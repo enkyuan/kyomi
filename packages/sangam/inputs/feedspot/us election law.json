@@ -1,0 +1,101 @@
+{
+  "category": "US Election Law",
+  "source_url": "https://rss.feedspot.com/us_election_law_rss_feeds",
+  "feeds": [
+    {
+      "title": "Election Law Blog",
+      "feed_url": "https://electionlawblog.org/?feed=rss2",
+      "website_url": "https://electionlawblog.org/",
+      "description": "Rick Hasen's Election Law Blog explains the law of politics and the politics of law election law, campaign finance, legislation, voting rights, initiatives, redistricting, and the Supreme Court nomination process.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 94000
+      },
+      "image_url": "https://i1.feedspot.com/645590.jpg?t=1608637322"
+    },
+    {
+      "title": "Excess of Democracy",
+      "feed_url": "https://excessofdemocracy.com/blog?format=rss",
+      "website_url": "https://excessofdemocracy.com/",
+      "description": "Election law, voting rights, legal education, the bar exam, and miscellany written by Derek T. Muller, Associate Professor of Law, Pepperdine University School of Law.",
+      "followers": {
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4770216.jpg?t=1608637348"
+    },
+    {
+      "title": "New York Election News",
+      "feed_url": "https://nyelectionsnews.wordpress.com/feed/",
+      "website_url": "https://nyelectionsnews.wordpress.com/",
+      "description": "The New York State Elections blog covers New York State news, legislative actions, election administration, and litigation related to redistricting, census and voting rights.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4781304.jpg?t=1608637360"
+    },
+    {
+      "title": "Princeton Election Consortium",
+      "feed_url": "https://election.princeton.edu/feed/",
+      "website_url": "https://election.princeton.edu/",
+      "description": "This blog's mission is to provide an informed analysis of US national elections by members of the Princeton academic community.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/333999.jpg?t=1608637339"
+    },
+    {
+      "title": "Election Updates",
+      "feed_url": "https://electionupdates.caltech.edu/feed/",
+      "website_url": "https://electionupdates.caltech.edu/",
+      "description": "The Election Updates Blog is a collaboration between Michael Alvarez, Lonna Atkeson, Paul Gronke, Thad Hall, Robert Krimmer, and Charles Stewart III focused on current issues related to election management and technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781163.jpg?t=1613113249"
+    },
+    {
+      "title": "More Soft Money Hard Law",
+      "feed_url": "http://www.moresoftmoneyhardlaw.com/feed/",
+      "website_url": "http://www.moresoftmoneyhardlaw.com/",
+      "description": "The site will identify and discuss developments in political law and proposals to change it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3993711.jpg?t=1608637574"
+    },
+    {
+      "title": "Texas Election Law Blog",
+      "feed_url": "https://texaselectionlaw.wordpress.com/feed/",
+      "website_url": "https://texaselectionlaw.wordpress.com/",
+      "description": "This blog provides a source of information for people who are interested in the law and particularly election law as the operating system for society. Given this mission and my interest in law as the game engine of governance, I often also touch on history, economics, and constitutional law.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4763140.jpg?t=1608637509"
+    },
+    {
+      "title": "Election Law Center",
+      "feed_url": "http://www.electionlawcenter.com/feed/",
+      "website_url": "http://www.electionlawcenter.com/",
+      "description": "This is the blog for Election Law Center, a source of news and commentary that provides a perspective regularly underserved in academia and often ignored by the legacy media.",
+      "followers": {
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4480686.jpg?t=1608637397"
+    },
+    {
+      "title": "Legally Political",
+      "feed_url": "https://legallypolitical.blogspot.com/feeds/posts/default",
+      "website_url": "https://legallypolitical.blogspot.com/",
+      "description": "A conservative perspective on campaign finance and election law. A blog about election law and campaign finance, as well as the intersection between law and politics.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5496324.jpg?t=1674124935"
+    },
+    {
+      "title": "The Independent Center",
+      "feed_url": "https://www.independentcenter.org/feed",
+      "website_url": "https://www.independentcenter.org/",
+      "description": "The Independent Center researches, engages & advocates for independent voters for common sense centrist solutions. The Independent Center's mission is advocate for the millions of Americans who believe we share common ground.",
+      "followers": {
+        "instagram": 357
+      },
+      "image_url": "https://i1.feedspot.com/7278358.jpg?t=1710932499"
+    }
+  ]
+}

@@ -1,0 +1,959 @@
+{
+  "category": "Retirement",
+  "source_url": "https://rss.feedspot.com/retirement_rss_feeds",
+  "feeds": [
+    {
+      "title": "Retire by 40",
+      "feed_url": "https://retireby40.org/feed/",
+      "website_url": "https://retireby40.org/category/feature/best-of-early-retirement/",
+      "description": "Posts on early retirement, frugal lifestyle, making money, real estate and stocks. Joe Udo wants to change the way you think about retirement. Retire by 40 is a place to share his aspiration for Financial Independence.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 16300,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4294433.jpg?t=1624608027"
+    },
+    {
+      "title": "The New York Times \u00bb Retirement",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/subject/retirement/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/retirement",
+      "description": "Articles and videos from The NY Times on retirement and retirement planning, including information on 401(k)s, IRAs or individual retirement plans, Roth IRAs, pensions and annuities.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4575013.jpg?t=1615014908"
+    },
+    {
+      "title": "Squared Away Blog",
+      "feed_url": "https://crr.bc.edu/publication-type/squared-away-blog/feed/",
+      "website_url": "https://crr.bc.edu/publication-type/squared-away-blog/",
+      "description": "Blog posts covering cutting-edge research on why some individuals handle their money well while others pile up debts, or how some individuals manage to prepare for retirement or college and others fail to save. Also covers articles on retirement, money management, saving, baby boomers, debt and spending.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/3650776.jpg?t=1608180096"
+    },
+    {
+      "title": "Retired Americans Blog",
+      "feed_url": "https://retiredamericans.org/category/blog/feed/",
+      "website_url": "https://retiredamericans.org/category/blog/",
+      "description": "The Alliance works to make senior voices heard on laws, policies, politics and institutions that shape their lives. The Alliance for Retired Americans is a national organization over 4 million, primarily union, retirees.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4574285.jpg?t=1615015234"
+    },
+    {
+      "title": "Retire Before Dad",
+      "feed_url": "https://www.retirebeforedad.com/feed/",
+      "website_url": "https://www.retirebeforedad.com/",
+      "description": "I'm a 46-year-old Dad and investor based in the Washington, DC area. My plan is to retire at age 55 (or earlier). To reach this goal, I invest in index funds and individual stocks in retirement accounts. I'm building multiple income streams to fund my early retirement through real estate crowdfunding, stock dividends, and side business income via this blog.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/3648938.jpg?t=1615014905"
+    },
+    {
+      "title": "PureAudacity Blog",
+      "feed_url": "https://pureaudacity.com/blogs/news.atom",
+      "website_url": "https://pureaudacity.com/blogs/news/",
+      "description": "The website 'Pure Audacity' offers a range of products and resources for senior and retirement lifestyles. They feature artistic prints, mugs, tees, and free resources such as books and training manuals. The site also includes a blog covering various topics related to aging, entertainment, travel, and more. Their vision is to provide sustainable, quality products inspired by timeless language and philosophy.",
+      "followers": {
+        "facebook": 117
+      },
+      "image_url": "https://i1.feedspot.com/7245295.jpg?t=1707219368"
+    },
+    {
+      "title": "Retirement Affairs",
+      "feed_url": "https://retirementaffairs.com/feed/",
+      "website_url": "https://retirementaffairs.com/category/retirement/",
+      "description": "I'm Carlos P. Barry & I started my retired life recently. I along with my wife now thinking and trying to find out various ways to make the rest of our life colorful.",
+      "followers": {
+        "facebook": 30,
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/7264154.jpg?t=1709270603"
+    },
+    {
+      "title": "MoneySense \u00bb Retired Money",
+      "feed_url": "https://www.moneysense.ca/columns/retired-money/feed/",
+      "website_url": "https://www.moneysense.ca/columns/retired-money/",
+      "description": "Get the updates on Registered Retirement Savings Plan, Registered Retirement Income Fund, real estate and travel. MoneySense is Canada's best-selling investment and lifestyle brand about all things money.",
+      "followers": {
+        "facebook": 81500,
+        "twitter": 127
+      },
+      "image_url": "https://i1.feedspot.com/4574278.jpg?t=1615014889"
+    },
+    {
+      "title": "Millennial Revolution",
+      "feed_url": "https://www.millennial-revolution.com/feed/",
+      "website_url": "https://www.millennial-revolution.com/",
+      "description": "Welcome to the Millennial Revolution, a FIRE (Financial Independence Retire Early) site started by two computer engineers/children's authors, FIRECracker & Wanderer, who retired at 31 to travel the world!",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4467550.jpg?t=1606889514"
+    },
+    {
+      "title": "Wealthy Retirement",
+      "feed_url": "https://wealthyretirement.com/feed/atom/",
+      "website_url": "https://wealthyretirement.com/",
+      "description": "Published by The Oxford Club, Wealthy Retirement offers a mix of finance and lifestyle advice to help everyday investors identify and pursue their retirement goals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5296350.jpg?t=1624606793"
+    },
+    {
+      "title": "My Federal Retirement",
+      "feed_url": "https://www.myfederalretirement.com/feed/",
+      "website_url": "https://www.myfederalretirement.com/",
+      "description": "My Federal Retirement is the leading provider of financial and retirement planning information for federal and postal employees. Get federal retirement planning resources for those in Federal Employees Retirement System (FERS), Civil Service Retirement System (CSRS), Thrift Savings Plan (TSP) and more.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/732001.jpg?t=1663044680"
+    },
+    {
+      "title": "1500 Days to Freedom",
+      "feed_url": "https://www.1500days.com/feed/",
+      "website_url": "https://www.1500days.com/",
+      "description": "1500 Days is a blog about my journey to early retirement in 1500 days, or approximately 4 years. I am not giving financial advice, but sharing with you various ways I save money to enable retirement in my early 40s.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 19900,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1946500.jpg?t=1615014927"
+    },
+    {
+      "title": "Bank On Yourself Blog",
+      "feed_url": "https://www.bankonyourself.com/feed",
+      "website_url": "https://www.bankonyourself.com/blog",
+      "description": "Know about dividend-paying whole life insurance, retirement planning, 401(k)s and IRAs. Bank On Yourself blog is a personal finance blog for Retirement and Investment Advice. It helps individuals take control, grow and protect their finances.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 20000
+      },
+      "image_url": "https://i1.feedspot.com/4474363.jpg?t=1615015028"
+    },
+    {
+      "title": "401k Maneuver Blog",
+      "feed_url": "https://www.401kmaneuver.com/feed/",
+      "website_url": "https://www.401kmaneuver.com/blog/",
+      "description": "401k Maneuver Blog covers posts on financial health, rebalancing, savings, retirement mistakes, tips, and lifestyle. 401k Maneuver's mission is to help America's employees improve their 401(k) account performance and, better protect their accounts from downside risk during tough times. If you are looking for tips that might maximize your retirement savings, subscribe to the 401k Maneuver, the go-to source for your retirement investing and saving tips.",
+      "followers": {
+        "instagram": 289
+      },
+      "image_url": "https://i1.feedspot.com/5294487.jpg?t=1674548524"
+    },
+    {
+      "title": "The Retirement Solution Blog",
+      "feed_url": "https://theretirementsolution.com/feed/",
+      "website_url": "https://theretirementsolution.com/blog/",
+      "description": "Our retirement planning firm focuses on helping retirees and those preparing for retirement to have the income they need and want for the rest of their lives. We help you realize your hopes and dreams by creating a clear, written plan around the goals that matter most to you.",
+      "followers": {
+        "facebook": 350
+      },
+      "image_url": "https://i1.feedspot.com/5294486.jpg?t=1624106586"
+    },
+    {
+      "title": "Runey & Associates Wealth Management Blog",
+      "feed_url": "https://www.raawealth.com/feed/",
+      "website_url": "https://www.raawealth.com/blog/",
+      "description": "The Retire on Your Terms blog provides relevant insights to those in or nearing retirement on financial and retirement planning topics. Runey & Associates Wealth Management provides comprehensive financial planning and investment management solutions for those in or nearing retirement.",
+      "followers": {
+        "facebook": 109
+      },
+      "image_url": "https://i1.feedspot.com/5372227.jpg?t=1644920219"
+    },
+    {
+      "title": "Realise Your Dream Blog",
+      "feed_url": "https://blog.centrepointalliance.com.au/realiseyourdream/rss.xml",
+      "website_url": "https://blog.centrepointalliance.com.au/realiseyourdream/tag/retirement",
+      "description": "This blog is authored by Peter Kelly and Mark Teale. Peter provides technical advice to financial advisers and accountants on superannuation, retirement planning and estate planning. Tealey's ambition is to change how people think about their retirement, he wants people to dream, plan and realize retirement is not defined by a magical age prescribed by the legislation.",
+      "followers": {
+        "facebook": 815,
+        "twitter": 504
+      },
+      "image_url": "https://i1.feedspot.com/4574960.jpg?t=1611146013"
+    },
+    {
+      "title": "Retirement Revealed",
+      "feed_url": "https://keilfp.com/feed/podcast/",
+      "website_url": "https://keilfp.com/blogpodcast/",
+      "description": "In the Retirement Revealed podcast, Jeremy Keil, CFP\u00ae, CFA shows you how to turn your retirement savings into retirement income.Listen in as Jeremy and his guests guide you towards making smarter retirement, investment, and tax planning decisions.Get free resources and learn how to have Jeremy and his team develop your own Retirement Revealed income plan at 5stepRetirementPlan.comFor important disclosures, see KeilFP.comKeil Financial Partners may utilize third-party websites, including social media websites, blogs, and other interactive content...",
+      "followers": {
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/5337446.jpg?t=1745425931"
+    },
+    {
+      "title": "Retired Introvert Blog",
+      "feed_url": "https://retiredintrovert.com/feed/",
+      "website_url": "https://retiredintrovert.com/blog/",
+      "description": "A blog about navigating retirement as an introvert. As a retiree, Author Linda shares her experiences and how it fits with her introverted personality. You don't have to be retired or an introvert to enjoy the blog.",
+      "followers": {
+        "facebook": 206
+      },
+      "image_url": "https://i1.feedspot.com/5330565.jpg?t=1691149268"
+    },
+    {
+      "title": "BOSS Retirement Solutions Blog",
+      "feed_url": "https://bossretirement.com/feed/",
+      "website_url": "https://bossretirement.com/blog/",
+      "description": "Posts feature articles related to Retirement, retirement income, and general advice. BOSS Retirement Solutions assists retirees and pre-retirees in the creation of retirement strategies utilizing investment and insurance products.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4574829.jpg?t=1615016134"
+    },
+    {
+      "title": "Retirement Sparks",
+      "feed_url": "https://retirementsparks.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://retirementsparks.blogspot.com/",
+      "description": "Authored by Elaine Decker, Retirement Sparks is a blog about reigniting the passion for life in retirement; edgy & irreverent observations on the retirement process, and the transition from career-driven to a lot more.",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5330564.jpg?t=1634016069"
+    },
+    {
+      "title": "Retire Successfully Blog",
+      "feed_url": "https://retiresuccessfully.co.za/feed/",
+      "website_url": "https://retiresuccessfully.co.za/retirementor-blogs/",
+      "description": "Retirement Financial Planning makes your journey to Retire Successfully easy. Our focus is on what you are retiring to, supported by your unique Financial Plan. Retire Successfully provides a community platform for South Africans close to or in retirement to plan for retirement holistically, including life planning. Our mission is to inspire South Africans who are close to or in retirement to plan for retirement and to live more holistic and fulfilled lives during retirement . And also provide unbiased information that is locally produced and relevant.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4574006.jpg?t=1623060434"
+    },
+    {
+      "title": "A Retirement Blog by Caree Risover",
+      "feed_url": "https://feeds.feedburner.com/CareeRisoverARetirementBlog",
+      "website_url": "https://aretirementblog.blogspot.com/",
+      "description": "Caree Risover shares retired pleasure, thought, creativity and adventure. Caree Risover charts her retirement through planning to implementation and enjoyment.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/3959837.jpg?t=1626160648"
+    },
+    {
+      "title": "First Coast Wealth Advisors Blog",
+      "feed_url": "https://firstcoastadvisors.com/blog/feed/",
+      "website_url": "https://firstcoastadvisors.com/blog/",
+      "description": "Whatever your financial goals are in life - a luxury lifestyle, leaving a legacy, or simply having financial security in retirement - it's our job to help you achieve those goals. Our professional financial advisors are here to help. First Coast Wealth Advisors: North Florida's retirement planning experts serving St. Augustine, Ponte Vedra and Jacksonville.",
+      "followers": {
+        "facebook": 157,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4574933.jpg?t=1615016088"
+    },
+    {
+      "title": "True North Retirement Advisors",
+      "feed_url": "https://truenorthretirementadvisors.com/feed/",
+      "website_url": "https://truenorthretirementadvisors.com/resources/",
+      "description": "Provides information on 401(k) plans, business exit planning, personal financial planning, and investment management. This is a retirement blog from a CRPC retirement planning advisor focusing on planning for retirement, financial planning, and investment management. At True North Retirement Advisors, we are retirement and business exit planning specialists helping you focus on the needs of your business while planning for a secure future.",
+      "followers": {
+        "facebook": 272
+      },
+      "image_url": "https://i1.feedspot.com/5294485.jpg?t=1624107588"
+    },
+    {
+      "title": "Retirement Reflections",
+      "feed_url": "https://retirementreflections.com/feed/",
+      "website_url": "https://retirementreflections.com/",
+      "description": "Hello, I'm Donna Connolly. Prior to retirement, I lived and worked in Beijing China for fourteen years (Middle School Principal/Deputy Director at The Western Academy of Beijing). Leaving international life behind, my husband and I retired to Vancouver Island in June 2015. To document both this transition and our new adventures, 'Retirement Reflections' was born. I hope that you enjoy these reflections, and will be willing to share your own.",
+      "followers": {
+        "twitter": 203
+      },
+      "image_url": "https://i1.feedspot.com/5294513.jpg?t=1624108123"
+    },
+    {
+      "title": "Retirement Revised",
+      "feed_url": "https://retirementrevised.com/feed/",
+      "website_url": "https://retirementrevised.com/recent-stories/",
+      "description": "RR is about the reinvention of traditional retirement - how the baby boom generation is revising its approach to careers, money and lifestyle after age 50. Your guide to retirement in tough times. Learn how to achieve retirement security, manage health care and benefits, and handle career transition.",
+      "followers": {
+        "facebook": 712,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/1360933.jpg?t=1615015486"
+    },
+    {
+      "title": "Mad Fientist",
+      "feed_url": "https://www.madfientist.com/feed/",
+      "website_url": "https://www.madfientist.com/articles/",
+      "description": "Developing advanced strategies and tactics for pursuing financial independence and early retirement. This site is focused on providing advice and innovative tax-avoidance methods specifically for people wanting to break away from full-time employment very early in life.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 31900
+      },
+      "image_url": "https://i1.feedspot.com/2341248.jpg?t=1615014919"
+    },
+    {
+      "title": "The Retirement Manifesto",
+      "feed_url": "https://www.theretirementmanifesto.com/feed/",
+      "website_url": "https://www.theretirementmanifesto.com/",
+      "description": "The Retirement Manifesto is a website focused on Helping Others Achieve A Great Retirement! My goal is to educate, challenge and encourage each of you to take the steps necessary to achieve success and financial independence on your journey toward retirement.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 13300
+      },
+      "image_url": "https://i1.feedspot.com/4573133.jpg?t=1615015022"
+    },
+    {
+      "title": "Jerry Golden on Retirement",
+      "feed_url": "https://jerrygoldenretirement.com/feed/",
+      "website_url": "https://jerrygoldenretirement.com/",
+      "description": "Covers topic on annuities, payments, taxes and retirement planning. Helps Baby Boomers to get the retirement they want. After four decades of continuous service, Jerry Golden is widely acknowledged as one of the leading innovators in the financial services industry.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/4574997.jpg?t=1615015953"
+    },
+    {
+      "title": "Rebel Retirement",
+      "feed_url": "https://rebelretirement.com/feed/",
+      "website_url": "https://rebelretirement.com/articles/",
+      "description": "Find the articles on empowerment, health and wellness and self - reliance to inspire and empower boomers to follow the path with a heart. It's not about the money! Be a Rebel Retiree! Free yourself from the bondage of worrying about money and live a happy, healthy, productive retirement.",
+      "followers": {
+        "facebook": 536
+      },
+      "image_url": "https://i1.feedspot.com/4870300.jpg?t=1615015479"
+    },
+    {
+      "title": "Living Life Retired",
+      "feed_url": "http://livingliferetired.com/feed/",
+      "website_url": "http://livingliferetired.com/",
+      "description": "Learn about financial planning, insurance, health and estate planning. Living Life Retired (LLR) focuses on information and inspiration for the solo retirement community. This blog is for everyone but especially those who may be divorced, single or widowed in retirement. Retired founder works part time and is renovating a mountain cabin property.",
+      "followers": {
+        "facebook": 325
+      },
+      "image_url": "https://i1.feedspot.com/4980106.jpg?t=1547465831"
+    },
+    {
+      "title": "Common Financial Sense",
+      "feed_url": "https://www.commonfinancialsense.com/feed/",
+      "website_url": "https://www.commonfinancialsense.com/",
+      "description": "Find the information and videos on strategies, market updates, financial wellness, estate planning, retirement plans, annuities, social securities, bitcoins and more. Common Financial Sense brings a little Common Financial Sense to a Complicated Landscape.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4681672.jpg?t=1626159674"
+    },
+    {
+      "title": "Forbes \u00bb Retirement",
+      "feed_url": "https://www.forbes.com/retirement/feed2/",
+      "website_url": "https://www.forbes.com/retirement/",
+      "description": "Forbes is a leading source for reliable retirement news and updated analysis. Read the breaking Retirement coverage and top headlines on Forbes.com",
+      "followers": {
+        "facebook": 8000000,
+        "twitter": 20700000
+      },
+      "image_url": "https://i1.feedspot.com/4575001.jpg?t=1615014881"
+    },
+    {
+      "title": "Papa Jefe",
+      "feed_url": "https://www.papajefe.com/feed/",
+      "website_url": "https://www.papajefe.com/journal/",
+      "description": "This is a story of how my wife and I retired at 55 to Ecuador. It's been a long, strange trip. I expect it to be longer and stranger still.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5053531.jpg?t=1626160150"
+    },
+    {
+      "title": "How Much Can I Afford to Spend In Retirement?",
+      "feed_url": "https://howmuchcaniaffordtospendinretirement.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://howmuchcaniaffordtospendinretirement.blogspot.com/",
+      "description": "The spending budget website for intelligent retirees and pre-retirees (and their financial advisors) who aren't afraid to do a little number crunching to get a better answer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5265043.jpg?t=1617690393"
+    },
+    {
+      "title": "Retirement Investing Today",
+      "feed_url": "https://feeds.feedburner.com/RetirementInvestingToday",
+      "website_url": "http://www.retirementinvestingtoday.com/",
+      "description": "RetirementInvestingToday analyses the economic data, market data and and investing strategies that I am using to reach Early Retirement. Our mission is to achieve Early Retirement by maximising salary contributions, minimising fees, minimising taxes, maximising return through tactical allocations and minimising investing mistakes.",
+      "followers": {
+        "facebook": 611,
+        "twitter": 638
+      },
+      "image_url": "https://i1.feedspot.com/761703.jpg?t=1611206493"
+    },
+    {
+      "title": "Annuity Watch USA",
+      "feed_url": "https://www.annuitywatchusa.com/feed/",
+      "website_url": "https://www.annuitywatchusa.com/articles/",
+      "description": "Discuss financial news, how politics affects the finances and the challenges that each generation from baby boomers to millennials are facing. Annuity Watch USA's retirement planning experts, based in Dallas, Texas, specialize in fixed index annuities & income plans that you cannot outlive.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4574208.jpg?t=1615015749"
+    },
+    {
+      "title": "Relative2me",
+      "feed_url": "https://relative2me.com/f.rss",
+      "website_url": "https://relative2me.com/",
+      "description": "Find anecdotes, poetry, humor, creative writing, conservative politics, veterans issues, Vietnam, Wisconsin Badgers, women's beach volleyball, constitution, kindness and political satire laced with strong opinion. Daniel Holtan is a retired person, having spent his working career in a family manufacturing business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5272544.jpg?t=1619171306"
+    },
+    {
+      "title": "Retirementally Challenged",
+      "feed_url": "https://retirementallychallenged.com/feed/",
+      "website_url": "https://retirementallychallenged.com/category/retirement/",
+      "description": "Hello, I'm Janis Heppell. I started my blog in the months before I retired in part to work through my ambivalence about my upcoming life-changing event. Navigating through my post-work world, I now enjoy writing about all sorts of topics, including travel, relationships, photography, gratitude, and whatever else pops into my head.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294514.jpg?t=1624108612"
+    },
+    {
+      "title": "Retirement Confidential",
+      "feed_url": "https://www.retirementconfidential.com/feed/",
+      "website_url": "https://www.retirementconfidential.com/",
+      "description": "Know about food, health, retirement planning, lifestyle and more. Donna Pekar is a two-time cancer survivor, retired corporate communications executive, and U.S. Army veteran.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294911.jpg?t=1624254098"
+    },
+    {
+      "title": "Retirement Transition Blog",
+      "feed_url": "https://retirementtransition.blog/feed/",
+      "website_url": "https://retirementtransition.blog/tag/retirement/",
+      "description": "Provides updates on life planning, life vision, retirement lifestyle, retirement transition and more. Patricia shares her own retirement journey. She continues to learn how to move from a workaholic lifestyle to the retirement lifestyle.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294910.jpg?t=1624254725"
+    },
+    {
+      "title": "I'm Thinking of Retiring Blog",
+      "feed_url": "https://imthinkingofretiring.com/feed/",
+      "website_url": "https://imthinkingofretiring.com/blog/",
+      "description": "Join me for conversations and ideas on how to live a larger than life retirement. Filling my days with new adventures and cool hobbies!",
+      "followers": {
+        "twitter": 38,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5295946.jpg?t=1634649123"
+    },
+    {
+      "title": "Laurel Wealth Planning \u00bb Retirement Planning",
+      "feed_url": "https://laurelwealthplanning.com/life-transitions/retirement-planning-articles/feed/",
+      "website_url": "https://laurelwealthplanning.com/life-transitions/retirement-planning-articles/",
+      "description": "A holistic, integrated and personable approach to financial planning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8531936.jpg?t=1753072408"
+    },
+    {
+      "title": "Dorval & Chorne Financial Advisors Blog \u00bb Retirement Funding",
+      "feed_url": "https://dorvalchorne.com/blog/category/retirement-funding/feed/",
+      "website_url": "https://dorvalchorne.com/blog/category/retirement-funding/",
+      "description": "Quality of Life Planning",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8531931.jpg?t=1753072395"
+    },
+    {
+      "title": "TKV Financial Blog",
+      "feed_url": "https://tkvfinancial.co.uk/feed/",
+      "website_url": "https://tkvfinancial.co.uk/blog/",
+      "description": "Stay informed with the latest financial tips, insights, and advice from TKV Financial. Explore our blog for expert guidance on personal and business finance.",
+      "followers": {
+        "facebook": 28
+      },
+      "image_url": "https://i1.feedspot.com/8531935.jpg?t=1753072407"
+    },
+    {
+      "title": "Focus Financial Melissa Mansfield Blog \u00bb Retirement",
+      "feed_url": "https://melissamansfield.com/blog/category/retirement/feed.xml",
+      "website_url": "https://melissamansfield.com/blog/category/retirement/",
+      "description": "Untitled RSS Feed",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8531933.jpg?t=1753072402"
+    },
+    {
+      "title": "Reverse Mortgage Blog",
+      "feed_url": "https://www.reversemortgage.org/feed/",
+      "website_url": "https://www.reversemortgage.org/blog/",
+      "description": "This blog is published by NRMLA as a guide for everything a consumer needs to know about Reverse Mortgage. The National Reverse Mortgage Lenders Association is the national voice and conscience of the reverse mortgage industry.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5367335.jpg?t=1643789966"
+    },
+    {
+      "title": "CGN Advisors Blog \u00bb Retirement Planning",
+      "feed_url": "https://cgnadvisors.com/blog/category/retirement-planning/feed.xml",
+      "website_url": "https://cgnadvisors.com/blog/category/retirement-planning/",
+      "description": "CGN Advisor's blog - co-authored by the whole team, where the goal is to be relevant, interesting, and to the point.",
+      "followers": {
+        "facebook": 290
+      },
+      "image_url": "https://i1.feedspot.com/8531934.jpg?t=1753072405"
+    },
+    {
+      "title": "Yorkshire Rose Financial Planning Blog",
+      "feed_url": "https://www.yrfp.co.uk/blog-feed.xml",
+      "website_url": "https://www.yrfp.co.uk/blog/",
+      "description": "yrfp",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8532163.jpg?t=1753072998"
+    },
+    {
+      "title": "Oak Pensions Blog",
+      "feed_url": "https://blog.oakpensions.com/blog-feed.xml",
+      "website_url": "https://blog.oakpensions.com/",
+      "description": "Oak Pensions Limited (PFA) is set up for the business of Pension Fund Administration under the new Pension Reform Act 2014.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8532165.jpg?t=1753073004"
+    },
+    {
+      "title": "Anderson Elder Law Blog",
+      "feed_url": "https://www.andersonelderlaw.com/blog-feed.xml",
+      "website_url": "https://www.andersonelderlaw.com/blog/",
+      "description": "Anderson Elder Law has an experienced team of elder law attorneys and professionals, offering a blog with many resources to help you start planning. Contact our team today.",
+      "followers": {
+        "facebook": 630,
+        "instagram": 161
+      },
+      "image_url": "https://i1.feedspot.com/8532164.jpg?t=1753073002"
+    },
+    {
+      "title": "Can I Retire Yet?",
+      "feed_url": "https://feeds.feedburner.com/caniretireyet",
+      "website_url": "https://www.caniretireyet.com/category/retirement-decision/",
+      "description": "Accelerate Your Retirement by getting the updates on health insurance, investing & taxes, lifestyle, real estate and retirement calculators and decisions. It is your retirement roadmap to save more, invest smarter, retire sooner. Darrow Kirkpatrick is focused on the personal finance needs of anyone who is thinking about retirement or early retirement. His goal is to serve as a trustworthy and independent resource for readers as they navigate one of modern life's most complex and expensive transitions: retirement.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4535658.jpg?t=1681470258"
+    },
+    {
+      "title": "Our Next Life",
+      "feed_url": "https://ournextlife.com/feed/",
+      "website_url": "https://ournextlife.com/",
+      "description": "For those aspiring to retire early or achieve financial independence, as well as those who've already gotten there. The blog is written by Tanja Hester, author of Work Optional and Wallet Activism.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 11800,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/4573854.jpg?t=1615014932"
+    },
+    {
+      "title": "Topretirements.com Blog",
+      "feed_url": "https://www.topretirements.com/blog/feed/",
+      "website_url": "https://www.topretirements.com/blog/",
+      "description": "Find the best retirement communities, active adult communities, best retirement towns and states, health and wellness issues, financial and taxes in retirement, and retirement planning.Topretirements.com is where real people share honest opinions about the best places to retire. Their goal is to help the 78 million baby boomers make more informed decisions about where they should live in retirement .",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/1563777.jpg?t=1615015025"
+    },
+    {
+      "title": "Retirement Savvy",
+      "feed_url": "https://retirementsavvy.net/feed/",
+      "website_url": "https://retirementsavvy.net/category/savvy-finances/retirement-planning/",
+      "description": "This blog is committed to sharing ideas and information to help readers gain a better understanding of personal finance concepts such as budgeting & spending, debt, retirement planning, investing and insurance and also prepare themselves for a comfortable retirement; and to the idea that knowledge should be shared, particularly knowledge that has the profound ability to change lives.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4574920.jpg?t=1615015452"
+    },
+    {
+      "title": "The Holiday Retirement Blog",
+      "feed_url": "https://holidayretirement.com/blog/feed/",
+      "website_url": "https://holidayretirement.com/blog/",
+      "description": "Read about independent living, assisted living, skilled nursing & rehab, senior health, living and lifestyle. Holiday Retirement has been providing the very best options for senior living. Each of our communities is designed with our focus on creating a rewarding and satisfying lifestyle for our residents.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4574966.jpg?t=1615015259"
+    },
+    {
+      "title": "Wicked Retirement Blog",
+      "feed_url": "https://wickedretirement.com/category/blog/feed/",
+      "website_url": "https://wickedretirement.com/category/blog/",
+      "description": "I've been driving my friends and family crazy over the last few years talking about retirement and where the best place would be to retire. My response is always 'you need to start thinking about it now because you don't want to waste valuable retirement time searching when you could be relaxing with a cold one.'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051659.jpg"
+    },
+    {
+      "title": "Sightings Over Sixty",
+      "feed_url": "https://feeds.feedburner.com/blogspot/bLNzV",
+      "website_url": "http://sightingsat60.blogspot.com/",
+      "description": "A blog by A Baby Boomer who looks at health, finance, retirement, grown-up children and ... how time flies. Covers topics such as Boomernomics, Children, Investing Strategies, Health, Living Arrangements, Planning for Retirement, Retirement Activities, Travel and more.",
+      "followers": {
+        "twitter": 431
+      },
+      "image_url": "https://i1.feedspot.com/1360936.jpg?t=1626103969"
+    },
+    {
+      "title": "VIA Actuarial Solutions Blog",
+      "feed_url": "https://viaactuarial.com/feed/",
+      "website_url": "https://viaactuarial.com/blog/",
+      "description": "Know about 401(k), cash balance plan, pension plan, retirement plan, health and more. Jim is a consulting actuary known for innovative retirement plan design, and for explaining technical topics in a way that's clear and wait for it. He's pretty extroverted, for an actuary.",
+      "followers": {
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/4574985.jpg?t=1626162014"
+    },
+    {
+      "title": "Joe's Retirement Blog",
+      "feed_url": "https://joesretirementblog.blogspot.com/feeds/posts/default",
+      "website_url": "https://joesretirementblog.blogspot.com/",
+      "description": "A photoblog about beautiful and/or interesting sights in our world - some close by, some far away - takes about a minute to read - almost always a positive perspective and sometimes silly or clever, too!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2268587.jpg?t=1615015544"
+    },
+    {
+      "title": "Snakes in the Grass Blog",
+      "feed_url": "https://snakesinthegrassblog.com/feed/",
+      "website_url": "https://snakesinthegrassblog.com/",
+      "description": "Know from financial issues (i.e. pension, social security, 401(k), divorce, alimony) to discussions of politics, current events, music, and mostly life's comical ironies. Snakes in the Grass is a Blog of Retirement and Related Thoughts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4573152.jpg?t=1615015599"
+    },
+    {
+      "title": "Having Fun Cracking Retirement",
+      "feed_url": "https://www.crackingretirement.com/feed/",
+      "website_url": "https://www.crackingretirement.com/category/retirement/",
+      "description": "Articles on retirement planning, retired life, travel, health and everything related to retirement. I took early retirement in 2011, having just turned 56. Over the past 5 years, I have been making the most of all the free time that retirement brings. I'm fortunate enough to be healthy and also have enough money to indulge my passions of travel, investing and working with metal of all shapes and styles.",
+      "followers": {
+        "facebook": 395,
+        "twitter": 515
+      },
+      "image_url": "https://i1.feedspot.com/4635743.jpg?t=1611206451"
+    },
+    {
+      "title": "Retirement And Good Living",
+      "feed_url": "https://retirementandgoodliving.com/feed/",
+      "website_url": "https://retirementandgoodliving.com/retirement-posts/",
+      "description": "The Retirement and Good Living website offers a wide range of information for retirees - from financial planning, to best places to retire, sports, news, travel, health and hobbies. The fresh, friendly content is updated daily from a range of contributors. There is always something new to discover about your retirement lifestyle options.",
+      "followers": {
+        "facebook": 307,
+        "twitter": 200
+      },
+      "image_url": "https://i1.feedspot.com/4574310.jpg?t=1615015459"
+    },
+    {
+      "title": "The Panama Adventure Blog",
+      "feed_url": "https://blog.thepanamaadventure.com/feed/",
+      "website_url": "https://blog.thepanamaadventure.com/",
+      "description": "Kris's blog, about retirement in Panama, and other various adventures. Retired and living a good life in Panama! We are interested in sharing our experiences with friends and family, and anyone else who may be interested. Perhaps you have thought about the possibility of doing something like this too.",
+      "followers": {
+        "facebook": 304,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/4574017.jpg?t=1615015237"
+    },
+    {
+      "title": "Teresa Ghilarducci Blog",
+      "feed_url": "https://www.teresaghilarducci.org/",
+      "website_url": "http://teresaghilarducci.org/blog",
+      "description": "Teresa Ghilarducci's blog focuses on the threats to retirement, pension, economics of retirement and the possible solutions that will secure retirement for generations to come.",
+      "followers": {
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4574247.jpg?t=1615016097"
+    },
+    {
+      "title": "The Retirement Plan Blog",
+      "feed_url": "https://feeds.feedburner.com/RetirementPlanBlog",
+      "website_url": "https://www.retirementplanblog.com/",
+      "description": "The Retirement Plan Blog provides information and insight for retirement plan sponsors and advisors on 21st century benefit plans. Know about 401 (k), 403 (b), annuities, behavioral finance, cash benefits plan, pension plans and more. The Retirement Plan Blog that is National Benefit Services, Inc. is a Chicago-based retirement plan consulting, actuarial, and administration firm that helps employers get their retirement plans from where they are now to where they need to be.",
+      "followers": {
+        "twitter": 767
+      },
+      "image_url": "https://i1.feedspot.com/4574161.jpg?t=1615015242"
+    },
+    {
+      "title": "theFIREstarter",
+      "feed_url": "http://thefirestarter.co.uk/feed/",
+      "website_url": "http://thefirestarter.co.uk/",
+      "description": "Financial Independence and Early Retirement blog. Read about life hacks, money saving tips, frugal food, general views on life and of course the occasional rant.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4280592.jpg?t=1609335795"
+    },
+    {
+      "title": "Retire Happy Blog",
+      "feed_url": "http://feed.retirehappy.ca/RetireHappyBlog",
+      "website_url": "https://retirehappy.ca/retirement/",
+      "description": "Retire Happy helps you to know about retirement issues such as RRSP, CPP, OAS, TFSA, RRIF, tax rates and tax optimization. Covers articles on investing, estate planning, personal finance, group benefits and pension. Retire Happy features retirement advice for people of all ages and economic statuses, whether you're a student or you're on the cusp of retirement!",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4573202.jpg?t=1615014901"
+    },
+    {
+      "title": "Retirement Wisdom Blog",
+      "feed_url": "https://www.retirementwisdom.com/feed/",
+      "website_url": "https://www.retirementwisdom.com/the-retirement-wisdom-blog/",
+      "description": "Retirement Wisdom enhances your transition to retirement with coaching and education designed to help you achieve your retirement goals.",
+      "followers": {
+        "facebook": 204,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4574953.jpg?t=1673440923"
+    },
+    {
+      "title": "Pension Works News",
+      "feed_url": "https://www.pensionworks.co.uk/news/feed/",
+      "website_url": "https://www.pensionworks.co.uk/news/",
+      "description": "Pension Works help you check your private pension performance. We also advise on consolidation, drawdown, final salary, transfers, and retirement planning. Stay updated by following this feed.",
+      "followers": {
+        "twitter": 97
+      },
+      "image_url": "https://i1.feedspot.com/5054977.jpg?t=1615015765"
+    },
+    {
+      "title": "Freedom With Bruno",
+      "feed_url": "https://freedomwithbruno.com/feed/",
+      "website_url": "https://freedomwithbruno.com/",
+      "description": "Retired in our 30's, having adventures with Bruno, enjoying our newfound freedom! Bruno is a 2000 Toyota 4Runner who is pleased to be joining the Overlanding travel community! We quit our jobs in March 2015 after reaching financial independence, sold most of our possessions and took to the road.",
+      "followers": {
+        "facebook": 490,
+        "twitter": 279
+      },
+      "image_url": "https://i1.feedspot.com/4573932.jpg?t=1615015768"
+    },
+    {
+      "title": "Financial Perspectives Blog",
+      "feed_url": "http://www.financialperspectives.biz/perspectives-retirement-blog?format=RSS",
+      "website_url": "http://www.financialperspectives.biz/perspectives-retirement-blog/",
+      "description": "Financial Perspectives, a fee-only financial advisor specializes in investment management & retirement planning. Our purpose is simple: to be the financial adviser clients ultimately trust for the long haul as the best partner to navigate them through the many financial challenges of today and secure the retirement of their tomorrow.",
+      "followers": {
+        "facebook": 34,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4574843.jpg?t=1615015772"
+    },
+    {
+      "title": "Kathy's Retirement Blog",
+      "feed_url": "https://kathleengolden.net/blog/feed",
+      "website_url": "https://kathleengolden.net/blog/",
+      "description": "Covers topics such as as Family, Healthy Living, Making The Most of Your Money, Relationships, Things To Do In Retirement and Transitions. Kathy Merlino is the author of Kathysretirementblog.com, a blog about her perspective and thoughts on the emotional side of retirement and caregiverschronicle.com, the story of her journey as a caregiver. She is one of the most thought-provoking and influential writers on non-financial retirement topics.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4573109.jpg?t=1615015934"
+    },
+    {
+      "title": "VestCred Blog",
+      "feed_url": "https://vestcred.com/feed/",
+      "website_url": "https://vestcred.com/blog/",
+      "description": "Giving you the knowledge, tools, and solutions to ensure your retirement plan maximizes your after-tax retirement income and ensures your plan will last.",
+      "followers": {
+        "facebook": 495
+      },
+      "image_url": "https://i1.feedspot.com/5136566.jpg?t=1615015942"
+    },
+    {
+      "title": "Retirement: A Full-Time Job",
+      "feed_url": "http://feeds.feedburner.com/RetirementAFull-timeJob",
+      "website_url": "https://retiredsyd.typepad.com/",
+      "description": "I started this blog in 2007 to chronicle my transition into Early retirement. Since then I've learned that we all deal with many of the same issues when we retire, no matter what age we are when we pull the trigger. Just like any other phase in life, it's exciting and it's also challenging. I may have four or five decades to fill with the unfettered pursuit of happiness. Blog by Sydney Lagier.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1360932.jpg?t=1615016466"
+    },
+    {
+      "title": "Retirement and beyond",
+      "feed_url": "https://joanfrankham.wordpress.com/feed/",
+      "website_url": "https://joanfrankham.wordpress.com/",
+      "description": "Get to know about travel, living life, architecture and more. Enjoy reading about Joan Frankham's travels since her retirement.",
+      "followers": {
+        "facebook": 79,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/4574903.jpg?t=1615016082"
+    },
+    {
+      "title": "Enjoy Being Retired",
+      "feed_url": "https://enjoybeingretired.com/feed/",
+      "website_url": "https://enjoybeingretired.com/",
+      "description": "In this blog, you will find information on Retirement, Planning, Housing, Vacationing and everything else to do enjoying retirement.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5213260.jpg?t=1604486834"
+    },
+    {
+      "title": "The Retirement Caf\u00e9",
+      "feed_url": "http://www.theretirementcafe.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.theretirementcafe.com/",
+      "description": "Dirk Cotton is a retired executive of a Fortune 500 technology company. Since retiring in 2005, he has researched and published papers on retirement finance, spoken at retirement industry conferences and events, and regularly posted on retirement finance issues at this blog.",
+      "followers": {
+        "twitter": 490
+      },
+      "image_url": "https://i1.feedspot.com/4573244.jpg?t=1615015440"
+    },
+    {
+      "title": "Tools for Retirement Planning",
+      "feed_url": "https://toolsforretirementplanning.com/feed/",
+      "website_url": "https://toolsforretirementplanning.com/",
+      "description": "Welcome to a website devoted to retirement income planning. The immediate focus is a specialty area: reverse mortgages and how they might fit into an individual's retirement planning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4574945.jpg"
+    },
+    {
+      "title": "Financial Mentor",
+      "feed_url": "https://www.financialmentor.com/feed",
+      "website_url": "https://www.financialmentor.com/category/retirement-planning",
+      "description": "Todd R. Tresidder founded Financial Mentor to educate business owners and investors about the wealth building principles he learned from years as an entrepreneur in the investment management industry. Advanced investment strategy for wealth building and retirement. Free resources include financial calculators, and money coaching to achieve your goals.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4573185.jpg?t=1615016130"
+    },
+    {
+      "title": "U.S. News and World Report \u00bb Retirement",
+      "feed_url": "https://www.usnews.com/blogrss/planning-to-retire",
+      "website_url": "https://money.usnews.com/money/retirement",
+      "description": "Retirement planning advice and guides to help you plan for a successful retirement. Retirement news on investing, including articles on 401ks, simple IRAs, Roth IRAs, and other financing tips. Recent topics include finding a new career after age 50, Social Security strategies for spouses, and the best ways to invest. Emily Brandon writes about retirement and aging for U.S. News. She has also spent much of the past year learning about, traveling to, and conversing with retirees about the best places to retire.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 33800
+      },
+      "image_url": "https://i1.feedspot.com/4423752.jpg?t=1615016148"
+    },
+    {
+      "title": "Miller Premier Investment Planning LLC Blog \u00bb Retirement Funding",
+      "feed_url": "https://feeonlyretirement.com/blog/category/retirement-funding/feed.xml",
+      "website_url": "https://feeonlyretirement.com/blog/category/retirement-funding/",
+      "description": "Our thought-provoking pieces cover everything from financial planning, to investments and the latest industry news. Check on our updates to learn more!",
+      "followers": {
+        "facebook": 78,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/8531932.jpg?t=1753072401"
+    },
+    {
+      "title": "Boldin",
+      "feed_url": "https://www.boldin.com/retirement/feed/",
+      "website_url": "https://www.boldin.com/retirement/",
+      "description": "Covering retirement, Social Security, how much you need to retire, best places to retire, Medicare, and all aspects of retirement planning. NewRetirement provides a DIY planning solution that allows anyone to gain control of their future by building, managing and monitoring their own retirement plan.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4574273.jpg?t=1615014878"
+    },
+    {
+      "title": "Retire Wise Blog",
+      "feed_url": "https://retirewisepro.com/feed/",
+      "website_url": "https://retirewisepro.com/resources/#blog",
+      "description": "Every successful retirement plan and financial strategy starts with an excellent client relationship. Our mission and values include providing unmatched service and exceeding our client's expectations. We'll work with you to create a successful retirement & financial plan based on your specific needs and goals. We also offer a number of other services, so we can work at protecting any and all of your personal assets.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 91,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5755983.jpg?t=1705467193"
+    },
+    {
+      "title": "Early Retirement Extreme",
+      "feed_url": "http://earlyretirementextreme.com/",
+      "website_url": "http://earlyretirementextreme.com/",
+      "description": "Learn how to become financially independent through frugality, self-sufficiency, sustainable behavior, investing, DIY ethics and voluntary simplicity! Jacob became financially independent at 30 and retired at 33 and he writes a blog about how to retire extremely early.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/295936.jpg?t=1615016139"
+    },
+    {
+      "title": "Root of Good",
+      "feed_url": "https://rootofgood.com/feed/",
+      "website_url": "https://rootofgood.com/",
+      "description": "Covers blog posts on retirement, financial independence, parenting, personal finance, investing, money hacks, travel, DIY and lifestyle. Root of Good tells how the author managed to accumulate enough wealth to make him financially independent which allowed him to retire at age 33.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/3590969.jpg?t=1605879678"
+    },
+    {
+      "title": "Wiser Women Blog",
+      "feed_url": "https://www.wiserwomen.org/blog/?feed=rss2",
+      "website_url": "https://wiserwomen.org/blog/",
+      "description": "The Women's Institute for a Secure Retirement works to provide low and moderate income women (aged 18 to 65) with basic financial information aimed at helping them take financial control over their lives and to increase awareness of the structural barriers that prevent women's adequate participation in the nation's retirement systems.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4574130.jpg?t=1610539749"
+    },
+    {
+      "title": "Baby Boomer Retirement",
+      "feed_url": "https://www.blogger.com/feeds/2608503664772109513/posts/default",
+      "website_url": "https://www.baby-boomer-retirement.com/",
+      "description": "Find the hundreds of useful articles on financial planning, Social Security, Medicare, where to retire, medical issues and travel. It is an award winning retirement blog where baby boomers share their retirement dreams and challenges.",
+      "followers": {
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4574227.jpg?t=1607922218"
+    },
+    {
+      "title": "Income for Life",
+      "feed_url": "https://incomeforlife.org/blog/feed/",
+      "website_url": "https://incomeforlife.org/ifl-blog/",
+      "description": "Provides information about retirement planning, social securities, life insurance, medicare, annuities, financial planning and also explain how the products work and how these products can provide a guaranteed income for life. Investing for retirement is an important step to take early on.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4574192.jpg?t=1615015482"
+    },
+    {
+      "title": "Retirement Voices Blog",
+      "feed_url": "https://retirementvoices.com/feed",
+      "website_url": "https://retirementvoices.com/blog/",
+      "description": "Retirement Voices explores the immense human impact of retirement on the identity and sense of purpose, relationships, health and everyday life. Retirement Voices is a community of women helping women navigate retirement.",
+      "followers": {
+        "facebook": 277,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5142182.jpg?t=1607922239"
+    },
+    {
+      "title": "Fix My Pension News",
+      "feed_url": "https://fixmypension.com/feed/",
+      "website_url": "https://fixmypension.com/fixmypension-news/",
+      "description": "Andrew Colyer-Worsell, Specialist pensions and retirement planner with over 30 years experience. Nowadays people have many pensions from previous employments - let us help you unravel them. You may have lost or forgotten pensions - let us find them for you. You may be coming up to retirement and are confused about your options - let us explain them in jargon-free language.",
+      "followers": {
+        "facebook": 112,
+        "twitter": 218
+      },
+      "image_url": "https://i1.feedspot.com/4574132.jpg?t=1647493812"
+    },
+    {
+      "title": "Retirement Solutions Blog",
+      "feed_url": "https://www.retirementsolutionsrsi.com/blog/feed",
+      "website_url": "https://www.retirementsolutionsrsi.com/blog",
+      "description": "Retirement Solutions works with families, individuals and women or men who have lost a spouse (through divorce or death) and develop financial plans for the next phase of their lives. Our goal is to create a comprehensive financial roadmap that helps you meet your goals, while guarding against the perils that could keep you from reaching those dreams.",
+      "followers": {
+        "facebook": 258
+      },
+      "image_url": "https://i1.feedspot.com/4574197.jpg?t=1615015972"
+    },
+    {
+      "title": "Retire In Style Blog Too",
+      "feed_url": "https://www.blogger.com/feeds/6306252283429139894/posts/default",
+      "description": "Retirement, aging, books, current events, humor, travel and good advice on being a snowbird fill the pages of the blog. The author, Barbara, is an aging retired person with a very active life. Being retired has allowed her to do those things she love with no worries about income.",
+      "followers": {
+        "facebook": 51,
+        "twitter": 456
+      },
+      "image_url": "https://i1.feedspot.com/5294909.jpg?t=1624255520"
+    }
+  ]
+}

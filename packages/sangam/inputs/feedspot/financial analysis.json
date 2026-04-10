@@ -1,0 +1,74 @@
+{
+  "category": "Financial Analysis",
+  "source_url": "https://rss.feedspot.com/financial_analysis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Datarails Blog",
+      "feed_url": "https://www.datarails.com/feed/",
+      "website_url": "https://www.datarails.com/blog/",
+      "description": "Datarails is on a mission to fundamentally change how analytics are used within the finance function. Our executive team has spent a good few dozen years in the corporate world and is all too familiar with the pain points that finance professionals encounter. The blog is dedicated to helping you streamline and automate critical spreadsheet processes in the key functions of your organization.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 726,
+        "instagram": 40800
+      },
+      "image_url": "https://i1.feedspot.com/5557227.jpg?t=1683285507"
+    },
+    {
+      "title": "Cube Blog",
+      "feed_url": "https://www.cubesoftware.com/blog/rss.xml",
+      "website_url": "https://www.cubesoftware.com/blog",
+      "description": "We're a digital-first company but happily headquartered in New York City. We're on a mission to help every company hit its numbers. Expand your strategic finance knowledge with our three curated collections: FP&A best practices, KPI and metric guides, and software and tool reviews.",
+      "followers": {
+        "twitter": 269
+      },
+      "image_url": "https://i1.feedspot.com/5557229.jpg?t=1683285511"
+    },
+    {
+      "title": "CSIMarket",
+      "feed_url": "https://feeds.feedburner.com/Csimarket-EarningsReports",
+      "website_url": "https://csimarket.com/index.php",
+      "description": "CSIMarket is an independent digital financial media company and provider of integrated financial information and analytical applications to the global investment community. Read economy reports, with news on U.S. economy and the break-down of most important economic indicators like GDP, Housing Starts, Inflation, Consumer spending and many others",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300885.jpg?t=1713362851"
+    },
+    {
+      "title": "Adams Financial Analysis Blog",
+      "feed_url": "https://adamsfinancialanalysis.com/feed/",
+      "website_url": "https://adamsfinancialanalysis.com/blog/",
+      "description": "Don't let the stresses of running a business get you down. Schedule your free consultation with Adams Financial Analysis",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5557226.jpg?t=1683285549"
+    },
+    {
+      "title": "The FP&A Guy",
+      "feed_url": "https://www.thefpandaguy.com/fp-and-a?format=rss",
+      "website_url": "https://www.thefpandaguy.com/fp-and-a",
+      "description": "My name is Paul Barnhurst (AKA The FP&A Guy), and I am a Finance Professional with 12+ years of finance and FP&A experience. I possess a strong background in budgeting, forecasting, financial planning, financial modeling, report building, and business partnering. I have worked in several industries, including the US government, travel services, finance, automotive, Cyber Security, Ecommerce, and more.",
+      "followers": {
+        "twitter": 519
+      },
+      "image_url": "https://i1.feedspot.com/5557225.jpg?t=1683535135"
+    },
+    {
+      "title": "High Impact Financial Analysis Blog",
+      "feed_url": "https://www.highimpactanalysis.com/blog/feed",
+      "website_url": "https://www.highimpactanalysis.com/blog",
+      "followers": {
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/5557228.jpg?t=1683285521"
+    },
+    {
+      "title": "CRiskCo Blog",
+      "feed_url": "https://www.criskco.com/en/feed/",
+      "website_url": "https://www.criskco.com/en/blog/",
+      "description": "Stay up to date with the latest news, reviews & product development updates from CRiskco; supporting businesses with AI financial management analytics. Our Technology brings together small and medium businesses and professional credit providers with Credit Risk Analysis, Management, and Matching platforms for both Lenders and Borrowers.",
+      "followers": {
+        "facebook": 261,
+        "twitter": 91
+      },
+      "image_url": "https://i1.feedspot.com/5557231.jpg?t=1683285534"
+    }
+  ]
+}

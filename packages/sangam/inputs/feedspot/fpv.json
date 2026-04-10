@@ -1,0 +1,80 @@
+{
+  "category": "FPV",
+  "source_url": "https://rss.feedspot.com/fpv_rss_feeds",
+  "feeds": [
+    {
+      "title": "360 Rumors \u00bb FPV",
+      "feed_url": "https://360rumors.com/category/fpv/feed/",
+      "website_url": "https://360rumors.com/category/fpv/",
+      "description": "Latest FPV content from 360 rumors. Learn about the current FPV drone market, models, and accessories, and Find guides, reviews, comparisons, and other resources to start with. 360 Rumors is the most comprehensive website about 360 cameras, featuring the latest news, reviews, and tutorials.",
+      "followers": {
+        "facebook": 12800
+      },
+      "image_url": "https://i1.feedspot.com/5458063.jpg?t=1666096408"
+    },
+    {
+      "title": "Oscar Liang",
+      "feed_url": "https://oscarliang.com/feed/",
+      "website_url": "https://oscarliang.com/",
+      "description": "FPV Drone Tutorials and Reviews, a blog for RC hobbyists to get the latest information about quadcopter and multirotor products and technology development, delivered to you by Oscar Liang. You can find build logs, tutorials, DIY hacks, and the latest product reviews. Oscar is an FPV drone aficionado and has been writing about them since 2013.",
+      "followers": {
+        "facebook": 32000,
+        "twitter": 699,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5458064.jpg?t=1666096434"
+    },
+    {
+      "title": "FPV Report",
+      "feed_url": "https://www.fpv-report.com/feed/",
+      "website_url": "https://www.fpv-report.com/",
+      "description": "FPV Report is a French news website dedicated to recreational FPV drones. Explore in-depth, well-researched articles covering News, Drones, FPV, sUAS Multirotor, Freestyle, Racer, and many more topics. The site also provides links to buy discounted drone spare parts along with up-to-date information.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5458065.jpg?t=1666099029"
+    },
+    {
+      "title": "UAV Coach \u00bb FPV Racing",
+      "feed_url": "https://uavcoach.com/category/fpv-racing/feed/",
+      "website_url": "https://uavcoach.com/category/fpv-racing/",
+      "description": "Read the latest Drone Industry News in our weekly Round Up as well s information on our products and services on the FPV racing page. UAV Coach is a Training portal that offers Drone training, news, and free resources for real estate marketers, construction companies, filmmakers, news reporters, and a variety of other professions.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 2700,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5458067.jpg?t=1666098901"
+    },
+    {
+      "title": "Top FPV Drone",
+      "feed_url": "https://topfpvdrone.com/feed/",
+      "website_url": "https://topfpvdrone.com/",
+      "description": "Top FPV Drone is a resource for the best drones, goggles, racing drones, FPV drones, fishing drones, and more. The purpose of TOP FPV DRONE is to provide well-researched information regarding drones, such as reviews of drones and guides on how to fly them. Additionally, the website provides up-to-date information as well as advice on the most recent developments in this industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5360457.jpg?t=1666099198"
+    },
+    {
+      "title": "NordFPV Blog",
+      "feed_url": "https://nordfpv.com/blogs/news.atom",
+      "website_url": "https://nordfpv.com/blogs/news",
+      "description": "Access FPV Drone news, and expert tips and counsel for flying drones in the NOrdFPV blog. NordFPV is an Online store offering carefully selected first-person view (FPV) equipment for the best flying experience. We are Headquartered in Sweden with fast shipping to Sweden, Denmark, and Finland.",
+      "followers": {
+        "facebook": 523,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5458068.jpg?t=1666098721"
+    },
+    {
+      "title": "Propwashed",
+      "feed_url": "https://www.propwashed.com/feed/",
+      "website_url": "https://www.propwashed.com/",
+      "description": "Get Buyer Guides, Reviews, the latest product information, and more in these articles from Propwashed. Propwashed is a one-stop shop for up-to-date information on all things Quadcopters and drones. Alongside our informational guides, you will find news on events we go to, fun things we do with our mini quads, and cool stuff we make or buy.",
+      "followers": {
+        "facebook": 479
+      },
+      "image_url": "https://i1.feedspot.com/5458062.jpg?t=1666098873"
+    }
+  ]
+}

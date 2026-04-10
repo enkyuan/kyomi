@@ -1,0 +1,843 @@
+{
+  "category": "Supply Chain",
+  "source_url": "https://rss.feedspot.com/supply_chain_rss_feeds",
+  "feeds": [
+    {
+      "title": "All Things Supply Chain",
+      "feed_url": "https://www.allthingssupplychain.com/feed/",
+      "website_url": "https://www.allthingssupplychain.com/",
+      "description": "Supply Chain trends, best practices, news and much more!",
+      "followers": {
+        "facebook": 633,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4661494.jpg?t=1617718301"
+    },
+    {
+      "title": "Let's Talk Supply Chain Blog",
+      "feed_url": "https://letstalksupplychain.com/feed/",
+      "website_url": "https://letstalksupplychain.com/blog/",
+      "description": "Hey, I'm Sarah. I am the founder and host of Lets Talk Supply Chain, a popular supply chain podcast, blog and YouTube channel. I'm obsessed with empowering and elevating voices in supply chain, featuring organizations making an impact in the industry and creating safe spaces for authentic dialogue.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 4700,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5279814.jpg?t=1620801396"
+    },
+    {
+      "title": "SupplyChain24/7",
+      "feed_url": "https://www.supplychain247.com/rss",
+      "website_url": "https://www.supplychain247.com/",
+      "description": "Supply Chain 24/7 is the ultimate online business resource for transportation, distributions, logistics and supply chain professionals.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4661386.jpg?t=1617717968"
+    },
+    {
+      "title": "Supply Chain Brain",
+      "feed_url": "https://www.supplychainbrain.com/rss/articles",
+      "website_url": "https://www.supplychainbrain.com/",
+      "description": "SupplyChainBrain, the world's most comprehensive supply chain management information resource, is accessed year round through a wide range of ever evolving multi-media formats by hundreds of thousands of senior level industry executives. It provides the latest news, emerging trends, technologies and best practices, forward thinking ideas, cutting-edge solutions and more.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 48300,
+        "instagram": 577
+      },
+      "image_url": "https://i1.feedspot.com/3441631.jpg?t=1615284791"
+    },
+    {
+      "title": "Supply Chain Game Changer",
+      "feed_url": "https://supplychaingamechanger.com/blog-posts/feed/",
+      "website_url": "https://supplychaingamechanger.com/blog-posts/",
+      "description": "Supply Chain Blog for transformational change. This is a blog dedicated to sharing experiences and expertise and curated to needs of any professional in supply chain and business.",
+      "followers": {
+        "facebook": 326,
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/4662063.jpg?t=1617718008"
+    },
+    {
+      "title": "Blue Yonder Supply Chain Nation Blog",
+      "feed_url": "https://blog.blueyonder.com/feed/",
+      "website_url": "https://blog.blueyonder.com/",
+      "description": "Key topics include industry insights, innovation, dive, logistics, and viewpoints. Blue Yonder helps companies modernize their supply chain using the cloud, artificial intelligence, and machine learning.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 12400,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4661425.jpg?t=1631769360"
+    },
+    {
+      "title": "BRASI Blog",
+      "feed_url": "https://blog.brasi.org/feed/",
+      "website_url": "https://blog.brasi.org/",
+      "description": "Welcome to our blog, where we delve into the world of supply chain management and explore the latest trends, technologies, and best practices. Our recent posts cover a range of topics. Join us on a journey of discovery as we explore the fascinating world of supply chain management.",
+      "followers": {
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/5552345.jpg?t=1682597470"
+    },
+    {
+      "title": "Magaya Blog",
+      "feed_url": "https://www.magaya.com/feed/",
+      "website_url": "https://www.magaya.com/blog/",
+      "description": "Questions about supply chain management, logistics software, and more? Visit our blog for useful articles. Your one-stop source of information about supply chain management trends, logistics software thought leadership, Magaya company and event updates, and so much more. At Magaya, we are passionate about helping our clients succeed and grow through our innovative, all-in-one supply chain automation platform, our collection of extensions and apps, and our expert professional services.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 546
+      },
+      "image_url": "https://i1.feedspot.com/5381046.jpg?t=1647348388"
+    },
+    {
+      "title": "Arkieva \u00bb Demand Planning Blog",
+      "feed_url": "https://blog.arkieva.com/feed/",
+      "website_url": "https://blog.arkieva.com/category/demand-planning/",
+      "description": "Arkieva's blog offers expertise in demand planning and supply chain optimization solutions. With a focus on demand segmentation, statistical forecasting techniques, and demand-driven decision-making, this blog provides insights into improving forecast accuracy, reducing stockouts, and optimizing inventory levels. Arkieva's blog shares practical tips, industry trends, and success stories to help businesses streamline their demand planning processes and achieve better supply chain performance.",
+      "followers": {
+        "facebook": 402,
+        "twitter": 489,
+        "instagram": 120
+      },
+      "image_url": "https://i1.feedspot.com/4661524.jpg?t=1617718273"
+    },
+    {
+      "title": "SCMDOJO",
+      "feed_url": "https://www.scmdojo.com/feed/",
+      "website_url": "https://www.scmdojo.com/",
+      "description": "SCMDOJO was created with the intention to enable supply chain professionals & supply chain team to solve the problems they face in their jobs & business. Check out the site to know more about supply chain, procurement, and leadership.",
+      "followers": {
+        "facebook": 21600,
+        "twitter": 4700,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/4661468.jpg?t=1597300845"
+    },
+    {
+      "title": "TECSYS Blog",
+      "feed_url": "https://www.tecsys.com/blog/rss.xml",
+      "website_url": "https://www.tecsys.com/blog",
+      "description": "Innovative, proven software and technology that transform the distribution supply chain with solutions for warehouse management, distribution management, transportation management, financial management and analytics.",
+      "followers": {
+        "facebook": 46000,
+        "twitter": 620
+      },
+      "image_url": "https://i1.feedspot.com/2148827.jpg?t=1617718012"
+    },
+    {
+      "title": "Logistics Manager \u00bb Supply Chain",
+      "feed_url": "https://www.logisticsmanager.com/supply-chain/feed/",
+      "website_url": "https://www.logisticsmanager.com/supply-chain/",
+      "description": "Logistics Manager is the leading monthly magazine for managers in charge of the supply chain of the UK's largest industrial, retail and commercial organizations. There's extensive coverage of the latest insights, intelligence, and trends that are shaping the world of logistics, supply chain, intralogistics, and property - with a heavy focus on new technologies and processes reshaping the industry.",
+      "followers": {
+        "twitter": 40700
+      },
+      "image_url": "https://i1.feedspot.com/5381047.jpg?t=1647345848"
+    },
+    {
+      "title": "Shipium Blog",
+      "feed_url": "https://www.shipium.com/blog/rss.xml",
+      "website_url": "https://www.shipium.com/blog",
+      "description": "Shipium helps eCommerce deliver their orders fast, free, and on time. Shipium centers on the idea that every eCommerce business can compete in today's economy by adopting a few modern principles. Modern eCommerce companies turn to Shipium when they want to increase revenue, improve loyalty, and decrease costs by adding new supply chain technology.",
+      "followers": {
+        "twitter": 145
+      },
+      "image_url": "https://i1.feedspot.com/5381038.jpg?t=1647349376"
+    },
+    {
+      "title": "SCM Blog",
+      "feed_url": "https://www.supplychainmovement.com/category/blogs/feed/",
+      "website_url": "https://www.supplychainmovement.com/category/blogs/",
+      "description": "Spreading European supply chain knowledge around the world. A blog by Martijn Lofvers. CEO & Chief Trendwatcher of Supply Chain Magazine and Movement, researcher for western movie Brimstone.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4661963.jpg?t=1617718437"
+    },
+    {
+      "title": "SCM Globe Blog",
+      "feed_url": "https://www.scmglobe.com/blog/feed/",
+      "website_url": "https://www.scmglobe.com/blog/",
+      "description": "SCM Globe provides cloud-based supply chain modeling and simulation applications for use in education, training, and business.",
+      "followers": {
+        "facebook": 166,
+        "twitter": 111
+      },
+      "image_url": "https://i1.feedspot.com/4661855.jpg?t=1608805400"
+    },
+    {
+      "title": "Logility Blog",
+      "feed_url": "https://www.logility.com/feed/",
+      "website_url": "https://www.logility.com/resources/?filter=Blog/",
+      "description": "Logility, Inc. is a global provider of supply chain planning software solutions for companies of all size. The company was established as a wholly-owned subsidiary of American Software, to take advantage of changing market conditions and the growing need for specialized supply chain management solutions.",
+      "followers": {
+        "facebook": 769,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4911674.jpg?t=1617718269"
+    },
+    {
+      "title": "Supply Chain Today",
+      "feed_url": "https://www.supplychaintoday.com/feed/",
+      "website_url": "https://www.supplychaintoday.com/",
+      "description": "Supply Chain and business portal aggregating top news and information.",
+      "followers": {
+        "facebook": 26800
+      },
+      "image_url": "https://i1.feedspot.com/4661487.jpg?t=1617718276"
+    },
+    {
+      "title": "Lucas Blog",
+      "feed_url": "https://www.lucasware.com/feed/",
+      "website_url": "https://www.lucasware.com/blog/",
+      "description": "Lucas provides solutions for intelligent work execution software solutions that improve hands-on processes and workflows in the DC.",
+      "followers": {
+        "facebook": 90,
+        "twitter": 386
+      },
+      "image_url": "https://i1.feedspot.com/5158870.jpg?t=1617718318"
+    },
+    {
+      "title": "RFgen Blog",
+      "feed_url": "https://www.rfgen.com/feed/",
+      "website_url": "https://www.rfgen.com/research-library/?media_category%5B%5D=blog_posts/",
+      "description": "The Mobile Supply Chain Blog features interesting and relevant articles related to supply chain management, mobile data collection, warehouse automation, field service automation, government compliance, and more.",
+      "followers": {
+        "facebook": 267,
+        "twitter": 400,
+        "instagram": 73
+      },
+      "image_url": "https://i1.feedspot.com/4661733.jpg?t=1617719325"
+    },
+    {
+      "title": "Supply Chain Shaman",
+      "feed_url": "https://www.supplychainshaman.com/feed/",
+      "website_url": "https://www.supplychainshaman.com/",
+      "description": "Lora Cecere is the Founder and CEO of Supply Chain Insights , the research firm that's paving new directions in building thought-leading supply chain research. She is also the author of the enterprise software blog Supply Chain Shaman. The blog focuses on the use of enterprise applications to drive supply chain excellence.",
+      "followers": {
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/42555.jpg?t=1617718450"
+    },
+    {
+      "title": "Argentus Supply Chain Insights Blog",
+      "feed_url": "https://www.argentus.com/category/blog/feed/",
+      "website_url": "https://www.argentus.com/category/blog/",
+      "description": "Experts in Supply Chain, Procurement, Operations, Planning, and Logistics. Our real value is the depth and reach of our network into the hidden passive candidate market.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4661446.jpg?t=1647425144"
+    },
+    {
+      "title": "Alpine Supply Chain Solutions Blog",
+      "feed_url": "https://alpinesupplychain.com/feed/",
+      "website_url": "https://alpinesupplychain.com/newsroom-blog/",
+      "description": "Follow and read news all about Alpine Supply Chain Solutions, Supply Chain System Consultants, Training, WMS Implementations, and Expertise. Alpine Supply Chain Solutions develops and implements optimal solutions that drive maximum value.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5381051.jpg?t=1647348300"
+    },
+    {
+      "title": "Enchange Supply Chain Consultancy",
+      "feed_url": "https://supplychain.enchange.com/rss.xml",
+      "website_url": "https://supplychain.enchange.com/",
+      "description": "International Supply Chain Consultants - We will work with your team to deliver results. Consultancy Projects - Interim Management - Supply Chain Analytics.",
+      "followers": {
+        "facebook": 134,
+        "twitter": 89
+      },
+      "image_url": "https://i1.feedspot.com/4661788.jpg?t=1617718471"
+    },
+    {
+      "title": "USC GSCM Blog",
+      "feed_url": "https://uscsupplychain.com/feed/",
+      "website_url": "https://uscsupplychain.com/blog/",
+      "description": "The USC Marshall Center for Global Supply Chain Management exists to connect the world through Global Supply Chain Management with Network, Education, and Advanced Research (NEAR).",
+      "followers": {
+        "facebook": 996,
+        "twitter": 332
+      },
+      "image_url": "https://i1.feedspot.com/5279812.jpg?t=1620814387"
+    },
+    {
+      "title": "Roambee",
+      "feed_url": "https://blog.roambee.com/supply-chain-technology/rss.xml",
+      "website_url": "https://blog.roambee.com/supply-chain-technology",
+      "description": "Roambee's blog provides information on a variety of topics focusing on increasing efficiency, improving security, and reducing the risk associated with your supply chain.",
+      "followers": {
+        "facebook": 343,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4797426.jpg"
+    },
+    {
+      "title": "NFI Industries",
+      "feed_url": "https://www.nfiindustries.com/feed/",
+      "website_url": "https://www.nfiindustries.com/about-nfi/insights/",
+      "description": "NFI is a leading third party logistics provider offering customers from various industries award-winning domestic and international supply chain solutions. Supply Chain Link is your industry connection for everything logistics and supply chain. Visit us for supply chain insights, resources, and best practices.",
+      "followers": {
+        "facebook": 14200,
+        "twitter": 2200,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4661738.jpg"
+    },
+    {
+      "title": "AbcSupplyChain Blog",
+      "feed_url": "https://abcsupplychain.com/feed/",
+      "website_url": "https://abcsupplychain.com/blog/",
+      "description": "I am Edouard Thieuleux from Bordeaux in France, founder of AbcSupplyChain. We provide the best tools, excel, courses, advice, software, ERP to improve your supply chain, logistics & inventory management performances and boost your career.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5273166.jpg?t=1619446280"
+    },
+    {
+      "title": "Schain24.com",
+      "feed_url": "https://www.schain24.com/feed/",
+      "website_url": "https://www.schain24.com/",
+      "description": "This is a blog about Supply Chain Management issues and facts.",
+      "followers": {
+        "facebook": 803,
+        "twitter": 123
+      },
+      "image_url": "https://i1.feedspot.com/5120542.jpg?t=1617718680"
+    },
+    {
+      "title": "Global Supply Chain Law Blog",
+      "feed_url": "https://www.globalsupplychainlawblog.com/feed/",
+      "website_url": "https://www.globalsupplychainlawblog.com/",
+      "description": "The Global Supply Chain Law Blog discusses legal supply chain issues that often lead to litigation in the supply chain across industries. We discuss current cases, important nuances in the law that can affect supply chain relationships, and ways to make supply chain legal practices more robust, particularly in light of today's global supply chains.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 11600,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4661730.jpg?t=1647429424"
+    },
+    {
+      "title": "eft - Supply Chain & Logistics Business Intelligence",
+      "feed_url": "https://www.reutersevents.com/supplychain/taxonomy/term/7954/feed",
+      "website_url": "https://www.reutersevents.com/supplychain/supply-chain",
+      "description": "eft is the global leader in business intelligence and C-level networking for the transport, logistics and supply chain industry. We specialize in connecting senior industry executives with their industry peers, and with the crucial information they need to excel in their work.",
+      "followers": {
+        "facebook": 299,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4739969.jpg?t=1617718280"
+    },
+    {
+      "title": "SCM Talent Group \u00bb Supply Chain Content Hub",
+      "feed_url": "https://scmtalent.com/feed/",
+      "website_url": "https://scmtalent.com/supply-chain-content-hub/",
+      "description": "SCM Talent Group is a national supply chain recruiting and executive search firm that recruits across the end-to-end supply chain discipline. The Supply Chain Talent Blog keeps you informed on the latest supply chain recruitment and career development trends, job search techniques, resume tips, interviewing advice and more.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4661740.jpg?t=1617718459"
+    },
+    {
+      "title": "Supply Chain Trend",
+      "feed_url": "https://supplychaintrend.com/feed/",
+      "website_url": "https://supplychaintrend.com/",
+      "description": "Shaping the world of S&OP and Supply Chain.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4661370.jpg"
+    },
+    {
+      "title": "Advatix - Logistic Supply Chain",
+      "feed_url": "https://feeds.feedburner.com/Advatix-LogisticSupplyChain",
+      "website_url": "https://logistic-consulting-services.blogspot.com/",
+      "description": "Advatix is an efficient team of Supply Chain Experts with extensive experience in Fulfillment, logistics and global operations to help you in scaling business profitability.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5452126.jpg?t=1674633741"
+    },
+    {
+      "title": "Supply Chain Dive",
+      "feed_url": "https://www.supplychaindive.com/feeds/news/",
+      "website_url": "https://www.supplychaindive.com/",
+      "description": "Supply Chain Dive provides in-depth journalism and insight into the most impactful news and trends shaping supply chain management. The website cover topics such as logistics, freight, operations, procurement, regulation, technology, and more.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4975750.jpg?t=1615287139"
+    },
+    {
+      "title": "AFFLINK Blog",
+      "feed_url": "https://www.afflink.com/blog/rss.xml",
+      "website_url": "https://www.afflink.com/blog",
+      "description": "AFFLINK is a leader in supply chain and strategic procurement services providing cost savings, process improvement, and quality products.",
+      "followers": {
+        "facebook": 844,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4661797.jpg?t=1617718294"
+    },
+    {
+      "title": "Establish Blog",
+      "feed_url": "https://www.establishinc.com/supply-chain-blog?format=rss",
+      "website_url": "https://www.establishinc.com/supply-chain-blog/",
+      "description": "Establish is a supply chain consulting firm offering specialized services in the optimization of the supply chain. We have completed over 2,000 client engagements over the last 42 years. The Establish supply chain consultants are very experienced in supply chain management. This is combined with the sharpest mathematicians and analysts with the state of the art tools, who provide quantitative analytics.",
+      "followers": {
+        "facebook": 12,
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/5279711.jpg?t=1620798698"
+    },
+    {
+      "title": "Supply Chain Now",
+      "feed_url": "https://supplychainnow.com/feed/",
+      "website_url": "https://supplychainnow.com/blog-news/",
+      "description": "It's time for Supply Chain Now! Make sure you're up to date on all the latest episodes, interviews, conversations, and live streams right here! On Monday, Tracie.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 24000,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5279813.jpg?t=1620800256"
+    },
+    {
+      "title": "Supply Chain Management Review",
+      "feed_url": "https://feeds.feedburner.com/scmr/rss/recentlyfiled",
+      "website_url": "https://www.scmr.com/",
+      "description": "Supply Chain Management Review covers the spectrum of supply chain management-that is, the flow of goods and information from sourcing through manufacturing and on to the final consumer. Key activities within this end-to-end process include sourcing, purchasing, production planning, inventory management, transportation/logistics, customer service and reverse logistics.",
+      "followers": {
+        "facebook": 34900,
+        "twitter": 33600
+      },
+      "image_url": "https://i1.feedspot.com/899765.jpg?t=1617717971"
+    },
+    {
+      "title": "Medium \u00bb MITSupplyChain",
+      "feed_url": "https://medium.com/feed/mitsupplychain",
+      "website_url": "https://medium.com/mitsupplychain",
+      "description": "MIT Supply Chain is a world leader in supply chain management education, research, and thought leadership. Medium is where those ideas take shape, take off, and spark powerful conversations. Here, expert and undiscovered voices alike dive into the heart of any topic and bring new ideas to the surface.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 34500,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5381039.jpg?t=1647345078"
+    },
+    {
+      "title": "Supply Chain Matters",
+      "feed_url": "https://theferrarigroup.com/supply-chain-matters/feed/",
+      "website_url": "https://theferrarigroup.com/supply-chain-matters/",
+      "description": "Supply chain business and technology advisory services. A blog by Bob Ferrari. Bob is a highly visible supply chain technology executive, noted industry analyst and consultant, with demonstrated and proven experience in business planning, process, and information technology transformation.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4661349.jpg?t=1647431447"
+    },
+    {
+      "title": "Supply Chain Management Research",
+      "feed_url": "https://scmresearch.org/feed/",
+      "website_url": "https://scmresearch.org/",
+      "description": "Andreas Wieland's supply chain management blog for academics and managers.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4661816.jpg?t=1617718654"
+    },
+    {
+      "title": "Supply Chain Secrets Blog",
+      "feed_url": "https://www.supplychainsecrets.com/feed/",
+      "website_url": "https://www.rdleagle.com/our-thinking/",
+      "description": "Supply Chain Secrets is an online education program that helps those working in Supply Chain and Logistics to boost their knowledge and be better at their jobs. The complete program consists of a comprehensive package of eClasses plus all the eBooks and corresponding bonuses.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5279713.jpg?t=1620813311"
+    },
+    {
+      "title": "RDL Eagle Trade",
+      "feed_url": "https://www.rdleagle.com/our-thinking?format=RSS",
+      "website_url": "https://www.rdleagle.com/our-thinking/",
+      "description": "RDL Eagle Trade is a premier logistics and supply chain management company in Barbados specializing in freight forwarding, customs brokerage, project and event logistics, in-bond inventory management and international procurement. The blog offers shipping and logistics tips that are specially packaged for easy consumption and are told from a Caribbean perspective.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5025922.jpg?t=1617720789"
+    },
+    {
+      "title": "Identify3D Blog",
+      "feed_url": "http://identify3d.com/blog/feed/",
+      "website_url": "http://identify3d.com/blog/",
+      "description": "The Identify3D Digital Supply Chain Platform provides design protection, quality assurance, and data logistics for digital manufacturing.",
+      "followers": {
+        "twitter": 325
+      },
+      "image_url": "https://i1.feedspot.com/4662057.jpg?t=1647431974"
+    },
+    {
+      "title": "Supply Chain Navigator",
+      "feed_url": "https://scnavigator.avnet.com/feed/",
+      "website_url": "https://scnavigator.avnet.com/december-2020/",
+      "description": "May 2017 Making in America How tech startups are compelling and enabling offshoring reversal Challenged to deliver more quick turn, customized products, while reducing their reliance on inventory, multinationals are rethinking the mass production, low-cost country sourcing model, opting instead to adopt a more regional, in-country/for-country approach.",
+      "followers": {
+        "facebook": 26400,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/4243609.jpg?t=1617718003"
+    },
+    {
+      "title": "Forecasting Blog",
+      "feed_url": "https://forecastingblog.com/feed/",
+      "website_url": "https://forecastingblog.com/",
+      "description": "The Forecasting Blog offers in-depth insights into the field of demand forecasting. With a focus on statistical forecasting techniques, forecasting models, and demand variability, this blog provides valuable information for professionals in the forecasting and planning domain. The Forecasting Blog offers practical tips, case studies, and academic research to help businesses improve their forecasting accuracy and make informed decisions.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 489,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5162615.jpg?t=1617718685"
+    },
+    {
+      "title": "SOURCING & SUPPLY CHAIN",
+      "feed_url": "https://sourcingandsupplychain.com/feed/",
+      "website_url": "https://sourcingandsupplychain.com/",
+      "description": "We at Sourcing and Supply Chain Management have a keen focus on the sharing of ideas, concepts, knowledge, and know-how of Sourcing and Supply Chain Management. Our aim is to share knowledge and expertise with industry for building a strong supply chain which help them to make businesses profitable.",
+      "followers": {
+        "facebook": 675,
+        "twitter": 428
+      },
+      "image_url": "https://i1.feedspot.com/5072626.jpg?t=1598853530"
+    },
+    {
+      "title": "The Mpower Group",
+      "feed_url": "https://feeds.feedburner.com/thempowergroup/DVCN",
+      "website_url": "https://blog.thempowergroup.com/",
+      "description": "The Mpower Group is in the business of Mpowering our clients to accelerate superior business outcomes by unleashing the full potential of their Strategic Sourcing / Supply Chain organizations. We are a global consulting firm dedicated to serving the needs of Fortune 500 Strategic Sourcing & Supply Chain organizations.",
+      "followers": {
+        "facebook": 28,
+        "twitter": 327
+      },
+      "image_url": "https://i1.feedspot.com/5013929.jpg?t=1617718693"
+    },
+    {
+      "title": "Optimum SCR Blog",
+      "feed_url": "https://www.optimumscr.com/blog/feed/",
+      "website_url": "https://www.optimumscr.com/blog/",
+      "description": "Read our supply chain tips and tricks for both candidates and companies. Our tips will help your company find the right supply chain manager!",
+      "followers": {
+        "facebook": 56,
+        "twitter": 150
+      },
+      "image_url": "https://i1.feedspot.com/4662025.jpg?t=1674640421"
+    },
+    {
+      "title": "MetaCog Solutions Blog",
+      "feed_url": "https://www.metacogsolutions.com/blog/feed/",
+      "website_url": "https://www.metacogsolutions.com/blog/",
+      "description": "MetaCog Solutions is a company committed to professional skill development in the field of Supply Chain management. Using a MOOC technology platform, we offer several courses that impart extensive training across locations in India and abroad.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/4662015.jpg?t=1617719276"
+    },
+    {
+      "title": "The Supply Chain Academy",
+      "feed_url": "https://supplychainacademy.org.uk/feed/",
+      "website_url": "https://supplychainacademy.org.uk/news/",
+      "description": "Established in 2012 by successful global freight business leader; Iain Liddell, the Supply Chain Academy provides senior managers and directors with the 'business led' innovative and strategic vision for leading their supply chain. The Academy's purpose is to provide creative insights for supply chain leaders through our Director Master Classes and to create supply chain genius.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5381048.jpg?t=1647345130"
+    },
+    {
+      "title": "Globalior",
+      "feed_url": "https://www.globalior.com/feed/",
+      "website_url": "https://www.globalior.com/",
+      "description": "Follow Globalior to get articles and updates related to international trade compliance, supply chain and logistics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5098969.jpg?t=1617719440"
+    },
+    {
+      "title": "Supply Chain Solutions Blog",
+      "feed_url": "https://supplycs.com/blog/feed/",
+      "website_url": "https://supplycs.com/blog/",
+      "description": "As the largest privately owned specialist 3PL we offer leading class solutions, and in many cases unique and proprietary solutions, for both B2B and B2C customers. The SCS value add offering now extends fully into 4PL as well as complete end to end Supply Chain Management contracts.",
+      "followers": {
+        "facebook": 344
+      },
+      "image_url": "https://i1.feedspot.com/4661923.jpg?t=1617718689"
+    },
+    {
+      "title": "UCLA Anderson Global Supply Chain Blog",
+      "feed_url": "https://feeds.feedburner.com/ucla/mTFb",
+      "website_url": "https://blogs.anderson.ucla.edu/global-supply-chain/",
+      "description": "This blog is developed by the Decisions Operations and Technology Management (DOTM) Faculty at the UCLA Anderson School. It is intended to report, analyze, and comment on events that relate to current Global Supply Chain Management issues.",
+      "followers": {
+        "facebook": 47800,
+        "twitter": 20000
+      },
+      "image_url": "https://i1.feedspot.com/1436065.jpg?t=1617717983"
+    },
+    {
+      "title": "Fronetics Digital and Content Marketing for the Supply Chain Blog",
+      "feed_url": "https://www.fronetics.com/feed/",
+      "website_url": "https://www.fronetics.com/blog/",
+      "description": "Fronetics' blog offers information, news, and updates on digital and content marketing for companies in the supply chain and logistics industries.",
+      "followers": {
+        "twitter": 7800,
+        "instagram": 235
+      },
+      "image_url": "https://i1.feedspot.com/4661466.jpg?t=1617718284"
+    },
+    {
+      "title": "KEPLER",
+      "feed_url": "https://www.kepler-consulting.com/en/kepler-mag/feed/",
+      "website_url": "https://www.kepler-consulting.com/en/kepler-mag/",
+      "description": "KEPLER is a consulting firm specialized in operational margin optimization with four areas of expertise: Innovation, Purchasing, Supply Chain and Operational Efficiency.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 256
+      },
+      "image_url": "https://i1.feedspot.com/4989086.jpg?t=1617721269"
+    },
+    {
+      "title": "Logistics Bureau Blog",
+      "feed_url": "https://www.logisticsbureau.com/feed/",
+      "website_url": "https://www.logisticsbureau.com/blog/",
+      "description": "Explore a helpful Supply Chain & logistics blog from Logistics Bureau packed with tips and insights from industry-leading professionals. Keep an eye on the latest trends and get valuable insights into various aspects of the logistics industry. Logistics Bureau is a privately owned specialist management consulting company focused on the field of Supply Chain and Logistics.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 2700,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5053491.jpg?t=1617717999"
+    },
+    {
+      "title": "Association for Supply Chain Management Blog",
+      "feed_url": "https://www.ascm.org/rss/",
+      "website_url": "https://www.ascm.org/ascm-insights/",
+      "description": "On the blog, The industry's experts offer their take on the current state of supply chain organizational transformation, innovation, and leadership. The Association for Supply Chain Management (ASCM) is the global leader in supply chain transformation, innovation, and leadership and is built upon a foundation of APICS certification and training spanning 60 years.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 16800
+      },
+      "image_url": "https://i1.feedspot.com/4661482.jpg?t=1631529426"
+    },
+    {
+      "title": "Supply Chain Xchange",
+      "feed_url": "https://www.thescxchange.com/rss/articles",
+      "website_url": "https://www.thescxchange.com/",
+      "description": "CSCMP's Supply Chain Quarterly provides the highest-value, must-have business intelligence available. The publication delivers fresh, cutting-edge ideas on all aspects of the global supply chain, from product design, procurement, transportation, and warehousing to human resources, information technology, and finance. We provide insight and advice to help readers make their supply chain operations a success.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/5254841.jpg?t=1710755599"
+    },
+    {
+      "title": "The Network Effect",
+      "feed_url": "https://supplychainbeyond.com/feed/",
+      "website_url": "https://supplychainbeyond.com/",
+      "description": "Exploring the latest supply chain trends. The Network Effect explores the implications of the next major trend to emerge in supply chain - the existence of a many-to-many network-based platform that connects all trading partners from the end customer to the raw material supplier, and coordinates their actions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2148829.jpg?t=1648471548"
+    },
+    {
+      "title": "BR Williams Trucking, INC Blog",
+      "feed_url": "https://brwnow.com/feed/",
+      "website_url": "https://www.authenticateis.com/news/",
+      "description": "BR Williams is a family-owned supply chain management company based in Alabama and serving the entire USA. Logistics, trucking, warehousing, and distribution services. Established in 1958. Check out our blog on best practices for supply chain management including warehousing, fulfillment, transportation, distribution, and logistics.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 94
+      },
+      "image_url": "https://i1.feedspot.com/5131436.jpg?t=1617721477"
+    },
+    {
+      "title": "Supply Chain Digest",
+      "feed_url": "https://www.scdigest.com/",
+      "website_url": "https://www.scdigest.com/",
+      "description": "Supply Chain Digest is the leading on-line newsletter and web site for busy supply chain and logistics professionals to get news and insight and to find solutions.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/1154584.jpg?t=1617719333"
+    },
+    {
+      "title": "Chainalytics",
+      "feed_url": "https://www.chainalytics.com/feed/",
+      "website_url": "https://us.nttdata.com/en/about-us/content/acquisitions/chainalytics-is-now-ntt-data",
+      "description": "Chainalytics, a leader in supply chain consulting, analytics, and market intelligence, helps its clients capture the maximum value from their supply chains.",
+      "followers": {
+        "facebook": 687
+      },
+      "image_url": "https://i1.feedspot.com/4661510.jpg?t=1617718310"
+    },
+    {
+      "title": "Supply Chain Digital",
+      "feed_url": "https://supplychaindigital.com/",
+      "website_url": "https://supplychaindigital.com/",
+      "description": "Supply Chain Digital is the digital community for the global supply chain & logistics industry that connects the world's largest supply chain & logistics brands. Supply Chain Digital focuses on procurement and supply chain news, key interviews, supply chain videos, along with an ever-expanding range of focused procurement and supply chain white papers and webinars.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 43900,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5381044.jpg?t=1647348836"
+    },
+    {
+      "title": "RELEX Solutions",
+      "feed_url": "https://www.relexsolutions.com/resources/feed/",
+      "website_url": "https://www.relexsolutions.com/resources/",
+      "description": "RELEX Solutions provides an integrated retail and supply chain planning system that delivers impressive results for customers around the world.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4661735.jpg?t=1648470419"
+    },
+    {
+      "title": "MPO Blog",
+      "feed_url": "https://blog.mpo.com/rss.xml",
+      "website_url": "https://www.kinaxis.com/en/blog",
+      "description": "MPO's blog for the latest supply chain orchestration news, events and commentary",
+      "followers": {
+        "facebook": 677,
+        "twitter": 327
+      },
+      "image_url": "https://i1.feedspot.com/5035316.jpg?t=1617719263"
+    },
+    {
+      "title": "Sphera \u00bb Supply Chain Sustainability",
+      "feed_url": "https://sphera.com/resources/?_resource_type=blog&_resource_solution=supply-chain-sustainability/",
+      "website_url": "https://sphera.com/resources/?_resource_type=blog&_resource_solution=supply-chain-sustainability/",
+      "description": "Keep up with our thoughts on all of the latest happenings in supply chain responsibility. At SupplyShift, we're committed to helping businesses create more transparent, responsible, and resilient supply chains. We help you discover the insights you need to build more a transparent, sustainable, and resilient supply chain.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5381043.jpg?t=1647347970"
+    },
+    {
+      "title": "ToolsGroup Blog",
+      "feed_url": "https://www.toolsgroup.com/blog/feed/",
+      "website_url": "https://www.toolsgroup.com/blog/",
+      "description": "Valuable innovation and technology insights for supply chain executives that improve growth and accelerate business performance.",
+      "followers": {
+        "facebook": 352,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4661825.jpg?t=1608804018"
+    },
+    {
+      "title": "Flexis AG",
+      "feed_url": "https://blog.flexis.com/rss.xml",
+      "website_url": "https://blog.flexis.com/",
+      "description": "Flexis AG is a global leader in supply chain management software. We are dedicated to developing and implementing automated, customer-orientated solutions for the most complex supply chain issues in automotive, manufacturing, and logistics.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4661871.jpg?t=1617718266"
+    },
+    {
+      "title": "Gravity Supply Chain",
+      "feed_url": "https://blog.gravitysupplychain.com/rss.xml",
+      "website_url": "https://gravitysupplychain.com/resources/",
+      "description": "Stay informed on supply chain best practices, current trends, and industry innovations.",
+      "followers": {
+        "twitter": 620
+      },
+      "image_url": "https://i1.feedspot.com/4661843.jpg?t=1617719255"
+    },
+    {
+      "title": "Aioneers Blog",
+      "feed_url": "https://blog.aioneers.com/supplychain/rss.xml",
+      "website_url": "https://blog.aioneers.com/supplychain",
+      "description": "At aioneers, we are a diverse group of individuals with a broad set of complementary skills and strengths, differing in life experience and seniority, and the origin and cultural backgrounds. We do optimization of the supply chain that creates actual business value, reduction of costs and working capital and boosts the top line.",
+      "followers": {
+        "facebook": 5,
+        "instagram": 122
+      },
+      "image_url": "https://i1.feedspot.com/5279712.jpg?t=1620799086"
+    },
+    {
+      "title": "Quality Assurance For Household Goods Blog",
+      "feed_url": "https://www.api-hk.com/quality-assurance-for-household-goods-blog/rss.xml",
+      "website_url": "https://www.api-hk.com/quality-assurance-for-household-goods-blog/",
+      "description": "Get regular expert information, quality advice and tips, and household goods industry news from API.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 76
+      },
+      "image_url": "https://i1.feedspot.com/4685736.jpg?t=1617718314"
+    },
+    {
+      "title": "Supply Chain World Magazine",
+      "feed_url": "https://scw-mag.com/component/fpss/module/115?format=feed",
+      "website_url": "https://scw-mag.com/",
+      "description": "Supply Chain World magazine is the authority on best practices in supply chain management. Helping Supply Chain leaders stay current with best practices!",
+      "followers": {
+        "facebook": 72,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4661833.jpg?t=1617719252"
+    },
+    {
+      "title": "LLamasoft Supply Chain Blog",
+      "feed_url": "https://llamasoft.com/blog/feed/",
+      "website_url": "https://www.coupa.com/blog/",
+      "description": "The global leader in supply chain design software and solutions. Optimise your supply chain with LLamasoft's industry-leading supply chain management software and tools.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4661850.jpg?t=1608805173"
+    },
+    {
+      "title": "River Logic Blog",
+      "feed_url": "https://riverlogic.com/blog/rss.xml",
+      "website_url": "https://riverlogic.com/blog/",
+      "description": "The River Logic blog covers industry topics around prescriptive analytics, supply chain planning design, optimization, innovative technologies, manufacturing, and more. River Logic is a privately held technology firm. We are a global innovator in advanced analytics for planning & decision support and offer both a platform for custom solutions in addition to packaged solutions.",
+      "followers": {
+        "facebook": 110
+      },
+      "image_url": "https://i1.feedspot.com/5381037.jpg?t=1647345069"
+    },
+    {
+      "title": "Flash Global: The Service Supply Chain Company",
+      "feed_url": "https://flashglobal.com/recent-articles/feed/",
+      "website_url": "https://flashglobal.com/recent-articles/",
+      "description": "Flash Global implements service supply chain strategies for expanding companies, creating predictability, consistency and visibility for your service logistics.",
+      "followers": {
+        "facebook": 577,
+        "twitter": 16700,
+        "instagram": 484
+      },
+      "image_url": "https://i1.feedspot.com/4661754.jpg?t=1617718323"
+    },
+    {
+      "title": "Dedola Global Logistics Blog",
+      "feed_url": "https://dedola.com/blog/feed/",
+      "website_url": "https://dedola.com/blog/",
+      "description": "Official supply chain management and freight forwarder blog of Dedola Global Logistics. Follow to get updates.",
+      "followers": {
+        "facebook": 462,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5067541.jpg?t=1617718298"
+    },
+    {
+      "title": "Supply Chain Minded",
+      "feed_url": "https://supplychainminded.com/feed/",
+      "website_url": "https://supplychainminded.com/",
+      "description": "Supply Chain Minded is a very active and fast growing online community in Supply Chain for Planning, Sourcing, Manufacturing, Delivery and Reverse Logistics professionals.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4661946.jpg?t=1617719341"
+    }
+  ]
+}

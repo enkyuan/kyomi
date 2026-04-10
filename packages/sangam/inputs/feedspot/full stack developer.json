@@ -1,0 +1,90 @@
+{
+  "category": "Full Stack Developer",
+  "source_url": "https://rss.feedspot.com/full_stack_developer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Designer to Full Stack",
+      "feed_url": "https://designertofullstack.com/feed/",
+      "website_url": "https://designertofullstack.com/",
+      "description": "Tech articles about full stack design, web development and entrepreneurship by Kelly Barkhurst, a female designer, developer and business owner.",
+      "followers": {
+        "facebook": 32
+      },
+      "image_url": "https://i1.feedspot.com/5506654.jpg?t=1676270848"
+    },
+    {
+      "title": "Full Stack Techies Blog",
+      "feed_url": "https://fullstacktechies.com/feed/",
+      "website_url": "https://fullstacktechies.com/blog/",
+      "description": "We are a global technology consulting &services company serving small, mediumand enterprise companies helping them togrow with agility to achieve competitiveadvantage. Read our blog and know more about our work and read helpful articles on full stack development.",
+      "followers": {
+        "facebook": 547,
+        "twitter": 27,
+        "instagram": 424
+      },
+      "image_url": "https://i1.feedspot.com/5605387.jpg?t=1687429367"
+    },
+    {
+      "title": "Chris' Full Stack Blog",
+      "feed_url": "https://chrisfrew.in/rss.xml",
+      "website_url": "https://chrisfrew.in/",
+      "description": "Become a better full stack software engineer. Check out Chris' Full Stack Blog!",
+      "followers": {
+        "instagram": 250
+      },
+      "image_url": "https://i1.feedspot.com/5605385.jpg?t=1687429521"
+    },
+    {
+      "title": "Nick Janetakis Blog",
+      "feed_url": "https://nickjanetakis.com/atom.xml",
+      "website_url": "https://nickjanetakis.com/blog",
+      "description": "Hi, I'm Nick. I'm a full-stack developer and teacher who focuses on building and deploying web apps. Take a look at my blog or courses. If I'm not building or deploying web apps, then I'm writing about what I've learned along the way in my blog. From development to production you will get all the information there.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5424063.jpg?t=1687429424"
+    },
+    {
+      "title": "Lawrence McDaniel",
+      "feed_url": "https://blog.lawrencemcdaniel.com/feed/",
+      "website_url": "https://blog.lawrencemcdaniel.com/",
+      "description": "Lawrence McDaniel is an American full stack developer with significant experience with classic backend stacks and front-end frameworks including Django, React, Angular, and WordPress. He also work extensively with the Open edX learning management system. A curated collection of technical how-to articles written by Lawrence McDaniel for AWS, Python, Django, Open edX, and WordPress.",
+      "followers": {
+        "twitter": 66
+      },
+      "image_url": "https://i1.feedspot.com/5293783.jpg?t=1623913322"
+    },
+    {
+      "title": "Andrej Gajdos Blog",
+      "feed_url": "https://andrejgajdos.com/feed/",
+      "website_url": "https://andrejgajdos.com/blog/",
+      "description": "Andrej's Personal Blog",
+      "followers": {
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/5605388.jpg?t=1687429360"
+    },
+    {
+      "title": "upGrad \u00bb Software Development",
+      "feed_url": "https://www.upgrad.com/blog/software-development/",
+      "website_url": "https://www.upgrad.com/blog/software-development/",
+      "description": "upGrad is an online higher education platform providing rigorous industry-relevant programs designed and delivered in collaboration with world-class faculty and industry. Learn About Full Stack Development through in-depth tutorials, research articles, infographics, helpful tips, developed by industry experts & fast-track your career.",
+      "followers": {
+        "facebook": 355900,
+        "twitter": 135100,
+        "instagram": 228100
+      },
+      "image_url": "https://i1.feedspot.com/5293784.jpg?t=1623912516"
+    },
+    {
+      "title": "Dev Post",
+      "feed_url": "https://devpost.hashnode.dev/rss.xml",
+      "website_url": "https://devpost.hashnode.dev/",
+      "description": "Hi!, My name is Aravind Vadamalaimuthu and I am a full-stack developer, passionate about sharing knowledge, free mentoring, and contributing to open-source projects and technology blogging. I write articles on TypeScript and JavaScript, Software Engineering concepts and design principles, AWS CDK and Serverless, and more.",
+      "followers": {
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/5405309.jpg?t=1653995418"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "category": "Yakima News",
+  "source_url": "https://rss.feedspot.com/yakima_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Yakima",
+      "feed_url": "https://www.yakimawa.gov/media/news/feed/",
+      "website_url": "https://www.yakimawa.gov/media/news/",
+      "description": "News and Updates from official website of City of Yakima.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 3900,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5140944.jpg?t=1623651936"
+    },
+    {
+      "title": "News Talk KIT",
+      "feed_url": "https://newstalkkit.com/feed/",
+      "website_url": "https://newstalkkit.com/",
+      "description": "1280 NewsTalk KIT, a Townsquare Media station, is Yakima Valley's home for the latest local news and information. Get the latest news and updates, events and more.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 663
+      },
+      "image_url": "https://i1.feedspot.com/5468327.jpg?t=1668591192"
+    },
+    {
+      "title": "FOX 41 Yakima",
+      "feed_url": "https://www.fox41yakima.com/feed/",
+      "website_url": "https://kimatv.com/",
+      "description": "Fox 11 and 41 is the home of Good Day morning news, FOX First at Ten and local news, weather and sports. The home of you favorite FOX shows.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 338
+      },
+      "image_url": "https://i1.feedspot.com/5141183.jpg?t=1623651926"
+    },
+    {
+      "title": "Apple Valley News Now",
+      "feed_url": "https://www.yaktrinews.com/feed/",
+      "website_url": "https://www.applevalleynewsnow.com/",
+      "description": "Yakima, Tri-Cities, Washington News, Weather, Sports and Events, KAPP-TV / KVEW-TV - KVEW",
+      "followers": {
+        "facebook": 95900,
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/5141182.jpg?t=1671425306"
+    }
+  ]
+}

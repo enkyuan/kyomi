@@ -1,0 +1,92 @@
+{
+  "category": "UK Landlord",
+  "source_url": "https://rss.feedspot.com/uk_landlord_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Landlord Law Blog",
+      "feed_url": "https://www.landlordlawblog.co.uk/feed/",
+      "website_url": "https://www.landlordlawblog.co.uk/blog-posts/",
+      "description": "An online information service site that has interesting articles, news, and tips on residential landlord & tenant law and practice. It helps landlords and tenants understand their legal rights and obligations.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4708149.jpg?t=1608801730"
+    },
+    {
+      "title": "OpenRent Blog",
+      "feed_url": "https://blog.openrent.co.uk/feed/",
+      "website_url": "https://blog.openrent.co.uk/",
+      "description": "Free, professional information for landlords & tenants.",
+      "followers": {
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4820108.jpg?t=1610774381"
+    },
+    {
+      "title": "Landlord Vision Blog",
+      "feed_url": "https://www.landlordvision.co.uk/blog/feed/",
+      "website_url": "https://www.landlordvision.co.uk/blog/",
+      "description": "On the Landlord Insider blog, you'll find some excellent resources for landlords of all sizes. From the latest landlord news to professional advice, tips, and guides for landlords, there's something for everyone. Get up-to-date information about landlord advice, landlord tips, landlord tenants, landlord property management, new laws for landlords, and more through their blog.",
+      "followers": {
+        "facebook": 985,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4632466.jpg?t=1614074004"
+    },
+    {
+      "title": "The BLA",
+      "feed_url": "https://thebla.co.uk/feed/",
+      "website_url": "https://thebla.co.uk/latest-landlords-news/",
+      "description": "Covers landlord news, legislation, and more. British Landlords Association the BLA is a Free national landlord association for British residential landlords. BLA supports residential & commercial landlords nationally.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/5122780.jpg?t=1630492250"
+    },
+    {
+      "title": "Property Hawk",
+      "feed_url": "https://blog.propertyhawk.co.uk/feeds/posts/default",
+      "website_url": "https://blog.propertyhawk.co.uk/",
+      "description": "A blog for landlords in the UK private residential sector; BTL mortgage, PRS legislation, property prices and property management news.",
+      "followers": {
+        "facebook": 288,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/1422703.jpg?t=1610774372"
+    },
+    {
+      "title": "Landlord Advice UK Blog",
+      "feed_url": "https://landlordadvice.co.uk/feed/",
+      "website_url": "https://landlordadvice.co.uk/blog/",
+      "description": "Landlord Advice UK Blog covers all topics including Eviction news and the latest articles. Landlord Advice UK is an independent paralegal law firm providing legal services, specializing in property law. We offer free advice on which eviction notice to serve. We aim to help landlords, among others, with our extensive knowledge and comprehensive court experience at the most competitive rate.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4820161.jpg?t=1610775585"
+    },
+    {
+      "title": "Landlord Today",
+      "feed_url": "https://www.landlordtoday.co.uk/rss/news/1",
+      "website_url": "https://www.landlordtoday.co.uk/breaking-news/",
+      "description": "Landlord Today provides daily news updates for landlords, property investors and those interested in the growing Private Rented Sector.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4908454.jpg?t=1630418708"
+    },
+    {
+      "title": "LandlordZONE",
+      "feed_url": "https://www.landlordzone.co.uk/",
+      "website_url": "https://www.landlordzone.co.uk/",
+      "description": "LandlordZONE is the UK's leading landlord publication, providing property news, advice, legal information, comment and insight for the rental property industry.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/4820080.jpg?t=1619191116"
+    }
+  ]
+}

@@ -1,0 +1,1342 @@
+[
+    {
+        "original": "Original Category: arts -> architecture -> houses.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Architecture > Houses"
+    },
+    {
+        "original": "Original Category: arts -> architecture -> infrastructure.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Architecture > Infrastructure"
+    },
+    {
+        "original": "Original Category: arts -> architecture -> interior-design.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Architecture > Interior Design"
+    },
+    {
+        "original": "Original Category: arts -> architecture.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Architecture"
+    },
+    {
+        "original": "Original Category: arts -> art -> printing.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Art > Printing"
+    },
+    {
+        "original": "Original Category: arts -> art.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Art"
+    },
+    {
+        "original": "Original Category: arts -> books -> comics.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Comics"
+    },
+    {
+        "original": "Original Category: arts -> books -> fiction-books -> childrens.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Fiction Books > Childrens"
+    },
+    {
+        "original": "Original Category: arts -> books -> fiction-books -> crime.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Fiction Books > Crime"
+    },
+    {
+        "original": "Original Category: arts -> books -> fiction-books -> fantasy.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Fiction Books > Fantasy"
+    },
+    {
+        "original": "Original Category: arts -> books -> fiction-books -> horror.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Fiction Books > Horror"
+    },
+    {
+        "original": "Original Category: arts -> books -> fiction-books -> science-fiction.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Fiction Books > Science Fiction"
+    },
+    {
+        "original": "Original Category: arts -> books -> fiction-books.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Fiction Books"
+    },
+    {
+        "original": "Original Category: arts -> books -> fiction.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Fiction"
+    },
+    {
+        "original": "Original Category: arts -> books -> non-fiction-books.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Non Fiction Books"
+    },
+    {
+        "original": "Original Category: arts -> books -> poetry.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Poetry"
+    },
+    {
+        "original": "Original Category: arts -> books -> publishing.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Publishing"
+    },
+    {
+        "original": "Original Category: arts -> books -> writing.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books > Writing"
+    },
+    {
+        "original": "Original Category: arts -> books.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Books"
+    },
+    {
+        "original": "Original Category: arts -> crafts -> knitting.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Arts > Crafts > Knitting"
+    },
+    {
+        "original": "Original Category: arts -> crafts -> modelmaking -> railway-modelling.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Arts > Crafts > Modelmaking > Railway Modelling"
+    },
+    {
+        "original": "Original Category: arts -> crafts -> modelmaking.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Arts > Crafts > Modelmaking"
+    },
+    {
+        "original": "Original Category: arts -> crafts -> woodworking.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Arts > Crafts > Woodworking"
+    },
+    {
+        "original": "Original Category: arts -> crafts.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Arts > Crafts"
+    },
+    {
+        "original": "Original Category: arts -> design -> book-design.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Design > Book Design"
+    },
+    {
+        "original": "Original Category: arts -> design -> data-visualization.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Design > Data Visualization"
+    },
+    {
+        "original": "Original Category: arts -> design -> digital-design.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Design > Digital Design"
+    },
+    {
+        "original": "Original Category: arts -> design.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Design"
+    },
+    {
+        "original": "Original Category: arts -> games -> tabletop-games -> board-games.opml",
+        "mapped": "Gaming",
+        "cleaned": "Arts > Games > Tabletop Games > Board Games"
+    },
+    {
+        "original": "Original Category: arts -> games -> tabletop-games -> role-playing-games.opml",
+        "mapped": "Gaming",
+        "cleaned": "Arts > Games > Tabletop Games > Role Playing Games"
+    },
+    {
+        "original": "Original Category: arts -> games -> tabletop-games -> war-games.opml",
+        "mapped": "Gaming",
+        "cleaned": "Arts > Games > Tabletop Games > War Games"
+    },
+    {
+        "original": "Original Category: arts -> games -> tabletop-games.opml",
+        "mapped": "Gaming",
+        "cleaned": "Arts > Games > Tabletop Games"
+    },
+    {
+        "original": "Original Category: arts -> games -> video-games.opml",
+        "mapped": "Gaming",
+        "cleaned": "Arts > Games > Video Games"
+    },
+    {
+        "original": "Original Category: arts -> games.opml",
+        "mapped": "Gaming",
+        "cleaned": "Arts > Games"
+    },
+    {
+        "original": "Original Category: arts -> illustration.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Illustration"
+    },
+    {
+        "original": "Original Category: arts -> images.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Images"
+    },
+    {
+        "original": "Original Category: arts -> magazines.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Magazines"
+    },
+    {
+        "original": "Original Category: arts -> movies -> classics.opml",
+        "mapped": "Entertainment",
+        "cleaned": "Arts > Movies > Classics"
+    },
+    {
+        "original": "Original Category: arts -> movies -> silent-film.opml",
+        "mapped": "Entertainment",
+        "cleaned": "Arts > Movies > Silent Film"
+    },
+    {
+        "original": "Original Category: arts -> movies.opml",
+        "mapped": "Entertainment",
+        "cleaned": "Arts > Movies"
+    },
+    {
+        "original": "Original Category: arts -> museums.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Museums"
+    },
+    {
+        "original": "Original Category: arts -> music -> genres -> jazz.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music > Genres > Jazz"
+    },
+    {
+        "original": "Original Category: arts -> music -> genres -> metal.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music > Genres > Metal"
+    },
+    {
+        "original": "Original Category: arts -> music -> genres.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music > Genres"
+    },
+    {
+        "original": "Original Category: arts -> music -> mp3-blogs.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music > MP3 Blogs"
+    },
+    {
+        "original": "Original Category: arts -> music -> musical-instruments -> guitars.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music > Musical Instruments > Guitars"
+    },
+    {
+        "original": "Original Category: arts -> music -> musical-instruments.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music > Musical Instruments"
+    },
+    {
+        "original": "Original Category: arts -> music -> simon-reynolds.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music > Simon Reynolds"
+    },
+    {
+        "original": "Original Category: arts -> music -> sound.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music > Sound"
+    },
+    {
+        "original": "Original Category: arts -> music.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music"
+    },
+    {
+        "original": "Original Category: arts -> news.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > News"
+    },
+    {
+        "original": "Original Category: arts -> photography -> photographs.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Photography > Photographs"
+    },
+    {
+        "original": "Original Category: arts -> photography.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Photography"
+    },
+    {
+        "original": "Original Category: arts -> radio.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Radio"
+    },
+    {
+        "original": "Original Category: arts -> tailoring.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Tailoring"
+    },
+    {
+        "original": "Original Category: arts -> theatre.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Theatre"
+    },
+    {
+        "original": "Original Category: arts -> tv.opml",
+        "mapped": "Entertainment",
+        "cleaned": "Arts > TV"
+    },
+    {
+        "original": "Original Category: arts.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts"
+    },
+    {
+        "original": "Original Category: countries -> ireland.opml",
+        "mapped": "Regional & Local",
+        "cleaned": "Countries > Ireland"
+    },
+    {
+        "original": "Original Category: countries -> uk -> london -> areas.opml",
+        "mapped": "Regional & Local",
+        "cleaned": "Countries > UK > London > Areas"
+    },
+    {
+        "original": "Original Category: countries -> uk -> london.opml",
+        "mapped": "Regional & Local",
+        "cleaned": "Countries > UK > London"
+    },
+    {
+        "original": "Original Category: countries -> uk -> uk-government.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Countries > UK > UK Government"
+    },
+    {
+        "original": "Original Category: countries -> uk.opml",
+        "mapped": "Regional & Local",
+        "cleaned": "Countries > UK"
+    },
+    {
+        "original": "Original Category: countries -> usa -> usa-government.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Countries > USA > USA Government"
+    },
+    {
+        "original": "Original Category: countries -> usa.opml",
+        "mapped": "Regional & Local",
+        "cleaned": "Countries > USA"
+    },
+    {
+        "original": "Original Category: countries.opml",
+        "mapped": "Regional & Local",
+        "cleaned": "Countries"
+    },
+    {
+        "original": "Original Category: economics -> business -> management.opml",
+        "mapped": "Industry & Professions",
+        "cleaned": "Economics > Business > Management"
+    },
+    {
+        "original": "Original Category: economics -> business.opml",
+        "mapped": "Business & Finance",
+        "cleaned": "Economics > Business"
+    },
+    {
+        "original": "Original Category: economics -> companies -> bbc.opml",
+        "mapped": "Business & Finance",
+        "cleaned": "Economics > Companies > BBC"
+    },
+    {
+        "original": "Original Category: economics -> companies.opml",
+        "mapped": "Business & Finance",
+        "cleaned": "Economics > Companies"
+    },
+    {
+        "original": "Original Category: economics -> economics -> cryptocurrencies.opml",
+        "mapped": "Business & Finance",
+        "cleaned": "Economics > Economics > Cryptocurrencies"
+    },
+    {
+        "original": "Original Category: economics -> economics.opml",
+        "mapped": "Business & Finance",
+        "cleaned": "Economics > Economics"
+    },
+    {
+        "original": "Original Category: economics -> finance.opml",
+        "mapped": "Business & Finance",
+        "cleaned": "Economics > Finance"
+    },
+    {
+        "original": "Original Category: economics -> personal-finance.opml",
+        "mapped": "Business & Finance",
+        "cleaned": "Economics > Personal Finance"
+    },
+    {
+        "original": "Original Category: economics -> work.opml",
+        "mapped": "Industry & Professions",
+        "cleaned": "Economics > Work"
+    },
+    {
+        "original": "Original Category: education.opml",
+        "mapped": "Industry & Professions",
+        "cleaned": "Education"
+    },
+    {
+        "original": "Original Category: humanities -> futures.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Humanities > Futures"
+    },
+    {
+        "original": "Original Category: humanities -> geography -> maps.opml",
+        "mapped": "Travel & Geography",
+        "cleaned": "Humanities > Geography > Maps"
+    },
+    {
+        "original": "Original Category: humanities -> geography.opml",
+        "mapped": "Travel & Geography",
+        "cleaned": "Humanities > Geography"
+    },
+    {
+        "original": "Original Category: humanities -> history -> genealogy.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Humanities > History > Genealogy"
+    },
+    {
+        "original": "Original Category: humanities -> history.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Humanities > History"
+    },
+    {
+        "original": "Original Category: humanities -> language.opml",
+        "mapped": "Arts & Culture",
+        "cleaned": "Humanities > Language"
+    },
+    {
+        "original": "Original Category: humanities -> philosophy.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Humanities > Philosophy"
+    },
+    {
+        "original": "Original Category: humanities -> urbanism.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Humanities > Urbanism"
+    },
+    {
+        "original": "Original Category: humanities.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Humanities"
+    },
+    {
+        "original": "Original Category: politics -> government.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Politics > Government"
+    },
+    {
+        "original": "Original Category: politics -> law.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Politics > Law"
+    },
+    {
+        "original": "Original Category: politics -> military.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Politics > Military"
+    },
+    {
+        "original": "Original Category: politics -> politics.opml",
+        "mapped": "News & Current Events",
+        "cleaned": "Politics > Politics"
+    },
+    {
+        "original": "Original Category: recreation -> edc.opml",
+        "mapped": "Style & Shopping",
+        "cleaned": "Recreation > EDC"
+    },
+    {
+        "original": "Original Category: recreation -> food-and-drink -> drink -> beer.opml",
+        "mapped": "Food & Drink",
+        "cleaned": "Recreation > Food And Drink > Drink > Beer"
+    },
+    {
+        "original": "Original Category: recreation -> food-and-drink -> drink.opml",
+        "mapped": "Food & Drink",
+        "cleaned": "Recreation > Food And Drink > Drink"
+    },
+    {
+        "original": "Original Category: recreation -> food-and-drink -> recipes.opml",
+        "mapped": "Food & Drink",
+        "cleaned": "Recreation > Food And Drink > Recipes"
+    },
+    {
+        "original": "Original Category: recreation -> food-and-drink -> restaurants -> pubs.opml",
+        "mapped": "Food & Drink",
+        "cleaned": "Recreation > Food And Drink > Restaurants > Pubs"
+    },
+    {
+        "original": "Original Category: recreation -> food-and-drink -> restaurants.opml",
+        "mapped": "Food & Drink",
+        "cleaned": "Recreation > Food And Drink > Restaurants"
+    },
+    {
+        "original": "Original Category: recreation -> food-and-drink.opml",
+        "mapped": "Food & Drink",
+        "cleaned": "Recreation > Food And Drink"
+    },
+    {
+        "original": "Original Category: recreation -> gardening.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Recreation > Gardening"
+    },
+    {
+        "original": "Original Category: recreation -> perfume.opml",
+        "mapped": "Style & Shopping",
+        "cleaned": "Recreation > Perfume"
+    },
+    {
+        "original": "Original Category: recreation -> public-transport -> trains.opml",
+        "mapped": "Automotive & Transport",
+        "cleaned": "Recreation > Public Transport > Trains"
+    },
+    {
+        "original": "Original Category: recreation -> public-transport.opml",
+        "mapped": "Automotive & Transport",
+        "cleaned": "Recreation > Public Transport"
+    },
+    {
+        "original": "Original Category: recreation -> sport -> athletics -> running.opml",
+        "mapped": "Sports",
+        "cleaned": "Recreation > Sport > Athletics > Running"
+    },
+    {
+        "original": "Original Category: recreation -> sport -> athletics.opml",
+        "mapped": "Sports",
+        "cleaned": "Recreation > Sport > Athletics"
+    },
+    {
+        "original": "Original Category: recreation -> sport -> cycling.opml",
+        "mapped": "Sports",
+        "cleaned": "Recreation > Sport > Cycling"
+    },
+    {
+        "original": "Original Category: recreation -> sport -> fishing.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Recreation > Sport > Fishing"
+    },
+    {
+        "original": "Original Category: recreation -> sport.opml",
+        "mapped": "Sports",
+        "cleaned": "Recreation > Sport"
+    },
+    {
+        "original": "Original Category: recreation -> toys.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Recreation > Toys"
+    },
+    {
+        "original": "Original Category: recreation -> travel -> disney-parks.opml",
+        "mapped": "Travel & Geography",
+        "cleaned": "Recreation > Travel > Disney Parks"
+    },
+    {
+        "original": "Original Category: recreation -> travel.opml",
+        "mapped": "Travel & Geography",
+        "cleaned": "Recreation > Travel"
+    },
+    {
+        "original": "Original Category: recreation -> vehicles -> cars.opml",
+        "mapped": "Automotive & Transport",
+        "cleaned": "Recreation > Vehicles > Cars"
+    },
+    {
+        "original": "Original Category: recreation -> vehicles -> motorcycles.opml",
+        "mapped": "Automotive & Transport",
+        "cleaned": "Recreation > Vehicles > Motorcycles"
+    },
+    {
+        "original": "Original Category: recreation -> vehicles.opml",
+        "mapped": "Automotive & Transport",
+        "cleaned": "Recreation > Vehicles"
+    },
+    {
+        "original": "Original Category: recreation -> walking.opml",
+        "mapped": "Health & Wellness",
+        "cleaned": "Recreation > Walking"
+    },
+    {
+        "original": "Original Category: recreation.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Recreation"
+    },
+    {
+        "original": "Original Category: science -> earth-science -> atmospheric-science.opml",
+        "mapped": "Science & Nature",
+        "cleaned": "Science > Earth Science > Atmospheric Science"
+    },
+    {
+        "original": "Original Category: science -> earth-science.opml",
+        "mapped": "Science & Nature",
+        "cleaned": "Science > Earth Science"
+    },
+    {
+        "original": "Original Category: science -> engineering.opml",
+        "mapped": "Science & Nature",
+        "cleaned": "Science > Engineering"
+    },
+    {
+        "original": "Original Category: science -> mathematics.opml",
+        "mapped": "Science & Nature",
+        "cleaned": "Science > Mathematics"
+    },
+    {
+        "original": "Original Category: science -> medicine.opml",
+        "mapped": "Health & Wellness",
+        "cleaned": "Science > Medicine"
+    },
+    {
+        "original": "Original Category: science -> natural-world.opml",
+        "mapped": "Science & Nature",
+        "cleaned": "Science > Natural World"
+    },
+    {
+        "original": "Original Category: science -> space.opml",
+        "mapped": "Science & Nature",
+        "cleaned": "Science > Space"
+    },
+    {
+        "original": "Original Category: science.opml",
+        "mapped": "Science & Nature",
+        "cleaned": "Science"
+    },
+    {
+        "original": "Original Category: society -> death-graves.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Society > Death Graves"
+    },
+    {
+        "original": "Original Category: society -> psychogeography.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Society > Psychogeography"
+    },
+    {
+        "original": "Original Category: society -> religion.opml",
+        "mapped": "Identity & Community",
+        "cleaned": "Society > Religion"
+    },
+    {
+        "original": "Original Category: society -> self-improvement.opml",
+        "mapped": "Health & Wellness",
+        "cleaned": "Society > Self Improvement"
+    },
+    {
+        "original": "Original Category: society.opml",
+        "mapped": "Society, Law & History",
+        "cleaned": "Society"
+    },
+    {
+        "original": "Original Category: technology -> ai.opml",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Technology > AI"
+    },
+    {
+        "original": "Original Category: technology -> apple.opml",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Technology > Apple"
+    },
+    {
+        "original": "Original Category: technology -> development -> python.opml",
+        "mapped": "Software & Engineering",
+        "cleaned": "Technology > Development > Python"
+    },
+    {
+        "original": "Original Category: technology -> development -> web -> back-end.opml",
+        "mapped": "Software & Engineering",
+        "cleaned": "Technology > Development > Web > Back End"
+    },
+    {
+        "original": "Original Category: technology -> development -> web -> front-end.opml",
+        "mapped": "Software & Engineering",
+        "cleaned": "Technology > Development > Web > Front End"
+    },
+    {
+        "original": "Original Category: technology -> development -> web.opml",
+        "mapped": "Software & Engineering",
+        "cleaned": "Technology > Development > Web"
+    },
+    {
+        "original": "Original Category: technology -> development.opml",
+        "mapped": "Software & Engineering",
+        "cleaned": "Technology > Development"
+    },
+    {
+        "original": "Original Category: technology -> graphics.opml",
+        "mapped": "Software & Engineering",
+        "cleaned": "Technology > Graphics"
+    },
+    {
+        "original": "Original Category: technology -> hardware.opml",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Technology > Hardware"
+    },
+    {
+        "original": "Original Category: technology -> internet -> blogging.opml",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Technology > Internet > Blogging"
+    },
+    {
+        "original": "Original Category: technology -> internet.opml",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Technology > Internet"
+    },
+    {
+        "original": "Original Category: technology -> vr.opml",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Technology > VR"
+    },
+    {
+        "original": "Original Category: technology.opml",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Technology"
+    },
+    {
+        "original": "Original Category: uncategorizable -> completionists.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Uncategorizable > Completionists"
+    },
+    {
+        "original": "Original Category: uncategorizable.opml",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Uncategorizable"
+    },
+    {
+        "original": "Original category: Arts",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts"
+    },
+    {
+        "original": "Original category: Arts -> Design",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Design"
+    },
+    {
+        "original": "Original category: Arts -> Film & TV",
+        "mapped": "Entertainment",
+        "cleaned": "Arts > Film & TV"
+    },
+    {
+        "original": "Original category: Arts -> Literature",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Literature"
+    },
+    {
+        "original": "Original category: Arts -> Music",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Music"
+    },
+    {
+        "original": "Original category: Arts -> Performing Arts",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Performing Arts"
+    },
+    {
+        "original": "Original category: Arts -> Publishing",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Publishing"
+    },
+    {
+        "original": "Original category: Arts -> Visual Arts",
+        "mapped": "Arts & Culture",
+        "cleaned": "Arts > Visual Arts"
+    },
+    {
+        "original": "Original category: Business",
+        "mapped": "Business & Finance",
+        "cleaned": "Business"
+    },
+    {
+        "original": "Original category: Business -> Economy",
+        "mapped": "Business & Finance",
+        "cleaned": "Business > Economy"
+    },
+    {
+        "original": "Original category: Business -> Personal Finance",
+        "mapped": "Business & Finance",
+        "cleaned": "Business > Personal Finance"
+    },
+    {
+        "original": "Original category: Business -> Real Estate",
+        "mapped": "Business & Finance",
+        "cleaned": "Business > Real Estate"
+    },
+    {
+        "original": "Original category: Business -> Startups",
+        "mapped": "Business & Finance",
+        "cleaned": "Business > Startups"
+    },
+    {
+        "original": "Original category: Business -> Stock Market",
+        "mapped": "Business & Finance",
+        "cleaned": "Business > Stock Market"
+    },
+    {
+        "original": "Original category: Education",
+        "mapped": "Industry & Professions",
+        "cleaned": "Education"
+    },
+    {
+        "original": "Original category: Education -> Academic Research",
+        "mapped": "Science & Nature",
+        "cleaned": "Education > Academic Research"
+    },
+    {
+        "original": "Original category: Education -> Books & Reading",
+        "mapped": "Arts & Culture",
+        "cleaned": "Education > Books & Reading"
+    },
+    {
+        "original": "Original category: Education -> Educational Policy",
+        "mapped": "Society, Law & History",
+        "cleaned": "Education > Educational Policy"
+    },
+    {
+        "original": "Original category: Education -> Online Learning",
+        "mapped": "Industry & Professions",
+        "cleaned": "Education > Online Learning"
+    },
+    {
+        "original": "Original category: Education -> Schools & Colleges",
+        "mapped": "Industry & Professions",
+        "cleaned": "Education > Schools & Colleges"
+    },
+    {
+        "original": "Original category: Entertainment",
+        "mapped": "Entertainment",
+        "cleaned": "Entertainment"
+    },
+    {
+        "original": "Original category: Entertainment -> Celebrity News",
+        "mapped": "Entertainment",
+        "cleaned": "Entertainment > Celebrity News"
+    },
+    {
+        "original": "Original category: Entertainment -> Gaming",
+        "mapped": "Gaming",
+        "cleaned": "Entertainment > Gaming"
+    },
+    {
+        "original": "Original category: Entertainment -> Movies",
+        "mapped": "Entertainment",
+        "cleaned": "Entertainment > Movies"
+    },
+    {
+        "original": "Original category: Entertainment -> Music",
+        "mapped": "Arts & Culture",
+        "cleaned": "Entertainment > Music"
+    },
+    {
+        "original": "Original category: Entertainment -> TV Shows",
+        "mapped": "Entertainment",
+        "cleaned": "Entertainment > TV Shows"
+    },
+    {
+        "original": "Original category: Environment",
+        "mapped": "Science & Nature",
+        "cleaned": "Environment"
+    },
+    {
+        "original": "Original category: Environment -> Climate Change",
+        "mapped": "Science & Nature",
+        "cleaned": "Environment > Climate Change"
+    },
+    {
+        "original": "Original category: Environment -> Green Energy",
+        "mapped": "Science & Nature",
+        "cleaned": "Environment > Green Energy"
+    },
+    {
+        "original": "Original category: Environment -> Sustainability",
+        "mapped": "Science & Nature",
+        "cleaned": "Environment > Sustainability"
+    },
+    {
+        "original": "Original category: Environment -> Wildlife",
+        "mapped": "Science & Nature",
+        "cleaned": "Environment > Wildlife"
+    },
+    {
+        "original": "Original category: Fashion",
+        "mapped": "Style & Shopping",
+        "cleaned": "Fashion"
+    },
+    {
+        "original": "Original category: Fashion -> Beauty",
+        "mapped": "Style & Shopping",
+        "cleaned": "Fashion > Beauty"
+    },
+    {
+        "original": "Original category: Fashion -> Designers & Brands",
+        "mapped": "Style & Shopping",
+        "cleaned": "Fashion > Designers & Brands"
+    },
+    {
+        "original": "Original category: Fashion -> Fashion Shows",
+        "mapped": "Style & Shopping",
+        "cleaned": "Fashion > Fashion Shows"
+    },
+    {
+        "original": "Original category: Fashion -> Shopping",
+        "mapped": "Style & Shopping",
+        "cleaned": "Fashion > Shopping"
+    },
+    {
+        "original": "Original category: Fashion -> Street Style",
+        "mapped": "Style & Shopping",
+        "cleaned": "Fashion > Street Style"
+    },
+    {
+        "original": "Original category: Food & Drink",
+        "mapped": "Food & Drink",
+        "cleaned": "Food & Drink"
+    },
+    {
+        "original": "Original category: Food & Drink -> Coffee & Tea",
+        "mapped": "Food & Drink",
+        "cleaned": "Food & Drink > Coffee & Tea"
+    },
+    {
+        "original": "Original category: Food & Drink -> Healthy Eating",
+        "mapped": "Food & Drink",
+        "cleaned": "Food & Drink > Healthy Eating"
+    },
+    {
+        "original": "Original category: Food & Drink -> Recipes",
+        "mapped": "Food & Drink",
+        "cleaned": "Food & Drink > Recipes"
+    },
+    {
+        "original": "Original category: Food & Drink -> Restaurants",
+        "mapped": "Food & Drink",
+        "cleaned": "Food & Drink > Restaurants"
+    },
+    {
+        "original": "Original category: Food & Drink -> Wine & Spirits",
+        "mapped": "Food & Drink",
+        "cleaned": "Food & Drink > Wine & Spirits"
+    },
+    {
+        "original": "Original category: Health",
+        "mapped": "Health & Wellness",
+        "cleaned": "Health"
+    },
+    {
+        "original": "Original category: Health -> Fitness",
+        "mapped": "Health & Wellness",
+        "cleaned": "Health > Fitness"
+    },
+    {
+        "original": "Original category: Health -> Medical Research",
+        "mapped": "Health & Wellness",
+        "cleaned": "Health > Medical Research"
+    },
+    {
+        "original": "Original category: Health -> Mental Health",
+        "mapped": "Health & Wellness",
+        "cleaned": "Health > Mental Health"
+    },
+    {
+        "original": "Original category: Health -> Nutrition",
+        "mapped": "Health & Wellness",
+        "cleaned": "Health > Nutrition"
+    },
+    {
+        "original": "Original category: Health -> Wellness",
+        "mapped": "Health & Wellness",
+        "cleaned": "Health > Wellness"
+    },
+    {
+        "original": "Original category: Hobbies",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Hobbies"
+    },
+    {
+        "original": "Original category: Hobbies -> Astrology",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Hobbies > Astrology"
+    },
+    {
+        "original": "Original category: Hobbies -> Cars",
+        "mapped": "Automotive & Transport",
+        "cleaned": "Hobbies > Cars"
+    },
+    {
+        "original": "Original category: Hobbies -> Crafts",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Hobbies > Crafts"
+    },
+    {
+        "original": "Original category: Hobbies -> Cycling",
+        "mapped": "Sports",
+        "cleaned": "Hobbies > Cycling"
+    },
+    {
+        "original": "Original category: Hobbies -> Fishing",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Hobbies > Fishing"
+    },
+    {
+        "original": "Original category: Hobbies -> Gaming",
+        "mapped": "Gaming",
+        "cleaned": "Hobbies > Gaming"
+    },
+    {
+        "original": "Original category: Hobbies -> Gardening",
+        "mapped": "Home & Hobbies",
+        "cleaned": "Hobbies > Gardening"
+    },
+    {
+        "original": "Original category: Hobbies -> History",
+        "mapped": "Society, Law & History",
+        "cleaned": "Hobbies > History"
+    },
+    {
+        "original": "Original category: Hobbies -> Photography",
+        "mapped": "Arts & Culture",
+        "cleaned": "Hobbies > Photography"
+    },
+    {
+        "original": "Original category: Hobbies -> Reading",
+        "mapped": "Arts & Culture",
+        "cleaned": "Hobbies > Reading"
+    },
+    {
+        "original": "Original category: Hobbies -> Writing",
+        "mapped": "Arts & Culture",
+        "cleaned": "Hobbies > Writing"
+    },
+    {
+        "original": "Original category: Local",
+        "mapped": "Regional & Local",
+        "cleaned": "Local"
+    },
+    {
+        "original": "Original category: Local -> Africa",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > Africa"
+    },
+    {
+        "original": "Original category: Local -> Asia",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > Asia"
+    },
+    {
+        "original": "Original category: Local -> Australia",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > Australia"
+    },
+    {
+        "original": "Original category: Local -> Canada",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > Canada"
+    },
+    {
+        "original": "Original category: Local -> Europe",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > Europe"
+    },
+    {
+        "original": "Original category: Local -> France",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > France"
+    },
+    {
+        "original": "Original category: Local -> London",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > London"
+    },
+    {
+        "original": "Original category: Local -> Los Angeles",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > Los Angeles"
+    },
+    {
+        "original": "Original category: Local -> New York City",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > New York City"
+    },
+    {
+        "original": "Original category: Local -> SF Bay Area",
+        "mapped": "Regional & Local",
+        "cleaned": "Local > SF Bay Area"
+    },
+    {
+        "original": "Original category: News",
+        "mapped": "News & Current Events",
+        "cleaned": "News"
+    },
+    {
+        "original": "Original category: News -> Environment",
+        "mapped": "Science & Nature",
+        "cleaned": "News > Environment"
+    },
+    {
+        "original": "Original category: News -> Global",
+        "mapped": "News & Current Events",
+        "cleaned": "News > Global"
+    },
+    {
+        "original": "Original category: News -> UK News",
+        "mapped": "News & Current Events",
+        "cleaned": "News > UK News"
+    },
+    {
+        "original": "Original category: News -> US News",
+        "mapped": "News & Current Events",
+        "cleaned": "News > US News"
+    },
+    {
+        "original": "Original category: Popular",
+        "mapped": "News & Current Events",
+        "cleaned": "Popular"
+    },
+    {
+        "original": "Original category: Sports",
+        "mapped": "Sports",
+        "cleaned": "Sports"
+    },
+    {
+        "original": "Original category: Sports -> Baseball",
+        "mapped": "Sports",
+        "cleaned": "Sports > Baseball"
+    },
+    {
+        "original": "Original category: Sports -> Basketball",
+        "mapped": "Sports",
+        "cleaned": "Sports > Basketball"
+    },
+    {
+        "original": "Original category: Sports -> Football",
+        "mapped": "Sports",
+        "cleaned": "Sports > Football"
+    },
+    {
+        "original": "Original category: Sports -> Olympics",
+        "mapped": "Sports",
+        "cleaned": "Sports > Olympics"
+    },
+    {
+        "original": "Original category: Sports -> Soccer",
+        "mapped": "Sports",
+        "cleaned": "Sports > Soccer"
+    },
+    {
+        "original": "Original category: Substack top newsletters about art",
+        "mapped": "Arts & Culture",
+        "cleaned": "Art"
+    },
+    {
+        "original": "Original category: Substack top newsletters about business",
+        "mapped": "Business & Finance",
+        "cleaned": "Business"
+    },
+    {
+        "original": "Original category: Substack top newsletters about climate",
+        "mapped": "Science & Nature",
+        "cleaned": "Climate"
+    },
+    {
+        "original": "Original category: Substack top newsletters about comics",
+        "mapped": "Arts & Culture",
+        "cleaned": "Comics"
+    },
+    {
+        "original": "Original category: Substack top newsletters about design",
+        "mapped": "Arts & Culture",
+        "cleaned": "Design"
+    },
+    {
+        "original": "Original category: Substack top newsletters about education",
+        "mapped": "Industry & Professions",
+        "cleaned": "Education"
+    },
+    {
+        "original": "Original category: Substack top newsletters about faith",
+        "mapped": "Identity & Community",
+        "cleaned": "Faith"
+    },
+    {
+        "original": "Original category: Substack top newsletters about fashionandbeauty",
+        "mapped": "Style & Shopping",
+        "cleaned": "Fashion And Beauty"
+    },
+    {
+        "original": "Original category: Substack top newsletters about fiction",
+        "mapped": "Arts & Culture",
+        "cleaned": "Fiction"
+    },
+    {
+        "original": "Original category: Substack top newsletters about finance",
+        "mapped": "Business & Finance",
+        "cleaned": "Finance"
+    },
+    {
+        "original": "Original category: Substack top newsletters about food",
+        "mapped": "Food & Drink",
+        "cleaned": "Food"
+    },
+    {
+        "original": "Original category: Substack top newsletters about health",
+        "mapped": "Health & Wellness",
+        "cleaned": "Health"
+    },
+    {
+        "original": "Original category: Substack top newsletters about health-politics",
+        "mapped": "Society, Law & History",
+        "cleaned": "Health Politics"
+    },
+    {
+        "original": "Original category: Substack top newsletters about history",
+        "mapped": "Society, Law & History",
+        "cleaned": "History"
+    },
+    {
+        "original": "Original category: Substack top newsletters about humor",
+        "mapped": "Entertainment",
+        "cleaned": "Humor"
+    },
+    {
+        "original": "Original category: Substack top newsletters about international",
+        "mapped": "News & Current Events",
+        "cleaned": "International"
+    },
+    {
+        "original": "Original category: Substack top newsletters about literature",
+        "mapped": "Arts & Culture",
+        "cleaned": "Literature"
+    },
+    {
+        "original": "Original category: Substack top newsletters about music",
+        "mapped": "Arts & Culture",
+        "cleaned": "Music"
+    },
+    {
+        "original": "Original category: Substack top newsletters about news",
+        "mapped": "News & Current Events",
+        "cleaned": "News"
+    },
+    {
+        "original": "Original category: Substack top newsletters about parenting",
+        "mapped": "Family & Relationships",
+        "cleaned": "Parenting"
+    },
+    {
+        "original": "Original category: Substack top newsletters about philosophy",
+        "mapped": "Society, Law & History",
+        "cleaned": "Philosophy"
+    },
+    {
+        "original": "Original category: Substack top newsletters about science",
+        "mapped": "Science & Nature",
+        "cleaned": "Science"
+    },
+    {
+        "original": "Original category: Substack top newsletters about sports",
+        "mapped": "Sports",
+        "cleaned": "Sports"
+    },
+    {
+        "original": "Original category: Substack top newsletters about technology",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Technology"
+    },
+    {
+        "original": "Original category: Substack top newsletters about travel",
+        "mapped": "Travel & Geography",
+        "cleaned": "Travel"
+    },
+    {
+        "original": "Original category: Substack top newsletters about us-politics",
+        "mapped": "News & Current Events",
+        "cleaned": "US Politics"
+    },
+    {
+        "original": "Original category: Substack top newsletters about world-politics",
+        "mapped": "News & Current Events",
+        "cleaned": "World Politics"
+    },
+    {
+        "original": "Original category: Tech",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Tech"
+    },
+    {
+        "original": "Original category: Tech -> AI & Machine Learning",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Tech > AI And Machine Learning"
+    },
+    {
+        "original": "Original category: Tech -> Apple",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Tech > Apple"
+    },
+    {
+        "original": "Original category: Tech -> Code",
+        "mapped": "Software & Engineering",
+        "cleaned": "Tech > Code"
+    },
+    {
+        "original": "Original category: Tech -> Cybersecurity",
+        "mapped": "Software & Engineering",
+        "cleaned": "Tech > Cybersecurity"
+    },
+    {
+        "original": "Original category: Tech -> Gadgets",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Tech > Gadgets"
+    },
+    {
+        "original": "Original category: Tech -> Hardware",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Tech > Hardware"
+    },
+    {
+        "original": "Original category: Tech -> Internet",
+        "mapped": "Consumer Tech & Digital",
+        "cleaned": "Tech > Internet"
+    },
+    {
+        "original": "Original category: Tech -> Software & Apps",
+        "mapped": "Software & Engineering",
+        "cleaned": "Tech > Software & Apps"
+    },
+    {
+        "original": "Original category: Tech -> UX and Product",
+        "mapped": "Software & Engineering",
+        "cleaned": "Tech > UX And Product"
+    },
+    {
+        "original": "Original category: Travel",
+        "mapped": "Travel & Geography",
+        "cleaned": "Travel"
+    },
+    {
+        "original": "Original category: Travel -> Adventure",
+        "mapped": "Travel & Geography",
+        "cleaned": "Travel > Adventure"
+    },
+    {
+        "original": "Original category: Travel -> Culture",
+        "mapped": "Travel & Geography",
+        "cleaned": "Travel > Culture"
+    },
+    {
+        "original": "Original category: Travel -> Food & Drink",
+        "mapped": "Travel & Geography",
+        "cleaned": "Travel > Food & Drink"
+    },
+    {
+        "original": "Original category: Travel -> Hotels & Accommodation",
+        "mapped": "Travel & Geography",
+        "cleaned": "Travel > Hotels & Accommodation"
+    },
+    {
+        "original": "Original category: Travel -> Transport & Flights",
+        "mapped": "Travel & Geography",
+        "cleaned": "Travel > Transport & Flights"
+    }
+]

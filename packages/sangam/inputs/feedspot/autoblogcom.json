@@ -1,0 +1,58 @@
+{
+  "category": "Autoblog.com",
+  "source_url": "https://rss.feedspot.com/autoblogdotcom_rss_feeds",
+  "feeds": [
+    {
+      "title": "Autoblog.com \u00bb News",
+      "feed_url": "https://www.autoblog.com/.rss/feed/3d70fbb5-ef5e-44f3-a547-e60939496e82.xml",
+      "website_url": "https://www.autoblog.com/news",
+      "description": "All News articles from Autoblog.com",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 449300,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/7902599.jpg?t=1745412581"
+    },
+    {
+      "title": "Autoblog.com \u00bb Reviews",
+      "feed_url": "https://www.autoblog.com/.rss/feed/1d8cb481-78e6-43a4-b746-ed5c73a73411.xml",
+      "website_url": "https://www.autoblog.com/reviews",
+      "description": "All Reviews from Autoblog.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7902599.jpg?t=1745412519"
+    },
+    {
+      "title": "Autoblog.com \u00bb Car Buying",
+      "feed_url": "https://www.autoblog.com/.rss/feed/22e022cf-474a-4fbe-9d56-b3e9585907e9.xml",
+      "website_url": "https://www.autoblog.com/carbuying",
+      "description": "All articles about Car Buying from Autoblog.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7902599.jpg?t=1745412503"
+    },
+    {
+      "title": "Autoblog.com \u00bb Features",
+      "feed_url": "https://www.autoblog.com/.rss/feed/1b22530b-da2b-4cdf-a055-d19245b9b201.xml",
+      "website_url": "https://www.autoblog.com/features",
+      "description": "All Features from Autoblog.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7902599.jpg?t=1745412454"
+    },
+    {
+      "title": "Autoblog.com \u00bb Maintenance",
+      "feed_url": "https://www.autoblog.com/.rss/feed/d30afa8c-d79c-4861-85a7-a86b23fd8c25.xml",
+      "website_url": "https://www.autoblog.com/maintenance",
+      "description": "All articles about Maintenance from Autoblog.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7902599.jpg?t=1745412477"
+    },
+    {
+      "title": "Autoblog.com \u00bb Deals",
+      "feed_url": "https://www.autoblog.com/.rss/feed/eeb20666-e769-4696-abbe-ff7ede3e46d2.xml",
+      "website_url": "https://www.autoblog.com/deals",
+      "description": "All articles about Deals from Autoblog.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7902599.jpg?t=1745412489"
+    }
+  ]
+}

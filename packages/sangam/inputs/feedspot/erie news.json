@@ -1,0 +1,63 @@
+{
+  "category": "Erie News",
+  "source_url": "https://rss.feedspot.com/erie_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "YourErie.com",
+      "feed_url": "https://www.yourerie.com/feed/",
+      "website_url": "https://www.yourerie.com/",
+      "description": "YourErie.com brings you Erie Local News and Weather forecasts, Sports updates, and more community stories. Your Erie is powered by JET 24 and FOX 66. JET 24 is the ABC affiliate in Erie, Pennsylvania. We tell local Erie news & weather stories, and what we do to make Erie & the rest of Pennsylvania a better place to live.",
+      "followers": {
+        "facebook": 99800,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/5133889.jpg?t=1669093216"
+    },
+    {
+      "title": "Erie Reader",
+      "feed_url": "http://rss.eriereader.com/all",
+      "website_url": "https://www.eriereader.com/",
+      "description": "Erie Reader is Erie PA's weekly newspaper & features in-depth coverage of news, arts, & entertainment while exploring & discussing issues of our city.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 6600,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5133892.jpg?t=1585805790"
+    },
+    {
+      "title": "TalkErie.com",
+      "feed_url": "https://talkerie.com/category/erie/feed/",
+      "website_url": "https://talkerie.com/",
+      "description": "We are Erie, Pennsylvania's radio home for breaking news and informative talk. Featuring the Joel Natalie Show, a daily local program singularly-focused on the Erie region. Stay up to date on topics such as local news, politics, business, and crime.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 791
+      },
+      "image_url": "https://i1.feedspot.com/5133890.jpg?t=1585804043"
+    },
+    {
+      "title": "GoErie.com",
+      "feed_url": "https://www.goerie.com/",
+      "website_url": "https://www.goerie.com/",
+      "description": "On April 12, 1888, the first edition of the Erie Daily Times was produced in a small cellar office at West 9th and State Streets. John Mead eventually acquired the newspaper from his eight partners and the Erie Daily Times has remained in the Mead family ever since. Today, GoErie delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 235600,
+        "twitter": 42600,
+        "instagram": 17700
+      },
+      "image_url": "https://i1.feedspot.com/5133893.jpg?t=1585805571"
+    },
+    {
+      "title": "CBS Pittsburgh \u00bb Erie",
+      "feed_url": "https://www.cbsnews.com/pittsburgh/",
+      "website_url": "https://www.cbsnews.com/pittsburgh/",
+      "description": "News, sports, weather, traffic and the best of Pittsburgh from KDKA - CBSN Pittsburgh. Follow our feed to read the latest news and breaking headlines on what's happening in Erie, Pennsylvania.",
+      "followers": {
+        "facebook": 572500,
+        "twitter": 235600
+      },
+      "image_url": "https://i1.feedspot.com/5133891.jpg?t=1585805761"
+    }
+  ]
+}

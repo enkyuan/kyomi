@@ -1,0 +1,44 @@
+{
+  "category": "NMR",
+  "source_url": "https://rss.feedspot.com/nmr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nanalysis Blog",
+      "feed_url": "https://www.nanalysis.com/nmready-blog?format=rss",
+      "website_url": "https://www.nanalysis.com/nmready-blog",
+      "description": "Our Chemists discuss and talk about everything benchtop NMR spectrometer and more. We hope you enjoy our blog. Nanalysis Corp. is the world-leading NMR manufacturer, we develop and manufacture compact, portable, benchtop Magnetic Resonance Imaging and Spectroscopy products.",
+      "followers": {
+        "twitter": 1400,
+        "instagram": 412
+      },
+      "image_url": "https://i1.feedspot.com/5420022.jpg?t=1657267057"
+    },
+    {
+      "title": "Magritek Blog",
+      "feed_url": "https://magritek.com/feed/",
+      "website_url": "https://magritek.com/blog/",
+      "description": "Read our articles & publications on Nuclear Magnetic Resonance research. Founded in 2004, Magritek is an advanced technology company. Magritek developed its flagship Spinsolve Benchtop NMR Spectrometer capable of multinuclear NMR spectroscopy, with the highest resolution and sensitivity performance on any benchtop instrument available today.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437675.jpg?t=1662038199"
+    },
+    {
+      "title": "ACD Labs Blog",
+      "feed_url": "https://www.acdlabs.com/feed/",
+      "website_url": "https://www.acdlabs.com/resources/blog/",
+      "description": "Created to engage with our customers, ACD/Labs' Blog will deliver new thought-provoking content, exclusive company news, and fun and entertaining updates from the ACD/Labs team. ACD Labs are making the complex analytical lab easier with vendor-neutral software solutions.",
+      "followers": {
+        "facebook": 474,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5447481.jpg?t=1663586144"
+    },
+    {
+      "title": "UC San Diego SSPPS NMR Facility",
+      "feed_url": "http://sopnmr.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sopnmr.blogspot.com/",
+      "description": "Blog for the NMR Facility at the UC San Diego Skaggs School of Pharmacy - with an emphasis on practical NMR.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437673.jpg?t=1662037177"
+    }
+  ]
+}

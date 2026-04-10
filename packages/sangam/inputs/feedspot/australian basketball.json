@@ -1,0 +1,54 @@
+{
+  "category": "Australian Basketball",
+  "source_url": "https://rss.feedspot.com/australian_basketball_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Pick and Roll",
+      "feed_url": "https://pickandroll.com.au/feed",
+      "website_url": "https://pickandroll.com.au/",
+      "description": "We are committed to providing accurate, relevant and timely coverage of Australian basketball to help promote and educate the public. We do this through providing a platform for everyone. Not only for readers, but also a springboard for budding writers to develop their talent and find opportunities.",
+      "followers": {
+        "facebook": 94900,
+        "twitter": 31600,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4911446.jpg?t=1620132251"
+    },
+    {
+      "title": "Basketball Australia News",
+      "feed_url": "https://www.australia.basketball/news",
+      "website_url": "https://www.australia.basketball/news",
+      "description": "Basketball Australia (BA) is the governing body for the sport of basketball in Australia and is responsible for Australian national teams, the Centre of Excellence, the WNBL, NWBL, Australian Junior Championships, and Aussie Hoops. Read the latest news and updates from BA in this space.",
+      "followers": {
+        "facebook": 133800,
+        "twitter": 53700,
+        "instagram": 111500
+      },
+      "image_url": "https://i1.feedspot.com/4478768.jpg?t=1603268590"
+    },
+    {
+      "title": "Palmerbet Blog",
+      "feed_url": "https://blog.palmerbet.com/",
+      "website_url": "https://blog.palmerbet.com/nba/",
+      "description": "Aussie Bookie talking all things betting! Palmerbet offers Basketball Betting Tips, Previews, and Bonus Bets.",
+      "followers": {
+        "facebook": 65900,
+        "twitter": 19400,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4911531.jpg?t=1620132266"
+    },
+    {
+      "title": "Basketball Australia",
+      "feed_url": "https://coach.basketball.net.au/category/blog/feed/?x=1",
+      "website_url": "https://www.australia.basketball/",
+      "description": "See what's happening in Australian Basketball and the World Association of Basketball Coaches",
+      "followers": {
+        "facebook": 133800,
+        "twitter": 53700,
+        "instagram": 111500
+      },
+      "image_url": "https://i1.feedspot.com/4854201.jpg?t=1611751043"
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "category": "Zero Waste",
+  "source_url": "https://rss.feedspot.com/zero_waste_rss_feeds",
+  "feeds": [
+    {
+      "title": "Zero Waste Chef",
+      "feed_url": "https://zerowastechef.com/feed/",
+      "website_url": "https://zerowastechef.com/",
+      "description": "Blog by Anne-Marie Bonneau. Zero-waste living step by step, with loads of recipes to replace your favorite packaged foods, tips on zero-waste and plastic-free living and the occasional rant.",
+      "followers": {
+        "facebook": 81700,
+        "twitter": 9200,
+        "instagram": 209900
+      },
+      "image_url": "https://i1.feedspot.com/4589953.jpg?t=1674121979"
+    },
+    {
+      "title": "The Rogue Ginger Blog",
+      "feed_url": "https://www.therogueginger.com/feeds/posts/default",
+      "website_url": "https://www.therogueginger.com/search?max-results=7",
+      "description": "Erin Rhoads is the curious lady behind The Rogue Ginger. She has been writing about her own journey, sharing how she reduced plastic and her rubbish, leading to a happier and healthier life. It is Australia's popular eco-lifestyle blog on zero waste and plastic-free living, sharing tips on how to reduce plastic and rubbish every day.",
+      "followers": {
+        "facebook": 13100,
+        "instagram": 25500
+      },
+      "image_url": "https://i1.feedspot.com/3962944.jpg?t=1608641663"
+    },
+    {
+      "title": "Eco Boost",
+      "feed_url": "https://eco-boost.co/feed/",
+      "website_url": "http://eco-boost.co/",
+      "description": "Eco Boost is a blog and YouTube channel where Kate Arnell shares awesome people, places, brands and general discoveries with an eco twist.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 694
+      },
+      "image_url": "https://i1.feedspot.com/4766842.jpg?t=1608641710"
+    },
+    {
+      "title": "Sustainable Jungle",
+      "feed_url": "https://www.sustainablejungle.com/feed/",
+      "website_url": "https://www.sustainablejungle.com/",
+      "description": "On Sustainable Jungle, we share sustainability-related ideas, tips, tricks, products, brands, and stories about people & organizations doing meaningful work to better our planet. Our goal is to play a role in making sustainability ubiquitous.",
+      "followers": {
+        "facebook": 51100,
+        "twitter": 476,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5442024.jpg?t=1663225578"
+    },
+    {
+      "title": "Zero Waste Europe",
+      "feed_url": "https://zerowasteeurope.eu/feed/",
+      "website_url": "https://zerowasteeurope.eu/resources/zwe-blog/",
+      "description": "Zero Waste Europe (ZWE) proposes to re-design our society in a way that all superfluous waste is eliminated and everything that is produced can be re-used, repaired, composted or recycled back into the system",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 23200
+      },
+      "image_url": "https://i1.feedspot.com/4606389.jpg?t=1604294742"
+    },
+    {
+      "title": "Robin Greenfield Blog",
+      "feed_url": "https://www.robingreenfield.org/blog/feed/",
+      "website_url": "https://www.robingreenfield.org/blog/",
+      "description": "Rob Greenfield is an adventurer, environmental activist, humanitarian, and dude making a difference. He is dedicated to leading the way to a more sustainable and just world. The blog of Rob Greenfield is where he shares inspiration and education to help you on your journey to a happier, healthier, and more sustainable existence.",
+      "followers": {
+        "facebook": 972800,
+        "twitter": 23800,
+        "instagram": 421
+      },
+      "image_url": "https://i1.feedspot.com/5442027.jpg?t=1663225599"
+    },
+    {
+      "title": "The Zero Waste Family",
+      "feed_url": "https://zerowastefamily.com/feed",
+      "website_url": "https://zerowastefamily.com/blog",
+      "description": "We're a family of five living zero-waste, plant-based, & mindfully minimal so that both our kids and our planet can enjoy a beautiful, thriving future. We focus on current environmental issues, share tips & ideas, and offer helpful information about sustainable products.",
+      "followers": {
+        "facebook": 63600,
+        "twitter": 19,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5288774.jpg?t=1622811940"
+    },
+    {
+      "title": "A Considered Life",
+      "feed_url": "https://www.aconsideredlife.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.aconsideredlife.co.uk/",
+      "description": "Hello, I'm Sophie! Welcome to A Considered Life, a UK-based simple living blog focused on sustainable style, eco habits, and slow travel. I write about the ways we can simplify our lives in order to be kinder to the planet and ourselves.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4907177.jpg?t=1674192886"
+    },
+    {
+      "title": "Green and Happy Mom",
+      "feed_url": "https://www.greenandhappymom.com/blog-feed.xml",
+      "website_url": "https://www.greenandhappymom.com/",
+      "description": "Green and Happy Mom helps you towards a sustainable lifestyle with eco-friendly tips and tricks to create a zero-waste life for your family.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 124
+      },
+      "image_url": "https://i1.feedspot.com/5299844.jpg?t=1625579126"
+    },
+    {
+      "title": "Zero Waste Week",
+      "feed_url": "https://www.zerowasteweek.co.uk/feed/",
+      "website_url": "https://www.zerowasteweek.co.uk/blog/",
+      "description": "Reduce waste to save money and the environment with Zero Waste Week!",
+      "followers": {
+        "twitter": 10100,
+        "instagram": 976
+      },
+      "image_url": "https://i1.feedspot.com/4766859.jpg?t=1608642666"
+    },
+    {
+      "title": "Greenify Me",
+      "feed_url": "https://www.greenify-me.com/feed",
+      "website_url": "https://www.greenify-me.com/",
+      "description": "Hi everyone, I'm Ariana. In July of 2015 I even started this blog to document sustainable living my journey. I want this to be an inviting place for you to learn about zero waste living, just as I did. I want you to grow as a fellow human being on this beautiful earth and not take it for granted.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3100,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/5442023.jpg?t=1663225571"
+    },
+    {
+      "title": "The Real Meal Deal",
+      "feed_url": "https://www.therealmealdeal.com/feed/",
+      "website_url": "https://www.therealmealdeal.com/",
+      "description": "Here, you'll find loads of easy sustainable Recipes and lifestyle Tips to help you and your family cut your carbon emissions and waste. See how you can enjoy food at its best, eat with the seasons, reduce food waste, use Fairtrade, and have a great sustainable diet. Blog author Claire Carter is passionate about and advocates a sustainable lifestyle.",
+      "followers": {
+        "facebook": 445,
+        "twitter": 623,
+        "instagram": 361
+      },
+      "image_url": "https://i1.feedspot.com/5367386.jpg?t=1701338604"
+    },
+    {
+      "title": "Zero Waste Nest",
+      "feed_url": "https://zerowastenest.com/feed/",
+      "website_url": "https://zerowastenest.com/",
+      "description": "Zero Waste Nest's mission is to help you reduce the amount of waste you produce in your day-to-day life: when you are at home, you go out, go grocery shopping, go to a party, do a picnic, etc.",
+      "followers": {
+        "facebook": 4300,
+        "instagram": 21200
+      },
+      "image_url": "https://i1.feedspot.com/5367157.jpg?t=1663661424"
+    },
+    {
+      "title": "The ReFab Diaries",
+      "feed_url": "https://feeds.feedburner.com/Candoodles",
+      "website_url": "https://www.refabdiaries.com/",
+      "description": "Hi, I'm Candice - a South African living in Chicago. My blog focuses on thrifty re-visions, re-makes and re-do's, fondly referred to as ReFABS! I work hard to find actual projects, not just inspiring images. Reducing waste through upcycling, repurposing, refashioning and reloving.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 415,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4697712.jpg?t=1608642673"
+    },
+    {
+      "title": "No Trace",
+      "feed_url": "https://notraceshop.com/blog/feed/",
+      "website_url": "https://notraceshop.com/blog/",
+      "description": "Going for zero waste? No Trace makes beautiful bags, wraps, and linens to help you go green.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4767089.jpg"
+    },
+    {
+      "title": "The Zero Journey",
+      "feed_url": "https://zerojourney.wordpress.com/feed/",
+      "website_url": "https://zerojourney.wordpress.com/",
+      "description": "A place where I can share my journey to zero-waste: the frustrations, challenges, and successes that come along for the ride. A place to network with others who have started and are maintaining the same journey, to share resources, and to get that much needed support when you can't find it in your closest circles! To Zero-Waste! And all the pretty things that come along with it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766285.jpg?t=1608643494"
+    },
+    {
+      "title": "ZeW-Min: The Zero Waste Journey",
+      "feed_url": "http://zewmin.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://zewmin.blogspot.com/",
+      "description": "I created my blog in 2014 mainly to document my zero waste journey. My main goal is to share things that I have tried to become more zero waste and minimalist.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4767194.jpg?t=1608642771"
+    },
+    {
+      "title": "Zero Waste Alliance Ireland",
+      "feed_url": "http://www.zerowasteireland.com/feed/",
+      "website_url": "http://www.zerowasteireland.com/blog/",
+      "description": "Zero Waste Alliance Ireland promotes a circular economy where waste is no longer tolerated and resources are valued for a lifetime of use and re-use.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 529
+      },
+      "image_url": "https://i1.feedspot.com/4767205.jpg?t=1608644175"
+    },
+    {
+      "title": "Conscious by Chlo\u00e9",
+      "feed_url": "https://consciousbychloe.com/rss/",
+      "website_url": "https://consciousbychloe.com/",
+      "description": "My name is Chlo\u00e9 Lepeltier. I started Conscious by Chlo\u00e9, my sustainable lifestyle blog, in the fall of 2015 as a creative outlet to express my thoughts & inspirations, and document my search for happiness. Here, I chronicle my daily style, DIY experiments, and adventures in the Pacific Northwest and beyond.",
+      "followers": {
+        "facebook": 982,
+        "twitter": 233,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5442025.jpg?t=1663666199"
+    },
+    {
+      "title": "Zero Waste in ACTION",
+      "feed_url": "https://zerowastezone.blogspot.com/feeds/posts/default",
+      "website_url": "https://zerowastezone.blogspot.com/",
+      "description": "Holly is on a mission to bring integrity into corporate business practices. While the IMPACT and Zero Waste in ACTION blogs' audience is the corporate community, the Evolved Integrity blog speaks to personal challenges while navigating the Earth's energetic shifts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/714852.jpg?t=1608643882"
+    },
+    {
+      "title": "Treading My Own Path",
+      "feed_url": "https://treadingmyownpath.com/feed/",
+      "website_url": "https://treadingmyownpath.com/",
+      "description": "Steps towards a sustainable lifestyle: plastic-free and zero waste, real food and recipes, minimalism and simple living.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 4500,
+        "instagram": 47000
+      },
+      "image_url": "https://i1.feedspot.com/4766167.jpg?t=1604294768"
+    },
+    {
+      "title": "Eco Roots",
+      "feed_url": "https://ecoroots.us/blogs/blog.atom",
+      "website_url": "https://ecoroots.us/blogs/blog",
+      "description": "Contains zero-waste tips, eco-friendly products, and a shopping guide for the home, bath, and kitchen. Eco Roots is a sustainable, earth-friendly, conscious, and plastic-free brand, Offering the best plastic-free alternatives to everyday products.",
+      "followers": {
+        "facebook": 6900,
+        "instagram": 81100
+      },
+      "image_url": "https://i1.feedspot.com/5307163.jpg?t=1627650171"
+    },
+    {
+      "title": "Wild Minimalist | Zero Waste",
+      "feed_url": "https://wildminimalist.com/blogs/news.atom",
+      "website_url": "https://wildminimalist.com/blogs/news",
+      "description": "We offer sustainable, eco-friendly, plastic-free products for your zero waste lifestyle.",
+      "followers": {
+        "facebook": 37700,
+        "twitter": 195,
+        "instagram": 128199
+      },
+      "image_url": "https://i1.feedspot.com/4766885.jpg?t=1608641673"
+    },
+    {
+      "title": "MY ZERO WASTE",
+      "feed_url": "https://myzerowaste.com/category/blog/feed/",
+      "website_url": "https://myzerowaste.com/category/recycle/",
+      "description": "Read the Green family's blog about reducing the amount of waste sent to landfill each week.The overall purpose of this blog is to help householders reduce the amount of rubbish sent to landfill. Their aim is to inspire and educate other people to reduce their landfill waste as much as possible.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4604203.jpg?t=1604135526"
+    },
+    {
+      "title": "Gippsland Unwrapped Zero waste, plastic free and no palm oil",
+      "feed_url": "https://gippslandunwrapped.com/feed/",
+      "website_url": "https://gippslandunwrapped.com/",
+      "description": "Tammy Logan is the author of Gippsland Unwrapped, a blog committed to the pursuit of plastic and waste free living. Based in Gippsland, Victoria Tammy combines her experience in conservation biology and community engagement with her dairy farming roots, to deliver a humble and honest approach to plastic and waste free family life.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 406
+      },
+      "image_url": "https://i1.feedspot.com/4698968.jpg?t=1608641695"
+    },
+    {
+      "title": "Eco Local",
+      "feed_url": "https://buyecolocal.com/feed/",
+      "website_url": "https://buyecolocal.com/",
+      "description": "Eco Local was created to give you more options in reaching your goals! Whether it is to achieve a fully zero waste home or to simply save money, Eco Local's collections are about making zero waste luxurious.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5162198.jpg?t=1608642678"
+    },
+    {
+      "title": "PAREdown | Live More Use Less",
+      "feed_url": "https://paredownhome.com/feed/",
+      "website_url": "https://paredownhome.com/paredown-blog/",
+      "description": "Our mission is to make the Zero Waste lifestyle fashionable and accessible to everyone. Because it is time to take sustainability seriously. PAREdown Home Website is Canada's number one site for information on living Zero Waste; sharing DIY tips, our favorite brands and products and stores across Canada. We live Zero Waste and our goal is to inspire you to do the same.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 513
+      },
+      "image_url": "https://i1.feedspot.com/4766160.jpg?t=1608642695"
+    },
+    {
+      "title": "ZeroWasteLifeStyle",
+      "feed_url": "http://zerowastelifestyle.de/category/aktuelles/feed/",
+      "website_url": "http://zerowastelifestyle.de/category/aktuelles/",
+      "description": "Zero Waste Lifestyle is ... buying without packaging. Zero Waste Lifestyle is ... avoiding as much plastic as possible. Zero Waste Lifestyle is ... not throwing away but giving away.",
+      "followers": {
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/4766384.jpg?t=1608642712"
+    },
+    {
+      "title": "Zero Waste Bloggers Network",
+      "feed_url": "https://zerowastebloggersnetwork.com/feed/",
+      "website_url": "https://zerowastebloggersnetwork.com/",
+      "description": "A supportive community of Zero Waste Bloggers around the world!",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4766829.jpg?t=1608642716"
+    },
+    {
+      "title": "Zero Waste Hamburg",
+      "feed_url": "http://alternulltivhamburg.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://alternulltivhamburg.blogspot.com/",
+      "description": "617 kg was the amount of waste per person in Germany in 2013. Up to 13 million tons of plastic wasteland in our oceans every year. Since you have landed here on the page, you are certainly below already mentioned average, but how about this: Do not produce garbage! Zero waste! You can find our alternatives here on our blog.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4766339.jpg?t=1608642721"
+    },
+    {
+      "title": "Spot of Earth",
+      "feed_url": "https://spotofearth.com/feed/",
+      "website_url": "https://spotofearth.com/",
+      "description": "A page linked to my blog, Spot of Earth, where I write about our journey towards a more eco-friendly family life in rural County Durham.",
+      "followers": {
+        "facebook": 338,
+        "twitter": 663
+      },
+      "image_url": "https://i1.feedspot.com/4766854.jpg?t=1608642747"
+    },
+    {
+      "title": "Emeraldfootprint",
+      "feed_url": "https://emeraldfootprint.wordpress.com/feed/",
+      "website_url": "https://emeraldfootprint.wordpress.com/",
+      "description": "This blog documents my adventures in green living & minimalism in Dublin and San Francisco. I hope I can inspire you to make even small changes that will make both your life and the earth a happier one.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766392.jpg?t=1608643019"
+    },
+    {
+      "title": "Zero Waste M\u00fcnchen",
+      "feed_url": "https://zerowastemunich.com/feed/",
+      "website_url": "https://zerowastemunich.com/",
+      "description": "This blog is about how a Munich family tries to live waste-free ...",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4766394.jpg?t=1608642765"
+    },
+    {
+      "title": "Amanda in Waste-free Land",
+      "feed_url": "http://www.wastefreeland.nz/feed/",
+      "website_url": "https://www.wastefreeland.nz/",
+      "description": "Living Waste Free in New Zealand",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 860
+      },
+      "image_url": "https://i1.feedspot.com/4766317.jpg?t=1608644171"
+    },
+    {
+      "title": "Saahas Zero Waste",
+      "feed_url": "https://saahaszerowaste.wordpress.com/feed/",
+      "website_url": "https://saahaszerowaste.wordpress.com/",
+      "description": "Saahas focuses on providing end-to-end waste management solutions to bulk waste generators. We offer consultancy services to plan and design a waste management facility for new properties We work with companies to aggregate and support a reverse logistics system in line with their sustainability policy.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4767053.jpg?t=1608644178"
+    },
+    {
+      "title": "Skip The Bag",
+      "feed_url": "http://feeds.feedburner.com/SkipTheBag",
+      "website_url": "https://www.skipthebag.com/",
+      "description": "A zero waste and homesteading blog changing the world by skipping one plastic bag at a time.",
+      "followers": {
+        "facebook": 395,
+        "twitter": 759,
+        "instagram": 844
+      },
+      "image_url": "https://i1.feedspot.com/4766845.jpg?t=1608644186"
+    },
+    {
+      "title": "Polly Barks | Zero Waste Educator",
+      "feed_url": "https://pollybarks.com/blog?format=rss",
+      "website_url": "https://pollybarks.com/",
+      "description": "Welcome to PollyBarks.com! I'm here to break down the big ideas of zero waste and sustainability into actionable pieces.",
+      "followers": {
+        "facebook": 53
+      },
+      "image_url": "https://i1.feedspot.com/4766869.jpg?t=1611137685"
+    },
+    {
+      "title": "DCC Blog",
+      "feed_url": "https://www.zerowasterecycler.com/feed/",
+      "website_url": "https://www.zerowasterecycler.com/category/waste-recycling/",
+      "description": "DCC Blog covers articles about zero waste management, manufacturing waste segregation plant, waste recycling machine, MSW plants and machinery, zero waste recycler techniques and more.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5316444.jpg?t=1667815272"
+    },
+    {
+      "title": "Eco Thrifty Living Blog",
+      "feed_url": "https://ecothriftyliving.com/feed",
+      "website_url": "https://ecothriftyliving.com/blog",
+      "description": "Hi, my name is Zo\u00eb Morrison and I am the author of Eco Thrifty Living. I have learned so much about being eco-friendly, saving money and setting healthy limits when it comes to both of those activities!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 6000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4700171.jpg?t=1611055811"
+    },
+    {
+      "title": "A Dream Lived Greener",
+      "feed_url": "https://adreamlivedgreener.wordpress.com/blog/feed/",
+      "website_url": "https://adreamlivedgreener.wordpress.com/blog/",
+      "description": "Zero Waste Family Life and Shopping in Ottawa, Canada",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766904.jpg"
+    },
+    {
+      "title": "Zero Waste Baton Rouge",
+      "feed_url": "http://zerowastebatonrouge.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://zerowastebatonrouge.blogspot.com/",
+      "description": "The best information about living a waste free life in Baton Rouge and the surrounding areas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4767199.jpg?t=1613117825"
+    },
+    {
+      "title": "Shop Without Plastic Blog",
+      "feed_url": "https://www.shop-without-plastic.com/pages/our-blog",
+      "website_url": "https://www.shop-without-plastic.com/pages/our-blog",
+      "description": "Our blog posts feature interesting short knowledge articles and guides about sustainable living and zero waste. SWOP - Shop Without Plastic is a green initiative by Ava and Lars, two passionate hikers and campers that share a deep love for our planet and its wildlife. They share some of the alternatives that can help lives with the rest of the world.",
+      "followers": {
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5600169.jpg?t=1686904139"
+    },
+    {
+      "title": "GAIA | Zero Waste World",
+      "feed_url": "https://zerowasteworld.org/feed/",
+      "website_url": "https://trashisfortossers.com/",
+      "description": "GAIA's Blog on Stories and Solutions for a Waste-Free World",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4766891.jpg?t=1608642776"
+    },
+    {
+      "title": "Trash is for Tossers",
+      "feed_url": "https://www.tift-admin.com/feed/",
+      "website_url": "https://trashisfortossers.com/",
+      "description": "My name is Lauren Singer and I live a Zero Waste life in NYC.Trash is for Tossers is my attempt. It will document my Zero Waste journey and show that leading a Zero Waste lifestyle is simple, cost-effective, timely, fun, & entirely possible for everyone and anyone. If I can do it, anyone can!",
+      "followers": {
+        "facebook": 104200,
+        "twitter": 17000,
+        "instagram": 302600
+      },
+      "image_url": "https://i1.feedspot.com/4058066.jpg?t=1608641677"
+    },
+    {
+      "title": "Going Zero Waste Blog",
+      "feed_url": "https://www.goingzerowaste.com/blog?format=RSS",
+      "website_url": "https://www.goingzerowaste.com/blog/",
+      "description": "A Zero Waste Blog. Follow along with my journey.\u00a0Living with intention, eating real food, waste reduction, saving money, but most importantly valuing experiences over things.",
+      "followers": {
+        "facebook": 471600,
+        "twitter": 4500,
+        "instagram": 701800
+      },
+      "image_url": "https://i1.feedspot.com/4724878.jpg?t=1607596277"
+    },
+    {
+      "title": "Zero Waste Home",
+      "feed_url": "https://zerowastehome.com/feed/",
+      "website_url": "https://zerowastehome.blogspot.com/",
+      "description": "Hi there and thanks for visiting my blog! My name is Bea Johnson, native of France and currently living in Mill Valley, California. Since adopting the Zero Waste lifestyle in 2008, my life and that of my family have changed for the better. I propose a simple guideline, my 5R's: Refuse, Reduce, Reuse, Recycle, and Rot.",
+      "followers": {
+        "facebook": 373200,
+        "twitter": 33600,
+        "instagram": 232900
+      },
+      "image_url": "https://i1.feedspot.com/4705002.jpg?t=1604294711"
+    },
+    {
+      "title": "Zero Waste Guy",
+      "feed_url": "https://zerowasteguy.com/blog/feed/",
+      "website_url": "https://zerowasteguy.com/blog/",
+      "description": "Sharing tips and tricks for living a zero waste life.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 779,
+        "instagram": 23000
+      },
+      "image_url": "https://i1.feedspot.com/4766202.jpg?t=1608644190"
+    },
+    {
+      "title": "Wasteland Rebel",
+      "feed_url": "https://wastelandrebel.com/en/blog/feed/",
+      "website_url": "https://wastelandrebel.com/en/blog/",
+      "description": "Hi, I am Shia! I am all about simple, effective, and first and foremost doable zero waste hacks!",
+      "followers": {
+        "facebook": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4767042.jpg?t=1608641688"
+    },
+    {
+      "title": "Moral Fibres Blog",
+      "feed_url": "https://moralfibres.co.uk/feed/",
+      "website_url": "https://moralfibres.co.uk/blog/",
+      "description": "I'm Wendy and welcome to Moral Fibres, a UK-based eco-blog. I'm a sustainability expert, and my aim is to make sustainability simple, by researching and writing on all things environmental - from product guides to breaking down big ideas - so you don't have to.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 7500,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/5156919.jpg?t=1625654027"
+    },
+    {
+      "title": "Sustainability Tribe",
+      "feed_url": "https://www.sustainabilitytribe.com/staging/feed/",
+      "website_url": "https://www.sustainabilitytribe.com/",
+      "description": "Sustainability Tribe is UAE's pioneering social enterprise and sustainability education resource founded by a sustainability industry insider in 2009. Over 12 years, Sustainability Tribe has changed mindsets by raising social awareness, inspired climate actions in social and business communities, and went on to become an urban grassroots movement.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1200,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5442026.jpg?t=1663660527"
+    },
+    {
+      "title": "Simply Spruce",
+      "feed_url": "https://simplyspruce.com/blogs/journal.atom",
+      "website_url": "https://simplyspruce.com/blogs/journal",
+      "description": "Simply Spruce provides sustainable, eco-friendly, and zero-waste products. We encourage reusability and sustainability. Products are compostable or recyclable.",
+      "followers": {
+        "facebook": 31,
+        "instagram": 118
+      },
+      "image_url": "https://i1.feedspot.com/5155956.jpg?t=1608642705"
+    },
+    {
+      "title": "Just Live Zero Waste Blog",
+      "feed_url": "http://www.einfachzerowasteleben.de/1/feed",
+      "website_url": "https://zerowasteadelaide.com/",
+      "description": "Simply Zero Waste live blog, updates, tips, tricks and interesting things.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4766350.jpg?t=1608642728"
+    },
+    {
+      "title": "My Sustainable Kitchen",
+      "feed_url": "https://mysustainablekitchen.com/feed/",
+      "website_url": "https://zerowasteadelaide.com/",
+      "description": "Recipes, tips & DIYs for an eco-conscious kitchen",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5156106.jpg?t=1608643401"
+    },
+    {
+      "title": "Zero Waste Adelaide",
+      "feed_url": "https://zerowasteadelaide.com/feed/",
+      "website_url": "https://zerowasteadelaide.com/",
+      "description": "My name is Lisa and I hail from the wonderful city of Adelaide, South Australia (Allegedly the world's fifth most livable city!). I started my journey to zero-waste this year (March 2015), and have found that it has helped me in more ways than one.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766311.jpg?t=1608642941"
+    },
+    {
+      "title": "Life Lived Simply | Zero Waste Enthusiast",
+      "feed_url": "https://lifelivedsimply.co/feed/",
+      "website_url": "https://lifelivedsimply.co/",
+      "description": "It's a bit of everything but mainly focuses on zero waste.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 590,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4766303.jpg?t=1608644290"
+    },
+    {
+      "title": "Zero Waste Canada",
+      "feed_url": "https://www.zerowastecanada.ca/blog/feed",
+      "website_url": "https://www.zerowastecanada.ca/blog",
+      "description": "Zero Waste Canada is a non-profit that advocates for a zero waste future.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4766908.jpg?t=1608641701"
+    }
+  ]
+}

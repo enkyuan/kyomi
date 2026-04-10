@@ -1,0 +1,63 @@
+{
+  "category": "AMD (Advanced Micro Devices)",
+  "source_url": "https://rss.feedspot.com/amd_rss_feeds",
+  "feeds": [
+    {
+      "title": "91mobiles.com \u00bb AMD",
+      "feed_url": "https://www.91mobiles.com/hub/tag/amd/feed/",
+      "website_url": "https://www.91mobiles.com/hub/tag/amd/",
+      "description": "Latest news/updates about AMD products and more from #1 Indian gadget discovery site. Follow for updates.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 141600,
+        "instagram": 398200
+      },
+      "image_url": "https://i1.feedspot.com/5041951.jpg"
+    },
+    {
+      "title": "AMD Community Gaming",
+      "feed_url": "https://community.amd.com/sdtpp67534/rss/board?board.id=gaming-blogs",
+      "website_url": "https://community.amd.com/t5/gaming/bg-p/gaming-blogs/",
+      "description": "All the updates and insights about the evolving AMD tech hardware right from the gaming community of the brand itself. Follow to get notified.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1200000,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/5042022.jpg"
+    },
+    {
+      "title": "Glenn Berry \u00bb AMD",
+      "feed_url": "https://www.sqlskills.com/blogs/glenn/category/amd/feed/",
+      "website_url": "https://www.sqlskills.com/blogs/glenn/category/amd/",
+      "description": "All the latest updates and tech news about AMD and its products by Glenn Berry, who has worked as a SQL server expert since 2007. Follow for further updates.",
+      "followers": {
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5042000.jpg?t=1622473568"
+    },
+    {
+      "title": "ProVideo Coalition \u00bb AMD",
+      "feed_url": "https://www.provideocoalition.com/tag/amd/feed/",
+      "website_url": "https://www.provideocoalition.com/tag/amd/",
+      "description": "All the best tech updates about AMD at ProVideo Coalition by Jose Antunes who has a vast experience in hardware and software along with a vast number of fields. Follow to know more.",
+      "followers": {
+        "facebook": 22500,
+        "twitter": 20300,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5041959.jpg?t=1622473572"
+    },
+    {
+      "title": "AMD Blogs",
+      "feed_url": "https://www.amd.com/en/blogs.html/",
+      "website_url": "https://www.amd.com/en/blogs.html/",
+      "description": "All Insights and content about the AMD Corporate world from the AMD Corporate Community itself. Follow for more updates and notifications.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5042913.jpg?t=1622473551"
+    }
+  ]
+}

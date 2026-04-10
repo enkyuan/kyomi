@@ -1,0 +1,98 @@
+{
+  "category": "Oakland News",
+  "source_url": "https://rss.feedspot.com/oakland_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "East Bay Express",
+      "feed_url": "https://eastbayexpress.com/feed/",
+      "website_url": "https://eastbayexpress.com/",
+      "description": "The East Bay Express is the local alternative to mainstream media. We seek to promote truth, expose wrongdoing, and give voice to the voiceless. We are dedicated to local arts and culture. Get News, arts, and dining coverage for Oakland, Berkeley, and the greater East Bay.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 61600,
+        "instagram": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4663888.jpg?t=1612934613"
+    },
+    {
+      "title": "Oakland News Online",
+      "feed_url": "https://oaklandnewsonline.com/feed/",
+      "website_url": "https://oaklandnewsonline.com/",
+      "description": "Oakland News Online covers topics such as Oakland news, food, politics and more.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5058059.jpg?t=1612934631"
+    },
+    {
+      "title": "Oakland North",
+      "feed_url": "https://oaklandnorth.net/feed/",
+      "website_url": "https://oaklandnorth.net/",
+      "description": "A news project of UC Berkeley's Graduate School of Journalism. We cover Oakland crime, business, politics, education, and more.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/3933871.jpg?t=1612934609"
+    },
+    {
+      "title": "The Mercury News \u00bb Oakland",
+      "feed_url": "https://www.mercurynews.com/location/california/bay-area/east-bay/alameda-county/oakland/feed/",
+      "website_url": "https://www.mercurynews.com/location/california/bay-area/east-bay/alameda-county/oakland/",
+      "description": "Latest Oakland breaking news, local news, sports, business, entertainment, lifestyle and opinion.",
+      "followers": {
+        "facebook": 195900,
+        "twitter": 276900,
+        "instagram": 31900
+      },
+      "image_url": "https://i1.feedspot.com/5133323.jpg?t=1585642965"
+    },
+    {
+      "title": "Oakland Voices",
+      "feed_url": "https://oaklandvoices.us/feed/",
+      "website_url": "https://oaklandvoices.us/",
+      "description": "Oakland Voices is The Oakland Tribune's 9-month program that trains East Bay residents to tell the stories of their neighborhoods. The Tribune created Oakland Voices as a vehicle for community members to become multimedia storytellers, and to be new voices directly shaping the coverage of this region.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 4100,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4902770.jpg?t=1672749840"
+    },
+    {
+      "title": "The Oaklandside",
+      "feed_url": "https://oaklandside.org/feed/",
+      "website_url": "https://oaklandside.org/",
+      "description": "The Oaklandside is a local nonprofit news source dedicated to Oakland. Working with a small team of journalists, we report on Oakland every day here at our nonprofit news site. Featuring News on arts and community events, OUSD, housing, city council, policing, and more. Sharing community voices and the power of real information.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 19300,
+        "instagram": 30100
+      },
+      "image_url": "https://i1.feedspot.com/5486990.jpg?t=1672749871"
+    },
+    {
+      "title": "Hoodline \u00bb Oakland",
+      "feed_url": "https://hoodline.com/news/oakland/rss/",
+      "website_url": "https://hoodline.com/news/oakland/",
+      "description": "Hoodline brings you daily local news coverage from Oakland. We cover restaurants, things to do, business, real estate, retail, and more. Formed by a network of local journalists and concerned people, Hoodline is an online newsroom connecting readers to the latest happenings from Oakland, San Jose and San Francisco.",
+      "followers": {
+        "facebook": 36200,
+        "twitter": 17100,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5486991.jpg?t=1672749914"
+    },
+    {
+      "title": "CBS News \u00bb Oakland",
+      "feed_url": "https://sanfrancisco.cbslocal.com/tag/oakland-news/feed/",
+      "website_url": "https://www.cbsnews.com/sanfrancisco/tag/oakland/",
+      "description": "News, Sports, Weather, Traffic & the Best of the Bay Area.",
+      "followers": {
+        "facebook": 322700,
+        "twitter": 122400
+      },
+      "image_url": "https://i1.feedspot.com/5133330.jpg?t=1702988540"
+    }
+  ]
+}

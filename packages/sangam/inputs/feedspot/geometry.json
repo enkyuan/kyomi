@@ -1,0 +1,82 @@
+{
+  "category": "Geometry",
+  "source_url": "https://rss.feedspot.com/geometry_rss_feeds",
+  "feeds": [
+    {
+      "title": "Go Geometry",
+      "feed_url": "https://feeds.feedburner.com/GoGeometry",
+      "website_url": "https://gogeometry.blogspot.com/",
+      "description": "Go Geometry is all about online Geometry theorems, problems, solutions, and related topics for all levels.",
+      "followers": {
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4539731.jpg?t=1622201377"
+    },
+    {
+      "title": "The Geometry Code Blog",
+      "feed_url": "https://www.geometrycode.com/feed/",
+      "website_url": "https://www.geometrycode.com/blog/",
+      "description": "The Geometry Code is all about Sacred Geometry Resources, Books, Conversations, Art Prints, Cards, Screensavers, Videos, Patterns, Blog and more.",
+      "followers": {
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/5007537.jpg?t=1622201383"
+    },
+    {
+      "title": "Geometry, Common Core Style",
+      "feed_url": "http://commoncoregeometry.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://commoncoregeometry.blogspot.com/",
+      "description": "This blog provides geometry lessons, tips and tricks to solve geometry problems.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5007561.jpg?t=1622201512"
+    },
+    {
+      "title": "Geometry Blog",
+      "feed_url": "https://marquisgeometry.wordpress.com/feed/",
+      "website_url": "https://marquisgeometry.wordpress.com/",
+      "description": "This blog gives an insight into basic geometry problems and theorems for school going students.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5007540.jpg?t=1622201498"
+    },
+    {
+      "title": "Geometry Coach Blog",
+      "feed_url": "https://geometrycoach.com/feed/",
+      "website_url": "https://geometrycoach.com/blog/",
+      "description": "Geometry Coach Blog provides ready to use lesson plans and materials to Geometry Teachers!",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/5007531.jpg?t=1622201388"
+    },
+    {
+      "title": "Geometry Gym",
+      "feed_url": "http://geometrygym.blogspot.com/feeds/posts/default",
+      "website_url": "http://geometrygym.blogspot.com/",
+      "description": "Geometry Gym develops tools to support openBIM interoperability. Particularly plug-ins for Rhino, Grasshopper, Revit, Tekla, and Navisworks.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/484097.jpg?t=1622201393"
+    },
+    {
+      "title": "Sunaina thinks absurd",
+      "feed_url": "https://sunainalovesmath.blogspot.com/feeds/posts/default",
+      "website_url": "https://sunainalovesmath.blogspot.com/",
+      "description": "A math olympiad blog by Sunaina Pati, to discuss math ideas, share experiences, notes(both school and olympiad).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362016.jpg?t=1641971521"
+    },
+    {
+      "title": "Math Only Math Blog",
+      "feed_url": "https://www.math-only-math.com/Math.xml",
+      "website_url": "https://www.math-only-math.com/math-blog.html",
+      "description": "Math Blog by Priyanka Ghosh having experience in teaching Mathematics for the past ten years in Kolkata, India. Presenting math-only-math to kids, students, and children. Mathematical ideas have been explained in the simplest possible way. Here you will have plenty of math help and lots of fun while learning and teaching math step-by-step.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 257
+      },
+      "image_url": "https://i1.feedspot.com/4470588.jpg?t=1608211712"
+    }
+  ]
+}

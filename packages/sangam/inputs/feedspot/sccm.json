@@ -1,0 +1,208 @@
+{
+  "category": "SCCM",
+  "source_url": "https://rss.feedspot.com/sccm_rss_feeds",
+  "feeds": [
+    {
+      "title": "PrajwalDesai.Com Blog",
+      "feed_url": "https://www.prajwaldesai.com/feed/",
+      "website_url": "https://www.prajwaldesai.com/blog/",
+      "description": "I am Prajwal Desai. I have been working in IT for over 8 years with a strong focus on Microsoft Server Technologies. For the last six years I have been working on SCCM / Configuration Manager, Lync, Vmware, VDI, Exchange server etc. This blog has articles on Microsoft Technologies such as SCCM, Azure, Cloud, PowerShell, Security and other technologies.",
+      "followers": {
+        "facebook": 764,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4738695.jpg?t=1612765691"
+    },
+    {
+      "title": "SCCM Intune Real World Enterprise Experience Blog",
+      "feed_url": "https://www.anoopcnair.com/feed/",
+      "website_url": "https://www.anoopcnair.com/intune/",
+      "description": "Anoop. C. Nair has received Microsoft MVP Award for Enterprise Client Management since 2015. In this blog he shares all about Microsoft technologies. It contains more about ConfigMgr (a.k.a SCCM), Intune, Mobile Device Management and all other technologies.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4818669.jpg?t=1612765701"
+    },
+    {
+      "title": "windows-noob.com",
+      "feed_url": "https://www.windows-noob.com/forums/discover/all.xml",
+      "website_url": "https://www.windows-noob.com/forums/portal/",
+      "description": "Niall C. Brady has been awarded Microsoft MVP Enterprise Client Management (Configuration Manager) 7 times in a row. Follow this blog where he shares plenty of content on Configuration Manager.",
+      "followers": {
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4739595.jpg?t=1612765746"
+    },
+    {
+      "title": "All about Microsoft Intune",
+      "feed_url": "https://petervanderwoude.nl/feed/",
+      "website_url": "https://petervanderwoude.nl/",
+      "description": "On this blog Peter shares his thoughts around Microsoft Intune (Suite), Windows Autopilot, Configuration Manager, Windows and many more related technologies.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4898396.jpg?t=1761627965"
+    },
+    {
+      "title": "CCMEXEC.COM",
+      "feed_url": "https://ccmexec.com/category/system-center-configuration-manager/feed/",
+      "website_url": "https://ccmexec.com/category/system-center-configuration-manager/",
+      "description": "My name is J\u00f6rgen Nilsson and I work as a Senior Consultant at Onevinn in Malmoe, Sweden. I have been working as a IT-Consulant since 1993 and since 1997 my main focus have been system management. In my role I do a lot of System Center and Windows design and deployment projects. I am also a Microsoft Certified Trainer and deliver trainings from time to time. Follow this blog to know more about System Center Configuration Manager.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4898405.jpg?t=1612765768"
+    },
+    {
+      "title": "just another windows noob ?",
+      "feed_url": "https://www.niallbrady.com/feed/",
+      "website_url": "https://www.niallbrady.com/",
+      "description": "Niall C. Brady has been awarded Microsoft MVP Enterprise Client Management (Configuration Manager) 7 times in a row. Follow this blog where he shares plenty of content on Configuration Manager.",
+      "followers": {
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4899379.jpg?t=1612765772"
+    },
+    {
+      "title": "Daniel Engberg",
+      "feed_url": "https://www.danielengberg.com/feed/",
+      "website_url": "https://www.danielengberg.com/",
+      "description": "Danielengberg.com covers the latest within Microsoft Endpoint Manager (SCCM, Intune) and Powershell. Also, find a big selection of tools and solutions.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5091757.jpg"
+    },
+    {
+      "title": "Techuisitive Blog",
+      "feed_url": "https://techuisitive.com/feed/",
+      "website_url": "https://techuisitive.com/blog/",
+      "description": "Inquisitive Technology is a group of IT Professionals dedicated to provide IT solutions and services to small business.",
+      "followers": {
+        "facebook": 190,
+        "twitter": 2,
+        "instagram": 23
+      },
+      "image_url": "https://i1.feedspot.com/5512088.jpg?t=1677151955"
+    },
+    {
+      "title": "Eswar Koneti's Blog",
+      "feed_url": "https://eskonr.com/feed/",
+      "website_url": "https://eskonr.com/",
+      "description": "Eswar Koneti Blog is a System Center Blog to share information about System Center Configuration Manager and its connected Components.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/897653.jpg?t=1612765795"
+    },
+    {
+      "title": "Nick's IT Blog",
+      "feed_url": "https://www.aitltd.com/feed/",
+      "website_url": "http://www.aitltd.com/",
+      "description": "Nicholas Drew is a Professional Technical Consultant with wide ranging skills from large scale Windows 10, 8.1 & 7 Desktop deployments to detailed problem analysis and lateral thinking. He has knowledge on SCCM installation, configuration, upgradation & problem solving. Follow this blog to get articles on SCCM.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4899382.jpg?t=1612765878"
+    },
+    {
+      "title": "Hayes Jupe's Blog",
+      "feed_url": "https://www.hayesjupe.com/feed/",
+      "website_url": "https://www.hayesjupe.com/",
+      "description": "I've been a Microsoft focused infrastructure nerd since 1997 and since 2005 I have been running my own consultancy, Adexis (www.adexis.com.au). We specialise in AD, Exchange, Lync, TMG, SCCM, SCOM, SCVVM, HyperV and anything else that falls into the Microsoft infrastructure space. Follow this blog to get resources on SCCM.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4897798.jpg?t=1612766585"
+    },
+    {
+      "title": "SCCMentor",
+      "feed_url": "https://sccmentor.com/feed/",
+      "website_url": "https://sccmentor.com/",
+      "description": "Paul Winstanley is a SCCM Consultant certified in both 2007 and 2012. He is a London based contractor with almost 20 years of IT experience and have spent the last 8 years specialising in SCCM deployments and advising clients how to use SCCM effectively within their environment. Follow this blog to get SCCM Tips, Fixes, Guides and much more.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4898477.jpg?t=1612765799"
+    },
+    {
+      "title": "GARYTOWN ConfigMgr Blog",
+      "feed_url": "https://garytown.com/feed",
+      "website_url": "https://garytown.com/",
+      "description": "Gary Blok is ConfigMgr Admin. Follow this blog where he shares his views and opinions on ConfigMgr, OSD, MDT and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4898461.jpg?t=1612766106"
+    },
+    {
+      "title": "System Center Dudes Blog",
+      "feed_url": "https://www.systemcenterdudes.com/blog/feed/",
+      "website_url": "https://www.systemcenterdudes.com/blog/",
+      "description": "System Center Dudes blog focuses on Microsoft System Center products, Configuration guides, detailed SQL Reports how-to troubleshooting and resolution.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4897805.jpg?t=1612765762"
+    },
+    {
+      "title": "Manish Bangia",
+      "feed_url": "https://www.manishbangia.com/feed/",
+      "website_url": "https://www.manishbangia.com/",
+      "description": "Covers various articles such SCCM / Intune / Azure and others. Manish Bangia is passionate about Microsoft technology specifically into managing endpoint devices and has hands on experience in various technologies.",
+      "followers": {
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/5323549.jpg?t=1632140071"
+    },
+    {
+      "title": "Workplace Ninja's Blog",
+      "feed_url": "https://www.wpninjas.ch/feed/",
+      "website_url": "https://www.wpninjas.ch/blogs/",
+      "description": "Workplace Ninja's Blog goal is to share knowledge with the community and to make Workplace Management with Microsoft Technologies simpler for everybody.",
+      "followers": {
+        "twitter": 1900,
+        "instagram": 151
+      },
+      "image_url": "https://i1.feedspot.com/5201800.jpg?t=1601300960"
+    },
+    {
+      "title": "Desktop Guy's Blog",
+      "feed_url": "https://desktopguy.com/category/sccm/feed/",
+      "website_url": "https://desktopguy.com/category/sccm/",
+      "description": "Follow this blog to get resources and articles on SCCM.",
+      "followers": {
+        "twitter": 663
+      },
+      "image_url": "https://i1.feedspot.com/4898426.jpg?t=1612766112"
+    },
+    {
+      "title": "System Center ConfigMgr",
+      "feed_url": "https://www.scconfigmgr.com/feed/",
+      "website_url": "https://msendpointmgr.com/",
+      "description": "System Center ConfigMgr is a blog about ConfigMgr, EMS, Intune, Windows 10, PowerShell. Follow this blog to get in depth knowledge in ECM and EMM.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/2181114.jpg?t=1612765810"
+    },
+    {
+      "title": "Enterprise Mobility and Enterprise Client Management Blog",
+      "feed_url": "https://configmgrblog.com/feed/",
+      "website_url": "https://www.recastsoftware.com/resources-type/blogs/",
+      "description": "I am a Senior Technical Consultant with a specialty on Enterprise Client Management and Enterprise Mobility working for CTGlobal. Since April 2012 I have been awarded as Microsoft MVP in System Center Configuration Manager, Enterprise Client Management (Microsoft Intune and System Center Configuration Manager). I am one of the authors of Mastering System Center 2012 Configuration Manager from Sybex. Follow this blog to get in depth knowledge in SCCM.",
+      "followers": {
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4897811.jpg"
+    },
+    {
+      "title": "Enhansoft Blog",
+      "feed_url": "https://www.enhansoft.com/blog/feed/",
+      "website_url": "https://www.recastsoftware.com/resources-type/blogs/",
+      "description": "Enhansoft is an information technology company specializing in System Center Configuration Manager (ConfigMgr / SCCM). Follow this blog to get the Enhansoft team's thoughts, ideas, and how-tos in System Center Configuration Manager.",
+      "followers": {
+        "facebook": 491,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4899475.jpg?t=1612766123"
+    }
+  ]
+}

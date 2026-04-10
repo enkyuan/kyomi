@@ -1,0 +1,81 @@
+{
+  "category": "Ransomware",
+  "source_url": "https://rss.feedspot.com/ransomware_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ransomware DataBreachToday.com",
+      "feed_url": "https://ransomware.databreachtoday.com/rss-feeds",
+      "website_url": "https://ransomware.databreachtoday.com/",
+      "description": "Ransomware data breach detection, prevention, and notification. DataBreachToday.com is a multimedia website providing news, insights and education on data breach detection, notification and prevention.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5372551.jpg?t=1645008291"
+    },
+    {
+      "title": "Coveware Blog",
+      "feed_url": "https://www.coveware.com/blog?format=RSS",
+      "website_url": "https://www.coveware.com/blog",
+      "description": "The Coveware team prides itself on keeping up-to-date, 24/7 with every aspect of ransomware and its possible threat to your business. Coveware helps businesses recover with speed and confidence when the latest evolution of ransomware strikes.",
+      "followers": {
+        "facebook": 122,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5039883.jpg?t=1645077067"
+    },
+    {
+      "title": "Ransomware.org Blog",
+      "feed_url": "https://ransomware.org/feed/",
+      "website_url": "https://ransomware.org/blog/",
+      "description": "Read recent articles, watch videos and webinars on ransomware. Find tools; hear from industry experts how to stay ahead of ransomware actors.",
+      "followers": {
+        "twitter": 382
+      },
+      "image_url": "https://i1.feedspot.com/5372547.jpg?t=1644988490"
+    },
+    {
+      "title": "Krebs on Security \u00bb Ransomware",
+      "feed_url": "https://krebsonsecurity.com/category/ransomware/feed/",
+      "website_url": "https://krebsonsecurity.com/category/ransomware/",
+      "description": "All articles about Ransomware on Ukraine form Krebs on Security.",
+      "followers": {
+        "twitter": 337300
+      },
+      "image_url": "https://i1.feedspot.com/5372544.jpg?t=1644988478"
+    },
+    {
+      "title": "Seqrite \u00bb Ransomware",
+      "feed_url": "https://www.seqrite.com/blog/tag/ransomware/feed/",
+      "website_url": "https://www.seqrite.com/blog/tag/ransomware/",
+      "description": "This section features articles on ransomware. Seqrite is the Enterprise Security Brand of Quick Heal Technologies Ltd. We help businesses simplify IT security and maximize business performance.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 15500
+      },
+      "image_url": "https://i1.feedspot.com/5372550.jpg?t=1644988517"
+    },
+    {
+      "title": "Cisco Blogs \u00bb Ransomware",
+      "feed_url": "https://blogs.cisco.com/tag/ransomware/feed",
+      "website_url": "https://blogs.cisco.com/tag/ransomware",
+      "description": "This section features articles on ransomware. Cisco helps companies seize the opportunities of tomorrow by proving that amazing things can happen when you connect the unconnected.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 378700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/5372540.jpg?t=1645076193"
+    },
+    {
+      "title": "Attivo Networks \u00bb Ransomware",
+      "feed_url": "https://www.attivonetworks.com/blogs/ransomware/feed/",
+      "description": "Articles on ransomware. Attivo Networks, the leader in identity detection and response, delivers a superior defense for preventing privilege escalation and lateral movement threat activity.",
+      "followers": {
+        "facebook": 369,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5372549.jpg?t=1644988504"
+    }
+  ]
+}

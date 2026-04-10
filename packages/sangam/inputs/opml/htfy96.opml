@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Vic subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="news" title="news">
+            <outline type="rss" text="路透: 时事要闻" title="路透: 时事要闻" xmlUrl="http://cn.reuters.com/rssFeed/CNTopGenNews/" htmlUrl="http://cn.reuters.com"/>
+            <outline type="rss" text="Washington Post: Breaking News, World, US, DC News &amp; Analysis" title="Washington Post: Breaking News, World, US, DC News &amp; Analysis" xmlUrl="http://www.washingtonpost.com/rss/homepage" htmlUrl="http://www.washingtonpost.com/pb/homepage/"/>
+            <outline type="rss" text="要闻_政经频道_财新网" title="要闻_政经频道_财新网" xmlUrl="http://china.caixin.com/news/rss/100300241.xml" htmlUrl="http://china.caixin.com/news/index.html"/>
+            <outline type="rss" text="澎湃新闻" title="澎湃新闻" xmlUrl="http://feedmaker.kindle4rss.com/feeds/choice.thepaper.xml" htmlUrl="http://www.thepaper.cn/index_scroll.jsp"/>
+            <outline type="rss" text="WSJ What's News" title="WSJ What's News" xmlUrl="http://feeds.wsjonline.com/wsj/podcast_wall_street_journal_whats_news" htmlUrl="http://www.wsj.com/podcasts"/>
+            <outline type="rss" text="《财经网》-每日要闻宏观" title="《财经网》-每日要闻宏观" xmlUrl="http://www.caijing.com.cn/rss/110827686.xml" htmlUrl="http://economy.caijing.com.cn/economynews/index.html"/>
+        </outline>
+        <outline text="hardcore tech" title="hardcore tech">
+            <outline type="rss" text="最新更新 – Solidot" title="最新更新 – Solidot" xmlUrl="http://www.solidot.org/index.rss" htmlUrl="https://www.solidot.org"/>
+            <outline type="rss" text="Facebook Code" title="Facebook Code" xmlUrl="https://code.facebook.com/posts/rss" htmlUrl="https://code.facebook.com/"/>
+            <outline type="rss" text="银河里的星星" title="银河里的星星" xmlUrl="http://duanple.blog.163.com/rss/" htmlUrl="http://duanple.blog.163.com"/>
+            <outline type="rss" text="Cloudera Engineering Blog" title="Cloudera Engineering Blog" xmlUrl="http://blog.cloudera.com/feed/" htmlUrl="http://blog.cloudera.com"/>
+            <outline type="rss" text="eBay Tech Blog" title="eBay Tech Blog" xmlUrl="http://www.ebaytechblog.com/feed/" htmlUrl="https://www.ebayinc.com/stories/blogs/tech/rss/"/>
+            <outline type="rss" text="Phoronix" title="Phoronix" xmlUrl="http://feeds.feedburner.com/Phoronix" htmlUrl="http://www.phoronix.com/"/>
+            <outline type="rss" text="Linux Journal - The Original Magazine of the Linux Community" title="Linux Journal - The Original Magazine of the Linux Community" xmlUrl="http://feeds.feedburner.com/linuxjournalcom" htmlUrl="https://www.linuxjournal.com/node/feed"/>
+            <outline type="rss" text="Netflix TechBlog" title="Netflix TechBlog" xmlUrl="http://techblog.netflix.com/feeds/posts/default" htmlUrl="https://medium.com/netflix-techblog?source=rss----2615bd06b42e---4"/>
+            <outline type="rss" text="Metadata" title="Metadata" xmlUrl="http://muratbuffalo.blogspot.com/feeds/posts/default" htmlUrl="http://muratbuffalo.blogspot.com/"/>
+            <outline type="rss" text="Dropbox Tech Blog" title="Dropbox Tech Blog" xmlUrl="https://tech.dropbox.com/feed/" htmlUrl="https://dropboxtechblog.wordpress.com"/>
+            <outline type="rss" text="LinkedIn Engineering" title="LinkedIn Engineering" xmlUrl="https://engineering.linkedin.com/blog.rss" htmlUrl="https://engineering.linkedin.com/blog.rss.html"/>
+            <outline type="rss" text="Uber Engineering Blog" title="Uber Engineering Blog" xmlUrl="https://eng.uber.com/feed/" htmlUrl="https://eng.uber.com"/>
+            <outline type="rss" text="GitHub Trends - All languages - Daily" title="GitHub Trends - All languages - Daily" xmlUrl="http://github-trends.ryotarai.info/rss/github_trends_all_daily.rss" htmlUrl="http://github-trends.ryotarai.info/rss/github_trends_all_daily.rss"/>
+            <outline type="rss" text="Hacker News" title="Hacker News" xmlUrl="http://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/"/>
+            <outline type="rss" text="Indeed Engineering Blog" title="Indeed Engineering Blog" xmlUrl="http://engineering.indeedblog.com/feed/" htmlUrl="http://engineering.indeedblog.com"/>
+            <outline type="rss" text="Airbnb Engineering &amp; Data Science" title="Airbnb Engineering &amp; Data Science" xmlUrl="https://medium.com/feed/airbnb-engineering" htmlUrl="https://medium.com/airbnb-engineering?source=rss----53c7c27702d5---4"/>
+            <outline type="rss" text="LWN.net" title="LWN.net" xmlUrl="http://lwn.net/headlines/newrss" htmlUrl="https://lwn.net"/>
+            <outline type="rss" text="GitHub Engineering" title="GitHub Engineering" xmlUrl="http://githubengineering.com/atom.xml" htmlUrl="https://githubengineering.com/"/>
+            <outline type="rss" text="Cloudflare Blog" title="Cloudflare Blog" xmlUrl="http://blog.cloudflare.com/rss.xml" htmlUrl="https://blog.cloudflare.com/"/>
+        </outline>
+        <outline text="business" title="business">
+            <outline type="rss" text="TechCrunch" title="TechCrunch" xmlUrl="http://feeds.feedburner.com/Techcrunch" htmlUrl="https://techcrunch.com"/>
+            <outline type="rss" text="Articles by KPCB Partners" title="Articles by KPCB Partners" xmlUrl="http://www.kpcb.com/blog.rss" htmlUrl="http://www.kpcb.com/blog"/>
+        </outline>
+    </body>
+</opml>

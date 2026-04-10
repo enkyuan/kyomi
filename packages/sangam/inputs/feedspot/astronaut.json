@@ -1,0 +1,124 @@
+{
+  "category": "Astronaut",
+  "source_url": "https://rss.feedspot.com/astronaut_rss_feeds",
+  "feeds": [
+    {
+      "title": "Everyday Astronaut",
+      "feed_url": "https://everydayastronaut.com/feed/",
+      "website_url": "https://everydayastronaut.com/",
+      "description": "Everyday Astronaut's mission is to bring space down to earth for everyday people. To communicate science through humor and imagination. To help adults reminisce about their childhood awe of the cosmos.",
+      "followers": {
+        "facebook": 278300,
+        "twitter": 1700000,
+        "instagram": 274400
+      },
+      "image_url": "https://i1.feedspot.com/4946007.jpg?t=1621421503"
+    },
+    {
+      "title": "Space Center Houston Blog",
+      "feed_url": "https://spacecenter.org/feed/",
+      "website_url": "https://spacecenter.org/blog",
+      "description": "pace Center Houston, nonprofit gateway to NASA Johnson Space Center and Houston's first Smithsonian Affiliate museum, inspires wonder in space exploration.",
+      "followers": {
+        "facebook": 279900,
+        "twitter": 18100,
+        "instagram": 55700
+      },
+      "image_url": "https://i1.feedspot.com/4946036.jpg?t=1621421507"
+    },
+    {
+      "title": "Explaining Science",
+      "feed_url": "https://explainingscience.org/tag/latest/feed/",
+      "website_url": "https://explainingscience.org/tag/latest/",
+      "description": "I have a PhD in astronomy from the University of Manchester in the North West of England. Explaining Science contains articles on astronomy, space, and space travel - written at a level which is easily accessible to the non-scientist but without being dumbed down. Check the posts now!",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/4811764.jpg?t=1606808699"
+    },
+    {
+      "title": "Astronomy Cast",
+      "feed_url": "https://www.astronomycast.com/feed/atom/",
+      "website_url": "https://www.astronomycast.com/",
+      "description": "Astronomy Cast takes a fact-based journey through the cosmos as it offers listeners weekly discussions on astronomical topics ranging from planets to cosmology. Hosted by Fraser Cain (Universe Today) and Dr. Pamela L. Gay (CosmoQuest), this show brings the questions of an avid astronomy lover direct to an astronomer. Together Fraser and Pamela explore what is known and being discovered about the universe around us.",
+      "followers": {
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/79929.jpg?t=1621421519"
+    },
+    {
+      "title": "Tom Jones Blog",
+      "feed_url": "https://astronauttomjones.com/feed/",
+      "website_url": "http://astronauttomjones.com/blog/",
+      "description": "I'm former NASA astronaut Tom Jones. Check here for my latest thoughts on our greatest adventure, the human exploration of the cosmos.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4946009.jpg?t=1621421611"
+    },
+    {
+      "title": "Alexander Gerst's Blog",
+      "feed_url": "https://blogs.esa.int/alexander-gerst/feed/",
+      "website_url": "https://blogs.esa.int/alexander-gerst/",
+      "description": "ESA astronaut Alexander Gerst's blog. Alexander Gerst is a European Space Agency (ESA) astronaut. In 2014 he spent six months on the International Space Station for ESA's Blue Dot mission. He is now back in space on his second mission called Horizons where he will take over as Station commander for Expedition 57. Alexander is a geophysicist and volcanologist.",
+      "followers": {
+        "facebook": 516100,
+        "twitter": 1200000,
+        "instagram": 307800
+      },
+      "image_url": "https://i1.feedspot.com/3840682.jpg?t=1621421497"
+    },
+    {
+      "title": "Astronaut Rhea Seddon's Blog",
+      "feed_url": "https://astronautrheaseddon.com/feed/",
+      "website_url": "https://astronautrheaseddon.com/latest-updates/",
+      "description": "Astronaut Rhea Seddon spent 19 years with NASA and 30 days in space. She is an award-winning author and motivational speaker.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4946013.jpg?t=1621421510"
+    },
+    {
+      "title": "Astronaut Mike Mullane's Blog",
+      "feed_url": "https://mikemullane.com/feed/",
+      "website_url": "https://mikemullane.com/astroblog/",
+      "description": "Colonel Mullane was born September 10, 1945 in Wichita Falls, Texas but spent much of his youth in Albuquerque, New Mexico, where he currently resides. He was a child of the space race and in the late 1950's embarked on his own rocket experiments in the deserts near his home.",
+      "followers": {
+        "facebook": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4946027.jpg?t=1621421523"
+    },
+    {
+      "title": "Astronaut Abby | Aspiring Astronaut's Blog",
+      "feed_url": "https://feeds.feedburner.com/astronautabby/OgIa",
+      "website_url": "https://gleopold.wordpress.com/",
+      "description": "Abigail Harrison is a girl with a dream. She aspires to become a NASA astronaut. But it doesn't stop there she also dreams of becoming the first astronaut to walk on Mars. She is studying astrobiology and Russian. She has an anticipated graduation date for spring of 2019 and is positioned to enter directly into a PhD program for astrobiology.",
+      "followers": {
+        "facebook": 445700,
+        "twitter": 185100
+      },
+      "image_url": "https://i1.feedspot.com/4946000.jpg?t=1621421529"
+    },
+    {
+      "title": "George Leopold's Blog",
+      "feed_url": "https://gleopold.wordpress.com/feed/",
+      "website_url": "https://gleopold.wordpress.com/",
+      "description": "Author of 'Calculated Risk: The Supersonic Life and Times of Gus Grissom. Blog on Space and Astronauts",
+      "followers": {
+        "twitter": 858
+      },
+      "image_url": "https://i1.feedspot.com/4946020.jpg?t=1621421533"
+    },
+    {
+      "title": "International Space Station Blog",
+      "feed_url": "https://www.nasa.gov/feed/",
+      "website_url": "https://www.nasa.gov/blogs/spacestation/",
+      "description": "Explore the universe and discover our home planet NASA's mission to pioneer the future in space exploration, scientific discovery and aeronautics research.",
+      "followers": {
+        "facebook": 26900000,
+        "twitter": 88100000,
+        "instagram": 96800000
+      },
+      "image_url": "https://i1.feedspot.com/4207479.jpg?t=1609308846"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "category": "Mississippi Food",
+  "source_url": "https://rss.feedspot.com/mississippi_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Cooking Bride",
+      "feed_url": "https://cookingbride.com/feed/",
+      "website_url": "https://cookingbride.com/",
+      "description": "Hi, I'm Lisa! On this blog, you'll find a mixture of traditional Southern recipes shared from my in-laws and a few of my creative updates on old classics. However, I've added two wild little boys into the mix, so there are a few quick and easy meals that can be prepared in between homework and after school activities.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 510,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4731268.jpg?t=1627027583"
+    },
+    {
+      "title": "Mississippi Sideboard",
+      "feed_url": "https://jesseyancy.com/feed/",
+      "website_url": "https://jesseyancy.com/",
+      "description": "I am Jesse L. Yancy - a knowledgeable, meticulous editor, an award-winning food writer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5303590.jpg?t=1631715997"
+    },
+    {
+      "title": "Eat Drink Mississippi Magazine",
+      "feed_url": "https://www.eatdrinkmississippi.com/blog-feed.xml",
+      "website_url": "https://www.eatdrinkmississippi.com/",
+      "description": "eat. drink. MISSISSIPPI is a food magazine dedicated to sharing Mississippi's unique tastes, traditions, and ideas with the world. From local chefs making their culinary mark both near and far, to the distinctive restaurants this state has to offer, Mississippi's hospitality radiates through the pages of this magazine.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 2100,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5318907.jpg?t=1630676049"
+    },
+    {
+      "title": "Mississippi Market Co-op Blog",
+      "feed_url": "https://msmarket.coop/blog/feed/",
+      "website_url": "https://msmarket.coop/blog/",
+      "description": "Sustainable, local & organic foods, recipes & classes. Mississippi Market Co-op was started by a community of people working toward a common goal - creating access to good food.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 3800,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4925202.jpg?t=1620903179"
+    },
+    {
+      "title": "THE HIVE",
+      "feed_url": "https://thehiveblog.com/feed/",
+      "website_url": "https://thehiveblog.com/",
+      "description": "Hi! I am Laurel. This is my food and lifestyle blog. I first started this blog as a place to post updates about my paper company, The Lovely Bee, it then turned into personal creative outlet that I have been loving. I married my best friend Price in 2009 and since then, we have grown our family by four precious dogs, a little boy, a little girl, and another sweet baby boy.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 387,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5318867.jpg?t=1630674125"
+    },
+    {
+      "title": "Jackson Free Press \u00bb Food & Drink",
+      "feed_url": "https://www.jacksonfreepress.com/rss/headlines/food&drink/",
+      "website_url": "https://www.jacksonfreepress.com/news/food&drink/",
+      "description": "This section features articles on Food & Drink. The Jackson Free Press is Jackson, Mississippi's award-winning free news and culture bi-weekly magazine, reaching over 35,000 readers per issue via over 500 locations in the Jackson Metro.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 39200
+      },
+      "image_url": "https://i1.feedspot.com/5318861.jpg?t=1630672596"
+    },
+    {
+      "title": "Deep South Dish",
+      "feed_url": "http://feeds.feedburner.com/deepsouthdish/SeVH",
+      "website_url": "https://www.deepsouthdish.com/",
+      "description": "I'm Mary, a writer and recipe developer. Pull up a chair & join me while I cook up good ole South Southern recipes from my kitchen in the Deep South USA.",
+      "followers": {
+        "facebook": 351000,
+        "twitter": 4000,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/484036.jpg?t=1620903161"
+    }
+  ]
+}

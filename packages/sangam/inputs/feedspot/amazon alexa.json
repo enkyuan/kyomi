@@ -1,0 +1,61 @@
+{
+  "category": "Amazon Alexa",
+  "source_url": "https://rss.feedspot.com/amazon_alexa_rss_feeds",
+  "feeds": [
+    {
+      "title": "Komando \u00bb Amazon Alexa",
+      "feed_url": "https://www.komando.com/tag/amazon-alexa/feed/",
+      "website_url": "https://www.komando.com/tag/amazon-alexa/",
+      "description": "Komando website is the source for the latest news on everything digital including security threats, scams, tips and tricks. Get the latest tech updates, breaking news, data breaches, security alerts, digital how-tos, trusted advice and viral videos from digital pro-Kim Komando.",
+      "followers": {
+        "facebook": 305900,
+        "twitter": 59700
+      },
+      "image_url": "https://i1.feedspot.com/4920159.jpg?t=1620715912"
+    },
+    {
+      "title": "SoundUp Blog",
+      "feed_url": "https://soundupnow.com/feed/",
+      "website_url": "https://soundupnow.com/blog/",
+      "description": "Get in front of your audience with your own Alexa Flash Briefing. SoundUp gets you there with little to no effort so that you may focus on creating quality content.",
+      "followers": {
+        "facebook": 327,
+        "twitter": 162
+      },
+      "image_url": "https://i1.feedspot.com/4920180.jpg?t=1620715907"
+    },
+    {
+      "title": "UK Echo Community",
+      "feed_url": "https://amazonechouk.wordpress.com/feed/",
+      "website_url": "https://amazonechouk.wordpress.com/",
+      "description": "UK Echo Community is a community for using amazon echo in the UK. Follow this site to know more updates on amazon echo.",
+      "followers": {
+        "twitter": 818
+      },
+      "image_url": "https://i1.feedspot.com/4920318.jpg?t=1620715919"
+    },
+    {
+      "title": "Amazon Science \u00bb Alexa",
+      "feed_url": "https://www.amazon.science/tag/alexa.rss",
+      "website_url": "https://www.amazon.science/tag/alexa",
+      "description": "Get into the minds of the people who are making Alexa smarter every day. Learn about the ways Alexa has evolved, and meet the people whose work makes those advances possible. Amazon Science provides the latest news, research, and innovation in artificial intelligence (AI) and machine learning (ML), including jobs, publications, conferences, and events.",
+      "followers": {
+        "facebook": 121700,
+        "twitter": 93200,
+        "instagram": 109300
+      },
+      "image_url": "https://i1.feedspot.com/5332879.jpg?t=1634553214"
+    },
+    {
+      "title": "Alexa in Canada",
+      "feed_url": "https://alexaincanada.ca/feed/",
+      "website_url": "https://voiceincanada.ca/amazon-alexa/",
+      "description": "Alexa in Canada blog is about getting the most out of your Amazon Alexa personal assistant. Learn the advantage of Alexa and make your life more relaxing, organized, stress-free and entertaining. Follow this blog that covers skills, tips, tricks, and other Alexa how-to articles for Canadians.",
+      "followers": {
+        "facebook": 424,
+        "instagram": 647
+      },
+      "image_url": "https://i1.feedspot.com/4920142.jpg?t=1620716016"
+    }
+  ]
+}

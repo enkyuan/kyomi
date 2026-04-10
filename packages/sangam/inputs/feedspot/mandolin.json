@@ -1,0 +1,63 @@
+{
+  "category": "Mandolin",
+  "source_url": "https://rss.feedspot.com/mandolin_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mandolin Cafe",
+      "feed_url": "https://www.mandolincafe.com/forum/blog_external.php?type=RSS2",
+      "website_url": "https://www.mandolincafe.com/forum/blog.php",
+      "description": "All about mandolins, including a forum, classifieds, music, chords, news, builders, workshops, and more. Discussions about mandolins, mandolin music and mandolin players.",
+      "followers": {
+        "facebook": 28900,
+        "twitter": 5600,
+        "instagram": 26200
+      },
+      "image_url": "https://i1.feedspot.com/5403339.jpg?t=1653306713"
+    },
+    {
+      "title": "Mandolin Secrets Blog",
+      "feed_url": "https://www.mandolinsecrets.com/blog.rss",
+      "website_url": "https://www.mandolinsecrets.com/blog/",
+      "description": "Mandolin Secrets is a complete online resource for learning to play the mandolin. It consists of a well-structured, collection of mandolin lessons, inspiring tutorials, and workshops delivered by streaming high-quality, video. Get inspired by new videos, podcast episodes, and blog posts for mandolin and guitar. Tips, lessons, and tutorials are all about music.",
+      "followers": {
+        "twitter": 54
+      },
+      "image_url": "https://i1.feedspot.com/5403340.jpg?t=1653306985"
+    },
+    {
+      "title": "Mandoisland",
+      "feed_url": "https://www.mandoisland.com/?feed=rss2",
+      "website_url": "https://www.mandoisland.com/?page_id=7250",
+      "description": "Welcome to www.mandoisland.com. In my blog, I am collecting information about the mandolin, the guitar, and other plucked instruments. I am also writing about my favorite music.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5401139.jpg?t=1652791055"
+    },
+    {
+      "title": "Montana Lutherie Blog",
+      "feed_url": "https://www.montanalutherie.com/feed/",
+      "website_url": "https://www.montanalutherie.com/mandolin-authority/blog/",
+      "description": "Thirty years of lutherie building Flatiron, Gibson, Weber, and repairing all brands of acoustic instruments: mandolins, mandolas, octaves, and mandocellos. Serving players from the back porch picker to the revered Bill Monroe. Entrust Bruce, and Montana Lutherie, with your mandolin family instrument for customization, add-ons, inspection, and repair.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 215
+      },
+      "image_url": "https://i1.feedspot.com/5403363.jpg?t=1653307479"
+    },
+    {
+      "title": "Tim's Mando Blog",
+      "feed_url": "https://www.timsmandolessons.com/blog.rss",
+      "website_url": "https://www.timsmandolessons.com/blog",
+      "description": "A graduate of the prestigious New England Conservatory of Music and a virtuoso multi-instrumentalist with over twenty-five years of professional performing experience, Tim forges a unique and sophisticated new voice for the mandolin in his work with Mike Marshall's Ger Mandolin Orchestra and through his collaborations with many other luminaries of the acoustic music world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5401140.jpg?t=1652791207"
+    },
+    {
+      "title": "Mandolin Expert Blog",
+      "feed_url": "https://mandolinexpert.com/feed/",
+      "website_url": "https://mandolinexpert.com/blog/",
+      "description": "We Share Practical And Actionable Advice on Mandolins.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5401138.jpg?t=1652791384"
+    }
+  ]
+}

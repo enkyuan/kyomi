@@ -1,0 +1,29 @@
+{
+  "category": "Nogales News",
+  "source_url": "https://rss.feedspot.com/nogales_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nogales International",
+      "feed_url": "https://www.nogalesinternational.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.nogalesinternational.com/news/",
+      "description": "The Nogales International is an award-winning newspaper, based in Nogales, Arizona and was founded in 1925. The Nogales International reports on issues affecting residents of Santa Cruz County, including Nogales, Rio Rico, Tumacacori, Tubac, Amado, Patagonia, Sonoita and Elgin.",
+      "followers": {
+        "facebook": 22600,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5157051.jpg?t=1590674442"
+    },
+    {
+      "title": "ABC15 Arizona \u00bb Nogales",
+      "feed_url": "https://www.abc15.com/news/region-central-southern-az/nogales.rss",
+      "website_url": "https://www.abc15.com/news/region-central-southern-az/nogales",
+      "description": "Arizona's source for breaking news, weather, traffic and in-depth investigations from ABC15 Arizona in Phoenix. Get news from the Nogales, Arizona area from ABC15 Arizona in Phoenix.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 474900,
+        "instagram": 280400
+      },
+      "image_url": "https://i1.feedspot.com/5157053.jpg"
+    }
+  ]
+}

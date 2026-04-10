@@ -1,0 +1,219 @@
+{
+  "category": "Data Breach",
+  "source_url": "https://rss.feedspot.com/data_breach_rss_feeds",
+  "feeds": [
+    {
+      "title": "Databreaches.net",
+      "feed_url": "https://databreaches.net/feed/",
+      "website_url": "https://databreaches.net/",
+      "description": "Blog posts on data breaches in various industries such as business, education, finance, as well as articles on data breach regulations and legislation. This blog combines news aggregation with investigative reporting and opinion.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4450051.jpg?t=1633431237"
+    },
+    {
+      "title": "UpGuard | Data Breaches",
+      "feed_url": "https://www.upguard.com/breaches/rss.xml",
+      "website_url": "https://www.upguard.com/breaches",
+      "description": "Latest in-depth reporting and information on major data breaches around the world. UpGuard provides end-to-end risk analysis and management products that detect indicators of risk both internally and externally.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5041695.jpg?t=1625823421"
+    },
+    {
+      "title": "Have I been pwned",
+      "feed_url": "https://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches",
+      "website_url": "https://haveibeenpwned.com/PwnedWebsites",
+      "description": "Have I been pwned is a resource for anyone to quickly assess if they may have been put at risk due to an online account of theirs having been compromised or 'pwned' in a data breach?",
+      "followers": {
+        "twitter": 168200
+      },
+      "image_url": "https://i1.feedspot.com/4306532.jpg?t=1625818223"
+    },
+    {
+      "title": "IT Pro \u00bb Data Breaches",
+      "feed_url": "https://www.itpro.com/feeds/tag/data-breaches",
+      "website_url": "https://www.itpro.com/security/data-breaches/",
+      "description": "News and articles on data breaches, hacking, data controllers and data protection. IT Pro is trusted by CIOs, IT leaders, developers and more to deliver news, reviews, features, and insights that help them empower their businesses",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 25000
+      },
+      "image_url": "https://i1.feedspot.com/5041747.jpg?t=1622473373"
+    },
+    {
+      "title": "Krebs on Security \u00bb Data Breaches",
+      "feed_url": "https://krebsonsecurity.com/category/data-breaches/feed/",
+      "website_url": "https://krebsonsecurity.com/category/data-breaches/",
+      "description": "The data breaches section on Krebs on Security provides detailed reports and analysis of major cyber incidents, explaining how they occurred, who was involved, and their wider impact.",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 337300
+      },
+      "image_url": "https://i1.feedspot.com/5041746.jpg?t=1762411578"
+    },
+    {
+      "title": "DataBreachToday.in",
+      "feed_url": "https://www.databreachtoday.in/rss-feeds",
+      "website_url": "https://www.databreachtoday.in/",
+      "description": "DataBreachToday.in is a multimedia resource for information security practitioners in India, providing news, insights, and education on data breach detection, notification, and prevention, as well as the latest breaches.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/4124793.jpg?t=1633430727"
+    },
+    {
+      "title": "Data Breach Today Podcast",
+      "feed_url": "https://www.databreachtoday.com/itunes_rss_podcasts.php",
+      "website_url": "https://www.databreachtoday.com/interviews",
+      "description": "Exclusive, insightful audio interviews by our staff with data breach/security leading practitioners and thought-leaders",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/7153660.jpg?t=1746025401"
+    },
+    {
+      "title": "Troy Hunt",
+      "feed_url": "https://www.troyhunt.com/rss/",
+      "website_url": "https://www.troyhunt.com/",
+      "description": "Troy Hunt is a cybersecurity expert known for creating Have I Been Pwned (HIBP), a service that allows users to check if their personal data has been exposed in a data breach. He regularly publishes research on breaches and their impact, aiming to raise awareness about privacy and security risks. Through his work, Hunt encourages better cybersecurity practices, such as using strong, unique passwords and enabling two-factor authentication.",
+      "followers": {
+        "twitter": 237400
+      },
+      "image_url": "https://i1.feedspot.com/4508493.jpg?t=1642752900"
+    },
+    {
+      "title": "Pkware Blog",
+      "feed_url": "https://www.pkware.com/blog/feed",
+      "website_url": "https://www.pkware.com/blog/",
+      "description": "PKWARE's blog focuses on topics related to data protection, encryption, and cybersecurity. It regularly features insights on preventing and managing data breaches, compliance strategies, and secure data management across different systems. The articles are written by the PKWARE team and industry experts, offering practical guidance and updates on recent cybersecurity incidents and trends.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 1200,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/8793374.jpg?t=1762608531"
+    },
+    {
+      "title": "Dark Reading",
+      "feed_url": "https://www.darkreading.com/rss.xml",
+      "website_url": "https://www.darkreading.com/",
+      "description": "Cyber security's comprehensive news site is now an online community for security professionals, outlining cyber threats and the technologies for defending against them. DarkReading.com encompasses 10 communities, each of which drills deeper into the enterprise security challenge: Attacks & Breaches, Application Security, Cloud Security, Data Leaks & Insider Threats, Endpoint Security & Privacy, Mobile Security, Network & Perimeter Security, Risk Management & Compliance, Security Management & Analytics, and Vulnerabilities and Threats.",
+      "followers": {
+        "facebook": 27200,
+        "twitter": 338900,
+        "instagram": 269
+      },
+      "image_url": "https://i1.feedspot.com/5335199.jpg?t=1762430644"
+    },
+    {
+      "title": "RedPacket Security \u00bb Data Breach",
+      "feed_url": "https://www.redpacketsecurity.com/category/databreach/feed/",
+      "website_url": "https://www.redpacketsecurity.com/category/databreach/",
+      "description": "The RedPacket Security blog's data breach section shares news and updates about recent cyberattacks, leaked data, and security incidents. It provides brief reports on affected organizations and threat actors, focusing on timely breach information.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/8793371.jpg?t=1762608512"
+    },
+    {
+      "title": "Daily Dark Web \u00bb Data Breaches",
+      "feed_url": "https://dailydarkweb.net/data-breaches/feed/",
+      "website_url": "https://dailydarkweb.net/data-breaches/",
+      "description": "DailyDarkWeb is a community of volunteers dedicated to monitoring the unseen layers of the digital world. Our mission is to bring transparency to the dark web by sharing current news, cybersecurity incidents, and critical threat intelligence with the public in an open and responsible manner.",
+      "followers": {
+        "twitter": 141400
+      },
+      "image_url": "https://i1.feedspot.com/8793372.jpg?t=1762608524"
+    },
+    {
+      "title": "HIPAA Journal",
+      "feed_url": "https://www.hipaajournal.com/feed/",
+      "website_url": "https://www.hipaajournal.com/",
+      "description": "The HIPAA Journal is the foremost independent authority and most trusted source of information on the Health Insurance Portability and Accountability Act (HIPAA). The journal provides the healthcare sector's most comprehensive HIPAA news coverage of regulatory developments, enforcement actions, data breaches, and compliance best practices. Since its launch more than a decade ago, The HIPAA Journal has published over 7,000 articles and has built the largest readership of HIPAA compliance professionals.",
+      "followers": {
+        "facebook": 506,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5122882.jpg?t=1762431826"
+    },
+    {
+      "title": "Security Affairs \u00bb Data Breach",
+      "feed_url": "https://securityaffairs.com/category/data-breach/feed",
+      "website_url": "https://securityaffairs.com/category/data-breach/",
+      "description": "The data breach section of Security Affairs shares news and analysis of cybersecurity incidents involving data leaks and exposures. It covers breaches across companies and public sectors, explaining what was exposed, how it occurred, and its impact.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 35700
+      },
+      "image_url": "https://i1.feedspot.com/8793376.jpg?t=1762608544"
+    },
+    {
+      "title": "Data Breaches Digest",
+      "feed_url": "https://www.dbdigest.com/feeds/posts/default",
+      "website_url": "https://www.dbdigest.com/",
+      "description": "Daily Digest of Global Data Breaches and Cyber Security News and Advice",
+      "followers": {
+        "facebook": 107,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/8793373.jpg?t=1762608526"
+    },
+    {
+      "title": "Strobes Security \u00bb Data Breaches",
+      "feed_url": "https://strobes.co/blog/category/data-breaches/feed/",
+      "website_url": "https://strobes.co/blog/category/data-breaches/",
+      "description": "Learn from real-world breaches. Our data breaches blogs explore causes, attacker tactics, impacts, and steps to prevent future security incidents.",
+      "followers": {
+        "facebook": 33
+      },
+      "image_url": "https://i1.feedspot.com/8793370.jpg?t=1762608508"
+    },
+    {
+      "title": "Current Scams",
+      "feed_url": "https://currentscams.com/index.php/feed/",
+      "website_url": "https://currentscams.com/",
+      "description": "Current Scams is your source for updated information on the latest attempts to get your money and personal information. We provide you with the latest breaking news and videos straight from multiple industry sources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5155974.jpg?t=1622473397"
+    },
+    {
+      "title": "IT Governance Blog \u00bb Data breaches",
+      "feed_url": "https://www.itgovernanceusa.com/blog/category/data-breaches-and-cyber-attacks/feed",
+      "website_url": "https://www.itgovernanceusa.com/blog/category/data-breaches-and-cyber-attacks/",
+      "description": "The data breaches and cyber attacks section of IT Governance USA's blog provides monthly summaries of major cybersecurity incidents and data leaks in the United States. It includes analysis of reported cases, affected records, and trends across different sectors.",
+      "followers": {
+        "facebook": 287,
+        "twitter": 321
+      },
+      "image_url": "https://i1.feedspot.com/8793375.jpg?t=1762608540"
+    },
+    {
+      "title": "SC Media",
+      "feed_url": "https://www.scworld.com/news/",
+      "website_url": "https://www.scworld.com/news/",
+      "description": "Latest data breach news, analysis and opinions. SC Media provides information security professionals with in-depth, unbiased business and technical information to help them address the numerous security challenges they face.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 119900
+      },
+      "image_url": "https://i1.feedspot.com/5041745.jpg?t=1622473357"
+    },
+    {
+      "title": "Thales blog \u00bb Data breach",
+      "feed_url": "https://dis-blog.thalesgroup.com/tag/data-breach/feed/",
+      "website_url": "https://dis-blog.thalesgroup.com/tag/data-breach/",
+      "description": "Conversations and insight on Data breaches around the world. Gemalto, a Thales company, is a global leader in digital security, bringing trust to an increasingly connected world.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5041743.jpg?t=1622473349"
+    }
+  ]
+}

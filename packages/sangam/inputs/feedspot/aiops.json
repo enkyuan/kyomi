@@ -1,0 +1,72 @@
+{
+  "category": "AIOps",
+  "source_url": "https://rss.feedspot.com/aiops_rss_feeds",
+  "feeds": [
+    {
+      "title": "BMC Blogs",
+      "feed_url": "https://www.bmc.com/blogs/feed/",
+      "website_url": "https://www.bmc.com/blogs/categories/aiops/",
+      "description": "BMC, founded in 1980, is a global leader in software solutions for businesses. Their AIOps blog focuses on the application of artificial intelligence in IT operations. Explore their website to learn about their AIOps platform, industry insights, and best practices for leveraging AI to optimize IT performance and enhance decision-making.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5286674.jpg?t=1623061208"
+    },
+    {
+      "title": "Pager Duty \u00bb AIOps",
+      "feed_url": "https://www.pagerduty.com/blog/category/aiops/feed/",
+      "website_url": "https://www.pagerduty.com/blog/category/aiops/",
+      "description": "PagerDuty, established in 2009, is a leading digital operations management platform. Their AIOps blog focuses on the application of AI in incident response and incident management. Visit their website to learn about their AIOps capabilities, industry insights, and best practices for using AI to streamline operations and ensure reliable digital services.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 26100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5593052.jpg?t=1686217571"
+    },
+    {
+      "title": "Science Logic Blog",
+      "feed_url": "https://sciencelogic.com/feed",
+      "website_url": "https://sciencelogic.com/blog",
+      "description": "ScienceLogic delivers AI-driven monitoring and observability solutions for IT operations. While specific information about their blog is not available, their website showcases their AIOps platform's capabilities, including AI-driven event correlation, automated workflows, and intelligent root cause analysis for faster incident resolution.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 10000,
+        "instagram": 438
+      },
+      "image_url": "https://i1.feedspot.com/5593057.jpg?t=1686217762"
+    },
+    {
+      "title": "Interlink Software Blog",
+      "feed_url": "https://www.interlinksoftware.com//feed/rss2",
+      "website_url": "https://www.interlinksoftware.com/blog",
+      "description": "Interlink Software specializes in providing IT operations management solutions. While specific information about their blog is not available, their website offers insights into AIOps practices, IT service management, and automation capabilities.",
+      "followers": {
+        "facebook": 349,
+        "twitter": 439
+      },
+      "image_url": "https://i1.feedspot.com/5593053.jpg?t=1686217783"
+    },
+    {
+      "title": "Dynatrace \u00bb AIOps",
+      "feed_url": "https://www.dynatrace.com/news/category/aiops/feed/",
+      "website_url": "https://www.dynatrace.com/news/category/aiops/",
+      "description": "Dynatrace is a software intelligence platform that offers AIOps capabilities for modern IT operations. Their AIOps blog covers topics such as AI-driven automation, intelligent monitoring, and real-time analytics. Visit their website to explore their AIOps platform, customer success stories, and resources for optimizing IT performance.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 18700
+      },
+      "image_url": "https://i1.feedspot.com/5593056.jpg?t=1686217831"
+    },
+    {
+      "title": "Moogsoft Blog",
+      "feed_url": "https://www.moogsoft.com/feed/",
+      "website_url": "https://www.moogsoft.com/resources/blog/",
+      "description": "Moogsoft, established in 2011, is a leading provider of AIOps solutions. Their blog covers a wide range of topics related to AIOps, including event correlation, anomaly detection, and incident management. Visit their website to explore their AIOps platform, customer success stories, and thought leadership articles.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2200,
+        "instagram": 183
+      },
+      "image_url": "https://i1.feedspot.com/5593055.jpg?t=1686217588"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "category": "The Wall Street Journal",
+  "source_url": "https://rss.feedspot.com/wsj_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Wall Street Journal \u00bb World",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
+      "website_url": "https://www.wsj.com/world",
+      "description": "Discover the latest breaking world news with The Wall Street Journal, featuring the top stories, international headlines, photos and videos from around the globe.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Markets & Finance",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",
+      "website_url": "https://www.wsj.com/finance",
+      "description": "Follow the latest Wall Street Journal news on stock markets, finance, banks, hedge funds and private equity, with quotes for stocks, stock indexes and ETFs.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb US",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSUSnews",
+      "website_url": "https://www.wsj.com/us-news",
+      "description": "Read the latest and breaking national US News covering Law, Politics, Education, Crime and College Rankings as well as the impact of climate on the environment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Politics",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/socialpoliticsfeed",
+      "website_url": "https://www.wsj.com/politics",
+      "description": "The latest breaking news and analysis on U.S. politics including coverage of the White House, elections, national security, the Supreme Court and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Technology",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSWSJD",
+      "website_url": "https://www.wsj.com/tech",
+      "description": "Find the latest Wall Street Journal stories on tech companies, start-ups and personal technology, plus the latest reviews.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Business",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness",
+      "website_url": "https://www.wsj.com/business",
+      "description": "Follow breaking business news and headlines on the world's most important companies from The Wall Street Journal.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Opinion",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSOpinion",
+      "website_url": "https://www.wsj.com/opinion",
+      "description": "Get The Wall Street Journal's Opinion columnists, editorials, op-eds, letters to the editor, and book and arts reviews.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Sports",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/rsssportsfeed",
+      "website_url": "https://www.wsj.com/sports",
+      "description": "The latest Sports news from The Wall Street Journal, including Baseball, Basketball, Football, Golf, Hockey, Olympics, Soccer, Tennis and more.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/8640174.jpg?t=1753338648"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Style",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSStyle",
+      "website_url": "https://www.wsj.com/style",
+      "description": "All articles about Style from The Wall Street Journal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Health",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/socialhealth",
+      "website_url": "https://www.wsj.com/health",
+      "description": "The latest news on health and wellness, including the healthcare industry, pharmaceuticals and more from The Wall Street Journal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Personal Finance",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSPersonalFinance",
+      "website_url": "https://www.wsj.com/personal-finance",
+      "description": "The latest personal finance news, analysis and insights, covering retirement, how to manage your savings, tax guidance and more from The Wall Street Journal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Real Estate",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/latestnewsrealestate",
+      "website_url": "https://www.wsj.com/real-estate",
+      "description": "The latest news on real estate, including luxury homes, interior design, renovation, as well as insights and analysis on buying, selling or renting your home from The Wall Street Journal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Arts & Culture",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSArtsCulture",
+      "website_url": "https://www.wsj.com/arts-culture",
+      "description": "News, reviews and analysis from WSJ, including books, movies, art, food, music, history, television and theater.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Economy",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/socialeconomyfeed",
+      "website_url": "https://www.wsj.com/economy",
+      "description": "Real Time Economics offers exclusive news, analysis and commentary on the U.S. and global economy, central bank policy and economics. Economic insight and analysis from The Wall Street Journal.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 995200
+      },
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Lifestyle",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/RSSLifestyle",
+      "website_url": "https://www.wsj.com/lifestyle",
+      "description": "The latest Journal coverage on relationships, travel, cars, careers and the workplace.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    },
+    {
+      "title": "The Wall Street Journal \u00bb Most Popular Videos",
+      "feed_url": "http://feeds.wsjonline.com/wsj/video/most-popular/feed",
+      "website_url": "https://www.wsj.com/video",
+      "description": "Wall Street Journal Video includes original programming on-demand as well as news and features from reporters across the globe.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000
+      },
+      "image_url": "https://i1.feedspot.com/4317167.jpg?t=1752152623"
+    }
+  ]
+}

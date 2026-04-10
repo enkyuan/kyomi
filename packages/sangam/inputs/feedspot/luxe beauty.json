@@ -1,0 +1,47 @@
+{
+  "category": "Luxe Beauty",
+  "source_url": "https://rss.feedspot.com/luxe_beauty_rss_feeds",
+  "feeds": [
+    {
+      "title": "From Luxe with Love \u00bb Beauty",
+      "feed_url": "https://fromluxewithlove.com/category/beauty/feed/",
+      "website_url": "https://fromluxewithlove.com/category/beauty/",
+      "description": "From Luxe With Love is a destination for all things style, beauty and travel which is based in Sydney, Australia.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 100300
+      },
+      "image_url": "https://i1.feedspot.com/4976081.jpg?t=1621951775"
+    },
+    {
+      "title": "The Luxe Lifestyle & Beauty Blog",
+      "feed_url": "https://theluxebeautyblog.wordpress.com/feed/",
+      "website_url": "https://theluxebeautyblog.wordpress.com/",
+      "description": "This blog is an ultimate guide to the best in luxury lifestyle & beauty where you will get to know everything about luxe makeup products, skincare products and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4976075.jpg?t=1621951955"
+    },
+    {
+      "title": "LuxMommy Blog \u00bb Beauty",
+      "feed_url": "https://www.luxmommyblog.com/category/beauty/feed/",
+      "website_url": "https://www.luxmommyblog.com/category/beauty/",
+      "description": "LuxMommy is a Houston based fashion, beauty and lifestyle blog in which Amanda shares her love of fashion, beauty, and life as a mom.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 1200,
+        "instagram": 187100
+      },
+      "image_url": "https://i1.feedspot.com/4976113.jpg?t=1621952016"
+    },
+    {
+      "title": "LUX Beauty Boutique Blog \u00bb Confessions of a Beauty Junkie",
+      "feed_url": "https://luxbeauty.com/blogs/confessions-of-a-beauty-junkie.atom",
+      "website_url": "https://luxbeauty.com/blogs/confessions-of-a-beauty-junkie",
+      "description": "LUX Beauty Boutique is Edmonton's original apothecary devoted to hot, hard-to-find beauty brands loved by celebrities, editors and product junkies.",
+      "followers": {
+        "facebook": 7
+      },
+      "image_url": "https://i1.feedspot.com/4976135.jpg?t=1621951802"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "category": "UK Boutique",
+  "source_url": "https://rss.feedspot.com/uk_boutique_rss_feeds",
+  "feeds": [
+    {
+      "title": "The White Gallery Boutique Blog",
+      "feed_url": "https://www.thewhitegalleryboutique.co.uk/blog?format=RSS",
+      "website_url": "https://www.thewhitegalleryboutique.co.uk/blog/",
+      "description": "The White Gallery Boutique is a carefully curated bridal boutique in Northern Ireland for women who think outside the traditional bridal box. We stock wedding dresses exclusive to our boutique from the most sought after designers.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 300,
+        "instagram": 26700
+      },
+      "image_url": "https://i1.feedspot.com/4917906.jpg?t=1620628248"
+    },
+    {
+      "title": "The Women's Society Boutique Blog",
+      "feed_url": "https://womens-society.co.uk/feed/",
+      "website_url": "https://womens-society.co.uk/blog/",
+      "description": "The Women's Society Boutique in Hertford is an online emporium for latest fashions and accessories from your favourite brands.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1700,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4640345.jpg?t=1616495507"
+    },
+    {
+      "title": "Pink Boutique UK",
+      "feed_url": "https://www.pinkboutique.co.uk/blogs/fashion.atom",
+      "website_url": "https://www.pinkboutique.co.uk/blogs/fashion",
+      "description": "Follow us to keep up with news and articles on fashion, clothing and accessories from Pink Boutique Blog.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 68400,
+        "instagram": 627100
+      },
+      "image_url": "https://i1.feedspot.com/4917887.jpg?t=1606722144"
+    },
+    {
+      "title": "SurfGirl Beach Boutique Blog",
+      "feed_url": "https://www.surfgirlbeachboutique.com/blogs/the-surfgirl-beach-boutique-blog.atom",
+      "website_url": "https://www.surfgirlbeachboutique.com/blogs/the-surfgirl-beach-boutique-blog",
+      "description": "SurfGirl Beach Boutique is a treasure chest of beach essentials and handmade crafts for girls who love the ocean.",
+      "followers": {
+        "facebook": 423500,
+        "twitter": 34700,
+        "instagram": 230500
+      },
+      "image_url": "https://i1.feedspot.com/4640366.jpg?t=1616496647"
+    },
+    {
+      "title": "The Boutique & Co Bridal Blog",
+      "feed_url": "https://www.theboutiqueandco.co.uk/feed/",
+      "website_url": "https://www.theboutiqueandco.co.uk/blog/",
+      "description": "The Boutique was founded on the belief of working together we bring together small and independent wedding suppliers under one roof creating a network of talented suppliers and allowing brides to be a stress free shopping experience for their wedding.",
+      "followers": {
+        "facebook": 761,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4917908.jpg?t=1620628257"
+    },
+    {
+      "title": "The Hair Boutique",
+      "feed_url": "https://hairboutique.co.uk/feed/",
+      "website_url": "https://hairboutique.co.uk/",
+      "description": "The Hair Boutique is one of Exeter's finest hairdressers, based in the beautiful Gandy Street in Exeter city centre.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 485,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4917889.jpg?t=1620628261"
+    },
+    {
+      "title": "LOVE Bridal Boutique",
+      "feed_url": "https://www.lovebridalboutique.co.uk/feed/",
+      "website_url": "https://www.lovebridalboutique.co.uk/the-love-blog/",
+      "description": "Welcome to LOVE Bridal Boutique! A boutique full of inspiration and love, with a range of refreshing, exciting bridal gowns and accessories for brides on the hunt for something a little more unusual.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 3400,
+        "instagram": 15300
+      },
+      "image_url": "https://i1.feedspot.com/4917894.jpg?t=1620628252"
+    }
+  ]
+}

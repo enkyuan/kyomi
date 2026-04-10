@@ -1,0 +1,42 @@
+{
+  "category": "Adelanto News",
+  "source_url": "https://rss.feedspot.com/adelanto_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Victor Valley News Group \u00bb Adelanto",
+      "feed_url": "https://www.vvng.com/category/adelanto_news/feed/",
+      "website_url": "https://www.vvng.com/category/adelanto_news/",
+      "description": "Victor Valley News Group provides news for Adelanto about car crashes, crime, the marijuana industry and upcoming events.",
+      "followers": {
+        "facebook": 192700,
+        "twitter": 12100,
+        "instagram": 242800
+      },
+      "image_url": "https://i1.feedspot.com/5158446.jpg"
+    },
+    {
+      "title": "KTLA \u00bb Adelanto",
+      "feed_url": "https://ktla.com/tag/adelanto/feed/",
+      "website_url": "https://ktla.com/tag/adelanto/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5158449.jpg?t=1591167925"
+    },
+    {
+      "title": "24/7 Headline News \u00bb Adelanto",
+      "feed_url": "https://247headline.com/category/victor-valley/city-of-adelanto-news/feed/",
+      "website_url": "https://247headline.com/category/victor-valley/city-of-adelanto-news/",
+      "description": "24/7 Headline provides the news that interests you. Keep up with the latest local news and updates in Adelanto, CA.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 175,
+        "instagram": 403
+      },
+      "image_url": "https://i1.feedspot.com/5158447.jpg?t=1591168347"
+    }
+  ]
+}

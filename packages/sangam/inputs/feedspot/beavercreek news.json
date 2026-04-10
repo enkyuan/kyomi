@@ -1,0 +1,28 @@
+{
+  "category": "Beavercreek News",
+  "source_url": "https://rss.feedspot.com/beavercreek_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Beavercreek News Current",
+      "feed_url": "https://www.beavercreeknewscurrent.com/feed/",
+      "website_url": "https://www.beavercreeknewscurrent.com/",
+      "description": "The Beavercreek News-Current is a weekly newspaper representing its growing community in Beavercreek and Beavercreek Township in Greene County. The News-Current has a long history of serving its readership as both a daily or weekly newspaper previously for decades. The mission of the staff is to provide the best local content possible.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5149669.jpg"
+    },
+    {
+      "title": "City of Beavercreek, OH",
+      "feed_url": "https://www.beavercreekohio.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "http://www.beavercreekohio.gov/",
+      "description": "Beavercreek is the largest city in Greene County, Ohio, and is the second-largest suburb of Dayton. The Beavercreek area was first settled in the early 1800s, the city itself was incorporated on January 11, 1980. Here, we provide information to the Beavercreek city and community. Follow this feed for the latest news, city alerts, economic, environment development, election news, and much more.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5149671.jpg?t=1626510578"
+    }
+  ]
+}

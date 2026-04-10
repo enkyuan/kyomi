@@ -1,0 +1,42 @@
+{
+  "category": "UK Doll",
+  "source_url": "https://rss.feedspot.com/uk_doll_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lottie Dolls Blog",
+      "feed_url": "https://www.lottie.com/blogs/blog.atom",
+      "website_url": "https://www.lottie.com/blogs/blog",
+      "description": "Lottie dolls' blog gives you all the real updates about the most recent fun activities & news of Lottie dolls that have happened in different places in the world. Subscribe to keep up with the latest articles from this blog.",
+      "followers": {
+        "facebook": 99000,
+        "twitter": 8100,
+        "instagram": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4786619.jpg?t=1605943607"
+    },
+    {
+      "title": "Petalina",
+      "feed_url": "https://petalinadolls.co.uk/feed/",
+      "website_url": "https://petalinadolls.co.uk/",
+      "description": "This blog a place where you can find lots of useful information about which dolls to buy for your children according to their age, which brands to buy and where to find them. Follow this blog to find beautiful photos, product information and activities for doll loving girls.",
+      "followers": {
+        "facebook": 16300,
+        "twitter": 2400,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4918228.jpg?t=1620634829"
+    },
+    {
+      "title": "My Doll Best Friend Blog",
+      "feed_url": "https://www.mydollbestfriend.co.uk/blog/feed/",
+      "website_url": "https://www.mydollbestfriend.co.uk/intl/blog",
+      "description": "My Doll Best Friend, the UK's destination online shop for standing and jointed play dolls from around the world for children and collectors. Follow this blog for the latest news and releases about dolls and doll related stuff.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 929,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4785611.jpg?t=1605943642"
+    }
+  ]
+}

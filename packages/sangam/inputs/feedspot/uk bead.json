@@ -1,0 +1,64 @@
+{
+  "category": "UK Bead",
+  "source_url": "https://rss.feedspot.com/uk_bead_rss_feeds",
+  "feeds": [
+    {
+      "title": "Disco Beads Blog",
+      "feed_url": "https://discobeads.com/blogs/news.atom",
+      "website_url": "https://discobeads.com/blogs/news",
+      "description": "Disco Beads is a family run business based in Cornwall, UK. Our freindly Disco Fairies hand make our unique brand of funky, reflective jewellery especially for you! Disco Beads Blog posts give you all the latest ideas and news from the world of super funky reflective jewellery and the Disco Fairies.",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 1200,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4908882.jpg?t=1614086935"
+    },
+    {
+      "title": "The Creative Beadcraft Blog",
+      "feed_url": "http://blog.creativebeadcraft.co.uk/feed/",
+      "website_url": "http://blog.creativebeadcraft.co.uk/",
+      "description": "The Creative Beadcraft is a major importer of quality beads and findings for jewellery making and embroidery, sourcing items from all over the world. We regularly review our products to ensure an interesting selection of unusual beads and fashion items.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4908905.jpg?t=1614086918"
+    },
+    {
+      "title": "BeadsJar Blog",
+      "feed_url": "https://beadsjar.co.uk/index.php?route=journal2/blog/feed",
+      "website_url": "https://beadsjar.co.uk/Blog",
+      "description": "Beadsjar brings you a brilliant collection of beads, findings, stringing materials and jewellery tools. On our website you will also find creative design ideas and free jewellery making tutorials.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 485,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4655029.jpg?t=1614086920"
+    },
+    {
+      "title": "Riverside Beads",
+      "feed_url": "https://riversidebeads.co.uk/feed/",
+      "website_url": "https://riversidebeads.co.uk/news/",
+      "description": "Riverside Beads is a beaders paradise, with everything you could possibly want and more! Follow this blog for the latest news and techniques.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 310,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4908893.jpg?t=1614086939"
+    },
+    {
+      "title": "CJ Beaders",
+      "feed_url": "https://www.cjbeaders.com/index.php?route=blog/posts",
+      "website_url": "https://www.cjbeaders.com/index.php?route=blog/posts",
+      "description": "CJ Beaders blog features useful and interesting information and knowledge about beads.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 628,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4656047.jpg?t=1614086926"
+    }
+  ]
+}

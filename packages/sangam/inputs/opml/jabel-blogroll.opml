@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>jabel - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Todd Grotenhuis" xmlUrl="https://blog.grotenhuis.info/feed.xml" htmlUrl="https://blog.grotenhuis.info/" category="Recommendations"/>
+    <outline type="rss" text="John Brady" xmlUrl="https://abbamoses.micro.blog/feed.xml" htmlUrl="https://abbamoses.micro.blog/" category="Recommendations"/>
+    <outline type="rss" text="Roger Wm. Bennett" xmlUrl="" htmlUrl="https://micro.blog/ReaderJohn" category="Recommendations"/>
+    <outline type="rss" text="David Walbert" xmlUrl="https://social.davidwalbert.com/feed.xml" htmlUrl="https://social.davidwalbert.com/" category="Recommendations"/>
+    <outline type="rss" text="Aaron Aiken" xmlUrl="https://aaronaiken.micro.blog/feed.xml" htmlUrl="https://aaronaiken.micro.blog/" category="Recommendations"/>
+    <outline type="rss" text="Denny Henke" xmlUrl="https://beardystarstuff.net/feed.xml" htmlUrl="https://beardystarstuff.net/" category="Recommendations"/>
+    <outline type="rss" text="Alan Jacobs" xmlUrl="https://social.ayjay.org/feed.xml" htmlUrl="https://social.ayjay.org/" category="Recommendations"/>
+    <outline type="rss" text="Robert Rackley" xmlUrl="" htmlUrl="https://canneddragons.net/" category="Recommendations"/>
+    <outline type="rss" text="Anna Havron" xmlUrl="https://annarama.net/feed.xml" htmlUrl="https://annarama.net/" category="Recommendations"/>
+    <outline type="rss" text="Dave Danielson" xmlUrl="https://blog.seadave.org/feed.xml" htmlUrl="https://blog.seadave.org/" category="Recommendations"/>
+    <outline type="rss" text="Clifford Beshers" xmlUrl="https://cliffordbeshers.micro.blog/feed.xml" htmlUrl="https://cliffordbeshers.micro.blog/" category="Recommendations"/>
+    <outline type="rss" text="DC" xmlUrl="https://tinyroofnail.micro.blog/feed.xml" htmlUrl="https://tinyroofnail.micro.blog/" category="Recommendations"/>
+    <outline type="rss" text="maique madeira" xmlUrl="https://maique.eu/feed.xml" htmlUrl="https://maique.eu/" category="Recommendations"/>
+    <outline type="rss" text="Chris Verbree" xmlUrl="" htmlUrl="https://micro.blog/V_" category="Recommendations"/>
+    <outline type="rss" text="Jason Heppler" xmlUrl="" htmlUrl="https://micro.blog/jaheppler" category="Recommendations"/>
+    <outline type="rss" text="Annie Mueller" xmlUrl="https://annie.micro.blog/feed.xml" htmlUrl="https://annie.micro.blog/" category="Recommendations"/>
+    <outline type="rss" text="Patrick Rhone" xmlUrl="https://www.patrickrhone.net/feed/" htmlUrl="https://www.patrickrhone.net/" category="Recommendations"/>
+    <outline type="rss" text="John Halstead" xmlUrl="https://anotherendoftheworld.org/feed/" htmlUrl="https://anotherendoftheworld.org/" category="Recommendations"/>
+    <outline type="rss" text="Adam Kotsko" xmlUrl="https://itself.blog/feed/" htmlUrl="https://itself.blog/" category="Recommendations"/>
+    <outline type="rss" text="Frank Brown Cloud" xmlUrl="https://fcbrowncloud.com/feed/" htmlUrl="https://fcbrowncloud.com/" category="Recommendations"/>
+    <outline type="rss" text="Dana O'Driscoll" xmlUrl="https://thedruidsgarden.com/feed/" htmlUrl="https://thedruidsgarden.com/" category="Recommendations"/>
+    <outline type="rss" text="Rhyd Wildermuth" xmlUrl="" htmlUrl="https://rhyd.substack.com/" category="Recommendations"/>
+    <outline type="rss" text="Dougald Hine" xmlUrl="" htmlUrl="https://dougald.substack.com/" category="Recommendations"/>
+    <outline type="rss" text="Miraz Jordan" xmlUrl="https://miraz.me/feed.xml" htmlUrl="https://miraz.me/" category="Recommendations"/>
+    <outline type="rss" text="Sarah Hendren" xmlUrl="https://ablerism.micro.blog/feed.xml" htmlUrl="https://ablerism.micro.blog/" category="Recommendations"/>
+  </body>
+</opml>

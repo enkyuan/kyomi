@@ -1,0 +1,221 @@
+{
+  "category": "Star Wars",
+  "source_url": "https://rss.feedspot.com/star_wars_rss_feeds",
+  "feeds": [
+    {
+      "title": "Star Wars News Net",
+      "feed_url": "https://www.starwarsnewsnet.com/feed",
+      "website_url": "https://www.starwarsnewsnet.com/",
+      "description": "Stay connected to a galaxy far, far away with Star Wars News Net. This platform delivers the latest news, rumors, and insights from the Star Wars universe. From updates on upcoming movies and TV shows to behind-the-scenes coverage and fan theories, Star Wars News Net keeps you informed and engaged with the ever-expanding Star Wars saga.",
+      "followers": {
+        "facebook": 25900,
+        "twitter": 52200,
+        "instagram": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4615345.jpg?t=1615879606"
+    },
+    {
+      "title": "TheForce.Net",
+      "feed_url": "http://www.theforce.net/rss/theforcenet.rss",
+      "website_url": "http://www.theforce.net/",
+      "description": "Your Daily Dose of Star Wars, get up to the minute updates on Star Wars Movies, Star Wars Television, Star Wars Literature, Star Wars Games, Star Wars Fandom, and so much more!",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 48300
+      },
+      "image_url": "https://i1.feedspot.com/1866565.jpg?t=1615879610"
+    },
+    {
+      "title": "Jedi News Your Daily Star Wars News Resource",
+      "feed_url": "https://www.jedinews.com/feed/",
+      "website_url": "https://www.jedinews.com/",
+      "description": "Jedi News brings you the latest Star Wars news daily, from apparel, collecting, film, TV, conventions, events, gaming, interviews, literature, and podcasts.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/4615331.jpg?t=1615879614"
+    },
+    {
+      "title": "Jedi Temple Archives",
+      "feed_url": "https://www.jeditemplearchives.com/feed/",
+      "website_url": "https://www.jeditemplearchives.com/",
+      "description": "Jedi Temple Archives is a Star Wars collecting database featuring current Star Wars news on action figures, books, statues, mini busts, games, miniatures, trading cards, posters and other collectibles. Reviews and up-to-date information on Star Wars collectibles from Hasbro, Sideshow Collectibles, Gentle Giant, LEGO, Master Replicas, Topps, Code 3, Kotobukiya, Attakus and more.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 10300,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/424262.jpg?t=1615793402"
+    },
+    {
+      "title": "Yakface.com",
+      "feed_url": "https://yakfaceforums.com/main/feed/",
+      "website_url": "https://yakfaceforums.com/main/",
+      "description": "Yakface.com covers all the latest Star Wars news from Hasbro, Gentle Giant, LEGO, Sideshow, Attakus and much more. Includes product reviews and descriptions, as well as a detailed toyguide of Star Wars-related products from vintage to the modern era.",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 36200,
+        "instagram": 71700
+      },
+      "image_url": "https://i1.feedspot.com/2441384.jpg?t=1615793203"
+    },
+    {
+      "title": "Coffee With Kenobi - Discussion, Analysis, and Rhetoric",
+      "feed_url": "https://coffeewithkenobi.com/feed/",
+      "website_url": "https://coffeewithkenobi.com/",
+      "description": "A bi-weekly Star Wars Podcast hosted by Dan Zehr and Cory Clubb. It covers the latest news, collectibles, and fan events. We speak with actors from the films, the Clone Wars, and Star Wars Rebels, as well as other podcasts and fans.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 12000,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4615359.jpg?t=1615879639"
+    },
+    {
+      "title": "Galactic Hunter's Star Wars Figure of the Day with Adam Pawlus",
+      "feed_url": "https://feeds.feedburner.com/blogspot/cImJr",
+      "website_url": "http://figureoftheday.blogspot.com/",
+      "description": "Thousands of articles about action figures, give or take. Presented by Galactic Hunter.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1125713.jpg?t=1615872938"
+    },
+    {
+      "title": "STAR WARS AFICIONADO",
+      "feed_url": "https://starwarsaficionado.blogspot.com/feeds/posts/default",
+      "website_url": "https://starwarsaficionado.blogspot.com/",
+      "description": "Star Wars Aficionado provides the best of the STAR WARS movies and TV series in all types of media- from films, to comics, to books, to toys and games.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1544961.jpg?t=1615879982"
+    },
+    {
+      "title": "Star Wars Collectors Archive",
+      "feed_url": "http://blog.theswca.com/feeds/posts/default?alt=rss",
+      "website_url": "http://blog.theswca.com/",
+      "description": "OFFICIAL BLOG of the Star Wars Collectors Archive was created with the goal of using the web to bridge the geographical gaps that exist between collectors. Its intent is to educate while showcasing some of the finest Star Wars collections in the world.",
+      "followers": {
+        "facebook": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4612099.jpg?t=1648036352"
+    },
+    {
+      "title": "Star Wars Comic Collector",
+      "feed_url": "http://swcomiccollector.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://swcomiccollector.blogspot.com/",
+      "description": "A site for comic collectors who are interested in domestic and foreign Star Wars comics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4615507.jpg?t=1615879905"
+    },
+    {
+      "title": "Bossk's Bounty - A Star Wars Collectors Blog",
+      "feed_url": "https://www.bossksbounty.com/feed",
+      "website_url": "https://www.bossksbounty.com/",
+      "description": "A personal blog about all things Star Wars. Reviews on Toys, comics and Lego. General Star Wars news.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 3000,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4754502.jpg?t=1615879632"
+    },
+    {
+      "title": "Stinson's All Things Star Wars Blog",
+      "feed_url": "https://deeplyobsessed.blogspot.com/feeds/posts/default",
+      "website_url": "https://deeplyobsessed.blogspot.com/",
+      "description": "A place for me to post all my deeply obsessive thoughts about my favorite movies: the Original Star Wars Trilogy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2299740.jpg?t=1615880016"
+    },
+    {
+      "title": "StarShips Blog",
+      "feed_url": "https://starships.com/feed/",
+      "website_url": "https://starships.com/blog/",
+      "description": "Hey, It's Brad here and welcome! I am your guide through this universe. Please enjoy the ride through space, buckle up we will hit some heavy gravity, and please no time jumping. Join us in discussing some of the best films ever made. From the marvelous first Star Wars trilogy to the maybe, and just maybe, painstaking torture of the second trilogy and the last few star wars movies that have been made.",
+      "followers": {
+        "instagram": 348
+      },
+      "image_url": "https://i1.feedspot.com/5207885.jpg?t=1603286624"
+    },
+    {
+      "title": "YASWB - Yet Another Star Wars Blog",
+      "feed_url": "https://yaswb.tumblr.com/rss",
+      "website_url": "https://yaswb.tumblr.com/",
+      "description": "A retrospection on Vintage Star Wars with modern action figures and other Star Wars toys.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4612044.jpg"
+    },
+    {
+      "title": "Star Wars Kidscast Blog",
+      "feed_url": "http://starwarskidscast.blogspot.com/feeds/posts/default",
+      "website_url": "http://starwarskidscast.blogspot.com/",
+      "description": "An entertaining & engaging source for both kids & parents to discuss everything we love about Star Wars books, collectibles and more! The only Star Wars podcast in the Galaxy for kids and grown-ups!",
+      "followers": {
+        "facebook": 512,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/2384070.jpg?t=1615879695"
+    },
+    {
+      "title": "The Coruscant Post",
+      "feed_url": "https://thecorusantpost.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thecorusantpost.blogspot.com/",
+      "description": "Starwars Toys blogs by The Coruscant Post.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4654456.jpg"
+    },
+    {
+      "title": "Star Wars - '77 - '80 Collector's Blog",
+      "feed_url": "http://starwars77-80.blogspot.com/feeds/posts/default",
+      "website_url": "http://starwars77-80.blogspot.com/",
+      "description": "I have a passion for collecting vintage Star Wars merchandise from the late 70's. Action figures, comics, trading cards and anything related to the first Star Wars movie.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1408848.jpg?t=1615879813"
+    },
+    {
+      "title": "Comicbook.com \u00bb Star Wars",
+      "feed_url": "https://comicbook.com/category/starwars/feed/",
+      "website_url": "https://comicbook.com/category/starwars/",
+      "description": "Comic Book Star Wars provides fans with the latest news, reviews, tv & movie database, vibrant communities, social platforms, events, Movies & Digital Comic Books.",
+      "followers": {
+        "facebook": 408800,
+        "twitter": 366500,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4615497.jpg?t=1615879618"
+    },
+    {
+      "title": "StarWars.com",
+      "feed_url": "https://www.starwars.com/news",
+      "website_url": "https://www.starwars.com/news",
+      "description": "Welcome to the official home of Star Wars. Follow along for exclusive news, updates and insider access, and May the Force Be With You..Always!",
+      "followers": {
+        "facebook": 18600000,
+        "twitter": 6400000,
+        "instagram": 17200000
+      },
+      "image_url": "https://i1.feedspot.com/4615320.jpg?t=1605618854"
+    },
+    {
+      "title": "International Talk Like Jar Jar Binks Day Blog",
+      "feed_url": "https://talklikejarjarday.com/blog/index.php?format=feed&type=rss",
+      "website_url": "https://talklikejarjarday.com/blog/",
+      "description": "International Talk Like Jar Jar Binks Day is the official day to speak like everyone's favorite Gungan, Jar Jar Binks! As anyone who has seen any of the Star Wars prequels knows, Jar Jar has a very unique and awesome way of speaking and we've decided that there should be a day celebrating his speech patterns!",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 456
+      },
+      "image_url": "https://i1.feedspot.com/4868754.jpg?t=1615879636"
+    },
+    {
+      "title": "From 4-LOM to Zuckuss",
+      "feed_url": "https://4lomkuss.com/feed/",
+      "description": "For all things Hasbro & Kenner Star Wars Action Figure related!",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 2200,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/2441392.jpg?t=1615879650"
+    }
+  ]
+}

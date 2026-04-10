@@ -1,0 +1,67 @@
+{
+  "category": "QT",
+  "source_url": "https://rss.feedspot.com/qt_rss_feeds",
+  "feeds": [
+    {
+      "title": "Qt Blog",
+      "feed_url": "https://www.qt.io/blog/rss.xml",
+      "website_url": "https://www.qt.io/blog",
+      "description": "Latest press releases, updates, and info. Qt allows you to write advanced applications and UIs once, and deploy them across desktop and embedded operating systems without rewriting the source code saving time and development cost.",
+      "followers": {
+        "facebook": 32900,
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/5374795.jpg?t=1645603509"
+    },
+    {
+      "title": "Felgo Blog",
+      "feed_url": "https://blog.felgo.com/rss.xml",
+      "website_url": "https://blog.felgo.com/",
+      "description": "Articles on app development, game development, qt development, product updates, and more. Felgo is a cross-platform development SDK based on the popular Qt framework. It allows you to create cross-platform business apps and games for iOS, Android, Desktop (Windows, Mac and Linux) and Embedded!",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5374798.jpg?t=1645603526"
+    },
+    {
+      "title": "Viking Software A/S Blog",
+      "feed_url": "https://www.vikingsoftware.com/feed/",
+      "website_url": "https://www.vikingsoftware.com/blog/",
+      "description": "Learnings in Qt, C++, QML and much more. Get inspiration from Viking Software's developer blog on everything from general scripting advice to simple functions for your code. Viking Software is a one-stop consultancy company for all software development needs.",
+      "followers": {
+        "facebook": 89
+      },
+      "image_url": "https://i1.feedspot.com/5374796.jpg?t=1645603515"
+    },
+    {
+      "title": "My C++ & Qt Blog",
+      "feed_url": "https://www.francescmm.com/feed/",
+      "website_url": "https://www.francescmm.com/",
+      "description": "I'm a software engineer that loves C++ development and performance optimization. Developing in C++ made me wonder about GUI development. Because of that I became a huge fan of Qt framework. I like to help projects with performance issues and code quality improving both backend and frontend.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5374794.jpg?t=1645603937"
+    },
+    {
+      "title": "KDAB Blog",
+      "feed_url": "https://www.kdab.com/rss.xml",
+      "website_url": "https://www.kdab.com/resources/?tags=blog",
+      "description": "Stay up-to-date and get inspiration from KDAB's expert insights into Qt, C++ and OpenGL development.Our engineers and designers share cutting-edge technology news and ideas with regard to Qt, QML, Qt on Android, OpenGL, Qt 3D, Vulkan, Scalable UIs and more embedded, mobile and desktop-related topics. The KDAB Group is the leading provider for Qt, C++ and 3D/OpenGL software expertise across desktop, embedded and mobile platforms.",
+      "followers": {
+        "facebook": 524,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5374797.jpg?t=1645603520"
+    },
+    {
+      "title": "basysKom GmbH Blog",
+      "feed_url": "https://www.basyskom.de/feed/",
+      "website_url": "https://www.basyskom.de/blog/#",
+      "description": "Articles on Qt, Cloud, IoT, open62541, OPC UA, HMI Development, and more. basysKom is a software service provider since 2004, located in Darmstadt, Germany.",
+      "followers": {
+        "facebook": 50
+      },
+      "image_url": "https://i1.feedspot.com/5374799.jpg?t=1645603538"
+    }
+  ]
+}

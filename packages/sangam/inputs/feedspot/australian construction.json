@@ -1,0 +1,98 @@
+{
+  "category": "Australian Construction",
+  "source_url": "https://rss.feedspot.com/australian_construction_rss_feeds",
+  "feeds": [
+    {
+      "title": "Construction People News",
+      "feed_url": "https://constructionpeople.com.au/feed/",
+      "website_url": "https://constructionpeople.com.au/news_advice/",
+      "description": "Construction People is a specialist recruitment agency for construction, project management, property development and gardening & landscaping jobs.",
+      "followers": {
+        "facebook": 252,
+        "instagram": 415
+      },
+      "image_url": "https://i1.feedspot.com/5093726.jpg?t=1620368491"
+    },
+    {
+      "title": "Master Builders Australia",
+      "feed_url": "https://masterbuilders.com.au/feed/",
+      "website_url": "https://masterbuilders.com.au/newsroom/",
+      "description": "Building Australia",
+      "followers": {
+        "facebook": 25700,
+        "twitter": 6100,
+        "instagram": 21600
+      },
+      "image_url": "https://i1.feedspot.com/7311017.jpg"
+    },
+    {
+      "title": "Australian Constructors Association Blog",
+      "feed_url": "https://www.constructors.com.au/category/blog/feed/",
+      "website_url": "https://www.constructors.com.au/category/blog/",
+      "description": "ACA Corporate",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7311016.jpg?t=1714997471"
+    },
+    {
+      "title": "Quality Seal Australia",
+      "feed_url": "https://qualitysealaustralia.com.au/feed/",
+      "website_url": "https://qualitysealaustralia.com.au/news/",
+      "description": "Discover the latest news and updates from Quality Seal Australia, your trusted provider of top-notch sealing services in Brisbane and Gold Coast, QLD.",
+      "followers": {
+        "facebook": 134
+      },
+      "image_url": "https://i1.feedspot.com/7311019.jpg?t=1714997333"
+    },
+    {
+      "title": "Builders Academy Australia",
+      "feed_url": "https://buildersacademy.edu.au/news/feed/",
+      "website_url": "https://buildersacademy.edu.au/news/",
+      "description": "Get the latest news and updates on our carpentry courses. Read stories from our student carpenters, trainers and successful graduates.",
+      "followers": {
+        "facebook": 53200
+      },
+      "image_url": "https://i1.feedspot.com/7311014.jpg?t=1714997287"
+    },
+    {
+      "title": "A Class Building & Construction Blog",
+      "feed_url": "https://www.aclassbuilding.com.au/blog/feed/",
+      "website_url": "https://www.aclassbuilding.com.au/blog/",
+      "description": "Custom Home Builders",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/7311015.jpg?t=1714997294"
+    },
+    {
+      "title": "Parker Brent Blog",
+      "feed_url": "https://www.parkerbrent.com.au/feed/",
+      "website_url": "https://www.parkerbrent.com.au/blog/",
+      "description": "Parker Brent - Training for Building and Construction. Study with us and take the next step in your Building and Construction career!",
+      "followers": {
+        "facebook": 2300
+      },
+      "image_url": "https://i1.feedspot.com/7311013.jpg?t=1714997280"
+    },
+    {
+      "title": "BMD",
+      "feed_url": "https://www.bmdgroup.global/news/",
+      "website_url": "https://www.bmdgroup.global/news/",
+      "followers": {
+        "facebook": 9000
+      },
+      "image_url": "https://i1.feedspot.com/7311011.jpg?t=1714997269"
+    },
+    {
+      "title": "Mates in Construction News",
+      "feed_url": "https://matesinconstruction.org.au/feed/",
+      "website_url": "https://abcg.com.au/news/",
+      "description": "Mates in Construction is a charity established in 2008 to reduce the high level of suicide among Australian construction workers. Show your support today.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 1700,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4510542.jpg?t=1612933592"
+    }
+  ]
+}

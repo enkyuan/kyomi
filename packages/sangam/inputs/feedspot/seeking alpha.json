@@ -1,0 +1,138 @@
+{
+  "category": "Seeking Alpha",
+  "source_url": "https://rss.feedspot.com/seeking_alpha_rss_feeds",
+  "feeds": [
+    {
+      "title": "Seeking Alpha",
+      "feed_url": "https://seekingalpha.com/feed.xml",
+      "website_url": "https://seekingalpha.com/market-news",
+      "description": "Seeking Alpha is the premier website for actionable stock market opinion and analysis, and vibrant, intelligent finance discussion. Seeking Alpha is a platform for investment research, with broad coverage of stocks, asset classes, ETFs and investment strategy.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/4668593.jpg"
+    },
+    {
+      "title": "Seeking Alpha \u00bb Apple Inc. (AAPL)",
+      "feed_url": "https://seekingalpha.com/api/sa/combined/AAPL.xml",
+      "website_url": "https://seekingalpha.com/symbol/AAPL",
+      "description": "Seeking Alpha is Stock market Insights & financial analysis, including free earnings, call transcripts, investment ideas and ETF & stock research written by finance experts.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/4712272.jpg"
+    },
+    {
+      "title": "Seeking Alpha \u00bb Tesla, Inc. (TSLA)",
+      "feed_url": "https://seekingalpha.com/symbol/TSLA/feed",
+      "website_url": "https://seekingalpha.com/symbol/TSLA",
+      "description": "A high-level overview of Tesla, Inc. (TSLA) stock. Stay up to date on the latest stock price, chart, news, analysis, fundamentals, trading and investment tools.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5595089.jpg?t=1686552310"
+    },
+    {
+      "title": "Seeking Alpha \u00bb IPO Stock Analysis",
+      "feed_url": "https://seekingalpha.com/tag/ipo-analysis.xml",
+      "website_url": "https://seekingalpha.com/stock-ideas/ipos",
+      "description": "Seeking Alpha's in-depth analysis on listed and upcoming IPO stocks. Click to learn more about and stay on top of IPO opportunities.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5088702.jpg?t=1686552153"
+    },
+    {
+      "title": "Seeking Alpha \u00bb Stock Investment Ideas",
+      "feed_url": "https://seekingalpha.com/tag/long-ideas.xml",
+      "website_url": "https://seekingalpha.com/stock-ideas/long-ideas",
+      "description": "Click to read single long-term stock idea articles containing in-depth opinion and analysis often from authors with positions in the stocks examined.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/4730178.jpg?t=1686552175"
+    },
+    {
+      "title": "Seeking Alpha \u00bb Earnings Call Transcripts",
+      "feed_url": "https://seekingalpha.com/sector/transcripts.xml",
+      "website_url": "https://seekingalpha.com/earnings/earnings-call-transcripts",
+      "description": "Complete transcripts of earnings calls, including the Audio and slideshow presentations.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/923377.jpg?t=1686552190"
+    },
+    {
+      "title": "Seeking Alpha \u00bb Forex",
+      "feed_url": "https://seekingalpha.com/tag/forex.xml",
+      "website_url": "https://seekingalpha.com/market-outlook/forex",
+      "description": "Seeking Alpha contributor analysis of forex rates and key currencies as it relates to U.S. investors. Come read analysis of dollar, euro, and more.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/173366.jpg?t=1686552210"
+    },
+    {
+      "title": "Seeking Alpha \u00bb ETF Investing Analysis",
+      "feed_url": "https://seekingalpha.com/tag/etf-portfolio-strategy.xml",
+      "website_url": "https://seekingalpha.com/etfs-and-funds/etf-analysis",
+      "description": "The latest ideas for investors interested in ETF investing. Come read the best ETF analysis that provides investors broad investment exposure.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/348035.jpg?t=1686552225"
+    },
+    {
+      "title": "Seeking Alpha \u00bb Healthcare",
+      "feed_url": "https://seekingalpha.com/sector/healthcare.xml",
+      "website_url": "https://seekingalpha.com/market-news/healthcare",
+      "description": "Real time healthcare news in the market. Read the latest news in the healthcare industry, including coverage of biotech, pharmaceutical, and insurance",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/4730181.jpg?t=1686552241"
+    },
+    {
+      "title": "Seeking Alpha \u00bb Cryptocurrency",
+      "feed_url": "https://seekingalpha.com/sector/cryptocurrency.xml",
+      "website_url": "https://seekingalpha.com/market-outlook/cryptocurrency",
+      "description": "Seeking Alpha opinion and analysis on the cryptocurrency market outlook. Click to read content on Bitcoin, Ethereum, Ripple, Solana and many more.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5595091.jpg?t=1686552322"
+    },
+    {
+      "title": "Seeking Alpha \u00bb REIT",
+      "feed_url": "https://seekingalpha.com/sector/reits.xml",
+      "website_url": "https://seekingalpha.com/dividends/reits",
+      "description": "Seeking Alpha has the best in-depth content on REIT stock and ETF investing and analysis. Come find the best information from our quality contributors.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5595090.jpg?t=1686552255"
+    }
+  ]
+}

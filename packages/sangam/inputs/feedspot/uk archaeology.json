@@ -1,0 +1,105 @@
+{
+  "category": "UK Archaeology",
+  "source_url": "https://rss.feedspot.com/uk_archaeology_rss_feeds",
+  "feeds": [
+    {
+      "title": "DigVentures | Latest Archaeology News, Finds and Discoveries",
+      "feed_url": "https://digventures.com/archaeologynews/feed/",
+      "website_url": "https://digventures.com/archaeologynews/",
+      "description": "An online Archaeology Magazine for the latest news, finds and discoveries fresh from the trenches",
+      "followers": {
+        "facebook": 78600,
+        "twitter": 19600,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4910821.jpg?t=1620114606"
+    },
+    {
+      "title": "Explore the Past | Worcestershire Archive & Archaeology Service",
+      "feed_url": "https://www.explorethepast.co.uk/feed/",
+      "website_url": "https://www.explorethepast.co.uk/blog/",
+      "description": "Discover the latest archive and archaeology news from Worcestershire in the Explore the Past blog.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4910843.jpg?t=1620114610"
+    },
+    {
+      "title": "Cotswold Archaeology | Professional Archaeological Services",
+      "feed_url": "https://cotswoldarchaeology.co.uk/feed/",
+      "website_url": "https://cotswoldarchaeology.co.uk/news/",
+      "description": "We are an educational charity that advances public education of archaeology and an appreciation of the cultural heritage and historic environment in the United Kingdom and other parts of the world. Dissemination of the results of our work is our primary educational activity and is of cardinal importance to us.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 10500,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4910951.jpg?t=1620114626"
+    },
+    {
+      "title": "Prehistoric Britain",
+      "feed_url": "https://prehistoric-britain.co.uk/feed",
+      "website_url": "https://prehistoric-britain.co.uk/",
+      "description": "Articles about the true story of our prehistoric archaeological and anthropological history contained in a trilogy of books and a DVD documentary. Robert John Langdon is a writer, historian and social philosopher who worked for the government and some of the largest corporations and education establishment.",
+      "followers": {
+        "instagram": 9
+      },
+      "image_url": "https://i1.feedspot.com/5360050.jpg?t=1641369759"
+    },
+    {
+      "title": "The Heritage Journal",
+      "feed_url": "https://heritageaction.wordpress.com/feed/",
+      "website_url": "https://heritageaction.wordpress.com/",
+      "description": "The Heritage Journal grew out of Heritage Action, a grassroots organization formed in 2003 by a large number of 'ordinary people caring for extraordinary places'. Its focus is on the conservation of prehistoric sites by promoting greater public appreciation of them and highlighting the many threats they face. It has grown into a very widely read community resource and everyone, whether professional or amateur, is welcome to contribute.",
+      "followers": {
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/1384114.jpg?t=1673335730"
+    },
+    {
+      "title": "Allen Archaeology Blog",
+      "feed_url": "https://www.allenarchaeology.co.uk/feed/",
+      "website_url": "https://www.allenarchaeology.co.uk/about-us/blog/",
+      "description": "Established in 2005, Allen Archaeology Ltd is an independent, professional commercial archaeological contractor and consultancy. Our experienced team can provide archaeological advice at an early stage in the design programme.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4910856.jpg?t=1620114621"
+    },
+    {
+      "title": "Ancient Origins",
+      "feed_url": "https://www.ancient-origins.net/taxonomy/term/1/feed",
+      "website_url": "https://www.ancient-origins.net/",
+      "description": "News and articles relating to ancient human origins, archaeology, anthropology, scientific mysteries, sacred writings, ancient places and more.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 314600
+      },
+      "image_url": "https://i1.feedspot.com/1558313.jpg?t=1614856271"
+    },
+    {
+      "title": "Rubicon Archaeology",
+      "feed_url": "https://www.rubiconheritage.com/news/feed",
+      "website_url": "https://www.rubiconheritage.com/news",
+      "description": "Rubicon Heritage Services Ltd is an archaeological and heritage consultancy firm serving the UK and Irish markets.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4558489.jpg?t=1614856431"
+    },
+    {
+      "title": "Archaeology Data Service Blog",
+      "feed_url": "https://archaeologydataservice.ac.uk/blog/feed/",
+      "website_url": "https://archaeologydataservice.ac.uk/blog/",
+      "description": "The archaeology data service (ads) supports research, learning and teaching with high quality and dependable digital resources. it does this by preserving digital data in the long term, and by promoting and disseminating a broad range of data in archaeology. the ads promotes good practice in the use of digital data in archaeology.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4558446.jpg"
+    }
+  ]
+}

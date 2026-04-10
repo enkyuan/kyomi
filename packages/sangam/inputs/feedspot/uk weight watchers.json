@@ -1,0 +1,71 @@
+{
+  "category": "UK Weight Watchers",
+  "source_url": "https://rss.feedspot.com/uk_weight_watchers_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Skinny Kitchen",
+      "feed_url": "https://www.skinnykitchen.com/feed/",
+      "website_url": "https://www.skinnykitchen.com/",
+      "description": "Quick and easy recipes with nutrition facts and calories. Weight Watchers friendly recipes with points.",
+      "followers": {
+        "facebook": 259000,
+        "twitter": 6200,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4790168.jpg?t=1675167103"
+    },
+    {
+      "title": "Slimming Kitchen Secrets",
+      "feed_url": "https://slimmingkitchensecrets.com/feed/",
+      "website_url": "https://slimmingkitchensecrets.com/",
+      "description": "Hi, I'm Laura, Weight Watchers Gold Member, northern lass and healthy cooking enthusiast bringing you delicious Smart Pointed recipes from my kitchen to yours.",
+      "followers": {
+        "facebook": 78000,
+        "twitter": 706
+      },
+      "image_url": "https://i1.feedspot.com/4790255.jpg?t=1605767354"
+    },
+    {
+      "title": "The WW Foodie Blog",
+      "feed_url": "http://thewwfoodie.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thewwfoodie.blogspot.com/",
+      "description": "The Weight Watching foodie: Essex born, Yorkshire based, torn between the love of food and a desire to rediscover a size 10 waistline.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4790524.jpg?t=1675167263"
+    },
+    {
+      "title": "The Slimming World Blog",
+      "feed_url": "https://www.slimmingworld.co.uk/blog/feed/",
+      "website_url": "https://www.slimmingworld.co.uk/blog/",
+      "description": "The Slimming World blog is your space to discover, share and enjoy a taste of the nation's favorite way to lose weight. If you're completely new to Slimming World, it's a sneak peek into a world of weight loss support and success. And if you're already a Slimming World member, it's another place to find lots of fantastic inspiration to help fire up your weight loss.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 194000,
+        "instagram": 986600
+      },
+      "image_url": "https://i1.feedspot.com/5402332.jpg?t=1675167411"
+    },
+    {
+      "title": "Essbeevee",
+      "feed_url": "https://feeds.feedburner.com/essbeevee",
+      "website_url": "http://www.lisacoleman.co.uk/blog/",
+      "description": "Do you like eating, shopping and travel? Me too! Click for healthy, Weight Watchers recipes, indulgent dishes and lots of restaurant recommendations.",
+      "followers": {
+        "facebook": 324,
+        "twitter": 2400,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4906411.jpg?t=1613744088"
+    },
+    {
+      "title": "Lisa Coleman Blog",
+      "feed_url": "http://www.lisacoleman.co.uk/blog/feed/",
+      "website_url": "http://www.lisacoleman.co.uk/blog/",
+      "description": "Hello I am Lisa Coleman, I wish to share my story, thoughts and creative recipes which have helped me lose some 20 stone.",
+      "followers": {
+        "twitter": 295
+      },
+      "image_url": "https://i1.feedspot.com/4910609.jpg?t=1613744098"
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "category": "Philadelphia",
+  "source_url": "https://rss.feedspot.com/philadelphia_rss_feeds",
+  "feeds": [
+    {
+      "title": "Philadelphia Magazine",
+      "feed_url": "https://www.phillymag.com/news/feed/",
+      "website_url": "https://www.phillymag.com/",
+      "description": "News and politics from Philadelphia magazine. A look at the people who influence the city and what's happening in Philadelphia today. It provides topical, in-depth reports on crucial and controversial issues confronting the region-business trends, political analysis, metropolitan planning, sociological trends, plus critical reviews of the cultural, sports and entertainment scene.",
+      "followers": {
+        "facebook": 134600,
+        "twitter": 197800,
+        "instagram": 239700
+      },
+      "image_url": "https://i1.feedspot.com/4892472.jpg?t=1612777817"
+    },
+    {
+      "title": "PhillyBite Magazine",
+      "feed_url": "https://www.phillybite.com/index.php?option=com_obrss&task=feed&id=1:phillybite-rss2-0&format=feed&Itemid=590",
+      "website_url": "https://www.phillybite.com/",
+      "description": "PhillyBite Magazine showcases Philly's Food, Review, Foodie News and more.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 67900,
+        "instagram": 53600
+      },
+      "image_url": "https://i1.feedspot.com/4902327.jpg?t=1612777821"
+    },
+    {
+      "title": "Philly Grub Blog",
+      "feed_url": "https://phillygrub.blog/feed/",
+      "website_url": "https://phillygrub.blog/",
+      "description": "Find articles on Philadelphia and South Jersey Food News, Commentary, Recommendations, etc. Philly Grub is a Philadelphia Food Blog founded by Marilyn Johnson in 2008. Marilyn Johnson eats, drinks, travels and talks about it.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 19900,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4899786.jpg?t=1660827108"
+    },
+    {
+      "title": "Hidden City Philadelphia",
+      "feed_url": "https://hiddencityphila.org/feed/",
+      "website_url": "https://hiddencityphila.org/",
+      "description": "Hidden City Philadelphia of CultureTrust is dedicated to exploring Philadelphia's urban landscape in all its complexity through journalism and public history. Hidden City Philadelphia grew out of founder Thaddeus Squire's interest in exploring old estates, churches and factories.",
+      "followers": {
+        "facebook": 36400,
+        "twitter": 17100,
+        "instagram": 102300
+      },
+      "image_url": "https://i1.feedspot.com/4899780.jpg?t=1612777832"
+    },
+    {
+      "title": "Eater Philly",
+      "feed_url": "https://philly.eater.com/rss/index.xml",
+      "website_url": "https://philly.eater.com/",
+      "description": "Eater is a digital media brand dedicated to all things food and dining. The Eater brand comprises a national site covering food and dining culture, 23 city sites tracking local dining scenes, a robust YouTube channel featuring documentary-style video about the inner workings of restaurants, and a variety of social channels, all run by a diverse team of writers, editors, producers, and contributors.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 25800,
+        "instagram": 99900
+      },
+      "image_url": "https://i1.feedspot.com/4899789.jpg?t=1632144066"
+    },
+    {
+      "title": "Billy Penn",
+      "feed_url": "https://billypenn.com/feed/",
+      "website_url": "https://billypenn.com/",
+      "description": "Billy Penn provides original reporting plus a carefully curated mix of important and fun news about Philadelphia. Billy Penn is a local news team that informs and entertains people living in Philadelphia, the greatest city in the world. Our reader-powered nonprofit newsroom covers everything Philly, from breaking news to urban life to food and fun.",
+      "followers": {
+        "facebook": 36300,
+        "twitter": 49700,
+        "instagram": 33100
+      },
+      "image_url": "https://i1.feedspot.com/4634180.jpg?t=1603896688"
+    },
+    {
+      "title": "Coming Up Roses",
+      "feed_url": "https://cominguprosestheblog.com/feed/",
+      "website_url": "https://cominguprosestheblog.com/",
+      "description": "Coming Up Roses is a Popular Philadelphia Lifestyle Blog in which Erica blogs daily inspiration, tips for shopping on a budget, beauty tips and tricks, and much more.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 4400,
+        "instagram": 102600
+      },
+      "image_url": "https://i1.feedspot.com/4899772.jpg?t=1612777849"
+    },
+    {
+      "title": "Do Good HQ",
+      "feed_url": "https://www.dogoodhq.co/feed/",
+      "website_url": "https://www.dogoodhq.co/",
+      "description": "Do Good HQ is an independent Philadelphia-based media outlet that provides advice and information to support our core value: common sense sustainability. Find curated collections of local, sustainable brands and products for everyday use through each post and learn how you can contribute.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7288960.jpg?t=1712106588"
+    },
+    {
+      "title": "Philadelphia Technician Training Institute",
+      "feed_url": "https://ptt.edu/feed/",
+      "website_url": "https://ptt.edu/news-and-event/",
+      "description": "PTTI was founded on this exact philosophy 10 years ago. The school's programs focus on hands-on training along with both online and classroom curriculum. The only way to gain sustainable employment in the 21st century is to know how to interact with trade and technology and use it in our day-to-day life, and make a career out of it. That is what PTTI assists its students with.",
+      "followers": {
+        "facebook": 3300,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5708096.jpg?t=1699437192"
+    },
+    {
+      "title": "Philadelphia Weekly",
+      "feed_url": "https://philadelphiaweekly.com/feed/",
+      "website_url": "https://philadelphiaweekly.com/",
+      "description": "Philadelphia Weekly is Philly's only alt-weekly newspaper, now all digital and still offering the most interesting and off-beat news, arts, events, food, and more. Our multimedia offerings include a weekly print tabloid; a robust selection of digital content, including blogs, social media and ebooks; and event marketing that gives our readers an immediate connection to the news and information they need.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 102100,
+        "instagram": 26500
+      },
+      "image_url": "https://i1.feedspot.com/4892642.jpg?t=1612777853"
+    },
+    {
+      "title": "Furia Rubel Communications, Inc.",
+      "feed_url": "https://www.furiarubel.com/feed/",
+      "website_url": "https://www.furiarubel.com/news-resources/",
+      "description": "Philadelphia PR and marketing that drive business success. Furia Rubel understands business objectives, strategies, and results.",
+      "followers": {
+        "facebook": 968,
+        "twitter": 2200,
+        "instagram": 674
+      },
+      "image_url": "https://i1.feedspot.com/5055342.jpg?t=1612777861"
+    },
+    {
+      "title": "LivingLesh",
+      "feed_url": "https://livinglesh.com/feed/",
+      "website_url": "https://livinglesh.com/",
+      "description": "LivingLesh is a fashion and luxe lifestyle blog where you will style tips, travel guides, beauty hacks, and little tidbits on how to live you best life.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1100,
+        "instagram": 116000
+      },
+      "image_url": "https://i1.feedspot.com/4899744.jpg?t=1612780896"
+    },
+    {
+      "title": "Just Grubbin",
+      "feed_url": "https://justgrubbin.com/feed/",
+      "website_url": "https://justgrubbin.com/articles/",
+      "description": "Just Grubbin is a lifestyle blog, podcast, and web series featuring all things food. We're not professional chefs or anything like that, just a group of friends that absolutely love food. No, seriously, we have a problem! So of course we decided to document our food adventures. This is us, just grubbing..",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3000,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4900348.jpg?t=1612780905"
+    },
+    {
+      "title": "Campus Philly Make the city your campus",
+      "feed_url": "https://campusphilly.org/feed/",
+      "website_url": "https://campusphilly.org/blog/",
+      "description": "Campus Philly is a student's connection to everything in and around Philly! The Campus Philly team provides area college students with social, community, and professional opportunities in the Philly region at their website. Campus Philly is a nonprofit organization that works with higher education, business, and public institutions, to make the region a better place where students can go to college and live after graduation.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 9900,
+        "instagram": 25800
+      },
+      "image_url": "https://i1.feedspot.com/4899782.jpg?t=1612780930"
+    },
+    {
+      "title": "Green Philly",
+      "feed_url": "https://www.thegreencities.com/category/food/feed/",
+      "website_url": "https://www.thegreencities.com/category/food/",
+      "description": "Green Philly Blog helps you live a more sustainable lifestyle. It is Philadelphia's top environmental news, sustainability, local food, companies & events & Philly recycling. Green Philly grew organically from frustration that sustainability wasn't accessible or simple. Through the latest news, recycling or events, Green Philly helps ease the transition into your sustainable lifestyle.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/1099536.jpg?t=1612777856"
+    },
+    {
+      "title": "Delanceyplace",
+      "feed_url": "https://delanceyplace.com/rss.xml.php",
+      "website_url": "https://delanceyplace.com/",
+      "description": "Delanceyplace is a brief daily email with an excerpt or quote we view as interesting or noteworthy, offered with commentary to provide context. There is no theme, except that most excerpts will come from a non-fiction work, mainly works of history, and we hope will have a more universal relevance than simply the subject of the book from which they came.",
+      "followers": {
+        "facebook": 24400,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5169791.jpg?t=1612780951"
+    },
+    {
+      "title": "Philly PR Girl",
+      "feed_url": "https://phillyprgirl.com/feed/",
+      "website_url": "https://phillyprgirl.com/blog-philly-events/",
+      "description": "Philly PR Girl LLC is Your Go-To Company For All Things PR, Social Media, and Events.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 8900,
+        "instagram": 27900
+      },
+      "image_url": "https://i1.feedspot.com/4899803.jpg?t=1612780912"
+    },
+    {
+      "title": "WURD Radio",
+      "feed_url": "https://wurdradio.com/feed/",
+      "website_url": "https://wurdradio.com/",
+      "description": "WURD Radio is the only African-American owned and operated talk radio station in the Commonwealth of Pennsylvania (and one of only three remaining in the country). Started in 2002, over the past 17 years WURD has evolved into a multi-media, multi-platform communications company that reaches deeply into the Black community through radio, events, digital and social media. It is considered the go-to media channel to engage, interact and connect with Philadelphia's Black community.",
+      "followers": {
+        "facebook": 29000,
+        "twitter": 14700,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/5161117.jpg?t=1612244609"
+    },
+    {
+      "title": "ForMotiv",
+      "feed_url": "https://formotiv.com/feed/",
+      "website_url": "https://formotiv.com/blog/",
+      "description": "ForMotiv's Digital Behavioral Intelligence platform provides previously unimaginable insight into a users digital body language. Our 'Digital Polygraph' uses AI to measure user behavior and predict outcomes such as risk and fraud.",
+      "followers": {
+        "twitter": 2500,
+        "instagram": 84
+      },
+      "image_url": "https://i1.feedspot.com/5046019.jpg?t=1612780945"
+    },
+    {
+      "title": "A Cup of Kims",
+      "feed_url": "https://acupofkims.com/feed/",
+      "website_url": "https://acupofkims.com/",
+      "description": "We are a married couple of believers and coffee-aficionados from the East Coast who love learning new things, traveling, and capturing memories using our DSLR camera. We enjoy exploring both familiar and unfamiliar places in local cities and places.",
+      "followers": {
+        "facebook": 64,
+        "twitter": 107,
+        "instagram": 469
+      },
+      "image_url": "https://i1.feedspot.com/5128024.jpg?t=1612780955"
+    },
+    {
+      "title": "Life in Pumps",
+      "feed_url": "https://lifeinpumps.com/feed/",
+      "website_url": "https://lifeinpumps.com/",
+      "description": "Life in Pumps knows the importance of finding calm in the chaos of life. The Bio-Chemist turned sports mom helps other busy moms navigate parenthood, travel, and wellness while staying relevant and stylish.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 7400,
+        "instagram": 145700
+      },
+      "image_url": "https://i1.feedspot.com/5049566.jpg?t=1612777865"
+    },
+    {
+      "title": "POSITIVE PUBLICITY",
+      "feed_url": "https://positivepublicityblog.com/feed/",
+      "website_url": "https://positivepublicityblog.com/",
+      "description": "A Philadelphia-based blog, Positive Publicity is for the girl looking for adventure. Stick around to chat about travel, music, style, food and much more!",
+      "followers": {
+        "facebook": 443
+      },
+      "image_url": "https://i1.feedspot.com/4899712.jpg?t=1612780940"
+    },
+    {
+      "title": "Fidelity Management Blog",
+      "feed_url": "https://www.phillyaptrentals.com/feed/",
+      "website_url": "https://www.phillyaptrentals.com/blog/",
+      "description": "Useful information for renters, visitors, & residents. Get information from Fidelity, the best-rated apartment for rent in Philadelphia. Fidelity Management Company provides the finest in residential living environment and experience in Northeast Philadelphia!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 65
+      },
+      "image_url": "https://i1.feedspot.com/5030036.jpg?t=1612780900"
+    },
+    {
+      "title": "Philatravelgirl | Flying by the Seat of my Points",
+      "feed_url": "http://philatravelgirl.com/feed/",
+      "website_url": "http://philatravelgirl.com/",
+      "description": "Hello I am Suzanne, a Philly girl, Finance/Investment MBA, Business Travel Manager and now Arden Road Travel consultant. Addicted to chocolate, travel and luxury using points to experience the world. I want to convey with my stories and photos adding a different voice/perspective to the (very) crowded travel blog space.",
+      "followers": {
+        "twitter": 8400,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/2166440.jpg?t=1612780917"
+    },
+    {
+      "title": "Small Biz Philly",
+      "feed_url": "https://smallbizphilly.com/feed/",
+      "website_url": "https://smallbizphilly.com/",
+      "description": "We're an independent, grass roots, news organization dedicated to keeping our readers up to date on the latest entrepreneurs, freelancers and startups.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5157039.jpg?t=1612780936"
+    },
+    {
+      "title": "The Constitutional Walking Tour of Philadelphia",
+      "feed_url": "https://www.theconstitutional.com/blog/rss",
+      "website_url": "https://www.theconstitutional.com/blog",
+      "description": "The Constitutional Walking Tour of Philadelphia takes visitors on a walking journey through America's birthplace and visits more than 20 sites including the Liberty Bell & Independence Hall. The Constitutional's blog delves into all things, Philly. You'll find blogs about Philly's biggest tourist destinations, hidden gems, Philly food, and information on Philadelphia's fascinating history. Whether you're a tourist or a resident, it's a great place to find the information you need to have a great time in Philadelphia.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 935
+      },
+      "image_url": "https://i1.feedspot.com/5087227.jpg?t=1612780960"
+    },
+    {
+      "title": "Belly of the Pig",
+      "feed_url": "https://www.bellyofthepig.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.bellyofthepig.com/",
+      "description": "I'm a self-proclaimed food addict who features his latest fix on a Philly Food Blog. This Philly Food Blog focused on Philadelphia Restaurants.",
+      "followers": {
+        "facebook": 171,
+        "twitter": 548
+      },
+      "image_url": "https://i1.feedspot.com/4899792.jpg?t=1612780965"
+    },
+    {
+      "title": "Misadventures In VO",
+      "feed_url": "https://www.brian-wiggins.com/misadventures-in-vo?format=RSS",
+      "website_url": "https://www.brian-wiggins.com/misadventures-in-vo",
+      "description": "Brian Wiggins is a voice actor & writer based out of Philadelphia.",
+      "followers": {
+        "facebook": 205,
+        "twitter": 699,
+        "instagram": 546
+      },
+      "image_url": "https://i1.feedspot.com/5058853.jpg?t=1612780974"
+    },
+    {
+      "title": "PhillyLiving Blog",
+      "feed_url": "https://www.phillyliving.com/blog/feed/",
+      "website_url": "https://www.phillyliving.com/news-blog/",
+      "description": "The PhillyLiving.com real estate team is always available to discuss buying or selling a home in Philadelphia. Follow our local MLS\u00ae listing to find your dream home or condo in Philadelphia.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 330,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4619555.jpg?t=1603805646"
+    },
+    {
+      "title": "Wee Wander | A parent's guide to navigating Philadelphia",
+      "feed_url": "https://wee-wander.com/feed/",
+      "website_url": "https://wee-wander.com/",
+      "description": "Raising your kids in Philadelphia? Let us help. Wee Wander is filled with events, tips for city parents, essential guides (like pediatricians, daycares, indoor play spaces), and suggestions for the best stuff in town from Philly's most in-the-know parents.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 478,
+        "instagram": 961
+      },
+      "image_url": "https://i1.feedspot.com/4899797.jpg?t=1612780988"
+    },
+    {
+      "title": "Hidden River Arts",
+      "feed_url": "https://hiddenriverarts.wordpress.com/feed/",
+      "website_url": "https://hiddenriverarts.wordpress.com/",
+      "description": "Hidden River Arts is the independent literary, visual and performing arts organization based in Philadelphia dedicated to the service, support and celebration of all artists.",
+      "followers": {
+        "twitter": 208
+      },
+      "image_url": "https://i1.feedspot.com/5052428.jpg?t=1612780925"
+    },
+    {
+      "title": "Uwishunu",
+      "feed_url": "https://www.uwishunu.com/feed/",
+      "website_url": "https://www.visitphilly.com/uwishunu/",
+      "description": "Uwishunu is Philadelphia's go-to blog for everything fun and exciting happening in Philadelphia - restaurants, bars, events, festivals, arts, music, hotels, museums, and more.",
+      "followers": {
+        "facebook": 802600
+      },
+      "image_url": "https://i1.feedspot.com/4900089.jpg?t=1612777813"
+    },
+    {
+      "title": "The Independent Hotel | Philadelphia Travel Guide & Blog",
+      "feed_url": "https://www.theindependenthotel.com/feed/",
+      "description": "Stay up-to-date on the latest happenings in Philadelphia with The Independent Hotel's travel blog. Stay updated on events, our favorite attractions & more.",
+      "followers": {
+        "facebook": 155
+      },
+      "image_url": "https://i1.feedspot.com/4899727.jpg?t=1612778814"
+    },
+    {
+      "title": "The Honest Blonde | Lifestyle Blog",
+      "feed_url": "https://thehonestblonde.com/feed/",
+      "description": "My name is Megan and I am a 20 something living in the city of Philadelphia with my boyfriend Anthony. My love for style began when I started working at a Plato's Closet in college. My hope is that this blog gives you an honest perspective on how I make it look good and lends you the tips that you need to do it too.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4949012.jpg?t=1612781065"
+    }
+  ]
+}

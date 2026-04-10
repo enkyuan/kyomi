@@ -1,0 +1,49 @@
+{
+  "category": "UK Bipolar",
+  "source_url": "https://rss.feedspot.com/uk_bipolar_rss_feeds",
+  "feeds": [
+    {
+      "title": "Be Your Own Light",
+      "feed_url": "https://beurownlight.com/feed/",
+      "website_url": "https://beurownlight.com/",
+      "description": "This blog is written by Eleanor Segall. Diagnosed with bipolar 1 disorder (a mood disorder) at 16, and now in her twenties, she blogs about what has helped her in recovery and tries to help others too.",
+      "followers": {
+        "twitter": 9100,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4677954.jpg?t=1629180096"
+    },
+    {
+      "title": "Bipolar UK",
+      "feed_url": "https://www.bipolaruk.org/handlers/rss.ashx?feed=1&IDBlogGroup=bfc29f70-db2f-4fb5-ba38-da1b62cf7264",
+      "website_url": "https://www.bipolaruk.org/",
+      "description": "Bipolar UK is the national charity dedicated to supporting individuals with the much misunderstood and devastating condition of bipolar, their families and carers.",
+      "followers": {
+        "facebook": 25400,
+        "twitter": 26500
+      },
+      "image_url": "https://i1.feedspot.com/4907889.jpg?t=1614004076"
+    },
+    {
+      "title": "purplepersuasion Blog",
+      "feed_url": "https://charlottewalker.uk/feed/",
+      "website_url": "https://charlottewalker.uk/blog/",
+      "description": "Charlotte Walker's Purple Persuasion is a mental health blog by a writer who has been dealing with bipolar disorder for more than 25 years. She writes, 'While I want this blog to have a wide reach in order to connect with other people in similar situations, it remains my space for exploring what it is like to have a serious mental illness.'",
+      "followers": {
+        "twitter": 20600
+      },
+      "image_url": "https://i1.feedspot.com/4589559.jpg?t=1614004082"
+    },
+    {
+      "title": "Manic Grant",
+      "feed_url": "https://www.manicgrant.com/feed",
+      "website_url": "https://www.manicgrant.com/",
+      "description": "I write about life with bipolar disorder (a.k.a. manic depression). All opinions are my own",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4907937.jpg?t=1614004086"
+    }
+  ]
+}

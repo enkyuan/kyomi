@@ -1,0 +1,64 @@
+{
+  "category": "CNG",
+  "source_url": "https://rss.feedspot.com/cng_rss_feeds",
+  "feeds": [
+    {
+      "title": "IOAGPL Blog",
+      "feed_url": "https://ioagpl.com/feed/",
+      "website_url": "https://ioagpl.com/blog/",
+      "description": "Indian Oil Corporation Limited and Adani Total Gas Limited is a city gas distribution company. IOAGPL is laying the infrastructure for the development of City Gas Distribution Networks to supply Compressed Natural Gas (CNG) to the transport sector. Read more about it in the IOAGPL Blog.",
+      "followers": {
+        "facebook": 60100,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5441344.jpg?t=1663070701"
+    },
+    {
+      "title": "American CNG News",
+      "feed_url": "https://americancng.com/blogs/updates.atom",
+      "website_url": "https://americancng.com/blogs/updates",
+      "description": "The American CNG News shares updates related to CNG, Company collaborations, New product information and more insights. American CNG is a one stop shop for CNG components including cylinders, valves, brackets, regulators, filters, fittings, fuel lines & safety valves all over USA.",
+      "followers": {
+        "facebook": 896
+      },
+      "image_url": "https://i1.feedspot.com/5441338.jpg?t=1663070768"
+    },
+    {
+      "title": "AVANews Blog \u00bb Connecticut Natural Gas",
+      "feed_url": "https://avanewsblog.com/category/networks/cng/feed/",
+      "website_url": "https://avanewsblog.com/category/networks/cng/",
+      "description": "Discover articles and updates from AVANGRID and Connecticut Natural Gas in our new blog. Features stories from Avangrid Foundation celebrating diversity and sustainability. Avangrid, Inc, established in 2015 after the merger of Iberdrola USA and UIL Holdings Corporation, is a diversified, sustainable energy company with operations in 27 states.",
+      "followers": {
+        "facebook": 27000,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5441342.jpg?t=1663070884"
+    },
+    {
+      "title": "CNG Europe News",
+      "feed_url": "https://cngeurope.com/category/news/feed/",
+      "website_url": "https://cngeurope.com/category/news/",
+      "description": "Check out our category Archives featuring Natural Gas Vehicle (NVG) and Compressed natural gas (CNG) related news. CNG Europe is a website that provides a Map of Natural Gas Vehicle (NVG) Compressed natural gas (CNG) filling stations in Europe, along with Information on Natural Gas vehicles and Terminals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5441343.jpg?t=1663070588"
+    },
+    {
+      "title": "Natural Gas Vehicle Institute Blog",
+      "feed_url": "https://ngvi.com/feed/",
+      "website_url": "https://easycng.com/blog/",
+      "description": "Learn CNG Training, Critical elements, Latest Guidelines, and other minutiae about using CNG in the Natural Gas Vehicle Institute Blog. NGVi is the leading training provider in North America for the natural gas vehicle industry providing training to NGV users from drivers, vehicle technicians, fueling station maintenance technicians, service managers, and more.",
+      "followers": {
+        "facebook": 690
+      },
+      "image_url": "https://i1.feedspot.com/5441341.jpg?t=1663070931"
+    },
+    {
+      "title": "CNG Fuels News",
+      "feed_url": "https://www.cngfuels.com/feed",
+      "website_url": "https://www.cngfuels.com/news",
+      "description": "The CNG Fuels Newsroom delivers news and major event updates related to biomethane and CNG. CNG Fuels is one of Europe's largest suppliers of Biomethane. CNGFuels develops, owns, and operates CNG refueling infrastructure and sources 100% Renewable Biomethane (aka Bio-CNG) for its stations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5441348.jpg?t=1663071315"
+    }
+  ]
+}

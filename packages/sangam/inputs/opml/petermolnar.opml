@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="//petermolnar.net/opml.xsl"?>
+<!--
+    Welcome!
+
+    If you're reading this it means your browser can't transform this
+    file into something nicer. If possible, please try to open it in
+    another browser, like Firefox, unless you're OK reading raw XML,
+    or if that was your intention from the beginning.
+-->
+<opml version="1.0">
+    <head>
+        <title>Websites Peter reads</title>
+        <dateCreated>Mon, 03 Jan 2022 12:10:00 GMT</dateCreated>
+        <ownerName>petermolnar.net</ownerName>
+        <ownerEmail>mail@petermolnar.net</ownerEmail>
+        <ownerId>https://petermolnar.net/</ownerId>
+    </head>
+    <body>
+        <outline title="art, aesthetics" text="art, aesthetics" description="art, aesthetics" type="folder">
+            <outline title="@liulangmao_art" text="@liulangmao_art" description="@liulangmao_art" type="atom" xmlUrl="https://bibliogram.hamster.dance/u/liulangmao_art/atom.xml" htmlUrl="https://bibliogram.hamster.dance/u/liulangmao_art/atom.xml" />
+            <outline title="Alex Konstad on ArtStation" text="Alex Konstad on ArtStation" description="Alex Konstad on ArtStation" type="rss" xmlUrl="https://www.artstation.com/alexkonstad.rss" htmlUrl="https://www.artstation.com/alexkonstad" />
+            <outline title="alexiuss's gallery" text="alexiuss's gallery" description="alexiuss's gallery" type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?type=gallery&amp;q=by%3Aalexiuss" htmlUrl="https://backend.deviantart.com/" />
+            <outline title="antifan-real's gallery" text="antifan-real's gallery" description="antifan-real's gallery" type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?type=gallery&amp;q=by%3Aantifan-real" htmlUrl="https://backend.deviantart.com/" />
+            <outline title="exellero" text="exellero" description="exellero" type="rss" xmlUrl="https://www.artstation.com/exellero.rss" htmlUrl="https://www.artstation.com/exellero" />
+            <outline title="hidrico" text="hidrico" description="hidrico" type="rss" xmlUrl="https://www.artstation.com/hidrico.rss" htmlUrl="https://www.artstation.com/hidrico" />
+            <outline title="https://bellatorinmachina.tumblr.com/rss" text="https://bellatorinmachina.tumblr.com/rss" description="https://bellatorinmachina.tumblr.com/rss" type="rss" xmlUrl="https://bellatorinmachina.tumblr.com/rss" htmlUrl="https://bellatorinmachina.tumblr.com/" />
+            <outline title="https://catinawitchhat.tumblr.com/rss" text="https://catinawitchhat.tumblr.com/rss" description="https://catinawitchhat.tumblr.com/rss" type="rss" xmlUrl="https://catinawitchhat.tumblr.com/rss" htmlUrl="https://catinawitchhat.tumblr.com/" />
+            <outline title="https://demobaza.tumblr.com/rss" text="https://demobaza.tumblr.com/rss" description="https://demobaza.tumblr.com/rss" type="rss" xmlUrl="https://demobaza.tumblr.com/rss" htmlUrl="https://demobaza.tumblr.com/" />
+            <outline title="https://elvenforestworld.tumblr.com/rss" text="https://elvenforestworld.tumblr.com/rss" description="https://elvenforestworld.tumblr.com/rss" type="rss" xmlUrl="https://elvenforestworld.tumblr.com/rss" htmlUrl="https://elvenforestworld.tumblr.com/" />
+            <outline title="https://myalternativereality.tumblr.com/rss" text="https://myalternativereality.tumblr.com/rss" description="https://myalternativereality.tumblr.com/rss" type="rss" xmlUrl="https://myalternativereality.tumblr.com/rss" htmlUrl="https://myalternativereality.tumblr.com/" />
+            <outline title="https://shalizeh7.tumblr.com/rss" text="https://shalizeh7.tumblr.com/rss" description="https://shalizeh7.tumblr.com/rss" type="rss" xmlUrl="https://shalizeh7.tumblr.com/rss" htmlUrl="https://shalizeh7.tumblr.com/" />
+            <outline title="https://xbejonson.tumblr.com/rss" text="https://xbejonson.tumblr.com/rss" description="https://xbejonson.tumblr.com/rss" type="rss" xmlUrl="https://xbejonson.tumblr.com/rss" htmlUrl="https://xbejonson.tumblr.com/" />
+            <outline title="In Search of Our Past Futures" text="In Search of Our Past Futures" description="In Search of Our Past Futures" type="rss" xmlUrl="https://truecyberadvocate.tumblr.com/rss" htmlUrl="https://truecyberadvocate.tumblr.com/" />
+            <outline title="Jorge Jacinto" text="Jorge Jacinto" description="Jorge Jacinto" type="rss" xmlUrl="http://www.jorgejacinto.com/?format=rss" htmlUrl="http://www.jorgejacinto.com/" />
+            <outline title="mattforsyth's gallery" text="mattforsyth's gallery" description="mattforsyth's gallery" type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?type=gallery&amp;q=by%3Amattforsyth" htmlUrl="https://backend.deviantart.com/" />
+            <outline title="papaninja" text="papaninja" description="papaninja" type="rss" xmlUrl="https://www.artstation.com/papaninja.rss" htmlUrl="https://www.artstation.com/papaninja" />
+            <outline title="seanvo" text="seanvo" description="seanvo" type="rss" xmlUrl="https://www.artstation.com/seanvo.rss" htmlUrl="https://www.artstation.com/seanvo" />
+            <outline title="shigera" text="shigera" description="shigera" type="rss" xmlUrl="https://www.artstation.com/shigera.rss" htmlUrl="https://www.artstation.com/shigera" />
+            <outline title="shouzhiduanle" text="shouzhiduanle" description="shouzhiduanle" type="rss" xmlUrl="https://www.artstation.com/shouzhiduanle.rss" htmlUrl="https://www.artstation.com/shouzhiduanle" />
+            <outline title="Swang . on ArtStation" text="Swang . on ArtStation" description="Swang . on ArtStation" type="rss" xmlUrl="https://www.artstation.com/swang.rss" htmlUrl="https://www.artstation.com/swang" />
+            <outline title="vuogle" text="vuogle" description="vuogle" type="rss" xmlUrl="https://www.artstation.com/vuogle.rss" htmlUrl="https://www.artstation.com/vuogle" />
+        </outline>
+        <outline title="design &amp; architecture" text="design &amp; architecture" description="design &amp; architecture" type="folder">
+            <outline title="Architecture &#x2013; Open Culture" text="Architecture &#x2013; Open Culture" description="Architecture &#x2013; Open Culture" type="rss" xmlUrl="https://www.openculture.com/category/architecture-2/feed" htmlUrl="https://www.openculture.com" />
+            <outline title="Control Panel" text="Control Panel" description="Control Panel" type="rss" xmlUrl="https://control--panel.com/rss" htmlUrl="https://control--panel.com/" />
+            <outline title="Dezeen" text="Dezeen" description="Dezeen" type="rss" xmlUrl="https://www.dezeen.com/feed/" htmlUrl="https://www.dezeen.com" />
+            <outline title="Hidden Architecture" text="Hidden Architecture" description="Hidden Architecture" type="rss" xmlUrl="https://hiddenarchitecture.net/feed/" htmlUrl="https://hiddenarchitecture.net" />
+            <outline title="Interiors Worldwide" text="Interiors Worldwide" description="Interiors Worldwide" type="rss" xmlUrl="https://minimalisthome.co.uk/rss" htmlUrl="https://minimalisthome.co.uk/" />
+            <outline title="Re:model" text="Re:model" description="Re:model" type="rss" xmlUrl="https://remodelproj.tumblr.com/rss" htmlUrl="https://remodelproj.tumblr.com/" />
+            <outline title="The Gem Picker" text="The Gem Picker" description="The Gem Picker" type="rss" xmlUrl="https://thegempicker.com/feed/" htmlUrl="https://thegempicker.com" />
+        </outline>
+        <outline title="diy" text="diy" description="diy" type="folder">
+            <outline title="Ikea Hackers" text="Ikea Hackers" description="Ikea Hackers" type="rss" xmlUrl="https://www.ikeahackers.net/feed" htmlUrl="https://ikeahackers.net" />
+            <outline title="Kamui Cosplay" text="Kamui Cosplay" description="Kamui Cosplay" type="rss" xmlUrl="https://www.kamuicosplay.com/feed/" htmlUrl="https://www.kamuicosplay.com" />
+        </outline>
+        <outline title="martial art" text="martial art" description="martial art" type="folder">
+            <outline title="Dan Djurdjevic" text="Dan Djurdjevic" description="Dan Djurdjevic" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC9Os0tBMTnMgefryMX0lueg" htmlUrl="https://www.youtube.com/channel/UC9Os0tBMTnMgefryMX0lueg" />
+            <outline title="DragonGateSanctuary" text="DragonGateSanctuary" description="DragonGateSanctuary" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCi7BNmMd53Z2Vabt86JupYQ" htmlUrl="https://www.youtube.com/channel/UCi7BNmMd53Z2Vabt86JupYQ" />
+            <outline title="https://wudangacademy.tumblr.com/rss" text="https://wudangacademy.tumblr.com/rss" description="https://wudangacademy.tumblr.com/rss" type="rss" xmlUrl="https://wudangacademy.tumblr.com/rss" htmlUrl="https://wudangacademy.tumblr.com/" />
+            <outline title="Pa-Kua - International League - Posts | Facebook" text="Pa-Kua - International League - Posts | Facebook" description="Pa-Kua - International League - Posts | Facebook" type="rss" xmlUrl="https://rss.app/feeds/tm3gzJCeTz9HWgnJ.xml" htmlUrl="https://www.facebook.com/pakua.international" />
+            <outline title="Pa-Kua Canada" text="Pa-Kua Canada" description="Pa-Kua Canada" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCWQcWgQ08_BNaDmUsAS0dfA" htmlUrl="https://www.youtube.com/channel/UCWQcWgQ08_BNaDmUsAS0dfA" />
+            <outline title="Stories by S&#xE9;rgio M. de Souza on Medium" text="Stories by S&#xE9;rgio M. de Souza on Medium" description="Stories by S&#xE9;rgio M. de Souza on Medium" type="rss" xmlUrl="https://medium.com/feed/@osergionauta" htmlUrl="https://medium.com/@osergionauta?source=rss-7a1868e6ee1c------2" />
+            <outline title="Wudang Academy" text="Wudang Academy" description="Wudang Academy" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCNL8iCmJqezjeQKmjRRgvig" htmlUrl="https://www.youtube.com/channel/UCNL8iCmJqezjeQKmjRRgvig" />
+        </outline>
+        <outline title="news" text="news" description="news" type="folder">
+            <outline title="Cambridge News" text="Cambridge News" description="Cambridge News" type="rss" xmlUrl="https://www.cambridgeindependent.co.uk/_api/rss/cambridge_independent_news_feed.xml" htmlUrl="http://www.cambridgeindependent.co.uk/" />
+            <outline title="Guardian morning briefing | The Guardian" text="Guardian morning briefing | The Guardian" description="Guardian morning briefing | The Guardian" type="rss" xmlUrl="https://www.theguardian.com/world/series/guardian-morning-briefing/rss" htmlUrl="https://www.theguardian.com/world/series/guardian-morning-briefing" />
+            <outline title="Qubit" text="Qubit" description="Qubit" type="rss" xmlUrl="https://qubit.hu/feed" htmlUrl="https://qubit.hu/feed" />
+            <outline title="WITNESS Blog" text="WITNESS Blog" description="WITNESS Blog" type="rss" xmlUrl="https://blog.witness.org/feed/" htmlUrl="https://blog.witness.org" />
+        </outline>
+        <outline title="photography, photographers" text="photography, photographers" description="photography, photographers" type="folder">
+            <outline title="@blackli_photography" text="@blackli_photography" description="@blackli_photography" type="atom" xmlUrl="https://bibliogram.hamster.dance/u/blackli_photography/atom.xml" htmlUrl="https://bibliogram.hamster.dance/u/blackli_photography/atom.xml" />
+            <outline title="@jiangbolee_" text="@jiangbolee_" description="@jiangbolee_" type="atom" xmlUrl="https://bibliogram.hamster.dance/u/jiangbolee_/atom.xml" htmlUrl="https://bibliogram.hamster.dance/u/jiangbolee_/atom.xml" />
+            <outline title="@ladymucur" text="@ladymucur" description="@ladymucur" type="atom" xmlUrl="https://bibliogram.hamster.dance/u/ladymucur/atom.xml" htmlUrl="https://bibliogram.hamster.dance/u/ladymucur/atom.xml" />
+            <outline title="@norahamucska" text="@norahamucska" description="@norahamucska" type="atom" xmlUrl="https://bibliogram.hamster.dance/u/norahamucska/atom.xml" htmlUrl="https://bibliogram.hamster.dance/u/norahamucska/atom.xml" />
+            <outline title="Alexandre Deschaumes" text="Alexandre Deschaumes" description="Alexandre Deschaumes" type="rss" xmlUrl="https://www.alexandredeschaumes.com/feed/" htmlUrl="https://www.alexandredeschaumes.com" />
+            <outline title="Bec Kilpatrick" text="Bec Kilpatrick" description="Bec Kilpatrick" type="rss" xmlUrl="http://beckil.co/blog/feed/" htmlUrl="http://beckil.co" />
+            <outline title="Blog &#x2014; ter" text="Blog &#x2014; ter" description="Blog &#x2014; ter" type="html5" xmlUrl="http://www.terenceleezy.com/blog" htmlUrl="http://www.terenceleezy.com/blog" />
+            <outline title="Brian Gao" text="Brian Gao" description="Brian Gao" type="rss" xmlUrl="https://500px.com/mrbrian/rss" htmlUrl="https://500px.com/mrbrian/rss" />
+            <outline title="Casual Photophile" text="Casual Photophile" description="Casual Photophile" type="rss" xmlUrl="https://casualphotophile.com/feed/" htmlUrl="https://casualphotophile.com" />
+            <outline title="China Mainland Pool" text="China Mainland Pool" description="China Mainland Pool" type="atom" xmlUrl="https://www.flickr.com/services/feeds/groups_pool.gne?id=976337@N22&amp;lang=en-us&amp;format=atom" htmlUrl="https://www.flickr.com/groups/mainlandchina/pool/" />
+            <outline title="Christian Wig" text="Christian Wig" description="Christian Wig" type="rss" xmlUrl="https://500px.com/wigh/rss" htmlUrl="https://500px.com/wigh/rss" />
+            <outline title="crack jackson jr" text="crack jackson jr" description="crack jackson jr" type="rss" xmlUrl="https://api.flickr.com/services/feeds/photos_public.gne?lang=en-us&amp;format=rss_200&amp;id=49291043@N00" htmlUrl="https://www.flickr.com/photos/crackjacksonjr/" />
+            <outline title="Douglas Hamilton ( days well spent )" text="Douglas Hamilton ( days well spent )" description="Douglas Hamilton ( days well spent )" type="rss" xmlUrl="https://api.flickr.com/services/feeds/photos_public.gne?lang=en-us&amp;format=rss_200&amp;id=56108238@N02" htmlUrl="https://www.flickr.com/photos/56108238@N02/" />
+            <outline title="el-ly's gallery" text="el-ly's gallery" description="el-ly's gallery" type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?type=gallery&amp;q=by%3Ael-ly" htmlUrl="https://backend.deviantart.com/" />
+            <outline title="Forbidden Places" text="Forbidden Places" description="Forbidden Places" type="rss" xmlUrl="http://www.forbidden-places.net/rssmaker/fluxrssen.xml" htmlUrl="http://www.forbidden-places.net" />
+            <outline title="Fotograf&#xED;as de Canarias - Canary Islands Pool" text="Fotograf&#xED;as de Canarias - Canary Islands Pool" description="Fotograf&#xED;as de Canarias - Canary Islands Pool" type="atom" xmlUrl="https://www.flickr.com/services/feeds/groups_pool.gne?id=42415289@N00&amp;lang=en-us&amp;format=atom" htmlUrl="https://www.flickr.com/groups/42415289@N00/pool/" />
+            <outline title="https://rjkoehler.tumblr.com/rss" text="https://rjkoehler.tumblr.com/rss" description="https://rjkoehler.tumblr.com/rss" type="rss" xmlUrl="https://rjkoehler.tumblr.com/rss" htmlUrl="https://rjkoehler.tumblr.com/" />
+            <outline title="ilovehatephotography" text="ilovehatephotography" description="ilovehatephotography" type="rss" xmlUrl="http://ilovehatephoto.com/feed/" htmlUrl="http://ilovehatephoto.com" />
+            <outline title="Infinite Beat" text="Infinite Beat" description="Infinite Beat" type="html5" xmlUrl="http://infinitebeat.hu/" htmlUrl="http://infinitebeat.hu/" />
+            <outline title="Irina Dzhul" text="Irina Dzhul" description="Irina Dzhul" type="rss" xmlUrl="https://500px.com/irinadzhul/rss" htmlUrl="https://500px.com/irinadzhul/rss" />
+            <outline title="Jingna Zhang &#x5F20;&#x6676;&#x5A1C; - Fashion, Fine Art &amp; Beauty Photographer" text="Jingna Zhang &#x5F20;&#x6676;&#x5A1C; - Fashion, Fine Art &amp; Beauty Photographer" description="Jingna Zhang &#x5F20;&#x6676;&#x5A1C; - Fashion, Fine Art &amp; Beauty Photographer" type="rss" xmlUrl="https://www.zhangjingna.com/?format=rss" htmlUrl="https://www.zhangjingna.com/" />
+            <outline title="Jiuzhaigou - Sichuan Province - China Pool" text="Jiuzhaigou - Sichuan Province - China Pool" description="Jiuzhaigou - Sichuan Province - China Pool" type="atom" xmlUrl="https://www.flickr.com/services/feeds/groups_pool.gne?id=903543@N25&amp;lang=en-us&amp;format=atom" htmlUrl="https://www.flickr.com/groups/jiuzhaigou/pool/" />
+            <outline title="Justin Lim Photography - The Official Blog - Justin Lim Photography" text="Justin Lim Photography - The Official Blog - Justin Lim Photography" description="Justin Lim Photography - The Official Blog - Justin Lim Photography" type="rss" xmlUrl="http://www.justlimphoto.com/blog?format=rss" htmlUrl="http://www.justlimphoto.com/blog/" />
+            <outline title="kariliimatainen's gallery" text="kariliimatainen's gallery" description="kariliimatainen's gallery" type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?type=gallery&amp;q=by%3Akariliimatainen" htmlUrl="https://backend.deviantart.com/" />
+            <outline title="kirawinter's gallery" text="kirawinter's gallery" description="kirawinter's gallery" type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?type=gallery&amp;q=by%3Akirawinter" htmlUrl="https://backend.deviantart.com/" />
+            <outline title="Malatang" text="Malatang" description="Malatang" type="rss" xmlUrl="https://amandakaminsky.wordpress.com/feed/" htmlUrl="https://amandakaminsky.wordpress.com" />
+            <outline title="Margarita Kareva" text="Margarita Kareva" description="Margarita Kareva" type="rss" xmlUrl="https://500px.com/oxota/rss" htmlUrl="https://500px.com/oxota/rss" />
+            <outline title="mariannainsomnia's gallery" text="mariannainsomnia's gallery" description="mariannainsomnia's gallery" type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?type=gallery&amp;q=by%3Amariannainsomnia" htmlUrl="https://backend.deviantart.com/" />
+            <outline title="milouvision" text="milouvision" description="milouvision" type="rss" xmlUrl="https://api.flickr.com/services/feeds/photos_public.gne?lang=en-us&amp;format=rss_200&amp;id=8265881@N03" htmlUrl="https://www.flickr.com/photos/milouvision/" />
+            <outline title="Neil Burnell" text="Neil Burnell" description="Neil Burnell" type="rss" xmlUrl="https://api.flickr.com/services/feeds/photos_public.gne?lang=en-us&amp;format=rss_200&amp;id=135458733@N03" htmlUrl="https://www.flickr.com/photos/135458733@N03/" />
+            <outline title="Nora Hamucska" text="Nora Hamucska" description="Nora Hamucska" type="rss" xmlUrl="https://norahamucska.com/feed/" htmlUrl="https://norahamucska.com" />
+            <outline title="pascal Boegli" text="pascal Boegli" description="pascal Boegli" type="rss" xmlUrl="https://www.pascalboegli.com/feed/" htmlUrl="https://www.pascalboegli.com" />
+            <outline title="Philippe Lejeanvre" text="Philippe Lejeanvre" description="Philippe Lejeanvre" type="rss" xmlUrl="https://philippelejeanvre.com/feed/" htmlUrl="https://philippelejeanvre.com" />
+            <outline title="Rogg4n" text="Rogg4n" description="Rogg4n" type="atom" xmlUrl="https://www.flickr.com/services/feeds/photos_public.gne?id=128294308@N05&amp;lang=en-us&amp;format=atom" htmlUrl="https://www.flickr.com/photos/128294308@N05/" />
+            <outline title="ryoko-demon's gallery" text="ryoko-demon's gallery" description="ryoko-demon's gallery" type="rss" xmlUrl="https://backend.deviantart.com/rss.xml?type=gallery&amp;q=by%3Aryoko-demon" htmlUrl="https://backend.deviantart.com/" />
+            <outline title="Shuji Moriwaki" text="Shuji Moriwaki" description="Shuji Moriwaki" type="rss" xmlUrl="https://api.flickr.com/services/feeds/photos_public.gne?lang=en-us&amp;format=rss_200&amp;id=57711921@N05" htmlUrl="https://www.flickr.com/photos/shujimoriwaki/" />
+            <outline title="Takashi Yasui" text="Takashi Yasui" description="Takashi Yasui" type="rss" xmlUrl="https://takashiyasui.com/rss" htmlUrl="https://takashiyasui.com/" />
+            <outline title="terenceleezy" text="terenceleezy" description="terenceleezy" type="rss" xmlUrl="https://api.flickr.com/services/feeds/photos_public.gne?lang=en-us&amp;format=rss_200&amp;id=40948577@N06" htmlUrl="https://www.flickr.com/photos/terenceleezy/" />
+            <outline title="The Bohemian Blog" text="The Bohemian Blog" description="The Bohemian Blog" type="rss" xmlUrl="http://www.thebohemianblog.com/feed" htmlUrl="https://www.thebohemianblog.com" />
+            <outline title="The Machine Planet" text="The Machine Planet" description="The Machine Planet" type="rss" xmlUrl="https://themachineplanet.wordpress.com/feed/" htmlUrl="https://themachineplanet.wordpress.com" />
+            <outline title="Wilson Au | &#x4E00;&#x671F;&#x4E00;&#x4F1A;" text="Wilson Au | &#x4E00;&#x671F;&#x4E00;&#x4F1A;" description="Wilson Au | &#x4E00;&#x671F;&#x4E00;&#x4F1A;" type="rss" xmlUrl="https://api.flickr.com/services/feeds/photos_public.gne?lang=en-us&amp;format=rss_200&amp;id=71092363@N03" htmlUrl="https://www.flickr.com/photos/wil_1000/" />
+            <outline title="&#x141;ukasz C. Jokiel" text="&#x141;ukasz C. Jokiel" description="&#x141;ukasz C. Jokiel" type="rss" xmlUrl="https://blog.jokielowie.com/feed/" htmlUrl="https://blog.jokielowie.com" />
+            <outline title="&#x7B49;&#x5BFC; &#x5FAE;&#x4FE1;18977165510" text="&#x7B49;&#x5BFC; &#x5FAE;&#x4FE1;18977165510" description="&#x7B49;&#x5BFC; &#x5FAE;&#x4FE1;18977165510" type="rss" xmlUrl="https://500px.com/vcg-3d516e1a44ca3955fed64983ab0f33491/rss" htmlUrl="https://500px.com/vcg-3d516e1a44ca3955fed64983ab0f33491/rss" />
+        </outline>
+        <outline title="random" text="random" description="random" type="folder">
+            <outline title="https://droidzombi.tumblr.com/rss" text="https://droidzombi.tumblr.com/rss" description="https://droidzombi.tumblr.com/rss" type="rss" xmlUrl="https://droidzombi.tumblr.com/rss" htmlUrl="https://droidzombi.tumblr.com/" />
+            <outline title="https://moviecode.tumblr.com/rss" text="https://moviecode.tumblr.com/rss" description="https://moviecode.tumblr.com/rss" type="rss" xmlUrl="https://moviecode.tumblr.com/rss" htmlUrl="https://moviecode.tumblr.com/" />
+            <outline title="The Calling - Posts | Facebook" text="The Calling - Posts | Facebook" description="The Calling - Posts | Facebook" type="rss" xmlUrl="https://rss.app/feeds/01s22P9dpGqxItoy.xml" htmlUrl="https://www.facebook.com/TheCallingCambridge" />
+            <outline title="99% Invisible" text="99% Invisible" description="99% Invisible" type="rss" xmlUrl="https://99percentinvisible.org/category/architecture/feed/" htmlUrl="https://99percentinvisible.org" />
+            <outline title="Haute Macabre" text="Haute Macabre" description="Haute Macabre" type="rss" xmlUrl="https://hautemacabre.com/feed/" htmlUrl="https://hautemacabre.com" />
+            <outline title="CyberPunks.com" text="CyberPunks.com" description="CyberPunks.com" type="rss" xmlUrl="https://www.cyberpunks.com/feed/" htmlUrl="https://www.cyberpunks.com" />
+            <outline title="Neon Dystopia" text="Neon Dystopia" description="Neon Dystopia" type="rss" xmlUrl="https://www.neondystopia.com/feed/" htmlUrl="https://www.neondystopia.com" />
+            <outline title="Messy Nessy Chic" text="Messy Nessy Chic" description="Messy Nessy Chic" type="rss" xmlUrl="https://www.messynessychic.com/feed/" htmlUrl="https://www.messynessychic.com" />
+            <outline title="Places Journal" text="Places Journal" description="Places Journal" type="rss" xmlUrl="https://feeds.feedburner.com/PlacesJournal" htmlUrl="https://placesjournal.org" />
+            <outline title="HUN / INDUSTRIAL \ TECH" text="HUN / INDUSTRIAL \ TECH" description="HUN / INDUSTRIAL \ TECH" type="atom" xmlUrl="https://hunindustrialtech.blog.hu/atom" htmlUrl="https://hunindustrialtech.blog.hu" />
+            <outline title="urban75: art, photos, walks" text="urban75: art, photos, walks" description="urban75: art, photos, walks" type="rss" xmlUrl="http://www.urban75.org/blog/feed/" htmlUrl="http://www.urban75.org/blog" />
+            <outline title="GothBleak &#x2013; Atmostfear Entertainment" text="GothBleak &#x2013; Atmostfear Entertainment" description="GothBleak &#x2013; Atmostfear Entertainment" type="rss" xmlUrl="https://www.atmostfear-entertainment.com/blogs/gothbleak/feed/" htmlUrl="https://www.atmostfear-entertainment.com" />
+            <outline title="Field Mag" text="Field Mag" description="Field Mag" type="rss" xmlUrl="https://www.fieldmag.com/feed/" htmlUrl="https://www.fieldmag.com/" />
+        </outline>
+        <outline title="tech, web, internet" text="tech, web, internet" description="tech, web, internet" type="folder">
+            <outline title="Aaron Parecki" text="Aaron Parecki" description="Aaron Parecki" type="atom" xmlUrl="https://granary.io/url?input=html&amp;output=atom&amp;url=https%3A%2F%2Faaronparecki.com%2Farticles" htmlUrl="https://granary.io/url?input=html&amp;output=atom&amp;url=https%3A%2F%2Faaronparecki.com%2Farticles" />
+            <outline title="Adactio" text="Adactio" description="Adactio" type="rss" xmlUrl="https://adactio.com/articles/rss" htmlUrl="https://adactio.com/articles/" />
+            <outline title="Alex Ellis" text="Alex Ellis" description="Alex Ellis" type="rss" xmlUrl="https://alexanderell.is/index.xml" htmlUrl="https://alexanderell.is/" />
+            <outline title="beepb00p" text="beepb00p" description="beepb00p" type="rss" xmlUrl="https://beepb00p.xyz/rss.xml" htmlUrl="https://beepb00p.xyz" />
+            <outline title="bigl.es" text="bigl.es" description="bigl.es" type="rss" xmlUrl="https://bigl.es/rss/" htmlUrl="http://bigl.es/" />
+            <outline title="Blog on With Blue Ink" text="Blog on With Blue Ink" description="Blog on With Blue Ink" type="rss" xmlUrl="https://withblue.ink/feed.xml" htmlUrl="https://withblue.ink/" />
+            <outline title="Christian Haschek" text="Christian Haschek" description="Christian Haschek" type="rss" xmlUrl="https://blog.haschek.at/rss.xml" htmlUrl="https://blog.haschek.at" />
+            <outline title="Christians Tagebuch" text="Christians Tagebuch" description="Christians Tagebuch" type="atom" xmlUrl="https://cweiske.de/tagebuch/feed/" htmlUrl="http://cweiske.de/tagebuch/feed/" />
+            <outline title="Crazy Sysadmins" text="Crazy Sysadmins" description="Crazy Sysadmins" type="rss" xmlUrl="http://crazyadmins.com/feed/" htmlUrl="http://crazyadmins.com" />
+            <outline title="datagubbe" text="datagubbe" description="datagubbe" type="rss" xmlUrl="https://datagubbe.se/atom.xml" htmlUrl="https://www.datagubbe.se" />
+            <outline title="Dilettante" text="Dilettante" description="Dilettante" type="rss" xmlUrl="https://partofthething.com/thoughts/feed/" htmlUrl="https://partofthething.com/thoughts" />
+            <outline title="ffuentes" text="ffuentes" description="ffuentes" type="rss" xmlUrl="http://ffuentes.sdf.org/feed.xml" htmlUrl="http://ffuentes.sdf.org/" />
+            <outline title="Julia Reda" text="Julia Reda" description="Julia Reda" type="rss" xmlUrl="https://juliareda.eu/en/feed/" htmlUrl="https://juliareda.eu" />
+            <outline title="Kai W" text="Kai W" description="Kai W" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCknMR7NOY6ZKcVbyzOxQPhw" htmlUrl="https://www.youtube.com/channel/UCknMR7NOY6ZKcVbyzOxQPhw" />
+            <outline title="Kliment Andreev" text="Kliment Andreev" description="Kliment Andreev" type="rss" xmlUrl="https://blog.andreev.it/?feed=rss2" htmlUrl="https://blog.andreev.it" />
+            <outline title="KN100 | Kevin Norman" text="KN100 | Kevin Norman" description="KN100 | Kevin Norman" type="rss" xmlUrl="https://kn100.me/index.xml" htmlUrl="https://kn100.me/" />
+            <outline title="Kyle Chayka Industries" text="Kyle Chayka Industries" description="Kyle Chayka Industries" type="rss" xmlUrl="https://kylechayka.substack.com/feed" htmlUrl="https://kylechayka.substack.com" />
+            <outline title="Leah Hanson" text="Leah Hanson" description="Leah Hanson" type="rss" xmlUrl="http://blog.leahhanson.us/index.xml" htmlUrl="http://blog.leahhanson.us/" />
+            <outline title="Linux Smartphones" text="Linux Smartphones" description="Linux Smartphones" type="rss" xmlUrl="https://linuxsmartphones.com/feed/" htmlUrl="https://liliputing.com" />
+            <outline title="loga.us" text="loga.us" description="loga.us" type="rss" xmlUrl="https://loga.us/feed/" htmlUrl="https://loga.us" />
+            <outline title="Lok Cheung" text="Lok Cheung" description="Lok Cheung" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC4_m1_0MTTmnWo4tpB0O_7g" htmlUrl="https://www.youtube.com/channel/UC4_m1_0MTTmnWo4tpB0O_7g" />
+            <outline title="Majenko Technologies" text="Majenko Technologies" description="Majenko Technologies" type="rss" xmlUrl="https://majenko.co.uk/rss/rss.php" htmlUrl="https://majenko.co.uk/blog/our-blog-1/" />
+            <outline title="nilsnh.no" text="nilsnh.no" description="nilsnh.no" type="rss" xmlUrl="https://nilsnh.no/index.xml" htmlUrl="https://nilsnh.no/" />
+            <outline title="Piotr Ko&#x142;aczkowski" text="Piotr Ko&#x142;aczkowski" description="Piotr Ko&#x142;aczkowski" type="atom" xmlUrl="https://pkolaczk.github.io/feed.xml" htmlUrl="http://localhost:4000/" />
+            <outline title="Potatoblog" text="Potatoblog" description="Potatoblog" type="rss" xmlUrl="https://kliu.io/index.xml" htmlUrl="https://kliu.io/" />
+            <outline title="Real HD-Audio" text="Real HD-Audio" description="Real HD-Audio" type="rss" xmlUrl="https://www.realhd-audio.com/?feed=rss2" htmlUrl="https://www.realhd-audio.com" />
+            <outline title="Rubenerd" text="Rubenerd" description="Rubenerd" type="rss" xmlUrl="https://rubenerd.com/feed/" htmlUrl="https://rubenerd.com/" />
+            <outline title="sadgrl.online" text="sadgrl.online" description="sadgrl.online" type="rss" xmlUrl="https://sadgrl.online/feed.xml" htmlUrl="https://sadgrl.online/" />
+            <outline title="Security" text="Security" description="Security" type="rss" xmlUrl="https://scarybeastsecurity.blogspot.com/feeds/posts/default?alt=rss" htmlUrl="https://scarybeastsecurity.blogspot.com/" />
+            <outline title="Techmoan" text="Techmoan" description="Techmoan" type="atom" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC5I2hjZYiW9gZPVkvzM8_Cw" htmlUrl="https://www.youtube.com/channel/UC5I2hjZYiW9gZPVkvzM8_Cw" />
+            <outline title="Tedium: The Dull Side of the Internet." text="Tedium: The Dull Side of the Internet." description="Tedium: The Dull Side of the Internet." type="rss" xmlUrl="https://feed.tedium.co/" htmlUrl="https://tedium.co/" />
+            <outline title="textfiles" text="textfiles" description="textfiles" type="rss" xmlUrl="http://ascii.textfiles.com/feed" htmlUrl="http://ascii.textfiles.com" />
+            <outline title="This Week in the IndieWeb" text="This Week in the IndieWeb" description="This Week in the IndieWeb" type="rss" xmlUrl="https://indieweb.org/this-week/feed.xml" htmlUrl="https://indieweb.org/this-week" />
+            <outline title="tjheeta" text="tjheeta" description="tjheeta" type="rss" xmlUrl="http://tjheeta.github.io/index.xml" htmlUrl="http://tjheeta.github.io/" />
+            <outline title="tommorris.org" text="tommorris.org" description="tommorris.org" type="rss" xmlUrl="https://tommorris.org/index.xml" htmlUrl="https://tommorris.org/" />
+            <outline title="Tympanus Playground" text="Tympanus Playground" description="Tympanus Playground" type="rss" xmlUrl="https://tympanus.net/codrops/category/playground/feed/" htmlUrl="https://tympanus.net/codrops" />
+            <outline title="Tympanus Tutorials" text="Tympanus Tutorials" description="Tympanus Tutorials" type="rss" xmlUrl="https://tympanus.net/codrops/category/tutorials/feed/" htmlUrl="https://tympanus.net/codrops" />
+            <outline title="WirelessMoves" text="WirelessMoves" description="WirelessMoves" type="rss" xmlUrl="https://blog.wirelessmoves.com/feed" htmlUrl="https://blog.wirelessmoves.com" />
+            <outline title="WP Tavern" text="WP Tavern" description="WP Tavern" type="rss" xmlUrl="https://wptavern.com/feed" htmlUrl="https://wptavern.com" />
+            <outline title="www.DavidHunt.ie" text="www.DavidHunt.ie" description="www.DavidHunt.ie" type="rss" xmlUrl="http://www.davidhunt.ie/feed/" htmlUrl="http://www.davidhunt.ie" />
+        </outline>
+    </body>
+</opml>

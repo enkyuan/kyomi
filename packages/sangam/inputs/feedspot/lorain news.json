@@ -1,0 +1,58 @@
+{
+  "category": "Lorain News",
+  "source_url": "https://rss.feedspot.com/lorain_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "News 5 Cleveland \u00bb Lorain",
+      "feed_url": "https://www.news5cleveland.com/news/local-news/oh-lorain.rss",
+      "website_url": "https://www.news5cleveland.com/news/local-news/oh-lorain",
+      "description": "News 5 Cleveland, champions the people of Cleveland. We investigate solutions, hold the powerful accountable, ask the tough questions, provide alerts, and tell memorable stories to our readers. Follow this feed to get current local Lorain news, crime, politics, weather, sports and more.",
+      "followers": {
+        "facebook": 632300,
+        "twitter": 132600
+      },
+      "image_url": "https://i1.feedspot.com/5133909.jpg?t=1585808564"
+    },
+    {
+      "title": "Fox 8 News \u00bb Lorain",
+      "feed_url": "https://fox8.com/tag/lorain-news/feed/",
+      "website_url": "https://fox8.com/tag/lorain-news/",
+      "description": "Cleveland's own- Fox 8 News. Cleveland's source for news, weather, Cleveland Browns, Cleveland Indians, and Cleveland Cavaliers team updates. Breaking local news, weather alerts and topics that impact you. Read the latest news and updates in Lorain brought to you by the team at fox8.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5133911.jpg?t=1674459768"
+    },
+    {
+      "title": "The Morning Journal",
+      "feed_url": "https://www.morningjournal.com/feed/",
+      "website_url": "https://www.morningjournal.com/",
+      "description": "The Morning Journal website online provides the Latest headlines covering Ohio News, Sports, Weather, and Things to Do in the State. Serving Lorain and western Cuyahoga counties, The Morning Journal is a regional daily periodical that publishes news about local events and community issues.",
+      "followers": {
+        "facebook": 37700,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5482434.jpg?t=1671684677"
+    },
+    {
+      "title": "Lorain Times",
+      "feed_url": "https://loraintimes.com/stories.rss",
+      "website_url": "https://loraintimes.com/",
+      "description": "Lorain Times website delivers a constantly updated feed of trending news stories, videos, and public information to educate and invigorate the people of Lorain County. Featuring news and commentary on the Latest from Local government, Real Estate, Business, Schools, and more. Lorain Times is owned by Metric Media LLC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497987.jpg?t=1674459678"
+    },
+    {
+      "title": "Lorain County Community Guide",
+      "feed_url": "https://www.lcnewspapers.com/category/lorain-county-community-guide/feed/",
+      "website_url": "https://www.lcnewspapers.com/category/lorain-county-community-guide/",
+      "description": "The Lorain County Newspapers are owned by Lorain County Printing and Publishing. We cover Lorain, Oberlin, Wellington, Amherst news and publish weekly in Lorain County, Ohio",
+      "followers": {
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/5133915.jpg?t=1623161333"
+    }
+  ]
+}

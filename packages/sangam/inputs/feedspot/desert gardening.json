@@ -1,0 +1,57 @@
+{
+  "category": "Desert Gardening",
+  "source_url": "https://rss.feedspot.com/desert_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hot Gardens.net",
+      "feed_url": "https://hotgardens.net/feed/",
+      "website_url": "https://hotgardens.net/",
+      "description": "Guide to gardening in hot dry climates combining Mediterranean gardens and desert landscape, desert gardening, Master Gardener advice for desert gardeners. My name is Carol Lightwood and I am a Master Gardener who earned my official state certification in Clark.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5306533.jpg?t=1628776598"
+    },
+    {
+      "title": "Desert Botanical Garden Blog",
+      "feed_url": "https://dbg.org/feed/",
+      "website_url": "https://dbg.org/blog/",
+      "description": "Discover the Desert Botanical Garden in Phoenix, Arizona, and experience the vibrant tranquility of desert plants nestled amid the red rocks of the Sonoran Desert today.",
+      "followers": {
+        "facebook": 164600,
+        "twitter": 18200
+      },
+      "image_url": "https://i1.feedspot.com/5306547.jpg?t=1627626894"
+    },
+    {
+      "title": "Gardening in the Desert",
+      "feed_url": "https://www.gardeninginthedesert.com/feed/",
+      "website_url": "https://www.gardeninginthedesert.com/",
+      "description": "Learn to garden and grow fruit trees organically in the low desert (zone 9) through informative articles, growing guides, zone 9 gardening-related tools, and hands-on workshops in the East Valley.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5306403.jpg?t=1627562599"
+    },
+    {
+      "title": "Desert Canyon Farm Green Thoughts",
+      "feed_url": "https://desertcanyonfarm.wpcomstaging.com/feed/",
+      "website_url": "https://desertcanyonfarm.wpcomstaging.com/",
+      "description": "We grow more than 1800 different varieties of potted herbs, heritage heirloom, and ethnic vegetable and fruit plants, including heirloom fruit trees, unique and native perennials, wildlife habitat plants, edible flowers, and other unique kinds of plants",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5306498.jpg?t=1627624451"
+    },
+    {
+      "title": "Xtremehorticulture of the Desert",
+      "feed_url": "https://www.buzzsprout.com/245292",
+      "website_url": "https://xtremehorticulture.blogspot.com/",
+      "description": "A blog by Robert Ll. Morris. Robert educates and consults with people on desert horticulture. His academic background in horticulture spans 40 years in arid and desert climates as well as 12 years in tropical horticulture.",
+      "followers": {
+        "facebook": 391,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/5311996.jpg?t=1628849464"
+    }
+  ]
+}

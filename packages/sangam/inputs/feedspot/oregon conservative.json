@@ -1,0 +1,56 @@
+{
+  "category": "Oregon Conservative",
+  "source_url": "https://rss.feedspot.com/oregon_conservative_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oregon Catalyst",
+      "feed_url": "https://oregoncatalyst.com/feed",
+      "website_url": "https://oregoncatalyst.com/",
+      "description": "A place for conservative Oregonians to gather and share news, commentary, and gossip. Oregon's idea braintrust.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/7257194.jpg?t=1710245600"
+    },
+    {
+      "title": "Deschutes Republicans Blog",
+      "feed_url": "https://www.deschutesrepublicans.org/blog.rss",
+      "website_url": "https://www.deschutesrepublicans.org/blog",
+      "description": "Most of us have ancestors who've immigrated to the USA. From all the earth. A great multitude of families and individuals and cultures, all with the same intention: hope in The Dream. Deschutes Republicans welcome the participation of anyone who shares our beliefs in limited government, individual and religious liberty, fiscal responsibility and common sense in public-policy. Please join us!",
+      "followers": {
+        "twitter": 879
+      },
+      "image_url": "https://i1.feedspot.com/7257193.jpg?t=1708507046"
+    },
+    {
+      "title": "Oregon Republican Party",
+      "feed_url": "https://oregon.gop/feed/",
+      "website_url": "https://oregon.gop/news/",
+      "description": "In May 1856, the first Republican meeting in Oregon was held in Jackson County to nominate county officers and adopt a strong platform declaring freedom throughout the United States, and the Oregon Republican Party was officially organized in Albany just three months later.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/7257190.jpg?t=1708507080"
+    },
+    {
+      "title": "Werner For Oregon",
+      "feed_url": "https://wernerfororegon.com/news/f.atom",
+      "website_url": "https://wernerfororegon.com/news",
+      "description": "Werner For Oregon is the campaign site for E. Werner Reschke, who is a candidate for State Representative in Oregon's 55th House District. The Werner For Oregon outlines his political stance, emphasizing individual liberty, personal responsibility, and limited government. It also highlights his background, including his business experience and service in the State Legislature. Reschke's platform includes support for pro-life, second amendment rights, agriculture, free markets, small business, medical freedom, law and order, school choice, and parental rights",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7257191.jpg?t=1708507144"
+    },
+    {
+      "title": "Right Now Oregon",
+      "feed_url": "https://rightnoworegon.com/category/politics/feed/",
+      "website_url": "https://rightnoworegon.com/category/politics/",
+      "description": "Right Now Oregon was formed by young Oregonians who take the lead in civics from Coos Bay to Wallowa Lake and everywhere in between. As the Beaver State's next generation of leadership, we take pride in connecting Oregonians and bringing them real news as it happens!",
+      "followers": {
+        "twitter": 190
+      },
+      "image_url": "https://i1.feedspot.com/7257192.jpg?t=1708506952"
+    }
+  ]
+}

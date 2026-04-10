@@ -1,0 +1,86 @@
+{
+  "category": "FED",
+  "source_url": "https://rss.feedspot.com/fed_rss_feeds",
+  "feeds": [
+    {
+      "title": "New York Fed Blog",
+      "feed_url": "https://libertystreeteconomics.newyorkfed.org/feed/",
+      "website_url": "https://libertystreeteconomics.newyorkfed.org/",
+      "description": "The Federal Reserve Bank of New York works within the Federal Reserve System and with other public and private sector institutions to foster the safety, soundness and vitality of our economic and financial systems. Some of its most critical functions include the implementation of monetary policy, supervision and regulation of depository institutions, international operations and financial services.",
+      "followers": {
+        "facebook": 55200,
+        "twitter": 245100
+      },
+      "image_url": "https://i1.feedspot.com/5569348.jpg?t=1684316204"
+    },
+    {
+      "title": "Federal Reserve Bank Of San Francisco Blog",
+      "feed_url": "https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/feed/",
+      "website_url": "https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/",
+      "description": "We are the San Francisco Fed, public servants with a congressionally mandated mission to promote the health of the U.S. economy and the stability of the U.S. financial system. At the SF Fed, we promote opportunity for all through our work in economic research, banking supervision, community development, and education.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 66600
+      },
+      "image_url": "https://i1.feedspot.com/5569350.jpg?t=1684316215"
+    },
+    {
+      "title": "Richmond Fed",
+      "feed_url": "https://www.richmondfed.org/press_room?cc_view=rss",
+      "website_url": "https://www.richmondfed.org/press_room",
+      "description": "We are a diverse team of 2,700 at the Richmond Fed, one of 12 regional Federal Reserve Banks working together with the national Board of Governors to strengthen our nation's economy and communities. We bring integrity and passion to our work - from conducting monetary policy and working to ensure a safe and sound financial system, to providing tools and resources to help you make more informed financial decisions.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 48900,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5569349.jpg?t=1684316209"
+    },
+    {
+      "title": "Federal Reserve Bank of Boston",
+      "feed_url": "https://www.bostonfed.org/feeds/rss_news.xml",
+      "website_url": "https://www.bostonfed.org/news-and-events.aspx",
+      "description": "As part of the Central Bank of the United States, the Boston Fed works to promote sound growth and financial stability in New England and the nation. We contribute to communities, the region, and the nation by conducting economic research, participating in monetary policy-making, supervising certain financial institutions, providing financial services and payments, playing a leadership role in the payments industry, and supporting economic well-being in communities through a variety of efforts.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 67900
+      },
+      "image_url": "https://i1.feedspot.com/5061327.jpg?t=1684390910"
+    },
+    {
+      "title": "Federal Reserve Bank of Dallas",
+      "feed_url": "https://www.dallasfed.org/rss/releases.xml",
+      "website_url": "https://www.dallasfed.org/news",
+      "description": "News releases from the Federal Reserve Bank of Dallas, which serves the public by contributing to national monetary policy, supervising and regulating financial institutions, and helping maintain a strong payments system.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 75600
+      },
+      "image_url": "https://i1.feedspot.com/5569351.jpg?t=1684316221"
+    },
+    {
+      "title": "Fed Communities",
+      "feed_url": "https://fedcommunities.org/feed/",
+      "website_url": "https://fedcommunities.org/voices/",
+      "description": "Fed Communities is a project that amplifies the Fed's work in low- and moderate-income communities and other underserved areas across the US, it's work that focuses on addressing racial inequities and building strong, resilient communities. Their Voices Blog is home to news & views for the community development field, Federal Reserve community development insights, data, and stories.",
+      "followers": {
+        "facebook": 245,
+        "twitter": 1500,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5546819.jpg?t=1681994429"
+    },
+    {
+      "title": "Federal News Network",
+      "feed_url": "https://federalnewsnetwork.com/feed/",
+      "website_url": "https://federalnewsnetwork.com/",
+      "description": "Federal News Network is the key source of breaking news, information and analysis on the topics that matter most to federal agency managers, policy makers and contractors. We cover the federal government and those who do business with the government, concentrating on workforce, management, defense, technology, contracting, policy, and pay and benefits issues.",
+      "followers": {
+        "facebook": 33600,
+        "twitter": 27300,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4993242.jpg?t=1662969700"
+    }
+  ]
+}

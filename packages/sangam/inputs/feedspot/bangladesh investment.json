@@ -1,0 +1,48 @@
+{
+  "category": "Bangladesh Investment",
+  "source_url": "https://rss.feedspot.com/bangladesh_investment_rss_feeds",
+  "feeds": [
+    {
+      "title": "Midway Securities Ltd Blog",
+      "feed_url": "https://www.midwaybd.com/2/feed",
+      "website_url": "https://www.midwaybd.com/blog",
+      "description": "Midway Securities Ltd. (TREC 142) has been a part of the Capital Market since 1975 and has received an overwhelming response from market investors.We have been serving a large number of valued investors to their satisfaction. Everything we do is backed by the fundamentals so as to put our clients' needs first.",
+      "followers": {
+        "facebook": 103300,
+        "instagram": 532
+      },
+      "image_url": "https://i1.feedspot.com/5343047.jpg?t=1636982249"
+    },
+    {
+      "title": "Business News Bangladesh \u00bb Stocks",
+      "feed_url": "https://businessnews-bd.net/category/news/stocks/feed/",
+      "website_url": "https://businessnews-bd.net/category/news/stocks/",
+      "description": "The Bangladesh Business News (BBN) is the country's lone business news portal, which provides daily 'News Highlights' as well as daily, weekly, monthly, quarterly, and annual economic indicators on different business entities including banks and financial institutions.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5461196.jpg?t=1667209613"
+    },
+    {
+      "title": "Bikroy Blogs \u00bb Property",
+      "feed_url": "https://blog.bikroy.com/en/category/property/feed/",
+      "website_url": "https://blog.bikroy.com/en/category/property/",
+      "description": "Our mission is to build leading online marketplaces in underserved markets and to create sustainable value for the community. If you are interested in buying, selling, or renting a property then you will find our articles useful.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5334483.jpg?t=1637316184"
+    },
+    {
+      "title": "Rents Blog",
+      "feed_url": "https://rents.com.bd/feed",
+      "website_url": "https://rents.com.bd/blog",
+      "description": "We believe only technology can make people's life easy and simple. Our mission is 'to provide a better experience about Buy-Rent-Invest in the real estate industry in Bangladesh'. Our vision is very simple 'solve people's real estate problems through PropTech'.",
+      "followers": {
+        "facebook": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5343048.jpg?t=1636982688"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "category": "Nickel",
+  "source_url": "https://rss.feedspot.com/nickel_rss_feeds",
+  "feeds": [
+    {
+      "title": "FPX Nickel",
+      "feed_url": "https://fpxnickel.com/feed/",
+      "website_url": "https://fpxnickel.com/news/",
+      "description": "At FPX Nickel, find the latest news and headlines for FPX nickel stocks, prices, market changes and more. FPX Nickel is a junior nickel mining company developing the large-scale Decar Nickel District in central British Columbia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440982.jpg?t=1663044180"
+    },
+    {
+      "title": "Stockhead \u00bb Nickel",
+      "feed_url": "https://stockhead.com.au/topic/nickel/feed/",
+      "website_url": "https://stockhead.com.au/topic/nickel/",
+      "description": "The latest news about ASX-listed small and micro cap stocks published daily by Australia's best business journalists. If you're interested in big discoveries, medical breakthroughs and revolutionary technologies you're in the right place. Stockhead is a free, journalistic news service dedicated to covering the stories of emerging, ASX-listed companies.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 24000,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5440984.jpg?t=1663045310"
+    },
+    {
+      "title": "Republic of Mining \u00bb Nickel",
+      "feed_url": "https://republicofmining.com/category/nickel-magazine/feed/",
+      "website_url": "https://republicofmining.com/category/nickel-magazine/",
+      "description": "Our blog gives you an insight and updates about the mining industry. Republic Of Mining aims to build awareness among the media, the general public and political decision makers about the economic and social benefits of sustainable mining practices in the 21st Century.",
+      "followers": {
+        "twitter": 790
+      },
+      "image_url": "https://i1.feedspot.com/5440986.jpg?t=1663043856"
+    },
+    {
+      "title": "Corrotherm International Blog",
+      "feed_url": "https://www.corrotherm.co.uk/blog/rss.xml",
+      "website_url": "https://www.corrotherm.co.uk/blog",
+      "description": "News and developments in the world of corrosion resistant alloys through the eyes of Corrotherm International. Our Company is all about Nickel Alloys and finding you the ideal solution. With more than 135 years' in-house experience and unrivalled technical expertise, we give you far more than simply the right product at the right price.",
+      "followers": {
+        "facebook": 278,
+        "twitter": 863
+      },
+      "image_url": "https://i1.feedspot.com/5440990.jpg?t=1663044645"
+    },
+    {
+      "title": "MINING.COM \u00bb Nickel",
+      "feed_url": "https://www.mining.com/commodity/nickel/feed/",
+      "website_url": "https://www.mining.com/commodity/nickel/",
+      "description": "MINING.COM is the number one source of global mining news and opinion. MINING.COM was launched in 2008 as a print and online magazine. In February 2011, it became an online only news site covering the global mining and metals industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440985.jpg?t=1663043852"
+    },
+    {
+      "title": "The Northern Miner \u00bb Nickel",
+      "feed_url": "https://www.northernminer.com/commodity/nickel/feed/",
+      "website_url": "https://www.northernminer.com/commodity/nickel/",
+      "description": "The Northern Miner has been providing the readers with mining news since 1915. We are a one-of-a-kind information resource. With over 100 years of experience serving the mining and exploration industry, crucial reports by The Northern Miner writing staff inform the decision-making process of thousands of high-performing mining professionals.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 25800
+      },
+      "image_url": "https://i1.feedspot.com/5440988.jpg?t=1663044890"
+    }
+  ]
+}

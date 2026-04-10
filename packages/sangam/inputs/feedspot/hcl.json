@@ -1,0 +1,62 @@
+{
+  "category": "HCL",
+  "source_url": "https://rss.feedspot.com/hcl_rss_feeds",
+  "feeds": [
+    {
+      "title": "HCL Technologies Blogs",
+      "feed_url": "https://www.hcltech.com/rss.xml",
+      "website_url": "https://www.hcltech.com/blogs",
+      "description": "Get industry insights on technology. HCL Technologies is a next-generation global technology company that helps enterprises reimagine their businesses for the digital age. Our technology products and services are built on four decades of innovation. HCL also takes pride in its many diversity, social responsibility, sustainability, and education initiatives.",
+      "followers": {
+        "twitter": 447300
+      },
+      "image_url": "https://i1.feedspot.com/5434472.jpg?t=1661233752"
+    },
+    {
+      "title": "HCL \u00bb Digital Workplace Podcast",
+      "feed_url": "https://www.hcltech.com/podcasts-feeds/7650/rss.xml",
+      "website_url": "https://www.hcltech.com/podcasts",
+      "description": "HCL Digital Workplace Podcast is brought to you by HCL Technologies, here we bring industry experts, analysts, and veterans to discuss and explore the upcoming digital workplace technologies and trends. HCL Technologies is a next-generation global technology company that helps enterprises reimagine their businesses for the digital age.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 447300,
+        "instagram": 146800
+      },
+      "image_url": "https://i1.feedspot.com/5229244.jpg?t=1608373616"
+    },
+    {
+      "title": "HCL Healthcare",
+      "feed_url": "https://hclhealthcare.in/feed/",
+      "website_url": "https://hclhealthcare.in/blog/",
+      "description": "Read articles on including topics; Monkeypox, New Variant of Covid-19and more. HCL Healthcare is one of the largest corporate health solutions firms. It provides end-to-end healthcare solutions with a vision to make corporate India a healthier place. We are committed to providing our partner organizations and their employees with a superior and class-leading healthcare experience that delivers positive health outcomes.",
+      "followers": {
+        "facebook": 35000,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5434479.jpg?t=1661233081"
+    },
+    {
+      "title": "HCLSoftware Blog",
+      "feed_url": "https://www.hcl-software.com/blog/",
+      "website_url": "https://www.hcl-software.com/blog/",
+      "description": "Find articles on the latest developments by HCL along with the reviews. HCL Software is a division of HCL Technologies that operates in Software products and SaaS. We develop, market, sell, and support. The mission is to drive ultimate customer success with its IT investments through relentless innovation of its products.",
+      "followers": {
+        "facebook": 42800,
+        "twitter": 39400,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5434480.jpg?t=1661234342"
+    },
+    {
+      "title": "HCL Foundation",
+      "feed_url": "https://www.hclfoundation.org/rss.xml",
+      "website_url": "https://www.hclfoundation.org/events",
+      "description": "HCL Foundation was established as the Corporate Social responsibility arm of HCL Technologies in India. It is a value-driven, not-for-profit organization. The foundation aims to alleviate poverty and achieve inclusive growth and development with a thematic focus on education and health.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5434477.jpg?t=1661233061"
+    }
+  ]
+}

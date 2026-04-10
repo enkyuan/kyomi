@@ -1,0 +1,426 @@
+{
+  "category": "Brazil Music",
+  "source_url": "https://rss.feedspot.com/brazil_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "DoSol",
+      "feed_url": "https://dosol.com.br/feed/",
+      "website_url": "https://dosol.com.br/",
+      "description": "Stay up to date with the latest news, programs, events, announcements, and interviews with the artists on DoSol.DoSol is an independent Music Festival held in Natal/RN reaching its 15th edition.",
+      "followers": {
+        "facebook": 21300,
+        "twitter": 8300,
+        "instagram": 40300
+      },
+      "image_url": "https://i1.feedspot.com/5337188.jpg?t=1635334721"
+    },
+    {
+      "title": "Rock On Board",
+      "feed_url": "https://www.rockonboard.com.br/feeds/posts/default",
+      "website_url": "https://www.rockonboard.com.br/",
+      "description": "Read the latest music news, concert news, artists, music releases, and reviews by Rock On Board. Rock On Board is a virtual rock magazine in Brazil. More than a decade bringing the best of the rock world.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 2400,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5337215.jpg?t=1635338112"
+    },
+    {
+      "title": "Hits Perdidos",
+      "feed_url": "https://hitsperdidos.com/feed/",
+      "website_url": "https://hitsperdidos.com/category/noticias/",
+      "description": "Hits Perdidos is a website that carries out journalistic coverage of the music market. Focusing on independent artists from Brazil and the world. In addition to reviews, interviews, and news, we bring lists with market tips, video clips, and playlists.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 3800,
+        "instagram": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5337201.jpg?t=1635336654"
+    },
+    {
+      "title": "Hominis Canidae",
+      "feed_url": "https://www.hominiscanidae.org/feeds/posts/default",
+      "website_url": "https://www.hominiscanidae.org/",
+      "description": "Hominis Canidae is a high quality Brazilian alternative music site. Cover articles on jazz, hip-hop, rock, indie music, metal, folk music and more.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 8900,
+        "instagram": 19500
+      },
+      "image_url": "https://i1.feedspot.com/39384.jpg?t=1635336373"
+    },
+    {
+      "title": "The Rio Times \u00bb Music",
+      "feed_url": "https://www.riotimesonline.com/brazil-news/category/rio-entertainment/music/feed/",
+      "website_url": "https://www.riotimesonline.com/brazil-news/category/rio-entertainment/music/",
+      "description": "Read the latest music news, concert news, artist news, music releases and reviews by The Rio Times. The Rio Times is an English language news company covering Rio de Janeiro, S\u00e3o Paulo and Brazil. We cover local and national politics, business, real estate, travel and entertainment, including a daily Rio and S\u00e3o Paulo nightlife guide [{'state_code':'','loc_main_id':'','country_id':'','state_id':'','city_id':'','country':'','state':'','city':'','n':'The Rio Times','e':'publisher@riotimesonline...",
+      "followers": {
+        "facebook": 198500,
+        "twitter": 47300
+      },
+      "image_url": "https://i1.feedspot.com/5337232.jpg?t=1635339326"
+    },
+    {
+      "title": "Connect Brazil \u00bb Music",
+      "feed_url": "https://www.connectbrazil.com/category/music/feed/",
+      "website_url": "https://www.connectbrazil.com/category/music/",
+      "description": "Latest music news, upcoming concerts, shows, reviews, and awards by Connect Brazil. Connect Brazil finds the best of Brazil & shares it with everyone we meet: streaming music channels, stories & events.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 394
+      },
+      "image_url": "https://i1.feedspot.com/5337235.jpg?t=1635339621"
+    },
+    {
+      "title": "Di\u00e1rio de Shows",
+      "feed_url": "https://diariodeshows.com.br/feed/",
+      "website_url": "https://diariodeshows.com.br/category/noticias/",
+      "description": "Music Blog",
+      "followers": {
+        "facebook": 465,
+        "twitter": 157,
+        "instagram": 212
+      },
+      "image_url": "https://i1.feedspot.com/5754892.jpg?t=1705324423"
+    },
+    {
+      "title": "Blog n' Roll \u00bb Music",
+      "feed_url": "https://blognroll.com.br/category/br-music/feed/",
+      "website_url": "https://blognroll.com.br/category/br-music/",
+      "description": "Espa\u00e7o reservado para os amantes da m\u00fasica boa.",
+      "followers": {
+        "facebook": 6700,
+        "instagram": 55400
+      },
+      "image_url": "https://i1.feedspot.com/5754894.jpg?t=1705324435"
+    },
+    {
+      "title": "RikardoMusic",
+      "feed_url": "https://rikardomusic.blogspot.com/feeds/posts/default",
+      "website_url": "https://rikardomusic.blogspot.com/",
+      "description": "EURODANCE, M\u00daSICA ELETR\u00d4NICA, FARSAS DA DANCE MUSIC, ITALO DISCO, HITS DA JOVEM PAN, COLET\u00c2NEAS DA PARADOXX MUSIC, ANOS 80, 90, 2000, ENTRE OUTROS...",
+      "followers": {
+        "twitter": 377
+      },
+      "image_url": "https://i1.feedspot.com/5754888.jpg?t=1705324712"
+    },
+    {
+      "title": "Novit\u00e0 Music Blog",
+      "feed_url": "https://www.novitamusic.com.br/feed/",
+      "website_url": "https://www.novitamusic.com.br/blog/",
+      "followers": {
+        "facebook": 7500,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/5754889.jpg?t=1705325376"
+    },
+    {
+      "title": "Casa Natura Musical Blog",
+      "feed_url": "https://casanaturamusical.com.br/feed/",
+      "website_url": "https://casanaturamusical.com.br/blog/",
+      "description": "O palco para todos os artistas celebrarem a m\u00fasica brasileira. Confira nossa programa\u00e7\u00e3o musical ou fa\u00e7a seu evento com a gente!",
+      "followers": {
+        "facebook": 42800,
+        "twitter": 4800,
+        "instagram": 180900
+      },
+      "image_url": "https://i1.feedspot.com/5754893.jpg?t=1705324430"
+    },
+    {
+      "title": "Terra da Mu\u0301sica Blog",
+      "feed_url": "https://terradamusicablog.com.br/feed/",
+      "website_url": "https://terradamusicablog.com.br/",
+      "description": "Cursos de m\u00fasica 100% desde o iniciante at\u00e9 a P\u00f3s-Gradua\u00e7\u00e3o",
+      "followers": {
+        "facebook": 33000,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5754887.jpg?t=1705324388"
+    },
+    {
+      "title": "LA PLAYA MUSIC - OLDIES",
+      "feed_url": "https://laplayamusic.blogspot.com/feeds/posts/default",
+      "website_url": "https://laplayamusic.blogspot.com/",
+      "description": "Sejam bem vindos.A m\u00fasica est\u00e1 em todos os momentos da nossa vida. Cada um de n\u00f3s tem uma trilha sonora. Cada momento, cada local, cada pessoa nos lembra uma m\u00fasica. Este blog tem o intuito de divulgar os artistas, os discos, as m\u00fasicas e as curiosidades que possam ter sido esquecidas pelo tempo. Al\u00e9m disso, compartilhar essas id\u00e9ias e informa\u00e7\u00f5es com outras pessoas que tamb\u00e9m tenham o mesmo est\u00edmulo. N\u00e3o importa o esti",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4256883.jpg?t=1705410097"
+    },
+    {
+      "title": "Music for All",
+      "feed_url": "https://musicforall.com.br/feed/",
+      "website_url": "https://musicforall.com.br/",
+      "description": "Music for All is a music portal committed to showcasing chart-busting Indie music and artists and promoting them to a wider audience. Discover new tracks, playlists, reviews, artist interviews, and tour news from your favorite Indie, National, and International artists all here!",
+      "followers": {
+        "facebook": 3500,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/7304722.jpg?t=1713948902"
+    },
+    {
+      "title": "Brazil Beat",
+      "feed_url": "https://brazilbeatblog.wordpress.com/feed/",
+      "website_url": "https://brazilbeatblog.wordpress.com/",
+      "description": "Brazil Beat is an excellent occasional exploration of recent Brazilian and Latin music, bringing you well-curated playlists, Top 10 lists, an Index of Top artists, and Records. The Author of this blog is a Latin Music enthusiast and likes to share his favorites here.",
+      "followers": {
+        "twitter": 383
+      },
+      "image_url": "https://i1.feedspot.com/5453886.jpg?t=1668144236"
+    },
+    {
+      "title": "Taioba Discos Blog",
+      "feed_url": "https://taiobadiscos.com/blogs/music-from-brazil.atom",
+      "website_url": "https://taiobadiscos.com/blogs/music-from-brazil/",
+      "description": "Taioba Discos is an independent Brazilian record store. Far from the big cities and located in Brazil's tropical northeast, Taioba is a store focused exclusively on Brazilian music on vinyl.",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8645415.jpg?t=1753354445"
+    },
+    {
+      "title": "Soul Brasil Magazine \u00bb Dance & Music",
+      "feed_url": "https://soulbrasil.com/art-culture/dance-music/feed/",
+      "website_url": "https://soulbrasil.com/art-culture/dance-music/",
+      "description": "A cultural portal celebrating Brazilian dance and music\u2014from capoeira and samba to Afro\u2011Brazilian rhythms, artist profiles, and cross\u2011cultural stories highlighting Brazil's artistic influence abroad.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8645528.jpg?t=1753355986"
+    },
+    {
+      "title": "Blog M\u00fasica Boa",
+      "feed_url": "https://www.blogmusicaboa.com/blog-feed.xml",
+      "website_url": "https://www.blogmusicaboa.com/",
+      "description": "Lan\u00e7ado em 2020, o M\u00fasica Boa \u00e9 um dos principais ve\u00edculos independentes de jornalismo musical do Brasil, com conte\u00fados exclusivos sobre lan\u00e7amentos, entrevistas, festivais e a cena musical nacional e internacional.",
+      "followers": {
+        "facebook": 303,
+        "twitter": 6,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/8645530.jpg?t=1753356107"
+    },
+    {
+      "title": "Rush Brazil Blog",
+      "feed_url": "https://rushbrasil.com/feed/",
+      "website_url": "https://rushbrasil.com/en/blog/",
+      "description": "Every week, we will publish in-depth articles about the history and philosophy of Rush. A deeper dive into the work of the greatest power trio in history.",
+      "followers": {
+        "instagram": 628
+      },
+      "image_url": "https://i1.feedspot.com/8645525.jpg?t=1753355331"
+    },
+    {
+      "title": "Revista do Choro",
+      "feed_url": "https://revistadochoro.com/feed/",
+      "website_url": "https://revistadochoro.com/",
+      "description": "A niche journal crafted to promote, preserve, and deepen understanding of Brazil's choro tradition globally\u2014via essays, interviews, lectures, editorial podcasts, and curated content.",
+      "followers": {
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/8645526.jpg?t=1753356183"
+    },
+    {
+      "title": "CartaCapital \u00bb Augusto Diniz | Brazilian Music",
+      "feed_url": "https://www.cartacapital.com.br/blogs/augusto-diniz/feed/",
+      "website_url": "https://www.cartacapital.com.br/blogs/augusto-diniz/",
+      "description": "Veteran Brazilian music journalist and former producer, Diniz has authored hundreds of in-depth columns since 2014, focusing on Brazilian artists, albums, cultural issues, and music industry trends for CartaCapital",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/8645524.jpg?t=1753355542"
+    },
+    {
+      "title": "Souza Lima Blog",
+      "feed_url": "https://souzalima.com.br/blog/feed/",
+      "website_url": "https://souzalima.com.br/blog/",
+      "description": "Explore o blog da Souza Lima com conte\u00fados sobre m\u00fasica, ensino, carreira e eventos. Aprenda, inspire-se e conecte-se com o universo musical!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645529.jpg?t=1753355797"
+    },
+    {
+      "title": "Music Ally \u00bb Brazil",
+      "feed_url": "https://musically.com/feed/",
+      "website_url": "https://musically.com/countries/brazil/",
+      "description": "Music Ally launched in 2002 with a mission to help the global music industry to thrive from digital disruption rather than fear it. In those early days, we published news and analysis of the way technology was impacting the industry, and provided strategy and research to enable music companies to navigate that landscape.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 32900,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/440178.jpg?t=1671441891"
+    },
+    {
+      "title": "The being of Music",
+      "feed_url": "https://oserdamusica.blogspot.com/feeds/posts/default",
+      "website_url": "https://oserdamusica.blogspot.com/",
+      "description": "This blog is intended solely to be a place for promoting good music",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645627.jpg?t=1753361912"
+    },
+    {
+      "title": "JAM Music Blog",
+      "feed_url": "https://www.jam.mus.br/feed/",
+      "website_url": "https://www.jam.mus.br/category/blog/",
+      "description": "Check out the best music posts JAM Music has prepared for you. Explore to stay up to date with the latest news.",
+      "followers": {
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/8645628.jpg?t=1753362121"
+    },
+    {
+      "title": "Se Vira Music Blog",
+      "feed_url": "https://www.seviramusic.com.br/blog-feed.xml",
+      "website_url": "https://www.seviramusic.com.br/blog/",
+      "description": "A dynamic Brazilian platform spotlighting independent Christian rock, offering band showcases, gig listings, industry tips and sharp commentary\u2014like hidden stories behind songs, genre trends, and scene culture",
+      "followers": {
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/200/8645626.jpg"
+    },
+    {
+      "title": "Innovate Music Blog",
+      "feed_url": "https://www.innovatemusic.com.br/blog-feed.xml",
+      "website_url": "https://www.innovatemusic.com.br/blog/",
+      "description": "The industry-focused blog of Brazil's largest full-service music management company\u2014covering digital music innovation, AI in music, artist spotlights, streaming trends, rights management, and big industry events like their own Innovate Music Awards and national music fair.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645625.jpg?t=1753362396"
+    },
+    {
+      "title": "X5Music Blog",
+      "feed_url": "https://blog.x5music.com.br/feed/",
+      "website_url": "https://blog.x5music.com.br/",
+      "description": "Blog da X5Music - Revendemos produtos de qualidade reconhecida, com profissionais capacitados para atender todos os perfis de p\u00fablico.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645633.jpg?t=1753362487"
+    },
+    {
+      "title": "Zion Music Studio Blog",
+      "feed_url": "https://zionmusics.com.br/feed/",
+      "website_url": "https://zionmusics.com.br/blogs/",
+      "description": "A Brazilian Christian music platform showcasing latest worship releases, artist features, single premieres, and devotional song reflections for faith-based audiences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645630.jpg?t=1753363159"
+    },
+    {
+      "title": "Store Acordes Music Blog",
+      "feed_url": "https://storeacordesmusic.com.br/feed/",
+      "website_url": "https://storeacordesmusic.com.br/blog/",
+      "description": "The official blog of a music instrument store in Sapiranga, RS, Brazil, offering expert guidance\u2014like why modern instruments matter for bands\u2014alongside store news, gear tips, and local promotions.",
+      "followers": {
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/8645634.jpg?t=1753363240"
+    },
+    {
+      "title": "Floga-SE",
+      "feed_url": "http://www.botequimdeideias.com.br/flogase/feed/",
+      "website_url": "http://www.botequimdeideias.com.br/flogase/",
+      "description": "Floga-SE shares all the information on good bands in Brazil. Covers articles on latest music news, interviews, reviews, concerts and shows.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/1388098.jpg?t=1635335745"
+    },
+    {
+      "title": "Lyrical Brazil",
+      "feed_url": "https://lyricalbrazil.com/feed/",
+      "website_url": "https://lyricalbrazil.com/",
+      "description": "English translations and the stories behind your favorite Brazilian songs. My name is Victoria Broadus. I started this site as a way to share more Brazilian music with friends and family and any other readers out there who wonder what the songs they're listening to are saying, and why.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4862341.jpg?t=1611990969"
+    },
+    {
+      "title": "Universal Music Store Blog",
+      "feed_url": "https://blog.umusicstore.com/feed/",
+      "website_url": "https://blog.umusicstore.com/",
+      "description": "Bem-vindo ao Blog da Universal Music Store, sua fonte definitiva para tudo relacionado \u00e0 m\u00fasica, artistas e cultura.",
+      "followers": {
+        "facebook": 10500,
+        "instagram": 85900
+      },
+      "image_url": "https://i1.feedspot.com/5754891.jpg?t=1705324415"
+    },
+    {
+      "title": "Jornal de Bras\u00edlia \u00bb M\u00fasica",
+      "feed_url": "https://jornaldebrasilia.com.br/entretenimento/musica/feed/",
+      "website_url": "https://jornaldebrasilia.com.br/entretenimento/musica/",
+      "description": "Informa\u00e7\u00e3o e Opini\u00e3o",
+      "followers": {
+        "facebook": 557800,
+        "twitter": 78100,
+        "instagram": 213100
+      },
+      "image_url": "https://i1.feedspot.com/5754886.jpg?t=1705324385"
+    },
+    {
+      "title": "Na Mira do Groove Blog",
+      "feed_url": "https://namiradogroove.com.br/blog/feed/",
+      "website_url": "https://namiradogroove.com.br/blog/",
+      "description": "Na Mira do Groove is a music site about urban music, mainly rock, hip hop, jazz, soul, and experimental music with news, analysis, reviews, and several playlists.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2800,
+        "instagram": 774
+      },
+      "image_url": "https://i1.feedspot.com/5337209.jpg?t=1635337559"
+    },
+    {
+      "title": "Brazil Drops Blog",
+      "feed_url": "https://brazildrops.music.blog/feed/",
+      "website_url": "https://brazildrops.music.blog/blog-2/",
+      "description": "Read about the all time Brazilian music to enjoy some moments of peace or get an energy boost on Brazil Drops.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5337217.jpg?t=1635338780"
+    },
+    {
+      "title": "Music & Copyright's Blog \u00bb Brazil",
+      "feed_url": "https://musicandcopyright.wordpress.com/category/brazil/feed/",
+      "website_url": "https://musicandcopyright.wordpress.com/category/brazil/",
+      "description": "Music & Copyright is a fortnightly research service covering global copyright and legal issues affecting the music industry.Covers articles on copyright, music forecasts, music industry, music publishing and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5337231.jpg?t=1705410313"
+    },
+    {
+      "title": "Bra Music-All-Lian Blog",
+      "feed_url": "https://www.allbrazilianmusic.com/feed/",
+      "website_url": "https://www.allbrazilianmusic.com/category/blog/",
+      "description": "A festival-organizer blog featuring cultural articles\u2014like how music festivals spark travel, contemporary art reflections, and the impact of Brazilian music events on cultural development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8645527.jpg?t=1753354833"
+    },
+    {
+      "title": "Revolution Music Blog",
+      "feed_url": "https://revoluo.com.br/feed/",
+      "website_url": "https://revoluo.com.br/blog/",
+      "description": "I strive to provide as much free information as possible to help both beginners and those already producing genres like tech house, techno, and EDM.",
+      "followers": {
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/8645631.jpg?t=1753363450"
+    },
+    {
+      "title": "Trama Music Hall Blog",
+      "feed_url": "https://blog.tramamusichall.com.br/feed/",
+      "website_url": "https://blog.tramamusichall.com.br/",
+      "description": "The official Brazilian music gear store's blog offering expert guides, instrument histories, and audio-equipment insights\u2014everything from Tagima Stratocaster specs and Soundcraft mixer reviews to classical music deep dives",
+      "followers": {
+        "facebook": 5000,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/8645632.jpg?t=1753363379"
+    },
+    {
+      "title": "M\u00fasica Brasileira",
+      "feed_url": "https://musicabrasileira.org/feed/",
+      "website_url": "https://musicabrasileira.org/",
+      "description": "Reviewing Brazilian Music We Like Since September 7, 2002.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5754885.jpg?t=1705410116"
+    }
+  ]
+}

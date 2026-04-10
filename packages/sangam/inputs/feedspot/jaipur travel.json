@@ -1,0 +1,62 @@
+{
+  "category": "Jaipur Travel",
+  "source_url": "https://rss.feedspot.com/jaipur_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "JaipurThruMyLens",
+      "feed_url": "https://jaipurthrumylens.com/feed/",
+      "website_url": "https://jaipurthrumylens.com/",
+      "description": "Jaipur Thru My Lens is the best blog on Jaipur. Get Picture, sights & stories of Jaipur, India from this blog. This is your offbeat guide to Jaipur.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4949959.jpg?t=1756209255"
+    },
+    {
+      "title": "Shutterholictv.com",
+      "feed_url": "https://shutterholictv.com/feed/",
+      "website_url": "https://shutterholictv.com/",
+      "description": "Varun Tyagi is a blogger from Jaipur, India. He writes extensively about WordPress blogging, Travel, Cycling, and his daily life. Stay tuned to his blog.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 945
+      },
+      "image_url": "https://i1.feedspot.com/5059752.jpg?t=1605864139"
+    },
+    {
+      "title": "Rajasthan Tour Planner \u00bb Jaipur Tour Packages",
+      "feed_url": "https://www.rajasthantourplanner.com/blog/category/jaipur-tour-packages/feed/",
+      "website_url": "https://www.rajasthantourplanner.com/blog/category/jaipur-tour-packages/",
+      "description": "Rajasthan Tour Planner is a Tourism travel operator in Jaipur Rajasthan who plans the best budget vacation holiday tours package. It is the leading tour operator for desert package, wildlife tour packages, and car rental service.",
+      "followers": {
+        "twitter": 213
+      },
+      "image_url": "https://i1.feedspot.com/4949964.jpg?t=1621509191"
+    },
+    {
+      "title": "Jaipur Stuff",
+      "feed_url": "https://www.jaipurstuff.com/feed/",
+      "website_url": "https://www.jaipurstuff.com/",
+      "description": "Your Ultimate Guide To Jaipur. Get all the latest news and updates on Jaipur. Find things to do, health benefits tips, shopping stuff, jaipur tours & travels, jewellery, hotels and restaurants, happening etc.",
+      "followers": {
+        "facebook": 340,
+        "twitter": 60,
+        "instagram": 262
+      },
+      "image_url": "https://i1.feedspot.com/5246204.jpg?t=1621509173"
+    },
+    {
+      "title": "Connect Jaipur",
+      "feed_url": "http://www.connectjaipur.com/feed/",
+      "website_url": "https://www.connectjaipur.com/",
+      "description": "Connect Jaipur is a blog about Food, Fashion, and Travel in Jaipur.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 25,
+        "instagram": 587
+      },
+      "image_url": "https://i1.feedspot.com/4949951.jpg?t=1621509185"
+    }
+  ]
+}

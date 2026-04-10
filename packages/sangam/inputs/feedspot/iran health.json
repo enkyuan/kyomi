@@ -1,0 +1,61 @@
+{
+  "category": "Iran Health",
+  "source_url": "https://rss.feedspot.com/iran_health_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jahan Tajhiz Hakim Blog",
+      "feed_url": "https://jahan-tajhiz.com/feed/",
+      "website_url": "https://jahan-tajhiz.com/blog/",
+      "description": "Jahan Tajhiz Hakim Blog covers articles on the latest healthcare news. Jahan Tajhiz Hakim Co. was established in 2009. We are a dedicated and professional importer and distributor of disposable medical equipment.",
+      "followers": {
+        "instagram": 381
+      },
+      "image_url": "https://i1.feedspot.com/5349039.jpg?t=1638350761"
+    },
+    {
+      "title": "Dr. Amin Azhari",
+      "feed_url": "https://azharimd.com/feed/",
+      "website_url": "https://azharimd.com/medical-and-health-news/",
+      "description": "Latest articles and top medical and health news related to family medicine. I'm Dr. Amin Azhari, medical doctor and physical medicine & rehabilitation, specialist. I am working as a physiatrist in the rehabilitation department, Imam Reza Hospital, Mashhad University of Medical Sciences.",
+      "followers": {
+        "twitter": 1500,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5349071.jpg?t=1638351564"
+    },
+    {
+      "title": "Sepcotrading Blog",
+      "feed_url": "https://sepcotrading.com/feed/",
+      "website_url": "https://sepcotrading.com/blog/",
+      "description": "Sepcotrading Blog covers articles on health, healthy food, organic foods and more.Sepcotrading is an Iranian based company, specialized in exporting of branded consumer goods originated from Iran.",
+      "followers": {
+        "twitter": 1,
+        "instagram": 231
+      },
+      "image_url": "https://i1.feedspot.com/5348975.jpg?t=1638341330"
+    },
+    {
+      "title": "Koushan Pharmed \u00bb Health Blog",
+      "feed_url": "https://www.koushanpharmed.com/en/category/health-blog/feed/",
+      "website_url": "https://www.koushanpharmed.com/en/category/health-blog/",
+      "description": "Read the latest health news on Koushan Pharmed.At Koushan Pharmed, we have the expertise of a proven pharmaceutical importer and the focus and passion of a developer and manufacturer.",
+      "followers": {
+        "facebook": 17,
+        "twitter": 8,
+        "instagram": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5348958.jpg?t=1638340384"
+    },
+    {
+      "title": "Iran Medtour Blog",
+      "feed_url": "https://iranmedtour.com/feed/",
+      "website_url": "https://iranmedtour.com/blog/",
+      "description": "Iranmedtour Health Tourism Company is a medical tourism facilitator brand specialized in guiding patients from all over the world to travel to Iran for performing medical treatments.",
+      "followers": {
+        "facebook": 523,
+        "instagram": 848
+      },
+      "image_url": "https://i1.feedspot.com/5349110.jpg?t=1638356614"
+    }
+  ]
+}

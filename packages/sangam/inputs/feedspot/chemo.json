@@ -1,0 +1,58 @@
+{
+  "category": "Chemo",
+  "source_url": "https://rss.feedspot.com/chemo_rss_feeds",
+  "feeds": [
+    {
+      "title": "News Medical \u00bb Chemotherapy",
+      "feed_url": "https://www.news-medical.net/tag/feed/Chemotherapy.aspx",
+      "website_url": "https://www.news-medical.net/condition/Chemotherapy",
+      "description": "Latest Chemotherapy News and Research from Around the World.",
+      "followers": {
+        "facebook": 254300,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4623642.jpg?t=1615871260"
+    },
+    {
+      "title": "Medical Xpress \u00bb Chemotherapy",
+      "feed_url": "https://medicalxpress.com/rss-feed/tags/chemotherapy/",
+      "website_url": "https://medicalxpress.com/tags/chemotherapy/",
+      "description": "Medical Xpress internet news portal provides the latest news on science including Physics, Nanotechnology, Life Sciences, and more. Read the Chemotherapy section to know more about chemo for different cancers, research & study on them, and a lot more!",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/5466199.jpg?t=1668682048"
+    },
+    {
+      "title": "Chemo Lassie",
+      "feed_url": "https://deannabanana81.wordpress.com/feed/",
+      "website_url": "https://deannabanana81.wordpress.com/",
+      "description": "Deanna's breast cancer story.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4612629.jpg?t=1668410360"
+    },
+    {
+      "title": "Cancer is Pants Blog",
+      "feed_url": "https://www.cancerispants.co.uk/blog?format=RSS",
+      "website_url": "https://www.cancerispants.co.uk/blog/",
+      "description": "A stage 4 breast cancer mom sharing chemotherapy treatments with before and after stages.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 182
+      },
+      "image_url": "https://i1.feedspot.com/4612511.jpg?t=1615871325"
+    },
+    {
+      "title": "Nature \u00bb Chemotherapy",
+      "feed_url": "https://www.nature.com/subjects/chemotherapy.rss",
+      "website_url": "https://www.nature.com/subjects/chemotherapy",
+      "description": "Latest research, reviews and news about Chemotherapy from across all of the Nature journals.",
+      "followers": {
+        "facebook": 792300,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/4623658.jpg?t=1615871269"
+    }
+  ]
+}

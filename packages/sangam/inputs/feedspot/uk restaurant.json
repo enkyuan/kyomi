@@ -1,0 +1,65 @@
+{
+  "category": "UK Restaurant",
+  "source_url": "https://rss.feedspot.com/uk_restaurant_rss_feeds",
+  "feeds": [
+    {
+      "title": "Luxury Restaurant Guide Blog",
+      "feed_url": "https://blog.luxuryrestaurantguide.com/feed/",
+      "website_url": "https://www.luxuryrestaurantguide.com/blog/",
+      "description": "The Luxury Restaurant Guide stands as the premier online destination for elite dining experiences in the UK. Renowned for its curated selection of top restaurants, it offers a gateway to gastronomic delights, culinary events, and culinary insights. With an unparalleled focus on luxury hospitality, its blog is a treasure trove of fine dining updates, exclusive offers, and stylish gourmet trends, captivating aficionados of the culinary arts.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 2900,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4634447.jpg?t=1701940644"
+    },
+    {
+      "title": "Meat & One Veg Blog",
+      "feed_url": "https://meatandoneveg.blog/feed/",
+      "website_url": "https://meatandoneveg.blog/articles/",
+      "description": "This restaurant blog, established in the summer of 2014, is a journey that has extended out of Birmingham, into the rest of the UK, and occasionally further afield. One which covers everything from the cheapest eats to the world's best restaurants. It has gone on to be recognised as an authoritative voice on the best places to eat whilst gaining notoriety for its brutally honest opinions.",
+      "followers": {
+        "facebook": 724,
+        "twitter": 14700,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5360116.jpg?t=1641378386"
+    },
+    {
+      "title": "London Eater",
+      "feed_url": "http://londoneater.com/feed/atom/",
+      "website_url": "http://londoneater.com/",
+      "description": "It is a London food blog and restaurant reviews and restaurant guide and a gastro-centric survival guide for Londoners.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 9400,
+        "instagram": 49800
+      },
+      "image_url": "https://i1.feedspot.com/224454.jpg?t=1613744371"
+    },
+    {
+      "title": "OpenTable UK Blog",
+      "feed_url": "https://blog.opentable.co.uk/feed/",
+      "website_url": "https://www.opentable.co.uk/blog/",
+      "description": "The leading online consumer destination for restaurant bookings in the UK. Get Food & restaurant news from OpenTable UK.",
+      "followers": {
+        "facebook": 52700,
+        "twitter": 28900,
+        "instagram": 38500
+      },
+      "image_url": "https://i1.feedspot.com/4906421.jpg?t=1613744350"
+    },
+    {
+      "title": "Bookatable Blog",
+      "feed_url": "http://www.bookatable.co.uk/blog/feed",
+      "website_url": "https://www.thefork.co.uk/blog/",
+      "description": "Check out the latest restaurant news, reviews, and dining guides on Bookatable's restaurant blog.",
+      "followers": {
+        "facebook": 42100,
+        "twitter": 32400
+      },
+      "image_url": "https://i1.feedspot.com/4868901.jpg?t=1613744356"
+    }
+  ]
+}

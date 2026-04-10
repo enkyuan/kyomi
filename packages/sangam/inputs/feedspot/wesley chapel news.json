@@ -1,0 +1,28 @@
+{
+  "category": "Wesley Chapel News",
+  "source_url": "https://rss.feedspot.com/wesley_chapel_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wesley Chapel Community",
+      "feed_url": "https://www.wesleychapelcommunity.com/blog-feed.xml",
+      "website_url": "https://www.wesleychapelcommunity.com/",
+      "description": "The Wesley Chapel Community Website is a privately owned website for residents of the Wesley Chapel, Florida area. Subscribe this feed for the latest news, updates and information in Wesley Chapel region.",
+      "followers": {
+        "facebook": 26500,
+        "twitter": 1700,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5148356.jpg?t=1588760748"
+    },
+    {
+      "title": "Neighborhood News \u00bb Wesley Chapel",
+      "feed_url": "https://neighborhoodnewsonline.net/category/wesley-chapel/wesley-chapel-news/feed/",
+      "website_url": "https://neighborhoodnewsonline.net/category/news/wesley-chapel-news/",
+      "description": "Neighborhood News serves New Tampa & Wesley Chapel since 1993. Read the latest news and updates in Wesley Chapel by following this feed.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5148344.jpg"
+    }
+  ]
+}

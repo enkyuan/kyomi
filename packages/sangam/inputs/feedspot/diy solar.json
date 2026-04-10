@@ -1,0 +1,53 @@
+{
+  "category": "DIY Solar",
+  "source_url": "https://rss.feedspot.com/diy_solar_rss_feeds",
+  "feeds": [
+    {
+      "title": "Solar with Yash Blog",
+      "feed_url": "https://solarwithyash.com/feed/",
+      "website_url": "https://solarwithyash.com/blog/",
+      "description": "Solar with Yash provides latest solar updates, detailed solar reviews, solar basics, DIY solar, and gives detailed Solar ROI so that you go SOLAR profitably. The site Solar with Yash is about designing the solar power system, finding its financial feasibility, and giving you detailed unbiased solar product reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403405.jpg?t=1653395915"
+    },
+    {
+      "title": "SRB Energy Blog",
+      "feed_url": "https://srbenergy.com/feed/",
+      "website_url": "https://srbenergy.com/blog/",
+      "description": "DIY solar in Canada becomes more popular each year. To help with that, we write about solar panel installation, products, and calculating energy production. Whether it be 60 or 72 Cell, SRB Energy has some of the widest selection of products to ensure you get the right module for your system.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403404.jpg?t=1653395348"
+    },
+    {
+      "title": "DIY Solar Power Blog",
+      "feed_url": "https://diysolarpower.com/blogs/news.atom",
+      "website_url": "https://diysolarpower.com/blogs/news",
+      "description": "Explore our blog to learn more about solar panels, our services, DIY guides, and more. At DIY Solar Power, we specialize in providing you with all the products and services necessary to build and install your solar system at the most affordable price point. Their mission is to empower you to take full control over your solar project.",
+      "followers": {
+        "facebook": 230,
+        "twitter": 9,
+        "instagram": 82
+      },
+      "image_url": "https://i1.feedspot.com/5403399.jpg?t=1653367872"
+    },
+    {
+      "title": "Solar Me Blog",
+      "feed_url": "https://solarmeusa.com/blog?format=rss",
+      "website_url": "https://solarmeusa.com/blog",
+      "description": "Explore our blog to know more about our services, solar products and more. Turn-Key solar solutions provider focused on delivery a high quality product at a lower price. We have a local business mentality with a professional approach.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 423
+      },
+      "image_url": "https://i1.feedspot.com/5403402.jpg?t=1653391333"
+    },
+    {
+      "title": "Solar Know How Blog",
+      "feed_url": "https://solarknowhow.com/feed/",
+      "website_url": "https://solarknowhow.com/",
+      "description": "This is a blog by a solar enthusiast for solar enthusiasts. Join me as I review solar energy and learn more about this clean energy. My name is Ellie, and I have worked in operations and construction for over 30 years, gaining an appreciation for not only solar energy but all sustainable energy sources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403406.jpg?t=1653392146"
+    }
+  ]
+}

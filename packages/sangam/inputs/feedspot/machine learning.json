@@ -1,0 +1,738 @@
+{
+  "category": "Machine Learning",
+  "source_url": "https://rss.feedspot.com/machine_learning_rss_feeds",
+  "feeds": [
+    {
+      "title": "Towards Data Science",
+      "feed_url": "https://towardsdatascience.com/feed/",
+      "website_url": "https://towardsdatascience.com/",
+      "description": "Sharing concepts, ideas and codes on data science. Towards Data Science Inc. is a corporation registered in Canada. It provides a platform for thousands of people to exchange ideas and to expand their understanding of data science.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 234000,
+        "instagram": 185
+      },
+      "image_url": "https://i1.feedspot.com/4825449.jpg?t=1616494733"
+    },
+    {
+      "title": "KDnuggets",
+      "feed_url": "https://www.kdnuggets.com/feed",
+      "website_url": "https://www.kdnuggets.com/news/index.html",
+      "description": "Articles on AI, Analytics, Big Data, Data Mining, Data Science, and Machine Learning by Gregory Piatetsky-Shapiro and Matthew Mayo at KDnuggets. KDnuggets is a leading site on Data Science, Machine Learning, AI and Analytics. Edited by Matthew Mayo. KDnuggets was founded by Gregory Piatetsky-Shapiro. KD stands for Knowledge Discovery",
+      "followers": {
+        "facebook": 39500,
+        "twitter": 219600
+      },
+      "image_url": "https://i1.feedspot.com/4765479.jpg?t=1619083684"
+    },
+    {
+      "title": "AWS \u00bb Machine Learning",
+      "feed_url": "https://aws.amazon.com/blogs/machine-learning/feed/",
+      "website_url": "https://aws.amazon.com/blogs/machine-learning/",
+      "description": "The following section of AWS features articles on Machine Learning. Amazon Web Services (AWS) is a dynamic, growing business unit within Amazon.com. Subscribe us to get articles about machine learning from Amazon Web Services.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4895815.jpg?t=1615179996"
+    },
+    {
+      "title": "Carnegie Mellon University",
+      "feed_url": "https://blog.ml.cmu.edu/feed/",
+      "website_url": "https://blog.ml.cmu.edu/",
+      "description": "The Carnegie Mellon University(CMU) ML Blog provides an accessible, general-audience medium for CMU researchers to communicate research findings, perspectives on the field of machine learning, & various updates, both to experts & the general audience. Posts are written by students, postdocs, and faculty at CMU. Posts on a variety of machine learning topics studied at CMU will appear bi-weekly.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5284610.jpg?t=1622023541"
+    },
+    {
+      "title": "Analytics Vidhya",
+      "feed_url": "https://www.analyticsvidhya.com/blog/category/machine-learning/feed/",
+      "website_url": "https://www.analyticsvidhya.com/blog/category/machine-learning/",
+      "description": "Analytics Vidhya is a thriving community for data driven industry. This platform allows people to know more about analytics from its articles, Q&A forum, and learning paths.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/4954357.jpg?t=1615180063"
+    },
+    {
+      "title": "Google Blog on AI & Machine Learning",
+      "feed_url": "https://blog.google/technology/ai/rss/",
+      "website_url": "https://blog.google/technology/ai/",
+      "description": "Explore the cutting-edge work Google is doing in AI and machine learning.",
+      "followers": {
+        "facebook": 34800000,
+        "twitter": 32799999,
+        "instagram": 15700000
+      },
+      "image_url": "https://i1.feedspot.com/4575020.jpg?t=1615180071"
+    },
+    {
+      "title": "MIT News - Machine learning",
+      "feed_url": "https://news.mit.edu/rss/topic/machine-learning",
+      "website_url": "https://news.mit.edu/topic/machine-learning",
+      "description": "MIT News is dedicated to communicating to the media and the public the news and achievements of the students, faculty, staff and the greater MIT community.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1400000,
+        "instagram": 500
+      },
+      "image_url": "https://i1.feedspot.com/4575136.jpg?t=1615179949"
+    },
+    {
+      "title": "Neptune.ai Blog",
+      "feed_url": "https://neptune.ai/blog/feed",
+      "website_url": "https://neptune.ai/blog",
+      "description": "Neptune brings organization and collaboration to data science projects. Everything is secured and backed up in an organized knowledge repository. This is a blog for ML practitioners with articles about MLOps, ML tools, and other ML-related topics. You'll find here guides, tutorials, case studies, tools reviews, and more.",
+      "followers": {
+        "facebook": 368,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5284613.jpg?t=1622023657"
+    },
+    {
+      "title": "BigML.com",
+      "feed_url": "https://blog.bigml.com/feed/",
+      "website_url": "https://blog.bigml.com/",
+      "description": "Machine Learning made beautifully simple. A company-wide platform that runs in any cloud or on-premises to operationalize Machine Learning in your organization.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4575021.jpg?t=1644844838"
+    },
+    {
+      "title": "Cisco Machine Learning Blog",
+      "feed_url": "https://blogs.cisco.com/tag/machine-learning/feed",
+      "website_url": "https://blogs.cisco.com/tag/machine-learning",
+      "description": "Cisco is the worldwide technology leader that has been making the Internet work. Our people, products, and partners help society securely connect and seize tomorrow's digital opportunity today. Subscribe us to get machine learning articles.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 740700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4954428.jpg?t=1615180010"
+    },
+    {
+      "title": "Apple Machine Learning Research",
+      "feed_url": "https://machinelearning.apple.com/rss.xml",
+      "website_url": "https://machinelearning.apple.com/",
+      "description": "Apple machine learning teams are engaged in state-of-the-art research in machine learning and artificial intelligence. Learn about the latest advancements. Our machine-learning research teams collaborate to deliver amazing experiences that improve the lives of millions of people every day.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 9700000,
+        "instagram": 34900000
+      },
+      "image_url": "https://i1.feedspot.com/5397383.jpg?t=1665560407"
+    },
+    {
+      "title": "The Official NVIDIA Blog \u00bb Deep Learning",
+      "feed_url": "https://blogs.nvidia.com/blog/category/deep-learning/feed/",
+      "website_url": "https://blogs.nvidia.com/blog/category/deep-learning/",
+      "description": "NVIDIA's invention of the GPU in 1999 sparked the growth of the PC gaming market, redefined modern computer graphics, and revolutionized parallel computing. More recently, GPU deep learning ignited modern AI- the next era of computing - with the GPU acting as the brain of computers, robots, and self-driving cars that can perceive and understand the world. Keep up to date with the latest news from the world leader in deep learning.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 2200000,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/5044449.jpg?t=1585047287"
+    },
+    {
+      "title": "O'Reilly Media \u00bb AI & ML",
+      "feed_url": "https://www.oreilly.com/radar/topics/ai-ml/feed/index.xml",
+      "website_url": "https://www.oreilly.com/radar/topics/ai-ml/",
+      "description": "O'Reilly's mission is to change the world by sharing the knowledge of innovators. For over 40 years, we've inspired companies & individuals to do new things by providing them with the skills & understanding that are necessary for success. Few technologies have the potential to change the nature of work & how we live as artificial intelligence (AI) and machine learning (ML). Read our AI & ML blog to receive weekly insight from industry insiders.",
+      "followers": {
+        "facebook": 121500,
+        "twitter": 107200
+      },
+      "image_url": "https://i1.feedspot.com/5280061.jpg?t=1620824501"
+    },
+    {
+      "title": "The TensorFlow Blog",
+      "feed_url": "https://blog.tensorflow.org/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.tensorflow.org/",
+      "description": "The blog contains regular news from the TensorFlow team and the community, with articles on Python, TensorFlow.js, TF Lite, and TFX. TensorFlow is a fast, flexible, and scalable open-source machine-learning library for research and production.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 384800
+      },
+      "image_url": "https://i1.feedspot.com/5329236.jpg?t=1633584138"
+    },
+    {
+      "title": "Nanonets Blog",
+      "feed_url": "https://nanonets.com/blog/rss/",
+      "website_url": "https://nanonets.com/blog/",
+      "description": "Check out the latest blog articles, webinars, insights, and other resources on Machine Learning, Deep Learning on Nanonets blog.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 681
+      },
+      "image_url": "https://i1.feedspot.com/5068109.jpg?t=1622025595"
+    },
+    {
+      "title": "Machine Learning Mastery Blog",
+      "feed_url": "https://feeds.feedburner.com/MachineLearningMastery",
+      "website_url": "https://machinelearningmastery.com/blog/",
+      "description": "Welcome to Machine Learning Mastery! Hi, I'm Jason Brownlee Ph.D. and I help developers like you skip years ahead. Explore my quick start guides and tutorials on machine learning and AI.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 69000
+      },
+      "image_url": "https://i1.feedspot.com/5199192.jpg?t=1662526115"
+    },
+    {
+      "title": "Machine Learning Techniques",
+      "feed_url": "https://mltechniques.com/feed/",
+      "website_url": "https://mltechniques.com/",
+      "description": "Discover original, authentic content written with passion by top experts in their field. Covering machine learning, data science, visualizations, explainable AI, experimental math, operations research, statistical engineering, predictive analytics, business analytics, simulation, synthetic data, and mathematical modeling.",
+      "followers": {
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5393892.jpg?t=1650968933"
+    },
+    {
+      "title": "MarkTechPost \u00bb Artificial Intelligence",
+      "feed_url": "https://www.marktechpost.com/category/technology/artificial-intelligence/feed/",
+      "website_url": "https://www.marktechpost.com/category/technology/artificial-intelligence/",
+      "description": "MarkTechPost reports related subjects such as artificial intelligence, blockchain technology, and healthcare. Marktechpost is a California-based AI News Platform providing easy-to-consume, byte size updates in machine learning, deep learning, and data science research.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4954402.jpg?t=1615870503"
+    },
+    {
+      "title": "PyImageSearch Blog",
+      "feed_url": "https://pyimagesearch.com/feed/",
+      "website_url": "https://pyimagesearch.com/blog/",
+      "description": "Hi there, I'm Adrian Rosebrock, PhD. Getting started with Computer Vision and Deep Learning is easier than you think. I created this website to show you what I believe is the best possible way to get your start. Follow me and I promise you'll find your way to Computer Vision, Deep Learning, and OpenCV mastery.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 25400
+      },
+      "image_url": "https://i1.feedspot.com/5451909.jpg?t=1664728524"
+    },
+    {
+      "title": "Pete Warden's Blog",
+      "feed_url": "https://petewarden.com/feed/",
+      "website_url": "https://petewarden.com/",
+      "description": "Pete Warden is an Engineer, CTO of Jetpac Inc, author of The Public Data Handbook and The Big Data Glossary for O'Reilly, builder of OpenHeatMap and the Data Science Toolkit, and other open source projects. Explore my articles on machine learning, big data and more in my blog.",
+      "followers": {
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/4541165.jpg?t=1665559760"
+    },
+    {
+      "title": "indico.io Blog",
+      "feed_url": "http://indico.io/blog/feed/",
+      "website_url": "https://indicodata.ai/blog/",
+      "description": "Resources for exploring machine learning and data science",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4575125.jpg?t=1644906951"
+    },
+    {
+      "title": "Towards AI \u00bb Artificial Intelligence",
+      "feed_url": "https://towardsai.net/ai/artificial-intelligence/feed",
+      "website_url": "https://towardsai.net/ai/artificial-intelligence",
+      "description": "Read our best articles on artificial intelligence (AI). At the best place for artificial intelligence (AI) news, research, industry, and technology trends -Towards AI, the world's leading AI and technology publication. Since 2019 Towards AI has provided an open platform for sharing information, educational content and research on AI. It has more than 2,000 authors and benefits from hundreds of thousands of followers in the AI community.",
+      "followers": {
+        "facebook": 40800,
+        "twitter": 41400,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5451908.jpg?t=1664728520"
+    },
+    {
+      "title": "Technical",
+      "feed_url": "https://mehebuba.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mehebuba.blogspot.com/",
+      "description": "This is a technical blog, to share, encourage and educate everyone to learn new technologies. I am a Machine Learning Engineer. I have worked with several Machine learning algorithms. My past work included research on NLP, Image and Video Processing, Human Computer Interaction and I developed several algorithms in this area while working in Computer Architecture and Parallel Processing lab of Seoul National University.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5015403.jpg?t=1615180606"
+    },
+    {
+      "title": "inFERENCe",
+      "feed_url": "https://www.inference.vc/rss/",
+      "website_url": "https://www.inference.vc/",
+      "description": "A blog about machine learning research, deep learning, causal inference, variational learning, by Ferenc Husz\u00e1r. Ferenc Husz\u00e1r is a Senior Lecturer in Machine Learning at the University of Cambridge. He recently joined the Department of Computer Science and Technology, a nice and cozy department, where he's building a new machine learning group with Neil Lawrence and Carl Henrik Ek and others.",
+      "followers": {
+        "twitter": 37900
+      },
+      "image_url": "https://i1.feedspot.com/4403673.jpg?t=1665551527"
+    },
+    {
+      "title": "Google Research",
+      "feed_url": "https://feeds.feedburner.com/blogspot/gJZg",
+      "website_url": "https://research.google/blog/",
+      "description": "The latest news on Google Research in Artificial Intelligence, machine learning, updates and more! Our teams aspire to make discoveries that impact everyone, and core to our approach is sharing our research and tools to fuel progress in the field.",
+      "followers": {
+        "facebook": 29200000,
+        "twitter": 32799999,
+        "instagram": 15700000
+      },
+      "image_url": "https://i1.feedspot.com/31710.jpg?t=1665550620"
+    },
+    {
+      "title": "Distill",
+      "feed_url": "https://distill.pub/rss.xml",
+      "website_url": "https://distill.pub/",
+      "description": "Distill is dedicated to clear explanations of machine learning. Subscribe us to get updates on Machine Learning.",
+      "followers": {
+        "twitter": 41300
+      },
+      "image_url": "https://i1.feedspot.com/4839722.jpg?t=1611211560"
+    },
+    {
+      "title": "BAIR Blog",
+      "feed_url": "https://bair.berkeley.edu/blog/feed.xml",
+      "website_url": "https://bair.berkeley.edu/blog/",
+      "description": "The BAIR Blog provides an accessible, general-audience medium for BAIR researchers to communicate research findings, perspectives on the field, and various updates. Posts are written by students, post-docs, and faculty in BAIR, and are intended to provide relevant and timely discussion of research findings and results, both to experts and the general audience. The Berkeley Artificial Intelligence Research (BAIR) Lab brings together UC Berkeley graduate students, post-docs, and faculty working in AI.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 103100
+      },
+      "image_url": "https://i1.feedspot.com/4954351.jpg?t=1615870301"
+    },
+    {
+      "title": "The Stanford AI Lab Blog",
+      "feed_url": "https://ai.stanford.edu/blog/feed.xml",
+      "website_url": "https://ai.stanford.edu/blog/",
+      "description": "The Stanford AI Lab (SAIL) Blog is a place for SAIL students, faculty, and researchers to share our work with the general public. We write about our latest research, discussions, and talks held at SAIL, and other interesting updates from our labs. The Stanford Artificial Intelligence Laboratory (SAIL) is a center of excellence for Artificial Intelligence research, teaching, theory, and practice.",
+      "followers": {
+        "twitter": 145200
+      },
+      "image_url": "https://i1.feedspot.com/5442306.jpg?t=1663245741"
+    },
+    {
+      "title": "Machine Learning at Berkeley",
+      "feed_url": "https://mlberkeley.substack.com/feed",
+      "website_url": "https://mlberkeley.substack.com/",
+      "description": "We are a student organization at UC Berkeley dedicated to building and fostering a vibrant machine learning community on campus while contributing to the greater machine learning community and beyond.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5311551.jpg?t=1628688597"
+    },
+    {
+      "title": "Becoming Human",
+      "feed_url": "https://becominghuman.ai/feed",
+      "website_url": "https://becominghuman.ai/",
+      "description": "Explore Artificial Intelligence and what it means to be human. Keep up with the latest news, info, and tutorials on Artificial Intelligence, Machine Learning, Deep Learning, Big Data, and more.",
+      "followers": {
+        "facebook": 736
+      },
+      "image_url": "https://i1.feedspot.com/4839624.jpg?t=1611211228"
+    },
+    {
+      "title": "An Ergodic Walk",
+      "feed_url": "https://ergodicity.net/feed/",
+      "website_url": "https://ergodicity.net/",
+      "description": "An Ergodic Walk is a blog written by Anand Sarwate, who is an Assistant Professor in the Electrical and Computer Engineering Department at the Rutgers, The State University of New Jersey.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4954352.jpg?t=1644908358"
+    },
+    {
+      "title": "Programmathically",
+      "feed_url": "https://programmathically.com/feed/",
+      "website_url": "https://programmathically.com/",
+      "description": "Hi, I'm Sebastian, a software engineer based in Vienna, Austria, where I run a software consultancy and a small early-stage machine learning startup. My main focus is on building machine learning-powered software applications for deployment in the cloud and on mobile devices. This blog is my attempt to explain technical stuff in simple terms, which will hopefully endow me with better 'explaining skills'.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5282552.jpg?t=1621500358"
+    },
+    {
+      "title": "BoTree Technologies \u00bb Machine Learning",
+      "feed_url": "https://www.botreetechnologies.com/blog/category/automation/machine-learning/feed/",
+      "website_url": "https://www.botreetechnologies.com/blog/category/automation/machine-learning/",
+      "description": "BoTree Technologies is a leading IT solutions provider working as the technology partner of small to medium-sized organizations. We leverage information, intelligence, and insights for assisting transformation into a digital enterprise.",
+      "followers": {
+        "facebook": 849,
+        "twitter": 1100,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5284614.jpg?t=1622023806"
+    },
+    {
+      "title": "Machine Learning Made Easy",
+      "feed_url": "https://www.aimlmadeeasy.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.aimlmadeeasy.com/",
+      "description": "A blog by Parag Verma, a machine learning enthusiast and writes articles on data science using R & python. Other topics covered are Rstats, Logistic Regression, NLP, Pandas, NLTK, and more.",
+      "followers": {
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/5330836.jpg?t=1634049735"
+    },
+    {
+      "title": "CALCULATED CONTENT",
+      "feed_url": "https://calculatedcontent.com/feed/",
+      "website_url": "https://calculatedcontent.com/",
+      "description": "Thoughts on applied AI and machine learning. Blog by Charles H Martin, PhD.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4575118.jpg?t=1615180235"
+    },
+    {
+      "title": "DatumBox - Blog on Machine Learning, Statistics & Software Development",
+      "feed_url": "http://blog.datumbox.com/feed/",
+      "website_url": "http://blog.datumbox.com/",
+      "description": "Datumbox blog focuses on Machine Learning, Statistics, Artificial Intelligence and their applications on Software Development and Online Marketing.",
+      "followers": {
+        "facebook": 679,
+        "twitter": 667
+      },
+      "image_url": "https://i1.feedspot.com/3947764.jpg?t=1615180128"
+    },
+    {
+      "title": "MIB Blog",
+      "feed_url": "https://semasuka.github.io/blog/feed",
+      "website_url": "https://semasuka.github.io/blog/",
+      "description": "Up & running with machine learning | semasuka stern machine learning blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5040833.jpg?t=1644910410"
+    },
+    {
+      "title": "Machined Learnings",
+      "feed_url": "http://www.machinedlearnings.com/feeds/posts/default",
+      "website_url": "http://www.machinedlearnings.com/",
+      "description": "Machined Learning by Paul Mineiro, from Microsoft Cloud & Information Services Lab",
+      "followers": {
+        "twitter": 697
+      },
+      "image_url": "https://i1.feedspot.com/102766.jpg?t=1644909124"
+    },
+    {
+      "title": "The Data Blog",
+      "feed_url": "https://data-annotation.com/feed/",
+      "website_url": "https://data-annotation.com/",
+      "description": "From data annotation and labeling service providers to research in active and semi-supervised learning. Learn how to build a data pipeline and save costs.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5124413.jpg?t=1615180286"
+    },
+    {
+      "title": "Another Datum",
+      "feed_url": "https://anotherdatum.com/feeds/all.atom.xml?format=xml",
+      "website_url": "https://anotherdatum.com/",
+      "description": "My name is Yoel Zeldes. I am an algorithm engineer at Taboola. I completed my M.Sc. and B.Sc in computer science at the Hebrew University of Jerusalem. I made a living participating in projects related to cyber, computer vision, machine learning, web, mobile and distributed computing. Here you'll find resources about data science, software engineering",
+      "followers": {
+        "twitter": 216
+      },
+      "image_url": "https://i1.feedspot.com/4949575.jpg?t=1615179965"
+    },
+    {
+      "title": "Vincent Granville Blog",
+      "feed_url": "https://www.vgranville.com/feeds/posts/default",
+      "website_url": "https://www.vgranville.com/",
+      "description": "Vincent Granville's articles, tutorials, and eBooks about machine learning, data science, mathematics, and related topics. Written in simple English.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5384659.jpg?t=1648186651"
+    },
+    {
+      "title": "foldl",
+      "feed_url": "http://feeds.feedburner.com/foldl/rss",
+      "website_url": "https://www.foldl.me/posts/",
+      "description": "foldl is a blog by Jon Gauthier about machine learning.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4954376.jpg?t=1615180247"
+    },
+    {
+      "title": "Insane",
+      "feed_url": "https://www.blogger.com/feeds/4337944176527214538/posts/default",
+      "website_url": "https://www.theinsaneapp.com/web-development",
+      "description": "At Insane, You will find Rare, Worthy, Informative & Funny Stuff on AI, ML, Data Science, App development, Web development, and Programming!",
+      "followers": {
+        "facebook": 220600,
+        "twitter": 13800,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5287010.jpg?t=1622528782"
+    },
+    {
+      "title": "John Langford's Machine Learning Theory",
+      "feed_url": "https://hunch.net/?feed=rss2",
+      "website_url": "https://hunch.net/",
+      "description": "This blog features Machine learning and learning theory research articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/21967.jpg?t=1615180137"
+    },
+    {
+      "title": "HackerEarth",
+      "feed_url": "https://www.hackerearth.com/blog/machine-learning/feed/",
+      "website_url": "https://www.hackerearth.com/blog/machine-learning/",
+      "description": "HackerEarth is building the largest hub of programmers to help programmers practice and improve programming skills. Follow to get information about machine learning from HackerEarth.",
+      "followers": {
+        "facebook": 436100,
+        "twitter": 27200,
+        "instagram": 30500
+      },
+      "image_url": "https://i1.feedspot.com/4954378.jpg?t=1615180059"
+    },
+    {
+      "title": "Stories by Srinath Sri on Medium",
+      "feed_url": "https://medium.com/feed/@srinathmoorthy",
+      "website_url": "https://medium.com/@srinathmoorthy",
+      "description": "Research and development in Splendio Technologies. Crazy on AI, Chatbot, Machine Learning, AWS Solution Architect and Certified AWS DevOps Associate.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4977433.jpg?t=1615180000"
+    },
+    {
+      "title": "Machine Learning Blog",
+      "feed_url": "https://blogs.city.ac.uk/ml/feed/",
+      "website_url": "https://blogs.city.ac.uk/ml/",
+      "description": "Blog onMachine Learning from the City, University of London,",
+      "followers": {
+        "facebook": 248300,
+        "twitter": 37400,
+        "instagram": 61000
+      },
+      "image_url": "https://i1.feedspot.com/4575049.jpg?t=1615180077"
+    },
+    {
+      "title": "Diving into data",
+      "feed_url": "http://blog.datadive.net/feed/",
+      "website_url": "http://blog.datadive.net/",
+      "description": "I'm Ando Saabas. I'm currently employed by Microsoft and work on data in the Skype team. This is a blog dedicated to general topics in applied machine learning, data mining and visualizations.",
+      "followers": {
+        "twitter": 384
+      },
+      "image_url": "https://i1.feedspot.com/4472938.jpg?t=1644912618"
+    },
+    {
+      "title": "Machine learns as data speak",
+      "feed_url": "https://letdataspeak.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://letdataspeak.blogspot.com/",
+      "description": "AI, machine learning, deep learning, data science and all those topics!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4575157.jpg?t=1615180640"
+    },
+    {
+      "title": "Optisol",
+      "feed_url": "https://datalabs.optisolbusiness.com/feed",
+      "website_url": "https://datalabs.optisolbusiness.com/",
+      "description": "Do you want to explore how technology intelligence can solve your Business Problems? OptiSol Datalabs is one of the best machine Learning development company which provides artificial intelligence cloud solutions to digitize your business process.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 766,
+        "instagram": 920
+      },
+      "image_url": "https://i1.feedspot.com/5059145.jpg?t=1615180319"
+    },
+    {
+      "title": "OpenAI Blog",
+      "feed_url": "https://openai.com/news/rss.xml",
+      "website_url": "https://openai.com/blog/",
+      "description": "OpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence (AGI) benefits all of humanity. We will attempt to directly build safe and beneficial AGI, but will also consider our mission fulfilled if our work aids others to achieve this outcome. Explore our blog to learn everything you need on AI, machine learning, deep learning and more!",
+      "followers": {
+        "facebook": 42400,
+        "twitter": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/4682400.jpg?t=1611211550"
+    },
+    {
+      "title": "DeepMind Blog",
+      "feed_url": "https://www.deepmind.com/blog/rss.xml",
+      "website_url": "https://deepmind.google/discover/blog/",
+      "description": "Read the latest articles and stories from DeepMind and find out more about our latest breakthroughs in cutting-edge AI research. We're a team of scientists, engineers, ethicists and more, committed to solving intelligence, to advance science and benefit humanity.",
+      "followers": {
+        "twitter": 797900,
+        "instagram": 194
+      },
+      "image_url": "https://i1.feedspot.com/5451907.jpg?t=1664728509"
+    },
+    {
+      "title": "Medium \u00bb Machine Learning",
+      "feed_url": "https://medium.com/tag/machine-learning",
+      "website_url": "https://medium.com/tag/machine-learning",
+      "description": "Follow to see more stories about Machine Learning on your homepage and in your Medium Daily Digest.",
+      "followers": {
+        "facebook": 520799,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5284611.jpg?t=1622025143"
+    },
+    {
+      "title": "Great Learning AI Blog",
+      "feed_url": "https://www.mygreatlearning.com/blog/artificial-intelligence/feed/",
+      "website_url": "https://www.mygreatlearning.com/blog/artificial-intelligence/",
+      "description": "Great Learning is an ed-tech company that offers impactful and industry-relevant programs in high-growth areas. With a strong presence across the globe, we have empowered 10,000+ learners from over 50 countries in achieving positive outcomes for their careers. Know about Machine Learning & how it works, interview questions, Machine Learning resume tips, linear regression, and random forest on our blog.",
+      "followers": {
+        "facebook": 354200,
+        "twitter": 31700,
+        "instagram": 311700
+      },
+      "image_url": "https://i1.feedspot.com/5284612.jpg?t=1622023924"
+    },
+    {
+      "title": "Databricks Blog \u00bb Data Science and ML",
+      "feed_url": "https://www.databricks.com/feed",
+      "website_url": "https://www.databricks.com/blog/category/engineering/data-science-machine-learning?categories=data-science-machine-learning",
+      "description": "Databricks combines the best of data warehouses and data lakes into a lakehouse architecture. Collaborate on all of your data, analytics, and AI workloads using one platform. Read the Databricks Machine Learning category on the engineering blog for the latest product news and use cases.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 76100
+      },
+      "image_url": "https://i1.feedspot.com/5284609.jpg?t=1622024513"
+    },
+    {
+      "title": "ML+ Blog",
+      "feed_url": "https://www.machinelearningplus.com/feed/",
+      "website_url": "https://www.machinelearningplus.com/blog/",
+      "description": "Machine Learning Plus is an educational resource for those seeking knowledge related to AI / Data Science / ML. Here, you will find quality articles that clearly explain the concepts, math, with working code and practical examples. This is built by keeping in mind Beginners, Python, R and Julia developers, Statisticians, and seasoned Data Scientists.",
+      "followers": {
+        "twitter": 37400
+      },
+      "image_url": "https://i1.feedspot.com/5263528.jpg?t=1617256110"
+    },
+    {
+      "title": "Chatbot's Life",
+      "feed_url": "https://rss.beehiiv.com/feeds/W0866OdVPj.xml",
+      "website_url": "https://www.chatbotslife.com/",
+      "description": "Best place to learn about Conversational AI. We share the latest News, Info, AI & NLP, Tools, Tutorials & More. Our mission is to help people understand the value of chatbots, AI, Voice technologies and to help them implement it in their business.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4504512.jpg?t=1655890599"
+    },
+    {
+      "title": "DataRobot Blog",
+      "feed_url": "https://www.datarobot.com/blog/feed/",
+      "website_url": "https://www.datarobot.com/blog/",
+      "description": "Algorithmia provides the fastest time to value for enterprise machine learning. This blog by Algorithmia covers special topics in machine learning.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5223997.jpg?t=1617255535"
+    },
+    {
+      "title": "Spark by {Examples}",
+      "feed_url": "https://sparkbyexamples.com/feed/",
+      "website_url": "https://sparkbyexamples.com/",
+      "description": "SparkByExamples.com is a BigData and Spark examples community page, all examples are simple and easy to understand and well tested in our development environment using Scala and Maven.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/5088836.jpg?t=1615180125"
+    },
+    {
+      "title": "Mastercard blogs \u00bb AI",
+      "feed_url": "https://b2b.mastercard.com/news-and-insights/blogs/?SelectedTopic=AI",
+      "website_url": "https://b2b.mastercard.com/news-and-insights/blogs/?SelectedTopic=AI",
+      "description": "Recent blog articles, news and thought leadership on artificial intelligence and machine learning for mission critical applications",
+      "followers": {
+        "facebook": 134,
+        "twitter": 547
+      },
+      "image_url": "https://i1.feedspot.com/4575131.jpg?t=1644907908"
+    },
+    {
+      "title": "The Spectator",
+      "feed_url": "https://blog.shakirm.com/",
+      "website_url": "https://blog.shakirm.com/",
+      "description": "Blog by Shakir Mohamed, a Research Scientist in Statistical Machine Learning. Bayesian reasoning, variational inference, deep learning, reinforcement learning, AI. South African.",
+      "followers": {
+        "twitter": 41700
+      },
+      "image_url": "https://i1.feedspot.com/4372128.jpg?t=1615180186"
+    },
+    {
+      "title": "Ayasdi - Artificial Intelligence, Machine Intelligence & Machine Learning",
+      "feed_url": "https://www.ayasdi.com/feed/",
+      "website_url": "https://www.symphonyai.com/resources/",
+      "description": "Expand your knowledge about artificial intelligence with our educational articles about AI, intelligent applications, machine intelligence and big data.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4575126.jpg?t=1644909008"
+    },
+    {
+      "title": "Tech Ladder",
+      "feed_url": "https://www.techladder.in/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://www.techladder.in/machinelearning/posts",
+      "description": "This is a blogging site where you will find posts on latest technology. Also you will find the latest news that is happening in the IT industry.",
+      "followers": {
+        "facebook": 417,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/4954389.jpg?t=1615180251"
+    },
+    {
+      "title": "Springboard Blog \u00bb Machine Learning",
+      "feed_url": "https://www.springboard.com/blog/category/ai-machine-learning/feed/",
+      "website_url": "https://www.springboard.com/blog/tag/ai/",
+      "description": "At Springboard, we offer an educational experience that empowers our students to thrive in this new world order. We believe that education should prepare us for the real world and that working on meaningful projects under the guidance of industry experts is one of the best ways to get there. Visit our machine learning blog to fast-track your career in ML.",
+      "followers": {
+        "facebook": 56700,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5284616.jpg?t=1622022854"
+    },
+    {
+      "title": "Oracle \u00bb Oracle Machine Learning Blog",
+      "feed_url": "https://blogs.oracle.com/machinelearning/compendium/rss",
+      "website_url": "https://blogs.oracle.com/machinelearning/",
+      "description": "This is a Machine Learning Blog by Oracle. Learn about Oracle Machine Learning for Oracle Database and Big Data, on-premises, and Oracle Cloud.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 822000,
+        "instagram": 378500
+      },
+      "image_url": "https://i1.feedspot.com/5284607.jpg?t=1622025032"
+    },
+    {
+      "title": "Uber Engineering",
+      "feed_url": "https://eng.uber.com/tag/machine-learning/feed/",
+      "website_url": "https://www.uber.com/en-IN/blog/engineering/data/",
+      "description": "Uber Engineering is all about building scalable systems to move people and things to the physical places they need to go. Follow to keep up with machine learning articles from Uber Engineering.",
+      "followers": {
+        "facebook": 72400,
+        "twitter": 54900
+      },
+      "image_url": "https://i1.feedspot.com/4954368.jpg?t=1615180006"
+    },
+    {
+      "title": "Stats and Bots - Medium Blog",
+      "feed_url": "https://cube.dev/blog",
+      "website_url": "https://cube.dev/blog",
+      "description": "Practical guides on machine learning with applications and code. Latest trends in data science for professionals, as long as good old methods for beginners.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4746115.jpg?t=1615179953"
+    },
+    {
+      "title": "FastML",
+      "feed_url": "http://fastml.com/",
+      "website_url": "http://fastml.com/",
+      "description": "Everything related to machine learning and data science in general. This site is brought to you by the letters M and L. It is meant to tackle interesting topics in machine learning while being entertaining and easy to read and understand. The site is run by Zygmunt Zajac (pronounced Ziontz",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/150496.jpg?t=1644911030"
+    },
+    {
+      "title": "Microsoft Learn Blog \u00bb Machine Learning",
+      "feed_url": "https://learn.microsoft.com/en-us/archive/blogs/machinelearning/",
+      "website_url": "https://learn.microsoft.com/en-us/archive/blogs/machinelearning/",
+      "description": "The official blog for the Cortana Intelligence. Follow for news and updates from the team and the community. #MSAdvAnalytics",
+      "followers": {
+        "twitter": 20800
+      },
+      "image_url": "https://i1.feedspot.com/4431827.jpg?t=1615180335"
+    }
+  ]
+}

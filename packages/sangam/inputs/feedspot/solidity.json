@@ -1,0 +1,44 @@
+{
+  "category": "Solidity",
+  "source_url": "https://rss.feedspot.com/solidity_rss_feeds",
+  "feeds": [
+    {
+      "title": "Knoldus Blog \u00bb Solidity",
+      "feed_url": "https://blog.knoldus.com/tag/solidity/feed/",
+      "website_url": "https://blog.knoldus.com/tag/solidity/",
+      "description": "Knoldus helps drives transformation and builds businesses by enabling the right mix of future-ready technologies thus helping organizations grow and thrive in the digital age. Explore the solidity blog that will give you insights and perspectives to keep you updated with the industry.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 814,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5488493.jpg?t=1672921362"
+    },
+    {
+      "title": "Finxter Blog \u00bb Solidity",
+      "feed_url": "https://blog.finxter.com/category/solidity/feed/",
+      "website_url": "https://blog.finxter.com/category/solidity/",
+      "description": "Finxter aims to be your lever! Our single purpose is to increase humanity's collective intelligence via programming tutorials so you can leverage infinite computational intelligence to your success! Read the solidity blog and create your thriving coding business with the tips and information given also find tutorials on Python, freelancing, data science, machine learning, and Blockchain development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488491.jpg?t=1672921425"
+    },
+    {
+      "title": "Get Secure World \u00bb Solidity",
+      "feed_url": "https://www.getsecureworld.com/category/blog/smart-contract/solidity/feed/",
+      "website_url": "https://www.getsecureworld.com/category/blog/smart-contract/solidity/",
+      "description": "Welcome to Getsecureworld, your number one source of cyber security consultancy. We're dedicated to giving you the very best recommendations in information security, with a focus on web and mobile applications. Get detailed articles about solidity on the site that are updated regularly to help you gain knowledge and keep you updated with the industry news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488494.jpg?t=1672921609"
+    },
+    {
+      "title": "Solidity Lang Blog",
+      "feed_url": "https://blog.soliditylang.org/feed.xml",
+      "website_url": "https://soliditylang.org/blog/",
+      "description": "Solidity Lang Blog is a collection of articles about the Solidity language and compiler. Find the latest news and announcements on the site posted by the Solidity Team to keep you informed and updated.",
+      "followers": {
+        "twitter": 39900
+      },
+      "image_url": "https://i1.feedspot.com/5488489.jpg?t=1672921026"
+    }
+  ]
+}

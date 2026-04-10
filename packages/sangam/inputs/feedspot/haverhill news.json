@@ -1,0 +1,25 @@
+{
+  "category": "Haverhill News",
+  "source_url": "https://rss.feedspot.com/haverhill_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Haverhill Gazette",
+      "feed_url": "https://www.hgazette.com/search/?f=rss&t=article&c=news/local_news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.hgazette.com/",
+      "description": "The Haverhill Gazette (est.1821) is a weekly newspaper in Massachusetts, owned by Community Newspaper Holdings Inc. of Montgomery, Alabama.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5153480.jpg"
+    },
+    {
+      "title": "The Eagle-Tribune \u00bb Haverhill",
+      "feed_url": "https://www.eagletribune.com/search/?f=rss&t=article&c=news/haverhill&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.eagletribune.com/news/haverhill/",
+      "description": "The two-time Pulitzer Prize-winning Eagle-Tribune covers the Merrimack Valley of Massachusetts and southern New Hampshire. Find news stories from the Haverhill edition.",
+      "followers": {
+        "facebook": 36800,
+        "twitter": 34100
+      },
+      "image_url": "https://i1.feedspot.com/5153481.jpg?t=1589892925"
+    }
+  ]
+}

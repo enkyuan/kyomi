@@ -1,0 +1,58 @@
+{
+  "category": "South Carolina Political",
+  "source_url": "https://rss.feedspot.com/south_carolina_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "South Carolina Public Radio \u00bb Politics",
+      "feed_url": "https://www.southcarolinapublicradio.org/tags/politics.rss",
+      "website_url": "https://www.southcarolinapublicradio.org/tags/politics",
+      "description": "Read daily commentary on politics and current affairs, in-depth analysis of daily updates by South Carolina Public Radio on Politics. South Carolina Public Radio was started in 1972 as a part of South Carolina ETV, the state's educational television agency. SCPR focuses on producing News, Music, Programs, and more",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5344515.jpg?t=1638430198"
+    },
+    {
+      "title": "FITSNews \u00bb SC Politics",
+      "feed_url": "https://www.fitsnews.com/category/sc-politics/feed/",
+      "website_url": "https://www.fitsnews.com/category/sc-politics/",
+      "description": "FITSNews focuses on the ongoing and recent matters and news from the political field, covering local and current affairs in the following section. FITSNews is the brainchild of South Carolina political consultant and former gubernatorial spokesman Will Folks.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 44500
+      },
+      "image_url": "https://i1.feedspot.com/5344514.jpg?t=1638430372"
+    },
+    {
+      "title": "Post and Courier \u00bb South Carolina Politics",
+      "feed_url": "https://www.postandcourier.com/search/?f=rss&t=article&c=politics/state_politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.postandcourier.com/politics/state_politics/",
+      "description": "The Post and Courier, South Carolina's largest newspaper and the winner of the 2015 Pulitzer Prize for Public Service cover the issues that matter the most to you. In the South Carolina Politics section get all the latest politics news from South Carolina, including coverage of the Statehouse and SC Legislature in Columbia.",
+      "followers": {
+        "facebook": 178400,
+        "twitter": 166400,
+        "instagram": 121100
+      },
+      "image_url": "https://i1.feedspot.com/5528679.jpg?t=1680004531"
+    },
+    {
+      "title": "Bradwarthen.com \u00bb Elections",
+      "feed_url": "https://bradwarthen.com/category/elections/feed/",
+      "website_url": "https://bradwarthen.com/category/elections/",
+      "description": "Brad Warthen is an ex-newspaperman, turned latter-day Mad Man. He started blogging in 2005 and was immediately addicted. He despises all political parties that actually exist, although he has proposed the creation of several parties of his own - the UnParty and the Energy Party most prominent among them. He is neither a liberal nor a conservative in the ways they are popularly defined these days.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5600312.jpg?t=1686902666"
+    },
+    {
+      "title": "Grand Strand Daily \u00bb Politics",
+      "feed_url": "https://www.grandstranddaily.com/category/politics/feed/",
+      "website_url": "https://www.grandstranddaily.com/category/politics/",
+      "description": "The focus of Grand Strand Daily is that publication will be local news and politics, as well as profiles of people and editorials on timely subjects. Get the latest news and updates on everything about politics and get to know about supreme court judgment and much more in the politics section.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5528677.jpg?t=1680004541"
+    }
+  ]
+}

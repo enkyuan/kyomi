@@ -1,0 +1,32 @@
+{
+  "category": "Deloitte",
+  "source_url": "https://rss.feedspot.com/deloitte_rss_feeds",
+  "feeds": [
+    {
+      "title": "Deloitte UK Tech Blog",
+      "feed_url": "https://medium.com/feed/@DeloitteUKTechBlog",
+      "website_url": "https://medium.com/@DeloitteUKTechBlog",
+      "description": "Read writings from Deloitte UK on Medium. Get an insight into the latest technologies being explored and developed by the enthusiasts and experts at Deloitte UK.",
+      "followers": {
+        "twitter": 73500
+      },
+      "image_url": "https://i1.feedspot.com/5432861.jpg?t=1660806470"
+    },
+    {
+      "title": "Deloitte Digital Connect",
+      "feed_url": "https://medium.com/feed/deloitte-digital-connect",
+      "website_url": "https://medium.com/deloitte-digital-connect",
+      "description": "Sharing experiences from participants on Deloitte Digital Connect, a five-month programme providing 32 charities with expertise and a network to support their digital development. A Deloitte 5M Futures initiative, in partnership with CAST.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5432860.jpg?t=1660806510"
+    },
+    {
+      "title": "Deloitte Middle East Matters",
+      "feed_url": "https://deloittemiddleeastmatters.com/feed/",
+      "website_url": "https://deloittemiddleeastmatters.com/",
+      "description": "A collection of blog posts from Deloitte Middle East professionals and thought leaders. Each of them will be covering a different topic, from a personal stance. Deloitte & Touche (M.E.) is among the region's leading professional services firms, providing audit, tax, consulting, and financial and risk advisory services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5275516.jpg?t=1620044260"
+    }
+  ]
+}

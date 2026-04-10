@@ -1,0 +1,41 @@
+{
+  "category": "ACL Injury",
+  "source_url": "https://rss.feedspot.com/acl_injury_rss_feeds",
+  "feeds": [
+    {
+      "title": "ACL Strong Blog",
+      "feed_url": "https://aclstrong.com/feed/",
+      "website_url": "https://aclstrong.com/blog/",
+      "description": "Get tips and strategies to ensure you protect your knees along with more information on ACL Injury and about preventing ACL injuries and other sports injuries. We help active people protect their knees, avoid injuries, and perform better so they can thrive in sports and life.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 803
+      },
+      "image_url": "https://i1.feedspot.com/5376874.jpg?t=1646226787"
+    },
+    {
+      "title": "Curovate Blog \u00bb ACL",
+      "feed_url": "https://curovate.com/blog/tag/acl/rss/",
+      "website_url": "https://curovate.com/blog/tag/acl/",
+      "description": "A blog for physical therapy advice and motivation after injury and surgery and information on topics like Anterior cruciate ligament (ACL) injury or surgery-related content. We at Curovate are a team of registered physical therapists, and engineers that strive to improve patient outcomes, satisfaction and engagement following orthopedic surgery.",
+      "followers": {
+        "facebook": 748,
+        "twitter": 53,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5376872.jpg?t=1646226188"
+    },
+    {
+      "title": "Accelerate ACL Blog",
+      "feed_url": "https://accelerateacl.com/feed/",
+      "website_url": "https://accelerateacl.com/acl-surgery-recovery-blog/",
+      "description": "The Accelerate ACL Blog provides tips and the latest research on how to speed up recovery from ACL surgery during all stages of the process - from time of injury to return to sport. Combining the latest ACL recovery science with the world's leading recovery technology to help you crush rehab milestones.",
+      "followers": {
+        "facebook": 517,
+        "twitter": 1000,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5376873.jpg?t=1646227582"
+    }
+  ]
+}

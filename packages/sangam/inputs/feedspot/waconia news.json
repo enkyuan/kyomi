@@ -1,0 +1,29 @@
+{
+  "category": "Waconia News",
+  "source_url": "https://rss.feedspot.com/waconia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sun Patriot \u00bb Waconia",
+      "feed_url": "https://www.hometownsource.com/search/?f=rss&t=article&c=sun_patriot/community/waconia&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.hometownsource.com/sun_patriot/community/waconia/",
+      "description": "Sun Patriot Newspapers is dedicated to informing citizens of Waconia and the Greater Carver County community. Follow this feed for the latest local news and happenings in Waconia, MN.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 482
+      },
+      "image_url": "https://i1.feedspot.com/5171973.jpg?t=1595064147"
+    },
+    {
+      "title": "Bring Me The News \u00bb Waconia",
+      "feed_url": "https://bringmethenews.com/.rss/full/tag/waconia",
+      "website_url": "https://bringmethenews.com/tag/waconia",
+      "description": "Bring Me The News is your one-stop-shop for the most important, interesting, and entertaining news and sports happening right now in Minnesota. Subscribe this feed to read the latest news and updates in Waconia, MN.",
+      "followers": {
+        "facebook": 240400,
+        "twitter": 49100,
+        "instagram": 20800
+      },
+      "image_url": "https://i1.feedspot.com/5171986.jpg?t=1595064219"
+    }
+  ]
+}

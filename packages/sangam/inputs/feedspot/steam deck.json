@@ -1,0 +1,28 @@
+{
+  "category": "Steam Deck",
+  "source_url": "https://rss.feedspot.com/steam_deck_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jsaux Blog",
+      "feed_url": "https://jsaux.com/blogs/news.atom",
+      "website_url": "https://jsaux.com/blogs/news/",
+      "description": "JSAUX is an electronics accessories supplier delivering power, data transit, audio/video connectivity, and productivity solutions to the market. JSAUX in-house team is in charge of dealing with everything, R&D, manufacturing, marketing, advertising, selling and customer support.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 9300,
+        "instagram": 29200
+      },
+      "image_url": "https://i1.feedspot.com/5538697.jpg?t=1681211536"
+    },
+    {
+      "title": "Steam Deck Life \u00bb Steam Deck News",
+      "feed_url": "https://steamdecklife.com/feed/",
+      "website_url": "https://steamdecklife.com/category/steam-deck-news/",
+      "description": "Steam Deck Life has you covered for all the latest Steam Deck news, tips, and tricks.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5538699.jpg?t=1681211408"
+    }
+  ]
+}

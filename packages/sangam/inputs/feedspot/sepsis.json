@@ -1,0 +1,41 @@
+{
+  "category": "Sepsis",
+  "source_url": "https://rss.feedspot.com/sepsis_rss_feeds",
+  "feeds": [
+    {
+      "title": "End Sepsis Blog",
+      "feed_url": "https://www.endsepsis.org/feed/",
+      "website_url": "https://www.endsepsis.org/our-blog/",
+      "description": "END SEPSIS is a movement of families and individuals who demand better infection education and hospital safety measures to ensure there are no more needles deaths from sepsis.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 1700,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5413896.jpg?t=1655986905"
+    },
+    {
+      "title": "Sepsis Research News",
+      "feed_url": "https://sepsisresearch.org.uk/feed/",
+      "website_url": "https://sepsisresearch.org.uk/news/",
+      "description": "The UK's sepsis research and awareness charity. Our main objective is to stop sepsis by funding vital medical research into the understanding and treatment of this potentially deadly condition. We also work hard to raise awareness of sepsis amongst medical professionals and members of the public.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2300,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5413910.jpg?t=1655988397"
+    },
+    {
+      "title": "The BMAS Blog \u00bb Sepsis",
+      "feed_url": "https://bmas.blog/category/sepsis/feed/",
+      "website_url": "https://bmas.blog/category/sepsis/",
+      "description": "This is the blog of the British Medical Acupuncture Society. The BMAS is a registered charity established to encourage the use and scientific understanding of acupuncture within medicine for the public benefit.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 980
+      },
+      "image_url": "https://i1.feedspot.com/5413909.jpg?t=1655988475"
+    }
+  ]
+}

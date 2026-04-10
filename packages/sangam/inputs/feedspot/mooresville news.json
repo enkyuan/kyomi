@@ -1,0 +1,17 @@
+{
+  "category": "Mooresville News",
+  "source_url": "https://rss.feedspot.com/mooresville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mooresville Tribune",
+      "feed_url": "https://mooresvilletribune.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://mooresvilletribune.com/news/",
+      "description": "The latest local and breaking news for Mooresville, N.C., southern Iredell County and the Lake Norman area, including weather, traffic, crime, sports, features and obituaries.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5157275.jpg?t=1590732473"
+    }
+  ]
+}

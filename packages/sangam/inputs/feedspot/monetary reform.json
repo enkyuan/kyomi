@@ -1,0 +1,45 @@
+{
+  "category": "Monetary Reform",
+  "source_url": "https://rss.feedspot.com/monetary_reform_rss_feeds",
+  "feeds": [
+    {
+      "title": "Uneasy Money",
+      "feed_url": "https://uneasymoney.com/feed/",
+      "website_url": "https://uneasymoney.com/",
+      "description": "David Glanser is an economist in the Washington DC area. His research and writing have been mostly on monetary economics and policy and the history of economics. Uneasy Money is a blog about monetary policy, which means it is also about monetary theory and macroeconomics.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4531953.jpg?t=1618405571"
+    },
+    {
+      "title": "The Money Illusion",
+      "feed_url": "https://feeds.feedburner.com/Themoneyillusion",
+      "website_url": "https://www.themoneyillusion.com/",
+      "description": "The Money Illusion is a highly regarded economics blog by Scott Sumner, who teaches at Bentley University. Through his blog, he popularized the idea of targeting the Nominal GDP, an idea which was later endorsed by the Federal Reserve.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/100947.jpg?t=1618404021"
+    },
+    {
+      "title": "West Midlands New Economics blog \u00bb Monetary reform",
+      "feed_url": "https://goodmorningamericaword.wordpress.com/category/monetary-reform/feed/",
+      "website_url": "https://goodmorningamericaword.wordpress.com/category/monetary-reform/",
+      "description": "WMNEG first met in 1994 to apply the ideas of the New Economics Foundation to the economy of Birmingham and the West Midlands. Since then we have developed our own unique response to the practical economic problems of the City and the Region through dialogue with many other organizations and bodies of opinion. We focus on economic activity designed to last and to meet people's basic needs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4955903.jpg?t=1621840648"
+    },
+    {
+      "title": "Cato Institute",
+      "feed_url": "https://feeds.cato.org/Cato-at-liberty",
+      "website_url": "https://www.cato.org/alt-m",
+      "description": "A blog devoted to exploring and promoting ideas for an alternative monetary future. Our goal is to reveal the shortcomings of today's centralized, bureaucratic, and discretionary monetary arrangements, and to bring serious consideration of real alternatives to the center stage of current monetary and financial reform debates.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4918572.jpg?t=1618405716"
+    }
+  ]
+}

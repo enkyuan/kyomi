@@ -1,0 +1,82 @@
+{
+  "category": "UK Geopolitics",
+  "source_url": "https://rss.feedspot.com/uk_geopolitics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Independent \u00bb World Politics",
+      "feed_url": "http://www.independent.co.uk/news/world/politics/rss",
+      "website_url": "https://www.independent.co.uk/news/world/politics",
+      "description": "Subscribe to keep up with articles from The Independent, an online newspaper that covers topics related to World Politics, geopolitics and news analysis.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/1038806.jpg?t=1607422790"
+    },
+    {
+      "title": "Daily Express \u00bb World News",
+      "feed_url": "https://feeds.feedburner.com/daily-express-world-news",
+      "website_url": "https://www.express.co.uk/news/world",
+      "description": "Daily Express is the Media/News Company in the UK. Get the latest world news, international news as well as breaking news on world affairs.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/3795720.jpg?t=1603890224"
+    },
+    {
+      "title": "The Sun \u00bb World News",
+      "feed_url": "https://www.thesun.co.uk/news/worldnews/feed/",
+      "website_url": "https://www.thesun.co.uk/news/worldnews/",
+      "description": "The Sun is a Media/News Company in London. Get all the latest news updates around the world as well as breaking stories, exclusives, videos and pictures on the topic-world news.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4721825.jpg?t=1603890191"
+    },
+    {
+      "title": "Oil Price",
+      "feed_url": "https://oilprice.com/rss/main",
+      "website_url": "https://oilprice.com/",
+      "description": "Oil Price is the most popular energy news site in the world. Our analysis focuses on Oil and Gas, Alternative Energy and Geopolitics. Get updates on crude oil prices & gas price charts. as well as energy news covering oil, petroleum, natural gas and investment advice.",
+      "followers": {
+        "facebook": 100000,
+        "twitter": 71800
+      },
+      "image_url": "https://i1.feedspot.com/4434332.jpg?t=1607422806"
+    },
+    {
+      "title": "Encyclopedia Geopolitica",
+      "feed_url": "https://encyclopediageopolitica.com/feed/",
+      "website_url": "https://encyclopediageopolitica.com/",
+      "description": "Encyclopedia Geopolitica is a collaborative effort to bring you thoughtful analytical briefings on world affairs. Contributors include Military officers, Geopolitical Intelligence analysts, Corporate Security professionals, Government officials, Academics and Journalists from around the globe. Topics cover diplomatic and foreign affairs, military developments, international relations, terrorism, armed conflict, espionage and the broader elements of statecraft.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 852
+      },
+      "image_url": "https://i1.feedspot.com/4726262.jpg?t=1615465457"
+    },
+    {
+      "title": "Ludic Geopolitics",
+      "feed_url": "https://ludicgeopolitics.wordpress.com/feed/",
+      "website_url": "https://ludicgeopolitics.wordpress.com/",
+      "description": "We are a group of researchers from the universities of Portsmouth, Exeter and Royal Holloway, looking at the relationship between war games, childhood and play. On this blog, we share our thoughts and latest research, focussing on how contemporary geopolitics are expressed and enacted through play.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4720892.jpg?t=1609943593"
+    },
+    {
+      "title": "Geographical \u00bb Geopolitics",
+      "feed_url": "https://geographical.co.uk/geopolitics/feed",
+      "website_url": "https://geographical.co.uk/geopolitics/",
+      "description": "Geographical is the magazine of The Royal Geographical Society in London. It was established in 1935, and publishes articles about culture, travel, science, exploration, wildlife, and the environment. Stay tuned to get the latest updates on Geopolitics.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 35000,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4720710.jpg?t=1620228460"
+    }
+  ]
+}

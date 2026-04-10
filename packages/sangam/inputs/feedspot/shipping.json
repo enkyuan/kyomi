@@ -1,0 +1,578 @@
+{
+  "category": "Shipping",
+  "source_url": "https://rss.feedspot.com/shipping_rss_feeds",
+  "feeds": [
+    {
+      "title": "FlagShip Blog",
+      "feed_url": "https://www.flagshipcompany.com/blog/feed/",
+      "website_url": "https://www.flagshipcompany.com/blog/",
+      "description": "FlagShip is one of Canada's leading online discount shipping solutions that helps small to mid-sized businesses save money and time on their shipping. FlagShip is a convenient one-stop shipping solution that makes it easy to compare brand-name courier rates, choose a preferred courier, and save money on every shipment.",
+      "followers": {
+        "facebook": 882,
+        "instagram": 374
+      },
+      "image_url": "https://i1.feedspot.com/4659327.jpg"
+    },
+    {
+      "title": "Lloyds List",
+      "feed_url": "https://feeds.feedblitz.com/lloyds-list",
+      "website_url": "https://www.lloydslist.com/",
+      "description": "Lloyd's List is the leading source for the maritime industry covering all sectors of the shipping world including tankers, containers, ports and dry bulk.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 68400
+      },
+      "image_url": "https://i1.feedspot.com/4409656.jpg?t=1617283492"
+    },
+    {
+      "title": "Shipping and Freight Resource - Educational Blog about Shipping and Freight",
+      "feed_url": "https://www.shippingandfreightresource.com/feed/?x=1",
+      "website_url": "https://www.shippingandfreightresource.com/",
+      "description": "This is an educational site that endeavours to explain and discuss interactively, practically and in simple terms, the processes and procedures involved in the shipping and freight industry. This blog covers a variety of topics ranging from imports to exports to hazardous goods to types of containers to types of ships, and other items of interest relating to the shipping, freight, container.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4640421.jpg?t=1616490734"
+    },
+    {
+      "title": "Ship Law Log",
+      "feed_url": "https://www.shiplawlog.com/feed/",
+      "website_url": "https://www.shiplawlog.com/",
+      "description": "Ship Law Log is written by the London Shipping Group at Reed Smith and offers updates & insights into shipping issues. Reed Smith is a dynamic international law firm dedicated to helping clients move their businesses forward. With an inclusive culture and innovative mindset, we deliver smarter, more creative legal services that drive better outcomes for our clients.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/4659276.jpg?t=1659502702"
+    },
+    {
+      "title": "ShipRocket Blog | Guide to E-Commerce Shipping Solutions",
+      "feed_url": "https://www.shiprocket.in/blog/category/ecommerce-shipping/feed/",
+      "website_url": "https://www.shiprocket.in/blog/category/ecommerce-shipping/",
+      "description": "Shiprocket, a product of Big Foot Retail Solution Pvt. Ltd., is India's best logistics software, which offers you automated shipping solution. Using this, you can ship anywhere in India and abroad using the best courier company.",
+      "followers": {
+        "facebook": 195600,
+        "twitter": 8300,
+        "instagram": 48900
+      },
+      "image_url": "https://i1.feedspot.com/4653484.jpg?t=1617283521"
+    },
+    {
+      "title": "The uShip Blog",
+      "feed_url": "https://ushipblogsubd.wpengine.com/feed/",
+      "website_url": "https://www.uship.com/blog/",
+      "description": "uShip is the world's largest and most trusted transportation marketplace, primarily serving the freight, household goods and vehicle shipping markets. Our shipping marketplace helps you connect with trusted, feedback-rated service providers of all kinds-large companies, small fleets, single-truck owners and even roadtrippers that compete for your business and offer extra cargo space at a discount.",
+      "followers": {
+        "facebook": 71400,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4654144.jpg"
+    },
+    {
+      "title": "LATESHIPMENT.COM Blog",
+      "feed_url": "https://www.lateshipment.com/blog/feed/",
+      "website_url": "https://www.lateshipment.com/blog/",
+      "description": "LateShipment.com makes your shipping refund claim process effortless by tracking and automatically requesting refunds from FedEx and UPS for all eligible shipments. Automate Your Shipping Refunds!",
+      "followers": {
+        "facebook": 409,
+        "twitter": 737
+      },
+      "image_url": "https://i1.feedspot.com/4659930.jpg"
+    },
+    {
+      "title": "Worldwide Brands Blog",
+      "feed_url": "https://www.worldwidebrands.com/blog/feed",
+      "website_url": "https://www.worldwidebrands.com/blog/",
+      "description": "A Resource for Tips on Dropshipping, Working With Wholesale Suppliers, Creating an Online Store, Selling on EBay , Selling on Amazon and More!",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4659612.jpg?t=1617283975"
+    },
+    {
+      "title": "Shipway",
+      "feed_url": "https://blog.shipway.com/feed/",
+      "website_url": "https://blog.shipway.com/",
+      "description": "Covers articles about E-commerce Shipping, shipping automation, and tracking services to e-commerce merchants for creating a better post-sales experience for the customers.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5324210.jpg?t=1632307116"
+    },
+    {
+      "title": "Eshipper Blog",
+      "feed_url": "https://www.eshipper.com/feed/",
+      "website_url": "https://www.eshipper.com/blog/",
+      "description": "Read updated information on all shipping services such as courier, LTL, air freight, Canada Shipping, international shipping, etc. here. Eshipper is your integrated shipping solution in the Cloud.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5404466.jpg?t=1653649072"
+    },
+    {
+      "title": "ShipHawk",
+      "feed_url": "https://blog.shiphawk.com/rss.xml",
+      "website_url": "https://blog.shiphawk.com/",
+      "description": "ShipHawk is a shipping software that helps automate order fulfillment and eliminate worker decisions so businesses can take control of their warehouse operations. Check out the Official ShipHawk Blog. Tens of thousands of readers rely on ShipHawk for everything they need to know to master transportation management, shipping software, and eCommerce.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4659530.jpg?t=1617284038"
+    },
+    {
+      "title": "Refund Retriever Blog",
+      "feed_url": "https://www.refundretriever.com/feed",
+      "website_url": "https://www.refundretriever.com/blog/",
+      "description": "Refund Retriever will automatically detect issues with your shipments, apply for refunds, and verify those refunds appear. UPS and FedEx Refunds.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 743,
+        "instagram": 483
+      },
+      "image_url": "https://i1.feedspot.com/4987251.jpg?t=1617284043"
+    },
+    {
+      "title": "Reliable Couriers Blog",
+      "feed_url": "https://www.reliablecouriers.com/feed",
+      "website_url": "https://www.reliablecouriers.com/blog",
+      "description": "Reliable Couriers is a same day courier service company that is located with offices all throughout the western United States. Browse through the latest courier and delivery logistics news stories, technology innovation, warehouse automation news and more",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5160980.jpg"
+    },
+    {
+      "title": "Xeneta Blog",
+      "feed_url": "https://www.xeneta.com/blog/rss.xml",
+      "website_url": "https://www.xeneta.com/blog",
+      "description": "Xeneta is the leading ocean freight price benchmarking and market intelligence platform transforming the shipping and logistics industry. Xeneta's turnkey yet powerful reporting and analytic platform provides shippers and freight forwarders the data they need in real time to compare their shipping prices against the world's largest database of contracted rates.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 4300,
+        "instagram": 480
+      },
+      "image_url": "https://i1.feedspot.com/4647101.jpg?t=1616491766"
+    },
+    {
+      "title": "More Than Shipping Blog",
+      "feed_url": "https://www.morethanshipping.com/feed/",
+      "website_url": "https://www.morethanshipping.com/topics/news/",
+      "description": "Over the last 14 years, MTS has been providing highly efficient cargo services for a variety of industries including petrochemical, manufacturing and others. MTS Logistics is a company that offers a full range of logistical options, meeting the demands of an ever growing range of clients from all over the world.",
+      "followers": {
+        "facebook": 52000,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4640450.jpg?t=1616491650"
+    },
+    {
+      "title": "West Coast Shipping Blog",
+      "feed_url": "https://www.wcshipping.com/blog/rss.xml",
+      "website_url": "https://www.wcshipping.com/blog",
+      "description": "West Coast Shipping provides shipping of priceless classic and exotic cars has drawn consumers, dealerships and wholesalers alike to utilize their car shipping services. They offer a full range of logistics solutions, including export and import services by sea or air.",
+      "followers": {
+        "facebook": 120300,
+        "twitter": 743,
+        "instagram": 22600
+      },
+      "image_url": "https://i1.feedspot.com/4643519.jpg?t=1616492617"
+    },
+    {
+      "title": "ShippingSolutions.com Blog",
+      "feed_url": "https://www.shippingsolutions.com/blog/rss.xml",
+      "website_url": "https://www.shippingsolutions.com/blog",
+      "description": "Shipping Solutions software helps you create your international shipping paperwork quickly and easily while staying compliant with U.S. export regulations. The blog is written by import-export professionals with in-depth knowledge and experience in these areas and the topics cover Automated Export Systems, Dangerous Goods/Hazmat, Export Basics, Export Compliance, Export Finance, and many more.",
+      "followers": {
+        "facebook": 29,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/5174305.jpg?t=1623821304"
+    },
+    {
+      "title": "Airoluggage Blog",
+      "feed_url": "https://blog.airoluggage.com/feed/",
+      "website_url": "https://blog.airoluggage.com/",
+      "description": "Your luggage delivered Door-2-Door. We will pick your luggage up straight from your home and deliver it to your hotel allowing you to travel stress-free. Stay Updated On The Best Travel Deals and Tips!",
+      "followers": {
+        "facebook": 814,
+        "twitter": 248,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5155335.jpg"
+    },
+    {
+      "title": "Freightera Blog",
+      "feed_url": "https://www.freightera.com/blog/feed/",
+      "website_url": "https://www.freightera.com/blog/",
+      "description": "Blog about freight and shipping, LTL & truckload freight, and tips on how to avoid extra charges. Freightera is an online freight marketplace that makes freight shipping transparent and easy.",
+      "followers": {
+        "facebook": 346,
+        "twitter": 814
+      },
+      "image_url": "https://i1.feedspot.com/4644407.jpg?t=1669795920"
+    },
+    {
+      "title": "LA LUNA shipping Blog",
+      "feed_url": "https://laluna.coop/blog/feed/",
+      "website_url": "https://laluna.coop/blog/",
+      "description": "LA LUNA shipping is the urgent courier and national and international transport cooperative that is changing the way of managing all types of shipments and transport that you can need, from an envelope to a container, from urban shipments to air, land and sea cargo transportation .",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2500,
+        "instagram": 517
+      },
+      "image_url": "https://i1.feedspot.com/4659343.jpg"
+    },
+    {
+      "title": "The Delivery Group",
+      "feed_url": "https://thedeliverygroup.co.uk/feed/",
+      "website_url": "https://thedeliverygroup.co.uk/news/",
+      "description": "Stay up to speed with the Delivery Group, service updates, industry knowledge, and the latest company news. Check out the news to know more.",
+      "followers": {
+        "twitter": 457
+      },
+      "image_url": "https://i1.feedspot.com/4989847.jpg?t=1606213599"
+    },
+    {
+      "title": "Links Courier Blog",
+      "feed_url": "https://linkscourier.com/blog/feed/",
+      "website_url": "https://linkscourier.com/blog/",
+      "description": "Links Courier provide 24 hour same day courier service and parcel delivery for London, UK & Europe. Follow to get the updates from Links Courier.",
+      "followers": {
+        "facebook": 23100,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5055300.jpg"
+    },
+    {
+      "title": "Gallagher Transport International Blog",
+      "feed_url": "https://gallaghertransport.com/feed/",
+      "website_url": "https://gallaghertransport.com/import-broker-blog/",
+      "description": "Your Goods Are in Good Hands with Gallagher Transport At Gallagher Transport the client always comes first. Our success is measured by your success. Our goal is to make your job easier by staying on top of communication and deadlines to save you time and money by ensuring your valuable shipments are delivered.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4768823.jpg?t=1509715847"
+    },
+    {
+      "title": "Modalyst Blog",
+      "feed_url": "https://www.modalyst.co/blog/feed/",
+      "website_url": "https://www.modalyst.co/blog/",
+      "description": "Get the latest news and tips on drop shipping and running your own E-Commerce business.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4659626.jpg?t=1617283525"
+    },
+    {
+      "title": "ShippingEasy - eCommerce & Shipping Blog",
+      "feed_url": "http://shippingeasy.com/blog/feed/",
+      "website_url": "https://shippingeasy.com/blog/",
+      "description": "ShippingEasy provides the simplest online shipping app for online sellers. Its cloud-based shipping solution offers the cheapest USPS postage rates and the ability to plug in existing UPS/FedEx accounts. ShippingEasy integrates with leading marketplaces, shopping carts, and ecommerce platforms to allow order fulfillment and tracking data to populate in real time across all systems.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4654116.jpg?t=1617283512"
+    },
+    {
+      "title": "ShipWorks , Parcel Shipping Info for Ecommerce Sellers and Online Retailers Blog",
+      "feed_url": "https://www.shipworks.com/blog/feed/",
+      "website_url": "https://www.shipworks.com/blog/",
+      "description": "The ShipWorks Blog provides shipping tips for ecommerce sellers, online retailers and warehouse shippers.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4659331.jpg"
+    },
+    {
+      "title": "LILLY Associates Blog",
+      "feed_url": "https://www.shiplilly.com/blog/feed/",
+      "website_url": "https://www.shiplilly.com/blog/",
+      "description": "Leader in international container shipping and logistics, specializing in ocean freight. The latest international transportation news and trends. Plus articles containing helpful tips that will impact your business decisions.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4659336.jpg"
+    },
+    {
+      "title": "Kimipost Blog",
+      "feed_url": "https://kimipost.com/feed/",
+      "website_url": "https://kimipost.com/category/blog/",
+      "description": "We are a leading shipping and fulfillment service provider in the Asia Pacific, known for our reliability and high satisfaction rates. With four years in the market, we have established warehouses in major Indian cities like Mumbai, Delhi, Gurgaon, Bangalore, Pune, Kolkata, Hyderabad, and Ahmedabad, along with micro fulfillment centers across India. Our extensive domestic network covers significant locations in India, and through our group company, Kimipost, we service over five countries and territories globally, specializing in fast and efficient distribution services.",
+      "followers": {
+        "facebook": 64,
+        "instagram": 433
+      },
+      "image_url": "https://i1.feedspot.com/7269331.jpg?t=1709877608"
+    },
+    {
+      "title": "SaleHoo Blog",
+      "feed_url": "https://www.salehoo.com/blog/rss",
+      "website_url": "https://www.salehoo.com/blog",
+      "description": "A blog about eCommerce, wholesale sourcing, and running an online business through eBay, Amazon, and SaleHoo stores. SaleHoo is an online sourcing directory that helps buyers and sellers all over the world find wholesale products to resell or keep for themselves.",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4659908.jpg?t=1675074115"
+    },
+    {
+      "title": "Wholesale2B Blog",
+      "feed_url": "https://blog.wholesale2b.com/feed/",
+      "website_url": "https://blog.wholesale2b.com/",
+      "description": "A perfect place to learn about Dropship. Our mission is to provide a dropship service that delivers results. We make sure that your orders are processed on time so you can keep your customers happy.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4659616.jpg?t=1619170992"
+    },
+    {
+      "title": "Freight Club Blog",
+      "feed_url": "https://www.freightclub.com/blog?format=rss",
+      "website_url": "https://www.freightclub.com/blog",
+      "description": "Freight Club is a premier shipping automation tool for furniture retailers, manufacturers & designers. Freight Club Blog features fundamentals of dropshipping, eco-friendly shipping, and shipping smart.",
+      "followers": {
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5320203.jpg?t=1669795993"
+    },
+    {
+      "title": "FreightPros Blog",
+      "feed_url": "https://www.freightpros.com/blog/feed/",
+      "website_url": "https://www.freightpros.com/blog/",
+      "description": "FreightPros provides best-in-class freight services combined with deeply discounted freight pricing. We also provide leading web-based freight solutions for small to medium sized business shippers. FreightPros is a licensed freight broker that takes a proactive, rather than reactive approach to LTL and full truckload freight management.",
+      "followers": {
+        "facebook": 330,
+        "twitter": 319
+      },
+      "image_url": "https://i1.feedspot.com/4647124.jpg"
+    },
+    {
+      "title": "Metti International",
+      "feed_url": "https://mettiintl.com/feed/",
+      "website_url": "https://mettiintl.com/blog/",
+      "description": "Covers articles related to trucking industry, international and domestic car shipping, and vehicle transport. Metti International is a two-time award-winning broker providing reliable international and domestic car shipping services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5346813.jpg?t=1638261673"
+    },
+    {
+      "title": "Spratt Personal Shipping Blog",
+      "feed_url": "https://www.sprattpersonalshipping.com/blogs/feed/",
+      "website_url": "https://www.sprattpersonalshipping.com/blogs/",
+      "description": "Spratt Transport Services - Bonded warehousing & transport freight company based in Dublin, Ireland offering excellent distribution throughout Ireland & rest of Europe, storage solutions, deconsolidation of shipments into Ireland. Specialists in personal shipping services such as personal effects, household moves abroad, excess baggage and motor vehicle / car shipping worldwide.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 945,
+        "instagram": 959
+      },
+      "image_url": "https://i1.feedspot.com/4647639.jpg?t=1616492381"
+    },
+    {
+      "title": "Khaled Jaohar",
+      "feed_url": "https://khaledjaohar.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://khaledjaohar.blogspot.com/",
+      "description": "Jaohar UK is a company based in the United Kingdom specialising in providing B2B services to the worldwide shipping industry. We work in partnership with offices and agents around the globe to ensure the best possible service for our clients.",
+      "followers": {
+        "facebook": 108400,
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/5038129.jpg"
+    },
+    {
+      "title": "ShipStation - The Daily Shipper Blog",
+      "feed_url": "http://www.shipstation.com/blog/feed/",
+      "website_url": "https://www.shipstation.com/blog/",
+      "description": "ShipStation leads the e-commerce world with our web-based software designed to make e-commerce retailers exceptionally efficient at processing, fulfilling, and shipping their orders from all the most popular marketplaces and shopping carts using all the top carriers.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 14400,
+        "instagram": 27300
+      },
+      "image_url": "https://i1.feedspot.com/4653464.jpg?t=1617283504"
+    },
+    {
+      "title": "AGL",
+      "feed_url": "https://apexgloballogistics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://apexgloballogistics.blogspot.com/",
+      "description": "Apex Global Logistics Cargo L.L.C established in 2013 in Abu Dhabi by a group of highly hands on experienced professionals in the field of freight forwarding / shipping, provide specialized and customized logistics solution to our customers.",
+      "followers": {
+        "facebook": 860,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/4989850.jpg?t=1550476196"
+    },
+    {
+      "title": "Transporteca Blog",
+      "feed_url": "https://transporteca.co.uk/feed/",
+      "website_url": "https://transporteca.co.uk/blog/",
+      "description": "Compare and book international freight forwarding and transportation solutions. Find the best price, transit time, and view customers feedback. At Transporteca, we believe it should be simple, swift, and straightforward to book international freight online.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 681,
+        "instagram": 55
+      },
+      "image_url": "https://i1.feedspot.com/4659079.jpg?t=1623733413"
+    },
+    {
+      "title": "Drop Ship Lifestyle Blog",
+      "feed_url": "https://www.dropshiplifestyle.com/blog/feed/",
+      "website_url": "https://www.dropshiplifestyle.com/blog/",
+      "description": "Drop Ship Lifestyle blog is one that focuses on drop shipping tips, strategies, and case studies. Learn how to create a real business with the help of the blog, presented by the Drop Ship Lifestyle. Drop Ship Lifestyle was created to give students the knowledge and tools necessary to create freedom through entrepreneurship by leveraging the power of Drop Shipping.",
+      "followers": {
+        "facebook": 257700,
+        "twitter": 1500,
+        "instagram": 152200
+      },
+      "image_url": "https://i1.feedspot.com/4659271.jpg?t=1619170983"
+    },
+    {
+      "title": "Bigship Blog",
+      "feed_url": "https://blog.bigship.direct/",
+      "website_url": "https://blog.bigship.direct/",
+      "description": "Get all updates and tips for couriers and logistics-related blogs at Bigship like Ecommerce, B2B, Hyperlocal, and Document Courier and grow your idea and business.Bigship is a business hub that offers you solutions for all your e-commerce business needs - Digital Marketing, Call Centre, and Automated Shipping.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 54,
+        "instagram": 33900
+      },
+      "image_url": "https://i1.feedspot.com/5273100.jpg?t=1619443460"
+    },
+    {
+      "title": "Baum Shipping Blogs",
+      "feed_url": "https://www.baumshipping.com/feed/",
+      "website_url": "https://www.baumshipping.com/blogs/",
+      "description": "ETC International Freight System is independently owned and operated, and although we're apart of an industry that is highly regulated, we help you close the gap to manage your shipments from inception to execution. We provide services such as air freight services, ocean freight services, specialized shipping services etc.",
+      "followers": {
+        "facebook": 628,
+        "twitter": 230
+      },
+      "image_url": "https://i1.feedspot.com/4647115.jpg?t=1616492350"
+    },
+    {
+      "title": "John Good Group",
+      "feed_url": "https://johngoodgroup.co.uk/feed/",
+      "website_url": "https://johngoodgroup.co.uk/",
+      "description": "John Good Shipping are one of the UK's most affordable shipping agents, freight forwarders & shipping companies. We offer a range of freight services! Check out the latest industry insight, opinion, advice, and best practice from the team at John Good Logistics Limited.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4659643.jpg"
+    },
+    {
+      "title": "Stamps.com Blog",
+      "feed_url": "http://blog.stamps.com/feed/",
+      "website_url": "https://www.stamps.com/articles/",
+      "description": "Provides info on the mailing and shipping industry for small business owners. Read articles, advice and tips to help lower your postage costs.",
+      "followers": {
+        "facebook": 89700,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4659282.jpg?t=1617283496"
+    },
+    {
+      "title": "ShipMonk Blog \u00bb Content Hub",
+      "feed_url": "https://www.shipmonk.com/resources/content-hub/",
+      "website_url": "https://www.shipmonk.com/resources/content-hub/",
+      "description": "ShipMonk's Blog with information about the latest changes in fulfillment, shipping, logistics, drop shipping, inventory management software, and more!",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4659320.jpg?t=1617283529"
+    },
+    {
+      "title": "Shippo Blog",
+      "feed_url": "https://goshippo.com/blog/feed",
+      "website_url": "https://goshippo.com/blog",
+      "description": "Latest news from USPS, FedEx, UPS, DHL, and more carriers, plus shipping tips, e-commerce best practices, and advice for retailers and e-commerce businesses of all sizes. Shippo is multi-carrier shipping software for e-commerce businesses.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311036.jpg?t=1628580168"
+    },
+    {
+      "title": "FreightCenter Blog",
+      "feed_url": "https://blog.freightcenter.com/rss.xml",
+      "website_url": "https://www.freightcenter.com/freight-shipping-resources/",
+      "description": "Get access to freight industry news, money saving tips and freight shipping tricks from the desk of the the freight industry's leading 3PL.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4902156.jpg?t=1607318400"
+    },
+    {
+      "title": "Pacejet",
+      "feed_url": "https://blog.pacejet.com/rss.xml",
+      "website_url": "https://go3g.com/resources/?_resource_filter=article",
+      "description": "Pacejet is the preferred cloud-based platform for enterprise shipping. With Pacejet, customers grow their businesses with better service, lower costs, continuous delivery improvement. Integrates with any software or cloud ERP.",
+      "followers": {
+        "twitter": 477
+      },
+      "image_url": "https://i1.feedspot.com/4647271.jpg?t=1616491801"
+    },
+    {
+      "title": "Eurosender Blog",
+      "feed_url": "https://blog.eurosender.com/feed/",
+      "website_url": "https://blog.eurosender.com/",
+      "description": "Eurosender Ltd is a leading digital platform for booking logistics services in Europe. At the core of our service is the belief that logistics should be simple and transparent. With Eurosender, booking requires just a few clicks and should take less than 3 minutes from start to finish.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 543,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4659365.jpg?t=1617283983"
+    },
+    {
+      "title": "Shipping Today, the blog about shipping and ports",
+      "feed_url": "https://shippingtoday.eu/feed/",
+      "website_url": "https://shippingtoday.eu/",
+      "description": "The aim of this Shipping Today blog: a good discussion on better maritime transport, personal views by Olaf Merk.",
+      "followers": {
+        "facebook": 149,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4659074.jpg?t=1536568027"
+    },
+    {
+      "title": "Air Sea Containers Compliance Blog",
+      "feed_url": "https://airseacontainers.com/blog/feed/",
+      "website_url": "https://airseacontainers.com/blog",
+      "description": "Learn more about shipping containers, hazmat packaging, custom boxes for UN and non UN use. With over 35 years of experience, we operate worldwide, providing dangerous goods packaging solutions & expert advice to shippers.",
+      "followers": {
+        "facebook": 25,
+        "twitter": 909
+      },
+      "image_url": "https://i1.feedspot.com/4659306.jpg"
+    },
+    {
+      "title": "Secureship.ca Blog",
+      "feed_url": "https://secureship.ca/blog/syndication.axd",
+      "website_url": "https://secureship.ca/blog",
+      "description": "Secureship\u00ae offers an online service that helps businesses and organizations ship more efficiently and affordably. Your source for all things shipping - savings, best practices, and more!",
+      "followers": {
+        "facebook": 987,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4659361.jpg?t=1617284047"
+    },
+    {
+      "title": "ParcelHero",
+      "feed_url": "https://www.parcelhero.com/blog/feed",
+      "website_url": "https://www.parcelhero.com/",
+      "description": "ParcelHero is the UK's leading parcel delivery company. ParcelHero offers express, timed and economy parcel delivery services to the UK and over 220 countries worldwide, from the world's largest carriers; DHL, UPS & TNT. Competitive prices, fast transit times, and good old-fashioned customer care means that we offer you a reliable courier service that you will simply LOVE.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4654152.jpg"
+    }
+  ]
+}

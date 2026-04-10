@@ -1,0 +1,636 @@
+{
+  "category": "Pakistan News",
+  "source_url": "https://rss.feedspot.com/pakistan_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hamariweb.com",
+      "feed_url": "https://enews.hamariweb.com/feed/",
+      "website_url": "https://enews.hamariweb.com/",
+      "description": "Read the latest Pakistani and International News Updates, and updates on Sports News, Business News, Showbiz News, Commerce News, PSX Market News, Science & Tech News, and much more. Hamariweb.com is Pakistan's most credible info portal, offering helpful info for everyday life.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5334209.jpg?t=1634793446"
+    },
+    {
+      "title": "Dawn",
+      "feed_url": "https://www.dawn.com/feeds/home",
+      "website_url": "https://www.dawn.com/",
+      "description": "Check out the Latest and Top News from Pakistan and around the world. Dawn is your window to the latest news, analysis, and features from Pakistan, South Asia, and the world.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 1400000,
+        "instagram": 375900
+      },
+      "image_url": "https://i1.feedspot.com/5122666.jpg?t=1664963696"
+    },
+    {
+      "title": "UrduPoint",
+      "feed_url": "https://www.urdupoint.com/en/sitemap/news.rss",
+      "website_url": "https://www.urdupoint.com/",
+      "description": "The largest Urdu web site of the world, Urdu News, Urdu Poetry, Horoscope, Technology, Weather, Business, Sports, Health, Islam, Women, Show-biz, Addab, Islamic Names, Articles and Features. UrduPoint is the only Urdu web site which has extended a major contributing hand in promoting the national language of Pakistan, with its numerous amounts of sections presented in Urdu language.",
+      "followers": {
+        "facebook": 15500000,
+        "twitter": 469700,
+        "instagram": 813000
+      },
+      "image_url": "https://i1.feedspot.com/5333999.jpg?t=1664956029"
+    },
+    {
+      "title": "BOL News",
+      "feed_url": "https://www.bolnews.com/feed/",
+      "website_url": "https://www.bolnews.com/",
+      "description": "Breaking News, Top headlines Today, Top News Stories, Entertainment News, Business News & more at BOL News; The official News Website of BOL Media Group. Since its inception, Bol Media Group has taken the media industry by storm by offering a plethora of never-seen-before characteristics.",
+      "followers": {
+        "facebook": 6700000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5334208.jpg?t=1664956541"
+    },
+    {
+      "title": "Express News",
+      "feed_url": "https://www.express.pk/feed/",
+      "website_url": "https://www.express.pk/",
+      "description": "Visit Express News for latest Urdu news, Pakistan news, breaking news, current news in Urdu from Pakistan, World, Sports, Business, Cricket, Politics and Weather only at Express News Channel. Express News is Pakistan's most visited news and current affairs website.",
+      "followers": {
+        "facebook": 20400000,
+        "twitter": 4200000,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4636334.jpg?t=1664956426"
+    },
+    {
+      "title": "Aaj News",
+      "feed_url": "https://www.aaj.tv/feeds/latest-news",
+      "website_url": "https://www.aaj.tv/",
+      "description": "Aaj News is committed to bringing accurate and authentic news coverage from across Pakistan. With extensive coverage on political and social issues and neutral analysis of current affairs, Aaj News has always managed to be fair.",
+      "followers": {
+        "twitter": 269
+      },
+      "image_url": "https://i1.feedspot.com/5334032.jpg?t=1634737199"
+    },
+    {
+      "title": "Pakistani Showbiz",
+      "feed_url": "https://www.pakshowbiz.com/feed/",
+      "website_url": "https://www.pakshowbiz.com/",
+      "description": "PakShowbiz is a website dedicated solely to Pakistani entertainment whether it is fashion, drama, film, or music. The website has a team of in-house writers who scour the country for the best talent.",
+      "followers": {
+        "facebook": 214200,
+        "twitter": 723,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5599686.jpg?t=1686833128"
+    },
+    {
+      "title": "Mashriq TV",
+      "feed_url": "https://mashriqtv.pk/feed/",
+      "website_url": "https://mashriqtv.pk/",
+      "description": "Mashriq Latest Urdu News Provides Latest Breaking News in Urdu from Pakistan, Khyber Pakhtunkhwa, Peshawar & all over the world. Daily Mashriq has been keeping its readers informed about all the important news of Pakistan for the last 54 years.",
+      "followers": {
+        "facebook": 824200,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5334046.jpg?t=1634737288"
+    },
+    {
+      "title": "Chitral Times",
+      "feed_url": "https://chitraltimes.com/feed",
+      "website_url": "https://chitraltimes.com/",
+      "description": "Chitral Times is the first online news portal that covers all local news from Chitral in Urdu and English. Visit to get the latest news about Chitral. We are the No. 1 News provider of Chitral.",
+      "followers": {
+        "facebook": 318300,
+        "twitter": 842,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5334075.jpg?t=1634737378"
+    },
+    {
+      "title": "The Financial Daily",
+      "feed_url": "https://thefinancialdaily.com/feed/",
+      "website_url": "https://thefinancialdaily.com/",
+      "description": "The Financial Daily is Pakistan's most comprehensive financial newspaper and financial news website. It provides a complete up-to-date source for business news, finance news, stock market news & the economy. The Financial Daily International is the first investors English Language business daily established in 2006.",
+      "followers": {
+        "facebook": 143800,
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/5334196.jpg?t=1664964508"
+    },
+    {
+      "title": "Daily Patriot",
+      "feed_url": "https://dailythepatriot.com/feed/",
+      "website_url": "https://dailythepatriot.com/",
+      "description": "Daily The Patriot covers Daily English News, Pakistan news update, and more. We are Islamabad's premier English language newspaper published under the banner of Pakistan Group of Newspapers.",
+      "followers": {
+        "twitter": 452
+      },
+      "image_url": "https://i1.feedspot.com/5334203.jpg?t=1664955785"
+    },
+    {
+      "title": "The Lahore Times",
+      "feed_url": "https://www.lhrtimes.com/feed/",
+      "website_url": "https://www.lhrtimes.com/",
+      "description": "The Lahore Times delivers the latest Lahore-Pakistan news, views, opinions, and information on the latest top stories, entertainment, business, sports, politics, and more. The Lahore Times is the first Pakistan-based online and printable Asian News Media. It is independently run by well-known international journalists, media analysts, writers and educationists and a team of IT personnel and experts.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5334204.jpg?t=1634793131"
+    },
+    {
+      "title": "Daily Qudrat",
+      "feed_url": "https://dailyqudrat.pk/feed/",
+      "website_url": "https://dailyqudrat.pk/",
+      "description": "Get daily updates, headlines, byte-sized snippets, opinions, and analyses of the current topics, and events here at Daily Qudrat. We are an Urdu news website committed to bringing forward the rich talent of the Urdu language to communicate and reform the masses.",
+      "followers": {
+        "facebook": 9100000,
+        "twitter": 50100
+      },
+      "image_url": "https://i1.feedspot.com/5428935.jpg?t=1664955950"
+    },
+    {
+      "title": "BOL News Urdu",
+      "feed_url": "https://www.bolnewsurdu.com/feed/",
+      "website_url": "https://www.bolnewsurdu.com/",
+      "description": "BOL News Urdu is a News Portal with the latest news alerts and updates in Urdu on Pakistan, World, Sports, Weather, Politics & Entertainment. BOL News Urdu is a part of BOL News Media and brings you uninterrupted coverage of activities from Pakistan and all around the globe.",
+      "followers": {
+        "facebook": 47400,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5428951.jpg?t=1659593475"
+    },
+    {
+      "title": "ARY News",
+      "feed_url": "https://arynews.tv/feed/",
+      "website_url": "https://arynews.tv/",
+      "description": "ARY News is a Pakistani news channel committed to bring you latest Pakistan news & featured stories from around Pakistan & all over the world. ARY News, the pioneer of News Channel in Pakistan operates under the philosophy of keeping its viewers 'Har Lamha Bakhabar.'",
+      "followers": {
+        "facebook": 29300000,
+        "twitter": 5500000,
+        "instagram": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/5452886.jpg?t=1664956406"
+    },
+    {
+      "title": "Daily Jang",
+      "feed_url": "https://feeds.feedburner.com/com/Yeor",
+      "website_url": "https://jang.com.pk/",
+      "description": "Daily Jang deliver latest news, breaking news, Urdu news, current news, top headlines in Urdu from Pakistan, World, Sports, Business, Cricket, Politics and Weather, and more. Daily Jang is a Leading national newspaper publishing accurate and comprehensive news for a long time.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 1000000,
+        "instagram": 413300
+      },
+      "image_url": "https://i1.feedspot.com/5428560.jpg?t=1664956438"
+    },
+    {
+      "title": "Independent Urdu",
+      "feed_url": "https://www.independenturdu.com/rss.xml",
+      "website_url": "https://www.independenturdu.com/",
+      "description": "Read daily updated news and headlines related to economy, politics, sports, technology, international news, and more. Independent Urdu is the Urdu version of the famous British newspaper The Independent. Its aim is to provide its readers with unbiased and authentic journalistic content.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 345500,
+        "instagram": 157700
+      },
+      "image_url": "https://i1.feedspot.com/5428561.jpg?t=1664956470"
+    },
+    {
+      "title": "24 News Urdu",
+      "feed_url": "https://www.24urdu.com/rss/world",
+      "website_url": "https://www.24urdu.com/",
+      "description": "24 News Urdu provides Latest news in Urdu language, instant updates on Pakistan, World, politics, sports & entertainment. 24 News Urdu seeks to enlighten its viewers with quality analysis from renowned journalists and anchors from across Pakistan and the globe.",
+      "followers": {
+        "facebook": 5700000,
+        "twitter": 4300,
+        "instagram": 134600
+      },
+      "image_url": "https://i1.feedspot.com/5428916.jpg?t=1659589924"
+    },
+    {
+      "title": "Pakistan News International",
+      "feed_url": "https://pni.net.pk/feed/",
+      "website_url": "https://pni.net.pk/",
+      "description": "PNI provides you with current news from Pakistan and the world, business news, sports news, weather forecasts, video reports, analyses, and comments. Pakistan News International (PNI) is a credible international news organization established in 2018, and has made its place among Urdu reading, writing, and speaking readers across the world.",
+      "followers": {
+        "facebook": 871400,
+        "twitter": 2500,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5428942.jpg?t=1659591998"
+    },
+    {
+      "title": "The Frontier Post",
+      "feed_url": "https://thefrontierpost.com/feed/",
+      "website_url": "https://thefrontierpost.com/",
+      "description": "Read the top stories from The Frontier Post and keep up with the news on Business, Pakistan, Afghanistan, and more. The Frontier Post started in 1984 from Peshawar city, capital of Khyber Pakhtunkhwa. The newspaper since its inception has promoted young and honest journalists throughout Pakistan and abroad.",
+      "followers": {
+        "facebook": 26700,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5452977.jpg?t=1664964524"
+    },
+    {
+      "title": "The Nation",
+      "feed_url": "https://www.nation.com.pk/rss/newspaper",
+      "website_url": "https://www.nation.com.pk/",
+      "description": "The Nation brings you the latest and breaking news updates from Pakistan. Read all the news from Today's Newspaper and e-Paper for Lahore, Karachi and Islamabad. The Nation is a leading daily newspaper based in Lahore and has been at the forefront of Pakistan's journalism landscape for over three decades.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 110800
+      },
+      "image_url": "https://i1.feedspot.com/5452974.jpg?t=1664964168"
+    },
+    {
+      "title": "Ummat",
+      "feed_url": "https://ummat.net/feed/",
+      "website_url": "https://ummat.net/",
+      "description": "Stay updated with the latest news on medicine, Ummat literature, sports, commerce, and more. Daily Ummat Karachi provides latest news in the Urdu language.",
+      "followers": {
+        "facebook": 105300,
+        "twitter": 46500
+      },
+      "image_url": "https://i1.feedspot.com/5452973.jpg?t=1664964192"
+    },
+    {
+      "title": "Business Recorder",
+      "feed_url": "https://www.brecorder.com/feeds/latest-news",
+      "website_url": "https://www.brecorder.com/",
+      "description": "Get the latest News on Business, Finance and Markets from Pakistan with Business Recorder. Business Recorder is the biggest financial daily in Pakistan and the first such publication to be published in the Muslim world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5186293.jpg?t=1664964454"
+    },
+    {
+      "title": "Pakistan & Gulf Economist",
+      "feed_url": "https://www.pakistangulfeconomist.com/feed/",
+      "website_url": "https://www.pakistangulfeconomist.com/",
+      "description": "Pakistan & Gulf Economist is a weekly business magazine published from Karachi covering the business community, stock exchanges, economy of Pakistan & the Gulf. PAGE has been the leading weekly business magazine of Pakistan for more than 40 years.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5334202.jpg?t=1664964553"
+    },
+    {
+      "title": "Arab News Pakistan",
+      "feed_url": "https://www.arabnews.pk/rss.xml",
+      "website_url": "https://www.arabnews.pk/",
+      "description": "Established in 1975, the Saudi-based Arab News is the Middle East's newspaper of record and the biggest English language daily in the Kingdom. Arab News launched its online Pakistan edition in 2018. It has become the newspaper's most successful digital expansion project as part of the newspaper's ongoing global and digital expansion.",
+      "followers": {
+        "facebook": 428000,
+        "twitter": 78900,
+        "instagram": 78000
+      },
+      "image_url": "https://i1.feedspot.com/5452990.jpg?t=1664966751"
+    },
+    {
+      "title": "ProPakistani",
+      "feed_url": "https://propakistani.pk/feed/",
+      "website_url": "https://propakistani.pk/",
+      "description": "ProPakistani is the premier and most trust worthy resource for technology, telecom, business and auto news in Pakistan. Whether it's the top trending news, inside scoops and features, interviews, market trends and analysis, product reviews, How to Do's or tutorials, we cover it all.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4467598.jpg?t=1664966635"
+    },
+    {
+      "title": "Independent News Pakistan",
+      "feed_url": "https://www.inp.net.pk/inp/rss",
+      "website_url": "https://www.inp.net.pk/",
+      "description": "Check out independent news Pakistan for the latest news, headlines, and news updates from Pakistan and all around the world. Independent News Pakistan is a major private-sector trend-setting news agency in the country.",
+      "followers": {
+        "twitter": 2600,
+        "instagram": 69
+      },
+      "image_url": "https://i1.feedspot.com/5453037.jpg?t=1664967996"
+    },
+    {
+      "title": "GNN",
+      "feed_url": "https://gnnhd.tv/rss/latest",
+      "website_url": "https://gnnhd.tv/",
+      "description": "G News Network, commonly known GNN HD, is a Pakistani 24-hour news and current affairs channel based in Lahore, Pakistan. It is owned and operated by Gourmet Foods. GNN is one of the few channels in the country that runs on UHD, and has established its reputation as one of the most reliable, credible and responsible news organizations.",
+      "followers": {
+        "facebook": 4400000,
+        "twitter": 959500,
+        "instagram": 207700
+      },
+      "image_url": "https://i1.feedspot.com/5453035.jpg?t=1664967957"
+    },
+    {
+      "title": "CustomsNews.pk Daily",
+      "feed_url": "https://customnews.pk/feed/",
+      "website_url": "https://customnews.pk/",
+      "description": "CustomsNews.pk Daily is your destination for Pakistan Customs, Shipping & Business News Resources. Visit our website to stay updated with customs related news.",
+      "followers": {
+        "facebook": 231
+      },
+      "image_url": "https://i1.feedspot.com/5453033.jpg?t=1666329707"
+    },
+    {
+      "title": "Pakistan News.Net",
+      "feed_url": "http://feeds.pakistannews.net/rss/8c3d7d78943a99c7",
+      "website_url": "https://www.pakistannews.net/",
+      "description": "Pakistan News is the national news service for Pakistan. It covers the country and key cities such as the capital, Islamabad, Lahore and Karachi. We are Long-time Pakistan news portal which also includes global coverage. Pakistan News.Net has been in operation since 1999 and is part of an international news service all with the news.net extension.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5453029.jpg?t=1664967786"
+    },
+    {
+      "title": "Pakistan News Express",
+      "feed_url": "https://pakistannewsexpress.com/feed/",
+      "website_url": "https://pakistannewsexpress.com/",
+      "description": "The Pakistan News Express is the renowned online news website in Pakistan when it comes to publishing the news. Read about the latest news, science and technology, health protection, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5453049.jpg?t=1664970740"
+    },
+    {
+      "title": "Daily Khabrain",
+      "feed_url": "https://dailykhabrain.com.pk/feed/",
+      "website_url": "https://dailykhabrain.com.pk/",
+      "description": "Welcome to Khabrain Group Pakistan. Here you can read about news on Pakistan, business, science and technology, showbiz, and more. Daily Khabrain is one of the most widely circulated Urdu newspapers published simultaneously from Lahore, Karachi, Islamabad, Sukkur, Rawalpindi, Peshawar, Muzaffarabad, Multan and Bahawalpur.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 153900
+      },
+      "image_url": "https://i1.feedspot.com/5453045.jpg?t=1664970756"
+    },
+    {
+      "title": "The Pakistan",
+      "feed_url": "https://thepakistan.pk/feed/",
+      "website_url": "https://thepakistan.pk/",
+      "description": "Visit our website for Breaking News on National and Politics topics. We also Cover Latest News on Cricket, Entertainment, Business, Science, and much more. The Pakistan cover all the latest news of Pakistan.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1800,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5453044.jpg?t=1664970785"
+    },
+    {
+      "title": "Pk News",
+      "feed_url": "https://pknewschannels.blogspot.com/feeds/posts/default",
+      "website_url": "https://pknewschannels.blogspot.com/",
+      "description": "Welcome to PK News Channels, your go-to source for the latest news and updates from Pakistan and around the world. We are dedicated to providing you with accurate, unbiased, and insightful news coverage to keep you informed and engaged.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7284403.jpg?t=1711617635"
+    },
+    {
+      "title": "Yes Urdu",
+      "feed_url": "https://www.yesurdu.com/feed",
+      "website_url": "https://www.yesurdu.com/",
+      "description": "Read daily updates, news, and headlines related to economy, politics, sports, technology, international news and more. Yes Urdu is an overseas television news and documentary network broadcasted in Urdu, French, English, and Arabic 24 hours a day, 7 days a week. Our mission is to provide independent and uncompromising journalism.",
+      "followers": {
+        "facebook": 8
+      },
+      "image_url": "https://i1.feedspot.com/5428542.jpg?t=1659958963"
+    },
+    {
+      "title": "Daily NewsPK",
+      "feed_url": "https://dailynewspk.com/feed/",
+      "website_url": "https://dailynewspk.com/",
+      "description": "Daily NewsPK is an English language Pakistani online newspaper. The content on the website carries business, political and cultural news and analysis from different regions of the world and has a dedicated section for news from Pakistan.",
+      "followers": {
+        "facebook": 362,
+        "twitter": 142,
+        "instagram": 188
+      },
+      "image_url": "https://i1.feedspot.com/5453036.jpg?t=1664967904"
+    },
+    {
+      "title": "Pakistan Today",
+      "feed_url": "https://www.pakistantoday.com.pk/feed/",
+      "website_url": "https://www.pakistantoday.com.pk/",
+      "description": "Pakistan Today covers latest news, Breaking news, Pakistan News, World news, business, sport, and multimedia. Pakistan Today aims to bring fair and unbiased news to a global audience.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 189800
+      },
+      "image_url": "https://i1.feedspot.com/561301.jpg?t=1664963748"
+    },
+    {
+      "title": "Times of Islamabad",
+      "feed_url": "https://timesofislamabad.com/rss/latest-news",
+      "website_url": "https://timesofislamabad.com/",
+      "description": "Times of Islamabad (Pvt) Limited is an online English News Agency of Pakistan and a source of authentic national, regional and international news. The News Agency focuses on aspects like Defence and Military News, Foreign Policy and Diplomacy, Counter Terrorism and Insurgency, National Security, Politics and International Relation.",
+      "followers": {
+        "facebook": 396100,
+        "twitter": 130699,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5453031.jpg?t=1664967843"
+    },
+    {
+      "title": "Dialogue Pakistan",
+      "feed_url": "https://dialoguepakistan.com/en/",
+      "website_url": "https://dialoguepakistan.com/en/",
+      "description": "Dialogue Pakistan is the country's first citizen journalism portal to provide Pakistanis an opportunity to get themselves heard aiming to encourage citizen journalism inculcated with ethical values. Get up-to-date news on Pakistan, the world, sports, entertainment, and more.",
+      "followers": {
+        "facebook": 276800,
+        "twitter": 3100,
+        "instagram": 287400
+      },
+      "image_url": "https://i1.feedspot.com/5453048.jpg?t=1664970633"
+    },
+    {
+      "title": "The Express Tribune",
+      "feed_url": "https://tribune.com.pk/404",
+      "website_url": "https://tribune.com.pk/",
+      "description": "Latest Pakistan News, World News, breaking news updates on Pakistan, Politics, Sports, Business, Technology, Education, lifestyle & Weather on eTribune. The Express Tribune is the first internationally affiliated newspaper in Pakistan.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 1100000,
+        "instagram": 502000
+      },
+      "image_url": "https://i1.feedspot.com/5334002.jpg?t=1634729832"
+    },
+    {
+      "title": "Daily Jang",
+      "feed_url": "https://jang.com.pk/",
+      "website_url": "https://jang.com.pk/",
+      "description": "Daily Jang delivers latest news, breaking news, Urdu news, current news, top headlines in Urdu from Pakistan, World, Sports, Business, Cricket, Politics and Weather. Daily Jang is Pakistan's leading newspaper.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 1000000,
+        "instagram": 413300
+      },
+      "image_url": "https://i1.feedspot.com/5334024.jpg?t=1634737138"
+    },
+    {
+      "title": "Awami Web",
+      "feed_url": "https://awamiweb.com/feed",
+      "website_url": "https://awamiweb.com/",
+      "description": "Covers articles on Jobs, Education, Media, Real Estate, Weird, and Awami News from Pakistan. Awami Web is Pakistan's Leading Independent English & Urdu Blogging Platform.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 8300,
+        "instagram": 36100
+      },
+      "image_url": "https://i1.feedspot.com/5334048.jpg?t=1634737291"
+    },
+    {
+      "title": "The Friday Times",
+      "feed_url": "https://thefridaytimes.com/",
+      "website_url": "https://thefridaytimes.com/",
+      "description": "Pakistan's first independent weekly newspaper. It covers News and views which are not fit to print. The Friday Times was founded in 1989 and collaborated with Naya Daur Media in 2021 to publish under a daily cycle. At the Friday Times, we cover stories that mainstream media shies away from covering.",
+      "followers": {
+        "facebook": 43300,
+        "twitter": 43700,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5334194.jpg?t=1634791619"
+    },
+    {
+      "title": "Pakistan Tribune",
+      "feed_url": "https://www.pktribune.com/feed",
+      "website_url": "https://dunya.com.pk/index.php",
+      "description": "Pakistan Tribune brings Latest Pakistan News, Latest News, Breaking News, Sports News, Politics News, and other News from Pakistan round the clock. We provide insightful opinion and analysis to our readers.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5334201.jpg?t=1634792540"
+    },
+    {
+      "title": "Roznama Dunya",
+      "feed_url": "https://dunya.com.pk/index.php",
+      "website_url": "https://dunya.com.pk/index.php",
+      "description": "Check out Roznama Dunya News for latest Urdu news, breaking news, current news in Urdu from Pakistan, World, Sports, Business, Cricket, Politics and Weather, and more. Roznama Dunya News is a rational source of news to remain updated with all the recent events from across the country.",
+      "followers": {
+        "facebook": 815900,
+        "twitter": 728100
+      },
+      "image_url": "https://i1.feedspot.com/5428952.jpg?t=1659593514"
+    },
+    {
+      "title": "Dharti News",
+      "feed_url": "https://dhartinews.com/feed/",
+      "website_url": "https://dhartinews.com/",
+      "description": "Read the latest news & live breaking news updates in Urdu from Pakistan. Dharti News is a Pakistani-based prominent mass media enterprise headquartered in Frankfurt, Germany. Our objective is to keep citizens up-to-date in their own national language. Our website shares the latest news, blogs and stories from Pakistan and around the world.",
+      "followers": {
+        "twitter": 1600,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5428936.jpg?t=1659593534"
+    },
+    {
+      "title": "NayaDaur",
+      "feed_url": "https://urdu.nayadaur.tv/",
+      "website_url": "https://urdu.nayadaur.tv/",
+      "description": "Visit Naya Daur Urdu to read the latest news and Urdu columns, watch talk shows on Pakistani politics, human rights, international relations and online videos. Naya Daur Media is a web channel established in 2017 that offers news, reviews, features, blogs, videos, and detailed reviews in Urdu and English simultaneously.",
+      "followers": {
+        "facebook": 64400,
+        "twitter": 60000,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5428937.jpg?t=1659593386"
+    },
+    {
+      "title": "Urdu News",
+      "feed_url": "https://urdunews.cc/urdu/feed/",
+      "website_url": "https://urdu.92newshd.tv/",
+      "description": "Urdu News is a trusted news source for all things related to Health, Education, Jobs, and News Websites. Founded by Dr. Qasim Malik, Urdu News Agency is dedicated to giving you the very best in Health, Education Jobs, and News Websites with a focus on quality and real-world problem solutions.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5428950.jpg?t=1659591494"
+    },
+    {
+      "title": "92 News",
+      "feed_url": "https://urdu.92newshd.tv/feed",
+      "website_url": "https://urdu.92newshd.tv/",
+      "description": "92 News HD Plus TV is a patriotic channel which provides latest news, Urdu news and live stream about Pakistan, world, sports, business, health and weather. 92 News HD news channel and its news website aims to bring credible, responsible news and important stories from Pakistan & around the World.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 2100000,
+        "instagram": 975400
+      },
+      "image_url": "https://i1.feedspot.com/5428941.jpg?t=1664963668"
+    },
+    {
+      "title": "Nai Baat",
+      "feed_url": "https://naibaat.pk/feed/",
+      "website_url": "https://naibaat.pk/",
+      "description": "Read daily updates, and news headlines regarding the economy, politics, sports, technology, and international news. The Nai Baat e-paper and online news portal are an inspiration to rebuild Pakistan. It's the personification of our patriotic spirit to serve the nation.",
+      "followers": {
+        "facebook": 181000,
+        "twitter": 231400,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5428934.jpg?t=1664963559"
+    },
+    {
+      "title": "92 News",
+      "feed_url": "https://92newshd.tv/feed",
+      "website_url": "https://92newshd.tv/",
+      "description": "92 News HD Plus TV is patriotic channel which provides latest news, Urdu news and live stream about Pakistan, world, sports, business, health and weather. 92 News HD is Pakistan's first HD Plus News Channel that aims to bring credible & responsible news & important stories from Pakistan & around the World.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5452988.jpg?t=1664966672"
+    },
+    {
+      "title": "The Current",
+      "feed_url": "https://thecurrent.pk/feed/",
+      "website_url": "https://thecurrent.pk/",
+      "description": "The Current is simple. We bring you the breaking news that is woke, celebrate the fact that you're not supposed to know everything. The Current is a news-lifestyle platform that informs Pakistan's millennials about all the issues that matter - news, entertainment, lifestyle, and much more.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 28800,
+        "instagram": 263000
+      },
+      "image_url": "https://i1.feedspot.com/5452987.jpg?t=1664966565"
+    },
+    {
+      "title": "24 News HD",
+      "feed_url": "https://www.24newshd.tv/",
+      "website_url": "https://www.24newshd.tv/",
+      "description": "Get the latest Pakistan News on 24 News HD. We bring you breaking News updates on Politics, Current Affairs, Sports, Technology, Entertainment & Business. 24 News HD is part of the largest news media organization, City News Network, and seeks to enlighten its viewers with quality analysis from renowned journalists including Nasim Zehra and anchors from across Pakistan and the globe.",
+      "followers": {
+        "facebook": 5700000,
+        "twitter": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5453032.jpg?t=1664967860"
+    },
+    {
+      "title": "Public News",
+      "feed_url": "https://publicnews.com/feed",
+      "website_url": "https://publicnews.com/",
+      "description": "Public News keeps you fully updated of the latest and major happenings in Pakistan and around the globe in the form of breaking news, bulletins, well-equipped talk shows. Public News dutifully brings you news about the Public of Pakistan. It's all about Zuban-E-Khalq.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 75800,
+        "instagram": 119300
+      },
+      "image_url": "https://i1.feedspot.com/5453030.jpg?t=1664968932"
+    },
+    {
+      "title": "The HeadQuarters",
+      "feed_url": "https://hq.com.pk/",
+      "website_url": "https://hq.com.pk/",
+      "description": "The HeadQuaters Daily is an Independent & Reliable English & Urdu Newspaper as well as an Online News Portal which publishes Pakistan and International Breaking News, latest news, Sports, Business, Cricket, and Politics. The Editor-in-Chief is Mr. Sardar Hayaat MUHAMMED Khan Mandokhel who also heads a 'think tank' and performs research and analysis on various topics.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 169,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5453046.jpg?t=1664969080"
+    },
+    {
+      "title": "Daily Mail Pakistan",
+      "feed_url": "https://dailymailnews.pk/feed/",
+      "website_url": "https://soontimes.pk/",
+      "description": "Get to know the top stories and news on our website. Daily Mail Pakistan is Pakistan's Leading English News Paper.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5453043.jpg?t=1666339197"
+    },
+    {
+      "title": "Daily Soon Times",
+      "feed_url": "https://soontimes.pk/",
+      "website_url": "https://soontimes.pk/",
+      "description": "Stay connected with the Daily Soon Times and get updates on National, International, Science and Tech, Sports, and many more topics. Daily Soon Times is the leading English National Newspaper exploring National as well as International stories. We are the first English Newspaper from Sargodha Division in Punjab, Pakistan.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5453042.jpg?t=1664970654"
+    }
+  ]
+}

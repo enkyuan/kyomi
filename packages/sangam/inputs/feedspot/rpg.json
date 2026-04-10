@@ -1,0 +1,782 @@
+{
+  "category": "RPG",
+  "source_url": "https://rss.feedspot.com/rpg_rss_feeds",
+  "feeds": [
+    {
+      "title": "RPG Site",
+      "feed_url": "https://www.rpgsite.net/feed.atom",
+      "website_url": "https://www.rpgsite.net/",
+      "description": "RPG Site is the premiere source for RPG news, reviews, previews, interviews, media and information. We love role playing video games, so we report on them all day every day.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 117000
+      },
+      "image_url": "https://i1.feedspot.com/4794173.jpg?t=1609844262"
+    },
+    {
+      "title": "EN World",
+      "feed_url": "https://www.enworld.org/ewr-porta/index.rss",
+      "website_url": "https://www.enworld.org/",
+      "description": "Morrus is the founder and owner of EN World, and owner of EN Publishing. It is the world's largest independent RPG news website. Find EN World's news and reviews of all tabletop roleplaying games, big and small.",
+      "followers": {
+        "facebook": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4795060.jpg?t=1702039609"
+    },
+    {
+      "title": "RPGamer",
+      "feed_url": "https://rpgamer.com/feed/",
+      "website_url": "https://rpgamer.com/",
+      "description": "RPGamer is the world's best RPG coverage. Get the Complete RPG Coverage.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4795126.jpg?t=1609844278"
+    },
+    {
+      "title": "Roleplaying Tips Blog",
+      "feed_url": "https://www.roleplayingtips.com/feed/",
+      "website_url": "https://www.roleplayingtips.com/blog/",
+      "description": "Roleplaying Tips was founded by Johnn Four. It is a website for tabletop GMs. Find posts and updates on roleplaying.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4793516.jpg?t=1609844375"
+    },
+    {
+      "title": "The RPGPundit",
+      "feed_url": "http://therpgpundit.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://therpgpundit.blogspot.com/",
+      "description": "The RPGPundit posts articles on RPGs, new games, updates, news from different popular games and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368742.jpg?t=1644227682"
+    },
+    {
+      "title": "What Do I Know? \u00bb Dungeons & Dragons",
+      "feed_url": "https://whatdoiknowjr.com/feed/",
+      "website_url": "https://whatdoiknowjr.com/category/dungeons-dragons/",
+      "description": "The RPG Games and Geekdom Site. Find articles on RPG games, personalised reviews, gameplays and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368743.jpg?t=1644228253"
+    },
+    {
+      "title": "The Grinning Frog Blog",
+      "feed_url": "https://www.thegrinningfrog.com/blog-feed.xml",
+      "website_url": "http://",
+      "description": "A creative collection of system free fantasy rpg material including new magic items, creatures, locations, NPCs and DM advice. I'm Eden- a self-employed RPG writer who works with a collective group of people to produce new content every month.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368753.jpg?t=1644226978"
+    },
+    {
+      "title": "Juego RPG",
+      "feed_url": "https://juegorpg.com/feed/",
+      "website_url": "https://juegorpg.com/",
+      "description": "Embark on an epic adventure with Juego RPG, your one-stop shop for all things RPG video games in Spanish! Dive into a world of news, reviews, and a thriving community where you can level up your knowledge and share your passion for these immersive journeys.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 732,
+        "instagram": 214
+      },
+      "image_url": "https://i1.feedspot.com/7270985.jpg?t=1710161326"
+    },
+    {
+      "title": "World Anvil Blog \u00bb Mapmaking",
+      "feed_url": "https://blog.worldanvil.com/feed/",
+      "website_url": "https://blog.worldanvil.com/category/mapmaking/",
+      "description": "Explore the Mapmaking segment by World Anvil and access a treasure trove of map-making tips and insights tailored to help you create breath-taking worlds. World Anvil is an online toolset specifically designed for worldbuilding, perfect for authors, writers, game developers, and tabletop gamers.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 12600,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5098104.jpg?t=1609844452"
+    },
+    {
+      "title": "Bell of Lost Souls \u00bb RPGs",
+      "feed_url": "https://www.belloflostsouls.net/category/rpgs/feed",
+      "website_url": "https://www.belloflostsouls.net/category/rpgs",
+      "description": "Roleplaying Game News, Reviews, Editorials, and Adventures. Bell of Lost Souls is a blog about tabletop and pop culture.",
+      "followers": {
+        "facebook": 228500,
+        "twitter": 15400,
+        "instagram": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5368729.jpg?t=1644210031"
+    },
+    {
+      "title": "RPGWatch",
+      "feed_url": "https://rpgwatch.com/files/rss1.xml",
+      "website_url": "https://rpgwatch.com/",
+      "description": "Find RPG News and updates.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4795039.jpg?t=1609844593"
+    },
+    {
+      "title": "The Angry GM",
+      "feed_url": "https://theangrygm.com/feed/",
+      "website_url": "https://theangrygm.com/",
+      "description": "The Angry GM delivers advice to players and dungeon masters of fantasy role-playing games with humor, snark, and attitude. Game masters and players are sure to find something of use, whether they are playing AD&D, D&D 3.5, D&D 4E, 5E, Pathfinder, D&D Next, or any other role-playing game.",
+      "followers": {
+        "facebook": 927,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/4793796.jpg?t=1609844587"
+    },
+    {
+      "title": "Sly Flourish",
+      "feed_url": "https://slyflourish.com/index.xml",
+      "website_url": "https://slyflourish.com/",
+      "description": "Follow this blog where Mike shares resources, articles and guide for building the better Dungeons and Dragons Dungeon Master.",
+      "followers": {
+        "twitter": 45800
+      },
+      "image_url": "https://i1.feedspot.com/1355248.jpg?t=1609844467"
+    },
+    {
+      "title": "Magpie Games Blog",
+      "feed_url": "https://magpiegames.com/blogs/news.atom",
+      "website_url": "https://magpiegames.com/blogs/news",
+      "description": "Read about latest RPG games and reviews. Magpie Games, founded by Mark Truman and Marissa Kelly, hopes to inspire a new generation of roleplayers to create emotional, expansive stories, without rolling too many dice.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 10400,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5368731.jpg?t=1644230971"
+    },
+    {
+      "title": "DMDavid Blog",
+      "feed_url": "https://dmdavid.com/feed/",
+      "website_url": "https://dmdavid.com/",
+      "description": "Dungeons & Dragons design, advice, rules, and inspiration. David Hartlage is a dungeon master at weekly D&D encounters sessions, occasional adventurers' League games, and judging at the big gaming conventions.",
+      "followers": {
+        "facebook": 554,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/2168809.jpg?t=1620796180"
+    },
+    {
+      "title": "Kobold Press Blog",
+      "feed_url": "https://koboldpress.com/feed/",
+      "website_url": "https://koboldpress.com/blog/",
+      "description": "The little company with big shoes keeps growing! With two gold ENnie Awards in 2012, people are noticing the excellent work done by the Kobold crew in adventure design, how-to advice, and worldbuilding for the Midgard campaign setting.",
+      "followers": {
+        "facebook": 34500,
+        "twitter": 68300
+      },
+      "image_url": "https://i1.feedspot.com/4900607.jpg?t=1609844603"
+    },
+    {
+      "title": "Dungeon Fantastic",
+      "feed_url": "https://feeds.feedburner.com/DungeonFantastic",
+      "website_url": "https://dungeonfantastic.blogspot.com/",
+      "description": "Hi I'm Peter V. Dell'Orto. I've been playing RPGs since I was about 9 years old. Find posts and updates on RPGs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4165288.jpg?t=1609844782"
+    },
+    {
+      "title": "The CRPG Addict",
+      "feed_url": "https://feeds.feedburner.com/TheCrpgAddict",
+      "website_url": "http://crpgaddict.blogspot.com/",
+      "description": "Chester Bolingbroke is a professional in his early 40s who really should be doing something more productive with his time. He lives in Maine with his patient wife, Irene, and when he isn't playing CRPGs, he enjoys traveling, crossword puzzles, and jazz. The CRPG Addict is a blog in which a dedicated addict plays through all PC computer role-playing games (CRPGs), in chronological order.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1834296.jpg?t=1609931918"
+    },
+    {
+      "title": "LitRPG Reads Blog",
+      "feed_url": "https://litrpgreads.com/feed",
+      "website_url": "https://litrpgreads.com/blog",
+      "description": "Paul Bellow is a LitRPG author, decades-long gamer, RPG game developer, and publisher of several online communities. Here at LitRPG Reads, he publishes articles about LitRPG books, tabletop RPG books, and all sorts of DND content that's free to use in your personal tabletop campaign - i.e. non-commercial use. Find the best LitRPG books, including recommendations. They feature LitRPG novels and RPG content.",
+      "followers": {
+        "facebook": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4794075.jpg?t=1609844910"
+    },
+    {
+      "title": "Bat In The Attic",
+      "feed_url": "https://batintheattic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://batintheattic.blogspot.com/",
+      "description": "A blog on 30 years of gaming and Sandbox Fantasy. Articles cover Role playing advice and inspiration including Wilderlands of High Fantasy, DnD, and Swords Wizardry. Authored by Robert Conley.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/498955.jpg?t=1630075053"
+    },
+    {
+      "title": "The Other Side",
+      "feed_url": "http://theotherside.timsbrannan.com/feeds/posts/default?alt=rss",
+      "website_url": "http://theotherside.timsbrannan.com/",
+      "description": "The Other Side Blog is a game design blog from Timothy S. Brannan, author of the Ghosts of Albion RPG and contributor to many horror themed RPGs. Follow his thoughts on game development or even just game playing.",
+      "followers": {
+        "facebook": 565,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4792965.jpg?t=1609844866"
+    },
+    {
+      "title": "cRPG Blog",
+      "feed_url": "https://lilura1.blogspot.com/feeds/posts/default",
+      "website_url": "https://lilura1.blogspot.com/p/crpg-blog.html",
+      "description": "In this blog, you will find Commentary & Criticism on the original & authoritative versions of Renaissance-era RPGs.Index to the cRPG blog on cRPG history, reviews, rankings and design. Its A blog on Computer Role-playing Games, written by a cRPG veteran.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5179834.jpg?t=1681816247"
+    },
+    {
+      "title": "Dicegeeks \u00bb RPG News",
+      "feed_url": "https://www.dicegeeks.com/feed/",
+      "website_url": "https://www.dicegeeks.com/rpg-news/",
+      "description": "Matt, the Game Master at Dicegeeks, is dedicated to enhancing the experiences of game masters, dungeon masters, and role-players. His Dicegeeks Blog offers posts on roleplaying tips, guides, and resources aimed at levelling up gaming sessions and campaigns.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4794416.jpg?t=1698751160"
+    },
+    {
+      "title": "Continuing Mission",
+      "feed_url": "https://continuingmissionsta.com/feed/",
+      "website_url": "https://continuingmissionsta.com/",
+      "description": "A Fan Site for the Star Trek Adventures RPG by Modiphius. Expansion on Core Rulebook rules, homebrew character sheets, and fan fiction. Continuing Mission is a fan-run website for the Star Trek Adventures roleplaying game, published by Modiphius Entertainment under licence from CBS & Paramount Pictures.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5380072.jpg?t=1661231178"
+    },
+    {
+      "title": "Dyson's Dodecahedron Blog",
+      "feed_url": "https://dysonlogos.blog/feed/",
+      "website_url": "https://dysonlogos.blog/",
+      "description": "I'm Dyson. I've been gaming since 1979 in a variety of game systems, but most often playing Dungeons & Dragons. This is a general RPG blog, where I talked a lot about the games I've played and how I like to play them.",
+      "followers": {
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/4566150.jpg?t=1682057490"
+    },
+    {
+      "title": "RPG Adverts",
+      "feed_url": "https://rpgadverts.tumblr.com/rss",
+      "website_url": "https://rpgadverts.tumblr.com/",
+      "description": "RPG Adverts is a directory blog dedicated to promoting all kinds of different forum based roleplays.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4795240.jpg"
+    },
+    {
+      "title": "Burn After Running: RPG One-Shots",
+      "feed_url": "https://burnafterrunningrpg.com/feed/",
+      "website_url": "https://burnafterrunningrpg.com/",
+      "description": "A blog about tabletop RPGs - specifically, one-shot RPG games of the kind you might see at conventions or ad-hoc meetups. All systems, all genres covered.",
+      "followers": {
+        "twitter": 978
+      },
+      "image_url": "https://i1.feedspot.com/5255013.jpg?t=1644228123"
+    },
+    {
+      "title": "Yore",
+      "feed_url": "https://www.martinralya.com/feed/",
+      "website_url": "https://www.martinralya.com/",
+      "description": "A blog about RPGs, miniatures, etc. I'm Martin Ralya (he/him). Alongside my day job, I'm an avid tabletop gamer (RPGs, board games, and miniatures), hiker, reader, lifelong comics fan, all-around geek, and award-winning RPG industry author and blogger.",
+      "followers": {
+        "twitter": 694
+      },
+      "image_url": "https://i1.feedspot.com/4794191.jpg?t=1644313096"
+    },
+    {
+      "title": "Notes From Pavis Blog",
+      "feed_url": "https://notesfrompavis.blog/feed/",
+      "website_url": "https://notesfrompavis.blog/",
+      "description": "Notes From Pavis features Roleplaying and GM notes mostly in Gloranthan context",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4979222.jpg?t=1610515040"
+    },
+    {
+      "title": "Solo Roleplaying & Game Mastery \u00bb Roleplaying",
+      "feed_url": "https://www.ppmgames.co.uk/category/roleplaying/feed/",
+      "website_url": "https://www.ppmgames.co.uk/category/roleplaying/",
+      "description": "Hi! I'm Peter, an Indie TTRPG developer, and a blogger. Specializing in Solo RPG and Rules Light games. Solo Roleplaying May Look Difficult, I try to make it easy with unique tools matched to each game. I also share hints and tips about solo playing. Parts Per Million is a project to create and publish independent games and all the supporting material a GM would need to play the games.",
+      "followers": {
+        "facebook": 270,
+        "twitter": 784,
+        "instagram": 294
+      },
+      "image_url": "https://i1.feedspot.com/5368750.jpg?t=1657791261"
+    },
+    {
+      "title": "Jeff's Gameblog",
+      "feed_url": "http://jrients.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jrients.blogspot.com/",
+      "description": "Find posts and updates on RPGs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1786222.jpg?t=1644314908"
+    },
+    {
+      "title": "Tribality",
+      "feed_url": "https://www.tribality.com/feed/",
+      "website_url": "https://www.tribality.com/",
+      "description": "Tribality is a collection of advice, homebrews, tools, research, news and other fun tabletop RPG stuff for everyone. Tribality.com provides D&D and tabletop RPG reviews, news, homebrews, tools, research, and other stuff for Gamemasters and Players.og:Description - Triba",
+      "followers": {
+        "twitter": 3800,
+        "instagram": 428
+      },
+      "image_url": "https://i1.feedspot.com/4900603.jpg?t=1702039479"
+    },
+    {
+      "title": "Tenkar's Tavern",
+      "feed_url": "https://www.tenkarstavern.com/feeds/posts/default",
+      "website_url": "https://www.tenkarstavern.com/",
+      "description": "A blog focused on OSR gaming, the Swords & Wizardry RPG, and all things Dungeons & Dragons. The blog is written by Christopher Stogdill and Tenkar. Tavern Chat is the accompanying Podcast.",
+      "followers": {
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/3616707.jpg?t=1682058433"
+    },
+    {
+      "title": "How to Succeed in RPGs or Die Trying",
+      "feed_url": "http://psychicmayhem.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://psychicmayhem.blogspot.com/",
+      "description": "Hi I'm S. P. I have been running roleplaying games since 1998, and playing since a little after that. In 2011, I decided to start writing about the hobby. Find posts and updates on Roleplaying.",
+      "followers": {
+        "twitter": 170
+      },
+      "image_url": "https://i1.feedspot.com/4792911.jpg?t=1609844639"
+    },
+    {
+      "title": "Gnome Stew",
+      "feed_url": "https://gnomestew.com/feed/",
+      "website_url": "https://gnomestew.com/",
+      "description": "Gnomestew.com Gnome Stew is a multi-author blog about tabletop RPG game mastering. Written by a team of veteran GMs, Gnome Stew is the most widely read game mastering blog on the planet",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4792781.jpg?t=1609844643"
+    },
+    {
+      "title": "Elven Tower",
+      "feed_url": "https://www.elventower.com/feed/",
+      "website_url": "https://www.elventower.com/",
+      "description": "The Elven Tower is a source of original imaginative content and narrative chronicles for D&D and other RPG games.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4793782.jpg?t=1630071153"
+    },
+    {
+      "title": "My RPG blog",
+      "feed_url": "https://www.tehvidya.com/feed/",
+      "website_url": "https://www.tehvidya.com/",
+      "description": "Find information on RPGs, SRPGs and otome games.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/4793768.jpg?t=1760696085"
+    },
+    {
+      "title": "Gaming Ballistic",
+      "feed_url": "https://gamingballistic.com/feed/",
+      "website_url": "https://gamingballistic.com/",
+      "description": "Gaming Ballistic is a publisher of role-playing games for 5e, OSR, the Dungeon Fantasy RPG, and The Fantasy Trip, and also does crafting of game-adjacent objects, such as Viking-style shields and wooden practice weapons. Here they share every update related to the games mentioned above and much more. If you are a game who's really into RPGs, then this website is for you!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4792714.jpg?t=1657775936"
+    },
+    {
+      "title": "Lamentations of the Flame Princess",
+      "feed_url": "http://lotfp.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lotfp.blogspot.com/",
+      "description": "LotFP is the brutal and wondrous Weird Fantasy tabletop role-playing game born out of love for underground heavy metal, horror literature and film, and in fact all things strange and macabre. RPG releases and general commentary about traditional gaming in general.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/498967.jpg?t=1609844897"
+    },
+    {
+      "title": "Campaign Mastery Blog",
+      "feed_url": "http://www.campaignmastery.com/blog/feed/",
+      "website_url": "https://www.campaignmastery.com/blog/",
+      "description": "Campaign Mastery is dedicated to offering GMs expert insights and techniques to improve their tabletop RPG campaigns. Mike Bourke is the writer of RPG games & articles, MIDI composer, lover of Sci-Fi & Fantasy and F1 fan. Find posts and updates on RPGs by Mike Bourke.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/1892689.jpg?t=1702039453"
+    },
+    {
+      "title": "The Kind GM",
+      "feed_url": "https://thekindgm.com/feed/",
+      "website_url": "https://thekindgm.com/",
+      "description": "The Kind GM is my blog where I write about tabletop RPGs and especially D&D. I provide reviews, tips and advice for DMs and players and more. My name is Chris.",
+      "followers": {
+        "facebook": 188,
+        "twitter": 8800,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4900620.jpg?t=1702039495"
+    },
+    {
+      "title": "The Nine and Thirty Kingdoms",
+      "feed_url": "http://9and30kingdoms.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://9and30kingdoms.blogspot.com/",
+      "description": "RPG Plans, Designs, and Ideas. Authored by John Laviolette, 'The Nine and Thirty Kingdoms' has been brainstorming, testing, and feedback point for old school fantasy role-playing game ideas.",
+      "followers": {
+        "twitter": 88
+      },
+      "image_url": "https://i1.feedspot.com/5316386.jpg?t=1630075504"
+    },
+    {
+      "title": "One Shot Adventures",
+      "feed_url": "https://1shotadventures.com/feed/",
+      "website_url": "https://1shotadventures.com/",
+      "description": "This blog is a collection of free roleplaying adventures - and the design thinking behind them. I like lots of different roleplaying systems, but here you'll mostly find material for Dungeons & Dragons, Call of Cthulhu, GURPS, and Broken Compass. My goal is always to give the GM all the stuff they need to run a 'professional grade' adventure with their friends with as little effort as possible.",
+      "followers": {
+        "twitter": 279
+      },
+      "image_url": "https://i1.feedspot.com/5041268.jpg?t=1673428872"
+    },
+    {
+      "title": "Octopus Carnival",
+      "feed_url": "https://bira.github.io/octopus-carnival/feed.xml",
+      "website_url": "https://bira.github.io/octopus-carnival/",
+      "description": "Hi I'm Ubiratan Pires Alberton. Octopus Carnival is my English-language RPG blog. Most of its content is GURPS-related, and usually deals with adapting something or other to GURPS. Find posts and updates on RPGs.",
+      "followers": {
+        "twitter": 122
+      },
+      "image_url": "https://i1.feedspot.com/4792754.jpg?t=1609846755"
+    },
+    {
+      "title": "Farsight Blogger",
+      "feed_url": "https://farsightblogger.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://farsightblogger.blogspot.com/",
+      "description": "Jonathan Hicks has been gaming since 1983 after he experienced the splendour that is Fighting Fantasy gamebooks and Basic D&D. He has played in hundreds of games, mainly as GM, and experienced dozens of gaming systems over pretty much every genre, with the odd boardgame and wargame thrown in, too. He does like to game.",
+      "followers": {
+        "facebook": 121,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4900621.jpg?t=1609845806"
+    },
+    {
+      "title": "Elthos RPG",
+      "feed_url": "http://elthosrpg.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://elthosrpg.blogspot.com/",
+      "description": "I'm VB Wyrde, a Role Playing Game designer, working on the Elthos Game System, which I started in 1978. I posts and update the mysteries and wonders of developing and GMing the Elthos RPG and Mythos Machine.",
+      "followers": {
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/4795200.jpg?t=1609845811"
+    },
+    {
+      "title": "Cross Planes",
+      "feed_url": "http://www.crossplanes.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.crossplanes.com/",
+      "description": "A blog about Dungeons & Dragons, Roleplaying Games, drawing board for my adventure ideas and a log of those adventures.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4900592.jpg?t=1609845818"
+    },
+    {
+      "title": "G*M*S Magazine \u00bb Role Playing Games",
+      "feed_url": "https://www.gmsmagazine.com/role_playing_game/feed/",
+      "website_url": "https://www.gmsmagazine.com/role_playing_game/",
+      "description": "G*M*S Magazine is here to bring you news and articles on your favourite games and game miscellanea. Find Roleplaying and board games with reviews, podcasts, videos and interviews",
+      "followers": {
+        "facebook": 676,
+        "twitter": 7800,
+        "instagram": 716
+      },
+      "image_url": "https://i1.feedspot.com/4794404.jpg?t=1609845832"
+    },
+    {
+      "title": "Stargazer's World",
+      "feed_url": "https://stargazersworld.com/feed/",
+      "website_url": "https://stargazersworld.com/",
+      "description": "Stargazer's World is a roleplaying game blog. It's a place where I can write down my thoughts on the roleplaying industry, the community and roleplaying in general. And by roleplaying I mean good old classic pen and paper roleplaying.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/3741461.jpg?t=1609845837"
+    },
+    {
+      "title": "Greyhawkery",
+      "feed_url": "http://greyhawkery.blogspot.com/feeds/posts/default",
+      "website_url": "http://greyhawkery.blogspot.com/",
+      "description": "A gaming blog about the World of Greyhawk fantasy setting for all editions of Dungeons & Dragons formerly owned by TSR now by Wizards of the Coast.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4002304.jpg?t=1610516072"
+    },
+    {
+      "title": "Happy Jacks RPG Podcast: GM & Player Tabletop RPG Advice",
+      "feed_url": "http://www.happyjacks.org/feed/podcast",
+      "website_url": "https://www.happyjacks.org/category/podcast-episode/",
+      "description": "Happy Jacks RPG Podcast combines friendship, table-top RPGs, and unbridled enthusiasm to bring you a weekly round table discussion that is informative, honest and funny. If you're looking for an RPG podcast with diverse opinions and a slightly infantile sense of humor, look no further -- you're home.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3600,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/2753754.jpg?t=1745431101"
+    },
+    {
+      "title": "6d6 RPG Blog",
+      "feed_url": "https://6d6rpg.com/feed/",
+      "website_url": "https://6d6rpg.com/blog/",
+      "description": "6d6 creates and publishes tabletop role-playing games (RPGs) for people who like fast, light games which promote role-playing and creativity. It is fast, flexible and fun tabletop roleplaying games. Find news on 6d6's range of role playing games, adventure, PDFs, setting and supplements.",
+      "followers": {
+        "facebook": 429,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4793789.jpg?t=1609846239"
+    },
+    {
+      "title": "Musings and Ravings",
+      "feed_url": "https://jkahane.livejournal.com/data/rss",
+      "website_url": "https://jkahane.livejournal.com/",
+      "description": "Hi I'm John M. Kahane. I was Born in England, I ama a translator, freelance editor and writer, amateur palaeontologist, avid book reader, roleplaying gamer, and music fan. I post and updates about RPGs.",
+      "followers": {
+        "twitter": 518
+      },
+      "image_url": "https://i1.feedspot.com/4793462.jpg?t=1609846235"
+    },
+    {
+      "title": "AUTOCRATIK",
+      "feed_url": "https://www.autocratik.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.autocratik.com/",
+      "description": "Autocratik is David F. Chapman. He is a gamer, writer, game designer and developer, editor, illustrator, comics publisher, and all-round geek. He is best known for his work as a game designer.",
+      "followers": {
+        "facebook": 189,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4795223.jpg?t=1609846850"
+    },
+    {
+      "title": "of Dice and Dragons",
+      "feed_url": "https://ofdiceanddragons.com/feed/",
+      "website_url": "https://ofdiceanddragons.com/",
+      "description": "I'm Scot Newbury and I've been playing various role-playing games for some time. After 30+ years of gaming from both sides of the screen where I've played in good games and in bad ones, ran some memorable sessions and campaigns and others I'd really like to forget, I want to pass that knowledge along to you, my fellow gamers and hopefully I'll get better at the trade myself in process.",
+      "followers": {
+        "facebook": 31,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5368754.jpg?t=1644219632"
+    },
+    {
+      "title": "Mantic Games News",
+      "feed_url": "https://www.manticgames.com/news/feed/",
+      "website_url": "https://www.manticgames.com/news/",
+      "description": "Find out the latest news and releases from Mantic Games, including Kings of War, Deadzone, DreadBall, All Out War, Hellboy: The Board Game and lots more. Mantic Games is the creator of tabletop games such as The Walking Dead: All Out War, Kings of War, Deadzone, Warpath, DreadBall, Dungeon Saga and Armada.",
+      "followers": {
+        "facebook": 55100,
+        "twitter": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5297379.jpg?t=1624944028"
+    },
+    {
+      "title": "Dreamland RPG Blog",
+      "feed_url": "https://www.dreamrpg.com/feed/",
+      "website_url": "https://www.dreamrpg.com/design-blog/",
+      "description": "Dreamland is a portal fantasy roleplaying game inspired by the fantasy stories of Lord Dunsany, H.P. Lovecraft, Kij Johnson and Michael Ende.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5368737.jpg?t=1644231458"
+    },
+    {
+      "title": "Ynas Midgard's RPG Blog",
+      "feed_url": "https://ynasmidgard.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ynasmidgard.blogspot.com/",
+      "description": "A place to post my ramblings on gaming, house rules, setting and adventure ideas, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368726.jpg?t=1644229095"
+    },
+    {
+      "title": "Life and Times of a Philippine Gamer",
+      "feed_url": "https://philgamer.wordpress.com/feed/",
+      "website_url": "https://philgamer.wordpress.com/",
+      "description": "Life and Times of a Philippine Gamer is all about the experiences, thoughts, opinions, and rants of a die-hard RPG enthusiast born and bred in the Pearl of the Orient. A self-taught GM that has been rolling oddly shaped polyhedrons since the tender age of nine, Pointyman2000 brings his musings on bringing more fun to the table as both a player and a GM.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/808602.jpg?t=1668581705"
+    },
+    {
+      "title": "The Song of the Susurrus Blog",
+      "feed_url": "https://www.rpghistory.blog/blog/feed/",
+      "website_url": "http://",
+      "description": "Welcome, adventurer, to the Song of the Susurrus, a personal history of role-playing games. In this personal blog, I'll be re-visiting items from my own collection of role-playing and board-games over forty years and musing about RPG's and their history, both personal and universal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368751.jpg?t=1644220906"
+    },
+    {
+      "title": "Make Your Own RPG Blog",
+      "feed_url": "https://www.makeyourownrpg.com/my-rpg-blog?format=feed&type=rss",
+      "website_url": "http://",
+      "description": "Follow my blog and learn techniques to make your own RPG for tabletop pen and paper or on the computer to share with friends. I'm Mathom - an RPG maker and game designer exploring the world of homebrew RPGs for tabletop and computer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368748.jpg?t=1644213366"
+    },
+    {
+      "title": "The-Crafty-DM Blog",
+      "feed_url": "https://craftydm.co.uk/feed",
+      "website_url": "http://",
+      "description": "RPG Blog where the Crafty DM will talk on all manner of RPG bits and bobs. From dice to characters and as well as reviews of books, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368752.jpg?t=1644221688"
+    },
+    {
+      "title": "Strike! RPG Blog",
+      "feed_url": "https://www.strikerpg.com/1/feed",
+      "website_url": "http://",
+      "description": "Strike! is a tabletop RPG with grid-based tactical combat. It's simple to learn and play.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368744.jpg?t=1644228140"
+    },
+    {
+      "title": "The Rolemaster Blog",
+      "feed_url": "https://www.rolemasterblog.com/feed/",
+      "website_url": "https://www.rolemasterblog.com/",
+      "description": "Articles and discussion on Roleplaying in general and various settings including Shadow World, Forgotten Realms and Aioskoru. We talk about pen and paper roleplaying as well as play by post. We have a strong interest in Rolemaster but also play and love other games",
+      "followers": {
+        "facebook": 150,
+        "twitter": 960
+      },
+      "image_url": "https://i1.feedspot.com/4795007.jpg?t=1609845821"
+    },
+    {
+      "title": "The Smart Party",
+      "feed_url": "https://smartparty.wordpress.com/feed/",
+      "website_url": "https://smartparty.wordpress.com/",
+      "description": "Gaz and Baz have spent decades talking about games. They present the UK's premier RPG podcast.",
+      "followers": {
+        "facebook": 234,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4364121.jpg?t=1609846854"
+    },
+    {
+      "title": "Armchair Gamer",
+      "feed_url": "https://armchairgamer.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://armchairgamer.blogspot.com/",
+      "description": "I mostly centered around playing RPGs. I general posts RPG history and news. I'm going to continue doing RPG reviews broken up into:new products & old products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4793169.jpg?t=1610516388"
+    },
+    {
+      "title": "Immersion RPG Blog",
+      "feed_url": "https://immersion-rpg.com/feed/",
+      "website_url": "https://immersion-rpg.com/blog/",
+      "description": "The Immersion RPG System is brought to you by Immersion Studios, a game and publishing company that aims to give you the ultimate role playing game experience. You can buy all things Infected Zombie RPG.",
+      "followers": {
+        "facebook": 589,
+        "twitter": 552
+      },
+      "image_url": "https://i1.feedspot.com/4794380.jpg?t=1609847467"
+    },
+    {
+      "title": "Dragons Keep Blog",
+      "feed_url": "https://www.dragonskeep.co.uk/blog-feed.xml",
+      "website_url": "https://www.dragonskeep.co.uk/blog",
+      "description": "Stay up to date with what is hot in the geek and tabletop game RPG news. Dragons Keep Roleplay Club is your home for Tabletop Roleplaying Games in South East London.",
+      "followers": {
+        "facebook": 199,
+        "twitter": 3,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5297460.jpg?t=1624958605"
+    },
+    {
+      "title": "PSJ Maps Blog",
+      "feed_url": "https://www.pauljoyce.co.uk/feed/",
+      "website_url": "https://www.pauljoyce.co.uk/",
+      "description": "Posts on D&D, wargamer, miniature painter, cartographer of bespoke RPG maps. Paul Joyce is a Fantasy Map Cartographer and D&D & Pathfinder Blogger.",
+      "followers": {
+        "twitter": 843
+      },
+      "image_url": "https://i1.feedspot.com/5297385.jpg?t=1624944813"
+    },
+    {
+      "title": "Roll4 Network",
+      "feed_url": "https://www.roll4.net/feed",
+      "website_url": "https://www.roll4.net/archive",
+      "description": "Welcome to the Roll4 Network, where tabletop RPG's reign supreme! Roll4 Network is a resource for anyone interested in Tabletop RPG's. Our primary goal is to provide articles, tools, settings, and ideas to any player or Game Master.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5046314.jpg?t=1609845054"
+    },
+    {
+      "title": "RPGFan",
+      "feed_url": "https://www.rpgfan.com/news/feeds/rss.xml",
+      "website_url": "https://www.rpgfan.com/",
+      "description": "Founded in 1997 as LunarNET, RPGFan has grown into one of the premiere news and media sites dedicated specifically to roleplaying games. The website features reviews, previews, editorials and daily news of the latest in RPGs, graphic adventures and visual novels on all platforms coming in from Japan, Korea, North America, and Europe.",
+      "followers": {
+        "facebook": 57200,
+        "twitter": 15600,
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/40759.jpg?t=1609844270"
+    },
+    {
+      "title": "All Things Roleplay",
+      "feed_url": "https://allthingsroleplay.tumblr.com/rss",
+      "website_url": "https://allthingsroleplay.tumblr.com/",
+      "description": "ALL THINGS ROLEPLAY is the #1 tumblr resource for invisionfree and jcink roleplaying sites! We're here to advertise and help boost your roleplaying experience! from advertisements, to character requests, all the way to interest checks on site ideas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4795235.jpg"
+    },
+    {
+      "title": "ttRPG Community",
+      "feed_url": "https://ttrpg.community/feed/",
+      "website_url": "https://ttrpg.community/",
+      "description": "The TTRPG Community is a place to discuss all things TTRPG directly with creators of TTRPG Content.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368738.jpg?t=1644230820"
+    },
+    {
+      "title": "Fireball RPG blog",
+      "feed_url": "https://www.fireballrpg.com/feed",
+      "website_url": "http://",
+      "description": "News about the Fireball app & articles about mobile role-playing. Fireball is a gaming startup based in Prague with offices in San Francisco.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368734.jpg?t=1644210054"
+    },
+    {
+      "title": "Molten Sulfur Blog",
+      "feed_url": "https://moltensulfur.com/blog-feed.xml",
+      "website_url": "http://",
+      "description": "Content for your RPG campaigns, drawn from history and folklore! I'm Tristan. I present cool stuff from real history and folklore - things worth learning about in their own right! - and show how to file the serial numbers off and add them to your ongoing RPG campaign tonight.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368728.jpg?t=1644210026"
+    },
+    {
+      "title": "fiction suit",
+      "feed_url": "https://fictionsuit.org/feed/",
+      "website_url": "http://",
+      "description": "An RPG blog with reviews, tips, strategies and more! Matthew Tyler-Jones writes this blog to publish his gaming life, current reads, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5368739.jpg?t=1644226394"
+    },
+    {
+      "title": "Storybrewers Roleplaying Blog",
+      "feed_url": "https://storybrewersroleplaying.com/category/blog/feed/",
+      "website_url": "https://storybrewersroleplaying.com/category/blog/",
+      "description": "We are Storybrewers. We lovingly brew roleplaying games eagerly waiting to come to life at your table. Find out more about our newest tabletop rpgs. We also have free games and supplements for download.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4794281.jpg?t=1609845828"
+    },
+    {
+      "title": "dieheart",
+      "feed_url": "https://dieheart.net/rss/",
+      "website_url": "https://www.dieheart.net/posts/",
+      "description": "die heart is the wonder of role-playing games. Find reviews, solo rpgs, old-school & narrative games.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4793688.jpg?t=1610516488"
+    }
+  ]
+}

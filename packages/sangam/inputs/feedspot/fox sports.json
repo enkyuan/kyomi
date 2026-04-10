@@ -1,0 +1,177 @@
+{
+  "category": "Fox Sports",
+  "source_url": "https://rss.feedspot.com/foxsports_rss_feeds",
+  "feeds": [
+    {
+      "title": "FOX Sports",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30",
+      "website_url": "https://www.foxsports.com/",
+      "description": "FOX Sports is a comprehensive sports news platform offering the latest scores, schedules, odds, and updates across various sports. It features extensive coverage of major leagues such as the NFL, NBA, MLB, NCAA Football, and more. The site includes articles, videos, podcasts, and live streaming options, providing fans with in-depth analysis, exclusive interviews, and expert opinions. Users can also personalize their experience by following their favorite teams and players.",
+      "followers": {
+        "facebook": 9700000,
+        "twitter": 2100000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    },
+    {
+      "title": "FOX Sports \u00bb MLB",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/mlb",
+      "website_url": "https://www.foxsports.com/stories/mlb",
+      "description": "All articles about MLB from FOX Sports.",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    },
+    {
+      "title": "FOX Sports \u00bb NFL",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/nfl",
+      "website_url": "https://www.foxsports.com/nfl/",
+      "description": "Get NFL news, scores, stats, standings & more for your favorite teams and players. You can also watch highlights and live games on our website! FOX Sports is the umbrella entity representing FOX Corporation's wide array of multi-platform US-based sports assets.",
+      "followers": {
+        "facebook": 9700000,
+        "twitter": 2100000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    },
+    {
+      "title": "FOX Sports \u00bb College Football",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/cfb",
+      "website_url": "https://www.foxsports.com/college-football/news",
+      "description": "All articles about College Football from FOX Sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    },
+    {
+      "title": "FOX Sports \u00bb NBA",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/nba",
+      "website_url": "https://www.foxsports.com/stories/nba",
+      "description": "All articles about NBA from FOX Sports.",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    },
+    {
+      "title": "FOX Sports \u00bb NHL",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/nhl",
+      "website_url": "https://www.foxsports.com/nhl",
+      "description": "All articles about NHL from FOX Sports.",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    },
+    {
+      "title": "FOX Sports \u00bb WWE",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/wwe",
+      "website_url": "https://www.foxsports.com/wwe",
+      "description": "All articles about WWE from FOX Sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb World Baseball Classic",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/world-baseball-classic",
+      "website_url": "https://www.foxsports.com/world-baseball-classic",
+      "description": "Get World Baseball Classic (WBC) 2023 news, highlights, schedule, scores, standings, bracket & more from FOX Sports.",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb Women's College Basketball",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/wcbk",
+      "website_url": "https://www.foxsports.com/womens-college-basketball/news",
+      "description": "All articles about Women's College Basketball from FOX Sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb WNBA",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/wnba",
+      "website_url": "https://www.foxsports.com/wnba",
+      "description": "Stay up to date on the latest WNBA basketball news, scores, stats, standings & more. Plus, watch live games, clips and highlights for your favorite teams!",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb Tennis",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/atp,fs/wta",
+      "website_url": "https://www.foxsports.com/tennis/atp",
+      "description": "Stay up to date on ATP news, stories, results, videos & analysis from the team at FOX Sports -- covering your favorite players & events",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb Soccer",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/soccer,soccer/epl/league/1,soccer/mls/league/5,soccer/ucl/league/7,soccer/europa/league/8,soccer/wc/league/12,soccer/euro/league/13,soccer/wwc/league/14,soccer/nwsl/league/20,soccer/cwc/league/26,soccer/gold_cup",
+      "website_url": "https://www.foxsports.com/soccer",
+      "description": "All articles about Soccer from FOX Sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb Golf",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/korn-ferry-tour,fs/lpga-tour,fs/pga-tour",
+      "website_url": "https://www.foxsports.com/golf/pga-tour",
+      "description": "All articles about Golf from FOX Sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb UFC",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/ufc",
+      "website_url": "https://www.foxsports.com/ufc",
+      "description": "Get Ultimate Fighting Championship news including UFC News, Stories, Analysis, Results, Highlights & more from FOX Sports.",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb NASCAR",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/truck-series,fs/cup-series,fs/xfinity-series",
+      "website_url": "https://www.foxsports.com/nascar/cup-series",
+      "description": "All articles about NASCAR from FOX Sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880797.jpg?t=1740572353"
+    },
+    {
+      "title": "FOX Sports \u00bb College Basketball",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/cbk",
+      "website_url": "https://www.foxsports.com/college-basketball/news",
+      "description": "Get all the latest news and updates from college football leagues, scores, statistics and more! The Fox News Channel, abbreviated FNC, commonly known as Fox News, and stylized in all caps, is an American multinational conservative cable news television channel.",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5406583.jpg?t=1661233422"
+    },
+    {
+      "title": "FOX Sports \u00bb USFL",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/usfl",
+      "website_url": "https://www.foxsports.com/usfl/news",
+      "description": "Get USFL news for your favorite former teams and players in the United States Football League from FOX Sports.",
+      "followers": {
+        "facebook": 9700000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    }
+  ]
+}

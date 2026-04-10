@@ -1,0 +1,85 @@
+{
+  "category": "Spotify",
+  "source_url": "https://rss.feedspot.com/spotify_rss_feeds",
+  "feeds": [
+    {
+      "title": "Spotify",
+      "feed_url": "https://newsroom.spotify.com/feed/",
+      "website_url": "https://newsroom.spotify.com/news/",
+      "description": "With Spotify, it's easy to find the right music or podcast for every moment on your phone, your computer, your tablet and more. There are millions of tracks and episodes on Spotify. So whether you're behind the wheel, working out, partying or relaxing, the right music or podcast is always at your fingertips. Choose what you want to listen to, or let Spotify surprise you. Here are some spotify news, updates, and what's playing in our own words.",
+      "followers": {
+        "facebook": 23700000,
+        "twitter": 197900,
+        "instagram": 13600000
+      },
+      "image_url": "https://i1.feedspot.com/5292125.jpg?t=1623334997"
+    },
+    {
+      "title": "Spotify for Artists",
+      "feed_url": "https://artists.spotify.com/api/v1/blogRss",
+      "website_url": "https://artists.spotify.com/blog/category/all",
+      "description": "Make Spotify yours with the help of music legends and industry insiders. Follow this blog to get more out of Spotify with tools & tips for artists and their teams.",
+      "followers": {
+        "twitter": 174300,
+        "instagram": 381300
+      },
+      "image_url": "https://i1.feedspot.com/4915613.jpg?t=1620366094"
+    },
+    {
+      "title": "Spotify Research Blog",
+      "feed_url": "https://research.atspotify.com/feed/",
+      "website_url": "https://research.atspotify.com/blog/",
+      "description": "Spotify Research is dedicated to extending the state of the art in audio. We've made it our mission to define what state of the art means in audio and machine learning. We develop novel research ideas, evaluate their performance on real data, and build tools, systems, and products that apply these ideas at Spotify-scale. Your official source for Spotify Research news and updates.",
+      "followers": {
+        "facebook": 23700000,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5292025.jpg?t=1623328023"
+    },
+    {
+      "title": "Music Industry Blog \u00bb Spotify",
+      "feed_url": "https://musicindustryblog.wordpress.com/category/spotify/feed/",
+      "website_url": "https://musicindustryblog.wordpress.com/category/spotify/",
+      "description": "This is the blog of Mark Mulligan a media and technology analyst of more than 15 years standing and one of the leading voices in music industry analysis. Mark's been analyzing the digital music market for over a decade, right from the days when there wasn't much of one to talk of. Posts about Spotify written by Mark Mulligan.",
+      "followers": {
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5292023.jpg?t=1623327427"
+    },
+    {
+      "title": "Spotify Labs",
+      "feed_url": "https://labs.spotify.com/feed/",
+      "website_url": "https://engineering.atspotify.com/",
+      "description": "This is Spotify's official technology blog. Here you can find out a little about us as a company, and a little about how we tackle our technology issues. All posts are authored by our own engineers.",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 35700,
+        "instagram": 13600000
+      },
+      "image_url": "https://i1.feedspot.com/4376519.jpg?t=1620366100"
+    },
+    {
+      "title": "Spotify Engineering",
+      "feed_url": "https://engineering.atspotify.com/feed",
+      "website_url": "https://engineering.atspotify.com/",
+      "description": "Watch our Chief R&D Officer, Gustav S\u00f6derstr\u00f6m, speak about the history of Spotify at MIT. Introduction by MIT Professor of the Practice, Eran Egozy, Co-Founder and Chief Scientist, Harmonix. Hosted by MIT SHASS and CSAIL. Read about the magic behind the music & more. Welcome to our official technology blog.",
+      "followers": {
+        "facebook": 23700000,
+        "twitter": 35700
+      },
+      "image_url": "https://i1.feedspot.com/5292026.jpg?t=1623328528"
+    },
+    {
+      "title": "Spotify HR Blog",
+      "feed_url": "https://hrblog.spotify.com/feed",
+      "website_url": "https://hrblog.spotify.com/",
+      "description": "Spotify HR Blog covers Compensation & Benefits, Culture, Diversity & Belonging, Employer Branding, Equity and Impact, Growth Mindset, Learning & Development, People Analytics and People Experience.",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 18700000,
+        "instagram": 13600000
+      },
+      "image_url": "https://i1.feedspot.com/4922996.jpg?t=1627278567"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "category": "Palm Harbor News",
+  "source_url": "https://rss.feedspot.com/palm_harbor_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tampa Bay Newspapers \u00bb Palm Harbor",
+      "feed_url": "https://www.tbnweekly.com/search/?f=rss&t=article&c=north_county/palm_harbor_beacon&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.tbnweekly.com/north_county/palm_harbor_beacon/",
+      "description": "Tampa Bay Newspapers covers news and entertainment for Pinellas County, Florida. Get the latest news and updates in Palm Harbor by following this feed.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5147675.jpg"
+    },
+    {
+      "title": "ABC Action News \u00bb Palm Harbor",
+      "feed_url": "https://www.abcactionnews.com/news/region-north-pinellas/palm-harbor.rss",
+      "website_url": "https://www.abcactionnews.com/news/region-north-pinellas/palm-harbor",
+      "description": "ABC Action News is taking action for you with leading local news coverage in the Tampa Bay area, 'Certified Most Accurate' weather forecasts, and award-winning I-Team Investigations on TV, online, on your phone and tablet. Follow this feed to read the latest news, updates, information, and everything that matters to you in city Palm Harbor.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/5147678.jpg?t=1588577706"
+    },
+    {
+      "title": "News 6 WKMG \u00bb Palm Harbor",
+      "feed_url": "https://www.clickorlando.com/topic/PALM_HARBOR/",
+      "website_url": "https://www.clickorlando.com/topic/PALM_HARBOR/",
+      "description": "Stay informed on everything Palm Harbor with constant news updates, press releases, local government and business, sports, and weather coverage brought to you by News 6 WKMG. Central Florida's CBS News affiliate WKMG is dedicated to providing sharp, prompt, and in-depth reporting on public matters the need highlighting.",
+      "followers": {
+        "facebook": 566200,
+        "twitter": 158500
+      },
+      "image_url": "https://i1.feedspot.com/5516090.jpg?t=1677831346"
+    }
+  ]
+}

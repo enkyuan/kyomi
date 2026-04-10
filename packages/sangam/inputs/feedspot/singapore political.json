@@ -1,0 +1,101 @@
+{
+  "category": "Singapore Political",
+  "source_url": "https://rss.feedspot.com/singapore_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "Progress Singapore Party Blog",
+      "feed_url": "https://psp.org.sg/feed/",
+      "website_url": "https://psp.org.sg/latest-blog/",
+      "description": "Progress Singapore Party is a political party representing the voices of Singaporeans for a more compassionate Singapore.",
+      "followers": {
+        "facebook": 57400,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5332593.jpg?t=1634545174"
+    },
+    {
+      "title": "Red Dot United",
+      "feed_url": "https://reddotunited.sg/latest/f.rss",
+      "website_url": "https://reddotunited.sg/latest",
+      "description": "Red Dot United is a national movement dedicated to serving Singapore and advancing the well-being of all Singaporeans; by promoting the ideals of faith.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 149
+      },
+      "image_url": "https://i1.feedspot.com/5332608.jpg?t=1634545485"
+    },
+    {
+      "title": "Singapore Politics Blog",
+      "feed_url": "https://jesscscott.wordpress.com/feed/",
+      "website_url": "https://jesscscott.wordpress.com/blog/",
+      "description": "'Jess C Scott' is a pen name I've used since I was 12. I've always had a keen interest in anything analytical. Here, in this blog, I talk about the history and politics of Singapore.",
+      "followers": {
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5332583.jpg?t=1678797921"
+    },
+    {
+      "title": "The Independent Singapore News \u00bb Singapore Politics",
+      "feed_url": "https://theindependent.sg/news/singapore-politics/feed/",
+      "website_url": "https://theindependent.sg/news/singapore-politics/",
+      "description": "The Singapore Politics section offers timely news, analysis, and commentary on political events, elections, and key figures shaping the nation's governance.",
+      "followers": {
+        "facebook": 179700,
+        "instagram": 51300
+      },
+      "image_url": "https://i1.feedspot.com/8656068.jpg?t=1754845938"
+    },
+    {
+      "title": "RICE Media \u00bb Government & Politics",
+      "feed_url": "https://www.ricemedia.co/topic/government-politics/feed/",
+      "website_url": "https://www.ricemedia.co/topic/government-politics/",
+      "description": "RICE Media explores the narratives of governance and policies that delve into the cultural dimensions and impact of politics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8656069.jpg?t=1754845804"
+    },
+    {
+      "title": "East Asia Forum \u00bb Singapore",
+      "feed_url": "https://eastasiaforum.org/category/countries/singapore/feed/",
+      "website_url": "https://eastasiaforum.org/category/countries/singapore/",
+      "description": "The Singapore section on East Asia Forum features peer-reviewed, expert policy analysis and commentary on Singapore's politics, economics, society, and regional developments within the Asia-Pacific context.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 27700
+      },
+      "image_url": "https://i1.feedspot.com/8656070.jpg?t=1754845762"
+    },
+    {
+      "title": "The Diplomat \u00bb Singapore Politics",
+      "feed_url": "https://thediplomat.com/tag/singapore-politics/feed/",
+      "website_url": "https://thediplomat.com/tag/singapore-politics/",
+      "description": "This news section covers articles on Singapore Political Updates. The Diplomat: the premier international affairs magazine for the Asia-Pacific, covering politics, defense, and society from China and Iran to Burma and Australia.",
+      "followers": {
+        "facebook": 826300,
+        "twitter": 269700
+      },
+      "image_url": "https://i1.feedspot.com/5118807.jpg?t=1634541612"
+    },
+    {
+      "title": "The Worker's Party News",
+      "feed_url": "https://www.wp.sg/news",
+      "website_url": "https://www.wp.sg/news",
+      "description": "Recent news from The Workers' Party. The Workers' Party is a political party in Singapore that believes in giving power to the people.",
+      "followers": {
+        "facebook": 191700,
+        "twitter": 64200
+      },
+      "image_url": "https://i1.feedspot.com/5332590.jpg?t=1634544982"
+    },
+    {
+      "title": "TODAY \u00bb Singapore Politics",
+      "feed_url": "https://www.todayonline.com/topics/singapore-politics",
+      "website_url": "https://www.todayonline.com/topics/singapore-politics",
+      "description": "Follow the latest news on Singapore politics at Today. Check out top news from Singapore and around the world. TODAY covers the latest and trending news from Singapore, Asia, and around the world.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 781600
+      },
+      "image_url": "https://i1.feedspot.com/5332894.jpg?t=1634555444"
+    }
+  ]
+}

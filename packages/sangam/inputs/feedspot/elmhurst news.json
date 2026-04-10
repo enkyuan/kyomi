@@ -1,0 +1,38 @@
+{
+  "category": "Elmhurst News",
+  "source_url": "https://rss.feedspot.com/elmhurst_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Independent Newspapers \u00bb Elmhurst",
+      "feed_url": "https://theindependentnewspapers.com/category/elmhurst-news/feed/",
+      "website_url": "https://theindependentnewspapers.com/category/elmhurst-news/",
+      "description": "Keep up with the latest local and breaking news, entertainment, weather, sports and much more in Elmhurst, IL from The Independent Newspapers.",
+      "followers": {
+        "facebook": 593
+      },
+      "image_url": "https://i1.feedspot.com/5155397.jpg?t=1590057613"
+    },
+    {
+      "title": "CBS Chicago \u00bb Elmhurst",
+      "feed_url": "https://chicago.cbslocal.com/tag/elmhurst/feed/",
+      "website_url": "https://www.cbsnews.com/chicago/tag/elmhurst/",
+      "description": "The latest news, weather & sports in Elmhurst brought to you by CBS Chicago.",
+      "followers": {
+        "facebook": 400300,
+        "twitter": 213900
+      },
+      "image_url": "https://i1.feedspot.com/5155398.jpg?t=1590057748"
+    },
+    {
+      "title": "Chicago Tribune \u00bb Elmhurst",
+      "feed_url": "https://www.chicagotribune.com/location/illinois/dupage-county/elmhurst/feed/",
+      "website_url": "https://www.chicagotribune.com/location/illinois/dupage-county/elmhurst/",
+      "description": "The Chicago Tribune is where you can find the latest Elmhurst news, recent events and much more. Founded in 1847, the Chicago Tribune, is the top source of news and information in the Chicago area and the largest news organization in the Midwest.",
+      "followers": {
+        "facebook": 721400,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5519407.jpg?t=1678694770"
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "category": "Computer Vision",
+  "source_url": "https://rss.feedspot.com/computer_vision_rss_feeds",
+  "feeds": [
+    {
+      "title": "Learn OpenCV - Satya Mallick",
+      "feed_url": "https://learnopencv.com/feed/",
+      "website_url": "https://learnopencv.com/",
+      "description": "This blog is for programmers, hackers, engineers, scientists, students and self-starters who are interested in Computer Vision and Machine Learning. Learn computer vision, machine learning, and image processing with OpenCV, CUDA, Caffe examples and tutorials written in C and Python.",
+      "followers": {
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/4961920.jpg?t=1621920625"
+    },
+    {
+      "title": "Zbigatron - Zbigniew Zdziarski",
+      "feed_url": "https://zbigatron.com/feed/",
+      "website_url": "https://zbigatron.com/",
+      "description": "Zbigatron is a blog on the interesting things going on in the world of Computer Vision.",
+      "followers": {
+        "twitter": 259
+      },
+      "image_url": "https://i1.feedspot.com/4961631.jpg?t=1621920631"
+    },
+    {
+      "title": "OpenCV library",
+      "feed_url": "https://opencv.org/feed/",
+      "website_url": "https://opencv.org/news/",
+      "description": "The OpenCV foundation is a non-profit foundation whose purpose is to enhance computer vision through software (mainly the OpenCV library) and non-software like the organization of events.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/4961908.jpg?t=1621920637"
+    },
+    {
+      "title": "CV-Tricks.com",
+      "feed_url": "https://cv-tricks.com/feed/",
+      "website_url": "https://cv-tricks.com/",
+      "description": "CV-Tricks stands for computer vision tricks. In this blog, they write about the practical tips, tricks, and methods used for making world-class computer vision solutions.",
+      "followers": {
+        "twitter": 540
+      },
+      "image_url": "https://i1.feedspot.com/4961700.jpg?t=1621920643"
+    },
+    {
+      "title": "LDV Capital Blog",
+      "feed_url": "https://www.ldv.co/blog?format=RSS",
+      "website_url": "https://www.ldv.co/blog?tag=computer+vision",
+      "description": "LDV Capital is a thesis-driven early stage venture fund investing in people building visual technology businesses that leverage computer vision, machine learning and artificial intelligence to analyze visual data.",
+      "followers": {
+        "facebook": 352,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4961961.jpg?t=1621920647"
+    },
+    {
+      "title": "The Xiris Blog",
+      "feed_url": "https://blog.xiris.com/blog/rss.xml",
+      "website_url": "https://blog.xiris.com/blog",
+      "description": "Xiris Automation Inc. specializes in developing optical metrology equipment (camera to computer machines that are 'smart') used for process and quality control across a number of specialty industries.",
+      "followers": {
+        "facebook": 377,
+        "twitter": 364,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4961654.jpg?t=1621920661"
+    },
+    {
+      "title": "the Serious Computer Vision Blog",
+      "feed_url": "https://computervisionblog.wordpress.com/feed/",
+      "website_url": "https://computervisionblog.wordpress.com/category/computer-vision/",
+      "description": "A blog about computer vision and serious stuff. This blog is an experiment to see what would happen, when some not very serious tropical islanders try to write a serious computer vision blog.",
+      "followers": {
+        "twitter": 177
+      },
+      "image_url": "https://i1.feedspot.com/4961686.jpg"
+    },
+    {
+      "title": "NVIDIA \u00bb Computer Vision",
+      "feed_url": "https://blogs.nvidia.com/blog/tag/computer-vision/feed/",
+      "website_url": "https://blogs.nvidia.com/blog/tag/computer-vision/",
+      "description": "Learn about Computer Vision and its uses in this section of the NVIDIA blog. NVIDIA is an AI computing company and is the world leader in visual computing.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 2200000,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/5296921.jpg?t=1624878523"
+    },
+    {
+      "title": "Analytics Vidhya \u00bb Computer Vision",
+      "feed_url": "https://www.analyticsvidhya.com/blog/category/computer-vision/feed/",
+      "website_url": "https://www.analyticsvidhya.com/blog/category/computer-vision/",
+      "description": "A community-based knowledge portal for Analytics and Data Science professionals. The aim of the platform is to become a complete portal serving all knowledge and career needs of Data Science Professionals. This section of our blog focuses on Computer Vision.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 30600,
+        "instagram": 149000
+      },
+      "image_url": "https://i1.feedspot.com/5296923.jpg?t=1624876507"
+    },
+    {
+      "title": "Roboflow Blog",
+      "feed_url": "https://blog.roboflow.com/rss/",
+      "website_url": "https://blog.roboflow.com/",
+      "description": "Our blog articles cover the intricacies of building better computer vision models, along with tutorials and computer vision case studies. Roboflow empowers developers to build their own computer vision applications, no matter their skillset or experience. We streamline the process between labeling your data and training your model.",
+      "followers": {
+        "facebook": 402,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5296927.jpg?t=1624877350"
+    },
+    {
+      "title": "iMerit Blog",
+      "feed_url": "https://imerit.net/feed/",
+      "website_url": "https://imerit.net/blog/",
+      "description": "iMerit enriches and annotates the data that powers your algorithms in Machine Learning, Computer Vision, Content and Analytics.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4961696.jpg?t=1621920682"
+    },
+    {
+      "title": "Viso.ai",
+      "feed_url": "https://viso.ai/feed/",
+      "website_url": "https://viso.ai/blog/computer-vision/",
+      "description": "Covers the latest updates, guides, tutorials and industry news about visual deep learning and computer vision. Viso is the premier knowledge hub for information about visual artificial intelligence.",
+      "followers": {
+        "facebook": 550,
+        "twitter": 254
+      },
+      "image_url": "https://i1.feedspot.com/5305371.jpg?t=1627301676"
+    },
+    {
+      "title": "To Data & Beyond",
+      "feed_url": "https://youssefh.substack.com/feed",
+      "website_url": "https://youssefh.substack.com/",
+      "description": "Data Science, Machine Learning, AI, and what is beyond them",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe25b560-db85-45fd-9925-5e22760ef64c_500x500.png"
+    },
+    {
+      "title": "Piekniewski's Blog",
+      "feed_url": "http://blog.piekniewski.info/feed/",
+      "website_url": "http://blog.piekniewski.info/",
+      "description": "Filip Piekniewski is a researcher working on computer vision and AI. My main research objective is to introduce dynamics into machine learning which is currently dominated by statistics.",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4961962.jpg?t=1621920792"
+    },
+    {
+      "title": "Paperspace \u00bb Computer Vision",
+      "feed_url": "https://blog.paperspace.com/tag/computer-vision/rss/",
+      "website_url": "https://blog.paperspace.com/tag/computer-vision/",
+      "description": "Paperspace is a high-performance cloud computing and ML development platform for building, training, and deploying machine learning models. This section of our blog focuses on Computer Vision and its applications.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5296926.jpg?t=1624876603"
+    },
+    {
+      "title": "Eastern European Conference on Computer Vision(EECVC)",
+      "feed_url": "http://eecvc.com/feed/",
+      "website_url": "http://eecvc.com/blog-1-column/",
+      "description": "Eastern European Conference on Computer Vision is a unique opportunity for computer vision researchers and developers to meet, share their knowledge, learn about new trends and find like-minded people.",
+      "followers": {
+        "facebook": 363
+      },
+      "image_url": "https://i1.feedspot.com/4961636.jpg?t=1621920665"
+    },
+    {
+      "title": "Dov Katz : Computer Vision",
+      "feed_url": "https://dovkatz.wordpress.com/feed/",
+      "website_url": "https://dovkatz.wordpress.com/",
+      "description": "Dov Katz's blog on Computer Vision, Machine Learning and Human Perception.",
+      "followers": {
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4961834.jpg?t=1621920752"
+    },
+    {
+      "title": "Computer Vision News",
+      "feed_url": "https://computervisionnews.wordpress.com/feed/",
+      "website_url": "https://computervisionnews.wordpress.com/",
+      "description": "All the events and academic vacancies within the field of Computer Vision, Image Analysis, and Medical Image Analysis, aggregated from different mailingslists and feeds.",
+      "followers": {
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4210493.jpg?t=1621920687"
+    },
+    {
+      "title": "My Great Learning \u00bb Artificial Intelligence",
+      "feed_url": "https://www.mygreatlearning.com/blog/artificial-intelligence/feed/",
+      "website_url": "https://www.mygreatlearning.com/blog/artificial-intelligence/",
+      "description": "Computer Vision's work is to develop techniques to help computers see and understand the content. This section of our blog covers Computer Vision related interview questions, Data Sets in CV, Low Level, & High Level Computer Vision, and AI vs Human Intelligence. Great Learning is an ed-tech company that offers impactful and industry-relevant programs in high-growth areas.",
+      "followers": {
+        "facebook": 354200,
+        "twitter": 31700,
+        "instagram": 311700
+      },
+      "image_url": "https://i1.feedspot.com/5296929.jpg?t=1624875839"
+    },
+    {
+      "title": "Edge AI and Vision Blog",
+      "feed_url": "https://www.edge-ai-vision.com/category/blog/feed/",
+      "website_url": "https://www.edge-ai-vision.com/category/blog/",
+      "description": "The primary goal of the Embedded Vision Alliance is to inspire and empower hardware and software product creators to use computer vision technology.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4961941.jpg?t=1621921185"
+    },
+    {
+      "title": "Maxar Blog",
+      "feed_url": "https://blog.maxar.com/",
+      "website_url": "https://blog.maxar.com/",
+      "description": "This section of the Wovenware blog features articles exclusively about Computer Vision technology and its uses. Wovenware is an AI and software development technology consulting firm.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 661,
+        "instagram": 587
+      },
+      "image_url": "https://i1.feedspot.com/5296925.jpg?t=1624877826"
+    },
+    {
+      "title": "RSIP Vision",
+      "feed_url": "https://www.rsipvision.com/category/rsip-vision-learns/feed/",
+      "website_url": "https://alexgkendall.com/",
+      "description": "RSIP Vision, managed by Ron Soferman, is an established leader in computer vision and image processing R&D. Here is the section with articles by RSIP Vision relating Computer Vision and Image Processing projects and works.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4961928.jpg?t=1621920671"
+    },
+    {
+      "title": "Kairos Blog",
+      "feed_url": "https://www.kairos.com/blog/feed/rss",
+      "website_url": "https://www.kairos.com/blog",
+      "description": "Kairos is an artificial intelligence company specializing in face recognition. Through computer vision and machine learning, Kairos can recognize faces in videos, photos, and the real-world - making it easier than ever to transform the way your business interacts with people.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4962043.jpg?t=1621920678"
+    }
+  ]
+}

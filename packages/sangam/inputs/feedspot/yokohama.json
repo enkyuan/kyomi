@@ -1,0 +1,78 @@
+{
+  "category": "Yokohama",
+  "source_url": "https://rss.feedspot.com/yokohama_rss_feeds",
+  "feeds": [
+    {
+      "title": "JustHungry",
+      "feed_url": "https://justhungry.com/node/feed",
+      "website_url": "https://justhungry.com/",
+      "description": "Hi everyone. My name is Makiko Itoh. Just Hungry is a food blog, established in 2003. My primary focus here on Just Hungry is Japanese food and home cooking. I try to always present recipes and methods for people who do not live in Japan and may not be familiar with Japanese cooking or have access to a wide selection of Japanese ingredients.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 6600,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/1489627.jpg?t=1640072408"
+    },
+    {
+      "title": "Tokyo Jazz Site Blog",
+      "feed_url": "https://tokyojazzsite.com/feed/",
+      "website_url": "https://tokyojazzsite.com/tjs-blog/",
+      "description": "Tokyo Jazz Site Blog is a guide to Jazz bars, clubs, cafes, and shops in the Tokyo and Yokohama metropolitan areas, home of the OK Jazz podcast, plus info on Soul and World Music.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4690080.jpg?t=1668509178"
+    },
+    {
+      "title": "grape Japan \u00bb Art",
+      "feed_url": "https://grapeejapan.com/category/art/feed",
+      "website_url": "https://grapeejapan.com/category/art",
+      "description": "Welcome to Grape Japan, a website dedicated to sharing interesting content related to Japan, ranging from the country's most beautiful traditional aspects to its popular modern sub-cultures.",
+      "followers": {
+        "facebook": 227800,
+        "twitter": 2600,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5343006.jpg?t=1636981251"
+    },
+    {
+      "title": "Zuken Blog",
+      "feed_url": "https://blog.zuken.com/category/pcb-design/feed/",
+      "website_url": "https://www.zuken.com/en/blog/category/pcb-design/",
+      "description": "Zuken is a global provider of leading-edge software and consulting services for electrical and electronic design and engineering. Zuken's PCB design software solutions have been changing the world's expectations and ability to design innovative electronic products since 1976. Follow this blog to get more knowledge on PCB Design.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 701
+      },
+      "image_url": "https://i1.feedspot.com/4891975.jpg?t=1612599590"
+    },
+    {
+      "title": "International Mothers Community in Yokohama",
+      "feed_url": "http://international-mothers-in-yokohama.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://international-mothers-in-yokohama.blogspot.com/",
+      "description": "This is the blog of the group International Mothers Community in Yokohama. The group is mainly for international mothers living and raising kids in Yokohama.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5331665.jpg?t=1634215659"
+    },
+    {
+      "title": "That Japan Life",
+      "feed_url": "https://thatjapanlife.com/?feed=rss2",
+      "website_url": "https://thatjapanlife.com/",
+      "description": "I am Jill, a Filipina mom living in Yokohama, Japan. After almost five years of dating, I married my Japanese boyfriend and left everything behind to start a new life in Japan. This blog helps other clueless gaijins out there tackle the more challenging aspects of life in Japan such as learning the language, being a foreign parent, and, well, choosing the best sanitary napkin.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5331550.jpg?t=1634203984"
+    },
+    {
+      "title": "Nissan Motor Corporation Global Website",
+      "feed_url": "https://reports.nissan-global.com/EN/?feed=rss2",
+      "website_url": "https://www.nissan-global.com/EN/STORIES/",
+      "description": "Nissan Motor Corporation is the Official Global Website of Nissan Motor Company, providing the latest news and press releases, corporate and product information.",
+      "followers": {
+        "facebook": 23100000,
+        "twitter": 795300
+      },
+      "image_url": "https://i1.feedspot.com/4915655.jpg?t=1620368271"
+    }
+  ]
+}

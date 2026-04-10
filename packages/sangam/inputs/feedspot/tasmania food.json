@@ -1,0 +1,39 @@
+{
+  "category": "Tasmania Food",
+  "source_url": "https://rss.feedspot.com/tasmania_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Hobart Magazine \u00bb Food & Drink",
+      "feed_url": "https://thehobartmagazine.com.au/category/food-drink/feed/",
+      "website_url": "https://thehobartmagazine.com.au/category/food-drink/",
+      "description": "The Hobart Magazine's Food & Drink section is a go-to resource for foodies living in or visiting Hobart, Tasmania. With features on the city's best restaurants, bars, cafes, and producers, as well as recipes and food-related events, this blog provides a comprehensive guide to Hobart's food and drink scene.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 157,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5549916.jpg?t=1682410139"
+    },
+    {
+      "title": "Dining Tas Blog",
+      "feed_url": "https://diningtas.com.au/feed/",
+      "website_url": "https://diningtas.com.au/posts/",
+      "description": "Dining Tas Blog is a blog that covers the latest news and trends in Tasmania's dining scene, with features on new restaurants, food events, and more. With a focus on Hobart and southern Tasmania, this blog is a great way to stay up-to-date on the latest developments in the island's food culture.",
+      "followers": {
+        "facebook": 316,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5549917.jpg?t=1682410149"
+    },
+    {
+      "title": "Sylvia's Kitchen Blog",
+      "feed_url": "https://www.sylviaskitchen.com.au/feed/",
+      "website_url": "https://www.sylviaskitchen.com.au/blog/",
+      "description": "Sylvia's Kitchen Blog is a personal blog written by a Tasmanian foodie who loves to cook and share her recipes and food experiences. From baking to cooking and everything in between, this blog is a great resource for anyone looking for inspiration in the kitchen. With a focus on simple, delicious, and seasonal ingredients, Sylvia's Kitchen Blog is a great way to discover new recipes and cooking techniques.",
+      "followers": {
+        "facebook": 298
+      },
+      "image_url": "https://i1.feedspot.com/5549915.jpg?t=1682410126"
+    }
+  ]
+}

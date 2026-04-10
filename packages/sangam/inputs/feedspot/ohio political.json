@@ -1,0 +1,40 @@
+{
+  "category": "Ohio Political",
+  "source_url": "https://rss.feedspot.com/ohio_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Ohio Star \u00bb Politics",
+      "feed_url": "https://theohiostar.com/category/politics/feed/",
+      "website_url": "https://theohiostar.com/category/politics/",
+      "description": "The Ohio Star offers in-depth coverage of events, politics, and policy and provides unbiased updates on the news that matters most. The Ohio Star is your place for state and local news and information that matters.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5348845.jpg?t=1638347222"
+    },
+    {
+      "title": "Spectrum News \u00bb Politics",
+      "feed_url": "https://spectrumlocalnews.com/services/contentfeed.oh%7Ccincinnati%7Cpolitics.hero.rss",
+      "website_url": "https://spectrumnews1.com/oh/columbus/politics",
+      "description": "Latest Columbus political reports, analyses, news, and more. Spectrum News 1 is a 24/7 statewide network, focused on delivering news and information on the issues that are important to Ohio residents.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 5300,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5348844.jpg?t=1638347946"
+    },
+    {
+      "title": "WTOL 11 \u00bb Politics",
+      "feed_url": "https://www.wtol.com/politics",
+      "website_url": "https://www.wtol.com/politics",
+      "description": "WTOL 11 proudly serves the Northwest Ohio and Southeastern Michigan area with top-rated news, entertainment and sports programming. WTOL 11 News is Toledo's News Leader on air, on line, and on your phone.",
+      "followers": {
+        "facebook": 503200,
+        "twitter": 120500
+      },
+      "image_url": "https://i1.feedspot.com/5348848.jpg?t=1638347055"
+    }
+  ]
+}

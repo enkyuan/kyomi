@@ -1,0 +1,114 @@
+{
+  "category": "Laptop",
+  "source_url": "https://rss.feedspot.com/laptop_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Guardian \u00bb Laptops",
+      "feed_url": "https://www.theguardian.com/technology/laptops/rss",
+      "website_url": "https://www.theguardian.com/technology/laptops",
+      "description": "Latest technology news such as laptop news, opinion, analysis and reviews from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5016435.jpg?t=1622284485"
+    },
+    {
+      "title": "A Laptop Blog",
+      "feed_url": "https://blog.rentourlaptops.com/feed/",
+      "website_url": "https://blog.rentourlaptops.com/",
+      "description": "Laptop Trends & Reviews For The Laptop Rental World only at Rent Our Laptops.com. Subscribe to our blog today to stay up-to-date with RentOurLaptops.com.",
+      "followers": {
+        "facebook": 72,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5016166.jpg?t=1622284489"
+    },
+    {
+      "title": "Laptop Magazine",
+      "feed_url": "http://feeds.feedburner.com/laptopmag",
+      "website_url": "https://www.laptopmag.com/",
+      "description": "Laptop Magazine offers reviews, daily commentary and insight into the breaking tech news of laptops, tablets, and 2-in-1s; takes you hands-on with new products; and helps you save time with smart tips.",
+      "followers": {
+        "twitter": 31900
+      },
+      "image_url": "https://i1.feedspot.com/673713.jpg?t=1622284526"
+    },
+    {
+      "title": "Wirecutter \u00bb Laptops",
+      "feed_url": "https://thewirecutter.com/electronics/laptops/feed/",
+      "website_url": "https://thewirecutter.com/electronics/laptops/",
+      "description": "Wirecutter tests and reviews the best tech, appliances, gear, and more. You can trust our veteran journalists, scientists, and experts to find the best stuff. From budget-friendly options to loaded ultrabooks, our experts have spent hundreds of hours finding the best laptops for most people.",
+      "followers": {
+        "facebook": 151400,
+        "twitter": 126300,
+        "instagram": 301100
+      },
+      "image_url": "https://i1.feedspot.com/5016434.jpg?t=1622284497"
+    },
+    {
+      "title": "Buisness Insider \u00bb Laptops",
+      "feed_url": "https://www.businessinsider.com/category/laptops.rss",
+      "website_url": "https://www.businessinsider.com/category/laptops?IR=T",
+      "description": "Business Insider is a fast-growing business site with deep financial, media, tech, and other industry verticals. Launched in 2007, the site is now the largest business news site on the web. Latest stories about Laptops on Business Insider.",
+      "followers": {
+        "facebook": 15100000,
+        "twitter": 4099999,
+        "instagram": 4900000
+      },
+      "image_url": "https://i1.feedspot.com/5016217.jpg?t=1622284463"
+    },
+    {
+      "title": "Best Laptop Ninja",
+      "feed_url": "https://www.bestlaptopninja.com/feed/",
+      "website_url": "https://www.bestlaptopninja.com/",
+      "description": "Best Laptop Ninja is mainly focused on helping people to find the best laptop according to their requirements. We have a team of experts who test and compile the list of best laptops with the latest technology.",
+      "followers": {
+        "facebook": 417,
+        "twitter": 43
+      },
+      "image_url": "https://i1.feedspot.com/5016249.jpg?t=1622284482"
+    },
+    {
+      "title": "LaptopsChamp",
+      "feed_url": "https://laptopschamp.com/feed/",
+      "website_url": "https://laptopstudy.com/",
+      "description": "LaptopsChamp.com is your knowledge base for the best laptops, laptop software reviews, and troubleshooting tips. Get started with our laptop buyer's guide!",
+      "followers": {
+        "facebook": 253,
+        "twitter": 483
+      },
+      "image_url": "https://i1.feedspot.com/5256850.jpg?t=1615525850"
+    },
+    {
+      "title": "Laptops100",
+      "feed_url": "https://techswow.com/feed/",
+      "website_url": "https://laptopstudy.com/",
+      "description": "Get laptop buyer guides and laptop reviews from this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5075761.jpg?t=1622285217"
+    },
+    {
+      "title": "Laptop Study",
+      "feed_url": "https://laptopstudy.com/feed/",
+      "website_url": "https://laptopstudy.com/",
+      "description": "The Most Complete Buying Guides & Best Laptops For Everyone. Get the latest tool, tips, software and apps and how to effectively use your laptop to succeed during college.",
+      "followers": {
+        "facebook": 551
+      },
+      "image_url": "https://i1.feedspot.com/5016247.jpg?t=1622284501"
+    },
+    {
+      "title": "Laptop Under Budget",
+      "feed_url": "https://laptopunderbudget.com/feed/",
+      "website_url": "https://laptopunderbudget.com/",
+      "description": "Laptop Under Budget is the one-stop-shop website to find and buy the best laptop within your budget from experts' curated laptop buying guides",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/5229423.jpg?t=1608799448"
+    }
+  ]
+}

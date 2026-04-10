@@ -1,0 +1,717 @@
+{
+  "category": "Pharma",
+  "source_url": "https://rss.feedspot.com/pharma_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cafepharma",
+      "feed_url": "https://www.cafepharma.com/rss.xml",
+      "website_url": "https://www.cafepharma.com/",
+      "description": "A source for the pharmaceutical/medical industry covering daily pharma news and headlines. Our scope includes pharmaceutical, device, biotech, laboratory, animal health, dental, etc. Our scope includes pharmaceutical, device, biotech, laboratory, animal health, dental, etc.",
+      "followers": {
+        "twitter": 18000
+      },
+      "image_url": "https://i1.feedspot.com/369061.jpg?t=1629886058"
+    },
+    {
+      "title": "pharmaphorum",
+      "feed_url": "https://pharmaphorum.com/rssfeed/news-and-features",
+      "website_url": "https://pharmaphorum.com/news",
+      "description": "Pharmaphorum reports all the latest Pharma news, views, and analysis of healthcare in a rapidly changing world. At Pharmaphorum We are publishers, consultants, and creatives bringing healthcare together. We support our pharmaceutical industry clients through both the reach and reputation of our publication and our consultative and creative capabilities in marketing, medical, communications, and digital innovation.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 24500
+      },
+      "image_url": "https://i1.feedspot.com/4512272.jpg?t=1614146724"
+    },
+    {
+      "title": "Pharmaceutical Executive",
+      "feed_url": "https://www.pharmexec.com/rss",
+      "website_url": "https://www.pharmexec.com/",
+      "description": "Pharmaceutical Executive is a digital and print magazine offering news and opinions, analysis, features, and executive profiles. Explore the latest featured content by the pharmaceutical executive editorial staff.",
+      "followers": {
+        "twitter": 34700,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5426145.jpg?t=1664784791"
+    },
+    {
+      "title": "FDA Law Blog",
+      "feed_url": "https://www.thefdalawblog.com/feed/",
+      "website_url": "https://www.thefdalawblog.com/",
+      "description": "FDA Law Blog is where experts go to learn about the FDA. Hyman, Phelps & McNamara has its finger on the pulse of the FDA and extensive experience with the universe of issues faced by companies regulated by FDA.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5302977.jpg?t=1659005990"
+    },
+    {
+      "title": "PharmTech News",
+      "feed_url": "https://www.pharmtech.com/rss",
+      "website_url": "https://www.pharmtech.com/",
+      "description": "PharmTech is a comprehensive information source for all professionals in the global pharmaceutical manufacturing drug development community. We provide professionals with dynamic and reliable cutting-edge peer-reviewed content and features on next-generation process development and manufacturing, formulation, drug delivery, ingredients, regulation, analytics, packaging, supply chain, and outsourcing.",
+      "followers": {
+        "twitter": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5424358.jpg?t=1658487872"
+    },
+    {
+      "title": "AIPAK Pharma",
+      "feed_url": "https://www.icapsulepack.com/feed/",
+      "website_url": "https://www.icapsulepack.com/knowledge/",
+      "description": "Take a look at the behind-the-scenes packaging and manufacturing processes and methods at AIPAK. Read articles on aspects that you must know about pharmaceutical equipment before your purchase. AIPAK is one of China's largest qualified pharmaceutical machinery and packaging equipment suppliers that exports quality capsule filling and other machines to the world.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5663818.jpg?t=1693895986"
+    },
+    {
+      "title": "Buygenmeds Blog",
+      "feed_url": "https://www.buygenmeds.com/feed/",
+      "website_url": "https://www.buygenmeds.com/blog/",
+      "description": "Discover everything you need to know about generic medicine prices, reviews, uses, dosages, side effects, and more at buygenmeds.com. Stay informed, make informed decisions, and compare with confidence on our trusted platform.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7247888.jpg?t=1707385612"
+    },
+    {
+      "title": "The New York Times \u00bb Drugs Pharmaceuticals",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/subject/drugs-pharmaceuticals/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/drugs-pharmaceuticals",
+      "description": "News about pharmaceuticals, including commentary and archival articles published in The New York Times.The New York Times is a hub for conversation about news and ideas.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4553655.jpg?t=1614673189"
+    },
+    {
+      "title": "The Economic Times \u00bb Pharmaceuticals",
+      "feed_url": "https://economictimes.indiatimes.com/rssfeeds/13358057.cms",
+      "website_url": "https://economictimes.indiatimes.com/industry/healthcare/biotech/pharmaceuticals",
+      "description": "Pharmaceuticals-Healthcare / Biotech-News By Industry-News-The Economic Times. We provide with the latest pharmaceutical news...",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 4400000,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/1943517.jpg?t=1614673194"
+    },
+    {
+      "title": "European Journal of Hospital Pharmacy",
+      "feed_url": "https://ejhp.bmj.com/rss/current.xml",
+      "website_url": "https://ejhp.bmj.com/",
+      "description": "European Journal of Hospital Pharmacy - Helping hospital pharmacists to provide better patient care.To develop hospital pharmacy and to establish a common pharmaceutical policy in Europe.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/2046573.jpg?t=1614673198"
+    },
+    {
+      "title": "STAT",
+      "feed_url": "https://www.statnews.com/category/pharma/feed/",
+      "website_url": "https://www.statnews.com/category/pharma/",
+      "description": "STAT is a media company focused on finding and telling compelling stories about health, medicine, and scientific discovery.",
+      "followers": {
+        "facebook": 314600,
+        "twitter": 160600,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/4479260.jpg?t=1659004729"
+    },
+    {
+      "title": "Pharmaceutical Technology",
+      "feed_url": "https://www.pharmaceutical-technology.com/feed/",
+      "website_url": "https://www.pharmaceutical-technology.com/",
+      "description": "Pharmaceutical Technology provides procurement & reference resources for the pharmaceutical & biochemistry industries. Read Pharmaceutical news and in-depth feature articles on new drug discoveries, healthcare research and development, big pharma trends, and company deals.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 573
+      },
+      "image_url": "https://i1.feedspot.com/4983899.jpg?t=1664782019"
+    },
+    {
+      "title": "European Pharmaceutical Review",
+      "feed_url": "https://www.europeanpharmaceuticalreview.com/article/feed/",
+      "website_url": "https://www.europeanpharmaceuticalreview.com/article/",
+      "description": "European Pharmaceutical Review is the leading publication for information on technologies in drug discovery and manufacturing.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4725044.jpg?t=1614146714"
+    },
+    {
+      "title": "BioPharma Dive",
+      "feed_url": "https://www.biopharmadive.com/feeds/news/",
+      "website_url": "https://www.biopharmadive.com/",
+      "description": "BioPharma Dive provides news and analysis for biotech and biopharmaceutical executives. We cover topics like clinical trials, drug discovery and development, pharma marketing, FDA approvals and regulations, and more.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5002196.jpg?t=1622189786"
+    },
+    {
+      "title": "PharmaTutor",
+      "feed_url": "https://www.pharmatutor.org/taxonomy/term/2758/feed?_wrapper_format=html",
+      "website_url": "https://www.pharmatutor.org/articles",
+      "description": "PharmaTutor.org has been created with the aim to create an interactive platform which could provide unprecedented support to novice pharmacy students and researchers in their day to day doubts and also to increase the awareness among the students about this field and introduce the various upcoming areas of research and Job opportunities.",
+      "followers": {
+        "facebook": 78100,
+        "twitter": 4100,
+        "instagram": 51700
+      },
+      "image_url": "https://i1.feedspot.com/4552375.jpg?t=1614673160"
+    },
+    {
+      "title": "Express Pharma",
+      "feed_url": "https://www.expresspharma.in/feed/",
+      "website_url": "https://www.expresspharma.in/",
+      "description": "Express Pharma is one of the most widely read publication in pharmaceutical media since 1994, published by one of the oldest and most respected media group in India, the Indian Express Group.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 11200,
+        "instagram": 696
+      },
+      "image_url": "https://i1.feedspot.com/5426225.jpg?t=1659013692"
+    },
+    {
+      "title": "Roots Analysis Blog",
+      "feed_url": "https://www.rootsanalysis.com/blog/feed/",
+      "website_url": "https://www.rootsanalysis.com/blog/",
+      "description": "Roots Analysis offers market research reports highlighting insightful opinions within the pharma, biotech, and medical devices industry. With over 500 clients spread across the small pharma, large pharma, VC firms, and academic institutes, our intellectual capital encompasses very niche / emerging market segments.",
+      "followers": {
+        "facebook": 856,
+        "twitter": 820,
+        "instagram": 144
+      },
+      "image_url": "https://i1.feedspot.com/5090230.jpg?t=1614673213"
+    },
+    {
+      "title": "Pharmaceutical Business Review",
+      "feed_url": "https://www.pharmaceutical-business-review.com/feed/",
+      "website_url": "https://www.pharmaceutical-business-review.com/",
+      "description": "Pharmaceutical Business Review provides the latest news updates, insights, and opinions on the pharmaceutical industry including clinical trials, pharma regulations, production & sales, packaging & supply chain, and pharma events.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5426157.jpg?t=1664784095"
+    },
+    {
+      "title": "Pharmaceutical Commerce",
+      "feed_url": "https://www.pharmaceuticalcommerce.com/rss",
+      "website_url": "https://www.pharmaceuticalcommerce.com/",
+      "description": "As the largest privately held medical media company in North America, Pharmaceutical Commerce provide integrated communication products, services, education, and research to professionals within health care, animal health, and industry sciences. Our editorial helps improve collaboration between management professionals with the goal of reducing the cost of commercial operations.",
+      "followers": {
+        "facebook": 910,
+        "twitter": 3300,
+        "instagram": 164
+      },
+      "image_url": "https://i1.feedspot.com/5315515.jpg?t=1664782587"
+    },
+    {
+      "title": "Kluwer Patent Blog \u00bb Pharma",
+      "feed_url": "https://patentblog.kluweriplaw.com/category/pharma/feed/",
+      "website_url": "https://patentblog.kluweriplaw.com/category/pharma/",
+      "description": "Pharma, an abbreviation commonly used for the pharmaceutical industry, discovers, develops, produces and markets drugs or pharmaceutical drugs for use as medication. Stay up to date on case law and developments in IP Law on the pharma industry via Kluwer Patent Blog.",
+      "followers": {
+        "facebook": 33400,
+        "twitter": 18300
+      },
+      "image_url": "https://i1.feedspot.com/4858339.jpg?t=1659010896"
+    },
+    {
+      "title": "Pharma Franchisee India Blog",
+      "feed_url": "https://www.pharmafranchiseeindia.com/feed",
+      "website_url": "https://www.pharmafranchiseeindia.com/",
+      "description": "Here you will know about the latest updates and news in the Indian pharmaceuticals industry. Follow our blogs post to know more.",
+      "followers": {
+        "twitter": 131
+      },
+      "image_url": "https://i1.feedspot.com/5053223.jpg?t=1614673410"
+    },
+    {
+      "title": "PharmaShots News",
+      "feed_url": "https://pharmashots.com/feed",
+      "website_url": "https://pharmashots.com/newshome",
+      "description": "Real-time summarized News in 3 shots from pharma, biotech, medical device, digital health, diagnostics and life sciences industry readable in 60 seconds.",
+      "followers": {
+        "facebook": 655,
+        "twitter": 2300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5164969.jpg?t=1614677537"
+    },
+    {
+      "title": "InCrowd",
+      "feed_url": "https://incrowdnow.com/feed",
+      "website_url": "https://incrowdnow.com/resources",
+      "description": "InCrowd is the only company providing healthcare focused real time market research. Using our mobile platform you can access pre-screened doctors and medical professionals across all therapeutic areas. We provide the channel to near-instant marketfeedback. Our on-demand market research platform is breaking the chain of wait-for-it data, allowing healthcare researchers and marketers to know now.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 5100,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4552956.jpg?t=1614677532"
+    },
+    {
+      "title": "L\u00f6sungsfabrik Blog",
+      "feed_url": "https://mpl.loesungsfabrik.de/en/english-blog?format=feed&type=rss",
+      "website_url": "https://mpl.loesungsfabrik.de/en/english-blog",
+      "description": "L\u00f6sungsfabrik's MPL division is offering consultating services and support in the areas of Med Tech, Pharma and Laboratory.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5172387.jpg?t=1614677504"
+    },
+    {
+      "title": "Fuld & Company Blog",
+      "feed_url": "https://www.fuld.com/category/blog-posts/feed/",
+      "website_url": "https://www.fuld.com/category/blog-posts/",
+      "description": "Fuld Co. delivers customized, proprietary research, analysis and consulting designed to help clients: - understand the competition - seize market opportunities - anticipate and thwart competitive challenges - drive growth and boost profits.",
+      "followers": {
+        "facebook": 234,
+        "twitter": 618,
+        "instagram": 65
+      },
+      "image_url": "https://i1.feedspot.com/4277402.jpg?t=1614673452"
+    },
+    {
+      "title": "Patent Docs",
+      "feed_url": "https://feeds.feedburner.com/PatentDocs",
+      "website_url": "https://www.patentdocs.org/biotech_news/",
+      "description": "Browse articles to stay updated on biotechnology law. Patent Docs is a weblog authored by patent practitioners, which focuses on biotech/pharma patent law, including reports on changes in USPTO rules and procedures, recent court decisions, newly filed patent litigation, and recently issued patents.",
+      "followers": {
+        "facebook": 209,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/96478.jpg?t=1672060628"
+    },
+    {
+      "title": "World Pharma News",
+      "feed_url": "https://www.worldpharmanews.com/?format=feed&type=rss",
+      "website_url": "https://www.worldpharmanews.com/",
+      "description": "World Pharma News is one of the world's leading web-based pharmaceutical news publications committed to providing and disseminating the most prominent pharmaceutical news and achievements.",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 79500
+      },
+      "image_url": "https://i1.feedspot.com/4552920.jpg?t=1614673414"
+    },
+    {
+      "title": "Epicur Pharma Blog",
+      "feed_url": "https://epicurpharma.com/feed/",
+      "website_url": "https://epicurpharma.com/blog/",
+      "description": "Keeping you up to date on the latest veterinary trends and best practices so you can provide the highest quality care.Epicur Pharma brings a unique advantage to the veterinary industry. The 503B facility manufactures drugs with consistent potency, sterility, and purity from batch to batch.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 114,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5426195.jpg?t=1659010311"
+    },
+    {
+      "title": "Origin Pharma Packaging Blog",
+      "feed_url": "https://www.originltd.com/blog/feed/",
+      "website_url": "https://www.originltd.com/blog/",
+      "description": "The UK's #1 Pharma packaging child resistant design experts, Origin. We engage in the design, manufacture and consolidated supply of pharmaceutical packaging, partnering with licence holders and CMOs. Our focus has been continually refined to support the creation of entirely effective packaging solutions underpinned by a robust supply chain and outstanding client services activity.",
+      "followers": {
+        "facebook": 213,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4660779.jpg?t=1614673450"
+    },
+    {
+      "title": "MVS Pharma GmbH Blog",
+      "feed_url": "https://mvs-pharma.com/feed/",
+      "website_url": "https://mvs-pharma.com/blog/",
+      "description": "MVS Pharma GmbH is an innovative pharmaceutical start-up company, researching in the area of reducing viruses and bacteria with plant-based aerosols. Their special formula ensures the purity and stability of the used ingredients during storage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5277570.jpg?t=1620289340"
+    },
+    {
+      "title": "World of DTC Marketing",
+      "feed_url": "https://worldofdtcmarketing.com/feed/",
+      "website_url": "https://worldofdtcmarketing.com/",
+      "description": "The latest news on direct to consumere marketing via biopharma companies.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/2780917.jpg"
+    },
+    {
+      "title": "iCare Pharmacy - Blog",
+      "feed_url": "https://icarepharmacy.ca/feed/",
+      "website_url": "https://icarepharmacy.ca/category/uncategorized/",
+      "description": "iCare Pharmacy is an independently owned pharmacy that cares about keeping you healthy so that you can live the life you deserve.",
+      "followers": {
+        "facebook": 260,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5084821.jpg?t=1614673592"
+    },
+    {
+      "title": "M Care Exports Blog",
+      "feed_url": "https://mcareexports.com/category/blogs/feed/",
+      "website_url": "https://mcareexports.com/category/blogs/",
+      "description": "M Care exports are one of the third-party leading pharmaceutical wholesalers, Stockist, Exporter, Supplier from India. M Care Exports operating from last 17 years. We are the provider of subjective medication items to customers everywhere in the world. We are certified by FDA and drug controller in India. Our Products depend on Branded Generic Pharmaceutical definitions.",
+      "followers": {
+        "facebook": 280,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5273931.jpg?t=1619607366"
+    },
+    {
+      "title": "The Guardian | Pharmaceuticals industry",
+      "feed_url": "https://www.theguardian.com/business/pharmaceuticals-industry/rss",
+      "website_url": "https://www.theguardian.com/business/pharmaceuticals-industry",
+      "description": "Follow us to keep up with the Latest news about the Pharmaceutical industry from The Guardian, the world's leading liberal voice",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4553609.jpg?t=1614146737"
+    },
+    {
+      "title": "MedzSafe Blog",
+      "feed_url": "https://www.medzsafe.com/feed/",
+      "website_url": "https://www.medzsafe.com/blog/",
+      "description": "MedzSafe aim to provide top-notch medications for erectile dysfunction, neurological diseases, orthopedic problems, and sleep disorders. The highest quality is sourced right from the manufacturer and also provides the best offer of efficient and discreet service.",
+      "followers": {
+        "facebook": 7,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5593909.jpg?t=1686299019"
+    },
+    {
+      "title": "CapsulCN Blog",
+      "feed_url": "https://www.capsulcn.com/blog/rss/1",
+      "website_url": "https://www.capsulcn.com/blog",
+      "description": "We produce high-quality empty capsules, multi-functional capsule filling machine, stable performance pharmaceutical machinery.",
+      "followers": {
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/5027617.jpg"
+    },
+    {
+      "title": "Pharma Mirror Magazine",
+      "feed_url": "https://www.pharmamirror.com/magazine/pharmaceutical-articles/feed/",
+      "website_url": "https://www.pharmamirror.com/magazine/pharmaceutical-articles/",
+      "description": "Pharma Mirror is an internationally recognized fully free access online pharma magazine which is being published globally. It represents drugs directory, pharma events listing, current pharma job circulars of Bangladesh, pharmaceutical articles, pharmaceutical news & innovation, pharma leader's interview, featured pharma company profile, featured hospital, pharmacy & medical case studies.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 997
+      },
+      "image_url": "https://i1.feedspot.com/4552259.jpg?t=1614677526"
+    },
+    {
+      "title": "PharmaState.Academy Blog",
+      "feed_url": "https://pharmastate.academy/feed/",
+      "website_url": "https://pharmastate.academy/blog/",
+      "description": "PharmaState Academy is an exclusive learning platform for Pharma Professionals.PharmaState.academy offers easy access to training & up-skilling programs created by experts from Pharma Industry.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 469,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5426177.jpg?t=1659009355"
+    },
+    {
+      "title": "Secure Pharma Online Blog",
+      "feed_url": "https://securepharmaonline.com/feed",
+      "website_url": "https://securepharmaonline.com/blog",
+      "description": "Health blog on generic viagra, nootropics, erectile dysfunctional, smart drugs, abortion pills, birth control pills and much more at securepharmaonline.com",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5052166.jpg?t=1659071376"
+    },
+    {
+      "title": "PharmacyChecker Blog",
+      "feed_url": "https://pharmacycheckerblog.com/feed",
+      "website_url": "https://pharmacycheckerblog.com/",
+      "description": "News and analysis about online pharmacies, drug prices and savings, and personal drug importation, to help American consumers.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4550972.jpg?t=1614673441"
+    },
+    {
+      "title": "World Healthcare Pharma Blog",
+      "feed_url": "https://www.worldhealthcarepharma.com/feed/",
+      "website_url": "https://www.worldhealthcarepharma.com/blogs/",
+      "description": "World Health Care Pharma is ISO Certified and renowned PCD Pharma Company in Ambala, Top PCD pharma franchise in Ambala. Know about the latest information about the pharmaceutical world. To know the particular medicines and discover more about the health cure, visit the world health care pharma section for more updates.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5174994.jpg?t=1614673529"
+    },
+    {
+      "title": "Reuters Events \u00bb Pharma",
+      "feed_url": "https://www.reutersevents.com/pharma/rss.xml",
+      "website_url": "https://www.reutersevents.com/pharma/",
+      "description": "Thought leadership and innovation for the Pharmaceutical Industry. Our mission is to make pharma more open and valued. More open so that the strongest ideas and insights are brought to the fore in a transparent, trustworthy manner. More valued by having an authentic approach to building products and services that matter to patients.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 26800
+      },
+      "image_url": "https://i1.feedspot.com/1369322.jpg?t=1622108014"
+    },
+    {
+      "title": "Pharma Marketing Blog",
+      "feed_url": "http://pharmamkting.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://pharmamkting.blogspot.com/",
+      "description": "A blog about pharmaceutical marketing and advertising written by PharmaGuy, a constructive critic of the industry.",
+      "followers": {
+        "twitter": 32700,
+        "instagram": 297
+      },
+      "image_url": "https://i1.feedspot.com/1693480.jpg"
+    },
+    {
+      "title": "Orange Biotech Blog",
+      "feed_url": "http://orangebiotech.in/blog/feed/",
+      "website_url": "http://orangebiotech.in/blog/",
+      "description": "We are one of growing #Pharma companies in India supplying various #pharma #Medicines and products for a healthy and active patients life.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 619
+      },
+      "image_url": "https://i1.feedspot.com/4553616.jpg?t=1614673556"
+    },
+    {
+      "title": "Pharmakeyduniya",
+      "feed_url": "https://pharmakeyduniya.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://pharmakeyduniya.blogspot.com/",
+      "description": "Pharmakeyduniya provides best pharma education platform to B Pharma and D Pharma aspirants. Updates in Science, technology and Indian pharma.",
+      "followers": {
+        "facebook": 30,
+        "twitter": 6,
+        "instagram": 83
+      },
+      "image_url": "https://i1.feedspot.com/5165794.jpg?t=1614673561"
+    },
+    {
+      "title": "The Natural Pharmacist Blog",
+      "feed_url": "https://naturalpharmacist.net/rw_common/plugins/stacks/armadillo/feed.rss",
+      "website_url": "https://naturalpharmacist.net/blog/",
+      "description": "Get real-time updates on health breakthroughs that can slow down your aging process and help you achieve healthy longevity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5083425.jpg?t=1614673597"
+    },
+    {
+      "title": "Science-Based Pharmacy",
+      "feed_url": "https://sciencebasedpharmacy.wordpress.com/feed/",
+      "website_url": "https://sciencebasedpharmacy.wordpress.com/",
+      "description": "Turning an eye on the profession, separating fact from fiction on both sides of the counter. Science-Based Pharmacy advocates for scientific skepticism, critical thinking, and ethical patient care.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4552192.jpg?t=1614673436"
+    },
+    {
+      "title": "Pharma Franchise Business Blog",
+      "feed_url": "https://www.pharmafranchisebusiness.com/blog/feed/",
+      "website_url": "https://www.pharmafranchisebusiness.com/blog/",
+      "description": "If you are looking for the best pharma franchise company for PCD pharma franchise business then PharmaFranchiseBusiness.com is right destination for you.",
+      "followers": {
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/5041683.jpg?t=1614673527"
+    },
+    {
+      "title": "PharmaTimes",
+      "feed_url": "https://www.pharmatimes.com/rss/news_rss.rss",
+      "website_url": "https://pharmatimes.com/",
+      "description": "PharmaTimes offers a unique blend of health stories, interviews, features, covering all aspects of health as it affects every individual and mankind.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 57000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4552124.jpg?t=1659014577"
+    },
+    {
+      "title": "Pharma Manufacturing",
+      "feed_url": "https://www.pharmamanufacturing.com/",
+      "website_url": "https://www.pharmamanufacturing.com/",
+      "description": "PharmaManufacturing.com is the site for knowledge, news and analysis for manufacturing and other professionals working in the pharmaceutical, biopharmaceutical and biotech industries.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 16800
+      },
+      "image_url": "https://i1.feedspot.com/4552096.jpg?t=1614673181"
+    },
+    {
+      "title": "Veeprho",
+      "feed_url": "https://veeprho.com/feed/",
+      "website_url": "https://veeprho.com/articles/",
+      "description": "VEEPRHO is a global manufacturer and supplier of Impurity Reference Standards for the Pharmaceutical industry. We are involved inthe research, development, and supply of synthesized impurities, metabolites,intermediates, and API's with custom synthesis.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5174385.jpg?t=1614673167"
+    },
+    {
+      "title": "Drug Channels",
+      "feed_url": "https://www.drugchannels.net/feeds/posts/default",
+      "website_url": "https://www.drugchannels.net/",
+      "description": "Expert insights by Dr. Adam J. Fein on pharmaceutical economics and the drug distribution system.",
+      "followers": {
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5426163.jpg?t=1659007397"
+    },
+    {
+      "title": "DrugPatentWatch Blog",
+      "feed_url": "https://www.drugpatentwatch.com/blog/feed/",
+      "website_url": "https://www.drugpatentwatch.com/blog/",
+      "description": "DrugPatentWatch serves leading companies ranging from biopharmaceutical R&D to healthcare delivery and has been cited by CNN, NEJM, Nature Journals, and many other leading publications. Business intelligence on pharmaceutical and biologic drugs - patents, generics, pricing, sales, litigation, and more. Make Better Decisions with DrugPatentWatch.",
+      "followers": {
+        "facebook": 245,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/4994716.jpg?t=1611906672"
+    },
+    {
+      "title": "GMPSOP Blog",
+      "feed_url": "https://www.gmpsop.com/gmpsop-blog/feed/",
+      "website_url": "https://www.gmpsop.com/gmpsop-blog/",
+      "description": "The blog posts contain articles, news, latest trends, and practices on good manufacturing, validation, and laboratory management in pharmaceuticals.",
+      "followers": {
+        "facebook": 517,
+        "twitter": 23
+      },
+      "image_url": "https://i1.feedspot.com/5381094.jpg?t=1647346988"
+    },
+    {
+      "title": "Science \u00bb Chemistry",
+      "feed_url": "https://www.science.org/topic/category/chemistry",
+      "website_url": "https://www.science.org/topic/category/chemistry",
+      "description": "In The Pipeline blog features Derek's excellent commentary on drug discovery and the pharma industry. It is an editorially independent blog from the publishers of Science Translational Medicine.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4340477.jpg?t=1614167174"
+    },
+    {
+      "title": "Certara Blog",
+      "feed_url": "https://www.certara.com/feed/",
+      "website_url": "https://www.certara.com/resources/blogs/",
+      "description": "Certara is the leading drug development consultancy with solutions spanning the discovery, preclinical and clinical stages of drug development. Mission is to help our customers accelerate decision making, and enable the cross-disciplinary approaches necessary for translational science.",
+      "followers": {
+        "facebook": 654,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4721925.jpg?t=1614676503"
+    },
+    {
+      "title": "MedzPills Blog",
+      "feed_url": "https://medzpills.com/feed/",
+      "website_url": "https://medzpills.com/a-to-z-blogs/",
+      "description": "MedzPills provides informative medical expertise on a range of common and uncommon topics and health issues. Browse through the blog from A to Z and quickly find what you're looking for. MedzPills is apremier online pharmacy catering to customers healthcare and medicinal needs.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 391
+      },
+      "image_url": "https://i1.feedspot.com/5717067.jpg?t=1700568164"
+    },
+    {
+      "title": "PhRMA Blog",
+      "feed_url": "https://phrma.org/blog",
+      "website_url": "https://phrma.org/blog",
+      "description": "We are creating a place where we can share ideas, provide the perspective of America's biopharmaceutical companies and, most importantly, listen to you.",
+      "followers": {
+        "facebook": 101400,
+        "twitter": 81500
+      },
+      "image_url": "https://i1.feedspot.com/4337073.jpg?t=1614673217"
+    },
+    {
+      "title": "Outsourcing-Pharma",
+      "feed_url": "https://www.outsourcing-pharma.com/Info/Outsourcing-Pharma-RSS",
+      "website_url": "https://www.outsourcing-pharma.com/",
+      "description": "Daily news on pharmaceutical outsourcing. Free access to news on pharmaceutical supply, pharmaceutical manufacturing, contract research and pharmaceutical services.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/1369335.jpg?t=1614673205"
+    },
+    {
+      "title": "Fossil Remedies Blog",
+      "feed_url": "https://fossilremedies.com/feed/",
+      "website_url": "https://fossilremedies.com/blogs/",
+      "description": "Here you can read PCD Pharma blogs, pharmaceutical article, Pharma press release, news and market updates. Fossil remedies is leading Pharma franchises Company in Gujarat, India which offers Pharma franchises.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 290
+      },
+      "image_url": "https://i1.feedspot.com/4552334.jpg?t=1614676528"
+    },
+    {
+      "title": "Planet Pharma Blog",
+      "feed_url": "https://www.planet-pharma.com/feed/",
+      "website_url": "https://www.planet-pharma.com/blog/",
+      "description": "Planet Pharma is a premier recruiting firm bringing a wealth of world-class global workforce solutions to the pharmaceutical, biotechnology, and device industries.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 375
+      },
+      "image_url": "https://i1.feedspot.com/5426208.jpg?t=1659010760"
+    },
+    {
+      "title": "Pharma IQ",
+      "feed_url": "https://www.pharma-iq.com/rss/articles",
+      "website_url": "https://www.pharma-iq.com/articles",
+      "description": "Read expert insights for pharmaceutical, biotech, supply chain professionals. Pharma IQ, is an international online community focusing on providing pharmaceutical professionals with knowledge, information and articles. We are dedicated to creating a learning environment for sharing ideas, best practices and solutions within the pharmaceutical community.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/5426144.jpg?t=1659005057"
+    },
+    {
+      "title": "Pharmaceutical Microbiology Resources",
+      "feed_url": "https://www.pharmamicroresources.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.pharmamicroresources.com/",
+      "description": "Pharmaceutical Microbiology provides a topical overview of microbiology related news, opinion, theories and facts. The blog details the latest microbiology news, training, updates to international standards, GMP and regulatory compliance, book reviews and so on.",
+      "followers": {
+        "facebook": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4521575.jpg?t=1606740595"
+    },
+    {
+      "title": "The Pharma Data",
+      "feed_url": "https://thepharmadata.com/feed/",
+      "website_url": "https://thepharmadata.com/",
+      "description": "The Pharma Data is an Information Centric Website focused mainly on Pharma News, Press Release, Industry related updates, Events, and Conferences.",
+      "followers": {
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/5084779.jpg?t=1614673539"
+    },
+    {
+      "title": "Pharma Packaging Solutions Blog",
+      "feed_url": "https://www.pharmapackagingsolutions.com/feed/",
+      "website_url": "https://www.pharmapackagingsolutions.com/blog/",
+      "description": "Pharma Packaging Solutions offer commercial packaging, stability services and product retain services to pharmaceutical and healthcare companies as well as government agencies.",
+      "followers": {
+        "facebook": 450,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/4552285.jpg?t=1614673447"
+    },
+    {
+      "title": "Pharma Job Portal",
+      "feed_url": "https://www.pharmajobportal.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.pharmajobportal.com/",
+      "description": "Pharma Jobs Portal- A website about pharmaceutical jobs, marketing jobs,production jobs,jobs for fresher and experienced",
+      "followers": {
+        "facebook": 22300,
+        "twitter": 545,
+        "instagram": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4863063.jpg?t=1614677530"
+    }
+  ]
+}

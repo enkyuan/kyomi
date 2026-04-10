@@ -1,0 +1,79 @@
+{
+  "category": "Australia Game Development",
+  "source_url": "https://rss.feedspot.com/australia_game_development_rss_feeds",
+  "feeds": [
+    {
+      "title": "Noble Steed Games Blog",
+      "feed_url": "https://noblesteedgames.com/blog/feed/",
+      "website_url": "https://noblesteedgames.com/blog/",
+      "description": "Noble Steed Games is an Australian indie game studio and consultancy that believes in democratizing its knowledge and experience. Check out the Gamedev resources they've created! Unlock programming and trouble shooting tips, gaming news and so much more.",
+      "followers": {
+        "facebook": 36,
+        "twitter": 875,
+        "instagram": 443
+      },
+      "image_url": "https://i1.feedspot.com/5476187.jpg?t=1670323419"
+    },
+    {
+      "title": "Australian Design Group Blog",
+      "feed_url": "https://www.a-d-g.com.au/blogs/news.atom",
+      "website_url": "https://www.a-d-g.com.au/blogs/news",
+      "description": "Australian Design Group's blog page is your one-stop hub for all the amazing work and activities at ADG. Dive into sneak peeks, behind-the-scenes glimpses, and insights into the challenges and triumphs of crafting compelling worlds. Australian Design Group is a popular Game Design company producing Interactive computer games since 1982.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5715662.jpg?t=1700468158"
+    },
+    {
+      "title": "Kevuru Games Blog",
+      "feed_url": "https://kevurugames.com/blog/category/all/feed/",
+      "website_url": "https://kevurugames.com/blog/category/all/",
+      "description": "Check out the latest news from Kevuru Games. Unlock how to craft 3D Characters for AAA Games with the Head of 3D at Kevuru Games. Learn the art, techniques, and industry tips to create characters. KEVURU GAMES is an art production and game development studio specializing in 2D/3D art, spine animation, concept art, and more",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5715667.jpg?t=1700467843"
+    },
+    {
+      "title": "Powerhoof",
+      "feed_url": "https://www.powerhoof.com/feed/",
+      "website_url": "https://www.powerhoof.com/?utm_source=feedspot",
+      "description": "Powerhoof is an independent games studio, located in Melbourne, Australia. Stay tuned for insightful articles, behind-the-scenes glimpses, and announcements that showcase their commitment to delivering innovative and immersive gaming experiences.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 25700
+      },
+      "image_url": "https://i1.feedspot.com/3850097.jpg?t=1619676269"
+    },
+    {
+      "title": "Broken Roads Blog",
+      "feed_url": "https://www.brokenroadsgame.com/dev-blog?format=rss",
+      "website_url": "https://www.brokenroadsgame.com/dev-blog",
+      "description": "Enjoy news and updates about Broken Roads from the dev team at Drop Bear Bytes. Broken Roads is a narrative-driven RPG for PC and console released in early 2024. Follow along with its making as the dev team shares interesting snippets and behind-the-scene ideas through these posts.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5715664.jpg?t=1700468076"
+    },
+    {
+      "title": "V3 Designs Australia Blog",
+      "feed_url": "https://www.v3designs.com.au/feed/",
+      "website_url": "https://www.v3designs.com.au/blog/",
+      "description": "Get industry-forward insights and expert perspectives that help you navigate the data-driven world of today. Stay on top of all things web design with this blog. V3 Designs Australia is an award-winning, technologically enhanced company that help in optimizing your company through unique solutions.",
+      "followers": {
+        "facebook": 363
+      },
+      "image_url": "https://i1.feedspot.com/5715665.jpg?t=1700467824"
+    },
+    {
+      "title": "Fgfactory Australia",
+      "feed_url": "https://fgfactory.com.au/feed",
+      "website_url": "https://fgfactory.com.au/resources",
+      "description": "Explore useful resources within the game development, past cases, development pipelines, live hacks, news, and overall software development industries and the gaming sector in particular. Fgfactory Australia is a game development company based in Melbourne, Australia, dedicated to creating custom game projects for clients.",
+      "followers": {
+        "instagram": 36
+      },
+      "image_url": "https://i1.feedspot.com/5715663.jpg?t=1700468131"
+    }
+  ]
+}

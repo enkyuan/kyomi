@@ -1,0 +1,237 @@
+{
+  "category": "France Technology",
+  "source_url": "https://rss.feedspot.com/france_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Presse-Citron",
+      "feed_url": "https://www.presse-citron.net/feed/",
+      "website_url": "https://www.presse-citron.net/category/tech-gadgets/",
+      "description": "Presse-citron is the reference site for digital news, new technologies, mobile phones and social networks.",
+      "followers": {
+        "facebook": 98400,
+        "twitter": 639300,
+        "instagram": 40800
+      },
+      "image_url": "https://i1.feedspot.com/38175.jpg?t=1637904123"
+    },
+    {
+      "title": "Korben",
+      "feed_url": "https://korben.info/feed",
+      "website_url": "https://korben.info/",
+      "description": "The best tech site in the visible and invisible universe. Find articles on software, cyber security, operating systems, crypto and more.",
+      "followers": {
+        "facebook": 33100,
+        "twitter": 129900,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/3679984.jpg?t=1637904378"
+    },
+    {
+      "title": "Journal du Geek",
+      "feed_url": "https://www.journaldugeek.com/feed/",
+      "website_url": "https://www.journaldugeek.com/",
+      "description": "Le Journal du Geek vous propose tous les jours les meilleures actualit\u00e9s en high-tech, Pop Culture, jeux vid\u00e9o, sciences, espace, mobilit\u00e9.",
+      "followers": {
+        "facebook": 217400,
+        "twitter": 998900,
+        "instagram": 36000
+      },
+      "image_url": "https://i1.feedspot.com/39063.jpg?t=1748500243"
+    },
+    {
+      "title": "Hitek",
+      "feed_url": "https://hitek.fr/rss",
+      "website_url": "https://hitek.fr/",
+      "description": "Hitek is the webzine for all High-Tech and Geek news: new technologies, mobile products and geek culture.",
+      "followers": {
+        "facebook": 555300,
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/5131391.jpg?t=1637911302"
+    },
+    {
+      "title": "Be Geek",
+      "feed_url": "https://www.begeek.fr/feed",
+      "website_url": "https://www.begeek.fr/tech",
+      "description": "Tech, Pop culture and tips, since 2006. Find Tech tips and video games here.",
+      "followers": {
+        "twitter": 110200
+      },
+      "image_url": "https://i1.feedspot.com/1612543.jpg?t=1638193392"
+    },
+    {
+      "title": "FrenchWeb.fr",
+      "feed_url": "https://www.frenchweb.fr/feed",
+      "website_url": "https://www.frenchweb.fr/rubrique/actualite",
+      "description": "Since 2008, FrenchWeb has identified the most relevant startups and innovations to support you in your digital transformation. It decodes the innovations developed by startups, SMEs, Corporates, public actors.",
+      "followers": {
+        "facebook": 55300,
+        "twitter": 764200
+      },
+      "image_url": "https://i1.feedspot.com/4845204.jpg?t=1637904583"
+    },
+    {
+      "title": "Usine Digitale L'Usine Digitale",
+      "feed_url": "https://www.usine-digitale.fr/rss",
+      "website_url": "https://www.usine-digitale.fr/",
+      "description": "L'Usine Digitale is a French online media platform dedicated to news and analysis in the digital sector, launched in 2013 by Thibaut De Jaegher, former editorial director of L'Usine Nouvelle. It is part of the Infopro Digital group and positions itself as a key player in the digital transformation of businesses.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4769352.jpg?t=1753961524"
+    },
+    {
+      "title": "France 24 \u00bb Business / Tech",
+      "feed_url": "https://www.france24.com/en/business-tech/rss",
+      "website_url": "https://www.france24.com/en/business-tech/",
+      "description": "Get all the business and technology news. France 24 offers business news, Internet and media news, and economy and banking news.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 445600,
+        "instagram": 481800
+      },
+      "image_url": "https://i1.feedspot.com/5344308.jpg?t=1753961524"
+    },
+    {
+      "title": "Frandroid",
+      "feed_url": "https://www.frandroid.com/feed",
+      "website_url": "https://www.frandroid.com/",
+      "description": "Frandroid is a media dedicated to new technologies, find buying guides, tests, news, videos, reports and a community of enthusiasts. Our mission is to inform about innovation and support our readers before, during and after the purchase of a technological product.",
+      "followers": {
+        "facebook": 671700,
+        "twitter": 245500,
+        "instagram": 149100
+      },
+      "image_url": "https://i1.feedspot.com/5022421.jpg?t=1748504900"
+    },
+    {
+      "title": "Vietnam Insider \u00bb Tech",
+      "feed_url": "https://vietnaminsiders.com/category/tech/feed/",
+      "website_url": "https://vietnaminsiders.com/category/tech/",
+      "description": "Find daily IT and digital news, our analyzes, files, buying guides and tests.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 58800
+      },
+      "image_url": "https://i1.feedspot.com/5347355.jpg?t=1638262044"
+    },
+    {
+      "title": "The French Tech Journal",
+      "feed_url": "https://frenchtechjournal.com/latest/rss/",
+      "website_url": "https://frenchtechjournal.com/",
+      "description": "Covering the global community of French entrepreneurs and investors",
+      "followers": {
+        "facebook": 363
+      },
+      "image_url": "https://i1.feedspot.com/8654264.jpg?t=1754023416"
+    },
+    {
+      "title": "01Net",
+      "feed_url": "https://www.01net.com/feed/",
+      "website_url": "https://www.01net.com/",
+      "description": "News, product reviews, tips, reports, and downloads. Experience the latest tech news as analyzed by the journalists at 01net, your specialist technology media outlet.",
+      "followers": {
+        "facebook": 919200,
+        "twitter": 206900,
+        "instagram": 47100
+      },
+      "image_url": "https://i1.feedspot.com/7699341.jpg?t=1753961522"
+    },
+    {
+      "title": "RFI \u00bb Science & Technology",
+      "feed_url": "https://www.rfi.fr/en/science-technology/rss",
+      "website_url": "https://www.rfi.fr/en/science-technology/",
+      "description": "RFI Science & Technology is the digital section of Radio France Internationale (RFI) that provides comprehensive coverage of global developments in science, technology, and innovation.",
+      "followers": {
+        "facebook": 251000,
+        "twitter": 31100
+      },
+      "image_url": "https://i1.feedspot.com/8654260.jpg?t=1754030250"
+    },
+    {
+      "title": "PARIS Tech",
+      "feed_url": "https://paristech.com/feed/",
+      "website_url": "https://paristech.com/blog/",
+      "description": "Explore blogs on Business Intelligence, Data Analysis, and Management, featuring strategies, best practices, PARIS product tips, and the latest updates.",
+      "followers": {
+        "twitter": 1000,
+        "instagram": 81
+      },
+      "image_url": "https://i1.feedspot.com/8654258.jpg?t=1754027137"
+    },
+    {
+      "title": "Rotek",
+      "feed_url": "https://rotek.fr/feed/",
+      "website_url": "https://rotek.fr/",
+      "description": "Rotek is a website focused on news about new technologies, smartphones, social media, startups, and IT tests.",
+      "followers": {
+        "facebook": 294,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/8654261.jpg?t=1754027376"
+    },
+    {
+      "title": "VCWire \u00bb France",
+      "feed_url": "https://vcwire.tech/feed/",
+      "website_url": "https://vcwire.tech/blog/category/france/",
+      "description": "The France section of VCWire offers in-depth coverage of the French venture capital and startup ecosystem, highlighting significant funding rounds, emerging investment firms, and strategic partnerships. This resource is invaluable for investors, entrepreneurs, and industry professionals seeking insights into France's dynamic tech landscape.",
+      "followers": {
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/8654262.jpg?t=1754288378"
+    },
+    {
+      "title": "ZDNET",
+      "feed_url": "https://www.zdnet.fr/feed",
+      "website_url": "https://www.zdnet.fr/",
+      "description": "ZDNet France is a leading French-language technology news platform focusing on IT, digital transformation, cybersecurity, and enterprise innovation. It caters primarily to professionals and decision-makers in the tech industry, providing in-depth analyses, product reviews, and expert opinions.",
+      "followers": {
+        "facebook": 53200,
+        "twitter": 55800
+      },
+      "image_url": "https://i1.feedspot.com/8654259.jpg?t=1754028862"
+    },
+    {
+      "title": "Manomano Tech Blog",
+      "feed_url": "https://medium.com/feed/manomano-tech",
+      "website_url": "https://medium.com/manomano-tech",
+      "description": "Tech news from the Online European leader in DIY, home and gardening. We share stories about our product, our data science & our engineering lives.",
+      "followers": {
+        "twitter": 797
+      },
+      "image_url": "https://i1.feedspot.com/5347250.jpg?t=1638261983"
+    },
+    {
+      "title": "The Tech Capital \u00bb France",
+      "feed_url": "https://thetechcapital.com/category/markets/europe/france/feed/",
+      "website_url": "https://thetechcapital.com/category/markets/europe/france/",
+      "description": "You Lead. We Report. - Daily news on digital infrastructure, data centres, telecomes, cloud, edge computing.",
+      "followers": {
+        "twitter": 2700,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/8654265.jpg?t=1754029006"
+    },
+    {
+      "title": "Clubic",
+      "feed_url": "https://www.clubic.com/feed/news.rss",
+      "website_url": "https://www.clubic.com/actualites-informatique/",
+      "description": "Find out about new technologies and digital news with Clubic.com. Join the community of experts and enthusiasts in digital and scientific subjects.",
+      "followers": {
+        "facebook": 238100,
+        "twitter": 97600
+      },
+      "image_url": "https://i1.feedspot.com/5146656.jpg?t=1637909101"
+    },
+    {
+      "title": "PhonAndroid",
+      "feed_url": "https://www.phonandroid.com/feed",
+      "website_url": "https://www.phonandroid.com/",
+      "description": "The best French speaking community dedicated to android and high tech news! Discover the new smartphone tests, apps, video games, tutorials and tips in preview!",
+      "followers": {
+        "facebook": 274800,
+        "twitter": 81900,
+        "instagram": 20600
+      },
+      "image_url": "https://i1.feedspot.com/15780.jpg?t=1638193581"
+    }
+  ]
+}

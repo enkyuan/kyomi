@@ -1,0 +1,50 @@
+{
+  "category": "UK Baseball",
+  "source_url": "https://rss.feedspot.com/uk_baseball_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bat Flips and Nerds",
+      "feed_url": "https://batflipsandnerds.com/feed/",
+      "website_url": "https://batflipsandnerds.com/",
+      "description": "Bat Flips and Nerds will provide a cynical British take in the sport of baseball. Follow this blog for all the latest blog updates, events news, competitions and more.",
+      "followers": {
+        "facebook": 918,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4918901.jpg?t=1620645411"
+    },
+    {
+      "title": "Guildford Baseball and Softball Club",
+      "feed_url": "https://www.guildfordbaseball.co.uk/feed/",
+      "website_url": "https://www.guildfordbaseball.co.uk/",
+      "description": "Welcome to the home of Mavericks baseball at Guildford Baseball & Softball Club. Follow this blog for all the latest baseball news, game reports, club news and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 990,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4918931.jpg?t=1620645421"
+    },
+    {
+      "title": "Bristol Baseball Club",
+      "feed_url": "https://www.bristolbaseball.co.uk/feed/",
+      "website_url": "https://www.bristolbaseball.co.uk/",
+      "description": "The Bristol Baseball Club is an amateur baseball club with teams, the Badgers and Bats. Our goal is to raise awareness of and participation in the sport of baseball in the greater Bristol region. Subscribe to keep up with the latest updates from this blog.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4918941.jpg?t=1620645426"
+    },
+    {
+      "title": "BaseballGB",
+      "feed_url": "https://baseballgb.co.uk/?feed=rss2",
+      "website_url": "https://baseballgb.co.uk/",
+      "description": "BaseballGB is a site dedicated to writing about baseball from a British perspective. Follow this blog for news stories, regular features and resources about MLB, British baseball, international baseball, fantasy baseball, UK media coverage of the sport, book reviews and anything else relating to life as a baseball fan in Britain.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4603941.jpg?t=1603288664"
+    }
+  ]
+}

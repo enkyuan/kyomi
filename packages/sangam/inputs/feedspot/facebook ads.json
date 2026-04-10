@@ -1,0 +1,53 @@
+{
+  "category": "Facebook Ads",
+  "source_url": "https://rss.feedspot.com/facebook_ads_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jon Loomer Blogs",
+      "feed_url": "https://www.jonloomer.com/feed/",
+      "website_url": "https://www.jonloomer.com/",
+      "description": "This is where advanced Facebook advertisers go to sharpen their skills and stay on top of the constantly evolving world of advertising. Jon Loomer's site is also where inexperienced advertisers go to become advanced.",
+      "followers": {
+        "facebook": 196400,
+        "twitter": 30300,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4705842.jpg?t=1619581855"
+    },
+    {
+      "title": "Andrea Vahl Blog",
+      "feed_url": "https://www.andreavahl.com/feed",
+      "website_url": "https://www.andreavahl.com/blog",
+      "description": "Blog posts on Facebook marketing and Facebook ads. Andrea Vahl is a Social Media Speaker and Consultant who is passionate about helping businesses understand and leverage the power of social media to grow their business. Andrea is the co-author of Facebook Marketing All-in-One for Dummies and her newest book is Facebook Ads Made Simple.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 28100,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5004530.jpg?t=1634019533"
+    },
+    {
+      "title": "Adscook Blog",
+      "feed_url": "https://adscook.com/blog/feed",
+      "website_url": "https://adscook.com/blog/",
+      "description": "Get more about A/B testing Facebook Automated Rules, Facebook Advertising Tips & Tricks, and scale your Facebook and Instagram ads easily.",
+      "followers": {
+        "facebook": 163,
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/5144957.jpg?t=1619581925"
+    },
+    {
+      "title": "AdEspresso Blog",
+      "feed_url": "https://adespresso.com/feed/",
+      "website_url": "https://adespresso.com/blog/",
+      "description": "AdEspresso's blog is the best resource to stay up to date with Facebook & Google Ads news and tactics for successful campaigns that convert! AdEspresso makes Facebook advertising easy and profitable for small and medium businesses. Whether you want to sell more products, grow your fan base, or increase engagement with your community, AdEspresso will help you create and optimize an advertising campaign that truly works!",
+      "followers": {
+        "facebook": 118900,
+        "twitter": 13000,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5286199.jpg?t=1622293938"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "category": "Cowboy Church",
+  "source_url": "https://rss.feedspot.com/cowboy_church_rss_feeds",
+  "feeds": [
+    {
+      "title": "Shiloh Ranch Blog",
+      "feed_url": "https://shilohranch.com/blog/rss",
+      "website_url": "https://shilohranch.com/blog",
+      "description": "Shiloh Ranch is an intergenerational church and a strong community of people who come together to worship God and learn from His words. They value their freedom and discover the unique purpose that God had in mind when He created them. All of their teaching and ministry are rooted in and flow out of biblical doctrines. For announcements and news, one can follow their blog section.",
+      "followers": {
+        "facebook": 5300,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5455885.jpg?t=1665571892"
+    },
+    {
+      "title": "International Cowboy Church Alliance Network Blog",
+      "feed_url": "https://iccanlink.ning.com/profiles/blog/feed?xn_auth=no",
+      "website_url": "https://iccanlink.ning.com/profiles/blog/list",
+      "description": "The International Cowboy Church Alliance Network is a non-denominational network and fellowship of churches, ministries, and ministers reaching out to Christian cowboys and cowgirls galloping around the globe. The network's main purpose is to provide fellowship, networking, resources, and prayer, with a desire to provide training and resources to promote cowboy church development. The network also has a blog page that helps people connect with God. learn more abut their church alliance through their informative blog.",
+      "followers": {
+        "facebook": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5455888.jpg?t=1665571929"
+    },
+    {
+      "title": "Rafter J Cowboy Church Blog",
+      "feed_url": "https://rafterjcowboychurch.org/feed/",
+      "website_url": "https://rafterjcowboychurch.org/",
+      "description": "Rafter J Cowboy Church started the blog in May 2002. The cowboy culture welcomes folks who may not feel comfortable, for their own personal reasons, in a conventional church. The vision of the church is achieved in the blog section, which is to create a place where worship is an act of the heart, soul, and mind.",
+      "followers": {
+        "facebook": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5455884.jpg?t=1665571903"
+    }
+  ]
+}

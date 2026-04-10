@@ -1,0 +1,314 @@
+{
+  "category": "Engineering",
+  "source_url": "https://rss.feedspot.com/engineering_rss_feeds",
+  "feeds": [
+    {
+      "title": "SoundCloud Backstage Blog",
+      "feed_url": "https://developers.soundcloud.com/blog/blog.rss",
+      "website_url": "https://developers.soundcloud.com/blog/",
+      "description": "Read everything related to SoundCloud Development and the API on SoundCloud's developer blog. As the world's largest music and audio platform, SoundCloud lets people discover and enjoy the greatest selection of music from the most diverse creator community on earth.",
+      "followers": {
+        "twitter": 25300
+      },
+      "image_url": "https://i1.feedspot.com/5429889.jpg?t=1659950535"
+    },
+    {
+      "title": "Grab Tech Blog",
+      "feed_url": "https://engineering.grab.com/feed",
+      "website_url": "https://engineering.grab.com/",
+      "description": "Grab's Engineering team solves critical transportation challenges and makes transport freedom a reality for 620 million people in Southeast Asia. Grab is Southeast Asia's leading superapp, offering a suite of services from deliveries, mobility, financial services, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5429890.jpg?t=1659950967"
+    },
+    {
+      "title": "Spotify Engineering",
+      "feed_url": "https://engineering.atspotify.com/feed/",
+      "website_url": "https://engineering.atspotify.com/",
+      "description": "Read about the magic behind the music & more in our official technology blog. Spotify Engineering is a diverse community of engineers, developers, researchers and more. Together, we build the infrastructure, features, and experiences you love - and help to shape the future of audio.",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 35700,
+        "instagram": 63300
+      },
+      "image_url": "https://i1.feedspot.com/5198529.jpg?t=1658226866"
+    },
+    {
+      "title": "Salesforce Engineering",
+      "feed_url": "https://engineering.salesforce.com/feed/",
+      "website_url": "https://engineering.salesforce.com/",
+      "description": "Read the latest articles on the Salesforce Engineering blog and go behind the cloud with Salesforce Engineers. Salesforce engineers are builders and together we've created a platform that helps companies around the world connect with their customers and establish lasting, trusted relationships.",
+      "followers": {
+        "twitter": 18200
+      },
+      "image_url": "https://i1.feedspot.com/4956945.jpg?t=1659951374"
+    },
+    {
+      "title": "Netflix Tech Blog",
+      "feed_url": "https://netflixtechblog.com/feed",
+      "website_url": "https://netflixtechblog.com/",
+      "description": "Learn about Netflix's world-class engineering efforts, company culture, product developments, and more. Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more, on thousands of internet-connected devices.",
+      "followers": {
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5272150.jpg?t=1715095610"
+    },
+    {
+      "title": "Medium Engineering",
+      "feed_url": "https://medium.engineering/feed",
+      "website_url": "https://medium.engineering/",
+      "description": "Read stories from the team building Medium. This is a publication by the Medium Engineering team, where they talk about engineering values, how they use technology, and fun oddities encountered while building their product.",
+      "followers": {
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4888458.jpg?t=1659950725"
+    },
+    {
+      "title": "Engineering Ethics Blog",
+      "feed_url": "https://engineeringethicsblog.blogspot.com/feeds/posts/default",
+      "website_url": "https://engineeringethicsblog.blogspot.com/",
+      "description": "The Engineering Ethics blog is a place for comments on current events with an engineering ethics angle. This blog discusses a much broader view of engineering ethics, and deal with subjects as diverse as disasters that involve technical matters, movies with an engineering ethics or technical angle, and even philosophical and religious questions that engineers might have to deal with.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1642946.jpg?t=1661156542"
+    },
+    {
+      "title": "Dropbox Tech",
+      "feed_url": "https://dropbox.tech/feed",
+      "website_url": "https://dropbox.tech/",
+      "description": "A blog about Dropbox technology and tips. Read about the application, infrastructure, developers, and more. Dropbox is the world's first smart workspace that helps people and teams focus on the work that matters.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 3800000,
+        "instagram": 100200
+      },
+      "image_url": "https://i1.feedspot.com/4292301.jpg?t=1620714306"
+    },
+    {
+      "title": "Lyft Engineering",
+      "feed_url": "https://eng.lyft.com/feed",
+      "website_url": "https://eng.lyft.com/",
+      "description": "Stories from Lyft Engineering. Read about the data science and engineering, and more behind the rideshare app. Lyft is your friend with a car, whenever you need one.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4793839.jpg?t=1659950853"
+    },
+    {
+      "title": "Yelp Engineering Blog",
+      "feed_url": "https://engineeringblog.yelp.com/feed.xml",
+      "website_url": "https://engineeringblog.yelp.com/",
+      "description": "Read news and blog posts to see the technical side of Yelp Engineering. Our engineers have shared their thoughts with the world on our blog. Take a peek into our engineering & product teams and all the work that we do. Yelp connects people with great local businesses.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4641020.jpg?t=1619072669"
+    },
+    {
+      "title": "Pinterest Engineering",
+      "feed_url": "https://medium.com/feed/pinterest-engineering",
+      "website_url": "https://medium.com/pinterest-engineering",
+      "description": "Inventive engineers building the first visual discovery engine with 300 billion ideas and counting. Pinterest is a visual discovery engine for finding ideas like recipes, home and style inspiration, and more.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 14000,
+        "instagram": 31500
+      },
+      "image_url": "https://i1.feedspot.com/5288869.jpg?t=1640263540"
+    },
+    {
+      "title": "Google Research",
+      "feed_url": "https://research.google/blog/rss/",
+      "website_url": "https://research.google/blog/",
+      "description": "Get the latest from Google Research. A list of labels is available which includes a range of categories. Google's mission is to organize the world's information and make it universally accessible and useful. AI is helping us do that in exciting new ways, solving problems for our users, our customers, and the world.",
+      "followers": {
+        "twitter": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4919562.jpg?t=1659951485"
+    },
+    {
+      "title": "Meta Engineering",
+      "feed_url": "https://engineering.fb.com/feed/",
+      "website_url": "https://engineering.fb.com/",
+      "description": "Stay up-to-date with the latest open source project releases from Facebook, news about Infrastructure Systems, Open Source, Connectivity, Data Center Engineering, and Developer Tools. Meta is helping build a future where people have more ways to play and connect in the metaverse.",
+      "followers": {
+        "facebook": 92000000,
+        "twitter": 13900000,
+        "instagram": 5000000
+      },
+      "image_url": "https://i1.feedspot.com/4278042.jpg?t=1659956163"
+    },
+    {
+      "title": "Interesting Engineering",
+      "feed_url": "https://interestingengineering.com/feed",
+      "website_url": "https://interestingengineering.com/",
+      "description": "Interesting Engineering is a leading community designed for engineering, technology, and science. IE brings you the latest news and videos from technology, space, innovation news, science, health, transportation, and more. Our mission is to report on and share the wonders of engineering, in all its forms, with the wider world.",
+      "followers": {
+        "facebook": 16399999,
+        "twitter": 258300,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/4793881.jpg?t=1663574351"
+    },
+    {
+      "title": "Heroku Blog",
+      "feed_url": "https://blog.heroku.com/engineering/feed",
+      "website_url": "https://blog.heroku.com/",
+      "description": "Read the Heroku Blog to keep in touch with everything that's happening at Heroku, including product updates, technical posts, and more. Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps - we're the fastest way to go from idea to URL, bypassing all those infrastructure headaches.",
+      "followers": {
+        "facebook": 77900,
+        "twitter": 13800,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4888422.jpg?t=1659951888"
+    },
+    {
+      "title": "Cisco Blogs \u00bb Engineering",
+      "feed_url": "https://blogs.cisco.com/tag/engineering/feed",
+      "website_url": "https://blogs.cisco.com/tag/engineering",
+      "description": "Read blogs by the partners, engineers, managers, and directors of Cisco as they share their insights on their experience at the tech company. Cisco has a keen focus on solving business challenges since their founding in 1984. They create long-lasting customer partnerships, work together to identify their customers' needs and provide solutions that fuel their success.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 37900,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/5429897.jpg?t=1659950576"
+    },
+    {
+      "title": "Meta Research Blog",
+      "feed_url": "https://research.facebook.com/feed/",
+      "website_url": "https://research.facebook.com/blog/",
+      "description": "At Meta, research permeates everything we do. We believe the most interesting research questions are derived from real world problems. Read the latest in data science, systems, and infrastructure. Meta builds technologies that help people connect, find communities and grow businesses.",
+      "followers": {
+        "facebook": 428400
+      },
+      "image_url": "https://i1.feedspot.com/5429895.jpg?t=1659955707"
+    },
+    {
+      "title": "BBC Product & Technology",
+      "feed_url": "https://medium.com/feed/bbc-design-engineering",
+      "website_url": "https://medium.com/bbc-product-technology",
+      "description": "Blog about building the best BBC products, platforms, and services for audiences in the UK and around the world. BBC produce programs and services for audiences throughout the UK. They also produce content which can be enjoyed across the globe.",
+      "followers": {
+        "facebook": 9300000,
+        "twitter": 2200,
+        "instagram": 6300000
+      },
+      "image_url": "https://i1.feedspot.com/4888343.jpg?t=1640265011"
+    },
+    {
+      "title": "Instagram Engineering",
+      "feed_url": "https://instagram-engineering.com/feed",
+      "website_url": "https://instagram-engineering.com/",
+      "description": "Get the latest updates and stories from the people that build Instagram. Instagram brings you closer to the people and things you love.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4915551.jpg?t=1620310357"
+    },
+    {
+      "title": "DoorDash \u00bb Engineering Blog",
+      "feed_url": "https://careersatdoordash.com/engineering-blog/",
+      "website_url": "https://careersatdoordash.com/engineering-blog/",
+      "description": "The official blog of the DoorDash Engineering team. Learn about high impact projects that power our velocity, reliability, and innovation. DoorDash is a technology company that connects people with the best of their neighborhoods. By building the last-mile logistics infrastructure for local commerce, we're fulfilling our mission to grow and empower local economies.",
+      "followers": {
+        "facebook": 684300,
+        "twitter": 229600,
+        "instagram": 387200
+      },
+      "image_url": "https://i1.feedspot.com/5429888.jpg?t=1659950529"
+    },
+    {
+      "title": "GitHub \u00bb Engineering",
+      "feed_url": "https://github.blog/engineering/feed/",
+      "website_url": "https://github.blog/engineering/",
+      "description": "See what the GitHub Engineering team is up to\u2014from building features to solving the nagging challenges teams face as they grow.",
+      "followers": {
+        "facebook": 319800,
+        "twitter": 2600000,
+        "instagram": 651400
+      },
+      "image_url": "https://i1.feedspot.com/5356099.jpg?t=1749555721"
+    },
+    {
+      "title": "eBay Inc.",
+      "feed_url": "https://www.ebayinc.com/stories/news/rss/",
+      "website_url": "https://innovation.ebayinc.com/stories/",
+      "description": "The eBay Tech Blog is a platform for the company's engineers, researchers, and product managers to share their work with the worldwide technical community. At eBay, we create pathways to connect millions of sellers and buyers in more than 190 markets around the world.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5225564.jpg?t=1659950775"
+    },
+    {
+      "title": "Linkedin Blog \u00bb Engineering",
+      "feed_url": "https://www.linkedin.com/blog/engineering/",
+      "website_url": "https://www.linkedin.com/blog/engineering/",
+      "description": "Explore LinkedIn's Engineering blog if you are interested in learning about who we are and what we do. We are the world's largest professional network on the Internet. We build to connect the world's professionals and make them more productive and successful.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 47100
+      },
+      "image_url": "https://i1.feedspot.com/5032867.jpg?t=1658226294"
+    },
+    {
+      "title": "Uber Engineering Blog",
+      "feed_url": "https://www.uber.com/en-IN/blog/mumbai/engineering/rss/",
+      "website_url": "https://www.uber.com/en-IN/blog/mumbai/engineering/",
+      "description": "Read articles on AI, Machine Learning, Computer Vision and the technology behind Uber Engineering. The Engineering team at Uber builds the technologies that power our platform and reimagines the way the world moves for the better.",
+      "followers": {
+        "facebook": 72400,
+        "twitter": 54900
+      },
+      "image_url": "https://i1.feedspot.com/4410764.jpg?t=1619073525"
+    },
+    {
+      "title": "Canva Developers Blog \u00bb Engineering",
+      "feed_url": "https://www.canva.dev/blog/engineering/feed.xml",
+      "website_url": "https://www.canva.dev/blog/engineering/",
+      "description": "Sharing how we solve complex engineering problems through our blog. Canva is an online design and publishing tool that is empowering everyone in the world to design anything and publish anywhere.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5429893.jpg?t=1659950554"
+    },
+    {
+      "title": "Mechanical Engineering",
+      "feed_url": "https://mechanical-engineering.com/feed/",
+      "website_url": "https://mechanical-engineering.com/",
+      "description": "EngineeringClicks is the leading place for the latest Mechanical Engineering, CAD knowledge and engineering fun for students and engineers. It was inspired by the lack of a simple and efficient online forum where mechanical design engineers could find advice and share knowledge. The forum has gradually been maturing into a friendly and knowledgeable community and resource.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5297000.jpg?t=1624878946"
+    },
+    {
+      "title": "Databricks \u00bb Engineering Blog",
+      "feed_url": "https://www.databricks.com/blog/category/engineering/feed",
+      "website_url": "https://www.databricks.com/blog/category/engineering",
+      "description": "Read the Databricks engineering blog for the latest on Apache Spark, Delta Lake, MLflow and much more. As the world's first and only lakehouse platform in the cloud, Databricks combines the best of data warehouses and data lakes to offer an open and unified platform for data and AI.",
+      "followers": {
+        "facebook": 40500,
+        "twitter": 76100
+      },
+      "image_url": "https://i1.feedspot.com/5429892.jpg?t=1659950549"
+    },
+    {
+      "title": "Curious Cat Science and Engineering Blog \u00bb Engineering",
+      "feed_url": "https://engineering.curiouscatblog.net/category/engineering/feed/",
+      "website_url": "https://taknikinc.hashnode.dev/",
+      "description": "Read the most interesting posts on engineering and science in the Engineering Category. The Curious Cat Science and Engineering blog lets you explore the latest in innovation, technology, research, education, economics, gadgets, health care and scientific inquiry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1561038.jpg?t=1661171705"
+    },
+    {
+      "title": "Taknik Incorporation",
+      "feed_url": "https://taknikinc.hashnode.dev/rss.xml",
+      "website_url": "https://taknikinc.hashnode.dev/",
+      "description": "Taknik Incorporation is an engineering consultancy services, wastewater treatment plant, effluent treatment plant, and zero liquid discharge system. A design engineer is a professional who is responsible for conceiving, planning, and creating products, systems, or structures.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5740008.jpg?t=1703065696"
+    }
+  ]
+}

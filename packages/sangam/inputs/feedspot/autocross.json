@@ -1,0 +1,110 @@
+{
+  "category": "Autocross",
+  "source_url": "https://rss.feedspot.com/autocross_rss_feeds",
+  "feeds": [
+    {
+      "title": "Saving Time",
+      "feed_url": "https://edfishjr.com/feed/",
+      "website_url": "https://edfishjr.com/",
+      "description": "Saving Time Blog is a project of TimeSolv, a time tracking and billing software company founded in 1999. Their mission is to provide valuable insights and tips on time management, productivity, and work-life balance. The blog offers practical solutions for professionals to optimize their time and boost their efficiency.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5518263.jpg?t=1678358824"
+    },
+    {
+      "title": "AutoX4U",
+      "feed_url": "https://www.autox4u.com/feed/",
+      "website_url": "https://www.autox4u.com/",
+      "description": "AutoX4U is a website dedicated to autocross racing founded by Steve and Barbara in 2003. Their mission is to provide autocross enthusiasts with a comprehensive platform to find events, connect with other racers, and get access to resources and information. The blog section features articles on race results, tips, and news related to the autocross community.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5518266.jpg?t=1678358736"
+    },
+    {
+      "title": "Trinity Touring Club Blog",
+      "feed_url": "https://trinitytouringclub.com/feed/",
+      "website_url": "https://trinitytouringclub.com/blog/",
+      "description": "Trinity Touring Club is a car club founded in 2016 by a group of Trinity University students. Their mission is to bring together car enthusiasts from all backgrounds to share their passion for cars and motorsports. The blog section features stories about the club's events, car reviews, and highlights from the autocross racing scene.",
+      "followers": {
+        "facebook": 728
+      },
+      "image_url": "https://i1.feedspot.com/5518269.jpg?t=1678358679"
+    },
+    {
+      "title": "Pit Talk \u00bb Autocross",
+      "feed_url": "https://pittalk.org/articles/autocross/feed/",
+      "website_url": "https://pittalk.org/articles/autocross/",
+      "description": "Pit Talk is a blog dedicated to autocross racing founded by Dan Dennehy in 2013. Their mission is to provide autocross racers with resources and tips to help them improve their driving skills and maximize their performance. The blog section covers topics such as suspension tuning, tire selection, and driving techniques.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5518264.jpg?t=1678358615"
+    },
+    {
+      "title": "Kansas City SCCA \u00bb Autocross",
+      "feed_url": "https://www.kcrscca.org/category/autocross/feed/",
+      "website_url": "https://www.kcrscca.org/category/autocross/",
+      "description": "KCR SCCA is the Kansas City Region of the Sports Car Club of America founded in 1952. Their mission is to promote motorsports and provide a safe and enjoyable environment for drivers of all levels. The autocross section of the blog features race results, event announcements, and tips for autocross racers.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 108,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5518268.jpg?t=1678358596"
+    },
+    {
+      "title": "NCC Autocross",
+      "feed_url": "https://nccautocross.com/feed/",
+      "website_url": "https://nccautocross.com/",
+      "description": "Founded in 1969, the club is dedicated to promoting safe and enjoyable driving, as well as fostering camaraderie among BMW enthusiasts. Whether you're a seasoned pro or a first-time participant, their autocross events offer a thrilling and challenging experience. Join the fun and put your driving skills to the test!",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 582
+      },
+      "image_url": "https://i1.feedspot.com/5518270.jpg?t=1678358556"
+    },
+    {
+      "title": "AutoXandTrack",
+      "feed_url": "https://www.autoxandtrack.com/feed/",
+      "website_url": "https://www.autoxandtrack.com/",
+      "description": "AutoXandTrack is a website created by racers for racers, founded in 2019 by Ryan Otis and a team of motorsports enthusiasts. Their mission is to bring together the autocross and track communities by sharing information, promoting events, and providing resources for both beginners and experienced racers. The blog section covers topics such as driving techniques, car modifications, and racing gear reviews.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 4,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5518261.jpg?t=1678358715"
+    },
+    {
+      "title": "Chapman Report Online Blog \u00bb Autocross",
+      "feed_url": "https://gglotus.org/blog/category/club-news/autocross/feed/",
+      "website_url": "https://gglotus.org/blog/category/club-news/autocross/",
+      "description": "The Chapman Report Online is a website founded by John Lamm in 2009. Their mission is to provide automotive enthusiasts with in-depth coverage of the latest car models, trends, and racing events. The autocross section of the blog features articles on car builds, race results, and driver profiles.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5518267.jpg?t=1678358656"
+    },
+    {
+      "title": "Redwood Region \u00bb Autocross",
+      "feed_url": "https://redwoodpca.org/category/autocross/feed/",
+      "website_url": "https://redwoodpca.org/category/autocross/",
+      "description": "The Redwood Region of the Porsche Club of America is a car club founded in 1964. Their mission is to promote the enjoyment and appreciation of Porsche cars and motorsports. The autocross section of the blog features articles on club events, race results, and interviews with members.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5518265.jpg?t=1678358636"
+    },
+    {
+      "title": "Evergreen Speedway \u00bb Autocross",
+      "feed_url": "https://evergreenspeedway.com/category/autocross/feed/",
+      "website_url": "https://evergreenspeedway.com/category/autocross/",
+      "description": "Evergreen Speedway is a motorsports facility located in Monroe, Washington, founded in 1954. Their autocross events provide a fun and safe environment for drivers of all levels to test their skills. Catch the excitement of autocross racing at this iconic venue!",
+      "followers": {
+        "facebook": 46900,
+        "twitter": 3000,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/5518262.jpg?t=1678358570"
+    }
+  ]
+}

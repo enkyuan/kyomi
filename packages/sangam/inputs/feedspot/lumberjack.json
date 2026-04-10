@@ -1,0 +1,37 @@
+{
+  "category": "Lumberjack",
+  "source_url": "https://rss.feedspot.com/lumberjack_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lumberjacks Blog",
+      "feed_url": "https://lumberjax.com/blog/feed/",
+      "website_url": "https://lumberjax.com/blog/",
+      "description": "Find in-depth blogs on the benefits of kiln-dried firewood, the different types of wood mulch, and more. Lumberjacks is the premier provider of kiln-dried firewood and mulch in Chicagoland and Southern Wisconsin. Our dry kilns ensure our wood is free of insects, mold, chemicals, and moisture.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 12,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5448673.jpg?t=1663830733"
+    },
+    {
+      "title": "Lumberjack Tools Blog",
+      "feed_url": "https://www.lumberjacktools.com/blogs/blog.atom",
+      "website_url": "https://www.lumberjacktools.com/blogs/blog",
+      "description": "Learn about choosing the right Lumberjack Tools on Lumberjack Tools Blog. Lumberjack is a relatively young brand with woodworking machines and accessories. Lumberjack Tools offers quality log furniture building tools including tenon cutters and more.",
+      "followers": {
+        "facebook": 162800,
+        "instagram": 366
+      },
+      "image_url": "https://i1.feedspot.com/5448674.jpg?t=1663830742"
+    },
+    {
+      "title": "Long Island Lumberjack",
+      "feed_url": "https://longislandlumberjack.co/feed/",
+      "website_url": "https://longislandlumberjack.co/",
+      "description": "Long Island Lumberjack is serving Long Island's tree needs with top-quality tree trimming & stump removal service. Long Island Lumberjack provides expert, precision tree removal, tree trimming and pruning, tree care, and maintenance to Long Island's homeowner's associations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5448672.jpg?t=1663832058"
+    }
+  ]
+}

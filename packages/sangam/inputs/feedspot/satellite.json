@@ -1,0 +1,97 @@
+{
+  "category": "Satellite",
+  "source_url": "https://rss.feedspot.com/satellite_rss_feeds",
+  "feeds": [
+    {
+      "title": "CIMSS Satellite Blog",
+      "feed_url": "https://cimss.ssec.wisc.edu/satellite-blog/feed",
+      "website_url": "https://cimss.ssec.wisc.edu/satellite-blog/",
+      "description": "This blog intends to showcase examples of meteorological satellite imagery and products that are available to scientists and researchers at NOAA's Cooperative Institute for Meteorological Satellite Studies (CIMSS), located at the University of Wisconsin Madison's Space Science and Engineering Center (SSEC).",
+      "followers": {
+        "twitter": 43800
+      },
+      "image_url": "https://i1.feedspot.com/4945956.jpg?t=1621423556"
+    },
+    {
+      "title": "AMSAT-UK",
+      "feed_url": "https://amsat-uk.org/feed/",
+      "website_url": "https://amsat-uk.org/",
+      "description": "AMSAT-UK represents the amateur satellite community in the UK whose members not only operate amateur satellites but also help to design, build and fund them.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4945976.jpg?t=1621423563"
+    },
+    {
+      "title": "SatTrackCam blog",
+      "feed_url": "https://sattrackcam.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sattrackcam.blogspot.com/",
+      "description": "SatTrackCam Leiden is a satellite tracking station located at Leiden, the Netherlands. The tracking focus is on classified objects i.e. 'spy satellites'. With a camera, accurate positional measurements on satellites of interest are obtained in order to determine their orbits. Orbital behavior is analyzed. This blog analyses Missile tests too.",
+      "followers": {
+        "twitter": 19900
+      },
+      "image_url": "https://i1.feedspot.com/4945960.jpg?t=1621423573"
+    },
+    {
+      "title": "ScienceDaily \u00bb Satellites News",
+      "feed_url": "https://www.sciencedaily.com/rss/space_time/satellites.xml",
+      "website_url": "https://www.sciencedaily.com/news/space_time/satellites/",
+      "description": "Read science articles on every type of satellite, from the new infrared satellite to micro-satellites. Free satellite pictures too.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4945983.jpg?t=1621423597"
+    },
+    {
+      "title": "PE\u00d8SAT Blog",
+      "feed_url": "https://www.pe0sat.vgnet.nl/feed/",
+      "website_url": "https://www.pe0sat.vgnet.nl/",
+      "description": "Information about Amateur Radio Satellite experiments .",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4945978.jpg?t=1621423605"
+    },
+    {
+      "title": "Riddles in the Sky",
+      "feed_url": "https://skyriddles.wordpress.com/feed/",
+      "website_url": "https://skyriddles.wordpress.com/",
+      "description": "A blog dedicated to observing, mostly classified, satellites.",
+      "followers": {
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4945973.jpg?t=1621423583"
+    },
+    {
+      "title": "ARISS-SSTV Images Blog",
+      "feed_url": "http://ariss-sstv.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ariss-sstv.blogspot.com/",
+      "description": "Slow Scan Television (SSTV) images transmitted from the International Space Station and other ARISS supported satellites.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 17500
+      },
+      "image_url": "https://i1.feedspot.com/4945962.jpg?t=1621423594"
+    },
+    {
+      "title": "Satellite Liaison Blog",
+      "feed_url": "https://satelliteliaisonblog.wordpress.com/feed/",
+      "website_url": "https://satelliteliaisonblog.wordpress.com/",
+      "description": "The future of weather satellites is almost here, and the Satellite Liaisons provide near real-time examples of the GOES-R and JPSS demonstration products.",
+      "followers": {
+        "twitter": 472
+      },
+      "image_url": "https://i1.feedspot.com/4945951.jpg"
+    },
+    {
+      "title": "Satellite News Digest",
+      "feed_url": "https://sat-nd.com/syndication/rssoutput.xml",
+      "website_url": "https://sat-nd.com/",
+      "description": "Sat-ND collects, archives and cross-references freely available news about satellites, adding analysis or commentary where appropriate.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4945982.jpg?t=1621423673"
+    }
+  ]
+}

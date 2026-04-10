@@ -1,0 +1,574 @@
+{
+  "category": "Il Sole 24 Ore",
+  "source_url": "https://rss.feedspot.com/ilsole24ore_rss_feeds",
+  "feeds": [
+    {
+      "title": "Il Sole 24 Ore \u00bb Italy",
+      "feed_url": "https://www.ilsole24ore.com/rss/italia.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/italia",
+      "description": "All the latest news today: Italian news, politics and economy always updated on Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Politics",
+      "feed_url": "https://www.ilsole24ore.com/rss/italia--politica.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/italia/politica",
+      "description": "All articles about Politics from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Economic Policy",
+      "feed_url": "https://www.ilsole24ore.com/rss/italia--politica-economica.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/italia/politica-economica",
+      "description": "Italian economic policy: all the latest news today. Insights, editorials, photos and videos from Il Sole 24 ORE.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb World",
+      "feed_url": "https://www.ilsole24ore.com/rss/mondo.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/mondo",
+      "description": "All the latest news from abroad: current affairs, politics and economics from Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Europe",
+      "feed_url": "https://www.ilsole24ore.com/rss/mondo--europa.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/mondo/europa",
+      "description": "Current affairs and European news. The most important news reported and updated by Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb USA",
+      "feed_url": "https://www.ilsole24ore.com/rss/mondo--usa.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/mondo/usa",
+      "description": "All articles about USA from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Americas",
+      "feed_url": "https://www.ilsole24ore.com/rss/mondo--americhe.xml",
+      "website_url": "https://www.ilsole24ore.com/rss/mondo--americhe.xml",
+      "description": "All articles about Americas from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Middle East",
+      "feed_url": "https://www.ilsole24ore.com/rss/mondo--medio-oriente.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/mondo/medio-oriente",
+      "description": "Current affairs and news Middle East and Africa: all the news collected and updated by Il Sole 24 Ore",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Economy",
+      "feed_url": "https://www.ilsole24ore.com/rss/economia.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/economia",
+      "description": "All articles about Economy from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Industry",
+      "feed_url": "https://www.ilsole24ore.com/rss/economia--industria.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/economia/industria",
+      "description": "All articles about Industry from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Energy and Environment",
+      "feed_url": "https://www.ilsole24ore.com/rss/economia--energia-e-ambiente.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/economia/energia-e-ambiente",
+      "description": "All articles about Energy and Environment from Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Consumption",
+      "feed_url": "https://www.ilsole24ore.com/rss/economia--consumi.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/economia/consumi",
+      "description": "News and insights from the world of consumption from Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Tourism",
+      "feed_url": "https://www.ilsole24ore.com/rss/economia--turismo.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/economia/turismo",
+      "description": "News and insights from the world of the tourism industry by Il Sole 24 ORE.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Agriculture",
+      "feed_url": "https://www.ilsole24ore.com/rss/economia--agricoltura.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/economia/agricoltura",
+      "description": "News and insights from the world of agriculture by Il Sole 24 ORE.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Work",
+      "feed_url": "https://www.ilsole24ore.com/rss/economia--lavoro.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/economia/lavoro",
+      "description": "All articles about Work from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Finance",
+      "feed_url": "https://www.ilsole24ore.com/rss/finanza.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/finanza",
+      "description": "All articles about Finance from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Business",
+      "feed_url": "https://www.ilsole24ore.com/rss/finanza--business.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/finanza/business",
+      "description": "All articles about Business from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Fintech & Startups",
+      "feed_url": "https://www.ilsole24ore.com/rss/finanza--fintech-e-startup.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/finanza/fintech-e-startup",
+      "description": "News and insights from Il Sole 24 ORE on fintech, digital finance and startups",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Commodities",
+      "feed_url": "https://www.ilsole24ore.com/rss/finanza--commodities.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/finanza/commodities",
+      "description": "All articles about Commodities from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Cryptocurrencies",
+      "feed_url": "https://www.ilsole24ore.com/rss/finanza--criptovalute.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/finanza/criptovalute",
+      "description": "All articles about Cryptocurrencies from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Personal Finance",
+      "feed_url": "https://www.ilsole24ore.com/rss/finanza-personale.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/finanza-personale",
+      "description": "All articles about Personal Finance from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Investments",
+      "feed_url": "https://www.ilsole24ore.com/rss/finanza-personale--investimenti.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/finanza-personale/investimenti",
+      "description": "News, insights and analysis from Il Sole 24 ORE on investments, advice on how to invest today",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Art and Finance",
+      "feed_url": "https://www.ilsole24ore.com/rss/arteconomy--arte-e-finanza.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/arteconomy/arte-e-finanza",
+      "description": "Art and collectibles investment, performance analysis, art investment funds, and results of listed art companies.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Editorials",
+      "feed_url": "https://www.ilsole24ore.com/rss/commenti--editoriali.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/commenti/editoriali",
+      "description": "All Editorial articles from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Interventions",
+      "feed_url": "https://www.ilsole24ore.com/rss/commenti--interventi.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/commenti/interventi",
+      "description": "The interventions and comments of authoritative people on current national and international economic issues, edited by Il Sole 24 ORE.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Society",
+      "feed_url": "https://www.ilsole24ore.com/rss/commenti--societa.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/commenti/societa",
+      "description": "All articles about Society from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb People",
+      "feed_url": "https://www.ilsole24ore.com/rss/commenti--persone.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/commenti/persone",
+      "description": "All articles about People from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Culture",
+      "feed_url": "https://www.ilsole24ore.com/rss/cultura.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/cultura",
+      "description": "All articles about Culture from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Travel",
+      "feed_url": "https://www.ilsole24ore.com/rss/viaggi.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/viaggi",
+      "description": "Viaggi24 offers a guide dedicated to travel, holidays and the most interesting destinations, giving you the awareness that loving travel or unusual itineraries gives unforgettable memories and awakens the spirit of adventure that is within each of us.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Science",
+      "feed_url": "https://www.ilsole24ore.com/rss/tecnologia--scienza.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/tecnologia/scienza",
+      "description": "All articles about Science from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Games",
+      "feed_url": "https://www.ilsole24ore.com/rss/tecnologia--games.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/tecnologia/games",
+      "description": "All articles about Games from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Cybersecurity",
+      "feed_url": "https://www.ilsole24ore.com/rss/tecnologia--cybersicurezza.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/tecnologia/cybersicurezza",
+      "description": "All articles about Cybersecurity from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Startup",
+      "feed_url": "https://www.ilsole24ore.com/rss/tecnologia--startup.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/tecnologia/startup",
+      "description": "Everything about the world of startups in Italy and abroad, government contributions, competitions and venture capital.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Fintech",
+      "feed_url": "https://www.ilsole24ore.com/rss/tecnologia--fintech.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/tecnologia/fintech",
+      "description": "All about technological innovations, the protagonists, the scenarios and the companies linked to technofinance.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Digital economy",
+      "feed_url": "https://www.ilsole24ore.com/rss/tecnologia--economia-digitale.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/tecnologia/economia-digitale",
+      "description": "All articles about Digital Economy from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Technology",
+      "feed_url": "https://www.ilsole24ore.com/rss/tecnologia.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/tecnologia",
+      "description": "Technology and internet news: constantly updated news on the digital economy, fintech, cybersecurity, video games, telephony and cell phones, computers, media and social networks, guides and digital vademecum by Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Football",
+      "feed_url": "https://www.ilsole24ore.com/rss/sport24--calcio.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/sport24/calcio",
+      "description": "All the financial updates related to the national and international football business: balance sheets, sponsors, acquisitions and economic news.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Sport",
+      "feed_url": "https://www.ilsole24ore.com/rss/sport24.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/sport24",
+      "description": "All the latest sports news. Insights, editorials, photos and videos from Il Sole 24 ORE",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Design",
+      "feed_url": "https://www.ilsole24ore.com/rss/casa--design.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/casa/design",
+      "description": "The latest trends and news from the world of design: furniture, accessories, design objects, as well as news on industry events and exhibitions.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Architecture",
+      "feed_url": "https://www.ilsole24ore.com/rss/casa--architettura.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/casa/architettura",
+      "description": "All articles about Architecture from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Market",
+      "feed_url": "https://www.ilsole24ore.com/rss/casa--mercato.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/casa/mercato",
+      "description": "Everything you need to know about the non-residential market: offices, retail spaces, logistics, hotels, student and senior living sectors.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Real Estate",
+      "feed_url": "https://www.ilsole24ore.com/rss/casa.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/casa",
+      "description": "All articles about Real Estate from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Motorcycles",
+      "feed_url": "https://www.ilsole24ore.com/rss/motori--moto.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/motori/moto",
+      "description": "All articles about Motorcycles from Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Cars",
+      "feed_url": "https://www.ilsole24ore.com/rss/motori--auto.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/motori/auto",
+      "description": "All articles about Cars from Il Sole 24 Ore.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Tech & gadgets",
+      "feed_url": "https://www.ilsole24ore.com/rss/htsi--tech-e-gadget.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/htsi/tech-e-gadget",
+      "description": "Ideas and advice for your next high-quality tech gadget. Discover the insights of How to spend it.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Travel",
+      "feed_url": "https://www.ilsole24ore.com/rss/htsi--viaggi.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/htsi/viaggi",
+      "description": "Ideas and advice for your next trip in the name of luxury and quality. Discover the insights of How to spend it.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Food & Drink",
+      "feed_url": "https://www.ilsole24ore.com/rss/htsi--food-e-drink.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/htsi/food-e-drink",
+      "description": "All articles about Food & Drink from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Design & art",
+      "feed_url": "https://www.ilsole24ore.com/rss/htsi--design-e-arte.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/htsi/design-e-arte",
+      "description": "Ideas and advice for purchases from the world of design and art. Discover the insights of How to spend it.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Motors",
+      "feed_url": "https://www.ilsole24ore.com/rss/htsi--motori.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/htsi/motori",
+      "description": "All articles about Motors from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Beauty & wellness",
+      "feed_url": "https://www.ilsole24ore.com/rss/htsi--beauty-e-wellness.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/htsi/beauty-e-wellness",
+      "description": "News and advice for shopping on the theme of beauty and wellness. Discover the insights of How to spend it.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Fashion Her & Him",
+      "feed_url": "https://www.ilsole24ore.com/rss/htsi--moda-lei-e-lui.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/htsi/moda-lei-e-lui",
+      "description": "Ideas and trends from the world of luxury clothing for both him and her. Discover the insights of How to spend it.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Food",
+      "feed_url": "https://www.ilsole24ore.com/rss/food.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/food",
+      "description": "All articles about Food from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Music",
+      "feed_url": "https://www.ilsole24ore.com/rss/cultura--musica.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/cultura/musica",
+      "description": "Tips and reviews from Il Sole 24 ORE to help you listen to quality music and tracklists.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Cinema and media",
+      "feed_url": "https://www.ilsole24ore.com/rss/cultura--cinema-e-media.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/cultura/cinema-e-media",
+      "description": "Reviews of films at the cinema and TV series and streaming, guide to the programming of films coming out in cinemas in your city by Il Sole 24 ORE.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1900000,
+        "instagram": 986300
+      },
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Shows",
+      "feed_url": "https://www.ilsole24ore.com/rss/cultura--spettacoli.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/cultura/spettacoli",
+      "description": "All articles about Shows from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    },
+    {
+      "title": "Il Sole 24 Ore \u00bb Books",
+      "feed_url": "https://www.ilsole24ore.com/rss/cultura--libri.xml",
+      "website_url": "https://www.ilsole24ore.com/sez/cultura/libri",
+      "description": "All articles about Books from Il Sole 24 Ore.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7897450.jpg?t=1744372507"
+    }
+  ]
+}

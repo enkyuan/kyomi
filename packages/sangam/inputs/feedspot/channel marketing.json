@@ -1,0 +1,77 @@
+{
+  "category": "Channel Marketing",
+  "source_url": "https://rss.feedspot.com/channel_marketing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oracle Blog \u00bb Cross Channel Marketing",
+      "feed_url": "https://blogs.oracle.com/marketingcloud/rss",
+      "website_url": "https://blogs.oracle.com/marketingcloud/category/mkt-cross-channel-marketing",
+      "description": "The latest in marketing strategy, technology, and innovation. Find innovative Cross-Channel Marketing solutions, tips, ideas, and more resources in these posts. Oracle is a world-leading Cloud Platform & Infrastructure company connecting critical business processes and providing consistent user experiences across the globe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5523553.jpg?t=1679317012"
+    },
+    {
+      "title": "Dotdigital Blog \u00bb Cross-channel marketing",
+      "feed_url": "https://dotdigital.com/blog/blog-topics/cross-channel-marketing/feed/",
+      "website_url": "https://dotdigital.com/blog/blog-topics/cross-channel-marketing/",
+      "description": "Check out our articles on top cross-channel marketing tactics. Get insights that will boost your brand's ability to connect with customers on channels, including email, SMS, social media, and more. Dotdigital is a customer engagement platform that helps digital marketers and developers deliver communications across the customer journey.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 16900,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5523552.jpg?t=1679316974"
+    },
+    {
+      "title": "Zift Solutions Blog",
+      "feed_url": "https://ziftsolutions.com/resources/blog/feed/",
+      "website_url": "https://ziftsolutions.com/resources/blog/",
+      "description": "Zift Solutions increases channel sales and boosts marketing impact by delivering a superior technology platform, strategic insight, and global channel support. Follow the latest news, trends and best practices to help you drive channel sales and boost marketing impact.",
+      "followers": {
+        "facebook": 382,
+        "twitter": 1500,
+        "instagram": 102
+      },
+      "image_url": "https://i1.feedspot.com/5016731.jpg?t=1622286845"
+    },
+    {
+      "title": "Channel Maven Blog",
+      "feed_url": "https://www.channelmavenconsulting.com/blog/rss.xml",
+      "website_url": "https://www.channelmavenconsulting.com/blog",
+      "description": "Channel Maven brings strategy and consulting expertise to technology companies and Channel organizations that drive revenue and audience engagement through tactics, programs, and marketing.",
+      "followers": {
+        "facebook": 155,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5016681.jpg?t=1622286850"
+    },
+    {
+      "title": "Forrester Blog \u00bb Channel marketing",
+      "feed_url": "https://www.forrester.com/blogs/tag/channel-marketing/feed/",
+      "website_url": "https://www.forrester.com/blogs/tag/channel-marketing/",
+      "description": "Forrester works with business and technology leaders to develop customer-obsessed strategies that drive growth.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 354300
+      },
+      "image_url": "https://i1.feedspot.com/5016678.jpg?t=1622286854"
+    },
+    {
+      "title": "Comperemedia \u00bb Omnichannel Marketing",
+      "feed_url": "https://welcome.comperemedia.com/insights/omnichannel-marketing/feed/",
+      "website_url": "https://welcome.comperemedia.com/insights/omnichannel-marketing/",
+      "description": "Read our latest US and Americas articles and reports from the omnichannel marketing sector, with perspectives and insights from our expert teams. Compremedia is an industry-leading Marketing Analytics company delivering fast, accurate analysis and tech solution to its clients across the Americas.",
+      "followers": {
+        "twitter": 429
+      },
+      "image_url": "https://i1.feedspot.com/5523551.jpg?t=1679316964"
+    },
+    {
+      "title": "WordStream Blog \u00bb Cross-Channel Marketing",
+      "feed_url": "https://www.wordstream.com/blog/ws/category/cross-channel-marketing/feed",
+      "description": "Use WordStream's actionable, in-depth articles to create and execute an effective cross-channel marketing strategy across PPC, SEO, social, email, and all your other channels. WordStream by LOCALiQ is your go-to source for data and insights in the world of digital marketing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5523549.jpg?t=1679317039"
+    }
+  ]
+}

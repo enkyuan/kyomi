@@ -1,0 +1,28 @@
+{
+  "category": "Avon Lake News",
+  "source_url": "https://rss.feedspot.com/avon_lake_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Villager Newspaper \u00bb Avon Lake",
+      "feed_url": "http://www.thevillagernewspaper.com/category/avon-lake/feed/",
+      "website_url": "http://www.thevillagernewspaper.com/category/avon-lake/",
+      "description": "The Villager Newspaper is your top source for local news serving Cleveland's Westshore for over 17 years. Read the latest news and breaking headlines on what's happening in Avon Lake city and community by following this feed.",
+      "followers": {
+        "facebook": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5158801.jpg?t=1591246142"
+    },
+    {
+      "title": "FOX 8 \u00bb Avon Lake",
+      "feed_url": "https://fox8.com/tag/avon-lake-news/feed/",
+      "website_url": "https://fox8.com/tag/avon-lake-news/",
+      "description": "Cleveland's own Fox 8 News provides breaking news, weather alerts and topics that impact you. Follow this feed for the latest news and updates in Avon Lake brought to you by the team at FOX 8.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5158805.jpg"
+    }
+  ]
+}

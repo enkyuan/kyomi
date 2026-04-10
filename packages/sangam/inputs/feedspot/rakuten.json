@@ -1,0 +1,122 @@
+{
+  "category": "Rakuten",
+  "source_url": "https://rss.feedspot.com/rakuten_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rakuten Today",
+      "feed_url": "https://rakuten.today/feed",
+      "website_url": "https://rakuten.today/",
+      "description": "Rakuten Today is the official blog of Rakuten. Follow this blog to get information on all things from CEO insights to the latest on entrepreneurship and innovation, news & views.",
+      "followers": {
+        "facebook": 11
+      },
+      "image_url": "https://i1.feedspot.com/4922763.jpg?t=1620884219"
+    },
+    {
+      "title": "Rakuten Inc",
+      "feed_url": "https://global.rakuten.com/corp/rss/press.xml",
+      "website_url": "https://global.rakuten.com/corp/news/press/",
+      "description": "Get to know about the latest news on businesses and brands of Rakuten, Inc. all over the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4922653.jpg?t=1620882926"
+    },
+    {
+      "title": "Rakuten Advertising Blog",
+      "feed_url": "https://blog.rakutenadvertising.com/feed/",
+      "website_url": "https://blog.rakutenadvertising.com/",
+      "description": "Covers marketing and advertising insights, marketing strategies, events, and news. Rakuten Advertising is the leading global provider of marketing and advertising services and technology.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 16300,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5357205.jpg?t=1640667331"
+    },
+    {
+      "title": "Rakuten Blog",
+      "feed_url": "https://www.rakuten.com/blog/feed/",
+      "website_url": "https://www.rakuten.com/blog/",
+      "description": "From money-saving guides and fun lifestyle posts to special promotions and coupons, discover the best deals and tips at The Smart Shopper from Rakuten.",
+      "followers": {
+        "facebook": 943500,
+        "twitter": 119400,
+        "instagram": 331300
+      },
+      "image_url": "https://i1.feedspot.com/4818486.jpg?t=1763032506"
+    },
+    {
+      "title": "Viki Blog",
+      "feed_url": "https://blog.viki.com/feed",
+      "website_url": "https://blog.viki.com/",
+      "description": "Viki is a global TV site and the ultimate destination for K-Drama and Asian entertainment. Together with Soompi, the online K-Pop authority, Viki breaks down barriers that stand between great entertainment and its fans, no matter where they are. Follow this blog to know more about Rakuten Viki.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 403400
+      },
+      "image_url": "https://i1.feedspot.com/4922887.jpg?t=1620883733"
+    },
+    {
+      "title": "Rakuten OverDrive Schools Blog",
+      "feed_url": "https://company.overdrive.com/blogs/schools-blog/feed/",
+      "website_url": "https://company.overdrive.com/blogs/schools-blog/",
+      "description": "Rakuten OverDrive is the world's leading provider of digital content to libraries and schools. Follow this blog to get information on how OverDrive engages with schools.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4922786.jpg?t=1620883990"
+    },
+    {
+      "title": "Rakuten OverDrive Library Blog",
+      "feed_url": "https://company.overdrive.com/blogs/library-blog/feed/",
+      "website_url": "https://company.overdrive.com/blogs/library-blog/",
+      "description": "Rakuten OverDrive is the Global distributor of digital eBooks, audiobooks, music & video for library, school & retail. Follow this blog to get updates on their Library services.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4922794.jpg?t=1620883916"
+    },
+    {
+      "title": "Rakuten OverDrive",
+      "feed_url": "https://company.overdrive.com/blogs/collection-development-blogs/feed/",
+      "website_url": "https://company.overdrive.com/blogs/collection-development-blogs/",
+      "description": "Rakuten OverDrive is the leading multichannel digital distributor of eBooks, audiobooks, streaming video and more. Follow this blog to get articles and resources on their Collection Development.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4922802.jpg?t=1620883953"
+    },
+    {
+      "title": "Rakuten eCommerce Blog",
+      "feed_url": "https://marketplace.rakuten.net/blog/rss.xml",
+      "website_url": "https://marketplace.rakuten.net/blog",
+      "description": "Rakuten eCommerce Insights, featuring Japan retailing, tips for selling in Japan, and Japan eCommerce. Rakuten Ichiba is the largest eCommerce marketplace in Japan and the third-largest eCommerce marketplace globally.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5357206.jpg?t=1640667430"
+    },
+    {
+      "title": "Rakuten Marketing Blog",
+      "feed_url": "https://blog.rakutenmarketing.com/en-uk/feed/",
+      "website_url": "https://blog.rakutenadvertising.com/en-uk/category/marketing-strategies/",
+      "description": "Rakuten Marketing is the global leader in integrated marketing solutions. With offices around the world, our integrated marketing solutions span affiliate, display and search. Follow this blog to get Digital Marketing Insights from the marketing global leader.",
+      "followers": {
+        "facebook": 981
+      },
+      "image_url": "https://i1.feedspot.com/4922645.jpg?t=1620884165"
+    },
+    {
+      "title": "Rakuten Kobo News Blog",
+      "feed_url": "https://www.kobo.com/blog",
+      "website_url": "https://www.kobo.com/blog",
+      "description": "Rakuten Kobo is one of the world's fastest-growing eReading services, offering more than 5 million eBooks and Audiobooks to millions of users across the world. Follow this site to stay up to date on the latest Kobo news, deals and events.",
+      "followers": {
+        "facebook": 406100,
+        "twitter": 54500,
+        "instagram": 132100
+      },
+      "image_url": "https://i1.feedspot.com/1538484.jpg?t=1531463656"
+    }
+  ]
+}

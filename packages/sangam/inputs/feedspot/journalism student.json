@@ -1,0 +1,56 @@
+{
+  "category": "Journalism Student",
+  "source_url": "https://rss.feedspot.com/journalism_student_rss_feeds",
+  "feeds": [
+    {
+      "title": "School Journalism",
+      "feed_url": "https://www.schooljournalism.org/feed/",
+      "website_url": "https://www.schooljournalism.org/",
+      "description": "This go-to education site for students and teachers provides hundreds of lesson plans and resources related to journalism, news literacy, and civic education. Whether you want to learn, teach or create news and information using digital media tools or increase your understanding of the First Amendment and democracy, this site can both inspire and instruct!",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4575285.jpg?t=1652792639"
+    },
+    {
+      "title": "Press Think",
+      "feed_url": "https://pressthink.org/feed/",
+      "website_url": "https://pressthink.org/",
+      "description": "PRESSTHINK is a project of the Arthur L. Carter Journalism Institute at New York University. It is written and edited by professor Jay Rosen, who has taught at NYU since 1986. The blog is about the fate of the press in a digital era and the challenges involved in rethinking what journalism is today. It presents essays, press criticism, interviews, and speeches. PressThink does not accept advertising.",
+      "followers": {
+        "twitter": 306400
+      },
+      "image_url": "https://i1.feedspot.com/18725.jpg?t=1652792420"
+    },
+    {
+      "title": "Brooklyn News Service",
+      "feed_url": "https://journalism.blog.brooklyn.edu/feed/",
+      "website_url": "https://journalism.blog.brooklyn.edu/",
+      "description": "At Brooklyn News Service, student journalists from Brooklyn College of the City University of New York cover the news of New York City. Brooklyn College offers a B.A. in Journalism and a B.S. in Broadcast Journalism.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5401151.jpg?t=1652792589"
+    },
+    {
+      "title": "Oviedo Journalism",
+      "feed_url": "https://oviedojournalism.com/feed/",
+      "website_url": "https://oviedojournalism.com/",
+      "description": "OviedoJournalism.com is the student-run news site that combines newspaper reporting (The Lion's Tale), TV production (WROR TV), and yearbook coverage (The Oviedian) of Oviedo High School in Oviedo, Florida.",
+      "followers": {
+        "twitter": 147,
+        "instagram": 141
+      },
+      "image_url": "https://i1.feedspot.com/5401150.jpg?t=1652792168"
+    },
+    {
+      "title": "Bob Stepno's Other Journalism",
+      "feed_url": "https://stepno.wordpress.com/feed/",
+      "website_url": "https://stepno.wordpress.com/",
+      "description": "Bob Stepno's Other Journalism blog features news for students, friends & colleagues.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5005895.jpg?t=1652792907"
+    }
+  ]
+}

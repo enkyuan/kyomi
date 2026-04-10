@@ -1,0 +1,409 @@
+{
+  "category": "Geography",
+  "source_url": "https://rss.feedspot.com/geography_rss_feeds",
+  "feeds": [
+    {
+      "title": "Geography Realm",
+      "feed_url": "https://www.geographyrealm.com/feed/",
+      "website_url": "https://www.geographyrealm.com/",
+      "description": "Geography Realm (formerly Geo Lounge) is an information site about all things geography. Find information here about physical and human geography as well as guides for learning about geography and developing a career in geography.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4726379.jpg?t=1608623398"
+    },
+    {
+      "title": "New Geography",
+      "feed_url": "https://feeds.feedburner.com/Newgeography",
+      "website_url": "http://www.newgeography.com/blogs",
+      "description": "NewGeography.com is a site devoted to analyzing and discussing the places where we live and work. We want to know not only what is happening, but also how you, your company and your community can best adapt to rapidly changing conditions. We welcome your writing, your thoughts on the site, and your insights on economic development, metropolitan demographics, and community leadership.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/334135.jpg?t=1607698110"
+    },
+    {
+      "title": "Digital Geography",
+      "feed_url": "https://digital-geography.com/feed/",
+      "website_url": "https://digital-geography.com/",
+      "description": "Digital-geography.com is a multilingual blog about GIS-tutorials, webmapping, statistics and much more out of the 'geosphere'.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/1152684.jpg?t=1607698119"
+    },
+    {
+      "title": "Brilliant Maps",
+      "feed_url": "https://brilliantmaps.com/feed/",
+      "website_url": "https://brilliantmaps.com/",
+      "description": "Learn more about maps that will help you make sense of the world at Brilliant Maps.",
+      "followers": {
+        "twitter": 128900
+      },
+      "image_url": "https://i1.feedspot.com/4201211.jpg?t=1607698137"
+    },
+    {
+      "title": "The New York Times - Geography",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/subject/geography/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/geography",
+      "description": "We aim to create a space on NYTimes where readers can exchange intelligent and informed commentary that enhances the quality of our news and information. News about geography. Commentary and archival information about geography from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4729070.jpg?t=1607698149"
+    },
+    {
+      "title": "GeographyPin",
+      "feed_url": "https://geographypin.com/feed/",
+      "website_url": "https://geographypin.com/",
+      "description": "Welcome to GeographyPin, your ultimate online resource for all geography-related things! Our mission is to make geography accessible, engaging, and educational for everyone, from curious learners to geography enthusiasts.",
+      "followers": {
+        "facebook": 543,
+        "instagram": 3
+      },
+      "image_url": "https://i1.feedspot.com/5713048.jpg?t=1700110335"
+    },
+    {
+      "title": "Salty Matters Blog",
+      "feed_url": "https://io.dropinblog.com/feed/7IXJX9J0G6KZK0LXKUYV/?limit=10",
+      "website_url": "https://saltworkconsultants.com/blog-salty-matters/",
+      "description": "Saltworks offers professional expertise across saline geosystems and carbonate reservoirs, consultancy services, online courses, skills transfer, and in-house training, as well as access to commercial and client-focused databases. All our services focus on the economic aspects of evaporite sediments and carbonate reservoirs. We work successfully with oil companies and mining companies across all aspects of surface and subsurface geology, reservoir characterization, brine evolution, core study, seismic interpretation, and site and project evaluation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7296789.jpg?t=1712907102"
+    },
+    {
+      "title": "ScienceDaily - Geography News",
+      "feed_url": "https://www.sciencedaily.com/rss/earth_climate/geography.xml",
+      "website_url": "https://www.sciencedaily.com/news/earth_climate/geography/",
+      "description": "ScienceDaily features breaking news about the latest scientific discoveries -- on everything from astrophysics to zoology. Visit ScienceDaily to read breaking news about the latest discoveries in science, health, the environment, and technology. Read the latest geographical research from universities and institutes around the world.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4729060.jpg?t=1607698157"
+    },
+    {
+      "title": "Library of Congress Blog \u00bb Geography and Map",
+      "feed_url": "https://blogs.loc.gov/maps/feed/",
+      "website_url": "https://blogs.loc.gov/maps/",
+      "description": "Welcome to the blog for the Geography and Map Division of the Library of Congress. The largest and most comprehensive cartographic collection in the world, the Geography and Map Division contains over six million maps in addition to a wide array of atlases, globes, raised relief models, archives, a vast collection of digital data and a GIS research center.",
+      "followers": {
+        "facebook": 579500,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4727944.jpg?t=1607698161"
+    },
+    {
+      "title": "University of Nottingham",
+      "feed_url": "https://feeds.feedburner.com/TheGeogBlog",
+      "website_url": "https://blogs.nottingham.ac.uk/geography/",
+      "description": "This blog is produced by members of the School of Geography at the University of Nottingham. It is a place for highlighting our latest internationally-ranked research, discussing important contemporary geographical issues such as climate change, food security and water resources, and for recording members' activities such as participation in outreach events, conferences and policy debates.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 98800,
+        "instagram": 128699
+      },
+      "image_url": "https://i1.feedspot.com/4727999.jpg?t=1607698164"
+    },
+    {
+      "title": "Geospatial World",
+      "feed_url": "https://geospatialworld.net/feed/",
+      "website_url": "https://geospatialworld.net/news/",
+      "description": "Get the latest updates on geospatial technology, application, research and business trends from our news, videos, magazine, blogs and more!",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 32400,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4496025.jpg?t=1699592835"
+    },
+    {
+      "title": "Internet Geography Blog",
+      "feed_url": "https://www.internetgeography.net/feed/",
+      "website_url": "https://www.internetgeography.net/blog/",
+      "description": "Internet Geography - GCSE Geography resources to support teachers and students. Get help with revision and homework. Amazing photos and videos of geography. Provides free access to resources to support learners of Geography.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4727936.jpg?t=1607698187"
+    },
+    {
+      "title": "The Rural Blog",
+      "feed_url": "https://irjci.blogspot.com/feeds/posts/default",
+      "website_url": "https://irjci.blogspot.com/",
+      "description": "A digest of events, trends, issues, ideas and journalism from and about rural America, from the Institute for Rural Journalism and Community Issues, based at the University of Kentucky.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/563031.jpg?t=1607698205"
+    },
+    {
+      "title": "The Map Room Blog",
+      "feed_url": "https://www.maproomblog.com/feed/",
+      "website_url": "https://www.maproomblog.com/",
+      "description": "The Map Room is a blog about maps by Jonathan Crowe that covers everything from antique map collecting to the latest in geospatial technology.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4726352.jpg?t=1609304751"
+    },
+    {
+      "title": "Aaron M. Renn All Things Aaron",
+      "feed_url": "https://www.aaronrenn.com/feed",
+      "website_url": "https://www.aaronrenn.com/",
+      "description": "Aaron M. Renn is a Senior Fellow at the Manhattan Institute and an opinion-leading urban analyst, writer, and speaker on a mission to help America's cities thrive and find sustainable success in the 21st century.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/573804.jpg?t=1607698222"
+    },
+    {
+      "title": "Geography Directions",
+      "feed_url": "https://blog.geographydirections.com/feed/",
+      "website_url": "https://blog.geographydirections.com/",
+      "description": "Welcome to Geography Directions. We host regular posts, content alerts, video files and news items from our team of news editors and other contributors.",
+      "followers": {
+        "facebook": 393,
+        "twitter": 19600
+      },
+      "image_url": "https://i1.feedspot.com/4728025.jpg?t=1607698235"
+    },
+    {
+      "title": "Suprageography",
+      "feed_url": "https://oobrien.com/feed/",
+      "website_url": "https://oobrien.com/",
+      "description": "I'm Oliver O'Brien, a Senior Research Associate at University College London (UCL), joining the university in 2008 and initially and currently based at the Department of Geography, in the Geospatial Analytics and Computing Research Group (GSAC) and forming part of the ESRa.",
+      "followers": {
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4521038.jpg?t=1607698246"
+    },
+    {
+      "title": "Maps4Kids",
+      "feed_url": "https://maps4kids.com/blog/feed/",
+      "website_url": "https://maps4kids.com/blog/",
+      "description": "Our mission is to help children gain a greater understanding of the world through maps, geographic information and games.",
+      "followers": {
+        "twitter": 578
+      },
+      "image_url": "https://i1.feedspot.com/5149320.jpg?t=1610116407"
+    },
+    {
+      "title": "Living Geography",
+      "feed_url": "https://feeds.feedburner.com/blogspot/gzkYv",
+      "website_url": "http://livinggeography.blogspot.com/",
+      "description": "Dispatches from the classroom, and from life as a freelance Geographer.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4727959.jpg?t=1607698255"
+    },
+    {
+      "title": "Arkansas Geological Survey Blog",
+      "feed_url": "https://arkansasgeological.wordpress.com/feed/",
+      "website_url": "https://arkansasgeological.wordpress.com/",
+      "description": "Our mission is to serve the people of Arkansas by providing geological information to the public. Posts about #geoblog written by argeology.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4730741.jpg?t=1607698272"
+    },
+    {
+      "title": "Cultural Geography Blog",
+      "feed_url": "http://cultcha.blogspot.com/feeds/posts/default",
+      "website_url": "http://cultcha.blogspot.com/",
+      "description": "Cultural Geography and Geography in the Media. For students and teachers of Geography.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/573797.jpg?t=1607698784"
+    },
+    {
+      "title": "Environmental Geography",
+      "feed_url": "https://www.environmentalgeography.net/feeds/posts/default",
+      "website_url": "https://www.environmentalgeography.net/",
+      "description": "Geography asks three questions: Where is it? Why is it there? So what?. Geographers apply spatial understanding to problems in the real world.",
+      "followers": {
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/4728012.jpg?t=1607698822"
+    },
+    {
+      "title": "The Guardian | Geography",
+      "feed_url": "https://www.theguardian.com/science/geography/rss",
+      "website_url": "https://www.theguardian.com/science/geography",
+      "description": "Follow us to keep up with articles on Geography from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4729063.jpg?t=1607698153"
+    },
+    {
+      "title": "Google Earth Blog",
+      "feed_url": "https://www.gearthblog.com/feed",
+      "website_url": "https://www.gearthblog.com/",
+      "description": "Google Earth Blog - The amazing things about Google Earth. Google Earth has revolutionized the ability to visualize geospatial information and has raised awareness about the importance of tying information to location.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 20900
+      },
+      "image_url": "https://i1.feedspot.com/4611248.jpg?t=1607698146"
+    },
+    {
+      "title": "Geography Study",
+      "feed_url": "https://geographystudy.com/feed/",
+      "website_url": "https://geographystudy.com/",
+      "description": "GeographyStudy.com is a website dedicated to providing students with comprehensive and up-to-date information on all aspects of geography. The website covers a wide range of topics, including physical geography, human geography, environmental geography, and regional geography.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5691263.jpg?t=1697536121"
+    },
+    {
+      "title": "UConn Libraries - Outside the Neatline",
+      "feed_url": "https://blogs.lib.uconn.edu/outsidetheneatline/feed/",
+      "website_url": "https://blogs.lib.uconn.edu/outsidetheneatline/",
+      "description": "Outside the Neatline focuses on a number of different geo topics from geoeducation to geotechnologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3823561.jpg?t=1607698555"
+    },
+    {
+      "title": "Geography for 2017 & Beyond Blog",
+      "feed_url": "https://www.geographypods.com/blog/feed",
+      "website_url": "https://www.geographypods.com/blog",
+      "description": "Welcome to the site. Since 2009, I have been a Geography teacher and a Curriculum Leader for the subject at the International School of Toulouse. I've just done quite a simple but effective piece of work with Grade 7 / Year 8 on the next section of their work on globalization ( Geography of my stuff ).",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4726404.jpg?t=1607698179"
+    },
+    {
+      "title": "Between the Poles",
+      "feed_url": "https://feeds.feedburner.com/typepad/zeissg/geospatial",
+      "website_url": "https://geospatial.blogs.com/",
+      "description": "All about infrastructure and the impact of global climate change on how we manage our infrastructure. Geoff Zeiss has more than 20 years experience developing geospatial solutions for the utilities, communications, and public works industries.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1053375.jpg?t=1699594080"
+    },
+    {
+      "title": "Geography Education",
+      "feed_url": "https://geographyeducation.org/feed/",
+      "website_url": "https://geographyeducation.org/",
+      "description": "Geography Education Supporting geography educators everywhere with current digital resources.",
+      "followers": {
+        "facebook": 45800,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4728079.jpg?t=1607698231"
+    },
+    {
+      "title": "Constant Geography",
+      "feed_url": "https://constantgeography.com/feed/",
+      "website_url": "https://constantgeography.com/",
+      "description": "Focused essays on higher education administration, teaching, learning, technology, geography, geospatial education, book reviews",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4729471.jpg?t=1607698803"
+    },
+    {
+      "title": "Geogteacher's Blog",
+      "feed_url": "https://geogteacher.wordpress.com/feed/",
+      "website_url": "https://geogteacher.wordpress.com/",
+      "description": "Follow us to keep up with articles and resources on Geography from Geogteacher's Blog. We collaborate on finding, writing, and sharing Geography resources. The author of this blog is a Geography teacher and likes to share interesting stuff that can be used by other teachers or students curious about Geography.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4727930.jpg?t=1662527840"
+    },
+    {
+      "title": "The Geo Blog",
+      "feed_url": "http://geokedley.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://geokedley.blogspot.com/",
+      "description": "MAYOR, US HISTORY TEACHER, COACH, AND ADVENTURER.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4729391.jpg?t=1607698989"
+    },
+    {
+      "title": "King's College London",
+      "feed_url": "https://blogs.kcl.ac.uk/geography/feed/",
+      "website_url": "https://blogs.kcl.ac.uk/geography/",
+      "description": "We are a leading UK geography department specialising in urban studies, environment & development, hazards & risk, & the study of Earth's environmental dynamics.",
+      "followers": {
+        "facebook": 395200,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4727986.jpg?t=1607698818"
+    },
+    {
+      "title": "Gustavus Adolphus College Geographic research and news",
+      "feed_url": "https://geography.blog.gustavus.edu/category/geographic-research-and-news/feed/",
+      "website_url": "https://geography.blog.gustavus.edu/category/geographic-research-and-news/",
+      "description": "Gustavus Adolphus College is a highly selective, private, coeducational, residential liberal arts college affiliated with the Evangelical Lutheran Church in America (ELCA). Geography Blog.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 7300,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4730617.jpg?t=1607698839"
+    },
+    {
+      "title": "Gary Gale",
+      "feed_url": "https://www.vicchi.org/feeds/feed.atom",
+      "website_url": "https://www.vicchi.org/",
+      "description": "Articles on Geo Technology, maps and more from Gary's Bloggage.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/1216894.jpg?t=1607698843"
+    },
+    {
+      "title": "University of Brighton",
+      "feed_url": "https://blogs.brighton.ac.uk/geography/feed/",
+      "website_url": "https://blogs.brighton.ac.uk/appliedsciences/category/geography-the-earth-and-environment/",
+      "description": "Welcome to the University of Brighton's blog. Follow us to keep up with articles on Geography, Geology & Environment.",
+      "followers": {
+        "twitter": 44200
+      },
+      "image_url": "https://i1.feedspot.com/4727969.jpg?t=1607698175"
+    },
+    {
+      "title": "Views of the World",
+      "feed_url": "http://www.viewsoftheworld.net/?feed=rss2",
+      "website_url": "http://www.viewsoftheworld.net/",
+      "description": "Benjamin is a geographer educated at the Universities of Cologne & Bonn and the Alfred Wegener Institute for Polar and Marine Research. HE is a Geographer and accidental cartographer. Rediscovering the world.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/358383.jpg?t=1607698141"
+    },
+    {
+      "title": "Canadian Geographic",
+      "feed_url": "https://canadiangeographic.ca/rss.xml",
+      "website_url": "https://canadiangeographic.ca/",
+      "description": "The authoritative source for all things geography, wildlife and environment, climate and energy, travel, culture and exploration in Canada, Canadian Geographic has been making Canada better known to Canada and the world since 1930.",
+      "followers": {
+        "facebook": 67900,
+        "twitter": 37200,
+        "instagram": 151000
+      },
+      "image_url": "https://i1.feedspot.com/4729019.jpg?t=1607698191"
+    },
+    {
+      "title": "Spatially Adjusted",
+      "feed_url": "https://www.spatiallyadjusted.com/feed/",
+      "website_url": "https://spatiallyadjusted.com/",
+      "description": "My name is James Fee, and I'm CTO of Cityzenith. Get information on Geospatial Technology, Web Mapping and Spatial Services.",
+      "followers": {
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/4410654.jpg?t=1607698269"
+    }
+  ]
+}

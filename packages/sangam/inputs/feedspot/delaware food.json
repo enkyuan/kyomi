@@ -1,0 +1,39 @@
+{
+  "category": "Delaware Food",
+  "source_url": "https://rss.feedspot.com/delaware_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rehoboth Foodie",
+      "feed_url": "https://rehobothfoodie.com/feed/",
+      "website_url": "https://rehobothfoodie.com/",
+      "description": "News & reviews of Delaware's Cape Region resort restaurants. It is a two weekly restaurant/food column in Cape Region newspapers, and articles.",
+      "followers": {
+        "facebook": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5311801.jpg?t=1628775795"
+    },
+    {
+      "title": "The Palate Princess",
+      "feed_url": "https://thepalateprincess.com/feed/",
+      "website_url": "https://thepalateprincess.com/",
+      "description": "The Palate Princess is a popular food, travel, and lifestyle blog created by writer Iris McCarthy. Taste the world one bite and flight at a time.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 4500,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5245674.jpg?t=1613479100"
+    },
+    {
+      "title": "Delaware Girl Eats Blog",
+      "feed_url": "https://delawaregirleats.typepad.com/blog/atom.xml",
+      "website_url": "https://delawaregirleats.typepad.com/blog/",
+      "description": "Sharing regional, seasonal foods and preserving family food traditions. Delaware Girl Eats celebrates seasonal foods of the MidAtlantic, inspired by Italian family recipes.",
+      "followers": {
+        "facebook": 512,
+        "twitter": 135
+      },
+      "image_url": "https://i1.feedspot.com/5311794.jpg?t=1628774883"
+    }
+  ]
+}

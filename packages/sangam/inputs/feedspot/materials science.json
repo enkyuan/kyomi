@@ -1,0 +1,87 @@
+{
+  "category": "Materials Science",
+  "source_url": "https://rss.feedspot.com/materials_science_rss_feeds",
+  "feeds": [
+    {
+      "title": "AZoM.com - Materials and Engineering News",
+      "feed_url": "https://www.azom.com/syndication.axd?format=rss",
+      "website_url": "https://www.azom.com/",
+      "description": "The Latest Materials and Engineering News from AZoM - The A to Z of Materials science.",
+      "followers": {
+        "facebook": 56600,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4975942.jpg"
+    },
+    {
+      "title": "Nature Materials",
+      "feed_url": "https://www.nature.com/nmat.rss",
+      "website_url": "https://www.nature.com/nmat/",
+      "description": "Nature Materials journal covers a range of topics within materials science, from materials engineering and structural materials (metals, alloys, ceramics, composites) to organic and soft materials (glasses, colloids, liquid crystals, polymers).",
+      "followers": {
+        "facebook": 792300,
+        "twitter": 157700
+      },
+      "image_url": "https://i1.feedspot.com/4976070.jpg?t=1621951345"
+    },
+    {
+      "title": "Journal of Materials Chemistry Blog",
+      "feed_url": "https://blogs.rsc.org/jm/feed/",
+      "website_url": "https://blogs.rsc.org/jm/",
+      "description": "The Royal Society of Chemistry is the world's leading chemistry community, advancing excellence in the chemical sciences. With 49,000 members and a knowledge business that spans the globe, we are the UK's professional body for chemical scientists; a not-for-profit organisation with 170 years of history and an international vision for the future.",
+      "followers": {
+        "facebook": 220200,
+        "twitter": 156500
+      },
+      "image_url": "https://i1.feedspot.com/700953.jpg?t=1621951128"
+    },
+    {
+      "title": "MSE Supplies LLC Blog",
+      "feed_url": "https://www.msesupplies.com/blogs/news.atom",
+      "website_url": "https://www.msesupplies.com/blogs/news",
+      "description": "MSE Supplies is a U.S.-based leading supplier of high quality materials, equipment and materials characterization analytical services for research and production.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4975961.jpg?t=1621951131"
+    },
+    {
+      "title": "The Welding Land",
+      "feed_url": "https://www.weldingland.com.br/blog-feed.xml",
+      "website_url": "https://www.weldingland.com.br/",
+      "description": "A fusion between the academic and industrial world of welding technology. It covers curiosities of the traditional processes and the latest innovations of the sector, made possible by light and easy reading.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5098098.jpg?t=1621951244"
+    },
+    {
+      "title": "Michigan Tech - Materials Science and Engineering News",
+      "feed_url": "https://blogs.mtu.edu/materials/feed/",
+      "website_url": "https://blogs.mtu.edu/materials/",
+      "description": "A blog on Materials Science and Engineering News by Michigan Technological University.",
+      "followers": {
+        "facebook": 59000,
+        "twitter": 15200,
+        "instagram": 29500
+      },
+      "image_url": "https://i1.feedspot.com/4975950.jpg?t=1621951120"
+    },
+    {
+      "title": "Hydrogen Embrittlement & Materials Science - Milos Djukic",
+      "feed_url": "https://milosdjukichydrogen.wordpress.com/feed/",
+      "website_url": "https://milosdjukichydrogen.wordpress.com/",
+      "description": "Discuss matters related to materials science and hydrogen embrittlement mechanisms of metallic materials.",
+      "followers": {
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4976138.jpg?t=1621951149"
+    },
+    {
+      "title": "PowderTechnology",
+      "feed_url": "https://powdertechnology.info/feed/",
+      "website_url": "https://powdertechnology.info/news/",
+      "description": "PowderTechnology.info offers you informative, and entertaining articles to keep you informed and up-to-date in an ever faster-moving powder industry. Read Breaking News and the latest powder technology and material sciences developments. Stay updated with groundbreaking innovations, research insights, and industry trends shaping the future of materials. Your go-to source for timely and relevant updates in the dynamic world of powders and materials.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5740795.jpg?t=1703150526"
+    }
+  ]
+}

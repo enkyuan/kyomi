@@ -1,0 +1,14 @@
+{
+  "category": "ZeroHedge",
+  "source_url": "https://rss.feedspot.com/zerohedge_rss_feeds",
+  "feeds": [
+    {
+      "title": "ZeroHedge",
+      "feed_url": "https://cms.zerohedge.com/fullrss2.xml",
+      "website_url": "https://www.zerohedge.com/",
+      "description": "All latest articles from ZeroHedge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7319432.jpg?t=1746102381"
+    }
+  ]
+}

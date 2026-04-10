@@ -1,0 +1,84 @@
+{
+  "category": "Oklahoma Food",
+  "source_url": "https://rss.feedspot.com/oklahoma_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dishin & Dishes",
+      "feed_url": "https://www.dishinanddishes.com/feed/",
+      "website_url": "https://www.dishinanddishes.com/",
+      "description": "Dishin & Dishes features recipes, gardening, and all things food written by Oklahoma food blogger Katie Johnstonbaugh. Katie is the wife of Mr. Wonderful and a mom to 6 beautiful kids.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1700,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5122211.jpg?t=1630048961"
+    },
+    {
+      "title": "Insider's Guide \u00bb Food",
+      "feed_url": "https://www.visitokc.com/blog/all-posts/category/what-to:-taste/556dce69496800cb60731f89/rss/",
+      "website_url": "https://www.visitokc.com/blog/all-posts/category/what-to:-taste/556dce69496800cb60731f89/",
+      "description": "See what's happening around Oklahoma City or get a local's view on what makes our city a great vacation destination!",
+      "followers": {
+        "facebook": 81100,
+        "twitter": 32900
+      },
+      "image_url": "https://i1.feedspot.com/5177992.jpg?t=1597311093"
+    },
+    {
+      "title": "Oklahoma Magazine \u00bb Taste Corner",
+      "feed_url": "https://okmag.com/blog/category/taste/feed/",
+      "website_url": "https://okmag.com/blog/category/taste/",
+      "description": "Oklahoma Magazine is the state largest circulated monthly publication with the highest readership. Subscribe for food updates from Oklahoma Magazine.",
+      "followers": {
+        "facebook": 29900,
+        "twitter": 21900,
+        "instagram": 33200
+      },
+      "image_url": "https://i1.feedspot.com/5178283.jpg?t=1597311341"
+    },
+    {
+      "title": "Mom Spark \u00bb Food",
+      "feed_url": "https://momspark.net/category/food/feed/",
+      "website_url": "https://momspark.net/category/food/",
+      "description": "Mom Spark is a cool, hip blog for moms. It is a place to bond, discuss and share recipes, tips, videos, reviews, and fabulous giveaways!",
+      "followers": {
+        "facebook": 272600,
+        "twitter": 68500,
+        "instagram": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5178175.jpg?t=1597311665"
+    },
+    {
+      "title": "Steve's Food Blog \u00bb Oklahoma City",
+      "feed_url": "https://www.stevesfoodblog.com/blog/category/restaurants/oklahoma/oklahoma-city-ok/feed/",
+      "website_url": "https://www.stevesfoodblog.com/blog/category/restaurants/oklahoma/oklahoma-city-ok/",
+      "description": "Steve Food Blog, a site dedicated to publishing restaurant reviews, delving into different cuisines, analyzing local and regional food trends, and encouraging discussion of these and other subjects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5178046.jpg"
+    },
+    {
+      "title": "Take A Bite",
+      "feed_url": "https://www.takeabiteblog.com/blog?format=rss",
+      "website_url": "https://www.takeabiteblog.com/",
+      "description": "I am Annie Tucker. A baker, foodie, millennial and friend to all. Sharing bites of my life literally and figuratively.",
+      "followers": {
+        "facebook": 828,
+        "twitter": 728,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5178372.jpg?t=1597311761"
+    },
+    {
+      "title": "Stillwater Living Magazine \u00bb Food & Beverage",
+      "feed_url": "https://stillwaterliving.com/category/food-beverage/feed/",
+      "website_url": "https://stillwaterliving.com/category/food-beverage/",
+      "description": "Stillwater Living is Stillwater only 100% locally owned, full colour, a monthly magazine. We publish art, culture, life, people, places, events, and stories that showcase our hometown of Stillwater, Oklahoma.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5178986.jpg?t=1597312085"
+    }
+  ]
+}

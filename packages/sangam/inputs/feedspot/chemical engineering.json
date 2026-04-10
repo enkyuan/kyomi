@@ -1,0 +1,65 @@
+{
+  "category": "Chemical Engineering",
+  "source_url": "https://rss.feedspot.com/chemical_engineering_rss_feeds",
+  "feeds": [
+    {
+      "title": "Michigan Tech Blog \u00bb Chemical Engineering News",
+      "feed_url": "https://blogs.mtu.edu/chemical/feed/",
+      "website_url": "https://blogs.mtu.edu/chemical/",
+      "description": "Michigan Tech Blogs",
+      "followers": {
+        "facebook": 192
+      },
+      "image_url": "https://i1.feedspot.com/7312570.jpg?t=1715251677"
+    },
+    {
+      "title": "Chemploy Blog",
+      "feed_url": "https://chemploy.nl/feed/",
+      "website_url": "https://chemploy.nl/blog/",
+      "description": "Chemistry in Employment",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7312569.jpg?t=1715252222"
+    },
+    {
+      "title": "The Chemical Engineer",
+      "feed_url": "https://www.thechemicalengineer.com/rss",
+      "website_url": "https://www.thechemicalengineer.com/news/",
+      "description": "The Chemical Engineer is the member magazine of the Institution of Chemical Engineers, the hub for chemical, biochemical and process engineering professionals worldwide.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4993170.jpg?t=1645700172"
+    },
+    {
+      "title": "Chemical Engineering World Blog",
+      "feed_url": "http://chem-eng.blogspot.com/feeds/posts/default",
+      "website_url": "http://chem-eng.blogspot.com/",
+      "description": "Get exposed to real Chemical Engineering practice. Learn something about Chemical Engineering that is not inside your textbook. Learn from other Chemical Engineers' hands-on experience.",
+      "followers": {
+        "facebook": 46500
+      },
+      "image_url": "https://i1.feedspot.com/3482942.jpg?t=1622119382"
+    },
+    {
+      "title": "Chemineers IITK",
+      "feed_url": "https://chemineeriitk.wordpress.com/feed/",
+      "website_url": "https://chemineeriitk.wordpress.com/",
+      "description": "Chemical Engineering Departmental Society at IIT Kanpur",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/7312589.jpg?t=1715253602"
+    },
+    {
+      "title": "The ChemEng Student Blog",
+      "feed_url": "https://www.chemengstudent.com/blog/feed/",
+      "website_url": "https://www.chemengstudent.com/blog/",
+      "description": "Chemical Engineering Online Course",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/7312568.jpg?t=1715251667"
+    }
+  ]
+}

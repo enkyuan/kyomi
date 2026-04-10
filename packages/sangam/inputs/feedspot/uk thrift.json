@@ -1,0 +1,50 @@
+{
+  "category": "UK Thrift",
+  "source_url": "https://rss.feedspot.com/uk_thrift_rss_feeds",
+  "feeds": [
+    {
+      "title": "The-Thrift",
+      "feed_url": "https://the-thrift.co.uk/feed/",
+      "website_url": "https://the-thrift.co.uk/",
+      "description": "Welcome to The Thrift for hints, tips, news and reviews from the world of ethical shopping. Barnardo's has over 720 stores across the UK where you can find all sorts of bargains, donate goods or volunteer.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/4835192.jpg?t=1611056547"
+    },
+    {
+      "title": "Gypsy Soul",
+      "feed_url": "http://www.gypsysoul.co.uk/category/thrift/feed/",
+      "website_url": "https://www.gypsysoul.co.uk/category/thrift/",
+      "description": "A selection of posts relating to thrift including thrifty living, cutting back on food costs, shopping at charity shops and saving money at home.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4913046.jpg?t=1620299134"
+    },
+    {
+      "title": "Thread and Thrift",
+      "feed_url": "http://threadandthrift.blogspot.com/feeds/posts/default",
+      "website_url": "http://threadandthrift.blogspot.com/",
+      "description": "Thread and Thrift is the personal blog of British textile artist Mandy\u202fPattullo, documenting her creative practice in slow\u2011stitched patchworks, reclaimed textiles, workshops, and reflective diary-like posts about her art and life in Northumberland",
+      "followers": {
+        "facebook": 12500
+      },
+      "image_url": "https://i1.feedspot.com/1235189.jpg?t=1753438328"
+    },
+    {
+      "title": "Eco Thrifty Living Blog",
+      "feed_url": "https://ecothriftyliving.com/feed",
+      "website_url": "https://ecothriftyliving.com/blog",
+      "description": "Hi, my name is Zo\u00eb Morrison and I am the author of Eco Thrifty Living. I have learned so much about being eco-friendly, saving money and setting healthy limits when it comes to both of those activities!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 6000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4700171.jpg?t=1611055811"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "category": "Philadelphia Vegan",
+  "source_url": "https://rss.feedspot.com/philadelphia_vegan_rss_feeds",
+  "feeds": [
+    {
+      "title": "P.S. & Co. Blog",
+      "feed_url": "https://psandco.com/blogs/news.atom",
+      "website_url": "https://psandco.com/blogs/news",
+      "description": "Uncover P.S. & Co's latest culinary creations and mouthwatering recipes in their blog. Indulge your senses and tantalize your taste buds with delicious Vegan delights. P.S. & Co.\u2122 is a vegan restaurant that provides 100% organic, plant-based, gluten-free, kosher parve, scratch-made, nutrient-rich food.",
+      "followers": {
+        "facebook": 9800
+      },
+      "image_url": "https://i1.feedspot.com/7273276.jpg?t=1710395836"
+    },
+    {
+      "title": "Philly Grub \u00bb Vegan",
+      "feed_url": "https://phillygrub.blog/category/vegan/feed/",
+      "website_url": "https://phillygrub.blog/category/vegan/",
+      "description": "Philly Grub is a Philadelphia Food Blog founded by Marilyn Johnson and serves a local go-to destination for the latest food news, tantalizing recommendations, and thought-provoking commentary. Join Marilyn on an epicurean journey through the region's dynamic dining scene, where every bite tells a story, and every sip unveils a new adventure.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 19900,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/7273277.jpg?t=1710395977"
+    },
+    {
+      "title": "PhillyVoice \u00bb Vegan",
+      "feed_url": "https://www.phillyvoice.com/feed/tag/vegan/",
+      "website_url": "https://www.phillyvoice.com/tags/vegan/",
+      "description": "Delve into a treasure trove of tips, recipes, and insights to nourish both body and soul. Whether you're a seasoned vegan or just dipping your toes into cruelty-free waters, you'll find inspiration aplenty as the PhillyVoice team explores the delicious flavors, ethical choices, and vibrant community that define the vegan experience.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 52500,
+        "instagram": 31300
+      },
+      "image_url": "https://i1.feedspot.com/7273275.jpg?t=1710399656"
+    },
+    {
+      "title": "Vegan Rescue",
+      "feed_url": "https://veganrescue.com/feed/",
+      "website_url": "https://veganrescue.com/",
+      "description": "Explore a splendid collection of Vegan Recipes a variety of Raw, GF, Vegan etc. Vegan since 2011, the author of Vegan Rescue takes much pleasure in creating, reinventing (veganizing), and indulging in vegan deliciousness with her husband and children.",
+      "followers": {
+        "facebook": 77,
+        "twitter": 60,
+        "instagram": 366
+      },
+      "image_url": "https://i1.feedspot.com/7273291.jpg?t=1710396606"
+    },
+    {
+      "title": "HipCityVeg",
+      "feed_url": "https://hipcityveg.com/feed/",
+      "website_url": "https://hipcityveg.com/articles/",
+      "description": "Dive into a world of plant-powered goodness and discover the boundless joys of a vegan lifestyle. These articles inform and inspire readers to try and join a healthier, more conscious community. HipCityVeg is a 100% plant-based, fast-casual restaurant serving American favorites like juicy burgers, crispy chick'n, and creamy shakes.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/7273278.jpg?t=1710395940"
+    }
+  ]
+}

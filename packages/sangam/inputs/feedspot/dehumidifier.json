@@ -1,0 +1,56 @@
+{
+  "category": "Dehumidifier",
+  "source_url": "https://rss.feedspot.com/dehumidifier_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eva Dry Blog",
+      "feed_url": "https://www.eva-dry.com/feed/",
+      "website_url": "https://www.eva-dry.com/blog/",
+      "description": "Eva-Dry products are designed and manufactured to the highest quality and consumer standards. We are a leading manufacturer of compact dehumidification systems and offer our retail customers the best value combination of quality, affordable pricing, and dedicated customer service. Read Blog, news, and events from Eva-Dry, maker of portable, compact dehumidifiers that use silica desiccant for powerful and effective moisture removal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470690.jpg?t=1669178790"
+    },
+    {
+      "title": "Innovative Dehumidifier Blog",
+      "feed_url": "https://www.innovativedehumidifiers.com/feed/",
+      "website_url": "https://www.innovativedehumidifiers.com/blog/",
+      "description": "The IDS team is dedicated to helping solve issues associated with high indoor humidity by providing clients and communities with creative solutions. Working directly with customers to build long-lasting partnerships throughout the industry by offering hands-on exceptional customer service. Read all about topics related to humidity, efficient dehumidification, and more on the Innovative Dehumidifiers blog.",
+      "followers": {
+        "facebook": 501
+      },
+      "image_url": "https://i1.feedspot.com/5470689.jpg?t=1669178631"
+    },
+    {
+      "title": "Quest Climate Blog",
+      "feed_url": "https://www.questclimate.com/blog/feed/",
+      "website_url": "https://www.questclimate.com/blog/",
+      "description": "Quest humidity control products come in a wide array of sizes and options, allowing you to customize and design your perfect environment for your industry's specific needs. In the blogs get insights on how humidity affects indoor air quality, food, and material production from the dehumidification experts at Quest.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470692.jpg?t=1669178866"
+    },
+    {
+      "title": "Air Solutions Blog",
+      "feed_url": "https://www.air-solutions.co.nz/news?format=rss",
+      "website_url": "https://www.air-solutions.co.nz/news",
+      "description": "Air Solutions are a New Zealand company which offer a range of commercial and industrial air treatment services. We specialise in the selection and supply of desiccant dehumidifiers and Steril-Aire UVC emitters. We have a wealth of experience across a diverse range of industries and sectors in New Zealand and overseas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470691.jpg?t=1669178930"
+    },
+    {
+      "title": "Origin Dehumidifiers Blog",
+      "feed_url": "https://www.origincorp.com/blogs/dehumidifiers.atom",
+      "website_url": "https://www.origincorp.com/blogs/dehumidifiers/",
+      "description": "Origin Dehumidifiers - India's Most Trusted Portable Dehumidifier Brand. Since 1998. Origin is a market leader in portable dehumidifiers. We represent the world's leading dehumidifier brands from Germany, Singapore, and Italy. We provide superior control against excess moisture for various industrial and commercial applications. Read our blogs to find more information about dehumidifiers and about the industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470693.jpg?t=1669178710"
+    },
+    {
+      "title": "Dehumidifier Corporation of America Blog",
+      "feed_url": "https://dehumidifiercorp.com/blog/feed/",
+      "website_url": "https://dehumidifiercorp.com/blog/",
+      "description": "Dehumidifier Corporation of America's mission is to solve our customer's dehumidification problems while offering the highest quality products at a competitive price employing the latest proven technology and being built to the highest standards by American craftsmen. The blogs of Dehumidifier Corporation of America are a place where we offer a range of blogs touching on different topics and products dealing with dehumidifiers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470688.jpg?t=1669178609"
+    }
+  ]
+}

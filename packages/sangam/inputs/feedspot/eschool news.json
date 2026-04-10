@@ -1,0 +1,95 @@
+{
+  "category": "eSchool News",
+  "source_url": "https://rss.feedspot.com/eschoolnews_rss_feeds",
+  "feeds": [
+    {
+      "title": "eSchool News \u00bb District Management",
+      "feed_url": "https://www.eschoolnews.com/district-management/feed/",
+      "website_url": "https://www.eschoolnews.com/district-management/",
+      "description": "eSchool News articles and information on District Management.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000
+      },
+      "image_url": "https://i1.feedspot.com/7846116.jpg?t=1736767781"
+    },
+    {
+      "title": "eSchool News \u00bb STEAM",
+      "feed_url": "https://www.eschoolnews.com/steam/feed/",
+      "website_url": "https://www.eschoolnews.com/steam/",
+      "description": "Stay updated with the latest STEAM education news, information, and technology trends at eSchool News. Subscribe now for weekly updates.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000
+      },
+      "image_url": "https://i1.feedspot.com/7846119.jpg?t=1736767765"
+    },
+    {
+      "title": "eSchool News \u00bb SEL",
+      "feed_url": "https://www.eschoolnews.com/sel/feed/",
+      "website_url": "https://www.eschoolnews.com/sel/",
+      "description": "Learn about Social and Emotional Learning (SEL) and how it can promote students' social, emotional, and academic learning. Read the helpful articles and news here.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000
+      },
+      "image_url": "https://i1.feedspot.com/7846117.jpg?t=1736767744"
+    },
+    {
+      "title": "eSchool News \u00bb Special Reports",
+      "feed_url": "https://www.eschoolnews.com/digital-issues/feed/",
+      "website_url": "https://www.eschoolnews.com/digital-issues/",
+      "description": "Special Reports from eSchool News.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000
+      },
+      "image_url": "https://i1.feedspot.com/7846115.jpg?t=1736767824"
+    },
+    {
+      "title": "eSchool News \u00bb Webinars",
+      "feed_url": "https://www.eschoolnews.com/webinars/feed/",
+      "website_url": "https://www.eschoolnews.com/webinars/",
+      "description": "Webinars from eSchool News.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000
+      },
+      "image_url": "https://i1.feedspot.com/7846120.jpg?t=1736767817"
+    },
+    {
+      "title": "eSchool News \u00bb Resource Library",
+      "feed_url": "https://www.eschoolnews.com/resource-library/feed/",
+      "website_url": "https://www.eschoolnews.com/resource-library/",
+      "description": "Resource Library from eSchool News.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000
+      },
+      "image_url": "https://i1.feedspot.com/7846118.jpg?t=1736767819"
+    },
+    {
+      "title": "eSchool News \u00bb Top News",
+      "feed_url": "https://www.eschoolnews.com/top-news/feed/",
+      "website_url": "https://www.eschoolnews.com/top-news/",
+      "description": "eSchool News articles and information on Top News.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000,
+        "instagram": 58
+      },
+      "image_url": "https://i1.feedspot.com/7846114.jpg?t=1736767792"
+    },
+    {
+      "title": "eSchool News \u00bb Education Resource Centers",
+      "feed_url": "https://www.eschoolnews.com/ercs/feed/",
+      "website_url": "https://www.eschoolnews.com/ercs/",
+      "description": "Education Resource Centers from eSchool News.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 118000
+      },
+      "image_url": "https://i1.feedspot.com/7846113.jpg?t=1736767822"
+    }
+  ]
+}

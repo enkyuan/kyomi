@@ -1,0 +1,50 @@
+{
+  "category": "Little League World Series",
+  "source_url": "https://rss.feedspot.com/little_league_world_series_rss_feeds",
+  "feeds": [
+    {
+      "title": "Little League News",
+      "feed_url": "https://www.littleleague.org/feed/",
+      "website_url": "https://www.littleleague.org/news/",
+      "description": "Founded in 1939, Little League Baseball and Softball is the world's largest organized youth sports program, with millions of players and more than one million adult volunteers in every U.S. state and more than 80 other countries. The basic goal remains the same, to give the children of the world a game that provides fundamental principles they can use later in life to become good citizens.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 109400,
+        "instagram": 378500
+      },
+      "image_url": "https://i1.feedspot.com/4801697.jpg?t=1610029904"
+    },
+    {
+      "title": "COMBA Blog",
+      "feed_url": "https://www.comba.ca/blog-feed.xml",
+      "website_url": "https://www.comba.ca/blog",
+      "description": "Keep up to date with minor baseball in Kelowna on COMBA Blog! Central Okanagan Minor Baseball Association is committed to promoting and developing the community of baseball players, parents, coaches, and volunteers, pursuing athletic excellence and personal development of youth in Central Okanagan.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 507
+      },
+      "image_url": "https://i1.feedspot.com/5441168.jpg?t=1663052787"
+    },
+    {
+      "title": "Novato Little League North",
+      "feed_url": "https://www.novatonorth.com/feed/",
+      "website_url": "https://www.novatonorth.com/news-and-events/",
+      "description": "The Breaking Ball Blog gives you Novato Little League North News, events, guides & much more! Novato Little League North provides the love of baseball to Northern Novato Families by providing articles like ways you're causing your child sports-induced sex, starting your next season the right way, coaching your own child, and many others.",
+      "followers": {
+        "facebook": 557
+      },
+      "image_url": "https://i1.feedspot.com/5441167.jpg?t=1663053168"
+    },
+    {
+      "title": "WPRI 12 \u00bb Little League World Series",
+      "feed_url": "https://www.wpri.com/sports/little-league-world-series/",
+      "website_url": "https://www.wpri.com/sports/little-league-world-series/",
+      "description": "The latest news and updates in Little League World Series are brought to you by the team at WPRI.com. WPRI 12 is known for broadcasting 12 News and delivering quality television on-air and digital media on WPRI.com. We provide local news, network and syndicated entertainment, and local programming to the viewers of the Providence, R.I./New Bedford, Mass., television market.",
+      "followers": {
+        "facebook": 320800,
+        "twitter": 132200
+      },
+      "image_url": "https://i1.feedspot.com/5446692.jpg?t=1663305572"
+    }
+  ]
+}

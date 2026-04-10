@@ -1,0 +1,642 @@
+{
+  "category": "Dotnet",
+  "source_url": "https://rss.feedspot.com/dotnet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Microsoft .NET DevBlogs",
+      "feed_url": "https://devblogs.microsoft.com/dotnet/feed/",
+      "website_url": "https://devblogs.microsoft.com/dotnet/",
+      "description": "Get the latest information, insights, announcements, and news on .NET from Microsoft.",
+      "followers": {
+        "facebook": 72000,
+        "twitter": 327900
+      },
+      "image_url": "https://i1.feedspot.com/5272175.jpg?t=1619078541"
+    },
+    {
+      "title": "Rick Strahl's Web Log",
+      "feed_url": "https://feeds.feedburner.com/RickStrahl",
+      "website_url": "https://weblog.west-wind.com/",
+      "description": "Home of Rick Strahl's company site. Find products, tools and development service, read development blogs and white papers about Web and Service development on the Microsoft and open Web stack.",
+      "followers": {
+        "twitter": 18400
+      },
+      "image_url": "https://i1.feedspot.com/112217.jpg?t=1617106135"
+    },
+    {
+      "title": ".NET - Telerik Blogs",
+      "feed_url": "https://feeds.telerik.com/blogs/web",
+      "website_url": "https://www.telerik.com/blogs/web",
+      "description": "Telerik: Leading UI controls and Reporting for .NET (ASP.NET AJAX, MVC, Core, Xamarin, WPF), Kendo UI for HTML5 and Angular development, and NativeScript.",
+      "followers": {
+        "facebook": 158100,
+        "twitter": 49100
+      },
+      "image_url": "https://i1.feedspot.com/4649752.jpg?t=1617106138"
+    },
+    {
+      "title": "Dotnetkicks News",
+      "feed_url": "https://dotnetkicks.com/feeds/rss",
+      "website_url": "https://dotnetkicks.com/",
+      "description": "DotNetKicks is a community based news site edited by members specializing in .NET development techniques, technologies and tools.",
+      "followers": {
+        "facebook": 403,
+        "twitter": 16100
+      },
+      "image_url": "https://i1.feedspot.com/4225573.jpg"
+    },
+    {
+      "title": "JetBrains \u00bb Dotnet",
+      "feed_url": "https://blog.jetbrains.com/dotnet/feed/",
+      "website_url": "https://blog.jetbrains.com/dotnet/",
+      "description": "An essential productivity kit for .NET developers, with How-To's, new releases, webinars, events, and .NET Annotation. JetBrains is a cutting-edge software vendor specializing in the creation of intelligent development tools.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100,
+        "instagram": 112700
+      },
+      "image_url": "https://i1.feedspot.com/5272176.jpg?t=1627971652"
+    },
+    {
+      "title": "Dave Brock",
+      "feed_url": "https://feeds.feedburner.com/dave-brock",
+      "website_url": "https://www.daveabrock.com/",
+      "description": "Software engineer specializing in Microsoft and JavaScript technologies. I like to party with C#, .NET Core, and Azure.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5206029.jpg?t=1602741603"
+    },
+    {
+      "title": "DotNetTips Blog",
+      "feed_url": "https://dotnettips.wordpress.com/feed/",
+      "website_url": "https://dotnettips.wordpress.com/",
+      "description": "David McCarter is a C# Microsoft MVP Developer/ Architect/ Consultant & Professional Code Reviewer in San Diego, California. David is the creator of dotNetTips.com that has been helping programmers since 1994. David has written for programming magazines and has published many books and his latest self-published book is David McCarter's .NET Coding Standards.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4650164.jpg"
+    },
+    {
+      "title": "ASPSnippets",
+      "feed_url": "https://www.aspsnippets.com/RSS.ashx",
+      "website_url": "https://www.aspsnippets.com/articles/all",
+      "description": "Covers ASP.Net code snippets, tutorials, articles, technical stuff, tips, and solutions.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 888
+      },
+      "image_url": "https://i1.feedspot.com/5361533.jpg?t=1641817039"
+    },
+    {
+      "title": "Andrew Lock",
+      "feed_url": "https://andrewlock.net/rss.xml",
+      "website_url": "https://andrewlock.net/",
+      "description": "Andrew Lock is Software developer, C# lover, blogger, focused on ASPNET. Author or ASP. NET Core in Action.",
+      "followers": {
+        "facebook": 994,
+        "twitter": 15300
+      },
+      "image_url": "https://i1.feedspot.com/4649855.jpg?t=1617106171"
+    },
+    {
+      "title": "DiscountASP.NET",
+      "feed_url": "https://blog.discountasp.net/feed/",
+      "website_url": "https://blog.discountasp.net/",
+      "description": "DiscountASP.NET, a Microsoft Gold Certified Partner, is a recognized leader in advanced Microsoft Windows web hosting services. Offering: ASP.NET 4.5, MVC & Silverlight ready, SQL 2008 R2, SQL 2012, and Team Foundation Server 2012 Hosting.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4649760.jpg"
+    },
+    {
+      "title": "Sahan Serasinghe",
+      "feed_url": "https://sahansera.dev/rss.xml",
+      "website_url": "https://sahansera.dev/",
+      "description": "Howdy, I'm Sahan Serasinghe, a Software Consultant based in Adelaide, Australia. I mainly work with .NET technologies at Telstra Purple. I'm currently pursuing my Master of Data Science degree with University of Illinois Urbana-Champaign, USA. This space is my personal blog, where I share my thoughts and experiments with tech.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5249437.jpg?t=1614347107"
+    },
+    {
+      "title": "Network Programming in .NET",
+      "feed_url": "https://blog.dotnetframework.org/feed/",
+      "website_url": "https://blog.dotnetframework.org/",
+      "description": "A blog about Visual Basic.NET.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4650165.jpg?t=1617106986"
+    },
+    {
+      "title": "Application Modernization Blog",
+      "feed_url": "https://www.mobilize.net/blog/rss.xml",
+      "website_url": "https://www.mobilize.net/blog",
+      "description": "Mobilize.Net is the fastest way to bring VB apps to .NET, mobile, cloud, or Web.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 707
+      },
+      "image_url": "https://i1.feedspot.com/4649840.jpg?t=1617106990"
+    },
+    {
+      "title": "Morning Dew",
+      "feed_url": "https://www.alvinashcraft.com/feed/",
+      "website_url": "https://www.alvinashcraft.com/",
+      "description": "Alvin Ashcraft's blog. Alvin is a Microsoft MVP and a developer with over 19 years of experience with Microsoft-related technologies. The blog is updated daily with links to articles that are relevant to .NET developers.",
+      "followers": {
+        "facebook": 993,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4649639.jpg?t=1617107007"
+    },
+    {
+      "title": "ASP.NET Hacker",
+      "feed_url": "http://asp.net-hacker.rocks/rss.xml",
+      "website_url": "http://asp.net-hacker.rocks/",
+      "description": "This blog contains technical articles about web development with ASP.NET and some more things about .NET and related technologies. J\u00fcrgen Gutsch is a Software engineer, .NET junkie, addicted to web and software development, clean coder, Microsoft MVP, author, and blogger.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4649894.jpg?t=1617107003"
+    },
+    {
+      "title": "Dotnet by Example",
+      "feed_url": "https://localjoost.github.io/feed.xml",
+      "website_url": "https://localjoost.github.io/",
+      "description": "Code samples and how-to's in the Microsoft stack, currently concentrating on Mixed Reality. Joost van Schaik is a Senior Mixed Reality Software Architect, Rogue R&D hacker.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/512993.jpg?t=1617107072"
+    },
+    {
+      "title": "Jaliya's Blog",
+      "feed_url": "https://jaliyaudagedara.blogspot.com/feeds/posts/default",
+      "website_url": "https://jaliyaudagedara.blogspot.com/",
+      "description": "In this blog, you will find articles on .NET, .NET Core, ASP.NET, ASP.NET Core, Visual Studio, and more.",
+      "followers": {
+        "twitter": 246
+      },
+      "image_url": "https://i1.feedspot.com/5235773.jpg?t=1610542327"
+    },
+    {
+      "title": "Damienbod Software Engineering",
+      "feed_url": "https://damienbod.com/feed/",
+      "website_url": "https://damienbod.com/",
+      "description": "Damienbod an engineer, Microsoft MVP living in Switzerland interested in web development. His favorite technologies are ASP.NET, Javascript, Angular, Typescript, MS SQL Server, SQLite and Elasticsearch.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4649862.jpg?t=1617106196"
+    },
+    {
+      "title": "Nikos Kantzelis - DOT NET RULES",
+      "feed_url": "https://dotnetstories.wordpress.com/feed/",
+      "website_url": "https://dotnetstories.wordpress.com/",
+      "description": "Nikos Kantzelis is MicrosoftCertified Trainer,Software Engineer,.Net Developer,passionate about .Net communities,love to blog about Software technologies.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4649718.jpg?t=1629963078"
+    },
+    {
+      "title": "Allen Conway's .NET Weblog",
+      "feed_url": "http://www.allenconway.net/feeds/posts/default?alt=rss",
+      "website_url": "http://www.allenconway.net/",
+      "description": "Allen Conway is a Magenic Lead Consultant that is an advocate of Microsoft .NET technologies and the Microsoft platform both professionally and personally.",
+      "followers": {
+        "twitter": 501
+      },
+      "image_url": "https://i1.feedspot.com/4650217.jpg?t=1617107046"
+    },
+    {
+      "title": "Neel Bhatt Establishing a Polyglot vision",
+      "feed_url": "https://neelbhatt.com/feed/",
+      "website_url": "https://neelbhatt.com/",
+      "description": "I'm a Developer with around 5 years experience of real-world software development in different domains. I love making code in Javascript, jQuery as well as code in C# in web forms, MVC and Windows Applications as well. I love challenges and I am always ready to take new one. I have worked with SQL, LINQ , Entitiy Framework. I have experience of working with Agile.",
+      "followers": {
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/4840432.jpg?t=1620107353"
+    },
+    {
+      "title": "AWS Blog \u00bb DotNet",
+      "feed_url": "https://aws.amazon.com/blogs/dotnet/feed/",
+      "website_url": "https://aws.amazon.com/blogs/dotnet/",
+      "description": "Amazon Web Services (AWS) delivers a set of services that together form a reliable, scalable, and inexpensive computing platform 'in the cloud'.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000,
+        "instagram": 673000
+      },
+      "image_url": "https://pbs.twimg.com/profile_images/1887523429068242944/MdPCt0aQ.png"
+    },
+    {
+      "title": "Milan Jovanovi\u0107 Blog",
+      "feed_url": "https://www.milanjovanovic.tech/rss/feed.xml",
+      "website_url": "https://www.milanjovanovic.tech/blog/",
+      "description": "The .NET Weekly is a newsletter that delivers 1 practical tip on .NET & software architecture that you can easily implement.",
+      "followers": {
+        "twitter": 41500
+      },
+      "image_url": "https://i1.feedspot.com/8538546.jpg?t=1753091686"
+    },
+    {
+      "title": "ByteHide \u00bb Dotnet",
+      "feed_url": "https://www.bytehide.com/blog/category/dotnet/feed",
+      "website_url": "https://www.bytehide.com/blog/category/dotnet/",
+      "description": "The all-in-one, developer-first platform that enables build secure applications in a fast and automated way.",
+      "followers": {
+        "facebook": 26,
+        "instagram": 796
+      },
+      "image_url": "https://i1.feedspot.com/8538544.jpg?t=1753091678"
+    },
+    {
+      "title": "Dotnet Blog",
+      "feed_url": "https://www.dotnet.ie/blog-posts/rss.xml",
+      "website_url": "https://www.dotnet.ie/blog-posts/",
+      "description": "See the latest blogs from Dotnet.ie",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8538543.jpg?t=1753091670"
+    },
+    {
+      "title": ".NET Ramblings",
+      "feed_url": "https://www.dotnetramblings.com/index.xml",
+      "website_url": "https://www.dotnetramblings.com/",
+      "description": "Stay updated with the latest news and insights on .NET, Azure, AWS, Docker, DevOps, and GenAI. Our website is your one-stop destination for all things tech, offering comprehensive and up-to-date information to help you stay ahead in the technology world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8538545.jpg?t=1753091682"
+    },
+    {
+      "title": "Scott Hanselman's Blog",
+      "feed_url": "http://feeds.hanselman.com/ScottHanselman",
+      "website_url": "https://www.hanselman.com/blog/",
+      "description": "Scott Hanselman is a programmer, teacher, speaker, technologist, podcaster, writer, diversity advocate and more.",
+      "followers": {
+        "twitter": 325000,
+        "instagram": 24200
+      },
+      "image_url": "https://i1.feedspot.com/4649252.jpg?t=1658994847"
+    },
+    {
+      "title": "Thomas Levesque's .NET blog",
+      "feed_url": "https://thomaslevesque.com/index.xml",
+      "website_url": "https://thomaslevesque.com/",
+      "description": "Thomas Levesque's .NET blog shares Tips, tricks and thoughts about .NET development.",
+      "followers": {
+        "twitter": 645
+      },
+      "image_url": "https://i1.feedspot.com/4651319.jpg?t=1617106947"
+    },
+    {
+      "title": "Mikesdotnetting News Feed",
+      "feed_url": "https://www.mikesdotnetting.com/feed",
+      "website_url": "https://www.mikesdotnetting.com/",
+      "description": "A collection of articles and tutorials on web development with ASP.NET by Mike Brind.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4649930.jpg?t=1617106187"
+    },
+    {
+      "title": "Swimburger.net",
+      "feed_url": "https://swimburger.net/atom.xml",
+      "website_url": "https://swimburger.net/blog",
+      "description": "Swimburger.net is a blog about .NET, C#, Web Development, Azure, Umbraco, and more authored by Niels Swimberghe. Niels Swimberghe is a Belgian Full Stack Developer solving problems and delivering value to customers using .NET technologies for back-end systems, and modern JavaScript technologies for the front-end",
+      "followers": {
+        "facebook": 88,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5255731.jpg?t=1615373685"
+    },
+    {
+      "title": "BestDotnetTraining Blog",
+      "feed_url": "http://blog.bestdotnettraining.com/feed/",
+      "website_url": "http://blog.bestdotnettraining.com/",
+      "description": "Get Asp net online training and video tutorials with project for beginners to advanced level by under the guidance of Microsoft Expert. Satisfaction Guaranteed",
+      "followers": {
+        "facebook": 698,
+        "twitter": 288
+      },
+      "image_url": "https://i1.feedspot.com/4649703.jpg?t=1617106148"
+    },
+    {
+      "title": "Muhammad Rehan Saeed",
+      "feed_url": "https://rehansaeed.com/feed/",
+      "website_url": "https://rehansaeed.com/",
+      "description": "Rehan is a professional Software Developer and Microsoft MVP. If it's written in C# or .NET, Rehan has probably written something using it in anger.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4650591.jpg?t=1629962974"
+    },
+    {
+      "title": "CodeClimber",
+      "feed_url": "https://codeclimber.net.nz/rss",
+      "website_url": "https://codeclimber.net.nz/",
+      "description": "Climbing the cliffs of web development, on .NET.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4842572.jpg?t=1617107360"
+    },
+    {
+      "title": ".NET Nakama",
+      "feed_url": "https://www.dotnetnakama.com/feed.xml",
+      "website_url": "https://www.dotnetnakama.com/",
+      "description": ".NET Nakama is a blog about .NET technologies and the development of Application Programming Interfaces (APIs) using mainly .NET Core.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5263688.jpg?t=1617273183"
+    },
+    {
+      "title": "Nicholas Blumhardt",
+      "feed_url": "https://nblumhardt.com/feed/",
+      "website_url": "https://nblumhardt.com/",
+      "description": "This blog is all about .NET.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4649931.jpg?t=1617106994"
+    },
+    {
+      "title": "Ankit Sharma's Blog",
+      "feed_url": "https://ankitsharmablogs.com/feed/",
+      "website_url": "https://ankitsharmablogs.com/",
+      "description": "Ankit Sharma blogs about the ASP.NET Core , Angular, Quantum Computers and other Microsoft technologies.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4902149.jpg?t=1617107330"
+    },
+    {
+      "title": "Maarten Balliauw Blog",
+      "feed_url": "https://blog.maartenballiauw.be/feed.xml",
+      "website_url": "https://blog.maartenballiauw.be/",
+      "description": "Maarten Balliauw loves building web and cloud apps. His main interests are in ASP.NET MVC, C#, Microsoft Azure, PHP and application performance. He co-founded MyGet and is Developer Advocate at JetBrains.",
+      "followers": {
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4571491.jpg"
+    },
+    {
+      "title": "Manuel Meyer",
+      "feed_url": "https://www.manuelmeyer.net/feed/?x=1",
+      "website_url": "https://www.manuelmeyer.net/",
+      "description": "Manuel Meyer is a .NET Senior Consultant and Trainer working for the Swiss IT service provider Trivadis AG. We provide a broad range of services in Application Development, Application Performance Management, Business Communication, Business Intelligence, Managed Services, Security and Training.",
+      "followers": {
+        "twitter": 947
+      },
+      "image_url": "https://i1.feedspot.com/4649924.jpg?t=1617107016"
+    },
+    {
+      "title": "The Morning Brew",
+      "feed_url": "https://feeds.feedburner.com/ReflectivePerspective",
+      "website_url": "https://blog.cwa.me.uk/",
+      "description": "The Morning Brew is a daily .NET software development link blog published by Chris Alcock a software developer from the north west of England.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/79963.jpg?t=1617106152"
+    },
+    {
+      "title": "Micha\u0142 Jankowski",
+      "feed_url": "https://www.jankowskimichal.pl/en/feed/",
+      "website_url": "https://www.jankowskimichal.pl/en/",
+      "description": "Let's go invent tomorrow instead of worrying about what happened yesterday.",
+      "followers": {
+        "facebook": 142,
+        "twitter": 425
+      },
+      "image_url": "https://i1.feedspot.com/4820955.jpg?t=1617107055"
+    },
+    {
+      "title": "Yi Zhang Blog",
+      "feed_url": "https://yizhang82.dev/feed",
+      "website_url": "https://yizhang82.dev/",
+      "description": "Yi Zhang is a Microsoft developer working on the CLR (Common Language Runtime), the virtual machine that powers Microsoft .NET framework, including full .NET Framework, CoreCLR, .NET Native, and CoreRT.",
+      "followers": {
+        "twitter": 194
+      },
+      "image_url": "https://i1.feedspot.com/4650536.jpg?t=1617107059"
+    },
+    {
+      "title": "{coding}Sight - .NET",
+      "feed_url": "https://codingsight.com/category/net/feed/",
+      "website_url": "https://codingsight.com/category/net/",
+      "description": "codingsight is the learning platform for .NET developers, SQL Server DBAs, programmers, web specialists, and all who is involved in a software development",
+      "followers": {
+        "facebook": 547,
+        "twitter": 910
+      },
+      "image_url": "https://i1.feedspot.com/4649281.jpg?t=1617106174"
+    },
+    {
+      "title": "OdeToCode by K. Scott Allen",
+      "feed_url": "https://feeds.feedburner.com/OdeToCode",
+      "website_url": "https://odetocode.com/",
+      "description": "Founder of Ode to Code and CTO of Medisolv. Teacher, writer, speaker, podcaster.",
+      "followers": {
+        "twitter": 37600
+      },
+      "image_url": "https://i1.feedspot.com/39551.jpg?t=1617106142"
+    },
+    {
+      "title": "dotnet catch",
+      "feed_url": "https://www.dotnetcatch.com/feed/",
+      "website_url": "https://www.dotnetcatch.com/",
+      "description": ".NET and software development learnings, tips and rants",
+      "followers": {
+        "twitter": 419
+      },
+      "image_url": "https://i1.feedspot.com/4649696.jpg?t=1617107101"
+    },
+    {
+      "title": "CodingBlast | Adventures in web development",
+      "feed_url": "https://codingblast.com/feed/",
+      "website_url": "https://codingblast.com/",
+      "description": "The main theme of this blog is ASP.NET Core. There will be regular posts about old and new features of ASP.NET Core, upcoming features, news from the ASP.NET team, sample snippets, projects and also smaller real-world projects.",
+      "followers": {
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/4906174.jpg?t=1617107336"
+    },
+    {
+      "title": "Talking Dotnet",
+      "feed_url": "https://www.talkingdotnet.com/feed/",
+      "website_url": "https://www.talkingdotnet.com/",
+      "description": "Talking Dotnet talks about ASP.Net, MVC, WCF, Web API, AngularJS, jQuery, JavaScript, BootStrap, Visual Studio, Grunt, Bootstrap, HTML5, CSS and other newest client side frameworks and technologies.",
+      "followers": {
+        "facebook": 297,
+        "twitter": 683
+      },
+      "image_url": "https://i1.feedspot.com/4415704.jpg?t=1617106192"
+    },
+    {
+      "title": "Exercises in .NET with Andras Nemes",
+      "feed_url": "https://dotnetcodr.com/feed/",
+      "website_url": "https://dotnetcodr.com/",
+      "description": "This blog is on various topics from the world of .NET.",
+      "followers": {
+        "twitter": 707
+      },
+      "image_url": "https://i1.feedspot.com/4649868.jpg?t=1659000074"
+    },
+    {
+      "title": "CsharpStar Blog",
+      "feed_url": "https://www.csharpstar.com/feed/",
+      "website_url": "https://www.csharpstar.com/",
+      "description": "CsharpStar Blog is all about Tutorials, Tips and Tricks on Microsoft Technologies.",
+      "followers": {
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/4494159.jpg?t=1659000243"
+    },
+    {
+      "title": "Nate McMaster",
+      "feed_url": "https://natemcmaster.com/feed.xml",
+      "website_url": "https://natemcmaster.com/blog/",
+      "description": "A Blog posts about software development, lifehacks, opinion, etc.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4649657.jpg?t=1617107105"
+    },
+    {
+      "title": "Dotnetguts - ASP.Net, C#, SQL, JQuery",
+      "feed_url": "https://feeds.feedburner.com/DotnetGuts",
+      "website_url": "http://dotnetguts.blogspot.com/",
+      "description": "This blog was started back in 2006 with the aim to blog topics explore. You will find discussion topics for ASP.net, C#, JQuery, AJAX, SQL, VB.net, .Net Framework, WCF, WPF, WWF, WSS 3.0, MOSS 2007, OOPs Concepts, SQL Server, Programming.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/259567.jpg?t=1629960110"
+    },
+    {
+      "title": "DotNet Revanth",
+      "feed_url": "https://dotnet-revanth.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://dotnet-revanth.blogspot.com/",
+      "description": "DotNet-Revanth offers Asp.Net, C#.Net, SQL Server, Web Services, WCF, WebApi, WPF, MVC, AJAX, XML, JavaScript, JQuery, Gridview, Interview Q&A, samples.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/4649676.jpg?t=1659000485"
+    },
+    {
+      "title": "Steve Gordon",
+      "feed_url": "https://www.stevejgordon.co.uk/feed",
+      "website_url": "https://www.stevejgordon.co.uk/",
+      "description": "Steve Gordon is an experienced, enthusiastic and versatile software developer currently working as a senior .NET developer.",
+      "followers": {
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4874108.jpg?t=1750069473"
+    },
+    {
+      "title": "Developer Express Inc.",
+      "feed_url": "https://community.devexpress.com/blogs/MainFeed.aspx/feed",
+      "website_url": "https://community.devexpress.com/blogs/",
+      "description": "DevExpress engineers feature-complete Presentation Controls, Reporting Systems, IDE Productivity Tools and Business Application Frameworks for Visual Studio.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5043140.jpg"
+    },
+    {
+      "title": "Anuraj Blog",
+      "feed_url": "https://anuraj.dev/blog/",
+      "website_url": "https://anuraj.dev/blog/",
+      "description": "Dotnetthoughts Blog is a dotnet developer's technical journal.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 46
+      },
+      "image_url": "https://i1.feedspot.com/4649858.jpg?t=1617106981"
+    },
+    {
+      "title": "Meziantou's blog",
+      "feed_url": "https://www.meziantou.net/feed",
+      "website_url": "https://www.meziantou.net/",
+      "description": "A Blog about Microsoft technologies (.NET, ASP.NET, WPF, UWP, etc.)",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4649891.jpg?t=1617106201"
+    },
+    {
+      "title": "Dot Net Core Tutorials",
+      "feed_url": "https://dotnetcoretutorials.com/feed/",
+      "website_url": "https://dotnetcoretutorials.com/",
+      "description": "Dotnetcoretutorials.com was born out of a need for a single place to 'record' how things work in .net core in an up to date way. The .net core framework is still relatively new and it shows with out of date articles and incomplete documentation providing the basis for learning.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4650203.jpg?t=1617106178"
+    },
+    {
+      "title": "Anthony Giretti's .NET blog",
+      "feed_url": "https://anthonygiretti.com/feed/",
+      "website_url": "https://www.migrateto.net/blog/",
+      "description": "Anthony Giretti is a passionate developer, Microsoft MVP and MCSD. Follow this blog to read articles related to .NET.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5157293.jpg?t=1617106957"
+    },
+    {
+      "title": "Macrosoft Inc. - Migrate to .Net Blog",
+      "feed_url": "https://www.migrateto.net/blog/feed/",
+      "website_url": "https://www.migrateto.net/blog/",
+      "description": "Macrosoft Migrate to .NET Blog shares it's knowledge and expertise Visual FoxPro, Visual Basic, ASP, Clipper, MS Access , SQL Server, Migration Methodologies.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4650168.jpg?t=1617107023"
+    },
+    {
+      "title": "Code with Dan Blog see it, learn it, code it",
+      "feed_url": "https://blog.codewithdan.com/",
+      "website_url": "https://blog.codewithdan.com/",
+      "description": "Dan Wahlin is co-founder and CEO of Wahlin Consulting. He handles the technical operations and has over 20 years of development and training experience. He's a Google Developer Expert (GDE), Microsoft MVP and is also part of Microsoft's Regional Director, ASP Insiders and Docker Captains programs.",
+      "followers": {
+        "twitter": 47600
+      },
+      "image_url": "https://i1.feedspot.com/4649877.jpg?t=1609249128"
+    },
+    {
+      "title": "Dotnet Report Builder",
+      "feed_url": "https://dotnetreport.com/blog/feed/",
+      "website_url": "https://dotnetreport.com/blog/",
+      "description": "Focuses on Dotnet Report and Ad Hoc Reporting in general. Dotnet Report Builder is dedicated to creating open reporting tools for software developers.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5308343.jpg?t=1627987731"
+    },
+    {
+      "title": "The .NET Lab",
+      "feed_url": "https://blog.georgekosmidis.net/feed/",
+      "website_url": "https://blog.georgekosmidis.net/",
+      "description": "My learning adventures in .NET and beyond.",
+      "followers": {
+        "twitter": 260
+      },
+      "image_url": "https://i1.feedspot.com/5163193.jpg?t=1617107042"
+    },
+    {
+      "title": "Andr\u00e1s T\u00f3th's Professional Blog",
+      "feed_url": "https://www.banditoth.net/feed/",
+      "website_url": "https://www.banditoth.net/",
+      "description": "I'm Andr\u00e1s T\u00f3th, a .NET, .NET MAUI, Xamarin.Forms developer from Hungary. The purpose of this blog - which you are browsing - is to make available to the small/public my professional experiences that I have found interesting during my career.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5498501.jpg?t=1674538366"
+    }
+  ]
+}

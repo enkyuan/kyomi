@@ -1,0 +1,29 @@
+{
+  "category": "Victoria News",
+  "source_url": "https://rss.feedspot.com/victoria_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Victoria Advocate",
+      "feed_url": "https://www.victoriaadvocate.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.victoriaadvocate.com/",
+      "description": "The Victoria Advocate, founded in 1846, is the second-oldest newspaper in Texas. We cover Victoria and the surrounding counties in the Crossroads region of Texas. Here you can find our top stories for the day.",
+      "followers": {
+        "facebook": 71500,
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5150749.jpg?t=1589539656"
+    },
+    {
+      "title": "Crossroads Today",
+      "feed_url": "https://www.crossroadstoday.com/",
+      "website_url": "https://www.crossroadstoday.com/",
+      "description": "CrossroadsToday.com brings you the latest News, Sports, Weather and Entertainment from the Victoria Television Group.",
+      "followers": {
+        "facebook": 70100,
+        "twitter": 4100,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5150754.jpg?t=1589540090"
+    }
+  ]
+}

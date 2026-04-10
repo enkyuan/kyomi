@@ -1,0 +1,40 @@
+{
+  "category": "Funko",
+  "source_url": "https://rss.feedspot.com/funko_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pop Vinyls",
+      "feed_url": "http://popvinyls.com/feed/",
+      "website_url": "http://popvinyls.com/",
+      "description": "PopVinyls.com was founded in 2012 by Matt Norris, after his love of Funko products. The continued goal of Pop Vinyls is to provide reliable and consistent news to the collecting community.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 38200
+      },
+      "image_url": "https://i1.feedspot.com/1195542.jpg?t=1615792293"
+    },
+    {
+      "title": "Firewire \u00bb Funko",
+      "feed_url": "https://firewireblog.com/category/funko/feed/",
+      "website_url": "https://firewireblog.com/category/funko/",
+      "description": "The Firewire is a pop culture blog that features daily articles about books, comics, music, movies, television, gadgets, posters, toys & more! Posts about Funko written by Larry Fire.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5287842.jpg?t=1622640337"
+    },
+    {
+      "title": "Pop and Figures",
+      "feed_url": "https://popandfigures.com/feed/",
+      "website_url": "https://popandfigures.com/",
+      "description": "PopAndFigures is a Funko blog that helps new and existing toy collectors advice on how to display their collection, which are rare or exclusive and other upcoming Funko pop news.",
+      "followers": {
+        "facebook": 36,
+        "twitter": 439,
+        "instagram": 489
+      },
+      "image_url": "https://i1.feedspot.com/5186963.jpg?t=1628148397"
+    }
+  ]
+}

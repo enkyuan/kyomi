@@ -1,0 +1,40 @@
+{
+  "category": "Kia",
+  "source_url": "https://rss.feedspot.com/kia_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kia Global Media Center News",
+      "feed_url": "https://www.kianewscenter.com/rss/news/all",
+      "website_url": "https://www.kianewscenter.com/news/all",
+      "description": "We believe movement inspires ideas. Great ideas come to you when you're on the move, whether you're walking, running, or driving. Our vision is to create sustainable mobility solutions for consumers, communities, and societies around the world. Find out the latest updates about Kia in the news section.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 256800,
+        "instagram": 691000
+      },
+      "image_url": "https://i1.feedspot.com/5460684.jpg?t=1666949958"
+    },
+    {
+      "title": "Korean Car Blog \u00bb Kia",
+      "feed_url": "https://thekoreancarblog.com/category/kia/feed/",
+      "website_url": "https://thekoreancarblog.com/category/kia/",
+      "description": "It's all about the Korean automakers Hyundai, Kia & Genesis. Spy shots, reviews, latest news, interviews, and more. This blog was born from the initiative of 2 people who even though they live on different continents, share the same passion for two brands, Hyundai and Kia, today now together.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 1600,
+        "instagram": 28900
+      },
+      "image_url": "https://i1.feedspot.com/5460686.jpg?t=1666951398"
+    },
+    {
+      "title": "theKEEA",
+      "feed_url": "https://www.thekeea.com/feed/",
+      "website_url": "https://www.thekeea.com/",
+      "description": "Your source for Kia Motors news and information. Featuring monthly sales reports, dealership deals, reviews of current vehicles and future electric cars.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4526743.jpg?t=1666951326"
+    }
+  ]
+}

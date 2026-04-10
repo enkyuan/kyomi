@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>Leon Mika - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Manton Reece" xmlUrl="https://www.manton.org/feed.xml" htmlUrl="https://www.manton.org/" category="Recommendations"/>
+    <outline type="rss" text="Matt Bircher" xmlUrl="https://birchtree.me/rss/" htmlUrl="https://birchtree.me/" category="Recommendations"/>
+    <outline type="rss" text="Cabel Sasser" xmlUrl="https://cabel.com/feed/" htmlUrl="https://cabel.com" category="Recommendations"/>
+    <outline type="rss" text="Chris Coyier" xmlUrl="https://chriscoyier.net/feed/" htmlUrl="https://chriscoyier.net" category="Recommendations"/>
+    <outline type="rss" text="Chris McLeod" xmlUrl="https://chrismcleod.dev/feed.xml" htmlUrl="https://chrismcleod.dev/" category="Recommendations"/>
+    <outline type="rss" text="Jarrod Blundy" xmlUrl="https://heydingus.net/feed.rss" htmlUrl="https://heydingus.net" category="Recommendations"/>
+    <outline type="rss" text="John Siracusa" xmlUrl="http://hypercritical.co/feeds/main" htmlUrl="http://hypercritical.co/" category="Recommendations"/>
+    <outline type="rss" text="Brent Simmons" xmlUrl="https://inessential.com/xml/rss.xml" htmlUrl="https://inessential.com/" category="Recommendations"/>
+    <outline type="rss" text="Jason Fried" xmlUrl="https://world.hey.com/jason/feed.atom" htmlUrl="https://world.hey.com/jason" category="Recommendations"/>
+    <outline type="rss" text="Jim Nielsen" xmlUrl="https://blog.jim-nielsen.com/feed.xml" htmlUrl="https://blog.jim-nielsen.com" category="Recommendations"/>
+    <outline type="rss" text="Kev Quirk" xmlUrl="https://kevquirk.com/feed" htmlUrl="https://kevquirk.com" category="Recommendations"/>
+    <outline type="rss" text="Casey Liss" xmlUrl="https://www.caseyliss.com/rss" htmlUrl="https://www.caseyliss.com" category="Recommendations"/>
+    <outline type="rss" text="Manuel Moreale" xmlUrl="https://manuelmoreale.com/feed/rss" htmlUrl="https://manuelmoreale.com" category="Recommendations"/>
+    <outline type="rss" text="Marco Arment" xmlUrl="http://marco.org/rss" htmlUrl="https://marco.org/" category="Recommendations"/>
+    <outline type="rss" text="Mike Crittenden" xmlUrl="https://critter.blog/feed/" htmlUrl="https://critter.blog" category="Recommendations"/>
+    <outline type="rss" text="Nicholas Bate" xmlUrl="" htmlUrl="https://blog.strategicedge.co.uk/" category="Recommendations"/>
+    <outline type="rss" text="Robb Knight" xmlUrl="https://rknight.me/subscribe/posts/atom.xml" htmlUrl="https://rknight.me/" category="Recommendations"/>
+    <outline type="rss" text="Ben Thompson" xmlUrl="" htmlUrl="https://stratechery.com" category="Recommendations"/>
+    <outline type="rss" text="Marcus Wong" xmlUrl="https://wongm.com/feed/" htmlUrl="https://wongm.com/" category="Recommendations"/>
+    <outline type="rss" text="John Gruber" xmlUrl="https://daringfireball.net/feeds/main" htmlUrl="https://daringfireball.net/" category="Recommendations"/>
+    <outline type="rss" text="Louie Mantia" xmlUrl="https://lmnt.me/feed.xml" htmlUrl="https://lmnt.me/" category="Recommendations"/>
+    <outline type="rss" text="Mandaris Moore" xmlUrl="https://mandarismoore.com/feed.xml" htmlUrl="https://mandarismoore.com/" category="Recommendations"/>
+    <outline type="rss" text="Nick Heer" xmlUrl="https://pxlnv.com/feed/" htmlUrl="https://pxlnv.com/" category="Recommendations"/>
+    <outline type="rss" text="Casey Newton" xmlUrl="https://www.platformer.news/rss/" htmlUrl="https://www.platformer.news/" category="Recommendations"/>
+    <outline type="rss" text="Robert Birming" xmlUrl="https://birming.com/feed/" htmlUrl="https://birming.com/" category="Recommendations"/>
+    <outline type="rss" text="Robin Rendle" xmlUrl="https://robinrendle.com/feed.xml" htmlUrl="https://robinrendle.com/" category="Recommendations"/>
+    <outline type="rss" text="Seth Godin" xmlUrl="" htmlUrl="https://www.sethgodin.com/" category="Recommendations"/>
+    <outline type="rss" text="M. G. Siegler" xmlUrl="https://spyglass.org/rss/" htmlUrl="https://spyglass.org/" category="Recommendations"/>
+    <outline type="rss" text="Barry Hess" xmlUrl="https://bjhess.com/posts_feed" htmlUrl="https://bjhess.com/" category="Recommendations"/>
+    <outline type="rss" text="Simon Willison" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="https://simonwillison.net" category="Recommendations"/>
+  </body>
+</opml>

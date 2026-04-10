@@ -1,0 +1,28 @@
+{
+  "category": "China Trade",
+  "source_url": "https://rss.feedspot.com/china_trade_rss_feeds",
+  "feeds": [
+    {
+      "title": "ExamineChina Blog",
+      "feed_url": "https://www.examinechina.com/blog/feed/",
+      "website_url": "https://www.examinechina.com/blog/",
+      "description": "We blog about safe China import, preventing China scams and doing business in China. ExamineChina was founded in 2011 by people passionate about doing business in China with a strong focus on security and counter fraud.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 76
+      },
+      "image_url": "https://i1.feedspot.com/5300446.jpg?t=1625749627"
+    },
+    {
+      "title": "Lowy Institute \u00bb Chinese Trade",
+      "feed_url": "https://www.lowyinstitute.org/taxonomy/term/267/feed",
+      "website_url": "https://www.lowyinstitute.org/key-issues/chinese-trade/",
+      "description": "This section of our blog website features articles that have to do exclusively with Chinese trade. The Lowy Institute is an independent, nonpartisan international policy think tank located in Sydney, Australia.",
+      "followers": {
+        "facebook": 30800,
+        "twitter": 75000
+      },
+      "image_url": "https://i1.feedspot.com/5294981.jpg?t=1624263278"
+    }
+  ]
+}

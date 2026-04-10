@@ -1,0 +1,57 @@
+{
+  "category": "SBS Australia",
+  "source_url": "https://rss.feedspot.com/sbsaustralia_rss_feeds",
+  "feeds": [
+    {
+      "title": "SBS Australia",
+      "feed_url": "https://www.sbs.com.au/news/feed",
+      "website_url": "https://www.sbs.com.au/news",
+      "description": "Welcome to SBS News, your trusted source for latest Australian and world news. Uncover breaking stories, in-depth analysis, and diverse perspectives on issues that matter.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 260600,
+        "instagram": 237200
+      },
+      "image_url": "https://i1.feedspot.com/7886846.jpg?t=1741611869"
+    },
+    {
+      "title": "SBS Australia \u00bb Latest News",
+      "feed_url": "https://www.sbs.com.au/news/topic/latest/feed",
+      "website_url": "https://www.sbs.com.au/news/collection/just-in",
+      "description": "Stay on top of breaking news and latest national and international stories from Australia and the world. Read the latest in breaking news and updates on SBS News.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 260600,
+        "instagram": 237200
+      },
+      "image_url": "https://i1.feedspot.com/7886846.jpg?t=1741611869"
+    },
+    {
+      "title": "SBS Australia \u00bb Videos",
+      "feed_url": "https://www.sbs.com.au/news/videos/feed",
+      "website_url": "https://www.sbs.com.au/news/news-videos",
+      "description": "Watch the latest News Videos from Australia and the world covering breaking news & current affairs. LIVE stream SBS World News Bulletin from SBS News app at 6.30PM AEST daily, or watch free On Demand.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7886846.jpg?t=1741611869"
+    },
+    {
+      "title": "SBS Australia \u00bb Australian News",
+      "feed_url": "https://www.sbs.com.au/news/topic/australia/feed",
+      "website_url": "https://www.sbs.com.au/news/topic/australia",
+      "description": "All Australian News from SBS Australia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7886846.jpg?t=1741611869"
+    },
+    {
+      "title": "SBS News \u00bb World News",
+      "feed_url": "https://www.sbs.com.au/news/topic/world/feed",
+      "website_url": "https://www.sbs.com.au/news/topic/world/",
+      "description": "Read, watch or listen to the latest news and headlines from all around the world with SBS News.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 260600
+      },
+      "image_url": "https://i1.feedspot.com/4953780.jpg?t=1756445046"
+    }
+  ]
+}

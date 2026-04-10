@@ -1,0 +1,273 @@
+{
+  "category": "Drupal",
+  "source_url": "https://rss.feedspot.com/drupal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Drupal.org \u00bb Blog",
+      "feed_url": "https://www.drupal.org/planet/rss.xml",
+      "website_url": "https://www.drupal.org/planet",
+      "description": "The Official blog of Drupal. Drupal is an open source platform for building amazing digital experiences. It's made by a dedicated community. Anyone can use it, and it will always be free.",
+      "followers": {
+        "facebook": 90600,
+        "twitter": 9600,
+        "instagram": 2100
+      },
+      "image_url": "https://scontent.fbom3-5.fna.fbcdn.net/v/t39.30808-6/327196815_566797605326609_2558312716232383533_n.png?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=6mP58qJmZncQ7kNvwGtHw6S&_nc_oc=AdmX5jG7trWsFMxAkLoI-jufn98_9yOE_0BBQRDy-JM5gU_CFi4oP9X6eUJv64XhI3M3SMXv5l2l"
+    },
+    {
+      "title": "Dries Buytaert",
+      "feed_url": "https://dri.es/rss.xml",
+      "website_url": "https://dri.es/",
+      "description": "This is the personal website of Dries Buytaert. Dries is the project lead of Drupal, co-founder and chief technology officer of Acquia, and co-founder of Mollom. On his blog, he writes about the web, open source, Drupal and photography.",
+      "followers": {
+        "twitter": 37800
+      },
+      "image_url": "https://i1.feedspot.com/119133.jpg"
+    },
+    {
+      "title": "Lullabot Articles",
+      "feed_url": "https://www.lullabot.com/rss/articles",
+      "website_url": "https://www.lullabot.com/resources?type%5Barticle%5D=article",
+      "description": "Lullabot Articles provide insights, tutorials, and advice around topics including content strategy, web design, development, Drupal, and more.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4646936.jpg?t=1616762756"
+    },
+    {
+      "title": "Drupalize.Me Blog",
+      "feed_url": "https://drupalize.me/blog/feed",
+      "website_url": "https://drupalize.me/blog",
+      "description": "Drupalize.Me is the best resource for learning Drupal online. We have an extensive library covering multiple versions of Drupal and we are the most accurate and up-to-date Drupal 8 resource.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4646990.jpg?t=1616762761"
+    },
+    {
+      "title": "Pantheon Blog",
+      "feed_url": "https://pantheon.io/blog/feed",
+      "website_url": "https://pantheon.io/blog",
+      "description": "Hear from blog experts on what's new for Drupal and WordPress developers, digital marketers, and development agencies. Get tips helpful resources to make your website awesome.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4647838.jpg"
+    },
+    {
+      "title": "Vardot s Blog",
+      "feed_url": "https://www.vardot.com/en-us/rss/rss.xml",
+      "website_url": "https://www.vardot.com/en/ideas/blog",
+      "description": "Vardot is an official Drupal services provider in the Middle East. They deliver enterprise web solutions including design, development, SEO, hosting and maintenance.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 2500,
+        "instagram": 466
+      },
+      "image_url": "https://i1.feedspot.com/4647172.jpg"
+    },
+    {
+      "title": "WebWash Blog",
+      "feed_url": "https://www.webwash.net/blog/feed/",
+      "website_url": "https://www.webwash.net/blog/",
+      "description": "WebWash offers high-quality tutorials about the latest web technologies especially Drupal. They are focusing on Drupal for now. Readers will discover new and exciting modules as well as learn how to develop websites the 'Drupal way'.",
+      "followers": {
+        "facebook": 396,
+        "twitter": 685,
+        "instagram": 142
+      },
+      "image_url": "https://i1.feedspot.com/4646977.jpg"
+    },
+    {
+      "title": "DrupalEasy - Tutorials, News, Quicktips, Video, and Podcasts.",
+      "feed_url": "https://www.drupaleasy.com/rss.xml",
+      "website_url": "https://www.drupaleasy.com/",
+      "description": "DrupalEasy develops and executes high quality Drupal projects and comprehensive education and training programs. Their catalog of expert-instructor-led training curriculum includes the first publicly available, licensed Drupal career training programs in the world, as well as workshops and programs that all include signature rich menu of follow-on learning resources.",
+      "followers": {
+        "facebook": 742,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4646985.jpg"
+    },
+    {
+      "title": "Nuvole Blog",
+      "feed_url": "https://nuvole.org/blog/all/feed",
+      "website_url": "https://nuvole.org/blog",
+      "description": "Nuvole is an international company specialized in online communication through open-source tools, and working primarily in Belgium and Italy. They focus on web platforms based on the popular open-source Drupal framework, used by institutions such as the White House, Harvard University, the City of London and the City of Venice.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 525
+      },
+      "image_url": "https://i1.feedspot.com/1476933.jpg?t=1616762998"
+    },
+    {
+      "title": "Matt Glaman",
+      "feed_url": "https://mglaman.dev/blog/feed",
+      "website_url": "https://mglaman.dev/",
+      "description": "Matt Glaman is Drupal developer, contributor; groovin' on Drupal Commerce and Panopoly.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4647820.jpg?t=1616762819"
+    },
+    {
+      "title": "Tag1 Consulting Blog",
+      "feed_url": "https://www.tag1consulting.com/rss.xml",
+      "website_url": "https://www.tag1consulting.com/blog",
+      "description": "Tag1 Consulting, Inc. is a distinguished professional consulting company headquartered in the United States, with an international presence providing computer consulting services worldwide. We focus on performance and scalability consulting in the entire LAMP stack, specializing in Drupal performance.",
+      "followers": {
+        "twitter": 496
+      },
+      "image_url": "https://i1.feedspot.com/4647182.jpg?t=1616763002"
+    },
+    {
+      "title": "Agaric s Blog",
+      "feed_url": "https://agaric.coop/blog/feed",
+      "website_url": "https://agaric.coop/blog",
+      "description": "Agaric Cooperative does web development using free software, for people who do things.",
+      "followers": {
+        "facebook": 161,
+        "twitter": 580
+      },
+      "image_url": "https://i1.feedspot.com/4647064.jpg"
+    },
+    {
+      "title": "Drupal Blog",
+      "feed_url": "https://ten7.com/taxonomy/term/5/feed",
+      "website_url": "https://ten7.com/blog",
+      "description": "We create and care for Drupal-powered websites.",
+      "followers": {
+        "facebook": 220
+      },
+      "image_url": "https://i1.feedspot.com/5082674.jpg?t=1616763103"
+    },
+    {
+      "title": "Dave Hall Consulting s Blog",
+      "feed_url": "https://feeds.feedburner.com/DaveHallConsultingBlogs",
+      "website_url": "https://www.davehall.com.au/blog/",
+      "description": "Dave Hall Consulting is an Australian based free / open source solutions provider. DHC has been providing IT services to a global client base for over a decade. We have an extensive a network of partners and contacts who we collaborate with and a wealth of knowledge and experience which we leverage to deliver quality free / open source solutions.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4647217.jpg"
+    },
+    {
+      "title": "Mike Madison",
+      "feed_url": "https://mikemadison.net/blog?format=rss",
+      "website_url": "https://mikemadison.net/",
+      "description": "Mike Madison is full stack technologist, Drupal developer, and Technical Architect at Acquia. He also occasionally writes science fiction and fantasy.",
+      "followers": {
+        "twitter": 391
+      },
+      "image_url": "https://i1.feedspot.com/5172674.jpg?t=1616762978"
+    },
+    {
+      "title": "More than (just) Themes",
+      "feed_url": "https://blog.morethanthemes.com/rss",
+      "website_url": "https://blog.morethanthemes.com/",
+      "description": "MtT presents some of the world's best Drupal, HTML & PSD themes around, as well as top-class web design and development services.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 917
+      },
+      "image_url": "https://i1.feedspot.com/4647855.jpg"
+    },
+    {
+      "title": "Theodoros Ploumis : Ideas, issues, thoughts Blog",
+      "feed_url": "https://www.theodorosploumis.com/en/blog/feed",
+      "website_url": "https://www.theodorosploumis.com/en/blog",
+      "description": "Theodoros Ploumisi s a freelancer, Drupal developer and web designer.",
+      "followers": {
+        "twitter": 492
+      },
+      "image_url": "https://i1.feedspot.com/4647175.jpg?t=1616762874"
+    },
+    {
+      "title": "Drupal-admin.com - Administration of Linux servers for Drupal projects",
+      "feed_url": "https://drupal-admin.com/rss.xml",
+      "website_url": "https://drupal-admin.com/",
+      "description": "Roman Agabekov is a System Administrator from Krasnodar, Russia.",
+      "followers": {
+        "facebook": 638
+      },
+      "image_url": "https://i1.feedspot.com/4647203.jpg?t=1616762959"
+    },
+    {
+      "title": "Jay Beaton Blog",
+      "feed_url": "https://jaybeaton.com/blog.xml",
+      "website_url": "https://jaybeaton.com/blog",
+      "description": "Jay Beaton is a senior-level PHP and Drupal developer experienced in all aspects of creating professional websites, including planning, system architecture and design, application development, database design and management, and system administration.",
+      "followers": {
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/4648180.jpg"
+    },
+    {
+      "title": "Wim Leers Blog",
+      "feed_url": "https://wimleers.com/feed",
+      "website_url": "https://wimleers.com/",
+      "description": "Wim Leers blog is all about Drupal.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/1862589.jpg?t=1616762986"
+    },
+    {
+      "title": "MyDropWizard",
+      "feed_url": "https://mydropwizard.com/feed/",
+      "website_url": "https://mydropwizard.com/",
+      "description": "A blog about Drupal sites, its maintenance and security.",
+      "followers": {
+        "twitter": 140
+      },
+      "image_url": "https://i1.feedspot.com/4647831.jpg"
+    },
+    {
+      "title": "Webomelette Blog",
+      "feed_url": "https://www.webomelette.com/rss",
+      "website_url": "https://www.webomelette.com/blog",
+      "description": "Webomelette is a Drupal web development website run by Daniel Sipos.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4647167.jpg?t=1616762780"
+    },
+    {
+      "title": "Chapter Three Blog",
+      "feed_url": "https://www.chapterthree.com/blog/all/rss.xml",
+      "website_url": "https://www.chapterthree.com/blog",
+      "description": "Chapter Three builds a better internet with Drupal. They focus entirely on web strategy, design and scalable, high performance Drupal development.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 4300,
+        "instagram": 82
+      },
+      "image_url": "https://i1.feedspot.com/4647086.jpg"
+    },
+    {
+      "title": "Ymbra Blog",
+      "feed_url": "https://www.ymbra.com/blog/feed",
+      "website_url": "https://www.ymbra.com/blog",
+      "description": "A Drupal based company. They are specialists in collaborative enviroments and social applications, like online publishing software, social network, etc.",
+      "followers": {
+        "facebook": 123,
+        "twitter": 498
+      },
+      "image_url": "https://i1.feedspot.com/4647886.jpg"
+    },
+    {
+      "title": "Drupal India Blog",
+      "feed_url": "https://drupalindia.co.in/blog/feed/",
+      "website_url": "https://drupalindia.co.in/blog/",
+      "description": "Drupal India is one stop solution for all Drupal services like designing, development, customization and drupal application development.",
+      "followers": {
+        "facebook": 286,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/4648187.jpg?t=1616763011"
+    }
+  ]
+}

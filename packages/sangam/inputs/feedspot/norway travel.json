@@ -1,0 +1,67 @@
+{
+  "category": "Norway Travel",
+  "source_url": "https://rss.feedspot.com/norway_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oslo.com Blog",
+      "feed_url": "https://www.oslo.com/blog/feed/",
+      "website_url": "https://www.oslo.com/blog/",
+      "description": "Oslo city travel guide with tours, hotels, flight and car bookings. A complete guide to hotels, flights to Oslo, skiing, entertainment, properties in Oslo, news and more on Oslo, Norway.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 388
+      },
+      "image_url": "https://i1.feedspot.com/4825079.jpg?t=1610945771"
+    },
+    {
+      "title": "Pauline Travels \u00bb Norway",
+      "feed_url": "https://paulinetravels.com/norway/feed/",
+      "website_url": "https://paulinetravels.com/norway/",
+      "description": "Pauline Travels is a travel blog that focuses on simple travel tips that anyone, especially solo female travelers, can use.Through this blog section, you can follow Pauline's adventures in Norway and be inspired to go there yourself.",
+      "followers": {
+        "facebook": 665,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5354318.jpg?t=1639717935"
+    },
+    {
+      "title": "Bilivoka \u00bb Norway",
+      "feed_url": "https://bilivoka.com/en/category/countries/europe/norway/feed/",
+      "website_url": "https://bilivoka.com/en/category/countries/europe/norway/",
+      "description": "We are two travel-loving people enjoying new places and seeing more of the world. Follow to know about our trips, tips, and experience with a focus on those who do not have the luxury of traveling anytime for any duration.",
+      "followers": {
+        "facebook": 212
+      },
+      "image_url": "https://i1.feedspot.com/4827538.jpg?t=1610965294"
+    },
+    {
+      "title": "Fjord Travel Norway",
+      "feed_url": "https://fjordtravelnorway.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://fjordtravelnorway.blogspot.com/",
+      "description": "A blog about travel in Norway. Through posts and pictures, we hope to bring you a little closer to the place, we call 'home' Norway!",
+      "followers": {
+        "facebook": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4825872.jpg?t=1610965298"
+    },
+    {
+      "title": "Ha det Mamma",
+      "feed_url": "https://www.hadetmamma.com/blog-feed.xml",
+      "website_url": "https://www.hadetmamma.com/posts",
+      "description": "Ha det Mamma's blog posts cover various destinations, experiences, and recommendations related to travel in Norway. Some of the topics discussed include budget travel in Oslo, saunas in Norway, stave churches, the town of Hell, weekend getaways, language learning, Norwegian culture, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5727618.jpg?t=1701688325"
+    },
+    {
+      "title": "Norway with P\u00e5l Blog",
+      "feed_url": "https://www.norwaywithpal.com/norway-travel-blog?format=rss",
+      "website_url": "https://norwaywithpal.com/norway-travel-blog/",
+      "description": "Are you traveling to, or do you have a passion for Norway & Scandinavia? Check out this travel blog where you'll find articles about food, language, history, destinations, and travel advice. P\u00e5l Bjarne Johansen is a tour guide from Oslo, Norway.",
+      "followers": {
+        "facebook": 18100,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5354317.jpg?t=1639718708"
+    }
+  ]
+}

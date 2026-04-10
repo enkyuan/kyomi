@@ -1,0 +1,90 @@
+{
+  "category": "Ireland Technology",
+  "source_url": "https://rss.feedspot.com/ireland_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ireland's Technology Blog",
+      "feed_url": "https://irelandstechnologyblog.com/feed",
+      "website_url": "https://irelandstechnologyblog.com/",
+      "description": "Ireland's Technology Blog is an Irish technology blog covering all aspects of technology no matter how small or large. We feature everything from home technology, personal technology, gaming, smartphones, and all the latest breaking news from around the world.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4722096.jpg?t=1638278245"
+    },
+    {
+      "title": "Silicon Republic",
+      "feed_url": "https://www.siliconrepublic.com/feed/",
+      "website_url": "https://www.siliconrepublic.com/technology/",
+      "description": "Silicon Republic is a leading source for technology, science and start-up news, information and resources for people who are passionate about STEM. Since going online in 2001, SiliconRepublic.com has gone from being Ireland's No 1 resource for science and technology news, with countless awards to its name, to one of the leading online publications in Europe with 250,000 sessions each month.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 70700
+      },
+      "image_url": "https://i1.feedspot.com/4365219.jpg?t=1638278164"
+    },
+    {
+      "title": "Irish Tech News",
+      "feed_url": "https://irishtechnews.ie/feed/",
+      "website_url": "https://irishtechnews.ie/",
+      "description": "Irish Tech News is an award-winning online publication aimed at keeping you informed of all the latest news from the world of Technology. With the main focus on Irish-based news, we cover a wide range of topics from social media and smartphones to start-ups and SMEs.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 43900
+      },
+      "image_url": "https://i1.feedspot.com/4748550.jpg?t=1638278031"
+    },
+    {
+      "title": "TechCentral.ie",
+      "feed_url": "http://www.techcentral.ie/feed/",
+      "website_url": "https://www.techcentral.ie/category/blogs/",
+      "description": "TechCentral.ie is the online home of TechPro, Ireland's best well-known and respected technology magazine. Delivering daily news through the Technology Minute newsletter, and podcast TechRadio. Across its Life, Pro & Trade channels, the site features the latest news and developments in tech. Insights provide access to a library of exclusive TechBeat market research; Blogs is where you will find unique commentary from some of the top journalists in tech; What's On is your go-to source for event listings.",
+      "followers": {
+        "facebook": 605,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4746827.jpg?t=1638277780"
+    },
+    {
+      "title": "Tech Buzz Ireland",
+      "feed_url": "https://techbuzzireland.com/feed/",
+      "website_url": "https://techbuzzireland.com/category/tech-3/",
+      "description": "Tech Buzz Ireland is a leading independent award-winning news & tech review site featuring articles on engineering software solutions, startups, AI, and more.",
+      "followers": {
+        "facebook": 530,
+        "twitter": 1600,
+        "instagram": 739
+      },
+      "image_url": "https://i1.feedspot.com/5123198.jpg?t=1638277102"
+    },
+    {
+      "title": "Tech Law Blog",
+      "feed_url": "https://www.irelandip.com/feed/",
+      "website_url": "https://www.techlaw.ie/",
+      "description": "Ireland IP & Technology Law Blog provides the information you need to know about Intellectual property & technology law in Ireland. A&L Goodbody is an Irish law firm providing expert legal advice across every aspect of business law.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4481124.jpg?t=1638277918"
+    },
+    {
+      "title": "Xerxes Blog",
+      "feed_url": "https://xerxes.ie/blogs",
+      "website_url": "https://xerxes.ie/blogs",
+      "description": "Explore the Xerxes IT support blog to learn more about managed IT services. With actionable how-to posts and informational blogs, you can keep up with the latest business technology trends and learn how to leverage IT to thrive. Xerxes is an affordable web hosting company that provides the best options to suit web hosting needs.",
+      "followers": {
+        "facebook": 4
+      },
+      "image_url": "https://i1.feedspot.com/7271429.jpg?t=1710227485"
+    },
+    {
+      "title": "goos3d.ie",
+      "feed_url": "https://goos3d.ie/feed/",
+      "description": "We bring you the very latest tech news and reviews along with the latest entertainment bits and bobs to hit Netflix, Disney+ and game consoles too.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5348775.jpg?t=1638278911"
+    }
+  ]
+}

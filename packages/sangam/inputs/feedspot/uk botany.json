@@ -1,0 +1,93 @@
+{
+  "category": "UK Botany",
+  "source_url": "https://rss.feedspot.com/uk_botany_rss_feeds",
+  "feeds": [
+    {
+      "title": "Botany One",
+      "feed_url": "https://botany.one/feed/",
+      "website_url": "https://botany.one/",
+      "description": "Botany One is a weblog produced by The Annals of Botany Company. The aim of the weblog is to alert plant scientists around the world to interesting and topical news about plants drawn from a wide variety of sources that include Annals of Botany, AoB PLANTS and in silico Plants.",
+      "followers": {
+        "facebook": 38600,
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/4508364.jpg?t=1639573909"
+    },
+    {
+      "title": "Winterbourne House and Garden Blog",
+      "feed_url": "https://www.winterbourne.org.uk/blog/feed/",
+      "website_url": "https://www.winterbourne.org.uk/blog/",
+      "description": "Restored to its Edwardian Arts and Craft splendour, Winterbourne House is a unique heritage attraction set within seven acres of beautiful botanic gardens. Winterbourne is a hidden gem home to beautiful antiques and over 6,000 plant species from around the world.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 5600,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4585938.jpg?t=1613995318"
+    },
+    {
+      "title": "Lizzie Harper Illustration",
+      "feed_url": "https://lizzieharper.co.uk/feed/",
+      "website_url": "http://lizzieharper.co.uk/blogs/",
+      "description": "Lizzie Harper is a Natural History, Botanical and Scientific Illustrator. here you will find botanical illustration, bird illustration, flower paintings and other scientific illustration commissions.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 3200,
+        "instagram": 21300
+      },
+      "image_url": "https://i1.feedspot.com/4907578.jpg?t=1613995323"
+    },
+    {
+      "title": "Sandrine Maugy Blog",
+      "feed_url": "https://sandrinemaugy.com/feed/",
+      "website_url": "https://sandrinemaugy.com/blog-2/",
+      "description": "We cover a range of topics, including Illustrations on Botany, Bird, garden, nature, autumn, and much more. Sandrine Maugy has been teaching Botanical Painting for the illustrious West Dean College since 2005.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4907588.jpg?t=1613995412"
+    },
+    {
+      "title": "Culham Research Group",
+      "feed_url": "https://blogs.reading.ac.uk/crg/feed/",
+      "website_url": "https://blogs.reading.ac.uk/crg/",
+      "description": "This blog brings together the research and teaching activities of the research group of Alastair Culham at the University of Reading. Dr Alastair Culham is a Associate Professor of Botany at the Reading University Herbarium (RNG). Follow this blog to discover the research we are doing and to promote collaboration with scientists interested in our work.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4585855.jpg?t=1613995308"
+    },
+    {
+      "title": "Dr M Goes Wild Blog",
+      "feed_url": "https://drmgoeswild.com/blog/feed/",
+      "website_url": "http://drmgoeswild.com/blog/",
+      "description": "Dr M (AKA Jonathan Mitchley) Associate Professor of Field Botany at the University of Reading, I am both botanist and plant ecologist and I GO WILD about teaching plant identification and vegetation survey and assessment.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4907536.jpg?t=1613995313"
+    },
+    {
+      "title": "Birmingham Botanical Gardens and Glasshouses",
+      "feed_url": "https://www.birminghambotanicalgardens.org.uk/feed/",
+      "website_url": "https://birminghambotanicalgardens.org.uk/",
+      "description": "The Birmingham Botanical Gardens offers something for everyone, be it one of our four stunning glasshouses showing tropical rainforest to arid desert, beautiful gardens, playground, tearoom or our gift shop.",
+      "followers": {
+        "facebook": 27400,
+        "twitter": 5600,
+        "instagram": 18600
+      },
+      "image_url": "https://i1.feedspot.com/4907550.jpg?t=1613995297"
+    },
+    {
+      "title": "National Botanic Garden of Wales",
+      "feed_url": "https://botanicgarden.wales/feed/",
+      "website_url": "https://botanicgarden.wales/blogs/",
+      "description": "Here you'll find an inspiring range of themed gardens, the world's largest single-span glasshouse, our new tropical Butterfly House, play areas and a national nature reserve, all set in a Regency landscape which provides the stage for a packed programme of events and news throughout the year.",
+      "followers": {
+        "facebook": 42200,
+        "twitter": 12000,
+        "instagram": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4587028.jpg"
+    }
+  ]
+}

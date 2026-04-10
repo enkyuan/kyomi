@@ -1,0 +1,48 @@
+{
+  "category": "Erlang Programming",
+  "source_url": "https://rss.feedspot.com/erlang_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Erlang Central Blog",
+      "feed_url": "https://www.erlang-solutions.com/feed/",
+      "website_url": "https://www.erlang-solutions.com/blog/",
+      "description": "Erlang Central is an informational and community site for programmers, developers, professionals and anyone around the world who's interested in and passionate about the open-source Erlang programming language. Follow us here you will find news, videos, tutorials, jobs, events and other resources related to Erlang programming language.",
+      "followers": {
+        "facebook": 979,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/3891938.jpg?t=1621943540"
+    },
+    {
+      "title": "Erlang Solutions Blog",
+      "feed_url": "https://www.erlang-solutions.com/blog/feed/",
+      "website_url": "https://www.erlang-solutions.com/blog/",
+      "description": "Though often complex and meticulous, our work enables us to share our passion for Erlang, strengthen global communities and explore the possibilities of technology. We fix issues of scale, reliability & performance. Passionate about Erlang & Elixirlang.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4478852.jpg?t=1621943546"
+    },
+    {
+      "title": "Planet Erlang",
+      "feed_url": "http://www.planeterlang.com/atom.xml?format=xml",
+      "website_url": "http://www.planeterlang.com/",
+      "description": "Planet Erlang is a metablog that collects posts from the blogs of various Erlang developers and contributors.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4974226.jpg?t=1621943582"
+    },
+    {
+      "title": "Erlang - Ericsson OTP Team Blog",
+      "feed_url": "https://blog.erlang.org/feed",
+      "website_url": "https://www.erlang.org/blog",
+      "description": "The Erlang/OTP team at Ericsson, the implementors and maintainers of Erlang/OTP. Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability.",
+      "followers": {
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4974206.jpg?t=1621943551"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "category": "Australian Survival",
+  "source_url": "https://rss.feedspot.com/australian_survival_rss_feeds",
+  "feeds": [
+    {
+      "title": "Australian Survival and Preppers",
+      "feed_url": "http://australiansurvivalandpreppers.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://australiansurvivalandpreppers.blogspot.com/",
+      "description": "Articles on survival tips from an Australian........",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4912467.jpg?t=1676464130"
+    },
+    {
+      "title": "Survival Storehouse Blog",
+      "feed_url": "https://survivalstorehouse.com/blog/f.rss",
+      "website_url": "https://survivalstorehouse.com/blog",
+      "description": "Survival Storehouse is an online Survival Products store with a product range that focuses on compact lightweight packs that are designed to get you through the first 3 days of a survival situation. Our blog articles offer special insight, tips, and advice on many survival aspects and related topics.",
+      "followers": {
+        "instagram": 678
+      },
+      "image_url": "https://i1.feedspot.com/5498197.jpg?t=1674469936"
+    },
+    {
+      "title": "Bushcraft Survival Australia",
+      "feed_url": "https://bushcraftsurvivalaustralia.com.au/feed/",
+      "website_url": "https://bushcraftsurvivalaustralia.com.au/blog/",
+      "description": "Explore Beginner's guides, Trainings hacks, Manuals and other Crucial things you need to know about Survival in the Wild. Bushcraft Survival Australia is an outdoor bushcraft survival school dedicated to teaching genuine and authentic modern and traditional outdoor living skills through carefully designed educational courses and classes.",
+      "followers": {
+        "facebook": 8300,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4869067.jpg?t=1604390633"
+    },
+    {
+      "title": "Everyday Carry Gear",
+      "feed_url": "https://www.everydaycarrygear.com/feed/",
+      "website_url": "https://www.everydaycarrygear.com/",
+      "description": "We are a portal of all things related to Everyday Carry Gear, Bug Out Bag Essentials with a touch of Survival related topics too. We aim to post new and interesting articles about hot tools and topics in Prepper enthusiast world. This is a site completely dedicated to providing educational information about Prepping, Survival & Bugging Out.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 790
+      },
+      "image_url": "https://i1.feedspot.com/4755284.jpg?t=1603869560"
+    },
+    {
+      "title": "Survival Courses Tasmania Blog",
+      "feed_url": "https://survivalcoursestasmania.au/feed/",
+      "website_url": "https://survivalcoursestasmania.au/blog/",
+      "description": "Read our Survival articles, consisting of Survival tips, Best Methods, Lists of Essential items, and Several Life-saving hacks. Survival Courses Tasmania (SCT) is a training school in Australia, teaching practical survival skills and genuine survival techniques through carefully designed training courses in a mixture of indoor and outdoor instruction.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5498198.jpg?t=1674469839"
+    }
+  ]
+}

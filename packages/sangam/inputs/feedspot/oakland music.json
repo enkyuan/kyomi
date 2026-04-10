@@ -1,0 +1,97 @@
+{
+  "category": "Oakland Music",
+  "source_url": "https://rss.feedspot.com/oakland_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "All The City Lights",
+      "feed_url": "https://billchapin.net/allthecitylights/feed/",
+      "website_url": "https://billchapin.net/allthecitylights/",
+      "description": "All The City Lights features posts about music\u2014maintaining a focus on Americana, nerd rock, obligatory list-making, and the Bay Area (the East Bay in particular) and on the field of urban planning, including issues related to revitalization, gentrification, and transportation. Bill Chapin is a former full-time journalist, and current full-time grad student.",
+      "followers": {
+        "facebook": 156
+      },
+      "image_url": "https://i1.feedspot.com/5738126.jpg?t=1702881736"
+    },
+    {
+      "title": "East Bay Times \u00bb Music",
+      "feed_url": "https://www.eastbaytimes.com/things-to-do/music/feed/",
+      "website_url": "https://www.eastbaytimes.com/things-to-do/music/",
+      "description": "Dive into the rhythm of now with EBT's Music section, where beats meet stories, and melodies paint the canvas of today's sonic landscape. East BayTimes is the leading source of breaking news, local news, sports, entertainment, lifestyle and opinion for Contra Costa County, Alameda County, and other areas in California.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5738119.jpg?t=1702881687"
+    },
+    {
+      "title": "Music in SF",
+      "feed_url": "https://musicinsf.com/feed/",
+      "website_url": "https://musicinsf.com/",
+      "description": "Music in SF provides complete coverage of the San Francisco and Bay Area music scene. The magazine features interviews, concert reviews, and music news from both local and national music acts. Find out everything you need to know about the music scene in San Francisco.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 4400,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5183005.jpg?t=1702881884"
+    },
+    {
+      "title": "Kev Choice",
+      "feed_url": "https://kevchoice.wordpress.com/feed/",
+      "website_url": "https://kevchoice.wordpress.com/",
+      "description": "Kev Choice is an Oakland-based artist who is redefining what it means to be a musician in this day and age. Choice aims to not only return hip-hop to the cultural standards it once had, but surpass the genre's creative peak by adding new layers of musical nuance into beats, rhymes, and braggadocio. Follow his latest updates and music here.",
+      "followers": {
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5738121.jpg?t=1702891612"
+    },
+    {
+      "title": "Flying Fiddlesticks Music \u00bb Oakland",
+      "feed_url": "https://flyingfiddlesticks.com/tag/oakland/feed/",
+      "website_url": "https://flyingfiddlesticks.com/tag/oakland/",
+      "description": "Follow all posts and reviews about Oakland music written by Wayne Edwards. His blog Flying Fiddlesticks unwinds a teeming tapestry of metal music, dissecting bone-crushing riffs, exploring the depths of growling vocals, and unearthing the hidden gems within the metal landscape.",
+      "followers": {
+        "facebook": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5738118.jpg?t=1702881785"
+    },
+    {
+      "title": "BoomShake Music",
+      "feed_url": "http://www.boomshakemusic.com/feeds/posts/default",
+      "website_url": "http://www.boomshakemusic.com/",
+      "description": "BoomShake Music is an intercultural community music and storytelling program for all ages, guided by principles of social justice and gender liberation. Their mission is to create strong, just communities of color that use music for creative expression, cultural survival, and social change.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5738120.jpg?t=1702881820"
+    },
+    {
+      "title": "Faeton Music \u00bb Oakland",
+      "feed_url": "https://www.faetonmusic.com/tag/oakland/feed/",
+      "website_url": "https://www.faetonmusic.com/tag/oakland/",
+      "description": "Discover a collection of diverse, catchy, made-in-Oakland music tracks and artists sourced by Faeton Music. Faeton Music is a music reviews and discovery website that aims to find and share some of the freshest, soothing alternative music deserving to be heard.",
+      "followers": {
+        "facebook": 864,
+        "twitter": 625,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5738125.jpg?t=1702881858"
+    },
+    {
+      "title": "Oakland Magazine \u00bb Music",
+      "feed_url": "https://www.oaklandmagazine.com/category/arts-culture/music/feed/",
+      "website_url": "https://www.oaklandmagazine.com/category/arts-culture/music/",
+      "description": "Oakland Magazine is your monthly gateway to the vibrant heartbeat of Oakland! Delving deep into the city's rich tapestry of news, tantalizing food scenes, dynamic arts, and cultural phenomena, Oakland Magazine curates stories that celebrate the essence of Oakland.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5738123.jpg?t=1702881704"
+    },
+    {
+      "title": "Oakland Family Services Blog \u00bb Music",
+      "feed_url": "https://www.oaklandfamilyservices.org/blog/tag/music?format=rss",
+      "website_url": "https://www.oaklandfamilyservices.org/blog/tag/music",
+      "description": "Uncover heartwarming musical playlists in the Musical archives. Oakland Family Services is a private, nonprofit human service organization that offers a continuum of prevention, education, and treatment services that span the human life cycle, enrich the lives of children, strengthen families, and rebuild lives.",
+      "followers": {
+        "facebook": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5738122.jpg?t=1702881698"
+    }
+  ]
+}

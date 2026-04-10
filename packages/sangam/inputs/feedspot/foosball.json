@@ -1,0 +1,51 @@
+{
+  "category": "Foosball",
+  "source_url": "https://rss.feedspot.com/foosball_rss_feeds",
+  "feeds": [
+    {
+      "title": "Foosball Sports Network",
+      "feed_url": "https://foosballsportsnetwork.com/thoughts?format=rss",
+      "website_url": "https://foosballsportsnetwork.com/thoughts",
+      "description": "The Foosball Sports Network blog provides helpful information from a Pro Foosball Player. Get to know about tricks you can use for your next Foosball match. The Foosball Sports Network provides Live Foosball Broadcasts from Foosball Tournaments across the US.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 640
+      },
+      "image_url": "https://i1.feedspot.com/5468885.jpg?t=1668677249"
+    },
+    {
+      "title": "KICK Foosball Tables Blog",
+      "feed_url": "https://kickfoosballtables.com/feed/",
+      "website_url": "https://kickfoosballtables.com/category/blog/",
+      "description": "Check out the KICK Foosball Tables Blog for useful advice on taking care of your Foosball Table as well as tips on how to be a Foosball pro! KICK Foosball Tables are taking the game of Foosball to a whole new level! KICK has revolutionized the Foosball industry by keeping costs low and delivering those savings to you.",
+      "followers": {
+        "facebook": 68,
+        "twitter": 14,
+        "instagram": 499
+      },
+      "image_url": "https://i1.feedspot.com/5468887.jpg?t=1668677545"
+    },
+    {
+      "title": "Jay's Brick Blog \u00bb Foosball Table",
+      "feed_url": "https://jaysbrickblog.com/tag/foosball-table/feed/",
+      "website_url": "https://jaysbrickblog.com/tag/foosball-table/",
+      "description": "Jay's Brick Blog talks about the LEGO Foosball table and its aim to to unite football and LEGO fans with a scaled down version. Hi, my name is Jay from Jay's Brick Blog. This blog serves as a creative outlet where I can gush about everything I love about LEGO.",
+      "followers": {
+        "instagram": 70700
+      },
+      "image_url": "https://i1.feedspot.com/5468889.jpg?t=1668677750"
+    },
+    {
+      "title": "Game Tables and More Blog \u00bb Foosball",
+      "feed_url": "https://www.gametablesonline.com/blog/category/foosball/feed/",
+      "website_url": "https://www.gametablesonline.com/blog/category/foosball/",
+      "description": "Visit the Games Table and More blog for all things related to the game of foosball. Game Tables Online has been in business since 2008 and in this time we've supplied game room tables for many high profile institutions and commercial clients. Browse our selection of foosball, pool, shuffleboard, air hockey, table tennis, multi-game tables and much more!",
+      "followers": {
+        "facebook": 165,
+        "twitter": 187,
+        "instagram": 35
+      },
+      "image_url": "https://i1.feedspot.com/5468882.jpg?t=1668677959"
+    }
+  ]
+}

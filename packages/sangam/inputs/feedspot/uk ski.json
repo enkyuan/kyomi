@@ -1,0 +1,102 @@
+{
+  "category": "UK Ski",
+  "source_url": "https://rss.feedspot.com/uk_ski_rss_feeds",
+  "feeds": [
+    {
+      "title": "InTheSnow Magazine",
+      "feed_url": "https://www.inthesnow.com/feed/",
+      "website_url": "https://www.inthesnow.com/",
+      "description": "InTheSnow Magazine is the only free Winter Sports News Magazine in the UK, edited by world renown ski journalist and 'Snowhunter' Patrick Thorne.",
+      "followers": {
+        "facebook": 78400,
+        "twitter": 17200,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/4907137.jpg?t=1613988383"
+    },
+    {
+      "title": "Ski In Luxury Blog",
+      "feed_url": "https://www.skiinluxury.com/blog/feed/",
+      "website_url": "https://www.skiinluxury.com/blog/",
+      "description": "Features articles offering unmatched expertise on opulent ski chalets and opulent ski vacations. Andy and Fran Castle, a husband and wife combination, established Ski In Luxury in 2005. This is a website that specializes in helping people find the ideal luxury ski chalet in France, Switzerland, Austria, Italy, and Canada.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 3000,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/4515848.jpg?t=1614151961"
+    },
+    {
+      "title": "Fall Line Skiing",
+      "feed_url": "https://www.fall-line.co.uk/feed/",
+      "website_url": "https://www.fall-line.co.uk/",
+      "description": "Get inside info and insight into the world of ski. Covering backcountry, powder and other interesting places to ride.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 4700,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4907182.jpg?t=1613988858"
+    },
+    {
+      "title": "The La Tania Ski Blog",
+      "feed_url": "http://www.latania.co.uk/blog/feed/",
+      "website_url": "http://www.latania.co.uk/blog/",
+      "description": "The La Tania Ski Resort information and community site with snow reports, weather, accommodation, travel, news, photos and apres skis from the locals in La Tania since 1999. This place has the Largest linked Ski Area in the World.",
+      "followers": {
+        "facebook": 19700,
+        "twitter": 6000,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4515489.jpg?t=1613988863"
+    },
+    {
+      "title": "Skiworld Blog",
+      "feed_url": "https://www.skiworld.co.uk/blog/feed/",
+      "website_url": "https://www.skiworld.co.uk/blog/",
+      "description": "Blog posts on where to ski, snowboard, and all things skiing. Topics covered are Competitions, News, Reviews, Ski Apartments & Hotels, Ski Equipments, Ski Gear, Snow Updates, and more. Skiworld provides ski or snowboard holidays in the best snow-sure resorts worldwide.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 5300,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4907145.jpg?t=1557829040"
+    },
+    {
+      "title": "Mountain Heaven Blog",
+      "feed_url": "https://www.mountainheaven.co.uk/blog/feed/",
+      "website_url": "https://www.mountainheaven.co.uk/blog/",
+      "description": "Full of interesting articles, latest ski news & useful ski and snowboard information. Find out what you need to know! The ski blog by Mountain Heaven. Our mission is to bring you great value for money combined with great services and no hidden extras. We have intimate knowledge of each resort and chalet, and we're committed to ensuring you have the very best possible mountain holiday.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 2100,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4907169.jpg?t=1613988400"
+    },
+    {
+      "title": "Snoworks Ski Blog",
+      "feed_url": "https://www.snoworks.co.uk/blog/feed/",
+      "website_url": "https://www.snoworks.co.uk/articles/",
+      "description": "Find articles with tutorials on skiing, advice for your skiing adventure, tips for beginners, intermediate and experts and more! Snoworks is one of the UK's leading providers of all-mountain ski courses to destinations around the world. It provides Ski courses and instructions.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 2300,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4907157.jpg?t=1613988391"
+    },
+    {
+      "title": "Crystal Ski Holidays",
+      "feed_url": "https://www.crystalski.co.uk/skibuzz/feed/",
+      "website_url": "https://www.crystalski.co.uk/skibuzz/",
+      "description": "Ski-buzz is a lively, informative and regularly updated ski blog with news, information tips and opinion about some of the best snowsports in the world.",
+      "followers": {
+        "facebook": 115900,
+        "twitter": 24400,
+        "instagram": 43300
+      },
+      "image_url": "https://i1.feedspot.com/4907114.jpg?t=1612157957"
+    }
+  ]
+}

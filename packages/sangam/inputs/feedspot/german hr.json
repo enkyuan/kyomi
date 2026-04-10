@@ -1,0 +1,103 @@
+{
+  "category": "German HR",
+  "source_url": "https://rss.feedspot.com/german_hr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Personalwirtschaft Podcast",
+      "feed_url": "https://www.personalwirtschaft.de/feed/",
+      "website_url": "https://www.personalwirtschaft.de/news/",
+      "description": "Folge dem Personalwirtschaft Podcast, wenn du \u00fcber die neuesten Entwicklungen in HR auf dem Laufenden bleiben willst. Ob Recruiting, F\u00fchrung, Employer Branding, Change Management, BGM oder Verg\u00fctung: Hier erf\u00e4hrst du alles \u00fcber die Themen, die Personalmanager:innen bewegen. Und du lernst die Menschen hinter erfolgreichen Projekten kennen zum Beispiel in unserem neuesten Format: Beim \u201ePersonalwirtschaft Vorstellungsgespr\u00e4ch' erwarten dich interessante Pers\u00f6nlichkeiten, \u00fcberraschende Einblicke und manch skurrile Anekdote Personaler:innen mal ganz pers\u00f6nlich...",
+      "followers": {
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5629548.jpg?t=1745503971"
+    },
+    {
+      "title": "HR JOURNAL Blog",
+      "feed_url": "https://www.hrjournal.de/feed/",
+      "website_url": "https://www.hrjournal.de/blog/",
+      "description": "Das Magazin f\u00fcr Personalmanagement",
+      "followers": {
+        "twitter": 378
+      },
+      "image_url": "https://i1.feedspot.com/5629557.jpg?t=1689686181"
+    },
+    {
+      "title": "troodi Blog",
+      "feed_url": "https://troodi.de/feed/",
+      "website_url": "https://troodi.de/blog/",
+      "description": "Learning is about you",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5629546.jpg?t=1689686326"
+    },
+    {
+      "title": "HRtalk.de",
+      "feed_url": "https://hrtalk.de/feed/",
+      "website_url": "https://hrtalk.de/",
+      "description": "Dein HR-Blog mit Praxisnahem Wissen",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5629551.jpg?t=1689686399"
+    },
+    {
+      "title": "Persoblogger.de",
+      "feed_url": "https://persoblogger.de/feed",
+      "website_url": "https://persoblogger.de/",
+      "description": "Das HR Praxisportal",
+      "followers": {
+        "twitter": 4700,
+        "instagram": 867
+      },
+      "image_url": "https://i1.feedspot.com/5629547.jpg?t=1689686122"
+    },
+    {
+      "title": "HR NEWS",
+      "feed_url": "https://hrnewsgermany.com/feed/",
+      "website_url": "https://hrnewsgermany.com/",
+      "description": "Immer UpToDate im Arbeitsrecht",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5629553.jpg?t=1689686164"
+    },
+    {
+      "title": "E-3 Magazine \u00bb Human Resources",
+      "feed_url": "https://e3zine.com/category/business/hr/feed/",
+      "website_url": "https://e3zine.com/category/business/hr/",
+      "followers": {
+        "facebook": 77,
+        "twitter": 833
+      },
+      "image_url": "https://i1.feedspot.com/5629554.jpg?t=1689686170"
+    },
+    {
+      "title": "HR Factory",
+      "feed_url": "https://hrfactory.com/de/feed/",
+      "website_url": "https://hrfactory.com/de/germany/hr-news/",
+      "description": "Home of HR Experts",
+      "followers": {
+        "facebook": 328,
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/5629549.jpg?t=1689686138"
+    },
+    {
+      "title": "42matches Blog",
+      "feed_url": "https://42matches.com/feed/",
+      "website_url": "https://42matches.com/blog/",
+      "description": "Workforce and Career Planning",
+      "followers": {
+        "facebook": 118
+      },
+      "image_url": "https://i1.feedspot.com/5629555.jpg?t=1689686376"
+    },
+    {
+      "title": "Future of HR",
+      "feed_url": "https://www.future-of-hr.com/feed/",
+      "website_url": "https://www.future-of-hr.com/",
+      "description": "Die Netzdebatte",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5629550.jpg?t=1689686421"
+    }
+  ]
+}

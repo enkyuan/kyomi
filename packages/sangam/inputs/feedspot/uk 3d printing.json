@@ -1,0 +1,72 @@
+{
+  "category": "UK 3D Printing",
+  "source_url": "https://rss.feedspot.com/uk_3d_printing_rss_feeds",
+  "feeds": [
+    {
+      "title": "3D Printing Industry",
+      "feed_url": "https://3dprintingindustry.com/feed/",
+      "website_url": "https://3dprintingindustry.com/",
+      "description": "3D Printing Industry (3DPI) is a global media company providing a dedicated resource for anyone interested in 3D printing and 3D scanning - two fields of technology that are rapidly growing in relevance and application across industrial and consumer sectors.",
+      "followers": {
+        "facebook": 923800,
+        "twitter": 105100,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4642100.jpg?t=1669027604"
+    },
+    {
+      "title": "Midlands 3D Printing Blog",
+      "feed_url": "https://midlands3d.com/feed/",
+      "website_url": "https://midlands3d.com/blog/",
+      "description": "Midlands 3D Printing blog shares news and insights on 3D printing innovations, manufacturing efficiency, and digital warehousing, while showcasing the company's expertise as a UK-based provider of professional 3D printing services for businesses and individuals.",
+      "followers": {
+        "instagram": 140
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/8787298/page/8657133/logo_1754651960.jpg"
+    },
+    {
+      "title": "Print My Part Blog",
+      "feed_url": "https://www.printmypart.co.uk/blog-feed.xml",
+      "website_url": "https://www.printmypart.co.uk/blog",
+      "description": "Welcome to the Print My Part blog. Here you will find our latest news and updates as well as other tips and news regarding 3D printing technology and product design.",
+      "followers": {
+        "facebook": 56,
+        "twitter": 55,
+        "instagram": 106
+      },
+      "image_url": "https://i1.feedspot.com/4912587.jpg?t=1620224686"
+    },
+    {
+      "title": "Reprap development and further adventures in DIY 3D printing",
+      "feed_url": "https://richrap.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://richrap.blogspot.com/",
+      "description": "My Developments following the pioneers at Reprap - My aim is to help others build technology and eventually a 3D printer of their own!",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4842686.jpg?t=1620224720"
+    },
+    {
+      "title": "Nath042 Blog",
+      "feed_url": "https://nath042.com/feed/",
+      "website_url": "https://nath042.com/blog",
+      "description": "Nath042 is a blog by Nathan Jenkins. This blog is about Gaming, Tech and 3D Printing.",
+      "followers": {
+        "facebook": 83,
+        "twitter": 512,
+        "instagram": 262
+      },
+      "image_url": "https://i1.feedspot.com/4739885.jpg?t=1616579125"
+    },
+    {
+      "title": "3D Printing Business Directory",
+      "feed_url": "https://www.3dprintingbusiness.directory/industry-blog/feed/",
+      "website_url": "https://www.voxelmatters.com/",
+      "description": "Get the most comprehensive & up to date listings for additive manufacturing companies in the global 3D Printing Industry.",
+      "followers": {
+        "twitter": 39500
+      },
+      "image_url": "https://i1.feedspot.com/4912585.jpg?t=1620224702"
+    }
+  ]
+}

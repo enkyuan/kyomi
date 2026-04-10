@@ -1,0 +1,28 @@
+{
+  "category": "NetApp",
+  "source_url": "https://rss.feedspot.com/netapp_rss_feeds",
+  "feeds": [
+    {
+      "title": "Why Is The Internet Broken?",
+      "feed_url": "https://whyistheinternetbroken.wordpress.com/feed/",
+      "website_url": "https://whyistheinternetbroken.wordpress.com/blogs/",
+      "description": "Justin Parisi works at NetApp as the Technical Marketing Engineer for NFS. He covers a variety of topics from IT/Storage.",
+      "followers": {
+        "facebook": 106,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4918858.jpg?t=1620643463"
+    },
+    {
+      "title": "NetApp Blog",
+      "feed_url": "https://www.netapp.com/blog/",
+      "website_url": "https://www.netapp.com/blog/",
+      "description": "Welcome to the NetApp Blog. Here you will find the latest blog posts about our products, emerging technologies, and NetApp culture.",
+      "followers": {
+        "facebook": 37100,
+        "twitter": 125000
+      },
+      "image_url": "https://i1.feedspot.com/4918819.jpg?t=1620643451"
+    }
+  ]
+}

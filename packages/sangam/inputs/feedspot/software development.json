@@ -1,0 +1,1151 @@
+{
+  "category": "Software Development",
+  "source_url": "https://rss.feedspot.com/software_development_rss_feeds",
+  "feeds": [
+    {
+      "title": "A List Apart",
+      "feed_url": "https://alistapart.com/main/feed/",
+      "website_url": "https://alistapart.com/",
+      "description": "Articles on Design, Process, User Experience, Responsive Design, Career, Creativity, Content Strategy, Usability, Code, JavaScript and more. A List Apart explores the design, development, and meaning of web content, with a special focus on web standards and best practices.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 133600
+      },
+      "image_url": "https://i1.feedspot.com/129498.jpg?t=1617284444"
+    },
+    {
+      "title": "DZone",
+      "feed_url": "https://feeds.dzone.com/home",
+      "website_url": "https://dzone.com/",
+      "description": "Covers articles on agile, AI, big data, cloud, database, devops, integration, IoT, java, microservices, open source, performance, ssecurity and web dev. DZone serves technology professionals with the knowledge, tools, and strategies they need to build the future.",
+      "followers": {
+        "facebook": 49500,
+        "twitter": 74000
+      },
+      "image_url": "https://i1.feedspot.com/4366858.jpg?t=1657173955"
+    },
+    {
+      "title": "SD Times",
+      "feed_url": "https://sdtimes.com/feed/",
+      "website_url": "https://sdtimes.com/",
+      "description": "Covers articles on api, ai, agile, containers, data, devops, devsecops, low code, microservices, monitor, security, serverless, value stream management and more. Software Development Times is the leading news source for the software development industry.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 24900
+      },
+      "image_url": "https://i1.feedspot.com/4065154.jpg?t=1650454451"
+    },
+    {
+      "title": "SCAND Blog",
+      "feed_url": "https://scand.com/company/blog/feed/",
+      "website_url": "https://scand.com/company/blog/",
+      "description": "SCAND is an IT outsourcing company located in the center of Europe, the home of the best IT universities and highly qualified specialists in computer sciences, mathematics, and related fields. The company is focused on custom software development outsourcing across multiple technologies including .NET, Java, PHP, JavaScript, and C++.",
+      "followers": {
+        "facebook": 234,
+        "twitter": 104
+      },
+      "image_url": "https://i1.feedspot.com/5036706.jpg?t=1606111244"
+    },
+    {
+      "title": "Google Developers Blog",
+      "feed_url": "https://feeds.feedburner.com/GDBcode",
+      "website_url": "https://developers.googleblog.com/",
+      "description": "Blog of our latest news, updates, and stories for developers. Covers articles on topics such as android app development, AMP, ajax, adwords, adsense, api, application development and more.",
+      "followers": {
+        "facebook": 249600,
+        "twitter": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/116349.jpg?t=1606110662"
+    },
+    {
+      "title": "YesITLabs Blog",
+      "feed_url": "https://www.yesitlabs.com/feed/",
+      "website_url": "https://www.yesitlabs.com/blog/",
+      "description": "YES IT Labs is a fully integrated, customer-oriented, IT service-providing company. As one of the leading companies operating in the States, their drive to offer simple infrastructural services to deliver hybrid IT solutions, enterprise apps, web portals, and industry-specific expertise services makes us stand out and a name trusted by many. Learn the art and science of the IT industry and beyond through insightful blogs.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5642698.jpg?t=1691056565"
+    },
+    {
+      "title": "Inventcolabs Blog",
+      "feed_url": "https://www.inventcolabssoftware.com/blog/feed/",
+      "website_url": "https://www.inventcolabssoftware.com/blog/",
+      "description": "Get the latest technology news, feeds, blog posts, and technology updates on web and mobile application development. Inventcolabs provides software development and mobile app development services that are driven by the ambition to help you derive maximum value from your IT investments.",
+      "followers": {
+        "facebook": 164,
+        "twitter": 60,
+        "instagram": 442
+      },
+      "image_url": "https://i1.feedspot.com/5759332.jpg?t=1705927892"
+    },
+    {
+      "title": ": Web Development, Mobile App development, Enterprise application Blog",
+      "feed_url": "https://www.flexsin.com/blog/feed/",
+      "website_url": "https://www.flexsin.com/blog/",
+      "description": "Flexsin Inc. - Digital transformation and consulting company delivering innovative solutions for SMBs and Enterprises with a proven track record in Product Development, Technology Consulting, and IT Outsourcing. Be abreast with industry insights, news, technologies, and trends. Make a difference in your business by leveraging the knowledge shared by experts.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 5600,
+        "instagram": 217
+      },
+      "image_url": "https://i1.feedspot.com/5554128.jpg?t=1683019721"
+    },
+    {
+      "title": "Rainx Blog",
+      "feed_url": "https://rainx.in/feed/",
+      "website_url": "https://rainx.in/blog/",
+      "description": "Embark on a transformative journey with team Rainx as it shares the newest and the biggest trend across the Software Development landscape in India. Rainx is a premier software development company, that fosters a dedicated team of passionate experts committed to crafting cutting-edge digital solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297402.jpg?t=1712920836"
+    },
+    {
+      "title": "RipenApps Blog",
+      "feed_url": "https://ripenapps.com/blog/feed/",
+      "website_url": "https://ripenapps.com/blog/",
+      "description": "Find the recent, trendy and crispy news, blogs and articles related to mobile app development world & turn out acquainted by landing RipenApps blogs corner.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 699,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5031666.jpg?t=1606111252"
+    },
+    {
+      "title": "Good Coders Code, Great Reuse",
+      "feed_url": "https://feeds.feedburner.com/catonmat",
+      "website_url": "https://catonmat.net/",
+      "description": "Peteris Krumins' blog about programming, hacking, software reuse, software ideas, computer security, google and technology.",
+      "followers": {
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/31709.jpg?t=1606110671"
+    },
+    {
+      "title": "Successful Software",
+      "feed_url": "https://successfulsoftware.net/feed/",
+      "website_url": "https://successfulsoftware.net/articles/",
+      "description": "...requires more than just good programming.",
+      "followers": {
+        "twitter": 977
+      },
+      "image_url": "https://i1.feedspot.com/4540845.jpg?t=1606111815"
+    },
+    {
+      "title": "Webkul Blog",
+      "feed_url": "https://webkul.com/blog/feed/",
+      "website_url": "https://webkul.com/blog/",
+      "description": "Articles on eCommerce, ERP, Web, Mobile, Design, Development, Strategy and Docs for OpenSource Webkul Apps and Products.Webkul is the hook for enterprise businesses and helps enterprises to upscale easily with a wider range of ready to use and highly customizable eCommerce centric products.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5098687.jpg?t=1606110707"
+    },
+    {
+      "title": "BoTree Technologies Blog",
+      "feed_url": "https://www.botreetechnologies.com/blog/feed/",
+      "website_url": "https://www.botreetechnologies.com/blog/",
+      "description": "Read about BoTree Technologies' official blog. An image of our beliefs, find the latest news, offers and update, and our aspirations. BoTree Technologies is a leading IT solutions provider working as the technology partner of small to medium-sized organizations.",
+      "followers": {
+        "facebook": 849,
+        "twitter": 1100,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5401129.jpg?t=1652790352"
+    },
+    {
+      "title": "MobiDev",
+      "feed_url": "https://mobidev.biz/feed",
+      "website_url": "https://mobidev.biz/trends-and-insights",
+      "description": "We make software development easier for product owners by delivering high-quality integrated products. Read about current and future trends in software engineering, revealing hot topics and new technologies in the software industry.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5126595.jpg?t=1606111227"
+    },
+    {
+      "title": "ASPER BROTHERS",
+      "feed_url": "https://asperbrothers.com/feed/",
+      "website_url": "https://asperbrothers.com/blog/",
+      "description": "ASPER BROTHERS is a software development company providing customized solutions that increase the value of products. Follow its blog to get articles and updates about software development.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 36,
+        "instagram": 382
+      },
+      "image_url": "https://i1.feedspot.com/5122745.jpg?t=1606111270"
+    },
+    {
+      "title": "The One Technologies Blog \u00bb Azure Data Factory",
+      "feed_url": "https://theonetechnologies.com/blog/feed/rss/",
+      "website_url": "https://theonetechnologies.com/blog/category/azure-data-factory/",
+      "description": "Covers Software Development, Mobile App Development, Software Outsourcing, Angular Development, Website Development, Social Media API Integration, and more. The One Technologies is a mobile app development and software development company in India.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 909,
+        "instagram": 563
+      },
+      "image_url": "https://i1.feedspot.com/5383524.jpg?t=1647863791"
+    },
+    {
+      "title": "Petri Kainulainen Blog",
+      "feed_url": "https://feeds.feedblitz.com/PetriKainulainen",
+      "website_url": "https://www.petrikainulainen.net/blog/",
+      "description": "Petri Kainulainen is passionate about software development and continuous improvement. He is specialized in software development with the Spring Framework and is the author of Spring Data book.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4540512.jpg?t=1606111235"
+    },
+    {
+      "title": "Developer Tech",
+      "feed_url": "https://www.developer-tech.com/feed/",
+      "website_url": "https://www.developer-tech.com/",
+      "description": "DeveloperTech is a hub for the latest news, blogs, comment, strategy and advice from leading brands and experts across the apps industry. It provides a free, practical resource that aims to help developers negotiate the industry, access top level advice and ensure they are able to negotiate the industry as effectively and profitably as possible.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/780270.jpg?t=1650458893"
+    },
+    {
+      "title": "DEV Community",
+      "feed_url": "https://dev.to/feed",
+      "website_url": "https://dev.to/",
+      "description": "DEV is a community of software developers who shares their expertise via informative blogs, with popular tags that include javascript, web dev, beginners, programming, DevOps, opensource, and productivity.",
+      "followers": {
+        "facebook": 147300,
+        "twitter": 308400,
+        "instagram": 45900
+      },
+      "image_url": "https://i1.feedspot.com/4612936.jpg?t=1640262085"
+    },
+    {
+      "title": "Sphinx Solution Blog",
+      "feed_url": "https://www.sphinx-solution.com/blog/feed/",
+      "website_url": "https://www.sphinx-solution.com/blog/",
+      "description": "Blogs that keep up with revolutionizing digital technology. Sphinx Solutions is a software development company that delivers comprehensive digital solutions.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 502
+      },
+      "image_url": "https://i1.feedspot.com/4871784.jpg?t=1656671876"
+    },
+    {
+      "title": "Vivaldi Browser Blog",
+      "feed_url": "https://vivaldi.com/feed/",
+      "website_url": "https://vivaldi.com/blog/",
+      "description": "Vivaldi is a new browser with unrivaled customization and control. Fast, secure and flexible - this is a browser made for you.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 35200,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5014806.jpg?t=1606110713"
+    },
+    {
+      "title": "Treehouse Blog - Learn to code and change your life!",
+      "feed_url": "http://blog.teamtreehouse.com/feed",
+      "website_url": "https://blog.teamtreehouse.com/",
+      "description": "The Treehouse blog provides valuable content on web development, web design, and startup tips.",
+      "followers": {
+        "facebook": 284800,
+        "twitter": 49100,
+        "instagram": 81000
+      },
+      "image_url": "https://i1.feedspot.com/120072.jpg?t=1606110675"
+    },
+    {
+      "title": "Speckyboy",
+      "feed_url": "https://speckyboy.com/feed/",
+      "website_url": "https://speckyboy.com/",
+      "description": "Speckyboy is an online magazine for designers with its focus on sharing helpful resources, exploring new techniques, sharing useful tips, and inspiring you to build a better web.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 68600
+      },
+      "image_url": "https://i1.feedspot.com/4423038.jpg?t=1606110703"
+    },
+    {
+      "title": "Mountain Goat Software Blog",
+      "feed_url": "https://www.mountaingoatsoftware.com/blog/rss",
+      "website_url": "https://www.mountaingoatsoftware.com/blog",
+      "description": "Mike Cohn provides certified ScrumMaster training and agile training to build extremely high-performance development organizations. Learn agile and Scrum tips and techniques from expert ScrumMaster, educator, and author Mike Cohn of Mountain Goat Software.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 59600
+      },
+      "image_url": "https://i1.feedspot.com/72554.jpg?t=1611063989"
+    },
+    {
+      "title": "Designveloper Blog",
+      "feed_url": "https://www.designveloper.com/feed/",
+      "website_url": "https://www.designveloper.com/blog/",
+      "description": "Designveloper is a IT consulting & Software Development company based in Vietnam. We help start-up and large companies to realize the ideas.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 945
+      },
+      "image_url": "https://i1.feedspot.com/5178226.jpg?t=1606111769"
+    },
+    {
+      "title": "ISHIR Blog",
+      "feed_url": "https://www.ishir.com/feed",
+      "website_url": "https://www.ishir.com/blog.htm",
+      "description": "Subscribe to ISHIR, a leading IT Outsourcing Company's Official Blog today to get the latest News around technology trends, tips and tricks straight to your mailbox. Get all updates around Web Development, Software Development, Cloud Computing, Virtualization and upcoming trends in the market.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5078549.jpg?t=1666960127"
+    },
+    {
+      "title": "Apiumhub",
+      "feed_url": "https://apiumhub.com/tech-blog-barcelona/feed/",
+      "website_url": "https://apiumhub.com/tech-blog-barcelona/",
+      "description": "Apiumhub is a software development company in Barcelona with services of software architecture, web development & mobile app development (iOS & Android).",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 11800,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4677284.jpg?t=1606111206"
+    },
+    {
+      "title": "Zenesys Blog",
+      "feed_url": "https://www.zenesys.com/rssfeed/",
+      "website_url": "https://www.zenesys.com/blogs/",
+      "description": "Keep yourself updated with Zenesys blogs for the latest news, trends, and guides on RPA, CMS, Mobile, Web, Cloud development, and UI/UX design. Zenesys is a leading software development company in USA & India.",
+      "followers": {
+        "facebook": 565,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5410333.jpg?t=1655206810"
+    },
+    {
+      "title": "Enlear Academy",
+      "feed_url": "https://enlear.academy/feed",
+      "website_url": "https://enlear.academy/",
+      "description": "Provides quality content on web development and cloud technologies for developers. Enlear Academy is a small team of people passionate about writing tech articles and producing YouTube videos. We believe in freely accessible high-quality learning materials for everyone.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/5342090.jpg?t=1636616927"
+    },
+    {
+      "title": "Evrone",
+      "feed_url": "https://evrone.com/feed.xml",
+      "website_url": "https://evrone.com/blog",
+      "description": "Evrone is an IT Outsourcing Company that specializes in the development of services for high-load systems in the web, mobile, blockchain, and other areas. Learn more about their projects including custom software, fast and seamless mobile applications, attractive UI design, machine learning & blockchain-based technologies solutions.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 518,
+        "instagram": 652
+      },
+      "image_url": "https://i1.feedspot.com/5194449.jpg?t=1606111755"
+    },
+    {
+      "title": "Imenso Software Blog",
+      "feed_url": "https://www.imensosoftware.com/feed/",
+      "website_url": "https://www.imensosoftware.com/blog/",
+      "description": "Get solutions to complex development problems at our knowledge base. At Imenso Software, we are a software development company with our core expertise lies in custom, web, and mobile application development.",
+      "followers": {
+        "facebook": 135,
+        "twitter": 94,
+        "instagram": 91
+      },
+      "image_url": "https://i1.feedspot.com/5426641.jpg?t=1659089939"
+    },
+    {
+      "title": "Star Knowledge Blog",
+      "feed_url": "https://star-knowledge.com/feed/",
+      "website_url": "https://star-knowledge.com/blog/",
+      "description": "Stay updated with Star Knowledge Latest Blogs on business tips, technology trends and thoughts & insights on software solutions. We are leading Software Development Company & we are passionate, creative, and experienced in developing products.",
+      "followers": {
+        "facebook": 220,
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/5042569.jpg?t=1606111820"
+    },
+    {
+      "title": "Josh Software",
+      "feed_url": "https://blog.joshsoftware.com/feed/",
+      "website_url": "https://blog.joshsoftware.com/",
+      "description": "Follow this blog to get articles and updates on software development.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5129408.jpg?t=1606111811"
+    },
+    {
+      "title": "Grape Up Blog",
+      "feed_url": "https://grapeup.com/feed/",
+      "website_url": "https://grapeup.com/blog/",
+      "description": "Grape Up is a technology consulting company that helps the world's leading enterprises deliver their most impactful software by bringing together AI, Machine Learning, Cloud-Native Technologies, and a unique approach to software delivery. The Grape Up blog covers topics on cloud technologies, software delivery, AI & business. Get insights from technology experts & develop your skills.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 284,
+        "instagram": 474
+      },
+      "image_url": "https://i1.feedspot.com/5193881.jpg?t=1606111998"
+    },
+    {
+      "title": "Intergy | Software Development Articles",
+      "feed_url": "https://www.intergy.com.au/feed/",
+      "website_url": "https://www.intergy.com.au/articles/",
+      "description": "Intergy brings you the latest thinking in enterprise software and innovation.",
+      "followers": {
+        "facebook": 286,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5097698.jpg"
+    },
+    {
+      "title": "Made Tech on Software Delivery Blog",
+      "feed_url": "https://www.madetech.com/feed/",
+      "website_url": "https://www.madetech.com/blog/",
+      "description": "Read about the latest trends and techniques being used to deliver modern web applications. Featuring articles from the team at Made Tech and guest posts by selected industry experts.",
+      "followers": {
+        "facebook": 902,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4540849.jpg?t=1606111952"
+    },
+    {
+      "title": "Donatix Blog",
+      "feed_url": "https://donatix.net/feed/",
+      "website_url": "https://donatix.net/blog/",
+      "description": "Donatix is a web and mobile application development company that specializes in working in the healthcare, financial and travel sectors.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/5033697.jpg?t=1606111978"
+    },
+    {
+      "title": "CodeIT | Software Development Blog",
+      "feed_url": "https://codeit.us/feed",
+      "website_url": "https://codeit.us/blog",
+      "description": "Exciting news regarding the latest updates on software development and the most interesting tendencies of the IT world. CodeIT is a software product development company. We are early technology adopters and rockstar innovators in providing the best quality services and make a team contributing to the development of world technologies. We build a community of developers and professionals interested in doing complex software projects.",
+      "followers": {
+        "facebook": 684,
+        "twitter": 830
+      },
+      "image_url": "https://i1.feedspot.com/5294987.jpg?t=1624272987"
+    },
+    {
+      "title": "Sirin Software Blog",
+      "feed_url": "https://sirinsoftware.com/feed",
+      "website_url": "https://sirinsoftware.com/news/",
+      "description": "Blog covers key topics such as Technology, IoT, Industrial automation, Cyber security, Cloud, Embedded Tech and Fintech. Sirin Software's core business is end-to-end software product delivery in the field of embedded systems, web and mobile applications, server-side programming, & IoT solutions.",
+      "followers": {
+        "facebook": 459,
+        "twitter": 54
+      },
+      "image_url": "https://i1.feedspot.com/5295993.jpg?t=1624519059"
+    },
+    {
+      "title": "Software for Good | Software Development Blog",
+      "feed_url": "https://softwareforgood.com/feed/",
+      "website_url": "https://softwareforgood.com/insights/",
+      "description": "Our team-authored software development blog features tips, ideas, and inspiration for software engineers, writers, and web designers.",
+      "followers": {
+        "facebook": 541,
+        "twitter": 3000,
+        "instagram": 785
+      },
+      "image_url": "https://i1.feedspot.com/4540508.jpg?t=1606111994"
+    },
+    {
+      "title": "Business Software India",
+      "feed_url": "https://business-software.in/feed/",
+      "website_url": "https://business-software.in/blog/",
+      "description": "Business Software India is a brand name of Primjena Software Private Limited. We are a full-service software development company. We offer turnkey cloud software solutions and customize software development to corporate clients such as direct sales companies, multi-level-marketing companies, and online retail businesses.",
+      "followers": {
+        "twitter": 20,
+        "instagram": 176
+      },
+      "image_url": "https://i1.feedspot.com/5150999.jpg?t=1605850597"
+    },
+    {
+      "title": "The Programmer's Paradox",
+      "feed_url": "https://feeds.feedburner.com/TheProgrammersParadox",
+      "website_url": "http://theprogrammersparadox.blogspot.com/",
+      "description": "A blog about software development and programming.",
+      "followers": {
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/122587.jpg?t=1606112513"
+    },
+    {
+      "title": "The Right Software Blog",
+      "feed_url": "https://therightsw.com/feed/",
+      "website_url": "https://therightsw.com/blog/",
+      "description": "Expert software development company. Hire us to design websites, mobile apps, eCommerce webshops and emails and API solutions. 130 projects, 73 clients and 18 developer strong. Software development in USA, UK and Europe.",
+      "followers": {
+        "facebook": 904,
+        "twitter": 482
+      },
+      "image_url": "https://i1.feedspot.com/4863090.jpg?t=1605850656"
+    },
+    {
+      "title": "Maple Software Private Limited",
+      "feed_url": "https://maple-software.com/feed/",
+      "website_url": "https://maple-software.com/blog/",
+      "description": "Maple Software provides a full range of software development services. We also effectively maintain software or applications using various activities. Follow to get the updates.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 75
+      },
+      "image_url": "https://i1.feedspot.com/5051664.jpg?t=1605850642"
+    },
+    {
+      "title": "Daniel Feldroy",
+      "feed_url": "https://daniel.feldroy.com/feeds/atom.xml",
+      "website_url": "https://daniel.feldroy.com/",
+      "description": "Hi, I'm Daniel Roy Greenfeld also known as 'pydanny'. I do Python, JavaScript, and C# out of Los Angeles, California. I love to read, write, hang out with my wife, and play with my daughter. For physical activity, I enjoy Brazilian Jiu-Jitsu and cycling. I am a total Space and NASA geek. I attend lots of software industry events. I also write books.",
+      "followers": {
+        "twitter": 17800
+      },
+      "image_url": "https://i1.feedspot.com/5270541.jpg?t=1618652948"
+    },
+    {
+      "title": "Herding Cats",
+      "feed_url": "https://feeds.feedburner.com/typepad/HerdingCats",
+      "website_url": "https://herdingcats.typepad.com/",
+      "description": "Glen Alleman's blog specialises in the intricacies of effective project management, and Herding Cats erding ccollates his expertise into series of in-depth blog posts, perfect for team leaders and agile developers.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/78726.jpg?t=1606111972"
+    },
+    {
+      "title": "Scott Hanselman Blog",
+      "feed_url": "http://feeds.hanselman.com/ScottHanselman",
+      "website_url": "https://www.hanselman.com/blog/",
+      "description": "Scott Hanselman blogs about technology, culture, gadgets, diversity, code and the web. Scott Hanselman is a programmer, teacher, and speaker.",
+      "followers": {
+        "twitter": 325000,
+        "instagram": 24200
+      },
+      "image_url": "https://i1.feedspot.com/2191.jpg?t=1606110654"
+    },
+    {
+      "title": "David Walsh",
+      "feed_url": "https://davidwalsh.name/feed",
+      "website_url": "https://davidwalsh.name/",
+      "description": "A blog featuring tutorials about JavaScript, HTML5, AJAX, PHP, CSS, WordPress, and everything else development. David Walsh is Mozilla's senior web developer and the core developer for the MooTools Javascript Framework.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 86400
+      },
+      "image_url": "https://i1.feedspot.com/4431048.jpg?t=1606110743"
+    },
+    {
+      "title": "Golpik Blog",
+      "feed_url": "https://golpik.com/feed/",
+      "website_url": "https://golpik.com/blog/",
+      "description": "Incepted In 2012, Golpik Is a result-driven software development company providing superior software, web app, mobile app, cloud management, and creative designing and development solutions and services globally.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5507776.jpg?t=1676373401"
+    },
+    {
+      "title": "Activator Crack Software",
+      "feed_url": "https://activationkey.org/feed/",
+      "website_url": "https://activationkey.org/",
+      "description": "Unlock the full potential of software applications on your application on your computer. Activator Crack Software website explores various real and modded software solutions, discussing their functionalities, and providing insights into their capabilities. Full download links along with license keys are also provided.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5746325.jpg?t=1704138638"
+    },
+    {
+      "title": "Teners Blog",
+      "feed_url": "https://teners.net/rss/blog",
+      "website_url": "https://teners.net/blog",
+      "description": "Explore insightful articles at Teners Blog, which inspires you to shape the future around you with engaging and valuable content. Teners is a software company dedicated to empowering individuals and businesses through stellar solutions in the field of Web Application Development, Mobile Application Development, and UI/UX Design.",
+      "followers": {
+        "twitter": 105
+      },
+      "image_url": "https://i1.feedspot.com/7279297.jpg?t=1711016292"
+    },
+    {
+      "title": "Eric D. Brown - Technology Consultant",
+      "feed_url": "https://ericbrown.com/feed",
+      "website_url": "https://ericbrown.com/blog",
+      "description": "Eric Brown is an entrepreneur and technology and marketing consultant, and his blog approaches development from a decidedly big-picture perspective. His content shares his advice and opinions on a wealth of business and development topics, and perfectly demonstrates the marriage of technology and business evident in so many of today's most exciting software companies.",
+      "followers": {
+        "instagram": 14800
+      },
+      "image_url": "https://i1.feedspot.com/773545.jpg?t=1605850140"
+    },
+    {
+      "title": "Coon Cave on Raccoon",
+      "feed_url": "https://raccoon.onyxbits.de/blog/index.xml",
+      "website_url": "https://raccoon.onyxbits.de/blog/",
+      "description": "A blog about Android, Google Play, cookies, bretzels, and world domination.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5063493.jpg?t=1606111886"
+    },
+    {
+      "title": "All in One Cluster",
+      "feed_url": "https://allinonecluster.com/blog/feed/",
+      "website_url": "https://allinonecluster.com/blog/",
+      "description": "Features articles that have to do exclusively with software development and related topics. All in One Cluster is a one-stop shop for all rental clone app development solutions. We provide a range of products & services including Airbnb Clone, Uber Clone, Zoom Clone, Cameo Clone, etc.",
+      "followers": {
+        "facebook": 7,
+        "twitter": 3,
+        "instagram": 17
+      },
+      "image_url": "https://i1.feedspot.com/5419050.jpg?t=1657169140"
+    },
+    {
+      "title": "Mass Software Solutions",
+      "feed_url": "https://massoftind.com/blog/feed/",
+      "website_url": "https://massoftind.com/blog/",
+      "description": "We are a result oriented, professional web design India, development and SEO company offering services at the best industry rates.",
+      "followers": {
+        "facebook": 942,
+        "twitter": 710
+      },
+      "image_url": "https://i1.feedspot.com/5165660.jpg?t=1606111824"
+    },
+    {
+      "title": "Prisom Technology",
+      "feed_url": "https://prisomtechnology.com/feed",
+      "website_url": "https://prisomtechnology.com/blogs",
+      "description": "Read Latest Blogs About Web & Mobile Game Development, AR (Augmented reality),VR(Virtual Reality), AI, Blockchain Technology, Alexa Skill development. Prisom Technology LLP is an offshore software development outsourcing company India. We offer offshore IT outsourcing services & solution for clients.",
+      "followers": {
+        "facebook": 650,
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/5035784.jpg?t=1606111945"
+    },
+    {
+      "title": "Logesh Palani",
+      "feed_url": "https://logeshpalani.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://logeshpalani.blogspot.com/",
+      "description": "I am budding energetic engineer with interest in the area of Software and Embedded development. I am well equipped to developing new codes and also well versed in manage the existing codes. Follow to get updates on Xamarin, Microsoft Azure, C#, IoT and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5069928.jpg?t=1606112013"
+    },
+    {
+      "title": "Elinsys Blog | Latest web & Mobile Technology Blog",
+      "feed_url": "https://www.elinsys.com/feed/",
+      "website_url": "https://www.elinsys.com/blog/",
+      "description": "Elinsys prime focus is to provide businesses with best in class web solutions and futuristic mobile applications that can help you align your business for success. We deliver customized solutions that attract traffic and generate conversions. Read our latest blog post on web design, web development, mobile apps development, and Internet marketing industry by Elinsys.",
+      "followers": {
+        "facebook": 264,
+        "twitter": 216,
+        "instagram": 204
+      },
+      "image_url": "https://i1.feedspot.com/4863077.jpg?t=1609394800"
+    },
+    {
+      "title": "R\u00e9mi Bourgarel's Blog",
+      "feed_url": "https://remibou.github.io/feed",
+      "website_url": "https://remibou.github.io/",
+      "description": "Blog about software development. Blazor, ASPNET Core, C#, Web Assembly, Spring, Angular, Docker. Follow to get updates.",
+      "followers": {
+        "twitter": 214
+      },
+      "image_url": "https://i1.feedspot.com/5057849.jpg?t=1606112207"
+    },
+    {
+      "title": "Lars Roettig",
+      "feed_url": "https://larsroettig.dev/rss.xml",
+      "website_url": "https://larsroettig.dev/",
+      "description": "Lars Roettig a blog about Software Architecture and Magento Development",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131050.jpg?t=1606112096"
+    },
+    {
+      "title": "CronJ Blog",
+      "feed_url": "https://www.cronj.com/blog/feed/",
+      "website_url": "https://www.cronj.com/blog/",
+      "description": "Explore CronJ's blog featuring tutorial guides for a variety of IT problems and talent-driven technological solutions. CronJ is a product development company that solves problems in Video analytics, IoT, Industrial Automation, Manufacturing 4.0, Smart Factory, Smart City, BlockChain, and supply chain consulting.",
+      "followers": {
+        "twitter": 123
+      },
+      "image_url": "https://i1.feedspot.com/5263506.jpg?t=1695214500"
+    },
+    {
+      "title": "WebAppers",
+      "feed_url": "https://feeds.feedburner.com/Webappers",
+      "website_url": "https://www.webappers.com/",
+      "description": "Dedicated to sharing top-quality open-source resources for web developers and web designers daily. These resources include plugins, themes, graphics, code, and more.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/33526.jpg?t=1605851796"
+    },
+    {
+      "title": "PragDave - Dave Thomas",
+      "feed_url": "https://pragdave.me/feed.xml",
+      "website_url": "https://pragdave.me/blog/",
+      "description": "Programmer turned publisher Dave Thomas blogs and tweets about all manner of development news and advice. He is co-author of The Pragmatic Programmer, Programming Elixir, Programming Ruby, The Pragmatic Starter Kit, Agile Web Development with Rails. Speaker. Trainer. Publisher.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4537221.jpg?t=1605850620"
+    },
+    {
+      "title": "2Base Technologies Blog",
+      "feed_url": "https://www.2basetechnologies.com/feed/",
+      "website_url": "https://www.2basetechnologies.com/blog/",
+      "description": "Check out our blog to know about the latest trends in technologies and updates on the best web & mobile app development company. 2Base Technologies is a mobile and website development company in India that is the technology partner & consultants for various startups & Fortune 500 companies.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 910,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5039876.jpg?t=1606111200"
+    },
+    {
+      "title": "Sate Technologies",
+      "feed_url": "https://medium.com/feed/@sate.technologies",
+      "website_url": "https://medium.com/@sate.technologies",
+      "description": "Sate Technologies is a leading software development company with deep expertise in Android, iOS and web apps. Follow to get updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5072109.jpg"
+    },
+    {
+      "title": "IT Enterprise",
+      "feed_url": "https://itenterprise.co.uk/blog/feed/",
+      "website_url": "https://itenterprise.co.uk/blog/",
+      "description": "IT Enterprise offers software development and IT consultancy services to SMEs to enable them to develop and grow as a business. Their blog is focused on sharing simple explanations of technical topics in addition to guides and advice about how to build businesses through digital methods.",
+      "followers": {
+        "facebook": 808,
+        "twitter": 569,
+        "instagram": 688
+      },
+      "image_url": "https://i1.feedspot.com/5036180.jpg?t=1606111967"
+    },
+    {
+      "title": "Sigma Solve Blog",
+      "feed_url": "https://www.sigmasolve.com/feed/",
+      "website_url": "https://www.sigmasolve.com/blog/",
+      "description": "The blog covers the latest trends and updates in eCommerce Website Development, SEO, Content Marketing, Copywriting, Web Design, and more. Sigma Solve is a technology consulting & software development company that helps and guides clients' vision for digitization, sales growth, system integration & business process automation.",
+      "followers": {
+        "facebook": 524,
+        "twitter": 954
+      },
+      "image_url": "https://i1.feedspot.com/5484713.jpg?t=1672224381"
+    },
+    {
+      "title": "Devgraph Blog",
+      "feed_url": "https://www.devgraph.com/blog/feed/",
+      "website_url": "https://www.devgraph.com/blog/",
+      "description": "Covers latest articles on driving higher development productivity and better-quality software. Devgraph is a suite of tightly integrated software development tools that is designed to maximise efficiency with higher quality software that doubles productivity every 2 years while increasing quality.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5318437.jpg?t=1630578996"
+    },
+    {
+      "title": "Alexey Golub",
+      "feed_url": "https://tyrrrz.me/blog/rss.xml",
+      "website_url": "https://tyrrrz.me/blog",
+      "description": "Alexey Golub is a software developer, open source maintainer, tech blogger and conference speaker.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5175192.jpg?t=1606111807"
+    },
+    {
+      "title": "Omertex Blog",
+      "feed_url": "https://www.blog.omertex.com/feed/",
+      "website_url": "https://www.blog.omertex.com/",
+      "description": "Omertex, Ltd. is a software development company from Belarus, focuses on Fintech, Blockchain.",
+      "followers": {
+        "facebook": 52,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5087445.jpg?t=1606112004"
+    },
+    {
+      "title": "Otaku, Cedric's blog | Thoughts about software development",
+      "feed_url": "https://www.beust.com/weblog/feed/",
+      "website_url": "https://www.beust.com/weblog/",
+      "description": "Otaku is packed-full of a ton of development advice, building off of author C\u00e9dric Beust 's experience as a former engineer at Android, and a the creator of the Java testing framework TestNG.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/70690.jpg?t=1606111781"
+    },
+    {
+      "title": "Martin Fowler",
+      "feed_url": "https://martinfowler.com/bliki/bliki.atom",
+      "website_url": "https://martinfowler.com/",
+      "description": "Software developer Martin Fowler is a prolific author and speaker essentially a loud-mouthed pundit on the topic of software development. He writes primarily around agile, refactoring and project delivery with a particular focus on the design of software systems, and ways to maximise the productivity of development.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 349200
+      },
+      "image_url": "https://i1.feedspot.com/77149.jpg?t=1623157001"
+    },
+    {
+      "title": "Developer.com",
+      "feed_url": "https://www.developer.com/",
+      "website_url": "https://www.developer.com/",
+      "description": "Key topics covered are java, Microsoft & .NET, languages, mobile, architecture & design, open source, cloud, database, web services, project management, security, voice and more. The Developer.com Network is the go-to resource for technical information written by developers for developers across the spectrum of development roles, platforms, programming languages, and methodologies.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4405405.jpg?t=1606111177"
+    },
+    {
+      "title": "The Daily WTF",
+      "feed_url": "http://syndication.thedailywtf.com/TheDailyWtf",
+      "website_url": "https://thedailywtf.com/",
+      "description": "Founded in 2004 by Alex Papadimoulis, The Daily WTF is your how-not-to guide for developing software. We recount tales of disastrous development, from project management gone spectacularly bad to inexplicable coding choices.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/21993.jpg?t=1657173835"
+    },
+    {
+      "title": "Phys.org: Software News",
+      "feed_url": "https://phys.org/rss-feed/technology-news/software/",
+      "website_url": "https://techxplore.com/software-news/",
+      "description": "Psyorg.com provides the latest news on the software, software development, software sciences and computer science.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/2193700.jpg?t=1606110700"
+    },
+    {
+      "title": "Invatechs \u00bb InvaBlog",
+      "feed_url": "https://www.invatechs.com/blog-feed.xml",
+      "website_url": "https://www.invatechs.com/invablog/",
+      "description": "Invatechs Software is a client-oriented Software Product Development Company and trusted Technological Partner for your business. Stay up to date with the latest trends in FinTech and Logistics with insights from our experts.",
+      "followers": {
+        "twitter": 31,
+        "instagram": 420
+      },
+      "image_url": "https://i1.feedspot.com/5140493.jpg?t=1605850542"
+    },
+    {
+      "title": "endjin blog",
+      "feed_url": "https://endjin.com/atom.xml",
+      "website_url": "https://endjin.com/blog/",
+      "description": "Endjin is a Microsoft Cloud Gold Partner that enable organizations of all sizes to deliver on the vision of a modern, data-driven enterprise.",
+      "followers": {
+        "facebook": 49,
+        "twitter": 1500,
+        "instagram": 57
+      },
+      "image_url": "https://i1.feedspot.com/5092445.jpg?t=1606111786"
+    },
+    {
+      "title": "BeyondKey Blog",
+      "feed_url": "https://www.beyondkey.com/blog/feed/",
+      "website_url": "https://www.valuelabs.com/resources/blog/",
+      "description": "BeyondKey is a World-Class Software Development and IT Consulting Company based in USA and India, delivering business solutions globally using full stack Microsoft and open source technologies.",
+      "followers": {
+        "facebook": 604,
+        "twitter": 193
+      },
+      "image_url": "https://i1.feedspot.com/5210878.jpg?t=1606111217"
+    },
+    {
+      "title": "Distillery Blog",
+      "feed_url": "https://distillery.com/feed/",
+      "website_url": "https://distillery.com/our-insights/blog/",
+      "description": "Distillery is a full-service software design and development company that offers custom software development for web and mobile applications. We have expertise in nearly every popular technical stack within any structure. Regardless of the project, we have the experience to execute in a timely manner. With the dedication of an in-house product team, we build apps with the mindset of achieving long-term goals and the understanding that launch is only the beginning.",
+      "followers": {
+        "facebook": 684,
+        "twitter": 732,
+        "instagram": 702
+      },
+      "image_url": "https://i1.feedspot.com/4893221.jpg?t=1606111790"
+    },
+    {
+      "title": "GeeksforGeeks",
+      "feed_url": "https://www.geeksforgeeks.org/feed/",
+      "website_url": "https://www.geeksforgeeks.org/",
+      "description": "A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes, and practice/competitive programming/company interview questions.",
+      "followers": {
+        "facebook": 215700,
+        "twitter": 84300,
+        "instagram": 471600
+      },
+      "image_url": "https://i1.feedspot.com/3365675.jpg?t=1658840981"
+    },
+    {
+      "title": "STX Next Blog",
+      "feed_url": "https://www.stxnext.com/blog/rss.xml",
+      "website_url": "https://www.stxnext.com/blog",
+      "description": "Read STX Next Blog to learn about Python web development, new trends in tech and outsourcing software development the right way. They are Europe's Python Powerhouse. Over 250 developers stand ready to supercharge your business, the Agile way. Their toolbox of frameworks includes Django, Angular and ReactJS, each chosen to create reliable solutions in short order.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 851,
+        "instagram": 989
+      },
+      "image_url": "https://i1.feedspot.com/4921883.jpg?t=1605850601"
+    },
+    {
+      "title": "Codersera Blog",
+      "feed_url": "https://codersera.com/blog/feed",
+      "website_url": "https://codersera.com/blog",
+      "description": "A collection of the latest blog posts about tech & software engineering trends, startup advice, and business insights. Codersera blog is the top hub for developers, designers, and entrepreneurs, featuring key technology updates, tutorials, freelancer resources, and management insights.",
+      "followers": {
+        "facebook": 480,
+        "twitter": 256
+      },
+      "image_url": "https://i1.feedspot.com/5305992.jpg?t=1627478806"
+    },
+    {
+      "title": "Plutora | Deliver Better Software Faster",
+      "feed_url": "https://www.plutora.com/feed",
+      "website_url": "https://www.plutora.com/blog",
+      "description": "Read our thought-provoking views and industry war stories. Learn about DevOps, IT Governance, Software Testing, Release Management and more...",
+      "followers": {
+        "twitter": 1900,
+        "instagram": 69
+      },
+      "image_url": "https://i1.feedspot.com/5087540.jpg?t=1606111238"
+    },
+    {
+      "title": "Elitex",
+      "feed_url": "https://elitex.systems/blog/feed",
+      "website_url": "https://elitex.systems/blog",
+      "description": "ELITEX is a boutique IT company based in Lviv, Ukraine. Their main expertise is custom software development using JavaScript and building dedicated development teams for businesses and startups.",
+      "followers": {
+        "facebook": 632,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5174601.jpg?t=1606111958"
+    },
+    {
+      "title": "Prompt Softech Blog",
+      "feed_url": "https://www.panthsoftech.com/blog/feed/",
+      "website_url": "https://www.netsolutions.com/insights/",
+      "description": "Prompt Softech is a leading custom software development company in India. We offer end-to-end outsourcing software development services and mobile app development services. Follow to get updates.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2800,
+        "instagram": 582
+      },
+      "image_url": "https://i1.feedspot.com/5063817.jpg?t=1606111798"
+    },
+    {
+      "title": "Net Solutions",
+      "feed_url": "https://www.netsolutions.com/insights/feed/",
+      "website_url": "https://www.netsolutions.com/insights/",
+      "description": "Read our thought leadership-driven content on best practices and trends in the ever-evolving technology landscape. Net Solutions is a strategic design & build consultancy that unites creative design thinking with agile software development under one expert roof. Founded in 2000, we create award-winning transformative digital products & platforms for startups and enterprises worldwide.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 2000,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5159121.jpg?t=1612177819"
+    },
+    {
+      "title": "Django Stars Blog",
+      "feed_url": "https://djangostars.com/blog/",
+      "website_url": "https://djangostars.com/blog/",
+      "description": "Django Stars is a full-service web and mobile development company. We provide our clients with creative solutions to help them drive the business forward and achieve goals. Here, we share our best practices, technical solutions, management tips and every useful insight we've got while working on our projects.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1800,
+        "instagram": 574
+      },
+      "image_url": "https://i1.feedspot.com/5033754.jpg?t=1606111191"
+    },
+    {
+      "title": "Yugasa",
+      "feed_url": "https://yugasa.com/",
+      "website_url": "https://yugasa.com/",
+      "description": "Yugasa is a global provider of high-quality software development services that delivers world-class software solutions to clients of every size.",
+      "followers": {
+        "facebook": 586,
+        "twitter": 229
+      },
+      "image_url": "https://i1.feedspot.com/4739962.jpg?t=1606111764"
+    },
+    {
+      "title": "Sunflower Lab",
+      "feed_url": "https://www.thesunflowerlab.com/feed/",
+      "website_url": "https://www.thesunflowerlab.com/blog/",
+      "description": "Covers articles about Android, Apps, digital transformation, ioS, software development, technology, web development and web design. Sunflower Lab is an award-winning software development company with a long-standing history of solving our client's toughest technology problems.",
+      "followers": {
+        "facebook": 246,
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/5342093.jpg?t=1636617668"
+    },
+    {
+      "title": "Swizec Teller's Blog",
+      "feed_url": "https://swizec.com/blog/",
+      "website_url": "https://swizec.com/blog/",
+      "description": "Swizec writes about JavaScript, ReactJS, and technical skills that will boost your career. He helps coders turn into high-value JavaScript experts with books, articles, talks, and workshops.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 16000,
+        "instagram": 859
+      },
+      "image_url": "https://i1.feedspot.com/105323.jpg?t=1606111760"
+    },
+    {
+      "title": "Xicom Blog | Software, Mobile App, Web Development Dubai, UAE",
+      "feed_url": "https://www.xicom.ae/blog/feed/",
+      "website_url": "https://www.xicom.ae/blog/",
+      "description": "Xicom is a ISO 9001:2008 certified software development company providing custom software, mobile app and web application development services in Dubai, UAE.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 542
+      },
+      "image_url": "https://i1.feedspot.com/4863075.jpg?t=1606111828"
+    },
+    {
+      "title": "Octos Global solutions | Software Development Company",
+      "feed_url": "https://www.octosglobal.com/feed/",
+      "website_url": "https://www.octosglobal.com/blog",
+      "description": "Octos Global Solutions Leading Software Development Company offering Mobile App Development, Software outsourcing, Quality Assurance Services in California.",
+      "followers": {
+        "facebook": 555,
+        "twitter": 1400,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4793096.jpg?t=1606111981"
+    },
+    {
+      "title": "Anadea Blog",
+      "feed_url": "https://anadea.info/blog/feed",
+      "website_url": "https://anadea.info/blog/",
+      "description": "Anadea was founded in 2000 and since then has grown into a trustful international custom software development services provider. We work with clients all over the globe and help businesses of all sizes to become strong and prosperous through automation, digitalization, and the latest technologies, such as Machine Learning.",
+      "followers": {
+        "facebook": 585,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4540504.jpg?t=1606111174"
+    },
+    {
+      "title": "QuikieApps",
+      "feed_url": "https://www.quikieapps.com/blog/feed/",
+      "website_url": "https://codeandpepper.com/blog/",
+      "description": "As one of the top-ranked software development companies, QuikieApps offers innovative and expert level solutions regarding software and app development. Such solutions are personalized and comprise all the development methods and Quality Assurance (QA) practices. The size and domain of your business do not matter. Our motto is to ensure speedy delivery to our respected customers.",
+      "followers": {
+        "facebook": 436,
+        "twitter": 27,
+        "instagram": 26
+      },
+      "image_url": "https://i1.feedspot.com/5197060.jpg?t=1606111265"
+    },
+    {
+      "title": "Emirates Software Group FZ LLC",
+      "feed_url": "https://emiratessg.com/blog/feed/",
+      "website_url": "https://emiratessg.com/blog/",
+      "description": "We are a UAE based software development company operating in UAE since 2013; we have delivered number of different software solutions to our valuable clients ranging from websites, mobile apps, desktop applications, and much more",
+      "followers": {
+        "facebook": 137,
+        "twitter": 50,
+        "instagram": 119
+      },
+      "image_url": "https://i1.feedspot.com/5119222.jpg?t=1606112008"
+    },
+    {
+      "title": "Digital Maelstrom",
+      "feed_url": "https://www.digitalmaelstrom.net/feed/",
+      "website_url": "https://www.digitalmaelstrom.net/blog/",
+      "description": "DM provides IT services in custom software development, security, operations, and strategy. As your IT Consultant, our top goal is your organization's gain. Follow Digital Maelstrom's page Out of the Maelstrom to keep up on new IT insights, industry guidance, business growth, and community engagement here.",
+      "followers": {
+        "twitter": 235,
+        "instagram": 413
+      },
+      "image_url": "https://i1.feedspot.com/5135761.jpg?t=1643793594"
+    },
+    {
+      "title": "AppRocket Blog",
+      "feed_url": "https://blog.approcket.co/feed/",
+      "website_url": "https://kndcode.com/nearshore-insights",
+      "description": "Software Development & Product Consulting made easy. We build startups that use advanced tech including Analytics, Machine Learning & AI to shape tomorrow.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 373
+      },
+      "image_url": "https://i1.feedspot.com/5053807.jpg?t=1605850667"
+    },
+    {
+      "title": "Nectarbits Blog",
+      "feed_url": "https://nectarbits.com/blog/feed/",
+      "website_url": "https://nectarbits.com/blog/",
+      "description": "Covers web and mobile app development tips, latest technology news, and much more. Get the latest On Demand App trends in technology and mobile applications. Nectarbits' vision is to provide a hands-on solution in every industry to make humans live easier and better.",
+      "followers": {
+        "facebook": 587,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5124501.jpg?t=1625810786"
+    },
+    {
+      "title": "bol.com Techlab",
+      "feed_url": "https://techlab.bol.com/blog/feed/",
+      "website_url": "https://litslink.com/blog",
+      "description": "Articles on development, infrastructure, UX, testing and security. bol.com Techlab is the e-commerce platform in the Netherlands and Belgium.",
+      "followers": {
+        "twitter": 485
+      },
+      "image_url": "https://i1.feedspot.com/5217632.jpg?t=1606110693"
+    },
+    {
+      "title": "Radixweb Blog",
+      "feed_url": "https://radixweb.com/feed/",
+      "website_url": "https://radixweb.com/blog",
+      "description": "Stay tuned with our latest blog on software development, IT outsourcing, technology trends and more about company's insights.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5187415.jpg?t=1608537607"
+    },
+    {
+      "title": "DevX: Your Information Source for Enterprise Application Development",
+      "feed_url": "https://www.devx.com/outgoing/devxfeed.xml",
+      "website_url": "https://www.devx.com/",
+      "description": "A 360-degree view of Enterprise Application Development. DevX is the leading provider of technical information, tools, and services for IT professionals developing corporate applications.",
+      "followers": {
+        "twitter": 648
+      },
+      "image_url": "https://i1.feedspot.com/22946.jpg?t=1605850607"
+    },
+    {
+      "title": "Mad Devs Blog\u200a",
+      "feed_url": "https://maddevs.io/insights/blog/",
+      "website_url": "https://blog.maddevs.io/",
+      "description": "Mad Devs is a Cambridge-headquartered IT company developing enterprise-level software solutions for finance, transportation & logistics, security, edtech, and advertising industries.",
+      "followers": {
+        "facebook": 95,
+        "twitter": 565,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5202387.jpg?t=1606111802"
+    },
+    {
+      "title": "Zapbuild",
+      "feed_url": "https://www.zapbuild.com/bitsntricks/feed/",
+      "website_url": "https://www.zapbuild.com/bitsntricks/",
+      "description": "Bitsntricks is a hub for the latest technical updates about the web. It is a technical blog that shares tutorials for Software developers and Architects.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1900,
+        "instagram": 529
+      },
+      "image_url": "https://i1.feedspot.com/5059307.jpg?t=1605850610"
+    },
+    {
+      "title": "Code-diesel Blog",
+      "feed_url": "https://www.codediesel.com/feed/",
+      "website_url": "https://www.codediesel.com/",
+      "description": "This blog shares Articles, tutorials and ideas on web development. The ideas are about software in general and php/mysql in particular.",
+      "followers": {
+        "facebook": 920,
+        "twitter": 147
+      },
+      "image_url": "https://i1.feedspot.com/332534.jpg?t=1606111259"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "category": "Portland Cannabis",
+  "source_url": "https://rss.feedspot.com/portland_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Weed Blog",
+      "feed_url": "https://theweedblog.com/feed",
+      "website_url": "https://theweedblog.com/",
+      "description": "Discover the latest cannabis news on The Weed Blog, your go-to resource for marijuana-related topics. Explore marijuana law, activism, medical updates, product reviews, smoking tips, and the plant's cultural significance. Stay informed with the latest insights into cannabis culture and trends.",
+      "followers": {
+        "facebook": 957500,
+        "twitter": 61000
+      },
+      "image_url": "https://i1.feedspot.com/5311543.jpg?t=1755081247"
+    },
+    {
+      "title": "Fidus PDX Blog",
+      "feed_url": "https://fiduspdx.com/feed/",
+      "website_url": "https://fiduspdx.com/blog/",
+      "description": "Level up your Cannabis knowledge with creative insights and Cannabis local stories. Fidus PDX's blog is stacked with in-depth guides on Cannabis products and lifecycles, consumption, and the variety on offer. Fidus PDX is a Portland-based dispensary that strives to provide the finest cannabis available.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7299310.jpg?t=1714754426"
+    },
+    {
+      "title": "Urban Farmacy",
+      "feed_url": "https://urbanfarmacypdx.com/feed/",
+      "website_url": "https://urbanfarmacypdx.com/oregon-cannabis-news/",
+      "description": "Urban Farmacy's inception in 2014 marked a passionate venture into Oregon's evolving cannabis landscape. Originating as a medical dispensary, it has since blossomed into a hub of cannabis culture and information. Explore their blog for in-depth insights on strains, recipes, dosing, and Oregon's cannabis scene.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 645
+      },
+      "image_url": "https://i1.feedspot.com/7294403.jpg?t=1714655579"
+    },
+    {
+      "title": "Tetra Cannabis Blog",
+      "feed_url": "https://tetrapdx.com/feed/",
+      "website_url": "https://tetrapdx.com/blog/",
+      "description": "Tetra Cannabis, a recreational dispensary, welcomes adults 21+ seeking a cannabis experience. Here, the Tetra team shares insights, reviews, how-tos, and musings on all things cannabis. It's a space where ideas flow freely, catering to enthusiasts with diverse interests and curiosities.",
+      "followers": {
+        "facebook": 329,
+        "twitter": 191
+      },
+      "image_url": "https://i1.feedspot.com/7294401.jpg?t=1714656079"
+    },
+    {
+      "title": "Bridge City Collective Blog",
+      "feed_url": "https://bridgecitycollective.com/blog/feed/",
+      "website_url": "https://greengoddesspdx.com/blog/",
+      "description": "BCC educates the community through blogs, providing vital Cannabis facts and medical support. The Bridge City Collective is a coast-to-coast fellowship of cannabis operators, educators, activists, and innovators. With decades of combined experience across every branch of the cannabis trade, the creators strive to be model citizens of this industry.",
+      "followers": {
+        "facebook": 983
+      },
+      "image_url": "https://i1.feedspot.com/7299307.jpg?t=1713243895"
+    }
+  ]
+}

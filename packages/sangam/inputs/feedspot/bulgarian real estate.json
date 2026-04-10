@@ -1,0 +1,36 @@
+{
+  "category": "Bulgarian Real Estate",
+  "source_url": "https://rss.feedspot.com/bulgarian_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sofia Property Broker",
+      "feed_url": "https://sofiapropertybroker.com/feed/",
+      "website_url": "https://sofiapropertybroker.com/latest-property-news-in-sofia/",
+      "description": "We are an independent Sofia Property Broker and aim to provide concierge-style real estate services to our clients that go beyond those offered by the large real estate agents in Sofia, Bulgaria by offering a single solution for buying or selling property. We have a detailed knowledge of the real estate market value in Sofia and will not waste your time in showing you over-priced, badly located properties or offering your assets at an unrealistic price to unvetted buyers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5525299.jpg?t=1679652487"
+    },
+    {
+      "title": "Vip Bulgarian Properties Blog",
+      "feed_url": "https://vipbulgarianproperties.com/blog/feed/",
+      "website_url": "https://vipbulgarianproperties.com/blog/",
+      "description": "VIP Bulgarian Properties is a leading real estate agency in Bulgaria. Since our establishment, we have been working hard in two main directions - offering a large selection of properties and providing all accompanying purchase services. We provide high reliability of its services.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 47,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5525300.jpg?t=1679549639"
+    },
+    {
+      "title": "Homes In Bulgaria News",
+      "feed_url": "https://sellmybulgarianproperty.com/feed/",
+      "website_url": "https://sellmybulgarianproperty.com/news/",
+      "description": "Homes in Bulgaria is a British/Bulgarian real estate agency founded in 2003. Offering a complete service of estate agency sales, property investment and advice, land acquisition, development consultancy, and project management, the business has been able to grow over the past 16 years to a position of experience, knowledge, and wisdom.",
+      "followers": {
+        "facebook": 168
+      },
+      "image_url": "https://i1.feedspot.com/5525301.jpg?t=1679549744"
+    }
+  ]
+}

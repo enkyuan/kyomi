@@ -1,0 +1,917 @@
+{
+  "category": "CRM",
+  "source_url": "https://rss.feedspot.com/crm_rss_feeds",
+  "feeds": [
+    {
+      "title": "CustomerThink Blog",
+      "feed_url": "https://customerthink.com/category/blog/feed/",
+      "website_url": "https://customerthink.com/category/blog/",
+      "description": "CustomerThink is a global online community of business leaders striving to create profitable customer-centric enterprises. Main areas of coverage include Customer Relationship Management, Customer Experience Management and Social Business.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4661519.jpg?t=1617702519"
+    },
+    {
+      "title": "The Nimble Blog",
+      "feed_url": "https://www.nimble.com/blog/feed/",
+      "website_url": "https://www.nimble.com/blog/",
+      "description": "The Nimble Blog will cover topics including customers engagement with social media, sales & marketing automation, customer service and analytics.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 16900,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/18841.jpg?t=1617692844"
+    },
+    {
+      "title": "Nutshell CRM Blog",
+      "feed_url": "https://www.nutshell.com/feed",
+      "website_url": "https://www.nutshell.com/blog",
+      "description": "Nutshell is the user-friendly small business CRM that helps sales reps win more deals, with sales process automation, fast onboarding, and free support.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 2800,
+        "instagram": 800
+      },
+      "image_url": "https://i1.feedspot.com/4661385.jpg?t=1617692851"
+    },
+    {
+      "title": "SuperOffice CRM : Articles, Tips and Strategies Blog",
+      "feed_url": "https://www.superoffice.com/blog/feed/",
+      "website_url": "https://www.superoffice.com/blog/",
+      "description": "Driven by a passion for Customer Relationship Management (CRM), SuperOffice makes award winning CRM software for sales, marketing and customer service. As the leading European CRM provider, SuperOffice is trusted and used by more than 11,000 companies.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 809
+      },
+      "image_url": "https://i1.feedspot.com/4661389.jpg?t=1617692950"
+    },
+    {
+      "title": "SugarCRM - Get your daily dose of Sugar",
+      "feed_url": "https://www.sugarcrm.com/blog/feed/",
+      "website_url": "https://www.sugarcrm.com/resources/",
+      "description": "SugarCRM enables businesses to create extraordinary customer relationships with the most innovative and affordable CRM solution in the market.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 21800,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4664400.jpg?t=1671436595"
+    },
+    {
+      "title": "Bullhorn Blog",
+      "feed_url": "https://www.bullhorn.com/feed/",
+      "website_url": "https://www.bullhorn.com/blog/",
+      "description": "Check out Bullhorn's Blog to stay up to date on the latest customer relationship management trends and information.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4662018.jpg"
+    },
+    {
+      "title": "CRMside",
+      "feed_url": "https://crmside.com/feed/",
+      "website_url": "https://crmside.com/crm/",
+      "description": "This blog was birthed out of the frustration of searching for CRM and other software tools needed to save time and scale. CRMside is an Online Publication for CRM Tools and Resources. We create in-depth guides, review statistics and articles about CRM & Sometimes Automation.",
+      "followers": {
+        "facebook": 90
+      },
+      "image_url": "https://i1.feedspot.com/5635228.jpg?t=1690285117"
+    },
+    {
+      "title": "CRM Tech Zone - CRM News, CRM Technology News, Salesforce CRM News, Oracle CRM News, MS Dynamic CRM",
+      "feed_url": "https://crmtechzone.com/feed/",
+      "website_url": "https://crmtechzone.com/",
+      "description": "Welcome to CRMTechZone.com, your one-stop shop for everything about CRM and technology. We are committed to providing you with insightful information, expert counsel, and the most recent updates on Customer Relationship Management (CRM) technology, making us your one-stop shop for CRM solutions and more.",
+      "followers": {
+        "facebook": 435,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5691496.jpg?t=1697547780"
+    },
+    {
+      "title": "Onpipeline Blog",
+      "feed_url": "https://www.onpipeline.com/blog/feed/",
+      "website_url": "https://www.onpipeline.com/blog/",
+      "description": "Onpipeline\u2122 is a cloud-based, reliable, and scalable Sales CRM (SaaS) that includes a full suite of tools that boost productivity and make the sales process more human. We are obsessed with solving problems for our customers, and eager to determine the problems of tomorrow. Our goal is to be the fastest evolving, most flexible, and most scalable platform available.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5718310.jpg?t=1700653786"
+    },
+    {
+      "title": "Salesflare Blog - The Intelligent CRM",
+      "feed_url": "https://blog.salesflare.com/feed",
+      "website_url": "https://blog.salesflare.com/",
+      "description": "Salesflare is the intelligent sales CRM that sales people love. Salesflare reminds you of who you should contact, collects information on customers, and logs all your customer interactions for you.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4661784.jpg?t=1620123085"
+    },
+    {
+      "title": "Act-On Blog",
+      "feed_url": "https://act-on.com/feed/",
+      "website_url": "https://act-on.com/learn/blog/",
+      "description": "Covers articles on topics such as analytics and reporting, content marketing, corporate, customer journey, customer marketing, data management and reporting, demand and lead generation, email marketing, events marketing, lead management, marketing automation, marketing integrations, multi-channel marketing, public relations, sales and marketing alignment, social media marketing and web. Act-On Software is the world's growth marketing leader, offering solutions that empower marketers to move beyond the lead and engage targets at every step of the customer lifecycle.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 34400,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4608071.jpg?t=1615553185"
+    },
+    {
+      "title": "Destination CRM Magazine",
+      "feed_url": "http://feeds.infotoday.com/DestinationCRMAllArticles",
+      "website_url": "https://www.destinationcrm.com/Default.aspx",
+      "description": "Destination CRM is dedicated to providing Customer Relationship Management product and service information in a timely manner to connect decision makers and CRM industry providers now and into the future. Destination CRM is ideal for anyone looking to improve customer interactions across many industries.",
+      "followers": {
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5030175.jpg?t=1653653229"
+    },
+    {
+      "title": "HelloLeads Blog",
+      "feed_url": "https://www.helloleads.io/blog/feed/",
+      "website_url": "https://www.helloleads.io/blog/",
+      "description": "HelloLeads offers sales CRM software to manage leads, improve customer relationships & more. Try the lead management system for your business.",
+      "followers": {
+        "facebook": 616,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5242516.jpg?t=1612532906"
+    },
+    {
+      "title": "SalesPOP!",
+      "feed_url": "https://salespop.net/feed/",
+      "website_url": "https://salespop.net/",
+      "description": "SalesPOP! is an online multi-media magazine by PipelinerCRM. that empowers sales leaders, sales management, sales professionals and entrepreneurs to thrive in today's new world of sales.",
+      "followers": {
+        "facebook": 691,
+        "twitter": 2100,
+        "instagram": 942
+      },
+      "image_url": "https://i1.feedspot.com/4663980.jpg?t=1617694150"
+    },
+    {
+      "title": "Inogic - Microsoft Dynamics 365(CRM) Tips and Tricks Blog",
+      "feed_url": "https://www.inogic.com/blog/feed/",
+      "website_url": "https://www.inogic.com/blog/",
+      "description": "Inogic is a Microsoft Partner with Gold Competency in Dynamics CRM. Their Product division specializes in the development of innovative solutions and products for Dynamics CRM like Maplytics and InoLink. Maplytics - Bing Maps CRM Integration is a geo-analytics tool designed to provide geo-spatial analysis for Dynamics CRM data from within Dynamics CRM.",
+      "followers": {
+        "facebook": 530,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4661934.jpg?t=1617692994"
+    },
+    {
+      "title": "Commence CRM Blog",
+      "feed_url": "https://commence.com/feed/?x=1",
+      "website_url": "https://commence.com/commence-crm-blog/",
+      "description": "Commence provides small business software and CRM solutions to help you organize and better manage customer data, improve sales efficiency, generate new business, provide high quality customer service and make informed business decisions.",
+      "followers": {
+        "facebook": 648,
+        "twitter": 474
+      },
+      "image_url": "https://i1.feedspot.com/2148744.jpg?t=1617695130"
+    },
+    {
+      "title": "Nishant Rana's Weblog",
+      "feed_url": "https://nishantrana.me/feed/",
+      "website_url": "https://nishantrana.me/",
+      "description": "Nishant Rana is Microsoft Certified Professional in Microsoft Dynamics CRM (CRM 3.0 to CRM 2016), Microsoft SharePoint (2007 and 2013) and Microsoft .NET. In this blog find everything related to Microsoft .NET Technology",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4661887.jpg?t=1611137841"
+    },
+    {
+      "title": "Teamgate CRM Blog",
+      "feed_url": "https://www.teamgate.com/feed/",
+      "website_url": "https://www.teamgate.com/blog/",
+      "description": "The latest news on inbound sales, new tactics in sales management, and a fair share of learned lessons in the SaaS and CRM field.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4664284.jpg?t=1607512766"
+    },
+    {
+      "title": "eWay-CRM Blog",
+      "feed_url": "https://www.eway-crm.com/feed/",
+      "website_url": "https://www.eway-crm.com/blog/",
+      "description": "Providing insight into the CRM world. Learn how to better your business. Interviews, tips and training, case studies and much more. Follow eWay-Blog.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 99,
+        "instagram": 113
+      },
+      "image_url": "https://i1.feedspot.com/5091846.jpg?t=1617695145"
+    },
+    {
+      "title": "It Ain't Boring",
+      "feed_url": "https://www.itaintboring.com/feed/",
+      "website_url": "https://www.itaintboring.com/",
+      "description": "Dynamics CRM Solution Architect with over 15 years of experience in the Information Technology Industry and more than 6 years of experience in requirements analysis, gathering and interpreting requirements documents, designing, configuring, coding, developing and implementing Microsoft Dynamics CRM based solutions for numerous clients.",
+      "followers": {
+        "twitter": 456
+      },
+      "image_url": "https://i1.feedspot.com/4763957.jpg?t=1617695162"
+    },
+    {
+      "title": "JOPX on CRM, Cloud and Analytics",
+      "feed_url": "https://feeds.feedburner.com/blogspot/reSHU",
+      "website_url": "http://jopx.blogspot.com/",
+      "description": "Occasional rantings about Dynamics CRM/365, Power BI, SharePoint, Office 365 and Azure cloud. Intrigued about how people collaborate and data driven decision making. Taking the first small steps in machine learning. Putting all of the above in practical use to help companies 'embrace' their customers.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/756044.jpg?t=1617696310"
+    },
+    {
+      "title": "enCloud9 Blog",
+      "feed_url": "https://www.encloud9.com/feed/",
+      "website_url": "https://www.encloud9.com/blog/",
+      "description": "enCloud9 helps small businesses to maximize their engagements with clients, prospects, and constituents. The blog focuses on helping you to get the most out of your Dynamics 365 with ideas and tips on sales, marketing, and customer service.",
+      "followers": {
+        "facebook": 455,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4664220.jpg?t=1599484170"
+    },
+    {
+      "title": "CallProof Blog",
+      "feed_url": "https://callproof.com/blog/feed/",
+      "website_url": "https://callproof.com/blog/",
+      "description": "CallProof is the leading sales tracking app & web portal that automates sales reporting activities in real time so you can sell more.",
+      "followers": {
+        "facebook": 488,
+        "twitter": 474
+      },
+      "image_url": "https://i1.feedspot.com/4664247.jpg?t=1671443974"
+    },
+    {
+      "title": "CRM Software Blog",
+      "feed_url": "https://www.crmsoftwareblog.com/feed/",
+      "website_url": "https://www.crmsoftwareblog.com/",
+      "description": "Microsoft Dynamics 365 & Dynamics CRM experts provide reviews and opinions to aid professionals with the Dynamics 365 selection process.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/1687167.jpg?t=1617695787"
+    },
+    {
+      "title": "1to1 Media",
+      "feed_url": "https://www.1to1media.com/feed",
+      "website_url": "https://www.1to1media.com/",
+      "description": "1to1 Media's award-winning editors produce in-depth and provocative features and case studies, as well as infographics, blogs, whitepapers, and e-books that cover the latest trends and insights in customer experience. Topics focus on customer service, marketing, employee engagement, sales effectiveness, and customer loyalty.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4661352.jpg?t=1617695735"
+    },
+    {
+      "title": "Epikonic Blog",
+      "feed_url": "http://www.epikonic.com/category/blog/feed/",
+      "website_url": "http://www.epikonic.com/category/blog/",
+      "description": "A blog about helping businesses to improve in Digital Transformation, Customer Engagement, Customer Experience, CRM, Innovation.",
+      "followers": {
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4661539.jpg?t=1617700625"
+    },
+    {
+      "title": "ECELLORS CRM Blog",
+      "feed_url": "https://ecellorscrm.com/feed/",
+      "website_url": "https://ecellorscrm.com/",
+      "description": "Sharing thoughts and challenges on Dynamics 365 along with respective solutions put together.",
+      "followers": {
+        "facebook": 15,
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5156257.jpg?t=1617696292"
+    },
+    {
+      "title": "ScienceSoft",
+      "feed_url": "https://www.scnsoft.com/blog/category/crm/atom",
+      "website_url": "https://www.scnsoft.com/blog/category/crm",
+      "description": "We have created this space for business owners, sales executives, IT and CRM managers who are keen to get a complete picture of CRM capabilities. Via how-to tutorials and business-oriented CRM articles, we lead you to a better understanding of the potential of building profitable customer relationships and help to efficiently cope with business challenges connected with customer management. Our primary focus is on two powerful solutions Salesforce and Microsoft Dynamics 365.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4959143.jpg?t=1611137862"
+    },
+    {
+      "title": "Mallareddy Gurram",
+      "feed_url": "http://mscrmgmr.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mscrmgmr.blogspot.com/",
+      "description": "This blog aims to provide some technical tips about Microsoft Dynamics CRM 4.0/2011/2013/2015/2016, DYNAMICS 365, SQL Server and .Net Javascript.",
+      "followers": {
+        "facebook": 188
+      },
+      "image_url": "https://i1.feedspot.com/4662139.jpg?t=1611137854"
+    },
+    {
+      "title": "Practical Jobs-to-be-Done",
+      "feed_url": "https://jobstobedone.substack.com/feed",
+      "website_url": "https://jobstobedone.substack.com/",
+      "description": "A blog for those interested in eliminating the lack of precision and the complexity of problem-solving for innovation, growth strategy, and customer experience using the lens of Customer Jobs Theory.",
+      "followers": {
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4661811.jpg?t=1617697499"
+    },
+    {
+      "title": "Dynamics 365 Blogs",
+      "feed_url": "https://d365feeds.com/feed/",
+      "website_url": "https://d365feeds.com/",
+      "description": "Talking about myself, i am Kuldeep Gupta from CloudFronts Technologies LLP. I work as a Delivery Maanger here. I have vast expertise in D365 PSA have written my e-book that facilitates learning for newbies.",
+      "followers": {
+        "twitter": 85
+      },
+      "image_url": "https://i1.feedspot.com/4962776.jpg?t=1617697553"
+    },
+    {
+      "title": "Certified Microsoft Dynamics CRM/365 Consultant",
+      "feed_url": "https://pradipwebmaster.wordpress.com/feed/",
+      "website_url": "https://pradipwebmaster.wordpress.com/",
+      "description": "Blog about Microsoft Dynamics CRM/365, Umbraco CMS and ASP.NET",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5063479.jpg?t=1671444685"
+    },
+    {
+      "title": "ConvergeHub Blog",
+      "feed_url": "https://www.convergehub.com/blog/feed",
+      "website_url": "https://www.convergehub.com/blog",
+      "description": "ConvergeHub combines Sales, Marketing and Service in a powerful CRM that helps small and medium business win sales and engage customers.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4859589.jpg?t=1617692978"
+    },
+    {
+      "title": "CRMnext - Digital CRM Blog",
+      "feed_url": "https://www.businessnext.com/blogs/feed/",
+      "website_url": "https://www.businessnext.com/blogs/",
+      "description": "The official blog by CRMNEXT for latest Customer Relationship Management trends, industry landscape, best practices in social, mobility, analytics, cloud for sales, customer service, marketing, key opinion leaders, gamification and much more.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 115
+      },
+      "image_url": "https://i1.feedspot.com/4661447.jpg?t=1617693005"
+    },
+    {
+      "title": "Archiz Solutions",
+      "feed_url": "https://archizsolutions.com/feed/",
+      "website_url": "https://archizsolutions.com/blogs/",
+      "description": "At Archiz, we believe there is a better way to do Sales, marketing, and customer support. We believe in a more valuable, less invasive way where customers are earned rather than bought. Our mission of providing smart solutions for your business helps you to grow your business, provide technical solutions to understand more business.",
+      "followers": {
+        "facebook": 735,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5171255.jpg?t=1617695141"
+    },
+    {
+      "title": "Saleswah CRM",
+      "feed_url": "https://saleswah.com/feed/",
+      "website_url": "https://saleswah.com/blogs/",
+      "description": "Covers articles to sales management, campaign management, lead management, how to manage transactions, processes, teams and opportunities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5364770.jpg?t=1671438125"
+    },
+    {
+      "title": "ActionClient Blog",
+      "feed_url": "https://actionclient.com/en/feed/",
+      "website_url": "https://actionclient.com/en/blog/",
+      "description": "ActionClient is a free CRM software for small businesses, freelancers, and sales representatives. It is designed to be simple and easy to use, so you can focus on selling and prospecting. ActionClient allows you to track your contacts, manage your pipeline, and keep notes on your interactions. It also includes features for sending emails, scheduling appointments, and generating reports.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5659167.jpg?t=1693303146"
+    },
+    {
+      "title": "Zoho CRM Blog",
+      "feed_url": "https://www.zoho.com/blog/crm/feed",
+      "website_url": "https://www.zoho.com/blog/crm",
+      "description": "Zoho CRM gives you a 360-degree view of your complete sales cycle and pipeline. Identify trends, spot opportunities, increase efficiency, and reduce costs with the right answers, right now.",
+      "followers": {
+        "facebook": 230400,
+        "twitter": 102000,
+        "instagram": 199700
+      },
+      "image_url": "https://i1.feedspot.com/4664142.jpg?t=1620121828"
+    },
+    {
+      "title": "Smackcoders",
+      "feed_url": "https://www.smackcoders.com/blog.html/feed",
+      "website_url": "https://www.smackcoders.com/blog.html",
+      "description": "Follow the blog for the latest news and product updates from Smackcoders.",
+      "followers": {
+        "facebook": 314,
+        "twitter": 371
+      },
+      "image_url": "https://i1.feedspot.com/5047868.jpg?t=1617692970"
+    },
+    {
+      "title": "Cynoteck Blog",
+      "feed_url": "https://cynoteck.com/blog-post/feed/",
+      "website_url": "https://cynoteck.com/blog-post/",
+      "description": "This blog showcase knowledge base on CRM, Cloud Computing, sales force and Mobile Apps development with focus on selecting best CRM & sales force consultant.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4661507.jpg?t=1620801139"
+    },
+    {
+      "title": "MSDynamicsWorld.com - MSDW Blog",
+      "feed_url": "https://feeds.feedburner.com/MsdwHomePage",
+      "website_url": "https://msdynamicsworld.com/",
+      "description": "MSDynamicsWorld.com is the independent authority for Microsoft Dynamics AX, GP, NAV, SL, and CRM news, white papers, case studies, and add-on ISV solutions.",
+      "followers": {
+        "facebook": 712,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/1061480.jpg?t=1671444598"
+    },
+    {
+      "title": "Microsoft Dynamics CRM Tip Of The Day",
+      "feed_url": "https://crmtipoftheday.com/feed/",
+      "website_url": "https://crmtipoftheday.com/",
+      "description": "Daily sm\u00f6rg\u00e5sbord of finest Microsoft Dynamics CRM tips and tricks.",
+      "followers": {
+        "facebook": 901,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4661877.jpg?t=1671436400"
+    },
+    {
+      "title": "Microsoft Dynamics 365 and Unified Service Desk",
+      "feed_url": "https://neilparkhurst.com/feed/",
+      "website_url": "https://neilparkhurst.com/category/crm-certifications/",
+      "description": "Neil Parkhurst is Microsoft MVP with a passion for all things Dynamics related includes posts on CRM and USD.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4662022.jpg?t=1617695700"
+    },
+    {
+      "title": "Microsoft Dynamics 365 CRM Online Blog",
+      "feed_url": "https://mscrmonline.wordpress.com/feed/",
+      "website_url": "https://mscrmonline.wordpress.com/",
+      "description": "How To Articles, Samples, Tips, Best Practices, News and Events about Microsoft CRM Online.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4662150.jpg?t=1617700664"
+    },
+    {
+      "title": "Develop 1 Limited Blog",
+      "feed_url": "https://www.develop1.net/public/syndication.axd?format=rss",
+      "website_url": "https://www.develop1.net/public/default.aspx",
+      "description": "Develop 1 Limited are a Microsoft Partner with experience in the Financial Services, Insurance and Local Government sectors. They specialise in Microsoft Dynamics CRM solutions with bespoke integration to line of business applications.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4510626.jpg?t=1671445255"
+    },
+    {
+      "title": "CRM Success by ClientsFirst Consulting Blog",
+      "feed_url": "https://clientsfirstconsulting.com/feed/",
+      "website_url": "https://clientsfirstconsulting.com/blog/",
+      "description": "A blog for CRM and Data Quality also covering eMarketing and other best practices. Blog posts cover CRM Success Tips, Business Development, Business intelligence, Case Studies, Marketing Technology, Outsourcing, and Technology. CLIENTSFirst offers CRM, eMarketing, and Data Quality Services to help you grow your business.",
+      "followers": {
+        "facebook": 474,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5309866.jpg?t=1628231626"
+    },
+    {
+      "title": "CrmKnowHow",
+      "feed_url": "https://crmknowhow.wordpress.com/feed/",
+      "website_url": "https://crmknowhow.wordpress.com/",
+      "description": "Umesh Kumar is currently a CRM Product Lead at Meridian Energy Limited in Christchurch, New Zealand. Umesh is also a Dynamics CRM Specialist.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5120991.jpg?t=1671444117"
+    },
+    {
+      "title": "Stevenjeffes",
+      "feed_url": "https://stevenjeffes.wordpress.com/feed/",
+      "website_url": "https://stevenjeffes.wordpress.com/",
+      "description": "Steven Jeffes is an award winning thought leader who has developed world-class CRM, marketing, sales, product management, social media, customer loyalty, retention and customer experience programs for numerous Fortune 500 companies including American Express, Pfizer, Intuit Software, Web MD, AstraZeneca, Lufthansa, American, Airlines, Wells Fargo, Microsoft, AT&T, Verizon, Vanguard Financial, Citigroup, Boehringer Ingelheim, HP, Compaq, Amazon, Chico's, Macy's, JC Penney, Neopost, and more.",
+      "followers": {
+        "twitter": 98800
+      },
+      "image_url": "https://i1.feedspot.com/4896082.jpg?t=1617697508"
+    },
+    {
+      "title": "Think Strategies",
+      "feed_url": "http://thinkstrategies.com/feed/",
+      "website_url": "http://thinkstrategies.com/blog/#",
+      "description": "The innovative THINKstrategies blog is written by Jeff Kaplan, who is its Managing Director. A leading expert in cloud computing, Jeff is a frequent guest blogger and keynote speaker on SaaS, managed services, and IOT.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/51295.jpg?t=1607513310"
+    },
+    {
+      "title": "Work and Study book Dynamics 365 (CRM) Blog",
+      "feed_url": "https://andz88.wordpress.com/feed/",
+      "website_url": "https://andz88.wordpress.com/",
+      "description": "A blog Sharing Andre K Margono work and study experience with technologies.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4661864.jpg?t=1611138626"
+    },
+    {
+      "title": "Salim Adamon Dynamics CRM Blog",
+      "feed_url": "https://www.salimadamoncrm.com/feed/",
+      "website_url": "https://www.salimadamoncrm.com/",
+      "description": "This blog is about Everything Dynamics CRM from a technical, architectural and business perspective.",
+      "followers": {
+        "twitter": 794
+      },
+      "image_url": "https://i1.feedspot.com/4662829.jpg?t=1617696582"
+    },
+    {
+      "title": "Nick Baggott's CRM and Digital Marketing Blog",
+      "feed_url": "https://feeds.feedburner.com/typepad/oCNG",
+      "website_url": "https://nickbaggott.typepad.com/",
+      "description": "This is all about providing strategic advice to clients, helping them to find the right path towards a successful digital marketing, CRM and data strategy. So, in this blog, he will try to bring you links to resources, articles & opinions that I think you will find interesting & thought provoking. he will also share his thoughts, opinions & comments on the latest marketing theories & projects.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4661802.jpg?t=1617697512"
+    },
+    {
+      "title": "Integros Blog",
+      "feed_url": "https://integroscrm.com/feed/",
+      "website_url": "https://integroscrm.com/category/sugarcrm-blog/",
+      "description": "As SugarCRM Advanced Partner Integros company offers full range of services on CRM processes improvement such as business consulting, CRM system customization and integration and CRM support",
+      "followers": {
+        "twitter": 465
+      },
+      "image_url": "https://i1.feedspot.com/4662103.jpg?t=1671443675"
+    },
+    {
+      "title": "That CRM Blog",
+      "feed_url": "https://thatcrmblog.wordpress.com/feed/",
+      "website_url": "https://thatcrmblog.wordpress.com/",
+      "description": "That CRM Blog is related to CRM and Customer Experience as it is a great example of how NOT to set up your customer service function.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4662074.jpg?t=1617697549"
+    },
+    {
+      "title": "ZeyOS Blog",
+      "feed_url": "https://www.zeyos.com/blog/rss",
+      "website_url": "https://www.zeyos.com/blog/",
+      "description": "ZeyOS unifies all the features of CRM and ERP you care about in one brilliant and intuitive platform - from e-mail and calendar to inventory and billing.",
+      "followers": {
+        "facebook": 467,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4661395.jpg?t=1671444488"
+    },
+    {
+      "title": "CRM Manifesto",
+      "feed_url": "https://crmmanifesto.wordpress.com/feed/",
+      "website_url": "https://crmmanifesto.wordpress.com/",
+      "description": "The CRM Manifesto is a declaration of the fundamental truths about Customer Relationship Management. It is intended to be used to inform and remind those on a CRM journey what they are seeking to achieve.",
+      "followers": {
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4681545.jpg?t=1617700638"
+    },
+    {
+      "title": "Mohamed Mostafa's Blog",
+      "feed_url": "https://www.mohamedmostafa.co.uk/blog/feed/",
+      "website_url": "https://www.mohamedmostafa.co.uk/blog/",
+      "description": "Mohamed Mostafa's Blog is about MSDynCRM Resources, Information, best practices & help on Microsoft Dynamics CRM, Scribe, .NET (C# & ASP), Integration, ECommerce, Business Transfomration and more.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4663969.jpg?t=1617700640"
+    },
+    {
+      "title": "Gustaf's Microsoft Dynamics CRM Blog",
+      "feed_url": "http://gustafwesterlund.blogspot.com/feeds/posts/default",
+      "website_url": "http://gustafwesterlund.blogspot.com/",
+      "description": "Gustaf Westerlund is Dynamics CRM MVP and Principal consultant of small consultancy with burning passion for Dynamics 365 and the CRM concepts.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/1204325.jpg?t=1617700645"
+    },
+    {
+      "title": "That Techie Girl for Power Platform",
+      "feed_url": "https://thattechiegirlroma.wordpress.com/feed/",
+      "website_url": "https://thattechiegirlroma.wordpress.com/",
+      "description": "I am Roma Gupta. I handled SMB to Enterprise clients managing an offshore team ranging from 2 to 12 consultants. Currently, I am the onsite delivery lead/SME/Project Coordinator for Dynamics 365 Customer Engagement online projects handling end-to-end delivery. I build relationships between stakeholders & Microsoft teams by providing simple and efficient designs using Dynamics Customer engagement and Microsoft stack of technologies.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5232175.jpg?t=1609409241"
+    },
+    {
+      "title": "AuroCRM Blog",
+      "feed_url": "https://www.aurocrm.com/feed/",
+      "website_url": "https://www.aurocrm.com/blog/",
+      "description": "AuroCRM is one of the best CRM Software that helps to make Multiple Marketing Strategies, Real-time Revenue Reports, and Deep Customer Insights. In AuroCRM blog, we cover topics related to CRM development and in general. Find the latest tips, guides, reviews of using CRM software, and how it benefits businesses.",
+      "followers": {
+        "facebook": 207,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/5171329.jpg?t=1617692999"
+    },
+    {
+      "title": "Microsoft Dynamics CRM",
+      "feed_url": "http://mscrmtechie.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mscrmtechie.blogspot.com/",
+      "description": "Started career at Osmosys, which has given me a chance to work on multiple Microsoft technologies like CRM, C#, ASP.net and MVC. Currently working as a Associate Consultant for MS CRM at Microsoft, Hyderabad, India.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4662115.jpg?t=1617696319"
+    },
+    {
+      "title": "Hosk's Dynamic CRM Blog",
+      "feed_url": "https://crmbusiness.wordpress.com/feed/",
+      "website_url": "https://crmbusiness.wordpress.com/",
+      "description": "I'm the Marvellous Hosk, this blog is all about my adventures in the world of Microsoft Dynamics CRM.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4151139.jpg?t=1611137876"
+    },
+    {
+      "title": "Arpit's Dynamic CRM Blog",
+      "feed_url": "https://arpitmscrmhunt.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://arpitmscrmhunt.blogspot.com/",
+      "description": "I am a MSCRM Technical Consultant on providing the best Solutions to the readers helping them achieve their Goals and objectives in Customer Relationship Space.",
+      "followers": {
+        "twitter": 233
+      },
+      "image_url": "https://i1.feedspot.com/4662129.jpg?t=1617695750"
+    },
+    {
+      "title": "Paramantra",
+      "feed_url": "https://www.paramantra.com/blog/feed/",
+      "website_url": "https://paramantra.com/",
+      "description": "Paramantra has been serving the CRM system needs of clients for over 11 years, with a retention rate of over 97%. Over the last decade, we have developed advanced SaaS-based CRM Software, which is sold and serviced directly by our team of experts.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5279613.jpg?t=1628230526"
+    },
+    {
+      "title": "karmaCRM Blog",
+      "feed_url": "https://www.karmacrm.com/feed/",
+      "website_url": "https://www.karmacrm.com/blog/",
+      "description": "A Simple CRM That You'll Actually Use. karmaCRM is the fully customizable solution for building better customer relationships through clarity and efficiency.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4664188.jpg?t=1617695109"
+    },
+    {
+      "title": "Hans Veldman's Microsoft Dynamics CRM",
+      "feed_url": "http://microsoftdynamicscrm.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://microsoftdynamicscrm.blogspot.com/",
+      "description": "Hans Veldman's blog is about Microsoft Dynamics CRM .",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4662133.jpg?t=1617701161"
+    },
+    {
+      "title": "ZDNET",
+      "feed_url": "https://www.zdnet.com/",
+      "website_url": "https://www.zdnet.com/",
+      "description": "Paul Greenberg focuses on not only what CRM is but where its going in this blog on CRM strategy, technology, stories, companies and personalities.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 456200
+      },
+      "image_url": "https://i1.feedspot.com/348251.jpg?t=1617692856"
+    },
+    {
+      "title": "Kapture CX Blog",
+      "feed_url": "https://www.kapture.cx/blog/",
+      "website_url": "https://www.kapture.cx/blog/",
+      "description": "Covers the latest tips and tactics in sales management, sales technology, customer service software and mobile CRM application. Be first to learn about latest Kapture Mobile CRM features, News. Also includes latest business CRM trends and automation benefits by big businesses.",
+      "followers": {
+        "twitter": 113
+      },
+      "image_url": "https://i1.feedspot.com/4662081.jpg?t=1640068054"
+    },
+    {
+      "title": "Tools On Cloud Blog",
+      "feed_url": "https://www.toolsoncloud.com/blog/",
+      "website_url": "https://www.toolsoncloud.com/blog/",
+      "description": "Covers sales and marketing tips, tricks, wisdom, insights and everything you would want learn to acquire more customers and close more sales. ToolsonCloud is a cloud based Sales CRM. It helps you organize your sales process, manage your sales contacts, leads, deals, tasks, etc and help you focus on improving your sales.",
+      "followers": {
+        "facebook": 65,
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/5311396.jpg?t=1628675336"
+    },
+    {
+      "title": "Godial Blog",
+      "feed_url": "https://godial.cc/blog/rss/",
+      "website_url": "https://godial.cc/blog/",
+      "description": "GoDial is an automatic call dialer app for your mobile. It turns your phone into a call center. Import an excel file and start dialing in seconds. Inbuilt advance CRM tracks payments, callbacks, notes, and much more.",
+      "followers": {
+        "facebook": 904,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5220414.jpg?t=1606374979"
+    },
+    {
+      "title": "Pipeline CRM Blog",
+      "feed_url": "https://pipelinecrm.com/blog/feed/",
+      "website_url": "https://pipelinecrm.com/blog/",
+      "description": "Follow the PipelineDeals blog for information on how to sell, building a sales pipeline and CRM software and other technology making waves in the world of selling.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4664280.jpg?t=1617700660"
+    },
+    {
+      "title": "Maximizer Blog",
+      "feed_url": "https://www.maximizer.com/feed/",
+      "website_url": "https://www.maximizer.com/resources/blog/",
+      "description": "Content & actionable advice that will help you maximize lead generation and manage pipelines to shorten sales cycles, close more deals and increase revenue. Maximizer Software has been developing CRM software to help businesses better manage their customers, leads, and prospects for over 25 years.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 3300,
+        "instagram": 389
+      },
+      "image_url": "https://i1.feedspot.com/4664061.jpg?t=1617700685"
+    },
+    {
+      "title": "CRM Buyer",
+      "feed_url": "https://www.crmbuyer.com/perl/syndication/rssfull.pl",
+      "website_url": "https://www.crmbuyer.com/",
+      "description": "CRM Buyer is the essential guide for CRM system purchasers. CRM Buyer features CRM product information, reviews and comparisons. It is an independent source updated each day.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/348370.jpg?t=1617692836"
+    },
+    {
+      "title": "The Vtiger Blog",
+      "feed_url": "https://www.vtiger.com/blog/feed/",
+      "website_url": "https://www.vtiger.com/blog/",
+      "description": "Insights and updates for sales, marketing, and customer service professionals. Vtiger CRM is online customer relationship management software that helps you track and nurture customers across marketing, sales, and customer service.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4664196.jpg"
+    },
+    {
+      "title": "Agile CRM Blog",
+      "feed_url": "https://www.agilecrm.com/blog/feed/",
+      "website_url": "https://www.agilecrm.com/blog/",
+      "description": "Agile CRM blog gives you insights on various topics related to an All-in-one CRM such as Marketing Automation, Sales Automation, Helpdesk and others to grow your small business.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4470608.jpg?t=1617692840"
+    },
+    {
+      "title": "Customer.com Blog",
+      "feed_url": "https://www.customer.com/feed/",
+      "website_url": "https://www.customer.com/blog/",
+      "description": "Stay on top of industry trends with our expert CRM blog, offering articles on customer relationship marketing strategy for retail and financial industries. Customer.com is an award-winning CRM agency focused on loyalty and retention.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5309869.jpg?t=1628328198"
+    },
+    {
+      "title": "NEHANET Corporation Blog",
+      "feed_url": "https://www.nehanet.com/feed/",
+      "website_url": "https://www.nehanet.com/blog/",
+      "description": "Our Focus NEHANET chosen by Leading Companies Worldwide Leading Manufacturers, Reps and Distributors choose NEHANET for one reason to maximize their Revenues and Profitability by automating and optimizing a broad set of business processes to drive business.",
+      "followers": {
+        "twitter": 179
+      },
+      "image_url": "https://i1.feedspot.com/5171291.jpg?t=1617696286"
+    },
+    {
+      "title": "FiveCRM Blog",
+      "feed_url": "https://www.fivecrm.com/feed/",
+      "website_url": "https://www.fivecrm.com/blog/",
+      "description": "The FIVE CRM suite of products give a range of options for CRM, email marketing, outbound calling, marketing automation & website tracking. This is a suite of fully customisable sales & marketing solutions, dedicated to helping organizations develop and grow.",
+      "followers": {
+        "facebook": 375,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4664241.jpg?t=1617695705"
+    },
+    {
+      "title": "Rich Bohn - SellMoreNow Blog",
+      "feed_url": "https://feeds.feedblitz.com/sellmorenow",
+      "website_url": "https://sellmorenow.com/blog/",
+      "description": "The oldest independent CRM analyst alive, Richard Bohn is a one-of-a-kind blend of salesman and computer geek on a mission to help companies to get the best bang for their buck when it comes to CRM software.",
+      "followers": {
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4661748.jpg?t=1671445266"
+    },
+    {
+      "title": "Insightly Blog",
+      "feed_url": "https://www.insightly.com/feed.xml",
+      "website_url": "https://www.insightly.com/blog/",
+      "description": "The Insightly blog is dedicated to providing relevant, fresh, and easy to consume content for small business owners seeking to understand the benefits of using a CRM platform, and who want to better understand specific business growth strategies such as building out a sales pipeline, leveraging social media to build brand awareness and better connect with their customers.",
+      "followers": {
+        "facebook": 32299
+      },
+      "image_url": "https://i1.feedspot.com/4619361.jpg?t=1615958235"
+    },
+    {
+      "title": "Power Platform Learner",
+      "feed_url": "https://sudheerreddy.me/feed/",
+      "website_url": "https://powerapplearner.wordpress.com/posts/",
+      "description": "Learning the power of power platform. Working as Power Platform / Dynamics 365 developer since 2011. A Continuous learner.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5156267.jpg?t=1617702465"
+    },
+    {
+      "title": "Greg Olsen Yellow Duck Guy",
+      "feed_url": "https://yellowduckguy.wordpress.com/feed/",
+      "website_url": "https://yellowduckguy.wordpress.com/",
+      "description": "Greg Olsen is currently a Solutions Architect at Sable37 in Auckland, New Zealand. Greg is also a Microsoft P-SSP for CRM, Dynamics CRM Specialist, Leader of the NZ CRM xRM User Group.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4661856.jpg?t=1671446392"
+    },
+    {
+      "title": "CRMJetty Blog",
+      "feed_url": "https://www.crmjetty.com/blog/feed/",
+      "website_url": "https://www.crmjetty.com/blog/",
+      "description": "Find out the latest news, trends, guides and about everything in the world of CRMs aka SugarCRM, SuiteCRM, Salesforce, Dynamics CRM.",
+      "followers": {
+        "facebook": 521,
+        "twitter": 670
+      },
+      "image_url": "https://i1.feedspot.com/5072122.jpg?t=1671442807"
+    },
+    {
+      "title": "IntelliSales CRM Blog",
+      "feed_url": "https://www.intellicrm.com/insights/feed/",
+      "website_url": "https://www.intellicrm.com/insights/",
+      "description": "IntelliSales CRM is developed by the salespeople for the salespeople, incorporating the best of technological innovations.",
+      "followers": {
+        "facebook": 154,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5053812.jpg?t=1617696300"
+    },
+    {
+      "title": "Str\u00e4va Tech Group Blog",
+      "feed_url": "https://www.stravatechgroup.com/feed/",
+      "website_url": "https://www.stravatechgroup.com/blog/",
+      "description": "Our official blog is designed to help business owners maximize their Microsoft Dynamics CRM/365 applications. Click here to learn more about Microsoft Dynamics 365 crm.",
+      "followers": {
+        "facebook": 97,
+        "twitter": 120
+      },
+      "image_url": "https://i1.feedspot.com/4664237.jpg?t=1611137870"
+    },
+    {
+      "title": "Cosential Blog",
+      "feed_url": "https://blog.cosential.com/rss.xml",
+      "website_url": "https://unanet.com/blog/topic/crm",
+      "description": "Cosential is the CRM and proposal automation solution for the AEC industry. Cosential is a powerful and easy-to-use customer relationship management (CRM), sales force automation, and proposal automation system designed specifically for AEC firms and by AEC experts.",
+      "followers": {
+        "facebook": 313,
+        "instagram": 126
+      },
+      "image_url": "https://i1.feedspot.com/4664271.jpg?t=1617693010"
+    },
+    {
+      "title": "CRM Switch Blog",
+      "feed_url": "https://crmswitch.com/blog/feed/",
+      "website_url": "https://crmswitch.com/blog/",
+      "description": "A blog about CRM and marketing technology. Topics include strategy, selection, implementation and usage.",
+      "followers": {
+        "facebook": 176,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4661809.jpg?t=1617700678"
+    }
+  ]
+}

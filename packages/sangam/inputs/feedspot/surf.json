@@ -1,0 +1,586 @@
+{
+  "category": "Surf",
+  "source_url": "https://rss.feedspot.com/surf_rss_feeds",
+  "feeds": [
+    {
+      "title": "SURFER Magazine",
+      "feed_url": "https://www.surfer.com/feed",
+      "website_url": "https://www.surfer.com/",
+      "description": "Known as 'the bible of the sport,' SURFER Magazine is founded with a mission: to bring their readers a slice of the entire surfing world with each issue. Every issue is packed with award-winning photography, provocative interviews, and travel features to the world's most exotic surf locales.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 240,
+        "instagram": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/2427522.jpg?t=1614238531"
+    },
+    {
+      "title": "Catch Surf Blog",
+      "feed_url": "https://catchsurf.com/blogs/catch-surf-blog.atom",
+      "website_url": "https://catchsurf.com/blogs/catch-surf-blog",
+      "description": "Born from the surf culture of Southern-California, Catch Surf is all about fun and good vibes. To have fun in good waves.",
+      "followers": {
+        "facebook": 42900,
+        "twitter": 2600,
+        "instagram": 286300
+      },
+      "image_url": "https://i1.feedspot.com/4534833.jpg?t=1614238552"
+    },
+    {
+      "title": "Surfd",
+      "feed_url": "http://surfd.com/feed/",
+      "website_url": "https://surfd.com/",
+      "description": "Culture and lifestyle magazine featuring news, interviews and surf product reviews. We love surf art and photography, videos, travel and surfboards.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 840,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/4567706.jpg?t=1614238561"
+    },
+    {
+      "title": "Surf Strength Coach Blog",
+      "feed_url": "https://surfstrengthcoach.com/feed/",
+      "website_url": "https://surfstrengthcoach.com/blog/",
+      "description": "To provide surfers with with sport specific fitness protocols, ranging from strength and conditioning, food advice, chronic pain relief, and more. Also aimed at improving the basic foundations of health and wellness.",
+      "followers": {
+        "facebook": 55800,
+        "instagram": 66500
+      },
+      "image_url": "https://i1.feedspot.com/615870.jpg?t=1614238573"
+    },
+    {
+      "title": "Surfermag",
+      "feed_url": "https://www.surfermag.pl/rss",
+      "website_url": "https://www.surfermag.pl/",
+      "description": "Surfing blog and photographs from my corner of the world. Promoting surfing and contributing to surfing in Europe and Canary Islands. Sharing experiences and inspirational stuff about the world of surfing and surfing related arts music and visual media. The best surf camps and stays in Portugal, Spain and the Canary Islands.",
+      "followers": {
+        "facebook": 3600,
+        "instagram": 701
+      },
+      "image_url": "https://i1.feedspot.com/5586136.jpg?t=1685511355"
+    },
+    {
+      "title": "Surfing LA",
+      "feed_url": "https://surfing.la/feed/",
+      "website_url": "https://surfing.la/",
+      "description": "Surfing.LA is a website that provides information about surfing in Los Angeles. It offers details about local surf spots, wave conditions, surfing events, and related news. The site may also include resources for surfers such as gear recommendations, tips for beginners, and insights into the local surfing community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7264158.jpg?t=1763440244"
+    },
+    {
+      "title": "The Beginner Surfer",
+      "feed_url": "https://www.thebeginnersurfer.com/feed/",
+      "website_url": "https://www.thebeginnersurfer.com/",
+      "description": "Explore a step-by-step guide to surfing for beginners. The Beginner Surfer is stacked with smart, informative materials, aiming to make the learning process smooth and enjoyable for other beginners. Join along and ride the waves for an exciting surfing adventure! With lessons sorted in order, you'll learn what you need to know, when you need to know it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7298788.jpg?t=1713182873"
+    },
+    {
+      "title": "Cleanline Surf",
+      "feed_url": "https://www.cleanlinesurf.com/blogs/surf.atom",
+      "website_url": "https://www.cleanlinesurf.com/blogs/surf",
+      "description": "Established in 1980, with locations in Seaside and Cannon Beach, Cleanline Surf remains the Northwest's Original Surf Shop and your leader for surf, skate, SUP, and kitesurf needs. We specialize in adrenaline-pumping boardsports and cater to people of all skill levels. In addition to our great selection of hard goods, Cleanline is proud to offer a fine assortment of quality apparel, footwear, and eyewear. Follow our Surf Blog for news, reviews, previews, products, events, and more!",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 883
+      },
+      "image_url": "https://i1.feedspot.com/5279119.jpg?t=1620646649"
+    },
+    {
+      "title": "One man's mission for surfing and the ocean life",
+      "feed_url": "https://www.surfing.pl/rss",
+      "website_url": "https://www.surfing.pl/",
+      "description": "Surfing blog and photographs from my corner of the world. Promoting surfing and contributing to surfing in Europe and Canary Islands. Sharing experiences and inspirational stuff about the world of surfing and surfing related arts music and visual media.",
+      "followers": {
+        "facebook": 3600,
+        "instagram": 701
+      },
+      "image_url": "https://i1.feedspot.com/5056429.jpg?t=1614239971"
+    },
+    {
+      "title": "Surfer Dad",
+      "feed_url": "https://www.surferdad.co.uk/feed",
+      "website_url": "https://www.surferdad.co.uk/",
+      "description": "Surf blog by a wave starved father. Surfer Dad is a surfing blog based in the UK, including sensational surf photos, surfing videos, news, reviews and shared father experiences.",
+      "followers": {
+        "facebook": 263,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4535329.jpg?t=1614004170"
+    },
+    {
+      "title": "Original Surf Morocco Blog",
+      "feed_url": "https://www.originalsurfmorocco.com/feed/",
+      "website_url": "https://www.originalsurfmorocco.com/blog/",
+      "description": "Your perfect moroccan surf holidays begins here! Experience surfing adventure, yoga classes and real Moroccan hospitality with Original Surf Morocco.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 953,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4649280.jpg?t=1614239784"
+    },
+    {
+      "title": "Chica Brava Blog",
+      "feed_url": "https://chicabrava.com/blog/feed/",
+      "website_url": "https://chicabrava.com/blog/",
+      "description": "The brainchild of Founder Ashley Blaylock, Chica Brava was birthed in 2003 after the Houston native first visited the pristine beaches of Nicaragua. Ashley's dream is carried on by a solid mix of locals and inspiring women from all over the world who keep Chica Brava headquarters afloat. Dedicated to empowering women, many of the loyal staff arrived in San Juan del Sur on their own surf adventure and discovered Chica Brava-a place they can call home and share their passion for surfing with other women on a similar journey.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 569,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4534846.jpg?t=1614240006"
+    },
+    {
+      "title": "Locals Only Surf",
+      "feed_url": "https://localsonlysurf.com/feed/",
+      "website_url": "https://localsonlysurf.com/",
+      "description": "source for information about surfing. We want to help people learn about the benefits of surfing, what kind of gear they should use and where they should take surf trips. Our site is packed with information, tips, and advice from experts in the field so that you can make the most of your surfing experience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5433030.jpg?t=1660818063"
+    },
+    {
+      "title": "Mission Beach Surfing School Blog",
+      "feed_url": "https://www.missionbeachsurfingschool.com/feed/",
+      "website_url": "https://www.missionbeachsurfingschool.com/blog/",
+      "description": "Mission Beach Surf School was founded in 1997 as one of the first surf schools in San Diego. We have been teaching surf lessons in San Diego for almost 20 years. Check out our blog for Surf lessons, camps, tips, and much more.",
+      "followers": {
+        "facebook": 4400,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5390813.jpg?t=1649930648"
+    },
+    {
+      "title": "Barefoot Surf Travel",
+      "feed_url": "https://barefootsurftravel.com/feed",
+      "website_url": "https://tutorials.barefootsurftravel.com/articles/",
+      "description": "Surf trips for beginners and intermediates. Travel, learn to surf and catch the best waves of your life during your surfing expedition in Nicaragua, Ecuador and Bali (Indonesia).",
+      "followers": {
+        "facebook": 25800,
+        "twitter": 205,
+        "instagram": 330900
+      },
+      "image_url": "https://i1.feedspot.com/4534793.jpg?t=1614239126"
+    },
+    {
+      "title": "SoulSurfing.co.uk",
+      "feed_url": "https://soul-surfing.co.uk/feed/",
+      "website_url": "https://soul-surfing.co.uk/category/categories/surf-blogs/",
+      "description": "To pursue a simpler more rewarding lifestyle doing the things we love. They love beautiful beaches, they love surfing.",
+      "followers": {
+        "facebook": 25700,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4535363.jpg?t=1614239163"
+    },
+    {
+      "title": "Channel Islands Surfboards",
+      "feed_url": "https://cisurfboards.com/blogs/blog.atom",
+      "website_url": "https://cisurfboards.com/blogs/blog/",
+      "description": "CI Surfboards (Channel Islands Surfboards) \u2014 a legacy surfboard brand founded in 1969, known for high-performance, rider-driven designs crafted at their Santa Barbara-area facility.",
+      "followers": {
+        "facebook": 75700,
+        "twitter": 23700,
+        "instagram": 453800
+      },
+      "image_url": "https://i1.feedspot.com/8811637.jpg?t=1763440291"
+    },
+    {
+      "title": "10 Over Surf Shop Blog",
+      "feed_url": "https://10oversurf.com/blogs/news.atom",
+      "website_url": "https://10oversurf.com/blogs/news/",
+      "description": "Get the latest surf news, surfing advice, surf product tips and much more. The 10 Over Surf Shop is a rich resource for discovering more about surfing and the beahc lifestyle.",
+      "followers": {
+        "facebook": 238
+      },
+      "image_url": "https://i1.feedspot.com/8811638.jpg?t=1763440726"
+    },
+    {
+      "title": "STAB",
+      "feed_url": "https://stabmag.com/feed/",
+      "website_url": "https://stabmag.com/",
+      "description": "We are writers, video editors, and photojournalists. But mostly, we just like to surf. Browse through all the latest news and updates from the world of surfing, surfers news, announcements, events and more!",
+      "followers": {
+        "facebook": 1200000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/1681086.jpg?t=1675859710"
+    },
+    {
+      "title": "waves n backpack",
+      "feed_url": "https://wavesnbackpack.com/en/travel-category/surf-trip/feed/",
+      "website_url": "https://wavesnbackpack.com/en/travel-category/surf-trip/",
+      "description": "Here you can find all our stories from surf trips on our beautiful planet. Whether surf trips in Asia, South America or Europe - this way!",
+      "followers": {
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/8811635.jpg"
+    },
+    {
+      "title": "Stoked For Travel",
+      "feed_url": "https://www.stokedfortravel.com/feed/",
+      "website_url": "https://www.stokedfortravel.com/latest-posts/",
+      "description": "A surf travel blog, featuring surf guides, surfboard reviews, and heaps of travel inspiration for your next trip. Chris Stevens is a surfer, videographer, award-winning travel blogger, and ocean lover traveling continuously since 2009.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 6700,
+        "instagram": 33300
+      },
+      "image_url": "https://i1.feedspot.com/5329050.jpg?t=1763441448"
+    },
+    {
+      "title": "The Inertia \u00bb Surf",
+      "feed_url": "https://www.theinertia.com/category/surf/feed/",
+      "website_url": "https://www.theinertia.com/category/surf/",
+      "description": "The Inertia is the definitive voice of surf and outdoors. We approach the natural world and its devoted culture with curiosity, optimism, and respect. We take pride in bringing our passion for the oceans and mountains to life through original films, reporting, and monumental gatherings. We aim to make a positive impact on our planet through partnerships with nonprofits working hard to preserve earth's sacred places.",
+      "followers": {
+        "facebook": 351500
+      },
+      "image_url": "https://i1.feedspot.com/8811636.jpg?t=1763441164"
+    },
+    {
+      "title": "Surf Station \u00bb Surf",
+      "feed_url": "https://www.surf-station.com/category/surf/feed/",
+      "website_url": "https://www.surf-station.com/category/surf/",
+      "description": "Surf Station operates a surf-shop and surf-report site based in St. Augustine, Florida, offering live wave cams, surf lessons, gear, and local surf news.",
+      "followers": {
+        "facebook": 18500
+      },
+      "image_url": "https://i1.feedspot.com/8811633.jpg"
+    },
+    {
+      "title": "Surfer Today",
+      "feed_url": "https://www.surfertoday.com/surfing?format=feed&type=rss",
+      "website_url": "https://www.surfertoday.com/surfing/",
+      "description": "SurferToday.com is the world's leading surf-and-skate website. It's the home of history, science, and innovation in surfing and skateboarding.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4969156.jpg?t=1763382129"
+    },
+    {
+      "title": "Go Surf Basis",
+      "feed_url": "https://surfbasis.com/blogs/training-blog.atom",
+      "website_url": "https://surfbasis.com/blogs/training-blog/",
+      "description": "Train your paddling anywhere, anytime so you can catch more waves and have more fun.",
+      "followers": {
+        "facebook": 17600
+      },
+      "image_url": "https://i1.feedspot.com/8811634.jpg"
+    },
+    {
+      "title": "Surf With Amigas Blog",
+      "feed_url": "https://surfwithamigas.com/blog/feed/",
+      "website_url": "https://surfwithamigas.com/blog/",
+      "description": "Surf With Amigas is a place for adventurous women (and occasionally men) to come together and encourage each other to fulfill their goals. Whether you want to stand up and ride a wave for the first time, finally learn how to duck dive, or come out of your first barrel, we will help you achieve!",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 293,
+        "instagram": 43700
+      },
+      "image_url": "https://i1.feedspot.com/4534913.jpg?t=1704284673"
+    },
+    {
+      "title": "Surfers Hype Blog",
+      "feed_url": "https://surfershype.com/feed",
+      "website_url": "https://surfershype.com/surf-blog",
+      "description": "Surfers Hype is an online magazine/blog, founded in early 2021, evolving around the sport of surfing. We are on a mission to spread awareness and hype around the sport we love and hope we can inspire more people to try out surfing.",
+      "followers": {
+        "facebook": 36,
+        "instagram": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5380081.jpg?t=1646915327"
+    },
+    {
+      "title": "The Blogging Barney",
+      "feed_url": "https://thebloggingbarney.com/feed/",
+      "website_url": "https://thebloggingbarney.com/",
+      "description": "Covers articles about surfing, guides, tips and tricks.",
+      "followers": {
+        "instagram": 159
+      },
+      "image_url": "https://i1.feedspot.com/5354178.jpg?t=1639641183"
+    },
+    {
+      "title": "Maui Surfer Girls Blog",
+      "feed_url": "https://mauisurfergirls.com/blog/feed/",
+      "website_url": "https://mauisurfergirls.com/blog/",
+      "description": "Maui Surfer Girls is a surf camp for girls and women located in Hawaii. The blog features articles on surf lessons, travel tips, and stories from camp participants. The blog aims to empower girls and women through surfing and create a supportive community of female surfers.",
+      "followers": {
+        "facebook": 5900,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5279118.jpg?t=1679401082"
+    },
+    {
+      "title": "Kahu Surf School",
+      "feed_url": "https://kahusurfschool.com/surfing-blog/feed/",
+      "website_url": "https://kahusurfschool.com/surfing-blog/",
+      "description": "Kahu Surf School in Waikiki Beach is the best place for beginner surfers in Honolulu! On our blog, we share with you the news about surf culture, surf trips, surf destinations. Let us provide you with some serious inspiration.",
+      "followers": {
+        "facebook": 690,
+        "twitter": 151,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/5279117.jpg?t=1620645290"
+    },
+    {
+      "title": "The Free Surfer Blog",
+      "feed_url": "https://thefreesurfer.com/blog/feed/",
+      "website_url": "https://thefreesurfer.com/blog/",
+      "description": "Hi, I'm Pascal. On my blog, you will find reviews from places I went on surf trips. It is not a guidebook, as I think you don't need anyone telling you what to do, in your time off. However, I try to give you some ideas and a few tips like talking to a friend.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 13000
+      },
+      "image_url": "https://i1.feedspot.com/5279124.jpg?t=1620645321"
+    },
+    {
+      "title": "Surf Star Morocco Blog",
+      "feed_url": "http://www.surfstarmorocco.com/blog/feed/",
+      "website_url": "http://www.surfstarmorocco.com/blog/",
+      "description": "Surf Star offers the very best surfing in Morocco, surf yoga and surf camp for all levels of experience. Enjoy a friendly atmosphere, great surf and yoga!",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 550,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4534825.jpg?t=1614239178"
+    },
+    {
+      "title": "Piha Surf Academy Blog",
+      "feed_url": "https://www.pihasurfacademy.com/blog-feed.xml",
+      "website_url": "https://www.pihasurfacademy.com/blog",
+      "description": "Piha Surf Academy is located at Piha Beach, one of New Zealand's most famous surf beaches. They run surf lessons every day for adults and children from all levels, holiday programmes and train advanced competitive surfers.",
+      "followers": {
+        "facebook": 978,
+        "twitter": 9,
+        "instagram": 502
+      },
+      "image_url": "https://i1.feedspot.com/4534873.jpg?t=1614239770"
+    },
+    {
+      "title": "da Surf Engine",
+      "feed_url": "https://www.dasurfengine.com/blog/feed/",
+      "website_url": "https://www.dasurfengine.com/blog/",
+      "description": "The premiere search engine to find your perfect waves. Find YOUR perfect waves by selecting from over 21 criteria at over 8,000 surf spots in the world!",
+      "followers": {
+        "facebook": 94,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/4795998.jpg?t=1614239777"
+    },
+    {
+      "title": "Wave Collective | Luxury Surf Trips - Maldives and Indonesia",
+      "feed_url": "https://wavecollective.co/blog?format=RSS",
+      "website_url": "https://wavecollective.co/blog",
+      "description": "For all the latest news and updates in regards to luxury surf travel to the Maldives, Indonesia, Central America and Morocco be sure to check out the blog section of the Wave Collective website. We give unique insights into resorts such as Niyama Private Islands, Anantara Uluwatu, Nihi Sumba, Six Senses Laamu, Ayada, Como Uma Canggu, Four Seasons Costa Rica, Red Frog Beach Resort and Paradis Plage",
+      "followers": {
+        "facebook": 533,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4996497.jpg?t=1614239798"
+    },
+    {
+      "title": "Nalua Surf",
+      "feed_url": "https://www.naluasurf.com/blog?format=RSS",
+      "website_url": "https://www.naluasurf.com/blog/",
+      "description": "They offer rooms, surf camp and shop in Kuta Lombok, Indonesia.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4534834.jpg?t=1614239965"
+    },
+    {
+      "title": "Adventures in Trim",
+      "feed_url": "http://adventuresintrim.blogspot.com/feeds/posts/default",
+      "website_url": "http://adventuresintrim.blogspot.com/",
+      "description": "Longboards, single fins, VW vans, grey waves and satisfying sunsets in The Shire (North Devon) and that's just the images. The photography alone make this blog an unmissable UK surfing gallery.",
+      "followers": {
+        "twitter": 296
+      },
+      "image_url": "https://i1.feedspot.com/593885.jpg?t=1614004194"
+    },
+    {
+      "title": "Surf Asylum Blog",
+      "feed_url": "https://surf-asylum.com/blog/feed/",
+      "website_url": "https://surf-asylum.com/blog/",
+      "description": "Surf Asylum offers private and group surf lessons for beginning or advanced surfers, summer surf camps, surf clinics and special events in and around Fernandina Beach and Amelia Island, Florida.",
+      "followers": {
+        "twitter": 195
+      },
+      "image_url": "https://i1.feedspot.com/4534908.jpg?t=1614239986"
+    },
+    {
+      "title": "really, dusty?",
+      "feed_url": "https://reallydusty.tumblr.com/rss",
+      "website_url": "https://reallydusty.tumblr.com/",
+      "description": "Hi, this is a collab blog dedicated to girls and their surfing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4535484.jpg?t=1704369756"
+    },
+    {
+      "title": "Lush Palm Blog",
+      "feed_url": "https://lushpalm.com/feed/",
+      "website_url": "https://lushpalm.com/surf-blog/",
+      "description": "Lush Palm is a surf travel and lifestyle website featuring in-depth destination guides, modern surf style, and inspiration for the ocean-minded.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 14800,
+        "instagram": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5231694.jpg?t=1609310275"
+    },
+    {
+      "title": "Beachgoer",
+      "feed_url": "https://beachgoer.com/blogs/news.atom",
+      "website_url": "https://beachgoer.com/blogs/news",
+      "description": "Beachgoer is your #1 destination for all things beach. We're a one-stop shop offering surfing, bodyboarding, and kiteboarding gear, as well as beach toys, beach gear, outdoor products, clothing and more. Get everything you need for your next beach session at Beachgoer.",
+      "followers": {
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/5163894.jpg"
+    },
+    {
+      "title": "Surf Fear",
+      "feed_url": "https://surf-fear.tumblr.com/rss",
+      "website_url": "https://surf-fear.tumblr.com/",
+      "description": "Surf blogs by Josefin Forsberg, twenty, swedish.",
+      "followers": {
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4535482.jpg?t=1704370240"
+    },
+    {
+      "title": "The Surf Culture",
+      "feed_url": "https://thesurfculture.tumblr.com/rss",
+      "website_url": "https://thesurfculture.tumblr.com/",
+      "description": "Best Surf Moments in Photos.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4535480.jpg?t=1704370442"
+    },
+    {
+      "title": "Below the Salt - SALT Surf",
+      "feed_url": "https://blog.saltsurf.com/rss",
+      "website_url": "https://blog.saltsurf.com/",
+      "description": "This is SALT Surf's blog. Subscribe to our blog to get the latest updates on Salt. SALT SURF's goal has always been to create something that people can connect with and see themselves in. It's attempted to carve a niche in the market that is inclusive, open-minded and straightforward.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/124627.jpg?t=1614240209"
+    },
+    {
+      "title": "THURSO SURF Blog",
+      "feed_url": "https://thursosurf.com/blogs/explore",
+      "website_url": "https://thursosurf.com/blogs/explore",
+      "description": "Thurso Surf was founded to jolt people out of their everyday routines and encourage them to seek their true selves. We want to take you to places you've never been before, give you a different perspective on Mother Nature, and offer you an opportunity to get in touch with your soul - on water. There, you can enjoy the deepest meditation, the sincerest companionship, or simply the purest fun. Subscribe to this blog feed for SUP knowledge, how-tos, techniques & tips. Thurso Surf blog is all you need to know about SUP.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 3000,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5279120.jpg?t=1620646544"
+    },
+    {
+      "title": "Loco Blog",
+      "feed_url": "https://locosurfing.com/blogs/news.atom",
+      "website_url": "https://locosurfing.com/blogs/news",
+      "description": "UK board sports brand Loco produces a range of high performance SUP, Surf and Kite Boards as well as industry leading accessories.",
+      "followers": {
+        "facebook": 4300,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4535391.jpg?t=1614239767"
+    },
+    {
+      "title": "Surf Simply Magazine",
+      "feed_url": "https://surfsimply.com/feed",
+      "website_url": "https://surfsimply.com/magazine",
+      "description": "Surf Simply Magazine bring you news and opinion from the world of surf culture, characters, competition and coaching.",
+      "followers": {
+        "facebook": 50700,
+        "instagram": 254200
+      },
+      "image_url": "https://i1.feedspot.com/4534774.jpg?t=1614238540"
+    },
+    {
+      "title": "Encyclopedia Of Surfing",
+      "feed_url": "https://www.eos.surf/feed",
+      "website_url": "https://www.eos.surf/feature",
+      "description": "Total A-to-Z Digital Surfability. Blog by Matt Warshaw.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4534800.jpg?t=1614238546"
+    },
+    {
+      "title": "SurfEars",
+      "feed_url": "https://surfears.com/blog/feed/",
+      "website_url": "https://surfears.com/journal/",
+      "description": "Stay updated on surf news from SurfEars!. SurfEars are waterproof ear plugs for water athletes, protect your ears without affecting hearing and balance. Preventing ear inflammation and surfer's ear.",
+      "followers": {
+        "facebook": 26200,
+        "twitter": 785,
+        "instagram": 38500
+      },
+      "image_url": "https://i1.feedspot.com/4534838.jpg?t=1614238557"
+    },
+    {
+      "title": "ISLE Blog",
+      "feed_url": "https://www.islesurfandsup.com/feed/",
+      "website_url": "https://islesurfandsup.com/blog",
+      "description": "Paddle board and surf blog from Isle Surf and SUP. We offer expert advice on all things paddle boarding and surfing. Our blog is a collection of tailored stories, gear reviews, and adventures that we curated for your enjoyment.",
+      "followers": {
+        "facebook": 83900,
+        "twitter": 2200,
+        "instagram": 82100
+      },
+      "image_url": "https://i1.feedspot.com/5271439.jpg?t=1618940034"
+    },
+    {
+      "title": "Samasama Surf Bali",
+      "feed_url": "https://samasamasurf.com/feed/",
+      "website_url": "https://samasamasurf.com/",
+      "description": "Surf informative and entertaining posts providing surf lessons for beginners and intermediate. Samasama Surf Bali is a surfing school and equipment provider perfect for individuals, groups, families, and kids. Bring you to the best beginner surf spot in Bali",
+      "followers": {
+        "twitter": 11,
+        "instagram": 108
+      },
+      "image_url": "https://i1.feedspot.com/5651540.jpg?t=1692617612"
+    },
+    {
+      "title": "Channel Islands Surfboards Blog",
+      "feed_url": "https://cisurfboards.com/blog/feed",
+      "website_url": "https://cisurfboards.com/blogs/blog",
+      "description": "Channel Islands Surfboards was created by Al and Terry Merrick in 1969. From his birth, Britt spent his days in the factory by the beach in Santa Barbara, from toddling around blanks to sweeping out shaping rooms. He is now the lead shaper and designer for CI and carries on the family tradition of developing high-performance board designs collaborating with the world's greatest surfers. From Tom Curren to Dane Reynolds, Channel Islands continues to evolve with the highest standard of surfing.",
+      "followers": {
+        "facebook": 75700,
+        "twitter": 23700,
+        "instagram": 453800
+      },
+      "image_url": "https://i1.feedspot.com/5271440.jpg?t=1619013364"
+    },
+    {
+      "title": "A Broad on a Board",
+      "feed_url": "http://www.abroadonaboard.com/feed/",
+      "website_url": "http://www.abroadonaboard.com/",
+      "description": "A Broad on a Board is a new surf & travel blog packed with information and advice, plus a little inspiration to get you surf tripping around the world",
+      "followers": {
+        "facebook": 222,
+        "twitter": 329,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4649872.jpg?t=1614239810"
+    },
+    {
+      "title": "Old Man's Surf report",
+      "feed_url": "https://www.oldmanwaves.com/blog?format=RSS",
+      "website_url": "https://www.oldmanwaves.com/blog",
+      "description": "Follow to get updates on surfing from Old Man's Surf report",
+      "followers": {
+        "instagram": 87
+      },
+      "image_url": "https://i1.feedspot.com/5053254.jpg"
+    }
+  ]
+}

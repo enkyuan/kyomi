@@ -1,0 +1,509 @@
+{
+  "category": "Gambling",
+  "source_url": "https://rss.feedspot.com/gambling_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yogonet International",
+      "feed_url": "https://www.yogonet.com/international/rss.xml",
+      "website_url": "https://www.yogonet.com/international/",
+      "description": "We publish news and interviews about bingos, casinos, racetracks, gaming equipment, legislation, licitations, technology, openings and other business information for members of the gambling industry worldwide.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5007039.jpg?t=1604731149"
+    },
+    {
+      "title": "This Week in Gambling",
+      "feed_url": "https://www.thisweekingambling.com/feed/",
+      "website_url": "https://www.thisweekingambling.com/",
+      "description": "This Week in Gambling is a dynamic, entertainment driven weekly video series for players and casino customers with news, information, interviews and features.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4763701.jpg?t=1604731153"
+    },
+    {
+      "title": "PokerNews",
+      "feed_url": "https://www.pokernews.com/rss.php?subset=q1ZKVLJS0lLSUSpRsjLQUSotBnKLiouVagE=",
+      "website_url": "https://www.pokernews.com/",
+      "description": "PokerNews is the world's leading source for international poker news, live tournament reporting, exclusive photos and videos, strategy tutorials, freerolls and bonuses.",
+      "followers": {
+        "facebook": 214900,
+        "twitter": 176800
+      },
+      "image_url": "https://i1.feedspot.com/4716911.jpg?t=1604731168"
+    },
+    {
+      "title": "Real Money Games & Gambling Blog",
+      "feed_url": "https://www.realmoney.games/feed/",
+      "website_url": "https://www.realmoney.games/blog/",
+      "description": "Latest blog posts on various aspects of online gambling and real money games, plus recent in-depth gambling guides published on RealMoney.games",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://www.realmoney.games/wp-content/uploads/2022/06/steve-cross-author-of-website-real-money-games.webp?t=1682681770"
+    },
+    {
+      "title": "The Gamblest",
+      "feed_url": "https://www.thegamblest.com/feed/",
+      "website_url": "https://www.thegamblest.com/",
+      "description": "A B2B directory of iGaming software providers, TheGamblest.com is your trusted source of the latest news in the online gambling industry dedicated to iGaming B2B providers and operators.",
+      "followers": {
+        "facebook": 55,
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/5518701.jpg?t=1678441957"
+    },
+    {
+      "title": "Jackpot Mobile Casino Blog",
+      "feed_url": "https://www.jackpotmobilecasino.co.uk/feed/",
+      "website_url": "https://www.jackpotmobilecasino.co.uk/blog/",
+      "description": "Regular updates on casino blogs and gambling articles from Jackpot Mobile Casino experts. UK's most popular destination for mobile casino.",
+      "followers": {
+        "twitter": 695
+      },
+      "image_url": "https://i1.feedspot.com/4542504.jpg?t=1604731529"
+    },
+    {
+      "title": "American Casino Guide Book Blog",
+      "feed_url": "https://www.americancasinoguidebook.com/feed",
+      "website_url": "https://www.americancasinoguidebook.com/blog.html/",
+      "description": "Blog educates gamblers on various topics including blackjack strategies, roulette techniques, best craps bets, slot machine strategies, and more, related to casino gambling. American Casino Guide author, Steve Bourie, interviews gambling experts to get insights on the best strategies for playing all casino games, as well as how to get the most value for your money whenever visiting a casino.",
+      "followers": {
+        "facebook": 30900,
+        "twitter": 5,
+        "instagram": 12
+      },
+      "image_url": "https://i1.feedspot.com/5274401.jpg?t=1619699984"
+    },
+    {
+      "title": "Roulette Games Blog",
+      "feed_url": "https://www.roulette-games.co.uk/blog/feed/",
+      "website_url": "https://www.roulette-games.co.uk/blog/",
+      "description": "Number 1 UK online roulette guide offering the best bonuses around as well as strategies, reviews and tips, check out our latest bonuses here!",
+      "followers": {
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/4764407.jpg?t=1604731553"
+    },
+    {
+      "title": "Gambling Ramblings",
+      "feed_url": "http://gamblingramblingsuk.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://gamblingramblingsuk.blogspot.com/",
+      "description": "Horse racing tipster who looks for value in the markets. I tip up horses at big odds for small stakes, and I am a tipster for Bettingtools .",
+      "followers": {
+        "facebook": 171,
+        "twitter": 944
+      },
+      "image_url": "https://i1.feedspot.com/4764550.jpg?t=1604732205"
+    },
+    {
+      "title": "Gambling Update",
+      "feed_url": "https://feeds.feedburner.com/GamblingUpdate",
+      "website_url": "http://gamblingupdate.blogspot.com/",
+      "description": "All the latest update of Gambling Industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4764555.jpg?t=1604732016"
+    },
+    {
+      "title": "Betting Gods Blog",
+      "feed_url": "https://bettinggods.com/feed/",
+      "website_url": "https://bettinggods.com/blog/",
+      "description": "Betting Gods is the internet's most reputable network of sports tipsters providing expert betting tips to thousands of members globally.",
+      "followers": {
+        "facebook": 21100,
+        "twitter": 40300,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4762460.jpg?t=1604898986"
+    },
+    {
+      "title": "Canadian Gambling Choice",
+      "feed_url": "https://www.canadiangamblingchoice.com/feed/",
+      "website_url": "https://www.canadiangamblingchoice.com/",
+      "description": "Best Online Casino Guides Latest Game Reviews Trusted Online Casinos Make the Safest Choices in Online Gambling at Canada's no.1 Casino Blog .",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4764620.jpg?t=1604731823"
+    },
+    {
+      "title": "GamblingNews.com",
+      "feed_url": "https://www.gamblingnews.com/feed/",
+      "website_url": "https://www.gamblingnews.com/",
+      "description": "GamblingNews.com provides the latest gambling headlines across the globe, bringing you casino, poker, and sports betting news on the daily.",
+      "followers": {
+        "twitter": 621
+      },
+      "image_url": "https://i1.feedspot.com/5318089.jpg?t=1630491259"
+    },
+    {
+      "title": "Blackjack Review Network Blog",
+      "feed_url": "https://www.blackjackreview.com/wp/feed/",
+      "website_url": "https://www.blackjackreview.com/wp/blogs/blackjack-review-blog/",
+      "description": "Covers Blackjack and card counting information, strategies, tips & tricks, school, reviews, rules, conditions, and historical archives. Blackjack Review is your portal into the world of blackjack",
+      "followers": {
+        "facebook": 128,
+        "twitter": 179
+      },
+      "image_url": "https://i1.feedspot.com/4764365.jpg?t=1604731510"
+    },
+    {
+      "title": "Gamer Limit \u00bb Gambling",
+      "feed_url": "https://gamerlimit.com/feed/",
+      "website_url": "https://gamerlimit.com/category/gambling/",
+      "description": "Find all gambling games sites reviews, how to play guides covering poker, casino, sports, betting, mobile gaming and more.",
+      "followers": {
+        "twitter": 389
+      },
+      "image_url": "https://i1.feedspot.com/1988.jpg?t=1604731281"
+    },
+    {
+      "title": "Roulette Physics",
+      "feed_url": "https://www.roulettephysics.com/feed/",
+      "website_url": "https://www.roulettephysics.com/",
+      "description": "Roulette Physics shares the truth about beating roulette. Find government lab test reports, news articles, TV documentaries & videos, learn the roulette strategies that really work at this site.",
+      "followers": {
+        "twitter": 522
+      },
+      "image_url": "https://i1.feedspot.com/4763539.jpg?t=1604730924"
+    },
+    {
+      "title": "Beasts of Poker",
+      "feed_url": "https://beastsofpoker.com/feed/",
+      "website_url": "https://beastsofpoker.com/poker-articles/",
+      "description": "Beast of poker was created to inspire its users and help them in their journey to financial independence via mastering poker. Get inspired by our lifestyle section or learn poker by chatting with our pro-team in the forum. Become a beast with us today.",
+      "followers": {
+        "facebook": 406,
+        "twitter": 320,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5121744.jpg?t=1604731498"
+    },
+    {
+      "title": "Online Casino Elite Blog",
+      "feed_url": "https://www.onlinecasinoselite.org/callback/rss.xml",
+      "website_url": "https://www.onlinecasinoselite.org/casino-blog/",
+      "description": "Guide to the 10 top online casinos for gamble worldwide. Special bonuses, directory of free slots and casino games to play instantly. Reviews, ratings and news. OnlineCasinosElite's blog explores topics in the worldwide gambling industry, providing in-depth news about events, laws and statistics.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4764927.jpg?t=1669894100"
+    },
+    {
+      "title": "Casino Player Magazine",
+      "feed_url": "https://www.casinocenter.com/feed/",
+      "website_url": "https://www.casinocenter.com/",
+      "description": "Life's a Gamble. Win It. America's Gaming Lifestyle Magazine For more than 24 years, Casino Player has delivered the most informative, up-to-date casino news and information to players and vacationers across the country.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1300,
+        "instagram": 578
+      },
+      "image_url": "https://i1.feedspot.com/3632175.jpg?t=1604731540"
+    },
+    {
+      "title": "GOKKEN999",
+      "feed_url": "https://gokken999-indonesia.com/feed/",
+      "website_url": "https://gokken999-indonesia.com/",
+      "description": "Gokken999 is an Indonesian online gaming platform offering a variety of digital entertainment options, including interactive slot games, live casino experiences, sportsbooks, and digital lotteries. Beyond gaming, Gokken999 serves as a trusted source of information for the online gaming community in Indonesia, featuring sports news, match predictions, and betting tips.",
+      "followers": {
+        "facebook": 43,
+        "instagram": 138
+      },
+      "image_url": "https://i1.feedspot.com/8524540.jpg?t=1753058245"
+    },
+    {
+      "title": "Action Network",
+      "feed_url": "https://www.actionnetwork.com//feed",
+      "website_url": "https://www.actionnetwork.com/",
+      "description": "Action Network, a leading source for sports betting news, information and analysis, launched in 2018 to serve the sports-betting audience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8538246.jpg?t=1753090705"
+    },
+    {
+      "title": "Capitol Casino Blog",
+      "feed_url": "https://www.capitol-casino.com/feed/",
+      "website_url": "https://www.capitol-casino.com/blog/",
+      "description": "Get the latest poker and gaming news, company news and announcements, updates on our poker tournaments, and tips and tricks on playing casino card games. Capitol Casino is a top poker destination with many gaming tables, a caf\u00e9 & restaurant, and a dedicated bar & lounge right in the heart of downtown Sacramento. We offer a large selection of table games, a table set for every type of casino player, and regular tournaments with the biggest prize pools in the region.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 603,
+        "instagram": 380
+      },
+      "image_url": "https://i1.feedspot.com/5474450.jpg?t=1669897370"
+    },
+    {
+      "title": "Stones Gambling Hall Blog",
+      "feed_url": "https://www.stonesgamblinghall.com/feed/",
+      "website_url": "https://www.stonesgamblinghall.com/blog/",
+      "description": "Stone Gambling Hall",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 3700,
+        "instagram": 787
+      },
+      "image_url": "https://i1.feedspot.com/8538249.jpg?t=1753090712"
+    },
+    {
+      "title": "Gambling and the Law Blogs",
+      "feed_url": "https://www.gamblingandthelaw.com/category/blogs/feed/",
+      "website_url": "https://www.gamblingandthelaw.com/category/blogs/",
+      "description": "I. Nelson Rose dissects Gambling and the Law\u00ae",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8538250.jpg?t=1753090715"
+    },
+    {
+      "title": "Casino.com Blog",
+      "feed_url": "https://www.casino.com/blog/feed/",
+      "website_url": "https://www.casino.com/blog/",
+      "description": "All the action from the casino floor: news, views and more. Their mission is to provide seamless social game services to global game players by developing fun and user-friendly on-line games. We're the home of online casinos, featuring all your favorite markets. Just call us a one-stop shop for all your betting needs. Launched in 2007, we've grown into an award-winning, industry-leading casino, bursting with the latest and greatest games, unbeatable offers, giant jackpots and competitive odds.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4542466.jpg?t=1670237709"
+    },
+    {
+      "title": "Sports Betting Operator Blog",
+      "feed_url": "https://sportsbettingoperator.com/blog/feed/",
+      "website_url": "https://sportsbettingoperator.com/blog/",
+      "description": "Sports Betting Operator provides technology features, news, and new product information, keeping Online gambling companies of up to date with the fastest-growing Gambling Sector in the world.",
+      "followers": {
+        "twitter": 125
+      },
+      "image_url": "https://i1.feedspot.com/5475513.jpg?t=1670233991"
+    },
+    {
+      "title": "Quit Gamble Blog",
+      "feed_url": "https://quitgamble.com/feed/",
+      "website_url": "https://quitgamble.com/blog/",
+      "description": "quitgamble.com Blog. This is an important page for us. Here we share the latest news about QG, in-depth articles and support material for our guides.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8538248.jpg?t=1753090707"
+    },
+    {
+      "title": "International Center for Responsible Gaming",
+      "feed_url": "https://www.icrg.org/feed/",
+      "website_url": "https://www.icrg.org/",
+      "description": "The world's leading organization exclusively devoted to research on Gambling Disorder.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8538247.jpg?t=1753090706"
+    },
+    {
+      "title": "The Guardian \u00bb Gambling",
+      "feed_url": "https://www.theguardian.com/society/gambling/rss",
+      "website_url": "https://www.theguardian.com/society/gambling",
+      "description": "The latest news,business, opinion, analysis and reviews and comment on gambling.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4763595.jpg?t=1604731190"
+    },
+    {
+      "title": "GamblingSites.com Blog",
+      "feed_url": "https://www.gamblingsites.com/feed/",
+      "website_url": "https://www.gamblingsites.com/blog/",
+      "description": "Learning everything gambling, from tips and strategies to in-depth reviews of the most popular online gambling sites. GamblingSites is your trusted resource for gambling online featuring beginner's guides for casinos, sports betting, and poker with an aim to help you to find the best gambling sites and create the best resources for gamblers.",
+      "followers": {
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/4763492.jpg?t=1707987339"
+    },
+    {
+      "title": "Taboo Casino",
+      "feed_url": "https://www.taboocasino.com/feed/",
+      "website_url": "https://www.taboocasino.com/",
+      "description": "A blog about all things related to casinos: tips, games, casino holiday destinations, and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5173101.jpg"
+    },
+    {
+      "title": "Gambling Laws in India",
+      "feed_url": "https://glaws.in/feed/",
+      "website_url": "https://glaws.in/",
+      "description": "Glaws is the first and only website that provides latest news and analysis about the developments in gambling, betting and lottery laws in India.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4764310.jpg?t=1604731566"
+    },
+    {
+      "title": "Gambling Guide and Online Casino Reviews",
+      "feed_url": "https://www.gambling.gg/feed.xml",
+      "website_url": "https://www.gambling.gg/",
+      "description": "Keep up with articles and news from Gambling Guide and Online Casino Reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5097673.jpg"
+    },
+    {
+      "title": "GamblersArea",
+      "feed_url": "https://gamblersarea.com/rss.xml",
+      "website_url": "https://gamblersarea.com/",
+      "description": "GamblersArea provides the freshest updates on the iGaming industry casino streamers and developments related to decentralized iGaming.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 647,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5266083.jpg?t=1617880768"
+    },
+    {
+      "title": "BetRoll",
+      "feed_url": "http://www.betroll.co.uk/feed/",
+      "website_url": "http://www.betroll.co.uk/",
+      "description": "Frequently post about new and exciting news within the gambling world.The Ultimate Resource in Online Betting.",
+      "followers": {
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/4763526.jpg?t=1604731442"
+    },
+    {
+      "title": "Best Online Casino Blog",
+      "feed_url": "https://www.bestonlinecasino.com/blog/feed/",
+      "website_url": "https://www.bestonlinecasino.com/blog/",
+      "description": "This is the gambling blog of bestonlinecasino.com, where you can read about casino, poker, bingo and other betting matters.",
+      "followers": {
+        "facebook": 23,
+        "instagram": 55
+      },
+      "image_url": "https://i1.feedspot.com/8538245.jpg?t=1753090704"
+    },
+    {
+      "title": "Casino.org News",
+      "feed_url": "https://www.casino.org/news/feed/?x=1",
+      "website_url": "https://www.casino.org/news/",
+      "description": "The world's premier guide for online gambling enthusiasts. Trusted reviews, news & strategy since 1995. 120 internet casinos tested for reliable payouts, bonuses & more.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 15300
+      },
+      "image_url": "https://i1.feedspot.com/4707688.jpg?t=1604731142"
+    },
+    {
+      "title": "Betway Blog",
+      "feed_url": "https://blog.betway.com/rss",
+      "website_url": "https://blog.betway.com/",
+      "description": "Start off on a winning note at Betway Online Casino with a fantastic Welcome Bonus worth up to \u00a31,000. An online blog featuring expert betting tips, editorial comment and exclusive columns from Richard Johnson, Davy Russell and more.",
+      "followers": {
+        "facebook": 247700,
+        "twitter": 132200
+      },
+      "image_url": "https://i1.feedspot.com/4762312.jpg?t=1604731165"
+    },
+    {
+      "title": "Florida Council on Compulsive Gambling Blog",
+      "feed_url": "https://gamblinghelp.org/feed/",
+      "website_url": "https://gamblinghelp.org/blog/",
+      "description": "The Florida Council on Compulsive Gambling (FCCG) is committed to increasing public awareness about problem and compulsive gambling.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1900,
+        "instagram": 381
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/9134675/page/4709467/logo_1743432258.png"
+    },
+    {
+      "title": "Vital Vegas \u00bb Gambling",
+      "feed_url": "https://www.casino.org/vitalvegas/gambling/feed/",
+      "website_url": "https://www.casino.org/vitalvegas/gambling/",
+      "description": "Vital Vegas is your source for news, tips, snark and all things Las Vegas.",
+      "followers": {
+        "facebook": 52000,
+        "twitter": 216700,
+        "instagram": 17300
+      },
+      "image_url": "https://i1.feedspot.com/4764705.jpg?t=1604731257"
+    },
+    {
+      "title": "Junglee Rummy Blog",
+      "feed_url": "https://www.jungleerummy.com/blog/feed",
+      "website_url": "https://www.jungleerummy.com/blog/",
+      "description": "Posts feature rummy promotions, rummy game enhanced features, playing tips, and new strategies to improve your rummy game. Jungleerummy is the ultimate rummy site for playing all the variants of rummy online.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 1300,
+        "instagram": 127400
+      },
+      "image_url": "https://i1.feedspot.com/4764441.jpg?t=1604731173"
+    },
+    {
+      "title": "N.E.Time Gambling",
+      "feed_url": "https://netimegambling.com/feed/",
+      "website_url": "https://netimegambling.com/",
+      "description": "Your complete resource for New England Casino Gambling, covering gambling news & topics, dining, entertainment, promotions and more.",
+      "followers": {
+        "facebook": 141,
+        "twitter": 433
+      },
+      "image_url": "https://i1.feedspot.com/4763684.jpg?t=1604731919"
+    },
+    {
+      "title": "Best Bitcoin Casino News",
+      "feed_url": "https://www.bestbitcoincasino.com/feed/",
+      "website_url": "https://www.bestbitcoincasino.com/news/",
+      "description": "Best Bitcoin Casino helps you navigate the Bitcoin casino space by providing you the latest news and reviews of online casinos, games, and bonuses.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5153651.jpg?t=1604731446"
+    },
+    {
+      "title": "Strictly Slots",
+      "feed_url": "https://www.strictlyslots.eu/feed/",
+      "website_url": "https://www.strictlyslots.eu/",
+      "description": "Phone Casino Mobile Games \u2022 FREE Mobile Casino Slots, No Deposit Bonus Offers, Slot Promotions and Jackpots for UK & International Players.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4764467.jpg?t=1604731934"
+    },
+    {
+      "title": "Blackjack Apprenticeship Blog",
+      "feed_url": "https://www.blackjackapprenticeship.com/feed/",
+      "website_url": "https://www.blackjackapprenticeship.com/blog/",
+      "description": "Blackjack stories and card counting posts from professional card counters and the Apprenticeship community to help you master Blackjack. Blackjack Apprenticeship is a complete blackjack card counting system designed to teach you how to beat the game of blackjack for big profits.",
+      "followers": {
+        "facebook": 46100,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4764357.jpg?t=1604732196"
+    },
+    {
+      "title": "Online Gambling Sites Blog",
+      "feed_url": "https://www.onlinegamblingsites.com/blog/feed/",
+      "website_url": "https://www.onlinegamblingsites.com/blog/",
+      "description": "Our editors have chosen the best online gambling sites for real money in 2017. We offer in-depth gambling site reviews, strategy, news and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4763568.jpg?t=1604732163"
+    },
+    {
+      "title": "Sailor Bingo Blog",
+      "feed_url": "https://www.sailorbingo.com/blog/feed/",
+      "website_url": "https://www.sailorbingo.com/blog/",
+      "description": "Play bingo online at Sailor Bingo. Sign up, spend \u00a310, play with \u00a340! Great promotions and wide range of bingo games, online slots & casino games. Join now!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4764336.jpg?t=1604732193"
+    },
+    {
+      "title": "Poker Guru Blog",
+      "feed_url": "https://pokergurublog.com/rss.xml",
+      "website_url": "https://pokergurublog.com/",
+      "description": "Poker Guru Blog is a news site for the latest events of the world of online and live poker, the most interesting players and most exciting action. Learn poker strategy tips, news, gossip and much more by following this blog.",
+      "followers": {
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4717050.jpg?t=1604759881"
+    },
+    {
+      "title": "New Casinos Blog",
+      "feed_url": "https://www.newcasinos.org/feed/",
+      "website_url": "https://www.newcasinos.org/category/blog/",
+      "description": "This website aims to provide accurate, up to date information on the newest best online casinos in the market. Visitors will be happy to know that when they visit my website, they will find the latest on the biggest, most exciting brands in the industry, as well as the best bonuses on offer.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4943135.jpg?t=1604727911"
+    }
+  ]
+}

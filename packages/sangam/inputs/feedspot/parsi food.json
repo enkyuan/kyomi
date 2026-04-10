@@ -1,0 +1,30 @@
+{
+  "category": "Parsi Food",
+  "source_url": "https://rss.feedspot.com/parsi_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Simply Bhonu Blog",
+      "feed_url": "https://simplybhonu.com/perisspiceladle-blog?format=rss",
+      "website_url": "https://simplybhonu.com/perisspiceladle-blog",
+      "description": "Read my blog for easy-to-follow informative recipe creations, and how-to-cook food articles on Indian and Parsi cooking. Peri's Spice Ladle is my blog, started in 2012, with a simple idea - bringing Indian and Parsi flavors to your table. As I've showcased over the past decade, 'It's easy to spice up just about any meal with a few Indian touches'. I'm Chef Peri Avari the co-founder of Peri's Spice Ladle. As co-founder of this catering, I set the vision, provided strategic direction, and led kitchen operations, serving corporate clientele in the San Francisco Bay Area.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1700,
+        "instagram": 160
+      },
+      "image_url": "https://i1.feedspot.com/5424730.jpg?t=1658737399"
+    },
+    {
+      "title": "The Tiny Taster \u00bb Parsi Food",
+      "feed_url": "https://www.thetinytaster.com/tag/parsi-food/feed/",
+      "website_url": "https://www.thetinytaster.com/tag/parsi-food/",
+      "description": "In the following section of The Tiny Taster Blog, the food experts share articles related to Parsi food and its types. Other major categories to explore are travel, countries, breakfasts, and more. As The Tiny Taster, I've decided to take the world by storm - one plate at a time! I hope to travel enough and give you an insight into the places I visit and of course a detailed description of the food they have to offer.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 37200,
+        "instagram": 17800
+      },
+      "image_url": "https://i1.feedspot.com/5424728.jpg?t=1659004105"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "category": "UK Science",
+  "source_url": "https://rss.feedspot.com/uk_science_rss_feeds",
+  "feeds": [
+    {
+      "title": "National Science and Media Museum blog",
+      "feed_url": "https://blog.scienceandmediamuseum.org.uk/feed/",
+      "website_url": "https://blog.scienceandmediamuseum.org.uk/",
+      "description": "We explore the science and culture of light and sound technologies and their impact on our lives.",
+      "followers": {
+        "facebook": 40500,
+        "twitter": 64300,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4906090.jpg?t=1613715101"
+    },
+    {
+      "title": "Science Museum Blog",
+      "feed_url": "https://blog.sciencemuseum.org.uk/feed/",
+      "website_url": "https://blog.sciencemuseum.org.uk/",
+      "description": "News and insights from the Science Museum in London. We aim to inspire visitors with award-winning exhibitions, iconic objects, and stories of incredible scientific achievement.",
+      "followers": {
+        "facebook": 246400,
+        "twitter": 642500,
+        "instagram": 298800
+      },
+      "image_url": "https://i1.feedspot.com/4571745.jpg?t=1627625898"
+    },
+    {
+      "title": "ReAgent Blog",
+      "feed_url": "https://feeds.feedburner.com/ReagentChemicalServices",
+      "website_url": "https://www.reagent.co.uk/blog/",
+      "description": "Get the latest from the world of science, chemistry, and chemical manufacturing in The Science Blog, packed full of science and chemical resources.",
+      "followers": {
+        "twitter": 864
+      },
+      "image_url": "https://i1.feedspot.com/5161055.jpg?t=1613715120"
+    },
+    {
+      "title": "Fuse open science blog",
+      "feed_url": "http://fuseopenscienceblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://fuseopenscienceblog.blogspot.com/",
+      "description": "This blog is a forum for sharing our 'warts-and-all' experiences of doing and translating public health research.",
+      "followers": {
+        "facebook": 129,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4906066.jpg"
+    },
+    {
+      "title": "Earth Learning Idea",
+      "feed_url": "http://earthlearningidea.blogspot.com/feeds/posts/default",
+      "website_url": "http://earthlearningidea.blogspot.com/",
+      "description": "The aim of this blog is to provide easy, accessible education ideas to promote knowledge and understanding of planet Earth.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1448691.jpg?t=1613715140"
+    },
+    {
+      "title": "PluriPotential on Medium",
+      "feed_url": "https://medium.com/feed/@pluripotential",
+      "website_url": "https://medium.com/@pluripotential",
+      "description": "Two scientists digging deeper, discussing realities of stem cell science.",
+      "followers": {
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5003655.jpg?t=1613715128"
+    },
+    {
+      "title": "The British Library",
+      "feed_url": "https://blogs.bl.uk/science/atom.xml",
+      "website_url": "https://blogs.bl.uk/science/",
+      "description": "We are the British Library Science Team; we provide access to world-leading scientific information resources, manage UK DataCite and run science events and exhibitions. This blog highlights a variety of the activities we are involved with.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4906043.jpg?t=1613715108"
+    }
+  ]
+}

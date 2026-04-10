@@ -1,0 +1,350 @@
+{
+  "category": "PerthNow",
+  "source_url": "https://rss.feedspot.com/perthnow_rss_feeds",
+  "feeds": [
+    {
+      "title": "PerthNow",
+      "feed_url": "https://www.perthnow.com.au/feed",
+      "website_url": "https://www.perthnow.com.au/",
+      "description": "PerthNow, Western Australia's latest news and stories including business, sport, entertainment, international and more. Its mission is to provide up-to-date local, national and international news, sport, business and entertainment to Western Australians.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596904.jpg?t=1686658210"
+    },
+    {
+      "title": "PerthNow \u00bb News",
+      "feed_url": "https://www.perthnow.com.au/news/feed",
+      "website_url": "https://www.perthnow.com.au/news",
+      "description": "The latest news at home and across the world featuring news on Western Australia, Australia, the world and other topics you are interested in.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596904.jpg?t=1686658210"
+    },
+    {
+      "title": "PerthNow \u00bb Sport",
+      "feed_url": "https://www.perthnow.com.au/sport/feed",
+      "website_url": "https://www.perthnow.com.au/sport",
+      "description": "The latest Sports news stories and updated articles from Perth Now. Find news surrounding AFL, Basketball, Cricket, NRL, Rugby, Football, and more. PerthNow delivers Western Australia's latest news and stories from categories including business, sport, entertainment, international and more.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5447544.jpg?t=1663590348"
+    },
+    {
+      "title": "PerthNow \u00bb Entertainment",
+      "feed_url": "https://www.perthnow.com.au/entertainment/feed",
+      "website_url": "https://www.perthnow.com.au/entertainment",
+      "description": "The latest entertainment news featuring movie reviews, TV show coverage, celebrity gossip and the latest from Perth's arts scene.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596894.jpg?t=1686658106"
+    },
+    {
+      "title": "PerthNow \u00bb Business",
+      "feed_url": "https://www.perthnow.com.au/business/feed",
+      "website_url": "https://www.perthnow.com.au/business",
+      "description": "The latest business news including market updates, mining news, property development and the start-ups you should know about.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596896.jpg?t=1686658218"
+    },
+    {
+      "title": "PerthNow \u00bb Lifestyle",
+      "feed_url": "https://www.perthnow.com.au/lifestyle/feed",
+      "website_url": "https://www.perthnow.com.au/lifestyle",
+      "description": "The latest lifestyle content featuring recipes, Perth's best food, health and wellbeing advice and tips for your garden and home.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596895.jpg?t=1686658116"
+    },
+    {
+      "title": "PerthNow \u00bb Local News",
+      "feed_url": "https://www.perthnow.com.au/local-news/feed",
+      "website_url": "https://www.perthnow.com.au/local-news",
+      "description": "Local News brings you the best and latest local news from all over Perth. All our editions cover the latest Perth news, lifestyle, sport, motoring, real estate as well as events for families, residents & businesses.",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 170200,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5596903.jpg?t=1686658243"
+    },
+    {
+      "title": "PerthNow \u00bb WA News",
+      "feed_url": "https://www.perthnow.com.au/news/wa/feed",
+      "website_url": "https://www.perthnow.com.au/news/wa",
+      "description": "Dramatic footage has emerged of a tourist getting into a brawl with a kangaroo at a Perth wildlife sanctuary but a spokesperson from the park has reassured visitors the roo was just being playful.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596902.jpg?t=1686658269"
+    },
+    {
+      "title": "PerthNow \u00bb Soccer",
+      "feed_url": "https://www.perthnow.com.au/sport/soccer/feed",
+      "website_url": "https://www.perthnow.com.au/sport/soccer",
+      "description": "All articles about Soccer from PerthNow.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535818.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb World News",
+      "feed_url": "https://www.perthnow.com.au/news/world/feed",
+      "website_url": "https://www.perthnow.com.au/news/world",
+      "description": "Get the latest world news published by PerthNow to get can overview on the worlds situation.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596897.jpg?t=1686658352"
+    },
+    {
+      "title": "PerthNow News \u00bb Weather",
+      "feed_url": "https://www.perthnow.com.au/news/weather/feed",
+      "website_url": "https://www.perthnow.com.au/news/weather",
+      "description": "While much of the country can look forward to some warmer weather, the same cannot be said for Western Australia.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5584986.jpg?t=1685420869"
+    },
+    {
+      "title": "PerthNow \u00bb Cricket",
+      "feed_url": "https://www.perthnow.com.au/sport/cricket/feed",
+      "website_url": "https://www.perthnow.com.au/sport/cricket",
+      "description": "Cricket breaking news and updates from PerthNow",
+      "followers": {
+        "facebook": 601700,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/8535821.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Music",
+      "feed_url": "https://www.perthnow.com.au/entertainment/music/feed",
+      "website_url": "https://www.perthnow.com.au/entertainment/music",
+      "description": "PerthNow's music section is a go-to resource for the most recent information, updates, and articles on music. These articles cover genres, musicians, concerts, and more, keeping you up to date with the thriving music scene.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596900.jpg?t=1686658171"
+    },
+    {
+      "title": "PerthNow \u00bb Technology",
+      "feed_url": "https://www.perthnow.com.au/technology/feed",
+      "website_url": "https://www.perthnow.com.au/technology",
+      "description": "Software used by government agencies and businesses to share documents has been hacked, with Microsoft urging customers to apply security updates immediately.",
+      "followers": {
+        "facebook": 601700,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/8535816.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Movies",
+      "feed_url": "https://www.perthnow.com.au/entertainment/movies/feed",
+      "website_url": "https://www.perthnow.com.au/entertainment/movies",
+      "description": "Discover the most recent movie news, reviews, and updates that span a variety of actors, directors, and genres.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596893.jpg?t=1686658670"
+    },
+    {
+      "title": "PerthNow \u00bb TV",
+      "feed_url": "https://www.perthnow.com.au/entertainment/tv/feed",
+      "website_url": "https://www.perthnow.com.au/entertainment/tv",
+      "description": "Get the most recent information, updates, and highlights from the television industry, including programmes, series, and celebrity interviews, for Perth's entertainment fans and beyond.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596898.jpg?t=1686658802"
+    },
+    {
+      "title": "PerthNow \u00bb Food",
+      "feed_url": "https://www.perthnow.com.au/lifestyle/food/feed",
+      "website_url": "https://www.perthnow.com.au/lifestyle/food",
+      "description": "PerthNow lifestyle/food",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596892.jpg?t=1686658814"
+    },
+    {
+      "title": "PerthNow \u00bb Health & Wellbeing",
+      "feed_url": "https://www.perthnow.com.au/lifestyle/health-wellbeing/feed",
+      "website_url": "https://www.perthnow.com.au/lifestyle/health-wellbeing",
+      "description": "One Australian state has maintained the highest standard of community wellbeing for seven consecutive years, according to a study.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596901.jpg?t=1686658883"
+    },
+    {
+      "title": "PerthNow \u00bb Fashion",
+      "feed_url": "https://www.perthnow.com.au/lifestyle/fashion/feed",
+      "website_url": "https://www.perthnow.com.au/lifestyle/fashion",
+      "description": "Perth Now's coverage of Fashion and lifestyle trends features an in-depth look into Fashion events and commentary happening around the city. PerthNow is Western Australia's top news and entertainment website, bringing you gives you the latest local, national, and international news, the hottest entertainment happenings, and the must-know lifestyle stories.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5454014.jpg?t=1665148221"
+    },
+    {
+      "title": "PerthNow \u00bb Real Estate",
+      "feed_url": "https://www.perthnow.com.au/lifestyle/real-estate/feed",
+      "website_url": "https://www.perthnow.com.au/lifestyle/real-estate",
+      "description": "Get details, headlines, and suggestions on the dynamic real estate market that is relevant to Perth, Australia's, home buying and investment opportunities.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596905.jpg?t=1686658223"
+    },
+    {
+      "title": "PerthNow \u00bb Opinion",
+      "feed_url": "https://www.perthnow.com.au/opinion/feed",
+      "website_url": "https://www.perthnow.com.au/opinion",
+      "description": "All the latest opinion and analysis of local, national and international events from Western Australia's leading newsroom.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535820.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Parenting",
+      "feed_url": "https://www.perthnow.com.au/lifestyle/parenting/feed",
+      "website_url": "https://www.perthnow.com.au/lifestyle/parenting",
+      "description": "Get access to a clear and informative resource for parents that offers perceptions, pointers, and guidance on numerous facets of family life and parenting.",
+      "followers": {
+        "facebook": 601700,
+        "twitter": 170200,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/5596899.jpg?t=1686658991"
+    },
+    {
+      "title": "PerthNow \u00bb Travel",
+      "feed_url": "https://www.perthnow.com.au/travel/feed",
+      "website_url": "https://www.perthnow.com.au/travel",
+      "description": "All articles about Travel from PerthNow.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535823.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Personal Finance",
+      "feed_url": "https://www.perthnow.com.au/lifestyle/personal-finance/feed",
+      "website_url": "https://www.perthnow.com.au/lifestyle/personal-finance",
+      "description": "From tips, to cash jobs and even 'lemonade stalls', here's all of the ATO tax demands making working Aussies furious.",
+      "followers": {
+        "facebook": 601700,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/8535826.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Property",
+      "feed_url": "https://www.perthnow.com.au/business/property/feed",
+      "website_url": "https://www.perthnow.com.au/business/property",
+      "description": "All articles about Property from PerthNow.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535824.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Markets",
+      "feed_url": "https://www.perthnow.com.au/business/markets/feed",
+      "website_url": "https://www.perthnow.com.au/business/markets",
+      "description": "The ASX200 has finished down more than one per cent, giving back most of Friday's rally at the start of a 'hectic week' for investors.",
+      "followers": {
+        "facebook": 601700,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/8535828.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Economy",
+      "feed_url": "https://www.perthnow.com.au/business/economy/feed",
+      "website_url": "https://www.perthnow.com.au/business/economy",
+      "description": "'One of the ways that we can share in productivity ... is to work less hours.'",
+      "followers": {
+        "facebook": 601700,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/8535827.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Books",
+      "feed_url": "https://www.perthnow.com.au/entertainment/books/feed",
+      "website_url": "https://www.perthnow.com.au/entertainment/books",
+      "description": "Mystery novelist Martin Cruz Smith, known for such Arkady Renko thrillers as Gorky Park, has died aged 82.",
+      "followers": {
+        "facebook": 601700,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/8535825.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Motorsport",
+      "feed_url": "https://www.perthnow.com.au/sport/motorsport/feed",
+      "website_url": "https://www.perthnow.com.au/sport/motorsport",
+      "description": "The NASCAR series heads to the Dover Motor Speedway this weekend where Shane van Gisbergen's rivals can extract some revenge on the dominant Kiwi champion.",
+      "followers": {
+        "facebook": 601700,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/8535822.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Tennis",
+      "feed_url": "https://www.perthnow.com.au/sport/tennis/feed",
+      "website_url": "https://www.perthnow.com.au/sport/tennis",
+      "description": "All articles about Tennis from PerthNow.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535819.jpg"
+    },
+    {
+      "title": "PerthNow \u00bb Basketball",
+      "feed_url": "https://www.perthnow.com.au/sport/basketball/feed",
+      "website_url": "https://www.perthnow.com.au/sport/basketball",
+      "description": "The Opals have booked their ticket to next year's Women's Basketball World Cup in Germany with victory in the Asia Cup decider against Japan.",
+      "followers": {
+        "facebook": 601700,
+        "instagram": 98000
+      },
+      "image_url": "https://i1.feedspot.com/8535817.jpg"
+    }
+  ]
+}

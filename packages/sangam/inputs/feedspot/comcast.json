@@ -1,0 +1,40 @@
+{
+  "category": "Comcast",
+  "source_url": "https://rss.feedspot.com/comcast_rss_feeds",
+  "feeds": [
+    {
+      "title": "Comcast NBCUniversal LIFT Labs",
+      "feed_url": "https://lift.comcast.com/feed/",
+      "website_url": "https://lift.comcast.com/stories/",
+      "description": "Get advice from the world's most successful entrepreneurs, hear stories from other startups & see what's going on inside Comcast NBCUniversal LIFT Labs. LIFT Labs was created with input from more than 1,500 entrepreneurs from around the world. Our programming helps startups understand our business, test and pilot things with us, and become better storytellers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434821.jpg?t=1661259500"
+    },
+    {
+      "title": "Comcast Corporation Investors",
+      "feed_url": "https://www.cmcsa.com/rss/news-releases.xml?items=15",
+      "website_url": "https://www.cmcsa.com/",
+      "description": "Comcast creates incredible technology and entertainment that connects millions of people to the moments and experiences that matter most. Comcast Corporation Investors provides the latest news and insights on resources, financials, events & presentations, and many more!",
+      "followers": {
+        "twitter": 175600
+      },
+      "image_url": "https://i1.feedspot.com/5434820.jpg?t=1661259512"
+    },
+    {
+      "title": "Contact Emails Blog",
+      "feed_url": "https://www.contact-emails.com/blog/feed/",
+      "website_url": "https://www.contact-emails.com/blog/",
+      "description": "Find articles on Comcast, AOL Email, Mozilla Thunderbird, SBCGlobal, Bellsouth Email and more. We will provide you with a step-by-step guide to block email addresses on Comcast and also Comcast phone numbers are always active to serve our customers to the best.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470461.jpg?t=1669108678"
+    },
+    {
+      "title": "Comcast Corporation",
+      "feed_url": "https://corporate.comcast.com/rss/all",
+      "website_url": "https://corporate.comcast.com/",
+      "description": "Comcast Cable is one of the United States' largest video, high-speed internet, and phone providers to residential customers under the Xfinity brand, and also provides these services to businesses. It also provides wireless and security and automation services to residential customers under the Xfinity brand.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5083154.jpg?t=1661259610"
+    }
+  ]
+}

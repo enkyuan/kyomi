@@ -1,0 +1,41 @@
+{
+  "category": "Oncology Nurse",
+  "source_url": "https://rss.feedspot.com/oncology_nurse_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oncology Nursing News",
+      "feed_url": "https://www.oncnursingnews.com/rss",
+      "website_url": "https://www.oncnursingnews.com/",
+      "description": "Oncology Nursing News is a blog founded in 2012 that focuses on providing nursing professionals with the latest news, research, and updates in the field of oncology nursing. Their mission is to help oncology nurses stay informed and up-to-date on the latest developments in cancer care, treatment, and research.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5523414.jpg?t=1679314034"
+    },
+    {
+      "title": "Oncology Nursing Society",
+      "feed_url": "https://www.ons.org/rss.xml",
+      "website_url": "https://www.ons.org/",
+      "description": "The Oncology Nursing Society is a professional organization for oncology nurses founded in 1975. Its mission is to promote excellence in oncology nursing and quality cancer care. The society offers a range of resources for oncology nurses, including educational programs, certification, and advocacy efforts to improve patient care.",
+      "followers": {
+        "facebook": 50100,
+        "twitter": 24500,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5523412.jpg?t=1679313908"
+    },
+    {
+      "title": "The Nurse Break \u00bb Oncology",
+      "feed_url": "https://www.thenursebreak.org/category/oncology/feed/",
+      "website_url": "https://www.thenursebreak.org/category/oncology/",
+      "description": "The Nurse Break \u00bb Oncology Nursing is a blog founded in 2015 that aims to provide nurses with the latest news and information on oncology nursing. The blog's content includes clinical updates, research news, and career advice for oncology nurses.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 451,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5523413.jpg?t=1679313936"
+    }
+  ]
+}

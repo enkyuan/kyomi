@@ -1,0 +1,476 @@
+{
+  "category": "BMX",
+  "source_url": "https://rss.feedspot.com/bmx_rss_feeds",
+  "feeds": [
+    {
+      "title": "Freedom BMX Blog",
+      "feed_url": "https://freedombmx.de/feed",
+      "website_url": "https://freedombmx.de/blog",
+      "description": "Freedom BMX is Germany's largest BMX magazine keeps you up to date on BMX news. Find every day there are the latest news, videos and photos on BMX.",
+      "followers": {
+        "facebook": 125900,
+        "twitter": 1200,
+        "instagram": 84300
+      },
+      "image_url": "https://i1.feedspot.com/4817131.jpg?t=1610618841"
+    },
+    {
+      "title": "Odyssey BMX News",
+      "feed_url": "https://odysseybmx.com/feed/",
+      "website_url": "https://odysseybmx.com/news/",
+      "description": "Find BMX and high end BMX components.",
+      "followers": {
+        "facebook": 413100,
+        "twitter": 69500,
+        "instagram": 553600
+      },
+      "image_url": "https://i1.feedspot.com/3583734.jpg?t=1610619096"
+    },
+    {
+      "title": "bmxultra \u00bb News",
+      "feed_url": "https://bmxultra.com/feed/",
+      "website_url": "https://bmxultra.com/category/news/",
+      "description": "bmxultra.com is an online BMX racing magazine. It is an online international BMX Racing magazine. It's most well known for it's regular product reviews, but also features news, interviews, photos and a whole lot more on BMX.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/4818995.jpg?t=1610619131"
+    },
+    {
+      "title": "FAT BMX",
+      "feed_url": "https://www.fatbmx.com/index.php?option=com_k2&view=itemlist&format=feed&type=rss",
+      "website_url": "https://www.fatbmx.com/",
+      "description": "A blog covering daily BMX Racing and Freestyle BMX news & gossip. Features the latest BMX streaming videos, a full BMX events calendar, BMX Bike checks, BMX interviews, BMX racing & freestyle contest reports, scenes, and more.",
+      "followers": {
+        "facebook": 19600,
+        "twitter": 5400,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/5315915.jpg?t=1629979545"
+    },
+    {
+      "title": "Ride UK BMX",
+      "feed_url": "https://rideukbmx.com/feed",
+      "website_url": "https://rideukbmx.com/",
+      "description": "Ride UK BMX is the essential BMX title for riders and fans alike across the UK and beyond. Find the latest BMX news, interviews, blogs and BMX how to guides. Ride UK also has the best BMX videos on the net.",
+      "followers": {
+        "facebook": 753900,
+        "twitter": 19200,
+        "instagram": 104700
+      },
+      "image_url": "https://i1.feedspot.com/4816938.jpg?t=1610619102"
+    },
+    {
+      "title": "Fifteen News",
+      "feed_url": "https://15.ie/feed/",
+      "website_url": "https://15.ie/news/",
+      "description": "Fifteen BMX covers International BMX Racing news & rumors including interviews with the pros, product reviews & previews, events, video, and photography.",
+      "followers": {
+        "facebook": 40900,
+        "instagram": 63200
+      },
+      "image_url": "https://i1.feedspot.com/5315943.jpg?t=1629981937"
+    },
+    {
+      "title": "Tall Order BMX News",
+      "feed_url": "https://tallorderbmx.com/blogs/news.atom",
+      "website_url": "https://tallorderbmx.com/blogs/news",
+      "description": "Hi I'm Sebastian Keep and I'm a professional BMX rider from the U.K. I'll review product design and manufacturing, searching out and sponsoring talented BMX riders, introducing the team, filming projects, putting on contests and much more. Tall Order BMX parts and clothing are specifically designed riding transitions, check out tour team riders and watch BMX videos.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 8400,
+        "instagram": 76700
+      },
+      "image_url": "https://i1.feedspot.com/4817067.jpg?t=1610619107"
+    },
+    {
+      "title": "Federal Bikes Blog",
+      "feed_url": "https://federalbikes.com/blogs/news.atom",
+      "website_url": "https://federalbikes.com/blogs/news",
+      "description": "Federal BMX bikes provides Dan Lacey signature BMX frame, Bruno Hoffmann signature BMX frame, Stevie Churchill signature BMX frame. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 211800,
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/3583739.jpg?t=1610619110"
+    },
+    {
+      "title": "Supercross BMX Blog",
+      "feed_url": "https://www.supercrossbmx.com/blogs/news.atom",
+      "website_url": "https://www.supercrossbmx.com/blogs/news",
+      "description": "Supercross BMX was founded in 1989 to build the ultimate BMX race Frame. Their lives revolve around BMX. Find all the latest BMX News by Supercross BMX. The Supercross BMX Blog - A collection of blog articles loaded with BMX how-to's, the latest factory news, in-depth product recommendations, and so much more! Explore their blog and get BMX educated today!",
+      "followers": {
+        "facebook": 72400,
+        "twitter": 3600,
+        "instagram": 99400
+      },
+      "image_url": "https://i1.feedspot.com/4816989.jpg?t=1610619180"
+    },
+    {
+      "title": "Ride UK BMX \u00bb BMX Talk",
+      "feed_url": "https://rideukbmx.com/feed",
+      "website_url": "https://rideukbmx.com/bmx-talk",
+      "description": "BMX Talk is a UK based BMX team (BCampbell, PMaidment, CBarnard TAndrews & ATuffs) the largest digital BMX race community in Europe. It is your source for BMX Racing news and is the number one BMX Racing forum.",
+      "followers": {
+        "facebook": 32500,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4817112.jpg?t=1610619365"
+    },
+    {
+      "title": "bmxweekly",
+      "feed_url": "https://www.bmxweekly.com/feed/",
+      "website_url": "https://www.bmxweekly.com/",
+      "description": "Find posts and updates on BMX by bmx weekly.",
+      "followers": {
+        "facebook": 36100,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4819079.jpg?t=1610619409"
+    },
+    {
+      "title": "DALEHOLMESRACING.COM",
+      "feed_url": "https://www.daleholmesracing.com/feed/",
+      "website_url": "https://www.daleholmesracing.com/",
+      "description": "Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 892
+      },
+      "image_url": "https://i1.feedspot.com/4818915.jpg?t=1610619443"
+    },
+    {
+      "title": "Dialed Action Sports Blog",
+      "feed_url": "https://www.dialedactionsportsteam.com/feed/",
+      "website_url": "https://www.dialedactionsportsteam.com/blog/",
+      "description": "DialedActionSportsTeam.com provides professional, BMX stunt shows for your school assemblies or special events.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4817318.jpg?t=1610620316"
+    },
+    {
+      "title": "The BMX Dude Magazine",
+      "feed_url": "https://thebmxdude.com/feed/",
+      "website_url": "https://thebmxdude.com/",
+      "description": "The BMX Dude is the world's best resource for everything related to BMX, professional and amateur riders, videos, products and news. The BMX Dude is the NBD (Never Been Done) online magazine for everything BMX-related. After riding bicycle motocross for 20+ years, I took a hiatus due to an injury. However, even when not riding, I was continually binging on BMX videos and new product drops.",
+      "followers": {
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5484715.jpg?t=1672224226"
+    },
+    {
+      "title": "BMX Union Blog",
+      "feed_url": "https://bmxunion.com/category/blog/feed/",
+      "website_url": "https://bmxunion.com/category/blog/",
+      "description": "BMX Union is all about BMX. Find the latest BMX videos and photos, BMX bikes, frames, parts, news and more.",
+      "followers": {
+        "facebook": 488600,
+        "twitter": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4812994.jpg?t=1610618809"
+    },
+    {
+      "title": "The Shadow Conspiracy \u00bb News",
+      "feed_url": "https://theshadowconspiracy.com/category/news/feed/",
+      "website_url": "https://theshadowconspiracy.com/category/news/",
+      "description": "Shadow has stood the test of time and proven itself to be one of the best and most original brands in BMX. Follow us and stay up to date with the latest product and riding videos from your favorite BMX brand the Shadow Conspiracy and find blogs on BMX.",
+      "followers": {
+        "facebook": 199100,
+        "twitter": 38900,
+        "instagram": 348400
+      },
+      "image_url": "https://i1.feedspot.com/3583733.jpg?t=1610619084"
+    },
+    {
+      "title": "BMX News",
+      "feed_url": "https://www.bmxnews.com/feed/",
+      "website_url": "https://www.bmxnews.com/",
+      "description": "BMX News is the most widely-read BMX Racing news site on the Internet. Find Original articles, awesome action photos and a nose for news on BMX. BMX News (bmxnews.com) is the World's leading source for News and Information on the sport of BMX Racing as heard on WCKG radio in Chicago.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 6100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4817405.jpg?t=1610619116"
+    },
+    {
+      "title": "Anchor BMX News",
+      "feed_url": "https://www.anchorbmx.com/blogs/news.atom",
+      "website_url": "https://www.anchorbmx.com/blogs/news",
+      "description": "Find posts and updates on BMX.",
+      "followers": {
+        "twitter": 116,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4817336.jpg"
+    },
+    {
+      "title": "Colony BMX News",
+      "feed_url": "https://colonybmx.com.au/news/feed/",
+      "website_url": "https://colonybmx.com.au/news/",
+      "description": "Colony BMX supports riders all across the world. Colony is all about functional BMX only products. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 96400,
+        "instagram": 150600
+      },
+      "image_url": "https://i1.feedspot.com/4819043.jpg?t=1610619159"
+    },
+    {
+      "title": "BMX Australia News",
+      "feed_url": "https://bmxaustralia.com.au/feed/",
+      "website_url": "https://bmxaustralia.com.au/news/",
+      "description": "Bicycle Motocross Australia (BMXA) is recognised by the Australian Sports Commission as the National Sporting Organisation for BMX racing and Freestyle BMX within the nation. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 33600
+      },
+      "image_url": "https://i1.feedspot.com/4819134.jpg"
+    },
+    {
+      "title": "Fatboy Mini BMX Blog",
+      "feed_url": "https://fatboyminibmx.com/blogs/news.atom",
+      "website_url": "https://fatboyminibmx.com/blogs/news",
+      "description": "Fatboy Mini BMX are an all ages bicycle for riding and doing tricks. Find news on the mini bmx culture.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 24,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4816964.jpg?t=1610619372"
+    },
+    {
+      "title": "Wildcat Mini Blog",
+      "feed_url": "https://wildcatmini.com/blogs/news.atom",
+      "website_url": "https://wildcatmini.com/blogs/news",
+      "description": "Welcome to Wildcat Mini BMX - where we are 'Built for bigger things!'Check out blog articles & news to educate you to excel on your Wildcat.",
+      "followers": {
+        "facebook": 11400,
+        "instagram": 15300
+      },
+      "image_url": "https://i1.feedspot.com/5041637.jpg?t=1610619376"
+    },
+    {
+      "title": "Props BMX Blog",
+      "feed_url": "https://www.propsbmx.com/feed/",
+      "website_url": "https://www.propsbmx.com/blog/",
+      "description": "Props BMX Craft's quality BMX videos since '93. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 77100,
+        "twitter": 14900
+      },
+      "image_url": "https://i1.feedspot.com/4817046.jpg?t=1610619406"
+    },
+    {
+      "title": "BMX.NET.NZ",
+      "feed_url": "https://bmx.net.nz/feed/",
+      "website_url": "https://bmx.net.nz/",
+      "description": "For all things BMX in NZ - news, reviews, videos, pictures, riders check out bmx.net.nz",
+      "followers": {
+        "facebook": 4500,
+        "instagram": 720
+      },
+      "image_url": "https://i1.feedspot.com/4819031.jpg?t=1610619413"
+    },
+    {
+      "title": "University of BMX.",
+      "feed_url": "https://www.universityofbmx.com/blog?format=feed&type=rss",
+      "website_url": "https://www.universityofbmx.com/blog",
+      "description": "Find the complete European history of BMX by Gerrit Does and beyond.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/4817091.jpg?t=1610619419"
+    },
+    {
+      "title": "Florida BMX",
+      "feed_url": "https://floridabmx.org/feed/",
+      "website_url": "https://floridabmx.org/",
+      "description": "Sunshine State BMX is a Non Profit Extreme Bicycle Racing Promoter. This is the Official Site for Florida BMX. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 275
+      },
+      "image_url": "https://i1.feedspot.com/4817194.jpg?t=1610619431"
+    },
+    {
+      "title": "STOUT",
+      "feed_url": "http://stoutbikes.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://stoutbikes.blogspot.com/",
+      "description": "Hi I'm Mattty. I will help you design a custom frame specific to your needs. My expertise/background is in DJ/street, All MTN and BMX frames. I'll posts and updates blogs on BMX.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4819884.jpg?t=1627906339"
+    },
+    {
+      "title": "BMX Moms Blog",
+      "feed_url": "https://bmxmoms.com/blogs/news.atom",
+      "website_url": "https://bmxmoms.com/blogs/news",
+      "description": "BMX Moms is an apparel brand dedicated to helping Mom's show support for their riders. BMX Moms is a proud supporter of bike moto cross. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 291
+      },
+      "image_url": "https://i1.feedspot.com/4817451.jpg?t=1610620007"
+    },
+    {
+      "title": "Fisurebmx",
+      "feed_url": "http://fisurebmx.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://fisurebmx.blogspot.com/",
+      "description": "Fisurebmx blog of BMX, knows all the news of this sport in the national and international environment, also knows our works in videos, photos, events!",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 465
+      },
+      "image_url": "https://i1.feedspot.com/4817265.jpg?t=1610620020"
+    },
+    {
+      "title": "Vocal BMX Blog",
+      "feed_url": "https://vocalbmx.com/feed/",
+      "website_url": "https://vocalbmx.com/blog/",
+      "description": "Vocal BMX is a UK based BMX Brand. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 251,
+        "instagram": 29300
+      },
+      "image_url": "https://i1.feedspot.com/4817057.jpg?t=1610620165"
+    },
+    {
+      "title": "GrindWorks BMX",
+      "feed_url": "https://grindworksbmx.com/feed/",
+      "website_url": "https://grindworksbmx.com/",
+      "description": "GrindWorks is rider owned and strives to provide high-functioning, long-lasting, quality products. GrindWorks is a small company headed out of Pittsburgh, PA and Vestal, NY. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 873,
+        "twitter": 107,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4819775.jpg?t=1610620170"
+    },
+    {
+      "title": "ARTIGUES BMX",
+      "feed_url": "http://artiguesbmx.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://artiguesbmx.blogspot.com/",
+      "description": "ARTIGUES BMX provides all the info in your team artigues bmx, race, track bmx, bmx-artigues, artigues-bmx, gironde.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4816950.jpg?t=1610620422"
+    },
+    {
+      "title": "Freestyle BMX Tales",
+      "feed_url": "http://freestylebmxtales43.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://freestylebmxtales43.blogspot.com/",
+      "description": "Find posts and updates on BMX.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4817272.jpg?t=1610620382"
+    },
+    {
+      "title": "FLBMX",
+      "feed_url": "http://fl-bmx.com/feed/",
+      "website_url": "http://fl-bmx.com/",
+      "description": "FL BMX Throwing the best jams and keeping you up to date on all that is BMX in Florida.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4819096.jpg?t=1610620229"
+    },
+    {
+      "title": "BMX Ireland",
+      "feed_url": "http://www.bmxireland.ie/feed/",
+      "website_url": "http://www.bmxireland.ie/",
+      "description": "The Cycling Ireland BMX Commission has been established to operate and control the cycling discipline of 'BMX Racing' on the island of Ireland. Find posts and updates on BMX Ireland.",
+      "followers": {
+        "facebook": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4819142.jpg?t=1610620190"
+    },
+    {
+      "title": "Vital BMX",
+      "feed_url": "http://feeds.vitalbmx.com/vitalbmx/aIrF",
+      "website_url": "https://digbmx.com/",
+      "description": "Vital BMX is the #1 BMX website. Watch BMX videos, meet other riders, read reviews in our BMX bike and parts guide. Trick tips, freestyle BMX, street, flatland, dirt jumping, ramps, and more.",
+      "followers": {
+        "facebook": 306000,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/1876761.jpg?t=1610618806"
+    },
+    {
+      "title": "Dig BMX",
+      "feed_url": "https://digbmx.com/digbmx.rss",
+      "website_url": "https://digbmx.com/",
+      "description": "DIG is the Premier Online Source for BMX Videos, Photography, Interviews, and more. DIG BMX is the leading online BMX magazine with unique articles, videos, reviews, BMX events & photo galleries.",
+      "followers": {
+        "facebook": 581500,
+        "twitter": 34800,
+        "instagram": 378000
+      },
+      "image_url": "https://i1.feedspot.com/4819740.jpg?t=1610618819"
+    },
+    {
+      "title": "USA BMX News",
+      "feed_url": "https://www.usabmx.com/site/sections/27.rss",
+      "website_url": "https://www.usabmx.com/site/sections/27",
+      "description": "The American Bicycle Association, was formed in 1977 and is headquartered in Chandler, Arizona. USABMX is the Worlds largest BMX racing organization. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 221700,
+        "twitter": 22400,
+        "instagram": 109700
+      },
+      "image_url": "https://i1.feedspot.com/4818974.jpg?t=1610618851"
+    },
+    {
+      "title": "Volume Bikes",
+      "feed_url": "https://volumebikes.com/feed/",
+      "website_url": "https://volumebikes.com/",
+      "description": "Find Volume Bikes latest and greatest videos, featuring our team riders.",
+      "followers": {
+        "facebook": 107600,
+        "twitter": 6300,
+        "instagram": 212700
+      },
+      "image_url": "https://i1.feedspot.com/4817389.jpg?t=1610619120"
+    },
+    {
+      "title": "Back Bone BMX Blog",
+      "feed_url": "https://backbonebmx.com/blogs/news.atom",
+      "website_url": "https://backbonebmx.com/blogs/news",
+      "description": "Back Bone BMX has been supplying riders with an amazing range of BMX bikes, parts, clothing and accessories since 2005. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 17100,
+        "twitter": 413,
+        "instagram": 25900
+      },
+      "image_url": "https://i1.feedspot.com/4817381.jpg?t=1610619175"
+    },
+    {
+      "title": "HARO BIKES",
+      "feed_url": "https://harobmxbikes.tumblr.com/rss",
+      "website_url": "https://harobmxbikes.tumblr.com/",
+      "description": "Welcome to the Haro BMX team blog. Haro is the original BMX freestyle brand since 1978. Dennis Enarson, Ryan Nyquist, Tyler Fernengel, Chad Kerley, Matthias Dandois, Jason Watts, Mike Gray, Dennis McCoy, Maxime Charveron. Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 150100,
+        "twitter": 27700,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4819927.jpg?t=1515396808"
+    },
+    {
+      "title": "Taupo BMX Club",
+      "feed_url": "https://taupobmx.org.nz/feed/",
+      "website_url": "https://taupobmx.org.nz/",
+      "description": "Find posts and updates on BMX.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4819101.jpg?t=1610620196"
+    },
+    {
+      "title": "Eastern Bikes Blog",
+      "feed_url": "https://blog.easternbikes.com/feed/",
+      "website_url": "https://blog.easternbikes.com/",
+      "description": "Eastern Bikes has been producing some of the best and most innovative BMX bikes in the world. This is the official blog for Eastern Bikes product and rider news focusing on our bicycles, frames, parts, how-to instructionals, trick-tips and more.",
+      "followers": {
+        "facebook": 46900,
+        "twitter": 3000,
+        "instagram": 50400
+      },
+      "image_url": "https://i1.feedspot.com/4813091.jpg?t=1610620025"
+    }
+  ]
+}

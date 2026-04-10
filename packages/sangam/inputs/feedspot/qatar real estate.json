@@ -1,0 +1,29 @@
+{
+  "category": "Qatar Real Estate",
+  "source_url": "https://rss.feedspot.com/qatar_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Alfardan Properties Blog",
+      "feed_url": "https://www.alfardanproperties.com/feed/",
+      "website_url": "https://www.alfardanproperties.com/media/blogs/",
+      "description": "Founded in 2004, Alfardan Properties is one of Qatar's leading luxury property developers. The company offers a range of properties including residential apartments, commercial spaces, and high-end villas. With a focus on quality and attention to detail, Alfardan Properties has earned a reputation for excellence in the real estate industry in Qatar.",
+      "followers": {
+        "facebook": 104000,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5555629.jpg?t=1684139844"
+    },
+    {
+      "title": "Qproperties Blog",
+      "feed_url": "https://qproperties.qa/feed/",
+      "website_url": "https://qproperties.qa/blog/",
+      "description": "Qproperties Real Estate Blog provides insights and analysis of the Qatar property market, with a focus on residential real estate, investment, and financing. The blog covers a range of topics related to the property market, including market trends, tips for buying and selling properties, and expert advice from industry professionals. It is a valuable resource for anyone interested in the Qatar real estate market.",
+      "followers": {
+        "facebook": 877,
+        "twitter": 43,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5118886.jpg?t=1683178948"
+    }
+  ]
+}

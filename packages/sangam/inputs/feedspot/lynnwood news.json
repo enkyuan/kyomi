@@ -1,0 +1,29 @@
+{
+  "category": "Lynnwood News",
+  "source_url": "https://rss.feedspot.com/lynnwood_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lynnwood Today",
+      "feed_url": "https://lynnwoodtoday.com/category/news/feed/",
+      "website_url": "https://lynnwoodtoday.com/category/news/",
+      "description": "Lynnwood Today is a neighborhood news website covering all things Lynnwood, WA. Keep up with all the latest local news and updates.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5157246.jpg?t=1625570391"
+    },
+    {
+      "title": "Lynnwood Times",
+      "feed_url": "https://lynnwoodtimes.com/category/news/feed/",
+      "website_url": "https://lynnwoodtimes.com/category/news/",
+      "description": "The Lynnwood Times is Lynnwood's premier news source as well as Lynnwood's only in-print and online newspaper. The Lynnwood Times features informative articles about the local community, residents, arts and culture, city government, history, education, community sports, entertainment and resident conversations.",
+      "followers": {
+        "facebook": 32500,
+        "twitter": 1700,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5157252.jpg"
+    }
+  ]
+}

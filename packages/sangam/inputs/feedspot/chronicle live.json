@@ -1,0 +1,46 @@
+{
+  "category": "Chronicle Live",
+  "source_url": "https://rss.feedspot.com/chroniclelive_rss_feeds",
+  "feeds": [
+    {
+      "title": "Chronicle Live",
+      "feed_url": "https://www.chroniclelive.co.uk/?service=rss",
+      "website_url": "https://www.chroniclelive.co.uk/",
+      "description": "All latest articles from Chronicle Live.",
+      "followers": {
+        "facebook": 601800,
+        "twitter": 218900,
+        "instagram": 81500
+      },
+      "image_url": "https://i1.feedspot.com/4940859.jpg?t=1741605131"
+    },
+    {
+      "title": "Chronicle Live \u00bb News",
+      "feed_url": "https://www.chroniclelive.co.uk/news/?service=rss",
+      "website_url": "https://www.chroniclelive.co.uk/news/",
+      "description": "Get the latest Newcastle news and North East news from the Evening Chronicle. Local website with breaking news, NUFC news, SAFC news, video, sport and weather from Newcastle and the North East region.",
+      "followers": {
+        "facebook": 601800,
+        "twitter": 218900,
+        "instagram": 81500
+      },
+      "image_url": "https://i1.feedspot.com/7886745.jpg?t=1741605130"
+    },
+    {
+      "title": "Chronicle Live \u00bb Sport",
+      "feed_url": "https://www.chroniclelive.co.uk/sport/?service=rss",
+      "website_url": "https://www.chroniclelive.co.uk/sport/",
+      "description": "All latest articles about Sports from Chronicle Live.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7886746.jpg?t=1741605129"
+    },
+    {
+      "title": "Chronicle Live \u00bb Whats On",
+      "feed_url": "https://www.chroniclelive.co.uk/whats-on/?service=rss",
+      "website_url": "https://www.chroniclelive.co.uk/whats-on/",
+      "description": "All latest articles about Whats On from Chronicle Live.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7886747.jpg?t=1741605128"
+    }
+  ]
+}

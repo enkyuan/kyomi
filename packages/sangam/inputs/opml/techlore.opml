@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>Techlore RSS Collection</title>
+  </head>
+  <body>
+
+    <outline text="Techlore">
+      <outline text="Techlore Main feed" type="rss" xmlUrl="https://social.lol/@techlore.rss"/>
+    </outline>
+
+    <outline text="General Technology">
+      <outline text="Engadget" type="rss" xmlUrl="https://www.engadget.com/rss.xml"/>
+      <outline text="Gizmodo" type="rss" xmlUrl="https://gizmodo.com/rss"/>
+      <outline text="Slashdot" type="rss" xmlUrl="http://rss.slashdot.org/Slashdot/slashdotMain"/>
+      <outline text="TechCrunch" type="rss" xmlUrl="https://techcrunch.com/feed"/>
+      <outline text="The Verge" type="rss" xmlUrl="https://www.theverge.com/rss/frontpage"/>
+      <outline text="Wired" type="rss" xmlUrl="https://www.wired.com/feed"/>
+    </outline>
+
+    <outline text="Cybersecurity">
+      <outline text="Bleeping Computer" type="rss" xmlUrl="https://www.bleepingcomputer.com/feed/"/>
+      <outline text="Krebs on Security" type="rss" xmlUrl="https://krebsonsecurity.com/feed"/>
+      <outline text="Schneier on Security" type="rss" xmlUrl="https://www.schneier.com/feed"/>
+      <outline text="The Hacker News" type="rss" xmlUrl="https://feeds.feedburner.com/TheHackersNews"/>
+      <outline text="The New Oil news feed" type="rss" xmlUrl="https://mastodon.thenewoil.org/@thenewoil.rss"/>
+    </outline>
+
+    <outline text="Digital Rights">
+      <outline text="404 Media" type="rss" xmlUrl="https://www.404media.co/rss/"/>
+      <outline text="Electronic Frontier Foundation (Deeplinks)" type="rss" xmlUrl="https://www.eff.org/rss/updates.xml"/>
+      <outline text="EPIC" type="rss" xmlUrl="https://epic.org/content-types/updates/feed"/>
+      <outline text="Privacy International" type="rss" xmlUrl="https://privacyinternational.org/rss.xml"/>
+    </outline>
+
+    <outline text="Privacy">
+      <outline text="Mullvad" type="rss" xmlUrl="https://mullvad.net/en/blog/feed/atom"/>
+      <outline text="Privacy Guides" type="rss" xmlUrl="https://blog.privacyguides.org/rss/"/>
+      <outline text="Proton Mail – Blog" type="rss" xmlUrl="https://proton.me/blog/feed"/>
+      <outline text="Proton VPN" type="rss" xmlUrl="https://protonvpn.com/blog/feed"/>
+      <outline text="Psyvacy" type="rss" xmlUrl="https://psyvacy.substack.com/feed"/>
+      <outline text="The New Oil – Blog" type="rss" xmlUrl="https://blog.thenewoil.org/feed/"/>
+      <outline text="The Privacy Dad" type="rss" xmlUrl="https://theprivacydad.com/feed/"/>
+      <outline text="Tor Project Blog" type="rss" xmlUrl="https://blog.torproject.org/feed"/>
+      <outline text="Tuta Blog" type="rss" xmlUrl="https://tuta.com/blog/feed.xml"/>
+    </outline>
+
+  </body>
+</opml>

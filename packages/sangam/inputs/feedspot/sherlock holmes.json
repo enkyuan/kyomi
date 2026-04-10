@@ -1,0 +1,59 @@
+{
+  "category": "Sherlock Holmes",
+  "source_url": "https://rss.feedspot.com/sherlock_holmes_rss_feeds",
+  "feeds": [
+    {
+      "title": "I Hear of Sherlock Everywhere",
+      "feed_url": "https://feeds.feedburner.com/IHearOfSherlock",
+      "website_url": "https://www.ihearofsherlock.com/",
+      "description": "I Hear of Sherlock Everywhere is the definitive Sherlock Holmes show and website at the intersection of news and popular culture. Covering the intersection of popular culture and the world of Sherlock Holmes since 2005, but where it's always 1895!",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5397198.jpg?t=1651743528"
+    },
+    {
+      "title": "Sherlock Peoria",
+      "feed_url": "http://sherlockpeoria.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sherlockpeoria.blogspot.com/",
+      "description": "The ongoing investigation of Sherlock Holmes reported from the Peoria, Illinois outpost of Baker Street's dirtiest half a dozen.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5397197.jpg?t=1651743401"
+    },
+    {
+      "title": "Doyleockian",
+      "feed_url": "https://alistaird221b.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://alistaird221b.blogspot.com/",
+      "description": "Hi! I'm Alistair Duncan. I've been a Sherlock Holmes and Arthur Conan Doyle fan for over thirty years and am a member of three related societies. The Sherlock Holmes Society of London, The Conan Doyle (Crowborough) Establishment, and The Sydney Passengers. I served as a Council Member of the Sherlock Holmes Society of London from 2012 to 2015. I am a member of the Crime Writers' Association.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5397194.jpg?t=1651744174"
+    },
+    {
+      "title": "Dan Andriacco's Baker Street Beat",
+      "feed_url": "http://bakerstreetbeat.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://bakerstreetbeat.blogspot.com/",
+      "description": "Welcome! Like the book of the same name, this blog is an eclectic collection of Sherlockian scribblings based on more than a half-century of reading Sherlock Holmes.",
+      "followers": {
+        "facebook": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5397195.jpg?t=1651744219"
+    },
+    {
+      "title": "Historical Sherlock",
+      "feed_url": "http://historicalsherlock.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://historicalsherlock.blogspot.com/",
+      "description": "Historical Sherlock is examining the chronology of the Sherlock Holmes Canon.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5397196.jpg?t=1651744327"
+    },
+    {
+      "title": "Parrot's Playground",
+      "feed_url": "https://parrotsplayground.com/feed/",
+      "website_url": "https://parrotsplayground.com/",
+      "description": "My name is Parrot! Grow interested in deduction from Sherlock Holmes, consider yourself a smart person. It's a collective insight from me and hopefully, in the future some more great minds that are also like the deduction and induction sphere. The goal is to reignite this art and act as a library to store and teach deduction skills.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604673.jpg?t=1687432564"
+    }
+  ]
+}

@@ -1,0 +1,788 @@
+{
+  "category": "Virtual Reality",
+  "source_url": "https://rss.feedspot.com/virtual_reality_rss_feeds",
+  "feeds": [
+    {
+      "title": "Road to VR",
+      "feed_url": "https://www.roadtovr.com/feed/",
+      "website_url": "https://www.roadtovr.com/",
+      "description": "Road to VR is the world's leading independent news publication dedicated to the consumer virtual reality industry. We explore the bleeding edge of virtual reality, augmented reality, and human-computer interaction.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 124800
+      },
+      "image_url": "https://i1.feedspot.com/319474.jpg?t=1669022901"
+    },
+    {
+      "title": "Upload VR",
+      "feed_url": "https://www.uploadvr.com/feed/",
+      "website_url": "https://www.uploadvr.com/best-of-vr/",
+      "description": "Our blog posts cover virtual reality news, reviews, guides, analysis, events, and the progress of the XR industry. Upload VR is a news organization focused on the intersection between people and VR/AR. We strive for fairness, accuracy, and depth in our coverage but we are also advocates for the safe, ethical, and inclusive use of this technology.",
+      "followers": {
+        "facebook": 140500,
+        "twitter": 179300
+      },
+      "image_url": "https://i1.feedspot.com/4413867.jpg?t=1669023526"
+    },
+    {
+      "title": "The Ghost Howls",
+      "feed_url": "https://skarredghost.com/feed/",
+      "website_url": "https://skarredghost.com/",
+      "description": "This blog covers almost everything about tech startups and VR; news, reviews, and previews. VR news and information posted in layman terms, The Ghost Howls takes into consideration everyone even remotely interested in VR and report accordingly.",
+      "followers": {
+        "twitter": 34000
+      },
+      "image_url": "https://i1.feedspot.com/4556606.jpg?t=1614853118"
+    },
+    {
+      "title": "Hypergrid Business",
+      "feed_url": "https://www.hypergridbusiness.com/feed/",
+      "website_url": "https://www.hypergridbusiness.com/",
+      "description": "Covering virtual reality, immersive worlds, and other emerging technologies. Other areas of coverage include augmented, virtual & extended reality, and artificial intelligence. Hypergrid Business is an online publication indexed by Google News that covers enterprise uses of immersive virtual reality environments and virtual worlds.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/443499.jpg?t=1614852406"
+    },
+    {
+      "title": "TechCrunch \u00bb Virtual reality",
+      "feed_url": "https://techcrunch.com/tag/virtual-reality/feed/",
+      "website_url": "https://techcrunch.com/tag/virtual-reality/",
+      "description": "TechCrunch covers the pulse of the tech industry. This section of the TechCrunch blog provides in-depth insights into the technical and mechanical aspects of VR.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4556591.jpg?t=1625578492"
+    },
+    {
+      "title": "Google AR and VR",
+      "feed_url": "https://blog.google/products/google-ar-vr/rss/",
+      "website_url": "https://blog.google/products/google-ar-vr/",
+      "description": "News about AR and VR at Google, including ARCore, Daydream, Cardboard, Jump, Tilt Brush, Blocks and more.",
+      "followers": {
+        "facebook": 29200000,
+        "twitter": 32799999,
+        "instagram": 15700000
+      },
+      "image_url": "https://i1.feedspot.com/4557274.jpg"
+    },
+    {
+      "title": "Game Developer \u00bb Extended Reality",
+      "feed_url": "https://www.gamedeveloper.com/rss.xml",
+      "website_url": "https://www.gamedeveloper.com/game-platforms/extended-reality",
+      "description": "Selected news, features, and analysis from Gamasutra, a leading site dealing with the art and business of video games. Here, you'll find VR news and updates.",
+      "followers": {
+        "facebook": 44700,
+        "twitter": 288
+      },
+      "image_url": "https://i1.feedspot.com/5259674.jpg?t=1616239933"
+    },
+    {
+      "title": "EON Reality Blog",
+      "feed_url": "http://eonreality.com/feed/",
+      "website_url": "https://eonreality.com/blog/",
+      "description": "EON Reality is the world leader in Virtual and Augmented Reality based knowledge transfer for industry and education. We believe that knowledge is a Human Right, and it's our goal to make knowledge available, affordable, and accessible for every human on the planet. To do this, we're creating the next generation of Virtual and Augmented Reality tools to increase the world's knowledge transfer capabilities.",
+      "followers": {
+        "facebook": 63400,
+        "twitter": 6200,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5012070.jpg?t=1614853124"
+    },
+    {
+      "title": "SimX Blog",
+      "feed_url": "https://www.simxvr.com/feed/",
+      "website_url": "https://www.simxvr.com/articles/",
+      "description": "Built by educators, for educators, SimX was founded by and is still run by MDs, PAs, RNs, and other clinicians. SimX is the only VR medical sim product that works on all major headsets, wired or wireless! From routine clinic visits to multi-trauma cases for field medics. From basic assessment for MA training to postoperative ICU cases for specialists. The SimX system can do it all!",
+      "followers": {
+        "facebook": 559,
+        "twitter": 510
+      },
+      "image_url": "https://i1.feedspot.com/5271189.jpg?t=1618900982"
+    },
+    {
+      "title": "Immersive Learning News",
+      "feed_url": "https://www.immersivelearning.news/feed/",
+      "website_url": "https://www.immersivelearning.news/",
+      "description": "Immersive Learning News is The Online Magazine for Virtual Reality and Augmented Reality- and Mixed Reality-Learning",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4945750.jpg?t=1614853209"
+    },
+    {
+      "title": "Yulio Blog",
+      "feed_url": "https://blog.yulio.com/rss.xml",
+      "website_url": "https://blog.yulio.com/",
+      "description": "Yulio VR blog is the source for key VR learnings and top-tier VR resources, our software updates, and more. Visit today and grab our latest whitepaper!",
+      "followers": {
+        "facebook": 630,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5192333.jpg?t=1599055909"
+    },
+    {
+      "title": "Maverick VR - Blog",
+      "feed_url": "https://www.maverickvr.com/blog-feed.xml",
+      "website_url": "https://www.maverickvr.com/blog",
+      "description": "Check this blog to see insights into all things virtual reality. They provide turn-key virtual reality event services to help create unforgettable customized VR event experiences throughout the nation",
+      "followers": {
+        "facebook": 8400,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/5021048.jpg?t=1614853245"
+    },
+    {
+      "title": "Owatch",
+      "feed_url": "https://www.stekiamusement.com/feed/",
+      "website_url": "https://www.stekiamusement.com/category/virtual-reality-technology/",
+      "description": "We supply customers around the world with high-quality 5D/7D Motion Cinema, Virtual Reality Equipment Manufacturer. Hi-Tech Enterprise of VR Game Machine, Virtual Reality Cinema Supplier, 9D VR Simulators products at attractive conditions. We have own R&D, production, sales, and technical services! In doing so, we are able to provide customized solutions to meet your individual needs!",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5038096.jpg?t=1614853171"
+    },
+    {
+      "title": "EON Reality",
+      "feed_url": "https://eonreality.com/feed/",
+      "website_url": "https://eonreality.com/news-and-events/",
+      "description": "EON Reality is the world leader in Augmented and Virtual Reality academic and industry training solutions. We believe that knowledge is a human right and should be available, accessible, and affordable for every human on the planet. Knowledge is a human right",
+      "followers": {
+        "facebook": 63400,
+        "twitter": 6200,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4556647.jpg?t=1614853376"
+    },
+    {
+      "title": "XROM | Virtual Reality",
+      "feed_url": "https://www.xrom.in/xrnews/blog-feed.xml",
+      "website_url": "https://www.xrom.in/all-news",
+      "description": "XROM is your One-Stop-Shop for Extended Reality Venture Designed to Shape India's AR/VR/MR Growth Story.",
+      "followers": {
+        "twitter": 309
+      },
+      "image_url": "https://i1.feedspot.com/5088849.jpg?t=1614853228"
+    },
+    {
+      "title": "VR Bites",
+      "feed_url": "https://vrbites.com/feed/",
+      "website_url": "https://vrbites.com/",
+      "description": "VRBites is the best place for all virtual reality enthusiastic. This is a comprehensive blog providing news on VR players, hardware, games, and apps. Together with news, they help the VR community with honest reviews and how-to articles on the latest VR tech.",
+      "followers": {
+        "facebook": 344,
+        "twitter": 362,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4556537.jpg?t=1614853594"
+    },
+    {
+      "title": "The Haptical News on Virtual Reality",
+      "feed_url": "https://haptic.al/feed",
+      "website_url": "https://haptic.al/",
+      "description": "Haptical is a leading news and information source on Virtual Reality. We track latest breakthroughs and trends to stimulate growth in the VR industry for a global audience. Virtual reality is a complex technology\u2026We make it easy, understandable and accessible through engaging stories, best practices and reviews.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 203100
+      },
+      "image_url": "https://i1.feedspot.com/4439313.jpg?t=1614853385"
+    },
+    {
+      "title": "VirtualSpeech Blog",
+      "feed_url": "https://virtualspeech.com/feed",
+      "website_url": "https://virtualspeech.com/blog/",
+      "description": "AI-powered soft skills training in virtual reality (VR), mixed reality (MR), and online, for public speaking, interviews, difficult conversations, and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8634152.jpg?t=1752139839"
+    },
+    {
+      "title": "ClassVR Blog",
+      "feed_url": "https://www.classvr.com/feed/",
+      "website_url": "https://www.classvr.com/blog/",
+      "description": "ClassVR comes complete with everything teachers need to improve student engagement and introduce virtual reality into the classroom. The world's first virtual reality set designed specifically for schools, ClassVR provides teachers with everything they need to deliver engaging VR lessons.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4600,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5466830.jpg?t=1669019048"
+    },
+    {
+      "title": "Played With Fire Blog",
+      "feed_url": "https://www.playedwithfire.com/feed/",
+      "website_url": "https://www.playedwithfire.com/blog/",
+      "description": "We create rich, immersive and original VR content, specializing in action & adventure games with focus on scientific twists.",
+      "followers": {
+        "facebook": 245,
+        "twitter": 630,
+        "instagram": 341
+      },
+      "image_url": "https://i1.feedspot.com/8634155.jpg?t=1752140480"
+    },
+    {
+      "title": "VictoryXR Blog",
+      "feed_url": "https://www.victoryxr.com/feed/",
+      "website_url": "https://www.victoryxr.com/about-us-original/blog/",
+      "description": "VictoryXR is committed to increasing education technology with metaversities and college digital twin campuses",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 974,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/8634144.jpg?t=1752140943"
+    },
+    {
+      "title": "DevDen Solutions Blog",
+      "feed_url": "https://www.devdensolutions.com/feed/",
+      "website_url": "https://www.devdensolutions.com/blog/",
+      "description": "A Metaverse Content Development Studio specialized on VR, AR, MR Solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8634180.jpg?t=1753124062"
+    },
+    {
+      "title": "VR Vibe Blog",
+      "feed_url": "https://www.vr-vibe.com/blog-feed.xml",
+      "website_url": "https://www.vr-vibe.com/blog/",
+      "description": "Explore virtual reality with VR Vibe Blog: insights, reviews, and trends to keep you updated on all things vsupportirtual reality.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8634143.jpg?t=1752146152"
+    },
+    {
+      "title": "Bob cooney blog",
+      "feed_url": "https://bobcooney.com/feed/",
+      "website_url": "https://bobcooney.com/blog/",
+      "description": "Radical insights into virtual reality from the world's leading expert. Subscribe to learn how leading innovators are disrupting entire markets with VR/AR.",
+      "followers": {
+        "instagram": 885
+      },
+      "image_url": "https://i1.feedspot.com/8634142.jpg?t=1752143928"
+    },
+    {
+      "title": "Yord Studio",
+      "feed_url": "https://yordstudio.com/feed/",
+      "website_url": "https://yordstudio.com/virtual-and-augmented-reality-news/",
+      "description": "We are a creative XR and AI agency that provides interactive VR, AR, MR, and AI solutions and services to enterprises, governments, and clients worldwide.",
+      "followers": {
+        "facebook": 517,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/8634151.jpg?t=1752144333"
+    },
+    {
+      "title": "VizExperts Blog",
+      "feed_url": "https://vizexperts.com/feed/",
+      "website_url": "https://vizexperts.com/blog/",
+      "description": "VizExperts blog delivers industrial-grade insights on how virtual\u202freality, augmented\u202freality, and mixed\u202freality streamline training, design reviews, safety protocols, and operational efficiencies across sectors like oil & gas, aerospace, construction, and pharmaceuticals",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8634176.jpg?t=1753124018"
+    },
+    {
+      "title": "VRGaming Blog",
+      "feed_url": "https://vrgaming.store/feed/",
+      "website_url": "https://vrgaming.store/blog/",
+      "description": "VRGaming.store Blog dives into immersive VR gameplay and hardware\u2014offering developer interviews, behind\u2011the\u2011scenes looks at games like\u202fDeath Lap, tips for Oculus and Quest platforms, and VR design processes for enthusiasts and creators alike",
+      "followers": {
+        "facebook": 352,
+        "twitter": 6,
+        "instagram": 277
+      },
+      "image_url": "https://i1.feedspot.com/8634154.jpg?t=1752144714"
+    },
+    {
+      "title": "XR Today",
+      "feed_url": "https://www.xrtoday.com/feed/",
+      "website_url": "https://www.xrtoday.com/",
+      "description": "Extended Reality industry news is here. XR Today covers virtual reality, augmented reality, and mixed reality business news. You can read the latest XR news here! Our mission is to be the definitive guide to the business communications marketplace.",
+      "followers": {
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5466831.jpg?t=1669019422"
+    },
+    {
+      "title": "Foretell Reality News",
+      "feed_url": "https://foretellreality.com/feed/",
+      "website_url": "https://foretellreality.com/news-and-views/",
+      "description": "Discover the latest virtual and augmented reality innovations through Foretell Reality's blog, News and Views!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8634148.jpg?t=1752144989"
+    },
+    {
+      "title": "SkillsVR Blog",
+      "feed_url": "https://skillsvr.com/blog/feed",
+      "website_url": "https://skillsvr.com/blog/",
+      "description": "Dive into immersive learning, cutting-edge product insights, company updates, VR training research, innovative learning design, and more",
+      "followers": {
+        "facebook": 88,
+        "instagram": 123
+      },
+      "image_url": "https://i1.feedspot.com/8634145.jpg?t=1752145100"
+    },
+    {
+      "title": "PIXO VR Blog",
+      "feed_url": "https://pixovr.com/feed/",
+      "website_url": "https://pixovr.com/blog/",
+      "description": "Read up on the latest news and information on Extended Reality for enterprises, brought to you by PIXO VR.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2000,
+        "instagram": 265
+      },
+      "image_url": "https://i1.feedspot.com/8634146.jpg?t=1752145368"
+    },
+    {
+      "title": "VR Today Magazine",
+      "feed_url": "https://vrtodaymagazine.com/feed/",
+      "website_url": "https://vrtodaymagazine.com/",
+      "description": "VR Today Magazine is your premier source for all things virtual reality (VR), guiding you through the immersive and ever-evolving world of VR technology. Here you'll find the latest news, insightful reviews, and comprehensive information, all wrapped in a user-friendly package.",
+      "followers": {
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/5747773.jpg?t=1704340162"
+    },
+    {
+      "title": "Medium \u00bb Tech Trends",
+      "feed_url": "https://medium.com/feed/edtech-trends",
+      "website_url": "https://medium.com/edtech-trends/tagged/virtual-reality",
+      "description": "Writings about Virtual Reality in Tech Trends. Tech Trends showcase the latest disruptive technology that is changing the education landscape globally.",
+      "followers": {
+        "facebook": 520799,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4556426.jpg?t=1625578257"
+    },
+    {
+      "title": "AnandTech \u00bb Virtual Reality",
+      "feed_url": "https://www.anandtech.com/rss/",
+      "website_url": "https://www.anandtech.com/tag/vr",
+      "description": "Find latest AnandTech's latest articles filed under VR. Covers VR headsets, their applications, and their producers. AnandTech is an online computer hardware magazine owned by Future plc.",
+      "followers": {
+        "facebook": 58600,
+        "twitter": 75700
+      },
+      "image_url": "https://i1.feedspot.com/3417.jpg?t=1614852403"
+    },
+    {
+      "title": "AR/VR Journey",
+      "feed_url": "https://arvrjourney.com/feed",
+      "website_url": "https://arvrjourney.com/tagged/virtual-reality",
+      "description": "AR/VR Journey is the best place to learn about AR & VR. They share the latest AR/VR news, info, tools, tutorials, ARkit, ARcore, and more. Learn all the trending latest, latest, up-to-date news on AR/VR on our page!",
+      "followers": {
+        "facebook": 101
+      },
+      "image_url": "https://i1.feedspot.com/5020995.jpg?t=1669023106"
+    },
+    {
+      "title": "VR Heaven",
+      "feed_url": "https://vrheaven.io/feed/",
+      "website_url": "https://vrheaven.io/news/",
+      "description": "Covers VR News, Guides and Industry Insights. VR Heaven is here to accelerate the adoption of virtual reality.",
+      "followers": {
+        "facebook": 224,
+        "twitter": 358,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/5360168.jpg?t=1641384044"
+    },
+    {
+      "title": "Stambol Blog",
+      "feed_url": "https://www.stambol.com/feed/",
+      "website_url": "https://www.stambol.com/blog",
+      "description": "Immersive Experiences through Virtual Reality and Augmented Reality, 3D Rendering, Animation for Architecture, Real Estate, Industrial, and Brand Engagement Applications. Latest Trends and Insights on Virtual Reality, Augmented Reality, Mixed Reality.",
+      "followers": {
+        "facebook": 651,
+        "twitter": 1200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5215428.jpg?t=1606216630"
+    },
+    {
+      "title": "VRdirect Blog",
+      "feed_url": "https://www.vrdirect.com/feed/",
+      "website_url": "https://www.vrdirect.com/blog/",
+      "description": "The VRdirect blog featuring virtual reality and 360\u00b0 news, VR content, tips, tricks, best practices, and helpful insights on our platform.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/5259671.jpg?t=1616235364"
+    },
+    {
+      "title": "VR Vision Group Blog",
+      "feed_url": "https://vrvisiongroup.com/insights/feed/",
+      "website_url": "https://vrvisiongroup.com/insights/",
+      "description": "VR Vision is a Virtual Reality company that provides full turnkey solutions for business. We provide application development, hardware deployments, SaaS products and all things virtual reality. Contact us today to see how VR can shape your business.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 825,
+        "instagram": 12500
+      },
+      "image_url": "https://i1.feedspot.com/4955568.jpg?t=1614853148"
+    },
+    {
+      "title": "Virtual Outworlding",
+      "feed_url": "https://virtualoutworlding.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://virtualoutworlding.blogspot.com/",
+      "description": "The goal of this blog is to show people what they need to know to get the best out of virtual worlds and to suggest lines of creative thinking on how to exploit the potential of virtual worlds.",
+      "followers": {
+        "twitter": 589
+      },
+      "image_url": "https://i1.feedspot.com/4967742.jpg?t=1614853181"
+    },
+    {
+      "title": "VRPlayin Blog",
+      "feed_url": "https://blog.vrplayin.ca/feed",
+      "website_url": "https://blog.vrplayin.ca/",
+      "description": "Blog about Virtual Reality in a different perspective. Here you will find everything about Virtual Reality Experiences!",
+      "followers": {
+        "facebook": 509,
+        "twitter": 190,
+        "instagram": 458
+      },
+      "image_url": "https://i1.feedspot.com/4945603.jpg?t=1614853358"
+    },
+    {
+      "title": "CatsandVR Blog",
+      "feed_url": "https://www.catsandvr.com/blog?format=RSS",
+      "website_url": "https://www.catsandvr.com/blog/",
+      "description": "Follow us to keep up with articles on VR Blog from CatsandVR",
+      "followers": {
+        "twitter": 2400,
+        "instagram": 119
+      },
+      "image_url": "https://i1.feedspot.com/4945571.jpg?t=1614853235"
+    },
+    {
+      "title": "Oculus VR News",
+      "feed_url": "https://www.ovrnews.com/feed/",
+      "website_url": "https://www.ovrnews.com/news-reviews/",
+      "description": "OVRnews is the Unofficial Blog of the Rift. An independent, VR News source dedicated to covering the latest topics on the Oculus Rift virtual reality headset, VR gaming, reviews, videos and more. Our goal is to be your trusted source for all things Oculus & Rift Gaming applications throughout this VR revolution & beyond!",
+      "followers": {
+        "facebook": 886,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4945521.jpg?t=1614853231"
+    },
+    {
+      "title": "Oculus Game Reviewer: OGR",
+      "feed_url": "https://oculusgamereviewer.com/feed/",
+      "website_url": "https://oculusgamereviewer.com/",
+      "description": "Reviews of Games for the Oculus Rift Virtual Reality Headset.",
+      "followers": {
+        "facebook": 24,
+        "twitter": 196
+      },
+      "image_url": "https://i1.feedspot.com/4782150.jpg?t=1614853174"
+    },
+    {
+      "title": "Leap Motion",
+      "feed_url": "http://blog.leapmotion.com/feed/",
+      "website_url": "https://blog.leapmotion.com/category/arvr/",
+      "description": "With Leap Motion, you can interact with digital content in virtual and augmented reality, Mac and PC using your hands just as you would in the real world. Our unique combination of software and hardware tracks the movement of hands and fingers with very low latency, converting in into 3D input. Our mission is to remove the barriers between people and technology.",
+      "followers": {
+        "facebook": 75900,
+        "twitter": 301
+      },
+      "image_url": "https://i1.feedspot.com/1051730.jpg?t=1614853399"
+    },
+    {
+      "title": "Scapic",
+      "feed_url": "https://medium.com/feed/scapic",
+      "website_url": "https://medium.com/scapic",
+      "description": "Scapic is the easiest platform to build and share #VR, #AR & #3D experiences big or small. No coding necessary, simply drag & drop!",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5032456.jpg?t=1633411704"
+    },
+    {
+      "title": "Tech Prior",
+      "feed_url": "https://www.techprior.com/category/vr/feed/",
+      "website_url": "https://www.techprior.com/category/vr/",
+      "description": "TECHPRIOR is a rapidly growing technology magazine and online news covering future technologies including AR, VR, MR, Machine Learning and IoT.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 546,
+        "instagram": 24
+      },
+      "image_url": "https://i1.feedspot.com/4859524.jpg?t=1614853187"
+    },
+    {
+      "title": "NVIDIA",
+      "feed_url": "https://blogs.nvidia.com/blog/category/virtual-reality/feed/",
+      "website_url": "https://blogs.nvidia.com/blog/category/virtual-reality/",
+      "description": "The leading technology company from the world of Artificial Intelligence, Nvidia has dedicated a good amount of content on their blog to VR and AR. This is a reliable source for all the latest news, reviews, and tip-offs from the VR world.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 2200000,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/4556566.jpg?t=1614852417"
+    },
+    {
+      "title": "Virtual Reality Pop",
+      "feed_url": "https://virtualrealitypop.com/feed",
+      "website_url": "https://virtualrealitypop.com/",
+      "description": "Virtual Reality Pop is packed with news, analysis, and techniques about virtual reality, augmented reality, Oculus Rift, HTC Vive, gear VR, steam, PSVR, daydream, 360 video and more.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4555887.jpg?t=1614853380"
+    },
+    {
+      "title": "Virtual Tour Easy Blog",
+      "feed_url": "https://blog.virtualtoureasy.com/feed/",
+      "website_url": "https://blog.virtualtoureasy.com/c/blog/",
+      "description": "The world easiest and powerful 360\u00b0 virtual tour builder. Follow this blog to know more about virtual reality",
+      "followers": {
+        "facebook": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5020984.jpg?t=1614853199"
+    },
+    {
+      "title": "EEVO - Medium",
+      "feed_url": "https://blog.eevo.com/feed",
+      "website_url": "https://blog.eevo.com/",
+      "description": "EEVO is a premium white label service for distributing immersive VR content across custom branded applications on all devices and platforms.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 569
+      },
+      "image_url": "https://i1.feedspot.com/4764970.jpg?t=1614853366"
+    },
+    {
+      "title": "InstaVR",
+      "feed_url": "http://www.instavr.co/articles/category/general/feed",
+      "website_url": "https://www.instavr.co/articles/category/general",
+      "description": "How to make vr apps? InstaVR is a web service that allows you to create your VR app with a few clicks. You can create your own VR movie player, VR tourism guide.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4656050.jpg?t=1614853373"
+    },
+    {
+      "title": "WITHIN",
+      "feed_url": "https://medium.com/feed/@Within",
+      "website_url": "https://medium.com/@Within",
+      "description": "WITHIN is the premier destination for innovative, entertaining, and informative story-based virtual and augmented reality. We bring together the best immersive experiences from the world's finest VR creators\u2014from gripping tales set in worlds of pure imagination to documentaries taking you further inside the news than ever before.",
+      "followers": {
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4945533.jpg?t=1614853395"
+    },
+    {
+      "title": "VR MArketing",
+      "feed_url": "https://vrmarketingdotblog.wordpress.com/feed/",
+      "website_url": "https://vrmarketingdotblog.wordpress.com/",
+      "description": "Follow this blog to get information and updates about all things virtual reality",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5021049.jpg"
+    },
+    {
+      "title": "Forrester Blog \u00bb Virtual Reality",
+      "feed_url": "https://www.forrester.com/blogs/category/virtual-reality/feed/",
+      "website_url": "https://www.forrester.com/blogs/category/virtual-reality/",
+      "description": "Learn how brands are successfully using virtual reality (VR) and how to avoid falling into the trap of 'cool, but no ROI.'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8634168.jpg?t=1752140337"
+    },
+    {
+      "title": "ACM SIGGRAPH Blog \u00bb Virtual Reality",
+      "feed_url": "https://blog.siggraph.org/category/virtualreality/feed/",
+      "website_url": "https://blog.siggraph.org/category/virtualreality/",
+      "description": "SIGGRAPH's Virtual Reality blog is a premier source of curated, expert-driven insights into immersive media\u2014from industry trends at SIGGRAPH events and haptic therapy to social VR experiences, storytelling innovations, motion capture tools, and inclusive technologies shaping the metaverse",
+      "followers": {
+        "facebook": 41600,
+        "twitter": 42400,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/8634164.jpg?t=1752140639"
+    },
+    {
+      "title": "VRTY Blog",
+      "feed_url": "https://vrty.io/feed/",
+      "website_url": "https://vrty.io/blog/",
+      "description": "The VRTY blog updates on the latest VRTY platform update, some tips and tricks on how to create the best VR experience for your classroom.",
+      "followers": {
+        "facebook": 69,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/8634150.jpg?t=1752141680"
+    },
+    {
+      "title": "PropVR Blog",
+      "feed_url": "https://propvr.ai/blog/feed/",
+      "website_url": "https://propvr.ai/blog/",
+      "description": "Explore how PropVR's AR/VR technology is used in real estate, healthcare, construction, manufacturing, entertainment, engineering, and education. Stay informed on industry trends.",
+      "followers": {
+        "facebook": 189
+      },
+      "image_url": "https://i1.feedspot.com/8634147.jpg?t=1752144052"
+    },
+    {
+      "title": "Metamandrill \u00bb Virtual Reality",
+      "feed_url": "https://metamandrill.com/category/virtual-reality/feed/",
+      "website_url": "https://metamandrill.com/category/virtual-reality/",
+      "description": "This VR blog contains explanatory virtual reality (VR) information to help and guide you through the virtual reality world.",
+      "followers": {
+        "facebook": 199,
+        "twitter": 253
+      },
+      "image_url": "https://i1.feedspot.com/8634149.jpg?t=1752144178"
+    },
+    {
+      "title": "XR Bootcamp Blog",
+      "feed_url": "https://xrbootcamp.com/virtual-reality-blog/feed/",
+      "website_url": "https://xrbootcamp.com/virtual-reality-blog/",
+      "description": "The XR Bootcamp Virtual Reality Blog features captivating student stories, VR tech tutorials and new insights fresh from our Virtual Reality Community meetups.",
+      "followers": {
+        "facebook": 949,
+        "twitter": 3900,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/8634153.jpg?t=1752145272"
+    },
+    {
+      "title": "Meta Blog",
+      "feed_url": "https://www.meta.com/blog/",
+      "website_url": "https://www.meta.com/blog/",
+      "description": "The official blog for all things Oculus. Get the latest news and updates on oculus, features and more! Oculus brings the world closer through the power of virtual reality. In 2014, The Facebook Company brought Oculus into the product family. Together, we're developing virtual reality products to reimagine how people work, play, and connect.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5259672.jpg?t=1659956046"
+    },
+    {
+      "title": "Gizmodo \u00bb Virtual Reality",
+      "feed_url": "https://gizmodo.com/tag/virtual-reality/rss",
+      "website_url": "https://gizmodo.com/tag/virtual-reality",
+      "description": "Blog post covers virtual reality and reviews on the best VR You can get with. Gizmodo is a news and opinion website about gadgets, technology, science, environmental news, entertainment, and culture.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/4556498.jpg?t=1614852433"
+    },
+    {
+      "title": "Auganix.org",
+      "feed_url": "https://www.auganix.org/feed/",
+      "website_url": "https://www.auganix.org/category/news/virtual-reality-news/",
+      "description": "Auganix was established with an aim of being the go-to online provider of news articles, reporting, and analysis on the Augmented and Virtual Reality industry. Auganix provides industry reports and research material, as well as an ever-growing pool of knowledge and resources through our HUD portal. Get the latest Augmented Reality news, virtual reality news, and AR/VR industry business intelligence, reporting, and insight from Auganix.org.",
+      "followers": {
+        "facebook": 117
+      },
+      "image_url": "https://i1.feedspot.com/5089975.jpg?t=1676012687"
+    },
+    {
+      "title": "Unimersiv Blog",
+      "feed_url": "https://unimersiv.com/feed/",
+      "website_url": "https://www.midiaresearch.com/blog/category/virtual-reality/",
+      "description": "Unimersiv is working on bringing VR to the education scenario.They post reviews and blogs along the premises of this wishful aim and all the latest news from the VR world. become part of the Unimersiv project and add more value to our educational systems with VR.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4556628.jpg?t=1614853190"
+    },
+    {
+      "title": "Virtual Perceptions",
+      "feed_url": "https://www.virtualperceptions.com/feed/",
+      "website_url": "https://www.immersivewire.com/",
+      "description": "Covers the latest news and features in virtual reality (VR), augmented reality (AR), and mixed reality (MR), particularly in the UK.",
+      "followers": {
+        "facebook": 403,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5020977.jpg?t=1614853154"
+    },
+    {
+      "title": "VR Tier",
+      "feed_url": "https://vrtier.com/feed/",
+      "website_url": "https://vrtier.com/category/virtual-reality-news/",
+      "description": "Stay up to date with the latest VR headset releases, game reviews, and expert guides that will enhance your virtual-reality adventures.VR Tier is tasked with a mission to bring the world of VR to enthusiasts and beginners alike. The website serves as a hub for VR enthusiasts, offering a wide range of VR content, reviews, tutorials, and guides.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5607844.jpg?t=1687764818"
+    },
+    {
+      "title": "GuidetoVR",
+      "feed_url": "https://www.guidetovr.com/feed/",
+      "website_url": "https://www.guidetovr.com/",
+      "description": "GuidetoVR is a one-stop resource portal for all your queries and problems. Stacked with VR gear reviews and recommendations, discussions on the latest tech innovations in VR, troubleshooting tips, and more insights, GuidetoVR serves readers with the most recent VR-related content on the web.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5656103.jpg?t=1692878244"
+    },
+    {
+      "title": "Entrepreneur \u00bb Virtual Reality",
+      "feed_url": "https://www.entrepreneur.com/topic/virtual-reality.rss",
+      "website_url": "https://www.entrepreneur.com/topic/virtual-reality",
+      "description": "Entrepreneur seeks to inspire, inform and celebrate entrepreneurs. This section of the Entrepreneur blog covers the latest news, videos, and discussion topics on Virtual Reality.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 3600000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4556694.jpg?t=1625579508"
+    },
+    {
+      "title": "SlashGear \u00bb Virtual Reality",
+      "feed_url": "https://www.slashgear.com/tags/virtual-reality/feed/",
+      "website_url": "https://www.slashgear.com/tags/virtual-reality/",
+      "description": "This section of the SlashGear blog covers articles on VR products, their guides, and reviews. SlashGear is a blog dedicated to highlighting the latest and greatest in technology and automotive.",
+      "followers": {
+        "facebook": 110700,
+        "twitter": 43200
+      },
+      "image_url": "https://i1.feedspot.com/4556573.jpg?t=1614852444"
+    },
+    {
+      "title": "Trezi Blog",
+      "feed_url": "https://trezi.com/blog/feed/",
+      "website_url": "https://iq3connect.com/blog/",
+      "description": "Trezi's mission is to become the building industry's leading virtual reality platform for design collaboration between architects, designers, building product manufacturers & suppliers, engineering service consultants, developers and owners, and operators.",
+      "followers": {
+        "facebook": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5045958.jpg?t=1614853202"
+    },
+    {
+      "title": "iQ3Connect Blog",
+      "feed_url": "https://iq3connect.com/feed/",
+      "website_url": "https://iq3connect.com/blog/",
+      "description": "Q3Connect is a VR Workspace SaaS software for digital transformation in enterprises by design VR collaboration & VR training in a virtual reality immersive environment. iQ3Connect Blog posts list the latest articles, views, news, and press release about virtual reality, augmented reality, and immersive tech.",
+      "followers": {
+        "twitter": 305
+      },
+      "image_url": "https://i1.feedspot.com/5285577.jpg?t=1622185040"
+    },
+    {
+      "title": "VR Geeks",
+      "feed_url": "https://vr-geeks.com/feed/",
+      "website_url": "https://vr-geeks.com/",
+      "description": "In this blog, you will find the latest news, articles, and updates on virtual reality. Follow the blog to know more about us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5207036.jpg?t=1603114609"
+    },
+    {
+      "title": "Mashable \u00bb Virtual Reality",
+      "feed_url": "https://mashable.com/category/virtual-reality/feed/",
+      "website_url": "https://mashable.com/category/virtual-reality",
+      "description": "Check out the latest coverage from Mashable on Virtual Reality, including news, current trends, and more. Mashable is a global media and entertainment company that's passionate about entertainment, culture, and tech.",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 8800000
+      },
+      "image_url": "https://i1.feedspot.com/4556562.jpg?t=1614852430"
+    }
+  ]
+}

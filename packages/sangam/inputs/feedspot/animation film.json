@@ -1,0 +1,106 @@
+{
+  "category": "Animation Film",
+  "source_url": "https://rss.feedspot.com/animation_film_rss_feeds",
+  "feeds": [
+    {
+      "title": "Animated Views",
+      "feed_url": "https://animatedviews.com/feed/",
+      "website_url": "https://animatedviews.com/",
+      "description": "Follow Animated Views to get updates on animation news, reviews, and commentary.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/365616.jpg?t=1621422918"
+    },
+    {
+      "title": "National Film Board \u00bb Animation",
+      "feed_url": "https://blog.nfb.ca/blog/category/animation/feed/",
+      "website_url": "https://blog.nfb.ca/blog/category/animation/",
+      "description": "Explore our vast collection of animated films and get info about the world of animation in general.",
+      "followers": {
+        "facebook": 126900,
+        "twitter": 157200,
+        "instagram": 64300
+      },
+      "image_url": "https://i1.feedspot.com/4945836.jpg?t=1621422929"
+    },
+    {
+      "title": "Rachel's Reviews",
+      "feed_url": "https://rachelsreviews.net/feed/",
+      "website_url": "https://rachelsreviews.net/",
+      "description": "Rachel's Reviews is a rottentomatoes approved film critic who gives the latest reviews of feature films especially animation, Disney, Pixar, and more.",
+      "followers": {
+        "facebook": 652,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4943363.jpg?t=1614254364"
+    },
+    {
+      "title": "Bloop Animation Blog",
+      "feed_url": "https://www.bloopanimation.com/blog/feed/",
+      "website_url": "https://www.bloopanimation.com/blog/",
+      "description": "Bloop Animation is an animation learning blog offering free video tutorials and articles for aspiring animators and visual artists. The blog features articles about animation filmmaking, career skills for artists and the animation industry.",
+      "followers": {
+        "facebook": 16200
+      },
+      "image_url": "https://i1.feedspot.com/4945908.jpg?t=1621422934"
+    },
+    {
+      "title": "Fantasy/Animation Blog",
+      "feed_url": "https://www.fantasy-animation.org/current-posts?format=rss",
+      "website_url": "https://www.fantasy-animation.org/current-posts",
+      "description": "A blog/podcast that examines the relationship between fantasy cinema and the medium of animation.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 902
+      },
+      "image_url": "https://i1.feedspot.com/4945855.jpg?t=1621422939"
+    },
+    {
+      "title": "Upcoming Pixar Blog",
+      "feed_url": "https://pixarplanet.com/blog/feed/",
+      "website_url": "https://pixarplanet.com/blog/",
+      "description": "Welcome to Pixar Planet, your number one site for Pixar and Disney discussion, theories, fun, and games! As the oldest Pixar news blog on the web, Upcoming Pixar is a trusted, leading source for all the latest in Emeryville.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 30500
+      },
+      "image_url": "https://i1.feedspot.com/4483584.jpg?t=1607404701"
+    },
+    {
+      "title": "The Animated Film Industry",
+      "feed_url": "https://theanimatedfilmindustry.com/feed/",
+      "website_url": "https://theanimatedfilmindustry.com/",
+      "description": "An avid film enthusiast who enjoys the history and process of movie design and development. The animation is a film category that should be highly recognized for its appeal to a general audience, its impact, and advancement in the film industry.",
+      "followers": {
+        "twitter": 132
+      },
+      "image_url": "https://i1.feedspot.com/4754108.jpg?t=1607405059"
+    },
+    {
+      "title": "Eric Miller Animation",
+      "feed_url": "http://blog.milleranimation.com/feed/",
+      "website_url": "http://blog.milleranimation.com/posts/",
+      "description": "Eric Miller Animation Studios, Inspired by imagination, we craft compelling stories through 3D character animation, design, and VFX for the advertising, gaming, TV & film production industries.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 3500,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4945839.jpg?t=1621422944"
+    },
+    {
+      "title": "Animation Complex Blog",
+      "feed_url": "https://www.animationcomplex.com/blog/feed/",
+      "website_url": "https://www.animationcomplex.com/blog/",
+      "description": "Animation Complex's goal is to look at animation through a critical and academic lens via writing, podcasts, and videos and want people to look at animation as the art form it is and educate them about the various ways it affects and is affected by our culture.",
+      "followers": {
+        "facebook": 12,
+        "twitter": 1200,
+        "instagram": 257
+      },
+      "image_url": "https://i1.feedspot.com/4945850.jpg?t=1621423098"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "category": "South Dakota Political",
+  "source_url": "https://rss.feedspot.com/south_dakota_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dakota Free Press",
+      "feed_url": "https://dakotafreepress.com/feed/",
+      "website_url": "https://dakotafreepress.com/",
+      "description": "The Dakota Free Press, like its preceding incarnation the Madville Times, is about South Dakota politics. Cory Allen Heidelberger, editor and publisher, discusses and invites readers to discuss statewide and local issues. He occasionally turns to national and international issues, usually because of their impact on South Dakota, but sometimes just because he finds them darned interesting.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5319588.jpg?t=1638428265"
+    },
+    {
+      "title": "Keloland \u00bb Politics",
+      "feed_url": "https://www.keloland.com/news/politics/feed/",
+      "website_url": "https://www.keloland.com/news/politics/",
+      "description": "The Latest News and Updates in Politics are brought to you by the team at Keloland. Other news categories to explore are Weather, Sports, Education, and more. KELOLAND Media Group is the leading media company in the region. It owns and operates television stations, websites, and mobile news applications.",
+      "followers": {
+        "facebook": 224700,
+        "twitter": 127300,
+        "instagram": 23200
+      },
+      "image_url": "https://i1.feedspot.com/5319594.jpg?t=1638428434"
+    },
+    {
+      "title": "SoDak Governors",
+      "feed_url": "https://sodakgovs.com/feed/",
+      "website_url": "https://sodakgovs.com/",
+      "description": "SoDak Governors is dedicated to promoting South Dakota History, particularly through the study of our state's governors. This blog complements SoDakGovs on Twitter and is proud to promote the Trail of Governors in Pierre.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5467133.jpg?t=1668507009"
+    },
+    {
+      "title": "The South Dakota Standard",
+      "feed_url": "https://www.sdstandardnow.com/home?format=rss",
+      "website_url": "https://www.sdstandardnow.com/",
+      "description": "The South Dakota Standard is a blog page where commentary and information that matters are published by John Tsitrian and Tom Lawrence.",
+      "followers": {
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5467135.jpg?t=1668507020"
+    },
+    {
+      "title": "Sioux City Journal \u00bb Government & Politics",
+      "feed_url": "https://siouxcityjournal.com/search/?f=rss&t=article&c=news/local/government-politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://siouxcityjournal.com/news/local/government-politics/",
+      "description": "Stay informed and notified of the ongoing political news, events and updated with the help of the Government & Politics section from Sioux City Journal. We are the best source for community, business, and entertainment news and opinions from the Sioux City region.",
+      "followers": {
+        "facebook": 48800,
+        "twitter": 30900
+      },
+      "image_url": "https://i1.feedspot.com/5313757.jpg?t=1638428861"
+    },
+    {
+      "title": "South Dakota Political News",
+      "feed_url": "http://southdakotapoliticalnews.com/feed/",
+      "website_url": "http://southdakotapoliticalnews.com/",
+      "description": "South Dakota Political News is owned and edited by Pat Powers. You will find news stories and insight into South Dakota Politics along with detailed articles on the topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5467134.jpg?t=1668507416"
+    }
+  ]
+}

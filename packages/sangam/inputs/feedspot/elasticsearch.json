@@ -1,0 +1,68 @@
+{
+  "category": "Elasticsearch",
+  "source_url": "https://rss.feedspot.com/elasticsearch_rss_feeds",
+  "feeds": [
+    {
+      "title": "Elastic Blog",
+      "feed_url": "https://www.elastic.co/blog/feed",
+      "website_url": "https://www.elastic.co/blog/",
+      "description": "Elastic provides real-time insights and makes massive amounts of structured and unstructured data usable for developers and enterprises. Follow this blog that focuses on the latest thoughts, insights, tips, tutorials and releases information about Elasticsearch, Logstash, Kibana, es-Hadoop, Shield, and Marvel from Elastic.",
+      "followers": {
+        "facebook": 116900,
+        "twitter": 63900
+      },
+      "image_url": "https://i1.feedspot.com/4323966.jpg?t=1621399581"
+    },
+    {
+      "title": "Logz.io Blog",
+      "feed_url": "https://logz.io/blog/feed/",
+      "website_url": "https://logz.io/blog/",
+      "description": "Logz.io provides Elasticsearch, Logstash, and Kibana on the cloud with alerts, unlimited scalability, and free ELK apps. Follow this blog to read about use-cases, tools, and insights to improve proficiency in IT Operations. We are an AI-powered log analysis platform built on the ELK Stack, with expertise in DevOps, Cloud, ELK and more.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4943163.jpg?t=1621399925"
+    },
+    {
+      "title": "Ashish Tiwari",
+      "feed_url": "https://ashish.one/index.xml",
+      "website_url": "https://ashish.one/",
+      "description": "Hi, I'm Ashish. Having experience in Software & Email Industry. Currently, I am working as a Senior Developer Advocate, in India at Elastic. This is my new spot to share my thoughts and findings of technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5520345.jpg?t=1678951819"
+    },
+    {
+      "title": "Spoons Elastic",
+      "feed_url": "https://spoon-elastic.com/category/all-elastic-search-post/feed/",
+      "website_url": "https://spoon-elastic.com/category/all-elastic-search-post/",
+      "description": "Discover Spoon Consulting tips and actuality on the Elastic Search tools, use cases, and implementation.",
+      "followers": {
+        "facebook": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5186562.jpg?t=1621399477"
+    },
+    {
+      "title": "AWS Database \u00bb Elasticsearch",
+      "feed_url": "https://aws.amazon.com/blogs/database/tag/elasticsearch/feed/",
+      "website_url": "https://aws.amazon.com/blogs/database/tag/elasticsearch/",
+      "description": "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services. This blog all about Amazon Elasticsearch services.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4943262.jpg?t=1621399636"
+    },
+    {
+      "title": "Opster Blog",
+      "feed_url": "https://opster.com/category/blogs/feed/",
+      "website_url": "https://opster.com/category/blogs/",
+      "description": "Opster's products and support services cover both the infrastructure layer and the data layer of managing Elasticsearch, with a focus on the data layer that users have always been left alone to handle. Running Elasticsearch can be extremely difficult. Companies don't want to master the technology and prefer to focus on their core business. That's why they often turn to managed services. Opster Elasticsearch blog focuses on best practices, recommendations, guidelines, and many more about the world of Elasticearch.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 253
+      },
+      "image_url": "https://i1.feedspot.com/5295873.jpg?t=1624458849"
+    }
+  ]
+}

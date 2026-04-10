@@ -1,0 +1,81 @@
+{
+  "category": "Lent",
+  "source_url": "https://rss.feedspot.com/lent_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lent Blog",
+      "feed_url": "https://marblewomen.com/feed/",
+      "website_url": "https://marblewomen.com/",
+      "description": "In this Lent Blog, The Marble Women's Ministry invites you on a 40-day journey of shared stories, poems, prayers, art, music, and activities exploring different kinds of friendships by 'Walking the Path of Lent with Friends.' We hope it helps you to spread kindness in your neighborhood.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5498993.jpg?t=1677045515"
+    },
+    {
+      "title": "Catholic All Year Blog \u00bb Lent",
+      "feed_url": "https://catholicallyear.com/blog/category/lent/feed/",
+      "website_url": "https://catholicallyear.com/blog/category/lent/",
+      "description": "Discover creative, family-friendly ideas for your Lent celebrations with these posts. My name is Kendra and here I will be sharing some crucial advice and the importance of Lent in the Liturgical year for Christian parents. My blog Catholic All Year is dedicated to the Christian Way of Life and other crazy stuff like Parenting & Pregnancy.",
+      "followers": {
+        "facebook": 56300,
+        "instagram": 33100
+      },
+      "image_url": "https://i1.feedspot.com/5511173.jpg?t=1677045460"
+    },
+    {
+      "title": "Verbum Blog \u00bb Lent",
+      "feed_url": "https://blog.verbum.com/category/lent/feed/",
+      "website_url": "https://blog.verbum.com/category/lent/",
+      "description": "Posts on Lent describing the significance and history behind the Period, Why it merits high importance in the Christian Faith and related Gospel reflections. The Verbum blog, part of the Faithlife family, empowers Catholics to study Scripture and explore Church tradition.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5511172.jpg?t=1677045455"
+    },
+    {
+      "title": "SMC",
+      "feed_url": "http://smclent.blogspot.com/feeds/posts/default",
+      "website_url": "http://smclent.blogspot.com/",
+      "description": "Daily Lenten Reflections is a blog collectively written by Students, Faculty, Staff, and the worshipping community of Saint Michael's College. Recent posts feature commentary and thoughts on each day of Lent, with associated Prayers and Scripture citations. Celebrate Lent with daily blog updates from SMC.",
+      "followers": {
+        "twitter": 133,
+        "instagram": 371
+      },
+      "image_url": "https://i1.feedspot.com/5511171.jpg?t=1677045656"
+    },
+    {
+      "title": "Catholic Online \u00bb Lent",
+      "feed_url": "https://www.catholic.org/xml/rss_news.php",
+      "website_url": "https://www.catholic.org/lent/news.php",
+      "description": "Lent is a season of prayer and fasting before Easter. This section on Catholic Online provides a concise summary of and spiritual insights into many traditions and observations during Lent. Catholic Online provides catholics easy access to comprehensive, educational information about Catholicism, and a range of easy methods to integrate their faith into their daily lives.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 18200,
+        "instagram": 123200
+      },
+      "image_url": "https://i1.feedspot.com/5162104.jpg?t=1677045748"
+    },
+    {
+      "title": "America Magazine \u00bb Lent",
+      "feed_url": "https://www.americamagazine.org/taxonomy/term/1182/feed",
+      "website_url": "https://www.americamagazine.org/topic/lent",
+      "description": "America Magazine is a digital forum for discussion of religion, society, politics, and culture from a Catholic perspective. Explore our collection of articles on several key topics surrounding the Celebration, Significance, and Catholic Traditions of Lent. Read and know more about the Christian Festival in the latest posts.",
+      "followers": {
+        "facebook": 114400,
+        "twitter": 76600
+      },
+      "image_url": "https://i1.feedspot.com/5511170.jpg?t=1677045785"
+    },
+    {
+      "title": "Commonweal Magazine \u00bb Lent",
+      "feed_url": "https://www.commonwealmagazine.org/taxonomy/term/2309/all/feed",
+      "website_url": "https://www.commonwealmagazine.org/lent",
+      "description": "A collection of Commonweal's articles, reflections, and poems to inspire peace this Lent and beyond. Stay informed, engaged, and independent-minded with regular Faith-based insights in the Commonweal blog. Commonweal is an independent journal of opinion edited by lay Catholics.",
+      "followers": {
+        "facebook": 17600,
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/5511174.jpg?t=1677045473"
+    }
+  ]
+}

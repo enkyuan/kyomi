@@ -1,0 +1,49 @@
+{
+  "category": "Coral Springs News",
+  "source_url": "https://rss.feedspot.com/coral_springs_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Coral Springs Talk",
+      "feed_url": "https://coralspringstalk.com/feed",
+      "website_url": "https://coralspringstalk.com/",
+      "description": "Coral Springs Talk is the only online news source dedicated to providing original coverage for the residence of Coral Springs,Florida. Our company, Talk Media, has been covering NW Broward county since 2010 by providing original News, Views, and Political coverage.",
+      "followers": {
+        "facebook": 47900,
+        "twitter": 16700,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5141360.jpg?t=1625728729"
+    },
+    {
+      "title": "NBC 6 \u00bb Coral Springs",
+      "feed_url": "https://www.nbcmiami.com/tag/coral-springs/feed/",
+      "website_url": "https://www.nbcmiami.com/tag/coral-springs/",
+      "description": "Read the latest Coral Springs news. Get breaking news, information on sports, weather and lifestyles.",
+      "followers": {
+        "facebook": 493900,
+        "twitter": 326300,
+        "instagram": 342000
+      },
+      "image_url": "https://i1.feedspot.com/5141394.jpg?t=1587466095"
+    },
+    {
+      "title": "Coral Springs Daily",
+      "feed_url": "https://coralspringsdaily.com/feed/",
+      "website_url": "https://coralspringsdaily.com/",
+      "description": "Enjoy overlooked, under-the-radar news from Coral Springs Daily, a sustainable community-news outlet that keeps residents in our area informed, engaged, and better educated. Our mission is to deliver a quality online source that the communities we serve can proudly call their own. As local publishers, we produce and publish stories that inform and inspire the communities we serve.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511998.jpg?t=1677145128"
+    },
+    {
+      "title": "TAPinto Coral Springs",
+      "feed_url": "https://www.tapinto.net/towns/coral-springs/articles.atom",
+      "website_url": "https://www.tapinto.net/towns/coral-springs/",
+      "description": "TAP into Coral Springs is the local newspaper covering news, sports, police, fire, and government issues for Coral Springs, Florida. Get the latest updates and breaking news of Coral Springs at TAP into Coral Springs.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 682
+      },
+      "image_url": "https://i1.feedspot.com/5141388.jpg?t=1625728734"
+    }
+  ]
+}

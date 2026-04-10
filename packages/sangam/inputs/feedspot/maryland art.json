@@ -1,0 +1,84 @@
+{
+  "category": "Maryland Art",
+  "source_url": "https://rss.feedspot.com/maryland_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Frederick Arts Council",
+      "feed_url": "https://frederickartscouncil.org/feed/",
+      "website_url": "https://frederickartscouncil.org/news-events/media-releases-newsletters/",
+      "description": "Stay updated on the latest media releases and newsletters from the Frederick Arts Council. The Frederick Arts Council envisions a Frederick County where the arts drive the culture, education, economy and everyday life of its citizens. Whether you're engaged in the arts as an audience member, patron, educator, or artist, the Frederick Arts Council (FAC) is your arts ally.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/7274295.jpg?t=1710487575"
+    },
+    {
+      "title": "Art with a Heart",
+      "feed_url": "https://www.artwithaheart.net/feed/",
+      "website_url": "https://www.artwithaheart.net/aboutus/news/",
+      "description": "Art with a Heart is enhancing the lives of people in need through visual art. Art with a Heart brings interactive visual art classes into schools, community centers, group homes, shelters, permanent housing facilities, hospitals, and senior day care and housing facilities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274300.jpg?t=1710488230"
+    },
+    {
+      "title": "Arts Every Day",
+      "feed_url": "https://artseveryday.org/feed",
+      "website_url": "https://artseveryday.org/news",
+      "description": "Arts Every Day serves as a strategic partner to the school district in advancing equitable access to the arts and implementing the 2018 Fine Arts Strategic Plan. The organization provides teacher professional development, arts integration technical assistance, and funding for student art experiences, school-based public art projects, art equipment, and supplies.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 2000,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5462996.jpg?t=1667545560"
+    },
+    {
+      "title": "Maryland Federation of Art",
+      "feed_url": "https://mdfedart.wordpress.com/feed/",
+      "website_url": "https://mdfedart.wordpress.com/",
+      "description": "For 60 years, the Maryland Federation of Art has been creating meaningful connections in the community through art. Visit the blog to know the latest updates and announcements from the Maryland Federation of Art. Discover new artists, art styles, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3849812.jpg?t=1714473864"
+    },
+    {
+      "title": "Chesapeake Arts Center Blog",
+      "feed_url": "https://www.chesapeakearts.org/cacblog?format=rss",
+      "website_url": "https://www.chesapeakearts.org/cacblog",
+      "description": "The Chesapeake Arts Center Blog provides an opportunity for readers to learn about new artists and their works. The Chesapeake Arts Center is led by a talented Board of Directors and a diverse group of arts management professionals and artists wholeheartedly dedicated to the mission of the organization.",
+      "followers": {
+        "facebook": 6800
+      },
+      "image_url": "https://i1.feedspot.com/7274297.jpg?t=1714474136"
+    },
+    {
+      "title": "Southern Maryland News \u00bb Arts and Entertainment",
+      "feed_url": "https://www.somdnews.com/search/?f=rss&t=article&c=arts_and_entertainment&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.somdnews.com/arts_and_entertainment/",
+      "description": "Read about Arts and Entertainment from the Southern Maryland newspapers serving Calvert County, Charles County, Prince George's County and St. Mary's County. For over 100 years, Southern Maryland News has provided Charles, St. Mary's and Calvert with unprecedented coverage of local news, sports and politics.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 9000,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/7274296.jpg?t=1710487582"
+    },
+    {
+      "title": "The Stamp Gallery Blog",
+      "feed_url": "https://stampgallery.wordpress.com/feed/",
+      "website_url": "https://stampgallery.wordpress.com/",
+      "description": "The Stamp Gallery Blog is a Contemporary Art Dedicated Space at the University of Maryland. The Stamp Gallery is dedicated to the exhibition of contemporary art with an emphasis on the work of emerging and mid-career artists. The gallery supports contemporary art that is challenging and/or academically engaging and that addresses broad community and social issues.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274294.jpg?t=1710488338"
+    },
+    {
+      "title": "St. Mary's County Arts Council Blog",
+      "feed_url": "https://www.stmarysartscouncil.com/blog?format=rss",
+      "description": "Since 1996, the U.S. District Court for the District of Maryland, Southern Division (Greenbelt), has been an unexpected, but quite welcoming venue for large-scale art shows. The mission of St. Mary's County Arts Council is to invest in the arts and increase awareness of the value of the arts and how the arts can enhance the quality of the community and individual lives.",
+      "followers": {
+        "facebook": 3400
+      },
+      "image_url": "https://i1.feedspot.com/7274298.jpg?t=1710487591"
+    }
+  ]
+}

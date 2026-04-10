@@ -1,0 +1,107 @@
+{
+  "category": "Angola News",
+  "source_url": "https://rss.feedspot.com/angola_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Club-K",
+      "feed_url": "https://www.club-k.net/index.php?option=com_obrss&task=feed&id=2:rss-noticias-do-club-k&format=feed&lang=pt",
+      "website_url": "https://www.club-k.net/index.php?lang=pt",
+      "description": "CLUB-K.net is an Angolan information portal. Our mission is to inform the public about news and information missing from state news channels.",
+      "followers": {
+        "facebook": 405200,
+        "twitter": 30300
+      },
+      "image_url": "https://i1.feedspot.com/5346463.jpg?t=1637761586"
+    },
+    {
+      "title": "OPa\u00eds",
+      "feed_url": "https://www.opais.ao/feed/",
+      "website_url": "https://opais.co.ao/",
+      "description": "OPa\u00eds is a generalist and daily Angolan newspaper. Find articles on politics, society, economy, health and wellness, opinion, culture, and more.",
+      "followers": {
+        "facebook": 115700,
+        "twitter": 14300,
+        "instagram": 27000
+      },
+      "image_url": "https://i1.feedspot.com/5346460.jpg?t=1637823091"
+    },
+    {
+      "title": "Correio da Kianda",
+      "feed_url": "https://correiokianda.info/feed/",
+      "website_url": "https://correiokianda.info/",
+      "description": "Correio da Kianda is a general information portal that aims to provide a wide coverage of the most important and significant national and international events, in all areas of interest.",
+      "followers": {
+        "facebook": 150600,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5346456.jpg?t=1637757302"
+    },
+    {
+      "title": "Not\u00edcias de Angola",
+      "feed_url": "https://noticiasdeangola.co.ao/feed/",
+      "website_url": "https://noticiasdeangola.co.ao/",
+      "description": "General information portal on Angola since 2016. Find news on politics, culture, sport, health, economy, beauty, fashion, and more.",
+      "followers": {
+        "facebook": 26400,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5346459.jpg?t=1637759307"
+    },
+    {
+      "title": "Folha 8",
+      "feed_url": "https://jornalf8.net/feed/",
+      "website_url": "https://jornalf8.net/",
+      "description": "Folha 8 is an Angolan newspaper. Find articles on politics, society, economy, culture, and more.",
+      "followers": {
+        "facebook": 205400,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/5346461.jpg?t=1637818315"
+    },
+    {
+      "title": "Portal de Angola",
+      "feed_url": "https://www.portaldeangola.com/feed/",
+      "website_url": "https://www.portaldeangola.com/",
+      "description": "We are a portal for information and dissemination of Angola and its Diaspora in the Portuguese-speaking world, which aims to be a reference for all Angolans. The portal provides several thematic channels of information, culture and business, offering a wide range of content of general interest.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 6500,
+        "instagram": 122
+      },
+      "image_url": "https://i1.feedspot.com/5346462.jpg?t=1637817105"
+    },
+    {
+      "title": "Nova Gazeta",
+      "feed_url": "https://www.novagazeta.co.ao/rss.php",
+      "website_url": "https://www.novagazeta.co.ao/",
+      "description": "News covering society, politics, economy, sport, culture, and more.",
+      "followers": {
+        "facebook": 52600
+      },
+      "image_url": "https://i1.feedspot.com/5346458.jpg?t=1637821020"
+    },
+    {
+      "title": "Hold On Angola",
+      "feed_url": "https://holdonangola.com/feed/",
+      "website_url": "https://valoreconomico.co.ao/",
+      "description": "'Hold On Angola' is an Angolan news platform covering politics, society, economy, opinion, and more. Recent articles discuss issues like a Supreme Court verdict on currency counterfeiting, the potential cargo movement at Lobito Port, opposition questioning government actions post-public service strike, mobilization of Angolan youth in Europe, and a former governor's conviction for embezzlement.",
+      "followers": {
+        "facebook": 76000,
+        "twitter": 382,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5734498.jpg?t=1711617910"
+    },
+    {
+      "title": "Valor Econ\u00f3mico",
+      "feed_url": "https://valoreconomico.co.ao/rss.php",
+      "website_url": "https://valoreconomico.co.ao/",
+      "description": "Information and analysis of relevant issues that directly or indirectly affect the Angolan and international economy.",
+      "followers": {
+        "facebook": 39900,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5346767.jpg?t=1638261648"
+    }
+  ]
+}

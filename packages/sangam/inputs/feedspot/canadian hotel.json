@@ -1,0 +1,92 @@
+{
+  "category": "Canadian Hotel",
+  "source_url": "https://rss.feedspot.com/canadian_hotel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hotel Association of Canada",
+      "feed_url": "https://hotelassociation.ca/feed/",
+      "website_url": "https://hotelassociation.ca/news-and-events/",
+      "description": "The Hotel Association of Canada is the leading voice of the Canadian Hotel & Lodging industry, bringing legislative solutions to industry challenges. Our mission is to enhance the prosperity of the Canadian Hotel and Lodging industry through strong member engagement, effective advocacy, and the provision of valued programs and services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5592615.jpg?t=1686200357"
+    },
+    {
+      "title": "Vintage Hotels Blog",
+      "feed_url": "https://www.vintage-hotels.com/feed/",
+      "website_url": "https://www.vintage-hotels.com/blog/",
+      "description": "With diverse backgrounds and decades of collective expertise, our management team provides the leadership needed to exceed our guest's expectations. Our vision was to redefine luxury and hospitality by making our hotels in Niagara a true destination for even the most discerning traveler.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 4300,
+        "instagram": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5592612.jpg?t=1686200224"
+    },
+    {
+      "title": "Verso Hotel Blog",
+      "feed_url": "https://hotelverso.ca/en/blog/feed/",
+      "website_url": "https://hotelverso.ca/en/blog/",
+      "description": "Situated on the current site of Verso on the shores of Lake Memphremagog, a motel, was founded in 1950 by the Leclerc family. Due to our prime location on the shores of Lake Memphremagog, guests can now enjoy panoramic views over the lake and the surrounding mountains. They are also within easy reach of attractions such as cultural events, outdoor activities, gourmet venues, and specialty stores and boutiques.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5592620.jpg?t=1686200279"
+    },
+    {
+      "title": "Oak Bay Beach Hotel Blog",
+      "feed_url": "https://www.oakbaybeachhotel.com/blog/feed/",
+      "website_url": "https://www.oakbaybeachhotel.com/blog/",
+      "description": "Built-in an English Manor House style and nestled on the shores of the Pacific Ocean, Victoria's Oak Bay Beach Hotel is an elegant luxury boutique resort reconstructed on the same oceanfront lot where the historical hotel sat for more than 90 years. Our blog is proud to feature stories and news from the Hotel and from its majestic natural surrounding area.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 5100,
+        "instagram": 63500
+      },
+      "image_url": "https://i1.feedspot.com/5592614.jpg?t=1686200237"
+    },
+    {
+      "title": "MasterBUILT Hotels Blog",
+      "feed_url": "https://masterbuilthotels.com/feed/",
+      "website_url": "https://masterbuilthotels.com/blog/",
+      "description": "MasterBUILT Hotels is a privately owned, Calgary-based hotel development and investment company. It is our mission to make a positive impact through a best-in-class hotel guest and franchise experience. We strive to alter the tourism and travel landscape by offering affordable, versatile options for everyone.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 439
+      },
+      "image_url": "https://i1.feedspot.com/5592613.jpg?t=1686200230"
+    },
+    {
+      "title": "The Banff Blog \u00bb Hotels",
+      "feed_url": "https://thebanffblog.com/category/lodging/hotels/feed/",
+      "website_url": "https://thebanffblog.com/category/lodging/hotels/",
+      "description": "This section features articles on Hotel Reviews. We're Cameron Seagle and Natasha Alden, and on this site, you'll find our experiences, photography, and informative travel guides from around the Canadian Rockies. We currently live in Canmore, Alberta, and love to explore our home.",
+      "followers": {
+        "instagram": 51100
+      },
+      "image_url": "https://i1.feedspot.com/5356411.jpg?t=1640174841"
+    },
+    {
+      "title": "TravelPulse Canada \u00bb Hotel & Resort",
+      "feed_url": "https://ca.travelpulse.com/rss/news.rss?category=5129",
+      "website_url": "https://www.travelpulse.ca/news/hotels-and-resorts",
+      "description": "Get the latest breaking news, stunning videos, and the latest offers from hotels and resorts in Canada. TravelPulse Canada covers news, offers, videos, opinions, and blogs on hotels, resorts, and places to visit.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5592617.jpg?t=1686200255"
+    },
+    {
+      "title": "The Lord Elgin Hotel Blog",
+      "feed_url": "https://lordelginhotel.ca/neighbourhood/blog/",
+      "website_url": "https://lordelginhotel.ca/neighbourhood/blog/",
+      "description": "Read stories from the Lord Elgin family and our guests, with plenty to learn about this unique hotel and the best things to do, eat and experience Ottawa.",
+      "followers": {
+        "twitter": 4400,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5592616.jpg?t=1686200249"
+    }
+  ]
+}

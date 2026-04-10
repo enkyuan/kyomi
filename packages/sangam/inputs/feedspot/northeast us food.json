@@ -1,0 +1,167 @@
+{
+  "category": "Northeast US Food",
+  "source_url": "https://rss.feedspot.com/northeast_us_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Philly",
+      "feed_url": "https://philly.eater.com/rss/index.xml",
+      "website_url": "https://philly.eater.com/",
+      "description": "Eater is a digital media brand dedicated to all things food and dining. The Eater brand comprises a national site covering food and dining culture, 23 city sites tracking local dining scenes, a robust YouTube channel featuring documentary-style video about the inner workings of restaurants, and a variety of social channels, all run by a diverse team of writers, editors, producers, and contributors.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 25800,
+        "instagram": 99900
+      },
+      "image_url": "https://i1.feedspot.com/4899789.jpg?t=1632144066"
+    },
+    {
+      "title": "PattyJ.com Blog",
+      "feed_url": "https://www.pattyj.com/full-blog?format=RSS",
+      "website_url": "https://www.pattyj.com/full-blog/",
+      "description": "Hi, I'm Patty J, founder of PattyJ.com, a RI based lifestyle blog with a funny, smart, fashion-y take on daily life. Be sure to watch for profiles of the coolest people and places in RI and beyond as well as guest blogs from family and friends old and new.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 1100,
+        "instagram": 41500
+      },
+      "image_url": "https://i1.feedspot.com/4954360.jpg?t=1621605098"
+    },
+    {
+      "title": "The Cozy Cook",
+      "feed_url": "https://thecozycook.com/feed/",
+      "website_url": "https://thecozycook.com/",
+      "description": "Browse hundreds of easy-to-make simple recipes that won't cost you a fortune! Find recipes big on taste but short on extra steps that will make your family ask for seconds.",
+      "followers": {
+        "facebook": 204800,
+        "twitter": 2300,
+        "instagram": 661900
+      },
+      "image_url": "https://i1.feedspot.com/5148025.jpg?t=1621605045"
+    },
+    {
+      "title": "Good Food Pittsburgh",
+      "feed_url": "https://goodfoodpittsburgh.com/feed/",
+      "website_url": "https://goodfoodpittsburgh.com/",
+      "description": "Good Food Pittsburgh is an online magazine that shares news and tells stories about the people, places and events that make up Pittsburghs thriving food community. It provides information about what is happening in and around the city, from restaurant openings and event previews, to in-depth profiles on the chefs, restaurateurs and food producers in the area.",
+      "followers": {
+        "facebook": 39100,
+        "twitter": 5300,
+        "instagram": 43200
+      },
+      "image_url": "https://i1.feedspot.com/4895013.jpg?t=1612620645"
+    },
+    {
+      "title": "Portland Food Map",
+      "feed_url": "https://www.portlandfoodmap.com/feed/",
+      "website_url": "https://www.portlandfoodmap.com/",
+      "description": "The definitive guide to Portland's food scene. Portland Food Map was launched in 2007 as a directory of the local food community.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 5500,
+        "instagram": 84100
+      },
+      "image_url": "https://i1.feedspot.com/4923777.jpg?t=1611036441"
+    },
+    {
+      "title": "Down East \u00bb Food & Dining",
+      "feed_url": "https://downeast.com/category/food-drink/feed/",
+      "website_url": "https://downeast.com/category/food-drink/",
+      "description": "Down East magazine regularly features the best of Maine food and dining, best restaurants in Maine, from clams and lobster rolls, to burgers and beer. See some of our most popular Maine food stories, Maine's Best Breakfasts, The Oral History of the Lobster Roll, Best Maine Restaurants, and Maine recipes.",
+      "followers": {
+        "facebook": 122400,
+        "twitter": 36000,
+        "instagram": 141800
+      },
+      "image_url": "https://i1.feedspot.com/4824162.jpg?t=1611036436"
+    },
+    {
+      "title": "Rhode Island Monthly",
+      "feed_url": "https://www.rimonthly.com/feed/",
+      "website_url": "https://www.rimonthly.com/",
+      "description": "Rhode Island Monthly is your guide to all there is to eat, see, and do in the Ocean State. Topics of conversation include Rhode Island restaurants, Food to eat, places to visit, and to try different cuisines of food. The magazine brings readers the very best of what Rhode Island has to offer.",
+      "followers": {
+        "facebook": 50500,
+        "twitter": 70200,
+        "instagram": 50700
+      },
+      "image_url": "https://i1.feedspot.com/4954366.jpg?t=1621605060"
+    },
+    {
+      "title": "PhillyBite Magazine",
+      "feed_url": "https://www.phillybite.com/index.php?option=com_obrss&task=feed&id=1:phillybite-rss2-0&format=feed&Itemid=590",
+      "website_url": "https://www.phillybite.com/",
+      "description": "PhillyBite Magazine showcases Philly's Food, Review, Foodie News and more.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 67900,
+        "instagram": 53600
+      },
+      "image_url": "https://i1.feedspot.com/4902327.jpg?t=1612777821"
+    },
+    {
+      "title": "Welcome to New England Food Adventures",
+      "feed_url": "https://newenglandfoodadventures.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://newenglandfoodadventures.blogspot.com/",
+      "description": "Discover food and wine festivals, restaurant weeks, country farms, cozy inns, recipes, books, cooking classes and more.",
+      "followers": {
+        "facebook": 777
+      },
+      "image_url": "https://i1.feedspot.com/4954330.jpg?t=1621605103"
+    },
+    {
+      "title": "Tastefully Grace",
+      "feed_url": "https://tastefullygrace.com/feed/",
+      "website_url": "https://tastefullygrace.com/",
+      "description": "Tastefully Grace is a seasonal food blog that offers seasonal cooking and baking recipes inspired by the New England seasons. Spring, Summer, fall & Winter recipes and recipes for the holiday. The recipes that feature are dad's split pea soup with ham, easy microwave peanut butter fudge, best soft m&m cookies, and juicy chicken breast.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 46500
+      },
+      "image_url": "https://i1.feedspot.com/5488513.jpg?t=1672922351"
+    },
+    {
+      "title": "The Blueberry Files",
+      "feed_url": "http://www.blueberryfiles.com/feeds/posts/default",
+      "website_url": "http://www.blueberryfiles.com/",
+      "description": "My name is Kate. I write to you from Portland, Maine about what goes on in my kitchen and in restaurants around Maine. I teach food preservation classes for the University of Maine Cooperative Extension for a living.",
+      "followers": {
+        "facebook": 811,
+        "twitter": 2000,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/776548.jpg?t=1621605056"
+    },
+    {
+      "title": "Belly of the Pig",
+      "feed_url": "https://www.bellyofthepig.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.bellyofthepig.com/",
+      "description": "I'm a self-proclaimed food addict who features his latest fix on a Philly Food Blog. This Philly Food Blog focused on Philadelphia Restaurants.",
+      "followers": {
+        "facebook": 171,
+        "twitter": 548
+      },
+      "image_url": "https://i1.feedspot.com/4899792.jpg?t=1612780965"
+    },
+    {
+      "title": "New England Today",
+      "feed_url": "https://newengland.com/category/food/feed/",
+      "website_url": "https://newengland.com/category/food/",
+      "description": "New England Today features the best in New England travel, food, living, fall foliage, and events, plus Yankee Magazine, New England's favorite magazine.",
+      "followers": {
+        "facebook": 169700
+      },
+      "image_url": "https://i1.feedspot.com/4823562.jpg?t=1610781465"
+    },
+    {
+      "title": "Maine Today",
+      "feed_url": "https://www.pressherald.com/things-to-do/",
+      "website_url": "http://mainetoday.com/eat-drink/",
+      "description": "Food. Drinks. Music. Outdoors. Find the must-do event of the weekend - and anything else worth doing in Maine.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 30500
+      },
+      "image_url": "https://i1.feedspot.com/4954393.jpg?t=1621605070"
+    }
+  ]
+}

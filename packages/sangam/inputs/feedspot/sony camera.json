@@ -1,0 +1,83 @@
+{
+  "category": "Sony Camera",
+  "source_url": "https://rss.feedspot.com/sony_camera_rss_feeds",
+  "feeds": [
+    {
+      "title": "SonyAlphaRumors",
+      "feed_url": "https://www.sonyalpharumors.com/feed/",
+      "website_url": "https://www.sonyalpharumors.com/",
+      "description": "SonyAlphaRumors provides you with Sony news, rumors and reviews about the whole digital camera world. They also provide news about future Sony products.",
+      "followers": {
+        "facebook": 113900,
+        "twitter": 33600
+      },
+      "image_url": "https://i1.feedspot.com/4905923.jpg?t=1656072250"
+    },
+    {
+      "title": "Sony Mirrorless Pro",
+      "feed_url": "https://sonymirrorlesspro.com/feed/",
+      "website_url": "https://sonymirrorlesspro.com/category/news/",
+      "description": "The leading news, tutorial and information site for Sony mirrorless photographers.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 124,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4906156.jpg?t=1613711400"
+    },
+    {
+      "title": "Sony Alpha Blog",
+      "feed_url": "https://sonyalpha.blog/feed/",
+      "website_url": "https://sonyalpha.blog/",
+      "description": "This is the most complete blog for Sony E mount lenses, Tests of flashes & accessories.",
+      "followers": {
+        "twitter": 54
+      },
+      "image_url": "https://i1.feedspot.com/4921939.jpg?t=1620815228"
+    },
+    {
+      "title": "Phillip Reeve Blog",
+      "feed_url": "https://phillipreeve.net/blog/feed/",
+      "website_url": "https://phillipreeve.net/blog/",
+      "description": "Follow this blog where Phillip Reeve and his team share their thoughts and reviews on mirrorless Sony Alphas, manual Lenses and much more.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4583962.jpg?t=1611912334"
+    },
+    {
+      "title": "Camera Times \u00bb Sony Camera Rumors",
+      "feed_url": "https://cameratimes.org/tag/sony-camera-rumors/feed/",
+      "website_url": "https://cameratimes.org/tag/sony-camera-rumors/",
+      "description": "Covers the Sony Alpha camera & lens news, rumors, videos, reviews, and tips. Camera Times is the place to get the latest camera news, rumors & deals.",
+      "followers": {
+        "facebook": 54200,
+        "twitter": 207
+      },
+      "image_url": "https://i1.feedspot.com/5331145.jpg?t=1634123598"
+    },
+    {
+      "title": "New Camera \u00bb Sony Rumors",
+      "feed_url": "https://thenewcamera.com/category/sony-rumors/feed/",
+      "website_url": "https://thenewcamera.com/category/sony-rumors/",
+      "description": "Features Sony Camera Rumors, lens reviews, comparison, and expert buying guide. New Camera gives you the latest information about the upcoming camera and lenses.",
+      "followers": {
+        "facebook": 57500,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/5331146.jpg?t=1634197218"
+    },
+    {
+      "title": "Sony Camera Rumors",
+      "feed_url": "https://sonycamerarumors.net/feed/",
+      "website_url": "https://sonycamerarumors.net/",
+      "description": "Sony Camera Rumors is the world's biggest Sony Alpha Camera News community. Get updates on Sony Camera & Lens News, Rumors, Reviews, and Deals.",
+      "followers": {
+        "facebook": 113900,
+        "twitter": 33600
+      },
+      "image_url": "https://i1.feedspot.com/4921892.jpg?t=1620815218"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "category": "Vendor Management",
+  "source_url": "https://rss.feedspot.com/vendor_management_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vendor Centric Blog",
+      "feed_url": "https://vendorcentric.com/feed/",
+      "website_url": "https://vendorcentric.com/blog/",
+      "description": "Read topics and practical advice for third-party management at Vendor Center. Vendor Centric provides a comprehensive suite of services, software and managed solutions that ensure you manage your vendors with total confidence.",
+      "followers": {
+        "facebook": 41,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5279947.jpg?t=1620814358"
+    },
+    {
+      "title": "Venminder Blog",
+      "feed_url": "https://www.venminder.com/blog/rss.xml",
+      "website_url": "https://www.venminder.com/blog/",
+      "description": "Venminder's blog keeps third-party risk managers up-to-date on news and articles on vendor risk management. Learn about critical vendors, mitigating risk, due diligence and much more.",
+      "followers": {
+        "facebook": 543,
+        "twitter": 442
+      },
+      "image_url": "https://i1.feedspot.com/5280031.jpg?t=1763446924"
+    },
+    {
+      "title": "Felix Blog",
+      "feed_url": "https://www.felix.net/blog/rss.xml",
+      "website_url": "https://www.felix.net/blog",
+      "description": "From tech trends to compliance news, Felix helps your keep your finger on the pulse of all things vendor management and sourcing. Keep up to date with leadership pieces around procurement, supplier relationship management, and sourcing.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5280036.jpg?t=1620819712"
+    },
+    {
+      "title": "Gatekeeper \u00bb Vendor Management",
+      "feed_url": "https://www.gatekeeperhq.com/blog/topic/vendor-management/rss.xml",
+      "website_url": "https://www.gatekeeperhq.com/blog/topic/vendor-management",
+      "description": "Read expert writing on the subjects of vendor and contract management. Opinion, tips and best practice for specialist & non-specialist contract managers, legal representatives and vendor management. Gatekeeper is a next-generation supplier and contract management solution for companies of all sizes.",
+      "followers": {
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/5280024.jpg?t=1620817591"
+    },
+    {
+      "title": "SIG \u00bb Vendor Management",
+      "feed_url": "https://www.sig.org/taxonomy/term/1734/feed",
+      "website_url": "https://www.sig.org/category/vms/",
+      "description": "This section of the blog features articles that have to do exclusively with Vendor Management. Sourcing Industry Group (SIG) is the premier global association for sourcing, procurement and risk professionals. Founded in 1991, SIG provides thought leadership, networking and training opportunities to executives in sourcing, procurement, and outsourcing from Fortune 500 and Global 1000 companies.",
+      "followers": {
+        "facebook": 620,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5280001.jpg?t=1620815978"
+    }
+  ]
+}

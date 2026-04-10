@@ -1,0 +1,374 @@
+{
+  "category": "R Programming",
+  "source_url": "https://rss.feedspot.com/r_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "R-bloggers",
+      "feed_url": "https://www.r-bloggers.com/feed/",
+      "website_url": "https://www.r-bloggers.com/",
+      "description": "'R' is a language and open-source software used as a standard by statisticians in the development of statistical software. R-Bloggers focuses on tutorials and tips for using R to create effective and efficient applications for use in Business Intelligence and other solutions.",
+      "followers": {
+        "facebook": 83100,
+        "twitter": 106300
+      },
+      "image_url": "https://i1.feedspot.com/4512210.jpg?t=1612588496"
+    },
+    {
+      "title": "Win Vector LLC",
+      "feed_url": "https://win-vector.com/feed/",
+      "website_url": "https://win-vector.com/",
+      "description": "Win-Vector Blog is a data science blog which gives tips and tricks for using R programming in data science.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/109790.jpg?t=1612588523"
+    },
+    {
+      "title": "RWeekly.org",
+      "feed_url": "https://rweekly.org/atom.xml",
+      "website_url": "https://rweekly.org/",
+      "description": "R Weekly was founded on May 20, 2016. Follow this blog to Learn R, R tutorials, R resources, blog posts and the latest updates about the statistical programming R language.",
+      "followers": {
+        "facebook": 902,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4861783.jpg?t=1612588535"
+    },
+    {
+      "title": "on rOpenSci - open tools for open science Blog",
+      "feed_url": "https://ropensci.org/blog/index.xml",
+      "website_url": "https://ropensci.org/blog/",
+      "description": "rOpenSci fosters a culture that values open and reproducible research using shared data and reusable software.",
+      "followers": {
+        "twitter": 35800
+      },
+      "image_url": "https://i1.feedspot.com/5032499.jpg?t=1612588565"
+    },
+    {
+      "title": "ouR data generation",
+      "feed_url": "https://www.rdatagen.net/index.xml",
+      "website_url": "https://www.rdatagen.net/",
+      "description": "This site is a compendium of R code meant to highlight the various uses of simulation to aid in the understanding of probability, statistics, and study design. I will frequently draw on examples using my R package simstudy and other related stuffs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4890626.jpg?t=1612589562"
+    },
+    {
+      "title": "TomazTsql",
+      "feed_url": "https://tomaztsql.wordpress.com/feed/",
+      "website_url": "https://tomaztsql.wordpress.com/",
+      "description": "Tomaz Kastrun is a BI / DEV developer and data analyst. With more than 15 years of experience in the field of databases, business warehouses, and development, with a focus on T-SQL programming and query optimization. Follow this blog to get articles on BI & DEV with SQL Server and R, Python, Power BI, Azure, and beyond.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4889371.jpg?t=1612588695"
+    },
+    {
+      "title": "Stats and R",
+      "feed_url": "https://statsandr.com/index.xml",
+      "website_url": "https://statsandr.com/",
+      "description": "A blog on statistics and R aiming at helping academics and professionals working with data to grasp important concepts in statistics and to apply them in R.",
+      "followers": {
+        "twitter": 957
+      },
+      "image_url": "https://i1.feedspot.com/5134987.jpg?t=1612588575"
+    },
+    {
+      "title": "Lucid Manager",
+      "feed_url": "https://lucidmanager.org/index.xml",
+      "website_url": "https://lucidmanager.org/",
+      "description": "Peter Prevos is a civil engineer and social scientist with a PhD in business. He manages the data science team at a regional water utility in Australia. His task is to create value by creating useful, sound and aesthetic data products. His goal is to write a book about data science for water utilities using R. Follow this blog where he shares his experiments he has performed using R language.",
+      "followers": {
+        "twitter": 594
+      },
+      "image_url": "https://i1.feedspot.com/4889115.jpg?t=1610602456"
+    },
+    {
+      "title": "R for the Rest of Us Blog",
+      "feed_url": "https://rfortherestofus.com/blog/feed/atom",
+      "website_url": "https://rfortherestofus.com/blog/",
+      "description": "The official blog of R for the Rest of Us, featuring updates, tutorials, and insights on R programming for data analysis and visualization",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8664547.jpg?t=1756459988"
+    },
+    {
+      "title": "The R Project Blog",
+      "feed_url": "https://blog.r-project.org/index.xml",
+      "website_url": "https://blog.r-project.org/",
+      "description": "On this blogging site R developers share their experience, ideas and plans related to R core implementation. Technical details presented here might be useful for package developers and interesting for technically-minded R enthusiasts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8664545.jpg?t=1756460051"
+    },
+    {
+      "title": "Jumping Rivers Blog",
+      "feed_url": "https://www.jumpingrivers.com/blog/index.xml",
+      "website_url": "https://www.jumpingrivers.com/blog/",
+      "description": "At Jumping Rivers, we love being part of the data science community. Our blog allows us to share our knowledge, through tutorials, as well as demonstrate some of the work that we do. Our blogs cover a multitude of topics, from data visualisation tips and tricks, to exploring the latest R and Python updates, and much more. Read on to see what we have to say.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8664546.jpg?t=1756460152"
+    },
+    {
+      "title": "Notes from a data witch \u00bb R",
+      "feed_url": "https://blog.djnavarro.net/index.xml",
+      "website_url": "https://blog.djnavarro.net/#category=R/",
+      "description": "Notes from a Data Witch \u2014 a thoughtful, code-centric blog by Danielle Navarro exploring R, data science, reproducibility, statistics, and even generative art.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8664544.jpg?t=1756460219"
+    },
+    {
+      "title": "Rtask Blog",
+      "feed_url": "https://rtask.thinkr.fr/blog/feed/",
+      "website_url": "https://rtask.thinkr.fr/blog/",
+      "description": "The R task Force - R experts for all your needs",
+      "followers": {
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/8664548.jpg?t=1756460246"
+    },
+    {
+      "title": "R-exercises",
+      "feed_url": "https://www.r-exercises.com/feed/",
+      "website_url": "https://www.r-exercises.com/",
+      "description": "R-exercises aims to help people develop and improve their R programming skills. Follow this blog to learn R through 2500 and more free exercises on data cleaning, modeling, machine learning, visualizing and much more.",
+      "followers": {
+        "facebook": 690,
+        "twitter": 301
+      },
+      "image_url": "https://i1.feedspot.com/4889296.jpg?t=1612588499"
+    },
+    {
+      "title": "Yihui's Blog",
+      "feed_url": "https://yihui.org/en/index.xml",
+      "website_url": "https://yihui.org/en/",
+      "description": "Yihui Xie is a software engineer at RStudio. As an active R user, he has authored several R packages, such as knitr, bookdown, blogdown, xaringan, animation, DT, tinytex, tufte, formatR, fun, mime, highr, servr, Rd2roxygen and much more. He has also initiated the Chinese R conference in 2008, and has been involved in organizing R conferences in China since then. Follow this blog where Yihui Xie shares his thoughts and experience on R programming.",
+      "followers": {
+        "twitter": 24400
+      },
+      "image_url": "https://i1.feedspot.com/4888232.jpg?t=1612588506"
+    },
+    {
+      "title": "Fronkonstin",
+      "feed_url": "https://fronkonstin.com/feed/",
+      "website_url": "https://fronkonstin.com/",
+      "description": "Follow this blog for small experiments in R about data science, mathematics, big data, open data and data visualization.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4889271.jpg?t=1612588540"
+    },
+    {
+      "title": "bensstats",
+      "feed_url": "https://bensstats.wordpress.com/feed/",
+      "website_url": "https://bensstats.wordpress.com/",
+      "description": "Benjamin shares his adventures in Data Science, Programming and as tricks and discoveries that he has made along the way in these areas.",
+      "followers": {
+        "facebook": 74
+      },
+      "image_url": "https://i1.feedspot.com/5356206.jpg?t=1640156166"
+    },
+    {
+      "title": "r4stats.com Blog",
+      "feed_url": "https://r4stats.com/blog/feed/",
+      "website_url": "https://r4stats.com/blog/",
+      "description": "Welcome to r4stats.com. This site's mission is twofold: to analyze the world of data science, and to help people learn to use R. R is free, open source, software for data science that is similar to the 'big three' commercial packages: SAS, SPSS, and Stata. Follow this blog to find articles on R packages, R for SAS, R for Stata users and much more.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4888295.jpg?t=1612588699"
+    },
+    {
+      "title": "That's so Random",
+      "feed_url": "https://edwinth.github.io/feed",
+      "website_url": "https://edwinth.github.io/",
+      "description": "Edwin Thoen is a statistician turned data scientist, currently working at Funda. After doing bachelor programs in psychology and history he did the Statistical Science program at Leiden University, at which he completed his MSc with professor Hein Putter. From that moment he started R programming, he was hooked, and it always remained his weapon of choice. He is the author and maintainer of the padr R package. Follow this blog where Edwin Thoen shares his knowledge on R programming.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4889138.jpg?t=1612588704"
+    },
+    {
+      "title": "FinderDing",
+      "feed_url": "https://finderding.com/feed/",
+      "website_url": "https://finderding.com/",
+      "description": "Tips & Opinions For All Things Data. Where opinionated views and insights into current technology meet the everyday practical application.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5118874.jpg?t=1612588708"
+    },
+    {
+      "title": "The Lab-R-torian",
+      "feed_url": "https://labrtorian.com/feed/",
+      "website_url": "https://labrtorian.com/",
+      "description": "Daniel Holmes is a MD, Medical Biochemist at Providence Health St. Paul's Hospital. Follow this blog where Daniel Holmes shares applications of the R programming Language in Laboratory Medicine.",
+      "followers": {
+        "twitter": 713
+      },
+      "image_url": "https://i1.feedspot.com/4889096.jpg?t=1612589119"
+    },
+    {
+      "title": "QuantStrat TradeR",
+      "feed_url": "https://quantstrattrader.com/feed/",
+      "website_url": "https://quantstrattrader.com/",
+      "description": "My name is Ilya Kipnis. I am a data scientist, systematic trader, and quantitative research analyst. This blog will be an investigation into various problems that interest me in data science, quantitative finance, systematic trading, and asset management.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4215097.jpg?t=1612588714"
+    },
+    {
+      "title": "Marcelo S. Perlin | A blog about R and Finance",
+      "feed_url": "https://msperlin.com/post/index.xml",
+      "website_url": "https://msperlin.com/post/",
+      "description": "Marcelo works as an assistant professor of Finance at Federal University of Rio Grande do Sul (UFRGS). In this blog he writes about CRAN packages and other ideas about finance and R, research papers that he is currently working on. Follow this blog to know more about R.",
+      "followers": {
+        "twitter": 207
+      },
+      "image_url": "https://i1.feedspot.com/4889369.jpg?t=1612588724"
+    },
+    {
+      "title": "blog.RDataMining.com",
+      "feed_url": "https://rdatamining.wordpress.com/feed/",
+      "website_url": "https://rdatamining.wordpress.com/",
+      "description": "Follow this blog which presents examples on using R for data mining applications.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4888705.jpg?t=1612589060"
+    },
+    {
+      "title": "Brandon LeBeau",
+      "feed_url": "https://brandonlebeau.org/index.xml",
+      "website_url": "https://brandonlebeau.org/post/",
+      "description": "Brandon LeBeau is a Assistant Professor in the Educational Measurement and Statistics program at the University of Iowa. He also enjoys computing and have become proficient in numerous statistical programming languages, especially R. Follow this blog to find resources on R programming.",
+      "followers": {
+        "twitter": 192
+      },
+      "image_url": "https://i1.feedspot.com/4888194.jpg?t=1612588734"
+    },
+    {
+      "title": "Stable Markets",
+      "feed_url": "https://stablemarkets.wordpress.com/feed/",
+      "website_url": "https://stablemarkets.wordpress.com/",
+      "description": "Arman is a biostatistics PhD student at the University of Pennsylvania. For the most part, his research centers was around developing Bayesian nonparametric methods. He has experience on data science, visualization, statistics, and other things using R programming. Follow this blog to find more articles on R programming.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4889199.jpg?t=1612589023"
+    },
+    {
+      "title": "Spatial Processing in R",
+      "feed_url": "https://lbusettspatialr.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lbusettspatialr.blogspot.com/",
+      "description": "Follow this blog to know more about Remote Sensing data analysis and spatial processing in the 'R' software for statistical computing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4889221.jpg?t=1612588984"
+    },
+    {
+      "title": "insightR",
+      "feed_url": "https://insightr.wordpress.com/feed/",
+      "website_url": "https://insightr.wordpress.com/",
+      "description": "Follow this blog to get insights on R programming from experts.",
+      "followers": {
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/4890533.jpg?t=1612590821"
+    },
+    {
+      "title": "R Psychologist",
+      "feed_url": "http://feeds.feedburner.com/RPsychologist",
+      "website_url": "https://rpsychologist.com/posts/",
+      "description": "I'm a PhD-student and a clinical psychologist from Sweden with a passion for research and statistics. This is my personal blog about psychological research and statistical programming with R.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4613279.jpg?t=1612588570"
+    },
+    {
+      "title": "Dean Attali",
+      "feed_url": "https://deanattali.com/feed.xml",
+      "website_url": "https://deanattali.com/",
+      "description": "Dean Attali is a R-Shiny developer and consultant with a MSc in Bioinformatics and a Bachelor of Computer Science. He has experience in R and an expert in R-Shiny. Follow this blog to find articles on R-shiny.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4890541.jpg?t=1612588681"
+    },
+    {
+      "title": "Jozef's Rblog",
+      "feed_url": "https://jozef.io/index.xml",
+      "website_url": "https://jozef.io/",
+      "description": "My name is Jozef and I have spent the past 10 years working for insurance companies, initially developing and implementing actuarial models with specialized software like Emblem, SPSS Modeler or Sophas. For the better part of this decade, I am developing and deploying production applications mostly written in R, for example computing Solvency II SCR. Currently, I am working on implementing and deploying predictive models for future insurance cash-flows under IFRS17 in Amsterdam, Netherlands.",
+      "followers": {
+        "twitter": 826
+      },
+      "image_url": "https://i1.feedspot.com/5121592.jpg?t=1612588690"
+    },
+    {
+      "title": "R tutorial for Spatial Statistics",
+      "feed_url": "https://r-video-tutorial.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://r-video-tutorial.blogspot.com/",
+      "description": "Follow this blog to get R tutorials for Spatial Statistics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4889354.jpg?t=1612588888"
+    },
+    {
+      "title": "Shiny Developer Series",
+      "feed_url": "https://serve.podhome.fm/rss/657582be-9f3a-5377-9e67-db97659bfa07",
+      "website_url": "https://shinydevseries.fireside.fm/",
+      "description": "The goals of the Shiny Developer Series are to showcase the innovative applications and packages in the ever-growing Shiny ecosystem, as well as the brilliant developers behind them! This is the audio-only feed in case you want to listen to the content on the go. Visit shinydevseries.com for the video version of all episodes",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6640610.jpg"
+    },
+    {
+      "title": "RStudio Blog",
+      "feed_url": "https://blog.rstudio.com/index.xml",
+      "website_url": "https://posit.co/blog/",
+      "description": "RStudio is an active member of the R community. This blog contains information on RStudio products and events, including RStudio open-source and commercial product announcements, company events, and company news.",
+      "followers": {
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/4889249.jpg?t=1612588515"
+    },
+    {
+      "title": "Revolutions",
+      "feed_url": "https://blog.revolutionanalytics.com/atom.xml",
+      "website_url": "https://blog.revolutionanalytics.com/",
+      "description": "Revolutions is a blog dedicated to news and information of interest to members of the R community. Follow to keep up with daily news about using open source R for data analysis, predictive modeling, data science, and visualization.",
+      "followers": {
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/57631.jpg?t=1612588519"
+    },
+    {
+      "title": "Thinking inside the box Blog",
+      "feed_url": "http://dirk.eddelbuettel.com/blog/",
+      "website_url": "http://dirk.eddelbuettel.com/blog/",
+      "description": "Dirk Eddelbuettel works on Quantitative Research and Trading, Data Science, Open Source, Debian, Rcpp and R. Follow this blog to get resources on Rcpp and R.",
+      "followers": {
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/987154.jpg?t=1612588533"
+    },
+    {
+      "title": "Theory meets practice Blog",
+      "feed_url": "https://staff.math.su.se/hoehle/blog/",
+      "website_url": "https://staff.math.su.se/hoehle/blog/",
+      "description": "Michael H\u00f6hle works as Associate Professor in mathematical statistics at Stockholm University. This blog is about statistics in theory and practice. Follow this blog to know more about R statistical programming.",
+      "followers": {
+        "twitter": 967
+      },
+      "image_url": "https://i1.feedspot.com/4889066.jpg?t=1612588555"
+    },
+    {
+      "title": "STHDA",
+      "feed_url": "http://www.sthda.com/english/syndication/rss/articles",
+      "website_url": "https://www.sthda.com/english/",
+      "description": "STHDA is a web site for statistical data analysis and data visualization using R software. It provides many R programming tutorials easy to follow.",
+      "followers": {
+        "facebook": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4889173.jpg?t=1612590933"
+    }
+  ]
+}

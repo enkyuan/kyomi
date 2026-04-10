@@ -1,0 +1,98 @@
+{
+  "category": "Oklahoma City News",
+  "source_url": "https://rss.feedspot.com/oklahoma_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KFOR",
+      "feed_url": "https://kfor.com/feed/",
+      "website_url": "https://kfor.com/",
+      "description": "Oklahoma's Own KFOR is Central Oklahoma's source for Oklahoma-area breaking news, streaming live video, traffic, and severe weather coverage. Read the Latest News and Updates in News brought to you by the team at KFOR. The station is owned by the Nexstar Media Group, as part of a duopoly with independent station KAUT-TV (channel 43).",
+      "followers": {
+        "facebook": 547900,
+        "twitter": 112900,
+        "instagram": 53700
+      },
+      "image_url": "https://i1.feedspot.com/5131111.jpg?t=1585031346"
+    },
+    {
+      "title": "Oklahoma Watch",
+      "feed_url": "https://oklahomawatch.org/feed/",
+      "website_url": "https://oklahomawatch.org/",
+      "description": "Oklahoma Watch is a nonprofit news organization that produces in-depth and investigative journalism on important public-policy issues facing the state. Through investigative, fact-driven journalism, they dig deep and examine significant issues facing their state. Their work engages all Oklahomans, amplifies the discussion of important issues, and leads to change. They help develop the journalists and journalism of the future.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 20100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5131110.jpg?t=1637407414"
+    },
+    {
+      "title": "Oklahoma Gazette",
+      "feed_url": "https://www.okgazette.com/oklahoma/Rss.xml/feed",
+      "website_url": "https://www.okgazette.com/",
+      "description": "Oklahoma Gazette is providing Oklahoma City's News, Entertainment, and Arts authority. Oklahoma Gazette's mission is to stimulate, examine and inform the public on local quality-of-life issues and social needs, recognize community accomplishments and provide a forum for inspiration, participation and interaction across all media.",
+      "followers": {
+        "facebook": 42200,
+        "twitter": 58600,
+        "instagram": 26500
+      },
+      "image_url": "https://i1.feedspot.com/4901925.jpg?t=1612870557"
+    },
+    {
+      "title": "Oklahoma City Free Press",
+      "feed_url": "https://freepressokc.com/feed/",
+      "website_url": "https://freepressokc.com/",
+      "description": "Oklahoma City Free Press is an independent reader-engaged community news from and for Oklahoma City. Oklahoma City Free Press is dedicated to providing high-quality journalism that positively impacts the community. They give a voice to those who aren't heard and expose that which is hidden from the public.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 6800,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4902000.jpg?t=1612870576"
+    },
+    {
+      "title": "The Black Chronicle",
+      "feed_url": "https://blackchronicle.com/feed/",
+      "website_url": "https://blackchronicle.com/",
+      "description": "The Black Chronicle newspaper, a weekly periodical servicing the Oklahoma City metro area's African American population, has grown into one of the largest paid weekly newspapers in the state of Oklahoma. Currently, The Black Chronicle services the entire state of Oklahoma i.e., Tulsa, Lawton/Ft. Sill, and Oklahoma City.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 675
+      },
+      "image_url": "https://i1.feedspot.com/5134115.jpg"
+    },
+    {
+      "title": "KOCO 5 News",
+      "feed_url": "https://www.koco.com/-/9844716/9844956/-/format/rss_2.0/view/asFeed/-/bp02agz/-/index.xml",
+      "website_url": "https://www.koco.com/local-news",
+      "description": "KOCO 5 News is your source for the latest local headlines and live alerts. Visit Oklahoma City's most reliable source for breaking news.",
+      "followers": {
+        "facebook": 766000,
+        "twitter": 168400
+      },
+      "image_url": "https://i1.feedspot.com/3353587.jpg?t=1694159859"
+    },
+    {
+      "title": "The Oklahoman",
+      "feed_url": "https://www.oklahoman.com/rss/home/",
+      "website_url": "https://www.oklahoman.com/",
+      "description": "NewsOK is Oklahoma's most trusted source for breaking news, sports, weather, obituaries, politics, business, art, entertainment, blogs, video, photos and Oklahoma City headlines.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/702595.jpg?t=1612870550"
+    },
+    {
+      "title": "CityNewsOKC",
+      "feed_url": "https://www.city-sentinel.com/feed/",
+      "website_url": "https://www.citynewsokc.com/",
+      "description": "The City Sentinel serves Downtown, Central and Northwest Oklahoma City. It focuses on the community and neighborhood news.The City Sentinel is now serving as THE source for news from the heart of Oklahoma City.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 895
+      },
+      "image_url": "https://i1.feedspot.com/5134121.jpg?t=1585834695"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "category": "Belgium News",
+  "source_url": "https://rss.feedspot.com/belgium_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Bulletin",
+      "feed_url": "https://www.thebulletin.be/rss.xml",
+      "website_url": "https://www.thebulletin.be/",
+      "description": "The Bulletin is the portal for Belgium's expatriate community since 1962.",
+      "followers": {
+        "facebook": 54600,
+        "twitter": 6000,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5335469.jpg?t=1635159020"
+    },
+    {
+      "title": "HLN",
+      "feed_url": "https://www.hln.be/home/rss.xml",
+      "website_url": "https://www.hln.be/",
+      "description": "HLN - Het Laatste Nieuws - Volg het nieuws op de nr1 nieuwssite in Belgi\u00eb, HLN.be brengt je het allerlaatste nieuws 24/24 en 7/7, uit binnen - en buitenland, evenals dichtbij met nieuws uit je eigen regio.",
+      "followers": {
+        "facebook": 981200,
+        "twitter": 314800,
+        "instagram": 308700
+      },
+      "image_url": "https://i1.feedspot.com/5335477.jpg?t=1635167357"
+    },
+    {
+      "title": "De Morgen",
+      "feed_url": "https://www.demorgen.be/in-het-nieuws/rss.xml",
+      "website_url": "https://www.demorgen.be/in-het-nieuws",
+      "description": "De Morgen is the news brand for young, highly educated, curious, creative and open-minded people.",
+      "followers": {
+        "facebook": 246100,
+        "twitter": 125200,
+        "instagram": 136100
+      },
+      "image_url": "https://i1.feedspot.com/5335491.jpg?t=1635224458"
+    },
+    {
+      "title": "Brussels Morning",
+      "feed_url": "https://brusselsmorning.com/feed/",
+      "website_url": "https://brusselsmorning.com/",
+      "description": "Brussels Morning is a daily electronic newspaper based in Belgium, Covering European Affairs with a special focus on EU politics such as European Parliament, the Commission, and the Council.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5210089.jpg?t=1635225220"
+    },
+    {
+      "title": "La Libre",
+      "feed_url": "https://www.lalibre.be/arc/outboundfeeds/rss/?outputType=xml",
+      "website_url": "https://www.lalibre.be/",
+      "description": "La Libre is a leading French-language daily newspaper on the Belgian market.",
+      "followers": {
+        "facebook": 360300,
+        "twitter": 293700,
+        "instagram": 43700
+      },
+      "image_url": "https://i1.feedspot.com/5335623.jpg?t=1635225701"
+    },
+    {
+      "title": "L'Echo",
+      "feed_url": "https://www.lecho.be/rss/top_stories.xml",
+      "website_url": "https://www.lecho.be/",
+      "description": "For 140 years, L'Echo has been the benchmark newspaper for captains of industry, business leaders and executives.",
+      "followers": {
+        "facebook": 151400,
+        "twitter": 72800
+      },
+      "image_url": "https://i1.feedspot.com/5335476.jpg?t=1635167432"
+    },
+    {
+      "title": "DH les Sports +",
+      "feed_url": "https://www.dhnet.be/rss.xml",
+      "website_url": "https://www.dhnet.be/",
+      "description": "All Belgian, international, regional, and sports news, it's on DH Les Sports.",
+      "followers": {
+        "facebook": 485600,
+        "twitter": 143000
+      },
+      "image_url": "https://i1.feedspot.com/4231829.jpg?t=1635160367"
+    },
+    {
+      "title": "Sudinfo Lameuse \u00bb Liege",
+      "feed_url": "https://www.sudinfo.be/2098/sections/regions/liege",
+      "website_url": "https://www.sudinfo.be/2098/sections/regions/liege",
+      "description": "Follow the news live, the news of your region, the national and international hot news, the sports results, the best of the People, the buzz news, the news, and much other quality content.",
+      "followers": {
+        "twitter": 23300
+      },
+      "image_url": "https://i1.feedspot.com/5335624.jpg?t=1635254881"
+    },
+    {
+      "title": "Sudinfo Lameuse \u00bb Bruxelles",
+      "feed_url": "https://www.sudinfo.be/2110/sections/regions/bruxelles",
+      "website_url": "https://www.sudinfo.be/2110/sections/regions/bruxelles",
+      "description": "Local Walloon and Brussels news from the no 1 newspaper in French-speaking Belgium.",
+      "followers": {
+        "twitter": 8000,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5335630.jpg?t=1635225972"
+    },
+    {
+      "title": "The Brussels Times",
+      "feed_url": "https://www.brusselstimes.com/feed/",
+      "website_url": "https://www.brusselstimes.com/",
+      "description": "Established in 1965, The Brussels Times is today Belgium's largest daily news media in English, with over 2 million visits per month.",
+      "followers": {
+        "facebook": 165500,
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5335458.jpg?t=1635158229"
+    },
+    {
+      "title": "Expatica \u00bb Belgium",
+      "feed_url": "https://www.expatica.com/be/feed/?post_type=post",
+      "website_url": "https://www.expatica.com/be/news/",
+      "description": "Get the latest English-language news in Belgium covering both domestic and global current events, curated especially for expats.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 8100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5335462.jpg?t=1635158400"
+    },
+    {
+      "title": "De Standaard",
+      "feed_url": "https://www.standaard.be/",
+      "website_url": "https://www.standaard.be/",
+      "description": "The latest news from Belgium and abroad, economy and money, culture, sport, and lifestyle.",
+      "followers": {
+        "facebook": 352300,
+        "twitter": 342700,
+        "instagram": 128800
+      },
+      "image_url": "https://i1.feedspot.com/5335478.jpg?t=1635160734"
+    },
+    {
+      "title": "Het Belang van Limburg",
+      "feed_url": "https://www.hbvl.be/",
+      "website_url": "https://www.hbvl.be/",
+      "description": "Covers the latest news from Limburg at any time, Domestic and foreign news, economy, media & culture, and sports are also extensively discussed.",
+      "followers": {
+        "facebook": 220300,
+        "twitter": 46300
+      },
+      "image_url": "https://i1.feedspot.com/5335493.jpg?t=1635254220"
+    },
+    {
+      "title": "Nieuwsblad.be",
+      "feed_url": "https://www.nieuwsblad.be/",
+      "website_url": "https://www.nieuwsblad.be/",
+      "description": "On top of complete coverage of the news from home and abroad, economy, lifestyle, Nieuwsblad.be pays extra attention to regional and sports news.",
+      "followers": {
+        "facebook": 842600,
+        "twitter": 144700
+      },
+      "image_url": "https://i1.feedspot.com/5335492.jpg?t=1635254396"
+    },
+    {
+      "title": "lavenir.net",
+      "feed_url": "https://www.lavenir.net/",
+      "website_url": "https://www.lavenir.net/",
+      "description": "Lavenir.net is the reference site for regional information in French-speaking Belgium. Municipalities, regions, Belgium, world, sports, and all the news 24 hours a day on Lavenir.net.",
+      "followers": {
+        "facebook": 420400,
+        "twitter": 78400,
+        "instagram": 29900
+      },
+      "image_url": "https://i1.feedspot.com/5335494.jpg?t=1635254510"
+    }
+  ]
+}

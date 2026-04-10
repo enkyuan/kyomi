@@ -1,0 +1,51 @@
+{
+  "category": "Macy's",
+  "source_url": "https://rss.feedspot.com/macys_rss_feeds",
+  "feeds": [
+    {
+      "title": "Free Stuff Finder",
+      "feed_url": "http://www.freestufffinder.com/coupons-for/macys/feed/",
+      "website_url": "https://www.freestufffinder.com/coupons-for/macys/",
+      "description": "Free Stuff Finder is a nationally recognized US news publication for the latest retail deals, coupons, and money-saving opportunities in the US. Free Stuff Finder publishes the latest deals, coupons, freebies around Macy's. We help readers save 50% off or more on purchases.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 22900,
+        "instagram": 869600
+      },
+      "image_url": "https://i1.feedspot.com/4976374.jpg?t=1622006887"
+    },
+    {
+      "title": "GWP Addict \u00bb Macy",
+      "feed_url": "https://gwpaddicts.com/category/macys/feed/",
+      "website_url": "https://gwpaddicts.com/category/macys/",
+      "description": "Hi, my name is Lisa. I am completely addicted to tiny little beauty bottles. The skincare, haircare, makeup, I love them all, but what I love most is buying something and getting those free little beauty gifts. I also love shopping online and finding great deals. I hope I can help you find some great beauty deals here.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 331
+      },
+      "image_url": "https://i1.feedspot.com/4976361.jpg?t=1622006897"
+    },
+    {
+      "title": "Coupons 4 Utah \u00bb Macy's Deals",
+      "feed_url": "https://coupons4utah.com/category/store-deals/macys-deals/feed/",
+      "website_url": "https://coupons4utah.com/category/store-deals/macys-deals/",
+      "description": "Coupons 4 Utah is Utah's number one source for connecting consumers with savings for Events, Restaurants, Online Coupon Codes and Grocery Coupons from sources locally and across the web.",
+      "followers": {
+        "facebook": 37700
+      },
+      "image_url": "https://i1.feedspot.com/4976365.jpg?t=1622006923"
+    },
+    {
+      "title": "Hip2Save \u00bb macys deals macys coupons",
+      "feed_url": "https://hip2save.com/save-money-with/macys-coupons-sales/feed/",
+      "website_url": "https://hip2save.com/save-money-with/macys-coupons-sales/",
+      "description": "Hip2Save is a frugal living blog that shows by example how to live a more fulfilling and rewarding life by saving money with coupons, taking advantage of the best online deals, and shopping stores with confidence! Get all the best deals & save money with Macy's coupons, deals, and discount codes.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 31000,
+        "instagram": 368100
+      },
+      "image_url": "https://i1.feedspot.com/4976367.jpg?t=1622006892"
+    }
+  ]
+}

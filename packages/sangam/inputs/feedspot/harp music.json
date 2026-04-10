@@ -1,0 +1,83 @@
+{
+  "category": "Harp Music",
+  "source_url": "https://rss.feedspot.com/harp_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Harp Column",
+      "feed_url": "https://harpcolumn.com/blog/category/news/feed/",
+      "website_url": "https://harpcolumn.com/blog/category/news/",
+      "description": "Harp Column is the world's best source for harp news, information, and discussion. Practical news for practical harpists, since 1993.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5262233.jpg?t=1616763325"
+    },
+    {
+      "title": "Josh Layne's Harp Blog",
+      "feed_url": "https://www.joshlayne.com/blog/feed/",
+      "website_url": "https://www.joshlayne.com/blog/",
+      "description": "Josh Layne is a Harpist, composer, teacher. He blogs about the harp and classical music.",
+      "followers": {
+        "twitter": 67,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5261998.jpg?t=1616743033"
+    },
+    {
+      "title": "Ailie Robertson Blog",
+      "feed_url": "https://www.ailierobertson.com/harp-tips-blog?format=rss",
+      "website_url": "https://www.ailierobertson.com/harp-tips-blog",
+      "description": "Ailie Robertson from Edinburgh is widely regarded as one of Scotland's leading traditional musicians and Celtic harpists. The blog covers topics such as harp tips, learn the harp, improve your harp playing, harp lessons, and more.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5261835.jpg?t=1616682854"
+    },
+    {
+      "title": "Beth A. Stockdell, Harpist Blog",
+      "feed_url": "https://stockdell.com/feed/",
+      "website_url": "https://stockdell.com/blog/",
+      "description": "Beth A. Stockdell is a professional harpist, Folk Harp Journal Editor, artist, photographer, football geek, voracious reader, and bookmaker. Follow to see her journey of the harp.",
+      "followers": {
+        "twitter": 127
+      },
+      "image_url": "https://i1.feedspot.com/5262154.jpg?t=1616768599"
+    },
+    {
+      "title": "The Early Pedal Harp Blog",
+      "feed_url": "https://www.theearlypedalharp.net/blog-feed.xml",
+      "website_url": "https://www.theearlypedalharp.net/blog",
+      "description": "Welcome to TheEarlyPedalHarp.net, an online multi-disciplinary research community of harpists, harp makers, conservators, restorers, historians, museum curators, musicians, musicologists, and organologists.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5262244.jpg?t=1616768636"
+    },
+    {
+      "title": "Hannah Flowers | Harpist and Event Musician",
+      "feed_url": "https://hannahflowersharp.com/category/blog/feed/",
+      "website_url": "https://hannahflowersharp.com/category/blog/",
+      "description": "Hannah Flowers is a harpist and singer from St. Paul, Minnesota. Although a classically trained musician, her passion is traditional Irish music and song. Find harp tunes and tales. The thoughts and harp ramblings of Hannah Flowers, a Minneapolis, MN weddings and event harpist.",
+      "followers": {
+        "facebook": 768,
+        "twitter": 48,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5261991.jpg?t=1616768672"
+    },
+    {
+      "title": "The Classic Harpist",
+      "feed_url": "https://theclassicharpist.com/feed/",
+      "website_url": "https://theclassicharpist.com/blog/",
+      "description": "Devon Carpenter is a professional harpist, providing music for weddings, parties, and other events throughout the Midwest, and around the world for destination weddings. She specializes in performing pop, jazz, and Bollywood music on the harp.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 281,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5262282.jpg?t=1616766571"
+    }
+  ]
+}

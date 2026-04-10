@@ -1,0 +1,99 @@
+{
+  "category": "MIT Technology Review",
+  "source_url": "https://rss.feedspot.com/mittechnologyreview_rss_feeds",
+  "feeds": [
+    {
+      "title": "MIT Technology Review",
+      "feed_url": "https://www.technologyreview.com/feed",
+      "website_url": "https://www.technologyreview.com/",
+      "description": "MIT Technology Review, is a rich source of information relating to computer science and programming. Myriad authors contribute to the blog, and specific topics include everything from social media trends and artificial intelligence, to climate change and blockchain, and everything in between.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1200000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5185808.jpg?t=1744095244"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Artificial Intelligence",
+      "feed_url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+      "website_url": "https://www.technologyreview.com/topic/artificial-intelligence/",
+      "description": "What is AI? It's the quest to build machines that can reason, learn, and act intelligently, and it has barely begun. We cover the latest advances in machine learning, neural networks, and robots. Founded at the Massachusetts Institute of Technology in 1899, MIT Technology Review is a world-renowned, independent media company whose insight, analysis, reviews, interviews and live events explain the newest technologies and their commercial, social and political impacts.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1200000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5280059.jpg?t=1620825800"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Biotechnology and Health",
+      "feed_url": "https://www.technologyreview.com/topic/biotechnology/feed",
+      "website_url": "https://www.technologyreview.com/topic/biotechnology/",
+      "description": "Our in-depth reporting on innovation reveals and explains what's really happening now to help you know what's coming next in biotechnology. Founded at the Massachusetts Institute of Technology in 1899, MIT Technology Review is a world-renowned, independent media company whose insight, analysis, reviews, interviews and live events explain the newest technologies and their commercial, social and political impacts.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1200000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5480636.jpg?t=1671189491"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Business",
+      "feed_url": "https://www.technologyreview.com/topic/business/feed",
+      "website_url": "https://www.technologyreview.com/topic/business/",
+      "description": "All articles about Business from MIT Technology Review.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5185808.jpg?t=1744095244"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Space",
+      "feed_url": "https://www.technologyreview.com/topic/space/feed",
+      "website_url": "https://www.technologyreview.com/topic/space/",
+      "description": "All articles about Space from MIT Technology Review.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5185808.jpg?t=1744095244"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Policy",
+      "feed_url": "https://www.technologyreview.com/topic/policy/feed",
+      "website_url": "https://www.technologyreview.com/topic/policy/",
+      "description": "All articles about Policy from MIT Technology Review.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5185808.jpg?t=1744095244"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Culture",
+      "feed_url": "https://www.technologyreview.com/topic/culture/feed",
+      "website_url": "https://www.technologyreview.com/topic/culture/",
+      "description": "How technology is changing the arts, beliefs and institutions surrounding us.",
+      "followers": {
+        "facebook": 1600000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5185808.jpg?t=1744095244"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Computing",
+      "feed_url": "https://www.technologyreview.com/topic/computing/feed",
+      "website_url": "https://www.technologyreview.com/topic/computing/",
+      "description": "How innovations in everything from microchips to quantum computing are powering the technology we rely on.",
+      "followers": {
+        "facebook": 1600000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5185808.jpg?t=1744095244"
+    },
+    {
+      "title": "MIT Technology Review \u00bb Climate Change and Energy",
+      "feed_url": "https://www.technologyreview.com/topic/climate-change/feed",
+      "website_url": "https://www.technologyreview.com/topic/climate-change/",
+      "description": "From EV batteries to carbon removal, we look at the technologies and policies that will help us reduce emissions and adapt to a warming world.",
+      "followers": {
+        "facebook": 1600000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5185808.jpg?t=1744095244"
+    }
+  ]
+}

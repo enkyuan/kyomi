@@ -1,0 +1,334 @@
+{
+  "category": "Geocaching",
+  "source_url": "https://rss.feedspot.com/geocaching_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Geocaching Blog",
+      "feed_url": "https://www.geocaching.com/blog/feed/",
+      "website_url": "https://www.geocaching.com/blog/",
+      "description": "Founded in 2000, Geocaching HQ is dedicated to inspiring and enabling discovery, exploration, and adventure through a unique combination of outdoor recreation and location-based technology.",
+      "followers": {
+        "facebook": 640500,
+        "twitter": 79500,
+        "instagram": 474100
+      },
+      "image_url": "https://i1.feedspot.com/4479829.jpg?t=1608721941"
+    },
+    {
+      "title": "PodCacher",
+      "feed_url": "https://www.podcacher.com/feed/",
+      "website_url": "https://www.podcacher.com/",
+      "description": "A world famous site packed with geocaching goodness. Find a podcast, articles, videos and more about high-tech treasure hunting.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 3900,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/1236651.jpg?t=1608721950"
+    },
+    {
+      "title": "Geocachen.be",
+      "feed_url": "https://geocachen.be/feed/",
+      "website_url": "https://geocachen.be/",
+      "description": "Discover everything you need to know about Geocaching. Geocaching is the outdoor sport where you have to combine walking, puzzling and searching to find treasures.",
+      "followers": {
+        "facebook": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4836280.jpg?t=1608721968"
+    },
+    {
+      "title": "The Caching Bag",
+      "feed_url": "http://thecachingbag.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thecachingbag.blogspot.com/",
+      "description": "Geocaching adventures in the Great Lakes. A repository of knoweldge about geocaching, waymarking, Wherigo",
+      "followers": {
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/4773096.jpg?t=1608722021"
+    },
+    {
+      "title": "MKGees",
+      "feed_url": "https://mkgees.uk/feed/",
+      "website_url": "https://mkgees.uk/",
+      "description": "Life in a nutshell, 'cos it's better if you're nuts!' A geocaching, travel and tech blog accompanied by some wonderful photography.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/4773066.jpg?t=1608722025"
+    },
+    {
+      "title": "Magicman65 Adventures",
+      "feed_url": "http://magicman65.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://magicman65.blogspot.com/",
+      "description": "These Blogs will mostly be about my geocaching adventures and where it takes me. I will also fill in the blanks with stories of my Magical adventures as well. You see, for those that may not know me, I am a Comedy Magician and I get to travel to quite a few cool places.",
+      "followers": {
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/5033215.jpg?t=1608722855"
+    },
+    {
+      "title": "Get Out!",
+      "feed_url": "https://getoutga.wordpress.com/feed/",
+      "website_url": "https://getoutga.wordpress.com/",
+      "description": "A blog dedicated to getting off the couch, turning off the tube and going outside to do something fun...now...GET OUT!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773231.jpg?t=1608723262"
+    },
+    {
+      "title": "Mud and Nettles",
+      "feed_url": "https://mudandnettles.com/feed/",
+      "website_url": "https://mudandnettles.com/",
+      "description": "Passionate about getting kids outdoors and connecting with nature. Sharing adventures of travel, camping, walking, exploring, geocaching and hopefully encouraging families to get outside. My big outdoor hobby is Geocaching, I find something strangely addictive about rummaging in bushes for Tupperware. I love the rush from finding a cache in an unusual or dangerous location. Blog By Clare.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4773250.jpg?t=1608721981"
+    },
+    {
+      "title": "Sandhurst Geocachers",
+      "feed_url": "https://sandhurstgeocachers.wordpress.com/feed/",
+      "website_url": "https://sandhurstgeocachers.wordpress.com/",
+      "description": "This blog was started to document the caches we found, where we found them and our experiences along the way. We live in the Berkshire/Surrey/Hampshire borders so most of our caches were in that area. We decided to continue geocaching and blogging too because geocaching has taken us to lots of interesting, unexpected places, and we made many new friends along the way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773567.jpg?t=1608723224"
+    },
+    {
+      "title": "Shortyknits",
+      "feed_url": "https://shortyknits.com/feed/",
+      "website_url": "https://shortyknits.com/",
+      "description": "Shortyknits follows the adventures of Jessie Brown aka shortyknits. She writes and describes her journeys hiking, enjoying nature, and participating in Geocaching events. She also shares other updates regarding her life as well as helpful geocaching tips and practices.",
+      "followers": {
+        "facebook": 513,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5670243.jpg?t=1694532859"
+    },
+    {
+      "title": "Geocaching with DS8300",
+      "feed_url": "https://ds8300.wordpress.com/feed/",
+      "website_url": "https://ds8300.wordpress.com/",
+      "description": "Martin lives in Sweden and caches under the name DS8300. He can lay claim to having cached in over 40 countries and enjoys travelling and adding to that list whenever he can. As of early 2014 he had found over 4000 caches and the split is almost 50 50 for those in Sweden and those abroad.Get weekly update on my geocaching activities.",
+      "followers": {
+        "twitter": 125
+      },
+      "image_url": "https://i1.feedspot.com/4773111.jpg?t=1608721989"
+    },
+    {
+      "title": "My Geek Odyssey",
+      "feed_url": "https://www.mygeekodyssey.com/?feed=rss2",
+      "website_url": "https://www.mygeekodyssey.com/",
+      "description": "The story of a one geek's journey through life, the universe & you know the rest. My Geek Odyssey follows the adventures of an elementary school teacher as he tries to discover and embrace his inner geek, be that in the world of pop-culture, technology, geocaching, teaching, Mini Coopers, and whatever else he encounters along the way. Blog by Bruce Nelson.",
+      "followers": {
+        "facebook": 437,
+        "twitter": 326
+      },
+      "image_url": "https://i1.feedspot.com/4773027.jpg?t=1608721994"
+    },
+    {
+      "title": "LANMonkey's GeoCaching Adventures Blog",
+      "feed_url": "http://lanmonkey.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lanmonkey.ca/blog/",
+      "description": "Follow the adventures of the Canadian geocaching and vlogging team 'LANMonkey' as they explore the amazing Pacific Northwest & Western States & Provinces finding creative & fun geocaches and meeting interesting people along the way.",
+      "followers": {
+        "facebook": 739,
+        "twitter": 925,
+        "instagram": 732
+      },
+      "image_url": "https://i1.feedspot.com/4773242.jpg?t=1608721999"
+    },
+    {
+      "title": "Thomfre & Heltinnen",
+      "feed_url": "https://thomfre.net/en/feed/",
+      "website_url": "https://thomfre.net/en/out-caching/fumble-after-daylight-2017/",
+      "description": "Thomfre and Heltinnen are two geocachers from Karm\u00f8y, a big island situated on the south western coast of Norway. Ever since discovering caching back in 2012 they have thrown themselves into the hobby with great dedication and enthusiasm. thomfre quickly became involved in the caching community and participates in organisations at the regional and national levelin Norway.",
+      "followers": {
+        "facebook": 359
+      },
+      "image_url": "https://i1.feedspot.com/4773627.jpg?t=1608722006"
+    },
+    {
+      "title": "Geocaching Milestones and Memories",
+      "feed_url": "http://miatabug-cachingmilestones.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://miatabug-cachingmilestones.blogspot.com/",
+      "description": "When you go to hide a cache, think of the reason you are bringing people to that spot. If the only reason is for the cache, then find a better spot.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773229.jpg?t=1613124664"
+    },
+    {
+      "title": "Geocaching Puzzle of the Day",
+      "feed_url": "http://geocachingpuzzleoftheday.blogspot.com/feeds/posts/default",
+      "website_url": "http://geocachingpuzzleoftheday.blogspot.com/",
+      "description": "If you are a puzzle solver looking for practice solving interesting puzzles, or a cache owner looking for a new twist on a puzzle cache.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3811921.jpg?t=1613372832"
+    },
+    {
+      "title": "Smashingcaching",
+      "feed_url": "https://smashingcaching.com/feed/",
+      "website_url": "https://smashingcaching.com/",
+      "description": "This is the official blog page for two Hertfordshire Goocachers. The blog's aim is to record our geocaching adventures. If you don't know what Geocaching is, you are seriously missing out! Keep up to date on our blog and join us on a global treasure hunt.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773620.jpg?t=1613124351"
+    },
+    {
+      "title": "The Muminator",
+      "feed_url": "http://themuminator.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://themuminator.blogspot.com/",
+      "description": "Krista is from Surrey in the UK and maintains an enjoyable and funny blog called The Muminator and the geocaching adventures of her family will always have you giggling. At times in the past she admits to letting her caching obsession get the better of her and confesses that it has come very close to being grounds for divorce on at least one occasion.",
+      "followers": {
+        "twitter": 764
+      },
+      "image_url": "https://i1.feedspot.com/4773257.jpg?t=1608722726"
+    },
+    {
+      "title": "Delta68's Geocaching Blog",
+      "feed_url": "http://delta68.blogspot.com/feeds/posts/default",
+      "website_url": "http://delta68.blogspot.com/",
+      "description": "Mark and Donna are from Warickshire in the UK and cache under the name Delta68. Their blog is a fantastic collection of stories about their geocaching adventures. They have over 17,000 finds, are currently the top cachers in the UK for webcams, have attended every piratemania event and every uk mega event since 2008, one of only a handful of people to do this.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1136689.jpg?t=1608722551"
+    },
+    {
+      "title": "Live Laugh Love",
+      "feed_url": "https://paisleykmt.wordpress.com/feed/",
+      "website_url": "https://paisleykmt.wordpress.com/",
+      "description": "K who caches as Paisleykmt, hails from Washington in the USA. She lists amongst her loves Steam Punk, camping with her boyfirend in their VW Vannagon, 007, dirty martinis and, of course, geocaching. She details the camping and geocaching adventures on her blog in an interesting and engaging way.",
+      "followers": {
+        "twitter": 148
+      },
+      "image_url": "https://i1.feedspot.com/4773244.jpg?t=1608722475"
+    },
+    {
+      "title": "GPS Tracklog",
+      "feed_url": "https://gpstracklog.com/feed",
+      "website_url": "https://gpstracklog.com/",
+      "description": "GPS Tracklog offers GPS reviews, news, tips, tricks and deals. We cover the auto, handheld and other segments of the industry, and offer regular hands on reviews of products by Garmin, TomTom, Magellan, DeLorme and others. Our Mission is to give you all the information you need to have fun and be productive with GPS.",
+      "followers": {
+        "facebook": 568,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4772978.jpg?t=1608722442"
+    },
+    {
+      "title": "Its Not About The Numbers",
+      "feed_url": "https://www.notaboutthenumbers.com/feed/",
+      "website_url": "https://www.notaboutthenumbers.com/",
+      "description": "New Zealand Geocacher and ranting blogger on It's Not About The Numbers. Check out the latest geo-news, product reviews and opinion pieces. Most hail from the United States, New Zealand, Australia and, more recently, Portugal with representatives from Groundspeak, Geocaching Australia and Garmin regularly logging in.",
+      "followers": {
+        "twitter": 288
+      },
+      "image_url": "https://i1.feedspot.com/2049665.jpg?t=1608722435"
+    },
+    {
+      "title": "Wizzard Prang The fine art of geocaching and other ramblings",
+      "feed_url": "https://wizzardprang.wordpress.com/feed/",
+      "website_url": "https://wizzardprang.wordpress.com/",
+      "description": "This Blog is a mishmash of my geocaching adventures, some technical babble, plus the occasional whinge. Consider yourself suitably warned. Blog by Steve.",
+      "followers": {
+        "twitter": 149
+      },
+      "image_url": "https://i1.feedspot.com/4773639.jpg?t=1608722091"
+    },
+    {
+      "title": "Life as a Geocacher",
+      "feed_url": "http://firennice.squarespace.com/journal?format=rss",
+      "website_url": "http://firennice.squarespace.com/",
+      "description": "Geocaching blogger Dick Nielson, Scouter, tech junkie and reviewer from Utah. Find Stories about Geocaching and Reviewing.",
+      "followers": {
+        "twitter": 150
+      },
+      "image_url": "https://i1.feedspot.com/4303171.jpg?t=1608722095"
+    },
+    {
+      "title": "Washknight",
+      "feed_url": "https://washknight.wordpress.com/feed/",
+      "website_url": "https://washknight.wordpress.com/",
+      "description": "I love techie things and geocaching and red wine. Oh yeah and I am blind. I usually talk about Geocaching, tech, life, blindness and assorted witterings on my blog",
+      "followers": {
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/4773058.jpg?t=1608722415"
+    },
+    {
+      "title": "LAGEEK Goes Geocaching",
+      "feed_url": "https://lageekgoesgeocaching.wordpress.com/feed/",
+      "website_url": "https://lageekgoesgeocaching.wordpress.com/",
+      "description": "Lageek lives in Texas USA, where her day job as a middle school teacher keeps her extremely busy. Outside of work she loves to walk and geocache and her blog is a rich collection of well written accounts of her adventures.",
+      "followers": {
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/4773236.jpg?t=1608722101"
+    },
+    {
+      "title": "Blazerfan's geocaching adventures",
+      "feed_url": "http://blazerfan.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://blazerfan.blogspot.com/",
+      "description": "Jason Breedlove's notes and thoughts on geocaching.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773650.jpg"
+    },
+    {
+      "title": "Dweeb's Diatribe",
+      "feed_url": "https://oldweeb.wordpress.com/feed/",
+      "website_url": "https://oldweeb.wordpress.com/",
+      "description": "OLdweeb lives and caches in the San Fernado Valley California USA and has been maintaining his blog for well over 7 years. His adventures are interesting, pithy and annotated with some truly breathtaking photographs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773118.jpg?t=1608722339"
+    },
+    {
+      "title": "Geocaching Journal",
+      "feed_url": "https://barbsview.wordpress.com/feed/",
+      "website_url": "https://barbsview.wordpress.com/",
+      "description": "Barbara has been caching under the name StarSpotter since 2010. She lives in Somerset in the UK and loves caching with family and her trusty GeoHound Tara, who has an unfortunate aversion to mud. The articles on her blog are both interesting and well written and are accompanied by a good selection of photographs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773217.jpg?t=1608722284"
+    },
+    {
+      "title": "Fun-gal caching",
+      "feed_url": "http://fun-gal-caching.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://fun-gal-caching.blogspot.com/",
+      "description": "This blog documents interesting things I come across whilst out and about, mainly caches, landmarks and fungi. It also features my musings of all things geocaching. My outdoor pursuits include geocaching, orienteering, waymarking and trigpointing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773109.jpg?t=1608722256"
+    },
+    {
+      "title": "My Geocaching Adventures",
+      "feed_url": "http://kelsgeojournal.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://kelsgeojournal.blogspot.com/",
+      "description": "A blog about the adventures I have whilst finding geocaches. Don't worry, there are no spoilers as I wouldn't want to ruin the fun for anyone else. I go by the cacher name Miss Chief and I've been geocaching since 18th May 2014.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4773075.jpg?t=1613124094"
+    },
+    {
+      "title": "UK Geocaching Blog",
+      "feed_url": "http://geocaching.co.uk/category/blog/feed/",
+      "website_url": "http://geocaching.co.uk/category/blog/",
+      "description": "Lee, who caches as FireStars, hails from Cambridgeshire in the UK and with over 1700 finds has plenty of stories to tell. He is also in the very enviable position of owning geocaching.co.uk where he hosts his blogs, videos and useful geocaching info.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4773636.jpg?t=1608721974"
+    },
+    {
+      "title": "GeoSnippits Reboot Podcast : Geocaching Insights",
+      "feed_url": "https://geosnippitsreboot.com/feed/",
+      "website_url": "https://geosnippitsreboot.com/",
+      "description": "The GeoSnippits Reboot Podcast is a tutorial show designed to educate and entertain geocachers of all experience levels. Giving advice and insights about our game, sport and obsession in ways only they can provide.",
+      "followers": {
+        "facebook": 108,
+        "twitter": 108
+      },
+      "image_url": "https://i1.feedspot.com/4773755.jpg?t=1608722460"
+    },
+    {
+      "title": "The Coastal Path",
+      "feed_url": "https://www.thecoastalpath.net/feed/",
+      "website_url": "https://www.thecoastalpath.net/",
+      "description": "One family's walk around the coast of Britain.",
+      "followers": {
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/4773578.jpg?t=1608722081"
+    }
+  ]
+}

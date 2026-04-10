@@ -1,0 +1,153 @@
+{
+  "category": "CBC",
+  "source_url": "https://rss.feedspot.com/cbc_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBC \u00bb Soccer",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-sports-soccer",
+      "website_url": "https://www.cbc.ca/sports/soccer",
+      "description": "All the latest Soccer News, scores, stats, videos and commentary from CBC Sports.",
+      "followers": {
+        "facebook": 918200,
+        "instagram": 699100
+      },
+      "image_url": "https://i1.feedspot.com/8544173.jpg"
+    },
+    {
+      "title": "CBC \u00bb Olympics",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-sports-olympics",
+      "website_url": "https://www.cbc.ca/sports/olympics",
+      "description": "All the latest news, results, features and video about athletes aiming to be Olympic champions",
+      "followers": {
+        "facebook": 918200,
+        "instagram": 699100
+      },
+      "image_url": "https://i1.feedspot.com/8544174.jpg"
+    },
+    {
+      "title": "CBC News",
+      "feed_url": "https://rss.cbc.ca/lineup/topstories.xml",
+      "website_url": "https://www.cbc.ca/news",
+      "description": "CBC News services keep Canadians at home and abroad informed about their communities, their country, and the world. Top news stories, breaking news, features, and viewpoints from CBC News.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 661900
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb World",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-world",
+      "website_url": "https://www.cbc.ca/news/world",
+      "description": "The latest world news and updates on CBC News.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000
+      },
+      "image_url": "https://i1.feedspot.com/3927353.jpg?t=1616762824"
+    },
+    {
+      "title": "CBC \u00bb Canada",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-canada",
+      "website_url": "https://www.cbc.ca/news/canada",
+      "description": "Get the latest news and updates from across Canada on CBC News.",
+      "followers": {
+        "facebook": 918200,
+        "twitter": 758600
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb Politics",
+      "feed_url": "https://rss.cbc.ca/lineup/politics.xml",
+      "website_url": "https://www.cbc.ca/news/politics",
+      "description": "Get the latest Canadian political news and updates from CBC News.",
+      "followers": {
+        "facebook": 918200,
+        "twitter": 758600
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb Business",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-business",
+      "website_url": "https://www.cbc.ca/news/business",
+      "description": "The latest business and financial news, stock quotes, personal finance, and more from CBC News.",
+      "followers": {
+        "facebook": 918200,
+        "twitter": 758600
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb Health",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-health",
+      "website_url": "https://www.cbc.ca/news/health",
+      "description": "The latest health news and information for you and your family on CBC News.",
+      "followers": {
+        "facebook": 918200,
+        "twitter": 758600
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb Technology & Science",
+      "feed_url": "https://rss.cbc.ca/lineup/technology.xml",
+      "website_url": "https://www.cbc.ca/news/science",
+      "description": "The latest technology news, gadgets, science news, and more.",
+      "followers": {
+        "facebook": 918200,
+        "twitter": 758600
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb Indigenous",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-Indigenous",
+      "website_url": "https://www.cbc.ca/news/indigenous",
+      "description": "The latest news and current affairs from Indigenous communities across Canada from CBC.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 661900
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb Arts",
+      "feed_url": "https://www.cbc.ca/arts",
+      "website_url": "https://www.cbc.ca/arts",
+      "description": "The best arts-related stories from across the CBC network and beyond.",
+      "followers": {
+        "facebook": 179800,
+        "twitter": 13700,
+        "instagram": 60700
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb Sports",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-sports",
+      "website_url": "https://www.cbc.ca/sports",
+      "description": "Get the latest headlines, opinions, and videos from CBC Sports about NHL hockey, CFL and NHL football, MLB baseball, NBA basketball, curling, skiing, figure skating, and Hockey Night in Canada.",
+      "followers": {
+        "facebook": 380200,
+        "twitter": 195200,
+        "instagram": 86500
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "CBC \u00bb Entertainment",
+      "feed_url": "https://www.cbc.ca/webfeed/rss/rss-arts",
+      "website_url": "https://www.cbc.ca/news/entertainment",
+      "description": "The latest arts & entertainment news and reviews from CBC.",
+      "followers": {
+        "facebook": 918200,
+        "twitter": 758600
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    }
+  ]
+}

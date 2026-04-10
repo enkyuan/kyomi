@@ -1,0 +1,29 @@
+{
+  "category": "Albany News",
+  "source_url": "https://rss.feedspot.com/albany_oregon_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KOIN 6 News \u00bb Albany",
+      "feed_url": "https://www.koin.com/search/albany/feed/rss2",
+      "website_url": "https://www.koin.com/?s=albany&submit=Search",
+      "description": "Reporting Portland and Vancouver area news and weather stories to make Oregon and Southwest Washington a better place to live.",
+      "followers": {
+        "facebook": 220700,
+        "twitter": 148600,
+        "instagram": 36000
+      },
+      "image_url": "https://i1.feedspot.com/5155356.jpg?t=1626429853"
+    },
+    {
+      "title": "Albany Democrat-Herald",
+      "feed_url": "https://democratherald.com/",
+      "website_url": "https://democratherald.com/",
+      "description": "Your source for news in Albany, Oregon.",
+      "followers": {
+        "facebook": 25600,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5155352.jpg?t=1626429808"
+    }
+  ]
+}

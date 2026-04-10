@@ -1,0 +1,687 @@
+{
+  "category": "Workplace",
+  "source_url": "https://rss.feedspot.com/workplace_rss_feeds",
+  "feeds": [
+    {
+      "title": "Workplace Insight",
+      "feed_url": "https://workplaceinsight.net/feed/",
+      "website_url": "https://workplaceinsight.net/latest-news/",
+      "description": "Workplace Insight is the UK's most widely read publication dedicated to the design and management of workplaces, offering a definitive source of daily ideas, comment, news and information. It publishes a weekly newsletter and has a readership of up to 8,000 unique users a day including workplace professionals, suppliers, purchasing, HR, IT and facilities managers and specifiers including fit-out firms, architects and designers.",
+      "followers": {
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4733020.jpg?t=1623043408"
+    },
+    {
+      "title": "Ask a Manager Blog",
+      "feed_url": "https://www.askamanager.org/feed",
+      "website_url": "https://www.askamanager.org/category/workplace-practices",
+      "description": "Covers articles on resume, cover letters, freelancing, interviewing , hiring, internships, networking, phone interview, salary, rejections, resigning, advice about your boss and coworkers, being the boss workplace practices and more. Alison Green is a creator of Ask a Manager was the chief of staff for a successful nonprofit, where she was responsible for hiring, firing, promoting, managing and all of that.",
+      "followers": {
+        "facebook": 53500,
+        "twitter": 96200
+      },
+      "image_url": "https://i1.feedspot.com/307960.jpg?t=1608011795"
+    },
+    {
+      "title": "Great Place to Work Blog",
+      "feed_url": "https://www.greatplacetowork.com/resources/blog?format=feed",
+      "website_url": "https://www.greatplacetowork.com/resources/blog",
+      "description": "Great Place to Work is dedicated to helping organizations understand and practice the qualities and behaviors that lead to the creation of great workplaces. This effort leads to enhanced quality of work life for employees and improved financial performance for the organization.",
+      "followers": {
+        "facebook": 35800,
+        "twitter": 16300,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4732916.jpg?t=1608011807"
+    },
+    {
+      "title": "iOffice Blog",
+      "feed_url": "https://eptura.com/feed/",
+      "website_url": "https://eptura.com/discover-more/blog/",
+      "description": "iOffice offers the latest news and tips relating to IWMS and Facility Management Software. Read articles on the smart workplace, executive insights, IWMS stories, and social media.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4886666.jpg?t=1608011816"
+    },
+    {
+      "title": "Inclusivv Blog",
+      "feed_url": "https://www.inclusivv.co/blog/rss.xml",
+      "website_url": "https://www.inclusivv.co/blog/tag/workplace",
+      "description": "Inclusivv brings people together for conversations that matter. See how Inclusivv can help your organization build belonging and inclusion, and create lasting change. Featured articles on Allyship in Workspalces, Bias, Leadership support, and more.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5657249.jpg?t=1692961107"
+    },
+    {
+      "title": "Rescue Time",
+      "feed_url": "https://blog.rescuetime.com/feed/",
+      "website_url": "https://blog.rescuetime.com/",
+      "description": "Rescue Time Blog Helps you stay happy and productive in the modern workplace",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 9800,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/38631.jpg?t=1608011835"
+    },
+    {
+      "title": "Condeco Software",
+      "feed_url": "https://www.condecosoftware.com/feed/",
+      "website_url": "https://www.condecosoftware.com/",
+      "description": "Condeco is the leading provider of integrated meeting room booking software, desk booking software and space utilisation technologies. Pioneering market leader in scalable meeting room scheduling and workspace reservation solutions, helping the biggest brands get more out of their space.",
+      "followers": {
+        "facebook": 506,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5170800.jpg?t=1608013538"
+    },
+    {
+      "title": "EVERFI \u00bb Workplace Culture",
+      "feed_url": "https://everfi.com/feed/",
+      "website_url": "https://everfi.com/workplace-compliance-training/resources/",
+      "description": "EVERFI, Inc. is the leading education technology company that provides learners of all ages education for the real world, through innovative and scalable digital learning. Check out all the quality Workplace Training resources here.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4733061.jpg?t=1612879252"
+    },
+    {
+      "title": "Hppy",
+      "feed_url": "https://gethppy.com/feed",
+      "website_url": "https://gethppy.com/",
+      "description": "Hppy is an employee engagement insights platform, providing leaders and HR managers information, data and ideas for creating better workplaces. We provide content and services that support leaders be more efficient in designing, implementing and understanding employee engagement strategies.",
+      "followers": {
+        "facebook": 992,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4733533.jpg?t=1608011859"
+    },
+    {
+      "title": "Energage",
+      "feed_url": "https://www.energage.com/feed/",
+      "website_url": "https://www.energage.com/energage-resources/",
+      "description": "Energage's employee engagement platform combines HR technology, reliable insights, and expert guidance to transform your workplace. We are on a mission to make the world a better place, we need to build a better workplace.",
+      "followers": {
+        "facebook": 599,
+        "twitter": 727
+      },
+      "image_url": "https://i1.feedspot.com/4733026.jpg?t=1608013875"
+    },
+    {
+      "title": "WellSteps Blog",
+      "feed_url": "https://www.wellsteps.com/blog/feed/",
+      "website_url": "https://www.wellsteps.com/blog/",
+      "description": "WellSteps is a leading provider of evidence-based, employee wellness solutions. Get employee wellness program ideas from the WellSteps worksite wellness experts.",
+      "followers": {
+        "facebook": 768,
+        "twitter": 373
+      },
+      "image_url": "https://i1.feedspot.com/4733034.jpg?t=1608011871"
+    },
+    {
+      "title": "Appreciation at Work Blog",
+      "feed_url": "https://www.appreciationatwork.com/blog/feed/",
+      "website_url": "https://www.appreciationatwork.com/blog/",
+      "description": "Blog helps teams improve performance by supporting and encouraging team members to truly feel valued. Key topics covered are Languages of Appreciation in the Workplace, Vibrant Workplace, Workplace Culture, Employee engagement, Leadership, and Remote Employees.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 256
+      },
+      "image_url": "https://i1.feedspot.com/5313184.jpg?t=1629283684"
+    },
+    {
+      "title": "The Chief Happiness Officer Blog",
+      "feed_url": "https://positivesharing.com/feed/",
+      "website_url": "https://positivesharing.com/",
+      "description": "Alexander is the founder and Chief Happiness Officer of Woohoo inc and one of the world's leading experts on happiness at work. He is an author and speaker, presenting and conducting workshops on happiness at work at businesses and conferences in over 30 countries.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4732974.jpg?t=1608012857"
+    },
+    {
+      "title": "Creativity at Work Blog",
+      "feed_url": "https://www.creativityatwork.com/feed/",
+      "website_url": "https://www.creativityatwork.com/blog/",
+      "description": "We help organizations develop the creativity, innovation and leadership capabilities required to adapt to change, stay competitive, improve business performance and make a positive difference in the world.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4732854.jpg?t=1608012520"
+    },
+    {
+      "title": "Work.Life Blog",
+      "feed_url": "https://work.life/feed/",
+      "website_url": "https://work.life/blog/",
+      "description": "The modern workspace blog with business advice, work wellbeing tips and office design ideas. Work.Life provides flexible workspace solutions for every business, including private office space for startups, hot-desking, and part-time office options.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 5500,
+        "instagram": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5295451.jpg?t=1645448525"
+    },
+    {
+      "title": "Humor at Work Blog",
+      "feed_url": "https://mikekerr.com/category/humour-at-work-blog/feed/",
+      "website_url": "https://mikekerr.com/category/humour-at-work-blog/",
+      "description": "Humor at Work offers practical, relevant ideas and inspiration to help your organization succeed. Humor at Work is all about the way work OUGHT to be! We're about creating inspiring workplace cultures that drive success in any organization.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4733569.jpg?t=1608012840"
+    },
+    {
+      "title": "Minding the Workplace",
+      "feed_url": "https://newworkplace.wordpress.com/feed/",
+      "website_url": "https://newworkplace.wordpress.com/",
+      "description": "Minding the Workplace, hosted and written by David Yamada, is dedicated to news and commentary about work and employment relations. Dignity at work, workplace bullying, employment & labor law, and psychologically healthy work environments are its recurring themes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4329468.jpg?t=1608012897"
+    },
+    {
+      "title": "IO at Work",
+      "feed_url": "http://www.ioatwork.com/feed/",
+      "website_url": "http://www.ioatwork.com/",
+      "description": "Many consider Industrial/Organizational Psychology as the science behind Human Resources, Organizational Development, Organizational Effectiveness, and Organizational Behavior. Our site also helps researchers stay on top of the latest research that falls outside their primary areas of interest. I/O at Work also provides a way for researchers to get their work out to a broader audience.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/7087.jpg?t=1608012902"
+    },
+    {
+      "title": "Lindsey Pollak's Blog",
+      "feed_url": "https://lindseypollak.com/feed/",
+      "website_url": "https://lindseypollak.com/blog/",
+      "description": "Millennial and Multigenerational Workplace Expert Lindsey Pollak's blog covers the future of work topics such as navigating generational differences at work, leadership, and career advice. Lindsey Pollak is the leading expert on the millennial generation and today's multigenerational workplace. Often called a 'translator,' she advises both young professionals looking to succeed in today's work environment and the organizations that want to recruit, retain and engage them.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 39900
+      },
+      "image_url": "https://i1.feedspot.com/5313183.jpg?t=1629284424"
+    },
+    {
+      "title": "Liz Kislik - Workplace Wisdom",
+      "feed_url": "https://lizkislik.com/feed/",
+      "website_url": "https://lizkislik.com/workplace-wisdom/",
+      "description": "Liz has a vision of pragmatic collaboration: people getting things done together in a real and humane way. Her goal is for people to do better and feel better at work so they and their organizations can accomplish more.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4733070.jpg?t=1608012920"
+    },
+    {
+      "title": "Workplace Unlimited",
+      "feed_url": "http://workplaceunlimited.blogspot.com/feeds/posts/default",
+      "website_url": "http://workplaceunlimited.blogspot.com/",
+      "description": "Blogging on workplace strategy and design, environmental psychology, and building evaluation.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/3398261.jpg?t=1608013623"
+    },
+    {
+      "title": "Today's Workplace Blog",
+      "feed_url": "https://feeds.feedburner.com/todaysworkplace",
+      "website_url": "https://www.workplacefairness.org/blog/",
+      "description": "Today's Workplace is your source for the latest developments in workplace rights and employment law. It is written by Paula Brantner, Executive Director of Workplace Fairness. In each entry, Paula focuses on legal and political information relevant to employee rights and fairness issues in the workplace.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/946633.jpg?t=1608013182"
+    },
+    {
+      "title": "Seramount",
+      "feed_url": "https://seramount.com/feed/",
+      "website_url": "https://seramount.com/all-research/",
+      "description": "Covers work-life balance tips and advice that help moms blend a career with family time. Working Mother is a national magazine committed to helping moms balance their personal and professional lives. A dedicated champion of culture change,",
+      "followers": {
+        "facebook": 323100,
+        "twitter": 163500,
+        "instagram": 58300
+      },
+      "image_url": "https://i1.feedspot.com/293355.jpg?t=1608613580"
+    },
+    {
+      "title": "SafetyAtWorkBlog",
+      "feed_url": "https://safetyatworkblog.com/feed/",
+      "website_url": "https://safetyatworkblog.com/",
+      "description": "Safety At Work Blog contains award-winning news, commentary, and opinion on workplace health and safety. Follow to get regular updates from this blog in your inbox.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4733067.jpg?t=1608618788"
+    },
+    {
+      "title": "WorkSMART",
+      "feed_url": "http://blog.trainerswarehouse.com/feed",
+      "website_url": "https://blog.trainerswarehouse.com/",
+      "description": "WorkSMART provides tips for a happier, more engaged workplace. We deliver innovative, playful tools and ideas to facilitators of learning seeking to enliven the learning process.",
+      "followers": {
+        "facebook": 471,
+        "twitter": 646
+      },
+      "image_url": "https://i1.feedspot.com/4733637.jpg?t=1608012526"
+    },
+    {
+      "title": "Quantum Workplace \u00bb Future of Work",
+      "feed_url": "https://www.quantumworkplace.com/future-of-work/rss.xml",
+      "website_url": "https://www.quantumworkplace.com/future-of-work",
+      "description": "Quantum workplace is your go-to source for trending workplace topics. Improve your workplace dynamics with data and advice on employee engagement, leadership, culture, and more. Quantum Workplace is a human resources technology provider that equips workplaces with the smartest talent solutions so that they can grow and succeed.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4733543.jpg?t=1608011852"
+    },
+    {
+      "title": "Legacy Business Cultures Blog",
+      "feed_url": "https://legacycultures.com/feed/",
+      "website_url": "https://legacycultures.com/blog/",
+      "description": "Legacy Business Cultures has studied and worked with a variety of organizational cultures from around the world. Through our cultural surveys, training, coaching and speaking, we've helped more than a quarter million leaders and employees create more respectful and engaged workplaces.",
+      "followers": {
+        "facebook": 527,
+        "twitter": 725
+      },
+      "image_url": "https://i1.feedspot.com/4733046.jpg"
+    },
+    {
+      "title": "Clariti Blog: What's On Our Minds",
+      "feed_url": "https://clariti.app/feed/",
+      "website_url": "https://clariti.app/category/workplace/",
+      "description": "Clariti is a business communication app that brings all your communication together. It connects chat & email so you are always communicating in context. If there's anything on our minds, this is where you will hear it. Some of it useful. Mostly banter. But always interesting.",
+      "followers": {
+        "facebook": 548,
+        "twitter": 1500,
+        "instagram": 878
+      },
+      "image_url": "https://i1.feedspot.com/4974510.jpg?t=1608013016"
+    },
+    {
+      "title": "Posture People Blog",
+      "feed_url": "https://posturepeople.co.uk/feed/",
+      "website_url": "https://posturepeople.co.uk/blog/",
+      "description": "Posture People was founded in 2002. Since then we've helped countless companies and individuals provide happier, healthier, and more productive environments. The Posture People blog is written by ergonomics experts. Find out more about workplace wellbeing, office design, and health & safety news",
+      "followers": {
+        "facebook": 455,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5259909.jpg?t=1616393456"
+    },
+    {
+      "title": "Full Focus Blog",
+      "feed_url": "https://fullfocus.co/feed/",
+      "website_url": "https://fullfocus.co/blog/",
+      "description": "Hi. I'm Michael Hyatt. I am a Virtual Mentor. I help high achievers people just like you get the clarity, confidence, and tools you need to win at work and succeed in life.",
+      "followers": {
+        "facebook": 346500,
+        "twitter": 255000,
+        "instagram": 110500
+      },
+      "image_url": "https://i1.feedspot.com/4506830.jpg?t=1670916975"
+    },
+    {
+      "title": "Work Awesome",
+      "feed_url": "https://feeds.feedburner.com/Workawesome",
+      "website_url": "http://workawesome.com/",
+      "description": "Work Awesome provides life hacks and tips and on how to be productive at work.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 13300
+      },
+      "image_url": "https://i1.feedspot.com/38032.jpg?t=1608011812"
+    },
+    {
+      "title": "WorkStatus Blog",
+      "feed_url": "https://www.workstatus.io/blog/feed/",
+      "website_url": "https://www.workstatus.io/blog/",
+      "description": "WorkStatus is an easy time tracking & productivity management software that makes your team more productive and allows you to track every second with screenshots, web usage, payroll, timesheets, billing & powerful reports.",
+      "followers": {
+        "facebook": 747,
+        "twitter": 2400,
+        "instagram": 526
+      },
+      "image_url": "https://i1.feedspot.com/5402294.jpg?t=1652955978"
+    },
+    {
+      "title": "Work From Home Happiness",
+      "feed_url": "https://workfromhomehappiness.com/feed/",
+      "website_url": "https://workfromhomehappiness.com/my-blog-page/",
+      "description": "This is Ashlee Anderson, friend to freelancer, solopreneur, and out-of-the-cube thinker. I provide legitimate work from home jobs, company reviews, advice and actionable ideas to start making money online. Get my weekly roundup of remote job leads and time management tips so you can thrive personally and professionally while working remotely.",
+      "followers": {
+        "facebook": 100900,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4733658.jpg?t=1640778342"
+    },
+    {
+      "title": "WorkExcel: Latest News Blog",
+      "feed_url": "https://workexcel.com/rss.php?action=newblogs&type=rss",
+      "website_url": "https://www.workexcel.com/employee-assistance-program-eap-blog/",
+      "description": "Thousands of employers use WorkExcel.com to educate employees, train supervisors, reduce risk, enhance workplace wellness tips, and have more effective Employee Assistance Programs (EAPs) and for alcohol/drug training.",
+      "followers": {
+        "facebook": 118,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4787542.jpg?t=1608011863"
+    },
+    {
+      "title": "The Productivity Pro Blog",
+      "feed_url": "http://theproductivitypro.com/blog/feed/",
+      "website_url": "https://theproductivitypro.com/blog/",
+      "description": "The Productivity Pro is written by Laura Stack, a productivity expert who provides training and keynotes on office productivity, personal productivity and time management.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 26500
+      },
+      "image_url": "https://i1.feedspot.com/4732997.jpg?t=1608012876"
+    },
+    {
+      "title": "Alexandra Levit's Water Cooler Wisdom",
+      "feed_url": "https://feeds.feedburner.com/WaterCoolerWisdom",
+      "website_url": "https://blog.alexandralevit.com/",
+      "description": "Alexandra Levit's Water Cooler Wisdom provides up-to-the-minute career advice from one who survived the trenches, helping people and organizations succeed in the evolving workplace.",
+      "followers": {
+        "twitter": 112300
+      },
+      "image_url": "https://i1.feedspot.com/2066196.jpg?t=1608013239"
+    },
+    {
+      "title": "Workplace Diva",
+      "feed_url": "http://www.workplacedivablog.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.workplacedivablog.com/",
+      "description": "Workplace Diva is a quirky little workplace blog about employment and career trends, office life, crazy co-workers, and doughnuts.",
+      "followers": {
+        "twitter": 709
+      },
+      "image_url": "https://i1.feedspot.com/4733022.jpg?t=1608013891"
+    },
+    {
+      "title": "Whither Work",
+      "feed_url": "https://whitherwork.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://whitherwork.blogspot.com/",
+      "description": "Whither Work contains thoughts about work and work-related topics. It is written by John Budd, Work & Organizations professor at the University of Minnesota's Carlson School of Mgmt.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4732937.jpg?t=1608012908"
+    },
+    {
+      "title": "Modern Workplace Learning Magazine",
+      "feed_url": "http://modernworkplacelearning.com/magazine/feed/",
+      "website_url": "http://modernworkplacelearning.com/magazine/articles/",
+      "description": "Modern Workplace Learning Magazine is a new online publication that focuses on helping L&D departments do things differently and do different things in order to provide an effective service for today's workforce. The articles will build a body of knowledge, experience and know-how for enabling and supporting learning in the modern workplace.",
+      "followers": {
+        "twitter": 381
+      },
+      "image_url": "https://i1.feedspot.com/4733484.jpg?t=1608012937"
+    },
+    {
+      "title": "Work Life Blog",
+      "feed_url": "https://worklife-blog.org/feed/",
+      "website_url": "https://worklife-blog.org/",
+      "description": "Welcome to Work-Life, a blog about the relationship between work and health and well-being of people, whether they are preparing for working life, managing their work/life balance or preparing for retirement and life beyond retirement.",
+      "followers": {
+        "twitter": 736
+      },
+      "image_url": "https://i1.feedspot.com/4732957.jpg?t=1608012952"
+    },
+    {
+      "title": "Ework",
+      "feed_url": "https://e-work.com/e-blog/feed/",
+      "website_url": "https://e-work.com/e-blog/",
+      "description": "Ework is an industry-leading training provider, delivering highly interactive, e-learning courses with global best practices for new ways of working and the ever evolving workplace. It provides workplace solutions for mobile work, agile work, flexible work, open office, telework, remote work, distributed teams, ergonomics, and health and wellness.",
+      "followers": {
+        "facebook": 261
+      },
+      "image_url": "https://i1.feedspot.com/4733678.jpg?t=1608012961"
+    },
+    {
+      "title": "The Islamic Workplace",
+      "feed_url": "https://theislamicworkplace.com/feed/",
+      "website_url": "https://theislamicworkplace.com/",
+      "description": "The Islamic Workplace enables Muslims and Non-Muslims to work more effectively and harmoniously together.",
+      "followers": {
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/4733474.jpg?t=1608012976"
+    },
+    {
+      "title": "Rebels at Work",
+      "feed_url": "https://www.rebelsatwork.com/blog?format=RSS",
+      "website_url": "https://www.rebelsatwork.com/blog/",
+      "description": "Rebels at Work is a movement for empowering every day people to challenge the status quo and stand up for positive change at work.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4732910.jpg?t=1608012981"
+    },
+    {
+      "title": "When the Abuser Goes to Work",
+      "feed_url": "https://www.abusergoestowork.com/feed/",
+      "website_url": "https://www.abusergoestowork.com/",
+      "description": "When the Abuser Goes to Work is an employment law blog about workplace bullying, discrimination and abuse",
+      "followers": {
+        "twitter": 398
+      },
+      "image_url": "https://i1.feedspot.com/4733065.jpg"
+    },
+    {
+      "title": "Inside Workplace Wellness",
+      "feed_url": "https://feeds.feedburner.com/InsideWorkplaceWellness",
+      "website_url": "http://www.insideworkplacewellness.com/",
+      "description": "Inside Workplace Wellness is a blog about health and wellness in the workplace that focuses on how employers can ease the path to a healthy lifestyle for their employees.",
+      "followers": {
+        "facebook": 156,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1662907.jpg?t=1608013010"
+    },
+    {
+      "title": "Brainybirdz",
+      "feed_url": "https://brainybirdz.net/feed/",
+      "website_url": "https://brainybirdz.net/blog/",
+      "description": "We are workplace scientists, specialising in the understanding of the interplay between spatial design and organisational behaviour in working environments. We are particularly interested in how office space affects 'Zusammenarbeit' that is, how people work together.",
+      "followers": {
+        "twitter": 619
+      },
+      "image_url": "https://i1.feedspot.com/4733505.jpg?t=1608013029"
+    },
+    {
+      "title": "Observations From the Nut House",
+      "feed_url": "https://www.observationsfromthenuthouse.com/feeds/posts/default",
+      "website_url": "https://www.observationsfromthenuthouse.com/",
+      "description": "A truthful, humorous workplace blog about my temp job that became permanent. The crazy things and people I encountered are insane and totally true.",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5127284.jpg?t=1608013926"
+    },
+    {
+      "title": "Nancy OKeefe Consulting",
+      "feed_url": "https://nancyokeefeconsulting.com/feed/",
+      "website_url": "https://nancyokeefeconsulting.com/",
+      "description": "When Nancy OKeefe was 38, she became a widow with two children and limited skills. She made it her mission to find a career at a time when career women were met with a lot of resistance. As a speaker and workplace expert, Nancy helps companies understand how to cultivate their existing talent and grow their organization into a productive and profitable business where people are excited to work.",
+      "followers": {
+        "twitter": 62
+      },
+      "image_url": "https://i1.feedspot.com/5144964.jpg?t=1608013481"
+    },
+    {
+      "title": "Conversations at Work",
+      "feed_url": "https://conversationsatwork.com/feed/",
+      "website_url": "https://conversationsatwork.com/",
+      "description": "Conversations At Work helps HR Managers to guide managers and employees be more communicative & work to improve performance & productivity in organizations.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5026978.jpg?t=1608013758"
+    },
+    {
+      "title": "The Work Sucks Blog",
+      "feed_url": "https://worksucks.com/feed/",
+      "website_url": "https://worksucks.com/",
+      "description": "Join the Revolution! Ramblings about work, freelancing and business shenanigans. A place to share your work stories and get fired up to Make You Great Again.",
+      "followers": {
+        "facebook": 530,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/4770958.jpg?t=1608013505"
+    },
+    {
+      "title": "FREE EMPLOYEE NEWSLETTER ARTICLES AND COMPANY NEWSLETTER TOPICS",
+      "feed_url": "http://feeds.feedburner.com/Employeework-life-producivityNewsletterPowerTips",
+      "website_url": "https://workplacenewsletters.blogspot.com/",
+      "description": "Free articles, topics, and tips for creating workplace wellness newsletters for internal communication effectiveness among small and medium size companies!",
+      "followers": {
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/5000876.jpg?t=1608013587"
+    },
+    {
+      "title": "The Marlin Company Blog",
+      "feed_url": "https://www.themarlincompany.com/category/blog-articles/feed/",
+      "website_url": "https://www.themarlincompany.com/category/blog-articles/",
+      "description": "Marlin experts dig deep to identify topics that are relevant to your workers' lives at home and at work, and then pair them with the important answers to workplace issues you want them to retain. Marlin is well known for its research in workplace communications.",
+      "followers": {
+        "facebook": 410,
+        "twitter": 327
+      },
+      "image_url": "https://i1.feedspot.com/4733580.jpg?t=1608011876"
+    },
+    {
+      "title": "wAnywhere Blog",
+      "feed_url": "https://www.wanywhere.com/blogs/",
+      "website_url": "https://www.wanywhere.com/blogs/",
+      "description": "Know all the latest info & tips on productively managing a remote/hybrid team with wAnywhere (employee time monitoring software) blogs. wAnywhere is an AI-powered remote employee monitoring software, helping business maximize productivity and ensure employee wellness.",
+      "followers": {
+        "facebook": 74,
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/5713230.jpg?t=1700128419"
+    },
+    {
+      "title": "FlexJobs Blog",
+      "feed_url": "https://www.flexjobs.com/blog/rss",
+      "website_url": "https://www.flexjobs.com/blog",
+      "description": "1 Million for Work Flexibility is the first national initiative creating a collective voice in support of work flexibility. It covers news, events, and topics related to the benefits of flexible work options for both individuals and companies.",
+      "followers": {
+        "facebook": 22800,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4733674.jpg"
+    },
+    {
+      "title": "WorkPro",
+      "feed_url": "https://www.workpro.com.au/feed",
+      "website_url": "https://www.workpro.com.au/resources/blog",
+      "description": "WorkPro was born out of a need to address employee compliance. WorkPro recognises that as an employer your objective is to get someone in to work quickly so you can be more productive. So we set about building a web based system, aggregating a range of key employment related requirements in a single system to help alleviate the burden of managing compliance.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 847
+      },
+      "image_url": "https://i1.feedspot.com/4733668.jpg?t=1608011826"
+    },
+    {
+      "title": "Officevibe Blog",
+      "feed_url": "https://officevibe.com/blog/feed",
+      "website_url": "https://workleap.com/blog",
+      "description": "Officevibe provides tips and insights to help you measure and increase employee engagement in your company while making everyone happier, healthier and more productive. Officevibe is an incredibly friendly people-first employee experience platform - the fresh, new way to engage, recognize, align, and enable world-class leaders and teams. Easy to use and super powerful, it creates an environment that encourages genuine conversations, with conditions that inspire a better vibe for all, no matter where you work.",
+      "followers": {
+        "facebook": 41300,
+        "twitter": 48900
+      },
+      "image_url": "https://i1.feedspot.com/4732920.jpg?t=1668671468"
+    },
+    {
+      "title": "Space Matrix Blog",
+      "feed_url": "https://www.spacematrix.com/blog/feed",
+      "website_url": "https://blog.spacematrix.com/",
+      "description": "Space Matrix is a dynamic and agile 21st-century digital enterprise with a major client focus to deliver a profitable, sustainable and future-ready workplace solutions.",
+      "followers": {
+        "facebook": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5049827.jpg?t=1608012826"
+    },
+    {
+      "title": "Emergenetics Blog",
+      "feed_url": "https://www.emergenetics.com/blog/feed/",
+      "website_url": "https://emergenetics.com/blog/",
+      "description": "Key topics covered are employee engagement, learning & development, professional development, self awareness, workplace challenges, inclusion, leadership, organisational development and more. Emergenetics International is a global human capital development company, providing a simpler, easier way to understand people and maximize human performance.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4458603.jpg?t=1608108192"
+    },
+    {
+      "title": "Mentoring Complete Blog",
+      "feed_url": "https://www.get.mentoringcomplete.com/blog/rss.xml",
+      "website_url": "https://www.get.mentoringcomplete.com/blog",
+      "description": "Expand your knowledge of mentoring with the help of researched statistics on latest trends and releases through mentoring blogs. Find out more on mentoring. Mentoring Complete wants be the leader in developing technology that shapes how people experience mentoring relationships and provide accessibility to all workplaces.",
+      "followers": {
+        "twitter": 520
+      },
+      "image_url": "https://i1.feedspot.com/5161860.jpg?t=1608012887"
+    },
+    {
+      "title": "AWA",
+      "feed_url": "https://www.advanced-workplace.com/research-and-insights/",
+      "website_url": "https://www.advanced-workplace.com/research-and-insights/",
+      "description": "Advanced Workplace Associates consist of Workplace consultants who provide agile working, workplace utilisation, optimisation and change management services",
+      "followers": {
+        "facebook": 646,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4733585.jpg?t=1608012872"
+    },
+    {
+      "title": "Work and Place Blog",
+      "feed_url": "https://workandplace.com/feed/",
+      "website_url": "https://workandplace.com/blog/",
+      "description": "Work&Place is a global resource for people like you with a professional interest in the intersection of work with digital, cultural and physical space. Since 2012, it has engaged the world's most progressive workplace thinkers to explore cutting edge ideas about the ever-changing and transdisciplinary nature of work and place.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4733522.jpg?t=1612795064"
+    },
+    {
+      "title": "Future Workplace Blog",
+      "feed_url": "https://futureworkplace.com/feed/",
+      "website_url": "https://futureworkplace.com/blog/",
+      "description": "Future Workplace is an HR advisory and research firm providing insights on the future of learning and working. Our mission is to promote the development of senior HR leaders.",
+      "followers": {
+        "facebook": 453,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5295452.jpg?t=1624368543"
+    },
+    {
+      "title": "Punched Clocks",
+      "feed_url": "https://www.punchedclocks.com/feed/",
+      "website_url": "https://miamiherald.typepad.com/worklifebalancingact/",
+      "description": "Hi. I'm Sarah Landrum. I started Punched Clocks to share my advice on navigating the work world and achieving happiness and success in life and at work.",
+      "followers": {
+        "facebook": 501,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4511482.jpg"
+    },
+    {
+      "title": "The Work/Life Balancing Act | Miami Herald",
+      "feed_url": "https://miamiherald.typepad.com/worklifebalancingact/rss.xml",
+      "website_url": "https://miamiherald.typepad.com/worklifebalancingact/",
+      "description": "Cindy Krischer Goodman is a veteran journalist who writes a nationally distributed newspaper column on work life topics. Through her blog, Cindy aims to help others manage the balance between career success and a fulfilling personal life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/977525.jpg?t=1608012575"
+    }
+  ]
+}

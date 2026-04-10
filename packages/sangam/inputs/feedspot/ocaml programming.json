@@ -1,0 +1,27 @@
+{
+  "category": "OCaml Programming",
+  "source_url": "https://rss.feedspot.com/ocaml_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jane Street",
+      "feed_url": "https://blog.janestreet.com/feed.xml",
+      "website_url": "https://blog.janestreet.com/",
+      "description": "Jane Street is a quantitative trading firm with a unique focus on technology and collaborative problem-solving.",
+      "followers": {
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4956248.jpg?t=1621842883"
+    },
+    {
+      "title": "OCaml Planet",
+      "feed_url": "https://ocaml.org/feed.xml?format=xml",
+      "website_url": "https://ocaml.org/ocaml-planet",
+      "description": "OCaml Planet is a community-driven website, created by and for OCaml developers and those interested in the language. OCaml is a general-purpose industrial-strength programming language with an emphasis on expressiveness and safety.",
+      "followers": {
+        "facebook": 292,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4956237.jpg?t=1621842873"
+    }
+  ]
+}

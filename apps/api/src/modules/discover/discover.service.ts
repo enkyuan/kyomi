@@ -2,6 +2,8 @@ import { and, asc, eq, ilike, inArray, or, sql } from "drizzle-orm";
 import { feedSubscriptions, feeds } from "@cronos/db";
 import type { db } from "@adapters/db/client";
 import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/meili";
+import type { AppLogger } from "@adapters/logger";
+import { AppError } from "@shared/errors/app-error";
 import { resolveRemoteFeed } from "./discover.resolve-remote-feed";
 import type { FeedPreviewDto, FeedSearchResultDto } from "./discover.types";
 
@@ -46,6 +48,7 @@ export async function searchFeeds(
   userId: string,
   rawQuery: string,
   limit = 20,
+  logger?: AppLogger,
 ): Promise<FeedSearchResultDto[]> {
   const query = rawQuery.trim();
   if (!query) {
@@ -71,8 +74,14 @@ export async function searchFeeds(
         ...hit,
         isSubscribed: subscribedIds.has(hit.id),
       }));
-    } catch {
-      // Fall back to Postgres search when the index is unavailable or warming up.
+    } catch (error) {
+      logger?.warn("discover.search.meili_fallback", {
+        userId,
+        query,
+        limit: safeLimit,
+        error: error instanceof Error ? error.message : String(error),
+        errorCode: error instanceof AppError ? error.code : undefined,
+      });
     }
   }
 

@@ -1,0 +1,284 @@
+{
+  "category": "Fake News",
+  "source_url": "https://rss.feedspot.com/fake_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "NewsThump",
+      "feed_url": "https://newsthump.com/feed/",
+      "website_url": "https://newsthump.com/",
+      "description": "NewsThump is one of the UK's fastest growing humour websites providing a daily satirical take on current affairs from around the globe, only without the facts.",
+      "followers": {
+        "facebook": 406000,
+        "twitter": 64800,
+        "instagram": 27300
+      },
+      "image_url": "https://i1.feedspot.com/3339.jpg?t=1618557785"
+    },
+    {
+      "title": "The Babylon Bee",
+      "feed_url": "https://babylonbee.com/feed",
+      "website_url": "https://babylonbee.com/",
+      "description": "Your Trusted Source For Christian News Satire.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 4800000,
+        "instagram": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4414380.jpg?t=1618623670"
+    },
+    {
+      "title": "The Duffel Blog",
+      "feed_url": "https://www.duffelblog.com/feed",
+      "website_url": "https://www.duffelblog.com/",
+      "description": "The Duffel Blog, the American military's most-trusted news source, is updated daily with the latest news from the US military and beyond.",
+      "followers": {
+        "facebook": 297900,
+        "twitter": 48600,
+        "instagram": 87100
+      },
+      "image_url": "https://i1.feedspot.com/2209141.jpg?t=1618557814"
+    },
+    {
+      "title": "The Chaser",
+      "feed_url": "https://chaser.com.au/feed/",
+      "website_url": "https://chaser.com.au/",
+      "description": "Founded in 1999 as an independent satirical newspaper produced out of a spare bedroom. The Chaser team has since gone on to produce Classic comedy in just about every corner of Australian media, including print, online, radio, television and Christmas crackers.",
+      "followers": {
+        "facebook": 392800,
+        "twitter": 275500
+      },
+      "image_url": "https://i1.feedspot.com/4677316.jpg?t=1618557806"
+    },
+    {
+      "title": "Weekly World News",
+      "feed_url": "https://weeklyworldnews.com/feed/",
+      "website_url": "https://weeklyworldnews.com/",
+      "description": "If you care about the future of our world, this is the only place on earth you can learn about UFO activity, classified government cover-ups, Bigfoot movements, Secret science experiments paid for by pharmaceutical companies, Cryptic findings Register online to be part of our world!",
+      "followers": {
+        "facebook": 179900,
+        "twitter": 12800,
+        "instagram": 36800
+      },
+      "image_url": "https://i1.feedspot.com/314864.jpg?t=1618623674"
+    },
+    {
+      "title": "News Biscuit",
+      "feed_url": "https://www.newsbiscuit.com/blog-feed.xml",
+      "website_url": "https://www.newsbiscuit.com/",
+      "description": "NewsBiscuit was launched by John O'Farrell with the noble aims of eradicating global poverty, creating a lasting peace in the Middle East and providing a daily dose of humour to bored people at work.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/1630.jpg?t=1605249361"
+    },
+    {
+      "title": "Adobo Chronicles Blog",
+      "feed_url": "https://adobochronicles.com/feed/",
+      "website_url": "https://adobochronicles.com/",
+      "description": "THE ADOBO CHRONICLES is your source of up-to-date, unbelievable news. Everything you read on this site is based on fact, except for the lies.",
+      "followers": {
+        "facebook": 19700,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4675773.jpg"
+    },
+    {
+      "title": "Gomer Blog",
+      "feed_url": "https://gomerblog.com/feed/",
+      "website_url": "https://gomerblog.com/",
+      "description": "Gomer Blog is dedicated to bringing you funny medical satire news that people want to hear but didn't happen. Features fake stories with medical humor and satire. Earth's finest medical satire news for doctors, nurses, and all healthcare professionals.",
+      "followers": {
+        "facebook": 184000,
+        "twitter": 48400,
+        "instagram": 65600
+      },
+      "image_url": "https://i1.feedspot.com/4676396.jpg?t=1618554973"
+    },
+    {
+      "title": "Empire News",
+      "feed_url": "https://empirenews.net/feed/",
+      "website_url": "https://empirenews.net/",
+      "description": "Empire News is intended for entertainment purposes only. Our website and social media content uses only fictional names, except in cases of public figure and celebrity parody or satirization. Any other use of real names is accidental and coincidental.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 289
+      },
+      "image_url": "https://i1.feedspot.com/4677411.jpg?t=1618557842"
+    },
+    {
+      "title": "GlossyNews.com",
+      "feed_url": "http://glossynews.com/feed/",
+      "website_url": "http://glossynews.com/",
+      "description": "Glossy News is the second longest-running 'fake news' satire site in history!",
+      "followers": {
+        "facebook": 282
+      },
+      "image_url": "https://i1.feedspot.com/1637290.jpg?t=1618558054"
+    },
+    {
+      "title": "Wah Sarkar",
+      "feed_url": "http://www.wahsarkar.com/feed/",
+      "website_url": "https://www.wahsarkar.com/",
+      "description": "Wah Sarkar is a satirical take on political parties and parliamentarians in India. We aim to look at key issues plaguing Indian democracy.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 155,
+        "instagram": 137
+      },
+      "image_url": "https://i1.feedspot.com/390203.jpg?t=1618623734"
+    },
+    {
+      "title": "FM Observer",
+      "feed_url": "http://fmobserver.com/feed/",
+      "website_url": "http://fmobserver.com/",
+      "description": "The Fargo Moorhead area's greatest satirical news and entertainment source. Most stories are farcical in nature. We are the greatest website you will ever visit in your entire human existence.",
+      "followers": {
+        "facebook": 847,
+        "twitter": 841
+      },
+      "image_url": "https://i1.feedspot.com/4677337.jpg?t=1618558442"
+    },
+    {
+      "title": "stevefakeballmer",
+      "feed_url": "https://stevefakeballmer.wordpress.com/feed/",
+      "website_url": "https://stevefakeballmer.wordpress.com/",
+      "description": "The Original Fake Steve Ballmer - Exiled by Blogger!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4910935.jpg"
+    },
+    {
+      "title": "Fake News Flash",
+      "feed_url": "https://fakenewsflash.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://fakenewsflash.blogspot.com/",
+      "description": "If you don't realise all this is made up, you're an idiot",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5053525.jpg"
+    },
+    {
+      "title": "Sports Pickle - News",
+      "feed_url": "https://sportspickle.com/category/news/feed",
+      "website_url": "https://sportspickle.com/category/news",
+      "description": "SportsPickle.com is a sports humor, satire and parody site for sports news.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 127700
+      },
+      "image_url": "https://i1.feedspot.com/4679248.jpg?t=1618623765"
+    },
+    {
+      "title": "The Onion",
+      "feed_url": "https://www.theonion.com/rss",
+      "website_url": "https://theonion.com/",
+      "description": "America's Finest News Source. It is a parody news website. The Onion is a Peabody award-winning news source founded in 1765 by Friedrich Siegfried Zweibel. T. Herman Zweibel. Many consider him the 'Father Of American Journalism,' also the title of his well-known 1943 biography, written by Norman Rombauer.",
+      "followers": {
+        "facebook": 6100000,
+        "twitter": 11600000,
+        "instagram": 4800000
+      },
+      "image_url": "https://i1.feedspot.com/31161.jpg?t=1605250035"
+    },
+    {
+      "title": "The Poke News",
+      "feed_url": "https://www.thepoke.com/feed/",
+      "website_url": "https://www.thepoke.com/category/news/",
+      "description": "The Poke is a satirical and topical news source, aiming to deliver an antidote to the daily grind.",
+      "followers": {
+        "facebook": 843800,
+        "twitter": 242500,
+        "instagram": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4679228.jpg?t=1618623926"
+    },
+    {
+      "title": "The Betoota Advocate",
+      "feed_url": "https://www.betootaadvocate.com/feed/",
+      "website_url": "https://www.betootaadvocate.com/",
+      "description": "The Betoota Advocate is an Australian satirical news website and digital media company that publishes articles on international, national, and local news. The site puts a comedic spin on current news topics and broader social observations.",
+      "followers": {
+        "facebook": 854000,
+        "twitter": 114100,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4677424.jpg?t=1618557790"
+    },
+    {
+      "title": "Waterford Whispers News",
+      "feed_url": "https://waterfordwhispersnews.com/",
+      "website_url": "https://waterfordwhispersnews.com/",
+      "description": "Waterford Whispers News is a fabricated satirical newspaper and comedy website. It uses invented names in all its stories, except in cases when public figures are being satirized.",
+      "followers": {
+        "facebook": 668900,
+        "twitter": 245000,
+        "instagram": 280300
+      },
+      "image_url": "https://i1.feedspot.com/4675848.jpg?t=1618560016"
+    },
+    {
+      "title": "The Beaverton",
+      "feed_url": "https://www.thebeaverton.com/feed",
+      "website_url": "https://www.thebeaverton.com/",
+      "description": "A televised adaptation of the immensely popular website TheBeaverton.com, it files fictional stories of the utmost importance, informed by real events, the cultural zeitgeist, and national news media. Using a 'fake news' platform The Beaverton offers devastating insight and biting commentary on Canadian life, politics, and the world around us.",
+      "followers": {
+        "facebook": 215600,
+        "twitter": 152600,
+        "instagram": 113700
+      },
+      "image_url": "https://i1.feedspot.com/4676319.jpg?t=1665473532"
+    },
+    {
+      "title": "The Spoof",
+      "feed_url": "https://www.thespoof.com/rss/feeds/frontpage/rss.xml",
+      "website_url": "https://www.thespoof.com/",
+      "description": "The Spoof is one of the web's leading satirical and spoof newspapers and magazines with the web's largest social group of fake news comedy writers. It brings you all the latest fake celebrity gossip and entertainment, current affairs, sports, technology, science, and business news.",
+      "followers": {
+        "facebook": 423,
+        "twitter": 787
+      },
+      "image_url": "https://i1.feedspot.com/2120.jpg?t=1665474602"
+    },
+    {
+      "title": "The Burrard Street Journal",
+      "feed_url": "https://www.burrardstreetjournal.com/",
+      "website_url": "https://www.burrardstreetjournal.com/",
+      "description": "The Burrard Street Journal is a occasionally funny Canadian satire, parody and comedy news website based in Vancouver, BC. All articles, videos and images are fictitious and occasionally intended to be humourous.",
+      "followers": {
+        "facebook": 40900,
+        "twitter": 831
+      },
+      "image_url": "https://i1.feedspot.com/4677915.jpg?t=1618557823"
+    },
+    {
+      "title": "Dapaan - InCredible news from Kashmir",
+      "feed_url": "https://dapaan.com/?feed=rss2",
+      "website_url": "https://dapaan.com/",
+      "description": "Dapaan.com is strictly about spoof and satire. There are no facts here, only fiction. If something here resembles any facts or reality, it is only because fiction tends to do so often.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 728
+      },
+      "image_url": "https://i1.feedspot.com/4677386.jpg?t=1618558499"
+    },
+    {
+      "title": "Beyond the Echo Chamber",
+      "feed_url": "https://www.beyondtheechochamber.com/feed/",
+      "website_url": "https://www.beyondtheechochamber.com/",
+      "description": "Fake News for the Moderate. This website is a fictional satire and parody website.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4894987.jpg?t=1618623749"
+    },
+    {
+      "title": "Free Wood Post",
+      "feed_url": "https://www.freewoodpost.com/feed/",
+      "website_url": "https://www.freewoodpost.com/",
+      "description": "Welcome to Free Wood Post! Where the news is almost reliable, and questions are almost answered. The Motive of this site is to bring you the could've would've should'ves in the world of free press reporting. Revel in the ridiculosity!",
+      "followers": {
+        "facebook": 85300,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/2112903.jpg?t=1618623760"
+    }
+  ]
+}

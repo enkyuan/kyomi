@@ -1,0 +1,105 @@
+{
+  "category": "UK Cricket",
+  "source_url": "https://rss.feedspot.com/uk_cricket_rss_feeds",
+  "feeds": [
+    {
+      "title": "King Cricket",
+      "feed_url": "https://www.kingcricket.co.uk/feed/",
+      "website_url": "https://www.kingcricket.co.uk/",
+      "description": "King Cricket is an independent cricket site bringing you offbeat cricket writing and huge digressions since 2006. Subscribe to the daily email to get all posts sent to your inbox.",
+      "followers": {
+        "facebook": 90,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4911867.jpg?t=1620194773"
+    },
+    {
+      "title": "Kent Cricket",
+      "feed_url": "https://www.kentcricket.co.uk/news/feed/",
+      "website_url": "https://www.kentcricket.co.uk/news/",
+      "description": "Kent County Cricket Club's home ground is The Spitfire Ground, St Lawrence in Canterbury but we also host matches at Beckenham and Tunbridge Wells. We have something for everyone: four-day Specsavers County Championship matches, 50-over Royal London One-Day Cup games and the fast and furious NatWest t20 Blast. Keep up to date with latest articles from this blog.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 107700,
+        "instagram": 61800
+      },
+      "image_url": "https://i1.feedspot.com/4911876.jpg?t=1620194778"
+    },
+    {
+      "title": "Derbyshire Cricket - Peakfan's blog",
+      "feed_url": "http://derbyshirecricket.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://derbyshirecricket.blogspot.com/",
+      "description": "News and views on Derbyshire County Cricket Club from a supporter of 50 years standing.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 77700
+      },
+      "image_url": "https://i1.feedspot.com/4589455.jpg?t=1603355749"
+    },
+    {
+      "title": "Cricket Yorkshire",
+      "feed_url": "https://cricketyorkshire.com/feed/",
+      "website_url": "https://cricketyorkshire.com/",
+      "description": "From Bradford Cricket League interviews to the best cricket teas and cricket club tales, this website features all of grassroots Yorkshire cricket.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5165023.jpg"
+    },
+    {
+      "title": "Women's Cricket Blog",
+      "feed_url": "http://womens-cricket.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://womens-cricket.blogspot.com/",
+      "description": "The Women's Cricket Blog - ODI, T20, international, regional, club, fixtures, results and reports - all things womens cricket.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4589450.jpg?t=1603355387"
+    },
+    {
+      "title": "Pitchero Blog",
+      "feed_url": "https://blog.pitchero.com/rss.xml",
+      "website_url": "https://berkshirecricket.org/latest-news/",
+      "description": "Pitchero is easy to use. Any club official, league manager or sports administrator can create and manage a professional sports website with Pitchero.",
+      "followers": {
+        "facebook": 16400,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/4589950.jpg?t=1603355708"
+    },
+    {
+      "title": "The Full Toss Cricket Blog",
+      "feed_url": "https://www.thefulltoss.com/feed/",
+      "website_url": "https://www.thefulltoss.com/",
+      "description": "Welcome to TFT, one of the UK's longest serving cricket blogs. We'll be here throughout the year to debate, moan, and occasionally rejoice about the England cricket team. The blog was initially founded by Maxie Allen and James Morgan. If something's bothering you, whether it's selection, governance, or the cost of a pint, don't hesitate to get in touch.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4911868.jpg?t=1620194764"
+    },
+    {
+      "title": "The Cricket Paper",
+      "feed_url": "https://www.thecricketpaper.com/feed/",
+      "website_url": "http://www.thecricketblog.com/",
+      "description": "The Cricket Paper is the UK's number one selling cricket title, covering the game from Test arena down to village green.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 39300
+      },
+      "image_url": "https://i1.feedspot.com/4911873.jpg?t=1620194768"
+    },
+    {
+      "title": "The Cricket Blog",
+      "feed_url": "http://www.thecricketblog.com/feed/",
+      "website_url": "http://www.thecricketblog.com/",
+      "description": "Cricket discussion and opinion, for the fans, by the fans from across the cricket universe. The Ashes, the World Cup, England, India, Australia and beyond.",
+      "followers": {
+        "facebook": 578,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4589535.jpg?t=1603354935"
+    }
+  ]
+}

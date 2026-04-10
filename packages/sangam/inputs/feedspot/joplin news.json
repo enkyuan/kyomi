@@ -1,0 +1,63 @@
+{
+  "category": "Joplin News",
+  "source_url": "https://rss.feedspot.com/joplin_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KSN 16 Local News",
+      "feed_url": "https://www.fourstateshomepage.com/feed/",
+      "website_url": "https://www.fourstateshomepage.com/",
+      "description": "We tell local Joplin news & weather stories, and we do what we do to make Joplin and the rest of Missouri a better place to live.",
+      "followers": {
+        "facebook": 54700,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5142159.jpg?t=1671425678"
+    },
+    {
+      "title": "City of Joplin, MO",
+      "feed_url": "https://www.joplinmo.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.joplinmo.org/CivicAlerts.aspx?CID=1",
+      "description": "Get the latest news from Official Website of the city.",
+      "followers": {
+        "facebook": 23300,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5142164.jpg?t=1626155928"
+    },
+    {
+      "title": "NewsTalk KZRG",
+      "feed_url": "https://www.newstalkkzrg.com/feed/",
+      "website_url": "https://www.newstalkkzrg.com/",
+      "description": "News talk and weather station for local news covering Joplin, Pittsburg, and Miami. Breaking news and weather updates 24 hours a day.",
+      "followers": {
+        "facebook": 68400,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5142166.jpg?t=1671425739"
+    },
+    {
+      "title": "Joplin News First",
+      "feed_url": "https://www.joplinnewsfirst.com/feeds/posts/default",
+      "website_url": "https://www.joplinnewsfirst.com/",
+      "description": "Read daily updated latest news and headlines related with economy, politics, sports, technology, international news and more from Joplin.",
+      "followers": {
+        "facebook": 136100,
+        "twitter": 2100,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5468343.jpg?t=1668591490"
+    },
+    {
+      "title": "KOAM News Now",
+      "feed_url": "https://www.koamnewsnow.com/feed/",
+      "website_url": "https://www.koamnewsnow.com/",
+      "description": "KOAMNewsNow.com is your source for News, Weather, Sports and Entertainment headlines for Joplin, Missouri.",
+      "followers": {
+        "facebook": 143500,
+        "twitter": 7200,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5142161.jpg?t=1671425709"
+    }
+  ]
+}

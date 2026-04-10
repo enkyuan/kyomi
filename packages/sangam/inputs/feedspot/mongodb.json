@@ -1,0 +1,132 @@
+{
+  "category": "MongoDB",
+  "source_url": "https://rss.feedspot.com/mongodb_rss_feeds",
+  "feeds": [
+    {
+      "title": "MongoDB Blog",
+      "feed_url": "https://www.mongodb.com/blog/rss",
+      "website_url": "https://www.mongodb.com/blog",
+      "description": "MongoDB is the next-generation database that helps businesses transform their industries by harnessing the power of data. The world's most sophisticated organizations, from cutting-edge startups to the largest companies, use MongoDB to create applications never before possible at a fraction of the cost of legacy databases.",
+      "followers": {
+        "facebook": 250100,
+        "twitter": 499000,
+        "instagram": 140800
+      },
+      "image_url": "https://i1.feedspot.com/4457209.jpg?t=1608215611"
+    },
+    {
+      "title": "Studio 3T",
+      "feed_url": "https://studio3t.com/feed/",
+      "website_url": "https://studio3t.com/whats-new/",
+      "description": "Studio 3T helps thousands of MongoDB developers and administrators with their everyday jobs by providing the finest MongoDB tools on the market.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4747209.jpg?t=1608215338"
+    },
+    {
+      "title": "Percona Database Performance Blog",
+      "feed_url": "https://www.percona.com/blog/category/mongodb/feed/",
+      "website_url": "https://www.percona.com/blog/category/mongodb/",
+      "description": "Percona delivers enterprise-class software, support, consulting and managed services for both MySQL and MongoDB across traditional and cloud-based platforms.",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/4746135.jpg?t=1610979331"
+    },
+    {
+      "title": "TutorialsJar",
+      "feed_url": "https://www.tutorialsjar.com/category/mongodb-tutorial/feed/",
+      "website_url": "https://www.tutorialsjar.com/category/mongodb-tutorial/",
+      "description": "MongoDB is an open-source document database and leading NoSQL database, written in C . This MongoDB tutorial will give you great understanding on MongoDB.",
+      "followers": {
+        "facebook": 475,
+        "twitter": 262
+      },
+      "image_url": "https://i1.feedspot.com/4746245.jpg?t=1608215349"
+    },
+    {
+      "title": "TechCrunch",
+      "feed_url": "https://techcrunch.com/tag/mongodb/feed/",
+      "website_url": "https://techcrunch.com/tag/mongodb/",
+      "description": "TechCrunch is a leading technology media property, dedicated to obsessively profiling startups, reviewing new Internet products, and breaking tech news. The blog is dedicated to providing information on MongoDB. Read to know more.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/4747364.jpg?t=1608215354"
+    },
+    {
+      "title": "John Papa",
+      "feed_url": "https://www.johnpapa.net/tag/mongodb-ref/rss/",
+      "website_url": "https://www.johnpapa.net/tag/mongodb-ref/",
+      "description": "Hi, I'm John Papa. I author this blog, create courses for Pluralsight and am a Developer Advocate. I speak at events, contribute to OSS, and I train technology thought leaders.",
+      "followers": {
+        "twitter": 94200
+      },
+      "image_url": "https://i1.feedspot.com/4747413.jpg?t=1608215361"
+    },
+    {
+      "title": "ODBMS.org",
+      "feed_url": "https://www.odbms.org/tag/mongodb/feed/",
+      "website_url": "https://www.odbms.org/tag/mongodb/",
+      "description": "Prof. Dott-Ing. Roberto V. Zicari is Full Professor of Database and Information Systems at Frankfurt University. Browse this blog to find useful insights about MongoDB.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4747405.jpg"
+    },
+    {
+      "title": "ZappySys Blog",
+      "feed_url": "https://zappysys.com/blog/tag/mongodb/feed/",
+      "website_url": "https://zappysys.com/blog/tag/mongodb/",
+      "description": "ZappySys is a USA based software development company. Here you can get the latest information on MongoDB.",
+      "followers": {
+        "facebook": 106,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4747425.jpg?t=1608215372"
+    },
+    {
+      "title": "Paul Done's Technical Blog",
+      "feed_url": "http://pauldone.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://pauldone.blogspot.com/",
+      "description": "A blog about enterprise software development and deployment. Browse through the blog to find useful articles on MongoDB.",
+      "followers": {
+        "twitter": 524
+      },
+      "image_url": "https://i1.feedspot.com/4746313.jpg?t=1608215378"
+    },
+    {
+      "title": "Exabig",
+      "feed_url": "http://exabig.com/blog/category/mongodb/feed/",
+      "website_url": "http://exabig.com/blog/category/mongodb/",
+      "description": "Posts about MongoDB written by Krishna Prajapati.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4746201.jpg?t=1608215589"
+    },
+    {
+      "title": "ProgrammerBlog.net",
+      "feed_url": "https://programmerblog.net/category/database/mongodb/feed/",
+      "website_url": "https://programmerblog.net/database/mongodb/",
+      "description": "Programmer Blog is a platform for sharing knowledge and techniques on latest web development trends and techniques. Visit Programmer blog for useful articles and video tutorials on new technologies.",
+      "followers": {
+        "facebook": 978,
+        "twitter": 238
+      },
+      "image_url": "https://i1.feedspot.com/4746225.jpg?t=1608215368"
+    },
+    {
+      "title": "adrshen \u00bb Mongodb",
+      "feed_url": "https://adrshen.wordpress.com/category/mongodb/feed/",
+      "website_url": "https://adrshen.wordpress.com/category/mongodb/",
+      "description": "The author is a passionate computer science graduate with tons of industry experience in relational database development, tuning, troubleshooting, administration with unique umbrellas skills in modern storage, systems, virtualization, NoSql/ Mongo and security software.",
+      "followers": {
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/4746267.jpg?t=1608215526"
+    }
+  ]
+}

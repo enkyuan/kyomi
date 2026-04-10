@@ -1,0 +1,944 @@
+{
+  "category": "Budget Travel",
+  "source_url": "https://rss.feedspot.com/budget_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Budget Traveller",
+      "feed_url": "https://budgettraveller.org/feed/",
+      "website_url": "https://budgettraveller.org/",
+      "description": "Travel can be had even if you're on a small budget and this blog is here to show you how. Start saving up and give this site a few visits for tips on how to plan a trip that you can afford. Whether it's discovering luxury hostels or the best cheap eats or budget places to stay in Paris or London, BudgetTraveller has it all covered.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 22800,
+        "instagram": 36400
+      },
+      "image_url": "https://i1.feedspot.com/43251.jpg?t=1607090295"
+    },
+    {
+      "title": "Go Backpacking",
+      "feed_url": "https://gobackpacking.com/feed/",
+      "website_url": "https://gobackpacking.com/",
+      "description": "A travel blog with backpacking advice for independent budget travelers. Learn to backpack around the world.",
+      "followers": {
+        "facebook": 46800,
+        "twitter": 25100,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/2715640.jpg?t=1617947880"
+    },
+    {
+      "title": "The Poor Traveler Blog",
+      "feed_url": "https://www.thepoortraveler.net/feed/",
+      "website_url": "https://www.thepoortraveler.net/",
+      "description": "Welcome to The Poor Traveler, the rich blog for the budget traveler. Traveling at any cost, a blog with tips on budget travels mostly around Asia.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 7400,
+        "instagram": 121200
+      },
+      "image_url": "https://i1.feedspot.com/4399490.jpg?t=1617947888"
+    },
+    {
+      "title": "Club Thrifty Blog",
+      "feed_url": "https://clubthrifty.com/feed/",
+      "website_url": "https://clubthrifty.com/blog/",
+      "description": "We're Holly and Greg Johnson, married bloggers who travel the world for pennies on the dollar. But, it hasn't always been this way. Now, we're living our dreams while saving for the future. If you'd like to do the same, join us! Here you will find about great destinations, traveling for cheap, and how you can use the money you already have to fund your dream life.",
+      "followers": {
+        "facebook": 81600,
+        "twitter": 24700,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4671688.jpg?t=1617947898"
+    },
+    {
+      "title": "CheapOair Travel - Miles Away Travel Blog",
+      "feed_url": "https://www.cheapoair.com/miles-away/feed/",
+      "website_url": "https://www.cheapoair.com/miles-away/",
+      "description": "If you're a young parent aching to see more of this beautiful earth, here are some tips and tricks that make it easier to travel with kids in tow. Follow CheapOair blog to learn how to travel the world for less.",
+      "followers": {
+        "facebook": 563200,
+        "twitter": 36200,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/4671418.jpg?t=1617947903"
+    },
+    {
+      "title": "Hostelworld Blog",
+      "feed_url": "https://www.hostelworld.com/blog/feed/",
+      "website_url": "https://www.hostelworld.com/blog/",
+      "description": "We bring you the best news in cheap travel and backpacking tips, top city and destination guides and advice on the best things to see and do - anywhere!",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 55300,
+        "instagram": 312400
+      },
+      "image_url": "https://i1.feedspot.com/4671724.jpg?t=1608127440"
+    },
+    {
+      "title": "Wally's Travel Guide",
+      "feed_url": "https://wallystravelguide.com/feed/",
+      "website_url": "https://wallystravelguide.com/",
+      "description": "Explore a surreal world of family travel, where memories are made in the most unexpected ways. Unlock curated guides, destination reviews and much more. Ann, the passionate explorer behind Wally's Adventure Travel is a mom with a love for family travel and wants to share her experience.",
+      "followers": {
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/7264236.jpg?t=1709278905"
+    },
+    {
+      "title": "The New York Times - Frugal Traveler",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/column/frugal-traveler/rss.xml",
+      "website_url": "https://www.nytimes.com/column/frugal-traveler",
+      "description": "Tips and dispatches from Lucas Peterson and other writers about navigating the world on a tight budget.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4671380.jpg?t=1617950630"
+    },
+    {
+      "title": "Nomadic Matt Blog",
+      "feed_url": "https://www.nomadicmatt.com/feed/",
+      "website_url": "https://www.nomadicmatt.com/travel-blog/",
+      "description": "The travel blog of Nomadic Matt features tips and advice on how you can travel better, cheaper, and smarter so you can explore the world on a budget. Hi, I'm Nomadic Matt, a New York Times best-selling author of How to Travel the World on $50 a Day and Ten Years a Nomad as well as the founder of this website.",
+      "followers": {
+        "facebook": 274500,
+        "twitter": 24,
+        "instagram": 158800
+      },
+      "image_url": "https://i1.feedspot.com/4434474.jpg?t=1634016371"
+    },
+    {
+      "title": "Budget Your Trip Blog",
+      "feed_url": "http://www.budgetyourtrip.com/blog/feed/",
+      "website_url": "http://www.budgetyourtrip.com/blog/",
+      "description": "Budget Your Trip lets you plan and track your travel expenses. On our blog you can find travel advice, tips, photos, and more! You can also find out how much stuff costs in various locations around the world with our average daily costs for destinations around the world.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4671335.jpg?t=1617947915"
+    },
+    {
+      "title": "Hostelgeeks",
+      "feed_url": "https://hostelgeeks.com/feed/",
+      "website_url": "https://hostelgeeks.com/",
+      "description": "Hostelgeeks awards unique hostels in the world becoming a 5 Star Hostel! Backpacking in style. Travel and hostel guide for geeky backpackers and travelers looking for hidden gems.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 4900,
+        "instagram": 39300
+      },
+      "image_url": "https://i1.feedspot.com/4671849.jpg?t=1617947933"
+    },
+    {
+      "title": "Journey Era Blog",
+      "feed_url": "https://www.journeyera.com/feed/",
+      "website_url": "https://www.journeyera.com/blog/",
+      "description": "Welcome to Journey Era by Jackson Groves. I've been backpacking and exploring epic locations around the world for over 2 years. I've never spent more than $12 a night on accommodation and am always looking for real adventures like treks, waterfalls and cliff jumping!",
+      "followers": {
+        "facebook": 52700,
+        "twitter": 6600,
+        "instagram": 428700
+      },
+      "image_url": "https://i1.feedspot.com/4671135.jpg?t=1608127423"
+    },
+    {
+      "title": "TravelFree.info - Travel blog with cheap flights, hotels, buses",
+      "feed_url": "https://travelfree.info/feed/",
+      "website_url": "https://travelfree.info/",
+      "description": "How to travel for FREE? Travel blog will help you to find the best travel deals, cheap flights, hotels and tours from Europe to the rest of the world. Save your money and travel more!",
+      "followers": {
+        "facebook": 152900,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4671404.jpg?t=1648201293"
+    },
+    {
+      "title": "One Step 4Ward Blog",
+      "feed_url": "https://onestep4ward.com/feed/",
+      "website_url": "https://onestep4ward.com/blog/",
+      "description": "Johnny provides detailed and practical advice on how we can all earn money and follow our travel dreams at the same time. I've visited pretty much every country in the world as I've blogged. Now I'd love to teach you guys how to 'Dream big. Travel Far. Live Full.",
+      "followers": {
+        "facebook": 110600,
+        "twitter": 64200,
+        "instagram": 90900
+      },
+      "image_url": "https://i1.feedspot.com/4671153.jpg?t=1617947952"
+    },
+    {
+      "title": "On the Luce travel Blog",
+      "feed_url": "https://www.ontheluce.com/feed/",
+      "website_url": "https://www.ontheluce.com/blog/",
+      "description": "Part-time travel, full-time travel obsession, On the Luce is designed to inspire independent travellers who might not be in the position to travel long-term but want to make the most of their travel time.On the Luce provides inspiration and advice to help you make the most of your travel time and get a taste of luxury on a budget - in the UK, Europe and beyond.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 11200,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4671125.jpg?t=1617948341"
+    },
+    {
+      "title": "YYC Deals",
+      "feed_url": "https://yycdeals.com/atom/1",
+      "website_url": "https://yycdeals.com/",
+      "description": "Calgary's travel deal community. Find cheap flights, holiday packages, and all inclusive vacations from YYC. Featuring articles, guides, alerts, forums, discount promo codes, sales and more.",
+      "followers": {
+        "facebook": 69500,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/1187988.jpg?t=1617948358"
+    },
+    {
+      "title": "The Travel Bunny Blog",
+      "feed_url": "https://www.the-travel-bunny.com/feed/",
+      "website_url": "https://www.the-travel-bunny.com/travel-blog/",
+      "description": "The Travel Bunny is a top travel blog with the best affordable travel tips, unique & complete budget travel guides, and personal travel stories.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 13200,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5067354.jpg?t=1617948928"
+    },
+    {
+      "title": "Frugal Frolicker",
+      "feed_url": "https://frugalfrolicker.com/feed/",
+      "website_url": "https://frugalfrolicker.com/",
+      "description": "Featuring travel adventures around the world, travel photography, budget travel tips, and travel guides. Frugal Frolicker is a travel blog by Lindsay Buckley.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1100,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4496288.jpg?t=1605264571"
+    },
+    {
+      "title": "Travel Dave",
+      "feed_url": "https://feeds.feedburner.com/traveldave",
+      "website_url": "https://traveldave.co.uk/",
+      "description": "Follow the UK's leading solo adventure travel blogger, Dave Brett on his travels around the world. An Adventure travel blog that features travel tips and advice, inspirational stories, travel videos and travel photography, tight budget and solo backpacking life that will help you inspire and plan your next trip abroad.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 19400,
+        "instagram": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4398957.jpg?t=1648204512"
+    },
+    {
+      "title": "Vinz Ideas Discovering Asia on a Budget",
+      "feed_url": "https://vinzideas.com/feed/",
+      "website_url": "https://vinzideas.com/",
+      "description": "This blog aims to help other wanderers and travel enthusiasts to fire up their desire to travel the globe in whatever means they have. You don't need tons of money to witness the beauty of this planet with your own naked eyes. All you need is passion, courage and hard work.",
+      "followers": {
+        "facebook": 802,
+        "twitter": 249,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4577195.jpg?t=1605851967"
+    },
+    {
+      "title": "Light Travel Action",
+      "feed_url": "https://lighttravelaction.com/feed/",
+      "website_url": "https://lighttravelaction.com/travel/",
+      "description": "Who says that you have to be rich and single to enjoy traveling. Just like you, we are real travelers seeking to explore as much as we can with our limited financial means and available vacation days. This website is about showing you what it's really like to travel with (or without) children with our tested tips and tricks, our successes and our failures so that our experiences inspire you.",
+      "followers": {
+        "facebook": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4772551.jpg?t=1617948951"
+    },
+    {
+      "title": "The Common Traveler",
+      "feed_url": "https://www.thecommontraveler.net/feed/",
+      "website_url": "https://www.thecommontraveler.net/",
+      "description": "Traveling while saving for future goals is possible. Affordable travel does not have to mean backpacking and sleeping in hostels. We hope to inspire you to re-discover travel by sharing destinations and tips on how to save at each location. Raised as a third culture kid living in South America and Europe, Annick caught the travel bug early. As an empty-nester, Annick enjoys sharing her tips for traveling for those with champagne taste and beer budgets.",
+      "followers": {
+        "facebook": 928,
+        "twitter": 1500,
+        "instagram": 30100
+      },
+      "image_url": "https://i1.feedspot.com/5180895.jpg?t=1597221313"
+    },
+    {
+      "title": "Family Travels on a Budget",
+      "feed_url": "https://familytravelsonabudget.com/feed/",
+      "website_url": "https://familytravelsonabudget.com/",
+      "description": "Family Travels on a Budget: Learn about cool places to visit in the US, theme park family deals, cruise ships for kids, and the best cruise lines for teens at this travel with kids blog. Couples and girlfriend getaways are also covered because we all need a break sometimes.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 6600,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4648141.jpg?t=1648206006"
+    },
+    {
+      "title": "FootLoose Dev",
+      "feed_url": "https://footloosedev.com/feed/",
+      "website_url": "https://footloosedev.com/",
+      "description": "Quit my journalism career to travel the world, write about my travel journeys, and help others realize their travel dreams. This Blog to share my experiences and help others to travel for cheaper, longer and better. Blog by Devesh.",
+      "followers": {
+        "facebook": 45100,
+        "twitter": 3800,
+        "instagram": 23600
+      },
+      "image_url": "https://i1.feedspot.com/4670601.jpg?t=1617947929"
+    },
+    {
+      "title": "The Navigatio Blog",
+      "feed_url": "https://thenavigatio.com/blog/feed/",
+      "website_url": "https://thenavigatio.com/blog/",
+      "description": "Hi! I'm Nele (Nayla), a recent English & Creative Writing Graduate. I am a full-time travel blogger based in Manchester. Lover of coffee, games, books and sharing my tips and tricks for affordable travel!",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 8500,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5027084.jpg?t=1613055484"
+    },
+    {
+      "title": "Frugal Flyer Blog",
+      "feed_url": "https://frugalflyer.ca/feed/",
+      "website_url": "https://frugalflyer.ca/blog/",
+      "description": "Covers articles providing actionable guidance to help you earn and redeem the points needed to get off the tarmac. Frugal Flyer is an online blog and resource engineered to help Canadians take full advantage of reward/loyalty programs offered by airlines, hotels, and financial institutions.",
+      "followers": {
+        "facebook": 553,
+        "twitter": 265,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5345931.jpg?t=1705662845"
+    },
+    {
+      "title": "Budget Slow Travel Blog",
+      "feed_url": "https://budgetslowtravel.com/feed/",
+      "website_url": "https://budgetslowtravel.com/blog/",
+      "description": "Covers inspiring detailed destination guides and budget tips, hacks and knowledge for Baby Boomers and young travelers.",
+      "followers": {
+        "facebook": 369
+      },
+      "image_url": "https://i1.feedspot.com/5318099.jpg?t=1630491883"
+    },
+    {
+      "title": "Thrifty Nomads",
+      "feed_url": "https://feeds.feedburner.com/ThriftyNomads",
+      "website_url": "https://thriftynomads.com/",
+      "description": "I'm Jen, one of the frugal-minded Canadians behind Thrifty Nomads. Back in 2013, I was your average city slicker, riding the assembly line of modern life with my former partner and website co-founder Ted. Thrifty Nomads is about cost-effective travel for all. We provide money-saving tips, tricks, and information to inspire affordable travel. Follow along and learn to see more of the world, for less!",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 1800,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5283991.jpg?t=1621941511"
+    },
+    {
+      "title": "Pommie Travels Blog",
+      "feed_url": "https://www.pommietravels.com/feed/",
+      "website_url": "https://www.pommietravels.com/blog/",
+      "description": "Pommie Travels is Kick-ass travel blog of a British girl traveling solo. It is a travel site providing tips for backpackers travelling on a budget, reviews of hostels, destination guides, travel videos and advice for travel bloggers.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 13900,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4444323.jpg?t=1648212128"
+    },
+    {
+      "title": "Frugal First Class Travel",
+      "feed_url": "https://frugalfirstclasstravel.com/feed/",
+      "website_url": "https://frugalfirstclasstravel.com/",
+      "description": "The place for travellers who love Europe, and love a first class experience on a frugal budget.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4670398.jpg?t=1617948932"
+    },
+    {
+      "title": "Shereen Travels Cheap",
+      "feed_url": "https://feeds.feedburner.com/ShereenTravelsCheap",
+      "website_url": "https://www.shereentravelscheap.com/",
+      "description": "A budget travel blog that gives you money-saving tips to plan affordable vacations. Let me show you some of the best deals and share with you my budget travel tips for saving hundreds and even thousands of dollars off each and every vacation you take. Blog by Shereen Rayle.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 3300,
+        "instagram": 843
+      },
+      "image_url": "https://i1.feedspot.com/4670417.jpg?t=1617948970"
+    },
+    {
+      "title": "Travel Like Anna: How to Travel on a Budget Blog",
+      "feed_url": "https://www.travellikeanna.com/feed/",
+      "website_url": "https://www.travellikeanna.com/photo-blog/",
+      "description": "Longterm Budget Travel Advice & Tips from a Professional Nomad Anna Mazurek. My goal is to inspire you to travel.",
+      "followers": {
+        "twitter": 581,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4671168.jpg?t=1648271209"
+    },
+    {
+      "title": "Portland Living on the Cheap",
+      "feed_url": "http://feeds.feedblitz.com/portlandlivingonthecheap",
+      "website_url": "https://portlandlivingonthecheap.com/",
+      "description": "Hi! I'm Victoria Hampton, publisher of Portland Living on the Cheap. I'm a mid-twenties Portlander who enjoys many of the wonderful free events and activities throughout the city. On this site, I share new deals, freebies, and fun activities in Portland that appeal to all ages.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1408855.jpg?t=1617949483"
+    },
+    {
+      "title": "YOW Deals",
+      "feed_url": "https://yowdeals.com/atom/1",
+      "website_url": "https://yowdeals.com/",
+      "description": "Ottawa's travel deal community. Find cheap flights, holiday packages, and all inclusive vacations from YOW. Featuring articles, guides, alerts, forums, discount promo codes, sales and more.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/1109018.jpg?t=1617951381"
+    },
+    {
+      "title": "K.E.Y. to Mind and Body",
+      "feed_url": "https://keytomindandbody.com/feed/",
+      "website_url": "https://keytomindandbody.com/",
+      "description": "Welcome! My name is Keyanna your guide to adventure and travel on a budget. Photography has always been my passion and a hobby of mine. I'm a lover of being outdoors and exploring new places to visit, while being budget friendly. I'm here to bring you some great places to visit. Family friendly or solo, I have something for everyone.",
+      "followers": {
+        "twitter": 231
+      },
+      "image_url": "https://i1.feedspot.com/5172120.jpg?t=1617949765"
+    },
+    {
+      "title": "Zero To Travel Podcast",
+      "feed_url": "https://feeds.megaphone.fm/ZTTIA6764283121",
+      "website_url": "https://cms.megaphone.fm/channel/ZTTIA6764283121",
+      "description": "\u2708\ufe0f The Zero To Travel Podcast has been downloaded 12+ million times and named a 'Best Travel Podcast' by The Washington Post, Travel + Leisure, The Telegraph, and Forbes.Packed with life-changing perspectives, inspiration, and practical advice for everyone from travel newbies to nomads, this podcast will give you everything you need to travel the world on your terms, regardless of your situation or experience. Welcome to our amazing global listening community!Since 2013, 'Travel Ambassador' Jason Moore from zerototravel...",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 1600,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5656568.jpg?t=1745676571"
+    },
+    {
+      "title": "EuroCheapo's Budget Travel Blog",
+      "feed_url": "https://www.eurocheapo.com/blog/feed",
+      "website_url": "https://www.eurocheapo.com/blog/",
+      "description": "EuroCheapo.com is the web's guide to budget travel in Europe. EuroCheapo's guide to the best cheap hotels in Europe. Our editors visit hundreds of budget hotels in Europe, write reviews, take photos, and provide full contact information. Our mission has been to make your time in Europe affordable and memorable. The world is out there, and it's less expensive than you think.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/591015.jpg?t=1617947892"
+    },
+    {
+      "title": "Budget Travel Buff",
+      "feed_url": "https://budgettravelbuff.com/feed/",
+      "website_url": "https://budgettravelbuff.com/",
+      "description": "I opened this Travel Blog to share my personal travel experiences with others and to provide the best Travel Guide and Travel Tips for budget travelers.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1000,
+        "instagram": 390
+      },
+      "image_url": "https://i1.feedspot.com/5161919.jpg?t=1617948353"
+    },
+    {
+      "title": "BUDGET WAYFARERS Blog",
+      "feed_url": "https://www.budgetwayfarers.com/feed/",
+      "website_url": "https://www.budgetwayfarers.com/blog/",
+      "description": "Budget Wayfarers is an online platform for Travelers and Bloggers from around the world. Come, join our global family.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5120862.jpg?t=1617947926"
+    },
+    {
+      "title": "Daily Travel Pill",
+      "feed_url": "https://dailytravelpill.com/feed",
+      "website_url": "https://dailytravelpill.com/",
+      "description": "Hi there! I'm Aura and I'm a full-time professional blogger. I visited each destination showcased on this website and I am here to help you make the most out of your holiday. My guides are full of off-the-beaten-path destinations, travel fails stories, and practical tips & tricks.May the travel bug bite you!",
+      "followers": {
+        "facebook": 8100,
+        "instagram": 48200
+      },
+      "image_url": "https://i1.feedspot.com/5093166.jpg?t=1617948922"
+    },
+    {
+      "title": "Globetrotter Girls",
+      "feed_url": "https://globetrottergirls.com/feed/",
+      "website_url": "https://globetrottergirls.com/",
+      "description": "Globetrotter Girls is all about travel adventures, travel tips, travel guides and travel photography from all our global travel adventures. Her mission is to inspire curiosity about the world and provide the tips and tools gained first-hand to help you see as much of the world as you can for yourself. Follow this blog and get travel tips and guides from travel adventures.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 18400,
+        "instagram": 18400
+      },
+      "image_url": "https://i1.feedspot.com/4671145.jpg?t=1607610831"
+    },
+    {
+      "title": "Roaming Around the World",
+      "feed_url": "https://www.roamingaroundtheworld.com/feed/",
+      "website_url": "https://www.roamingaroundtheworld.com/",
+      "description": "While roaming around the world for the past 3 years and 60 countries, we (John & Heather) have been on a search for adventure, fun, and value! This blog shares our discoveries & aims to inspire your next trip while maximizing your travel budget!",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 1500,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4670728.jpg?t=1617951114"
+    },
+    {
+      "title": "Phenomenal Globe Travel Blog",
+      "feed_url": "https://www.phenomenalglobe.com/feed/",
+      "website_url": "https://www.phenomenalglobe.com/",
+      "description": "The best travel blog for for detailed travel advice and inspiration: travel itineraries, travel budget, where to go, where to stay, what to pack and more!",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/4671116.jpg?t=1617948362"
+    },
+    {
+      "title": "A Couple For The Road",
+      "feed_url": "https://www.acouplefortheroad.com/feed/",
+      "website_url": "https://www.acouplefortheroad.com/travel/",
+      "description": "Tips on how to save money and travel on a budget from America's couples travel blog experts. Explore food, deals, art, culture, drinks and adventure with.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 3900,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4652725.jpg?t=1617948505"
+    },
+    {
+      "title": "RexyEdventures Blog",
+      "feed_url": "https://rexyedventures.com/feed/",
+      "website_url": "https://rexyedventures.com/blog/",
+      "description": "RexyEdventures is a travel blog resource chronicling the Adventures of a Deaf & Handsome Luxury Backpacker Travelling the Unexpected.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4552293.jpg?t=1613626868"
+    },
+    {
+      "title": "Budget Travel Talk - Journey Destination Experience Blog",
+      "feed_url": "https://www.budgettraveltalk.com/feed/",
+      "website_url": "https://www.budgettraveltalk.com/blog/",
+      "description": "Budget minded travellers who love life and adventure. Loving life at Coolum Beach. Queensland road trippers and trying to decide on our next overseas adventure.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 914,
+        "instagram": 513
+      },
+      "image_url": "https://i1.feedspot.com/4399444.jpg?t=1617948958"
+    },
+    {
+      "title": "Travel China Cheaper",
+      "feed_url": "https://www.travelchinacheaper.com/feed",
+      "website_url": "https://www.travelchinacheaper.com/",
+      "description": "Travel China Cheaper is an in-depth, online resource for travelers considering a visit to China. Whether you're planning only a few days in the country or moving to China for a couple years, Travel China Cheaper provides all the information and tools necessary to properly prepare you for the journey. We provide you the insider tips that will help you save money and plan your perfect trip to China!",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 206
+      },
+      "image_url": "https://i1.feedspot.com/4671814.jpg?t=1608355559"
+    },
+    {
+      "title": "The Savvy Backpacker",
+      "feed_url": "https://thesavvybackpacker.com/feed/",
+      "website_url": "https://thesavvybackpacker.com/",
+      "description": "TheSavvyBackpacker.com is an online resource for student and budget travelers that are planning to backpack Europe. The site contains honest and unbiased tips about packing lists, Eurail passes, budget planning, guides to the the best party cities and much more.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 5300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4670106.jpg?t=1617947956"
+    },
+    {
+      "title": "My Funky Travel",
+      "feed_url": "https://myfunkytravel.com/feed",
+      "website_url": "https://myfunkytravel.com/",
+      "description": "Backpacking blog with inspiring routes, budget travel tips and plenty more! Here you'll find backpacking tips, articles, routes, suggestions and lots of budget travel inspiration.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4671295.jpg?t=1608127605"
+    },
+    {
+      "title": "The Travelling Blizzards",
+      "feed_url": "https://thetravellingblizzards.com/feed/",
+      "website_url": "https://thetravellingblizzards.com/",
+      "description": "Simplfying the world of budget travel, one country at a time! Blog by Amanda Blizzard.",
+      "followers": {
+        "twitter": 21,
+        "instagram": 751
+      },
+      "image_url": "https://i1.feedspot.com/4671250.jpg?t=1617949492"
+    },
+    {
+      "title": "Lena On The Move",
+      "feed_url": "https://lenaonthemove.com/feed/",
+      "website_url": "https://lenaonthemove.com/",
+      "description": "My name is Lena and I'm a Divemaster and passionate backpacker with a degree in tourism management. Over the past 7 years, I've had the chance to explore different countries and oceans around the world and developed a couple of helpful budget travel and budget diving techniques. On the blog, you can find not only useful travel tips but also travel guides and inspiration for unique travel adventures off the beaten path as well as scuba diving.",
+      "followers": {
+        "twitter": 401,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5069773.jpg?t=1617949500"
+    },
+    {
+      "title": "Feather and the Wind Blog",
+      "feed_url": "https://www.featherandthewind.com/blog?format=rss",
+      "website_url": "https://www.featherandthewind.com/blog",
+      "description": "We're Fel and Wes - a couple of travel bloggers who never know where to go next. Join us as we have fun all over the world while traveling on a budget. Check the blog for obtaining quality travel information like how to travel full-time, guides to trending destinations, unique things to do around the world, and lessons learned as a full-time travel couple.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 841,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4671187.jpg?t=1609223018"
+    },
+    {
+      "title": "Just Wandering",
+      "feed_url": "https://justwandering.org/feed/",
+      "website_url": "https://justwandering.org/",
+      "description": "Just Wandering is my personal travel blog, where I share stories, tips and resources from my travels. Blog by Nina Fuentes.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/1122583.jpg?t=1617949513"
+    },
+    {
+      "title": "Being30.com",
+      "feed_url": "https://being30.com/feed/",
+      "website_url": "https://being30.com/",
+      "description": "Juliana is a travel writter, blogging about many places she has visited. She has been to over 40 countries and 100 cities and likes to share her experiences of how to see the world on a budget.",
+      "followers": {
+        "facebook": 90,
+        "twitter": 162,
+        "instagram": 204
+      },
+      "image_url": "https://i1.feedspot.com/4671221.jpg?t=1617951377"
+    },
+    {
+      "title": "Sharingcost Blog",
+      "feed_url": "https://sharingcost.com/feed/",
+      "website_url": "https://sharingcost.com/blog/",
+      "description": "Find Cheap flights and hotels Worldwide and get your last minute price by visiting our website we have combine thousand of flights and hotels.",
+      "followers": {
+        "facebook": 199,
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/5058522.jpg?t=1617949802"
+    },
+    {
+      "title": "Dare Journey Blog",
+      "feed_url": "https://darejourney.com/feed/",
+      "website_url": "https://darejourney.com/category/blog/",
+      "description": "Budget travel blog - Ultimate travel guide - How to travel the world with no money !! Inspire the people around the world stop a boring life and start our own Life.",
+      "followers": {
+        "facebook": 233
+      },
+      "image_url": "https://i1.feedspot.com/4671293.jpg?t=1617950197"
+    },
+    {
+      "title": "Travel House Budget Hotels Blog",
+      "feed_url": "https://travelhousenigeria.com/feed/",
+      "website_url": "https://travelhousenigeria.com/blog/",
+      "description": "The Travel House Budget Hotels' group is the first branded chain of comfort budget hotels in Nigeria. The group shares the same concept and standards as other worldwide respected budget hotels. We serve as a home away from home, offering a quality service by providing basic accommodation at an affordable price.",
+      "followers": {
+        "twitter": 517,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4671300.jpg?t=1617950619"
+    },
+    {
+      "title": "Budget Travelers Sandbox - Priceless Independent Travel",
+      "feed_url": "https://www.budgettravelerssandbox.com/feed/",
+      "website_url": "https://www.budgettravelerssandbox.com/",
+      "description": "Travel blog for independent budget travelers. Find out about local food, accommodation, attractions, and much much more.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 4600,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4666756.jpg?t=1617950625"
+    },
+    {
+      "title": "MonkBoughtLunch",
+      "feed_url": "https://www.monkboughtlunch.com/feed/",
+      "website_url": "https://www.monkboughtlunch.com/",
+      "description": "A budget travel blog from Central Asia, the Silk Road, and beyond.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 5300,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4670625.jpg?t=1617951147"
+    },
+    {
+      "title": "Innovative Travelers",
+      "feed_url": "https://innovativetravelers.com/feed/",
+      "website_url": "https://innovativetravelers.com/",
+      "description": "Covering topics related to New York to Orlando, the knowledge necessary to conquer any journal in these destinations. Innovative Travelers is a travel, tech and life blog providing cost-saving tips and travel/tech hacks.",
+      "followers": {
+        "twitter": 71
+      },
+      "image_url": "https://i1.feedspot.com/5339395.jpg?t=1635837100"
+    },
+    {
+      "title": "Backpacker Banter Travel Blog - Reviews, Advice and Budget Tips",
+      "feed_url": "https://www.backpackerbanter.com/blog/feed",
+      "website_url": "https://www.backpackerbanter.com/blog/latest",
+      "description": "A travel blogging website with heaps of reviews, advice and banter from around the world - covering everything from how to plan a gap year to guest posts from our network of backpackers. It is an award winning travel blog featuring reviews, advice, stories and budgeting tips from around the world.",
+      "followers": {
+        "facebook": 17400,
+        "instagram": 33300
+      },
+      "image_url": "https://i1.feedspot.com/4671131.jpg?t=1608127427"
+    },
+    {
+      "title": "The Budget-Minded Traveler Blog",
+      "feed_url": "https://thebudgetmindedtraveler.com/feed/",
+      "website_url": "https://thebudgetmindedtraveler.com/blog/",
+      "description": "I am Jackie, the founder of this blog, and for nearly half my life, I have been traveling independently overseas. I have done it all with my own savings and resources, and I am forever changed from immersing myself in other cultures, learning multiple languages, tasting foreign foods, and collecting friends all over the world. My love for travel has completely shaped the course of my life. My mission is to make travel as easy and accessible for you as possible, and that is why The Budget-Minded Traveler exists.",
+      "followers": {
+        "facebook": 7900,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5283990.jpg?t=1621941603"
+    },
+    {
+      "title": "Tigrest Travel Blog",
+      "feed_url": "https://tigrest.com/feed/",
+      "website_url": "https://tigrest.com/category/blog/",
+      "description": "This is a blog about destinations, food and travel tips and various ways to travel cheaper, better and eventually with much more fun!",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4671897.jpg?t=1617948967"
+    },
+    {
+      "title": "Extra Pack of Peanuts Blog",
+      "feed_url": "https://extrapackofpeanuts.com/feed/",
+      "website_url": "https://extrapackofpeanuts.com/blog/",
+      "description": "Hi, We're Travis & Heather. And just like you, we like to travel... without breaking the bank. We've done it all - from $2/night hostels in Thailand to $1,000/night hotels in Paris (which we stayed in for free) and over the years, our travel style has evolved. But one thing has remained constant - we're always looking for the sweet spot of cost, convenience, comfort, and culture.",
+      "followers": {
+        "facebook": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5255832.jpg?t=1615446262"
+    },
+    {
+      "title": "Cheap Flights AU, Compare the cheapest flights, flight tickets & airfares",
+      "feed_url": "https://www.cheapflights.com.au/news/feed",
+      "website_url": "https://www.cheapflights.com.au/news/",
+      "description": "Cheapflights is an award-winning flight search and travel inspiration site. We're here to make it easy for you to find flights, bag bargains - and make travel simpler. All the news you can use and tips for smarter travellers.",
+      "followers": {
+        "facebook": 699200,
+        "twitter": 68800,
+        "instagram": 38100
+      },
+      "image_url": "https://i1.feedspot.com/4671804.jpg?t=1617950652"
+    },
+    {
+      "title": "Andy's Travel Blog",
+      "feed_url": "https://andystravelblog.com/feed/",
+      "website_url": "https://andystravelblog.com/",
+      "description": "Andy's Travel Blog chronicles the travel adventures of a guy named, unsurprisingly, Andy. Readers love his sarcastic take on traveling the world, says Andy. Travelers visit Andy's Travel Blog from all over the world to read about amazing flights, great hotels, and the best the world has to offer.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4671761.jpg?t=1617947910"
+    },
+    {
+      "title": "Affordable Travel Tips",
+      "feed_url": "https://affordabletraveltips.com/feed/",
+      "website_url": "https://allinclusivehq.com/",
+      "description": "I started as a TikTok account that built an audience by providing tips on how to travel for cheap and vacation inspirations. I have created this blog to provide more info to my audience with tips on how to travel for less.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461395.jpg?t=1667219940"
+    },
+    {
+      "title": "FlyerTalk",
+      "feed_url": "https://www.flyertalk.com/feed",
+      "website_url": "https://www.flyertalk.com/",
+      "description": "Sharing tips & tricks that we can use to see the world at prices we all can afford! The award-winning online home of free travel expert Rick Ingersoll, the author of The Frugal Travel Guy Handbook. Rick's mission is to teach others how to enjoy traveling the country or the world for free or nearly free -- especially those who don't think they can afford to travel.",
+      "followers": {
+        "facebook": 91100,
+        "twitter": 66200
+      },
+      "image_url": "https://i1.feedspot.com/332447.jpg?t=1630764289"
+    },
+    {
+      "title": "Practical Wanderlust Blog",
+      "feed_url": "https://practicalwanderlust.com/feed/",
+      "website_url": "https://practicalwanderlust.com/blog/",
+      "description": "Find practical, down-to-earth, budget-friendly travel tips that will help you avoid making all of the terrible mistakes. Lia Garcia & Jeremy are the accident-prone travel bloggers behind Practical Wanderlust.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 3500,
+        "instagram": 23000
+      },
+      "image_url": "https://i1.feedspot.com/4670610.jpg?t=1607580192"
+    },
+    {
+      "title": "African Budget Safaris - Budget Travel Experts Blog",
+      "feed_url": "http://feeds.africanbudgetsafaris.com/budgetsafaris/?format=xml",
+      "website_url": "https://www.africanbudgetsafaris.com/blog/",
+      "description": "African Budget Safaris brings you first person coverage of budget travel and responsible travel in Africa. Get the latest on travelling Africa the way it should be travelled - on a shoestring. Here lie tales of budget travel heroism, up to the minute travel news and despatches from tents on the front line of the safari dream.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 966,
+        "instagram": 998
+      },
+      "image_url": "https://i1.feedspot.com/4671241.jpg?t=1617951107"
+    },
+    {
+      "title": "Etramping \u00bb Budget travel",
+      "feed_url": "https://etramping.com/budget-travel/feed/",
+      "website_url": "https://etramping.com/budget-travel/",
+      "description": "They travel since 2011. They are best friends. They are experts in travel. Follow along on eTramping.com and enjoy tips and guides for destinations you'd like to visit.",
+      "followers": {
+        "facebook": 21900,
+        "twitter": 20200,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4671195.jpg?t=1617947944"
+    },
+    {
+      "title": "Journalist On The Run",
+      "feed_url": "https://journalistontherun.com/feed/",
+      "website_url": "https://ticketsntour.com/",
+      "description": "Hi, I'm Janet and this is my travel blog where I write about my solo travel adventures around the world. Here you will find budget backpacking tips, solo travel guides and some funny stories thrown in here and there!",
+      "followers": {
+        "facebook": 36800,
+        "twitter": 14400,
+        "instagram": 156000
+      },
+      "image_url": "https://i1.feedspot.com/4670702.jpg?t=1617948345"
+    },
+    {
+      "title": "Breaking Free Without Breaking The Budget",
+      "feed_url": "https://www.thebudgetsavvytravelers.com/feed/",
+      "website_url": "https://www.thebudgetsavvytravelers.com/",
+      "description": "Join us as we explore the world through a budget savvy mindset. Our focus being to find amazing places that deliver an exceptional value for the dollar. We'll show you how to travel the world for WAY less than you think is possible.",
+      "followers": {
+        "facebook": 75900,
+        "twitter": 13600,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/4671360.jpg?t=1617948349"
+    },
+    {
+      "title": "StudentUniverse Travel - Written for Young Travelers, by Young Travelers Blog",
+      "feed_url": "https://www.studentuniverse.com/blog/feed",
+      "website_url": "https://www.studentuniverse.com/blog/",
+      "description": "StudentUniverse is the world's leading travel booking site for students and youth. This blog is for students looking to travel the world, we offer our members special rates on flights, hotels and tours, allowing students to travel more and spend less. Tips for Cheap Student Travel from Fellow Jetsetters.",
+      "followers": {
+        "facebook": 417300,
+        "twitter": 105400,
+        "instagram": 78800
+      },
+      "image_url": "https://i1.feedspot.com/4670589.jpg?t=1611312689"
+    },
+    {
+      "title": "Escape ATX",
+      "feed_url": "https://escapeatx.com/feed/",
+      "website_url": "https://escapeatx.com/",
+      "description": "Escape ATX is a travel blog that focuses on cheap airfare and travel deals leaving from Austin and San Antonio. This isn't a blog about visiting Austin or San Antonio, it's about leaving here for other destinations as cheaply as possible.",
+      "followers": {
+        "facebook": 69300,
+        "twitter": 32500,
+        "instagram": 133000
+      },
+      "image_url": "https://i1.feedspot.com/4671861.jpg?t=1612333672"
+    },
+    {
+      "title": "One Roof Travel",
+      "feed_url": "https://www.onerooftravel.com/blog/feed/",
+      "website_url": "https://www.onerooftravel.com/blog/news",
+      "description": "OneRoofTravel is a one stop destination for all your travel and vacation needs. From best rates on flights to amazing deals on hotel packages, OneRoofTravel can help you organize a fantastic trip and experience the joy of travel to its fullest. Our aim is to ensure every trip you take, become a lifelong memory to cherish.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/4671790.jpg?t=1617949785"
+    },
+    {
+      "title": "Truly Traveled",
+      "feed_url": "https://trulytraveled.com/feed/",
+      "website_url": "https://cheapdfw.com/",
+      "description": "From in-depth destination guides, to top 10 articles, to advanced travel tips, Truly Traveled prides itself in providing highly engaging useful content. Our team of contributors are avid travelers that share stories, pictures, and videos from their own experiences so you know you're getting up-to-date helpful insights to inspire you and prepare you for wherever your travels take you next.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 457,
+        "instagram": 385
+      },
+      "image_url": "https://i1.feedspot.com/4971271.jpg?t=1617948947"
+    },
+    {
+      "title": "Cheap DFW",
+      "feed_url": "https://cheapdfw.com/feed/",
+      "website_url": "https://cheapdfw.com/",
+      "description": "Inexpensive flights from Dallas / Fort heap DFW is a travel blog that focuses on cheap airfare and travel deals leaving from Dallas / Ft. Worth. This isn't a blog that covers local Dallas and Ft. Worth travel, it's about leaving here for other destinations as cheaply as possible.Worth!",
+      "followers": {
+        "facebook": 135500,
+        "twitter": 73900,
+        "instagram": 164000
+      },
+      "image_url": "https://i1.feedspot.com/4469408.jpg?t=1610777415"
+    },
+    {
+      "title": "Two Wandering Soles Blog",
+      "feed_url": "https://www.twowanderingsoles.com/blog?format=RSS",
+      "website_url": "https://www.twowanderingsoles.com/blog",
+      "description": "Read our stories, see our photos and come along on the adventure with us by following our travel blog.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 4500,
+        "instagram": 30000
+      },
+      "image_url": "https://i1.feedspot.com/4671199.jpg?t=1605875769"
+    },
+    {
+      "title": "Escape Houston",
+      "feed_url": "https://escapehouston.com/feed/",
+      "website_url": "https://escapehouston.com/",
+      "description": "Escape Houston is a travel blog that covers anything related to travel from Houston to anywhere else. This isn't a blog about Houston: it's about getting out, skipping town, and going to new places without breaking the bank. Mission is providing travel tips and highlighting great airfare deals so you can travel more often without it costing a lot of money.",
+      "followers": {
+        "facebook": 141400,
+        "twitter": 55500,
+        "instagram": 128699
+      },
+      "image_url": "https://i1.feedspot.com/4671859.jpg?t=1617948499"
+    },
+    {
+      "title": "Africa Overland Tours Blog",
+      "feed_url": "https://africanoverlandtours.com/feed/",
+      "website_url": "https://africanoverlandtours.com/overland-africa-blog/",
+      "description": "African Overland Tours offers best budget African safari tour packages (accommodated, small group, camping trips and overland tours) at amazing prices. We hope you find our blog informative and entertaining. We have packed it full of interesting articles, great specials, beautiful photographs of Africa and fascinating facts.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 192,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4671342.jpg?t=1617951139"
+    },
+    {
+      "title": "Secret Flying Blog",
+      "feed_url": "https://www.secretflying.com/feed/",
+      "website_url": "https://www.secretflying.com/blog/",
+      "description": "Find cheap flight deals at Secret Flying. We provide info on airfares with huge savings to your favourite destinations around the world.",
+      "followers": {
+        "facebook": 939900,
+        "twitter": 214200
+      },
+      "image_url": "https://i1.feedspot.com/4152221.jpg?t=1609134117"
+    }
+  ]
+}

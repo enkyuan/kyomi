@@ -1,0 +1,340 @@
+{
+  "category": "Boston Food",
+  "source_url": "https://rss.feedspot.com/boston_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Boston Chefs",
+      "feed_url": "https://www.bostonchefs.com/feed/",
+      "website_url": "https://www.bostonchefs.com/",
+      "description": "BostonChefs.com serves as the ultimate guide to Boston's culinary landscape, spotlighting top chefs and restaurants. As a digital marketing network, it fosters connections between chefs, diners, and brands, uniting them through a mutual love for food and drink. With insider coverage of the local culinary scene, it offers brands a unique platform to engage with their audience within the context of their passion for food.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 16600,
+        "instagram": 29100
+      },
+      "image_url": "https://i1.feedspot.com/4825772.jpg?t=1610795901"
+    },
+    {
+      "title": "We are not Martha",
+      "feed_url": "https://wearenotmartha.com/feed/",
+      "website_url": "https://wearenotmartha.com/",
+      "description": "Simple recipes that are perfect for both low-key time at home and entertaining friends, featuring easy weeknight dinners, delightful desserts, & cocktails!",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 4600,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5009684.jpg?t=1702634195"
+    },
+    {
+      "title": "Boston Girl Bakes",
+      "feed_url": "https://www.bostongirlbakes.com/feed/",
+      "website_url": "https://www.bostongirlbakes.com/",
+      "description": "Learn to make the perfect dessert every time and have fun doing it! Browse dozens of easy baking, cake and cookie recipes that will make you the hit of your next party or gathering.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 20800
+      },
+      "image_url": "https://i1.feedspot.com/5009662.jpg?t=1622268133"
+    },
+    {
+      "title": "The Ghee Spot",
+      "feed_url": "https://searchforthegheespot.com/feed/",
+      "website_url": "https://searchforthegheespot.com/",
+      "description": "Hi, I'm Adarsh and I am the chef behind The Ghee Spot! My inspiration for exploring new cuisines and flavors comes from watching Gordon Ramsay & Jamie Oliver; while I follow the basic recipe I always try to add instincts to create my recipes.",
+      "followers": {
+        "twitter": 6,
+        "instagram": 386
+      },
+      "image_url": "https://i1.feedspot.com/5165284.jpg?t=1702633743"
+    },
+    {
+      "title": "Assaggio Blog",
+      "feed_url": "https://assaggioboston.com/news/feed/",
+      "website_url": "https://assaggioboston.com/news/",
+      "description": "Read recipes, food critics, news and more from Assaggio's blog page.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5352071.jpg?t=1639122485"
+    },
+    {
+      "title": "Northshore Magazine \u00bb Eat-Drink",
+      "feed_url": "https://www.nshoremag.com/section/eat-drink/feed/",
+      "website_url": "https://www.nshoremag.com/section/eat-drink/",
+      "description": "Read the latest Eat + Drink articles from Northshore magazine. For 20 years, Northshore magazine's experienced editors, creatives, writers, and photographers have captured the region with its award-winning prose and design. They report on desirable towns and neighborhoods, places to hike and bike along the coast, which doctors are first-rate, and which restaurants, shops, spas, salons, and services are the Best of the North Shore.",
+      "followers": {
+        "facebook": 25300,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5352065.jpg?t=1639124077"
+    },
+    {
+      "title": "Bricco",
+      "feed_url": "https://bricco.com/news/feed/",
+      "website_url": "https://bricco.com/news/",
+      "description": "Read our blog to explore our menu options including pizza, pasta, seafood & desserts. We have the best Italian food & cocktails in the North End. Bricco is an Italian Restaurant in Boston's North End.",
+      "followers": {
+        "facebook": 9300,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5352067.jpg?t=1639123226"
+    },
+    {
+      "title": "Boston Magazine \u00bb Restaurants",
+      "feed_url": "https://www.bostonmagazine.com/restaurants/feed/",
+      "website_url": "https://www.bostonmagazine.com/restaurants/",
+      "description": "With over 40 years of expertise, Boston Magazine's seasoned team of writers, editors, and designers illuminate every facet of the city. Delve into their award-winning writing and groundbreaking reporting for insights on Boston's dining scene. From restaurant openings to dining advice, discover the city's culinary gems for both foodies and newcomers alike.",
+      "followers": {
+        "facebook": 156000,
+        "twitter": 170200,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/5316914.jpg?t=1639122905"
+    },
+    {
+      "title": "Boston.com \u00bb Food",
+      "feed_url": "https://www.boston.com/category/food/feed/",
+      "website_url": "https://www.boston.com/category/food/",
+      "description": "Stay up to date with Boston.com coverage of Food. Also get breaking updates on news, sports, and weather local alerts, things to do, and more on Boston.com.",
+      "followers": {
+        "facebook": 482800,
+        "twitter": 459600,
+        "instagram": 503800
+      },
+      "image_url": "https://i1.feedspot.com/5316846.jpg?t=1686810024"
+    },
+    {
+      "title": "BostonZest",
+      "feed_url": "https://feeds.feedburner.com/Bostonzest",
+      "website_url": "https://www.bostonzest.com/",
+      "description": "BostonZest is your guide for enjoying a full-flavoured life in an unbeatable city. We'll show you that there is life in Boston beyond the 'club kids' and students. Whether you live in Boston, plan to visit Boston, or are moving to Boston; we'll help you locate great food, fun events, and reliable resources.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/1902186.jpg?t=1702634219"
+    },
+    {
+      "title": "Boston Restaurant Talk",
+      "feed_url": "https://bostonrestaurants.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bostonrestaurants.blogspot.com/",
+      "description": "Boston Restaurant Talk is a news-based journal on the Boston restaurant scene. The owner of this blog, Marc, is also the founder of Boston's Hidden Restaurants, a website that focuses on local dining spots.",
+      "followers": {
+        "facebook": 42300,
+        "twitter": 120900
+      },
+      "image_url": "https://i1.feedspot.com/805271.jpg?t=1639121567"
+    },
+    {
+      "title": "Eater Boston",
+      "feed_url": "https://boston.eater.com/rss/index.xml",
+      "website_url": "https://boston.eater.com/",
+      "description": "Founded in 2005 and acquired by Vox Media in 2013, Eater has blossomed into a comprehensive platform for culinary enthusiasts. With the Gastropod podcast, a wine club, and acclaimed TV series like No Passport Required and Eater's Guide to the World, it's a global authority on food culture. Dive into exclusive articles, dining guides, and rich cultural experiences, including Boston's vibrant dining scene.",
+      "followers": {
+        "facebook": 32100,
+        "twitter": 35300,
+        "instagram": 106100
+      },
+      "image_url": "https://i1.feedspot.com/4724366.jpg?t=1639121376"
+    },
+    {
+      "title": "GBH \u00bb Food",
+      "feed_url": "https://www.wgbh.org/lifestyle/food.rss",
+      "website_url": "https://www.wgbh.org/lifestyle/food",
+      "description": "Food",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/5737412.jpg?t=1702632859"
+    },
+    {
+      "title": "BostonFoodventures Blog",
+      "feed_url": "https://www.bostonfoodventures.com/blog-feed.xml",
+      "website_url": "https://www.bostonfoodventures.com/blog",
+      "description": "Bostonfoodventures",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5737418.jpg?t=1702633135"
+    },
+    {
+      "title": "Dr. Frederick Douglass Opie Blog \u00bb Food",
+      "feed_url": "http://www.fredopie.com/food?format=rss",
+      "website_url": "https://www.fredopie.com/food",
+      "description": "Food as a lens into history based on the research and writing of Babson College professor of history and foodways Fred Opie",
+      "followers": {
+        "twitter": 1500,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5737414.jpg?t=1702632866"
+    },
+    {
+      "title": "Olives for Dinner",
+      "feed_url": "https://olivesfordinner.com/feed/",
+      "website_url": "https://olivesfordinner.com/",
+      "description": "Recipes focus on vegan seafood and comfort food classics for the Ethical Vegan. Written by Erin Wysocarski with photography by Jeff Wysocarski.",
+      "followers": {
+        "instagram": 17600
+      },
+      "image_url": "https://i1.feedspot.com/4481532.jpg?t=1609245442"
+    },
+    {
+      "title": "Clover Food Lab Blog",
+      "feed_url": "https://www.cloverfoodlab.com/feed/",
+      "website_url": "https://www.cloverfoodlab.com/blog/",
+      "description": "The Clover Food Lab blog shares updates on seasonal meal boxes new menu items and creative food ideas from the team.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5737411.jpg?t=1757411314"
+    },
+    {
+      "title": "Confessions of a Chocoholic \u00bb Recipes",
+      "feed_url": "http://www.confessionsofachocoholic.com/category/recipes/feed",
+      "website_url": "http://www.confessionsofachocoholic.com/category/recipes",
+      "description": "Bianca Garcia is a food and lifestyle blogger who writes about her favorite eats, family, recipe collection, restaurant review database, travel diary, and other life musings.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 2800,
+        "instagram": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5009679.jpg?t=1639397931"
+    },
+    {
+      "title": "Gourmet Pigs",
+      "feed_url": "http://gourmetpigs.blogspot.com/feeds/posts/default",
+      "website_url": "http://gourmetpigs.blogspot.com/",
+      "description": "Gourmet Pigs is a blog focused on showing people good restaurants, bars, food, and wine products, as well as where to travel and what to do.",
+      "followers": {
+        "facebook": 872,
+        "twitter": 7900,
+        "instagram": 25400
+      },
+      "image_url": "https://i1.feedspot.com/1661037.jpg?t=1622268160"
+    },
+    {
+      "title": "A Thought For Food Blog",
+      "feed_url": "https://www.athoughtforfood.net/blog?format=RSS",
+      "website_url": "https://www.athoughtforfood.net/blog/",
+      "description": "Brian is a lifestyle and food photographer in Boston and New York. He is the creator of the acclaimed food blog, A Thought For Food, a collection of recipes and personal anecdotes pertaining to cooking. His work has been featured in the Wall Street Journal, Bon Appetit, Sunday Morning on CBS, Saveur, Kinfolk, The Boston Globe, Edible Boston, and The Kitchen.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4680882.jpg?t=1618624178"
+    },
+    {
+      "title": "Elisabeth McKnight \u00bb Recipies",
+      "feed_url": "https://elisabethmcknight.com/category/recipes-boston-food-blogger/feed/",
+      "website_url": "https://elisabethmcknight.com/category/recipes-boston-food-blogger/",
+      "description": "Find here all the recipes from the popular Boston Food Blogger Elisabeth McKnight; from quick dinners to family favourites.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 13200,
+        "instagram": 18400
+      },
+      "image_url": "https://i1.feedspot.com/5352066.jpg?t=1639123925"
+    },
+    {
+      "title": "Mackenzie Fritz \u00bb Food",
+      "feed_url": "https://www.mackenziefritz.com/category/food/feed/",
+      "website_url": "https://www.mackenziefritz.com/category/food/",
+      "description": "A Boston-based lifestyle and food blog by Mackenzie Murphy. Brunch on Sunday is a place where she shares bits of style inspiration, hair and beauty tips, travel guides, and life in New England.",
+      "followers": {
+        "facebook": 823
+      },
+      "image_url": "https://i1.feedspot.com/5009825.jpg?t=1702633790"
+    },
+    {
+      "title": "The Boston Foodie",
+      "feed_url": "http://thebostonfoodie.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thebostonfoodie.blogspot.com/",
+      "description": "The Boston Foodie brings you articles on food, fun, celebrity encounters and lifestyle luxury events in and around Boston and New England.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5352061.jpg?t=1639122571"
+    },
+    {
+      "title": "Domestikated Life \u00bb Recipes",
+      "feed_url": "https://domestikatedlife.com/category/recipes/feed/",
+      "website_url": "https://domestikatedlife.com/category/recipes/",
+      "description": "Hi! I'm Kate, and I live in a charming coastal town just outside of Boston with my husband and daughter. I have been blogging for over a decade, chronicling my personal adventures in entertaining, home cooking, DIY projects, and motherhood.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2600,
+        "instagram": 31100
+      },
+      "image_url": "https://i1.feedspot.com/5352069.jpg?t=1639122272"
+    },
+    {
+      "title": "Boston Foodgram Blog",
+      "feed_url": "https://www.bostonfoodgram.com/blog-feed.xml",
+      "website_url": "https://www.bostonfoodgram.com/blog-1",
+      "description": "Boston Foodgram is a media platform that promotes restaurants, food and drink companies, hotels, apartment complexes, etc. on multiple media platforms",
+      "followers": {
+        "facebook": 968,
+        "instagram": 128500
+      },
+      "image_url": "https://i1.feedspot.com/5737415.jpg?t=1702633085"
+    },
+    {
+      "title": "Tiny Urban Kitchen \u00bb Boston",
+      "feed_url": "https://tinyurbankitchen.com/category/us-travel/boston/feed/",
+      "website_url": "https://tinyurbankitchen.com/category/us-travel/boston/",
+      "description": "Exploring Food from Boston to Hong Kong and Beyond",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 5500,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5737416.jpg?t=1702632884"
+    },
+    {
+      "title": "Catie Cooks",
+      "feed_url": "https://catiecooks.kitchen/feed/",
+      "website_url": "https://catiecooks.kitchen/",
+      "description": "The Anti-Diet Foodie",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 71
+      },
+      "image_url": "https://i1.feedspot.com/5737413.jpg?t=1702633205"
+    },
+    {
+      "title": "The Food in my Beard",
+      "feed_url": "https://www.thefoodinmybeard.com/feed/",
+      "website_url": "https://www.thefoodinmybeard.com/",
+      "description": "Hi! I'm Dan Whalen. The Food in my Beard is my recipe playground, so the recipes you see here were on my table or in my beard just a few days before being posted. Since starting The Food in my Beard in 2008, I've created over 1,000 recipes. I cook anything and everything and enjoy mashing up flavours, techniques, or cuisines that normally aren't paired together.",
+      "followers": {
+        "facebook": 376200,
+        "twitter": 4400,
+        "instagram": 87200
+      },
+      "image_url": "https://i1.feedspot.com/5352059.jpg?t=1702634018"
+    },
+    {
+      "title": "Made With Motif Blog",
+      "feed_url": "https://madewithmotif.com/blog/feed/",
+      "website_url": "https://meimeidumplings.com/blog/",
+      "description": "Unlike other food and ingredient companies, we're built to bring the outside in. We're a lean, nimble organization with seasoned professionals who have lived and led food businesses, along with science and technology experts who have renovated, innovated and designed leading-edge solutions. Stay up-to-date with the latest from us.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5352062.jpg?t=1639123077"
+    },
+    {
+      "title": "Mei Mei Blog",
+      "feed_url": "https://meimeidumplings.com/blog?format=rss",
+      "website_url": "https://meimeidumplings.com/blog/",
+      "description": "Chef Irene Li co-founded Mei Mei with her two older siblings in 2012. Mei Mei's unconventional dumpling combinations showcase our love for great New England ingredients along with a pursuit of what tastes delicious. We are a farm-focused, woman-owned business that strives to be a good company in every sense of the word. That's why we source our ingredients carefully and put our community at the centre of everything we do.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5352063.jpg?t=1639122121"
+    }
+  ]
+}

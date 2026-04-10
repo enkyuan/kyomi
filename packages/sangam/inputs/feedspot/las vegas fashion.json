@@ -1,0 +1,61 @@
+{
+  "category": "Las Vegas Fashion",
+  "source_url": "https://rss.feedspot.com/las_vegas_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "Glamour and Gains",
+      "feed_url": "https://glamourandgains.com/feed/",
+      "website_url": "https://glamourandgains.com/",
+      "description": "Glamour & Gains is a fashion and luxury lifestyle blog featuring the latest fashion, curated cruelty-free beauty, dream travel destinations, and fitness.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5232073.jpg?t=1612273855"
+    },
+    {
+      "title": "Thrifts + Tangles Blog",
+      "feed_url": "https://www.thriftsandtangles.com/feed/",
+      "website_url": "https://www.thriftsandtangles.com/blog/",
+      "description": "Tyler Chanel is the creator behind Thrifts & Tangles. Thrifts and Tangles began in 2012 as a way for Tyler to document her natural hair journey. After receiving several questions about her secondhand clothing from friends and family, she expanded into sharing thrifted fashion. Follow her blog, which provides educational tips and resources to encourage millennial women to give thrifting, sustainability, and their natural selves a chance.",
+      "followers": {
+        "facebook": 394,
+        "twitter": 158,
+        "instagram": 42
+      },
+      "image_url": "https://i1.feedspot.com/4836116.jpg?t=1611056560"
+    },
+    {
+      "title": "The Nomis Niche",
+      "feed_url": "https://www.thenomisniche.com/feed/",
+      "website_url": "https://www.thenomisniche.com/",
+      "description": "Based in Las Vegas, The Nomis Niche is a collection of outfit inspiration, beauty tips, and adventures of motherhood. The Nomis Niche is the personal style and fashion blog created and run by Lindsey Simon.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1600,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/4690849.jpg?t=1612869940"
+    },
+    {
+      "title": "Ivana Jorgensen",
+      "feed_url": "https://ivajorg.com/blog?format=RSS",
+      "website_url": "https://ivajorg.com/",
+      "description": "Showcasing daily fashion looks, travel guides, and occasional home renovation projects in the desert. A fashion and lifestyle blog based in Las Vegas, Nevada by Ivana Jorgensen.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5035002.jpg?t=1600352998"
+    },
+    {
+      "title": "Vintage Vandalizm Blog",
+      "feed_url": "https://vintagevandalizm.com/blogs/news.atom",
+      "website_url": "https://vintagevandalizm.com/blogs/news",
+      "description": "I believe fashion should be limitless and that self-expression should be fun and this is why I started this fashion blog. After wearing many hats in the New York Fashion world, I now reside in Las Vegas working as a full-time influencer, however, my journey has just begun. Be a part of my adventure and follow this blog for my take on fashion, art, and life.",
+      "followers": {
+        "facebook": 129300,
+        "twitter": 6100,
+        "instagram": 80700
+      },
+      "image_url": "https://i1.feedspot.com/4698732.jpg?t=1612869947"
+    }
+  ]
+}

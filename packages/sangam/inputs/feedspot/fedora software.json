@@ -1,0 +1,46 @@
+{
+  "category": "Fedora Software",
+  "source_url": "https://rss.feedspot.com/fedora_software_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fedora Magazine",
+      "feed_url": "https://fedoramagazine.org/feed/",
+      "website_url": "https://fedoramagazine.org/",
+      "description": "Fedora is a Linux-based operating system that showcases the latest in free and open-source software. Get guides, information, and news about the Fedora operating system for users, developers, system administrators, and community members.",
+      "followers": {
+        "facebook": 69400,
+        "twitter": 184400,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4861030.jpg?t=1619417317"
+    },
+    {
+      "title": "Christian F.K. Schaller \u00bb Fedora",
+      "feed_url": "https://blogs.gnome.org/uraeus/category/fedora/feed/",
+      "website_url": "https://blogs.gnome.org/uraeus/category/fedora/",
+      "description": "Christian F.K. Schaller is a Senior Manager at Red Hat SoftwareBlog talking about Fedora, GNOME, GStreamer, and related topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4954811.jpg"
+    },
+    {
+      "title": "Project Atomic Blog",
+      "feed_url": "https://projectatomic.io/blog/feed.xml?format=xml",
+      "website_url": "https://projectatomic.io/blog/",
+      "description": "Atomic Host provides immutable infrastructure for deploying to hundreds or thousands of servers in your private or public cloud. Available in Fedora Atomic Host, CentOS Atomic Host, and Red Hat Atomic Host editions depending on your platform and support needs.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/3909130.jpg?t=1621835320"
+    },
+    {
+      "title": "Planet Fedora - Fedora People",
+      "feed_url": "http://fedoraplanet.org//atom.xml",
+      "website_url": "https://fedoraplanet.org/",
+      "description": "News and updates all about the Fedora Project community that develops supports and promotes Fedora. For more information, and to download the Fedora OS head to Get Fedora. For general news about the Fedora OS, follow the Fedora Magazine.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4954790.jpg?t=1621835494"
+    }
+  ]
+}

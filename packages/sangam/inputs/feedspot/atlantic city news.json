@@ -1,0 +1,62 @@
+{
+  "category": "Atlantic City News",
+  "source_url": "https://rss.feedspot.com/atlantic_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Press of Atlantic City",
+      "feed_url": "https://pressofatlanticcity.com/search/?c=news&f=rss&l=50&s=start_time&sd=desc&t=article",
+      "website_url": "https://pressofatlanticcity.com/",
+      "description": "The Press of Atlantic City has been the leading South Jersey media and news source for over 100 years. Be informed with your trusted source for local & breaking news, sports, and weather forecasts from Atlantic City and the South Jersey area.",
+      "followers": {
+        "facebook": 101800,
+        "twitter": 139000,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5135896.jpg?t=1586416424"
+    },
+    {
+      "title": "Atlantic City News.Net",
+      "feed_url": "http://feeds.atlanticcitynews.net/rss/1d182eadc5b4db9d",
+      "website_url": "https://www.atlanticcitynews.net/",
+      "description": "Comprehensive coverage of Atlantic City news. New Jersey State issues, politics, and people making the news, Atlantic City weather updates, global news, and business stories.",
+      "followers": {
+        "facebook": 791,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5135922.jpg?t=1586416659"
+    },
+    {
+      "title": "NBC10 Philadelphia \u00bb Atlantic City",
+      "feed_url": "https://www.nbcphiladelphia.com/tag/atlantic-city/feed/",
+      "website_url": "https://www.nbcphiladelphia.com/tag/atlantic-city/",
+      "description": "Get Atlantic City Local News, Weather, Traffic, Entertainment, and Breaking News from NBC10 Philadelphia.",
+      "followers": {
+        "facebook": 898300,
+        "twitter": 644200,
+        "instagram": 224000
+      },
+      "image_url": "https://i1.feedspot.com/5135921.jpg?t=1586417061"
+    },
+    {
+      "title": "CBS News \u00bb Los Angeles",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/losangeles/",
+      "description": "Read local new reports and publics announcements. Atlantic Daily Voice is an Online Community News service committed to touching upon and bringing to light every newsworthy piece of information and action happening in the Atlantics City region and beyond. We are a community-focused media company serving the people of Atlantic City..",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5499068.jpg?t=1674562642"
+    },
+    {
+      "title": "CBS Philadelphia \u00bb Atlantic City",
+      "feed_url": "https://philadelphia.cbslocal.com/tag/atlantic-city/feed/",
+      "website_url": "https://www.cbsnews.com/philadelphia/tag/atlantic-city/",
+      "description": "News, Sports, Weather, Traffic and Alerts about Atlantic City from CBS Philly.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 215000
+      },
+      "image_url": "https://i1.feedspot.com/5135918.jpg?t=1586416834"
+    }
+  ]
+}

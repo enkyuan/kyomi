@@ -1,0 +1,38 @@
+{
+  "category": "Oakland Beauty",
+  "source_url": "https://rss.feedspot.com/oakland_beauty_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Lash Lounge Blog",
+      "feed_url": "https://www.thelashlounge.com/ca-oakland-rockridge/blog/feed/",
+      "website_url": "https://www.thelashlounge.com/ca-oakland-rockridge/blog/",
+      "description": "The Lash Lounge Oakland Rockridge is all about YOU! From the moment you walk in, our sole focus is giving you an exceptional guest experience that includes consultation, customization and care.",
+      "followers": {
+        "facebook": 564,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5738541.jpg?t=1702904913"
+    },
+    {
+      "title": "ShineForth Blog",
+      "feed_url": "https://shineforth.com/blog?format=rss",
+      "website_url": "https://shineforth.com/blog",
+      "description": "ShineForth Salon's blog for bridal hair and makeup stories.",
+      "followers": {
+        "facebook": 470
+      },
+      "image_url": "https://i1.feedspot.com/5738542.jpg?t=1702896022"
+    },
+    {
+      "title": "Adorn Cosmetics Blog",
+      "feed_url": "https://www.adorncosmetic.com/blog?format=rss",
+      "website_url": "https://www.adorncosmetic.com/blog",
+      "description": "Hallie Hyatt is a Certified Permanent Makeup Artist located in Oakland, California, and the co-owner of Studio Noir, a female-owned and operated permanent makeup and traditional tattoo studio serving people from all walks of life. At Adorn Permanent Cosmetics we specialize in real improvements. Our permanent makeup artists create perfect brows with individual hair strokes using a micro blade to give a polished look.",
+      "followers": {
+        "facebook": 138,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5505301.jpg?t=1675844236"
+    }
+  ]
+}

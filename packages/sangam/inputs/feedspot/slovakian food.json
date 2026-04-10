@@ -1,0 +1,61 @@
+{
+  "category": "Slovakian Food",
+  "source_url": "https://rss.feedspot.com/slovakian_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Varecha \u00bb Recipes",
+      "feed_url": "https://varecha.pravda.sk/rss/recepty.rss",
+      "website_url": "https://varecha.pravda.sk/recepty/",
+      "description": "Gorge upon a massive collection of easy & entertaining recipes and sides from Varecha. Varecha is today one of the largest recipe portals in Slovakia. A community of people has gathered around it, who discover new culinary inspirations and share their cooking experiences.",
+      "followers": {
+        "facebook": 191100,
+        "twitter": 1000,
+        "instagram": 27900
+      },
+      "image_url": "https://i1.feedspot.com/3703194.jpg?t=1666092202"
+    },
+    {
+      "title": "Cookslovak",
+      "feed_url": "https://cookslovak.com/feed/",
+      "website_url": "https://cookslovak.com/",
+      "description": "Cookslovak is a wonderful cooking blog sharing beautifully homemade, tasty recipes from the European Country of Slovakia. Dive into old traditions, cooking festivals, personal recommendations, and more. The blog also gives lifestyle and travel tips for visiting tourists in the country.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5458036.jpg?t=1666092113"
+    },
+    {
+      "title": "Menu\u010dka magaz\u00edn",
+      "feed_url": "https://menucka.sk/magazin/feed/",
+      "website_url": "https://menucka.sk/magazin/",
+      "description": "In Menucka Magazine we write about various interesting things from gastronomy, restaurants, food, and drinks or other gastro products and services. We write about what is good and where it is worth going for good food, about tips for interesting events, we interview interesting people and present our partner restaurants.",
+      "followers": {
+        "facebook": 8900,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5458039.jpg?t=1666092592"
+    },
+    {
+      "title": "Svetov\u00e9 recepty",
+      "feed_url": "https://svetoverecepty.sk/feed/",
+      "website_url": "https://svetoverecepty.sk/",
+      "description": "Explore a vast variety of English, Greek, Hungarian, and Indian Cuisines, Appetizers, Breakfast, Meatless meals Easter and Christmas recipes. Svetove is Slovakian that brings to you delicious, healthy, and easy-to-make recipes from all over the world. Explore more categories for your favorite cuisines.",
+      "followers": {
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5458038.jpg?t=1666091734"
+    },
+    {
+      "title": "Bratislava Beerbike Blog",
+      "feed_url": "https://bratislavabeerbike.sk/en/feed/",
+      "website_url": "https://bratislavabeerbike.sk/en/blog-en/",
+      "description": "Everything about our service, exciting new offers, upcoming prices, tours and developments, and more is in this blog. Bratislava Beerbike offers a unique and unforgettable experience through its Pub-on-Wheels where you can tap your own beer with your friends while listening to your favorite songs.",
+      "followers": {
+        "facebook": 34,
+        "instagram": 37
+      },
+      "image_url": "https://i1.feedspot.com/5458037.jpg?t=1666092610"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "category": "Gadsden News",
+  "source_url": "https://rss.feedspot.com/gadsden_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gadsden Messenger",
+      "feed_url": "https://gadsdenmessenger.com/category/news/feed/",
+      "website_url": "https://gadsdenmessenger.com/",
+      "description": "The Messenger is a weekly newspaper serving the City of Gadsden and all of Etowah County. We report the best local news, including high school sports and local events.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 755
+      },
+      "image_url": "https://i1.feedspot.com/5149790.jpg?t=1626164950"
+    },
+    {
+      "title": "City of Gadsden, AL",
+      "feed_url": "https://www.cityofgadsden.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofgadsden.com/CivicAlerts.aspx",
+      "description": "Get the latest news and notifications from The City of Gadsden, Alabama.",
+      "followers": {
+        "facebook": 26100,
+        "twitter": 2100,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5149794.jpg?t=1626164954"
+    },
+    {
+      "title": "The Gadsden Times",
+      "feed_url": "https://www.gadsdentimes.com/news?template=rss&mime=xml",
+      "website_url": "https://www.gadsdentimes.com/",
+      "description": "The Gadsden Times delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/5149785.jpg?t=1626164945"
+    }
+  ]
+}

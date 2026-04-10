@@ -1,0 +1,109 @@
+{
+  "category": "Phoenix News",
+  "source_url": "https://rss.feedspot.com/phoenix_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "North Central News",
+      "feed_url": "https://northcentralnews.net/feed/",
+      "website_url": "https://northcentralnews.net/",
+      "description": "North Central News is a monthly community newspaper in North Central Phoenix delivering updates on current issues. On this associated website, you will find Top stories from the Print edition covering Local and National Politics, Business, Community, Health, Education, Weather, and Public Safety.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 427
+      },
+      "image_url": "https://i1.feedspot.com/5482009.jpg?t=1671601499"
+    },
+    {
+      "title": "Burn City Sports",
+      "feed_url": "https://burncitysports.com/feed/",
+      "website_url": "https://burncitysports.com/",
+      "description": "Burn City Sports is the one-stop shop for all things related to sports in Phoenix. We cover sports 24/7 in Phoenix online and via print. Find team news, rumors, match previews, live scores, commentary, and analysis of your favorite sports teams online and tons of more premium content.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/5482010.jpg?t=1671601517"
+    },
+    {
+      "title": "Phoenix Business Journal",
+      "feed_url": "http://feeds.bizjournals.com/bizj_phoenix",
+      "website_url": "https://www.bizjournals.com/phoenix/",
+      "description": "Phoenix BizJournal provides latest breaking business news.Access business resources, company profiles, business advice columns, local jobs and more.",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 91700
+      },
+      "image_url": "https://i1.feedspot.com/1065133.jpg?t=1671597655"
+    },
+    {
+      "title": "Cronkite News",
+      "feed_url": "https://cronkitenews.azpbs.org/rss-ticker/",
+      "website_url": "https://cronkitenews.azpbs.org/",
+      "description": "Cronkite News is a multiplatform news organization. Cronkite News provides news, feature and investigative stories each week on issues critical to Arizonans.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 25800,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4493939.jpg?t=1671597736"
+    },
+    {
+      "title": "North Phoenix News",
+      "feed_url": "https://nophonews.com/feed/",
+      "website_url": "https://nophonews.com/",
+      "description": "North Phoenix News has its eye on the area's tremendous residential and commercial growth, and aims to keep you informed of everything that's going on, from neighborhood and school events to community news and real estate development.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 535
+      },
+      "image_url": "https://i1.feedspot.com/4893769.jpg?t=1671597766"
+    },
+    {
+      "title": "Phoenix New Times",
+      "feed_url": "https://www.phoenixnewtimes.com/phoenix/Rss.xml",
+      "website_url": "https://www.phoenixnewtimes.com/",
+      "description": "Original reporting and compelling writing on local news, restaurants, arts and culture have made Phoenix New Times a vital resource for readers who want to understand and engage with their community.",
+      "followers": {
+        "facebook": 143300,
+        "twitter": 151100,
+        "instagram": 107300
+      },
+      "image_url": "https://i1.feedspot.com/4538229.jpg?t=1694080531"
+    },
+    {
+      "title": "AZCentral",
+      "feed_url": "https://www.azcentral.com/",
+      "website_url": "https://www.azcentral.com/",
+      "description": "Follow us to stay informed with Arizona local news and headlines, photos and videos from around the Valley of Sun, including Chandler, Gilbert, Glendale, Peoria, Mesa, Phoenix, Scottsdale, Surprise and northwest Valley, the southwest Valley and Tempe.",
+      "followers": {
+        "facebook": 653800,
+        "twitter": 453500,
+        "instagram": 156800
+      },
+      "image_url": "https://i1.feedspot.com/4825324.jpg?t=1621407098"
+    },
+    {
+      "title": "Fox 10 Phoenix",
+      "feed_url": "https://www.fox10phoenix.com/",
+      "website_url": "https://www.fox10phoenix.com/",
+      "description": "FOX 10 is your home for breaking news, headlines, weather, traffic and politics in the Phoenix metro area with videos, photos and special reports.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 350600,
+        "instagram": 278700
+      },
+      "image_url": "https://i1.feedspot.com/4893706.jpg?t=1671597719"
+    },
+    {
+      "title": "Arizona Informant",
+      "feed_url": "https://azinformant.com/feed/",
+      "website_url": "https://abc13.com/place/arizona/",
+      "description": "Since 1971, the Arizona Informant has provided an important voice for the Black community throughout the state. The family owned and operated newspaper continues to capture the attention of the Black community and others. Published every Wednesday, the Arizona Informant Newspaper is the only African-American owned weekly newspaper in the state.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5482008.jpg?t=1679576603"
+    }
+  ]
+}

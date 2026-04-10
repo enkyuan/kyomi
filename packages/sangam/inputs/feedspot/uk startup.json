@@ -1,0 +1,114 @@
+{
+  "category": "UK Startup",
+  "source_url": "https://rss.feedspot.com/uk_startup_rss_feeds",
+  "feeds": [
+    {
+      "title": "Startups",
+      "feed_url": "https://startups.co.uk/feed/",
+      "website_url": "https://startups.co.uk/",
+      "description": "Find business ideas, funding help, independent growth advice, tools, and information for new businesses, start-ups, small businesses, and entrepreneurs.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 72300
+      },
+      "image_url": "https://i1.feedspot.com/4418507.jpg?t=1600241913"
+    },
+    {
+      "title": "TechRound",
+      "feed_url": "https://techround.co.uk/feed/",
+      "website_url": "https://techround.co.uk/",
+      "description": "TechRound provides the latest startup and technology news in London and the UK. We cover views and interviews as well as insights into how tech startups are changing our world. Keep posted for interviews with startup entrepreneurs and notable business people in London.",
+      "followers": {
+        "facebook": 798,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4839135.jpg?t=1611150893"
+    },
+    {
+      "title": "UK Business Blog",
+      "feed_url": "https://business.clickdo.co.uk/feed/atom/",
+      "website_url": "https://business.clickdo.co.uk/",
+      "description": "Top UK business blog bringing you small business advice and startup tips to grow your business in the United Kingdom. The blogs are written by ClickDo digital consultants with extensive experience in the fields of growth hacking and internet marketing.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4906341.jpg?t=1613737789"
+    },
+    {
+      "title": "ByteStart",
+      "feed_url": "https://www.bytestart.co.uk/feed",
+      "website_url": "https://www.bytestart.co.uk/",
+      "description": "How to start a business as a limited company owner or sole trader. Understand tax, accounting, and how expenses are treated, Sales & Marketing, Legal, Insurance, and Finance. ByteStart is now one of the most popular small business information sites in the UK, providing practical help and advice to startups and business owners while also being readable and entertaining.",
+      "followers": {
+        "twitter": 1600,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5331067.jpg?t=1634187892"
+    },
+    {
+      "title": "Startups of London",
+      "feed_url": "https://startupsoflondon.com/feed/",
+      "website_url": "https://startupsoflondon.com/",
+      "description": "Voice of the London Startup Ecosystem. Learn from the mistakes, failures, or success stories of other entrepreneurs and startups.",
+      "followers": {
+        "facebook": 148,
+        "twitter": 660,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5221901.jpg?t=1606908969"
+    },
+    {
+      "title": "Just Entrepreneurs Blog",
+      "feed_url": "https://feeds.feedburner.com/JustEntrepreneursBlog",
+      "website_url": "https://justentrepreneurs.co.uk/",
+      "description": "Just Entrepreneurs is a media and content marketing platform created for start-ups, small business owners and entrepreneurs. Follow us to keep up with amazing tips, guides and advice.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 3200,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4905626.jpg?t=1613652880"
+    },
+    {
+      "title": "Startups Magazine",
+      "feed_url": "https://startupsmagazine.co.uk/rss.xml",
+      "website_url": "https://startupsmagazine.co.uk/",
+      "description": "A digital and print magazine helping tech startups connect the dots on their entrepreneurial journeys. Connect the dots with founder secrets, startup success stories & more.",
+      "followers": {
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5196286.jpg?t=1599831262"
+    },
+    {
+      "title": "Motion Paradox",
+      "feed_url": "https://motionparadox.com/feed/",
+      "website_url": "https://motionparadox.com/insights/",
+      "description": "The Motion Paradox blog offers insights from highly experienced attorneys that specialize in helping start-ups, scale-ups and SME's build a solid foundation that limits risk and enables companies to grow the proper way.",
+      "followers": {
+        "facebook": 74,
+        "twitter": 22,
+        "instagram": 44
+      },
+      "image_url": "https://i1.feedspot.com/5511153.jpg?t=1677042312"
+    },
+    {
+      "title": "Startup Today",
+      "feed_url": "https://startuptoday.co.uk/feed/",
+      "website_url": "https://www.tartlemedia.co.uk/startupblog",
+      "description": "Startup Today is an online website and blog that helps people find business ideas to start up a online business today with tutorials and much more",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4906318.jpg?t=1613737782"
+    },
+    {
+      "title": "Tartlemedia Blog",
+      "feed_url": "https://www.tartlemedia.co.uk/feed.xml",
+      "website_url": "https://www.tartlemedia.co.uk/startupblog",
+      "description": "Tartle Media works with startups and small businesses seeking press coverage, copywriting, branding and content services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4906329.jpg?t=1613737802"
+    }
+  ]
+}

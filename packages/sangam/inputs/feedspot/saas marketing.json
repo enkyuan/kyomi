@@ -1,0 +1,75 @@
+{
+  "category": "SAAS Marketing",
+  "source_url": "https://rss.feedspot.com/saas_marketing_rss_feeds",
+  "feeds": [
+    {
+      "title": "SaaStr",
+      "feed_url": "https://www.saastr.com/feed/",
+      "website_url": "https://www.saastr.com/",
+      "description": "SaaStr is one of the world's largest communities of SaaS executives, founders, and entrepreneurs. Our goal is to help everyone get from $0 to $100m ARR with less stress and more success. We do that with a combination of industry-leading content and community connections.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 63600
+      },
+      "image_url": "https://i1.feedspot.com/4397495.jpg?t=1615289877"
+    },
+    {
+      "title": "Coexsys",
+      "feed_url": "https://www.coexsys.com/feed/",
+      "website_url": "https://www.coexsys.com/blogs/",
+      "description": "Coexsys Timekeeping efficiently tracks employee work time, leave, overtime by projects and eliminates hidden and indirect financial costs. Coexsys Timekeeping is the most feature rich, secure, reliable and proven time entry SaaS cloud in marketplace today.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5070991.jpg?t=1621325672"
+    },
+    {
+      "title": "Practical Advice on SaaS Marketing Blog",
+      "feed_url": "http://saasmarketingstrategy.blogspot.com/feeds/posts/default",
+      "website_url": "http://saasmarketingstrategy.blogspot.com/",
+      "description": "I'm Peter Cohen, principal of SaaS Marketing Strategy Advisors, and the author of the 'Practical Advice on SaaS Marketing' blog. Before I started my own firm and this blog, I'd spent many years in marketing positions with Lotus, IBM, and other companies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/314087.jpg?t=1609998905"
+    },
+    {
+      "title": "Cobloom Blog",
+      "feed_url": "https://www.cobloom.com/blog/rss.xml",
+      "website_url": "https://www.cobloom.com/blog",
+      "description": "Cobloom helps SaaS Startups to find traction and scale growth in a repeatable, predictable and data-driven way. Get the latest B2B SaaS growth tips, strategies & advice fresh from the Cobloom blog.",
+      "followers": {
+        "facebook": 204,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4721870.jpg?t=1607512754"
+    },
+    {
+      "title": "Preceptist Blog",
+      "feed_url": "https://preceptist.com/blog/feed/",
+      "website_url": "https://preceptist.com/blog/",
+      "description": "Preceptist, a content marketing agency for SaaS companies helps you get authoritative media exposure, convert traffic to leads and build resilient customer retention. This is a SaaS content marketing blog that focuses on strategies, trends, case studies, whitepapers, checklists, media exposure, leads generation and customer retention.",
+      "followers": {
+        "twitter": 765
+      },
+      "image_url": "https://i1.feedspot.com/4941736.jpg?t=1621325760"
+    },
+    {
+      "title": "CloudKettle Blog \u00bb SaaS Sales and Marketing",
+      "feed_url": "https://www.cloudkettle.com/blog/category/enterprise-sales-and-marketing/feed/",
+      "website_url": "https://www.cloudkettle.com/blog/category/enterprise-sales-and-marketing/",
+      "description": "CloudKettle helps SaaS companies improve their Sales, Marketing and Customer Support activities by leveraging Salesforce and integrated tools.",
+      "followers": {
+        "facebook": 249,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4941748.jpg?t=1621325681"
+    },
+    {
+      "title": "App Marketing Minds Blog",
+      "feed_url": "https://appmarketingminds.com/blog/feed/",
+      "website_url": "https://appmarketingminds.com/blog/",
+      "description": "App Marketing Minds provides SaaS companies with sales, marketing strategy, and execution, content marketing, customer success. Follow this blog for tactical and practical advice related to SaaS sales & marketing. Read more about lead generation, SEO, content marketing & SaaS sales.",
+      "followers": {
+        "facebook": 585
+      },
+      "image_url": "https://i1.feedspot.com/4941821.jpg?t=1621325735"
+    }
+  ]
+}

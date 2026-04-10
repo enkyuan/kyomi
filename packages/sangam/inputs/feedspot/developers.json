@@ -1,0 +1,260 @@
+{
+  "category": "Developers",
+  "source_url": "https://rss.feedspot.com/developers_rss_feeds",
+  "feeds": [
+    {
+      "title": "Stack Overflow",
+      "feed_url": "https://stackoverflow.blog/feed/",
+      "website_url": "https://stackoverflow.blog/",
+      "description": "Essays, opinions, and advice on the act of computer programming. Stack Overflow empowers the world to develop technology through collective knowledge. Stack Overflow's public platform serves 100 million people every month, making it one of the 50 most popular websites in the world.",
+      "followers": {
+        "facebook": 529500,
+        "twitter": 251500,
+        "instagram": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4744989.jpg?t=1760435691"
+    },
+    {
+      "title": "DEV Community",
+      "feed_url": "https://dev.to/feed",
+      "website_url": "https://dev.to/",
+      "description": "DEV is a community of software developers who shares their expertise via informative blogs, with popular tags that include javascript, web dev, beginners, programming, DevOps, opensource, and productivity.",
+      "followers": {
+        "facebook": 147300,
+        "twitter": 308400,
+        "instagram": 45900
+      },
+      "image_url": "https://i1.feedspot.com/4612936.jpg?t=1640262085"
+    },
+    {
+      "title": "freeCodeCamp",
+      "feed_url": "https://www.freecodecamp.org/news/rss",
+      "website_url": "https://www.freecodecamp.org/news/",
+      "description": "Browse thousands of programming tutorials written by experts. Learn Web Development, Data Science, DevOps, Security, and get developer career advice. We're a nonprofit community that helps you learn to code by building projects.",
+      "followers": {
+        "facebook": 275500,
+        "twitter": 836300
+      },
+      "image_url": "https://i1.feedspot.com/5060843.jpg?t=1657173235"
+    },
+    {
+      "title": "A List Apart",
+      "feed_url": "https://alistapart.com/main/feed/",
+      "website_url": "https://alistapart.com/articles/",
+      "description": "Since 1998, A List Apart has explored the design, development, and meaning of web content, with a special focus on web standards and best practices. Its mission is to inform, provoke, challenge, lead and educate the practice and profession of web design and related specializations.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 133600
+      },
+      "image_url": "https://i1.feedspot.com/320467.jpg?t=1608799625"
+    },
+    {
+      "title": "DZone",
+      "feed_url": "https://feeds.dzone.com/home",
+      "website_url": "https://dzone.com/",
+      "description": "Covers articles on agile, AI, big data, cloud, database, devops, integration, IoT, java, microservices, open source, performance, ssecurity and web dev. DZone serves technology professionals with the knowledge, tools, and strategies they need to build the future.",
+      "followers": {
+        "facebook": 49500,
+        "twitter": 74000
+      },
+      "image_url": "https://i1.feedspot.com/4366858.jpg?t=1657173955"
+    },
+    {
+      "title": "Smashing Magazine",
+      "feed_url": "https://www.smashingmagazine.com/feed",
+      "website_url": "https://www.smashingmagazine.com/articles/",
+      "description": "Smashing Magazine provides information on CSS, JavaScript, front-end, accessibility, UX and design. For developers, designers and front-end engineers. Founded in September 2006 in Germany, Smashing Magazine delivers reliable, useful, but most importantly practical articles to web designers and developers.",
+      "followers": {
+        "facebook": 268500,
+        "twitter": 875200
+      },
+      "image_url": "https://i1.feedspot.com/4398932.jpg?t=1643430987"
+    },
+    {
+      "title": "Shaaf's Blog",
+      "feed_url": "https://shaaf.dev/index.xml",
+      "website_url": "https://shaaf.dev/",
+      "description": "Shaaf Syed is a software developer at Red Hat, architect, open-source enthusiast, and cricket coach. His blog talks about Java, Kubernetes, and other things that he finds interesting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5667921.jpg?t=1694179868"
+    },
+    {
+      "title": "Google Developers Blog",
+      "feed_url": "https://feeds.feedburner.com/GDBcode",
+      "website_url": "https://developers.googleblog.com/en/",
+      "description": "News and insights on Google platforms, tools, and events. Google Developers is your source for announcements, protips from product experts, and the resources to support your development efforts.",
+      "followers": {
+        "facebook": 456700,
+        "twitter": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/4508832.jpg?t=1657173890"
+    },
+    {
+      "title": "Site Point Blog",
+      "feed_url": "https://www.sitepoint.com/sitepoint.rss",
+      "website_url": "https://www.sitepoint.com/blog/",
+      "description": "SitePoint is one of the largest online communities of web professionals. Their large, vibrant forum, thousands of top-quality tutorials, and their wide range of educational products on their learning platform learnable.com make sitepoint.com the top online resource for web designers and developers. Learn web design and development with SitePoint tutorials, courses, and books - HTML, CSS, JavaScript, PHP, and Responsive Web Design. Head to their blog to get detailed information about the site, their services, products, and more helpful articles.",
+      "followers": {
+        "facebook": 91700,
+        "twitter": 114600
+      },
+      "image_url": "https://i1.feedspot.com/5358672.jpg?t=1676010630"
+    },
+    {
+      "title": "Codrops",
+      "feed_url": "https://tympanus.net/codrops/feed/",
+      "website_url": "https://tympanus.net/codrops/",
+      "description": "Creative front-end resources and inspiration for web professionals. Codrops is a web design and development blog that publishes articles and tutorials about the latest web trends, techniques and new possibilities.",
+      "followers": {
+        "facebook": 81800,
+        "twitter": 180200,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/90418.jpg?t=1606107963"
+    },
+    {
+      "title": "SCAND Blog",
+      "feed_url": "https://scand.com/company/blog/feed/",
+      "website_url": "https://scand.com/company/blog/",
+      "description": "SCAND is an IT outsourcing company located in the center of Europe, the home of the best IT universities and highly qualified specialists in computer sciences, mathematics, and related fields. The company is focused on custom software development outsourcing across multiple technologies including .NET, Java, PHP, JavaScript, and C++.",
+      "followers": {
+        "facebook": 234,
+        "twitter": 104
+      },
+      "image_url": "https://i1.feedspot.com/5036706.jpg?t=1606111244"
+    },
+    {
+      "title": "SD Times",
+      "feed_url": "https://sdtimes.com/feed/",
+      "website_url": "https://sdtimes.com/",
+      "description": "Covers articles on api, ai, agile, containers, data, devops, devsecops, low code, microservices, monitor, security, serverless, value stream management and more. Software Development Times is the leading news source for the software development industry.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 24900
+      },
+      "image_url": "https://i1.feedspot.com/4065154.jpg?t=1650454451"
+    },
+    {
+      "title": "Jon Skeet's Coding Blog",
+      "feed_url": "https://codeblog.jonskeet.uk/feed/",
+      "website_url": "https://codeblog.jonskeet.uk/",
+      "description": "Jon Skeet's Coding Blog is a place where you can read the latest blogs and resources on coding and development.",
+      "followers": {
+        "twitter": 66700
+      },
+      "image_url": "https://i1.feedspot.com/4652093.jpg?t=1657177623"
+    },
+    {
+      "title": "Codemotion Magazine",
+      "feed_url": "https://www.codemotion.com/magazine/feed/",
+      "website_url": "https://www.codemotion.com/magazine",
+      "description": "Codemotion is the proven platform that helps developers grow their careers by connecting IT professionals, technology communities and Companies. Like all our activities, our Magazine is made by developers for developers with a genuine passion for programming. Use it as a source of information, to get first-hand industry insights or simply to confront your skillset with those of other IT professionals.",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 2300,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5496930.jpg?t=1674199739"
+    },
+    {
+      "title": "Simple Programmer",
+      "feed_url": "https://simpleprogrammer.com/feed/",
+      "website_url": "https://simpleprogrammer.com/blog-2/",
+      "description": "Hi, I'm John Sonmez, the Founder of Simple Programmer. Learn how to program, improve your career and develop your people skills. Let's make the complex simple and tackle the mental aspects of being a software developer together.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 41800
+      },
+      "image_url": "https://i1.feedspot.com/28657.jpg?t=1619592838"
+    },
+    {
+      "title": "Smashing Hub",
+      "feed_url": "https://smashinghub.com/feed",
+      "website_url": "https://smashinghub.com/",
+      "description": "SmashingHub is all about free online resources for developers, designers, and photographers; you can find useful tutorials, WordPress, freebies, digital art, web apps, etc. SmashingHub (SH) is a leading weblog and resource site for Graphic designers, Photographers, Technology and web developers.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 396
+      },
+      "image_url": "https://i1.feedspot.com/66330.jpg?t=1657177431"
+    },
+    {
+      "title": "Code Simplicity",
+      "feed_url": "https://www.codesimplicity.com/feed/",
+      "website_url": "https://www.codesimplicity.com/",
+      "description": "Complexity is stupid. Simplicity is smart. Code Simplicity focuses on the idea of simplicity: simple things, simple thoughts, and simple ideas that can make the world of computing a better place. Max Kanat-Alexander is the author of Code Simplicity: The Science of Software Development, published by O'Reilly Media. During the day, Max is a Principal Staff Software Engineer at LinkedIn. Before that, he was the Technical Lead for Code Health at Google.",
+      "followers": {
+        "facebook": 40800,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/363306.jpg?t=1657175227"
+    },
+    {
+      "title": "WebAppers",
+      "feed_url": "https://feeds.feedburner.com/Webappers",
+      "website_url": "https://www.webappers.com/",
+      "description": "WebAppers is a blog dedicated to share top quality open source resources for web developer and web designer daily. As a web designer, you'll find some of the best free icons, stock photos, brushes, fonts and design inspirations. As a web developer, you'll also find some of the best Javascript and Ajax components like modal windows, menus, galleries, tooltips, charts, calendars plugins and a lot more.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/131485.jpg?t=1657175609"
+    },
+    {
+      "title": "Pontikis.net Blog",
+      "feed_url": "https://www.pontikis.net/feed",
+      "website_url": "https://www.pontikis.net/blog",
+      "description": "Blog posts on Angular, Digital Marketing, SEO, Linux Administration, Mobile Development, Python and more. Pontikis.net is a technology and how-to blog. Web labs is the space where open source projects are presented (demo, docs, tutorials). The purpose of the site is to review web technology, its business and culture and to provide breaking tech news.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 566
+      },
+      "image_url": "https://i1.feedspot.com/4203736.jpg?t=1657175495"
+    },
+    {
+      "title": "The Daily WTF",
+      "feed_url": "http://syndication.thedailywtf.com/TheDailyWtf",
+      "website_url": "https://thedailywtf.com/",
+      "description": "Founded in 2004 by Alex Papadimoulis, The Daily WTF is your how-not-to guide for developing software. We recount tales of disastrous development, from project management gone spectacularly bad to inexplicable coding choices.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/21993.jpg?t=1657173835"
+    },
+    {
+      "title": "AIParabellum.com Blog",
+      "feed_url": "https://aiparabellum.com/feed/",
+      "website_url": "https://aiparabellum.com/category/blog/",
+      "description": "AIParabellum.com is your premier destination for discovering and showcasing cutting-edge AI tools. As the dedicated AI Tools Directory, we connect creators, innovators, and enthusiasts in the field of artificial intelligence. Here you'll find articles on various topics related to artificial intelligence and AI tools. We aim to inform readers of the latest developments in the field while maintaining an easy-to-digest and laid-back writing style.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5750654.jpg?t=1704709429"
+    },
+    {
+      "title": "GeeksforGeeks",
+      "feed_url": "https://www.geeksforgeeks.org/feed/",
+      "website_url": "https://www.geeksforgeeks.org/",
+      "description": "A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes, and practice/competitive programming/company interview questions.",
+      "followers": {
+        "facebook": 215700,
+        "twitter": 84300,
+        "instagram": 471600
+      },
+      "image_url": "https://i1.feedspot.com/3365675.jpg?t=1658840981"
+    },
+    {
+      "title": "Net Solutions",
+      "feed_url": "https://www.netsolutions.com/insights/feed/",
+      "website_url": "https://www.netsolutions.com/insights/",
+      "description": "Read our thought leadership-driven content on best practices and trends in the ever-evolving technology landscape. Net Solutions is a strategic design & build consultancy that unites creative design thinking with agile software development under one expert roof. Founded in 2000, we create award-winning transformative digital products & platforms for startups and enterprises worldwide.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 2000,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5159121.jpg?t=1612177819"
+    }
+  ]
+}

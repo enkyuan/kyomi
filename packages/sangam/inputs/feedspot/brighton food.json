@@ -1,0 +1,74 @@
+{
+  "category": "Brighton Food",
+  "source_url": "https://rss.feedspot.com/brighton_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Brighton Restaurants Blog",
+      "feed_url": "https://restaurantsbrighton.co.uk/blog/feed/",
+      "website_url": "https://restaurantsbrighton.co.uk/blog/",
+      "description": "Brighton Restaurants Guide, featuring the latest openings and the cities best restaurants. Including food & drink events, food festival news, and more.",
+      "followers": {
+        "facebook": 21900,
+        "twitter": 34000,
+        "instagram": 52100
+      },
+      "image_url": "https://i1.feedspot.com/5174457.jpg?t=1626250415"
+    },
+    {
+      "title": "Foodie Eshe",
+      "feed_url": "https://foodieeshe.com/feed/",
+      "website_url": "https://foodieeshe.com/",
+      "description": "Hello, I'm Esh\u00e9 the lady behind the blog. Foodie Eshe is a Brighton food blog and insider's guide to where to eat across Brighton & Hove, with a focus on independent restaurants. On this blog, you'll find honest reviews of restaurants, cafes, supper clubs, takeaways, and pop-up restaurants in Brighton, as well as all the latest news on the new openings.",
+      "followers": {
+        "facebook": 947
+      },
+      "image_url": "https://i1.feedspot.com/4635131.jpg?t=1602510037"
+    },
+    {
+      "title": "The Graphic Foodie",
+      "feed_url": "https://feeds.feedburner.com/thegraphicfoodie",
+      "website_url": "http://www.thegraphicfoodie.co.uk/",
+      "description": "Covers reviews and guide to the best restaurants, popups, supper clubs and food news in Brighton & Hove.",
+      "followers": {
+        "facebook": 909,
+        "twitter": 9600,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4549321.jpg?t=1602063589"
+    },
+    {
+      "title": "Tea, Cake & Make",
+      "feed_url": "https://www.teacakemake.com/feed/",
+      "website_url": "https://www.teacakemake.com/",
+      "description": "Tea, Cake & Make is a Brighton based vegan food and lifestyle blog. It documents the life of a craft-loving, planner addict in her 30s, living in Brighton and Hove in the UK.",
+      "followers": {
+        "facebook": 178,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4785091.jpg?t=1605253192"
+    },
+    {
+      "title": "The Wine Ninjas \u00bb Food",
+      "feed_url": "https://wineninjas.org/category/food/feed/",
+      "website_url": "https://wineninjas.org/category/food/",
+      "description": "Welcome to The Wine Ninjas, a wine-flavored online magazine, pouring out irreverent wine, food, and travel features.",
+      "followers": {
+        "twitter": 4500,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5173751.jpg?t=1626250423"
+    },
+    {
+      "title": "BN1 Magazine \u00bb FOOD & DRINK",
+      "feed_url": "https://www.bn1magazine.co.uk/category/food-drink/feed/",
+      "website_url": "https://www.bn1magazine.co.uk/category/food-drink/",
+      "description": "BN1 Magazine is the leading source of entertainment and lifestyle news in Brighton & Hove. The definitive guide for reviews and lists of the best and most popular restaurants and bars in Brighton & Hove. Find the perfect place for your meal or drinks.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 19500,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5173867.jpg?t=1626250411"
+    }
+  ]
+}

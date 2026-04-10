@@ -1,0 +1,53 @@
+{
+  "category": "UK Womens Fashion",
+  "source_url": "https://rss.feedspot.com/uk_womens_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "Marie Claire \u00bb Fashion",
+      "feed_url": "https://www.marieclaire.co.uk/feeds/tag/fashion",
+      "website_url": "https://www.marieclaire.co.uk/fashion",
+      "description": "Marie Claire magazine's daily destination site marieclaire.co.uk is your one-stop shop for celebrity gossip, world news, fashion, beauty and shopping advice.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 267200,
+        "instagram": 216100
+      },
+      "image_url": "https://i1.feedspot.com/4512668.jpg?t=1605596598"
+    },
+    {
+      "title": "Midlifechic \u00bb Style",
+      "feed_url": "https://www.midlifechic.com/feed/",
+      "website_url": "https://www.midlifechic.com/topics/style/",
+      "description": "Midlife Chic is a UK blog for women over 40 who are getting their groove back. Written by the former editor of Selfridges magazine, it focuses on classic chic featuring high street fashion and beauty. It is a forum for midlife women to discuss the issues that they face as they enter into the second half of their life.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 2400,
+        "instagram": 42200
+      },
+      "image_url": "https://i1.feedspot.com/4642747.jpg?t=1605591304"
+    },
+    {
+      "title": "Ivy Ekong \u00bb Style",
+      "feed_url": "https://ivyekong.com/blogs/style.atom",
+      "website_url": "https://ivyekong.com/blogs/style",
+      "description": "A Multicultural Fashion, Beauty and Lifestyle Platform for women of all ages. Check out all fashion and style related articles here.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 2400,
+        "instagram": 108000
+      },
+      "image_url": "https://i1.feedspot.com/4912708.jpg?t=1620280048"
+    },
+    {
+      "title": "SoSensational",
+      "feed_url": "https://www.sosensational.co.uk/feed/",
+      "description": "Mature woman looking for age-appropriate fashion? You've come to the right place! No more trawling the high street or websites. Here you will get fabulous fashion tips that suits your style.",
+      "followers": {
+        "facebook": 25600,
+        "twitter": 3800,
+        "instagram": 449
+      },
+      "image_url": "https://i1.feedspot.com/4911634.jpg?t=1622037439"
+    }
+  ]
+}

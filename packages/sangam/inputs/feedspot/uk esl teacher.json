@@ -1,0 +1,50 @@
+{
+  "category": "UK ESL Teacher",
+  "source_url": "https://rss.feedspot.com/uk_esl_teacher_rss_feeds",
+  "feeds": [
+    {
+      "title": "My Elt Rambles",
+      "feed_url": "https://myeltrambles.com/feed/",
+      "website_url": "https://myeltrambles.com/",
+      "description": "This page is dedicated to my blog, My ELT Rambles. I enjoy blogging about teaching English and lifestyle.",
+      "followers": {
+        "facebook": 974,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4723992.jpg?t=1607497673"
+    },
+    {
+      "title": "Cambridge English University",
+      "feed_url": "https://www.cambridge.org/elt/blog/feed/",
+      "website_url": "https://www.cambridge.org/elt/blog/",
+      "description": "Create your own world from our thousands of experiences, insights, ideas and resources we have available. This is your space, your World of better learning.",
+      "followers": {
+        "facebook": 49400,
+        "twitter": 31300
+      },
+      "image_url": "https://i1.feedspot.com/4645700.jpg?t=1761647524"
+    },
+    {
+      "title": "TEFL Org UK Blog",
+      "feed_url": "https://www.tefl.org/feed/",
+      "website_url": "https://www.tefl.org/blog/",
+      "description": "Most highly accredited TEFL courses in the UK! Over 30 UK course locations and online courses, you can study from anywhere in the world.",
+      "followers": {
+        "facebook": 39000,
+        "twitter": 7700,
+        "instagram": 29000
+      },
+      "image_url": "https://i1.feedspot.com/4912117.jpg?t=1620621840"
+    },
+    {
+      "title": "Teacher Phili",
+      "feed_url": "https://teacherphili.wordpress.com/feed/",
+      "website_url": "https://teacherphili.wordpress.com/news/",
+      "description": "English Language Tutor - originally from London but now living and working in Norwich, UK.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4917624.jpg?t=1620621845"
+    }
+  ]
+}

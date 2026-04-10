@@ -1,0 +1,28 @@
+{
+  "category": "Carson City News",
+  "source_url": "https://rss.feedspot.com/carson_city_nevada_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Carson Now",
+      "feed_url": "https://www.carsonnow.org/rss.xml",
+      "website_url": "https://www.carsonnow.org/",
+      "description": "Carson Now is a local news website serving the Carson City, Nevada area. It is dedicated to the advancement of community journalism and educating local readers about current news and events.",
+      "followers": {
+        "facebook": 40200,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5142572.jpg?t=1626442411"
+    },
+    {
+      "title": "Nevada Appeal",
+      "feed_url": "https://www.nevadaappeal.com/feed/",
+      "website_url": "https://www.nevadaappeal.com/",
+      "description": "News in Carson City Nevada. Your source for News, Crime, Public Safety, Weather, Business and Opinion from NevadaAppeal.com",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5130716.jpg?t=1626442407"
+    }
+  ]
+}

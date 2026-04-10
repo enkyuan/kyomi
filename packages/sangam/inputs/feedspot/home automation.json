@@ -1,0 +1,786 @@
+{
+  "category": "Home Automation",
+  "source_url": "https://rss.feedspot.com/home_automation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Automated Home",
+      "feed_url": "https://automatedhome.com/feed/",
+      "website_url": "https://automatedhome.com/",
+      "description": "Automated Home is the Centre of the Home Automation Community with home automation news, reviews, forums, wiring guides, and tutorials. Read, learn about, and shop innovatively designed products and smart systems within the Automated Home blog page.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 36600,
+        "instagram": 33
+      },
+      "image_url": "https://i1.feedspot.com/4604338.jpg?t=1619531766"
+    },
+    {
+      "title": "SmartThings Blog",
+      "feed_url": "https://blog.smartthings.com/feed/",
+      "website_url": "https://blog.smartthings.com/",
+      "description": "SmartThings lets you easily monitor, control, and secure your home from anywhere. You can stay connected to loved ones when you're on the go; control and program lights, temperature, and more; and protect your home more affordably than with a traditional home security system.",
+      "followers": {
+        "facebook": 96,
+        "twitter": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4605056.jpg?t=1615469896"
+    },
+    {
+      "title": "Home Assistant Blog",
+      "feed_url": "https://www.home-assistant.io/atom.xml?format=xml",
+      "website_url": "https://www.home-assistant.io/blog/",
+      "description": "Home Assistant is an open-source home automation platform running on Python 3. Track and control all devices at home and automate control.",
+      "followers": {
+        "facebook": 48600,
+        "twitter": 72100
+      },
+      "image_url": "https://i1.feedspot.com/4605004.jpg?t=1615526208"
+    },
+    {
+      "title": "Hackaday \u00bb Home Automation",
+      "feed_url": "https://hackaday.com/tag/home-automation/feed/",
+      "website_url": "https://hackaday.com/tag/home-automation/",
+      "description": "Hackaday.com serves up fresh hacks each day, every day from around the web. Hackaday.io is a platform for people who like to make things.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/4605430.jpg?t=1615526214"
+    },
+    {
+      "title": "DigitNet Store Blog",
+      "feed_url": "https://digitnetstore.com/feed/",
+      "website_url": "https://global.digitnetstore.com/techguardian-blog/",
+      "description": "DigitNet Store Inc., is your number one curated online marketplace that offers the best in smart products, security, safety, and allied products. Stay on top of all the latest Digital and Smart utility products with round-the-clock updates on this blog.",
+      "followers": {
+        "twitter": 4,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5715369.jpg?t=1700655570"
+    },
+    {
+      "title": "Technico Blog",
+      "feed_url": "https://www.technicoss.com/blog-feed.xml",
+      "website_url": "https://www.technicoss.com/blog",
+      "description": "Uncover the top security trends of 2024! The Technico Blog is your source of all smart home technology news and innovations. Technico Security Systems is a specialist security camera company in Brooklyn that provides the best CCTV products and installation services including Nest, and Ring doorbells, thermostats, security cameras, locks, and more, near you.",
+      "followers": {
+        "facebook": 2,
+        "instagram": 75
+      },
+      "image_url": "https://i1.feedspot.com/7288591.jpg?t=1712085769"
+    },
+    {
+      "title": "Chefio Blog",
+      "feed_url": "https://www.chefio.co/blogs/news.atom",
+      "website_url": "https://www.chefio.co/blogs/news",
+      "description": "Explore the endless possibilities with Chefio home gadgets and elevate your home to new heights of convenience and sophistication. From modern kitchen appliances to intelligent smart home automation devices and luxurious bathroom essentials, Chefio's innovative range seamlessly integrates into any home environment, enhancing practicality and efficiency.",
+      "followers": {
+        "facebook": 347,
+        "twitter": 17,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/7303878.jpg?t=1713869072"
+    },
+    {
+      "title": "Z-Wave Alliance Blog",
+      "feed_url": "https://z-wavealliance.org/feed/",
+      "website_url": "https://z-wavealliance.org/z-wave-alliance-blog/",
+      "description": "The Internet of Things is powered by Z-Wave. Z-Wave Alliance is a consortium of leading companies in the home technology space dedicated to solidifying Z-Wave as the standard for wireless home control products.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4605641.jpg?t=1615526254"
+    },
+    {
+      "title": "SDM Magazine",
+      "feed_url": "https://www.sdmmag.com/rss/articles",
+      "website_url": "https://www.sdmmag.com/",
+      "description": "SDM, Security Distributing and Marketing is the security channel media, providing management and technical professionals with solutions for the security marketplace.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4605572.jpg?t=1619517641"
+    },
+    {
+      "title": "Connected World",
+      "feed_url": "https://connectedworld.com/feed/",
+      "website_url": "https://connectedworld.com/category/expert-opinions/",
+      "description": "Connected World is the adviser to business leaders who are making decisions about connectivity, innovation, technology, and collaboration. Specialty Publishing Media is dedicated to on-the-go people who are looking to stay connected in a hypercompetitive IoT world.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4605074.jpg?t=1615528032"
+    },
+    {
+      "title": "Mighty Gadget",
+      "feed_url": "https://mightygadget.co.uk/category/home-automation/feed/",
+      "website_url": "https://mightygadget.co.uk/category/home-automation/",
+      "description": "Mighty Gadget is the UK's leading gadget blog covering everything new in gadgets, phones, gaming, TVs and other consumer electronics.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 6900,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4605085.jpg?t=1615526239"
+    },
+    {
+      "title": "Guardian Protection Blog",
+      "feed_url": "https://guardianprotection.com/blog/feed/",
+      "website_url": "https://guardianprotection.com/blog/",
+      "description": "Guardian Protection Services is a company dedicated to life safety and monitoring of property. They provide an extensive array of security and monitoring services to more than a quarter-million residential and commercial customers.",
+      "followers": {
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4605048.jpg?t=1615526453"
+    },
+    {
+      "title": "E Control Devices Blog",
+      "feed_url": "https://econtroldevices.com/feed/",
+      "website_url": "https://econtroldevices.com/blog/",
+      "description": "Features articles that have to do exclusively with Home Automation. At E Control Devices, we help people to solve the challenges in the right electric product selection and provide a rapid introduction to the newest technology for the design engineers.",
+      "followers": {
+        "facebook": 892,
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/5376721.jpg?t=1646217131"
+    },
+    {
+      "title": "HomeTechHacker",
+      "feed_url": "https://hometechhacker.com/feed/",
+      "website_url": "https://hometechhacker.com/",
+      "description": "Information about smart home technology and home network security for the DIY crowd. HomeTechHacker provides insight into common tech problems in the modern home, advice for tough tech purchases, and reviews of common products.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 2400,
+        "instagram": 766
+      },
+      "image_url": "https://i1.feedspot.com/5215362.jpg?t=1660047765"
+    },
+    {
+      "title": "Security Sales & Integration News",
+      "feed_url": "https://www.securitysales.com/feed/",
+      "website_url": "https://www.securitysales.com/news/",
+      "description": "The leading electronic security industry resource for professional security installing contractors, security dealers and systems integrators. Dedicated to keeping security professionals informed of market trends, new security products and training opportunities. Security News, Video, Blog, Product Reviews and more.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4604998.jpg?t=1615526245"
+    },
+    {
+      "title": "Smart Home World Magazine",
+      "feed_url": "https://www.smarthomeworld.in/feed/",
+      "website_url": "https://www.smarthomeworld.in/",
+      "description": "Smart Home World is an online information platform for the latest innovations in Smart Home Tech, Home Control Systems, Home Automation, Lighting, Audio Video, Energy Saving, security, Building Automation, and more.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 192,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5273581.jpg?t=1619531705"
+    },
+    {
+      "title": "Alayoubi Technologies Blog",
+      "feed_url": "https://alayoubi.com/feed/",
+      "website_url": "https://alayoubi.com/blog/",
+      "description": "If you are thinking to start a smart home automation business then here is easy to apply guide for you. Now many of the people are thinking on the practical basis to start this business. Alayoubi technologies is the answer for a smart home automation as they strive to give your home a brain.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 3000,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5289402.jpg?t=1623049247"
+    },
+    {
+      "title": "Level Up Your Home Blog",
+      "feed_url": "https://www.levelupyourhome.com/blogs/level-up-smart-stuff.atom",
+      "website_url": "https://www.levelupyourhome.com/blogs/level-up-smart-stuff",
+      "description": "This blog covers all the important topics of Smart Home or Connected home products. From home automation, to wireless speakers, smart thermostats to video doorbells.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 184,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4605012.jpg?t=1615526289"
+    },
+    {
+      "title": "Wayne Alarm Systems Blog",
+      "feed_url": "https://waynealarm.com/resources/blog/feed/",
+      "website_url": "https://waynealarm.com/resources/blog/",
+      "description": "Wayne Alarm Systems writes frequent blogs and new articles about local home and business security alarm system & fire information safety tips in Boston MA.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4605739.jpg?t=1615526276"
+    },
+    {
+      "title": "Loxone Blog",
+      "feed_url": "https://www.loxone.com/enen/feed/",
+      "website_url": "https://www.loxone.com/enen/blog/",
+      "description": "The destination for smart home news. Discover the latest product and software news, tips for building a smart home, real life case studies and more.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 4700,
+        "instagram": 53900
+      },
+      "image_url": "https://i1.feedspot.com/4604968.jpg?t=1615470002"
+    },
+    {
+      "title": "At Home in the Future",
+      "feed_url": "https://athomeinthefuture.com/feed/",
+      "website_url": "https://athomeinthefuture.com/archives/",
+      "description": "A smart home blog documenting journey to find the perfect solutions to make home safer, more organized, and a better place to live.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 617,
+        "instagram": 361
+      },
+      "image_url": "https://i1.feedspot.com/4572193.jpg?t=1615470034"
+    },
+    {
+      "title": "Majik House Blog",
+      "feed_url": "https://majikhouse.com/feed",
+      "website_url": "https://majikhouse.com/blog",
+      "description": "Read more from the world of home automation, home cinema, dynamic audio systems and home lighting systems. Majik House for design and installation of smart home automation.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 5200,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4605548.jpg?t=1615527352"
+    },
+    {
+      "title": "Smart Home Perfected",
+      "feed_url": "https://www.smarthomeperfected.com/feed/",
+      "website_url": "https://www.smarthomeperfected.com/",
+      "description": "Smart Home Perfected is the ultimate resource to help you build out your smart home. From learning materials, advice to product guides and reviews.",
+      "followers": {
+        "facebook": 29
+      },
+      "image_url": "https://i1.feedspot.com/5155369.jpg?t=1615527599"
+    },
+    {
+      "title": "ListenUp Blog",
+      "feed_url": "https://listenup.com/blogs/posts.atom",
+      "website_url": "https://listenup.com/blogs/posts",
+      "description": "Check out blog to see what's new at ListenUp. Articles on new tech products, user guides, clearance items, and in-store audio visual events.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 1600,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4605563.jpg?t=1615527751"
+    },
+    {
+      "title": "Connected Home Inc Blog",
+      "feed_url": "https://www.connectedhomenc.com/blog-feed.xml",
+      "website_url": "https://www.connectedhomenc.com/blog-1",
+      "description": "Connected Home Inc. was formed under the guiding principle that great service does not have to be expensive. Their goal is to provide the best service, best products, and cleanest installs at an amazing value.",
+      "followers": {
+        "facebook": 540,
+        "twitter": 158
+      },
+      "image_url": "https://i1.feedspot.com/4605093.jpg?t=1615527755"
+    },
+    {
+      "title": "Coldwell Banker Blog \u00bb Smart Home",
+      "feed_url": "https://blog.coldwellbanker.com/category/smart-home/feed/",
+      "website_url": "https://blog.coldwellbanker.com/category/smart-home/",
+      "description": "Coldwell Banker has investigated the most cutting edge smart home technology. Read up on the latest and decide what smart home technology is best for your home.",
+      "followers": {
+        "facebook": 332000,
+        "twitter": 97500
+      },
+      "image_url": "https://i1.feedspot.com/4605742.jpg?t=1615526190"
+    },
+    {
+      "title": "Wink Blog",
+      "feed_url": "https://www.blog.wink.com/wink-blog?format=RSS",
+      "website_url": "https://www.blog.wink.com/",
+      "description": "Wink is the smarter way to a simpler home. The Wink app is a beautifully designed platform that keeps you connected to your home\u2014no matter where you are. Simple controls allow you to monitor and manage everything in your home.",
+      "followers": {
+        "facebook": 27800,
+        "twitter": 21200
+      },
+      "image_url": "https://i1.feedspot.com/4496438.jpg?t=1615471785"
+    },
+    {
+      "title": "The Smart Cave Blog",
+      "feed_url": "https://thesmartcave.com/feed/",
+      "website_url": "https://thesmartcave.com/blog/",
+      "description": "The world of smart devices is exciting, new, and often confusing. Read articles, reviews, and expert advice on the latest in smart home technology.",
+      "followers": {
+        "facebook": 996,
+        "twitter": 252
+      },
+      "image_url": "https://i1.feedspot.com/4643367.jpg?t=1615526522"
+    },
+    {
+      "title": "The Canary Blog",
+      "feed_url": "https://blog.canary.is/feed/",
+      "website_url": "https://blog.canary.is/",
+      "description": "The world's first smart home security device for everyone. Canary is a complete home security system packed into a single device\u2014a modern approach to security that lets you protect the people and places you care about most.",
+      "followers": {
+        "facebook": 43600,
+        "twitter": 12900,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4605080.jpg"
+    },
+    {
+      "title": "Living Smarter",
+      "feed_url": "https://living-smarter.com/feed/",
+      "website_url": "https://living-smarter.com/",
+      "description": "Living Smarter is a website with information about how to live smarter with technology. There is a lot of good to know stuff and other know-how for example about robot vacuum cleaners, that are really helpful and can give you an overall better experience. You'll find the site helpful and useful in your quest to make your life and home smarter.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5199247.jpg?t=1600865825"
+    },
+    {
+      "title": "Digitized House",
+      "feed_url": "https://digitized.house/feed/",
+      "website_url": "https://digitized.house/",
+      "description": "Guide to a smart, sustainable, healthy house. home. House Digitized House Magazine is the all-digital, original-content source for engaged homeowners, exploring the convergence of the smart house, the sustainable house, and the zero energy house.",
+      "followers": {
+        "facebook": 777,
+        "twitter": 15700
+      },
+      "image_url": "https://i1.feedspot.com/4605585.jpg?t=1619531479"
+    },
+    {
+      "title": "Skyler H \u00bb Home Automation",
+      "feed_url": "https://skylerh.com/feed/",
+      "website_url": "https://skylerh.com/category/home-automation/",
+      "description": "A personal blog covering industrial automation, home automation, science, and electronics.",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5008213.jpg?t=1615527742"
+    },
+    {
+      "title": "Automate Your Crib",
+      "feed_url": "https://automateyourcrib.com/feed/",
+      "website_url": "https://automateyourcrib.com/",
+      "description": "Live A Better Life Through Smart Home Technology.This site is for your average consumer who are enthusiastic about home automation",
+      "followers": {
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/4960620.jpg?t=1615526532"
+    },
+    {
+      "title": "H3 Digital Blog",
+      "feed_url": "https://feeds.feedburner.com/SmartHomeBlog-H3Digital-SmartHomes",
+      "website_url": "https://www.h3-digital.com/smarthomeblog",
+      "description": "This blog is about home cinema, audio and lighting technology from Thailand's top Smart Home company.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 275
+      },
+      "image_url": "https://i1.feedspot.com/4605747.jpg?t=1615527320"
+    },
+    {
+      "title": "Brock Technology Grp Blog",
+      "feed_url": "https://brocktg.com/blog/feed/rss/blog?format=feed",
+      "website_url": "https://brocktg.com/blog",
+      "description": "See how Smart Home Automation and Lighting Control enhances your lifestyle with added convenience, comfort, security and aesthetics in your Texas home.",
+      "followers": {
+        "facebook": 258,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/4605487.jpg?t=1615527326"
+    },
+    {
+      "title": "Ambiance Systems Blog",
+      "feed_url": "https://www.ambiancesystems.com/blog/feed/rss/blog?format=feed",
+      "website_url": "https://www.ambiancesystems.com/blog",
+      "description": "Technology integrator explains how smart home automation enhances your New York lifestyle with added convenience, comfort, security and aesthetics.",
+      "followers": {
+        "facebook": 288,
+        "twitter": 82,
+        "instagram": 195
+      },
+      "image_url": "https://i1.feedspot.com/4605471.jpg?t=1615527336"
+    },
+    {
+      "title": "TL Tech Smart Home Solutions Blog",
+      "feed_url": "https://www.tltechsmart.com/feed/",
+      "website_url": "https://www.tltechsmart.com/blog/",
+      "description": "Welcome to the TL Tech website, we can help you get the most out of your home environment and be better connected to your family. This blog series will be looking to showcase the opportunities, find out more about the people working in this field and how we can create a world 'where smart meets kind'. Follow to get updates.",
+      "followers": {
+        "facebook": 326,
+        "twitter": 210,
+        "instagram": 61
+      },
+      "image_url": "https://i1.feedspot.com/5202762.jpg?t=1601559068"
+    },
+    {
+      "title": "NV Integration News",
+      "feed_url": "https://nvintegration.co.uk/blog/rss/news",
+      "website_url": "https://nvintegration.co.uk/category/news",
+      "description": "Get the latest news on NV Integration and home automation projects. NV Integration is an innovative home technology company. They design & install bespoke home automation & cinema systems for the luxury residential market.",
+      "followers": {
+        "facebook": 723,
+        "twitter": 717,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4605605.jpg?t=1615527341"
+    },
+    {
+      "title": "One Box To Rule Them All",
+      "feed_url": "https://mediaserver8.blogspot.com/feeds/posts/default",
+      "website_url": "https://mediaserver8.blogspot.com/",
+      "description": "A blog about setting up smart-home automation, media storage and playback based on unRAID.",
+      "followers": {
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/712845.jpg?t=1615527493"
+    },
+    {
+      "title": "SmartNutter",
+      "feed_url": "https://smartnutter.com/feed/",
+      "website_url": "https://smartnutter.com/",
+      "description": "We discuss all sorts of home upgrades and technological enhancements that are both inexpensive and bring in value-added benefits to your living standards!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5059089.jpg"
+    },
+    {
+      "title": "Think Protection Blog",
+      "feed_url": "https://thinkprotection.com/blog/feed/",
+      "website_url": "https://thinkprotection.com/blog/",
+      "description": "With Thinkpro's targeted security packages, you can protect your home and family and save money on installation costs. It offers top-notch technology at an affordable price. This blog provides news and useful information about their home security monitoring services and home security alarm systems.",
+      "followers": {
+        "facebook": 3700,
+        "instagram": 51
+      },
+      "image_url": "https://i1.feedspot.com/4604942.jpg?t=1615527765"
+    },
+    {
+      "title": "Smart Home Geeks",
+      "feed_url": "https://www.smarthomegeeks.co.uk/feed/",
+      "website_url": "https://www.smarthomegeeks.co.uk/",
+      "description": "Smart Home Geeks is a site by Smart enthusiasts for Smart enthusiasts. You'll find How to's, reviews and news on everything smart home related.",
+      "followers": {
+        "facebook": 454,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4736338.jpg?t=1615528184"
+    },
+    {
+      "title": "GeeksFL Blog",
+      "feed_url": "https://www.geeksfl.com/blog/feed/",
+      "website_url": "https://www.geeksfl.com/blog/",
+      "description": "Step inside the GeeksFL blog to learn about the latest home automation technologies, home theater, surround sound systems, and motorized shading solutions. We offer free guides, tips & DIY projects that you can start today. Geeks of Tech South Florida is a tight-knit team of automation engineering professionals.",
+      "followers": {
+        "facebook": 552,
+        "twitter": 569
+      },
+      "image_url": "https://i1.feedspot.com/5302693.jpg?t=1626439123"
+    },
+    {
+      "title": "eZlO Blog",
+      "feed_url": "https://blog.ezlo.com/feed/",
+      "website_url": "https://blog.ezlo.com/",
+      "description": "The best way to keep your family safe, and make your life easier and greener. Vera makes any home a smart home at affordable prices.",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 3700,
+        "instagram": 526
+      },
+      "image_url": "https://i1.feedspot.com/4604924.jpg?t=1615527716"
+    },
+    {
+      "title": "Leviton Blog \u00bb Home Automation",
+      "feed_url": "https://blog.leviton.com/taxonomy/term/128/all/feed",
+      "website_url": "https://blog.leviton.com/tags/home-automation",
+      "description": "Leviton Manufacturing is North America's leading manufacturer of electrical wiring devices, lighting controls, data center connectivity solutions, electric vehicle supply equipment and security & automation.",
+      "followers": {
+        "facebook": 218700,
+        "twitter": 12100,
+        "instagram": 51100
+      },
+      "image_url": "https://i1.feedspot.com/4604909.jpg?t=1615526229"
+    },
+    {
+      "title": "Naran",
+      "feed_url": "https://medium.com/feed/naran",
+      "website_url": "https://medium.com/naran",
+      "description": "Developing smart devices and robots for home automation and the Internet of Things.",
+      "followers": {
+        "facebook": 619,
+        "twitter": 770
+      },
+      "image_url": "https://i1.feedspot.com/4605016.jpg?t=1615527812"
+    },
+    {
+      "title": "Link Your House Blog",
+      "feed_url": "https://linkyourhouse.com/feed/",
+      "website_url": "https://linkyourhouse.com/news-blog/",
+      "description": "Link Your House mission is to enhance the lifestyle of clients by providing safety, comfort and convenience through the use of technology.",
+      "followers": {
+        "facebook": 140,
+        "twitter": 175
+      },
+      "image_url": "https://i1.feedspot.com/4604352.jpg?t=1615526565"
+    },
+    {
+      "title": "The Ambient",
+      "feed_url": "https://www.the-ambient.com/rss",
+      "website_url": "https://www.the-ambient.com/",
+      "description": "The home for your smart home. Here, you'll find smart home technology reviews & guides. The Ambient helps you buy, connect and use Alexa, Google Assistant, and big-name brands to create your perfect connected home.",
+      "followers": {
+        "facebook": 693,
+        "twitter": 2200,
+        "instagram": 753
+      },
+      "image_url": "https://i1.feedspot.com/5118349.jpg?t=1628249937"
+    },
+    {
+      "title": "Grid Connect Blog",
+      "feed_url": "https://www.gridconnect.com/blogs/news.atom",
+      "website_url": "https://www.gridconnect.com/blogs/news",
+      "description": "ConnectSense is the perfect solution for automating your home or business, allowing you to control everything from your living room to your server room. Their line of wireless products is steeped in the technology of the Internet of Things.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 2400,
+        "instagram": 195
+      },
+      "image_url": "https://i1.feedspot.com/4604886.jpg?t=1615470052"
+    },
+    {
+      "title": "Glow Green",
+      "feed_url": "https://www.glowgreenltd.com/help-and-advice/page/1",
+      "website_url": "https://www.glowgreenltd.com/help-and-advice/page/1",
+      "description": "You can hardly surprise people with smart devices and other IoT gadgets, however, this new development is something entirely new we're talking about an emerging sub-discipline of IoT which is smart surfaces. It encompass a new generation of materials that are able to change their properties instigated by an external impulse.",
+      "followers": {
+        "facebook": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4682645.jpg?t=1615527747"
+    },
+    {
+      "title": "Rich AV Design Blog",
+      "feed_url": "https://richavdesign.com/blog",
+      "website_url": "https://richavdesign.com/blog",
+      "description": "Smart home technology integrator explains how home automation enhances your lifestyle with services like lighting control, motorized shading, audio / video.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 95
+      },
+      "image_url": "https://i1.feedspot.com/4605458.jpg?t=1615527285"
+    },
+    {
+      "title": "Bravas Blog",
+      "feed_url": "https://bravas.com/feed/",
+      "website_url": "https://bravas.com/blog/",
+      "description": "Follow this blog for helpful smart home automation guidance for your Dallas, Texas home, from lighting and shading control to a dedicated home theater.",
+      "followers": {
+        "facebook": 363,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4605775.jpg"
+    },
+    {
+      "title": "Wicked Smart Homes Blog",
+      "feed_url": "https://wickedsmarthomes.com/blog",
+      "website_url": "https://wickedsmarthomes.com/blog",
+      "description": "Wicked Smart Homes can make your home more luxurious, more secure, and more entertaining than you ever dreamed possible. Smart home integration specialists.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 390
+      },
+      "image_url": "https://i1.feedspot.com/4605757.jpg"
+    },
+    {
+      "title": "HomeToys News",
+      "feed_url": "https://hometoys.com/",
+      "website_url": "https://hometoys.com/",
+      "description": "A News and Information Resource for the Automation, Security & A/V Systems Industry. Daily News Stories, Products, Industry Tools, Hundreds of Articles and more.",
+      "followers": {
+        "facebook": 402,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/1710980.jpg?t=1615469874"
+    },
+    {
+      "title": "Lifehacker - Home Automation",
+      "feed_url": "https://lifehacker.com/tag/home-automation/rss",
+      "website_url": "https://lifehacker.com/tag/home-automation",
+      "description": "This blog is about Home Automation News, Videos, Reviews and Gossip. Lifehacker curates tips, tricks, and technology for living better in the digital age.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/1068786.jpg?t=1615526219"
+    },
+    {
+      "title": "Smarter Home Guide",
+      "feed_url": "https://smarterhomeguide.com/feed/",
+      "website_url": "https://smarterhomeguide.com/",
+      "description": "DIY Home Automation Made Simple. Adrian Snead is passionate about smart home gadgets. In this blog, He tries to answer a lot of the questions you might encounter while purchasing or setting up your smart home devices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5302689.jpg"
+    },
+    {
+      "title": "Brainy Housing",
+      "feed_url": "https://brainyhousing.com/feed/",
+      "website_url": "https://brainyhousing.com/",
+      "description": "I'm Dinu Sri, a computer and electronic embedded system developer. Currently, perusing a PhD in Nanosensors. From my childhood, I had a passion for SMART automatic systems. Throughout the day to day life, I did many electronic experiments and obsessed with them. Most of them related to my home automation. So, I believe those experiences motivated to start the BrainyHousing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5172902.jpg"
+    },
+    {
+      "title": "Supreme Security Blog",
+      "feed_url": "https://supremesecurity.com/feed/",
+      "website_url": "https://supremesecurity.com/blogs/",
+      "description": "Supreme Security is improving the safety and security of homeowners and business owners since 1985 and has been the main focus of what they do and it is what they continue to pride themselves on. Their expertise in providing trusted custom security solutions and enhancements is what has been keeping their customers not only coming back but spreading the word as well. Explore blog articles for condo security, strategies, commercial and home security, and more.",
+      "followers": {
+        "facebook": 862,
+        "twitter": 236
+      },
+      "image_url": "https://i1.feedspot.com/4605675.jpg?t=1615526536"
+    },
+    {
+      "title": "Great Smart Gadgets",
+      "feed_url": "https://greatsmartgadgets.com/feed/",
+      "website_url": "https://greatsmartgadgets.com/",
+      "description": "A team of passionate experts, who are enthusiastic in Engineering and Information Technology, fit for today's needs in an ever-changing world.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5121523.jpg?t=1615527306"
+    },
+    {
+      "title": "Digital Home Systems Blog",
+      "feed_url": "https://www.digitalhomesystems.com.au/news?format=feed&type=rss",
+      "website_url": "https://digitalhomesystems.com.au/blog/",
+      "description": "Find smart home automation tips and tricks, latest news in the Z-Wave technology industry and top guides to help set up the perfect smart home system for you!",
+      "followers": {
+        "facebook": 237
+      },
+      "image_url": "https://i1.feedspot.com/5129167.jpg?t=1615528050"
+    },
+    {
+      "title": "Stratatech Group",
+      "feed_url": "https://www.stratatech.net/feed/",
+      "website_url": "https://www.stratatech.net/",
+      "description": "Follow this blog for complete smart home and Information Technology Solutions.",
+      "followers": {
+        "facebook": 501,
+        "twitter": 54,
+        "instagram": 163
+      },
+      "image_url": "https://i1.feedspot.com/4605510.jpg"
+    },
+    {
+      "title": "Resolution Products Blog",
+      "feed_url": "https://resolutionproducts.com/blog/feed/",
+      "website_url": "https://securitygrad.com/",
+      "description": "Resolution Products is a high-tech design and manufacturing company specializing in wireless technologies for the professional security market and related connected-home (IoT) space.",
+      "followers": {
+        "facebook": 417,
+        "twitter": 734
+      },
+      "image_url": "https://i1.feedspot.com/4605069.jpg?t=1615527443"
+    },
+    {
+      "title": "Security Grad",
+      "feed_url": "https://securitygrad.com/index.php/feed/",
+      "website_url": "https://securitygrad.com/",
+      "description": "Alarm and security information for everyone. Home security Reviews, security how to's, home alarms, automation and video surveillance from start to finish.",
+      "followers": {
+        "twitter": 623
+      },
+      "image_url": "https://i1.feedspot.com/5123172.jpg?t=1615527468"
+    },
+    {
+      "title": "Barrett's Blog",
+      "feed_url": "https://barretts.tv/feed/",
+      "website_url": "https://www.smarterhomeautomation.com/articles/",
+      "description": "Barrett's Technology Solutions is Chicago's leading technology integrator, specializing in the design and installation of smart home automation and control.",
+      "followers": {
+        "facebook": 935200,
+        "twitter": 421,
+        "instagram": 575
+      },
+      "image_url": "https://i1.feedspot.com/4605822.jpg?t=1615527483"
+    },
+    {
+      "title": "Smarter Home Automation",
+      "feed_url": "https://www.smarterhomeautomation.com/articles/feed/",
+      "website_url": "https://www.smarterhomeautomation.com/articles/",
+      "description": "Posts feature articles on new smart home or home automation industry trends, new technologies, products updates, reviews, and more. Smarter Home Automation provides you with information on creating your own Smart Home.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 292,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/4605726.jpg?t=1615472286"
+    },
+    {
+      "title": "SmartHomeBit",
+      "feed_url": "https://www.smarthomebit.com/feed/",
+      "website_url": "https://www.smarthomebit.com/",
+      "description": "My Smart Home Blog is for individuals who want the latest information or want some guides on making your own Smart Home. From Amazon, Google and Ring.",
+      "followers": {
+        "twitter": 94
+      },
+      "image_url": "https://i1.feedspot.com/5056502.jpg?t=1615526558"
+    },
+    {
+      "title": "24/7 Home Security",
+      "feed_url": "https://24-7-home-security.com/feed/",
+      "website_url": "https://24-7-home-security.com/",
+      "description": "24/7 Home Security blog is about security and home automation.",
+      "followers": {
+        "facebook": 164500,
+        "twitter": 981
+      },
+      "image_url": "https://i1.feedspot.com/4605722.jpg?t=1615526264"
+    },
+    {
+      "title": "Automated Lifestyles Blog",
+      "feed_url": "https://www.automated-lifestyles.com/home-automation-news/feed",
+      "website_url": "https://www.automated-lifestyles.com/blog",
+      "description": "Automated Lifestyles shares design, installation and troubleshooting tips along with the latest home automation news and technology trends.",
+      "followers": {
+        "facebook": 383,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/4605483.jpg?t=1615526541"
+    },
+    {
+      "title": "Home Security Reviews",
+      "feed_url": "https://zwavezone.com/blog/feed/",
+      "website_url": "https://home-security-reviews.com/",
+      "description": "Z-Wave Zone is your source for everything Z-Wave and home automation related. Here you will find reviews, deals, and guides on hooking up your smart home.",
+      "followers": {
+        "facebook": 266,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4605089.jpg?t=1615527728"
+    },
+    {
+      "title": "Builder Online \u00bb Home Automation",
+      "feed_url": "https://www.builderonline.com/tag/home-automation?rss=true",
+      "website_url": "https://www.builderonline.com/tag/home-automation",
+      "description": "The leading information source for the home building industry. Get the latest news on home designs, building materials, building products, and home plans to help you and your home building operations.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 30400
+      },
+      "image_url": "https://i1.feedspot.com/4605534.jpg"
+    },
+    {
+      "title": "Build Your Smart Home",
+      "feed_url": "https://buildyoursmarthome.co/feed/",
+      "website_url": "https://buildyoursmarthome.co/",
+      "description": "A webpage dedicated to the Smart Home. Find News, Tutorials and Reviews for the areas of Home Automation & Home Security. Your info resource on everything Home Automation, Home Security & Smart Home related.",
+      "followers": {
+        "facebook": 658,
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/4605558.jpg?t=1615527722"
+    }
+  ]
+}

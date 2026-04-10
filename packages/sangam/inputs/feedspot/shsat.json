@@ -1,0 +1,44 @@
+{
+  "category": "SHSAT",
+  "source_url": "https://rss.feedspot.com/shsat_rss_feeds",
+  "feeds": [
+    {
+      "title": "SHSAT Sunset Blog",
+      "feed_url": "https://shsatsunset.org/blog/feed/",
+      "website_url": "https://shsatsunset.org/blog/",
+      "description": "At SHSAT, our goal is to advocate the replacement of the Hecht-Calandra act. A terrible law passed 50 years ago out of fear. Read our blogs and keep up with data, information, and opinions on the SHSAT exam.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488801.jpg?t=1672992367"
+    },
+    {
+      "title": "The Tutorverse Blog",
+      "feed_url": "https://thetutorverse.com/blog/feed/",
+      "website_url": "https://thetutorverse.com/blog/",
+      "description": "Here at Tutoverse, we'll help you separate fact from fiction. There's a lot of information out there. We stay updated on all the latest changes to entrance exams, admissions, and educational standards so you don't have to. Let our experts help you define and attain your goals.",
+      "followers": {
+        "facebook": 105,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/5488798.jpg?t=1672992430"
+    },
+    {
+      "title": "City Smarts Blog",
+      "feed_url": "https://www.citysmarts.net/new-blog?format=rss",
+      "website_url": "https://www.citysmarts.net/new-blog",
+      "description": "City Smarts provides tailored academic tutoring, test preparation, and admissions consulting to students encountering a variety of goals. We work with our student's parents, teachers, and learning specialists to establish an individualized support structure that will ensure both short-term benefits and long-term comprehension.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488800.jpg?t=1672992653"
+    },
+    {
+      "title": "AdmissionSquad Blog",
+      "feed_url": "https://admissionsquad.org/blog?format=rss",
+      "website_url": "https://admissionsquad.org/blog",
+      "description": "AdmissionSquad, Inc., is an education company that offers test prep, academic enrichment, mentorship, and application consulting to middle schoolers who have a goal to attend one of the Specialized High Schools in NYC or a competitive screened program. Our goal is to ensure that all New Yorkers, regardless of race or economic status, have an opportunity to attend New York City's top public high schools.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/5488802.jpg?t=1672992691"
+    }
+  ]
+}

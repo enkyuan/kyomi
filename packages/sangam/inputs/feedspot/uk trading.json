@@ -1,0 +1,92 @@
+{
+  "category": "UK Trading",
+  "source_url": "https://rss.feedspot.com/uk_trading_rss_feeds",
+  "feeds": [
+    {
+      "title": "Admiral Markets Blog",
+      "feed_url": "https://admiralmarkets.com/analytics/traders-blog/feed.xml",
+      "website_url": "https://admiralmarkets.com/analytics/traders-blog",
+      "description": "Members of the Admiral Markets group are regulated by various financial regulatory authorities all over the world. Follow our blog to get the latest market updates from professional traders. Being a client-oriented company, Admiral Markets mission is to become a global leader in providing comfortable access to every type of financial instrument, while empowering clients with relevant education, competitive trading terms, an engaging community, prompt customer support.",
+      "followers": {
+        "facebook": 4,
+        "instagram": 770
+      },
+      "image_url": "https://i1.feedspot.com/4584835.jpg?t=1613718052"
+    },
+    {
+      "title": "Logikfx Blog",
+      "feed_url": "https://www.logikfx.com/blog-feed.xml",
+      "website_url": "https://www.logikfx.com/forex-trading-blog",
+      "description": "Logikfx strives to bridge the technological & educational gap between the financial institutions and stand-alone retail traders. Learn to trade Forex with Logikfx's fundamental trading, and macro trading articles. The best free resource for beginner and pro traders.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 59,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5171374.jpg?t=1613718067"
+    },
+    {
+      "title": "TheDaxTrader | DAX 30 Trading Community",
+      "feed_url": "https://thedaxtrader.co.uk/feed/",
+      "website_url": "https://thedaxtrader.co.uk/",
+      "description": "Professional German DAX 30 Technical Analysis, Strategies, Signals, Software and Education. Invest in your development as a trader.",
+      "followers": {
+        "facebook": 521,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4949718.jpg?t=1613718092"
+    },
+    {
+      "title": "Two Blokes Trading | Learn to Trade Online",
+      "feed_url": "https://twoblokestrading.com/feed/",
+      "website_url": "https://twoblokestrading.com/blog/",
+      "description": "Join Two Blokes Training as they learn the secrets to trading online. For all the latest news & tips & to listen to our trading podcast visit our website.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3000,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4906093.jpg?t=1613718063"
+    },
+    {
+      "title": "Loans and International Financing",
+      "feed_url": "https://cmfinancials.wordpress.com/feed/",
+      "website_url": "https://cmfinancials.wordpress.com/",
+      "description": "CM financials provides with financial adviser, lease brokerage, consultant & mandate, bank instruments, funding and loans. To know more on these. follow us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4964479.jpg?t=1613718157"
+    },
+    {
+      "title": "Decoding Markets | Trading and Investing Ideas",
+      "feed_url": "https://decodingmarkets.com/feed/",
+      "website_url": "https://stocksoftresearch.com/blog/",
+      "description": "Joe Marwood is an independent trader and investor specializing in financial market analysis and trading systems. He worked as a professional futures trader for a trading firm in London and has a passion for building mechanical trading strategies. Check out his posts to know more about trading.",
+      "followers": {
+        "facebook": 851,
+        "twitter": 271
+      },
+      "image_url": "https://i1.feedspot.com/4906113.jpg?t=1607336684"
+    },
+    {
+      "title": "InterTrader Blog | Spread Betting UK, CFD Trading, Financial Spread Betting",
+      "feed_url": "https://www.intertrader.com/en-gb/feed",
+      "website_url": "https://www.intertrader.com/en-gb/blog",
+      "description": "InterTrader provides 100% market-neutral spread betting and CFD trading on shares, indices, forex, commodities and more.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4906083.jpg?t=1613718071"
+    },
+    {
+      "title": "LS Trader Blog | Financial Spread Betting System",
+      "feed_url": "https://lstrader.co.uk/blog/feed/",
+      "description": "The LS Trader blog contains a wealth of information about spread betting, financial trading, our weekly market updates & guides on how to trade more successfully. It also captures trends in the financial markets, including stock indexes, forex and commodities.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4906129.jpg"
+    }
+  ]
+}

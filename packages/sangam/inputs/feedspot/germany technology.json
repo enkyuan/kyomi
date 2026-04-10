@@ -1,0 +1,441 @@
+{
+  "category": "Germany Technology",
+  "source_url": "https://rss.feedspot.com/germany_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Telekom Blog",
+      "feed_url": "https://www.telekom.com/service/rss/1712/feed.rss",
+      "website_url": "https://www.telekom.com/de/blog",
+      "description": "Blog.Telekom, the corporate blog of Deutsche Telekom, provides insights into the company and introduces products and employees. Deutsche Telekom is one of the world's leading integrated telecommunications companies which provides internet and communication services all around Germany.",
+      "followers": {
+        "facebook": 537900,
+        "twitter": 81900,
+        "instagram": 89500
+      },
+      "image_url": "https://i1.feedspot.com/5344658.jpg?t=1637302530"
+    },
+    {
+      "title": "Handelsblatt",
+      "feed_url": "https://www.handelsblatt.com/contentexport/feed/top-themen",
+      "website_url": "https://www.handelsblatt.com/",
+      "description": "Innovations from technology, IT, telecommunications, research, medicine, energy and the environment. Read up-to-the-minute technology news on Handelsblatt Online. Handelsblatt is Germany's leading newspaper which covers topics such as finance, technology, politics and much more.",
+      "followers": {
+        "facebook": 343800,
+        "twitter": 425400
+      },
+      "image_url": "https://i1.feedspot.com/5003480.jpg?t=1671522988"
+    },
+    {
+      "title": "Blog.de \u00bb Technology",
+      "feed_url": "https://www.blog.de/technik/feed/",
+      "website_url": "https://www.blog.de/technik/",
+      "description": "In our technology blog you will find the latest news and information about technology in order to have an optimal overview of the innovations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344272.jpg?t=1637222444"
+    },
+    {
+      "title": "n-komm Blog",
+      "feed_url": "https://n-komm.de/feed/",
+      "website_url": "https://n-komm.de/tech-notes/",
+      "description": "The expert IT blog, provides information on topics like ELO ECM, Microsoft Azure Cloud, HCL Domino Notes, and managed IT services. From IT consulting to the conception of new IT solutions, n-komm offers you a wide range of services and benefits. And if there is no suitable software, we will simply develop the appropriate application for you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4906556.jpg?t=1669202382"
+    },
+    {
+      "title": "BASIC thinking \u00bb Technology",
+      "feed_url": "https://www.basicthinking.de/blog/category/technologie/feed/",
+      "website_url": "https://www.basicthinking.de/blog/category/technologie/",
+      "description": "Here you will find all articles on the topic of technology - carefully sorted. Since its creation in 2004, the topics of technology, gadgets, smart home and electronics have been among the cornerstones of reporting in the online magazine BASIC thinking. We report here on everything that is digital, technical or networked, test, try out and introduce new products.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 33200,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5343918.jpg?t=1637148992"
+    },
+    {
+      "title": "MuleSoft Blog",
+      "feed_url": "https://blogs.mulesoft.com/feed/",
+      "website_url": "https://blogs.mulesoft.com/bloghome/",
+      "description": "Learn how the Anypoint Platform helps organizations connect their apps, data, and devices and how to leverage RPA to automate these. MuleSoft's mission is to help organizations change and innovate faster by making it easy to connect the world's applications, data, and devices.",
+      "followers": {
+        "facebook": 89200,
+        "twitter": 95100,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/5469990.jpg?t=1669205750"
+    },
+    {
+      "title": "MacTech News",
+      "feed_url": "https://www.mactechnews.de/Rss/News.x",
+      "website_url": "https://www.mactechnews.de/",
+      "description": "We always provide up-to-date Apple news, tips, tricks, and test reports for Mac, iPhone, iPad, and Co. MacTechNews.de is the news page about Apple and everything that goes with it and related to it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/638551.jpg?t=1669201662"
+    },
+    {
+      "title": "BitExpert Blog",
+      "feed_url": "https://blog.bitexpert.de/blog/rss.xml",
+      "website_url": "https://blog.bitexpert.de/blog",
+      "description": "The blog combines news and informative tutorials around technology and software. bitExpert AG is a software company based in Mannheim, Germany, that wants to share knowledge related to tech, software and latest innovations with the world.",
+      "followers": {
+        "facebook": 394,
+        "twitter": 425
+      },
+      "image_url": "https://i1.feedspot.com/5451108.jpg?t=1664449071"
+    },
+    {
+      "title": "TopTech",
+      "feed_url": "https://www.toptechnews.de/feed/",
+      "website_url": "https://www.toptechnews.de/category/zubehoer/",
+      "description": "TopTech provides information, news, tests, and much more about gaming, technology, and multimedia. We are a multi-headed team of passionate gamers and friends of technology and thanks to our many years of experience we have been able to turn one of our greatest passions into a profession or rather a vocation.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5470001.jpg?t=1669025319"
+    },
+    {
+      "title": "Tech Junkies Blog",
+      "feed_url": "https://techjunkies.blog/feed/",
+      "website_url": "https://techjunkies.blog/",
+      "description": "Tech Junkies is a German technology blog with many topics such as coding, digital life, fintech, gadgets, gaming, hardware, and photo. It is a blog that involves a lot of gadgets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5469996.jpg?t=1669025230"
+    },
+    {
+      "title": "Daniel's Tech Blog",
+      "feed_url": "https://www.danielstechblog.io/feed/",
+      "website_url": "https://www.danielstechblog.io/",
+      "description": "Daniel's Tech covers blog posts about technology. Hi, my name is Daniel Neumann, I am a Microsoft Professional and this is my blog where I am writing down my thoughts about Microsoft Azure, Kubernetes, and Cloud Native technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4957523.jpg?t=1660891236"
+    },
+    {
+      "title": "Tech-Blogs.de",
+      "feed_url": "https://tech-blogs.de/feed/",
+      "website_url": "https://tech-blogs.de/",
+      "description": "Tech-Blogs.de is a blog all about technology, it provides the latest news, reviews, and updates on data and technology. Check out our blog to read articles on topics like Danger for Sparkasse customers: Several users report particularly perfidious scams, Google, YouTube, and Netflix left behind: This is now the most popular brand in the world, and more like this!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5469999.jpg?t=1669024323"
+    },
+    {
+      "title": "Fly-tech IT Blog",
+      "feed_url": "https://fly-tech.de/feed/",
+      "website_url": "https://fly-tech.de/blog/",
+      "description": "News from the company, current industry trends, and exciting events: these are the topics that move us to fly tech. We at fly-tech are the digital partner for medium-sized companies in the region. The fly-Tech team lives the company's philosophy of 'Simply work digitally' every day. This allows us to share our experience of a safe, efficient, and flexible workplace with our medium-sized customers. We want to go into the digital future together.",
+      "followers": {
+        "facebook": 519,
+        "instagram": 476
+      },
+      "image_url": "https://i1.feedspot.com/5470000.jpg?t=1669024275"
+    },
+    {
+      "title": "IT-techBlog-Podcast (KI, Cloud, Security & Co.)",
+      "feed_url": "https://www.it-techblog.de/feed/",
+      "website_url": "https://www.it-techblog.de/",
+      "description": "F\u00fcr meine Podcasts lade ich interessante Gespr\u00e4chspartner aus der Industrie ein, um mit ihnen \u00fcber Cloud Computing, Cybersecurity, K\u00fcnstliche Intelligenz und mehr zu sprechen.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/1809940.jpg?t=1637240935"
+    },
+    {
+      "title": "Bidt Digital Blog",
+      "feed_url": "https://www.bidt.digital/feed/",
+      "website_url": "https://www.bidt.digital/blog/",
+      "description": "On the bidt blog, scientists from various disciplines and experts from practice exchange ideas about digital change. Bidt helps in understanding technology and digital transformation so that future in dialogue can be shaped.",
+      "followers": {
+        "facebook": 298,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5344660.jpg?t=1637305799"
+    },
+    {
+      "title": "MusicTech Germany",
+      "feed_url": "https://www.music-tech.de/en/feed/",
+      "website_url": "https://www.music-tech.de/en/more-news/",
+      "description": "MusicTech Germany is the Federal Association for Music-Technology in Germany. It represents the common interests of hardware and software developers, research institutions, and service providers in the field of music technology that pioneer innovation to meet the challenges of the music value chain in the digital age.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 801,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5374725.jpg?t=1669199529"
+    },
+    {
+      "title": "PRODATO Blog",
+      "feed_url": "https://prodato.de/feed/",
+      "website_url": "https://prodato.de/",
+      "description": "Prodato Integration Technology GmbH offers comprehensive, result-oriented, and independent advice in the areas o: Business Intelligence, Big Data, process and project management, and the implementation of complex software projects (in the Java EE environment)",
+      "followers": {
+        "instagram": 238
+      },
+      "image_url": "https://i1.feedspot.com/5470004.jpg?t=1669024157"
+    },
+    {
+      "title": "PROMATIS DE",
+      "feed_url": "https://promatis.com/de/en/techblog-en/feed/",
+      "website_url": "https://promatis.com/de/en/techblog-en/",
+      "description": "The blog gives insights on latest technologies that are used by the company. PROMATIS is a team of committed doers who with the help of technology develop solutions for you for profitable optimization and automation of your business.",
+      "followers": {
+        "facebook": 197,
+        "twitter": 128,
+        "instagram": 218
+      },
+      "image_url": "https://i1.feedspot.com/5344063.jpg?t=1637158130"
+    },
+    {
+      "title": "Tax Tech Blog",
+      "feed_url": "https://tax-tech.de/feed/",
+      "website_url": "https://tax-tech.de/aktuelles-zum-thema-tax-tech/",
+      "description": "If you eant to know how can digitization and tax tech be successfully implemented in the tax office, our blog posts support you on the way to becoming a digital law firm. Tax Tech promotes and believes in digitalization of tax advice.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5469993.jpg?t=1669025041"
+    },
+    {
+      "title": "Das Netz und Ich",
+      "feed_url": "https://dasnetzundich.de/feed/",
+      "website_url": "https://dasnetzundich.de/",
+      "description": "Das Netz und Ich features an interesting mix of technology news, news about Next cloud and a few things from author's everyday life. Technology blog by Lars Mueller, with preferred Linux topics such as Nextcloud installations and extensions, maintenance and operation of servers, email servers and much more.",
+      "followers": {
+        "facebook": 3
+      },
+      "image_url": "https://i1.feedspot.com/5480593.jpg?t=1671184768"
+    },
+    {
+      "title": "Matrixpost Blog",
+      "feed_url": "https://blog.matrixpost.net/feed/",
+      "website_url": "https://blog.matrixpost.net/",
+      "description": "Enter the matrixpost.net blog by Marcus Rath, I will post here about a wide range of IT topics and technologies I had to deal with in my daily work as a system administrator and IT consultant.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5586459.jpg?t=1685518775"
+    },
+    {
+      "title": "Mobimeo Technology",
+      "feed_url": "https://medium.com/feed/mobimeo-technology",
+      "website_url": "https://medium.com/mobimeo-technology",
+      "description": "Founded by Deutsche Bahn AG in 2018, Mobimeo develops digital solutions for the mobility of tomorrow. Today we are Europe's largest platform developers for Mobility-as-a-Service applications.",
+      "followers": {
+        "twitter": 394
+      },
+      "image_url": "https://i1.feedspot.com/5344465.jpg?t=1637237629"
+    },
+    {
+      "title": "Commercetools Tech Blog",
+      "feed_url": "https://techblog.commercetools.com/feed",
+      "website_url": "https://techblog.commercetools.com/",
+      "description": "Commercetools is a next-generation software technology company that offers a true cloud commerce platform, providing the building blocks for the new digital commerce age",
+      "followers": {
+        "facebook": 898,
+        "twitter": 3600,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4888371.jpg?t=1637145614"
+    },
+    {
+      "title": "Breeze Technologies Blog",
+      "feed_url": "https://www.breeze-technologies.de/feed/",
+      "website_url": "https://www.breeze-technologies.de/blog/",
+      "description": "Read the latest news from Breeze, the Hamburg-based startup developing smart environmental sensors and data analytics. Breeze Technologies develop and deploy environmental sensor networks that make sense of our surroundings.",
+      "followers": {
+        "facebook": 578,
+        "twitter": 383
+      },
+      "image_url": "https://i1.feedspot.com/5469995.jpg?t=1669199015"
+    },
+    {
+      "title": "Spin Digital \u00bb Tech Blog",
+      "feed_url": "https://spin-digital.com/category/tech-blog/feed/",
+      "website_url": "https://spin-digital.com/category/tech-blog/",
+      "description": "Stay tuned for the latest news about trade fairs, product releases, technical blogs, and other announcements. Spin Digital Video Technologies GmbH develops high-performance video codecs for the next generation of ultra-high-quality video applications.",
+      "followers": {
+        "twitter": 157
+      },
+      "image_url": "https://i1.feedspot.com/5344470.jpg?t=1637242225"
+    },
+    {
+      "title": "Tech in the City Blog",
+      "feed_url": "https://techinthecity.de/feed/",
+      "website_url": "https://techinthecity.de/blog/",
+      "description": "The non-profit association 'Tech in the City' has set itself the goal of bringing more talented people closer to the tech industry through networking and information. Our blog contains the latest news from the tech scene, event insights, interviews with cooperation partners or updates from our team.",
+      "followers": {
+        "facebook": 660,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5469991.jpg?t=1669023978"
+    },
+    {
+      "title": "Joe's Technology Blog",
+      "feed_url": "https://joes-tech-blog.blogspot.com/feeds/posts/default",
+      "website_url": "https://joes-tech-blog.blogspot.com/",
+      "description": "always curious about the wiring under the board - in hardware and software",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5469992.jpg?t=1669025354"
+    },
+    {
+      "title": "Mars Services Blog",
+      "feed_url": "https://www.mars-services.de/feed/",
+      "website_url": "https://www.mars-services.de/blog/",
+      "description": "Mars Services offers its customers comprehensive IT consultancy and all round support without great effort.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344586.jpg?t=1637245728"
+    },
+    {
+      "title": "Trimplement Blog",
+      "feed_url": "https://www.trimplement.de/blog/feed/",
+      "website_url": "https://www.trimplement.de/blog",
+      "description": "Trimplement is a software engineering and consulting company. We are coding the future of money for you. Build money management and online payment applications with CoreWallet. Read our blog to enhance your digital and technology knowledge.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 536
+      },
+      "image_url": "https://i1.feedspot.com/5469998.jpg?t=1669196630"
+    },
+    {
+      "title": "OTTO Tech Blog",
+      "feed_url": "https://www.otto.de/jobs/technology/techblog/rss.php",
+      "website_url": "https://www.otto.de/jobs/en/technology/techblog/",
+      "description": "In our techblog, we offer an insight into development, architecture, testing, devops and more. We rely on open source technologies and use standards for the development of our software. Our teams use several programming languages, databases and frameworks e.g. Java, MongoDB, Spring MVC or Varnish.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 1,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5344466.jpg?t=1637238640"
+    },
+    {
+      "title": "Dell Technologies",
+      "feed_url": "https://www.dell.com/de-de/blog/feed/",
+      "website_url": "https://www.dell.com/de-de/blog/",
+      "description": "At Dell Technologies, we keep innovating and developing technology so that nothing stands in the way of your progress. Learn more about end-to-end technology solutions and accelerators for digital transformation. And discover real reports from our customers as well as comprehensive information about new technologies.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 5300,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5343917.jpg?t=1637148162"
+    },
+    {
+      "title": "ScaleUp Technologies",
+      "feed_url": "https://www.scaleuptech.com/feed/",
+      "website_url": "https://www.scaleuptech.com/blog/",
+      "description": "ScaleUp is a hosting partner for over 2,000 websites and apps and looks after more than 500 customer projects - from the initial idea through to the operations management of complex, site-distributed business hosting solutions. Get insights into technology and data-related things happening in Berlin on our blog.",
+      "followers": {
+        "facebook": 81,
+        "twitter": 893
+      },
+      "image_url": "https://i1.feedspot.com/5469997.jpg?t=1669197998"
+    },
+    {
+      "title": "DW Innovation",
+      "feed_url": "https://innovation.dw.com/feed",
+      "website_url": "https://innovation.dw.com/en/articles",
+      "description": "We explore emerging technologies and their impact on journalism, media, and audiences.",
+      "followers": {
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5344469.jpg?t=1637241371"
+    },
+    {
+      "title": "K&C Digital Transformation Blog",
+      "feed_url": "https://kruschecompany.com/feed/",
+      "website_url": "https://kruschecompany.com/digital-transformation-blog/",
+      "description": "K&C's expert insights into digital transformation, web development, cloud and qa testing. We share our opinion and experience on the tech questions that matter. K&C has been driving digital transformation since 1999. Privately owned we are dedicated to our partners' success through German management, a global talent pool and leading technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344270.jpg?t=1637221672"
+    },
+    {
+      "title": "IPlytics Blog",
+      "feed_url": "https://www.iplytics.com/feed/",
+      "website_url": "https://www.lexisnexisip.com/resources/ip-blog/",
+      "description": "Latest news about company, events, conferences and published in-depth technology reports in the world of intellectual property. IPlytics is an IP intelligence tool that enables the analysis of technology landscapes and market competition by providing access to multiple databases and connecting patents.",
+      "followers": {
+        "facebook": 226,
+        "twitter": 756
+      },
+      "image_url": "https://i1.feedspot.com/5344035.jpg?t=1637155357"
+    },
+    {
+      "title": "onOffice \u00bb Tech",
+      "feed_url": "https://onoffice.com/blog/tech-topics/",
+      "website_url": "https://onoffice.com/blog/tech-topics/",
+      "description": "In the Technology Blog of onOffice GmbH, our IT teams write specialist articles about software development, administration, DevOps and data migration. onOffice is a company is driven by shared goals and values. Having a vision in mind creates a community.",
+      "followers": {
+        "facebook": 11100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5469994.jpg?t=1669023999"
+    },
+    {
+      "title": "Innoplexus Blog",
+      "feed_url": "https://www.innoplexus.com/feed",
+      "website_url": "https://www.innoplexus.com/blog",
+      "description": "We are The Intelligence Machine for Life Science. We are on the mission of moving decision making from batch to continuum and turning big data into big value for our customers based on AI and Blockchain.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5343916.jpg?t=1637147163"
+    },
+    {
+      "title": "Hubraum",
+      "feed_url": "https://www.hubraum.com/news/blog/",
+      "website_url": "https://www.hubraum.com/news/blog/",
+      "description": "Check out the Hubraum blog and news sections to get the latest from start-ups and technologies such as AI, 5G and IoT. As Deutsche Telekom's tech incubator, we bring startups and the leading European telcotech together.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/5344467.jpg?t=1637239771"
+    },
+    {
+      "title": "Mindcurv Blog",
+      "feed_url": "https://mindcurv.com/en/feed/",
+      "website_url": "https://mindcurvgroup.com/en/mindfeed.html",
+      "description": "Mindcurv helps you rethink your digital business, experiences, and technology. We do this by designing sustainable and accountable solutions for humans living in a digital world.",
+      "followers": {
+        "facebook": 733,
+        "twitter": 340,
+        "instagram": 765
+      },
+      "image_url": "https://i1.feedspot.com/5343919.jpg?t=1637149758"
+    },
+    {
+      "title": "IF-Tech AG Magazine",
+      "feed_url": "https://www.if-tech.de/infohub/",
+      "website_url": "https://www.if-tech.de/infohub/",
+      "description": "IF-Tech AG focuses on the area of virtualization and cloud computing. We offer our customers state-of-the-art individual IT infrastructure solutions to be able to set up virtual workplaces. Know all about technology from our blog!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470002.jpg?t=1669024596"
+    },
+    {
+      "title": "Cyberus Technology Blog",
+      "feed_url": "https://cyberus-technology.de/en/articles/1",
+      "website_url": "https://cyberus-technology.de/en/articles/1",
+      "description": "Cyberus Technology is a German cyber security software company with employees based in Dresden, Braunschweig and Bamberg.",
+      "followers": {
+        "twitter": 606
+      },
+      "image_url": "https://i1.feedspot.com/5344026.jpg?t=1637154365"
+    },
+    {
+      "title": "AiSight \u00bb Technology Insights",
+      "feed_url": "https://www.aisight.de/blog/tag/technology/rss/",
+      "website_url": "https://sensirion-connected.com/newsroom/news",
+      "description": "AiSight develops a product that uses machine learning algorithms to determine the state of a machine in real time, predicts errors and dynamically regulates the machine parameters based on sensor data.",
+      "followers": {
+        "facebook": 360,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5344271.jpg?t=1637223209"
+    },
+    {
+      "title": "Servicetrace Blog",
+      "feed_url": "https://www.servicetrace.com/feed/",
+      "website_url": "https://blogs.mulesoft.com/bloghome/",
+      "description": "Read the latest software robotics news, RPA thought leadership and industry insights from Servicetrace here. As a technological pioneer, Servicetrace started developing software robots back in 2004.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5343920.jpg?t=1637151253"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "category": "Wells Fargo",
+  "source_url": "https://rss.feedspot.com/wells_fargo_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wells Fargo",
+      "feed_url": "https://stories.wf.com/feed",
+      "website_url": "https://stories.wf.com/",
+      "description": "Wells Fargo provides financial education, community news and more. Wells Fargo Stories features real stories about how we help our customers succeed, help our communities thrive, and live our vision and values.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 346800,
+        "instagram": 143800
+      },
+      "image_url": "https://i1.feedspot.com/4920192.jpg?t=1620716479"
+    },
+    {
+      "title": "CollegeSTEPS",
+      "feed_url": "https://collegesteps.wf.com/feed/",
+      "website_url": "https://collegesteps.wf.com/",
+      "description": "Wells Fargo & Company is a diversified, community-based financial services company. It is the provider of banking, mortgage, investing, credit card, and personal, small business, and commercial financial services. CollegeSTEPS is all about making money decisions with confidence on your journey to and through college.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 346800,
+        "instagram": 143800
+      },
+      "image_url": "https://i1.feedspot.com/4920193.jpg?t=1612185444"
+    }
+  ]
+}

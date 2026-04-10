@@ -1,0 +1,59 @@
+{
+  "category": "UK Email Marketing",
+  "source_url": "https://rss.feedspot.com/uk_email_marketing_rss_feeds",
+  "feeds": [
+    {
+      "title": "WizEmail Blog",
+      "feed_url": "https://wizemail.co.uk/email-marketing-blog/feed/",
+      "website_url": "https://wizemail.co.uk/email-marketing-blog/",
+      "description": "A UK email marketing company specializing in managed and hosted email marketing software services all with superlative personal support as standard!",
+      "followers": {
+        "facebook": 134,
+        "twitter": 68
+      },
+      "image_url": "https://i1.feedspot.com/4537174.jpg"
+    },
+    {
+      "title": "Campaignmaster Blog",
+      "feed_url": "https://blog.campaignmaster.co.uk/feed/",
+      "website_url": "https://blog.campaignmaster.co.uk/",
+      "description": "Our goal is to provide easy to use, powerful email marketing solutions with excellent customer support, to ensure you build professional, successful email marketing campaigns time after time. Subscribe us to keep up with articles on email marketing.",
+      "followers": {
+        "facebook": 219,
+        "twitter": 701
+      },
+      "image_url": "https://i1.feedspot.com/4537185.jpg?t=1607152315"
+    },
+    {
+      "title": "Maxemail by Xtremepush Blog",
+      "feed_url": "https://maxemail.xtremepush.com/feed/",
+      "website_url": "https://maxemail.xtremepush.com/blog/",
+      "description": "Maxemail by Xtremepush News & Blog posts. Discover the last news and insight on Email & SMS Marketing",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4537151.jpg"
+    },
+    {
+      "title": "Enabler Blog",
+      "feed_url": "https://www.enablermail.com/feed/",
+      "website_url": "https://www.enablermail.com/blog/",
+      "description": "Enabler is enterprise-level email marketing software combined with award-winning support and consultancy service specializing in email strategy, design and campaign management.",
+      "followers": {
+        "twitter": 363
+      },
+      "image_url": "https://i1.feedspot.com/4537180.jpg"
+    },
+    {
+      "title": "Email Blaster Blog",
+      "feed_url": "https://www.emailblasteruk.com/blog/feed/",
+      "website_url": "https://www.emailblasteruk.com/blog/",
+      "description": "Email Blaster is a marketing tool designed for small businesses with a library of pro designed templates for bulk email marketing. Follow us to keep up with articles on Email Marketing.",
+      "followers": {
+        "facebook": 185,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4917705.jpg?t=1620624209"
+    }
+  ]
+}

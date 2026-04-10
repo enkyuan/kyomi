@@ -1,0 +1,507 @@
+{
+  "category": "Coffee Roasting",
+  "source_url": "https://rss.feedspot.com/coffee_roasting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mill City Roasters Blog",
+      "feed_url": "https://millcityroasters.com/blogs/blog.atom",
+      "website_url": "https://millcityroasters.com/blogs/blog",
+      "description": "Since 2013, Mill City Roasters has helped launch over 4500 commercial roasteries providing commercially focused education and training from our SCA Certified Campus, CSA and UL compliant industrial quality coffee roasters.",
+      "followers": {
+        "facebook": 4700,
+        "instagram": 42700
+      },
+      "image_url": "https://i1.feedspot.com/5365060.jpg?t=1643025418"
+    },
+    {
+      "title": "Kaldi's Coffee Blog",
+      "feed_url": "https://kaldiscoffee.com/blogs/news.atom",
+      "website_url": "https://kaldiscoffee.com/blogs/news",
+      "description": "Origin trips, how-to guides, the latest coffee industry happenings, and more are documented here. In 1994, Kaldi's Coffee first opened its doors in St. Louis' DeMun neighbourhood. Since then, we've been dedicated to creating memorable coffee experiences wherever our coffee is served.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 10900,
+        "instagram": 34400
+      },
+      "image_url": "https://i1.feedspot.com/5365048.jpg?t=1643102491"
+    },
+    {
+      "title": "K Brew Blog",
+      "feed_url": "https://www.knoxvillebrew.com/feed/",
+      "website_url": "https://www.knoxvillebrew.com/blog/",
+      "description": "We prepare top-notch coffee and espresso drinks with our own roasted coffee, organic milk from a local dairy farm, organic syrups and organic chocolate. Check out the latest from us at the K Brew team, where we're writing about coffee, bagels, espresso, recipes, Knoxville, or other fun topics!",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 1600,
+        "instagram": 44200
+      },
+      "image_url": "https://i1.feedspot.com/5364949.jpg?t=1643021203"
+    },
+    {
+      "title": "Three Thousand Thieves Blog",
+      "feed_url": "https://www.threethousandthieves.com/blogs/news.atom",
+      "website_url": "https://www.threethousandthieves.com/blogs/news",
+      "description": "We are a team of coffee fanatics from the caffeine-fuelled streets of Melbourne on a mission to bring Australian coffee to the world! Let us take you on a journey to discover new Australian roasted, artisan coffee each month. Here at Thieves, we pride ourselves in finding the most delicious and unique Australian coffee out there and delivering it right to our caffeine loving members. We want you to have a taste of everything out there and discover new blends, single origins, styles, and roasters.",
+      "followers": {
+        "facebook": 8400,
+        "instagram": 48000
+      },
+      "image_url": "https://i1.feedspot.com/5364924.jpg?t=1643088205"
+    },
+    {
+      "title": "DOMA Coffee Roasting Company Blog",
+      "feed_url": "https://www.domacoffee.com/blogs/blog.atom",
+      "website_url": "https://www.domacoffee.com/blogs/blog",
+      "description": "Hi! I'm Terry Patano. In 1997, my wife Rebecca and I were laying the groundwork for DOMA Coffee. Our inspiration is drawn from our local surroundings and travel to coffee-producing countries. Along with community and family values, roasting at DOMA combines science and craft. Each small batch is methodically trialled, tested and recorded in order to create flavorful, consistent roasts.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 896,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5364930.jpg?t=1643091903"
+    },
+    {
+      "title": "The Roasting Party",
+      "feed_url": "https://roastingparty.co.uk/blogs/news.atom",
+      "website_url": "https://roastingparty.co.uk/blogs/news?",
+      "description": "Great coffee built on friendship, passion and trust. The blog is your source about what is happening at The Roasting Party, events, giveaways, festivals, and more.",
+      "followers": {
+        "facebook": 231,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5364940.jpg?t=1643094548"
+    },
+    {
+      "title": "Daily Coffee News \u00bb Roasting",
+      "feed_url": "https://dailycoffeenews.com/category/coffee-roasting/feed/",
+      "website_url": "https://dailycoffeenews.com/category/coffee-roasting/",
+      "description": "This section features articles on coffee roasting. Since 2012, Daily Coffee News by Roast magazine has provided essential online reading for specialty coffee professionals.Through original content composed of breaking news, in-depth feature stories and insider columns, Daily Coffee News strives to support the responsible growth of the specialty coffee industry and the success of the incredible people within it.",
+      "followers": {
+        "facebook": 31900,
+        "twitter": 45900,
+        "instagram": 25800
+      },
+      "image_url": "https://i1.feedspot.com/5364922.jpg?t=1643089149"
+    },
+    {
+      "title": "THE BARN Blog",
+      "feed_url": "https://thebarn.de/blogs/the-barn-blog.atom",
+      "website_url": "https://thebarn.de/blogs/the-barn-blog",
+      "description": "THE BARN is a leading coffee roaster in Europe and represents the Specialty Coffee Movement at the highest level since 2010. Our philosophy is to source and roast some of the best coffees available.",
+      "followers": {
+        "facebook": 29500,
+        "twitter": 9800,
+        "instagram": 143000
+      },
+      "image_url": "https://i1.feedspot.com/5364948.jpg?t=1643087074"
+    },
+    {
+      "title": "Hermanos Colombian Coffee Roasters Blog",
+      "feed_url": "https://hermanoscoffeeroasters.com/blogs/blog.atom",
+      "website_url": "https://hermanoscoffeeroasters.com/blogs/blog",
+      "description": "Specialty coffee shop and roasters bring the very best Colombian coffee beans to the UK.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 296,
+        "instagram": 19000
+      },
+      "image_url": "https://i1.feedspot.com/5364927.jpg?t=1643021435"
+    },
+    {
+      "title": "Christopher Feran Blog",
+      "feed_url": "https://christopherferan.com/feed/",
+      "website_url": "https://christopherferan.com/christopher-feran/blog/",
+      "description": "Hi! I'm Christopher Feran. I'm a coffee industry consultant, green buyer, roaster and lapsed Q-grader with years of experience helping startups and established companies in the Midwest, California and New York City as well as exporters and coffee growers in producing countries like Guatemala, Colombia and Ethiopia. I enjoy planning and building cafes, coffee programs, roasteries and spreadsheets.",
+      "followers": {
+        "twitter": 608
+      },
+      "image_url": "https://i1.feedspot.com/5364953.jpg?t=1643022179"
+    },
+    {
+      "title": "PT's Coffee Blog",
+      "feed_url": "https://ptscoffee.com/blogs/news.atom",
+      "website_url": "https://ptscoffee.com/blogs/news",
+      "description": "Your source for PT's news, updates on our cafes, reports on trips to origin, how-tos, and more! PT's was born in 1993 in Topeka, Kansas, out of Jeff Taylor and Fred Polzin's simple desire for an excellent cup of coffee. Four years and two retail locations later, we began buying green coffee, roasting, and traveling to the origin. Now it is a leader in the specialty coffee industry.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4941876.jpg?t=1643107607"
+    },
+    {
+      "title": "Scott Rao Blog",
+      "feed_url": "https://www.scottrao.com/blog?format=RSS",
+      "website_url": "https://www.scottrao.com/blog",
+      "description": "A coffee blog with tips, tricks, and resources for methodical coffee roasting, coffee brewing, and cafe operation. Scott is a coffee consultant and author.",
+      "followers": {
+        "twitter": 193,
+        "instagram": 92600
+      },
+      "image_url": "https://i1.feedspot.com/4928466.jpg?t=1700252260"
+    },
+    {
+      "title": "CoffeeTec Blog",
+      "feed_url": "https://coffeetec.com/blogs/news.atom",
+      "website_url": "https://coffeetec.com/blogs/news",
+      "description": "We are a global coffee roastery development company. We provide equipment, financing, consulting, and education services to coffee roasteries, coffeehouses, and coffee-related businesses worldwide. We provide new and used coffee roasters and almost every other piece of equipment you could possibly need for crafting your roast",
+      "followers": {
+        "facebook": 71000,
+        "twitter": 22,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5365053.jpg?t=1643105625"
+    },
+    {
+      "title": "Utica Coffee Roasting Co. Blog",
+      "feed_url": "https://uticacoffeeroasting.com/blogs/news.atom",
+      "website_url": "https://uticacoffeeroasting.com/blogs/news",
+      "description": "The latest news and updates from the Utica Coffee Roasting Company. With cafes in Utica & Clinton, our world-class roasting & education centre on Hotel Street, and production facility in a historical freight house in Utica; it's safe to say the Utica Coffee brand has grown to be a staple of our community.",
+      "followers": {
+        "facebook": 26500,
+        "twitter": 3700,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/5365054.jpg?t=1643024556"
+    },
+    {
+      "title": "Volcano Coffee Works",
+      "feed_url": "https://volcanocoffeeworks.com/blogs/journal.atom",
+      "website_url": "https://volcanocoffeeworks.com/blogs/journal",
+      "description": "Volcano Coffee Works is a leading small batch, specialty coffee roastery based in South London.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 5700,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/5364929.jpg?t=1643092359"
+    },
+    {
+      "title": "Wood St Coffee Blog",
+      "feed_url": "https://www.woodstcoffee.co.uk/blogs/wsc.atom",
+      "website_url": "https://www.woodstcoffee.co.uk/blogs/wsc",
+      "description": "Hear about how we source and roast coffee, the different coffees we stock and how to brew them at home. Owners Clare and Gareth Reid brought specialty coffee to Walthamstow in the summer of 2013, starting out as a weekly stall at Wood Street Indoor Market (hence the name, 'Wood St Coffee').",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5364714.jpg?t=1643085268"
+    },
+    {
+      "title": "Zest Coffee Blog",
+      "feed_url": "https://www.zestcoffee.com.au/category/blog/feed/",
+      "website_url": "https://www.zestcoffee.com.au/category/blog/",
+      "description": "Articles feature brewing methods, coffee roasting, company achievements, news and other information regarding the coffee market. Zest specialty coffee roasters are a progressive, creative and eclectic team of coffee professionals who strive to deliver the best of specialty coffee to all coffeekind. We put all our efforts into building a consistent, reliable supply of great tasting coffee beans accredited by the best judges in the country.",
+      "followers": {
+        "facebook": 990,
+        "instagram": 20300
+      },
+      "image_url": "https://i1.feedspot.com/5364968.jpg?t=1643028325"
+    },
+    {
+      "title": "Numero Uno Coffee Roasters",
+      "feed_url": "https://www.numerouno.com.au/blogs/news.atom",
+      "website_url": "https://www.numerouno.com.au/blogs/news",
+      "description": "We are a speciality coffee roaster that helps purpose-driven individuals build a local community founded on great coffee. We continually seek coffees that are ethically and sustainably grown. Sign up for the latest news, offers and styles.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5364944.jpg?t=1643023769"
+    },
+    {
+      "title": "Coffee Gems Blog",
+      "feed_url": "https://coffeegems.co.uk/blogs/blog.atom",
+      "website_url": "https://coffeegems.co.uk/blogs/blog",
+      "description": "Coffee Gems is an artisan coffee roaster specialising in unique, top of the range and fair traded coffee. Receive news about releases, exclusive sales, tasting sessions, and more.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5364704.jpg?t=1643026957"
+    },
+    {
+      "title": "Rounton Coffee Blog",
+      "feed_url": "https://rountoncoffee.co.uk/blogs/rounton-coffee-blog.atom",
+      "website_url": "https://rountoncoffee.co.uk/blogs/rounton-coffee-blog",
+      "description": "An independent coffee roastery based in Yorkshire, providing coffees, equipment and training to customers across the UK.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 3400,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5364707.jpg?t=1643104809"
+    },
+    {
+      "title": "Berto Coffee Roaster Blog",
+      "feed_url": "https://berto-online.com/blog/feed/",
+      "website_url": "https://berto-online.com/blog/",
+      "description": "Expand your knowledge about coffee roasting, various coffee-related events and the coffee industry in general from our blog. Berto Coffee Roaster offers compact, clean and efficient coffee roasting machines, backed by engineering excellence since 1984.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5365063.jpg?t=1643105167"
+    },
+    {
+      "title": "FARO Roasting House Blog",
+      "feed_url": "https://farocoffee.com/blogs/news.atom",
+      "website_url": "https://farocoffee.com/blogs/news",
+      "description": "A family business founded in Sherbrooke, Br\u00fbleries Faro specializes in speciality coffee roasting since 1982. Indeed, we offer a wide variety of bulk coffees; because above all, coffee is a matter of taste! Our specialty coffees are roasted in our small batches, thus maximizing the development of aromas, flavors and of course, the freshness of the product.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 90,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5365049.jpg?t=1643098062"
+    },
+    {
+      "title": "San Francisco Coffee Roasting Co Blog",
+      "feed_url": "https://www.sanfranciscocoffeeroastingco.com/blogs/news.atom",
+      "website_url": "https://www.sanfranciscocoffeeroastingco.com/blogs/news",
+      "description": "What began as an idea in pre-tech San Francisco, is now a proud Intown Atlanta institution. Tanya and Doug Bond opened San Francisco Coffee Roasting Company in Atlanta in the 1990s.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 168,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5364932.jpg?t=1643095251"
+    },
+    {
+      "title": "Modern Standard Coffee Blog",
+      "feed_url": "https://modernstandardcoffee.co.uk/blogs/journal.atom",
+      "website_url": "https://modernstandardcoffee.co.uk/blogs/journal",
+      "description": "Check out the Modern Standard Coffee Blog. Discover the latest news and updates from the world of speciality coffee. Recipes, coffee origins and more. Modern Standard is a speciality coffee roaster, aiming to work with all sectors of the industry to improve coffee quality and deliver a better-tasting cup. We care about great coffee and focus on serving the whole journey from the source to the cup.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1900,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/5365055.jpg?t=1643102335"
+    },
+    {
+      "title": "Jokes Aside Blog",
+      "feed_url": "https://jokesasidecoffee.eu/blogs/making-coffee-is-just-marginal.atom",
+      "website_url": "https://jokesasidecoffee.eu/blogs/making-coffee-is-just-marginal",
+      "description": "Jokes Aside was born as a roastery and coffee training project. We're dedicated coffee professionals with tons of passion for the craft.",
+      "followers": {
+        "facebook": 627,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5364943.jpg?t=1643022042"
+    },
+    {
+      "title": "Tradition Coffee Roasters Blog",
+      "feed_url": "https://traditioncoffeeroasters.com/blogs/meet-the-bean.atom",
+      "website_url": "https://traditioncoffeeroasters.com/blogs/meet-the-bean",
+      "description": "Tradition Coffee Roasters is family owned & loved. We love supporting our farmers who utilize organic and sustainable methods to protect our environment.",
+      "followers": {
+        "facebook": 595,
+        "twitter": 6,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5365052.jpg?t=1643104902"
+    },
+    {
+      "title": "Prescription Roasting Blog",
+      "feed_url": "https://prescriptionroasting.com/blogs/news.atom",
+      "website_url": "https://prescriptionroasting.com/blogs/news",
+      "description": "Prescription Roasting offers freshly roasted coffee, responsibly sourced while keeping an eye on our future planet.",
+      "followers": {
+        "instagram": 428
+      },
+      "image_url": "https://i1.feedspot.com/5364950.jpg?t=1643022263"
+    },
+    {
+      "title": "Mad Priest Coffee Blog",
+      "feed_url": "https://madpriestcoffee.com/blogs/chronicles.atom",
+      "website_url": "https://madpriestcoffee.com/blogs/chronicles",
+      "description": "Welcome to Chronicles, the official Mad Priest Blog! You'll see all kinds of fun stuff pop up on here like coffee brewing & education, a deeper look into the cultures and countries our coffee comes from, behind the scenes at Mad Priest, what's going on in our Chattanooga community, recipes, and more. Mad Priest Coffee Roasters is a specialty coffee roasting company + a social enterprise with the mission to 'Craft excellent coffee. Educate the curious. Champion the displaced.'",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 477,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5364925.jpg?t=1643094208"
+    },
+    {
+      "title": "Bean Box Blog",
+      "feed_url": "https://beanbox.com/blog/rss",
+      "website_url": "https://beanbox.com/blog",
+      "description": "Join us as we spill our beans on all things coffee. Wake up to better coffee with tips, how-tos, and gear recommendations from our coffee experts. We founded Bean Box to share the joy of small-batch, locally-roasted beans with coffee lovers around the country, leveraging our technology and expertise to help you discover your next favorite cup.",
+      "followers": {
+        "facebook": 30200,
+        "twitter": 24800,
+        "instagram": 48000
+      },
+      "image_url": "https://i1.feedspot.com/5280381.jpg?t=1620922172"
+    },
+    {
+      "title": "Mistobox \u00bb Roasters",
+      "feed_url": "https://blog.mistobox.com/category/roasters/feed/",
+      "website_url": "https://blog.mistobox.com/category/recipes/",
+      "description": "Learn all about the best coffee roasters in the world on Mistobox Coffee Blog. We search high and low for the most talented roasters, sample their coffee, and choose the best ones to send you. Our coffee experts know the difference between the merely good and the truly special so your only job is to subscribe and enjoy. Along the way, we hope to share what we have learned with you.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 4600,
+        "instagram": 23600
+      },
+      "image_url": "https://i1.feedspot.com/5365050.jpg?t=1643107008"
+    },
+    {
+      "title": "Haymaker Coffee Blog",
+      "feed_url": "https://www.haymakercoffeeco.com/blog?feed=rss",
+      "website_url": "https://www.haymakercoffeeco.com/blog",
+      "description": "The American Dream won't chase itself. Explore our tips, tricks, and quick resources for coffee drinkers and hustlers everywhere. Haymaker Coffee only roasts top-quality, speciality-grade coffee beans, resulting in brews that satisfy those who demand every drop from their coffee and their day. If you work hard, run hard, fight hard and play hard, we have your coffee right here.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 189,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5364945.jpg?t=1643086957"
+    },
+    {
+      "title": "Fidalgo Coffee Roasters Blog",
+      "feed_url": "https://fidalgocoffee.com/feed/",
+      "website_url": "https://fidalgocoffee.com/blog/",
+      "description": "Fidalgo Coffee Roasters has been roasting speciality grade coffee since 1992. Originally starting as a small coffee house with a passion for providing the best cup of coffee available, Fidalgo Coffee has since grown into a full-fledged roasting operation shipping coffee internationally. It's our mission to bring joy to all with quality coffee that's good for people and the planet.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 137,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5364928.jpg?t=1643092920"
+    },
+    {
+      "title": "Cherry Blend Coffee Roasters Blog",
+      "feed_url": "https://www.cherryblendcoffeeroasters.com/blogs/news.atom",
+      "website_url": "https://www.cherryblendcoffeeroasters.com/blogs/news",
+      "description": "After twenty-two years of giving our house-painting customers great service, we've turned to our other great love, and what got us going every morning all those years: a good cup of coffee. We hope to warm your mornings with our unique blends and our friendly service. On our blog, we answer questions about all things coffee from where the beans are grown to enjoying a fresh cup.",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 726
+      },
+      "image_url": "https://i1.feedspot.com/5364946.jpg?t=1643021531"
+    },
+    {
+      "title": "Veteran Roasters Blog",
+      "feed_url": "https://veteranroasters.com/blogs/vr-blog.atom",
+      "website_url": "https://veteranroasters.com/blogs/vr-blog",
+      "description": "Our blog dives deep into our vision, employees, and passion for helping veterans find passion and community after service. Veteran Roasters Coffee was founded in 2017 to help give veterans a place to work and regain their lives after service. Our veteran coffee roasters are trained by some of the best premium coffee roasters in the Chicago area, providing them with a relevant, valuable skill set in an expanding industry.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 121,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5365056.jpg?t=1643098445"
+    },
+    {
+      "title": "Well-Bean Coffee Roasters Blog",
+      "feed_url": "https://wellbean.com/blogs/blog.atom",
+      "website_url": "https://wellbean.com/blogs/blog",
+      "description": "Hi! I'm Melissa. I'm the founder of Well-Bean Coffee Roasters. Well-Bean is a woman-owned coffee roastery specializing in small-batch, craft coffee selling through coffee subscriptions, e-commerce, & corporate coffee partnerships.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 232,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5365058.jpg?t=1644299200"
+    },
+    {
+      "title": "Square Mile Coffee",
+      "feed_url": "https://squaremileblog.com/category/news/feed/",
+      "website_url": "https://squaremileblog.com/category/news/",
+      "description": "Square Mile Coffee Roasters is a multi-award-winning coffee roasting company founded in 2008 by speciality coffee pioneers Anette Moldvaer and James Hoffmann.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 42700,
+        "instagram": 125200
+      },
+      "image_url": "https://i1.feedspot.com/5364941.jpg?t=1643023496"
+    },
+    {
+      "title": "Carnival Coffee Roasters Blog",
+      "feed_url": "https://carnivalcoffee.co.uk/blogs/news.atom",
+      "website_url": "https://carnivalcoffee.co.uk/blogs/news",
+      "description": "We are Jayne and Juan and our family is the life and soul of our Carnival Coffee adventure. We source, roast and sell some of the best coffee in the world from our home in South East London. Our mission is to roast awesome speciality coffee that is full of flavour and wonder. We want to share our love of these beautiful beans with you and for you to love what we do!",
+      "followers": {
+        "facebook": 910,
+        "twitter": 563,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5364933.jpg?t=1643095035"
+    },
+    {
+      "title": "Roast House Coffee Blog",
+      "feed_url": "https://roasthousecoffee.com/blogs/news.atom",
+      "website_url": "https://roasthousecoffee.com/blogs/news",
+      "description": "Roast House Coffee was founded in 2010 by Deborah Di Bernardo with one focused vision in mind: source dynamite organic coffees exclusively. Over the years, we have remained committed to only sourcing organic coffee and speciality producers around the globe who share in those values. By sourcing shade-grown coffee produced without the use of chemicals, we support the preservation of the beautiful planet we love so much.",
+      "followers": {
+        "facebook": 4900,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5365062.jpg?t=1643103898"
+    },
+    {
+      "title": "RoosRoast Coffee Blog",
+      "feed_url": "https://www.roosroast.com/blogs/news.atom",
+      "website_url": "https://www.roosroast.com/blogs/news",
+      "description": "RoosRoast Coffee is a life/ art/ food project that turned legit. It was born of John Roos' mind and person, but now it's all of us. It is not just about coffee, it's a community of weirdos and freaky, highly caffeinated people, joined by a love of art, good beans, and hard work.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 4000,
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5365059.jpg?t=1643024580"
+    },
+    {
+      "title": "Coffee Roasters Australia",
+      "feed_url": "https://coffeeroasters.com.au/blogs/news.atom",
+      "website_url": "https://coffeeroasters.com.au/blogs/news",
+      "description": "Coffee Roasters Australia is proudly serving the coffee industry since 2002. Mark and Alana Beattie are the directors of CRA Group.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5364923.jpg?t=1643024092"
+    },
+    {
+      "title": "Pharmacie Coffee",
+      "feed_url": "https://pharmacie.coffee/blogs/news.atom",
+      "website_url": "https://pharmacie.coffee/blogs/news",
+      "description": "Pharmacie Coffee is an independent micro-roasters supplier of wholesale speciality coffee, training & espresso equipment to the UK.",
+      "followers": {
+        "twitter": 913,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5365051.jpg?t=1643024538"
+    },
+    {
+      "title": "Sunday Morning Roasting Company Blog",
+      "feed_url": "https://sundaymorningroast.com/blogs/news.atom",
+      "website_url": "https://sundaymorningroast.com/blogs/news",
+      "description": "Sunday Morning is an experience of Coffee Culture. It is our top priority to provide the highest quality coffee beans from only the most responsible farmers around the globe. Our artisan coffees are freshly roasted, using 100% Arabica beans that are specially heated for optimal flavour releasing compounds that emerge into an amazing experience for the palate.",
+      "followers": {
+        "facebook": 345
+      },
+      "image_url": "https://i1.feedspot.com/5364947.jpg?t=1643087437"
+    },
+    {
+      "title": "Chinook Coffee Roasters Blog",
+      "feed_url": "https://chinook.coffee/feed/",
+      "website_url": "https://chinook.coffee/air-roasting-blog/",
+      "description": "We are air coffee roasting specialists. Our designs are informed by 30 years of air coffee roasting experience since 1991 with the latest process control software & hardware.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5364937.jpg?t=1643023025"
+    },
+    {
+      "title": "Terranova Coffee Roasting Blog",
+      "feed_url": "https://www.terranovacoffeeroasting.com/blog-feed.xml",
+      "description": "Through thick and thin, coffee has always been the glue that's held our family together. Now we roast right here start to finish with our family. We offer a brand that you will never have to second guess. We make sure every detail of our company, from the farms we purchase beans, the clean air roasting process we use to roast our coffee and to the quality of products we carry are to the highest level of expectation.",
+      "followers": {
+        "facebook": 620,
+        "instagram": 588
+      },
+      "image_url": "https://i1.feedspot.com/5364926.jpg?t=1643023966"
+    }
+  ]
+}

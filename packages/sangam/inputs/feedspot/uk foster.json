@@ -1,0 +1,72 @@
+{
+  "category": "UK Foster",
+  "source_url": "https://rss.feedspot.com/uk_foster_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Secret Foster Carer's Blog",
+      "feed_url": "https://blueskyfostering.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blueskyfostering.blogspot.com/",
+      "description": "The 'Secret Foster Carer' is a blog by an active foster carer which offers insight and information for other carers and those who are considering becoming carers.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4915757.jpg?t=1620372011"
+    },
+    {
+      "title": "Swiis Foster Care News",
+      "feed_url": "https://www.swiisfostercarescotland.com/feed/",
+      "website_url": "https://www.swiisfostercarescotland.com/news/",
+      "description": "Get the latest news and blog posts from Swiis Foster Care's local offices, placement support sessions, and more. This is how we make a difference to children's lives through positive outcomes.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4697836.jpg?t=1619159109"
+    },
+    {
+      "title": "Compass Fostering - Stepping Forward Together",
+      "feed_url": "https://www.compassfostering.com/feed",
+      "website_url": "https://www.compassfostering.com/infocentre/",
+      "description": "Compass Fostering deliver professional, respectful and forward-thinking fostering services for children, carer families and local authorities.",
+      "followers": {
+        "facebook": 27700,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4690760.jpg?t=1619157613"
+    },
+    {
+      "title": "Diverse Care",
+      "feed_url": "https://www.diversecare.com/foster-care-blog.html?format=feed&lang=en&type=rss",
+      "website_url": "https://www.diversecare.com/blog",
+      "description": "Diverse Care is an independent fostering organisation based in Stratford, East London, with locations in Essex and Kent. We recruit, train and assess our Foster Parents to provide vulnerable children and young people with a caring, secure and stable place to call home.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 662
+      },
+      "image_url": "https://i1.feedspot.com/4690826.jpg?t=1619159076"
+    },
+    {
+      "title": "Simply Fostering Blog",
+      "feed_url": "https://simplyfostering.co.uk/blogs/feed/",
+      "website_url": "https://simplyfostering.co.uk/fostering-news-blog/",
+      "description": "Simply Fostering provides fostering information and choice of fostering agencies to potential and experienced foster carers.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4859573.jpg?t=1619159020"
+    },
+    {
+      "title": "Kid Hero Foster Care and Adoption Blog",
+      "feed_url": "https://kidhero.chw.org/feed/",
+      "website_url": "https://childrenswi.org/newshub",
+      "description": "A foster care and adoptive parent blog from Children's Hospital of Wisconsin.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/4915876.jpg?t=1620372044"
+    }
+  ]
+}

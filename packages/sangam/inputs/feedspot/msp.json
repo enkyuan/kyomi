@@ -1,0 +1,700 @@
+{
+  "category": "MSP",
+  "source_url": "https://rss.feedspot.com/msp_rss_feeds",
+  "feeds": [
+    {
+      "title": "Smarter MSP",
+      "feed_url": "https://smartermsp.com/feed/",
+      "website_url": "https://smartermsp.com/",
+      "description": "At SmarterMSP.com, our mission is to deliver resources and content to help you grow your managed services business. From addressing the latest threats in the security landscape to sharing business best practices and step-by-step how-tos\u2014we are committed to creating resources to help you develop your business and make it more successful. Follow this site as we help MSPs Build Better Businesses.",
+      "followers": {
+        "twitter": 15900
+      },
+      "image_url": "https://i1.feedspot.com/4756928.jpg?t=1607080142"
+    },
+    {
+      "title": "Kaseya Corp Blog",
+      "feed_url": "https://www.kaseya.com/blog/feed/",
+      "website_url": "https://www.kaseya.com/blog/",
+      "description": "Kaseya is the leading provider of cloud-based IT management and security software. Kaseya solutions allow Managed Service Providers (MSPs) and IT organizations to efficiently manage and secure IT in order to drive IT service and business success. Follow this blog to get insights on msg services.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 18100
+      },
+      "image_url": "https://i1.feedspot.com/1907060.jpg?t=1607080164"
+    },
+    {
+      "title": "Erick Simpson Blog",
+      "feed_url": "https://mspmastered.com/feed/",
+      "website_url": "https://mspmastered.com/blog/",
+      "description": "A blog for MSPs by an MSP covering business growth strategies. Erick Simpson Co-founded one of the first MSPs in the industry and is the creator of the MSP Mastered Methodology for Managed Services business performance improvement and transformation. Erick Simpson's blog offers tips and recommendations on business strategy, marketing, sales, and more for Managed Service Providers and IT professionals.",
+      "followers": {
+        "facebook": 632,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/5179906/page/5250504/logo_1669824169.png"
+    },
+    {
+      "title": "Giant Rocketship Blog",
+      "feed_url": "https://giantrocketship.com/feed/",
+      "website_url": "https://giantrocketship.com/blog/",
+      "description": "Giant Rocketship solves your biggest problems by building smart, easy-to-use tools for MSPs.",
+      "followers": {
+        "facebook": 162,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5514126.jpg?t=1677577379"
+    },
+    {
+      "title": "MSP Corner Blog",
+      "feed_url": "https://www.cloudtango.net/blog/feed/",
+      "website_url": "https://www.cloudtango.net/blog/",
+      "description": "Technology helps drive innovation and we believe that Managed service providers (MSPs) play a vital role in turning IT into a distinctive advantage. Cloudtango provides technology leaders the information and analysis that will help them navigate their IT journey and find the right MSP in order to succeed. Explore our MSP Corner for more information on MSP.",
+      "followers": {
+        "twitter": 196
+      },
+      "image_url": "https://i1.feedspot.com/5612643.jpg?t=1688030584"
+    },
+    {
+      "title": "Wingman MSP Marketing \u00bb Club Lounge",
+      "feed_url": "https://wingmanmspmarketing.com/feed/",
+      "website_url": "https://wingmanmspmarketing.com/club-lounge/",
+      "description": "Educational guidance and best practices for Managed Service Providers from the marketing brains inside Wingman MSP Marketing. Wingman drives the evolution of businesses just like yours in the MSP, ISP, SaaS and Communications spaces across the UK, US, Canada, ANZ and beyond - from our base just north of London. We provide deliverable-based fixed fee services that proudly operate on an 'all done for you' approach, so you can relax with the peace of mind that your sales and marketing strategy is executed for you.",
+      "followers": {
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/5612639.jpg?t=1688030434"
+    },
+    {
+      "title": "MSP Camp Blog",
+      "feed_url": "https://msp-camp.com/feed/",
+      "website_url": "https://msp-camp.com/blog/",
+      "description": "MSP Camp is everything an MSP owner or Marketing Coordinator needs to begin marketing their business successfully. Created from the team that built one of the fastest-growing MSPs in the country, MSP Camp provides their most successful campaigns, content, templates, and guides that propelled them to where they are today. For more marketing guidance, check out our Blog!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5612645.jpg?t=1688030749"
+    },
+    {
+      "title": "ScalePad Blog",
+      "feed_url": "https://www.scalepad.com/blog/feed/",
+      "website_url": "https://www.scalepad.com/blog/",
+      "description": "Managed Service Provider Digital is the leading source of informative and educational material for MSPs to better their busienss operations. We're set on a course towards a future where our people, partners and products work in harmony. Join us as we continue to give MSPs the platforms they need to scale.",
+      "followers": {
+        "facebook": 564,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5612633.jpg?t=1688030398"
+    },
+    {
+      "title": "Technology Marketing Toolkit Blog",
+      "feed_url": "https://www.technologymarketingtoolkit.com/feed/",
+      "website_url": "https://www.technologymarketingtoolkit.com/blog/",
+      "description": "Free technology marketing toolkit MSP marketing blog articles provide you with tips on how to improve your company's marketing. We Are The IT Industry's Leading Marketing And Sales Consulting Firm For MSPs, MSSPs, VARs And Firms Selling Outsourced IT Projects And Services.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 5500,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5612632.jpg?t=1688030390"
+    },
+    {
+      "title": "Channel Insider \u00bb Managed Services",
+      "feed_url": "https://www.channelinsider.com/managed-services/feed/",
+      "website_url": "https://www.channelinsider.com/managed-services/",
+      "description": "Learn how to start and run a managed services business, including choosing your services, working with vendors and clients, earning key certifications, and more. Channel Insider combines news and technology recommendations to keep channel partners, value-added resellers, IT solution providers, MSPs, and SaaS providers informed on the changing IT landscape.",
+      "followers": {
+        "facebook": 625,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5612628.jpg?t=1688030363"
+    },
+    {
+      "title": "Technibble Blog",
+      "feed_url": "https://www.technibble.com/blog/feed/",
+      "website_url": "https://www.technibble.com/blog/",
+      "description": "Learn how to predictably grow your MSP with practical, no B.S, marketing tips and resources. Technibble provides the tools that help Computer Repair Businesses win more clients, save time and generate more revenue.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 750
+      },
+      "image_url": "https://i1.feedspot.com/5612637.jpg?t=1688030420"
+    },
+    {
+      "title": "Broadleaf Results Blog \u00bb MSP",
+      "feed_url": "https://broadleafresults.com/blog/category/managed-service-programs/feed/",
+      "website_url": "https://broadleafresults.com/blog/category/managed-service-programs/",
+      "description": "Stay informed on MSP best practices. Learn strategies to simplify your organization's contingent staffing responsibilities and the benefits of Managed Service Programs. Broadleaf delivers total talent management services to a wide range of industries across the United States. Founded in 1965, our expert team specializes in managed service programs (FlexMSP), recruitment process outsourcing (FlexRPO), direct sourcing (DS), independent contractor compliance (ICC), statement of work (FlexSOW) and procurement management, vendor management systems (VMS), and employer of record (EOR).",
+      "followers": {
+        "facebook": 345,
+        "twitter": 294,
+        "instagram": 204
+      },
+      "image_url": "https://i1.feedspot.com/5612640.jpg?t=1688030441"
+    },
+    {
+      "title": "NinjaOne Blog \u00bb MSP Growth",
+      "feed_url": "https://www.ninjaone.com/blog/category/growth/feed/",
+      "website_url": "https://www.ninjaone.com/blog/category/growth/",
+      "description": "NinjaOne is committed to building high-performance, scalable, secure, and easy-to-use IT management products that monitor, remediate, and enable MSPs and IT professionals to deliver business continuity and drive profitability. Explore our articles in MSP growth for the latest news, insights, solutions for growth and more!",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5612638.jpg?t=1688030431"
+    },
+    {
+      "title": "Arctic Wolf \u00bb MSP Blog",
+      "feed_url": "https://arcticwolf.com/resources/category/msp-blog/feed/",
+      "website_url": "https://arcticwolf.com/resources/category/msp-blog/",
+      "description": "Using the cloud-native Arctic Wolf Platform, we help organizations end cyber risk by providing security operations as a concierge service. Arctic Wolf solutions include Arctic Wolf\u00ae Managed Detection and Response (MDR), Managed Risk, Managed Cloud Monitoring, and Managed Security Awareness; each delivered by the industry's original Concierge Security Team. Explore the MSP blog for the latest news and insights, solutions, tools and more!",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5612629.jpg?t=1688030371"
+    },
+    {
+      "title": "MSP360 Blog",
+      "feed_url": "https://www.msp360.com/resources/blog-articles/feed/",
+      "website_url": "https://www.msp360.com/resources/blog-articles/",
+      "description": "Read MSP360's latest news and expert articles about MSP business and technology. Established in 2011 by a group of IT professionals, MSP360 provides simple and reliable cutting-edge Backup and IT management solutions for MSPs and IT departments worldwide.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5612636.jpg?t=1688030414"
+    },
+    {
+      "title": "Support Adventure Blog",
+      "feed_url": "https://www.supportadventure.com/feed/",
+      "website_url": "https://www.supportadventure.com/blog/",
+      "description": "Covers a compilation full of MSP best practices resources to improve your MSP and reach new heights. Support Adventure connects MSPs with the best IT Professionals with excellent communication.",
+      "followers": {
+        "facebook": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5317036.jpg?t=1630391113"
+    },
+    {
+      "title": "Liongard Blog",
+      "feed_url": "https://www.liongard.com/resources/blog/feed/",
+      "website_url": "https://www.liongard.com/resources/blog/",
+      "description": "Expert-written insights designed to help MSPs thrive, featuring MSP marketing, cybersecurity, and company updates. Liongard is the automation platform that gives managed service providers complete visibility across the IT stack.",
+      "followers": {
+        "facebook": 485,
+        "twitter": 583,
+        "instagram": 64
+      },
+      "image_url": "https://i1.feedspot.com/5318816.jpg?t=1630665465"
+    },
+    {
+      "title": "Tubblog",
+      "feed_url": "https://tubblog.co.uk/feed/",
+      "website_url": "https://tubblog.co.uk/",
+      "description": "Putting IT Consultants Back In Control. Tubblog provides news and advice for SMB IT Solution Providers, Managed Service Providers (MSPs) and IT Professionals.",
+      "followers": {
+        "facebook": 583,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4756983.jpg?t=1607081158"
+    },
+    {
+      "title": "Joom Connect Blog",
+      "feed_url": "https://www.joomconnect.com/blog?format=feed",
+      "website_url": "https://www.joomconnect.com/blog",
+      "description": "IT and MSP Marketing Platform for Managed Service Providers. JoomConnect is a professional Website and Marketing agency for IT and MSP Companies. To provide high end marketing and fulfillment services to MSP companies and provide tools via their website.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1100,
+        "instagram": 234
+      },
+      "image_url": "https://i1.feedspot.com/4755992.jpg?t=1607080540"
+    },
+    {
+      "title": "MSP Alliance Blog",
+      "feed_url": "https://mspalliance.com/feed/",
+      "website_url": "https://www.mspalliance.com/blog/",
+      "description": "To educate the business consumer on the benefits of using a Managed Service Provider and Cloud Service Provider. Promoting ethical standards, education and best practices to service providers the world over.",
+      "followers": {
+        "facebook": 774,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4755975.jpg?t=1607080536"
+    },
+    {
+      "title": "i.t.NOW Blog",
+      "feed_url": "https://itnow.net/blog/feed/",
+      "website_url": "https://itnow.net/blog/",
+      "description": "i.t.NOW Provides IT Support, IT Solutions, and Managed Services for businesses in the Salt Lake City Utah metro area and across the Wasatch Front.",
+      "followers": {
+        "facebook": 245,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5021054.jpg?t=1607081179"
+    },
+    {
+      "title": "Office1 Blog",
+      "feed_url": "https://www.office1.com/blog/rss.xml",
+      "website_url": "https://www.office1.com/blog",
+      "description": "Office1 is the leading IT Service company with all-inclusive solutions, serving a wide range of businesses across the United States. This blog digest filled with valuable resources and industry insights you can use in your day-to-day office operations.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 29,
+        "instagram": 172
+      },
+      "image_url": "https://i1.feedspot.com/5051781.jpg?t=1607081123"
+    },
+    {
+      "title": "MSP Today",
+      "feed_url": "https://rss.tmcnet.com/rss/grss.ashx?cnl=261",
+      "website_url": "https://www.msptoday.com/",
+      "description": "Managed Services Providers (MSPs) play an integral role in the reliability and dependability of IT services. Through network administration, support and centralized services for end customers, MSPs are able to manage IT for clients. MSPToday offers MSP professionals and the end user community up-to-date news and headlines on latest happenings in the Managed Services industry.",
+      "followers": {
+        "facebook": 917,
+        "twitter": 475
+      },
+      "image_url": "https://i1.feedspot.com/4757382.jpg?t=1607081175"
+    },
+    {
+      "title": "ProVal Technologies Blog",
+      "feed_url": "https://www.provaltech.com/blog/feed/",
+      "website_url": "https://www.provaltech.com/blog/",
+      "description": "Managed Services. Delivered. Are you a Managed Service Provider looking to become more efficient? ProVal Tech helps MSP's leverage automation, so they become more efficient and reduce noise",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1000,
+        "instagram": 368
+      },
+      "image_url": "https://i1.feedspot.com/4756919.jpg?t=1607081126"
+    },
+    {
+      "title": "Astute Technology Management Blog",
+      "feed_url": "https://www.astutetm.com/feed/",
+      "website_url": "https://www.astutetm.com/blog/",
+      "description": "Our blog covering topics such as artificial inelligence, security, healthcare, financial services, commercial construction, commercial real estate, etc. Astute Technology Management has been Ohio's premier managed IT service provider, providing IT management and support for small and mid-size businesses. We understand how critical data, and up-to-the-minute accurate information, is to every company.",
+      "followers": {
+        "facebook": 445,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5009282.jpg?t=1607081201"
+    },
+    {
+      "title": "Rutter Networking Technologies Blog",
+      "feed_url": "https://www.rutter-net.com/blog/rss.xml",
+      "website_url": "https://www.rutter-net.com/blog",
+      "description": "Rutter Networking Technologies is a Boston-area managed IT services provider that implements leading cloud, cybersecurity, and network infrastructure solutions for public and private sector enterprises across New England. See how Rutter can help your company maximize IT ROI and reduce overhead.",
+      "followers": {
+        "facebook": 302,
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4988647.jpg?t=1607081133"
+    },
+    {
+      "title": "p1Technologies",
+      "feed_url": "https://www.p1technology.com.au/our-news?func=viewRSS&wid=117",
+      "website_url": "https://www.p1technology.com.au/our-news/",
+      "description": "p1 is a team of innovative IT enterprise architects with deep cloud expertise delivering true-fit storage, virtualization & networking solutions. People Driven Managed IT Services & Support for professional, medical, engineering, construction & manufacturing sectors.",
+      "followers": {
+        "twitter": 208
+      },
+      "image_url": "https://i1.feedspot.com/5226237.jpg?t=1607522286"
+    },
+    {
+      "title": "MSP Growth Hacks",
+      "feed_url": "https://mspgrowthhacks.com/feed/",
+      "website_url": "https://mspgrowthhacks.com/",
+      "description": "The complete MSP guide to growth hacking, lead generation, digital marketing, profitability and business strategy presented by current and former Managed IT Industry pros.",
+      "followers": {
+        "facebook": 192
+      },
+      "image_url": "https://i1.feedspot.com/5007552.jpg?t=1607081623"
+    },
+    {
+      "title": "Altaro",
+      "feed_url": "https://www.altaro.com/hyper-v/feed/",
+      "website_url": "https://www.altaro.com/hyper-v/",
+      "description": "Altaro Software is a fast growing developer of easy to use backup solutions targeted towards SMBs and focused primarily on Microsoft Hyper-V Server and VMware.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5004978.jpg?t=1607080176"
+    },
+    {
+      "title": "S&L IT Consultants Blog \u00bb MSP",
+      "feed_url": "https://www.slconsultants.nyc/blog?format=rss",
+      "website_url": "https://www.slconsultants.nyc/blog/category/MSP",
+      "description": "Most businesses use applications that require 24/7 back-end servers that need to be properly maintained and upgraded as needed. This process ensures efficiency, productivity and reliability. S&L IT Consultants will assure you will get proper advisement for your current and future IT infrastructure. Browse through our articles on MSP for all the information, resources and insights.",
+      "followers": {
+        "facebook": 385,
+        "twitter": 2,
+        "instagram": 311
+      },
+      "image_url": "https://i1.feedspot.com/5612644.jpg?t=1688030468"
+    },
+    {
+      "title": "MSP Resource Blog",
+      "feed_url": "https://www.mspresources.org/blog?format=rss",
+      "website_url": "https://www.mspresources.org/blog",
+      "description": "Read our recent articles and experts insights for MSPs and IT professionals. MSP Resources features insights and advice for modern MSPs and ITSPs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5612646.jpg?t=1688030780"
+    },
+    {
+      "title": "BeeCastle Blog",
+      "feed_url": "https://beecastle.com/blog/index.xml",
+      "website_url": "https://beecastle.com/blog/",
+      "description": "BeeCastle exists for one reason: to empower MSPs to harness better client relationships. To nurture them, to grow them, and ultimately, to benefit from strong consistent relationships. We're always working to level up our solution for our customers. Check out what's new and what's changed in BeeCastle - data solutions for MSPs - loads of free tools for MSPs.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/5603578.jpg?t=1687324562"
+    },
+    {
+      "title": "Humanize IT Blog",
+      "feed_url": "https://blog.humanizeit.biz/rss.xml",
+      "website_url": "https://blog.humanizeit.biz/",
+      "description": "Build a Better MSP and Transform From an IT Service Provider to a High-Value Business Partner. Differentiate your MSP from your competition with ease, get in front of potential ideal clients and close higher-value deals. Check out our latest insights and news here. Our platform allows managed services providers to design high-value client interactions, deliver engaging client meetings and scale account management, vCIO and IT consultative sales operations.",
+      "followers": {
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5612650.jpg?t=1688030502"
+    },
+    {
+      "title": "Citrix Blog \u00bb Managed Service Provider",
+      "feed_url": "https://www.citrix.com/blogs/category/managed-service-providers/feed/",
+      "website_url": "https://www.citrix.com/blogs/category/managed-service-providers/",
+      "description": "At Citrix, we believe organizational strength stems from the success of individuals. In giving people the freedom to do what they love and be who they want to be. In whatever size, shape, or form that may take. Stay up to date with the latest news and insights on MSP Marketing, technology and more!",
+      "followers": {
+        "facebook": 212800,
+        "twitter": 205000,
+        "instagram": 68500
+      },
+      "image_url": "https://i1.feedspot.com/5612649.jpg?t=1688030495"
+    },
+    {
+      "title": "EZ MSP Blog",
+      "feed_url": "https://www.ezmsp.com/blog?format=feed",
+      "website_url": "https://www.ezmsp.com/blog",
+      "description": "Stay connected with all of the latest IT trends and alerts by following our blog. EZ MSP has been serving the New York area since 2008, providing IT Support such as technical helpdesk support, computer support and consulting to small and medium-sized businesses. It's always been our goal to provide enterprise-level IT practices and solutions to the small business sector, with small business prices.",
+      "followers": {
+        "facebook": 187,
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/5612651.jpg?t=1688030509"
+    },
+    {
+      "title": "ScienceSoft Blog \u00bb Managed IT",
+      "feed_url": "https://www.scnsoft.com/blog/category/managed-it/atom",
+      "website_url": "https://www.scnsoft.com/blog/category/managed-it",
+      "description": "Find comprehensive articles and practical tips for solving the problems of managed IT from experienced ScienceSoft's consultants on our blog.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4959163.jpg?t=1607080180"
+    },
+    {
+      "title": "Ulistic Inc Blog",
+      "feed_url": "https://www.ulistic.com/category/blog/feed/",
+      "website_url": "https://www.ulistic.com/category/blog/",
+      "description": "Stuart Crawford is respected as a leader in the MSP Marketing & IT channel. We provide marketing and consulting services to managed service providers. We have a responsibility to help you succeed. We won't stop until that happens.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4756991.jpg?t=1607080947"
+    },
+    {
+      "title": "SankalpIT Services Blog",
+      "feed_url": "https://sankalpit.com/blog/feed/",
+      "website_url": "https://sankalpit.com/blog/",
+      "description": "SankalpIT is serving the MSPs since 2013 and aims at building the best client network in the IT World! Follow to get updates.",
+      "followers": {
+        "facebook": 249,
+        "twitter": 267
+      },
+      "image_url": "https://i1.feedspot.com/5057192.jpg?t=1613050831"
+    },
+    {
+      "title": "Contemporary Staffing \u00bb MSP / VMS",
+      "feed_url": "https://contemporarystaffing.com/category/msp-vms/feed/",
+      "website_url": "https://contemporarystaffing.com/category/msp-vms/",
+      "description": "Contemporary Staffing Solutions is a national industry leading professional Employment Agency who also offers our Workforce Management Services and more!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 6,
+        "instagram": 977
+      },
+      "image_url": "https://i1.feedspot.com/4756024.jpg?t=1607081251"
+    },
+    {
+      "title": "MSP.blog",
+      "feed_url": "https://msp.blog/feed/",
+      "website_url": "https://msp.blog/msp-blog-all/",
+      "description": "All things MSP, M&A, exits and funding for MSP owners. We're a team of ex MSP owners that have experience within M&A, Exits and funding. We have created MSP.blog to demystify the space within the MSP community and give you the knowledge and tools to grow, acquire and successfully exit.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5482945.jpg?t=1671775599"
+    },
+    {
+      "title": "The Compassionate Geek Blog",
+      "feed_url": "https://doncrawley.com/the-compassionate-geek/feed/",
+      "website_url": "https://doncrawley.com/the-compassionate-geek/",
+      "description": "Learn how to exceed customer expectations from The Compassionate Geek as you read these articles regarding great customer service and learn how to improve service quality as you learn how to identify and how to respond to customer needs and emotions.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 718
+      },
+      "image_url": "https://i1.feedspot.com/5095009.jpg?t=1607081162"
+    },
+    {
+      "title": "The N\u2011able Blog",
+      "feed_url": "https://www.n-able.com/blog",
+      "website_url": "https://www.n-able.com/blog",
+      "description": "SolarWinds\u00ae MSP delivers scalable IT service management solutions, empowering MSPs worldwide to create highly efficient and profitable businesses that drive a measurable competitive advantage. Follow this blog for new IT News, MSP industry tips, and advice about how to get the most out of your SolarWinds\u00ae MSP products.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/4755960.jpg?t=1607080159"
+    },
+    {
+      "title": "Auvik \u00bb Managed Service Providers",
+      "feed_url": "https://www.auvik.com/feed/",
+      "website_url": "https://www.auvik.com/franklyit/category/managed-service-providers-msps/",
+      "description": "Auvik provides out-of-the-box network monitoring and management at astonishing speed. Explore our wide variety of blog posts about Managing an MSP.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5612641.jpg?t=1688030448"
+    },
+    {
+      "title": "MSP Success Magazine",
+      "feed_url": "https://www.mspsuccessmagazine.com/feed/",
+      "website_url": "https://www.mspsuccessmagazine.com/",
+      "description": "Find all the latest articles on the topics of marketing, client acquisition, sales, profitability, leadership and personal development. MSP Success Magazine is a print and digital publication dedicated to helping the CEOs and owners of managed IT services businesses build strong, profitable, growth-oriented businesses. Written and published by Robin Robins, founder of Technology Marketing Toolkit, this magazine is uniquely focused on the topics of marketing, client-acquisition, sales, profitability, leadership and personal development.",
+      "followers": {
+        "facebook": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5612647.jpg?t=1746030967"
+    },
+    {
+      "title": "Magna5",
+      "feed_url": "https://www.magna5.com/feed/",
+      "website_url": "https://www.magna5.com/resource-center/",
+      "description": "Keep your MSP up to date with the latest news on cybersecurity from ThreatAdvice. Protect and power your success with world-class cybersecurity solutions for any size organization. Relying on a series of disparate solutions to secure your company and power its technology just isn't enough. Get crystal clear, comprehensive cybersecurity for less with ThreatAdvice.",
+      "followers": {
+        "facebook": 461,
+        "twitter": 388,
+        "instagram": 314
+      },
+      "image_url": "https://i1.feedspot.com/5612635.jpg?t=1688030408"
+    },
+    {
+      "title": "Palmetto Technology Group Blog",
+      "feed_url": "https://www.goptg.com/feed/",
+      "website_url": "https://www.goptg.com/blog/",
+      "description": "PTG is an outsourced IT company in Greenville, SC. The blog features productivity tips and tricks, security advice, and how-to articles for the Microsoft programs you use every day. Palmetto Technology Group (PTG) is an award-winning IT support and managed service provider headquartered in Greenville, South Carolina. We believe in delivering phenomenal IT experiences in every interaction.",
+      "followers": {
+        "facebook": 503,
+        "twitter": 801
+      },
+      "image_url": "https://i1.feedspot.com/5612660.jpg?t=1688030562"
+    },
+    {
+      "title": "Opollo Blog",
+      "feed_url": "https://opollo.com/blog/",
+      "website_url": "https://opollo.com/blog/",
+      "description": "LeftLeads is a IT & MSP marketing blog that provides in-depth articles, blog posts, and insights into the world of digital marketing for IT companies. We are an MSP and IT marketing agency with a diverse team of professionals. Our consultants have years of experience in the field and are experts in their area. We also hire young talent who have the ambition to succeed and slowly cultivate them into our team.",
+      "followers": {
+        "facebook": 859,
+        "twitter": 98
+      },
+      "image_url": "https://i1.feedspot.com/5612642.jpg?t=1688030456"
+    },
+    {
+      "title": "The ChannelPro Network \u00bb MSP Spotlights",
+      "feed_url": "https://www.channelpronetwork.com/content_type/msp-spotlights/feed/",
+      "website_url": "https://www.channelpronetwork.com/content_type/msp-spotlights/?cs=17",
+      "description": "Stay informed about the latest IT solutions for Managed Services with expert analysis, opinion, news, event updates, and free resources. The ChannelPro Network is a media company providing targeted business and technology information for IT decision makers and channel partners. Via its websites, live events and the monthly magazine, The ChannelPro Network delivers expert opinion, analysis, news, product reviews, and advice for IT decision makers and channel partners.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5612652.jpg?t=1688030523"
+    },
+    {
+      "title": "NinjaRMM MSP Blog",
+      "feed_url": "https://www.ninjarmm.com/feed/",
+      "website_url": "https://www.ninjaone.com/blog/",
+      "description": "Stay up to date with the latest articles, news, and resources on IT management and monitoring on the NinjaRMM blog for managed service providers (MSP) and IT professionals. Access free case studies, webinars, and more",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4757399.jpg?t=1607080432"
+    },
+    {
+      "title": "Omega Systems Blog",
+      "feed_url": "https://omegasystemscorp.com/insights/blog/feed/",
+      "website_url": "https://omegasystemscorp.com/insights/blog/",
+      "description": "Covers the latest MSP trend, news, and solutions. The TNS Group gives businesses the opportunity to grow through technology by providing strategic IT planning and customized support.",
+      "followers": {
+        "facebook": 207,
+        "twitter": 616
+      },
+      "image_url": "https://i1.feedspot.com/5318817.jpg?t=1630665977"
+    },
+    {
+      "title": "ExterNetworks Blog",
+      "feed_url": "https://www.extnoc.com/blog/feed/",
+      "website_url": "https://www.extnoc.com/blog/",
+      "description": "ExterNetworks is a leading Managed service provider offering 24/7 network monitoring, noc services & IT help desk services. Leave all your worries related to managed technology services to ExterNetworks! We are on a mission to provide end-to-end solutions featuring design, deployment and 24*7*365 support to top IT companies. We embrace all the emerging technologies and offer top-notch solutions that are agile and optimal for the organizations.",
+      "followers": {
+        "facebook": 105,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4828863.jpg?t=1607080447"
+    },
+    {
+      "title": "SuperOps.ai Blog",
+      "feed_url": "https://superops.ai/blog/feed.rss",
+      "website_url": "https://superops.com/blog",
+      "description": "The AI-powered MSP software purpose-built for MSPs to automate processes, drive revenue, and scale their businesses. Strategies, tips, ideas, stories, and inspiration for Managed Service Providers (MSPs) to grow their business and increase revenue.",
+      "followers": {
+        "facebook": 319,
+        "twitter": 408,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5244379.jpg?t=1613105969"
+    },
+    {
+      "title": "ConnectWise Blog",
+      "feed_url": "https://www.connectwise.com/blog",
+      "website_url": "https://www.connectwise.com/blog",
+      "description": "Strategies for managed services providers (MSPs) to become more profitable, scale their services, hire better talent, and grow their IT solutions business.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4755953.jpg?t=1607081225"
+    },
+    {
+      "title": "QBS Software Blog",
+      "feed_url": "https://www.qbssoftware.com/news/category/blog/feed/",
+      "website_url": "https://www.qbssoftware.com/news/category/blog/",
+      "description": "A fresh approach to technology sourcing, offering a high value, human relationship focused service exclusively for IT Managed Service Providers.",
+      "followers": {
+        "facebook": 29
+      },
+      "image_url": "https://i1.feedspot.com/5009273.jpg?t=1607081924"
+    },
+    {
+      "title": "Atera Blog \u00bb MSP Tips",
+      "feed_url": "https://www.atera.com/blog/category/msp-tips/feed/",
+      "website_url": "https://www.atera.com/blog/",
+      "description": "Atera provides an all-in-one RMM and PSA platform for IT professionals. From Remote Monitoring and Management to Remote Access, Helpdesk, Billing, and Reporting, Atera offers all the next-level features you wished for in one place. IT automation rules, shared script library, and exclusive patch management software take care of all the busywork so you can step up and shape the future of IT. Our blog articles about MSP feature the latest news and insights, tips, tutorials and more!",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5612631.jpg?t=1688030384"
+    },
+    {
+      "title": "MSPbots.ai Blog",
+      "feed_url": "https://www.mspbots.ai/feed",
+      "website_url": "https://www.mspbots.ai/blog",
+      "description": "A collection of articles that will keep your business secure, productive, and profitable. We create and deploy bots that flawlessly automate administrative tasks, shorten processes, and convert data into actionable items so that managed service providers (MSPs) can devote more of their precious resources to creative solutions.",
+      "followers": {
+        "facebook": 299,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/5612630.jpg?t=1688030379"
+    },
+    {
+      "title": "AvePoint Blog \u00bb MSP & Channel",
+      "feed_url": "https://www.avepoint.com/blog/category/msp-and-channel/feed",
+      "website_url": "https://www.avepoint.com/blog/category/msp-and-channel",
+      "description": "AvePoint provides the most advanced platform to optimize SaaS operations and secure collaboration. More than 17,000 customers worldwide rely on our solutions to make them more productive, compliant and secure. Our articles on MSP & Channel feature all the latest news and features, information and more!",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 10400,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5612665.jpg?t=1688030617"
+    },
+    {
+      "title": "Uptime Solutions Blog",
+      "feed_url": "https://www.uptimesolutions.tech/mspblog?format=rss",
+      "website_url": "https://www.uptimeglobal.tech/msp-blog",
+      "description": "Uptime Solutions work with MSPs and VARs around the world, this provides a valuable insight into trends that are working and some that are not. Our MSP Blog aims to share some useful tips and guidance that can help you as you steer your MSP through some monumental years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5612634.jpg?t=1688030522"
+    },
+    {
+      "title": "BigOrange.Marketing \u00bb MSP Marketing",
+      "feed_url": "https://bigorange.marketing/category/msp-marketing/feed/",
+      "website_url": "https://bigorange.marketing/category/msp-marketing/",
+      "description": "At BigOrange, we understand that you want solid results from your digital inbound marketing. We help American businesses get leads and grow with websites, digital marketing, content, SEO, video and social media marketing. Explore the latest articles on MSP Marketing, insights, news, stories and more!",
+      "followers": {
+        "facebook": 184,
+        "twitter": 275,
+        "instagram": 456
+      },
+      "image_url": "https://i1.feedspot.com/5612653.jpg?t=1688030526"
+    },
+    {
+      "title": "Syncro Blog",
+      "feed_url": "https://syncromsp.com/feed/",
+      "website_url": "https://syncromsp.com/blog/",
+      "description": "Syncro is a fully-armed PSA, RMM, and Remote Session platform designed specifically for Managed Service Providers (MSPs). Follow the blog and stay up to date with all of Syncro's biggest releases and announcements.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 264
+      },
+      "image_url": "https://i1.feedspot.com/5175269.jpg?t=1607080436"
+    },
+    {
+      "title": "Impact Networking",
+      "feed_url": "https://www.impactmybiz.com/feed/",
+      "website_url": "https://www.impactmybiz.com/resource-center/#contentType=(40)",
+      "description": "Discover Your Business Identity in the Age of Transformation The Boundaries of Business Are Disappearing Confront the Demands of a Changing Landscape Today's world is becoming more connected, collaborative and fast-paced at every turn. RESOURCES Knowledge at Your Fingertips Accesses digital content created to educate users about our range of solutions and technology.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5075741.jpg?t=1607080450"
+    },
+    {
+      "title": "Lifecycle Insights Blog",
+      "feed_url": "https://lifecycleinsights.io/feed/",
+      "website_url": "https://www.scalepad.com/blog/",
+      "description": "At Lifecycle Insights we believe better data leads to better insights and better business. We make asset lifecycle management fast, simple and accurate. You bet your assets we have the insights you need on your hardware, software and contract management.",
+      "followers": {
+        "facebook": 517,
+        "twitter": 799
+      },
+      "image_url": "https://i1.feedspot.com/5081344.jpg?t=1607081205"
+    },
+    {
+      "title": "HigherGround Managed Services Provider (MSP) Blog",
+      "feed_url": "https://www.ntiva.com/feed/",
+      "website_url": "https://www.ntiva.com/blog",
+      "description": "HigherGround Managed Services Provider (MSP) | A leader in Managed Services for Chicago. HG is an all-inclusive IT consulting firm providing both managed services and on-site technical support. One of Microsoft's top 5% worldwide partners.",
+      "followers": {
+        "facebook": 123,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4757054.jpg?t=1607081219"
+    },
+    {
+      "title": "Pronto Marketing",
+      "feed_url": "https://msp.prontomarketing.com/feed/",
+      "website_url": "https://www.prontomarketing.com/blog/category/it-marketing/",
+      "description": "Learn more about how to grow your online presence and build a stronger lead generation strategy from the marketing experts at Pronto.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5096177.jpg?t=1607081256"
+    }
+  ]
+}

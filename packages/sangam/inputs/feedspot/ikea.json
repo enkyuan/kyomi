@@ -1,0 +1,41 @@
+{
+  "category": "Ikea",
+  "source_url": "https://rss.feedspot.com/ikea_rss_feeds",
+  "feeds": [
+    {
+      "title": "IKEA Hackers",
+      "feed_url": "https://ikeahackers.net/feed",
+      "website_url": "https://ikeahackers.net/",
+      "description": "IKEA hackers is the site for hacks and mods on all things IKEA. Browse thousands of ideas to transform your IKEA furniture to fit your home and life.",
+      "followers": {
+        "facebook": 638500,
+        "twitter": 11400,
+        "instagram": 479200
+      },
+      "image_url": "https://i1.feedspot.com/4925727.jpg?t=1620970269"
+    },
+    {
+      "title": "IKEA Foundation Blog",
+      "feed_url": "https://ikeafoundation.org/feed/",
+      "website_url": "https://ikeafoundation.org/stories/",
+      "description": "The IKEA Foundation works to create a better everyday life for many people. Our mission is to improve the lives of vulnerable children by enabling their families to create sustainable livelihoods, and fight and cope with climate change.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 8200,
+        "instagram": 23600
+      },
+      "image_url": "https://i1.feedspot.com/4925692.jpg?t=1620970065"
+    },
+    {
+      "title": "IKEA Today",
+      "feed_url": "https://ikea.today/feed/",
+      "website_url": "https://www.ikea.com/global/en/newsroom/",
+      "description": "IKEA Today is an opportunity to get behind the scenes at IKEA product development and experience what we are working on and how we make it happen through Democratic Design. It is an insight into the democratic design process at IKEA.",
+      "followers": {
+        "facebook": 33200000,
+        "twitter": 351200
+      },
+      "image_url": "https://i1.feedspot.com/4925697.jpg?t=1620970149"
+    }
+  ]
+}

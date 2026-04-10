@@ -1,0 +1,48 @@
+{
+  "category": "Centennial News",
+  "source_url": "https://rss.feedspot.com/centennial_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Centennial State News",
+      "feed_url": "https://centennialstatenews.com/stories.rss",
+      "website_url": "https://centennialstatenews.com/",
+      "description": "Centennial State News brings forward news stories important to Centennial, Colorado. This page features regular updates offering a comprehensive, reliable, and timely recap of local Business, Politics, Government, Schools, and Regulation matters. Centennial State News portal is owned by Metric Media LLC, a non-profit news content provider.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5512576.jpg?t=1677224007"
+    },
+    {
+      "title": "Denver7 \u00bb Centennial",
+      "feed_url": "https://www.thedenverchannel.com/news/front-range/centennial.rss",
+      "website_url": "https://www.denver7.com/news/front-range/centennial",
+      "description": "Denver7 News brings you breaking and developing news from Centennial, Colorado on KMGH-TV and TheDenverChannel.com.",
+      "followers": {
+        "facebook": 830800,
+        "twitter": 323900,
+        "instagram": 107900
+      },
+      "image_url": "https://i1.feedspot.com/5142140.jpg?t=1587533682"
+    },
+    {
+      "title": "Centennial Citizen Independent",
+      "feed_url": "https://coloradocommunitymedia.com/centennial-citizen//rss/",
+      "website_url": "https://coloradocommunitymedia.com/centennial/",
+      "description": "Keep up with the latest local and breaking news of Centennial, CO from Centennial Citizen a publication of Colorado Community Media.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5142138.jpg?t=1587534571"
+    },
+    {
+      "title": "CBS Colorado \u00bb Centennial",
+      "feed_url": "https://denver.cbslocal.com/tag/centennial-news/feed/",
+      "website_url": "https://www.cbsnews.com/colorado/tag/centennial-news/",
+      "description": "Find Denver news, Colorado news, Colorado weather forecasts and sports reports including Denver Broncos at CBSDenver.com.",
+      "followers": {
+        "facebook": 531300,
+        "twitter": 231700
+      },
+      "image_url": "https://i1.feedspot.com/5142144.jpg?t=1587534868"
+    }
+  ]
+}

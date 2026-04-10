@@ -1,0 +1,75 @@
+{
+  "category": "Canadian Productivity",
+  "source_url": "https://rss.feedspot.com/canadian_productivity_rss_feeds",
+  "feeds": [
+    {
+      "title": "Scott H. Young Blog",
+      "feed_url": "https://www.scotthyoung.com/blog/feed/",
+      "website_url": "https://www.scotthyoung.com/blog/",
+      "description": "Hi! I'm Scott H Young. I'm a Wall Street Journal bestselling author, podcast host, computer programmer, and avid reader. Since 2006, I've published weekly essays on this website to help people like you learn and think better. The theme of posts ranges from productivity to learning to the meaning of life.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 21400,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4524232.jpg?t=1659691467"
+    },
+    {
+      "title": "Mike Vardy Blog",
+      "feed_url": "https://mikevardy.com/category/blog/feed/",
+      "website_url": "https://mikevardy.com/category/blog/",
+      "description": "Productivityist will help you be more effective, more efficient, and better than ever by powering up your productivity and taking you to the next level.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 22200,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5294340.jpg?t=1624083807"
+    },
+    {
+      "title": "Farnam Street Blog \u00bb Productivity",
+      "feed_url": "https://fs.blog/category/productivity/feed/",
+      "website_url": "https://fs.blog/category/productivity/",
+      "description": "Timeless lessons and insights that help you think better, learn faster and make smart decisions.",
+      "followers": {
+        "facebook": 90400,
+        "twitter": 528600,
+        "instagram": 211300
+      },
+      "image_url": "https://i1.feedspot.com/5321394.jpg?t=1631514052"
+    },
+    {
+      "title": "Clear Concept Inc. \u00bb Productivity",
+      "feed_url": "https://clearconceptinc.ca/category/productivity/feed/",
+      "website_url": "https://clearconceptinc.ca/category/productivity/",
+      "description": "Clear Concept is a global training organization. Our productivity tools, collaboration skills, and mindset practices have been empowering people to perform at their best for almost 20 years. Our practical workshops, coaching, and online training are designed to have an immediate impact on individuals and teams in any industry, at any stage in their career.",
+      "followers": {
+        "facebook": 545,
+        "twitter": 1100,
+        "instagram": 459
+      },
+      "image_url": "https://i1.feedspot.com/5321400.jpg?t=1631515007"
+    },
+    {
+      "title": "Minima Basics Blog \u00bb Productivity",
+      "feed_url": "https://minimabasics.ca/blogs/minima-blogs/tagged/productivity.atom",
+      "website_url": "https://minimabasics.ca/blogs/minima-blogs/tagged/productivity",
+      "description": "Minima Blogs is another resource, another fun place to hang around, and another place to find inspiration to stay organized, motivated and productive. A place where they can rely on, to receive advice!",
+      "followers": {
+        "facebook": 166,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5321403.jpg?t=1631515234"
+    },
+    {
+      "title": "A Life of Productivity Blog",
+      "feed_url": "https://alifeofproductivity.com/feed/",
+      "website_url": "https://chrisbailey.com/blog/",
+      "description": "Tips, tools, and techniques to become more productive. My name is Chris, and I live in Kingston, Canada with my wife Ardyn and our turtle Edward. There is nothing I'm obsessed about more than becoming more productive, besides helping other people become more productive. This site exists solely for that purpose.",
+      "followers": {
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/3819547.jpg?t=1624870850"
+    }
+  ]
+}

@@ -1,0 +1,597 @@
+{
+  "category": "UK News",
+  "source_url": "https://rss.feedspot.com/uk_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sky News",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/home.xml",
+      "website_url": "https://news.sky.com/",
+      "description": "Sky news delivers breaking news, headlines and top stories from business, politics, entertainment and more in the UK and worldwide.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/4479115.jpg?t=1721214585"
+    },
+    {
+      "title": "The Telegraph",
+      "feed_url": "https://www.telegraph.co.uk/rss.xml",
+      "website_url": "https://www.telegraph.co.uk/",
+      "description": "Latest news, business, sport, comment, lifestyle, and culture from the Daily Telegraph and Sunday Telegraph newspapers and video from Telegraph TV.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8605.jpg?t=1615291245"
+    },
+    {
+      "title": "The Independent",
+      "feed_url": "http://www.independent.co.uk/rss",
+      "website_url": "https://www.independent.co.uk/",
+      "description": "The Independent is world's most free-thinking newspaper. Find all the latest news, comment and features from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "HuffPost UK",
+      "feed_url": "https://www.huffingtonpost.co.uk/feeds/index.xml",
+      "website_url": "https://www.huffingtonpost.co.uk/",
+      "description": "The destination for U.K news, blogs and coverage of politics, entertainment, lifestyle, world news, technology and comedy.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 198500
+      },
+      "image_url": "https://i1.feedspot.com/3985433.jpg"
+    },
+    {
+      "title": "Daily Record",
+      "feed_url": "https://www.dailyrecord.co.uk/news/?service=rss",
+      "website_url": "https://www.dailyrecord.co.uk/",
+      "description": "Read the latest Scottish news covering Glasgow and Edinburgh. Scotland news, UK and world news. Covering all the latest headlines and full reports.",
+      "followers": {
+        "facebook": 827100,
+        "twitter": 153700
+      },
+      "image_url": "https://i1.feedspot.com/2205359.jpg?t=1659599455"
+    },
+    {
+      "title": "The Sun \u00bb Porto",
+      "feed_url": "https://www.thesun.co.uk/feed/",
+      "website_url": "https://www.thesun.co.uk/sport/football/team/2974521/fc-porto/",
+      "description": "Get the latest news, exclusives, sports, celebrities, showbiz, politics, business, and lifestyle from The Sun. The Best for News, Sport, Showbiz, Celebrities, etc. The Sun was launched in 1969 with the slogan 'forward with the people,' because that is what we believe in. It cares about the quality of life, the kind of world we live in, and about people. The Sun is more than a newspaper. It is an instigator, an entertainer, a cultural reference point, a finger on the pulse, and a daily relationship.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 2100000,
+        "instagram": 483100
+      },
+      "image_url": "https://i1.feedspot.com/4464042.jpg?t=1684197121"
+    },
+    {
+      "title": "Politics.co.uk",
+      "feed_url": "https://www.politics.co.uk/feed/",
+      "website_url": "https://www.politics.co.uk/",
+      "description": "Politics.co.uk is an impartial political website with no political affiliation, which prides itself on standing out as an independent voice in a landscape where the norm is to nail your colours to the mast. Up to the minute UK political news, features, view and analysis, plus guides, briefings and debate.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 56200
+      },
+      "image_url": "https://i1.feedspot.com/1566181.jpg?t=1614247521"
+    },
+    {
+      "title": "The Mirror",
+      "feed_url": "https://www.mirror.co.uk/?service=rss",
+      "website_url": "https://www.mirror.co.uk/",
+      "description": "Daily Mirror provides all the big headlines, pictures, analysis, opinion and video on the stories, news, sport and celebrity gossip that matter to you. You will also find plus weather, horoscopes, competitions, sudoku, bingo and more.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/41349.jpg?t=1751622163"
+    },
+    {
+      "title": "London Evening Standard",
+      "feed_url": "https://www.standard.co.uk/rss",
+      "website_url": "https://www.standard.co.uk/",
+      "description": "Latest London news, football, business, showbiz and entertainment from the London Evening Standard",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 191300
+      },
+      "image_url": "https://i1.feedspot.com/4368371.jpg"
+    },
+    {
+      "title": "The Conversation UK",
+      "feed_url": "https://theconversation.com/uk/articles.atom",
+      "website_url": "https://theconversation.com/uk",
+      "description": "Curated by professional editors, The Conversation offers informed commentary and debate on the issues affecting our world. Plus a Plain English guide to the latest developments and discoveries from the university and research sector. In-depth analysis, research, news and ideas from leading academics and researchers.",
+      "followers": {
+        "facebook": 119300,
+        "twitter": 151700
+      },
+      "image_url": "https://i1.feedspot.com/1833315.jpg?t=1723016875"
+    },
+    {
+      "title": "Manchester Evening News",
+      "feed_url": "https://www.manchestereveningnews.co.uk/?service=rss",
+      "website_url": "https://www.manchestereveningnews.co.uk",
+      "description": "Manchester Evening News covers central and Greater Manchester, including news, opinion, sport & celebrity gossipfrom Oldham, Rochdale and Glossop.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 783700,
+        "instagram": 437000
+      },
+      "image_url": "https://i1.feedspot.com/1051660.jpg?t=1659594809"
+    },
+    {
+      "title": "Daily Express",
+      "feed_url": "https://feeds.feedburner.com/daily-express-news-showbiz",
+      "website_url": "https://www.express.co.uk/",
+      "description": "Latest UK news, breaking news and current news, plus political news from Express.co.uk, all the latest breaking stories.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/1383770.jpg?t=1638958282"
+    },
+    {
+      "title": "Metro.co.uk",
+      "feed_url": "https://metro.co.uk/feed/",
+      "website_url": "https://metro.co.uk/",
+      "description": "Metro brings you all the latest news, showbiz gossip, the latest film and TV reviews, bizarre videos and headlines from around the world, the most up to date news from the world of sport and exclusive competitions.",
+      "followers": {
+        "facebook": 5400000,
+        "twitter": 357700,
+        "instagram": 305600
+      },
+      "image_url": "https://i1.feedspot.com/5235365.jpg?t=1686227087"
+    },
+    {
+      "title": "Birmingham Mail",
+      "feed_url": "https://www.birminghammail.co.uk/?service=rss",
+      "website_url": "https://www.birminghammail.co.uk/",
+      "description": "The Birmingham Mail has been providing the UK's second city & surrounding areas with unrivalled coverage for more than 130 years. They aim to provide readers with the latest news, sport, comment and information for the area both in print and online.",
+      "followers": {
+        "facebook": 263500,
+        "instagram": 134900
+      },
+      "image_url": "https://i1.feedspot.com/4442241.jpg"
+    },
+    {
+      "title": "The Argus",
+      "feed_url": "https://www.theargus.co.uk/news/rss/",
+      "website_url": "https://www.theargus.co.uk/",
+      "description": "The Argus for news, sport, Brighton and Hove Albion, entertainment, video, blogs and for Brighton Hove Lewes Worthing Shoreham Newhaven and Sussex. For over 135 years theye have brought local news, sport and entertainment to Brighton, Hove and Sussex. They provide the best coverage of the Albion and live up-to-the-minute coverage of what is going on in your community around the clock.",
+      "followers": {
+        "facebook": 118100,
+        "twitter": 118200
+      },
+      "image_url": "https://i1.feedspot.com/1679948.jpg?t=1623733403"
+    },
+    {
+      "title": "The York Press",
+      "feed_url": "https://www.yorkpress.co.uk/news/rss/",
+      "website_url": "https://www.yorkpress.co.uk/news/",
+      "description": "York news, archive, North Yorkshire local information, picture galleries, breaking news, travel updates and what's on.",
+      "followers": {
+        "facebook": 86300,
+        "twitter": 72200
+      },
+      "image_url": "https://i1.feedspot.com/441796.jpg"
+    },
+    {
+      "title": "The Northern Echo",
+      "feed_url": "https://www.thenorthernecho.co.uk/news/rss/",
+      "website_url": "https://www.thenorthernecho.co.uk/",
+      "description": "North East & North Yorkshire news from Darlington, Durham, Middlesbrough, Newcastle, Sunderland, Bishop Auckland, Barnard Castle, and other areas.",
+      "followers": {
+        "facebook": 178700,
+        "twitter": 80300
+      },
+      "image_url": "https://i1.feedspot.com/864213.jpg?t=1722603519"
+    },
+    {
+      "title": "The Bolton News",
+      "feed_url": "https://www.theboltonnews.co.uk/news/rss/",
+      "website_url": "https://www.theboltonnews.co.uk/",
+      "description": "The Bolton News - formerly the Bolton Evening News - is a daily newspaper covering the towns of Bolton, Horwich, Farnworth and Westhoughton in north-western Bolton news, sport, leisure, business, education, health and information from The Bolton News with regular updates.",
+      "followers": {
+        "facebook": 149600,
+        "twitter": 38300
+      },
+      "image_url": "https://i1.feedspot.com/1453246.jpg"
+    },
+    {
+      "title": "The News, Portsmouth",
+      "feed_url": "https://www.portsmouth.co.uk/rss",
+      "website_url": "https://www.portsmouth.co.uk/",
+      "description": "The daily news service for Portsmouth, Gosport, Fareham, Havant, Waterlooville, south east Hampshire and West Sussex. Get latest news, sport, business, lifestyle and more, from Portsmouth's newspaper, The News.",
+      "followers": {
+        "facebook": 200100,
+        "twitter": 92600
+      },
+      "image_url": "https://i1.feedspot.com/4629290.jpg"
+    },
+    {
+      "title": "The Scarborough News",
+      "feed_url": "https://www.thescarboroughnews.co.uk/rss",
+      "website_url": "https://www.thescarboroughnews.co.uk/",
+      "description": "The Scarborough News is the biggest and best news provider on the East Coast and is the latest incarnation of the paper first published on July 10 1882. The Scarboro News is where you'll find live updates from The Scarborough News team on all things Scarborough, and offers you the chance to share your news.",
+      "followers": {
+        "facebook": 49400,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4629313.jpg"
+    },
+    {
+      "title": "WalesOnline",
+      "feed_url": "https://www.walesonline.co.uk/?service=rss",
+      "website_url": "https://www.walesonline.co.uk/",
+      "description": "WalesOnline is the place for news, views, jobs, business news and sport in Wales.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 433400,
+        "instagram": 145000
+      },
+      "image_url": "https://i1.feedspot.com/79449.jpg"
+    },
+    {
+      "title": "The Herald Scotland",
+      "feed_url": "https://www.heraldscotland.com/news/rss/",
+      "website_url": "https://www.heraldscotland.com/",
+      "description": "The Herald is a Scottish broadsheet newspaper founded in 1783. The Herald is the longest running national newspaper in the world and is the eighth oldest daily paper in the world.",
+      "followers": {
+        "facebook": 164700,
+        "twitter": 126600,
+        "instagram": 36700
+      },
+      "image_url": "https://i1.feedspot.com/4405183.jpg?t=1516597424"
+    },
+    {
+      "title": "Belfast Live",
+      "feed_url": "https://www.belfastlive.co.uk/?service=rss",
+      "website_url": "https://www.belfastlive.co.uk/",
+      "description": "The latest news from Belfast and Northern Ireland. Covering Belfast News, sport, opinion, celebrity gossip and much more. They intend to provide in-depth news and information about Belfast, for the people of this new Belfast.",
+      "followers": {
+        "facebook": 567500,
+        "twitter": 154400,
+        "instagram": 93900
+      },
+      "image_url": "https://i1.feedspot.com/4629823.jpg"
+    },
+    {
+      "title": "Cambridgeshire Live",
+      "feed_url": "https://www.cambridge-news.co.uk/?service=rss",
+      "website_url": "https://www.cambridge-news.co.uk/",
+      "description": "Stay up to date with the latest news from around Cambridgeshire including breaking news updates, sport, football, local events and business.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 1500,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4629787.jpg"
+    },
+    {
+      "title": "Grimsby Telegraph",
+      "feed_url": "https://www.grimsbytelegraph.co.uk/news/?service=rss",
+      "website_url": "https://www.grimsbytelegraph.co.uk/news/",
+      "description": "ews, sport, entertainment and more from the Grimsby Telegraph covering North East Lincolnshire including Grimsby, Cleethorpes, Immingham and Louth. Get all of the latest Grimsby News news updated throughout the day and join the discussion on the Grimsby Telegraph",
+      "followers": {
+        "facebook": 4,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/2012202.jpg"
+    },
+    {
+      "title": "Glasgow Times",
+      "feed_url": "https://www.glasgowtimes.co.uk/news/rss/",
+      "website_url": "https://www.glasgowtimes.co.uk/news/",
+      "description": "Get the latest Scottish news from Glasgow and across Scotland, stay updated with the Glasgow Times.",
+      "followers": {
+        "facebook": 267100
+      },
+      "image_url": "https://i1.feedspot.com/4629807.jpg?t=1612512109"
+    },
+    {
+      "title": "Deadline News",
+      "feed_url": "https://www.deadlinenews.co.uk/feed/",
+      "website_url": "https://www.deadlinenews.co.uk/",
+      "description": "Deadline News is one of Scotland's leading press and picture agencies serving content to national newspapers, magazines and online press.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/2192997.jpg?t=1553495744"
+    },
+    {
+      "title": "Positive News",
+      "feed_url": "https://www.positive.news/feed/",
+      "website_url": "https://www.positive.news/",
+      "description": "The longest-established publication for quality reporting that inspires, Positive News is owned and supported by a global community. As a magazine and a movement, we are changing the news for good.",
+      "followers": {
+        "facebook": 280600,
+        "twitter": 70000,
+        "instagram": 250500
+      },
+      "image_url": "https://i1.feedspot.com/4556660.jpg?t=1614850015"
+    },
+    {
+      "title": "London Journal",
+      "feed_url": "https://londonjournal.co.uk/feed/",
+      "website_url": "https://londonjournal.co.uk/",
+      "description": "Caters national and international trending news stories from various categories that include Business, Education, Health, Science & Environment and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5337764.jpg?t=1635506149"
+    },
+    {
+      "title": "Consett Magazine",
+      "feed_url": "https://consettmagazine.com/feed/",
+      "website_url": "https://consettmagazine.com/",
+      "description": "Consett Magazine publishes positive local content about a town which sits high on the edge of the Pennines in North East England, Consett. Consett Magazine focuses on inspiring, educational, and entertaining content.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5059159.jpg"
+    },
+    {
+      "title": "The Daily Mash",
+      "feed_url": "https://www.thedailymash.co.uk/feed",
+      "website_url": "https://www.thedailymash.co.uk/",
+      "description": "The Daily Mash is a satirical website that publishes spoof articles, i.e. it is all made-up and is not intended, in any way whatsoever, to be taken as factual.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 123100,
+        "instagram": 38200
+      },
+      "image_url": "https://i1.feedspot.com/26766.jpg?t=1665473567"
+    },
+    {
+      "title": "The Scotsman \u00bb News",
+      "feed_url": "https://www.scotsman.com/news/rss",
+      "website_url": "https://www.scotsman.com/news/",
+      "description": "Get all of the latest news from The Scotsman. Providing a fresh perspective for online news.",
+      "followers": {
+        "facebook": 326800,
+        "twitter": 188900,
+        "instagram": 26000
+      },
+      "image_url": "https://i1.feedspot.com/4629730.jpg?t=1761306374"
+    },
+    {
+      "title": "BreakingNews.ie",
+      "feed_url": "https://feeds.breakingnews.ie/bntopstories",
+      "website_url": "https://www.breakingnews.ie/",
+      "description": "Ireland's premier breaking news website providing up to the minute news and sports reports.",
+      "followers": {
+        "facebook": 484600,
+        "twitter": 109100,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/1077653.jpg"
+    },
+    {
+      "title": "The Scottish Sun \u00bb Liverpool FC",
+      "feed_url": "https://www.thescottishsun.co.uk/feed/",
+      "website_url": "https://www.thescottishsun.co.uk/sport/football/team/173659/liverpool/",
+      "description": "Get the latest Scottish, UK and world news, sport, celebrity gossip, showbiz, politics, business and lifestyle from The Scottish Sun. The Scottish Sun strives to the very highest standards of accuracy in its reporting and continues to invest in original journalism in print and online.",
+      "followers": {
+        "facebook": 433600,
+        "twitter": 61600
+      },
+      "image_url": "https://i1.feedspot.com/4629738.jpg?t=1608117650"
+    },
+    {
+      "title": "Scottish Field",
+      "feed_url": "https://www.scottishfield.co.uk/feed/",
+      "website_url": "https://www.scottishfield.co.uk/",
+      "description": "Scottish Field is Scotland's quality lifestyle magazine, bringing you country news, fashion, interiors, travel, food & drink, property features and much more. Established in 1903, Scottish Field has just celebrated its 113th birthday. Read the latest posts and get to know more about Scotland.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 23800,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4629816.jpg?t=1553495720"
+    },
+    {
+      "title": "HuffPost UK",
+      "feed_url": "https://www.huffingtonpost.co.uk/feeds/index.xml",
+      "website_url": "https://www.huffingtonpost.co.uk/",
+      "description": "HuffPost is the original internet newspaper, founded in 2005. Now we have newsrooms and editions in 15 countries. We're truly global, but still feel local. In the UK we do relevant breaking news, powerful original journalism, and we report on the real lives of our readers. We tell stories in text, video, audio, and pictures, and bring them to our audiences wherever they are. We're fast, fun, and inclusive.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 198500,
+        "instagram": 84000
+      },
+      "image_url": "https://i1.feedspot.com/4905723.jpg?t=1603288816"
+    },
+    {
+      "title": "The Church of England Newspaper",
+      "feed_url": "https://www.churchnewspaper.com/feed/",
+      "website_url": "https://www.churchnewspaper.com/",
+      "description": "The Church of England Newspaper is the original church newspaper and one of the oldest newspapers in the world, dating back to 1828. It provides the latest news and has established itself as the prime source for news in the Anglican world.",
+      "followers": {
+        "facebook": 240,
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4629774.jpg?t=1608624117"
+    },
+    {
+      "title": "Daily Echo",
+      "feed_url": "https://www.dailyecho.co.uk/news/rss/",
+      "website_url": "https://www.dailyecho.co.uk/news/",
+      "description": "The Daily Echo website brings you the latest news from Southampton, Winchester, Eastleigh, Fareham, the New Forest and across Hampshire.",
+      "followers": {
+        "facebook": 206100,
+        "twitter": 112400
+      },
+      "image_url": "https://i1.feedspot.com/1338626.jpg"
+    },
+    {
+      "title": "KentNews.Online",
+      "feed_url": "https://www.kentnews.online/feed/",
+      "website_url": "https://www.kentnews.online/",
+      "description": "KentNews launched in 2019, providing news about Kent, written by the people of Kent. We are the first social-based news platform, where anyone can become a journalist and write an article for publication. In the same way that computer networks can achieve more when connected together, we can cover all of Kent by utilizing guest writers located across the county.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5118307.jpg?t=1652353085"
+    },
+    {
+      "title": "Northern Ireland World",
+      "feed_url": "https://www.northernirelandworld.com/news/rss",
+      "website_url": "https://www.northernirelandworld.com/news/",
+      "description": "A Coleraine perspective on news, sport, what's on, lifestyle and more, from your local paper the Coleraine Times.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4629840.jpg?t=1754656724"
+    },
+    {
+      "title": "The Guardian \u00bb UK",
+      "feed_url": "https://www.theguardian.com/uk-news/rss",
+      "website_url": "https://www.theguardian.com/uk-news",
+      "description": "The Guardian's UK news section covers a wide range of topics pertinent to the United Kingdom, including breaking news, politics, business, technology, culture, and more. It provides in-depth reporting and analysis on national events, political developments, and societal issues. The section also features opinions and editorials, offering diverse perspectives on current affairs.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4455856.jpg?t=1615377370"
+    },
+    {
+      "title": "Breaking News Today",
+      "feed_url": "https://www.breakingnewstoday.co.uk/feed/",
+      "website_url": "https://www.breakingnewstoday.co.uk/",
+      "description": "Get the latest from Breaking News Today: in-depth features, analysis and the latest news across the whole of the UK.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5133567.jpg?t=1585727460"
+    },
+    {
+      "title": "Newsnet.scot",
+      "feed_url": "https://newsnet.scot/feed/",
+      "website_url": "https://newsnet.scot/",
+      "description": "Newsnet Scotland was launched on 12th March 2010 by a small group of unpaid volunteers from Greenock. The site was set up in order to address what we believed to be an imbalance in the reporting of Scottish News and current affairs. News, current affairs and opinion from Scotland.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 25000
+      },
+      "image_url": "https://i1.feedspot.com/4629813.jpg?t=1553495728"
+    },
+    {
+      "title": "Daily Politics",
+      "feed_url": "https://www.dailypolitics.com/feed.xml",
+      "website_url": "https://www.dailypolitics.com/",
+      "description": "Latest news, comments and analysis from the UK and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5165030.jpg"
+    },
+    {
+      "title": "Pink News",
+      "feed_url": "https://www.thepinknews.com/feed/",
+      "website_url": "https://www.thepinknews.com/",
+      "description": "PinkNews covers politics, entertainment, religion and community news for the gay, lesbian, bisexual and transgender community.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 302400
+      },
+      "image_url": "https://i1.feedspot.com/1121879.jpg?t=1607610798"
+    },
+    {
+      "title": "Northern Ireland World",
+      "feed_url": "https://www.larnetimes.co.uk/news/rss",
+      "website_url": "https://www.northernirelandworld.com/",
+      "description": "Get the latest breaking news from the Larne Times - politics, transport, education, health, environment and more, updated daily",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4629826.jpg?t=1722603571"
+    },
+    {
+      "title": "The Poke",
+      "feed_url": "https://www.thepoke.co.uk/feed/",
+      "website_url": "https://www.thepoke.com/tag/satire/",
+      "description": "The Poke is a satirical and topical news source, aiming to deliver an antidote to the daily grind. With the discovery of new British comedy talent firmly at its core, we publish photoshop-led topical articles that cover UK politics, world news, tv arts and culture, science and technology, celebrity and sport.",
+      "followers": {
+        "facebook": 843800,
+        "twitter": 242500,
+        "instagram": 17900
+      },
+      "image_url": "https://i1.feedspot.com/304782.jpg?t=1618557770"
+    },
+    {
+      "title": "The Irish Times",
+      "feed_url": "https://www.irishtimes.com/cmlink/news-1.1319192",
+      "website_url": "https://www.irishtimes.com/",
+      "description": "The Irish Times has earned an international reputation as Ireland's quality daily newspaper. News reporting from throughout Ireland is accompanied by reports from a comprehensive network of foreign correspondents, as well as sports and business coverage, features and arts sections, lifestyle, jobs and property.",
+      "followers": {
+        "facebook": 768300,
+        "twitter": 805100
+      },
+      "image_url": "https://i1.feedspot.com/568607.jpg"
+    },
+    {
+      "title": "NBC Boston \u00bb Local",
+      "feed_url": "https://www.nbcboston.com/?rss=y",
+      "website_url": "https://www.nbcboston.com/news/local/",
+      "description": "New England Cable News, Local News, Weather, Traffic, Entertainment, Breaking News.",
+      "followers": {
+        "facebook": 188400,
+        "twitter": 104800,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4629747.jpg"
+    },
+    {
+      "title": "Wired UK",
+      "feed_url": "https://www.wired.co.uk/rss",
+      "website_url": "https://www.wired.com/",
+      "description": "An award-winning printed monthly and online publication. WIRED is an agenda-setting magazine offering brain food on a wide range of topics, from science, technology and business to pop-culture and politics.",
+      "followers": {
+        "facebook": 129900,
+        "twitter": 266500,
+        "instagram": 94900
+      },
+      "image_url": "https://i1.feedspot.com/542109.jpg"
+    },
+    {
+      "title": "NewsUK1",
+      "feed_url": "https://www.newsuk1.com/feeds/posts/default",
+      "website_url": "https://swd.media/",
+      "description": "Stay informed with NewsUK1, your go-to source for breaking news headlines today. Explore the latest and most significant stories from around the world, covering politics, finance, technology, entertainment, and more. NewsUK1's dedicated team of journalists works tirelessly to deliver timely and accurate updates, keeping you in the know.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7286733.jpg?t=1711797635"
+    },
+    {
+      "title": "SWD Media",
+      "feed_url": "https://swd.media/",
+      "website_url": "https://swd.media/",
+      "description": "We are a Scottish Multimedia News Agency specializing in transport news and driver misdemeanors.",
+      "followers": {
+        "facebook": 25700,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4900676.jpg?t=1525958206"
+    },
+    {
+      "title": "Belfast Telegraph",
+      "feed_url": "https://www.belfasttelegraph.co.uk/",
+      "website_url": "https://www.belfasttelegraph.co.uk/",
+      "description": "Northern Ireland live news, sport, business, opinion, entertainment, lifestyle updates from Belfast Telegraph.",
+      "followers": {
+        "facebook": 371700,
+        "twitter": 243000
+      },
+      "image_url": "https://i1.feedspot.com/1691880.jpg"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "category": "Brazil Business",
+  "source_url": "https://rss.feedspot.com/brazil_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Rio Times \u00bb Business",
+      "feed_url": "https://www.riotimesonline.com/brazil-news/category/rio-business/feed/",
+      "website_url": "https://www.riotimesonline.com/brazil-news/category/rio-business/",
+      "description": "Economic and Business News in Rio de Janeiro and Brazil. Latin America's Voice from Brazil The Rio Times is an English-language publication dedicated to anyone interested in Brazil and Latin America.",
+      "followers": {
+        "facebook": 198500,
+        "twitter": 47300
+      },
+      "image_url": "https://i1.feedspot.com/5342472.jpg?t=1636714354"
+    },
+    {
+      "title": "Brazilian-American Chamber of Commerce, Inc \u00bb Brazil Business",
+      "feed_url": "https://brazilcham.com/category/brazil-business/feed/",
+      "website_url": "https://brazilcham.com/category/brazil-business/",
+      "description": "This section features articles on Brazil Business. The Chamber's mission is to promote trade and investment relations between Brazil and the United States and forge closer ties between the business communities of both nations.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2200,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5342471.jpg?t=1636713875"
+    },
+    {
+      "title": "Financial Times \u00bb Brazil",
+      "feed_url": "https://www.ft.com/brazil?format=rss",
+      "website_url": "https://www.ft.com/brazil",
+      "description": "The Financial Times is one of the world's leading news organizations, recognized internationally for its authority, integrity, and accuracy. Financial Times highlights all the latest happenings in Brazil be it new business reports, plans, recent news, breaking news, updates, and more.",
+      "followers": {
+        "twitter": 7400000
+      },
+      "image_url": "https://i1.feedspot.com/5499809.jpg?t=1674651469"
+    },
+    {
+      "title": "My Business Brazil",
+      "feed_url": "https://mybusinessbrazil.com/feed/",
+      "website_url": "https://mybusinessbrazil.com/articles/",
+      "description": "Find reliable information directly from CLM Controller, one of the most renowned accounting firms in Brazil, ready to answer your questions to define the best path to success. With a 40-year history in the field, we have experience dealing with the demands of our national and international clients and assisting them to obtain an effective business plan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5499811.jpg?t=1674651578"
+    },
+    {
+      "title": "Brazil Journal \u00bb Neg\u00f3cios",
+      "feed_url": "https://braziljournal.com/categoria/negocios/feed/",
+      "website_url": "https://braziljournal.com/categoria/negocios/",
+      "description": "Read news about company strategy, competition, new products, the heads of CEOs and CFOs. Brazil Journal publsihes news about companies, markets and technology. Brazil's premier source of financial and corporate news.",
+      "followers": {
+        "facebook": 16400,
+        "twitter": 81700,
+        "instagram": 332400
+      },
+      "image_url": "https://i1.feedspot.com/5499807.jpg?t=1674651730"
+    },
+    {
+      "title": "Latin America Business Stories",
+      "feed_url": "https://labsnews.com/en/business/feed/",
+      "website_url": "https://blog.ebanx.com/en/",
+      "description": "Latin America Business Stories is a trilingual news and analysis outlet dedicated to putting Latin America into the limelight, giving it visibility as a land of business opportunities and creative innovative wealth. From travel to e-commerce, SaaS, logistics, and other rising sectors, understand the business trends, market news, and consumer habits in Latin America.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5499808.jpg?t=1674651953"
+    }
+  ]
+}

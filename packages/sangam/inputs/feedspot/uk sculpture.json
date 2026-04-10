@@ -1,0 +1,59 @@
+{
+  "category": "UK Sculpture",
+  "source_url": "https://rss.feedspot.com/uk_sculpture_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nick Mackman Animal Sculpture Blog",
+      "feed_url": "https://nickmackmansculpture.co.uk/feed",
+      "website_url": "https://nickmackmansculpture.co.uk/blog",
+      "description": "Animal sculptures of personality and distinction by award winning artist Nick Mackman.",
+      "followers": {
+        "facebook": 86800,
+        "twitter": 8500,
+        "instagram": 166400
+      },
+      "image_url": "https://i1.feedspot.com/4574343.jpg?t=1606454387"
+    },
+    {
+      "title": "The Thoughts of James the Person.",
+      "feed_url": "https://thegoodwhovian.tumblr.com/rss",
+      "website_url": "https://thegoodwhovian.tumblr.com/",
+      "description": "A blog by James O'Neill (Sculptor. Writer).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4574991.jpg?t=1528184319"
+    },
+    {
+      "title": "Fiona Campbell Art Blog",
+      "feed_url": "https://fionacampbellart.co.uk/blog?format=rss",
+      "website_url": "https://fionacampbellart.co.uk/blog/",
+      "description": "Raised in Kenya, Fiona graduated from the Byam Shaw School of Art, London (Fine Art, Sculpture), later gaining a PGCE at Exeter University. Now based in Somerset, Fiona makes sculptural and installation work using mixed media, particularly found and reclaimed materials including steel, copper, lead, wire, twine, wood, paper and wax, giving them new life.",
+      "followers": {
+        "facebook": 759,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4910551.jpg?t=1620051439"
+    },
+    {
+      "title": "Jennifer Tetlow Blog",
+      "feed_url": "https://jennifertetlow.co.uk/blog/feed",
+      "website_url": "https://jennifertetlow.co.uk/blog",
+      "description": "Sculpture in Stone by Jennifer Tetlow.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1200,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4910557.jpg?t=1620051443"
+    },
+    {
+      "title": "Mick Kirkby-Geddes Blog",
+      "feed_url": "https://mkg.me.uk/blog/feed/",
+      "website_url": "https://mkg.me.uk/blog/",
+      "description": "Mick Kirkby-Geddes, thats me, a metal sculptor. I'm based in the Sculpture Lounge studios, established in an old textile mill in Holmbridge, a few miles away. Influenced by cartoons, 1970s kids tv, books, in fact anything really, I make sculptures to go inside and outside, public art and commissions and sometimes i work in schools too.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4910529.jpg?t=1620051450"
+    }
+  ]
+}

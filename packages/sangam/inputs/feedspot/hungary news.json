@@ -1,0 +1,161 @@
+{
+  "category": "Hungary News",
+  "source_url": "https://rss.feedspot.com/hungary_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hungary Today",
+      "feed_url": "https://hungarytoday.hu/feed/",
+      "website_url": "https://hungarytoday.hu/",
+      "description": "Latest news about Hungary. Topics covered are politics, society, economy, opinion, culture, sport, lifestyle, and more.",
+      "followers": {
+        "facebook": 131900,
+        "twitter": 11400,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5319270.jpg?t=1637217253"
+    },
+    {
+      "title": "The Budapest Times",
+      "feed_url": "https://www.budapesttimes.hu/feed/",
+      "website_url": "https://www.budapesttimes.hu/",
+      "description": "The Budapest Times is the leading weekly paper in Hungary. Up-to-date and understandable news on Hungarian politics, business, economy, news and culture.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5319269.jpg?t=1637217085"
+    },
+    {
+      "title": "ZAOL",
+      "feed_url": "https://www.zaol.hu/feed/",
+      "website_url": "https://www.zaol.hu/",
+      "description": "ZAOL is a popular news, service and entertainment portal in Zala County, with diverse, transparent, fast-processing content.",
+      "followers": {
+        "facebook": 77100,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5344244.jpg?t=1637219834"
+    },
+    {
+      "title": "FEOL",
+      "feed_url": "https://www.feol.hu/feed/",
+      "website_url": "https://www.feol.hu/",
+      "description": "Authentic and fast information about the most important news of Fej\u00e9r county.",
+      "followers": {
+        "facebook": 73300,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5344243.jpg?t=1645629222"
+    },
+    {
+      "title": "Demokrata",
+      "feed_url": "https://demokrata.hu/feed/",
+      "website_url": "https://demokrata.hu/",
+      "description": "Demokrata is a Hungarian Democratic weekly.",
+      "followers": {
+        "facebook": 59100
+      },
+      "image_url": "https://i1.feedspot.com/5344241.jpg?t=1637219182"
+    },
+    {
+      "title": "BorsOnline",
+      "feed_url": "https://www.borsonline.hu/publicapi/hu/rss/bors/articles",
+      "website_url": "https://www.borsonline.hu/",
+      "description": "Bors provides a unique reach, national coverage and a variety of appearance options. In addition to fresh tabloid news, you can find everything interesting with us.",
+      "followers": {
+        "facebook": 443100,
+        "instagram": 22100
+      },
+      "image_url": "https://i1.feedspot.com/5547044.jpg?t=1682054353"
+    },
+    {
+      "title": "The New York Times \u00bb Hungary",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/hungary/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/destination/hungary",
+      "description": "News about Hungary, including commentary and archival articles published in The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/5344187.jpg?t=1637217220"
+    },
+    {
+      "title": "Dunakanyar R\u00e9gi\u00f3",
+      "feed_url": "https://www.dunakanyarregio.hu/feed/",
+      "website_url": "https://www.dunakanyarregio.hu/",
+      "description": "The most important news of the left bank of the Danube from Dunakeszi to Szob.",
+      "followers": {
+        "facebook": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5344240.jpg?t=1637218238"
+    },
+    {
+      "title": "Budapester Zeitung",
+      "feed_url": "https://www.budapester.hu/feed/",
+      "website_url": "https://www.budapester.hu/",
+      "description": "German-language weekly updated news from, about and for Hungary.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5344248.jpg?t=1645628790"
+    },
+    {
+      "title": "Delmagyar",
+      "feed_url": "https://www.delmagyar.hu/feed/",
+      "website_url": "https://www.delmagyar.hu/",
+      "description": "Delmagyar is the leading news portal of the Southern Great Plain and Csongr\u00e1d-Csan\u00e1d counties.",
+      "followers": {
+        "facebook": 108000,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5344245.jpg?t=1645629308"
+    },
+    {
+      "title": "DUOL",
+      "feed_url": "https://www.duol.hu/feed/",
+      "website_url": "https://www.duol.hu/",
+      "description": "This page is the news feed of Duna\u00fajv\u00e1ros with the latest news, pictures and programs.",
+      "followers": {
+        "facebook": 30400,
+        "instagram": 156
+      },
+      "image_url": "https://i1.feedspot.com/5344246.jpg?t=1645629629"
+    },
+    {
+      "title": "Index",
+      "feed_url": "https://index.hu/24ora/rss/",
+      "website_url": "https://index.hu/",
+      "description": "Hungary quick news, revealed facts, and scratched opinions.",
+      "followers": {
+        "facebook": 667900,
+        "twitter": 56800,
+        "instagram": 81100
+      },
+      "image_url": "https://i1.feedspot.com/274417.jpg?t=1637591315"
+    },
+    {
+      "title": "hvg.hu",
+      "feed_url": "https://hvg.hu/",
+      "website_url": "https://hvg.hu/",
+      "description": "HVG is the leading weekly economic and political magazine in Hungary with its headquarter in Budapest.",
+      "followers": {
+        "facebook": 703500,
+        "twitter": 430700
+      },
+      "image_url": "https://i1.feedspot.com/5344247.jpg?t=1637217782"
+    },
+    {
+      "title": "Vil\u00e1ggazdas\u00e1g",
+      "feed_url": "https://www.vg.hu/",
+      "website_url": "https://www.vg.hu/",
+      "description": "Vil\u00e1ggazdas\u00e1g is a reliable, up-to-date, objective source of information, an influential, authoritative newspaper.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/5344251.jpg?t=1637218032"
+    }
+  ]
+}

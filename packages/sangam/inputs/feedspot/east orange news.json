@@ -1,0 +1,52 @@
+{
+  "category": "East Orange News",
+  "source_url": "https://rss.feedspot.com/east_orange_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Essex News Daily \u00bb East Orange",
+      "feed_url": "https://essexnewsdaily.com/category/news/eastorange/feed",
+      "website_url": "https://essexnewsdaily.com/category/news/eastorange",
+      "description": "Essex News Daily is a news portal providing up-to-the-minute local news headlines, global news coverage, business, markets, arts, obituaries and finance updates. Find the latest breaking news and updates of the East Orange city.",
+      "followers": {
+        "facebook": 838,
+        "twitter": 800
+      },
+      "image_url": "https://i1.feedspot.com/5148398.jpg?t=1588824957"
+    },
+    {
+      "title": "City of East Orange, NJ",
+      "feed_url": "https://www.eastorange-nj.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.eastorange-nj.gov/CivicAlerts.aspx?sort=date",
+      "description": "The East Orange, NJ is dedicated to keeping residents informed and up-to-date by providing the latest news about schools, sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 19800,
+        "twitter": 1100,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5148405.jpg?t=1588828186"
+    },
+    {
+      "title": "TAPinto \u00bb East Orange/Orange",
+      "feed_url": "https://www.tapinto.net/towns/east-orange-slash-orange/",
+      "website_url": "https://www.tapinto.net/towns/east-orange-slash-orange/",
+      "description": "TAP into East Orange/Orange is an all-online, objective, newspaper serving the residents, organizations, and business owners of East Orange and Orange New Jersey.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5148399.jpg?t=1588826280"
+    },
+    {
+      "title": "CBS New York \u00bb East Orange",
+      "feed_url": "https://newyork.cbslocal.com/tag/east-orange/feed/",
+      "website_url": "https://www.cbsnews.com/newyork/tag/east-orange/",
+      "description": "Read the latest East Orange news. Get breaking news, events and information on sports, weather, entertainment, lifestyles and everything about the city at CBS New York.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 201400,
+        "instagram": 185500
+      },
+      "image_url": "https://i1.feedspot.com/5148401.jpg?t=1588827587"
+    }
+  ]
+}

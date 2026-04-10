@@ -1,0 +1,217 @@
+{
+  "category": "Madrid Travel",
+  "source_url": "https://rss.feedspot.com/madrid_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Madrid Experience Blog",
+      "feed_url": "https://madrid-experience.com/en/feed/",
+      "website_url": "https://madrid-experience.com/en/blog-en/",
+      "description": "Madrid Experience, a boutique agency, meticulously designs private tours in Spain with heart and expertise. Their exclusive trips offer access to iconic sites and hidden gems, showcasing Spain's richness from historical, artistic, gastronomic, and mystical angles. With a focus on luxury and excellence, they share insightful articles and recommendations, ensuring unforgettable experiences for every traveller.",
+      "followers": {
+        "facebook": 3200,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7280533.jpg?t=1711108449"
+    },
+    {
+      "title": "Madrid Traveling Blog",
+      "feed_url": "https://madridtraveling.com/feed/",
+      "website_url": "https://madridtraveling.com/blog/",
+      "description": "Meet Sara, a Madrid native passionate about sharing her love for her city through her travel blog. With insider guides and expert tips, she aims to make your Madrid experience unforgettable. From iconic landmarks to culinary delights, Sara's blog is your ultimate companion for exploring Madrid's beauty and charm.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/7280536.jpg?t=1714567533"
+    },
+    {
+      "title": "Madrid Travel gers Blog",
+      "feed_url": "https://madridtb.com/feed/",
+      "website_url": "https://madridtb.com/blog/",
+      "description": "Discover Madrid TB, an association of travel bloggers passionate about exploring Spain and beyond. With a wealth of travel experience and a tight-knit community, they share insider insights on tourist destinations worldwide. Join their journey as they uncover hidden gems and travel the world with enthusiasm and wanderlust.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 8300,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5373731.jpg?t=1645271235"
+    },
+    {
+      "title": "Madrid City Tour Blog",
+      "feed_url": "https://madrid.city-tour.com/es/blog/feed",
+      "website_url": "https://madrid.city-tour.com/es/blog",
+      "description": "Madrid City Tour, an official tourist transport service, combines the expertise of Grupo Juli\u00e0 and Alsa since 2011. Awarded by the Madrid City Council, they offer Hop On Hop Off tours, allowing visitors to explore global destinations with ease. Experience cities from a unique perspective with City Tour Worldwide!",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/7280543.jpg?t=1711108368"
+    },
+    {
+      "title": "SaltaConmigo Blog \u00bb Madrid",
+      "feed_url": "https://saltaconmigo.com/blog/category/europa/espana/madrid/feed/",
+      "website_url": "https://saltaconmigo.com/blog/category/europa/espana/madrid/",
+      "description": "Salta Conmigo, authored by Sara and JAAC, comprises an Italian-Spanish duo passionate about travel. Based in Madrid, they blend trip planning with churros and ice cream breaks. Their mission is to inspire and advise fellow travellers to explore the world, believing there's always something new to discover everywhere.",
+      "followers": {
+        "facebook": 64500,
+        "twitter": 16600,
+        "instagram": 29400
+      },
+      "image_url": "https://i1.feedspot.com/7280531.jpg?t=1711108350"
+    },
+    {
+      "title": "Vitium Urban Suites Blog",
+      "feed_url": "https://vitium.es/feed/",
+      "website_url": "https://vitium.es/blog/",
+      "description": "Hostal de Lujo en Gran V\u00eda Madrid",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/7280541.jpg?t=1711348134"
+    },
+    {
+      "title": "Sierra Norte de Madrid Blog",
+      "feed_url": "https://www.sierranortemadrid.org/feed/",
+      "website_url": "https://www.sierranortemadrid.org/blog/",
+      "description": "Sierra Norte Madrid serves as the hub for nature enthusiasts, offering a blend of outdoor adventures, cultural exploration, and appreciation for the region's rural heritage. Stay updated on news and activities, and immerse yourself in the natural beauty and rich cultural tapestry of the Community of Madrid's northern mountains.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 3600,
+        "instagram": 18200
+      },
+      "image_url": "https://i1.feedspot.com/7280538.jpg?t=1711108784"
+    },
+    {
+      "title": "Cosas de Madrid",
+      "feed_url": "https://www.cosasdemadrid.es/feed/",
+      "website_url": "https://www.cosasdemadrid.es/",
+      "description": "Cosas de Madrid is your go-to source for everything related to the Autonomous Community of Madrid. From local festivals to top restaurants and noteworthy attractions, this blog provides comprehensive coverage of Madrid and its surroundings. Stay informed and discover the best that this vibrant region has to offer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1453125.jpg?t=1714569988"
+    },
+    {
+      "title": "Tour Time Blog",
+      "feed_url": "https://www.tourtime.es/en/feed/",
+      "website_url": "https://www.tourtime.es/en/blog-about-history-places-and-curiosities-of-madrid/",
+      "description": "Tours guiados por Madrid",
+      "followers": {
+        "facebook": 461,
+        "instagram": 803
+      },
+      "image_url": "https://i1.feedspot.com/7280532.jpg?t=1711108512"
+    },
+    {
+      "title": "Segcitytours Blog",
+      "feed_url": "https://segcitytours.es/feed/",
+      "website_url": "https://segcitytours.es/categoria/blog-segway-tour-madrid/",
+      "description": "Segcitytours simplifies Segway tour booking, offering convenient reservations anytime, anywhere. Their tours span Madrid, Toledo, Soria, Segovia, enabling travelers to embrace nature, explore, and savor unique Segway experiences. With a focus on delivering memorable moments, they ensure excitement and adrenaline on every ride. Their blog, Segway Tour Madrid, presents diverse routes and customer testimonials, enriching the journey for all adventurers.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 91
+      },
+      "image_url": "https://i1.feedspot.com/7280545.jpg?t=1711108383"
+    },
+    {
+      "title": "Inspirience \u00bb Madrid",
+      "feed_url": "https://inspirience.es/lugar/madrid/feed/",
+      "website_url": "https://inspirience.es/lugar/madrid/",
+      "description": "At Inspirience, individuals are encouraged to step out of their comfort zones while feeling embraced within the journey. The focus is on connecting with nature, embracing vibrant experiences, and fostering a sense of community. Through tailored challenges and a commitment to sustainability, Inspirience aims to cultivate a collective of empowered adventurers dedicated to positive impact.",
+      "followers": {
+        "facebook": 309,
+        "instagram": 2000
+      },
+      "image_url": "https://inspirience.es/wp-content/uploads/2021/03/inspierence-1.png?t=1711108342"
+    },
+    {
+      "title": "Hand Luggage Only \u00bb Madrid",
+      "feed_url": "https://handluggageonly.co.uk/tag/madrid/feed/",
+      "website_url": "https://handluggageonly.co.uk/tag/madrid/",
+      "description": "Hand Luggage Only emerged from a college room at the University of Cambridge in 2014. Founded by Yaya and Lloyd, it aimed to connect travellers globally. Starting as a blog, it quickly grew into a platform for sharing travel stories and photos, fostering two-way conversations about travel experiences.",
+      "followers": {
+        "facebook": 813300,
+        "twitter": 23100,
+        "instagram": 478300
+      },
+      "image_url": "https://i1.feedspot.com/7280539.jpg?t=1711108426"
+    },
+    {
+      "title": "Spanish Sabores \u00bb Madrid Travel",
+      "feed_url": "https://spanishsabores.com/madrid-travel-guide/feed/",
+      "website_url": "https://spanishsabores.com/madrid-travel-guide/",
+      "description": "Spanish Sabores, curated by Lauren Aloise, offers a rich blend of Spanish cuisine, travel insights, and entrepreneurial experiences. With Madrid as her canvas since 2011, Lauren shares insider tips on dining, exploration, and cultural immersion, inviting readers to fall in love with Madrid's vibrant tapestry.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/7280527.jpg?t=1711108334"
+    },
+    {
+      "title": "Viaja por libre \u00bb Madrid",
+      "feed_url": "https://www.viajaporlibre.com/espana/madrid/feed",
+      "website_url": "https://www.viajaporlibre.com/espana/madrid",
+      "description": "Viaja por libre blog is your ultimate guide to exploring Madrid and beyond, offering a plethora of travel tips, excursion ideas, and hiking routes in the Sierra de Guadarrama. Delve into the best corners of the capital, discover top terraces and restaurants, and uncover recommendations for must-see monuments and visits. Whether you're seeking plans, excursions, or hiking adventures, this blog provides invaluable insights and ideas for independent travelers.",
+      "followers": {
+        "facebook": 45600,
+        "twitter": 13400,
+        "instagram": 21500
+      },
+      "image_url": "https://i1.feedspot.com/7280542.jpg?t=1711108361"
+    },
+    {
+      "title": "Los Viajes de Ali \u00bb Madrid",
+      "feed_url": "https://losviajesdeali.com/destinos/espana/madrid/feed/",
+      "website_url": "https://losviajesdeali.com/destinos/espana/madrid/",
+      "description": "Alicia Ortego, author of Los Viajes de Ali, hails from Madrid, infusing her blog with hometown love. As she explores her beloved city and beyond, she shares her travel adventures and insights, inviting readers to discover the charm of Madrid through her eyes.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 5900,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/7280534.jpg?t=1711108487"
+    },
+    {
+      "title": "Gu\u00edas Viajar Blog \u00bb Madrid",
+      "feed_url": "https://guias-viajar.com/madrid/feed/",
+      "website_url": "https://guias-viajar.com/en/turismo-espana/visitar-madrid/guia-de-madrid/",
+      "description": "Gu\u00edas Viajar is a travel blog curated to inspire wanderlust, offering a treasure trove of experiences, travel recommendations, and practical tips for globetrotters. With a passion for exploration, the blog serves as a trusted companion, guiding readers on unforgettable journeys across the globe.",
+      "followers": {
+        "facebook": 656200,
+        "twitter": 43900,
+        "instagram": 112400
+      },
+      "image_url": "https://i1.feedspot.com/7280544.jpg?t=1711108375"
+    },
+    {
+      "title": "Hotel Madrid Rio Blog",
+      "feed_url": "https://www.hotelmadridrio.com/feed/",
+      "website_url": "https://www.hotelmadridrio.com/blog/",
+      "description": "Experience Madrid's charm at Hotel Madrid R\u00edo, nestled along the Manzanares River. With proximity to Plaza R\u00edo 2 and Matadero Madrid, cultural exploration awaits. Unwind in comfort just steps from the vibrant heart of the city. Dive into the Hotel Madrid R\u00edo Blog for insider tips and secrets to make the most of your Madrid adventure.",
+      "followers": {
+        "facebook": 120
+      },
+      "image_url": "https://i1.feedspot.com/7280537.jpg?t=1711108575"
+    },
+    {
+      "title": "Hotel Moderno Blog",
+      "feed_url": "https://www.hotel-moderno.com/es/blog/feed/",
+      "website_url": "https://www.hotel-moderno.com/es/blog/",
+      "description": "Otro sitio m\u00e1s de Mirai Multisite 3 Sites",
+      "followers": {
+        "facebook": 562,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/7280526.jpg?t=1711108541"
+    },
+    {
+      "title": "Hotel Puerta de Toledo Blog",
+      "feed_url": "https://www.hotelpuertadetoledo.com/blog/feed/",
+      "website_url": "https://www.hotelpuertadetoledo.com/en/blog/",
+      "description": "Explore the blog to know more about Madrid, Spain and tourism in the country along with services offered by the hotel and more! Opened in 1968 and renovated in 2015, this traditional, comfortable and comfortable Hotel offers personalized treatment within a family atmosphere.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 3200,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5373721.jpg?t=1645271174"
+    }
+  ]
+}

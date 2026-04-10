@@ -1,0 +1,87 @@
+{
+  "category": "Elk Grove News",
+  "source_url": "https://rss.feedspot.com/elk_grove_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Elk Grove News.net",
+      "feed_url": "https://feeds.feedburner.com/ElkGroveNewsnet",
+      "website_url": "https://www.elkgrovenews.net/",
+      "description": "News and opinion for the Elk Grove California and the surrounding areas of Sacramento County, founded 11 January 2008.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5137165.jpg"
+    },
+    {
+      "title": "Elk Grove Laguna News",
+      "feed_url": "https://elkgrovelagunanews.com/feed/",
+      "website_url": "https://elkgrovelagunanews.com/",
+      "description": "Keep up to date with the latest news in Elk Grove and Laguna with one of Elk Grove's most trusted news sources. Elk Grove Laguna News helps the community and readers on the internet stay informed on the latest in local Government, Crime/Public Safety, Sports, Business, and Technology.",
+      "followers": {
+        "facebook": 65500,
+        "twitter": 902,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5487898.jpg?t=1672836494"
+    },
+    {
+      "title": "The Elk Grove Tribune",
+      "feed_url": "https://elkgrovetribune.com/feed/",
+      "website_url": "https://elkgrovetribune.com/",
+      "description": "The Elk Grove Tribune is an Elk Grove news site which portrays local and community news, community events, and supports local businesses. Our content comes from local authors from throughout the community. We are not a one-man blog with one-person's opinions. We are your community Elk Grove News site. Of, by, and for Elk Grove!",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 267,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5136623.jpg?t=1586769061"
+    },
+    {
+      "title": "Elk Grove Daily News",
+      "feed_url": "https://elkgrovedailynews.com/feed/",
+      "website_url": "https://www.elkgrovedailynews.com/",
+      "description": "Elk Grove Daily News is a news website dedicated to covering current news from Elk Grove. It provides information and opinion on your local and regional governments as well as other news and information that affects your life including community news, elections, environment, and public & editorial opinions.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2000,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5487899.jpg?t=1672836259"
+    },
+    {
+      "title": "Elk Grove Citizen",
+      "feed_url": "https://www.egcitizen.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.egcitizen.com/",
+      "description": "The Elk Grove Citizen is the official news source for the city of Elk Grove and the surrounding communities. Serving up local, hometown news since 1909. We are a member of the California Newspaper Publishers Association and Herburger Publications, Inc.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5137164.jpg?t=1586852696"
+    },
+    {
+      "title": "The Sacramento Bee \u00bb Elk Grove",
+      "feed_url": "https://feeds.mcclatchy.com/sacbee/sections/community/elk-grove/stories",
+      "website_url": "https://www.cbsnews.com/sacramento/tag/elk-grove-news/",
+      "description": "Read the latest local news for the city of Elk Grove including crime, education and traffic updates. Stay up to date on community news in Sacramento, CA.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 254800
+      },
+      "image_url": "https://i1.feedspot.com/5137162.jpg"
+    },
+    {
+      "title": "CBS Sacramento \u00bb Elk Grove",
+      "feed_url": "https://sacramento.cbslocal.com/tag/elk-grove-news/feed/",
+      "website_url": "https://www.cbsnews.com/sacramento/tag/elk-grove-news/",
+      "description": "CBS13 provides you with all the news and information you need in Sacramento, Stockton, Modesto, and nearby areas, since 1954. Follow this feed to read the latest news and breaking headlines on what's happening in Elk Grove city and community.",
+      "followers": {
+        "facebook": 353300,
+        "twitter": 151100,
+        "instagram": 76600
+      },
+      "image_url": "https://i1.feedspot.com/5137163.jpg?t=1586763447"
+    }
+  ]
+}

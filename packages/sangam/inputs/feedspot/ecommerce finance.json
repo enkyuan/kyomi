@@ -1,0 +1,29 @@
+{
+  "category": "eCommerce Finance",
+  "source_url": "https://rss.feedspot.com/ecommerce_finance_rss_feeds",
+  "feeds": [
+    {
+      "title": "EcomBalance Blog",
+      "feed_url": "https://ecombalance.com/feed/",
+      "website_url": "https://ecombalance.com/blog-ecommerce/",
+      "description": "EcomBalance was founded by Nathan Hirsch and Connor Gillivan in 2021 after discovering a huge need for a simple bookkeeping service specifically for eCommerce businesses. At EcomBalance, they are on a mission to help thousands of businesses within the eCommerce industry. Businesses selling on Amazon, Shopify, Etsy, and elsewhere as well as agencies, consultants, coaches, and software companies. Follow their informative blog and learn more about their work, e-commerce sector, past companies they have worked with, finance management, and similar sectors.",
+      "followers": {
+        "facebook": 699,
+        "twitter": 127,
+        "instagram": 167
+      },
+      "image_url": "https://i1.feedspot.com/5698887.jpg?t=1698386801"
+    },
+    {
+      "title": "SBO Blog",
+      "feed_url": "https://sbo.financial/feed/",
+      "website_url": "https://sbo.financial/blog/",
+      "description": "Focus on what you do best and outsource the rest. SBOs are your accounting team, your CFO, your bookkeeper, and your financial advisor. So you can focus on servicing customers, growing your business and realizing profits.The SBO Blog features post on topics such as CFO Advisory, Financial Modelling, Management Accounting, Bookkeeping, Tax and more.",
+      "followers": {
+        "facebook": 415,
+        "twitter": 363
+      },
+      "image_url": "https://i1.feedspot.com/5698888.jpg?t=1698386875"
+    }
+  ]
+}

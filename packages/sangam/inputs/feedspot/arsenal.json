@@ -1,0 +1,574 @@
+{
+  "category": "Arsenal",
+  "source_url": "https://rss.feedspot.com/arsenal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Arseblog ... an Arsenal blog",
+      "feed_url": "https://arseblog.com/feed",
+      "website_url": "https://arseblog.com/",
+      "description": "The award winning Arsenal blog and news site. Home of the Arsecast, the twice weekly Arsenal podcast.",
+      "followers": {
+        "facebook": 448500,
+        "twitter": 435400,
+        "instagram": 73400
+      },
+      "image_url": "https://i1.feedspot.com/70013.jpg?t=1608626602"
+    },
+    {
+      "title": "Arsenal News",
+      "feed_url": "https://feeds.feedburner.com/ArsenalNewscouk",
+      "website_url": "https://arsenalnews.co.uk/",
+      "description": "Arsenal News scours the web to find the latest breaking stories about Arsenal FC and deliver you the best news, blogs and opinion about the club.",
+      "followers": {
+        "facebook": 55200,
+        "twitter": 82100
+      },
+      "image_url": "https://i1.feedspot.com/3569895.jpg?t=1608626615"
+    },
+    {
+      "title": "She Wore A Yellow Ribbon",
+      "feed_url": "https://shewore.com/feed/",
+      "website_url": "https://shewore.com/",
+      "description": "An Arsenal blog written by Arsenal fans for Arsenal fans.",
+      "followers": {
+        "facebook": 73800,
+        "twitter": 47000
+      },
+      "image_url": "https://i1.feedspot.com/4765604.jpg?t=1608626618"
+    },
+    {
+      "title": "Daily Cannon",
+      "feed_url": "https://dailycannon.com/feed/",
+      "website_url": "https://dailycannon.com/",
+      "description": "Comprehensive Arsenal coverage, media analysis, tactics, stats and more. Since 2008.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 62300
+      },
+      "image_url": "https://i1.feedspot.com/4765772.jpg?t=1608626624"
+    },
+    {
+      "title": "Just Arsenal",
+      "feed_url": "https://www.justarsenal.com/feed",
+      "website_url": "https://www.justarsenal.com/",
+      "description": "Just Arsenal has been created to bring the best of Arsenal news and all other things Gooners all around the world adore. Just Arsenal Fans, is a blog which has been created for the common armchair Gooner, who would like to have their views and opinions expressed and discussed upon on a worldwide basis.",
+      "followers": {
+        "facebook": 34500,
+        "twitter": 20500
+      },
+      "image_url": "https://i1.feedspot.com/4765576.jpg?t=1608626626"
+    },
+    {
+      "title": "Arsenal Mania",
+      "feed_url": "https://arsenal-mania.com/feed/",
+      "website_url": "https://arsenal-mania.com/",
+      "description": "The largest Arsenal fan forum in the world along with all the latest news and views surrounding the mighty Gunners.",
+      "followers": {
+        "facebook": 633,
+        "instagram": 365
+      },
+      "image_url": "https://i1.feedspot.com/4765580.jpg?t=1608629172"
+    },
+    {
+      "title": "Gooner News Blog",
+      "feed_url": "https://goonernews.com/blog/feed/",
+      "website_url": "https://goonernews.com/blog/",
+      "description": "Bringing you original, objective coverage of all the Arsenal news, Arsenal transfer news, match previews and reports plus all other things Arsenal FC.",
+      "followers": {
+        "facebook": 172200,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4765562.jpg?t=1608626643"
+    },
+    {
+      "title": "Le Grove - The Arsenal opinion blog",
+      "feed_url": "https://www.le-grove.co.uk/feed",
+      "website_url": "https://www.le-grove.co.uk/",
+      "description": "A daily mash-up of the latest Arsenal news and gossip combined with opinion and insight.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 106900
+      },
+      "image_url": "https://i1.feedspot.com/4765526.jpg?t=1608626657"
+    },
+    {
+      "title": "You Are My Arsenal Blog",
+      "feed_url": "https://feeds.feedburner.com/youaremyarsenal/eZma",
+      "website_url": "https://youaremyarsenal.com/blog/",
+      "description": "Telling the Arsenal Story As It Is, As We Want To.. Everything up to date on the greatest Football Club the world has ever seen.",
+      "followers": {
+        "facebook": 682,
+        "twitter": 83900
+      },
+      "image_url": "https://i1.feedspot.com/1744952.jpg"
+    },
+    {
+      "title": "Fresh Arsenal",
+      "feed_url": "https://fresharsenal.com/feed/",
+      "website_url": "https://fresharsenal.com/",
+      "description": "Unique Arsenal content from the fans for the fans. Daily articles including the latest Arsenal transfer news and gossip, injury updates, news, analysis and more.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 15700,
+        "instagram": 201
+      },
+      "image_url": "https://i1.feedspot.com/4766159.jpg"
+    },
+    {
+      "title": "Arsenal Analysis",
+      "feed_url": "http://arsenalanalysis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://arsenalanalysis.blogspot.com/",
+      "description": "Provides an independent, analytical and mature approach to Arsenal's games and related issues.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766266.jpg"
+    },
+    {
+      "title": "Jeorge Bird's Arsenal Youth",
+      "feed_url": "https://arsenalyouth.wordpress.com/feed/",
+      "website_url": "https://arsenalyouth.wordpress.com/",
+      "description": "Jeorge Bird's Arsenal Youth is a website which provides up-to-date information on all of the young players at Arsenal.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 66500
+      },
+      "image_url": "https://i1.feedspot.com/4765712.jpg?t=1608626664"
+    },
+    {
+      "title": "Bergkampesque",
+      "feed_url": "https://bergkampesque.com/feed/",
+      "website_url": "https://bergkampesque.com/",
+      "description": "An Arsenal blog inspired by DB10's genius and quest for beauty.",
+      "followers": {
+        "twitter": 497
+      },
+      "image_url": "https://i1.feedspot.com/4765753.jpg?t=1613115751"
+    },
+    {
+      "title": "Arsenal True Fans",
+      "feed_url": "https://arsenaltruefans.com/feed",
+      "website_url": "https://arsenaltruefans.com/",
+      "description": "This is the home of latest Arsenal news,pics,videos and anything related to Arsenal. This is a platform for Arsenal True Fans where they can discuss topics.",
+      "followers": {
+        "facebook": 102700,
+        "twitter": 378
+      },
+      "image_url": "https://i1.feedspot.com/4924040.jpg?t=1608626688"
+    },
+    {
+      "title": "Arsenal Insider",
+      "feed_url": "https://www.arsenalinsider.com/feed/",
+      "website_url": "https://www.arsenalinsider.com/",
+      "description": "The latest Arsenal football club news, transfers, match previews, reviews and results.",
+      "followers": {
+        "facebook": 245300,
+        "twitter": 974
+      },
+      "image_url": "https://i1.feedspot.com/4765788.jpg?t=1608626744"
+    },
+    {
+      "title": "Positively Arsenal",
+      "feed_url": "https://positivelyarsenal.com/feed/",
+      "website_url": "https://positivelyarsenal.com/",
+      "description": "If you're a supporter of a club, you have to be, through thick, thin, laughter, smiles and tears.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4765768.jpg?t=1608626751"
+    },
+    {
+      "title": "Suburban Gooners",
+      "feed_url": "https://www.suburbangooners.com/feed/",
+      "website_url": "https://www.suburbangooners.com/",
+      "description": "Suburban Gooners is an Arsenal blog talking, well, all things Arsenal. If you're an Arsenal fan, you will love this.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4766033.jpg?t=1608626754"
+    },
+    {
+      "title": "Arsenal World",
+      "feed_url": "https://www.arsenal-world.co.uk/channel/rss",
+      "website_url": "https://www.arsenal-world.co.uk/",
+      "description": "A Arsenal FC fan's dream site: all the breaking news, live scores, results and match reports, prediction games, fan forums/messageboards, sports goods, competitions, in-depth statistics and full playing squad detail.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 220
+      },
+      "image_url": "https://i1.feedspot.com/4766176.jpg?t=1608626765"
+    },
+    {
+      "title": "Ever Arsenal",
+      "feed_url": "https://feeds.feedburner.com/EVERARSENAL",
+      "website_url": "http://everarsenal.blogspot.com/",
+      "description": "A blog about Arsenal and all things Arsenal.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/3954962.jpg?t=1608626802"
+    },
+    {
+      "title": "Poorly Drawn Arsenal",
+      "feed_url": "https://www.poorlydrawnarsenal.com/rss/",
+      "website_url": "https://www.poorlydrawnarsenal.com/",
+      "description": "I have questionable artistic skills and a love of Arsenal. Here is where I combine the two.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 76400
+      },
+      "image_url": "https://i1.feedspot.com/4766364.jpg?t=1608629335"
+    },
+    {
+      "title": "234 Arsenal",
+      "feed_url": "http://anaijagunner.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://anaijagunner.blogspot.com/",
+      "description": "A blog about Arsenal FC from Naija Anaijagunner.",
+      "followers": {
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/4960203.jpg?t=1608629386"
+    },
+    {
+      "title": "Arsenal FC Blog",
+      "feed_url": "https://www.arsenalfcblog.com/feed/",
+      "website_url": "https://www.arsenalfcblog.com/",
+      "description": "Arsenal FC Blog is an independent blog dedicated to sharing the joys of being a modern-day Arsenal fan.",
+      "followers": {
+        "facebook": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4765713.jpg?t=1608629429"
+    },
+    {
+      "title": "London is Red.",
+      "feed_url": "https://londonisred.com/feed/",
+      "website_url": "https://londonisred.com/",
+      "description": "A blog by an Arsenal Fan. In this blog, you will find the latest arsenal news, articles, updates, and much more.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5259015.jpg?t=1616073914"
+    },
+    {
+      "title": "The Short Fuse",
+      "feed_url": "https://theshortfuse.sbnation.com/rss/index.xml",
+      "website_url": "https://theshortfuse.sbnation.com/",
+      "description": "All the latest news on Arsenal",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8652132.jpg?t=1753708395"
+    },
+    {
+      "title": "Pain in the Arsenal",
+      "feed_url": "https://paininthearsenal.com/feed",
+      "website_url": "https://paininthearsenal.com/",
+      "description": "Arsenal news, rumors, updates, transfers, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/8652131.jpg"
+    },
+    {
+      "title": "You Are My Arsenal",
+      "feed_url": "https://youaremyarsenal.com/feed",
+      "website_url": "https://youaremyarsenal.com/",
+      "description": "You Are My Arsenal' is a dedicated Arsenal football analysis site offering in\u2011depth tactical breakdowns, match previews, player reviews, and opinion pieces focused on Arsenal's performance and development",
+      "followers": {
+        "twitter": 83900,
+        "instagram": 329
+      },
+      "image_url": "https://i1.feedspot.com/2298321.jpg?t=1753709129"
+    },
+    {
+      "title": "LE GROVE",
+      "feed_url": "https://www.le-grove.co.uk/feed",
+      "website_url": "https://www.le-grove.co.uk/blog/",
+      "description": "The site was set up in late 2007 by Geoff and Pedro. They set out to create a place where Arsenal fans could talk about whatever they liked football wise without the fear of aggressive recriminations. Four and a bit years on, the site has posted over 1600 times and has over 1,000,000 comments approved and published.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 106900
+      },
+      "image_url": "https://i1.feedspot.com/1077303.jpg?t=1608624296"
+    },
+    {
+      "title": "Big Raddy's Pre-match",
+      "feed_url": "https://arsenalarsenal.net/feed/",
+      "website_url": "https://arsenalarsenal.net/",
+      "description": "Arsenal is not just any old football club. It is a by-word for history, tradition and success.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4765695.jpg?t=1608629048"
+    },
+    {
+      "title": "Gooner Daily - Your Daily Arsenal Digest",
+      "feed_url": "https://goonerdaily.com/feed/",
+      "website_url": "https://goonerdaily.com/",
+      "description": "This is an Arsenal blog that feeds its readers up to the minute news about the Arsenal which ranges from transfer gossip, daily news, match previews, match reviews, team news and much more..",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4465814.jpg?t=1608628785"
+    },
+    {
+      "title": "Goodplaya",
+      "feed_url": "https://www.goodplaya.com/feed/",
+      "website_url": "https://www.goodplaya.com/",
+      "description": "Blogging on Arsenal since a long period of time.",
+      "followers": {
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4765578.jpg?t=1608626760"
+    },
+    {
+      "title": "Arsenal 4 Life Blog",
+      "feed_url": "https://www.afc4life.co.uk/feed/",
+      "website_url": "https://www.afc4life.co.uk/",
+      "description": "Arsenal News, Match Reports, Previews, Opinions, Fans Forum.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4765779.jpg?t=1608626768"
+    },
+    {
+      "title": "Up The Arsenal",
+      "feed_url": "https://upthearsenal.com/feed/",
+      "website_url": "https://upthearsenal.com/",
+      "description": "This blog orbits the unconventional. If football and eccentricity are your bag then take my hand as I guide you through the wild plains of imagination. Get Arsenal news, Gunners stories.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5178093.jpg?t=1608626785"
+    },
+    {
+      "title": "oohtobeagooner",
+      "feed_url": "https://feeds.feedburner.com/oohtobeagooner/gvId",
+      "website_url": "https://oohtobeagooner.com/",
+      "description": "Arsenal blog from a season ticket holder featuring match highlights, goals, news & reports",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 322
+      },
+      "image_url": "https://i1.feedspot.com/4766080.jpg?t=1608629295"
+    },
+    {
+      "title": "Humans of The Arsenal",
+      "feed_url": "https://humansofthearsenal.com/rss",
+      "website_url": "https://humansofthearsenal.com/",
+      "description": "Humans of The Arsenal is a photo blog sharing stories, in their own words.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 1900,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4766148.jpg?t=1608629328"
+    },
+    {
+      "title": "Arsenal Life Through A Lens",
+      "feed_url": "https://thearsenalphotolens.tumblr.com/rss",
+      "website_url": "https://thearsenalphotolens.tumblr.com/",
+      "description": "Photos taken and owned by the club photographers Stuart MacFarlane and David Price.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4766380.jpg"
+    },
+    {
+      "title": "CIVILIZED GUNNER",
+      "feed_url": "https://civilizedgunner.wordpress.com/feed/",
+      "website_url": "https://civilizedgunner.wordpress.com/",
+      "description": "This is a weblog purely about Arsenal football club. Complete Arsenal coverage done the civilized way from a Naija Gunner lover",
+      "followers": {
+        "facebook": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4908478.jpg?t=1608629338"
+    },
+    {
+      "title": "#yagunnersya",
+      "feed_url": "https://oliviergiroudd.tumblr.com/rss",
+      "website_url": "https://oliviergiroudd.tumblr.com/",
+      "description": "Dominique. 23 years old from England. Football and Olivier Giroud ruined my life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766476.jpg"
+    },
+    {
+      "title": "Pictures of THE ARSENAL",
+      "feed_url": "https://picturesofthearsenal.tumblr.com/rss",
+      "website_url": "https://picturesofthearsenal.tumblr.com/",
+      "description": "Welcome to my sideblog. I'm strictly posting/ reblogging uploads of HQ Arsenal pictures here. They don't belong to me. If I uploaded them the sources are linked in the descriptions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766345.jpg"
+    },
+    {
+      "title": "Gooner's Diary",
+      "feed_url": "https://feeds.feedburner.com/blogspot/TwGoN",
+      "website_url": "http://www.goonersdiary.co.uk/",
+      "description": "Gooner's Diary - who knows until it's written, albeit obviously with just a FEW Arsenal related undertones.",
+      "followers": {
+        "twitter": 397
+      },
+      "image_url": "https://i1.feedspot.com/4766306.jpg?t=1608629354"
+    },
+    {
+      "title": "North London Is Red",
+      "feed_url": "http://northlondonisred.co.uk/feed/",
+      "website_url": "http://northlondonisred.co.uk/",
+      "description": "North London Is Red is a blog site dedicated to Arsenal news, transfers, match previews, opinion & short stories.",
+      "followers": {
+        "facebook": 530,
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/2298320.jpg"
+    },
+    {
+      "title": "Woolwich 1886",
+      "feed_url": "https://woolwich1886.com/feed/",
+      "website_url": "https://woolwich1886.com/",
+      "description": "A life-long Arsenal fan takes to the web to share his limited supplies of wisdom and insight.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7129034/page/4908483/logo_1693138921.png"
+    },
+    {
+      "title": "The Weekly Arsenal Blog",
+      "feed_url": "http://theweeklyarsenalblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://theweeklyarsenalblog.blogspot.com/",
+      "description": "My name is Aaron Mayhew, I am an 18 year old Arsenal fan and young journalist. Once a week I will voice my opinion on how Arsenal performed and what I think they need to improve on (this will most likely be putting the ball in the back of the net). As I am studying for my A levels I cannot guarantee the blog will continue to be weekly. COME ON YOU GUNNERS!",
+      "followers": {
+        "twitter": 726
+      },
+      "image_url": "https://i1.feedspot.com/4908475.jpg?t=1608815486"
+    },
+    {
+      "title": "Gunner Thoughts",
+      "feed_url": "https://gunnerthoughts.com/feed/",
+      "website_url": "https://gunnerthoughts.com/news/",
+      "description": "Hello from Gunner Thoughts. This is your spot for match reports, Arsenal news, and a community to comment and engage with myself and other Arsenal fans.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5212319.jpg?t=1608629375"
+    },
+    {
+      "title": "Gambeano Snitch AFC",
+      "feed_url": "https://gambeanosnitch.com/feed/",
+      "website_url": "https://gambeanosnitch.com/",
+      "description": "Full time gooner, part time everything else. Just a dedicated Arsenal fan who likes to share his thoughts with fellow gooners. I celebrate every win and I suffer every defeat, it's all about taking the good with the bad and writing and sharing keeps me sane.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5196744.jpg?t=1608629390"
+    },
+    {
+      "title": "Goonerholic",
+      "feed_url": "https://goonerholic.com/feed/",
+      "website_url": "https://goonerholic.com/",
+      "description": "Eat, sleep, breathe, drink, Arsenal. Blogging about the FA Cup Winners since 2006.",
+      "followers": {
+        "twitter": 22800
+      },
+      "image_url": "https://i1.feedspot.com/70484.jpg?t=1608629398"
+    },
+    {
+      "title": "The Feed for Arsenal FC",
+      "feed_url": "https://arsenalfeed.tumblr.com/rss",
+      "website_url": "https://arsenalfeed.tumblr.com/",
+      "description": "All the photos related to Arsenal FC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766347.jpg"
+    },
+    {
+      "title": "Arsenal America",
+      "feed_url": "https://www.arsenalamerica.com/feed/",
+      "website_url": "https://www.arsenalamerica.com/",
+      "description": "The Official Supporters Organization For Arsenal FC in the United States.",
+      "followers": {
+        "twitter": 28200
+      },
+      "image_url": "https://i1.feedspot.com/4765783.jpg?t=1608629415"
+    },
+    {
+      "title": "It's MY Arsenal Opinion",
+      "feed_url": "https://feeds.feedburner.com/blogspot/znHal",
+      "website_url": "http://myarsenalopinion.blogspot.com/",
+      "description": "A blog written by an Arsenal fan for other Arsenal fans.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4766255.jpg?t=1608629424"
+    },
+    {
+      "title": "ESPN \u00bb Football",
+      "feed_url": "https://www.espn.in/football/",
+      "website_url": "https://www.espn.in/football/",
+      "description": "Check out this new story published on Arsenal by ESPN FC.",
+      "followers": {
+        "facebook": 14600000,
+        "twitter": 16600000
+      },
+      "image_url": "https://i1.feedspot.com/4765091.jpg?t=1608626637"
+    },
+    {
+      "title": "Pain in the Arsenal",
+      "feed_url": "https://paininthearsenal.com/feed/",
+      "website_url": "https://paininthearsenal.com/",
+      "description": "The ultimate home for Arsenal FC news, rumors, updates, transfers, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/4765584.jpg?t=1608626654"
+    },
+    {
+      "title": "Arsenal News",
+      "feed_url": "https://arsenalnews.co.uk/feed/",
+      "website_url": "https://arsenalnews.co.uk/",
+      "description": "All the latest Arsenal news, views, transfers and videos from Emirates Stadium.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 3100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1157220.jpg?t=1608626668"
+    },
+    {
+      "title": "#gunnernation",
+      "feed_url": "https://dailyarsenal.tumblr.com/rss",
+      "website_url": "https://www.tumblr.com/dailyarsenal",
+      "description": "A tumblr source for Arsenal FC! This blog contains pictures, information, news and everything Arsenal. Content posted are proudly fan-made.",
+      "followers": {
+        "instagram": 31500000
+      },
+      "image_url": "https://i1.feedspot.com/4766349.jpg"
+    },
+    {
+      "title": "The Arsenal Collection",
+      "feed_url": "https://thearsenalcollection.org.uk/?feed=rss2",
+      "website_url": "https://thearsenalcollection.org.uk/",
+      "description": "Putting right The Arsenal's history.",
+      "followers": {
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4766116.jpg?t=1608629438"
+    },
+    {
+      "title": "All Arsenal News",
+      "feed_url": "https://www.allarsenal.com/feed/",
+      "website_url": "https://www.bet-bonuscode.co.uk/events/",
+      "description": "The number one source for all of the latest Arsenal News, transfer rumours, gossip and matchday team news.",
+      "followers": {
+        "twitter": 5200,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4765814.jpg?t=1608626608"
+    },
+    {
+      "title": "The Arsenal Blog",
+      "feed_url": "https://thearsenalblog.com/feed",
+      "description": "This is TheArsenalBlog and we aim to be amongst the best unofficial Arsenal Blogs around, with up-to-date Arsenal News, Analysis and Arsenal transfer rumours from around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4465798.jpg?t=1613115789"
+    }
+  ]
+}

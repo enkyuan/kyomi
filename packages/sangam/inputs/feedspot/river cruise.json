@@ -1,0 +1,64 @@
+{
+  "category": "River Cruise",
+  "source_url": "https://rss.feedspot.com/river_cruise_rss_feeds",
+  "feeds": [
+    {
+      "title": "Helford River Cruises",
+      "feed_url": "http://helfordrivercruises.co.uk/feed",
+      "website_url": "http://helfordrivercruises.co.uk/blog",
+      "description": "Discover the stunning Helford and Frenchman's Creek on a traditional Cornish boat trip. Get to know latest updates and information about river cruise at Helford River Cruises.",
+      "followers": {
+        "facebook": 970,
+        "twitter": 360
+      },
+      "image_url": "https://i1.feedspot.com/5205449.jpg?t=1602510394"
+    },
+    {
+      "title": "USA River Cruises",
+      "feed_url": "https://usarivercruises.com/feed/",
+      "website_url": "https://usarivercruises.com/blog/",
+      "description": "USA River Cruises Blog tells stories of trips around the world, beautiful destinations, traveling hacks and first hand river cruise experiences.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 2300,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5204825.jpg?t=1602504892"
+    },
+    {
+      "title": "Global River Cruising",
+      "feed_url": "https://www.globalrivercruising.co.uk/feed/",
+      "website_url": "https://www.globalrivercruising.co.uk/blog/",
+      "description": "Global River Cruising help you to find your perfect river cruise holiday. Experience new cultures and age old traditions. Where would you like to go? Europe, Asia or the Americas? What to wear and what to pack? How does tipping work? Read our river cruising blog to be inspired and be informed.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 151
+      },
+      "image_url": "https://i1.feedspot.com/5205450.jpg?t=1602511218"
+    },
+    {
+      "title": "Avalon Waterways Blog",
+      "feed_url": "https://blog.avalonwaterways.com/feed/",
+      "website_url": "https://blog.avalonwaterways.com/",
+      "description": "We set the standard in river cruising with extraordinary cruises on the newest ships. Visit Avalon's Revealing Travel Blog for the latest news, resources, tips & more as you plan, or just dream about, your next river cruise!",
+      "followers": {
+        "facebook": 224600,
+        "twitter": 10100,
+        "instagram": 49100
+      },
+      "image_url": "https://i1.feedspot.com/5204827.jpg?t=1602506342"
+    },
+    {
+      "title": "Cruise Lifestyle | Cruise Blog \u00bb River Cruises",
+      "feed_url": "https://cruiselifestyle.co.uk/category/destinations/river-cruises/feed/",
+      "website_url": "https://cruiselifestyle.co.uk/category/destinations/river-cruises/",
+      "description": "Cruise Lifestyle is a UK cruise blog dedicated to news, advice, destinations and lifestyle tips. Get the latest information about river cruise at Cruise Lifestyle blog.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 7100,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5205363.jpg?t=1602508272"
+    }
+  ]
+}

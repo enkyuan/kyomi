@@ -1,0 +1,81 @@
+{
+  "category": "Steampunk",
+  "source_url": "https://rss.feedspot.com/steampunk_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bluestocking Writes Blog",
+      "feed_url": "https://steampunklibrarian.blog/feed/",
+      "website_url": "https://steampunklibrarian.blog/",
+      "description": "Read articles and write-ups that combine technologies and aesthetic designs inspired by the 19th-century industrial machinery by Elizabeth D. Headrick.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5375806.jpg?t=1646023488"
+    },
+    {
+      "title": "My Steampunk Style",
+      "feed_url": "https://my-steampunk-style.com/blogs/steampunk-blog.atom",
+      "website_url": "https://my-steampunk-style.com/blogs/steampunk-blog",
+      "description": "This blog features articles on a wide variety of steampunk topics. Find tips, information, and revelations about your favorite universe, and learn secrets about Steampunk. My Steampunk Style is an online shop selling Steampunk costumes, clothes, accessories, and so on.",
+      "followers": {
+        "facebook": 817,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5389627.jpg?t=1649757787"
+    },
+    {
+      "title": "Steampunk Movement Blog",
+      "feed_url": "https://steampunkmovement.com/feed/",
+      "website_url": "https://steampunkmovement.com/category/steampunk-movement-blog-steampunk-watch-guides-and-articles/",
+      "description": "We are the comprehensive place online for Steampunk pocket watch guides, we regularly bring out articles on Steampunk fashion, watches, and general topics.",
+      "followers": {
+        "facebook": 493,
+        "instagram": 419
+      },
+      "image_url": "https://i1.feedspot.com/5375834.jpg?t=1646024932"
+    },
+    {
+      "title": "Airship Ambassador",
+      "feed_url": "https://airshipambassador.wordpress.com/feed/",
+      "website_url": "https://airshipambassador.wordpress.com/",
+      "description": "Airship Ambassador is the most complete news and information resource for the steampunk community.",
+      "followers": {
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/2161369.jpg?t=1646023950"
+    },
+    {
+      "title": "Jonathan Fesmire Blog",
+      "feed_url": "https://www.jonathanfesmire.com/feed/",
+      "website_url": "https://www.jonathanfesmire.com/blog/",
+      "description": "This is Jonathan Fesmire's Steampunk, Science Fiction, and Writing Blog. It covers steampunk and other science fiction, fantasy, and geek interests, as well as writing and art. Dive into the creative process, explore worldbuilding secrets, and witness the sparks fly as story ideas coalesce.",
+      "followers": {
+        "facebook": 905,
+        "twitter": 82000
+      },
+      "image_url": "https://i1.feedspot.com/5375808.jpg?t=1646023703"
+    },
+    {
+      "title": "All About Steampunk",
+      "feed_url": "https://allaboutsteampunk.com/feed/",
+      "website_url": "https://allaboutsteampunk.com/blog/",
+      "description": "Read all about steampunk culture, fashion, art, and decor. Stay updated on steampunk news and events through our blog.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 17,
+        "instagram": 558
+      },
+      "image_url": "https://i1.feedspot.com/5375809.jpg?t=1646023105"
+    },
+    {
+      "title": "Steampunk Journal",
+      "feed_url": "https://steampunkjournal.org/",
+      "website_url": "https://steampunkjournal.org/",
+      "description": "Steampunk Journal is committed to promoting steampunk throughout the world with honest, unbiased reviews, thoughtful articles, and interesting news & interviews. It is a highly popular online steampunk magazine. Covering aesthetics of the 19th century, science fiction, and other subcultures from around the world.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5375807.jpg?t=1646023817"
+    }
+  ]
+}

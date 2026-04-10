@@ -1,0 +1,55 @@
+{
+  "category": "LARP",
+  "source_url": "https://rss.feedspot.com/larp_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nordiclarp.org",
+      "feed_url": "https://nordiclarp.org/feed/",
+      "website_url": "https://nordiclarp.org/",
+      "description": "Articles on LARP, production, inspirations, and ideas for magical LARP experience and more! Nordiclarp.org is an Online magazine about Nordic-style LARP.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 748
+      },
+      "image_url": "https://i1.feedspot.com/5373397.jpg?t=1645188973"
+    },
+    {
+      "title": "LARP News",
+      "feed_url": "https://larpnews.org/feed/",
+      "website_url": "https://larpnews.org/",
+      "description": "Find the latest news and updates from the LARP community with popular LARPs, tips, and more! News site reporting about live-action roleplay (LARP) events and all things related.",
+      "followers": {
+        "facebook": 378,
+        "instagram": 349
+      },
+      "image_url": "https://i1.feedspot.com/5373399.jpg?t=1645188982"
+    },
+    {
+      "title": "Fair Escape",
+      "feed_url": "https://fairescape.wordpress.com/feed/",
+      "website_url": "https://fairescape.wordpress.com/",
+      "description": "This blog is intended to be a collection of thoughts on my favorite hobby, along with a record of my personal experiences in LARPing. If anything, I hope this blog might help kickstart interesting conversations about LARP, and give people a glimpse of some of what goes on in the New England LARP communities. I've been LARPing for years, in a variety of styles, including both live combat and theater.",
+      "followers": {
+        "twitter": 528
+      },
+      "image_url": "https://i1.feedspot.com/5373396.jpg?t=1645188967"
+    },
+    {
+      "title": "LarpHack",
+      "feed_url": "http://www.larphack.com/feed/",
+      "website_url": "http://www.larphack.com/",
+      "description": "The definitive Calendar and Guide to Sport LARPing in New England - encompassing reviews, tips, tricks, and solutions to any sort of adventure that can be found. I have been gaming since I was about 6, starting in the golden day of tabletops and lead miniatures. Experienced in strategy games, writing, adventure campaigns, I've been LARPing for over 16 years - and more importantly, have game experience in almost 40 LARP game systems over hundreds of events.",
+      "followers": {
+        "facebook": 207
+      },
+      "image_url": "https://i1.feedspot.com/5373401.jpg?t=1645188988"
+    },
+    {
+      "title": "LARPed Blog",
+      "feed_url": "https://larped.com/feed/",
+      "description": "From fantasy to horror, take a look at some LARPs on our radar, and see if they might be for you. While some might involve boffer combat, others are political and heavy role-play. LARPed is a resource for LARPers, those who play role-playing games and people looking to get into the nerd scene and experience the amazing world of live-action role-play. We're a group of dedicated larpers putting out content, tutorials, tips, tricks, and resources for other larpers of every skill and talent level.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5373400.jpg?t=1645189243"
+    }
+  ]
+}

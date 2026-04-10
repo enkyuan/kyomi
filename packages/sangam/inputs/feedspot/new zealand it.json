@@ -1,0 +1,107 @@
+{
+  "category": "New Zealand IT",
+  "source_url": "https://rss.feedspot.com/nz_it_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eagle Technology Blog",
+      "feed_url": "https://www.eagle.co.nz/blog/rss.xml",
+      "website_url": "https://www.eagle.co.nz/blog",
+      "description": "When Trevor and Corallie Eagle founded what was to become Eagle Technology in 1969, their vision was for a family company that would bring excellence in IT products and services to the New Zealand market. Today, Duane Eagle, Managing Director, remains committed to that vision and heads up an organisation that has grown to include 120 staff whilst retaining its family ownership and core values. All of Trevor and Corallie's seven children worked within the company at some time; Today, Duane Eagle continues the legacy started by Trevor and Corallie more than fifty years ago.",
+      "followers": {
+        "facebook": 841,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/7290601.jpg?t=1712213330"
+    },
+    {
+      "title": "IT Professionals NZ Blog",
+      "feed_url": "https://itp.nz/techblog?format=rss",
+      "website_url": "https://itp.nz/techblog",
+      "description": "IT Professionals New Zealand is Aotearoa's body for software and IT Professionals, where thousands of members come together to connect with experts, advance their careers, learn, and stay updated with the local tech industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290833.jpg?t=1712225364"
+    },
+    {
+      "title": "IT Brief New Zealand",
+      "feed_url": "https://itbrief.co.nz/feed",
+      "website_url": "https://itbrief.co.nz/",
+      "description": "Dedicated to IT decision-makers at enterprise, corporate, and government organizations throughout New Zealand. These are organizations with more than 50 employees and an IT manager or CIO. IT Brief is a live news website with weekly email newsletters.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5591582.jpg?t=1686058346"
+    },
+    {
+      "title": "Absolute IT",
+      "feed_url": "https://absoluteit.co.nz/feed/",
+      "website_url": "https://absoluteit.co.nz/articles/",
+      "description": "They are big believers in people and their potential. We are naturally technology-curious, and driven to discover unique talent in the market. We constantly seek to enhance and improve our approach to recruitment, underpinned by our commitment to delivering an outstanding experience to job seekers, and on building truly long-standing partnerships with our clients.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 678,
+        "instagram": 225
+      },
+      "image_url": "https://i1.feedspot.com/5645870.jpg?t=1691662231"
+    },
+    {
+      "title": "Inde Technology Blog",
+      "feed_url": "https://www.inde.nz/blog/rss.xml",
+      "website_url": "https://www.inde.nz/blog",
+      "description": "Inde is a New Zealand employee-owned and operated cloud-first provider of enterprise technology business solutions. We specialize in cloud-first enterprise technology solutions, with a focus on keeping our scope of service to our core competencies to maintain premium knowledge. Read Inde's latest blogs, news, and information about enterprise IT and cloud technology in New Zealand and Australia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5591579.jpg?t=1686058373"
+    },
+    {
+      "title": "New Era Technology Blog",
+      "feed_url": "https://www.neweratech.com/nz/category/blog/feed/",
+      "website_url": "https://www.neweratech.com/nz/refine/blog/technology/",
+      "description": "s",
+      "followers": {
+        "facebook": 422,
+        "twitter": 466
+      },
+      "image_url": "https://i1.feedspot.com/7290604.jpg?t=1712225406"
+    },
+    {
+      "title": "New Zealand Computing Solutions Blog",
+      "feed_url": "https://nzcs.co.nz/feed/",
+      "website_url": "https://nzcs.co.nz/blog/",
+      "description": "Streamline your technology operations, amplify your business and eliminate risk with a team of IT superheroes that proactively manage your IT infrastructure, cyber security and system maintenance.",
+      "followers": {
+        "facebook": 481,
+        "twitter": 134
+      },
+      "image_url": "https://i1.feedspot.com/7290835.jpg?t=1712232796"
+    },
+    {
+      "title": "Mace IT Blog",
+      "feed_url": "https://maceit.co.nz/feed/",
+      "website_url": "https://maceit.co.nz/it-blog/",
+      "description": "Mace IT was founded in 2008 with the sole aim of delivering top-notch technology services to Auckland's small and medium sized businesses. The Latest Expert IT Insights on the Mace IT Blog Your Ultimate Destination for In-Depth Technology Updates, Tips, & Trends.",
+      "followers": {
+        "facebook": 314,
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/7290836.jpg?t=1712225517"
+    },
+    {
+      "title": "Lexel Systems",
+      "feed_url": "https://lexel.co.nz/feed/",
+      "website_url": "https://lexel.co.nz/recent-news/",
+      "description": "Founded over 35 years ago; Lexel is one of the largest privately-owned providers of ICT services and solutions in New Zealand. An agile and innovative organisation, Lexel has a staff of over 110 and revenues exceeding $70m. Read more of Lexel's recent news and find out about latest happenings, awards, technical insights, promotions and events.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290834.jpg?t=1712225557"
+    },
+    {
+      "title": "NSP Blog",
+      "feed_url": "https://blog.nsp.co.nz/tag/cybersecurity",
+      "website_url": "https://blog.nsp.co.nz/tag/cybersecurity",
+      "description": "Network Service Providers (NSP) is a leading provider of IT infrastructure and networking solutions. Their blog section offers informative content on network security, cloud computing, and emerging technologies. Stay updated with the latest trends in networking and cybersecurity by visiting their website and exploring their blog.",
+      "followers": {
+        "facebook": 104
+      },
+      "image_url": "https://i1.feedspot.com/5588121.jpg?t=1685619042"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "category": "Olympics",
+  "source_url": "https://rss.feedspot.com/olympics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Special Olympics",
+      "feed_url": "https://www.specialolympics.org/stories.rss",
+      "website_url": "https://www.specialolympics.org/stories",
+      "description": "Special Olympics is an international nonprofit organization dedicated to empowering individuals with intellectual disabilities to become physically fit, productive and respected members of society through sports training and competition.",
+      "followers": {
+        "facebook": 854200,
+        "twitter": 115200,
+        "instagram": 205600
+      },
+      "image_url": "https://i1.feedspot.com/4573029.jpg?t=1615024593"
+    },
+    {
+      "title": "BBC Sport - Olympics",
+      "feed_url": "https://feeds.bbci.co.uk/sport/olympics/rss.xml",
+      "website_url": "https://www.bbc.com/sport/olympics",
+      "description": "The home of Olympics on BBC Sport online. Includes the latest news stories, results, fixtures, video and audio.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000
+      },
+      "image_url": "https://i1.feedspot.com/4573067.jpg?t=1615024588"
+    },
+    {
+      "title": "Wild Olympics Campaign Blog",
+      "feed_url": "http://www.wildolympics.org/feed/",
+      "website_url": "http://www.wildolympics.org/about/blog/",
+      "description": "We are a coalition working to protect wild forest and river watersheds on the Olympic Peninsula. The campaign is working with other local citizens and community leaders to establish new Wilderness amd Wild and Scenic river designations for these natural treasures.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4573010.jpg?t=1615024636"
+    },
+    {
+      "title": "The Guardian | Olympic Games",
+      "feed_url": "https://www.theguardian.com/sport/olympic-games/rss",
+      "website_url": "https://www.theguardian.com/sport/olympic-games",
+      "description": "Full coverage of every Olympic Games.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4573006.jpg?t=1615024596"
+    },
+    {
+      "title": "The Sports Archives Blog Olympics",
+      "feed_url": "https://thesportsarchivesblog.com/category/olympics/feed/",
+      "website_url": "https://thesportsarchivesblog.com/category/olympics/",
+      "description": "Posts about Olympics written by thesportsarchives. The Sports Archives is a Free Search Portal to Sports History; Greatest Moments; Sports Videos; Audio; Statistics; Quotes; Photos; Memorabilia and Merchandise!",
+      "followers": {
+        "facebook": 46,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/4573014.jpg?t=1615024620"
+    },
+    {
+      "title": "Special Olympics Massachusetts",
+      "feed_url": "https://specialolympicsma.wordpress.com/feed/",
+      "website_url": "https://specialolympicsma.wordpress.com/",
+      "description": "Special Olympics Massachusetts provides year-round sports training and competition in a variety of Olympic-type sports for individuals with intellectual disabilities.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4573019.jpg?t=1615024624"
+    },
+    {
+      "title": "Mashable",
+      "feed_url": "https://in.mashable.com/olympics.xml",
+      "website_url": "https://in.mashable.com/olympics",
+      "description": "Mashable is the leading source for news, information and resources for the connected generation. Get latest Updates on Olympics.",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 8800000
+      },
+      "image_url": "https://i1.feedspot.com/4573057.jpg?t=1615024630"
+    },
+    {
+      "title": "Velo \u00bb Olympic",
+      "feed_url": "https://velo.outsideonline.com/category/olympics/feed/",
+      "website_url": "https://velo.outsideonline.com/category/olympics/",
+      "description": "Velo Magazine brings you inside the sport of bike racing, with exclusive features, race analysis, expert training advice, unbiased gear reviews and the absolute best cycling photography. VeloNews.com brings you the latest news in the world of professional cycling.",
+      "followers": {
+        "facebook": 288300,
+        "twitter": 213
+      },
+      "image_url": "https://i1.feedspot.com/4573053.jpg?t=1615024606"
+    },
+    {
+      "title": "NESN.com Olympics",
+      "feed_url": "https://nesn.com/olympics/feed/",
+      "website_url": "https://nesn.com/olympics/",
+      "description": "NESN.com provides olympics news and video about the Boston Red Sox, Boston Bruins, New England Patriots, and Boston Celtics.",
+      "followers": {
+        "facebook": 750700,
+        "twitter": 358100,
+        "instagram": 276700
+      },
+      "image_url": "https://i1.feedspot.com/4573076.jpg?t=1615024609"
+    },
+    {
+      "title": "Special Olympics Vermont",
+      "feed_url": "https://www.specialolympicsvermont.org/feed",
+      "website_url": "https://www.specialolympicsvermont.org/news",
+      "description": "Special Olympics is founded of the belief that people with intellectual disabilities can with proper instruction and encouragement, learn, enjoy, and benefit from participation in individual and team sports.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 2900,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4573071.jpg?t=1615024613"
+    }
+  ]
+}

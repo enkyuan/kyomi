@@ -1,0 +1,86 @@
+{
+  "category": "UK Tennis",
+  "source_url": "https://rss.feedspot.com/uk_tennis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tennis Threads",
+      "feed_url": "http://tennisthreads.net/feed/",
+      "website_url": "https://tennisthreads.net/",
+      "description": "Tennis Threads features Tennis News and Live Scores.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 213,
+        "instagram": 392
+      },
+      "image_url": "https://i1.feedspot.com/4788602.jpg?t=1603204849"
+    },
+    {
+      "title": "BBC Sport \u00bb Tennis",
+      "feed_url": "https://feeds.bbci.co.uk/sport/tennis/rss.xml",
+      "website_url": "https://www.bbc.com/sport/tennis/",
+      "description": "The best of the BBC, with the latest news and sport headlines, weather, TV & radio highlights and much more from across the whole of BBC Online. Follow us to keep up with news and updates on Tennis.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/4477258.jpg?t=1603202135"
+    },
+    {
+      "title": "Perfect Tennis",
+      "feed_url": "https://www.perfect-tennis.com/feed/",
+      "website_url": "https://www.perfect-tennis.com/",
+      "description": "UK based Tennis Blog with a strong focus on Roger Federer. Includes match reports, analysis, predictions, general tennis news, videos and anything Federer related.",
+      "followers": {
+        "facebook": 90500,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4788569.jpg?t=1603204673"
+    },
+    {
+      "title": "Evening Standard \u00bb Tennis",
+      "feed_url": "https://www.standard.co.uk/sport/tennis/rss",
+      "website_url": "https://www.standard.co.uk/sport/tennis",
+      "description": "Bringing you breaking news, pictures, reviews and features from Standard.co.uk. Subscribe us to keep up with articles on Tennis.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 191300
+      },
+      "image_url": "https://i1.feedspot.com/4478390.jpg?t=1603202168"
+    },
+    {
+      "title": "The Guardian \u00bb Tennis",
+      "feed_url": "https://www.theguardian.com/sport/tennis/rss",
+      "website_url": "https://www.theguardian.com/sport/tennis",
+      "description": "All articles about Tennis from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 906200,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4477207.jpg?t=1603202149"
+    },
+    {
+      "title": "Tennishead",
+      "feed_url": "https://tennishead.net/wp-content/uploads/2019/01/News.jpg",
+      "website_url": "https://tennishead.net/tennis/news/",
+      "description": "Tennishead brings you the latest tennis news, scores, stats and products. With exclusive features and interviews, plus equipment reviewed in depth.",
+      "followers": {
+        "facebook": 281000,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4478223.jpg?t=1603202237"
+    },
+    {
+      "title": "Betfred Insights",
+      "feed_url": "https://insights.betfred.com/",
+      "website_url": "https://insights.betfred.com/",
+      "description": "The World's biggest owner-operator bookmaker. Betfred offer a betting news service at blog.betfred.com, you will find the latest football, tennis, golf, cricket, uk horse racing betting news. Follow us to keep up with articles on Tennis.",
+      "followers": {
+        "twitter": 13700,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4907868.jpg?t=1613999945"
+    }
+  ]
+}

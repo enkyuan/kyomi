@@ -1,0 +1,139 @@
+{
+  "category": "Data Integration",
+  "source_url": "https://rss.feedspot.com/data_integration_rss_feeds",
+  "feeds": [
+    {
+      "title": "Striim Blog",
+      "feed_url": "https://www.striim.com/feed/",
+      "website_url": "https://www.striim.com/blog/",
+      "description": "Striim was founded with the simple goal of helping companies make data useful the instant it's born. Striim was built to handle the volume, complexity, and velocity of enterprise data by connecting legacy systems to modern cloud applications on a scalable platform. The company's blog is a helpful place to read articles on a guide to data contracts, how real-time healthcare analytics help improve patient care, making data intelligent with Microsoft, and more.",
+      "followers": {
+        "facebook": 649,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5070097.jpg?t=1673873036"
+    },
+    {
+      "title": "Data Integration . Info",
+      "feed_url": "https://dataintegration.info/feed",
+      "website_url": "https://dataintegration.info/",
+      "description": "The Data blog shares all the necessary and essential information related to Data Integration. It provides popular categories such as Cloud Computing, Data Integration, Artificial Intelligence and Machine Learning, Data Analytics, Visualization, Data Engineering, and Data Warehousing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5494215.jpg?t=1673872936"
+    },
+    {
+      "title": "Dataddo Blog",
+      "feed_url": "https://blog.dataddo.com/rss.xml",
+      "website_url": "https://blog.dataddo.com/",
+      "description": "Learn everything you need to know about data management, data infrastructure, and data analysis from the Dataddo blog. It also provides the latest marketing, sales, and service tips and news. Dataddo is a fully managed, no-code integration platform that syncs cloud-based services, dash boarding apps, data warehouses, and data lakes. Visualize, centralize, distribute, and activate data by automating its transfer from virtually any source to any destination.",
+      "followers": {
+        "facebook": 570,
+        "twitter": 255,
+        "instagram": 275
+      },
+      "image_url": "https://i1.feedspot.com/5494214.jpg?t=1673872670"
+    },
+    {
+      "title": "Dispatch Integration Blog",
+      "feed_url": "https://dispatchintegration.com/feed/",
+      "website_url": "https://dispatchintegration.com/blog/",
+      "description": "Their blog is a value-added resource that helps you explore, learn, and make informed decisions when seeking your integration partner in the future. Dispatch Integration provides data integration and workflow automation solutions for companies of all sizes.",
+      "followers": {
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5494211.jpg?t=1673872643"
+    },
+    {
+      "title": "Oracle Blog \u00bb Data Integration",
+      "feed_url": "https://blogs.oracle.com/dataintegration/rss",
+      "website_url": "https://blogs.oracle.com/dataintegration/",
+      "description": "The Oracle has a mission to help people see data in new ways, discover insights, and unlock endless possibilities. Their blog is your source for the latest news, product updates, and industry insights. The blog has a separate Page for data integration which features articles on large transactions, parallel replicate diagnosability, Oracle GoldenGate community forums, using Oracle CLOUD infrastructure GoldenGate with MySQL databases, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5494208.jpg?t=1673873019"
+    },
+    {
+      "title": "KingswaySoft - Data Integration Made Easy",
+      "feed_url": "https://www.kingswaysoft.com/BlogRssFeed.ashx?bid=7d5cb2a4-4469-43fd-beb7-bee72d5e3a2b&cultureName=en-US",
+      "website_url": "https://www.kingswaysoft.com/blog",
+      "description": "KingswaySoft is a leading integration solution provider offering software solutions that make data integration affordable and painlessly easy. Thousands of enterprise clients from over 100 countries and regions rely on our solutions to integrate data with various application systems in order to drive their business efficiency and fully leverage their information assets. Follow KingswaySoft's blog for articles on data integration, Microsoft Dynamics, Dataverse and Power Platform, CRM, and much more.",
+      "followers": {
+        "facebook": 289,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5494210.jpg?t=1673872638"
+    },
+    {
+      "title": "Solutions Review",
+      "feed_url": "https://solutionsreview.com/data-integration/feed/",
+      "website_url": "https://solutionsreview.com/data-integration/category/news/",
+      "description": "Follow their blog for Data Integration News Archive, Best Data Integration Vendors, Reviews for Big Data, Applications, ETL, and Hadoop. Solutions Review brings all the technology news, opinion, best practices, and industry events together in one place. Every day their editors scan the Web looking for the most relevant content about Data Integration.",
+      "followers": {
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5494213.jpg?t=1673872657"
+    },
+    {
+      "title": "Etlworks Blog",
+      "feed_url": "https://blog.etlworks.com/feed/",
+      "website_url": "https://blog.etlworks.com/",
+      "description": "Etlworks is a modern, cloud-first, any-to-any data integration platform that scales with the business. We help people and organizations tackle their most complex challenges with data. The company's blog publishes articles such as 7 Reasons to Have a Data Integration Strategy, How to Approach Data Integration Project, Data Integration Project, ETL, and more.",
+      "followers": {
+        "facebook": 106,
+        "twitter": 564
+      },
+      "image_url": "https://i1.feedspot.com/5049098.jpg?t=1673873197"
+    },
+    {
+      "title": "Bizdata Blog",
+      "feed_url": "https://www.bizdata360.com/feed/",
+      "website_url": "https://www.bizdata360.com/blogs/",
+      "description": "Discover the leading source of trending topics, thoughts, and insights on big data analytics, data integration, data automation, iPaaS, and Product life cycle management. Bizdata Inc., founded in 2018, is a leading provider of data integration and analytics solutions. Including real-time data refresh, data search engine, and visualization features.",
+      "followers": {
+        "facebook": 321,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/6699690.jpg?t=1706873751"
+    },
+    {
+      "title": "Actian \u00bb Data Integration",
+      "feed_url": "https://www.actian.com/category/data-integration/feed/",
+      "website_url": "https://www.actian.com/category/data-integration/",
+      "description": "Follow their historical Data Integration archives of blogs that have useful content, articles, and information that will help you manage your data practice easier. Actian's Avalanche Cloud Data Platform gives customers the ability to innovate faster, gain real-time insights, modernize at any pace, leverage native data integration, and deploy anywhere.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5494212.jpg?t=1673873098"
+    },
+    {
+      "title": "Red Three Blog",
+      "feed_url": "https://redthree.com/feed/",
+      "website_url": "https://redthree.com/blog/",
+      "description": "Red Three Blog reviews data integration challenges for SAAS solutions, with a particular emphasis on UKG solutions. The Red Three solves your challenge with their integration, analysis, and reporting support services. So, your data can be where you need, when you need it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5494209.jpg?t=1673872867"
+    },
+    {
+      "title": "Software Blog",
+      "feed_url": "https://www.softwareag.com/en_corporate/blog.html",
+      "website_url": "https://www.softwareag.com/en_corporate/blog.html",
+      "description": "StreamSets believes in the audacious, ambitious goal of teasing order out of the chaos of modern data and help customers achieve that goal by solving the problem of data integration and data management for continuous delivery and constant change across any platform past, present, and future. The StreamSets DataOps Blog turns engineering experience and industry thought leadership into best practices for managing modern data integration. Follow to get updates.",
+      "followers": {
+        "facebook": 334,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5180548.jpg?t=1597138503"
+    },
+    {
+      "title": "DBTA \u00bb Data Integration",
+      "feed_url": "https://www.dbta.com/Categories/Data-Integration-329.aspx",
+      "website_url": "https://www.dbta.com/Categories/Data-Integration-329.aspx",
+      "description": "Follow the blog to read about Data integration, data virtualization, ETL, and CDC news, analysis, trends, and research from Database Trends and Applications magazine. Database Trends and Applications is a magazine covering data and information management, big data, and data science. In addition, the website, dbta.com, connects visitors with white papers, webinars, and other learning opportunities in the field.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5494219.jpg?t=1673872702"
+    }
+  ]
+}

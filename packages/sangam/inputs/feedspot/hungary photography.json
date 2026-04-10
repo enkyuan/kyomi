@@ -1,0 +1,39 @@
+{
+  "category": "Hungary Photography",
+  "source_url": "https://rss.feedspot.com/hungary_photography_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dora Film Blog",
+      "feed_url": "https://dorafilm.hu/en/feed/",
+      "website_url": "https://dorafilm.hu/en/blog/",
+      "description": "Dori Senas is a professional wedding and lifestyle photographer who loves to capture people's priceless moments through her lens. Read her blog to stay updated on her latest projects. Also discover tips, tricks and advice to elevate your photography skills.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5692512.jpg?t=1697635883"
+    },
+    {
+      "title": "Julian Gyula Zacsfalvi Blog",
+      "feed_url": "https://gyula.co/feed/",
+      "website_url": "https://gyula.co/blog/",
+      "description": "Julian Gyula Zacsfalvi is a Wedding Photographer based in Budapest / Hungary. He's passionate about traveling and documenting unique stories, and loves to share from people have one too to share and capture. Get some inspiration for capturing unique glimpses here.",
+      "followers": {
+        "facebook": 818,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5692510.jpg?t=1697635870"
+    },
+    {
+      "title": "Weigert Images Blog",
+      "feed_url": "https://www.weigertimages.com/journal/feed/",
+      "website_url": "https://www.weigertimages.com/journal/",
+      "description": "Explore, learn and be inspired with the captivating showcases of timeless weddings on the Weigert Images blog. Dive into a treasure trove of photography tips and tricks, empowering both budding and seasoned photographers to capture the magic of every moment.",
+      "followers": {
+        "facebook": 5000,
+        "instagram": 565
+      },
+      "image_url": "https://i1.feedspot.com/5692511.jpg?t=1697803634"
+    }
+  ]
+}

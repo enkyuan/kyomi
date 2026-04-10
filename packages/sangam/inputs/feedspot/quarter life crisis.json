@@ -1,0 +1,45 @@
+{
+  "category": "Quarter Life Crisis",
+  "source_url": "https://rss.feedspot.com/quarter_life_crisis_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Conversation \u00bb Quarter Life",
+      "feed_url": "https://theconversation.com/topics/quarter-life-117947/articles.atom",
+      "website_url": "https://theconversation.com/topics/quarter-life-117947",
+      "description": "Browse Quarter Life news, research and analysis from The Conversation. The Conversation is a collaboration between editors and academics to provide informed news analysis.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5421086.jpg?t=1657699541"
+    },
+    {
+      "title": "Quarter Life Academy Blog",
+      "feed_url": "https://quarterlifeacademy.com/feed/",
+      "website_url": "https://quarterlifeacademy.com/blog/",
+      "description": "Set yourself up for the rest of your life. Gain Clarity and Take Action in any area of your life. After a decade of helping young adults with their personal and professional development, we created the Quarter Life Framework to help you achieve sustainable growth in a dynamic world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5421089.jpg?t=1657701035"
+    },
+    {
+      "title": "All Groan Up Blog",
+      "feed_url": "https://allgroanup.com/feed/",
+      "website_url": "https://allgroanup.com/blog/",
+      "description": "Your twenties and thirties are hard and important. All Groan Up is a community dedicated to reminding each one of us that we're not alone. This Groan-Up life isn't simple or straight-forward and we need a safe, real, hilarious space to talk about it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3377934.jpg?t=1657700750"
+    },
+    {
+      "title": "Quarterlife Center Blog",
+      "feed_url": "https://quarterlifecenter.com/feed/",
+      "website_url": "https://quarterlifecenter.com/blog/",
+      "description": "The Quarterlife Center was founded by Dr. Christine Greer O'Connor in 2015 with headquarters in Washington, D.C. From my own quarterlife crisis, I was inspired to create the Quarterlife Center, to help empower young adults in their own journeys towards building the lives they want.",
+      "followers": {
+        "facebook": 154,
+        "twitter": 54,
+        "instagram": 978
+      },
+      "image_url": "https://i1.feedspot.com/5421092.jpg?t=1657704495"
+    }
+  ]
+}

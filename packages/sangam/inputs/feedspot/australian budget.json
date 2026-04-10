@@ -1,0 +1,41 @@
+{
+  "category": "Australian Budget",
+  "source_url": "https://rss.feedspot.com/australian_budget_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Thrifty Issue Blog",
+      "feed_url": "https://www.thethriftyissue.com.au/feed/",
+      "website_url": "https://www.thethriftyissue.com.au/blog/",
+      "description": "The Thrifty Issue, a beacon for Aussie mums, champions financial independence and control. Through savvy money management and resourceful tips, it empowers women to navigate life's financial terrain confidently. With a diverse team of Aussie mum writers, it offers a treasure trove of insights, experiences, recipes, and side gigs, fostering a community dedicated to making and saving more.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 692,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4912356.jpg?t=1621002760"
+    },
+    {
+      "title": "Frugal Frolicker",
+      "feed_url": "https://frugalfrolicker.com/feed/",
+      "website_url": "https://frugalfrolicker.com/",
+      "description": "Featuring travel adventures around the world, travel photography, budget travel tips, and travel guides. Frugal Frolicker is a travel blog by Lindsay Buckley.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1100,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4496288.jpg?t=1605264571"
+    },
+    {
+      "title": "Frugal and Thriving",
+      "feed_url": "https://www.frugalandthriving.com.au/feed/",
+      "website_url": "https://www.frugalandthriving.com.au/",
+      "description": "Here at Frugal and Thriving, I share what I've learned (and still learning!) on our frugal journey. I share information on how to budget your money, money saving tips, frugal recipes, simple and green living ideas.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/4926989.jpg?t=1621002766"
+    }
+  ]
+}

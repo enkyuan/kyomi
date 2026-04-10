@@ -1,0 +1,72 @@
+{
+  "category": "Zee News",
+  "source_url": "https://rss.feedspot.com/zee_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Zee News \u00bb India",
+      "feed_url": "https://zeenews.india.com/rss/india-national-news.xml",
+      "website_url": "https://zeenews.india.com/india",
+      "description": "India News, National News: Zee News brings latest news from India including breaking news, current India news live, political news, Indian sports news, and news headlines which gives you exclusive information about all that happening in India.",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 7000000
+      },
+      "image_url": "https://i1.feedspot.com/730390.jpg?t=1685964485"
+    },
+    {
+      "title": "Zee News \u00bb World",
+      "feed_url": "https://zeenews.india.com/rss/world-news.xml",
+      "website_url": "https://zeenews.india.com/world",
+      "description": "Get all latest breaking world news, international news, world news headlines and update at zee news. Stay connected to know more update about latest international news headlines, top world news",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 7000000
+      },
+      "image_url": "https://i1.feedspot.com/767447.jpg?t=1685964521"
+    },
+    {
+      "title": "Zee News \u00bb Business",
+      "feed_url": "https://zeenews.india.com/rss/business.xml",
+      "website_url": "https://zeenews.india.com/business",
+      "description": "Get latest business news today from Indian economy and stock market including share market news, live sensex today, Nifty, BSE, Forex, IPO, company profiles, financial advice, global economy along with global business news from around the world only on Zee News.",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 7000000
+      },
+      "image_url": "https://i1.feedspot.com/4123090.jpg?t=1685964551"
+    },
+    {
+      "title": "Zee News \u00bb Sports",
+      "feed_url": "https://zeenews.india.com/rss/sports-news.xml",
+      "website_url": "https://zeenews.india.com/sports",
+      "description": "Latest sports news at Zee News: Stay updated with the latest news from sports like football, cricket, tennis, golf, motor sports and others. See all the latest photos and videos of the recent sport events exclusively at Zee News.",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 7000000
+      },
+      "image_url": "https://i1.feedspot.com/767445.jpg?t=1685964564"
+    },
+    {
+      "title": "Zee News \u00bb Entertainment",
+      "feed_url": "https://zeenews.india.com/rss/entertainment-news.xml",
+      "website_url": "https://zeenews.india.com/entertainment",
+      "description": "Entertainment News: Get latest entertainment news online, Bollywood gossips, movie reviews, Hollywood news at Zee News. Stay connected to know more about Bollywood news, television, music, regional news",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 7000000
+      },
+      "image_url": "https://i1.feedspot.com/3409504.jpg?t=1685964578"
+    },
+    {
+      "title": "Zee News \u00bb Technology",
+      "feed_url": "https://zeenews.india.com/rss/technology-news.xml",
+      "website_url": "https://zeenews.india.com/technology",
+      "description": "Latest Technology News: Get all latest news on technology, tech news, technology headlines at Zee News. Stay connected to know more about latest tec news, top technology news, top IT news.",
+      "followers": {
+        "facebook": 24000000,
+        "twitter": 7000000
+      },
+      "image_url": "https://i1.feedspot.com/4554331.jpg?t=1685964593"
+    }
+  ]
+}

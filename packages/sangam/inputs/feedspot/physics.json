@@ -1,0 +1,657 @@
+{
+  "category": "Physics",
+  "source_url": "https://rss.feedspot.com/physics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Quantum Frontiers",
+      "feed_url": "https://quantumfrontiers.com/feed/",
+      "website_url": "https://quantumfrontiers.com/",
+      "description": "A blog by the Institute for Quantum Information and Matter @ Caltech",
+      "followers": {
+        "facebook": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4505481.jpg?t=1605784150"
+    },
+    {
+      "title": "APS Physics Magazine",
+      "feed_url": "http://feeds.aps.org/rss/recent/physics.xml",
+      "website_url": "https://physics.aps.org/",
+      "description": "Physics is a free, online magazine from the American Physical Society. The publication primarily reports on papers from the Physical Review journals, focusing on results that will change the course of research, inspire a new way of thinking, or spark curiosity. The stories behind these findings are written by experts, journalists, and our staff writers for the benefit of the physics community and beyond.",
+      "followers": {
+        "facebook": 250500,
+        "twitter": 247100
+      },
+      "image_url": "https://i1.feedspot.com/31736.jpg?t=1639831836"
+    },
+    {
+      "title": "MIT Physics",
+      "feed_url": "https://physics.mit.edu/feed/",
+      "website_url": "https://physics.mit.edu/news/",
+      "description": "The MIT Physics Department is one of the best places in the world for research and education in physics.",
+      "followers": {
+        "facebook": 42700,
+        "twitter": 26100
+      },
+      "image_url": "https://i1.feedspot.com/4505665.jpg?t=1605784054"
+    },
+    {
+      "title": "Berkeley News - Physics",
+      "feed_url": "https://news.berkeley.edu/topics/physics/feed/",
+      "website_url": "https://news.berkeley.edu/topics/physics/",
+      "description": "Physics News from the University of California, Berkeley. The Physics Department at UC Berkeley is consistently ranked one of the best in the world and is home to eight Nobel Laureates.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 3100,
+        "instagram": 375300
+      },
+      "image_url": "https://i1.feedspot.com/4505533.jpg?t=1605784077"
+    },
+    {
+      "title": "Not Even Wrong",
+      "feed_url": "https://www.math.columbia.edu/~woit/wordpress/?feed=rss2",
+      "website_url": "https://www.math.columbia.edu/~woit/wordpress/",
+      "description": "My name is Peter. I'm currently a Senior Lecturer in the Mathematics department at Columbia University, where I teach, do research, and am responsible for the department Computer system. At various times, I've also been our Calculus Director, coordinating Calculus teaching. My academic background includes undergraduate and master's degrees in physics from Harvard, a Ph.D. in particle theory from Princeton, and postdocs in physics (ITP Stony Brook) and mathematics (MSRI Berkeley).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2068942.jpg?t=1620191324"
+    },
+    {
+      "title": "Phys.org",
+      "feed_url": "https://phys.org/rss-feed/physics-news/",
+      "website_url": "https://phys.org/",
+      "description": "Phys.org internet news portal provides the latest news on science including: Physics, Nanotechnology, Life Sciences, Space Science, Earth Science, Environment, Health and Medicine.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/1077946.jpg?t=1617362927"
+    },
+    {
+      "title": "FY! Fluid Dynamics",
+      "feed_url": "https://fyfluiddynamics.com/feed/",
+      "website_url": "https://fyfluiddynamics.com/",
+      "description": "Celebrating the physics of all that flows. Find posts and updates on maps.",
+      "followers": {
+        "twitter": 12400,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/28710.jpg?t=1606375988"
+    },
+    {
+      "title": "Open Source Physics @ Singapore",
+      "feed_url": "https://weelookang.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://weelookang.blogspot.com/",
+      "description": "A blog about physics computer models made in easy java simulation authoring toolkit and open source physics tools by a Singapore teacher.",
+      "followers": {
+        "twitter": 663
+      },
+      "image_url": "https://i1.feedspot.com/4505480.jpg?t=1606375999"
+    },
+    {
+      "title": "Intermediate Physics for Medicine and Biology",
+      "feed_url": "http://hobbieroth.blogspot.com/feeds/posts/default",
+      "website_url": "http://hobbieroth.blogspot.com/",
+      "description": "I'm Brad. I am an emeritus professor of physics at Oakland University and coauthor of the textbook Intermediate Physics for Medicine and Biology. The purpose of this blog is specifically to support and promote my textbook, and in general to illustrate applications of physics to medicine and biology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2258638.jpg?t=1654337369"
+    },
+    {
+      "title": "Skulls in the Stars",
+      "feed_url": "https://skullsinthestars.com/feed/",
+      "website_url": "https://skullsinthestars.com/",
+      "description": "The intersection of physics, optics, history and pulp fiction. The author of Skulls in the Stars is an associate professor of physics, specializing in optical science, at UNC Charlotte. The blog covers topics in physics and optics, the history of science, classic pulp fantasy and horror fiction, and the surprising intersections between these areas.",
+      "followers": {
+        "twitter": 18000
+      },
+      "image_url": "https://i1.feedspot.com/4505497.jpg"
+    },
+    {
+      "title": "Nanoscale Views",
+      "feed_url": "http://nanoscale.blogspot.com/feeds/posts/default",
+      "website_url": "http://nanoscale.blogspot.com/",
+      "description": "My name is Douglas Natelson. I am a physics professor at Rice University. My group uses nanoscale tools to address open questions in condensed matter physics, the study of the remarkable emergent properties of materials.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/100884.jpg?t=1617362657"
+    },
+    {
+      "title": "Physics and Physicists",
+      "feed_url": "https://feeds.feedburner.com/blogspot/hNAhW",
+      "website_url": "http://physicsandphysicists.blogspot.com/",
+      "description": "ZapperZ's physics blog on the world of Physics and Physicists.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/357467.jpg?t=1605275457"
+    },
+    {
+      "title": "Antimatter",
+      "feed_url": "https://antimatter.ie/feed/",
+      "website_url": "https://antimatter.ie/",
+      "description": "Blog will be mainly concerned with the universe and its puzzles (see Categories)\u2026with occasional pieces on science and society, climate science, surfing, skiing and whatnot.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4763785.jpg?t=1605276197"
+    },
+    {
+      "title": "ThinkPhysics Blog",
+      "feed_url": "https://nustem.uk/feed/",
+      "website_url": "https://nustem.uk/blog/",
+      "description": "Physics is about exploring the world, and we think those explorations can be delightful, surprising and satisfying. We believe physics should be accessible to everyone, for study and pleasure, from early years through school to employment and beyond.",
+      "followers": {
+        "facebook": 134,
+        "twitter": 640
+      },
+      "image_url": "https://i1.feedspot.com/4505479.jpg?t=1605277401"
+    },
+    {
+      "title": "The Physics Detective",
+      "feed_url": "https://physicsdetective.com/feed/",
+      "website_url": "http://physicsdetective.com/",
+      "description": "The physics detective is a fundamental physics blog referring to historical and contemporary papers and hard scientific evidence to break the current impasse. It refers to physics and cosmology news, and contains articles like 'How gravity works', 'What charge is', 'How a magnet works', 'The nuclear force', 'The mystery of the missing antimatter', 'Dark matter', and 'There is no quantum entanglement'. As Bert Schroer said: 'Perhaps the past, if looked upon with care and hindsight, may teach us where we possibly took a wrong turn'.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/2196556/page/4917911/logo_1756807325.png"
+    },
+    {
+      "title": "Galileo Unbound Blog",
+      "feed_url": "https://galileo-unbound.blog/feed/",
+      "website_url": "https://galileo-unbound.blog/",
+      "description": "The Science of Life, the Universe and (Almost) Everything.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4959510.jpg?t=1605784675"
+    },
+    {
+      "title": "Interactions.org - Particle Physics News and Resources",
+      "feed_url": "https://www.interactions.org/index.rss",
+      "website_url": "https://www.interactions.org/news-center",
+      "description": "News from the world's particle physics laboratories.",
+      "followers": {
+        "twitter": 15500,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/1632240.jpg?t=1605275909"
+    },
+    {
+      "title": "Physics from the edge",
+      "feed_url": "https://physicsfromtheedge.blogspot.com/feeds/posts/default",
+      "website_url": "https://physicsfromtheedge.blogspot.com/",
+      "description": "Blog by Mike McCulloch. I chose the title Physics from the Edge because the theory of inertia I have suggested (MiHsC) assumes that local inertia is affected by the far-off Hubble-edge. I've written a book called Physics from the Edge",
+      "followers": {
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/3298167.jpg?t=1605275812"
+    },
+    {
+      "title": "Brian Jackson",
+      "feed_url": "http://www.astrojack.com/feed/",
+      "website_url": "http://www.astrojack.com/",
+      "description": "Assistant Professor of Physics at Boise State University",
+      "followers": {
+        "twitter": 999
+      },
+      "image_url": "https://i1.feedspot.com/4505517.jpg?t=1606376054"
+    },
+    {
+      "title": "Physics Us",
+      "feed_url": "https://physicsus.com/feed/",
+      "website_url": "https://physicsus.com/",
+      "description": "Physics Us is an initiative to reach people out there who are interested in physics and grow a community of like minded fellow physicists",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5152404.jpg?t=1616072205"
+    },
+    {
+      "title": "Physics-Based Animation",
+      "feed_url": "https://www.physicsbasedanimation.com/feed/",
+      "website_url": "https://www.physicsbasedanimation.com/",
+      "description": "This site is dedicated to accumulating and highlighting research in the exciting field of physics-based animation for computer graphics. In general, the topics that I usually include are rigid bodies, deformable bodies, cloth, articulated bodies, collision detection, meshing, shells, hair, liquids, gases/smoke, explosions, fracture, and the list goes on.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4340902.jpg?t=1637918532"
+    },
+    {
+      "title": "Taking up Spacetime",
+      "feed_url": "https://takingupspacetime.wordpress.com/feed/",
+      "website_url": "https://takingupspacetime.wordpress.com/",
+      "description": "Where Philosophers of Physics Meet. Run by Christian Wuthrich.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/623883.jpg"
+    },
+    {
+      "title": "Lincoln School Maths & Physics Blog",
+      "feed_url": "https://lincolnmathsphys.wordpress.com/feed/",
+      "website_url": "https://lincolnmathsphys.wordpress.com/category/physics/",
+      "description": "Lincoln School of Mathematics & Physics Blog. The School offers undergraduate and postgraduate degrees in a range of fundamental and applied mathematics and physics.",
+      "followers": {
+        "twitter": 833
+      },
+      "image_url": "https://i1.feedspot.com/4470176.jpg?t=1608213101"
+    },
+    {
+      "title": "Hogg's Research",
+      "feed_url": "https://hoggresearch.blogspot.com/feeds/posts/default",
+      "website_url": "https://hoggresearch.blogspot.com/",
+      "description": "David W. Hogg is a Professor of Physics and Data Science in the Center for Cosmology and Particle Physics in the Department of Physics at New York University. He is also Group Leader for the Astronomical Data Group in the Center for Computational Astrophysics of the Flatiron Institute, and he has an affiliation with the Max-Planck-Institut f\u00fcr Astronomie. His main research interests are in observational cosmology, especially approaches that use galaxies to infer the physical properties of the Universe.",
+      "followers": {
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5264083.jpg?t=1617362073"
+    },
+    {
+      "title": "The Photonics Spotlight Blog",
+      "feed_url": "https://www.rp-photonics.com/spotlight.rss",
+      "website_url": "https://www.rp-photonics.com/spotlight.html",
+      "description": "RP Photonics Consulting GmbH provides technical consultancy and simulation & design software on a wide range of topics in photonics, in particular concerning lasers, laser amplifiers, nonlinear optics and fiber optics. The Photonics Spotlight presents interesting materials and thoughts in the area of photonics.",
+      "followers": {
+        "facebook": 326
+      },
+      "image_url": "https://i1.feedspot.com/4735105.jpg?t=1617362492"
+    },
+    {
+      "title": "UMD Physics - Research News",
+      "feed_url": "https://umdphysics.umd.edu/about-us/news/research-news.feed?type=rss",
+      "website_url": "https://umdphysics.umd.edu/about-us/news/research-news.html",
+      "description": "Research news from The University of Maryland Physics Department",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4505670.jpg?t=1605784084"
+    },
+    {
+      "title": "Physics and Physicists",
+      "feed_url": "https://physicsandphysicists.blogspot.com/feeds/posts/default",
+      "website_url": "https://physicsandphysicists.blogspot.com/",
+      "description": "ZapperZ's physics blog on the world of Physics and Physicists.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663933.jpg?t=1756229498"
+    },
+    {
+      "title": "Life and Physics",
+      "feed_url": "https://lifeandphysics.com/feed/",
+      "website_url": "https://lifeandphysics.com/",
+      "description": "Life & Physics is a thoughtful physics blog by Jon Butterworth that bridges particle physics insights\u2014like LHC updates, scientific publishing debates, and ATLAS findings\u2014with personal reflections and lighthearted commentary.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1424915.jpg?t=1756232323"
+    },
+    {
+      "title": "Of Particular Significance",
+      "feed_url": "https://profmattstrassler.com/feed/",
+      "website_url": "https://profmattstrassler.com/blog/",
+      "description": "Conversations About Science with Theoretical Physicist Matt Strassler",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/31727.jpeg?t=1756225709"
+    },
+    {
+      "title": "Nature Physics",
+      "feed_url": "https://www.nature.com/nphys.rss",
+      "website_url": "https://www.nature.com/nphys/",
+      "description": "Nature Physics offers a unique mix of news and reviews alongside top-quality research papers. Published monthly, in print and online, the journal reflects the entire spectrum of physics, pure and applied.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5067915.jpg?t=1756229583"
+    },
+    {
+      "title": "Emory Physics News",
+      "feed_url": "https://emoryphysicsnews.com/feed/",
+      "website_url": "https://emoryphysicsnews.com/",
+      "description": "Emory Physics News\u2014The Horizon Blog showcases Emory University's physics breakthroughs, from AI-driven discoveries in dusty plasma and exotic quantum phases to biophysical insights and storytelling on how we remember narratives\u2014blended with academic context and researcher profiles.",
+      "followers": {
+        "twitter": 196
+      },
+      "image_url": "https://i1.feedspot.com/8663932.jpg?t=1756232362"
+    },
+    {
+      "title": "Wonders of Physics",
+      "feed_url": "https://www.wondersofphysics.com/feeds/posts/default",
+      "website_url": "https://www.wondersofphysics.com/search/label/History#google_vignette/",
+      "description": "A blog about physics, astronomy and science history. Purpose: To promote physics and encourage scientific temper.",
+      "followers": {
+        "facebook": 266700,
+        "twitter": 384
+      },
+      "image_url": "https://i1.feedspot.com/8663929.jpg?t=1756225756"
+    },
+    {
+      "title": "Doc V Physics",
+      "feed_url": "http://docvphysics.blogspot.com/feeds/posts/default",
+      "website_url": "http://docvphysics.blogspot.com/",
+      "description": "Doc V Physics is a lively science blog by Mark Vondracek where physics, education, and everyday curiosity converge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663930.jpg?t=1756355229"
+    },
+    {
+      "title": "The Journal of Young Physicists",
+      "feed_url": "https://www.journalofyoungphysicists.org/blog-feed.xml",
+      "website_url": "https://www.journalofyoungphysicists.org/",
+      "description": "The Journal of Young Physicists is an online, non-profit physics blog journal where young students can publish their physics articles after a review process. You can also choose to join our team as a regular contributor.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663928.jpg?t=1756229656"
+    },
+    {
+      "title": "Pivot Physics",
+      "feed_url": "https://pivotphysics.com/feed/",
+      "website_url": "https://pivotphysics.com/blog/",
+      "description": "Pivot Physics shares practical guides and educational insights for physics students.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663934.jpg?t=1756232434"
+    },
+    {
+      "title": "Ace Physics",
+      "feed_url": "https://www.ace-physics.com/blog-feed.xml",
+      "website_url": "https://www.ace-physics.com/physics-blog/",
+      "description": "ACE Physics's blog provides concise, exam-focused physics support for IGCSE, O-Level, A-Level, AP, and IB students\u2014featuring detailed solutions for recent exam questions, essential equation guides, and practical strategies for tackling Internal Assessments across global curricula.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663931.jpg?t=1756232468"
+    },
+    {
+      "title": "Kungfu Physics",
+      "feed_url": "https://kungfuphysics.com/feed/",
+      "website_url": "https://kungfuphysics.com/blog/",
+      "description": "Kungfu Physics Tuition is a renowned physics tuition center that offers the best teaching and learning experience for students. With all classes taught by Ex-Raffles JC lecturer Mr Gabriel Tan, one can be assured of the quality of teaching in helping students achieve their full potential in physics.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 250
+      },
+      "image_url": "https://i1.feedspot.com/8663939.jpg?t=1756232541"
+    },
+    {
+      "title": "4 Gravitons",
+      "feed_url": "https://4gravitons.com/feed/",
+      "website_url": "https://4gravitons.com/",
+      "description": "Stories about physics from someone who's been there.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3974650.jpg?t=1756232532"
+    },
+    {
+      "title": "ScienceDaily \u00bb Physics",
+      "feed_url": "https://www.sciencedaily.com/rss/matter_energy/physics.xml",
+      "website_url": "https://www.sciencedaily.com/news/matter_energy/physics/",
+      "description": "Physics News and Research. Why is the universe more partial to matter than antimatter? How could fuel cells be more efficient? Read current science articles on physics.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/439109.jpg?t=1756225752"
+    },
+    {
+      "title": "SciTechDaily \u00bb Physics",
+      "feed_url": "https://scitechdaily.com/feed/",
+      "website_url": "https://scitechdaily.com/news/physics/",
+      "description": "SciTechDaily offers the best intelligent, informed science and technology coverage and analysis you can find on a daily basis, sourcing a huge range of great writers and excellent research institutes. It was founded in 1998, with the idea of linking to the most thought-provoking, well-researched online items in the world of science and technology.",
+      "followers": {
+        "facebook": 167700,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4478228.jpg?t=1756225754"
+    },
+    {
+      "title": "sciencenews.org \u00bb Physics",
+      "feed_url": "https://www.sciencenews.org/topic/physics/feed",
+      "website_url": "https://www.sciencenews.org/topic/physics/",
+      "description": "The Physics page features the latest news in materials science, quantum physics, particle physics, and more.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 5300000,
+        "instagram": 102400
+      },
+      "image_url": "https://i1.feedspot.com/8523781.jpg?t=1753055608"
+    },
+    {
+      "title": "Sci.News \u00bb Physics News",
+      "feed_url": "https://www.sci.news/news/physics/feed",
+      "website_url": "https://www.sci.news/news/physics/",
+      "description": "Physics news from across the world provided by Sci.News, an independent source for the latest news on science.",
+      "followers": {
+        "facebook": 41000,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/8663924.jpg?t=1756225753"
+    },
+    {
+      "title": "Science News Explores \u00bb Physics",
+      "feed_url": "https://www.snexplores.org/topic/physics/feed",
+      "website_url": "https://www.snexplores.org/topic/physics/",
+      "description": "Science News for Students is a free, award-winning online publication dedicated to providing age-appropriate science news to learners, parents and educators. The publication, as well as Science News magazine, are published by the Society for Science & the Public, a nonprofit membership organization dedicated to public engagement in scientific research and education.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 13900,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5229274.jpg?t=1608378787"
+    },
+    {
+      "title": "The Conversation \u00bb Physics",
+      "feed_url": "https://theconversation.com/topics/physics-154/articles.atom",
+      "website_url": "https://theconversation.com/topics/physics-154/",
+      "description": "Browse Physics news, research and analysis from The Conversation",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/8663925.jpg?t=1756225755"
+    },
+    {
+      "title": "Quantum Zeitgeist \u00bb Physics",
+      "feed_url": "https://quantumzeitgeist.com/category/physics/feed/",
+      "website_url": "https://quantumzeitgeist.com/category/physics/",
+      "description": "Quantum News Quantum Computing News Quantum Insight",
+      "followers": {
+        "twitter": 165
+      },
+      "image_url": "https://quantumzeitgeist.com/wp-content/uploads/QuantumZ_1_ico-1.ico?t=1756225671"
+    },
+    {
+      "title": "VISMAYA \u00bb Physics",
+      "feed_url": "https://historyofscience.in/category/physics/feed/",
+      "website_url": "https://historyofscience.in/category/physics/",
+      "description": "Posts about physics written by G.V. Pavan Kumar.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663923.jpg?t=1756355357"
+    },
+    {
+      "title": "Physics | The Guardian",
+      "feed_url": "https://www.theguardian.com/science/physics/rss",
+      "website_url": "https://www.theguardian.com/science/physics",
+      "description": "Latest Physics news and features from theguardian.com, the world's leading liberal voice",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4505501.jpg?t=1605784050"
+    },
+    {
+      "title": "Physics and Astronomy outreach",
+      "feed_url": "https://blogs.cardiff.ac.uk/physicsoutreach/feed/",
+      "website_url": "https://blogs.cardiff.ac.uk/physicsoutreach/",
+      "description": "Covers astronomy, pythagorean astronomy, physics and more. We have a large outreach programme made possible by members of the School volunteering their own time. As part of this programme, we offer a range of talks on cutting edge scientific research from academics in the School.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1800,
+        "instagram": 96800
+      },
+      "image_url": "https://i1.feedspot.com/4505484.jpg?t=1605784120"
+    },
+    {
+      "title": "The Blog of Phyz",
+      "feed_url": "https://phyzblog.blogspot.com/feeds/posts/default",
+      "website_url": "https://phyzblog.blogspot.com/",
+      "description": "High school physics education issues as seen by one California teacher: From content standards to critical thinking.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/660109.jpg?t=1612950963"
+    },
+    {
+      "title": "R\u00e9sonaances",
+      "feed_url": "https://resonaances.blogspot.com/feeds/posts/default",
+      "website_url": "https://resonaances.blogspot.com/",
+      "description": "R\u00e9sonaances is a particle physics blog from Paris. It's about the latest news and gossips in particle physics and astrophysics. The main goal is to make you laugh; if it makes you think too, that's entirely on your own responsibility.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5264086.jpg?t=1617361034"
+    },
+    {
+      "title": "Quantum Physics",
+      "feed_url": "https://mysteriousquantumphysics.tumblr.com/rss",
+      "website_url": "https://mysteriousquantumphysics.tumblr.com/",
+      "description": "A blog dedicated to physics; especially quantum physics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4505744.jpg"
+    },
+    {
+      "title": "Dark matter",
+      "feed_url": "https://yesrpcuniverse.tumblr.com/rss",
+      "website_url": "https://yesrpcuniverse.tumblr.com/",
+      "description": "Theoretical response on the dark matter.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4505751.jpg?t=1551946655"
+    },
+    {
+      "title": "Unifying Quantum and Relativistic Theories",
+      "feed_url": "https://www.theimagineershome.com/blog/feed/",
+      "website_url": "https://www.theimagineershome.com/blog/",
+      "description": "The purpose of this blog is to show how changing ones perspective on the physical structure of the universe will allow one to unite the abstract concepts of Quantum Mechanics with the observable realities of both Einstein's Special and General Theories of Relativity",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161851.jpg?t=1608213830"
+    },
+    {
+      "title": "PhyLab-Educate",
+      "feed_url": "http://feeds.feedburner.com/blogspot/GHeUI",
+      "website_url": "http://phy-lab.blogspot.com/",
+      "description": "Welcome to PhyLAB (Learn, Analyse & Build)... the process of learning and teaching Physics. In this blog, I welcome each and every student who is appearing for their Physics-ISC examination. I will try to upload questions, movies and other materials that I have been using as a teaching aid.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5049313.jpg?t=1606376047"
+    },
+    {
+      "title": "Universe \u00e0 la Carte",
+      "feed_url": "https://universealacarte.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://universealacarte.blogspot.com/",
+      "description": "Hi, my name is Campbell. I'm a PhD student studying theoretical physics at the University of Cambridge. I'm not an expert on all topics covered in this blog but I think sometimes curiosity trumps expertise. I hope you find the content informative and maybe even a little entertaining!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5192362.jpg?t=1605277916"
+    },
+    {
+      "title": "Physics Materials (Notes and Videos)",
+      "feed_url": "https://emaanchaudhary777.blogspot.com/feeds/posts/default",
+      "website_url": "https://emaanchaudhary777.blogspot.com/",
+      "description": "Physics Materials are available like notes and videos on such topics Vector and Equilibrium , Force and motion, Mechanics, spectroscopy etc",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149423.jpg?t=1606376072"
+    },
+    {
+      "title": "Physics for Bunnies",
+      "feed_url": "https://physicsforbunnies.tumblr.com/rss",
+      "website_url": "https://physicsforbunnies.tumblr.com/",
+      "description": "Particle Physics, Astrophysics, Quantum Mechanics, Quantum Information, Cosmology, Physics of Matter & Famous Physicists.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4505740.jpg?t=1551946664"
+    },
+    {
+      "title": "JMU Physics & Astro Blog",
+      "feed_url": "http://jmuphysics.blogspot.com/feeds/posts/default",
+      "website_url": "http://jmuphysics.blogspot.com/",
+      "description": "James Madison University Physics and Astronomy Blog. Our Mission: The preparation of scientifically enlightened citizens. Science literacy is promoted through the integration of classroom & experiential learning.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 737
+      },
+      "image_url": "https://i1.feedspot.com/4426648.jpg?t=1606376086"
+    },
+    {
+      "title": "Concept First Blog",
+      "feed_url": "https://conceptfirst.com.sg/feed/",
+      "website_url": "https://conceptfirst.com.sg/blog/",
+      "description": "Covers articles related to physics, physicists, useful tips to improve grades and tips to memorize physics. Concept First guides students in achieving concept mastery and hone their problem solving skills to excel in their exams!",
+      "followers": {
+        "facebook": 542
+      },
+      "image_url": "https://i1.feedspot.com/5342092.jpg?t=1636617361"
+    },
+    {
+      "title": "Sean Carroll Blog",
+      "feed_url": "https://www.preposterousuniverse.com/blog/feed/",
+      "website_url": "https://www.preposterousuniverse.com/blog/",
+      "description": "Hi. I'm Sean Carroll. I'm a physicist at Caltech who occasionally wears other hats. This blog is part of my larger website. With my physicist hat on, I'm a theorist who thinks about the fundamental laws of nature and these days about philosophy and the foundations of physics. Some of my work has been on violations of fundamental symmetries, the physics of dark energy, modifications of general relativity, and the arrow of time. Recently I've been focusing on issues at the foundations of cosmology, statistical mechanics, quantum mechanics, and complexity.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5264089.jpg?t=1617360943"
+    },
+    {
+      "title": "Physics.Teacher.Momma.",
+      "feed_url": "https://physicsteachermomma.com/feed/",
+      "website_url": "https://physicsteachermomma.com/",
+      "description": "Hi, I'm Marianna Ruggerio. I've taught physics since 2009. I'm incredibly passionate about increasing diversity and equity in physics, as well as mentorship of preservice and novice teachers. Here you will find me sharing my classroom ideas, reflections and making Physics Education Research tangible for fellow high school teachers.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5415017.jpg?t=1756225758"
+    },
+    {
+      "title": "Explore Physics Realm",
+      "feed_url": "https://physicsrealm.com/feed/",
+      "website_url": "https://physicsrealm.com/",
+      "description": "Discover captivating physics insights, articles, and resources for enthusiasts, students, and professionals at Physics Realm.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663935.jpg"
+    },
+    {
+      "title": "York Medical Physics",
+      "feed_url": "https://www.yorkphysics.com/blog-feed.xml",
+      "website_url": "https://www.yorkphysics.com/blog/",
+      "description": "Stay informed with the York Medical Physics blog, your go-to source for insights on nuclear radiation safety, compliance, equipment calibration, and best practices for your facility. Explore expert articles, industry news, and practical tips to ensure safety and compliance in every aspect of radiation use.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663927.jpg?t=1756232520"
+    },
+    {
+      "title": "Chip Physics Blog",
+      "feed_url": "https://www.chipphysics.com/feed/",
+      "website_url": "https://www.chipphysics.com/blog/",
+      "description": "A site to explore the concepts behind Structured Energy Chip Physics and other interesting concepts in Math and Physics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663937.jpg?t=1756355274"
+    },
+    {
+      "title": "Physics World",
+      "feed_url": "https://physicsworld.com/feed/",
+      "website_url": "https://ww2.aip.org/library/ex-libris-universum",
+      "description": "News, views and information for the global physics community from Institute of Physics Publishing. It contains features from the world's leading physicists and science writers, comprehensive news and analysis, incisive opinion pieces, sound careers advice, reviews of the best new books and multimedia.",
+      "followers": {
+        "facebook": 587700,
+        "twitter": 420700
+      },
+      "image_url": "https://i1.feedspot.com/4859839.jpg?t=1605784124"
+    },
+    {
+      "title": "Ex Libris Universum",
+      "feed_url": "https://ww2.aip.org/library/ex-libris-universum.rss",
+      "website_url": "https://ww2.aip.org/library/ex-libris-universum",
+      "description": "A federation of physical science societies, the American Institute of Physics advances, promotes, and serves the physical sciences for the benefit of humanity. A blog chronicling AIP's Niels Bohr Library & Archives' history of physics collections.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5174870.jpg?t=1605784131"
+    },
+    {
+      "title": "Physics FAIL",
+      "feed_url": "https://physicsfail.tumblr.com/rss",
+      "website_url": "https://physicsfail.tumblr.com/",
+      "description": "A collection of some of the gems my AP Physics students have said or written.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4505741.jpg"
+    },
+    {
+      "title": "iPLEX - The Institute for Planets and Exoplanets",
+      "feed_url": "https://uclaiplex.tumblr.com/rss",
+      "website_url": "https://uclaiplex.tumblr.com/",
+      "description": "iPLEX is interested in sharing the fascinating world of planetary science with local and national communities and schools. Our education and public outreach program includes private and public events during which UCLA scientists and students demonstrate...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4505747.jpg"
+    },
+    {
+      "title": "Cocktail Party Physics",
+      "feed_url": "https://twistedphysics.typepad.com/cocktail_party_physics/atom.xml",
+      "website_url": "https://twistedphysics.typepad.com/",
+      "description": "Cocktail Party Physics is a science-and-culture blog that aims to create a salon-like virtual space highlighting the latest news and ideas in science -- with a twist. Blog by Jennifer Ouellette.",
+      "followers": {
+        "twitter": 39900
+      },
+      "image_url": "https://i1.feedspot.com/343755.jpg?t=1606376170"
+    }
+  ]
+}

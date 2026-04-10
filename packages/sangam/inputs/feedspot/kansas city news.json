@@ -1,0 +1,122 @@
+{
+  "category": "Kansas City News",
+  "source_url": "https://rss.feedspot.com/kansas_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KMBC 9",
+      "feed_url": "https://www.kmbc.com/topstories-rss",
+      "website_url": "https://www.kmbc.com/",
+      "description": "Keep up with Kansas City's Breaking News and Weather from Channel 9. Get the latest Kansas City news, sports, and weather from KMBC. With the best local coverage and the top Missouri news stories, you can stay in the know.",
+      "followers": {
+        "facebook": 585300,
+        "twitter": 191700
+      },
+      "image_url": "https://i1.feedspot.com/5133467.jpg?t=1669276673"
+    },
+    {
+      "title": "FOX4 News Kansas City",
+      "feed_url": "https://fox4kc.com/feed/",
+      "website_url": "https://fox4kc.com/",
+      "description": "Keep up with News, weather, and interesting stories from Kansas City's FOX4 News. WDAF-TV, virtual channel 4, is a FOX-affiliated television station licensed to Kansas City, Missouri, United States, and serving the Kansas City metropolitan area.",
+      "followers": {
+        "facebook": 720300,
+        "twitter": 231300,
+        "instagram": 104500
+      },
+      "image_url": "https://i1.feedspot.com/5133469.jpg?t=1757591449"
+    },
+    {
+      "title": "KSN-TV",
+      "feed_url": "https://www.ksn.com/feed/",
+      "website_url": "https://www.ksn.com/",
+      "description": "KSN-TV is a television station that serves the Wichita, Kansas market. It was founded in 1955 by the Kansas State Network. The station aims to provide comprehensive news coverage, sports, and weather information to its viewers. KSN News gives up to date information, latest news, sports, community, and weather updates.",
+      "followers": {
+        "facebook": 190300,
+        "twitter": 79100,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5131148.jpg?t=1667884288"
+    },
+    {
+      "title": "FlatlandKC",
+      "feed_url": "https://flatlandkc.org/feed/",
+      "website_url": "https://flatlandkc.org/all-stories/",
+      "description": "Flatland is Kansas City PBS' Nonprofit Journalism Source. Flatland shares digital-first series and stories that give you the best of people & places, eats & drinks, news & issues, arts & culture, and more. We're Kansas City PBS' destination for local and regional storytelling.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 9600,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5462150.jpg?t=1667377655"
+    },
+    {
+      "title": "The Pitch Kansas City",
+      "feed_url": "https://www.thepitchkc.com/feed/",
+      "website_url": "https://www.thepitchkc.com/",
+      "description": "The Pitch is Kansas City's source for progressive, independent, street-level coverage of news, arts, music, and culture. Founded in 1980 in the basement of a Westport record shop, we are your filter for alternative Kansas City news.",
+      "followers": {
+        "facebook": 70600,
+        "twitter": 45000,
+        "instagram": 45300
+      },
+      "image_url": "https://i1.feedspot.com/5462149.jpg?t=1667377643"
+    },
+    {
+      "title": "Kansas City Business Journal",
+      "feed_url": "http://feeds.bizjournals.com/bizj_kansascity",
+      "website_url": "https://www.bizjournals.com/kansascity/",
+      "description": "The Business Journals features local business news from 43 different cities across the nation. We also provide tools to help businesses grow, network and hire.",
+      "followers": {
+        "facebook": 42000,
+        "twitter": 44900
+      },
+      "image_url": "https://i1.feedspot.com/1068592.jpg?t=1669276747"
+    },
+    {
+      "title": "The Kansas City Star",
+      "feed_url": "https://feeds.mcclatchy.com/kansascity/stories",
+      "website_url": "https://www.kctv5.com/",
+      "description": "Follow the Kansas City Star for the latest news, opinion columns, politics, business, sports, videos and community events.",
+      "followers": {
+        "facebook": 258600,
+        "twitter": 304500
+      },
+      "image_url": "https://i1.feedspot.com/4898395.jpg?t=1669276934"
+    },
+    {
+      "title": "KCTV 5",
+      "feed_url": "https://www.kctv5.com/",
+      "website_url": "https://www.kctv5.com/",
+      "description": "KCTV5 News features breaking news, stories, weather and much more.",
+      "followers": {
+        "facebook": 671300,
+        "twitter": 187800,
+        "instagram": 51200
+      },
+      "image_url": "https://i1.feedspot.com/5133466.jpg?t=1669276905"
+    },
+    {
+      "title": "Flatland",
+      "feed_url": "https://cityscenekc.com/feed/",
+      "website_url": "https://flatlandkc.org/news-issues/",
+      "description": "We are your community news source for all things Downtown Kansas City",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4898491.jpg?t=1633007363"
+    },
+    {
+      "title": "The Beacon",
+      "feed_url": "https://thebeacon.media/feed/",
+      "website_url": "https://thebeaconnews.org/",
+      "description": "The Kansas City Beacon is a local, nonprofit digital news organization that reports Kansas City news to Kansas and Missouri readers. Beacon stories are revelatory, contextual, data-driven and solutions-driven. Our reporting centers around issues in health care, education, economics, environment and civic engagement.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 2800,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5462148.jpg?t=1667377629"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "category": "New England Education & Career",
+  "source_url": "https://rss.feedspot.com/new_england_education_and_career_rss_feeds",
+  "feeds": [
+    {
+      "title": "NEIT Blog",
+      "feed_url": "https://www.neit.edu/feed",
+      "website_url": "https://www.neit.edu/blog",
+      "description": "Visit the NEIT Blog for informative, illuminating, and well-researched content on several education and career-related topics. Read highlighted News articles and other updates. Located in East Greenwich, New England Tech is a private, world-class technical university committed to an emphasis on hands-on education, and professional skill building.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 3500,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5550198.jpg?t=1682424107"
+    },
+    {
+      "title": "Tufts University Blog",
+      "feed_url": "https://careers.tufts.edu/feed/",
+      "website_url": "https://careers.tufts.edu/blog/",
+      "description": "Read the latest news and opportunities from Tufts University Career Center Blog. These articles provide accurate, balanced expertise in the Recruitment process, Internship applications and many more Career topics. The Tufts University Career Center is dedicated to shaping the professional, academic, and personal development of Tufts students and alumni.",
+      "followers": {
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5550199.jpg?t=1682424136"
+    },
+    {
+      "title": "NEPM Education Blog",
+      "feed_url": "https://education.nepm.org/feed/",
+      "website_url": "https://education.nepm.org/",
+      "description": "NEPM's Blog offers Education & PBS Learning Media Resources for Western New England. Find History articles, Webinar links, and much more. NEPM, public media for western New England, is committed to providing quality educational content and experiences for all adults and children in the region.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5550200.jpg?t=1682424111"
+    }
+  ]
+}

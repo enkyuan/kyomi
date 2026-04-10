@@ -1,0 +1,70 @@
+{
+  "category": "Soccer Mom",
+  "source_url": "https://rss.feedspot.com/soccer_mom_rss_feeds",
+  "feeds": [
+    {
+      "title": "A Soccer Mom's Book Blog",
+      "feed_url": "http://www.asoccermomsbookblog.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.asoccermomsbookblog.com/",
+      "description": "A Soccer Mom's Book Blog by Charlotte Lynn, a soccer mom shares the books that she has read and reviewed.",
+      "followers": {
+        "facebook": 867,
+        "twitter": 666
+      },
+      "image_url": "https://i1.feedspot.com/4976672.jpg?t=1622012136"
+    },
+    {
+      "title": "Cristeen Olley",
+      "feed_url": "https://cristeenolley.com/feed/",
+      "website_url": "https://cristeenolley.com/",
+      "description": "Life+STYLE",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7318906.jpg?t=1717179497"
+    },
+    {
+      "title": "The Soccer Mom Blog",
+      "feed_url": "https://thesoccermomblog.com/feed/",
+      "website_url": "https://thesoccermomblog.com/",
+      "description": "Hi, my name is Stacey - mom of 2, positive thinker & coffee drinker! I created this site to be a positive resource for moms and families. Follow me for fun, DO-able ideas, and inspiration for the modern wife and mama and know more about parenting & positive lifestyle for moms.",
+      "followers": {
+        "facebook": 550300,
+        "twitter": 16800,
+        "instagram": 109900
+      },
+      "image_url": "https://i1.feedspot.com/4387660.jpg?t=1598446407"
+    },
+    {
+      "title": "Soccer Mom Life",
+      "feed_url": "https://feeds.feedburner.com/soccermomlife",
+      "website_url": "https://www.soccermomlife.com/",
+      "description": "Author April Ockerman is a Mom, Wife, Blogger, Pre-School Teacher, Traveler, Car Lover. Follow Soccer Mom Life blog to get insights and information about travel, cars, kids, and life as a soccer mom.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4976527.jpg?t=1622012142"
+    },
+    {
+      "title": "The So Cal Soccer Mom",
+      "feed_url": "https://socalsoccermom.com/feed/",
+      "website_url": "https://socalsoccermom.com/",
+      "description": "The So Cal Soccer Mom by Lisa is a mom of two teen girls, navigating through life and the Southern California competitive girls club soccer scene. Follow this blog to get serious soccer posts sprinkled in with soccer mom fashion, tips and a peek into the crazy life.",
+      "followers": {
+        "facebook": 121,
+        "twitter": 296
+      },
+      "image_url": "https://i1.feedspot.com/4976526.jpg?t=1622012155"
+    },
+    {
+      "title": "The Busysoccermom Blog",
+      "feed_url": "https://busysoccermom.com/busysoccermom-blog/f.atom",
+      "website_url": "https://busysoccermom.com/busysoccermom-blog",
+      "description": "TheBusysoccermom",
+      "followers": {
+        "facebook": 109,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/7318907.jpg"
+    }
+  ]
+}

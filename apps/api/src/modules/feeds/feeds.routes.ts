@@ -1,6 +1,7 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { publishJob } from "@adapters/queue/publish-job";
+import { enforceRateLimitForContext } from "@adapters/rate-limit/rate-limit.plugin";
 import { getRedis } from "@adapters/redis";
 import { AppError } from "@shared/errors/app-error";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
@@ -22,17 +23,20 @@ import {
 } from "./feeds.service";
 import * as dto from "./feeds.dto";
 
+const createFeedRateLimit = {
+  name: "feeds.create_by_url",
+  max: 20,
+  windowMs: 10 * 60_000,
+} as const;
+
 export function registerFeedRoutes(app: Elysia) {
   return app
     .post(
       "/feeds",
       async (context) => {
-        const { body, db, logger, set, userId } = v1HandlerContext(context);
-        const url =
-          typeof body === "object" && body !== null && "url" in body
-            ? String((body as { url: unknown }).url).trim()
-            : "";
-        const result = await createOrSubscribeToFeed(db, userId, url);
+        const { body, db, logger, set, userId } = v1HandlerContext<{ url: string }>(context);
+        await enforceRateLimitForContext(context, userId, createFeedRateLimit);
+        const result = await createOrSubscribeToFeed(db, userId, body.url.trim());
         set.status = result.newSubscription ? 201 : 200;
         logger.info("feeds.subscribe.by_url", {
           userId,
@@ -74,15 +78,8 @@ export function registerFeedRoutes(app: Elysia) {
     .delete(
       "/feeds",
       async (context) => {
-        const { body, db, logger, userId } = v1HandlerContext(context);
-        const feedIds =
-          typeof body === "object" &&
-          body !== null &&
-          "feedIds" in body &&
-          Array.isArray((body as { feedIds: unknown }).feedIds)
-            ? (body as { feedIds: string[] }).feedIds
-            : [];
-        const result = await bulkUnsubscribeFromFeeds(db, userId, feedIds);
+        const { body, db, logger, userId } = v1HandlerContext<{ feedIds: string[] }>(context);
+        const result = await bulkUnsubscribeFromFeeds(db, userId, body.feedIds);
         logger.info("feeds.unsubscribe.bulk", { userId, removedCount: result.removedCount });
         return result;
       },
@@ -96,15 +93,14 @@ export function registerFeedRoutes(app: Elysia) {
     .patch(
       "/feeds/folder",
       async (context) => {
-        const { body, db, logger, userId } = v1HandlerContext(context);
-        const raw =
-          typeof body === "object" && body !== null ? (body as Record<string, unknown>) : {};
-        const feedIds = Array.isArray(raw.feedIds) ? (raw.feedIds as string[]) : [];
-        const folderId = typeof raw.folderId === "string" ? raw.folderId : "";
-        const result = await bulkMoveFeedsToFolder(db, userId, feedIds, folderId);
+        const { body, db, logger, userId } = v1HandlerContext<{
+          feedIds: string[];
+          folderId: string;
+        }>(context);
+        const result = await bulkMoveFeedsToFolder(db, userId, body.feedIds, body.folderId);
         logger.info("feeds.folder.bulk_move", {
           userId,
-          folderId,
+          folderId: body.folderId,
           updatedCount: result.updatedCount,
         });
         return result;
@@ -151,12 +147,12 @@ export function registerFeedRoutes(app: Elysia) {
     .put(
       "/feeds/:feedId",
       async (context) => {
-        const { body, db, logger, params, userId } = v1HandlerContext(context);
-        const patch =
-          typeof body === "object" && body !== null
-            ? (body as { customTitle?: string | null })
-            : {};
-        const result = await updateFeedSubscriptionSettings(db, userId, params.feedId, patch);
+        const { body, db, logger, params, userId } = v1HandlerContext<
+          { customTitle?: string | null },
+          Record<string, unknown>,
+          { feedId: string }
+        >(context);
+        const result = await updateFeedSubscriptionSettings(db, userId, params.feedId, body);
         logger.info("feeds.subscription.updated", { userId, feedId: params.feedId });
         return result;
       },
@@ -201,11 +197,13 @@ export function registerFeedRoutes(app: Elysia) {
     .put(
       "/feeds/:feedId/admin",
       async (context) => {
-        const { body, db, logger, params, userId } = v1HandlerContext(context);
-        assertFeedAdminUser(userId);
-        const patch =
-          typeof body === "object" && body !== null ? (body as AdminUpdateGlobalFeedBody) : {};
-        const detail = await adminUpdateGlobalFeed(db, params.feedId, patch);
+        const { body, db, logger, params, userId } = v1HandlerContext<
+          AdminUpdateGlobalFeedBody,
+          Record<string, unknown>,
+          { feedId: string }
+        >(context);
+        assertFeedAdminUser(userId, context.request.headers);
+        const detail = await adminUpdateGlobalFeed(db, params.feedId, body);
         logger.info("feeds.admin.updated", { userId, feedId: params.feedId });
         return detail;
       },
@@ -221,7 +219,7 @@ export function registerFeedRoutes(app: Elysia) {
       "/feeds/:feedId/admin",
       async (context) => {
         const { db, logger, params, userId } = v1HandlerContext(context);
-        assertFeedAdminUser(userId);
+        assertFeedAdminUser(userId, context.request.headers);
         await adminDeleteGlobalFeed(db, params.feedId);
         logger.info("feeds.admin.deleted", { userId, feedId: params.feedId });
         return { message: "Feed deleted" };

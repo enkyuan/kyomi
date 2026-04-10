@@ -1,0 +1,46 @@
+{
+  "category": "Decoupage",
+  "source_url": "https://rss.feedspot.com/decoupage_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mod Podge Rocks",
+      "feed_url": "https://modpodgerocksblog.com/feed/",
+      "website_url": "https://modpodgerocksblog.com/",
+      "description": "My name is Amy Anderson, and I'm a blogger I love creative ideas. A craft blog dedicated to providing you the best Mod Podge projects, how-tos, and inspiration on the net.",
+      "followers": {
+        "facebook": 153400,
+        "twitter": 17900,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/819695.jpg?t=1618581927"
+    },
+    {
+      "title": "Kracalactaka Creations Comic Decoupage Blog",
+      "feed_url": "http://kracalactakacreations.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://kracalactakacreations.blogspot.com/",
+      "description": "A blog about Comic Decoupage by Kracalactaka Creations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4677780.jpg?t=1618582030"
+    },
+    {
+      "title": "Creator's Image Studio \u00bb Decoupage",
+      "feed_url": "https://www.creatorsimagestudio.com/category/decoupage-2/feed/",
+      "website_url": "https://www.creatorsimagestudio.com/category/decoupage-2/",
+      "description": "In this blog you will find some new inspiration and ideas for decoupage art work.",
+      "followers": {
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/4679238.jpg?t=1618581967"
+    },
+    {
+      "title": "The Paint Palette \u00bb Napkin Decoupage",
+      "feed_url": "https://www.thepaintpalette.co.uk/blog/topic/napkin-decoupage/feed/",
+      "website_url": "https://www.thepaintpalette.co.uk/blog/topic/napkin-decoupage/",
+      "description": "I have been teaching decorative painting and craft classes for 18 years and am lucky to have my studio in Churchdown, Gloucester. Here you will learn napkin decoupage through articles.",
+      "followers": {
+        "facebook": 319
+      },
+      "image_url": "https://i1.feedspot.com/4677948.jpg?t=1618581939"
+    }
+  ]
+}

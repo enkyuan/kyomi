@@ -1,0 +1,74 @@
+{
+  "category": "UK Theology",
+  "source_url": "https://rss.feedspot.com/uk_theology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Think Theology Blog",
+      "feed_url": "https://thinktheology.co.uk/rss",
+      "website_url": "https://thinktheology.co.uk/blog",
+      "description": "THINK is a collaboration of thinkers and writers who are passionate about the Church, and who enjoy spending time wrestling with deep theological questions and helping others to engage with them. Keeping you up to date with papers and blog articles from the Think Theology website.",
+      "followers": {
+        "facebook": 882,
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4916264.jpg?t=1620383254"
+    },
+    {
+      "title": "P.OST",
+      "feed_url": "https://www.postost.net/feed/all/rss.xml",
+      "website_url": "https://www.postost.net/",
+      "description": "My overriding theological interest at the moment is in how we retell the biblical story as we negotiate the difficult transition from the centre to the margins of our culture following the collapse of Western Christendom. Working on a narrative-historical theology for the church after Christendom.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1684370.jpg?t=1618567807"
+    },
+    {
+      "title": "Learning From God's Word",
+      "feed_url": "https://learningfromgodsword.wordpress.com/feed/",
+      "website_url": "https://learningfromgodsword.wordpress.com/",
+      "description": "Follow Learning From God's Word for prayers, Bible readings notes, Sermons And Theological articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5093189.jpg"
+    },
+    {
+      "title": "The Centre for Theology & Community Blog",
+      "feed_url": "http://www.theology-centre.org.uk/feed/",
+      "website_url": "http://www.theology-centre.org.uk/ctc-blog/",
+      "description": "Equipping churches to transform their communities through community organising, reflection & prayer - and helping them use their resources for this mission.",
+      "followers": {
+        "facebook": 945,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4676325.jpg?t=1618569542"
+    },
+    {
+      "title": "Helm's Deep",
+      "feed_url": "http://paulhelmsdeep.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://paulhelmsdeep.blogspot.com/",
+      "description": "Paul Helm is a Professor of History & Philosophy of Religion from King's College, London. Find post on Philosophical Theology by Paul Helm on his blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/344531.jpg?t=1612184179"
+    },
+    {
+      "title": "Teaching Theology",
+      "feed_url": "https://teachingtheology.org/feed/",
+      "website_url": "https://teachingtheology.org/",
+      "description": "This blog is designed to encourage good theological education by posting quick to read, pithy articles which are fun to read but which also contain important issues for those who teach theology.",
+      "followers": {
+        "twitter": 62
+      },
+      "image_url": "https://i1.feedspot.com/4678910.jpg?t=1618569586"
+    },
+    {
+      "title": "BLOGOS",
+      "feed_url": "http://blogos.wp.st-andrews.ac.uk/feed/",
+      "website_url": "https://blogos.wp.st-andrews.ac.uk/",
+      "description": "The official blog of the Logos Institute of Analytic and Exegetical at the University of St Andrews. The Logos Institute aims to explore the central claims of Christianity through dialogue with Biblical exegesis and analytic, philosophical theology.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4916284.jpg?t=1620383264"
+    }
+  ]
+}

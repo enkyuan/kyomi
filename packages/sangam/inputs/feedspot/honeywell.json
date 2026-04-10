@@ -1,0 +1,30 @@
+{
+  "category": "Honeywell",
+  "source_url": "https://rss.feedspot.com/honeywell_rss_feeds",
+  "feeds": [
+    {
+      "title": "Honeywell Investor Relations",
+      "feed_url": "https://honeywell.gcs-web.com/rss.xml",
+      "website_url": "https://honeywell.gcs-web.com/",
+      "description": "We have been innovating for more than 100 years - and now we're creating what's next. We work in aerospace, building technologies, performance materials, and technologies along with safety and productivity solutions.",
+      "followers": {
+        "facebook": 179300,
+        "twitter": 66700,
+        "instagram": 64000
+      },
+      "image_url": "https://i1.feedspot.com/5435865.jpg?t=1661501551"
+    },
+    {
+      "title": "Aerospace Unplugged",
+      "feed_url": "https://feeds.buzzsprout.com/337793.rss",
+      "website_url": "https://www.buzzsprout.com/337793",
+      "description": "The Aerospace industry is ready for takeoff and Honeywell Aerospace is here to keep you up to date with interviews featuring special guests, industry experts talking about technology breakthroughs, emerging trends and more. So, if you work in the industry, are passionate about the ins and outs of the aerospace world or just want to know how Honeywell solutions help take the industry to new heights this is the podcast for you.",
+      "followers": {
+        "facebook": 93000,
+        "twitter": 66800,
+        "instagram": 46400
+      },
+      "image_url": "https://i1.feedspot.com/5122737.jpg?t=1745429662"
+    }
+  ]
+}

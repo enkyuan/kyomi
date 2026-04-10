@@ -1,0 +1,277 @@
+{
+  "category": "NBA",
+  "source_url": "https://rss.feedspot.com/nba_rss_feeds",
+  "feeds": [
+    {
+      "title": "HoopsHype",
+      "feed_url": "https://hoopshype.com/feed/",
+      "website_url": "https://hoopshype.com/",
+      "description": "The go-to site for the hardcore NBA fan.Find the latest NBA rumors, news, salaries, and more.",
+      "followers": {
+        "facebook": 190300,
+        "twitter": 305700,
+        "instagram": 30900
+      },
+      "image_url": "https://i1.feedspot.com/4660969.jpg?t=1643697508"
+    },
+    {
+      "title": "RealGM",
+      "feed_url": "https://basketball.realgm.com/rss/wiretap/0/0.xml",
+      "website_url": "https://basketball.realgm.com/",
+      "description": "RealGM, L.L.C., owns and operates RealGM.com and a licensing business that delivers proprietary software to NBA teams as an application service provider. RealGM.com offers users all the data and tools required to simulate the experience of a real general manager. Get the latest NBA basketball news, scores, stats, standings, forums and more on RealGM.com.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 161500,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/1035104.jpg?t=1643259756"
+    },
+    {
+      "title": "The Hoop Doctors",
+      "feed_url": "https://thehoopdoctors.com/feed/",
+      "website_url": "http://thehoopdoctors.com/",
+      "description": "NBA Basketball news, rumors, videos and other cool stuff for hardcore hoop heads.",
+      "followers": {
+        "facebook": 399200,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4641414.jpg?t=1643698258"
+    },
+    {
+      "title": "NBADraft.net",
+      "feed_url": "https://www.nbadraft.net/feed/",
+      "website_url": "https://www.nbadraft.net/articles",
+      "description": "Specializing in drafts with top players on the NBA horizon, player profiles, scouting reports, rankings and prospective international recruits.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/5278150.jpg?t=1620370074"
+    },
+    {
+      "title": "The Cold Wire \u00bb NBA",
+      "feed_url": "https://www.thecoldwire.com/sports/nba/feed/",
+      "website_url": "https://www.thecoldwire.com/sports/nba/",
+      "description": "A go-to source for trending sports news covering the NFL, MLB, NBA, college football, entertainment, and much more. Get the latest NBA news, updates, rumors, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 1300,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/5520900.jpg?t=1678875754"
+    },
+    {
+      "title": "Basketball Intelligence Newsletter",
+      "feed_url": "https://www.basketballintelligence.net/feed",
+      "website_url": "https://www.basketballintelligence.net/",
+      "description": "The Day's Best NBA Reporting And Analysis. Follow to read updates on Basketball Intelligence.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5310350.jpg?t=1658833126"
+    },
+    {
+      "title": "Sportsnet \u00bb NBA",
+      "feed_url": "https://www.sportsnet.ca/basketball/nba/feed",
+      "website_url": "https://www.sportsnet.ca/basketball/nba/",
+      "description": "Comprehensive National Basketball Association news, scores, standings, fantasy games, rumors, and more. Sportsnet is Canada's guide for the latest sports news, scores, standings, video highlights and more.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 1100000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4427885.jpg?t=1745828274"
+    },
+    {
+      "title": "Yardbarker \u00bb NBA",
+      "feed_url": "https://www.yardbarker.com/rss/sport_merged/3",
+      "website_url": "https://www.yardbarker.com/nba",
+      "description": "Check out NBA rumors, news and videos from the best sources on the web. Yardbarker breaks down traditional barriers, allowing fans and athletes to debate sports, read and write articles, and watch videos. Yardbarker is your go-to site for all things sports.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5463723.jpg?t=1667822377"
+    },
+    {
+      "title": "Hoops Rumors",
+      "feed_url": "https://www.hoopsrumors.com/feed",
+      "website_url": "https://www.hoopsrumors.com/",
+      "description": "NBA rumors delivered with lightning speed and pinpoint accuracy, only at HoopsRumors.com. Hoops Rumors is a clearinghouse for relevant, legitimate NBA rumors. The site focuses on trades and free agent signings. Rumors come from established journalists, and always include a link to the source material. All 30 teams are covered.",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 181200
+      },
+      "image_url": "https://i1.feedspot.com/3351461.jpg?t=1668066309"
+    },
+    {
+      "title": "New York Post \u00bb NBA",
+      "feed_url": "https://nypost.com/nba/feed/",
+      "website_url": "https://nypost.com/nba/",
+      "description": "Get the latest NBA news from the New York Knicks, Brooklyn Nets, and around the league on the New York Post, including scores, trade rumors, and standings. Explore the NBA section for the latest news on NBA scores, teams, stats and more!",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/5463725.jpg?t=1667822395"
+    },
+    {
+      "title": "Hoops Wire",
+      "feed_url": "https://hoopswire.com/feed/",
+      "website_url": "https://hoopswire.com/",
+      "description": "Hoops Wire is the go-to source for the latest NBA Rumors, NBA Trade Rumors, NBA Transactions along with NBA Draft & Insider News. Keep up with the latest right here! HoopsWire aggregates NBA news and rumors from a select list of reporters and news outlets, along with social media feeds. Hoops Wire covers the latest NBA insider news and Rumors from all 30 teams.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5463721.jpg?t=1667822349"
+    },
+    {
+      "title": "Hot Hot Hoops Blog",
+      "feed_url": "https://hothothoops.com/feed/",
+      "website_url": "https://hothothoops.com/",
+      "description": "Miami HEAT news and notes Popular Posts",
+      "followers": {
+        "facebook": 157900,
+        "twitter": 11100,
+        "instagram": 26200
+      },
+      "image_url": "https://i1.feedspot.com/8536259.jpg?t=1753083239"
+    },
+    {
+      "title": "NBAstuffer Blog",
+      "feed_url": "https://www.nbastuffer.com/blog/feed/",
+      "website_url": "https://www.nbastuffer.com/blog/",
+      "description": "NBAstuffer blog offers a variety of articles on NBA stats and analysis about NBA teams and players from an analytical point of view.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/8536260.jpg?t=1753083241"
+    },
+    {
+      "title": "Hoops Distro",
+      "feed_url": "https://hoopsdistro.com/feed/",
+      "website_url": "https://hoopsdistro.com/",
+      "description": "Everything NBA basketball with the Hoops Distro. Stay in the loop with the latest NBA news, trades, history, stats, rumors, highlights, and sneakers. Keep up with your favorite basketball players and NBA teams. Hoops Distro is your spot for finding what's the latest up news in the NBA.",
+      "followers": {
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5661087.jpg?t=1693479132"
+    },
+    {
+      "title": "SLAM \u00bb NBA",
+      "feed_url": "https://www.slamonline.com/category/nba/feed/",
+      "website_url": "https://www.slamonline.com/category/nba/",
+      "description": "If it isn't here, it didn't happen. The SLAM Newswire is SLAMOnline's comprehensive section for all things basketball analysis, breaking news and more. We're passionate about basketball and guess so are you. From game and player highlights to the latest in NBA news to upcoming stars in high school basketball - we've got you covered.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 1300000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/5463724.jpg?t=1667822382"
+    },
+    {
+      "title": "NBA Blog",
+      "feed_url": "http://www.insidehoops.com/blog/?feed=rss2",
+      "website_url": "http://www.insidehoops.com/blog/",
+      "description": "The NBA basketball blog section of InsideHoops.com. NBA news and NBA league and team blogs with news, info and more. Inside Hoops is the most popular independent pro basketball website in the world, with a regular readership of hundreds of thousands of the biggest hoops fans on the planet.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 288300,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/42455.jpg?t=1603269479"
+    },
+    {
+      "title": "Yahoo! Sports \u00bb NBA",
+      "feed_url": "https://sports.yahoo.com/nba/rss.xml",
+      "website_url": "https://sports.yahoo.com/nba/",
+      "description": "Comprehensive National Basketball Association news, scores, standings, fantasy games, rumors, and more. Yahoo! Sports is dedicated to bringing you more of the stories, highlights and features you love. Sports news for the sports obsessed.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/90857.jpg?t=1643260919"
+    },
+    {
+      "title": "Basketball Insiders",
+      "feed_url": "https://www.basketballinsiders.org/feed/",
+      "website_url": "https://www.basketballinsiders.org/",
+      "description": "BasketballInsiders.com brings the best NBA news, NCAAB College Basketball news, and NBA betting pick from the best online sportsbooks. Basketball Insiders, since the first few days of existence, have been huge supporters of the online betting industry. Our aim for the site is to provide everyday news and information about sports and sports betting, along with the best and most accurate online gambling information possible.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 164100
+      },
+      "image_url": "https://i1.feedspot.com/3937275.jpg?t=1662113012"
+    },
+    {
+      "title": "NetsDaily",
+      "feed_url": "https://www.netsdaily.com/rss/index.xml",
+      "website_url": "https://www.netsdaily.com/",
+      "description": "Your best source for quality Brooklyn Nets news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 27800,
+        "twitter": 65300
+      },
+      "image_url": "https://i1.feedspot.com/4903818.jpg?t=1749475128"
+    },
+    {
+      "title": "Hoops Habit",
+      "feed_url": "https://hoopshabit.com/",
+      "website_url": "https://hoopshabit.com/",
+      "description": "The ultimate home for all NBA news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 41800,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4789394.jpg?t=1643697814"
+    },
+    {
+      "title": "Basketball News",
+      "feed_url": "https://www.basketballnews.com/",
+      "website_url": "https://www.basketballnews.com/",
+      "description": "BasketballNews.com offers unprecedented access and coverage to diehard basketball fans and insight from some of the leading minds in basketball. It offers the latest NBA news and rumors, advanced stats, charts and betting odds.",
+      "followers": {
+        "facebook": 27300,
+        "twitter": 51500,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/153816.jpg?t=1643698154"
+    },
+    {
+      "title": "The Ringer \u00bb NBA",
+      "feed_url": "https://www.theringer.com/nba",
+      "website_url": "https://www.theringer.com/nba",
+      "description": "Get the latest NBA basketball news, scores, stats, and more from The Ringer. The Ringer is a sports and pop culture website.",
+      "followers": {
+        "facebook": 213700,
+        "twitter": 525300
+      },
+      "image_url": "https://i1.feedspot.com/5365565.jpg?t=1643699467"
+    },
+    {
+      "title": "The Athletic \u00bb NBA",
+      "feed_url": "https://theathletic.com/nba/?rss",
+      "website_url": "https://www.nytimes.com/athletic/nba/",
+      "description": "Breaking NBA news and in-depth analysis from the best newsroom in sports. Follow your favorite teams. Get the latest injury updates, trade analysis, draft info and more from around the league.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5251056.jpg?t=1643260300"
+    },
+    {
+      "title": "FanSided \u00bb NBA",
+      "feed_url": "https://fansided.com/nba/",
+      "website_url": "https://fansided.com/nba/",
+      "description": "The latest NBA news, NBA rumors, mock drafts, trade grades, free agency updates, fantasy basketball analysis, and more from FanSided. Whether it's the NBA offseason, where free agents and trades shake up rosters and set forth storylines we will be glued to all season, or it's the NBA Playoffs and NBA Finals where everything we've watched all season-long comes together, FanSided NBA has you covered.",
+      "followers": {
+        "facebook": 57000,
+        "twitter": 11900,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5365566.jpg?t=1643700550"
+    }
+  ]
+}

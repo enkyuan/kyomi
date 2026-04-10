@@ -1,0 +1,65 @@
+{
+  "category": "Wilmington (Delaware) News",
+  "source_url": "https://rss.feedspot.com/wilmington_delaware_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WDEL",
+      "feed_url": "https://www.wdel.com/search/?c=news&f=rss&l=50&s=start_time&sd=desc&t=article",
+      "website_url": "https://www.wdel.com/",
+      "description": "WDEL is Wilmington's leading source for news, traffic, weather, local talk, and sports. WDEL covers Delaware, southeastern Pennsylvania and southern New Jersey with content that is LIVE and LOCAL. WDEL features the area's largest staff of broadcast journalists.",
+      "followers": {
+        "facebook": 56700,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/5147748.jpg?t=1588588775"
+    },
+    {
+      "title": "WITN Channel 22",
+      "feed_url": "https://www.witn22.org/feed/",
+      "website_url": "https://www.witn22.org/",
+      "description": "Find out the latest news on all things Wilmington, Delaware - City Council Government meetings and stories about community and cultural affairs.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 2200,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5058146.jpg?t=1669811146"
+    },
+    {
+      "title": "Delaware LIVE",
+      "feed_url": "https://delawarelive.com/feed/",
+      "website_url": "https://delawarelive.com/",
+      "description": "Delaware LIVE News is an all-digital newsroom producing hyper-local content to fill gaps in the coverage of the state. Rooted in pragmatic journalism, the innovative digital media outlet offers one million residents an accessible source for news through interactive internet, email, social media, and video platforms.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 362,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5473775.jpg?t=1675411705"
+    },
+    {
+      "title": "Wilmington Today",
+      "feed_url": "https://www.wilmtoday.com/feed/",
+      "website_url": "https://www.wilmtoday.com/",
+      "description": "Discover Wilmington, Delaware with Wilmington Today. It is a community-driven social news network powered by the posts and people of Wilmington, DE.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2400,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5147755.jpg?t=1623151407"
+    },
+    {
+      "title": "Delaware Online",
+      "feed_url": "https://www.delawareonline.com/",
+      "website_url": "https://www.delawareonline.com/",
+      "description": "Delaware Online covers in depth and updated local news. Stay informed with both Delaware news as well as headlines and stories from around the world.",
+      "followers": {
+        "facebook": 328000,
+        "twitter": 133600,
+        "instagram": 80200
+      },
+      "image_url": "https://i1.feedspot.com/4895972.jpg?t=1669811203"
+    }
+  ]
+}

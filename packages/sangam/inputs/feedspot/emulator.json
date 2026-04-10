@@ -1,0 +1,59 @@
+{
+  "category": "Emulator",
+  "source_url": "https://rss.feedspot.com/emulator_rss_feeds",
+  "feeds": [
+    {
+      "title": "melonDS",
+      "feed_url": "https://melonds.kuribo64.net/rss.php",
+      "website_url": "https://melonds.kuribo64.net/",
+      "description": "melonDS aims to provide fast and accurate Nintendo DS emulation. While it is still a work in progress, it has a pretty solid set of features. Their blog updates about the activity if the site, latest updates and much more intriguing stuff.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5496182.jpg?t=1674120464"
+    },
+    {
+      "title": "NoxPlayer Blog",
+      "feed_url": "https://www.bignox.com/blog/feed/",
+      "website_url": "https://www.bignox.com/blog/",
+      "description": "NoxPlayer aims to provide the best experience for users to play android games and apps on a PC. Follow the NoxPlayer Blog to get information on the latest news, gaming updates, features, new games, guides for gamers, and more.",
+      "followers": {
+        "facebook": 97100,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5496181.jpg?t=1674119953"
+    },
+    {
+      "title": "AEP Emulation Page - Emulation News",
+      "feed_url": "https://www.aep-emu.de/rss_en.xml",
+      "website_url": "https://www.aep-emu.de/",
+      "description": "AEP Emulation Page is your one-stop solution for all your asks regarding the emulator world. The blog consists of Emulator News, Remakes, Virtual Machines, Gaming, Retro and Vintage, Highscore Competitions, Community, reviews and more.",
+      "followers": {
+        "twitter": 265
+      },
+      "image_url": "?t=1675325003"
+    },
+    {
+      "title": "dolphin-emu.org - Latest entries",
+      "feed_url": "https://dolphin-emu.org/blog/feeds/",
+      "website_url": "https://dolphin-emu.org/blog/",
+      "description": "Over the past four years, the Community Dolphin Discord Server, which was unaffiliated with the project itself, has become a fantastic community that has been providing support and a hub for Dolphin users. While it started out small, the server now boasts over 10,000 users and several of Dolphin's developers interact and help users directly on the server.",
+      "followers": {},
+      "image_url": "?t=1675326329"
+    },
+    {
+      "title": "mGBA",
+      "feed_url": "https://mgba.io/feed.xml",
+      "website_url": "https://mgba.io/",
+      "description": "mGBA is an open-source Game Boy Advance emulator, copyright Vicki Pfau. This project is not affiliated in any way with Nintendo. Game Boy Advance is a registered trademark of Nintendo Co., Ltd. Blog publishes articles on the latest, news, announcements, development, game tricks, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5496180.jpg?t=1674120423"
+    },
+    {
+      "title": "Libretro Blog",
+      "feed_url": "https://www.libretro.com/index.php/feed/",
+      "website_url": "https://www.libretro.com/index.php/category/blog/",
+      "description": "Libretro Blog shares all the important information about the site, the latest updates, games, software, and emulators. Libretro is a simple but powerful development interface that allows for the easy creation of emulators, games, and multimedia applications that can plug straight into any libretto-compatible frontend. This development interface is open to others so that they can run these pluggable emulators and game cores also in their own programs or devices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4340834.jpg?t=1674120520"
+    }
+  ]
+}

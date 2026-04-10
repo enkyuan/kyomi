@@ -1,36 +1,45 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
-import { loginFormSchema, registerFormSchema } from "@pages/auth/schema";
+import { apiJson, buildForwardHeaders, resolveApiUrl } from "@lib/api";
 
-type SessionData = Awaited<ReturnType<Awaited<ReturnType<typeof getAuth>>["api"]["getSession"]>>;
+export type AuthSession = {
+  session: {
+    id: string;
+    expiresAt: string;
+    token: string;
+    createdAt: string;
+    updatedAt: string;
+    ipAddress?: string | null;
+    userAgent?: string | null;
+    userId: string;
+  } | null;
+  user: {
+    id: string;
+    email: string;
+    emailVerified: boolean;
+    name: string;
+    image?: string | null;
+    createdAt: string;
+    updatedAt: string;
+  } | null;
+} | null;
 
-type SessionGetter = {
-  getSession: (args: { headers: Headers }) => Promise<SessionData>;
-};
+export async function fetchSessionFromHeaders(headers: Headers): Promise<AuthSession> {
+  const response = await fetch(resolveApiUrl("/api/auth/get-session"), {
+    method: "GET",
+    headers: buildForwardHeaders(headers),
+  });
 
-type LoginInput = {
-  email: string;
-  password: string;
-};
+  if (response.status === 401) {
+    return null;
+  }
 
-type RegisterInput = {
-  email: string;
-  password: string;
-  confirmPassword: string;
-};
+  if (!response.ok) {
+    const message = await response.text();
+    throw new Error(message || `Unable to fetch session: ${response.status}`);
+  }
 
-type AuthActionResult = {
-  error: string | null;
-};
-
-async function getAuth() {
-  const module = await import("@lib/auth");
-  return module.auth;
-}
-
-export async function fetchSessionFromHeaders(headers: Headers, sessionGetter?: SessionGetter) {
-  const auth = await getAuth();
-  return (sessionGetter ?? auth.api).getSession({ headers });
+  return (await response.json()) as AuthSession;
 }
 
 export const getSession = createServerFn({ method: "POST" }).handler(async () => {
@@ -48,57 +57,18 @@ export const ensureSession = createServerFn({ method: "POST" }).handler(async ()
   return session;
 });
 
-function getAuthErrorMessage(error: unknown, fallback: string) {
-  if (error instanceof Error && error.message) {
-    return error.message;
-  }
+export const getUserProfile = createServerFn({ method: "GET" }).handler(async () => {
+  const headers = getRequestHeaders();
 
-  return fallback;
-}
-
-export const signInWithEmail = createServerFn({ method: "POST" })
-  .inputValidator((input: LoginInput) => loginFormSchema.parse(input))
-  .handler(async ({ data }): Promise<AuthActionResult> => {
-    const headers = getRequestHeaders();
-    const auth = await getAuth();
-
-    try {
-      await auth.api.signInEmail({
-        body: {
-          email: data.email,
-          password: data.password,
-        },
-        headers,
-      });
-
-      return { error: null };
-    } catch (error) {
-      return {
-        error: getAuthErrorMessage(error, "Invalid email or password"),
-      };
-    }
+  return apiJson<{
+    id: string;
+    name: string;
+    email: string;
+    emailVerified: boolean;
+    image: string | null;
+    createdAt: string;
+    updatedAt: string;
+  }>("/api/v1/users/profile", {
+    headers: buildForwardHeaders(headers),
   });
-
-export const signUpWithEmail = createServerFn({ method: "POST" })
-  .inputValidator((input: RegisterInput) => registerFormSchema.parse(input))
-  .handler(async ({ data }): Promise<AuthActionResult> => {
-    const headers = getRequestHeaders();
-    const auth = await getAuth();
-
-    try {
-      await auth.api.signUpEmail({
-        body: {
-          email: data.email,
-          password: data.password,
-          name: data.email.split("@")[0] || "User",
-        },
-        headers,
-      });
-
-      return { error: null };
-    } catch (error) {
-      return {
-        error: getAuthErrorMessage(error, "An error occurred during sign up"),
-      };
-    }
-  });
+});

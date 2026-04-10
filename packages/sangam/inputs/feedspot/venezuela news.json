@@ -1,0 +1,322 @@
+{
+  "category": "Venezuela News",
+  "source_url": "https://rss.feedspot.com/venezuela_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Caracas Chronicles",
+      "feed_url": "https://www.caracaschronicles.com/feed/",
+      "website_url": "https://www.caracaschronicles.com/",
+      "description": "Caracas Chronicles is an independent news and analysis organization devoted to one of those missions that's easier-said-than-done: making Venezuela make sense.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 51600,
+        "instagram": 33900
+      },
+      "image_url": "https://i1.feedspot.com/4928441.jpg?t=1621060063"
+    },
+    {
+      "title": "El Diario",
+      "feed_url": "https://eldiario.com/feed/",
+      "website_url": "https://eldiario.com/",
+      "description": "News from Venezuela and the world. We are a group of curious journalists, passionate and willing to do journalism with character and without censorship.",
+      "followers": {
+        "facebook": 2700000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5337123.jpg?t=1635751217"
+    },
+    {
+      "title": "\u00daltimas Noticias",
+      "feed_url": "https://ultimasnoticias.com.ve/feed/",
+      "website_url": "https://ultimasnoticias.com.ve/",
+      "description": "\u00daltimas Noticias is the most complete information portal on the web. Get the latest news from Venezuela and the world.",
+      "followers": {
+        "facebook": 321600,
+        "twitter": 4800000,
+        "instagram": 716300
+      },
+      "image_url": "https://i1.feedspot.com/5337122.jpg?t=1646216651"
+    },
+    {
+      "title": "El Nacional",
+      "feed_url": "https://www.elnacional.com/feed/",
+      "website_url": "https://www.elnacional.com/",
+      "description": "El medio independiente m\u00e1s importante de Venezuela. Noticias, investigaciones y an\u00e1lisis de pol\u00edtica, econom\u00eda, deportes, tecnolog\u00eda, cultura y m\u00e1s.",
+      "followers": {
+        "facebook": 821500,
+        "twitter": 6100000,
+        "instagram": 4300000
+      },
+      "image_url": "https://i1.feedspot.com/5337120.jpg?t=1757590755"
+    },
+    {
+      "title": "El Arag\u00fce\u00f1o",
+      "feed_url": "https://elaragueno.com.ve/feed/",
+      "website_url": "https://elaragueno.com.ve/",
+      "description": "Covers articles on Aragua news, sports, world updates, arts & show, regional news, events, and more.",
+      "followers": {
+        "facebook": 21600,
+        "twitter": 298000
+      },
+      "image_url": "https://i1.feedspot.com/4433231.jpg?t=1635752020"
+    },
+    {
+      "title": "El Clar\u00edn",
+      "feed_url": "https://elclarinweb.com/feed/",
+      "website_url": "https://elclarinweb.com/",
+      "description": "Central region newspaper. Main headlines about what the most current news is in the state of Aragua, Venezuela, and the world.",
+      "followers": {
+        "facebook": 41300,
+        "twitter": 34000,
+        "instagram": 104500
+      },
+      "image_url": "https://i1.feedspot.com/5337276.jpg?t=1635343094"
+    },
+    {
+      "title": "Correo del Orinoco",
+      "feed_url": "http://www.correodelorinoco.gob.ve/feed/",
+      "website_url": "http://www.correodelorinoco.gob.ve/",
+      "description": "News from Venezuela and the world. Topics covered are sports, economy, society, opinions, and more.",
+      "followers": {
+        "facebook": 310200,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/1367480.jpg?t=1635343717"
+    },
+    {
+      "title": "Correo del Caron\u00ed",
+      "feed_url": "https://correodelcaroni.com/feed/",
+      "website_url": "https://correodelcaroni.com/",
+      "description": "News from Ciudad Guayana, the Bolivar State, and Venezuela at the moment. Politics, events, work, opinion, sports, economics, and much more.",
+      "followers": {
+        "facebook": 49900,
+        "twitter": 189300,
+        "instagram": 55000
+      },
+      "image_url": "https://i1.feedspot.com/5337292.jpg?t=1635344152"
+    },
+    {
+      "title": "Elimpulso.com",
+      "feed_url": "https://www.elimpulso.com/feed/",
+      "website_url": "https://www.elimpulso.com/",
+      "description": "The information boost you need every day. Regional news from Lara and Barquisimeto, national and international.",
+      "followers": {
+        "facebook": 111500,
+        "twitter": 908100,
+        "instagram": 610700
+      },
+      "image_url": "https://i1.feedspot.com/4482407.jpg?t=1635344411"
+    },
+    {
+      "title": "Nuevo D\u00eda",
+      "feed_url": "https://nuevodia.com.ve/feed/",
+      "website_url": "https://nuevodia.com.ve/",
+      "description": "News and information for Venezuela, Latin America, and the Caribbean.",
+      "followers": {
+        "facebook": 29300,
+        "twitter": 111900
+      },
+      "image_url": "https://i1.feedspot.com/5337293.jpg?t=1635344577"
+    },
+    {
+      "title": "El Informador",
+      "feed_url": "https://elinformadorve.com/category/venezuela/feed/",
+      "website_url": "https://elinformadorve.com/",
+      "description": "We are an independent communication medium that offers balanced, reliable and timely information, generating well-being for our readers, advertisers and workers, which contributes to Latin American development.",
+      "followers": {
+        "facebook": 101900,
+        "twitter": 203100,
+        "instagram": 615500
+      },
+      "image_url": "https://i1.feedspot.com/5337290.jpg?t=1635344863"
+    },
+    {
+      "title": "La Voz",
+      "feed_url": "https://diariolavoz.net/feed/",
+      "website_url": "https://diariolavoz.net/",
+      "description": "We are the main news portal for events in Venezuela.",
+      "followers": {
+        "facebook": 23300,
+        "twitter": 169000
+      },
+      "image_url": "https://i1.feedspot.com/5337330.jpg?t=1635391700"
+    },
+    {
+      "title": "La Verdad de Monagas",
+      "feed_url": "https://laverdaddemonagas.com/feed/",
+      "website_url": "https://laverdaddemonagas.com/",
+      "description": "News from Monagas and Venezuela. La Verdad de Monagas is a newspaper with more than 10 years of circulation in Monagas, Matur\u00edn, Ven.",
+      "followers": {
+        "facebook": 33500,
+        "twitter": 35100
+      },
+      "image_url": "https://i1.feedspot.com/5337329.jpg?t=1635394342"
+    },
+    {
+      "title": "La Raz\u00f3n",
+      "feed_url": "https://larazon.net/feed/",
+      "website_url": "https://larazon.net/",
+      "description": "La Raz\u00f3n is an independent newspaper, with national circulation, general information, a clear Latin American vocation, defender of pluralist and participatory democracy.",
+      "followers": {
+        "twitter": 46000
+      },
+      "image_url": "https://i1.feedspot.com/5337343.jpg?t=1635758808"
+    },
+    {
+      "title": "Analitica",
+      "feed_url": "https://www.analitica.com/feed/",
+      "website_url": "https://www.analitica.com/",
+      "description": "Analitica.com offers the latest news from Venezuela covering politics, economy, opinion, sports, technology, people, entertainment and more.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 120800,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5337342.jpg?t=1635393655"
+    },
+    {
+      "title": "Efecto Cocuyo",
+      "feed_url": "https://efectococuyo.com/feed/",
+      "website_url": "https://efectococuyo.com/",
+      "description": "We are a transmedia news platform. We are a journalism platform made by journalists. We want to do journalism that enlightens.",
+      "followers": {
+        "facebook": 86900,
+        "twitter": 813000,
+        "instagram": 291000
+      },
+      "image_url": "https://i1.feedspot.com/4433281.jpg?t=1635394384"
+    },
+    {
+      "title": "Entorno Inteligente",
+      "feed_url": "https://entornointeligente.com/feed/",
+      "website_url": "https://entornointeligente.com/",
+      "description": "EntornoInteligente.com is a portal that handles more than 1,000 daily news items derived from the main communication media around the world. The news that you require to be informed throughout the day.",
+      "followers": {
+        "facebook": 19700,
+        "instagram": 27500
+      },
+      "image_url": "https://i1.feedspot.com/5337339.jpg?t=1635393941"
+    },
+    {
+      "title": "2001 Online",
+      "feed_url": "https://2001online.com//feed",
+      "website_url": "https://2001online.com/",
+      "description": "Current news from Venezuela and the rest of the world. Presents sections such as Politics, Sports, Economy, Entertainment, and International.",
+      "followers": {
+        "facebook": 54500,
+        "twitter": 283600
+      },
+      "image_url": "https://i1.feedspot.com/5337121.jpg?t=1635339349"
+    },
+    {
+      "title": "Deportes La Naci\u00f3n",
+      "feed_url": "https://lanaciondeportes.com/feed/",
+      "website_url": "https://lanaciondeportes.com/",
+      "description": "News from T\u00e1chira, Venezuela, and the world. Deportes La Naci\u00f3n is the leading news site in T\u00e1chira and the Venezuelan Andes.",
+      "followers": {
+        "facebook": 314700,
+        "twitter": 310800,
+        "instagram": 473900
+      },
+      "image_url": "https://i1.feedspot.com/5337332.jpg?t=1635394348"
+    },
+    {
+      "title": "La Region",
+      "feed_url": "https://diariolaregion.net/feed/",
+      "website_url": "https://diariolaregion.net/",
+      "description": "Circulation newspaper in the high-Andean region. Covers articles on politics, sports, events, entertainment and more.",
+      "followers": {
+        "twitter": 107300
+      },
+      "image_url": "https://i1.feedspot.com/5337328.jpg?t=1635392210"
+    },
+    {
+      "title": "El Periodiquito",
+      "feed_url": "https://elperiodiquito.com/feed/",
+      "website_url": "https://elperiodiquito.com/",
+      "description": "Live the news through the leading newspaper of the Aragua state and the central region of the country.",
+      "followers": {
+        "facebook": 30000,
+        "twitter": 377200,
+        "instagram": 894000
+      },
+      "image_url": "https://i1.feedspot.com/5337275.jpg?t=1635342440"
+    },
+    {
+      "title": "El Peri\u00f3dico De Monagas",
+      "feed_url": "https://elperiodicodemonagas.com.ve//feed",
+      "website_url": "https://elperiodicodemonagas.com.ve/",
+      "description": "News from Matur\u00edn, Monagas, Venezuela and the World.",
+      "followers": {
+        "facebook": 148700,
+        "twitter": 41900,
+        "instagram": 237900
+      },
+      "image_url": "https://i1.feedspot.com/5337331.jpg?t=1635392347"
+    },
+    {
+      "title": "Venezuela Today",
+      "feed_url": "https://venezuelatoday.net/feed/",
+      "website_url": "https://venezuelatoday.net/",
+      "description": "Venezuela Today covers articles on business, finance, lifestyle, sports, and the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5337341.jpg?t=1635394333"
+    },
+    {
+      "title": "Venezuelanalysis",
+      "feed_url": "https://venezuelanalysis.com/",
+      "website_url": "https://venezuelanalysis.com/",
+      "description": "Venezuelanalysis.com is an independent website produced by individuals who are dedicated to disseminating news and analysis about the current political situation in Venezuela.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 39400
+      },
+      "image_url": "https://i1.feedspot.com/4971555.jpg?t=1635751492"
+    },
+    {
+      "title": "Diario El Tiempo",
+      "feed_url": "https://diarioavance.com/",
+      "website_url": "https://diarioavance.com/",
+      "description": "We are the leading newspaper in Trujillo. Covering regional, national, entertainment and sports news.",
+      "followers": {
+        "facebook": 140100,
+        "twitter": 43700
+      },
+      "image_url": "https://i1.feedspot.com/5337337.jpg?t=1635753834"
+    },
+    {
+      "title": "Diario Avance",
+      "feed_url": "https://diarioavance.com/",
+      "website_url": "https://diarioavance.com/",
+      "description": "We are the leading newspaper in Altos Mirandinos. Get the latest news covering politics, sports, events, and more.",
+      "followers": {
+        "facebook": 172600,
+        "twitter": 105000
+      },
+      "image_url": "https://i1.feedspot.com/5337336.jpg?t=1635391397"
+    },
+    {
+      "title": "Diario de Los Andes",
+      "feed_url": "https://diariodelosandes.com/",
+      "website_url": "https://diariodelosandes.com/",
+      "description": "We are an informative medium with news from Trujillo, M\u00e9rida and T\u00e1chira.",
+      "followers": {
+        "facebook": 193800,
+        "twitter": 118700
+      },
+      "image_url": "https://i1.feedspot.com/5337333.jpg?t=1646219322"
+    },
+    {
+      "title": "Informe21",
+      "feed_url": "https://www.informe21.com/",
+      "website_url": "https://www.informe21.com/",
+      "description": "News from Venezuela and the world. Topics covered are politics, economy, sports, health, technology, and more.",
+      "followers": {
+        "facebook": 96100,
+        "twitter": 86100,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5337344.jpg?t=1635392986"
+    }
+  ]
+}

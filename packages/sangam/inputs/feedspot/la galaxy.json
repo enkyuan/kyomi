@@ -1,0 +1,98 @@
+{
+  "category": "LA Galaxy",
+  "source_url": "https://rss.feedspot.com/la_galaxy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Corner of the Galaxy",
+      "feed_url": "https://cornerofthegalaxy.com/feed/",
+      "website_url": "https://cornerofthegalaxy.com/",
+      "description": "Weekly LA Galaxy Soccer podcasts and written articles offering news, discussion, and analysis from an independent perspective.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 12000,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5181536.jpg?t=1597386623"
+    },
+    {
+      "title": "Yahoo Sports \u00bb LA Galaxy",
+      "feed_url": "https://sports.yahoo.com/soccer/teams/la-galaxy/rss/",
+      "website_url": "https://sports.yahoo.com/soccer/teams/la-galaxy/",
+      "description": "The latest LA Galaxy news from Yahoo Sports. Find LA Galaxy fixtures, results, top scorers, transfer, rumors and player profiles, with exclusive photos and video highlights.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5181720.jpg?t=1597403290"
+    },
+    {
+      "title": "SportSpyder.com \u00bb Los Angeles Galaxy",
+      "feed_url": "https://sportspyder.com/mls/los-angeles-galaxy/news.xml",
+      "website_url": "https://sportspyder.com/mls/los-angeles-galaxy/news",
+      "description": "The Latest Los Angeles Galaxy MLS news articles from around the web.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/5181681.jpg?t=1597400173"
+    },
+    {
+      "title": "Yardbarker \u00bb LA Galaxy",
+      "feed_url": "https://www.yardbarker.com/rss/team/17326",
+      "website_url": "https://www.yardbarker.com/soccer/teams/la_galaxy/17326",
+      "description": "LA Galaxy rumors, news, and videos from the best sources on the web.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5181768.jpg?t=1597408676"
+    },
+    {
+      "title": "The Athletic \u00bb LA Galaxy",
+      "feed_url": "https://www.nytimes.com/athletic/rss/football/galaxy/",
+      "website_url": "https://www.nytimes.com/athletic/football/team/galaxy/",
+      "description": "Welcome to The Athletic. Get access to smart, in-depth Galaxy sports coverage from an all-star team of writers.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 473800
+      },
+      "image_url": "https://i1.feedspot.com/5181746.jpg?t=1597405724"
+    },
+    {
+      "title": "AS USA \u00bb LA Galaxy",
+      "feed_url": "https://feeds.as.com/mrss-s/list/as/site/en.as.com/tag/los_angeles_galaxy_a",
+      "website_url": "https://en.as.com/news/los-angeles-galaxy/",
+      "description": "Get the latest LA Galaxy news, rumors, analysis, stats, and more.",
+      "followers": {
+        "facebook": 2800000,
+        "twitter": 3300000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5181568.jpg?t=1597392154"
+    },
+    {
+      "title": "LA Galaxy",
+      "feed_url": "https://www.lagalaxy.com/rss.xml",
+      "website_url": "https://www.lagalaxy.com/",
+      "description": "Get the latest news, updates, analysis, stats, and more on the official website of the LA Galaxy.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 536600,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4988181.jpg?t=1597388319"
+    },
+    {
+      "title": "LAG Confidential",
+      "feed_url": "https://www.lagconfidential.com/rss/index.xml",
+      "website_url": "https://www.lagconfidential.com/",
+      "description": "Your best source for quality LA Galaxy news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5181530.jpg?t=1597385411"
+    }
+  ]
+}

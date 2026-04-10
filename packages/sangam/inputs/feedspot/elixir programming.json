@@ -1,0 +1,58 @@
+{
+  "category": "Elixir Programming",
+  "source_url": "https://rss.feedspot.com/elixir_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "ElixirStatus",
+      "feed_url": "https://elixirstatus.com/rss",
+      "website_url": "https://elixirstatus.com/",
+      "description": "Elixir news and status updates from the community for Elixir and Phoenix. Elixir Community dedicated to announcements, where you can post your new project, blog post or version update.",
+      "followers": {
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4974421.jpg?t=1621945572"
+    },
+    {
+      "title": "Plataformatec \u00bb Elixir",
+      "feed_url": "https://blog.plataformatec.com.br/tag/elixir/feed/",
+      "website_url": "https://blog.plataformatec.com.br/tag/elixir/",
+      "description": "This is the company blog of Plataformatec, a software development, and consultancy company, specialized in Elixir, Ruby and Agile.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4974426.jpg?t=1621945616"
+    },
+    {
+      "title": "AmberBit's Blog",
+      "feed_url": "https://www.amberbit.com/blog.rss",
+      "website_url": "https://www.amberbit.com/blog/",
+      "description": "AmberBit is a Ruby on Rails, JavaScript, Elixir, and web apps development company.",
+      "followers": {
+        "facebook": 178,
+        "twitter": 198
+      },
+      "image_url": "https://i1.feedspot.com/4974501.jpg?t=1621945582"
+    },
+    {
+      "title": "Daniel Berkompas",
+      "feed_url": "https://blog.danielberkompas.com/index.xml",
+      "website_url": "http://blog.danielberkompas.com/",
+      "description": "Daniel Berkompas is a full-stack engineer at Infinite Red. He is creator of LearnElixir.tv and LearnPhoenix.tv.",
+      "followers": {
+        "twitter": 595
+      },
+      "image_url": "https://i1.feedspot.com/4974444.jpg?t=1621945590"
+    },
+    {
+      "title": "Adam DeLong Blog",
+      "feed_url": "https://adamdelong.com/feed/",
+      "website_url": "https://adamdelong.com/elixir-tutorials/",
+      "description": "A collection of Elixir tutorials I have written based on my experience writing Elixir applications so far. Tutorials covering everything from Elixir data collections to Elixir testing to the Phoenix web framework.",
+      "followers": {
+        "twitter": 418
+      },
+      "image_url": "https://i1.feedspot.com/4974538.jpg?t=1621945622"
+    }
+  ]
+}

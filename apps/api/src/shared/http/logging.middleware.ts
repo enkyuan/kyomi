@@ -5,6 +5,10 @@ import { elapsedMs } from "@shared/utils/timing";
 
 const startedAtByRequest = new WeakMap<Request, number>();
 
+function requestPathname(request: Request): string {
+  return new URL(request.url).pathname;
+}
+
 /** Structured request start / complete logging (pairs with `request-id.middleware` on the same stack). */
 export const loggingMiddleware = new Elysia({
   name: "logging.middleware",
@@ -14,7 +18,7 @@ export const loggingMiddleware = new Elysia({
     startedAtByRequest.set(request, Date.now());
     const observedRequestId = getRequestIdFromHeaders(request.headers);
     log.info("request.started", {
-      url: request.url,
+      path: requestPathname(request),
       method: request.method,
       requestId: observedRequestId,
     });
@@ -23,7 +27,7 @@ export const loggingMiddleware = new Elysia({
     const observedRequestId = getRequestIdFromHeaders(request.headers);
     const startedAt = startedAtByRequest.get(request);
     log.info("request.completed", {
-      url: request.url,
+      path: requestPathname(request),
       method: request.method,
       status: set.status,
       requestId: observedRequestId,

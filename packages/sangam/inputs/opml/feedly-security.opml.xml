@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Martin subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Blogs" title="Blogs">
+            <outline type="rss" text="Vitali Kremez | Ethical Hacker | Reverse Engineer" title="Vitali Kremez | Ethical Hacker | Reverse Engineer" xmlUrl="http://www.vkremez.com/feeds/posts/default" htmlUrl="https://www.vkremez.com/"/>
+            <outline type="rss" text="Malwarebytes Labs" title="Malwarebytes Labs" xmlUrl="http://blog.malwarebytes.org/feed/" htmlUrl="https://blog.malwarebytes.com"/>
+            <outline type="rss" text="PS C:\Users\itm4n&gt; _" title="PS C:\Users\itm4n&gt; _" xmlUrl="https://itm4n.github.io/feed.xml" htmlUrl="https://itm4n.github.io/"/>
+            <outline type="rss" text="ALTAIR.blog" title="ALTAIR.blog" xmlUrl="http://www.aspnet.cz/feed.rss" htmlUrl="https://www.altair.blog/"/>
+            <outline type="rss" text="Wilbur Security" title="Wilbur Security" xmlUrl="https://www.jimwilbur.com/feed/" htmlUrl="https://www.wilbursecurity.com"/>
+            <outline type="rss" text="Decoder's Blog" title="Decoder's Blog" xmlUrl="https://decoder.cloud/feed/" htmlUrl="https://decoder.cloud"/>
+            <outline type="rss" text="Fox-IT International blog" title="Fox-IT International blog" xmlUrl="http://blog.fox-it.com/feed/" htmlUrl="https://blog.fox-it.com"/>
+            <outline type="rss" text="Ondrej Sevecek's Blog: Site Pages" title="Ondrej Sevecek's Blog: Site Pages" xmlUrl="https://www.sevecek.com/_layouts/listfeed.aspx?List=eb770b5f%2D118a%2D4521%2D8a64%2D15a8ad9c0199" htmlUrl="https://www.sevecek.com/SitePages/Forms/AllPages.aspx"/>
+            <outline type="rss" text="Troy Hunt's Blog" title="Troy Hunt's Blog" xmlUrl="http://feeds.feedburner.com/TroyHunt" htmlUrl="https://www.troyhunt.com/"/>
+            <outline type="rss" text="GCITS" title="GCITS" xmlUrl="https://gcits.com/feed/" htmlUrl="https://gcits.com"/>
+            <outline type="rss" text="Bill's Blog" title="Bill's Blog" xmlUrl="https://billdemirkapi.me/feed/" htmlUrl="https://billdemirkapi.me"/>
+        </outline>
+        <outline text="Security" title="Security">
+            <outline type="rss" text="Naked Security" title="Naked Security" xmlUrl="http://nakedsecurity.sophos.com/feed/" htmlUrl="https://nakedsecurity.sophos.com"/>
+            <outline type="rss" text="Darknet" title="Darknet" xmlUrl="http://feeds.feedburner.com/darknethackers" htmlUrl="https://www.darknet.org.uk"/>
+            <outline type="rss" text="Full Disclosure" title="Full Disclosure" xmlUrl="http://seclists.org/rss/fulldisclosure.rss" htmlUrl="http://seclists.org/#fulldisclosure"/>
+            <outline type="rss" text="Fire Eye Threat Research " title="Fire Eye Threat Research " xmlUrl="http://www.fireeye.com/blog/feed" htmlUrl="http://www.fireeye.com/blog/threat-research.html"/>
+            <outline type="rss" text="Security Latest" title="Security Latest" xmlUrl="http://blog.wired.com/defense/atom.xml" htmlUrl="https://www.wired.com/category/security/latest"/>
+            <outline type="rss" text="The Register – Security" title="The Register – Security" xmlUrl="http://www.theregister.co.uk/security/headlines.atom" htmlUrl="https://www.theregister.com/security/"/>
+            <outline type="rss" text="The Hacker News" title="The Hacker News" xmlUrl="http://thehackernews.com/feeds/posts/default" htmlUrl="https://thehackernews.com/"/>
+            <outline type="rss" text="Krebs on Security" title="Krebs on Security" xmlUrl="http://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com"/>
+            <outline type="rss" text="Unit42" title="Unit42" xmlUrl="http://feeds.feedburner.com/Unit42" htmlUrl="https://unit42.paloaltonetworks.com"/>
+            <outline type="rss" text="BleepingComputer" title="BleepingComputer" xmlUrl="http://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/"/>
+        </outline>
+    </body>
+</opml>

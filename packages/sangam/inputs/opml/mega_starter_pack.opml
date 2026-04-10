@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>RSS starter pack</title>
+    <dateCreated>Sat, 08 Sep 2018 14:28:08 -0500</dateCreated>
+    <ownerEmail>nobody_in_particular@example.com</ownerEmail>
+  </head>
+  <body>
+    <outline text="Books Bundle" title="Books Bundle">
+      <outline text="Goodreads Blog" title="Goodreads Blog" type="rss" xmlUrl="https://www.goodreads.com/blog/list_rss" htmlUrl="https://www.goodreads.com/"/>
+      <outline text="The New York Review of Books" title="The New York Review of Books" type="rss" xmlUrl="https://feeds.feedburner.com/nybooks" htmlUrl="https://www.nybooks.com"/>
+      <outline text="NYT Book Review" title="NYT Book Review" type="rss" xmlUrl="https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/books/review/rss.xml" htmlUrl="https://www.nytimes.com/section/books/review"/>
+      <outline text="Books blog | The Guardian" title="Books blog | The Guardian" type="rss" xmlUrl="https://www.theguardian.com/books/booksblog/rss" htmlUrl="https://www.theguardian.com/books/booksblog"/>
+    </outline>
+    <outline text="Celebs and Movies" title="Celebs and Movies">
+      <outline text="TMZ.com" title="TMZ.com" type="rss" xmlUrl="http://www.tmz.com/rss.xml" htmlUrl="http://www.tmz.com"/>
+      <outline text="Entertainment Weekly" title="Entertainment Weekly" type="rss" xmlUrl="http://entertainmentweekly.tumblr.com/rss" htmlUrl="http://entertainmentweekly.tumblr.com/"/>
+      <outline text="/Film" title="/Film" type="rss" xmlUrl="https://feeds2.feedburner.com/slashfilm" htmlUrl="https://www.slashfilm.com"/>
+      <outline text="The A.V. Club" title="The A.V. Club" type="rss" xmlUrl="https://www.avclub.com/rss" htmlUrl="https://www.avclub.com"/>
+    </outline>
+    <outline text="Delicious Dining" title="Delicious Dining">
+      <outline text="smitten kitchen" title="smitten kitchen" type="rss" xmlUrl="http://feeds.feedburner.com/smittenkitchen" htmlUrl="https://smittenkitchen.com"/>
+      <outline text="Serious Eats" title="Serious Eats" type="rss" xmlUrl="http://feeds.feedburner.com/seriouseatsfeaturesvideos" htmlUrl="http://www.seriouseats.com/"/>
+      <outline text="Skinnytaste" title="Skinnytaste" type="rss" xmlUrl="https://www.skinnytaste.com/feed/" htmlUrl="https://www.skinnytaste.com"/>
+      <outline text="101 Cookbooks" title="101 Cookbooks" type="rss" xmlUrl="https://www.101cookbooks.com/feed" htmlUrl="https://www.101cookbooks.com"/>
+    </outline>
+    <outline text="Fascination Station" title="Fascination Station">
+      <outline text="Damn Interesting" title="Damn Interesting" type="rss" xmlUrl="https://feeds.feedburner.com/damninteresting/all" htmlUrl="https://www.damninteresting.com"/>
+      <outline text="99% Invisible" title="99% Invisible" type="rss" xmlUrl="http://feeds.feedburner.com/99pi" htmlUrl="https://99percentinvisible.org"/>
+      <outline text="Atlas Obscura - Latest Articles and Places" title="Atlas Obscura - Latest Articles and Places" type="rss" xmlUrl="https://www.atlasobscura.com/feeds/latest" htmlUrl="https://www.atlasobscura.com"/>
+    </outline>
+    <outline text="Freedom From Accounts" title="Freedom From Accounts">
+      <outline text="BEEPLE - Tumblr" title="BEEPLE - Tumblr" type="rss" xmlUrl="http://beeple.tumblr.com/rss" htmlUrl="http://beeple.tumblr.com/"/>
+      <outline text="A subreddit for cute and cuddly pictures - Reddit" title="A subreddit for cute and cuddly pictures - Reddit" type="rss" xmlUrl="https://www.reddit.com/r/aww/.rss" htmlUrl="https://www.reddit.com/r/aww/"/>
+      <outline text="Primitive Technology - Youtube" title="Primitive Technology - Youtube" type="rss" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCAL3JXZSzSm8AlZyD3nQdBA" htmlUrl="https://www.youtube.com/channel/UCAL3JXZSzSm8AlZyD3nQdBA"/>
+      <outline text="Vimeo / Kosuke Sugimoto’s videos" title="Vimeo / Kosuke Sugimoto’s videos" type="rss" xmlUrl="https://vimeo.com/user36872580/videos/rss" htmlUrl="https://vimeo.com/user36872580/videos"/>
+    </outline>
+    <outline text="Gaming Greatness" title="Gaming Greatness">
+      <outline text="IGN Video Games" title="IGN Video Games" type="rss" xmlUrl="http://feeds.ign.com/ign/games-all" htmlUrl="http://www.ign.com/articles"/>
+      <outline text="Tiny Cartridge 3DS" title="Tiny Cartridge 3DS" type="rss" xmlUrl="http://tinycartridge.com/rss" htmlUrl="http://tinycartridge.com/"/>
+      <outline text="It Runs Doom!" title="It Runs Doom!" type="rss" xmlUrl="http://itrunsdoom.tumblr.com/rss" htmlUrl="http://itrunsdoom.tumblr.com/"/>
+      <outline text="Xbox Live's Major Nelson" title="Xbox Live's Major Nelson" type="rss" xmlUrl="https://majornelson.com/feed/" htmlUrl="https://majornelson.com"/>
+      <outline text="No Wrong Way To Play" title="No Wrong Way To Play" type="rss" xmlUrl="https://nowrongwaytoplay.tumblr.com/rss" htmlUrl="https://nowrongwaytoplay.tumblr.com/"/>
+      <outline text="Rock Paper Shotgun – PC Game Reviews, Previews, Subjectivity" title="Rock Paper Shotgun – PC Game Reviews, Previews, Subjectivity" type="rss" xmlUrl="https://www.rockpapershotgun.com/feed/" htmlUrl="https://www.rockpapershotgun.com"/>
+      <outline text="Gematsu" title="Gematsu" type="rss" xmlUrl="https://gematsu.com/feed" htmlUrl="https://gematsu.com"/>
+      <outline text="Steam Spy - Medium" title="Steam Spy - Medium" type="rss" xmlUrl="https://galyonk.in/feed" htmlUrl="https://galyonk.in?source=rss----92ace9487f22---4"/>
+      <outline text="Co-Optimus" title="Co-Optimus" type="rss" xmlUrl="https://feeds.feedburner.com/Co-optimus" htmlUrl="http://www.co-optimus.com"/>
+      <outline text="Nerfwire" title="Nerfwire" type="rss" xmlUrl="https://www.nerfwire.com/feed/" htmlUrl="https://www.nerfwire.com"/>
+      <outline text="Niche Gamer" title="Niche Gamer" type="rss" xmlUrl="https://nichegamer.com/feed/" htmlUrl="https://nichegamer.com"/>
+    </outline>
+    <outline text="Guns Galore" title="Guns Galore">
+      <outline text="Impro Guns" title="Impro Guns" type="rss" xmlUrl="https://homemadeguns.wordpress.com/feed/" htmlUrl="https://homemadeguns.wordpress.com"/>
+      <outline text="NRA BLOG" title="NRA BLOG" type="rss" xmlUrl="https://www.nrablog.com/rss" htmlUrl="https://www.nrablog.com/"/>
+      <outline text="Forgotten Weapons" title="Forgotten Weapons" type="rss" xmlUrl="https://www.forgottenweapons.com/feed/" htmlUrl="https://www.forgottenweapons.com"/>
+      <outline text="The Firearm Blog" title="The Firearm Blog" type="rss" xmlUrl="https://www.thefirearmblog.com/blog/feed/" htmlUrl="https://www.thefirearmblog.com/blog"/>
+    </outline>
+    <outline text="Music Hotline" title="Music Hotline">
+      <outline text="Bandcamp Daily" title="Bandcamp Daily" type="rss" xmlUrl="https://daily.bandcamp.com/feed/" htmlUrl="https://daily.bandcamp.com"/>
+      <outline text="Best New Albums - Pitchfork" title="Best New Albums - Pitchfork" type="rss" xmlUrl="https://pitchfork.com/rss/reviews/best/albums/" htmlUrl="https://pitchfork.com/reviews/best/albums/"/>
+      <outline text="Stereogum" title="Stereogum" type="rss" xmlUrl="https://www.stereogum.com/feed/" htmlUrl="https://www.stereogum.com"/>
+      <outline text="3hive" title="3hive" type="rss" xmlUrl="https://3hive.com/feed/" htmlUrl="https://3hive.com"/>
+      <outline text="NME" title="NME" type="rss" xmlUrl="https://www.nme.com/feed" htmlUrl="https://www.nme.com"/>
+    </outline>
+    <outline text="Podcast Spectacular" title="Podcast Spectacular">
+      <outline text="Revolutions" title="Revolutions" type="rss" xmlUrl="http://revolutionspodcast.libsyn.com/rss" htmlUrl="http://www.revolutionspodcast.com"/>
+      <outline text="Twenty Thousand Hertz" title="Twenty Thousand Hertz" type="rss" xmlUrl="https://www.20k.org/home?format=RSS" htmlUrl="https://www.20k.org/"/>
+      <outline text="Twenty Thousand Hertz" title="Twenty Thousand Hertz" type="rss" xmlUrl="http://feeds.megaphone.fm/20k" htmlUrl="http://www.20k.org"/>
+      <outline text="The Magnus Archives" title="The Magnus Archives" type="rss" xmlUrl="http://rss.acast.com/themagnusarchives" htmlUrl="http://www.acast.com/themagnusarchives"/>
+      <outline text="Noclip" title="Noclip" type="rss" xmlUrl="http://noclippodcast.libsyn.com/rss" htmlUrl="https://www.noclip.video"/>
+      <outline text="The Podcast - Lore" title="The Podcast - Lore" type="rss" xmlUrl="https://www.lorepodcast.com/episodes?format=RSS" htmlUrl="https://www.lorepodcast.com/episodes/"/>
+      <outline text="Uncanny Japan - Folklore and Culture" title="Uncanny Japan - Folklore and Culture" type="rss" xmlUrl="http://www.uncannyjapan.com/feed/podcast/" htmlUrl="http://www.uncannyjapan.com"/>
+      <outline text="Darknet Diaries" title="Darknet Diaries" type="rss" xmlUrl="https://darknetdiaries.com/podcast.xml" htmlUrl="https://darknetdiaries.com/"/>
+      <outline text="Plumbing the Death Star" title="Plumbing the Death Star" type="rss" xmlUrl="https://rss.acast.com/plumbingthedeathstar" htmlUrl="http://www.sanspantsradio.com/plumbing-the-death-star/"/>
+    </outline>
+    <outline text="Politics Fightbox" title="Politics Fightbox">
+      <outline text="davidthompson" title="davidthompson" type="rss" xmlUrl="http://feeds.feedburner.com/Davidthompson" htmlUrl="http://davidthompson.typepad.com/davidthompson/"/>
+      <outline text="Ace of Spades HQ" title="Ace of Spades HQ" type="rss" xmlUrl="http://ace.mu.nu/index.xml" htmlUrl="http://ace.mu.nu/"/>
+      <outline text="Slate Star Codex" title="Slate Star Codex" type="rss" xmlUrl="http://slatestarcodex.com/feed/" htmlUrl="http://slatestarcodex.com"/>
+      <outline text="Slate News and Politics" title="Slate News and Politics" type="rss" xmlUrl="http://www.slate.com/articles/news_and_politics.fulltext.all.10.rss" htmlUrl="http://www.slate.com/articles/news_and_politics.fulltext.all.10.rss"/>
+      <outline text="Sultan Knish" title="Sultan Knish" type="rss" xmlUrl="http://feeds.feedburner.com/FromNyToIsraelSultanRevealsTheStoriesBehindTheNews?format=xml" htmlUrl="http://sultanknish.blogspot.com/"/>
+      <outline text="Features – FiveThirtyEight" title="Features – FiveThirtyEight" type="rss" xmlUrl="https://fivethirtyeight.com/features/feed/" htmlUrl="https://fivethirtyeight.com"/>
+      <outline text="Status 451" title="Status 451" type="rss" xmlUrl="https://status451.com/feed/" htmlUrl="https://status451.com"/>
+      <outline text="Vox -  All" title="Vox -  All" type="rss" xmlUrl="https://www.vox.com/rss/index.xml" htmlUrl="https://www.vox.com/"/>
+      <outline text="Instapundit" title="Instapundit" type="rss" xmlUrl="https://pjmedia.com/instapundit/feed/" htmlUrl="https://pjmedia.com/instapundit"/>
+      <outline text="Best of The Atlantic" title="Best of The Atlantic" type="rss" xmlUrl="https://www.theatlantic.com/feed/best-of/" htmlUrl="https://www.theatlantic.com/"/>
+      <outline text="Volokh Conspiracy" title="Volokh Conspiracy" type="rss" xmlUrl="https://reason.com/volokh/atom.xml" htmlUrl="https://reason.com/volokh/atom.xml?startdate=2018-09-01+17%3A08%3A00"/>
+      <outline text="The Corner | National Review" title="The Corner | National Review" type="rss" xmlUrl="https://www.nationalreview.com/corner/feed/" htmlUrl="https://www.nationalreview.com"/>
+      <outline text="Popehat" title="Popehat" type="rss" xmlUrl="https://feeds.feedburner.com/Popehat" htmlUrl="https://www.popehat.com"/>
+    </outline>
+    <outline text="Science Spectacular" title="Science Spectacular">
+      <outline text="Scientific American Content: Global" title="Scientific American Content: Global" type="rss" xmlUrl="http://rss.sciam.com/ScientificAmerican-Global?format=xml" htmlUrl="http://www.scientificamerican.com"/>
+      <outline text="Body Horrors" title="Body Horrors" type="rss" xmlUrl="http://feeds.feedburner.com/BodyHorrors" htmlUrl="http://discovermagazine.com/rss/blog-feeds/body-horrors"/>
+      <outline text="What If?" title="What If?" type="rss" xmlUrl="https://what-if.xkcd.com/feed.atom" htmlUrl="https://what-if.xkcd.com/feed.atom"/>
+      <outline text="NASA Image of the Day" title="NASA Image of the Day" type="rss" xmlUrl="https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss" htmlUrl="http://www.nasa.gov/"/>
+      <outline text="New Scientist - Home" title="New Scientist - Home" type="rss" xmlUrl="https://www.newscientist.com/feed/home?cmpid=RSS|NSNS-Home&amp;amp;utm_medium=RSS&amp;amp;utm_source=NSNS&amp;amp;utm_campaign=Home&amp;amp;utm_content=Home" htmlUrl="https://www.newscientist.com"/>
+      <outline text="Popular Science" title="Popular Science" type="rss" xmlUrl="https://www.popsci.com/rss.xml" htmlUrl="https://www.popsci.com/rss.xml"/>
+    </outline>
+    <outline text="Tech News and Views" title="Tech News and Views">
+      <outline text="Hacker News" title="Hacker News" type="rss" xmlUrl="https://news.ycombinator.com/rss" htmlUrl="https://news.ycombinator.com/"/>
+      <outline text="Code Of Honor" title="Code Of Honor" type="rss" xmlUrl="https://www.codeofhonor.com/blog/feed" htmlUrl="https://www.codeofhonor.com/blog"/>
+      <outline text="Random ASCII" title="Random ASCII" type="rss" xmlUrl="https://randomascii.wordpress.com/feed/" htmlUrl="https://randomascii.wordpress.com"/>
+      <outline text="Coding Horror" title="Coding Horror" type="rss" xmlUrl="https://feeds.feedburner.com/codinghorror" htmlUrl="https://blog.codinghorror.com/"/>
+      <outline text="The Old New Thing" title="The Old New Thing" type="rss" xmlUrl="https://blogs.msdn.microsoft.com/oldnewthing/feed" htmlUrl="https://blogs.msdn.microsoft.com/oldnewthing"/>
+      <outline text="TechCrunch" title="TechCrunch" type="rss" xmlUrl="https://techcrunch.com/feed/" htmlUrl="https://techcrunch.com"/>
+      <outline text="Source Code in TV and Films" title="Source Code in TV and Films" type="rss" xmlUrl="https://moviecode.tumblr.com/rss" htmlUrl="https://moviecode.tumblr.com/"/>
+      <outline text="The Keyword" title="The Keyword" type="rss" xmlUrl="https://www.blog.google/rss/" htmlUrl="https://www.blog.google/"/>
+      <outline text="The Register" title="The Register" type="rss" xmlUrl="https://www.theregister.co.uk/headlines.atom" htmlUrl="https://www.theregister.co.uk/"/>
+      <outline text="Lifehacker" title="Lifehacker" type="rss" xmlUrl="https://lifehacker.com/rss" htmlUrl="https://lifehacker.com"/>
+      <outline text="Internet of Shit" title="Internet of Shit" type="rss" xmlUrl="https://internetofshit.net/rss/" htmlUrl="https://internetofshit.net/"/>
+    </outline>
+    <outline text="Travel Trail" title="Travel Trail">
+      <outline text="The Points Guy" title="The Points Guy" type="rss" xmlUrl="https://thepointsguy.com/feed/" htmlUrl="https://thepointsguy.com"/>
+      <outline text="adventure journal" title="adventure journal" type="rss" xmlUrl="https://www.adventure-journal.com/feed/" htmlUrl="https://www.adventure-journal.com"/>
+      <outline text="Unpacked - Lonely Planet's travel blog" title="Unpacked - Lonely Planet's travel blog" type="rss" xmlUrl="https://www.lonelyplanet.com/blog/feed/atom/" htmlUrl="https://lonelyplanet.com/blog/feed/atom"/>
+    </outline>
+    <outline text="USA News Firehose" title="USA News Firehose">
+      <outline text="Reuters: U.S." title="Reuters: U.S." type="rss" xmlUrl="http://feeds.reuters.com/Reuters/domesticNews" htmlUrl="https://www.reuters.com"/>
+      <outline text="FOX News" title="FOX News" type="rss" xmlUrl="http://feeds.foxnews.com/foxnews/national" htmlUrl="http://www.foxnews.com/"/>
+      <outline text="CNN.com - RSS Channel - US" title="CNN.com - RSS Channel - US" type="rss" xmlUrl="http://rss.cnn.com/rss/edition_us.rss" htmlUrl="https://www.cnn.com/us/index.html"/>
+    </outline>
+    <outline text="Web Comics" title="Web Comics">
+      <outline text="Nedroid Picture Diary 2" title="Nedroid Picture Diary 2" type="rss" xmlUrl="http://nedroid.com/feed/atom/" htmlUrl="http://nedroid.com"/>
+      <outline text="xkcd.com" title="xkcd.com" type="rss" xmlUrl="https://xkcd.com/atom.xml" htmlUrl="https://xkcd.com/"/>
+      <outline text="Let's Speak English" title="Let's Speak English" type="rss" xmlUrl="http://www.marycagle.com/rss.php" htmlUrl="http://www.marycagle.com/"/>
+      <outline text="Hark, A Vagrant!" title="Hark, A Vagrant!" type="rss" xmlUrl="http://www.harkavagrant.com/rssfeed.php" htmlUrl="http://www.harkavagrant.com"/>
+      <outline text="Dilbert Daily Strip" title="Dilbert Daily Strip" type="rss" xmlUrl="http://dilbert.com/feed" htmlUrl="http://dilbert.com"/>
+      <outline text="Three Panel Soul" title="Three Panel Soul" type="rss" xmlUrl="http://www.threepanelsoul.com/rss.php" htmlUrl="http://www.threepanelsoul.com/"/>
+      <outline text="Kill Six Billion Demons" title="Kill Six Billion Demons" type="rss" xmlUrl="https://killsixbilliondemons.com/feed/" htmlUrl="https://killsixbilliondemons.com"/>
+      <outline text="FoxTrot" title="FoxTrot" type="rss" xmlUrl="https://www.foxtrot.com/feed/" htmlUrl="https://www.foxtrot.com"/>
+    </outline>
+  </body>
+</opml>

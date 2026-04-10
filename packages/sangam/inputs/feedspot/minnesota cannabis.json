@@ -1,0 +1,26 @@
+{
+  "category": "Minnesota Cannabis",
+  "source_url": "https://rss.feedspot.com/minnesota_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "MNWeedEvents Blog",
+      "feed_url": "https://mnweedevents.com/cannabis-lifestyle-blog/f.atom",
+      "website_url": "https://mnweedevents.com/cannabis-lifestyle-blog",
+      "description": "This blog covers local Minnesota cannabis events and other weed goodies. MNWeedEvents serves as a trusted source of cannabis sesh weed-related events, educational courses, and cannabis industry jobs in Minnesota, covering all towns and cities such as Anoka, Duluth, Fairmont, North Branch, Mankato, Minneapolis, Rochester, St Paul, and Stillwater.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7285008.jpg?t=1711614832"
+    },
+    {
+      "title": "MJBiz \u00bb Minnesota",
+      "feed_url": "https://mjbizdaily.com/news-by-state/minnesota/feed/",
+      "website_url": "https://mjbizdaily.com/news-by-state/minnesota/",
+      "description": "Get Minnesota Cannabis Industry News and Marijuana legislation updates at Marijuana Business Daily, the leading publication in the cannabis world. Founded in 2011, MJBiz\u2122 is the most trusted, independent publisher and event producer serving America's cannabis industry entrepreneurs and investors.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 77900,
+        "instagram": 73600
+      },
+      "image_url": "https://i1.feedspot.com/7285009.jpg?t=1711614720"
+    }
+  ]
+}

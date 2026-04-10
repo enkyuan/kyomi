@@ -1,0 +1,253 @@
+{
+  "category": "Le Monde",
+  "source_url": "https://rss.feedspot.com/lemonde_rss_feeds",
+  "feeds": [
+    {
+      "title": "Le Monde \u00bb International",
+      "feed_url": "https://www.lemonde.fr/en/international/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/international/",
+      "description": "International - Discover all the articles, videos and infographics in the International section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb United States",
+      "feed_url": "https://www.lemonde.fr/en/united-states/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/united-states/",
+      "description": "United States - Discover all the articles, videos and infographics in the United States section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde",
+      "feed_url": "https://www.lemonde.fr/en/rss/une.xml",
+      "website_url": "https://www.lemonde.fr/en/",
+      "description": "Le Monde is the number one website for news and newspaper articles. Get the latest international news, news on France, Society, economy, culture, environment, blogs, and more. Le Monde is a French daily afternoon newspaper and the main publication of Le Monde Group founded in 1944.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 16700,
+        "instagram": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Europe",
+      "feed_url": "https://www.lemonde.fr/en/europe/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/europe/",
+      "description": "Europe - Discover all the articles, videos and infographics in the Europe section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb United Kingdom",
+      "feed_url": "https://www.lemonde.fr/en/united-kingdom/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/united-kingdom/",
+      "description": "United Kingdom - Discover all the articles, videos and infographics in the United Kingdom section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb TV Shows",
+      "feed_url": "https://www.lemonde.fr/en/tv-shows/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/tv-shows/",
+      "description": "TV Shows news: All the articles, features, photos and videos from Le Monde.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Environment",
+      "feed_url": "https://www.lemonde.fr/en/environment/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/environment/",
+      "description": "Environment - Discover all the articles, videos and infographics in the Environment section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Sports",
+      "feed_url": "https://www.lemonde.fr/en/sports/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/sports/",
+      "description": "Sports - Discover all the articles, videos and infographics in the Sports section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Performance Art",
+      "feed_url": "https://www.lemonde.fr/en/performance-art/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/performance-art/",
+      "description": "Performing Arts - Discover all the articles, videos and infographics in the Performing Arts section on Le Monde.fr.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Arts",
+      "feed_url": "https://www.lemonde.fr/en/arts/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/arts/",
+      "description": "Art - Discover all the articles, videos and infographics in the Art section on Le Monde.fr.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Books",
+      "feed_url": "https://www.lemonde.fr/en/books/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/books/",
+      "description": "Books - Discover all the articles, videos and infographics in the Books section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Television & Radio",
+      "feed_url": "https://www.lemonde.fr/en/television-radio/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/televisions-radio/",
+      "description": "Television - Discover all the articles, videos and infographics in the Television section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800000
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Music",
+      "feed_url": "https://www.lemonde.fr/en/music/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/music/",
+      "description": "Music - Discover all the articles, videos and infographics in the Music section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Cinema",
+      "feed_url": "https://www.lemonde.fr/en/cinema/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/cinema/",
+      "description": "Cinema - Discover all the articles, videos and infographics in the Cinema section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Culture",
+      "feed_url": "https://www.lemonde.fr/en/culture/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/culture/",
+      "description": "Culture - Discover all the articles, videos and infographics in the Culture section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Media",
+      "feed_url": "https://www.lemonde.fr/en/media/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/media/",
+      "description": "Media - Discover all the articles, videos and infographics in the Media section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Employment",
+      "feed_url": "https://www.lemonde.fr/en/employment/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/employment/",
+      "description": "Employment - Discover all the articles, videos and infographics in the Employment section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Money & Investment",
+      "feed_url": "https://www.lemonde.fr/en/money-investments/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/money-investments/",
+      "description": "Money & Investments - Discover all the articles, videos and infographics in the Money & Investments section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Climate Change",
+      "feed_url": "https://www.lemonde.fr/en/climate-change/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/climate-change/",
+      "description": "Climate change - Discover all the articles, videos and infographics in the Climate change section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Pixels",
+      "feed_url": "https://www.lemonde.fr/en/pixels/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/pixels/",
+      "description": "Pixels - Discover all the articles, videos and infographics in the Pixels section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Economy",
+      "feed_url": "https://www.lemonde.fr/en/economy/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/economy/",
+      "description": "Economy - Discover all the articles, videos and infographics in the Economy section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Magazine",
+      "feed_url": "https://www.lemonde.fr/en/m-le-mag/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/m-le-mag/",
+      "description": "Magazine - Discover all the articles, videos and infographics in the Magazine section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    },
+    {
+      "title": "Le Monde \u00bb Our Times",
+      "feed_url": "https://www.lemonde.fr/en/our-times/rss_full.xml",
+      "website_url": "https://www.lemonde.fr/en/our-times/",
+      "description": "Our Times - Discover all the articles, videos and infographics in the Our Times section on Le Monde.fr.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 94800
+      },
+      "image_url": "https://i1.feedspot.com/5460263.jpg?t=1666869108"
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "category": "Frontend",
+  "source_url": "https://rss.feedspot.com/frontend_rss_feeds",
+  "feeds": [
+    {
+      "title": "Smashing Magazine",
+      "feed_url": "https://www.smashingmagazine.com/feed",
+      "website_url": "https://www.smashingmagazine.com/articles/",
+      "description": "Smashing Magazine provides information on CSS, JavaScript, front-end, accessibility, UX and design. For developers, designers and front-end engineers. Founded in September 2006 in Germany, Smashing Magazine delivers reliable, useful, but most importantly practical articles to web designers and developers.",
+      "followers": {
+        "facebook": 268500,
+        "twitter": 875200
+      },
+      "image_url": "https://i1.feedspot.com/4398932.jpg?t=1643430987"
+    },
+    {
+      "title": "Codrops",
+      "feed_url": "https://tympanus.net/codrops/feed/",
+      "website_url": "https://tympanus.net/codrops/",
+      "description": "Creative front-end resources and inspiration for web professionals. Codrops is a web design and development blog that publishes articles and tutorials about the latest web trends, techniques and new possibilities.",
+      "followers": {
+        "facebook": 81800,
+        "twitter": 180200,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/90418.jpg?t=1606107963"
+    },
+    {
+      "title": "Kilian Valkhof",
+      "feed_url": "https://feeds.feedburner.com/Kilianvalkhofcom",
+      "website_url": "https://kilianvalkhof.com/",
+      "description": "Hello! I'm Kilian Valkhof, a front-end developer, user-experience designer and generalist. That means I also do back-end, visual design, marketing and DevOps if needed. I build tools for developers, designers and other people that work on the web to make them more effective, efficient and to let them have more fun. I often write about the things I built or explain the way I look at topics like design tools or accessibility.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/133177.jpg?t=1643111456"
+    },
+    {
+      "title": "LogRocket Blog",
+      "feed_url": "https://blog.logrocket.com/feed/",
+      "website_url": "https://blog.logrocket.com/",
+      "description": "A blog for front-end developers and web app engineers. LogRocket was founded in 2016 by Matthew Arbesfeld and Ben Edelstein, a computer science duo who have been building products together since the 3rd grade. Frustrated by how difficult it was to understand their customers' experiences, Arbesfeld and Edelstein set out towards an audacious goal: make every experience on the web as perfect as possible. It combines session replay, performance monitoring, and product analytics empowering software teams to create the ideal product experience.",
+      "followers": {
+        "facebook": 884,
+        "twitter": 15200
+      },
+      "image_url": "https://i1.feedspot.com/5289563.jpg?t=1623071585"
+    },
+    {
+      "title": "CSS { In Real Life }",
+      "feed_url": "https://css-irl.info/rss.xml",
+      "website_url": "https://css-irl.info/",
+      "description": "A blog about front-end technologies, with a particular focus on CSS. Find the latest tips, tricks, tutorials, and handy links related to CSS. Written & developed by Michelle Barker, Lead Front End Developer at Atomic Smash and CSS superfan.",
+      "followers": {
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5152829.jpg?t=1627977273"
+    },
+    {
+      "title": "Josh W. Comeau",
+      "feed_url": "https://www.joshwcomeau.com/rss.xml",
+      "website_url": "https://www.joshwcomeau.com/",
+      "description": "Josh writes articles with a focus on React, Gatsby, CSS, and animation. His goal is to create helpful content for front-end web developers.",
+      "followers": {
+        "twitter": 106900
+      },
+      "image_url": "https://i1.feedspot.com/5354568.jpg?t=1639746302"
+    },
+    {
+      "title": "Honeybadger Developer Blog",
+      "feed_url": "https://www.honeybadger.io/blog/feed.xml",
+      "website_url": "https://www.honeybadger.io/blog/",
+      "description": "We're the application health monitoring tool built for you, the developer who cares about a quality product and happy customers. The modern error management app gives you more than an email and a backtrace. Read useful articles for web developers in Ruby, Javascript, Elixir, and more on our blog page.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5365337.jpg?t=1643107989"
+    },
+    {
+      "title": "Ahmad Shadeed Blog",
+      "feed_url": "https://ishadeed.com/feed.xml",
+      "website_url": "https://ishadeed.com/articles/",
+      "description": "I'm Ahmad - an independent product designer and front end developer from Palestine. I enjoy working on large scale Product Design and Front End Projects, solving complex design problems.",
+      "followers": {
+        "twitter": 25100,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5152835.jpg?t=1627976823"
+    },
+    {
+      "title": "Bitovi Blog",
+      "feed_url": "https://www.bitovi.com/blog/rss.xml",
+      "website_url": "https://www.bitovi.com/blog",
+      "description": "Bitovi simplifies JavaScript development and UX design. We teach people how to create amazing web apps, the right way. After years of solving complex front-end engineering problems, we know what works and what doesn't. And we've baked that experience into our tools, consulting, and training.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5365342.jpg?t=1643108010"
+    },
+    {
+      "title": "Lea Verou",
+      "feed_url": "https://feeds.feedburner.com/leaverou",
+      "website_url": "https://lea.verou.me/",
+      "description": "My name is Lea Verou. I have a long-standing passion for open web standards. I love sharing knowledge and have given over 100 invited talks at web design/web development conferences around the world.",
+      "followers": {
+        "twitter": 120200
+      },
+      "image_url": "https://i1.feedspot.com/1209199.jpg?t=1643722152"
+    },
+    {
+      "title": "Sara Soueidan Blog",
+      "feed_url": "https://www.sarasoueidan.com/blog/index.xml",
+      "website_url": "https://www.sarasoueidan.com/blog/",
+      "description": "Hi, I'm Sara. I'm an independent web user interface and design systems engineer, author, speaker, and trainer based in Lebanon. Find project case studies, thought processes & design thinking, front-end strategy, techniques, and best practices, focused on HTML, CSS, SVG, accessibility, and everything in between.",
+      "followers": {
+        "twitter": 120300
+      },
+      "image_url": "https://i1.feedspot.com/5367112.jpg?t=1643722730"
+    },
+    {
+      "title": "Jake Archibald's Blog",
+      "feed_url": "https://jakearchibald.com/posts.rss",
+      "website_url": "https://jakearchibald.com/",
+      "description": "I'm Jake. I'm a developer advocate for Google Chrome. I talk about whatever's going on in the world of web development.",
+      "followers": {
+        "twitter": 105500
+      },
+      "image_url": "https://i1.feedspot.com/1914664.jpg?t=1643721728"
+    },
+    {
+      "title": "Matuzo Blog",
+      "feed_url": "https://www.matuzo.at/feed_all.xml?rev=1643360019822",
+      "website_url": "https://www.matuzo.at/blog/",
+      "description": "My name is Manuel Matuzovic. I'm a professional web developer since 2008 and a freelancer since 2010. I'm specialized in HTML, accessibility, and CSS layout and architecture.",
+      "followers": {
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5367111.jpg?t=1643722523"
+    },
+    {
+      "title": "Speckyboy",
+      "feed_url": "https://speckyboy.com/feed/",
+      "website_url": "https://speckyboy.com/",
+      "description": "Speckyboy is an online magazine for designers with its focus on sharing helpful resources, exploring new techniques, sharing useful tips, and inspiring you to build a better web.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 68600
+      },
+      "image_url": "https://i1.feedspot.com/4423038.jpg?t=1606110703"
+    },
+    {
+      "title": "CSS-Tricks",
+      "feed_url": "https://css-tricks.com/feed/",
+      "website_url": "https://css-tricks.com/",
+      "description": "Find the Tips, Tricks, and Techniques on using Cascading Style Sheets.",
+      "followers": {
+        "facebook": 75700,
+        "twitter": 276,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4487476.jpg?t=1741339328"
+    },
+    {
+      "title": "Frontend Masters Blog",
+      "feed_url": "https://frontendmasters.com/blog/feed/",
+      "website_url": "https://frontendmasters.com/blog/",
+      "description": "Frontend Masters Boost is a blog about web development. It's written by the team at Frontend Masters, course instructors from the industry, and curated guest authors. The goal is to help you on your path to becoming a senior developer, or to be an even better one.",
+      "followers": {
+        "facebook": 69600,
+        "twitter": 128100,
+        "instagram": 39900
+      },
+      "image_url": "https://i1.feedspot.com/8640385.jpg?t=1752218035"
+    },
+    {
+      "title": "A List Apart",
+      "feed_url": "https://alistapart.com/main/feed/",
+      "website_url": "https://alistapart.com/articles/",
+      "description": "Since 1998, A List Apart has explored the design, development, and meaning of web content, with a special focus on web standards and best practices. Its mission is to inform, provoke, challenge, lead and educate the practice and profession of web design and related specializations.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 133600
+      },
+      "image_url": "https://i1.feedspot.com/320467.jpg?t=1608799625"
+    },
+    {
+      "title": "CodePen Blog",
+      "feed_url": "https://blog.codepen.io/feed/",
+      "website_url": "https://blog.codepen.io/",
+      "description": "CodePen is a social development environment. In this blog, the CodePen team talks about the ins and outs of running a web software business. They focus primarily on front-end languages like HTML, CSS, JavaScript, and preprocessing syntaxes that turn into those things.",
+      "followers": {
+        "twitter": 186800,
+        "instagram": 64300
+      },
+      "image_url": "https://i1.feedspot.com/4540948.jpg?t=1606109385"
+    },
+    {
+      "title": "Amazon AWS Blog \u00bb Front-End Web & Mobile",
+      "feed_url": "https://aws.amazon.com/blogs/mobile/feed/",
+      "website_url": "https://aws.amazon.com/blogs/mobile/",
+      "description": "AWS Mobile Blog is the official AWS developer hub for front\u2011end web and mobile engineering\u2014offering deep technical guides, architecture patterns, and new feature updates to empower scalable, serverless, and AI\u2011powered app development.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000,
+        "instagram": 673000
+      },
+      "image_url": "https://i1.feedspot.com/5263031.jpg?t=1752218201"
+    },
+    {
+      "title": "Frontend Undefined",
+      "feed_url": "https://www.frontendundefined.com/feed/feed.xml",
+      "website_url": "https://www.frontendundefined.com/",
+      "description": "Posts about frontend development",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8640383.jpg"
+    },
+    {
+      "title": "Frank M Taylor Blog \u00bb Front-end",
+      "feed_url": "https://blog.frankmtaylor.com/category/web/code-and-development/feed/",
+      "website_url": "https://blog.frankmtaylor.com/category/web/code-and-development/",
+      "description": "Front-end Development: the fun stuff that happens in the browser with HTML, CSS, and JavaScript",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8640384.jpg?t=1752218571"
+    },
+    {
+      "title": "Ben Frain Blog",
+      "feed_url": "https://benfrain.com/feed",
+      "website_url": "https://benfrain.com/blog/",
+      "description": "Ben Frain author and web developer",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/1535836.jpg?t=1752218785"
+    },
+    {
+      "title": "Lea Verou Blog",
+      "feed_url": "https://lea.verou.me/feed.xml",
+      "website_url": "https://lea.verou.me/blog/",
+      "description": "Lea Verou's blog explores advanced CSS, web standards, design systems, and open-source tools from a front-end expert's perspective.",
+      "followers": {
+        "twitter": 120200
+      },
+      "image_url": "https://i1.feedspot.com/5726872.jpg?t=1752218965"
+    },
+    {
+      "title": "webrtcHacks",
+      "feed_url": "https://webrtchacks.com/feed/",
+      "website_url": "https://webrtchacks.com/",
+      "description": "We are WebRTC technologists and enthusiasts. Our goals in this blog are to provide more detailed technical explanations on how WebRTC works, identify, review, and organize the rapidly expanding WebRTC tools market, document our experiments with various WebRTC applications and serve the needs of WebRTC developers.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5150292.jpg?t=1664363426"
+    },
+    {
+      "title": "Codemotion Magazine \u00bb Frontend",
+      "feed_url": "https://www.codemotion.com/magazine/frontend/feed/",
+      "website_url": "https://www.codemotion.com/magazine/frontend/",
+      "description": "Codemotion Magazine Frontend section delivers expert-led articles on advanced web development\u2014covering CSS, JavaScript frameworks, UX patterns, AI-powered frontends, and architecture best practices for professional frontend engineers",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 12900,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/8640386.jpg?t=1752219019"
+    },
+    {
+      "title": "David Walsh",
+      "feed_url": "https://davidwalsh.name/feed",
+      "website_url": "https://davidwalsh.name/",
+      "description": "A blog featuring tutorials about JavaScript, HTML5, AJAX, PHP, CSS, WordPress, and everything else development. David Walsh is Mozilla's senior web developer and the core developer for the MooTools Javascript Framework.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 86400
+      },
+      "image_url": "https://i1.feedspot.com/4431048.jpg?t=1606110743"
+    },
+    {
+      "title": "Free Frontend",
+      "feed_url": "https://freefrontend.com/index.xml",
+      "website_url": "https://freefrontend.com/",
+      "description": "Free Frontend offers a bunch of hand-picked, accurate, and guiding articles on topics like HTML, CSS and JavaScript (jQuery, React, Vue) with code examples, tutorials and articles.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5224833.jpg?t=1643109905"
+    },
+    {
+      "title": "Nikita Hlopov's Frontend Dev Blog",
+      "feed_url": "https://nikitahl.com/feed.xml",
+      "website_url": "https://nikitahl.com/",
+      "description": "Hello, my name is Nikita! I'm a full-time frontend developer at Visual Composer. In this blog, I'll post my observations and share experience related to frontend web development. I do hope that this little blog of mine brings value, knowledge and help to developers out there. It is my contribution to the dev community around the world.",
+      "followers": {
+        "twitter": 176
+      },
+      "image_url": "https://i1.feedspot.com/5365340.jpg?t=1643109274"
+    },
+    {
+      "title": "Code Frontend",
+      "feed_url": "https://codefrontend.com/rss/",
+      "website_url": "https://codefrontend.com/",
+      "description": "CodeFrontend is a blog about web development, publishing daily coding tips and occasional deep dives.Find web development tips, guides for Javascript and React to help you build real-world applications.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5447430.jpg?t=1671534678"
+    }
+  ]
+}

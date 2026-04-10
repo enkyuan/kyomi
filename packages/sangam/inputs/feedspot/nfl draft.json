@@ -1,0 +1,447 @@
+{
+  "category": "NFL Draft",
+  "source_url": "https://rss.feedspot.com/nfl_draft_rss_feeds",
+  "feeds": [
+    {
+      "title": "Walter Football",
+      "feed_url": "https://walterfootball.com/rss.xml",
+      "website_url": "https://walterfootball.com/index.php",
+      "description": "Detailed NFL mock drafts, player prospect rankings, NFL draft information, and more.",
+      "followers": {
+        "twitter": 35000
+      },
+      "image_url": "https://i1.feedspot.com/3902328.jpg?t=1653972988"
+    },
+    {
+      "title": "The Draft Scout",
+      "feed_url": "https://www.thedraftscout.com/feed",
+      "website_url": "https://www.thedraftscout.com/",
+      "description": "Former Bleacher Report NFL Draft analyst and insider Matt Miller brings a decade's worth of insights, knowledge, connections and sources to The Draft Scout where all things NFL offseason for all 32 teams gets the attention and coverage they deserve.",
+      "followers": {
+        "facebook": 109,
+        "twitter": 304200
+      },
+      "image_url": "https://i1.feedspot.com/5405050.jpg?t=1653974134"
+    },
+    {
+      "title": "NFL Draft Blog",
+      "feed_url": "https://nfldraftblog.substack.com/feed",
+      "website_url": "https://nfldraftblog.substack.com/",
+      "description": "A place for NFL Draft nerds to learn, and Bears fans to commiserate. My goal here is to provide readers with a new way to think and digest NFL draft coverage.",
+      "followers": {
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/5405085.jpg?t=1653975667"
+    },
+    {
+      "title": "NFL Trade Rumors",
+      "feed_url": "https://nfltraderumors.co/feed/",
+      "website_url": "https://nfltraderumors.co/",
+      "description": "NFL Trade Rumors is the best source for NFL insider news and rumors. Keep up with the latest trade rumors right here!",
+      "followers": {
+        "facebook": 203700,
+        "twitter": 327700
+      },
+      "image_url": "https://i1.feedspot.com/1369758.jpg?t=1617627521"
+    },
+    {
+      "title": "Seahawks Draft Blog",
+      "feed_url": "https://seahawksdraftblog.com/feed",
+      "website_url": "https://seahawksdraftblog.com/",
+      "description": "Rob Staton created Seahawks Draft Blog in 2008, supplying fans of college football, the Seattle Seahawks and the NFL Draft with daily analysis and conversation.",
+      "followers": {
+        "twitter": 89000
+      },
+      "image_url": "https://i1.feedspot.com/4923588.jpg?t=1611042748"
+    },
+    {
+      "title": "NFL Draft Diamonds",
+      "feed_url": "https://nfldraftdiamonds.com/feed/",
+      "website_url": "https://nfldraftdiamonds.com/",
+      "description": "NFL Draft Diamonds is a website dedicated to small school football players. We talk NFL draft news, NFL draft rumors, fantasy football, NFL draft advice and help, small school football, small school interviews, and more.",
+      "followers": {
+        "facebook": 26000,
+        "twitter": 102800,
+        "instagram": 32200
+      },
+      "image_url": "https://i1.feedspot.com/5192107.jpg?t=1677147761"
+    },
+    {
+      "title": "NFL Draft Countdown",
+      "feed_url": "https://www.draftcountdown.com/feed/",
+      "website_url": "https://www.draftcountdown.com/",
+      "description": "Draft Countdown started in 1997 as one of the earliest NFL Draft websites on the internet by Scott Wright. With over two decades of reliable NFL Draft content, Draft Countdown has been the go to site for Mock Drafts, Rankings, and more.",
+      "followers": {
+        "facebook": 857,
+        "twitter": 20700,
+        "instagram": 358
+      },
+      "image_url": "https://i1.feedspot.com/4788442.jpg?t=1653982105"
+    },
+    {
+      "title": "PFF \u00bb NFL Draft",
+      "feed_url": "https://www.pff.com/feed",
+      "website_url": "https://www.pff.com/draft/",
+      "description": "The latest football news, analysis, and rankings from PFF. Featuring player grades, rankings and stats for the NFL, fantasy football, and NFL Draft. Pro Football Focus is a sports analytics company that focuses on thorough analysis of the National Football League and NCAA Division-I football in the United States.",
+      "followers": {
+        "facebook": 196000,
+        "twitter": 1500000,
+        "instagram": 795500
+      },
+      "image_url": "https://i1.feedspot.com/1403544.jpg?t=1609410781"
+    },
+    {
+      "title": "WI Sports Heroics \u00bb NFL Draft",
+      "feed_url": "https://wisportsheroics.com/tag/nfl-draft/feed/",
+      "website_url": "https://wisportsheroics.com/tag/nfl-draft/",
+      "description": "WI Sports Heroics' 'NFL Draft' tag page delivers comprehensive coverage of the 2025 NFL Draft \u2014 featuring analysis, team-by-team breakdowns (like the Broncos and Packers), prospect profiles, reactions, and event details tailored for Wisconsin football fans.",
+      "followers": {
+        "facebook": 78100,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/8541854.jpg?t=1753101854"
+    },
+    {
+      "title": "Toronto Sun \u00bb NFL Draft",
+      "feed_url": "https://torontosun.com/feed/atom",
+      "website_url": "https://torontosun.com/tag/nfl-draft/",
+      "description": "Stories tagged 'nfl-draft'",
+      "followers": {
+        "facebook": 165600,
+        "twitter": 449500,
+        "instagram": 25500
+      },
+      "image_url": "https://i1.feedspot.com/8541855.jpg?t=1753101856"
+    },
+    {
+      "title": "ClutchPoints \u00bb NFL Draft",
+      "feed_url": "https://clutchpoints.com/tag/nfl-draft/feed",
+      "website_url": "https://clutchpoints.com/tag/nfl-draft/",
+      "description": "The latest NFL Draft news from ClutchPoints",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 336500,
+        "instagram": 981400
+      },
+      "image_url": "https://i1.feedspot.com/8541856.jpg?t=1753101858"
+    },
+    {
+      "title": "Boston Herald \u00bb NFL Draft",
+      "feed_url": "https://www.bostonherald.com/feed/",
+      "website_url": "https://www.bostonherald.com/tag/nfl-draft/",
+      "description": "The Boston Herald is a daily newspaper whose primary market is Boston, Massachusetts, United States, and its surrounding area. It was started in 1846 and is one of the oldest daily newspapers in the United States. The Boston Herald is the leading source of breaking news, local news, sports, politics, entertainment, opinion, and weather in Boston, Massachusetts.",
+      "followers": {
+        "facebook": 158300,
+        "twitter": 145000,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/531749.jpg?t=1603896381"
+    },
+    {
+      "title": "Athlon Sports \u00bb NFL Draft",
+      "feed_url": "https://athlonsports.com/.rss/feed/99d9ddce-9758-498f-8961-bd110c2d720f.xml",
+      "website_url": "https://athlonsports.com/nfl-draft/",
+      "description": "The Athlon Sports NFL page is a comprehensive hub delivering the latest NFL news, rumors, game highlights, schedules, scores, stats, and expert analysis.",
+      "followers": {
+        "facebook": 44800,
+        "twitter": 25200,
+        "instagram": 25300
+      },
+      "image_url": "https://i1.feedspot.com/7894241.jpg?t=1743502915"
+    },
+    {
+      "title": "NFL Draft Blog",
+      "feed_url": "https://nfldraftblog.com/feed/",
+      "website_url": "https://nfldraftblog.com/",
+      "description": "This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8541858.jpg?t=1753101860"
+    },
+    {
+      "title": "Succeed in Football \u00bb NFL Draft",
+      "feed_url": "https://succeedinfootball.com/category/nfl-draft/feed/",
+      "website_url": "https://succeedinfootball.com/category/nfl-draft/",
+      "description": "Succeed in Football is a daily blog by ITL's Neil Stratton offering insider analysis and practical guidance on the NFL Draft \u2014 from agent prep and scouting insights to draft trends and player development.",
+      "followers": {
+        "facebook": 416
+      },
+      "image_url": "https://i1.feedspot.com/8666690.jpg?t=1756748685"
+    },
+    {
+      "title": "Footballguys",
+      "feed_url": "https://feeds.libsyn.com/336017/rss",
+      "website_url": "https://www.footballguys.com/articles",
+      "description": "Your go-to source for expert-driven fantasy football strategy, rankings, and analysis across all formats\u2014helping you win smarter, not harder.",
+      "followers": {
+        "facebook": 42200,
+        "instagram": 34100
+      },
+      "image_url": "https://i1.feedspot.com/8666695.jpg?t=1756748962"
+    },
+    {
+      "title": "Draft Insiders' Digest",
+      "feed_url": "https://draftinsiders.com/DraftInsiders/feed/",
+      "website_url": "https://draftinsiders.com/DraftInsiders/",
+      "description": "Premiere NFL Draft and Free Agency Publication",
+      "followers": {
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/8666694.jpg?t=1756748999"
+    },
+    {
+      "title": "Heel Tough Blog \u00bb NFL Draft",
+      "feed_url": "https://www.heeltoughblog.com/blog-feed.xml",
+      "website_url": "https://www.heeltoughblog.com/all-news/categories/nfl-draft/",
+      "description": "The latest news and notes around the Tar Heel players head to the NFL Draft.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/8666692.jpg?t=1756749033"
+    },
+    {
+      "title": "NESN.com \u00bb NFL Draft",
+      "feed_url": "https://nesn.com/nfl-draft/feed/",
+      "website_url": "https://nesn.com/nfl-draft/",
+      "description": "This section features articles on NFL Draft. The definitive source for New England sports programming, NESN consistently has been one of the top-rated regional sports networks in the country, with a reputation for innovative and award-winning production of sports events and specials.",
+      "followers": {
+        "facebook": 750700,
+        "twitter": 358100,
+        "instagram": 276700
+      },
+      "image_url": "https://i1.feedspot.com/5265247.jpg?t=1617711875"
+    },
+    {
+      "title": "FiveThirtyEight \u00bb NFL Draft",
+      "feed_url": "https://fivethirtyeight.com/tag/nfl-draft/feed/",
+      "website_url": "https://fivethirtyeight.com/tag/nfl-draft/",
+      "description": "This section features articles on the NFL draft. FiveThirtyEight uses statistical analysis -- hard numbers -- to tell compelling stories about politics, sports, science, economics and culture.",
+      "followers": {
+        "facebook": 390900,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5405132.jpg?t=1653977363"
+    },
+    {
+      "title": "Pro Football Network \u00bb NFL Draft",
+      "feed_url": "https://www.profootballnetwork.com/nfl-draft/feed/",
+      "website_url": "https://www.profootballnetwork.com/nfl-draft/",
+      "description": "News and analysis on NFL Draft. We strive to deliver passionately deliver purposeful, captivating, and exceptional football content.",
+      "followers": {
+        "facebook": 95200,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5264822.jpg?t=1617617589"
+    },
+    {
+      "title": "Las Vegas Review-Journal \u00bb NFL Draft",
+      "feed_url": "https://www.reviewjournal.com/sports/nfl-draft/feed/",
+      "website_url": "https://www.reviewjournal.com/sports/nfl-draft/",
+      "description": "Read the latest blogs, articles and news about NFL Draft on Review-Journal. The Las Vegas Review-Journal is Nevada's largest newspaper and the most reliable source for news, breaking news, video, and information about Las Vegas.",
+      "followers": {
+        "facebook": 429000,
+        "twitter": 321800,
+        "instagram": 150600
+      },
+      "image_url": "https://i1.feedspot.com/5405082.jpg?t=1653975382"
+    },
+    {
+      "title": "Inside The Star \u00bb NFL Draft",
+      "feed_url": "https://insidethestar.com/nfl/nfl-draft/feed",
+      "website_url": "https://insidethestar.com/nfl/nfl-draft/",
+      "description": "Articles on NFL Draft. Being the heart of the Cowboys Nation on the most powerful social network in the world, it is our solitary mission to make the fan experience better for every Dallas Cowboys fan.",
+      "followers": {
+        "facebook": 65000,
+        "twitter": 203500,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5405083.jpg?t=1653975514"
+    },
+    {
+      "title": "DRAFTPLEX",
+      "feed_url": "https://nfldraftplex.com/feed/",
+      "website_url": "https://nfldraftplex.com/",
+      "description": "This is DRAFTPLEX - an NFL Draft enterprise from a free-time draft analyst, franchise mode GM, and football fan like you.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5265091.jpg?t=1617691029"
+    },
+    {
+      "title": "Larry Brown Sports \u00bb NFL Draft",
+      "feed_url": "https://larrybrownsports.com/tag/2025-nfl-draft/feed",
+      "website_url": "https://larrybrownsports.com/tag/2025-nfl-draft/",
+      "description": "The Larry\u202fBrown\u202fSports tag page for the 2025 NFL Draft offers a curated stream of draft-focused articles\u2014from player analyses and news on prospects like Shedeur Sanders and Abdul Carter to team trade moves and commentary on draft-day drama\u2014covering every round and headline in real time.",
+      "followers": {
+        "facebook": 8800,
+        "instagram": 992
+      },
+      "image_url": "https://i1.feedspot.com/8541857.jpg?t=1753101859"
+    },
+    {
+      "title": "NBC Sports \u00bb NFL Draft",
+      "feed_url": "https://www.nbcsports.com/nfl/draft.atom",
+      "website_url": "https://www.nbcsports.com/nfl/draft/",
+      "description": "April 24-26 - Green Bay, Wisconsin",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 1800000,
+        "instagram": 636300
+      },
+      "image_url": "https://i1.feedspot.com/8541853.jpg?t=1753101853"
+    },
+    {
+      "title": "Establish The Run \u00bb NFL Draft",
+      "feed_url": "https://establishtherun.com/feed/",
+      "website_url": "https://establishtherun.com/nfl-draft/",
+      "description": "The best football information available. Period.",
+      "followers": {
+        "twitter": 89400
+      },
+      "image_url": "https://i1.feedspot.com/8666693.jpg?t=1756748756"
+    },
+    {
+      "title": "In-Between Media \u00bb NFL Draft",
+      "feed_url": "https://in-betweenmedia.com/category/football/nfl-draft/feed/",
+      "website_url": "https://in-betweenmedia.com/category/football/nfl-draft/",
+      "description": "What is the NFL Draft? The NFL Draft is an annual event where NFL teams select eligible college football players to join their rosters. It plays a crucial role in shaping team rosters for the upcoming season. When is the NFL Draft? The NFL Draft is typically held in late April. However, the exact dates can vary each year, so it's best to check the official NFL website for the most up-to-date schedule. How does the NFL Draft work? The draft is conducted over several rounds. Teams take turns selecting players based on factors like their previous season's performance and overall team needs...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8666696.jpg"
+    },
+    {
+      "title": "DeepCoverPod Blog \u00bb NFL Draft",
+      "feed_url": "https://deepcoverpod.blog/feed/",
+      "website_url": "https://deepcoverpod.blog/",
+      "description": "Posts about NFL Draft written by chrisaguilera1",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8666691.jpg?t=1756749093"
+    },
+    {
+      "title": "The Athletic \u00bb NFL Draft",
+      "feed_url": "https://www.nytimes.com/athletic/rss/tag/nfl-draft/",
+      "website_url": "https://www.nytimes.com/athletic/tag/nfl-draft/",
+      "description": "Unrivaled sports coverage across every team you care about and every league you follow. Get breaking news, powerful stories and smart analysis, all ad-free.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5264815.jpg?t=1656653317"
+    },
+    {
+      "title": "The Draft Wire",
+      "feed_url": "https://draftwire.usatoday.com/feed/",
+      "website_url": "https://draftwire.usatoday.com/",
+      "description": "All the NFL Draft news, mock drafts, interviews, and updates you need. USA Today is your source for news, analysis, viral storylines, and wall-to-wall coverage about college sports, the NFL, and the NBA.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/5265007.jpg?t=1617685864"
+    },
+    {
+      "title": "The Ringer \u00bb NFL Draft",
+      "feed_url": "https://www.theringer.com/rss/nfl-draft/index.xml",
+      "website_url": "https://www.theringer.com/nfl-draft",
+      "description": "This section features articles on NFL Draft.The Ringer is a sports and pop culture website and podcast network.",
+      "followers": {
+        "facebook": 213700,
+        "twitter": 525300,
+        "instagram": 278300
+      },
+      "image_url": "https://i1.feedspot.com/5265233.jpg?t=1617710911"
+    },
+    {
+      "title": "The Draft Network",
+      "feed_url": "https://thedraftnetwork.com/feed/",
+      "website_url": "https://thedraftnetwork.com/",
+      "description": "The Draft Network is dedicated to providing year round analysis of the NFL Draft and college football prospects.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 91600,
+        "instagram": 38600
+      },
+      "image_url": "https://i1.feedspot.com/5405084.jpg?t=1653975037"
+    },
+    {
+      "title": "Sports Illustrated \u00bb NFL Draft",
+      "feed_url": "https://www.si.com/nfl/draft/.rss/full/",
+      "website_url": "https://www.si.com/nfl/draft",
+      "description": "The NFL Draft Bible on Sports Illustrated brings unique access inside the NFL and the publication is used by all 32 teams.Sports Illustrated provides sports news, expert analysis, highlights, stats, and scores for the NFL, NBA, MLB, NHL, college football, soccer, fantasy, gambling, and more.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 1900000,
+        "instagram": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5264730.jpg?t=1653980621"
+    },
+    {
+      "title": "NFL Draft Blitz",
+      "feed_url": "https://nfldraftblitz.com/feed/",
+      "website_url": "https://nfldraftblitz.com/",
+      "description": "NFL Draft Blitz has been covering the NFL Draft year-round since 1999.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5264689.jpg?t=1617606145"
+    },
+    {
+      "title": "Bleacher Report \u00bb NFL Draft",
+      "feed_url": "https://bleacherreport.com/nfl-draft",
+      "website_url": "https://bleacherreport.com/nfl-draft",
+      "description": "Stay up to date on the NFL Draft with Bleacher Report. Keep up with the biggest storylines, expert analysis, highlights, predictions and more.",
+      "followers": {
+        "facebook": 10600000,
+        "twitter": 19900000,
+        "instagram": 22500000
+      },
+      "image_url": "https://i1.feedspot.com/5405086.jpg?t=1653976243"
+    },
+    {
+      "title": "FanSided \u00bb NFL Draft",
+      "feed_url": "https://fansided.com/nfl/nfl-draft/feed",
+      "website_url": "https://fansided.com/nfl/nfl-draft/",
+      "description": "Get the latest NFL Draft news, rumors, GIFs, predictions, and more from FanSided. FanSided is one of the fastest-growing networks of fandom-focused sports, entertainment and lifestyle sites on the Internet.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4882520.jpg?t=1653981760"
+    },
+    {
+      "title": "PFF \u00bb NFL Draft",
+      "feed_url": "https://www.pff.com/draft",
+      "website_url": "https://www.pff.com/draft",
+      "description": "PFF brings you in-depth analysis for the NFL Draft, including college player grades, prospect profiles, and rankings.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 366900,
+        "instagram": 152900
+      },
+      "image_url": "https://i1.feedspot.com/5405089.jpg?t=1653976279"
+    },
+    {
+      "title": "NFL Spin Zone \u00bb NFL Draft",
+      "feed_url": "https://nflspinzone.com/nfl-draft/feed/",
+      "website_url": "https://nflspinzone.com/nfl-draft/",
+      "description": "The latest NFL Draft news, updates, injuries, players, stats, rumors, analysis, opinion, and commentary from NFL Spin Zone. Welcome to NFL Spin Zone, the NFL news and opinions site brought to you by the FanSided Network. NFL Spin Zone is dedicated to providing top-notch NFL news, views, and original content. This site also serves as a community for like-minded fans to come together to catch up on the latest news and to discuss their passion.",
+      "followers": {
+        "facebook": 136000,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5405147.jpg?t=1653981877"
+    },
+    {
+      "title": "With the First Pick \u00bb NFL Draft News",
+      "feed_url": "https://withthefirstpick.com/nfl-draft-news-analysis/feed/",
+      "website_url": "https://withthefirstpick.com/nfl-draft-news-analysis/",
+      "description": "Welcome to With the First Pick, the NFL news and opinions site brought to you by the FanSided Network. With the First Pick is dedicated to providing top-notch NFL news, views, and original content. This site also serves as a community for like-minded fans to come together to catch up on the latest news and to discuss their passion.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5405146.jpg?t=1653982544"
+    }
+  ]
+}

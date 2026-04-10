@@ -1,0 +1,257 @@
+{
+  "category": "Matlab",
+  "source_url": "https://rss.feedspot.com/matlab_rss_feeds",
+  "feeds": [
+    {
+      "title": "MATLAB Community",
+      "feed_url": "https://blogs.mathworks.com/community/feed/",
+      "website_url": "https://blogs.mathworks.com/community/",
+      "description": "MathWorks is the leading developer of mathematical computing software. MATLAB is a high-level language and interactive environment for numerical computation, visualization, and programming. This is the best place to learn about MATLAB and Simulink from the experts at MathWorks.",
+      "followers": {
+        "facebook": 229900,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/2209221.jpg?t=1616135013"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/mathworks/deeplearning",
+      "website_url": "https://blogs.mathworks.com/deep-learning/",
+      "description": "A MATLAB blog by Johanna Pingel about understanding and using deep learning networks. She specializes in deep learning & computer vision. Her goal is to give insight into deep learning through code examples, developer Q&As, and tips and tricks using MATLAB.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/5351882.jpg?t=1639037235"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/mathworks/moler",
+      "website_url": "https://blogs.mathworks.com/cleve/",
+      "description": "Cleve Moler shares his thoughts on numerical computing, interesting mathematics, and MATLAB. He is the author of the first MATLAB, one of the founders of MathWorks, and is currently Chief Mathematician at the company.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/1834150.jpg?t=1639037275"
+    },
+    {
+      "title": "MathWorks | Guy on Simulink",
+      "feed_url": "https://feeds.feedburner.com/GuyOnSimulink",
+      "website_url": "https://blogs.mathworks.com/simulink/feed/",
+      "description": "Guy Rouleau is an Application Engineer for MathWorks. He writes here about Simulink and other MathWorks tools used in Model-Based Design.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/4826800.jpg?t=1639128117"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/mathworks/DeveloperZone",
+      "website_url": "https://blogs.mathworks.com/developer/",
+      "description": "Find new ways of using MATLAB to develop, test, and integrate production-grade software on Developer Zone.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/5352319.jpg?t=1639129427"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/stuartMatlabVideoTutorials",
+      "website_url": "https://blogs.mathworks.com/?s_tid=gn_mlc_blg",
+      "description": "On MathWorks, Stuart uses video to share his experiences solving problems with MATLAB day-to-day, interesting new features, plus tips and tricks he has picked up along the way.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/4826800.jpg?t=1639128117"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/mathworks/headlines/",
+      "website_url": "https://blogs.mathworks.com/headlines/",
+      "description": "Lisa Harvey discusses how MATLAB and Simulink are connected to today's news stories and trends around the world.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/5352317.jpg?t=1639129333"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/mathworks/pick",
+      "website_url": "https://blogs.mathworks.com/pick/",
+      "description": "A MathWorks blog where Jiro and Sean share favorite user-contributed submissions from the File Exchange.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/1645916.jpg?t=1639129309"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/mathworks/startups",
+      "website_url": "https://blogs.mathworks.com/startups/",
+      "description": "Featuring stories about startups and accelerators around the world. Highlighting companies from MathWorks Startup Program and how MATLAB and Simulink are helping them from concept to production.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/5352318.jpg?t=1639129184"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/mathworks/StudentLounge",
+      "website_url": "https://blogs.mathworks.com/student-lounge/",
+      "description": "The Student Lounge Blog focuses on student success stories. Winning student teams share their knowledge and the MathWorks student programs team shares best practices and workflows using MATLAB and Simulink.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/4826800.jpg?t=1639128117"
+    },
+    {
+      "title": "MATLAB ... and more ...",
+      "feed_url": "https://feeds.feedburner.com/MatlabAndMore",
+      "website_url": "https://matlabnewbie.blogspot.com/",
+      "description": "MATLAB applications, tutorials, examples, tricks, resources, and a little bit of everything in between.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5351880.jpg?t=1639120571"
+    },
+    {
+      "title": "Nick Higham",
+      "feed_url": "https://nhigham.com/feed/",
+      "website_url": "https://nhigham.com/",
+      "description": "Nick Higham the Richardson Professor of Applied Mathematics in the School of Mathematics at the University of Manchester. His research area is numerical analysis, focusing on numerical linear algebra.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4474658.jpg?t=1616135021"
+    },
+    {
+      "title": "Undocumented Matlab",
+      "feed_url": "https://undocumentedmatlab.com/feed/",
+      "website_url": "https://undocumentedmatlab.com/articles",
+      "description": "In over 20 years of programming in a multitude of different programming languages & environments, Yair Altman have found Matlab to be second to none in the depth, width & extent of its hidden niches. Over time he discovered that many other Matlab programmers have similar problems that can be solved by these hidden programming components. He therefore welcomes your feedback, suggestion & questions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/95645.jpg?t=1647327471"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/SteveOnImageProcessing",
+      "website_url": "https://blogs.mathworks.com/steve/",
+      "description": "Get a better understanding of image processing and the use of MATLAB from Steve Eddins at MathWorks. Steve's blog covers Image processing concepts, algorithms, and MATLAB. MathWorks is the leading developer of mathematical computing software for engineers & scientists.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/1180478.jpg?t=1624602975"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://feeds.feedburner.com/mathworks/loren",
+      "website_url": "https://blogs.mathworks.com/loren/",
+      "description": "Loren Shure works on the design of the MATLAB language at MathWorks. She writes here about once a week on MATLAB programming and related topics.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/95643.jpg?t=1639118198"
+    },
+    {
+      "title": "MathWorks",
+      "feed_url": "https://blogs.mathworks.com/iot/feed/",
+      "website_url": "https://blogs.mathworks.com/iot/",
+      "description": "Hans Scharler is an Internet of Things pioneer. He writes about IoT, MATLAB and ThingSpeak IoT platform features.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 94600,
+        "instagram": 136500
+      },
+      "image_url": "https://i1.feedspot.com/4826800.jpg?t=1639128117"
+    },
+    {
+      "title": "Mr MatLab Blog",
+      "feed_url": "https://mrmatlab.wordpress.com/feed/",
+      "website_url": "https://mrmatlab.wordpress.com/blog/",
+      "description": "Mr. MatLab Blog is your source to find assistance, benefits, guides, tips, and more on MATLAB. Stay tuned to the blog to learn more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5380903.jpg?t=1647333010"
+    },
+    {
+      "title": "mathinking Blog",
+      "feed_url": "https://mathinking.github.io/feed.xml",
+      "website_url": "https://mathinking.github.io/blog/",
+      "description": "My name is Lucas Garc\u00eda. I am a Mathematician with over 15 years of professional experience working in the computer software industry and research. I like writing about Machine Learning, Deep Learning, Software Development, Robotics, etc. Hopefully, you'll find such topics interesting too.",
+      "followers": {
+        "twitter": 563
+      },
+      "image_url": "https://i1.feedspot.com/5380902.jpg?t=1647330191"
+    },
+    {
+      "title": "MAtrilab Examples \u00bb Matlab",
+      "feed_url": "https://matrixlab-examples.com/matlab.xml",
+      "website_url": "https://matrixlab-examples.com/matlab-blog.html",
+      "description": "In this blog, I propose some interesting Matlab exercises, examples, and tutorials to cover powerful programming instructions to work with matrices, vectors, and arrays. This site is dedicated to working with matrices, vectors, arrays, and MATLAB, of course. You can find and learn from plenty of examples, tutorials, applications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/645801.jpg?t=1647330855"
+    },
+    {
+      "title": "Data Mining in MATLAB",
+      "feed_url": "http://matlabdatamining.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://matlabdatamining.blogspot.com/",
+      "description": "I am a data scientist with more years of experience than I care to remember. I've worked in a variety of fields and used a wide array of tools, but MATLAB is my tool of choice. This blog is about exploring data mining using MATLAB (and sometimes MATLAB Toolboxes).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1180481.jpg?t=1647331264"
+    },
+    {
+      "title": "MATLAB Recipes for Earth Sciences",
+      "feed_url": "https://mres.uni-potsdam.de/index.php/feed/",
+      "website_url": "https://mres.uni-potsdam.de/",
+      "description": "I am a geoscientist, titular professor of paleoclimate dynamics at the University of Potsdam. I have been using MATLAB since late 1992, especially for the analysis of paleoclimatic series.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4751428.jpg?t=1647331052"
+    },
+    {
+      "title": "MatlabSolutions",
+      "feed_url": "https://www.matlabsolutions.com/blog.php",
+      "website_url": "https://www.matlabsolutions.com/blog.php",
+      "description": "Blog regarding MATLAB Programming. Gather important information about MATLAB from Matlab Experts. MatlabSolutions is a technology learning platform for all new technologies like MATLAB, Artificial Intelligence, Machine Learning, and a lot more.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/5351883.jpg?t=1639035674"
+    },
+    {
+      "title": "Stack All Flow \u00bb Matlab",
+      "feed_url": "https://stackallflow.com/category/matlab/feed/",
+      "website_url": "https://www.matlabassignmentexperts.com/blog.html",
+      "description": "The following section of Stack All Flow is dedicated to articles on Matlab. Other major categories to explore are Dev, MySQL, Php, Ubuntu, Unix Linux, and more. Find tutorial and helpful tips to clear your doubts on the above-mentioned topics as well more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5380901.jpg?t=1647336266"
+    },
+    {
+      "title": "Alec's Web Log Blog",
+      "feed_url": "https://www.alecjacobson.com/weblog/?feed=rss2",
+      "website_url": "https://www.alecjacobson.com/weblog/",
+      "description": "Alec's Web Log is all about Matlab. Read articles on art, codes, and ideas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4159740.jpg?t=1647331175"
+    }
+  ]
+}

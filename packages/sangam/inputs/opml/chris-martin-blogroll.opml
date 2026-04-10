@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>Chris Martin - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Aaron Hertzmann" xmlUrl="https://aaronhertzmann.com/feed.xml" htmlUrl="https://aaronhertzmann.com/" category="Recommendations"/>
+    <outline type="rss" text="James Reeves" xmlUrl="https://atlasminor.com/feed/" htmlUrl="https://atlasminor.com/" category="Recommendations"/>
+    <outline type="rss" text="Jeff Kaufman" xmlUrl="https://www.jefftk.com/news.rss" htmlUrl="https://www.jefftk.com/" category="Recommendations"/>
+    <outline type="rss" text="Jim Kosem" xmlUrl="https://www.halfman.com/rss/" htmlUrl="https://www.halfman.com/tag/articles/" category="Recommendations"/>
+    <outline type="rss" text="Joe Rosensteel" xmlUrl="feed.xml" htmlUrl="https://joe-steel.com/index.html" category="Recommendations"/>
+    <outline type="rss" text="Matt Lakeman" xmlUrl="https://mattlakeman.org/feed/" htmlUrl="https://mattlakeman.org/" category="Recommendations"/>
+    <outline type="rss" text="Matt Webb" xmlUrl="https://interconnected.org/home/feed" htmlUrl="https://interconnected.org/home/" category="Recommendations"/>
+    <outline type="rss" text="Sam Kriss" xmlUrl="" htmlUrl="https://samkriss.substack.com/" category="Recommendations"/>
+    <outline type="rss" text="Jenn Schiffer" xmlUrl="" htmlUrl="https://livelaugh.blog/" category="Recommendations"/>
+    <outline type="rss" text="Keenan" xmlUrl="https://gkeenan.co/avgb?format=rss" htmlUrl="https://gkeenan.co/avgb" category="Recommendations"/>
+    <outline type="rss" text="Phil Gyford" xmlUrl="https://www.gyford.com/phil/feeds/everything/rss/" htmlUrl="https://www.gyford.com/phil/writing/" category="Weeknotes"/>
+    <outline type="rss" text="Tom Stuart" xmlUrl="https://tomstu.art/feed.atom" htmlUrl="https://tomstu.art/" category="Weeknotes"/>
+    <outline type="rss" text="Matthew Sheret" xmlUrl="https://matthewsheret.wordpress.com/feed/" htmlUrl="https://matthewsheret.wordpress.com" category="Weeknotes"/>
+    <outline type="rss" text="Alice Bartlett" xmlUrl="" htmlUrl="https://alicebartlett.co.uk/" category="Weeknotes"/>
+    <outline type="rss" text="D.W." xmlUrl="https://walknotes.com/feed/" htmlUrl="https://walknotes.com" category="Weeknotes"/>
+    <outline type="rss" text="Chuck Grimmett" xmlUrl="https://clgrimmett.com/feed/" htmlUrl="https://clgrimmett.com" category="Weeknotes"/>
+    <outline type="rss" text="Timothy Monger" xmlUrl="https://www.timothymonger.com/isthissomething?format=rss" htmlUrl="https://www.timothymonger.com/isthissomething/" category="Weeknotes"/>
+    <outline type="rss" text="Mark Larson" xmlUrl="https://mlarson.org/feed/" htmlUrl="https://mlarson.org" category="Weeknotes"/>
+    <outline type="rss" text="Chris Glass" xmlUrl="https://chrisglass.com/feed" htmlUrl="https://chrisglass.com" category="Daily notes"/>
+    <outline type="rss" text="Kevin Vognar" xmlUrl="" htmlUrl="https://www.kevinvognar.com/days" category="Daily notes"/>
+    <outline type="rss" text="Jasper Tandy" xmlUrl="https://jasper.tandy.is/syndicated" htmlUrl="https://jasper.tandy.is/" category="Daily notes"/>
+    <outline type="rss" text="Lex" xmlUrl="https://lex.micro.blog/feed.xml" htmlUrl="https://lex.micro.blog" category="Daily notes"/>
+    <outline type="rss" text="Jack Cheng" xmlUrl="https://www.jackcheng.com/sunday/rss/" htmlUrl="https://www.jackcheng.com" category="Recommendations"/>
+    <outline type="rss" text="Merlin Mann" xmlUrl="https://merlin.ghost.io/rss/" htmlUrl="https://merlin.ghost.io/" category="Recommendations"/>
+    <outline type="rss" text="Robin Sloan" xmlUrl="https://www.robinsloan.com/feed.xml" htmlUrl="https://www.robinsloan.com/" category="Recommendations"/>
+    <outline type="rss" text="Andy Baio" xmlUrl="https://waxy.org/feed/" htmlUrl="https://waxy.org" category="Recommendations"/>
+    <outline type="rss" text="Anh" xmlUrl="https://anhvn.com/feed.xml" htmlUrl="https://anhvn.com/blog" category="Weeknotes"/>
+    <outline type="rss" text="Jedda" xmlUrl="https://notes.jeddacp.com/feed/" htmlUrl="https://notes.jeddacp.com" category="Weeknotes"/>
+    <outline type="rss" text="Jeremy Felt" xmlUrl="https://jeremyfelt.com/feed/" htmlUrl="https://jeremyfelt.com/blog/" category="Weeknotes"/>
+    <outline type="rss" text="Courtney" xmlUrl="https://netigen.com/rss" htmlUrl="https://netigen.com" category="Weeknotes"/>
+  </body>
+</opml>

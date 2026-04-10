@@ -1,0 +1,69 @@
+{
+  "category": "Product Marketing",
+  "source_url": "https://rss.feedspot.com/product_marketing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Product Marketing Alliance",
+      "feed_url": "https://www.productmarketingalliance.com/rss/",
+      "website_url": "https://www.productmarketingalliance.com/content-hub/",
+      "description": "PMA is the go-to place for 1,000s of product marketers. Online resources, 24/7 communities, global events, reports, awards, courses, mentors, jobs and podcasts. We've got it all.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 6600,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5280127.jpg?t=1620830158"
+    },
+    {
+      "title": "Aventi Group Blog",
+      "feed_url": "https://aventigroup.com/feed/",
+      "website_url": "https://aventigroup.com/blog/",
+      "description": "New ideas, fresh perspectives and best practices for product marketing success. Aventi Group is a product marketing agency providing go-to-market strategy consulting, expertise, and resources on-demand in Silicon Valley and beyond.",
+      "followers": {
+        "facebook": 88,
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/5280141.jpg?t=1620831295"
+    },
+    {
+      "title": "Kalungi Blog \u00bb Product Marketing",
+      "feed_url": "https://www.kalungi.com/blog/tag/product-marketing/rss.xml",
+      "website_url": "https://www.kalungi.com/blog/tag/product-marketing",
+      "description": "Proven strategies, tactics, and best practices for B2B Product Marketing. Backed by decades of experience, Kalungi provides access to a full service, outsourced B2B SaaS marketing team with the speed you need and the quality you deserve.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5280132.jpg?t=1643016952"
+    },
+    {
+      "title": "Cadesign form Blog \u00bb Product Marketing",
+      "feed_url": "https://www.cadesignform.com/blog/rss.xml",
+      "website_url": "https://www.cadesignform.com/blog/tag/product-marketing",
+      "description": "Cadesign form is a visual communications agency that designs visual solutions for people to see, understand and remember. We create everything from images and films to interactive solutions for customers all over the world. In this section, get fresh inspiration and news from the field of product marketing.",
+      "followers": {
+        "facebook": 439,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5364726.jpg?t=1642765097"
+    },
+    {
+      "title": "B2B Growth Insights",
+      "feed_url": "https://b2bpricinginsights.substack.com/feed",
+      "website_url": "https://b2bpricinginsights.substack.com/",
+      "description": "Analysis of B2B Software Company GTM, Pricing & Marketing",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F34bc86bb-21c7-4a4b-bde0-e8a2ff125bc0_1024x1024.png"
+    },
+    {
+      "title": "Chameleon Blog \u00bb Product Marketing",
+      "feed_url": "https://www.chameleon.io/blog/feed",
+      "website_url": "https://www.chameleon.io/blog/tags/product-marketing",
+      "description": "Articles on product marketing. Chameleon allows you to create beautiful product guidance that helps, guides, and delights your users throughout their journey.",
+      "followers": {
+        "twitter": 622
+      },
+      "image_url": "https://i1.feedspot.com/5364729.jpg?t=1642764656"
+    }
+  ]
+}

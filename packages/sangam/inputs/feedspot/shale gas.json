@@ -1,0 +1,75 @@
+{
+  "category": "Shale Gas",
+  "source_url": "https://rss.feedspot.com/shale_gas_rss_feeds",
+  "feeds": [
+    {
+      "title": "Shale Directories Blog",
+      "feed_url": "https://www.shaledirectories.com/feed/",
+      "website_url": "https://www.shaledirectories.com/blog-1/",
+      "description": "Shale Directories is a directory and information resource for the shale industry. Their blog provides updates on shale gas and oil activities, showcasing companies, products, and services involved in the sector. From networking events to industry trends and business opportunities, the blog serves as a platform for connecting industry professionals and promoting collaboration within the shale community.",
+      "followers": {
+        "facebook": 196
+      },
+      "image_url": "https://i1.feedspot.com/5587612.jpg?t=1685604425"
+    },
+    {
+      "title": "Novi Labs Blog",
+      "feed_url": "https://novilabs.com/feed/",
+      "website_url": "https://novilabs.com/blog/",
+      "description": "The Shale Oil and Gas Insights & News Blog provides a wealth of information on the shale oil and gas industry. With a focus on insights, analysis, and market trends, the blog covers topics such as production techniques, technological advancements, market forecasts, and sustainability efforts. It aims to keep readers informed and educated about the dynamic landscape of the shale oil and gas sector.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5587614.jpg?t=1685604437"
+    },
+    {
+      "title": "SHALE Magazine",
+      "feed_url": "https://shalemag.com/feed/",
+      "website_url": "https://shalemag.com/",
+      "description": "Shale Magazine Oil & Gas provides up to date energy news from the experts in their field. With all sources of energy, stay up to date with Shale. SHALE Oil & Gas Business Magazine is the Premier Magazine Covering the Shale Revolution. We are a publication which showcases the dynamic impact of the energy industry.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4629660.jpg?t=1604326169"
+    },
+    {
+      "title": "Marcellus Drilling News",
+      "feed_url": "https://marcellusdrilling.com/feed/",
+      "website_url": "https://marcellusdrilling.com/",
+      "description": "Find news & resources on drilling for natural gas. Marcellus Drilling News is the best source available for news about the Marcellus and Utica Shales. Editor Jim Willis spends several hours providing the latest news interests to producers, supply chain companies, landowners, and anyone with a curiosity in the northeast shale gas industry.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 31600
+      },
+      "image_url": "https://i1.feedspot.com/4340647.jpg?t=1663071138"
+    },
+    {
+      "title": "UPI.com \u00bb Marcellus Shale",
+      "feed_url": "https://rss.upi.com/topic/Marcellus_Shale/",
+      "website_url": "https://www.upi.com/topic/Marcellus_Shale/",
+      "description": "UPI.com provides comprehensive coverage of the Marcellus Shale, one of the largest natural gas fields in the United States. Through news articles, analysis, and expert commentary, readers can stay informed about the latest developments, drilling activities, regulations, and economic impacts associated with the Marcellus Shale region.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5587611.jpg?t=1685604419"
+    },
+    {
+      "title": "Penn State Shale Law Blog",
+      "feed_url": "http://www.pennstateshalelaw.com/feeds/posts/default",
+      "website_url": "http://www.pennstateshalelaw.com/",
+      "description": "The Penn State Shale Law Blog is a valuable resource for legal insights and analysis related to the shale industry. Founded by the Penn State Center for Agricultural and Shale Law, the blog covers a wide range of topics, including leasing and contract issues, environmental regulations, and litigation updates, providing a platform for legal professionals and stakeholders to stay informed and engaged.",
+      "followers": {
+        "facebook": 253,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5587609.jpg?t=1685604405"
+    },
+    {
+      "title": "Shale Gas Reporter",
+      "feed_url": "https://shalegasreporter.com/feed",
+      "website_url": "https://shalegasreporter.com/",
+      "description": "Shale Gas Reporter delivers news, analysis, and industry updates on the shale gas sector. From exploration and production to market trends and policy developments, the blog provides a comprehensive view of the shale gas industry, helping readers understand the technological advancements, environmental considerations, and economic implications associated with shale gas extraction.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5587613.jpg?t=1685605813"
+    }
+  ]
+}

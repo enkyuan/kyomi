@@ -1,0 +1,50 @@
+{
+  "category": "Athens News",
+  "source_url": "https://rss.feedspot.com/athens_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Red & Black \u00bb Athens",
+      "feed_url": "https://www.redandblack.com/search/?f=rss&t=article&c=athensnews&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.redandblack.com/athensnews/",
+      "description": "The Red & Black Publishing Company, Inc. is an independent, private, not-for-profit corporation. Founded in 1893, the paper operated for 87 years under the University of Georgia.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 43100
+      },
+      "image_url": "https://i1.feedspot.com/5140535.jpg?t=1626503946"
+    },
+    {
+      "title": "Flagpole",
+      "feed_url": "https://flagpole.com/news/feed/",
+      "website_url": "https://flagpole.com/",
+      "description": "Flagpole.com is the online presence of Flagpole Magazine, since 1987 the locally owned, independent voice of Athens, Northeast Georgia's vibrantly laid-back, architecturally interesting home of the renowned music scene and the University of Georgia.",
+      "followers": {
+        "facebook": 26000,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/5140459.jpg?t=1626503931"
+    },
+    {
+      "title": "Athens Politics Nerd",
+      "feed_url": "https://athenspoliticsnerd.com/feed/",
+      "website_url": "https://athenspoliticsnerd.com/category/state-news/",
+      "description": "Athens Politics Nerd is an independent media organization using short YouTube videos to keep you up to date with local news and politics in the Athens, Georgia area. APN also presents info and opinion on progressive policy options for the state and federal governments as well.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5140537.jpg?t=1626503952"
+    },
+    {
+      "title": "Classic City News",
+      "feed_url": "https://www.classiccitynews.com/blog-feed.xml",
+      "website_url": "https://www.classiccitynews.com/",
+      "description": "Classic City News provides free, reliable local information such as newsworthy stories, reports of public events, weather, traffic, and Opinions through Community voices on its digital platform. It is a completely community-driven portal dedicated to bringing quality, independent, local journalism and diverse voices to the metro Athens area.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 231
+      },
+      "image_url": "https://i1.feedspot.com/5500058.jpg?t=1674806425"
+    }
+  ]
+}

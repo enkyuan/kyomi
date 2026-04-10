@@ -1,0 +1,102 @@
+{
+  "category": "The Daily Herald",
+  "source_url": "https://rss.feedspot.com/daily_herald_rss_feeds",
+  "feeds": [
+    {
+      "title": "Daily Herald \u00bb Local News",
+      "feed_url": "https://www.heraldextra.com/news/local/",
+      "website_url": "https://www.heraldextra.com/news/local/",
+      "description": "Get the latest local news and information from Daily Herald.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5239083.jpg?t=1750745713"
+    },
+    {
+      "title": "Daily Herald \u00bb Community",
+      "feed_url": "https://www.heraldextra.com/search/?f=rss&t=article&c=news/community&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldextra.com/news/community/",
+      "description": "Community news from the Daily Herald.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5239083.jpg?t=1750745713"
+    },
+    {
+      "title": "Daily Herald \u00bb Entertainment",
+      "feed_url": "https://www.heraldextra.com/search/?f=rss&t=article&c=entertainment&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldextra.com/entertainment/",
+      "description": "What to do in Utah? Movies, art and theater, cooking, kids activities, and much, much more from Daily Herald.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5239083.jpg?t=1750745713"
+    },
+    {
+      "title": "Daily Herald \u00bb Opinion",
+      "feed_url": "https://www.heraldextra.com/search/?f=rss&t=article&c=news/opinion&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.heraldextra.com/news/opinion/",
+      "description": "Opinions and editorials on the Daily Herald.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5239083.jpg?t=1750745713"
+    },
+    {
+      "title": "Daily Herald \u00bb Sports",
+      "feed_url": "https://www.heraldextra.com/search/?f=rss&t=article&c=sports*&l=25&s=start_time&sd=desc",
+      "website_url": "https://www.heraldextra.com/sports/",
+      "description": "Local high school sports and college sports for Utah Valley. Photos, video, games, rankings, and more from Daily Herald.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5239083.jpg?t=1750745713"
+    },
+    {
+      "title": "Daily Herald \u00bb Business",
+      "feed_url": "https://www.heraldextra.com/search/?f=rss&t=article&c=business*&l=25&s=start_time&sd=desc",
+      "website_url": "https://www.heraldextra.com/business/",
+      "description": "Local, national, and world business news and information from Utah Valley's Daily Herald.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5239083.jpg?t=1750745713"
+    },
+    {
+      "title": "Daily Herald \u00bb Real Estate",
+      "feed_url": "https://www.heraldextra.com/search/?c=homes&f=rss&l=50&s=start_time&sd=desc&t=article",
+      "website_url": "https://www.heraldextra.com/homes/",
+      "description": "Find Utah homes for sale, real estate, and rental properties. Brought to you by the Daily Herald.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5239083.jpg?t=1750745713"
+    },
+    {
+      "title": "Daily Herald \u00bb Home and Garden",
+      "feed_url": "https://www.heraldextra.com/search/?f=rss&t=article&c=lifestyles/home-and-garden&l=25&s=start_time&sd=desc",
+      "website_url": "https://www.heraldextra.com/lifestyles/home-and-garden/",
+      "description": "Get the latest home and garden news, articles, ideas for improvement projects, outdoor living, and more.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 10200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5239083.jpg?t=1750745713"
+    }
+  ]
+}

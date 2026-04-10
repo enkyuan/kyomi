@@ -1,0 +1,189 @@
+{
+  "category": "9News",
+  "source_url": "https://rss.feedspot.com/9news_rss_feeds",
+  "feeds": [
+    {
+      "title": "9News \u00bb Politics",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/news/local/local-politics",
+      "website_url": "https://www.9news.com/politics",
+      "description": "Local politics and government news from 9NEWS KUSA in Denver, Colorado",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535889.jpg"
+    },
+    {
+      "title": "9News \u00bb News",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/news",
+      "website_url": "https://www.9news.com/news",
+      "description": "9News is a trusted source for comprehensive and up-to-date news coverage, delivering local, national, and international news across a wide range of topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5595365.jpg?t=1686558120"
+    },
+    {
+      "title": "KUSA.com \u00bb Sports",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports",
+      "website_url": "https://www.9news.com/sports",
+      "description": "Local News and Information for Denver, Colorado and surrounding areas. 9NEWS.com is the official website for KUSA-TV, your trusted source for breaking news, weather and sports in Denver, CO. 9NEWS.com",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 551000,
+        "instagram": 272200
+      },
+      "image_url": "https://i1.feedspot.com/5595368.jpg?t=1753342949"
+    },
+    {
+      "title": "9News \u00bb Entertainment",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/news/entertainment-news",
+      "website_url": "https://www.9news.com/entertainment/",
+      "description": "Entertainment news from 9 News KUSA in Denver, Colorado",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5595364.jpg?t=1686558312"
+    },
+    {
+      "title": "9News \u00bb Health",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/news/health",
+      "website_url": "https://www.9news.com/health",
+      "description": "Read the latest health news, expert insights, and practical tips to support a well-rounded and informed approach to well-being.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5595370.jpg?t=1686558399"
+    },
+    {
+      "title": "9News \u00bb Food",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/life/food/",
+      "website_url": "https://www.9news.com/food",
+      "description": "This Section serves as a delectable hub of culinary inspiration, featuring mouthwatering recipes, food trends, restaurant reviews, and expert tips to satisfy the food enthusiast in you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5595367.jpg"
+    },
+    {
+      "title": "9News \u00bb Weather",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/weather",
+      "website_url": "https://www.9news.com/weather/",
+      "description": "Weather forecast and conditions for Denver, Colorado and surrounding areas. 9NEWS.com is the official website for KUSA-TV, Channel 9, your trusted source for breaking news, weather and sports in Denver, CO. 9NEWS.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5595371.jpg?t=1686558293"
+    },
+    {
+      "title": "9News \u00bb Money",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/money",
+      "website_url": "https://www.9news.com/money",
+      "description": "Money, consumer and business news from 9 News KUSA in Denver, Colorado.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5595366.jpg?t=1749198693"
+    },
+    {
+      "title": "9News \u00bb Olympics",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports/olympics",
+      "website_url": "https://www.9news.com/olympics",
+      "description": "Visit 9News for 2024 Summer Olympics in Paris coverage including latest updates, results, schedules, video highlights, breaking news, medal count, and athlete bios. Coverage from 9News KUSA in Denver, Colorado.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535893.jpg"
+    },
+    {
+      "title": "9News \u00bb Colorado Rapids",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports/soccer/colorado-rapids",
+      "website_url": "https://www.9news.com/rapids",
+      "description": "Colorado Rapids soccer news and scores from 9NEWS KUSA in Denver, Colorado",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535897.jpg"
+    },
+    {
+      "title": "9News \u00bb Colorado Avalanche",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports/nhl/colorado-avalanche",
+      "website_url": "https://www.9news.com/avalanche",
+      "description": "Colorado Avalanche pro ice hockey news from 9NEWS KUSA in Denver, Colorado.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535900.jpg"
+    },
+    {
+      "title": "9News \u00bb Denver Broncos",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports/nfl/denver-broncos",
+      "website_url": "https://www.9news.com/broncos",
+      "description": "Denver Broncos pro football news from 9NEWS KUSA in Denver, Colorado",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535899.jpg"
+    },
+    {
+      "title": "9News \u00bb Denver Nuggets",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports/nba/denver-nuggets",
+      "website_url": "https://www.9news.com/nuggets",
+      "description": "Denver Nuggets pro basketball news and scores from 9NEWS KUSA in Denver, Colorado.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535890.jpg"
+    },
+    {
+      "title": "9News \u00bb Colorado Rockies",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports/mlb/colorado-rockies",
+      "website_url": "https://www.9news.com/rockies",
+      "description": "Colorado Rockies pro baseball news from 9NEWS KUSA in Denver, Colorado.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535895.jpg"
+    },
+    {
+      "title": "9News \u00bb High School Sports",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/sports/high-school",
+      "website_url": "https://www.9news.com/hss",
+      "description": "High school sports news, scores and video from 9News KUSA in Denver, Colorado",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535894.jpg"
+    },
+    {
+      "title": "9News \u00bb Traffic",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/traffic",
+      "website_url": "https://www.9news.com/traffic",
+      "description": "Denver traffic news, accidents, congestion and road construction from 9NEWS KUSA in Denver, Colorado",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535896.jpg"
+    },
+    {
+      "title": "9News \u00bb Travel",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/travel",
+      "website_url": "https://www.9news.com/travel",
+      "description": "Stay on top of all Travel news and related developments in Denver. 9News.com features the latest breaking news and weather, daily talk shows, coverage of your favorite sports teams, fact-checking, and the latest trending stories from Daily Blast Live.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5725085.jpg?t=1707627707"
+    },
+    {
+      "title": "9News \u00bb Nation World",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/news/nation-world",
+      "website_url": "https://www.9news.com/nation-world",
+      "description": "National and world news from 9NEWS KUSA in Denver, Colorado.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535892.jpg"
+    },
+    {
+      "title": "9News \u00bb Education",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/news/education",
+      "website_url": "https://www.9news.com/education",
+      "description": "Education news from 9NEWS KUSA in Denver, Colorado",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535891.jpg"
+    },
+    {
+      "title": "9News \u00bb Business",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/money/business",
+      "website_url": "https://www.9news.com/business",
+      "description": "Business news from 9NEWS KUSA in Denver, Colorado",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535898.jpg"
+    },
+    {
+      "title": "9News \u00bb Cultural Diversity",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/news/community/race-and-culture",
+      "website_url": "https://www.9news.com/culturaldiversity",
+      "description": "Cultural and diversity news and features from 9NEWS KUSA in Denver, Colorado.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8535888.jpg"
+    },
+    {
+      "title": "9News \u00bb Recipes",
+      "feed_url": "https://www.9news.com/feeds/syndication/rss/life/food/recipes",
+      "website_url": "https://www.9news.com/recipes/",
+      "description": "Local News and Information for Denver, Colorado and surrounding areas. 9NEWS.com is the official website for KUSA-TV, your trusted source for breaking news, weather and sports in Denver, CO. 9NEWS.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5595366.jpg?t=1749200124"
+    }
+  ]
+}

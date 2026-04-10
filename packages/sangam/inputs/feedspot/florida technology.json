@@ -1,0 +1,84 @@
+{
+  "category": "Florida Technology",
+  "source_url": "https://rss.feedspot.com/florida_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kappa Computer Systems Blog",
+      "feed_url": "https://www.kappaservices.com/blog-feed.xml",
+      "website_url": "https://www.kappaservices.com/blog",
+      "description": "The Kappa Computer Systems Blog offers insights, tips, and resources on IT solutions, software development, and technology trends. Discover articles on software implementation, cloud computing, and digital transformation. The blog aims to provide valuable information to businesses and individuals looking to leverage technology for their growth and success.",
+      "followers": {
+        "facebook": 927,
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/5574423.jpg?t=1684842007"
+    },
+    {
+      "title": "L7 Solutions Blog \u00bb Technology",
+      "feed_url": "https://www.l7solutions.com/blog/categories/technology?format=feed&type=rss",
+      "website_url": "https://www.l7solutions.com/blog/categories/technology",
+      "description": "The L7 Solutions Blog's Technology section covers a wide range of topics, including IT infrastructure, cloud computing, and network security. Explore articles on technology strategy, industry news, and solutions for IT challenges. The blog aims to provide practical advice and thought leadership in the ever-evolving landscape of technology.",
+      "followers": {
+        "facebook": 163,
+        "twitter": 46
+      },
+      "image_url": "https://i1.feedspot.com/5574429.jpg?t=1684842125"
+    },
+    {
+      "title": "Orlando Tech News",
+      "feed_url": "https://orlandotechnews.com/feed/",
+      "website_url": "https://orlandotechnews.com/",
+      "description": "Read news articles covering a variety of tech-related subsectors including Education, Industry, Start-ups, Metaverse, and more. Orlando Tech News is a product of former Orlando Sentinel technology reporter Marco Santana. He covered the industry in Central Florida for seven years before branching out on his own.",
+      "followers": {
+        "twitter": 209,
+        "instagram": 451
+      },
+      "image_url": "https://i1.feedspot.com/5477241.jpg?t=1670487864"
+    },
+    {
+      "title": "Florida Tech News",
+      "feed_url": "https://news.fit.edu/feed/",
+      "website_url": "https://news.fit.edu/all-news/",
+      "description": "Florida Tech News is a platform that highlights news, events, and research breakthroughs from Florida's tech community. Discover articles on cutting-edge technologies, industry collaborations, and educational programs. The blog aims to showcase the vibrant tech ecosystem in Florida and its contributions to innovation and economic growth.",
+      "followers": {
+        "facebook": 52800,
+        "twitter": 9600,
+        "instagram": 22500
+      },
+      "image_url": "https://i1.feedspot.com/5574427.jpg?t=1684842150"
+    },
+    {
+      "title": "Secure Network Services Blog",
+      "feed_url": "https://snspolk.com/feed/",
+      "website_url": "https://snspolk.com/about-us/technology-blog/",
+      "description": "The Secure Network Services Blog provides valuable information and resources on cybersecurity, network infrastructure, and data protection. Explore articles on best practices, industry trends, and tips for maintaining a secure technology environment. The blog aims to educate and empower businesses to safeguard their digital assets and stay ahead of cyber threats.",
+      "followers": {
+        "facebook": 238
+      },
+      "image_url": "https://i1.feedspot.com/5574424.jpg?t=1684995574"
+    },
+    {
+      "title": "WFIT \u00bb Florida Tech News",
+      "feed_url": "https://www.wfit.org/florida-tech-news.rss",
+      "website_url": "https://www.wfit.org/florida-tech-news",
+      "description": "WFIT's Florida Tech News section provides updates and stories on the latest technological advancements, research, and innovations from Florida's universities and institutions. Explore articles on scientific breakthroughs, engineering achievements, and academic contributions. The blog aims to showcase the state's technological prowess and its impact on various fields.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 1700,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5574428.jpg?t=1684842068"
+    },
+    {
+      "title": "Florida Technical College Blog",
+      "feed_url": "https://ftccollege.edu/feed/",
+      "website_url": "https://ftccollege.edu/blog/",
+      "description": "The Florida Technical College Blog offers insights, resources, and success stories related to vocational and technical education. Explore articles on career development, industry trends, and educational opportunities. The blog aims to inspire and inform students and professionals interested in pursuing technical careers.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5574426.jpg?t=1684995625"
+    }
+  ]
+}

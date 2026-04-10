@@ -1,0 +1,60 @@
+{
+  "category": "STEAM",
+  "source_url": "https://rss.feedspot.com/steam_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kotaku \u00bb Steam",
+      "feed_url": "https://kotaku.com/tag/steam/rss",
+      "website_url": "https://kotaku.com/tag/steam",
+      "description": "News, articles, opinions, culture, and commentary on Steam from Kotaku, a news and opinion site about games and other topics of interest to avid gamers.",
+      "followers": {
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/5038536.jpg?t=1622460110"
+    },
+    {
+      "title": "Manga Gamer Blog",
+      "feed_url": "https://blog.mangagamer.org/search/steam/feed/rss2/",
+      "website_url": "https://blog.mangagamer.org/?s=steam",
+      "description": "News, updates, releases, and announcements about steam gaming from MangaGamer. Founded in 2008, MangaGamer specializes in bringing Japanese visual novels to English-speaking fans around the world.",
+      "followers": {
+        "twitter": 62700
+      },
+      "image_url": "https://i1.feedspot.com/5039140.jpg?t=1622460150"
+    },
+    {
+      "title": "TechCrunch \u00bb Steam",
+      "feed_url": "https://techcrunch.com/tag/steam/feed/",
+      "website_url": "https://techcrunch.com/tag/steam/",
+      "description": "Updates on Steam and the gaming community from TechCrunch. TechCrunch is a website dedicated to obsessively profiling and reviewing new Internet products and companies.",
+      "followers": {
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/5039085.jpg?t=1622460126"
+    },
+    {
+      "title": "The Behemoth | Steam",
+      "feed_url": "https://blog.thebehemoth.com/tag/steam/feed/",
+      "website_url": "http://",
+      "description": "Latest Steam updates from the Behemoth, a pioneer in independent game development and publishing across a variety of consoles and platforms.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5039120.jpg?t=1622460134"
+    },
+    {
+      "title": "Time to Loot | Steam",
+      "feed_url": "https://www.timetoloot.com/tag/steam/feed/",
+      "website_url": "http://",
+      "description": "The latest news and updates on the Steam gaming community from Time to Loot, a gaming blog about having fun with loot and adventure.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5039137.jpg?t=1625720987"
+    },
+    {
+      "title": "SkinWallet | Steam",
+      "feed_url": "https://www.skinwallet.com/csgo/tag/steam/feed",
+      "website_url": "http://",
+      "description": "Blog posts keeping us updated about all the updates and new deals on Steam.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5039134.jpg?t=1622460140"
+    }
+  ]
+}

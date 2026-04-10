@@ -1,0 +1,63 @@
+{
+  "category": "UK Fake News",
+  "source_url": "https://rss.feedspot.com/uk_fake_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "NewsThump",
+      "feed_url": "https://newsthump.com/feed/",
+      "website_url": "https://newsthump.com/",
+      "description": "NewsThump is one of the UK's fastest growing humour websites providing a daily satirical take on current affairs from around the globe, only without the facts.",
+      "followers": {
+        "facebook": 406000,
+        "twitter": 64800,
+        "instagram": 27300
+      },
+      "image_url": "https://i1.feedspot.com/3339.jpg?t=1618557785"
+    },
+    {
+      "title": "News Biscuit",
+      "feed_url": "https://www.newsbiscuit.com/blog-feed.xml",
+      "website_url": "https://www.newsbiscuit.com/",
+      "description": "NewsBiscuit was launched by John O'Farrell with the noble aims of eradicating global poverty, creating a lasting peace in the Middle East and providing a daily dose of humour to bored people at work.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/1630.jpg?t=1605249361"
+    },
+    {
+      "title": "Financial Times \u00bb Misinformation",
+      "feed_url": "https://www.ft.com/misinformation?format=rss",
+      "website_url": "https://www.ft.com/misinformation",
+      "description": "Follow and read Fake News, analysis, and comments from the Financial Times, the world's leading global business publication. The Financial Times is one of the world's leading news organizations, recognized internationally for its authority, integrity, and accuracy.",
+      "followers": {
+        "twitter": 7400000
+      },
+      "image_url": "https://i1.feedspot.com/5485585.jpg?t=1672402955"
+    },
+    {
+      "title": "The Poke News",
+      "feed_url": "https://www.thepoke.com/feed/",
+      "website_url": "https://www.thepoke.com/category/news/",
+      "description": "The Poke is a satirical and topical news source, aiming to deliver an antidote to the daily grind.",
+      "followers": {
+        "facebook": 843800,
+        "twitter": 242500,
+        "instagram": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4679228.jpg?t=1618623926"
+    },
+    {
+      "title": "Waterford Whispers News",
+      "feed_url": "https://waterfordwhispersnews.com/",
+      "website_url": "https://waterfordwhispersnews.com/",
+      "description": "Waterford Whispers News is a fabricated satirical newspaper and comedy website. It uses invented names in all its stories, except in cases when public figures are being satirized.",
+      "followers": {
+        "facebook": 668900,
+        "twitter": 245000,
+        "instagram": 280300
+      },
+      "image_url": "https://i1.feedspot.com/4675848.jpg?t=1618560016"
+    }
+  ]
+}

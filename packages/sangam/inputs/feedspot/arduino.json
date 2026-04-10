@@ -1,0 +1,292 @@
+{
+  "category": "Arduino",
+  "source_url": "https://rss.feedspot.com/arduino_rss_feeds",
+  "feeds": [
+    {
+      "title": "Arduino Blog",
+      "feed_url": "https://blog.arduino.cc/feed/",
+      "website_url": "https://blog.arduino.cc/",
+      "description": "Arduino is an open-source electronics platform based on flexible, easy-to-use hardware and software. It's intended for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 435000,
+        "instagram": 816800
+      },
+      "image_url": "https://i1.feedspot.com/4365711.jpg?t=1615983179"
+    },
+    {
+      "title": "Arduino Stack Exchange",
+      "feed_url": "https://arduino.stackexchange.com/feeds/week",
+      "website_url": "https://arduino.stackexchange.com/?tab=week",
+      "description": "Arduino Stack Exchange is a question and answer site for developers of open-source hardware and software that is compatible with Arduino.",
+      "followers": {
+        "facebook": 226,
+        "twitter": 19100,
+        "instagram": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4632744.jpg?t=1642050566"
+    },
+    {
+      "title": "Electronics-Lab",
+      "feed_url": "https://feeds.feedburner.com/electronics-lab/CpKG",
+      "website_url": "https://www.electronics-lab.com/category/arduino/",
+      "description": "Electronics-Lab is an Open Source Hardware Electronics Projects website. Here you can find everything related to Electronics Projects, Circuits and Arduino. From small electronic component to complex electronic circuit it is a complete electronics guide for you.",
+      "followers": {
+        "facebook": 89500,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4621369.jpg?t=1642049774"
+    },
+    {
+      "title": "PlanetArduino",
+      "feed_url": "https://feeds.feedburner.com/planetarduino",
+      "website_url": "https://www.planetarduino.org/",
+      "description": "Planet Arduino is, or at the moment is wishing to become, an aggregation of public weblogs from around the world written by people who develop, play, and think on the Arduino platform.",
+      "followers": {
+        "facebook": 50,
+        "twitter": 34700
+      },
+      "image_url": "https://i1.feedspot.com/313402.jpg?t=1642050895"
+    },
+    {
+      "title": "Seeed Studio \u00bb Arduino",
+      "feed_url": "https://www.seeedstudio.com/blog/tag/arduino/feed/",
+      "website_url": "https://www.seeedstudio.com/blog/tag/arduino/",
+      "description": "Read the latest Arduino news from Seeed in the following section. Seeed is the IoT hardware enabler providing services that empower IoT developers to swiftly realize their products. By partnering with technology providers from hardware to the cloud, Seeed offers a wide array of hardware platforms and sensor modules ready to be integrated with existing IoT platforms.",
+      "followers": {
+        "facebook": 47800,
+        "twitter": 67800,
+        "instagram": 49700
+      },
+      "image_url": "https://i1.feedspot.com/5359265.jpg?t=1641203248"
+    },
+    {
+      "title": "Techatronic \u00bb Arduino Projects",
+      "feed_url": "https://techatronic.com/category/arduino-projects/feed/",
+      "website_url": "https://techatronic.com/category/arduino-projects/",
+      "description": "The following section of Techatronic is dedicated to Arduino Projects. We are engineers, innovators and Stem educators. we believe in sharing our knowledge with the people. Our main motive is to be aware of the students of the latest technology. We teach coding by fun like making games, graphics, cartoons and stories. We also teach hands-on experiments in robotics, IoT training.",
+      "followers": {
+        "twitter": 38,
+        "instagram": 319000
+      },
+      "image_url": "https://i1.feedspot.com/5359264.jpg?t=1641203471"
+    },
+    {
+      "title": "Sparkfun News",
+      "feed_url": "https://news.sparkfun.com/feeds/news",
+      "website_url": "https://news.sparkfun.com/tags/",
+      "description": "Read articles on Arduino by SparkFun. Since 2003, SparkFun has been helping turn ideas into reality - whether you're creating a smart weather station, exploring the frontier of machine learning, building a robot for school or prototyping your first (or tenth) product. No matter your vision or skill level, our open source components, resources and online tutorials are designed to broaden access to innovative technology and make the road to a finished project shorter.",
+      "followers": {
+        "facebook": 90200,
+        "twitter": 157900,
+        "instagram": 83800
+      },
+      "image_url": "https://i1.feedspot.com/5359267.jpg?t=1642052224"
+    },
+    {
+      "title": "Hackaday \u00bb Arduino Hacks",
+      "feed_url": "https://hackaday.com/category/arduino-hacks/feed/",
+      "website_url": "https://hackaday.com/category/arduino-hacks/",
+      "description": "All latest articles about Arduino Hacks from Hackaday.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/4621783.jpg?t=1746599744"
+    },
+    {
+      "title": "Make: DIY Projects and Ideas for Makers",
+      "feed_url": "https://makezine.com/category/technology/arduino/feed/",
+      "website_url": "https://makezine.com/category/technology/arduino/",
+      "description": "Make: DIY Projects and Ideas for Makers provides latest ideas, techniques and tools for building with Arduino, a microcontroller and open source development environment popular for DIY electronics projects.",
+      "followers": {
+        "facebook": 267600,
+        "twitter": 236100,
+        "instagram": 61100
+      },
+      "image_url": "https://i1.feedspot.com/4567818.jpg?t=1616064615"
+    },
+    {
+      "title": "CNX Software \u00bb Arduino",
+      "feed_url": "https://www.cnx-software.com/news/arduino/feed/",
+      "website_url": "https://www.cnx-software.com/news/arduino/",
+      "description": "Read the latest Arduino news on CNX Software. CNX Software is a news & information company that offers regular updates on Embedded Systems, Linux, Android, Raspberry Pi, Arduino, and more.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5315646.jpg?t=1629898190"
+    },
+    {
+      "title": "LiuDr Electronic Solutions LLC Official Blog",
+      "feed_url": "https://liudresllc.com/feed/",
+      "website_url": "https://liudresllc.com/",
+      "description": "A blog covering Arduino raspberry pi circuits programming. I am Liudr, a Tesla member at the Arduino forum. Here, I blog about my projects with Arduino, raspberry pi, physics with Arduino, makes printed circuit boards (PCB), designs, and other electronics-related content.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/959331.jpg?t=1626427182"
+    },
+    {
+      "title": "Chip Wired Blog",
+      "feed_url": "https://chipwired.com/feed/",
+      "website_url": "https://chipwired.com/blog/",
+      "description": "An Arduino Blog. I'm Chris, an engineer, a consultant, and I enjoy working with electronics. I'm here to help you unlock the value of your electronics projects, find efficient uses for embedded systems, and make it easier for you to work with embedded systems.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5315647.jpg?t=1629897034"
+    },
+    {
+      "title": "Arduino++",
+      "feed_url": "https://arduinoplusplus.wordpress.com/feed/",
+      "website_url": "https://arduinoplusplus.wordpress.com/",
+      "description": "This blog is about Arduino and CNC related stuff - hardware, software, algorithms and whatever else I may find interesting. I'll be covering topics and projects that are interesting to me.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5359263.jpg?t=1641203411"
+    },
+    {
+      "title": "Arduino-er",
+      "feed_url": "http://arduino-er.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://arduino-er.blogspot.com/",
+      "description": "Arduino-er is an Arduino development blog from beginner to beginner.",
+      "followers": {
+        "twitter": 66
+      },
+      "image_url": "https://i1.feedspot.com/5359262.jpg?t=1642051931"
+    },
+    {
+      "title": "Elementz Tech Blog",
+      "feed_url": "https://elementztechblog.wordpress.com/feed/",
+      "website_url": "https://elementztechblog.wordpress.com/",
+      "description": "Elementz Tech Blog is Tech blog based on research and development done by the Elementz team. They are involved in developing new products and services as well as discovering and creating new knowledge about scientific and technological topics for the purpose of uncovering and enabling development of valuable new products, processes, and services.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/4622466.jpg?t=1642057456"
+    },
+    {
+      "title": "Embedded Lab",
+      "feed_url": "https://embedded-lab.com/blog/category/arduino-2/feed/",
+      "website_url": "https://embedded-lab.com/blog/category/arduino-2/",
+      "description": "Embedded Lab is an online teaching laboratory for Microcontrollers, Arduino and Embedded Systems. This website is aimed at anyone who is curious to learn how these things work on fundamental level and who wants to get started with embedded system design on their own. Follow this blog for Arduino tutorials, projects, and more.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 289
+      },
+      "image_url": "https://i1.feedspot.com/4621800.jpg?t=1616064625"
+    },
+    {
+      "title": "The DIY Life",
+      "feed_url": "https://www.the-diy-life.com/tag/arduino/feed/",
+      "website_url": "https://www.the-diy-life.com/tag/arduino/",
+      "description": "The DIY Life is all about great new DIY projects and creative ideas on electronics, arduino etc for you. The DIY Life is all about your next project. Be it a project to make improvements to your home, something fun to do or simply finding a different dinner to cook, The DIY Life will help you find it and give you step by step instructions to get it done.",
+      "followers": {
+        "facebook": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4622382.jpg?t=1616064943"
+    },
+    {
+      "title": "arduino life",
+      "feed_url": "http://arduinolife1.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://arduinolife1.blogspot.com/",
+      "description": "Arduino life is a blog dedicated to arduino.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4704708.jpg?t=1616065502"
+    },
+    {
+      "title": "NerdyTechy",
+      "feed_url": "https://nerdytechy.com/feed/",
+      "website_url": "https://nerdytechy.com/",
+      "description": "Hi! My name is Rober Brown, and I'm an author of the NerdyTechy blog. I like different technologies and devices. That's why I'm going to share my knowledge with you. I'm going to write a lot of useful content for you. Check website updates!",
+      "followers": {
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5222605.jpg?t=1616064958"
+    },
+    {
+      "title": "AnalysIR Blog",
+      "feed_url": "https://www.analysir.com/blog/feed/",
+      "website_url": "https://www.analysir.com/blog/",
+      "description": "AnalysIR is an advanced IR analyzer & decoder that works with LearnIR, A.IR Shield Nano, A.IR Shield Photon, A.IR Shield Rx, Arduinos, Raspberry Pi, USB IR Toy, Teensy3, Photon, ESP8266/NodeMCU, ChipKit Fubarino, PSOC4 and the TI Tiva C MSP430-F5529 LaunchPads (beta) connected to a Windows PC.",
+      "followers": {
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/4622537.jpg?t=1642058204"
+    },
+    {
+      "title": "Electron Hacks",
+      "feed_url": "http://electronhacks.com/category/electronics/arduino/feed/",
+      "website_url": "http://electronhacks.com/category/electronics/arduino/",
+      "description": "Electron Hacks is a DIY home automation, microcontrollers, gadgets, and electronic projects by Johnathan Hottell.",
+      "followers": {
+        "facebook": 141,
+        "twitter": 155
+      },
+      "image_url": "https://i1.feedspot.com/4621611.jpg?t=1642057913"
+    },
+    {
+      "title": "Dimdim's Blog",
+      "feed_url": "https://www.dimdim.gr/category/arduino/feed/",
+      "website_url": "https://www.dimdim.gr/category/arduino/",
+      "description": "Dimitris D is a computer engineer with a penchant for DIY audio and electronics in general. DIY Audio, Arduino, Computers, Music.",
+      "followers": {
+        "twitter": 108
+      },
+      "image_url": "https://i1.feedspot.com/4621809.jpg?t=1642058068"
+    },
+    {
+      "title": "Runtime Projects",
+      "feed_url": "https://runtimeprojects.com/category/arduino/feed/",
+      "website_url": "https://runtimeprojects.com/category/arduino/",
+      "description": "A blog featuring Arduino projects, tutorials, hardware reviews and ebooks. Follow this blog for more projects, articles, tutorials and project ideas using Arduino, Raspberry Pi and other platforms.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 662
+      },
+      "image_url": "https://i1.feedspot.com/4622426.jpg?t=1616064981"
+    },
+    {
+      "title": "FactoryForward",
+      "feed_url": "https://www.factoryforward.com/category/arduino/feed/",
+      "website_url": "https://www.factoryforward.com/category/arduino/",
+      "description": "FactoryForward is an Electronics Distributor and E-commerce Store, with a goal to bring new technology and latest microcontroller development boards and sensors to all age groups.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/4918147.jpg?t=1616064987"
+    },
+    {
+      "title": "Industrial Shields \u00bb Arduino Industrial",
+      "feed_url": "https://www.industrialshields.com/blog/open-source-industrial-blog-1/feed",
+      "website_url": "https://www.industrialshields.com/blog/arduino-industrial-1",
+      "description": "Industrial PLC Arduino uses, examples and demo, and also helping posts of Raspberry Pi Industrial Panel PC. Industrial Shields is an Industrial applications of PLC Arduino based. They are a fast growing company with the aim to become the biggest e-commerce of industrial automation electronic devices based on Open Source Hardware electronics.",
+      "followers": {
+        "facebook": 52700,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4622543.jpg?t=1616064588"
+    },
+    {
+      "title": "Adafruit",
+      "feed_url": "https://blog.adafruit.com/category/arduino/feed",
+      "website_url": "https://blog.adafruit.com/category/arduino/",
+      "description": "Adafruit was founded in 2005 by MIT hacker & engineer, Limor 'Ladyada' Fried. Her goal was to create the best place online for learning electronics and making the best designed products for makers of all ages and skill levels. Adafruit makes all-original DIY electronics kits and is a New York City based company that sells kits and parts for original, open source hardware electronics projects.",
+      "followers": {
+        "facebook": 141600,
+        "twitter": 222000,
+        "instagram": 264600
+      },
+      "image_url": "https://i1.feedspot.com/4621346.jpg?t=1616064607"
+    },
+    {
+      "title": "ArduCAM",
+      "feed_url": "https://www.arducam.com/feed/",
+      "website_url": "https://www.arducam.com/",
+      "description": "ArduCAM is a open source camera develop platform which is based on very popular Arduino boards. It will support most of the camera modules with sensors from Omnivision and Aptina which is range from 0.3MegaPixel to 13MegaPixel. They are professional CMOS image sensor and camera module developer and manufacture.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 681
+      },
+      "image_url": "https://i1.feedspot.com/4621731.jpg?t=1616064597"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "category": "OSINT",
+  "source_url": "https://rss.feedspot.com/osint_rss_feeds",
+  "feeds": [
+    {
+      "title": "Skopenow",
+      "feed_url": "https://www.skopenow.com/news/rss.xml",
+      "website_url": "https://www.skopenow.com/news",
+      "description": "Get the latest news and updates on Fraud Detection and Risk Evaluation. Skopenow supports hundreds of companies from around the world helping automate their business and people intelligence needs. Our goal is to combine technology, design, simplicity, and power to deliver the best product possible.",
+      "followers": {
+        "facebook": 788,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5416494.jpg?t=1664347892"
+    },
+    {
+      "title": "OSINT Me",
+      "feed_url": "https://www.osintme.com/index.php/feed/",
+      "website_url": "https://www.osintme.com/",
+      "description": "OSINTME.COM is a blog about digital privacy and open-source intelligence. These two items are inherently conflicted, as OSINT techniques often exploit gaps and deficiencies within the privacy framework. Here I intend to share some of my knowledge, techniques and observations, partly as a way of contributing to the OSINT community, and partly as a way of keeping those tools sharp and practicing what I preach.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5416493.jpg?t=1664346058"
+    },
+    {
+      "title": "Knowmad OSINT Blog",
+      "feed_url": "https://knowmad-osint.com/feed/",
+      "website_url": "https://knowmad-osint.com/blog/",
+      "description": "Knowmad provides cutting-edge OSINT training to give you an edge on the job market. You'll learn how to collect and analyze satellite imagery, track aircraft, vessels, and satellites, exploit social media channels, authenticate media material, conduct digital forensics and open-source investigations. The mission is to make OSINT accessible for students and young professionals from all backgrounds.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5416488.jpg?t=1664348367"
+    },
+    {
+      "title": "OSINT Daily",
+      "feed_url": "https://feeds.feedburner.com/blogspot/vpAFr",
+      "website_url": "https://osintdaily.blogspot.com/",
+      "description": "Explore my insights and findings about OSINT in this blog. Researching and writing about the U.S. Intelligence Community is my passion! As a member of the Association of Former Intelligence Officers (AFIO), I attend seminars and discuss intel matters with professionals in and around Washington DC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5416482.jpg?t=1664344977"
+    },
+    {
+      "title": "Social Links Blog \u00bb OSINT",
+      "feed_url": "https://blog.sociallinks.io/tag/osint/rss/",
+      "website_url": "https://blog.sociallinks.io/tag/osint/",
+      "description": "Learn more about OSINT, how it can help in security and industry news. Social Links is a Global provider of OSINT solutions for Social media, Blockchain, Darknet. We assemble massive volumes of data from open sources including social media, messengers, blockchains, and the Dark Web to analyze and visualize a holistic picture for streamlining data-driven investigations.",
+      "followers": {
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/5416479.jpg?t=1656505948"
+    },
+    {
+      "title": "Offensive OSINT",
+      "feed_url": "https://www.offensiveosint.io/rss/",
+      "website_url": "https://www.offensiveosint.io/",
+      "description": "My name is Wojciech and I am an experienced Systems Engineer, Pentester, Security Analyst, and OSINT researcher. During my professional career as a cyber security expert, I provided analysis for companies across Europe. I took part in many projects for big corporations as well as startups. I have made a lot of open-source projects for the OSINT community. Browse through my projects and news on the OSINT industry and security.",
+      "followers": {
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5416477.jpg?t=1656505938"
+    },
+    {
+      "title": "Blackdot Solutions Blog",
+      "feed_url": "https://blackdotsolutions.com/feed/",
+      "website_url": "https://blackdotsolutions.com/resources/#blogs",
+      "description": "Stay up to date with the latest insights on open source investigations with our blog directly from the experts at Blackdot Solutions. We make Videris, the world's leading online investigations software. We help collect, analyse and visualise open source data faster and more accurately.",
+      "followers": {
+        "twitter": 88
+      },
+      "image_url": "https://i1.feedspot.com/5416475.jpg?t=1656505932"
+    },
+    {
+      "title": "Vanimpe \u00bb Osint",
+      "feed_url": "https://www.vanimpe.eu/category/osint/feed/",
+      "website_url": "https://www.vanimpe.eu/category/osint/",
+      "description": "Explore my rants and opinions on OSINT in this section. I'm Koen Van Impe. I'm involved with computer security and I work as a freelancer in incident response, incident coordination, threat intelligence, vulnerability management and security best practices. My main interests in computers are security, web applications (PHP, MySQL, Apache), system administration and free software.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5416491.jpg?t=1656506011"
+    },
+    {
+      "title": "Micah Hoffman's Personal Blog \u00bb OSINT",
+      "feed_url": "https://webbreacher.com/category/osint/feed/",
+      "website_url": "https://webbreacher.com/category/osint/",
+      "description": "I'm Micah Hoffman, also known as WebBreacher. I'm also currently the President of The OSINT Curious Project, the Founder and lead trainer of the My OSINT training site and the Principal Investigator at Spotlight Infosec LLC. Browse through my articles on OSINT detailing my experience in the area.",
+      "followers": {
+        "twitter": 23700
+      },
+      "image_url": "https://i1.feedspot.com/5416485.jpg?t=1664349210"
+    },
+    {
+      "title": "NixIntel \u00bb OSINT",
+      "feed_url": "https://nixintel.info/category/osint/feed/",
+      "website_url": "https://nixintel.info/category/osint/",
+      "description": "I'm an investigator with an interest in all things OSINT, Linux, and Digital Forensics. I spent 12 years working in law enforcement as a detective specializing in the investigation of serious crime, online child abuse, and cybercrime. OSINT and cyber security remain my passion and I now work in these areas for a private company. In addition to this blog, I also contribute to the OSINT Curious Project to help the community learn and develop their OSINT skills.",
+      "followers": {
+        "twitter": 23600
+      },
+      "image_url": "https://i1.feedspot.com/5416486.jpg?t=1664348507"
+    },
+    {
+      "title": "Third Eye OSINT",
+      "feed_url": "https://feeds.feedburner.com/ThirdEyeOsint",
+      "website_url": "http://thirdeyeosint.blogspot.com/",
+      "description": "Third Eye OSINT publishes enlightened commentary on geopolitics. The articles will always reflect a pro-American personal viewpoint, because the author is a loyal citizen of the United States of America. This blog is a wholly-owned project of Alfidi Capital.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5416481.jpg?t=1664367037"
+    },
+    {
+      "title": "SOCRadar \u00bb OSINT",
+      "feed_url": "https://socradar.io/category/osint/feed/",
+      "website_url": "https://socradar.io/category/osint/",
+      "description": "Learn more about OSINT, security and more! SOCRadar provides an early warning system with an extended threat intelligence platform. We're one of the fastest-growing cyber security companies in the world.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5416480.jpg?t=1656505953"
+    },
+    {
+      "title": "Hatless1der Blog",
+      "feed_url": "https://hatless1der.com/feed/",
+      "website_url": "https://hatless1der.com/",
+      "description": "I started this blog site because I love to learn, share, and collaborate on all things related to open source investigating, or digital investigations if you're one of those anti-INT people. I have been working in an investigative capacity for 20 years now.",
+      "followers": {
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5416478.jpg?t=1664367166"
+    },
+    {
+      "title": "Secjuice \u00bb OSINT",
+      "feed_url": "https://www.secjuice.com/tag/osint/rss/",
+      "website_url": "https://www.secjuice.com/tag/osint/",
+      "description": "A selection of articles related to OSINT (open source intelligence), written by members of the Secjuice writers collective. Secjuice is the only non-profit, independent and volunteer led publication in the information security space. We are a private members writing club focused on cybersecurity, information security, network security, hacking, cyberwar, and open source intelligence gathering.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5416476.jpg?t=1656505935"
+    },
+    {
+      "title": "ESPY Blog",
+      "feed_url": "https://espysys.com/blog/",
+      "website_url": "https://espysys.com/blog/",
+      "description": "ESPY is a global leader in developing OSINT investigation solutions that leverage advanced data-driven, artificial intelligence technologies to meet a wide range of mission-critical operational needs and real-world security threats. Get your daily dose of OSINT-Related resources, case studies and news from around the globe.",
+      "followers": {
+        "facebook": 302,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5416487.jpg?t=1664348457"
+    },
+    {
+      "title": "OSINT Curious Project",
+      "feed_url": "https://www.osintcurio.us/feed",
+      "website_url": "https://www.osintcurio.us/",
+      "description": "The OSINT Curious Project is a source of quality, actionable, Open Source Intelligence news, original blogs, instructional videos, and live streams. We try to keep people curious about exploring web applications for bits of information or trying out new techniques to access important OSINT data.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5123047.jpg?t=1664367652"
+    },
+    {
+      "title": "OSINT Editor",
+      "feed_url": "https://osinteditor.com/",
+      "website_url": "https://osinteditor.com/",
+      "description": "OSINT Editor is a brand new initiative built around a discord community, the goal and hope for it is to build a pool of OSINT amateurs, experts and in general all those interested in Open Source Intelligence so to leverage a shared pool of knowledge to filter, fact check and evaluate news coming out of the social media OSINT world, propose researches/investigations and provide tools and learning material for the tools and techniques around which most of the OSINT world revolves around.",
+      "followers": {
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/5416496.jpg?t=1656506041"
+    }
+  ]
+}

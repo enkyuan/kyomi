@@ -1,0 +1,104 @@
+{
+  "category": "Kiosk",
+  "source_url": "https://rss.feedspot.com/kiosk_rss_feeds",
+  "feeds": [
+    {
+      "title": "RedyRef Kiosks",
+      "feed_url": "https://redyref.com/feed/",
+      "website_url": "https://redyref.com/news/",
+      "description": "RedyRef is a U.S leader in kiosk manufacturing, digital signage, and self-service kiosk software. Follow us to learn how RedyRef can take your business to the next level.",
+      "followers": {
+        "facebook": 273,
+        "twitter": 519,
+        "instagram": 265
+      },
+      "image_url": "https://i1.feedspot.com/5057058.jpg?t=1622697738"
+    },
+    {
+      "title": "Acante News",
+      "feed_url": "https://acante.co.uk/feed/",
+      "website_url": "https://acante.co.uk/news/",
+      "description": "Acante has an excellent reputation in the touch screen marketplace for producing innovative, reliable and high-quality kiosk solutions. Our varied kiosk range has been developed and grown over time to ensure that we have a kiosk to suit every requirement. Follow us to get the latest updates.",
+      "followers": {
+        "facebook": 80,
+        "twitter": 827
+      },
+      "image_url": "https://i1.feedspot.com/5057060.jpg?t=1622697741"
+    },
+    {
+      "title": "Olea Kiosks Inc.",
+      "feed_url": "https://www.olea.com/feed/",
+      "website_url": "https://www.olea.com/news/",
+      "description": "Olea Kiosks Inc. has been the leading manufacturer of standard and custom interactive kiosks. Follow the latest kiosk industry news and articles from Olea Kiosks.",
+      "followers": {
+        "facebook": 540,
+        "twitter": 262
+      },
+      "image_url": "https://i1.feedspot.com/5057066.jpg?t=1622697745"
+    },
+    {
+      "title": "imageHOLDERS",
+      "feed_url": "https://www.imageholders.com/feed/",
+      "website_url": "https://www.imageholders.com/",
+      "description": "Future proof your business with a bespoke touch screen, interactive & digital kiosk at imageHOLDERS. Follow us to get updates regularly.",
+      "followers": {
+        "facebook": 286,
+        "twitter": 886
+      },
+      "image_url": "https://i1.feedspot.com/5057064.jpg?t=1622697753"
+    },
+    {
+      "title": "Kiosk Marketplace",
+      "feed_url": "https://www.kioskmarketplace.com/rss/",
+      "website_url": "https://www.kioskmarketplace.com/articles/",
+      "description": "Kiosk Marketplace provides free news and information about the business of self-service kiosks. It has been the leader in covering the kiosk industry.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5057080.jpg?t=1623853650"
+    },
+    {
+      "title": "Advanced Kiosks",
+      "feed_url": "https://advancedkiosks.com/feed/",
+      "website_url": "https://advancedkiosks.com/self-service-blog/",
+      "description": "Advanced Kiosks is a leader in engineering custom hardware and software kiosk solutions for self-service technology. Follow our blog posts to learn more about kiosk.",
+      "followers": {
+        "facebook": 740,
+        "twitter": 955,
+        "instagram": 254
+      },
+      "image_url": "https://i1.feedspot.com/5057111.jpg?t=1622697734"
+    },
+    {
+      "title": "Omniexperience \u00bb Kiosk",
+      "feed_url": "https://omniexperience.com/category/kiosk/feed",
+      "website_url": "https://omniexperience.com/category/kiosk",
+      "description": "Omniexperience provides responsive web design, mobile apps & interactive kiosks, all managed out of a custom CMS platform with awesome marketing tools. Follow us to learn and keep yourself up to date with our kiosk blog.",
+      "followers": {
+        "facebook": 4
+      },
+      "image_url": "https://i1.feedspot.com/5057129.jpg?t=1622698488"
+    },
+    {
+      "title": "PopShap",
+      "feed_url": "https://popshap.com/feed",
+      "website_url": "https://popshap.com/blog",
+      "description": "Popshap specializes in technological devices like Digital Interactive Touchscreen Kiosks! Using our kiosks opens a whole world of possibilities for you and your business. Follow our The Kiosk Blog that provides consistent information sharing insights into the upcoming kiosk trends and capabilities at different events.",
+      "followers": {
+        "facebook": 369,
+        "instagram": 640
+      },
+      "image_url": "https://i1.feedspot.com/5057083.jpg?t=1622697773"
+    },
+    {
+      "title": "The KioskSimple",
+      "feed_url": "https://blog.kiosksimple.com/feed/",
+      "description": "The KioskSimple is a simple and elegant kiosk software solution that makes it easy to securely deploy your self-service kiosk. Follow us to get the expert advice for developing, deploying, and managing self-service kiosks.",
+      "followers": {
+        "twitter": 119
+      },
+      "image_url": "https://i1.feedspot.com/5057076.jpg?t=1622697782"
+    }
+  ]
+}

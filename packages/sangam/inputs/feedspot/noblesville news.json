@@ -1,0 +1,18 @@
+{
+  "category": "Noblesville News",
+  "source_url": "https://rss.feedspot.com/noblesville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fox 59 \u00bb Noblesville",
+      "feed_url": "https://fox59.com/tag/noblesville/feed/",
+      "website_url": "https://fox59.com/tag/noblesville/",
+      "description": "Get Indianapolis news and weather, traffic, sports, entertainment and community events from FOX59, central Indiana's FOX affiliate.",
+      "followers": {
+        "facebook": 998200,
+        "twitter": 296000,
+        "instagram": 114400
+      },
+      "image_url": "https://i1.feedspot.com/5155323.jpg?t=1623157497"
+    }
+  ]
+}

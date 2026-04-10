@@ -1,0 +1,38 @@
+{
+  "category": "Turkey Business",
+  "source_url": "https://rss.feedspot.com/turkey_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "N24 Business",
+      "feed_url": "https://n24.com.tr/feed/",
+      "website_url": "https://n24.com.tr/",
+      "description": "N24 Business is a Turkish news website and portal dedicated to covering and supporting investors, entrepreneurs, and SMEs to the fullest, contributing to success at all levels. Stay tuned for in-depth coverage and running stories in local small business communities in Turjey.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 507
+      },
+      "image_url": "https://i1.feedspot.com/5742583.jpg?t=1703595219"
+    },
+    {
+      "title": "Doing Business in Turkey",
+      "feed_url": "https://doingbusinessinturkey.com/feed/",
+      "website_url": "https://doingbusinessinturkey.com/in-the-news/",
+      "description": "Doing Business in Turkey is the leading business news and information portal that provides lots of resources for global entrepreneurs and corporates who consider starting or operating a business in Turkey.",
+      "followers": {
+        "facebook": 659,
+        "twitter": 32,
+        "instagram": 67
+      },
+      "image_url": "https://i1.feedspot.com/4994518.jpg?t=1622102193"
+    },
+    {
+      "title": "ERAI Turkey Blog",
+      "feed_url": "https://eraiturkey.com/feed/",
+      "description": "The agency that supports the development of companies in Turkey. Latest breaking business news, opinion, and analysis from Turkey, including personal finance, farming, property, and the economy.",
+      "followers": {
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/5342914.jpg?t=1636968158"
+    }
+  ]
+}

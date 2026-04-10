@@ -1,0 +1,28 @@
+{
+  "category": "Linden News",
+  "source_url": "https://rss.feedspot.com/linden_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Union News Daily \u00bb Linden",
+      "feed_url": "https://unionnewsdaily.com/category/news/linden/feed",
+      "website_url": "https://unionnewsdaily.com/category/news/linden",
+      "description": "A news source that provides local information about 14 communities in Union County, NJ. Follow this feed to read the latest news and updates in Linden, NJ.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 208
+      },
+      "image_url": "https://i1.feedspot.com/5149772.jpg?t=1589262239"
+    },
+    {
+      "title": "TAPinto Linden",
+      "feed_url": "https://www.tapinto.net/towns/linden/",
+      "website_url": "https://www.tapinto.net/towns/linden/",
+      "description": "TAPinto Linden is a hyperlocal newspaper covering news, sports, police, fire, and government issues for Linden, NJ.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 329
+      },
+      "image_url": "https://i1.feedspot.com/5149767.jpg?t=1589263155"
+    }
+  ]
+}

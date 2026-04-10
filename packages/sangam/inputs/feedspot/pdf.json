@@ -1,0 +1,82 @@
+{
+  "category": "PDF",
+  "source_url": "https://rss.feedspot.com/pdf_rss_feeds",
+  "feeds": [
+    {
+      "title": "Readdle",
+      "feed_url": "https://pdfexpert.com/blog/rss",
+      "website_url": "https://pdfexpert.com/blog",
+      "description": "Readdle's PDF Expert is a fast, robust and beautiful PDF editor. It is also the best PDF writer for Mac. You can easily edit text, images, and links. It will automatically detect the font, size, and opacity of the original text, so you can make edits easily. Follow our blog to stay updated.",
+      "followers": {
+        "facebook": 24200,
+        "twitter": 26100
+      },
+      "image_url": "https://i1.feedspot.com/5059265.jpg?t=1622788452"
+    },
+    {
+      "title": "Soda PDF",
+      "feed_url": "https://www.sodapdf.com/blog/feed/",
+      "website_url": "https://www.sodapdf.com/blog/",
+      "description": "Soda PDF is trusted by thousands of clients and businesses to securely manipulate pdf files online. Our reliable and fast solutions allow you to edit, read, convert and sign your documents easily on your web browser or computer. Follow us to get the latest updates.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5059269.jpg?t=1622788456"
+    },
+    {
+      "title": "PDF Association",
+      "feed_url": "https://pdfa.org/resource/feed/",
+      "website_url": "https://pdfa.org/resource/",
+      "description": "The PDF Association is an international association of companies and subject matter experts interested in PDF technology for digital document applications. Follow us to get the latest updates.",
+      "followers": {
+        "facebook": 536,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5059292.jpg?t=1622788478"
+    },
+    {
+      "title": "Investintech PDF Solutions",
+      "feed_url": "https://www.investintech.com/resources/blog/feed/",
+      "website_url": "https://www.investintech.com/resources/blog/",
+      "description": "Investintech PDF Solutions provide PDF to Word, Excel, PowerPoint conversion. Quickly convert, create and edit PDF files on the spot. Follow us to get expert advice on working with PDF files.",
+      "followers": {
+        "facebook": 28500,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5059267.jpg?t=1622788448"
+    },
+    {
+      "title": "PDFTables",
+      "feed_url": "https://pdftables.com/blog/feed.xml",
+      "website_url": "https://pdftables.com/blog/",
+      "description": "PDFTables converts PDFs to Excel, CSV, XML or HTML. Our API allows you to integrate PDF conversion into your operations. Follow our latest blog posts around PDF conversion and how you can automate your processes.",
+      "followers": {
+        "facebook": 35,
+        "twitter": 687
+      },
+      "image_url": "https://i1.feedspot.com/5059264.jpg?t=1622788493"
+    },
+    {
+      "title": "DocFly Blog",
+      "feed_url": "https://www.docfly.com/blog/feed",
+      "website_url": "https://www.docfly.com/blog/?redirect=pdfpro",
+      "description": "PDF Pro is a fast, secure, easy and entirely online free PDF editor for editing PDFs. Follow and get tutorials and information on PDF",
+      "followers": {
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5059272.jpg?t=1622788468"
+    },
+    {
+      "title": "Foxit PDF Blog",
+      "feed_url": "https://www.foxit.com/blog/",
+      "website_url": "https://www.foxit.com/blog/",
+      "description": "Foxit's mission is to develop market-leading and innovative PDF products and services, helping knowledge workers to increase their productivity.",
+      "followers": {
+        "facebook": 123700,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5311382.jpg?t=1628674002"
+    }
+  ]
+}

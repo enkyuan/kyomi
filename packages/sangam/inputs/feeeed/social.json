@@ -1,0 +1,1073 @@
+{
+  "id": "social",
+  "display_name": "Social",
+  "feeds": [
+    {
+      "id": "substack:top:noahpinion_-_noah_smith",
+      "title": "Noahpinion - Noah Smith",
+      "cleaned_title": "Noahpinion",
+      "summary": "An engaging exploration of economics, this newsletter blends insightful commentary with current events, making complex topics accessible and relevant to a broader audience.",
+      "kind": "feed",
+      "feed_url": "https://www.noahpinion.blog/feed",
+      "details": "Business",
+      "sources": [
+        "substack_top",
+        "curated"
+      ],
+      "tags": [
+        "Money",
+        "Finance",
+        "Science",
+        "Social",
+        "_intellectual"
+      ],
+      "cleaned_author": "Noah Smith",
+      "language": "en",
+      "keywords": [
+        "economics",
+        "current events",
+        "analysis"
+      ],
+      "top_level_category": "Business & Finance"
+    },
+    {
+      "id": "substack:top:cartoons_hate_her",
+      "title": "Cartoons Hate Her",
+      "cleaned_title": "Cartoons Hate Her",
+      "summary": "This Substack navigates the complexities of social dynamics and online culture through the unique perspective of a self-described 'normie mom.' Combining humor with thoughtful critiques, this feed explores the absurdities of modern life.",
+      "kind": "feed",
+      "feed_url": "https://www.cartoonshateher.com/feed",
+      "details": "Humor",
+      "sources": [
+        "substack_top"
+      ],
+      "tags": [
+        "Arts & Culture",
+        "Humor",
+        "Social"
+      ],
+      "cleaned_author": null,
+      "language": "en",
+      "keywords": [
+        "social dynamics",
+        "online culture",
+        "humor"
+      ],
+      "top_level_category": "Entertainment"
+    },
+    {
+      "id": "feed:thespinoff.co.nz:The Spinoff",
+      "cleaned_title": "The Spinoff",
+      "summary": "A New Zealand publication that delves into pop culture, politics, and social issues through thoughtful features and criticism. The Spinoff engages its audience with diverse perspectives on contemporary matters.",
+      "title": "The Spinoff",
+      "kind": "feed",
+      "feed_url": "https://thespinoff.co.nz/feed",
+      "details": "Popular",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "News",
+        "Arts & Culture",
+        "Social",
+        "_artsy"
+      ],
+      "language": "en",
+      "keywords": [
+        "New Zealand",
+        "culture",
+        "politics",
+        "features",
+        "criticism"
+      ],
+      "top_level_category": "News & Current Events"
+    },
+    {
+      "id": "feed:mashable.com:Mashable",
+      "cleaned_title": "Mashable",
+      "summary": "A digital media website that focuses on technology, digital culture, and entertainment, with a section dedicated to Internet-related topics.",
+      "title": "Mashable",
+      "kind": "feed",
+      "feed_url": "https://mashable.com/feeds/rss/social-media",
+      "details": "Tech > Internet",
+      "sources": [
+        "original_feed_db",
+        "crowdsourced_popular"
+      ],
+      "popularity_score": 3.923591125760805,
+      "cleaned_author": null,
+      "tags": [
+        "Tech",
+        "Internet",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "technology",
+        "digital culture",
+        "entertainment",
+        "online trends"
+      ],
+      "top_level_category": "Consumer Tech & Digital"
+    },
+    {
+      "id": "youtube:GaryVee",
+      "cleaned_title": "GaryVee",
+      "summary": "Gary Vaynerchuk's YouTube channel offers motivational content, business advice, and insights for entrepreneurs.",
+      "title": "GaryVee",
+      "kind": "youtube",
+      "channel_id": "UCctXZhXmG-kf3tlIXgVZUlw",
+      "thumbnail_url": "https://yt3.ggpht.com/4NddRokneuqTE852U1HyLitfwyulzAHpm4fHOML_Iy6qIHzizL0y0RkMdnqy1xckD6Uyrj0e=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Business > Startups",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": "Gary Vaynerchuk",
+      "tags": [
+        "Money",
+        "Tech",
+        "Social",
+        "Ventures"
+      ],
+      "language": "en",
+      "keywords": [
+        "entrepreneurship",
+        "business advice",
+        "social media"
+      ],
+      "top_level_category": "Business & Finance"
+    },
+    {
+      "id": "feed:screenshot-magazine.com:SCREENSHOT Media",
+      "cleaned_title": "SCREENSHOT Media",
+      "summary": "SCREENSHOT Media discusses contemporary politics, technology, and culture, providing a critical lens on issues that resonate with today\u2019s youth. It covers a wide range of compelling topics, from entertainment to social movements.",
+      "title": "SCREENSHOT Media",
+      "kind": "feed",
+      "feed_url": "https://screenshot-magazine.com/feed/",
+      "details": "Arts",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Arts & Culture",
+        "Celebs & Entertainment",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "politics",
+        "culture",
+        "technology",
+        "youth issues"
+      ],
+      "top_level_category": "Arts & Culture"
+    },
+    {
+      "id": "youtube:Our Changing Climate",
+      "cleaned_title": "Our Changing Climate",
+      "summary": "A YouTube channel that explores various environmental topics, including climate change, sustainability, and conservation.",
+      "title": "Our Changing Climate",
+      "kind": "youtube",
+      "channel_id": "UCNXvxXpDJXp-mZu3pFMzYHQ",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqPm7RF8UKE4ZweyjGWPripW4wXr9p8jwSN5oa_Q=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Environment > Climate Change",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Science",
+        "Climate & Environment",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "climate change",
+        "sustainability",
+        "pollution",
+        "environmental education"
+      ],
+      "top_level_category": "Science & Nature"
+    },
+    {
+      "id": "youtube:Wine Folly",
+      "cleaned_title": "Wine Folly",
+      "summary": "A YouTube channel dedicated to making wine easy to understand, with educational videos, wine tastings, and tips for wine enthusiasts.",
+      "title": "Wine Folly",
+      "kind": "youtube",
+      "channel_id": "UCyHNNb7v43Xyeg3oE_XW4Pw",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqOoQBCG2eeP8kLXn3R9yjSLJbDOfGw572AxqIyuOA=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Food & Drink > Wine & Spirits",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Education",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "wine education",
+        "tasting",
+        "tips",
+        "videos"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "reddit:wine",
+      "cleaned_title": "wine",
+      "summary": "A subreddit for wine enthusiasts to discuss and share their love for wine, ask questions, and discover new bottles and wineries.",
+      "title": "wine",
+      "kind": "reddit",
+      "subreddit": "wine",
+      "details": "Food & Drink > Wine & Spirits",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Social",
+        "Education"
+      ],
+      "language": "en",
+      "keywords": [
+        "wine",
+        "discussion",
+        "community",
+        "questions"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "youtube:GuildSomm",
+      "cleaned_title": "GuildSomm",
+      "summary": "A YouTube channel dedicated to wine education, offering videos on wine tasting, sommelier tips, and interviews with industry professionals.",
+      "title": "GuildSomm",
+      "kind": "youtube",
+      "channel_id": "UC8pfV0swKa6nZUo11rD0t_g",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqODuQAabtKo2-CsezWeaOEoP6-RYrLvNNoakJ659g=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Food & Drink > Wine & Spirits",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Education",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "wine education",
+        "sommeliers",
+        "tutorials",
+        "interviews"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "youtube:Sustainably Vegan",
+      "cleaned_title": "Sustainably Vegan",
+      "summary": "A YouTube channel that focuses on sustainable living, zero waste, veganism, and ethical fashion.",
+      "title": "Sustainably Vegan",
+      "kind": "youtube",
+      "channel_id": "UCkq2gEWE-i647M71bh7zDxA",
+      "thumbnail_url": "https://yt3.ggpht.com/s3kNkL6RqyGAnsPeO4d3TrJOyx9yKCM-Zy83YlJHfjzlEJpI2bNW-PTuaB3yU52nfYSe9vEwaQ=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Environment > Sustainability",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Social",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "sustainability",
+        "veganism",
+        "zero waste"
+      ],
+      "top_level_category": "Science & Nature"
+    },
+    {
+      "id": "youtube:Sustainably Vegan",
+      "cleaned_title": "Sustainably Vegan",
+      "summary": "A YouTube channel that focuses on sustainable living, zero waste, veganism, and ethical fashion.",
+      "title": "Sustainably Vegan",
+      "kind": "youtube",
+      "channel_id": "UCkq2gEWE-i647M71bh7zDxA",
+      "thumbnail_url": "https://yt3.ggpht.com/s3kNkL6RqyGAnsPeO4d3TrJOyx9yKCM-Zy83YlJHfjzlEJpI2bNW-PTuaB3yU52nfYSe9vEwaQ=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Environment > Sustainability",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Social",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "sustainability",
+        "veganism",
+        "zero waste"
+      ],
+      "top_level_category": "Science & Nature"
+    },
+    {
+      "id": "youtube:Exploring Alternatives",
+      "cleaned_title": "Exploring Alternatives",
+      "summary": "A YouTube channel that explores alternative lifestyles, including tiny houses, off-grid living, and sustainable travel.",
+      "title": "Exploring Alternatives",
+      "kind": "youtube",
+      "channel_id": "UC8EQAfueDGNeqb1ALm0LjHA",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqNLcwQMjBrKcj8QVilLDoR9DeUUwAVg2rtSdFKmhg=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Environment > Sustainability",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "DIY",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "tiny house",
+        "off-grid",
+        "sustainable living"
+      ],
+      "top_level_category": "Science & Nature"
+    },
+    {
+      "id": "youtube:Vox",
+      "cleaned_title": "Vox",
+      "summary": "Vox Borders is a YouTube series that explores the intersections of culture, politics, and geography, offering fascinating insights into different cultures and their unique characteristics.",
+      "title": "Vox",
+      "kind": "youtube",
+      "channel_id": "UCLXo7UDZvByw2ixzpQCufnA",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqM8rHWDu071t1WRxP7fThK1xi42GWsJEWFqRxyqnw=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Travel > Culture",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Social",
+        "World News"
+      ],
+      "language": "en",
+      "keywords": [
+        "culture",
+        "politics",
+        "geography",
+        "insights"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://spyglass.org/rss/",
+      "title": "Spyglass",
+      "kind": "feed",
+      "feed_url": "https://spyglass.org/rss/",
+      "sources": [
+        "curated"
+      ],
+      "cleaned_title": "Spyglass",
+      "cleaned_author": "M.G. Siegler",
+      "summary": "Spyglass features thoughtful commentary and analysis on technology and media, exploring contemporary issues from a unique perspective.",
+      "tags": [
+        "Tech",
+        "Internet",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "technology",
+        "media",
+        "commentary"
+      ]
+    },
+    {
+      "id": "feed:https://futuresoutheastasia.com/feed/",
+      "title": "Southeast Asia construction, transport, and infrastructure",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://futuresoutheastasia.com/feed/",
+      "summary": "Transport and urban development in Southeast Asia.",
+      "details": "Humanities > Urbanism",
+      "cleaned_title": "Southeast Asia construction, transport, and infrastructure",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Urban",
+        "Social",
+        "Urban",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "Southeast Asia",
+        "transport",
+        "infrastructure",
+        "railways",
+        "urban development"
+      ],
+      "top_level_category": "Society, Law & History"
+    },
+    {
+      "id": "feed:https://anderegg.ca/feed.xml",
+      "title": "anderegg.ca",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://anderegg.ca/feed.xml",
+      "summary": "Something (slightly) less boring than nothing.",
+      "details": "Technology",
+      "cleaned_title": "anderegg.ca",
+      "cleaned_author": null,
+      "tags": [
+        "Tech",
+        "Internet",
+        "Social",
+        "Writing"
+      ],
+      "language": "en",
+      "keywords": [],
+      "top_level_category": "Consumer Tech & Digital"
+    },
+    {
+      "id": "feed:https://www.zephoria.org/thoughts/feed",
+      "title": "danah boyd | apophenia",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.zephoria.org/thoughts/feed",
+      "details": "Technology",
+      "cleaned_title": "danah boyd | apophenia",
+      "cleaned_author": "danah boyd",
+      "summary": "A blog focused on social media, technology, and their impact on society through a critical lens.",
+      "tags": [
+        "Tech",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "democracy",
+        "social media games",
+        "Cornell faculty",
+        "Ministry of Empowerment"
+      ],
+      "top_level_category": "Consumer Tech & Digital"
+    },
+    {
+      "id": "feed:https://olu.online/feed/?type=rss",
+      "title": "Olu Online | Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://olu.online/feed/?type=rss",
+      "details": "Technology",
+      "cleaned_title": "Olu Online",
+      "cleaned_author": null,
+      "summary": "A reflective blog exploring the intersections of technology, social justice, and personal growth through thoughtful commentary and weekly updates.",
+      "tags": [
+        "Tech",
+        "Activism",
+        "Social",
+        "Writing"
+      ],
+      "language": "en",
+      "keywords": [
+        "tech ethics",
+        "social justice",
+        "personal development"
+      ],
+      "top_level_category": "Consumer Tech & Digital"
+    },
+    {
+      "id": "feed:https://researchbuzz.me/feed/",
+      "title": "ResearchBuzz",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://researchbuzz.me/feed/",
+      "details": "Technology",
+      "cleaned_title": "ResearchBuzz",
+      "cleaned_author": null,
+      "summary": "A valuable source of news and resources focusing on social media, search engines, and databases, serving as an essential guide since 1998.",
+      "tags": [
+        "Tech",
+        "Social",
+        "Internet"
+      ],
+      "language": "en",
+      "keywords": [
+        "social media news",
+        "search engines",
+        "archives"
+      ],
+      "top_level_category": "Consumer Tech & Digital"
+    },
+    {
+      "id": "feed:https://thewavingcat.com/feed/",
+      "title": "The Waving Cat \u2013 Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://thewavingcat.com/feed/",
+      "details": "Technology",
+      "cleaned_title": "The Waving Cat",
+      "cleaned_author": "Peter Bihr",
+      "summary": "A thoughtful blog by Peter Bihr examining the intersections of technology and society, highlighting important discussions about democracy and public information.",
+      "tags": [
+        "Tech",
+        "Social",
+        "Data"
+      ],
+      "language": "en",
+      "keywords": [
+        "technology and society",
+        "democracy",
+        "public information"
+      ],
+      "top_level_category": "Consumer Tech & Digital"
+    },
+    {
+      "id": "feed:https://hedgehogreview.com/web-features/feed",
+      "title": "THR Web Features | Web Features | The Hedgehog Review",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://hedgehogreview.com/web-features/feed",
+      "summary": "Critical Reflections on Contemporary Culture.",
+      "details": "Society",
+      "cleaned_title": "THR Web Features",
+      "cleaned_author": null,
+      "tags": [
+        "Arts & Culture",
+        "Living",
+        "Literature",
+        "Journalism",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "culture",
+        "society",
+        "critique",
+        "contemporary"
+      ],
+      "top_level_category": "Society, Law & History"
+    },
+    {
+      "id": "feed:https://www.joeydevilla.com/feed/",
+      "title": "The Adventures of Accordion Guy in the 21st Century",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.joeydevilla.com/feed/",
+      "summary": "Joey deVilla's Personal Blog.",
+      "details": "Uncategorizable",
+      "cleaned_title": "The Adventures of Accordion Guy in the 21st Century",
+      "cleaned_author": "Joey deVilla",
+      "tags": [
+        "Living",
+        "Humor",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "personal blog",
+        "life adventures"
+      ],
+      "top_level_category": "Home & Hobbies"
+    },
+    {
+      "id": "feed:http://xml.onfocus.com/posts",
+      "title": "onfocus by Paul Bausch",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "http://xml.onfocus.com/posts",
+      "details": "Uncategorizable",
+      "cleaned_title": "onfocus",
+      "cleaned_author": "Paul Bausch",
+      "summary": "A personal blog by web developer Paul Bausch, where he shares insights on technology, media, and current events. It offers a unique perspective on topics affecting the web development community and beyond.",
+      "tags": [
+        "Tech",
+        "WebDev",
+        "Internet",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "web development",
+        "media",
+        "technology",
+        "current events"
+      ],
+      "top_level_category": "Home & Hobbies"
+    },
+    {
+      "id": "feed:https://webcurios.co.uk/feed/",
+      "title": "webcurios",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://webcurios.co.uk/feed/",
+      "details": "Uncategorizable",
+      "cleaned_title": "webcurios",
+      "cleaned_author": null,
+      "summary": "A collection of fascinating links and discoveries from the web, delivered in a concise format. It serves as a window into the quirky and valuable content circulating online.",
+      "tags": [
+        "Tech",
+        "Internet",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "links",
+        "discoveries",
+        "online content"
+      ],
+      "top_level_category": "Home & Hobbies"
+    },
+    {
+      "id": "feed:https://faroutliers.com/feed/",
+      "title": "Far Outliers",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://faroutliers.com/feed/",
+      "summary": "Exploring migrants, exiles, expatriates, and out-of-the-way peoples, places, and times.",
+      "details": "Society",
+      "cleaned_title": "Far Outliers",
+      "cleaned_author": null,
+      "tags": [
+        "Politics",
+        "History",
+        "Social",
+        "Europe"
+      ],
+      "language": "en",
+      "keywords": [
+        "migrants",
+        "cultures",
+        "Pashto",
+        "Romania",
+        "Eastern European nationalism"
+      ],
+      "top_level_category": "Society, Law & History"
+    },
+    {
+      "id": "feed:https://jainfamilyinstitute.org/category/news/feed/",
+      "title": "Jain Family Institute - News",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://jainfamilyinstitute.org/category/news/feed/",
+      "summary": "Our mission is to address pressing social problems by identifying and building high-impact interventions that translate to real world progress.",
+      "details": "Society",
+      "cleaned_title": "Jain Family Institute",
+      "cleaned_author": null,
+      "tags": [
+        "Science",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "social problems",
+        "research",
+        "interventions",
+        "guaranteed income"
+      ],
+      "top_level_category": "Society, Law & History"
+    },
+    {
+      "id": "feed:https://www.stitchesontherun.com/rss/",
+      "title": "Stitches on the Run",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.stitchesontherun.com/rss/",
+      "details": "Arts > Tailoring",
+      "cleaned_title": "Stitches on the Run",
+      "cleaned_author": null,
+      "summary": "A blog that encourages mastering sashiko and taking care of clothing. It promotes a thoughtful approach to garment care and creative sewing techniques.",
+      "tags": [
+        "Arts & Culture",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "sashiko",
+        "sewing",
+        "clothing care"
+      ],
+      "top_level_category": "Arts & Culture"
+    },
+    {
+      "id": "feed:https://silviamaggidesign.com/feed.xml",
+      "title": "Silvia Maggi - Designer",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://silviamaggidesign.com/feed.xml",
+      "details": "Arts > Design",
+      "cleaned_title": "Silvia Maggi",
+      "cleaned_author": "Silvia Maggi",
+      "summary": "A blog by designer Silvia Maggi, focusing on accessible design, ethical practices, and sustainability in product development.",
+      "tags": [
+        "Arts & Culture",
+        "Design",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "design",
+        "accessibility",
+        "sustainability",
+        "ethics"
+      ],
+      "top_level_category": "Arts & Culture"
+    },
+    {
+      "id": "feed:https://nwn.blogs.com/nwn/atom.xml",
+      "title": "New World Notes",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://nwn.blogs.com/nwn/atom.xml",
+      "summary": "The Internet's longest-running metaverse news and culture site. From Wagner James Au, author of \"The Making of Second Life\".",
+      "details": "Technology > VR",
+      "cleaned_title": "New World Notes",
+      "cleaned_author": "Wagner James Au",
+      "tags": [
+        "Tech",
+        "Social",
+        "Internet"
+      ],
+      "language": "en",
+      "keywords": [
+        "metaverse",
+        "VR",
+        "Wagner James Au"
+      ],
+      "top_level_category": "Consumer Tech & Digital"
+    },
+    {
+      "id": "feed:https://andypiper.co.uk/feed/",
+      "title": "The lost outpost \u2013 technology, photography, society, and life",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://andypiper.co.uk/feed/",
+      "details": "Technology > Development",
+      "cleaned_title": "The lost outpost",
+      "cleaned_author": null,
+      "summary": "An eclectic blog discussing intersections of technology, photography, and social issues.",
+      "tags": [
+        "Tech",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "technology",
+        "photography",
+        "society"
+      ],
+      "top_level_category": "Software & Engineering"
+    },
+    {
+      "id": "feed:https://waxy.org/feed/",
+      "title": "Waxy.org - Andy Baio lives here",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://waxy.org/feed/",
+      "summary": "Waxy.org is the personal sandbox of Andy Baio. I made XOXO, Upcoming, Belong.io, Playfic, Kind of Bloop, helped build Kickstarter, and a bunch of other stuff too.",
+      "details": "Technology > Internet",
+      "cleaned_title": "Waxy.org",
+      "cleaned_author": "Andy Baio",
+      "tags": [
+        "Tech",
+        "Internet",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "creativity",
+        "technology",
+        "internet culture"
+      ],
+      "top_level_category": "Consumer Tech & Digital"
+    },
+    {
+      "id": "feed:https://www.nomadicnotes.com/feed/",
+      "title": "Nomadic Notes",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.nomadicnotes.com/feed/",
+      "summary": "Travel blog and weekly travel newsletter.",
+      "details": "Recreation > Travel",
+      "cleaned_title": "Nomadic Notes",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Local",
+        "Social",
+        "Asia"
+      ],
+      "language": "en",
+      "keywords": [
+        "Southeast Asia",
+        "travel",
+        "transportation",
+        "guides"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://saintjohnswort.ca/feed/",
+      "title": "St. John's Wort",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://saintjohnswort.ca/feed/",
+      "summary": "Beery Musings And Amusing Beers.",
+      "details": "Recreation > Food And Drink > Drink > Beer",
+      "cleaned_title": "St. John's Wort",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Drinks",
+        "Crafts",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "beer",
+        "insights",
+        "humor"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://disneyparksblog.com/feed/",
+      "title": "Disney Parks Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://disneyparksblog.com/feed/",
+      "summary": "The official blog for Disneyland Resort, Walt Disney World and Disney Cruise Line.",
+      "details": "Recreation > Travel > Disney Parks",
+      "cleaned_title": "Disney Parks Blog",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Cities",
+        "Social",
+        "Journalism"
+      ],
+      "language": "en",
+      "keywords": [
+        "Disney",
+        "parks",
+        "guides"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://gorillasdontblog.blogspot.com/feeds/posts/default",
+      "title": "GORILLAS DON'T BLOG",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://gorillasdontblog.blogspot.com/feeds/posts/default",
+      "summary": "Fellow bloggers have inspired me to share vintage images of Disneyland from my personal collection.",
+      "details": "Recreation > Travel > Disney Parks",
+      "cleaned_title": "GORILLAS DON'T BLOG",
+      "cleaned_author": null,
+      "tags": [
+        "Arts & Culture",
+        "Photos",
+        "History",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "Disneyland",
+        "vintage",
+        "nostalgia"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://www.magicaltrash.com/rss",
+      "title": "Magical Trash",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.magicaltrash.com/rss",
+      "summary": "Documenting the trash cans of Disney theme parks and resorts for 13 years.",
+      "details": "Recreation > Travel > Disney Parks",
+      "cleaned_title": "Magical Trash",
+      "cleaned_author": "Steve Tanner",
+      "tags": [
+        "Living",
+        "Humor",
+        "Social",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "Disney",
+        "trash",
+        "humor"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://heatherburns.tech/feed/",
+      "title": "Hi, I'm Heather Burns \u2013 Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://heatherburns.tech/feed/",
+      "summary": "at home in the world.",
+      "details": "Countries > UK",
+      "cleaned_title": "Hi, I'm Heather Burns \u2013 Blog",
+      "cleaned_author": "Heather Burns",
+      "tags": [
+        "Arts & Culture",
+        "Writing",
+        "Social",
+        "Mental Health"
+      ],
+      "language": "en",
+      "keywords": [
+        "personal",
+        "stories",
+        "creativity"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://theblockchainsocialist.com/feed/",
+      "title": "The Blockchain Socialist - Blog Archives",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://theblockchainsocialist.com/feed/",
+      "summary": "Exploring the intersection between blockchain and left politics.",
+      "details": "Economics > Economics > Cryptocurrencies",
+      "cleaned_title": "The Blockchain Socialist",
+      "cleaned_author": null,
+      "tags": [
+        "Politics",
+        "Tech",
+        "Internet",
+        "Social",
+        "Activism"
+      ],
+      "language": "en",
+      "keywords": [
+        "blockchain",
+        "left politics",
+        "community",
+        "governance"
+      ],
+      "top_level_category": "Business & Finance"
+    },
+    {
+      "title": "r/apple",
+      "popularity_score": 4.33452380952381,
+      "sources": [
+        "crowdsourced_popular"
+      ],
+      "subreddit": "apple",
+      "kind": "reddit",
+      "id": "reddit:apple",
+      "cleaned_title": "r/apple",
+      "cleaned_author": null,
+      "summary": "An unofficial community centered around Apple where enthusiasts discuss devices, software updates, and share advice.",
+      "tags": [
+        "Tech",
+        "Apple",
+        "Internet",
+        "Social"
+      ],
+      "language": "en",
+      "keywords": [
+        "Apple",
+        "community",
+        "devices",
+        "advice"
+      ]
+    },
+    {
+      "title": "V2EX-\u6700\u70ed\u4e3b\u9898 \u2013 rsshub.app",
+      "popularity_score": 3.1,
+      "sources": [
+        "crowdsourced_popular"
+      ],
+      "feed_url": "https://rsshub.app/v2ex/topics/hot",
+      "kind": "feed",
+      "id": "feed:https://rsshub.app/v2ex/topics/hot",
+      "cleaned_title": "V2EX\u2014\u6700\u70ed\u4e3b\u9898",
+      "cleaned_author": null,
+      "summary": "A platform featuring trending discussions and topics of interest, predominantly in Chinese, catered to enthusiasts and tech-savvy individuals.",
+      "tags": [
+        "Tech",
+        "Living",
+        "Internet",
+        "Social"
+      ],
+      "language": "zh",
+      "keywords": [
+        "technology",
+        "trending",
+        "discussions"
+      ]
+    }
+  ],
+  "child_categories": []
+}

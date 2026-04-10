@@ -34,6 +34,22 @@
     },
     "clean": {
       "cache": false
+    },
+    "catalog:install": {
+      "cache": false
+    },
+    "catalog:export": {
+      "dependsOn": ["catalog:install"],
+      "outputs": ["processing/exports/**"]
+    },
+    "catalog:import": {
+      "cache": false
+    },
+    "catalog:smoke": {
+      "cache": false
+    },
+    "catalog:sync": {
+      "cache": false
     }
   }
 }

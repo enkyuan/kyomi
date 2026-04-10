@@ -1,0 +1,63 @@
+<opml version="1.0">
+<head>
+<title>
+Subscriptions of find from Inoreader [https://www.inoreader.com]
+</title>
+</head>
+<body>
+<outline text="Blogs" title="Blogs">
+<outline text="cgnail's weblog" title="cgnail's weblog" type="rss" xmlUrl="http://cgnail.github.io/atom.xml" htmlUrl="http://cgnail.github.io/"/>
+<outline text="Pythoner" title="Pythoner" type="rss" xmlUrl="http://www.pythoner.com/feed" htmlUrl="http://www.pythoner.com/"/>
+<outline text="FindHao" title="FindHao" type="rss" xmlUrl="https://www.findhao.net/feed" htmlUrl="https://www.findhao.net/"/>
+<outline text="Tim's Blog" title="Tim's Blog" type="rss" xmlUrl="http://wuzhiwei.net/feed/" htmlUrl="http://wuzhiwei.net/"/>
+<outline text="Fantasy" title="Fantasy" type="rss" xmlUrl="http://liaoph.com/atom.xml" htmlUrl="http://liaoph.com/"/>
+<outline text="CppLive 编程在线" title="CppLive 编程在线" type="rss" xmlUrl="http://www.cpplive.com/feed" htmlUrl="http://www.cpplive.com/"/>
+<outline text="Matrix67: The Aha Moments" title="Matrix67: The Aha Moments" type="rss" xmlUrl="http://www.matrix67.com/blog/feed" htmlUrl="http://www.matrix67.com/blog"/>
+<outline text="浅墨的部落格" title="浅墨的部落格" type="rss" xmlUrl="http://www.0xffffff.org/?feed=rss2" htmlUrl="http://www.0xffffff.org/"/>
+<outline text="reille blog" title="reille blog" type="rss" xmlUrl="http://velep.com/feed" htmlUrl="http://velep.com/"/>
+<outline text="酷 壳 - CoolShell.cn" title="酷 壳 - CoolShell.cn" type="rss" xmlUrl="http://coolshell.cn/feed" htmlUrl="http://coolshell.cn/"/>
+<outline text="NetS H" title="NetS H" type="rss" xmlUrl="http://blog.netsh.org/feed" htmlUrl="http://blog.netsh.org/"/>
+<outline text="Blog · Tanky Woo" title="Blog · Tanky Woo" type="rss" xmlUrl="http://blog.tankywoo.com/feed.xml" htmlUrl="http://blog.tankywoo.com/"/>
+<outline text="InfoSecLab" title="InfoSecLab" type="rss" xmlUrl="http://www.cnnetsec.com/feed" htmlUrl="http://www.cnnetsec.com/"/>
+<outline text="程序人生" title="程序人生" type="rss" xmlUrl="http://www.programlife.net/feed" htmlUrl="http://www.programlife.net/"/>
+<outline text="Shengbin's Blog" title="Shengbin's Blog" type="rss" xmlUrl="http://blog.shengbin.me/rss.xml" htmlUrl="http://blog.shengbin.me/"/>
+<outline text="zrong's Blog" title="zrong's Blog" type="rss" xmlUrl="http://zengrong.net/feed" htmlUrl="http://zengrong.net/"/>
+<outline text="编程派 | Coding Python" title="编程派 | Coding Python" type="rss" xmlUrl="http://codingpy.com/feed/" htmlUrl="http://www.codingpy.com/"/>
+<outline text="编程派 | Coding Python" title="编程派 | Coding Python" type="rss" xmlUrl="http://www.codingpy.com/feed/" htmlUrl="http://www.codingpy.com/"/>
+<outline text="Just For Fun" title="Just For Fun" type="rss" xmlUrl="http://selfboot.cn/atom.xml" htmlUrl="http://selfboot.cn/"/>
+<outline text="离别歌" title="离别歌" type="rss" xmlUrl="https://www.leavesongs.com/rss/" htmlUrl="https://www.leavesongs.com/"/>
+</outline>
+<outline text="Research" title="Research">
+<outline text="ACM Computing Surveys (CSUR)" title="ACM Computing Surveys (CSUR)" type="rss" xmlUrl="http://rss.acm.org/dl/J204.xml" htmlUrl="http://dl.acm.org/citation.cfm?id=2658850"/>
+<outline text="NVIDIA Developer Blog" title="NVIDIA Developer Blog" type="rss" xmlUrl="https://devblogs.nvidia.com/feed/" htmlUrl="https://devblogs.nvidia.com/"/>
+<outline text="JetsonHacks" title="JetsonHacks" type="rss" xmlUrl="https://www.jetsonhacks.com/feed/" htmlUrl="https://www.jetsonhacks.com"/>
+<outline text="GPUOpen" title="GPUOpen" type="rss" xmlUrl="https://gpuopen.com/feed/" htmlUrl="https://gpuopen.com"/>
+</outline>
+<outline text="news" title="news">
+<outline text="Debian News" title="Debian News" type="rss" xmlUrl="http://www.debian.org/News/news" htmlUrl="https://www.debian.org/News/"/>
+<outline text="Engadget 中国版 RSS Feed" title="Engadget 中国版 RSS Feed" type="rss" xmlUrl="http://cn.engadget.com/rss.xml" htmlUrl="http://cn.engadget.com/"/>
+<outline text="cnBeta.COM业界资讯" title="cnBeta.COM业界资讯" type="rss" xmlUrl="http://feeds2.feedburner.com/cnbeta_full" htmlUrl="http://www.cnbeta.com/"/>
+<outline text="知乎日报" title="知乎日报" type="rss" xmlUrl="http://feeds.feedburner.com/zhihu-daily" htmlUrl="http://daily.zhihu.com/"/>
+<outline text="爱板网" title="爱板网" type="rss" xmlUrl="http://www.eeboard.com/feed/" htmlUrl="http://www.eeboard.com/"/>
+<outline text="LinuxTOY" title="LinuxTOY" type="rss" xmlUrl="http://feeds.feedburner.com/linuxtoy" htmlUrl="https://linuxtoy.org/"/>
+<outline text="FreeBuf.COM | 关注黑客与极客" title="FreeBuf.COM | 关注黑客与极客" type="rss" xmlUrl="http://www.freebuf.com/feed" htmlUrl="http://www.freebuf.com/"/>
+<outline text="DARPA News RSS" title="DARPA News RSS" type="rss" xmlUrl="https://www.darpa.mil/rss" htmlUrl="https://www.darpa.mil/"/>
+<outline text="环球科学（科学美国人）" title="环球科学（科学美国人）" type="rss" xmlUrl="http://blog.sina.com.cn/rss/sciam.xml" htmlUrl="http://blog.sina.com.cn/sciam"/>
+<outline text="Good E-Reader – eBook, Audiobook and Digital Publishing News" title="Good E-Reader – eBook, Audiobook and Digital Publishing News" type="rss" xmlUrl="https://goodereader.com/blog/feed/" htmlUrl="https://goodereader.com/blog"/>
+<outline text="好奇心日报" title="好奇心日报" type="rss" xmlUrl="https://www.qdaily.com/feed.xml" htmlUrl="http://www.qdaily.com/"/>
+<outline text="91Ri.org" title="91Ri.org" type="rss" xmlUrl="http://www.91ri.org/feed" htmlUrl="http://www.91ri.org/"/>
+<outline text="爱范儿 · Beats of Bits" title="爱范儿 · Beats of Bits" type="rss" xmlUrl="http://www.ifanr.com/feed" htmlUrl="http://www.ifanr.com/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign="/>
+<outline text="三联生活周刊" title="三联生活周刊" type="rss" xmlUrl="http://feedmaker.kindle4rss.com/feeds/lifeweek.weixin.xml" htmlUrl="http://www.iwgc.cn/list/99"/>
+<outline text="CSDN最新资讯" title="CSDN最新资讯" type="rss" xmlUrl="http://www.csdn.net/article/rss_lastnews" htmlUrl="http://news.csdn.net/"/>
+<outline text="Linuxeden 开源社区" title="Linuxeden 开源社区" type="rss" xmlUrl="http://www.linuxeden.com/feed" htmlUrl="http://www.linuxeden.com/"/>
+<outline text="NVIDIA Developer Blog" title="NVIDIA Developer Blog" type="rss" xmlUrl="https://devblogs.nvidia.com/feed/" htmlUrl="https://devblogs.nvidia.com/"/>
+<outline text="博客 - 伯乐在线" title="博客 - 伯乐在线" type="rss" xmlUrl="http://blog.jobbole.com/feed/" htmlUrl="http://blog.jobbole.com/"/>
+<outline text="Linux.中国 - 开源中文社区" title="Linux.中国 - 开源中文社区" type="rss" xmlUrl="https://linux.cn/rss.xml" htmlUrl="https://linux.cn/"/>
+<outline text="开发者头条" title="开发者头条" type="rss" xmlUrl="http://feedmaker.kindle4rss.com/feeds/toutiao.io.xml" htmlUrl="http://toutiao.io/"/>
+<outline text="LinuxTOY" title="LinuxTOY" type="rss" xmlUrl="https://linuxtoy.org/feeds/all.atom.xml" htmlUrl="https://linuxtoy.org/"/>
+<outline text="NVIDIA 中国官方博客" title="NVIDIA 中国官方博客" type="rss" xmlUrl="https://blogs.nvidia.cn/feed/" htmlUrl="https://blogs.nvidia.cn/"/>
+<outline text="VPS大全" title="VPS大全" type="rss" xmlUrl="http://vpsdaquan.cn/feed" htmlUrl="http://www.vpsdaquan.cn/"/>
+<outline text="Solidot" title="Solidot" type="rss" xmlUrl="http://ftr.fivefilters.org/makefulltextfeed.php?url=http://www.solidot.org/index.rss&amp;max=5" htmlUrl="http://www.solidot.org/index.rss"/>
+</outline>
+</body>
+</opml>

@@ -1,0 +1,145 @@
+{
+  "category": "El Pais",
+  "source_url": "https://rss.feedspot.com/elpais_rss_feeds",
+  "feeds": [
+    {
+      "title": "El Pais \u00bb Internacional",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada",
+      "website_url": "https://elpais.com/internacional/",
+      "description": "Sigua la \u00faltima hora de la actualidad internacional con EL PA\u00cdS.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7890029.jpg?t=1742307693"
+    },
+    {
+      "title": "El Pais \u00bb Opinion",
+      "feed_url": "https://feeds.elpais.com/mrss-s/list/ep/site/elpais.com/section/opinion",
+      "website_url": "https://elpais.com/opinion/",
+      "description": "Opini\u00f3n es una secci\u00f3n de El Pa\u00eds que recoge art\u00edculos y an\u00e1lisis de distintos columnistas, expertos y colaboradores sobre temas de actualidad, pol\u00edtica, sociedad, cultura y otros asuntos relevantes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7890026.jpg?t=1742307692"
+    },
+    {
+      "title": "El Pais \u00bb Espa\u00f1a",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/espana/portada",
+      "website_url": "https://elpais.com/espana/",
+      "description": "La \u00faltima hora de la actualidad nacional, auton\u00f3mica y local: pol\u00edtica, sociedad, sucesos adem\u00e1s de reportajes y entrevistas en EL PA\u00cdS.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7890028.jpg?t=1742307692"
+    },
+    {
+      "title": "El Pais \u00bb Econom\u00eda",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/economia/portada",
+      "website_url": "https://elpais.com/economia/",
+      "description": "Econom\u00eda es una secci\u00f3n de El Pa\u00eds dedicada a cubrir temas relacionados con la econom\u00eda nacional e internacional. En esta secci\u00f3n se analizan cuestiones como el mercado laboral, la pol\u00edtica econ\u00f3mica, las finanzas, las empresas, los mercados burs\u00e1tiles, la macroeconom\u00eda y la microeconom\u00eda.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7890035.jpg?t=1742307695"
+    },
+    {
+      "title": "El Pais \u00bb Sociedad",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/sociedad/portada",
+      "website_url": "https://elpais.com/sociedad/",
+      "description": "Sigue la \u00faltima hora de la actualidad social con EL PA\u00cdS. Educaci\u00f3n, salud, ciencia, medio ambiente, igualdad, consumo, comunicaci\u00f3n, Vida & artes y los blogs de sociedad.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7890031.jpg?t=1742307691"
+    },
+    {
+      "title": "El Pais \u00bb Clima y Medio Ambiente",
+      "feed_url": "https://feeds.elpais.com/mrss-s/list/ep/site/elpais.com/section/clima-y-medio-ambiente",
+      "website_url": "https://elpais.com/clima-y-medio-ambiente/",
+      "description": "Clima y Medio Ambiente es una secci\u00f3n de El Pa\u00eds dedicada a temas relacionados con el medio ambiente y el cambio clim\u00e1tico.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7890025.jpg?t=1742307690"
+    },
+    {
+      "title": "El Pais \u00bb Tecnolog\u00eda",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/tecnologia/portada",
+      "website_url": "https://elpais.com/tecnologia/",
+      "description": "Las \u00faltimas noticias sobre tecnolog\u00eda con EL PA\u00cdS. Internet, redes sociales, m\u00f3viles, gadgets, software, legislaci\u00f3n, seguridad y empresas de tecnolog\u00eda, ocio, entretenimiento y los blog de tecnolog\u00eda.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7304581.jpg?t=1742307688"
+    },
+    {
+      "title": "El Pais \u00bb Cultura",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/cultura/portada",
+      "website_url": "https://elpais.com/cultura/",
+      "description": "Las \u00faltimas noticias sobre cultura con EL PA\u00cdS. Literatura y libros, cine, m\u00fasica, teatro, danza, arte, arquitectura, adem\u00e1s de Tentaciones y los blogs de cultura.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7890030.jpg?t=1742307688"
+    },
+    {
+      "title": "El Pais \u00bb Deportes",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/deportes/portada",
+      "website_url": "https://elpais.com/deportes/",
+      "description": "La \u00faltima hora deportiva: noticias sobre f\u00fatbol, baloncesto, tenis, ciclismo, f\u00f3rmula 1, motociclismo, balonmano, atletismo y el resto de deportes adem\u00e1s de todos los resultados deportivos por competici\u00f3n con EL PA\u00cdS.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7890027.jpg?t=1742307687"
+    },
+    {
+      "title": "El Pais \u00bb Babelia",
+      "feed_url": "https://feeds.elpais.com/mrss-s/list/ep/site/elpais.com/section/babelia",
+      "website_url": "https://elpais.com/babelia/",
+      "description": "Literatura, m\u00fasica, teatro, ensayo y pensamiento en el suplemento cultural de EL PA\u00cdS.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7890032.jpg?t=1742307687"
+    },
+    {
+      "title": "El Pais \u00bb Eps",
+      "feed_url": "https://feeds.elpais.com/mrss-s/list/ep/site/elpais.com/section/eps",
+      "website_url": "https://elpais.com/eps/",
+      "description": "EPS es una secci\u00f3n de El Pa\u00eds que se centra en el \u00e1mbito econ\u00f3mico y empresarial. En esta secci\u00f3n se abordan temas relacionados con el mundo de los negocios, las finanzas, la econom\u00eda global y las tendencias del mercado.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7890034.jpg?t=1742307686"
+    },
+    {
+      "title": "El Pais \u00bb Ciencia",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/ciencia/portada",
+      "website_url": "https://elpais.com/ciencia/",
+      "description": "Las \u00faltimas noticias sobre ciencia donde encontrar\u00e1s la \u00faltima hora sobre investigaciones, hallazgos, I+D, laboratorios, descubrimientos adem\u00e1s de reportajes, entrevistas y los blogs de EL PA\u00cdS.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7890036.jpg?t=1742307689"
+    },
+    {
+      "title": "El Pais \u00bb Cinco D\u00edas",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/cincodias.elpais.com/portada",
+      "website_url": "https://cincodias.elpais.com/",
+      "description": "Noticias de \u00faltima hora sobre econom\u00eda, mercados, pymes y emprendedores, empresas, finanzas y tecnolog\u00eda en Cinco D\u00edas y EL PA\u00cdS Econom\u00eda.",
+      "followers": {
+        "facebook": 168100,
+        "twitter": 345200
+      },
+      "image_url": "https://i1.feedspot.com/7890033.jpg?t=1742307695"
+    }
+  ]
+}

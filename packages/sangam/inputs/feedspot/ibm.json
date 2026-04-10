@@ -1,0 +1,380 @@
+{
+  "category": "IBM",
+  "source_url": "https://rss.feedspot.com/ibm_rss_feeds",
+  "feeds": [
+    {
+      "title": "IT Jungle",
+      "feed_url": "https://www.itjungle.com/feed/",
+      "website_url": "https://www.itjungle.com/",
+      "description": "IT Jungle has a strong heritage with the IBM i platforms, but we also have a deep and broad knowledge of other platforms that we can bring to bear as we track and analyze the IBM i market. And in 2017, we will be branching out to new markets for the first time since the Great Recession, with a slightly different track than we followed before then with our various Windows, Linux, Unix, and mainframe publications of the past. Stay tuned.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5265766.jpg?t=1617803638"
+    },
+    {
+      "title": "Rpgpgm.Com",
+      "feed_url": "https://www.rpgpgm.com/feeds/posts/default",
+      "website_url": "https://www.rpgpgm.com/",
+      "description": "Hi, I'm Simon Hutchinson. I am an IT professional with over 30 years of experience with the IBM i, and its former forms. I created this blog to share ideas on how to do things using the IBM i operating system (formerly known as AS/400, iSeries, and System i).",
+      "followers": {
+        "twitter": 933
+      },
+      "image_url": "https://i1.feedspot.com/5265764.jpg?t=1617802814"
+    },
+    {
+      "title": "IBM Redbooks",
+      "feed_url": "https://www.redbooks.ibm.com/rss/all.xml?Open",
+      "website_url": "https://redbooks.ibm.com/",
+      "description": "IBM Redbooks content is developed and published by IBM Garage. We develop and deliver skills, technical know-how, and materials to IBM technical professionals, Business Partners, clients, and the marketplace in general. We work with IBM Divisions and Business Partners to develop a broad range of IBM Redbooks content. Our value-add information products address product, platform, and solution perspectives. They explore integration, implementation, and operation of realistic client scenarios that include IBM products as well as technologies from Red Hat, SAP, Oracle, Linux, and others",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4989315.jpg?t=1617800841"
+    },
+    {
+      "title": "IBM Blueview Blog",
+      "feed_url": "https://ibmblueview.com/feed/",
+      "website_url": "https://ibmblueview.com/blog/",
+      "description": "Ryan Dolley hails from a long and storied line of Cognos developers. His father worked at Cognos/IBM for many years before Ryan took up the mantle of the family business. Having put in his time as a report developer and Transformer master, he now advises clients on how to maximize their investment in IBM analytics technologies. In 2019 he was selected as an IBM Champion. He is currently a Senior Solution Architect and Product Manager with PMsquare.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5265765.jpg?t=1617803021"
+    },
+    {
+      "title": "IBM Software Audits Blog",
+      "feed_url": "https://ibmaudits.com/feed/",
+      "website_url": "https://ibmaudits.com/ibm-audits-blog/",
+      "description": "Most organizations intend to abide by their contractual agreements with IBM but being prepared for a software audit is the best defense. IBM software audits are more common than you may think. Being properly prepared for an IBM audit should be a top priority. Learn more now by following our blog.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/5265767.jpg?t=1617804259"
+    },
+    {
+      "title": "IBMi.org Bart's blog",
+      "feed_url": "https://theibmi.org/feed/",
+      "website_url": "https://theibmi.org/",
+      "description": "Hi, I'm Bart My idea was to create a simple website, where a user can easily find information about IBM i/iSeries/System i/AS400 (so many names for the same system over the last 30 years), AIX, Virtual I/O Server, PowerVM features, and POWER Systems. There are a number of sites about VIOS and IBM i, but I couldn't find one where PowerVM features are described from the IBM i perspective. I'm also going to publish some simple scripts, and programs which I think might be useful.",
+      "followers": {
+        "twitter": 622
+      },
+      "image_url": "https://i1.feedspot.com/5265843.jpg?t=1617806192"
+    },
+    {
+      "title": "IBM \u00bb Security",
+      "feed_url": "https://www.ibm.com/think/security/",
+      "website_url": "https://www.ibm.com/think/security/",
+      "description": "Find the latest security analysis and insights from top IT security experts and leaders, made exclusively for security professionals and CISOs.",
+      "followers": {
+        "facebook": 199900,
+        "twitter": 77100
+      },
+      "image_url": "https://i1.feedspot.com/3495948.jpg?t=1613975777"
+    },
+    {
+      "title": "IBM Think",
+      "feed_url": "https://www.ibm.com/think/",
+      "website_url": "https://www.ibm.com/think/",
+      "description": "The IBM THINK Blog is dedicated to chronicling the fast-moving world of cognitive computing. Authored by IBM leaders, researchers and scientists, as well as academics and experts across industries, the thought leadership content within IBM THINK Blog provides insights into pivotal and disruptive technologies, such as cloud, analytics, Internet of Things, blockchain and more.",
+      "followers": {
+        "twitter": 717500
+      },
+      "image_url": "https://i1.feedspot.com/4907102.jpg?t=1613976333"
+    },
+    {
+      "title": "IBM Training",
+      "feed_url": "https://www.ibm.com/new/training/",
+      "website_url": "https://www.ibm.com/new/training/",
+      "description": "The IBM Training & Skills Blog is an IBM-owned, cross-geographic blog. It is a forum for posts related to IBM Training and Conferences across all geographies including: Eastern and Western Europe, the Middle East & Africa (EMEA), Asia & Asia Pacific, Latin America, the United States and Canada.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/4907128.jpg?t=1613976559"
+    },
+    {
+      "title": "IBM Think",
+      "feed_url": "https://www.ibm.com/think/",
+      "website_url": "https://www.ibm.com/think/",
+      "description": "IBM has been working to solve some of the biggest issues facing in Australia and New Zealand. Today IBM is helping doctors diagnose disease, predicting the latest fashion trends and creating better services for citizens. Follow this blog to get stories of IBM in Australia and New Zealand.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/4907445.jpg?t=1613976549"
+    },
+    {
+      "title": "IBM Research Blog",
+      "feed_url": "https://www.ibm.com/blogs/research/feed/atom/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "For 75 years, IBM Research has been propelling innovation for IBM, from the first programmable computers to the quantum computers of today. More than anything, our goal is to catalyze and drive the advancements that shape our world. With more than 3,000 researchers across the globe, we are anticipating, examining, and inventing what's next in science and technology every single day.",
+      "followers": {
+        "twitter": 234600
+      },
+      "image_url": "https://i1.feedspot.com/5265768.jpg?t=1617802478"
+    },
+    {
+      "title": "The developerWorks Blog",
+      "feed_url": "https://developer.ibm.com/feed/",
+      "website_url": "https://developer.ibm.com/blogs/",
+      "description": "developerWorks is the IT industry's most comprehensive source of technical how-to content, evaluation software, and community discussions focusing on IBM software products and open-standards technologies. It helps you to maximize your productivity with over 40K targeted how-to resources, engage with your peers, and gain career-building recognition. Follow this blog to know more about developerWorks.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4667237.jpg?t=1613976282"
+    },
+    {
+      "title": "IBM Cloud computing",
+      "feed_url": "https://www.ibm.com/blogs/cloud-computing/feed/",
+      "website_url": "https://www.ibm.com/think/cloud",
+      "description": "Thoughts on Cloud is a leading source of insights, news and analysis for the cloud community, presented by IBM and powered by exclusive commentary from IBM thought leaders and industry experts, along with curated, relevant cloud computing news from around the globe.",
+      "followers": {
+        "facebook": 239300,
+        "twitter": 233800
+      },
+      "image_url": "https://i1.feedspot.com/4511436.jpg?t=1605848437"
+    },
+    {
+      "title": "IBM | Internet of Things blog",
+      "feed_url": "https://www.ibm.com/blogs/internet-of-things/feed/",
+      "website_url": "https://www.ibm.com/thought-leadership/institute-business-value/en-us/technology/internet-of-things-iot",
+      "description": "The IBM IoT (Internet of Things) blog contains the very latest IoT news and blogs from IBM and also Internet of Things info on security, connected buildings, automotive, Watson IoT, and cognitive computing.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 111400
+      },
+      "image_url": "https://i1.feedspot.com/4667826.jpg?t=1613975765"
+    },
+    {
+      "title": "IBM IT Infrastructure Blog",
+      "feed_url": "https://www.ibm.com/blogs/systems/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "IBM IT Infrastructure Blog is the official blog of IBM Systems. It is a platform for dialogue and a source of insight for IT infrastructure leaders and other key technology decision makers.",
+      "followers": {
+        "facebook": 44800
+      },
+      "image_url": "https://i1.feedspot.com/4907143.jpg?t=1613976044"
+    },
+    {
+      "title": "IBM Watson Health Perspectives",
+      "feed_url": "https://www.ibm.com/blogs/watson-health/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Watson Health Perspectives mission is to empower leaders, advocates and influencers in health through support that helps them achieve remarkable outcomes, accelerate discovery, make essential connections and gain confidence on their path to solving the world's biggest health challenges.",
+      "followers": {
+        "twitter": 44900
+      },
+      "image_url": "https://i1.feedspot.com/4907512.jpg?t=1613975836"
+    },
+    {
+      "title": "IBM Watson Talent | Conversations about transforming talent management",
+      "feed_url": "https://www.ibm.com/blogs/watson-talent/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "The IBM Watson Talent Blog is dedicated to helping organizations build an impassioned and engaged workforce. Authored by IBM leaders, researchers and partners, as well as academics and industry experts, our content provides insights into the future of talent management and the HR profession.",
+      "followers": {
+        "facebook": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4907511.jpg?t=1613977666"
+    },
+    {
+      "title": "IBM Electronics Industry Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/electronics/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "The IBM Electronics blog is intended to provide readers with strategic business insights, news on emerging technologies and industry trends for executives in the Electronics Industry. Hear from thought leaders including IBMers, Business Partners, and market influencers covering topics and trends most important to business.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4907489.jpg?t=1613976614"
+    },
+    {
+      "title": "IBM Retail Industry Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "The IBM Retail blog is a thought-leadership hub discussing multiple facets of today's retail industry including the latest trends, ideas, topics, findings, predictions and technologies. Hear opinions from prominent thought leaders including IBMers, Business Partners and other influencers.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4651289.jpg?t=1613976554"
+    },
+    {
+      "title": "IBM SAP Consulting Services Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/sap-consulting/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Follow this blog to know more about IBM SAP Consulting Services from experts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4907441.jpg?t=1613976345"
+    },
+    {
+      "title": "IBM Age and Ability",
+      "feed_url": "https://www.ibm.com/blogs/age-and-ability/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Offers readers best practices in accessibility, new innovations to help streamline the DevOps and design processes, and provides updates on accessibility standards and evolving government regulations. This blog also discusses the industry trends for the aging market and solutions that are transforming eldercare. Hear from thought leaders including IBMers, Business Partners, and market influencers who cover topics that are transforming the human experience.",
+      "followers": {
+        "facebook": 6
+      },
+      "image_url": "https://i1.feedspot.com/4907482.jpg?t=1613976489"
+    },
+    {
+      "title": "IBM PSIRT Blog",
+      "feed_url": "https://www.ibm.com/blogs/psirt/feed/atom/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "This site contains important information regarding security vulnerabilities that may affect IBM products and solutions. IBM PSIRT follows the NIST guidelines for determining the severity rating of the reported vulnerability. This blog contains information on Security Bulletins and advisories along with future IBM Security Bulletins and advisories.",
+      "followers": {
+        "twitter": 717500
+      },
+      "image_url": "https://i1.feedspot.com/4907112.jpg?t=1613976543"
+    },
+    {
+      "title": "IBM Energy & Utilities Industry Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/energy-and-utilities/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Follow this blog to know about industry-leading solutions for your organization on Energy & Utilities.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4907506.jpg?t=1613976537"
+    },
+    {
+      "title": "IBM Travel & Transportation Industry Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/travel-and-transportation/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "The travel and transportation industry is growing, and expectations are rising from today's savvier, more connected travelers. Discover how IBM's digital solutions can help you provide the seamless travel experience they want with the improved efficiency you need.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4907540.jpg?t=1613976576"
+    },
+    {
+      "title": "IBM Oil & Gas Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Follow this blog to know about IBM's tailored solutions for oil and gas which can help you gain an edge in a 'lower for longer' marketplace, boost productivity despite a shrinking workforce and drive growth in a volatile ecosystem.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4907170.jpg?t=1613976367"
+    },
+    {
+      "title": "IBM Oracle Consulting Services Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/oracle-consulting/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Follow this blog to get resources and articles on IBM Oracle Consulting Services from IBM experts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4907438.jpg?t=1613976361"
+    },
+    {
+      "title": "IBM Watson",
+      "feed_url": "https://www.ibm.com/blogs/watson/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "IBM Watson, is a cognitive system that enables a new partnership between people and computers that enhances and scales human expertise. This blog contains stories of how Watson and AI are transforming business and changing the world, bots, cognitive technologies and real-world case studies.",
+      "followers": {
+        "facebook": 140700,
+        "twitter": 267700
+      },
+      "image_url": "https://i1.feedspot.com/4689089.jpg?t=1613976352"
+    },
+    {
+      "title": "IBM Client Success Field Notes",
+      "feed_url": "https://www.ibm.com/blogs/client-voices/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "IBM Client Success Field Notes is the official IBM Client References blog. Here, we aim to share the unique and personal client experience stories of IBM solution implementations. Read client success insights, best practices and lessons learned from IBM clients, IBM Business Partners and members of the IBM Client References team. Follow along to go behind the scenes of IBM client success stories.",
+      "followers": {
+        "twitter": 717500
+      },
+      "image_url": "https://i1.feedspot.com/4907453.jpg?t=1613975818"
+    },
+    {
+      "title": "Good Tech IBM",
+      "feed_url": "https://www.ibm.com/blogs/corporate-social-responsibility/feed/atom/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Good Tech IBM Blog is home to all things IBM Corporate Social Responsibility. It is here we share how IBMers are donating time, talent and technology to change the world. For more than a century IBM has been dedicated to every client's success and to creating innovations that matter for the world",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 717500,
+        "instagram": 690800
+      },
+      "image_url": "https://i1.feedspot.com/5246950.jpg?t=1613795790"
+    },
+    {
+      "title": "IBM RegTech Innovations Blog | Banking",
+      "feed_url": "https://www.ibm.com/blogs/regtech/category/banking/feed/",
+      "website_url": "https://www.ibm.com/thought-leadership/institute-business-value/en-us/technology/internet-of-things-iot",
+      "description": "Banking categorized articles for the IBM RegTech Innovations Blog. Read insight from IBM's Subject Matter Experts, who have been helping top banks and financial services organizations for decades.",
+      "followers": {
+        "twitter": 717500,
+        "instagram": 690800
+      },
+      "image_url": "https://i1.feedspot.com/4644513.jpg?t=1613976564"
+    },
+    {
+      "title": "Irving Wladawsky-Berger Blog",
+      "feed_url": "https://blog.irvingwb.com/blog/atom.xml",
+      "website_url": "https://blog.irvingwb.com/blog/",
+      "description": "Hi, I'm Irving Wladawsky-Berger. I retired from IBM in May of 2007 after 37 years with the company, where I was responsible for identifying emerging technologies and marketplace developments that are critical to the future of the IT industry. I was also responsible for our university relations office and for the IBM Academy of Technology where I served as Chairman of the Board of Governors. I led a number of IBM's companywide initiatives including the Internet, supercomputing, and Linux.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/196921.jpg?t=1617801879"
+    },
+    {
+      "title": "IBM Government Industry Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/government/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "The IBM Government blog is intended to provide readers with thought-provoking and engaging content where thought leaders, inspiring thinkers and governments leaders from around the globe are encouraged to discover ways in which their organizations can focus on citizen centric services, using technology to help build data driven insights to address the challenges of today and build capabilities to tackle problems of tomorrow.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4907503.jpg?t=1613976571"
+    },
+    {
+      "title": "IBM Global University Programs",
+      "feed_url": "https://www.ibm.com/blogs/global-university-programs/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "The IBM Global University Programs Executive blog hosts news, interviews, conversations, stories, and opinions from the Global University Programs community, inside and outside of IBM. It explores how IBM university programs are changing the world through collaboration with universities and schools.",
+      "followers": {
+        "twitter": 717500
+      },
+      "image_url": "https://i1.feedspot.com/4907474.jpg?t=1613976607"
+    },
+    {
+      "title": "IBM Telecom, Media and Entertainment Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/telecom-media-entertainment/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "The IBM Telecom, Media and Entertainment Blog provides strategic business insights, news on emerging technologies and industry trends for executives in Telecommunications, Media and Entertainment. Wherever you are in the digital transformation journey, either seeking insights to developing personalized customer experiences, or redesigning your infrastructure, or looking to create new market value, you can find content and questions answered by thought leaders and industry subject matter experts.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4907532.jpg?t=1613976620"
+    },
+    {
+      "title": "IBM Healthcare & Life Sciences Industries Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/healthcare/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Follow this blog to get guide on redefining value and success in Healthcare from IBM Healthcare experts.",
+      "followers": {
+        "facebook": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4907508.jpg?t=1613976628"
+    },
+    {
+      "title": "IBM iX Blog",
+      "feed_url": "https://www.ibm.com/blogs/insights-on-business/ibmix",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "Follow this blog to know more about IBM iX from IBM experts and professionals.",
+      "followers": {
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4907164.jpg?t=1613976634"
+    },
+    {
+      "title": "IBM Global Financing Blog",
+      "feed_url": "https://www.ibm.com/blogs/ibm-global-financing/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "IBM Global Financing can integrate your business strategies and IT solutions into one seamless financing plan. It's complete spectrum of payment solutions and services is designed to help make your goals possible and provide support throughout your investment lifecycle. Follow this blog for news and information about IBM Global Financing options.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4907200.jpg?t=1613977442"
+    },
+    {
+      "title": "PEPPOL by IBM | Making eProcurement smarter",
+      "feed_url": "https://www.ibm.com/blogs/peppol-by-ibm/feed/",
+      "website_url": "https://research.ibm.com/blog",
+      "description": "PEPPOL by IBM Blog discusses all aspects of the EU's PEPPOL eProcurement and eInvoicing standard. It also discusses all aspects of PEPPOL's features, benefits and applications.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4907193.jpg?t=1613976642"
+    }
+  ]
+}

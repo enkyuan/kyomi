@@ -1,0 +1,68 @@
+{
+  "category": "Paramotor",
+  "source_url": "https://rss.feedspot.com/paramotor_rss_feeds",
+  "feeds": [
+    {
+      "title": "Joe Onofrio Powered Paragliding",
+      "feed_url": "https://joeonofrio.com/feed/",
+      "website_url": "https://joeonofrio.com/",
+      "description": "This blog documents my experiences with powered paragliding since 2005. I started it as a training tool for myself and to share photos with my friends and fellow pilots The bulk of the material is strait forward flight log entries but occasionally I got inspired and expand on the experience. Lately I've added bits from previous logs, trip dairies and old photographs.",
+      "followers": {
+        "twitter": 19,
+        "instagram": 137
+      },
+      "image_url": "https://i1.feedspot.com/4738536.jpg?t=1657718262"
+    },
+    {
+      "title": "Volar PR Blog",
+      "feed_url": "https://www.volarpr.com/blog/feed/",
+      "website_url": "https://www.volarpr.com/blog/",
+      "description": "This blog serves as a diary of our entire paramotoring journey. We enjoy exploring new places and sharing our paramotoring adventures. In addition to overseeing the takeoff and landing, we also directly supervise the mounting of the equipment and the preparation of the equipment.",
+      "followers": {
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5421208.jpg?t=1657712065"
+    },
+    {
+      "title": "USPPA",
+      "feed_url": "https://usppa.org/feed/",
+      "website_url": "https://usppa.org/news/",
+      "description": "Find the most recent paramotoring news, statistics, and information to keep up with aviation laws and regulations. The USPPA(the United States Powered Paragliding Association) was formed in 2001 as a 501(c)3 charitable corporation. Its mission is to preserve, promote, and enhance the sport of powered paragliding (AKA paramotoring).",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/5421206.jpg?t=1657712049"
+    },
+    {
+      "title": "Foot Flyer",
+      "feed_url": "https://www.footflyer.com/category/recent/feed/",
+      "website_url": "https://www.footflyer.com/category/recent/",
+      "description": "In the following section of Foot Flyer read recent articles to point out the latest about paramotor accidents, developments, and assessments of what's going on in paramotor circuits. We at Foot Flyer cover training rules, Federal Aviation Regulations, and understanding of the sport's changes.",
+      "followers": {
+        "facebook": 133
+      },
+      "image_url": "https://i1.feedspot.com/5421210.jpg?t=1657718258"
+    },
+    {
+      "title": "Mark's PPF Blog",
+      "feed_url": "https://marksppf.com/category/blog/feed/",
+      "website_url": "https://marksppf.com/category/blog/",
+      "description": "Get resources and information centered on utilizing a powered paraglider to travel securely. We offer target rich environment to post PPG items for sale, discuss various topics of interest, ask questions for input or simply share our Florida flying experiences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5421211.jpg?t=1657775728"
+    },
+    {
+      "title": "Flyozone",
+      "feed_url": "https://flyozone.com/paramotor/feed",
+      "website_url": "https://flyozone.com/paramotor/news",
+      "description": "Read our blog to stay up-to-date on topics like Paragliders, Paramotor, and Speed Flying. We regularly post news regarding our paramotor products here. Ozone paragliders and kites are one of the world's leading paragliding, paramotoring, kitesurf, snow kite, and power kite manufacturers.",
+      "followers": {
+        "facebook": 60200,
+        "twitter": 6300,
+        "instagram": 40800
+      },
+      "image_url": "https://i1.feedspot.com/5421207.jpg?t=1657712062"
+    }
+  ]
+}

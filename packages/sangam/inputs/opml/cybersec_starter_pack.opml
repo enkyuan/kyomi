@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Digital subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="DFIR YouTube Feeds" title="DFIR YouTube Feeds">
+            <outline type="rss" text="Magnet Forensics Presents: Cache Up" title="Magnet Forensics Presents: Cache Up" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=PLrDSw3yTk3Xj2LQ5tcvGqUmxxM6boVGV4"/>
+            <outline type="rss" text="13Cubed" title="13Cubed" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCy8ntxFEudOCRZYT1f7ya9Q" htmlUrl="https://www.youtube.com/channel/UCy8ntxFEudOCRZYT1f7ya9Q"/>
+            <outline type="rss" text="DFIR Python Study Group" title="DFIR Python Study Group" xmlUrl="https://www.youtube.com/feeds/videos.xml?playlist_id=PLz61osc7c3OqQ_xBZJbzZdIkVd8HnxLmC"/>
+            <outline type="rss" text="SANS Digital Forensics and Incident Response (uploads) on YouTube" title="SANS Digital Forensics and Incident Response (uploads) on YouTube" xmlUrl="http://gdata.youtube.com/feeds/base/users/robtlee73/uploads?alt=rss&amp;v=2&amp;orderby=published&amp;client=ytapi-youtube-profile" htmlUrl="https://youtube.com/playlist?list=UUwSo89W3KgPrid41vskBDYA"/>
+            <outline type="rss" text="Mobile Forensic Investigations" title="Mobile Forensic Investigations" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCc-bl6Z-Eqy1nC8N5aVl7zQ" htmlUrl="https://www.youtube.com/channel/UCc-bl6Z-Eqy1nC8N5aVl7zQ"/>
+        </outline>
+        <outline text="Cyber Security" title="Cyber Security">
+            <outline type="rss" text="VMware Carbon Black" title="VMware Carbon Black" xmlUrl="http://www.carbonblack.com/feed/" htmlUrl="https://www.carbonblack.com"/>
+            <outline type="rss" text="Threatpost" title="Threatpost" xmlUrl="http://threatpost.com/feed" htmlUrl="https://threatpost.com"/>
+            <outline type="rss" text="Malwarebytes Labs" title="Malwarebytes Labs" xmlUrl="http://blog.malwarebytes.org/feed/" htmlUrl="https://blog.malwarebytes.com"/>
+            <outline type="rss" text="Have I Been Pwned latest breaches" title="Have I Been Pwned latest breaches" xmlUrl="http://feeds.feedburner.com/HaveIBeenPwnedLatestBreaches" htmlUrl="https://haveibeenpwned.com/"/>
+            <outline type="rss" text="Krebs on Security" title="Krebs on Security" xmlUrl="http://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com"/>
+            <outline type="rss" text="BleepingComputer" title="BleepingComputer" xmlUrl="http://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/"/>
+            <outline type="rss" text="Dark Reading" title="Dark Reading" xmlUrl="http://www.darkreading.com/rss/all.xml" htmlUrl="https://www.darkreading.com"/>
+        </outline>
+        <outline text="DFIR Bloggers" title="DFIR Bloggers">
+            <outline type="rss" text="Windows Incident Response" title="Windows Incident Response" xmlUrl="http://windowsir.blogspot.com/feeds/posts/default" htmlUrl="http://windowsir.blogspot.com/"/>
+            <outline type="rss" text="dfir.blog" title="dfir.blog" xmlUrl="https://dfir.blog/rss/" htmlUrl="https://dfir.blog/"/>
+            <outline type="rss" text="Another Forensics Blog" title="Another Forensics Blog" xmlUrl="http://az4n6.blogspot.com/feeds/posts/default" htmlUrl="http://az4n6.blogspot.com/"/>
+            <outline type="rss" text="DFIR Diva" title="DFIR Diva" xmlUrl="https://dfirdiva.com/feed" htmlUrl="https://dfirdiva.com"/>
+            <outline type="rss" text="Digital Forensics Stream" title="Digital Forensics Stream" xmlUrl="https://df-stream.com/feed/" htmlUrl="https://df-stream.com"/>
+            <outline type="rss" text="mac4n6.com" title="mac4n6.com" xmlUrl="http://www.mac4n6.com/blog?format=rss" htmlUrl="http://www.mac4n6.com/"/>
+            <outline type="rss" text="binary foray" title="binary foray" xmlUrl="http://binaryforay.blogspot.com/feeds/posts/default" htmlUrl="https://binaryforay.blogspot.com/"/>
+            <outline type="rss" text="Salt Forensics" title="Salt Forensics" xmlUrl="https://salt4n6.com/feed/" htmlUrl="https://salt4n6.com"/>
+            <outline type="rss" text="Cheeky4n6Monkey - Learning About Digital Forensics" title="Cheeky4n6Monkey - Learning About Digital Forensics" xmlUrl="http://cheeky4n6monkey.blogspot.com/feeds/posts/default" htmlUrl="http://cheeky4n6monkey.blogspot.com/"/>
+            <outline type="rss" text="ThinkDFIR" title="ThinkDFIR" xmlUrl="https://thinkdfir.com/feed/" htmlUrl="https://thinkdfir.com"/>
+            <outline type="rss" text="DoubleBlak RSS" title="DoubleBlak RSS" xmlUrl="http://doubleblak.com/blogRSS.xml" htmlUrl="https://www.doubleblak.com/"/>
+            <outline type="rss" text="The Binary Hick" title="The Binary Hick" xmlUrl="https://thebinaryhick.blog/feed/" htmlUrl="https://thebinaryhick.blog"/>
+            <outline type="rss" text="forensicmike1" title="forensicmike1" xmlUrl="https://forensicmike1.com/feed/" htmlUrl="https://forensicmike1.com"/>
+            <outline type="rss" text="Hacking Exposed Computer Forensics Blog" title="Hacking Exposed Computer Forensics Blog" xmlUrl="http://hackingexposedcomputerforensicsblog.blogspot.com/feeds/posts/default" htmlUrl="https://www.hecfblog.com/"/>
+            <outline type="rss" text="tisiphone.net" title="tisiphone.net" xmlUrl="http://tisiphone.net/feed/" htmlUrl="https://tisiphone.net"/>
+            <outline type="rss" text="Smarter Forensics" title="Smarter Forensics" xmlUrl="http://smarterforensics.com/feed/" htmlUrl="https://smarterforensics.com"/>
+            <outline type="rss" text="Initialization vectors" title="Initialization vectors" xmlUrl="http://abrignoni.blogspot.com/feeds/posts/default" htmlUrl="https://abrignoni.blogspot.com/"/>
+            <outline type="rss" text="Brett Shavers" title="Brett Shavers" xmlUrl="http://feeds.feedburner.com/brettshavers/oSyq" htmlUrl="https://brettshavers.com/brett-s-blog"/>
+            <outline type="rss" text="Yogesh Khatri's forensic blog" title="Yogesh Khatri's forensic blog" xmlUrl="http://www.swiftforensics.com/feeds/posts/default" htmlUrl="http://www.swiftforensics.com/"/>
+        </outline>
+        <outline text="OSINT" title="OSINT">
+            <outline type="rss" text="IntelTechniques Blog" title="IntelTechniques Blog" xmlUrl="https://inteltechniques.com/blog/feed/" htmlUrl="https://inteltechniques.com/blog"/>
+        </outline>
+        <outline text="Digital Forensics" title="Digital Forensics">
+            <outline type="rss" text="Forensic Focus" title="Forensic Focus" xmlUrl="http://www.forensicfocus.com/rss/news2.php" htmlUrl="https://www.forensicfocus.com"/>
+            <outline type="rss" text="Forensic Multimedia Analysis Blog" title="Forensic Multimedia Analysis Blog" xmlUrl="http://forensicphotoshop.blogspot.com/feeds/posts/default" htmlUrl="http://forensicphotoshop.blogspot.com/"/>
+            <outline type="rss" text="Carved From Unallocated – Cellebrite" title="Carved From Unallocated – Cellebrite" xmlUrl="https://www.cellebrite.com/en/feed/?cat=17753" htmlUrl="https://www.cellebrite.com"/>
+            <outline type="rss" text="Nothing to See Here? I Beg to DFIR – Cellebrite" title="Nothing to See Here? I Beg to DFIR – Cellebrite" xmlUrl="https://www.cellebrite.com/en/feed/?cat=17751" htmlUrl="https://www.cellebrite.com"/>
+            <outline type="rss" text="Magnet Forensics" title="Magnet Forensics" xmlUrl="https://www.magnetforensics.com/feed/" htmlUrl="https://www.magnetforensics.com"/>
+            <outline type="rss" text="DFIR Training" title="DFIR Training" xmlUrl="https://www.dfir.training/dfir-training-categories-k2/itemlist?format=feed" htmlUrl="https://www.dfir.training"/>
+            <outline type="rss" text="Cellebrite" title="Cellebrite" xmlUrl="https://www.cellebrite.com/en/feed/" htmlUrl="https://www.cellebrite.com"/>
+            <outline type="rss" text="MSAB" title="MSAB" xmlUrl="https://www.msab.com/feed/" htmlUrl="https://www.msab.com"/>
+            <outline type="rss" text="SANS Digital Forensics and Incident Response" title="SANS Digital Forensics and Incident Response" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCwSo89W3KgPrid41vskBDYA" htmlUrl="https://www.youtube.com/channel/UCwSo89W3KgPrid41vskBDYA"/>
+            <outline type="rss" text="Life has no ctrl alt del – Cellebrite" title="Life has no ctrl alt del – Cellebrite" xmlUrl="https://www.cellebrite.com/en/feed/?cat=17749" htmlUrl="https://www.cellebrite.com"/>
+            <outline type="rss" text="AboutDFIR – The Definitive Compendium Project" title="AboutDFIR – The Definitive Compendium Project" xmlUrl="http://aboutdfir.com/feed/" htmlUrl="https://aboutdfir.com"/>
+            <outline type="rss" text="Forensic 4cast" title="Forensic 4cast" xmlUrl="http://4cast.whitfields.org/?feed=rss2" htmlUrl="https://forensic4cast.com"/>
+            <outline type="rss" text="This Week In 4n6" title="This Week In 4n6" xmlUrl="https://thisweekin4n6.wordpress.com/feed/" htmlUrl="https://thisweekin4n6.com"/>
+            <outline type="rss" text="sleuthkit.org Updates" title="sleuthkit.org Updates" xmlUrl="http://www.sleuthkit.org/rss.xml" htmlUrl="http://www.sleuthkit.org"/>
+            <outline type="rss" text="SANS Institute - Upcoming Webcasts" title="SANS Institute - Upcoming Webcasts" xmlUrl="http://www.sans.org/webcasts/rss/" htmlUrl="https://www.sans.org/webcasts/rss"/>
+            <outline type="rss" text="Amped Blog" title="Amped Blog" xmlUrl="http://blog.ampedsoftware.com/feed/" htmlUrl="http://blog.ampedsoftware.com"/>
+        </outline>
+    </body>
+</opml>

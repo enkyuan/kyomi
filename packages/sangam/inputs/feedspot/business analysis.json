@@ -1,0 +1,370 @@
+{
+  "category": "Business Analysis",
+  "source_url": "https://rss.feedspot.com/business_analysis_rss_feeds",
+  "feeds": [
+    {
+      "title": "BA Times",
+      "feed_url": "https://feeds.feedburner.com/BusinessAnalystTimes-BusinessAnalysisHome",
+      "website_url": "https://www.batimes.com/",
+      "description": "BA Times is an online resource for Business Analysts. Find 1000's of business analysis articles, webinars, whitepapers, templates, jobs, books and much more!",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/653035.jpg?t=1608191742"
+    },
+    {
+      "title": "Bridging the Gap Blog",
+      "feed_url": "https://www.bridging-the-gap.com/feed/",
+      "website_url": "https://www.bridging-the-gap.com/blog/",
+      "description": "Bridging the Gap was established in 2008 and has helped thousands of business analysts take their careers to the next level. We provide virtual, instructor-supported courses and on-the-job resources to professionals who want to start and succeed in business analysis careers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5099337.jpg?t=1713169001"
+    },
+    {
+      "title": "Techcanvass Business Analysis",
+      "feed_url": "https://businessanalyst.techcanvass.com/feed/",
+      "website_url": "https://businessanalyst.techcanvass.com/",
+      "description": "Techcanvass is an Information Technology certifications training Organization for professionals. It offers internationally recognized certifications in the fields of Project Management and Business Analysis.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 274,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5121807.jpg?t=1608191752"
+    },
+    {
+      "title": "Adaptive US Blog",
+      "feed_url": "https://www.adaptiveus.com/blog/rss.xml",
+      "website_url": "https://www.adaptiveus.com/blog",
+      "description": "Explore our blog page to read 200+ articles on business analysis written by our experts on business analysis, IIBA certification training.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 199
+      },
+      "image_url": "https://i1.feedspot.com/5115660.jpg?t=1608191756"
+    },
+    {
+      "title": "Business Analysts",
+      "feed_url": "https://www.busanalysts.com.au/feed/",
+      "website_url": "https://www.business-analysis.com.au/",
+      "description": "For over a decade Business Analysts Pty Ltd (BAPL) has provided its world-leading expertise in business analysis to help organisations realise optimal efficiencies and to break through barriers preventing advanced, sustainable growth.",
+      "followers": {
+        "twitter": 176
+      },
+      "image_url": "https://i1.feedspot.com/5115665.jpg?t=1608191769"
+    },
+    {
+      "title": "Passionate BA Blog",
+      "feed_url": "https://passionateba.pro/feed/",
+      "website_url": "https://passionateba.pro/blog/",
+      "description": "Passionate BA Blog aims to inspire business, requirements, and systems analysts, product owners, product managers, and others who drive the process of creating informational systems from the perspective of business needs and goals, management of solution scope and planning, system design creation, and, specifically, requirements engineering.",
+      "followers": {
+        "facebook": 25,
+        "twitter": 52,
+        "instagram": 441
+      },
+      "image_url": "https://i1.feedspot.com/5728330.jpg?t=1701768744"
+    },
+    {
+      "title": "BusinessAnalysisHub Blog",
+      "feed_url": "https://www.businessanalysishub.com/blog-feed.xml",
+      "website_url": "https://www.businessanalysishub.com/blog",
+      "description": "Business analysis can be a pretty tricky discipline to define because a BA's role can change drastically from business to business. The bottom line is, we're here to help you understand your business and your customers so you can provide the best possible service.",
+      "followers": {
+        "facebook": 30,
+        "twitter": 504,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5118646.jpg?t=1608191793"
+    },
+    {
+      "title": "B2T Business Analysis Blog",
+      "feed_url": "https://b2ttraining.com/feed/",
+      "website_url": "https://b2ttraining.com/b2t-blog/",
+      "description": "Business Agility through Business Analysis",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297058.jpg?t=1712907479"
+    },
+    {
+      "title": "Meta Business Analyst Blog",
+      "feed_url": "https://metabusinessanalyst.com/feed/",
+      "website_url": "https://metabusinessanalyst.com/blog-2/",
+      "description": "Going beyond your basic business analyst",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297062.jpg?t=1712907707"
+    },
+    {
+      "title": "Better Business Analysis Institute Blog",
+      "feed_url": "https://bba.institute/feed/",
+      "website_url": "https://bba.institute/the-business-analysis-blog/",
+      "description": "Better BA Training",
+      "followers": {
+        "facebook": 10
+      },
+      "image_url": "https://i1.feedspot.com/7297067.jpg?t=1712907529"
+    },
+    {
+      "title": "Medium | Analyst's corner",
+      "feed_url": "https://medium.com/feed/analysts-corner",
+      "website_url": "https://medium.com/analysts-corner",
+      "description": "All aspects of organisational analysis: business analysis | enterprise architecture | quality - Medium",
+      "followers": {
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/7297065.jpg?t=1712908026"
+    },
+    {
+      "title": "Watermark Learning Blog",
+      "feed_url": "https://www.watermarklearning.com/blog/feed/",
+      "website_url": "https://www.watermarklearning.com/blog/",
+      "description": "Business Ananlysis, Project Management, and Agile Topics of interest",
+      "followers": {
+        "facebook": 896,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7297061.jpg?t=1712907497"
+    },
+    {
+      "title": "MetricsCube Blog",
+      "feed_url": "https://www.metricscube.io/blog/feed",
+      "website_url": "https://www.metricscube.io/blog/",
+      "description": "Business Analysis Made Simple - Official MetricsCube Blog",
+      "followers": {
+        "facebook": 43
+      },
+      "image_url": "https://i1.feedspot.com/5118344.jpg?t=1713160708"
+    },
+    {
+      "title": "Business Bullet \u00bb Business Analysis",
+      "feed_url": "https://www.businessbullet.co.uk/category/business-analysis/feed/",
+      "website_url": "https://www.businessbullet.co.uk/category/business-analysis/",
+      "description": "Delivering better business outcomes",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297059.jpg?t=1712908070"
+    },
+    {
+      "title": "The Business Analyst's Toolkit",
+      "feed_url": "https://www.businessanalyststoolkit.com/feed/",
+      "website_url": "https://www.businessanalyststoolkit.com/business-analysis-articles/",
+      "description": "Business analysis fundamentals for the information technology professional",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4657368.jpg?t=1712918572"
+    },
+    {
+      "title": "Business Analysis Pty Ltd Blog",
+      "feed_url": "https://www.business-analysis.com.au/feed/",
+      "website_url": "https://www.business-analysis.com.au/blogspage/blog/",
+      "description": "Business Analysis",
+      "followers": {
+        "twitter": 176
+      },
+      "image_url": "https://i1.feedspot.com/7297068.jpg?t=1712908201"
+    },
+    {
+      "title": "Business Analyst School Blog",
+      "feed_url": "https://businessanalystschool.com/feed/",
+      "website_url": "https://businessanalystschool.com/blog/",
+      "description": "Business Analysis Lifetime On Demand Videos and Resources",
+      "followers": {
+        "facebook": 6700
+      },
+      "image_url": "https://i1.feedspot.com/7297066.jpg?t=1712908264"
+    },
+    {
+      "title": "Agora Insights Blog",
+      "feed_url": "https://io.dropinblog.com/feed/e7b1eb7e-da93-437b-ba03-76a693b204b7/?limit=10",
+      "website_url": "https://courses.agorainsights.com/pages/blog",
+      "description": "Your one-stop shop for business analysts and enterprise and business architects to find great articals on certification, tips, training, AI and resources.",
+      "followers": {
+        "facebook": 315
+      },
+      "image_url": "https://i1.feedspot.com/7297064.jpg?t=1712907512"
+    },
+    {
+      "title": "Inteq Group Blog",
+      "feed_url": "https://www.inteqgroup.com/blog/rss.xml",
+      "website_url": "https://www.inteqgroup.com/blog",
+      "description": "Are you a business analyst looking for tips and information on how to become better in your career? Visit this blog for more of this information.",
+      "followers": {
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/7297051.jpg?t=1712908367"
+    },
+    {
+      "title": "Business Analysis Career Mentor Blog",
+      "feed_url": "https://www.bacareermentor.com/blog-feed.xml",
+      "website_url": "https://www.bacareermentor.com/blog",
+      "description": "Accelerate your career as IT Business Analyst and Product Owner | 20 years of experience | Agile, Scrum, E-commerce | CBAP\u00ae, PSPO I, SAFe\u00ae Agilist",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297053.jpg?t=1712908438"
+    },
+    {
+      "title": "BA-EXPERTS Blog",
+      "feed_url": "https://www.businessanalysisexperts.com/feed/",
+      "website_url": "https://www.businessanalysisexperts.com/the-business-analysis-experts-blog/",
+      "description": "BA-EXPERTS offers self-paced and instructor-led business analysis training for anyone wearing the 'BA hat' to improve their business analysis skills, techniques, and results.",
+      "followers": {
+        "facebook": 970,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5115640.jpg?t=1608191761"
+    },
+    {
+      "title": "Fhyzics",
+      "feed_url": "https://blog.fhyzics.net/bcs-business-analysis-artificial-intelligence/rss.xml",
+      "website_url": "https://blog.fhyzics.net/bcs-business-analysis-artificial-intelligence",
+      "description": "Fhyzics is a global leader in business analysis-offers business consulting, business analysis, SOP, product development and supply chain services to organisations.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 304
+      },
+      "image_url": "https://i1.feedspot.com/5116073.jpg?t=1608191814"
+    },
+    {
+      "title": "Business Analysis Knowledge Share",
+      "feed_url": "https://baknowledgeshare.com/feed/",
+      "website_url": "https://baknowledgeshare.com/",
+      "description": "BAknowledgeshare is for Business Analysts that offers interesting titbits around business analysis Process, Business Analysis Templates, Business Analysis Tools, and Business Analysis Techniques.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5241953.jpg?t=1612420744"
+    },
+    {
+      "title": "Business Analyst Mentor",
+      "feed_url": "https://businessanalystmentor.com/feed/",
+      "website_url": "https://businessanalystmentor.com/",
+      "description": "We help the new, aspiring and seasoned business analysts in their careers. We guide and support them on their personal journeys so that each one of them reaches their full potential in the ever-changing business analysis profession.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 318
+      },
+      "image_url": "https://i1.feedspot.com/5144985.jpg?t=1608191800"
+    },
+    {
+      "title": "The Samurai Business Analyst",
+      "feed_url": "https://thesamuraibusinessanalyst.wordpress.com/feed/",
+      "website_url": "https://thesamuraibusinessanalyst.wordpress.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297049.jpg?t=1712907569"
+    },
+    {
+      "title": "Business Analyst Learnings",
+      "feed_url": "https://feeds.feedburner.com/BusinessAnalystLearnings",
+      "website_url": "https://www.businessanalystlearnings.com/blog",
+      "description": "Business Analyst Blog comprising tips, techniques and resources for every BA",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 680
+      },
+      "image_url": "https://i1.feedspot.com/653034.jpg?t=1713165162"
+    },
+    {
+      "title": "Business Analysis Excellence Blog",
+      "feed_url": "https://baexcellence.com/blogs/business-analysis-excellence-blog.atom",
+      "website_url": "https://baexcellence.com/blogs/business-analysis-excellence-blog",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/7297050.jpg?t=1712907439"
+    },
+    {
+      "title": "Skilled Business Analyst Blog",
+      "feed_url": "https://www.theskilledba.com/feed/",
+      "website_url": "https://www.theskilledba.com/blog/",
+      "followers": {
+        "facebook": 3100
+      },
+      "image_url": "https://i1.feedspot.com/7297063.jpg?t=1712907507"
+    },
+    {
+      "title": "IAG Consulting Blog \u00bb Business Analysis",
+      "feed_url": "https://www.iag.biz/category/ba-posts/feed/",
+      "website_url": "https://www.iag.biz/category/ba-posts/",
+      "description": "Requirements-driven Lean Agile Project, Program, Portfolio Management, Business Analysis, and Business Architecture",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/7297054.jpg?t=1712907459"
+    },
+    {
+      "title": "Biz Analysis",
+      "feed_url": "https://www.bizanalysis.org/en/feed/",
+      "website_url": "https://www.bizanalysis.org/en/",
+      "description": "Helping Business Do Business Better!",
+      "followers": {
+        "facebook": 319,
+        "twitter": 439
+      },
+      "image_url": "https://i1.feedspot.com/7297047.jpg?t=1712907425"
+    },
+    {
+      "title": "The Business Analyst Story Blog",
+      "feed_url": "https://thebastory.com/feed/",
+      "website_url": "https://thebastory.com/blog-feed/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297048.jpg?t=1712908167"
+    },
+    {
+      "title": "The Uncommon League Blog",
+      "feed_url": "https://theuncommonleague.com/articles?format=rss",
+      "website_url": "https://theuncommonleague.com/articles",
+      "followers": {
+        "facebook": 247
+      },
+      "image_url": "https://i1.feedspot.com/7297052.jpg?t=1712907449"
+    },
+    {
+      "title": "The Digital Business Analyst",
+      "feed_url": "https://thedigitalbusinessanalyst.co.uk/feed",
+      "website_url": "https://thedigitalbusinessanalyst.co.uk/",
+      "description": "Thoughts, musings and ramblings of a digital consultant by Burn Up Media Ltd - Medium",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297057.jpg?t=1712908409"
+    },
+    {
+      "title": "Better Business Analysis Blog",
+      "feed_url": "https://betterba.co.uk/feed/",
+      "website_url": "https://betterba.co.uk/stuart-mullinger-blog/",
+      "description": "Business analysis consultancy and training",
+      "followers": {
+        "facebook": 34900
+      },
+      "image_url": "https://i1.feedspot.com/7297055.jpg?t=1712920531"
+    },
+    {
+      "title": "Adrian Reed's Blog",
+      "feed_url": "https://www.adrianreed.co.uk/page/7/feed",
+      "website_url": "https://www.adrianreed.co.uk/",
+      "description": "Adrian Reed is a Principal Consultant and Director at Blackmetric Business Solutions, where he provides business analysis consultancy and training solutions to a range of clients in varying industries. Subscribe to this blog and get articles relating to Business Analysis, Business Change & Management by Adrian Reed.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5105946.jpg?t=1608191785"
+    },
+    {
+      "title": "PESTLE Analysis",
+      "feed_url": "https://pestleanalysis.com/feed/",
+      "website_url": "https://pestleanalysis.com/",
+      "description": "The Latest and Best Analysis Online",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/7297060.jpg?t=1712907824"
+    },
+    {
+      "title": "Career path for Business Analyst",
+      "feed_url": "https://www.specificfeeds.com/bacareers",
+      "website_url": "https://www.bacareers.in/home/",
+      "description": "This page is intended to gain knowledge about Business Analyst role, Business analysis, SDLC and high-level knowledge on few domains.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5118204.jpg?t=1713166744"
+    }
+  ]
+}

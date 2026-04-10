@@ -1,0 +1,150 @@
+{
+  "category": "Boston News",
+  "source_url": "https://rss.feedspot.com/boston_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WCVB Channel 5",
+      "feed_url": "https://www.wcvb.com/topstories-rss",
+      "website_url": "https://www.wcvb.com/",
+      "description": "Get the latest Boston news, weather and sports online, anytime. Stay in the know with Boston's news leader - WCVB.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 366700
+      },
+      "image_url": "https://i1.feedspot.com/4835941.jpg?t=1585124537"
+    },
+    {
+      "title": "WHDH 7News",
+      "feed_url": "https://whdh.com/feed/",
+      "website_url": "https://whdh.com/",
+      "description": "Find Boston news on weather, sorts, local news and more from WHDH 7News.",
+      "followers": {
+        "facebook": 529800,
+        "twitter": 364800
+      },
+      "image_url": "https://i1.feedspot.com/4835279.jpg?t=1585124003"
+    },
+    {
+      "title": "Boston Herald \u00bb NFL Draft",
+      "feed_url": "https://www.bostonherald.com/feed/",
+      "website_url": "https://www.bostonherald.com/tag/nfl-draft/",
+      "description": "The Boston Herald is a daily newspaper whose primary market is Boston, Massachusetts, United States, and its surrounding area. It was started in 1846 and is one of the oldest daily newspapers in the United States. The Boston Herald is the leading source of breaking news, local news, sports, politics, entertainment, opinion, and weather in Boston, Massachusetts.",
+      "followers": {
+        "facebook": 158300,
+        "twitter": 145000,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/531749.jpg?t=1603896381"
+    },
+    {
+      "title": "NBC10 Boston",
+      "feed_url": "https://www.nbcboston.com/?rss=y",
+      "website_url": "https://www.nbcboston.com/",
+      "description": "NBC10 Boston is your source for breaking news, weather, traffic, entertainment and sports.",
+      "followers": {
+        "facebook": 650100,
+        "twitter": 52800,
+        "instagram": 182700
+      },
+      "image_url": "https://i1.feedspot.com/4835286.jpg?t=1679919809"
+    },
+    {
+      "title": "Universal Hub",
+      "feed_url": "https://www.universalhub.com/node/feed",
+      "website_url": "https://www.universalhub.com/",
+      "description": "Boston news and the latest turkey and helicopter updates from Universal Hub, all from at least six feet away from you.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 81400,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/17412.jpg?t=1610795905"
+    },
+    {
+      "title": "South Boston Today",
+      "feed_url": "https://www.southbostontoday.com/feed/",
+      "website_url": "https://www.southbostontoday.com/",
+      "description": "South Boston Today covers and reports on the city upholding the South Boston community's traditions, promoting its values, and embracing all of its people. We tell the stories of local people who live and shape the City's Business, Politics, and Cultural landscape. Read the latest articles here.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5518943.jpg?t=1678451491"
+    },
+    {
+      "title": "East Boston Times-Free Press",
+      "feed_url": "https://feeds.feedburner.com/EastBostonTimes",
+      "website_url": "https://eastietimes.com/",
+      "description": "East Boston Times-Free Press is an East Boston News Staple that consistently delivers local news, obituaries, police briefs, and more to keep readers updated on what's happening in Boston's communities. Here you will find round-the-clock updates on all major trending topics across East Boston.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5518945.jpg?t=1678453803"
+    },
+    {
+      "title": "South Boston Online",
+      "feed_url": "https://southbostononline.com/feed/",
+      "website_url": "https://southbostononline.com/",
+      "description": "South Boston Online is a community newspaper that reports weekly in print and online throughout the year on events that occur in South Boston, Massachusetts, the Boston Seaport, and the city of Boston. Our primary focus is on South Boston community events in our businesses, churches, city governance, educational resources, and local entertainment.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 418
+      },
+      "image_url": "https://i1.feedspot.com/5518944.jpg?t=1678451498"
+    },
+    {
+      "title": "Boston.com",
+      "feed_url": "https://www.boston.com/feed/",
+      "website_url": "https://www.boston.com/",
+      "description": "Get breaking updates on news, sports, and weather. Boston.com is Boston's source for the latest breaking news, sports scores, traffic updates, weather, culture, events, and more. The website primarily covers all the teams, players, and sporting events with Boston as their bases.",
+      "followers": {
+        "facebook": 482800,
+        "twitter": 459600,
+        "instagram": 503800
+      },
+      "image_url": "https://i1.feedspot.com/4437703.jpg?t=1676609477"
+    },
+    {
+      "title": "Boston Business Journal",
+      "feed_url": "http://feeds.bizjournals.com/bizj_boston",
+      "website_url": "https://www.bizjournals.com/boston/",
+      "description": "View Breaking Local News Headlines in Boston from the Boston Business Journal. Access business resources, company profiles, business advice columns, local jobs and more.",
+      "followers": {
+        "facebook": 23800,
+        "twitter": 72600,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/1380388.jpg?t=1701350598"
+    },
+    {
+      "title": "CBS Boston",
+      "feed_url": "https://www.cbsnews.com/boston/",
+      "website_url": "https://www.cbsnews.com/boston/",
+      "description": "CBS Boston is Boston's source for breaking news, weather, traffic, and sports.",
+      "followers": {
+        "facebook": 782500,
+        "twitter": 238000,
+        "instagram": 96700
+      },
+      "image_url": "https://i1.feedspot.com/3085.jpg?t=1603896079"
+    },
+    {
+      "title": "EastBoston.com",
+      "feed_url": "https://eastboston.com/?feed=rss2",
+      "website_url": "https://eastboston.com/",
+      "description": "Grab the latest stories and moments happening across Boston's Political, and Community circles. Here at EastBoston.com, We provide you with the latest breaking news about East Boston, aggregated from many sources.",
+      "followers": {
+        "twitter": 753
+      },
+      "image_url": "https://i1.feedspot.com/5518946.jpg?t=1678453881"
+    },
+    {
+      "title": "DigBoston",
+      "feed_url": "https://digboston.com/feed/",
+      "website_url": "https://digboston.com/",
+      "description": "DigBoston is Boston's best and only alternative weekly publication. We cover local news, arts, music, sex, food, movies, and shopping in a lively, funny, incisive, and, most importantly, dead honest style.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4825740.jpg?t=1610795874"
+    }
+  ]
+}

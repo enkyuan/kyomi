@@ -1,0 +1,56 @@
+{
+  "category": "UK English Teacher",
+  "source_url": "https://rss.feedspot.com/uk_english_teacher_rss_feeds",
+  "feeds": [
+    {
+      "title": "Primary English Blog",
+      "feed_url": "https://primaryenglished.co.uk/blog?format=rss",
+      "website_url": "https://primaryenglished.co.uk/blog",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/7317769.jpg?t=1716910701"
+    },
+    {
+      "title": "Get Set Go English Blog",
+      "feed_url": "https://www.getsetgoenglish.co.uk/blog-feed.xml",
+      "website_url": "https://www.getsetgoenglish.co.uk/blogs",
+      "description": "Tuition and training courses for English as a Foreign Language.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7317770.jpg?t=1716910733"
+    },
+    {
+      "title": "Sandy Millin",
+      "feed_url": "https://sandymillin.wordpress.com/feed/",
+      "website_url": "https://sandymillin.wordpress.com/",
+      "description": "Technologically and linguistically adventurous EFL teacher, trainer, writer and manager.",
+      "followers": {
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4723409.jpg"
+    },
+    {
+      "title": "Online Teachers UK Blog",
+      "feed_url": "https://onlineteachersuk.com/blog/feed/",
+      "website_url": "https://onlineteachersuk.com/blog/",
+      "description": "OTUK is an online English school run by a small team of British English teachers. Learn British English from online teacher OTUK.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4912325.jpg?t=1620198500"
+    },
+    {
+      "title": "Oxford University Press",
+      "feed_url": "https://oupeltglobalblog.com/feed/",
+      "website_url": "https://teachingenglishwithoxford.oup.com/",
+      "description": "Welcome to Oxford University Press Blog. This blog is intended for teachers, trainers, lecturers, authors and anyone else with an interest in keeping up with what's happening in the world of ELT and what we're up to. We'll bring you resources you can use in your classrooms, hints and tips for teaching, insights into the lives of publishers and authors.",
+      "followers": {
+        "facebook": 318800,
+        "twitter": 107700
+      },
+      "image_url": "https://i1.feedspot.com/4510435.jpg?t=1607493236"
+    }
+  ]
+}

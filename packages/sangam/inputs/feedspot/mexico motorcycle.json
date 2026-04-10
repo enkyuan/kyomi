@@ -1,0 +1,56 @@
+{
+  "category": "Mexico Motorcycle",
+  "source_url": "https://rss.feedspot.com/mexico_motorcycle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Trawlercat Chronicles \u00bb Mexico",
+      "feed_url": "https://trawlercat.com/tag/mexico/feed/",
+      "website_url": "https://trawlercat.com/tag/mexico/",
+      "description": "Explore Mexico through the lens of Trawlercat Blog, featuring adventure motorcycle travel stories. Delve into living life to the fullest and embracing the journey of growing older with each captivating post.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282617.jpg?t=1711443894"
+    },
+    {
+      "title": "Motociclo Magazine",
+      "feed_url": "https://motociclo.com.mx/feed/",
+      "website_url": "https://motociclo.com.mx/",
+      "description": "Motociclo Magazine, a premier motorcycle publication, covers the latest events in motorcycling across Mexico and globally. With a focus on relevance, it brings enthusiasts the most captivating stories and updates from the world of motorcycles.",
+      "followers": {
+        "twitter": 44100
+      },
+      "image_url": "https://i1.feedspot.com/7282618.jpg?t=1711449926"
+    },
+    {
+      "title": "Biker Passion Blog",
+      "feed_url": "https://www.pasionbiker.com/feed/",
+      "website_url": "https://www.pasionbiker.com/",
+      "description": "Pasi\u00f3n Biker, fueled by a deep love for motorcycling, was born as a platform to share the enriching experiences of George, Penny, and their Travel group. Their Motorcycle Blog delves into all aspects of the motorcycling world, from safety and destinations to history and fashion. Stay tuned for news, tips, techniques, and captivating travel tales.",
+      "followers": {
+        "facebook": 119600,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/7282616.jpg?t=1711443819"
+    },
+    {
+      "title": "Royal Enfield Blog",
+      "feed_url": "https://royalenfieldmx.com/feed/",
+      "website_url": "https://royalenfieldmx.com/blog/",
+      "description": "Since its establishment in 1901, Royal Enfield epitomizes innovation, adventure, and freedom. Originating in England, it has evolved into a global icon, symbolizing the essence of motorcycling. Discover limitless adventure with news, events, articles, and tips from this legendary brand.",
+      "followers": {
+        "facebook": 4800000,
+        "twitter": 207800
+      },
+      "image_url": "https://i1.feedspot.com/7282620.jpg?t=1711443840"
+    },
+    {
+      "title": "Kawasaki Capital Blog",
+      "feed_url": "https://kawasakicapital.com.mx/blogs/noticias.atom",
+      "website_url": "https://kawasakicapital.com.mx/blogs/noticias",
+      "description": "Kawasaki Capital Mexico boasts two branches: Kawasaki Insurgentes and Kawasaki Viaducto, renowned for their top-notch service. Offering motorcycles, accessories, spare parts, a service workshop, and coffee, they provide a comprehensive experience. Stay updated with the latest news and updates from Kawasaki Capital Mexico.",
+      "followers": {
+        "facebook": 80200
+      },
+      "image_url": "https://i1.feedspot.com/7282619.jpg?t=1711443834"
+    }
+  ]
+}

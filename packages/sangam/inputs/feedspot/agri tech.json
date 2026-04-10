@@ -1,0 +1,186 @@
+{
+  "category": "Agri Tech",
+  "source_url": "https://rss.feedspot.com/agri_tech_rss_feeds",
+  "feeds": [
+    {
+      "title": "AgriTechTomorrow",
+      "feed_url": "https://www.agritechtomorrow.com/rss/news/",
+      "website_url": "https://www.agritechtomorrow.com/stream/news/",
+      "description": "A news and information resource for the agricultural technology industry. Daily news stories, products, industry tools, hundreds of articles, and more. AgriTechTomorrow is an online trade magazine for the agricultural technology and precision farming industries.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 854
+      },
+      "image_url": "https://i1.feedspot.com/5397294.jpg?t=1651751758"
+    },
+    {
+      "title": "Agri-TechE",
+      "feed_url": "https://www.agri-tech-e.co.uk/feed/",
+      "website_url": "https://www.agri-tech-e.co.uk/knowledge-hub/",
+      "description": "Agri-TechE is bringing together farmers and growers with scientists, technologists, and entrepreneurs, creating a global agri-tech network. The priority is to improve production in the UK and globally, helping meet the challenges of food and nutritional security, adaptation to climate change, and managing limited natural resources.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 7500,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4913104.jpg?t=1620298952"
+    },
+    {
+      "title": "Sprout Agritech Ltd Blog",
+      "feed_url": "https://www.sproutagritech.com/blog/rss/",
+      "website_url": "https://www.sproutagritech.com/blog/tag/29937/AgTech/",
+      "description": "Sprout is an investment company that is breaking new ground for agtech and foodtech entrepreneurs through its accelerator and seed-stage investment activity. We're on a mission to build the next generation of agtech and foodtech entrepreneurs and companies.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5397295.jpg?t=1651752814"
+    },
+    {
+      "title": "Global Ag Tech Initiative",
+      "feed_url": "https://www.globalagtechinitiative.com/feed/",
+      "website_url": "https://www.globalagtechinitiative.com/",
+      "description": "PrecisionAg is a diversified, independent media enterprise serving the global community using precision agriculture techniques and is a global digital source of expert commentary, longer-range trends and insights, and headlines from key precision regions.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/3465389.jpg?t=1641988242"
+    },
+    {
+      "title": "AgriTech Ireland",
+      "feed_url": "https://agritechireland.ie/feed/",
+      "website_url": "https://agritechireland.ie/news/",
+      "description": "Ireland's AgriTech cluster is a coming of industry, knowledge providers and governments to unlock new opportunities to accelerate sustainable growth in this important sector.",
+      "followers": {
+        "facebook": 28,
+        "twitter": 550,
+        "instagram": 217
+      },
+      "image_url": "https://i1.feedspot.com/5397313.jpg?t=1651753740"
+    },
+    {
+      "title": "Agritech UK",
+      "feed_url": "https://www.agritech-uk.org/category/news/feed/",
+      "website_url": "https://www.agritech-uk.org/category/news/",
+      "description": "The AgriTech-UK Directory, features companies and products from across the UK. The user functionality on the directory has been developed to include a more complete experience for both producers and buyers alike. Key information is now featured on producer profiles including products, and services, searchable by sector, product, and region.",
+      "followers": {
+        "twitter": 268
+      },
+      "image_url": "https://i1.feedspot.com/5397316.jpg?t=1651756236"
+    },
+    {
+      "title": "Foraging And Farming",
+      "feed_url": "https://www.foragingandfarming.com/blog-feed.xml",
+      "website_url": "https://www.foragingandfarming.com/",
+      "description": "Food is a common thread that touches all aspects of our lives. I produce informative and engaging content on food, food systems, and organics, and the farmers and chefs who share in creating these products. My goal is to contribute to advancing awareness of food and agricultural issues and opportunities through my writing. Thank you for joining me; it should be a fun and exciting adventure!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5681759.jpg?t=1695993714"
+    },
+    {
+      "title": "Animal AgTech Innovation Summit",
+      "feed_url": "https://animalagtech.com/category/news/feed/",
+      "website_url": "https://animalagtech.com/category/news/",
+      "description": "Find out the latest news and updates about the Animal AgTech Innovation Summit. From carbon-smart innovations and early disease detection to precision farming, robotics and AI, the summit will address the pain-points and opportunities at the core of the US livestock and dairy industry.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5397309.jpg?t=1651754281"
+    },
+    {
+      "title": "World AgriTech USA",
+      "feed_url": "https://worldagritechusa.com/feed/",
+      "website_url": "https://worldagritechusa.com/category/news/",
+      "description": "The World Agri-Tech Innovation Summit has become the annual meeting place for the global agtech ecosystem. Growers, agribusiness leaders, technology pioneers and investors come together to exchange insights, be inspired, and identify future partners.",
+      "followers": {
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5397306.jpg?t=1651754192"
+    },
+    {
+      "title": "Farm Automation Today",
+      "feed_url": "https://www.farmautomationtoday.com/feed",
+      "website_url": "https://www.farmautomationtoday.com/news",
+      "description": "Farm Automation Today, exists to present the latest news in the development of farm automation, an area which will only become more important as the average age of the typical farmer continues to rise whilst available labour forces decline. Topics include tech innovations 'in the field' such as advances in weeding robotics or autonomous vehicles and 'in the barn' solutions such as livestock health monitoring software and methane management.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5381896.jpg?t=1710915942"
+    },
+    {
+      "title": "World Agri-Tech London Summit News",
+      "feed_url": "https://www.worldagritechinnovation.com/news",
+      "website_url": "https://www.worldagritechinnovation.com/news",
+      "description": "Keep up to date with the latest news from the agtech industry. World Agri-Tech Innovation Summit has become the annual meeting place for the global agtech industry. As we celebrate a return to live events, the summit will bring together leading agribusinesses, co-operatives, CPG brands, entrepreneurs, investors, and policy makers to accelerate the transition to sustainable and resilient agri-food systems.",
+      "followers": {
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5397308.jpg?t=1651754175"
+    },
+    {
+      "title": "AgriTech New Zealand",
+      "feed_url": "https://agritechnz.org.nz/feed/",
+      "website_url": "https://www.agritecture.com/blog/tag/technology",
+      "description": "Agritech is providing alternatives to traditional farming methods and revolutionising the sector. New innovations can increase productivity gains to maximise profitability for the primary sector, for the benefit of all New Zealanders. Launched in 2018, AgriTech New Zealand is a purpose driven, membership funded organisation whose members share a passion for the opportunities that agritech can generate.",
+      "followers": {
+        "facebook": 578,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5397310.jpg?t=1651754330"
+    },
+    {
+      "title": "Agritecture Blog",
+      "feed_url": "https://www.agritecture.com/blog?format=rss",
+      "website_url": "https://www.agritecture.com/blog/tag/technology",
+      "description": "Your source for urban and vertical farming news, business, and design. Agritecture provides advisory services in the design, planning, implementation, and operation of urban agriculture projects. We offer our clients the tools, data, ideas, network, and expertise needed to ensure their success.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 14600,
+        "instagram": 39200
+      },
+      "image_url": "https://i1.feedspot.com/5397293.jpg?t=1651751594"
+    },
+    {
+      "title": "Agri-EPI Centre Blog",
+      "feed_url": "https://agri-epicentre.com/feed/",
+      "website_url": "https://fareasternagriculture.com/technology",
+      "description": "Our blog will keep you up-to-date with the very latest ideas and innovations in agri-tech from our Agri-EPI team, members & industry experts. Agri-EPI Centre is the UK lead centre for the adoption of precision agriculture and engineering technology, across the whole agrifood chain.",
+      "followers": {
+        "twitter": 2600,
+        "instagram": 777
+      },
+      "image_url": "https://i1.feedspot.com/5397297.jpg?t=1651751829"
+    },
+    {
+      "title": "Far Eastern Agriculture \u00bb Technology",
+      "feed_url": "https://fareasternagriculture.com/technology",
+      "website_url": "https://fareasternagriculture.com/technology",
+      "description": "The latest news on the agricultural technologies in Africa. Far Eastern Agriculture is the only broad-based agribusiness magazine serving the Asia-Pacific region with an independently-audited circulation.",
+      "followers": {
+        "twitter": 902
+      },
+      "image_url": "https://i1.feedspot.com/5397296.jpg?t=1651751087"
+    },
+    {
+      "title": "UK Agri-Tech Centres",
+      "feed_url": "https://www.agritechcentres.com/news?format=rss",
+      "website_url": "https://ukagritechcentre.com/news-and-blogs/",
+      "description": "The Agri-Tech Centres are a unique collaboration between government, and academia to accelerate agri-food innovation. Proud to be supported by Innovate UK.",
+      "followers": {
+        "twitter": 491
+      },
+      "image_url": "https://i1.feedspot.com/5397317.jpg?t=1651755925"
+    },
+    {
+      "title": "Farmsio Blog",
+      "feed_url": "https://farmsio.com/blog/feed/",
+      "website_url": "https://www.farms.io/blog",
+      "description": "Farmsio is the Agri platform, created with a vision to empower the farmers by enabling decision making at the grassroot level. It improves pre and post-harvesting efficiency by the digitization of the value chain, providing Climate-Smart solutions and decision tools to farmers and organization by integration.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5397311.jpg?t=1651753444"
+    }
+  ]
+}

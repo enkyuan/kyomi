@@ -1,0 +1,340 @@
+{
+  "category": "Freight",
+  "source_url": "https://rss.feedspot.com/freight_rss_feeds",
+  "feeds": [
+    {
+      "title": "Journal of Commerce",
+      "feed_url": "https://www.joc.com/rssfeed",
+      "website_url": "https://www.joc.com/",
+      "description": "The Journal of Commerce magazine is produced by a team of specialized, subject-matter expert journalists providing original daily news analysis of international logistics for corporate logistics teams and other participants in global supply chains.",
+      "followers": {
+        "facebook": 48000,
+        "twitter": 31900
+      },
+      "image_url": "https://i1.feedspot.com/3659142.jpg?t=1669794892"
+    },
+    {
+      "title": "Container News",
+      "feed_url": "https://container-news.com/feed/",
+      "website_url": "https://container-news.com/",
+      "description": "Our website offers fast, accurate, and reliable information to all companies having transport activities in the container shipping industry. Container News was created by shipping executives. It is a shipping and maritime news portal, specializing in liner shipping and its container applications.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5421165.jpg?t=1669794956"
+    },
+    {
+      "title": "Bluegrace",
+      "feed_url": "https://mybluegrace.com/feed/",
+      "website_url": "https://mybluegrace.com/news/",
+      "description": "We're on a mission to make all businesses better, with a vision to advance the logistics landscape through new and different approaches while empowering top talent who share our core values. Find everything you need to know with our extensive library of case studies, white papers, guides, reports, the latest news, and industry trends in blogs.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 11100,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5470756.jpg?t=1669794990"
+    },
+    {
+      "title": "Shipping and Freight Resource",
+      "feed_url": "https://www.shippingandfreightresource.com/feed/",
+      "website_url": "https://www.shippingandfreightresource.com/",
+      "description": "Shipping and Freight Resource by Hariesh Manaadiar has been providing quality content to the industry since 2008, helping readers understand more about this industry and the business of Shipping, Freight, Maritime, Logistics, Supply Chain, and Trade, allowing them to make better business decisions. This is where shipping and freight professionals come for quality content, industry news, analysis, interactive discussions, executive insights from experts in the industry, and more.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5470758.jpg?t=1669795099"
+    },
+    {
+      "title": "The Loadstar",
+      "feed_url": "https://theloadstar.com/feed/?adad",
+      "website_url": "https://theloadstar.com/",
+      "description": "Every day thousands of freight professionals and shippers read The Loadstar to make sense of the supply chain. Our focus is on independent, high-quality journalism for the benefit of our readers' knowledge and understanding. We strive for authenticity and significance by a daily attempt to be first to the story, making the market think, and challenging the global freight industry to do better.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 8400,
+        "instagram": 281
+      },
+      "image_url": "https://i1.feedspot.com/5470767.jpg?t=1669795358"
+    },
+    {
+      "title": "FreightCaviar",
+      "feed_url": "https://www.freightcaviar.com/latest/rss/",
+      "website_url": "https://www.freightcaviar.com/",
+      "description": "FreightCaviar, founded by Paul-Bernard Jaroslawski, specializes in blending humor with hard-hitting insights in the freight brokerage industry. Beyond the engaging newsletter, podcast, and memes, it offers tailored marketing services that include crafting insightful blogs and articles and providing targeted exposure for companies eager to connect with freight brokers.",
+      "followers": {
+        "twitter": 8000,
+        "instagram": 47300
+      },
+      "image_url": "https://i1.feedspot.com/5749856.jpg?t=1704488314"
+    },
+    {
+      "title": "US CarGo Freight",
+      "feed_url": "https://uscargofreight.com/feed/",
+      "website_url": "https://uscargofreight.com/",
+      "description": "US Cargo Freight is a shipping and logistics company based in the United States. Their website provides information about their services, such as freight forwarding, cargo transportation, warehousing, and distribution.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297507.jpg?t=1712921684"
+    },
+    {
+      "title": "CSA Software Blog",
+      "feed_url": "https://csasoftware.com/feed/",
+      "website_url": "https://csasoftware.com/blog/",
+      "description": "CSA Software products are designed for the unique needs of freight forwarders and their clients, vendors, and overseas business partners. CSA Software provides the end-to-end, industry-leading solutions, and the expertise you need to increase operational efficiency and drive competitive advantage. Read and learn about how to grow your freight forwarding business through state-of-the-art software such as World-Trak, LTL-Trak, WMS-Trak, and more!",
+      "followers": {
+        "facebook": 21,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5471324.jpg?t=1669795538"
+    },
+    {
+      "title": "DAT Blog",
+      "feed_url": "https://www.dat.com/blog/feed",
+      "website_url": "https://www.dat.com/blog",
+      "description": "The latest Trucking News, Industry Trends, Trucking Regulations, and Product Reviews from DAT Blog. DAT Freight & Analytics operates the largest truckload freight marketplace in North America.",
+      "followers": {
+        "facebook": 106200,
+        "twitter": 13800,
+        "instagram": 28000
+      },
+      "image_url": "https://i1.feedspot.com/5316341.jpg?t=1669795873"
+    },
+    {
+      "title": "Freightera Blog",
+      "feed_url": "https://www.freightera.com/blog/feed/",
+      "website_url": "https://www.freightera.com/blog/",
+      "description": "Blog about freight and shipping, LTL & truckload freight, and tips on how to avoid extra charges. Freightera is an online freight marketplace that makes freight shipping transparent and easy.",
+      "followers": {
+        "facebook": 346,
+        "twitter": 814
+      },
+      "image_url": "https://i1.feedspot.com/4644407.jpg?t=1669795920"
+    },
+    {
+      "title": "Uber Freight Blog",
+      "feed_url": "https://www.uberfreight.com/feed/",
+      "website_url": "https://www.uberfreight.com/blog/",
+      "description": "To best serve our communities, we serve the people who move them-building technology and services that provide greater transparency and visibility so shippers and carriers can make an impact. Uber Freight is not just one of the largest logistics and transportation networks in the world. It's a platform and service that helps shippers and carriers of all sizes take control of their freight and deliver on their goals.",
+      "followers": {
+        "facebook": 50800,
+        "twitter": 5500,
+        "instagram": 21800
+      },
+      "image_url": "https://i1.feedspot.com/5471318.jpg?t=1669795961"
+    },
+    {
+      "title": "Dedola Blog",
+      "feed_url": "https://dedola.com/feed/",
+      "website_url": "https://dedola.com/most-popular-freight-forwarding-blogs/",
+      "description": "Dedola Global Logistics (DGL) provides logistics and freight management solutions for importers and exporters worldwide. DGL currently manages a full matrix of logistics services within all trade lanes of the world, in the air, over land and on the sea.",
+      "followers": {
+        "facebook": 462,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4643057.jpg?t=1669796017"
+    },
+    {
+      "title": "Harbour International Freight Blog",
+      "feed_url": "https://www.harbourfreight.co.uk/blog-feed.xml",
+      "website_url": "https://www.harbourfreight.co.uk/blog",
+      "description": "Harbour International is a former family business that has grown from road freight roots to become a dynamic freight forwarding company. Harbour offers you total transport, customs management, and freight forwarding solutions, with the coverage you need via our integrated European network and membership of CTN, which gives us the benefit of a truly global business.",
+      "followers": {
+        "facebook": 293,
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/5471388.jpg?t=1669283294"
+    },
+    {
+      "title": "KG Logistics Blog",
+      "feed_url": "https://www.kg-logistics.co.uk/feed/",
+      "website_url": "https://www.kg-logistics.co.uk/news/",
+      "description": "KG Logistics is an independent freight forwarding and logistics company based in the UK. We have over 35 years of combined experience working as independent freight forwarding specialists. Find the latest industry news and blog articles relating to the freight forwarding and logistics industry, written by experts.",
+      "followers": {
+        "facebook": 408
+      },
+      "image_url": "https://i1.feedspot.com/5471387.jpg?t=1669796226"
+    },
+    {
+      "title": "Transport Topics News",
+      "feed_url": "https://www.ttnews.com/rss.xml",
+      "website_url": "https://www.ttnews.com/",
+      "description": "Transport Topics is the nation's logistics and trucking news leader, with award-winning coverage of the regulatory, technology, business, and equipment sectors. Their goal is to be the premier source of news and information for the U.S. freight transportation industry, with an emphasis on trucking, logistics and intermodal operations.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 47100
+      },
+      "image_url": "https://i1.feedspot.com/3816087.jpg?t=1658815436"
+    },
+    {
+      "title": "DHL Freight Blog",
+      "feed_url": "https://dhl-freight-connections.com/en/feed/",
+      "website_url": "https://dhl-freight-connections.com/en/blog/",
+      "description": "DHL Freight stands out as a top player in European road transport, backed by DHL Global Forwarding. Their solutions in land, intermodal, and rail transport prioritize flexibility and efficiency. The logistics blog delves into innovation, sustainability, and customs, offering valuable insights into road transport trends.",
+      "followers": {
+        "facebook": 27700,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5471384.jpg?t=1669283239"
+    },
+    {
+      "title": "Stockwell International Blog",
+      "feed_url": "https://stockwells.com.au/feed/",
+      "website_url": "https://stockwells.com.au/blog/",
+      "description": "At Stockwell, we strive to be the best freight company and are dedicated to delivering exceptional service and world-class logistics services. See what our freight specialists are talking about and learn more about the freight industry on our dedicated freight and logistics blog.",
+      "followers": {
+        "facebook": 7400,
+        "instagram": 583
+      },
+      "image_url": "https://i1.feedspot.com/5471385.jpg?t=1669796502"
+    },
+    {
+      "title": "Freightcom Blog",
+      "feed_url": "https://www.freightcom.com/blog/rss.xml",
+      "website_url": "https://www.freightcom.com/blog",
+      "description": "Freightcom offers small, medium, and large-sized businesses an efficient and cost-effective shipping solution based on deep shipping industry knowledge. Freightcom provides instant online LTL freight rates and shipping solutions.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1000,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5473609.jpg?t=1669799895"
+    },
+    {
+      "title": "Air Freight Blog",
+      "feed_url": "https://www.airfreight.com/blog/rss.xml",
+      "website_url": "https://www.airfreight.com/blog",
+      "description": "AirFreight.com envisions a world where no company has to leave its logistics to chance. We operate as a global provider of premium freight services in a best-in-class segment of the expedited transportation industry. Services include Air Freight, Air Cargo, Air Charter, Expedited Ground Transport, and just-in-time delivery for the time-critical shipping business.",
+      "followers": {
+        "facebook": 621,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4649162.jpg?t=1669796547"
+    },
+    {
+      "title": "TalkFreight.ai",
+      "feed_url": "https://talkfreightai.com/feed/",
+      "website_url": "https://talkfreight.ai/logistics-hub/",
+      "description": "TalkFreight.ai's Logistics Hub is a comprehensive blog designed to revolutionize the logistics industry with AI-driven solutions. The platform provides in-depth articles on optimizing supply chains, leveraging AI technology for efficiency, and the latest industry trends. The editorial team, including CEO David Burdick, COO Mike Levy, and CTO Shannon Michael, brings expertise in AI and logistics. With content that spans LTL shipping, AI-powered tracking, and innovative freight strategies, TalkFreight.ai aims to enhance logistics operations and drive the future of freight management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7322258.jpg?t=1718717047"
+    },
+    {
+      "title": "NTG Blog",
+      "feed_url": "https://www.freightpros.com/feed/",
+      "website_url": "https://www.freightpros.com/blog/",
+      "description": "FreightPros (now NTG) was founded in 2009 with a focus on transforming a backward and antiquated industry that just wasn't up to par on service or technology The NTG blog brings you insightful freight and shipping posts and videos aimed to enable small to medium-sized business shippers to make smart decisions in regard to their freight. We also give you some insight into the people and culture that makes FreightPros tick.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 596
+      },
+      "image_url": "https://i1.feedspot.com/5471322.jpg?t=1669795476"
+    },
+    {
+      "title": "Fork Freight Blog",
+      "feed_url": "https://forkfreight.com/feed/",
+      "website_url": "https://forkfreight.com/blogs/",
+      "description": "At Fork Freight We provide high-end, affordable services that will help carriers, shippers, and brokers grow their businesses. Our Blogs give us a unique opportunity to share news, updates, and content, while also offering a place for us to interact with you. If you're wondering what can you expect from the content you find on our blog, and how the information here relates to the information you will find on our website.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5471323.jpg?t=1669795497"
+    },
+    {
+      "title": "FreightSnap Blog",
+      "feed_url": "https://freightsnap.com/feed/",
+      "website_url": "https://freightsnap.com/blog/",
+      "description": "At FreightSnap, we know every company faces different challenges. That's why we work to offer specialized solutions based on your company's individual needs and wants.",
+      "followers": {
+        "facebook": 171,
+        "twitter": 411
+      },
+      "image_url": "https://i1.feedspot.com/5471319.jpg?t=1669795849"
+    },
+    {
+      "title": "Freight Club Blog",
+      "feed_url": "https://www.freightclub.com/blog?format=rss",
+      "website_url": "https://www.freightclub.com/blog",
+      "description": "Freight Club is a premier shipping automation tool for furniture retailers, manufacturers & designers. Freight Club Blog features fundamentals of dropshipping, eco-friendly shipping, and shipping smart.",
+      "followers": {
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5320203.jpg?t=1669795993"
+    },
+    {
+      "title": "Forest Freight Blog",
+      "feed_url": "https://www.forestfreight.co.uk/feed/",
+      "website_url": "https://www.forestfreight.co.uk/blog/",
+      "description": "Forest Freight has been delivering first-class haulage solutions across the UK for over 50 years. Driven by a young, dynamic, and dedicated management team, we aim to provide innovative transport and warehousing solutions for all of our clients, regardless of size. Read all the latest news and articles from Forest Freight in our haulage blog including articles on industry events and international news.",
+      "followers": {
+        "facebook": 896,
+        "twitter": 536,
+        "instagram": 556
+      },
+      "image_url": "https://i1.feedspot.com/5471386.jpg?t=1669796380"
+    },
+    {
+      "title": "GoFreight Blog",
+      "feed_url": "https://www.gofreight.com/feed",
+      "website_url": "https://www.gofreight.com/blog",
+      "description": "GoFreight is a customer-first freight software expert revolutionizing the freight forwarding industry. Backed by world-class investors and industry experts, we dedicate ourselves to solving real problems for skilled freight forwarders and their customers.",
+      "followers": {
+        "facebook": 981
+      },
+      "image_url": "https://i1.feedspot.com/5471383.jpg?t=1669796476"
+    },
+    {
+      "title": "InTek Logistics Blog",
+      "feed_url": "https://www.inteklogistics.com/blog/rss.xml",
+      "website_url": "https://www.inteklogistics.com/blog/",
+      "description": "The InTek Freight & Logistics Blog offers updates on the latest freight, logistics and supply chain news, plus tips, definitions, how-tos and fun features - all from a leading North American logistics service and solutions provider with expertise in intermodal, truckload, managed transportation, cloud-based TMS and more.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/1582538/page/4647143/logo_1681501792.jpg"
+    },
+    {
+      "title": "Air Cargo News",
+      "feed_url": "https://www.aircargonews.net/feed/",
+      "website_url": "https://www.aircargonews.net/",
+      "description": "Established in 1983, Air Cargo News is the leading source of news, information, interviews, analyses, and reports to the global airfreight industry. Their leading portfolio includes print, digital, and events that give businesses in the airfreight industry the ability to connect with decision-makers in this sector. Read news, analysis, features, interviews, and data covering the air cargo, freight, and supply chain industries, and much more from their blog.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4649783.jpg?t=1617103722"
+    },
+    {
+      "title": "Navigating the Commodity Markets with Freight and Spreads",
+      "feed_url": "https://jacquessimon506.wordpress.com/feed/",
+      "website_url": "https://jacquessimon506.wordpress.com/",
+      "description": "Navigating the Commodity Markets with Freight and Spreads is about commodities, trading, market risks, national and international trades, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470757.jpg?t=1669795044"
+    },
+    {
+      "title": "Cargologik Blog",
+      "feed_url": "https://www.cargologik.com/feed",
+      "website_url": "https://www.cargologik.com/blog",
+      "description": "Cargologik is here to facilitate trade, foster collaboration, and promote the well-being of independent forwarders, shippers, and their customers. Stay up-to-date with the latest freight forwarding management news. Our freight forwarding management blog provides tips for your global logistics efforts.",
+      "followers": {
+        "facebook": 79,
+        "twitter": 170
+      },
+      "image_url": "https://i1.feedspot.com/5471320.jpg?t=1669795779"
+    },
+    {
+      "title": "UPS Supply Chain Logistics",
+      "feed_url": "https://www.ups.com/us/en/supplychain/insights/news-and-market-updates.page",
+      "website_url": "https://www.ups.com/us/en/supplychain/insights/news-and-market-updates.page",
+      "description": "As supply chains get more complex, companies like yours are simplifying processes and improving bottom lines with what might appear to be an unexpected partner. Keep your business up to date and your freight moving with UPS Supply Chain's weekly freight news and market updates.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 277700
+      },
+      "image_url": "https://i1.feedspot.com/5471391.jpg?t=1669796357"
+    }
+  ]
+}

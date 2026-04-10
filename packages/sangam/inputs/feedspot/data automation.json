@@ -1,0 +1,47 @@
+{
+  "category": "Data Automation",
+  "source_url": "https://rss.feedspot.com/data_automation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Process and Data Automation",
+      "feed_url": "https://www.processanddata.com/feed/",
+      "website_url": "https://www.processanddata.com/news/",
+      "description": "Process and Data Automation communicate their newest changes and announcements. Keep abreast of new projects, collaborations, breakthrough innovations from PDA, and more. Process and Data Automation is a full-service, CSIA Certified industrial control systems integration firm specializing in a host of automation design and programming services.",
+      "followers": {
+        "facebook": 172
+      },
+      "image_url": "https://i1.feedspot.com/5637478.jpg?t=1690462263"
+    },
+    {
+      "title": "Rossum Blog",
+      "feed_url": "https://rossum.ai/blog/feed/",
+      "website_url": "https://rossum.ai/blog/",
+      "description": "Stay informed about all the news and updates in the ever-changing and fast-growing fields of invoice processing, data extraction, and OCR by following Rossum's blog. Rossum is a modern, cloud-native intelligent document-processing solution serving hundreds of customers around the globe.",
+      "followers": {
+        "facebook": 820,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5641667.jpg?t=1690976413"
+    },
+    {
+      "title": "Openprise Blog",
+      "feed_url": "https://www.openprisetech.com/feed/",
+      "website_url": "https://www.openprisetech.com/company/blog/",
+      "description": "Stay up to date on the latest RevOps news with Openprise blogs. The Openprise Blog offers insights on marketing and sales ops, best practices, industry trends, and much more! Openprise is a leading RevOps-as-a-service company helping other companies accelerate their funnel flow and drive revenue growth.",
+      "followers": {
+        "facebook": 920
+      },
+      "image_url": "https://i1.feedspot.com/5639809.jpg?t=1690810284"
+    },
+    {
+      "title": "The Ascend Blog",
+      "feed_url": "https://www.ascend.io/feed/",
+      "website_url": "https://www.ascend.io/blog/",
+      "description": "Get insights and advice on automating repetitive data engineering, optimizing data platform costs, and accelerating data initiatives at your company. The Ascend Blog updates readers with the team building the future of data pipeline automation. Ascend is the leader in Data Pipeline Automation for building robust data infrastructures.",
+      "followers": {
+        "twitter": 246
+      },
+      "image_url": "https://i1.feedspot.com/5637475.jpg?t=1690462350"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "category": "Germany Drone",
+  "source_url": "https://rss.feedspot.com/germany_drone_rss_feeds",
+  "feeds": [
+    {
+      "title": "FlyNex Blog",
+      "feed_url": "https://www.flynex.io/de/feed/",
+      "website_url": "https://www.flynex.io/de/news/",
+      "description": "FlyNex believe that the way people access accurate data has a critical impact on a sustainable future. Their software enables companies in the construction, real estate, energy, and telecommunications sectors to drive digital transformation forward. Browse through their blog and learn more about solutions, services, cases, resources, pricing, and more.",
+      "followers": {
+        "twitter": 587,
+        "instagram": 360
+      },
+      "image_url": "https://i1.feedspot.com/5668336.jpg?t=1694179256"
+    },
+    {
+      "title": "Skycharge Blog",
+      "feed_url": "https://www.skycharge.de/blog?format=rss",
+      "website_url": "https://www.skycharge.de/blog",
+      "description": "Skycharge was founded in 2014 by Andrea Puiatti. The company was initially funded by Qualcomm Ventures, Techstars, and angel investors. Their team blends a deep knowledge of the commercial drone industry with aerospace, electronic, and mechanical engineering. Visit their blog to know about drones, technology, products, services, etc.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5668335.jpg?t=1694179247"
+    },
+    {
+      "title": "VR Copter Blog",
+      "feed_url": "https://vr-copter.de/feed/",
+      "website_url": "https://vr-copter.de/blog-aerial-drone-filming/",
+      "description": "VR-Copter is the service provider for exceptional drone footage founded by Jochen. Their team is available worldwide for your project. Whether for your film or TV production, as well as your commercial, image film or industrial film. Get into their blog to find their projects, services, news, and more.",
+      "followers": {
+        "facebook": 570,
+        "instagram": 23300
+      },
+      "image_url": "https://i1.feedspot.com/5668338.jpg?t=1694179269"
+    },
+    {
+      "title": "Drones Magazine",
+      "feed_url": "https://www.drones-magazin.de/feed/",
+      "website_url": "https://www.drones-magazin.de/",
+      "description": "Drones is the magazine about drones and multi-copters. Get into their blog and know the latest updates, articles, reports, comparisons, recommendations, and more.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 289,
+        "instagram": 302
+      },
+      "image_url": "https://i1.feedspot.com/5668337.jpg?t=1694179263"
+    }
+  ]
+}

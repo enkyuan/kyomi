@@ -1,0 +1,35 @@
+{
+  "category": "Linux Security",
+  "source_url": "https://rss.feedspot.com/linux_security_rss_feeds",
+  "feeds": [
+    {
+      "title": "Paul Moore Blog",
+      "feed_url": "https://paul-moore.com/blog/atom.xml",
+      "website_url": "https://paul-moore.com/blog/",
+      "description": "Learn more about Linux security, the latest news and features and more. Paul Moore has been involved in various Linux platform security efforts since 2004 at Hewlett-Packard, Red Hat, Cisco, and Microsoft. He currently maintains the SELinux, audit, and labeled networking subsystems in the Linux Kernel as well as the libseccomp userspace library.",
+      "followers": {
+        "twitter": 603
+      },
+      "image_url": "https://i1.feedspot.com/5397506.jpg?t=1651842497"
+    },
+    {
+      "title": "LinuxInsider \u00bb Security",
+      "feed_url": "https://www.linuxinsider.com/section/security/feed",
+      "website_url": "https://www.linuxinsider.com/section/security",
+      "description": "LinuxInsider provides Linux News & Information From Around the World. Find security-related news about Linux, latest patches, features and more in this section.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5397510.jpg?t=1651842837"
+    },
+    {
+      "title": "Robert Penz Blog \u00bb Linux",
+      "feed_url": "https://robert.penz.name/category/linux/feed/",
+      "website_url": "https://robert.penz.name/category/linux/",
+      "description": "Learn more about Linux, IT security, tips and tricks and other stuff that comes into my mind. I define Linux in this case as the whole ecosystem which is built around the Linux kernel. Still to fuzzy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5397508.jpg?t=1651841892"
+    }
+  ]
+}

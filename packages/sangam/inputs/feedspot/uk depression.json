@@ -1,0 +1,51 @@
+{
+  "category": "UK Depression",
+  "source_url": "https://rss.feedspot.com/uk_depression_rss_feeds",
+  "feeds": [
+    {
+      "title": "National Elf Service",
+      "feed_url": "https://www.nationalelfservice.net/mental-health/depression/feed/",
+      "website_url": "https://www.nationalelfservice.net/mental-health/depression/",
+      "description": "Welcome to the Mental Elf. Our website will help you find just what you need to keep up-to-date with all of the important and reliable depression research and guidance.",
+      "followers": {
+        "facebook": 589,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4907753.jpg?t=1613998072"
+    },
+    {
+      "title": "Be Your Own Light",
+      "feed_url": "https://beurownlight.com/category/depression/feed/",
+      "website_url": "https://beurownlight.com/category/depression/",
+      "description": "Posts about Depression written by Eleanor Segall. Be Ur Own Light was started in March 2016 to raise awareness to friends and family of what life is like living with these conditions and to emphasise how, however difficult you can go on to live a happy and fulfilling life. I write to combat stigma against mental illness and increase understanding of mental health conditions.",
+      "followers": {
+        "twitter": 9100,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4907774.jpg?t=1613998090"
+    },
+    {
+      "title": "The Guardian \u00bb Depression",
+      "feed_url": "https://www.theguardian.com/society/depression/rss",
+      "website_url": "https://www.theguardian.com/society/depression",
+      "description": "Get the latest news and updates on depression in the world, the mental health status of the world, issues, events and more! The Guardian is renowned for its agenda-setting journalism including, most recently the Cambridge Analytica, Paradise and Panama Papers investigations as well as the Pulitzer Prize and Emmy-winning NSA revelations.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4569824.jpg?t=1613998076"
+    },
+    {
+      "title": "Alexandra Massey",
+      "feed_url": "https://www.alexandramassey.co.uk/blog-feed.xml",
+      "website_url": "https://www.alexandramassey.co.uk/",
+      "description": "Alexandra Massey author and specialist in beating depression and anxiety. Anyone can beat depression given the right tools and information. I write books, blogs and programs on how to do it. I am full of gratitude to all the people who helped me beat depression.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 6000,
+        "instagram": 239
+      },
+      "image_url": "https://i1.feedspot.com/4907737.jpg?t=1613998085"
+    }
+  ]
+}

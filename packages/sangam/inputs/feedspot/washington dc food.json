@@ -1,0 +1,222 @@
+{
+  "category": "Washington DC Food",
+  "source_url": "https://rss.feedspot.com/washington_dc_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater DC",
+      "feed_url": "https://dc.eater.com/rss/index.xml",
+      "website_url": "https://dc.eater.com/",
+      "description": "Eater DC is a food news and dining guides for Washington, DC.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 63200,
+        "instagram": 117200
+      },
+      "image_url": "https://i1.feedspot.com/4900867.jpg?t=1671514930"
+    },
+    {
+      "title": "Rick Eats DC Blog",
+      "feed_url": "https://rickeatsdc.com/blog/feed/",
+      "website_url": "https://rickeatsdc.com/blog/",
+      "description": "A website devoted to eating in DC. Check here for updates of what and where I'm eating, or the full blog for 'best of' lists, reviews, and articles.",
+      "followers": {
+        "facebook": 666,
+        "twitter": 801,
+        "instagram": 866
+      },
+      "image_url": "https://i1.feedspot.com/4900803.jpg?t=1671514899"
+    },
+    {
+      "title": "Marilena's Kitchen",
+      "feed_url": "https://marilenaskitchen.com/feed/",
+      "website_url": "https://marilenaskitchen.com/",
+      "description": "I started this blog in January 2015 as a way to record my culinary adventures for my friends and students at the cooking school. My goal was to create a space where everyone could access the simple and foolproof recipes I cook for my family. As Marilena's Kitchen has grown to a small online community, I have been able to share my food and photographs with people from all over the world and I am so excited about that!",
+      "followers": {
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4639628.jpg?t=1616506234"
+    },
+    {
+      "title": "DCF\u00fcd",
+      "feed_url": "https://feeds.feedburner.com/dcfud/dpaV",
+      "website_url": "https://www.dcfud.com/",
+      "description": "DCF\u00fcd is a DC Area online food magazine. We cover a variety of food-related topics including reviews, recipes, events, and discussions. We have approximately 6 Writers and many Guest Writers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4902937.jpg?t=1672030991"
+    },
+    {
+      "title": "17\u00b0 Cork by Northwest",
+      "feed_url": "https://17degreesdc.com/feed/",
+      "website_url": "https://17degreesdc.com/",
+      "description": "A Navigation Tool for dining in DC.",
+      "followers": {
+        "facebook": 50,
+        "twitter": 1100,
+        "instagram": 847
+      },
+      "image_url": "https://i1.feedspot.com/5128297.jpg"
+    },
+    {
+      "title": "What Micky Eats Blog",
+      "feed_url": "https://feeds.feedburner.com/WhatMickyEats",
+      "website_url": "http://whatmickyeats.blogspot.com/",
+      "description": "What Micky Eats is a food & travel blog that follows my dining experiences at various restaurants in the greater Washington, DC area and beyond. I am no food critic - just an average girl who enjoys eating out. The experiences I share are of places I read about or just stumble upon.",
+      "followers": {
+        "facebook": 207,
+        "twitter": 812,
+        "instagram": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4902913.jpg?t=1672030936"
+    },
+    {
+      "title": "Food for All DC Blog",
+      "feed_url": "https://foodforalldc.org/feed/",
+      "website_url": "https://foodforalldc.org/about/news-and-stories/",
+      "description": "Food for All DC strives to provide food to low income home-bound residents in real need. Our clients are generally elderly citizens, handicapped or single mothers with young children. The operation is entirely volunteer operated with the assistance of public and private funding.",
+      "followers": {
+        "facebook": 927,
+        "twitter": 1600,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5483235.jpg?t=1672031481"
+    },
+    {
+      "title": "Hip Mama's Place \u00bb Food and Recipes",
+      "feed_url": "https://www.hipmamasplace.com/category/foodandrecipes/feed/",
+      "website_url": "https://www.hipmamasplace.com/category/foodandrecipes/",
+      "description": "Some of my favorite recipes are inspired by family and friends! I share these recipes and other food articles to help you feel inspired as well! My name is Jocelyn Brown, Founder and Editor of Hip Mama's Place. My goal has been to make Hip Mama's Place a helpful site for moms to find products and services for their family as well as tips, events and offers on products for the whole family!",
+      "followers": {
+        "facebook": 39900,
+        "twitter": 16400,
+        "instagram": 371200
+      },
+      "image_url": "https://i1.feedspot.com/5483233.jpg?t=1672031393"
+    },
+    {
+      "title": "Tyler Cowen's Ethnic Dining Guide",
+      "feed_url": "https://tylercowensethnicdiningguide.com/index.php/feed/",
+      "website_url": "https://tylercowensethnicdiningguide.com/",
+      "description": "Check out Tyler Cowen's Ethnic Dining Guide for restaurant recommendations and food reviews. This guide is intended to help individuals enjoy good food, and keep Tyler's favorite places in business. Effective consumer choice improves your eating and, in the long run, improves the quality of available restaurants.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5483238.jpg?t=1672378027"
+    },
+    {
+      "title": "Mango & Tomato",
+      "feed_url": "https://www.mangotomato.com/feeds/posts/default",
+      "website_url": "https://www.mangotomato.com/",
+      "description": "Welcome to Mango Tomato! This is a Washington DC area food blog. Here you'll find my original recipes, cookbook and restaurant reviews, travel and food photography. Look around, keep in touch, and come back soon!",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/724289.jpg"
+    },
+    {
+      "title": "HungryLobbyist.com",
+      "feed_url": "http://hungrylobbyist.com/feed/",
+      "website_url": "http://hungrylobbyist.com/",
+      "description": "Premier food & lifestyle collaborative HungryLobbyist.com was founded by a DC lobbyist who has a serious passion for food and is maintained with help from our ever-growing team of talented contributors and columnists. The site has become a must-read for District dwellers and visitors alike as it takes a satirical, often ironic, and more often humorously judgmental look at restaurants, politics, fashion, DC events, and other things going on in our nation's Capital",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 5100,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4902922.jpg?t=1672031196"
+    },
+    {
+      "title": "Feed the Malik",
+      "feed_url": "https://www.feedthemalik.com/blog-feed.xml",
+      "website_url": "https://www.feedthemalik.com/works/categories/food",
+      "description": "Feed the Malik bringing you diverse food stories, simple sourdough recipes, DC and DMV area events, real talk about food politics, and the best foodie finds.",
+      "followers": {
+        "facebook": 54000,
+        "twitter": 4600,
+        "instagram": 205600
+      },
+      "image_url": "https://i1.feedspot.com/5197328.jpg?t=1600331440"
+    },
+    {
+      "title": "Savory Simple",
+      "feed_url": "https://www.savorysimple.net/feed/",
+      "website_url": "https://www.savorysimple.net/",
+      "description": "Get all of the most recent recipe posts on Savory Simple! Everything from appetizers to main courses and all the way through desserts. This is a site for those who embrace cooking & baking from scratch. If you love getting your hands dirty in the kitchen, look no further.",
+      "followers": {
+        "facebook": 480200,
+        "twitter": 37,
+        "instagram": 17800
+      },
+      "image_url": "https://i1.feedspot.com/4821041.jpg?t=1672030651"
+    },
+    {
+      "title": "Been There Eaten That",
+      "feed_url": "https://feeds.feedburner.com/blogspot/jVwOf",
+      "website_url": "https://beenthereeatenthat.net/",
+      "description": "Dining out is my passion, and often times the culmination of hours of research. This restaurant review blog reflects my journey as I try to keep up with my restaurant wish list for the DC area where I live, and in my travels. It's a struggle at times, but with the help of family and friends, I manage.",
+      "followers": {
+        "facebook": 481,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4902910.jpg?t=1540212686"
+    },
+    {
+      "title": "DCDining.com Reviews",
+      "feed_url": "http://reviews.dcdining.com/feed/",
+      "website_url": "http://reviews.dcdining.com/",
+      "description": "There is no other food critic's opinion that we trust more than Don Rockwell's. Over many years, he has shown himself as a multi-dimensional critic, appreciating all forms of dining: modern trends and traditional cooking, hole-in-the-wall mom'n'pop shops and fine dining places. That is why people trust him: he is not biased to anything at all, other than the quality of food.",
+      "followers": {
+        "facebook": 970,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4902919.jpg?t=1672030797"
+    },
+    {
+      "title": "FANNEtastic Food",
+      "feed_url": "https://www.fannetasticfood.com/feed/atom/",
+      "website_url": "https://www.fannetasticfood.com/",
+      "description": "A healthy lifestyle and recipe blog written by registered dietitian nutritionist Anne Mauney. Get delicious, healthy recipes and nutrition tips! Anne has been blogging since 2009 and loves showing others that eating nutritious foods and staying active can actually be fun rather than overwhelming!",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 16100,
+        "instagram": 18600
+      },
+      "image_url": "https://i1.feedspot.com/5483234.jpg?t=1672031235"
+    },
+    {
+      "title": "DCEatings Blog",
+      "feed_url": "https://www.dceatings.com/blog?format=rss",
+      "website_url": "https://www.dceatings.com/blog",
+      "description": "DCEatings is blogging our way around the kitchen. Enjoy stories about cooking adventures and discovering new things in the kitchen. DCEatings was established in Washington, DC as a boutique personal chef company by chef and owner, Jordan Miller. Jordan also curated and operated a food blog under the same name, sharing original recipes and providing recipe development services to local food and culinary brands.",
+      "followers": {
+        "facebook": 175,
+        "instagram": 351
+      },
+      "image_url": "https://i1.feedspot.com/5483236.jpg?t=1672031250"
+    },
+    {
+      "title": "Slow Food DC Blog",
+      "feed_url": "https://www.slowfooddc.org/blog?format=rss",
+      "website_url": "https://www.slowfooddc.org/blog",
+      "description": "Visit the Slow Food DC blog to know about events and food in DC. Slow Food is linking the pleasure of good food with a commitment to their community and the environment. Our mission as an international grassroots membership organization is good, clean and fair food for all.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 4600,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5483237.jpg?t=1672031254"
+    },
+    {
+      "title": "The Dining Traveler \u00bb DC",
+      "feed_url": "https://diningtraveler.com/category/dc/feed",
+      "website_url": "https://diningtraveler.com/category/dc",
+      "description": "Food and Travel Inspiration: from Washington, DC and beyond, follow me as I eat and travel around the globe.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 9800,
+        "instagram": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4902948.jpg?t=1540212815"
+    }
+  ]
+}

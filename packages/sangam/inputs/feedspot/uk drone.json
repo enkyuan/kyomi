@@ -1,0 +1,84 @@
+{
+  "category": "UK Drone",
+  "source_url": "https://rss.feedspot.com/uk_drone_rss_feeds",
+  "feeds": [
+    {
+      "title": "sUAS News",
+      "feed_url": "https://www.suasnews.com/feed/",
+      "website_url": "https://www.suasnews.com/",
+      "description": "sUAS News is the leading news and information source for unmanned aviation. started and collated by UAS pilots and professionals. Separating the wheat from the chaff in a snake oil filled market. stay informed and learn how to earn in the business of drones with sUAS News.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 43100,
+        "instagram": 633
+      },
+      "image_url": "https://i1.feedspot.com/4554869.jpg?t=1625738709"
+    },
+    {
+      "title": "Oscar Liang",
+      "feed_url": "https://oscarliang.com/feed/?format=xml",
+      "website_url": "https://oscarliang.com/",
+      "description": "Oscar Liang's blog is perfect for the DIY drone builder and operator. He has some of the sharpest technical drone knowledge I've seen online. Oscar's blog is a must-read, especially if you're into FPV drone racing.",
+      "followers": {
+        "facebook": 32000,
+        "twitter": 699,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4554890.jpg?t=1614064446"
+    },
+    {
+      "title": "First Quadcopter",
+      "feed_url": "https://www.firstquadcopter.com/feed/",
+      "website_url": "https://www.firstquadcopter.com/",
+      "description": "Quadcopter reviews and tests. Latest quadcopter and drone news.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 420
+      },
+      "image_url": "https://i1.feedspot.com/4948829.jpg?t=1614064347"
+    },
+    {
+      "title": "Drone Scotland Blog",
+      "feed_url": "https://dronescotland.com/drone-scotland-blog/feed/",
+      "website_url": "https://dronescotland.com/drone-scotland-blog/",
+      "description": "Drone Scotland Blog. Regular updates and useful information relating to the UK Drone industry. A must read for everyone who loves Drones/ UAVs.",
+      "followers": {
+        "facebook": 727,
+        "twitter": 166,
+        "instagram": 220
+      },
+      "image_url": "https://i1.feedspot.com/4908226.jpg?t=1614064352"
+    },
+    {
+      "title": "Bots & Drones UK",
+      "feed_url": "https://botsanddrones.uk/news/f.rss",
+      "website_url": "https://botsanddrones.uk/news",
+      "description": "Get The Latest News and Updates From the UK Robot and Drone industry. Bots & Drones UK is a UK-based Supplier of Unmanned Systems, Hardware & Software,",
+      "followers": {
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5385195.jpg?t=1648281026"
+    },
+    {
+      "title": "The Drone Lass",
+      "feed_url": "https://thedronelass.wordpress.com/feed/",
+      "website_url": "https://thedronelass.wordpress.com/",
+      "description": "I'm northern-based, I fly a drone, with UK CAA permission (PFCO) please read the blog I'm sharing my experience. I come from TV land camera op/filmmaker.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4908204.jpg?t=1614064367"
+    },
+    {
+      "title": "Coptrz",
+      "feed_url": "https://coptrz.com/blog/",
+      "website_url": "https://coptrz.com/blog/",
+      "description": "Follow the COPTRZ blog to stay up-to-date with the latest drone news, reviews and studies related to the world of commercial drones.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4908211.jpg?t=1614064334"
+    }
+  ]
+}

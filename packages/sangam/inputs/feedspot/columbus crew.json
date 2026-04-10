@@ -1,0 +1,25 @@
+{
+  "category": "Columbus Crew",
+  "source_url": "https://rss.feedspot.com/columbus_crew_rss_feeds",
+  "feeds": [
+    {
+      "title": "Last Word on Soccer \u00bb Columbus Crew SC",
+      "feed_url": "https://lastwordonsports.com/soccer/category/mls/crew/feed/",
+      "website_url": "https://lastwordonsports.com/soccer/category/mls/crew/",
+      "description": "LastWordOnSports.com is the flagship and original website owned and operated by Last Word On Sports INC since 2011. Get the latest Columbus Crew SC news, scores, standings, and rumors. LWOS brings you a decade of experience covering the 'Beautiful Game' in North America.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5477703.jpg?t=1670570856"
+    },
+    {
+      "title": "Massive Report",
+      "feed_url": "https://massive-report.com/rss/current.xml",
+      "website_url": "https://massive-report.com/",
+      "description": "Massive Report is your best source for quality Columbus Crew SC news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5477702.jpg?t=1670570418"
+    }
+  ]
+}

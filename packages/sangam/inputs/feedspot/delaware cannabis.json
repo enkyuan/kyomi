@@ -1,0 +1,44 @@
+{
+  "category": "Delaware Cannabis",
+  "source_url": "https://rss.feedspot.com/delaware_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Green Relief Health Blog",
+      "feed_url": "https://www.greenreliefhealth.com/feed/",
+      "website_url": "https://www.greenreliefhealth.com/blog/",
+      "description": "Green Relief Health's blog is your source for reliable info to elevate your cannabis experience. Guides, health resources, policy alerts, and dispensary exclusives. Green Relief Health in Baltimore, MD and Selbyville, DE offers health and wellness consultations including medical cannabis certifications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7291341.jpg?t=1712245342"
+    },
+    {
+      "title": "MJBiz \u00bb Delaware",
+      "feed_url": "https://mjbizdaily.com/news-by-state/delaware/feed/",
+      "website_url": "https://mjbizdaily.com/news-by-state/delaware/",
+      "description": "Get Delaware Cannabis Industry News and Marijuana legislation updates at Marijuana Business Daily, the leading publication in the cannabis world. Founded in 2011, MJBiz\u2122 is the most trusted, independent publisher and event producer serving America's cannabis industry entrepreneurs and investors.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 77900,
+        "instagram": 73600
+      },
+      "image_url": "https://i1.feedspot.com/7291342.jpg?t=1712245346"
+    },
+    {
+      "title": "Delaware Cannabis Docs Blog",
+      "feed_url": "https://delawarecannabisdocs.com/feed/",
+      "website_url": "https://delawarecannabisdocs.com/blogs/",
+      "description": "Level up your cannabis journey with expert insights. Find ingestion tutorials, medicinal research, regulatory updates, and behind-the-scenes dispensary content. Delaware Cannabis Docs is a telemedicine medical marijuana clinic that brings quality healthcare to those in need.",
+      "followers": {
+        "facebook": 3
+      },
+      "image_url": "https://i1.feedspot.com/5550708.jpg?t=1712245394"
+    },
+    {
+      "title": "Dankworks Blog",
+      "feed_url": "https://dank.works/feed/",
+      "website_url": "https://dank.works/blog/",
+      "description": "The Dankworks Cannabis Club serves Delaware, Pennsylvania, New Jersey, Maryland, and Area Visitors, as the best source for award-winning and cutting-edge cannabis strains. Discover in-depth guides and resources on How to consume recreational marijuana and other safety tips.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7291343.jpg?t=1712245403"
+    }
+  ]
+}

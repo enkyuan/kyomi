@@ -1,0 +1,84 @@
+{
+  "category": "Australian Retail",
+  "source_url": "https://rss.feedspot.com/australian_retail_rss_feeds",
+  "feeds": [
+    {
+      "title": "Inside Retail",
+      "feed_url": "https://insideretail.com.au/feed",
+      "website_url": "https://insideretail.com.au/",
+      "description": "As a trusted voice to the industry for over 40 years, Inside Retail's dedicated journalists and industry insiders deliver unparalleled news, analysis, and trends in retail across the globe. Their mission is to provide in-depth, critical, and quality retail journalism for the retail industry in Australia and beyond.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 13000,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4651760.jpg?t=1617171068"
+    },
+    {
+      "title": "RetailBiz",
+      "feed_url": "https://www.retailbiz.com.au/feed/",
+      "website_url": "https://www.retailbiz.com.au/",
+      "description": "Retailbiz has been reporting on Australia's $299 billion retail sector for over a decade. As the retail industry is constantly evolving, Retailbiz is committed to bringing you not only the latest retail news and trends but also the innovations and technologies that are driving the industry forward.",
+      "followers": {
+        "facebook": 331,
+        "twitter": 1400,
+        "instagram": 225
+      },
+      "image_url": "https://i1.feedspot.com/4652292.jpg?t=1617171208"
+    },
+    {
+      "title": "Retail World Magazine",
+      "feed_url": "https://retailworldmagazine.com.au/feed/",
+      "website_url": "https://retailworldmagazine.com.au/",
+      "description": "Retail World is committed to the development of the retail industry. The mission is to provide trusted, informative, and timely coverage of the opportunities, developments, and issues impacting supermarket owners, managers, staff, and suppliers.",
+      "followers": {
+        "facebook": 721,
+        "twitter": 699,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4651776.jpg?t=1617171220"
+    },
+    {
+      "title": "The Retail Solution Blog",
+      "feed_url": "https://theretailsolution.com.au/feed/",
+      "website_url": "https://theretailsolution.com.au/about-old/blog/",
+      "description": "The Retail Solution have provided nearly 2 decades of unparalleled expertise in retail consulting for Australian businesses. Their mission is to help retail business owners maximise the potential of their staff, recruiters and turnover. Subscribe to keep up with the latest updates from this blog.",
+      "followers": {
+        "facebook": 189,
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/4922915.jpg?t=1620890451"
+    },
+    {
+      "title": "Retail Rockstars Blog",
+      "feed_url": "https://retailrockstars.com.au/feed/",
+      "website_url": "https://retailrockstars.com.au/blog/",
+      "description": "Retail Rockstars is a localised retail marketing platform that connects customers with a local industry expert through educational and inspirational in-store events.This blog is helpful is to appease your inner retail geek for research on customer engagement, trends and experiential retailing.",
+      "followers": {
+        "facebook": 491,
+        "instagram": 598
+      },
+      "image_url": "https://i1.feedspot.com/4922799.jpg?t=1620890479"
+    },
+    {
+      "title": "Australian Retailers Association News",
+      "feed_url": "https://www.retail.org.au/news-and-insights",
+      "website_url": "https://www.retail.org.au/news-and-insights",
+      "description": "A trusted voice of the Australian retail industry in news, advice, and advocacy for more than 109 years.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2600,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4652699.jpg?t=1617173320"
+    },
+    {
+      "title": "Retail Food Group",
+      "feed_url": "https://www.rfg.com.au/feed/",
+      "website_url": "https://www.rfg.com.au/",
+      "description": "Retail Food Group (RFG) is a global food and beverage company. It's Australia's largest multi-brand retail food franchise owner, a roaster and supplier of high quality coffee products and an emerging leader in the foodservice, dairy processing and wholesale bakery sectors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4923053.jpg?t=1620890658"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "category": "Oak Lawn News",
+  "source_url": "https://rss.feedspot.com/oak_lawn_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBS Chicago \u00bb Oak Lawn",
+      "feed_url": "https://chicago.cbslocal.com/tag/oak-lawn/feed/",
+      "website_url": "https://www.cbsnews.com/chicago/tag/oak-lawn/",
+      "description": "CBS Chicago provides you with 24/7 access to the latest updates in local news, sports, traffic, and weather. Get the Oak Lawn news and information at CBS Chicago.",
+      "followers": {
+        "facebook": 400300,
+        "twitter": 213900
+      },
+      "image_url": "https://i1.feedspot.com/5148089.jpg?t=1588668401"
+    }
+  ]
+}

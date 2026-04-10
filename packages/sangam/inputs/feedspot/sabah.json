@@ -1,0 +1,146 @@
+{
+  "category": "Sabah",
+  "source_url": "https://rss.feedspot.com/sabah_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sabah",
+      "feed_url": "https://www.sabah.com.tr/rss/anasayfa.xml",
+      "website_url": "https://www.sabah.com.tr/",
+      "description": "Sabah Newspaper's goal is to convey unbiased and reliable news, funny videos, and breaking news in the fastest way possible.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/1840476.jpg?t=1634642952"
+    },
+    {
+      "title": "Sabah \u00bb Ekonomi",
+      "feed_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+      "website_url": "https://www.sabah.com.tr/ekonomi",
+      "description": "In this section of the website, Sabah gives an overview & lastest insights in the Economy sector.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/320233.jpg?t=1685527923"
+    },
+    {
+      "title": "Sabah \u00bb Ya\u015fam",
+      "feed_url": "https://www.sabah.com.tr/rss/yasam.xml",
+      "website_url": "https://www.sabah.com.tr/yasam",
+      "description": "In this section of the website, Sabah gives an overview & lastest news on the daily life news.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5586867.jpg?t=1685527402"
+    },
+    {
+      "title": "Sabah \u00bb Teknoloji",
+      "feed_url": "https://www.sabah.com.tr/rss/teknoloji.xml",
+      "website_url": "https://www.sabah.com.tr/teknoloji",
+      "description": "Get the most recent Technology news published by Sabah in this part of the website.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5181258.jpg?t=1685528978"
+    },
+    {
+      "title": "Sabah \u00bb SA\u011eLIK",
+      "feed_url": "https://www.sabah.com.tr/rss/saglik.xml",
+      "website_url": "https://www.sabah.com.tr/saglik",
+      "description": "In this section of the website, Sabah gives an overview & lastest insights in the Health sector.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5586864.jpg?t=1685527370"
+    },
+    {
+      "title": "Sabah \u00bb D\u00fcnya",
+      "feed_url": "https://www.sabah.com.tr/rss/dunya.xml",
+      "website_url": "https://www.sabah.com.tr/dunya",
+      "description": "In this area of the website get the lastest World news published by Sabah.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5034874.jpg?t=1685528395"
+    },
+    {
+      "title": "Sabah \u00bb G\u00dcNDEM",
+      "feed_url": "https://www.sabah.com.tr/rss/gundem.xml",
+      "website_url": "https://www.sabah.com.tr/gundem",
+      "description": "Get the latest Agenda News published by Sabah in this section of the website.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5034875.jpg?t=1685528803"
+    },
+    {
+      "title": "Sabah \u00bb K\u00f6\u015fe Yazarlar\u0131 ve K\u00f6\u015fe Yaz\u0131lar\u0131",
+      "feed_url": "https://www.sabah.com.tr/rss/yazarlar.xml",
+      "website_url": "https://www.sabah.com.tr/yazarlar",
+      "description": "Read the Columns and Columns section to get insights on the famous writers.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5034876.jpg?t=1685528897"
+    },
+    {
+      "title": "Sabah \u00bb Otomobil",
+      "feed_url": "https://www.sabah.com.tr/rss/otomobil.xml",
+      "website_url": "https://www.sabah.com.tr/otomobil",
+      "description": "In this section of the website, you can get the most recent news on the automotive industry as published by Sabah.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/2112938.jpg"
+    },
+    {
+      "title": "Sabah \u00bb K\u00fclt\u00fcr & Sanat",
+      "feed_url": "https://www.sabah.com.tr/rss/kultur-sanat.xml",
+      "website_url": "https://www.sabah.com.tr/kultur-sanat",
+      "description": "Discover the most recent information on the Art & Culture Industry in this section of the website.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5586866.jpg?t=1685529190"
+    },
+    {
+      "title": "Sabah \u00bb ROZA",
+      "feed_url": "https://www.sabah.com.tr/rss/roza.xml",
+      "website_url": "https://www.sabah.com.tr/roza",
+      "description": "Read the most recent Roza news. Published in this section by Sabah",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 10600,
+        "instagram": 163500
+      },
+      "image_url": "https://i1.feedspot.com/5586865.jpg?t=1685529244"
+    },
+    {
+      "title": "Sabah \u00bb Turizm",
+      "feed_url": "https://www.sabah.com.tr/rss/Turizm.xml",
+      "website_url": "https://www.sabah.com.tr/turizm",
+      "description": "Get the most recently released travel news, as reported by Sabah, in the travel section of the website.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2360735.jpg?t=1685529072"
+    }
+  ]
+}

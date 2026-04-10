@@ -1,0 +1,17 @@
+{
+  "category": "Ellicott City News",
+  "source_url": "https://rss.feedspot.com/ellicott_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBS Baltimore \u00bb Ellicott City",
+      "feed_url": "https://baltimore.cbslocal.com/tag/ellicott-city/feed/",
+      "website_url": "https://www.cbsnews.com/baltimore/tag/ellicott-city/",
+      "description": "News, Sports, Weather, Traffic and the Best of Ellicott City.",
+      "followers": {
+        "facebook": 432200,
+        "twitter": 277400
+      },
+      "image_url": "https://i1.feedspot.com/5150455.jpg?t=1589451328"
+    }
+  ]
+}

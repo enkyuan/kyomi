@@ -1,0 +1,927 @@
+{
+  "category": "Employment",
+  "source_url": "https://rss.feedspot.com/employment_rss_feeds",
+  "feeds": [
+    {
+      "title": "Employment & Labor Insider Blog",
+      "feed_url": "https://www.constangy.com/employment-labor-insider?rss",
+      "website_url": "https://www.constangy.com/employment-labor-insider/",
+      "description": "The Employment & Labor Insider blog provides insight on class action litigation, employee benefits, labor relations, and compensation.",
+      "followers": {
+        "facebook": 604,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4480698.jpg?t=1610518098"
+    },
+    {
+      "title": "Labor & Employment Law Blog",
+      "feed_url": "https://feeds.feedburner.com/laboremploymentlawblog/OJAv",
+      "website_url": "https://www.laboremploymentlawblog.com/",
+      "description": "The Sheppard Mullin Labor & Employment Law Blog is designed to provide employers breaking news, insights & legal analysis on issues facing employers today. Key topics covered are Antitrust, Cannabis Law, Corporate Governance, Employee Benefits, FEHA, Immigration, Retaliation, and Workers Compensation.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4479389.jpg?t=1610514596"
+    },
+    {
+      "title": "Employment Law Worldview",
+      "feed_url": "https://www.employmentlawworldview.com/feed/",
+      "website_url": "https://www.employmentlawworldview.com/",
+      "description": "The Employment Law Worldview Blog aims to interest and educate, to stimulate discussion, to provoke and sometimes just to amuse HR and other practitioners around the world. Through contributions from our own Labor & Employment lawyers, along with occasional guest writers, it provides a unique global insight into practical and legal HR issues relevant to employers everywhere.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4615571.jpg?t=1615885014"
+    },
+    {
+      "title": "California Employment Law",
+      "feed_url": "https://californiaemploymentlaw.foxrothschild.com/feed/",
+      "website_url": "https://californiaemploymentlaw.foxrothschild.com/",
+      "description": "Stories, Latest News, and Commentary on Employment Law and issues faced by California Employers. Fox Rothschild LLP is an AmLaw 100 full-service law firm built to serve businesses of all sizes as well as individuals.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4616062.jpg?t=1628763229"
+    },
+    {
+      "title": "The Law Firm of J.W. Stafford Blog",
+      "feed_url": "https://www.staffordtrialteam.com/blog/feed/",
+      "website_url": "https://www.staffordtrialteam.com/blog/",
+      "description": "The Law Firm of J.W. Stafford attorneys tirelessly advocate for employees to ensure that their employment is free from discrimination, harassment or other forms of wrongful conduct by their employer.",
+      "followers": {
+        "facebook": 161
+      },
+      "image_url": "https://i1.feedspot.com/5602049.jpg?t=1687173470"
+    },
+    {
+      "title": "The Devadoss Law Firm PLLC Blog",
+      "feed_url": "https://www.fedemploymentlaw.com/feed/atom/",
+      "website_url": "https://www.fedemploymentlaw.com/blog/",
+      "description": "This blog by The Devadoss Law Firm, P.L.L.C. aims to bring news and commentary on Federal Employment and Labor Law issues to residents of Dallas, Washington D.C., Atlanta.",
+      "followers": {
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/4618035.jpg"
+    },
+    {
+      "title": "Employment Law Handbook Blog",
+      "feed_url": "https://www.employmentlawhandbook.com/feed/",
+      "website_url": "https://www.employmentlawhandbook.com/blog/",
+      "description": "Since 2008, EmploymentLawHandbook.com has been the resource to help you find the information you need on state and federal laws. It is designed to assist employers, including small businesses, and employees find answers to employment and labor law questions, Employment Law Handbook also covers many different areas of labor law including wage payment, discrimination, workplace safety, unemployment, and many others.",
+      "followers": {
+        "facebook": 826,
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/5295038.jpg?t=1624273186"
+    },
+    {
+      "title": "Bond Schoeneck & King, PLLC",
+      "feed_url": "https://www.bsk.com/new-york-labor-and-employment-law-report/rss",
+      "website_url": "https://www.bsk.com/new-york-labor-and-employment-law-report",
+      "description": "With 64 labor, employment law, and employee benefits attorneys devoted to the representation of management, Bond Schoeneck & King, PLLC has one of the largest Labor and Employment Law practices in the Northeast. Check the articles to know more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4618076.jpg?t=1608020690"
+    },
+    {
+      "title": "Whitten & Lublin Employment and Labour Law Blog",
+      "feed_url": "https://toronto-employmentlawyer.com/feed/",
+      "website_url": "https://toronto-employmentlawyer.com/blog/",
+      "description": "Whitten & Lublin is an employment and labour law firm providing expert legal counsel to both employees and employers in all aspects of employment law.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4618150.jpg?t=1615885049"
+    },
+    {
+      "title": "Lipsky Lowe LLP Blog",
+      "feed_url": "https://lipskylowe.com/feed/",
+      "website_url": "https://lipskylowe.com/blog/",
+      "description": "Covers the latest updates and news surrounding employment law matters including discrimination, sexual harassment, unpaid wages, hostile work environment, wrongful discharge, breach of contract, and more. Lipsky Lowe has over 30 years of experience in all areas of employment law.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 15,
+        "instagram": 127
+      },
+      "image_url": "https://i1.feedspot.com/5294945.jpg?t=1624267895"
+    },
+    {
+      "title": "Shaw Law Group, PC Blog",
+      "feed_url": "https://shawlawgroup.com/feed/",
+      "website_url": "https://shawlawgroup.com/blog/",
+      "description": "The Shaw Law Group team is committed to providing our clients with skillful and inspired advice, training, and investigation services to encourage a positive work environment and prevent litigation. Keep up with our employment law blog focusing on employment law developments, particularly in California.",
+      "followers": {
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/5294942.jpg?t=1624263138"
+    },
+    {
+      "title": "California Public Agency Labor & Employment Blog",
+      "feed_url": "https://www.calpublicagencylaboremploymentblog.com/feed/",
+      "website_url": "https://www.calpublicagencylaboremploymentblog.com/",
+      "description": "This law blog provides news & commentary on developments in public agency management, labor relations and employment law in California. Topics include workplace policies, disability and discrimination in the workplace. Liebert Cassidy Whitmore attorney bloggers cover a wide variety of topics pertaining to legal challenges faced by employers in all areas of labor relations and employment law.",
+      "followers": {
+        "twitter": 566
+      },
+      "image_url": "https://i1.feedspot.com/4616090.jpg?t=1666269019"
+    },
+    {
+      "title": "Global Workplace Insider",
+      "feed_url": "https://www.globalworkplaceinsider.com/feed/",
+      "website_url": "https://www.globalworkplaceinsider.com/",
+      "description": "Global Workplace Insider a cutting-edge blog led by the global employment and labor team of Norton Rose Fulbright, designed to deliver diverse insight on legal and business developments as well as trends impacting employment and labor matters in various regions around the world.",
+      "followers": {
+        "twitter": 19000
+      },
+      "image_url": "https://i1.feedspot.com/4616070.jpg?t=1615885091"
+    },
+    {
+      "title": "Carey & Associates P.C. Blog",
+      "feed_url": "https://capclaw.com/feed/",
+      "website_url": "https://capclaw.com/blog/",
+      "description": "Carey & Associates P.C. represents employees and executives nationwide from all industries and professions in employment law matters. Our mission is to educate you about your rights and zealously advocate on your behalf to ensure these rights are protected in the workplace. If you want to stay informed about employment issues facing employees, read our Employment Law Blog.",
+      "followers": {
+        "facebook": 127,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/5295042.jpg?t=1624275804"
+    },
+    {
+      "title": "California Peculiarities Employment Law Blog",
+      "feed_url": "https://www.calpeculiarities.com/feed/",
+      "website_url": "https://www.calpeculiarities.com/",
+      "description": "California Peculiarities Employment Law Blog covers legislative updates & commentary on employer laws in CA including harassment & wage statements. The Seyfarth California Peculiarities Employment Law Blog is a unique - and peculiarities - of California employment law. This blog is for in-house attorneys, HR professionals, business owners, and managers who face real issues on a daily basis and need practical solutions to address them.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4480808.jpg?t=1628748038"
+    },
+    {
+      "title": "Minken Employment Lawyers Blog",
+      "feed_url": "http://www.minkenemploymentlawyers.com/category/blog/feed/",
+      "website_url": "https://www.minkenemploymentlawyers.com/category/blog/",
+      "description": "Minken Employment Lawyers is a specialty employment law boutique that provides expert legal services on a full range of workplace issues to employees, employers, law firms, corporate counsel and human resource departments in a variety of industries.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4616495.jpg?t=1615885067"
+    },
+    {
+      "title": "The McKinney Law Firm Blog",
+      "feed_url": "https://www.themckinneylawfirm.com/texasemploymentlawblog?format=rss",
+      "website_url": "https://www.themckinneylawfirm.com/texasemploymentlawblog/",
+      "description": "Covers issues and developments in federal and Texas employment law, including wrongful termination, sexual harassment, discrimination, and retaliation news and cases. McKinney Law Firm is a firm that focuses on the most serious Employment Rights & Workplace Injury cases.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4479399.jpg?t=1610518232"
+    },
+    {
+      "title": "Employment Law Lookout",
+      "feed_url": "https://www.laborandemploymentlawcounsel.com/feed/",
+      "website_url": "https://www.laborandemploymentlawcounsel.com/",
+      "description": "Employment Law Lookout: Insights for Management is a resource for employers seeking intelligent discourse and updates on today's most pressing workplace issues.",
+      "followers": {
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4616447.jpg?t=1615885083"
+    },
+    {
+      "title": "San Diego Employment Attorneys Group Blog",
+      "feed_url": "https://www.lawgrady.com/feed/atom/",
+      "website_url": "https://www.lawgrady.com/blog/",
+      "description": "This San Diego, California blog by Grady & Associates discusses legal issues related to Employment Law - Employee. We hope you'll provide your feedback.enochslawfirm",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4618072.jpg?t=1615885949"
+    },
+    {
+      "title": "Canadian Labour and Employment Law",
+      "feed_url": "https://www.labourandemploymentlaw.com/feed/",
+      "website_url": "https://www.labourandemploymentlaw.com/",
+      "description": "Baker & McKenzie's Canadian Labour and Employment Law blog provides employers with up to date information on legal developments that impact workplace policies and procedures, human resources management, employment agreements, discipline and dismissal, and employment-related litigation.",
+      "followers": {
+        "facebook": 24300
+      },
+      "image_url": "https://i1.feedspot.com/4480790.jpg?t=1610517039"
+    },
+    {
+      "title": "Bow River Law Blog",
+      "feed_url": "https://bowriveremploymentlaw.com/feed/",
+      "website_url": "https://bowriveremploymentlaw.com/blog/",
+      "description": "Bow River Law LLP is a team of lawyers who enjoy tackling difficult legal issues arising in the workplace. As part of Bow River Law LLP's commitment to legal excellence, we often do research and update our knowledge in the law. In service of the public & profession, we then write legal articles and post them here for your perusal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5274183.jpg?t=1620022062"
+    },
+    {
+      "title": "Barry Fisher's Employment Law Blog",
+      "feed_url": "https://barryfisher.ca/employmentlawblog/feed/",
+      "website_url": "https://barryfisher.ca/employmentlawblog/",
+      "description": "Barry B. Fisher LL.B. is a mediator and arbitrator in Toronto.His practice focuses on both labour and employment law matters. He is one of the most often chosen mediators for employment law cases under the Ontario Mandatory Mediator Program. Barry is a frequent presenter at seminars and educational courses on issues relating to employment law, labour law, and ADR.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4616471.jpg?t=1615885244"
+    },
+    {
+      "title": "Allred, Maroko & Goldberg Blog",
+      "feed_url": "https://www.amglaw.com/feed/",
+      "website_url": "https://www.amglaw.com/blog/",
+      "description": "Allred, Maroko & Goldberg was founded in 1976 to assist individual employees throughout California victimized by their employers as well as anyone who has suffered because of a violation of civil rights. We are focused on helping clients who are the victims of sexual assault, harassment, discrimination, retaliation, wrongful termination, and other employee rights violations. Our Employment Law Blog offers news and insight on a wide range of legal topics. We hope you'll join in on the discussion.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 128,
+        "instagram": 127
+      },
+      "image_url": "https://i1.feedspot.com/5295036.jpg?t=1624277242"
+    },
+    {
+      "title": "Law and the Workplace",
+      "feed_url": "https://www.lawandtheworkplace.com/feed/",
+      "website_url": "https://www.lawandtheworkplace.com/",
+      "description": "Proskauer's Law and the Workplace Blog provides timely insights and analysis on national and state-specific legal developments impacting employers.",
+      "followers": {
+        "facebook": 793,
+        "twitter": 123
+      },
+      "image_url": "https://i1.feedspot.com/4615929.jpg?t=1615885064"
+    },
+    {
+      "title": "Connecticut Employment Law Blog",
+      "feed_url": "https://www.ctemploymentlawblog.com/feed/",
+      "website_url": "https://www.ctemploymentlawblog.com/",
+      "description": "Information & Insights on Labor & Employment Developments for Connecticut Businesses. Connecticut Employment Law Blog shares new and noteworthy items relating to employment law with employers, human resources personnel, and executives in Connecticut.",
+      "followers": {
+        "facebook": 383,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4616446.jpg?t=1629189031"
+    },
+    {
+      "title": "Bachman Law Blog",
+      "feed_url": "https://ebachmanlaw.com/feed/",
+      "website_url": "https://www.thelelawblog.com/",
+      "description": "Covers glass ceiling and other employment discrimination and whistleblower retaliation cases and trends from around the country. Eric holds extensive litigation experience, including trials in federal and state courts, and has also set important precedent on employment discrimination issues at the appellate level. He litigates employment discrimination cases, including age discrimination, sex harassment, and whistleblower retaliation cases.",
+      "followers": {
+        "twitter": 290
+      },
+      "image_url": "https://i1.feedspot.com/5350906.jpg?t=1662982281"
+    },
+    {
+      "title": "The Labor & Employment Law Blog",
+      "feed_url": "https://www.thelelawblog.com/feed/",
+      "website_url": "https://www.thelelawblog.com/",
+      "description": "The Labor and Employment Law blog is written by the Employment Lawyers at Weintraub Tobin law firm and discusses labor and employment topics, issues, and legal news. Weintraub Tobin is an innovative provider of sophisticated legal services to businesses and business owners throughout California.",
+      "followers": {
+        "facebook": 518,
+        "twitter": 437
+      },
+      "image_url": "https://i1.feedspot.com/4480810.jpg?t=1628746305"
+    },
+    {
+      "title": "Atlanta Employment Attorneys Blog",
+      "feed_url": "https://www.atlantaemploymentattorneysblog.com/feed/",
+      "website_url": "https://www.atlantaemploymentattorneysblog.com/",
+      "description": "Blog posts on topics such as Employment Discrimination, Employment Law, Wage & Hour, Sexual Harassment, and more. Parks, Chesin & Walbert is an Atlanta law firm that represents clients in a wide array of litigation matters, including constitutional disputes, employment discrimination, civil rights, government contracting, and catastrophic injury cases.",
+      "followers": {
+        "facebook": 940,
+        "twitter": 223
+      },
+      "image_url": "https://i1.feedspot.com/4615997.jpg?t=1629891021"
+    },
+    {
+      "title": "Atkinson, Andelson, Loya, Ruud & Romo Blog",
+      "feed_url": "https://www.aalrr.com/Labor-Employment-Law-Blog?rss",
+      "website_url": "https://www.aalrr.com/Labor-Employment-Law-Blog",
+      "description": "Atkinson, Andelson, Loya, Ruud & Romo (AALRR) is a full-service firm with over 200 attorneys representing California's public and private organizations. Our firm is a recognized powerhouse in labor and employment law, education law, cities and counties representation, and litigation. Through decades of dedicated commitment to high-quality legal work and providing consistently practical management solutions to our clients, AALRR has earned a reputation as one of California's leading law firms.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5295039.jpg?t=1624274479"
+    },
+    {
+      "title": "Yeager Employment Law Blog",
+      "feed_url": "https://yeageremploymentlaw.com/feed/",
+      "website_url": "https://yeageremploymentlaw.com/blog/",
+      "description": "Employment Law Blog by an expert team at Yeager to give you advice & insight into previous dismissal cases, reasonable notice, & sample cases. Key topics covered are Settlement, Resignation, Reinstatement, Employment Contracts, Bullying, and Harassment. Yeager Employment Law is an employment law firm based in North Vancouver, British Columbia.",
+      "followers": {
+        "facebook": 16
+      },
+      "image_url": "https://i1.feedspot.com/5311730.jpg?t=1636550919"
+    },
+    {
+      "title": "Kentucky Employment Lawyers Blog",
+      "feed_url": "https://3139787.findlaw4.flsitebuilder.com/feed/",
+      "website_url": "https://www.kentuckyemploymentlawyer.com/blog/",
+      "description": "News & commentary on Employment Law issues that affect Louisville, Kentucky residents. Blog posts cover Disability Discrimination, Workers' Compensation Retaliation, Wage & Hour Claims, Sexual Harassment, and Transgender Rights. Kentucky Employment Lawyers handle business & commercial litigation cases and employment law cases in Kentucky.",
+      "followers": {
+        "facebook": 744,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5311731.jpg?t=1636551864"
+    },
+    {
+      "title": "Luchansky Law",
+      "feed_url": "https://employmentattorneymd.com/feed/",
+      "website_url": "https://employmentattorneymd.com/news-and-resources-old/",
+      "description": "Features Articles exclusively on Employment Law. Some of the sub-topics include Employee Agreements, Employee Lawsuits, Litigation Avoidance, Employment Discrimination, and more. Luchansky Law is dedicated to resolving workplace disputes of all types, representing both employers and employees.",
+      "followers": {
+        "facebook": 12,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/200/5294944.jpg?t=1624269104"
+    },
+    {
+      "title": "Employment & Consumer Law Group Blog",
+      "feed_url": "https://eclaw.com/blog/feed/",
+      "website_url": "https://eclaw.com/blog/",
+      "description": "The Employment & Consumer Law Group represents consumers who have been ripped off and employees with legal claims against an employer. Representing employees and small businesses in all employment matters. Representing consumers victimized by fraudulent or unethical business practices.",
+      "followers": {
+        "facebook": 534,
+        "twitter": 43
+      },
+      "image_url": "https://i1.feedspot.com/4742003.jpg?t=1615885087"
+    },
+    {
+      "title": "San Antonio Employment Law Blog",
+      "feed_url": "https://www.sanantonioemploymentlawblog.com/feed/",
+      "website_url": "https://www.sanantonioemploymentlawblog.com/",
+      "description": "San Antonio Employment Law Blog focuses on labor cases involving wrongful conduct by the employer in Texas. Thomas J. Crane focuses on cases involving wrongful conduct by the employer. He has been practicing employment law for 20 years. He had his own law practice in San Antonio for many years prior to being called to active duty in 2003. He then worked for Disability Rights of Texas, representing persons with disabilities, in between tours of duty with the U.S. Army.",
+      "followers": {
+        "twitter": 396
+      },
+      "image_url": "https://i1.feedspot.com/4618152.jpg?t=1660109619"
+    },
+    {
+      "title": "HR Legalist",
+      "feed_url": "https://www.hrlegalist.com/feed/",
+      "website_url": "https://www.hrlegalist.com/",
+      "description": "The HRLegalist is an online resource for corporate employers, HR professionals, C-suite executives, and corporate counsel on the latest developments and trends in labor and employment law as well as analysis and commentary regarding best practices for employers.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/4448448.jpg?t=1615885211"
+    },
+    {
+      "title": "Rabner Baumgart Ben-Asher & Nirenberg, P.C. Blog",
+      "feed_url": "https://www.njemploymentlawfirmblog.com/feed/",
+      "website_url": "https://www.njemploymentlawfirmblog.com/",
+      "description": "Covers Discrimination, Disability Discrimination, Age Discrimination, Gender Discrimination, Pregnancy Discrimination, and more. Rabner Baumgart Ben-Asher & Nirenberg, P.C. is a team of well-rounded attorneys, many with decades-long careers, who craft creative and thoughtful solutions in their representation of employees, independent contractors and entrepreneurs.",
+      "followers": {
+        "facebook": 86,
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/4618200.jpg?t=1615885382"
+    },
+    {
+      "title": "Workplace Legal Employment Lawyers Blog",
+      "feed_url": "https://workplacelegalpc.com/feed/",
+      "website_url": "https://workplacelegalpc.com/blog/",
+      "description": "'Workplace Legal' represents large corporations, small businesses, startups, and high-level executives and professionals in complex employment law matters. With decades of HR & employment law expertise, and real-world business & employee management experience, Workplace Legal delivers smart, practical, and cost-effective employment law solutions to help you succeed. Check out our blog to get timely commentary on HR and employment law issues relevant to California employers and employees from the experts at Workplace Legal.",
+      "followers": {
+        "facebook": 20
+      },
+      "image_url": "https://i1.feedspot.com/5295037.jpg?t=1624274088"
+    },
+    {
+      "title": "Amundsen Davis LLC \u00bb Labor & Employment Law Update",
+      "feed_url": "https://www.amundsendavislaw.com/labor-employment-law-update?rss",
+      "website_url": "https://www.amundsendavislaw.com/labor-employment-law-update",
+      "description": "Welcome to the Labor and Employment Law Update where attorneys from SmithAmundsen blog about management side labor and employment issues. They cover topics including addressing harassment and discrimination in the workplace, developing labor law, navigating through ADA(AA), FMLA and workers compensation issues, avoiding wage and hour landmines, key legislative, case law and regulatory changes.",
+      "followers": {
+        "facebook": 379,
+        "twitter": 123
+      },
+      "image_url": "https://i1.feedspot.com/4616519.jpg?t=1615885287"
+    },
+    {
+      "title": "James P. Tarquin, P.A. Blog",
+      "feed_url": "https://www.ocalaemploymentlawyer.com/blog/feed/",
+      "website_url": "https://www.ocalaemploymentlawyer.com/blog/",
+      "description": "James P. Tarquin, P.A. is Ocala based law firm dedicated to representing employees in employment law cases. For more than 15 years, we have represented employees in all areas of employment and helped hundreds of employees fight back against unfair employment practices. As part of our commitment to assist & educate employees in fighting back against the abusive employment practices of employers, we offer a broad range of information about employment law issues in our employment blog.",
+      "followers": {
+        "facebook": 166
+      },
+      "image_url": "https://i1.feedspot.com/5295040.jpg?t=1624277619"
+    },
+    {
+      "title": "Zatuchni & Associates Blog",
+      "feed_url": "http://www.zatlaw.com/blog/feed/",
+      "website_url": "https://www.zatlaw.com/blog/",
+      "description": "David Zatuchni Zatuchni & Associates represents the interests of employees from Wall Street to Main Street, from Staten Island to Trenton, who have been injured by discrimination, harassment, and illegal employment practices.",
+      "followers": {
+        "facebook": 292,
+        "twitter": 90
+      },
+      "image_url": "https://i1.feedspot.com/4618177.jpg?t=1615885307"
+    },
+    {
+      "title": "Klie Law Offices Blog",
+      "feed_url": "https://klielaw.com/feed/",
+      "website_url": "https://klielaw.com/blog/",
+      "description": "Our experienced attorneys at Klie Law Offices have a well-earned reputation throughout West Virginia for winning big cases & getting victims the money they rightfully deserve. Whether you've been a victim of illegal practices in the workplace, hurt in a car accident, or need assistance with another legal matter, our knowledgeable lawyers can work with you and make sure your rights are respected every step of the way. Our experienced West Virginia attorneys blog about timely legal topics for West Virginia employees.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 139
+      },
+      "image_url": "https://i1.feedspot.com/5294937.jpg?t=1624261925"
+    },
+    {
+      "title": "Overholt Law LLP Blog",
+      "feed_url": "https://www.overholtlawyers.com/feed/",
+      "website_url": "https://www.overholtlawyers.com/blog/",
+      "description": "Overholt Law is an employment and labor relations boutique law firm located in the heart of the downtown Vancouver business community. Overholt Law specializes in the areas of Employment, Labour Relations, Human Rights, Privacy, and Occupational Health and Safety. Our Employment Law blog contains news and commentary relevant to Vancouver, British Columbia residents.",
+      "followers": {
+        "facebook": 88,
+        "twitter": 177
+      },
+      "image_url": "https://i1.feedspot.com/5294947.jpg?t=1624269817"
+    },
+    {
+      "title": "Lawffice Space",
+      "feed_url": "https://feeds.feedburner.com/LawfficeSpace",
+      "website_url": "https://www.lawfficespace.com/",
+      "description": "Lawffice Space is an employment law blog, focusing on Pennsylvania and Federal Law. It provides the latest and most interesting case law, statutory law, and current events from the world of employment law.",
+      "followers": {
+        "facebook": 120,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4618000.jpg?t=1615885273"
+    },
+    {
+      "title": "SC Employers' Blog",
+      "feed_url": "https://www.scemployersblog.com/feed/",
+      "website_url": "https://www.scemployersblog.com/",
+      "description": "Haynsworth Sinkler Boyd attorneys represent private and public employers in every facet of management-side employment law, including discrimination and harassment claims, wrongful-discharge, workforce reduction planning, immigration issues, and restrictive-covenant enforcement. Haynsworth Sinkler Boyd employment lawyers also work with clients on traditional labor matters.",
+      "followers": {
+        "facebook": 639,
+        "twitter": 601
+      },
+      "image_url": "https://i1.feedspot.com/4616091.jpg?t=1615885221"
+    },
+    {
+      "title": "Labour Pains",
+      "feed_url": "https://www.ottawaemploymentlaw.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.ottawaemploymentlaw.com/",
+      "description": "An employment law blog for employers and employees. Published by Sean Bawden of Kelly Santini LLP. Sean P. Bawden is an experienced trial lawyer and trusted strategic advisor with respect to matters of employment law and commercial disputes. He is a partner with Kelly Santini LLP, located in Ottawa, Ontario, Canada.",
+      "followers": {
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4480674.jpg?t=1610517603"
+    },
+    {
+      "title": "Akeel & Valentine, PLC Blog",
+      "feed_url": "https://www.akeelvalentine.com/feed/",
+      "website_url": "https://www.akeelvalentine.com/blog/",
+      "description": "This blog by Akeel & Valentine, PLC is geared toward Troy, Michigan residents interested in news and information on the topic of Employment Law.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4618110.jpg?t=1615885374"
+    },
+    {
+      "title": "Krevsky Bowser Blog",
+      "feed_url": "https://www.krevskybowser.com/feed/",
+      "website_url": "https://www.krevskybowser.com/blog/",
+      "description": "This blog provides Lemoyne, Pennsylvania residents with information on Employment Law from Krevsky Bowser LLC.",
+      "followers": {
+        "facebook": 112
+      },
+      "image_url": "https://i1.feedspot.com/4618074.jpg?t=1608020220"
+    },
+    {
+      "title": "Maine Employment Lawyer Blog",
+      "feed_url": "https://www.maineemploymentlawyerblog.com/feed/",
+      "website_url": "https://www.maineemploymentlawyerblog.com/",
+      "description": "Maine Employee Rights Group represents employees in the following types of cases: Discrimination, harassment, whistleblower retaliation, unpaid wages/overtime, denials of disability-related accommodations, medical leave disputes, denials of benefits, and workers' compensation.",
+      "followers": {
+        "facebook": 114,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/4618046.jpg?t=1615885391"
+    },
+    {
+      "title": "Savine Employment Law Blog",
+      "feed_url": "https://savinelaw.com/feed/",
+      "website_url": "https://savinelaw.com/blog/",
+      "description": "Gary Savine founded Savine Employment Law, Ltd. to provide employers and employees with a rare and valuable resource. It is a law firm that understands both sides of workplace disputes and can translate that balanced perspective into better outcomes. Gary brings over two decades of expertise working around the globe, shoulder-to-shoulder with senior executives and human resource professionals, solving the thorniest of workplace disputes. Gary's Employment Law Blog covers employment law topics in Chicago and Illinois.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/5294938.jpg?t=1624264197"
+    },
+    {
+      "title": "Levy Employment Law Blog",
+      "feed_url": "https://www.levyemploymentlaw.com/feed/",
+      "website_url": "https://www.levyemploymentlaw.com/employment-law-blog/",
+      "description": "Levy Employment Law, LLC is dedicated to assisting employers through the challenges of managing their employees in a fair and consistent manner that complies with the law. Our focus is internal to your organization, serving clients of all sizes and industries but with particular experience in the fields of financial services, not-for-profits, and media companies. Key topics covered are Employee Relations, Employer Notice Requirements, Harassment/Discriminations, HR policies, Paid Leave time, Sick and Safe Leave, Wage and Hour Laws, and Workplace Training.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294941.jpg?t=1624263884"
+    },
+    {
+      "title": "Vedder Works",
+      "feed_url": "https://www.vedderworks.com/feed/",
+      "website_url": "https://www.vedderworks.com/",
+      "description": "The blog features topics related to antitrust, employee benefits, discrimination, ADA and more. Vedder Price is a thriving 300-plus lawyer firm serving dynamic clients locally, nationally and globally from offices all over the world. Vedder price also delivers a unique mix of best-in-class legal and business skills in private equity, M&A, global transportation and commercial finance, commercial litigation, executive compensation and employment counseling.",
+      "followers": {
+        "facebook": 275,
+        "twitter": 782
+      },
+      "image_url": "https://i1.feedspot.com/5474538.jpg?t=1669901530"
+    },
+    {
+      "title": "The Spiggle Law Firm Blog",
+      "feed_url": "https://spigglelaw.com/feed/",
+      "website_url": "https://spigglelaw.com/employment-blog/",
+      "description": "The Spiggle Law Firm is a Virginia-based employment law firm helping those who have been fired or are afraid that they might be. We help employees win workplace disputes and fight wrongful termination. Read our employment blog for the latest updates.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5274181.jpg?t=1619683199"
+    },
+    {
+      "title": "Practical Law Employment and Discrimination Blog",
+      "feed_url": "http://employmentblog.practicallaw.com/feed/",
+      "website_url": "http://employmentblog.practicallaw.com/",
+      "description": "Practical Law Employment provides up-to-date and practical guidance on all aspects of employment and discrimination law. Practical Law is a legal solution from Thomson Reuters providing current awareness, legal know-how, and documents to lawyers working in law firms and in-house.",
+      "followers": {
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4615928.jpg?t=1615885114"
+    },
+    {
+      "title": "Orrick Blogs \u00bb Employment Law and Litigation",
+      "feed_url": "https://blogs.orrick.com/employment/feed/",
+      "website_url": "https://blogs.orrick.com/employment/",
+      "description": "An Employment Law and Litigation blog from Orrick. Orrick is a global law firm focused on serving the Employment, Technology, Energy & Infrastructure and Finance sectors.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/2339521.jpg?t=1615885031"
+    },
+    {
+      "title": "Lecker & Associates Blog",
+      "feed_url": "https://leckerslaw.com/blog/feed/",
+      "website_url": "https://leckerslaw.com/blog/",
+      "description": "Lecker & Associates, Toronto Employment and Business Lawyers have been providing services to wrongfully terminated employees for over 25 years. As an advocate for employees we specialize in cases involving wrongful dismissal, constructive dismissal, employment law in Ontario, employment contracts, sexual harassment in the workplace, short and long term disability claims.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 450
+      },
+      "image_url": "https://i1.feedspot.com/4742010.jpg?t=1615885281"
+    },
+    {
+      "title": "Labor & Employment Report",
+      "feed_url": "https://www.laboremploymentreport.com/feed/",
+      "website_url": "https://www.laboremploymentreport.com/",
+      "description": "The Labor & Employment Report is your one-stop blog to learn about the latest developments in labor and employment law issues. Published by Shawe & Rosenthal LLP, Management's Workplace Lawyers, this blog informs human resource professionals, corporate counsel, business leaders, policy makers, journalists, judges, and other attorneys about critical labor and employment issues.",
+      "followers": {
+        "facebook": 40,
+        "twitter": 145
+      },
+      "image_url": "https://i1.feedspot.com/4618077.jpg?t=1615885265"
+    },
+    {
+      "title": "Screw You Guys, I'm Going Home",
+      "feed_url": "https://feeds.feedburner.com/ScrewYouGuysImGoingHome",
+      "website_url": "https://employeeatty.blogspot.com/",
+      "description": "What You Need To Know Before You Scream 'I Quit, 'Get Fired, Or Decide to Sue the Bastards. Author Donna Ballman is an employee-side employment lawyer. She has built a reputation as a skilled and knowledgeable attorney in all of the aspects of labor and employment law. Follow to read her regular articles on employee-side employment law issues.",
+      "followers": {
+        "facebook": 198,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5294935.jpg?t=1624259311"
+    },
+    {
+      "title": "Firstaff Personnel Consultants Blog",
+      "feed_url": "https://firstaff.ie/feed/",
+      "website_url": "https://firstaff.ie/blog/",
+      "description": "Firstaff is one of the longest established personnel consultancies in Ireland, with experience and knowledge at the core of what we do. Since 1967 we have been committed to a total service philosophy guaranteeing a first class, professional service before, during and after recruitment.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/4742011.jpg?t=1615885216"
+    },
+    {
+      "title": "The California Employment Law Blog",
+      "feed_url": "https://feeds.feedburner.com/cawageandhourlaw",
+      "website_url": "http://cawageandhourlaw.blogspot.com/",
+      "description": "Steven G. Pearl is a full-time mediator resolving disputes involving Employment Law, including Discrimination, Harassment, Retaliation, Wrongful Termination, Non-Competition Agreements, Trade Secrets, Wage & Hour, including class actions and individual actions",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2339525.jpg?t=1615885770"
+    },
+    {
+      "title": "Strong Advocates Blog",
+      "feed_url": "https://www.strongadvocates.com/blog/feed/",
+      "website_url": "https://www.strongadvocates.com/blog/",
+      "description": "Strong Advocates's employment law attorneys handle cases of wrongful termination, discrimination and workplace abuse. And they work passionately to protect their rights.",
+      "followers": {
+        "facebook": 286,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4616522.jpg?t=1615885298"
+    },
+    {
+      "title": "Washington Employment Lawyers Association Blog",
+      "feed_url": "https://welalaw.org/feed/",
+      "website_url": "https://welalaw.org/blog/",
+      "description": "WELA's mission is to enforce and advance employee rights, in recognition that employment with dignity and fairness is fundamental to the quality of life. We do this by promoting and increasing public awareness of the rights of individual employees; enhancing the quality of legal representation of employees; advocating for employee rights before courts and legislative bodies.",
+      "followers": {
+        "facebook": 133,
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/4618108.jpg?t=1615885302"
+    },
+    {
+      "title": "Iowa Employment Law Blog",
+      "feed_url": "https://www.iowaemploymentlawblog.com/feed/",
+      "website_url": "https://www.iowaemploymentlawblog.com/",
+      "description": "Iowa Employment Law Blog is written by Patrick Smith of Bradshaw Fowler Proctor & Fairgrave, PC's Employment & Labor practice group focusing on matters related to employment & labor litigation, disputes, benefits, unfair practice, and wage & hour claims in Iowa.",
+      "followers": {
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/4480789.jpg?t=1610517888"
+    },
+    {
+      "title": "Doorways Employment Law Blog",
+      "feed_url": "https://www.doorwaysemploymentlaw.com/blog-feed.xml",
+      "website_url": "https://www.doorwaysemploymentlaw.com/blog",
+      "description": "Doorways Employment Law, Specializing in employment law counseling, strategic advice and representation to individuals and businesses across Massachusetts, Doorways Employment Law is a virtual employment law practice, leveraging the power of technology to connect with clients in the most efficient, convenient and cost-effective way possible.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/4618047.jpg?t=1615885691"
+    },
+    {
+      "title": "Employment Law Blog",
+      "feed_url": "https://feeds.feedburner.com/EmploymentLawBlog",
+      "website_url": "http://employmentlawuk.blogspot.com/",
+      "description": "Employment law blog, An advocate's guide to, tactics, tips and employment law updates from employment law barrister Charles Price.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4618151.jpg?t=1615885405"
+    },
+    {
+      "title": "Hogie & Campbell Lawyers \u00bb Employment Law",
+      "feed_url": "https://firedme.com/category/employment-law-blog/feed/",
+      "website_url": "https://firedme.com/category/employment-law-blog/",
+      "description": "At Hogie & Campbell our commitment to employment law has brought together Employment Lawyers that are experienced at fighting for employees who have suffered from Workplace Discrimination, Disability Discrimination, Sexual Harassment, Race Discrimination, Gender Discrimination, Pregnancy Discrimination, denied Pregnancy Disability Leave (PDL) or Family Medical Leave (FMLA) and more.",
+      "followers": {
+        "twitter": 2,
+        "instagram": 349
+      },
+      "image_url": "https://i1.feedspot.com/4618197.jpg?t=1615885412"
+    },
+    {
+      "title": "Wong Employment Law Blog",
+      "feed_url": "https://wongemploymentlaw.com/blog?format=rss",
+      "website_url": "https://wongemploymentlaw.com/blog",
+      "description": "Jason Wong is a Toronto employment lawyer who practices exclusively employment, labor, and human rights law. Because of a streamlined and innovative approach in his employment law practice, Jason provides cost-effective legal representation. Stay up to date with the latest developments in employment, labor, and human rights law. Jason Wong blogs about important legal information relevant to employees and employers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294936.jpg?t=1624259635"
+    },
+    {
+      "title": "The Galo Law Firm P.C. Blog",
+      "feed_url": "https://3337512.findlaw4.flsitebuilder.com/feed/",
+      "website_url": "https://www.galolawfirm.com/blog/",
+      "description": "The Galo Law Firm P.C., specializes in the practice of labor & employment law. The firm is owned & operated by Michael V. Galo, Jr. He is board-certified by the Texas Board of Legal Specialization in labor & employment law. Whether you are the plaintiff or defendant, our law firm can provide a wealth of knowledge and resources to help you reach a resolution that protects your legal rights and best interests.",
+      "followers": {
+        "facebook": 335
+      },
+      "image_url": "https://i1.feedspot.com/5294946.jpg?t=1624270341"
+    },
+    {
+      "title": "DeWitt Law Blog",
+      "feed_url": "https://www.dewittlawco.com/feed/",
+      "website_url": "https://www.dewittlawco.com/blog/",
+      "description": "If you are an Ohio worker who is facing unlawful practices at your job, then DeWitt Law, LLC, is here to advocate for you. Our founder, Michael W. DeWitt, is a trial and appellate lawyer who has more than 20 years of experience. After representing corporate clients in employment disputes, Mike now represents employees in harassment, discrimination, retaliation, and restrictive covenant cases. Columbus Employment Law Blog covers articles on topics Employment Law, Employment Retaliation, and Workplace Discrimination.",
+      "followers": {
+        "facebook": 87
+      },
+      "image_url": "https://i1.feedspot.com/5295043.jpg?t=1624277988"
+    },
+    {
+      "title": "McGrade + Co. Ltd News",
+      "feed_url": "https://mcgrade.co.uk/feed/",
+      "website_url": "https://mcgrade.co.uk/news/",
+      "description": "We are Employment Lawyers in Glasgow who specialise in providing an excellent quality service. We deal only with employment cases. We provide good quality, practical, client focused advice to a wide range of individuals and organisations on the full range of employment issues from the stage of recruitment through to employment tribunal proceedings and appeals.",
+      "followers": {
+        "facebook": 7,
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/4788542.jpg?t=1615885420"
+    },
+    {
+      "title": "Bay Area Employment Lawyer Blog",
+      "feed_url": "https://www.bayareaemploymentlawyerblog.com/feed/",
+      "website_url": "https://www.bayareaemploymentlawyerblog.com/",
+      "description": "Siegel & LeWitter has been one of the most highly regarded San Francisco Bay Area employment law firms, representing employees or plaintiffs in individual and class action employment litigation and representing labor organizations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4618176.jpg?t=1615885881"
+    },
+    {
+      "title": "Sherman Law Corporation Blog",
+      "feed_url": "https://sherm-law.com/feed/",
+      "website_url": "https://sherm-law.com/blog/",
+      "description": "Sherman Law Corporation conducts investigations thoroughly and strategically, making sure to give our clients a full understanding of the case and its various potential outcomes from the get-go. Go through the articles for frequent updates in employment laws, news, court news and resources and more!",
+      "followers": {
+        "facebook": 302,
+        "twitter": 660
+      },
+      "image_url": "https://i1.feedspot.com/5455165.jpg?t=1665473887"
+    },
+    {
+      "title": "Herbert Smith Freehills \u00bb Employment",
+      "feed_url": "https://www.herbertsmithfreehills.com/notes/employment/",
+      "website_url": "https://www.herbertsmithfreehills.com/notes/employment/",
+      "description": "Employment notes is a Herbert Smith Freehills know-how blog where you will find the latest developments in international employment legislation, regulation and litigation.",
+      "followers": {
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/4616467.jpg?t=1615885010"
+    },
+    {
+      "title": "A&O Shearman \u00bb Employement",
+      "feed_url": "https://www.aoshearman.com/en/insights/ao-shearman-on-employment",
+      "website_url": "https://www.aoshearman.com/en/insights/ao-shearman-on-employment",
+      "description": "Allen & Overy is a global law firm that helps the world's leading businesses to grow, innovate and thrive. Employment Talk is the place where members of our employment team share their views. Dedicated to providing HR and ER professionals with tips and best practice guidance for the fast-paced and ever-changing landscape of employment law.",
+      "followers": {
+        "twitter": 36700
+      },
+      "image_url": "https://i1.feedspot.com/5295045.jpg?t=1624272206"
+    },
+    {
+      "title": "Felhaber Larson Blog",
+      "feed_url": "https://www.felhaber.com/feed/",
+      "website_url": "https://www.genovaburns.com/news/labor-law",
+      "description": "The Immigration Law Bulletin is our newest blog, offering immigration expertise to successfully help families and businesses achieve their immigration goals. We can assist you with your U.S. immigration matter regardless of where in the world you live. Felhaber Larson is a full-service law firm with a more than 70-year history of serving clients.",
+      "followers": {
+        "facebook": 520,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/5295041.jpg?t=1624274957"
+    },
+    {
+      "title": "Vigilant Blog",
+      "feed_url": "https://www.vigilant.org/employment-law-blog/rss",
+      "website_url": "https://www.vigilant.org/employment-law-blog/",
+      "description": "Vigilant counsels companies on employment issues across the Northwest and California. For a flat monthly fee employers can get unlimited legal advice from employment and labor attorneys and counsel from HR professionals and safety experts on employment matters.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4617999.jpg?t=1615885235"
+    },
+    {
+      "title": "The Workplace Report with Ancel Glink",
+      "feed_url": "http://workplacereport.ancelglink.com//feeds/posts/default",
+      "website_url": "https://workplacereport.ancelglink.com/",
+      "description": "Helping employers manage their biggest asset. A preeminent local government law firm. Clients rely on Ancel Glink's labor team for the best advice in managing their biggest assets - their employees.",
+      "followers": {
+        "facebook": 465,
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/4901066.jpg?t=1615885277"
+    },
+    {
+      "title": "First Reference Blog",
+      "feed_url": "https://www.firstreference.com/blog/",
+      "website_url": "https://www.firstreference.com/blog/",
+      "description": "First Reference is a publisher of Canadian compliance-based payroll, employment law & internal control resources for businesses, hr & professionals.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/1941313.jpg?t=1662975313"
+    },
+    {
+      "title": "Dutton Blog",
+      "feed_url": "https://duttonlaw.ca/blog/feed/",
+      "website_url": "https://duttonlaw.ca/blog/",
+      "description": "A blog about employment and labour law with a focus on Ontario and Canadian wrongful dismissal cases, legislation and commentary.",
+      "followers": {
+        "facebook": 564
+      },
+      "image_url": "https://i1.feedspot.com/4653754.jpg?t=1615885040"
+    },
+    {
+      "title": "Barnes & Thornburg Blog \u00bb Labour & Employment",
+      "feed_url": "https://btlaw.com/en/insights/blog#?Topics=Labor%20and%20Employment",
+      "website_url": "https://btlaw.com/en/insights/blog#?Topics=Labor%20and%20Employment",
+      "description": "Barnes & Thornburg LLP is a national, full-service law firm representing clients ranging from Fortune 500 corporations to entrepreneurial growth companies. We provide services in more than 50 areas, including litigation, labor & employment, intellectual property law, and more. This section is managed by the attorneys in Barnes & Thornburg's Labor & Employment Law Department. It's designed to be your resource on employment law developments across the country. It will help employers across all industries stay aware of & respond to these developments.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5295044.jpg?t=1624275476"
+    },
+    {
+      "title": "Labour and Employment Law Blog",
+      "feed_url": "https://www.lawsonlundell.com/labour-and-employment-law-blog/?rss",
+      "website_url": "https://www.lawsonlundell.com/labour-and-employment-law-blog/",
+      "description": "Lawson Lundell LLP is a leading full-service business law firm in Western and Northern Canada known for its practical, strategic approach to legal and business problems. Lawson Lundell's Labour and Employment Law Blog provides updates on the most recent legal developments impacting the Canadian workplace & offers practical tips for employers. We cover a range of topics, including labor relations, employment law, collective bargaining, human rights, employment standards, employment equity, workers' compensation, business immigration, pensions & employee benefits, and more.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5294940.jpg?t=1624339495"
+    },
+    {
+      "title": "Workforce Bulletin",
+      "feed_url": "https://www.workforcebulletin.com/feed/",
+      "website_url": "https://www.workforcebulletin.com/",
+      "description": "Epstein Becker & Green, P.C., is a national law firm with a primary focus on health care and life sciences; employment, labor, and workforce management; and litigation and business disputes.",
+      "followers": {
+        "facebook": 742,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4618027.jpg?t=1615885292"
+    },
+    {
+      "title": "Cripps \u00bb Employment",
+      "feed_url": "https://www.crippspg.co.uk/blog/employment/feed/",
+      "website_url": "https://www.cripps.co.uk/thinking/?type=articles&serv=employment-law&sector=&topic=",
+      "description": "Cripps's Employment blog provides the latest updates on labour and employment law and personal legal services at workplace.",
+      "followers": {
+        "facebook": 423,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4616036.jpg?t=1609755744"
+    },
+    {
+      "title": "Polsinelli At Work",
+      "feed_url": "https://www.polsinelliatwork.com/blog?format=RSS",
+      "website_url": "https://www.dcemploymentattorney.com/resources/blog/",
+      "description": "Employers, whether large or small, face an ever-growing web of workplace regulations and potential entanglements with employees. Polsinelli at Work is a blog designed to help employers navigate the complexity and sensitivity of employee relations and workplace issues. Our blog focuses on topics ranging from workforce development and compliance to employment litigation, disputes and class actions to immigration, traditional labor and workplace safety.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 3200,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4616068.jpg?t=1615885261"
+    },
+    {
+      "title": "Alan Lescht & Associates, P.C. Blog",
+      "feed_url": "https://www.dcemploymentattorney.com/feed/",
+      "website_url": "https://www.dcemploymentattorney.com/resources/blog/",
+      "description": "Described by clients as 'exceptional' and a 'true lawyer's lawyer,' Alan Lescht and Associates is one of D.C.'s premier employment law firms. Our blog provides breaking news, insight, and legal analysis on issues that affect both government and private sector employees.",
+      "followers": {
+        "facebook": 497,
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/4618107.jpg?t=1608021010"
+    },
+    {
+      "title": "Employment Law Partners",
+      "feed_url": "https://www.ekrtlaw.com/feed.xml",
+      "website_url": "https://www.employmentlawpartners.com/articles",
+      "description": "Elfvin, Klingshirn, Royer & Torch, LLC is a Northeast Ohio law firm representing individuals as plaintiffs or defendants, classes of individuals, public entities and companies (employers), in employment law and related practice areas.",
+      "followers": {
+        "facebook": 91
+      },
+      "image_url": "https://i1.feedspot.com/4616468.jpg?t=1615885378"
+    },
+    {
+      "title": "Law Offices of Lauren Abrams Blog",
+      "feed_url": "https://www.employeerightslaw.com/blog/atom.xml",
+      "website_url": "https://www.employeerightslaw.com/blog/",
+      "description": "This Los Angeles, California blog by Law Offices of Lauren Abrams discusses legal issues related to Employment Law. The Law Office of Lauren Abrams is a boutique law firm specializing in: -Employment Law -Discrimination Law -Retaliation Law -Overtime Law -Wrongful Termination -Sexual Harassment Cases, they understand the delicate and personal nature of employment matters.",
+      "followers": {
+        "facebook": 18,
+        "twitter": 212
+      },
+      "image_url": "https://i1.feedspot.com/4618156.jpg?t=1615885387"
+    },
+    {
+      "title": "Wyatt, Tarrant & Combs Blog \u00bb Employment Law Report",
+      "feed_url": "https://wyattfirm.com/blogs/category/employment-law-report/feed/",
+      "website_url": "https://wyattfirm.com/blogs/category/employment-law-report/",
+      "description": "Tyson Gorman leads Wyatt, Tarrant & Combs, LLP's Labor & Employment Service Team. Its representes both private and public sector employers in a number of traditional labor law matters, including employer defense in labor arbitrations of all types, employment discrimination litigation, wrongful discharge and related tort cases, union organizing campaigns, and collective bargaining negotiations.",
+      "followers": {
+        "facebook": 640
+      },
+      "image_url": "https://i1.feedspot.com/4618113.jpg?t=1615885399"
+    },
+    {
+      "title": "Brodies LLP \u00bb Employment & Immigration",
+      "feed_url": "https://brodies.com/blog/category/employment/feed/",
+      "website_url": "https://brodies.com/insights/?expertise=employment-and-immigration&page=1",
+      "description": "Employment lawyers from Brodies LLP - Scotland's largest law firm - provide industry insight, analysis and expertise.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 7200,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4616497.jpg?t=1615885424"
+    }
+  ]
+}

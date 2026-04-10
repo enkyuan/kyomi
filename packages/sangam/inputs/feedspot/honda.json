@@ -1,0 +1,72 @@
+{
+  "category": "Honda",
+  "source_url": "https://rss.feedspot.com/honda_rss_feeds",
+  "feeds": [
+    {
+      "title": "Acura Connected",
+      "feed_url": "https://acuraconnected.com/feed/",
+      "website_url": "https://acuraconnected.com/",
+      "description": "An Acura Blog is your source for Acura News, Information, Reviews, and Rumors.",
+      "followers": {
+        "facebook": 33000,
+        "twitter": 649,
+        "instagram": 27400
+      },
+      "image_url": "https://i1.feedspot.com/4908798.jpg?t=1614077947"
+    },
+    {
+      "title": "GaadiKey \u00bb Honda",
+      "feed_url": "https://blog.gaadikey.com/category/bikes/honda-bikes/feed/",
+      "website_url": "https://blog.gaadikey.com/category/bikes/honda-bikes/",
+      "description": "GaadiKey is one stop portal for all the latest information in automobile industry. A bunch of people who are passionate about bikes and cars share their experience, reviews and stuff connected to Gaadis. Honda Motorcycle and Scooter India, Private Limited (HMSI) was founded in 1999 as a subsidiary of Honda, Japanese automaker. This section of blog features articles that have to do exclusively with Honda Motercycle and other popular Honda Bkes.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 936,
+        "instagram": 863
+      },
+      "image_url": "https://i1.feedspot.com/5297499.jpg?t=1624965569"
+    },
+    {
+      "title": "Top Honda Cars",
+      "feed_url": "https://tophondacars.com/feed/",
+      "website_url": "https://tophondacars.com/",
+      "description": "Honda Cars News, Rumors, Reviews, and Spy-Photos. Everything about Honda.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4908808.jpg?t=1614078089"
+    },
+    {
+      "title": "Autoblog \u00bb Honda",
+      "feed_url": "https://www.autoblog.com/category/honda/rss.xml",
+      "website_url": "https://www.autoblog.com/honda/",
+      "description": "Get the latest news, spy shots, concepts and reveals along with high-res photos and videos of new Honda vehicles with Autoblog. Check out up-to-the-minute automotive news along with reviews, podcasts, high-quality photography and commentary about automobiles and the auto industry.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 449300,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/4506661.jpg?t=1624967768"
+    },
+    {
+      "title": "Orangeville Honda",
+      "feed_url": "https://www.orangevillehonda.com/feed",
+      "website_url": "https://www.orangevillehonda.com/en/news",
+      "description": "Our automotive blog offers educational, entertaining, and insightful content important to the people of Orangeville and beyond. Follow our blog to stay on top of the latest Honda news. Learn how to maintain your vehicle and get updates on special events happening in Orangeville.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 809
+      },
+      "image_url": "https://i1.feedspot.com/5038342.jpg?t=1614077962"
+    },
+    {
+      "title": "Honda News",
+      "feed_url": "https://feeds.feedburner.com/honda/news",
+      "website_url": "https://hondanews.com/en-US",
+      "description": "Explore an innovative line of quality products from American Honda Motor Company. Find the latest news and information on Honda and Acura brand products.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/3930273.jpg?t=1614077966"
+    }
+  ]
+}

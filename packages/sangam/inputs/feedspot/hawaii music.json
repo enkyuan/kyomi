@@ -1,0 +1,120 @@
+{
+  "category": "Hawaii Music",
+  "source_url": "https://rss.feedspot.com/hawaii_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hawaii Music Teachers Association News",
+      "feed_url": "https://www.hmta.org/news?format=rss",
+      "website_url": "https://www.hmta.org/news",
+      "description": "Latest news from the Hawaii Music Teachers Association.The Hawaii Music Teachers Association (HMTA) is an affiliate of the Music Teachers National Association and a resource for music teachers and students across the state of Hawaii.",
+      "followers": {
+        "facebook": 475
+      },
+      "image_url": "https://i1.feedspot.com/5316100.jpg?t=1630043119"
+    },
+    {
+      "title": "Hawaii Youth Symphony Blog",
+      "feed_url": "https://www.hiyouthsymphony.org/feed/",
+      "website_url": "https://www.hiyouthsymphony.org/blog/",
+      "description": "Latest news, events, and announcements by the Hawaii Youth Symphony. Hawaii Youth Symphony is a nonprofit dedicated to serving students statewide through instrumental music education. Our Mission is to help youth develop to their fullest potential through orchestral music, in the setting of our Islands' unique culture.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2800,
+        "instagram": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5316091.jpg?t=1673247387"
+    },
+    {
+      "title": "Honolulu Magazine \u00bb Music",
+      "feed_url": "https://www.honolulumagazine.com/category/music/feed/",
+      "website_url": "https://www.honolulumagazine.com/category/music/",
+      "description": "Latest music news from Honolulu Magazine.Honolulu Magazine is a locally produced city magazine and website that covers dining, arts, entertainment, news, real estate, and fashion in Hawaii.",
+      "followers": {
+        "facebook": 61400,
+        "twitter": 52300,
+        "instagram": 118400
+      },
+      "image_url": "https://i1.feedspot.com/5315841.jpg?t=1629971996"
+    },
+    {
+      "title": "Aloha Got Soul",
+      "feed_url": "https://alohagotsoul.com/blogs/stories.atom",
+      "website_url": "https://alohagotsoul.com/blogs/stories",
+      "description": "Blog posts, interviews, reviews, and more from Aloha Got Soul. Music from Hawaii and musicians connected to the Hawaiian Islands.Aloha Got Soul is a Honolulu-based record label bringing rare and relatively unknown music of Hawaii to the surface.",
+      "followers": {
+        "twitter": 1500,
+        "instagram": 21400
+      },
+      "image_url": "https://i1.feedspot.com/5315840.jpg?t=1629971463"
+    },
+    {
+      "title": "The Molokai Dispatch \u00bb Music",
+      "feed_url": "https://themolokaidispatch.com/category/culture_and_art/music/feed/",
+      "website_url": "https://themolokaidispatch.com/category/culture_and_art/music/",
+      "description": "Stories regarding Molokai's music scene.The Molokai Dispatch has been the longest running publication delivering the latest news and information for the Island of Molokai.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 1400,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5316141.jpg?t=1630049700"
+    },
+    {
+      "title": "Willie K",
+      "feed_url": "https://williek.com/feed/",
+      "website_url": "https://williek.com/events-and-news/",
+      "description": "Events and News from Willie K.Willie K is Hawaii's renowned entertainer/producer who captivates audiences around the globe.",
+      "followers": {
+        "facebook": 26100,
+        "twitter": 545
+      },
+      "image_url": "https://i1.feedspot.com/5316096.jpg?t=1630042807"
+    },
+    {
+      "title": "Ukulele Underground Blog",
+      "feed_url": "https://ukuleleunderground.com/blog/feed/",
+      "website_url": "https://ukuleleunderground.com/blog/",
+      "description": "Ukulele Underground is one of the fastest growing ukulele communities on the internet. Learn to play the ukulele at your own pace with our step-by-step approach from the best teachers in the world.",
+      "followers": {
+        "facebook": 69700,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4758150.jpg?t=1608551367"
+    },
+    {
+      "title": "University of Hawaii at Manoa \u00bb Music Department",
+      "feed_url": "https://manoa.hawaii.edu/music/feed/",
+      "website_url": "https://manoa.hawaii.edu/music/news/",
+      "description": "The Music Department achieves its mission by featuring a unique blend of academic and practical instruction in Western music traditions and in the music of the Pacific region and Asia. The University of Hawaii at Manoa is a world-class university providing affordable, quality higher education to the people of Hawaii and beyond!",
+      "followers": {
+        "facebook": 772,
+        "twitter": 34,
+        "instagram": 57000
+      },
+      "image_url": "https://i1.feedspot.com/5315903.jpg?t=1629977590"
+    },
+    {
+      "title": "Decades 107.9",
+      "feed_url": "https://decades1079.com/content/rss/featured-content",
+      "website_url": "https://decades1079.com/featured-content",
+      "description": "Playing the greatest music ever made from the 70's 80's and 90s!!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 29,
+        "instagram": 752
+      },
+      "image_url": "https://i1.feedspot.com/5315844.jpg?t=1629974376"
+    },
+    {
+      "title": "Country 97.5 FM",
+      "feed_url": "https://975country.com/content/rss/featured-content",
+      "website_url": "https://975country.com/featured-content",
+      "description": "Get the latest music news, releases, and music videos by Country 97.5 FM. Country 97.5 FM serves Honolulu, Hawaii with the best country music and live music streaming.",
+      "followers": {
+        "facebook": 6100,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5316086.jpg?t=1630041864"
+    }
+  ]
+}

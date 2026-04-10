@@ -1,0 +1,186 @@
+{
+  "category": "CMS",
+  "source_url": "https://rss.feedspot.com/cms_rss_feeds",
+  "feeds": [
+    {
+      "title": "Contentful Blog",
+      "feed_url": "https://www.contentful.com/blog/feed.xml",
+      "website_url": "https://www.contentful.com/blog/",
+      "description": "Our composable content platform scales across the enterprise, to accelerate how teams build great digital experiences. The Contentful blog helps builders and digital leaders create better digital experiences.",
+      "followers": {
+        "twitter": 32200
+      },
+      "image_url": "https://i1.feedspot.com/4334024.jpg?t=1669205808"
+    },
+    {
+      "title": "The Gilbane Advisor Blog",
+      "feed_url": "https://gilbane.com/feed/",
+      "website_url": "https://gilbane.com/blog/",
+      "description": "The Gilbane Advisor is a weekly published newsletter. We have advised hundreds of organizations representing a wide range of industries, including government and other non-profits, technology, manufacturing, publishing, etc. The blog posts are curated analyses and news for content technology, computing, and digital experience professionals.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/1862052.jpg?t=1669207115"
+    },
+    {
+      "title": "Things on a content management system",
+      "feed_url": "https://cqdump.joerghoh.de/feed/",
+      "website_url": "https://cqdump.joerghoh.de/",
+      "description": "Read tips and tricks for Adobe Experience Manager / AEM6 and AEM as a Cloud Service on his blogs like Dispatcher, CDN, and Caching, What's the maximum size of a node in JCR/AEM, Sling Scheduled Jobs vs Sling Scheduler, How to analyze 'Authentication support missing', and many more!",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/397398.jpg?t=1669205870"
+    },
+    {
+      "title": "SilverStripe.org Blog",
+      "feed_url": "https://www.silverstripe.org/blog/rss",
+      "website_url": "https://www.silverstripe.org/blog/",
+      "description": "At Silverstripe, we focus on using creative strategy and digital problem-solving to create compelling, human-centered experiences.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/1351956.jpg?t=1669205934"
+    },
+    {
+      "title": "Concrete CMS Blog",
+      "feed_url": "https://www.concretecms.com/rss/blog",
+      "website_url": "https://www.concretecms.com/about/blog",
+      "description": "Concrete CMS is packed with powerful features to make it easy for a team to run even the most complex websites. Check out the latest news, trends, and announcements from the team at Concrete CMS.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5470993.jpg?t=1669206005"
+    },
+    {
+      "title": "Drupal Blog",
+      "feed_url": "https://www.drupal.org/section-blog/2603760/feed",
+      "website_url": "https://www.drupal.org/blog",
+      "description": "With robust content management tools, sophisticated APIs for multichannel publishing, and a track record of continuous innovation - Drupal is the best digital experience platform(DXP) on the web, proudly open source. Find News and stories to help you make something amazing, for anyone, with Drupal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470988.jpg?t=1764661555"
+    },
+    {
+      "title": "Joomla",
+      "feed_url": "https://www.joomla.org/announcements.feed?tb_iframe=true&amp=924&keepthis=true&type=rss",
+      "website_url": "https://www.joomla.org/announcements.html",
+      "description": "Joomla! is a free and open-source content management system (CMS) for publishing web content. Over the years Joomla! has won several awards. It is built on a model-view-controller web application framework that can be used independently of the CMS that allows you to build powerful online applications.",
+      "followers": {
+        "facebook": 155800,
+        "twitter": 56700,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5470991.jpg?t=1669206200"
+    },
+    {
+      "title": "DatoCMS Blog",
+      "feed_url": "https://www.datocms.com/blog.xml",
+      "website_url": "https://www.datocms.com/blog",
+      "description": "At DatoCMS we build tools that work the way you do. Our mission is to help you create projects that truly feel yours. The DatoCMS official blog is where we document our progress, announce product updates and talk about topics such as digital publishing, content strategy, and software development.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5470989.jpg?t=1669204696"
+    },
+    {
+      "title": "WordPress News",
+      "feed_url": "https://wordpress.org/news/feed/",
+      "website_url": "https://wordpress.org/news/",
+      "description": "WordPress is software designed for everyone, emphasizing accessibility, performance, security, and ease of use. We believe great software should work with a minimum setup, so you can focus on sharing your story, product, or services freely. The basic WordPress software is simple and predictable so you can easily get started. It also offers powerful features for growth and success. Read the latest news about WordPress and the WordPress community.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 638100,
+        "instagram": 48600
+      },
+      "image_url": "https://i1.feedspot.com/282853.jpg?t=1669207010"
+    },
+    {
+      "title": "CMS Report",
+      "feed_url": "http://cmsreport.com/rss.xml",
+      "website_url": "http://cmsreport.com/",
+      "description": "CMS Report is part of a trio of sites delivering you content that supports your website, business, and time away from work. We cover such topics as content management, marketing strategy, information technology, technology, consumer electronics, after-work interests, and personal hobbies.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/55087.jpg?t=1669207057"
+    },
+    {
+      "title": "Wagtail Blog",
+      "feed_url": "https://wagtail.org/blog/feed/",
+      "website_url": "https://wagtail.org/blog/",
+      "description": "Get fresh news about the Wagtail content management system as well as tutorials, success stories, and more from the Wagtail CMS community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8835870.jpg"
+    },
+    {
+      "title": "Umbraco Blog",
+      "feed_url": "https://umbraco.com/rss/blog",
+      "website_url": "https://umbraco.com/blog/",
+      "description": "Blog posts from umbraco.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8835869.jpg"
+    },
+    {
+      "title": "Directus Blog",
+      "feed_url": "https://directus.io/rss.xml",
+      "website_url": "https://directus.io/blog/",
+      "description": "Built for developers who need more than just a CMS. Manage complex content structures, handle digital assets, and control user permissions all through an intuitive Studio.",
+      "followers": {},
+      "image_url": "https://marketing.directus.app/assets/54c69e23-b8af-4aa8-abc5-2d3544bb7c23.png?t=1764658528"
+    },
+    {
+      "title": "Craft CMS Blog",
+      "feed_url": "https://craftcms.com/blog.rss",
+      "website_url": "https://craftcms.com/blog/",
+      "description": "Everything we've been up to lately.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8835868.jpg?t=1764660665"
+    },
+    {
+      "title": "CMS Minds Blog",
+      "feed_url": "https://cmsminds.com/feed/",
+      "website_url": "https://cmsminds.com/blogs/",
+      "description": "Stay updated with the latest WordPress trends, plugin guides, development tips, and CMS insights, curated weekly by the WordPress experts at cmsMinds.",
+      "followers": {
+        "facebook": 983,
+        "twitter": 158
+      },
+      "image_url": "https://i1.feedspot.com/5055349.jpg?t=1614345521"
+    },
+    {
+      "title": "CMS Critic",
+      "feed_url": "https://cmscritic.com/feed",
+      "website_url": "https://cmscritic.com/articles/",
+      "description": "CMS Critic is one of the industry's most trusted resources for unbiased and timely news, reviews, and guidance about Content Management Systems (CMS), Digital Experience Platforms (DXP), and related digital and cloud technologies. Our experts provide readers across the globe with quality content that clarifies, simplifies, and elevates the conversation about CMS and beyond.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/3886442.jpg?t=1669206129"
+    },
+    {
+      "title": "W3Techs Blog \u00bb Content Managment System",
+      "feed_url": "https://w3techs.com/blogfeed/category/content_management",
+      "website_url": "https://w3techs.com/blog/category/content_management",
+      "description": "W3Techs is a division of Q-Success Web-based Services. The goal is to collect information about the usage of various types of technologies used for building and running websites and to produce and publish surveys that give insights into that subject. Read Content Management System blogs to find news articles, industry updates, and many more to improve your knowledge.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5470992.jpg?t=1669206076"
+    },
+    {
+      "title": "Hannon Hill Blog",
+      "feed_url": "http://feeds.feedburner.com/HannonHillNews",
+      "website_url": "https://www.hannonhill.com/blog/index.html",
+      "description": "Hannon Hill is a content management system, that takes enterprise web strategy to the next level. With built-in tools to eliminate stale content, increase digital outreach, and ensure the best possible audience engagement, it's no wonder Cascade CMS powers more than 25,000 sites and serves over 100,000 users across the globe.",
+      "followers": {
+        "facebook": 317,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5470990.jpg?t=1669205848"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "category": "Wake Forest Football",
+  "source_url": "https://rss.feedspot.com/wake_forest_football_rss_feeds",
+  "feeds": [
+    {
+      "title": "ACCSports \u00bb Wake Forest Demon Deacons",
+      "feed_url": "https://accsports.com/teams/wake-forest/feed/",
+      "website_url": "https://accsports.com/teams/wake-forest/latest-news/",
+      "description": "ACCSports.com launched in 1998 with one single goal: to be the ultimate source for recruiting and insider news for the Atlantic Coast Conference. Get the latest Wake Forest recruiting and insider news for Demon Deacons football and basketball on the website.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5483962.jpg?t=1672121428"
+    },
+    {
+      "title": "College Football News \u00bb Wake Forest",
+      "feed_url": "https://collegefootballnews.com/tag/wake-forest/",
+      "website_url": "https://collegefootballnews.com/tag/wake-forest/",
+      "description": "College Football News is a magazine and website published by College Football News, Inc., headquartered in Chicago, Illinois. News coverage includes scores, statistics, rankings, and reports on college football games. CFN delivers the latest college football predictions, analysis and updates in the website.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 24500
+      },
+      "image_url": "https://i1.feedspot.com/5483960.jpg?t=1672121409"
+    },
+    {
+      "title": "SportSpyder \u00bb Wake Forest Deacons Football",
+      "feed_url": "https://sportspyder.com/rss/teams/wake-forest-deacons-football/articles",
+      "website_url": "https://sportspyder.com/cf/wake-forest-deacons-football/news",
+      "description": "We've been up and running since January 2004. SportSpyder was started in Albany, NY by two brothers looking for a way to get their sports news faster than anyone else. We make it easy to find and subscribe to sports news for your favorite teams. We let you take it from there. Get the latest Wake Forest Deacons Football news articles from around the web on the website.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/5483961.jpg?t=1672133086"
+    }
+  ]
+}

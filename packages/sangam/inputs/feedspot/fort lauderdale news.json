@@ -1,0 +1,51 @@
+{
+  "category": "Fort Lauderdale News",
+  "source_url": "https://rss.feedspot.com/fort_lauderdale_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fort Lauderdale News.Net",
+      "feed_url": "http://feeds.fortlauderdalenews.net/rss/257b7bc7aa875450",
+      "website_url": "https://www.fortlauderdalenews.net/",
+      "description": "Read breaking news from Fort Lauderdale, link to official sports, weather, hotels and travel, access a map of Fort Lauderdale, world news, financial and currency markets. One of the most comprehensive Fort Lauderdale news sites on the Web.",
+      "followers": {
+        "facebook": 567,
+        "twitter": 173
+      },
+      "image_url": "https://i1.feedspot.com/5134729.jpg?t=1625480014"
+    },
+    {
+      "title": "New Times Broward Palm Beach",
+      "feed_url": "https://www.browardpalmbeach.com/browardpalmbeach/Rss.xml",
+      "website_url": "https://www.browardpalmbeach.com/",
+      "description": "Getting original reporting and compelling writing on local news, restaurants, arts, and culture have made Broward Palm Beach New Times a vital resource for readers who want to understand and engage with their community.",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 38600,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5134739.jpg?t=1625663018"
+    },
+    {
+      "title": "Big News Network \u00bb Fort Lauderdale News",
+      "feed_url": "https://feeds.bignewsnetwork.com/category/257b7bc7aa875450",
+      "website_url": "https://www.bignewsnetwork.com/category/fort-lauderdale-news",
+      "description": "Providing specialist news coverage for an informed global public. One of the oldest and largest news services on the Web.",
+      "followers": {
+        "facebook": 53600,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5134732.jpg?t=1670916990"
+    },
+    {
+      "title": "Sun Sentinel \u00bb Fort Lauderdale",
+      "feed_url": "https://www.sun-sentinel.com/location/florida/broward-county/fort-lauderdale/feed/",
+      "website_url": "https://www.sun-sentinel.com/location/florida/broward-county/fort-lauderdale/",
+      "description": "Sun Sentinel website offers trending stories and videos covering Local news and politics in this section. Discover top headlines, and news stories and more from Fort Lauderdale. The Sun Sentinel is the main daily newspaper of Fort Lauderdale, Florida.",
+      "followers": {
+        "facebook": 188900,
+        "twitter": 299900
+      },
+      "image_url": "https://i1.feedspot.com/5466505.jpg?t=1670917047"
+    }
+  ]
+}

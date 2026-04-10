@@ -1,0 +1,345 @@
+{
+  "category": "PHP",
+  "source_url": "https://rss.feedspot.com/php_rss_feeds",
+  "feeds": [
+    {
+      "title": "JetBrains \u00bb PHP Storm",
+      "feed_url": "https://blog.jetbrains.com/phpstorm/feed/",
+      "website_url": "https://www.jetbrains.com/phpstorm/",
+      "description": "The most intelligent PHP IDE with refactorings, code completion, on-the-fly code analysis and coding productivity orientation.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100
+      },
+      "image_url": "https://i1.feedspot.com/4635079.jpg?t=1762778830"
+    },
+    {
+      "title": "PHPGurukul Blog",
+      "feed_url": "https://phpgurukul.com/feed/",
+      "website_url": "https://phpgurukul.com/blog/",
+      "description": "PHP GURUKUL is a vision to provide free and easy education to everyone over the web. We have an aim to educate and provide you the power to make website anything. Anytime. We don't teach, we educate. We provide Tutorials for many Programming languages on PHP GURUKUL.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4730559.jpg?t=1616408596"
+    },
+    {
+      "title": "PHP Classes Blog",
+      "feed_url": "https://www.phpclasses.org/blog/post/latest.xml",
+      "website_url": "https://www.phpclasses.org/blog/",
+      "description": "Follow PHPClasses for early insights about upcoming site features. Free ready to use contributed PHP class scripts, book reviews, jobs, specialist forums.",
+      "followers": {
+        "twitter": 44700
+      },
+      "image_url": "https://i1.feedspot.com/4634648.jpg?t=1616408559"
+    },
+    {
+      "title": "PHPDeveloper.org",
+      "feed_url": "http://phpdeveloper.org/feed",
+      "website_url": "http://phpdeveloper.org/",
+      "description": "This is all about Up-to-the Minute PHP News, views and community.",
+      "followers": {
+        "twitter": 47900
+      },
+      "image_url": "https://i1.feedspot.com/116293.jpg?t=1616409107"
+    },
+    {
+      "title": "PHPCluster Blog",
+      "feed_url": "https://www.phpcluster.com/feed/",
+      "website_url": "https://www.phpcluster.com/",
+      "description": "PHPCluster is a programming blog maintained By author Vikash Kumar Singh. PHPCluster is a tutorial blog all about php,programming, jquery, javascript, ajax, demos, mysql.",
+      "followers": {
+        "facebook": 808,
+        "twitter": 586,
+        "instagram": 4
+      },
+      "image_url": "https://i1.feedspot.com/4635356.jpg?t=1616409005"
+    },
+    {
+      "title": "Laravel News Blog",
+      "feed_url": "https://feed.laravel-news.com/",
+      "website_url": "https://laravel-news.com/blog",
+      "description": "Laravel News is the official blog of Laravel. Every day bringing you the latest news, tutorials, and packages for the framework.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 105600,
+        "instagram": 34000
+      },
+      "image_url": "https://i1.feedspot.com/4635109.jpg?t=1616408562"
+    },
+    {
+      "title": "Symfony Framework Blog",
+      "feed_url": "https://feeds.feedburner.com/symfony/blog",
+      "website_url": "https://symfony.com/blog/",
+      "description": "Symfony is an Open Source PHP Web applications development framework. Official Symfony Blog: all about Symfony releases, new Symfony features, case studies and other important announcements.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 45000
+      },
+      "image_url": "https://i1.feedspot.com/4635085.jpg?t=1683013661"
+    },
+    {
+      "title": "PHP Classes Blog",
+      "feed_url": "https://www.phpclasses.org/blog/post/latest.xml",
+      "website_url": "https://www.phpclasses.org/blog/",
+      "description": "Follow PHPClasses for early insights about upcoming site features. Free ready to use contributed PHP class scripts, book reviews, jobs, specialist forums.",
+      "followers": {
+        "twitter": 44700
+      },
+      "image_url": "https://i1.feedspot.com/2117057.jpg?t=1712205759"
+    },
+    {
+      "title": "murze.be Blog - Freek Van der Herten",
+      "feed_url": "https://freek.dev/feed",
+      "website_url": "https://freek.dev/",
+      "description": "A blog on modern PHP and Laravel. Freek Van der Herten is a Laravel enthousiast and PHP developer at Spatie",
+      "followers": {
+        "twitter": 52900
+      },
+      "image_url": "https://i1.feedspot.com/4387992.jpg?t=1616408600"
+    },
+    {
+      "title": "Rob Allen's DevNotes",
+      "feed_url": "https://akrabat.com/feed/",
+      "website_url": "https://akrabat.com/",
+      "description": "Rob is a PHP and Zend Framework expert based in Worcester, UK. He runs Nineteen Feet, is the author of Zend Framework in Action.",
+      "followers": {
+        "twitter": 13300
+      },
+      "image_url": "https://i1.feedspot.com/4634599.jpg?t=1616408992"
+    },
+    {
+      "title": "Matthew Weierophinney Blog",
+      "feed_url": "https://mwop.net/blog/rss.xml",
+      "website_url": "https://mwop.net/blog",
+      "description": "Matthew Weierophinney is an open source software architect, specializing in PHP. He is a Zend Certified Engineer, and a member of the Zend Education Advisory Board, the group responsible for authoring the Zend Certification Exam.",
+      "followers": {
+        "twitter": 14600,
+        "instagram": 287
+      },
+      "image_url": "https://i1.feedspot.com/4635276.jpg?t=1616409929"
+    },
+    {
+      "title": "Zend Blog",
+      "feed_url": "https://www.zend.com/blog/feed",
+      "website_url": "https://www.zend.com/blog",
+      "description": "Zend by Perforce delivers leading PHP solutions including Zend Server, ZendPHP Enterprise runtimes, support for PHP and Laminas, plus training and certification. This PHP blog includes articles from experts about PHP development, security, best practices and more.",
+      "followers": {
+        "facebook": 44800,
+        "twitter": 42100
+      },
+      "image_url": "https://i1.feedspot.com/5263875.jpg?t=1617287282"
+    },
+    {
+      "title": "Paul M. Jones",
+      "feed_url": "https://paul-m-jones.com/atom.xml",
+      "website_url": "https://paul-m-jones.com/",
+      "description": "Paul M. Jones is an internationally recognized PHP expert, working in that language since 1999, and programming in general since 1983. He has held roles from junior developer to VP of Engineering in all kinds of organizations (corporate, military, non-profit, educational, medical, and others). He is a regular speaker at technical conferences worldwide.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/116281.jpg?t=1616409783"
+    },
+    {
+      "title": "urmaul.com",
+      "feed_url": "https://urmaul.com/atom.xml?format=xml",
+      "website_url": "https://urmaul.com/",
+      "description": "My name is Bogdan. I live in Berlin and I develop things for the Internet. One time I'll white here something more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4772388.jpg?t=1616409731"
+    },
+    {
+      "title": "Ash Allen Design",
+      "feed_url": "https://ashallendesign.co.uk/rss/blog",
+      "website_url": "https://ashallendesign.co.uk/blog/",
+      "description": "Stay up to date with latest blog posts from Ash Allen Design. The blog covers areas such as Laravel, PHP, web development and website design.",
+      "followers": {
+        "facebook": 120
+      },
+      "image_url": "https://i1.feedspot.com/8797470.jpg?t=1762770757"
+    },
+    {
+      "title": "Honeybadger \u00bb PHP",
+      "feed_url": "https://www.honeybadger.io/blog/php/feed.xml",
+      "website_url": "https://www.honeybadger.io/blog/php/",
+      "description": "The blog section for 'PHP' on Honeybadger's Developer Blog provides practical tutorials and best-practice guides for PHP (and often its frameworks like Laravel), focused on error-handling, performance, code quality and deployment workflows.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/8797471.jpg?t=1762770759"
+    },
+    {
+      "title": "Andrew Woods",
+      "feed_url": "https://andrewwoods.net/section/articles/feed/",
+      "website_url": "https://andrewwoods.net/section/articles/",
+      "description": "Andrew Woods is a senior developer, located in NYC, who develops web applications. He's specializes in modernizing PHP-based applications. Andrew values accessibility, design, and user experience.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8797472.jpg?t=1762770760"
+    },
+    {
+      "title": "PHP Magazine",
+      "feed_url": "https://phpmagazine.net/feed",
+      "website_url": "https://phpmagazine.net/",
+      "description": "PHP Magazine is an online magazine about PHP programming language and web application development technologies. Since 2015, their network of 25 Magazines merged in a single magazine to keep focused on just important information.",
+      "followers": {
+        "facebook": 980,
+        "twitter": 2600,
+        "instagram": 6
+      },
+      "image_url": "https://i1.feedspot.com/4635096.jpg?t=1612949195"
+    },
+    {
+      "title": "Phpblogs",
+      "feed_url": "https://phpblogs.in/feed/",
+      "website_url": "https://phpblogs.in/",
+      "description": "Phpblogs is the largest free PHP content resource website for all beginners and experts to increase the power of knowledge. Our main goal is to provide cutting-edge helpful PHP tutorials including various CMS and its frameworks that are easy to understand for small businesses, bloggers, and non-techy PHP website developer as well as owners.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5263876.jpg?t=1618927218"
+    },
+    {
+      "title": "eTatvaSoft Blog",
+      "feed_url": "http://www.etatvasoft.com/blog/feed/",
+      "website_url": "https://www.etatvasoft.com/blog/",
+      "description": "eTatvaSoft is a PHP Web Development company provides PHP Application and Open Source Application Development services around the world.",
+      "followers": {
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/4635658.jpg?t=1616408983"
+    },
+    {
+      "title": "Colin O'Dell Blog",
+      "feed_url": "https://www.colinodell.com/blog/rss.xml",
+      "website_url": "https://www.colinodell.com/blog",
+      "description": "Colin O'Dell is a Web Developer, author, speaker, and open-source project maintainer.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4635592.jpg?t=1616408999"
+    },
+    {
+      "title": "Matt Stauffer on Laravel, PHP, Frontend development Blog",
+      "feed_url": "https://mattstauffer.com/blog/feed.atom",
+      "website_url": "https://mattstauffer.com/blog/",
+      "description": "Matt Stauffer is a developer and a communicator, and Partner/Technical Director at Tighten Co.",
+      "followers": {
+        "twitter": 33200
+      },
+      "image_url": "https://i1.feedspot.com/4479329.jpg?t=1616408607"
+    },
+    {
+      "title": "PHPFOREVER",
+      "feed_url": "https://phpforever.com/feed/",
+      "website_url": "https://phpforever.com/",
+      "description": "PHPForever is an opensource web development tutorial especially developed for candidates who are looking for practical exposure. Its aim is to provide free practical tutorial as well as a project in PHP domain-like PHP, Codeigniter, Laravel, MySql, PostgreSql, Javascript, Jquery, etc.",
+      "followers": {
+        "facebook": 73
+      },
+      "image_url": "https://i1.feedspot.com/5198143.jpg?t=1600689320"
+    },
+    {
+      "title": "PHP Development - PHP Blog",
+      "feed_url": "http://phpdevelopment.net/php-blog/feed/",
+      "website_url": "https://phpdevelopment.net/php-blog/",
+      "description": "PHPDevelopment.net offers Professional PHP Development services in the United States. Their U.S. Based PHP Developers provide Enterprise level solutions.",
+      "followers": {
+        "twitter": 152300
+      },
+      "image_url": "https://i1.feedspot.com/4635365.jpg?t=1616409954"
+    },
+    {
+      "title": "My Programming Tutorials",
+      "feed_url": "https://www.myprogrammingtutorials.com/feed",
+      "website_url": "https://www.myprogrammingtutorials.com/",
+      "description": "My Programming Tutorials is one stop solution for passionate programmers which provides various tricks and tutorials on mobile app development, ionic framework, codeigniter, jquery and web development.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 47
+      },
+      "image_url": "https://i1.feedspot.com/4635187.jpg?t=1616409960"
+    },
+    {
+      "title": "Qafoo - PHP Hypertext Processor",
+      "feed_url": "https://qafoo.com/blog/php.rss",
+      "website_url": "https://qafoo.com/blog/php.html",
+      "description": "Qafoo GmbH provides Training, Consulting and Support for Quality Assurance Processes and various quality assurance tools like PHP_Depend, PHPMD, Arbit and PhpUnderControl.",
+      "followers": {
+        "facebook": 201,
+        "twitter": 595
+      },
+      "image_url": "https://i1.feedspot.com/4634668.jpg?t=1616409116"
+    },
+    {
+      "title": "Programmer Desk",
+      "feed_url": "https://programmerdesk.com/feed/",
+      "website_url": "https://programmerdesk.com/",
+      "description": "Best learning place for beginner and expert level programmer. Programmer Desk helps to make developer life easy. There is wide range of tutorials including PHP, WP, CodeIgniter, Laravel and Many more..",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5452548.jpg?t=1664880570"
+    },
+    {
+      "title": "Stefan Mischook - KillerPHP.com",
+      "feed_url": "https://www.killerphp.com/feed/",
+      "website_url": "https://www.killerphp.com/articles/",
+      "description": "Stefan Mischook blog is for to teach PRACTICAL PHP to non-nerd web designer types. With the recent release of PHP7 in 2016, PHP continues to prove that it is a powerful programming language.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4634704.jpg"
+    },
+    {
+      "title": "Envato Tuts \u00bb PHP",
+      "feed_url": "https://code.tutsplus.com/categories/php.atom",
+      "website_url": "https://code.tutsplus.com/c/php",
+      "description": "Contains the most recent PHP how-to tutorials, courses, books, and guides. Envato Tuts provides tutorials and online courses to help you learn software development, from mobile devices to web applications.",
+      "followers": {
+        "facebook": 497800,
+        "twitter": 105900
+      },
+      "image_url": "https://i1.feedspot.com/5305989.jpg?t=1627474504"
+    },
+    {
+      "title": "SitePoint - PHP",
+      "feed_url": "https://www.sitepoint.com/php/",
+      "website_url": "https://www.sitepoint.com/php/",
+      "description": "Learn PHP with online tutorials, courses and books plus articles from industry experts covering MySQL, Laravel, Symfony, TDD, Restful APIs and more.",
+      "followers": {
+        "facebook": 91700,
+        "twitter": 114600
+      },
+      "image_url": "https://i1.feedspot.com/4634685.jpg?t=1616409124"
+    },
+    {
+      "title": "Voices of the ElePHPant",
+      "feed_url": "https://voicesoftheelephpant.com/feed/",
+      "website_url": "https://www.phpkolkata.com/blog/",
+      "description": "Interviews with the people that are making the PHP community special.",
+      "followers": {
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4634656.jpg?t=1616408569"
+    },
+    {
+      "title": "PHP KOLKATA Blog",
+      "feed_url": "https://www.phpkolkata.com/blog/feed/",
+      "website_url": "https://www.phpkolkata.com/blog/",
+      "description": "PHPKolkata is one of the best php training institute and placement consultancy in kolkata.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/4635312.jpg?t=1616409099"
+    },
+    {
+      "title": "Fabien Potencier",
+      "feed_url": "http://feeds.fabien.potencier.org/aidedecamp",
+      "website_url": "https://fabien.potencier.org/",
+      "description": "The blog of Fabien Potencier about web technology and the symfony framework.",
+      "followers": {
+        "twitter": 47900
+      },
+      "image_url": "https://i1.feedspot.com/103778.jpg?t=1616409897"
+    }
+  ]
+}

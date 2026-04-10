@@ -1,0 +1,59 @@
+{
+  "category": "UK Pen",
+  "source_url": "https://rss.feedspot.com/uk_pen_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ian Hedley",
+      "feed_url": "http://penpaperpencil.net/feed/",
+      "website_url": "https://penpaperpencil.net/",
+      "description": "Welcome to Pens! Paper! Pencils by Ian Hedley. Follow us to keep up with articles on pens, paper, pencils and art.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4710259.jpg?t=1619682451"
+    },
+    {
+      "title": "United Inkdom",
+      "feed_url": "http://unitedinkdom.uk/feed/",
+      "website_url": "http://unitedinkdom.uk/",
+      "description": "UnitedInkdom is a stationery news and reviews site, with a twist; as well as everyday news pieces, we do meta-reviews. The reviews posted here are compiled from reviews by knowledgeable, experienced fountain pen /ink/paper obsessives who have already carried out their own original reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4710120.jpg?t=1619684658"
+    },
+    {
+      "title": "penbox.co.uk Blog",
+      "feed_url": "https://penboxblog.co.uk/feed/",
+      "website_url": "https://penboxblog.co.uk/",
+      "description": "Penbox is a luxury pens, inks, pen refills, pen nibs and writing accessories retailer, offering prestige pens, nibs, writing accessories and more. It aims to supply individuals with a range of prestige pens, inks and writing accessories and has a retail and internet presence.",
+      "followers": {
+        "facebook": 365,
+        "twitter": 116,
+        "instagram": 727
+      },
+      "image_url": "https://i1.feedspot.com/4710831.jpg?t=1619683901"
+    },
+    {
+      "title": "The Pen Company Blog",
+      "feed_url": "https://www.thepencompany.com/blog/feed/",
+      "website_url": "https://www.thepencompany.com/blog/",
+      "description": "The Pen Company is a family run business that specialises in selling quality pens & pencils through our website. We stock a wide selection of pens and pencils from a child's first fountain pen to limited edition collectors pens. Subscribe us to keep up with articles, tips, reviews and more from the Pen Company.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4709370.jpg?t=1619682390"
+    },
+    {
+      "title": "Pen Heaven Blog | Keeping Handwriting Alive | Pen tips, news and reviews",
+      "feed_url": "https://www.penheaven.co.uk/blog/feed",
+      "website_url": "https://www.penheaven.co.uk/blog/",
+      "description": "Find a huge range of luxury pens from brands including Parker & Cross at Pen Heaven. It is a personalised pen specialist based in north London. They offer a same day personalisation service, in-house, using our state of the art laser engraving machine.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4709162.jpg?t=1619683921"
+    }
+  ]
+}

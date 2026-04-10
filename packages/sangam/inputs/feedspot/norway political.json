@@ -1,0 +1,38 @@
+{
+  "category": "Norway Political",
+  "source_url": "https://rss.feedspot.com/norway_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "Politico \u00bb Norway",
+      "feed_url": "https://www.politico.eu/country/norway/feed/",
+      "website_url": "https://www.politico.eu/country/norway/",
+      "description": "Latest politics, government and election news for Norway. POLITICO strives to be the dominant source for news on politics and policy in power centers across every continent where access to reliable information, nonpartisan journalism, and real-time tools create, inform and engage a global citizenry.",
+      "followers": {
+        "facebook": 240600,
+        "twitter": 358700
+      },
+      "image_url": "https://i1.feedspot.com/4947682.jpg?t=1638367956"
+    },
+    {
+      "title": "The Nordic Page \u00bb Norway Politics",
+      "feed_url": "https://www.tnp.no/category/norway/politics/feed/",
+      "website_url": "https://www.tnp.no/category/norway/politics/",
+      "description": "Know everything about Norway politics in this section. The Nordic Page (TNP) has started as Norway's only printed English magazine in 2010 and its online newspaper has been launched in 2012. TNP is more than an ordinary news source; it is a leading resource that helps English speakers to understand Norway through its dynamic web and mobile edition.",
+      "followers": {
+        "facebook": 24300
+      },
+      "image_url": "https://i1.feedspot.com/5349149.jpg?t=1638364359"
+    },
+    {
+      "title": "Fremskrittspartiet",
+      "feed_url": "https://www.frp.no/feed.rss",
+      "website_url": "https://www.frp.no/nyheter",
+      "description": "The Progress Party is a liberal people's party. We work for a stricter immigration policy, safe care for the elderly, good hospitals, lower taxes and fees and better roads.",
+      "followers": {
+        "facebook": 174800,
+        "instagram": 48100
+      },
+      "image_url": "https://i1.feedspot.com/5349147.jpg?t=1638368391"
+    }
+  ]
+}

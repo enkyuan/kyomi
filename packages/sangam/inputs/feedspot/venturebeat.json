@@ -1,0 +1,88 @@
+{
+  "category": "VentureBeat",
+  "source_url": "https://rss.feedspot.com/venturebeat_rss_feeds",
+  "feeds": [
+    {
+      "title": "VentureBeat",
+      "feed_url": "https://venturebeat.com/feed/",
+      "website_url": "https://venturebeat.com/",
+      "description": "VentureBeat is the leading source for news & perspective on tech innovation. We give context to help execs, entrepreneurs, & tech enthusiasts make smart decisions.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4655297.jpg?t=1743165433"
+    },
+    {
+      "title": "VentureBeat \u00bb Artificial Intelligence",
+      "feed_url": "https://venturebeat.com/category/ai/feed/",
+      "website_url": "https://venturebeat.com/category/ai/",
+      "description": "All latest articles about Artificial Intelligence from VentureBeat.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000
+      },
+      "image_url": "https://i1.feedspot.com/4922559.jpg?t=1753098055"
+    },
+    {
+      "title": "VentureBeat \u00bb Security",
+      "feed_url": "https://venturebeat.com/category/security/feed/",
+      "website_url": "https://venturebeat.com/category/security/",
+      "description": "All latest articles about Security from VentureBeat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7893584.jpg?t=1743165306"
+    },
+    {
+      "title": "VentureBeat \u00bb Data Infrastructure",
+      "feed_url": "https://venturebeat.com/category/data-infrastructure/feed/",
+      "website_url": "https://venturebeat.com/category/data-infrastructure/",
+      "description": "All latest articles about Data Infrastructure from VentureBeat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7893582.jpg?t=1743165305"
+    },
+    {
+      "title": "VentureBeat \u00bb Enterprise Analytics",
+      "feed_url": "https://venturebeat.com/category/enterprise-analytics/feed/",
+      "website_url": "https://venturebeat.com/category/enterprise-analytics/",
+      "description": "All latest articles about Enterprise Analytics from VentureBeat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7893580.jpg?t=1743165303"
+    },
+    {
+      "title": "VentureBeat \u00bb Data Decision Makers",
+      "feed_url": "https://venturebeat.com/category/datadecisionmakers/feed/",
+      "website_url": "https://venturebeat.com/category/datadecisionmakers/",
+      "description": "All latest articles about Data Decision Makers from VentureBeat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7893583.jpg?t=1743165303"
+    },
+    {
+      "title": "VentureBeat \u00bb Virtual Communication",
+      "feed_url": "https://venturebeat.com/category/virtual/feed/",
+      "website_url": "https://venturebeat.com/category/virtual/",
+      "description": "All latest articles about Virtual Communication from VentureBeat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7893581.jpg?t=1743165302"
+    },
+    {
+      "title": "VentureBeat \u00bb Automation",
+      "feed_url": "https://venturebeat.com/category/automation/feed/",
+      "website_url": "https://venturebeat.com/category/automation/",
+      "description": "All latest articles about Automation from VentureBeat.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000
+      },
+      "image_url": "https://i1.feedspot.com/5637476.jpg?t=1743165304"
+    },
+    {
+      "title": "VentureBeat \u00bb Programming & Development",
+      "feed_url": "https://venturebeat.com/category/programming-development/feed/",
+      "website_url": "https://venturebeat.com/category/programming-development/",
+      "description": "All latest articles about Programming & Development from VentureBeat.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7893585.jpg?t=1743165301"
+    }
+  ]
+}

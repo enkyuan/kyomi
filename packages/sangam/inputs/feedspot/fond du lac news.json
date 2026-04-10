@@ -1,0 +1,29 @@
+{
+  "category": "Fond Du Lac News",
+  "source_url": "https://rss.feedspot.com/fond_du_lac_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Radio Plus Inc",
+      "feed_url": "https://radioplusinfo.com/category/local-news/feed/",
+      "website_url": "https://radioplusinfo.com/",
+      "description": "Radio Plus Inc delivers up-to-the-minute news and information on the latest top stories, weather, entertainment and more.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 233
+      },
+      "image_url": "https://i1.feedspot.com/5150520.jpg"
+    },
+    {
+      "title": "Fond du Lac Reporter",
+      "feed_url": "https://www.fdlreporter.com/",
+      "website_url": "https://www.fdlreporter.com/",
+      "description": "The Fond du Lac Reporter is one of the daily newspapers within Gannett Wisconsin Media that provides readers with news, information and local advertising offers. We provide our readers with news and information that is relevant and timely.",
+      "followers": {
+        "facebook": 28400,
+        "twitter": 6200,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5127477.jpg?t=1671774447"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "category": "Peruvian Food",
+  "source_url": "https://rss.feedspot.com/peruvian_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Amigo Foods Blog \u00bb Peruvian Foods",
+      "feed_url": "https://blog.amigofoods.com/index.php/Topics/peruvian-foods/feed/",
+      "website_url": "https://blog.amigofoods.com/index.php/Topics/peruvian-foods/",
+      "description": "Enjoy Peruvian food articles on the very best foods, drinks, and recipes Peru has to offer to the culinary world. Our e-commerce store is the largest online Latin grocery store offering a wide variety of hard-to-find freshly imported foods & drinks from all over Latin America and Spain. By using 21st-century technology and good old fashion hard work we are happy to share and serve your Latin food needs in a prompt, courteous, and efficient manner.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5431333.jpg?t=1660210681"
+    },
+    {
+      "title": "Eat Peru",
+      "feed_url": "https://www.eatperu.com/feed/",
+      "website_url": "https://www.eatperu.com/",
+      "description": "Hi, I am Keith, a native English speaker, Spanish speaker, food lover, traveler, and writer. EatPeru is an independent recipe and food blog dedicated to the wonderful and delicious cuisine of Peru.",
+      "followers": {
+        "facebook": 594,
+        "twitter": 436,
+        "instagram": 712
+      },
+      "image_url": "https://i1.feedspot.com/5172163.jpg?t=1595083196"
+    },
+    {
+      "title": "Brasa Peruvian Kitchen",
+      "feed_url": "https://brasaperuvian.com/blogs/news.atom",
+      "website_url": "https://brasaperuvian.com/blogs/news",
+      "description": "Read blogs by Brasa Peruvian Kitchen to find out the latest stories, recipes, and techniques to become a great at-home cook. Hi, I'm Michel Falcon. I have built this company to share how great the flavors of Peru are and introduce more people to the majestic elements that are Peruvian culture.",
+      "followers": {
+        "twitter": 43,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5431332.jpg?t=1660210453"
+    },
+    {
+      "title": "Pisco Trail Blog",
+      "feed_url": "https://www.piscotrail.com/feed/",
+      "website_url": "https://www.piscotrail.com/blog/",
+      "description": "Explore Pisco Trail Blog for Peruvian food recipes, Peru's traditional dishes, pisco cocktails, and more. The blog belongs to Nico Vera, a freelance writer, photographer, and vegan chef specializing in Peru's drink and food culture. He is on a mission to veganize Peruvian cuisine.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 841,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5431334.jpg?t=1661345512"
+    }
+  ]
+}

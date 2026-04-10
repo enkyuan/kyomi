@@ -1,0 +1,40 @@
+{
+  "category": "Naperville News",
+  "source_url": "https://rss.feedspot.com/naperville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Positively Naperville",
+      "feed_url": "https://www.positivelynaperville.com/feed",
+      "website_url": "https://www.positivelynaperville.com/",
+      "description": "Positively Naperville is your source for breaking news, sports, weather, business, art, entertainment, and Naperville City headlines.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 4800,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5140539.jpg?t=1623651700"
+    },
+    {
+      "title": "Chicago Tribune \u00bb Naperville Sun",
+      "feed_url": "https://www.chicagotribune.com/naperville-sun/feed/",
+      "website_url": "https://www.chicagotribune.com/naperville-sun/",
+      "description": "Gather today's Top news stories and trending videos from Naperville, reported by the Chicago Tribune. The Chicago Tribune is the top source of news and information in the Chicago area and the largest news organization in the Midwest.",
+      "followers": {
+        "facebook": 721400,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5500083.jpg?t=1674807609"
+    },
+    {
+      "title": "Chicago Morning Star \u00bb Naperville",
+      "feed_url": "https://chicagomorningstar.com/tag/naperville/feed",
+      "website_url": "https://chicagomorningstar.com/tag/naperville",
+      "description": "We provide readers with the most up-to-date and unbiased information about life in Chicago, Illinois, the USA and the world. Find the latest news of Naperville at Chicago Morning Star.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 923
+      },
+      "image_url": "https://i1.feedspot.com/5140567.jpg"
+    }
+  ]
+}

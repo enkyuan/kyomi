@@ -1,0 +1,52 @@
+{
+  "category": "San Clemente News",
+  "source_url": "https://rss.feedspot.com/san_clemente_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Orange County Register \u00bb San Clemente",
+      "feed_url": "https://www.ocregister.com/location/california/orange-county/san-clemente/feed/",
+      "website_url": "https://www.ocregister.com/location/california/orange-county/san-clemente/",
+      "description": "The Orange County Register covers local news from San Clemente CA, including city government, crime and breaking news.",
+      "followers": {
+        "facebook": 186400,
+        "twitter": 262600,
+        "instagram": 107300
+      },
+      "image_url": "https://i1.feedspot.com/5152538.jpg?t=1589800039"
+    },
+    {
+      "title": "KTLA 5 \u00bb San Clemente",
+      "feed_url": "https://ktla.com/tag/san-clemente/feed/",
+      "website_url": "https://ktla.com/tag/san-clemente/",
+      "description": "The latest news and updates in San Clemente brought to you by the team at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5152540.jpg?t=1589800219"
+    },
+    {
+      "title": "San Clemente Journal",
+      "feed_url": "https://www.sanclementejournal.com/?format=rss",
+      "website_url": "https://www.sanclementejournal.com/",
+      "description": "San Clemente Journal is a quarterly, tabloid-sized magazine 'Celebrating Life in San Clemente'.",
+      "followers": {
+        "facebook": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5152527.jpg?t=1626331190"
+    },
+    {
+      "title": "San Clemente Times",
+      "feed_url": "https://www.sanclementetimes.com/category/eye-on-sc/news-headlines/feed/",
+      "website_url": "https://www.picketfencemedia.com/sanclementetimes/",
+      "description": "The San Clemente Times is a leading source of local news, events, sports, surf reports, and more from San Clemente, California.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 5500,
+        "instagram": 19700
+      },
+      "image_url": "https://i1.feedspot.com/5152558.jpg?t=1626331195"
+    }
+  ]
+}

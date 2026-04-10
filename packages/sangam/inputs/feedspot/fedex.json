@@ -1,0 +1,28 @@
+{
+  "category": "FedEx",
+  "source_url": "https://rss.feedspot.com/fedex_rss_feeds",
+  "feeds": [
+    {
+      "title": "Route Advisors",
+      "feed_url": "https://www.routeadvisors.com/feed/",
+      "website_url": "https://www.routeadvisors.com/blog-posts/",
+      "description": "Are you interested in learning more about owning or selling FedEx routes? Find more information and insights from various blog posts from Route Advisors which specializes in helping sellers and buyers of FedEx Routes since 2014.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5349527.jpg?t=1638445715"
+    },
+    {
+      "title": "KR Capital LLC Blog",
+      "feed_url": "https://www.deliveryroutesforsale.com/feed/",
+      "website_url": "https://www.deliveryroutesforsale.com/blog/",
+      "description": "A source for the latest updates on buying & selling FedEx Routes. Get articles on best practices, buyer & seller insights, and industry news. KR Capital LLC is an industry leader specializing exclusively in the sale of FedEx Ground, Home Delivery, and Linehaul routes.",
+      "followers": {
+        "facebook": 148,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/5349528.jpg?t=1638444775"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>HN Recommended Feeds (Ask HN: Good RSS feeds)</title>
+  </head>
+  <body>
+    <outline text="Feeds from Ask HN thread" title="Feeds from Ask HN thread">
+      <outline text="Ghacks" type="rss" xmlUrl="https://www.ghacks.net/feed/" htmlUrl="https://www.ghacks.net/"/>
+      <outline text="Krebs on Security" type="rss" xmlUrl="http://krebsonsecurity.com/feed/" htmlUrl="http://krebsonsecurity.com/"/>
+      <outline text="Malwarebytes Blog" type="rss" xmlUrl="http://blog.malwarebytes.org/feed/" htmlUrl="http://blog.malwarebytes.org/"/>
+      <outline text="Ars Technica" type="rss" xmlUrl="http://feeds.arstechnica.com/arstechnica/index/" htmlUrl="https://arstechnica.com/"/>
+      <outline text="DSL Reports" type="rss" xmlUrl="http://feeds.feedburner.com/dslreports" htmlUrl="https://www.dslreports.com/"/>
+      <outline text="PetaPixel" type="rss" xmlUrl="https://feedproxy.google.com/PetaPixel" htmlUrl="https://petapixel.com/"/>
+      <outline text="Slashdot" type="rss" xmlUrl="http://rss.slashdot.org/Slashdot/slashdotMain" htmlUrl="https://slashdot.org/"/>
+      <outline text="IEEE Spectrum" type="rss" xmlUrl="https://spectrum.ieee.org/feeds/topic.rss" htmlUrl="https://spectrum.ieee.org/"/>
+      <outline text="Ben's Bargains" type="rss" xmlUrl="http://bensbargains.net/rss/" htmlUrl="http://bensbargains.net/"/>
+      <outline text="Dan Luu" type="rss" xmlUrl="https://danluu.com/atom.xml" htmlUrl="https://danluu.com/"/>
+      <outline text="Google Project Zero" type="rss" xmlUrl="https://googleprojectzero.blogspot.com/feeds/posts/default" htmlUrl="https://googleprojectzero.blogspot.com/"/>
+      <outline text="Faster Than Lime" type="rss" xmlUrl="https://fasterthanli.me/index.xml" htmlUrl="https://fasterthanli.me/"/>
+      <outline text="Andrew Helwer" type="rss" xmlUrl="https://ahelwer.ca/index.xml" htmlUrl="https://ahelwer.ca/"/>
+      <outline text="Erlang Blog" type="rss" xmlUrl="https://www.erlang.org/blog.xml" htmlUrl="https://www.erlang.org/blog/"/>
+      <outline text="Drew DeVault" type="rss" xmlUrl="https://drewdevault.com/blog/index.xml" htmlUrl="https://drewdevault.com/blog/"/>
+      <outline text="Peter Norvig" type="rss" xmlUrl="https://norvig.com/rss-feed.xml" htmlUrl="https://norvig.com/"/>
+      <outline text="Datente Feeds (meta OPML)" type="rss" xmlUrl="https://datente.com/main.feeds" htmlUrl="https://datente.com/"/>
+      <outline text="HN Daily" type="rss" xmlUrl="http://www.daemonology.net/hn-daily/index.rss" htmlUrl="http://www.daemonology.net/hn-daily/"/>
+      <outline text="Martin Kleppmann" type="rss" xmlUrl="https://feeds.feedburner.com/martinkl" htmlUrl="https://martin.kleppmann.com/"/>
+      <outline text="Daring Fireball (JSON Feed)" type="rss" xmlUrl="https://daringfireball.net/feeds/json" htmlUrl="https://daringfireball.net/"/>
+      <outline text="Lazy Dev Stories" type="rss" xmlUrl="https://lazydevstories.com/index.xml" htmlUrl="https://lazydevstories.com/"/>
+      <outline text="Six Colors (JSON Feed)" type="rss" xmlUrl="https://sixcolors.com/feed.json" htmlUrl="https://sixcolors.com/"/>
+      <outline text="Julia Evans (jvns.ca)" type="rss" xmlUrl="https://jvns.ca/atom.xml" htmlUrl="https://jvns.ca/"/>
+    </outline>
+  </body>
+</opml>

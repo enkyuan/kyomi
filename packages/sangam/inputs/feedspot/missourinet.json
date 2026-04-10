@@ -1,0 +1,50 @@
+{
+  "category": "Missourinet",
+  "source_url": "https://rss.feedspot.com/missourinet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Missourinet",
+      "feed_url": "https://feeds.feedburner.com/missourinews",
+      "website_url": "https://www.missourinet.com/",
+      "description": "Your source for Missouri News and Sports.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/1287500.jpg?t=1613566922"
+    },
+    {
+      "title": "Missourinet \u00bb Business",
+      "feed_url": "https://www.missourinet.com/category/business/feed/",
+      "website_url": "https://www.missourinet.com/category/business/",
+      "description": "Subscribe to keep up with business, jobs, economics, and entrepreneurship only in Missourinet.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5245972.jpg?t=1613563061"
+    },
+    {
+      "title": "Missourinet \u00bb Health / Medicine",
+      "feed_url": "https://www.missourinet.com/category/health-medicine/feed/",
+      "website_url": "https://www.missourinet.com/category/health-medicine/",
+      "description": "Get the latest news and updates from the health care industry.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5245994.jpg?t=1613564704"
+    },
+    {
+      "title": "Missourinet \u00bb Crime / Courts",
+      "feed_url": "https://www.missourinet.com/category/crime-courts/feed/",
+      "website_url": "https://www.missourinet.com/category/crime-courts/",
+      "description": "Get the latest news and updates covering crime and courts only on Missourinet.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5245978.jpg?t=1613564599"
+    }
+  ]
+}

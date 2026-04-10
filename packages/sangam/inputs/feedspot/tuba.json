@@ -1,0 +1,58 @@
+{
+  "category": "Tuba",
+  "source_url": "https://rss.feedspot.com/tuba_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wessex Tubas",
+      "feed_url": "https://www.wessex-tubas.com/blogs/news.atom",
+      "website_url": "https://www.wessex-tubas.com/blogs/news",
+      "description": "Wessex Tubas was established by an experienced British tuba player, Jonathan Hodgetts, with the aim of bringing the pleasure of brass music-making to the masses. Starting small and with big ideas, after only a year, Wessex Tubas had grown enough for Jonathan to dedicate all of his time to the business and, in 2012, a distribution centre was opened in the USA; responding to increasing demand in the States.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 126,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5046992.jpg?t=1622549723"
+    },
+    {
+      "title": "Andrew Hitz Blog",
+      "feed_url": "https://www.andrewhitz.com/blog?format=RSS",
+      "website_url": "https://www.andrewhitz.com/blog",
+      "description": "Andrew Hitz is a former tuba player for Boston Brass as well as a soloist, professor, clinician, speaker, music business consultant and Co-Founder of Pedal Note Media. This blog is about the performance and pedagogy of music by Andrew himself.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5047190.jpg?t=1622549785"
+    },
+    {
+      "title": "Strictly Oompah",
+      "feed_url": "https://tubapastor.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://tubapastor.blogspot.com/",
+      "description": "Marching through the history of the Sousaphone that belongs to the Tuba family of brass instruments. Follow to know more and to keep up with our blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5047238.jpg?t=1622549852"
+    },
+    {
+      "title": "Jeremy Lewis, Tuba Blog",
+      "feed_url": "https://www.jeremylewistuba.com/tublog/feed",
+      "website_url": "https://www.jeremylewistuba.com/tublog",
+      "description": "Jeremy Lewis teaches applied lessons to all tuba and euphonium majors at West Texas A&M University. He is the principal tubist with the Amarillo Symphony Orchestra. Follow this blog for online resources, lessons and tips about Tuba.",
+      "followers": {
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/5047198.jpg?t=1622549732"
+    },
+    {
+      "title": "SmartMusic \u00bb Tuba",
+      "feed_url": "https://www.smartmusic.com/search/tuba/feed/rss2",
+      "website_url": "https://www.makemusic.com/blog/",
+      "description": "SmartMusic is a music learning software for educators and students. We aim to develop solutions that transform how music is taught, learned, and performed. Follow for updates about Tuba on SmartMusic.",
+      "followers": {
+        "facebook": 320,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5047024.jpg?t=1622549736"
+    }
+  ]
+}

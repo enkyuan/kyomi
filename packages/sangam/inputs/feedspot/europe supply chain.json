@@ -1,0 +1,38 @@
+{
+  "category": "Europe Supply Chain",
+  "source_url": "https://rss.feedspot.com/europe_supply_chain_rss_feeds",
+  "feeds": [
+    {
+      "title": "SCM Blog",
+      "feed_url": "https://www.supplychainmovement.com/category/blogs/feed/",
+      "website_url": "https://www.supplychainmovement.com/category/blogs/",
+      "description": "Spreading European supply chain knowledge around the world. A blog by Martijn Lofvers. CEO & Chief Trendwatcher of Supply Chain Magazine and Movement, researcher for western movie Brimstone.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4661963.jpg?t=1617718437"
+    },
+    {
+      "title": "Supply Chain Info",
+      "feed_url": "https://www.supplychaininfo.eu/feed/",
+      "website_url": "https://www.supplychaininfo.eu/",
+      "description": "SITL Europe brings together all the innovative products and services dedicated to the supply, distribution and supply chain of tomorrow. It constitutes the highest concentration of transport and logistics users in industry and distribution, serving players in the transport of goods and logistics services.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5528749.jpg?t=1680005730"
+    },
+    {
+      "title": "Sphera \u00bb Supply Chain Sustainability",
+      "feed_url": "https://sphera.com/resources/?_resource_type=blog&_resource_solution=supply-chain-sustainability/",
+      "website_url": "https://sphera.com/resources/?_resource_type=blog&_resource_solution=supply-chain-sustainability/",
+      "description": "Keep up with our thoughts on all of the latest happenings in supply chain responsibility. At SupplyShift, we're committed to helping businesses create more transparent, responsible, and resilient supply chains. We help you discover the insights you need to build more a transparent, sustainable, and resilient supply chain.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5381043.jpg?t=1647347970"
+    }
+  ]
+}

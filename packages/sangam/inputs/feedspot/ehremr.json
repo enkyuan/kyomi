@@ -1,0 +1,356 @@
+{
+  "category": "EHR/EMR",
+  "source_url": "https://rss.feedspot.com/ehr-emr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Open EMR Blog",
+      "feed_url": "https://www.open-emr.org/blog/index.xml",
+      "website_url": "https://www.open-emr.org/blog/",
+      "description": "Open EMR is the world's leading open-source electronic medical record and practice management software. Their blog is a one-stop solution for all the information you might need regarding open EMR such as general information about the technology, recent achievements, ongoing projects, industry news, and technological updates.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5540521.jpg?t=1681379877"
+    },
+    {
+      "title": "AWS Blog \u00bb Amazon EMR",
+      "feed_url": "https://aws.amazon.com/blogs/big-data/tag/amazon-emr/feed/",
+      "website_url": "https://aws.amazon.com/blogs/big-data/tag/amazon-emr/",
+      "description": "The AWS Blog features various articles related to EMR, including tutorials, best practices, use cases, and updates about new features and enhancements to the service. Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted cloud, offering over 200 fully featured services from data centers globally.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5540523.jpg?t=1681379704"
+    },
+    {
+      "title": "EMR Systems Blog",
+      "feed_url": "https://www.emrsystems.net/blog/feed/",
+      "website_url": "https://www.emrsystems.net/blog/",
+      "description": "EMRSystems is a comprehensive EMR/EHR software catalog featuring hundreds of free EMR software demos, pricing information, latest reviews and ratings. EMRSystems also provides latest EHR software news and EMR software comparison.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 238
+      },
+      "image_url": "https://i1.feedspot.com/5540546.jpg?t=1681379828"
+    },
+    {
+      "title": "Nextech Blog",
+      "feed_url": "https://www.nextech.com/blog/rss.xml",
+      "website_url": "https://www.nextech.com/blog",
+      "description": "The latest news and information regarding electronic medical records, practice management software, and ICD-10. Nextech is the complete healthcare technology solution for clinical specialties of Ophthalmology, Plastic Surgery, Dermatology, and Orthopedics.",
+      "followers": {
+        "facebook": 425,
+        "twitter": 741
+      },
+      "image_url": "https://i1.feedspot.com/4955656.jpg?t=1627732033"
+    },
+    {
+      "title": "Practice Pro Blog",
+      "feed_url": "https://ptpracticepro.com/feed/",
+      "website_url": "https://ptpracticepro.com/resources/research/",
+      "description": "A web-based EMR and practice management software platform designed to be flexible and customizable to work the way you do, so you'll actually enjoy using it. Explore a wide selection of physical therapy EMR thought leadership. Learn how you can grow your practice and increase patient and financial outcomes through Practice Pro Blog.",
+      "followers": {
+        "facebook": 271,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5540534.jpg?t=1681379757"
+    },
+    {
+      "title": "Find EMR",
+      "feed_url": "https://www.findemr.com/resources/feed/",
+      "website_url": "https://www.findemr.com/resources/",
+      "description": "FindEMR is one of the leading contenders for the title of the best online software finding resource! And we take pride in that and provide our clients with the right industry insights and expert advice to make sure they find the best software. Looking for medical software? Read blogs & reviews on finding the right fit for your medical practice, hospitals, nursing homes, and more in 2022.",
+      "followers": {
+        "twitter": 75
+      },
+      "image_url": "https://i1.feedspot.com/5540543.jpg?t=1681380644"
+    },
+    {
+      "title": "Practice EHR Blog",
+      "feed_url": "https://www.practiceehr.com/blog/rss.xml",
+      "website_url": "https://www.practiceehr.com/blog",
+      "description": "Practice EHR is a leading provider of simple, cloud-based, cost-effective healthcare solutions. The Practice EHR blog is your resource for running a more profitable and efficient practice. Read healthcare news and insights for small practice physicians.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 371
+      },
+      "image_url": "https://i1.feedspot.com/5540525.jpg?t=1681379716"
+    },
+    {
+      "title": "DrChrono Blog",
+      "feed_url": "https://drchrono.com/blog/index.xml",
+      "website_url": "https://drchrono.com/blog/",
+      "description": "DrChrono is a culmination of people passionate in crafting only the best healthcare platform & community. The driving force of our efforts is in changing the way people engage and experience healthcare. Be on the leading edge of Healthcare and Tech with DrChrono. Stay up to date with our company news, platform new features, industry news, and regulatory updates.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5540544.jpg?t=1681380752"
+    },
+    {
+      "title": "Checkpoint EHR Blog",
+      "feed_url": "https://checkpointehr.com/feed/",
+      "website_url": "https://checkpointehr.com/blog/",
+      "description": "Visit the Checkpoint EHR blog today to find helpful articles on how our software can benefit your behavioral health practice! If there is one reason behavioral health practitioners of all sizes use Checkpoint EHR, it's quality of service and guidance we provide along with our tailor-made software. We understand what is at stake when you go to work every day, and we come to work with the same mindset. Simply put, your goals are our goals.",
+      "followers": {
+        "facebook": 302,
+        "instagram": 39
+      },
+      "image_url": "https://i1.feedspot.com/5540542.jpg?t=1681380969"
+    },
+    {
+      "title": "EHRA",
+      "feed_url": "https://ehrablog.org/feed/",
+      "website_url": "https://ehrablog.org/",
+      "description": "Established in 2004, the Electronic Health Record Association (EHRA) is comprised of more than 30 companies that supply the vast majority of EHRs to physicians' practices and hospitals across the United States. EHRA operates on the premise that the rapid, widespread adoption of EHRs will help improve the quality of patient care as well as the productivity and sustainability of the healthcare system as a key enabler of healthcare transformation.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5540526.jpg?t=1681381009"
+    },
+    {
+      "title": "Sigmund Software Blog",
+      "feed_url": "https://www.sigmundsoftware.com/feed/",
+      "website_url": "https://www.sigmundsoftware.com/blog/",
+      "description": "We believe that our customers deserve a software solution, not just software. A complete solution starts with the software and ends with the quality of service provided by the vendor. Our users receive a cutting-edge enterprise platform and a full suite of enterprise-level services to match. We strive to be an active partner in your success, not just a technology partner.",
+      "followers": {
+        "facebook": 542,
+        "twitter": 621
+      },
+      "image_url": "https://i1.feedspot.com/5540531.jpg?t=1681379739"
+    },
+    {
+      "title": "Arya Health Blog",
+      "feed_url": "https://www.aryaehr.com/blog-feed.xml",
+      "website_url": "https://www.aryaehr.com/blog",
+      "description": "Up to date NEWS on Electronic Medical Records (EMRs), office efficiencies, technology, events for clinicians, research and other useful topics for physicians, office managers, MOAs and clinics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5540549.jpg?t=1681381303"
+    },
+    {
+      "title": "Revele Blog \u00bb EHR",
+      "feed_url": "https://www.revelemd.com/blog/rss.xml",
+      "website_url": "https://www.revelemd.com/blog/topic/ehr",
+      "description": "Revele's revenue cycle management blog for healthcare professionals provides answers and insights on denial management, patient collections, and value-based payments.",
+      "followers": {
+        "twitter": 308,
+        "instagram": 159
+      },
+      "image_url": "https://i1.feedspot.com/5540539.jpg?t=1681379779"
+    },
+    {
+      "title": "CapMinds Blog \u00bb EHR",
+      "feed_url": "https://www.capminds.com/blog/category/applications/ehr-vendor/feed/",
+      "website_url": "https://www.capminds.com/blog/category/ehr-vendor/",
+      "description": "CapMinds LLC. is a Health-IT Digital Transformation partner to Healthcare & related organizations. CapMinds the world's largest suppliers of EHR in regions. Allscripts are coming in top in the USA and UK.",
+      "followers": {
+        "facebook": 126,
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/5540547.jpg?t=1681379831"
+    },
+    {
+      "title": "Darena Solutions Blog \u00bb EHR",
+      "feed_url": "https://www.darenasolutions.com/blog?format=rss",
+      "website_url": "https://www.darenasolutions.com/blog/category/EHR",
+      "description": "The Cures Act is multi-pronged and impacts all the stakeholders in healthcare. The real value of the Cures Act will begin when the data gathered from various sources can be easily 'melded' to construct an organized longitudinal health record to provide better real-time insights. To enable this, Darena Solutions has built an entire ecosystem around its BlueButtonPRO Certified FHIR API to complete the process of creation, sharing, and receiving melded data.",
+      "followers": {
+        "twitter": 383
+      },
+      "image_url": "https://i1.feedspot.com/5540537.jpg?t=1681381418"
+    },
+    {
+      "title": "MEDITECH Blog",
+      "feed_url": "https://blog.meditech.com/rss.xml",
+      "website_url": "https://blog.meditech.com/",
+      "description": "MEDITECH's Blog provides healthcare IT resources to inform and empower healthcare professionals all over the world. MEDITECH develops EHRs to simplify and enhance clinicians' interactions with patients.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 8300,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5312442.jpg?t=1629100262"
+    },
+    {
+      "title": "EMR Industry",
+      "feed_url": "https://www.emrindustry.com/feed/",
+      "website_url": "https://www.emrindustry.com/",
+      "description": "EMRIndustry is an exclusive Electronic Medical Records #EMR, Electronic Health Records #EHR, and #Healthcare Portal with Latest News, Articles, Suppliers, etc. Know more information about electronic medical records, electronic health records, emr suppliers, emr software, eclinicalworks, ai in emr at emrindustry.com",
+      "followers": {
+        "facebook": 696,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5540522.jpg?t=1681379700"
+    },
+    {
+      "title": "EMR Magazine",
+      "feed_url": "https://emrmagazine.com/feed/",
+      "website_url": "https://emrmagazine.com/",
+      "description": "EMR Magazine (Electronic Medical Record Magazine) is a publication focused on the latest developments, trends, and news related to electronic health records (EHRs) and healthcare technology. The magazine covers topics such as healthcare IT, healthcare analytics, telemedicine, digital health, patient engagement, and other related areas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5540545.jpg?t=1681382024"
+    },
+    {
+      "title": "Aesthetic Record Blog",
+      "feed_url": "https://blog.aestheticrecord.com/feed/",
+      "website_url": "https://blog.aestheticrecord.com/",
+      "followers": {
+        "facebook": 5900,
+        "instagram": 20900
+      },
+      "image_url": "https://i1.feedspot.com/5540548.jpg?t=1681382144"
+    },
+    {
+      "title": "Senthil Muthiah",
+      "feed_url": "http://emrpms.blogspot.com/feeds/posts/default",
+      "website_url": "http://emrpms.blogspot.com/",
+      "description": "The Senthil Muthiah blog provides information related to Electronic Medical Record (EMR) and Practice Management System (PMS) software. It covers a wide range of topics related to these systems, including reviews, comparisons, features, and benefits. The blog features articles written by industry experts and software users, sharing their experiences, best practices, and tips for success with EMR and PMS systems.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5540520.jpg?t=1681380041"
+    },
+    {
+      "title": "Eggplant Blog \u00bb EMR testing",
+      "feed_url": "https://blog.eggplantsoftware.com/rss.xml",
+      "website_url": "https://blog.eggplantsoftware.com/topic/emr-testing",
+      "description": "At Eggplant we help businesses to test, monitor and analyze their end-to-end customer experience and continuously improve their business outcomes. On the blog, our pool of Software Development authorities share the latest trends, tips, and insight to support your automation journey. Check out now.",
+      "followers": {
+        "facebook": 348,
+        "twitter": 7700,
+        "instagram": 204
+      },
+      "image_url": "https://i1.feedspot.com/4949125.jpg?t=1621493581"
+    },
+    {
+      "title": "Sync Computing Blog",
+      "feed_url": "https://synccomputing.com/feed/",
+      "website_url": "https://synccomputing.com/blog/",
+      "description": "Unleashing the untapped potential of millions of computers in data centers around the world. Spun out of the MIT Lincoln Lab, Sync was founded on the vision of a future of computing no longer dictated by single chips,s but by the orchestration of thousands.",
+      "followers": {
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/5540529.jpg?t=1681379727"
+    },
+    {
+      "title": "Agile EMR Blog",
+      "feed_url": "https://www.agiletherapyemr.com/feed/",
+      "website_url": "https://www.agiletherapyemr.com/blog/",
+      "description": "The AgileEMR blog provides physical therapy clinics and employees the resources to manage their practice - Based in Grand Rapids, MI",
+      "followers": {
+        "facebook": 26
+      },
+      "image_url": "https://i1.feedspot.com/5540533.jpg?t=1681379750"
+    },
+    {
+      "title": "Sevocity Blog",
+      "feed_url": "https://www.sevocity.com/feed/",
+      "website_url": "https://www.sevocity.com/company/blog/",
+      "description": "Sevocity is a combination of two words: seven, which signifies good luck or prosperity and velocity, which means speed or journey. Together, they create prosperous journey. Our mission is to facilitate a prosperous journey for our customers.",
+      "followers": {
+        "facebook": 853,
+        "twitter": 449
+      },
+      "image_url": "https://i1.feedspot.com/5540519.jpg?t=1681381071"
+    },
+    {
+      "title": "EHR Reviews Blog",
+      "feed_url": "https://www.ehrreviews.com/blog/feed/",
+      "website_url": "https://www.ehrreviews.com/blog/",
+      "description": "Finding the right EHR software can be overwhelming. EHR Reviews is helping health care providers choose the right medical software to improve their practices.",
+      "followers": {
+        "facebook": 82,
+        "twitter": 41,
+        "instagram": 53
+      },
+      "image_url": "https://i1.feedspot.com/5540536.jpg?t=1681381107"
+    },
+    {
+      "title": "Criterions Blog",
+      "feed_url": "https://criterions.com/feed/",
+      "website_url": "https://criterions.com/blog-ehr/",
+      "description": "We offer Practice Management and Electronic Health Record solutions to offices, clinics, and billing services of all sizes. Moving to an Electronic Health Record (EHR) can be daunting. We make it easy to create a paperless office, with features designed to work your way.",
+      "followers": {
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5540524.jpg?t=1681379708"
+    },
+    {
+      "title": "EduHealth Blog",
+      "feed_url": "https://www.eduhealthsystem.com/feed/",
+      "website_url": "https://www.eduhealthsystem.com/blog/",
+      "description": "EduHealth provides School nurse software to collect , track and manage student health records. Read our blog and stay updated with the latest health news, tips ,roles and reponsibilities of school nurses , impact of diseases on students , entertainment spots etc",
+      "followers": {
+        "facebook": 501,
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/5540540.jpg?t=1681379797"
+    },
+    {
+      "title": "VisionWeb Blog \u00bb EHR Software",
+      "feed_url": "https://blog.visionweb.com/rss.xml",
+      "website_url": "https://blog.visionweb.com/topic/ehr-software",
+      "description": "The VisionWeb blog. Get the latest and greatest from VisionWeb on our optical industry blog. Over 17,000 ECPs use VisionWeb for a better way to order products and manage claims! And VisionWeb now offers Uprise, a Practice Management & EHR solution!",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5540541.jpg?t=1681379800"
+    },
+    {
+      "title": "Practice Perfect Blog",
+      "feed_url": "https://practiceperfectemr.com/blog/feed/",
+      "website_url": "https://practiceperfectemr.com/blog",
+      "description": "Millions across North America work in the healthcare industry. They didn't choose this line of work because they enjoy doing paperwork they chose it because of a passion for helping people. But when there are still clinical and operational requirements that must be met, there needs to be an easy way to manage them. Enter Practice Perfect EMR Management software, designed to provide clinics with a streamlined approach to daily operations. Learn more about EMR software and practice management to help maximize your clinic's efficiency and profitability by following the Practice Perfect blog.",
+      "followers": {
+        "facebook": 568,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5540538.jpg?t=1681379773"
+    },
+    {
+      "title": "1st Providers Choice Blog",
+      "feed_url": "https://1stproviderschoice.com/company/blog.php/feed/",
+      "website_url": "https://1stproviderschoice.com/company/blog.php/",
+      "description": "Since 1983 providers all over the U.S. have enjoyed the flexibility and power of our software. 1st Providers Choice specializes in Electronic Health Records, Billing & Practice Management Software designed to help practices improve the quality of care, reduce risk, cut costs, and increase revenues.",
+      "followers": {
+        "facebook": 527,
+        "twitter": 281
+      },
+      "image_url": "https://i1.feedspot.com/5540532.jpg?t=1681380159"
+    },
+    {
+      "title": "blueEHR Blog",
+      "feed_url": "https://blueehr.com/blogs/feed/",
+      "website_url": "https://bluebrix.health/blogs",
+      "description": "In 1989 I had co-founded a hospital management software(HMS) company in India. When I came to the US the cost of digital health software shocked me. Someone had to do something, and we decided that we were that someone. So we decided to write open-source software for OpenEMR.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 612
+      },
+      "image_url": "https://i1.feedspot.com/5540527.jpg?t=1681380619"
+    },
+    {
+      "title": "Patagonia Health Blog",
+      "feed_url": "https://patagoniahealth.com/feed/",
+      "website_url": "https://patagoniahealth.com/blog",
+      "description": "Patagonia Health is an integrated Electronic Health Record (EHR), Practice Management, & Billing solution made for public and behavioral health organizations. Patagonia Health's blog provides insight on EHR best practices and EHR training. Learn about best behavioral health EHR practices and public health management.",
+      "followers": {
+        "facebook": 56,
+        "twitter": 688
+      },
+      "image_url": "https://i1.feedspot.com/5540528.jpg?t=1681381031"
+    },
+    {
+      "title": "AllegianceMD Blog",
+      "feed_url": "https://allegiancemd.com/feed",
+      "website_url": "https://allegiancemd.com/blogs",
+      "description": "AllegianceMD is the only web-based medical billing/practice management/EHR software, using Artificial Intelligence.",
+      "followers": {
+        "facebook": 23,
+        "twitter": 1300,
+        "instagram": 11
+      },
+      "image_url": "https://i1.feedspot.com/5540550.jpg?t=1681379853"
+    }
+  ]
+}

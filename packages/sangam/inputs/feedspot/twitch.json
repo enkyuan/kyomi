@@ -1,0 +1,150 @@
+{
+  "category": "Twitch",
+  "source_url": "https://rss.feedspot.com/twitch_rss_feeds",
+  "feeds": [
+    {
+      "title": "TechCrunch | Twitch",
+      "feed_url": "https://techcrunch.com/tag/twitch/feed/",
+      "website_url": "https://techcrunch.com/tag/twitch/",
+      "description": "Stories and news on Twitch from TechCrunch. TechCrunch is a website dedicated to obsessively profiling and reviewing new Internet products and companies.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5040476.jpg?t=1622464579"
+    },
+    {
+      "title": "Kotaku | Twitch",
+      "feed_url": "https://kotaku.com/tag/twitch/rss",
+      "website_url": "https://kotaku.com/tag/twitch",
+      "description": "Twitch news, tips, and more on Twitch from Kotaku. Kotaku is a news and opinion site about games and things serious gamers care about.",
+      "followers": {
+        "facebook": 988500,
+        "twitter": 2600000,
+        "instagram": 49600
+      },
+      "image_url": "https://i1.feedspot.com/5040470.jpg?t=1622464599"
+    },
+    {
+      "title": "Mxdwn | Twitch",
+      "feed_url": "https://games.mxdwn.com/tag/twitch/feed/",
+      "website_url": "https://games.mxdwn.com/tag/twitch/",
+      "description": "More stories on Twitch from mxdwn Games. mxdwn.com is an online entertainment magazine that focuses on news, original reviews, features, photography, and interviews.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 409,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5040483.jpg?t=1622465328"
+    },
+    {
+      "title": "The Guardian | Twitch",
+      "feed_url": "https://www.theguardian.com/games/twitch/rss",
+      "website_url": "https://www.theguardian.com/games/twitch",
+      "description": "Latest Twitch news and features from theguardian.com, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/5040478.jpg?t=1622464592"
+    },
+    {
+      "title": "Engadget | Twitch",
+      "feed_url": "https://www.engadget.com/tag/twitch/rss.xml",
+      "website_url": "https://www.engadget.com/tag/twitch/",
+      "description": "Latest news on Twitch from Engadget. Engadget is your source for technology news and review and breaking stories about the people, products, and ideas shaping our world.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2300000,
+        "instagram": 367700
+      },
+      "image_url": "https://i1.feedspot.com/5039469.jpg?t=1622464595"
+    },
+    {
+      "title": "GeekWire | Twitch",
+      "feed_url": "https://www.geekwire.com/tag/twitch/feed/",
+      "website_url": "https://www.geekwire.com/tag/twitch/",
+      "description": "Stories and news about twitch from GeekWire. GeekWire is a fast-growing news site that focuses on breaking news, expert analysis and unique insights into the technology industry.",
+      "followers": {
+        "facebook": 141300,
+        "twitter": 169200,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5040474.jpg?t=1625645629"
+    },
+    {
+      "title": "Top Twitch Streamers",
+      "feed_url": "https://toptwitchstreamers.com/feed/",
+      "website_url": "https://toptwitchstreamers.com/blog/",
+      "description": "News and updates about Twitch and Twitch streamers. Top Twitch Streamers introduces you to a variety of streamers from the established ones to the up and coming.",
+      "followers": {
+        "facebook": 926,
+        "twitter": 308
+      },
+      "image_url": "https://i1.feedspot.com/5040463.jpg?t=1622464624"
+    },
+    {
+      "title": "StreamerSquare | Twitch",
+      "feed_url": "https://streamersquare.com/tag/twitch-2/feed/",
+      "website_url": "https://streamersquare.com/tag/twitch-2/",
+      "description": "News, updates on Twitch from StreamerSquare. StreamerSquare provides guides, hands-on services, and coaching, reviews to help creators bring their stream to the next level.",
+      "followers": {
+        "facebook": 300,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5040479.jpg?t=1622464619"
+    },
+    {
+      "title": "Twitch Tips",
+      "feed_url": "https://twitchtips.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://twitchtips.blogspot.com/",
+      "description": "A blog about social networking, twitch, gaming, streaming, mixer, news, reviews, tips, guides, and more...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5052126.jpg?t=1625649684"
+    },
+    {
+      "title": "Dot Esports |Twitch",
+      "feed_url": "https://dotesports.com/news/tag/twitch/feed",
+      "website_url": "https://dotesports.com/news/tag/twitch",
+      "description": "News, information and updates on Twitch from Dot Esports. Dot Esports is the premier global destination for the coverage of esports.",
+      "followers": {
+        "facebook": 966200,
+        "twitter": 52000
+      },
+      "image_url": "https://i1.feedspot.com/5040475.jpg?t=1622464611"
+    },
+    {
+      "title": "Gizmodo | Twitch",
+      "feed_url": "https://gizmodo.com/tag/twitch/rss",
+      "website_url": "https://gizmodo.com/tag/twitch",
+      "description": "Twitch news and analysis from Gizmodo. Gizmodo is a news and opinion website about gadgets, technology, science, environmental news, entertainment, and culture.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 2600000,
+        "instagram": 123500
+      },
+      "image_url": "https://i1.feedspot.com/5040471.jpg?t=1625644310"
+    },
+    {
+      "title": "Game Rant | Twitch",
+      "feed_url": "https://gamerant.com/tag/twitch/feed/",
+      "description": "Twitch News, Tips & Updates from Game Rant. Game Rant features latest video game news, reviews, trailers, live streams, and more",
+      "followers": {
+        "facebook": 710200,
+        "twitter": 61100
+      },
+      "image_url": "https://i1.feedspot.com/5040484.jpg?t=1625648465"
+    },
+    {
+      "title": "MakeUseOf | Twitch",
+      "feed_url": "https://www.makeuseof.com/tags/twitch/feed/",
+      "description": "News, conversations, and analysis from around the world related to Twitch. Founded in 2007, MUO is on a mission to teach the world how to use and understand the tech in their lives.",
+      "followers": {
+        "facebook": 120,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5040472.jpg?t=1622464603"
+    }
+  ]
+}

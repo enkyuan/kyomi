@@ -1,0 +1,18 @@
+{
+  "category": "Stock Price",
+  "source_url": "https://rss.feedspot.com/stockprice_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nasdaq \u00bb Stocks",
+      "feed_url": "https://www.nasdaq.com/feed/rssoutbound?category=Stocks",
+      "website_url": "https://www.nasdaq.com/news-and-insights/topic/markets/stocks",
+      "description": "Get timely analysis and expert opinions on stocks to make informed investment decisions. Stay up to date on the latest news and insights from Nasdaq.",
+      "followers": {
+        "facebook": 825600,
+        "twitter": 148000,
+        "instagram": 594700
+      },
+      "image_url": "https://i1.feedspot.com/5211728.jpg?t=1733996924"
+    }
+  ]
+}

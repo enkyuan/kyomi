@@ -1,0 +1,194 @@
+{
+  "category": "New Scientist",
+  "source_url": "https://rss.feedspot.com/new_scientist_rss_feeds",
+  "feeds": [
+    {
+      "title": "New Scientist \u00bb News",
+      "feed_url": "https://www.newscientist.com/section/news/feed/",
+      "website_url": "https://www.newscientist.com/section/news/",
+      "description": "The latest science and technology news from New Scientist. Read exclusive articles and expert analysis on breaking stories and global developments",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5594439.jpg?t=1686313206"
+    },
+    {
+      "title": "New Scientist \u00bb Technology",
+      "feed_url": "https://www.newscientist.com/subject/technology/feed/",
+      "website_url": "https://www.newscientist.com/subject/technology/",
+      "description": "New Scientist Magazine is the world's number one science and technology magazine, and online we are the go-to site for breaking news, exclusive content, and breakthroughs that will change your world. From electronics and engineering to artificial intelligence, discover the latest developments, awe-inspiring features, and in-depth analysis of today's technological advances",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5411103.jpg?t=1686313236"
+    },
+    {
+      "title": "New Scientist \u00bb Health",
+      "feed_url": "https://www.newscientist.com/subject/health/feed/",
+      "website_url": "https://www.newscientist.com/subject/health/",
+      "description": "Discover the latest health news, scientific discoveries and big ideas about the human body and treating diseases, plus diet, fitness, exercise, wellness and how to live a healthy life.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5049851.jpg?t=1686313292"
+    },
+    {
+      "title": "New Scientist \u00bb Culture",
+      "feed_url": "https://www.newscientist.com/section/culture/feed/",
+      "website_url": "https://www.newscientist.com/section/culture/",
+      "description": "Discover the intersection of science and culture with New Scientist's expert reviews and recommendations. Explore the latest trends in science-related arts and entertainment",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5594441.jpg?t=1686313440"
+    },
+    {
+      "title": "New Scientist \u00bb Features",
+      "feed_url": "https://www.newscientist.com/section/features/feed/",
+      "website_url": "https://www.newscientist.com/section/features/",
+      "description": "In-depth features and analysis on the latest developments in science and technology with New Scientist. Read exclusive articles by expert journalists and researchers.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5594438.jpg?t=1686313192"
+    },
+    {
+      "title": "New Scientist \u00bb Physics",
+      "feed_url": "https://www.newscientist.com/subject/physics/feed/",
+      "website_url": "https://www.newscientist.com/subject/physics/",
+      "description": "From dark matter to the multiverse, discover the latest developments, awe-inspiring features and in-depth analysis from the world of physics",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5411210.jpg?t=1686313222"
+    },
+    {
+      "title": "New Scientist \u00bb Space",
+      "feed_url": "https://www.newscientist.com/subject/space/feed/",
+      "website_url": "https://www.newscientist.com/subject/space/",
+      "description": "Get the latest and most comprehensive space news and information on our Space subject page. Stay informed on space exploration, astronomy, and the cosmos with in-depth articles, videos, and infographics. Satisfy your space curiosity here",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4624929.jpg?t=1686313251"
+    },
+    {
+      "title": "New Scientist \u00bb Life",
+      "feed_url": "https://www.newscientist.com/subject/life/feed/",
+      "website_url": "https://www.newscientist.com/subject/life/",
+      "description": "From evolution to animal behaviour, discover the latest developments, awe-inspiring features and in-depth analysis about our planet's animals, plants and other organisms",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5411212.jpg?t=1686313266"
+    },
+    {
+      "title": "New Scientist \u00bb Earth",
+      "feed_url": "https://www.newscientist.com/subject/earth/feed/",
+      "website_url": "https://www.newscientist.com/subject/earth/",
+      "description": "Discover and understand planet Earth with the latest news and in-depth analysis on everything from climate change to geology and our ever-changing environment. New Scientist is the world's most popular weekly science and technology publication. Our website, app and print editions cover international news from a scientific standpoint and ask big-picture questions about life, the universe, and what it means to be human.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4964876.jpg?t=1664455867"
+    },
+    {
+      "title": "New Scientist \u00bb Humans",
+      "feed_url": "https://www.newscientist.com/subject/humans/feed/",
+      "website_url": "https://www.newscientist.com/subject/humans/",
+      "description": "New Scientist - Humans",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5594436.jpg?t=1686313313"
+    },
+    {
+      "title": "New Scientist \u00bb Environment",
+      "feed_url": "https://www.newscientist.com/subject/environment/feed/",
+      "website_url": "https://www.newscientist.com/subject/environment/",
+      "description": "From climate change to pollution, discover the latest developments, awe-inspiring features and in-depth analysis about the environment and how to save it.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5594443.jpg?t=1686313331"
+    },
+    {
+      "title": "New Scientist \u00bb Mind",
+      "feed_url": "https://www.newscientist.com/subject/mind/feed/",
+      "website_url": "https://www.newscientist.com/subject/mind/",
+      "description": "From how the brain works to the origin of consciousness, discover the latest developments, awe-inspiring features and in-depth analysis about what is going on in our minds",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5594440.jpg?t=1686313385"
+    },
+    {
+      "title": "New Scientist \u00bb Mathematics",
+      "feed_url": "https://www.newscientist.com/subject/mathematics/feed/",
+      "website_url": "https://www.newscientist.com/subject/mathematics/",
+      "description": "From number theory to cryptography, discover the latest developments, awe-inspiring features and in-depth analysis from the world of maths",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5534651.jpg?t=1686313399"
+    },
+    {
+      "title": "New Scientist \u00bb Chemistry",
+      "feed_url": "https://www.newscientist.com/subject/chemistry/feed/",
+      "website_url": "https://www.newscientist.com/subject/chemistry/",
+      "description": "From atoms and elements to catalysis and chemical synthesis, discover the latest developments, awe-inspiring features and in-depth analysis from the world of chemistry, the central science",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5594437.jpg?t=1686313410"
+    },
+    {
+      "title": "New Scientist \u00bb Society",
+      "feed_url": "https://www.newscientist.com/subject/society/feed/",
+      "website_url": "https://www.newscientist.com/subject/society/",
+      "description": "From science policy to economics, discover the latest developments, awe-inspiring features and in-depth analysis about human society",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5594442.jpg?t=1686313424"
+    },
+    {
+      "title": "New Scientist",
+      "feed_url": "https://www.newscientist.com/feed/home/",
+      "website_url": "https://www.newscientist.com/",
+      "description": "Science news and long reads from expert journalists, covering developments in science, technology, health and the environment on the website and the magazine.",
+      "followers": {
+        "facebook": 3800000,
+        "twitter": 4400000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5098242.jpg?t=1686313171"
+    }
+  ]
+}

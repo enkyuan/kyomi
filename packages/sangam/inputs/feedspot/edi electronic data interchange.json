@@ -1,0 +1,88 @@
+{
+  "category": "EDI (Electronic Data Interchange)",
+  "source_url": "https://rss.feedspot.com/electronic_data_interchange_rss_feeds",
+  "feeds": [
+    {
+      "title": "EDI ACADEMY",
+      "feed_url": "https://ediacademy.com/blog/feed/",
+      "website_url": "https://ediacademy.com/blog/",
+      "description": "The best resource on the web for learning about EDI. EDI Academy is the only independent source for EDI knowledge. Learn all about EDI Including 7030 X12 HIPAA.",
+      "followers": {
+        "facebook": 345
+      },
+      "image_url": "https://i1.feedspot.com/5180201.jpg?t=1597052394"
+    },
+    {
+      "title": "EDI2XML",
+      "feed_url": "https://www.edi2xml.com/feed/",
+      "website_url": "https://www.edi2xml.com/blog/",
+      "description": "Our EDI2XML Blog about current topics in Electronic Data Interchange, EDI technology, B2B Integration, and EDI solutions.",
+      "followers": {
+        "facebook": 112,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/5180218.jpg"
+    },
+    {
+      "title": "EDI Options",
+      "feed_url": "https://edioptions.com/feed/",
+      "website_url": "https://edioptions.com/latest-news-2/",
+      "description": "EDI Options is a first-class service provider operating on a first-name basis. In our 26+ years, we have seen it all, done it all, and used that knowledge to provide the best user experience in the industry.",
+      "followers": {
+        "facebook": 43
+      },
+      "image_url": "https://i1.feedspot.com/5180212.jpg"
+    },
+    {
+      "title": "OpenText Blogs \u00bb EDI",
+      "feed_url": "https://blogs.opentext.com/tag/edi/feed/",
+      "website_url": "https://blogs.opentext.com/tag/edi/",
+      "description": "The OpenText team of industry experts provide the latest news, opinion, advice and industry trends for all things EIM & Digital Transformation.",
+      "followers": {
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/5180196.jpg?t=1597053170"
+    },
+    {
+      "title": "Commport Communications Blog",
+      "feed_url": "https://www.commport.com/feed/",
+      "website_url": "https://www.commport.com/blog/",
+      "description": "Read blogs, articles, case studies and more related to EDI, GDSN, and other supply chain technology topics. Subscribe to Commport blog now. Commport Communications provides a wide range of innovative and comprehensive supply chain management solutions.",
+      "followers": {
+        "facebook": 102,
+        "twitter": 170,
+        "instagram": 153
+      },
+      "image_url": "https://i1.feedspot.com/5680063.jpg?t=1695820391"
+    },
+    {
+      "title": "Data Interchange",
+      "feed_url": "https://datainterchange.com/feed/",
+      "website_url": "https://datainterchange.com/blog/",
+      "description": "Data Interchange News. Read our latest articles that cover product releases and changes, company news, and shifts in the EDI market.",
+      "followers": {
+        "facebook": 143
+      },
+      "image_url": "https://i1.feedspot.com/5180254.jpg?t=1597233506"
+    },
+    {
+      "title": "Transalis \u00bb Electronic Data Interchange",
+      "feed_url": "https://www.transalis.com/tag/electronic-data-interchange/feed/",
+      "website_url": "https://www.transalis.com/tag/electronic-data-interchange/",
+      "description": "Packed full of informative and helpful posts and reports from Transalis: EDI explainers, insight-led articles, latest industry trends, customer stories and expert opinion.",
+      "followers": {
+        "facebook": 70,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5180245.jpg?t=1597232778"
+    },
+    {
+      "title": "EDI Alliance | Your EDI Resource",
+      "feed_url": "https://www.edialliance.com/blog/rss.xml",
+      "website_url": "https://ihateedi.com/blog/",
+      "description": "A weekly blog about current topics in EDI, supply chain, e-commerce, and B2B.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5180208.jpg?t=1597232887"
+    }
+  ]
+}

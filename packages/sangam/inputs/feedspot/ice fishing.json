@@ -1,0 +1,52 @@
+{
+  "category": "Ice Fishing",
+  "source_url": "https://rss.feedspot.com/ice_fishing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Outdoornews \u00bb Ice Fishing",
+      "feed_url": "https://www.outdoornews.com/fishing//feed",
+      "website_url": "https://www.outdoornews.com/fishing/",
+      "description": "Subscribe to Outdoor News, your No. 1 source for hunting and fishing related news and information.",
+      "followers": {
+        "facebook": 52300,
+        "twitter": 57200,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/5083449.jpg?t=1613796789"
+    },
+    {
+      "title": "MidWest Outdoors Magazine \u00bb Ice Fishing",
+      "feed_url": "https://midwestoutdoors.com/mwo-fishing/ice-fishing-articles/feed/",
+      "website_url": "https://midwestoutdoors.com/mwo-fishing/ice-fishing-articles/",
+      "description": "MidWest Outdoors magazine and TV shows are dedicated to helping you enjoy the outdoors! Fishermen and hunters turn to MWO for information on where to go, what to use, how to use it, and for features that add to their general success and enjoyment of the Great Outdoors. Learn how to catch your favorite species of fish this ice fishing season. MidWest Outdoors features a full selection of ice fishing articles!",
+      "followers": {
+        "facebook": 91500,
+        "twitter": 3900,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5161747.jpg?t=1625836972"
+    },
+    {
+      "title": "ICE FORCE",
+      "feed_url": "https://blog.iceforce.com/feed/",
+      "website_url": "https://blog.iceforce.com/",
+      "description": "Subscribe to Ice force blog which is packed with all the latest hardwater information. Get current fishing reports and ice fishing tips written by our Pro Staff. Be the first to read news, watch videos and more.",
+      "followers": {
+        "facebook": 41900
+      },
+      "image_url": "https://i1.feedspot.com/5162405.jpg?t=1625836977"
+    },
+    {
+      "title": "WCCO",
+      "feed_url": "https://minnesota.cbslocal.com/tag/ice-fishing/feed/",
+      "website_url": "https://minnesota.cbslocal.com/tag/ice-fishing/",
+      "description": "Subscribe to get the news related to Ice Fishing, and the Best of Minnesota.",
+      "followers": {
+        "facebook": 484700,
+        "twitter": 269700,
+        "instagram": 87900
+      },
+      "image_url": "https://i1.feedspot.com/5161746.jpg?t=1625836981"
+    }
+  ]
+}

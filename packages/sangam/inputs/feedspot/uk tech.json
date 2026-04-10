@@ -1,0 +1,582 @@
+{
+  "category": "UK Tech",
+  "source_url": "https://rss.feedspot.com/uk_tech_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tech Advisor",
+      "feed_url": "https://www.techadvisor.com/feed",
+      "website_url": "https://www.techadvisor.com/",
+      "description": "Whether you are an experienced tech geek or a relatively new one, Tech Advisor focuses its commentary for all tech heads on subject matters such as\u00a0wearable technology,\u00a0computing,\u00a0smart home & appliances, entertainment & gaming, audio, accessories, software, and services. With a focus on prioritizing the tech experience of every user, Tech Advisor provides relevant information about new and upcoming products that meet all needs without compromising the price range.",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 20000
+      },
+      "image_url": "https://i1.feedspot.com/4839017.jpg?t=1611150845"
+    },
+    {
+      "title": "Silicon Republic",
+      "feed_url": "https://www.siliconrepublic.com/feed/",
+      "website_url": "https://www.siliconrepublic.com/technology/",
+      "description": "Silicon Republic is a leading source for technology, science and start-up news, information and resources for people who are passionate about STEM. Since going online in 2001, SiliconRepublic.com has gone from being Ireland's No 1 resource for science and technology news, with countless awards to its name, to one of the leading online publications in Europe with 250,000 sessions each month.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 70700
+      },
+      "image_url": "https://i1.feedspot.com/4365219.jpg?t=1638278164"
+    },
+    {
+      "title": "Computerworld UK",
+      "feed_url": "https://www.computerworld.com/feed/",
+      "website_url": "https://www.computerworld.com/uk/",
+      "description": "Computerworld covers a range of technology topics, with a focus on these core areas of IT: Windows, Mobile, Apple/enterprise, Office and productivity suites, collaboration, web browsers and blockchain, as well as relevant information about companies such as Microsoft, Apple and Google. Computerworld focuses on empowering enterprise users and their managers, helping them create business advantage by skillfully exploiting today's abundantly powerful web, mobile, and desktop applications.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4838937.jpg?t=1611150856"
+    },
+    {
+      "title": "Irish Tech News",
+      "feed_url": "https://irishtechnews.ie/feed/",
+      "website_url": "https://irishtechnews.ie/",
+      "description": "Irish Tech News is an award-winning online publication aimed at keeping you informed of all the latest news from the world of Technology. With the main focus on Irish-based news, we cover a wide range of topics from social media and smartphones to start-ups and SMEs.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 43900
+      },
+      "image_url": "https://i1.feedspot.com/4826170.jpg?t=1611150865"
+    },
+    {
+      "title": "Everest Group Blog",
+      "feed_url": "https://www.everestgrp.com/feed/",
+      "website_url": "https://www.everestgrp.com/blog/",
+      "description": "Everest Group's blog provides insights to help enterprises and service providers overcome challenges in the age of digital transformation and constant market evolution. Everest Group is a research firm focused on strategic IT, business services, engineering services, and sourcing.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5379408.jpg?t=1646827491"
+    },
+    {
+      "title": "TechRound",
+      "feed_url": "https://techround.co.uk/feed/",
+      "website_url": "https://techround.co.uk/",
+      "description": "TechRound provides the latest startup and technology news in London and the UK. We cover views and interviews as well as insights into how tech startups are changing our world. Keep posted for interviews with startup entrepreneurs and notable business people in London.",
+      "followers": {
+        "facebook": 806,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4839135.jpg?t=1611150893"
+    },
+    {
+      "title": "Advanced Design Technology Blog",
+      "feed_url": "https://blog.adtechnology.com/rss.xml",
+      "website_url": "https://blog.adtechnology.com/",
+      "description": "Discover all the latest information about turbomachinery design software and services in the Advanced Design Technology blog. ADT's unique TURBOdesign Suite software is designed to empower designers, giving you full control of the aerodynamic design process to revolutionize your turbomachinery components.",
+      "followers": {
+        "twitter": 676
+      },
+      "image_url": "https://i1.feedspot.com/5481535.jpg?t=1671513267"
+    },
+    {
+      "title": "eg technology Blog",
+      "feed_url": "https://www.egtechnology.co.uk/category/blog/feed/",
+      "website_url": "https://www.egtechnology.co.uk/category/blog/",
+      "description": "We create the next generation of medical devices and consumer products, making a positive difference to how people live. eg has a great track of delivering inspiring and marketable products across MedTech, Lab/BioTech, Vetcare, CleanTech, Consumer and Food/Drink Sectors; we know how to make things work. We share our ideas, expertise and knowledge and ensure that everyone feels supported & valued.",
+      "followers": {
+        "facebook": 219,
+        "twitter": 714
+      },
+      "image_url": "https://i1.feedspot.com/5481543.jpg?t=1671512986"
+    },
+    {
+      "title": "Technology in Government",
+      "feed_url": "https://technology.blog.gov.uk/feed/",
+      "website_url": "https://www.blog.gov.uk/",
+      "description": "Covers Data, Digital Marketplace, Security, Tools, Jobs, Technology, Transformation, and more. It is the place to go for digital, data, and technology careers in the UK government.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5128629.jpg?t=1627277600"
+    },
+    {
+      "title": "Retail Technology Magazine",
+      "feed_url": "https://www.retailtechnology.co.uk/rss.xml",
+      "website_url": "https://www.retailtechnology.co.uk/section/news/",
+      "description": "The magazine for the omnichannel age. Retail Technology is the online IT publication for major retailers and brands in food, non-food, hospitality, leisure, financial services, and variety retailing.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/1879781.jpg?t=1671512673"
+    },
+    {
+      "title": "HJS Technology Ltd",
+      "feed_url": "https://www.hjstechnology.co.uk/feed/",
+      "website_url": "https://www.hjstechnology.co.uk/news/",
+      "description": "HJS Technology was formed in April 2007 when Essentia Technology merged with the HJS Solutions group. We take pride in helping SMEs with cost-effective and robust technology solutions, keeping companies connected, up-to-date, legally compliant and technically advanced, regardless of industry sector. Stay up to date with the latest news and up dates from the technology industry.",
+      "followers": {
+        "facebook": 192,
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/5481539.jpg?t=1671512557"
+    },
+    {
+      "title": "GeekedCartree",
+      "feed_url": "https://geekedcartree.co.uk/feed/",
+      "website_url": "https://geekedcartree.co.uk/",
+      "description": "I'm Corinne. Welcome to my new technology blog. Check out my lifestyle articles from a point of view of technology geek.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 9900,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5481538.jpg?t=1671514127"
+    },
+    {
+      "title": "Med-Tech Insights",
+      "feed_url": "https://med-techinsights.com/feed/",
+      "website_url": "https://med-techinsights.com/",
+      "description": "The theMed-Tech Innovation blog covers topics related to medical technology, including digital health, medical devices, healthcare IT, wearables, artificial intelligence, and robotics. It provides information on the latest developments in the industry, including regulatory updates, product launches, industry events, and interviews with industry leaders.",
+      "followers": {
+        "facebook": 355,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5481563.jpg?t=1671514065"
+    },
+    {
+      "title": "UK Tech Blog",
+      "feed_url": "https://tech.clickdo.co.uk/feed/",
+      "website_url": "https://tech.clickdo.co.uk/",
+      "description": "We deliver tech expert ideas or insights when it comes to modern-day technology, products, solutions and services.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 401
+      },
+      "image_url": "https://i1.feedspot.com/5481548.jpg?t=1671513248"
+    },
+    {
+      "title": "Health Tech World",
+      "feed_url": "https://www.htworld.co.uk/feed/",
+      "website_url": "https://www.htworld.co.uk/",
+      "description": "Health Tech World is for everyone with a professional interest in health technology. The relentless drive to improve medical outcomes through technology brings together innovators, investors and clinicians. Health Tech World is an accessible but singularly specialist title, providing expert commentary on this critical and dynamic sector of the global economy.",
+      "followers": {
+        "facebook": 113,
+        "twitter": 3700,
+        "instagram": 293
+      },
+      "image_url": "https://i1.feedspot.com/5481550.jpg?t=1671512647"
+    },
+    {
+      "title": "Health Tech Newspaper",
+      "feed_url": "https://htn.co.uk/feed/",
+      "website_url": "https://htn.co.uk/",
+      "description": "HTN is an innovative platform for the health tech community. Through our website, newspaper, live events, Health Tech Awards and Features, HTN offers a unique depth, breadth and perspective on health technology.",
+      "followers": {
+        "facebook": 155,
+        "twitter": 7000,
+        "instagram": 485
+      },
+      "image_url": "https://i1.feedspot.com/4857077.jpg?t=1671513220"
+    },
+    {
+      "title": "Cable Technology News",
+      "feed_url": "https://www.cabletechnologynews.co.uk/feed/",
+      "website_url": "https://www.cabletechnologynews.co.uk/",
+      "description": "Cable Technology News (CTN) is a leading technology and project news and information provider for the wire and cable industry. CTN provides opportunities for manufacturers, suppliers, distributors, contractors, and service companies to feature products and services via press releases, articles, interviews, videos, corporate profiles, advertising, and social media.",
+      "followers": {
+        "facebook": 581,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5481537.jpg?t=1671512549"
+    },
+    {
+      "title": "Cleanroom Technology",
+      "feed_url": "https://cleanroomtechnology.com/rss",
+      "website_url": "https://cleanroomtechnology.com/",
+      "description": "Cleanroom Technology is a B2B magazine reporting on hi-tech industries manufacturing in controlled environments. The magazine covers a wide range of industries that use cleanrooms, including pharmaceuticals, biotechnology, medical devices, electronics, and aerospace.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5481544.jpg?t=1671512591"
+    },
+    {
+      "title": "The BiosearchTech Blog",
+      "feed_url": "https://blog.biosearchtech.com/rss.xml",
+      "website_url": "https://blog.biosearchtech.com/",
+      "description": "Keep up with Biosearch Technologies by reading our blog! Providing mission-critical analysis tools, reagents and instruments to companies that are bringing new products to market quickly, cost-effectively, and safely.",
+      "followers": {
+        "facebook": 25500,
+        "twitter": 14100
+      },
+      "image_url": "https://i1.feedspot.com/5481540.jpg?t=1671512572"
+    },
+    {
+      "title": "Telef\u00f3nica Tech UK",
+      "feed_url": "https://telefonicatech.uk/articles/feed",
+      "website_url": "https://telefonicatech.uk/articles/",
+      "description": "At Telef\u00f3nica Tech, we believe technology has a bigger purpose. It has the potential to make our lives brighter and lighter. The power to make organizations safer and more secure. And the ability to make working easier. That's why we approach tech differently from other companies. We're not here just to make money or sell shares, to invent for the sake of it, or to sell you the tech we've got, not the tech you need. Follow our blog to learn more about our company, our services, past clients work and more detialed infmrtion on technology.",
+      "followers": {
+        "twitter": 51000
+      },
+      "image_url": "https://i1.feedspot.com/5481557.jpg?t=1671513917"
+    },
+    {
+      "title": "Vanson Bourne Community",
+      "feed_url": "https://www.vansonbournecommunity.com/feed/",
+      "website_url": "https://www.vansonbournecommunity.com/",
+      "description": "Join Vanson Bourne Community and take part in a range of research studies where your opinion will be used by leading technology companies across the globe. By joining our community, you'll be able to influence decisions that technology companies make, discover new trends and perspectives.",
+      "followers": {
+        "twitter": 273
+      },
+      "image_url": "https://i1.feedspot.com/5593182.jpg?t=1686221810"
+    },
+    {
+      "title": "Wayne Horkan Blog",
+      "feed_url": "https://horkan.com/feed",
+      "website_url": "https://horkan.com/",
+      "description": "Welcome to the website, blog, et cetera, of Wayne Horkan. I'm a technologist and engineer, typically working in enterprise architecture and systems engineering. Mainly I design systems for people. Occasionally I even build them. Currently, I work for Cyber Tzar providing vision and technology leadership.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5648226.jpg?t=1692162930"
+    },
+    {
+      "title": "AZTech IT Blog",
+      "feed_url": "https://www.aztechit.co.uk/blog/rss.xml",
+      "website_url": "https://www.aztechit.co.uk/blog",
+      "description": "Discover more about IT Services, Cyber Security, IT Support, Digital Transformation, and the Modern Workplace in the AZTech IT Blog. AZTech IT is a trusted IT partner for UK businesses delivering professional, proactive IT support services.",
+      "followers": {
+        "facebook": 259,
+        "twitter": 728,
+        "instagram": 169
+      },
+      "image_url": "https://i1.feedspot.com/5713227.jpg?t=1700122581"
+    },
+    {
+      "title": "Tech News Century",
+      "feed_url": "https://technewscentury.co.uk/feed/",
+      "website_url": "https://technewscentury.co.uk/",
+      "description": "Get the latest Tech News from the net from Smart home devices to gaming and smartphone and more all in one place for you to look at. Tech News Century strives to empower people's views on what technology is available and what is the best around",
+      "followers": {
+        "facebook": 37,
+        "twitter": 36,
+        "instagram": 203
+      },
+      "image_url": "https://i1.feedspot.com/5481545.jpg?t=1671512845"
+    },
+    {
+      "title": "Developer Tech News",
+      "feed_url": "https://www.developer-tech.com/feed/",
+      "website_url": "https://www.developer-tech.com/",
+      "description": "Developer Tech News, part of the TechForge Media portfolio is a practical resource providing news, analysis and opinion on the world of development, from standardisation to business use cases, and development opportunities. We take the best research and put our own spin on it, report from the frontline of the industry, as well as feature contributions from companies at the heart of this revolution.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4799715.jpg?t=1611150879"
+    },
+    {
+      "title": "TechyGeeksHome Blog",
+      "feed_url": "https://techygeekshome.info/feed/",
+      "website_url": "https://techygeekshome.info/",
+      "description": "Free tech guides, the latest news and reviews are all designed to help you with your technical issues! Starting in 2010 as a small blog site, we have grown into a site that has had over 20 million hits. Mostly news and technical guides, we also expanded into custom-built software two years ago.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1800,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5090203.jpg?t=1611150874"
+    },
+    {
+      "title": "Tech Digest",
+      "feed_url": "https://feeds.feedburner.com/TechDigest",
+      "website_url": "https://www.techdigest.tv/",
+      "description": "Tech Digest is the UK and Europe's leading blog for consumer tech news, reviews and opinions. This includes news stories from the world of tech on subjects as diverse as intelligent fridges and 5G networks, plus coverage of all the biggest tech events, including CES in Las Vegas and IFA in Berlin. Tech Digest was started way back in 2003 by two freelance technology journalists, Chris Price and Ashley Norris.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4838970.jpg?t=1611150887"
+    },
+    {
+      "title": "Business Tech Magazine",
+      "feed_url": "https://tbtech.co/feed/",
+      "website_url": "https://tbtech.co/",
+      "description": "Covers stories about how the tech world is changing for the people delivering that change and how it will affect business across the globe. TBTech covers these urgent themes with balance, patience, and with our own internal insights. Our audience is the decision-makers of the world who have a keen interest in Tech, the latest trends, and how these topics will impact their business and their lives.",
+      "followers": {
+        "facebook": 298,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5346650.jpg?t=1637837607"
+    },
+    {
+      "title": "Coolsmartphone",
+      "feed_url": "https://www.coolsmartphone.com/feed/",
+      "website_url": "https://www.coolsmartphone.com/",
+      "description": "Stay up to date on the latest in Android and iPhone, Windows Phone news, reviews, gossip and live coverage.",
+      "followers": {
+        "facebook": 672,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4587029.jpg?t=1671514237"
+    },
+    {
+      "title": "ShinyShiny",
+      "feed_url": "https://www.shinyshiny.tv/feed",
+      "website_url": "https://www.shinyshiny.tv/",
+      "description": "ShinyShiny is a website that focuses on the way technology is enriching the lives of women. Our readers are female early adopters - an important and influential audience - and our team brings them the latest news, no-nonsense reviews and video round-ups of the coolest stuff out there.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 7700,
+        "instagram": 133
+      },
+      "image_url": "https://i1.feedspot.com/4838795.jpg?t=1611150943"
+    },
+    {
+      "title": "TechSPARK.co",
+      "feed_url": "https://techspark.co/feed/",
+      "website_url": "https://techspark.co/",
+      "description": "TechSPARK is the info hub for all things tech and digital in Bristol, Bath and the West of England region. We strengthen the tech community from Swindon to Swansea by connecting the best people, companies and investors with opportunities for growth. TechSPARK strengthens tech communities across the West & Wales. We connect the best people, orgs & investors with opportunities for growth.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4839499.jpg?t=1611150959"
+    },
+    {
+      "title": "TechCentral.ie",
+      "feed_url": "http://www.techcentral.ie/feed/",
+      "website_url": "https://www.techcentral.ie/category/blogs/",
+      "description": "TechCentral.ie is the online home of TechPro, Ireland's best well-known and respected technology magazine. Delivering daily news through the Technology Minute newsletter, and podcast TechRadio. Across its Life, Pro & Trade channels, the site features the latest news and developments in tech. Insights provide access to a library of exclusive TechBeat market research; Blogs is where you will find unique commentary from some of the top journalists in tech; What's On is your go-to source for event listings.",
+      "followers": {
+        "facebook": 605,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4746827.jpg?t=1638277780"
+    },
+    {
+      "title": "Ireland's Technology Blog",
+      "feed_url": "https://irelandstechnologyblog.com/feed",
+      "website_url": "https://irelandstechnologyblog.com/",
+      "description": "Ireland's Technology Blog is an Irish technology blog covering all aspects of technology no matter how small or large. We feature everything from home technology, personal technology, gaming, smartphones, and all the latest breaking news from around the world.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4722096.jpg?t=1638278245"
+    },
+    {
+      "title": "Discus Systems Blog",
+      "feed_url": "https://discus.co.uk/feed/",
+      "website_url": "https://discus.co.uk/blog/",
+      "description": "Follow the Discus Systems Blog and read the latest news in blog posts from Discus Systems in Birmingham. Find useful IT articles including tips and information on the latest tech world news. Discus Systems is a IT Support Company which was founded in 1997 to meet the demand from small and medium-sized businesses in their local area for IT support and service.",
+      "followers": {
+        "facebook": 67,
+        "twitter": 184
+      },
+      "image_url": "https://i1.feedspot.com/5481541.jpg?t=1671513093"
+    },
+    {
+      "title": "Kevin's Tech Blog",
+      "feed_url": "https://kevinstreet.co.uk/feed/",
+      "website_url": "https://kevinstreet.co.uk/",
+      "description": "I am Kevin Street. I specialise in the deployment and administration of Microsoft Endpoint Configuration Manager (MECM/SCCM), Windows 10 deployments and migrations and Office 365 deployments and migrations. Additionally, I make use of PowerShell for general management, as well as scripting and automation. Check out my blog where I discuss technology, the latest features and news and more!",
+      "followers": {
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/5481542.jpg?t=1671512745"
+    },
+    {
+      "title": "Bit-tech.net",
+      "feed_url": "https://www.bit-tech.net/xml/all.rss",
+      "website_url": "https://www.bit-tech.net/",
+      "description": "The latest technology, hardware and game reviews and case mods. The latest news headlines from the hardware and gaming industries. We're the UK's leading online destination for tech enthusiasts, modders, gamers, and cheesecake lovers.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 15400,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/109063.jpg?t=1611150841"
+    },
+    {
+      "title": "MyMemory Blog",
+      "feed_url": "https://www.mymemory.co.uk/blog/feed/",
+      "website_url": "https://www.mymemory.co.uk/blog/",
+      "description": "Founded in 2003, the MyMemory blog is the online destination for how to improve your tech life. Read on for a mix of tips, news, trending stories, and more.",
+      "followers": {
+        "facebook": 28100,
+        "twitter": 2400,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4839687.jpg?t=1611150860"
+    },
+    {
+      "title": "Techx Blog",
+      "feed_url": "https://techxblog.co.uk/feed/",
+      "website_url": "https://techxblog.co.uk/",
+      "description": "Stay informed, and stay up to date on the latest technology with the Techx blog. The site provides information about software, VPS management, and VPNs. Stay up to date with hacking news and business marketing benefits.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481549.jpg?t=1671512955"
+    },
+    {
+      "title": "Katy's Tech Blog",
+      "feed_url": "https://katystech.blog/rss.xml",
+      "website_url": "https://katystech.blog/",
+      "description": "Katy's Tech Blog is a personal blog that covers a range of technology-related topics, including hardware reviews, software tutorials, and news about the latest tech products and trends. The blog is authored by Katy, who is a tech enthusiast and shares her passion for technology through her writing.The blog's content includes product reviews and comparisons, tutorials on software and hardware, and coverage of technology news and events. The blog also covers topics related to social media, mobile devices, and gaming.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5481547.jpg?t=1671512613"
+    },
+    {
+      "title": "AM Technology",
+      "feed_url": "https://www.amt.uk/blog-feed.xml",
+      "website_url": "https://www.amt.uk/news",
+      "description": "Keep up to date with the latest news from the continuous chemical manufacturing industry and other evolving applications of flow chemistry through our blog and publication features. AM Technology designs and manufactures continuous-flow reactors and continuous-flow chemical plants for the fine chemical and pharmaceutical industries.",
+      "followers": {
+        "facebook": 38,
+        "twitter": 112,
+        "instagram": 231
+      },
+      "image_url": "https://i1.feedspot.com/5481554.jpg?t=1671512664"
+    },
+    {
+      "title": "Dreams Technologies Blog",
+      "feed_url": "https://dreamstechnologies.com/feed/",
+      "website_url": "https://dreamstechnologies.com/company/blogs/",
+      "description": "Dive into the latest blog posts for expert insights and industry trends. Get insights on trends, thoughtful articles, and expert perspectives for growth. Stay informed and inspired. Dream Technologies is a leading technology company at the forefront of the digital revolution, empowering businesses to thrive in the dynamic world of the digital age.",
+      "followers": {
+        "facebook": 694,
+        "twitter": 259
+      },
+      "image_url": "https://i1.feedspot.com/5739978.jpg?t=1703068045"
+    },
+    {
+      "title": "Artificially Intelligent Claire Blog",
+      "feed_url": "https://www.artificiallyintelligentclaire.com/feed/",
+      "website_url": "https://www.artificiallyintelligentclaire.com/blog/",
+      "description": "On a mission to make artificial intelligence and big data concepts accessible to all. I help inquisitive millennials who love to learn about tech and AI by blogging learning to code and innovations in AI. I want people to feel they now have a voice in developing the tech industry.",
+      "followers": {
+        "facebook": 239,
+        "twitter": 194
+      },
+      "image_url": "https://i1.feedspot.com/4983019.jpg?t=1611150935"
+    },
+    {
+      "title": "GadgetyNews.com",
+      "feed_url": "https://gadgetynews.com/feed/",
+      "website_url": "https://gadgetynews.com/",
+      "description": "Keeping gadget reviews and technology news easy to read and friendly. Find out what's happening in the world of smartphones, laptops, tablets, gaming and other shiny areas of gadgety loveliness. UK-based, global coverage.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1000,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1714932.jpg?t=1611150939"
+    },
+    {
+      "title": "The Register",
+      "feed_url": "https://www.theregister.com/headlines.atom",
+      "website_url": "https://www.theregister.com/",
+      "description": "The Register is a leading global online tech publication, with more than nine million monthly unique browsers worldwide. Starting out in London in 1994 as an occasional email newsletter, The Register began publishing online daily in 1998. Today we have journalists in America, Europe, Asia-Pacific, and Britain covering the worlds of enterprise technology, business software, and much more besides every working hour: the sun never sets on El Reg.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 102100
+      },
+      "image_url": "https://i1.feedspot.com/4584100.jpg?t=1671511859"
+    },
+    {
+      "title": "Coolest Gadgets",
+      "feed_url": "https://www.coolest-gadgets.com/",
+      "website_url": "https://www.coolest-gadgets.com/",
+      "description": "Reporting on all the latest cool gadgets in the ongoing quest for the coolest gadget. Find the Coolest Gadgets in the world today and the future.",
+      "followers": {
+        "facebook": 953,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/38902.jpg?t=1611150835"
+    },
+    {
+      "title": "Silicon UK",
+      "feed_url": "https://www.silicon.co.uk/feed",
+      "website_url": "https://www.silicon.co.uk/",
+      "description": "Silicon UK is the leading source for IT news, analysis, features and interviews covering the technology that impacts your business. Keep up-to-date with the latest tech news and read in-depth features by subscribing to our newsletter and attending our events.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4817782.jpg?t=1611150870"
+    },
+    {
+      "title": "Mighty Gadget",
+      "feed_url": "https://mightygadget.com/feed/",
+      "website_url": "https://mightygadget.com/",
+      "description": "Mighty Gadget is the UK leading gadget blog covering everything new in gadgets, phones, gaming, TVs and other consumer electronics.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 6900,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4629310.jpg?t=1669017899"
+    },
+    {
+      "title": "Legal IT Insider",
+      "feed_url": "https://feeds.feedburner.com/LegalItInsider",
+      "website_url": "https://legaltechnology.com/",
+      "description": "Legal IT Insider is the legal sector's leading global source of legal tech news, edited by ex-City solicitor Caroline Hill. Our content, which appears daily and in our monthly digital newsletter, The Orange Rag, has been read by legal IT professionals since 1995, and we are a recognised authority on all aspects of legal IT - back-end and front-end systems and solutions. If you need it to deliver legal client services ahead of the curve, we write about it. We regularly break legal IT stories first and are a source for buyers and sellers of technology in the legal sector.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4839286.jpg?t=1611150950"
+    },
+    {
+      "title": "UNLEASH",
+      "feed_url": "https://www.unleashgroup.io/feed/",
+      "website_url": "https://www.unleash.ai/news/",
+      "description": "Visit us at UNLEASH to read the latest insights in HR and business intelligence. Learn about rising tech trends and more today. UNLEASH is the world's customer-first digital media platform and transformation engine for Human Resources, built to inspire, connect and empower HR leaders worldwide to navigate the new working world.",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4839600.jpg?t=1611150897"
+    },
+    {
+      "title": "RiverSafe Tech Blog",
+      "feed_url": "https://riversafe.co.uk/resources/tech-blog/",
+      "website_url": "https://riversafe.co.uk/resources/tech-blog/",
+      "description": "Read the latest tech articles and insights on the RiverSafe tech blog. Stay informed and ahead of the game in the rapidly evolving tech industry. RiverSafe is a leading cyber security intelligence partner, supporting companies to put security at the heart of business operations & yield actionable business insight. Proudly supporting some of the world's biggest companies - including Vodafone, Sky and BP.",
+      "followers": {
+        "twitter": 161
+      },
+      "image_url": "https://i1.feedspot.com/5481559.jpg?t=1671512709"
+    },
+    {
+      "title": "A10 Computers Blog",
+      "feed_url": "https://www.a10computers.co.uk/feed/",
+      "website_url": "https://www.computing.co.uk/",
+      "description": "A10 Computers is a local computer, parts, and accessories store that allows people from Buntingford and the surrounding area to leverage IT expert Rob Mitchell's commitment to service and support along with great deals and technical know-how which you will find in the blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7270986.jpg?t=1710159445"
+    },
+    {
+      "title": "Computing",
+      "feed_url": "https://www.computing.co.uk/feeds/rss",
+      "website_url": "https://www.computing.co.uk/",
+      "description": "Since 1973, Computing's talented team of editors has reported on the news IT leaders need to build successful, resilient teams, networks and organisations. Computing is the go-to source for breaking news on the IT industry, in-depth coverage and analysis of market-shaping trends, and insights from experienced IT professionals. Coverage crosses over a variety of technology areas, including cloud, security, data centres, climate initiatives, networking, software and recruitment.",
+      "followers": {
+        "facebook": 914,
+        "twitter": 22700
+      },
+      "image_url": "https://i1.feedspot.com/4818647.jpg?t=1611150966"
+    },
+    {
+      "title": "Phones Review",
+      "feed_url": "http://feeds.feedburner.com/PhonesReview",
+      "website_url": "https://www.phonesreview.co.uk/",
+      "description": "read all about Mobile Phones Reviews & Updates. Features & Specifications. Phones Review, obviously as the name suggests is a site dedicated to the news of present-day Mobile Phones. Phones Review reports about all the hottest announcements, launches, and ongoing developments in the world of all things mobile.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/126056.jpg?t=1611150983"
+    }
+  ]
+}

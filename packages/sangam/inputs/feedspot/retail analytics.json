@@ -1,0 +1,98 @@
+{
+  "category": "Retail Analytics",
+  "source_url": "https://rss.feedspot.com/retail_analytics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Retail Customer Experience Blog",
+      "feed_url": "https://www.retailcustomerexperience.com/rss/",
+      "website_url": "https://www.retailcustomerexperience.com/blogs/",
+      "description": "Blogs from retail industry experts who share their insights on how to design and deliver the best customer experiences. Retail Customer Experience.com is a Web portal devoted to helping retailers differentiate on experience, rather than price.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 15700
+      },
+      "image_url": "https://i1.feedspot.com/4650929.jpg?t=1654261864"
+    },
+    {
+      "title": "Retail Times",
+      "feed_url": "https://retailtimes.co.uk/feed/",
+      "website_url": "https://retailtimes.co.uk/",
+      "description": "Retail Times is an independently owned website reporting on local and global retail markets. It delivers original and unique retail news and is first with the detail; discovering, exploring, and revealing the latest retail trends, opinions, and innovations in this vibrant business sector.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4900395.jpg?t=1653656257"
+    },
+    {
+      "title": "Retail Insight Blog",
+      "feed_url": "https://www.retailinsight.io/blog/rss.xml",
+      "website_url": "https://www.retailinsight.io/blog",
+      "description": "We were founded in 2005 to capitalize on the growing amount of data available to CPGs. Our goal was to develop a suite of intuitive algorithms, based on advanced analytics and industry expertise, that generate actionable insights to help CPGs sell more and lose less. Retail Insight takes data and turns it into action. Our advanced algorithms unlock valuable insights that drive better decision-making for retailers and CPGs.",
+      "followers": {
+        "twitter": 164
+      },
+      "image_url": "https://i1.feedspot.com/5404522.jpg?t=1653653709"
+    },
+    {
+      "title": "IGD \u00bb Retail Analysis",
+      "feed_url": "https://www.igd.com/Commercial-Insight/Retail-Analysis",
+      "website_url": "https://www.igd.com/Commercial-Insight/Retail-Analysis",
+      "description": "Day-to-day support and inspiration, aligned with longer-term thinking, showing what great looks like to drive commercial success. We provide a unique window into the world of global retail, providing commercial, insight, and strategy professionals the inspiration and deep understanding they need.",
+      "followers": {
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5404517.jpg?t=1653653685"
+    },
+    {
+      "title": "Retalon Blog",
+      "feed_url": "https://retalon.com/feed",
+      "website_url": "https://retalon.com/blog",
+      "description": "Blog articles from Retalon, an award-winning Retail Predictive Analytics solutions provider. Articles for news from the retail predictive analytics space. Retalon is an award-winning provider of advanced retail predictive analytics & AI solutions for supply chain, planning, merchandising, inventory management, and pricing optimization, with a transformational approach to the retail industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5404511.jpg?t=1653656407"
+    },
+    {
+      "title": "MRI Software Blog",
+      "feed_url": "https://www.mrisoftware.com/uk/onlocation-footfall-analytics-insights-hub/",
+      "website_url": "https://www.mrisoftware.com/uk/onlocation-footfall-analytics-insights-hub/",
+      "description": "Retail intelligence blog sharing insights about retail AI trends, store traffic trends from retail industry leaders, and industry influencers from Springboard. Springboard is the leading provider of retail data analytics, retail traffic counting, and customer sentiment tracking for leading brands, shopping centers, and high streets worldwide.",
+      "followers": {
+        "facebook": 130,
+        "twitter": 105
+      },
+      "image_url": "https://i1.feedspot.com/5404514.jpg?t=1653653668"
+    },
+    {
+      "title": "Vend Retail Blog \u00bb Retail Tips & Trends",
+      "feed_url": "https://www.vendhq.com/blog/category/retail-tips-trends/feed/",
+      "website_url": "https://www.lightspeedhq.com/blog/cat/retail/",
+      "description": "The following section of Vend Retail Blog features articles on Retail Tips & Trends. We designed Vend to be so intuitive, that anyone - from owners to managers to cashiers - can get the hang of it in minutes. Effortlessly sell, manage and grow your retail business with Vend, the unparalleled, cloud-based point of sale and retail management system.",
+      "followers": {
+        "twitter": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5404513.jpg?t=1653653661"
+    },
+    {
+      "title": "Avanade",
+      "feed_url": "https://www.avanade.com/en/insights#sortCriteria=%40sorting_date%20descending",
+      "website_url": "https://www.avanade.com/en/insights#sortCriteria=%40sorting_date%20descending",
+      "description": "Read blog posts about the retail industry on the Avanade Insights blog. At Avanade, our vision is to advance the world through the power of people and Microsoft. Through thousands of projects, we've transformed businesses for the digital world. We've helped them create compelling experiences for their customers and employees. We've reduced costs, increased productivity, enabled collaboration and enhanced agility - and ultimately improved performance.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 29700,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5404523.jpg?t=1653653716"
+    },
+    {
+      "title": "insideAI News \u00bb Retail",
+      "feed_url": "https://insideainews.com/category/industry-segments/retail/feed/",
+      "website_url": "https://insideainews.com/category/industry-segments/retail/",
+      "description": "Get the latest news and report from the retail industry from the experts of insideBIGDATA. insideBIGDATA is a news outlet that distills news, strategies, products, and services in the world of Big Data for data scientists as well as IT and business professionals. Our editorial focus is big data, data science, AI, machine learning, and deep learning.",
+      "followers": {
+        "twitter": 637
+      },
+      "image_url": "https://i1.feedspot.com/5404512.jpg?t=1653653655"
+    }
+  ]
+}

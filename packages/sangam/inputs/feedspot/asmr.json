@@ -1,0 +1,72 @@
+{
+  "category": "ASMR",
+  "source_url": "https://rss.feedspot.com/asmr_rss_feeds",
+  "feeds": [
+    {
+      "title": "ASMR University Blog",
+      "feed_url": "https://asmruniversity.com/feed/",
+      "website_url": "https://asmruniversity.com/blog/",
+      "description": "ASMR University is an ASMR Resource and News Center. These articles are posted to bring you current info, research, and perspectives on ASMR.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5360999.jpg?t=1641559904"
+    },
+    {
+      "title": "Longshot ASMR Blog",
+      "feed_url": "https://longshotasmr.com/feed/",
+      "website_url": "https://longshotasmr.com/blog/",
+      "description": "Longshot ASMR started out as a place for visitors to come and escape the daily troubles by relieving stress with ASMR. We are always dedicated to bringing you the latest news, updates, and spotlighting the genre.",
+      "followers": {
+        "facebook": 4,
+        "twitter": 4,
+        "instagram": 406
+      },
+      "image_url": "https://i1.feedspot.com/5360997.jpg?t=1641559691"
+    },
+    {
+      "title": "Pok\u00e9mon Blog \u00bb Autonomous Sensory Meridian Response",
+      "feed_url": "https://pokemonblog.com/tag/autonomous-sensory-meridian-response/feed/",
+      "website_url": "https://pokemonblog.com/tag/autonomous-sensory-meridian-response/",
+      "description": "Posts about Autonomous sensory meridian response. The blog is for all and everything related to Pokemon, be it news, games, anime, TCG, and videos.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1500,
+        "instagram": 72
+      },
+      "image_url": "https://i1.feedspot.com/5360996.jpg?t=1641559333"
+    },
+    {
+      "title": "My True Life \u00bb ASMR",
+      "feed_url": "https://mytruelife.nl/category/asmr/feed/",
+      "website_url": "https://mytruelife.nl/category/asmr/",
+      "description": "This section features articles on ASMR. My True Life is about bullet journaling to help you organize your thoughts, life and goals.",
+      "followers": {
+        "facebook": 909,
+        "twitter": 1200,
+        "instagram": 226
+      },
+      "image_url": "https://i1.feedspot.com/5360995.jpg?t=1641559606"
+    },
+    {
+      "title": "Slime Obsidian \u00bb ASMR",
+      "feed_url": "https://slimeobsidian.com/blogs/slime-blog/tagged/asmr.atom",
+      "website_url": "https://slimeobsidian.com/blogs/slime-blog/tagged/asmr",
+      "description": "In the following segment, the Slime Obsidian blog talks about the usage of slime in the ASMR community and how it has allowed the user to experience various textures and sounds to induce relaxation and encourage calmness. Slime Obsidian started in 2017 when founder Jacob decided to create a slime account after realizing how satisfying slime was the year before. With over a million followers, we pride ourselves on quality, creativity and amazing service.",
+      "followers": {
+        "facebook": 203000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5360994.jpg?t=1641560198"
+    },
+    {
+      "title": "ASMR Toy Blog",
+      "feed_url": "https://asmr-toy.com/feed/",
+      "website_url": "https://asmr-toy.com/blog/",
+      "description": "ASMR Toy brings you a new way to experience ASMR that will help you relax, study, chill, meditate or help your sleep. With them, you can create your own sound mixes, choose among the great variety of high-quality ASMR sounds or a relaxing paper aeroplane, which can be anything from a plane to a spaceship. The blog gives you a varied range of articles on ASMR what-to, how-tos, 8D audio, and more.",
+      "followers": {
+        "facebook": 16,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5361000.jpg?t=1641560704"
+    }
+  ]
+}

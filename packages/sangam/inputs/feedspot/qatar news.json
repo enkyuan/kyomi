@@ -1,0 +1,108 @@
+{
+  "category": "Qatar News",
+  "source_url": "https://rss.feedspot.com/qatar_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Al Jazeera \u00bb Congo",
+      "feed_url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "website_url": "https://www.aljazeera.com/where/democratic-republic-of-the-congo/",
+      "description": "The Al Jazeera page on the Democratic Republic of the Congo delivers up-to-date news, analysis and features focused on the country's politics, conflict zones, health crises and social issues.",
+      "followers": {
+        "facebook": 19400000,
+        "twitter": 8900000,
+        "instagram": 6900000
+      },
+      "image_url": "https://i1.feedspot.com/4823177.jpg?t=1761733727"
+    },
+    {
+      "title": "Doha News",
+      "feed_url": "https://dohanews.co/feed/",
+      "website_url": "https://dohanews.co/",
+      "description": "Doha News has been covering breaking news, politics, business, culture, and more in and around Qatar since 2009. They're a local start-up staffed by a small but versatile team of professional journalists, who've worked for Al Jazeera English, the BBC, and the Wall Street Journal.",
+      "followers": {
+        "facebook": 884100,
+        "twitter": 599200,
+        "instagram": 384400
+      },
+      "image_url": "https://i1.feedspot.com/5425592.jpg?t=1658910152"
+    },
+    {
+      "title": "Arab News \u00bb Qatar",
+      "feed_url": "https://www.arabnews.com/taxonomy/term/786/feed",
+      "website_url": "https://www.arabnews.com/category/tags/qatar",
+      "description": "Arab News, Saudi Arabia's first English language daily newspaper was founded in 1975 and has become the Middle East's leading English daily.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 512500,
+        "instagram": 706900
+      },
+      "image_url": "https://i1.feedspot.com/5425624.jpg?t=1658917777"
+    },
+    {
+      "title": "Al-Sharq",
+      "feed_url": "https://al-sharq.com/",
+      "website_url": "https://al-sharq.com/",
+      "description": "Al Sharq Newspaper is a comprehensive Qatari news website that presents local and international news around the clock. Get coverage of the latest Qatari, Gulf and international economy news, political developments on the local and international arena, sports news, technology and miscellaneous.",
+      "followers": {
+        "facebook": 835500,
+        "twitter": 376500,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5425568.jpg?t=1658907457"
+    },
+    {
+      "title": "Gulf Times",
+      "feed_url": "https://full.gulf-times.com/Rss/Index",
+      "website_url": "https://www.gulf-times.com/",
+      "description": "Gulf Times is Qatar's top-selling English daily newspaper published in Qatar and provides the latest information on weather, currency rates, prayer in addition to the latest developments in the political events, economic, sporting, cultural and artistic locally and internationally, and much much more.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 74800,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5061570.jpg?t=1658908176"
+    },
+    {
+      "title": "Al-Arab",
+      "feed_url": "https://alarab.qa/feed",
+      "website_url": "https://alarab.qa/",
+      "description": "Al-Arab newspaper was established in 1972 as the first daily political university newspaper published in Qatar by Dar Al-Orouba for Press, Printing, Publishing, and Distribution. It was founded by the Dean of the Qatari Press, Mr. Abdullah Hussein Nima, may God have mercy on him, where he held the position of responsible editor-in-chief.",
+      "followers": {
+        "facebook": 265900,
+        "twitter": 346400,
+        "instagram": 66800
+      },
+      "image_url": "https://i1.feedspot.com/5425583.jpg?t=1658908721"
+    },
+    {
+      "title": "Lusail News",
+      "feed_url": "https://lusailnews.net/feed",
+      "website_url": "https://lusailnews.net/",
+      "description": "Lusail News is a comprehensive Qatari news site that displays local and international news around the clock. Coverage of the latest Qatari, Gulf, and international economic news, political developments in the local and international arena, sports news, technology, and miscellaneous.",
+      "followers": {
+        "facebook": 107600,
+        "twitter": 52600,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5425582.jpg?t=1658908876"
+    },
+    {
+      "title": "Doha Insight",
+      "feed_url": "http://dohainsight.com/",
+      "website_url": "http://dohainsight.com/",
+      "description": "Everything that's happening in Qatar. Find news covering aviation, banking, fashion, finance, real estate, telecom, and more.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5425585.jpg?t=1658908963"
+    },
+    {
+      "title": "Qatar Just",
+      "feed_url": "https://qatarjust.com/feed/",
+      "website_url": "https://qatarjust.com/",
+      "description": "Qatar Just is the middle east news portal about Qatar, Saudi, Kuwait, Oman & UAE. This is millions of expats trusted source.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5425594.jpg?t=1658913923"
+    }
+  ]
+}

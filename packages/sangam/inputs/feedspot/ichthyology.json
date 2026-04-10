@@ -1,0 +1,52 @@
+{
+  "category": "Ichthyology",
+  "source_url": "https://rss.feedspot.com/ichthyology_rss_feeds",
+  "feeds": [
+    {
+      "title": "GeorgiaBeforePeople \u00bb Ichthyology",
+      "feed_url": "https://markgelbart.wordpress.com/category/ichthyology/feed/",
+      "website_url": "https://markgelbart.wordpress.com/category/ichthyology/",
+      "description": "Posts about Ichthyology written by Mark Gelbart.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131352.jpg?t=1625643087"
+    },
+    {
+      "title": "Virginia Tech Ichthyology Class",
+      "feed_url": "http://vtichthyology.blogspot.com/feeds/posts/default",
+      "website_url": "http://vtichthyology.blogspot.com/",
+      "description": "A blog for teaching and learning about Ichthyology at Virginia Tech. For students enrolled in Ichthyology and other interested fish enthusiasts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131346.jpg?t=1625642997"
+    },
+    {
+      "title": "The Academy of Natural Sciences \u00bb Ichthyology",
+      "feed_url": "https://www.anspblog.org/category/ichthyology/feed/",
+      "website_url": "https://www.anspblog.org/category/ichthyology/",
+      "description": "This blog gives us the chance to share different kinds of information all in one place, with categories you can use to navigate between topics so you can focus on your favorites types of content.You may see pictures or videos from the field, hear a scientist's commentary on a research trip or discovery, or learn more about an item in the Academy's collections. You'll also get information about upcoming events and exhibits, opportunities for families,and membership at the Academy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131347.jpg?t=1625643050"
+    },
+    {
+      "title": "Pensoft blog \u00bb ichthyology",
+      "feed_url": "https://blog.pensoft.net/tag/ichthyology/feed/",
+      "website_url": "https://blog.pensoft.net/tag/ichthyology/",
+      "description": "Pensoft is an independent academic publishing company, well known worldwide for its innovations in the field of semantic publishing and for its cutting-edge publishing tools and workflows. Follow to get updates on ichthyology.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5131344.jpg?t=1625642953"
+    },
+    {
+      "title": "Nature.com \u00bb Ichthyology",
+      "feed_url": "https://www.nature.com/subjects/ichthyology.atom",
+      "website_url": "https://www.nature.com/subjects/ichthyology",
+      "description": "Nature Research is here to serve the research community by publishing its most significant discoveries-findings that advance knowledge and address some of the greatest challenges that we face as a society today. Our journals publish not only primary research but also reviews, critical comment, news and analysis.",
+      "followers": {
+        "facebook": 792300,
+        "twitter": 157700
+      },
+      "image_url": "https://i1.feedspot.com/5133370.jpg"
+    }
+  ]
+}

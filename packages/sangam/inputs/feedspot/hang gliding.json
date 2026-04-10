@@ -1,0 +1,58 @@
+{
+  "category": "Hang Gliding",
+  "source_url": "https://rss.feedspot.com/hang_gliding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hang Gliding Blog",
+      "feed_url": "https://www.hanggliding.org/feed/",
+      "website_url": "https://www.hanggliding.org/blog/",
+      "description": "Hang Gliding Org. is the world's largest hang gliding community. We provide hang gliding classifieds, hang gliding magazines, hang gliding blogs, forum, videos, and more.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5016292.jpg?t=1622286168"
+    },
+    {
+      "title": "The Oz Report",
+      "feed_url": "http://ozreport.com/rss.xml.php",
+      "website_url": "https://ozreport.com/blogFull.php",
+      "description": "The Oz Report is a daily, worldwide hang gliding news ezine, with reports on competitions, pilot rankings, political issues, fly-ins, the latest technology, ultralight sailplanes, reader feedback and anything else from within the global HG community worthy of coverage.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 727
+      },
+      "image_url": "https://i1.feedspot.com/5016277.jpg?t=1622286164"
+    },
+    {
+      "title": "Wills Wing Blog",
+      "feed_url": "https://www.willswing.com/feed/",
+      "website_url": "https://www.willswing.com/category/articles/",
+      "description": "Wills Wing is manufacturing the highest quality hang gliders and hang gliding equipment. Wills Wing offers the most comprehensive line-up of hang gliders available. Whether you're starting in the sport, a casual recreational flyer, or a seasoned competition pilot, there is a Wills Wing glider to fit your style of flying and experience level.",
+      "followers": {
+        "facebook": 13300,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5016282.jpg?t=1622286172"
+    },
+    {
+      "title": "Corinna\u00b4s Sky",
+      "feed_url": "http://corinnaflies.blogspot.com/feeds/posts/default",
+      "website_url": "http://corinnaflies.blogspot.com/",
+      "description": "Hi! I am corinna schwiegersha. My travels through the skies of the world, have fun reading about my adventures, and I hope you\u00b4re flying with me in your thoughts.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 350
+      },
+      "image_url": "https://i1.feedspot.com/3515477.jpg?t=1622286176"
+    },
+    {
+      "title": "New Zealand Hang Gliding Nationals Murchison 2020",
+      "feed_url": "http://nzhgnats.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://nzhgnats.blogspot.com/",
+      "description": "This blog provides information on hang gliding tricks, techniques, and events in New Zealand.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5016432.jpg?t=1622286244"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "category": "Algo Trading",
+  "source_url": "https://rss.feedspot.com/algo_trading_rss_feeds",
+  "feeds": [
+    {
+      "title": "QuantInsti Blog",
+      "feed_url": "https://blog.quantinsti.com/rss/",
+      "website_url": "https://blog.quantinsti.com/",
+      "description": "QuantInsti's Blog on Algo Trading and Quantitative Finance. Articles on skill development and individual success stories. Tutorials on trading indicators & strategies, portfolio & risk management, automated trading, Python programming and more. QuantInsti is your go-to resource for all things quant.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 11400,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5052497.jpg?t=1658839434"
+    },
+    {
+      "title": "Robot Wealth Blog",
+      "feed_url": "https://robotwealth.com/feed/",
+      "website_url": "https://robotwealth.com/blog/",
+      "description": "Learn algo trading and quantitative analysis. Read the research behind our firm's algo trading, FX trading strategies, machine learning tools and quantitative research for free on our blog. Robot Wealth provides trading education to aspiring retail traders.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 60100
+      },
+      "image_url": "https://i1.feedspot.com/5370330.jpg?t=1644393916"
+    },
+    {
+      "title": "Quantitative Trading",
+      "feed_url": "http://epchan.blogspot.com/feeds/posts/default",
+      "website_url": "https://epchan.blogspot.com/",
+      "description": "Quantitative investment and trading ideas, research, and analysis. Authored by Ernie Chan - author of 3 algorithmic trading books and educator.",
+      "followers": {
+        "twitter": 21100
+      },
+      "image_url": "https://i1.feedspot.com/81697.jpg?t=1644472113"
+    },
+    {
+      "title": "Quantified Strategies Blog",
+      "feed_url": "https://www.quantifiedstrategies.com/blog/feed/",
+      "website_url": "https://www.quantifiedstrategies.com/blog/",
+      "description": "Quantitative analysis and strategies in the financial markets. This website is written and managed by Oddmund Groette and Hakan Samuelsson. They have been independent full-time traders and investors for 20 years.",
+      "followers": {
+        "twitter": 14300
+      },
+      "image_url": "https://i1.feedspot.com/1156144.jpg?t=1644473370"
+    },
+    {
+      "title": "StrategyQuant Blog",
+      "feed_url": "https://strategyquant.com/blog/feed/",
+      "website_url": "https://strategyquant.com/blog",
+      "description": "General articles about trading. StrategyQuant is a strategy development platform that uses machine learning and genetic programming to automatically generate automated trading systems.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 556
+      },
+      "image_url": "https://i1.feedspot.com/5370336.jpg?t=1644393955"
+    },
+    {
+      "title": "The Financial Hacker",
+      "feed_url": "https://financial-hacker.com/feed/",
+      "website_url": "https://financial-hacker.com/",
+      "description": "A new view on algorithmic trading.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370343.jpg?t=1644471202"
+    },
+    {
+      "title": "Jonathankinlay.com",
+      "feed_url": "https://jonathankinlay.com/feed/",
+      "website_url": "https://jonathankinlay.com/",
+      "description": "The latest theories, models and investment strategies in quantitative research and trading. Dr Jonathan Kinlay is the Head of Quantitative Trading at Systematic Strategies, LLC, a systematic hedge fund that deploys high frequency trading strategies using news-based algorithms.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370339.jpg?t=1644471043"
+    },
+    {
+      "title": "Quantifiable Edges Blog",
+      "feed_url": "https://quantifiableedges.com/feed/",
+      "website_url": "https://quantifiableedges.com/blog/",
+      "description": "Rob utilizes price action, volume, breadth, sentiment, seasonality, liquidity flows and more to conduct his research. In January of 2008 Rob began Quantifiable Edges. He uses historical analysis to asses current market action and odds. Rob utilizes price action, volume, breadth, sentiment, seasonality, liquidity flows and more to conduct his research.",
+      "followers": {
+        "facebook": 186,
+        "twitter": 20500
+      },
+      "image_url": "https://i1.feedspot.com/3877337.jpg?t=1644473608"
+    },
+    {
+      "title": "This Blog is Systematic",
+      "feed_url": "https://qoppac.blogspot.com/feeds/posts/default",
+      "website_url": "https://qoppac.blogspot.com/",
+      "description": "Rob Carvers blog about quant trading, investing, and economics. Rob is a systematic trader, blogger, quant geek, dad and MAMIL.",
+      "followers": {
+        "facebook": 470,
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/4241709.jpg?t=1644471605"
+    },
+    {
+      "title": "AlgoTrading101",
+      "feed_url": "https://algotrading101.com/learn/feed/",
+      "website_url": "https://algotrading101.com/learn/",
+      "description": "From $0 to $1,000,000. Authentic guides and stories about trading, coding and life. Lucas and his team designed AlgoTrading101 to be the education program they wished they had when they started trading.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370334.jpg?t=1644475845"
+    },
+    {
+      "title": "Quant Nomad Blog",
+      "feed_url": "https://quantnomad.com/feed/",
+      "website_url": "http://",
+      "description": "Check out the latest news, tips, offers, and guides on algorithmic trading using Python, R, or TradingView's Pine Script. The Quant Nomad has over 6 years' experience in the quantitative trading industry (15+ years in programming). He has helped more than 200 traders and companies create/optimize their algorithmic trading models.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370337.jpg?t=1644393962"
+    },
+    {
+      "title": "Algo Trading & Investment Blog",
+      "feed_url": "https://algotrading-investment.com/feed/",
+      "website_url": "http://",
+      "description": "Articles on trading and forex market prediction. Algo Trading & Investment is an Innovative Financial Technology Company working under the notion of Algorithmic and Quantitative Trading. We have been working with Stock and Forex market as well as Options and Futures since 2008.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370342.jpg?t=1644472352"
+    },
+    {
+      "title": "Alvarez Quant Trading Blog",
+      "feed_url": "https://alvarezquanttrading.com/feed/",
+      "website_url": "https://alvarezquanttrading.com/blog/",
+      "description": "I'm Cesar Alvarez. I have been trading since 1996 mostly stocks and ETFs. I trade multiple quantitative strategeis both on the long and short side. Since the start of this blog in 2013, I have been sharing my research thoughts with other traders. I also help traders test out their trading ideas through my consulting services.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/3970004.jpg?t=1647437329"
+    },
+    {
+      "title": "Myalgomate Blog",
+      "feed_url": "https://www.myalgomate.com/feed/",
+      "website_url": "https://www.allquant.co/blog",
+      "description": "Find articles on algo trading. We bring the best-in-class technologies, platforms, brokers, and strategies to realize your dream of algo trading.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370331.jpg?t=1644393921"
+    },
+    {
+      "title": "AllQuant Blog",
+      "feed_url": "https://www.allquant.co/blog-feed.xml",
+      "website_url": "https://www.allquant.co/blog",
+      "description": "Insights on quantitative investment and general topics about finance and capital markets. We strive to demystify quantitative investing for retail investors. AllQuant is a one-stop service for retail investors on quantitative investing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370341.jpg?t=1644471431"
+    },
+    {
+      "title": "QuantStrat TradeR",
+      "feed_url": "https://quantstrattrader.com/feed/",
+      "website_url": "https://quantstrattrader.com/",
+      "description": "My name is Ilya Kipnis. I am a data scientist, systematic trader, and quantitative research analyst. This blog will be an investigation into various problems that interest me in data science, quantitative finance, systematic trading, and asset management.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4215097.jpg?t=1612588714"
+    },
+    {
+      "title": "Quantpedia Blog",
+      "feed_url": "https://quantpedia.com/feed/",
+      "website_url": "https://quantpedia.com/Blog/",
+      "description": "Quantpedia is the encyclopedia of quantitative trading strategies. Quantpedia's mission is to process financial academic research into a more user-friendly form to help anyone who seeks new quantitative and algorithmic trading strategy ideas.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5042503.jpg?t=1644473022"
+    },
+    {
+      "title": "SmartStore Blog",
+      "feed_url": "http://",
+      "website_url": "http://",
+      "description": "The blog serves as a go to resource for beginner to advanced level enthusiast and professional traders interested in algorithmic trading.Power your trades with cutting edge fintech technologies and learn algorithmic trading with one platform",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370347.jpg?t=1644474527"
+    },
+    {
+      "title": "SquareOff Blog",
+      "feed_url": "https://squareoff.in/feed/",
+      "website_url": "http://",
+      "description": "SquareOff provides automated Trading Bots that will automatically place trades in your own Trading Account.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 62900
+      },
+      "image_url": "https://i1.feedspot.com/5370332.jpg?t=1644472550"
+    },
+    {
+      "title": "Neuravest Blog",
+      "feed_url": "https://neuravest.net/feed/",
+      "website_url": "http://",
+      "description": "Covering algorithmic investments with NLP, alternative data, model portfolios, statistical modeling, machine learning, and AI for the financial services and asset management industry. Neuravest works with asset managers to implement adaptive investment strategies driven by predictive alternative data, human insights and machine learning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370335.jpg?t=1644393953"
+    }
+  ]
+}

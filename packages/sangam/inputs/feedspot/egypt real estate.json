@@ -1,0 +1,61 @@
+{
+  "category": "Egypt Real Estate",
+  "source_url": "https://rss.feedspot.com/egypt_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nawy Blog",
+      "feed_url": "https://www.nawy.com/blog/feed",
+      "website_url": "https://www.nawy.com/blog/",
+      "description": "The ultimate premium real estate search engine in Egypt. Browse areas, compounds, and properties by price, location, and amenities to find the perfect place.",
+      "followers": {
+        "facebook": 206300,
+        "twitter": 41,
+        "instagram": 106000
+      },
+      "image_url": "https://i1.feedspot.com/5335557.jpg?t=1635170472"
+    },
+    {
+      "title": "Enjaz Property Blog",
+      "feed_url": "https://www.enjazproperty.com/en/feed/",
+      "website_url": "https://www.enjazproperty.com/en/blog/",
+      "description": "Enjaz Property is an Egyptian company established in 2015 with the aim of providing real estate services in various fields including residential, commercial, and tourist.",
+      "followers": {
+        "facebook": 26900,
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/5335558.jpg?t=1635225407"
+    },
+    {
+      "title": "Masharf Real Estate Blog",
+      "feed_url": "https://masharf.com/en/blog/feed/",
+      "website_url": "https://masharf.com/en/blog/",
+      "description": "Masharf is A one-stop-shop that will provide you with the option to choose your new home by presenting all the necessary information VIA reliable agents.",
+      "followers": {
+        "facebook": 109400
+      },
+      "image_url": "https://i1.feedspot.com/5335560.jpg?t=1635224206"
+    },
+    {
+      "title": "Heliopolis Developers Group Blog",
+      "feed_url": "https://www.hdg.com.eg/feed/",
+      "website_url": "https://www.hdg.com.eg/blog/",
+      "description": "Heliopolis Developers Group is the largest real estate developer in New Heliopolis City. As a group of the largest and most successful real estate developers in Egypt, we have contributed over the past 25 years to the reconstruction of New Cairo. Keep up to date with our articles and news",
+      "followers": {
+        "facebook": 76100,
+        "twitter": 157,
+        "instagram": 906
+      },
+      "image_url": "https://i1.feedspot.com/5335555.jpg?t=1635171100"
+    },
+    {
+      "title": "Royal Gate Real Estate Egypt",
+      "feed_url": "https://royalgate-egypt.com/feed/",
+      "website_url": "https://royalgate-egypt.com/category/news/",
+      "description": "Royal Gate Real Estate was established in 2004 as one of the first established Real Estate Brokers in Egypt. From the beginning, our strategy has been based on a strong commitment to professionalism. Read more for updates and news on new properties in Egypt, luxury properties, offices, and more.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5335632.jpg?t=1635950297"
+    }
+  ]
+}

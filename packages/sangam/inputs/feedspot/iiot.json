@@ -1,0 +1,129 @@
+{
+  "category": "IIOT",
+  "source_url": "https://rss.feedspot.com/iiot_rss_feeds",
+  "feeds": [
+    {
+      "title": "Link Labs Blog",
+      "feed_url": "https://www.link-labs.com/blog/rss.xml",
+      "website_url": "https://www.link-labs.com/blog",
+      "description": "We're leading innovators in technology for the IoT. Our flagship product offering, AirFinder makes locating and monitoring anything, anywhere easy and impactful. We believe that unique solutions built by solving hard technical problems can transform businesses of any scale.",
+      "followers": {
+        "facebook": 399,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4666229.jpg?t=1617953519"
+    },
+    {
+      "title": "IoT Analytics \u00bb Industrial IoT",
+      "feed_url": "https://iot-analytics.com/category/industrial-iot/feed/",
+      "website_url": "https://iot-analytics.com/category/industrial-iot/",
+      "description": "At IoT Analytics our coverage includes Industrial IoT, non-industrial IoT, general IoT, and more. IoT Analytics is a leading provider of market insights and strategic business intelligence for the Internet. The goal is to supply market participants in the IoT ecosystem with accurate information that enables them to go to market quicker and build safer and better IoT solutions.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5429382.jpg?t=1660734989"
+    },
+    {
+      "title": "Paessler Blog \u00bb Industrial IoT",
+      "feed_url": "https://blog.paessler.com/topic/industrial-iot/rss.xml",
+      "website_url": "https://blog.paessler.com/topic/industrial-iot",
+      "description": "Read this blog if you are an IT geek, sys-admin, or interested in monitoring topics. As a monitoring company, we offer to monitor solutions for businesses across all industries and all sizes, that help our customers save resources, from optimizing their IT, OT, and IoT infrastructures, to reducing energy consumption or emissions.",
+      "followers": {
+        "facebook": 33000,
+        "twitter": 4800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5429380.jpg?t=1660740395"
+    },
+    {
+      "title": "IoT Now \u00bb Industrial Automation",
+      "feed_url": "https://www.iot-now.com/news/industrial-news/feed/",
+      "website_url": "https://www.iot-now.com/news/industrial-news/",
+      "description": "By delivering Industrial automation news, Daily IoT news, and expert opinions IoT Now magazine has become the leading global publication dedicated to IoT-enabled business. IoT Now analyses the opportunities and challenges and reports on lessons from the real world of next-generation IoT services.focuses on the deployment of technologies across the enterprise, automotive, logistics, healthcare, utilities, travel, security, and smart city verticals.webcasts, bi-monthly magazines, white papers, daily news, and expert opinion pieces,",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 29300
+      },
+      "image_url": "https://i1.feedspot.com/5429378.jpg?t=1659681911"
+    },
+    {
+      "title": "Netilion Endress Blog",
+      "feed_url": "https://netilion.endress.com/blog/rss/",
+      "website_url": "https://netilion.endress.com/blog/",
+      "description": "Netilion Blog run by the Endress+Hauser Group, shares thoughts, stories, and ideas on IIoT, IoT, and more. Endress+Hauser is a global leader in measurement instrumentation, services, and solutions for industrial process engineering. We provide process solutions for flow, level, pressure, analytics, temperature, and digital communications, optimizing processes in terms of economic efficiency, safety & environmental impact.",
+      "followers": {
+        "facebook": 26200,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5429385.jpg?t=1660739616"
+    },
+    {
+      "title": "Hark Blog",
+      "feed_url": "https://harksys.com/feed/",
+      "website_url": "https://harksys.com/blog/",
+      "description": "Blog posts cover news and expert opinions from Hark, covering Internet of things (IoT), technology, and software engineering. The Hark platform allows companies to simplify the route to intelligent assets to increase efficiency while reducing waste. We monitor, store and analyze sensor data in real-time.",
+      "followers": {
+        "twitter": 966,
+        "instagram": 366
+      },
+      "image_url": "https://i1.feedspot.com/5429383.jpg?t=1659681944"
+    },
+    {
+      "title": "Industry IoT Consortium Blog",
+      "feed_url": "https://www.iiconsortium.org/feed/",
+      "website_url": "https://www.iiconsortium.org/blog/",
+      "description": "The IIC blog discusses the latest IIoT news, provides shortened versions of IIC documents, and covers various digital transformation topics. Our services are targeted toward helping members drive business value in our core verticals of IT, Networks, Academia & Research, Manufacturing, Energy & Utilities, and Healthcare. We help organizations identify best technology practices.",
+      "followers": {
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5429381.jpg?t=1659681933"
+    },
+    {
+      "title": "Clovity Blog \u00bb IIoT",
+      "feed_url": "https://www.clovity.com/blog/category/iiot/feed/",
+      "website_url": "https://www.clovity.com/blog/category/iiot/",
+      "description": "Read blogs & articles about IIoT by Clovity. Clovity is a San Francisco-based IoT service platform provider. We offer a range of innovative business solutions and accelerators to help solve your complex industry challenges.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 458
+      },
+      "image_url": "https://i1.feedspot.com/5429379.jpg?t=1659681922"
+    },
+    {
+      "title": "Gevernova Software Blog",
+      "feed_url": "https://www.gevernova.com/software/blog/",
+      "website_url": "https://www.gevernova.com/software/blog/",
+      "description": "Read the latest blogs on digital transformation, industrial IoT trends, and the state of the industry from GE, analysts, customers, and partners. GE Digital is a software company, that helps clients solve challenges by putting industrial data to work. We bring simplicity, speed, and scale to our customers' digital transformation.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/5429393.jpg?t=1659682007"
+    },
+    {
+      "title": "Worximity Blog",
+      "feed_url": "https://www.worximity.com/en/blog/rss.xml",
+      "website_url": "https://www.worximity.com/blog",
+      "description": "Head to our blog to educate yourself on IIoT, Industry 4.0, Machine Monitoring, and Smart Factory. We assist manufacturers to apply continuous improvement and profitability. Our solution enables better decision-making and facilitates collaboration so organizations can meet production goals.",
+      "followers": {
+        "facebook": 393,
+        "twitter": 240,
+        "instagram": 122
+      },
+      "image_url": "https://i1.feedspot.com/5429384.jpg?t=1659681952"
+    },
+    {
+      "title": "ReadWrite \u00bb Industrial",
+      "feed_url": "https://readwrite.com/category/industrial/feed/",
+      "website_url": "https://readwrite.com/category/industrial/",
+      "description": "ReadWrite is the leading media platform that brings you the latest Industrial news, analysis, and conversation on IoT and connected topics. Every day there are stories of amazing technologies. ReadWrite is a place where builders, creators, developers, and dreamers can explore and stay in the know about all things IoT.",
+      "followers": {
+        "facebook": 111900,
+        "twitter": 1400000,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4476277.jpg?t=1660741192"
+    }
+  ]
+}

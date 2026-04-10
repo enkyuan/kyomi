@@ -1,0 +1,215 @@
+{
+  "category": "Miami Food",
+  "source_url": "https://rss.feedspot.com/miami_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Miami",
+      "feed_url": "https://miami.eater.com/rss/index.xml",
+      "website_url": "https://miami.eater.com/",
+      "description": "The Miami Restaurant, Bar, and Nightlife magazine. Food news and dining guides for Miami. Check out the neighborhoods to know what you can find in various places or search our map for the best restaurants right where you are. You can also get to know about the latest new openings in the city with Eater Miami.",
+      "followers": {
+        "facebook": 23800,
+        "twitter": 27200,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4772269.jpg?t=1608797902"
+    },
+    {
+      "title": "MiamiCurated \u00bb Food",
+      "feed_url": "https://www.miamicurated.com/category/food/feed/",
+      "website_url": "https://www.miamicurated.com/category/food/",
+      "description": "Find out about the best Food in Miami! New restaurants, best dishes, deals, food festivals and gastronomic events.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2700,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5178273.jpg?t=1629357891"
+    },
+    {
+      "title": "Food For Thought Miami",
+      "feed_url": "https://www.foodforthoughtmiami.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.foodforthoughtmiami.com/",
+      "description": "A Miami food blog with reviews of restaurants in South Florida and elsewhere.",
+      "followers": {
+        "facebook": 185,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4635224.jpg?t=1602510110"
+    },
+    {
+      "title": "Miami Food Pug",
+      "feed_url": "https://miamifoodpug.com/feed/",
+      "website_url": "https://miamifoodpug.com/",
+      "description": "Miami Food Pug is a Miami food blog that combines local South Florida fare and cute pugs.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 2600,
+        "instagram": 77200
+      },
+      "image_url": "https://i1.feedspot.com/4772120.jpg?t=1608798583"
+    },
+    {
+      "title": "Dish Miami",
+      "feed_url": "https://www.dishmiami.com/feed/",
+      "website_url": "https://www.dishmiami.com/",
+      "description": "Dish Miami is a digital media company that was created to help restaurant partners get the coverage they deserve while streamlining the process of delivering their message to the public. Get the dish on restaurants, travel, wellness, and local business in Miami.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 294,
+        "instagram": 29900
+      },
+      "image_url": "https://i1.feedspot.com/5500412.jpg?t=1675058779"
+    },
+    {
+      "title": "Miami Culinary Tours Blog",
+      "feed_url": "https://www.miamiculinarytours.com/feed/",
+      "website_url": "https://www.miamiculinarytours.com/blog/",
+      "description": "Our blog is here to provide you with news & updates, special events around Miami, and killer recipes. Since 2010, we have been offering daily tours throughout the city's most celebrated neighborhoods. From Cafe Cubano to Peruvian ceviche, we bring you everything South Florida's culinary communities have to offer as well as the culture and tradition behind those doing the cooking.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 8500,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/1563490.jpg?t=1675058980"
+    },
+    {
+      "title": "MiamiTake.com \u00bb Food",
+      "feed_url": "https://miamitake.com/category/food/feed/",
+      "website_url": "https://miamitake.com/category/food/",
+      "description": "Check out the newest and most popular restaurants news and reviews around Miami. Miami Take is our take on the best places to eat, shop and explore in Miami, Florida.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 12,
+        "instagram": 52
+      },
+      "image_url": "https://i1.feedspot.com/5500409.jpg?t=1675059003"
+    },
+    {
+      "title": "The Rebel Chick",
+      "feed_url": "https://therebelchick.com/feed/",
+      "website_url": "https://therebelchick.com/",
+      "description": "I am Jenn Quillen, also known as The Rebel Chick. I'm a Miami native and I love sharing easy dinner recipes, baking recipes, travel ideas and general Miami Lifestyle fun!",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 71400,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/1800269.jpg?t=1608797984"
+    },
+    {
+      "title": "Digest Miami \u00bb Digest Lover",
+      "feed_url": "https://www.digestmiami.com/category/best-miami-restaurants/feed/",
+      "website_url": "https://www.digestmiami.com/category/best-miami-restaurants/",
+      "description": "Get to know the best Miami restaurants, the people that create our favorite dishes & where to find them. Digest Miami goes beyond cooking and explores the many stories behind the food we eat and the people that make up our culinary world. From the concepts that inspire great restaurants to the vision behind each Chef's signature dish, we are committed to the exploration of food as a lifestyle and not just a commodity. We hope to share our passionate adventures with you.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 2800,
+        "instagram": 20700
+      },
+      "image_url": "https://i1.feedspot.com/5500413.jpg?t=1675058785"
+    },
+    {
+      "title": "The Whet Palette",
+      "feed_url": "https://thewhetpalette.com/feed/",
+      "website_url": "https://thewhetpalette.com/",
+      "description": "I'm a Cuban-American writer and podcaster passionate about food, wine, and travel. Follow my colorful South Florida adventures as I review Miami restaurants, and spotlight local chefs and somms. I am a Michelin dining enthusiast, but nothing is off-limits. After all, I was raised on pan Cubano, cafecito, and pastelitos.",
+      "followers": {
+        "twitter": 2300,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5178280.jpg?t=1675060530"
+    },
+    {
+      "title": "Fatgirl Hedonist",
+      "feed_url": "https://fatgirlhedonist.com/feed/",
+      "website_url": "https://fatgirlhedonist.com/",
+      "description": "Browse hundreds of delicious family-friendly recipes for every occasion with a Latin twist! Then, stick around for giveaways and the 'occasional' restaurant review. My name is Cari Garcia and I'm a proud Latina and the daughter of immigrants.",
+      "followers": {
+        "facebook": 48800,
+        "twitter": 9700,
+        "instagram": 227400
+      },
+      "image_url": "https://i1.feedspot.com/5312897.jpg?t=1629199637"
+    },
+    {
+      "title": "DiningOut Miami",
+      "feed_url": "https://diningoutmiami.com/feed",
+      "website_url": "https://www.diningoutmiami.com/",
+      "description": "DiningOut Miami is your ultimate guide to the best restaurants in Miami. Discover your next favorite restaurant, recipe, or read about Miami chefs. Get to know about the people, restaurants, and neighborhoods with the best food in Miami.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 9400,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5178331.jpg?t=1667457078"
+    },
+    {
+      "title": "The Chowfather",
+      "feed_url": "http://www.thechowfather.com/feeds/posts/default",
+      "website_url": "http://www.thechowfather.com/",
+      "description": "I'm a food fan not a critic. I love great food and love sharing great spots even more.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5178299.jpg?t=1629357911"
+    },
+    {
+      "title": "Join Me in Miami \u00bb Food+ Drinks",
+      "feed_url": "http://joinmein.miami/category/food-drinks/feed/",
+      "website_url": "http://joinmein.miami/category/food-drinks/",
+      "description": "Hi! Welcome to the online diary of my love for fashion, food, travel, & life in Miami.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 4000,
+        "instagram": 101800
+      },
+      "image_url": "https://i1.feedspot.com/5178312.jpg?t=1626443273"
+    },
+    {
+      "title": "The Joy of Food \u00bb Miami",
+      "feed_url": "https://thejoyoffood.life/category/united-states/miami/feed/",
+      "website_url": "https://thejoyoffood.life/category/united-states/miami/",
+      "description": "The Joy of Food blog celebrates eating well, traveling often, and living la dolce vita. Joy is a webmaster by day and a self-described foodie, traveler, photographer, and writer by night. Check out his food ventures in the city of Miami, popular and hidden food gems and more!",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5500414.jpg?t=1675059145"
+    },
+    {
+      "title": "WhatNow Miami",
+      "feed_url": "https://whatnow.com/miami/feed/",
+      "website_url": "https://whatnow.com/miami/",
+      "description": "What Now Miami is the premier news source for planned restaurants, retail, and real estate in the Miami, FL area. Learn what's trending in MIA today!",
+      "followers": {
+        "facebook": 487,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/5500415.jpg?t=1675058843"
+    },
+    {
+      "title": "Miami New Times \u00bb Food & Drink",
+      "feed_url": "https://www.miaminewtimes.com/restaurants.rss",
+      "website_url": "https://www.miaminewtimes.com/restaurants",
+      "description": "Discover new restaurants and where to find the best food in Miami. Some of the city's finest food writers cover the restaurant industry for Miami New Times, reporting on openings and closings, reviewing restaurants, interviewing chefs, and recommending the best food and drink.",
+      "followers": {
+        "facebook": 195400,
+        "twitter": 220700,
+        "instagram": 182800
+      },
+      "image_url": "https://i1.feedspot.com/5178221.jpg?t=1626443263"
+    },
+    {
+      "title": "The Real Food Academy Blog",
+      "feed_url": "https://therealfoodacademy.com/blog/feed",
+      "website_url": "https://therealfoodacademy.com/blog",
+      "description": "The Real Food Academy Blog will bring you lots of healthy recipes and tips and tricks for the kitchen. The Real Food Academy is a cooking school for kids and adults. We believe all your favorite dishes can be made, without processed foods. Learn to make it from scratch!",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 194,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5500411.jpg?t=1675058774"
+    }
+  ]
+}

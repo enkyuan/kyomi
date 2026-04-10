@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+    <head>
+        <title>Global News RSS Feeds</title>
+        <dateCreated>Fri, 05 Dec 2025 00:00:00 GMT</dateCreated>
+        <ownerName>User</ownerName>
+    </head>
+    <body>
+        <outline text="US Based RSS News Feeds" title="US Based RSS News Feeds">
+            <outline type="rss" text="CNN" title="CNN" xmlUrl="http://rss.cnn.com/rss/cnn_topstories.rss" htmlUrl="http://us.cnn.com" description="CNN News is one of the leading giants in online news &amp; information that seeks to inform, empower, engage the world with top news headlines." />
+            <outline type="rss" text="The New York Times" title="The New York Times" xmlUrl="https://archive.nytimes.com/www.nytimes.com/services/xml/rss/index.html" htmlUrl="http://nytimes.com" description="The New York Times is a renowned American newspaper with worldwide readership and influence." />
+            <outline type="rss" text="USA TODAY" title="USA TODAY" xmlUrl="http://rssfeeds.usatoday.com/UsatodaycomNation-TopStories" htmlUrl="http://usatoday.com" description="USATODAY.com is a celebrated news &amp; information blog providing readers with breaking news on sports, weather, travel, money, life, technology." />
+            <outline type="rss" text="NBC News" title="NBC News" xmlUrl="http://www.nbcnews.com/id/6257883/t/press-release/" htmlUrl="http://nbcnews.com" description="NBCNews.com features content from different NBC shows along with wire and original reporting of all the current headlines." />
+            <outline type="rss" text="The Washington Times" title="The Washington Times" xmlUrl="https://www.washingtontimes.com/feeds/" htmlUrl="http://washingtontimes.com" description="The Washington Times is famous for its thorough coverage of politics and hard-hitting investigative reporting." />
+            <outline type="rss" text="The Huffington Post" title="The Huffington Post" xmlUrl="https://www.huffingtonpost.in/news/rss/" htmlUrl="http://huffpost.com" description="HuffPost is a popular American news aggregator &amp; website, with international and national editions of everyday news feeds." />
+        </outline>
+        <outline text="Australia Based RSS News Feeds" title="Australia Based RSS News Feeds">
+            <outline type="rss" text="ABC Australia" title="ABC Australia" xmlUrl="https://www.abc.net.au/news/rural/rss/" htmlUrl="http://abc.net.au/news" description="ABC News is a local news service in Australia operated by the Current and News Affairs division of the Australian Broadcasting Corporation." />
+            <outline type="rss" text="The Age" title="The Age" xmlUrl="https://www.theage.com.au/rssheadlines" htmlUrl="http://theage.com.au" description="The Age is an Australian daily newspaper published in Melbourne offering fine news coverage from across the country." />
+            <outline type="rss" text="Herald Sun" title="Herald Sun" xmlUrl="https://www.heraldsun.com.au/help-rss" htmlUrl="http://heraldsun.com.au" description="The Herald Sun is one of the biggest-selling newspapers with a proud history of leading the advocating and agenda for Victorians." />
+            <outline type="rss" text="SBS Australia" title="SBS Australia" xmlUrl="https://www.sbs.com.au/news/feeds" htmlUrl="http://sbs.com.au" description="The Special Broadcasting Service (SBS) is a hybrid-funded public online broadcasting network owned by the Australian government." />
+            <outline type="rss" text="Brisbane Times" title="Brisbane Times" xmlUrl="https://www.heraldsun.com.au/rss" htmlUrl="http://brisbanetimes.com.au" description="Brisbane Times is a news online publication that offers information covering areas of sports, lifestyles, entertainment, technology, business, and travel." />
+            <outline type="rss" text="Crikey" title="Crikey" xmlUrl="https://www.heraldsun.com.au/rss" htmlUrl="http://crikey.com.au" description="Crikey is a digital news and commentary publication aiming to provide a fair blend of opinion and analysis in journalism." />
+            <outline type="rss" text="The Northern Star" title="The Northern Star" xmlUrl="https://www.northernstar.com.au/feeds/rss/homepage/" htmlUrl="http://northernstar.com.au" description="The Northern Star is the premier news organization of the northern Australian region." />
+        </outline>
+        <outline text="Europe Based RSS News Feeds" title="Europe Based RSS News Feeds">
+            <outline type="rss" text="The Guardian" title="The Guardian" xmlUrl="https://www.theguardian.com/help/feeds" htmlUrl="http://theguardian.com/uk" description="The Guardian is an influential daily newspaper published in London considered one of the United Kingdom’s leading newspapers." />
+            <outline type="rss" text="Channel 4 News" title="Channel 4 News" xmlUrl="https://www.channel4.com/news/rss-feeds" htmlUrl="http://channel4.com/news" description="Channel 4 is the commercially-funded UK based public service news broadcasting website." />
+            <outline type="rss" text="The Irish Times" title="The Irish Times" xmlUrl="https://www.irishtimes.com/business/rss-bringing-the-latest-syndicated-news-feeds-to-a-desktop-near-you-1.412210" htmlUrl="http://irishtimes.com" description="The Irish Times is an internationally reputed daily newspaper from Ireland covering news reporting from throughout the country." />
+            <outline type="rss" text="Wired UK" title="Wired UK" xmlUrl="https://www.wired.com/about/rss_feeds/" htmlUrl="http://wired.co.uk" description="The Wired UK is an online RSS feed and news publication that reports on the effects of technology and science." />
+            <outline type="rss" text="The Bolton News" title="The Bolton News" xmlUrl="https://www.theboltonnews.co.uk/rss/" htmlUrl="http://theboltonnews.co.uk" description="The Bolton News is a daily newspaper and a news website covering the towns of north-western England." />
+            <outline type="rss" text="The Telegraph" title="The Telegraph" xmlUrl="http://telegraph.co.uk/rss.xml" htmlUrl="http://telegraph.co.uk" description="The Daily Telegraph, known as The Telegraph online, is a British national broadsheet daily newspaper based in London." />
+        </outline>
+        <outline text="Asia Based RSS News Feeds" title="Asia Based RSS News Feeds">
+            <outline type="rss" text="The Diplomat" title="The Diplomat" xmlUrl="https://thediplomat.com/tag/rss/" htmlUrl="http://thediplomat.com" description="The Diplomat is an online source of premier international current-affairs for the Asia-Pacific." />
+            <outline type="rss" text="Asian Correspondent" title="Asian Correspondent" xmlUrl="https://asiancorrespondent.com/feed" htmlUrl="http://asiancorrespondent.com" description="Asian Correspondent is an English-based news website that presents news articles by professional bloggers and journalists." />
+            <outline type="rss" text="The Asian Age" title="The Asian Age" xmlUrl="http://www.asianage.com/rss_feed/" htmlUrl="http://asianage.com" description="The Asian Age was India’s first global newspaper, with a special focus on international news coverage." />
+            <outline type="rss" text="Channel News Asia" title="Channel News Asia" xmlUrl="https://www.channelnewsasia.com/rssfeeds/8395986" htmlUrl="http://channelnewsasia.com" description="CNA is an English-based news channel operated in Singapore covering breaking news and top stories both nationally and internationally." />
+            <outline type="rss" text="East Asia Forum" title="East Asia Forum" xmlUrl="https://www.eastasiaforum.org/feed/" htmlUrl="http://eastasiaforum.org" description="East Asia Forum is an online platform that provides research and analysis on business, politics, economics, and law." />
+            <outline type="rss" text="The Retail News Asia" title="The Retail News Asia" xmlUrl="https://www.retailnews.asia/feed/" htmlUrl="http://retailnews.asia" description="The Retail News Asia is an online news source that provides market research on the current retail news of pan-Asia." />
+        </outline>
+        <outline text="Canada Based RSS News Feeds" title="Canada Based RSS News Feeds">
+            <outline type="rss" text="Global News" title="Global News" xmlUrl="http://www.globalnews.ca/feed" htmlUrl="http://globalnews.ca" description="Global News is a Canadian host website providing breaking news, national weather forecasts, and local news videos." />
+            <outline type="rss" text="Toronto Star" title="Toronto Star" xmlUrl="https://torontosun.com/feed" htmlUrl="http://torontosun.com" description="The Toronto Star has long been Canada’s largest daily newspaper, publishing articles 7 days a week." />
+            <outline type="rss" text="The Vancouver Sun" title="The Vancouver Sun" xmlUrl="http://www.vancouversun.com/feed/?x=1" htmlUrl="http://vancouversun.com" description="The Vancouver Sun is Vancouver’s ultimate source for local news, video, breaking headlines, and images." />
+            <outline type="rss" text="Metro News Canada" title="Metro News Canada" xmlUrl="http://www.metronews.ca/feeds.articles.news.rss" htmlUrl="http://metronews.ca" description="Metro News is the first national daily newspaper to be published in 2 different official languages." />
+            <outline type="rss" text="The Post Millennial" title="The Post Millennial" xmlUrl="http://www.thepostmillennial.com/feed" htmlUrl="http://thepostmillennial.com" description="The Post Millennial is one of Canada’s fastest-growing news corporations delivering news as it unfolds." />
+            <outline type="rss" text="CBC News" title="CBC News" xmlUrl="https://www.cbc.ca/rss/" htmlUrl="http://CBC.ca" description="CBC News covers local, regional, and national news from all across Canada." />
+            <outline type="rss" text="National Post" title="National Post" xmlUrl="https://www.rsssearchhub.com/feeds/national-post" htmlUrl="http://nationalpost.com" description="The National Post is one of Canada’s largest news networks present online delivering quality news content on business and finance." />
+        </outline>
+        <outline text="Russian Based RSS News Feeds" title="Russian Based RSS News Feeds">
+            <outline type="rss" text="Meduza" title="Meduza" xmlUrl="https://meduza.io/rss/podcasts/meduza-v-kurse" htmlUrl="http://meduza.io" description="Meduza is a news aggregator in Russian that provides manually selected news articles, podcasts, and videos." />
+            <outline type="rss" text="The Moscow Times" title="The Moscow Times" xmlUrl="https://www.themoscowtimes.com/page/rss" htmlUrl="http://themoscowtimes.com" description="The Moscow Times is one of Russia’s leading, independent English-based media resources." />
+            <outline type="rss" text="TASS" title="TASS" xmlUrl="https://tass.com/search" htmlUrl="http://tass.com" description="TASS is a leading Russian state news agency that focuses on national news journalism." />
+            <outline type="rss" text="Russia Today" title="Russia Today" xmlUrl="https://www.rt.com/rss-feeds/" htmlUrl="http://rt.com" description="Russia Today is the nations very first 24/7 English-language news channel which brings the Russian view on global news." />
+        </outline>
+    </body>
+</opml>

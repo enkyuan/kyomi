@@ -1,0 +1,28 @@
+{
+  "category": "Hobart News",
+  "source_url": "https://rss.feedspot.com/hobart_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Times of Northwest Indiana \u00bb Hobart",
+      "feed_url": "https://www.nwitimes.com/search/?f=rss&t=article&c=news/local/lake/hobart&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.nwitimes.com/news/local/lake/hobart/",
+      "description": "We're the leading source of news and information for Northwest Indiana and Chicago's southeast suburbs. Read the news about crime, business, government, education and sports and also more information of Hobart city.",
+      "followers": {
+        "facebook": 163900,
+        "twitter": 69100,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5171535.jpg?t=1594965326"
+    },
+    {
+      "title": "City of Hobart",
+      "feed_url": "https://www.cityofhobart.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofhobart.org/CivicAlerts.aspx?sort=date",
+      "description": "Hobart, IN is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "twitter": 333
+      },
+      "image_url": "https://i1.feedspot.com/5171539.jpg"
+    }
+  ]
+}

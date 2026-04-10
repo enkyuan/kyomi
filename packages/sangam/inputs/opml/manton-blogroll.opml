@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>Manton Reece - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Jon Hays" xmlUrl="https://jonhays.me/feed.xml" htmlUrl="https://jonhays.me" category="Recommendations"/>
+    <outline type="rss" text="Vincent Ritter" xmlUrl="https://vincentritter.com/feeds/all.rss" htmlUrl="https://vincentritter.com/blog" category="Recommendations"/>
+    <outline type="rss" text="Daniel Jalkut" xmlUrl="https://bitsplitting.org/feed/" htmlUrl="https://bitsplitting.org" category="Recommendations"/>
+    <outline type="rss" text="John Gruber" xmlUrl="https://daringfireball.net/feeds/main" htmlUrl="https://daringfireball.net" category="Recommendations"/>
+    <outline type="rss" text="Ben Thompson" xmlUrl="" htmlUrl="https://stratechery.com" category="Recommendations"/>
+    <outline type="rss" text="Jean MacDonald" xmlUrl="https://micro.welltempered.net/feed.xml" htmlUrl="https://micro.welltempered.net" category="Recommendations"/>
+    <outline type="rss" text="Alan Jacobs" xmlUrl="https://social.ayjay.org/feed.xml" htmlUrl="https://social.ayjay.org" category="Recommendations"/>
+    <outline type="rss" text="Brent Simmons" xmlUrl="https://inessential.com/xml/rss.xml" htmlUrl="https://inessential.com" category="Recommendations"/>
+    <outline type="rss" text="Michael Tsai" xmlUrl="https://mjtsai.com/blog/feed/" htmlUrl="https://mjtsai.com/blog/" category="Recommendations"/>
+    <outline type="rss" text="Austin Kleon" xmlUrl="https://austinkleon.com/feed/" htmlUrl="https://austinkleon.com" category="Recommendations"/>
+    <outline type="rss" text="Ton Z&#x133;lstra" xmlUrl="https://www.zylstra.org/blog/feed/" htmlUrl="https://www.zylstra.org/blog/" category="Recommendations"/>
+    <outline type="rss" text="Nick Heer" xmlUrl="https://pxlnv.com/feed/" htmlUrl="https://pxlnv.com" category="Recommendations"/>
+    <outline type="rss" text="Sven Dahlstrand" xmlUrl="https://dahlstrand.net/feed.xml" htmlUrl="https://dahlstrand.net" category="Recommendations"/>
+    <outline type="rss" text="Dave Winer" xmlUrl="http://scripting.com/rss.xml" htmlUrl="http://scripting.com" category="Recommendations"/>
+    <outline type="rss" text="Jason Fried" xmlUrl="https://world.hey.com/jason/feed.atom" htmlUrl="https://world.hey.com/jason" category="Recommendations"/>
+    <outline type="rss" text="Rebecca Toh" xmlUrl="https://rebeccatoh.co/feed/" htmlUrl="https://rebeccatoh.co" category="Recommendations"/>
+    <outline type="rss" text="Adrian Vila" xmlUrl="https://aows.co/blog?format=rss" htmlUrl="https://aows.co/blog" category="Recommendations"/>
+    <outline type="rss" text="Ana Rodrigues" xmlUrl="https://ohhelloana.blog/feed.xml" htmlUrl="https://ohhelloana.blog" category="Recommendations"/>
+    <outline type="rss" text="Om Malik" xmlUrl="https://om.co/feed/" htmlUrl="https://om.co" category="Recommendations"/>
+    <outline type="rss" text="Molly White" xmlUrl="https://www.mollywhite.net/feed/feed.xml" htmlUrl="https://www.mollywhite.net" category="Recommendations"/>
+  </body>
+</opml>

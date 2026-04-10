@@ -1,0 +1,576 @@
+{
+  "category": "Pop Music",
+  "source_url": "https://rss.feedspot.com/pop_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Popjustice",
+      "feed_url": "https://www.popjustice.com/feed/",
+      "website_url": "https://www.popjustice.com/",
+      "description": "Popjustice is a website which bangs on about pop music at considerable length. We have been giving pop the respect it deserves and the disrespect it deserves since the turn of the century.",
+      "followers": {
+        "facebook": 36000,
+        "twitter": 213300,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4666694.jpg?t=1611221096"
+    },
+    {
+      "title": "Soompi",
+      "feed_url": "https://www.soompi.com/feed",
+      "website_url": "https://www.soompi.com/",
+      "description": "Soompi is one of the world's largest and longest-running English online media providing complete coverage of Korean pop culture. Founded in 1998, Soompi has become the ultimate authority for all the latest news on Korean celebrities, music, TV shows, movies, and style.",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 3600000,
+        "instagram": 311100
+      },
+      "image_url": "https://i1.feedspot.com/4667209.jpg?t=1660719711"
+    },
+    {
+      "title": "PopCrush \u00bb Music News",
+      "feed_url": "https://popcrush.com/category/music-news/feed/",
+      "website_url": "https://popcrush.com/category/music-news/",
+      "description": "PopCrush is the digital destination for fun and irreverent pop music, celebrity and entertainment news served with a fresh and positive perspective.",
+      "followers": {
+        "facebook": 583500,
+        "twitter": 113000,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/4667475.jpg?t=1604476610"
+    },
+    {
+      "title": "The Bias List",
+      "feed_url": "https://thebiaslist.com/feed/",
+      "website_url": "https://thebiaslist.com/",
+      "description": "K-Pop reviews and discussion with just a hint of bias. Each week, Nick will be taking a listen to the newest kpop releases and giving his thoughts.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4667326.jpg?t=1668660847"
+    },
+    {
+      "title": "Essentially Pop",
+      "feed_url": "https://essentiallypop.com/epop/feed/",
+      "website_url": "https://essentiallypop.com/epop/",
+      "description": "The passionate team at Essentially Pop covers music that deserves to be heard, with a particular focus on independent artists. Scroll through a stream of hot updates, gossip, arts interviews, music reviews and stay updated on the what's banging in UK's Pop scene.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 11600,
+        "instagram": 21600
+      },
+      "image_url": "https://i1.feedspot.com/4886542.jpg?t=1604476631"
+    },
+    {
+      "title": "EQ Music Blog",
+      "feed_url": "https://eqmusicblog.com/feed/",
+      "website_url": "https://eqmusicblog.com/",
+      "description": "EQ Music Blog is the authority on new electronic pop and alternative music with daily updates, news, music videos, and interviews with the most relevant names in pop music. Their mission is to promote and foster the development of new pop and electronic music through online publishing, live events, and social media. Browse their blog and learn more about updates, news, music videos, interviews, and more.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 14600,
+        "instagram": 874
+      },
+      "image_url": "https://i1.feedspot.com/4666590.jpg?t=1695970502"
+    },
+    {
+      "title": "Pop Passion Blog",
+      "feed_url": "https://www.poppassionblog.com/blog-feed.xml",
+      "website_url": "https://www.poppassionblog.com/blog/",
+      "description": "Pop Passion is a pop influenced blog that covers everything from the biggest stars to small indie artists. We want to help the ones who deserve to be heard by promoting through our interviews, song reviews, and playlists. We accept all sub-genres and mixed genres of pop.",
+      "followers": {
+        "facebook": 413,
+        "twitter": 465,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5465843.jpg?t=1754475316"
+    },
+    {
+      "title": "MuuMuse",
+      "feed_url": "https://muumuse.com/feed/",
+      "website_url": "https://muumuse.com/",
+      "description": "Founded in 2007, MuuMuse is a sassy, classy music blog with a sarcastic bent dedicated to music and pop culture commentary, album and song reviews, interviews and exclusives. Since its inception, MuuMuse has garnered a devoted readership and recognition as a top pop blog.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 40300,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4666622.jpg?t=1670569794"
+    },
+    {
+      "title": "Global Media Pop",
+      "feed_url": "https://globalmoneyworld.com/index.php/category/global-media-pop/feed/",
+      "website_url": "https://globalmoneyworld.com/index.php/category/global-media-pop/",
+      "description": "The Globe Is Yours! Top music blog platform for Hip Hop, Rock, EDM, Latin, Pop, and R&B. Covers major and independent artists! News, articles, blog reviews. and interviews.",
+      "followers": {
+        "facebook": 945,
+        "twitter": 12900,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5127537.jpg?t=1604476978"
+    },
+    {
+      "title": "2 Loud 2 Old Music \u00bb Pop Music",
+      "feed_url": "https://2loud2oldmusic.com/category/pop-music/feed/",
+      "website_url": "https://2loud2oldmusic.com/category/pop-music/",
+      "description": "2loud2oldmusic.com is about my love for everything music. It will have album reviews, artists profile, music news and so much more.",
+      "followers": {
+        "facebook": 307,
+        "twitter": 286
+      },
+      "image_url": "https://i1.feedspot.com/4667453.jpg?t=1668660806"
+    },
+    {
+      "title": "Powerpopaholic",
+      "feed_url": "https://feeds.feedburner.com/Powerpopaholic",
+      "website_url": "https://www.powerpopaholic.com/",
+      "description": "The Power Popaholic is a premier music blog that focuses on the genre of power pop and melodic rock. We also report on live shows, tour dates, gossip, MP3's, videos and just about anything a power pop fan could want.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4666601.jpg?t=1668660752"
+    },
+    {
+      "title": "Popmusic Life",
+      "feed_url": "https://popmusic.life/feed/",
+      "website_url": "https://popmusic.life/category/news/",
+      "description": "Covers Pop music news articles, festival updates, interviews with current EDM artists & DJs for personal insights, and updates about the freshest new releases from around the globe.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5331246.jpg?t=1634131343"
+    },
+    {
+      "title": "Electrozombies",
+      "feed_url": "https://electrozombies.com/feed/",
+      "website_url": "https://electrozombies.com/",
+      "description": "Electrozombies is an international Synthpop magazine focused on Synth Pop, Electro Pop, Future Pop, Industrial Pop, EBM, Dark Wave, and genre related music. In particular, we publish music videos, album reviews, interviews, music downloads, best-of list articles, our own complilations and tributes and much more.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 812
+      },
+      "image_url": "https://i1.feedspot.com/4667225.jpg?t=1673332667"
+    },
+    {
+      "title": "Billcs Music Blog",
+      "feed_url": "https://billcsmusic.blog/feed/",
+      "website_url": "https://billcsmusic.blog/",
+      "description": "Charting the internet pop world one blog post at a time.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4666666.jpg?t=1604477366"
+    },
+    {
+      "title": "Popastic!",
+      "feed_url": "https://popastic.com/feed/",
+      "website_url": "https://popastic.com/",
+      "description": "All the latest breaking news on pop music. Browse our complete collection of articles and commentary on pop music. We offer all the news regarding the upcoming releases of your favorite artists. We are still improving the website, so stay tuned!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5127179.jpg"
+    },
+    {
+      "title": "Dizzy O'Brian",
+      "feed_url": "https://www.dizzyobrian.com/feeds/posts/default",
+      "website_url": "https://www.dizzyobrian.com/",
+      "description": "This is the official artist's blog for Dizzy O'Brian; a composer of pop classical fusion music. Find information here about new music releases by Dizzy and where you can listen to music by Dizzy O'Brian",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 78,
+        "instagram": 312
+      },
+      "image_url": "https://i1.feedspot.com/5180269.jpg?t=1662364986"
+    },
+    {
+      "title": "Billboard \u00bb Pop",
+      "feed_url": "https://www.billboard.com/c/music/pop/feed/",
+      "website_url": "https://www.billboard.com/c/music/pop/",
+      "description": "Trending stories and news from the Pop Industry are covered by Billboard. Follow your favorite artist and read all about their latest works. Billboard is the world's most influential music media brand, with an unmatched authority among artists, fans, and the industry. Featuring unrivaled reporting on music news, issues, and trends.",
+      "followers": {
+        "facebook": 14600000,
+        "twitter": 14300000,
+        "instagram": 17600000
+      },
+      "image_url": "https://i1.feedspot.com/5470037.jpg?t=1669027317"
+    },
+    {
+      "title": "Pop Dose Magazine",
+      "feed_url": "https://popdosemagazine.co.uk/feed/",
+      "website_url": "https://popdosemagazine.co.uk/category/news/",
+      "description": "Stay in the know with the current Pop music scene, discover popular new pop songs, updated daily, and the latest releases in the world of pop. Pop Dose magazine is one the premier sources of all things and updates from the Pop industry in the UK.",
+      "followers": {
+        "twitter": 404,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5470041.jpg?t=1669291298"
+    },
+    {
+      "title": "Retro Pop Magazine",
+      "feed_url": "https://retropopmagazine.com/feed/",
+      "website_url": "https://retropopmagazine.com/category/news/",
+      "description": "Gather news, interviews, reviews, features, and all the latest content from the biggest pop acts of the industry at our website. Retro Pop Magazine is a joyous celebration of pop music, f\u00eating the biggest hits, hottest sounds, and signature styles of the past five decades, and the artists who stood at the centre of it all.",
+      "followers": {
+        "facebook": 26400,
+        "twitter": 5000,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5470035.jpg?t=1752045032"
+    },
+    {
+      "title": "Dereksmusicblog \u00bb Pop",
+      "feed_url": "https://dereksmusicblog.com/category/pop/feed/",
+      "website_url": "https://dereksmusicblog.com/category/pop/",
+      "description": "Re-discover certified musical gems from the Pop genre. Derekmusicblog by Derek Anderson revisits some of the golden periods of Rock'n Roll and country music. Derek offers reviews and details of rare, underrated songs and albums from his collection. Derek is a huge music connoisseur with eclectic taste in different genres.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470033.jpg?t=1669027021"
+    },
+    {
+      "title": "Women In Pop",
+      "feed_url": "http://www.womeninpop.com/news-home?format=rss",
+      "website_url": "http://www.womeninpop.com/",
+      "description": "Read articles and interviews focusing on female-oriented music, achievements, and issues faced by them in the industry. Women in Pop is a print magazine focusing solely on female musicians. We profile their stories, their music, and their craft as well as explore the herstory and gender politics behind the pop music industry.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 505,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5470032.jpg?t=1669026069"
+    },
+    {
+      "title": "Power Pop News",
+      "feed_url": "https://powerpopnews.com/feed/",
+      "website_url": "https://powerpopnews.com/",
+      "description": "PowerPopNews.com gives you the latest on power pop news and reviews. Learn about the latest power pop records. Musicians will enjoy power pop guitar chords posted regularly. Read about today's power pop at PowerPopNews.com.",
+      "followers": {
+        "twitter": 98
+      },
+      "image_url": "https://i1.feedspot.com/5018456.jpg?t=1698230866"
+    },
+    {
+      "title": "She Makes Music",
+      "feed_url": "https://shemakesmusic.co.uk/feed/",
+      "website_url": "https://shemakesmusic.co.uk/",
+      "description": "She Makes Music highlights and puts focus on the best new music made by female-identifying and non-binary artists from all around the world on their website. Keep up-to-date with the music world and discover more brilliant music made by women in this music blog by Helen Evans.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4200,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5427697.jpg?t=1659424210"
+    },
+    {
+      "title": "9bills",
+      "feed_url": "https://www.9bills.co.uk/british-pop-culture/feed/",
+      "website_url": "https://www.9bills.co.uk/british-pop-culture/",
+      "description": "Blog posts covering upcoming artists and musical events. 9bills is a digital platform curating the best in Black British music & culture. We often start the trending topics on Twitter, with our viral posts from J Hus' lyricism and the Smoke Boys' break-up, to Jorja Smith's holiday snaps, and Stefflon Don's Yoruba appreciation.",
+      "followers": {
+        "twitter": 20500,
+        "instagram": 27700
+      },
+      "image_url": "https://i1.feedspot.com/5490482.jpg?t=1673270768"
+    },
+    {
+      "title": "Gems & Secrets Blog \u00bb Bedroom Pop",
+      "feed_url": "https://gemsandsecrets.com/blog/category/Bedroom%20Pop?format=rss",
+      "website_url": "https://gemsandsecrets.com/blog/category/Bedroom+Pop",
+      "description": "Discover news and reviews on underrated, catchy Bedroom Pop tunes and find where to stream them in our articles in the Bedroom Pop category. A clutch, youth-focused music news source, Gems & Secrets Blog was formed as a platform dedicated to interesting people and places about music.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5490483.jpg?t=1673270874"
+    },
+    {
+      "title": "Tonspion \u00bb Pop",
+      "feed_url": "https://www.tonspion.de/rubrik/musik/pop/feed",
+      "website_url": "https://www.tonspion.de/rubrik/musik/pop",
+      "description": "Read the most important news and new releases from the pop genre recommended by the Tonspion editorial team. Tonspion is the ultimate online destination for fans of all gneres Pop, Skirt, Rap, Electro, Metal, Classic and many more. Featurimg reviews, gossip, and humor aboutyour favorite Music artists, TV show and movies.",
+      "followers": {
+        "facebook": 28200,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5490484.jpg?t=1752045780"
+    },
+    {
+      "title": "A&R Factory \u00bb Pop",
+      "feed_url": "https://www.anrfactory.com/category/music/pop/feed/",
+      "website_url": "https://www.anrfactory.com/category/music/pop/",
+      "description": "Browse news and independent music submitted by various artists in our Pop Music Blog and Promotion category. We analyze, dissect, and share constructive commentary on many tracks and genres daily. A&R Factory is one of the most respected artist and repertoire (A&R) blogs covering music talent worldwide.",
+      "followers": {
+        "twitter": 15500,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/5490486.jpg?t=1673270848"
+    },
+    {
+      "title": "Obscure Sound \u00bb Indie pop",
+      "feed_url": "https://www.obscuresound.com/category/indie-pop/feed/",
+      "website_url": "https://www.obscuresound.com/category/indie-pop/",
+      "description": "A long-running music blog, formed in 2006, that covers quality independent artists via features of singles and albums.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 6200,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/8553516.jpg?t=1753112215"
+    },
+    {
+      "title": "Scandipop",
+      "feed_url": "https://scandipop.co.uk/feed/",
+      "website_url": "https://scandipop.co.uk/",
+      "description": "Scandipop is the definitive source of all happenings and developments in the Scandinavian Music scene. Explore a dynamic blend of Artist spotlights, Interviews, New releases, Reviews, and the Top Scandivanian playlists. Connect with the Scandinavian Pop music fan community and remain updated.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 10600,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5646063.jpg?t=1691664134"
+    },
+    {
+      "title": "A&R Factory",
+      "feed_url": "https://www.anrfactory.com/feed/",
+      "website_url": "https://www.anrfactory.com/",
+      "description": "A&R FACTORY is an online publication that covers the latest news and reviews from the music industry. With a focus on emerging artists and new music trends, A&R FACTORY provides readers with insights into the changing landscape of the music industry. The Liverpool edition of A&R FACTORY covers the city's thriving music scene and provides a platform for local talent to gain exposure.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 15500,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4840404.jpg?t=1754476546"
+    },
+    {
+      "title": "The FADER",
+      "feed_url": "https://www.thefader.com/feed.rss",
+      "website_url": "https://www.thefader.com/music",
+      "description": "The FADER is the definitive voice of music and the lifestyle that surrounds it.",
+      "followers": {
+        "facebook": 540400,
+        "twitter": 624300,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5341029.jpg?t=1636451830"
+    },
+    {
+      "title": "Electro Wow \u00bb Pop",
+      "feed_url": "https://www.electrowow.net/category/pop/feed",
+      "website_url": "https://www.electrowow.net/category/pop/",
+      "description": "Pop music relies more on vocals, lyrics, and, most importantly, on emotions. Listen to new songs from indie and commercial artists here.",
+      "followers": {
+        "facebook": 16500,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/8553517.jpg?t=1753112218"
+    },
+    {
+      "title": "New Lease Music",
+      "feed_url": "https://newleasemusic.com/tag/pop-music/feed/",
+      "website_url": "https://newleasemusic.com/tag/pop-music/",
+      "description": "Posts about pop music written by Tracey Dawkins",
+      "followers": {
+        "facebook": 678,
+        "twitter": 4400,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/8553514.jpg?t=1753112211"
+    },
+    {
+      "title": "Pop music and rock \u00bb Pop",
+      "feed_url": "https://www.popmusicandrock.com/category/pop/feed/",
+      "website_url": "https://www.popmusicandrock.com/category/pop/",
+      "description": "Pop is simpelweg een afkorting voor populaire muziek. De huidige variant kent zijn oorsprong in het Verenigd Koninkrijk en de VS van de jaren 50. De meeste popliedjes zijn erg toegankelijk en gemakkelijk mee te zingen.",
+      "followers": {
+        "twitter": 18,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8553519.jpg?t=1753112223"
+    },
+    {
+      "title": "Power Popholic",
+      "feed_url": "https://www.powerpopaholic.com/feed",
+      "website_url": "https://www.powerpopaholic.com/",
+      "description": "The latest power pop music reviews and opinions, updated frequently. Powerpopholic - The latest power pop music reviews and opinions, updated frequently.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 3100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5697149.jpg?t=1698231148"
+    },
+    {
+      "title": "mySoundposter",
+      "feed_url": "https://mysoundposter.blog/feed/",
+      "website_url": "https://mysoundposter.blog/",
+      "description": "a window into the artist",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553515.jpg?t=1753112213"
+    },
+    {
+      "title": "A Geek Girl's",
+      "feed_url": "https://ageekgirlsguide.com/feed/",
+      "website_url": "https://ageekgirlsguide.com/",
+      "description": "One geek's corner of the internet. From game reviews to how to guides to every geeky thing in between!",
+      "followers": {
+        "facebook": 197,
+        "twitter": 528,
+        "instagram": 591
+      },
+      "image_url": "https://i1.feedspot.com/4860130.jpg?t=1607412480"
+    },
+    {
+      "title": "Platinummind \u00bb Pop music",
+      "feed_url": "https://platinummind.net/index.php/category/pop-music/feed/",
+      "website_url": "https://platinummind.net/index.php/category/pop-music/",
+      "description": "I'm a musician from South London, a keyboard player with over 25 years worth of experience on different stages, but specialising in gospel music. I like all styles, I can't read music, I play entirely by ear, and I have perfect pitch.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553518.jpg?t=1753112222"
+    },
+    {
+      "title": "Idolator",
+      "feed_url": "https://www.idolator.com/feed",
+      "website_url": "https://www.idolator.com/",
+      "description": "Energetic, irreverent and utterly devoted to pop hits, Idolator provides pop music fans with the best new songs, music videos, photos and related media of the day, as well as a savvy take on daily pop news.",
+      "followers": {
+        "facebook": 92400,
+        "twitter": 53600,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/3371461.jpg?t=1604476600"
+    },
+    {
+      "title": "Talk About Pop Music",
+      "feed_url": "https://talkaboutpopmusic.com/feed/",
+      "website_url": "https://talkaboutpopmusic.com/",
+      "description": "On this blog you will find, amongst others, features such as news, views and reviews on all types of music past, present and future. There will also be regular items such as then & now, record breakers & trivia, mix-tape madness, awesome playlists and the Now! Project.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4666698.jpg?t=1611221560"
+    },
+    {
+      "title": "This Must Be Pop",
+      "feed_url": "https://thismustbepop.com/feed/",
+      "website_url": "https://www.thismustbepop.com/",
+      "description": "This Must Be Pop has been online since June 2003, when it was part of the original set of pop music blogs. The articles focus on showcasing the most promising new pop songs and artists and discussing the music industry in a way that appeals to those who work within it, as well as those who are just obsessed with it.",
+      "followers": {
+        "facebook": 728,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4478773.jpg?t=1611221882"
+    },
+    {
+      "title": "Pop, Rinse, Repeat",
+      "feed_url": "http://www.poprinserepeat.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.poprinserepeat.com/",
+      "description": "Pop, Rinse, Repeat blog has been showcasing the best in up and coming music and maybe some tried and true artists as well. It is a pop music blog that features mostly indie pop music but in reality music that interests the author.",
+      "followers": {
+        "facebook": 186,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4481982.jpg?t=1604477034"
+    },
+    {
+      "title": "Canal Pop",
+      "feed_url": "https://www.canalpop.com.ar/feed/",
+      "website_url": "https://www.canalpop.com.ar/",
+      "description": "Canal Pop is the name chosen by the electropop producer (and label owner) Emiliano Canal, from Buenos Aires, Argentina, to release his material. Canal Pop's music can be described as 'catchy pop songs with intelligent lyrics', and this is because Emiliano has a remarkable ear for catchy choruses and hit melodies, the kind of music that sticks to your head after hearing it on the radio",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 582
+      },
+      "image_url": "https://i1.feedspot.com/4667247.jpg?t=1604477559"
+    },
+    {
+      "title": "A Bit Of Pop Music",
+      "feed_url": "https://abitofpopmusic.com/feed/",
+      "website_url": "https://abitofpopmusic.com/",
+      "description": "A Bit Of Pop Music will provide you with the answer to your daily needs in pop music. You will find reviews on new singles, albums and concerts and interviews with a broad range of artists in contemporary pop music.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 579
+      },
+      "image_url": "https://i1.feedspot.com/4666604.jpg?t=1604476764"
+    },
+    {
+      "title": "This Is Pop? Blog",
+      "feed_url": "https://thisispop.net/category/blog/feed/",
+      "website_url": "https://thisispop.net/category/blog/",
+      "description": "Check out expert-curated music, songs, and fresh news and magazine issue covers. This Is Pop? magazine and associated website is a box of contemporary sounds that mixes music, books, cinema, TV series, and news.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 157,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5470038.jpg?t=1669026827"
+    },
+    {
+      "title": "The Lowtown",
+      "feed_url": "https://www.thelowdown.online/blog-feed.xml",
+      "website_url": "https://www.thelowdown.online/",
+      "description": "Established to cater to a range of audiences, The Lowdown Magazine is a Music & Entertainment platform featuring the very best in pop, commercial, indie, alternative, electronic, and house from both established and upcoming talent, delivering quality pieces including in-depth music reviews and interviews.",
+      "followers": {
+        "twitter": 4900,
+        "instagram": 735
+      },
+      "image_url": "https://i1.feedspot.com/5490485.jpg?t=1673270842"
+    },
+    {
+      "title": "Classic Pop Magazine",
+      "feed_url": "https://www.classicpopmag.com/feed/",
+      "website_url": "https://www.classicpopmag.com/",
+      "description": "Classic Pop is the new bi-monthly magazine that finally gives pop music the recognition it deserves. After decades of rock magazines wallowing in the 60s and 70s, Classic Pop truly celebrates the explosion of creativity and diversity that shook up music in the late 70s, defined the sound of the 80s, and continues to influence today.",
+      "followers": {
+        "facebook": 52100,
+        "twitter": 18200,
+        "instagram": 13800
+      },
+      "image_url": "https://i1.feedspot.com/1929068.jpg?t=1604476746"
+    },
+    {
+      "title": "J-Generation",
+      "feed_url": "https://j-generation.com/feed/",
+      "website_url": "https://j-generation.com/",
+      "description": "NekoPOP features reviews, interviews, and commentary for J-Pop, idols, dance, and other cool things from Japanese pop culture.",
+      "followers": {
+        "facebook": 31100,
+        "twitter": 186
+      },
+      "image_url": "https://i1.feedspot.com/4666753.jpg?t=1609854318"
+    },
+    {
+      "title": "Unlock Your Sound Blog",
+      "feed_url": "https://unlockyoursound.com/feed",
+      "website_url": "https://pitchfork.com/genre/pop/",
+      "description": "Unlock Your Sound is a collective of producers, engineers, songwriters, and music lovers who help up-and-coming musicians like you create and release music that you are proud of and will leave you feeling confident in what to do next.",
+      "followers": {
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/5085045.jpg?t=1604476726"
+    },
+    {
+      "title": "POP On And On",
+      "feed_url": "https://poponandon.com/feed/",
+      "website_url": "https://pitchfork.com/genre/pop/",
+      "description": "Covering your pop music favorites while spotlighting emerging talent from newly signed artists to bedroom producers.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/1277162.jpg?t=1628851149"
+    },
+    {
+      "title": "EARMILK \u00bb Pop",
+      "feed_url": "https://earmilk.com/music/pop/feed/",
+      "website_url": "https://earmilk.com/music/pop/",
+      "description": "Pop Music News, Interviews, Industry updates, and more. EARMILK is an online music publication based out of the United States & Canada. We use our experience as journalists, musicians, and fanatics to share our musical taste in the latest hits and underground discoveries across all musical genres.",
+      "followers": {
+        "facebook": 137100,
+        "twitter": 51000,
+        "instagram": 38000
+      },
+      "image_url": "https://i1.feedspot.com/5470039.jpg?t=1669026922"
+    }
+  ]
+}

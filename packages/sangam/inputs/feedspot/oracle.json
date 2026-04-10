@@ -1,0 +1,1216 @@
+{
+  "category": "Oracle",
+  "source_url": "https://rss.feedspot.com/oracle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oracle Blogs",
+      "feed_url": "https://blogs.oracle.com/rss",
+      "website_url": "https://blogs.oracle.com/",
+      "description": "The official blog of Oracle Corporation. This blog shares News from Oracle's Database Team. They use this space to tell you the latest about the #1 database in the industry helping you optimize your move from on-premises to the cloud.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 822000
+      },
+      "image_url": "https://i1.feedspot.com/4619267.jpg?t=1605965143"
+    },
+    {
+      "title": "The ORACLE-BASE Blog",
+      "feed_url": "https://feeds.feedburner.com/TheOracleBaseBlog",
+      "website_url": "https://oracle-base.com/blog/",
+      "description": "This blog shares Oracle DBA and development articles, scripts, How Tos and forums. Tim Hall is an Oracle Certified Professional (OCP) DBA/Developer, Oracle ACE Director, OakTable Network member and was chosen as Oracle ACE of the Year 2006 by Oracle Magazine Editors Choice Awards. He has been involved in DBA, design and development work with Oracle databases since 1995.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4624225.jpg?t=1616128814"
+    },
+    {
+      "title": "ThatJeffSmith",
+      "feed_url": "http://www.thatjeffsmith.com/feed/",
+      "website_url": "http://www.thatjeffsmith.com/",
+      "description": "ThatJeffSmith blog is about tips and tricks for Oracle SQL Developer, SQLcl, SQL Developer Data Modeler, and Oracle REST Data Services. My primary goal is to help you save time when working with Oracle Database. If I can ALSO make what you're currently doing a little more fun, then that's a big bonus for me.",
+      "followers": {
+        "twitter": 16200
+      },
+      "image_url": "https://i1.feedspot.com/1473217.jpg?t=1616046330"
+    },
+    {
+      "title": "Sean D. Stuber",
+      "feed_url": "https://seanstuber.com/feed/",
+      "website_url": "https://seanstuber.com/",
+      "description": "My name is Sean D. Stuber. I am an Oracle Developer/DBA based out of central Ohio, USA. I specialize in the design and tuning of applications written in PL/SQL and SQL. In this blog, I post articles and code samples primarily focusing on SQL and PL/SQL, but I do use peripheral technologies and will explore those areas as well.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5549584.jpg?t=1685968834"
+    },
+    {
+      "title": "ANJANI APPS DBA",
+      "feed_url": "https://anjaniappsdba.blogspot.com/feeds/posts/default",
+      "website_url": "https://anjaniappsdba.blogspot.com/",
+      "description": "Read articles on 11i/R12, 12CDB, 18C, 19C, ASM, BACKUPS, BIGDATA, CLONE, CM DATAGUARD, DEMANTRA, EBS 12.2, EXADATA, ISTORE, ITIL, MWA, OCI, OEM and more on ANJANI APPS DBA, your source to learn Oracle",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5610529.jpg?t=1687947116"
+    },
+    {
+      "title": "Soumya's Database Blog",
+      "feed_url": "https://dbasoumya.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://dbasoumya.blogspot.com/",
+      "description": "A blog related to Different Databases i.e. Oracle, SQL Server , Mysql , Postgresql , Mongodb , Hadoop.",
+      "followers": {
+        "facebook": 216
+      },
+      "image_url": "https://i1.feedspot.com/4621281.jpg?t=1616060693"
+    },
+    {
+      "title": "DBsGuru",
+      "feed_url": "https://dbsguru.com/feed/",
+      "website_url": "https://dbsguru.com/",
+      "description": "DBsGuru is a group of experienced DBA professionals and serves the database and its related community by providing technical blogs, projects, training. Technical blogs are the source of vast information not about databases but its related product like middleware, PL/SQL, replication methodology, and so on. We are ready to accept all challenges.",
+      "followers": {
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/5196612.jpg?t=1607604645"
+    },
+    {
+      "title": "Upgrade your Database NOW!",
+      "feed_url": "https://mikedietrichde.com/feed/",
+      "website_url": "https://mikedietrichde.com/",
+      "description": "Mike Dietrich's Blog About Oracle Database Upgrades... Mostly. Based in Bavaria, Germany. >25 years IT experience. Database Upgrade and Migration specialist, currently in the role of a Master Product Manager working for Oracle for over 20 years.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4782219.jpg?t=1616128859"
+    },
+    {
+      "title": "RSS Feed",
+      "feed_url": "https://blog.zeddba.com/feed/",
+      "website_url": "https://blog.zeddba.com/",
+      "description": "The author of Zed DBA's Oracle Blog , Zahid Anwar aka Zed DBA is an enthusiastic and knowledgeable Principal Consultant with 12 years of Oracle experience (as of 2016). He is currently working on Version 1 in the UK, you can find out more about Version 1 here in his blog.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 999
+      },
+      "image_url": "https://i1.feedspot.com/4624422.jpg?t=1616129274"
+    },
+    {
+      "title": "KT Experts",
+      "feed_url": "https://www.ktexperts.com/feed/",
+      "website_url": "https://www.ktexperts.com/",
+      "description": "This is Vinod Kumar having around 14+ years of experience as Oracle DBA having exposure to RAC, Dataguard, RMAN, GoldenGate, DB Upgrades, Hadoop. Looking forward to sharpening my skill set and adopt new things. Worked for various industries like Banking, financial, Telecom, Product based companies, and retail, etc.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 54
+      },
+      "image_url": "https://i1.feedspot.com/5075710.jpg?t=1616129375"
+    },
+    {
+      "title": "Andrejus Baranovskis's Blog",
+      "feed_url": "http://andrejusb.blogspot.com/feeds/posts/default",
+      "website_url": "http://andrejusb.blogspot.com/",
+      "description": "A blog about ADF, JDeveloper, JET, Cloud, NetBeans, BPM, Mobile, MAF, SOA, WebCenter.",
+      "followers": {
+        "facebook": 872,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/747168.jpg?t=1616129201"
+    },
+    {
+      "title": "GoSaaS",
+      "feed_url": "https://www.gosaas.io/blog/rss.xml",
+      "website_url": "https://www.gosaas.io/blog",
+      "description": "Learn about the latest trends, insights, webinars, and news regarding Oracle Cloud PLM, Agile PLM, product development, quality management, and much more.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 36,
+        "instagram": 289
+      },
+      "image_url": "https://i1.feedspot.com/5388493.jpg?t=1649331163"
+    },
+    {
+      "title": "MacLochlainns Weblog",
+      "feed_url": "https://blog.mclaughlinsoftware.com/feed/",
+      "website_url": "https://blog.mclaughlinsoftware.com/",
+      "description": "This is the blog of Michael McLaughlin, a veteran of Oracle technology since Oracle 6 and an Oracle ACE since 2009.",
+      "followers": {
+        "twitter": 298
+      },
+      "image_url": "https://i1.feedspot.com/568345.jpg?t=1616129032"
+    },
+    {
+      "title": "Fun Oracle Apps",
+      "feed_url": "https://feeds.feedburner.com/OracleApplicationDBA",
+      "website_url": "https://www.funoracleapps.com/",
+      "description": "A passionate blogger and trainer, I provide in-depth training on Oracle Applications, Linux Administration, and related technologies. With a focus on practical problem-solving and knowledge sharing, I aim to empower professionals and bridge the gap between learning and real-world application.As an Oracle ACE and experienced IT professional, I specialize in Oracle Applications (R12.2, R12.1, and 11i), Linux Administration, and end-to-end implementation of enterprise solutions. With expertise in Oracle Apps DBA, OAM, IDM, SSO, and Shell Scripting,",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5226769.jpg?t=1607674400"
+    },
+    {
+      "title": "Hemant's Oracle DBA Blog",
+      "feed_url": "https://hemantoracledba.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://hemantoracledba.blogspot.com/",
+      "description": "Hemant K Chitale is an Oracle Database Specialist in Singapore.",
+      "followers": {
+        "twitter": 619
+      },
+      "image_url": "https://i1.feedspot.com/4619329.jpg?t=1616129749"
+    },
+    {
+      "title": "Erman Arslan's Oracle Blog",
+      "feed_url": "http://ermanarslan.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ermanarslan.blogspot.com/",
+      "description": "This blog reflects experiences of Erman Arslan gained from various Oracle projects that he has been involved in.",
+      "followers": {
+        "facebook": 101,
+        "twitter": 299
+      },
+      "image_url": "https://i1.feedspot.com/4638233.jpg"
+    },
+    {
+      "title": "Rittman Mead Blog",
+      "feed_url": "https://www.rittmanmead.com/blog/rss/",
+      "website_url": "https://www.rittmanmead.com/blog/",
+      "description": "Rittman Mead consults, trains, and innovates within the world of Oracle Business Intelligence, data integration, and analytics. Helping companies harness data in and around their organisations through a range of analytics strategies, processes and tools.",
+      "followers": {
+        "facebook": 46,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4623899.jpg?t=1616129194"
+    },
+    {
+      "title": "Tales From A Lazy Fat DBA",
+      "feed_url": "https://fatdba.com/feed/",
+      "website_url": "https://fatdba.com/",
+      "description": "A blog covering all about Databases & their performance, troubleshooting & much more. Prashant Dixit is a long-time Oracle Database Guy and his sole purpose in reserving this space is to share what he'd learned and experienced while working on complex database performance issues, optimization, tuning, and troubleshooting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5405955.jpg?t=1654254973"
+    },
+    {
+      "title": "PaaS Community Blog",
+      "feed_url": "https://paascommunity.com/feed/",
+      "website_url": "https://paascommunity.com/",
+      "description": "J\u00fcrgen Kress drives innovation as the founder of the Oracle PaaS and Developer Partner Communities as well as the global Oracle Partner Advisory Councils. He supports partners to adopt the Oracle Cloud Platform. PaaS Community Blog covers Oracle Integration & Process, Cloud Platform and more.",
+      "followers": {
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5337279.jpg?t=1684497325"
+    },
+    {
+      "title": "DBA-010",
+      "feed_url": "https://dba010.com/feed/",
+      "website_url": "https://dba010.com/",
+      "description": "Mariami Kupatadze currently works as a Senior Solutions Architect at FlashGrid Inc. She holds Oracle Database 11g Certified Master, Oracle Database 11g Administrator Certified Professional(Link), Oracle Database 11g Administrator Certified Associate(Link) and much more. Follow this blog where she shares her knowledge on Oracle.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4943243.jpg?t=1616130263"
+    },
+    {
+      "title": "Run like Hell",
+      "feed_url": "https://feeds.feedburner.com/blogspot/idXZd",
+      "website_url": "https://dietrichschroff.blogspot.com/",
+      "description": "Blog include articles on Oracle, linux and many more technology Topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4887274.jpg"
+    },
+    {
+      "title": "Martin Berger",
+      "feed_url": "https://www.martinberger.com/feed/",
+      "website_url": "https://www.martinberger.com/",
+      "description": "Martin shares articles all about Oracle Cloud, Engineered Systems and other stuff.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5342256.jpg?t=1636637105"
+    },
+    {
+      "title": "Modern Oracle DBA",
+      "feed_url": "https://sanjeevvellaisamydba.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sanjeevvellaisamydba.blogspot.com/",
+      "description": "Follow this blog to read articles on Oracle.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5031372.jpg?t=1616129831"
+    },
+    {
+      "title": "ORACLE DATABASE PROBLEM AND SOLUTIONS",
+      "feed_url": "https://anuragkumarjoy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://anuragkumarjoy.blogspot.com/",
+      "description": "This blog help Oracle DBA to oracle installation, backup, recovery, performance, patching, upgrade, data guard, RAC, RMAN, oracle 9i/10g/11g/12c/18c.",
+      "followers": {
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/5082494.jpg?t=1616129522"
+    },
+    {
+      "title": "Ahmed AbdelFattah Blog !",
+      "feed_url": "https://ahmedfattah.com/feed/",
+      "website_url": "https://ahmedfattah.com/",
+      "description": "I'm a Senior Oracle Technology Expert, I'm specialized in providing Expert Services for Oracle Core Technology products. Oracle Technology blog about Oracle Database, RAC, Visualization, Performance.. etc",
+      "followers": {
+        "twitter": 240
+      },
+      "image_url": "https://i1.feedspot.com/5082474.jpg"
+    },
+    {
+      "title": "Blog for DBA, RAC, EBS DBA",
+      "feed_url": "http://appsdba.info/feed/",
+      "website_url": "http://appsdba.info/",
+      "description": "This blog shares information about DBA, RAC, EBS DBA",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5085321.jpg"
+    },
+    {
+      "title": "Alfredo Krieg Blog",
+      "feed_url": "https://alfredokriegdba.com/feed/",
+      "website_url": "https://alfredokriegdba.com/blog-feed/",
+      "description": "IT Blog. Covers all things Oracle Database and Enterprise Manager.",
+      "followers": {
+        "twitter": 514
+      },
+      "image_url": "https://i1.feedspot.com/5401453.jpg?t=1652870984"
+    },
+    {
+      "title": "Oracle DBA Resource",
+      "feed_url": "https://deepakba.wordpress.com/feed/",
+      "website_url": "https://deepakba.wordpress.com/",
+      "description": "Oracle Database Administrator with nearly 16 years of rich experience in Core Oracle Database Administration, Oracle Administration for Core Banking, Telecom Billing Applications. Proficient at conducting Oracle installation, database creation, Performance Tuning, consolidation & configuration and up-gradation of Oracle Server Software & Fusion Middleware.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5258473.jpg?t=1615978992"
+    },
+    {
+      "title": "ORACLE-SCN",
+      "feed_url": "https://www.oracle-scn.com/feed/",
+      "website_url": "https://www.oracle-scn.com/articles/",
+      "description": "Veeratteshwaran Sridhar shares articles all about Oracle GoldenGate.",
+      "followers": {
+        "twitter": 631
+      },
+      "image_url": "https://i1.feedspot.com/5344770.jpg?t=1637308306"
+    },
+    {
+      "title": "Laurent Schneider Oracle Certified Master",
+      "feed_url": "https://laurentschneider.com/feed",
+      "website_url": "https://laurentschneider.com/",
+      "description": "Laurent Schneider blog is all about Oracle.",
+      "followers": {
+        "facebook": 286,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/122971.jpg?t=1616129517"
+    },
+    {
+      "title": "Being Piyush",
+      "feed_url": "https://feeds.feedburner.com/suggestcloud",
+      "website_url": "https://beingpiyush.blogspot.com/",
+      "description": "Covers articles about Oracle Application DBA where you can explore the concept of Oracle Database, Oracle Application Database & Cloud Technology like OCI, AWS.",
+      "followers": {
+        "facebook": 181,
+        "twitter": 287,
+        "instagram": 54
+      },
+      "image_url": "https://i1.feedspot.com/5337277.jpg?t=1635342359"
+    },
+    {
+      "title": "TECHDATABASKET",
+      "feed_url": "https://www.techdatabasket.com/feed/",
+      "website_url": "https://www.techdatabasket.com/",
+      "description": "Group created to share knowledge about IT through various blogs that are part of it. Our focus are database and operating system.",
+      "followers": {
+        "twitter": 387
+      },
+      "image_url": "https://i1.feedspot.com/4754783.jpg?t=1616129504"
+    },
+    {
+      "title": "OCP Technology Blog",
+      "feed_url": "https://ocptechnology.com/feed/",
+      "website_url": "https://ocptechnology.com/blog/",
+      "description": "Keep up with articles from OCP Technology.",
+      "followers": {
+        "twitter": 28,
+        "instagram": 388
+      },
+      "image_url": "https://i1.feedspot.com/5069791.jpg?t=1616129247"
+    },
+    {
+      "title": "Ron Ekins",
+      "feed_url": "https://ronekins.com/feed/",
+      "website_url": "https://ronekins.com/",
+      "description": "In this blog, you will find various thoughts on Oracle, Enterprise Architecture, Cloud Computing, Kubernetes and everything Storage.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5235987.jpg?t=1610609699"
+    },
+    {
+      "title": "IT Tutorials",
+      "feed_url": "https://ittutorial.org/feed/",
+      "website_url": "https://ittutorial.org/",
+      "description": "English & Turkish Database, Application, Operating System, Network, Artifical Intelligence, Programming Languages Tutorials & Useful Scripts",
+      "followers": {
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/5069308.jpg?t=1616061077"
+    },
+    {
+      "title": "The /*+Go-Faster*/ Oracle Blog",
+      "feed_url": "https://www.blogger.com/feeds/14654018/posts/default",
+      "website_url": "https://blog.go-faster.co.uk/",
+      "description": "This blog contains things about PeopleSoft, mostly performance-related, that DBAs might find interesting. The Non-PeopleSoft Oracle stuff is at blog.go-faster.co.uk.",
+      "followers": {
+        "twitter": 759
+      },
+      "image_url": "https://i1.feedspot.com/5282833.jpg?t=1621574184"
+    },
+    {
+      "title": "Pete Finnigan's Oracle security weblog",
+      "feed_url": "https://www.petefinnigan.com/weblog/entries/petefinnigan.rdf",
+      "website_url": "http://www.petefinnigan.com/weblog/entries/",
+      "description": "PeteFinnigan.com's weblog is the only weblog dedicated to Oracle security.",
+      "followers": {
+        "facebook": 531,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/696109.jpg?t=1616060697"
+    },
+    {
+      "title": "DBA Rodrigo Jorge Oracle Dicas e Guias",
+      "feed_url": "https://www.dbarj.com.br/en/feed/",
+      "website_url": "https://www.dbarj.com.br/en/",
+      "description": "Blog About Databases and High Availability.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4736988.jpg?t=1616128855"
+    },
+    {
+      "title": "Technology Geek",
+      "feed_url": "https://osamaoracle.com/feed/",
+      "website_url": "https://osamaoracle.com/",
+      "description": "Osama Mustafa is a database specialist, Oracle ACE Director , Certified Oracle Professional (10g, 11g), Certified Ethical hacker (Penetration testing), and Sun System Administrator.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/3610621.jpg?t=1616060702"
+    },
+    {
+      "title": "Julian Dontcheff's Database Blog",
+      "feed_url": "https://juliandontcheff.wordpress.com/feed/",
+      "website_url": "https://juliandontcheff.wordpress.com/",
+      "description": "The good DBA is one who learns from his mistakes, the best DBA is one who learns from other DBA's mistakes.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4621177.jpg"
+    },
+    {
+      "title": "Adityanath's Oracle Blog",
+      "feed_url": "https://adityanathoracledba.com/feed/",
+      "website_url": "https://adityanathoracledba.com/",
+      "description": "This blog belongs to Adityanath Dewoolkar who is a part of Oracle ACE Alumni group. Adityanath loves to blog and share his knowledge with Oracle community. Follow his blog/twitter/LinkedIn to get updates on his recent posts.",
+      "followers": {
+        "twitter": 440
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4446257/page/5179134/logo_1693894002.png"
+    },
+    {
+      "title": "Oracle Scratchpad",
+      "feed_url": "https://jonathanlewis.wordpress.com/feed/",
+      "website_url": "https://jonathanlewis.wordpress.com/all-postings/",
+      "description": "The blog is one of the best at solving Oracle performance and optimization issues. 50 years using computers, 30+ freelance years dealing with Oracle design an performance issues. Working at retirement but making time for interesting problems.",
+      "followers": {
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/1590783.jpg?t=1693224897"
+    },
+    {
+      "title": "Sultan DBA",
+      "feed_url": "https://www.sultandba.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.sultandba.com/",
+      "description": "Welcome to Sultan Dba, We're dedicated to providing you the very best of information and troubleshooting scenarios on the database, with an emphasis on Oracle database, Goldengate, RAC.",
+      "followers": {
+        "facebook": 167
+      },
+      "image_url": "https://i1.feedspot.com/5202354.jpg?t=1601457656"
+    },
+    {
+      "title": "DBA Solved",
+      "feed_url": "https://www.dbasolved.com/feed/",
+      "website_url": "https://www.dbasolved.com/",
+      "description": "This blog is intended to provide the reader with some knowledge that they can use in their every day applications as a DBA. Many of these posts will be technical in nature, but a few may be some rants or technical reviews I've read at some time.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5044955.jpg?t=1616131022"
+    },
+    {
+      "title": "Brendan Tierney - Oralytics Blog",
+      "feed_url": "https://oralytics.com/feed/",
+      "website_url": "https://oralytics.com/",
+      "description": "Data Architecture, Data Science, Artificial Intelligence",
+      "followers": {
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4649679.jpg?t=1616131031"
+    },
+    {
+      "title": "data.KISS Blog",
+      "feed_url": "https://buckenhofer.com/feed/",
+      "website_url": "https://buckenhofer.com/",
+      "description": "Oracle ACE Associate. Databases with focus on DWH/BigData: Data Integration, DataVault, Analytics, Data Visualisation.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5143238.jpg?t=1616131790"
+    },
+    {
+      "title": "IDMFUN - More than just Identity & Access Management",
+      "feed_url": "http://www.idmfun.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.idmfun.com/",
+      "description": "All about experience with Identity, Access and Risk management products in the industry",
+      "followers": {
+        "facebook": 594
+      },
+      "image_url": "https://i1.feedspot.com/4766823.jpg?t=1616131795"
+    },
+    {
+      "title": "Venkanna Mittakanti's ORACLE ERP Blog",
+      "feed_url": "https://www.vm-oracle.com/feed/",
+      "website_url": "https://www.vm-oracle.com/",
+      "description": "This is Venkanna Venkat Reddy / Venky Mittakanti from Houston,TX. Welcome to my Oracle blog! I am certified as an Oracle ACE by Oracle Corporation. I have over 21 years of experience working with Oracle EBS and Oracle technologies, specifically focusing on implementing, designing, developing and maintaining of Oracle EBS since 2002.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5170706.jpg?t=1624529427"
+    },
+    {
+      "title": "Connor McDonald's Oracle blog",
+      "feed_url": "https://connor-mcdonald.com/feed/",
+      "website_url": "https://connor-mcdonald.com/all-posts/",
+      "description": "This is where my idle musings on Oracle over the years are posted.",
+      "followers": {
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4624729.jpg?t=1616131819"
+    },
+    {
+      "title": "Durham Oracle",
+      "feed_url": "https://www.durham.computer/feeds/posts/default?alt=rss",
+      "website_url": "https://www.durham.computer/p/landing.html",
+      "description": "An eclectic view of the world of Oracle.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5037503.jpg?t=1616132044"
+    },
+    {
+      "title": "A-Different-View by Joerg Sobottka",
+      "feed_url": "https://www.blogger.com/feeds/231611914574536972/posts/default",
+      "website_url": "https://a-different-view-by-js.blogspot.com/",
+      "description": "I am Joerg Sobottka, working as a consultant focussed on Oracle databases. One of my big hobbies beside sports and travelling is photography. So this blog will focus on the topics I like most - photography and Oracle stuff.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5142160.jpg?t=1616132570"
+    },
+    {
+      "title": "Ric Ramblings",
+      "feed_url": "http://ricramblings.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ricramblings.blogspot.com/",
+      "description": "Ric Van Dyke is an Oracle Ace with over 30 years of experience in the IT industry. Coming from a 3GL programing back ground he started working with Oracle Version 6 as a developer with Forms 2.3 and became a DBA at Ford Motor Credit.",
+      "followers": {
+        "twitter": 900
+      },
+      "image_url": "https://i1.feedspot.com/4053988.jpg"
+    },
+    {
+      "title": "ELCARO",
+      "feed_url": "http://elcaro-se.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://elcaro-se.blogspot.com/",
+      "description": "ELCARO is a place to find best oracle blogs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4660807.jpg"
+    },
+    {
+      "title": "Technology and Oracle solutions",
+      "feed_url": "https://dba4oracleapps.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://dba4oracleapps.blogspot.com/",
+      "description": "The Blog about Oracle database, APPS, weblogic and LINUX.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4699517.jpg"
+    },
+    {
+      "title": "dbgenre",
+      "feed_url": "https://www.dbgenre.com/blog-feed.xml",
+      "website_url": "https://www.dbgenre.com/all-blog",
+      "description": "Focuses on sharing technology knowledge on Oracle, MongoDB, Redis, etc database platforms.",
+      "followers": {
+        "facebook": 107
+      },
+      "image_url": "https://i1.feedspot.com/5303242.jpg?t=1626691980"
+    },
+    {
+      "title": "Root Fan",
+      "feed_url": "https://rootfan.com/feed/",
+      "website_url": "https://rootfan.com/",
+      "description": "Covers articles related to Apache, Firewall, Linux, Oracle, Postfix, Security, and Ubuntu. Root Fan is a Oracle High Availability and Linux Blog.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5343041.jpg?t=1636980799"
+    },
+    {
+      "title": "Oracle Technologies Cedric Leruth",
+      "feed_url": "https://cedricleruth.com/category/oracle/feed/",
+      "website_url": "https://cedricleruth.com/category/oracle/",
+      "description": "Cedric Leruth is an IT Engineer passionate about the growing influence of IT. He graduated with Engineering and Management degrees in IT and Network.He has worked on full stack leading technologies, SOA, SCM, CRM, transformation and innovation missions with several clients from different sectors including Telecommunication, Finance, Advertisement and IT Expertise.",
+      "followers": {
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/4922840.jpg?t=1616129396"
+    },
+    {
+      "title": "One Oracle Developer",
+      "feed_url": "http://www.oneoracledeveloper.com/feeds/posts/default",
+      "website_url": "http://www.oneoracledeveloper.com/",
+      "description": "Covers code snippets, tips and tricks and thoughts for Oracle developers, SQL, PL/SQL, APEX, clean code, certifications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5349097.jpg?t=1638354040"
+    },
+    {
+      "title": "OracleMAA By Francisco Munoz Alvarez",
+      "feed_url": "https://oraclemaa.com/feed/",
+      "website_url": "https://oraclemaa.com/",
+      "description": "Blog features articles on Maximum Availability Architecture (MAA), Data Guard and other topics. The author Francisco Munoz Alvarez is an author and popular speaker at many Oracle conferences around the world and currently works for Oracle, as a distinguished product manager for maximum availability architecture (MAA) and competitive intelligence.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5420706.jpg?t=1667997679"
+    },
+    {
+      "title": "Talip Hakan Ozturk's ORACLE BLOG",
+      "feed_url": "https://taliphakanozturken.wordpress.com/feed/",
+      "website_url": "https://taliphakanozturken.wordpress.com/",
+      "description": "I have fully dedicated to Oracle Database technologies like RAC, Data Guard, RMAN, ASM, Grid Control, Performance Tuning, and Security. I like to learn new technologies and teach others. I have presented at several University and Oracle user Group seminar and have an active Oracle blog to share knowledge and experiences. Blog by Talip Hakan Ozturk's.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4718679.jpg?t=1616133673"
+    },
+    {
+      "title": "oraHow - Howto Guides & Software Tutorials",
+      "feed_url": "https://orahow.com/feed/",
+      "website_url": "https://orahow.com/",
+      "description": "oraHow is an Oracle Database and Linux tutorial blog which provide articles on, 11g, RHEL, Oracle scripts, Dumps, issues, Guides, Backup and Recovery.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4915777.jpg?t=1616133313"
+    },
+    {
+      "title": "Grassroots Oracle",
+      "feed_url": "https://www.grassroots-oracle.com/feeds/posts/default",
+      "website_url": "http://www.grassroots-oracle.com/",
+      "description": "Grassroots transmission of mainly oracle (typically apex, sql, pl/sql), sometimes interesting science, rarely polemical.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1115615.jpg?t=1616129187"
+    },
+    {
+      "title": "Chanaka-dbhelp Blog",
+      "feed_url": "https://chanaka-dbhelp.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://chanaka-dbhelp.blogspot.com/",
+      "description": "The blog provides insights related to oracle database, OCI and OLVM configurations steps, details description about the issues encountered during ODA patching and more. Chanaka dbhelp is a blog by oracle certified professional and a Solution Consultant with over nine years of experience in installing, managing, maintaining and troubleshooting Oracle 9i database.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5490801.jpg?t=1673345256"
+    },
+    {
+      "title": "Oracle FAQ blogs",
+      "feed_url": "https://www.orafaq.com/blog/feed",
+      "website_url": "https://www.orafaq.com/articles",
+      "description": "Home page of The Oracle Frequently Asked Questions Website. A valuable resource for all Oracle professionals!!! You may not get the Oracle company line, but you will surely get an answer to just about any question concerning the software giant and its products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/761803.jpg?t=1616129112"
+    },
+    {
+      "title": "Database Tutorials",
+      "feed_url": "https://dbtut.com/index.php/feed/",
+      "website_url": "https://dbtut.com/",
+      "description": "Database Tutorials features articles on MSSQL, Oracle, PostgreSQL, MySQL, MariaDB, DB2, Sybase, Teradata, Big Data, NOSQL, MongoDB, Couchbase, Cassandra, Windows, Linux and more...",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5128458.jpg?t=1622958928"
+    },
+    {
+      "title": "Know-Oracle",
+      "feed_url": "https://know-oracle.com/feed/",
+      "website_url": "https://know-oracle.com/",
+      "description": "I am Shivmohan Purohit, professionally working in areas of Oracle Applications, majority in Oracle Financials General Ledger, Oracle Payables, Oracle Receivables, Oracle Fixed Assets and many more other related modules and technical tool along with IT Projects and IT Governance Areas.",
+      "followers": {
+        "twitter": 508
+      },
+      "image_url": "https://i1.feedspot.com/5132822.jpg?t=1616129269"
+    },
+    {
+      "title": "Oraask",
+      "feed_url": "https://www.oraask.com/feed",
+      "website_url": "https://www.oraask.com/",
+      "description": "Oraask is a question and answer site for professional programmers. Oraask was built by programmers, for programmers, and we hope to help each other. Oraask is free to join and open to everyone to ask a question related to any programming languages or to help others by answer questions asked by users so with Oraask you will never be stuck again.",
+      "followers": {
+        "facebook": 575,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4993172.jpg?t=1616129210"
+    },
+    {
+      "title": "Helios's Blog",
+      "feed_url": "https://heliosguneserol.com/feed/",
+      "website_url": "https://heliosguneserol.com/",
+      "description": "Posts in (E-Business Suite, Database General, Database Installation, Database Upgrade, Linux .. etc) in OTN Discussion Forum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4644210.jpg?t=1616130468"
+    },
+    {
+      "title": "APEX App Lab",
+      "feed_url": "https://apexapplab.dev/feed/",
+      "website_url": "https://apexapplab.dev/",
+      "description": "From developers to developers. Oracle APEX all the way. Hi! I'm Plamen Mushkov. APEX App Lab Covers articles dedicated primarily to Oracle APEX, you will also find topics about Oracle Database, PL/SQL, and other application development articles.",
+      "followers": {
+        "twitter": 860
+      },
+      "image_url": "https://i1.feedspot.com/5337516.jpg?t=1655961933"
+    },
+    {
+      "title": "About Oracle and Oracle \u0101'p\u011bks",
+      "feed_url": "http://orclking.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://orclking.blogspot.com/",
+      "description": "Hi! I'm Karkuvelraja Thangamariappan.I am an Oracle Certified Professional having 6.5 years of experience involving Oracle APEX Applications. I actively participate in the Oracle community by publishing technical posts on my blog.",
+      "followers": {
+        "twitter": 396
+      },
+      "image_url": "https://i1.feedspot.com/5296070.jpg?t=1655965394"
+    },
+    {
+      "title": "Anar Godjaev",
+      "feed_url": "https://anargodjaev.wordpress.com/feed/",
+      "website_url": "https://anargodjaev.wordpress.com/",
+      "description": "Oracle blog by Anar Godjaev.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4649685.jpg?t=1616130300"
+    },
+    {
+      "title": "Developer Community",
+      "feed_url": "https://developercommunity.blog/feed/",
+      "website_url": "https://developercommunity.blog/",
+      "description": "Covers Oracle Digital Assistant, Developer Tools and Application Development Updates.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5341336.jpg?t=1636525814"
+    },
+    {
+      "title": "Tales from the Datacenter",
+      "feed_url": "http://talesfromthedatacenter.com/feed/",
+      "website_url": "http://talesfromthedatacenter.com/",
+      "description": "Erik is currently an Oracle ACE Director and VP Enterprise Transformationas a lead strategist for Federal, State, and Local Government and Commercial customers throughout the United States.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5082507.jpg"
+    },
+    {
+      "title": "Database Administration Tips",
+      "feed_url": "http://dba-tips.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://dba-tips.blogspot.com/",
+      "description": "A blog about oracle database administration tips, implementations, scripts and Linux script.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4766847.jpg?t=1616129863"
+    },
+    {
+      "title": "Oracle Tips and Techs",
+      "feed_url": "https://orabliss.blogspot.com/feeds/posts/default",
+      "website_url": "https://orabliss.blogspot.com/",
+      "description": "The 24x7 feel of bliss as an Oracle DBA. Contents are of my own testing and deployments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5423264.jpg?t=1658217232"
+    },
+    {
+      "title": "Richard Foote's Oracle Blog",
+      "feed_url": "https://richardfoote.wordpress.com/feed/",
+      "website_url": "https://richardfoote.wordpress.com/",
+      "description": "Focusing Specifically On Oracle Indexes, Database Administration and Some Great Music.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4623744.jpg?t=1616060632"
+    },
+    {
+      "title": "Josip Pojatina Blog",
+      "feed_url": "https://www.josip-pojatina.com/en/category/blog-en/feed/",
+      "website_url": "https://www.josip-pojatina.com/en/category/blog-en/",
+      "description": "Performatune provides consulting in Oracle Retail Performance Tuning, Oracle & Java Performance Troubleshooting and Tuning, Design & Development of HA scalable systems based on Oracle and Open Source technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4624718.jpg?t=1616131363"
+    },
+    {
+      "title": "SQLMaria",
+      "feed_url": "https://sqlmaria.com/feed/",
+      "website_url": "https://sqlmaria.com/",
+      "description": "SQLMaria blog, which shares what's new with Oracle Database and the best practices for incorporating it into your environment.",
+      "followers": {
+        "facebook": 718,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4624268.jpg?t=1616060614"
+    },
+    {
+      "title": "svenweller Notes about Oracle SQL, PLSQL and APEX",
+      "feed_url": "https://svenweller.wordpress.com/feed/",
+      "website_url": "https://svenweller.wordpress.com/",
+      "description": "I am a professional software developer working with Oracle Databases for more than 15 years. I am strongly passionate about performance tuning and about rapid application development with Apex. My real strength is in depth analysis of problems. That helps a little when finding new ways to tweak and twist SQL and PLSQL. More recently focused on APEX and BI integrations.",
+      "followers": {
+        "twitter": 845
+      },
+      "image_url": "https://i1.feedspot.com/4789884.jpg?t=1616129675"
+    },
+    {
+      "title": "Mufalani DBA (OCM)",
+      "feed_url": "https://mufalani.wordpress.com/feed/",
+      "website_url": "https://mufalani.wordpress.com/",
+      "description": "In this blog, you will find tips and tricks from a real-life DBA... DBA, Oracle Certified Master (OCM), Oracle ACE, Blogger, Rider, Husband, Father & LuxOUG Chairman.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5226210.jpg?t=1607519602"
+    },
+    {
+      "title": "Oracle Cloud Blog",
+      "feed_url": "https://oc-blog.com/feed/",
+      "website_url": "https://oc-blog.com/",
+      "description": "I am Richard Garsthagen. I work for Oracle as Business Development Manager for the Oracle Cloud in EMEA. On this blog I like to share my experiences with the Oracle Cloud, Scripts / tips and Tricks and of course interesting news.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4969484.jpg?t=1624855031"
+    },
+    {
+      "title": "Integrigy - Oracle Security Blog",
+      "feed_url": "https://www.integrigy.com/feeds/rss.xml",
+      "website_url": "https://www.integrigy.com/oracle-security-blog",
+      "description": "Integrigy Corporation is a leader in application security for enterprise mission-critical applications.",
+      "followers": {
+        "facebook": 67,
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/4624221.jpg?t=1616129264"
+    },
+    {
+      "title": "Oracle Ride",
+      "feed_url": "https://www.oracleride.com/feed/",
+      "website_url": "https://www.oracleride.com/",
+      "description": "Riaz Ahmad Ansari is an Oracle Consultant & Corporate Trainer. He is famous by Ahmad nick name in the IT industry. He has 20+ years of IT experience. From the last 10+ years working as a production Oracle DBA managing all operating system based Oracle Databases. He has 10+ years experience as an Oracle Database Corporate Trainer.",
+      "followers": {
+        "twitter": 207
+      },
+      "image_url": "https://i1.feedspot.com/5205581.jpg?t=1616129418"
+    },
+    {
+      "title": "DBA Anderson Graf",
+      "feed_url": "http://www.andersondba.com.br/feeds/posts/default?alt=rss",
+      "website_url": "http://www.andersondba.com.br/",
+      "description": "Oracle DBA, Bachelor of Information Systems, MBA in Oracle database management, OCA, OCP, OCE, OCS and OPNCS. Author oraclehome.com and OTN, founder of the Oracle Users Group of Santa Catarina.",
+      "followers": {
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4766830.jpg?t=1616130982"
+    },
+    {
+      "title": "APEX by G",
+      "feed_url": "http://apexbyg.blogspot.com/feeds/posts/default",
+      "website_url": "http://apexbyg.blogspot.com/",
+      "description": "A blog about Oracle APEX.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/1115575.jpg"
+    },
+    {
+      "title": "Fernando Simon Blog",
+      "feed_url": "https://www.fernandosimon.com/blog/feed/",
+      "website_url": "https://www.fernandosimon.com/blog/",
+      "description": "Fernando Simon's blog. DBA with practical experience in Oracle Exadata, MAA, DataGuard, Oracle RAC. Also in related infrastructure like Storage, Disks, VMware.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5158056.jpg?t=1616131015"
+    },
+    {
+      "title": "Oracle Blog",
+      "feed_url": "https://www.oracleplsqltr.com/feed/",
+      "website_url": "https://www.oracleplsqltr.com/",
+      "description": "My name is Caglar Polat. I am an Oracle Developer & DBA. I have been using Oracle technologies for more than 10 years. In this blog, I write about SQL, PL/SQL, and APEX technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5241031.jpg?t=1612173328"
+    },
+    {
+      "title": "dbaonTap",
+      "feed_url": "https://dbaontap.com/feed/",
+      "website_url": "https://dbaontap.com/",
+      "description": "The DBA On Tap blog is intended to provide readers with information surrounding problems I encounter on a daily basis in support of Oracle tools and applications.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4623797.jpg?t=1616131053"
+    },
+    {
+      "title": "Vineet's Oracle Blog Spot",
+      "feed_url": "https://vineetsoracleblogspot.blogspot.com/feeds/posts/default",
+      "website_url": "https://vineetsoracleblogspot.blogspot.com/",
+      "description": "Follow to get updates on Oracle,Performance Tuning, Parallel, LOB, Index, 12C, Feature, Parameter,1 1G, Datapump, SecureFile, Insert, Update, feature, stats, Issue, create, table, database.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5178160.jpg"
+    },
+    {
+      "title": "HeliFromFinland",
+      "feed_url": "https://helifromfinland.blog/feed/",
+      "website_url": "https://helifromfinland.blog/",
+      "description": "Heli's thoughts on Database Designing, Oracle SQL Developer Data Modeler, User Groups etc.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4621295.jpg"
+    },
+    {
+      "title": "Edward's Oracle Blog",
+      "feed_url": "https://www.dewolf.net/feed/",
+      "website_url": "https://www.dewolf.net/",
+      "description": "This blog is intended to keep you up to date on Oracle Sales Cloud and Business Intelligence.",
+      "followers": {
+        "facebook": 59,
+        "twitter": 434
+      },
+      "image_url": "https://i1.feedspot.com/4624190.jpg?t=1616131069"
+    },
+    {
+      "title": "Sasank's PeopleSoft Log",
+      "feed_url": "https://pe0ples0ft.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://pe0ples0ft.blogspot.com/",
+      "description": "A blog aimed at PeopleSoft Knowledge Sharing and Discussion.",
+      "followers": {
+        "twitter": 277
+      },
+      "image_url": "https://i1.feedspot.com/4624725.jpg?t=1616131096"
+    },
+    {
+      "title": "dbapath",
+      "feed_url": "https://www.dbapath.com/feed/",
+      "website_url": "https://www.dbapath.com/",
+      "description": "The idea of dbapath.com is to provide technical information on various database administration tasks which include Oracle 11g, 12c, Rac, and Data Guard.The content is organized in such a way that the topics are segregated under the various categories like Oracle 11g, Oracle 12c, ORA-Errors, interview questions etc.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5044988.jpg?t=1616131772"
+    },
+    {
+      "title": "Jaffar Oracle blog",
+      "feed_url": "http://jaffardba.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jaffardba.blogspot.com/",
+      "description": "Whatever topic has been discussed on this blog is my own finding and views, not necessary match with others. I strongly recommend you to do a test before you implement the piece of advice given at my blog.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/1384202.jpg?t=1616131779"
+    },
+    {
+      "title": "Oraclewizard",
+      "feed_url": "http://oraclewizard.com/Oraclewizard/feed/",
+      "website_url": "https://mauro-pagano.com/",
+      "description": "Veteran Owned HUBZONE Certified Small Business, Oracle Database Security and Performance. Winner of the 2015 Oracle Developers Choice Award for Database Design and Oracle ACE",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4623844.jpg?t=1616131785"
+    },
+    {
+      "title": "Mauro Pagano's Blog",
+      "feed_url": "https://mauro-pagano.com/feed/",
+      "website_url": "https://mauro-pagano.com/",
+      "description": "Mauro Pagano is a database engineer who likes performance, query optimization and SQL Tuning.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4624780.jpg"
+    },
+    {
+      "title": "OraclExuberance",
+      "feed_url": "https://maazdba.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://maazdba.blogspot.com/",
+      "description": "Articles on Oracle DB, defragmentation, performance improvements, installation, termination and many more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5052140.jpg"
+    },
+    {
+      "title": "Jeff's PeopleSoft Blog",
+      "feed_url": "http://jeffpsb.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jeffpsb.blogspot.com/",
+      "description": "Blog to share and discuss PeopleSoft knowledge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4649702.jpg?t=1616132477"
+    },
+    {
+      "title": "Chaitanya Oracle Dba Blog",
+      "feed_url": "https://chaitanyaoracledba.blogspot.com/feeds/posts/default",
+      "website_url": "https://chaitanyaoracledba.blogspot.com/",
+      "description": "My name is Chaitanya C. Divakala. I am working as Oracle Dba Consultant. Chaitanya Oracle Dba Blog is your number one source for all things Oracle, Asm, Rac, Unix, Linux, & Rman Backup & Recoveries. This Blog is useful for those who want to learn new technologies. We are here to provide all solutions in technologies. We are dedicated to giving you the very best of all things with a focus on Database, Storages, Networking, and Security.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5202597.jpg?t=1601536024"
+    },
+    {
+      "title": "oraQBA",
+      "feed_url": "http://oraqba.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://oraqba.blogspot.com/",
+      "description": "Jakub is an Oracle DBA, Linux Admin Oracle 11g OCM Exadata 11g Certified Implementation Specialist. Follow to get updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5057875.jpg"
+    },
+    {
+      "title": "Carlos Magno EzDBA",
+      "feed_url": "https://ezdba.wordpress.com/author/cmagnojunior/feed/",
+      "website_url": "https://ezdba.wordpress.com/author/cmagnojunior/",
+      "description": "Carlos Magno Experience of over 15 years as Oracle DBA on complex projects in countries such as Brazil, India, the Netherlands, Luxembourg, France and Italy. Blog with useful information for Oracle DBAs , Oracle DBM, Infrastructure Admin etc. Information about Oracle DBs, Oracle EM, Cloud, Exadata, Sun Cluster, Golden Gate and etc. Cloud: Backup Database - Using Oracle Cloud Engineered Systems.",
+      "followers": {
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/4821636.jpg?t=1616132099"
+    },
+    {
+      "title": "Carlos Sierra's Tools and Tips",
+      "feed_url": "https://carlos-sierra.net/feed/",
+      "website_url": "https://carlos-sierra.net/",
+      "description": "Follow this blog for Tools and Tips for Oracle Performance and SQL Tuning.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4624651.jpg"
+    },
+    {
+      "title": "Striving for Optimal Performance Blog",
+      "feed_url": "https://antognini.ch/blog/feed/",
+      "website_url": "https://antognini.ch/blog/",
+      "description": "This blog is all about Oracle Database.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4623791.jpg?t=1616132074"
+    },
+    {
+      "title": "OracleDBPro - Pini Dibask Blog",
+      "feed_url": "http://oracledbpro.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://oracledbpro.blogspot.com/",
+      "description": "Pini Dibask Oracle Database Blog shares Articles, Tips & Tricks, Sample Code, Videos and more.",
+      "followers": {
+        "twitter": 273
+      },
+      "image_url": "https://i1.feedspot.com/4621255.jpg?t=1616061072"
+    },
+    {
+      "title": "Kamran Agayev's Oracle Blog",
+      "feed_url": "http://kamranagayev.com/feed/",
+      "website_url": "http://kamranagayev.com/",
+      "description": "Kamran Agayev is Oracle Certified Master and Oracle ACE Director with 7 years of experience managing UNIX- based Oracle Databases.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/1574709.jpg?t=1616132978"
+    },
+    {
+      "title": "Oracle DBA Quick Notes",
+      "feed_url": "http://feeds.feedburner.com/blogspot/KKPLP",
+      "website_url": "https://rajkumar-dba.blogspot.com/",
+      "description": "Articles on database general, interview questions, cloud infrastructure, migration, auditing, performance and much more.",
+      "followers": {
+        "twitter": 291
+      },
+      "image_url": "https://i1.feedspot.com/5059649.jpg?t=1616132997"
+    },
+    {
+      "title": "Oracle Sean",
+      "feed_url": "https://oraclesean.com/blog?format=rss",
+      "website_url": "https://oraclesean.com/",
+      "description": "Sean shares articles about Oracle and other related technologies. He is an Oracle Database Reliability Engineer with interests in Real Application Clusters, Exadata and Engineered Systems, Trace File Analyzer, Oracle Cloud, and performance tuning.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5346895.jpg?t=1638261712"
+    },
+    {
+      "title": "ORACLE-HELP - Oracle DBA and Cloud Articles",
+      "feed_url": "http://oracle-help.com/feed/",
+      "website_url": "http://oracle-help.com/",
+      "description": "Oracle-Help.com is website for sharing knowledge in Oracle Databases and Oracle Cloud.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 880
+      },
+      "image_url": "https://i1.feedspot.com/4738381.jpg?t=1616060571"
+    },
+    {
+      "title": "Let's Develop in Oracle",
+      "feed_url": "http://nimishgarg.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://nimishgarg.blogspot.com/",
+      "description": "This blog provides useful information and Tips on Oracle database, Oracle SQL, Oracle PL/SQL, DBMS job scheduler, oracle performance tuning, Oracle SQL Query Optimization, Oracle Interview Questions, Various Oracle Error Codes, Oracle Regular Expressions and String Aggregation for Oracle DBA and Database Developers.",
+      "followers": {
+        "twitter": 560
+      },
+      "image_url": "https://i1.feedspot.com/4623838.jpg"
+    },
+    {
+      "title": "Unirac Technologies",
+      "feed_url": "https://unirac.in/blog/feed/",
+      "website_url": "https://unirac.in/blog/",
+      "description": "Best Oracle DBA Training Institute: Unirac is the best Oracle DBA Training Institute in Hyderabad. Real Time Oracle DBA Training by 15+yrs Expert from MNC.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5170661.jpg?t=1616129405"
+    },
+    {
+      "title": "Easy to Learn Oracle Database and Solve Your Problem",
+      "feed_url": "https://rajiboracle.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://rajiboracle.blogspot.com/",
+      "description": "A blog about database administrator,pl sql,sql,oracle tutorial,sql programming,oracle certification path,oracle certification.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4621230.jpg"
+    },
+    {
+      "title": "Steven Feuerstein on Oracle PL/SQL",
+      "feed_url": "http://stevenfeuersteinonplsql.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://stevenfeuersteinonplsql.blogspot.com/",
+      "description": "This blog is all about Oracle PL/SQL. PL/SQL Evangelist at Oracle Corporation Lives in Chicago, IL, United States.",
+      "followers": {
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4619305.jpg?t=1616046717"
+    },
+    {
+      "title": "Oracle DBA Place",
+      "feed_url": "http://feeds.feedburner.com/OracleDbaPlace",
+      "website_url": "https://oracledba.blogspot.com/",
+      "description": "A blog about Oracle database on Linux environment. Oracle ACE Associate, Chief Database Architect, Oracle DBA with 20 years of experience and a blogger Yossi Nixon.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1120424.jpg?t=1616133529"
+    },
+    {
+      "title": "Sun Oracleworld",
+      "feed_url": "http://sunoracleworld.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sunoracleworld.blogspot.com/",
+      "description": "Expert Database Consultancy & Solutions. All the post in this blog is my own opinion and all the steps are tested in test environment. Kindly review and test it before implementing in production. This Blog is intend to share & gain the knowledge of Oracle Technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4872481.jpg?t=1616133394"
+    },
+    {
+      "title": "DBI Services Blog \u00bb Oracle",
+      "feed_url": "https://www.dbi-services.com/blog/category/oracle/feed/",
+      "website_url": "https://www.dbi-services.com/blog/category/oracle/",
+      "description": "The dbi services blog represents the point of view of our consultants regarding various IT technologies mainly Oracle.",
+      "followers": {
+        "facebook": 282,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4887265.jpg?t=1616128828"
+    },
+    {
+      "title": "K21 Academy - Oracle Trainings Blog",
+      "feed_url": "https://k21academy.com/blog/",
+      "website_url": "https://k21academy.com/blog/",
+      "description": "K21 Academy, Oracle Gold Partner specialized in Oracle Implementation & Training.",
+      "followers": {
+        "facebook": 68900,
+        "twitter": 701
+      },
+      "image_url": "https://i1.feedspot.com/4624441.jpg?t=1616128839"
+    },
+    {
+      "title": "Ontoor Solutions",
+      "feed_url": "https://blogs.ontoorsolutions.com/index.xml",
+      "website_url": "https://blogs.ontoorsolutions.com/",
+      "description": "Ontoor Solutions is an Organised Network Technology openness-oriented online directory to learn, implement, document, and share concepts of applications using Oracle APEX. Reporting in SAP, Project management, Consulting, and coaching. We can help you with APEX, and PLSQL. One place to your all projects, set up a meeting with us.",
+      "followers": {
+        "facebook": 22,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/5299019.jpg?t=1655964963"
+    },
+    {
+      "title": "Oracle DBA ++",
+      "feed_url": "https://www.blogger.com/feeds/9145754559533452707/posts/default",
+      "website_url": "https://rupeshanantghubade.blogspot.com/",
+      "description": "\ud83d\udd39 Oracle DBA ++ \ud83d\udd39 Stay updated with expert insights, best practices, and step-by-step guides on Oracle Database Administration. From performance tuning to migrations, monitoring, and AI-powered search\u2014get everything you need to master Oracle databases! \ud83d\udd38 Tips, Tricks & Tutorials. \ud83d\udd38 Database Monitoring & Administration. \ud83d\udd38 AI Vector Search in Oracle 23ai. \ud83d\udd38 RMAN, Data Guard & Migrations. \ud83d\udd38 RAC and Performance Tuning. Join me for regular updates !!!!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5237489.jpg?t=1611063233"
+    },
+    {
+      "title": "BigDBA",
+      "feed_url": "https://www.bigdba.com/feed/",
+      "website_url": "https://www.bigdba.com/",
+      "description": "Keep up with articles from BigDBA.",
+      "followers": {
+        "twitter": 252
+      },
+      "image_url": "https://i1.feedspot.com/5082875.jpg?t=1616128870"
+    },
+    {
+      "title": "MiCORE Solutions Blog",
+      "feed_url": "https://www.micoresolutions.com/feed",
+      "website_url": "https://www.datastrike.com/blog",
+      "description": "MiCORE Blog - 'At the CORE of the Solution' regularly produces thoughts and information related to MiCORE, Oracle Consulting and the IT Industry. MiCORE Solutions is a leading provider of Remote Database Management, Support and Consulting Services, specializing in Oracle technologies.",
+      "followers": {
+        "facebook": 480,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4624438.jpg?t=1616129508"
+    },
+    {
+      "title": "Jobacle",
+      "feed_url": "https://www.jobacle.nl/?feed=rss2",
+      "website_url": "https://www.jobacle.nl/",
+      "description": "A technical Oracle blog with licensing information.",
+      "followers": {
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/4624415.jpg"
+    },
+    {
+      "title": "Oracle Database Development",
+      "feed_url": "https://oradbdev.mathiasmagnusson.com/feed/",
+      "website_url": "https://oradbdev.mathiasmagnusson.com/",
+      "description": "Things in the Oracle database development space that I fancy.",
+      "followers": {
+        "twitter": 278
+      },
+      "image_url": "https://i1.feedspot.com/1115646.jpg?t=1686298382"
+    },
+    {
+      "title": "Dutra DBA Blog",
+      "feed_url": "https://www.dbadutra.com.br/feed/",
+      "website_url": "https://www.dbadutra.com/",
+      "description": "Oracle world an easy way.",
+      "followers": {
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/1813599/page/4782119/logo_1687277087.jpg"
+    },
+    {
+      "title": "SusantoTech",
+      "feed_url": "https://susantotech.com/feed/",
+      "website_url": "https://susantotech.com/",
+      "description": "In this blog, you will find the latest oracle news, articles, trends, updates, and much more. Check out the blog to know more about us and stay up to date.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5229321.jpg?t=1608382989"
+    },
+    {
+      "title": "Database Star",
+      "feed_url": "https://www.databasestar.com/feed/",
+      "website_url": "https://www.databasestar.com/",
+      "description": "Practical advice for database developers.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4681127.jpg?t=1616133824"
+    }
+  ]
+}

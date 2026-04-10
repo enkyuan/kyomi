@@ -1,0 +1,62 @@
+{
+  "category": "Monterey Park News",
+  "source_url": "https://rss.feedspot.com/monterey_park_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Monterey Park, CA",
+      "feed_url": "https://www.montereypark.ca.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "http://www.montereypark.ca.gov/CivicAlerts.aspx?CID=1",
+      "description": "The official government website of the City of Monterey Park, CA. Providing resident, business, and visitor information sections, plus city government information to Monterey Park city and community. Follow this feed for the latest news, city alerts, economic, environment development, election news, and much more.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5147733.jpg?t=1626159446"
+    },
+    {
+      "title": "Pasadena Star-News \u00bb Monterey Park",
+      "feed_url": "https://www.pasadenastarnews.com/location/california/los-angeles-county/san-gabriel-valley/monterey-park/feed/",
+      "website_url": "https://www.pasadenastarnews.com/location/california/los-angeles-county/san-gabriel-valley/monterey-park/",
+      "description": "The Pasadena Star-News is the local news source for Pasadena and the surrounding area providing breaking news, sports, business, entertainment, things to do, opinion, photos, videos, and more from the west San Gabriel Valley.",
+      "followers": {
+        "facebook": 41800,
+        "twitter": 45000
+      },
+      "image_url": "https://i1.feedspot.com/5147739.jpg?t=1588590016"
+    },
+    {
+      "title": "KTLA 5 \u00bb Monterey Park",
+      "feed_url": "https://ktla.com/tag/monterey-park/feed/",
+      "website_url": "https://ktla.com/tag/monterey-park/",
+      "description": "The first commercial TV station licensed west of the Mississippi, Los Angeles-based KTLA has been keeping Southern Californians informed since 1947. KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic, and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond. Subscribe this feed for the latest news and updates in Monterey Park brought to you by the team at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5147737.jpg?t=1588589453"
+    },
+    {
+      "title": "MontereyParkonline.us",
+      "feed_url": "https://news.montereyparkonline.us/",
+      "website_url": "https://news.montereyparkonline.us/",
+      "description": "MontereyParkonline.us brings you complete business, leisure, travel and tourism, weather, the latest news, and all other related information about Monterey Park. Stay connected to the local news stream with round-the-clock updates. This website is part of the USA Online Network, a group of interconnected websites dedicated to covering all US States, cities and territories.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 429,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5492867.jpg?t=1673596780"
+    },
+    {
+      "title": "CBS Los Angeles \u00bb Monterey Park",
+      "feed_url": "https://losangeles.cbslocal.com/tag/monterey-park/feed/",
+      "website_url": "https://www.cbsnews.com/losangeles/tag/monterey-park/",
+      "description": "CBSLA is a new 24/7 digital streaming network for live and local news. We bring you local and breaking news, sports, weather, and the best of LA and OC. Follow this feed to read current local Monterey Park news, crime, events, and much more.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 329
+      },
+      "image_url": "https://i1.feedspot.com/5147734.jpg?t=1588588749"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "category": "Hapkido",
+  "source_url": "https://rss.feedspot.com/hapkido_rss_feeds",
+  "feeds": [
+    {
+      "title": "Delaware Hapkido Martial Arts Academy Blog",
+      "feed_url": "https://www.firststatemartialarts.com/blog?format=rss",
+      "website_url": "https://www.firststatemartialarts.com/blog",
+      "description": "The mission of Delaware Hapkido is to provide a personally oriented martial arts experience, which instills a sense of pride through excellence, enabling each student to realize personal growth. Our blog amplifies that purpose through critical insight, training guides and more resources about Hapkido.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497528.jpg?t=1674220316"
+    },
+    {
+      "title": "Choe's HapKiDo Duluth Blog",
+      "feed_url": "https://karateduluth.com/feed/",
+      "website_url": "https://karateduluth.com/blog/",
+      "description": "A Hapkido blog featuring articles and advice on how to reach your goals, develop discipline, and hapkido benefits. Choe's HapKiDo Martial Arts Duluth Ga teaches quality Martial Arts Karate to kids, teens, and adults.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2800,
+        "instagram": 483
+      },
+      "image_url": "https://i1.feedspot.com/5351215.jpg?t=1638943944"
+    },
+    {
+      "title": "Soo Dan Hap-Ki-Do",
+      "feed_url": "https://www.soodanhapkido.com//feed/rss2",
+      "website_url": "https://www.soodanhapkido.com/news-events",
+      "description": "Check out our News & Events to keep up to date with what's going on at the school. View the Centre's upcoming event schedule and news articles. Soo Dan Hap-Ki-Do Cornacchio's Martial Arts Centre's mission is to provide effective martial arts instruction. Helping people learn how to defend themselves.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497527.jpg?t=1674220076"
+    },
+    {
+      "title": "The World Hapkido Union Blog",
+      "feed_url": "https://theworldhapkidounion.org/category/blog/feed/",
+      "website_url": "https://theworldhapkidounion.org/category/blog/",
+      "description": "Get important news updates and announcements from The USA Hapkido Union in this blog. Stay current on all our latest programs and activities. The USA Hapkido Union, Inc. is a world-class organization comprised of highly skilled and dedicated Hapkido teachers whose skills are rich in the tradition of excellence.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497529.jpg?t=1674220119"
+    },
+    {
+      "title": "World Hapkido News Blog",
+      "feed_url": "https://worldhapkidonews.com/feed/",
+      "website_url": "https://worldhapkidonews.com/blog/",
+      "description": "Explore our blog to find a wide variety of articles from Hapkido enthusiasts and Grand Masters, for beginners and professionals alike. The World Hapkido News website is the complete Hapkido & Lifestyle Resource, a place for Hapkido News, Instructional Videos, Articles, Program information, Mindfulness, and Lifestyle.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5497530.jpg?t=1674220196"
+    }
+  ]
+}

@@ -1,0 +1,962 @@
+{
+  "category": "Sharepoint",
+  "source_url": "https://rss.feedspot.com/sharepoint_rss_feeds",
+  "feeds": [
+    {
+      "title": "SharePoint Maven Blog",
+      "feed_url": "http://sharepointmaven.com/blog-sharepoint-best-practices/feed/",
+      "website_url": "https://sharepointmaven.com/blog-sharepoint-best-practices/",
+      "description": "Key topics covered are SharePoint Training, Setup of SharePoint Sites, SharePoint Governance, SharePoint Document Management, and SharePoint Best Practices. Also features OneDrive, Planner, Power Automate, lists, and Microsoft 365. Greg Zelfond, SharePoint Consultant specializing in Document Management & Migration, out-of-the-box configuration for SharePoint & Office 365.",
+      "followers": {
+        "twitter": 2200,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4624833.jpg?t=1625817173"
+    },
+    {
+      "title": "SharePoint Europe",
+      "feed_url": "https://www.sharepointeurope.com/feed/",
+      "website_url": "https://www.sharepointeurope.com/resource-centre/",
+      "description": "The European SharePoint Community Resource Centre has a vast and growing library of SharePoint content for you to browse from. The online community regularly shares best practices, new innovations and advice on how to achieve a greater return on your Microsoft Office 365 and SharePoint investment.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4624836.jpg?t=1625817474"
+    },
+    {
+      "title": "SharePoint lightbulb moments",
+      "feed_url": "https://steveknutson.blog/feed/",
+      "website_url": "https://steveknutson.blog/",
+      "description": "Covers blog posts on Office 365, Powershell, Power Automate, SharePoint, Stratos, Microsoft Teams, and Power Apps. Blog by Steve Knutson, Microsoft MVP Office Apps and Services.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5178978.jpg?t=1625817935"
+    },
+    {
+      "title": "Waldek Mastykarz",
+      "feed_url": "https://blog.mastykarz.nl/feed.xml",
+      "website_url": "https://blog.mastykarz.nl/",
+      "description": "Thoughts, tips and best practices for building applications on Microsoft 365 and SharePoint Framework by Waldek Mastykarz - Microsoft 365 Cloud Developer Advocate.",
+      "followers": {
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4625408.jpg?t=1625817718"
+    },
+    {
+      "title": "SharePains \u00bb Microsoft SharePoint Online",
+      "feed_url": "https://sharepains.com/feed",
+      "website_url": "https://sharepains.com/sharepoint-online",
+      "description": "This section of our blog features articles that have to do exclusively with the Microsoft SharePoint Platform. SharePains is the blog with posts about Microsoft Technology such as SharePoint, Power Platform, Dynamics and Azure.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5263232.jpg?t=1617283370"
+    },
+    {
+      "title": "HANDS ON SharePoint",
+      "feed_url": "https://sharepoint.handsontek.net/feed/",
+      "website_url": "https://sharepoint.handsontek.net/",
+      "description": "A blog about SharePoint development and SharePoint branding. Finding ways to make SharePoint even better. Blog by Joao Ferreira, Microsoft Office Development MVP.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4624846.jpg?t=1616145658"
+    },
+    {
+      "title": "LazyAdmin",
+      "feed_url": "https://lazyadmin.nl/feed/",
+      "website_url": "https://lazyadmin.nl/",
+      "description": "Everything about Office & Microsoft 365, SharePoint, PowerShell, Smart Home, SysAdmin, and Home networks. Written by a SysAdmin with more than 15 years of experience.",
+      "followers": {
+        "twitter": 700
+      },
+      "image_url": "https://i1.feedspot.com/4944167.jpg?t=1616145379"
+    },
+    {
+      "title": "Cameron Dwyer | Office 365, SharePoint, Outlook, OnePlace Solutions",
+      "feed_url": "https://camerondwyer.com/feed/",
+      "website_url": "https://camerondwyer.com/",
+      "description": "Cameron Dwyer is a founding architect and developer of the OnePlace Solutions suite of products which provide awesome integration between Office 365/SharePoint and the desktop.",
+      "followers": {
+        "facebook": 44,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4625485.jpg?t=1616146331"
+    },
+    {
+      "title": "Salaudeen Rajack's SharePoint Diary",
+      "feed_url": "https://feeds.feedburner.com/Sharepointdiary",
+      "website_url": "https://www.sharepointdiary.com/",
+      "description": "A Blog for Sharing My experiences as an Architect, Consultant, Administrator and Developer with SharePoint and its related products.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 420
+      },
+      "image_url": "https://i1.feedspot.com/2809651.jpg?t=1616145345"
+    },
+    {
+      "title": "Joseph Velliah",
+      "feed_url": "https://blog.josephvelliah.com/feed.xml",
+      "website_url": "https://blog.josephvelliah.com/",
+      "description": "I'm a Sr. Staff SW Engineer with a focus on Cloud Computing, Microsoft 365, Azure, AWS, and SharePoint. On my website, I write articles about leveraging technology to improve employee experience and productivity.",
+      "followers": {
+        "twitter": 308
+      },
+      "image_url": "https://i1.feedspot.com/4948824.jpg?t=1616146327"
+    },
+    {
+      "title": "SharePoint Stuff",
+      "feed_url": "https://sharepointstuff.com/feed/",
+      "website_url": "https://sharepointstuff.com/posts/",
+      "description": "Looking for the Microsoft roadmap roundup? Get all the latest additions & changes to the M365 roadmap each week with updates for SharePoint, Teams, OneDrive, and Information Protection. Written by Anthony Tudor, Microsoft Technical Manager for the Canal & River Trust, and has been working with SharePoint & Microsoft 365 for many years.",
+      "followers": {
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/5339714.jpg?t=1635927112"
+    },
+    {
+      "title": "Nuno \u00c1rias Silva Website",
+      "feed_url": "https://www.nuno-silva.net/feed",
+      "website_url": "https://www.nuno-silva.net/",
+      "description": "Nuno is Architect Manager at GFI Portugal - Modern Workplace Lead - Microsoft MVP Office Apps and Services, Windows Insider MVP and MCT. Specialist in Microsoft 365 and Azure with more than 20 years of experience in Datacenter Architectures, he has 40+ certifications. He is also an international speaker and author of Office 365 Essentials Book.",
+      "followers": {
+        "twitter": 806
+      },
+      "image_url": "https://i1.feedspot.com/5072355.jpg"
+    },
+    {
+      "title": "Service Automation",
+      "feed_url": "https://serviceautomation.online/feed/",
+      "website_url": "https://serviceautomation.online/",
+      "description": "Welcome to Geoff Evelyn's SharePoint blog, called SharePointGeoff. This blog is devoted to service, support and high-end administration for SharePoint solutions. This site houses many articles, resources and downloads concerning Sharepoint Planning, Design, Deployment, Implementation, Automation, Architecture, Business Continuity, Disaster Recovery, Software Development and Support.",
+      "followers": {
+        "twitter": 307
+      },
+      "image_url": "https://i1.feedspot.com/671275.jpg"
+    },
+    {
+      "title": "Global SharePoint Diary",
+      "feed_url": "https://global-sharepoint.com/feed/",
+      "website_url": "https://global-sharepoint.com/",
+      "description": "A place where you will learn various new concepts of SharePoint and office 365.",
+      "followers": {
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5059978.jpg?t=1616145385"
+    },
+    {
+      "title": "Beyond Key Blog",
+      "feed_url": "https://www.beyondintranet.com/blog/feed/",
+      "website_url": "https://www.beyondintranet.com/blog/",
+      "description": "Founded in 2005, Beyond Key incubated Beyond Intranet as its strategic division, to ensure that their clients get the most out of Microsoft technologies, including SharePoint, Teams, Dynamics 365, and Power Platform (Power BI, Power Apps, and Power Automate).",
+      "followers": {
+        "facebook": 604,
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/5175922.jpg?t=1616145646"
+    },
+    {
+      "title": "Laura Rogers - SharePoint for Non-Developers",
+      "feed_url": "https://wonderlaura.com/posts/feed/",
+      "website_url": "https://wonderlaura.com/posts/",
+      "description": "Laura Rogers is SharePoint consultant, author and speaker, Microsoft MVP, complete SharePoint and Office 365 geek.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 21100
+      },
+      "image_url": "https://i1.feedspot.com/4624940.jpg?t=1616145711"
+    },
+    {
+      "title": "SPGeeks",
+      "feed_url": "https://spgeeks.devoworx.com/feed/",
+      "website_url": "https://spgeeks.devoworx.com/",
+      "description": "Problem Solving for SharePoint, Project Server, EPM, Office 365, Power Platform, Power Automate, Power Apps, Power BI, SQL server, and more.",
+      "followers": {
+        "twitter": 193
+      },
+      "image_url": "https://i1.feedspot.com/5118838.jpg?t=1625819483"
+    },
+    {
+      "title": "Petri | Sharepoint",
+      "feed_url": "https://petri.com/category/sharepoint/feed/",
+      "website_url": "https://petri.com/category/sharepoint/",
+      "description": "This section of our blog features news, How-Tos, and an overview of Sharepoint. The Petri IT Knowledgebase focuses on serving the needs of IT professionals by providing information to help them solve problems and advance their careers.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5295659.jpg?t=1624442990"
+    },
+    {
+      "title": "Jussi Palo - How To Code",
+      "feed_url": "http://feeds.feedburner.com/blogspot/howtocode",
+      "website_url": "https://blog.jussipalo.com/",
+      "description": "Jussi Palo is a Senior Consultant, Partner at Sulava Oy, Co-Founder at Apped. He Answers to Microsoft Technology related questions, such as SharePoint, Office 365.",
+      "followers": {
+        "twitter": 723
+      },
+      "image_url": "https://i1.feedspot.com/434516.jpg"
+    },
+    {
+      "title": "Andrew Connell",
+      "feed_url": "https://www.andrewconnell.com/blog/rss.xml",
+      "website_url": "https://www.andrewconnell.com/blog",
+      "description": "Andrew Connell is an entrepreneur & developer with an emphasis in Microsoft SharePoint & content management systems (CMS).",
+      "followers": {
+        "twitter": 15400,
+        "instagram": 972
+      },
+      "image_url": "https://i1.feedspot.com/3769614.jpg?t=1616145687"
+    },
+    {
+      "title": "Marc D Anderson's Blog",
+      "feed_url": "https://sympmarc.com/feed/",
+      "website_url": "https://sympmarc.com/",
+      "description": "Marc is the Co-Founder and President of Sympraxis Consulting LLC, located in the Boston suburb of Newton, MA, USA. Sympraxis focuses on enabling collaboration throughout the enterprise using the SharePoint application platform.",
+      "followers": {
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/365773.jpg?t=1616145675"
+    },
+    {
+      "title": "CardioLog Analytics",
+      "feed_url": "https://www.intlock.com/feed/",
+      "website_url": "https://www.intlock.com/blog/",
+      "description": "To help you discover the analystics insights you need to engage your SharePoint/Office 365 users. Read about various SharePoint analytics topics including: Adoption, Productivity, Consumption, Migration, Engagement, Governance, Search and more.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 831
+      },
+      "image_url": "https://i1.feedspot.com/4426531.jpg?t=1616145662"
+    },
+    {
+      "title": "Michelcarlo",
+      "feed_url": "https://michelcarlo.com/feed/",
+      "website_url": "https://michelcarlo.com/",
+      "description": "Microsoft 365, Power Platform and SharePoint related thoughts. Author of this blog Michel Mendes is a Microsoft 365 Consultant.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5281084.jpg?t=1621063509"
+    },
+    {
+      "title": "Total Solutions",
+      "feed_url": "https://www.totalsol.com/feed/",
+      "website_url": "https://www.totalsol.com/blog/",
+      "description": "Features tips and tricks on SharePoint and Microsoft. Key topics covered are Microsoft 365, digital adoption, SharePoint Migration, and SharePoint Online. Total Solutions is a global provider of SharePoint consulting and development.",
+      "followers": {
+        "facebook": 99,
+        "twitter": 368
+      },
+      "image_url": "https://i1.feedspot.com/5307800.jpg?t=1627880356"
+    },
+    {
+      "title": "SharePoint Addiction",
+      "feed_url": "https://sharepointaddiction.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sharepointaddiction.blogspot.com/",
+      "description": "Writings and ramblings on SharePoint for those who are addicted to it! Authored by Kevin O'Neill who is a knowledgeable information system professional with more than 25 years' experience that includes managing individuals, customer service, systems analysis, business analysis, web servers, web development, and much more.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5339715.jpg?t=1635926932"
+    },
+    {
+      "title": "Voitanos Blog",
+      "feed_url": "https://www.voitanos.io/blog.rss",
+      "website_url": "https://www.voitanos.io/blog",
+      "description": "Covers blog posts on SharePoint, SharePoint Framework, Development, Microsoft 365, Microsoft Teams, AzureAD, Microsoft Graph, and more. Voitanos is your host for on-demand technical training and educational resources for Microsoft's Office 365, Microsoft Azure and cloud related technologies. Whether you are looking to learn something new for a project, get up-to-speed on a new technology or level up your skill set, Voitanos is for you.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 751
+      },
+      "image_url": "https://i1.feedspot.com/4624912.jpg?t=1616145792"
+    },
+    {
+      "title": "C5 Insight Blogs",
+      "feed_url": "https://c5insight.com/feed/",
+      "website_url": "https://c5insight.com/blog/",
+      "description": "The latest information on business management, best practices, user tips, advanced administration and development for customer experience, digital transformation and the digital workplace, including Microsoft SharePoint, Dynamics CRM and Salesforce.com.",
+      "followers": {
+        "facebook": 392,
+        "twitter": 780
+      },
+      "image_url": "https://i1.feedspot.com/4625429.jpg?t=1616145651"
+    },
+    {
+      "title": "Chris O'Brien",
+      "feed_url": "https://feeds.feedburner.com/ChrisObrien",
+      "website_url": "https://www.sharepointnutsandbolts.com/",
+      "description": "This blog focuses on the architecture/development aspects of working with SharePoint.",
+      "followers": {
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/1155482.jpg?t=1616145671"
+    },
+    {
+      "title": "BA Insight Official Blog",
+      "feed_url": "https://www.bainsight.com/feed/",
+      "website_url": "https://www.bainsight.com/blog/",
+      "description": "BA Insight's Software Portfolio makes it possible to connect SharePoint Online and SharePoint on-premise to enterprise systems so that you can implement intranets with internet-like search experiences.",
+      "followers": {
+        "facebook": 104,
+        "twitter": 689
+      },
+      "image_url": "https://i1.feedspot.com/4626054.jpg?t=1616145707"
+    },
+    {
+      "title": "Search Explained",
+      "feed_url": "https://searchexplained.com/blog/feed/",
+      "website_url": "https://searchexplained.com/blog/",
+      "description": "Consulting, training and implementation services specialized in SharePoint and Office 365 Search and information architecture.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5076981.jpg?t=1616146705"
+    },
+    {
+      "title": "SharePoint Lessons | Tips, Tricks & How-To's",
+      "feed_url": "https://sharepointlessons.wordpress.com/feed/",
+      "website_url": "https://sharepointlessons.wordpress.com/",
+      "description": "Working almost exclusively as a SharePoint Developer/Consultant since 2005. I've been involved in a variety of projects for many clients in various industries. I've had the opportunity to work with all versions of SharePoint throughout my career. My work has taken me to projects in Virginia, DC, Maryland, New Jersey, New York, and my home, Philadelphia.",
+      "followers": {
+        "twitter": 701
+      },
+      "image_url": "https://i1.feedspot.com/4752699.jpg"
+    },
+    {
+      "title": "Collabmania",
+      "feed_url": "https://www.collabmania.com/feed/",
+      "website_url": "https://www.collabmania.com/",
+      "description": "From SharePoint on Premise to Office 365, I enjoy every aspects with these technologies. From development to training, consulting, architecture to pre-sales, I've been enjoying the path because we see the impact of collaborative solutions on daily life employees.",
+      "followers": {
+        "twitter": 999
+      },
+      "image_url": "https://i1.feedspot.com/4901138.jpg?t=1640757562"
+    },
+    {
+      "title": "Eric Shupps",
+      "feed_url": "https://www.ericshupps.com/feed/",
+      "website_url": "https://www.ericshupps.com/",
+      "description": "Eric Shupps is the founder and President of BinaryWave, a leading provider of enterprise software solutions for SharePoint. Eric has worked with SharePoint Products and Technologies since 2001 as a consultant, administrator, architect, developer and trainer. He is a director of the Dallas/Ft. Worth SharePoint Community group and participating member of user groups throughout the United Kingdom.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4626030.jpg"
+    },
+    {
+      "title": "Olaf Didszun - SharePoint and more\u2026",
+      "feed_url": "https://olafd.wordpress.com/feed/",
+      "website_url": "https://olafd.wordpress.com/",
+      "description": "Anything about SharePoint and what's all around. Olaf Didszun is SharePoint specialist, system engineer, coach, trainer, solution architect, software developer.",
+      "followers": {
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/4625414.jpg?t=1616146034"
+    },
+    {
+      "title": "I like SharePoint",
+      "feed_url": "https://www.ilikesharepoint.de/feed/",
+      "website_url": "https://www.ilikesharepoint.de/",
+      "description": "This blog is all about SharePoint Technology.",
+      "followers": {
+        "facebook": 83,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4457039.jpg?t=1616146011"
+    },
+    {
+      "title": "MORE SHAREPOINTS",
+      "feed_url": "http://feeds.feedburner.com/blogspot/uAiLH",
+      "website_url": "https://moresharepoints.blogspot.com/",
+      "description": "A Blog on Office 365, SharePoint 2013,2010,2007 Development and Administration.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5173201.jpg?t=1616146739"
+    },
+    {
+      "title": "Me & My SharePoint",
+      "feed_url": "https://chrisstahl.wordpress.com/feed/",
+      "website_url": "https://chrisstahl.wordpress.com/",
+      "description": "All about SharePoint branding & customizations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4654445.jpg?t=1616146453"
+    },
+    {
+      "title": "ScienceSoft | SharePoint Blogs",
+      "feed_url": "https://www.scnsoft.com/blog/category/sharepoint/atom",
+      "website_url": "https://www.scnsoft.com/blog/category/sharepoint",
+      "description": "The SharePoint blog highlights how your business can benefit from using SharePoint and Office 365 solutions. Check out our SharePoint articles for practical tips on how to improve employee collaboration, create effective workflows and more with Office 365. ScienceSoft is a software development company, we help businesses successfully solve complex digital challenges.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4959075.jpg?t=1616145366"
+    },
+    {
+      "title": "Plumsail",
+      "feed_url": "https://medium.com/feed/plumsail",
+      "website_url": "https://medium.com/plumsail",
+      "description": "Plumsail is an Independent Software Vendor concentrating on Tools, Web Parts and Add-Ins for Microsoft SharePoint range of products. We offer comprehensive tools for generating documents and web forms, processing requests, and enhancing Microsoft 365 and SharePoint platforms.",
+      "followers": {
+        "facebook": 279,
+        "twitter": 204
+      },
+      "image_url": "https://i1.feedspot.com/4625554.jpg?t=1625818673"
+    },
+    {
+      "title": "Robert Bogue [MVP] Blog",
+      "feed_url": "https://feeds.feedburner.com/NotFitForPrint",
+      "website_url": "https://thorprojects.com/",
+      "description": "Robert Bogue is Author, Speaker, Consultant, Crazy, MVP of SharePoint.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/1082913.jpg"
+    },
+    {
+      "title": "SharePoint PitStop",
+      "feed_url": "http://www.sharepointpitstop.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.sharepointpitstop.com/",
+      "description": "Writing(though i hardly write these days), Traveling, Food [ \ud83d\ude42 ], Music(just listening and attempting to sing), being with family.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4748034.jpg?t=1616145874"
+    },
+    {
+      "title": "TechTask: SharePoint, Azure IaaS & Office 365 Blog by Roger Haueter",
+      "feed_url": "https://www.techtask.com/feed/",
+      "website_url": "https://www.techtask.com/",
+      "description": "Practical insights, tips, and strategies on Modern Work, Microsoft 365, Teams, SharePoint, Copilot, Purview, and digital workplace transformation.",
+      "followers": {
+        "facebook": 937,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4624947.jpg?t=1616145965"
+    },
+    {
+      "title": "Office 365 Journey",
+      "feed_url": "https://office365journey.wordpress.com/feed/",
+      "website_url": "https://office365journey.wordpress.com/",
+      "description": "A technical and functional blog around Office 365 technologies, such as SharePoint Online, Dynamics 365, Azure and SharePoint On-Premise.",
+      "followers": {
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/4901137.jpg?t=1616146345"
+    },
+    {
+      "title": "Dock365 Blog",
+      "feed_url": "https://blog.mydock365.com/rss.xml",
+      "website_url": "https://blog.mydock365.com/",
+      "description": "Our blog is a great resource for SharePoint Tips, productivity tips, collaboration tools and insights on SharePoint Templates for Office 365. Dock 365 is committed to providing you with tools and information you can use to take your business to the next level. Follow blog for insights into the latest business solutions, trends, and practices.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 592,
+        "instagram": 557
+      },
+      "image_url": "https://i1.feedspot.com/5295662.jpg?t=1624444999"
+    },
+    {
+      "title": "Francois",
+      "feed_url": "https://digitalfrancois.com/feed/",
+      "website_url": "https://digitalfrancois.com/",
+      "description": "Francois is a SharePoint, Office 365 and all around Digital skills instructor who does not like to re-invent the wheel. He posts regular tips on being more productive and use tech the right way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5286225.jpg?t=1622292967"
+    },
+    {
+      "title": "Lets Share with SharePoint",
+      "feed_url": "https://howtodowithsharepoint.wordpress.com/feed/",
+      "website_url": "https://howtodowithsharepoint.wordpress.com/",
+      "description": "This blog is about SharePoint by Prashant Bansal .",
+      "followers": {
+        "twitter": 62
+      },
+      "image_url": "https://i1.feedspot.com/4626095.jpg"
+    },
+    {
+      "title": "The blog of Wictor Wil\u00e9n",
+      "feed_url": "https://feeds.feedburner.com/WictorWilen",
+      "website_url": "https://www.wictorwilen.se/",
+      "description": "Wictor Wil\u00e9n is a Group Manager and SharePoint Architect working at Avanade. Wictor has achieved the Microsoft Certified Architect (MCA) - SharePoint 2010, Microsoft Certified Solutions Master (MCSM) - SharePoint and Microsoft Certified Master (MCM) - SharePoint 2010 certifications. He has also been awarded Microsoft Most Valuable Professional (MVP) since 2010.",
+      "followers": {
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/277204.jpg?t=1616146362"
+    },
+    {
+      "title": "Nate Chamberlain",
+      "feed_url": "https://natechamberlain.com/feed/",
+      "website_url": "https://natechamberlain.com/",
+      "description": "Nate Chamberlain is an award-winning, certified technical content creator, product marketer, and trainer who specializes in the administration, governance, and adoption of Microsoft 365 (M365) apps and services. Background as an IT professional in business analysis and systems administration roles across several industries.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/6903388/page/5201796/logo_1743944677.png"
+    },
+    {
+      "title": "Todd Baginski's Blog",
+      "feed_url": "https://toddbaginski.com/blog/feed/",
+      "website_url": "https://toddbaginski.com/blog/",
+      "description": "Todd Baginski is a eleven-time Microsoft SharePoint Server MVP, O365 and SharePoint Top 25 Influencer, and Sitecore Certified Professional Developer whose blog focuses on Microsoft SharePoint, Office 365, Azure, Mobile, Office, and cloud technologies.",
+      "followers": {
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/277193.jpg"
+    },
+    {
+      "title": "Collabshow.com",
+      "feed_url": "https://collabshow.com/feed/",
+      "website_url": "https://collabshow.com/",
+      "description": "Subscribe us to get articles on Sharepoint from Collabshow.com.",
+      "followers": {
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5000637.jpg?t=1616145817"
+    },
+    {
+      "title": "Leon Armston's Blog",
+      "feed_url": "https://www.leonarmston.com/feed/",
+      "website_url": "https://www.leonarmston.com/",
+      "description": "Key topics covered are Power Automate, SharePoint, Power Platform, Microsoft/Office 365, and Azure. Leon is an experienced SharePoint and Microsoft 365 Consultant. Predominately working with SharePoint but also adept with most apps in the Microsoft 365 suite and Azure.",
+      "followers": {
+        "twitter": 878
+      },
+      "image_url": "https://i1.feedspot.com/5194264.jpg?t=1599477780"
+    },
+    {
+      "title": "SharePoint JavaScripts",
+      "feed_url": "https://spjsblog.com/feed/",
+      "website_url": "https://spjsblog.com/",
+      "description": "Alexander Bautz's blog is all about JavaScript tricks for SharePoint.",
+      "followers": {
+        "twitter": 357
+      },
+      "image_url": "https://i1.feedspot.com/277162.jpg?t=1616145810"
+    },
+    {
+      "title": "The SharePoint Interface",
+      "feed_url": "https://sharepointinterface.com/feed/",
+      "website_url": "https://sharepointinterface.com/",
+      "description": "Multidisciplinary discourse on the topics of SharePoint architecture, development, and administration.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/277160.jpg?t=1755866779"
+    },
+    {
+      "title": "Records about the world \u00bb SharePoint Online",
+      "feed_url": "https://andrewwarland.wordpress.com/category/products-and-applications/sharepoint-online/feed/",
+      "website_url": "https://andrewwarland.wordpress.com/category/products-and-applications/sharepoint-online/",
+      "description": "Posts about SharePoint Online written by Andrew Warland.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662564.jpg"
+    },
+    {
+      "title": "Vignesh's SharePoint Thoughts \u00bb SharePoint",
+      "feed_url": "https://vigneshsharepointthoughts.com/category/sharepoint/feed/",
+      "website_url": "https://vigneshsharepointthoughts.com/category/sharepoint/",
+      "description": "Posts about SharePoint written by Vignesh Ganesan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662565.jpg"
+    },
+    {
+      "title": "Vlad's SharePoint blog \u00bb SharePoint",
+      "feed_url": "https://vladilen.com/category/software/sharepoint/feed/",
+      "website_url": "https://vladilen.com/category/software/sharepoint/",
+      "description": "All latest articles about SharePoint from Vlad's SharePoint blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662566.jpg"
+    },
+    {
+      "title": "Brainvire.com \u00bb SharePoint",
+      "feed_url": "https://www.brainvire.com/blog/category/sharepoint/feed/",
+      "website_url": "https://www.brainvire.com/blog/category/sharepoint/",
+      "description": "All latest articles about SharePoint from Brainvire.com.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/8662567.jpg"
+    },
+    {
+      "title": "Sajid Khan's Blog \u00bb Sharepoint",
+      "feed_url": "https://sajidkhanblogs.com/category/sharepoint/feed/",
+      "website_url": "https://sajidkhanblogs.com/category/sharepoint/",
+      "description": "All latest articles about Sharepoint from Sajid Khan's Blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662568.jpg"
+    },
+    {
+      "title": "Doy's Microsoft 365 and Azure Dev Blog \u00bb SharePoint Online",
+      "feed_url": "https://simondoy.com/category/sharepoint-online/feed/",
+      "website_url": "https://simondoy.com/category/sharepoint-online/",
+      "description": "Posts about SharePoint Online written by Simon Doy",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8662569.jpg"
+    },
+    {
+      "title": "SharePoint \u00bb Calance Content",
+      "feed_url": "https://www.calanceus.com/blog/tag/sharepoint/rss.xml",
+      "website_url": "https://www.calanceus.com/blog/tag/sharepoint/",
+      "description": "All latest articles about Calance Content from SharePoint.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/8662570.jpg"
+    },
+    {
+      "title": "Office 365 for IT Pros \u00bb SharePoint Online",
+      "feed_url": "https://office365itpros.com/category/sharepoint-online/feed/",
+      "website_url": "https://office365itpros.com/category/sharepoint-online/",
+      "description": "All latest articles about SharePoint Online from Office 365 for IT Pros.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/8662571.jpg"
+    },
+    {
+      "title": "AgilePoint NX Unleashed \u00bb SharePoint",
+      "feed_url": "https://blog.agilepoint.com/category/sharepoint/feed/",
+      "website_url": "https://blog.agilepoint.com/category/sharepoint/",
+      "description": "All latest articles about SharePoint from AgilePoint NX Unleashed.",
+      "followers": {
+        "facebook": 823
+      },
+      "image_url": "https://i1.feedspot.com/8662572.jpg"
+    },
+    {
+      "title": "Office 365 Reports \u00bb SharePoint Online",
+      "feed_url": "https://o365reports.com/category/sharepoint-online/feed/",
+      "website_url": "https://o365reports.com/category/sharepoint-online/",
+      "description": "Explore the latest news, security tips, and PowerShell scripts for SharePoint Online administration and monitoring.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/8662573.jpg"
+    },
+    {
+      "title": "Penthara Technologies \u00bb SharePoint",
+      "feed_url": "https://www.penthara.com/category/sharepoint/feed/",
+      "website_url": "https://www.penthara.com/category/sharepoint/",
+      "description": "All latest articles about SharePoint from Penthara Technologies.",
+      "followers": {
+        "facebook": 334,
+        "twitter": 545
+      },
+      "image_url": "https://i1.feedspot.com/8662574.jpg"
+    },
+    {
+      "title": "Cloudbik \u00bb SharePoint",
+      "feed_url": "https://www.cloudbik.com/resources/search/sharepoint/feed/rss2/",
+      "website_url": "https://www.cloudbik.com/resources/?s=sharepoint/",
+      "description": "All latest articles about SharePoint from Cloudbik.",
+      "followers": {
+        "facebook": 493,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/8662575.jpg"
+    },
+    {
+      "title": "Microtek Learning \u00bb SharePoint Archives",
+      "feed_url": "https://www.microteklearning.com/blog/category/microsoft/sharepoint/feed/",
+      "website_url": "https://www.microteklearning.com/blog/category/microsoft/sharepoint/",
+      "description": "All latest articles about SharePoint from Microtek Learning.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/8662576.jpg"
+    },
+    {
+      "title": "Codevision Technologies \u00bb SharePoint",
+      "feed_url": "https://thecodevision.com/blog/category/sharepoint/feed/",
+      "website_url": "https://thecodevision.com/blog/category/sharepoint/",
+      "description": "Discover expert insights, best practices, and the latest updates on SharePoint solutions. Explore blogs on SharePoint integrations, apps, and features to enhance collaboration and productivity for your business.",
+      "followers": {
+        "facebook": 789,
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/8662577.jpg"
+    },
+    {
+      "title": "Super Simple 365 \u00bb SharePoint",
+      "feed_url": "https://supersimple365.com/category/sharepoint/feed/",
+      "website_url": "https://supersimple365.com/category/sharepoint/",
+      "description": "All latest articles about SharePoint from Super Simple 365.",
+      "followers": {
+        "facebook": 48,
+        "twitter": 881
+      },
+      "image_url": "https://i1.feedspot.com/8662578.jpg"
+    },
+    {
+      "title": "NGenious Solutions \u00bb Microsoft SharePoint",
+      "feed_url": "https://ngenioussolutions.com/blog/category/microsoft-sharepoint-blogs/feed/",
+      "website_url": "https://ngenioussolutions.com/blog/category/microsoft-sharepoint-blogs/",
+      "description": "Explore our collections of Microsoft SharePoint blogs for expert insights, tips, and best practices. Stay updated on the latest news with NGenious Solutions.",
+      "followers": {
+        "facebook": 251,
+        "twitter": 403
+      },
+      "image_url": "https://i1.feedspot.com/8662579.jpg"
+    },
+    {
+      "title": "Gravity Union \u00bb SharePoint",
+      "feed_url": "https://www.gravityunion.com/blog/tag/SharePoint?format=rss",
+      "website_url": "https://www.gravityunion.com/blog/tag/SharePoint/",
+      "description": "All latest articles about SharePoint from Gravity Union.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662580.jpg"
+    },
+    {
+      "title": "Influential Software \u00bb SharePoint",
+      "feed_url": "https://www.influentialsoftware.com/category/sharepoint/feed/",
+      "website_url": "https://www.influentialsoftware.com/category/sharepoint/",
+      "description": "All latest articles about SharePoint from Influential Software.",
+      "followers": {
+        "facebook": 497,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/8662581.jpg"
+    },
+    {
+      "title": "Prakash Software Solutions \u00bb SharePoint",
+      "feed_url": "https://prakashinfotech.com/category/sharepoint/feed",
+      "website_url": "https://prakashinfotech.com/category/sharepoint/",
+      "description": "Explore our blogs on SharePoint. From collaboration to customization, discover insights shaping effective business solutions.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 654
+      },
+      "image_url": "https://i1.feedspot.com/8662582.jpg"
+    },
+    {
+      "title": "SharePoint Migrator Blog",
+      "feed_url": "https://www.sharepointmigrator.com/blog/feed",
+      "website_url": "https://www.sharepointmigrator.com/blog/",
+      "description": "All latest articles from SharePoint Migrator blog.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/8662583.jpg"
+    },
+    {
+      "title": "Practical 365 \u00bb SharePoint Online",
+      "feed_url": "https://practical365.com/sharepoint-online/feed/",
+      "website_url": "https://practical365.com/sharepoint-online/",
+      "description": "Read blog posts and articles about SharePoint Online on Practical 365.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 21800
+      },
+      "image_url": "https://i1.feedspot.com/8662584.jpg"
+    },
+    {
+      "title": "Aquaforest \u00bb SharePoint",
+      "feed_url": "https://www.aquaforest.com/blog/category/sharepoint/feed",
+      "website_url": "https://www.aquaforest.com/blog/category/sharepoint/",
+      "description": "All latest articles about SharePoint from Aquaforest.",
+      "followers": {
+        "facebook": 84,
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/8662585.jpg"
+    },
+    {
+      "title": "Crow Canyon Software \u00bb SharePoint",
+      "feed_url": "https://www.crowcanyon.com/blog/category/sharepoint/feed/",
+      "website_url": "https://www.crowcanyon.com/blog/category/sharepoint/",
+      "description": "Read Crow Canyon Software's range of subject matter expert posts about SharePoint and the array of business applications using SharePoint as a platform.",
+      "followers": {
+        "facebook": 146,
+        "twitter": 652
+      },
+      "image_url": "https://i1.feedspot.com/8662586.jpg"
+    },
+    {
+      "title": "VisualSP Blog",
+      "feed_url": "https://www.visualsp.com/blog/",
+      "website_url": "https://www.visualsp.com/blog/",
+      "description": "SharePoint and Office 365 related insights from Just-in-Time Learning solutions provider VisualSP.",
+      "followers": {
+        "facebook": 20300,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4625655.jpg?t=1616146019"
+    },
+    {
+      "title": "SharePains \u00bb Microsoft SharePoint Online",
+      "feed_url": "https://sharepains.com/feed",
+      "website_url": "https://sharepains.com/sharepoint-online",
+      "description": "SharePains is the blog with posts about Microsoft Technology such as Microsoft 365, Power Platform, SharePoint, OneDrive, PowerShell, Teams, Azure and Dynamics.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4700752.jpg?t=1616146001"
+    },
+    {
+      "title": "Aerie Blog",
+      "feed_url": "https://www.goaerie.com/blog/rss.xml",
+      "website_url": "https://www.goaerie.com/blog",
+      "description": "Check out Aerie's blog for the latest news and information on SharePoint & Office 365 expertise, and proven methods for business improvement.",
+      "followers": {
+        "facebook": 76,
+        "twitter": 367
+      },
+      "image_url": "https://i1.feedspot.com/4735204.jpg?t=1616145982"
+    },
+    {
+      "title": "Microsoft 365 Developer Blog \u00bb SharePoint Framework",
+      "feed_url": "https://devblogs.microsoft.com/microsoft365dev/category/sharepoint-framework/feed/",
+      "website_url": "https://devblogs.microsoft.com/microsoft365dev/category/sharepoint-framework/",
+      "description": "Get news, information, releases and latest updates related to SharePoint development from Microsoft Developer. Connect to the latest conferences, trainings, and blog posts for Microsoft 365, Office client, and SharePoint developers.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 214700
+      },
+      "image_url": "https://i1.feedspot.com/5280263.jpg?t=1620890970"
+    },
+    {
+      "title": "N8D",
+      "feed_url": "https://n8d.at/feed/",
+      "website_url": "https://n8d.at/",
+      "description": "Stefan Bauer work as a design-minded developer & information architect and Office Development MVP based in Vienna / Austria.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4625473.jpg"
+    },
+    {
+      "title": "Nik Charlebois Automating SharePoint",
+      "feed_url": "https://nikcharlebois.com/feed/",
+      "website_url": "https://nikcharlebois.com/",
+      "description": "Nik Charlebois is a Microsoft Premier Field Engineer SharePoint & Office 365.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4625645.jpg?t=1616145991"
+    },
+    {
+      "title": "Vlad Talks Tech",
+      "feed_url": "https://vladtalkstech.com/feed",
+      "website_url": "https://vladtalkstech.com/",
+      "description": "This is the tech blog of Microsoft MVP Vlad Catrinescu, covering Microsoft 365 products such as SharePoint, Teams, Azure as well as PowerShell and Microsoft Certifications.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4571423.jpg?t=1616145354"
+    },
+    {
+      "title": "#SharePointProblems",
+      "feed_url": "https://www.koskila.net/wp-admin/install.php",
+      "website_url": "https://www.koskila.net/",
+      "description": "The blog of Finnish Software Developer Antti K. Koskela. Covers his musings about Azure, SharePoint, other tech topics and occasional speaking gig. Check out the tech & programming tips, often about ASP.NET MVC, Entity Framework, Microsoft SharePoint Server & Online, Azure, Active Directory, Office 365 or other parts of the ever-growing and more and more intimidating stack that Microsoft offers us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5218734.jpg?t=1606817778"
+    },
+    {
+      "title": "TopSharePoint Blog",
+      "feed_url": "https://feeds.feedburner.com/TopSharepoint?x=1",
+      "website_url": "https://topsharepoint.com/category/blog",
+      "description": "TopSharePoint.com is a showcase gallery that features top quality, creative and unique SharePoint-based websites from around the world.",
+      "followers": {
+        "facebook": 718,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/1745679.jpg?t=1616145350"
+    },
+    {
+      "title": "Julie Turner - Veni, Vidi, Vici",
+      "feed_url": "https://julieturner.net/feed/",
+      "website_url": "https://julieturner.net/",
+      "description": "This blog is all about Musings and Solutions for SharePoint, O365, and Azure.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4626036.jpg?t=1616146005"
+    },
+    {
+      "title": "Rick's Blog",
+      "feed_url": "https://www.rickvanrousselt.com/feed/",
+      "website_url": "https://www.rickvanrousselt.com/",
+      "description": "Rick Van Rousselt is a SharePoint / Office 365 consultant living in Belgium. He is working with SharePoint since 2007 and recently made the transition to Office 365.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4625567.jpg"
+    },
+    {
+      "title": "Binary Republik",
+      "feed_url": "https://blog.binaryrepublik.com/",
+      "website_url": "https://blog.binaryrepublik.com/",
+      "description": "Binary Republik is a SharePoint consulting company helping Clients Globally for their SharePoint and Office 365 requirements.",
+      "followers": {
+        "facebook": 417,
+        "twitter": 179,
+        "instagram": 325
+      },
+      "image_url": "https://i1.feedspot.com/5058095.jpg?t=1616145783"
+    },
+    {
+      "title": "Devoworx | SharePoint Blog",
+      "feed_url": "https://blog.devoworx.net/feed/",
+      "website_url": "https://blog.devoworx.net/",
+      "description": "The blog basically concentrates on SharePoint, Office 365 and Project Server.",
+      "followers": {
+        "twitter": 193
+      },
+      "image_url": "https://i1.feedspot.com/5000631.jpg?t=1616145996"
+    },
+    {
+      "title": "SharePoint Tricks",
+      "feed_url": "https://sharepoint-tricks.com/feed/",
+      "website_url": "https://sharepoint-tricks.com/",
+      "description": "My name is David Ramalho and I'm currently part of BindTuning family where I'm part of the SharePoint development team. The reason for creating this blog is to share tricks that can help on a daily basis for managing your SharePoint in different areas.",
+      "followers": {
+        "twitter": 703
+      },
+      "image_url": "https://i1.feedspot.com/5031260.jpg?t=1616145764"
+    },
+    {
+      "title": "VirtoSoftware SharePoint Blog",
+      "feed_url": "https://blog.virtosoftware.com/feed/",
+      "website_url": "https://blog.virtosoftware.com/",
+      "description": "Covers blog posts on SharePoint Online, SharePoint Web Parts, SharePoint Calendar, SharePoint Use Cases, SharePoint How To's, Teams, and more. VirtoSoftware designs and builds innovative web parts for Microsoft SharePoint 2007, 2010 and 2013 and apps for Office 365.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 923
+      },
+      "image_url": "https://i1.feedspot.com/4625558.jpg?t=1619076326"
+    },
+    {
+      "title": "Jerry Yasir SharePoint Blog",
+      "feed_url": "https://jerryyasir.com/feed/",
+      "website_url": "https://jerryyasir.wordpress.com/",
+      "description": "Jerry Yasir is a Microsoft MVP for Office Servers ad Services and Office 365 Architect at Hewlett Packard Enterprise. Love SharePoint, Office 365 Azure & PS.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4625546.jpg"
+    },
+    {
+      "title": "Peter Ward",
+      "feed_url": "https://www.wardpeter.com/feed/",
+      "website_url": "https://www.wardpeter.com/",
+      "description": "I'm the CTO of SoHo Dragon, one of Microsoft's fastest-growing partners. Within the company, I'm very much a hands-on technology manager of the Microsoft web stack SharePoint, Azure, O365 and best known as the person to lead a team/project to get stuff done, on time and on budget, with an obsession of UX simplicity.",
+      "followers": {
+        "twitter": 374
+      },
+      "image_url": "https://i1.feedspot.com/5057861.jpg?t=1616146040"
+    },
+    {
+      "title": "SPJeff - Jeff Jones",
+      "feed_url": "https://feeds.feedburner.com/spjeff",
+      "website_url": "https://www.spjeff.com/",
+      "description": "This blog is all about SharePoint, Office 365, Azure, and Front end JS geek.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4626084.jpg?t=1616145974"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "category": "Los Angeles FC",
+  "source_url": "https://rss.feedspot.com/los_angeles_fc_rss_feeds",
+  "feeds": [
+    {
+      "title": "SportSpyder.com \u00bb Los Angeles FC",
+      "feed_url": "https://sportspyder.com/mls/lafc/news.xml",
+      "website_url": "https://sportspyder.com/mls/lafc/news",
+      "description": "The latest Los Angeles FC MLS news articles from around the web.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/5186588.jpg?t=1598507242"
+    },
+    {
+      "title": "Yahoo Sports \u00bb Los Angeles FC",
+      "feed_url": "https://sports.yahoo.com/soccer/teams/los-angeles-football-club/rss/",
+      "website_url": "https://sports.yahoo.com/soccer/teams/los-angeles-football-club/",
+      "description": "The latest Los Angeles Football Club news from Yahoo Sports. Find Los Angeles Football Club fixtures, results, top scorers, transfer rumors, and player profiles, with exclusive photos, and video highlights.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5186751.jpg?t=1598523437"
+    },
+    {
+      "title": "Yardbarker \u00bb Los Angeles FC",
+      "feed_url": "https://www.yardbarker.com/rss/team/17420",
+      "website_url": "https://www.yardbarker.com/soccer/teams/los_angeles_fc/17420",
+      "description": "Get the latest Los Angeles FC news, rumors, scores and highlights from Yardbarker, your source for the best Los Angeles FC content on the web.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5186739.jpg?t=1598522688"
+    },
+    {
+      "title": "Angels on Parade",
+      "feed_url": "https://angelsonparade.com/rss/index.xml",
+      "website_url": "https://angelsonparade.com/",
+      "description": "Your best source for quality Los Angeles Football Club news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 539,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5186521.jpg?t=1598449274"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "category": "Auburn Tigers",
+  "source_url": "https://rss.feedspot.com/auburn_tigers_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Athletic \u00bb Auburn Tigers",
+      "feed_url": "https://www.nytimes.com/athletic/rss/college-football/auburn-tigers-college-football/",
+      "website_url": "https://www.nytimes.com/athletic/college-football/team/auburn-tigers-college-football/",
+      "description": "Breaking Auburn Tigers news and in-depth analysis from the best newsroom in sports. Follow your favorite clubs. Get the latest injury updates, player news and more from around the league.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5439782.jpg?t=1662633405"
+    },
+    {
+      "title": "Auburn Wire",
+      "feed_url": "https://auburnwire.usatoday.com/feed/",
+      "website_url": "https://auburnwire.usatoday.com/",
+      "description": "Get the latest Auburn Tigers news, schedule, photos and rumors from Auburn Wire, the definitive source for Tigers fans. All the up-to-date news and analysis you need for Auburn athletics. Brought to you by USA Today.",
+      "followers": {
+        "facebook": 28900,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5439771.jpg?t=1662633906"
+    },
+    {
+      "title": "Busting Brackets \u00bb Auburn Tigers",
+      "feed_url": "https://bustingbrackets.com/sec/auburn-tigers/feed/",
+      "website_url": "https://bustingbrackets.com/sec/auburn-tigers/",
+      "description": "Busting Brackets is dedicated to providing top-notch NCAA news, views, and original content covering Auburn Tigers news, blogs, opinion, and more.",
+      "followers": {
+        "facebook": 654,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5439772.jpg?t=1662634246"
+    },
+    {
+      "title": "The Spun \u00bb Auburn Tigers",
+      "feed_url": "https://thespun.com/college-basketball/auburn-tigers/",
+      "website_url": "https://thespun.com/college-basketball/auburn-tigers/",
+      "description": "Auburn Tigers football, basketball news, recruiting, scores, predictions, previews, analysis and more. The best Tigers coverage on the web.The Spun covers the most interesting sports stories for the NFL, the NBA, college football, college basketball, Major League Baseball and more.",
+      "followers": {
+        "facebook": 871400,
+        "twitter": 15700
+      },
+      "image_url": "https://i1.feedspot.com/5439773.jpg?t=1662633809"
+    },
+    {
+      "title": "Sports Illustrated \u00bb Auburn Tigers Football",
+      "feed_url": "https://www.si.com/college/auburn/.rss/full/football",
+      "website_url": "https://www.si.com/college/auburn/football",
+      "description": "Auburn Daily is a Sports Illustrated channel bringing you the latest news, highlights, analysis surrounding the Auburn Tigers.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 1900000,
+        "instagram": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5439774.jpg?t=1662633587"
+    },
+    {
+      "title": "College and Magnolia",
+      "feed_url": "https://www.collegeandmagnolia.com/rss/index.xml",
+      "website_url": "https://www.collegeandmagnolia.com/",
+      "description": "Get real-time coverage of the latest sports news, including breaking news, injury updates, and trade rumors. College and Magnolia is your best source for quality Auburn Tigers news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/5439775.jpg?t=1662634473"
+    }
+  ]
+}

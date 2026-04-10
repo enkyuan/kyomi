@@ -1,0 +1,45 @@
+{
+  "category": "Environmental Economics",
+  "source_url": "https://rss.feedspot.com/environmental_economics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mereconomics",
+      "feed_url": "https://mereconomics.com/feed/",
+      "website_url": "https://mereconomics.com/",
+      "description": "The objective of the Mereconomics Blog is to provide 'Mere' - the Danish word for More - on Environmental and Resource Economics. We seek to engage our colleagues and students both within the research group and around the world and to highlight the insights environmental and resource economics bring to current events and our own research.",
+      "followers": {
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/5379762.jpg?t=1646887746"
+    },
+    {
+      "title": "Environmental and Urban Economics",
+      "feed_url": "http://greeneconomics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://greeneconomics.blogspot.com/",
+      "description": "Matthew E. Kahn discusses his thoughts on environmental and urban issues from an economics perspective. Matthew provost Professor of Economics at the University of Southern California. Senior Fellow and Director of the Healthy Markets Initiative at USC Schaeffer Center.",
+      "followers": {
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/195780.jpg?t=1646890541"
+    },
+    {
+      "title": "United States Society for Ecological Economics",
+      "feed_url": "https://ussee.org/feed/",
+      "website_url": "https://ussee.org/",
+      "description": "The United States Society for Ecological Economics (USSEE) provides a venue for intellectual exchange and collaboration on issues related to the theory, policy, and implementation of sustainable development. Society consists of an interdisciplinary group of academics and practitioners who seek to develop solutions to complex and interrelated economic, social, and environmental problems.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5379764.jpg?t=1646888854"
+    },
+    {
+      "title": "An Economic View of the Environment",
+      "feed_url": "https://www.robertstavinsblog.org/feed/",
+      "website_url": "https://www.env-econ.net/",
+      "description": "Robert N. Stavins is the A.J. Meyer Professor of Energy & Economic Development. In this blog, he writes about his perceptive on climate and other policies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5379763.jpg?t=1646889330"
+    }
+  ]
+}

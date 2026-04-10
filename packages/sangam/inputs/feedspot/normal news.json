@@ -1,0 +1,30 @@
+{
+  "category": "Normal News",
+  "source_url": "https://rss.feedspot.com/normal_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Pantagraph",
+      "feed_url": "https://pantagraph.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://pantagraph.com/",
+      "description": "The Pantagraph is your No. 1 local news source, serving the residents in the Bloomington-Normal area since 1837.",
+      "followers": {
+        "facebook": 54700,
+        "twitter": 14000,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5148302.jpg?t=1625564321"
+    },
+    {
+      "title": "Town of Normal",
+      "feed_url": "https://www.normalil.gov/CivicAlerts.aspx",
+      "website_url": "https://www.normalil.gov/CivicAlerts.aspx",
+      "description": "Get the latest news, updates, information and important announcements from the official website of Normal, IL.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 5900,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5148294.jpg?t=1625564316"
+    }
+  ]
+}

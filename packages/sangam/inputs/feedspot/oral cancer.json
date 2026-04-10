@@ -1,0 +1,39 @@
+{
+  "category": "Oral Cancer",
+  "source_url": "https://rss.feedspot.com/oral_cancer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Oral Cancer News",
+      "feed_url": "https://oralcancernews.org/wp/feed/",
+      "website_url": "https://oralcancernews.org/wp/",
+      "description": "The Oral Cancer Foundation is a national public service, non-profit entity designed to reduce suffering and save lives through prevention, education, research, advocacy, and support activities.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 5000,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5365173.jpg?t=1643089285"
+    },
+    {
+      "title": "Nature \u00bb Oral cancer",
+      "feed_url": "https://www.nature.com/subjects/oral-cancer.rss",
+      "website_url": "https://www.nature.com/subjects/oral-cancer",
+      "description": "Latest news and research from Nature.com on the topic of Oral cancer. Nature Portfolio is here to serve the research community by publishing its most significant discoveries - findings that advance knowledge and address some of the greatest challenges that we face as a society today. Our journals publish not only primary research but also reviews, critical comment, news and analysis.",
+      "followers": {
+        "facebook": 792300,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5365175.jpg?t=1643693410"
+    },
+    {
+      "title": "Rajiv Gandhi Cancer Institute & Research Centre \u00bb Mouth Cancer",
+      "feed_url": "https://www.rgcirc.org/category/mouth-cancer/feed/",
+      "website_url": "https://www.rgcirc.org/category/mouth-cancer/",
+      "description": "Get information about mouth cancer symptoms, preventions, and more! At Rajiv Gandhi Cancer Institute and Research Centre, we thrive to prevent and treat cancer at affordable prices, along with international standards of screening and treatment.",
+      "followers": {
+        "facebook": 15400
+      },
+      "image_url": "https://i1.feedspot.com/5365177.jpg?t=1643090669"
+    }
+  ]
+}

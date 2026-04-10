@@ -1,0 +1,38 @@
+{
+  "category": "Egypt Food",
+  "source_url": "https://rss.feedspot.com/egypt_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mido Eats",
+      "feed_url": "https://midoeats.com/feed/",
+      "website_url": "https://midoeats.com/",
+      "description": "An Egyptian food blogger with a wild attitude. Find recipes, reviews, and kitchen experiments.",
+      "followers": {
+        "facebook": 3100,
+        "instagram": 15700
+      },
+      "image_url": "https://i1.feedspot.com/5333817.jpg?t=1634714584"
+    },
+    {
+      "title": "The Egyptian Kitchen Blog",
+      "feed_url": "https://feeds.feedburner.com/TheEgyptianKitchen",
+      "website_url": "https://abissadacooks.blogspot.com/",
+      "description": "I am Annie. I've always loved to cook and I've always loved learning about my Egyptian heritage. As the first generation born outside of Egypt, my connection to the country has been primarily through food, not language. I created this blog to introduce people to my favourite foods that are found in Egypt, and explain the historical or cultural background of each dish or ingredient.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4755185.jpg?t=1607083886"
+    },
+    {
+      "title": "Travel Food Atlas \u00bb Egypt",
+      "feed_url": "https://travelfoodatlas.com/middle-east/egypt/feed",
+      "website_url": "https://travelfoodatlas.com/middle-east/egypt",
+      "description": "Egyptian recipes, foods, cuisines, dishes, travel inspiration & blogs. Discover a whole host of food delicacies from Egypt. Travel Food Atlas is a travel & food blog dedicated to exploring cultures, local foods, delicacies, recipes and travel experiences all over the world.",
+      "followers": {
+        "facebook": 63,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5333834.jpg?t=1634714860"
+    }
+  ]
+}

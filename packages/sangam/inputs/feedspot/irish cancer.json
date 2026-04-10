@@ -1,0 +1,69 @@
+{
+  "category": "Irish Cancer",
+  "source_url": "https://rss.feedspot.com/irish_cancer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Beaumont RCSI Cancer Centre Blog",
+      "feed_url": "https://beaumontrcsicancercentre.ie/feed/",
+      "website_url": "https://beaumontrcsicancercentre.ie/category/blog/",
+      "description": "Stay informed about the latest research news and updates from Beaumont RCSI Cancer Centre. Discover new clinical breakthroughs, medical advancements, and more. The Beaumont RCSI Cancer Centre is a premier Cancer research institute and is committed to providing the best possible healthcare to patients.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5643681.jpg?t=1691155212"
+    },
+    {
+      "title": "Childhood Cancer Ireland",
+      "feed_url": "https://childhoodcancer.ie/feed/",
+      "website_url": "https://childhoodcancer.ie/get-involved/event-directory/",
+      "description": "Childhood Cancer Ireland is a charity founded by and led by parents of children with cancer and provides practical and emotional support to families in need. Here you will find all information about their upcoming events, collaborations, practical tips and more.",
+      "followers": {
+        "twitter": 2900,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5643679.jpg?t=1691155201"
+    },
+    {
+      "title": "Cancer Trials Ireland News",
+      "feed_url": "https://www.cancertrials.ie/feed/",
+      "website_url": "https://www.cancertrials.ie/category/news/",
+      "description": "Access all recent News press releases from Cancer Trials Ireland. Stay abreast of the latest Cancer-related developments, medical research, and other updates. Cancer Trials Ireland is one of the leading cancer research trials organizations in Ireland that enable, support and oversee the running of over 100 trials involving thousands of patients.",
+      "followers": {
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5643677.jpg?t=1691155194"
+    },
+    {
+      "title": "Breakthrough Cancer Research Blog",
+      "feed_url": "https://breakthroughcancerresearch.ie/feed/",
+      "website_url": "https://breakthroughcancerresearch.ie/blogs/",
+      "description": "Breakthrough Cancer Research funds the development of new treatment options for poor prognosis & incurable cancers. Their blog section explores subjects like cancer prevention, cancer myths, explore scientific concepts, and new avenues they are pursuing in research but all with a focus on cancer.",
+      "followers": {
+        "facebook": 22600,
+        "twitter": 4800,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5531315.jpg?t=1680259621"
+    },
+    {
+      "title": "National Cancer Registry Ireland News",
+      "feed_url": "https://www.ncri.ie/news/rss.xml",
+      "website_url": "https://www.ncri.ie/news",
+      "description": "Stay updated with cutting-edge research and breakthroughs in oncology. Explore articles that highlight innovative therapies, clinical trials, and emerging technologies that are shaping the future of cancer care. National Cancer Registry Ireland is a national body tasked with collecting and classifying information on all cancer cases occuring in Ireland.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5643680.jpg?t=1691155203"
+    },
+    {
+      "title": "Irish Cancer Society News",
+      "feed_url": "https://www.cancer.ie/about-us/news.xml",
+      "website_url": "https://www.cancer.ie/about-us/news",
+      "description": "Draw strength from personal stories of resilience and triumph. Discover how individuals have transformed adversity into opportunities for growth, hope, and advocacy. Irish Cancer Society is a community of patients, survivors, volunteers, supporters, health and social care professionals, and researchers offering advocacy, support, and research for cancer.",
+      "followers": {
+        "facebook": 177700,
+        "twitter": 44500,
+        "instagram": 44000
+      },
+      "image_url": "https://i1.feedspot.com/5643678.jpg?t=1691155197"
+    }
+  ]
+}

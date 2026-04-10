@@ -1,0 +1,90 @@
+{
+  "category": "NHPR",
+  "source_url": "https://rss.feedspot.com/nhpr_rss_feeds",
+  "feeds": [
+    {
+      "title": "NHPR \u00bb News",
+      "feed_url": "https://www.nhpr.org/news/rss.xml",
+      "website_url": "https://www.nhpr.org/news",
+      "description": "Public Radio from NH. Your source for state-wide news and information offering a mix of local, national, and international news and cultural programming.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 44600,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5246068.jpg?t=1613570199"
+    },
+    {
+      "title": "NHPR \u00bb Politics",
+      "feed_url": "https://www.nhpr.org/feeds/term/125/rss.xml",
+      "website_url": "https://www.nhpr.org/term/politics-0",
+      "description": "Political news from New Hampshire Public Radio, from the State House to the First in the Nation Primary.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 44600,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5246232.jpg?t=1613626559"
+    },
+    {
+      "title": "NHPR \u00bb Environment",
+      "feed_url": "https://www.nhpr.org/feeds/term/233/rss.xml",
+      "website_url": "https://www.nhpr.org/term/environment-0",
+      "description": "Stay up to date with the climate, pollution, pesticides, and environmental news.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 44600,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5246239.jpg?t=1613626750"
+    },
+    {
+      "title": "NHPR \u00bb Climate Change",
+      "feed_url": "https://www.nhpr.org/feeds/146452/rss.xml",
+      "website_url": "https://www.nhpr.org/climate",
+      "description": "Discover the latest news and updates covering climatic change only on NHPR.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 44600,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5246241.jpg?t=1613627104"
+    },
+    {
+      "title": "NHPR \u00bb Health",
+      "feed_url": "https://www.nhpr.org/feeds/term/234/rss.xml",
+      "website_url": "https://www.nhpr.org/term/health-0",
+      "description": "Stay up to date with the latest health news by NHPR.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 44600,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5246245.jpg?t=1613627347"
+    },
+    {
+      "title": "NHPR \u00bb Education",
+      "feed_url": "https://www.nhpr.org/feeds/term/2247/rss.xml",
+      "website_url": "https://www.nhpr.org/term/education-0",
+      "description": "Get the latest education news and updates only on the New Hampshire Public Radio.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 44600,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5246251.jpg?t=1613627541"
+    },
+    {
+      "title": "NHPR \u00bb Coronavirus",
+      "feed_url": "https://www.nhpr.org/feeds/150357/rss.xml",
+      "website_url": "https://www.nhpr.org/topic/coronavirus-coverage",
+      "description": "Stay up to date with the covid news and updates about vaccines only on New Hampshire Public Radio.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 44600,
+        "instagram": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5246107.jpg?t=1613571514"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "category": "Nestle",
+  "source_url": "https://rss.feedspot.com/nestle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nestl\u00e9 Purina News Center",
+      "feed_url": "https://newscenter.purina.com/press-releases?pagetemplate=rss",
+      "website_url": "https://newscenter.purina.com/press-releases",
+      "description": "Nestl\u00e9 Purina is a family-friendly and pet-friendly community. This site is an official Nestl\u00e9 Purina News site where experts share tips on care, feeding, and behavior with fellow pet lovers in the U.S along with the latest press releases.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 60000,
+        "instagram": 184600
+      },
+      "image_url": "https://i1.feedspot.com/4925998.jpg?t=1620973357"
+    },
+    {
+      "title": "Nestl\u00e9 News",
+      "feed_url": "https://www.nestle.com/news-rss.xml",
+      "website_url": "https://www.nestle.com/media/news",
+      "description": "Nestl\u00e9 is the world's largest food and beverage company. Its purpose is enhancing the quality of life and contributing to a healthier future. The Nestl\u00e9 Newsfeed is a one-stop-shop for news, press releases, statements, media contacts and other multi-media content about Nestl\u00e9.",
+      "followers": {
+        "facebook": 11800000,
+        "twitter": 286800,
+        "instagram": 457800
+      },
+      "image_url": "https://i1.feedspot.com/4925836.jpg?t=1620973365"
+    }
+  ]
+}

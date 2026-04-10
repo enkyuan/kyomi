@@ -1,0 +1,29 @@
+{
+  "category": "Blackberry",
+  "source_url": "https://rss.feedspot.com/blackberry_rss_feeds",
+  "feeds": [
+    {
+      "title": "BBin",
+      "feed_url": "https://www.bbin.in/feed/",
+      "website_url": "https://www.bbin.in/",
+      "description": "BBin is an unofficial blog for BlackBerry users in India. It was India's Best BlackBerry Community, serving the best and reality of BlackBerry in India since 2010. Get the latest local updates, instant help, etc.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4910241.jpg?t=1614149986"
+    },
+    {
+      "title": "CrackBerry",
+      "feed_url": "https://feeds.crackberry.com/crackberry/qBTB",
+      "website_url": "https://crackberry.com/",
+      "description": "CrackBerry is the No. 1 community and resource for all things BlackBerry. Get news, reviews, help & how-to, apps, games, accessories & more!",
+      "followers": {
+        "facebook": 60200,
+        "twitter": 136300,
+        "instagram": 31600
+      },
+      "image_url": "https://i1.feedspot.com/4910235.jpg?t=1614149976"
+    }
+  ]
+}

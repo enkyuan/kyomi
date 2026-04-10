@@ -1,0 +1,53 @@
+{
+  "category": "Mansfield News",
+  "source_url": "https://rss.feedspot.com/mansfield_ohio_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fox 8 Cleveland \u00bb Mansfield",
+      "feed_url": "https://fox8.com/tag/mansfield-news/feed/",
+      "website_url": "https://fox8.com/tag/mansfield-news/",
+      "description": "FOX 8 is your source for the latest local headlines and updates. It covers breaking news, events, sports, and much more from the Mansfield city.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5147078.jpg"
+    },
+    {
+      "title": "Mansfield News Journal",
+      "feed_url": "http://rssfeeds.mansfieldnewsjournal.com/mansfield/news",
+      "website_url": "https://www.mansfieldnewsjournal.com/",
+      "description": "Mansfield News Journal delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 70700,
+        "twitter": 8500,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5147074.jpg?t=1626692263"
+    },
+    {
+      "title": "Richland Source",
+      "feed_url": "https://www.richlandsource.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.richlandsource.com/",
+      "description": "Get the local news from Mansfield Ohio and surrounding communities in Richland and Crawford Counties. Find breaking news, traffic updates and closures, and all other area news here.",
+      "followers": {
+        "facebook": 46700,
+        "twitter": 5800,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5147077.jpg?t=1626692258"
+    },
+    {
+      "title": "WMFD TV",
+      "feed_url": "https://www.wmfd.com/",
+      "website_url": "https://www.wmfd.com/",
+      "description": "WMFD TV is the Local News leader both on TV and Online channels for Mansfield, Ohio. Check out trending local news videos and posts, from Sports, Weather, Entertainment, and Community at wmfd.com, the official online presence for the Network.",
+      "followers": {
+        "facebook": 59400,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5482490.jpg?t=1671687143"
+    }
+  ]
+}

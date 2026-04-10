@@ -1,0 +1,85 @@
+{
+  "category": "LNG",
+  "source_url": "https://rss.feedspot.com/lng_rss_feeds",
+  "feeds": [
+    {
+      "title": "LNG Industry",
+      "feed_url": "https://www.lngindustry.com/rss/lngindustry.xml",
+      "website_url": "https://www.lngindustry.com/",
+      "description": "The latest LNG news, industry trends and events from LNG Industry magazine, including LNG terminals, shipping, natural gas and liquefaction. LNG Industry is the leading international publication for the LNG sector.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/5371965.jpg?t=1644906120"
+    },
+    {
+      "title": "Global LNG Hub Blog",
+      "feed_url": "https://globallnghub.com/feed",
+      "website_url": "https://globallnghub.com/blog",
+      "description": "A blog about global natural gas and LNG markets. Global LNG Hub is an online platform for sharing analysis and information on Global and regional LNG markets.",
+      "followers": {
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5371960.jpg?t=1644906089"
+    },
+    {
+      "title": "LNG Global News",
+      "feed_url": "https://www.lngglobal.com//feed/rss2",
+      "website_url": "https://www.lngglobal.com/lng-news",
+      "description": "LNG Global provides up to date news on the world of liquefied natural gas. We assist companies in need of marketing products and services in the LNG industry.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/5371962.jpg?t=1644906103"
+    },
+    {
+      "title": "European Gas Hub \u00bb LNG",
+      "feed_url": "https://europeangashub.com/category/lng/feed",
+      "website_url": "https://europeangashub.com/category/lng",
+      "description": "Find news, analysis & information about Liquified Natural Gas markets. European Gas Hub is an online platform for sharing analysis and information about European natural gas markets.",
+      "followers": {
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5371961.jpg?t=1644906099"
+    },
+    {
+      "title": "350 Tacoma \u00bb LNG",
+      "feed_url": "https://www.350tacoma.org/category/lng/feed/",
+      "website_url": "http://",
+      "description": "Articles on LNG, LNG market news, trends, and more. 350 Tacoma is a local independent group of 350.org, an international grassroots movement working in collaboration with others to solve the climate crisis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371958.jpg?t=1644910042"
+    },
+    {
+      "title": "Sapphire Gas Solutions \u00bb Liquid Natural Gas",
+      "feed_url": "https://www.sapphiregassolutions.com/blog/category/liquid-natural-gas/feed/",
+      "website_url": "http://",
+      "description": "Find information on LNG along with news from the LNG industry, tips for managing and preventing disasters and more! Sapphire Gas Solutions is a turnkey infrastructure services and equipment provider to customers in the utility, pipeline, asphalt, C&I, and RNG markets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371959.jpg?t=1644906086"
+    },
+    {
+      "title": "First Nations Natural Gas Alliance",
+      "feed_url": "https://fnnga.com/feed/",
+      "website_url": "https://fnnga.com/blog/",
+      "description": "Latest updates from the First Nations LNG Alliance, an emerging collective of First Nations who support the development of LNG in BC.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5371957.jpg?t=1644906072"
+    },
+    {
+      "title": "Gas Strategies",
+      "feed_url": "https://www.gasstrategies.com/shell/shell.xml",
+      "website_url": "https://www.gasstrategies.com/blogs",
+      "description": "Delivering meaningful insights into your business in the gas, LNG and energy industry. Gas Strategies is a professional services firm providing consultancy, information services and training in the global gas and LNG sectors.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5371963.jpg?t=1644906113"
+    }
+  ]
+}

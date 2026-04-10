@@ -1,0 +1,36 @@
+{
+  "category": "Airbus",
+  "source_url": "https://rss.feedspot.com/airbus_rss_feeds",
+  "feeds": [
+    {
+      "title": "Leeham News and Analysis",
+      "feed_url": "https://leehamnews.com/feed/",
+      "website_url": "https://leehamnews.com/",
+      "description": "Leeham News and Analysis is an industry-leading commercial aviation news blog. Leeham News is the independent voice that cuts through the spin to deliver stories with verified facts, analysis and content that becomes a must-read every day. News and Comment principally focus on news, events, and analysis of issues involving Airbus.",
+      "followers": {
+        "facebook": 826,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4586008.jpg?t=1611035471"
+    },
+    {
+      "title": "AIRBUS DELIVERIES",
+      "feed_url": "https://feeds.feedburner.com/AirbusDeliveries",
+      "website_url": "http://airbusdeliveries.blogspot.com/",
+      "description": "This blog shows Airbus flights and deliveries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4923458.jpg?t=1611035482"
+    },
+    {
+      "title": "The Mission Critical Blog",
+      "feed_url": "https://criticalcommunications.airbus.com/en/blog/",
+      "website_url": "https://criticalcommunications.airbus.com/en/blog/",
+      "description": "Secure Land Communications (SLC) at Airbus Defence and Space develops, installs and maintains professional mobile radio solutions. Secure Land Communications (SLC), an Airbus business unit, offers advanced communication and collaboration solutions enabling its customers to gather, process and deploy intelligence.",
+      "followers": {
+        "facebook": 412,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4923435.jpg?t=1611035479"
+    }
+  ]
+}

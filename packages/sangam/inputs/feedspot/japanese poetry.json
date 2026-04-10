@@ -1,0 +1,85 @@
+{
+  "category": "Japanese Poetry",
+  "source_url": "https://rss.feedspot.com/japanese_poetry_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tokyo Poetry Journal Blog",
+      "feed_url": "https://www.topojo.com/blog-feed.xml",
+      "website_url": "https://www.topojo.com/blog",
+      "description": "Poetry journal focused on the literary arts and their relationship to other arts in/around or occasionally not at all related to Tokyo/Japan.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 280,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5699883.jpg?t=1698494743"
+    },
+    {
+      "title": "Alexis Rotella's Blog",
+      "feed_url": "https://alexisrotella.wordpress.com/feed/",
+      "website_url": "https://alexisrotella.wordpress.com/",
+      "description": "My art, my writings, your health",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5699885.jpg?t=1698494752"
+    },
+    {
+      "title": "September Poetry Blog",
+      "feed_url": "https://september.theshop.jp/blog/feed",
+      "website_url": "https://september.theshop.jp/blog",
+      "description": "\u305b\u3077\u3066\u3093\u3070\u30fc\u307d\u3048\u3068\u308a\u30fc\u300cSeptember Poetry\u300d\u4f5c\u5bb6\u306e\u60f3\u3044\u304c\u8a69\u96c6\u3068\u306a\u308a\u3042\u306a\u305f\u306e\u4eba\u751f\u3092\u5f69\u308b\u796d\u58c7\u306e\u3088\u3046\u306b\u306a\u308b\u3053\u3068\u3092\u9858\u3063\u3066\u7f8e\u3057\u304f\u3066\u30e6\u30fc\u30e2\u30a2\u306e\u3042\u308b\u3055\u307e\u3056\u307e\u306a\u3082\u306e\u3092\u3054\u7d39\u4ecb\u3057\u3066\u3044\u307e\u3059\u3002",
+      "followers": {
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5699888.jpg?t=1698495676"
+    },
+    {
+      "title": "The Hyakunin Isshu",
+      "feed_url": "https://100poets.com/feed/",
+      "website_url": "https://100poets.com/",
+      "description": "A Hundreds Poems by a Hundred Poets",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5699886.jpg?t=1698495737"
+    },
+    {
+      "title": "Frances Kakugawa's Blog \u00bb Poetry",
+      "feed_url": "https://franceskakugawa.wordpress.com/category/poetry/feed/",
+      "website_url": "https://franceskakugawa.wordpress.com/category/poetry/",
+      "description": "Writing, Poetry, Caregiving, Life and Me",
+      "followers": {
+        "facebook": 320
+      },
+      "image_url": "https://i1.feedspot.com/5699893.jpg?t=1698496193"
+    },
+    {
+      "title": "Ronovan Writes \u00bb Japanese Poetry",
+      "feed_url": "https://ronovanwrites.com/tag/japanese-poetry/feed/",
+      "website_url": "https://ronovanwrites.com/tag/japanese-poetry/",
+      "description": "Author, Poet, Blogger, Father, Reader And More",
+      "followers": {
+        "facebook": 410,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5699887.jpg?t=1698494772"
+    },
+    {
+      "title": "I Haiku You Blog",
+      "feed_url": "https://www.i-haiku-you.com/blog-feed.xml",
+      "website_url": "https://www.i-haiku-you.com/blog",
+      "description": "Express your inner poet and connect with other haiku enthusiasts on a platform that offers resources, tools, and a community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5699884.jpg?t=1698495713"
+    },
+    {
+      "title": "Brief Poems \u00bb Japanese Poetry",
+      "feed_url": "https://briefpoems.wordpress.com/tag/japanese-poetry/feed/",
+      "website_url": "https://briefpoems.wordpress.com/tag/japanese-poetry/",
+      "description": "An irregular anthology of tweet-size poems",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5699891.jpg?t=1698495768"
+    }
+  ]
+}

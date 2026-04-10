@@ -1,0 +1,41 @@
+{
+  "category": "UAE Book",
+  "source_url": "https://rss.feedspot.com/uae_book_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bookends Blog",
+      "feed_url": "https://bookends.ae/blogs/blog.atom",
+      "website_url": "https://bookends.ae/blogs/blog",
+      "description": "Buy and sell pre loved books! Bookends is an online book store and marketplace for used books in the UAE with a wide collection to cater all genre, language and ages. Check out our website for book reviews. Bookends is the first digital platform for buying and selling used books online that ships all over the UAE.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 63,
+        "instagram": 34600
+      },
+      "image_url": "https://i1.feedspot.com/5522876.jpg?t=1679056115"
+    },
+    {
+      "title": "SAMAMA Reads",
+      "feed_url": "https://www.samamareza.com/bookreviews/feed/blog-feed.xml",
+      "website_url": "https://www.samamareza.com/bookreviews",
+      "description": "A straightforward book critic; read my honest opinion on the latest internationally published books in every genre. My name is Samama Reza I am a creative content writer and a fictional novel writer and book blogger based in Dubai, regularly contributing to weekly magazines and newspapers with a dose of my thoughts and a dedicated book blogging page.",
+      "followers": {
+        "facebook": 678,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5506111.jpg?t=1676269610"
+    },
+    {
+      "title": "Austin Macauley Publishers Blog",
+      "feed_url": "https://austinmacauley.ae/feed",
+      "website_url": "https://austinmacauley.ae/blog",
+      "description": "The Austin Macauley Publishers blog is where you can get a range of book recommendations, be it genres like romance, adventure, children's books, inspirational, and more. Austin Macauley Publishers is determined to contribute towards artistic development, to nurture and showcase the talents and energies of authors from all walks of life.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 4300,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5506114.jpg?t=1703250338"
+    }
+  ]
+}

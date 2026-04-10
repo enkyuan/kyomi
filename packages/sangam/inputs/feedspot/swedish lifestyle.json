@@ -1,0 +1,63 @@
+{
+  "category": "Swedish Lifestyle",
+  "source_url": "https://rss.feedspot.com/swedish_lifestyle_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Way We Play",
+      "feed_url": "https://thewayweplay.se/feed/",
+      "website_url": "https://thewayweplay.se/",
+      "description": "TWWP is a lifestyle magazine and creative studio. Please enjoy our exclusive home visits, fashion stories and food & travel features.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 34700
+      },
+      "image_url": "https://i1.feedspot.com/4840602.jpg?t=1611209342"
+    },
+    {
+      "title": "The World According to Pia",
+      "feed_url": "https://piaks.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://piaks.blogspot.com/",
+      "description": "The personal lifestyle blog by Stockholmer with the soft spot for anything bright and beautiful to ease weltschmerz.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4871798.jpg?t=1612333099"
+    },
+    {
+      "title": "Nicole Falciani",
+      "feed_url": "https://nicolefalciani.elle.se/feed/",
+      "website_url": "https://nicolefalciani.elle.se/",
+      "description": "A Lifestyle blog by Stockholm based Nicole Falciani. Mostly writing about personal style, travel and fashion.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 10300,
+        "instagram": 300600
+      },
+      "image_url": "https://i1.feedspot.com/4669792.jpg?t=1611209834"
+    },
+    {
+      "title": "ADARAS Blogazine",
+      "feed_url": "https://adarasblogazine.com/feed/",
+      "website_url": "https://adarasblogazine.com/lifestyle/",
+      "description": "ADARAS Blogazine is a lifestyle and travel destination presented by the Swedish couple, Ida and Simon. We cover everything from enchanting escapes, amazing adventures, brilliant beauty, fearless fashion and lifestyle ideas.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 405,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4871785.jpg?t=1612333100"
+    },
+    {
+      "title": "Damernas V\u00e4rld",
+      "feed_url": "https://www.damernasvarld.se/feed",
+      "website_url": "https://www.eldiario.es/el-equipo/",
+      "description": "Damernas V\u00e4rld is your best guide to fashion & beauty. Here we want to inspire you in the topics we love most, fashion, beauty and lifestyle! Every day, we do our utmost to create material that inspires our readers and engages in the topics that put the golden edge on our daily lives.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 1600,
+        "instagram": 39100
+      },
+      "image_url": "https://i1.feedspot.com/4839720.jpg?t=1611209254"
+    }
+  ]
+}

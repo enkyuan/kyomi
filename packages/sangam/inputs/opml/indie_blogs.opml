@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>My curated list of indie blogs I follow</title>
+  </head>
+  <body>
+    <outline text="Adactio: Articles" type="rss" xmlUrl="https://adactio.com/articles/rss" htmlUrl="https://adactio.com/articles/" />
+    <outline text="alexwlchan" type="rss" xmlUrl="https://alexwlchan.net/atom.xml" htmlUrl="https://alexwlchan.net/" />
+    <outline text="Anže’s Blog" type="rss" xmlUrl="https://blog.pecar.me/feed.xml" htmlUrl="https://blog.pecar.me/" />
+    <outline text="blog on Fundor 333" type="rss" xmlUrl="https://fundor333.com/post/index.xml" htmlUrl="https://fundor333.com/post/" />
+    <outline text="Brain Baking" type="rss" xmlUrl="https://brainbaking.com/index.xml" htmlUrl="https://brainbaking.com/" />
+    <outline text="daverupert.com" type="rss" xmlUrl="https://daverupert.com/atom.xml" htmlUrl="https://daverupert.com/" />
+    <outline text="dnsmichi.at" type="rss" xmlUrl="https://dnsmichi.at/rss/" htmlUrl="https://dnsmichi.at/" />
+    <outline text="Evan Boehs in the blog" type="rss" xmlUrl="https://boehs.org/in/blog.xml" htmlUrl="https://boehs.org/" />
+    <outline text="Miguel Grinberg" type="rss" xmlUrl="https://blog.miguelgrinberg.com/feed" htmlUrl="https://blog.miguelgrinberg.com" />
+    <outline text="Jeff Triplett's Micro.blog" type="rss" xmlUrl="https://micro.webology.dev/feed.xml" htmlUrl="https://micro.webology.dev/" />
+    <outline text="Juha-Matti Santala" type="rss" xmlUrl="https://hamatti.org/feed/feed.xml" htmlUrl="https://hamatti.org" />
+    <outline text="Kev Quirk" type="rss" xmlUrl="https://kevquirk.com/feed" htmlUrl="https://kevquirk.com/" />
+    <outline text="Kristian Glass - Do I Smell Burning?" type="rss" xmlUrl="https://blog.doismellburning.co.uk/atom.xml" htmlUrl="https://blog.doismellburning.co.uk" />
+    <outline text="LewisDale.dev" type="rss" xmlUrl="https://lewisdale.dev/feed/" htmlUrl="https://lewisdale.dev/" />
+    <outline text="LMNT" type="rss" xmlUrl="https://lmnt.me/feed.xml" htmlUrl="https://lmnt.me/" />
+    <outline text="Martin Heinz's Blog" type="rss" xmlUrl="https://martinheinz.dev/rss/" htmlUrl="https://martinheinz.dev/" />
+    <outline text="Matthias Endler" type="rss" xmlUrl="https://endler.dev/rss.xml" htmlUrl="https://endler.dev/" />
+    <outline text="Michael Nordmeyer" type="rss" xmlUrl="https://michaelnordmeyer.com/feed.xml" htmlUrl="https://michaelnordmeyer.com/" />
+    <outline text="Nicola Iarocci" type="rss" xmlUrl="https://nicolaiarocci.com/index.xml" htmlUrl="https://nicolaiarocci.com/" />
+    <outline text="Pablo González" type="rss" xmlUrl="https://pablogonzalez.me/index.xml" htmlUrl="https://pablogonzalez.me/" />
+    <outline text="passo.uno" type="rss" xmlUrl="https://passo.uno/index.xml" htmlUrl="https://passo.uno/" />
+    <outline text="PauLoX" type="rss" xmlUrl="https://www.paulox.net/feed.xml" htmlUrl="https://www.paulox.net/" />
+    <outline text="Robb Knight • Posts • RSS Feed" type="rss" xmlUrl="https://rknight.me/subscribe/posts/rss.xml" htmlUrl="https://rknight.me/" />
+    <outline text="Robert Birming" type="rss" xmlUrl="https://birming.com/feed/" htmlUrl="https://birming.com/" />
+    <outline text="Simon Willison's Weblog" type="rss" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="http://simonwillison.net/" />
+    <outline text="Terence Eden’s Blog" type="rss" xmlUrl="https://shkspr.mobi/blog/feed/atom/" htmlUrl="https://shkspr.mobi/blog" />
+    <outline text="The Art Of Not Asking Why" type="rss" xmlUrl="https://taonaw.com/feed.xml" htmlUrl="https://taonaw.com/" />
+    <outline text="Tim Hårek" type="rss" xmlUrl="https://timharek.no/rss.xml" htmlUrl="https://timharek.no/feed.json" />
+    <outline text="underlap" type="rss" xmlUrl="https://underlap.org/feed/" htmlUrl="https://underlap.org/" />
+    <outline text="Welcome to Tara's Website" type="rss" xmlUrl="https://tara.sh/index.xml" htmlUrl="https://www.tara.sh/" />
+    <outline text="www.bentasker.co.uk" type="rss" xmlUrl="https://www.bentasker.co.uk/rss.xml" htmlUrl="https://www.bentasker.co.uk/" />
+    <outline text="xahteiwi.eu" type="rss" xmlUrl="https://xahteiwi.eu/feeds/all.atom.xml" htmlUrl="https://xahteiwi.eu/" />
+  </body>
+</opml>

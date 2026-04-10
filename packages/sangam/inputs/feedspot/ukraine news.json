@@ -1,0 +1,196 @@
+{
+  "category": "Ukraine News",
+  "source_url": "https://rss.feedspot.com/ukraine_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Euromaidan Press",
+      "feed_url": "https://euromaidanpress.com/feed/",
+      "website_url": "https://euromaidanpress.com/",
+      "description": "Euromaidan Press (EP) is an online English-language independent newspaper launched in 2014 by Ukrainian volunteers. EP focuses on events covering Ukraine and provides translations of Ukrainian news and expert analysis as well as independent research.",
+      "followers": {
+        "facebook": 224300,
+        "twitter": 350500
+      },
+      "image_url": "https://i1.feedspot.com/4350002.jpg?t=1620991902"
+    },
+    {
+      "title": "Kyiv Independent",
+      "feed_url": "https://kyivindependent.com/news-archive/rss/",
+      "website_url": "https://kyivindependent.com/",
+      "description": "The Kyiv Independent offers comprehensive news coverage focused on Ukraine and Eastern Europe. It features sections on the ongoing war, business, opinion, culture, and investigations. The site provides in-depth analysis, breaking news, and multimedia content, including videos and podcasts, to keep readers informed about significant developments and human stories in the region.",
+      "followers": {
+        "facebook": 161200,
+        "twitter": 1900000,
+        "instagram": 205200
+      },
+      "image_url": "https://i1.feedspot.com/7326696.jpg?t=1721802686"
+    },
+    {
+      "title": "Interfax-Ukraine",
+      "feed_url": "https://en.interfax.com.ua/news/last.rss",
+      "website_url": "https://en.interfax.com.ua/",
+      "description": "News about recent political developments in Ukraine, key Ukrainian economic news and major current events in the CIS and the rest of the world. The Interfax-Ukraine News Agency - has been an information provider in the political and economic information market of Ukraine since 1992.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/2952920.jpg?t=1634906065"
+    },
+    {
+      "title": "The New York Times \u00bb Ukraine",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/ukraine/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/destination/ukraine/",
+      "description": "Live news, investigations, opinion, photos, and videos by the journalists of The New York Times from more than 150 countries around the world. This news section covers articles on Ukraine news and updates.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/5335245.jpg?t=1635137286"
+    },
+    {
+      "title": "Ukrainian Truth",
+      "feed_url": "https://www.pravda.com.ua/rss/",
+      "website_url": "https://www.pravda.com.ua/",
+      "description": "Ukrainian Truth is an independent online publication that covers socio-political and economic events in Ukraine. Political scientists, economists, writers, cultural figures, well-known journalists are regular authors of articles on Ukrainian Pravda. Since its founding in 2000, the site has reached a staggering stable traffic - hundreds of millions of readers each year. Every day, the Ukrainian Pravda website is visited by more than half a million unique readers.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 911400,
+        "instagram": 245600
+      },
+      "image_url": "https://i1.feedspot.com/499283.jpg?t=1646140063"
+    },
+    {
+      "title": "ZN.UA",
+      "feed_url": "https://zn.ua/rss/full.rss",
+      "website_url": "https://zn.ua/",
+      "description": "An overview of the most important and relevant political, economic and socio-cultural events in Ukraine and abroad.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 106800,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/3652952.jpg?t=1634905724"
+    },
+    {
+      "title": "UNIAN",
+      "feed_url": "https://rss.unian.net/site/news_ukr.rss",
+      "website_url": "https://www.unian.ua/",
+      "description": "Get the latest news Ukraine, news of the day online. News of politics, economy, latest sports news, news of Ukraine and the world 2022 around the clock in Ukrainian from UNIAN. Unian is The first non-governmental independent news agency of Ukraine, founded in 1993. During the first decade of independence, during the formation of Ukrainian statehood, UNIAN was the only source of objective information about events and news in Ukraine for domestic and foreign media.",
+      "followers": {
+        "facebook": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5376326.jpg?t=1646135409"
+    },
+    {
+      "title": "FOCUS MEDIA",
+      "feed_url": "https://focus.ua/modules/rss.php",
+      "website_url": "https://focus.ua/",
+      "description": "The main and latest news for today and for the last hour. Analytics, articles and news about politics, economics, auto, technology, events in the world and Ukraine from the analytical publication Focus.",
+      "followers": {
+        "facebook": 127400,
+        "twitter": 23900
+      },
+      "image_url": "https://i1.feedspot.com/5021735.jpg?t=1646140287"
+    },
+    {
+      "title": "Fakty.ua",
+      "feed_url": "https://fakty.ua/rss_feed/all",
+      "website_url": "https://fakty.ua/",
+      "description": "The latest news of Ukraine and the world, articles, comments, and analytics from experts and the editorial board of the newspaper.",
+      "followers": {
+        "facebook": 27100,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5335062.jpg?t=1634904938"
+    },
+    {
+      "title": "URA-Inform",
+      "feed_url": "https://ura-inform.com/feed/",
+      "website_url": "https://ura-inform.com/",
+      "description": "News of the day from the information agency URA-Inform. Incidents, operational fresh information from the world of politics, business, and finance, all the latest news from Ukraine and the world.",
+      "followers": {
+        "twitter": 911
+      },
+      "image_url": "https://i1.feedspot.com/5335084.jpg?t=1634907184"
+    },
+    {
+      "title": "Government Courier",
+      "feed_url": "https://ukurier.gov.ua/uk/feed/",
+      "website_url": "http://ukurier.gov.ua/uk/",
+      "description": "The Government Courier newspaper is a daily publication of the central executive bodies of Ukraine. Covers the top news of Ukraine today.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 383
+      },
+      "image_url": "https://i1.feedspot.com/5335072.jpg?t=1634905594"
+    },
+    {
+      "title": "Sivershchyna",
+      "feed_url": "https://siver.com.ua/news/rss/",
+      "website_url": "https://siver.com.ua/",
+      "description": "Covers articles on Society, Economy, Politics, Crime, Culture, and more local updates.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5335094.jpg?t=1634908322"
+    },
+    {
+      "title": "The Ukrainian Independent Information Agency",
+      "feed_url": "https://rss.unian.net/site/news_eng.rss",
+      "website_url": "https://www.unian.info/",
+      "description": "The Ukrainian Independent Information Agency (UNIAN) is one of Ukraine's biggest producers and suppliers of political, business, and financial information. Read the top-news of politics in Ukraine and the world, the latest political news from the UNIAN news agency.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4915645.jpg?t=1634906322"
+    },
+    {
+      "title": "Ukrainian National News",
+      "feed_url": "https://unn.ua/rss/news_uk.xml",
+      "website_url": "https://unn.ua/",
+      "description": "UNN - news agency 'Ukrainian national news', specializing in exclusive news about the political, economic and social life of Ukraine and other countries of the world. Own analyzes, author journalism investigations, exclusive interview.",
+      "followers": {
+        "facebook": 231600,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5335080.jpg?t=1634906804"
+    },
+    {
+      "title": "KyivPost",
+      "feed_url": "https://www.kyivpost.com/",
+      "website_url": "https://www.kyivpost.com/",
+      "description": "The Kyiv Post, founded in 1995, is Ukraine's Global Voice in the English language and founded on the principles of Independence, Community, Trust. Provides reliable and independent journalism in business, politics, and entertainment.",
+      "followers": {
+        "facebook": 310200,
+        "twitter": 395800,
+        "instagram": 132700
+      },
+      "image_url": "https://i1.feedspot.com/5335479.jpg?t=1635160810"
+    },
+    {
+      "title": "War.ukraine.ua",
+      "feed_url": "https://war.ukraine.ua/feed/",
+      "website_url": "https://war.ukraine.ua/",
+      "description": "Learn about the latest events in Ukraine - news and stories. In these sections, we gather good news about Ukraine, our people and our industries. Explore Ukraine, an open and modern European country and your next travel destination. This is the official website of Ukraine, administered by the Ministry of Foreign Affairs of Ukraine and Ukrainian Institute.",
+      "followers": {
+        "facebook": 347500,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5376339.jpg?t=1646135547"
+    },
+    {
+      "title": "Delo.ua",
+      "feed_url": "https://delo.ua/",
+      "website_url": "https://delo.ua/",
+      "description": "The Delo.ua business portal contains business, economic, political and other news, interviews with famous people, reviews of various markets and their main trends, exclusive comments from authoritative experts: their positions, opinions and forecasts, personal experience and classic examples of successful building a business, advice and consultations on a wide range of issues related to doing business and entrepreneurial activity in Ukraine.",
+      "followers": {
+        "facebook": 51400,
+        "twitter": 18400,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5376334.jpg?t=1646135467"
+    }
+  ]
+}

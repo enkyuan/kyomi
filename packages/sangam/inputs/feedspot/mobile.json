@@ -1,0 +1,653 @@
+{
+  "category": "Mobile",
+  "source_url": "https://rss.feedspot.com/mobile_rss_feeds",
+  "feeds": [
+    {
+      "title": "GSMArena",
+      "feed_url": "https://www.gsmarena.com/rss-news-reviews.php3",
+      "website_url": "https://www.gsmarena.com/",
+      "description": "GSMArena is the ultimate resource for GSM handset information. It contains the latest articles (news and reviews). Our primary task is to provide detailed and accurate information about mobile phones and their features",
+      "followers": {
+        "facebook": 916000,
+        "twitter": 176900,
+        "instagram": 153500
+      },
+      "image_url": "https://i1.feedspot.com/4756892.jpg?t=1760513904"
+    },
+    {
+      "title": "Android Authority",
+      "feed_url": "https://www.androidauthority.com/feed/",
+      "website_url": "https://www.androidauthority.com/",
+      "description": "Android Authority is a trusted global publication delivering expert news, reviews, guides, deals, and insights on Android devices, apps, and mobile technology.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 1200000,
+        "instagram": 719800
+      },
+      "image_url": "https://i1.feedspot.com/4759364.jpg?t=1756720325"
+    },
+    {
+      "title": "PhoneArena",
+      "feed_url": "https://www.phonearena.com/feed",
+      "website_url": "https://www.phonearena.com/",
+      "description": "At PhoneArena, we believe that mobile technology is so powerful it can help us live richer, more connected and productive lives. PhoneArena is the ultimate source for news, reviews, picks and deals on the latest phones, tablets, wearables and other mobile technology.",
+      "followers": {
+        "facebook": 494300,
+        "twitter": 75200,
+        "instagram": 204700
+      },
+      "image_url": "https://i1.feedspot.com/4756862.jpg?t=1742987077"
+    },
+    {
+      "title": "Android Developers Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/hsDu",
+      "website_url": "https://android-developers.googleblog.com/",
+      "description": "Get the latest Android news, best practices, live videos, demonstrations, tutorials, and more on Android Developers Blog. The platform is focused on bringing the best experiences and latest innovations to users. This page includes best practices and resources to help developers design and implement safe, secure, and private apps.",
+      "followers": {
+        "twitter": 105800
+      },
+      "image_url": "https://i1.feedspot.com/26339.jpg?t=1660895433"
+    },
+    {
+      "title": "Apple Developer",
+      "feed_url": "https://developer.apple.com/news/rss/news.rss",
+      "website_url": "https://developer.apple.com/news/",
+      "description": "Learn about the latest technologies, events, and policies for developers. Apple Inc. is an American multinational technology company that specializes in consumer electronics, software, and online services.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/178055.jpg?t=1658226751"
+    },
+    {
+      "title": "Scalefusion Blog",
+      "feed_url": "https://blog.scalefusion.com/feed/",
+      "website_url": "https://blog.scalefusion.com/",
+      "description": "The Scalefusion blog offers news and information around Mobile Device Management, Unified Endpoint Management and Scalefusion product updates.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 5500,
+        "instagram": 312
+      },
+      "image_url": "https://i1.feedspot.com/5052362.jpg?t=1608387906"
+    },
+    {
+      "title": "Samsung Global Newsroom \u00bb Mobile",
+      "feed_url": "https://news.samsung.com/global/category/products/mobile/feed",
+      "website_url": "https://news.samsung.com/global/category/products/mobile/",
+      "description": "All latest articles about Mobile from Samsung Global Newsroom",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 682900
+      },
+      "image_url": "https://i1.feedspot.com/4758790.jpg?t=1762251563"
+    },
+    {
+      "title": "CNET \u00bb Mobile",
+      "feed_url": "https://www.cnet.com/rss/news/",
+      "website_url": "https://www.cnet.com/search/?searchQuery=mobile",
+      "description": "CNET news reporters and editors cover the latest in Mobile, with in-depth stories on issues and events.",
+      "followers": {
+        "facebook": 983,
+        "twitter": 1700000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4758414.jpg?t=1608387826"
+    },
+    {
+      "title": "Trusted Reviews",
+      "feed_url": "https://www.trustedreviews.com/type/mobile-phones/feed",
+      "website_url": "https://www.trustedreviews.com/type/mobile-phones",
+      "description": "Whether it's a brand-new flagship or something a little lighter on the wallet, we've got in-depth reviews of all the best, and worst, smartphones you can buy right now.",
+      "followers": {
+        "facebook": 134000,
+        "twitter": 33900
+      },
+      "image_url": "https://i1.feedspot.com/4759208.jpg?t=1608387876"
+    },
+    {
+      "title": "GizBot",
+      "feed_url": "https://www.gizbot.com/rss/mobile-fb.xml",
+      "website_url": "https://www.gizbot.com/",
+      "description": "Follow to keep up with the latest mobile reviews and news on all Samsung mobiles, iPhone, Sony, Nokia, Xiaomi and Micromax smartphones. Also see the technical updates for all Android, Windows and BlackBerry phones.",
+      "followers": {
+        "facebook": 47600,
+        "twitter": 23500
+      },
+      "image_url": "https://i1.feedspot.com/4758393.jpg?t=1608387790"
+    },
+    {
+      "title": "H2S Media",
+      "feed_url": "https://www.how2shout.com/feed",
+      "website_url": "https://www.how2shout.com/",
+      "description": "H2S Media provides Tutorials & Gadgets, Open source software list WordPress tutorials, Apps, How to articles, Tools, Opensource, E-commerce, Technology, and lot more.",
+      "followers": {
+        "facebook": 22800,
+        "twitter": 179
+      },
+      "image_url": "https://i1.feedspot.com/4821459.jpg?t=1608387912"
+    },
+    {
+      "title": "Know Your Mobile",
+      "feed_url": "https://www.knowyourmobile.com/feed/",
+      "website_url": "https://www.knowyourmobile.com/",
+      "description": "Follow to keep up with everything related to mobiles and opinions on all the latest tech, phones and tablets which includes product reviews and news.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4756815.jpg?t=1608388570"
+    },
+    {
+      "title": "TechJuice",
+      "feed_url": "https://www.techjuice.pk/category/mobile/feed/",
+      "website_url": "https://www.techjuice.pk/category/mobile/",
+      "description": "TechJuice comes up with fine reviews of products that have hit international market and reviews on those products/services/news to enlighten our users about those.",
+      "followers": {
+        "facebook": 806300,
+        "twitter": 23200,
+        "instagram": 37400
+      },
+      "image_url": "https://i1.feedspot.com/4759171.jpg?t=1608387897"
+    },
+    {
+      "title": "MobiGyaan",
+      "feed_url": "https://www.mobigyaan.com/feed",
+      "website_url": "https://www.mobigyaan.com/",
+      "description": "MobiGyaan has been one of the leading sources of Smartphone and Telecom Industry news since 2008. It provides one of the most in-depth and comprehensive coverage related to Smartphones, Tablets, Applications, and the Telecom Sector.",
+      "followers": {
+        "facebook": 56800,
+        "twitter": 13100,
+        "instagram": 114500
+      },
+      "image_url": "https://i1.feedspot.com/4758339.jpg?t=1608387904"
+    },
+    {
+      "title": "RCR Wireless News",
+      "feed_url": "https://feeds.feedburner.com/rcrwireless/sLmV",
+      "website_url": "https://www.rcrwireless.com/",
+      "description": "RCR Wireless News has been providing wireless and mobile industry news, insights, and analysis to mobile and wireless industry professionals, decision-makers, policymakers, analysts and investors. Our mission is to connect, globally and locally, mobile technology professionals and companies online, in person, in print and on video.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 29300
+      },
+      "image_url": "https://i1.feedspot.com/19387.jpg?t=1629284184"
+    },
+    {
+      "title": "Coolsmartphone",
+      "feed_url": "https://www.coolsmartphone.com/feed/",
+      "website_url": "https://www.coolsmartphone.com/",
+      "description": "Android and iPhone, Windows Phone news, reviews and gossip.",
+      "followers": {
+        "facebook": 231,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4758445.jpg?t=1608387937"
+    },
+    {
+      "title": "Phones LTD Blog",
+      "feed_url": "https://www.phonesltd.co.uk/feed/",
+      "website_url": "https://www.phonesltd.co.uk/blog/",
+      "description": "Compare the cheapest mobile contracts and upgrade deals from all UK retailers. Save even more with Exclusive Discount Codes",
+      "followers": {
+        "twitter": 3800,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5124495.jpg?t=1608388465"
+    },
+    {
+      "title": "Cell Phone Parts Canada",
+      "feed_url": "https://cellphonepartscanada.com/blogs/news.atom",
+      "website_url": "https://cellphonepartscanada.com/blogs/news",
+      "description": "You can find Cell Phone Parts in Canada on wholesale rates. We also supply iPhone Parts, Samsung and LG Mobile Parts. We also do mobile phone repairing on our Mississauga, Ontario Canada Store.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 65,
+        "instagram": 514
+      },
+      "image_url": "https://i1.feedspot.com/5150700.jpg?t=1608388468"
+    },
+    {
+      "title": "GeekWire \u00bb Mobile News",
+      "feed_url": "https://www.geekwire.com/mobile-news/feed/",
+      "website_url": "https://www.geekwire.com/mobile-news/",
+      "description": "GeekWire reporters provide the latest news, opinions and analysis of mobile devices, smartphones and wireless technologies.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 169200,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4758561.jpg?t=1608388537"
+    },
+    {
+      "title": "NextPit",
+      "feed_url": "https://www.nextpit.com/feed/main.xml",
+      "website_url": "https://www.nextpit.com/",
+      "description": "NextPit is the magazine for all tech-lovers and your contact point for all topics concerning smartphones, tablets, and other cool gadgets. We bring you news, reviews, device comparisons, and tips & tricks for your device.",
+      "followers": {
+        "facebook": 346700,
+        "twitter": 14600,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4352297.jpg?t=1622790213"
+    },
+    {
+      "title": "Mobile Marketing Watch",
+      "feed_url": "https://mobilemarketingwatch.com/feed/",
+      "website_url": "https://mobilemarketingwatch.com/",
+      "description": "Mobile Marketing Watch, otherwise referred to as MMW is owned and operated by the Los Angeles based communications company, mobileStorm covering news, resources, insight and industry commentary. mobileStorm sees MMW as its part in helping grow the fascinating industry we call mobile.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4612642.jpg?t=1608388580"
+    },
+    {
+      "title": "Phone Scoop",
+      "feed_url": "https://www.phonescoop.com/rss/news.php",
+      "website_url": "https://www.phonescoop.com/",
+      "description": "Information about cell phones for the U.S. Searchable specs, news, guides, and more.",
+      "followers": {
+        "facebook": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5191403.jpg?t=1756720324"
+    },
+    {
+      "title": "BGR \u00bb News",
+      "feed_url": "https://www.bgr.com/category/news/feed/",
+      "website_url": "https://www.bgr.com/category/news/",
+      "description": "All latest articles about News from BGR.",
+      "followers": {
+        "facebook": 410100,
+        "twitter": 141300
+      },
+      "image_url": "https://i1.feedspot.com/8666642.jpg?t=1759841747"
+    },
+    {
+      "title": "MobileSyrup",
+      "feed_url": "https://mobilesyrup.com/feed/",
+      "website_url": "https://mobilesyrup.com/",
+      "description": "MobileSyrup is Canada's premier tech news and reviews platform\u2014delivering daily coverage on mobile devices, gadgets, and industry trends from a proudly Canadian perspective",
+      "followers": {
+        "facebook": 88200,
+        "twitter": 100200,
+        "instagram": 33200
+      },
+      "image_url": "https://i1.feedspot.com/285.jpg?t=1756720327"
+    },
+    {
+      "title": "TmoNews",
+      "feed_url": "https://www.tmonews.com/feed/",
+      "website_url": "https://www.tmonews.com/",
+      "description": "TmoNews is the premiere T-Mobile news and rumor site on the Internet. Follow this blog for the latest and greatest T-Mobile news, videos, articles, reviews, and rumors.",
+      "followers": {
+        "facebook": 47000,
+        "twitter": 32100
+      },
+      "image_url": "https://i1.feedspot.com/4917694.jpg?t=1756720326"
+    },
+    {
+      "title": "Phandroid",
+      "feed_url": "https://phandroid.com/feed/",
+      "website_url": "https://phandroid.com/",
+      "description": "The world's first Android News Source, Phandroid.com covers Android news, reviews, and tips to help you get the most out of your smartphone or tablet.",
+      "followers": {
+        "facebook": 207900,
+        "twitter": 221400
+      },
+      "image_url": "https://i1.feedspot.com/484.jpg?t=1644840761"
+    },
+    {
+      "title": "Mobile Industry Review",
+      "feed_url": "https://www.mobileindustryreview.com/rss/",
+      "website_url": "https://www.mobileindustryreview.com/",
+      "description": "News and opinion for mobile industry executives and fanatics",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8666640.jpg"
+    },
+    {
+      "title": "The Mobile Indian",
+      "feed_url": "https://www.themobileindian.com/web-stories/feed/",
+      "website_url": "https://www.themobileindian.com/",
+      "description": "The Mobile Indian is a tech news website which covers personal technology and aspires to declutter tech jargons.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8666643.jpg?t=1756720437"
+    },
+    {
+      "title": "Gizmochina",
+      "feed_url": "https://www.gizmochina.com/feed/",
+      "website_url": "https://www.gizmochina.com/",
+      "description": "Gizmochina brings you the best of tech from China and around the globe!",
+      "followers": {
+        "facebook": 386100,
+        "twitter": 44600,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5296746.jpg"
+    },
+    {
+      "title": "Pocket-lint",
+      "feed_url": "https://www.pocket-lint.com/feed/",
+      "website_url": "https://www.pocket-lint.com/",
+      "description": "Welcome to Pocket-lint, for the latest product reviews, including news on gadgets, digital cameras, home cinema, audio, cars and mobile phones.",
+      "followers": {
+        "facebook": 33600,
+        "twitter": 28900,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/8666641.jpg"
+    },
+    {
+      "title": "Apptunix Blog",
+      "feed_url": "https://www.apptunix.com/blog/feed/",
+      "website_url": "https://www.apptunix.com/blog/",
+      "description": "Read the latest trends, and ideas to gain insights into mobile app development, website development & more. Apptunix offers Android and Hybrid App development services. Our ultimate goal is to become the most innovative and trend-setting mobile app development firm.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5090065.jpg?t=1659960454"
+    },
+    {
+      "title": "Pocketnow",
+      "feed_url": "https://pocketnow.com/feed/",
+      "website_url": "https://phonesaaz.com/",
+      "description": "Pocketnow has been a key source of mobile technology news and reviews since its establishment in 2000. Pocketnow offers round-the-clock coverage of the mobile technology landscape, from smartphones to tablets to wearables.",
+      "followers": {
+        "facebook": 511200,
+        "twitter": 188700,
+        "instagram": 135100
+      },
+      "image_url": "https://i1.feedspot.com/470689.jpg?t=1608387719"
+    },
+    {
+      "title": "Phone Saaz",
+      "feed_url": "https://phonesaaz.com/feed/",
+      "website_url": "https://phonesaaz.com/",
+      "description": "Phone Saaz acts as your guide to finding the perfect mobile phone-related products. They understand the challenge of choosing from so many options, and their goal is to empower you to make an informed purchase. They achieve this by offering in-depth analysis of various mobile phone products, presented in a clear and jargon-free way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7302353.jpg?t=1713723645"
+    },
+    {
+      "title": "MTI News Blog",
+      "feed_url": "https://mtigs.com/feed/",
+      "website_url": "https://mtigs.com/blog/",
+      "description": "For over 40 years MTI (Mobile Tech Inc.) has been a global leader in mobile device display technologies, developing solutions that deliver the highest level of merchandising security for consumer electronics and mobile enterprise applications allowing products, sales and service to be the focus, while security operates efficiently in the background.",
+      "followers": {
+        "facebook": 392,
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/4759113.jpg?t=1608389170"
+    },
+    {
+      "title": "VentureBeat",
+      "feed_url": "https://venturebeat.com/category/mobile/feed/",
+      "website_url": "https://venturebeat.com/category/mobile/",
+      "description": "VentureBeat is the leading source for news & perspective on tech innovation. We give context to help execs, entrepreneurs, & tech enthusiasts make smart decisions.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/4756878.jpg?t=1608387794"
+    },
+    {
+      "title": "Top Mobile And Gadgets News",
+      "feed_url": "https://gadgetszyan.blogspot.com/feeds/posts/default",
+      "website_url": "https://gadgetszyan.blogspot.com/",
+      "description": "Find latest technology news, gadgets reviews & ratings. Popular & latest gadgets specifications, features, prices, photos & videos. Trending mobile phone.",
+      "followers": {
+        "twitter": 2,
+        "instagram": 229
+      },
+      "image_url": "https://i1.feedspot.com/5140869.jpg?t=1608388518"
+    },
+    {
+      "title": "ScienceSoft",
+      "feed_url": "https://www.scnsoft.com/blog/category/mobile-apps/atom",
+      "website_url": "https://www.scnsoft.com/blog/category/mobile-apps",
+      "description": "With its 13 years of expertise in mobile app development, ScienceSoft writes about the use of mobile technology in solving business challenges. Business owners, consultants, and industry professionals can all find helpful insights in our articles.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4959100.jpg?t=1608387891"
+    },
+    {
+      "title": "Mobilyf Cell Care Blog",
+      "feed_url": "https://www.mobilyf.ca/blog/feed/",
+      "website_url": "https://www.mobilyf.ca/blog/",
+      "description": "Mobilyf Cell Care was started in 2017 in Vancouver with one store. We are now four locations across Canada whose number one goal is customer satisfaction. We take pride in our work. We believe that a repair is only as good as the quality of the parts used. We stand by every repair that we do and the parts that we use. We strive to help people by providing extraordinary service and expert repairs using only the highest quality parts available. Smartphones, Tablets and other mobile devices sold separately.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 29,
+        "instagram": 331
+      },
+      "image_url": "https://i1.feedspot.com/5261759.jpg?t=1616674756"
+    },
+    {
+      "title": "Greener Mobile Blog",
+      "feed_url": "https://greenermobile.com.au/feed/",
+      "website_url": "https://greenermobile.com.au/blog/",
+      "description": "Keep up with articles from Greener Mobile.",
+      "followers": {
+        "facebook": 338,
+        "twitter": 62
+      },
+      "image_url": "https://i1.feedspot.com/5061184.jpg?t=1613052759"
+    },
+    {
+      "title": "The Android Arsenal",
+      "feed_url": "https://android-arsenal.com/rss",
+      "website_url": "https://android-arsenal.com/",
+      "description": "A categorized directory of libraries and tools for Android.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4616125.jpg?t=1608387894"
+    },
+    {
+      "title": "The Next Web",
+      "feed_url": "https://thenextweb.com/mobile/feed",
+      "website_url": "https://thenextweb.com/mobile",
+      "description": "The Next Web is one of the largest online publications delivering the latest breaking news and in-depth reviews of various mobile devices, including iOS, Android, Windows and more.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 1600000,
+        "instagram": 107600
+      },
+      "image_url": "https://i1.feedspot.com/4612603.jpg?t=1608387873"
+    },
+    {
+      "title": "Android Central",
+      "feed_url": "https://www.androidcentral.com/feed",
+      "website_url": "https://www.androidcentral.com/",
+      "description": "News, reviews and everything else that falls into the wide world of the Android mobile operating system.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 1400000,
+        "instagram": 271100
+      },
+      "image_url": "https://i1.feedspot.com/4702116.jpg?t=1608387726"
+    },
+    {
+      "title": "9to5Mac",
+      "feed_url": "https://9to5mac.com/search/iphone/feed/rss2",
+      "website_url": "https://9to5mac.com/?s=iphone",
+      "description": "9to5Mac.com is a daily Apple news site. We cover everything about Apple Inc. and the personalities that surround the industry. We dig deep for information about the famously secretive Cupertino-based company.",
+      "followers": {
+        "facebook": 280600,
+        "twitter": 1000000,
+        "instagram": 174100
+      },
+      "image_url": "https://i1.feedspot.com/4759343.jpg?t=1608387730"
+    },
+    {
+      "title": "Gadgets360",
+      "feed_url": "https://gadgets.ndtv.com/rss/mobiles/feeds",
+      "website_url": "https://gadgets.ndtv.com/",
+      "description": "NDTV Gadgets is now Gadgets 360. This features Tech News, Latest Mobiles, Reviews, Buying Guides and much more.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 371300
+      },
+      "image_url": "https://i1.feedspot.com/4632523.jpg?t=1608387772"
+    },
+    {
+      "title": "TechCrunch \u00bb Media & Entertainment",
+      "feed_url": "https://techcrunch.com/category/media-entertainment/feed/",
+      "website_url": "https://techcrunch.com/category/media-entertainment/",
+      "description": "Media & Entertainment tech news covers social media, streaming services, mobile apps, startups entering App Stores, the creator economy and more.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4612631.jpg?t=1612264689"
+    },
+    {
+      "title": "ZDNET \u00bb Smartphones",
+      "feed_url": "https://www.zdnet.com/topic/smartphones/",
+      "website_url": "https://www.zdnet.com/topic/smartphones/",
+      "description": "ZDNet provides you with news, commentary and in-depth reviews of the latest in mobile phones sporting iOS, Android, and Windows.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 456200
+      },
+      "image_url": "https://i1.feedspot.com/4064700.jpg?t=1608387786"
+    },
+    {
+      "title": "Expert Reviews",
+      "feed_url": "https://www.expertreviews.co.uk/technology/phones/feed",
+      "website_url": "https://www.expertreviews.co.uk/technology/phones",
+      "description": "Expert Reviews provides authoritative and independent technology reviews. Our in-depth testing will help you find the perfect products to buy.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4759205.jpg?t=1608389115"
+    },
+    {
+      "title": "Ray Wenderlich",
+      "feed_url": "https://www.raywenderlich.com/feed",
+      "website_url": "https://www.kodeco.com/library",
+      "description": "Keep your Swift & iOS skills up-to-date via hands-on tutorials. Ray Wenderlich is a favorite of everyone on the V-Play team. This is one of the best places on the internet for mobile game tutorials so give it a look as soon as you can. Ray has put together a very experienced team with expertise in a number of different areas, making this blog one of the biggest game development authorites online.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 167,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4431093.jpg?t=1608797979"
+    },
+    {
+      "title": "Buymobiles Blog",
+      "feed_url": "https://www.buymobiles.net/blog/rss/",
+      "website_url": "https://www.buymobiles.net/blog/",
+      "description": "Enjoy the hottest mobile phone news, fun features, clever how tos and much more. Plus check out our smartphone reviews for help buying your next mobile.",
+      "followers": {
+        "facebook": 69900,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4758688.jpg?t=1608388561"
+    },
+    {
+      "title": "Tech Advisor \u00bb Mobile",
+      "feed_url": "https://www.techadvisor.co.uk/latest/mobile-phone/rss",
+      "website_url": "https://www.techadvisor.com/phones",
+      "description": "To bring you the best news, reviews, tips, tricks and opinions about the greatest mobilephones and tech as it's unveiled around the world.",
+      "followers": {
+        "facebook": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4759150.jpg?t=1608387885"
+    },
+    {
+      "title": "PhoneRadar",
+      "feed_url": "https://phoneradar.com/",
+      "website_url": "https://phoneradar.com/",
+      "description": "PhoneRadar reports the latest news in technology, keeping you updated around the Upcoming Smartphones & Gadgets.",
+      "followers": {
+        "facebook": 123200,
+        "twitter": 20200,
+        "instagram": 88300
+      },
+      "image_url": "https://i1.feedspot.com/4758659.jpg?t=1608387744"
+    },
+    {
+      "title": "BLU Cell Phones",
+      "feed_url": "https://blucellphones.us/feed",
+      "website_url": "https://blucellphones.us/",
+      "description": "Latest BLU Cell Phones 2019 News, Updates, Comparison. We provide information on the latest unlocked BLU Cell Phone 2022, & additionally general Tech how-to tips. We also cover mobile network reviews & info.",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5025084.jpg?t=1667297748"
+    },
+    {
+      "title": "CeLLPhoneAGe.com",
+      "feed_url": "https://www.cellphoneage.com/blog/rss/feed",
+      "website_url": "https://www.cellphoneage.com/news",
+      "description": "Where to Buy a refurbished or used phone? Choose CellphoneAge.com with high quality and low-price. Get your phones or earbuds tips on CellphoneAge.com.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5139582.jpg?t=1608388646"
+    },
+    {
+      "title": "Today Gadgets Specs",
+      "feed_url": "https://www.blogger.com/feeds/2730876445880214758/posts/default",
+      "website_url": "https://todaygadgetspecs.blogspot.com/",
+      "description": "Today Gadgets Specification is a blog all about the specification of smartphones, laptops, and accessories. In this blog, we inform about gadgets before their launching and show their expected specs and images. Stay connected to read about the latest gadgets and updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5276996.jpg?t=1620218622"
+    },
+    {
+      "title": "Mashable",
+      "feed_url": "https://mashable.com/mobile/feed",
+      "website_url": "https://mashable.com/category/mobile",
+      "description": "Mashable is the leading source for news, information and resources for the connected generation on mobile.",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 8800000
+      },
+      "image_url": "https://i1.feedspot.com/4614507.jpg?t=1608387779"
+    },
+    {
+      "title": "Naija Tech Guide",
+      "feed_url": "https://www.naijatechguide.net/feeds/posts/default",
+      "website_url": "https://www.naijatechguide.net/",
+      "description": "Naijatechguide is the best blog for Technology Gist, Gadget Reviews , Specs, and Tips. The Blog also covers Online Services as well as Prices of Mobile Phones, Laptops, and other Gadgets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5197030.jpg?t=1600247592"
+    },
+    {
+      "title": "Just Mobile Pk",
+      "feed_url": "https://www.justmobileinfo.com/feeds/posts/default?alt=rss",
+      "website_url": "https://justmobilepk.blogspot.com/?m=1",
+      "description": "Mobile Prices in Pakistan 2020 just Mobile pk , Daily Updated Mobile Prices, Oppo Mobile prices, Techno Mobile price,Only on just Mobile. Latest updates about latest mobile phone devices.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5150375.jpg?t=1608388522"
+    },
+    {
+      "title": "Xiaomi Global",
+      "feed_url": "https://www.mi.com/global/discover/newsroom",
+      "website_url": "https://www.mi.com/global/discover/newsroom",
+      "description": "Xiaomi was founded in 2010 by serial entrepreneur Lei Jun, who believes that high-quality technology doesn't need to cost a fortune. We create remarkable hardware, software and Internet services for and with the help of our Mi fans.",
+      "followers": {
+        "facebook": 16900000,
+        "twitter": 4400000
+      },
+      "image_url": "https://i1.feedspot.com/4758807.jpg?t=1608387775"
+    },
+    {
+      "title": "iFixScreens Blog",
+      "feed_url": "https://ifixscreens.com/blog/feed/",
+      "website_url": "https://ifixscreens.com/blog/",
+      "description": "Our blog at iFixScreens.com, Most of your questions about broken iPhones, Smartphone or tablets, also we write out news, tips & tricks, wearables",
+      "followers": {
+        "facebook": 106800,
+        "twitter": 899,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5029395.jpg?t=1608387940"
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+{
+  "category": "Computer Science",
+  "source_url": "https://rss.feedspot.com/computer_science_rss_feeds",
+  "feeds": [
+    {
+      "title": "Computational Complexity Blog",
+      "feed_url": "https://blog.computationalcomplexity.org/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.computationalcomplexity.org/",
+      "description": "Computational Complexity is a fun and popular computer science blog written by computational theorists Lance Fortnow and Bill Gasarch.",
+      "followers": {
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/95898.jpg?t=1627626305"
+    },
+    {
+      "title": "Treehouse Blog",
+      "feed_url": "https://blog.teamtreehouse.com/feed",
+      "website_url": "https://blog.teamtreehouse.com/",
+      "description": "The blog covers a wide range of topics that are helpful to computer science students. Treehouse is a popular learning center for students who want to be experts in coding. Their mission is to diversify the tech industry through accessible education, unlocking the door to opportunity, and empowering people to achieve their dreams.",
+      "followers": {
+        "facebook": 284800,
+        "twitter": 130900,
+        "instagram": 81000
+      },
+      "image_url": "https://i1.feedspot.com/5281790.jpg?t=1621250466"
+    },
+    {
+      "title": "John D. Cook Consulting Blog",
+      "feed_url": "https://www.johndcook.com/blog/feed/",
+      "website_url": "https://www.johndcook.com/blog/",
+      "description": "The Endeavor gives readers a sense of how they might combine their programming skills with business, and/or use those skills to solve real-world problems. It is the popular computer science-themed blog of John Cook, a former math professor and programmer who has transitioned into consulting. He helps companies make better decisions by taking advantage of the data they have, combining it with expert opinion, creating mathematical models, overcoming computational difficulties, and interpreting the results.",
+      "followers": {
+        "twitter": 48600
+      },
+      "image_url": "https://i1.feedspot.com/103679.jpg?t=1665146302"
+    },
+    {
+      "title": "MIT Technology Review",
+      "feed_url": "https://www.technologyreview.com/feed/",
+      "website_url": "https://www.technologyreview.com/topic/computing/",
+      "description": "MIT Technology Review is a digitally oriented independent media company whose analysis, features, reviews, interviews, and live events explain the commercial, social, and political impact of new technologies. MIT Technology Review readers are curious technology enthusiasts a global audience of business and thought leaders, innovators, early adopters, entrepreneurs, and investors. Every day, we provide an authoritative filter for the flood of information about technology.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1200000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5430303.jpg?t=1660030445"
+    },
+    {
+      "title": "David Eppstein Blog",
+      "feed_url": "https://11011110.github.io/blog/feed.xml",
+      "website_url": "https://11011110.github.io/blog/",
+      "description": "Anyone interested in computer science is sure to find Eppstein's posts both entertaining and informative. He writes on just about everything, always from a computer science perspective. This journal's name comes from interpreting his initials as the hexadecimal number 0xDE (decimal 222) and then converting the result to binary. He is a Chancellor's Professor of Computer Science at the University of California, Irvine, and an administrator on the English-language Wikipedia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5185947.jpg?t=1627624797"
+    },
+    {
+      "title": "Google Research Blog",
+      "feed_url": "https://research.google/blog/rss/",
+      "website_url": "https://research.google/blog/",
+      "description": "Google AI is focused on bringing the benefits of AI to everyone. In conducting and applying our research, we advance the state-of-the-art in many domains.The latest news and updates directly from Google bring the benefits of AI to everyone.",
+      "followers": {
+        "twitter": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4971488.jpg?t=1660037143"
+    },
+    {
+      "title": "Daniel Lemire Blog",
+      "feed_url": "https://lemire.me/blog/feed/",
+      "website_url": "https://lemire.me/blog/",
+      "description": "Daniel Lemire is a computer science professor at the University of Quebec (TELUQ) in Montreal. His research is focused on software performance and data engineering. He programs in C, C++, Java, JavaScript, Python, Swift and Go. He works primarily in an open-source setting.",
+      "followers": {
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/5060883.jpg?t=1630934710"
+    },
+    {
+      "title": "Computing Education Research Blog",
+      "feed_url": "https://computinged.wordpress.com/feed/",
+      "website_url": "https://computinged.wordpress.com/",
+      "description": "Computing Education Research is about how people come to understanding computing, and how we can facilitate that understanding. I am Mark Guzdial, a professor at the University of Michigan in Computer Science & Engineering, Engineering Education Research, and Information.",
+      "followers": {
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/1086054.jpg?t=1627627805"
+    },
+    {
+      "title": "Computer Science Teacher Blog",
+      "feed_url": "https://feeds.feedburner.com/ComputerScienceTeacher",
+      "website_url": "https://blog.acthompson.net/",
+      "description": "Computer Science Teacher is the personal blog of educator Alfred Thompson. Thompson writes about all things related to teaching computer science as part of the K-12 curriculum, and posts include thoughts on coding problems, announcements of competitions, and interesting updates from computer and tech companies.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/272875.jpg?t=1627626848"
+    },
+    {
+      "title": "Alan Winfield",
+      "feed_url": "https://alanwinfield.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://alanwinfield.blogspot.com/",
+      "description": "Engineer, roboticist, and pro-feminist. Interested in robots as working models of life, evolution, intelligence, and culture.",
+      "followers": {
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/342945.jpg?t=1660032296"
+    },
+    {
+      "title": "Combinatorics And More",
+      "feed_url": "https://gilkalai.wordpress.com/feed/",
+      "website_url": "https://gilkalai.wordpress.com/",
+      "description": "Combinatorics and More is the blog by Gil Kalai. Kalai continues to and has published hundreds of posts on topics ranging from applied mathematics and probability to computer science and optimization and everything in between. Gil Kalai is a mathematician working mainly on geometric combinatorics and the study of convex polytopes and related objects.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/22015.jpg?t=1664259852"
+    },
+    {
+      "title": "What's new",
+      "feed_url": "https://terrytao.wordpress.com/feed/",
+      "website_url": "https://terrytao.wordpress.com/",
+      "description": "What's New is the work of Terence Tao, a mathematician whose work is frequently relevant for computer scientists and computational theorists. Updates on his research and expository papers, discussion of open problems, and other maths-related topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1187123.jpg?t=1627631052"
+    },
+    {
+      "title": "Towards Data Science",
+      "feed_url": "https://towardsdatascience.com/feed/",
+      "website_url": "https://towardsdatascience.com/",
+      "description": "Sharing concepts, ideas and codes on data science. Towards Data Science Inc. is a corporation registered in Canada. It provides a platform for thousands of people to exchange ideas and to expand their understanding of data science.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 234000,
+        "instagram": 185
+      },
+      "image_url": "https://i1.feedspot.com/4825449.jpg?t=1616494733"
+    },
+    {
+      "title": "Knowing and Doing Blog",
+      "feed_url": "http://www.cs.uni.edu/~wallingf/blog/atom.xml",
+      "website_url": "http://www.cs.uni.edu/~wallingf/blog/",
+      "description": "Reflections of an academic and computer scientist.",
+      "followers": {
+        "twitter": 195
+      },
+      "image_url": "https://i1.feedspot.com/121775.jpg?t=1628590776"
+    },
+    {
+      "title": "Scott Aaronson Blog",
+      "feed_url": "https://scottaaronson.blog/?feed=rss2",
+      "website_url": "https://scottaaronson.blog/",
+      "description": "I'm David J. Bruton Centennial Professor of Computer Science at The University of Texas at Austin and director of its Quantum Information Center. Prior to coming here, I taught for nine years in Electrical Engineering and Computer Science at MIT. My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5360790.jpg?t=1660031002"
+    },
+    {
+      "title": "Windows On Theory Blog",
+      "feed_url": "https://windowsontheory.org/feed/",
+      "website_url": "https://windowsontheory.org/",
+      "description": "The blog describes its purpose as a forum for exchanging ideas and debating topics of interest to the Theory of Computing. Although Windows on Theory was started by a group of theoretical computer science researchers at Microsoft Research Silicon Valley (MSR-SVC), the blog's list of authors now includes a slew of other theoretical researchers from around the country.",
+      "followers": {
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/1499842.jpg?t=1627631577"
+    },
+    {
+      "title": "Process Algebra Diary",
+      "feed_url": "http://processalgebra.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://processalgebra.blogspot.com/",
+      "description": "Process Algebra Diary is the blog of Luca Aceto. It covers various papers and process reports about Process Algebra, plus some other fun stuff in Mathematics and Computer Science at large and on general issues related to research, teaching, and academic life.",
+      "followers": {
+        "twitter": 183
+      },
+      "image_url": "https://i1.feedspot.com/5306485.jpg?t=1627630408"
+    },
+    {
+      "title": "Computer Science Simplified",
+      "feed_url": "https://computersciencesimplified.substack.com/feed",
+      "website_url": "https://computersciencesimplified.substack.com/",
+      "description": "Become a real software engineer who understands the principles of computer science, system design, architecture, and software engineering in general",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2ee3613b-2ea8-4de4-94d7-944a269834c9_442x442.png"
+    },
+    {
+      "title": "University of St Andrews Computer Science Blog",
+      "feed_url": "https://blogs.cs.st-andrews.ac.uk/csblog/feed/",
+      "website_url": "https://blogs.cs.st-andrews.ac.uk/csblog/",
+      "description": "The Computer Science Blog from the University of St Andrews shares news and stories from the School including PhD successes, research highlights, seminars, events, and student activities. It offers an engaging look into the academic and community life of computing at St Andrews.",
+      "followers": {
+        "facebook": 711,
+        "twitter": 1200,
+        "instagram": 428
+      },
+      "image_url": "https://i1.feedspot.com/8665347.jpg?t=1756702979"
+    },
+    {
+      "title": "Computational Complexity",
+      "feed_url": "https://blog.computationalcomplexity.org/feeds/posts/default",
+      "website_url": "https://blog.computationalcomplexity.org/",
+      "description": "Computational Complexity and other fun stuff in math and computer science from Lance Fortnow and Bill Gasarch.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/22016.jpg"
+    },
+    {
+      "title": "Computer Science Teacher",
+      "feed_url": "https://blog.acthompson.net/feeds/posts/default",
+      "website_url": "https://blog.acthompson.net/",
+      "description": "A blog about computer science education. Projects, resources, and ideas for teaching, learning, and using computer science. By a teacher for teachers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8665338.jpg?t=1756702845"
+    },
+    {
+      "title": "MIT News \u00bb Computer science and technology",
+      "feed_url": "https://news.mit.edu/rss/topic/computers",
+      "website_url": "https://news.mit.edu/topic/computers/",
+      "description": "MIT News is dedicated to communicating to the media and the public the news and achievements of the students, faculty, staff and the greater MIT community.",
+      "followers": {
+        "twitter": 1400000,
+        "instagram": 972700
+      },
+      "image_url": "https://i1.feedspot.com/4398914.jpg?t=1756473785"
+    },
+    {
+      "title": "cs4fn",
+      "feed_url": "https://cs4fn.blog/feed/",
+      "website_url": "https://cs4fn.blog/",
+      "description": "CS4FN (Computer Science for Fun) is a resource-rich blog and magazine from Queen Mary University of London that brings playful, engaging takes on computer science\u2014offering curious articles, puzzles, 'unplugged' activities, and free downloadable magazines and booklets for schools and enthusiasts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5279748.jpg?t=1756703063"
+    },
+    {
+      "title": "Computer Science Newbies",
+      "feed_url": "https://www.csnewbs.com/blog-feed.xml",
+      "website_url": "https://www.csnewbs.com/",
+      "description": "Homepage for learning about computer science in school. Discover topics across GCSE and Level 3 IT subjects, plus programming languages including Python, HTML and Greenfoot.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8665339.jpg?t=1756703430"
+    },
+    {
+      "title": "ScienceDaily \u00bb : Computer Science",
+      "feed_url": "https://www.sciencedaily.com/rss/computers_math/computer_science.xml",
+      "website_url": "https://www.sciencedaily.com/news/computers_math/computer_science/",
+      "description": "Computer Science. Read all the latest developments in the computer sciences including articles on new software, hardware and systems.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/129918.jpg?t=1756473784"
+    },
+    {
+      "title": "Mostly nerdless \u00bb Computer Science",
+      "feed_url": "https://mostlynerdless.de/feed/",
+      "website_url": "https://mostlynerdless.de/blog/category/computer-science/",
+      "description": "Mostly Nerdless is a technical blog by Johannes Bechberger that dives into advanced computer science topics like Java profiling, eBPF debugging, OpenJDK internals, Python debugging, and low-level systems optimization.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/8665342.jpg?t=1756703651"
+    },
+    {
+      "title": "Department of Computer Science",
+      "feed_url": "https://lbscomputerscience.blogspot.com/feeds/posts/default",
+      "website_url": "https://lbscomputerscience.blogspot.com/",
+      "description": "Lal Bahadur Shastri College's Computer Science Blog shares departmental news, academic resources, student project updates, exam notices, and career guidance\u2014delivering a practical and informative platform for B.Sc Computer Science students.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/8665341.jpg?t=1756703863"
+    },
+    {
+      "title": "Journal of Computer Science",
+      "feed_url": "https://thescipub.com/feed/jcs/current.rss",
+      "website_url": "https://thescipub.com/jcs/",
+      "description": "Current Issue | Journal of Computer Science",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 182
+      },
+      "image_url": "https://i1.feedspot.com/8665343.jpg"
+    },
+    {
+      "title": "Mostafa Technical Blog \u00bb Computer Science",
+      "feed_url": "https://mshaeri.com/blog/category/computer-science/feed/",
+      "website_url": "https://mshaeri.com/blog/category/computer-science/",
+      "description": "I'm a software developer with a focus on web development, software architecture and database optimization. I occasionally share insights and practical tips from my work on this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8665344.jpg?t=1756704167"
+    },
+    {
+      "title": "Bertrand Meyer's technology+ blog \u00bb Computer Science",
+      "feed_url": "https://bertrandmeyer.com/feed/",
+      "website_url": "https://bertrandmeyer.com/category/computer-science/",
+      "description": "Software engineering, programming methodology, languages, verification, general technology, publication culture, and more",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/8665348.jpg?t=1756705088"
+    },
+    {
+      "title": "Kalvium Matters \u00bb Computer Science",
+      "feed_url": "https://blog.kalvium.com/category/computer-science/feed/",
+      "website_url": "https://blog.kalvium.com/category/computer-science/",
+      "description": "Official Blog of Kalvium",
+      "followers": {
+        "facebook": 13600
+      },
+      "image_url": "https://i1.feedspot.com/8665335.jpg"
+    },
+    {
+      "title": "Prof. Ajay Pashankar's Blog \u00bb Computer Science",
+      "feed_url": "https://www.profajaypashankar.com/category/computer-science/feed/",
+      "website_url": "https://www.profajaypashankar.com/category/computer-science/",
+      "description": "Educational Blog for IT and CS students(BSc,MSc,BE,MCA)",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8665346.jpg?t=1756705645"
+    },
+    {
+      "title": "USC Viterbi \u00bb Computer Science",
+      "feed_url": "https://viterbiadmission.usc.edu/category/academics/compsci/feed/",
+      "website_url": "https://viterbiadmission.usc.edu/category/academics/compsci/",
+      "description": "Undergraduate admission news, announcements, updates and more for the USC Viterbi School of Engineering.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8665336.jpg?t=1756705761"
+    },
+    {
+      "title": "The Conversation \u00bb Computer Science",
+      "feed_url": "https://theconversation.com/topics/computer-science-6612/articles.atom",
+      "website_url": "https://theconversation.com/topics/computer-science-6612/",
+      "description": "Browse Computer science news, research and analysis from The Conversation",
+      "followers": {
+        "facebook": 117400,
+        "twitter": 65300,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/8665337.jpg"
+    },
+    {
+      "title": "Tech Xplore \u00bb Computer Sciences",
+      "feed_url": "https://techxplore.com/rss-feed/computer-sciences-news/",
+      "website_url": "https://techxplore.com/computer-sciences-news/",
+      "description": "The latest news on computer science, computer science technology, computer science technologies and technology science.",
+      "followers": {
+        "facebook": 44200
+      },
+      "image_url": "https://i1.feedspot.com/5497666.jpg?t=1674450778"
+    },
+    {
+      "title": "Semantic Domain Blog",
+      "feed_url": "https://semantic-domain.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://semantic-domain.blogspot.com/",
+      "description": "Semantic Domain is the computer science and programming blog of Neel Krishnaswami. Features Krishnaswami's thoughts on mathematics, computer science, and a few other niche topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/561737.jpg?t=1627630638"
+    },
+    {
+      "title": "David Walsh",
+      "feed_url": "https://davidwalsh.name/feed",
+      "website_url": "https://davidwalsh.name/",
+      "description": "A blog featuring tutorials about JavaScript, HTML5, AJAX, PHP, CSS, WordPress, and everything else development. David Walsh is Mozilla's senior web developer and the core developer for the MooTools Javascript Framework.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 86400
+      },
+      "image_url": "https://i1.feedspot.com/4431048.jpg?t=1606110743"
+    },
+    {
+      "title": "Embedded in Academia",
+      "feed_url": "https://blog.regehr.org/feed",
+      "website_url": "https://blog.regehr.org/",
+      "description": "Embedded in Academia is the popular blog of John Regehr, a professor of computer science at University of Utah.",
+      "followers": {
+        "twitter": 15200
+      },
+      "image_url": "https://i1.feedspot.com/5008153.jpg?t=1627628136"
+    },
+    {
+      "title": "Turing's Invisible Hand Blog",
+      "feed_url": "https://agtb.wordpress.com/feed/",
+      "website_url": "https://agtb.wordpress.com/",
+      "description": "Turing's Invisible Hand focuses on the field of Algorithmic Game Theory and Economics, broadly defined. It also covers related scientific topics such as the theory of computer science and artificial intelligence and publishes related tidbits about the world in general.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4902101.jpg?t=1614859601"
+    },
+    {
+      "title": "In Theory",
+      "feed_url": "https://lucatrevisan.wordpress.com/feed/",
+      "website_url": "https://lucatrevisan.wordpress.com/",
+      "description": "Luca is a professor of computer science at Berkeley. He works in theoretical computer science and he lives in San Francisco. When he is out of town he can often be found in Hong Kong, New York, or Rome. In theory is about the food he likes to eat, the movies he likes to watch, and math and computer science theory.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/22021.jpg?t=1660031783"
+    },
+    {
+      "title": "Bits and Pieces",
+      "feed_url": "https://harry-lewis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://harry-lewis.blogspot.com/",
+      "description": "A blog by Gordon McKay. Gordon McKay is a professor of Computer Science at Harvard's School of Engineering and Applied Sciences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5306612.jpg?t=1627636088"
+    },
+    {
+      "title": "Adventures in Computation",
+      "feed_url": "http://aaronsadventures.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://aaronsadventures.blogspot.com/",
+      "description": "He writes on just about everything, always from a computer science perspective. CS professor at Penn. Amazon Scholar at AWS. Author of The Ethical Algorithm (w/ Michael Kearns). I study machine learning, privacy, game theory, and fairness.",
+      "followers": {
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5430337.jpg?t=1660033567"
+    },
+    {
+      "title": "My Biased Coin Blog",
+      "feed_url": "http://mybiasedcoin.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mybiasedcoin.blogspot.com/",
+      "description": "Michael Mitzenmacher's take on computer science, algorithms, networking, information theory, and related items. He is a Professor of Computer Science at Harvard University.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/95903.jpg?t=1627630121"
+    },
+    {
+      "title": "The Leisure of the Theory Class",
+      "feed_url": "https://theoryclass.wordpress.com/feed/",
+      "website_url": "https://theoryclass.wordpress.com/",
+      "description": "The Leisure of the Theory of Class is a blog devoted to speculation and ruminations on all aspects of economic and game theory.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4233981.jpg?t=1660037406"
+    },
+    {
+      "title": "Confessions of a Code Addict",
+      "feed_url": "https://blog.codingconfessions.com/feed",
+      "website_url": "https://blog.codingconfessions.com/",
+      "description": "Deep dives into varied topics on Computer Science including compilers, programming languages, database internals, AI and more. Subscribe for insights and advance your engineering skills!",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe440a724-cff0-437a-8361-d7699406ac22_500x500.png"
+    },
+    {
+      "title": "Simplified Computer Science",
+      "feed_url": "https://simplifiedcomputerscience.com/feed/",
+      "website_url": "https://simplifiedcomputerscience.com/insightblogs/",
+      "description": "Unlocking Computer Science: SimplifiedCS for Effortless Learning!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8665345.jpg"
+    },
+    {
+      "title": "Computer Science",
+      "feed_url": "https://computerscience1246.blogspot.com/feeds/posts/default",
+      "website_url": "https://computerscience1246.blogspot.com/",
+      "description": "Explore how data processing, artificial intelligence, and computer technology drive advances in robotics and computer science for innovative solutions.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/8665340.jpg?t=1756703457"
+    },
+    {
+      "title": "CACM Blog",
+      "feed_url": "https://cacm.acm.org/blogs/blog-cacm.rss",
+      "website_url": "https://cacm.acm.org/",
+      "description": "Communications of the ACM is the leading print and online publication for the computing and information technology fields. Read by computing's leading professionals worldwide, Communications is recognized as the most trusted and knowledgeable source of industry information for today's computing professionals.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/21922.jpg?t=1660029664"
+    },
+    {
+      "title": "Jeremy Kun",
+      "feed_url": "https://jeremykun.com/feed/",
+      "website_url": "https://www.jeremykun.com/",
+      "description": "My name is Jeremy Kun. I'm currently a software engineer at 21. co. I earned a Ph.D. in mathematics from the University of Illinois at Chicago, where my advisor was Lev Reyzin. This blog is a presentation of the interesting solutions I come across, and an exploration of the deeper mathematical ideas therein. Most often this means exploring the mathematical structure of a problem to lubricate the cogs of algorithm design.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4474659.jpg?t=1660032507"
+    },
+    {
+      "title": "CodeMonkey Blog",
+      "feed_url": "https://www.codemonkey.com/feed/",
+      "website_url": "https://www.codemonkey.com/blog/",
+      "description": "CodeMonkey is a leading coding for kids program. Through its award-winning courses, millions of students learn how to code in real programming languages. It offers an engaging and enjoyable curriculum for schools, after-school clubs, and camps as well as self-paced online courses to learn coding at home.",
+      "followers": {
+        "facebook": 24800,
+        "twitter": 11000,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/5288578.jpg?t=1622785181"
+    },
+    {
+      "title": "RJ Lipton",
+      "feed_url": "https://rjlipton.wpcomstaging.com/feed/",
+      "website_url": "https://rjlipton.com/",
+      "description": "A personal view of the theory of computation. Dick Lipton is a professor of computer science at Georgia Tech. He has worked in the area of theory of computation since 1973. Named for the famous letter in which mathematician Kurt G\u00f6del was the first to state the P=NP question, G\u00f6del's Lost Letter and P=NP is a blog all about P=NP and other questions relating to the theory of computing.",
+      "followers": {
+        "twitter": 956
+      },
+      "image_url": "https://i1.feedspot.com/5306484.jpg?t=1627629345"
+    },
+    {
+      "title": "Brian Hayes Blog",
+      "feed_url": "http://bit-player.org/",
+      "website_url": "http://bit-player.org/",
+      "description": "I'm the lucky dog who has been able to spend a lifetime exploring math, science, computing, and technology, then writing about my adventures.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/22085.jpg?t=1627625554"
+    },
+    {
+      "title": "GeeksforGeeks",
+      "feed_url": "https://www.geeksforgeeks.org/feed/",
+      "website_url": "https://www.geeksforgeeks.org/",
+      "description": "A Computer Science portal for geeks. It contains well written, well thought and well explained computer science and programming articles, quizzes, and practice/competitive programming/company interview questions.",
+      "followers": {
+        "facebook": 215700,
+        "twitter": 84300,
+        "instagram": 471600
+      },
+      "image_url": "https://i1.feedspot.com/3365675.jpg?t=1658840981"
+    },
+    {
+      "title": "Panos Ipeirotis Blog",
+      "feed_url": "https://www.behind-the-enemy-lines.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.behind-the-enemy-lines.com/",
+      "description": "Random thoughts of a computer scientist who is working behind the enemy lines; and lately turned into a double agent.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5430418.jpg?t=1660037799"
+    }
+  ]
+}

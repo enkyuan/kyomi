@@ -1,0 +1,55 @@
+{
+  "category": "Vintage Book",
+  "source_url": "https://rss.feedspot.com/vintage_book_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vintage Girls Books",
+      "feed_url": "http://vintagegirlsbooks.blogspot.com/feeds/posts/default",
+      "website_url": "http://vintagegirlsbooks.blogspot.com/",
+      "description": "Semi-illiterate that can barely string a sentence together, but I love vintage books and I have a lot of opinions on them, so I'm going to share them with you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5308832.jpg?t=1628086374"
+    },
+    {
+      "title": "Lost Classics of Teen Lit: 1939-1989 \u00bb Vintage YA Fiction",
+      "feed_url": "https://mondomolly.wordpress.com/category/vintage-ya-fiction/feed/",
+      "website_url": "https://mondomolly.wordpress.com/category/vintage-ya-fiction/",
+      "description": "Posts about Vintage YA Fiction. 50 years of lost Young Adult classics, updated with a new title every Sunday.",
+      "followers": {
+        "facebook": 991,
+        "twitter": 61
+      },
+      "image_url": "https://i1.feedspot.com/5308895.jpg?t=1628143203"
+    },
+    {
+      "title": "Vintage Reads",
+      "feed_url": "https://vintagereads.blogspot.com/feeds/posts/default",
+      "website_url": "https://vintagereads.blogspot.com/",
+      "description": "I'm Nicola. Mother of grown up daughters and reader of books. Mostly novels.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5308917.jpg?t=1628144248"
+    },
+    {
+      "title": "The Vintage Book Club Blog",
+      "feed_url": "https://thevintagebookclub.com/feed/",
+      "website_url": "https://thevintagebookclub.com/blog/",
+      "description": "Hi there! I'm Dr. Carly Maris, and I am the founder and curator of the Vintage Book Club, formerly the Pinup Book Club. I have been interested in vintage styling and history for 20 years, and have my PhD in History.",
+      "followers": {
+        "twitter": 2200,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5308825.jpg?t=1628086221"
+    },
+    {
+      "title": "Love Vintage Books Blog",
+      "feed_url": "https://www.lovevintagebooks.com.au/blog?format=rss",
+      "website_url": "https://www.lovevintagebooks.com.au/blog",
+      "description": "The Love Vintage Books blog is written by Margaret Dunstan, the owner/manager. Margaret has been selling collectible & vintage books via shop fronts, mail order, fairs & markets from 1990 & online from 1999.",
+      "followers": {
+        "facebook": 787,
+        "instagram": 418
+      },
+      "image_url": "https://i1.feedspot.com/5308821.jpg?t=1628085532"
+    }
+  ]
+}

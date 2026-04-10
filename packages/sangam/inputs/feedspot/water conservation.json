@@ -1,0 +1,60 @@
+{
+  "category": "Water Conservation",
+  "source_url": "https://rss.feedspot.com/water_conservation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Water Use It Wisely",
+      "feed_url": "https://wateruseitwisely.com/feed/",
+      "website_url": "https://wateruseitwisely.com/blog/",
+      "description": "News & Events, Product updates, reviews from Water Use It Wisely (WUIW). Also covers articles on Environmental and Sustainability, Education, Gardening, Landscaping, Outdoors, Kids and more. WUIW is a community awareness campaign demonstrating how changing a few simple habits can have a significant impact on water consumption.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 13000,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5041333.jpg?t=1622472495"
+    },
+    {
+      "title": "Waterwise News",
+      "feed_url": "https://waterwise.org.uk/feed/",
+      "website_url": "https://waterwise.org.uk/news-events/",
+      "description": "Blog posts on saving water, water efficiency, eco-lifestyle, events, and more from Waterwise. Waterwise is a non-profit organization focused on lowering water consumption in the United Kingdom that provides independent and ambitious leadership to create social and political change.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 10900,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5041336.jpg?t=1622472525"
+    },
+    {
+      "title": "AquaSwitch",
+      "feed_url": "https://www.aquaswitch.co.uk/feed/",
+      "website_url": "https://www.aquaswitch.co.uk/blog/",
+      "description": "Keep up to date with the current issues and latest news in the British Water Market. Contains guides and advice on switching your business water supplier. AquaSwitch provides a comparison and switching service that allows British businesses to benefit from deregulation of the water market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5374037.jpg?t=1645447576"
+    },
+    {
+      "title": "Metron News",
+      "feed_url": "https://metron-us.com/news/",
+      "website_url": "https://metron-us.com/news/",
+      "description": "Useful tips and information to help you save water and money. WaterSignal measures water flow in real-time to detect leaks and conserve water.",
+      "followers": {
+        "facebook": 223,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5041337.jpg?t=1622472500"
+    },
+    {
+      "title": "Water Conservation Blog \u00bb Water Conservation",
+      "feed_url": "https://blog.conservationmart.com/feed/",
+      "website_url": "https://blog.conservationmart.com/category/water-conservation/",
+      "description": "Ideas, recommendations, and articles about how to save money on your water bills. Conservation Mart is your one-stop-shop for weatherization materials, energy-saving goods, and water-saving devices.",
+      "followers": {
+        "facebook": 440,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5041331.jpg?t=1622472503"
+    }
+  ]
+}

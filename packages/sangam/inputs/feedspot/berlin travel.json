@@ -1,0 +1,71 @@
+{
+  "category": "Berlin Travel",
+  "source_url": "https://rss.feedspot.com/berlin_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "visitBerlin Blog",
+      "feed_url": "https://www.visitberlin.de/de/blog/feed",
+      "website_url": "https://www.visitberlin.de/de/blog",
+      "description": "Catherine has lived in Berlin for over 20 years and loves to be out and about in the city. Preferably by bike, she discovers the most exciting and interesting sides of Berlin. Dagmar is an archaeologist and has worked on the Mayan sites in Central America. Now she is busy with the cultural treasures of Berlin and loves to be out and about in the city, to take the time to look more closely and to write about it. Check out the blog and discover the awesomeness of Berlin.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 93700,
+        "instagram": 472500
+      },
+      "image_url": "https://i1.feedspot.com/5604705.jpg?t=1687412901"
+    },
+    {
+      "title": "Berlin Travel Tips",
+      "feed_url": "https://berlintraveltips.com/feed/",
+      "website_url": "https://berlintraveltips.com/",
+      "description": "Ali is a Berlin resident since 2015. She is originally from the US, but Germany is now home. And she loves Berlin so much that she wants to make sure you have the best trip possible when you visit Berlin. From the iconic sights to the lesser-known gems, you can find everything you need to plan a trip to Berlin on her blog.",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5604708.jpg?t=1687880765"
+    },
+    {
+      "title": "Hostelworld Travel Blog \u00bb Berlin",
+      "feed_url": "https://www.hostelworld.com/blog/c/berlin/feed/",
+      "website_url": "https://www.hostelworld.com/blog/c/berlin/",
+      "description": "Check out the Hostelworld Trave blog dedicated to Berlin travel. The aim of this travel blog is to feed and water your wanderlust. Here they share their best travel tips with the help of their favorite travel writers; such as where to find those authentic, soul-filled places, and the hottest hostels to stay in while you're at it. They will give you a sneak peek into hostel life, solo travel, and the friend-filled adventures you can have on the road!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604707.jpg?t=1687414411"
+    },
+    {
+      "title": "Slow Travel Berlin",
+      "feed_url": "http://www.slowtravelberlin.com/feed/",
+      "website_url": "http://www.slowtravelberlin.com/",
+      "description": "Inspired by the Slow Food movement, Slow Travel was founded by British guidebook author and travel journalist Paul Sullivan in 2010, with the aim of encouraging people to travel deeper and more mindfully. Here on this blog, you will find articles on art, culture, travel, design, architecture, food, drinks, health, history, literature, and more.",
+      "followers": {
+        "facebook": 62000,
+        "twitter": 27400
+      },
+      "image_url": "https://i1.feedspot.com/822035.jpg?t=1687912497"
+    },
+    {
+      "title": "Berlin.de",
+      "feed_url": "https://www.berlin.de/en/tourism/guides/index.rss",
+      "website_url": "https://www.berlin.de/en/tourism/guides/",
+      "description": "Berlin.de is the official website of Berlin. It gives you insights into traveling Brelin via guided tours and organized city tours in Berlin: for visitors, tourists, and students. Other than that, you can also read about politics, administration, business, economy, and more about Berlin.",
+      "followers": {
+        "facebook": 56200,
+        "twitter": 123100,
+        "instagram": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5604706.jpg?t=1687412906"
+    },
+    {
+      "title": "Miss Tourist \u00bb Berlin",
+      "feed_url": "https://misstourist.com/category/europe/germany/berlin/feed/",
+      "website_url": "https://misstourist.com/category/europe/germany/berlin/",
+      "description": "Yulia is a world traveler, adventurer, and entrepreneur. She has been traveling full-time for the last 6 years and visited -70 countries. She was born in Russia in an industrial city where people generally do not travel much and it still blows her mind about achieving the seemingly impossible! Check out her blogs for traveling tips, saving money, adventure, time-saving, and more, as she travels the world. Also, explore Berlin with her.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 50900,
+        "instagram": 38300
+      },
+      "image_url": "https://i1.feedspot.com/5604704.jpg?t=1687412895"
+    }
+  ]
+}

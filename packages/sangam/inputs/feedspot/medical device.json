@@ -1,0 +1,383 @@
+{
+  "category": "Medical Device",
+  "source_url": "https://rss.feedspot.com/medical_device_rss_feeds",
+  "feeds": [
+    {
+      "title": "Verdict Medical Devices",
+      "feed_url": "https://www.medicaldevice-network.com/feed/",
+      "website_url": "https://www.medicaldevice-network.com/",
+      "description": "Medicaldevice-network.com is your one stop for information on the medical device industry, covering everything along the supply chain from biomaterials and materials solutions to electronics, packaging, motors and motion control, outsourcing and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4882657.jpg?t=1612435937"
+    },
+    {
+      "title": "iData Research Blog",
+      "feed_url": "https://idataresearch.com/feed/",
+      "website_url": "https://idataresearch.com/blog/",
+      "description": "iData Research is a full-service medical consulting market research firm dedicated to the provision of business intelligence for the medical device, biologics, dental and pharmaceutical industries. iData Research's MedTech, Cardio, Dental and OrthoFuture blogs help you stay on top of the latest news in at medical device industries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5197570.jpg?t=1600423884"
+    },
+    {
+      "title": "Medical Device Regulatory",
+      "feed_url": "https://www.regulatorymedicaldevice.com/feeds/posts/default",
+      "website_url": "https://www.regulatorymedicaldevice.com/",
+      "description": "Welcome to Medical Device Regulatory, a specialized blog dedicated to exploring the world of medical devices and their regulatory landscape. As an extension of the Science Arena franchise, our mission is to provide valuable insights, updates, and resources on the regulatory aspects of medical devices.",
+      "followers": {
+        "facebook": 418,
+        "instagram": 341
+      },
+      "image_url": "https://i1.feedspot.com/5673602.jpg?t=1695028931"
+    },
+    {
+      "title": "Greenlight Guru Blog",
+      "feed_url": "https://www.greenlight.guru/blog/rss.xml",
+      "website_url": "https://www.greenlight.guru/blog#",
+      "description": "The Guru Edge consists of comprehensive, industry-guiding services, tools, and educational resources that accelerate your success. Greenlight Guru gives you an edge in your medical device development processes so that you can deliver life-changing MedTech. Find information on Modern Quality Management Software and Services for Medical Device Companies.",
+      "followers": {
+        "facebook": 353,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4881726.jpg?t=1612434315"
+    },
+    {
+      "title": "ScienceDaily",
+      "feed_url": "https://www.sciencedaily.com/rss/health_medicine/medical_devices.xml",
+      "website_url": "https://www.sciencedaily.com/news/health_medicine/medical_devices/",
+      "description": "ScienceDaily features breaking news about the latest scientific discoveries on everything from astrophysics to zoology from the world's leading universities and research organizations. Get the latest research news on medical devices and medical technology.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4882674.jpg?t=1612434307"
+    },
+    {
+      "title": "Operon Strategist Blog",
+      "feed_url": "https://operonstrategist.com/feed/",
+      "website_url": "https://operonstrategist.com/blog/",
+      "description": "Operon Strategist is a technical consultancy & regulatory advisory company providing consultancy & guidance to various manufacturers in the healthcare.",
+      "followers": {
+        "facebook": 790,
+        "twitter": 344
+      },
+      "image_url": "https://i1.feedspot.com/4960713.jpg?t=1612434336"
+    },
+    {
+      "title": "NAMSA",
+      "feed_url": "https://namsa.com/feed/",
+      "website_url": "https://namsa.com/",
+      "description": "NAMSA is leading contract research organization (CRO), and the world's only medical research organization (MRO), providing expert regulatory, laboratory, clinical, and compliance services to medical device and healthcare product manufacturers. In this blog you will get information about their medical device and healthcare services and more.",
+      "followers": {
+        "twitter": 482
+      },
+      "image_url": "https://i1.feedspot.com/4881516.jpg?t=1612434324"
+    },
+    {
+      "title": "Orthogonal",
+      "feed_url": "https://orthogonal.io/feed/",
+      "website_url": "https://orthogonal.io/insights/article/",
+      "description": "Orthogonal is a software development and design consulting firm that creates Software as a Medical Device (SaMD), digital therapeutics (DTx), and connected medical devices. Orthogonal's blog provides thought leadership, timely news, literature reviews, articles, white papers, and commentary for Software as a Medical Device, digital therapeutics (DTx), and connected medical device systems.",
+      "followers": {
+        "facebook": 368,
+        "twitter": 626
+      },
+      "image_url": "https://i1.feedspot.com/5416651.jpg?t=1656565812"
+    },
+    {
+      "title": "Clinico Diagnostic & Scan Centre Blog",
+      "feed_url": "https://www.clinico.in/feed/",
+      "website_url": "https://www.clinico.in/blog/",
+      "description": "Getting ready for a stress test? This blog will educate you on what a stress test is, why it's done, its three types, and the preparation before the test. Clinico offers Diagnostic services in Mumbai.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 479
+      },
+      "image_url": "https://i1.feedspot.com/5379404.jpg?t=1646807857"
+    },
+    {
+      "title": "Primedeq- Blog",
+      "feed_url": "https://www.primedeq.com/blog/feed/",
+      "website_url": "https://www.primedeq.com/blog/",
+      "description": "Interesting inforPrimedeQ is an eMarketplace for medical equipment buying, selling, renting, servicing and spares.mation on medical equipment in India",
+      "followers": {
+        "facebook": 760,
+        "twitter": 91
+      },
+      "image_url": "https://i1.feedspot.com/5227379.jpg?t=1612434340"
+    },
+    {
+      "title": "The Medical Futurist",
+      "feed_url": "https://api.medicalfuturist.com/feed/",
+      "website_url": "https://medicalfuturist.com/magazine/",
+      "description": "Berci Mesk\u00f3, The Director of The Medical Futurist Institute, science fiction fanatic, health tracker with a mission to bring future technologies to healthcare.",
+      "followers": {
+        "facebook": 87500,
+        "twitter": 83200,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4864249.jpg?t=1612165618"
+    },
+    {
+      "title": "Medical Device Academy Blog",
+      "feed_url": "https://medicaldeviceacademy.com/blog/feed/",
+      "website_url": "https://medicaldeviceacademy.com/blog/",
+      "description": "Medical Device Academy blog archive contains more than 200 blogs related to 510k submissions, FDA regulations, quality systems, auditing and CAPA.",
+      "followers": {
+        "twitter": 266
+      },
+      "image_url": "https://i1.feedspot.com/4881619.jpg?t=1612434438"
+    },
+    {
+      "title": "China Med Device",
+      "feed_url": "https://chinameddevice.com/cmd-blogs/feed/",
+      "website_url": "https://chinameddevice.com/cmd-blogs/",
+      "description": "China Med Device specialize in accelerating Western medtech companies with turn-key solutions for China FDA regulatory & CRO services and commercialization. Get daily updates about China medtech market assessment, CFDA regulation, China funding oppotunies.",
+      "followers": {
+        "facebook": 7,
+        "twitter": 101
+      },
+      "image_url": "https://i1.feedspot.com/4881737.jpg?t=1612434355"
+    },
+    {
+      "title": "Easy Medical Device Blog",
+      "feed_url": "https://easymedicaldevice.com/blog/feed/",
+      "website_url": "https://easymedicaldevice.com/blog/",
+      "description": "Easy Medical Device is a platform for tools and resources for Regulatory Affairs, Quality Management, Regualtory Compliance. Learn how to choose your notified body or how the device regulation is different in other countries",
+      "followers": {
+        "facebook": 770,
+        "twitter": 2100,
+        "instagram": 779
+      },
+      "image_url": "https://i1.feedspot.com/4960709.jpg?t=1612434351"
+    },
+    {
+      "title": "Strategy Inc. Blog",
+      "feed_url": "https://www.strategyinc.net/feed/",
+      "website_url": "https://www.strategyinc.net/blog/",
+      "description": "The Strategy Inc. blog includes valuable information for both leaders in lifescience startups and of established innovative companies seeking industry insight.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5593848.jpg?t=1686297034"
+    },
+    {
+      "title": "Asian Medical Blog",
+      "feed_url": "https://www.asianmedical.net/feed/",
+      "website_url": "https://www.asianmedical.net/blog/",
+      "description": "Asian Medical Blog offers insights and expertise to help you navigate the region's healthcare industry. Stay informed and make sensible decisions. Asian Medical, Inc. is a representative for medical companies that want to export more medical equipment to the Asia-Pacific and Middle East regions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7274693.jpg?t=1710501048"
+    },
+    {
+      "title": "The Medical and Dental Device Patenting Blog",
+      "feed_url": "http://www.medicaldevicepatentattorneys.com/feed/",
+      "website_url": "https://www.medicaldevicepatentattorneys.com/",
+      "description": "This blog gives information as how to protect medical and dental inventions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4881699.jpg?t=1612434532"
+    },
+    {
+      "title": "Medical Device Marketing Insights",
+      "feed_url": "https://medicaldevicemktgblog.com/feed/",
+      "website_url": "https://medicaldevicemktgblog.com/",
+      "description": "Medical Device Marketing Insights is a blog all about the lessons Tim Walker has learned over a 30-year career commercializing Medical Devices. Sharing these lessons with you is my way of paying it forward. All of the stories are based on real-life experiences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5183121.jpg?t=1597669538"
+    },
+    {
+      "title": "Knobbe Medical",
+      "feed_url": "https://knobbemedical.com/feed/",
+      "website_url": "https://knobbemedical.com/",
+      "description": "KnobbeMedical.com is a cooperative portal for entrepreneurs, executives, clinicians, researchers, investors, and corporate board members who are exploring a start-up, joint venture or spin-off in the medical device industry. Get all updates about everything you need to operate your medical device business.",
+      "followers": {
+        "facebook": 70,
+        "twitter": 721
+      },
+      "image_url": "https://i1.feedspot.com/4881579.jpg?t=1612434372"
+    },
+    {
+      "title": "Aligned Elements Blog",
+      "feed_url": "https://www.aligned.ch/blog?format=feed&type=rss",
+      "website_url": "https://www.aligned.ch/blog",
+      "description": "Aligned Elements is a Medical Device application lifecycle management (ALM) solution enabling fast development and regulatory compliance through improved Design History File management. Read more about medical device development insights in general and medical device application lifecycle management, in particular, using Aligned Elements - the medical device development ALM.",
+      "followers": {
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5226114.jpg?t=1607506972"
+    },
+    {
+      "title": "Meera Operon Strategist",
+      "feed_url": "https://meeraoperonstrategist.blogspot.com/feeds/posts/default",
+      "website_url": "https://meeraoperonstrategist.blogspot.com/",
+      "description": "Provides regulatory guidance to various manufacturers in the healthcare industry to ensure the strategic development of these manufacturers. Operon Strategist is a medical device quality consulting company.",
+      "followers": {
+        "facebook": 790,
+        "twitter": 344
+      },
+      "image_url": "https://i1.feedspot.com/5340961.jpg?t=1637047493"
+    },
+    {
+      "title": "Best Rated Docs",
+      "feed_url": "https://bestrateddocs.com/feed/",
+      "website_url": "https://bestrateddocs.com/",
+      "description": "est Health. Right Here. We hand-pick the best rated doctors, health professionals and products with the goal to help you quickly and conveniently find the best for your health concerns.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5139615.jpg?t=1612434345"
+    },
+    {
+      "title": "Novasyte",
+      "feed_url": "https://blog.novasyte.com/rss.xml",
+      "website_url": "https://blog.novasyte.com/",
+      "description": "Novasyte's blog provides insights and perspectives on trends, news, and advancements taking place in the evolving med-tech industry.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/4882030.jpg?t=1612434368"
+    },
+    {
+      "title": "Medical Marcom | Medical Device Marketing",
+      "feed_url": "https://medicalmarcom.com/feed/",
+      "website_url": "https://medicalmarcom.com/blog/",
+      "description": "Medical Marcom is a medical device marketing consultancy specializing in marketing communications, strategy, lead generation, web development, social media.",
+      "followers": {
+        "facebook": 121,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4881595.jpg?t=1612434466"
+    },
+    {
+      "title": "StarFish Medical",
+      "feed_url": "https://starfishmedical.com/resources/",
+      "website_url": "https://starfishmedical.com/resources/",
+      "description": "StarFish Medical provides medical device development services ranging from strategic planning and technology development to engineering, manufacturing and regulatory support. StarFish Medical blog focuses on medical device innovation best practices.",
+      "followers": {
+        "facebook": 854,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4881523.jpg?t=1612434299"
+    },
+    {
+      "title": "Syrma Johari Medtech Blog",
+      "feed_url": "https://syrmajoharimedtech.com/feed/",
+      "website_url": "https://syrmajoharimedtech.com/blogs/",
+      "description": "Articles focused on medical device innovation, diagnostic devices, therapeutic devices. and best healthcare practices. Johari Digital provides medical device development services ranging from strategic planning and technology development to engineering, designing, manufacturing and regulatory support.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 241
+      },
+      "image_url": "https://i1.feedspot.com/5337010.jpg?t=1635316834"
+    },
+    {
+      "title": "Ecom Surgicals",
+      "feed_url": "https://www.ecomsurgicals.com/feed/",
+      "website_url": "https://www.regdesk.co/blog/",
+      "description": "At Ecom Surgicals, you will find wide range of health monitoring devices like Glucometers & Strips, Weighing Machines, Thermometers, BP Monitoring devices, Stethoscopes and Nebulizers from leading manufactures. Get fitness tips, health monitoring tips, tips to use health monitoring devices and many more by going through our blog. Get now, most updated health tips.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 18,
+        "instagram": 45
+      },
+      "image_url": "https://i1.feedspot.com/4916320.jpg?t=1612434455"
+    },
+    {
+      "title": "Millstone Medical Blog",
+      "feed_url": "https://millstonemedical.com/feed/",
+      "website_url": "https://millstonemedical.com/blogs/",
+      "description": "News about manufacturing and regulatory testing, cleaning validation, preservative efficacy testing, research and development activities, and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5291176.jpg?t=1623148265"
+    },
+    {
+      "title": "Medical Device and Diagnostic industry",
+      "feed_url": "https://www.mddionline.com/rss.xml",
+      "website_url": "https://www.mddionline.com/",
+      "description": "Medical Device Diagnostic Industry is a magazine written exclusively for original equipment manufacturers of medical devices and in vitro diagnostic products. The goal of MD DI is to help industry professionals develop, design, and manufacture medical products that comply with complex and demanding regulations and market requirements.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4881552.jpg?t=1612434278"
+    },
+    {
+      "title": "Medical Device News Magazine",
+      "feed_url": "https://infomeddnews.com/rsslatest.xml",
+      "website_url": "https://infomeddnews.com/",
+      "description": "Medical Device News Magazine is a digital publication providing medical device industry news that is of interest to practising medical specialists and others. The publication is one of the industry's leading sources of medical device and biotech industry updates. Stay up-to-date with the latest advancements and innovations in the medical device industry through the Medical Device News Magazine.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2000,
+        "instagram": 116
+      },
+      "image_url": "https://i1.feedspot.com/4882686.jpg?t=1612434287"
+    },
+    {
+      "title": "Emergo",
+      "feed_url": "https://www.emergobyul.com/blog/rss",
+      "website_url": "https://www.emergobyul.com/news",
+      "description": "Emergo is a medical device quality assurance and regulatory affairs blog. This blog is for QA/RA professionals in the medical device and IVD industry. The idea is to give short updates on quality and regulatory topics that may be of interest to you.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4881663.jpg?t=1612434292"
+    },
+    {
+      "title": "Medical News Today",
+      "feed_url": "https://rss.medicalnewstoday.com/medical_devices.xml",
+      "website_url": "https://www.medicalnewstoday.com/categories/medical_devices",
+      "description": "Find the latest medical devices and diagnostics research news from prestigious universities and journals throughout the world.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 89700
+      },
+      "image_url": "https://i1.feedspot.com/4882798.jpg?t=1612434569"
+    },
+    {
+      "title": "Delve \u00bb Medical Design",
+      "feed_url": "https://www.bresslergroup.com/blog/feed/",
+      "website_url": "https://www.delve.com/",
+      "description": "The accelerator is Bresslergroup's product development and innovation blog with insights from our strategists, researchers, engineers & designers. Bresslergroup is a research-driven product innovation lab whose strategists, researchers, engineers & designers work together every day to solve complex design & development challenges.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2300,
+        "instagram": 838
+      },
+      "image_url": "https://i1.feedspot.com/5043819.jpg?t=1612434328"
+    },
+    {
+      "title": "Saebo Blog",
+      "feed_url": "https://www.saebo.com/blog/feed/",
+      "website_url": "https://www.saebo.com/blogs/clinical-article/",
+      "description": "Read a variety of articles, tips, personal stories, up-to-date news & advice about Saebo medical devices as well as stroke recovery. Saebo, Inc. is a medical device company primarily engaged in the development of affordable and novel clinical solutions designed to improve mobility and function in individuals suffering from neurological and orthopedic conditions.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 1900,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5297427.jpg?t=1624961349"
+    },
+    {
+      "title": "IMARC",
+      "feed_url": "https://www.imarcresearch.com/blog/rss.xml",
+      "website_url": "https://www.avaniaclinical.com/resources/",
+      "description": "IMARC Research Incorporated is a well-respected medical device CRO company. Learn more about our clinical monitoring and training through this blog.",
+      "followers": {
+        "facebook": 277,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4882009.jpg?t=1612434332"
+    },
+    {
+      "title": "Medtech Impact On Wellness",
+      "feed_url": "https://www.medtechimpact.com/medical-devices/feed/",
+      "website_url": "https://www.medtechimpact.com/medical-devices/",
+      "description": "A compilation of blog posts examine the advent and proliferation of digital health technology, focusing on new techniques and strategies for chronic disease management: including medical devices like mobile health apps, remote monitoring, and other activity trackers.",
+      "followers": {
+        "facebook": 258,
+        "twitter": 380
+      },
+      "image_url": "https://i1.feedspot.com/4882740.jpg?t=1612434460"
+    }
+  ]
+}

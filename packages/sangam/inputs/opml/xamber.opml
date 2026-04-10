@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Artem F subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Технологии (News)" title="Технологии (News)">
+            <!--<outline type="rss" text="/r/Technology" title="/r/Technology" xmlUrl="http://www.reddit.com/r/technology/.rss" htmlUrl="https://www.reddit.com/r/technology/"/>-->
+            <outline type="rss" text="Lobsters" title="Lobsters" xmlUrl="https://lobste.rs/rss" htmlUrl="https://lobste.rs/"/>
+            <outline type="rss" text="The Verge" title="The Verge" xmlUrl="http://www.theverge.com/rss/full.xml" htmlUrl="https://www.theverge.com/"/>
+            <outline type="rss" text="Hacker News: Newest" title="Hacker News" xmlUrl="http://hnrss.org/newest?points=30" htmlUrl="https://news.ycombinator.com/newest"/>
+        </outline>
+        <outline text="Компании" title="Компании">
+            <outline type="rss" text="Stack Overflow Blog" title="Stack Overflow Blog" xmlUrl="http://blog.stackoverflow.com/feed/" htmlUrl="https://stackoverflow.blog"/>
+            <outline type="rss" text="The DigitalOcean Blog" title="The DigitalOcean Blog" xmlUrl="https://blog.digitalocean.com/rss/" htmlUrl="https://blog.digitalocean.com/"/>
+            <outline type="rss" text="YouTube Blog" title="YouTube Blog" xmlUrl="https://youtube.googleblog.com/feeds/posts/default?alt=rss" htmlUrl="http://youtube.googleblog.com/"/>
+            <outline type="rss" text="Facebook Engineering" title="Facebook Engineering" xmlUrl="https://code.facebook.com/posts/rss" htmlUrl="https://engineering.fb.com"/>
+            <outline type="rss" text="Stories by Skyscanner Engineering on Medium" title="Skyscanner Engineering" xmlUrl="https://medium.com/feed/@SkyscannerEng" htmlUrl="https://medium.com/@SkyscannerEng?source=rss-401f3b3c958f------2"/>
+            <outline type="rss" text="Netflix TechBlog " title="Netflix TechBlog - Medium" xmlUrl="https://medium.com/feed/netflix-techblog" htmlUrl="https://medium.com/netflix-techblog"/>
+            <outline type="rss" text="Google Russia" title="Google Russia" xmlUrl="http://googlerussiablog.blogspot.com/atom.xml" htmlUrl="http://russia.googleblog.com/"/>
+            <outline type="rss" text="Uber Engineering" title="Uber Engineering" xmlUrl="https://eng.uber.com/feed/" htmlUrl="https://eng.uber.com"/>
+            <outline type="rss" text="LinkedIn Engineering" title="LinkedIn Engineering" xmlUrl="https://engineering.linkedin.com/blog.rss" htmlUrl="https://engineering.linkedin.com/blog.rss.html"/>
+            <outline type="rss" text="Sentry" title="Sentry" xmlUrl="https://blog.sentry.io/feed.xml" htmlUrl="https://blog.sentry.io"/>
+            <outline type="rss" text="The GitHub" title="GitHub" xmlUrl="https://github.com/blog/all.atom" htmlUrl="https://github.blog"/>
+            <outline type="rss" text="Docker" title="Docker" xmlUrl="http://blog.docker.io/feed/" htmlUrl="https://www.docker.com/blog"/>
+            <outline type="rss" text="Microsoft" title="Microsoft" xmlUrl="https://www.microsoft.com/en-us/research/feed/" htmlUrl="https://www.microsoft.com/en-us/research/"/>
+            <outline type="rss" text="Rust" title="Rust" xmlUrl="http://blog.rust-lang.org/feed.xml" htmlUrl="https://blog.rust-lang.org/"/>
+            <outline type="rss" text="Airbnb Engineering &amp; Data Science - Medium" title="Airbnb Engineering &amp; Data Science - Medium" xmlUrl="https://medium.com/feed/airbnb-engineering" htmlUrl="https://medium.com/airbnb-engineering?source=rss----53c7c27702d5---4"/>
+            <outline type="rss" text="Instagram Engineering - Medium" title="Instagram Engineering" xmlUrl="https://engineering.instagram.com/feed" htmlUrl="https://instagram-engineering.com?source=rss----37dc2a3034f2---4"/>
+            <outline type="rss" text="New on MIT Technology Review" title="MIT" xmlUrl="https://www.technologyreview.com/topnews.rss" htmlUrl="https://www.technologyreview.com/"/>
+            <outline type="rss" text="Medium Engineering - Medium" title="Medium Engineering" xmlUrl="https://medium.com/feed/medium-eng" htmlUrl="https://medium.engineering?source=rss----2817475205d3---4"/>
+            <outline type="rss" text="Engineering – The GitHub Blog" title="GitHub" xmlUrl="http://githubengineering.com/atom.xml" htmlUrl="https://github.blog"/>
+            <outline type="rss" text="Блог компании Селектел" title="Селектел" xmlUrl="https://blog.selectel.ru/feed/" htmlUrl="https://selectel.ru/blog"/>
+            <outline type="rss" text="Labs" title="Labs" xmlUrl="http://labs.spotify.com/feed/" htmlUrl="https://labs.spotify.com"/>
+            <outline type="rss" text="Блог Яндекса" title="Яндекс" xmlUrl="http://clubs.ya.ru/company/rss/posts.xml" htmlUrl="http://yandex.ru/blog/company"/>
+            <outline type="rss" text="The Go Programming Language Blog" title="The Go Programming Language" xmlUrl="http://blog.golang.org/feeds/posts/default" htmlUrl="http://blog.golang.org/"/>
+            <outline type="rss" text="Several People Are Coding - Medium" title="Slack" xmlUrl="https://slack.engineering/feed" htmlUrl="https://slack.engineering?source=rss"/>
+            <outline type="rss" text="Ebay" title="Slack" xmlUrl="http://www.ebaytechblog.com/feed/" htmlUrl="http://www.ebaytechblog.com"/>
+        </outline>
+        <outline text="Science" title="Science">
+            <outline type="rss" text="Элементы" title="Элементы" xmlUrl="https://elementy.ru/rss/news" htmlUrl="https://elementy.ru/"/>
+            <outline type="rss" text="N+1: научные статьи, новости, открытия" title="N+1" xmlUrl="https://nplus1.ru/rss" htmlUrl="https://nplus1.ru"/>
+            <outline type="rss" text="Постнаука" title="Постнаука" xmlUrl="http://postnauka.ru/feed" htmlUrl="https://postnauka.ru/"/>
+            <outline type="rss" text="Наука и жизни" title="Наука и жизни" xmlUrl="https://www.nkj.ru/rss/" htmlUrl="https://www.nkj.ru"/>
+            <outline type="rss" text="Naked Science" title="Naked Science" xmlUrl="https://naked-science.ru/feedrss.xml" htmlUrl="https://naked-science.ru"/>
+        </outline>
+        <outline text="Russia" title="Russia">
+            <outline type="rss" text="TJ: популярное" title="TJ" xmlUrl="https://tjournal.ru/rss/all" htmlUrl="https://tjournal.ru/"/>
+            <outline type="rss" text="Т—Ж" title="Т—Ж" xmlUrl="http://journal.tinkoff.ru/feed/" htmlUrl="https://journal.tinkoff.ru/"/>
+            <outline type="rss" text="The Village" title="The Village" xmlUrl="http://www.the-village.ru/village/recent.atom"/>
+            <outline type="rss" text="vc.ru: популярное" title="VC" xmlUrl="https://vc.ru/rss/all" htmlUrl="https://vc.ru/"/>
+        </outline>
+        <outline text="Технологии (English)" title="Технологии (English)">
+            <outline type="rss" text="Handpicked stories about Technology on Medium" title="Handpicked stories about Technology on Medium" xmlUrl="https://medium.com/feed/topic/technology" htmlUrl="https://medium.com/topic/technology?source=rss-------8-----------------technology"/>
+            <outline type="rss" text="The Information" title="The Information" xmlUrl="http://www.theinformation.com/feed" htmlUrl="https://www.theinformation.com"/>
+            <outline type="rss" text="Hacker Noon" title="Hacker Noon" xmlUrl="https://hackernoon.com/feed" htmlUrl="http://github.com/dylang/node-rss"/>
+            <outline type="rss" text="The Wired" title="The Wired" xmlUrl="https://www.wired.com/feed/rss" htmlUrl="https://www.wired.com"/>
+            <outline type="rss" text="NYT Technology" title="NYT Technology" xmlUrl="https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/technology/rss.xml" htmlUrl="https://www.nytimes.com/section/technology"/>
+        </outline>
+        <outline text="Entertainment" title="Entertainment">
+            <outline type="rss" text="Disgusting Men" title="Disgusting Men" xmlUrl="https://disgustingmen.com/feed/" htmlUrl="https://disgustingmen.com"/>
+            <outline type="rss" text="Kanobu" title="Kanobu" xmlUrl="https://kanobu.ru/rss/articles.xml" htmlUrl="https://kanobu.ru"/>
+            <outline type="rss" text="FC Zenit" title="Zenit" xmlUrl="https://fc-zenit.ru/rss/allnews.rss" htmlUrl="https://fc-zenit.ru/"/>
+        </outline>
+        <outline text="Idea" title="Idea">
+            <outline type="rss" text="Project Hunt" title="Project Hunt" xmlUrl="https://www.producthunt.com/feed" htmlUrl="https://www.producthunt.com"/>
+            <outline type="rss" text="Show NN" title="Show NN" xmlUrl="https://hnrss.org/show?points=3" htmlUrl="https://news.ycombinator.com/show"/>
+        </outline>
+        <outline text="Lobby" title="Lobby">
+            <outline type="rss" text="Newochem" title="Newochem" xmlUrl="https://newochem.io/feed/" htmlUrl="https://newochem.io"/>
+            <outline type="rss" text="Системный Блок{ъ}" title="Системный Блок{ъ}" xmlUrl="https://sysblok.ru/feed/" htmlUrl="https://sysblok.ru"/>
+        </outline>
+        <outline text="Trips" title="Trips">
+            <outline type="rss" text="emigrantschannel" title="emigrantschannel" xmlUrl="https://tg2rss.xyz/channel/?name=emigrantschannel" htmlUrl="https://t.me/emigrantschannel"/>
+            <outline type="rss" text="travelhacks" title="travelhacks" xmlUrl="https://tg2rss.xyz/channel/?name=travelhacks" htmlUrl="https://t.me/travelhacks"/>
+            <outline type="rss" text="34travel.me" title="34travel.me" xmlUrl="https://34travel.me/feed" htmlUrl="https://34travel.me/"/>
+            <outline type="rss" text="Perito Burrito" title="Perito Burrito" xmlUrl="http://perito-burrito.com/feed" htmlUrl="http://perito-burrito.com/"/>
+            <outline type="rss" text="Traveling.by" title="Traveling.by" xmlUrl="https://traveling.by/rss" htmlUrl="https://traveling.by"/>
+        </outline>
+        <outline text="Iceland" title="Iceland">
+            <outline type="rss" text="rus.is" title="rus.is" xmlUrl="https://rus.is/feed/" htmlUrl="https://rus.is/"/>
+            <outline type="rss" text="Icelandmonitor" title="Iceland Monitor" xmlUrl="https://icelandmonitor.mbl.is/rss/" htmlUrl="https://icelandmonitor.mbl.is"/>
+            <outline type="rss" text="vedur" title="Vedur" xmlUrl="https://en.vedur.is/about-imo/news/rss.xml" htmlUrl="https://en.vedur.is/"/>
+            <outline type="rss" text="icelandreview" title="Iceland Review" xmlUrl="https://www.icelandreview.com/feed/" htmlUrl="https://www.icelandreview.com/"/>
+            <outline type="rss" text="Prime minister office" title="Prime minister office" xmlUrl="https://www.government.is/extensions/news/rss/Prime-minister-office.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry of Transport and Local Government" title="Ministry of Transport and Local Government" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-of-Transport-and-Local-Government.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry-of-Health" title="Ministry-of-Health" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-of-Health.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry of Finance and Economic Affairs" title="Ministry of Finance and Economic Affairs" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-of-Finance-and-Economic-Affairs.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry of Education, Science and Culture" title="Ministry of Education, Science and Culture" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-of-Education-Science-and-Culture.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry for the Environment and Natural Resources" title="Ministry for the Environment and Natural Resources" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-for-the-Environment-and-Natural-Resources.rss" htmlUrl="http://www.government.is"/>
+            <outline type="rss" text="Ministry for Foreign Affairs" title="Ministry for Foreign Affairs" xmlUrl="https://www.government.is/extensions/news/rss/Ministry-for-Foreign-Affairs.rss" htmlUrl="http://www.government.is"/>
+        </outline>
+    </body>
+</opml>

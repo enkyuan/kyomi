@@ -1,0 +1,18 @@
+{
+  "category": "Hong Kong Stock",
+  "source_url": "https://rss.feedspot.com/hong_kong_stock_rss_feeds",
+  "feeds": [
+    {
+      "title": "South China Morning Post \u00bb Stocks",
+      "feed_url": "https://www.scmp.com/topics/stocks",
+      "website_url": "https://www.scmp.com/topics/stocks",
+      "description": "Live updates of the equity markets of Hong Kong, including the policy ramifications, recommendations about the biggest market movers, gainers, and losers. The South China Morning Post is a leading news media company that has reported on China and Asia for more than a century with global impact.",
+      "followers": {
+        "facebook": 5000000,
+        "twitter": 1000000,
+        "instagram": 541600
+      },
+      "image_url": "https://i1.feedspot.com/5327320.jpg?t=1633065749"
+    }
+  ]
+}

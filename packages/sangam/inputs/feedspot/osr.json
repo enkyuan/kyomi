@@ -1,0 +1,651 @@
+{
+  "category": "OSR",
+  "source_url": "https://rss.feedspot.com/osr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Havard's Blackmoor Blog",
+      "feed_url": "http://blackmoormystara.blogspot.com/feeds/posts/default",
+      "website_url": "http://blackmoormystara.blogspot.com/",
+      "description": "This is a blog dedicated to Dave Arneson's Blackmoor. The World of Mystara will also most likely appear here given the fondness of the author towards that fantastic setting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/80060.jpg?t=1689830551"
+    },
+    {
+      "title": "The Other Side",
+      "feed_url": "http://theotherside.timsbrannan.com/feeds/posts/default",
+      "website_url": "http://theotherside.timsbrannan.com/",
+      "description": "The Other Side Blog is a game design blog from Timothy S. Brannan. He is also a writer, he has authored The Witch for Swords & Wizardry White Box. In his blog, you can find his character-building techniques, his views on books, and various other topics that intrigue him.",
+      "followers": {
+        "facebook": 526,
+        "twitter": 4000,
+        "instagram": 392
+      },
+      "image_url": "https://i1.feedspot.com/5314623.jpg?t=1682058433"
+    },
+    {
+      "title": "Tenkar's Tavern",
+      "feed_url": "https://www.tenkarstavern.com/feeds/posts/default",
+      "website_url": "https://www.tenkarstavern.com/",
+      "description": "A blog focused on OSR gaming, the Swords & Wizardry RPG, and all things Dungeons & Dragons. The blog is written by Christopher Stogdill and Tenkar. Tavern Chat is the accompanying Podcast.",
+      "followers": {
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/3616707.jpg?t=1682058433"
+    },
+    {
+      "title": "Northport",
+      "feed_url": "https://gwythaintny.wordpress.com/feed/",
+      "website_url": "https://gwythaintny.wordpress.com/",
+      "description": "Northport is about adventures in designing a GURPS Dungeon Fantasy setting. You will find articles on game art, dungeon fantasy, RPG, NPC, OSR, GURPS, role-playing, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5390515.jpg?t=1682491664"
+    },
+    {
+      "title": "Echoes from the Geekcave",
+      "feed_url": "http://geekechoes.blogspot.com/feeds/posts/default",
+      "website_url": "http://geekechoes.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547209.jpg?t=1682058420"
+    },
+    {
+      "title": "Remixes and Revelations",
+      "feed_url": "https://www.remixesandrevelations.com/feeds/posts/default",
+      "website_url": "http://www.remixesandrevelations.com/",
+      "description": "Remixes and Revelations blog is hosted by Yami Bakura. She creates creepy artwork and writes about monsters, OSR, character class, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547210.jpg?t=1682058126"
+    },
+    {
+      "title": "Whose Measure God Could Not Take",
+      "feed_url": "https://whosemeasure.blogspot.com/feeds/posts/default",
+      "website_url": "https://whosemeasure.blogspot.com/",
+      "description": "Whose Measure God Could Not Take yields uncertainty and unyielding bronze.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547181.jpg?t=1682056673"
+    },
+    {
+      "title": "The Elder Sk\u00fcll",
+      "feed_url": "http://elderskull.blogspot.com/feeds/posts/default",
+      "website_url": "http://elderskull.blogspot.com/",
+      "description": "The Elder Sk\u00fcll focuses on being a blog dedicated to that harrowing and cruel master, gaming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547204.jpg?t=1682058108"
+    },
+    {
+      "title": "Applied Phantasticality",
+      "feed_url": "https://appliedphantasticality.blogspot.com/feeds/posts/default",
+      "website_url": "https://appliedphantasticality.blogspot.com/",
+      "description": "Applied Phantasticality is a site devoted to fantasy and science fantasy role-playing games. Mainly Dungeon Crawl Classics RPG and Dungeons & Dragons (esp. OD&D and B/X D&D). It is authored by Gordon Cooper. His interests are AD&D 1st Edition, AFMG, All for Me Grog RPG, Aquabats, archery, art, astronomy, Backswords & Bucklers, bagpipes, Basic/Expert D&D, Basic Role-Playing, BBC, bebop, bicycles, bicycling, big band, birdwatching, blues, board games, books, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4002301.jpg?t=1682500039"
+    },
+    {
+      "title": "Age of Dusk",
+      "feed_url": "https://princeofnothingblogs.wordpress.com/feed/",
+      "website_url": "https://princeofnothingblogs.wordpress.com/",
+      "description": "A former YDIS shock trooper with a checkered past, as of March 2018, Prince officially joined the gentry of the OSR by teaming up with The Merciless Merchants and writing a kickass adventure. Explore OSR, reviews, play reports, setting material, fear, book talk, merciless annihilation, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5314580.jpg?t=1682502702"
+    },
+    {
+      "title": "The Nothic's Eye",
+      "feed_url": "https://nothicseye.blogspot.com/feeds/posts/default",
+      "website_url": "https://nothicseye.blogspot.com/",
+      "description": "The Nothic's Eye is a blog dedicated to role-playing, OSR, planescape, D&D, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547201.jpg?t=1682058104"
+    },
+    {
+      "title": "Beyond Fomalhaut",
+      "feed_url": "http://beyondfomalhaut.blogspot.com/feeds/posts/default",
+      "website_url": "http://beyondfomalhaut.blogspot.com/",
+      "description": "Beyond Fomalhaut is dedicated to reviews of things that catch my fancy, reflections on game-related issues, plans that go nowhere, and whatever else comes up. The blog is written by Melan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547188.jpg?t=1682057799"
+    },
+    {
+      "title": "False Machine",
+      "feed_url": "http://falsemachine.blogspot.com/feeds/posts/default",
+      "website_url": "http://falsemachine.blogspot.com/",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1833405.jpg?t=1682057795"
+    },
+    {
+      "title": "Old School RPG Planet",
+      "feed_url": "https://campaignwiki.org/osr/feed.xml",
+      "website_url": "https://campaignwiki.org/osr/",
+      "description": "Old School RPG Planet, as the name suggests is a blog that collects Old School RPG blog posts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547217.jpg?t=1682057792"
+    },
+    {
+      "title": "Grumpy Wizard Blog",
+      "feed_url": "https://grumpywizard.home.blog/feed/",
+      "website_url": "https://grumpywizard.home.blog/",
+      "description": "Grumpy Wizard Blog offers essays on sword & sorcery fiction, classic adventure gaming, and heavy metal music.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 953,
+        "instagram": 672
+      },
+      "image_url": "https://i1.feedspot.com/5547213.jpg?t=1682057789"
+    },
+    {
+      "title": "Blog of Holding",
+      "feed_url": "https://www.blogofholding.com/?feed=rss2",
+      "website_url": "https://www.blogofholding.com/",
+      "description": "Blog of Holding is all about fantasy gaming, dungeons, and dragons. Find guides, books, articles, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547214.jpg?t=1682057780"
+    },
+    {
+      "title": "Grognardia",
+      "feed_url": "https://grognardia.blogspot.com/feeds/posts/default",
+      "website_url": "https://grognardia.blogspot.com/",
+      "description": "James Maliszewski started roleplaying in the late Fall of 1979 when he opened up a copy of the Dungeons & Dragons Basic Set edited by Dr. J. Eric Holmes originally purchased for his father. More than 40 years later, he's still playing. This blog is where James collects his memories and musings about roleplaying games and related nonsense, as well as articles about the history of the hobby from its earliest beginnings to the present day.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5314601.jpg?t=1682639401"
+    },
+    {
+      "title": "Smoldering Wizard",
+      "feed_url": "https://smolderingwizard.wordpress.com/feed/",
+      "website_url": "https://smolderingwizard.wordpress.com/",
+      "description": "I'm Doug, a guy who grew up gaming with the old classics - mainly Holmes Basic and AD&D 1e. The Old-School Renaissance got me back into gaming online and with my family over a decade ago; now I enjoy playing lots of old-school games - originals, clones, and unique games alike. I'm Merias on a few internet forums.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547184.jpg?t=1682057245"
+    },
+    {
+      "title": "Jeffs Gameblog",
+      "feed_url": "https://jrients.blogspot.com/feeds/posts/default",
+      "website_url": "https://jrients.blogspot.com/",
+      "description": "Jeffs Gameblog is an extraordinary blog where the author tries things that are bizarre yet entertaining and blogs his experiences here. Also catch up on other articles about OSR, fantasy games, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5314605.jpg?t=1682502893"
+    },
+    {
+      "title": "Aeons & Augauries",
+      "feed_url": "http://aeonsnaugauries.blogspot.com/feeds/posts/default",
+      "website_url": "http://aeonsnaugauries.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/80038.jpg?t=1689834784"
+    },
+    {
+      "title": "A Knight at the Opera",
+      "feed_url": "https://knightattheopera.blogspot.com/feeds/posts/default",
+      "website_url": "https://knightattheopera.blogspot.com/",
+      "description": "A Knight at the Opera is written by two friends. It's all about dungeons, dragons, OSR, fantasy games, the good and bad aspects, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547203.jpg?t=1682057513"
+    },
+    {
+      "title": "Save vs. Total Party Kill",
+      "feed_url": "https://save.vs.totalpartykill.ca/atom.xml",
+      "website_url": "https://save.vs.totalpartykill.ca/",
+      "description": "This is a blog about D&D. I started playing D&D when I was 12 or 13. A family friend ran a campaign for me, my brother, and my cousin using his copy of the Rules Cyclopedia. That was a million years ago. I recently got back into D&D. Wizards of the Coast announced D&D 4th Edition, which got one of my friends interested in running a game.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547202.jpg?t=1682057506"
+    },
+    {
+      "title": "Fabled Lands",
+      "feed_url": "https://fabledlands.blogspot.com/feeds/posts/default",
+      "website_url": "https://fabledlands.blogspot.com/",
+      "description": "A site dedicated to gamebooks, role-playing games and interactive fiction, in particular the works of best-selling authors and award-winning game designers Dave Morris and Jamie Thomson.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/1317076.jpg?t=1682057247"
+    },
+    {
+      "title": "Roles, Rules, and Rolls",
+      "feed_url": "http://rolesrules.blogspot.com/feeds/posts/default",
+      "website_url": "http://rolesrules.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1818907.jpg"
+    },
+    {
+      "title": "Monsters and Manuals",
+      "feed_url": "https://feeds.feedburner.com/MonstersAndManuals",
+      "website_url": "https://monstersandmanuals.blogspot.com/",
+      "description": "Creator of Yoon-Suin and other materials. Propounding my half-baked ideas on role-playing games. Jotting down and elaborating on ideas for campaigns, missions, and adventures. Talking about general industry-related matters. Putting a new twist on gaming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1659907.jpg?t=1682663572"
+    },
+    {
+      "title": "Ancient Vaults & Eldritch Secrets",
+      "feed_url": "https://ancientvaults.wordpress.com/feed/",
+      "website_url": "https://ancientvaults.wordpress.com/",
+      "description": "A blog that I contribute to every other day now, it was daily, full of spells, monsters, and miscellaneous about traditional gaming with a bit of commentary on the various influences that contribute to a game full of flavor. Since I run Swords & Wizardry and Labyrinth Lord there will be a focus on these games when it comes to game write-ups, but considering how easy conversions are between the simulacrum systems, anything contributed to the games can easily be used in BFRPG or any of the other retro-clones with very little effort.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1798026.jpg?t=1682663698"
+    },
+    {
+      "title": "Methods & Madness",
+      "feed_url": "https://methodsetmadness.blogspot.com/feeds/posts/default",
+      "website_url": "https://methodsetmadness.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547207.jpg?t=1682057255"
+    },
+    {
+      "title": "The Glatisant",
+      "feed_url": "https://questingbeast.substack.com/feed",
+      "website_url": "https://questingbeast.substack.com/",
+      "description": "The best writing and videos from the Old-School D&D internet, all in once place. Subscribers are entered in my giveaways.",
+      "followers": {
+        "twitter": 37700
+      },
+      "image_url": "https://i1.feedspot.com/5547216.jpg?t=1682057252"
+    },
+    {
+      "title": "Tales of the Lunar Lands",
+      "feed_url": "https://tales-of-the-lunar-lands.blogspot.com/feeds/posts/default",
+      "website_url": "https://tales-of-the-lunar-lands.blogspot.com/",
+      "description": "Tales of the Lunar Lands is a blog discussing tabletop musings and more. Here you will find catchy articles on games, dungeons and dragons, art, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547189.jpg?t=1682057250"
+    },
+    {
+      "title": "Pits Perilous",
+      "feed_url": "http://pitsperilous.blogspot.com/feeds/posts/default",
+      "website_url": "http://pitsperilous.blogspot.com/",
+      "description": "Pits Perilous is an old schoolery blog. They write about old-school games without dice, fantasy games, OSR, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547200.jpg?t=1682058124"
+    },
+    {
+      "title": "Rise Up Comus",
+      "feed_url": "https://riseupcomus.blogspot.com/feeds/posts/default",
+      "website_url": "https://riseupcomus.blogspot.com/",
+      "description": "Rise Up Comus is about fantasy gaming, dungeons, and dragons, wizardry, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547185.jpg?t=1682057229"
+    },
+    {
+      "title": "Tabletop Curiosity Cabinet",
+      "feed_url": "https://tabletopcuriositycabinet.blogspot.com/feeds/posts/default",
+      "website_url": "https://tabletopcuriositycabinet.blogspot.com/",
+      "description": "Where I ramble about tabletop stuff from a DIY, rules lite perspective.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547182.jpg?t=1682056969"
+    },
+    {
+      "title": "Prismatic Wasteland",
+      "feed_url": "https://www.prismaticwasteland.com/blog?format=rss",
+      "website_url": "https://www.prismaticwasteland.com/",
+      "description": "Prismatic Wasteland is about monsters, mysteries, mosquitillos, borderland, hexcrawl, and more.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5390719.jpg?t=1682056962"
+    },
+    {
+      "title": "All Dead Generations",
+      "feed_url": "https://alldeadgenerations.blogspot.com/feeds/posts/default",
+      "website_url": "https://alldeadgenerations.blogspot.com/",
+      "description": "'[RPGs] make their own history, but they do not make it as they please; they do not make it under self-selected circumstances, but under circumstances existing already, given and transmitted from the past. The [dungeons] of all dead generations weigh like a nightmare on the [games] of the living.'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547191.jpg?t=1682056696"
+    },
+    {
+      "title": "Traverse Fantasy",
+      "feed_url": "https://traversefantasy.blogspot.com/feeds/posts/default",
+      "website_url": "https://traversefantasy.blogspot.com/",
+      "description": "My name is Marcia and I like to blog about tabletop games and analyze cultural trends through a Marxist and Freudian lens because I'm bored. I just released a free retroclone of the original 1974 game, called 'Fantastic Medieval Campaigns'.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5547192.jpg?t=1682056956"
+    },
+    {
+      "title": "I Cast Light",
+      "feed_url": "https://icastlight.blogspot.com/feeds/posts/default",
+      "website_url": "https://icastlight.blogspot.com/",
+      "description": "I Cast Light is a blog written by Warren D. He describes the blog as 'In the D&D BASIC rules, a blinded creature may not attack.'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547208.jpg?t=1682056952"
+    },
+    {
+      "title": "DIY & Dragons",
+      "feed_url": "https://diyanddragons.blogspot.com/feeds/posts/default",
+      "website_url": "https://diyanddragons.blogspot.com/",
+      "description": "DIY & Dragons is written by Anne. The blog is all about Dungeons and dragons, it also gives you ideas about doing it yourselves.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547195.jpg?t=1682056948"
+    },
+    {
+      "title": "Coins and Scrolls",
+      "feed_url": "https://coinsandscrolls.blogspot.com/feeds/posts/default",
+      "website_url": "https://coinsandscrolls.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4968830.jpg?t=1689841764"
+    },
+    {
+      "title": "Goodberry Monthly",
+      "feed_url": "https://goodberrymonthly.blogspot.com/feeds/posts/default",
+      "website_url": "https://goodberrymonthly.blogspot.com/",
+      "description": "Goodberry Monthly is authored by Martin O. He has been blogging since 2015. He is in the science industry. In this blog, he writes about games, death, exploration, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547180.jpg?t=1682056667"
+    },
+    {
+      "title": "Alone in the Labyrinth",
+      "feed_url": "http://aloneinthelabyrinth.blogspot.com/feeds/posts/default",
+      "website_url": "http://aloneinthelabyrinth.blogspot.com/",
+      "description": "Alone in the Labyrinth is a blog about pen-and-paper RPGs, sandbox campaigning, storytelling, and world-building.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5314581.jpg?t=1682636997"
+    },
+    {
+      "title": "Numbers Aren't Real",
+      "feed_url": "https://as-they-must.blogspot.com/feeds/posts/default",
+      "website_url": "https://as-they-must.blogspot.com/",
+      "description": "Numbers Aren't Real is written by G. R. Michael. He is a software engineer. He is a religious person and his favorite book is The Bible. In his blog, he writes about Games, fantasy, OSR, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547183.jpg?t=1682056658"
+    },
+    {
+      "title": "Engine of Oracles \u00bb OSR",
+      "feed_url": "https://engineoforacles.wordpress.com/category/osr/feed/",
+      "website_url": "https://engineoforacles.wordpress.com/category/osr/",
+      "description": "Find posts about OSR written by Daniel James Hanley. The Engine of Oracles is a blog about gaming and is not meant as a vehicle for any particular political or religious beliefs.",
+      "followers": {
+        "facebook": 221
+      },
+      "image_url": "https://i1.feedspot.com/5547190.jpg?t=1682056656"
+    },
+    {
+      "title": "Swords & Stitchery",
+      "feed_url": "http://swordsandstitchery.blogspot.com/feeds/posts/default",
+      "website_url": "http://swordsandstitchery.blogspot.com/",
+      "description": "Swords & Stitchery is a blog about sewing machine repairs, but mainly my hobbies include old school role-playing games, science fiction, films, horror, and general geekery.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1833437.jpg?t=1682636544"
+    },
+    {
+      "title": "Goblin Punch",
+      "feed_url": "https://goblinpunch.blogspot.com/feeds/posts/default",
+      "website_url": "https://goblinpunch.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3375636.jpg?t=1689847844"
+    },
+    {
+      "title": "Solo Dungeon Crawler",
+      "feed_url": "https://solodungeoncrawler.blogspot.com/feeds/posts/default",
+      "website_url": "https://solodungeoncrawler.blogspot.com/",
+      "description": "Solo Dungeon Crawler is the home of old school solo Dungeons and Dragons campaigns, how to play DnD solo and all other solo DnD needs, such as solo D&D actual play and tutorials. You will also find information on the D&D BECMI rules and old school DnD history. If you want to learn how to play Dungeons & Dragons solo and you love Basic D&D or old school revival/old school renaissance (OSR) table top RPG rules then this blog is for you.",
+      "followers": {
+        "twitter": 513
+      },
+      "image_url": "https://i1.feedspot.com/5547282.jpg?t=1682058698"
+    },
+    {
+      "title": "Venger's Old School Gaming Blog",
+      "feed_url": "http://vengersatanis.blogspot.com/feeds/posts/default",
+      "website_url": "http://vengersatanis.blogspot.com/",
+      "description": "This blog is an eldritch melange of savagery, super-science, and sorcery!Are you a devotee of neo-OSR, paper and pencil, tabletop roleplaying games like Call of Cthulhu, Vampire: the Masquerade, Hollow Earth Expedition, The Mutant Epoch, Encounter Critical, WEG Star Wars, Dark Conspiracy, Marvel Super Heroes, Paranoia, and all the retro-awesomeness of the original fantasy RPG, then come aboard. Let this be your virtual",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3616708.jpg?t=1689846351"
+    },
+    {
+      "title": "The Ruins of Murkhill-OEOEFASRPG",
+      "feed_url": "https://originaldungeons-and-dragons.blogspot.com/feeds/posts/default",
+      "website_url": "https://originaldungeons-and-dragons.blogspot.com/",
+      "description": "I am Halenar Frosthelm, 66, a widower, a cancer survivor three times over, and now a heart attack survivor as well. I am a fan, ref, and player of OD&D, the Original Dungeons & Dragons role-playing game (RPG), published in 1974. Halenar Frosthelm - The Perilous Dreamer (Perilous Dreams, Perilous Worlds, Perilous Lands, Perilous Journeys, Perilous Seas & Oceans, Perilous Adventures, Perilous Heroes, Perilous Monsters, Perilous Realms and many more Perilous things since 1975).",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5547281.jpg?t=1682058709"
+    },
+    {
+      "title": "Bat in the Attic",
+      "feed_url": "https://batintheattic.blogspot.com/feeds/posts/default",
+      "website_url": "https://batintheattic.blogspot.com/",
+      "description": "Bat in the Attic is a blog on 30 years of gaming and Sandbox Fantasy. Hosted by Robert Conley.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/80041.jpg?t=1682058686"
+    },
+    {
+      "title": "Akratic Wizardry",
+      "feed_url": "https://akraticwizardry.blogspot.com/feeds/posts/default",
+      "website_url": "https://akraticwizardry.blogspot.com/",
+      "description": "A blog wherein I scribble about various role-playing games (Mythras, Middle-earth Role-playing, Adventures in Middle-Earth, Against the Darkmaster, Classic Dungeons and Dragons, Advanced Dungeons and Dragons, Into the Unknown, Crypts and Things, Swords and Wizardry, Call of Cthulhu, etc.) and RPG settings (Greyhawk, Middle-earth, Cthulhu Mythos, Lyonesse, Young Kingdoms, etc.). I also write about fantasy and science-fiction films, novels, art, TV shows, and the like.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4002293.jpg?t=1682058684"
+    },
+    {
+      "title": "OSR Grimoire",
+      "feed_url": "https://osrgrimoire.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://osrgrimoire.blogspot.com/",
+      "description": "A historical exploration of the Dungeons & Dragons game. Dive deep into adventures and campaign settings from the early days of Dungeons & Dragons covering vast, intercrossing storylines, amazingly written characters, magical moves, and whatnot. Check out OSR Grimoire for more updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5616866.jpg?t=1688474506"
+    },
+    {
+      "title": "Dyson's Dodecahedron Blog",
+      "feed_url": "https://dysonlogos.blog/feed/",
+      "website_url": "https://dysonlogos.blog/",
+      "description": "I'm Dyson. I've been gaming since 1979 in a variety of game systems, but most often playing Dungeons & Dragons. This is a general RPG blog, where I talked a lot about the games I've played and how I like to play them.",
+      "followers": {
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/4566150.jpg?t=1682057490"
+    },
+    {
+      "title": "Dice Goblin Blog",
+      "feed_url": "https://dicegoblin.blog/feed/",
+      "website_url": "https://dicegoblin.blog/",
+      "description": "I'm Lars, a Dungeon Master for multiple campaigns for about 4 years now. My interests and inspiration has evolved all over the place during that time: From 5e to PbtA to OSR and beyond. On this blog, I'll share my ideas about being a DM with the world, and hopefully add something useful to your personal DM toolbox!",
+      "followers": {
+        "twitter": 186
+      },
+      "image_url": "https://i1.feedspot.com/5482149.jpg?t=1682058692"
+    },
+    {
+      "title": "Axian Spice",
+      "feed_url": "https://axianspice.blogspot.com/feeds/posts/default",
+      "website_url": "https://axianspice.blogspot.com/",
+      "description": "I am Giuseppe Rotondo. I'm a husband and father of two, and I work as a teacher, usually tutoring teenage students with special needs. I also work as a freelance RPG translator (English to Italian) and content creator and designer. In this blog I write about RPGs I like, play, and create.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547211.jpg?t=1682058431"
+    },
+    {
+      "title": "Halfling's Luck",
+      "feed_url": "https://halflingsluck.blogspot.com/feeds/posts/default",
+      "website_url": "https://halflingsluck.blogspot.com/",
+      "description": "Halfling's Luck is authored by James M. Spahn. This is a blog for table-top RPG discussions over a Pint and a Pipe!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547194.jpg?t=1682058428"
+    },
+    {
+      "title": "Shoalmont Games",
+      "feed_url": "https://shoalmontgames.com/feed/",
+      "website_url": "https://shoalmontgames.com/",
+      "description": "Shoalmont Games is about running OSR, 5e, and Mini games. Find captivating articles about minigames with pictures and tables for better understanding.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547215.jpg?t=1682058427"
+    },
+    {
+      "title": "Wondering Monsters",
+      "feed_url": "https://wulfwaldrpg.blogspot.com/feeds/posts/default",
+      "website_url": "https://wulfwaldrpg.blogspot.com/",
+      "description": "The blog is written by Lee Lawrence for confused monsters and all things, OSR, RPGs, DIY D&D, PC/and Console Gaming, Fantasy, and writing. He writes fantasy, historical, and adventure fiction, as well as RPG material. He is interested in writing, music, fantasy, RPG, and guitar.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547206.jpg?t=1682058426"
+    },
+    {
+      "title": "Vorpal Mace",
+      "feed_url": "http://vorpalmace.blogspot.com/feeds/posts/default",
+      "website_url": "http://vorpalmace.blogspot.com/",
+      "description": "Vorpal Mace is written by Tamas Illes. He is a humble fan of classic fantasy literature and old-school RPGs - both the tabletop and digital kind. The blog contains articles about games, OSR, RPG, and more. According to the author this blog is a gate to another world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547187.jpg?t=1682058426"
+    },
+    {
+      "title": "Melancholies and Mirth",
+      "feed_url": "http://melancholiesandmirth.blogspot.com/feeds/posts/default",
+      "website_url": "http://melancholiesandmirth.blogspot.com/",
+      "description": "Melancholies and Mirth is an OSR blog about thinking that requires underworld exploration!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547212.jpg?t=1682057771"
+    },
+    {
+      "title": "Playing at the World",
+      "feed_url": "https://playingattheworld.blogspot.com/feeds/posts/default",
+      "website_url": "https://playingattheworld.blogspot.com/",
+      "description": "I am Jon Peterson. I am an author investigating the history of war games and role-playing games. Read my finding on Playing at the World.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547178.jpg?t=1682057242"
+    },
+    {
+      "title": "Liche's Libram",
+      "feed_url": "https://licheslibram.blogspot.com/feeds/posts/default",
+      "website_url": "https://licheslibram.blogspot.com/",
+      "description": "Liche's Libram is a blog focused on extruded fantasy games, OSR, wizards, glog, thieves, cults, tlon, and more. Some of the data is well organized and easy to understand.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547193.jpg?t=1682057814"
+    },
+    {
+      "title": "The Wandering Gamist",
+      "feed_url": "https://wanderinggamist.blogspot.com/feeds/posts/default",
+      "website_url": "https://wanderinggamist.blogspot.com/",
+      "description": "The Wandering Gamist is written by Jedavis. He believes in every game there is a journey. Read his blog for articles o OSR, games, fantasy, dungeons and dragons, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/271984.jpg?t=1682656847"
+    },
+    {
+      "title": "Necropraxis",
+      "feed_url": "https://necropraxis.com/feed/",
+      "website_url": "https://necropraxis.com/",
+      "description": "This is a blog primarily about traditional fantasy roleplaying games, with occasional digressions about other media relevant to tabletop roleplaying.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1042366.jpg?t=1682057502"
+    },
+    {
+      "title": "Ten Foot Polemic",
+      "feed_url": "http://tenfootpolemic.blogspot.com/feeds/posts/default",
+      "website_url": "http://tenfootpolemic.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5314615.jpg?t=1689837358"
+    },
+    {
+      "title": "Delta's D&D Hotspot",
+      "feed_url": "https://deltasdnd.blogspot.com/feeds/posts/default",
+      "website_url": "https://deltasdnd.blogspot.com/",
+      "description": "Math, history, and design of old-school D&D.",
+      "followers": {
+        "twitter": 701
+      },
+      "image_url": "https://i1.feedspot.com/5314589.jpg?t=1682057235"
+    },
+    {
+      "title": "Gundobad Games",
+      "feed_url": "https://gundobadgames.blogspot.com/feeds/posts/default",
+      "website_url": "https://gundobadgames.blogspot.com/",
+      "description": "The author is an ancient historian by day. Suave gaming geek by night! Gundobad Games is about discussing history, Role Playing Games, Wargames...etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547177.jpg?t=1682057232"
+    },
+    {
+      "title": "Signs in the Wilderness",
+      "feed_url": "https://signsinthewilderness.blogspot.com/feeds/posts/default",
+      "website_url": "https://signsinthewilderness.blogspot.com/",
+      "description": "Signs in the Wilderness is written by Joseph Fatula. He is interested in maps, antarctic explorers, page layout, smoked fish, text adventures, intermodal shipping, lambda calculus, Hardanger fiddle, voting systems, and muskets. His favorite movies are Indiana Jones and the Last Crusade, The Hunt for Red October, Hopscotch, and The Sting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547196.jpg?t=1682056966"
+    },
+    {
+      "title": "The Hapless Henchman",
+      "feed_url": "https://noahms456.blogspot.com/feeds/posts/default",
+      "website_url": "https://noahms456.blogspot.com/",
+      "description": "The Hapless Henchman is a blog written by Noah. The blog contains articles about dragons and dungeon crawling in a kitchen-sink style.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547197.jpg?t=1682058114"
+    },
+    {
+      "title": "Papers & Pencils",
+      "feed_url": "https://www.paperspencils.com/feed/",
+      "website_url": "https://www.paperspencils.com/",
+      "description": "Papers & Pencils writes about dungeons, dragons, how the author runs his games, house rules, dungeon designs, dungeon moon, deadly dungeons, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1358074.jpg?t=1682056959"
+    },
+    {
+      "title": "Bones of Contention",
+      "feed_url": "https://bonesofcontention.blogspot.com/feeds/posts/default",
+      "website_url": "https://bonesofcontention.blogspot.com/",
+      "description": "Bones of Contention defines itself as Skeleton Crew of Reviewers. The blog is contributed by many authors. The blog is about gaming, fantasy, OSR, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547179.jpg?t=1682056942"
+    },
+    {
+      "title": "Mazirian's Garden",
+      "feed_url": "http://maziriansgarden.blogspot.com/feeds/posts/default",
+      "website_url": "http://maziriansgarden.blogspot.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547176.jpg?t=1682056938"
+    },
+    {
+      "title": "Bardiches & Bathhouses",
+      "feed_url": "http://bardichesandbathhouses.blogspot.com/feeds/posts/default",
+      "website_url": "http://bardichesandbathhouses.blogspot.com/",
+      "description": "Bardiches & Bathhouses the blog is musing on fantasy and historical gaming. You will find interesting articles about wizards, fantasy, art, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547186.jpg?t=1682058112"
+    },
+    {
+      "title": "Pretendo Games",
+      "feed_url": "https://pretendo.games/feed/",
+      "website_url": "https://pretendo.games/",
+      "description": "Pretendo Games is written by Jason. It is about games, dungeons, dragons, fantasy, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547283.jpg?t=1682058697"
+    },
+    {
+      "title": "An Abominable Fancy",
+      "feed_url": "http://abominablefancy.blogspot.com/feeds/posts/default",
+      "website_url": "http://abominablefancy.blogspot.com/",
+      "description": "An Abominable Fancy is a blog by Joel Priddy which is about role-playing games.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547198.jpg?t=1682058119"
+    },
+    {
+      "title": "The Wasted Lands",
+      "feed_url": "https://wastedlandsfantasy.blogspot.com/feeds/posts/default",
+      "website_url": "https://wastedlandsfantasy.blogspot.com/",
+      "description": "Discuss and study classic editions of Dungeons & Dragons, including Advanced AD&D, B/X D&D, original OD&D, BECMI, and other old-school and OSR RPGs.",
+      "followers": {
+        "facebook": 240
+      },
+      "image_url": "https://s3-uThe%20Grey%20Elfs-west-2.amazonaws.com/feedspotfeed/4002366.jpg?t=1682636285"
+    },
+    {
+      "title": "A Rust Monster Ate My Sword",
+      "feed_url": "https://www.arustmonsteratemysword.com/feeds/posts/default",
+      "website_url": "http://www.arustmonsteratemysword.com/",
+      "description": "A blog about games and gamers, and various and sundry geek-related ephemera and paraphernalia.",
+      "followers": {
+        "twitter": 61
+      },
+      "image_url": "https://i1.feedspot.com/5547280.jpg?t=1682058681"
+    },
+    {
+      "title": "Raven God Games",
+      "feed_url": "https://ravengodgames.blogspot.com/feeds/posts/default",
+      "website_url": "https://ravengodgames.blogspot.com/",
+      "description": "I am a freelance cartographer, writer, and game designer who has been involved with role-playing games for more than 30 years. I am the writer and creator of Eldritch Tales: Lovecraftian White Box Roleplaying and Reaver RPG and have produced material for Astonishing Swordsmen & Sorcerers of Hyperborea, AFS Magazine, Delving Deeper, Swords & Wizardry, and Tunnel Goons.",
+      "followers": {
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/5547199.jpg?t=1682058121"
+    },
+    {
+      "title": "Trollsmyth",
+      "feed_url": "http://trollsmyth.blogspot.com/feeds/posts/default",
+      "website_url": "http://trollsmyth.blogspot.com/",
+      "description": "Trollsmyth reviews of genre-related movies, books, and art. Although the blog is mostly focused on personal thoughts and critique of RPGs, science fiction & fantasy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5547205.jpg?t=1682057769"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "category": "Vancouver Education",
+  "source_url": "https://rss.feedspot.com/vancouver_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vancouver Sun \u00bb Education",
+      "feed_url": "https://vancouversun.com/tag/education/feed.xml",
+      "website_url": "https://vancouversun.com/tag/education/",
+      "description": "Read the latest breaking news, updates, and headlines on education. Vancouver Sun is a digital newspaper that covers everything happening in the city of Vancouver. From business to home, life, art, sports, education, health, and more.",
+      "followers": {
+        "facebook": 219200,
+        "twitter": 300600,
+        "instagram": 60200
+      },
+      "image_url": "https://i1.feedspot.com/5473466.jpg?t=1669785514"
+    },
+    {
+      "title": "Scarfe Sandbox Blog",
+      "feed_url": "https://scarfedigitalsandbox.teach.educ.ubc.ca/category/blog-posts/feed/",
+      "website_url": "https://scarfedigitalsandbox.teach.educ.ubc.ca/category/blog-posts/",
+      "description": "The Scarfe Digital Sandbox began in 2013 as a virtual and face-to-face space for teacher candidates and faculty to explore technology integration. This is intended as an informal learning event where participants can 'drop in and drop out' as their schedules permit.",
+      "followers": {
+        "twitter": 190
+      },
+      "image_url": "https://i1.feedspot.com/5473467.jpg?t=1669786665"
+    },
+    {
+      "title": "Vancouver Home Learners Program Blog",
+      "feed_url": "https://shanei.edublogs.org/feed/",
+      "website_url": "https://shanei.edublogs.org/",
+      "description": "The Vancouver Home Learners' Program, housed at Lord Beaconsfield Elementary School, incorporates grades Kindergarten through 7. The Program welcomes families who are looking for a balance between full-time home schooling and structured classroom learning for their children who are self-motivated, independent learners.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5473468.jpg?t=1669786908"
+    },
+    {
+      "title": "Online Learning and Distance Education Resources",
+      "feed_url": "https://www.tonybates.ca/feed/",
+      "website_url": "https://www.tonybates.ca/category/teaching-and-learning/",
+      "description": "The blog by Tony Bates is meant as a resource for students, faculty, and academic administrators interested in online learning. Dr. Tony Bates is the author of eleven books in the field of online learning and distance education.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4853588.jpg?t=1669788375"
+    },
+    {
+      "title": "BCBusiness \u00bb Education",
+      "feed_url": "https://www.bcbusiness.ca/industries/education/",
+      "website_url": "https://www.bcbusiness.ca/industries/education/",
+      "description": "Get to know about personality development in a post-pandemic world, new educational strategies, and more. BCBusiness provides unparalleled behind-the-scenes coverage, chronicling major deals and putting faces to the major players. Our objective is to provide readers with relevant, comprehensive, and provocative commentary on the issues, trends, and people shaping business in British Columbia.",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 50900
+      },
+      "image_url": "https://i1.feedspot.com/5473472.jpg?t=1669786325"
+    },
+    {
+      "title": "BC Parent Magazine \u00bb Education",
+      "feed_url": "https://bcparent.ca/blog/education/feed/",
+      "website_url": "https://bcparent.ca/blog/education/",
+      "description": "Get some tips on how to choose the best education for your child. BC Parent Magazine is dedicated to parenthood. They publish articles for parents and help them understand parenthood.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 1300,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5473465.jpg?t=1669786974"
+    },
+    {
+      "title": "GrantMe Blog",
+      "feed_url": "https://www.grantme.ca/feed",
+      "website_url": "https://www.grantme.ca/blog",
+      "description": "GrantMe is in the business of student futures. And when students and families feel they have options - the future looks bright. Our philosophy is simple. Remove the uncertainty. Create options. Let our education planning platform be your expert guide. You deserve to graduate to the next level. We help students navigate their higher education journey. Find guides on student scholarships, admissions requirements, financial planning, and more.",
+      "followers": {
+        "facebook": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5473464.jpg?t=1669788535"
+    }
+  ]
+}

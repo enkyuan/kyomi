@@ -1,0 +1,35 @@
+{
+  "category": "Boston Indie Music",
+  "source_url": "https://rss.feedspot.com/boston_indie_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Allston Pudding \u00bb Indie",
+      "feed_url": "https://allstonpudding.com/tag/indie/feed/",
+      "website_url": "https://allstonpudding.com/tag/indie/",
+      "description": "Welcome to Allston Pudding, your online source for music both in Boston and beyond! Allston Pudding is operated and written by fans and musicians to highlight new music and live music from all over. We are supporters of local music, from our hometown to local scenes throughout the world. We hope to support and champion artists who may not receive their proper radio play or publicity, but definitely deserve your attention. Take a read and enjoy!",
+      "followers": {
+        "twitter": 9600,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/7270930.jpg?t=1710153146"
+    },
+    {
+      "title": "EveryDejaVu Blog",
+      "feed_url": "https://everydejavu.com/feed/",
+      "website_url": "https://everydejavu.com/blog/",
+      "description": "EveryDejaVu is an independent record label and music discovery blog based out of the Boston area. A place for us to invite writers to write about new music from lesser known, independent, underground artists from any genre. Interviews, reviews, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7270931.jpg?t=1710151590"
+    },
+    {
+      "title": "New Lease Music \u00bb Boston",
+      "feed_url": "https://newleasemusic.com/tag/boston/feed/",
+      "website_url": "https://newleasemusic.com/tag/boston/",
+      "description": "Tracey Dawkins is a freelance writer specializing in music. Over the years, she has written for several music magazines and has observed editors dismissing indie and unsigned artists who submit good music simply because they didn't have a large enough fan base.This led her to start New Lease Music back in the summer of 2012 to give those artists who are unable to secure a feature on major music publications a chance to showcase their good music that really hits the soul.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/7270929.jpg?t=1710151381"
+    }
+  ]
+}

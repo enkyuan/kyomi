@@ -1,0 +1,752 @@
+{
+  "category": "Coin",
+  "source_url": "https://rss.feedspot.com/coin_rss_feeds",
+  "feeds": [
+    {
+      "title": "CoinWeek",
+      "feed_url": "https://coinweek.com/feed/",
+      "website_url": "https://coinweek.com/",
+      "description": "Covers the latest news and instructive content to enhance the knowledge of numismatics coins, modern & classic, bullion and currency and every other related topics. CoinWeek is the most advanced independent on-line media source for rare, modern and bullion coin & currency news, video, analysis, and articles.",
+      "followers": {
+        "facebook": 94600,
+        "twitter": 10300,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/1425126.jpg?t=1616593097"
+    },
+    {
+      "title": "ANA Coin Press Blog",
+      "feed_url": "https://blog.money.org/coin-collecting/rss.xml",
+      "website_url": "https://blog.money.org/coin-collecting",
+      "description": "Covers numismatic stories, practical coin collecting tips and more. The American Numismatic Association is a nonprofit organization dedicated to educating and encouraging people to study and collect coins and related items. The Association serves the academic community, collectors and the general public with an interest in numismatics.",
+      "followers": {
+        "facebook": 37500,
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/5267642.jpg?t=1618381912"
+    },
+    {
+      "title": "CoinNews.net",
+      "feed_url": "https://feeds.feedburner.com/CoinNewsnet",
+      "website_url": "https://www.coinnews.net/",
+      "description": "Provides breaking coin news, unique coin articles, coin news, coin price guides, videos and free numismatic services for new and experienced coin collectors.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4642048.jpg?t=1633699943"
+    },
+    {
+      "title": "World Coin News",
+      "feed_url": "https://feeds.feedburner.com/WorldCoinNews",
+      "website_url": "https://worldcoinnews.blogspot.com/",
+      "description": "Covers information about a wide variety of coins along with their specifications, numismatic news and information about recent coin types and varieties released worldwide.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 124
+      },
+      "image_url": "https://i1.feedspot.com/532841.jpg?t=1695622997"
+    },
+    {
+      "title": "David Lawrence Rare Coins Blog",
+      "feed_url": "https://blog.davidlawrence.com/rss/",
+      "website_url": "https://blog.davidlawrence.com/",
+      "description": "Provides current offerings, auctions and stories about DLRC. David Lawrence Rare Coins is an industry leader in the trading and auctioning of U.S. rare coins certified by PCGS, NGC, and CAC.",
+      "followers": {
+        "twitter": 3400,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4958682.jpg?t=1633700410"
+    },
+    {
+      "title": "Variety & Errors",
+      "feed_url": "https://varietyerrors.com/feed/",
+      "website_url": "https://varietyerrors.com/",
+      "description": "Find all the information on error and variety coins that can help you grow as a collector.",
+      "followers": {
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/4642931.jpg?t=1695626463"
+    },
+    {
+      "title": "Atlanta Gold & Coin Buyers Blog",
+      "feed_url": "https://atlantagoldandcoin.com/feed/",
+      "website_url": "https://atlantagoldandcoin.com/blog/",
+      "description": "The goal is to provide you with the most up-to-date information on the gold, silver and platinum markets, the latest coin news, exciting new coin inventory offerings and educational resources",
+      "followers": {
+        "facebook": 633,
+        "twitter": 404
+      },
+      "image_url": "https://i1.feedspot.com/4642037.jpg?t=1695626498"
+    },
+    {
+      "title": "Robi's Collection",
+      "feed_url": "http://robiscollection.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://robiscollection.blogspot.com/",
+      "description": "In this blog you will find images of coins and bank notes from the author's personal collection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4642851.jpg?t=1616594166"
+    },
+    {
+      "title": "The Westminster Collection",
+      "feed_url": "https://blog.westminstercollection.com/feed/",
+      "website_url": "https://blog.westminstercollection.com/",
+      "description": "Covers historic coins information, stamps and collectables honoring the nation's most important events and anniversaries. The Westminster Collection is a leading distributor of collectable stamps and coins.",
+      "followers": {
+        "facebook": 159500,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4643063.jpg?t=1616593132"
+    },
+    {
+      "title": "Exclusive Coins",
+      "feed_url": "https://exclusivecoins.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://exclusivecoins.blogspot.com/",
+      "description": "Articles about the history of the period when the coins/banknotes/stamps were minted/printed and events/persons they honor/depict, both on Indian and foreign coins/banknotes/stamps.",
+      "followers": {
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4958710.jpg?t=1616593401"
+    },
+    {
+      "title": "Numismatics Collections",
+      "feed_url": "https://numismaticscollections.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://numismaticscollections.blogspot.com/",
+      "description": "This blog majorly concentrates on bringing the latest news, updates on Republic Coins of India. Authored by S Navaneethan Ramanujam. He has been a Numismatist for around 20 years.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 955,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5340814.jpg?t=1636978056"
+    },
+    {
+      "title": "Change Checker Blog",
+      "feed_url": "https://blog.changechecker.org/feed",
+      "website_url": "https://blog.changechecker.org/",
+      "description": "Providing all the latest news and information about UK coins and coin collecting. Change Checker allows you to start and build a full collection of designs, including all 29 of the sports 50p coins which were minted for the 2012 Olympic Games.",
+      "followers": {
+        "facebook": 173500,
+        "twitter": 6600,
+        "instagram": 36400
+      },
+      "image_url": "https://i1.feedspot.com/4641960.jpg?t=1616593125"
+    },
+    {
+      "title": "A Survey of Ancient Coins",
+      "feed_url": "https://guberman.blogspot.com/feeds/posts/default",
+      "website_url": "https://guberman.blogspot.com/",
+      "description": "Find interesting information about ancient coins.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1856598.jpg?t=1616594579"
+    },
+    {
+      "title": "JR Newsletter",
+      "feed_url": "http://jr-newsletter.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jr-newsletter.blogspot.com/",
+      "description": "The JR Newsletter is the official e-newsletter of the John Reich Collectors Society. The purpose of the John Reich Collectors Society (JRCS) is to encourage the study of numismatics, particularly United States gold and silver coins minted before the introduction of the Seated Liberty design, and to provide technical and educational information concerning such coins.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4642777.jpg?t=1616594650"
+    },
+    {
+      "title": "Douglas Winter Numismatics",
+      "feed_url": "https://raregoldcoins.com/blog?format=RSS",
+      "website_url": "https://raregoldcoins.com/blog?category=MarketBlog",
+      "description": "Douglas Winter Numismatics was founded in 1985 by Doug Winter. Follow to discover rare gold coins.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 2800,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4643376.jpg?t=1616593425"
+    },
+    {
+      "title": "David's Coin Travels Blog",
+      "feed_url": "https://davidscointravels.blog/feed/",
+      "website_url": "https://davidscointravels.blog/",
+      "description": "Follow David journey across the country collecting elongated coins",
+      "followers": {
+        "facebook": 213,
+        "instagram": 407
+      },
+      "image_url": "https://i1.feedspot.com/4958701.jpg?t=1616593952"
+    },
+    {
+      "title": "The Coin Show",
+      "feed_url": "https://www.spreaker.com/show/1080503/episodes/feed",
+      "website_url": "https://coinshowradio.com/listen-to-the-show/",
+      "description": "Mike Nottelmann and Matt Dinger brings you The Coin Show. A podcast dedicated to coins and coin collectors. Each episode features news and interesting discussions about the world of coins as well as interviews, games and more.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 1200,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4966530.jpg?t=1610347674"
+    },
+    {
+      "title": "The Old Currency Exchange",
+      "feed_url": "https://oldcurrencyexchange.com/feed/",
+      "website_url": "https://oldcurrencyexchange.com/",
+      "description": "An educational and entertaining website where collectors, both young and not so young, can read about the economics, history and politics behind Irish coin and banknote issues.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5084796.jpg?t=1695628036"
+    },
+    {
+      "title": "Coin Parade",
+      "feed_url": "https://coinparade.co.uk/feed/",
+      "website_url": "https://coinparade.co.uk/",
+      "description": "CoinParade.co.uk is authored by Les Kendall. I built this site because I am interested in coin collecting, and as a professional Freelance Software Developer I have been lucky enough to write software for several professional Coin and bullion dealers.",
+      "followers": {
+        "facebook": 917,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4761715.jpg?t=1616593456"
+    },
+    {
+      "title": "Alliance Coin & Banknote",
+      "feed_url": "https://alliancecoin.wordpress.com/feed/",
+      "website_url": "https://alliancecoin.wordpress.com/",
+      "description": "The blog for Canadian coin dealer Alliance Coin & Banknote",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4958698.jpg?t=1616593975"
+    },
+    {
+      "title": "Mauseus",
+      "feed_url": "http://mauseus.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mauseus.blogspot.com/",
+      "description": "In this blog you will find information about ancient coins.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643342.jpg?t=1616594357"
+    },
+    {
+      "title": "The Australian Coin Collecting Blog",
+      "feed_url": "https://www.australian-coins.com/feed/",
+      "website_url": "https://www.australian-coins.com/",
+      "description": "Covers information about Aussie pre-decimal and decimal coins. The Australian Coin Collecting Blog is Australia's largest and most popular coin collecting weblog, and is the premier source of information for Australian Coin Collectors.",
+      "followers": {
+        "facebook": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4642804.jpg?t=1616594730"
+    },
+    {
+      "title": "Grand Rapids Coins Blog",
+      "feed_url": "https://www.grandrapidscoins.com/feed/",
+      "website_url": "https://www.grandrapidscoins.com/blog/",
+      "description": "Formerly know as the Mullen Coins Collection Blog and currently Grand Rapids Coins Blog provides valuable articles and content about coin collections, rare coins, currency, antiquities and interesting reviews of news and events within the numismatic community.Grand Rapids Coin Dealer and online Coin Dealer offering online coin sales through a secure, easy to browse website. Search coins, currency and antiquities from a local, US based company you can trust.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5677257.jpg?t=1695617240"
+    },
+    {
+      "title": "Pocket Change Blog",
+      "feed_url": "https://numismatics.org/pocketchange-type/pocket-change/feed/",
+      "website_url": "https://numismatics.org/pocketchange-type/pocket-change/",
+      "description": "The mission of the American Numismatic Society shall be to promote and advance the study, research, and appreciation of numismatics. Founded in 1858, The American Numismatic Society is dedicated to the study and appreciation of numismatics and has assembled a permanent collection of more than 800,000 coins, monetary objects, medals, and other related items dating back to 2000 BCE.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 8800,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5677481.jpg?t=1695623956"
+    },
+    {
+      "title": "U.S. Coins Guide",
+      "feed_url": "https://coins.thefuntimesguide.com/feed/",
+      "website_url": "https://coins.thefuntimesguide.com/",
+      "description": "If you're a beginning coin collector looking for a little advice on managing your coin collection, then you've come to the right place!This site is packed with helpful info if you're just getting started coin collecting and have questions about the coins in your collection. U.S. Coins Guide coin experts have provided a wealth of info here that will help point you in the right direction before you start buying & selling coins, attending coin shows and auctions, and interacting with coin dealers.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/5677334.jpg?t=1695618613"
+    },
+    {
+      "title": "Embleholics Blog",
+      "feed_url": "https://embleholics.com/feed/",
+      "website_url": "https://embleholics.com/blog/",
+      "description": "Amazing Challenge Coins | Military Discounts Available - Disabled Veteran Owned & Operated. Free Molds, Free Shipping, and Free Artwork.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 88
+      },
+      "image_url": "https://i1.feedspot.com/5677476.jpg?t=1695623749"
+    },
+    {
+      "title": "RareCoin Blog",
+      "feed_url": "https://rarecoin.store/en/feed/",
+      "website_url": "https://rarecoin.store/en/blog/",
+      "description": "RareCoin.Store is part of TriaPrima GmbH. One of the two managing directors of TriaPrima GmbH and responsible for RareCoin is Dirk Wasserthal.RareCoin Blog features posts about gold coins, silver coins, and coins made of platinum or palladium.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5677492.jpg?t=1695627282"
+    },
+    {
+      "title": "Hill Top Coins Blog",
+      "feed_url": "https://www.hilltopcoin.com//feed/rss2",
+      "website_url": "https://www.hilltopcoin.com/blog",
+      "description": "Hill Top Coins provides the buying and selling of coins, gold, silver, and currency in the Marion, IA area. Visit their Hill Top Coins Blog to see the latest news and updates from Hill Top Coins. the blog provides you with all the necessary information regarding eh coins market.",
+      "followers": {
+        "facebook": 382
+      },
+      "image_url": "https://i1.feedspot.com/5677477.jpg?t=1695623752"
+    },
+    {
+      "title": "Colonial Coin Collectors Club Blog",
+      "feed_url": "https://colonialcoins.org/feed/",
+      "website_url": "https://colonialcoins.org/blog/",
+      "description": "The Colonial Coin Collectors Club (C4) was founded in 1993 to provide a forum for collectors of numismatic material related to the Early American era. This involves coins, tokens, currency, and medals.",
+      "followers": {},
+      "image_url": "https://colonialcoins.org/wp-content/uploads/2022/03/C4-Club-Logo-150x150.webp?t=1695623737"
+    },
+    {
+      "title": "Americana Rare Coin Blog",
+      "feed_url": "https://americanararecoin.com/blogs/blog.atom",
+      "website_url": "https://americanararecoin.com/blogs/blog",
+      "description": "Americana Rare Coin is a local coin shop in Sacramento, CA. The team of numismatists are fair and courteous coin dealers in Sacramento. We buy and sell rare coins, currency, gold, silver and more. Come stop by and visit the best coin shop in Sacramento, California!",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 32,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5677475.jpg?t=1695627514"
+    },
+    {
+      "title": "Coin Collecting Blog",
+      "feed_url": "https://www.coincollecting.com//feed/rss2",
+      "website_url": "https://www.coincollecting.com/blog",
+      "description": "The Coin Collecting blog covers everything coin-related. Delivering tips, tricks, advice, and even history on coins. Welcome to CoinCollecting.com, the ultimate guide for rare coin collectors and numismatists. Their mission is to help you on your coin-collecting journey, from beginners to experienced collectors.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/5677480.jpg?t=1695623905"
+    },
+    {
+      "title": "Finest Known Blog",
+      "feed_url": "https://finestknown.com/feed/",
+      "website_url": "https://finestknown.com/blog/",
+      "description": "Numismaster.com is the leading source for coin and paper money pricing, specification and identification. Our extensive database covers coins from over 400 countries and over 1,200 independent coin issuers dating back to 1501 and paper money from its origin in 1368 through the present day with issues from over 300 countries. Rare Coin Blog offers information on coins, their dealers, and also offers exquisite rare coins, ancient coinage, shipwreck treasure, currency, and artifacts.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 691,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5677485.jpg?t=1695624258"
+    },
+    {
+      "title": "Colonial Acres Coins Blog",
+      "feed_url": "https://blog.colonialacres.com/feed/",
+      "website_url": "https://blog.colonialacres.com/",
+      "description": "Follow the Colonial Acres Coins Blog and Read their blogs about Canada coins at Colonial Acres Coins. They are one of the largest coin shops in Canada. Colonial Acres Coins is a numismatic shop that offers a wide assortment of coins, banknotes, gold and silver bullion, and supplies for all your collecting needs. They offer free in-store appraisals and buy all gold and silver-related items like coins, bars, jewelry, cutlery sets, and more.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5677478.jpg?t=1695623803"
+    },
+    {
+      "title": "Victor-Li.com \u00bb Coins",
+      "feed_url": "https://victor-li.com/category/coins/feed/",
+      "website_url": "https://victor-li.com/category/coins/",
+      "description": "Victor Li is an award-winning multimedia journalist based in Chicago. He is the author of the book Nixon in New York: How Wall Street Helped Richard Nixon Win the White House. He is currently an assistant managing editor with the ABA Journal, covering the business of law and legal technology. Read about some of the topics on commemorative coins, coins from different countries, and error coins. The author also shares some of his own coin collection.",
+      "followers": {
+        "facebook": 143
+      },
+      "image_url": "https://i1.feedspot.com/5677471.jpg?t=1695623586"
+    },
+    {
+      "title": "Coin Talk",
+      "feed_url": "https://www.cointalk.com/forums/-/index.rss",
+      "website_url": "https://www.cointalk.com/",
+      "description": "Coin Talk Forum is an online community where you can discuss everything coin related. Chat, share pictures and talk about collecting, trading, auctioning coins, etc.",
+      "followers": {
+        "facebook": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5235133.jpg?t=1695646992"
+    },
+    {
+      "title": "Vegas Coin Dealer Blog",
+      "feed_url": "https://vegascoindealer.com/blogs/news.atom",
+      "website_url": "https://vegascoindealer.com/blogs/news",
+      "description": "Vegas Coin Dealer provides first-class comprehensive coin collection market information, entertainment, and education for collectors in regard to rare coins, ingots, and every other area of the numismatic industry. It connects collectors and bidders with the finest certified rare coins with transparent accuracy, providing a secure platform for the coin collection market via rare coin purchases, sales, auctions, prompt communication, respect, and ethics.",
+      "followers": {
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5677483.jpg?t=1695646662"
+    },
+    {
+      "title": "Sedwick Coins Blog",
+      "feed_url": "https://sedwickcoins.blog/feed/",
+      "website_url": "https://sedwickcoins.blog/",
+      "description": "Daniel Frank Sedwick, LLC is the world's premier specialist company in the colonial coinage of Spanish America, shipwreck coins, and artifacts of all nations. In addition to an Online Store, he sells coins and artifacts at various numismatic shows around the nation. Daniel Frank Sedwick, LLC also has the honor of being the only auction company in the world specializing in Authentic Treasure! The auction catalogs are accessible on the web and printed in a high-quality format with full-color illustrations for all lots.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5677472.jpg?t=1695623640"
+    },
+    {
+      "title": "USCoinNews",
+      "feed_url": "https://uscoinnews.com/feed/",
+      "website_url": "https://uscoinnews.com/",
+      "description": "US Coin News was founded in May 2019 and it is aimed at the casual United States Coin Collector. The focus of the site is to bring news, tips, tricks, and information to help collectors who are starting out or seasoned collectors. Generally speaking, there won't be many posts about ultra-rare coins or high-priced auction coins. Rather, the focus is on those who enjoy the hobby, for the hobby and not necessarily for investments.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 367
+      },
+      "image_url": "https://i1.feedspot.com/5677497.jpg?t=1697613123"
+    },
+    {
+      "title": "Art in Coins",
+      "feed_url": "https://www.artincoins.com/feed/",
+      "website_url": "https://www.artincoins.com/news-and-updates/",
+      "description": "Founded in 2010 and re-branded around the luxury numismatic segment of the market in 2017, Art in Coins is a boutique dealer of some of the most exciting and exclusive collectibles produced today. It specializes in high-tech, low-mintage gold and silver coins sourced from recognized manufacturers worldwide.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 270,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5677496.jpg?t=1695646729"
+    },
+    {
+      "title": "Coin Collectors Blog",
+      "feed_url": "http://coinsblog.ws/feed",
+      "website_url": "http://coinsblog.ws/",
+      "description": "Providing information about numismatic collecting from a collector, collections of various types of coins right from modern (post 1964) to classic era (up to 1964) coins.",
+      "followers": {
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4641634.jpg?t=1616593418"
+    },
+    {
+      "title": "Mintage World Blog",
+      "feed_url": "https://www.mintageworld.com/blog/feed/",
+      "website_url": "https://www.mintageworld.com/blog/",
+      "description": "A one-stop shop for information on coins, notes and stamps for budding and seasoned collectors and students. Mintage World is an online Museum catering to Numismatists, Notaphilists and Philatelists with a purpose of imparting knowledge and interest in the areas of Numismatics, Notaphily and Philately to the general public, collectors, students and scholars alike.",
+      "followers": {
+        "facebook": 418100,
+        "twitter": 981
+      },
+      "image_url": "https://i1.feedspot.com/4642808.jpg?t=1616593121"
+    },
+    {
+      "title": "Ancient Coins",
+      "feed_url": "https://www.ancientgoldcoins.com/ancient-coin-blog/feed/",
+      "website_url": "https://www.ancientgoldcoins.com/ancient-coin-blog/",
+      "description": "Here you will find ancient coins from around the world including ancient coins from ancient Greece, ancient Rome, ancient Persia, and ancient Egypt.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 822
+      },
+      "image_url": "https://i1.feedspot.com/4642161.jpg?t=1616594053"
+    },
+    {
+      "title": "Coin Thrill",
+      "feed_url": "https://cointhrill.com/feed/",
+      "website_url": "https://cointhrill.com/",
+      "description": "A blog on coin collecting, currency, foreign coins, and all other fun stuff in the hobby of numismatics. This site is dedicated to all those who love discussing the coin/currency hobby.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/3658683.jpg?t=1616593432"
+    },
+    {
+      "title": "A Gift For Polydektes",
+      "feed_url": "http://digitalhn.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://digitalhn.blogspot.com/",
+      "description": "Get to know about different coins along with their significance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1856597.jpg?t=1616594249"
+    },
+    {
+      "title": "Collecting Old Wheat Back Pennies",
+      "feed_url": "https://wheatbackpennies.blogspot.com/feeds/posts/default",
+      "website_url": "https://wheatbackpennies.blogspot.com/",
+      "description": "A huge collection of wheat pennies from the author's hoard. Enjoy full images and descriptions of old coins and learn the value & rarity of old circulated wheat pennies & old American coins.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367056.jpg?t=1643712521"
+    },
+    {
+      "title": "Old Coin Roll Hunting",
+      "feed_url": "https://oldcoinrollhunting.blogspot.com/feeds/posts/default",
+      "website_url": "https://oldcoinrollhunting.blogspot.com/",
+      "description": "Hunting for old coins by getting free bankrolls from your local financial institutions can be fun. Learn how to enjoy this great hobby and see what old silver coins I find.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367055.jpg?t=1643711710"
+    },
+    {
+      "title": "CPM Prestige Gold & Silver Coins Blog",
+      "feed_url": "https://blog.cpmcoins.com/feed/",
+      "website_url": "https://blog.cpmcoins.com/",
+      "description": "CPM is a Coin Consultancy that offers a tailored service giving clients personal access to the most exclusive and limited edition collectible gold and silver coins. Their blog provides expert recommendations and advice for all those interested and actively collecting gold and silver coins.",
+      "followers": {
+        "facebook": 14700,
+        "twitter": 713
+      },
+      "image_url": "https://i1.feedspot.com/4958697.jpg?t=1695627150"
+    },
+    {
+      "title": "Numismatics With Kenny Blog (Coin Collecting Blog)",
+      "feed_url": "https://numismaticswithkenny.com/feed/",
+      "website_url": "https://libertycoinandcurrency.com/blog-page/",
+      "description": "Numismatic discussion, numismatic videos, numismatics, coin collecting articles, coin history, and more. All coin collectors from around the world are welcome. numismatic blog, coin collecting blog",
+      "followers": {
+        "facebook": 452,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4973165.jpg?t=1616593387"
+    },
+    {
+      "title": "Liberty Coin & Currency",
+      "feed_url": "http://libertycoinandcurrency.com/feed/",
+      "website_url": "https://libertycoinandcurrency.com/blog-page/",
+      "description": "Liberty Coin & Currency is a family-owned business that specializes in evaluating rare coins, diamonds, currency, gold, silver, and platinum. Follow the blog for the latest news and info on collectible coins, currency, diamonds, jewelry, gold, and other valuables",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 511
+      },
+      "image_url": "https://i1.feedspot.com/4641976.jpg?t=1616593391"
+    },
+    {
+      "title": "Yorkshire Numismatic Society",
+      "feed_url": "http://yorkshirenumismatic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://yorkshirenumismatic.blogspot.com/",
+      "description": "Founded in 1909 and affiliated to the British Association of Numismatic Societies from 1953 the Yorkshire Numismatic Society aims to promote the study of coins.",
+      "followers": {
+        "facebook": 371,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4643337.jpg?t=1616593970"
+    },
+    {
+      "title": "Ancient Coin Collecting",
+      "feed_url": "http://ancientcoincollecting.blogspot.com/feeds/posts/default",
+      "website_url": "http://ancientcoincollecting.blogspot.com/",
+      "description": "Find comments related to numismatic topics of personal interest.",
+      "followers": {
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/1856634.jpg?t=1616594465"
+    },
+    {
+      "title": "Early American Copper",
+      "feed_url": "http://earlyamericancopper.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://earlyamericancopper.blogspot.com/",
+      "description": "A web log devoted to early American copper coins. These include Colonial coins, Half Cents, and Large Cents. Follow to know more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4642869.jpg?t=1616594423"
+    },
+    {
+      "title": "NwPlaza Coins",
+      "feed_url": "https://nwplaza.wordpress.com/feed/",
+      "website_url": "https://nwplaza.wordpress.com/",
+      "description": "NwPlaza Antique Coin Buyers was formed in 2009. Our Antique Coin Buyers contribute their years of coin collecting knowledge and experience to this blog.",
+      "followers": {
+        "facebook": 121,
+        "twitter": 574
+      },
+      "image_url": "https://i1.feedspot.com/4642985.jpg?t=1695627712"
+    },
+    {
+      "title": "Thoreson Numismatics",
+      "feed_url": "https://thoresonnumismatics.com/blog/feed/",
+      "website_url": "https://thoresonnumismatics.com/blog/",
+      "description": "Follow this blog to get updates and information about coins",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4958714.jpg?t=1695627699"
+    },
+    {
+      "title": "Indian Coins",
+      "feed_url": "https://india-coin.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://india-coin.blogspot.com/",
+      "description": "A blog dedicated to sharing information about Indian coin collection by PJ.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4958705.jpg?t=1616594320"
+    },
+    {
+      "title": "Nevada Coin and Jewelry Blog",
+      "feed_url": "https://blog.nvcoin.com/syndication.axd",
+      "website_url": "https://blog.nvcoin.com/",
+      "description": "Providing useful and interesting information about coins to add to your knowledge.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4642840.jpg?t=1695627963"
+    },
+    {
+      "title": "Rocky Mountain Coin Blog",
+      "feed_url": "https://rmcoin.com/feed/",
+      "website_url": "https://rmcoin.com/blog/",
+      "description": "Rocky Mountain Coin is a dealer of rare coins, currencies and precious metals in the heart of Denver, Colorado. Founded in 1976, RMC has grown to be one of the largest dealers in the United States\u2212handling millions of dollars in coin, currency, and precious metal transactions each year.Rocky Mountain Coin also buys and sells a variety of collectibles, gold jewelry, and pre-owned Rolex watches. In addition, RMC is one of Colorado's premier dealers for Garrett and Minelab metal detectors.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5677470.jpg?t=1695644747"
+    },
+    {
+      "title": "Custom Challenge Coins Blog",
+      "feed_url": "https://customchallengecoins.net/blog/feed/",
+      "website_url": "https://customchallengecoins.net/blog/",
+      "description": "Metal Promo is a world-class promotions company, specializing in customized metal goods including lapel pins, medals, keychains, awards, and other promo items. Custom challenge coins are used to commemorate a special moment or achievement. Want to learn more about Challenge follow their informative blog.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 334,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5677473.jpg?t=1695623691"
+    },
+    {
+      "title": "Century Stamps and Coins Blog",
+      "feed_url": "https://centurystamps.com/feed/",
+      "website_url": "https://centurystamps.com/coin-and-stamp-collecting-blog/",
+      "description": "Century Stamp Co. Ltd was established in 1946 when it opened its first retail outlet in a rented mezzanine in a large bookstore in Heliopolis, Egypt. Owned and operated by Emil N. Hakim. Emil started collecting stamps in 1933 at the age of 7, when a relative gave him his first album. By the Age of 12 he started dealing professionally with stamps, by buying and selling to the local stamps dealers in Cairo, Egypt. Follow the Century Stamps and Coins Blog and read the latest news on all things coin and stamp collecting. Get expert insight from the Century Coin & Stamp team.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5677490.jpg?t=1695624513"
+    },
+    {
+      "title": "Coin Publications Blog",
+      "feed_url": "https://coinpublications.com/feed/",
+      "website_url": "https://coinpublications.com/blog/",
+      "description": "Coin Publications is a small family-owned publishing company based in London, UK, and Saxony, Germany. They produce a range of quality price and reference books, mainly on subjects relating to coins and other collectibles, including medals and banknotes. Most of the books are paperbacks and priced under \u00a310.00. They also publish a couple of beautifully produced hardbacks. Learn more about their books, their publications, coin collection, detailed information, history, market research, and more.",
+      "followers": {
+        "facebook": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5677488.jpg?t=1695624410"
+    },
+    {
+      "title": "Atlantic Coin & Currency Blog",
+      "feed_url": "https://augustacoin.com/feed/",
+      "website_url": "https://augustacoin.com/blog/",
+      "description": "At Atlantic Coin & Currency, they are a renowned and trusted destination for collectors, investors, and individuals seeking expert guidance and services in the world of numismatics, precious metals, and valuable collectibles. They have built a solid reputation as a family-owned and operated business dedicated to providing exceptional service, unparalleled expertise, and a vast inventory of rare and sought-after items. Explore their blog and learn more about the extensive coin collection, coin description, market research, industry insights, case studies, feature stories and more.",
+      "followers": {
+        "facebook": 15,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5677487.jpg?t=1695624359"
+    },
+    {
+      "title": "British Coin Blog",
+      "feed_url": "https://www.britishcoin.co.uk/blog-feed.xml",
+      "website_url": "https://www.britishcoin.co.uk/blog",
+      "description": "British Coin's social media channels and blogs are a hub of information about everything happening within the world of coins. It also provides an insight into the day-to-day life at British Coin and how their customers are always at the heart of everything they do.",
+      "followers": {
+        "facebook": 41
+      },
+      "image_url": "https://i1.feedspot.com/5677484.jpg?t=1695624207"
+    },
+    {
+      "title": "Marin Aleksov Blog",
+      "feed_url": "https://marinaleksov.com/feed/",
+      "website_url": "https://marinaleksov.com/blog/",
+      "description": "Marin Aleksov is CEO of Rosland Capital LLC, overseeing all day-to-day operations and employees and serves as key decision maker in all company aspects. In addition to serving as Rosland's CEO, Aleksov is also an active industry commentator and dedicated philanthropist. He has appeared on numerous radio shows and podcasts to offer expert insight on the precious metals market, and has also been featured in entrepreneurship platforms such as Ideamensch.",
+      "followers": {
+        "facebook": 12,
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/5677479.jpg?t=1695623854"
+    },
+    {
+      "title": "Blind Coin Collector",
+      "feed_url": "https://blindcoincollector.com/feed/",
+      "website_url": "https://blindcoincollector.com/",
+      "description": "My name is Tom Babinszki. I was born totally blind, which is not the first thing I tell people about my self, but for the purpose of the blog, it is one of the most important things. The other important is that I'm a coin collector. In this blog, I will tell you all about it. What is fun about coin collecting if you can't see the coins. How I keep track of the coins, what is interesting & what isn't. Over the years, I found that there is much more to coin collecting, & I also started to write bout related issues, such as accessible currency, coin museums, etc.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5084394.jpg?t=1616594725"
+    },
+    {
+      "title": "Vermillion Enterprise Blog",
+      "feed_url": "https://vermillion-enterprises.com/feed/",
+      "website_url": "https://vermillion-enterprises.com/blog/",
+      "description": "Vermillion Enterprise Blog features posts on the regional coin shops, latest coins collection, extensive information on coins, coins comparison, market value, industry news and updates. Vermillion Enterprises is the Nature Coasts premier buyer of gold, silver and coins.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 56,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5677482.jpg?t=1695627344"
+    },
+    {
+      "title": "United States Mint",
+      "feed_url": "https://www.usmint.gov/feed/usmint",
+      "website_url": "https://www.usmint.gov/",
+      "description": "Covers coin collecting news, information about Commemorative coins, and precious metal coins. United States Mint manufactures and distributes circulating coins, precious metals and collectable coins and national medals to meet the needs of the United States.",
+      "followers": {
+        "facebook": 137200,
+        "twitter": 56100,
+        "instagram": 26900
+      },
+      "image_url": "https://i1.feedspot.com/4958641.jpg?t=1616594734"
+    },
+    {
+      "title": "Littleton Coin Company",
+      "feed_url": "https://blog.littletoncoin.com/feed/",
+      "website_url": "https://blog.littletoncoin.com/",
+      "description": "Features stories and articles all about coin collecting, valuable coin collecting information and tips. Maynard Sundman founded Littleton Coin Company on the time-honored values of courtesy, trust and providing quality products. Littleton Coin is an employee-owned business, built by collectors, for collectors.",
+      "followers": {
+        "facebook": 96800,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4641871.jpg?t=1616593130"
+    },
+    {
+      "title": "NumismaticNews",
+      "feed_url": "https://www.numismaticnews.net/.rss/full",
+      "website_url": "https://www.numismaticnews.net/",
+      "description": "Provides weekly reports on market trends and news concerning collectible U.S. coins and paper money. Numismatic News is your source for all things coins and paper money from around the world.",
+      "followers": {
+        "facebook": 23000,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/1425136.jpg?t=1695627900"
+    },
+    {
+      "title": "London Coin Galleries Blog",
+      "feed_url": "https://londoncoin.com/feed/",
+      "website_url": "https://londoncoin.com/blog/",
+      "description": "In August of 1990, London Coin Galleries of Newport opened as the second Southern California Gallery of the Corporation. The blog offers an eclectic and diverse inventory that you are sure to find interesting.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4642173.jpg?t=1616593484"
+    },
+    {
+      "title": "Heritage Auctions Blog \u00bb US Coins",
+      "feed_url": "https://blog.ha.com/category/us-coins/feed/",
+      "website_url": "https://blog.ha.com/category/us-coins/",
+      "description": "Features articles that have to do exclusively with U.S. Coins. Heritage Auctions is the Internet's most popular resource for owners & collectors of valuable and fascinating objects.",
+      "followers": {
+        "facebook": 104900,
+        "twitter": 57700,
+        "instagram": 65800
+      },
+      "image_url": "https://i1.feedspot.com/5305994.jpg?t=1627469477"
+    },
+    {
+      "title": "Coin Replicas Blog",
+      "feed_url": "https://coinreplicas.com/feed/",
+      "website_url": "https://coinreplicas.com/blog/",
+      "description": "CoinReplicas.com was founded in 2003 by Charles Doyle. A Bronx, NY, native and a current resident of Putnam County, NY, Doyle is a metallic art reproductionist, specializing in museum-quality, rare and ancient coins. A long-time apprentice to his uncle, ancient coin expert and reproductionist, Peter Rosa, Doyle's unique coin reproduction skills and techniques are a Rosa legacy.",
+      "followers": {
+        "facebook": 175
+      },
+      "image_url": "https://i1.feedspot.com/5677489.jpg?t=1695627540"
+    },
+    {
+      "title": "Certified Coin Consultants Blog",
+      "feed_url": "https://certifiedcoinconsultants.com/blogs/news.atom",
+      "description": "Established in 2012, Certified Coin Consultants is a trusted coin dealer located in Rockville Centre, NY that specializes in buying and selling coins online. CCC offers a wide variety of numismatic coins for sale including Gold Coins, Silver Coins, Rare Coins, Old Coins, Modern Coins, United States Coins, World Coins and Graded Coins.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2700,
+        "instagram": 136
+      },
+      "image_url": "https://i1.feedspot.com/5677469.jpg?t=1695646520"
+    }
+  ]
+}

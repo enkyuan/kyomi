@@ -1,0 +1,1319 @@
+{
+  "category": "Apple",
+  "source_url": "https://rss.feedspot.com/apple_rss_feeds",
+  "feeds": [
+    {
+      "title": "MacRumors",
+      "feed_url": "http://feeds.macrumors.com/MacRumors-Front",
+      "website_url": "https://www.macrumors.com/",
+      "description": "MacRumors.com is a website focused on Apple news and rumors. As the most popular site of its kind, MacRumors attracts a broad audience of both consumers and professionals interested in the latest technologies and products. The site also boasts an active community focused on purchasing decisions and technical aspects of the iPhone, iPod and Macintosh platforms.",
+      "followers": {
+        "facebook": 505300,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/22889.jpg?t=1608797784"
+    },
+    {
+      "title": "9to5Mac",
+      "feed_url": "https://9to5mac.com/feed/",
+      "website_url": "https://9to5mac.com/",
+      "description": "Apple News & Mac Rumors Breaking All Day.",
+      "followers": {
+        "facebook": 280600,
+        "twitter": 1000000,
+        "instagram": 174100
+      },
+      "image_url": "https://i1.feedspot.com/4467234.jpg?t=1758879912"
+    },
+    {
+      "title": "AppleInsider",
+      "feed_url": "https://appleinsider.com/rss/news",
+      "website_url": "https://appleinsider.com/",
+      "description": "For Apple News, Rumors, Reviews, Prices, and Deals, trust AppleInsider. AppleInsider launched in 1997 and quickly grew to become one of the Internet's premier sources of information for all things Apple. Each month, AppleInsider caters to several million unique visitors including consumers, engineers, bankers, and CEOs of Fortune 500 companies.",
+      "followers": {
+        "facebook": 152600,
+        "twitter": 725000
+      },
+      "image_url": "https://i1.feedspot.com/160978.jpg?t=1608797781"
+    },
+    {
+      "title": "Daring Fireball",
+      "feed_url": "https://daringfireball.net/feeds/main",
+      "website_url": "https://daringfireball.net/",
+      "description": "Blog By John Gruber covering the latest news, event updates from Apple. John Gruber is a technology blogger, UI designer, and one of the inventors of the Markdown markup language.",
+      "followers": {
+        "twitter": 96700
+      },
+      "image_url": "https://i1.feedspot.com/3806556.jpg?t=1667218613"
+    },
+    {
+      "title": "Apple",
+      "feed_url": "https://www.apple.com/newsroom/rss-feed.rss",
+      "website_url": "https://www.apple.com/newsroom/",
+      "description": "Apple Newsroom is the source for news about Apple. Read press releases, get updates, watch video and download images.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 9700000
+      },
+      "image_url": "https://i1.feedspot.com/4761391.jpg?t=1608797809"
+    },
+    {
+      "title": "iPhone Hacks",
+      "feed_url": "https://ijunkie.com/feed/",
+      "website_url": "https://ijunkie.com/",
+      "description": "iPhone Hacks is a popular blog dedicated to providing the latest news, tips, tricks, and guides for iPhone users. The blog covers a wide range of topics, from hidden features and hacks to software updates and troubleshooting tips, aimed at enhancing the iPhone user experience. With a focus on practical advice and easy-to-follow tutorials, iPhone Hacks is a valuable resource for both new and seasoned iPhone users looking to get the most out of their devices.",
+      "followers": {
+        "facebook": 849800,
+        "twitter": 115200
+      },
+      "image_url": "https://i1.feedspot.com/47364.jpg?t=1608797789"
+    },
+    {
+      "title": "Cult of Mac",
+      "feed_url": "https://www.cultofmac.com/feed",
+      "website_url": "https://www.cultofmac.com/category/news/",
+      "description": "Cult of Mac is a daily news website and magazine about the world of Apple. We publish a daily digest of news, reviews and how-tos.",
+      "followers": {
+        "facebook": 222000,
+        "twitter": 704600,
+        "instagram": 55500
+      },
+      "image_url": "https://i1.feedspot.com/4743552.jpg?t=1608797792"
+    },
+    {
+      "title": "TechCrunch \u00bb Apple",
+      "feed_url": "https://techcrunch.com/tag/apple/feed/",
+      "website_url": "https://techcrunch.com/tag/apple/",
+      "description": "TechCrunch's Apple section is a key resource for staying updated on all things Apple, featuring news, reviews, and analyses of the latest products, software updates, and corporate developments. The blog offers timely and comprehensive coverage, ensuring readers are well-informed about new iPhone releases, MacBook updates, and innovations in Apple's software and services. With contributions from a team of seasoned tech journalists, TechCrunch provides in-depth articles and expert insights, making it a valuable destination for Apple enthusiasts and tech aficionados alike.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/586370.jpg?t=1608797797"
+    },
+    {
+      "title": "Mactrast",
+      "feed_url": "https://www.mactrast.com/feed/",
+      "website_url": "https://www.mactrast.com/category/general/",
+      "description": "Mactrast is an technology news website focused on Apple, Inc. Our mission is to provide millions of readers with up-to-date news on all things Mac, iPhone, iPad, Apple Watch, and more. We started covering news about '1 Infinite Loop in Cupertino' in 2010 and evolved into securing recognition as an authority domain for Apple related news. In addition to fresh daily news, we also publish reviews, how-to guides, giveaways, and opinions on matters in the world of Apple Inc.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 150700
+      },
+      "image_url": "https://i1.feedspot.com/1084242.jpg?t=1681717353"
+    },
+    {
+      "title": "Basic Apple Guy Blog \u00bb Mac",
+      "feed_url": "https://basicappleguy.com/basicappleblog?format=rss",
+      "website_url": "https://basicappleguy.com/basicappleblog/category/Mac/",
+      "description": "I've had an incredible affinity for Apple - from the iMac to their iPod socks. Their products gave then young me tools that pushed the boundaries of what I felt capable of and provided me with a creative reach that I didn't know was possible. Decades later, that passion for creativity and Apple fandom continue. BasicAppleGuy is a place where my appreciation and musings on Apple can continue onward.",
+      "followers": {
+        "twitter": 240700
+      },
+      "image_url": "https://i1.feedspot.com/5542829.jpg?t=1681715148"
+    },
+    {
+      "title": "iDrop News",
+      "feed_url": "http://feeds.feedburner.com/idropnews/feed",
+      "website_url": "https://www.idropnews.com/category/news/",
+      "description": "iDrop News is one of today's hottest iOS news sites covering topics including Apple and iPhone rumors, tips, products, reviews, apps, accessories and more.",
+      "followers": {
+        "twitter": 131700
+      },
+      "image_url": "https://i1.feedspot.com/5542831.jpg?t=1681715221"
+    },
+    {
+      "title": "73Inc Blog",
+      "feed_url": "https://73inc.nz/feed/",
+      "website_url": "https://73inc.nz/blog/",
+      "description": "Welcome to the blog at 73Inc, where you can stay updated on the best practices for maintaining and repairing your Apple devices. From in-depth guides on MacBook screen replacements to essential tips for troubleshooting common issues like Wi-Fi connectivity, this blog is a valuable resource for any Apple device owner. The articles are enriched with practical advice to help extend the lifespan of your devices, safeguard your investment, and enhance your user experience...",
+      "followers": {
+        "facebook": 222,
+        "twitter": 9,
+        "instagram": 125
+      },
+      "image_url": "https://i1.feedspot.com/5614671.jpg?t=1688124205"
+    },
+    {
+      "title": "iStore STM Blog",
+      "feed_url": "https://istorestm.com/feed/",
+      "website_url": "https://istorestm.com/blog/",
+      "description": "The iStore STM blog, found on iStoreSTM.com, offers valuable insights into the Apple ecosystem, covering topics from device repairs to technology training. The blog is supported by a team of experts with over 25 years of experience, including Jason Wu, Mudit Gupta, and Charlie Thomas, who bring extensive knowledge from their roles in product procurement, service advisory, and corporate solutions. The blog serves as a reliable resource for both Apple enthusiasts and professionals looking to stay updated on the latest in Apple technology and services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7257401.jpg?t=1708536421"
+    },
+    {
+      "title": "Apple Developer News & Updates",
+      "feed_url": "https://developer.apple.com/news/rss/news.rss",
+      "website_url": "https://developer.apple.com/news/",
+      "description": "Get updates, tips, and how-to information on a range of development, App Store, and Mac App Store topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/99442.jpg?t=1608797804"
+    },
+    {
+      "title": "Nytimes \u00bb Apple Incorporated",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/company/apple-incorporated/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/company/apple-incorporated",
+      "description": "Apple Incorporated financial and business news, updates, and information from The New York Times and other leading providers.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4471834.jpg?t=1608797924"
+    },
+    {
+      "title": "Stack Exchange",
+      "feed_url": "https://apple.stackexchange.com/feeds/week",
+      "website_url": "https://apple.stackexchange.com/",
+      "description": "Browse through Q&A for power users of Apple hardware and software. Explore the latest updates, news, tutorials and more!",
+      "followers": {
+        "facebook": 226,
+        "twitter": 19100,
+        "instagram": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4471734.jpg?t=1608797932"
+    },
+    {
+      "title": "Ars Technica \u00bb Apple",
+      "feed_url": "http://feeds.arstechnica.com/arstechnica/apple/",
+      "website_url": "https://arstechnica.com/tag/apple/",
+      "description": "Updates on Apple by Ars Technica - Original tech news, reviews and analysis on the most fundamental aspects of tech. Ars Technica is a trusted source for technology news, tech policy analysis, breakdowns of the latest scientific advancements, gadget reviews, software, hardware, and nearly everything else found in between layers of silicon.",
+      "followers": {
+        "facebook": 413200,
+        "twitter": 1200000,
+        "instagram": 41900
+      },
+      "image_url": "https://i1.feedspot.com/35438.jpg?t=1608797955"
+    },
+    {
+      "title": "VentureBeat \u00bb Apple",
+      "feed_url": "https://venturebeat.com/tag/apple/feed/",
+      "website_url": "https://venturebeat.com/tag/apple/",
+      "description": "VentureBeat's coverage about Apple. VentureBeat is the leading source for news & perspective on tech innovation. We give context to help execs, entrepreneurs, & tech enthusiasts make smart decisions.",
+      "followers": {
+        "facebook": 443000,
+        "twitter": 705000,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4471828.jpg?t=1608797960"
+    },
+    {
+      "title": "iGeeksBlog",
+      "feed_url": "https://www.igeeksblog.com/feed/",
+      "website_url": "https://www.igeeksblog.com/",
+      "description": "iGeeksBlog is the most trusted community of Apple enthusiasts to help you do more with your iPhone, iPad, Mac, Apple Watch, and more.",
+      "followers": {
+        "facebook": 121100,
+        "twitter": 22800,
+        "instagram": 268300
+      },
+      "image_url": "https://i1.feedspot.com/4471805.jpg?t=1608797988"
+    },
+    {
+      "title": "iDownloadBlog",
+      "feed_url": "https://www.idownloadblog.com/feed/",
+      "website_url": "https://www.idownloadblog.com/",
+      "description": "iDownloadBlog is a website focused on delivering news about Apple products such as the iPhone, iPad, iPod and Apple TV, as well as industry-related insights. The site has a strong focus on jailbreaking and teaching people how to get the most of their iOS device.",
+      "followers": {
+        "facebook": 127500,
+        "twitter": 165500,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/246.jpg?t=1608797982"
+    },
+    {
+      "title": "Redmond Pie \u00bb Apple",
+      "feed_url": "https://www.redmondpie.com/category/apple/feed/",
+      "website_url": "https://www.redmondpie.com/category/apple/",
+      "description": "Redmond Pie's coverage about Apple. Redmond Pie is a site focused on technology news, views and reviews about products/services from Microsoft and its competitors like Apple and Google.",
+      "followers": {
+        "facebook": 223600,
+        "twitter": 68500,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4471845.jpg?t=1608797987"
+    },
+    {
+      "title": "iPhone in Canada",
+      "feed_url": "https://feeds.feedburner.com/iphoneincanada",
+      "website_url": "https://www.iphoneincanada.ca/",
+      "description": "iPhoneinCanada.ca was started in late 2007 as an independent online news source, documenting the use of the first-generation iPhone in Canada, a rarity at the time. The site has evolved along with the iPhone and we are a leading news authority for anything Apple and technology-related that's relevant to Canadians, including the latest telecom news and tech deals.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 37000
+      },
+      "image_url": "https://i1.feedspot.com/1302213.jpg?t=1608798080"
+    },
+    {
+      "title": "iOS Hacker",
+      "feed_url": "https://ioshacker.com/feed",
+      "website_url": "https://ioshacker.com/category/news",
+      "description": "iOSHacker is an Apple focused blog that provides in-depth news, reviews and tutorials related to iPhone, iPad, Apple Watch, Mac, Apple TV and iOS.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5162357.jpg?t=1608798178"
+    },
+    {
+      "title": "Six Colors",
+      "feed_url": "https://feedpress.me/sixcolors",
+      "website_url": "https://sixcolors.com/",
+      "description": "Six Colors provides daily coverage of Apple, other technology companies, and the intersection of technology and culture. Its founder and editor in chief is Jason Snell. Its East Coast Bureau Chief and co-author is Dan Moren.",
+      "followers": {
+        "facebook": 802,
+        "twitter": 16200
+      },
+      "image_url": "https://i1.feedspot.com/4051316.jpg?t=1608798191"
+    },
+    {
+      "title": "Michael Tsai Blog",
+      "feed_url": "https://mjtsai.com/blog/feed/",
+      "website_url": "https://mjtsai.com/blog/",
+      "description": "I am Michael Tsai, a Mac Software Developer. Explore my blog for the latest news from apple, tutorials for mac programming, development, tips and more!",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/25115.jpg?t=1648555641"
+    },
+    {
+      "title": "The Apple Post",
+      "feed_url": "https://www.theapplepost.com/feed/",
+      "website_url": "https://www.theapplepost.com/category/news/",
+      "description": "The Apple Post publishes in-depth Apple News, iPhone leaks and Mac rumors, sharing helpful how-to articles for Apple Watch, iPad, iOS & macOS users. The Apple Post publishes the latest coverage and analysis on all things Apple.",
+      "followers": {
+        "facebook": 38400,
+        "twitter": 13600,
+        "instagram": 392
+      },
+      "image_url": "https://i1.feedspot.com/5021195.jpg?t=1608798227"
+    },
+    {
+      "title": "SecureMac",
+      "feed_url": "https://www.securemac.com/feed",
+      "website_url": "https://www.securemac.com/news",
+      "description": "Get the latest computer security news for Macs and be the first to be informed about critical updates. Industry news, security events and all you need right at your fingertips. Malware threats change daily, so keep up to date on the latest developments to help ensure your privacy and protection. You can never be too safe.",
+      "followers": {
+        "facebook": 845,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4471769.jpg?t=1608798258"
+    },
+    {
+      "title": "Above Avalon",
+      "feed_url": "https://www.aboveavalon.com/notes?format=RSS",
+      "website_url": "https://www.aboveavalon.com/",
+      "description": "Blog by Neil Cybart - By examining Apple from both a Wall Street and Silicon Valley perspective, I am positioning Above Avalon to provide unique insight into how Apple functions and its worldview.",
+      "followers": {
+        "facebook": 174,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4471792.jpg?t=1648556150"
+    },
+    {
+      "title": "TidBITS",
+      "feed_url": "https://tidbits.com/feed/",
+      "website_url": "https://tidbits.com/category/aapl/",
+      "description": "To provide in-depth, intelligent analysis of only the events and products that matter to Macintosh, iPhone, and iPod users. TidBITS is the oldest Internet-only technology publication, having brought news and reviews of interest to the worldwide Apple community since April of 1990.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/70665.jpg?t=1608798096"
+    },
+    {
+      "title": "The Loop",
+      "feed_url": "https://www.loopinsight.com/feed/",
+      "website_url": "https://www.loopinsight.com/",
+      "description": "The Loop provides comprehensive and insightful news, editorial, and commentary on iPhone, iPod, Macintosh, associated third-party software and accessories. It brings you all the information you need on Apple and its technologies.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/89234.jpg?t=1648557191"
+    },
+    {
+      "title": "AppAdvice",
+      "feed_url": "https://appadvice.com/feed",
+      "website_url": "https://appadvice.com/appnn",
+      "description": "AppAdvice is the ideal resource on the Web for people looking to discover iOS apps. We thoroughly filter through the 1,500,000 apps in the App Store to bring you up to date on relevant news regarding apps, as well as providing detailed app reviews.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 85400
+      },
+      "image_url": "https://i1.feedspot.com/1655798.jpg?t=1608797984"
+    },
+    {
+      "title": "iOS Dev Weekly",
+      "feed_url": "https://iosdevweekly.com/issues.rss",
+      "website_url": "https://iosdevweekly.com/",
+      "description": "Subscribe to a hand-picked round up of the best iOS development links every week. Curated by Dave Verwer and published every Friday. Free.",
+      "followers": {
+        "facebook": 162,
+        "twitter": 23900
+      },
+      "image_url": "https://i1.feedspot.com/4431091.jpg?t=1608798255"
+    },
+    {
+      "title": "iPhone J.D.",
+      "feed_url": "https://feeds.feedburner.com/iphonejd/kBay",
+      "website_url": "https://www.iphonejd.com/",
+      "description": "A site for lawyers using the iPhone and iPad. iPhone J.D. is published by Jeff Richardson, an attorney in New Orleans, Louisiana.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/334588.jpg?t=1608798275"
+    },
+    {
+      "title": "GeeksModo",
+      "feed_url": "https://geeksmodo.com/feed/",
+      "website_url": "https://geeksmodo.com/category/iphone/",
+      "description": "GeeksModo is a Geeks' blog on iPhone, iPad, iOS, Apple Watch, Mac and all things Apple. GeeksModo covers the latest Apple and Technology News, reveal the latest rumors on Apple products, teach people how to better use their devices and apps, and review the latest product releases.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5164315.jpg?t=1608798008"
+    },
+    {
+      "title": "iPhone Life",
+      "feed_url": "https://www.iphonelife.com/blog/all/all/feed",
+      "website_url": "https://www.iphonelife.com/",
+      "description": "iPhone Life magazine is your one-stop source for all things iPhone, iPad and iPod touch. In each issue you'll find the greatest gear, the best apps, and top tips to get the most from your iDevice. It is published my Mango Life Media.",
+      "followers": {
+        "facebook": 36100
+      },
+      "image_url": "https://i1.feedspot.com/652839.jpg?t=1608797993"
+    },
+    {
+      "title": "The Apple Geek Blog \u00bb MacOS",
+      "feed_url": "https://www.theapplegeek.co.uk/blog?format=rss",
+      "website_url": "https://www.theapplegeek.co.uk/blog/category/MacOS/",
+      "description": "The Apple Geek blog, created by Craig Pickerill, offers a wealth of information on Apple products, including news, tips, and reviews. Based in Stockport, Craig shares his expertise and insights on various Apple devices and software, aiming to help users maximize their Apple experience. The blog covers a wide range of topics from iOS updates to smart home integrations, providing practical advice and detailed reviews.",
+      "followers": {
+        "twitter": 238
+      },
+      "image_url": "https://i1.feedspot.com/5351443.jpg?t=1638948628"
+    },
+    {
+      "title": "OS X Daily",
+      "feed_url": "https://osxdaily.com/feed/",
+      "website_url": "https://osxdaily.com/category/news/",
+      "description": "OSXDaily.com provides relevant news, helpful tips, tricks, guides, troubleshooting, reviews, and much more for users of Apple products. Mac, iPhone, iPad, iPod, OS X, and iOS, if it's Apple, we have it covered.",
+      "followers": {
+        "facebook": 76300,
+        "twitter": 82200
+      },
+      "image_url": "https://i1.feedspot.com/91814.jpg?t=1681717278"
+    },
+    {
+      "title": "iClarified",
+      "feed_url": "https://www.iclarified.com/rss/rss.xml",
+      "website_url": "https://www.iclarified.com/news",
+      "description": "iClarified offers news and tutorials to help you stay current with your Mac, iPhone, iPad, iPod, and other Apple Products.",
+      "followers": {
+        "facebook": 149300,
+        "twitter": 50700
+      },
+      "image_url": "https://i1.feedspot.com/98546.jpg?t=1673592644"
+    },
+    {
+      "title": "Call-A.P.P.L.E.",
+      "feed_url": "https://www.callapple.org/feed/",
+      "website_url": "https://www.callapple.org/",
+      "description": "Everything Apple and Then Some! Call-A.P.P.L.E. is the name of our magazine that started in 1978 and ran through 1990, and was one of the most widely-distributed magazines in the world. With extensive articles on programming, news, reviews, and interviews",
+      "followers": {
+        "facebook": 749,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4971113.jpg?t=1629868633"
+    },
+    {
+      "title": "PCMag",
+      "feed_url": "https://www.pcmag.com/feeds/rss/latest",
+      "website_url": "https://www.pcmag.com/",
+      "description": "PCMag is your complete guide to PC computers, peripherals and upgrades. We test and review computer- and Internet-related products and services, report technology news and trends, and provide shopping advice and price comparisons.",
+      "followers": {
+        "facebook": 986800,
+        "twitter": 404300,
+        "instagram": 532700
+      },
+      "image_url": "https://i1.feedspot.com/7250317.jpg?t=1744781805"
+    },
+    {
+      "title": "Swift with Vincent",
+      "feed_url": "https://www.swiftwithvincent.com/blog?format=rss",
+      "website_url": "https://www.swiftwithvincent.com/",
+      "description": "I talk (a lot) about iOS and Swift",
+      "followers": {
+        "twitter": 25100
+      },
+      "image_url": "https://i1.feedspot.com/8553286.jpg?t=1753111811"
+    },
+    {
+      "title": "Fix My Mobile Blog",
+      "feed_url": "https://www.fixmymobile.com.au/blog/feed",
+      "website_url": "https://www.fixmymobile.com.au/blog/",
+      "description": "Check our Blog for new and upcoming info. For Mobile Phone Repairs in Brisbane drop in and see us. Brisbane's Leading Mobile Phone Repairer.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 185,
+        "instagram": 226
+      },
+      "image_url": "https://i1.feedspot.com/8553294.jpg?t=1753111829"
+    },
+    {
+      "title": "Jacob's QuickTips",
+      "feed_url": "https://www.jacobsquick.tips/feed/",
+      "website_url": "https://www.jacobsquick.tips/",
+      "description": "Friendly, simple and easy-to-follow video tutorials to help you make the most of your iPhone and iPad from Jacob Woolcock.",
+      "followers": {
+        "facebook": 163,
+        "instagram": 342
+      },
+      "image_url": "https://i1.feedspot.com/8553305.jpg?t=1753111859"
+    },
+    {
+      "title": "InsanelyMac Blog",
+      "feed_url": "https://www.insanelymac.com/blog/feed/",
+      "website_url": "https://www.insanelymac.com/blog/",
+      "description": "Unlock the full potential of your Apple devices with InsanelyMac. We are a comprehensive resource dedicated to empowering users of iPhone, Mac, and iPad.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553300.jpg?t=1753111847"
+    },
+    {
+      "title": "Setapp Blog",
+      "feed_url": "https://setapp.com/rss",
+      "website_url": "https://setapp.com/blog/",
+      "description": "Setapp blog provides the latest news, lifestyle tips, and useful how-to articles that help you stay productive.",
+      "followers": {
+        "facebook": 26500,
+        "twitter": 12900,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5003675.jpg?t=1616501735"
+    },
+    {
+      "title": "Owl Repairs \u00bb iPhone",
+      "feed_url": "https://owlrepairs.com/feed/",
+      "website_url": "https://owlrepairs.com/iphone-tips/",
+      "description": "Discover useful iPhone tips and tricks to enhance performance, extend battery life, and troubleshoot common issues. Get expert insights to make the most of your device!",
+      "followers": {
+        "facebook": 4000,
+        "instagram": 1300
+      },
+      "image_url": "https://graph.facebook.com/owlrepairksu/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77"
+    },
+    {
+      "title": "iPhone Ambulance Blog",
+      "feed_url": "https://www.iphoneambulance.online/feed/",
+      "website_url": "https://www.iphoneambulance.online/blog/",
+      "description": "Stay updated with iPhone Ambulance's blogs for expert tips, troubleshooting guides, and the latest insights on iPhone repair and maintenance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553291.jpg?t=1753111822"
+    },
+    {
+      "title": "Fixcare Blog",
+      "feed_url": "https://fixcare.in/blog/feed/",
+      "website_url": "https://fixcare.in/blog/",
+      "description": "Get the lastest update of Apple Products through our Apple Blog, Apple Launches, Apple Repair and all",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553307.jpg?t=1753111864"
+    },
+    {
+      "title": "Mark Ellis Reviews Blog",
+      "feed_url": "https://markellisreviews.com/feed/",
+      "website_url": "https://markellisreviews.com/blog/",
+      "description": "Tech, productivity and remote working.",
+      "followers": {
+        "twitter": 2100,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/8553298.jpg?t=1753111843"
+    },
+    {
+      "title": "David Lewis Talking Tech Blog",
+      "feed_url": "https://talkingtechandaudio.com/feed/",
+      "website_url": "https://talkingtechandaudio.com/talking-apple-tech-blog/",
+      "description": "Talking Apple Tech Blog with David Lewis. Regular updates from the world of Apple with the latest news, reviews, leaks and insights in to Apple Tech.",
+      "followers": {
+        "twitter": 286,
+        "instagram": 433
+      },
+      "image_url": "https://i1.feedspot.com/8553301.jpg"
+    },
+    {
+      "title": "MaKaiTeeTum Blog",
+      "feed_url": "https://makaiteetum.com/en/feed/",
+      "website_url": "https://makaiteetum.com/en/blog/",
+      "description": "Explore tips, in-depth reviews, buying guides, and the latest news to maximize your Apple device's potential while saving money!",
+      "followers": {
+        "facebook": 106
+      },
+      "image_url": "https://i1.feedspot.com/8553299.jpg?t=1753111846"
+    },
+    {
+      "title": "Parallels Blog \u00bb Apple",
+      "feed_url": "https://www.parallels.com/blogs/category/apple/feed/",
+      "website_url": "https://www.parallels.com/blogs/category/apple/",
+      "description": "Award-winning solution to run Windows on Mac. Our blog provides helpful tips and tricks surrounding virtualization, macOS, and Windows.",
+      "followers": {
+        "facebook": 59600,
+        "twitter": 29600
+      },
+      "image_url": "https://i1.feedspot.com/8553302.jpg?t=1753111850"
+    },
+    {
+      "title": "lonelybrand Blog \u00bb Apple",
+      "feed_url": "https://lonelybrand.com/blog/category/apple/feed/",
+      "website_url": "https://lonelybrand.com/blog/category/apple/",
+      "description": "The Apple category on LonelyBrand features timely tech news, reviews, and insights\u2014from iOS and hardware updates to AI research and streaming strategy\u2014highlighting Apple's latest products, software, and initiatives.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553282.jpg?t=1753111798"
+    },
+    {
+      "title": "Business Insider",
+      "feed_url": "https://feeds.businessinsider.com/custom/all",
+      "website_url": "https://www.businessinsider.com/",
+      "description": "All latest articles from Business Insider.",
+      "followers": {
+        "facebook": 15100000,
+        "twitter": 4099999,
+        "instagram": 4900000
+      },
+      "image_url": "https://i1.feedspot.com/5396971.jpg?t=1758095885"
+    },
+    {
+      "title": "CASEBX \u00bb iPhone Tips",
+      "feed_url": "https://casebx.com/blogs/tips.atom",
+      "website_url": "https://casebx.com/blogs/tips/",
+      "description": "Discover the best tips and tricks to get the most out of your iPhone. From hidden features to time-saving shortcuts, we provide everything you need to know to master your device.",
+      "followers": {
+        "instagram": 2000000
+      },
+      "image_url": "https://graph.facebook.com/shopify/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77"
+    },
+    {
+      "title": "Mac Medics Blog",
+      "feed_url": "https://macmedics.com/feed/",
+      "website_url": "https://macmedics.com/mac-medics-blog/",
+      "description": "Mac Medics Blog: WE OFFER ON-SITE SERVICE AND CONSULTING TO THE BALTIMORE-WASHINGTON METRO AREA AS WELL AS NOVA AND PHILADELPHIA.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 670,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8553289.jpg?t=1753111817"
+    },
+    {
+      "title": "Rossellimac Blog",
+      "feed_url": "https://rossellimac.es/blogs/blog.atom",
+      "website_url": "https://rossellimac.es/blogs/blog/",
+      "description": "Lee nuestras publicaciones de blog para obtener m\u00e1s informaci\u00f3n sobre los productos Apple, las funciones especiales, los consejos t\u00e9cnicos y mucho m\u00e1s.",
+      "followers": {
+        "facebook": 27500,
+        "twitter": 3700,
+        "instagram": 26900
+      },
+      "image_url": "https://i1.feedspot.com/8553304.jpg?t=1753111856"
+    },
+    {
+      "title": "Jamf Blog",
+      "feed_url": "https://www.jamf.com/blog/rss/",
+      "website_url": "https://www.jamf.com/blog/",
+      "description": "Stay updated with the latest in Apple device management and security insights. Discover how to simplify IT workflows and enhance security across Apple ecosystem!",
+      "followers": {
+        "facebook": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5029828.jpg?t=1752038129"
+    },
+    {
+      "title": "Stephen Robles Blog",
+      "feed_url": "https://beard.fm/blog?format=rss",
+      "website_url": "https://beard.fm/blog/",
+      "description": "iPhone, iPad, and Mac tutorials and tips for all kinds of users. Latest tech news, iPhone Shortcuts to automate your workflows, and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553292.jpg?t=1753111823"
+    },
+    {
+      "title": "Mac-Fusion Blog",
+      "feed_url": "https://mac-fusion.com/feed/",
+      "website_url": "https://mac-fusion.com/blog-2/",
+      "description": "Mac-Fusion's blog is a tech-focused resource and Apple-authorized service provider site offering up-to-date coverage of Apple events (like WWDC), software and hardware updates (macOS, iOS, iPadOS), how\u2011to tips, app spotlights, and device maintenance guides.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8553293.jpg?t=1753111825"
+    },
+    {
+      "title": "MacWorks Blog",
+      "feed_url": "https://www.macworksinc.net/blog/feed/",
+      "website_url": "https://www.macworksinc.net/blog/",
+      "description": "Discover expert IT solutions with MacWorks, LLC of CT. Apple Certified Consultants with managed IT services for businesses and individuals",
+      "followers": {
+        "facebook": 214,
+        "twitter": 769,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/8553290.jpg?t=1753111821"
+    },
+    {
+      "title": "The Eclectic Light Company",
+      "feed_url": "https://eclecticlight.co/feed",
+      "website_url": "https://eclecticlight.co/",
+      "description": "A detailed blog delivering technical insights, troubleshooting guides, and in-depth macOS and Apple ecosystem analysis for advanced Mac users.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4745883.jpg?t=1752038394"
+    },
+    {
+      "title": "Power Mac Center Blog",
+      "feed_url": "https://powermaccenter.com/blogs/lifestyle.atom",
+      "website_url": "https://powermaccenter.com/blogs/lifestyle/",
+      "description": "Get the latest lifestyle scoop on everything Apple. Be the first to know of product releases, specs, prices, installment offers, and more! Read on here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553303.jpg?t=1753111852"
+    },
+    {
+      "title": "The Mac Observer",
+      "feed_url": "https://www.macobserver.com/feed/",
+      "website_url": "https://www.macobserver.com/",
+      "description": "With Jeff Butts from The Mac Observer as your guide, head into the Terminal and learn your way through the UNIX underpinnings of macOS.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 25500
+      },
+      "image_url": "https://i1.feedspot.com/5542832.jpg?t=1681714896"
+    },
+    {
+      "title": "Mr. Macintosh Blog",
+      "feed_url": "https://mrmacintosh.com/feed/",
+      "website_url": "https://mrmacintosh.com/blog/",
+      "description": "Mr. Macintosh is a place to keep up with the fast-paced world of Apple Mac & macOS. It will keep you informed of the latest news of Mac. The blog focuses on various topics like macOS news, How-to Articles, Troubleshooting, and problem-solving.",
+      "followers": {
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5229311.jpg?t=1624518103"
+    },
+    {
+      "title": "Mike The Mac Guy Blog",
+      "feed_url": "https://mikethemacguy.com/feed/",
+      "website_url": "https://mikethemacguy.com/blog/",
+      "description": "We offer onsite Mac support services including training, set up, troubleshooting, malware removal, and data recovery, and more. Sarasota & Manatee Counties.",
+      "followers": {
+        "facebook": 307,
+        "instagram": 73
+      },
+      "image_url": "https://i1.feedspot.com/8553284.jpg?t=1753111805"
+    },
+    {
+      "title": "Austin MacWorks Blog",
+      "feed_url": "https://austinmacworks.com/feed/",
+      "website_url": "https://austinmacworks.com/blog/",
+      "description": "Austin MacWorks' blog is your go\u2011to source for expert Apple device tips, troubleshooting guides, and productivity how\u2011tos\u2014covering everything from Macs and iPhones to AirPlay setup, passkeys, AI policies, and security advice.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 460,
+        "instagram": 112
+      },
+      "image_url": "https://i1.feedspot.com/8553295.jpg?t=1753111833"
+    },
+    {
+      "title": "Macback Blog",
+      "feed_url": "https://macback.co.uk/feed/",
+      "website_url": "https://macback.co.uk/blog/",
+      "description": "Looking for fast guaranteed no hassle cash for your Apple Device. MacBack will offer you the best guides. MacBack Blog about Apple devices, news and rumours from the electronics industry. Keep an eye on the latest news with us.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 43
+      },
+      "image_url": "https://i1.feedspot.com/5643823.jpg?t=1691383167"
+    },
+    {
+      "title": "Addigy Blog",
+      "feed_url": "https://addigy.com/feed/",
+      "website_url": "https://addigy.com/blog/",
+      "description": "Keep up on the latest Addigy and MDM news and product release details. Product releases happen 100s of times each year, and we're always posting!",
+      "followers": {
+        "facebook": 557,
+        "twitter": 480
+      },
+      "image_url": "https://i1.feedspot.com/8553283.jpg?t=1753111801"
+    },
+    {
+      "title": "iPhoneApplicationList",
+      "feed_url": "https://iphoneapplicationlist.com/feed/",
+      "website_url": "https://iphoneapplicationlist.com/",
+      "description": "iPhoneApplicationList is the 1st listings of iPhone apps, since 2007. All the latest news on iPhone apps, iPad apps, accessories, and more.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 97600,
+        "instagram": 44100
+      },
+      "image_url": "https://i1.feedspot.com/8553285.jpg?t=1753111809"
+    },
+    {
+      "title": "iLounge News",
+      "feed_url": "https://www.ilounge.com/news/feed",
+      "website_url": "https://www.ilounge.com/news/",
+      "description": "News about Apple, iPhone, iPod, iPad, Apple TV, Apple Watch and AirPods can be found on this page.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 15900,
+        "instagram": 152
+      },
+      "image_url": "https://i1.feedspot.com/7925601.jpg?t=1752038773"
+    },
+    {
+      "title": "The iPhone FAQ",
+      "feed_url": "https://www.iphonefaq.org/rss.xml",
+      "website_url": "https://www.iphonefaq.org/",
+      "description": "Up to the minute news on Apple's iPhone with answers to all your frequently asked questions. Includes tips, guides, forums, and more - all dedicated to the Apple iPhone.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/132967.jpg"
+    },
+    {
+      "title": "iPhoneNess",
+      "feed_url": "https://www.iphoneness.com/feed",
+      "website_url": "https://www.iphoneness.com/",
+      "description": "Get the latest iPhone news, thoughts, and tips on iPhoneness.com.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1124565.jpg?t=1752038923"
+    },
+    {
+      "title": "Gadget Hacks \u00bb Apple",
+      "feed_url": "https://apple.gadgethacks.com/rss.xml",
+      "website_url": "https://apple.gadgethacks.com/",
+      "description": "Apple",
+      "followers": {
+        "facebook": 31600
+      },
+      "image_url": "https://i1.feedspot.com/8553306.jpg?t=1753111863"
+    },
+    {
+      "title": "The iPhone Guru",
+      "feed_url": "https://www.theiphoneguru.net/feed",
+      "website_url": "https://www.theiphoneguru.net/",
+      "description": "The iPhone Guru is a tech and Apple-focused news blog offering articles on iPhones, gadgets, software, internet trends, and broader technology insights\u2014from product guides to industry analysis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1068877.jpg?t=1752053320"
+    },
+    {
+      "title": "The Guardian - Apple",
+      "feed_url": "https://www.theguardian.com/technology/apple/rss",
+      "website_url": "https://www.theguardian.com/technology/apple",
+      "description": "The Guardian's Apple technology blog provides in-depth coverage of Apple Inc.'s latest news, product launches, reviews, and industry insights. It features articles written by a team of technology journalists and experts, offering readers up-to-date information and analysis on all things Apple. This section of The Guardian is a valuable resource for staying informed about developments in the Apple ecosystem, from software updates to hardware innovations.",
+      "followers": {
+        "facebook": 267800,
+        "twitter": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/4472328.jpg?t=1608797936"
+    },
+    {
+      "title": "Engadget on Apple",
+      "feed_url": "https://www.engadget.com/tag/apple/rss.xml",
+      "website_url": "https://www.engadget.com/tag/apple/",
+      "description": "Updates about Apple by Engadget. Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2300000,
+        "instagram": 367700
+      },
+      "image_url": "https://i1.feedspot.com/4471752.jpg?t=1608797948"
+    },
+    {
+      "title": "The Next Web \u00bb Apple",
+      "feed_url": "https://thenextweb.com/apple/feed",
+      "website_url": "https://thenextweb.com/apple",
+      "description": "Our coverage of all things Apple. The company, founded by Steve Jobs, Steve Wozniak, and Ronald Wayne in 1976 has transformed how the world feels about personal computers. Headquartered in Cupertino, California, Apple develops, designs and sells computer software, online services, and consumer electronics.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 1600000,
+        "instagram": 107300
+      },
+      "image_url": "https://i1.feedspot.com/731090.jpg?t=1608797958"
+    },
+    {
+      "title": "GeekWire \u00bb Apple",
+      "feed_url": "https://www.geekwire.com/apple/feed/",
+      "website_url": "https://www.geekwire.com/apple/",
+      "description": "Apple news by GeekWire. GeekWire provides tech news, commentary and other nerdiness from Seattle, covering Microsoft, Amazon, Google, Internet, startups, mobile, PCs, geek culture and more. It is a fast-growing, national technology news site with strong roots in the Seattle region and a large audience of loyal, tech-savvy readers around the globe.",
+      "followers": {
+        "facebook": 141300,
+        "twitter": 169200,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4472017.jpg?t=1608797975"
+    },
+    {
+      "title": "iPhone Photography School Blog",
+      "feed_url": "http://iphonephotographyschool.com/feed/",
+      "website_url": "https://iphonephotographyschool.com/blog/",
+      "description": "iPhone Photography School is a website that provides tutorials on how to improve your iPhone photography and iPhone photo editing. They share tips on different genres: Landscape, Portrait, Street, Children, etc. They have bestselling iPhone Photo Academy online course on how to take incredible iPhone photos that everyone adores.",
+      "followers": {
+        "facebook": 3500000,
+        "twitter": 3800,
+        "instagram": 4400000
+      },
+      "image_url": "https://i1.feedspot.com/2355598.jpg?t=1609304432"
+    },
+    {
+      "title": "Patently Apple",
+      "feed_url": "https://feeds.feedburner.com/patentlyapple/SZdI",
+      "website_url": "https://www.patentlyapple.com/",
+      "description": "Patently Apple is an Apple Inc. centric blog focused on dissecting Apple's latest Intellectual Property. We mainly report on Apple's patent applications, granted patents and trademark filings that have been published by the US Patent and Trademark Office. To round off our site, we report on some of Apple's legal cases relating to intellectual property.",
+      "followers": {
+        "twitter": 18100
+      },
+      "image_url": "https://i1.feedspot.com/98551.jpg?t=1648555297"
+    },
+    {
+      "title": "Mac Adviser",
+      "feed_url": "https://mac-adviser.com/feed/",
+      "website_url": "https://mac-adviser.com/apple-news/",
+      "description": "Mac Adviser is dedicated to providing the latest Apple news, rumors, and reviews. We provide coverage for the iPhone, iPad, AirPods, Homepod, and Mac!",
+      "followers": {
+        "facebook": 570,
+        "twitter": 125
+      },
+      "image_url": "https://i1.feedspot.com/5263375.jpg?t=1617193072"
+    },
+    {
+      "title": "Ole Begemann: iOS Development",
+      "feed_url": "https://oleb.net/blog/atom.xml",
+      "website_url": "https://oleb.net/",
+      "description": "A blog about programming in Objective-C and Cocoa (Touch) for iOS and Mac OS X by Ole - an iOS and Mac developer from Berlin.",
+      "followers": {
+        "twitter": 22600
+      },
+      "image_url": "https://i1.feedspot.com/94769.jpg?t=1608798265"
+    },
+    {
+      "title": "ApplePIT - Home for iPad/iphone Product Reviews, Apps, Tips & News",
+      "feed_url": "https://applepit.com/feed/",
+      "website_url": "https://applepit.com/category/news/",
+      "description": "The ultimate resource for keeping an eye on the latest from Apple, Apple Pit offers huge amounts of information, product reviews, product descriptions and news about the biggest smartphone provider.",
+      "followers": {
+        "facebook": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4775796.jpg?t=1608798309"
+    },
+    {
+      "title": "Apple TV Hacks",
+      "feed_url": "https://www.appletvhacks.net/feed/",
+      "website_url": "https://www.appletvhacks.net/",
+      "description": "Apple TV Hacks was founded in September 2007, right after the announcement of the first-generation Apple TV. Since then, it tracks the hacks, jailbreaks, tips & tricks, mods and third-party software that the community brought to the Apple TV. From the very beginning, our goal was to be the leading source for news related to the Apple TV.",
+      "followers": {
+        "facebook": 31500,
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/27664.jpg?t=1608798305"
+    },
+    {
+      "title": "AlecLikesMacintosh",
+      "feed_url": "https://aleclikesmacintosh.tumblr.com/rss",
+      "website_url": "https://aleclikesmacintosh.tumblr.com/",
+      "description": "This is were I curate screen shots and photos of vintage Apple hardware and software from my personal collection and occasionally from other sources. My main interest is the UI and UX of these older systems and how they have influenced how we design for\u2026",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4472350.jpg?t=1752053512"
+    },
+    {
+      "title": "iPapers.co",
+      "feed_url": "https://ipaperscompany.tumblr.com/rss",
+      "website_url": "https://ipaperscompany.tumblr.com/",
+      "description": "Wallpapers for Apple. http://iPapers.co",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4472353.jpg?t=1752053572"
+    },
+    {
+      "title": "Mac's Tech Notes",
+      "feed_url": "http://feeds.feedburner.com/MacsTechNotes",
+      "website_url": "https://sdmactech.blogspot.com/",
+      "description": "Mac's notes from the tech bench. Everything Macintosh and then some! I am an Apple Certified Technician who has worked with Macintosh and Apple computers for over 20 years (Yes even way back with an Apple IIc and green screen monitors). I have a passion for the Mac platform and for helping people with their Macintosh. I love to see that look in someone's eyes when they realize the wonderful things that they can do with their Mac.",
+      "followers": {
+        "facebook": 48,
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/4841301.jpg?t=1608798499"
+    },
+    {
+      "title": "Lover Apple",
+      "feed_url": "https://appleloverapple.tumblr.com/rss",
+      "website_url": "https://appleloverapple.tumblr.com/",
+      "description": "For those who like Apple, just like me.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4472352.jpg"
+    },
+    {
+      "title": "Apple Morning",
+      "feed_url": "https://applemorning.tumblr.com/rss",
+      "website_url": "https://applemorning.tumblr.com/",
+      "description": "Anything news about Apple products today?",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4472356.jpg"
+    },
+    {
+      "title": "iSimu used iPhone News",
+      "feed_url": "https://i-simu.blogspot.com/feeds/posts/default",
+      "website_url": "https://i-simu.blogspot.com/",
+      "description": "iSimu provides you with more information about mobile phone and sale used iPhones on iSimu.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5135045.jpg?t=1608798534"
+    },
+    {
+      "title": "iOS Droids",
+      "feed_url": "https://iosdroids.com/feed/",
+      "website_url": "https://iosdroids.com/",
+      "description": "iOS Droids is a website that aims to inform, educate, narrate and persuade our readers on the many functions and benefits of putting various iOS and macOS devices. From how-to guides to notorious tricks and tips, we aim to do the best research possible to arm you with the best applications and alternatives for your iPhone and iPad.",
+      "followers": {
+        "facebook": 16,
+        "twitter": 119
+      },
+      "image_url": "https://i1.feedspot.com/5384873.jpg?t=1648191094"
+    },
+    {
+      "title": "mac4n6.com",
+      "feed_url": "https://www.mac4n6.com/blog?format=RSS",
+      "website_url": "https://www.mac4n6.com/",
+      "description": "Blog by Sarah Edwards - Mac Nerd, Forensic Analyst, Author & Instructor of SANS FOR518 - Mac Forensic Analysis",
+      "followers": {
+        "twitter": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4471807.jpg?t=1608798443"
+    },
+    {
+      "title": "App store Intelligence from appFigures",
+      "feed_url": "https://blog.appfigures.com/feed/",
+      "website_url": "https://blog.appfigures.com/",
+      "description": "Blog by appFigures - A Cross-platform app store analytics for all of your mobile apps. Engineered by Developers, For Developers.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 12000,
+        "instagram": 384
+      },
+      "image_url": "https://i1.feedspot.com/151286.jpg?t=1608797996"
+    },
+    {
+      "title": "Beginners Mac Blog",
+      "feed_url": "https://macnancy.wordpress.com/feed/",
+      "website_url": "https://macnancy.wordpress.com/",
+      "description": "The site features posts about Mac computers, iPhones, iPads, and related software and accessories. The author, who goes by the name Nancy, shares tips, tricks, and reviews aimed at helping readers get the most out of their Apple devices. The site also includes posts about technology news and trends, as well as personal anecdotes and observations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4431133.jpg?t=1612260272"
+    },
+    {
+      "title": "Hypercritical",
+      "feed_url": "https://hypercritical.co/feeds/main",
+      "website_url": "https://hypercritical.co/",
+      "description": "Hypercritical is John\u202fSiracusa's long\u2011running blog and podcast that delivers in\u2011depth, often witty analysis of Apple, macOS, software design, and broader tech culture from a seasoned developer's perspective.",
+      "followers": {
+        "twitter": 75200
+      },
+      "image_url": "https://i1.feedspot.com/5378906.jpg?t=1751997096"
+    },
+    {
+      "title": "MacTech Solutions Blog",
+      "feed_url": "https://mactech-solutions.com/feed/",
+      "website_url": "https://mactech-solutions.com/blog/",
+      "description": "MacTech Solutions Your Local Apple Experts",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 297
+      },
+      "image_url": "https://i1.feedspot.com/8553296.jpg?t=1753111837"
+    },
+    {
+      "title": "MacEdge Blog",
+      "feed_url": "https://www.macedge.com/feed/",
+      "website_url": "https://www.macedge.com/blog/",
+      "description": "MacEdge's blog offers expert Apple-focused guidance \u2014 from time machine backups, iCloud setups, and macOS/iOS feature deep dives to security alerts and accessory recommendations \u2014 tailored for Mac, iPhone, and iPad users in Portsmouth, NH.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 112,
+        "instagram": 385
+      },
+      "image_url": "https://i1.feedspot.com/8553297.jpg?t=1753111841"
+    },
+    {
+      "title": "Macwelt",
+      "feed_url": "https://www.macwelt.de/feed",
+      "website_url": "https://www.macwelt.de/",
+      "description": "The most useful guides, the best tests, the most interesting news everything you need to know about the Apple cosmos and its products and services.",
+      "followers": {
+        "facebook": 33800
+      },
+      "image_url": "https://i1.feedspot.com/8651600.jpg?t=1753448254"
+    },
+    {
+      "title": "Macerkopf",
+      "feed_url": "https://feeds.feedburner.com/macerkopf",
+      "website_url": "https://www.macerkopf.de/",
+      "description": "Macerkopf - Apple News about iPhone 15 & 15 Pro, iOS 17, iPad Pro, iPadOS, Apple Watch 9 and more.",
+      "followers": {
+        "twitter": 6000,
+        "instagram": 545
+      },
+      "image_url": "https://i1.feedspot.com/313479.jpg?t=1753447842"
+    },
+    {
+      "title": "Tech Xplore \u00bb Apple",
+      "feed_url": "https://techxplore.com/rss-feed/tags/apple/",
+      "website_url": "https://techxplore.com/tags/apple/",
+      "description": "Tech Xplore internet news portal provides the latest news on electronics, technology, and engineering.",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/8651601.jpg?t=1753447619"
+    },
+    {
+      "title": "Laptop Mag \u00bb Apple",
+      "feed_url": "https://www.laptopmag.com/uk/feeds/tag/apple",
+      "website_url": "https://www.laptopmag.com/uk/tag/apple",
+      "description": "The latest Apple breaking news, comment, reviews and features from the experts at Laptop Mag.",
+      "followers": {
+        "facebook": 155500,
+        "twitter": 31900,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/8651602.jpg?t=1753447464"
+    },
+    {
+      "title": "Stuff.tv \u00bb Apple",
+      "feed_url": "https://www.stuff.tv/brand/apples-latest-products/feed/",
+      "website_url": "https://www.stuff.tv/brand/apples-latest-products/",
+      "description": "Stay completely up to date with Apple's latest products including their newest releases, recent updates and our comprehensive product reviews.",
+      "followers": {
+        "facebook": 386200,
+        "twitter": 31100,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/8651603.jpg?t=1753447698"
+    },
+    {
+      "title": "Macworld",
+      "feed_url": "https://www.macworld.com/index.rss",
+      "website_url": "https://www.macworld.com/",
+      "description": "Your ultimate guide to Apple's product universe. We focus on practical information: deep-dive hardware and software reviews; clear, concise tips and tutorials, and penetrating analysis that only true Apple experts can deliver.",
+      "followers": {
+        "facebook": 110800,
+        "twitter": 514900
+      },
+      "image_url": "https://i1.feedspot.com/397744.jpg?t=1608797794"
+    },
+    {
+      "title": "MakeUseOf \u00bb iOS",
+      "feed_url": "https://www.makeuseof.com/service/ios/feed/",
+      "website_url": "https://www.kodeco.com/library",
+      "description": "Get more out of your iPhone or iPad: let us show you what iOS is really capable of. From apps to tips to hardware advice If it's not worth featuring, we won't feature it.",
+      "followers": {
+        "facebook": 120,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/3729685.jpg?t=1608797951"
+    },
+    {
+      "title": "Ray Wenderlich",
+      "feed_url": "https://www.raywenderlich.com/feed",
+      "website_url": "https://www.kodeco.com/library",
+      "description": "Keep your Swift & iOS skills up-to-date via hands-on tutorials. Ray Wenderlich is a favorite of everyone on the V-Play team. This is one of the best places on the internet for mobile game tutorials so give it a look as soon as you can. Ray has put together a very experienced team with expertise in a number of different areas, making this blog one of the biggest game development authorites online.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 167,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4431093.jpg?t=1608797979"
+    },
+    {
+      "title": "Mashable \u00bb Apple",
+      "feed_url": "https://mashable.com/category/apple/feed/",
+      "website_url": "https://mashable.com/category/apple",
+      "description": "Mashable's coverage by Apple. Mashable is a global, multi-platform media and entertainment company.",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 161900,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4472333.jpg?t=1608797971"
+    },
+    {
+      "title": "iLounge",
+      "feed_url": "https://www.ilounge.com/feed",
+      "website_url": "https://www.ilounge.com/",
+      "description": "iLounge is an independent provider of information about Apple Inc.'s iPod, iPhone, and iPad digital media players, accessories, and related software. You'll get news, how-tos, reviews, forums, and daily deals. iLounge is owned and operated by a company named Netly PTY LTD.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 15900,
+        "instagram": 152
+      },
+      "image_url": "https://i1.feedspot.com/222089.jpg?t=1745568124"
+    },
+    {
+      "title": "MacSecurity.net",
+      "feed_url": "https://macsecurity.net/feed",
+      "website_url": "https://macsecurity.net/news",
+      "description": "MacSecurity is a web project that makes the Mac world a safer place by broadcasting best practices of malware prevention and removal. We are a crew of security experts who teamed up in 2013 under the umbrella of a local tech support start-up and witnessed Mac threats evolving from marginal to mainstream over the years. This change incentivized us to rethink our mission and focus on combating malicious code that targets Apple devices.",
+      "followers": {
+        "facebook": 162,
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5271093.jpg?t=1618841732"
+    },
+    {
+      "title": "The Mac Security Blog",
+      "feed_url": "https://www.intego.com/mac-security-blog/feed/",
+      "website_url": "https://www.intego.com/mac-security-blog/",
+      "description": "Keep Macs safe from the dangers of the Internet. Mac users have unique security needs, and Intego has been working to protect them from the dangers of the Internet for nearly 15 years. Founded in 1997, Intego is the only company focusing solely on security for Macs and other Apple products.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4431132.jpg?t=1648556575"
+    },
+    {
+      "title": "Computerworld Blog \u00bb Apple Holic",
+      "feed_url": "https://www.computerworld.com/feed/",
+      "website_url": "https://www.computerworld.com/in/blogs/apple-holic/",
+      "description": "Appleholic, (noun), : An imaginative person who thinks about what Apple is doing, why and where it is going. Delivering popular Apple-related news, advice and entertainment since 1999.",
+      "followers": {
+        "facebook": 865000,
+        "twitter": 244800
+      },
+      "image_url": "https://i1.feedspot.com/4471709.jpg?t=1608797964"
+    },
+    {
+      "title": "Gummicube Blog",
+      "feed_url": "https://blog.gummicube.com/rss.xml",
+      "website_url": "https://www.gummicube.com/blog",
+      "description": "Gummicube Offers The Best App Store Optimization Services & Amazing Mobile Analytics Technology. Gummicube's blog brings you the latest App Store Optimization trends and news first. Start learning from our blog today!",
+      "followers": {
+        "facebook": 420,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4471810.jpg?t=1608798185"
+    },
+    {
+      "title": "MacDailyNews",
+      "feed_url": "https://macdailynews.com/feed/",
+      "website_url": "https://appleosophy.com/",
+      "description": "Mac Daily News features daily news about Apple, OS X, Mac, iPad, iPhone, iPod, and more. It's where the Apple community goes to discuss these Apple news items in their own words with real-time Reader Feedback. Where Mac News Comes First.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/22909.jpg?t=1616501971"
+    },
+    {
+      "title": "Appleosophy",
+      "feed_url": "https://appleosophy.com/feed/",
+      "website_url": "https://appleosophy.com/",
+      "description": "Covering a range of Apple-related news, Appleosophy provides the best Apple-related content since 2015 as part of Redfruit Media LLC.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5492110.jpg?t=1673588352"
+    },
+    {
+      "title": "iMore",
+      "feed_url": "https://www.imore.com/feed",
+      "website_url": "https://www.imore.com/news",
+      "description": "The ultimate source for iPhone, iPad, Mac, and Apple Watch, and all things Apple! We're dedicated to expanding your Apple universe with expert analysis, how-tos, forums, buying guides, and reviews.",
+      "followers": {
+        "facebook": 93600,
+        "twitter": 179100,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/98547.jpg?t=1608797787"
+    },
+    {
+      "title": "The Verge \u00bb Apple",
+      "feed_url": "https://www.theverge.com/apple/rss/index.xml",
+      "website_url": "https://www.theverge.com/apple",
+      "description": "The Verge's Apple coverage. The Verge covers the intersection of technology, science, art, and culture.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/321479.jpg?t=1608797941"
+    },
+    {
+      "title": "How-To Geek \u00bb Apple",
+      "feed_url": "https://www.howtogeek.com/t/apple/feed/",
+      "website_url": "https://www.techradar.com/tag/apple",
+      "description": "The How-To Geek Apple blog section is an essential resource for anyone looking to deepen their understanding of Apple products and technology. It provides comprehensive how-to guides, practical tips, and thorough reviews, making it easier for users to navigate and maximize their Apple devices. The expert editorial team ensures that even complex topics are broken down into simple, easy-to-follow instructions, catering to both beginners and advanced users.",
+      "followers": {
+        "twitter": 62600
+      },
+      "image_url": "https://i1.feedspot.com/4471832.jpg?t=1608797945"
+    },
+    {
+      "title": "Techradar \u00bb Apple",
+      "feed_url": "https://www.technobuffalo.com/feed",
+      "website_url": "https://www.techradar.com/tag/apple",
+      "description": "The TechRadar Apple blog section is a comprehensive source for all things Apple, featuring the latest news, in-depth reviews, and expert analysis on Apple's range of products, including iPhones, iPads, Macs, and more. The blog is curated by a team of experienced tech journalists and editors who provide detailed insights and updates, helping readers stay informed about the latest developments in the Apple ecosystem.",
+      "followers": {
+        "facebook": 400600,
+        "twitter": 201600,
+        "instagram": 184
+      },
+      "image_url": "https://i1.feedspot.com/4472016.jpg?t=1608798091"
+    },
+    {
+      "title": "Geek.com \u00bb Apple",
+      "feed_url": "https://geek.com/category/apple/feed/",
+      "website_url": "https://geek.com/category/apple/",
+      "description": "Geek.com coverage about Apple. Providing readers with tech news, reviews, and articles since 1996.",
+      "followers": {
+        "facebook": 564800,
+        "twitter": 95200
+      },
+      "image_url": "https://i1.feedspot.com/1368650.jpg?t=1608797991"
+    },
+    {
+      "title": "Apple Investor News",
+      "feed_url": "https://www.techinvestornews.com/Apple/Latest-Apple-News-RSS",
+      "website_url": "https://www.techinvestornews.com/Apple/Latest-Apple-News",
+      "description": "Always-updating Apple news stream. For techies, AAPL stockholders, anyone invested in all things Apple.",
+      "followers": {
+        "facebook": 83,
+        "twitter": 421
+      },
+      "image_url": "https://i1.feedspot.com/4471747.jpg?t=1608798161"
+    },
+    {
+      "title": "iOSCraze",
+      "feed_url": "https://www.ioscraze.com/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://www.ioscraze.com/",
+      "description": "iOSCraze Blog is all about iOS & MAC apps, tips, tricks, how to, News, Hacks, Tutorial etc. As the name suggests we only write about Apple products.",
+      "followers": {
+        "facebook": 191
+      },
+      "image_url": "https://i1.feedspot.com/5049742.jpg?t=1608798181"
+    },
+    {
+      "title": "MacStudioA",
+      "feed_url": "https://macstudioa.tumblr.com/rss",
+      "website_url": "https://macstudioa.tumblr.com/",
+      "description": "Providing Top Quality Easy to Follow Video How To's, Demos, Mac Tips and Tricks, for OS X Yosemite, OS X Mavericks, OS X Mountain Lion, iOS 7 and later Devices, and the Apple Eco-System.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4472362.jpg"
+    },
+    {
+      "title": "Apple World Today",
+      "feed_url": "https://appleworld.today/?format=rss",
+      "website_url": "https://appleworld.today/",
+      "description": "Blog for news, reviews, how-to information and community for Apple customers worldwide. Apple World Today's audience consists of consumers, creatives, and IT professionals with a passion for the latest products from Apple Inc. and third-party developers and manufacturers.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3600,
+        "instagram": 201
+      },
+      "image_url": "https://i1.feedspot.com/4233421.jpg?t=1608798188"
+    }
+  ]
+}

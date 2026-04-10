@@ -1,0 +1,414 @@
+{
+  "category": "CNBC",
+  "source_url": "https://rss.feedspot.com/cnbc_rss_feeds",
+  "feeds": [
+    {
+      "title": "CNBC \u00bb World",
+      "feed_url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/world-top-news/",
+      "description": "CNBC is the recognized world leader in business news, providing real-time financial market coverage and business information to more than 340 million homes worldwide, including more than 95 million households in the United States and Canada.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb U.S.",
+      "feed_url": "https://www.cnbc.com/id/15837362/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/us-news/",
+      "description": "Get complete CNBC business news coverage online. Find the latest regional business news pertaining to the United States of America including headlines & top stories available on the official CNBC site.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Asia",
+      "feed_url": "https://www.cnbc.com/id/19832390/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/asia-news/",
+      "description": "Read the latest stock business, finance, global economy news, and analysis on the Asia Pacific in regions from Japan, China, Singapore, Australia, to New Zealand. Find business; finance; economy, stocks, and global economy news on CNBC's Asia Pacific page.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Europe",
+      "feed_url": "https://www.cnbc.com/id/19794221/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/europe-news/",
+      "description": "Get complete CNBC business news coverage online. Find the latest business news pertaining to Europe. Sector watch news, headlines; top stories are available on the official CNBC Europe site.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Business",
+      "feed_url": "https://www.cnbc.com/id/10001147/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/business/",
+      "description": "Latest headlines for business news around the world.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Earnings",
+      "feed_url": "https://www.cnbc.com/id/15839135/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/earnings/",
+      "description": "Get the latest articles on corporate company earnings, find earnings per share, and earnings history from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Commentary",
+      "feed_url": "https://www.cnbc.com/id/100370673/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/commentary/",
+      "description": "Find the latest opinion and commentary on politics, the economy, social issues, and government from our blogs and around the web.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Economy",
+      "feed_url": "https://www.cnbc.com/id/20910258/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/economy/",
+      "description": "Find the latest economic news, current events, and headlines, as well as blogs and video from CNBC.com.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Finance",
+      "feed_url": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/finance/",
+      "description": "Latest investing news and finance headlines straight from Wall Street.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4920384.jpg?t=1611206092"
+    },
+    {
+      "title": "CNBC \u00bb Technology",
+      "feed_url": "https://www.cnbc.com/id/19854910/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/technology/",
+      "description": "Find the latest business news related to technology covering companies, advancements, multimedia, electronics, mobile technologies, and science from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://s3-us-west-2.amazonaws.co%20from%20/feedspotfeed/5067833.jpg?t=1611206300"
+    },
+    {
+      "title": "CNBC \u00bb Politics",
+      "feed_url": "https://www.cnbc.com/id/10000113/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/politics/",
+      "description": "Get the latest news, commentary, and video for political events, politics, and the government.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Health and Science",
+      "feed_url": "https://www.cnbc.com/id/10000108/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/health-and-science/",
+      "description": "CNBC is the world leader in business news and real-time financial market coverage. Get the latest news from the health care industry.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Real Estate",
+      "feed_url": "https://www.cnbc.com/id/10000115/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/real-estate/",
+      "description": "Find the latest news, headlines, blogs and watch videos about real estate, housing, mortgages, refinancing, apr, and real estate markets.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Wealth",
+      "feed_url": "https://www.cnbc.com/id/10001054/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/wealth/",
+      "description": "Get the latest information on millionaires & billionaires. Read about how they are investing, spending their time and their money on from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Autos",
+      "feed_url": "https://www.cnbc.com/id/10000101/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/autos/",
+      "description": "Find the latest news on car recalls and automobile manufacturers, as well as industry insights from Behind the Wheel, from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Energy",
+      "feed_url": "https://www.cnbc.com/id/19836768/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/energy/",
+      "description": "Find the latest news and analysis, headlines, blogs, and videos about energy markets, gas, oil, coal, commodities, nuclear power from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Media",
+      "feed_url": "https://www.cnbc.com/id/10000110/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/media/",
+      "description": "The latest news on media, communications, broadcast media, media companies, social media, and advertising from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Retail",
+      "feed_url": "https://www.cnbc.com/id/10000116/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/retail/",
+      "description": "Find the latest news, headlines, blogs, and videos about retail, consumers, shopping, and retail companies from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Travel",
+      "feed_url": "https://www.cnbc.com/id/10000739/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/travel/",
+      "description": "Get the latest news for the travel industry, inside tips, fascinating stories, and advice on snagging deals.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Small Business",
+      "feed_url": "https://www.cnbc.com/id/44877279/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/small-business/",
+      "description": "Find the top small business news, headlines, and videos about entrepreneurs, venture capital, jobs, start-ups, and more in CNBC's Small Business section.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Investing",
+      "feed_url": "https://www.cnbc.com/id/15839069/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/investing/",
+      "description": "Get the latest expert analysis, investment tools, stock screeners, and financial strategy information from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Financial Advisors",
+      "feed_url": "https://www.cnbc.com/id/100646281/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/financial-advisors/",
+      "description": "For individual investors and financial advisors alike, figuring out the best way to manage money can be a challenge. CNBC has put together these reports to help boost your bottom line.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Personal Finance",
+      "feed_url": "https://www.cnbc.com/id/21324812/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/personal-finance/",
+      "description": "Find personal finance top news, headlines, and videos from credit cards, mortgages, retirement, savings, taxes, and more from CNBC's Personal Finance section.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Market Insider",
+      "feed_url": "https://www.cnbc.com/id/20409666/device/rss/rss.html?x=1",
+      "website_url": "https://www.cnbc.com/market-insider/",
+      "description": "Your daily guide to events and trends that drive the financial markets. Whether it's a stock, foreign exchange, commodities, or bonds, you'll get a distinctive look at the discussion shaping investment decisions as well a wide range of opinions.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Net Net",
+      "feed_url": "https://www.cnbc.com/id/38818154/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/netnet/",
+      "description": "Net Net examines how top companies are promoting and managing innovation, leveraging rapid change, and using technology to grow exponentially.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Buffett Watch",
+      "feed_url": "https://www.cnbc.com/id/19206666/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/warren-buffett-watch/",
+      "description": "Warren Buffett is arguably America's most-admired and most-followed investor. Buffett is the largest shareholder and CEO of Berkshire Hathaway and one of the world's most famous and most generous philanthropists. Legions of investors - from all walks of life - follow Buffett's homespun investment philosophy: invest in what you know, invest in value. Here on CNBC.com's Warren Buffett Watch, we'll keep you up to date on what the 'Oracle of Omaha' is doing by following Buffett's trades, words, and deeds.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Mad Money with Jim Cramer",
+      "feed_url": "https://www.cnbc.com/id/15838459/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/mad-money/",
+      "description": "Mad Money seeks to help people like you, who own stocks and feel like they're on the outside looking in, become better investors. To teach you how to think about the market like a pro. This show is not about picking stocks. It's not about giving you tips that will make you money overnight. Our mission is educational, to teach you how to analyze stocks and the market through the prism of events.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb CEO Interviews",
+      "feed_url": "https://www.cnbc.com/id/100004032/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/video-ceo-interviews/",
+      "description": "Watch what CEOs have to say about business news headlines, or get updates on what's next for companies.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Trader Talk",
+      "feed_url": "https://www.cnbc.com/id/20398120/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/trader-talk/",
+      "description": "Direct from the floor of the New York Stock Exchange, Trader Talk with Bob Pisani provides a dynamic look at the reasons for the day's actions on Wall Street. If you want to go beyond the latest numbers, Bob will tell you why the market does what it does and what it means for the next day's trading.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Squawk Box",
+      "feed_url": "https://www.cnbc.com/id/15838368/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/squawk-box-us/",
+      "description": "'Squawk Box' is the ultimate pre-market morning news program, featuring Joe Kernen, Becky Quick, and Andrew Ross Sorkin. It's a 'must-see' for everyone from the professional trader to the casual investor.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Options Action",
+      "feed_url": "https://www.cnbc.com/id/28282083/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/options-action/",
+      "description": "'Options Action' features option traders from some of the top firms on Wall Street. Each week, they gather for a fast-paced, half-hour show that focuses on how to increase profits and limit losses using common option techniques. Fresh from the trading desk, the 'Options Action' panel will demystify the daunting terminology often used when talking about options, and simplify this fast-growing and crucial corner of the market.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Squawk Box Europe",
+      "feed_url": "https://www.cnbc.com/id/15838652/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/squawk-box-europe/",
+      "description": "During three hours of unscripted and dynamic debate, CNBC's flagship show leads you into the open of the European markets. Each trading day, anchors Geoff Cutmore, Steve Sedgwick, and Karen Tso are joined by leading business personalities and financial market specialists adding to the debate. The show opens with the Overnight Indicator covering Asia's market performance and analysis on how the US markets fared, with the second hour 'Squawk Pre-Trade' focusing on news affecting the opening call and futures prices.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "CNBC \u00bb Squawk Box Asia",
+      "feed_url": "https://www.cnbc.com/id/15838831/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/asia-squawk-box/",
+      "description": "Anchored by Martin Soong and Sri Jegarajah at the Singapore Exchange (SGX), Squawk Box Asia is CNBC's flagship show that sets the news agenda and takes viewers through the pre-game and the opening of Asia's business trading day, covering the top market-moving stories and views from the top CEOs, asset managers, and newsmakers.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4436152.jpg?t=1611221530"
+    },
+    {
+      "title": "CNBC \u00bb Kudlow's Corner",
+      "feed_url": "https://www.cnbc.com/id/15838446/device/rss/rss.html",
+      "website_url": "https://www.cnbc.com/the-kudlow-report/",
+      "description": "Renowned economist and long-time CNBC anchor, Larry Kudlow offers unique insights on markets, politics, and economic policy.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    }
+  ]
+}

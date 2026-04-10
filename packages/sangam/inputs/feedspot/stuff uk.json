@@ -1,0 +1,74 @@
+{
+  "category": "Stuff UK",
+  "source_url": "https://rss.feedspot.com/stuffuk_rss_feeds",
+  "feeds": [
+    {
+      "title": "Stuff UK",
+      "feed_url": "https://www.stuff.tv/feed/",
+      "website_url": "https://www.stuff.tv/",
+      "description": "Latest technology news and in-depth expert reviews. From smartphones, headphones and gadgets to games and fitness tech. Find the right tech for you. Stuff aims to select, showcase and recommend the best gadgets for you - and we do it in an entertaining way that isn't held back by stacks of jargon.",
+      "followers": {
+        "facebook": 386200,
+        "twitter": 31100,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5537598.jpg?t=1751959521"
+    },
+    {
+      "title": "Stuff UK \u00bb News",
+      "feed_url": "https://www.stuff.tv/news/feed/",
+      "website_url": "https://www.stuff.tv/news/",
+      "description": "The latest gadget \u200bnews from Stuff. Read on for the smartest, wittiest \u200btech news, analysis and opinion on the web.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553264.jpg?t=1751959499"
+    },
+    {
+      "title": "Stuff UK \u00bb Features",
+      "feed_url": "https://www.stuff.tv/features/feed",
+      "website_url": "https://www.stuff.tv/features/",
+      "description": "The latest tech features from Stuff. Read on for the smartest, wittiest longreads, group tests and gadget comparisons on the web.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4725008.jpg?t=1751959498"
+    },
+    {
+      "title": "Stuff UK \u00bb Best Stuff",
+      "feed_url": "https://www.stuff.tv/tag/best-stuff/feed/",
+      "website_url": "https://www.stuff.tv/tag/best-stuff/",
+      "description": "All latest articles about Best Stuff from Stuff UK.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553263.jpg?t=1751959497"
+    },
+    {
+      "title": "Stuff UK \u00bb Deals",
+      "feed_url": "https://www.stuff.tv/tag/deals/feed/",
+      "website_url": "https://www.stuff.tv/tag/deals/",
+      "description": "All latest articles about Deals from Stuff UK.",
+      "followers": {
+        "facebook": 386200,
+        "twitter": 31100,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/8553266.jpg?t=1753111766"
+    },
+    {
+      "title": "Stuff UK \u00bb Reviews",
+      "feed_url": "https://www.stuff.tv/reviews/feed/",
+      "website_url": "https://www.stuff.tv/reviews/",
+      "description": "All latest articles about Reviews from Stuff UK.",
+      "followers": {
+        "facebook": 386200,
+        "twitter": 31100,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/8553262.jpg?t=1753111761"
+    },
+    {
+      "title": "Stuff UK \u00bb Win",
+      "feed_url": "https://www.stuff.tv/win/feed/",
+      "website_url": "https://www.stuff.tv/win/",
+      "description": "Win great gadget and tech prizes from Stuff! We promise the questions are easy...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553265.jpg?t=1751959496"
+    }
+  ]
+}

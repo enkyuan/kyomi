@@ -1,0 +1,100 @@
+{
+  "category": "UK Kids Food",
+  "source_url": "https://rss.feedspot.com/uk_kids_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "My Fussy Eater",
+      "feed_url": "https://www.myfussyeater.com/feed/",
+      "website_url": "https://www.myfussyeater.com/",
+      "description": "Latest recipes on 15 minute meals, kid-friendly snacks, hidden veggie recipes, gluten-free, vegan, nut-free, egg-free and more. My Fussy Eater is packed with healthy eating recipes and fun food ideas that even the pickiest of eaters will love.",
+      "followers": {
+        "facebook": 502100,
+        "twitter": 3800,
+        "instagram": 282700
+      },
+      "image_url": "https://i1.feedspot.com/4496801.jpg?t=1600346483"
+    },
+    {
+      "title": "A Mummy Too",
+      "feed_url": "https://www.amummytoo.co.uk/feed/",
+      "website_url": "https://www.amummytoo.co.uk/",
+      "description": "While on maternity leave awaiting the birth of her second child, Emily created her blog, A Mummy Too in 2011 as an outlet for her love of family, food and photography. it has become the place to come for daily recipes, tips and video guides for anyone who believes a shortage of spare time shouldn't mean you can't enjoy beautiful, delicious things.",
+      "followers": {
+        "facebook": 53100,
+        "twitter": 15,
+        "instagram": 36800
+      },
+      "image_url": "https://i1.feedspot.com/4907535.jpg?t=1613995194"
+    },
+    {
+      "title": "Cooking with my Kids Blog",
+      "feed_url": "https://www.cookingwithmykids.co.uk/feed/",
+      "website_url": "https://www.cookingwithmykids.co.uk/",
+      "description": "Cooking with my kids is full of recipes showing you how to cook with your children. With lots of pictures and advice your toddler can become a budding chef.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 438,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4841101.jpg?t=1603039450"
+    },
+    {
+      "title": "Annabel Karmel",
+      "feed_url": "https://www.annabelkarmel.com/category/articles/feed/",
+      "website_url": "https://www.annabelkarmel.com/category/articles/",
+      "description": "Annabel Karmel is the UK's best-selling parenting author and leading food expert on feeding babies and toddlers. A mother of three, she has been hugely influential in her imaginative approach to creating healthy food that also tastes good. She was awarded an MBE for her outstanding work in the field of child nutrition.",
+      "followers": {
+        "facebook": 312700,
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/4716995.jpg?t=1607520232"
+    },
+    {
+      "title": "Eats Amazing",
+      "feed_url": "https://www.eatsamazing.co.uk/feed",
+      "website_url": "https://www.eatsamazing.co.uk/",
+      "description": "Sharing ideas, recipes and tips for making food that your kids will love. From breakfasts to dinners, healthy packed lunches to snacks and treats, we've got it covered!",
+      "followers": {
+        "facebook": 172700,
+        "twitter": 5400,
+        "instagram": 39700
+      },
+      "image_url": "https://i1.feedspot.com/4671912.jpg?t=1600346554"
+    },
+    {
+      "title": "Sneaky Veg",
+      "feed_url": "https://www.sneakyveg.com/feed/",
+      "website_url": "https://www.sneakyveg.com/",
+      "description": "Hi, I'm Mandy Mazliah, a London-based mother. How to get kids to eat more vegetables is an age old question. Here on Sneaky Veg you'll find vegetarian family recipes that are designed to get kids eating more fruit and vegetables especially picky eaters and plenty of hidden vegetable recipes.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 3300,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4717278.jpg?t=1613995190"
+    },
+    {
+      "title": "Add Some Veg",
+      "feed_url": "https://addsomeveg.com/feed/",
+      "website_url": "https://addsomeveg.com/",
+      "description": "I'm Claire. Add Some Veg is a food blog aimed at helping parents reduce the sugar intake of their families, providing recipes, information, and advice to help along the way.",
+      "followers": {
+        "facebook": 967,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4717062.jpg?t=1609917484"
+    },
+    {
+      "title": "The Children's Nutritionist's Blog",
+      "feed_url": "https://www.childrensnutrition.co.uk/full-blog?format=rss",
+      "website_url": "https://childrensnutrition.co.uk/full-blog/",
+      "description": "I am Sarah Almond Bushell. I'm a Registered Dietitian & Children's Nutritionist with over 20 years of NHS and private practice experience working with families. I help with weaning babies, fussy eaters, nutrition, food allergies, constipation, weight, behavioral issues like food throwing, and more. The blog is filled with expert advice and inspirational ideas for feeding your little.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 82,
+        "instagram": 26400
+      },
+      "image_url": "https://i1.feedspot.com/5365513.jpg?t=1643258358"
+    }
+  ]
+}

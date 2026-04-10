@@ -1,0 +1,93 @@
+{
+  "category": "UK Cargo",
+  "source_url": "https://rss.feedspot.com/uk_cargo_rss_feeds",
+  "feeds": [
+    {
+      "title": "Air Cargo Week",
+      "feed_url": "https://aircargoweek.com/feed/",
+      "website_url": "https://aircargoweek.com/",
+      "description": "Air Cargo Week is the world's only weekly newspaper published for air logistics professionals. Their readers from all categories of the air logistics business include executives from airlines, airports, cargo handlers, freight forwarders, general sales agents, and logistic service providers, the very people who keep this major global industry on the move. Get into their blog and learn more about the latest news, issues, videos, features, articles, and more.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 9400,
+        "instagram": 899
+      },
+      "image_url": "https://i1.feedspot.com/4650497.jpg?t=1667821345"
+    },
+    {
+      "title": "Project Cargo Blog",
+      "feed_url": "http://projectcargoblog.com/feed",
+      "website_url": "http://projectcargoblog.com/",
+      "description": "Project Cargo Network is an ISO 9001 (Quality Management) and ISO 14001 (Environmental Management) certified organisation to provide heavy lift and project cargo specialists access to a trusted, worldwide network of agents who can handle their specialist shipments, whilst working professionally and safely under a strict Code of Conduct. Follow this blog for the latest news from the experts in the project cargo and heavy lift industry.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4651761.jpg?t=1617103996"
+    },
+    {
+      "title": "A to Z India Courier Blog",
+      "feed_url": "https://www.atozindiacourier.co.uk/blog/feed/",
+      "website_url": "https://www.atozindiacourier.co.uk/blog/",
+      "description": "AtoZ India Courier has always been at the forefront of delivering excellent customer service and assisting our customers with any queries they may have. We are the reliable delivery force when it comes to sending gifts, luggage, excess baggage and any type sea or air cargo to all cities of India from UK.",
+      "followers": {
+        "facebook": 903
+      },
+      "image_url": "https://i1.feedspot.com/4910855.jpg?t=1620115901"
+    },
+    {
+      "title": "Barrington Freight Blog",
+      "feed_url": "https://www.barringtonfreight.co.uk/blog/feed/",
+      "website_url": "https://www.barringtonfreight.co.uk/blog/",
+      "description": "Barrington Freight is one of the UK's leading international freight shipping companies. We offer worldwide freight shipping solutions by road haulage, sea freight and air cargo. Follow this blog for information on technological advancements, tips and current affairs within the freight industry and more.",
+      "followers": {
+        "facebook": 552,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4910838.jpg?t=1620115890"
+    },
+    {
+      "title": "Parcels to India Blog",
+      "feed_url": "https://www.parcelstoindia.co.uk/blog/feed/",
+      "website_url": "https://www.parcelstoindia.co.uk/blog/",
+      "description": "Parcels To India is the best service for sending cargo from anywhere in UK to anywhere in India. They offer both air cargo and sea shipping services at the lowest rates.",
+      "followers": {
+        "facebook": 312,
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/4651786.jpg?t=1617103926"
+    },
+    {
+      "title": "Andrews Shipping Blog",
+      "feed_url": "https://www.andrewsshipping.co.uk/feed/",
+      "website_url": "https://www.andrewsshipping.co.uk/blog/",
+      "description": "Andrews Shipping has been in operation since 1962, offering a professional removal service from anywhere in the UK to anywhere in the world. With over 45 years' experience of freight forwarding, we specialise in commercial, residential, student and vehicle shipping.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 401
+      },
+      "image_url": "https://i1.feedspot.com/4910865.jpg?t=1620115906"
+    },
+    {
+      "title": "Pak Direct Cargo Blog",
+      "feed_url": "https://pakdirectcargo.com/feed/",
+      "website_url": "https://pakdirectcargo.com/blog/",
+      "description": "Pak Direct Cargo provide all kinds of Pak Cargo services which enables you to ship your Cargo to Pakistan in fast delivery time, from anywhere in the UK to anywhere in Pakistan. Follow this blog for the latest news and article.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4910867.jpg?t=1620115981"
+    },
+    {
+      "title": "Air Cargo News",
+      "feed_url": "https://www.aircargonews.net/feed/",
+      "website_url": "https://www.aircargonews.net/",
+      "description": "Established in 1983, Air Cargo News is the leading source of news, information, interviews, analyses, and reports to the global airfreight industry. Their leading portfolio includes print, digital, and events that give businesses in the airfreight industry the ability to connect with decision-makers in this sector. Read news, analysis, features, interviews, and data covering the air cargo, freight, and supply chain industries, and much more from their blog.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4649783.jpg?t=1617103722"
+    }
+  ]
+}

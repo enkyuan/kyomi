@@ -1,0 +1,46 @@
+{
+  "category": "Bachelor Party",
+  "source_url": "https://rss.feedspot.com/bachelor_party_rss_feeds",
+  "feeds": [
+    {
+      "title": "Medellin Blog",
+      "feed_url": "https://medellinbachelorpartytours.com/feed/",
+      "website_url": "https://medellinbachelorpartytours.com/blog/",
+      "description": "FEEL THE NIGHT HERE WITH US",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5631312.jpg?t=1689846216"
+    },
+    {
+      "title": "Jaco Bachelor Parties Blog",
+      "feed_url": "https://jacobachelorparties.com/feed/",
+      "website_url": "https://jacobachelorparties.com/blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5631320.jpg?t=1689847145"
+    },
+    {
+      "title": "Amsterdam Bachelor Blog",
+      "feed_url": "https://www.amsterdambachelor.com/feed/",
+      "website_url": "https://www.amsterdambachelor.com/blog/",
+      "description": "Amsterdam Bachelor Party, Stag Do Activities & VIP Treatment",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5631319.jpg?t=1689846262"
+    },
+    {
+      "title": "Tahoe Bachelor Plan - Blog",
+      "feed_url": "https://www.tahoebachelorplan.com/blog/feed/",
+      "website_url": "https://www.tahoebachelorplan.com/blog/",
+      "description": "Bachelor Parties in Tahoe",
+      "followers": {
+        "twitter": 599
+      },
+      "image_url": "https://i1.feedspot.com/5631311.jpg?t=1698313390"
+    },
+    {
+      "title": "Bachelor Party House Costa Rica Blog",
+      "feed_url": "https://bachelorpartyhousecr.com/feed/",
+      "website_url": "https://bachelorpartyhousecr.com/blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5631314.jpg?t=1689846383"
+    }
+  ]
+}

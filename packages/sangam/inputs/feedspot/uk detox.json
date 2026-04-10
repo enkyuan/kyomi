@@ -1,0 +1,40 @@
+{
+  "category": "UK Detox",
+  "source_url": "https://rss.feedspot.com/uk_detox_rss_feeds",
+  "feeds": [
+    {
+      "title": "Detox Nutrition Blog",
+      "feed_url": "https://detoxnutrition.com/feed/",
+      "website_url": "https://detoxnutrition.com/main-blog/",
+      "description": "Blog posts cover Detoxification Techniques, Adrenal Fatigue,Allergy Addiction, Chronic Fatigue, Environmental Toxins, Genetic Nutrition, Mitochondrial Dysfunction, Viruses & Co-infections. Anna Baudrain is an experienced naturopathic nutritional therapist, nutrigenomics practitioner, healer and emotional release therapist.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5353466.jpg?t=1639633905"
+    },
+    {
+      "title": "Time to Log Off Blog",
+      "feed_url": "https://www.itstimetologoff.com/blog/feed/",
+      "website_url": "https://www.itstimetologoff.com/blog/",
+      "description": "Time to Log Off is the home of digital detox. We collect facts & research, run digital detox events & publish books 'OFF' & 'Stop Staring at Screens'. Follow our latest posts on digital detox tips, mindfulness, work-life balance, tech addiction and getting a healthy balance with technology.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 4600,
+        "instagram": 20700
+      },
+      "image_url": "https://i1.feedspot.com/4917194.jpg?t=1620386069"
+    },
+    {
+      "title": "The Detox Specialist Blog",
+      "feed_url": "https://thedetoxspecialist.com/blog/feed/",
+      "website_url": "https://thedetoxspecialist.com/blog/",
+      "description": "Hello, I am Sandy Halliday a former nurse, holistic nutritionist, and health coach. Here you will find tips and news for detox, detox diet plan, colon cleanses, liver detox for your healthy life.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4708589.jpg?t=1619601064"
+    }
+  ]
+}

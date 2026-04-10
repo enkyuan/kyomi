@@ -1,0 +1,523 @@
+{
+  "category": "Emergency Medicine",
+  "source_url": "https://rss.feedspot.com/emergency_medicine_rss_feeds",
+  "feeds": [
+    {
+      "title": "EMCrit Blog",
+      "feed_url": "https://emcrit.org/feed/",
+      "website_url": "https://emcrit.org/",
+      "description": "We are obsessed with Emergency Department (ED) Critical Care. A blog & podcast for medical education on ED Intensive Care, Trauma, and Resuscitation.",
+      "followers": {
+        "facebook": 41400,
+        "twitter": 75900
+      },
+      "image_url": "https://i1.feedspot.com/4717104.jpg?t=1758282723"
+    },
+    {
+      "title": "ACEP Now",
+      "feed_url": "https://www.acepnow.com/feed/",
+      "website_url": "https://www.acepnow.com/",
+      "description": "ACEP Now is an official publication of the American College of Emergency Physicians. ACEP Now offers real-time clinical news, news from the American College of Emergency Physicians, and news on practice trends and health care reform for the emergency medicine physician.",
+      "followers": {
+        "facebook": 57600,
+        "twitter": 22100
+      },
+      "image_url": "https://i1.feedspot.com/4052248.jpg?t=1614169500"
+    },
+    {
+      "title": "REBEL EM",
+      "feed_url": "http://rebelem.com/feed/",
+      "website_url": "https://rebelem.com/",
+      "description": "R.E.B.E.L. EM stands for Rational Evidence Based Evaluation of Literature in Emergency Medicine. We cover a myriad of topics, primarily focusing on evidence-based clinical topics, ECG cases, and high-yield exam review.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 36200
+      },
+      "image_url": "https://i1.feedspot.com/4717098.jpg?t=1614169516"
+    },
+    {
+      "title": "emDocs",
+      "feed_url": "http://www.emdocs.net/feed/",
+      "website_url": "https://www.emdocs.net/",
+      "description": "emDocs a group of seven emergency physicians who want to provide a truly current resource for the rapidly developing field of emergency medicine. Their goal is to inform the global EM community with timely and high yield content about what providers like you are seeing and doing everyday in your local ED.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/3988885.jpg?t=1614169537"
+    },
+    {
+      "title": "Medscape",
+      "feed_url": "https://www.medscape.com/cx/rssfeeds/2673.xml",
+      "website_url": "https://www.medscape.com/emergencymedicine",
+      "description": "Medscape is the leading online global destination for physicians and healthcare professionals worldwide. Learn more about Emergency Medicine medical journal articles, medical news, thought leader perspectives, Emergency Medicine conference coverage and comprehensive drug information by following Medscape.",
+      "followers": {
+        "facebook": 877800,
+        "twitter": 256399,
+        "instagram": 893800
+      },
+      "image_url": "https://i1.feedspot.com/707765.jpg?t=1614169545"
+    },
+    {
+      "title": "First10EM",
+      "feed_url": "https://first10em.com/feed/",
+      "website_url": "https://first10em.com/",
+      "description": "First10EM is a FOAM educational blog dedicated to emergency medicine and critical care. It is an guide to the first 10 minutes in the resuscitation room and all topics related to emergency medicine",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4717208.jpg?t=1614169617"
+    },
+    {
+      "title": "St.Emlyn's",
+      "feed_url": "https://www.stemlynsblog.org/feed/",
+      "website_url": "https://www.stemlynsblog.org/",
+      "description": "St.Emlyns is a collection of people and projects aimed at improving Emergency Medicine through free and open access education.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 17900,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/707667.jpg?t=1614169774"
+    },
+    {
+      "title": "Emergency Medicine Cases",
+      "feed_url": "https://emergencymedicinecases.com/feed/",
+      "website_url": "https://emergencymedicinecases.com/",
+      "description": "Emergency Medicine Cases (EM Cases) is a free online medical education podcast, medical blog and website dedicated to providing online emergency medicine education and CME for physicians, residents, students nurses and paramedics.",
+      "followers": {
+        "facebook": 31900,
+        "twitter": 15300,
+        "instagram": 27200
+      },
+      "image_url": "https://i1.feedspot.com/4717100.jpg?t=1614169623"
+    },
+    {
+      "title": "NUEM Blog",
+      "feed_url": "https://www.nuemblog.com/blog?format=rss",
+      "website_url": "https://www.nuemblog.com/blog/category/Pediatrics",
+      "description": "NUEM Blog is a resident educational site devoted to enhancing emergency medicine education through online, asynchronous learning. Key topics covered are Cardiovascular disease, Infectious Disease, Neurology, Obstetrics & Gynecology, Ophthalmology, Orthopedics, and Pulmonary.",
+      "followers": {
+        "twitter": 4600,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5298258.jpg?t=1625146597"
+    },
+    {
+      "title": "AED Leader Blog",
+      "feed_url": "https://www.aedleader.com/feed/",
+      "website_url": "https://www.aedleader.com/blog/",
+      "description": "Our blog is dedicated to all topics related to CPR, emergency resuscitation, and the use of automated external defibrillators (AEDs).",
+      "followers": {
+        "facebook": 55
+      },
+      "image_url": "https://i1.feedspot.com/5226398.jpg?t=1614170645"
+    },
+    {
+      "title": "Dr. Smith's ECG Blog",
+      "feed_url": "http://hqmeded-ecg.blogspot.com/feeds/posts/default",
+      "website_url": "http://hqmeded-ecg.blogspot.com/",
+      "description": "Dr. Smith's ECG Blog features well-written pieces of Instructive ECGs in Emergency Medicine Clinical Context. His team of editors writes and highlights learning points from each case. Dr. Stephen W. Smith is a faculty physician in the Emergency Medicine Residency at Hennepin County Medical Center (HCMC) in Minneapolis, MN.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 50100
+      },
+      "image_url": "https://i1.feedspot.com/4632.jpg?t=1650628584"
+    },
+    {
+      "title": "Emergency Medicine for Students",
+      "feed_url": "https://www.emclerkship.com/feed/",
+      "website_url": "https://www.emclerkship.com/",
+      "description": "My name is Zack Olson, and I'm a huge nerd. I like making podcasts, and I LOVE Emergency Medicine. Last year, I started to develop The EM Clerkship Podcast. It has been time consuming, detail oriented, and technical process",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4717570.jpg?t=1614170324"
+    },
+    {
+      "title": "Broome Docs",
+      "feed_url": "https://broomedocs.com/feed/",
+      "website_url": "https://broomedocs.com/",
+      "description": "Free educational blog for rural GP / proceduralists. The aim of this site is to provide a single place for all you time-poor doctors to come and get quality education, clinical tips and interact with one another without having to search all over the internet.",
+      "followers": {
+        "facebook": 143,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4972478.jpg?t=1614169810"
+    },
+    {
+      "title": "PEM Blog",
+      "feed_url": "https://pemcincinnati.com/blog/feed/",
+      "website_url": "https://pemcincinnati.com/blog/",
+      "description": "A Pediatric Emergency Medicine education destination. Authored by Brad. Brad Sobolewski, MD, MEd is an Associate Professor of Pediatric Emergency Medicine and an Assistant Director for the Pediatric Residency Training Program at Cincinnati Children's Hospital Medical Center.",
+      "followers": {
+        "facebook": 928,
+        "twitter": 2800,
+        "instagram": 307
+      },
+      "image_url": "https://i1.feedspot.com/4717186.jpg?t=1650628341"
+    },
+    {
+      "title": "Resus M.E",
+      "feed_url": "https://resus.me/feed/",
+      "website_url": "https://resus.me/",
+      "description": "Resus M.E aims to save lives through the dissemination of effective resuscitation medicine education.",
+      "followers": {
+        "facebook": 838,
+        "twitter": 44900
+      },
+      "image_url": "https://i1.feedspot.com/1874370.jpg?t=1614169853"
+    },
+    {
+      "title": "Emergency Medicine Ireland",
+      "feed_url": "https://emergencymedicineireland.com/feed/",
+      "website_url": "https://emergencymedicineireland.com/",
+      "description": "I've done most of my training so far in Northern Ireland, New Zealand and Dublin and spent 2 yrs on a clinical hiatus teaching anatomy in Dublin. I've been back in the ED since July 2012. I am a flexible trainee in emergency medicine and as a result of the somewhat extending training.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/707650.jpg?t=1614169871"
+    },
+    {
+      "title": "Emergucate",
+      "feed_url": "http://www.emergucate.com/feed/",
+      "website_url": "http://www.emergucate.com/",
+      "description": "FOAMed Emergency Medicine site providing: Weekly ECG, Imaging & Lab cases, Bite-Sized Basics and FOAM Eye-Catchers",
+      "followers": {
+        "twitter": 919
+      },
+      "image_url": "https://i1.feedspot.com/3988835.jpg"
+    },
+    {
+      "title": "#badEM (Brave African Discussions in Emergency Medicine )",
+      "feed_url": "http://badem.co.za/feed/",
+      "website_url": "http://badem.co.za/blog/",
+      "description": "Brave African Discussions in Emergency Medicine #badEM is a group of long time friends that all support a passion for emergency medicine and FOAMed. They are all about promoting the special uniqueness of Emergency Medicine in Africa.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4717552.jpg?t=1614169892"
+    },
+    {
+      "title": "GruntDoc",
+      "feed_url": "http://gruntdoc.com/feed",
+      "website_url": "http://gruntdoc.com/",
+      "description": "I'm Allen, also known as GruntDoc. I'm an Emergency Medicine doctor who just works shifts. I'm a grunt in the Doctor world. I'm a grad of The University of Texas at the Permian Basin (BS, MS) and Texas Tech (MD). I'm board certified in Emergency Medicine, and am a Fellow in both ACEP and AAEM.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/581491.jpg?t=1614170085"
+    },
+    {
+      "title": "Emergency Physicians Monthly Blog",
+      "feed_url": "https://epmonthly.com/blog/feed/",
+      "website_url": "https://epmonthly.com/blog/",
+      "description": "Emergency Physicians Monthly is the independent voice for emergency medicine, bringing together commentary from the top opinion leaders, clinical reviews from leading educators and quick-hit departments covering everything from ultrasound to toxicology.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/4717271.jpg?t=1614169524"
+    },
+    {
+      "title": "CanadiEM",
+      "feed_url": "https://feeds.feedburner.com/canadiem",
+      "website_url": "https://canadiem.org/",
+      "description": "CanadiEM aims to improve emergency care in Canada by building an online community of practice for healthcare practitioners and providing them with high quality, freely available educational resources.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/4717256.jpg?t=1614169634"
+    },
+    {
+      "title": "Ziqitza HealthCare Ltd Blog",
+      "feed_url": "https://zhl.org.in/blog/feed/",
+      "website_url": "https://zhl.org.in/blog/",
+      "description": "Ziqitza Healthcare Ltd provides emergency medical services & ambulance in India for the general public in all critical care, trauma & accident cases all free of Cost. Follow to get updates from this blog to your inbox.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5067660.jpg?t=1614169639"
+    },
+    {
+      "title": "Emergency Medicine Literature of Note",
+      "feed_url": "https://www.emlitofnote.com/?feed=rss2",
+      "website_url": "https://www.emlitofnote.com/",
+      "description": "Emergency Medicine Literature of Note is a medical weblog reviewing current news and literature, with a focus on Emergency Medicine. Commentary by Ryan Radecki, Assistant Professor of Emergency Medicine at The University of Texas Health Science Center at Houston.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4717203.jpg?t=1614169817"
+    },
+    {
+      "title": "AAEM Resident and Student Association",
+      "feed_url": "http://aaemrsa.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://aaemrsa.blogspot.com/",
+      "description": "The AAEM/RSA Blog is intended to supply readers with a source for reliable emergency medicine information and provide an education in the publications process. The blog is targeted to medical students and residents in emergency medicine.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4717728.jpg?t=1614169819"
+    },
+    {
+      "title": "The Vocal CORD",
+      "feed_url": "https://cordemblog.com/feed/",
+      "website_url": "https://cordemblog.com/",
+      "description": "The Vocal CORD is the blog of the Council of Residency Directors in Emergency Medicine. They are an enthusiastic group of medical educators who focus on learning and teaching emergency medicine. They look forward to sharing their experiences with you through the pages of this blog.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4718201.jpg?t=1609420653"
+    },
+    {
+      "title": "Down East Emergency Medicine",
+      "feed_url": "https://downeastem.squarespace.com/downeastem?format=rss",
+      "website_url": "https://www.downeastem.org/",
+      "description": "Down East Emergency Medicine are committed to providing high quality education to improve the care of the emergency patient in Maine, northern New England and beyond.",
+      "followers": {
+        "facebook": 940,
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/4717534.jpg?t=1614169884"
+    },
+    {
+      "title": "Paediatric Emergency Medicine",
+      "feed_url": "http://paediatricem.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://paediatricem.blogspot.com/",
+      "description": "A curriculum based blog, linking existing resources together and matching them towards the College of Emergency Medicine CT3 Paediatric Emergency Medicine Syllabus.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4726297.jpg?t=1614169900"
+    },
+    {
+      "title": "EMOttawa",
+      "feed_url": "http://emottawa.blogspot.com/feeds/posts/default",
+      "website_url": "https://emottawablog.com/",
+      "description": "EMOttawa is a blog from the Department of Emergency Medicine, University Ottawa. The aim of this blog is to provide their residents, staff and any other medical professionals involved in Emergency Medicine (EM) an archive of articles. Additionally, this will act as a resource for EM practitioners who are looking for a quick review of landmark studies in Emergency Medicine.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/3988846.jpg?t=1614169927"
+    },
+    {
+      "title": "Edinburgh Emergency Medicine",
+      "feed_url": "https://www.edinburghemergencymedicine.com/blog?format=RSS",
+      "website_url": "https://www.edinburghemergencymedicine.com/blog/",
+      "description": "Edinburgh Emergency Medicine deliver their service across 3 Departments in NHS Lothian to approximately 200,000 patients a year. They believe in clinical excellence, provided within a strong multidisciplinary team ethos and with patient care at its centre.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4717532.jpg?t=1614169948"
+    },
+    {
+      "title": "Global Emergency Care",
+      "feed_url": "https://globalemergencycare.org/blog/feed/",
+      "website_url": "https://globalemergencycare.org/blog/",
+      "description": "Global Emergency Care (GEC) is a nonprofit organization founded and run by U.S. board certified emergency physicians dedicated to address the lack of acute emergency care infrastructure. Global Emergency Care is dedicated to making lifesaving medical care available to everyone.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4717584.jpg?t=1614169975"
+    },
+    {
+      "title": "Seymour Ambulance Association Blog",
+      "feed_url": "https://www.seymourems.org/feed/",
+      "website_url": "https://www.seymourems.org/blog/",
+      "description": "Seymour Ambulance Association provides non profit emergency medical services to the residents of Seymour, CT along side EMS classes & EMT training courses. Their mission is to provide and maintain a non-profit emergency medical services (EMS) system which will protect, educate and serve the residents and visitors of the Town of Seymour and surrounding towns.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 412
+      },
+      "image_url": "https://i1.feedspot.com/4726308.jpg"
+    },
+    {
+      "title": "GEMCAST",
+      "feed_url": "https://gempodcast.com/feed/",
+      "website_url": "https://gempodcast.com/",
+      "description": "GEMCAST is a Geriatric Emergency Medicine Podcast: A series of lectures on clinical topics to help physicians, trainees, nurses, and paramedics who take care of older adults, particularly in the acute care setting. GEMCAST grew out of a desire to help share expertise in the fields of geriatrics and emergency medicine.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4717549.jpg?t=1614170047"
+    },
+    {
+      "title": "Survive:ED",
+      "feed_url": "http://accssurvivor.net/ed/feed/",
+      "website_url": "http://accssurvivor.net/ed/",
+      "description": "Survive:ED is an Emergency Medicine Blog. Tom Bircher is a Trainee ED doc at ACCS Survivor.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4717551.jpg?t=1614170147"
+    },
+    {
+      "title": "Adult Emergency Medicine",
+      "feed_url": "http://adultemergencymedicine.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://adultemergencymedicine.blogspot.com/",
+      "description": "I'm a junior Emergency Medicine Trainee in South East London. I'm embracing the world of FOAMEd, and in the spirit of FOAM am making all of my research and ramblings available for everyone to share.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4717591.jpg?t=1614171333"
+    },
+    {
+      "title": "EM Didactic",
+      "feed_url": "http://emdidactic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://emdidactic.blogspot.com/",
+      "description": "This blog intends to create an educational platform for Emergency Physicians, sharing EM related basics and updates. My goal with this blog is to improve Resident education, Academic EM and Flipping the classroom.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4717895.jpg?t=1614170108"
+    },
+    {
+      "title": "Emergency Medicine PharmD",
+      "feed_url": "http://empharmd.blogspot.com/feeds/posts/default",
+      "website_url": "http://empharmd.blogspot.com/",
+      "description": "Emergency medicine from the perspective of a pharmacist",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2162084.jpg?t=1614170114"
+    },
+    {
+      "title": "EM in 5",
+      "feed_url": "https://emin5.com/feed/",
+      "website_url": "https://emin5.com/",
+      "description": "EM in 5 is a series of 5 minute video lectures for all residents, medical students and learners in Emergency Medicine. Originally created as a live conference series for the University of Chicago EM Residency, we now bring you a new online 5 minute video each week with the hope to keep our hyperactive EM minds attentive while driving home some key points!",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4972488.jpg?t=1614170133"
+    },
+    {
+      "title": "Emergency Medicine Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/xIbTe",
+      "website_url": "http://emergencymedic.blogspot.com/",
+      "description": "This is the space meant for professional education only (particularly emergency medicine) and is not a place for medical consultation and it DOES NOT replace proper consultation and treatment advice to patients. This site is mainly created for my students - undergraduates and postgraduates - to facilitate teaching and learning purposes, to serve as additional learning materials, to share sample exam questions, etc etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3988892.jpg?t=1614171056"
+    },
+    {
+      "title": "EM Basic",
+      "feed_url": "https://embasic.libsyn.com/rss",
+      "website_url": "https://embasic.libsyn.com/",
+      "description": "EM Basic- your boot camp guide to emergency medicine. Made for medical students and emergency medicine interns to review common chief complaints in emergency medicine from the ground up",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 15700
+      },
+      "image_url": "https://i1.feedspot.com/5124022.jpg?t=1752357501"
+    },
+    {
+      "title": "Academic Life in EM",
+      "feed_url": "https://www.aliem.com/feed/",
+      "website_url": "https://www.aliem.com/",
+      "description": "This blog aims to disrupt how medical providers and trainees can gain public access to high-quality, educational content while also engaging in a dialogue about best-practices in EM and medical education. We strive to reshape medical education and academia in their evolution beyond the traditional classroom.",
+      "followers": {
+        "facebook": 25900,
+        "twitter": 24700,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4717120.jpg?t=1614169530"
+    },
+    {
+      "title": "Don't Forget the Bubbles",
+      "feed_url": "https://dontforgetthebubbles.com/feed/",
+      "website_url": "https://dontforgetthebubbles.com/",
+      "description": "DFTB is a Free Open Access Medical Education (FOAM) resource for paediatrics; it's a practical, high-quality paediatric educational resource. DFTB does this through collaboration - getting more people involved in creating online content and FOAM, for junior doctors, trainees and Paediatricians.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 17500,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/3988839.jpg?t=1614169645"
+    },
+    {
+      "title": "Pediatric EM Morsels",
+      "feed_url": "https://pedemmorsels.com/feed/",
+      "website_url": "https://pedemmorsels.com/",
+      "description": "Pediatric Emergency Medicine Educational morsels and pearls to help augment comfort when caring for kids.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/1920729.jpg?t=1614169768"
+    },
+    {
+      "title": "BMC EM Blog",
+      "feed_url": "https://bostoncityem.wordpress.com/feed/",
+      "website_url": "https://bostoncityem.wordpress.com/",
+      "description": "BostonCityEM Blog is a Free Open Access Medical Education (FOAMed) blog brought to you by the emergency medicine residents and faculty at Boston Medical Center. Their goal is to provide high yield educational content, driven by EM medicine residents and reviewed by faculty. They will feature hot topics in clinical emergency medicine, ultrasound, critical care, pediatric emergency medicine etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4717643.jpg?t=1614169942"
+    },
+    {
+      "title": "Emergency Medicine Journal",
+      "feed_url": "https://blogs.bmj.com/emj/feed/",
+      "website_url": "https://blogs.bmj.com/bmj/latest-articles/",
+      "description": "The Emergency Medicine Journal is a leading international journal reporting developments and advances in emergency medicine and acute care. It has relevance to all specialties involved in the management of emergencies in the hospital and prehospital environment. Each issue contains editorials, reviews, original research, evidence based reviews, letters and more.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 40100
+      },
+      "image_url": "https://i1.feedspot.com/2042538.jpg?t=1614169578"
+    },
+    {
+      "title": "Brown Emergency Medicine",
+      "feed_url": "https://brownemblog.com/blog-1?format=RSS",
+      "website_url": "http://brownemblog.com/",
+      "description": "The aim of Brown Emergency Medicine is to create high-quality, up-to-date, open access emergency medicine educational content for our residency and the world beyond.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4717135.jpg?t=1614169778"
+    },
+    {
+      "title": "FemInEM",
+      "feed_url": "https://feminem.org/feed",
+      "website_url": "https://feminem.org/",
+      "description": "FemInEM is an open access resource where we discuss, discover, and affect the journey of women working in emergency medicine. Through deliberate conversation and engaging dialogue, members explore a variety of issues that support the development and advancement of all women in medicine. FemInEM aims to address gender disparities in a positive way, empowering physicians of both genders.",
+      "followers": {
+        "facebook": 774,
+        "twitter": 10800,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4717542.jpg?t=1614169827"
+    },
+    {
+      "title": "Thomas Jefferson EMS Council",
+      "feed_url": "https://www.tjems.org/news?format=RSS",
+      "website_url": "https://www.tjems.org/",
+      "description": "The Thomas Jefferson Council is an integral part of the EMS system whose function is to assess, identify, coordinate, plan and implement an efficient and effective regional EMS delivery system in partnership with the Virginia Office of EMS and the Virginia EMS Advisory Board.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4717712.jpg?t=1614169957"
+    },
+    {
+      "title": "USF Emergency Medicine Blog",
+      "feed_url": "https://www.usfemergencymedicine.org/blog?format=rss",
+      "website_url": "https://www.tampaemergencymedicine.org/blog",
+      "description": "Learn more about Emergency Medicine at USF. This blog features information about our training program and evidence-based medicine posts.",
+      "followers": {
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5229643.jpg?t=1608537610"
+    },
+    {
+      "title": "Annals of Emergency Medicine",
+      "feed_url": "https://www.annemergmed.com/content/rss",
+      "website_url": "https://www.annemergmed.com/current",
+      "description": "Annals of Emergency Medicine is owned by the American College of Emergency Physicians. Annals of Emergency Medicine is an international, peer-reviewed journal dedicated to improving the quality of care by publishing the highest quality science for emergency medicine and related medical specialties.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 22700
+      },
+      "image_url": "https://i1.feedspot.com/707636.jpg?t=1614170126"
+    }
+  ]
+}

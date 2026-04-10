@@ -1,0 +1,17 @@
+{
+  "category": "Bay City News",
+  "source_url": "https://rss.feedspot.com/bay_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Bay City Tribune",
+      "feed_url": "https://baycitytribune.com/search/?c=news&f=rss&l=50&s=start_time&sd=desc&t=article",
+      "website_url": "https://baycitytribune.com/news/",
+      "description": "The Bay City Tribune is the third oldest newspaper in Texas. It is a semi-weekly community newspaper that has been serving historical Matagorda County since 1845. Stay up-to-date with the latest news and updates in Bay City by following this feed.",
+      "followers": {
+        "facebook": 16300,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5168863.jpg?t=1594120732"
+    }
+  ]
+}

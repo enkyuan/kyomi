@@ -1,0 +1,597 @@
+{
+  "category": "Cyber Security News",
+  "source_url": "https://rss.feedspot.com/cyber_security_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Hacker News",
+      "feed_url": "https://feeds.feedburner.com/TheHackersNews",
+      "website_url": "https://thehackernews.com/",
+      "description": "The Hacker News has been internationally recognized as a leading news source dedicated to promoting awareness for security experts and hackers",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 922200,
+        "instagram": 142900
+      },
+      "image_url": "https://i1.feedspot.com/189173.jpg?t=1546583793"
+    },
+    {
+      "title": "Dark Reading",
+      "feed_url": "https://www.darkreading.com/rss.xml",
+      "website_url": "https://www.darkreading.com/",
+      "description": "Cyber security's comprehensive news site is now an online community for security professionals, outlining cyber threats and the technologies for defending against them.",
+      "followers": {
+        "facebook": 27200,
+        "twitter": 338900
+      },
+      "image_url": "https://i1.feedspot.com/4719811.jpg?t=1546584329"
+    },
+    {
+      "title": "Sophos",
+      "feed_url": "https://news.sophos.com/en-us/feed/",
+      "website_url": "https://news.sophos.com/en-us/",
+      "description": "All latest articles from Sophos.",
+      "followers": {
+        "facebook": 236500,
+        "twitter": 86900,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4046947.jpg?t=1746006603"
+    },
+    {
+      "title": "HackRead",
+      "feed_url": "https://hackread.com/feed/",
+      "website_url": "https://hackread.com/",
+      "description": "HackRead is a news media organization based in London, United Kingdom that centers on InfoSec, Cyber Crime, Privacy, Surveillance, and Hacking News with full-scale reviews on Social Media Platforms & Technology trends.",
+      "followers": {
+        "facebook": 79400,
+        "twitter": 117100
+      },
+      "image_url": "https://i1.feedspot.com/4277770.jpg?t=1619767965"
+    },
+    {
+      "title": "Cyble Blog",
+      "feed_url": "https://cyble.com/feed/",
+      "website_url": "https://cyble.com/blog/",
+      "description": "Keep your knowledge up-to-the-minute with reports on the latest threats and trends in the Cyberworld. The Cyble Research and Intelligence Labs (CRIL) consists of a team of world-class responders, expert malware researchers, and skilled exploit-code analysts. They provide capabilities for customers to manage cyber risks with AI-powered actionable threat intelligence.",
+      "followers": {
+        "twitter": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5675734.jpg?t=1764235331"
+    },
+    {
+      "title": "IT Security Guru",
+      "feed_url": "https://www.itsecurityguru.org/feed/",
+      "website_url": "https://www.itsecurityguru.org/",
+      "description": "The IT Security Guru offers a daily news digest of all the best breaking IT security news stories first thing in the morning!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 20500
+      },
+      "image_url": "https://i1.feedspot.com/4660474.jpg?t=1617631540"
+    },
+    {
+      "title": "SearchSecurity",
+      "feed_url": "https://searchsecurity.techtarget.com/rss/Security-Wire-Daily-News.xml",
+      "website_url": "https://www.techtarget.com/searchsecurity/",
+      "description": "The latest information security news on IT threats, vulnerabilities and market trends from the award-winning SearchSecurity.com.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 30100
+      },
+      "image_url": "https://i1.feedspot.com/634868.jpg"
+    },
+    {
+      "title": "CSO",
+      "feed_url": "https://www.csoonline.com/feed/",
+      "website_url": "https://www.csoonline.com/news/",
+      "description": "CSO offers the latest information and best practices on business continuity and data protection, best practices for prevention of social engineering scams, malware and breaches, and tips and advice abut security careers and leadership.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 63400
+      },
+      "image_url": "https://i1.feedspot.com/4811766.jpg?t=1622092043"
+    },
+    {
+      "title": "GBHackers on Security",
+      "feed_url": "https://gbhackers.com/feed/",
+      "website_url": "https://gbhackers.com/",
+      "description": "GBHackers on Security is a Cyber Security platform that covers daily Cyber Security News, Hacking News, Technology updates, and SOC Resources, Kali Linux tutorials. Their mission is to keep the community up to date with happenings in the Cyber World. Their blog features technological articles, cyber security, AI, and more.",
+      "followers": {
+        "facebook": 54700
+      },
+      "image_url": "https://i1.feedspot.com/4668131.jpg?t=1617631347"
+    },
+    {
+      "title": "Krebs on Security",
+      "feed_url": "https://krebsonsecurity.com/feed/",
+      "website_url": "https://krebsonsecurity.com/",
+      "description": "KrebsOnSecurity.com, a daily blog dedicated to investigative stories on cybercrime and computer security.Also find in depth security news and investigation.",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 337300
+      },
+      "image_url": "https://i1.feedspot.com/1102872.jpg?t=1514878926"
+    },
+    {
+      "title": "Bank Info Security",
+      "feed_url": "https://www.bankinfosecurity.com/rss-feeds",
+      "website_url": "https://www.bankinfosecurity.com/blogs",
+      "description": "Articles covering top risk management issues, from compliance to latest technology, including authentication, mobile and cloud on bank information security",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/835277.jpg?t=1617631343"
+    },
+    {
+      "title": "Cyber Defense Magazine",
+      "feed_url": "https://www.cyberdefensemagazine.com/feed/",
+      "website_url": "https://www.cyberdefensemagazine.com/news/",
+      "description": "Cyber Defense Magazine offers information on threats, trends, and solutions in cybersecurity. It addresses many different subjects, such as malware, data breaches, cyberattacks, and security best practices. The journal provides in-depth research, leader interviews, and advice on how individuals and companies may improve their digital security posture. It is a useful tool for both cybersecurity experts and hobbyists, with an emphasis on cutting-edge technologies and new threats.",
+      "followers": {
+        "facebook": 32299,
+        "twitter": 54700
+      },
+      "image_url": "https://i1.feedspot.com/3940449.jpg?t=1642761893"
+    },
+    {
+      "title": "Hacker Combat",
+      "feed_url": "https://www.hackercombat.com/feed/",
+      "website_url": "https://www.hackercombat.com/",
+      "description": "Hacker combat provides frequent updates on cyber attacks, hacking, and exclusive events. Explore the latest news and security stories from around the world.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4740274.jpg?t=1642756720"
+    },
+    {
+      "title": "Cybers Guards",
+      "feed_url": "https://cybersguards.com/feed/",
+      "website_url": "https://cybersguards.com/",
+      "description": "Cybers Guards offer Online Information Security, Hacker News, Cybersecurity, Data Breach, Web Application and Ransomware News. Explore the latest news now!.",
+      "followers": {
+        "facebook": 667,
+        "twitter": 1200,
+        "instagram": 571
+      },
+      "image_url": "https://i1.feedspot.com/4984616.jpg?t=1549361096"
+    },
+    {
+      "title": "Graham Cluley",
+      "feed_url": "https://grahamcluley.com/feed/",
+      "website_url": "https://grahamcluley.com/writing/",
+      "description": "If your computer, and the data on it, is important to you - keep yourself informed about the latest security news by following Graham Cluley Security blog from veteran anti-virus expert Graham Cluley.",
+      "followers": {
+        "twitter": 113100
+      },
+      "image_url": "https://i1.feedspot.com/4428657.jpg?t=1612932620"
+    },
+    {
+      "title": "GovInfoSecurity",
+      "feed_url": "https://www.govinfosecurity.com/rssFeeds.php?type=main",
+      "website_url": "https://www.govinfosecurity.com/",
+      "description": "GovInfoSecurity.com covers the latest news, laws, regulations and directives related to government information security, focusing on the White House's cybersecurity initiatives.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/632216.jpg?t=1546584397"
+    },
+    {
+      "title": "The Security Ledger",
+      "feed_url": "https://feeds.feedblitz.com/thesecurityledger",
+      "website_url": "https://thecyberpost.com/",
+      "description": "The Security Ledger is an independent security news website that explores the intersection of cyber security with business, commerce, politics and everyday life. Security Ledger provides well-reported and context-rich news and opinion about computer security topics that matter in our IP-enabled homes, workplaces and daily lives.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4700,
+        "instagram": 160
+      },
+      "image_url": "https://i1.feedspot.com/4404433.jpg?t=1546584553"
+    },
+    {
+      "title": "The Cyber Post",
+      "feed_url": "https://thecyberpost.com/feed/",
+      "website_url": "https://thecyberpost.com/",
+      "description": "Covers the latest hacker news, cyber security reports on cybercrime, ransomware, malware, vulnerabilities and more. The Cyber Post brings you the most up to date current events in the realm of hacking ,vulnerabilities, cybercrime and more.",
+      "followers": {
+        "twitter": 777,
+        "instagram": 113
+      },
+      "image_url": "https://i1.feedspot.com/5307764.jpg?t=1627906738"
+    },
+    {
+      "title": "Cyber Safe News",
+      "feed_url": "https://cybersafe.news/feed/",
+      "website_url": "https://cybersafe.news/",
+      "description": "Cyber Safe Latest News, Cyber Security, Information Security, IT Security, and Hacking News",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 14,
+        "instagram": 46800
+      },
+      "image_url": "https://i1.feedspot.com/5083280.jpg"
+    },
+    {
+      "title": "Threatpost",
+      "feed_url": "https://threatpost.com/feed/",
+      "website_url": "https://threatpost.com/",
+      "description": "Threatpost, is an independent news site which is a leading source of information about IT and business security for hundreds of thousands of professionals.",
+      "followers": {
+        "facebook": 21700,
+        "twitter": 225000,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/2048938.jpg?t=1612932609"
+    },
+    {
+      "title": "Cyberpress",
+      "feed_url": "https://news.cyberpress.io/feed/",
+      "website_url": "https://news.cyberpress.io/",
+      "description": "We are absolutely committed to helping our clients achieve their marketing and communication objectives. Our mission at Cyberpress is to provide a platform that allows you to connect with influential, relevant, and highly targeted media outlets that will broadcast your message far and wide, putting your content in front of the right eyes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5549981.jpg?t=1682417010"
+    },
+    {
+      "title": "The K-12 Cybersecurity Resource Center Blog",
+      "feed_url": "https://k12cybersecure.com/feed/",
+      "website_url": "https://k12cybersecure.com/category/blog/",
+      "description": "The K-12 Cybersecurity Resource Center hosts cybersecurity research and resources for the U.S. K-12 community. The K-12 Cybersecurity Resource Center is the new home of the Map and will be devoted solely to issues of school cybersecurity and privacy issues.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5023517.jpg?t=1558161441"
+    },
+    {
+      "title": "Virtualattacks",
+      "feed_url": "https://virtualattacks.com/feed/",
+      "website_url": "https://virtualattacks.com/",
+      "description": "Virtualattacks features the latest cybersecurity news and in-depth coverage of current as well as future trends in Infosec and how they are shaping the cyber world.",
+      "followers": {
+        "facebook": 148
+      },
+      "image_url": "https://i1.feedspot.com/5172882.jpg?t=1612932893"
+    },
+    {
+      "title": "CyberInsider",
+      "feed_url": "https://cyberinsider.com/feed/",
+      "website_url": "https://cyberinsider.com/",
+      "description": "Reliable cybersecurity news and in-depth resources, written by industry experts. Explore news topics Cyberinsider resources.",
+      "followers": {
+        "facebook": 75
+      },
+      "image_url": "https://i1.feedspot.com/5224874.jpg?t=1756297035"
+    },
+    {
+      "title": "eSecurity Planet",
+      "feed_url": "https://www.esecurityplanet.com/feed/",
+      "website_url": "https://www.esecurityplanet.com/",
+      "description": "eSecurity Planet provides the latest cybersecurity news, trends, and software reviews for IT leaders. Browse our buyer's guides and analysis now.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/463776.jpg?t=1756297035"
+    },
+    {
+      "title": "Help Net Security",
+      "feed_url": "https://www.helpnetsecurity.com/feed/",
+      "website_url": "https://www.helpnetsecurity.com/",
+      "description": "Cybersecurity news with a focus on enterprise security. Discover what matters in the world of information security today.",
+      "followers": {
+        "facebook": 479,
+        "twitter": 58200
+      },
+      "image_url": "https://i1.feedspot.com/4509047.jpg?t=1756297035"
+    },
+    {
+      "title": "Cybersecurity Dive",
+      "feed_url": "https://www.cybersecuritydive.com/feeds/news/",
+      "website_url": "https://www.cybersecuritydive.com/",
+      "description": "Cybersecurity Dive provides in-depth journalism and insight into the most impactful news and trends shaping cybersecurity.",
+      "followers": {
+        "facebook": 973
+      },
+      "image_url": "https://i1.feedspot.com/5400358.jpg?t=1756297035"
+    },
+    {
+      "title": "Upstream Blog",
+      "feed_url": "https://upstream.auto/feed/",
+      "website_url": "https://upstream.auto/blog/",
+      "description": "See what Upstream is doing from our blog with professional insights and updates on some of the burning topics in automotive cyber security and data analytics. At Upstream, we unlock the value of mobility data through a purpose-built cloud-based cybersecurity and data analytics platform to provide you with unparalleled data-driven actionable insights.",
+      "followers": {
+        "facebook": 269,
+        "twitter": 1300,
+        "instagram": 145
+      },
+      "image_url": "https://i1.feedspot.com/5406607.jpg?t=1756297035"
+    },
+    {
+      "title": "The Cyber Express",
+      "feed_url": "https://thecyberexpress.com/feed/",
+      "website_url": "https://thecyberexpress.com/",
+      "description": "The Cyber Express brings you all the latest cybersecurity news, Hacker news and updates to help you stay ahead of the curve. Keep reading to stay safe online!",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 3000,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5432757.jpg?t=1756201556"
+    },
+    {
+      "title": "MIT News \u00bb Cybersecurity",
+      "feed_url": "https://news.mit.edu/topic/mitcyber-security-rss.xml",
+      "website_url": "https://news.mit.edu/topic/cyber-security/",
+      "description": "All latest articles about Cybersecurity from MIT News.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/7343466.jpg?t=1756297035"
+    },
+    {
+      "title": "The New York Times \u00bb Cybersecurity",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/spotlight/cybersecurity/rss.xml",
+      "website_url": "https://www.nytimes.com/spotlight/cybersecurity/",
+      "description": "All latest articles about Cybersecurity from The New York Times.",
+      "followers": {
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/8529645.jpg?t=1756297035"
+    },
+    {
+      "title": "TechCrunch \u00bb Cybersecurity",
+      "feed_url": "https://techcrunch.com/tag/cybersecurity/feed/",
+      "website_url": "https://techcrunch.com/tag/cybersecurity/",
+      "description": "Read the latest news about cybersecurity on TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4447421.jpg?t=1634630003"
+    },
+    {
+      "title": "Alias Robotics News",
+      "feed_url": "https://news.aliasrobotics.com/rss/",
+      "website_url": "https://news.aliasrobotics.com/",
+      "description": "Official Alias Robotics blog: news, case studies, and trends in robotic cybersecurity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663883.jpg?t=1756297083"
+    },
+    {
+      "title": "The Conversation \u00bb Cybersecurity",
+      "feed_url": "https://theconversation.com/topics/cybersecurity-535/articles.atom",
+      "website_url": "https://theconversation.com/topics/cybersecurity-535/",
+      "description": "Browse Cybersecurity news, research and analysis from The Conversation",
+      "followers": {
+        "facebook": 118100,
+        "twitter": 65300
+      },
+      "image_url": "https://i1.feedspot.com/8663884.jpg?t=1756297093"
+    },
+    {
+      "title": "Security News Wire",
+      "feed_url": "https://snwire.com/feed/",
+      "website_url": "https://snwire.com/",
+      "description": "SNWIRE is a cybersecurity news platform for information security professionals. News & press release distribution across multiple cybersecurity media channels.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/8663885.jpg?t=1756297089"
+    },
+    {
+      "title": "Heimdal Security \u00bb Cybersecurity News",
+      "feed_url": "https://heimdalsecurity.com/blog/category/cybersecurity-news/feed/",
+      "website_url": "https://heimdalsecurity.com/blog/category/cybersecurity-news/",
+      "description": "The latest cybersecurity news about threat actors, industry developments, technology news relevant to security, cyberattacks, data breaches, and so on.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/8663886.jpg"
+    },
+    {
+      "title": "Mitnick Security Blog \u00bb Cybersecurity News and Articles",
+      "feed_url": "https://www.mitnicksecurity.com/blog/rss.xml",
+      "website_url": "https://www.mitnicksecurity.com/blog/",
+      "description": "Discover the latest insights and expertise in cybersecurity from the Mitnick Security team.",
+      "followers": {
+        "facebook": 71300
+      },
+      "image_url": "https://i1.feedspot.com/8663887.jpg?t=1756297092"
+    },
+    {
+      "title": "South China Morning Post \u00bb Cybersecurity",
+      "feed_url": "https://www.scmp.com/rss/296935/feed/",
+      "website_url": "https://www.scmp.com/topics/cybersecurity/",
+      "description": "From black hat hackers attempting to break into government computer systems, to white hat security experts working to crack and improve\u00a0protections on popular internet browsers, cybersecurity affects us all. Every day hackers steal millions of pieces of personal data and, as former NSA contractor Edward Snowden revealed, sometimes it may be our own governments doing the snooping.",
+      "followers": {
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/8663888.jpg?t=1756297085"
+    },
+    {
+      "title": "Security Magazine \u00bb Cybersecurity",
+      "feed_url": "https://www.securitymagazine.com/rss/topic/2788",
+      "website_url": "https://www.securitymagazine.com/topics/2788-cybersecurity/",
+      "description": "All latest articles about Cybersecurity from Security Magazine.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 28400
+      },
+      "image_url": "https://i1.feedspot.com/8663889.jpg?t=1756297091"
+    },
+    {
+      "title": "U.S. News & World Report \u00bb Cybersecurity",
+      "feed_url": "https://www.usnews.com/topics/subjects/cybersecurity/rss",
+      "website_url": "https://www.usnews.com/topics/subjects/cybersecurity/",
+      "description": "All latest articles about Cybersecurity from U.S. News & World Report.",
+      "followers": {
+        "facebook": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/8663890.jpg?t=1756297090"
+    },
+    {
+      "title": "2binnovations \u00bb Cybersecurity News & Updates",
+      "feed_url": "https://2binnovations.com/category/cybersecurity-news-updates/feed/",
+      "website_url": "https://2binnovations.com/category/cybersecurity-news-updates/",
+      "description": "All latest articles about Cybersecurity News & Updates from 2binnovations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663891.jpg?t=1756297088"
+    },
+    {
+      "title": "WeLiveSecurity",
+      "feed_url": "https://www.welivesecurity.com/feed/",
+      "website_url": "https://www.welivesecurity.com/en/",
+      "description": "The latest news, research, cyber threats, malware discoveries, mobile security, ransomware, and insight from the ESET experts. WeLiveSecurity comes from the brains at ESET - experienced researchers with in-depth knowledge of the latest threats & security trends.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4648913.jpg?t=1619767649"
+    },
+    {
+      "title": "SecurityWeek",
+      "feed_url": "https://www.securityweek.com",
+      "website_url": "https://www.securityweek.com/",
+      "description": "IT Security News and Information Security News, Cyber Security, Network Security, Enterprise Security Threats, Cybercrime News and more. Information Security Industry Expert insights and analysis from IT security experts around the world.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 224600
+      },
+      "image_url": "https://i1.feedspot.com/121911.jpg?t=1617631338"
+    },
+    {
+      "title": "Comodo News",
+      "feed_url": "https://blog.comodo.com/feed/",
+      "website_url": "https://blog.comodo.com/",
+      "description": "The corporate blog for Comodo, providing news about Comodo products and the latest news and information about internet and computer security.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4717908.jpg"
+    },
+    {
+      "title": "Techworm \u00bb Security",
+      "feed_url": "https://www.techworm.net/feed",
+      "website_url": "https://www.techworm.net/category/security-news",
+      "description": "This site provides latest technology news, hacking news, cyber security updates, tutorials and science related news.",
+      "followers": {
+        "facebook": 809900,
+        "twitter": 20000,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4673081.jpg?t=1546584345"
+    },
+    {
+      "title": "Security Gladiators \u00bb Internet Security News",
+      "feed_url": "https://securitygladiators.com/internet-security-news/feed/",
+      "website_url": "https://securitygladiators.com/internet-security-news/",
+      "description": "Best source for cyber security news, reviews and how to guides. We report security stories, review wide variety of security and freedom tools, and also write guides for DIY security, privacy, anonymity and freedom on the net.",
+      "followers": {
+        "twitter": 855,
+        "instagram": 384
+      },
+      "image_url": "https://i1.feedspot.com/4812938.jpg"
+    },
+    {
+      "title": "Information Security Buzz",
+      "feed_url": "https://informationsecuritybuzz.com/feed/",
+      "website_url": "https://informationsecuritybuzz.com/",
+      "description": "Information Security Buzz is a new resource that provides the best in breaking news for the industry. Aggregated from many credible sources, content is carefully selected to provide you with the latest threat trends, insights, practical solutions, hot topics and advice from around the globe.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4547032.jpg?t=1617631375"
+    },
+    {
+      "title": "Cyber Security Review",
+      "feed_url": "https://www.cybersecurity-review.com/news-2/",
+      "website_url": "https://www.cybersecurity-review.com/news-2/",
+      "description": "Our mission is to promote dialogue and provide a platform for information exchange and cooperation between stakeholders, industry, academia and security experts.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4812057.jpg?t=1546584520"
+    },
+    {
+      "title": "CYBERInsights",
+      "feed_url": "https://www.iainfraser.net/feeds/posts/default",
+      "website_url": "https://cyberinsights.iainfraser.net/",
+      "description": "Iain is a cyber-security journalist and European Authority Writer & Corporate Lecturer on Cyber Security Threat Management and Risk Assessment. He researches and deliver well researched, news, features or articles on all aspects of Cyber Security to a broad cross section of Corporates and Online Media Platforms.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5003484.jpg"
+    },
+    {
+      "title": "Hackers News Bulletin",
+      "feed_url": "https://www.hackersnewsbulletin.com/feed",
+      "website_url": "https://www.hackersnewsbulletin.com/",
+      "description": "Discover the latest trends, interesting news and useful tips about hackers, hacking, cyber security, technology and anonymous around the globe",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 23100
+      },
+      "image_url": "https://i1.feedspot.com/4812207.jpg"
+    },
+    {
+      "title": "Binary Blogger \u00bb Security",
+      "feed_url": "https://binaryblogger.com/category/interesting-news/securitynews/feed/",
+      "website_url": "https://binaryblogger.com/category/interesting-news/securitynews/",
+      "description": "Security News and Topics That You Can Understand. Another random voice in the chorus of the cyber-elite.",
+      "followers": {
+        "facebook": 129,
+        "twitter": 918
+      },
+      "image_url": "https://i1.feedspot.com/4812495.jpg?t=1546584501"
+    },
+    {
+      "title": "SC Media",
+      "feed_url": "https://www.scworld.com/rss",
+      "website_url": "https://www.scworld.com/",
+      "description": "The essential resource for cybersecurity professionals, delivering in-depth, unbiased news, analysis and perspective to keep the community informed, educated and enlightened about the market.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 119900
+      },
+      "image_url": "https://i1.feedspot.com/3631657.jpg?t=1612932821"
+    },
+    {
+      "title": "CyberWire \u00bb Cybersecurity News",
+      "feed_url": "https://thecyberwire.com/feeds/rss.xml",
+      "website_url": "https://thecyberwire.com/",
+      "description": "The CyberWire is an independent voice delivering concise, accessible, and relevant cyber security news to people all across the globe. We separate the signal from the noise.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 42100,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5039651.jpg?t=1587975732"
+    },
+    {
+      "title": "Cyber Security News",
+      "feed_url": "https://cybersecuritynews.com/feed/",
+      "website_url": "https://cybersecuritynews.com/",
+      "description": "Cyber Security News is a Dedicated News Platform For Cyber News, Cyber Attack News, Hacking News & Vulnerability Analysis.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5119270.jpg?t=1743599224"
+    },
+    {
+      "title": "The HIPAA Journal \u00bb Healthcare Cybersecurity",
+      "feed_url": "https://www.hipaajournal.com/category/healthcare-cybersecurity/feed/",
+      "website_url": "https://www.hipaajournal.com/category/healthcare-cybersecurity/",
+      "description": "The following section of HIPAA Journal features industry insights on Healthcare Cybersecurity. We provide the most comprehensive coverage of HIPAA news anywhere online, in addition to independent advice about HIPAA compliance and the best practices to adopt to avoid data breaches, HIPAA violations, and regulatory fines.",
+      "followers": {
+        "facebook": 506,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5406683.jpg?t=1756297035"
+    }
+  ]
+}

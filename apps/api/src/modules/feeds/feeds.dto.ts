@@ -67,6 +67,8 @@ export const subscribedFeedItem = t.Object({
   title: t.String(),
   customTitle: t.Union([t.String(), t.Null()]),
   link: t.Union([t.String(), t.Null()]),
+  folderId: t.Union([t.String(), t.Null()]),
+  folderName: t.Union([t.String(), t.Null()]),
   subscribedAt: t.String(),
 });
 

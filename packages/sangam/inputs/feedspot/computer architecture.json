@@ -1,0 +1,52 @@
+{
+  "category": "Computer Architecture",
+  "source_url": "https://rss.feedspot.com/computer_architecture_rss_feeds",
+  "feeds": [
+    {
+      "title": "SIGARCH Blog",
+      "feed_url": "https://www.sigarch.org/feed/",
+      "website_url": "https://www.sigarch.org/blog/",
+      "description": "SIGARCH serves a unique community of computer professionals working at the forefront of computer design in both industry and academia. It is ACM's primary forum to interchange ideas about tomorrow's hardware and its interactions with software. Read articles such as Looking Beyond Microarchitectural Side Channels, Fast memcpy, A System Design, Safety Analysis for Autonomous Driving Computing Systems, and more.",
+      "followers": {
+        "facebook": 483,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5496752.jpg?t=1674189922"
+    },
+    {
+      "title": "IEEE Computer Architecture Letters",
+      "feed_url": "https://csdl-api.computer.org/api/rss/periodicals/letters/ca/rss.xml",
+      "website_url": "https://www.computer.org/csdl/journal/ca",
+      "description": "The IEEE Computer Society is the world's leading computing membership organization, and the trusted information and career-development source for a global workforce of technology leaders, including professors, researchers, software engineers, IT professionals, employers, and students. Read the informative blog for peer-reviewed papers with high impact on all areas of uni- and multiprocessor computer systems, computer architecture, microarchitecture, and workload characterization.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5069878.jpg?t=1674190075"
+    },
+    {
+      "title": "Observations from Uppsala \u00bb Computer Architecture",
+      "feed_url": "https://jakob.engbloms.se/archives/category/computer-architecture/feed",
+      "website_url": "https://jakob.engbloms.se/archives/category/computer-architecture",
+      "description": "Observations from Uppsala are a technological blog providing information on computer simulation, programming, software, technology, research, and more since 2007.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5496753.jpg?t=1674190134"
+    },
+    {
+      "title": "SAGE Journals | JAC",
+      "feed_url": "https://journals.sagepub.com/action/showFeed?ui=0&mi=ehikzz&ai=2b4&jc=jaca&type=axatoc&feed=rss",
+      "website_url": "https://journals.sagepub.com/home/jac",
+      "description": "The International Journal of Architectural Computing (IJAC) blog is an exciting peer-reviewed journal founded by international organizations dedicated to promoting collaborative research and development of computer-aided architectural design. SAGE journal is an exciting collaboration of five international organizations dedicated to promoting research and development of computer-aided architectural",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5496750.jpg?t=1674189915"
+    },
+    {
+      "title": "IEEE TCCA Blog",
+      "feed_url": "https://www.blog.ieeetcca.org/feed/",
+      "website_url": "https://www.blog.ieeetcca.org/",
+      "description": "The Technical Committee on Computer Architecture (TCCA) is involved with research and development in the integrated hardware and software design of general- and special-purpose processors and parallel computers. IEEE TCCA Blog features articles on Recent IEEE Computer Architecture Letters Publications, SIGARCH/TCCA Best Practices & Resources, HPCA 2022 Trip Report and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5496751.jpg?t=1674190182"
+    }
+  ]
+}

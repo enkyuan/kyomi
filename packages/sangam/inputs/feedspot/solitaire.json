@@ -1,0 +1,42 @@
+{
+  "category": "Solitaire",
+  "source_url": "https://rss.feedspot.com/solitaire_rss_feeds",
+  "feeds": [
+    {
+      "title": "Solitaire Tripeaks",
+      "feed_url": "https://solitairetripeaks.com/feed/",
+      "website_url": "https://solitairetripeaks.com/",
+      "description": "The Tiki Solitaire TriPeaks Website is a website where you can access various features, including the Web Shop, the Club Shop, the Loyalty Points tab, the free Daily Gift, and the Club Free Gift. You can access the website here: https://play.solitairetripeaks.com/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5752999.jpg?t=1704960336"
+    },
+    {
+      "title": "Solitaire Social Blog",
+      "feed_url": "https://solitairesocial.com/feed/",
+      "website_url": "https://solitairesocial.com/blog/",
+      "description": "Read the Solitaire Social's blog! The most interesting articles about solitaire and other online games are here. Current news and events for solitaire players!",
+      "followers": {
+        "facebook": 73700
+      },
+      "image_url": "https://i1.feedspot.com/5753003.jpg?t=1704960245"
+    },
+    {
+      "title": "Online Solitaire Blog",
+      "feed_url": "https://online-solitaire.com/blog/rss/",
+      "website_url": "https://online-solitaire.com/blog/",
+      "description": "Thoughts and stories about Solitaire, Spider Solitaire, Freecell and other great card games.",
+      "followers": {
+        "facebook": 72
+      },
+      "image_url": "https://i1.feedspot.com/5753002.jpg?t=1704960231"
+    },
+    {
+      "title": "Spider Solitaire Addict Blog",
+      "feed_url": "https://spidersolitaireaddict.blog/feed/",
+      "website_url": "https://spidersolitaireaddict.blog/",
+      "description": "Spider Solitaire, the whole Spider Solitaire, and nothing but the Spider Solitaire",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5752998.jpg?t=1704960650"
+    }
+  ]
+}

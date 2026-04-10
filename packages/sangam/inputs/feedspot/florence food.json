@@ -1,0 +1,79 @@
+{
+  "category": "Florence Food",
+  "source_url": "https://rss.feedspot.com/florence_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Curious Appetite",
+      "feed_url": "https://thecuriousappetite.com/feed/",
+      "website_url": "https://thecuriousappetite.com/",
+      "description": "Embark on a culinary journey through the Curious Appetite blog. Founded by passionate food lover, this blog explores the diverse food scene in Florence and beyond. From hidden gems to iconic eateries, Curious Appetite offers insightful articles, reviews, and recommendations to help you discover the flavors and traditions of Florence's culinary landscape.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 2000,
+        "instagram": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4634405.jpg?t=1600347419"
+    },
+    {
+      "title": "Bambi Tripe and Lampredotto Blog",
+      "feed_url": "https://www.bambitrippaelampredotto.it/feed/",
+      "website_url": "https://www.bambitrippaelampredotto.it/blog/",
+      "description": "Dive into the heart of Florentine street food with the Bambi Trippa e Lampredotto Firenze Blog. This blog is dedicated to the traditional street food of Florence, featuring articles on trippa (tripe) and lampredotto (cow stomach) and their importance in the local food culture. Discover where to find the best tripe and lampredotto vendors and learn about their historical significance in Florentine cuisine.",
+      "followers": {
+        "facebook": 36200,
+        "instagram": 20600
+      },
+      "image_url": "https://i1.feedspot.com/5616040.jpg?t=1689020110"
+    },
+    {
+      "title": "Marco Bechi",
+      "feed_url": "https://www.marcobechi.it/feed/",
+      "website_url": "https://www.marcobechi.it/",
+      "description": "Discover the culinary world through the eyes of chef Marco Bechi. With his blog, Marco shares his culinary adventures, recipes, and insights into Italian cuisine, including his experiences in Florence. Explore his blog for delicious recipes, food photography, and stories that capture the essence of Florence's gastronomy.",
+      "followers": {
+        "twitter": 261,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5616041.jpg?t=1688390550"
+    },
+    {
+      "title": "IO AMO Firenze",
+      "feed_url": "https://www.ioamofirenze.it/feed/",
+      "website_url": "https://www.ioamofirenze.it/",
+      "description": "Immerse yourself in the love for Florence's food scene with the IO AMO Firenze blog. This blog celebrates the culinary traditions and flavors of Florence, offering articles on local dishes, food events, and recommended eateries. Explore the blog to discover hidden food gems, cooking tips, and a deep appreciation for the culinary delights that Florence has to offer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5616037.jpg?t=1688390923"
+    },
+    {
+      "title": "The Joy of Food \u00bb Florence",
+      "feed_url": "https://thejoyoffood.life/category/italy/florence/feed/",
+      "website_url": "https://thejoyoffood.life/category/italy/florence/",
+      "description": "Experience the joy of food in Florence through The Joy of Food blog. With a focus on the city's culinary scene, this blog explores local ingredients, traditional recipes, and the stories behind Florentine dishes. From pasta to pastries, The Joy of Food offers mouthwatering content that will inspire your culinary explorations in Florence.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5616036.jpg?t=1688390506"
+    },
+    {
+      "title": "Italy Foodies \u00bb Florence",
+      "feed_url": "https://www.italyfoodies.com/blog/tag/Florence?format=rss",
+      "website_url": "https://www.italyfoodies.com/blog/tag/Florence",
+      "description": "Join the Italy Foodies community as they take you on a gastronomic journey through Florence. This blog features articles on food tours, restaurant recommendations, and local food traditions. Immerse yourself in the flavors and culture of Florence's food scene with Italy Foodies as your guide.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5616034.jpg?t=1688390495"
+    },
+    {
+      "title": "Eating Around Italy \u00bb Florence",
+      "feed_url": "https://eatingarounditaly.com/category/food-destinations-in-italy/florence/feed/",
+      "website_url": "https://eatingarounditaly.com/category/food-destinations-in-italy/florence/",
+      "description": "Get a taste of Florence through the Eating Around Italy blog. This blog offers articles on the city's culinary offerings, including restaurant reviews, food events, and culinary adventures. Whether you're looking for recommendations on trattorias or insights into local ingredients, Eating Around Italy provides a delightful resource for food lovers exploring Florence.",
+      "followers": {
+        "facebook": 47,
+        "instagram": 159
+      },
+      "image_url": "https://i1.feedspot.com/5616033.jpg?t=1688390491"
+    }
+  ]
+}

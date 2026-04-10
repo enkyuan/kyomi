@@ -1,0 +1,62 @@
+{
+  "category": "UK Aging",
+  "source_url": "https://rss.feedspot.com/uk_aging_rss_feeds",
+  "feeds": [
+    {
+      "title": "Age UK",
+      "feed_url": "https://www.ageuk.org.uk/discover/rss/",
+      "website_url": "https://www.ageuk.org.uk/discover/",
+      "description": "Age UK is the country's largest charity dedicated to helping everyone make the most of later life. We believe that living longer should be celebrated and everything we do is designed to change the way we age for the better and enable everyone to be part of the solution. Together, we can create a world where everyone can love later life.",
+      "followers": {
+        "facebook": 261800,
+        "twitter": 137700,
+        "instagram": 67000
+      },
+      "image_url": "https://i1.feedspot.com/4553535.jpg?t=1606203002"
+    },
+    {
+      "title": "Lumity Life UK News",
+      "feed_url": "https://lumitylife.co.uk/blogs/news.atom",
+      "website_url": "https://lumitylife.co.uk/blogs/news",
+      "description": "Join our community of avid readers on our anti-ageing, lifestyle and beauty blog where you will find the latest news and updates from Lumity, plus exclusive secrets on how you can stay looking and feeling your best every day. Don't miss out and join in the discussion today.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 41100
+      },
+      "image_url": "https://i1.feedspot.com/4908481.jpg?t=1614074526"
+    },
+    {
+      "title": "Alternative Ageing",
+      "feed_url": "https://www.alternativeageing.net/blog?format=RSS",
+      "website_url": "https://www.alternativeageing.net/",
+      "description": "Positive Ageing with Suzi Grant, the nutritionist with a passion for fashion. She shares all the things she loves and has experience with: health & nutrition, fashion & style, and travel & lifestyle, for the Over50s.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 4200,
+        "instagram": 106700
+      },
+      "image_url": "https://i1.feedspot.com/4908437.jpg?t=1614074541"
+    },
+    {
+      "title": "Age UK London Blog",
+      "feed_url": "https://www.ageuklondonblog.org.uk/feed/",
+      "website_url": "http://www.ageuklondonblog.org.uk/",
+      "description": "The Age UK London Blog is talking about the big issues affecting older people in London. Age UK London is the regional voice of independent Age Concerns and Age UKs in London. We champion the voices of older people in London.",
+      "followers": {
+        "facebook": 561,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4908467.jpg?t=1614074511"
+    },
+    {
+      "title": "Ageing Issues",
+      "feed_url": "https://lgbtqmenopause.org/feed/",
+      "website_url": "https://ageingissues.wordpress.com/",
+      "description": "This is the blog site for the British Society of Gerontology, where members are able to share ideas, promote discussion and publicise research. A space where members of the British Society of Gerontology discuss contemporary issues raised by ageing societies.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4588521.jpg?t=1614074520"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "category": "UK Camera",
+  "source_url": "https://rss.feedspot.com/uk_camera_rss_feeds",
+  "feeds": [
+    {
+      "title": "35mmc",
+      "feed_url": "https://www.35mmc.com/feed/",
+      "website_url": "https://www.35mmc.com/",
+      "description": "Reviews, thoughts & experiences with 35mm compact cameras, rangefinders & lenses. From vintage manual focus cameras to auto focus point and shoots and everything in between.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 6100,
+        "instagram": 69700
+      },
+      "image_url": "https://i1.feedspot.com/4743038.jpg?t=1608188512"
+    },
+    {
+      "title": "Photography Blog",
+      "feed_url": "https://feeds.feedburner.com/photographyblog",
+      "website_url": "https://www.photographyblog.com/",
+      "description": "Photography Blog brings you the latest and greatest camera and photography news, both film and digital, both global and UK-based. They have expert reviews of all the latest cameras, lenses, smartphones and accessories, since 2003.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 9900,
+        "instagram": 43400
+      },
+      "image_url": "https://i1.feedspot.com/171360.jpg?t=1615196539"
+    },
+    {
+      "title": "HD Warrior",
+      "feed_url": "https://www.hdwarrior.co.uk/feed/",
+      "website_url": "https://www.hdwarrior.co.uk/",
+      "description": "Pro HD video blog about hd videos, video camera, reviews of video cameras etc by Philip Johnston.",
+      "followers": {
+        "twitter": 298
+      },
+      "image_url": "https://i1.feedspot.com/4584109.jpg"
+    },
+    {
+      "title": "Canny Cameras",
+      "feed_url": "https://austerityphoto.co.uk/feed/",
+      "website_url": "https://austerityphoto.co.uk/",
+      "description": "Hi! I'm Alan Duncan. I have a growing love of the often neglected Point & Shoot cameras that we all used in the '70s and '80s before the arrival of auto-focus and later digital. I don't claim to be the next Vivien Maier and this blog ain't about me lording my shots but hopefully will be of some help to folk who wanna know more about some of the cameras, film etc I use.",
+      "followers": {
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/4912171.jpg?t=1620200856"
+    },
+    {
+      "title": "Amateur Photographer",
+      "feed_url": "https://amateurphotographer.com/feed/",
+      "website_url": "https://amateurphotographer.com/",
+      "description": "Amateur Photographer magazine is featuring photography news, camera reviews, lens reviews, equipment guides, photography forum and buying guides.",
+      "followers": {
+        "facebook": 84500,
+        "twitter": 393200,
+        "instagram": 42600
+      },
+      "image_url": "https://i1.feedspot.com/4108698.jpg?t=1620200836"
+    },
+    {
+      "title": "Park Cameras Blog",
+      "feed_url": "https://blog.parkcameras.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.parkcameras.com/blog/",
+      "description": "Learn photography with our guides, tips & tricks, find out about the latest camera releases, and read articles from your favourite photographers.",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4912162.jpg?t=1620200825"
+    },
+    {
+      "title": "360\u00b0 Camera Reviews",
+      "feed_url": "https://www.threesixtycameras.com/",
+      "description": "The home of 360 degree cameras online. Read the latest 360\u00b0 camera reviews and find out when new 360 cameras are being released.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 375,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4912218.jpg?t=1620200840"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>GG - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Krebs on Security" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com" category="Recommendations"/>
+    <outline type="rss" text="James Hoffmann" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCMb0O2CdPBNi-QqPk5T3gsQ" htmlUrl="https://www.youtube.com/channel/UCMb0O2CdPBNi-QqPk5T3gsQ" category="Recommendations"/>
+    <outline type="rss" text="The Gospel Coalition" xmlUrl="https://www.thegospelcoalition.org/feed/" htmlUrl="https://www.thegospelcoalition.org/" category="Recommendations"/>
+    <outline type="rss" text="Andrew Kelley" xmlUrl="https://andrewkelley.me/rss.xml" htmlUrl="https://andrewkelley.me/" category="Recommendations"/>
+    <outline type="rss" text="Hundred Rabbits" xmlUrl="https://100r.co/links/rss.xml" htmlUrl="https://100r.co" category="Recommendations"/>
+    <outline type="rss" text="Stephen Wolfram Writings" xmlUrl="https://writings.stephenwolfram.com/feed/" htmlUrl="https://writings.stephenwolfram.com" category="Recommendations"/>
+    <outline type="rss" text="BibleProject" xmlUrl="https://feeds.simplecast.com/3NVmUWZO" htmlUrl="http://www.bibleproject.com" category="Recommendations"/>
+    <outline type="rss" text="fasterthanli.me" xmlUrl="https://fasterthanli.me/index.xml" htmlUrl="https://fasterthanli.me" category="Recommendations"/>
+    <outline type="rss" text="Cory Doctorow" xmlUrl="https://pluralistic.net/feed/" htmlUrl="https://pluralistic.net" category="Recommendations"/>
+    <outline type="rss" text="Moxie Marlinspike" xmlUrl="https://moxie.org/feed.xml" htmlUrl="https://moxie.org/" category="Recommendations"/>
+    <outline type="rss" text="Paris Marx" xmlUrl="https://www.disconnect.blog/feed" htmlUrl="https://www.disconnect.blog" category="Recommendations"/>
+    <outline type="rss" text="Ludicity" xmlUrl="https://ludic.mataroa.blog/rss/" htmlUrl="https://ludic.mataroa.blog" category="Recommendations"/>
+    <outline type="rss" text="Low-tech magazine" xmlUrl="https://solar.lowtechmagazine.com/posts/index.xml" htmlUrl="https://solar.lowtechmagazine.com/posts/" category="Recommendations"/>
+    <outline type="rss" text="Dr. Joel Beeke" xmlUrl="https://joelbeeke.org/feed/" htmlUrl="https://joelbeeke.org/" category="Recommendations"/>
+    <outline type="rss" text="Ed Zitron" xmlUrl="https://www.wheresyoured.at/rss/" htmlUrl="https://www.wheresyoured.at/" category="Recommendations"/>
+    <outline type="rss" text="Molly White" xmlUrl="https://www.mollywhite.net/feed/feed.xml" htmlUrl="https://mollywhite.net/feed" category="Recommendations"/>
+    <outline type="rss" text="karpathy" xmlUrl="https://karpathy.bearblog.dev/feed/?type=rss" htmlUrl="https://karpathy.bearblog.dev" category="Recommendations"/>
+    <outline type="rss" text="Dan Alcantara" xmlUrl="https://danalcantara.substack.com/feed" htmlUrl="https://danalcantara.substack.com/" category="Recommendations"/>
+    <outline type="rss" text="Lydia McGrew" xmlUrl="https://lydiaswebpage.blogspot.com/feeds/posts/default" htmlUrl="https://lydiaswebpage.blogspot.com/" category="Recommendations"/>
+    <outline type="rss" text="bt" xmlUrl="http://btxx.org/index.rss" htmlUrl="https://btxx.org" category="Recommendations"/>
+    <outline type="rss" text="Bartosz Ciechanowski" xmlUrl="https://ciechanow.ski/atom.xml" htmlUrl="https://ciechanow.ski/" category="Recommendations"/>
+    <outline type="rss" text="Sam.Who" xmlUrl="https://samwho.dev/rss.xml" htmlUrl="https://samwho.dev/" category="Recommendations"/>
+  </body>
+</opml>

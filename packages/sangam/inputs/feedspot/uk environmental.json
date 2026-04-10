@@ -1,0 +1,84 @@
+{
+  "category": "UK Environmental",
+  "source_url": "https://rss.feedspot.com/uk_environmental_rss_feeds",
+  "feeds": [
+    {
+      "title": "Environment Journal",
+      "feed_url": "https://environmentjournal.online/feed/",
+      "website_url": "https://environmentjournal.online/",
+      "description": "Environment Journal consists of News, analysis and features on environmental management issues.",
+      "followers": {
+        "facebook": 785,
+        "twitter": 2600,
+        "instagram": 811
+      },
+      "image_url": "https://i1.feedspot.com/4700419.jpg?t=1622034546"
+    },
+    {
+      "title": "Envirotec Magazine",
+      "feed_url": "https://envirotecmagazine.com/feed/",
+      "website_url": "https://envirotecmagazine.com/",
+      "description": "Envirotec magazine provides the most comprehensive coverage of the UK environmental technology and services industry and delivers comprehensive news and current issues examined in informative features, profiles and interviews keeping its readers informed and up-to-date.",
+      "followers": {
+        "facebook": 550,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4700758.jpg?t=1622035667"
+    },
+    {
+      "title": "The Independent \u00bb Climate Change",
+      "feed_url": "https://www.independent.co.uk/climate-change/news/rss",
+      "website_url": "https://www.independent.co.uk/climate-change/news",
+      "description": "Check out the latest news, impacts, facts, and the latest climate change updates. The Independent is an international newspaper, published in serval languages. It publishes news from politics, sports, travel, lifestyle, culture, and more.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/1038771.jpg?t=1606210249"
+    },
+    {
+      "title": "National Association for Environmental Education Blog",
+      "feed_url": "https://naee.org.uk/feed/",
+      "website_url": "https://naee.org.uk/blog/",
+      "description": "National Association for Environmental Education, NAEE has have been promoting all forms of environmental education so that together we can understand and act on the need to live more sustainably in order to protect the future of our planet.",
+      "followers": {
+        "facebook": 400,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4906071.jpg"
+    },
+    {
+      "title": "Ellendale Environmental Blog",
+      "feed_url": "https://www.ellendale-environmental.co.uk/blog?format=RSS",
+      "website_url": "https://www.ellendale-environmental.co.uk/blog/",
+      "description": "Ellendale Environmental Limited was established in 2010 to focus on provision of specialist ecological services to both the public and private sectors and provides high level ecological support and assistance on a wide breadth of projects covering all sectors.",
+      "followers": {
+        "facebook": 365,
+        "twitter": 234
+      },
+      "image_url": "https://i1.feedspot.com/4906044.jpg?t=1613714291"
+    },
+    {
+      "title": "Isonomia",
+      "feed_url": "https://www.isonomia.co.uk/feed/",
+      "website_url": "https://www.isonomia.co.uk/category/recycling/",
+      "description": "Follow us to keep up with independent ideas from environment experts.",
+      "followers": {
+        "facebook": 84,
+        "twitter": 842
+      },
+      "image_url": "https://i1.feedspot.com/4607390.jpg?t=1604136685"
+    },
+    {
+      "title": "GreenAlliance",
+      "feed_url": "https://green-alliance.org.uk/rss.xml",
+      "website_url": "https://green-alliance.org.uk/",
+      "description": "Green Alliance was launched in 1979 with the aim to ensure that the political priorities of the United Kingdom are determined within an ecological perspective. It is now the leading UK think tank working on environmental policy and politics.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 40600
+      },
+      "image_url": "https://i1.feedspot.com/4906060.jpg?t=1613714287"
+    }
+  ]
+}

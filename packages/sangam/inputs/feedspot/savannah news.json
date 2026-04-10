@@ -1,0 +1,75 @@
+{
+  "category": "Savannah News",
+  "source_url": "https://rss.feedspot.com/savannah_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WSAV News 3",
+      "feed_url": "https://www.wsav.com/feed/",
+      "website_url": "https://www.wsav.com/",
+      "description": "WSAV is the NBC & CW affiliate for Coastal Empire and the Lowcountry. It provides the local latest news, weather and sports report and much more.",
+      "followers": {
+        "facebook": 386400,
+        "twitter": 70200,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5135319.jpg?t=1680094960"
+    },
+    {
+      "title": "The Current",
+      "feed_url": "https://thecurrentga.org/feed/",
+      "website_url": "https://thecurrentga.org/",
+      "description": "Get in-depth news and information for Coastal Georgia delivered to your feed. The Current is an inclusive nonprofit, non-partisan news organization providing watchdog journalism for Savannah, Brunswick, and Coastal Georgia communities.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1300,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5507818.jpg?t=1676376788"
+    },
+    {
+      "title": "Connect Savannah",
+      "feed_url": "https://www.connectsavannah.com/savannah/Rss.xml",
+      "website_url": "https://www.connectsavannah.com/",
+      "description": "Connect Savannah is a leading alternative weekly newspaper and website connecting Savannah and Georgian Metropolitan areas. We provide comprehensive coverage of local arts and entertainment, news and issues, pertinent social and political commentary, and extensive event and happenings listings",
+      "followers": {
+        "facebook": 37700,
+        "twitter": 29300,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4902445.jpg?t=1676376932"
+    },
+    {
+      "title": "WJCL News",
+      "feed_url": "https://www.wjcl.com/topstories-rss",
+      "website_url": "https://www.wjcl.com/",
+      "description": "Get the latest Savannah news. WJCL gives you online, anytime access to the biggest Georgia news and Lowcountry weather of the day. Wjcl.com and WJCL are the ABC-affiliated website and television station respectively for Southeast Georgia and South Carolina's Lowcountry bringing quality local coverage to viewers.",
+      "followers": {
+        "facebook": 257899,
+        "twitter": 33900
+      },
+      "image_url": "https://i1.feedspot.com/5135322.jpg?t=1676376898"
+    },
+    {
+      "title": "Savannah Morning News",
+      "feed_url": "https://www.savannahnow.com/news/",
+      "website_url": "https://www.savannahnow.com/news/",
+      "description": "Savannah Now is the leading source of information for Coastal Georgia delivering up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 109800,
+        "twitter": 56800,
+        "instagram": 19600
+      },
+      "image_url": "https://i1.feedspot.com/5130546.jpg?t=1586247705"
+    },
+    {
+      "title": "The Savannah Tribune",
+      "feed_url": "https://www.savannahtribune.com/",
+      "website_url": "https://www.savannahtribune.com/",
+      "description": "Founded by John H. Deveaux, The Savannah Tribune chronicles the contemporary life and activities of African- Americans in the Savannah and coastal Georgia area.",
+      "followers": {
+        "twitter": 691
+      },
+      "image_url": "https://i1.feedspot.com/5135325.jpg?t=1586254772"
+    }
+  ]
+}

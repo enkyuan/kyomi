@@ -1,0 +1,146 @@
+{
+  "category": "The New Indian Express",
+  "source_url": "https://rss.feedspot.com/the_new_indian_express_rss_feeds",
+  "feeds": [
+    {
+      "title": "The New Indian Express",
+      "feed_url": "https://prod-qt-images.s3.amazonaws.com/production/newindianexpress/feed.xml",
+      "website_url": "https://www.newindianexpress.com/",
+      "description": "Today's News Headlines, Explore the latest news, opinions, and features from New Indian Express. Stay informed with breaking news, in-depth coverage, and expert perspectives on various topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8536028.jpg"
+    },
+    {
+      "title": "The New Indian Express \u00bb Nation",
+      "feed_url": "https://www.newindianexpress.com/Nation/rssfeed/?id=170&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/nation",
+      "description": "You may obtain in-depth examination and insights into the newest incidents in India, as well as extensive and up-to-date coverage of national news, politics, and current affairs.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594498.jpg?t=1686316101"
+    },
+    {
+      "title": "The New Indian Express \u00bb World",
+      "feed_url": "https://www.newindianexpress.com/World/rssfeed/?id=171&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/world",
+      "description": "Read thorough coverage of international news, bringing you the most recent developments, stories, and viewpoints from across the world.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594505.jpg?t=1686315991"
+    },
+    {
+      "title": "The New Indian Express \u00bb Opinion",
+      "feed_url": "https://www.newindianexpress.com/Opinions/rssfeed/?id=337&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/Opinions",
+      "description": "This section of the website offers an opportunity for thought-provoking opinions, expert analysis, and incisive op-eds, as well as a varied spectrum of opinion articles on current events, politics, social issues, and more.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594504.jpg?t=1686316632"
+    },
+    {
+      "title": "The New Indian Express \u00bb Business",
+      "feed_url": "https://www.newindianexpress.com/Business/rssfeed/?id=186&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/business",
+      "description": "Get all the latest Business news headlines with updates on finance, stock market, Mutual Funds, IPO, sensex, BSE/Nifty & share market news at New India Express.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594497.jpg?t=1686315914"
+    },
+    {
+      "title": "The New Indian Express \u00bb Sports",
+      "feed_url": "https://www.newindianexpress.com/Sport/rssfeed/?id=187&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/sport",
+      "description": "Get the Latest Sports News, Stats, Scores And Analysis published by The New Indian Express.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594495.jpg?t=1686315898"
+    },
+    {
+      "title": "The New Indian Express \u00bb Good News",
+      "feed_url": "https://www.newindianexpress.com/Good-News/rssfeed/?id=398&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/good-news",
+      "description": "Read all the positive news about India. Social development, art, travel, environment, women empowerment, NGOs, education much more.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594496.jpg?t=1686315902"
+    },
+    {
+      "title": "The New Indian Express \u00bb Tech",
+      "feed_url": "https://www.newindianexpress.com/Lifestyle/Tech/rssfeed/?id=212&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/lifestyle/tech",
+      "description": "Find latest technology news and reviews on mobile phones, tablets, cameras and all other electronic gadgets at New Indian Express.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594499.jpg?t=1686315934"
+    },
+    {
+      "title": "The New Indian Express \u00bb Health",
+      "feed_url": "https://www.newindianexpress.com/Lifestyle/Health/rssfeed/?id=213&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/lifestyle/health",
+      "description": "Get updated with our latest health articles, health care tips for men, women and children New Indian Express.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594502.jpg?t=1686315960"
+    },
+    {
+      "title": "The New Indian Express \u00bb Travel",
+      "feed_url": "https://www.newindianexpress.com/Lifestyle/Travel/rssfeed/?id=214&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/lifestyle/travel",
+      "description": "Stay updated with our latest travel news from India and abroad. Get indulged in travel places with our travel experience news and easy tips for travelling.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594501.jpg?t=1686315951"
+    },
+    {
+      "title": "The New Indian Express \u00bb Food",
+      "feed_url": "https://www.newindianexpress.com/Lifestyle/Food/rssfeed/?id=215&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/lifestyle/food",
+      "description": "Get updated with latest food news from India and abroad at New Indian Express. This includes tips for healthy living, easy recipe making steps.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594503.jpg?t=1686315974"
+    },
+    {
+      "title": "New Scientist \u00bb Books",
+      "feed_url": "https://www.newindianexpress.com/Lifestyle/Books/rssfeed/?id=216&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/lifestyle/books",
+      "description": "Get News and reviews of books, authors, book releases, fiction, non-fiction, Indian writers in English, regional language literature, children's books.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594500.jpg?t=1686315937"
+    },
+    {
+      "title": "The New Indian Express \u00bb Spirituality",
+      "feed_url": "https://www.newindianexpress.com/Lifestyle/Spirituality/rssfeed/?id=217&getXmlFeed=true",
+      "website_url": "https://www.newindianexpress.com/lifestyle/spirituality",
+      "description": "Daily news on spirituality from India and abroad. Articles on religion, ethics and conversations about spirituality from around the globe.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 494400
+      },
+      "image_url": "https://i1.feedspot.com/5594506.jpg?t=1686316001"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "category": "Kroger",
+  "source_url": "https://rss.feedspot.com/kroger_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kroger Krazy",
+      "feed_url": "https://www.krogerkrazy.com/feed/",
+      "website_url": "https://www.krogerkrazy.com/posts/",
+      "description": "Kroger Krazy is committed to finding and sharing the best Kroger deals to save you money on the things your family needs most! Follow this blog that shares coupon matchups, Kroger finds and general money-saving deals in a very detail-oriented manner.",
+      "followers": {
+        "facebook": 598400,
+        "twitter": 8900,
+        "instagram": 69000
+      },
+      "image_url": "https://i1.feedspot.com/4926083.jpg?t=1620980345"
+    },
+    {
+      "title": "I Heart Kroger",
+      "feed_url": "http://feeds.feedblitz.com/IHeartKroger",
+      "website_url": "https://www.iheartkroger.com/",
+      "description": "Michelle is a stay-at-home-mom. She loves to save money and try to get the most for the least amount of money. Follow this blog to find all the best Kroger deals and coupons.",
+      "followers": {
+        "facebook": 43600,
+        "twitter": 561
+      },
+      "image_url": "https://i1.feedspot.com/695917.jpg?t=1620980349"
+    },
+    {
+      "title": "Supermarket News \u00bb Kroger",
+      "feed_url": "https://www.supermarketnews.com/keyword/kroger/",
+      "website_url": "https://www.supermarketnews.com/keyword/kroger/",
+      "description": "The latest news about the largest conventional food retailer in the U.S.: The Kroger Co. Supermarket News is the news source food-retail professionals count on for competitive intelligence, news, and information to make smart business decisions. Connect to industry insiders and gain access to primary market information with our coverage.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 23900
+      },
+      "image_url": "https://i1.feedspot.com/5501396.jpg?t=1675156762"
+    },
+    {
+      "title": "For the Mommas \u00bb Kroger",
+      "feed_url": "https://forthemommas.com/category/store-deals/kroger/feed",
+      "website_url": "https://forthemommas.com/category/store-deals/kroger",
+      "description": "Forthemommas.com takes just being a little frugal to living fabulous. You can find secrets to the good life on a cheap-yet-chic shoestring. FTM is your helping hand with tips for what's on sale, where to go get it, online deals, and freebies.",
+      "followers": {
+        "facebook": 115300,
+        "twitter": 7200,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4926475.jpg?t=1620980359"
+    },
+    {
+      "title": "MyLitter \u00bb Kroger",
+      "feed_url": "http://mylitter.com/category/kroger/feed/",
+      "website_url": "https://www.foodsafetynews.com/tag/kroger/",
+      "description": "Mylitter.com is a money-saving blog where you can find the best deals to your local stores. This blog is a way to share recipes, family stories and an occasional great deal that the author found at the store using coupons.",
+      "followers": {
+        "facebook": 84000
+      },
+      "image_url": "https://i1.feedspot.com/4926464.jpg?t=1620980363"
+    }
+  ]
+}

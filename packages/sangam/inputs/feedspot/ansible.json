@@ -1,0 +1,70 @@
+{
+  "category": "Ansible",
+  "source_url": "https://rss.feedspot.com/ansible_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cisco Blogs \u00bb Ansible",
+      "feed_url": "https://blogs.cisco.com/tag/ansible/feed",
+      "website_url": "https://blogs.cisco.com/tag/ansible",
+      "description": "Read posts and blogs here about ansible automation to take your skills to the next level. Cisco is a platform that enables people to make powerful connections whether in business, education, philanthropy, or creativity. We are specialists in networking, wireless, security, unified communication, cloud, collaboration, data center, virtualization, and unified computing systems.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 113800,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/5426829.jpg?t=1659340974"
+    },
+    {
+      "title": "Red Hat Blog \u00bb Ansible Automation",
+      "feed_url": "https://www.redhat.com/en/rss/blog/channel/red-hat-ansible-automation",
+      "website_url": "https://www.redhat.com/en/blog/channel/red-hat-ansible-automation",
+      "description": "The latest posts on Red Hat Ansible Automation cover articles on ansible platform, infrastructure, security, hybrid cloud, and much more. Red Hat is a leading provider of enterprise open source solution including Linux, cloud, container, and Kubernetes.",
+      "followers": {
+        "facebook": 560400,
+        "twitter": 297700
+      },
+      "image_url": "https://i1.feedspot.com/5426825.jpg?t=1659338738"
+    },
+    {
+      "title": "Jeff Geerling Blog",
+      "feed_url": "https://www.jeffgeerling.com/blog.xml",
+      "website_url": "https://www.jeffgeerling.com/blog",
+      "description": "Hello, I am Jeff Geerling, welcome to my blogs. I am a software developer and author. I am specialized in website and application scalability and performance, front-end design, and plenty of buzzwords and acronyms. I'm deeply involved in open source, especially in the Ansible, Linux, Raspberry Pi, and Drupal communities. By reading my blogs you will get to know all the latest information related to technology and software.",
+      "followers": {
+        "twitter": 47500
+      },
+      "image_url": "https://i1.feedspot.com/5048445.jpg?t=1616069615"
+    },
+    {
+      "title": "Ron Ekins \u00bb Ansible",
+      "feed_url": "https://ronekins.com/tag/ansible/feed/",
+      "website_url": "https://ronekins.com/tag/ansible/",
+      "description": "Find articles on Ron Ekins's website on these topics ansible, containers, Delphix, LINUX, MySQL, oracle ace, oracle apex, and many more. He is an oracle ACE director, TOGAF certified enterprise architect, oracle and azure cloud certified architect, and a regular presenter at technology conferences across the globe. He is experienced in the design, development, and delivery of large enterprise solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5426827.jpg?t=1659531703"
+    },
+    {
+      "title": "Knoldus Blog \u00bb Ansible",
+      "feed_url": "https://blog.knoldus.com/tag/ansible/feed/",
+      "website_url": "https://blog.knoldus.com/tag/ansible/",
+      "description": "Knoldus Blogs provides insights and perspectives to keep you updated about ansible automation technology, ansible-playbook, configuration management, and more. Knoldus is a software development company and it has capabilities in building high-performance millisecond response real-time applications that deposit data into high-speed data mesh. Our mission is to help businesses succeed with technology.",
+      "followers": {
+        "facebook": 960,
+        "twitter": 814,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5426824.jpg?t=1659346356"
+    },
+    {
+      "title": "NetApp IT \u00bb Ansible",
+      "feed_url": "https://netappit.com/news/category/ansible/feed/",
+      "website_url": "https://netappit.com/news/category/ansible/",
+      "description": "NetApp is providing tech solutions on various tech topics including ansible automation. The NetApp on NetApp team dives into NetApp's internal IT operations to shine a light on how we use NetApp products. We are specialists in network storage, cloud computing, storage efficiency, Information management, data storage, and hybrid cloud.",
+      "followers": {
+        "twitter": 1500,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/5426833.jpg?t=1659338116"
+    }
+  ]
+}

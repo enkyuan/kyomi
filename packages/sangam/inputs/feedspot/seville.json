@@ -1,0 +1,357 @@
+{
+  "category": "Seville",
+  "source_url": "https://rss.feedspot.com/seville_rss_feeds",
+  "feeds": [
+    {
+      "title": "Diario de Sevilla",
+      "feed_url": "https://www.diariodesevilla.es/rss/",
+      "website_url": "https://www.diariodesevilla.es/",
+      "description": "Journal of Seville. News from Seville and Andalusia. All the news of Seville, Andalusia, Events in Seville, last minute of Betis and Seville, Holy Week, April Fair, Health, Local Information and leisure of Seville.",
+      "followers": {
+        "facebook": 199100,
+        "twitter": 251900,
+        "instagram": 171700
+      },
+      "image_url": "https://i1.feedspot.com/4740264.jpg?t=1643696448"
+    },
+    {
+      "title": "Sevilla Actualidad",
+      "feed_url": "https://www.sevillaactualidad.com/feed/",
+      "website_url": "https://www.sevillaactualidad.com/",
+      "description": "Sevilla Actualidad is a Digital communication medium of Seville and its province. News from Seville, Province and Andalusia. Digital newspaper of Seville, Culture and Sport. Seville News. counting on you",
+      "followers": {
+        "facebook": 87100,
+        "twitter": 118600,
+        "instagram": 17300
+      },
+      "image_url": "https://i1.feedspot.com/5366604.jpg?t=1643607884"
+    },
+    {
+      "title": "Urban Explorers",
+      "feed_url": "https://www.urbanexplorers.es/feed/",
+      "website_url": "https://www.urbanexplorers.es/",
+      "description": "Urban Explorers in the Sevillian magazine on cultural and gastronomic tourism, written by Txema Mar\u00edn and Sara P\u00e9rez. Know everything you need about Sevilla including gastronomy, news, tourist places and more on the site.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5366599.jpg?t=1643607850"
+    },
+    {
+      "title": "Archidi\u00f3cesis de Sevilla",
+      "feed_url": "https://www.archisevilla.org/categoria/noticias/feed/",
+      "website_url": "https://www.archisevilla.org/categoria/noticias/",
+      "description": "All the information referred to the Church in Seville (Spain). Media Delegation of the Archdiocese of Seville.",
+      "followers": {
+        "facebook": 21600,
+        "twitter": 29200,
+        "instagram": 14800
+      },
+      "image_url": "https://i1.feedspot.com/5366603.jpg?t=1643607874"
+    },
+    {
+      "title": "Ayuntamiento de Sevilla",
+      "feed_url": "https://www.sevilla.org/noticias/noticias/RSS",
+      "website_url": "https://www.sevilla.org/",
+      "description": "Official website of the Seville City Council. Useful information for citizens, News, declarations by council and more!",
+      "followers": {
+        "facebook": 108300,
+        "twitter": 223300,
+        "instagram": 126700
+      },
+      "image_url": "https://i1.feedspot.com/5366580.jpg?t=1655101403"
+    },
+    {
+      "title": "Autismo Sevilla Blog",
+      "feed_url": "https://www.autismosevilla.org/blog/feed/",
+      "website_url": "https://www.autismosevilla.org/blog/",
+      "description": "Association of Parents of people with Autism Spectrum Disorder. We strive To improve the quality of life of people with ASD and their families throughout the life cycle, providing specialized and individualized services and support, raising awareness in society and respecting their rights for real and active inclusion.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 7600,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5366585.jpg?t=1643607766"
+    },
+    {
+      "title": "Seville Traveller",
+      "feed_url": "https://www.seville-traveller.com/feed/",
+      "website_url": "https://www.seville-traveller.com/",
+      "description": "This Seville travel guide helps you plan the best trip ever. Find the best things to do in the city and learn from many of my insider tips!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5366592.jpg?t=1643695441"
+    },
+    {
+      "title": "Sevilla Factory",
+      "feed_url": "https://www.sevillafactory.com/feed/",
+      "website_url": "https://www.sevillafactory.com/noticias-sevillafactory/",
+      "description": "Sevilla Factory Dos Hermanas was opened in 1999 as the first outlet in Andalusia. It brings together national and international firms with discounts that can reach 70%. Check the news that the Sevilla Factory puts at your disposal and enjoy the best prices in the oldest outlet in Andalusia.",
+      "followers": {
+        "facebook": 83000,
+        "instagram": 20600
+      },
+      "image_url": "https://i1.feedspot.com/5366581.jpg?t=1643607748"
+    },
+    {
+      "title": "Olive Press \u00bb Seville",
+      "feed_url": "https://www.theolivepress.es/spain-news/category/andalucia-news/sevilla/feed/",
+      "website_url": "https://www.theolivepress.es/spain-news/category/andalucia-news/sevilla/",
+      "description": "The Olive Press is the English language newspaper for Andalucia. A campaigning, community newspaper, the Olive Press represents the huge and growing expatriate community in southern Spain. Olive Press offers you the opportunity to discuss topics that the Seville is talking about including sports, politics, entertainment, economy and more!",
+      "followers": {
+        "facebook": 49000,
+        "twitter": 10100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5366597.jpg?t=1643607837"
+    },
+    {
+      "title": "Blog de Plazas en Ayuntamientos \u00bb Seville",
+      "feed_url": "https://www.adams.es/blogs/clocales/category/02-convocatorias/sevilla/feed/",
+      "website_url": "https://www.adams.es/blogs/clocales/category/02-convocatorias/sevilla/",
+      "description": "Welcome to the ADAMS Blog about vacancies in Town Halls. In it you will find information related to Public Employment Offers and Announcements for selective tests, regularly published in the Official Gazettes, to fill vacancies in City Councils, Provincial Councils, Councils and Island Councils. Carry out your search in the territorial area that interests you.",
+      "followers": {
+        "facebook": 143500,
+        "twitter": 12000,
+        "instagram": 46400
+      },
+      "image_url": "https://i1.feedspot.com/5366608.jpg?t=1643693963"
+    },
+    {
+      "title": "MLS Alianza Blog",
+      "feed_url": "https://alianzasevilla.com/feed/",
+      "website_url": "https://alianzasevilla.com/category/blog/",
+      "description": "ALIANZA Sevilla is the Association of Real Estate Agents of Seville. It represents approximately 30% of the real estate sector in Seville and its metropolitan area. Real estate blog of the MLS Alianza Sevilla where you will find all the information about the real estate market in Seville.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 708,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5366575.jpg?t=1643607715"
+    },
+    {
+      "title": "Institute of Mathematics Blog",
+      "feed_url": "https://institucional.us.es/blogimus/feed/",
+      "website_url": "https://institucional.us.es/blogimus/en/bienvenidos-al-blog-del-imus-english/",
+      "description": "This is the Blog of the Institute of Mathematics of the University of Seville. Get articles on mathematics, historical aspects of different mathematical concepts, theory and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5366584.jpg?t=1643696119"
+    },
+    {
+      "title": "Fhyncaser Real Estate Blog",
+      "feed_url": "https://fhyncaser.es/feed/",
+      "website_url": "https://fhyncaser.es/blog-inmobiliario-de-sevilla-fhyncaser/",
+      "description": "FhynCaser, your trusted real estate agency in Seville. Seville real estate blog, where we will help and advise you on everything related to buying and selling homes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5366607.jpg?t=1655108054"
+    },
+    {
+      "title": "JaviSFC.com",
+      "feed_url": "https://feeds.feedburner.com/Javisfc",
+      "website_url": "https://www.javisfc.com/",
+      "description": "Welcome to JaviSFC.com. Sevillista Blog since May 2007. Awarded as the Best News and Sports Blog of Seville 2020. All the news in the best Sevilla FC blog on the internet.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5366571.jpg?t=1643607678"
+    },
+    {
+      "title": "Calasancias Sevilla Blog",
+      "feed_url": "https://www.calasancias-sevilla.es/feed/",
+      "website_url": "https://www.calasancias-sevilla.es/blog/",
+      "description": "Bilingual Concerted Center , which provides an educational response accompanying children and young people, in the stages of Early Childhood Education, Primary Education and Secondary Education. Attached for the completion of Baccalaureate to IES Herrera and IES Heli\u00f3polis. Get the latest news from the institute in the blog.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 119,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5366590.jpg?t=1643607795"
+    },
+    {
+      "title": "Espacio Mobile ChN Blog",
+      "feed_url": "https://espaciomovilieschn.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://espaciomovilieschn.blogspot.com/",
+      "description": "Equality Plan of the IES Chaves Nogales in Seville. Find articles on news, events and views on equality.",
+      "followers": {
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/5366588.jpg?t=1643654987"
+    },
+    {
+      "title": "Casa del Poeta Blog",
+      "feed_url": "https://casadelpoeta.es/en/feed/",
+      "website_url": "https://casadelpoeta.es/en/blog-sevilla-encanto/",
+      "description": "Casa del Poeta is a Boutique Hotel located in the Barrio de Santa Cruz, in the heart of Seville, a charming hotel with a Sevillian patio. Get news from the hotel on its offered services, about Seville, places to visit and travel guides",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5366577.jpg?t=1643607723"
+    },
+    {
+      "title": "Seville CEP Blog",
+      "feed_url": "https://blog.cepsevilla.es/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.cepsevilla.es/",
+      "description": "Teacher Training Center. Ministry of Education and Sports of the Junta de Andaluc\u00eda. Follow all the information about the teacher training activities that we carry out.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5366591.jpg?t=1643607801"
+    },
+    {
+      "title": "La Vida No Es Solo Trabajar \u00bb Sevilla",
+      "feed_url": "https://lavidanoessolotrabajar.com/category/viajes/espana/andalucia/sevilla/feed/",
+      "website_url": "https://lavidanoessolotrabajar.com/category/viajes/espana/andalucia/sevilla/",
+      "description": "Travel blog from Barcelona to the world. Explore this section for travel tips and guides of Saville, tourist places and more!",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 101500,
+        "instagram": 17400
+      },
+      "image_url": "https://i1.feedspot.com/5366593.jpg?t=1643607811"
+    },
+    {
+      "title": "Portalparados \u00bb Seville",
+      "feed_url": "https://www.portalparados.es/tag/trabajo-sevilla/feed/",
+      "website_url": "https://www.portalparados.es/tag/trabajo-sevilla/",
+      "description": "Useful information website for those looking for work on the internet. You will find opportunities for employment, training, HR, leisure and everything that can help you. News about work, public employment, oppositions, training courses, freelancers, entrepreneurs and unemployed.",
+      "followers": {
+        "facebook": 70900,
+        "twitter": 75700
+      },
+      "image_url": "https://i1.feedspot.com/5366602.jpg?t=1643607867"
+    },
+    {
+      "title": "Obra Nueva en Sevilla Blog",
+      "feed_url": "https://obranuevaensevilla.es/feed/",
+      "website_url": "https://obranuevaensevilla.es/blog-obra-nueva-en-sevilla/",
+      "description": "Obra Nueva en Sevilla is the real estate portal specialized in newly built homes in Seville. Find out about the latest developments in the real estate world, urban planning, news of interest & related articles.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5366606.jpg?t=1643607895"
+    },
+    {
+      "title": "Waldorf Sevilla Blog",
+      "feed_url": "https://www.waldorfsevilla.org/feed/",
+      "website_url": "https://www.waldorfsevilla.org/category/blog/",
+      "description": "In 2012, three families from the city of Seville came together to create the Sevilla Girasol Waldorf Association. The main objective was to promote the creation and growth of the first Waldof/Steiner school in the province of Seville. Get all information and news about the school, activities held and more in the blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5366586.jpg?t=1643607773"
+    },
+    {
+      "title": "Mar Mart\u00ednez Blog",
+      "feed_url": "https://www.marmartinez.es/category/blog/feed/",
+      "website_url": "https://www.marmartinez.es/category/blog/",
+      "description": "Hi, I'm Mar Martinez. For 25 years I have dedicated myself to professional makeup in Seville. Behind all my beauty advice is my ultimate goal: to make you feel even more beautiful. Blog about beauty and makeup tips and tricks to get the best out of yourself. We talk about brands, techniques and everything related to makeup",
+      "followers": {
+        "twitter": 687,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5366598.jpg?t=1643694662"
+    },
+    {
+      "title": "Scribbler in Seville",
+      "feed_url": "https://scribblerinseville.com/feed/",
+      "website_url": "https://scribblerinseville.com/",
+      "description": "Living in Seville, with all its foibles; exploring its hidden corners of the city, and surrounding province, and finding out what makes it tick.",
+      "followers": {
+        "facebook": 771,
+        "twitter": 5400,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4787500.jpg?t=1609406560"
+    },
+    {
+      "title": "Seville Unique Experiences Blog",
+      "feed_url": "https://sevilleuniqueexperiences.com/feed/",
+      "website_url": "https://sevilleuniqueexperiences.com/blog/",
+      "description": "Guided Tours",
+      "followers": {
+        "facebook": 632
+      },
+      "image_url": "https://i1.feedspot.com/5763051.jpg?t=1706514958"
+    },
+    {
+      "title": "Sevilla FC",
+      "feed_url": "https://sevillafc.es/en",
+      "website_url": "https://sevillafc.es/en",
+      "description": "Sevilla FC is the oldest football club in Seville, founded in the year 1890. Sevilla FC has been the most successful club in Andalusia, with 73 seasons in the First Division and 13 national and international titles. Covers the official news and updates of Sevilla Football club.",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 1200000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/5336966.jpg?t=1635311597"
+    },
+    {
+      "title": "Housin Real Estate Blog",
+      "feed_url": "https://housin-inmobiliaria.es/feed/",
+      "website_url": "https://housin-inmobiliaria.es/blog/",
+      "description": "housin real estate is a real estate agency in Seville. We have 2 offices in Seville in Los Remedios and El Porvenir, we also work in Triana, Nervi\u00f3n, Los Bermejales and the Center of Seville. Get Tips to sell or buy apartments and houses in Seville, important information related to the purchase and sale of homes in Seville.",
+      "followers": {
+        "facebook": 7100,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5366601.jpg?t=1643607863"
+    },
+    {
+      "title": "Eldiario \u00bb Sevilla",
+      "feed_url": "https://www.eldiario.es/rss/sevilla/",
+      "website_url": "https://www.eldiario.es/sevilla/",
+      "description": "elDiario.es is a digital media outlet founded in 2012 by a group of journalists who have not given up, despite the crisis, despite pressure from power, despite the press's lack of credibility. We believe in journalism, despite everything. ElDiario.es brings you the Latest News from Seville. Get live news and latest stories from Politics, Business, Technology, Sports and more.",
+      "followers": {
+        "facebook": 729600,
+        "twitter": 1500000,
+        "instagram": 731200
+      },
+      "image_url": "https://i1.feedspot.com/5366595.jpg?t=1643607821"
+    },
+    {
+      "title": "Hotel Posada del Lucero Blog",
+      "feed_url": "https://www.hotelposadadellucero.es/en/blog/feed/",
+      "website_url": "https://www.hotelposadadellucero.es/es/blog/",
+      "description": "The Posada del Lucero is the last exponent of the inns, inns and inns that existed in Seville from the XVI century. Enter and you will discover a fascinating place! This elegant hotel has been scrupulously restored respecting all its values and its essence, managing to make this romantic Posada an establishment in perfect harmony with the tradition and modernity of the most advanced technology. Explore our traveling guide for the city of Sevilla, articles bequeathing our services and more!",
+      "followers": {
+        "facebook": 626,
+        "twitter": 458,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5366570.jpg?t=1643607668"
+    },
+    {
+      "title": "Hotel Fernando III Blog",
+      "feed_url": "https://www.hotelfernandoiii.es/blog/feed/",
+      "website_url": "https://www.hotelfernandoiii.es/es/blog/",
+      "description": "In the heart of Seville, in the emblematic neighborhood of Santa Cruz, cradle of ancient Seville. Its privileged location next to the Cathedral, La Giralda and the most famous monuments and leisure and shopping areas will make you enjoy the city like never before. A classic and distinguished hotel in the center of Seville, with all the possible comforts and that stands out for the care that its professionals put into serving the client. Read our travel guide and tips for traveling Sevilla, best season to visit, places to tour and more.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 599,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5366576.jpg?t=1643607718"
+    },
+    {
+      "title": "Hotel Rey Alfonso X Blog",
+      "feed_url": "https://www.hotelreyalfonsox.es/blog/feed/",
+      "website_url": "https://www.hotelreyalfonsox.es/es/blog/",
+      "description": "Two majestic buildings located in the historic center of the city make up the elegant IMG Hotel Rey Alfonso X. Get news from the hotel on its offered services, about Seville, places to visit and travel guides.",
+      "followers": {
+        "facebook": 546,
+        "twitter": 417,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5366572.jpg?t=1643607686"
+    },
+    {
+      "title": "DomusVi 1",
+      "feed_url": "https://www.domusvi.es/portal-del-mayor/",
+      "website_url": "https://www.domusvi.es/portal-del-mayor/",
+      "description": "DomusVi Spain, a comprehensive platform of health and social care centers and services for people in Spain, has a workforce of 20,000 professionals and cares for some 200,000 people a year. Get comprehensive information about our services, new treatments available, articles on various diseases and more!",
+      "followers": {
+        "facebook": 54500,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5366587.jpg?t=1643607779"
+    }
+  ]
+}

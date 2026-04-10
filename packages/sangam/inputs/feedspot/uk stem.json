@@ -1,0 +1,81 @@
+{
+  "category": "UK STEM",
+  "source_url": "https://rss.feedspot.com/uk_stem_rss_feeds",
+  "feeds": [
+    {
+      "title": "All About STEM",
+      "feed_url": "https://www.allaboutstem.co.uk/news/feed/",
+      "website_url": "https://www.allaboutstem.co.uk/news/",
+      "description": "All About STEM do amazing things to promote Science, Technology, Engineering & Maths in schools, business, the community & beyond! Here they offer advice & guidance and also run competitions and events to enhance & enrich the curriculum, extra-curricular activities & careers guidance.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4811460.jpg?t=1620796017"
+    },
+    {
+      "title": "Scientix Blog",
+      "feed_url": "https://blog.scientix.eu/feed/",
+      "website_url": "https://blog.scientix.eu/",
+      "description": "Scientix is a project that promotes and supports a Europe-wide collaboration among STEM (science, technology, engineering, and maths) teachers, education researchers, policymakers, and other STEM education professionals. Their blog focuses on topics like the education system, environment awareness, student ethics, creative thinking in students, and more.",
+      "followers": {
+        "twitter": 20500
+      },
+      "image_url": "https://i1.feedspot.com/4185499.jpg?t=1669102460"
+    },
+    {
+      "title": "STEM Central in Motion",
+      "feed_url": "https://blogs.glowscotland.org.uk/glowblogs/STEMcentralinmotion/feed/",
+      "website_url": "https://blogs.glowscotland.org.uk/glowblogs/STEMcentralinmotion/",
+      "description": "Your go to resource for addictively fun science, technology, engineering and math activities for kids!",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4920730.jpg?t=1620795972"
+    },
+    {
+      "title": "STEM Returners Blog",
+      "feed_url": "https://stemreturners.com/feed/",
+      "website_url": "https://stemreturners.com/news/",
+      "description": "The STEM Returners project is a programme to help employers recruit, develop and retain the best available talent, and to enable highly qualified and experienced candidates to re-start their career enabling high qualified STEM professionals to return or transfer.",
+      "followers": {
+        "facebook": 410,
+        "twitter": 849
+      },
+      "image_url": "https://i1.feedspot.com/4920671.jpg?t=1620795746"
+    },
+    {
+      "title": "STEM Newcastle",
+      "feed_url": "https://blogs.ncl.ac.uk/stem/feed/",
+      "website_url": "https://blogs.ncl.ac.uk/stem/",
+      "description": "STEM Newcastle is a team of recent STEM graduates from Newcastle University, Their main aim is to encourage more young people to get involved with STEM subjects. A big part of their job is going in to schools and promoting the subjects that we love.",
+      "followers": {
+        "facebook": 625,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4808874.jpg?t=1610524302"
+    },
+    {
+      "title": "HowToSTEM",
+      "feed_url": "https://howtostem.co.uk/feed/",
+      "website_url": "https://howtostem.co.uk/blog/",
+      "description": "Educator Emily Hunt founded HowToSTEM to enhance science, technology, engineering and mathematics education for younger children. Follow this blog to find STEM education advice, recommendations of books and apps, and reviews of STEM activities.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1900,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4810486.jpg?t=1610529760"
+    },
+    {
+      "title": "Advance HE",
+      "feed_url": "https://www.advance-he.ac.uk/",
+      "website_url": "https://www.advance-he.ac.uk/",
+      "description": "The HEA STEM blog is about empowering their discipline communities. It provides an opening to express their academic experience, share innovative learning and teaching, demonstrate our creativity and generate enthusiasm for what they do.",
+      "followers": {
+        "twitter": 26500
+      },
+      "image_url": "https://i1.feedspot.com/4920747.jpg?t=1610530801"
+    }
+  ]
+}

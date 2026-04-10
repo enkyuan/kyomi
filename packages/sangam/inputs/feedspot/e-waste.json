@@ -1,0 +1,61 @@
+{
+  "category": "E-Waste",
+  "source_url": "https://rss.feedspot.com/ewaste_rss_feeds",
+  "feeds": [
+    {
+      "title": "Great Lakes Electronics Blog",
+      "feed_url": "https://www.ewaste1.com/blog/feed/",
+      "website_url": "https://www.ewaste1.com/blog/",
+      "description": "Great Lakes Electronics is a full service e-waste recycling company. We offer environmentally friendly recycling solutions for all types of electronics. Get up to date information & current news on the electronic waste recycling industry. Learn tips and advice on how you can recycle.",
+      "followers": {
+        "facebook": 12
+      },
+      "image_url": "https://i1.feedspot.com/5287850.jpg?t=1622634872"
+    },
+    {
+      "title": "e-Waste Blog",
+      "feed_url": "https://www.e-wasteonline.com/blog/feed/",
+      "website_url": "https://www.e-wasteonline.com/blog/",
+      "description": "Founded in 2002 and headquartered in Hudson Ohio, e-Waste helps companies of all shapes and sizes recycle their outdated technology assets in a safe, secure and responsible manner.e-Waste offers a full suite of IT asset management and disposal services, including asset tracking, residual forecasting, portfolio planning, certified DoD data erasure, IT Asset Recovery/Asset Purchase programs (liquidation of unwanted equipment and trade-in credit or revenue sharing programs) and fully certified, comprehensive electronic waste recycling.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 565
+      },
+      "image_url": "https://i1.feedspot.com/5287889.jpg?t=1622638390"
+    },
+    {
+      "title": "The Shredding Alliance \u00bb Electronic Waste",
+      "feed_url": "https://www.theshreddingalliance.co.uk/category/electronic-waste/feed/",
+      "website_url": "https://www.theshreddingalliance.co.uk/category/electronic-waste/",
+      "description": "Like to discover more about electronic waste? Read our interesting articles about hard drive destruction and how electronic equipment is disposed of.",
+      "followers": {
+        "facebook": 109,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5287980.jpg?t=1622645392"
+    },
+    {
+      "title": "Sims Lifecycle Services \u00bb E-Waste (WEEE) Recycling",
+      "feed_url": "https://www.simslifecycle.com/category/e-waste-recycling-weee-recycling/feed/",
+      "website_url": "https://www.simslifecycle.com/category/e-waste-recycling-weee-recycling/",
+      "description": "SRS offers a coordinated e-waste recycling and IT asset disposition (ITAD) solutions with a high focus on data security, regulatory and corporate compliance, value recovery and sustainability.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 3300,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5287909.jpg?t=1622640104"
+    },
+    {
+      "title": "R3e Waste Blog",
+      "feed_url": "https://www.r3ewaste.com/feed/",
+      "website_url": "https://www.r3ewaste.com/blog/",
+      "description": "The R3eWaste blog is your source for information on recycling technology, computer, electronics, and more. Learn how you can help the environment by partnering with a certified recycler.",
+      "followers": {
+        "facebook": 441,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5287989.jpg?t=1622648435"
+    }
+  ]
+}

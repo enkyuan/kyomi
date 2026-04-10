@@ -1,0 +1,718 @@
+{
+  "category": "BJJ",
+  "source_url": "https://rss.feedspot.com/bjj_rss_feeds",
+  "feeds": [
+    {
+      "title": "Graciemag",
+      "feed_url": "https://www.graciemag.com/feed/",
+      "website_url": "https://www.graciemag.com/",
+      "description": "GRACIEMAG teaches Brazilian Jiu-Jitsu fundamentals and techniques. We spread the Jiu-Jitsu philosophy, diet and lifestyle. We post and update on Brazilian Jiu-Jitsu.",
+      "followers": {
+        "facebook": 493200,
+        "twitter": 44400,
+        "instagram": 61000
+      },
+      "image_url": "https://i1.feedspot.com/4806851.jpg?t=1610353775"
+    },
+    {
+      "title": "BJJ Fanatics",
+      "feed_url": "https://bjjfanatics.com/blogs/news.atom",
+      "website_url": "https://bjjfanatics.com/blogs/news",
+      "description": "BJJ Fanatics is the #1 place for BJJ techniques and training. Find the best gi's, rashguards, shorts, instructional videos, spats, DVDs and more for BJJ.",
+      "followers": {
+        "facebook": 26300,
+        "twitter": 705,
+        "instagram": 456400
+      },
+      "image_url": "https://i1.feedspot.com/4806726.jpg?t=1610353797"
+    },
+    {
+      "title": "Grappling Insider",
+      "feed_url": "https://grapplinginsider.com/feed/",
+      "website_url": "https://grapplinginsider.com/",
+      "description": "Grappling insider is a web based news site, giving the fans of BJJ and Grappling up to date news about the sport they love!",
+      "followers": {
+        "facebook": 64500
+      },
+      "image_url": "https://i1.feedspot.com/5164764.jpg?t=1610363574"
+    },
+    {
+      "title": "Rolljunkie Jiu-jitsu Blog",
+      "feed_url": "https://www.rolljunkie.com/blogs/bjj.atom",
+      "website_url": "https://www.rolljunkie.com/blogs/bjj",
+      "description": "Rollunkie provides stylish jiu-jitsu gear and apparel. Jiu jitsu shirts, jiu jitsu gi kimonos, BJJ rash guards, BJJ shorts, BJJ gear, accessories.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 1000,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5083710.jpg?t=1610363806"
+    },
+    {
+      "title": "Bjj Eastern Europe",
+      "feed_url": "https://www.bjjee.com/feed/",
+      "website_url": "https://www.bjjee.com/",
+      "description": "A news site focusing on BJJ grappling news from around the world & eastern Europe. Also features gear reviews, training & nutrition, competition calendar, European belt rankings, academy directory, and interviews for the BJJ community of Central-Eastern Europe.",
+      "followers": {
+        "facebook": 211400,
+        "twitter": 2100,
+        "instagram": 369500
+      },
+      "image_url": "https://i1.feedspot.com/5317025.jpg?t=1630391318"
+    },
+    {
+      "title": "BJJ World",
+      "feed_url": "https://bjj-world.com/feed/",
+      "website_url": "https://bjj-world.com/",
+      "description": "BJJ World is created to provide Brazilian Jiu-Jitsu practitioners with useful information related to their Jiu-Jitsu training. Whether you're looking for the Best Grappling and jiu-jitsu Gear, DVDs, instructional, etc. you're in the right place to make the best choice with our reviews. We also cover grappling, MMA, and BJJ news.",
+      "followers": {
+        "facebook": 153700
+      },
+      "image_url": "https://i1.feedspot.com/5390051.jpg?t=1649842988"
+    },
+    {
+      "title": "Grapplearts",
+      "feed_url": "http://www.grapplearts.com/feed/",
+      "website_url": "https://www.grapplearts.com/bjj-techniques-and-articles/",
+      "description": "Grapplearts is the top grappling resource by BJJ blackbelt Stephan Kesting. At Grapplearts we specialize in Brazilian jiu-jitsu, submission grappling, and MMA (mixed martial arts). We provide informative articles, techniques, and information on BJJ.",
+      "followers": {
+        "facebook": 92100,
+        "twitter": 12600,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/4497000.jpg?t=1610363587"
+    },
+    {
+      "title": "BJJ More",
+      "feed_url": "https://bjjmore.com/feed/",
+      "website_url": "https://bjjmore.com/",
+      "description": "Hi there, nice to meet you! I'm Max, a BJJ brown belt from Amsterdam. This website is here to help you get better at BJJ much quicker than everyone else",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5473120.jpg?t=1669715178"
+    },
+    {
+      "title": "The Jiu Jitsu Brotherhood Blog",
+      "feed_url": "https://www.jiujitsubrotherhood.com/blogs/blog.atom",
+      "website_url": "https://www.jiujitsubrotherhood.com/blogs/blog",
+      "description": "The Jiu-Jitsu Brotherhood is a dojo without walls and without limits. It is a global community of BJJ practitioners who are united by a desire to share and learn by transcending the inherent limits. It was formed to help people remember that art is about uniting people, not dividing them.",
+      "followers": {
+        "facebook": 93100,
+        "instagram": 45000
+      },
+      "image_url": "https://i1.feedspot.com/5272361.jpg?t=1619101750"
+    },
+    {
+      "title": "Globetrotters",
+      "feed_url": "https://www.bjjglobetrotters.com/feed/",
+      "website_url": "https://www.bjjglobetrotters.com/blogs/",
+      "description": "Hi, I'm Christian Graugart. I started grappling in 1999 and am currently a black belt in Brazilian Jiu Jitsu. I posts and update on grappling and Brazilian Jiu Jitsu.",
+      "followers": {
+        "instagram": 69600
+      },
+      "image_url": "https://i1.feedspot.com/4806826.jpg?t=1610364799"
+    },
+    {
+      "title": "BJJ After 40",
+      "feed_url": "https://bjjafter40blog.wordpress.com/feed/",
+      "website_url": "https://bjjafter40blog.wordpress.com/",
+      "description": "Find Brazilian Jiu Jitsu Life After 40",
+      "followers": {
+        "facebook": 160900
+      },
+      "image_url": "https://i1.feedspot.com/4806948.jpg?t=1610363802"
+    },
+    {
+      "title": "Higher Jiu Jitsu Blog",
+      "feed_url": "https://higherjiujitsu.com.au/feed/",
+      "website_url": "https://higherjiujitsu.com.au/blog/",
+      "description": "Covers strategy and techniques, effective self defence skills, and how to build quality of life with Brazilian Jiu Jitsu.",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5315249.jpg?t=1629809309"
+    },
+    {
+      "title": "BusyBJJ",
+      "feed_url": "https://www.busybjj.com/blog-feed.xml",
+      "website_url": "https://www.busybjj.com/blog-1",
+      "description": "Busy Brazilian Jiu-Jitsu (Busy BJJ) is a martial arts and fitness center. We help you develop a healthier, safer and more active lifestyle. Find posts and updates on Brazilian Jiu-Jitsu (BJJ).",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 81,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4804884.jpg?t=1610364081"
+    },
+    {
+      "title": "Old Man Brazilian Jiu Jitsu",
+      "feed_url": "https://thefightingphotographer.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thefightingphotographer.blogspot.com/",
+      "description": "This Blog is all about Brazilian Jiu Jitsu as seen through the eyes of a 47 year old instructor. What it's like training as a 40 plus year old; the highs and lows of competing in the Old Man's Division; technique videos; interviews; DVD reviews; product reviews and BJJ news. The aim is to help promote the benefits of training BJJ for the over 40's and all the fun you can enjoy along the way.",
+      "followers": {
+        "twitter": 481
+      },
+      "image_url": "https://i1.feedspot.com/4804049.jpg"
+    },
+    {
+      "title": "Maxbjj",
+      "feed_url": "https://maxbjj.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://maxbjj.blogspot.com/",
+      "description": "Hi I'm Max De Michelis. I am BJJ Black Belt Head Instructor of Rio Grappling Club Massa-Pietrasanta, BJJ Blogger. I post and update on Brazilian Jiu-Jitsu, Grappling, MMA.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/4803951.jpg?t=1610364166"
+    },
+    {
+      "title": "Fargo Brazilian Jiu-jitsu & Kickboxing Blog",
+      "feed_url": "https://fargobjj.com/feed/",
+      "website_url": "https://fargobjj.com/blog/",
+      "description": "Fargo Brazilian Jiu-jitsu Muay Thai Kick Boxing & MMA Academy North Dakota's #1 Martial Arts training Center! Frago BJJ provides a lifelong dedication to the development of healthy habits physically, mentally and socially, through training. Fins posts and updates on BJJ.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 190,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4805527.jpg?t=1610364174"
+    },
+    {
+      "title": "CAZA Brazilian Jiu Jitsu - CAZA BJJ Noosa Blog",
+      "feed_url": "https://cazabjj.com.au/blog/feed",
+      "website_url": "https://cazabjj.com.au/blog",
+      "description": "Caza BJJ is a friendly training facility focusing on the best quality BJJ & Self Defense classes for Kids, Adults & Women. CAZA BJJ take pride in providing the best training to further your BJJ journey. Find posts and updates on BJJ.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 41,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4805487.jpg?t=1610364231"
+    },
+    {
+      "title": "Yemaso BJJ | Sacramento BJJ",
+      "feed_url": "https://www.yemasobjj.com/blog/feed/",
+      "website_url": "https://www.yemasobjj.com/blog/",
+      "description": "Yemaso BJJ is a World Class Brazilian Jiu-Jitsu & Martial Arts Academy Serving Sacramento Since 2011. We help everyone stay healthy with jiu-jitsu exercise, and create a strong successful BJJ competition team. We post and update on News, articles, and information about Yemaso Brazilian Jiu-Jitsu.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 417,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4804144.jpg?t=1610364251"
+    },
+    {
+      "title": "Dartford Blog",
+      "feed_url": "http://dartfordbjj.com/feed/",
+      "website_url": "http://dartfordbjj.com/blog/",
+      "description": "Academia De Jiu Jitsu offers Black Belt Instruction in the following Arts: Gracie/Brazilian Jiu Jitsu , Combat Submission Wrestling, Mixed Martial Arts, Kick Boxing, JKD and The Filipino Arts. Find posts and updates on Brazilian Jiu Jitsu.",
+      "followers": {
+        "facebook": 940,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4806621.jpg?t=1610364507"
+    },
+    {
+      "title": "BJJ Equipment",
+      "feed_url": "https://bjjequipment.com/feed/",
+      "website_url": "https://bjjequipment.com/articles/",
+      "description": "The #1 Source For BJJ Gear: Showing you the best BJJ gear so you look, feel, & perform your best on the mats. Authored by Tsavo Neal, a Vancouver-based entrepreneur, writer, and BJJ blue belt under Ritchie Yip at InFighting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5419405.jpg?t=1657191900"
+    },
+    {
+      "title": "Jits Magazine",
+      "feed_url": "https://jitsmagazine.com/feed/",
+      "website_url": "https://jitsmagazine.com/",
+      "description": "Jitsmagazine is your home for BJJ and Jiu-Jitsu news, including the latest in MMA, event results, interviews, and features. Jits is predicated on being an all-encompassing source for jiu-jitsu lifestyle and culture. Our series of media outlets focus on delivering timeless content that not only educates and interests, but also drives jiu-jitsu culture forward.",
+      "followers": {
+        "facebook": 152400,
+        "twitter": 18500,
+        "instagram": 152200
+      },
+      "image_url": "https://i1.feedspot.com/5504270.jpg?t=1675682497"
+    },
+    {
+      "title": "Black Girl, White Gi Blog",
+      "feed_url": "https://www.blackgirlwhitegi.com/blog-feed.xml",
+      "website_url": "https://www.blackgirlwhitegi.com/bgwgblog",
+      "description": "Enjoy cool facts about BJJ, fitness, and lifestyle. If you're starting jiu-jitsu, need some fitness encouragement, or just want to talk all things martial arts, jiu-jitsu, and more, Black Girl, White Gi is the right place! This site is dedicated to helping you and being a place to get information, share tips, and have fun in all things jiu-jitsu!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 450,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5747771.jpg?t=1704340730"
+    },
+    {
+      "title": "BjjTribes",
+      "feed_url": "https://bjjtribes.com/feed/",
+      "website_url": "https://bjjtribes.com/",
+      "description": "BjjTribes provides news, articles, and information about Brazilian Jiu-Jitsu. Follow to get updates.",
+      "followers": {
+        "instagram": 800
+      },
+      "image_url": "https://i1.feedspot.com/5205543.jpg?t=1610356068"
+    },
+    {
+      "title": "BJJ Motivation | Your guide to improving your Jiu-Jitsu",
+      "feed_url": "https://bjjmotivation.com/feed/",
+      "website_url": "https://bjjmotivation.com/",
+      "description": "Hey there, my name is Nick Kovach and I am the person behind this website. I started grappling about ten years ago and on this site I will share everything I know about BJJ, Judo and grappling.",
+      "followers": {
+        "facebook": 18,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5085239.jpg?t=1610363597"
+    },
+    {
+      "title": "Chewjitsu.net",
+      "feed_url": "https://www.chewjitsu.net/feed/",
+      "website_url": "https://www.chewjitsu.net/",
+      "description": "Hi I'm Nick Albin. I am BJJ Black Belt and Active Competitor, History Nerd, Coffee Addict. I posts and updates on BJJ.",
+      "followers": {
+        "facebook": 45700,
+        "twitter": 3900,
+        "instagram": 161300
+      },
+      "image_url": "https://i1.feedspot.com/4805491.jpg?t=1610363620"
+    },
+    {
+      "title": "Grapplezilla",
+      "feed_url": "https://grapplezilla.com/feed/",
+      "website_url": "https://grapplezilla.com/",
+      "description": "Your go-to source for all things Grappling, Brazilian Jiu-Jitsu, and Wrestling. Learn everything about Grappling from tips and tricks to insights and analysis that will expand your knowledge base.",
+      "followers": {
+        "facebook": 491,
+        "twitter": 26,
+        "instagram": 68600
+      },
+      "image_url": "https://i1.feedspot.com/5383294.jpg?t=1647838541"
+    },
+    {
+      "title": "Slideyfoot",
+      "feed_url": "https://feeds.feedburner.com/slideystraininglog",
+      "website_url": "http://www.slideyfoot.com/",
+      "description": "This blog is about Brazilian jiu jitsu (BJJ), offering various resources intended to further the discussion of BJJ and help Jiu-Jitsu beginners. Authored by Can Sonmez.",
+      "followers": {
+        "twitter": 518
+      },
+      "image_url": "https://i1.feedspot.com/5317024.jpg?t=1630390689"
+    },
+    {
+      "title": "Slidey Foot",
+      "feed_url": "https://feeds.feedburner.com/slideystraininglog",
+      "website_url": "http://www.slideyfoot.com/",
+      "description": "Hi I'm Can S\u00f6nmez. This site is about Brazilian jiu jitsu (BJJ), offering various resources intended to further the discussion of BJJ and help jiu jitsu beginners.",
+      "followers": {
+        "twitter": 518
+      },
+      "image_url": "https://i1.feedspot.com/1733183.jpg?t=1610363796"
+    },
+    {
+      "title": "On The Mat",
+      "feed_url": "http://onthemat.com/feed/",
+      "website_url": "http://onthemat.com/",
+      "description": "Find information on Brazilian Jiu Jitsu, MMA, News, Gear and Kimonos.",
+      "followers": {
+        "facebook": 23100
+      },
+      "image_url": "https://i1.feedspot.com/4804076.jpg?t=1610363915"
+    },
+    {
+      "title": "Aces Jiu Jitsu Club",
+      "feed_url": "https://www.acesjiujitsuclub.com/our-blog/feed/",
+      "website_url": "https://www.acesjiujitsuclub.com/our-blog/",
+      "description": "Aces Jiu Jitsu Club is the #1 Jiu Jitsu and Martial Arts Club in Austin, TX. We specialize in Jiu Jitsu, Muay Thai, and MMA in a clean family environment. Learn Self-Defense and get fit with Martial Arts-Brazilian Jiu Jitsu, MMA, Muay Thai.",
+      "followers": {
+        "facebook": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4806664.jpg?t=1610363925"
+    },
+    {
+      "title": "BJJ Mat Rat",
+      "feed_url": "http://www.bjjmatrat.com/feed/",
+      "website_url": "http://www.bjjmatrat.com/",
+      "description": "BJJ Mat Rat is a Brazilian Jiu Jitsu blog, exploring technique, fitness, nutrition and philosophy.",
+      "followers": {
+        "facebook": 17,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/5139329.jpg?t=1610363929"
+    },
+    {
+      "title": "BJJ For Women",
+      "feed_url": "https://poweredbyshe.com/feed/",
+      "website_url": "https://poweredbyshe.com/",
+      "description": "Hi I'm Fenom Kimonos. The purpose of this blog is to deliver content related to what we believe in, who and what we are involved with, and introduce you to some of the cool products that we produce for girls and women in Brazilian Jiu-Jitsu.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 777
+      },
+      "image_url": "https://i1.feedspot.com/4803213.jpg?t=1610363933"
+    },
+    {
+      "title": "JoshJitsu - Tappin' and Nappin'",
+      "feed_url": "https://feeds.feedburner.com/Joshjitsu-TappinAndNappin",
+      "website_url": "http://www.joshjitsu.info/",
+      "description": "Find posts and updates on jiu jitsu.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/4803018.jpg?t=1610363938"
+    },
+    {
+      "title": "BJJ Grrl",
+      "feed_url": "https://bjjgrrl.wordpress.com/feed/",
+      "website_url": "https://bjjgrrl.wordpress.com/",
+      "description": "Hi I'm Sensei Keiko. I'm a purple belt in Brazilian Jiu-Jitsu under Tim Mannon. I'm a writer, an editor, a business analyst, and a software tester. I blog and post on Brazilian Jiu-Jitsu (BJJ).",
+      "followers": {
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4803388.jpg?t=1610355132"
+    },
+    {
+      "title": "Coach's Killer Blog",
+      "feed_url": "https://coachskiller.com/blog/feed/",
+      "website_url": "https://coachskiller.com/blog/",
+      "description": "Hi I'm Nicholle Stoller. I train full time with Shawn Hammonds. I post and update on Brazilian Jiu Jitsu.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 347
+      },
+      "image_url": "https://i1.feedspot.com/4803357.jpg?t=1610364077"
+    },
+    {
+      "title": "Sub Force BJJ | Brazilian Martial Arts Rutherford",
+      "feed_url": "https://www.subforcebjj.com/blog/feed/",
+      "website_url": "https://www.subforcebjj.com/blog/",
+      "description": "SubForce BJJ is about cutting edge Brazilian Jiu-Jitsu and Mixed Martial Arts. Exercise your body and mind while learning practical martial arts defense techniques, all in a cooperative and competitive environment and find posts and updates on Brazilian Jiu-Jitsu and Mixed Martial Arts.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 21,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4806768.jpg?t=1610364094"
+    },
+    {
+      "title": "Shark Girl BJJ",
+      "feed_url": "http://sharkgirlbjj.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sharkgirlbjj.blogspot.com/",
+      "description": "Find posts and updates on Brazilian jiu jitsu.",
+      "followers": {
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/4803111.jpg"
+    },
+    {
+      "title": "A Skirt on the Mat",
+      "feed_url": "https://skirtonthemat.wordpress.com/feed/",
+      "website_url": "https://skirtonthemat.wordpress.com/",
+      "description": "Hi I'm Katie. I'm a jiu jitsu black belt student at Maxercise in Philadelphia, PA who likes to write. I blog on my take on Brazilian Jiu Jitsu and everything in it",
+      "followers": {
+        "twitter": 207
+      },
+      "image_url": "https://i1.feedspot.com/4803196.jpg?t=1610364104"
+    },
+    {
+      "title": "Grappling and BJJ tips by Liam The Part-Time Grappler Wandi",
+      "feed_url": "https://feeds.feedburner.com/GrapplingAndBjjTipsThePart-timeGrapplerPeopleWhoHaveALifeOutsideTheGym",
+      "website_url": "http://parttimegrappler.blogspot.com/",
+      "description": "Liam Wandi is the Part Time Grappler. I apply Time-management & Statistical principles to the art of Brazilian Jiu Jitsu. I post and update on combat sport.",
+      "followers": {
+        "facebook": 797,
+        "twitter": 606
+      },
+      "image_url": "https://i1.feedspot.com/4802113.jpg?t=1610364110"
+    },
+    {
+      "title": "Artemis BJJ | Bristol Brazilian Jiu Jitsu",
+      "feed_url": "http://feeds.feedburner.com/ArtemisBJJPodcast",
+      "website_url": "http://www.artemisbjj.com/category/news/interview/podcast/",
+      "description": "Artemis BJJ offers Brazilian jiu jitsu from the heart of Bristol. Find posts and videos on Brazilian jiu jitsu(bjj).",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 206,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4803104.jpg?t=1610364170"
+    },
+    {
+      "title": "MEERKATSU",
+      "feed_url": "http://feeds.feedburner.com/Meerkatsu",
+      "website_url": "http://meerkat69.blogspot.com/",
+      "description": "My name is Seymour Yang and I am an artist and Brazilian Jiu Jitsu fanatic. I write and draw content under the name Meerkatsu. This page celebrates the creative subculture of BJJ.",
+      "followers": {
+        "facebook": 86600,
+        "twitter": 3300,
+        "instagram": 46700
+      },
+      "image_url": "https://i1.feedspot.com/1733178.jpg?t=1610364177"
+    },
+    {
+      "title": "Breaking Grips - BJJ Blog and Jiu-Jitsu News",
+      "feed_url": "https://breakinggrips.com/feed/",
+      "website_url": "https://breakinggrips.com/",
+      "description": "I am an avid BJJ, MMA, grappling, and general sports fan from Ireland. I am currently a BJJ purple belt and love to do nothing more than competing. The idea of this blog is to combine news from the world of grappling with opinion pieces on Jiu Jitsu and any other observations which I think may be of interest to you.",
+      "followers": {
+        "facebook": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4850066.jpg?t=1610364191"
+    },
+    {
+      "title": "Southside BJJ Gold Coast | Brazilian Jiu Jitsu Gold Coast",
+      "feed_url": "https://www.bjjgoldcoast.com.au/feed/",
+      "website_url": "https://www.bjjgoldcoast.com.au/",
+      "description": "Southside BJJ Gold Coast is Brazilian Jiu Jitsu and Fitness Conditioning Gym located in west Burleigh, providing Adult BJJ and Kids BJJ Classes. We post and update blogs on Brazilian Jiu Jitsu(BJJ).",
+      "followers": {
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/4806603.jpg?t=1610364199"
+    },
+    {
+      "title": "Functional BJJ",
+      "feed_url": "https://functionalbjjblog.wordpress.com/feed/",
+      "website_url": "https://functionalbjjblog.wordpress.com/",
+      "description": "Functionalbjj.com is a website designed for people who want to train jiu-jitsu through a self-defense/fighting perspective. Learn Brazilian Jiu-Jitsu as a functional self defense/fighting system, as it was intended. Also find posts and updates on Brazilian Jiu-Jitsu",
+      "followers": {
+        "facebook": 494,
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/4806587.jpg?t=1610364237"
+    },
+    {
+      "title": "A nice lady's adventures in the gentle art of jiu jitsu",
+      "feed_url": "http://grapplinggirl.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://grapplinggirl.blogspot.com/",
+      "description": "Find posts and updates on jiu jitsu.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4803180.jpg?t=1610364359"
+    },
+    {
+      "title": "RIO Grappling Club | Brazilian Jiu-Jitsu without borders",
+      "feed_url": "https://riograpplingclub.net/feed/",
+      "website_url": "https://riograpplingclub.net/",
+      "description": "Hi we are Roberto Atalla and Mauro Chueng. We have a network of BJJ and Grappling experts that love the sport and work hard to make it better. We posts and update on Brazilian Jiu-Jitsu (BJJ).",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 341,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4803954.jpg?t=1610364485"
+    },
+    {
+      "title": "BJJ Bear",
+      "feed_url": "https://bjjbear.com/feed/",
+      "website_url": "https://bjjbear.com/",
+      "description": "BJJ Bear blog covers all the latest Grappling, BJJ, MMA, and No-Gi News. Read in-depth guides about everything BJJ related, from sportswear to diet!",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5198202.jpg?t=1610364495"
+    },
+    {
+      "title": "BJJ Mums",
+      "feed_url": "https://www.bjjmums.com/feed/",
+      "website_url": "https://www.bjjmums.com/blog/",
+      "description": "Hi I'm Dr. Ana G. Yag\u00fces Molina. BJJ Mums is a project whose goal is to support and extend Brazilian Jiu Jitsu as well as to encourage its practice amongst women who became mums. I share my own experience as a BJJ blackbelt mum of two kids - providing information about how to combine BJJ with pregnancy and maternity, helpful advices and tips.",
+      "followers": {
+        "facebook": 705
+      },
+      "image_url": "https://i1.feedspot.com/4805073.jpg?t=1610364515"
+    },
+    {
+      "title": "Grappling and Fitness",
+      "feed_url": "https://abetterself.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://abetterself.blogspot.com/",
+      "description": "Hi I'm John Logan. I am a Brazilian Jiu-Jitsu and Judo in Japan plus my methods of keeping fit and healthy. I started BJJ because I've always had an interest in submission techniques. I post and update blogs on BJJ and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4806653.jpg?t=1610365029"
+    },
+    {
+      "title": "The BJJ Mental Coach",
+      "feed_url": "https://www.thebjjmentalcoach.com/blog.rss",
+      "website_url": "https://www.thebjjmentalcoach.com/blog",
+      "description": "Gustavo Dantas, is a fourth degree Black Belt in Brazilian Jiu-Jitsu from Andre Pederneiras. The BJJ Mental Coach can help you to perform to the best of your abilities and reach the success you desire. Find posts and updates on Jiu-Jitsu.",
+      "followers": {
+        "facebook": 29000
+      },
+      "image_url": "https://i1.feedspot.com/4802571.jpg?t=1610364575"
+    },
+    {
+      "title": "Dirty White Belt",
+      "feed_url": "https://www.dirtywhitebelt.com/feed/",
+      "website_url": "https://www.dirtywhitebelt.com/blog/",
+      "description": "Hi I'm Jeff Shaw. I teach at Triangle Jiu-Jitsu Academy in Durham, North Carolina. Dirty White Belt covers Brazilian Jiu-Jitsu in the Carolinas and beyond with a blog, a weekly podcast, photography and more.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 113,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4802625.jpg?t=1610364578"
+    },
+    {
+      "title": "Find Your Gi",
+      "feed_url": "https://findyourgi.com/feed/",
+      "website_url": "https://findyourgi.com/",
+      "description": "Find Your Gi is a site built for, and by, people passionate about Brazilian jiu-jitsu and martial arts.",
+      "followers": {
+        "facebook": 2
+      },
+      "image_url": "https://i1.feedspot.com/5126662.jpg?t=1610364895"
+    },
+    {
+      "title": "Just a Girl in a Jiu Jitsu World",
+      "feed_url": "https://www.justagirlbjj.com/blog/feed",
+      "website_url": "https://www.justagirlbjj.com/blog",
+      "description": "Hi I'm Leslie Gardineer. I started this website with the intention was to do a blog about the trials and tribulations I was personally facing as a female in the greatly male populated World of Jiu Jitsu and to serve as a way to look back on my journey to achieve my Black Belt in Jiu Jitsu. I post and update on Jio jitsu.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/4802718.jpg?t=1610364590"
+    },
+    {
+      "title": "The Gentle Artist | Jiu-Jitsu Blog",
+      "feed_url": "https://thegentleartist.com/feed/",
+      "website_url": "https://thegentleartist.com/",
+      "description": "Hi, I'm Ruben. I'm a Brown Belt, Writer, Gamer, Web Designer, and Digital Marketing dude. This bjj blog documents my obsession with jiu-jitsu & grappling in general. Topics include: advice, gear reviews, & concepts for improving your skills.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4804105.jpg?t=1610364605"
+    },
+    {
+      "title": "John Will's Blog: 5th Degree BJJ Black Belt, MMA coach, Author and Licorice Lover",
+      "feed_url": "http://bjj-australia.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://bjj-australia.blogspot.com/",
+      "description": "Musings, ponderings and various observations on the intersection of BJJ/Martial arts training and the living of life. I have no inclination toward either political correctness or correct spelling. This blog, such as it is, remains fundamentally an unfiltered gush of thought both raw and unpolished. Find posts and updates on BJJ.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4804902.jpg?t=1610363712"
+    },
+    {
+      "title": "Jiu Jitsu Legacy",
+      "feed_url": "https://jiujitsulegacy.com/feed/",
+      "website_url": "https://jiujitsulegacy.com/",
+      "description": "We are BJJ enthusiasts! Our goal is to create a place where you can learn, envolve and get into BJJ lifestyle!",
+      "followers": {
+        "facebook": 210800,
+        "twitter": 24,
+        "instagram": 73000
+      },
+      "image_url": "https://i1.feedspot.com/5090008.jpg?t=1610363979"
+    },
+    {
+      "title": "Jiu-Jitsu Brotherhood",
+      "feed_url": "https://www.jiujitsubrotherhood.com/feed",
+      "website_url": "https://www.jiujitsubrotherhood.com/",
+      "description": "Jiu-Jitsu Brotherhood provides Quality content on all aspects of the Jiu Jitsu lifestyle including concepts, techniques, travel and interviews.",
+      "followers": {
+        "facebook": 93100,
+        "instagram": 45000
+      },
+      "image_url": "https://i1.feedspot.com/4496999.jpg?t=1610353788"
+    },
+    {
+      "title": "Attack The Back",
+      "feed_url": "https://www.attacktheback.com/feed/",
+      "website_url": "https://510judo.com/blog/",
+      "description": "Attack The Back bring you the latest BJJ news and editorial pieces. We provide you with some of the latest action and up-to-date community information. Find posts and updates on BJJ.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 1000,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4752573.jpg?t=1610353805"
+    },
+    {
+      "title": "HansDavidian.com Blog",
+      "feed_url": "https://hansdavidian.com/feed/",
+      "website_url": "https://510judo.com/blog/",
+      "description": "Welcome to my blog! My name is Hans David, and I'm a journalist based in Jakarta, Indonesia. When I'm not busy reporting on the latest news, you can find me training in Brazilian Jiu Jitsu (BJJ). This martial art has not only helped me stay in shape, but it's also taught me discipline and mental focus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5512072.jpg?t=1677150190"
+    },
+    {
+      "title": "The Gentle Art | Applying the principle of simplicity to the art of Jiu Jitsu",
+      "feed_url": "http://www.caneprevost.com/feed/",
+      "website_url": "http://www.caneprevost.com/",
+      "description": "Hi I'm Cane Prevost. The blog will be my place on the web to write down my thoughts on teaching and learning the art of Brazilian Jiu Jitsu.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4803155.jpg"
+    },
+    {
+      "title": "MegJitsu",
+      "feed_url": "https://megjitsu.com/feed/",
+      "website_url": "https://monumentjiujitsu.com/blog/",
+      "description": "A blog by Meg Smitley who loves Brazilian Jiu-Jitsu. She writes about BJJ, Martial Arts, Injuries & Recovery, Nutrition, Self Defense, Women in BJJ, Training, Strength & Conditioning.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 499
+      },
+      "image_url": "https://i1.feedspot.com/4802799.jpg?t=1630390494"
+    },
+    {
+      "title": "Academy Martial Arts",
+      "feed_url": "https://monumentjiujitsu.com/rss.xml",
+      "website_url": "https://monumentjiujitsu.com/blog/",
+      "description": "Academy Martial Arts offers adult and children's classes taught by a Brazilian Jiu-Jitsu (BJJ) and Taekwondo Black Belt. Academy Martial Arts blog for Brazilian Jiu Jitsu, BJJ, Taekwondo, Kickboxing, self-defense, and MMA in Monument, Colorado.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 90,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4804966.jpg?t=1610364061"
+    },
+    {
+      "title": "gypsy girl in gi | life updates and musings about brazilian jiu jitsu",
+      "feed_url": "https://gypsygirlingi.com/feed/",
+      "website_url": "https://gypsygirlingi.com/",
+      "description": "Hi I'm Carlie. I started this blog when I first left Australia, expecting to fill it with posts about travel and training BJJ around Europe. I Take my Brazilian Jiu Jitsu gi everywhere I travel.",
+      "followers": {
+        "twitter": 516
+      },
+      "image_url": "https://i1.feedspot.com/4803867.jpg"
+    },
+    {
+      "title": "Legacy Brazilian Jiu-Jitsu and Mixed Martial Arts",
+      "feed_url": "https://www.legacybjj.com/news",
+      "website_url": "https://www.legacybjj.com/news",
+      "description": "Legacy Brazilian Jiu-Jitsu and Mixed Martial Arts is Brazilian Jiu-Jitsu for Kids and Adults, Muay Thai, Mixed Martial Arts, and Womens Boot Camp. Find posts and updates on Brazilian Jiu-Jitsu(BJJ).",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 651
+      },
+      "image_url": "https://i1.feedspot.com/4804857.jpg?t=1610364181"
+    },
+    {
+      "title": "Neutral Ground Martial Arts and Fitness",
+      "feed_url": "https://www.wisconsinbjj.com/feed/",
+      "website_url": "https://www.rebeccagrossbard.com/about",
+      "description": "Find posts and updates on BJJ.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4806749.jpg?t=1610364264"
+    },
+    {
+      "title": "Team Randori Martial Arts",
+      "feed_url": "https://teamrandori.com/feed/",
+      "website_url": "https://www.rebeccagrossbard.com/about",
+      "description": "A premier martial arts academy where we teach Brazilian Jiu Jitsu techniques to adults & kids. Academies located in Annapolis and Silver Spring MD. Our instructor staff is nationally renounced for their teaching expertise and commitment to students and our academy features modern amenities, equipment in a first-class family friendly environment.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 311
+      },
+      "image_url": "https://i1.feedspot.com/4979789.jpg?t=1610364586"
+    },
+    {
+      "title": "Couchjitsu | From Couch Potato To Brazilian Jiu Jitsu",
+      "feed_url": "https://couchjitsu.com/?feed=rss2",
+      "website_url": "https://www.couchjitsu.com/",
+      "description": "I am currently a whitebelt in Brazilian Jiu Jitsu at Mid-America Martial Arts. I posts and update on my experience on BJJ.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4803877.jpg?t=1610365097"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "category": "Kansas Food",
+  "source_url": "https://rss.feedspot.com/kansas_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wichita By E.B.",
+      "feed_url": "https://www.wichitabyeb.com/feed",
+      "website_url": "https://www.wichitabyeb.com/",
+      "description": "Wichita By E.B. is free resource for restaurant reviews, dining suggestions, local business highlights, event, things to do away from home and anything Wichita. My name is Eddy and I've had this blog since 2011. I'm a local guy from Wichita who enjoys getting out of the house and seeing what the city has to offer whether it's things to do in town or trying restaurants and food trucks.",
+      "followers": {
+        "facebook": 92000,
+        "twitter": 4200,
+        "instagram": 42100
+      },
+      "image_url": "https://i1.feedspot.com/5314903.jpg?t=1629725170"
+    },
+    {
+      "title": "The Culinary Center of Kansas City Blog",
+      "feed_url": "https://kcculinary.com/feed/",
+      "website_url": "https://kcculinary.com/tag/blog/",
+      "description": "Keep an eye on our 'Kitchen Talk' Blog - it's where we share news, tips, recipes, and other info about The Culinary Center of Kansas City and the culinary world! The Culinary Center of KC is Heartland's premiere culinary arts center, offering cooking classes, corporate events, and The Kitchen Shop.",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 1800,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5314913.jpg?t=1629726179"
+    },
+    {
+      "title": "The Kansas City Dietitian Blog",
+      "feed_url": "https://www.kansascitydietitian.com/blog-recipes/feed/",
+      "website_url": "https://www.kansascitydietitian.com/blog-recipes/",
+      "description": "Bethany Frazier is a Registered Dietitian offering nutrition consulting and professional services in and around the Kansas City area. She is revolutionizing the way you think and approach food, creating a lifestyle that works for you.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 531
+      },
+      "image_url": "https://i1.feedspot.com/4898455.jpg?t=1629725356"
+    }
+  ]
+}

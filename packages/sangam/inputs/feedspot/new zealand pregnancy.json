@@ -1,0 +1,39 @@
+{
+  "category": "New Zealand Pregnancy",
+  "source_url": "https://rss.feedspot.com/new_zealand_pregnancy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pregnancy Bump & Baby",
+      "feed_url": "https://bumpandbaby.co.nz/feed/",
+      "website_url": "https://bumpandbaby.co.nz/",
+      "description": "If you're looking for information about pregnancy in New Zealand, BUMP and baby Magazine is your place for pregnancy information and babyhood.",
+      "followers": {
+        "facebook": 12200,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/4940851.jpg?t=1620650579"
+    },
+    {
+      "title": "Smileybelt Blog",
+      "feed_url": "https://smileybelt.co.nz/feed/",
+      "website_url": "https://smileybelt.co.nz/blog/",
+      "description": "Articles on Pregnancy by Smileybelt. Smileybelt is a comfortable and versatile pregnancy and lower back support belt that relieves pain and helps keep you active.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5279163.jpg?t=1620648839"
+    },
+    {
+      "title": "Pregnancy Journal Blog",
+      "feed_url": "https://www.pregnancyjournal.co.nz/feed/",
+      "website_url": "https://forgetmenotjournals.com/nz/category/pregnancy-journal/",
+      "description": "Welcome to Pregnancy Journal, a place to share, read and learn from stories of fertility, pregnancy and birth. Finding it hard to find either a pregnancy journal, or a place to read others' pregnancy journals and stories, I set about creating both.",
+      "followers": {
+        "twitter": 77,
+        "instagram": 27800
+      },
+      "image_url": "https://i1.feedspot.com/5279146.jpg?t=1620647137"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "category": "Germany Fishing",
+  "source_url": "https://rss.feedspot.com/germany_fishing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Flyfishing Blog",
+      "feed_url": "https://flyfishing-blog.com/flyfishing-blog.com/feed/",
+      "website_url": "https://flyfishing-blog.com/",
+      "description": "Articles, news, opinions, videos, reports and more on fly-fishing, fly-tying and fly-casting. Flyfishing Blog - Articles, news, opinions, videos, reports and more on fly-fishing, fly-tying and fly-casting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5629497.jpg?t=1689684609"
+    },
+    {
+      "title": "DAF Blog",
+      "feed_url": "https://dicht-am-fisch.de/feed",
+      "website_url": "https://dicht-am-fisch.de/",
+      "description": "Angeln auf Zander, Barsch, Hecht & Co.The DaF blog is about fishing for zander, pike, etc. There is also a shop with caps, shirts, bait, etc. for anglers",
+      "followers": {
+        "facebook": 27000,
+        "twitter": 922,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/5626169.jpg?t=1689320382"
+    },
+    {
+      "title": "SPRO Freestyle Blog",
+      "feed_url": "https://sprofreestyle.com/feed",
+      "website_url": "https://sprofreestyle.com/blog",
+      "description": "'Break the Stereotype' with Fish Urban's wide range of innovative fishing gear that will help you get the most out of your fishing experience. Discover our latest SPRO Freestyle blog posts, written by our experienced team of anglers, for in-depth information about our products, tutorials, and much more. Experience urban finesse with Fish Urban.",
+      "followers": {
+        "facebook": 51500,
+        "instagram": 63200
+      },
+      "image_url": "https://i1.feedspot.com/5629498.jpg?t=1689684408"
+    },
+    {
+      "title": "Angel Wissen Blog",
+      "feed_url": "https://pro-fishing.de/blog/feed/",
+      "website_url": "https://pro-fishing.de/blog/",
+      "description": "Whether predator fishing or coarse fishing, with us you get the right reports, instructions and facts about our favorite topic: fishing.",
+      "followers": {
+        "facebook": 3900,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5629496.jpg?t=1692172429"
+    }
+  ]
+}

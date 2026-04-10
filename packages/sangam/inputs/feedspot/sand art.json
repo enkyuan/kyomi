@@ -1,0 +1,36 @@
+{
+  "category": "Sand Art",
+  "source_url": "https://rss.feedspot.com/sand_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Charlene Lanzel Blog",
+      "feed_url": "https://www.sand-artist.com/blog?format=rss",
+      "website_url": "https://www.sand-artist.com/blog",
+      "description": "Stay up to date with the latest news about Charlene's performances, videos, product line, interviews and general musings. Charlene Lanzel is a world-renowned American sand animation artist, who uses her hands in the sand to create living sand art stories. This is an amazing live performance using sand, a light box and a projector. Charlene creates these fluid story illustrations for large audiences, with an overhead camera instantaneously projecting onto a large screen for audiences in the US and worldwide.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 326,
+        "instagram": 834
+      },
+      "image_url": "https://i1.feedspot.com/5518675.jpg?t=1678441140"
+    },
+    {
+      "title": "Sand Painting Blog",
+      "feed_url": "https://www.bgsandsculptures.com/blog?format=rss",
+      "website_url": "https://www.bgsandsculptures.com/blog",
+      "description": "Our sculptures have been featured on a variety of television shows including Travel Channel's Sand Blasters, Sand Wars and Sand Masters. We travel the world creating some of the most original, extraordinary sand sculptures and sand castles ever created for a variety of occasions. Learn more about sand arts, our projects and more!",
+      "followers": {
+        "instagram": 522
+      },
+      "image_url": "https://i1.feedspot.com/5518677.jpg?t=1678441082"
+    },
+    {
+      "title": "Sand-Art Kreativagentur Blog",
+      "feed_url": "https://sandart.co.za/za/feed/",
+      "website_url": "https://sandart.co.za/za/blog/",
+      "description": "The Sandart story began in 2002. SandArt provides creativity with endless possibilities providing children with an outlet for their creativity. Our blog feature tips and tricks for sand arts, project ideas for children and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5518678.jpg?t=1678440978"
+    }
+  ]
+}

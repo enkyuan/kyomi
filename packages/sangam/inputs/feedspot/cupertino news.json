@@ -1,0 +1,17 @@
+{
+  "category": "Cupertino News",
+  "source_url": "https://rss.feedspot.com/cupertino_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cupertino Today",
+      "feed_url": "https://cupertinotoday.com/feed/",
+      "website_url": "https://cupertinotoday.com/",
+      "description": "Cupertino Today brings everyday news about the people and events of Cupertino to your screen. We tell local stories about our community, schools, city politics, businesses, and sports.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 696
+      },
+      "image_url": "https://i1.feedspot.com/5150374.jpg?t=1625480466"
+    }
+  ]
+}

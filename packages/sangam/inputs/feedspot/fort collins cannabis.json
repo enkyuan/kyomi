@@ -1,0 +1,32 @@
+{
+  "category": "Fort Collins Cannabis",
+  "source_url": "https://rss.feedspot.com/fort_collins_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Flower Power Botanicals Blog",
+      "feed_url": "https://flowerpowerbotanicals.com/feed/",
+      "website_url": "https://flowerpowerbotanicals.com/blog/",
+      "description": "Flower Power Botanicals Blog is your go-to destination for the latest in medical and recreational marijuana, CBD, and cannabis products. Explore the best cannabis blogs to stay informed on industry trends and developments. Keep up with the ever-evolving world of cannabis with Flower Power Botanicals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7299346.jpg?t=1713244969"
+    },
+    {
+      "title": "The Rocky Mountain Collegian \u00bb Cannabis",
+      "feed_url": "https://collegian.com/category/articles/cannabis/feed/",
+      "website_url": "https://collegian.com/category/articles/cannabis/",
+      "description": "The Rocky Mountain Collegian, an independent print and online newspaper, empowers students to shape content. Serving Colorado State University in Fort Collins, it distributes 5,000 weekly copies on campus and online at collegian.com daily. As the student news site of CSU, it fosters a vibrant campus discourse.",
+      "followers": {
+        "facebook": 7000
+      },
+      "image_url": "https://i1.feedspot.com/7299348.jpg?t=1713245004"
+    },
+    {
+      "title": "Kind Care of Colorado Blog",
+      "feed_url": "https://kindcare.co/feed/",
+      "website_url": "https://kindcare.co/blog/",
+      "description": "Kind Care of Colorado, a locally owned and operated dispensary since 2009, serves medical and recreational cannabis seekers in Fort Collins. Situated on College Avenue, their mission is to offer safe, affordable, and discreet access to cannabis. With a knowledgeable staff and diverse inventory, including flowers, edibles, and concentrates, they cater to northern Colorado's cannabis needs. Explore their blog for insights and more about Kind Care.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7299349.jpg?t=1715001131"
+    }
+  ]
+}

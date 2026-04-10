@@ -1,0 +1,52 @@
+{
+  "category": "Nissan",
+  "source_url": "https://rss.feedspot.com/nissan_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nissan Insider",
+      "feed_url": "https://nissaninsider.co.uk/feed/",
+      "website_url": "https://nissaninsider.co.uk/",
+      "description": "Nissan Motor Company Ltd is a Japanese automaker of an iconic range of vehicles, from the urban crossover Juke to the world-class GT-R sports car. The inside track for Nissan executives offers Nissan news, opinion, analysis, blogs, and videos.",
+      "followers": {
+        "facebook": 22300000,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4915649.jpg?t=1620368278"
+    },
+    {
+      "title": "NissanNews USA",
+      "feed_url": "https://usa.nissannews.com/en-US/rss",
+      "website_url": "https://usa.nissannews.com/en-US",
+      "description": "The Nissan brand aspires to provide customers with innovative ideas for the joy of everyday driving. Get the latest Nissan news, press kits, images and videos from Nissan Online Newsroom.",
+      "followers": {
+        "facebook": 22700000,
+        "twitter": 803700,
+        "instagram": 820000
+      },
+      "image_url": "https://i1.feedspot.com/963015.jpg?t=1620368332"
+    },
+    {
+      "title": "Autoblog \u00bb Nissan News",
+      "feed_url": "https://www.autoblog.com/category/nissan/rss.xml",
+      "website_url": "https://www.autoblog.com/nissan/",
+      "description": "Autoblog brings you car news; expert reviews of cars, trucks, crossovers, and SUVs; and pictures and video. Get Nissan news, press releases and expert reviews along with detailed photos, spy shots and road tests of new Nissan vehicles.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 449300,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/4915715.jpg?t=1620368282"
+    },
+    {
+      "title": "Nissan Motor Corporation Global Website",
+      "feed_url": "https://reports.nissan-global.com/EN/?feed=rss2",
+      "website_url": "https://www.nissan-global.com/EN/STORIES/",
+      "description": "Nissan Motor Corporation is the Official Global Website of Nissan Motor Company, providing the latest news and press releases, corporate and product information.",
+      "followers": {
+        "facebook": 23100000,
+        "twitter": 795300
+      },
+      "image_url": "https://i1.feedspot.com/4915655.jpg?t=1620368271"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "category": "Hazelwood News",
+  "source_url": "https://rss.feedspot.com/hazelwood_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fox2Now \u00bb Hazelwood",
+      "feed_url": "https://fox2now.com/tag/hazelwood/feed/",
+      "website_url": "https://fox2now.com/tag/hazelwood/",
+      "description": "Fox2Now provides St. Louis news, weather, and sports. Follow this feed to read the latest news and updates in Hazelwood brought to you by the team at FOX2now.com.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 276700,
+        "instagram": 166900
+      },
+      "image_url": "https://i1.feedspot.com/5157600.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "category": "UK Shaving",
+  "source_url": "https://rss.feedspot.com/uk_shaving_rss_feeds",
+  "feeds": [
+    {
+      "title": "Shavers.co.uk Blog",
+      "feed_url": "https://www.shavers.co.uk/blog/feed",
+      "website_url": "https://www.shavers.co.uk/blog/",
+      "description": "Since opening in 1998, Shavers.co.uk aspires to offer the most comprehensive collection of online Electric Shaver products and related information. Male grooming explained with expert advice and product recommendations and suggestions",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4779092.jpg?t=1609165229"
+    },
+    {
+      "title": "Edwards Traditional Shaving Emporium Blog",
+      "feed_url": "https://edwardstraditionalshavingemporium.co.uk/feed/",
+      "website_url": "https://edwardstraditionalshavingemporium.co.uk/blog/",
+      "description": "Edwards traditional shaving emporium features products like the Traditional safety razors, Straight razors and strops, Shaving sets, Contemporary designer razors, Badger hair brushes, Shaving mugs and bowls and an abundant array of luxurious shaving soaps and creams.",
+      "followers": {
+        "twitter": 348
+      },
+      "image_url": "https://i1.feedspot.com/4779362.jpg?t=1609165646"
+    },
+    {
+      "title": "MENROCK",
+      "feed_url": "https://menrock.co.uk/blogs/men-rock-banter.atom",
+      "website_url": "https://menrock.co.uk/blogs/men-rock-banter",
+      "description": "Follow us to keep up with a comprehensive collection of expertly designed men's beard and shaving products and accessories, also find tips and tricks on shaving.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4640822.jpg?t=1616507204"
+    },
+    {
+      "title": "Electricshaversuk.co.uk Blog",
+      "feed_url": "https://electricshaversuk.co.uk/feed/",
+      "website_url": "https://electricshaversuk.co.uk/blog/",
+      "description": "Follow us to keep up with articles from Electricshaversuk.co.uk",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4921083.jpg?t=1620804428"
+    }
+  ]
+}

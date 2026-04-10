@@ -1,0 +1,171 @@
+{
+  "category": "Government Technology",
+  "source_url": "https://rss.feedspot.com/government_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "StateTech Magazine",
+      "feed_url": "https://feeds.feedburner.com/StateTech",
+      "website_url": "https://statetechmagazine.com/news",
+      "description": "Covers Security Management, Networking, Digital Workspace, Cloud Public, Safety Management, Data Center, Hardware, and more. StateTech Magazine explore technology issues that state and local government IT leaders and workers face when they're evaluating and implementing technology solutions.",
+      "followers": {
+        "facebook": 116300,
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5197224.jpg?t=1655727150"
+    },
+    {
+      "title": "Nextgov/FCW",
+      "feed_url": "https://www.nextgov.com/rss/all/",
+      "website_url": "https://www.nextgov.com/",
+      "description": "Nextgov's mission is to lead the national discussion about how technology and innovation are transforming the way government agencies serve citizens and perform vital functions. Nextgov provides Federal technology news, best practices, and web 2.0 tools.",
+      "followers": {
+        "facebook": 52,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/1175437.jpg?t=1663045181"
+    },
+    {
+      "title": "Government Technology Insider",
+      "feed_url": "https://governmenttechnologyinsider.com/feed/",
+      "website_url": "https://governmenttechnologyinsider.com/",
+      "description": "Covers articles on Digital Transformation, Ai & Data, Civilian, Transformative Tech, Cybersecurity, Defense & IC. Government Technology Insider is a digital community where thought leaders share their best practices, lessons learned, and proven strategies for using innovative technologies to address the challenges faced by federal, state, and local governments.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5305195.jpg?t=1627282343"
+    },
+    {
+      "title": "Technology in Government",
+      "feed_url": "https://technology.blog.gov.uk/feed/",
+      "website_url": "https://www.blog.gov.uk/",
+      "description": "Covers Data, Digital Marketplace, Security, Tools, Jobs, Technology, Transformation, and more. It is the place to go for digital, data, and technology careers in the UK government.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5128629.jpg?t=1627277600"
+    },
+    {
+      "title": "Azure Government",
+      "feed_url": "https://devblogs.microsoft.com/azuregov/feed/",
+      "website_url": "https://devblogs.microsoft.com/azuregov/",
+      "description": "Get Insights, how-tos, and updates for building solutions on Microsoft's cloud for the US government. Azure is an open and flexible cloud computing platform created by Microsoft.",
+      "followers": {
+        "facebook": 779300,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5304868.jpg?t=1627278071"
+    },
+    {
+      "title": "GovPilot Blog",
+      "feed_url": "https://www.govpilot.com/blog/rss.xml",
+      "website_url": "https://www.govpilot.com/blog",
+      "description": "Covers Constituent Engagement, Government Efficiency, GovInspect App, Digital Transformation, Cybersecurity, Emergency Management, Civic Engagement, Customer Success, Open Data, News and Press Release. GovPilot is a cloud-based Management Platform developed exclusively for local government.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 285,
+        "instagram": 412
+      },
+      "image_url": "https://i1.feedspot.com/5304874.jpg?t=1627279420"
+    },
+    {
+      "title": "NIST",
+      "feed_url": "https://www.nist.gov/blogs/taking-measure/rss.xml",
+      "website_url": "https://www.nist.gov/blogs/taking-measure",
+      "description": "National Institute of Standards and Technology Blog provides a behind-the-scenes look at NIST's research and programs, covering a broad range of science and technology areas in the Taking Measure segment. Founded in 1901, NIST is one of the nation's oldest physical science laboratories that work towards advancing measurement science, standards, and technology in ways that enhance economic security and improve our quality of life.",
+      "followers": {
+        "facebook": 120300,
+        "twitter": 89300,
+        "instagram": 66700
+      },
+      "image_url": "https://i1.feedspot.com/4865153.jpg?t=1659089924"
+    },
+    {
+      "title": "National Institute of Standards and Technology \u00bb NIST News",
+      "feed_url": "https://www.nist.gov/news-events/news/rss.xml",
+      "website_url": "https://www.nist.gov/news-events/news",
+      "description": "NIST promotes U.S. innovation and industrial competitiveness by advancing measurement science, standards, and technology in ways that enhance economic security and improve the quality of life.",
+      "followers": {
+        "facebook": 120300,
+        "twitter": 89300,
+        "instagram": 66700
+      },
+      "image_url": "https://i1.feedspot.com/4892572.jpg?t=1628147702"
+    },
+    {
+      "title": "CIO.GOV",
+      "feed_url": "https://www.cio.gov/feed.xml",
+      "website_url": "https://www.cio.gov/news/",
+      "description": "Here you can find articles from the CIO Council and our partners. The Chief Information Officers (CIO) Council is the principal interagency forum for improving agency practices related to the design, acquisition, development, modernization, use, sharing, and performance of Federal information resources.",
+      "followers": {
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5308915.jpg?t=1628145843"
+    },
+    {
+      "title": "NC Department of Information Technology Blog",
+      "feed_url": "https://it.nc.gov/news/feed",
+      "website_url": "https://it.nc.gov/news/blog",
+      "description": "This is the official page of the North Carolina Department of Information Technology. Provides IT services, including network hosting, cybersecurity, data analytics, and desktop computing and also support to North Carolina government entities and leader of the state's broadband expansion efforts.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5308893.jpg?t=1628146705"
+    },
+    {
+      "title": "Cisco Blogs",
+      "feed_url": "https://blogs.cisco.com/government/feed",
+      "website_url": "https://blogs.cisco.com/government",
+      "description": "Get Insights and opinions on global government challenges and happenings in technology.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 4700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/5044512.jpg?t=1627278944"
+    },
+    {
+      "title": "DCMS blog",
+      "feed_url": "https://dcmsblog.uk/category/digital/feed/",
+      "website_url": "https://dcmsblog.uk/category/digital/",
+      "description": "UK Government Department for Digital, Culture, Media, and Sport (DCMS). Covers all the latest news, campaigns, and policy announcements related to the digital field in the UK.",
+      "followers": {
+        "facebook": 56500,
+        "twitter": 287400,
+        "instagram": 34100
+      },
+      "image_url": "https://i1.feedspot.com/5305204.jpg?t=1627280024"
+    },
+    {
+      "title": "California Department of Technology News",
+      "feed_url": "https://cdt.ca.gov/newsroom/feed/",
+      "website_url": "https://cdt.ca.gov/newsroom/",
+      "description": "Hosted by the California Department of Technology, The Tech Blog is a site that provides news and information related to the IT community working in the California state government. Whether you are a state IT professional, a vendor doing business with the State, or a curious taxpayer wanting to know about the inner workings of the IT world within state government, this blog will be informative and useful.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5304870.jpg?t=1627278699"
+    },
+    {
+      "title": "Government Digital Service",
+      "feed_url": "https://gds.blog.gov.uk/feed/atom",
+      "website_url": "https://gds.blog.gov.uk/",
+      "description": "Government Digital Service (GDS) builds platforms, products and services that help deliver a simple, joined-up and personalized experience of government to everyone.",
+      "followers": {
+        "twitter": 113600,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/3993252.jpg?t=1627277770"
+    },
+    {
+      "title": "Iowa STEM | Department of Education",
+      "feed_url": "https://educate.iowa.gov/iowa-stem/",
+      "website_url": "https://educate.iowa.gov/iowa-stem/",
+      "description": "The Governor's STEM Advisory Council's mission is increasing interest and achievement in STEM (science, technology, engineering, and mathematics) studies and careers through partnerships engaging PreK-12 students, parents, educators, employers, non-profits, policy leaders, and others.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5308887.jpg?t=1628146962"
+    }
+  ]
+}

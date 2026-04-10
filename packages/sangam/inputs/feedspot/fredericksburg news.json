@@ -1,0 +1,30 @@
+{
+  "category": "Fredericksburg News",
+  "source_url": "https://rss.feedspot.com/fredericksburg_virginia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Fredericksburg",
+      "feed_url": "https://www.fredericksburgva.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.fredericksburgva.gov/CivicAlerts.aspx?sort=date",
+      "description": "Fredericksburg, VA is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 2400,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5215334.jpg?t=1605023874"
+    },
+    {
+      "title": "Potomac Local \u00bb Fredericksburg",
+      "feed_url": "https://www.potomaclocal.com/fredericksburg/feed/",
+      "website_url": "https://www.potomaclocal.com/fredericksburg/",
+      "description": "Welcome to your source for news and events happening right here in Virginia's Potomac communities. PotomacLocal.com is the leading independently owned and operated source of local news in Prince William and Stafford counties, and the cities of Manassas and Manassas Park. It is constantly updated with the latest local news information. Stay tuned to get the latest news happening in Fredericksburg, VA.",
+      "followers": {
+        "facebook": 21300,
+        "twitter": 5900,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5215336.jpg?t=1605024449"
+    }
+  ]
+}

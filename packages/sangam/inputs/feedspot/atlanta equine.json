@@ -1,0 +1,75 @@
+{
+  "category": "Atlanta Equine",
+  "source_url": "https://rss.feedspot.com/atlanta_equine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bearfoot Ranch News",
+      "feed_url": "https://bearfootranch.org/feed/",
+      "website_url": "https://bearfootranch.org/news/",
+      "description": "Equine Therapy and Horse Rescue",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 30,
+        "instagram": 277
+      },
+      "image_url": "https://i1.feedspot.com/5633017.jpg?t=1690174886"
+    },
+    {
+      "title": "New London Farm Blog",
+      "feed_url": "https://www.newlondonfarm.horse/blog-feed.xml",
+      "website_url": "https://www.newlondonfarm.horse/blog",
+      "description": "New London Farm offers overnight stays in two Airbnb's, horseback riding lessons, farm tours, summer camps and special events.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 323
+      },
+      "image_url": "https://i1.feedspot.com/5633370.jpg?t=1690183527"
+    },
+    {
+      "title": "Sweet Fresno Photography Blog",
+      "feed_url": "https://www.sweetfresnophotography.com/feed/",
+      "website_url": "https://www.sweetfresnophotography.com/blog/",
+      "description": "Atlanta, Georgia Equestrian Photographer",
+      "followers": {
+        "facebook": 832,
+        "twitter": 140,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5632936.jpg?t=1689943309"
+    },
+    {
+      "title": "Chastain Horse Park News",
+      "feed_url": "https://www.chastainhorsepark.org/blog-feed.xml",
+      "website_url": "https://www.chastainhorsepark.org/news",
+      "description": "Chastain Horse Park",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 31,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5632935.jpg?t=1689943303"
+    },
+    {
+      "title": "Georgia Equine Rescue League Blog",
+      "feed_url": "https://gerlltd.org/feed/",
+      "website_url": "https://gerlltd.org/blog-patty/",
+      "description": "Georgia Equine Rescue League (GERL) is a non-profit organization with 501 (c) (3) status that believes it is the responsibility of its members to help find solutions to the growing problem of starved, abused, and neglected equine in the state of Georgia.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 57,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5633372.jpg?t=1690183741"
+    },
+    {
+      "title": "Tommie Turvey Blog",
+      "feed_url": "https://tommieturvey.com/feed/",
+      "website_url": "https://tommieturvey.com/blog/",
+      "description": "Tommie Turvey provides safe, well- trained animals for entertainment and inspiring all animal lovers to do more with their four legged friends.",
+      "followers": {
+        "twitter": 606
+      },
+      "image_url": "https://i1.feedspot.com/5633371.jpg?t=1690184116"
+    }
+  ]
+}

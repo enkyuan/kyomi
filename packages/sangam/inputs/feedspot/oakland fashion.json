@@ -1,0 +1,88 @@
+{
+  "category": "Oakland Fashion",
+  "source_url": "https://rss.feedspot.com/oakland_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dorian Webb Blog",
+      "feed_url": "https://dorianwebb.com/blogs/news.atom",
+      "website_url": "https://dorianwebb.com/blogs/news/",
+      "followers": {
+        "facebook": 881
+      },
+      "image_url": "https://i1.feedspot.com/5738150.jpg?t=1702883549"
+    },
+    {
+      "title": "Oakland's Own Blog",
+      "feed_url": "https://www.oaklandsown1852.com/oaklander-blog?format=rss",
+      "website_url": "https://www.oaklandsown1852.com/oaklander-blog",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5738153.jpg?t=1702883565"
+    },
+    {
+      "title": "Oaklandish Blog",
+      "feed_url": "https://www.oaklandish.com/blogs/news.atom",
+      "website_url": "https://www.oaklandish.com/blogs/news",
+      "description": "Stay updated with the latest news from Oaklandish, featuring community stories, events, and updates on our mission to support Oakland's culture and creativity.",
+      "followers": {
+        "facebook": 48000,
+        "twitter": 65700
+      },
+      "image_url": "https://i1.feedspot.com/5738149.jpg?t=1702883542"
+    },
+    {
+      "title": "Anatoly & Sons Blog",
+      "feed_url": "https://www.anatolys.com/blogs/from-the-journal.atom",
+      "website_url": "https://www.anatolys.com/blogs/from-the-journal",
+      "followers": {
+        "facebook": 413
+      },
+      "image_url": "https://i1.feedspot.com/5738151.jpg?t=1702883554"
+    },
+    {
+      "title": "Taylor Jay Collection Blog",
+      "feed_url": "https://www.taylorjaycollection.com/blogs/news.atom",
+      "website_url": "https://www.taylorjaycollection.com/blogs/news",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 714
+      },
+      "image_url": "https://i1.feedspot.com/5738148.jpg?t=1702883535"
+    },
+    {
+      "title": "The Oaklandside \u00bb Oakland Fashion Designers",
+      "feed_url": "https://oaklandside.org/tag/oakland-fashion-designers/feed/",
+      "website_url": "https://oaklandside.org/tag/oakland-fashion-designers/",
+      "description": "The Oaklandside. Journalism for Oakland.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 19300,
+        "instagram": 30100
+      },
+      "image_url": "https://i1.feedspot.com/5738154.jpg?t=1702883572"
+    },
+    {
+      "title": "East Bay Magazine \u00bb Fashion",
+      "feed_url": "https://www.eastbaymag.com/lifestyle-home/fashion/feed/",
+      "website_url": "https://www.eastbaymag.com/lifestyle-home/fashion/",
+      "description": "THE MAGAZINE OF OAKLAND, BERKELEY AND THE WORLD THAT REVOLVES AROUND US",
+      "followers": {
+        "facebook": 66,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5738152.jpg?t=1702883943"
+    },
+    {
+      "title": "Work It, Berk",
+      "feed_url": "https://workitberk.blogspot.com/feeds/posts/default",
+      "website_url": "https://workitberk.blogspot.com/",
+      "description": "Street style and food blog based in Oakland, CA",
+      "followers": {
+        "facebook": 534,
+        "twitter": 991
+      },
+      "image_url": "https://i1.feedspot.com/5738224.jpg?t=1702883888"
+    }
+  ]
+}

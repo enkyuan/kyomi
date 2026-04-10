@@ -1,0 +1,39 @@
+{
+  "category": "TensorFlow",
+  "source_url": "https://rss.feedspot.com/tensorflow_rss_feeds",
+  "feeds": [
+    {
+      "title": "The TensorFlow Blog",
+      "feed_url": "https://blog.tensorflow.org/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.tensorflow.org/",
+      "description": "The blog contains regular news from the TensorFlow team and the community, with articles on Python, TensorFlow.js, TF Lite, and TFX. TensorFlow is a fast, flexible, and scalable open-source machine-learning library for research and production.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 384800
+      },
+      "image_url": "https://i1.feedspot.com/5329236.jpg?t=1633584138"
+    },
+    {
+      "title": "RStudio \u00bb TensorFlow for R",
+      "feed_url": "https://blogs.rstudio.com/tensorflow/index.xml",
+      "website_url": "https://blogs.rstudio.com/ai/",
+      "description": "RStudio is the Open source and enterprise-ready professional software for the R community. Follow this blog for news, insights, and in-depth case studies on the R interface to TensorFlow and Keras.",
+      "followers": {
+        "facebook": 31,
+        "twitter": 189
+      },
+      "image_url": "https://i1.feedspot.com/4973102.jpg?t=1621941020"
+    },
+    {
+      "title": "Adventures in Machine Learning \u00bb TensorFlow",
+      "feed_url": "https://www.adventuresinmachinelearning.com/category/deep-learning/tensorflow/feed/",
+      "website_url": "https://www.adventuresinmachinelearning.com/",
+      "description": "Adventures in Machine Learning is the Machine learning explorer, educator, and enthusiast. Explore and learn all about machine learning, deep learning, TensorFlow, artificial intelligence, tutorials, news, and more here.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 206
+      },
+      "image_url": "https://i1.feedspot.com/4973167.jpg?t=1621941012"
+    }
+  ]
+}

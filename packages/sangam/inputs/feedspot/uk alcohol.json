@@ -1,0 +1,70 @@
+{
+  "category": "UK Alcohol",
+  "source_url": "https://rss.feedspot.com/uk_alcohol_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Sober School Blog",
+      "feed_url": "https://thesoberschool.com/feed/",
+      "website_url": "https://thesoberschool.com/kates-blog/",
+      "description": "The Sober School is an online hub with the mission of inspiring and supporting women who are tired of feeling hungover.",
+      "followers": {
+        "facebook": 32100,
+        "twitter": 2500,
+        "instagram": 29900
+      },
+      "image_url": "https://i1.feedspot.com/4905617.jpg?t=1613649676"
+    },
+    {
+      "title": "Alcoholic Daze",
+      "feed_url": "https://alcoholicdaze.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://alcoholicdaze.blogspot.com/",
+      "description": "My husband recently died after a long struggle with alcoholism and I am making the slow climb back to normality.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4905520.jpg?t=1613649728"
+    },
+    {
+      "title": "SoberPunks",
+      "feed_url": "https://soberpunks.co.uk/feed/",
+      "website_url": "https://soberpunks.co.uk/",
+      "description": "Soberpunks.co.uk is a sweary alcohol recovery blog that is written by mid-thirties ex-drinker Jon Turner. Soberpunks.co.uk was launched in September 2016, to mark his first year of sobriety. Since its launch, Jon's blog has received praise for its honesty, wanking jokes, and non-patronizing approach to offering advice and support.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4905513.jpg?t=1613649692"
+    },
+    {
+      "title": "Mummy was a Secret Drinker",
+      "feed_url": "http://mummywasasecretdrinker.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mummywasasecretdrinker.blogspot.com/",
+      "description": "Clare Pooley had a wild and turbulent love affair with high priced good quality wine until she realized that the relationship was heading rapidly downhill. She was overweight, stuck in a rut, tired and anxious. So she quit, and started a blog - Mummy was a Secret Drinker - to help mend her broken heart. To read Clare's story, and for lots of help and advice on going sober in a world where everyone drinks.",
+      "followers": {
+        "facebook": 25500,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4905627.jpg?t=1613649706"
+    },
+    {
+      "title": "Club Soda",
+      "feed_url": "https://joinclubsoda.com/feed/",
+      "website_url": "https://joinclubsoda.com/hub/",
+      "description": "Club Soda is a supportive community for people wanting to change their drinking: cut down, stop for a bit or quit. Want to know about mindful drinking, non-drinking, our courses or events? Check our blog with hundreds of articles about life, alcohol, mindfulness, and more.",
+      "followers": {
+        "twitter": 13100,
+        "instagram": 35200
+      },
+      "image_url": "https://i1.feedspot.com/4905620.jpg?t=1613649688"
+    },
+    {
+      "title": "Alcohol Policy UK",
+      "feed_url": "https://www.alcoholpolicy.net/index.rdf",
+      "website_url": "https://www.alcoholpolicy.net/",
+      "description": "Alcohol news and analysis helping those in the UK field to stay up to date.",
+      "followers": {
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4905635.jpg?t=1613649672"
+    }
+  ]
+}

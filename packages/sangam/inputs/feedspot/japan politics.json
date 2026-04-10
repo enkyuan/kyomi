@@ -1,0 +1,73 @@
+{
+  "category": "Japan Politics",
+  "source_url": "https://rss.feedspot.com/japan_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Japan Today \u00bb Politics",
+      "feed_url": "https://japantoday.com/category/politics/feed",
+      "website_url": "https://japantoday.com/category/politics",
+      "description": "This news section covers articles on Political updates and more. Japan Today is the leading English news site about Japan, featuring all the latest news and stimulating reader discussions on domestic and international issues.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 139400,
+        "instagram": 36900
+      },
+      "image_url": "https://i1.feedspot.com/5118837.jpg?t=1748236593"
+    },
+    {
+      "title": "News On Japan \u00bb Politics",
+      "feed_url": "https://newsonjapan.com/html/newsdesk/Politics_News/rss/index.xml",
+      "website_url": "https://newsonjapan.com/politics/",
+      "description": "This section of news articles covers political updates. News On Japan covers articles on Society, Business, Education, Sci-tech, Sports, Travel and more.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/5331716.jpg?t=1634368604"
+    },
+    {
+      "title": "The Japan News \u00bb Political News",
+      "feed_url": "https://japannews.yomiuri.co.jp/politics/feed/",
+      "website_url": "https://japannews.yomiuri.co.jp/news/politics/",
+      "description": "Latest news and analysis about Japanese politics. The Japan News provides breaking news, opinion, in-depth stories on politics, business, society, sports, Cool Japan, culture, arts, entertainment, more.",
+      "followers": {
+        "facebook": 176300,
+        "twitter": 221900
+      },
+      "image_url": "https://i1.feedspot.com/5332004.jpg?t=1634370892"
+    },
+    {
+      "title": "Foreign Policy \u00bb Japan",
+      "feed_url": "https://foreignpolicy.com/tag/japan/feed/",
+      "website_url": "https://foreignpolicy.com/tag/japan/",
+      "description": "Foreign Policy is the premier, award-winning magazine of global politics, economics, and ideas. This section covers articles related to Japan.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5331713.jpg?t=1634368417"
+    },
+    {
+      "title": "TokyoReporter \u00bb Politics",
+      "feed_url": "https://www.tokyoreporter.com/category/politics/feed/",
+      "website_url": "https://www.tokyoreporter.com/category/politics/",
+      "description": "Read the latest salacious news from Tokyo and beyond. From yakuza to prostitution to murder, Tokyo Reporter has the underside of Japan covered.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 47800
+      },
+      "image_url": "https://i1.feedspot.com/5331890.jpg?t=1634369134"
+    },
+    {
+      "title": "Shingetsu News \u00bb Politics",
+      "feed_url": "https://shingetsunewsagency.com/category/politics/feed/",
+      "website_url": "https://shingetsunewsagency.com/category/politics/",
+      "description": "Japan's Progressive News Source. Covers articles on Japan political updates and more.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5331893.jpg?t=1634370816"
+    }
+  ]
+}

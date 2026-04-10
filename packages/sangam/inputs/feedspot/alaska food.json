@@ -1,0 +1,61 @@
+{
+  "category": "Alaska Food",
+  "source_url": "https://rss.feedspot.com/alaska_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Little House Big Alaska",
+      "feed_url": "https://littlehousebigalaska.com/feed",
+      "website_url": "https://littlehousebigalaska.com/",
+      "description": "Laura Sampson is on a mission to teach modern family oriented women how to make old-fashioned foods new again. A wife and mom of 3 boys, Laura understands the struggles of trying to serve a home-cooked meal each night. She provides recipes and cooking hacks for busy moms to create dishes they may think to take more time or skill than they have to make.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 3600,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4890594.jpg?t=1597223659"
+    },
+    {
+      "title": "Coleen's Recipes Blog",
+      "feed_url": "https://coleensrecipes.blogspot.com/feeds/posts/default",
+      "website_url": "https://coleensrecipes.blogspot.com/",
+      "description": "A blog on tried and true, old fashioned, family style recipes from Coleens kitchen in Alaska.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1154300.jpg?t=1628255300"
+    },
+    {
+      "title": "Allergy Free Alaska Blog",
+      "feed_url": "https://www.allergyfreealaska.com/feed/",
+      "website_url": "https://www.allergyfreealaska.com/blog/",
+      "description": "Hey, I'm Megan. Wife, mother, and gluten-free baker of 12+ years. Here you'll find my tasty from-scratch recipes that are always gluten-free and dairy-free, with some vegan and grain-free, too.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 1500,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4891330.jpg?t=1597221798"
+    },
+    {
+      "title": "Sandra's Alaska Recipes Blog",
+      "feed_url": "https://sandrarecipeblogsite.blogspot.com/feeds/posts/default",
+      "website_url": "https://sandrarecipeblogsite.blogspot.com/",
+      "description": "Newly created recipes and traditional favorites featuring wild Alaska salmon, seafood, venison. moose and waterfowl.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5181255.jpg?t=1597313515"
+    },
+    {
+      "title": "Alaska Magazine \u00bb Alaskan Food",
+      "feed_url": "https://alaskamagazine.com/tag/alaskan-food/feed/",
+      "website_url": "https://alaskamagazine.com/tag/alaskan-food/",
+      "description": "Great stories, photography, videos and food recipes at Alaska Magazine. They have been sharing authentic Alaska since 1935. Today's Alaska is a vibrant and multifaceted place, and guide you on adventures large and small while you explore life on the Last Frontier through images and stories by award-winning photographers and writers.",
+      "followers": {
+        "facebook": 369100,
+        "twitter": 12900,
+        "instagram": 31300
+      },
+      "image_url": "https://i1.feedspot.com/5310087.jpg?t=1628258702"
+    }
+  ]
+}

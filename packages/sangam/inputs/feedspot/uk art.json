@@ -1,0 +1,585 @@
+{
+  "category": "UK Art",
+  "source_url": "https://rss.feedspot.com/uk_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "ARTMAG Magazine",
+      "feed_url": "https://artmag.co.uk/feed/",
+      "website_url": "https://artmag.co.uk/",
+      "description": "Artmag has always aimed to celebrate and support the galleries, artists, the performing arts and arts related businesses and inspire readers to become an 'art lover' and value a life filled with the arts. Join us as we highlight the news and reviews from the world of music, opera, dance theatre, screenings and more.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 3900,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/4855437.jpg?t=1611755829"
+    },
+    {
+      "title": "Making a Mark",
+      "feed_url": "https://makingamark.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://makingamark.blogspot.com/",
+      "description": "A top art blog for artists and art lovers: news about major art competitions and exhibitions, interviews with artists, techniques and tips for art and business",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4854127.jpg?t=1611755833"
+    },
+    {
+      "title": "Aesthetica Magazine",
+      "feed_url": "https://aestheticamagazine.com/category/art-design/feed/",
+      "website_url": "https://aestheticamagazine.com/category/art-design/",
+      "description": "Aesthetica is one of the leading magazines on art, design, photography, architecture, music, film and performance.",
+      "followers": {
+        "facebook": 157800,
+        "twitter": 122400,
+        "instagram": 101700
+      },
+      "image_url": "https://i1.feedspot.com/4946663.jpg?t=1611755838"
+    },
+    {
+      "title": "Street Art News",
+      "feed_url": "https://streetartnews.net/feed",
+      "website_url": "https://streetartnews.net/",
+      "description": "StreetArtNews, founded in 2009 by Rom Levy, is a premier publication dedicated to urban art, providing comprehensive coverage on street art, graffiti, and related cultural movements. As the definitive guide to the street art world, it features news, exhibition reviews, artist interviews, and in-depth analyses. The editorial team, led by Levy as Editor-in-Chief, has established the platform as a trusted source for art enthusiasts and professionals alike.",
+      "followers": {
+        "facebook": 265000,
+        "twitter": 65200,
+        "instagram": 620400
+      },
+      "image_url": "https://i1.feedspot.com/4476386.jpg?t=1602849637"
+    },
+    {
+      "title": "The Lazarus Corporation",
+      "feed_url": "https://feeds.feedburner.com/artistsnotebook",
+      "website_url": "https://www.lazaruscorporation.co.uk/blogs/artists-notebook",
+      "description": "Paul Watson's notes on ongoing artwork, give an insight into the creative process. Paul skillfully details and arranges academic commentary on a myriad of social, cultural, and political subjects. The Lazarus Corporation is a coalition of independent artists, writers, & musicians working on related themes, exhibiting and selling their work directly online.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5607854.jpg?t=1687780789"
+    },
+    {
+      "title": "Art2Arts Online Magazine",
+      "feed_url": "https://art2arts.co.uk/magazine/feed/",
+      "website_url": "https://art2arts.co.uk/magazine/",
+      "description": "Art2Arts is the leading online art gallery that helps you discover and connect with some of the world's most talented artists.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4992907.jpg?t=1611755864"
+    },
+    {
+      "title": "Frustration Inkorporated",
+      "feed_url": "http://frustration-ink.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://frustration-ink.blogspot.com/",
+      "description": "I'm Anne born in Denmark, I came to the UK to study animation and after finishing my BA (Hons) in Animation Production I decided to stick around. I love digital painting, writing, riding my motorbike and singing.This is my blog where I post the things that I draw and paint.",
+      "followers": {
+        "facebook": 394,
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/4650885.jpg?t=1604584559"
+    },
+    {
+      "title": "GraffitiStreet",
+      "feed_url": "https://www.graffitistreet.com/feed/",
+      "website_url": "https://www.graffitistreet.com/news/",
+      "description": "GraffitiStreet is a brand new urban art store selling limited edition screen prints and original artwork from the world's best graffiti and street artists.. Follow this blog to know about their artists, shows, interviews and much more.",
+      "followers": {
+        "facebook": 55000,
+        "twitter": 1200,
+        "instagram": 45000
+      },
+      "image_url": "https://i1.feedspot.com/4855247.jpg?t=1611755851"
+    },
+    {
+      "title": "Arena illustration",
+      "feed_url": "https://www.arenaillustration.com/news/feed/",
+      "website_url": "https://www.arenaillustration.com/news/",
+      "description": "Arena illustration represents a diverse group of illustrators with an array of distinctive styles. Beautiful and eye-catching illustrations for book covers, children's books, magazines and newspapers, designs for packaging and advertising campaigns.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4684783.jpg?t=1606195297"
+    },
+    {
+      "title": "Inspiring City",
+      "feed_url": "https://inspiringcity.com/feed/",
+      "website_url": "https://inspiringcity.com/",
+      "description": "Inspiring City is a Street art blog featuring the best artists, interviews, murals, and graffiti from London and around the world. Discover new and emerging artists on the London Street Art scene.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4855156.jpg?t=1611755860"
+    },
+    {
+      "title": "BOHA Blog",
+      "feed_url": "https://www.bohaglass.co.uk/blog/feed/",
+      "website_url": "https://www.bohaglass.co.uk/blog/",
+      "description": "Boha Glass is run by husband and wife team Anna and Barnaby Kirsen. Since 2010, they have been scouring the world for the very best art glass and collaborating with leading glass artists. As a couple, they have always loved colourful, unique bohemian glass art. Here at Boha, we love what we do and are so proud to say that over the past decade and a bit, we have carefully curated and provided beautiful artwork to individuals in the UK and across the globe. We have supplied Super Yachts and Cruise ships, Hollywood Studios, British TV and even Royalty!",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4679008.jpg?t=1602850645"
+    },
+    {
+      "title": "Dot-Art Blog",
+      "feed_url": "https://dot-art.co.uk/feed/",
+      "website_url": "https://dot-art.co.uk/news/",
+      "description": "dot-art: buy art online or in our Liverpool gallery, sign up for an art class, buy, rent or commission art for your business, support local artists.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5000,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4854999.jpg?t=1611756106"
+    },
+    {
+      "title": "Original Watercolours by Tim Wilmot",
+      "feed_url": "https://feeds.feedburner.com/OriginalWatercoloursByTimWilmot",
+      "website_url": "https://www.timwilmot.com/",
+      "description": "Watercolor paintings from UK artist Tim Wilmot. As I paint them, I upload them with some watercolour hints and tips along the way. Plus get the latest information on any watercolour courses and workshops I am doing in the future.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4583070.jpg?t=1602850688"
+    },
+    {
+      "title": "London Calling Blog",
+      "feed_url": "https://londoncallingblog.net/feed/",
+      "website_url": "https://londoncallingblog.net/",
+      "description": "London Calling Blog have set to share our passion for and love of Street Art around our home of London. We have taken our love of documenting the scene and ventured into trying to facilitate the addition of Street Art around London, setting to brighten and add expression to the local communities they adorn.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4569711.jpg?t=1675849064"
+    },
+    {
+      "title": "scribblah",
+      "feed_url": "https://scribblah.co.uk/feed/",
+      "website_url": "https://scribblah.co.uk/",
+      "description": "Hello, I'm Rose Davies, ageing rock chick, scribbler and printmaker.Drawing obsessed ageing headbanger and Thatcher survivor; printmaker and scribbler; my work is drawn from life and from the deep dark moist places where you don't want to go.",
+      "followers": {
+        "facebook": 782,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4855426.jpg?t=1611756200"
+    },
+    {
+      "title": "Sasha Ward Blog",
+      "feed_url": "https://www.sashaward.co.uk/blog?format=RSS",
+      "website_url": "https://www.sashaward.co.uk/blog/",
+      "description": "Sasha Ward is a blog on Architectural Glass Design and Fabrication Modern Stained Glass. Subscribe to keep up with latest articles from this blog.",
+      "followers": {
+        "twitter": 918
+      },
+      "image_url": "https://i1.feedspot.com/4681125.jpg?t=1611756220"
+    },
+    {
+      "title": "Dispatches in Art History",
+      "feed_url": "https://manchesterarthistory.wordpress.com/feed/",
+      "website_url": "https://manchesterarthistory.wordpress.com/",
+      "description": "A community blog for research, news and events from Art History and Visual Studies at the University of Manchester. News on research and events from the Department of Art History, University of Manchester.",
+      "followers": {
+        "facebook": 120,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4652074.jpg?t=1608193328"
+    },
+    {
+      "title": "Joanna Gilbert Blog",
+      "feed_url": "https://joannagilbert.com/blog?format=rss",
+      "website_url": "https://joannagilbert.com/blog",
+      "description": "Joanna Gilbert, a 2018 graduate with a Masters in Fine Art from UAL Chelsea College of Arts, earned distinction for her groundbreaking 'NOTHING TO BUY' body of work. Her bold, large-scale abstract pieces exude visceral energy, symbolizing freedom and limitless potential. Through recent exhibitions, press features, and studio updates, Joanna invites audiences to immerse themselves in the abstract art realm, witnessing her fearless and transformative artistic journey unfold.",
+      "followers": {
+        "facebook": 578,
+        "twitter": 1400,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4541727.jpg?t=1604585101"
+    },
+    {
+      "title": "Blog Alison G Saunders Art",
+      "feed_url": "https://alisongsaunders.co.uk/feed/",
+      "website_url": "https://alisongsaunders.co.uk/blog/",
+      "description": "Hello! Alison Saunders, a Painter/Print maker producing original artworks for homes, offices and public spaces. Through this blog section I provide useful information about the world of art and you can see some of the work I have produced.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 41,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5058166.jpg?t=1611756427"
+    },
+    {
+      "title": "Art Plugged",
+      "feed_url": "https://artplugged.co.uk/feed/",
+      "website_url": "https://artplugged.co.uk/",
+      "description": "Art Plugged emerges as a contemporary platform deeply connected to diverse arts communities worldwide. Offering curated insights, from exhibitions to artist interviews, it provides a comprehensive view of the art world. Showcasing various mediums from across the globe, Art Plugged caters to both casual art enthusiasts and serious collectors alike, ensuring all are embraced within its vibrant artistic tapestry.",
+      "followers": {
+        "facebook": 413,
+        "twitter": 5000,
+        "instagram": 46800
+      },
+      "image_url": "https://i1.feedspot.com/5130575.jpg?t=1681987886"
+    },
+    {
+      "title": "The Red Door Gallery",
+      "feed_url": "https://www.edinburghart.com/feed/",
+      "website_url": "https://www.edinburghart.com/",
+      "description": "The Red Door Gallery stock a huge selection of art prints from 100 illustrators (screenprints, giclee and digital prints) sitting alongside designer products, fashion accessories, knitware, unique homewares, jewellery, artist cards and wrap.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3400,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4855481.jpg?t=1611756111"
+    },
+    {
+      "title": "Caiger Art Blog",
+      "feed_url": "https://www.caigerart.com/blog?format=RSS",
+      "website_url": "https://www.caigerart.com/blog",
+      "description": "Caiger Contemporary Art, founded by Carol Caiger, welcomes visitors to a relaxed and approachable gallery space, offering original artworks for both seasoned collectors and newcomers alike. The gallery's online platform, www.caigerart.com, presents an array of affordable and awe-inspiring contemporary art, including paintings, limited edition prints, and sculptures. Visitors can explore insightful tips on art buying and hanging, along with engaging stories about the artists and their creations. At Caiger Contemporary Art, finding the ideal artwork is an enjoyable and accessible experience.",
+      "followers": {
+        "facebook": 580,
+        "twitter": 1000,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4541497.jpg?t=1604585058"
+    },
+    {
+      "title": "Cambridge Contemporary Art Blog",
+      "feed_url": "https://www.cambridgegallery.co.uk/blog?format=RSS",
+      "website_url": "https://www.cambridgegallery.co.uk/blog",
+      "description": "Cambridge Contemporary Art, nestled near King's College, Cambridge, boasts a diverse collection of handmade prints, paintings, sculptures, and crafts. Since its establishment in 1990, the gallery has earned acclaim for its broad selection of high-quality artworks and innovative exhibitions featuring local, national, and international artists. With an open and welcoming atmosphere, visitors receive friendly assistance from knowledgeable staff, eager to share insights about the showcased artists and craftspeople.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 2100,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/4541478.jpg?t=1701704535"
+    },
+    {
+      "title": "Graffoto Blog",
+      "feed_url": "https://graffoto1.blogspot.com/feeds/posts/default",
+      "website_url": "https://graffoto1.blogspot.com/",
+      "description": "Up to the minute happenings on the streets of London. Street art, graffiti and shows too. We write about what we like, when we like.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/270516.jpg?t=1611756145"
+    },
+    {
+      "title": "Love Art Blog",
+      "feed_url": "https://loveartinsurance.co.uk/feed/",
+      "website_url": "https://loveartinsurance.co.uk/blog/",
+      "description": "The Love Art Blog is dedicated to keeping you informed of news and events in the Art Market. We've created a balance between useful information on keeping your collection safe and general news on current art events.",
+      "followers": {
+        "facebook": 113,
+        "twitter": 312
+      },
+      "image_url": "https://i1.feedspot.com/4840642.jpg?t=1611215900"
+    },
+    {
+      "title": "Nail Lacquer UK",
+      "feed_url": "https://nail-lacquer.co.uk/category/nail-art/feed/",
+      "website_url": "https://nail-lacquer.co.uk/",
+      "description": "Hi, and welcome to my nail blog! Here you can enjoy lots of nail art, tutorials and swatches. Starting from popular high street brands to more unique indie polishes.",
+      "followers": {
+        "facebook": 4300,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4530945.jpg?t=1611756194"
+    },
+    {
+      "title": "London Arts Board",
+      "feed_url": "https://londonartsboard.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://londonartsboard.blogspot.com/",
+      "description": "A gallery dedicated to giving emerging artists the chance to have a solo exhibition in London.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4946664.jpg?t=1611756205"
+    },
+    {
+      "title": "Alexandra Lunn",
+      "feed_url": "https://www.alexandralunn.com/research?format=rss",
+      "website_url": "https://www.alexandralunn.com/research",
+      "description": "We at Alexandra Lunn Studio work with copywriters and brand strategists to make beautiful work that stands out; we carry out excellent research and provide in-depth discussion with clients to identify their needs and thereafter produce outstanding work and that you can be proud of. We work with you directly to make sure that all of the design work we produce is in line with your business goals and objectives.",
+      "followers": {
+        "facebook": 584,
+        "twitter": 680,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5017152.jpg?t=1611756234"
+    },
+    {
+      "title": "Furious Filer",
+      "feed_url": "https://www.furiousfiler.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.furiousfiler.com/",
+      "description": "Hi everyone and thanks for peeking at my blog! I'm a twenty-something girl who recently discovered nail art and got instantly addicted! Although I love it I have to say I'm not the most calm person on the planet so tricky designs and techniques do get on my nerves, hence the name Furious Filer. However, good news! Apparently nail art helps you became calmer....well, I'll keep you posted but I'm not getting my hopes up!",
+      "followers": {
+        "facebook": 354,
+        "twitter": 224,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4656601.jpg?t=1605177556"
+    },
+    {
+      "title": "Alexi K - Artist",
+      "feed_url": "https://alexik-artist.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://alexik-artist.blogspot.com/",
+      "description": "My name is Alexi K. I am a contemporary artist, based in Birmingham, in the UK. My art is all about abstracting the everyday and speculating the future: architecture, people, diagrams, data, and bright colours. I'm inspired by Cubism, Futurism, Bauhaus and Constructivism. I love straight lines.",
+      "followers": {
+        "facebook": 465,
+        "twitter": 564
+      },
+      "image_url": "https://i1.feedspot.com/4946667.jpg?t=1611756245"
+    },
+    {
+      "title": "Sara Sherwood Art Blog",
+      "feed_url": "https://www.sarasherwood.co.uk/feed/",
+      "website_url": "https://www.sarasherwood.co.uk/blog/",
+      "description": "Sara creates vibrant and expressive works of art, her paintings of London, New York and other skylines reveal cities as we have never seen them before. Follow this blog to know more about Sara's paintings.",
+      "followers": {
+        "facebook": 627,
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/4854829.jpg?t=1681452487"
+    },
+    {
+      "title": "Helen Grierson Blog",
+      "feed_url": "https://www.helengrierson.co.uk/blog?format=RSS",
+      "website_url": "https://www.helengrierson.co.uk/blog/",
+      "description": "Helen Grierson is a glass artist based in Broomhill, Northumberland. Creating fused and stained glass artwork, beginner and advanced workshops and commissions. Subscribe this blog for latest news and updates from the studio of Glass Artist Helen Grierson.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 472,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4679587.jpg?t=1611756257"
+    },
+    {
+      "title": "Jewellery artist Blog",
+      "feed_url": "https://jewelleryartist.co.uk/blog/feed/",
+      "website_url": "https://jewelleryartist.co.uk/blog/",
+      "description": "Sam Rowena is a Jewellery designer-maker, creating sculptural wire and beaded jewellery / accessories and fused glass designs. Inspired by ancient civilizations, travel and nature.",
+      "followers": {
+        "facebook": 196,
+        "instagram": 324
+      },
+      "image_url": "https://i1.feedspot.com/4682516.jpg?t=1611756261"
+    },
+    {
+      "title": "Fictionail Blog",
+      "feed_url": "http://fictionail.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://fictionail.blogspot.com/",
+      "description": "I'm Mantha, 23 from Suffolk, England. I've been doing nail art for about 6 years now and am completely obsessed with it. So I decided to make this blog to share my passion with you all! I use my nails to let the creative side of my personality run wild!",
+      "followers": {
+        "twitter": 272
+      },
+      "image_url": "https://i1.feedspot.com/4532917.jpg?t=1602855608"
+    },
+    {
+      "title": "Fiona Bryer Glass Blog",
+      "feed_url": "http://www.fionabryerglass.co.uk/blog/feed",
+      "website_url": "http://www.fionabryerglass.co.uk/blog",
+      "description": "Fiona Bryer is a Glass Artist, Licentiate of The Society of Designer Craftsmen, enthused by our amazing natural world. The works she create suit both public and private settings, and range from small scale decorative bowls and sculptural centrepieces to larger scale wall panels.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 195
+      },
+      "image_url": "https://i1.feedspot.com/4682503.jpg?t=1611756411"
+    },
+    {
+      "title": "Clare Bowen",
+      "feed_url": "https://clarebowen.co.uk/feed/",
+      "website_url": "https://clarebowen.co.uk/blog/",
+      "description": "My painting has been influenced by some of the positive experiences in my life. I grew up on Hayling, a small island in Hampshire on the south coast of England where water and boats were never far away. Even though I am now temporarily landlocked in Surrey, the appeal that water holds constantly inspires me to return to it to paint.",
+      "followers": {
+        "twitter": 911,
+        "instagram": 122300
+      },
+      "image_url": "https://i1.feedspot.com/5042860.jpg?t=1611756418"
+    },
+    {
+      "title": "CreativeFolk",
+      "feed_url": "https://creativefolk.co.uk/feed/",
+      "website_url": "https://creativefolk.co.uk/news/",
+      "description": "Our goal is to bring the most exciting, original art directly to you, without all the pompous nonsense that seems to surround the art world. We simply want to showcase, for you, what we believe is stunning art from very talented artists at a fair price. Our main focus is art and prints but we aim to discover more exciting products from the worlds of sculpture, photography, and even fashion. CreativeFolk will continue to develop and grow and we'd love for you to join us on this very exciting artistic journey.",
+      "followers": {
+        "facebook": 486,
+        "twitter": 30,
+        "instagram": 382
+      },
+      "image_url": "https://i1.feedspot.com/5175792.jpg?t=1611756431"
+    },
+    {
+      "title": "Carla's Curiosities Blog",
+      "feed_url": "https://www.carlascuriosities.com/blog/feed/",
+      "website_url": "https://www.carlascuriosities.com/blog/",
+      "description": "Find unique Art for the Home and Workplace Art at Carla's Curiosities. Be the first to get the latest news about our artists, deals, seasonal specials, and new arrivals.",
+      "followers": {
+        "facebook": 311,
+        "twitter": 14900,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5061635.jpg?t=1611756527"
+    },
+    {
+      "title": "Fierce Nice",
+      "feed_url": "https://feeds.feedburner.com/FierceNice-Blog",
+      "website_url": "https://www.fiercenice.com/blogs/news",
+      "description": "We're Fierce Nice, a Galway, Ireland-based online art gallery. Our mission? Showcasing the country's best, most interesting contemporary artists to the world and helping them to make a living from their work.",
+      "followers": {
+        "twitter": 17500,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5063989.jpg?t=1611756441"
+    },
+    {
+      "title": "Kumi Contemporary Blog",
+      "feed_url": "https://www.kumicontemporary.com/blog/feed/",
+      "website_url": "https://www.kumicontemporary.com/blog/",
+      "description": "Kumi Contemporary, situated in London, serves as a premier gallery for Contemporary Japanese Art, spotlighting renowned artists like Takashi Murakami and Chiho Aoshima. It proudly features works by innovative talents within the Japanese art scene. As a specialist Japanese gallery, Kumi Contemporary offers an extensive selection of Japanese Pop Art and facilitates the acquisition of Contemporary Japanese Art. Visitors can explore the Takashi Murakami print shop, showcasing a curated collection of his iconic works.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 683,
+        "instagram": 29400
+      },
+      "image_url": "https://i1.feedspot.com/3372571.jpg?t=1604585512"
+    },
+    {
+      "title": "ArtGallery.co.uk Blog",
+      "feed_url": "https://www.artgallery.co.uk/blog/feed.rss",
+      "website_url": "https://www.artgallery.co.uk/blog/",
+      "description": "News and views from the UK art world. Discover original British paintings & artwork in our online Art Gallery collection. Use the test drive tool to see it on a living room or office wall. We aim to help art lovers find art and buy art online.",
+      "followers": {
+        "facebook": 13500,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4476345.jpg?t=1602850533"
+    },
+    {
+      "title": "Lucy's Stash",
+      "feed_url": "https://www.lucysstash.com/rss",
+      "website_url": "https://www.lucysstash.com/",
+      "description": "Lucy's Stash is a nail and nail art blog focusing on nail art tutorials, hand and nail care, nail products in general and latest nail polish collection",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 5300,
+        "instagram": 116100
+      },
+      "image_url": "https://i1.feedspot.com/523745.jpg?t=1611755855"
+    },
+    {
+      "title": "Red Ted Art's - Easy Crafts for Kids Blog",
+      "feed_url": "https://www.redtedart.com/feed/",
+      "website_url": "https://www.redtedart.com/blog/",
+      "description": "Fun, easy and 'do-able' crafts for kids and grown ups. Using every day materials, making DIY a great activity to do together. With successful and gorgeous projects and results. Keep them. Treasure them or create wonderful gifts for friends and family.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4843564.jpg?t=1519909629"
+    },
+    {
+      "title": "Jackson's Art Blog",
+      "feed_url": "https://www.jacksonsart.com/blog/feed/",
+      "website_url": "https://www.jacksonsart.com/blog/",
+      "description": "Founded in London in 2000, Jackson's offers a vast range of art materials to artists from all over the world. Jackson's Art Blog is a friendly place for artists to talk about their work, techniques, and materials. With our expertise and knowledge and as a team of practicing artists, we are dedicated to helping you find the colors, surfaces, brushes, and tools that you need for your practice.",
+      "followers": {
+        "facebook": 184800,
+        "twitter": 132,
+        "instagram": 562900
+      },
+      "image_url": "https://i1.feedspot.com/4586396.jpg?t=1639568870"
+    },
+    {
+      "title": "Rise Art",
+      "feed_url": "https://www.riseart.com/article/rss",
+      "website_url": "https://www.riseart.com/articles",
+      "description": "All articles for Art Magazine. Discover the latest art news, articles and events on Rise Art. Use Rise Art to discover original art from talented artists. Rent and buy art from an expertly curated selection of paintings, photography and limited edition prints at affordable prices.",
+      "followers": {
+        "facebook": 51000,
+        "twitter": 63300,
+        "instagram": 60200
+      },
+      "image_url": "https://i1.feedspot.com/4854082.jpg?t=1611755825"
+    },
+    {
+      "title": "Blackbird Rook",
+      "feed_url": "https://blackbirdrook.com/blog-contemporary-art?format=rss",
+      "website_url": "https://blackbirdrook.com/blog-contemporary-art/",
+      "description": "Modern and contemporary art advisor and consultant, providing uniquely positioned advice to family offices, private clients and the workplace.",
+      "followers": {
+        "facebook": 578
+      },
+      "image_url": "https://i1.feedspot.com/5075767.jpg?t=1611756449"
+    },
+    {
+      "title": "3DTotal.com",
+      "feed_url": "https://3dtotal.com/rss.xml",
+      "website_url": "https://store.3dtotal.com/blogs/news",
+      "description": "3DTotal.com mission is to provide daily gallery and news updates to keep 3dtotal the CG artist's homepage of choice! We have staff around the world dedicated to finding the best news for the site, and our in-house team are adding plenty of tutorials, interviews and making of weekly for your enjoyment.",
+      "followers": {
+        "facebook": 190800,
+        "twitter": 50000,
+        "instagram": 121200
+      },
+      "image_url": "https://i1.feedspot.com/4650872.jpg?t=1604584082"
+    },
+    {
+      "title": "Contemporary Art Society",
+      "feed_url": "https://www.contemporaryartsociety.org/news/feed/",
+      "website_url": "https://www.contemporaryartsociety.org/explore/resources?conditions%5B%5D=&page=1",
+      "description": "Encouraging an appreciation and understanding of contemporary art by a wide audience and donating works by important and new artists to museums and public galleries across the UK.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 25700,
+        "instagram": 74500
+      },
+      "image_url": "https://i1.feedspot.com/4854285.jpg?t=1611755846"
+    },
+    {
+      "title": "Cadogan Contemporary",
+      "feed_url": "https://cadogangallery.com/press/",
+      "website_url": "https://cadogangallery.com/press/",
+      "description": "Get the latest news about our exhibitions, artists, and the British art world in general here on the Cadogan Contemporary blog.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/4541528.jpg?t=1611756133"
+    },
+    {
+      "title": "Jessica Zoob",
+      "feed_url": "https://www.jessicazoob.com/feed/",
+      "website_url": "https://www.jessicazoob.com/",
+      "description": "Original fine art paintings & prints by Jessica Zoob. Jessica creates huge jewel like paintings inspired by the beauty she sees on her travels.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 2800,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4854871.jpg?t=1611756141"
+    },
+    {
+      "title": "Linden Hall Studio",
+      "feed_url": "https://lindenhallstudio.co.uk/feed/",
+      "website_url": "https://lindenhallstudio.co.uk/",
+      "description": "Linden Hall Studio is a superb open space over two floors for artists to exhibit their work. The gallery opened in November 2014 after a four-year restoration of the building, previously a Christian chapel which dates back to 1775.The gallery shows the best of contemporary art including painting, sculpture, ceramics and glass.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2500,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4854709.jpg?t=1611756215"
+    }
+  ]
+}

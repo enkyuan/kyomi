@@ -1,0 +1,61 @@
+{
+  "category": "Property Inventory",
+  "source_url": "https://rss.feedspot.com/property_inventory_rss_feeds",
+  "feeds": [
+    {
+      "title": "Inventory Company Blog",
+      "feed_url": "https://inventorycompany.co.uk/feed/",
+      "website_url": "https://inventorycompany.co.uk/blog-no-sidebar/",
+      "description": "Inventory Company is a property inventory & property marketing services specialist, We provide independent inventory check-in, Midterm & check-out services. Our Property marketing team provides Professional Interior and Exterior Photo, Film, Drone, and virtual services for all residential and commercial properties",
+      "followers": {
+        "facebook": 108,
+        "twitter": 4,
+        "instagram": 329
+      },
+      "image_url": "https://i1.feedspot.com/5487381.jpg?t=1672820913"
+    },
+    {
+      "title": "Letting a Property Blog",
+      "feed_url": "https://www.lettingaproperty.com/landlord/blog/feed/",
+      "website_url": "https://www.lettingaproperty.com/landlord/blog/",
+      "description": "Whether you are a first-time landlord or a seasoned pro, our team of positive problem-solvers collectively draw on decades of shared industry experience, to give you the personal lettings support you need. We're constantly listening, learning, and growing - to innovate and help shape the future of renting.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 6500,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4975832.jpg?t=1610774376"
+    },
+    {
+      "title": "InventoryBase Blog",
+      "feed_url": "https://inventorybase.co.uk/feed/",
+      "website_url": "https://inventorybase.co.uk/blog/",
+      "description": "InventoryBase is the most advanced property reporting and operations solution for inventory providers, property managers, and estate agents. Produce professional inventories, check-ins, check-outs, interim inspections, building inspections, risk assessments & more using our inspection software.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5487384.jpg?t=1672820934"
+    },
+    {
+      "title": "Trust Inventory Blog",
+      "feed_url": "https://trustinventory.co.uk/feed/",
+      "website_url": "https://trustinventory.co.uk/inventory-clerk-blog/",
+      "description": "Trust Inventory was founded in 2014 to provide landlords, tenants, and agents with an organization they can turn to for a team of professional inventory clerks that can take on an unlimited number of inspections, so they will never experience the feeling of being let down. Our inventory company will provide you with a Local Inventory Clerk that is trained to the highest standard and know the area well, ensuring he or she will understand your needs.",
+      "followers": {
+        "facebook": 181,
+        "twitter": 425,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5487378.jpg?t=1672823722"
+    },
+    {
+      "title": "Property Inventory Pros Blog",
+      "feed_url": "https://propertyinventorypros.co.uk/feed/",
+      "website_url": "https://propertyinventorypros.co.uk/blog/",
+      "description": "Property Inventory Pros has developed a unique set of tools for the real estate sector. Our team is working day and night to innovate. We have seamless processes for all the workloads to make sure we achieve consistent results each time. We have high-quality control in place so our customers receive high-quality results. Our competent team of inventory clerks work hard to ensure all our clients reach the highest level of service possible and place the safety of your property at the forefront of our operations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5487379.jpg?t=1672823821"
+    }
+  ]
+}

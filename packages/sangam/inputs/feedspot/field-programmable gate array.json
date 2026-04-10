@@ -1,0 +1,112 @@
+{
+  "category": "Field-Programmable Gate Array",
+  "source_url": "https://rss.feedspot.com/fpga_rss_feeds",
+  "feeds": [
+    {
+      "title": "Analog Devices, Inc. - FPGA Reference Designs",
+      "feed_url": "https://ez.analog.com/fpga/rss",
+      "website_url": "https://ez.analog.com/fpga",
+      "description": "EngineerZone technical forum that provides customer support for Analog Devices FPGA Reference Designs. Analog Devices is the leading global high-performance analog technology company dedicated to solving the toughest engineering challenges.",
+      "followers": {
+        "facebook": 138700,
+        "twitter": 47900,
+        "instagram": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4957260.jpg?t=1621851659"
+    },
+    {
+      "title": "Aldec Blog",
+      "feed_url": "https://www.aldec.com/en/rss",
+      "website_url": "https://www.aldec.com/en/company/blog",
+      "description": "Aldec, Inc. is an industry-leading Electronic Design Automation (EDA) company delivering innovative design creation, simulation and verification solutions to assist in the development of complex FPGA, ASIC, SoC and embedded system designs.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4957066.jpg?t=1621851670"
+    },
+    {
+      "title": "The ZipCPU by Gisselquist Technology",
+      "feed_url": "http://zipcpu.com/feed",
+      "website_url": "http://zipcpu.com/",
+      "description": "The ZipCPU blog, featuring how to discussions of FPGA and soft-core CPU design. This site will be focused on Verilog solutions, using exclusively OpenSource IP products for FPGA design. Particular focus areas include topics often left out of more mainstream FPGA design courses such as how to debug an FPGA design.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4957096.jpg?t=1621851906"
+    },
+    {
+      "title": "Dangerous Prototypes Blog",
+      "feed_url": "http://dangerousprototypes.com/blog/feed/",
+      "website_url": "http://dangerousprototypes.com/blog/",
+      "description": "A new open source hardware project every month.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 48700
+      },
+      "image_url": "https://i1.feedspot.com/4520420.jpg?t=1621851657"
+    },
+    {
+      "title": "FPGA Related Blogs",
+      "feed_url": "https://www.fpgarelated.com/blogs_rss.php/feed",
+      "website_url": "https://www.fpgarelated.com/blogs.php",
+      "description": "Everything FPGA: Forums (including comp.arch.fpga), Blogs, WhitePapers, Business Directory, Free PDF Downloads, Code Snippets, etc. Portal for FPGA engineers, with blogs, forums, free documents and a complete vendors directory.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 857
+      },
+      "image_url": "https://i1.feedspot.com/4957074.jpg?t=1621851675"
+    },
+    {
+      "title": "Annapolis Micro Systems, Inc. Blog",
+      "feed_url": "https://www.annapmicro.com/blog/feed/",
+      "website_url": "https://www.annapmicro.com/blog/",
+      "description": "Learn more about rugged, embedded, high performance, COTS FPGA-based boards & systems for High Performance Computing & Digital Signal Processing",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4957293.jpg?t=1621851681"
+    },
+    {
+      "title": "FPGA4student",
+      "feed_url": "http://feeds.feedburner.com/fpga4student",
+      "website_url": "https://www.fpga4student.com/",
+      "description": "FPGA4Student has been creating FPGA/ Verilog/ VHDL projects since Nov. 2016 with the purpose of assisting students all over the world with full source code and tutorials. FPGA4Student want to continue creating more and more FPGA projects and tutorials for helping students with their projects.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4957147.jpg?t=1621851752"
+    },
+    {
+      "title": "FPGA Coding",
+      "feed_url": "https://fpgacoding.com/feed/",
+      "website_url": "https://fpgacoding.com/",
+      "description": "Learn to code FPGA devices in Verilog. I have worked as a software engineer in the video gaming industry for over 20 years. In my work, low-level software that interacts with the hardware has always been a favorite space. I've enjoyed assembly language programming for many CPU architectures including 6502, 6809, Z-80, 80\u00d786, PIC, and AVR. And even pixel and vertex shaders in the days before high-level shading languages.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5201369.jpg"
+    },
+    {
+      "title": "Plunify Blog",
+      "feed_url": "https://support.plunify.com/en/blog/feed/",
+      "website_url": "https://support.plunify.com/en/blog/",
+      "description": "Find the latest FPGA industry news, information about FPGA timing closure techniques, and Plunify's product news. Plunify makes software that optimizes IC chip designs, using statistical and machine learning methods, making it easier and faster for FPGA and ASIC engineers to increase performance in fewer number of iterations.",
+      "followers": {
+        "facebook": 151,
+        "twitter": 241
+      },
+      "image_url": "https://i1.feedspot.com/4957298.jpg?t=1621851734"
+    },
+    {
+      "title": "Digilent Blog",
+      "feed_url": "https://digilent.com/blog/feed/",
+      "website_url": "https://digilent.com/blog/",
+      "description": "Digilent Inc. is a leader in the design, manufacture, and world wide distribution of FPGA and microcontroller technologies.",
+      "followers": {
+        "facebook": 15400,
+        "twitter": 6100,
+        "instagram": 27700
+      },
+      "image_url": "https://i1.feedspot.com/4957100.jpg?t=1621851665"
+    }
+  ]
+}

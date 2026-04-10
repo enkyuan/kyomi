@@ -1,0 +1,107 @@
+{
+  "category": "QlikView",
+  "source_url": "https://rss.feedspot.com/qlikview_rss_feeds",
+  "feeds": [
+    {
+      "title": "Qlikview Cookbook | Recipes for Qlikview Success",
+      "feed_url": "https://qlikviewcookbook.com/feed/",
+      "website_url": "https://qlikviewcookbook.com/",
+      "description": "The Qlikview Cookbook was born in 2008 as a downloadable collection of working examples to demonstrate 'how-to' Qlikview development. The focus is on discrete tasks, not complete applications. This site is published by Rob Wunderlich, an experienced Qlikview Consultant and Trainer. Follow this blog to learn more about QlikView.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/3551230.jpg?t=1606924212"
+    },
+    {
+      "title": "The Qlik Sense and QlikView Blog by Steve Dark",
+      "feed_url": "https://www.quickintelligence.co.uk/blog/feed/",
+      "website_url": "https://www.quickintelligence.co.uk/blog/",
+      "description": "Qlik Consultants provides innovative solutions and expert advice around the Qlik business intelligence platform in the UK. Follow this blog to read articles, study tutorials and watch video demonstrations by our pro Qlik developers. Become a better Qlik Sense developer.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4871034.jpg?t=1606924247"
+    },
+    {
+      "title": "The Qlik Fix | QlikView & Qlik Sense tips, tricks and tutorials",
+      "feed_url": "http://www.qlikfix.com/feed/",
+      "website_url": "http://www.qlikfix.com/",
+      "description": "The Qlik Fix is a blog dedicated exclusively to QlikView tips, tricks and tutorials, written by Barry Harmsen. He is a Business Intelligence Consultant at Bitmetric in the Netherlands, where he specializes in QlikView (and Business Intelligence, Data Warehousing and Performance Management in general). As a QlikView consultant, he has built up an extensive library of QlikView tips, scripts, best practices and examples through the years. He plans to share these things through this blog.",
+      "followers": {
+        "facebook": 83,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/67953.jpg?t=1606924336"
+    },
+    {
+      "title": "QlikView Maven",
+      "feed_url": "https://feeds.feedburner.com/QlikviewMaven",
+      "website_url": "http://qlikviewmaven.blogspot.com/",
+      "description": "How to do it notes and tutorial from a QlikView Desktop user who uses QlikView for data analysis and helps clients and co-workers get the most out of their data. A mix of tips for both beginners and advanced users with a focus on things you won't find in the manual. QlikView is one of the most useful data review and analysis tools available for people who make sense of data for a living.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/38634.jpg?t=1606924279"
+    },
+    {
+      "title": "Qlik Tips",
+      "feed_url": "https://www.qliktips.com/feeds/posts/default",
+      "website_url": "https://www.qliktips.com/",
+      "description": "Qlik Tips is a blog about Tips and tricks that Stephen Redmond have come across over several years of QlikView development.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/3551220.jpg?t=1606924292"
+    },
+    {
+      "title": "qlikcentral",
+      "feed_url": "https://qlikcentral.com/feed/",
+      "website_url": "https://qlikcentral.com/",
+      "description": "Richard has been working within Business Intelligence for over 18 years. He has managed teams of analysts in a number of large organisations across finance, healthcare, service, and retail. He has worked with QlikView for over seven years and Qlik Sense for over two years. He is a Director of the QlikDevGroup and a Qlik Luminary. Follow this blog to get in depth knowledge on QlikView and Qliksense.",
+      "followers": {
+        "twitter": 858
+      },
+      "image_url": "https://i1.feedspot.com/4871781.jpg?t=1606924299"
+    },
+    {
+      "title": "Qlik Freak | Useful Qlik Resources",
+      "feed_url": "https://qlikfreak.wordpress.com/feed/",
+      "website_url": "https://qlikfreak.wordpress.com/",
+      "description": "My name is Julian Villafuerte, I'm from Mexico City and I've been working with QlikView since 2010. As a consultant, I've had the opportunity to work in application development, project management, pre-sales and training with multiple platforms, but my favourite, without a doubt is QlikView. I opened this blog in order to share some of my ideas, tips and tricks with you. Follow this blog to get useful resources on QlikView.",
+      "followers": {
+        "twitter": 802
+      },
+      "image_url": "https://i1.feedspot.com/4871821.jpg?t=1606924305"
+    },
+    {
+      "title": "Harvesting Wisdom | A rumination on data discovery by Karl Pover",
+      "feed_url": "https://poverconsulting.com/feed/",
+      "website_url": "https://poverconsulting.com/",
+      "description": "My name is Karl Pover and I would like to welcome you to my website. I've been a data discovery consultant since 2006. The data discovery tool I use the most is QlikView. The goal of this blog is to organize and share my thoughts, experiences and expectations within the realm of data discovery.",
+      "followers": {
+        "twitter": 790
+      },
+      "image_url": "https://i1.feedspot.com/4871099.jpg?t=1606924313"
+    },
+    {
+      "title": "Learn Qlikview",
+      "feed_url": "http://www.learnqlikview.com/feed/",
+      "website_url": "http://www.learnqlikview.com/",
+      "description": "Hi, I'm Shilpan. My goal with this site is to make it grow and evolve as a comprehensive online resource for anyone who wants to learn QlikView. Qlikview basics and advance articles are presented with quality. I'd like to make this site as a platform for all of us to share practical tips and techniques that someone can apply in a real world scenario.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 728
+      },
+      "image_url": "https://i1.feedspot.com/4870949.jpg?t=1606924317"
+    },
+    {
+      "title": "Qlik Blog",
+      "feed_url": "https://www.qlik.com/blog?page=1&limit=9/",
+      "website_url": "https://www.qlik.com/blog?page=1&limit=9/",
+      "description": "Qlik delivers intuitive platform solutions for self-service data visualization, guided analytics applications, embedded analytics and reporting to approximately 45,000 customers worldwide. Companies of all sizes, across all industries and geographies, use Qlik solutions to visualize and explore information, generate insight and make better decisions. Follow this blog to get resources and articles on QlikView and Qliksense from the Qlik community.",
+      "followers": {
+        "facebook": 57500,
+        "twitter": 66900
+      },
+      "image_url": "https://i1.feedspot.com/4872393.jpg?t=1606924208"
+    }
+  ]
+}

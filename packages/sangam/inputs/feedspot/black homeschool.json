@@ -1,0 +1,49 @@
+{
+  "category": "Black Homeschool",
+  "source_url": "https://rss.feedspot.com/black_homeschool_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mama Jenn Blog",
+      "feed_url": "https://www.mamajenn.com/posts/feed/",
+      "website_url": "https://www.mamajenn.com/posts/",
+      "description": "Blog helps you homeschool with ease and creativity by providing educational activities, crafty ideas, and homeschool resources along with loads of free printables that can be used by anyone with a heart to make learning fun and engaging. Along the way, Jennifer also provides quality, family time ideas, and a mama lifestyle!",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 1000,
+        "instagram": 227
+      },
+      "image_url": "https://i1.feedspot.com/5354329.jpg?t=1639728540"
+    },
+    {
+      "title": "African-American Homeschool Moms Blog",
+      "feed_url": "https://www.africanamericanhomeschoolmoms.com/feed/",
+      "website_url": "https://www.africanamericanhomeschoolmoms.com/blog/",
+      "description": "If you are an African-American homeschool mom, you are not alone! Homeschooling is on the rise among African-American families and this website has been created to serve as a place of encouragement and resources for Black homeschoolers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5196912.jpg?t=1600253351"
+    },
+    {
+      "title": "Joy in the Ordinary",
+      "feed_url": "https://joyintheordinary.com/homeschooling?format=RSS",
+      "website_url": "https://joyintheordinary.com/latest-posts",
+      "description": "Homeschooling from a Black mom's perspective, with emphasis on family life, faith, and education. Authored by Latonya Moore.",
+      "followers": {
+        "facebook": 816,
+        "twitter": 696,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4928016.jpg?t=1639805153"
+    },
+    {
+      "title": "Heritage Mom \u00bb Homeschool",
+      "feed_url": "https://heritagemom.com/category/homeschool/feed/",
+      "website_url": "https://heritagemom.com/category/homeschool/",
+      "description": "Heritage Mom discusses how we can stay true to Charlotte Mason's principles while creating mirrors and windows for all children to see POC, African and African-American culture reflected in their school books. Get to know everything about homeschooling at Heritage Mom.",
+      "followers": {
+        "facebook": 8700,
+        "instagram": 41100
+      },
+      "image_url": "https://i1.feedspot.com/5196913.jpg?t=1600253934"
+    }
+  ]
+}

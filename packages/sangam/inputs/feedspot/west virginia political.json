@@ -1,0 +1,75 @@
+{
+  "category": "West Virginia Political",
+  "source_url": "https://rss.feedspot.com/west_virginia_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "WOWK 13 News \u00bb Inside WV Politics",
+      "feed_url": "https://www.wowktv.com/news/inside-wv-politics/feed/",
+      "website_url": "https://www.wowktv.com/news/inside-wv-politics/",
+      "description": "WOWK 13 News features insights and in-depth reports and updates on political policies, news, events, analysis, and more. WOWK-TV is owned by Nexstar Media Group, and is the CBS affiliate for the Charleston-Huntington, WV television market.",
+      "followers": {
+        "facebook": 405300,
+        "twitter": 80300,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5348552.jpg?t=1638341821"
+    },
+    {
+      "title": "Charleston Gazette-Mail \u00bb Politics",
+      "feed_url": "https://www.wvgazettemail.com/search/?f=rss&t=article&c=news/politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.wvgazettemail.com/news/politics/",
+      "description": "To be politically updated on the latest news and reports, read the Political section of Charleston Gazette-Mail. Our mission is to provide readers with the most up-to-date, accurate news in the Kanawha Valley and across the Mountain State.",
+      "followers": {
+        "facebook": 88600,
+        "twitter": 69500,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/5348557.jpg?t=1638341309"
+    },
+    {
+      "title": "WVNS 59 News \u00bb Inside WV Politics",
+      "feed_url": "https://www.wvnstv.com/politics/inside-wv-politics/feed/",
+      "website_url": "https://www.wvnstv.com/politics/inside-wv-politics/",
+      "description": "The Latest News and Updates in Inside WV Politics are brought to you by the team at WVNS covering local news, elections, health, and more. At WVNS 59 News, our goal is to provide fair and balanced coverage of local news that benefits our viewers.",
+      "followers": {
+        "facebook": 160500,
+        "twitter": 9300,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5348553.jpg?t=1638340700"
+    },
+    {
+      "title": "Herald Dispatch \u00bb Elections",
+      "feed_url": "https://www.herald-dispatch.com/search/?f=rss&t=article&c=elections&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.herald-dispatch.com/elections/",
+      "description": "Herald-Dispatch's election news section covers the latest and daily updates on new candidates, strategies, policies, political party commentary, and more. The Herald-Dispatch publishes a morning edition seven days a week. Our mission is to bring Tri-State readers news they can use.",
+      "followers": {
+        "facebook": 45300,
+        "twitter": 20400,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5348558.jpg?t=1638340517"
+    },
+    {
+      "title": "Dominion Post \u00bb West Virginia Legislature",
+      "feed_url": "https://www.dominionpost.com/category/latest-news/government/west-virginia-legislature/feed/",
+      "website_url": "https://www.dominionpost.com/category/latest-news/government/west-virginia-legislature/",
+      "description": "Dominion Post brings you a political point of view on topics such as Business, Healthcare, Environment, Elections, and more. The West Virginia Newspaper Publishing Company is dedicated to providing the best quality journalism to our community. At The Dominion Post, we publish products that our readers and advertisers find informative, useful, accurate, reliable, and enjoyable.",
+      "followers": {
+        "facebook": 24500
+      },
+      "image_url": "https://i1.feedspot.com/5348556.jpg?t=1638340255"
+    },
+    {
+      "title": "West Virginia Center on Budget & Policy Blog",
+      "feed_url": "https://wvpolicy.org/category/blog/feed/",
+      "website_url": "https://wvpolicy.org/category/blog/",
+      "description": "Available real-time, data-driven analysis that's easy to understand is crucial for good policy and a strong democracy. Stay current with state and federal policy issues with our weekly blog posts. We blog about a variety of topics, including state and federal taxes, family economic security, budgets, health care, income inequality, criminal justice reform and more.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5348555.jpg?t=1638341381"
+    }
+  ]
+}

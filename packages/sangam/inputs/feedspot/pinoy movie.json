@@ -1,0 +1,97 @@
+{
+  "category": "Pinoy Movie",
+  "source_url": "https://rss.feedspot.com/pinoy_movie_rss_feeds",
+  "feeds": [
+    {
+      "title": "UnGeek \u00bb Movies",
+      "feed_url": "https://www.ungeek.ph/category/movies/feed/",
+      "website_url": "https://www.ungeek.ph/category/movies/",
+      "description": "Get all the movie reviews, film industry news, fan theories, and rumors in this section. UnGeek is the fastest-growing premier geek blog based in the Philippines. Born out of Unbox.ph (one of the country's top tech and gadget media outfits), UnGeek has been making waves in the local and international geek and gaming scene.",
+      "followers": {
+        "facebook": 83700,
+        "twitter": 317
+      },
+      "image_url": "https://i1.feedspot.com/5363647.jpg?t=1642573800"
+    },
+    {
+      "title": "Where is Ed Uy? \u00bb Movies",
+      "feed_url": "https://www.whereiseduy.com/category/entertainment/movies/feed/",
+      "website_url": "https://www.whereiseduy.com/category/entertainment/movies/",
+      "description": "This section features articles on movie reviews. Where is Ed Uy? is a review blog publishing reviews on everything tech, movies, lifestyle.",
+      "followers": {
+        "facebook": 35400,
+        "twitter": 497,
+        "instagram": 37700
+      },
+      "image_url": "https://i1.feedspot.com/5363643.jpg?t=1642573230"
+    },
+    {
+      "title": "Rod Pulido Blog",
+      "feed_url": "https://www.rodpulido.com/blog?format=rss",
+      "website_url": "https://www.rodpulido.com/blog",
+      "description": "Rod Pulido grew up in Cerritos, California. His movie The Flip Side became the first feature by a Filipino director to world premiere at the Sundance Film Festival. Rod strives to uplift and entertain with stories that highlight the Fil-Am experience. Dive into his personal blog to know more about his journey as one of the few Filipino directors in the film industry.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5363640.jpg?t=1642569408"
+    },
+    {
+      "title": "ClickTheCity",
+      "feed_url": "https://www.clickthecity.com/movies/news/",
+      "website_url": "https://www.clickthecity.com/movies/news/",
+      "description": "Movies is the go-to section for all the latest news and trailers of upcoming films, as well as the updated cinema schedules and critic reviews of what's showing right now. ClickTheCity is your Philippine multi-platform guide based in Metro Manila posting on the latest in all things entertainment and lifestyle.",
+      "followers": {
+        "facebook": 134200,
+        "twitter": 8900,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/5342489.jpg?t=1636715525"
+    },
+    {
+      "title": "ABS-CBN \u00bb Moview Review",
+      "feed_url": "https://www.abs-cbn.com/list/tag/movie-review/",
+      "website_url": "https://www.abs-cbn.com/list/tag/movie-review/",
+      "description": "Articles related to the movie review. BS-CBN is one of the leading media and entertainment organizations in the Philippines. From its humble beginnings to its undeniable successes, the company has over 60 years of stories to tell.",
+      "followers": {
+        "facebook": 28400000,
+        "twitter": 1900000,
+        "instagram": 325700
+      },
+      "image_url": "https://i1.feedspot.com/5363645.jpg?t=1642667360"
+    },
+    {
+      "title": "ABS-CBN Studios \u00bb Film",
+      "feed_url": "https://www.abs-cbn.com/entertainment/studios/films/",
+      "website_url": "https://www.abs-cbn.com/entertainment/studios/films/",
+      "description": "Founded in 1993, ABS-CBN Film Productions, Inc. (Star Cinema), is the foremost Filipino film production and distribution outfit. The company has produced more than 200 films in various genres, all of which are geared to suit the preferences of Filipinos of all ages and walks of life wherever they may be in the world. Be the FIRST to get the latest news about upcoming films, your favorite stars and celebrities in text, videos, and photos.",
+      "followers": {
+        "facebook": 15800000,
+        "twitter": 2000000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5363642.jpg?t=1642573915"
+    },
+    {
+      "title": "The Big Bang Blog",
+      "feed_url": "https://www.bigbangcopy.co/blog/",
+      "website_url": "https://www.bigbangcopy.co/blog/",
+      "description": "News stories and features about full-length movies, short films, and full-length documentaries. Rappler is a Manila-based online news platform - a social news network.",
+      "followers": {
+        "facebook": 6200000,
+        "twitter": 3800000
+      },
+      "image_url": "https://i1.feedspot.com/5363639.jpg?t=1642568428"
+    },
+    {
+      "title": "Orange Magazine \u00bb Movies",
+      "feed_url": "https://orangemagazine.ph/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://orangemagazine.ph/archives/movies-reviews/",
+      "description": "Get the latest information and news on the Pinoy movie industry, celebrities, entertainment sector, and more! Orange Magazine, a Philippine-based online magazine, was formally launched in July 2010. It is the brainchild of Jessie Bunyi Villanueva a.k.a. JEMAN, an avid magazine collector who previously worked as a tabloid correspondent and as an Events, Media and Promotions Coordinator for a couple of print magazine publications.",
+      "followers": {
+        "facebook": 103200,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5363644.jpg?t=1642572779"
+    }
+  ]
+}

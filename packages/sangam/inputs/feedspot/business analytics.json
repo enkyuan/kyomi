@@ -1,0 +1,104 @@
+{
+  "category": "Business Analytics",
+  "source_url": "https://rss.feedspot.com/business_analytics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Teradata \u00bb Cloud Data Analytics",
+      "feed_url": "https://www.teradata.com/rss/blogs",
+      "website_url": "https://www.teradata.com/insights/cloud-data-analytics",
+      "description": "Teradata is the connected multi-cloud data platform for enterprise analytics, solving data challenges from start to scale. As businesses collect more data, insights are harder to find. We'll help you answer your toughest business challenges.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 54300,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5272482.jpg?t=1619160244"
+    },
+    {
+      "title": "SplashBI Blog",
+      "feed_url": "https://splashbi.com/feed/",
+      "website_url": "https://splashbi.com/blog/",
+      "description": "SplashBI covers articles related to reporting, analytics, business intelligence, and workforce analytics. SplashBI helps organizations make the very best business decisions by providing instant access to data from disparate systems in the form of reports, visualizations, & trends.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5083967.jpg?t=1641290796"
+    },
+    {
+      "title": "Timo Elliott's Blog",
+      "feed_url": "https://timoelliott.com/blog/feed/atom",
+      "website_url": "https://timoelliott.com/blog/",
+      "description": "This blog tracks innovation in analytics and social media, including topics such as big data, collaborative decision-making, and social analytics. Timo Elliott is an innovation evangelist and international conference speaker who has presented to business and IT audiences in over fifty countries around the world.",
+      "followers": {
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/540128.jpg?t=1608191479"
+    },
+    {
+      "title": "Augmented Analytics and Advanced Analytics Smarten Blog",
+      "feed_url": "https://www.smarten.com/feed/",
+      "website_url": "https://www.smarten.com/blog/",
+      "description": "Augmented Analytics and Advanced Analytics Smarten blog provides insight on self-serve data preparation, assisted predictive modeling, predictive analytics, smart data visualization and related topics.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4997589.jpg?t=1608191474"
+    },
+    {
+      "title": "Select Distinct Business Analytics Blog",
+      "feed_url": "https://www.selectdistinct.co.uk/feed/",
+      "website_url": "https://www.selectdistinct.co.uk/business-analytics-blog/",
+      "description": "Here's a regularly updated Business Analytics Blog with tips and Timesavers for Microsoft Power BI, SQL, and Excel. Discover practical tips for Business Analysts. Select Distinct specializes in Power BI Consulting, SQL Data Warehouse Consulting, Data Integration Consulting and more areas to help its clients make the most of their business data.",
+      "followers": {
+        "twitter": 231,
+        "instagram": 58
+      },
+      "image_url": "https://i1.feedspot.com/5792142.jpg?t=1706610961"
+    },
+    {
+      "title": "Blast Analytics Blog",
+      "feed_url": "https://www.blastanalytics.com/blog/feed",
+      "website_url": "https://www.blastanalytics.com/blog",
+      "description": "The Blast Analytics Blog shares insights on Analytics and CX. Get digital, marketing, and business analytics tips from certified partner experts. Founded in 1999, Blast Analytics & Marketing is a strategic analytics consulting company accelerating the complex analytics journey for clients. We solve their data challenges to help optimize marketing campaigns and improve customer experience.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5024578.jpg?t=1659328929"
+    },
+    {
+      "title": "EZlytix Blog",
+      "feed_url": "https://ezlytix.com/feed/",
+      "website_url": "https://ezlytix.com/blog/",
+      "description": "EZlytix is a complete end-to-end Cloud BI platform that provides business intelligence and business analytics services. EZlytix ranks highest in customer satisfaction with key analyst firms.",
+      "followers": {
+        "facebook": 167,
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5170293.jpg?t=1608191647"
+    },
+    {
+      "title": "Sisense Blog",
+      "feed_url": "https://www.sisense.com/blog/",
+      "website_url": "https://www.sisense.com/blog/",
+      "description": "Read all the latest news, discussions and practical tips on complex data analytics, business intelligence software and big data.",
+      "followers": {
+        "facebook": 27000,
+        "twitter": 6800,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4511968.jpg"
+    },
+    {
+      "title": "InfoCepts Blog",
+      "feed_url": "https://www.infocepts.com/feed/",
+      "website_url": "https://www.infocepts.com/blog/",
+      "description": "InfoCepts is a leading Information Management and Business Analytics solutions, services, and Advisory Consulting provider. InfoCepts blog features the latest articles by technology experts on trending topics of business analytics, information management, data visualization, MicroStrategy services, and more.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 497
+      },
+      "image_url": "https://i1.feedspot.com/5272481.jpg?t=1619160884"
+    }
+  ]
+}

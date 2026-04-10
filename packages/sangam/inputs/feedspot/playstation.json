@@ -1,0 +1,105 @@
+{
+  "category": "Playstation",
+  "source_url": "https://rss.feedspot.com/playstation_rss_feeds",
+  "feeds": [
+    {
+      "title": "PlayStation Blog",
+      "feed_url": "https://feeds.feedburner.com/psblog",
+      "website_url": "https://blog.playstation.com/",
+      "description": "Follow this official PlayStation Blog for news and video updates on PS4, PS3, PSN, PS Vita and PSP.",
+      "followers": {
+        "facebook": 37800000,
+        "twitter": 35000000,
+        "instagram": 32100000
+      },
+      "image_url": "https://i1.feedspot.com/27530.jpg?t=1608187737"
+    },
+    {
+      "title": "PlayStation LifeStyle",
+      "feed_url": "https://www.playstationlifestyle.net/feed/",
+      "website_url": "https://www.playstationlifestyle.net/",
+      "description": "PlayStation LifeStyle is the #1 PlayStation destination. It provides information on PS3, PS4, PSN and Vita News, Trophies, Reviews, Guides, Cheats and More.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 90600
+      },
+      "image_url": "https://i1.feedspot.com/724923.jpg?t=1606478414"
+    },
+    {
+      "title": "PlayStation Universe",
+      "feed_url": "https://www.psu.com/feed/?post_type=psu_news",
+      "website_url": "https://www.psu.com/",
+      "description": "Playstation Game Reviews, Cheats, Game Trailers & Pictures | PlayStation Universe (PSU)",
+      "followers": {
+        "facebook": 3,
+        "twitter": 48000
+      },
+      "image_url": "https://i1.feedspot.com/4741975.jpg?t=1606478422"
+    },
+    {
+      "title": "Kotaku \u00bb Playstation 4",
+      "feed_url": "https://kotaku.com/tag/playstation-4/rss",
+      "website_url": "https://kotaku.com/tag/playstation-4",
+      "description": "Kotaku is a news and opinion site about games and things serious gamers care about. We're here to inform you and, sometimes, entertain you.We aim to be an inclusive site for gamers of any ethnicity, gender or sexual orientation.",
+      "followers": {
+        "facebook": 988500,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/4743615.jpg?t=1606478507"
+    },
+    {
+      "title": "PS4Blog.net",
+      "feed_url": "https://feeds.feedburner.com/PS4Blognet",
+      "website_url": "https://www.ps4blog.net/",
+      "description": "PS4Blog.net gives News, Reviews & Giveaways on PS4 and Vita",
+      "followers": {
+        "facebook": 851,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4743620.jpg?t=1606478546"
+    },
+    {
+      "title": "PSX Extreme",
+      "feed_url": "https://psxextreme.com/feed/",
+      "website_url": "https://psxextreme.com/",
+      "description": "PSX Extreme has been covering all things PlayStation since 1999, making us one of the oldest PlayStation publications in the world.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5087297.jpg?t=1606478515"
+    },
+    {
+      "title": "Amiga Guru Blog \u00bb Playstation",
+      "feed_url": "https://blog.amigaguru.com/category/playstation/feed/",
+      "website_url": "https://blog.amigaguru.com/category/playstation/",
+      "description": "A gamers blog for gamers.Hello, my name is Tony Aksnes and i am one of those crazy retro gamer freaks whom collect and play games older than most people out there.",
+      "followers": {
+        "facebook": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4744064.jpg?t=1606478885"
+    },
+    {
+      "title": "PlayStation.Blog",
+      "feed_url": "http://feeds.feedburner.com/psblog",
+      "website_url": "https://blog.playstation.com/",
+      "description": "All the latest PlayStation news, exclusive content and exciting extras, direct from PlayStation Europe.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 1100000,
+        "instagram": 32100000
+      },
+      "image_url": "https://i1.feedspot.com/4741781.jpg?t=1606478439"
+    },
+    {
+      "title": "Pure PlayStation",
+      "feed_url": "https://pureplaystation.com/feed/",
+      "website_url": "https://pureplaystation.com/",
+      "description": "Pure PlayStation is a dedicated news site for PlayStation fans. Whether it's PS4, PS3 or PS Vita, It will bring you all the latest PlayStation news.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4477238.jpg?t=1606478598"
+    }
+  ]
+}

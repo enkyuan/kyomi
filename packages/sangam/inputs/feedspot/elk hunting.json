@@ -1,0 +1,64 @@
+{
+  "category": "Elk Hunting",
+  "source_url": "https://rss.feedspot.com/elk_hunting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Elk Hunting Tips Blog",
+      "feed_url": "https://www.elk-hunting-tips.net/Elk-hunting.xml",
+      "website_url": "https://www.elk-hunting-tips.net/Elk-hunting-blog.html",
+      "description": "Elk Hunting Tips from experienced hunters to help regular hunters increase the chances of 'close encounters of the herd kind' and put elk meat in the freezer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5133451.jpg?t=1625643520"
+    },
+    {
+      "title": "Eastmans Official Blog",
+      "feed_url": "https://blog.eastmans.com/feed/",
+      "website_url": "https://blog.eastmans.com/",
+      "description": "Eastmans is a three generation media based hunting company whose goal is to promote the pursuit of elk hunting, deer hunting and all western big game. Our mission is to educate and entertain along the lines of bowhunting and rifle hunting to provide sportsmen with the most up-to-date tactics, hunting gear and hunting area research for both archery hunting and rifle hunting in the West.",
+      "followers": {
+        "facebook": 404500,
+        "twitter": 22100,
+        "instagram": 123400
+      },
+      "image_url": "https://i1.feedspot.com/4536009.jpg?t=1614241190"
+    },
+    {
+      "title": "Elk Hunters Guide",
+      "feed_url": "https://elkhuntersguide.com/feed/",
+      "website_url": "https://elkhuntersguide.com/blog-posts/",
+      "description": "Hi, I'm Jimmie Norris, and ElkHuntersGuide.com is my new adventure.The blog format typically includes a story of one of my hunting adventures, and what I learned from the experience. Some of these nuggets of knowledge come from my successes. Most of them come from my mistakes. All of them are shared in order to help you along in your elk hunting journey.",
+      "followers": {
+        "facebook": 124
+      },
+      "image_url": "https://i1.feedspot.com/5132144.jpg?t=1625643526"
+    },
+    {
+      "title": "Iowa Slam \u00bb Elk Hunting",
+      "feed_url": "https://iowaslam.com/tag/elk-hunting/feed/",
+      "website_url": "https://iowaslam.com/tag/elk-hunting/",
+      "description": "We write articles telling our stories and explaining the keys for hunting effectively across the west as well as in Iowa.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5132155.jpg?t=1625643531"
+    },
+    {
+      "title": "SNS Outfitters \u00bb Elk Blog",
+      "feed_url": "https://www.huntwyo.com/blog/category/elk/feed/",
+      "website_url": "http://www.huntwyo.com/blog/category/elk/",
+      "description": "SNS is Wyoming's 1 hunting outfitter and the top antelope outfitter in North America. We offer antelope, mule deer, elk and black bear hunting.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 137,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5132151.jpg?t=1623731606"
+    },
+    {
+      "title": "Elk's Hunting & Fishing Blog",
+      "feed_url": "https://www.elks.com.au/feed/",
+      "website_url": "https://www.elks.com.au/blog/",
+      "description": "Elk's Hunting & Fishing are Southern NSW and North East Victoria's largest suppliers of firearms, hunting equipment, fishing gear and camping supplies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5132154.jpg?t=1625643544"
+    }
+  ]
+}

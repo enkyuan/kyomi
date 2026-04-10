@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>News Feeds</title>
+  </head>
+  <body>
+
+    <outline text="General News">
+      <outline text="ABC News U.S. Headlines" type="rss" xmlUrl="http://feeds.abcnews.com/abcnews/usheadlines"/>
+      <outline text="Wall Street Journal" type="rss" xmlUrl="http://online.wsj.com/xml/rss/3_7085.xml"/>
+      <outline text="Christian Science Monitor - USA" type="rss" xmlUrl="http://rss.csmonitor.com/feeds/usa"/>
+      <outline text="NBC News Top Stories" type="rss" xmlUrl="http://feeds.nbcnews.com/feeds/topstories"/>
+      <outline text="NBC News World News" type="rss" xmlUrl="http://feeds.nbcnews.com/feeds/worldnews"/>
+      <outline text="Huffington Post - World News" type="rss" xmlUrl="http://www.huffingtonpost.com/feeds/verticals/world/index.xml"/>
+      <outline text="BBC News - U.S. and Canada" type="rss" xmlUrl="http://feeds.bbci.co.uk/news/world/us_and_canada/rss.xml"/>
+      <outline text="Yahoo News - U.S. News" type="rss" xmlUrl="http://news.yahoo.com/rss/us"/>
+      <outline text="Yahoo News - World News" type="rss" xmlUrl="http://rss.news.yahoo.com/rss/world"/>
+      <outline text="Newsweek" type="rss" xmlUrl="http://www.newsweek.com/rss"/>
+      <outline text="The Guardian - U.S. News" type="rss" xmlUrl="http://www.theguardian.com/world/usa/rss"/>
+      <outline text="Politico" type="rss" xmlUrl="http://www.politico.com/rss/politicopicks.xml"/>
+      <outline text="New Yorker" type="rss" xmlUrl="http://www.newyorker.com/feed/news"/>
+      <outline text="U.S. News" type="rss" xmlUrl="http://www.usnews.com/rss/news"/>
+      <outline text="NPR National News" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1003"/>
+      <outline text="NPR World News" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1004"/>
+      <outline text="L.A. Times - National News" type="rss" xmlUrl="http://www.latimes.com/nation/rss2.0.xml"/>
+      <outline text="L.A. Times - World News" type="rss" xmlUrl="http://www.latimes.com/world/rss2.0.xml"/>
+      <outline text="Vice News" type="rss" xmlUrl="https://news.vice.com/rss"/>
+      <outline text="Time" type="rss" xmlUrl="http://time.com/newsfeed/feed/"/>
+      <outline text="Fox News" type="rss" xmlUrl="http://feeds.foxnews.com/foxnews/latest?format=xml"/>
+    </outline>
+
+    <outline text="Sports">
+      <outline text="New York Times Sports" type="rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/Sports.xml"/>
+      <outline text="BuzzFeed Sports" type="rss" xmlUrl="http://www.buzzfeed.com/sports.xml"/>
+      <outline text="Fox News - Sports" type="rss" xmlUrl="http://feeds.foxnews.com/foxnews/sports"/>
+      <outline text="SB Nation" type="rss" xmlUrl="http://feeds.sbnation.com/rss/streams"/>
+      <outline text="ESPN" type="rss" xmlUrl="http://sports.espn.go.com/espn/rss/news"/>
+      <outline text="LA Times Sports" type="rss" xmlUrl="http://www.latimes.com/sports/rss2.0.xml"/>
+      <outline text="Yahoo Sports" type="rss" xmlUrl="https://sports.yahoo.com/top/rss.xml"/>
+      <outline text="The Guardian - U.S. Sports" type="rss" xmlUrl="http://www.theguardian.com/sport/us-sport/rss"/>
+    </outline>
+
+    <outline text="Business">
+      <outline text="Wall Street Journal - U.S. Business" type="rss" xmlUrl="https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml"/>
+      <outline text="Dow Jones" type="rss" xmlUrl="https://feeds.a.dj.com/rss/RSSMarketsMain.xml"/>
+      <outline text="New York Times - Business" type="rss" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/Business.xml"/>
+      <outline text="The Economist" type="rss" xmlUrl="http://www.economist.com/feeds/print-sections/77/business.xml"/>
+      <outline text="Business Standard" type="rss" xmlUrl="http://www.business-standard.com/rss/latest.rss"/>
+      <outline text="Harvard Business" type="rss" xmlUrl="http://feeds.harvardbusiness.org/harvardbusiness?format=xml"/>
+      <outline text="Huffington Post - Business News" type="rss" xmlUrl="http://www.huffingtonpost.com/feeds/verticals/business/news.xml"/>
+      <outline text="CNN World Business News" type="rss" xmlUrl="http://rss.cnn.com/rss/edition_business.rss"/>
+    </outline>
+
+    <outline text="Health">
+      <outline text="CNN Health" type="rss" xmlUrl="http://rss.cnn.com/rss/cnn_health.rss"/>
+      <outline text="New York Times Health" type="rss" xmlUrl="http://www.nytimes.com/services/xml/rss/nyt/Health.xml"/>
+      <outline text="BBC Health News" type="rss" xmlUrl="http://feeds.bbci.co.uk/news/health/rss.xml?edition=us"/>
+      <outline text="ABC News - Health" type="rss" xmlUrl="http://feeds.abcnews.com/abcnews/healthheadlines"/>
+      <outline text="NBC News - Health" type="rss" xmlUrl="http://feeds.nbcnews.com/feeds/health"/>
+      <outline text="Chicago Tribune - Health" type="rss" xmlUrl="http://www.chicagotribune.com/lifestyles/health/rss2.0.xml"/>
+      <outline text="The Guardian - Health" type="rss" xmlUrl="http://www.theguardian.com/society/health/rss"/>
+      <outline text="NY Daily News - Health" type="rss" xmlUrl="http://www.nydailynews.com/lifestyle/health/index_rss.xml"/>
+      <outline text="Men's Health" type="rss" xmlUrl="https://www.menshealth.com/rss/all.xml/"/>
+      <outline text="New Scientist - Health" type="rss" xmlUrl="http://feeds.newscientist.com/health"/>
+      <outline text="Time - Health" type="rss" xmlUrl="http://time.com/health/feed/"/>
+      <outline text="U.S. News - Health" type="rss" xmlUrl="http://www.usnews.com/rss/health?int=a7fe09"/>
+      <outline text="Yahoo Health News" type="rss" xmlUrl="http://news.yahoo.com/rss/health"/>
+      <outline text="Mayo Clinic Health Information" type="rss" xmlUrl="http://www.mayoclinic.org/rss/all-health-information-topics"/>
+      <outline text="BuzzFeed News - Health" type="rss" xmlUrl="http://www.buzzfeed.com/health.xml"/>
+      <outline text="Lifehacker" type="rss" xmlUrl="http://vitals.lifehacker.com/rss"/>
+      <outline text="Consumer Product Safety Commission (CPSC)" type="rss" xmlUrl="http://www.cpsc.gov/en/Newsroom/CPSC-RSS-Feed/Recalls-RSS/"/>
+      <outline text="The Guardian - Health and Well-Being" type="rss" xmlUrl="http://www.theguardian.com/lifeandstyle/health-and-wellbeing/rss"/>
+      <outline text="Health: NPR" type="rss" xmlUrl="http://www.npr.org/rss/rss.php?id=1128"/>
+    </outline>
+
+    <outline text="Entertainment">
+      <outline text="Variety" type="rss" xmlUrl="http://variety.com/feed/"/>
+      <outline text="L.A. Times - Entertainment" type="rss" xmlUrl="http://www.latimes.com/entertainment/rss2.0.xml"/>
+      <outline text="Vulture" type="rss" xmlUrl="http://feeds.feedburner.com/nymag/vulture"/>
+      <outline text="New Yorker - Culture" type="rss" xmlUrl="http://www.newyorker.com/feed/culture"/>
+      <outline text="BuzzFeed - TV and Movies" type="rss" xmlUrl="http://www.buzzfeed.com/tvandmovies.xml"/>
+      <outline text="TMZ" type="rss" xmlUrl="http://www.tmz.com/rss.xml"/>
+      <outline text="CBS News - Entertainment" type="rss" xmlUrl="http://www.cbsnews.com/latest/rss/entertainment"/>
+      <outline text="ABC News - Entertainment" type="rss" xmlUrl="http://feeds.abcnews.com/abcnews/entertainmentheadlines"/>
+      <outline text="Huffington Post - Entertainment" type="rss" xmlUrl="https://www.huffpost.com/dept/entertainment/feed"/>
+      <outline text="Deadline" type="rss" xmlUrl="http://deadline.com/feed/"/>
+      <outline text="NBC News - Entertainment" type="rss" xmlUrl="http://feeds.nbcnews.com/feeds/todayentertainment"/>
+      <outline text="CNN Entertainment News" type="rss" xmlUrl="http://rss.cnn.com/rss/cnn_showbiz.rss"/>
+      <outline text="Esquire - Culture" type="rss" xmlUrl="http://www.esquire.com/blogs/culture/culture-rss"/>
+      <outline text="Yahoo News - Entertainment" type="rss" xmlUrl="http://news.yahoo.com/rss/entertainment"/>
+    </outline>
+
+  </body>
+</opml>

@@ -1,0 +1,25 @@
+{
+  "category": "F1 Betting",
+  "source_url": "https://rss.feedspot.com/f1_betting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Scuderia Fans \u00bb Formula 1",
+      "feed_url": "https://scuderiafans.com/tag/formula-1/feed/",
+      "website_url": "https://scuderiafans.com/tag/formula-1/",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5540729.jpg?t=1681384932"
+    },
+    {
+      "title": "Before You Bet \u00bb Motorsports",
+      "feed_url": "https://www.beforeyoubet.com.au/taxonomy/term/171/all/feed",
+      "website_url": "https://www.beforeyoubet.com.au/sports-betting/motorsports-tips",
+      "description": "Before You Bet is one of Australia's leading sports betting websites providing free daily betting tips and previews. Formula 1 is one of the biggest sports in the world and we have previews and F1 betting tips for all the major F1 events, as well as MotoGP and other Motorsports, ensuring a betting edge for fans of these high octane sports.",
+      "followers": {
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5540730.jpg?t=1681384825"
+    }
+  ]
+}

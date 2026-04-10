@@ -1,0 +1,29 @@
+{
+  "category": "Kizomba",
+  "source_url": "https://rss.feedspot.com/kizomba_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kizomba Regina Blog",
+      "feed_url": "https://www.kizombaregina.com/blog?format=rss",
+      "website_url": "https://www.kizombaregina.com/blog",
+      "description": "Kizomba Regina provides a stress and judgment free environment to dancers who learn Kizomba and any other dance under the Kizomba umbrella. Learn more about Kizomba, tips and tricks, courses and events and more!",
+      "followers": {
+        "facebook": 788,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5460766.jpg?t=1666959284"
+    },
+    {
+      "title": "Kizomba Classes Blog",
+      "feed_url": "https://www.kizombaclasses.com/blog.rss",
+      "website_url": "https://www.kizombaclasses.com/blog/",
+      "description": "Tips for social dancers and teachers. Focus on how you can learn kizomba better and faster, but it is good for many other types of dance styles and dancing too. This site is run by Kristofer Menc\u00e1k. Here you can find kizomba and kizomba fusion courses from beginners to advanced and even teachers.",
+      "followers": {
+        "facebook": 29700,
+        "twitter": 343,
+        "instagram": 37700
+      },
+      "image_url": "https://i1.feedspot.com/5460768.jpg?t=1666959387"
+    }
+  ]
+}

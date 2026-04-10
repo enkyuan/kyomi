@@ -1,0 +1,113 @@
+{
+  "category": "Climate News",
+  "source_url": "https://rss.feedspot.com/climate_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yale Climate Connections",
+      "feed_url": "https://yaleclimateconnections.org/feed/",
+      "website_url": "https://yaleclimateconnections.org/",
+      "description": "Yale Climate Connections is a nonpartisan, multimedia service providing daily broadcast radio programming and original web-based reporting, commentary, and analysis on the issue of climate change, one of the greatest challenges and stories confronting modern society.",
+      "followers": {
+        "facebook": 62600,
+        "twitter": 21200
+      },
+      "image_url": "https://i1.feedspot.com/1526084.jpg?t=1620231135"
+    },
+    {
+      "title": "Climate California",
+      "feed_url": "https://www.latimes.com/environment.rss",
+      "website_url": "https://www.latimes.com/environment",
+      "description": "Read Climate & Environment news and updates. Los Angeles Times is the go-to source for anyone looking forward to staying updated on the latest news on Climate & Environment. The L.A. Times is a leading source of breaking news, entertainment, sports, politics, and more for Southern California and the world.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5434750.jpg?t=1661254909"
+    },
+    {
+      "title": "NPR \u00bb Climate",
+      "feed_url": "https://feeds.npr.org/1167/rss.xml",
+      "website_url": "https://www.npr.org/sections/climate/",
+      "description": "NPR gives full coverage of climate change and related issues on this page. NPR is an independent, nonprofit media organization that was founded on a mission to create a more informed public. NPR connects with millions of Americans on the air, online, and in-person to explore the news, ideas, and what it means to be human.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "The New York Times \u00bb Climate & Environment",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/climate/rss.xml",
+      "website_url": "https://www.nytimes.com/section/climate",
+      "description": "The New York Times brings you the recent news and reports from the US on Climate and Environment. The New York Times is dedicated to helping people understand the world through on-the-ground, expert, and deeply reported independent journalism.",
+      "followers": {
+        "twitter": 115100
+      },
+      "image_url": "https://i1.feedspot.com/4693485.jpg?t=1661254105"
+    },
+    {
+      "title": "Inside Climate News",
+      "feed_url": "https://insideclimatenews.org/feed/",
+      "website_url": "https://insideclimatenews.org/category/fossil-fuels/",
+      "description": "Inside Climate News is a Pulitzer Prize-winning, a nonprofit, nonpartisan news organization that provides essential reporting and analysis on climate change, energy and the environment, for the public and for decision-makers. We serve as watchdogs of government, industry, and advocacy groups and hold them accountable for their policies and actions.",
+      "followers": {
+        "facebook": 81100,
+        "twitter": 162500,
+        "instagram": 58800
+      },
+      "image_url": "https://i1.feedspot.com/5277146.jpg?t=1657273789"
+    },
+    {
+      "title": "ScienceDaily \u00bb Climate",
+      "feed_url": "https://www.sciencedaily.com/rss/earth_climate/climate.xml",
+      "website_url": "https://www.sciencedaily.com/news/earth_climate/climate/",
+      "description": "Climate change and climate prediction. Read science articles on regional climates and global climate shifts. ScienceDaily features breaking news about the latest discoveries in science, health, the environment, technology, and more -- from leading universities, scientific journals, and research organizations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5193952.jpg?t=1661254269"
+    },
+    {
+      "title": "Climate Home News",
+      "feed_url": "https://feeds.feedburner.com/ClimateHome",
+      "website_url": "https://www.climatechangenews.com/",
+      "description": "Climate Home News aims to be the go-to media outlet for a global community of doers and thinkers seeking to understand the political, social, and economic drivers of the climate crisis and climate action.",
+      "followers": {
+        "facebook": 19500,
+        "twitter": 73800
+      },
+      "image_url": "https://i1.feedspot.com/5067251.jpg"
+    },
+    {
+      "title": "The Daily Climate",
+      "feed_url": "https://www.dailyclimate.org/feeds/feed.rss",
+      "website_url": "https://www.dailyclimate.org/",
+      "description": "We push good journalism and science into public discussion and public policy on environmental health issues, including climate change.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5066822.jpg?t=1661254003"
+    },
+    {
+      "title": "The Conversation \u00bb Climate change",
+      "feed_url": "https://theconversation.com/topics/climate-change-27/articles.atom",
+      "website_url": "https://theconversation.com/topics/climate-change-27",
+      "description": "Browse Climate change news, research, and analysis from The Conversation. The Conversation is an independent source of news analysis and informed comment written by academic experts, working with professional journalists who help share their knowledge with the world.",
+      "followers": {
+        "facebook": 119300,
+        "twitter": 151700,
+        "instagram": 54600
+      },
+      "image_url": "https://i1.feedspot.com/5434747.jpg?t=1661254364"
+    },
+    {
+      "title": "Floodlight",
+      "feed_url": "https://floodlightnews.org/blog-feed.xml/",
+      "website_url": "https://floodlightnews.org/",
+      "description": "Floodlight is a nonprofit environmental news collaborative. We partner with local journalists and theGuardianto investigate the powerful influences holding back climate action.",
+      "followers": {
+        "twitter": 8100,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5434748.jpg?t=1661253920"
+    }
+  ]
+}

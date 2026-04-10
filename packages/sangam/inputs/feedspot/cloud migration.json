@@ -1,0 +1,113 @@
+{
+  "category": "Cloud Migration",
+  "source_url": "https://rss.feedspot.com/cloud_migration_rss_feeds",
+  "feeds": [
+    {
+      "title": "AWS Blog \u00bb Migration",
+      "feed_url": "https://aws.amazon.com/blogs/mt/feed/",
+      "website_url": "https://aws.amazon.com/blogs/mt/",
+      "description": "Learn more about AWS cloud technologies, migration tools and more. Amazon Web Services (AWS) is the world's most comprehensive and broadly adopted cloud platform, offering over 200 fully featured services from data centers globally. Millions of customers- including the fastest-growing startups, largest enterprises, and leading government agencies- are using AWS to lower costs, become more agile, and innovate faster.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/5120689.jpg?t=1658147112"
+    },
+    {
+      "title": "RiverMeadow Blog",
+      "feed_url": "https://www.rivermeadow.com/blog/rss.xml",
+      "website_url": "https://www.rivermeadow.com/blog",
+      "description": "Cloud migration tips and advice straight from the experts. Subscribe to RiverMeadow's Cloud Migration Blog to receive the latest news and updates. Developed specifically for the cloud, RiverMeadow is the only provider that offers an automated tool for secure workload migration into and between clouds.",
+      "followers": {
+        "facebook": 261,
+        "twitter": 618
+      },
+      "image_url": "https://i1.feedspot.com/5416984.jpg?t=1656591181"
+    },
+    {
+      "title": "Virtana Blog \u00bb Cloud Migration",
+      "feed_url": "https://www.virtana.com/blog/category/cloud-migration/feed/",
+      "website_url": "https://www.virtana.com/blog/category/cloud-migration/",
+      "description": "Find everything you need to know about Cloud Migration in this section. Virtana was founded in 2008 with a mission of delivering the highest quality infrastructure performance monitoring and high-definition precision data analytics to our customers. Today, after years of continued innovation, more than 150+ global 2000 enterprise customers rely on our multi-cloud software to enable them to run the right workload, on the right cloud, at the best performance, capacity, and cost available.",
+      "followers": {
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5416975.jpg?t=1658147617"
+    },
+    {
+      "title": "Oamii Tech Blog",
+      "feed_url": "https://www.oamiitech.com//feed/rss2",
+      "website_url": "https://www.oamiitech.com/blog",
+      "description": "Tips, news, and advice on cloud services consulting for businesses of all sizes. OamiiTech is a leader in the cloud computing, database, and data warehousing spaces. We maximize return on investment for our clients by continuously improving cloud computing, database, and data warehousing optimization opportunities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5416982.jpg?t=1658147337"
+    },
+    {
+      "title": "V-Soft Consulting Blog \u00bb Cloud migration",
+      "feed_url": "https://blog.vsoftconsulting.com/blog/topic/cloud-migration/rss.xml",
+      "website_url": "https://blog.vsoftconsulting.com/blog/topic/cloud-migration",
+      "description": "Learn more about cloud migration, technology, the latest trends and more! V-Soft was founded in 1997 by Purna Veer, an engineer by profession. Today V-Soft continues Purna's tradition of excellence for our employees and clients in bringing the latest in technology solutions and IT Staffing services to Fortune 500 companies.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/5416983.jpg?t=1656591176"
+    },
+    {
+      "title": "VMware Cloud Blog \u00bb Cloud Migration",
+      "feed_url": "https://blogs.vmware.com/cloud/cloud-migration/feed/",
+      "website_url": "https://blogs.vmware.com/cloud/cloud-migration/",
+      "description": "Get the latest trends from the cloud migration industry, more information about migration, cloud services and more. VMware is a leading provider of multi-cloud services for all apps, enabling digital innovation with enterprise control.",
+      "followers": {
+        "facebook": 391400,
+        "twitter": 328200
+      },
+      "image_url": "https://i1.feedspot.com/5416985.jpg?t=1656591193"
+    },
+    {
+      "title": "ModLogix \u00bb Cloud migration",
+      "feed_url": "https://modlogix.com/cat/cloud-migration/",
+      "website_url": "https://modlogix.com/cat/cloud-migration/",
+      "description": "Keep informed on software modernization, tech and business trends. We modernize legacy software moving it to secure, stable, and scalable platforms. ModLogix clients get innovative features combined with a good old essence of their software solutions.",
+      "followers": {
+        "facebook": 26,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/5416977.jpg?t=1656591149"
+    },
+    {
+      "title": "ReluTech Blog \u00bb Cloud Migration",
+      "feed_url": "https://relutech.com/category/blog/cloud-migration/feed",
+      "website_url": "https://relutech.com/category/blog/cloud-migration/",
+      "description": "Find all of the Mitel blogs relating to Cloud Migration here. Your home for the latest on Cloud Migration trends, tips, news and announcements. At ReluTech, we provide solutions that allow you to achieve all this and more, which helps you become a hero for your organization.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 814,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5416976.jpg?t=1656591143"
+    },
+    {
+      "title": "Cloudsfer Blog",
+      "feed_url": "https://cloudsfer.com/blog/feed/",
+      "website_url": "https://cloudsfer.com/blog/",
+      "description": "Find Tips for a Successful Backup & Cloud Migration, Best practice for migration to cloud services. Cloudsfer was developed by Tzunami Inc. - a pioneering content migration company and leading provider of enterprise content management (ECM) migration solutions. Tzunami enables advanced, large-scale migrations between multiple systems. Over the years, Tzunami Inc. has migrated more than 20 million seats and thousands of TBs into SP.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 161
+      },
+      "image_url": "https://i1.feedspot.com/5416978.jpg?t=1656591152"
+    },
+    {
+      "title": "Datavail Blog \u00bb Cloud Migration & Management",
+      "feed_url": "https://www.datavail.com/blog/service/cloud-migration-management/feed/",
+      "website_url": "https://www.datavail.com/blog/service/cloud-migration-management/",
+      "description": "Welcome to Datavail's Blog, where you can read the latest insights, tips and opinions of our experts on all things data and technology. Datavail is a company of over 1,000 professionals helping clients build and manage applications and data via a world-class tech-enabled delivery platform and software solutions across leading technologies.",
+      "followers": {
+        "facebook": 981,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5416980.jpg?t=1658148085"
+    }
+  ]
+}

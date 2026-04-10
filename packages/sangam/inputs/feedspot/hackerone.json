@@ -1,0 +1,135 @@
+{
+  "category": "HackerOne",
+  "source_url": "https://rss.feedspot.com/hackerone_rss_feeds",
+  "feeds": [
+    {
+      "title": "HackerOne \u00bb AI",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/411/feed",
+      "website_url": "https://www.hackerone.com/blog/topic/ai",
+      "description": "All articles about AI from HackerOne.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521925.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Culture and Talent",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/360/feed",
+      "website_url": "https://www.hackerone.com/blog/culture-and-talent",
+      "description": "All articles about Culture and Talent from HackerOne.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521930.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Customer Stories",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/293/feed",
+      "website_url": "https://www.hackerone.com/blog/customer-stories",
+      "description": "All Customer Stories from HackerOne.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8521924.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Bug Bounty",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/301/feed",
+      "website_url": "https://www.hackerone.com/blog/topic/bug-bounty",
+      "description": "All articles about Bug Bounty from HackerOne.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521923.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Vulnerability Management",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/307/feed",
+      "website_url": "https://www.hackerone.com/blog/topic/vulnerability-management",
+      "description": "We cover everything in vulnerability management including discovery, prioritization, assessment, disclosure, and remediation.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521928.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Researcher Community",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/291/feed",
+      "website_url": "https://www.hackerone.com/blog/community",
+      "description": "All articles from the Researcher Community from HackerOne.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521933.jpg?t=1746082174"
+    },
+    {
+      "title": "HackerOne \u00bb Best Practices",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/314/feed",
+      "website_url": "https://www.hackerone.com/blog/topic/best-practices",
+      "description": "All articles about Best Practices from HackerOne.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521932.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Public Policy",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/361/feed",
+      "website_url": "https://www.hackerone.com/blog/public-policy",
+      "description": "HackerOne advocates for policies and standards around the world that support our customers, advance protections for the hacker community, and promote adoption of cybersecurity best practices.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521931.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb News & Updates",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/299/feed",
+      "website_url": "https://www.hackerone.com/blog/news-updates",
+      "description": "All News & Updates from HackerOne.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521929.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Engineering",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/298/feed",
+      "website_url": "https://www.hackerone.com/blog/engineering",
+      "description": "Inside HackerOne Engineering: developing for a safer digital world.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521927.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Code Security Audit",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/303/feed",
+      "website_url": "https://www.hackerone.com/blog/topic/code-security-audit",
+      "description": "All articles about Code Security Audit from HackerOne.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521926.jpg"
+    },
+    {
+      "title": "HackerOne \u00bb Application Security",
+      "feed_url": "https://www.hackerone.com/taxonomy/term/306/feed",
+      "website_url": "https://www.hackerone.com/blog/topic/application-security",
+      "description": "Learn how to prevent vulnerabilities in your applications. We cover current practices in application security, cloud security, API testing, and more.",
+      "followers": {
+        "facebook": 75900,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/8521922.jpg"
+    }
+  ]
+}

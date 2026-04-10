@@ -1,0 +1,51 @@
+{
+  "category": "Microfinance",
+  "source_url": "https://rss.feedspot.com/microfinance_rss_feeds",
+  "feeds": [
+    {
+      "title": "MicroLoan Foundation News",
+      "feed_url": "https://www.microloanfoundation.org.uk/category/news/feed/",
+      "website_url": "https://www.microloanfoundation.org.uk/category/news/",
+      "description": "Blog contains regular news from the MicroLoan team with articles on events, fundraising, schools, and success stories. MicroLoan Foundation provides small loans, training, mentoring, and ongoing support to some of the most vulnerable women in sub-Saharan Africa, allowing them to start small businesses for themselves.",
+      "followers": {
+        "twitter": 3700,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5351242.jpg?t=1638950844"
+    },
+    {
+      "title": "KwikCash Blog",
+      "feed_url": "https://www.kwikcashonline.com/blog/feed/",
+      "website_url": "https://www.kwikcashonline.com/blog/",
+      "description": "KwikCash, Inc. was founded with the utmost integrity to gratify, benefit and ease each and every individual that finds themselves in an economic rut. It is our personal mission to deliver quick and painless low-rate personal loans to those with financial difficulties.",
+      "followers": {
+        "facebook": 1,
+        "instagram": 304
+      },
+      "image_url": "https://i1.feedspot.com/5037824.jpg?t=1610460275"
+    },
+    {
+      "title": "Wisconsin Microfinance Blog",
+      "feed_url": "https://wisconsinmicrofinance.com/feed/",
+      "website_url": "https://wisconsinmicrofinance.com/about-us/media/news-and-updates/blog/",
+      "description": "News & updates from Wisconsin Microfinance, a non-profit organization that raises awareness of microfinance, a promising sustainable tool to fight poverty & support economic growth in the developing world. We provide small loans to those living in extreme poverty, primarily in geographies recovering from natural disasters.",
+      "followers": {
+        "facebook": 455,
+        "twitter": 368,
+        "instagram": 172
+      },
+      "image_url": "https://i1.feedspot.com/5328254.jpg?t=1633352025"
+    },
+    {
+      "title": "E Mfp Blog",
+      "feed_url": "https://www.e-mfp.eu/blog-feed.xml",
+      "website_url": "https://www.e-mfp.eu/blogs",
+      "description": "Blog topics cover agricultural finance, bank accounts,banks, cgap, client centricity, client protection, conflict, crisis, customer-centricity, digital finance, and disaster. e-MFP fosters innovative action & research and advocates sustainable & responsible microfinance.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5351247.jpg?t=1638878939"
+    }
+  ]
+}

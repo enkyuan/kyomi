@@ -1,0 +1,29 @@
+{
+  "category": "Fairfield News",
+  "source_url": "https://rss.feedspot.com/fairfield_ohio_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WCPO 9 News \u00bb Fairfield",
+      "feed_url": "https://www.wcpo.com/news/local-news/hamilton-county/fairfield.rss",
+      "website_url": "https://www.wcpo.com/news/local-news/hamilton-county/fairfield",
+      "description": "WCPO 9 News stands at the forefront of the broadcast industry. WCPO 9 News is a strong brand in the Cincinnati/Tri-State region, known for its consumer and breaking news, severe weather coverage and relentless advocacy work. Follow this feed to read the latest news and updates in Fairfield, OH.",
+      "followers": {
+        "facebook": 412900,
+        "twitter": 223000
+      },
+      "image_url": "https://i1.feedspot.com/5150373.jpg?t=1589440193"
+    },
+    {
+      "title": "City of Fairfield, OH",
+      "feed_url": "https://www.fairfield-city.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.fairfield-city.org/CivicAlerts.aspx",
+      "description": "Get the latest city news, updates and information from the official website of Fairfield, OH.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 2200,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5150382.jpg?t=1589441116"
+    }
+  ]
+}

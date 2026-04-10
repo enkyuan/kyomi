@@ -1,0 +1,47 @@
+{
+  "category": "Barcelona Political",
+  "source_url": "https://rss.feedspot.com/barcelona_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "TOT Barcelona \u00bb Pol\u00edtica",
+      "feed_url": "https://www.totbarcelona.cat/es/politica-es/feed/",
+      "website_url": "https://www.totbarcelona.cat/es/politica-es/",
+      "description": "Get comprehensive coverage of the latest political news, in-depth reports, insightful interviews, incisive analysis, and thought-provoking opinion pieces. TOT Barcelona is the premier digital newspaper for Barcelona, delivering high-quality journalism entirely in the Catalan language.",
+      "followers": {
+        "facebook": 67500,
+        "twitter": 24100,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/7289961.jpg?t=1712144951"
+    },
+    {
+      "title": "Barcelona al D\u00eda \u00bb Pol\u00edtica",
+      "feed_url": "https://www.barcelonaaldia.com/category/politica/feed/",
+      "website_url": "https://www.barcelonaaldia.com/category/politica/",
+      "description": "Dive deep into the heart of Barcelona's political discourse with political coverage. Barcelona al D\u00eda is your trusted source for staying informed about all the current events, happenings, and issues impacting life in the vibrant city of Barcelona - noticias que reflejan la evoluci\u00f3n de Barcelona.",
+      "followers": {
+        "facebook": 5000
+      },
+      "image_url": "https://i1.feedspot.com/7289963.jpg?t=1712145086"
+    },
+    {
+      "title": "Catalunya Plural \u00bb Pol\u00edtica",
+      "feed_url": "https://catalunyaplural.cat/es/category/politica-es/feed/",
+      "website_url": "https://catalunyaplural.cat/es/category/politica-es/",
+      "description": "Explore imploding, impartial poliyical coverage and commentary on the inner working of the government. Catalunya Plural is a digital media outlet established with the goal of focusing on reporting related to fundamental rights, critical thinking, and reflecting the plurality/diversity of Catalan society.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/7289964.jpg?t=1712144971"
+    },
+    {
+      "title": "Patrycia Centeno Blog",
+      "feed_url": "https://www.politicaymoda.com/feed/",
+      "website_url": "https://www.politicaymoda.com/blog/",
+      "description": "Patrycia Centeno is a journalist, analyst, essayist, and advisor who is also a pioneer in the study of visual language as a tool for political and corporate communication. With insights honed from her experience in fashion journalism and political image consulting, she sheds light on the unspoken messages that influence how we perceive leaders and brands.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7289962.jpg?t=1712145127"
+    }
+  ]
+}

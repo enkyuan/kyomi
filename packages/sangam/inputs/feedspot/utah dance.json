@@ -1,0 +1,63 @@
+{
+  "category": "Utah Dance",
+  "source_url": "https://rss.feedspot.com/utah_dance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Repertory Dance Theatre Blog",
+      "feed_url": "https://rdtutah.org/feed/",
+      "website_url": "https://rdtutah.org/blog-standard/",
+      "description": "Utah's Repertory Dance Theatre, established in 1966, emerged from a collaborative effort involving Salt Lake City, the University of Utah, and a significant grant from the Rockefeller Foundation. Initially conceived as a democratic artistic endeavour, RDT evolved under the leadership of Virginia Tanner, with support from the Rockefeller Foundation.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7280005.jpg?t=1711090392"
+    },
+    {
+      "title": "University of Utah",
+      "feed_url": "https://www.dance.utah.edu/full-bulletin?format=rss",
+      "website_url": "https://www.dance.utah.edu/full-bulletin",
+      "description": "The University of Utah's School of Dance serves as a leading incubator for dance education and artistic exploration. With renowned faculty, they provide personalized attention, fostering growth in young artists. Offering diverse performance opportunities and rigorous coursework, they inspire interdisciplinary creativity and scholarly inquiry.",
+      "followers": {
+        "facebook": 3700
+      },
+      "image_url": "https://i1.feedspot.com/7280004.jpg?t=1711090442"
+    },
+    {
+      "title": "Dance Concepts Utah Blog",
+      "feed_url": "https://danceconceptsutah.com/feed/",
+      "website_url": "https://danceconceptsutah.com/blog/",
+      "description": "Dance Concepts Utah offers a wide range of dance classes tailored for ages 2-18 in Sandy and Bluffdale, Utah. With a focus on nurturing young talent, they provide a supportive environment for students to explore various dance styles and develop their skills.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7280002.jpg?t=1713511019"
+    },
+    {
+      "title": "Wasatch Contemporary Dance Company Blog",
+      "feed_url": "https://wasatchcontemporary.com/?feed=rss2",
+      "website_url": "https://wasatchcontemporary.com/?page_id=62",
+      "description": "Founded in April 2010, Wasatch Contemporary Dance Company has been a driving force in Utah County's dance scene. It offers post-graduate performance and choreographic platforms for local dancers, contributing to the region's artistic growth. WCDC blends classical training with contemporary innovation, uniting diverse dance styles to create a unique artistic expression.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://wasatchcontemporary.com/wp-content/uploads/2014/01/Screen-Shot-2014-01-10-at-1.43.20-PM1.png?t=1711090330"
+    },
+    {
+      "title": "SALT Contemporary Dance Blog",
+      "feed_url": "https://saltdance.com/feed/",
+      "website_url": "https://saltdance.com/blog/",
+      "description": "Since its inception in 2013, SALT has emerged as a prominent force in Utah's contemporary dance scene. Over 10 seasons, it has collaborated with renowned choreographers, developed comprehensive training programs, and presented groundbreaking productions. SALT Contemporary Dance embodies the essence of the present moment, promoting dance innovation, arts education, and social advocacy, enriching the community's vitality and diversity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4976942.jpg?t=1713510817"
+    },
+    {
+      "title": "Vertical Art Dance Blog",
+      "feed_url": "https://www.verticalartdance.com/blog?format=rss",
+      "website_url": "https://www.verticalartdance.com/blog",
+      "description": "Explore the Vertical Art Dance Blog for insights into safety practices, rigging, and custom truss projects. Specializing in designing bespoke truss structures for various applications including aerial dance, pole fitness, and more, their expertise extends to performance, lighting, and set design.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7280006.jpg?t=1711090282"
+    }
+  ]
+}

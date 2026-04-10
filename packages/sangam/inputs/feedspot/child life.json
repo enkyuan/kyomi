@@ -1,0 +1,53 @@
+{
+  "category": "Child Life",
+  "source_url": "https://rss.feedspot.com/child_life_rss_feeds",
+  "feeds": [
+    {
+      "title": "Child Life Mommy Blog",
+      "feed_url": "https://childlifemommy.com/feed/",
+      "website_url": "https://childlifemommy.com/blog/",
+      "description": "This website is intended to provide information about the child life field and how it can relate to caregivers, educators, medical providers, and students. Shani Thornton is a Certified Child Life Specialist supporting families coping with illness, loss, trauma & transitions. In-Home/Virtual Services & Workshops.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1600,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5301734.jpg?t=1626267304"
+    },
+    {
+      "title": "SpellBound Blog",
+      "feed_url": "https://www.spellboundar.com/blog?format=rss",
+      "website_url": "https://www.spellboundar.com/blog/",
+      "description": "We create immersive AR tools for hospital care teams to encourage pediatric patient mobility & reduce the perception of pain.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 567,
+        "instagram": 730
+      },
+      "image_url": "https://i1.feedspot.com/4698383.jpg?t=1606217325"
+    },
+    {
+      "title": "Child Life, Wild Life",
+      "feed_url": "https://childlifewildlife.com/feed/",
+      "website_url": "https://childlifewildlife.com/",
+      "description": "Tips & Tricks from The Child Life Mentor. Authored by Jessica Lewin - Certified Child Life Specialist Capturing the HOPE+COURAGE+STRENGTH of children undergoing treatment for illness, disabilities, or injuries through photography.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5304829.jpg?t=1627046792"
+    },
+    {
+      "title": "Child Life Saver Blog",
+      "feed_url": "https://www.childlifesaver.com/blog-feed.xml",
+      "website_url": "https://www.childlifesaver.com/blog",
+      "description": "Empowering you with tools to help your child cope during tough medical experiences. Through intentional education, preparation, and play you can decrease stress and anxiety for you and your little ones!",
+      "followers": {
+        "facebook": 557,
+        "twitter": 26,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5301704.jpg?t=1626264353"
+    }
+  ]
+}

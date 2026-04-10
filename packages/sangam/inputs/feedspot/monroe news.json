@@ -1,0 +1,36 @@
+{
+  "category": "Monroe News",
+  "source_url": "https://rss.feedspot.com/monroe_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KTVE \u00bb Monroe",
+      "feed_url": "https://www.myarklamiss.com/tag/monroe/feed/",
+      "website_url": "https://www.myarklamiss.com/tag/monroe/",
+      "description": "The Latest News and Updates in Monroe brought to you by the team at KTVE - myarklamiss.com.",
+      "followers": {
+        "facebook": 227800,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5142197.jpg?t=1587540189"
+    },
+    {
+      "title": "Monroe Dispatch",
+      "feed_url": "https://www.monroedispatchonline.com/rss",
+      "website_url": "https://www.monroedispatchonline.com/",
+      "description": "Cover News, Sports, Business, Lifestyle, Obituaries, and more from Monroe city. The Monroe Dispatch is a family-owned and operated weekly news publication committed to sharing news and stories of people and events in northeast Louisiana and continuing to connect people who live throughout the United States to our region.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5471744.jpg?t=1669362535"
+    },
+    {
+      "title": "The News-Star",
+      "feed_url": "https://www.thenewsstar.com/",
+      "website_url": "https://www.thenewsstar.com/",
+      "description": "The News Star is your source for local, breaking, sports and entertainment news around Monroe and West Monroe, Louisiana areas. Our mission is to provide accurate and comprehensive news, advertising, and public service information to our readers in a timely fashion every day of the year. All the departments of the Paper work together toward this common goal.",
+      "followers": {
+        "facebook": 42100,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5142201.jpg?t=1668403328"
+    }
+  ]
+}

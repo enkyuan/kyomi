@@ -1,0 +1,903 @@
+{
+  "category": "WordPress Development",
+  "source_url": "https://rss.feedspot.com/wordpress_development_rss_feeds",
+  "feeds": [
+    {
+      "title": "The WordPress.com Blog",
+      "feed_url": "https://wordpress.com/blog/feed/",
+      "website_url": "https://wordpress.com/blog/",
+      "description": "Our common goal is to democratize publishing so that anyone with a story can tell it, regardless of income, gender, politics, language, or where they live in the world.The latest news on WordPress.com and the WordPress community.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/4279755.jpg?t=1623911654"
+    },
+    {
+      "title": "WPMU DEV - Your WordPress Toolkit Blog",
+      "feed_url": "https://wpmudev.com/blog/feed/",
+      "website_url": "https://wpmudev.com/blog/",
+      "description": "The WPMU DEV WordPress blog provides tutorials, tips, resources and reviews to help out any WP user",
+      "followers": {
+        "facebook": 45600,
+        "twitter": 34000,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/3655127.jpg?t=1610949326"
+    },
+    {
+      "title": "WordPress Beginner Blog",
+      "feed_url": "https://www.wpbeginner.com/feed/",
+      "website_url": "https://www.wpbeginner.com/blog/",
+      "description": "WPBeginner is a free WordPress resource site for Beginners. WPBeginner was founded in July 2009 by Syed Balkhi. The main goal of this site is to provide quality tips, tricks, hacks, and other WordPress resources that allows WordPress beginners to improve their site.",
+      "followers": {
+        "facebook": 404100,
+        "twitter": 203100
+      },
+      "image_url": "https://i1.feedspot.com/89622.jpg?t=1610949331"
+    },
+    {
+      "title": "Tom McFarlin",
+      "feed_url": "https://tommcfarlin.com/feed/",
+      "website_url": "https://tommcfarlin.com/",
+      "description": "This is a personal blog of Tom McFarlin's where he teaches about the WordPress world, gives his perspective on professional WordPress development, and shares other tips on different related matters.",
+      "followers": {
+        "twitter": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4448031.jpg?t=1610949341"
+    },
+    {
+      "title": "WP Engine Blog",
+      "feed_url": "https://wpengine.com/blog/feed/",
+      "website_url": "https://wpengine.com/blog/",
+      "description": "The WP Engine blog is your source for WordPress news,and information that impacts the WordPress community.",
+      "followers": {
+        "facebook": 55900,
+        "twitter": 44300,
+        "instagram": 24400
+      },
+      "image_url": "https://i1.feedspot.com/4689321.jpg?t=1610949347"
+    },
+    {
+      "title": "WP Mayor Blog",
+      "feed_url": "https://wpmayor.com/feed/",
+      "website_url": "https://wpmayor.com/blog/",
+      "description": "WordPress resources, plugin reviews, tutorials for all WordPress users and developers.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 28700
+      },
+      "image_url": "https://i1.feedspot.com/4824976.jpg?t=1610949351"
+    },
+    {
+      "title": "WinningWP - Tips And Resources For People Who Use WordPress!",
+      "feed_url": "https://winningwp.com/feed/",
+      "website_url": "https://winningwp.com/",
+      "description": "WinningWP, a.k.a. Winning WordPress, is an award-winning WordPress resource for people who love, you guessed it: WordPress. WinningWP is a blog that explores WordPress-related techniques and resources, shares helpful information, and provides useful tips and insights to anybody and everybody with an interest in WordPress.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/4825018.jpg?t=1610949357"
+    },
+    {
+      "title": "WordPress News",
+      "feed_url": "https://wordpress.org/news/feed/",
+      "website_url": "https://wordpress.org/news/",
+      "description": "Follow this blog to get latest news and information on wordpress.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 638100
+      },
+      "image_url": "https://i1.feedspot.com/1784297.jpg"
+    },
+    {
+      "title": "WP Newsify - Daily News About WordPress",
+      "feed_url": "https://wpnewsify.com/feed/",
+      "website_url": "https://wpnewsify.com/",
+      "description": "WP Newsify was founded in May 2016 by Peter Nilsson. His goal was to share his experience of WordPress through articles, tutorials, tips and tricks to help all WordPress enthusiasts in order to make it easier for you to get started and working with WordPress as a pro.To help people with WordPress, WP Newsify providing tutorials, theme roundups, plugin guides and general news about WordPress.",
+      "followers": {
+        "facebook": 467,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4825838.jpg?t=1610951686"
+    },
+    {
+      "title": "Kinsta Managed WordPress Hosting - Powered By Google Cloud Blog",
+      "feed_url": "https://kinsta.com/feed/",
+      "website_url": "https://kinsta.com/blog/",
+      "description": "The best managed WordPress hosting, powered by Google Cloud and LXD orchestrated Linux containers. Let us handle caching, security, updates, and more.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 16300,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4651510.jpg?t=1610949619"
+    },
+    {
+      "title": "WordPress Themes Loved By Over 430k Customers Blog",
+      "feed_url": "https://www.elegantthemes.com/blog/feed",
+      "website_url": "https://www.elegantthemes.com/blog/",
+      "description": "WordPress Themes with Visual Drag & Drop Technology. Home of Divi, the most popular Premium WordPress Theme in the world.Elegant Themes builds amazingly beautiful Premium WordPress Themes coupled with advanced functionality and awesome support. Follow this blog to know more about Elegant themes.",
+      "followers": {
+        "facebook": 153900,
+        "twitter": 63000
+      },
+      "image_url": "https://i1.feedspot.com/4825207.jpg?t=1610949626"
+    },
+    {
+      "title": "ThemeIsle Blog",
+      "feed_url": "https://themeisle.com/blog/feed/",
+      "website_url": "https://themeisle.com/blog/",
+      "description": "A treasure trove of WordPress tutorials and tips for Beginners and Experts. We are pirates with extreme WordPress skills. We deliver themes, detailed tutorials, and insights. We can help you make your site awesome.",
+      "followers": {
+        "facebook": 35800,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4827262.jpg?t=1610949635"
+    },
+    {
+      "title": "WPExplorer",
+      "feed_url": "https://www.wpexplorer.com/feed/",
+      "website_url": "https://www.wpexplorer.com/archives/",
+      "description": "We showcase some of the best free & premium WordPress Themes & WordPress Plugins. Plus high quality 100% GPL business, blog themes available for download. Our blog also includes information on news, tutorials, tips, snippets, SEO and security.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 31400
+      },
+      "image_url": "https://i1.feedspot.com/426267.jpg?t=1610949671"
+    },
+    {
+      "title": "WordPress Tavern",
+      "feed_url": "https://wptavern.com/feed",
+      "website_url": "https://wptavern.com/",
+      "description": "WordPress Tavern is a site focused on all things WordPress. We also cover BuddyPress, bbPress, and any project under the Automattic umbrella. WordPress Tavern is a warm and inviting community where those interested in the software can hang out with fellow WordPressers to engage in enlightening discussions.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 32400,
+        "instagram": 220
+      },
+      "image_url": "https://i1.feedspot.com/4461070.jpg?t=1610949661"
+    },
+    {
+      "title": "WP Reset Blog",
+      "feed_url": "https://wpreset.com/feed/",
+      "website_url": "https://wpreset.com/blog/",
+      "description": "WP Reset is a premium WordPress development tool, made by developers for developers. Debugging, testing and developing is hard and time-consuming. Make it faster with the right tool!",
+      "followers": {
+        "twitter": 479
+      },
+      "image_url": "https://i1.feedspot.com/5082553.jpg?t=1610950787"
+    },
+    {
+      "title": "Cozmoslabs",
+      "feed_url": "https://www.cozmoslabs.com/feed/",
+      "website_url": "https://www.cozmoslabs.com/blog/",
+      "description": "Cozmoslabs is focused on delivering premium WordPress plugins you can rely on. Follow this blog to know more about Cozmoslabs WordPress Plugins & Solutions.",
+      "followers": {
+        "facebook": 507,
+        "twitter": 387
+      },
+      "image_url": "https://i1.feedspot.com/4826815.jpg?t=1610950556"
+    },
+    {
+      "title": "WPKube",
+      "feed_url": "https://www.wpkube.com/feed/",
+      "website_url": "https://www.wpkube.com/",
+      "description": "WPKube is an online WordPress resource that focuses on WordPress tutorials, How-to's, guides, plugins, news, and more. We aim to provide the most comprehensive beginner's guides to anything about WordPress - from installing plugins, themes, automated installs, and setups, to creating and setting up pages for your website.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/139062.jpg?t=1666789113"
+    },
+    {
+      "title": "WordPress Themes, Plugins, Reviews, & Tutorials - WPKube",
+      "feed_url": "https://www.wpkube.com/feed/",
+      "website_url": "https://www.wpkube.com/",
+      "description": "WPKube is a WordPress resource site which focuses on WordPress Themes, plugins, tutorials, news, and Modifications.We aim to provide the most comprehensive beginner's guides to anything about WordPress \u2014 from installing plugins, themes, automated installs and setups, to creating and setting up pages for your website.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4825262.jpg?t=1610950551"
+    },
+    {
+      "title": "WPShout \u2014 WordPress Development Tutorials and More",
+      "feed_url": "https://wpshout.com/feed/",
+      "website_url": "https://wpshout.com/",
+      "description": "WPShout is a blog with free WordPress tutorials on all sorts of topics. Key areas are: plugin development, theme design and development, and understanding the concepts underpinning the whole thing.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4824922.jpg?t=1610950560"
+    },
+    {
+      "title": "WP SITES",
+      "feed_url": "https://wpsites.net/feed/",
+      "website_url": "https://wpsites.net/",
+      "description": "The largest range of tutorials with code for modifying StudioPress child themes, Genesis & WordPress. WP SITES includes over 2100 tutorials PLUS 4000 code snippets written specifically for use in different Genesis child themes. Follow this blog to know more about Genesis wordpress themes.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4826971.jpg?t=1610951131"
+    },
+    {
+      "title": "WP Solver",
+      "feed_url": "https://www.wpsolver.com/feed/",
+      "website_url": "https://www.wpsolver.com/",
+      "description": "WP Solver covers the latest WordPress themes, plugins, PHP coding hacks, WP tips and everything WooCommerce.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4825334.jpg?t=1610950766"
+    },
+    {
+      "title": "Post Status",
+      "feed_url": "https://poststatus.com/feed/",
+      "website_url": "https://poststatus.com/category/blogs/",
+      "description": "Post Status is a WordPress news site devoted to covering the WordPress ecosystem for WordPress professionals and enthusiasts.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/4651540.jpg?t=1610951780"
+    },
+    {
+      "title": "WPEka Blog",
+      "feed_url": "https://wpeka.com/feed",
+      "website_url": "https://wpeka.com/",
+      "description": "WPEka is an eminent source of knowledge for WordPress, SEO, Web Design, and Digital Marketing. We share quality blog posts to take your business up a notch. Get Premium WordPress Themes, Power Packed Plugins and Video Tutorials all in one place.",
+      "followers": {
+        "facebook": 732,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4825295.jpg?t=1610950578"
+    },
+    {
+      "title": "WordPress.tv | Engage Yourself with WordPress.tv",
+      "feed_url": "https://wordpress.tv/feed/",
+      "website_url": "https://wordpress.tv/",
+      "description": "A WordPress blog consisting of post that has a video related to the bloggers or web developers talking at WordCamp events, interviews on various WordPress issues, product introductions or tutorials offered by specialists in front of a crowd.",
+      "followers": {
+        "facebook": 445,
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4826681.jpg?t=1610950793"
+    },
+    {
+      "title": "Appsero",
+      "feed_url": "https://appsero.com/feed/",
+      "website_url": "https://appsero.com/blog/",
+      "description": "A blog site for WordPress developers to continue the shape-making of future WordPress developers of plugins and themes. Appsero is a tool for analytics, software licensing, automatic updates, and releasing new versions of plugins and themes.",
+      "followers": {
+        "facebook": 230
+      },
+      "image_url": "https://i1.feedspot.com/5392966.jpg?t=1650535168"
+    },
+    {
+      "title": "WPArena - WordPress Plugins, Themes, Hosting, Tutorials & more!",
+      "feed_url": "https://wparena.com/feed/",
+      "website_url": "https://wparena.com/",
+      "description": "WPArena is the most Popular WordPress Resource site covering all things related to WordPress: Themes, Plugins, Tutorials, Deals and Beginner tips. At WordPress Arena, we create high-quality WordPress tutorials with lots of enthusiasm and commitment. Everything is clearly demonstrated through our specially crafted tutorials.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1900,
+        "instagram": 37
+      },
+      "image_url": "https://i1.feedspot.com/4825722.jpg?t=1610950782"
+    },
+    {
+      "title": "W3 SpeedUp Blog",
+      "feed_url": "https://w3speedup.com/feed/",
+      "website_url": "https://w3speedup.com/blog/",
+      "description": "Find the latest reviews on WordPress plugins, hosting services, theme reviews, website speed optimization tips, case studies, and more. At W3 SpeedUp, we are dedicated to Website Acceleration and Performance Optimization.",
+      "followers": {
+        "facebook": 536,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5288880.jpg?t=1656409922"
+    },
+    {
+      "title": "The LayerWP Blog",
+      "feed_url": "https://layerwp.com/blog/feed/",
+      "website_url": "https://layerwp.com/blog/",
+      "description": "New to WordPress? I was too; if you're new and love tutorials, reviews, what to buy, and what not to buy, you're going to love LayerWP. Check out all my latest posts in one handy place. Read tutorials, tips, reviews and interviews with WordPress makers and users. all on layerwp.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4826955.jpg?t=1614679236"
+    },
+    {
+      "title": "WP Creative Blog",
+      "feed_url": "https://wpcreative.com.au/feed/",
+      "website_url": "https://wpcreative.com.au/blog/",
+      "description": "Need help with your WordPress website? WP Creative is an Award-Winning team of WordPress developers specialising in WordPress technology to build responsive and conversion-focused websites.",
+      "followers": {
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5142568.jpg?t=1610952006"
+    },
+    {
+      "title": "WPLeaders",
+      "feed_url": "https://wpleaders.com/feed/",
+      "website_url": "https://wpleaders.com/",
+      "description": "WPLeaders is your trusted reviews site, we test-drive WordPress Themes, Plugins, and Web Hosting. All reviews are made by highly experienced WordPress users from the blogging community.",
+      "followers": {
+        "facebook": 295,
+        "twitter": 81
+      },
+      "image_url": "https://i1.feedspot.com/4963560.jpg?t=1610950776"
+    },
+    {
+      "title": "Tutsflow \u00bb WordPress",
+      "feed_url": "https://tutsflow.com/category/wordpress/feed/",
+      "website_url": "https://tutsflow.com/category/wordpress/",
+      "description": "Tutsflow WordPress tutorials empower you to increase the strength of WordPress. Our step-by-step WordPress tutorials are clear to learn and follow the WordPress best methods.",
+      "followers": {
+        "facebook": 96,
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/4908972.jpg?t=1610952029"
+    },
+    {
+      "title": "ZetaMatic Blog",
+      "feed_url": "https://zetamatic.com/feed/",
+      "website_url": "https://zetamatic.com/blog/",
+      "description": "ZetaMatic.com is a one stop solution provider for WordPress and WooCommerce platforms. ZetaMatic Blog section provides tutorials, news, and guides related to WordPress, WooCommerce, WordPress Plugins, and our products.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 364
+      },
+      "image_url": "https://i1.feedspot.com/5293780.jpg?t=1623911608"
+    },
+    {
+      "title": "WPCtrl.com",
+      "feed_url": "https://wpctrl.com/feed/",
+      "website_url": "https://wpctrl.com/",
+      "description": "WpCtrl.com is the place to catch up with all the latest WordPress trends. It reviews both free and premium items, to give you the best perspective on what will work best for you and your project. The experts at WPCtrla are committed to creating beautiful WordPress websites that deliver results.",
+      "followers": {
+        "facebook": 97
+      },
+      "image_url": "https://i1.feedspot.com/4833914.jpg?t=1698315819"
+    },
+    {
+      "title": "WPINDIGO",
+      "feed_url": "https://wpindigo.com/feed/",
+      "website_url": "https://wpindigo.com/",
+      "description": "Here, you can find some awesome resources and guides that will help you launch, manage, and improve your WordPress website. The goal is to show YOU how to create and elevate your own website.",
+      "followers": {
+        "facebook": 65,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/5426159.jpg?t=1659006853"
+    },
+    {
+      "title": "Newt Labs",
+      "feed_url": "https://newtlabs.co.uk/blog/feed/",
+      "website_url": "https://newtlabs.co.uk/blog/",
+      "description": "WordPress related articles including but not limited to reviews, seo, security, design, development, hosting, theme, plugin and content marketing. On demand access to our WordPress support team who are more than happy to help you with any fixes, help and advice you may need for your WordPress website.",
+      "followers": {
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4836377.jpg?t=1610952090"
+    },
+    {
+      "title": "EasyBlog Themes",
+      "feed_url": "https://easyblogthemes.com/feed/",
+      "website_url": "https://easyblogthemes.com/blog/",
+      "description": "EasyBlog Themes is a team of skilled and creative designers and developers that design and build awesome and minimal WordPress themes for bloggers. Read the latest articles and resources about WordPress, Blogging Tips, WordPress Themes and more from EasyBlog Themes Blog.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 1400,
+        "instagram": 658
+      },
+      "image_url": "https://i1.feedspot.com/5192785.jpg?t=1610951975"
+    },
+    {
+      "title": "FooPlugins-WordPress Plugins for Better Media and Management Blog",
+      "feed_url": "https://fooplugins.com/feed/",
+      "website_url": "https://fooplugins.com/blog/",
+      "description": "You have WordPress media problems, we have your solutions. - Home of FooBox and FooGallery, the best lightbox and gallery plugins for WordPress.",
+      "followers": {
+        "facebook": 715,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4826868.jpg?t=1610951674"
+    },
+    {
+      "title": "Managed WordPress Hosting by Pagely\u00ae Blog",
+      "feed_url": "https://pagely.com/feed/",
+      "website_url": "https://pagely.com/blog/",
+      "description": "Pagely\u00ae is the premium Managed WordPress Hosting provider, delivering flexible enterprise-grade hosting & support to help you effectively scale WP.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/4826895.jpg?t=1610949646"
+    },
+    {
+      "title": "WPLove",
+      "feed_url": "https://wplove.co/feed/",
+      "website_url": "https://wplove.co/",
+      "description": "WPLove.co was founded to help people with themes selection, choosing the best hosting provider, plugins, deals and more.",
+      "followers": {
+        "facebook": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4825989.jpg?t=1610952024"
+    },
+    {
+      "title": "WP Support Desk",
+      "feed_url": "https://wpsupportdesk.com/feed/",
+      "website_url": "https://wpsupportdesk.com/blog/",
+      "description": "Welcome to WP Support Desk, the WordPress support solution for WordPress website owners, developers, and marketers. We are a team of WordPress consultants, developers & customer happiness support members who are consulting, developing, maintaining, and providing WordPress support since 2010.",
+      "followers": {
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/5192187.jpg?t=1599038606"
+    },
+    {
+      "title": "WP Buffs Blog",
+      "feed_url": "https://wpbuffs.com/feed/",
+      "website_url": "https://wpbuffs.com/blog/",
+      "description": "WordPress care plans for serious website owners and white-label agency partners. Follow this blog to know more about wordpress maintainence, wordpress care plans, managed wp hosting and much more.",
+      "followers": {
+        "facebook": 853,
+        "twitter": 4000,
+        "instagram": 988
+      },
+      "image_url": "https://i1.feedspot.com/4825871.jpg"
+    },
+    {
+      "title": "MH Themes Blog",
+      "feed_url": "https://mhthemes.com/feed/",
+      "website_url": "https://mhthemes.com/blog/",
+      "description": "This is the official MH Themes Blog where you can read all about new releases, announcements and other WordPress related stuff. MH Themes is specialized in developing high-quality WordPress magazine themes for online magazines, dynamic news websites, blogs, and editorial websites.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 994
+      },
+      "image_url": "https://i1.feedspot.com/4827336.jpg?t=1610949651"
+    },
+    {
+      "title": "ThemeXriver",
+      "feed_url": "https://themexriver.com/feed/",
+      "website_url": "https://themexriver.com/blog/",
+      "description": "Themexriver is an Awesome source for your needs. We Build Awesome Quality WordPress, HTML, and PSD Templates. You get 100% responsive and unique templates. We are trying to provide the best and the most quality full templates. Those are made by our professional team members!",
+      "followers": {
+        "facebook": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5246000.jpg?t=1613565520"
+    },
+    {
+      "title": "Torque - WordPress News, WP Community Experts",
+      "feed_url": "http://torquemag.io/feed/",
+      "website_url": "https://torquemag.io/",
+      "description": "Current WordPress News. The Torque News Core is a group of WordPress experts that are part of the WordPress community.Torque Magazine is a leading resource for WordPress news. Content equips new and advanced WordPress users with expert insights and information to help them create, grow, and optimize their WordPress sites and build better experiences online.",
+      "followers": {
+        "facebook": 31900,
+        "twitter": 16700
+      },
+      "image_url": "https://i1.feedspot.com/1813788.jpg?t=1516346229"
+    },
+    {
+      "title": "Blog - CAREMYWP",
+      "feed_url": "https://caremywp.com/feed/",
+      "website_url": "https://caremywp.com/blog/",
+      "description": "We are WordPress lovers doing development for more than 15 years now. The problems in website maintenance faced by us and our clients made us think about starting this WordPress maintenance service. We want to allow more and more freelancers and small business owners to opt for the maintenance services and this is why we kept ours prices much affordable than many of the existing service providers.",
+      "followers": {
+        "facebook": 29,
+        "twitter": 175
+      },
+      "image_url": "https://i1.feedspot.com/5667880.jpg?t=1694168233"
+    },
+    {
+      "title": "K12Press Connect",
+      "feed_url": "https://www.k12press.com/feed/",
+      "website_url": "https://www.k12press.com/k12press-connect/",
+      "description": "K12Press Connect is your gateway to educational insights, technology tips, and school website solutions. Explore the blog for in-depth articles, expert advice, and the latest updates in the world of educational communications. Stay connected with valuable resources for managing your school's online presence effectively.",
+      "followers": {
+        "facebook": 436
+      },
+      "image_url": "https://i1.feedspot.com/7250701.jpg?t=1707740556"
+    },
+    {
+      "title": "Compete Themes Blog",
+      "feed_url": "https://www.competethemes.com/feed/",
+      "website_url": "https://www.competethemes.com/blog/",
+      "description": "The Compete Themes WordPress customizations blog provides tips, tricks, and advice for customizing, marketing, and running your WordPress site. We make WordPress themes for content creators.",
+      "followers": {
+        "twitter": 989
+      },
+      "image_url": "https://i1.feedspot.com/4825771.jpg?t=1610950573"
+    },
+    {
+      "title": "ThemeGrill Blog",
+      "feed_url": "https://themegrill.com/blog/feed/",
+      "website_url": "https://themegrill.com/blog/",
+      "description": "ThemeGrill was founded in February 2014 and is located at Basundhara 3, Kathmandu, Nepal. We love WordPress and we are here to provide you with professional-looking WordPress themes and awesome plugins so that you can take your website one step ahead.s",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5160471.jpg?t=1625137333"
+    },
+    {
+      "title": "Kasa Reviews",
+      "feed_url": "https://www.kasareviews.com/feed/",
+      "website_url": "https://www.kasareviews.com/",
+      "description": "Everything you need to know about WordPress. Check out WordPress website tips and tricks. Read WordPress plugin and themes reviews, see wordpress tutorials.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 278
+      },
+      "image_url": "https://i1.feedspot.com/4826071.jpg?t=1610950761"
+    },
+    {
+      "title": "Templatic Blog",
+      "feed_url": "https://templatic.com/feed/",
+      "website_url": "https://templatic.com/blog/",
+      "description": "200k Customers, 100 Beautiful Premium WordPress Themes, Templates & Plugins coupled with advanced functionality and 24/7 support. Directory themes and Listing themes are our specialty. Select Your Premium Theme Today!",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4825818.jpg?t=1610949677"
+    },
+    {
+      "title": "WPOven Blog",
+      "feed_url": "https://www.wpoven.com/blog/feed/",
+      "website_url": "https://www.wpoven.com/blog/",
+      "description": "Unlimited Managed WordPress Hosting. WPOven aims to provide a complete web solution to our clients, not just an optimized server setup but also other useful addons like Clients Manager, SEM Manager, Development support, Free SSL and CDN setup, and more. Follow our blog to know more about us.",
+      "followers": {
+        "facebook": 851,
+        "twitter": 86
+      },
+      "image_url": "https://i1.feedspot.com/5180767.jpg?t=1610950546"
+    },
+    {
+      "title": "woorkup - Marketing, WordPress, SEO, WebPerf",
+      "feed_url": "https://woorkup.com/feed/",
+      "website_url": "https://woorkup.com/",
+      "description": "woorkup helps take your marketing to the next level by sharing SEO, SMM, WordPress, and web performance strategies; along with in-depth SaaS reviews.",
+      "followers": {
+        "facebook": 631,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4825952.jpg?t=1610949682"
+    },
+    {
+      "title": "Bill Erickson Blog",
+      "feed_url": "https://www.billerickson.net/feed/",
+      "website_url": "https://www.billerickson.net/blog/",
+      "description": "Bill has been building custom WordPress websites for businesses and individuals since 2006. He specializes in crafting easy-to-use backend experiences. Follow this blog where he provides tutorials and code snippets to help others learn WordPress, free plugins and much more.",
+      "followers": {
+        "facebook": 546,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4826977.jpg?t=1610951669"
+    },
+    {
+      "title": "Deluxe Blog Tips",
+      "feed_url": "https://deluxeblogtips.com/feed/",
+      "website_url": "https://deluxeblogtips.com/",
+      "description": "My name is Tran Ngoc Tuan Anh (a.k.a. Rilwis), a WordPress developer based in Hanoi, Vietnam.I started Deluxe Blog Tips 6 years ago to share tutorials, tips and tricks on using WordPress that I found myself while working with it. I try to make it easy for both beginning and advanced WordPress users.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4826546.jpg?t=1610951834"
+    },
+    {
+      "title": "WPWarfare",
+      "feed_url": "https://wpwarfare.com/feed/",
+      "website_url": "https://wpwarfare.com/",
+      "description": "WPWarfare is a WordPress blog and resource site which focuses on WordPress themes, plugins, reviews, tips & tutorials, and the best WordPress marketing tools.",
+      "followers": {
+        "facebook": 984,
+        "twitter": 455
+      },
+      "image_url": "https://i1.feedspot.com/4827329.jpg?t=1610951723"
+    },
+    {
+      "title": "Web Training Wheels",
+      "feed_url": "https://webtrainingwheels.com/feed/",
+      "website_url": "https://webtrainingwheels.com/",
+      "description": "Providing WordPress training, online marketing coaching and consulting to small businesses & entrepreneurs.",
+      "followers": {
+        "facebook": 373,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4826150.jpg?t=1610951839"
+    },
+    {
+      "title": "A WordPress business podcast for the freelancer and small business.",
+      "feed_url": "https://mattreport.com/feed/",
+      "website_url": "https://mattreport.com/",
+      "description": "Finally a WordPress podcast for freelancers, agencies, and small business. No more asking, How do I start a WordPress business? It's all on the Matt Report!",
+      "followers": {
+        "facebook": 528,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/4826844.jpg?t=1610951986"
+    },
+    {
+      "title": "PixemWeb-Premium WordPress Themes, Design & Development",
+      "feed_url": "https://www.pixemweb.com/feed/",
+      "website_url": "https://www.pixemweb.com/",
+      "description": "Premium WordPress Themes, Design & Development for Real Estate Agents, Brokers, Business', Lawyers, Elected Officials and Bloggers.",
+      "followers": {
+        "facebook": 605,
+        "twitter": 1200,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4825738.jpg?t=1610951967"
+    },
+    {
+      "title": "WeLoveWP | WordPress Website and Theme Inspiration Gallery",
+      "feed_url": "https://welovewp.com/feed/",
+      "website_url": "https://welovewp.com/",
+      "description": "Browse the best WordPress website designs and websites in our famous gallery. Submit your original design or modification of a free or premium WP theme.",
+      "followers": {
+        "facebook": 868,
+        "twitter": 342
+      },
+      "image_url": "https://i1.feedspot.com/4824964.jpg?t=1610951981"
+    },
+    {
+      "title": "Neil Matthews, I Fix WordPress Sites",
+      "feed_url": "https://wpdude.com/feed/",
+      "website_url": "https://wpdude.com/",
+      "description": "My name is Neil Matthews and I'm the owner of NeilMatthews.co. Get WordPress Help and technical support from Neil Matthews.I'm a WordPress consultant and I specialise in fixing those annoying technical issues that break on WordPress sites. 80% of running a WordPress site is none technical it's that final 20% where things break, if you are hacked, if you need custom code that's where I step in.",
+      "followers": {
+        "facebook": 322,
+        "twitter": 187
+      },
+      "image_url": "https://i1.feedspot.com/4826916.jpg?t=1610952037"
+    },
+    {
+      "title": "WPNeon",
+      "feed_url": "https://wpneon.com/feed/",
+      "website_url": "https://wpneon.com/",
+      "description": "Honest Reviews and Ratings of the Best (and Worst) WordPress Themes & Plugins. WPNeon is a WP resource site providing useful articles on themes, plugins, tutorials, news and reviews.",
+      "followers": {
+        "facebook": 654,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4879030.jpg?t=1622611985"
+    },
+    {
+      "title": "PSDs2WP",
+      "feed_url": "https://psds2wp.com/blog/feed/",
+      "website_url": "https://psds2wp.com/blog/",
+      "description": "If you are looking for a White Label WordPress Agency that provide Custom WordPress Development Services, then PSDs2WP is the right place for you.",
+      "followers": {
+        "facebook": 163,
+        "twitter": 104
+      },
+      "image_url": "https://i1.feedspot.com/5027593.jpg?t=1610952293"
+    },
+    {
+      "title": "ThemeShaper Shaping WordPress Themes",
+      "feed_url": "https://themeshaper.com/feed/",
+      "website_url": "https://themeshaper.com/",
+      "description": "This is ThemeShaper, a WordPress-powered blog which helps for shaping WordPress Themes and home to the Automattic Theme Division. We shape beautiful and customizable themes that make the world a better place.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4826496.jpg?t=1610951799"
+    },
+    {
+      "title": "JustWP",
+      "feed_url": "https://justwp.org/feed/",
+      "website_url": "https://justwp.org/",
+      "description": "JustWP, founded by Karan Chopra, proud to be called a WordPress Junkie, is a resource site that offers its readers WordPress news, tips, tutorials, reviews, and lots more so as to make life simple for them whenever they will use or plan to use the WordPress.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 113
+      },
+      "image_url": "https://i1.feedspot.com/3714303.jpg?t=1641362007"
+    },
+    {
+      "title": "Cobalt Apps Blog",
+      "feed_url": "https://cobaltapps.com/feed/",
+      "website_url": "https://cobaltapps.com/blog/",
+      "description": "At Cobalt Apps you'll find high quality, premium DEV tools for freelance WordPress developers of all types and skill levels.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 762
+      },
+      "image_url": "https://i1.feedspot.com/4826168.jpg?t=1610951718"
+    },
+    {
+      "title": "Konstantin Kovshenin",
+      "feed_url": "https://konstantin.blog/feed/",
+      "website_url": "https://konstantin.blog/",
+      "description": "I'm Konstantin Kovshenin, a WordPress developer from Russia. I create WordPress themes, plugins, and a bunch of other cool stuff with the finest WordPress folks at Automattic. This is my personal blog where I tend to keep the posts tech-related, share code snippets, links, tips, and tricks.",
+      "followers": {
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5315594.jpg?t=1629892843"
+    },
+    {
+      "title": "WordPressIntegration",
+      "feed_url": "https://www.wordpressintegration.com/blog/feed/",
+      "website_url": "https://www.wordpressintegration.com/blog/",
+      "description": "A great resource for WordPress lovers to learn about WordPress Development including custom WordPress plugins, templates, and theme development tips & tutorials. WordPressIntegration is a USA-based WordPress development company.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5315596.jpg?t=1629893427"
+    },
+    {
+      "title": "WP Theming",
+      "feed_url": "https://wptheming.com/feed/",
+      "website_url": "https://wptheming.com/",
+      "description": "WP Theming is collection of tutorials and code snippets related to WordPress, WooCommerce, and themes.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4826518.jpg?t=1610951728"
+    },
+    {
+      "title": "WPSutra:Free WordPress Tutorials & Guides",
+      "feed_url": "https://wpsutra.com/blog/feed/",
+      "website_url": "https://wpsutra.com/blog/",
+      "description": "Here at How to WordPress, you will learn various WordPress tips and tricks. That includes WordPress SEO, about WordPress how to tutorials.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4827489.jpg?t=1610951713"
+    },
+    {
+      "title": "WP Engineer | WordPress News, Hacks, Tips, Tutorials, Plugins and Themes",
+      "feed_url": "https://wpengineer.com/feed/",
+      "website_url": "https://wpengineer.com/",
+      "description": "WP Engineer was created by 3 WordPress Junkies, who love WordPress. We always try to show ways to make WordPress a little bit better, more convenient, more flexible or in short - just awesome! We will try to give our readers tips and tricks for their WordPress website. We hope you enjoy this blog.",
+      "followers": {
+        "facebook": 70,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/34505.jpg?t=1610951788"
+    },
+    {
+      "title": "WP Garage - WordPress tricks, hacks, and tips",
+      "feed_url": "https://www.wpgarage.com/feed/",
+      "website_url": "https://www.wpgarage.com/",
+      "description": "Your source for the latest on WordPress tips, tricks and hacks for WordPress developers and users.",
+      "followers": {
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/4826510.jpg?t=1610951853"
+    },
+    {
+      "title": "Flywheel | Managed WordPress Hosting for Designers and Agencies",
+      "feed_url": "https://getflywheel.com/feed/",
+      "website_url": "https://getflywheel.com/",
+      "description": "Flywheel is managed WordPress hosting built for designers and creative agencies. Build, scale, and managed hundreds of WP sites with ease on Flywheel. The blog helps to improve the lives of the millions of web designers and developers worldwide that build sites on WordPress.",
+      "followers": {
+        "facebook": 28600,
+        "twitter": 15100,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4407123.jpg?t=1610952312"
+    },
+    {
+      "title": "AlienWP - Clean, Minimal & Professional WordPress Themes",
+      "feed_url": "https://alienwp.com/feed/",
+      "website_url": "https://alienwp.com/",
+      "description": "The home of fine, well designed and clean minimalist WordPress Themes Download our Free Themes Here AlienWP is a provider of the best themes for WordPress.",
+      "followers": {
+        "facebook": 217,
+        "twitter": 140
+      },
+      "image_url": "https://i1.feedspot.com/4825060.jpg?t=1610952327"
+    },
+    {
+      "title": "Nimbus Themes",
+      "feed_url": "https://www.nimbusthemes.com/feed/",
+      "website_url": "https://www.nimbusthemes.com/",
+      "description": "Follow this blog to get Beautiful premium WordPress themes loaded with options and designed with professionals in mind.",
+      "followers": {
+        "facebook": 247,
+        "twitter": 212
+      },
+      "image_url": "https://i1.feedspot.com/4826047.jpg?t=1610951702"
+    },
+    {
+      "title": "Codeinwp Blog",
+      "feed_url": "https://www.codeinwp.com/feed/",
+      "website_url": "https://wpshout.com/blog/",
+      "description": "CodeinWP is a blog about all things WordPress.Our goal is to provide easy to digest content that helps you understand various aspects of the WordPress platform, plus what you can build with it.Every week, you can expect new tutorials, lists, comparison posts, and highly researched pieces that go into the inner workings of WordPress and how to get the most out of it.",
+      "followers": {
+        "facebook": 32800,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4827280.jpg?t=1610949656"
+    },
+    {
+      "title": "iThemes Blog",
+      "feed_url": "https://ithemes.com/feed/",
+      "website_url": "https://solidwp.com/blog/",
+      "description": "Your one-stop shop for WordPress themes, plugins and training. Get the latest WordPress news, tips, tricks, techniques and more from iThemes.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4176335.jpg?t=1610949630"
+    },
+    {
+      "title": "Digging Into WordPress",
+      "feed_url": "https://feeds2.feedburner.com/DiggingIntoWordpress",
+      "website_url": "https://digwp.com/",
+      "description": "DigWP.com is home for the book, Digging Into WordPress, written by Chris Coyier and Jeff Starr. Here you will find lots of awesome free WordPress resources, themes, and techniques to improve your site. Check us out for high-quality tutorials, tricks, tips and much more.",
+      "followers": {
+        "facebook": 703,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/4824563.jpg?t=1610950756"
+    },
+    {
+      "title": "WPLift Blog",
+      "feed_url": "https://wplift.com/feed/",
+      "website_url": "https://wplift.com/blog/",
+      "description": "We learn WordPress as we explore the WordPress universe. Join us if you want to learn WordPress. Read our plugin reviews, theme listings, how-to's, etc",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 19900
+      },
+      "image_url": "https://i1.feedspot.com/4811852.jpg?t=1610949336"
+    },
+    {
+      "title": "WPGlossy - Smart WordPress Guide Blog",
+      "feed_url": "https://www.wpglossy.com/feed/",
+      "website_url": "https://www.wpglossy.com/blog/",
+      "description": "WPGlossy is a smart blog that offers data about WordPress Features, Themes, Plugins, Hosting, Deals and much more.You will also read in-depth WordPress tutorials, Hosting and WP Theme Reviews from time to time. Its primary aim is to show the visitors how to create the highly sophisticated websites using the available WordPress sources.",
+      "followers": {
+        "facebook": 444,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4825888.jpg?t=1610951697"
+    },
+    {
+      "title": "SKT Themes",
+      "feed_url": "https://www.sktthemes.org/blog/feed/",
+      "website_url": "https://www.sktthemes.org/blog/",
+      "description": "Our SKT Themes blog writes about various issues and Responsive blog themes for WordPress. It also launches the latest news with regards to our themes for the industry.",
+      "followers": {
+        "facebook": 30500,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5058111.jpg?t=1610949666"
+    },
+    {
+      "title": "The Blogsmith | SEO Content for WordPress & Technology Brands",
+      "feed_url": "https://www.the-blogsmith.com/feed/",
+      "website_url": "https://www.the-blogsmith.com/blog/",
+      "description": "Maddy Osman runs The Blogsmith, an SEO Content Strategy company that works with WordPress brands (and other technology companies).",
+      "followers": {
+        "facebook": 482,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4948014.jpg?t=1610952302"
+    },
+    {
+      "title": "WPSafeScan",
+      "feed_url": "https://www.wpsafescan.com/articles/feed/",
+      "website_url": "https://www.wpsafescan.com/articles/",
+      "description": "In this blog, you will find the latest news, and tips to Scan & Secure Your WordPress Website.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5212360.jpg?t=1604154773"
+    },
+    {
+      "title": "TeslaThemes | Premium WordPress Themes Club",
+      "feed_url": "https://teslathemes.com/feed/",
+      "description": "We create beautiful, modern WordPress themes with responsive design, advanced features and great support. Get your best matching theme now! Follow this blog to know more about TeslaThemes.",
+      "followers": {
+        "facebook": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4826088.jpg?t=1610951708"
+    }
+  ]
+}

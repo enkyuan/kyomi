@@ -1,0 +1,149 @@
+{
+  "category": "Kazakhstan News",
+  "source_url": "https://rss.feedspot.com/kazakhstan_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "ng.kz",
+      "feed_url": "https://www.ng.kz/modules/newspaper/cache/newspaper.xml",
+      "website_url": "https://www.ng.kz/",
+      "description": "ng.kz is a full-fledged Internet portal, in which high-quality, relevant content is combined with the possibility of interactive communication.",
+      "followers": {
+        "facebook": 4500,
+        "instagram": 213200
+      },
+      "image_url": "https://i1.feedspot.com/3816685.jpg?t=1636607508"
+    },
+    {
+      "title": "The Astana Times",
+      "feed_url": "https://astanatimes.com/feed/atom/",
+      "website_url": "https://astanatimes.com/",
+      "description": "Bringing Kazakhstan to the world. The Astana Times is published by the Regional Non-Profit Organization Guild of Independent Journalists.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5342009.jpg?t=1636607566"
+    },
+    {
+      "title": "Time.kz",
+      "feed_url": "https://time.kz/rss",
+      "website_url": "https://time.kz/",
+      "description": "News and articles about politics, economics, sports, and culture in Kazakhstan, the CIS, and the world.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 21300
+      },
+      "image_url": "https://i1.feedspot.com/5342007.jpg?t=1636607959"
+    },
+    {
+      "title": "Lada.kz",
+      "feed_url": "https://www.lada.kz/rss.xml",
+      "website_url": "https://www.lada.kz/",
+      "description": "News of the city of Aktau and Mangistau region.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 6000,
+        "instagram": 328000
+      },
+      "image_url": "https://i1.feedspot.com/5342008.jpg?t=1636608761"
+    },
+    {
+      "title": "The New York Times \u00bb Kazakhstan",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/kazakhstan/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/destination/kazakhstan",
+      "description": "News about Kazakhstan, including commentary and archival articles published in The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 765800
+      },
+      "image_url": "https://i1.feedspot.com/5342094.jpg?t=1646061151"
+    },
+    {
+      "title": "ekaraganda.kz",
+      "feed_url": "https://ekaraganda.kz/rss.php",
+      "website_url": "https://ekaraganda.kz/",
+      "description": "News of the Karaganda region covering real estate, cinema, weather, media, and more.",
+      "followers": {
+        "twitter": 4600,
+        "instagram": 832900
+      },
+      "image_url": "https://i1.feedspot.com/5342095.jpg?t=1636626252"
+    },
+    {
+      "title": "Liter.kz",
+      "feed_url": "https://liter.kz/feed/",
+      "website_url": "https://liter.kz/",
+      "description": "The latest and most relevant news of the Republic of Kazakhstan.",
+      "followers": {
+        "facebook": 50500
+      },
+      "image_url": "https://i1.feedspot.com/5342033.jpg?t=1636611792"
+    },
+    {
+      "title": "Kazpravda.kz",
+      "feed_url": "https://kazpravda.kz/en/",
+      "website_url": "https://kazpravda.kz/en/",
+      "description": "Fresh news from Kazakhstan and the world about politics, business, economy, incidents, sports, and more.",
+      "followers": {
+        "twitter": 246,
+        "instagram": 159800
+      },
+      "image_url": "https://i1.feedspot.com/5342038.jpg?t=1636614195"
+    },
+    {
+      "title": "DKN World news",
+      "feed_url": "https://dknews.kz/",
+      "website_url": "https://dknews.kz/",
+      "description": "Latest news, author's articles and analytical materials from the international news agency.",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 865,
+        "instagram": 122800
+      },
+      "image_url": "https://i1.feedspot.com/5342040.jpg?t=1636614522"
+    },
+    {
+      "title": "Kp.kz",
+      "feed_url": "https://www.kp.kz/",
+      "website_url": "https://www.kp.kz/",
+      "description": "Kp.kz is a socio-political, information and entertainment newspaper.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 666,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5342116.jpg?t=1636624998"
+    },
+    {
+      "title": "zakon.kz",
+      "feed_url": "https://www.zakon.kz/",
+      "website_url": "https://www.zakon.kz/",
+      "description": "Latest news of Kazakhstan and the world,",
+      "followers": {
+        "facebook": 96100,
+        "twitter": 95500,
+        "instagram": 809200
+      },
+      "image_url": "https://i1.feedspot.com/5342097.jpg?t=1636627290"
+    },
+    {
+      "title": "Tengrinews.kz",
+      "feed_url": "https://en.tengrinews.kz/",
+      "website_url": "https://en.tengrinews.kz/",
+      "description": "Tengrinews.kz English is an English language news website in Kazakhstan. Creating and distributing top-quality news, sports and entertainment in Kazakhstan and around the world it has a multinational readership and is a valuable source of news for the English-speaking community in Kazakhstan.",
+      "followers": {
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5342098.jpg?t=1636626591"
+    },
+    {
+      "title": "Izvestia.kz",
+      "feed_url": "http://www.izvestia.kz/",
+      "website_url": "http://www.izvestia.kz/",
+      "description": "Latest news and headlines related to economy, politics, sports, society, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5342104.jpg?t=1636626903"
+    }
+  ]
+}

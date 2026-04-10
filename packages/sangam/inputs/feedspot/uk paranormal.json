@@ -1,0 +1,66 @@
+{
+  "category": "UK Paranormal",
+  "source_url": "https://rss.feedspot.com/uk_paranormal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Supernatural Tales",
+      "feed_url": "http://suptales.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://suptales.blogspot.com/",
+      "description": "A blog about ghost stories, weird fiction, quiet horror, and related matters.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4910342.jpg?t=1620046476"
+    },
+    {
+      "title": "Hayley is a Ghost",
+      "feed_url": "https://hayleyisaghost.co.uk/feed/",
+      "website_url": "https://hayleyisaghost.co.uk/",
+      "description": "Hayley is a ghost geek and started to blog in 2007. She uses scientific scepticism to investigate weird stuff and writes about it here while also speaking publicly about how to hunt ghosts as a skeptic.",
+      "followers": {
+        "facebook": 817,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4910279.jpg?t=1620046483"
+    },
+    {
+      "title": "Knock Once For Yes",
+      "feed_url": "https://knockonceforyes.com/feed/",
+      "website_url": "https://knockonceforyes.com/",
+      "description": "A Podcast of true ghost stories, real paranormal encounters, history and hauntings.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 3300,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4910278.jpg?t=1620046488"
+    },
+    {
+      "title": "Haunted Magazine",
+      "feed_url": "https://www.haunteddigitalmagazine.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.haunteddigitalmagazine.com/",
+      "description": "Haunted Magazine is the UK's premier digital magazine presenting the world of the Paranormal in a very different way. We take our time with each issue to ensure it's the best that it can be with the best writing talent, exclusive locations and content and features that will blow the supernatural socks off any sinister spectre.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4910282.jpg?t=1620046493"
+    },
+    {
+      "title": "Paranormal Magazine Blog",
+      "feed_url": "https://paranormal-magazine.com/feed/",
+      "website_url": "https://paranormal-magazine.com/blog/",
+      "description": "The official paranormal magazine published in the uk, the true home of ghost stories and documentary videos, Read the best ghost hunting articles here!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4838326.jpg?t=1611150156"
+    },
+    {
+      "title": "Paranormal Pilgrim Blog",
+      "feed_url": "https://www.paranormalpilgrim.com/blog-feed.xml",
+      "website_url": "https://www.paranormalpilgrim.com/blog",
+      "description": "Matt is a Copywriter based in Hertfordshire UK who studied ancient history and archaeology at the University of Exeter. He follows a research-based approach in his investigations, preferring to identify key information from witness accounts and highlighting their similarities.",
+      "followers": {
+        "facebook": 236
+      },
+      "image_url": "https://i1.feedspot.com/5391011.jpg?t=1650108107"
+    }
+  ]
+}

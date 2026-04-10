@@ -1,0 +1,93 @@
+{
+  "category": "New Jersey Sports",
+  "source_url": "https://rss.feedspot.com/new_jersey_sports_rss_feeds",
+  "feeds": [
+    {
+      "title": "NJ Athletics Blog",
+      "feed_url": "https://njathletics.net/blogs/news.atom",
+      "website_url": "https://njathletics.net/blogs/news",
+      "description": "We are a social media community for all athletes and creators in the state of New Jersey. Our mission is to shine a light on all of the talents this state has to offer at all levels of competition.",
+      "followers": {
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5504086.jpg?t=1675669083"
+    },
+    {
+      "title": "World Sports Network Blog",
+      "feed_url": "https://www.wsn.com/feed/",
+      "website_url": "https://www.wsn.com/blog/",
+      "description": "The World Sports Network, or WSN, is an independent online sports and betting guide that features news, stories, picks, predictions, and odds on the basis of a set of guiding editorial principles. WSN's blog brings you interesting stories from the world of sports. Our writers mix fascinating insights and facts with engaging content so you can have fun reading our posts.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1800,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5504090.jpg?t=1675668932"
+    },
+    {
+      "title": "Jersey Sports Zone",
+      "feed_url": "https://jerseysportszone.com/feed/",
+      "website_url": "https://jerseysportszone.com/feature-stories/",
+      "description": "Jersey Sports Zone brings a new level of media coverage to New Jersey high school sports. We know how hard high school athletes work to get on the field and the work ethic and teamwork they show will pay dividends beyond the world of sports. Jersey Sports Zone will discover future stars of major college and professional sports and promote high school athletes in a truly unique way.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 43800,
+        "instagram": 137900
+      },
+      "image_url": "https://i1.feedspot.com/5504088.jpg?t=1675669034"
+    },
+    {
+      "title": "Tom Williams Sports Blog",
+      "feed_url": "https://ochssports.game.blog/feed/",
+      "website_url": "https://ochssports.game.blog/",
+      "description": "Tom Williams Sports covers Ocean City (NJ), the Cape-Atlantic League & New Jersey sports. Read the blog to stay updated on the lastest happening in the sports sector in New Jersey.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5504087.jpg?t=1675669196"
+    },
+    {
+      "title": "Devilsmedia",
+      "feed_url": "https://devilsmedia.wordpress.com/feed/",
+      "website_url": "https://devilsmedia.wordpress.com/",
+      "description": "Official Home of the New Jersey Devils Communications Department is designed to serve our media as a one-stop destination to assist with your coverage of the team. This site will be updated daily. On game days we'll upload notes as they become available. In addition to any pre-game notes, storylines, etc., you can also expect updates soon after the conclusion of every game.",
+      "followers": {
+        "facebook": 477800
+      },
+      "image_url": "https://i1.feedspot.com/5180864.jpg?t=1675668986"
+    },
+    {
+      "title": "Devils Army Blog",
+      "feed_url": "https://devilsarmynetwork.com/feed/",
+      "website_url": "https://devilsarmynetwork.com/category/articles/",
+      "description": "The Devils Army Network is a fan-run site that covers the New Jersey Devils (NHL), Binghamton Devils (AHL), Metropolitan Riveters (NWHL), and National Hockey League. Founded in 2011, DAN's mission is to unite all members of the Devils Army and provide them with up-to-the-minute news and analysis.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 7600,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5504089.jpg?t=1675669009"
+    },
+    {
+      "title": "All About The Jersey",
+      "feed_url": "https://www.allaboutthejersey.com/rss/current.xml",
+      "website_url": "https://www.allaboutthejersey.com/",
+      "description": "All About The Jersey is your best source for quality New Jersey Devils' news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4921086.jpg?t=1675668781"
+    },
+    {
+      "title": "Pucks and Pitchforks",
+      "feed_url": "https://pucksandpitchforks.com/feed/",
+      "website_url": "https://pucksandpitchforks.com/",
+      "description": "Welcome to Pucks and Pitchforks, the New Jersey Devils' news and opinions site brought to you by the FanSided Network. Pucks and Pitchforks are dedicated to providing top-notch Devils news, views, and original content. This site also serves as a community for like-minded fans to come together to catch up on the latest news and discuss their passion.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5180630.jpg?t=1675668956"
+    }
+  ]
+}

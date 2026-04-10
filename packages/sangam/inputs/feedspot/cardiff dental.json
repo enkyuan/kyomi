@@ -1,0 +1,50 @@
+{
+  "category": "Cardiff Dental",
+  "source_url": "https://rss.feedspot.com/cardiff_dental_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bay House Dental Practice Blog",
+      "feed_url": "https://bayhousedentalpractice.co.uk/feed/",
+      "website_url": "https://bayhousedentalpractice.co.uk/blog/",
+      "description": "Unlock the secrets to your dental beauty. Bay House Dental Practice is one of the leading private dental practice in Cardiff. Read their dental blogs here for guidance, tips, and facts about various aspects of dentistry.",
+      "followers": {
+        "facebook": 310,
+        "twitter": 32,
+        "instagram": 312
+      },
+      "image_url": "https://i1.feedspot.com/5710212.jpg?t=1699620658"
+    },
+    {
+      "title": "North Cardiff Dental & Implants Blog",
+      "feed_url": "https://northcardiffdentalimplants.co.uk/feed/",
+      "website_url": "https://northcardiffdentalimplants.co.uk/category/ndci-blog/",
+      "description": "Explore your complete guide to dental implants. Follow expert dental advice and practices and know more about aesthetic treatments. North Cardiff Dental & Implants is a center for bespoke dental excellence set in the convenient North Cardiff suburbs.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5710211.jpg?t=1699620655"
+    },
+    {
+      "title": "Park Place Dental Cardiff Blog",
+      "feed_url": "https://www.parkplacedental.co.uk/feed/",
+      "website_url": "https://www.parkplacedental.co.uk/category/news/blog/",
+      "description": "Explore the diverse spectrum of dental services offered by Park Place Dental Cardiff, tailored to meet your unique oral health needs. Whether you are looking to achieve excellent dental health for life or to create a wonderful smile Park Place Dentists in Cardiff can help you!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 131
+      },
+      "image_url": "https://i1.feedspot.com/5710209.jpg?t=1699620632"
+    },
+    {
+      "title": "Cyncoed Dental & Aesthetic Skin Clinic Blog",
+      "feed_url": "https://www.cyncoeddentalpractice.co.uk/feed/",
+      "website_url": "https://www.cyncoeddentalpractice.co.uk/blog/",
+      "description": "Dive into articles illuminating a range of topics from modern dentistry including Cosmetic treatments, Hygiene, Facial aesthetics, Oral health advice, and more. Cardiff-based Cyncoed Dental & Aesthetic Skin Clinic's blog provides all the information you need when it comes to dental problems.",
+      "followers": {
+        "facebook": 173
+      },
+      "image_url": "https://i1.feedspot.com/5710210.jpg?t=1699620835"
+    }
+  ]
+}

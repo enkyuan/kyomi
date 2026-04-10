@@ -1,0 +1,65 @@
+{
+  "category": "UK Bridal",
+  "source_url": "https://rss.feedspot.com/uk_bridal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Love My Dress Blog",
+      "feed_url": "https://www.lovemydress.net/feed",
+      "website_url": "https://www.lovemydress.net/blog",
+      "description": "Love My Dress is beautiful wedding blog full of inspiration for brides and those planning a wedding that embraces glamour and elegance and encourages sophistication and style, whilst remaining true to the love story behind every wedding. Love My Dress is a soulful platform for weddings, founded by Annabel Beeforth.",
+      "followers": {
+        "facebook": 515700,
+        "twitter": 53000,
+        "instagram": 129300
+      },
+      "image_url": "https://i1.feedspot.com/4278268.jpg?t=1611293858"
+    },
+    {
+      "title": "The English Wedding Blog",
+      "feed_url": "https://english-wedding.com/feed/",
+      "website_url": "https://english-wedding.com/",
+      "description": "The very best real English weddings and inspiration for UK brides. English Wedding is about being in love, about celebrating love and about planning your very own, personal celebration. Every wedding, elopement or alternative celebration is different - and that's what spins our love-filled world around.",
+      "followers": {
+        "facebook": 17600,
+        "twitter": 27300,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4842102.jpg?t=1658309754"
+    },
+    {
+      "title": "Guides for Brides Blog",
+      "feed_url": "https://www.guidesforbrides.co.uk/blog/feed",
+      "website_url": "https://guidesforbrides.co.uk/wedding-ideas",
+      "description": "Guides for Brides wedding planner has ideas and information for anyone getting married in the UK.",
+      "followers": {
+        "facebook": 68900,
+        "twitter": 46900
+      },
+      "image_url": "https://i1.feedspot.com/4908422.jpg?t=1614073521"
+    },
+    {
+      "title": "Loved Up North",
+      "feed_url": "https://lovedupnorth.com/feed/",
+      "website_url": "https://lovedupnorth.com/",
+      "description": "Since its launch in 2010, Brides Up North has skyrocketed in popularity and profile to become one of the most visited wedding blogs in the UK and is the only top bridal blog, especially for northern couples. If you're planning a wedding Up North, you've come to the right place.",
+      "followers": {
+        "facebook": 41100,
+        "twitter": 33800,
+        "instagram": 5
+      },
+      "image_url": "https://i1.feedspot.com/4926.jpg?t=1658312192"
+    },
+    {
+      "title": "Rock My Wedding",
+      "feed_url": "https://www.rockmywedding.co.uk/feed",
+      "website_url": "https://www.rockmywedding.co.uk/",
+      "description": "The best UK wedding blog for brides and grooms featuring real weddings, inspiration, ideas and useful planning advice to create your day your way.",
+      "followers": {
+        "facebook": 443300,
+        "twitter": 65900,
+        "instagram": 357100
+      },
+      "image_url": "https://i1.feedspot.com/4841884.jpg?t=1611293877"
+    }
+  ]
+}

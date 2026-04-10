@@ -1,0 +1,182 @@
+{
+  "category": "San Francisco Music",
+  "source_url": "https://rss.feedspot.com/san_francisco_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "San Francisco Classical Voice",
+      "feed_url": "https://feeds.feedburner.com/sfcv/uqkO",
+      "website_url": "https://www.sfcv.org/",
+      "description": "San Francisco Classical Voice is the go-to place for comprehensive coverage of music in the SF Bay Area and Los Angeles. Our mission is to engage audiences, artists, and arts organizations, and forge meaningful connections through music journalism.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 5000,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4785857.jpg?t=1597732901"
+    },
+    {
+      "title": "Music in SF",
+      "feed_url": "https://musicinsf.com/feed/",
+      "website_url": "https://musicinsf.com/",
+      "description": "Music in SF provides complete coverage of the San Francisco and Bay Area music scene. The magazine features interviews, concert reviews, and music news from both local and national music acts. Find out everything you need to know about the music scene in San Francisco.",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 4400,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5183005.jpg?t=1702881884"
+    },
+    {
+      "title": "San Francisco Community Music Center",
+      "feed_url": "https://sfcmc.org/feed/",
+      "website_url": "https://sfcmc.org/about/news/",
+      "description": "Latest news, updates and announcements by San Francisco Community Music Center.The Community Music Center makes high quality music accessible to people of all ages, backgrounds and abilities, regardless of financial means.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 742,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5183273.jpg?t=1597674346"
+    },
+    {
+      "title": "SF Weekly \u00bb Music",
+      "feed_url": "https://www.sfweekly.com/search/?f=rss",
+      "website_url": "https://www.sfweekly.com/music/",
+      "description": "Get the latest San Francisco Music news, updates, reviews, and more on SF Weekly. SF Weekly is your go-to publication for comprehensive coverage of San Francisco news, music, food, and arts scenes.",
+      "followers": {
+        "facebook": 69700,
+        "twitter": 203400,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5183024.jpg?t=1629108144"
+    },
+    {
+      "title": "SF Sonic",
+      "feed_url": "https://sfsonic.com/feed/",
+      "website_url": "https://sfsonic.com/",
+      "description": "Check out concert highlights, latest releases, photos and interviews of your favorite artists and bands in San Francisco in SF Sonic. SF Sonic is San Francisco's #1 site for music coverage including concerts, interviews, album/song reviews, and feature stories.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5486194.jpg?t=1672647694"
+    },
+    {
+      "title": "Static & Blur Music Magazine",
+      "feed_url": "https://www.staticandblur.com/feed/",
+      "website_url": "https://www.staticandblur.com/page/2/",
+      "description": "We're writers, photographers, videographers, and fans dedicated to the thriving communities of talented musicians and loyal fans who create and support music in the San Francisco Bay Area and beyond.",
+      "followers": {
+        "facebook": 119,
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/8657160.jpg"
+    },
+    {
+      "title": "MINTED SF Blog",
+      "feed_url": "https://www.mintedsf.com/feed/",
+      "website_url": "https://www.mintedsf.com/blog/",
+      "description": "Stories of SF's local DJ crews and community builders keeping the city's creative pulse alive through music, culture, and connection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8657161.jpg"
+    },
+    {
+      "title": "San Francisco Contemporary Music Players",
+      "feed_url": "https://sfcmp.org/news/atom.xml",
+      "website_url": "https://sfcmp.org/news/",
+      "description": "San Francisco Contemporary Music Players (SFCMP) is not a traditional blog it's a performing ensemble and arts organization dedicated to contemporary classical music in the Bay Area. They frequently present large-ensemble performances, commission new works, premiere pieces by California composers, and offer educational and rehearsal access programs.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 911
+      },
+      "image_url": "https://i1.feedspot.com/8657158.jpg?t=1754653678"
+    },
+    {
+      "title": "Center for New Music Blog",
+      "feed_url": "https://centerfornewmusic.com/feed/",
+      "website_url": "https://centerfornewmusic.com/blog/",
+      "description": "The Center for New Music San Francisco, Inc. is a community center for participants of new music in San Francisco. The Center for New Music fosters contemporary music's growth by giving practicing artists access to professional resources and expertise, and by providing them with opportunities for sharing knowledge and exploring new ideas.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5183869.jpg?t=1672647506"
+    },
+    {
+      "title": "All The City Lights Blog",
+      "feed_url": "http://billchapin.net/allthecitylights/feed/",
+      "website_url": "http://billchapin.net/allthecitylights/",
+      "description": "Just a guy in Oakland, California, blabbing about (mostly) indie music, local and otherwise.",
+      "followers": {
+        "facebook": 156
+      },
+      "image_url": "https://i1.feedspot.com/5183042.jpg?t=1597651469"
+    },
+    {
+      "title": "BAM Magazine",
+      "feed_url": "https://bammagazine.com/feed/",
+      "website_url": "https://bammagazine.com/",
+      "description": "Get the latest updates on San Francisco Bay Area Music, musicians, clubs, and events. BAM Magazine is a free online digital entertainment magazine that delivers passionate and exclusive coverage of the Bay Area music scene and beyond. BAM's goal is to offer in-depth reviews, be the voice of respected and aspiring musicians, and cultivate the diverse music scene in the Bay Area and beyond.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 116
+      },
+      "image_url": "https://i1.feedspot.com/5183923.jpg?t=1597752244"
+    },
+    {
+      "title": "SFChronicle Datebook \u00bb Music",
+      "feed_url": "https://datebook.sfchronicle.com/category/music/feed",
+      "website_url": "https://datebook.sfchronicle.com/category/music",
+      "description": "Datebook is the San Francisco Chronicle's guide to Music in the Bay Area, combining award-winning news coverage with a curated events calendar. Datebook is your guide to art and entertainment in the Bay Area, from the San Francisco Chronicle.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 5400,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5486196.jpg?t=1672647662"
+    },
+    {
+      "title": "Other Minds",
+      "feed_url": "https://www.otherminds.org/feed/",
+      "website_url": "https://www.otherminds.org/",
+      "description": "Other Minds is dedicated to the encouragement and propagation of contemporary music in all its forms through concerts, recordings, broadcasts, audio preservation, and public discussions.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/8657159.jpg"
+    },
+    {
+      "title": "San Francisco Bay Area Concerts",
+      "feed_url": "https://www.sfbayareaconcerts.com/feeds/posts/default",
+      "website_url": "https://www.sfbayareaconcerts.com/",
+      "description": "The SF Bay Area's source for concert reviews, artist interviews, and upcoming live shows you need to know about. Bay Area venues and ticket info too. SFBAC began as a way to highlight great concerts in and around the Bay Area with quick reviews, setlists, pictures and clips from the shows. The team is made-up of true music enthusiasts who are passionate about the bands and artists that we highlight.",
+      "followers": {
+        "facebook": 694,
+        "twitter": 320,
+        "instagram": 990
+      },
+      "image_url": "https://i1.feedspot.com/5486195.jpg?t=1672647610"
+    },
+    {
+      "title": "The Bay Bridged",
+      "feed_url": "https://thebaybridged.com/feed/",
+      "website_url": "https://www.sfems.org/news-and-events",
+      "description": "The leading source for the best in San Francisco Bay Area independent music.The Bay Bridged is a nonprofit arts organization utilizing new media and presenting live events to support the San Francisco Bay Area's indie rock, folk, and pop music communities.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 10400,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4066974.jpg?t=1597646382"
+    },
+    {
+      "title": "San Francisco Early Music Society",
+      "feed_url": "https://www.sfems.org/news-and-events",
+      "website_url": "https://www.sfems.org/news-and-events",
+      "description": "The San Francisco Early Music Society is a community-based organization dedicated to increasing public appreciation for historically-informed performance of early music.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 351
+      },
+      "image_url": "https://i1.feedspot.com/5183709.jpg?t=1597925033"
+    }
+  ]
+}

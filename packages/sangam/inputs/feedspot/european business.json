@@ -1,0 +1,84 @@
+{
+  "category": "European Business",
+  "source_url": "https://rss.feedspot.com/european_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "EU-Startups",
+      "feed_url": "https://www.eu-startups.com/feed/",
+      "website_url": "https://www.eu-startups.com/",
+      "description": "EU-Startups Magazine is the leading online magazine about startups in Europe. Learn more about them and their advertising options as they write about internet and tech startups out of Europe and provide their readers with data-driven analysis, interviews, and startup-related news.",
+      "followers": {
+        "facebook": 48800,
+        "twitter": 45400,
+        "instagram": 34500
+      },
+      "image_url": "https://i1.feedspot.com/82072.jpg?t=1643024204"
+    },
+    {
+      "title": "EU Business News",
+      "feed_url": "https://www.eubusinessnews.com/feed/",
+      "website_url": "https://www.eubusinessnews.com/category/articles/",
+      "description": "Get the most recent posts from EU Business News from Europe. The EU is a vital and exciting region defined by innovation and client-centricity, with businesses that are truly the harbingers of greater global change. Naturally, we aim to provide a thorough overview of the world of European business.",
+      "followers": {
+        "facebook": 646,
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/5434172.jpg?t=1661159869"
+    },
+    {
+      "title": "ECSB Research Blog",
+      "feed_url": "https://ecsbresearchblog.wordpress.com/feed/",
+      "website_url": "https://ecsbresearchblog.wordpress.com/",
+      "description": "This blog is a forum for ECSB members to share current research in Entrepreneurship and Small Business. ECSB Mission ECSB is a scholarly community that supports its members to develop high-quality intellectual contributions in entrepreneurship research, teaching and societal interaction to advance entrepreneurship in Europe.",
+      "followers": {
+        "facebook": 301,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5434173.jpg?t=1661159938"
+    },
+    {
+      "title": "The European Magazine",
+      "feed_url": "https://the-european.eu/feed",
+      "website_url": "https://the-european.eu/",
+      "description": "The European is a quarterly business publication, published by Chase-Publishing. We cover a broad spectrum of business affairs globally and provide decision-makers with the latest news and information about Energy, Banking, Finance, Foreign Direct Investment, Aviation, Technology, and more.",
+      "followers": {
+        "facebook": 827,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5434174.jpg?t=1661165845"
+    },
+    {
+      "title": "European Business Magazine",
+      "feed_url": "https://europeanbusinessmagazine.com/feed/",
+      "website_url": "https://europeanbusinessmagazine.com/",
+      "description": "European Business Magazine provides a detailed analysis of Europe's diverse marketplace. We keep our readers abreast of the latest developments in the European market but with our smart technology, we will also be targeting our readers digitally with updates via email and newsletter as well as social media with the latest news from Europe. We bring you live daily news about the European parliament, economy & current events.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5434177.jpg?t=1661160344"
+    },
+    {
+      "title": "The European Business Review",
+      "feed_url": "https://www.europeanbusinessreview.com/feed/",
+      "website_url": "https://www.europeanbusinessreview.com/",
+      "description": "Our leading business intelligence magazine publishes insightful business article reviews written by the brightest of the minds from varied industry verticals. The European Business Review acts as an accessible bridge between academia and business. We fill in the gaps between business intelligence and practical application in a real-world setting.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 1700,
+        "instagram": 285
+      },
+      "image_url": "https://i1.feedspot.com/5434180.jpg?t=1661160880"
+    },
+    {
+      "title": "EuroDev Blog",
+      "feed_url": "https://blog.eurodev.com/rss.xml",
+      "website_url": "https://www.eurodev.com/blog",
+      "description": "Read the latest info on business development and employment in Europe. Since its establishment in 1996, EuroDev has been the preferred business development partner of more than 500 businesses. Today, our workforce consists of more than 75 highly-skilled, multilingual professionals committed to our client's success and to the EuroDev vision.",
+      "followers": {
+        "facebook": 356
+      },
+      "image_url": "https://i1.feedspot.com/5434175.jpg?t=1661160219"
+    }
+  ]
+}

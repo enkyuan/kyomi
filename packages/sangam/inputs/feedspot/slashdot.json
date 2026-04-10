@@ -1,0 +1,18 @@
+{
+  "category": "Slashdot",
+  "source_url": "https://rss.feedspot.com/slashdot_rss_feeds",
+  "feeds": [
+    {
+      "title": "Slashdot",
+      "feed_url": "https://rss.slashdot.org/Slashdot/slashdotMain",
+      "website_url": "https://slashdot.org/",
+      "description": "Slashdot was created in 1997 by Rob CmdrTaco Malda. Today it's owned by Slashdot Media. It is run primarily by a handful of editors and coders, with the help of many others. Check out their blog and learn more about their resources, services, stories, latest news, issues, and more.",
+      "followers": {
+        "facebook": 128900,
+        "twitter": 5400,
+        "instagram": 47000
+      },
+      "image_url": "https://i1.feedspot.com/5675488.jpg?t=1695276303"
+    }
+  ]
+}

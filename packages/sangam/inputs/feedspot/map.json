@@ -1,0 +1,541 @@
+{
+  "category": "Map",
+  "source_url": "https://rss.feedspot.com/map_rss_feeds",
+  "feeds": [
+    {
+      "title": "Brilliant Maps",
+      "feed_url": "https://brilliantmaps.com/feed/",
+      "website_url": "https://brilliantmaps.com/",
+      "description": "Learn more about maps that will help you make sense of the world at Brilliant Maps.",
+      "followers": {
+        "twitter": 128900
+      },
+      "image_url": "https://i1.feedspot.com/4201211.jpg?t=1607698137"
+    },
+    {
+      "title": "Google Maps Mania",
+      "feed_url": "https://feeds.feedburner.com/GoogleMapsMania",
+      "website_url": "https://googlemapsmania.blogspot.com/",
+      "description": "Maps Mania is a blog dedicated to tracking the very best digital interactive maps on the internet and the tools used to create them.",
+      "followers": {
+        "facebook": 555,
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/34964.jpg?t=1609395467"
+    },
+    {
+      "title": "Google Maps Blog",
+      "feed_url": "https://blog.google/products/maps/rss/",
+      "website_url": "https://blog.google/products/maps/",
+      "description": "The latest news and updates about Google Maps, which makes navigating and exploring your world faster and easier.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 4300000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4729959.jpg?t=1699592958"
+    },
+    {
+      "title": "The Map Room | A weblog about maps",
+      "feed_url": "https://www.maproomblog.com/feed/",
+      "website_url": "https://www.maproomblog.com/",
+      "description": "The Map Room is a blog about maps by Jonathan Crowe that covers everything from antique map collecting to the latest in geospatial technology",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/75878.jpg?t=1609395514"
+    },
+    {
+      "title": "OpenStreetMap",
+      "feed_url": "https://blogs.openstreetmap.org/rss20.xml",
+      "website_url": "https://blogs.openstreetmap.org/",
+      "description": "OpenStreetMap is a project aimed at creating and providing free geographic data such as street maps to anyone who wants them. It is the free editable map of the whole world.",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 83500
+      },
+      "image_url": "https://i1.feedspot.com/4786406.jpg?t=1609395568"
+    },
+    {
+      "title": "Transit Maps | Showing you how to get from here to there",
+      "feed_url": "https://transitmap.net/feed/",
+      "website_url": "http://transitmap.net/",
+      "description": "Transit Maps is a celebration of transit maps and diagrams from around the world, whether they be real or imaginary, or from the past, future or present and stating what I like and don't like about them, giving each map my own, totally subjective rating.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4785796.jpg?t=1609395579"
+    },
+    {
+      "title": "Library of Congress Blog \u00bb Geography and Map",
+      "feed_url": "https://blogs.loc.gov/maps/feed/",
+      "website_url": "https://blogs.loc.gov/maps/",
+      "description": "Welcome to the blog for the Geography and Map Division of the Library of Congress. The largest and most comprehensive cartographic collection in the world, the Geography and Map Division contains over six million maps in addition to a wide array of atlases, globes, raised relief models, archives, a vast collection of digital data and a GIS research center.",
+      "followers": {
+        "facebook": 579500,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4727944.jpg?t=1607698161"
+    },
+    {
+      "title": "Bodleian Map Room \u00bb Maps",
+      "feed_url": "https://blogs.bodleian.ox.ac.uk/maps/feed/",
+      "website_url": "https://blogs.bodleian.ox.ac.uk/maps/",
+      "description": "Welcome to the Bodleian Social Science Library! We are one of the University's busiest lending and reference libraries.Find Items of interest from the wonderful world of maps.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 107900
+      },
+      "image_url": "https://i1.feedspot.com/4785879.jpg?t=1609395610"
+    },
+    {
+      "title": "Gaia GPS Blog",
+      "feed_url": "https://blog.gaiagps.com/feed/",
+      "website_url": "https://blog.gaiagps.com/",
+      "description": "Gaia GPS integrates the best topo maps, offline navigation tools, and planning features, seamlessly across phones and tablet. Stay plugged into the Gaia GPS community with new feature updates, navigation tips, and inspiration for getting outdoors.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 3400,
+        "instagram": 35600
+      },
+      "image_url": "https://i1.feedspot.com/4785908.jpg?t=1609395859"
+    },
+    {
+      "title": "BatchGeo",
+      "feed_url": "https://blog.batchgeo.com/feed/",
+      "website_url": "https://blog.batchgeo.com/",
+      "description": "BatchGeo.com is a free website that makes it easy to create maps from lists of addresses or coordinates. It is all about a simple service that lets you make maps real fast.",
+      "followers": {
+        "facebook": 396,
+        "twitter": 594
+      },
+      "image_url": "https://i1.feedspot.com/4786456.jpg?t=1609395846"
+    },
+    {
+      "title": "Scribble Maps",
+      "feed_url": "https://blog.scribblemaps.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.scribblemaps.com/",
+      "description": "It is a development blog for ScribbleMaps.com, Scribble Maps API, and MapYourList.com. Find blogs and updates on maps.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4681334.jpg?t=1609395865"
+    },
+    {
+      "title": "National Park Maps",
+      "feed_url": "https://npmaps.com/feed/",
+      "website_url": "https://npmaps.com/",
+      "description": "Here, I uploaded a bunch of free maps for you. View and download any high resolution national park maps.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 483
+      },
+      "image_url": "https://i1.feedspot.com/4786687.jpg?t=1609395900"
+    },
+    {
+      "title": "Lovell Johns",
+      "feed_url": "https://www.lovelljohns.com/feed/",
+      "website_url": "https://www.lovelljohns.com/blog/",
+      "description": "Here at Lovell Johns, we provide clients with cost-efficient mapping solutions. Follow the blog to find out the latest news from the mapping Industry.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5049694.jpg"
+    },
+    {
+      "title": "FY! Fluid Dynamics",
+      "feed_url": "https://fyfluiddynamics.com/feed/",
+      "website_url": "https://fyfluiddynamics.com/",
+      "description": "Celebrating the physics of all that flows. Find posts and updates on maps.",
+      "followers": {
+        "twitter": 12400,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/28710.jpg?t=1606375988"
+    },
+    {
+      "title": "Paul Shapley's Open Source Geospatial Blog",
+      "feed_url": "https://www.paulshapley.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.paulshapley.com/",
+      "description": "Find Observations, comments and tutorials on the world of open source mapping and geographical information systems(GIS) for users and developers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4730075.jpg?t=1607666692"
+    },
+    {
+      "title": "Concept3D | Blog",
+      "feed_url": "https://concept3d.com/blog/feed/",
+      "website_url": "https://concept3d.com/blog/",
+      "description": "We are the leaders in bringing mapping into the digitalized world. At Concept3D, we believe the best software combines innovation with creative inspiration. The age of the map does not end with technological advancement, it is just the beginning. Concept3D marries art and science in highly detailed, interactive 3D renderings to breathe life into static maps and meet your customers where they are. Read the blog to know more.",
+      "followers": {
+        "facebook": 239,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4786436.jpg?t=1612246948"
+    },
+    {
+      "title": "SplashMaps News",
+      "feed_url": "https://www.splash-maps.com/feed/",
+      "website_url": "https://www.splash-maps.com/news/",
+      "description": "SplashMaps we've taken our knowledge of mapping, gained from years of experience with mapping agencies, added open map data from Ordnance Survey and OpenStreetMap to make a product that is entirely designed around you. We posts news and the latest in, rugged, all-weather fabric maps designed for the REAL outdoors. Personalized maps on indestructible cloth.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4786006.jpg?t=1609396031"
+    },
+    {
+      "title": "Mapping as Process",
+      "feed_url": "https://www.mappingasprocess.net/blog?format=sqsp_rss_wceoq1kgqnmf2cn9czutlluofr44tazt",
+      "website_url": "https://www.mappingasprocess.net/",
+      "description": "Dive into Cartopgraphy insights in Mapping as Process - a blog on the study of mapping processes, on the production, circulation, and consumption of maps, to delineate mapping discourses and modes. Explore a myriad of musings and discerning patterns in historical data that can be used to reveal insights into mapping processes.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4945561.jpg?t=1699516137"
+    },
+    {
+      "title": "Adventures In Mapping",
+      "feed_url": "https://adventuresinmapping.com/feed/",
+      "website_url": "https://adventuresinmapping.com/",
+      "description": "Adventures In Mapping illuminates the art and science of Cartoprahy further by sharing thoughtful ideas and stories from the history of Map-making. The author also shares strategies, recreations, guides on what tools to use, and their personal favorite reimagined maps for readers to enjoy.",
+      "followers": {
+        "twitter": 22300
+      },
+      "image_url": "https://i1.feedspot.com/4785835.jpg?t=1609396374"
+    },
+    {
+      "title": "Map Fail",
+      "feed_url": "https://mapfail.tumblr.com/rss",
+      "website_url": "https://mapfail.tumblr.com/",
+      "description": "If geography is prose, maps are iconography. Find posts and updates on maps.",
+      "followers": {
+        "twitter": 357
+      },
+      "image_url": "https://i1.feedspot.com/4787064.jpg"
+    },
+    {
+      "title": "Great Map",
+      "feed_url": "http://greatmap.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://greatmap.blogspot.com/",
+      "description": "Great Map is MAPS WithOUT Borders. Get Information Mapping Interface.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4786988.jpg?t=1609396814"
+    },
+    {
+      "title": "Leaflet Dev",
+      "feed_url": "https://leafletjs.com/atom.xml?format=xml",
+      "website_url": "https://leafletjs.com/blog.html",
+      "description": "Leaflet is an open-source JavaScript library for mobile-friendly interactive maps.",
+      "followers": {
+        "twitter": 28700
+      },
+      "image_url": "https://i1.feedspot.com/4785891.jpg?t=1609395839"
+    },
+    {
+      "title": "Minds Behind Maps",
+      "feed_url": "https://maphappenings.com/feed/",
+      "website_url": "https://maphappenings.com/",
+      "description": "Maps Are Everywhere.These are conversations with those building them.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5708888.jpg?t=1745503730"
+    },
+    {
+      "title": "Big Think \u00bb Strange Maps",
+      "feed_url": "https://bigthink.com/feed/strange-maps",
+      "website_url": "https://bigthink.com/strange-maps/",
+      "description": "In an increasingly remote world, it's more important than ever that you have a scalable, digital resource to build culture and enable transformation. Unlock potential across your organization by building the capabilities that are relevant today and will continue to be relevant in the future with Big Think+.They have a section that focuses on Strange Maps, their cartography, geography, political division and feature stories with other related topics.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 185500,
+        "instagram": 432500
+      },
+      "image_url": "https://i1.feedspot.com/5708344.jpg?t=1699445045"
+    },
+    {
+      "title": "Mapping London",
+      "feed_url": "https://mappinglondon.co.uk/feed/",
+      "website_url": "https://mappinglondon.co.uk/",
+      "description": "Highlighting the best London maps. They have featured hundreds of London's finest cartographical creations, so far! People, places, data, things.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/1633773.jpg?t=1607505292"
+    },
+    {
+      "title": "NextBillion.ai Blog",
+      "feed_url": "https://nextbillion.ai/blog/feed",
+      "website_url": "https://nextbillion.ai/blog",
+      "description": "NextBillion.ai is an industry-leading spatial data + AI platform that helps enterprises build, scale, and manage their own mapping ecosystem. NextBillion.ai is an AI-powered unified platform that solves highly complex location problems. NextBillion.ai's aim is to build a self-sustaining location ecosystem for every enterprise enabling a billion different maps for millions of enterprises.",
+      "followers": {
+        "twitter": 336,
+        "instagram": 362
+      },
+      "image_url": "https://i1.feedspot.com/5708887.jpg?t=1699516773"
+    },
+    {
+      "title": "Land of Maps",
+      "feed_url": "https://landofmaps.com/feed/",
+      "website_url": "https://landofmaps.com/",
+      "description": "Find 1000 Maps & Infographics posts.",
+      "followers": {
+        "facebook": 49
+      },
+      "image_url": "https://i1.feedspot.com/4787070.jpg?t=1609395716"
+    },
+    {
+      "title": "OSMBlog",
+      "feed_url": "https://blog.openstreetmap.de/feed/",
+      "website_url": "https://blog.openstreetmap.de/",
+      "description": "Find reports and news about OpenStreetMap, the free wiki world map.",
+      "followers": {
+        "twitter": 791
+      },
+      "image_url": "https://i1.feedspot.com/1963964.jpg?t=1699592707"
+    },
+    {
+      "title": "Missing Maps",
+      "feed_url": "https://www.missingmaps.org/feed.xml",
+      "website_url": "https://www.missingmaps.org/blog/",
+      "description": "The Missing Maps Project is an open collaboration founded by the American Red Cross, the British Red Cross, Humanitarian OSM Team (HOT) and Medecins Sans Frontieres/Doctors Without Borders (MSF). It aims to map the places in the world where the most vulnerable people live in a proactive way.",
+      "followers": {
+        "twitter": 18000,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4785830.jpg?t=1609395912"
+    },
+    {
+      "title": "Stats, Maps n Pix",
+      "feed_url": "http://www.statsmapsnpix.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.statsmapsnpix.com/",
+      "description": "This blog is for anyone interested in maps, statistics and images. Find blogs mostly about maps, data and images.",
+      "followers": {
+        "twitter": 45700
+      },
+      "image_url": "https://i1.feedspot.com/4732043.jpg?t=1609396047"
+    },
+    {
+      "title": "Mappa Mercia",
+      "feed_url": "https://www.mappa-mercia.org/feed",
+      "website_url": "https://www.mappa-mercia.org/blog",
+      "description": "Mappa Mercia is a project to grow OpenStreetMap in the West Midlands, UK. We support OpenStreetMap and Open Data in the West Midlands of England. We post updates on maps.",
+      "followers": {
+        "twitter": 281
+      },
+      "image_url": "https://i1.feedspot.com/4787288.jpg?t=1609396055"
+    },
+    {
+      "title": "Jerry's Map",
+      "feed_url": "http://jerrysmap.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jerrysmap.blogspot.com/",
+      "description": "In the summer of 1963 I began drawing a map of an imaginary city. I continued to add to that map through the years until, in 1983. I blog about maps.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4787019.jpg?t=1609396451"
+    },
+    {
+      "title": "WiSAR and GIS Blog",
+      "feed_url": "https://wisarandgis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://wisarandgis.blogspot.com/",
+      "description": "Paul Doherty is a GIS specialist and enthusiast. Find maps are at the core of any Wildland Search and Rescue (WiSAR) operation.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4729998.jpg?t=1609396579"
+    },
+    {
+      "title": "Gary Gale",
+      "feed_url": "https://www.vicchi.org/feeds/feed.atom",
+      "website_url": "https://www.vicchi.org/",
+      "description": "Articles on Geo Technology, maps and more from Gary's Bloggage.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/1216894.jpg?t=1607698843"
+    },
+    {
+      "title": "SmartCarto.com",
+      "feed_url": "https://smartcarto.com/feed/",
+      "website_url": "https://smartcarto.com/",
+      "description": "Presenting curious maps and gis methods, focusing on GIS software, cartography, maps, geology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5327638.jpg?t=1634031298"
+    },
+    {
+      "title": "Mapbox",
+      "feed_url": "https://blog.mapbox.com/feed",
+      "website_url": "https://blog.mapbox.com/",
+      "description": "Mapbox is the location data platform for mobile and web applications. We're changing the way people move around cities and explore our world.",
+      "followers": {
+        "facebook": 32100,
+        "twitter": 77300
+      },
+      "image_url": "https://i1.feedspot.com/4786380.jpg?t=1609395949"
+    },
+    {
+      "title": "MindMup 2",
+      "feed_url": "https://www.mindmup.com/feed.xml",
+      "website_url": "https://www.mindmup.com/news/index.html",
+      "description": "MindMup 2 is a easy mindmapping software. It is the most productive online mind map canvas on the Web. It supports Freemind mindmap import/export. Get MindMup news and updates.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4786569.jpg?t=1609395834"
+    },
+    {
+      "title": "EasyMapMaker",
+      "feed_url": "https://blog.easymapmaker.com/feed/",
+      "website_url": "https://blog.easymapmaker.com/",
+      "description": "EasyMapMaker makes custom online maps for mobile, table, and computers. Maps are made easy so you can focus on the more important things.",
+      "followers": {
+        "facebook": 38,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4786065.jpg?t=1609395880"
+    },
+    {
+      "title": "Judgmental Maps | Your city. Judged.",
+      "feed_url": "https://judgmentalmaps.com/rss",
+      "website_url": "https://judgmentalmaps.com/",
+      "description": "Find posts and updates on maps.",
+      "followers": {
+        "facebook": 40300,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/3646726.jpg?t=1609396062"
+    },
+    {
+      "title": "MapTrove",
+      "feed_url": "https://www.maptrove.ca/info/feed",
+      "website_url": "https://www.maptrove.ca/info/",
+      "description": "MapTrove sells high-quality maps from best publishers across the globe. Maps can be ordered in high-quality prints with different sizes & materials. Follow to get the updates.",
+      "followers": {
+        "facebook": 136,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/5053892.jpg?t=1609396013"
+    },
+    {
+      "title": "Google Geo Developers Blog",
+      "feed_url": "http://feeds.feedburner.com/GoogleGeoDevelopersBlog",
+      "website_url": "https://mapsplatform.googleblog.com/",
+      "description": "The Google Maps APIs blog covers all aspects of Google Maps APIs, including product launches, updates and developer stories. Get local businesses, view maps and get driving directions in Google Maps.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/102357.jpg?t=1609396591"
+    },
+    {
+      "title": "Here Dragons Abound",
+      "feed_url": "https://heredragonsabound.blogspot.com/feeds/posts/default",
+      "website_url": "https://heredragonsabound.blogspot.com/",
+      "description": "Scott Turner has a Ph.D. in Artificial Intelligence from UCLA. His dissertation subject was a program called MINSTREL that told stories about King Arthur and his knights, as a way to explore issues in creativity and storytelling. For the last twenty years, Dr. Turner has worked for the Aerospace Corporation, where he advises the nation's space programs on software and systems engineering issues. In his blog here Dragon Abound he shares the places he has been along with detailed map descriptions which turn out to be useful for fellow people visiting those places.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5708884.jpg?t=1699516672"
+    },
+    {
+      "title": "Maps of Iceland Blog",
+      "feed_url": "https://mapsoficeland.shop/feed/",
+      "website_url": "https://mapsoficeland.shop/blogs-and-media/",
+      "description": "Snorri is a local photographer, filmmaker, and cartographer. Snorri is the founder of Maps of Iceland, Iceland360VR, and Iceland Location Scouting. He has spent the last years traveling all around Iceland to capture high-resolution 360\u00b0 images of Iceland's major points of interest. Snorri is also the founder and owner of the design studio Borgarmynd.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5708889.jpg?t=1699516692"
+    },
+    {
+      "title": "Northlandia",
+      "feed_url": "https://northlandia.wordpress.com/feed/",
+      "website_url": "https://northlandia.wordpress.com/",
+      "description": "Northlandia is a highly informative blog about maps that showcases current happening around serval places and provides detailed map descriptions, news, and updates regarding the places.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5708886.jpg?t=1699524068"
+    },
+    {
+      "title": "PolicyMap Blog",
+      "feed_url": "https://www.policymap.com/feed/",
+      "website_url": "https://www.policymap.com/resources/blog",
+      "description": "GIS mapping from PolicyMap allows you to map data quickly and easily. PolicyMap provides up-to-date news, information and interesting data insights using the web's most user-friendly geographic information system (GIS).",
+      "followers": {
+        "facebook": 539,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4729905.jpg?t=1699593412"
+    },
+    {
+      "title": "MapmyIndia",
+      "feed_url": "https://www.mapmyindia.com/blog/feed/",
+      "website_url": "https://www.mapmyindia.com/",
+      "description": "MapmyIndia is India's leader in premium quality digital map and data, GPS, location-based services (LBS), GIS and location-based business intelligence solutions. MapmyIndia offers the best navigation devices & most advanced accurate map data of India. Get Map, GPS & location solutions for enterprise & government organizations.",
+      "followers": {
+        "facebook": 105800,
+        "twitter": 24500
+      },
+      "image_url": "https://i1.feedspot.com/4785841.jpg?t=1609395869"
+    },
+    {
+      "title": "CARTO Blog",
+      "feed_url": "https://carto.com/blog",
+      "website_url": "https://carto.com/blog",
+      "description": "CARTO is the location intelligence platform for turning location data into business outcomes. Learn about new features, event updates, conferences, online mapping, and view how-to-guides at the CARTO blog.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 32500
+      },
+      "image_url": "https://i1.feedspot.com/4478699.jpg?t=1699595565"
+    },
+    {
+      "title": "OsmAnd",
+      "feed_url": "http://osmand.net/rss.xml",
+      "website_url": "http://osmand.net/blog/",
+      "description": "OsmAnd is a map and navigation application with access to the free, worldwide, and high-quality OpenStreetMap data.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4786663.jpg?t=1609395891"
+    },
+    {
+      "title": "National Library of Wales",
+      "feed_url": "https://www.library.wales/news/rss",
+      "website_url": "https://www.library.wales/index.php?id=13491",
+      "description": "News- National Library of Wales - The Nation's Memory - collecting, preserving and giving access to Welsh history and culture.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5708890.jpg?t=1699516619"
+    },
+    {
+      "title": "Mapme Blog",
+      "feed_url": "https://mapme.com/feed/",
+      "website_url": "https://mapme.com/blog/",
+      "description": "Mapme presents Create actionable interactive maps. Mapme Blog with updates, news and case studies about Mapme builder for interactive maps with no coding and programming needed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5708885.jpg?t=1699525352"
+    },
+    {
+      "title": "Maps on the Web",
+      "feed_url": "https://mapsontheweb.zoom-maps.com/rss",
+      "website_url": "https://mapsontheweb.zoom-maps.com/",
+      "description": "Maps on the web, maps from the web, charts and infographics. Find News on maps, online maps, route planners from around the world.",
+      "followers": {
+        "facebook": 176400,
+        "twitter": 96100
+      },
+      "image_url": "https://i1.feedspot.com/3444176.jpg?t=1609395525"
+    },
+    {
+      "title": "Maptitude",
+      "feed_url": "https://maptitude1.tumblr.com/rss",
+      "website_url": "https://maptitude1.tumblr.com/",
+      "description": "Hi Tumblr!I'm a 28-year-old postdoc at Harvard, and a big fan of maps. This is where I'll be posting some of my favorites as I find them, as well as some maps I've drawn myself (look for the tag #original or add /tagged/original\u2026",
+      "followers": {},
+      "image_url": "?t=1699592432"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "category": "Antivirus",
+  "source_url": "https://rss.feedspot.com/antivirus_rss_feeds",
+  "feeds": [
+    {
+      "title": "McAfee Antivirus",
+      "feed_url": "https://www.mcafee.com/blogs/feed/",
+      "website_url": "https://www.mcafee.com/blogs/security-news/",
+      "description": "McAfee is one of the world's leading independent cyber security companies. Inspired by the power of working together, it creates business and consumer solutions that make the world a safer place.",
+      "followers": {
+        "facebook": 821400,
+        "twitter": 116900
+      },
+      "image_url": "https://i1.feedspot.com/4509511.jpg?t=1612932600"
+    },
+    {
+      "title": "Avast \u00bb Blogs",
+      "feed_url": "https://blog.avast.com/rss.xml",
+      "website_url": "https://blog.avast.com/",
+      "description": "All latest blogs from Avast.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 158900
+      },
+      "image_url": "https://i1.feedspot.com/4674149.jpg?t=1742974601"
+    },
+    {
+      "title": "Kaspersky Blog",
+      "feed_url": "https://www.kaspersky.co.uk/blog/feed/",
+      "website_url": "https://www.kaspersky.co.uk/blog/",
+      "description": "Kaspersky is the world's largest privately held vendor of endpoint protection solutions. Learn how to stay protected from viruses, spyware, hackers, spam, and other dangers of the digital age with Kaspersky Lab's official blog.",
+      "followers": {
+        "facebook": 3300000,
+        "twitter": 320100
+      },
+      "image_url": "https://i1.feedspot.com/4903795.jpg?t=1613550489"
+    },
+    {
+      "title": "Graham Cluley",
+      "feed_url": "https://grahamcluley.com/feed/",
+      "website_url": "https://grahamcluley.com/writing/",
+      "description": "If your computer, and the data on it, is important to you - keep yourself informed about the latest security news by following Graham Cluley Security blog from veteran anti-virus expert Graham Cluley.",
+      "followers": {
+        "twitter": 113100
+      },
+      "image_url": "https://i1.feedspot.com/4428657.jpg?t=1612932620"
+    },
+    {
+      "title": "Webroot Blog",
+      "feed_url": "https://www.webroot.com/blog/feed/",
+      "website_url": "https://www.webroot.com/blog/",
+      "description": "Internet Security Threat Updates & Insights. Webroot provides real-time protection for PCs and Macs against viruses, malware, phishing attacks and identity theft. Our unique, smart cloud technology scans fast and secures your online identity and financial information without interrupting or slowing down your online experience. Supporting millions of businesses and home users with powerful data security and easy recovery. Webroot, an OpenText company, strengthens CyberResilience in the connected world.",
+      "followers": {
+        "facebook": 108400,
+        "twitter": 65400
+      },
+      "image_url": "https://i1.feedspot.com/4510481.jpg?t=1642743573"
+    },
+    {
+      "title": "Safety Detectives Blog",
+      "feed_url": "https://www.safetydetectives.com/feed/",
+      "website_url": "https://www.safetydetectives.com/blog/",
+      "description": "Articles on the computer and mobile security, antivirus testing and comparisons, interviews, and practical guides for the home & business user. SafetyDetectives is a publishing group of cybersecurity experts & privacy researchers whose mission is to help you make informed decisions about staying safe & protected on the internet.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 892
+      },
+      "image_url": "https://i1.feedspot.com/5329011.jpg?t=1633515045"
+    },
+    {
+      "title": "Virusdie. Blog",
+      "feed_url": "https://virusdie.com/blog/feed/",
+      "website_url": "https://virusdie.com/blog/",
+      "description": "Virusdie is an easy and powerful website security tools built for everyone. Follow us to keep up with articles on Antivirus.",
+      "followers": {
+        "facebook": 778,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4903793.jpg?t=1613550503"
+    },
+    {
+      "title": "Quick Heal Blog",
+      "feed_url": "https://blogs.quickheal.com/feed/",
+      "website_url": "https://blogs.quickheal.com/category/security/",
+      "description": "Quick Heal Technologies Ltd. is the pioneer of antivirus research and development in India and has set the benchmark of computer security standards. The brand simplifies security management to ensure an uninterrupted digital experience for all users across multiple devices and platforms. The blog shares articles on IT security news, alerts, threats, tips, and more.",
+      "followers": {
+        "facebook": 283100,
+        "twitter": 96800
+      },
+      "image_url": "https://i1.feedspot.com/4804832.jpg?t=1688369055"
+    },
+    {
+      "title": "Antivirus Software",
+      "feed_url": "https://antivirussoftwareforpc.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://antivirussoftwareforpc.blogspot.com/",
+      "description": "Follow to get al the updates related to antivirus",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5029426.jpg"
+    },
+    {
+      "title": "Avira Blog",
+      "feed_url": "https://www.avira.com/en/blog/feed",
+      "website_url": "https://www.avira.com/en/blog/",
+      "description": "This blog features articles to make your digital life safe and successful. Also you can find Security News, Reviews and Recommendations",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4903784.jpg?t=1760591647"
+    },
+    {
+      "title": "Panda Security Mediacenter",
+      "feed_url": "https://www.pandasecurity.com/en/mediacenter/feed/",
+      "website_url": "https://www.pandasecurity.com/en/mediacenter/",
+      "description": "Our mission is to keep our customers, information and IT assets safe from security threats, giving them the most effective protection with the minimum resource consumption.",
+      "followers": {
+        "facebook": 523600,
+        "twitter": 36500
+      },
+      "image_url": "https://i1.feedspot.com/4903779.jpg?t=1613550494"
+    },
+    {
+      "title": "ZoneAlarm Blog",
+      "feed_url": "https://blog.zonealarm.com/feed/",
+      "website_url": "https://blog.zonealarm.com/",
+      "description": "News and information about internet security, online threats and safe web practices. ZoneAlarm is a world leader in firewall & antivirus software, and mobile security.",
+      "followers": {
+        "facebook": 954600,
+        "twitter": 5300,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/730364.jpg?t=1643011007"
+    }
+  ]
+}

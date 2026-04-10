@@ -1,0 +1,126 @@
+{
+  "category": "ABC Action News",
+  "source_url": "https://rss.feedspot.com/abcactionnews_rss_feeds",
+  "feeds": [
+    {
+      "title": "ABC Action News \u00bb News",
+      "feed_url": "https://www.abcactionnews.com/news.rss",
+      "website_url": "https://www.abcactionnews.com/news",
+      "description": "ABC Action News brings you breaking and developing news, weather, traffic and sports coverage from the Tampa Bay metro area and across Florida on WFTS-TV and ABCActionNews,com.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/5131440.jpg?t=1585129765"
+    },
+    {
+      "title": "ABC Action News \u00bb Local News",
+      "feed_url": "https://www.abcactionnews.com/news/local-news.rss",
+      "website_url": "https://www.abcactionnews.com/news/local-news",
+      "description": "All articles about the Locality from ABC Action News.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131440.jpg?t=1585129765"
+    },
+    {
+      "title": "ABC Action News \u00bb Florida News",
+      "feed_url": "https://www.abcactionnews.com/news/state.rss",
+      "website_url": "https://www.abcactionnews.com/news/state/",
+      "description": "ABC Action News is a regional U.S. news website providing breaking news, weather updates, local politics, sports, and community stories focused on the Tampa Bay area and Central Florida.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/7878342.jpg?t=1752735287"
+    },
+    {
+      "title": "ABC Action News \u00bb National News",
+      "feed_url": "https://www.abcactionnews.com/news/national.rss",
+      "website_url": "https://www.abcactionnews.com/news/national-news",
+      "description": "All National News from ABC Action News.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131440.jpg?t=1585129765"
+    },
+    {
+      "title": "ABC Action News \u00bb Sports",
+      "feed_url": "https://www.abcactionnews.com/sports.rss",
+      "website_url": "https://www.abcactionnews.com/sports",
+      "description": "All articles about Sports from ABC Action News.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/7878347.jpg?t=1739943069"
+    },
+    {
+      "title": "ABC Action News \u00bb USF Sports",
+      "feed_url": "https://www.abcactionnews.com/sports/college-sports/usf-sports.rss",
+      "website_url": "https://www.abcactionnews.com/sports/college-sports/usf-sports",
+      "description": "All articles about USF Sports from ABC Action News.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/7878346.jpg?t=1739943063"
+    },
+    {
+      "title": "ABC Action News \u00bb Tampa Bay Rays",
+      "feed_url": "https://www.abcactionnews.com/sports/baseball/rays.rss",
+      "website_url": "https://www.abcactionnews.com/sports/baseball/rays",
+      "description": "All articles about Tampa Bay Rays from ABC Action News.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5131440.jpg?t=1585129765"
+    },
+    {
+      "title": "ABC Action News \u00bb Tampa Bay Lightning",
+      "feed_url": "https://www.abcactionnews.com/sports/hockey/lightning.rss",
+      "website_url": "https://www.abcactionnews.com/sports/hockey/lightning",
+      "description": "All articles about Tampa Bay Lightning from ABC Action News.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/7878348.jpg?t=1739943075"
+    },
+    {
+      "title": "ABC Action News \u00bb Tampa Bay Bucs",
+      "feed_url": "https://www.abcactionnews.com/sports/football/tampa-bay-bucs.rss",
+      "website_url": "https://www.abcactionnews.com/sports/football/tampa-bay-bucs",
+      "description": "All articles about Tampa Bay Bucs from ABC Action News.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/7878344.jpg?t=1739944477"
+    },
+    {
+      "title": "ABC Action News \u00bb Tampa Bay's Morning Blend",
+      "feed_url": "https://www.abcactionnews.com/morning-blend.rss",
+      "website_url": "https://www.abcactionnews.com/morning-blend",
+      "description": "All articles about Tampa Bay's Morning Blend from ABC Action News.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/7878343.jpg?t=1739944488"
+    },
+    {
+      "title": "ABC Action News \u00bb Entertainment",
+      "feed_url": "https://www.abcactionnews.com/entertainment.rss",
+      "website_url": "https://www.abcactionnews.com/entertainment",
+      "description": "All articles about Entertainment from ABC Action News.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 181700,
+        "instagram": 79000
+      },
+      "image_url": "https://i1.feedspot.com/7878340.jpg?t=1739944503"
+    }
+  ]
+}

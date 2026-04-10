@@ -1,0 +1,102 @@
+{
+  "category": "Fluid Mechanics",
+  "source_url": "https://rss.feedspot.com/fluid_mechanics_rss_feeds",
+  "feeds": [
+    {
+      "title": "COMSOL \u00bb Fluid & Heat",
+      "feed_url": "https://www.comsol.com/blogs/category/fluid-and-heat/feed",
+      "website_url": "https://www.comsol.com/blogs/category/fluid-and-heat",
+      "description": "The COMSOL Group provides software solutions for multiphysics modeling. You will find step-by-step modeling instructions, discussions of a variety of physics, product news, and more on the COMSOL Blog.",
+      "followers": {
+        "facebook": 27400,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4976909.jpg?t=1622015518"
+    },
+    {
+      "title": "FLOW-3D Blog",
+      "feed_url": "https://www.flow3d.com/feed/",
+      "website_url": "https://www.flow3d.com/blog/",
+      "description": "A pioneer in the CFD industry, FLOW-3D is an accurate, fast, proven CFD software that solves the toughest free-surface flow problems. Subscribe to the FLOW-3D blog to learn about upcoming CFD software developments, novel applications and featured customer case studies.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 612
+      },
+      "image_url": "https://i1.feedspot.com/4976534.jpg?t=1622015625"
+    },
+    {
+      "title": "Resolved Analytics",
+      "feed_url": "https://www.resolvedanalytics.com/theflux?format=RSS",
+      "website_url": "https://www.resolvedanalytics.com/theflux/",
+      "description": "Resolved Analytics blog is about CFD, Fluid dynamics, structural dynamics, optimization, and multi-physics simulations. Our CFD Consultants share their 15+ years of experience in stories and case studies on our CFD and Computational Engineering Blog.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 316
+      },
+      "image_url": "https://i1.feedspot.com/4976928.jpg?t=1622015530"
+    },
+    {
+      "title": "CFD Review",
+      "feed_url": "http://www.cfdreview.com/cfdreview.rss",
+      "website_url": "http://www.cfdreview.com/",
+      "description": "CFD Review is news, support, an information clearinghouse for the computational fluid dynamics (CFD) community. It is a place where the CFD community can learn about the latest developments in CFD technology, read about interesting applications, post questions, and generally help each other out.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/581990.jpg?t=1622015515"
+    },
+    {
+      "title": "Teaching Fluid Mechanics",
+      "feed_url": "https://teachingfluids.wordpress.com/feed/",
+      "website_url": "https://teachingfluids.wordpress.com/",
+      "description": "Teaching Fluid Mechanics blog is to share and discuss in class physical demonstrations and illustrate some interesting aspect of fluid mechanics. This blog is by Nigel Kaye.",
+      "followers": {
+        "twitter": 484
+      },
+      "image_url": "https://i1.feedspot.com/4976914.jpg?t=1622015562"
+    },
+    {
+      "title": "AirShaper Blog",
+      "feed_url": "https://airshaper.com/feed.xml",
+      "website_url": "https://airshaper.com/blog/page/1",
+      "description": "Blog covers important info on aerodynamics, its resources, analysis and more. AirShaper is an online platform for designers to optimize the aerodynamics of their design and improve it to reach your goals. It also helps in running simulations and then discussing the results with leading experts.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 649
+      },
+      "image_url": "https://i1.feedspot.com/5452532.jpg?t=1664876717"
+    },
+    {
+      "title": "FYFD",
+      "feed_url": "https://fyfluiddynamics.com/feed/",
+      "website_url": "https://fyfluiddynamics.com/",
+      "description": "FYFD is dedicated to sharing the awesomeness that is fluid dynamics with the world whether or not you care for calculus. It is a science and engineering outreach blog with a new post about the physics of liquids, gases, plasmas, or granular materials anything that behaves like a fluid.",
+      "followers": {
+        "twitter": 12400,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4976886.jpg?t=1622015504"
+    },
+    {
+      "title": "LEAP Australia Blog \u00bb CFD",
+      "feed_url": "https://www.leapaust.com.au/blog/cfd/",
+      "website_url": "https://www.leapaust.com.au/blog/cfd/",
+      "description": "LEAP Australia is the leading engineering software solutions provider in Australia and New Zealand, assisting thousands of companies with their design and engineering problems. This site aims to share the extensive experience and knowledge we have gained over the years in working with Computational Fluid Dynamics.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/4976897.jpg?t=1622015599"
+    },
+    {
+      "title": "FluidFlow Blog",
+      "feed_url": "https://fluidflowinfo.com/category/blog/feed/",
+      "description": "Flite Software NI Ltd is recognized worldwide as a provider of quality engineering application and selection of software products. The industry-leading flow simulator for pipe networks. FluidFlow offers the latest industrial news and articles.",
+      "followers": {
+        "facebook": 488,
+        "twitter": 808
+      },
+      "image_url": "https://i1.feedspot.com/4977075.jpg?t=1622015524"
+    }
+  ]
+}

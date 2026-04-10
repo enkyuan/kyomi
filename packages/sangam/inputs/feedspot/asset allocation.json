@@ -1,0 +1,72 @@
+{
+  "category": "Asset Allocation",
+  "source_url": "https://rss.feedspot.com/asset_allocation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Allocate Smartly Blog",
+      "feed_url": "https://allocatesmartly.com/feed/",
+      "website_url": "https://allocatesmartly.com/blog/",
+      "description": "Allocate Smartly tracks the industry's best Tactical Asset Allocation strategies, with thorough, up-to-date backtests. Members can combine multiple strategies with the click of a button to create their own custom Model Portfolios. Members can follow their Model Portfolios in near real-time, and receive notifications when a change is likely to occur today.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5478239.jpg?t=1670831691"
+    },
+    {
+      "title": "Alpha Architect \u00bb Tactical Asset Allocation",
+      "feed_url": "https://alphaarchitect.com/category/architect-academic-insights/tactical-asset-allocation/feed/",
+      "website_url": "https://alphaarchitect.com/category/architect-academic-insights/tactical-asset-allocation/",
+      "description": "Our mission is to empower investors through education in order to develop sustainable investors. Asset allocation is all about determining how to divvy up your portfolio across various classes of investment opportunities in order to achieve your portfolio mission. Explore our Tactical asset allocation blogs written by experts.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 46000,
+        "instagram": 148
+      },
+      "image_url": "https://i1.feedspot.com/5478246.jpg?t=1670831786"
+    },
+    {
+      "title": "First Trust Blog \u00bb Investment Insights",
+      "feed_url": "https://www.ftportfolios.com/Common/Rss/InvestmentInsightsBlogFeed.aspx",
+      "website_url": "https://www.ftportfolios.com/retail/blogs/investmentinsights/index.aspx",
+      "description": "First Trust Portfolios L.P. and its affiliate First Trust Advisors L.P. (collectively 'First Trust') were established in 1991 with a mission to offer trusted investment products and advisory services. We are inspired every day by how financial professionals and their customers use our products and services to define goals, solve problems and develop long-term strategies. Read Insights and analyses from our portfolio managers and market strategists in our Investment Insight blogs.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/5478241.jpg?t=1670832011"
+    },
+    {
+      "title": "Simplify Blog",
+      "feed_url": "https://www.simplify.us/blog/rss.xml",
+      "website_url": "https://www.simplify.us/blog",
+      "description": "Simplify Asset Management was founded in 2020 to help advisors tackle the most pressing portfolio challenges with an innovative set of options-based strategies. By accounting for real-world investor needs and market behavior, along with the non-linear power of options, our strategies allow for the tailored portfolio outcomes clients are looking for.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5478240.jpg?t=1670831847"
+    },
+    {
+      "title": "CFA Institute Enterprising Investor Blog \u00bb Asset Allocation",
+      "feed_url": "https://blogs.cfainstitute.org/investor/tag/asset-allocation/feed/",
+      "website_url": "https://blogs.cfainstitute.org/investor/tag/asset-allocation/",
+      "description": "Enterprising Investor is a forum for provocative and useful analysis of current issues in finance and investing. Written for investment professionals by investment professionals, it aims to elevate the most compelling perspectives from the sea of opinions and research. Read the latest blog post and find articles like 'Evaluating Benchmark Misfit Risk','Frontier and Emerging Markets: Inflection Points', and some book reviews.",
+      "followers": {
+        "facebook": 527200,
+        "twitter": 28800,
+        "instagram": 146500
+      },
+      "image_url": "https://i1.feedspot.com/5478242.jpg?t=1670832500"
+    },
+    {
+      "title": "Investment Magazine \u00bb Asset Allocation",
+      "feed_url": "https://www.investmentmagazine.com.au/tag/asset-allocation/feed/",
+      "website_url": "https://www.investmentmagazine.com.au/tag/asset-allocation/",
+      "description": "Investment Magazine provides an in-depth, monthly analysis of trends and developments for all the businesses in which superannuation funds engage including asset allocation, investment manager selection, custody and fund accounting, member administration, group insurance, and compliance. Explore the Asset allocation blog to learn tips and tricks for your investment and finance.",
+      "followers": {
+        "facebook": 461,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5478243.jpg?t=1670831442"
+    }
+  ]
+}

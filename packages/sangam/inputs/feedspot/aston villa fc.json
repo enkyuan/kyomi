@@ -1,0 +1,81 @@
+{
+  "category": "Aston Villa FC",
+  "source_url": "https://rss.feedspot.com/aston_villa_fc_rss_feeds",
+  "feeds": [
+    {
+      "title": "myoldmansaid",
+      "feed_url": "https://myoldmansaid.com/feed/",
+      "website_url": "https://myoldmansaid.com/",
+      "description": "Aston Villa blog and Aston Villa podcast. A website that covers all football supporter issues from Villa Park to national.",
+      "followers": {
+        "facebook": 47000,
+        "twitter": 386,
+        "instagram": 23900
+      },
+      "image_url": "https://i1.feedspot.com/5175122.jpg?t=1626267461"
+    },
+    {
+      "title": "avillafan.com",
+      "feed_url": "https://www.avillafan.com/feed/",
+      "website_url": "https://www.avillafan.com/",
+      "description": "Follow Aston Villa AVFC for the latest news, views, stats, and also talk on our forums with fellow fans and supporters.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 16700,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4465881.jpg?t=1608624623"
+    },
+    {
+      "title": "Villa Underground",
+      "feed_url": "https://villaunderground.com/feed/",
+      "website_url": "https://villaunderground.com/",
+      "description": "Aston Villa fan website with news, rumour & blog.",
+      "followers": {
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5175250.jpg?t=1626267471"
+    },
+    {
+      "title": "Aston Villa News and Views",
+      "feed_url": "https://www.astonvillanewsandviews.co.uk/feed/",
+      "website_url": "https://www.astonvillanewsandviews.co.uk/",
+      "description": "A place for comment and debate for all Aston Villa Fc fans.",
+      "followers": {
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5175285.jpg?t=1626267475"
+    },
+    {
+      "title": "The Aston Villa Blog",
+      "feed_url": "https://feeds.feedburner.com/avfcblog",
+      "website_url": "https://www.thevillablog.co.uk/",
+      "description": "The original and best Aston Villa blog with news, views, statistics, opinion covering all things Aston Villa.",
+      "followers": {
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/5175092.jpg?t=1626267482"
+    },
+    {
+      "title": "7500 To Holte",
+      "feed_url": "https://7500toholte.sbnation.com/rss/current.xml",
+      "website_url": "https://7500toholte.sbnation.com/",
+      "description": "For all the latest news about Aston Villa football.",
+      "followers": {
+        "facebook": 94900,
+        "twitter": 15800
+      },
+      "image_url": "https://i1.feedspot.com/5175072.jpg?t=1626267445"
+    },
+    {
+      "title": "Aston Villa Life",
+      "feed_url": "https://www.astonvillalife.com/feed/",
+      "website_url": "http://www.astonvillalife.com/",
+      "description": "The world's best Aston Villa blog featuring news, blogs, and exclusive content.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5175187.jpg"
+    }
+  ]
+}

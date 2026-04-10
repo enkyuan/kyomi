@@ -1,0 +1,123 @@
+{
+  "category": "Soccer Referee",
+  "source_url": "https://rss.feedspot.com/soccer_referee_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dutch Referee Blog",
+      "feed_url": "https://www.dutchreferee.com/category/blog/feed/",
+      "website_url": "https://www.dutchreferee.com/category/blog/",
+      "description": "dutchreferee.com is a blog written by a Dutch journalist and soccer referee who interviews (top) referees, provides the interesting news and will bring you funny, new or remarkable thoughts and experiences about refereeing.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 4400,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4882200.jpg?t=1612439792"
+    },
+    {
+      "title": "Law 5",
+      "feed_url": "http://law5-theref.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://law5-theref.blogspot.com/",
+      "description": "Law 5 is a blog about the man in the middle: appointments, analysis, discussions and much more.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/4882176.jpg?t=1612440129"
+    },
+    {
+      "title": "RefChat",
+      "feed_url": "https://www.refchat.co.uk/forums/-/index.rss",
+      "website_url": "https://www.refchat.co.uk/",
+      "description": "RefChat is an refereeing forum every referee must follow.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4882773.jpg?t=1612439807"
+    },
+    {
+      "title": "Professional Referee Organization",
+      "feed_url": "https://proreferees.com/feed/",
+      "website_url": "http://proreferees.com/",
+      "description": "PRO is the organization responsible for managing the referee and assistant referee program in professional soccer league. They are dedicated to the identification, training, assessment, assignment, and employment of male and female professional soccer officials.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 14500,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4882925.jpg?t=1612439811"
+    },
+    {
+      "title": "Refereeing World",
+      "feed_url": "http://refereeingworld.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://refereeingworld.blogspot.com/",
+      "description": "Follow the blog for updates from the Refereeing World.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4882293.jpg?t=1612440028"
+    },
+    {
+      "title": "theweeklysoccerreferee",
+      "feed_url": "https://theweeklysoccerreferee.wordpress.com/feed/",
+      "website_url": "https://theweeklysoccerreferee.wordpress.com/",
+      "description": "The Weekly Soccer Referee Blog is produced by George Wilhelmsen. He has worked a variety of games, from rec to competitive to the adult amateur league, to adult recreational league games to tournaments, and has been writing this blog for 15 years so that all may learn from the wacky things that happen on the pitch.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5567717.jpg?t=1684213447"
+    },
+    {
+      "title": "Refereeing the Beautiful Game",
+      "feed_url": "https://larbitre.wordpress.com/feed/",
+      "website_url": "https://larbitre.wordpress.com/",
+      "description": "Find refereeing conundrums, useful things to know as a referee, things you will be interested to know about referees, or how my refereeing career is panning out in football/futsal.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 536
+      },
+      "image_url": "https://i1.feedspot.com/4882260.jpg?t=1612439815"
+    },
+    {
+      "title": "In The Opinion Of The Referee",
+      "feed_url": "https://intheopinionofthereferee.com/feed/",
+      "website_url": "https://intheopinionofthereferee.com/",
+      "description": "Find product reviews, news, case studies, exclusive downloads, and other unique content designed for today's soccer referees.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4882685.jpg?t=1612439826"
+    },
+    {
+      "title": "Referee Tales",
+      "feed_url": "http://refereetales.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://refereetales.blogspot.com/",
+      "description": "Every game tells a story. Dispatches from the amateur leagues of a multi-ethnic city somewhere on Earth.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4882335.jpg?t=1612439836"
+    },
+    {
+      "title": "Yet Another Soccer Referee",
+      "feed_url": "http://yetanothersoccerref.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://yetanothersoccerref.blogspot.com/",
+      "description": "Yet Another Soccer Referee is about rantings and ravings of a newly minted soccer referee.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4882832.jpg"
+    },
+    {
+      "title": "Today's Referee",
+      "feed_url": "https://todaysref.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://todaysref.blogspot.com/",
+      "description": "Find news, pictures and comments from the refereeing world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4882973.jpg?t=1612439942"
+    },
+    {
+      "title": "Hong Kong Referee",
+      "feed_url": "http://hkref.blogspot.com/feeds/posts/default",
+      "website_url": "http://hkref.blogspot.com/",
+      "description": "Hong Kong Referee posts match analyses and observations so that other Referees can learn from the mistakes {and successes} of high-profile Referees.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1115866.jpg?t=1612439902"
+    }
+  ]
+}

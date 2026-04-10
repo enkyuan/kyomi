@@ -1,0 +1,874 @@
+{
+  "category": "New York Music",
+  "source_url": "https://rss.feedspot.com/new_york_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Switched on Pop",
+      "feed_url": "https://nysmusic.com/feed/",
+      "website_url": "https://nysmusic.com/",
+      "description": "A podcast all about the making and meaning of popular music. Musicologist Nate Sloan & songwriter Charlie Harding pull back the curtain on how pop hits work magic on our ears & our culture. From Vulture and the Vox Media Podcast Network.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4762145.jpg?t=1745431000"
+    },
+    {
+      "title": "XXL Magazine",
+      "feed_url": "https://www.xxlmag.com/feed/",
+      "website_url": "https://www.xxlmag.com/",
+      "description": "A leading voice in hip-hop since 1997, XXL delivers the latest hip-hop music, news and features to a highly engaged urban audience in print and online.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4800000,
+        "instagram": 9400000
+      },
+      "image_url": "https://i1.feedspot.com/274305.jpg?t=1608539228"
+    },
+    {
+      "title": "Metal Injection",
+      "feed_url": "https://feeds.feedburner.com/metalinjection",
+      "website_url": "https://metalinjection.net/news",
+      "description": "The leading metal news, metal music video, and metal tour date source on the internet. Get your fix of Metal Injection!",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 256800
+      },
+      "image_url": "https://i1.feedspot.com/168246.jpg?t=1600507186"
+    },
+    {
+      "title": "Rolling Stone \u00bb Music",
+      "feed_url": "https://www.rollingstone.com/music/feed/",
+      "website_url": "https://www.rollingstone.com/music/",
+      "description": "The latest news and more from Rolling Stone magazine. Get the latest Rolling Stone new music news, song and album reviews, free music downloads, artist videos & pictures, playlists and more.",
+      "followers": {
+        "facebook": 5400000,
+        "twitter": 6100000
+      },
+      "image_url": "https://i1.feedspot.com/4131394.jpg?t=1608539235"
+    },
+    {
+      "title": "Dancing Astronaut",
+      "feed_url": "https://dancingastronaut.com/feed/",
+      "website_url": "https://dancingastronaut.com/music/",
+      "description": "A leading dance music media site in the US. The mission is to expose and promote electronic dance music in the digital media space in order to grow the industry's reach and support talented artists.",
+      "followers": {
+        "facebook": 831800,
+        "twitter": 279200,
+        "instagram": 448200
+      },
+      "image_url": "https://i1.feedspot.com/3372856.jpg?t=1608539249"
+    },
+    {
+      "title": "Rap Radar",
+      "feed_url": "https://rapradar.com/feed/",
+      "website_url": "https://rapradar.com/",
+      "description": "Rap Radar is the Premiere Rap Blog for the latest news, music and video in Hip Hop Culture. Articles cover albums, mixtapes, songs, and videos.",
+      "followers": {
+        "facebook": 46400,
+        "twitter": 192200
+      },
+      "image_url": "https://i1.feedspot.com/321657.jpg?t=1625465934"
+    },
+    {
+      "title": "Spin.com \u00bb New Music",
+      "feed_url": "https://www.spin.com/new-music/feed/",
+      "website_url": "https://www.spin.com/new-music/",
+      "description": "From the concert stage to the dressing room, from the recording studio to the digital realm, SPIN surveys the modern musical landscape and the culture around it with reporting, interviews and a discerning critical ear.",
+      "followers": {
+        "facebook": 907700,
+        "twitter": 488800,
+        "instagram": 868900
+      },
+      "image_url": "https://i1.feedspot.com/4761946.jpg?t=1608539218"
+    },
+    {
+      "title": "Stereogum",
+      "feed_url": "https://www.stereogum.com/feed/",
+      "website_url": "https://www.stereogum.com/",
+      "description": "Stereogum is the best music blog founded in 2002. The blog features articles on new music, columns, interviews, reviews, and indie rock gossip.",
+      "followers": {
+        "facebook": 437400,
+        "twitter": 347300,
+        "instagram": 601200
+      },
+      "image_url": "https://i1.feedspot.com/3801816.jpg?t=1745910780"
+    },
+    {
+      "title": "BrooklynVegan",
+      "feed_url": "https://www.brooklynvegan.com/feed/",
+      "website_url": "https://www.brooklynvegan.com/category/music/",
+      "description": "BrooklynVegan is an NYC-centric, multi-genre, mostly music blog that focuses on international music news, album and live show reviews, pictures, festivals, tour dates, gossip, tips, song and album streams, videos, industry and tech news, and special events, and more.",
+      "followers": {
+        "facebook": 131200,
+        "twitter": 185400,
+        "instagram": 245400
+      },
+      "image_url": "https://i1.feedspot.com/4478921.jpg?t=1608812660"
+    },
+    {
+      "title": "Okayplayer",
+      "feed_url": "https://www.okayplayer.com/feeds/feed.rss",
+      "website_url": "https://www.okayplayer.com/",
+      "description": "Stay informed on Hip Hop Music, Audio, Video, Reviews, News, Interviews, Blogs, and Discussion Board. Okayplayer is the original progressive urban music site and maintains its position as the premier digital destination for music connoisseurs worldwide.",
+      "followers": {
+        "facebook": 389100,
+        "twitter": 107700,
+        "instagram": 631600
+      },
+      "image_url": "https://i1.feedspot.com/4136983.jpg?t=1601039356"
+    },
+    {
+      "title": "Obscure Sound",
+      "feed_url": "https://www.obscuresound.com/feed/",
+      "website_url": "https://www.obscuresound.com/",
+      "description": "Obscure Sound is an indie music site that I formed in February 2006 out of a love for finding new and emerging quality music. My name is Mike Mineo and I'm the site's founder and editor. This site aims to provide music fans with the latest and greatest music, preferably from artists you've never heard of before.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/3497692.jpg?t=1669264698"
+    },
+    {
+      "title": "I Care if You Listen",
+      "feed_url": "https://icareifyoulisten.com/feed/",
+      "website_url": "https://icareifyoulisten.com/",
+      "description": "I CARE IF YOU LISTEN is an award-winning blog about contemporary, classical or new music. We cover the new music scene and offer a free seasonal mixtape.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 72500,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4478944.jpg?t=1662364715"
+    },
+    {
+      "title": "Alt Citizen Magazine",
+      "feed_url": "http://altcitizen.com/feed/",
+      "website_url": "http://altcitizen.com/",
+      "description": "Alt Citizen Magazine is a Brooklyn based music & culture blog.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 23900,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/3680073.jpg?t=1608539431"
+    },
+    {
+      "title": "We All Want Someone To Shout For",
+      "feed_url": "https://weallwantsomeone.org/feed/",
+      "website_url": "https://weallwantsomeone.org/",
+      "description": "We All Want Someone To Shout For is a music blog run by Will Oliver. The blog is your Arctic Monkeys-inspired home for music reviews (singles and albums), mp3's, news, album reviews, concert reviews & photography, and film reviews.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 6900,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/162196.jpg?t=1608539314"
+    },
+    {
+      "title": "New York Jazz Workshop Blog",
+      "feed_url": "https://newyorkjazzworkshop.com/feed/",
+      "website_url": "https://newyorkjazzworkshop.com/blog/",
+      "description": "The premier Jazz organization in New York City, NYJW offers dynamic teambuilding experiences, immersive music trips, and top-tier music lessons and ensembles. Through our teambuilding workshops, participants explore the transformative power of music, fostering a sense of community while tapping into their own creativity and talents. NYJW also curates unforgettable music trips abroad, where participants can deepen their connection to jazz while exploring rich cultural landscapes. Our private lessons offer personalized guidance from world-class musicians.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/3062397/page/4928688/logo_1740490678.png"
+    },
+    {
+      "title": "Powerpopaholic",
+      "feed_url": "https://feeds.feedburner.com/Powerpopaholic",
+      "website_url": "https://www.powerpopaholic.com/",
+      "description": "The Power Popaholic is a premier music blog that focuses on the genre of power pop and melodic rock. We also report on live shows, tour dates, gossip, MP3's, videos and just about anything a power pop fan could want.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4666601.jpg?t=1668660752"
+    },
+    {
+      "title": "Largehearted Boy Blog",
+      "feed_url": "https://feeds.feedburner.com/largeheartedboy",
+      "website_url": "https://largeheartedboy.com/blog/",
+      "description": "Largehearted Boy is a literature and music website featuring daily free and legal music downloads as well as news and features from the worlds of music, literature, and pop culture.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 30900
+      },
+      "image_url": "https://i1.feedspot.com/30173.jpg?t=1600509254"
+    },
+    {
+      "title": "The Manhattan Beat Blog",
+      "feed_url": "https://themanhattanbeat.blogspot.com/feeds/posts/default",
+      "website_url": "https://themanhattanbeat.blogspot.com/",
+      "description": "The Manhattan Beat reports on live music news and photographs in New York City. A live music calendar also is updated frequently. Pre-pandemic, I used to write concert reviews and post photographs every night. Since June, I have been posting articles and photo spreads of the live music that happens in pandemic-era New York City every night.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5252271.jpg?t=1621226640"
+    },
+    {
+      "title": "Fluxblog",
+      "feed_url": "https://www.fluxblog.org/feed/",
+      "website_url": "https://www.fluxblog.org/",
+      "description": "Fluxblog is the very first MP3 Blog. It was founded by Matthew Perpetua in 2002. He updates the blog with reviews of new music and sample mp3s, and also maintains a podcast.",
+      "followers": {
+        "facebook": 348,
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/78149.jpg?t=1608539507"
+    },
+    {
+      "title": "Joe Tell's Music Blog",
+      "feed_url": "http://jotellwnymusic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jotellwnymusic.blogspot.com/",
+      "description": "Music Blog covers the Underground/Indie Rock Music Scene in a positive manner with a focus on the WNY area. Bands and promoters are encouraged to submit promo material/CDs for review. Listening to new music with an open mind is important and I enjoy listening to creative bands that aren't afraid to break new musical ground. This blog isn't about Joe Tell it's about exposing new music and promoting new bands that want a push. I also post about any interesting topic that may cross my mind.",
+      "followers": {
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5088788.jpg?t=1611031713"
+    },
+    {
+      "title": "IndieWavves Music Blog",
+      "feed_url": "https://indiewavves.com/musicblog?format=rss",
+      "website_url": "https://indiewavves.com/musicblog/",
+      "description": "IndieWavves is an independent music blog. Its focus is to share the new wav(v)e of emerging acts in music in a creative and unconventional manner. This is done by incorporating social media, video journalism, music streaming services, and partnerships with artists on the rise. We aim to make your experience in discovering your next music obsession fun, unexpected, and unique.",
+      "followers": {
+        "facebook": 228,
+        "twitter": 92,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5203125.jpg?t=1601741030"
+    },
+    {
+      "title": "Sequenza21",
+      "feed_url": "https://www.sequenza21.com/feed/",
+      "website_url": "https://www.sequenza21.com/",
+      "description": "Welcome to the thriving hub of the Contemporary Classical Music Community-Sequenza21. For over a decade, it has been the go-to online space for creators, performers, and enthusiasts of new music. Join them in celebrating the convergence of innovation, exploration, and artistic appreciation in the world of contemporary classical music.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/1639.jpg?t=1669879120"
+    },
+    {
+      "title": "Buffa Blog",
+      "feed_url": "https://buffablog.com/feed/",
+      "website_url": "https://buffablog.com/",
+      "description": "We write about music. Follow us to keep up with national and international music. Hypothetical and imaginary music, tertiarily. We'll keep you suitably well-informed about recently released music and upcoming shows in the Buffalo area by local and national acts.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/9134603/page/4402950/logo_1743425413.png"
+    },
+    {
+      "title": "Manhattan School of Music",
+      "feed_url": "https://www.msmnyc.edu/news/feed/",
+      "website_url": "https://www.msmnyc.edu/news/",
+      "description": "Manhattan School of Music is one of the world's premier music conservatories for classical music, jazz, and musical theatre. With more than 960 talented undergraduate and graduate students from at least 45 countries and nearly all 50 United States; it is known for its innovative curricula - offering classical, jazz, and musical theatre training - and world-renowned artist-teacher faculty.",
+      "followers": {
+        "facebook": 50100,
+        "twitter": 5600,
+        "instagram": 41300
+      },
+      "image_url": "https://i1.feedspot.com/5473958.jpg?t=1669882450"
+    },
+    {
+      "title": "Interview Magazine \u00bb Music",
+      "feed_url": "https://www.interviewmagazine.com/category/music/feed",
+      "website_url": "https://www.interviewmagazine.com/category/music",
+      "description": "Intimate conversations between the world's most creative people in the magazine were founded in 1969 by artist Andy Warhol. The magazine brings you all the latest and juicy highlights from the world of music regarding artists, and their songs.",
+      "followers": {
+        "twitter": 265100,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5473960.jpg?t=1669882461"
+    },
+    {
+      "title": "Rock NYC Live",
+      "feed_url": "https://rocknyc.live/category/news/feed",
+      "website_url": "https://rocknyc.live/category/news",
+      "description": "Follow and read our website for album reviews, brief encounters, charts, who's going steady, live events, news, press releases, sneak peeks, merchandise, and more!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 483
+      },
+      "image_url": "https://i1.feedspot.com/5473961.jpg?t=1669882467"
+    },
+    {
+      "title": "Elicit Magazine",
+      "feed_url": "https://www.elicitmagazine.com/feed/",
+      "website_url": "https://www.elicitmagazine.com/",
+      "description": "Elicit Magazine is an online music magazine based out of Buffalo, NY. We tell the stories of up-and-coming musicians, review new music, post press releases, cover music events, and more. We've always had the mentality that maximum exposure is great, but quality exposure is better.",
+      "followers": {
+        "twitter": 2900,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5473962.jpg?t=1669882472"
+    },
+    {
+      "title": "Indie Music Review",
+      "feed_url": "https://www.indiemusicreview.com/feed",
+      "website_url": "https://www.indiemusicreview.com/",
+      "description": "An indie music review blog showcasing the latest releases from indie artists all over the globe. Articles cover album reviews, MP3s downloads, music videos, concert reviews, tour dates, and more.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5384019.jpg?t=1669880292"
+    },
+    {
+      "title": "Blabbermouth",
+      "feed_url": "https://blabbermouth.net/feed",
+      "website_url": "https://blabbermouth.net/news",
+      "description": "Blabbermouth.net focuses on the latest heavy metal and hard rock news, reviews, and music featuring tour dates and release dates, and more. Read our in-depth reviews and news columns for the latest word on your favorite Hard Rock and Heavy Metal Artists and Bands.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 251100
+      },
+      "image_url": "https://i1.feedspot.com/1957518.jpg?t=1670564899"
+    },
+    {
+      "title": "PopCrush \u00bb Music News",
+      "feed_url": "https://popcrush.com/category/music-news/feed",
+      "website_url": "https://popcrush.com/category/music-news/",
+      "description": "PopCrush is the digital destination for fun and irreverent pop music, celebrity and entertainment news served with a fresh and positive perspective. Stay up to date ith the latest happenings in pop music industry, artists, concerts, scandals and more!",
+      "followers": {
+        "facebook": 583500,
+        "twitter": 113000,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/5477649.jpg?t=1670567725"
+    },
+    {
+      "title": "WNY Music Blog",
+      "feed_url": "https://wnymusic.com/feed/",
+      "website_url": "https://wnymusic.com/wny-music-blog/",
+      "description": "The website was created in 1996 and peaked in 2005. We are now a volunteer-run website for musicians and fans by musicians and fans. We're bringing back The List of local bands (which features over 500 local bands). We trace back the history of WNY music and share exclusive concert bootlegs of local artists.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5477652.jpg?t=1670569681"
+    },
+    {
+      "title": "A&R Factory \u00bb New York",
+      "feed_url": "https://www.anrfactory.com/category/location/usa/new-york/feed/",
+      "website_url": "https://www.anrfactory.com/category/location/usa/new-york/",
+      "description": "Browse Music trends, Interviews, and Reviews of the latest music from Indie, Hip-Hop Country Rock, and genres being produced in New York. Founded in 2012, A&R Factory is one of the most respected artists and repertoire blogs. We help music industry professionals discover new independent music from across the world.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 15500,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/5477653.jpg?t=1670565983"
+    },
+    {
+      "title": "The Nocturnal Times",
+      "feed_url": "https://www.thenocturnaltimes.com/feed/",
+      "website_url": "https://www.thenocturnaltimes.com/",
+      "description": "Immerse yourself in Music, nightlife, and entertainment here at The Nocturnal Times - The arts & culture destination for night owls. Featuring Music News, Events, and trending Videos. The Nocturnal Times connects night owls across the world by delivering various forms of captivating, unique, and exclusive content.",
+      "followers": {
+        "facebook": 196200,
+        "twitter": 14800,
+        "instagram": 43000
+      },
+      "image_url": "https://i1.feedspot.com/5477654.jpg?t=1670567557"
+    },
+    {
+      "title": "The Ark of Music",
+      "feed_url": "https://thearkofmusic.com/feed/",
+      "website_url": "https://thearkofmusic.com/category/music-reviews/genres/indie/",
+      "description": "Explore Music News and Reviews from the Ark Of Music. The Ark of Music strives to enrich the music culture by connecting independent and small-label musicians with the music-loving public. We are dedicated to discovering and providing greater exposure for the unheard-of, independent, and small-label musicians of planet Earth.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5311736.jpg?t=1670565003"
+    },
+    {
+      "title": "Manhattan City Music Blog",
+      "feed_url": "https://manhattancitymusic.com/feed/",
+      "website_url": "https://manhattancitymusic.com/blog/",
+      "description": "Manhattan City Music is New York's premiere full-service event services company providing music and entertainment for the best high-profile New York events. Our blog covers the latest events and social gatherings that we provide entertainment to - Awards, Ceremonies, Reception, After Parties, and more.",
+      "followers": {
+        "facebook": 419,
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/5477661.jpg?t=1670569924"
+    },
+    {
+      "title": "Piercing Metal",
+      "feed_url": "https://www.piercingmetal.com/feed/",
+      "website_url": "https://www.piercingmetal.com/",
+      "description": "PiercingMetal is an Online Entertainment magazine dedicated to Heavy Music & Pop Culture and was launched in 2005 by Ken Pierce, a professionally published Content Creator whose work was previously found in Metal Edge & Metal Maniacs magazine along with the The Metal Circus (Spain), Maximum Metal (US) and Sea Of Tranquility (US) websites.",
+      "followers": {
+        "facebook": 4100,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5477666.jpg?t=1670567051"
+    },
+    {
+      "title": "JazzTrail Blog",
+      "feed_url": "https://jazztrail.net/blog?format=rss",
+      "website_url": "https://jazztrail.net/blog",
+      "description": "Based in NYC, JazzTrail is the product of the collaborative work between a compulsive listener with a passion for jazz and a sharp observer whose photography captures the expressiveness of musical moments. Check out our Jazz Album Reviews and Editor's Picks.",
+      "followers": {
+        "facebook": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5383668.jpg?t=1670567598"
+    },
+    {
+      "title": "Acoustic Music Scene",
+      "feed_url": "https://acousticmusicscene.com/feed/",
+      "website_url": "https://acousticmusicscene.com/",
+      "description": "Get the latest News & Commentary for the Folk, Roots & Singer-Songwriter Communities. Showcasing advance notice and coverage of awards and contests, conferences of note, and music festivals, AcousticMusicScene.com is designed to promote quality acoustic music by providing you with useful news and insightful commentary.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5392189.jpg?t=1670567208"
+    },
+    {
+      "title": "NextMosh",
+      "feed_url": "https://nextmosh.com/feed/",
+      "website_url": "https://nextmosh.com/",
+      "description": "Immerse into the latest Heavy Metal music news bytes, Tours and concert details, and other exclusive updates. NextMosh.com is your premier destination for rock and metal news, press releases, concert photos, show listings and more.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 876,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5165004.jpg?t=1670565809"
+    },
+    {
+      "title": "Music To Your Home Blog",
+      "feed_url": "https://www.musictoyourhome.com/feed/",
+      "website_url": "https://www.musictoyourhome.com/blog/",
+      "description": "The official blog for Music To Your Home. We will be posting music tutorials, inspirational resources, and more information for music lovers of all ages. Music to Your Home provides music lessons in NYC and its surrounding areas with highly skilled teachers who have studied at the some of the most prestigious conservatories in the country.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5157023.jpg?t=1670570138"
+    },
+    {
+      "title": "Jazz Lives Blog",
+      "feed_url": "https://jazzlives.wordpress.com/feed/",
+      "website_url": "https://jazzlives.wordpress.com/",
+      "description": "Jazz Lives is a blog by Michael Steinman that covers content all about Jazz. Keep up with the latest jazz articles illustrating wonderful notes and songs by legendary artists. Michael Steinman is a writer, videographer, and jazz chronicler. He has been published in many jazz periodicals.",
+      "followers": {
+        "twitter": 434
+      },
+      "image_url": "https://i1.feedspot.com/139171.jpg?t=1623072557"
+    },
+    {
+      "title": "Grotesqualizer",
+      "feed_url": "http://gtqlizer.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://gtqlizer.blogspot.com/",
+      "description": "Grotesqualizer is a Music Review Blog featuring commentary and in-depth reviews on various Indie, Non-mainstream Electronic, Alt /Country Folk, Hip-Hop, Indie Pop & Rock, and Metal music. It also features annually curated playlists for Music lovers.",
+      "followers": {
+        "facebook": 79,
+        "twitter": 656,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5037806.jpg?t=1670565038"
+    },
+    {
+      "title": "The Static Dive",
+      "feed_url": "https://staticdive.com/feed/",
+      "website_url": "https://staticdive.com/",
+      "description": "StaticDive.com is a music blog featuring independent Pop, Rock, and Electronic artists from around the globe. Here you can find brief intros and reports consisting of Information on Artists and their latest works. The site is also home to Experimental Electronica artist The Static Dive (aka Bob).",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 4600,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5037532.jpg?t=1670565841"
+    },
+    {
+      "title": "Songtrust Blog",
+      "feed_url": "https://blog.songtrust.com/rss.xml",
+      "website_url": "https://blog.songtrust.com/",
+      "description": "Official blog of Songtrust featuring the latest global news, announcements, and resources to support musicians, artists, and independent music companies. Songtrust is a global publishing administrator that monitors Music Artist's work globally, with direct relationships with 65 collection societies.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 17300,
+        "instagram": 61600
+      },
+      "image_url": "https://i1.feedspot.com/4946257.jpg?t=1670564549"
+    },
+    {
+      "title": "This Is RnB",
+      "feed_url": "https://thisisrnb.com/feed/",
+      "website_url": "https://thisisrnb.com/category/news/",
+      "description": "ThisisRnB.com is the premier online destination for mainstream R&B music fans. The website is updated daily, with the latest news, music, videos, performances, interviews, gossip & more. Launched in 2008 with the intention to fill a void of a professional, reliable and consistent source in the online marketplace, This is RnB caters to R&B music fans worldwide with a wide spectrum of tastes and styles.",
+      "followers": {
+        "facebook": 123700,
+        "twitter": 34400,
+        "instagram": 23100
+      },
+      "image_url": "https://i1.feedspot.com/153835.jpg?t=1670567514"
+    },
+    {
+      "title": "Relix",
+      "feed_url": "https://relix.com/feed/",
+      "website_url": "https://relix.com/",
+      "description": "Catch up on live music with a focus on band interviews, album reviews, concert festivals, music videos, podcasts, musician classifieds, and show reviews. Relix Magazine is a print and online publication that focuses on the live music scene and features a wide spectrum of artists ranging from Phish and Tedeschi Trucks Band to Tame Impala and more.",
+      "followers": {
+        "facebook": 349200,
+        "twitter": 81400,
+        "instagram": 157900
+      },
+      "image_url": "https://i1.feedspot.com/4820052.jpg?t=1670565116"
+    },
+    {
+      "title": "Debbie Burke",
+      "feed_url": "https://debbieburkecreative.com/feed/",
+      "website_url": "https://debbieburkecreative.com/",
+      "description": "Great Q&As, jazzy insights, musical musings, and what it's like to be a published jazz author, all here. Debbie Burke is the author of 'GLISSANDO: A Story of Love, Lust, and Jazz' (Waldorf Publishing, February 2018) -and- 'The Poconos In B Flat, The incredible jazz legacy of the Pocono Mountains.'",
+      "followers": {
+        "facebook": 578,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4766524.jpg?t=1670567322"
+    },
+    {
+      "title": "New York Classical Review",
+      "feed_url": "https://feeds.feedburner.com/TheClassicalReview",
+      "website_url": "https://newyorkclassicalreview.com/category/news/",
+      "description": "New York Classical Review was founded in March 2010 by music critic Lawrence A. Johnson to establish a single, one-stop online source for classical music coverage. He is the former classical music critic of the Miami Herald, and, before that, a classical music writer at the South Florida Sun-Sentinel. Find Opera reviews, the latest Classical Music news, and exhaustive articles on the current American Classical scene.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/493920.jpg?t=1670565593"
+    },
+    {
+      "title": "Loudwire",
+      "feed_url": "https://loudwire.com/feed/",
+      "website_url": "https://loudwire.com/category/news/",
+      "description": "Discover buzzing Rock music news, interviews, reviews, and more from rock artists. Follow the latest stories and events across the Rock and Heavy Metal world. Loudwire is the No. 1 source for rock and metal subculture. It is owned by Townsquare Media.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 573300,
+        "instagram": 969900
+      },
+      "image_url": "https://i1.feedspot.com/815658.jpg?t=1657630544"
+    },
+    {
+      "title": "Greenleaf Music",
+      "feed_url": "https://greenleafmusic.com/feed/",
+      "website_url": "https://greenleafmusic.com/",
+      "description": "Read the latest news, updates, and releases from Greenleaf Music. Curated by trumpeter Dave Douglas, Greenleaf Music is an independent jazz record label with podcasts and exclusive releases. While concentrating on releasing jazz, post-jazz and world music, the company's primary focus is creativity in musical expression.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4761397.jpg?t=1670566065"
+    },
+    {
+      "title": "MuuMuse",
+      "feed_url": "https://muumuse.com/feed/",
+      "website_url": "https://muumuse.com/",
+      "description": "Founded in 2007, MuuMuse is a sassy, classy music blog with a sarcastic bent dedicated to music and pop culture commentary, album and song reviews, interviews and exclusives. Since its inception, MuuMuse has garnered a devoted readership and recognition as a top pop blog.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 40300,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4666622.jpg?t=1670569794"
+    },
+    {
+      "title": "Glenn's World of Rock",
+      "feed_url": "https://www.glennsworldofrock.com/feed/",
+      "website_url": "https://www.glennsworldofrock.com/blogs/",
+      "description": "I am a rock and roll fanatic from New York 550 shows (and counting) since 1977.",
+      "followers": {},
+      "image_url": "https://www.glennsworldofrock.com/wp-content/uploads/2015/03/nycrockandroll.png"
+    },
+    {
+      "title": "Oh My Rockness",
+      "feed_url": "https://www.ohmyrockness.com/features.atom",
+      "website_url": "https://www.ohmyrockness.com/",
+      "description": "New York City's indie concert calendar. Find show and band recommendations, venue info, tickets and more.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 19400
+      },
+      "image_url": "https://i1.feedspot.com/7270652.jpg?t=1710140496"
+    },
+    {
+      "title": "Tribeca Music New York City Blog",
+      "feed_url": "https://tribecamusicnyc.com/blog?format=rss",
+      "website_url": "https://tribecamusicnyc.com/blog/",
+      "description": "Come check out our blog, where we have a bunch of great articles for you to read about us and music!",
+      "followers": {
+        "instagram": 433
+      },
+      "image_url": "https://i1.feedspot.com/8553728.jpg?t=1752060799"
+    },
+    {
+      "title": "Alex Battles",
+      "feed_url": "http://www.alexbattles.com/?feed=rss2",
+      "website_url": "http://www.alexbattles.com/",
+      "description": "Alex Battles grew up on a Christmas tree farm in Ohio. He writes songs and plays guitar, tenor banjo, and piano. He learned how to play the tenor banjo, and subsequently the guitar by playing along with Hank Williams records. He performs in New York City with his bands, Alex Battles & The Whisky Rebellion and Alex Battles & The Engelberts.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 716,
+        "instagram": 733
+      },
+      "image_url": "https://i1.feedspot.com/8553727.jpg?t=1752061160"
+    },
+    {
+      "title": "The New York Times \u00bb Music",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/arts/music/rss.xml",
+      "website_url": "https://www.nytimes.com/section/arts/music/",
+      "description": "New York Times brings you the latest music news, reviews, playlists and interviews from critics and reporters covering classical, pop, rock, jazz, hip-hop, dance, country and avant music.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/5761901.jpg?t=1706177996"
+    },
+    {
+      "title": "City Magazine (Rochester) \u00bb Music",
+      "feed_url": "https://www.roccitymag.com/rochester/Rss.xml?oid=2124542",
+      "website_url": "https://www.roccitymag.com/music/",
+      "description": "Rochester, New York's source for arts, music, events listings and culture, on the web and in print every month. Offering alternative news since 1971.",
+      "followers": {
+        "facebook": 16300,
+        "twitter": 21500,
+        "instagram": 31100
+      },
+      "image_url": "https://i1.feedspot.com/8553726.jpg?t=1752061696"
+    },
+    {
+      "title": "New York Post \u00bb Music",
+      "feed_url": "https://nypost.com/music/feed/",
+      "website_url": "https://nypost.com/music/",
+      "description": "Get the latest music news about new releases and read the New York Post's reviews of top rock, country, and more popular albums.",
+      "followers": {
+        "facebook": 6900000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/8553724.jpg?t=1752061886"
+    },
+    {
+      "title": "The Family Reviews",
+      "feed_url": "https://www.thefamilyreviews.com/features?format=rss",
+      "website_url": "https://www.thefamilyreviews.com/features",
+      "description": "The Family Reviews is a collaborative project. Founded on the shared love of music, we provide completely unqualified, unprofessional, and sometimes unnecessary, reviews of music. Since the initial inception, this blog has taken on a life of its own. We are dedicated to highlighting independent and emerging artists within New York and New Jersey. With honest opinions, a bit of humor, and a whole lot of fun, we're here to spotlight some great tunes, share artists' stories, and build a community of music lovers.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 368,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5203369.jpg?t=1634883865"
+    },
+    {
+      "title": "Elmore Magazine",
+      "feed_url": "http://www.elmoremagazine.com/feed",
+      "website_url": "http://www.elmoremagazine.com/",
+      "description": "Elmore Magazine covers American music with a deep knowledge and respect for its historical traditions. They seek to cover the best in blues, folk, Americana, country, rock, soul, jazz, and many more.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/207591.jpg?t=1650889776"
+    },
+    {
+      "title": "Ad Hoc",
+      "feed_url": "https://adhoc.fm/feed/",
+      "website_url": "https://adhoc.fm/",
+      "description": "AdHoc is an underground music and visual culture publication created for and by a community of music lovers with a shared ethos - that of building the world you want to see using the materials at your disposal. We're a daily destination for MP3s, videos, mixes, interviews, artist's writings, and cultural commentary-- curated for quality.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 16700,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/98483.jpg?t=1600508917"
+    },
+    {
+      "title": "The Boombox",
+      "feed_url": "https://theboombox.com/feed/",
+      "website_url": "https://theboombox.com/",
+      "description": "Follow us to keep up with Top R&B and hip hop news, music videos, newest songs and exclusive interviews with the hottest rappers and R&B artists.",
+      "followers": {
+        "facebook": 174600,
+        "twitter": 29800,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/1819383.jpg?t=1601042600"
+    },
+    {
+      "title": "Birthplace Magazine",
+      "feed_url": "https://www.birthplacemag.com/feed/",
+      "website_url": "https://www.birthplacemag.com/",
+      "description": "We are Birthplace Magazine, an award-winning website dedicated to documenting the hip-hop music scene in the New York tri-state area. Birthplace Magazine provides nationally known, tri-state-based artists a hometown media outlet, while providing regionally successful entities a platform they might not receive elsewhere.",
+      "followers": {
+        "facebook": 755,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5473965.jpg?t=1669882486"
+    },
+    {
+      "title": "New York Music Daily",
+      "feed_url": "https://newyorkmusicdaily.wordpress.com/feed/",
+      "website_url": "https://newyorkmusicdaily.wordpress.com/",
+      "description": "New York Music Daily came into the world quietly in the late summer of 2011. This blog had grown organically into New York City's go-to source for music and concert coverage that didn't fit a corporate or social media-approved model.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1695049.jpg?t=1670237842"
+    },
+    {
+      "title": "Northtown Music Blog",
+      "feed_url": "https://www.northtownmusic.com/blog?format=rss",
+      "website_url": "https://www.northtownmusic.com/blog",
+      "description": "Northtown Music Blog delivers Updates, Music news, and other developments from Northtown Music. Northtown Music is a music store where customers can come and try out the instrument, take a lesson, or rent an instrument. The store is unique in that its owner was a music teacher for 34 years and can play all the instruments.",
+      "followers": {
+        "facebook": 929,
+        "instagram": 402
+      },
+      "image_url": "https://i1.feedspot.com/5477651.jpg?t=1670565661"
+    },
+    {
+      "title": "The Country Scene",
+      "feed_url": "https://thecountryscene.com/feed/",
+      "website_url": "https://thecountryscene.com/",
+      "description": "Discover Exclusive coverage of the latest country music concerts in and around NYC plus interviews with your favorite artists. Bringing you coverage of country music news and events, The Country Scene is the buzzing source for country music news and events in and around NYC.",
+      "followers": {
+        "facebook": 959,
+        "twitter": 1500,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5477656.jpg?t=1670565910"
+    },
+    {
+      "title": "Upcoming Hip-Hop",
+      "feed_url": "http://upcominghiphop.net/feed/",
+      "website_url": "http://upcominghiphop.net/",
+      "description": "We at Upcoming Hip Hop believe every upcoming artist and producer deserves the chance to get their music heard. We also believe that artists and producers should get paid for their work. We share interviews, ciphers, in the studio web series, premieres, album reviews, advice/opinion articles, news, and events to the Upcoming Hip Hop brand.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 12100,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4707445.jpg?t=1670566726"
+    },
+    {
+      "title": "Music Consultant Blog",
+      "feed_url": "https://musicconsultant.com/feed/",
+      "website_url": "https://musicconsultant.com/blog/",
+      "description": "Music Consultant is a company that strives to help foster, develop, and guide the careers of both established and developing artists. Working with a long-term vision of creating enduring careers for these artists, we offer customized, strategic marketing and management services for every individual artist. We help artists navigate the music business and formulate music marketing strategies.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 24000,
+        "instagram": 173
+      },
+      "image_url": "https://i1.feedspot.com/4881778.jpg?t=1670570244"
+    },
+    {
+      "title": "Riff Relevant",
+      "feed_url": "https://www.riffrelevant.com/feed/",
+      "website_url": "https://www.riffrelevant.com/",
+      "description": "Riff Relevant is a one-stop destination for all Heavy music news, press releases, or music submissions. Dive into a constantly updated stream of Heavy Metal content - News, Interviews, Tour details, Reviews, and more. RiffRelevant.com is owned & operated by Mettle Media LLC.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4856283.jpg?t=1670570286"
+    },
+    {
+      "title": "BrooklynRocks: NYC Music Blog",
+      "feed_url": "https://brooklynrocks.blogspot.com/feeds/posts/default",
+      "website_url": "https://brooklynrocks.blogspot.com/",
+      "description": "NYC-based music blog and photo journal featuring music news, reviews, tour dates, along with exclusive interviews and photos from area concerts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8553725.jpg?t=1752061598"
+    },
+    {
+      "title": "NYlive",
+      "feed_url": "https://nylive.org/feed/",
+      "website_url": "https://nylive.org/",
+      "description": "New York Live Magazine is your premium destination for the best Live acts currently hitting the New York area. A growing team, led by NY photojournalist Angelo Santoro, brings you both the biggest names in the business, as well as the rising artists and events that you should also be paying attention to.",
+      "followers": {
+        "facebook": 574,
+        "twitter": 53,
+        "instagram": 187
+      },
+      "image_url": "https://i1.feedspot.com/5473959.jpg?t=1669882456"
+    },
+    {
+      "title": "JazzRochester",
+      "feed_url": "https://jazzrochester.com/feed/atom/",
+      "website_url": "https://www.jazzrochester.com/",
+      "description": "JazzRochester is an attempt to cover the live jazz scene around Rochester with updates on concerts, live performances, the international jazz festival and make connections between the various jazz communities in Rochester and its environs.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 11300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5477657.jpg?t=1670569962"
+    },
+    {
+      "title": "Raven Sings The Blues",
+      "feed_url": "https://www.ravensingstheblues.com/feed/",
+      "website_url": "https://www.ravensingstheblues.com/",
+      "description": "Raven Sings The Blues started in 2006 as a collaboration between three co-workers. RSTB is purely a labor of love that's spent almost a decade mining corners of indie, psych, garage and experimental music for those lost gems that seem to fall between the cracks.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3500,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5474041.jpg?t=1670569720"
+    },
+    {
+      "title": "Remezcla \u00bb Music",
+      "feed_url": "https://remezcla.com/music/feed/",
+      "website_url": "https://remezcla.com/music/",
+      "description": "Remezcla is your source for emerging Latin music, culture, and entertainment.",
+      "followers": {
+        "facebook": 867100,
+        "twitter": 69700,
+        "instagram": 247100
+      },
+      "image_url": "https://i1.feedspot.com/4759800.jpg?t=1608539252"
+    },
+    {
+      "title": "BaebleMusic",
+      "feed_url": "https://www.baeblemusic.com/rss/baebleContentRSS.aspx",
+      "website_url": "https://www.baeblemusic.com/",
+      "description": "Baeble Music is a Brooklyn-based music platform dedicated to providing high quality, originally produced video programming that extends far beyond its web-based home and its city borders. It is devoted to providing daily coverage on all things music and pop culture.",
+      "followers": {
+        "facebook": 72700,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4762211.jpg?t=1608539299"
+    },
+    {
+      "title": "Reach Reality Studios Blog",
+      "feed_url": "https://reachrealitystudios.com/blog?format=rss",
+      "website_url": "https://reachrealitystudios.com/blog",
+      "description": "Read the reach reality studio blog to get the detailed information on the music in New York, music recordings, latest track releases, and more. Reach Reality Studios takes your song through all the creative technical stages and turns it into a polished gem. From recording, editing, arranging, vocal tuning to producing, mixing, and mastering. Reach Reality Studios is your one-stop-shop for radio quality music.",
+      "followers": {
+        "facebook": 98,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5472594.jpg?t=1669628007"
+    },
+    {
+      "title": "Illustrate Magazine",
+      "feed_url": "https://illustratemagazine.com/feed/",
+      "website_url": "https://illustratemagazine.com/",
+      "description": "Illustrate Magazine is an independent online music magazine covering a wide range of global alternative, pop, underground and experimental music.",
+      "followers": {
+        "facebook": 36300,
+        "twitter": 11200,
+        "instagram": 32299
+      },
+      "image_url": "https://i1.feedspot.com/5405874.jpg?t=1669880241"
+    },
+    {
+      "title": "Alex Levin Music Blog",
+      "feed_url": "https://alexlevinmusic.com/feed",
+      "website_url": "https://alexlevinmusic.com/blog",
+      "description": "The Alex Levin Music Agency provides superb live jazz and swing music for weddings, parties and corporate events. Whether you are interested in booking a solo pianist or guitarist, a small jazz trio or quartet, or a larger combo, Alex offers a wide range of distinctive and elegant bands that will add just the right touch to your party.",
+      "followers": {
+        "facebook": 601,
+        "twitter": 58,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5473963.jpg?t=1674126825"
+    }
+  ]
+}

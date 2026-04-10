@@ -1,0 +1,41 @@
+{
+  "category": "Fontana News",
+  "source_url": "https://rss.feedspot.com/fontana_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fontana Herald News",
+      "feed_url": "https://www.fontanaheraldnews.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.fontanaheraldnews.com/",
+      "description": "The Fontana Herald News is the leading source of local news and advertising in one of the fastest growing communities in the country. It delivers news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5139046.jpg?t=1586860953"
+    },
+    {
+      "title": "KTLA 5 \u00bb Fontana",
+      "feed_url": "https://ktla.com/tag/fontana/feed/",
+      "website_url": "https://ktla.com/tag/fontana/",
+      "description": "L.A.'s very own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A. Find the weather, latest breaking news and updates throughout the day of Fontana at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5139066.jpg?t=1586861642"
+    },
+    {
+      "title": "24/7 Headline News \u00bb Fontana",
+      "feed_url": "https://247headline.com/category/san-bernardino-county/fontana/feed/",
+      "website_url": "https://247headline.com/category/san-bernardino-county/fontana/",
+      "description": "24/7 Headline News is the official source for around the clock breaking news. It delivers up-to-the-minute news and information on the latest top stories, weather, entertainment and more.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 175,
+        "instagram": 403
+      },
+      "image_url": "https://i1.feedspot.com/5139090.jpg?t=1586865945"
+    }
+  ]
+}

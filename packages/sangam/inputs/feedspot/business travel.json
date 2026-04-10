@@ -1,0 +1,367 @@
+{
+  "category": "Business Travel",
+  "source_url": "https://rss.feedspot.com/business_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Business Traveller",
+      "feed_url": "https://www.businesstraveller.com/news/feed/",
+      "website_url": "https://www.businesstraveller.com/news/",
+      "description": "Launched in the UK in 1976, Business Traveller has become the leading magazine around the world for the frequent corporate traveller. A consumer publication, it is aimed at entertaining business travellers, saving them money and making their travelling life easier.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 54400,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4765690.jpg?t=1624519396"
+    },
+    {
+      "title": "Breaking Travel News",
+      "feed_url": "https://feeds.feedburner.com/breakingtravelnews",
+      "website_url": "https://www.breakingtravelnews.com/",
+      "description": "Breaking Travel News is the leading online resource for travel industry executives from around the world. From market intelligence, trend analysis, and breaking news, to exclusive interviews, insightful features, and perceptive videos, the site provides all the information insiders need to keep their fingers on the travel pulse.",
+      "followers": {
+        "facebook": 37800,
+        "twitter": 43800,
+        "instagram": 55600
+      },
+      "image_url": "https://i1.feedspot.com/162038.jpg?t=1605880194"
+    },
+    {
+      "title": "Frequent Business Traveler",
+      "feed_url": "http://www.frequentbusinesstraveler.com/feed/",
+      "website_url": "http://www.frequentbusinesstraveler.com/",
+      "description": "FBT is the leading business and travel publication designed to cater to the travel and lifestyle needs of the business traveler. Our readers seek out the best in travel - top hotels, airline cabins, restaurants, & automobiles as well as cultural activities such as concerts and shows -and our writers, members of the Outer Critics Circle & the International Travel Writer Alliance, deliver on this.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/3680436.jpg?t=1605880210"
+    },
+    {
+      "title": "Stuck at the Airport",
+      "feed_url": "https://feeds.feedburner.com/StuckAtTheAirport",
+      "website_url": "https://stuckattheairport.com/",
+      "description": "Stuck at the Airport Founder Harriet Baskas is dedicated to helping business travellers make the most of their layovers and unexpected airport 'lock-ins.' Her blog covers things like the best airport lounges, up-to-date construction reporting, restaurant and hotel reviews, and other must-knows for the airport-bound business traveller.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 9100,
+        "instagram": 867
+      },
+      "image_url": "https://i1.feedspot.com/1076186.jpg?t=1605880215"
+    },
+    {
+      "title": "Blue Cube Travel Blog",
+      "feed_url": "https://www.bluecubetravel.co.uk/blog-feed.xml",
+      "website_url": "https://www.bluecubetravel.co.uk/blog",
+      "description": "Blue Cube Travel's blogs will keep you updated regularly on business travel industry trends, thought leadership, and the latest viewpoints, from subject matter experts and other industry contributors. Blue Cube Travel is a premier Corporate Travel company providing our clients with hands-on, concierge-style corporate travel management.",
+      "followers": {
+        "twitter": 19,
+        "instagram": 261
+      },
+      "image_url": "https://i1.feedspot.com/6700879.jpg?t=1707131414"
+    },
+    {
+      "title": "Direct Travel Blog",
+      "feed_url": "https://canada.dt.com/en-ca/blog/rss.xml",
+      "website_url": "https://canada.dt.com/en-ca/blog",
+      "description": "Direct Travel is a leading North American corporate travel management agency, providing a comprehensive range of corporate travel, cruises, leisure vacations as well as meetings & incentives services.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4765555.jpg?t=1611131530"
+    },
+    {
+      "title": "The Company Dime",
+      "feed_url": "https://www.thecompanydime.com/feed/",
+      "website_url": "https://www.thecompanydime.com/",
+      "description": "The Company Dime's features, exclusives, and analysis equip business travel professionals with vital information and intelligence for top performance. Follow for alerts on news and analysis about managing business travel expenses",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5221270.jpg?t=1606735085"
+    },
+    {
+      "title": "The Lost Executive",
+      "feed_url": "https://www.thelostexecutive.com/feed/",
+      "website_url": "https://www.thelostexecutive.com/",
+      "description": "The Lost Executive is a collective of people who love travelling, seeking out new places, interacting with every facet of civilisation, sharing ideas and making every second count. Even when it's on the company's time.",
+      "followers": {
+        "facebook": 113500,
+        "twitter": 3800,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5165941.jpg?t=1605880268"
+    },
+    {
+      "title": "Mark's Travel Journal \u00bb Business Travel",
+      "feed_url": "https://markstraveljournal.me/category/business-travel/feed/",
+      "website_url": "https://markstraveljournal.me/category/business-travel/",
+      "description": "Posts about Business Travel written by Mark Crone.",
+      "followers": {
+        "twitter": 18700,
+        "instagram": 589
+      },
+      "image_url": "https://i1.feedspot.com/4766337.jpg?t=1605880358"
+    },
+    {
+      "title": "Business Travel Destinations \u00bb News",
+      "feed_url": "https://businesstraveldestinations.com/category/business-travel-news/feed/",
+      "website_url": "https://businesstraveldestinations.com/category/business-travel-news/",
+      "description": "Business Travel Destinations explores where you travel for business, the hotels you prefer, things to do and your lifestyle preferences on the road. We are committed to inspiring the best in travel.",
+      "followers": {
+        "facebook": 43,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4765026.jpg?t=1605880378"
+    },
+    {
+      "title": "Teplis \u00bb Corporate Travel News",
+      "feed_url": "https://teplis.com/blog/category/corporatetravelnews/feed/",
+      "website_url": "https://teplis.com/blog/category/corporatetravelnews/",
+      "description": "Teplis Travel is ranked among the top corporate travel agencies in the country. Explore the blog to find posts on corporate travel news.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1200,
+        "instagram": 711
+      },
+      "image_url": "https://i1.feedspot.com/4766270.jpg?t=1605880435"
+    },
+    {
+      "title": "Business Travel Life \u00bb Travel Tips",
+      "feed_url": "https://businesstravellife.com/travel-tips/feed/",
+      "website_url": "https://businesstravellife.com/travel-tips/",
+      "description": "Business Travel Life is a resource for business travelers covering business travel tips and trends, healthy travel, travel accessories, hotel workouts and topics that matter to travelers. Our goal is to make business travel healthier and healthy business travel easier.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 5100,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4765065.jpg?t=1605880205"
+    },
+    {
+      "title": "Road Warriorette",
+      "feed_url": "http://roadwarriorette.boardingarea.com/feed/",
+      "website_url": "https://roadwarriorette.boardingarea.com/",
+      "description": "Road Warriorette is the place to find all you need to know about traveling for work with efficiency and style! After a decade on the road, Road Warriorette knows how to help you have the best trip possible. Whether you're taking your first trip or hundredth, you will find useful tips and advice on packing, etiquette, and making your business travel as easy as possible.",
+      "followers": {
+        "facebook": 94200,
+        "twitter": 62400
+      },
+      "image_url": "https://i1.feedspot.com/4000434.jpg?t=1605880218"
+    },
+    {
+      "title": "Travel After Five Blog",
+      "feed_url": "https://www.travelafterfive.com/feed/",
+      "website_url": "https://www.travelafterfive.com/",
+      "description": "Travel After Five a blog with resources for business professionals traveling for work. While on a business trip, you might find yourself in a cool city but everything you want to see is closed after 5:00 pm. Travel After Five focuses on activities you can do after you get out of your last meeting or conference, along with advice for your business trips.",
+      "followers": {
+        "facebook": 259,
+        "twitter": 422,
+        "instagram": 95
+      },
+      "image_url": "https://i1.feedspot.com/4996410.jpg?t=1605880284"
+    },
+    {
+      "title": "Travelpro\u00ae Luggage Blog",
+      "feed_url": "https://travelproluggageblog.com/category/travel-2/business-travel/feed/",
+      "website_url": "https://travelproluggageblog.com/category/travel-2/business-travel/",
+      "description": "Stay up to date with the latest news in the business travel industry.",
+      "followers": {
+        "facebook": 73900,
+        "twitter": 29900,
+        "instagram": 99800
+      },
+      "image_url": "https://i1.feedspot.com/4766327.jpg?t=1605880421"
+    },
+    {
+      "title": "Holiday Tours & Travel \u00bb Business Travel",
+      "feed_url": "https://www.holidaytourstravel.com/business-travel/feed/",
+      "website_url": "https://www.holidaytourstravel.com/business-travel/",
+      "description": "The latest business travel news, insights, and information for corporate travelers. Holiday Tours & Travel is Malaysia's largest travel agency that co-creates personalized, tailor-made experiences for discerning travelers who seek unique holidays and business trips.",
+      "followers": {
+        "facebook": 41100,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5320052.jpg?t=1631086884"
+    },
+    {
+      "title": "C Boarding Group",
+      "feed_url": "http://cboardinggroup.com/feed/",
+      "website_url": "https://cboardinggroup.com/",
+      "description": "Business travel tips for road warriors. Travel Smarter with our travel tips and travel hacks, packing tips & more. Plus, find the best travel gear and funniest travel memes.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2100,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4996404.jpg?t=1605880239"
+    },
+    {
+      "title": "ExtraVitality",
+      "feed_url": "https://www.extravitality.co/feed/",
+      "website_url": "https://www.extravitality.co/",
+      "description": "Travel health and wellbeing experts specialising in executive travel health. Transforming executive travel into optimal business performance.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4946072.jpg?t=1605880399"
+    },
+    {
+      "title": "Beyond Business Travel News",
+      "feed_url": "https://beyondbusinesstravel.com/news/feed/",
+      "website_url": "https://beyondbusinesstravel.com/news/",
+      "description": "Read the latest news from Beyond Business Travel. Updates on flight delays, airline news, travel research and reports and more.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4766119.jpg?t=1605880386"
+    },
+    {
+      "title": "Business Travel Show",
+      "feed_url": "http://businesstravelshow.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://businesstravelshow.blogspot.com/",
+      "description": "A blog about the business travel industry for European buyers, bookers and managers.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4766913.jpg?t=1605880416"
+    },
+    {
+      "title": "JTB Business Travel Blog",
+      "feed_url": "https://jtbbts.com/feed/",
+      "website_url": "https://jtbbts.com/blog/",
+      "description": "Insights, trends, and tips for business travelers, travel managers, and executives that want to manage travel better. JTB Business Travel is an end-to-end, single trusted source for Business Travel Management.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 196,
+        "instagram": 316
+      },
+      "image_url": "https://i1.feedspot.com/5320315.jpg?t=1631170773"
+    },
+    {
+      "title": "YTC",
+      "feed_url": "https://ytc.co.uk/feed/",
+      "website_url": "https://ytc.co.uk/",
+      "description": "From one-off trips to complete business travel management, Your Travel Corporate provide the highest level of service at the lowest possible fares. For expert advice and top tips on how to maximise your travel spend read our business travel blog.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 716
+      },
+      "image_url": "https://i1.feedspot.com/4885881.jpg?t=1605880373"
+    },
+    {
+      "title": "Business Travel News",
+      "feed_url": "https://www.businesstravelnews.com/rss/business-travel-news",
+      "website_url": "https://www.businesstravelnews.com/",
+      "description": "The BTN Group is the undisputed leader of business travel and meeting information and intelligence in North America. The BTN Group has an unrivaled reach of more than 65,000 business travel/meeting professionals with its leading global brands; Business Travel News,Travel Procurement and The Beat.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 115500
+      },
+      "image_url": "https://i1.feedspot.com/1662875.jpg?t=1605880198"
+    },
+    {
+      "title": "Skift",
+      "feed_url": "https://skift.com/travel-services/corporate-travel/feed/",
+      "website_url": "https://skift.com/business-travel/",
+      "description": "Skift is the largest industry intelligence platform providing MEDIA, INSIGHTS and MARKETING to key sectors of travel. Skift reports and curates news and information about business travel specifically for the business traveler market. Visit the blog to find more information.",
+      "followers": {
+        "facebook": 51600,
+        "twitter": 89400,
+        "instagram": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4766828.jpg?t=1605880222"
+    },
+    {
+      "title": "Entrepreneur",
+      "feed_url": "https://www.entrepreneur.com/topic/business-travel.rss",
+      "website_url": "https://www.entrepreneur.com/topic/business-travel",
+      "description": "Visit the blog to find latest news, videos, and discussion topics on Business Travel.",
+      "followers": {
+        "facebook": 517799,
+        "twitter": 33200,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4766041.jpg?t=1605880225"
+    },
+    {
+      "title": "The Informed Traveler",
+      "feed_url": "https://www.ovationtravel.com/blog/rss.xml",
+      "website_url": "https://www.amexglobalbusinesstravel.com/the-atlas/",
+      "description": "The 'Informed Traveler Blog' features the latest in corporate travel news and information for your business. The mission is to provide outstanding service, significant cost savings and comprehensive, convenient travel solutions to professional travel managers, administrators and business travelers.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4765708.jpg?t=1605880228"
+    },
+    {
+      "title": "the squa.re Blog",
+      "feed_url": "https://www.thesqua.re/blog/feed/",
+      "website_url": "https://www.thesqua.re/blog",
+      "description": "Find fully furnished service apartment and book luxury serviced accommodation for long and short corporate stay for executives from studio to multi bedroom self-contained corporate housing at thesqua.re",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1500,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4996408.jpg?t=1605880233"
+    },
+    {
+      "title": "Click Travel Blog",
+      "feed_url": "https://www.travelperk.com/uk/click-travel/",
+      "website_url": "https://www.travelperk.com/blog/",
+      "description": "Making your travel management easier and more cost-effective. Click Travel's success is built on innovative tech, outstanding service & expert knowledge. Visit the blog to find travel management best practice, tips, news and technical updates from the Click Travel team.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4765072.jpg?t=1605880265"
+    },
+    {
+      "title": "Christopherson Business Travel Blog",
+      "feed_url": "https://www.cbtravel.com/blog/feed",
+      "website_url": "https://www.cbtravel.com/blog",
+      "description": "Christopherson Business Travel is the independently-owned leader in intelligent corporate travel management. We are a certified, woman-owned corporation, and ranked by Business Travel News as the 12th largest corporate travel agency in the United States. Stay up to date with the business travel management tips & insights from our experienced team members.",
+      "followers": {
+        "facebook": 847,
+        "twitter": 1500,
+        "instagram": 389
+      },
+      "image_url": "https://i1.feedspot.com/4766071.jpg?t=1605880354"
+    },
+    {
+      "title": "American Express Global Business Travel",
+      "feed_url": "https://www.amexglobalbusinesstravel.com/feed/",
+      "website_url": "https://www.amexglobalbusinesstravel.com/the-atlas/",
+      "description": "American Express Global Business Travel provides end-to-end corporate travel and meetings program management - for companies of all sizes and across all industries. Check in with our business travel blog, The Atlas. American Express Global Business Travel has the latest business travel developments to share.",
+      "followers": {
+        "twitter": 8500,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4766132.jpg?t=1605880244"
+    },
+    {
+      "title": "Business Travel Tips & Trends Blog",
+      "feed_url": "https://www.corptrav.com/feed/",
+      "website_url": "https://www.frosch.com/blog/",
+      "description": "Founded in 1976, CorpTrav is proud to be a wholly-owned Global Corporate Travel Management Company. Stay tuned with the corporate travel tips, trends and news. For more information on business travel news and business travel tips read the blog.",
+      "followers": {
+        "facebook": 134,
+        "twitter": 936
+      },
+      "image_url": "https://i1.feedspot.com/4766152.jpg?t=1605880281"
+    },
+    {
+      "title": "Deem Blog",
+      "feed_url": "https://www.deem.com/corporate-travel-articles?format=rss",
+      "website_url": "https://www.deem.com/resources/blog",
+      "description": "Deem's mission is creating intuitive and personalized experiences for travelers, that also deliver exceptional value and insights for businesses. Follow the feed for corporate travel technology, innovation and trend updates for professionals managing a corporate travel program.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5191178.jpg?t=1605880255"
+    }
+  ]
+}

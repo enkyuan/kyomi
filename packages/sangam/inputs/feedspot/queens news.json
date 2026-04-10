@@ -1,0 +1,95 @@
+{
+  "category": "Queens News",
+  "source_url": "https://rss.feedspot.com/queens_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "QNS",
+      "feed_url": "https://qns.com/feed",
+      "website_url": "https://qns.com/",
+      "description": "QNS provides the latest and most interesting information about Queens - be it breaking news, politics, and education, or dining, nightlife, real estate and getting around. Our award-winning journalists are complemented by our grassroots community that posts comments, events, discussions, photos, videos, and classifieds of their own to keep all of Queens up to date and in the know.",
+      "followers": {
+        "facebook": 43800,
+        "twitter": 14400,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5131401.jpg?t=1673267750"
+    },
+    {
+      "title": "Queens Daily Eagle",
+      "feed_url": "https://queenseagle.com/all?format=rss",
+      "website_url": "https://queenseagle.com/",
+      "description": "The Queens Daily Eagle describes developments in the legal community, informs Queens residents of their rights and resources and provides a platform for borough-wide voices. Ultimately, we serve as a crucial guide to our borough's legal system, a system that affects everyone who lives, works or visits Queens.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5131408.jpg"
+    },
+    {
+      "title": "Queens Chronicle",
+      "feed_url": "https://www.qchron.com/search/?f=rss&t=article&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.qchron.com/",
+      "description": "The Queens Chronicle is an award-winning weekly newspaper that has served the communities of Queens since 1978. From Astoria to Laurelton, Whitestone to Howard Beach, and all of the neighborhoods in between, we cover the news and events of our communities.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5131406.jpg?t=1585224169"
+    },
+    {
+      "title": "Queens Gazette",
+      "feed_url": "https://www.qgazette.com/feed",
+      "website_url": "https://www.qgazette.com/",
+      "description": "Queens Gazette is a community publication dedicated to bringing readers a vital locally-oriented view of the news. Covering over 50 neighborhoods in the borough of Queens.",
+      "followers": {
+        "facebook": 19500,
+        "twitter": 2500,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5131413.jpg?t=1585224199"
+    },
+    {
+      "title": "New York Post \u00bb Queens",
+      "feed_url": "https://nypost.com/tag/queens/feed",
+      "website_url": "https://nypost.com/tag/queens/",
+      "description": "The New York Post is your source for breaking news, news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more. Get the latest news and breaking news in your local Queens area on the New York Post.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/5131414.jpg"
+    },
+    {
+      "title": "Queens Ledger",
+      "feed_url": "https://queensledger.com/feed/",
+      "website_url": "https://queensledger.com/",
+      "description": "Queens Ledge online brings hyper-local content and trending stories to readers in the Queens area. Read the latest news and opinions reflecting on contemporary issues affecting the local people. The Queens Ledger is the flagship weekly community newspaper of the BQE Media Publishing Group.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5490346.jpg?t=1673267011"
+    },
+    {
+      "title": "Queens Post",
+      "feed_url": "https://queenspost.com/feed",
+      "website_url": "https://queenspost.com/",
+      "description": "The Queens Post is a local news website operated by veteran journalists Christian Murray and Czarinna Andres. We deliver up-to-the-minute reports on education, local politics, small business, crime, neighborhood real estate, and more. Our experienced reporters dig up stories both big and small - that are of concern to local residents.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5490348.jpg?t=1673267531"
+    },
+    {
+      "title": "PIX11 News \u00bb Queens",
+      "feed_url": "https://pix11.com/news/local-news/queens/feed/",
+      "website_url": "https://pix11.com/news/local-news/queens/",
+      "description": "This page at PIX11 News showcases breaking news and community stories that Queens residents and New Yorkers need to know. Catch headlines and learn more about the ongoing local, social and cultural phenomena in the area. PIX11 News is the flagship station of the CW Network delivering New Yorkers with the latest news on air and the web throughout the day.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 114800,
+        "instagram": 261100
+      },
+      "image_url": "https://i1.feedspot.com/5490347.jpg?t=1673267034"
+    }
+  ]
+}

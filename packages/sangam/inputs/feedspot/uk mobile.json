@@ -1,0 +1,105 @@
+{
+  "category": "UK Mobile",
+  "source_url": "https://rss.feedspot.com/uk_mobile_rss_feeds",
+  "feeds": [
+    {
+      "title": "Know Your Mobile",
+      "feed_url": "https://www.knowyourmobile.com/feed/",
+      "website_url": "https://www.knowyourmobile.com/",
+      "description": "Follow to keep up with everything related to mobiles and opinions on all the latest tech, phones and tablets which includes product reviews and news.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/3589044.jpg?t=1620052000"
+    },
+    {
+      "title": "Coolsmartphone",
+      "feed_url": "https://winmo.coolsmartphone.com/feed/",
+      "website_url": "https://winmo.coolsmartphone.com/",
+      "description": "Find Android and iPhone, Windows Phone news, reviews and gossip.",
+      "followers": {
+        "facebook": 672,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4910616.jpg?t=1620052023"
+    },
+    {
+      "title": "Trusted Reviews",
+      "feed_url": "https://www.trustedreviews.com/type/mobile-phones/feed",
+      "website_url": "https://www.trustedreviews.com/type/mobile-phones",
+      "description": "Whether it's a brand-new flagship or something a little lighter on the wallet, we've got in-depth reviews of all the best, and worst, smartphones you can buy right now.",
+      "followers": {
+        "facebook": 134000,
+        "twitter": 33900
+      },
+      "image_url": "https://i1.feedspot.com/4759208.jpg?t=1608387876"
+    },
+    {
+      "title": "Ken's Tech Tips",
+      "feed_url": "https://kenstechtips.com/index.php/feed",
+      "website_url": "https://kenstechtips.com/",
+      "description": "Subscribe us to keep up with Ken Lo's guide to mobile technology in the UK, discussing UK mobile networks and mobile technology.",
+      "followers": {
+        "facebook": 577,
+        "twitter": 532
+      },
+      "image_url": "https://i1.feedspot.com/4910648.jpg?t=1620052028"
+    },
+    {
+      "title": "Mobile News Online",
+      "feed_url": "http://feeds.feedburner.com/co/tGpA",
+      "website_url": "https://www.mobilenewscwp.co.uk/",
+      "description": "The leading news source for the mobile communications industry.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4614393.jpg?t=1620052013"
+    },
+    {
+      "title": "Tech Advisor \u00bb Phones",
+      "feed_url": "https://www.techadvisor.com/phones/",
+      "website_url": "https://www.techadvisor.com/phones/",
+      "description": "Get latest Smartphones news, reviews, group tests, opinion, features and buying advice from the experts.",
+      "followers": {
+        "facebook": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4910622.jpg?t=1620052082"
+    },
+    {
+      "title": "Expert Reviews",
+      "feed_url": "https://www.expertreviews.co.uk/technology/phones/feed",
+      "website_url": "https://www.expertreviews.co.uk/technology/phones",
+      "description": "Expert Reviews provides authoritative and independent technology reviews. Our in-depth testing will help you find the perfect products to buy.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4759205.jpg?t=1608389115"
+    },
+    {
+      "title": "Computerworld \u00bb Mobile",
+      "feed_url": "https://www.computerworld.com/uk/mobile/",
+      "website_url": "https://www.computerworld.com/uk/mobile/",
+      "description": "Get Mobile & Wireless News & Tutorials on Mobile devices, apps, wireless technology advancements, security updates, and the UK mobile IT industry.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4910633.jpg?t=1620052053"
+    },
+    {
+      "title": "Stuff.tv",
+      "feed_url": "https://www.stuff.tv/smartphones/feed",
+      "website_url": "https://www.stuff.tv/smartphones/",
+      "description": "The destination to find out everything that matters about the latest smartphones and mobile technologies - news, reviews, features, opinion and more.",
+      "followers": {
+        "facebook": 386200,
+        "twitter": 31100,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4910642.jpg?t=1620052018"
+    }
+  ]
+}

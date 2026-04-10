@@ -1,0 +1,416 @@
+{
+  "category": "Dallas",
+  "source_url": "https://rss.feedspot.com/dallas_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Dallas",
+      "feed_url": "https://dallas.eater.com/rss/index.xml",
+      "website_url": "https://dallas.eater.com/",
+      "description": "Food news and dining guides for Dallas.",
+      "followers": {
+        "facebook": 35600,
+        "twitter": 24700,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4820094.jpg?t=1610777401"
+    },
+    {
+      "title": "Dallas ISD",
+      "feed_url": "https://thehub.dallasisd.org/feed/",
+      "website_url": "https://thehub.dallasisd.org/",
+      "description": "Connecting you to the personalities, places and perspectives of Dallas ISD.",
+      "followers": {
+        "facebook": 112600,
+        "twitter": 100600,
+        "instagram": 38000
+      },
+      "image_url": "https://i1.feedspot.com/4820198.jpg?t=1610777423"
+    },
+    {
+      "title": "The Chalk Report",
+      "feed_url": "https://www.thechalkreport.com/blog-feed.xml",
+      "website_url": "https://www.thechalkreport.com/",
+      "description": "The Chalk Report by Andrew Chalk explores, travels, and talks about some of the best stuff to eat, drink and travel in Dallas, Texas. Author Andrew Chalk is a Dallas-based author who writes about wine, spirits, beer, food, restaurants, wineries, and destinations all over the world.",
+      "followers": {
+        "twitter": 96,
+        "instagram": 119
+      },
+      "image_url": "https://i1.feedspot.com/5647722.jpg?t=1692005243"
+    },
+    {
+      "title": "Voyage Dallas Magazine | Dallas City Guide",
+      "feed_url": "https://voyagedallas.com/feed/",
+      "website_url": "https://voyagedallas.com/",
+      "description": "VoyageDallas wants to highlight the best of Dallas - from freelance makeup artists that will dazzle you to the best Meetup groups in town.",
+      "followers": {
+        "twitter": 825,
+        "instagram": 36400
+      },
+      "image_url": "https://i1.feedspot.com/4820231.jpg"
+    },
+    {
+      "title": "Confessions of Parenting | Dallas Parenting Blog",
+      "feed_url": "https://confessionsofparenting.com/home/blog/feed/",
+      "website_url": "https://confessionsofparenting.com/home/blog/",
+      "description": "Strengthening family relationships through parenting tips, marriage helps and a whole lot of family fun. Here is where we stand up join together and figure out how to make our families and marriages more successful while taking care of ourselves and making our lives more simplistic. If you want a strong marriage.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4926052.jpg?t=1610777488"
+    },
+    {
+      "title": "Dallas Voice",
+      "feed_url": "https://dallasvoice.com/feed/",
+      "website_url": "https://dallasvoice.com/",
+      "description": "The premier media source for LGBT Texas. We blanket the DFW metroplex in over 400 locations, 23 cities, 62 zip codes and 5 counties.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 16600,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4820674.jpg?t=1610777498"
+    },
+    {
+      "title": "Dallas Parks",
+      "feed_url": "https://www.dallasparks.org/RSSFeed.aspx?ModID=76&CID=All-0/feed",
+      "website_url": "https://www.dallasparks.org/",
+      "description": "To enhance the quality of life for our customers by providing leisure, cultural and educational services while preserving, conserving and promoting our natural and physical resources.",
+      "followers": {
+        "twitter": 11900,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4820209.jpg?t=1610777511"
+    },
+    {
+      "title": "D Weddings | Dallas' Ultimate Wedding Guide",
+      "feed_url": "https://dweddings.com/feed/",
+      "website_url": "https://dweddings.com/",
+      "description": "From glorious gown retailers to fabulous florists to creative cake makers, D Weddings is a magazine of stylish recommendations, presented in a friendly environment our brides have grown to trust.",
+      "followers": {
+        "facebook": 8600,
+        "instagram": 17000
+      },
+      "image_url": "https://i1.feedspot.com/4820664.jpg?t=1610777516"
+    },
+    {
+      "title": "CandysDirt.com",
+      "feed_url": "https://feeds.feedburner.com/CandysDirt",
+      "website_url": "https://candysdirt.com/",
+      "description": "Welcome to CandysDirt.com, an award-winning site for the truly real-estate obsessed in Dallas and North Texas. Dallas Real Estate News and Blog from Publisher Candy Evans.",
+      "followers": {
+        "facebook": 17000,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4820133.jpg?t=1610777493"
+    },
+    {
+      "title": "Dallas Pets Alive! Blog",
+      "feed_url": "https://dallaspetsalive.org/feed/",
+      "website_url": "https://dallaspetsalive.org/category/news/blog/",
+      "description": "DPA is an all-volunteer nonprofit working to rescue, rehab & re-home pets in the Dallas area. Its mission is to promote and provide the resources, education, and programs needed to eliminate the killing of companion animals. Dallas Pet Alive gives the option to not only adopt but foster pets and volunteer. To get all useful information about volunteering events and stories, you can visit their blog.",
+      "followers": {
+        "facebook": 48300,
+        "twitter": 3400,
+        "instagram": 26100
+      },
+      "image_url": "https://i1.feedspot.com/4624769.jpg?t=1610777522"
+    },
+    {
+      "title": "Beer in Big D",
+      "feed_url": "https://www.beerinbigd.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.beerinbigd.com/",
+      "description": "Beer in Big D provides coverage of the craft beer industry in Dallas, Fort Worth and the surrounding North Texas area.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4512056.jpg"
+    },
+    {
+      "title": "I Live In Dallas",
+      "feed_url": "https://www.iliveindallas.com/feed/",
+      "website_url": "https://www.iliveindallas.com/",
+      "description": "ILiveInDallas.com covers local art, music, film and things to do in Dallas, Texas.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 41800,
+        "instagram": 746
+      },
+      "image_url": "https://i1.feedspot.com/43115.jpg?t=1610777569"
+    },
+    {
+      "title": "Dallas Fort Worth Real Estate Blog",
+      "feed_url": "https://www.dfwurbanrealty.com/blog/rss",
+      "website_url": "https://www.dfwurbanrealty.com/blog/",
+      "description": "Find DFW real estate articles, housing reports, new construction homes, condo builder updates., housing trends, and home sales statistics. DFW Urban Realty specializes in buying, selling, and renting homes, townhomes, condos, lofts, high rises, and apartments.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 554
+      },
+      "image_url": "https://i1.feedspot.com/4820125.jpg?t=1657020447"
+    },
+    {
+      "title": "Dallas Style & Design Magazine \u00bb Lifestyle",
+      "feed_url": "https://dsdmag.com/feed/",
+      "website_url": "https://dsdmag.com/lifestyle/",
+      "description": "Dallas Style & Design will be a one-stop resource for all your home design needs. The Lifestyle section of Dallas Style and Design Magazine is a great resource for anyone who is looking for inspiration and advice on how to live a stylish, healthy, and fulfilling life.",
+      "followers": {
+        "facebook": 144400,
+        "twitter": 393,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4820676.jpg?t=1610777597"
+    },
+    {
+      "title": "People Newspapers",
+      "feed_url": "https://www.peoplenewspapers.com/feed/",
+      "website_url": "https://www.peoplenewspapers.com/",
+      "description": "People Newspapers publishes Park Cities People and Preston Hollow People. Park Cities People is the source for community news and events in Highland Park and University Park. Preston Hollow People captures grand, majestic Preston Hollow, which anchors the center of Dallas.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 182,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/1399309.jpg?t=1631941323"
+    },
+    {
+      "title": "Flashback : Dallas",
+      "feed_url": "https://flashbackdallas.com/feed/",
+      "website_url": "https://flashbackdallas.com/",
+      "description": "A Miscellany: History, Ads, Pop Culture. Dallas, Texas -- history, pop culture, and vintage.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4820511.jpg?t=1610777613"
+    },
+    {
+      "title": "Dallas Museum of Art Uncrated",
+      "feed_url": "https://blog.dma.org/feed/",
+      "website_url": "https://blog.dma.org/",
+      "description": "Official behind-the-scenes blog of the Dallas Museum of Art.",
+      "followers": {
+        "facebook": 179900,
+        "twitter": 159400,
+        "instagram": 148700
+      },
+      "image_url": "https://i1.feedspot.com/4224436.jpg?t=1610778001"
+    },
+    {
+      "title": "VisitDallas Blog",
+      "feed_url": "https://feeds.feedburner.com/DallasNowBlog",
+      "website_url": "https://www.visitdallas.com/blog/",
+      "description": "Welcome to Dallas - Big things happen here! Find the city's top attractions, restaurants, shopping, and much more. Plan your trip here at the Dallas CVB, with our guides, maps, lists, and top insider tips for experiencing Dallas to the fullest!",
+      "followers": {
+        "facebook": 219200,
+        "twitter": 49100,
+        "instagram": 203800
+      },
+      "image_url": "https://i1.feedspot.com/4820072.jpg?t=1610777378"
+    },
+    {
+      "title": "D Magazine",
+      "feed_url": "https://www.dmagazine.com/feed/",
+      "website_url": "https://www.dmagazine.com/",
+      "description": "D Magazine is a monthly magazine covering Dallas-Fort Worth. It was founded in 1974 by Wick Allison and Jim Atkinson. The magazine covers a range of topics including politics, business, food, fashion and lifestyle in the city of Dallas.",
+      "followers": {
+        "facebook": 167300,
+        "twitter": 323600,
+        "instagram": 229200
+      },
+      "image_url": "https://i1.feedspot.com/4820178.jpg?t=1610777381"
+    },
+    {
+      "title": "FunCity Stuff DFW | Things to do Dallas",
+      "feed_url": "https://funcitystuff.com/feed/",
+      "website_url": "https://funcitystuff.com/",
+      "description": "Fun things to do in DFW and things to do in Dallas. We have things to do ranging from date night ideas for DFW to cooking classes in DFW and farm to table.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 28100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4957983.jpg?t=1610777410"
+    },
+    {
+      "title": "Dallas Arboretum and Botanical Garden",
+      "feed_url": "http://blog.dallasarboretum.org/feed/",
+      "website_url": "https://blog.dallasarboretum.org/",
+      "description": "Inside info and stories from the Dallas Arboretum Blog - Dallas Arboretum and Botanical Garden Blog",
+      "followers": {
+        "facebook": 284800,
+        "twitter": 21300,
+        "instagram": 164600
+      },
+      "image_url": "https://i1.feedspot.com/4820191.jpg?t=1610777419"
+    },
+    {
+      "title": "The Dallas Socials",
+      "feed_url": "https://www.thedallassocials.com/feed/",
+      "website_url": "https://www.thedallassocials.com/",
+      "description": "Dallas Socials is a Dallas Lifestyle Blog. We love to travel, eat delicious food, attend fabulous events, find fun things to do in Dallas and tell the world about it! From the Dallas life to where to eat in DFW - we are your Big D resource. Follow our adventures!",
+      "followers": {
+        "twitter": 69600,
+        "instagram": 23800
+      },
+      "image_url": "https://i1.feedspot.com/4820104.jpg?t=1610777532"
+    },
+    {
+      "title": "Oh So Cynthia",
+      "feed_url": "http://feeds.feedburner.com/OhSoCynthia",
+      "website_url": "https://www.ohsocynthia.com/",
+      "description": "A blog about fashion, food, events, celebrity sightings, reality TV & events in Dallas. Cynthia Smoot covers Dallas' hottest events & coolest people.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 9400,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/1912933.jpg?t=1610777602"
+    },
+    {
+      "title": "Dallas, Fort Worth Real Estate :: The Rhodes Team",
+      "feed_url": "https://www.rhodesteamtexas.com/blog/feed/",
+      "website_url": "https://www.rhodesteamtexas.com/blog/",
+      "description": "Find real estate in Dallas, Fort Worth. Use The Rhodes Team search engine to find Dallas, Fort Worth real estate by price, bedrooms and more. We have every listing from every real estate company in the Dallas, Fort Worth area.",
+      "followers": {
+        "facebook": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4820636.jpg?t=1610777997"
+    },
+    {
+      "title": "Blogging The Boys",
+      "feed_url": "https://www.bloggingtheboys.com/rss/index.xml",
+      "website_url": "https://www.bloggingtheboys.com/",
+      "description": "Dallas Cowboys Schedule, News, Roster and Stats.",
+      "followers": {
+        "facebook": 199800,
+        "twitter": 154900,
+        "instagram": 25200
+      },
+      "image_url": "https://i1.feedspot.com/4755406.jpg?t=1610777396"
+    },
+    {
+      "title": "Mavs Moneyball | Dallas Mavericks community",
+      "feed_url": "https://www.mavsmoneyball.com/rss/index.xml",
+      "website_url": "https://www.mavsmoneyball.com/",
+      "description": "Your best source for quality Dallas Mavericks news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 93700,
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/4820064.jpg?t=1610778024"
+    },
+    {
+      "title": "CultureMap Dallas",
+      "feed_url": "https://dallas.culturemap.com/feeds/news/",
+      "website_url": "https://dallas.culturemap.com/",
+      "description": "CultureMap is your source for local lifestyle news. We report on the things that matter to you most, like where to eat and what to do. You're going to love our daily updates on how to make the most of living in the cities we serve as well as fun tidbits about what's happening around the state.",
+      "followers": {
+        "facebook": 85600,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/5297186.jpg?t=1624893264"
+    },
+    {
+      "title": "The Landry Hat",
+      "feed_url": "https://thelandryhat.com/feed/",
+      "website_url": "https://thelandryhat.com/",
+      "description": "The ultimate home for Dallas Cowboys news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 113300,
+        "twitter": 5800,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4756966.jpg?t=1610777473"
+    },
+    {
+      "title": "Autos of Dallas",
+      "feed_url": "https://www.autosofdallas.com/blog/feed",
+      "website_url": "https://www.autosofdallas.com/blog/",
+      "description": "Autos of Dallas is a pre-owned luxury vehicle dealership located near Plano Texas. We're here to help with any automotive needs you may have.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 964
+      },
+      "image_url": "https://i1.feedspot.com/4820587.jpg?t=1610777479"
+    },
+    {
+      "title": "Specialized Property Management News",
+      "feed_url": "https://specializedpropertymanagementdallas.com/feed/",
+      "website_url": "https://specializedpropertymanagementdallas.com/news/",
+      "description": "Boost Revenue, Efficiency and Stability. We can help, with the most comprehensive rental property management in Dallas and Fort Worth, Texas.",
+      "followers": {
+        "facebook": 410,
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/4820560.jpg?t=1610777593"
+    },
+    {
+      "title": "Dallas Observer",
+      "feed_url": "https://www.dallasobserver.com/index.rss",
+      "website_url": "https://www.dallasobserver.com/",
+      "description": "Dallas Observer is the definitive source of information for news, music, movies, restaurants, reviews, and events in Dallas.",
+      "followers": {
+        "facebook": 180400,
+        "twitter": 231400,
+        "instagram": 137800
+      },
+      "image_url": "https://i1.feedspot.com/4820148.jpg?t=1610777387"
+    },
+    {
+      "title": "Cheap DFW",
+      "feed_url": "https://cheapdfw.com/feed/",
+      "website_url": "https://cheapdfw.com/",
+      "description": "Inexpensive flights from Dallas / Fort heap DFW is a travel blog that focuses on cheap airfare and travel deals leaving from Dallas / Ft. Worth. This isn't a blog that covers local Dallas and Ft. Worth travel, it's about leaving here for other destinations as cheaply as possible.Worth!",
+      "followers": {
+        "facebook": 135500,
+        "twitter": 73900,
+        "instagram": 164000
+      },
+      "image_url": "https://i1.feedspot.com/4469408.jpg?t=1610777415"
+    },
+    {
+      "title": "We Are Dallas Fort Worth",
+      "feed_url": "https://wearedallasfortworth.com/feed/",
+      "website_url": "https://wearedallasfortworth.com/",
+      "description": "Welcome to the We Are Dallas Fort Worth Community. Discover unique businesses or events, check the calendar, peruse new home listings, grab a Texas tee or research your next adventure.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 841,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5054544.jpg?t=1610777589"
+    },
+    {
+      "title": "Delta Dallas",
+      "feed_url": "https://www.deltadallas.com/feed/rss2",
+      "website_url": "http://deltadallas.com/resources",
+      "description": "Looking for Dallas employment services? Delta Dallas is top leading staffing agencies in Dallas Tx that offers full time or part time employment services.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 167
+      },
+      "image_url": "https://i1.feedspot.com/4722052.jpg?t=1610777584"
+    },
+    {
+      "title": "Kassidi Foy",
+      "feed_url": "https://kassidifoy.com/feed/",
+      "website_url": "https://www.arkhamthoughts.com/",
+      "description": "I am a new blogger living in Dallas. Just trying to gain my footing in this space and meet like-minded people.",
+      "followers": {
+        "twitter": 946
+      },
+      "image_url": "https://i1.feedspot.com/5174235.jpg"
+    },
+    {
+      "title": "Arkham Thoughts",
+      "feed_url": "https://www.arkhamthoughts.com/feed",
+      "website_url": "https://www.arkhamthoughts.com/",
+      "description": "I specialize in turning my thoughts into the perfect blogs for my generation to achieve free game.",
+      "followers": {
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/5033742.jpg"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "category": "UK Party",
+  "source_url": "https://rss.feedspot.com/uk_party_rss_feeds",
+  "feeds": [
+    {
+      "title": "Party Pieces Blog",
+      "feed_url": "https://partypieces.co.uk/blogs/inspire.atom",
+      "website_url": "https://partypieces.co.uk/blogs/inspire",
+      "description": "The Party Pieces blog is packed full of party ideas for party planning. Party supplies, party entertainers, party ideas, advice & the latest party products, blogs & news.",
+      "followers": {
+        "facebook": 51200,
+        "twitter": 10100,
+        "instagram": 70100
+      },
+      "image_url": "https://i1.feedspot.com/4730793.jpg?t=1607953610"
+    },
+    {
+      "title": "Party Packs",
+      "feed_url": "https://www.partypacks.co.uk/blogs/party-inspiration.atom",
+      "website_url": "https://www.partypacks.co.uk/blogs/party-inspiration",
+      "description": "Party Packs features Inspiration and ideas for your parties, events, weddings and celebrations. If party supplies are what you are after, we have it all, from a wide range of ideas for any party or event.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 2800,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4729449.jpg?t=1607928177"
+    },
+    {
+      "title": "Hen Party Blog",
+      "feed_url": "https://thehenplanner.com/blog/feed/",
+      "website_url": "https://thehenplanner.co.uk/blogs/blog",
+      "description": "The Hen Planner is a resource to help you plan the perfect hen party. Daring to be different, we love everything stylish, unique and fun and incorporate this into our hen parties.",
+      "followers": {
+        "facebook": 32900,
+        "twitter": 5200,
+        "instagram": 22600
+      },
+      "image_url": "https://i1.feedspot.com/4729845.jpg?t=1607927990"
+    }
+  ]
+}

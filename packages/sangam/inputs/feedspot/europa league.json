@@ -1,0 +1,61 @@
+{
+  "category": "Europa League",
+  "source_url": "https://rss.feedspot.com/europa_league_rss_feeds",
+  "feeds": [
+    {
+      "title": "Betfair Betting \u00bb Europa League",
+      "feed_url": "https://betting.betfair.com/football/europa-league/index.xml",
+      "website_url": "https://betting.betfair.com/football/europa-league/",
+      "description": "Find Europa League betting tips, previews & predictions on Betfair Betting. At Betfair, we're committed to providing the best sports betting and gaming experience on the web, mobile, and tablet.",
+      "followers": {
+        "facebook": 613100,
+        "twitter": 105600,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/5450246.jpg?t=1664264824"
+    },
+    {
+      "title": "Diario AS \u00bb Europa League",
+      "feed_url": "https://feeds.as.com/mrss-s/list/as/site/en.as.com/tag/liga_europa_a",
+      "website_url": "https://en.as.com/news/liga-europa/",
+      "description": "Find all the news and videos of the Europa League, live broadcasts, chronicles, and statistics with Diario AS. Diario AS is a Spanish daily sports newspaper that concentrates particularly on football and offers you the latest reports from the world of sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5450250.jpg?t=1664265053"
+    },
+    {
+      "title": "Marca \u00bb Europa League",
+      "feed_url": "https://e00-marca.uecdn.es/rss/en/football/europa-league.xml",
+      "website_url": "https://www.marca.com/en/football/europa-league.html",
+      "description": "Get updates on the latest Europa League news and enjoy our posts, videos, and analysis on Marca. Marca is Spain's national daily sports newspaper that focuses primarily on football. Also, It has daily and fresh information about influencers, Instagram, and other media.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 221800
+      },
+      "image_url": "https://i1.feedspot.com/5450249.jpg?t=1664265692"
+    },
+    {
+      "title": "Sports Mole \u00bb Europa League",
+      "feed_url": "https://www.sportsmole.co.uk/football/europa-league.xml",
+      "website_url": "https://www.sportsmole.co.uk/football/europa-league/",
+      "description": "Find articles from Sports Mole about Europa League. Sports Mole is a sports news site. The website is updated with the latest breaking news and results from right across the sporting world, covering everything from football, cricket, tennis, and rugby union to athletics, golf, and Formula 1.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 39000,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5450248.jpg?t=1664264882"
+    },
+    {
+      "title": "theScore.com \u00bb UEFA",
+      "feed_url": "https://feeds.thescore.com/uefa.rss",
+      "website_url": "https://www.thescore.com/uefa/news",
+      "description": "Read trending UEFA news, and rumors for football, basketball, baseball, hockey, soccer & more. theScore is a digital media company that owns and operates digital sports media and sports betting products and delivers sports scores, data, news, and sportsbook offerings via emerging and established platforms.",
+      "followers": {
+        "facebook": 5100000,
+        "twitter": 616800,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/5450245.jpg?t=1664264691"
+    }
+  ]
+}

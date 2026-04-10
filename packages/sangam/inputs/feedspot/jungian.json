@@ -1,0 +1,60 @@
+{
+  "category": "Jungian",
+  "source_url": "https://rss.feedspot.com/jungian_rss_feeds",
+  "feeds": [
+    {
+      "title": "Carl Jung Depth Psychology Blog",
+      "feed_url": "https://carljungdepthpsychologysite.blog/feed/",
+      "website_url": "https://carljungdepthpsychologysite.blog/",
+      "description": "This blog covers numerous articles on the Life, Work and Legacy of Carl Jung and is a must for those interested in the work of Dr. Carl Jung and his work in Depth Psychology.",
+      "followers": {
+        "twitter": 561
+      },
+      "image_url": "https://i1.feedspot.com/5300971.jpg?t=1626076217"
+    },
+    {
+      "title": "Jungianthology Blog",
+      "feed_url": "https://jungchicago.org/blog/category/blog-posts/feed/",
+      "website_url": "https://jungchicago.org/blog/category/blog-posts/",
+      "description": "The blog shares articles, essays, video, audio, and other resources by members of the Chicago Society of Jungian Analysts. The mission of the institute is to advance Analytical Psychology through training analysts, teaching clinicians, and engaging diverse communities to foster personal transformation and social renewal.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 2500,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5300784.jpg?t=1625839513"
+    },
+    {
+      "title": "Speaking of Jung Blog",
+      "feed_url": "https://speakingofjung.com/blog?format=rss",
+      "website_url": "https://speakingofjung.com/blog",
+      "description": "Covers topics such as psychology, soul, ego, human consciousness and many more. The blog hosted by Laura London gives updates about the Jungian podcasts featuring in-depth discussions with certified Jungian analysts about the life and work of C.G. Jung.",
+      "followers": {
+        "twitter": 20000,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5300771.jpg?t=1626086261"
+    },
+    {
+      "title": "Applied Jung Blog",
+      "feed_url": "https://appliedjung.com/feed/",
+      "website_url": "https://appliedjung.com/blog-page/",
+      "description": "The blog covers a wide variety of articles sharing personal experiences and concepts from Jungian psychology along with some guest blogs and book reviews. Focuses on Jungian psychology as a practical, accessible and real tool for personal transformation. The goal of the Centre for Applied Jungian is to make Jungian psychology accessible to all.",
+      "followers": {
+        "facebook": 102100,
+        "twitter": 875
+      },
+      "image_url": "https://i1.feedspot.com/5300775.jpg?t=1625837199"
+    },
+    {
+      "title": "Jung Currents",
+      "feed_url": "https://jungcurrents.com/feed/",
+      "website_url": "https://jungcurrents.com/",
+      "description": "A comprehensive website devoted to Carl Jung. Author Steve Parker, a clinical psychologist has taught numerous Jungian seminars, and helped start the C. G. Jung Society of Northern Alaska over ten years ago.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5301047.jpg?t=1626100048"
+    }
+  ]
+}

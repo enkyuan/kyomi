@@ -1,0 +1,62 @@
+{
+  "category": "Epson",
+  "source_url": "https://rss.feedspot.com/epson_rss_feeds",
+  "feeds": [
+    {
+      "title": "Epson Blog",
+      "feed_url": "https://blog.epson.com/feed/",
+      "website_url": "https://blog.epson.com/",
+      "description": "This blog provides helpful articles, white papers, and insights from an industry leader on enterprise, small business & education tech.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 25800
+      },
+      "image_url": "https://i1.feedspot.com/4925525.jpg"
+    },
+    {
+      "title": "Epson America",
+      "feed_url": "https://news.epson.com/rss.xml",
+      "website_url": "https://news.epson.com/",
+      "description": "This site is intended to route worldwide visitors looking for information about the business or products of Seiko Epson Corporation to appropriate local sites or other business unit sites of interest to the visitor.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 25800,
+        "instagram": 44900
+      },
+      "image_url": "https://i1.feedspot.com/4925522.jpg"
+    },
+    {
+      "title": "Epson",
+      "feed_url": "https://corporate.epson/en/news/xml/newsroom_all.xml",
+      "website_url": "https://corporate.epson/en/news/",
+      "description": "Epson is a global technology company at the forefront of technological revolutions in imaging, robotics, precision machinery, and electronics. Get the latest Epson news updates from Epson Newsroom.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4925611.jpg"
+    },
+    {
+      "title": "Epson Philippines",
+      "feed_url": "https://news.epson.com.ph/rss/current_news/78578",
+      "website_url": "https://blog.epson.com.ph/",
+      "description": "Epson is a global digital imaging leader with technological innovations designed only for you. Find news, resources, and information related to Epson from Epson newsroom Philippines.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4925546.jpg"
+    },
+    {
+      "title": "Epson Singapore",
+      "feed_url": "https://news.epson.com.sg/rss/current_news/78574",
+      "website_url": "https://blog.epson.com.ph/",
+      "description": "We are the regional HQ for a global technology leader dedicated to exceeding our customers' vision and offer the most innovative products to customers worldwide. Find news, resources and information related to Epson from Epson newsroom Singapore.",
+      "followers": {
+        "facebook": 77800,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4925538.jpg?t=1576152620"
+    }
+  ]
+}

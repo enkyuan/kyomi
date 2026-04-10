@@ -1,0 +1,118 @@
+{
+  "category": "Voice Recognition Technology",
+  "source_url": "https://rss.feedspot.com/voice_recognition_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Speech Technology",
+      "feed_url": "http://feeds.infotoday.com/SpeechTechMag-AllArticles",
+      "website_url": "https://www.speechtechmag.com/Categories/Speech-Recognition_180.aspx",
+      "description": "Speechtechmag.com is the #1 destination for professionals seeking speech technology industry news, information, articles, directories, and services.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5306282.jpg?t=1627545553"
+    },
+    {
+      "title": "Speech Blog",
+      "feed_url": "https://blog.speech.com/feed/",
+      "website_url": "https://blog.speech.com/",
+      "description": "The Speech Blog provides the world with greater knowledge and resources specifically dealing with voice recording, dictation workflow, transcription and speech recognition solutions as well as cloud services.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 1000,
+        "instagram": 835
+      },
+      "image_url": "https://i1.feedspot.com/5306122.jpg?t=1627477730"
+    },
+    {
+      "title": "Deepgram Blog",
+      "feed_url": "https://deepgram.com/blog.xml",
+      "website_url": "https://deepgram.com/learn/article",
+      "description": "Read the latest blog articles and industry insights about AI Automatic Speech Recognition (ASR) technology. Deepgram have reinvented Automatic Speech Recognition (ASR) with a complete, deep learning model that allows companies to get faster, more accurate transcription, resulting in more reliable data sets.",
+      "followers": {
+        "facebook": 603,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5306259.jpg?t=1627542981"
+    },
+    {
+      "title": "Vivoka \u00bb Resources",
+      "feed_url": "https://vivoka.com/feed/",
+      "website_url": "https://vivoka.com/resources/",
+      "description": "Articles on various areas of Voice technologies and their applications. Vivoka is a French company with 5 years of expertise in the field of speech technologies whose objective is to offer relevant and adapted solutions to companies wishing to invest in voice interfaces for their business.",
+      "followers": {
+        "twitter": 7000,
+        "instagram": 253
+      },
+      "image_url": "https://i1.feedspot.com/5306273.jpg?t=1627544180"
+    },
+    {
+      "title": "SoapBox Labs Blog",
+      "feed_url": "https://www.soapboxlabs.com/blog/feed/",
+      "website_url": "https://www.soapboxlabs.com/blog/",
+      "description": "Get the latest news & insight on speech recognition technology for children's tech and education from the thought leaders in the industry. SoapBox Labs is working on transforming how kids interact with technology using their voices.",
+      "followers": {
+        "facebook": 186,
+        "twitter": 2000,
+        "instagram": 398
+      },
+      "image_url": "https://i1.feedspot.com/5306182.jpg?t=1627534916"
+    },
+    {
+      "title": "Alan Blog",
+      "feed_url": "https://alan.app/blog/feed/",
+      "website_url": "https://alan.app/blog/",
+      "description": "Articles on Voice Artificial Intelligence. Alan is a complete Voice AI Platform that lets you embed a contextual voice assistant into your existing application UI. Alan enables mobile applications and websites to have direct human-like conversations with their users.",
+      "followers": {
+        "facebook": 281,
+        "twitter": 423,
+        "instagram": 370
+      },
+      "image_url": "https://i1.feedspot.com/5306333.jpg?t=1627553590"
+    },
+    {
+      "title": "Rev \u00bb Speech-To-Text Technology",
+      "feed_url": "https://www.rev.com/category/speech-to-text-technology/",
+      "website_url": "https://www.rev.com/category/speech-to-text-technology/",
+      "description": "Follow the Rev.ai blog to learn about how to choose a speech-to-text API, product features, and the latest in automatic speech recognition. Rev.com provides human transcription services and is now the world's largest transcription vendor, with over 35,000 contractors.",
+      "followers": {
+        "facebook": 33900,
+        "twitter": 10800,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5306057.jpg?t=1627470286"
+    },
+    {
+      "title": "Speechmatics Blog",
+      "feed_url": "https://www.speechmatics.com/blog/feed",
+      "website_url": "https://www.speechmatics.com/company/articles-and-news",
+      "description": "News, views, and opinions about Speechmatics' any-context speech recognition engine and how it is being used across multiple industries. Speechmatics powers applications that require mission-critical, accurate speech recognition using its any-context speech recognition engine.",
+      "followers": {
+        "facebook": 768,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5306080.jpg?t=1627472047"
+    },
+    {
+      "title": "Speech-to-Meaning Blog",
+      "feed_url": "https://voices.soundhound.com/feed/",
+      "website_url": "https://www.soundhound.com/voice-ai-blog/",
+      "description": "Latest in Voice AI Trends, News, Success Stories, Insights, Best practices, and Expert advice. SoundHound Inc. is the leading innovator of conversational technologies and is trusted by top brands around the globe.",
+      "followers": {
+        "facebook": 248,
+        "twitter": 160
+      },
+      "image_url": "https://i1.feedspot.com/5306134.jpg?t=1627479421"
+    },
+    {
+      "title": "Speechly Voice UI Blog",
+      "feed_url": "https://www.speechly.com/feed.xml",
+      "description": "Covers Articles on topics like Voice Tech, Voice Design, and Use cases. Speechly writes occasionally about improving user experience through voice. It is the Fast, Accurate, and Simple Voice Interface API for Web, Mobile, and E-commerce.",
+      "followers": {
+        "twitter": 955
+      },
+      "image_url": "https://i1.feedspot.com/5306221.jpg?t=1627538847"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "category": "Xerox Corporation",
+  "source_url": "https://rss.feedspot.com/xerox_corporation_rss_feeds",
+  "feeds": [
+    {
+      "title": "Xerox",
+      "feed_url": "http://rss.xerox.com/xerox-news",
+      "website_url": "https://www.news.xerox.com/",
+      "description": "Your resource for Xerox news on our products, business solutions, citizenship, company information via news releases, videos and more.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 167900
+      },
+      "image_url": "https://i1.feedspot.com/4497844.jpg?t=1620641898"
+    },
+    {
+      "title": "Xerox",
+      "feed_url": "http://rss.xerox.com/xerox-uk-news",
+      "website_url": "https://news.xerox.co.uk/news",
+      "description": "Xerox Newsroom includes a range of Xerox press releases about the company. Read all the latest Xerox corporate news and more here.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4918684.jpg?t=1620641918"
+    },
+    {
+      "title": "Xerox \u00bb Digital Printing",
+      "feed_url": "https://www.xerox.com/en-us/digital-printing/",
+      "website_url": "https://www.xerox.com/en-us/digital-printing/",
+      "description": "Get ideas, insights and trends to help you grow your business and get the most out of your production digital print technology.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 19500,
+        "instagram": 20900
+      },
+      "image_url": "https://i1.feedspot.com/4918680.jpg?t=1620641933"
+    }
+  ]
+}

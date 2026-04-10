@@ -1,0 +1,28 @@
+{
+  "category": "Gainesville News",
+  "source_url": "https://rss.feedspot.com/gainesville_georgia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gainesville Times",
+      "feed_url": "https://www.gainesvilletimes.com/rss/",
+      "website_url": "https://www.gainesvilletimes.com/",
+      "description": "The Gainesville Times is a newspaper committed to providing news about Hall County and Northeast Georgia.",
+      "followers": {
+        "facebook": 51300,
+        "twitter": 9800,
+        "instagram": 23500
+      },
+      "image_url": "https://i1.feedspot.com/5130519.jpg?t=1587030073"
+    },
+    {
+      "title": "AccessWDUN",
+      "feed_url": "https://accesswdun.com/rss/10/rss.xml",
+      "website_url": "https://accesswdun.com/",
+      "description": "AccessWDUN is North Georgia's most read news website. Subscribe with us to keep up with Georgia's local and State news.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5130516.jpg?t=1587030163"
+    }
+  ]
+}

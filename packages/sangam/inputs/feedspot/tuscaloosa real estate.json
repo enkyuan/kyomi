@@ -1,0 +1,41 @@
+{
+  "category": "Tuscaloosa Real Estate",
+  "source_url": "https://rss.feedspot.com/tuscaloosa_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Gray Group Blog",
+      "feed_url": "https://www.thegraygroupal.com/blog/feed/",
+      "website_url": "https://www.thegraygroupal.com/blog/",
+      "description": "The Gray Group at Keller Williams Realty Tuscaloosa writes often to update you on the latest in real estate in Tuscaloosa County. Explore recent posts filling you in on the Top places to visit, Real estate trends, Home buying & selling tops, and Popular neighborhoods in Tuscaloosa. The Gray Group is a dedicated team of real estate team in Alabama.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 10,
+        "instagram": 18900
+      },
+      "image_url": "https://i1.feedspot.com/4792244.jpg?t=1685347616"
+    },
+    {
+      "title": "The Williams Group Blog",
+      "feed_url": "https://www.thewilliamsgroupal.com/blog/feed/",
+      "website_url": "https://www.thewilliamsgroupal.com/blog/",
+      "description": "Discover our blog where our agents write often to give you the latest insights on owning a home or property in the local area. Get relevant, in-depth reviews and insights on the local housing market, home maintenance tips, industry news, and much more. The Williams Group is a team of real estate professionals, and realtors helping Tuscaloosans find the right homes.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 23,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5584431.jpg?t=1685347872"
+    },
+    {
+      "title": "Mary Harmon & Co",
+      "feed_url": "https://www.maryharmon.com/",
+      "website_url": "https://www.maryharmon.com/",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 163,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5584501.jpg?t=1685624167"
+    }
+  ]
+}

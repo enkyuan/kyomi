@@ -1,0 +1,63 @@
+{
+  "category": "St. Cloud News",
+  "source_url": "https://rss.feedspot.com/st_cloud_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "AM 1240 WJON",
+      "feed_url": "https://wjon.com/category/local-news/feed",
+      "website_url": "https://wjon.com/category/local-news/",
+      "description": "AM 1240 WJON Radio, has the best news coverage in St. Cloud, Minnesota. Providing news and information to the St. Cloud metro area since 1950. With greater Minnesota's largest radio news team - we're plugged into the news you need to know, here in Central Minnesota, and all over the North Star State, 24-7.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5140914.jpg"
+    },
+    {
+      "title": "KSTP \u00bb St. Cloud",
+      "feed_url": "https://kstp.com/tag/st-cloud/feed/",
+      "website_url": "https://kstp.com/tag/st-cloud/",
+      "description": "Keep up to date with the latest news and updates from St. Clouds including local news, weather updates and more! KSTP-TV is the home of 5 Eyewitness News and ABC in the Twin Cities.",
+      "followers": {
+        "facebook": 360500,
+        "twitter": 132500,
+        "instagram": 48900
+      },
+      "image_url": "https://i1.feedspot.com/5501037.jpg?t=1675140836"
+    },
+    {
+      "title": "St. Cloud Times",
+      "feed_url": "http://rssfeeds.sctimes.com/stcloud/news",
+      "website_url": "https://www.sctimes.com/",
+      "description": "St. Cloud Times founded in 1861. Today, we are Central Minnesota's largest news organization for online, mobile print and tablet platforms. We are the winner of Minnesota Newspaper Association Vance Trophy for Outstanding Daily Newspaper:1985-89;'90-'94; '97-'99; 2002-03, ;05-08,'10-'13, 2016. Get the latest breaking news and continuing news updates from Central Minnesota.",
+      "followers": {
+        "facebook": 41700,
+        "twitter": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4826504.jpg?t=1587386375"
+    },
+    {
+      "title": "KNSI News",
+      "feed_url": "https://knsiradio.com/",
+      "website_url": "https://knsiradio.com/",
+      "description": "We are all things News, Weather, Sports and Information in St. Cloud, Minnesota. Locally owned and operated by Leighton Broadcasting, Founded in 1938.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5140917.jpg?t=1587387138"
+    },
+    {
+      "title": "CBS Minnesota \u00bb St. Cloud",
+      "feed_url": "https://minnesota.cbslocal.com/tag/st-cloud/feed/",
+      "website_url": "https://www.cbsnews.com/minnesota/tag/st-cloud/",
+      "description": "WCCO-TV is part of CBS Television Stations, a division of CBS Corp. and one of the largest network-owned station groups in the country. We provide you news, sports, weather, traffic, and the best of Minnesota, and the Twin Cities of Minneapolis-St. Paul. Follow this feed to stay up to date on St. Cloud local news, politics, business, and crime.",
+      "followers": {
+        "facebook": 484700,
+        "twitter": 269700,
+        "instagram": 87900
+      },
+      "image_url": "https://i1.feedspot.com/5140915.jpg"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "category": "Algeria",
+  "source_url": "https://rss.feedspot.com/algeria_rss_feeds",
+  "feeds": [
+    {
+      "title": "CAERT",
+      "feed_url": "https://www.caert.org.dz/feed/",
+      "website_url": "https://www.caert.org.dz/",
+      "description": "The African Center for the Study and Research on Terrorism conducts research on terrorism with the purpose to prevent & combat terrorism in Africa. The African Center for the Study and Research on Terrorism (ACSRT) was inaugurated in 2004 with Headquarters in Algiers, Algeria, as a structure of the African Union Commission, in conformity with the Protocol to the 1999 OAU Convention on the Prevention and Combating of Terrorism.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5440747.jpg?t=1662986984"
+    },
+    {
+      "title": "Fashion and Beauty",
+      "feed_url": "https://beutyfashiontoday.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://beutyfashiontoday.blogspot.com/",
+      "description": "The blog is interested in publishing articles and videos on different areas related to women, including beauty, health, nutrition, weight loss, shopping for beauty and health products, accessories and perfumes and flash sale.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5076774.jpg?t=1674022245"
+    }
+  ]
+}

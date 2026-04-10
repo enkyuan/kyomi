@@ -1,0 +1,84 @@
+{
+  "category": "Infectious Disease",
+  "source_url": "https://rss.feedspot.com/infectious_disease_rss_feeds",
+  "feeds": [
+    {
+      "title": "Contagion Live",
+      "feed_url": "https://www.contagionlive.com/rss",
+      "website_url": "https://www.contagionlive.com/",
+      "description": "Contagion is a fully integrated news resource covering all areas of infectious disease. We provide practitioners and specialists with disease-specific information designed to improve patient outcomes and assist with the identification, diagnosis, treatment, and prevention of infectious diseases.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5074433.jpg?t=1622898586"
+    },
+    {
+      "title": "IDStewardship",
+      "feed_url": "https://www.idstewardship.com/feed/",
+      "website_url": "https://www.idstewardship.com/",
+      "description": "IDStewardship provides practical information to pharmacy students and pharmacists, looking to educate themselves on infectious disease and practical pharmaceutical information.",
+      "followers": {
+        "facebook": 24700,
+        "twitter": 38800,
+        "instagram": 57300
+      },
+      "image_url": "https://i1.feedspot.com/5074434.jpg?t=1622898589"
+    },
+    {
+      "title": "Centre for Infectious Disease Research in Zambia Blog",
+      "feed_url": "https://www.cidrz.org/category/blog/feed/",
+      "website_url": "https://www.cidrz.org/category/blog/",
+      "description": "CIDRZ has strong technical expertise and years of experience in the field. We are uniquely positioned to identify and address health problems in the country and the African region. The blog focuses on topics such as HIV, tuberculosis, women's health, newborn child, and health system strengthening.",
+      "followers": {
+        "facebook": 56800,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5074439.jpg?t=1622898602"
+    },
+    {
+      "title": "BioFire Diagnostics Blog",
+      "feed_url": "https://www.biofiredx.com/blog/feed/",
+      "website_url": "https://www.biofiredx.com/blog/",
+      "description": "Covers news on the latest in syndromic infectious disease diagnostics. BioFire Diagnostics offers molecular diagnostic solutions for the healthcare industry.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5288371.jpg?t=1622816116"
+    },
+    {
+      "title": "National Foundation for Infectious Diseases",
+      "feed_url": "https://www.nfid.org/feed/",
+      "website_url": "https://www.nfid.org/",
+      "description": "National Foundation for Infectious Diseases (NFID) is a non-profit organization dedicated to educating the public and healthcare professionals about the burden, causes, prevention, diagnosis, and treatment of infectious diseases across the lifespan. Follow this blog to have a healthier life through effective prevention and treatment of infectious diseases.",
+      "followers": {
+        "facebook": 61200,
+        "twitter": 9000,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5074431.jpg?t=1622898595"
+    },
+    {
+      "title": "Infectious Disease Special Edition",
+      "feed_url": "https://www.idse.net/RSS/RSS.xml",
+      "website_url": "https://www.idse.net/",
+      "description": "Infectious Disease Special Edition (IDSE), is a quarterly publication in print that presents educational review articles on the latest medical developments and practice guidelines relevant to infectious disease specialists, pharmacists, pathologists, hospitalists, and others involved in the treatment of infectious diseases.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5074461.jpg?t=1622898599"
+    },
+    {
+      "title": "Pediatric Infectious Diseases Society",
+      "feed_url": "https://pids.org/news.feed?type=rss",
+      "website_url": "https://pids.org/",
+      "description": "PIDS is the world's largest organization of professionals dedicated to the treatment, control, and eradication of infectious diseases affecting children. Membership comprises physicians, doctoral-level scientists and others who have trained or are training in infectious diseases.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5074452.jpg?t=1622898606"
+    }
+  ]
+}

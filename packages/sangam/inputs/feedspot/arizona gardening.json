@@ -1,0 +1,105 @@
+{
+  "category": "Arizona Gardening",
+  "source_url": "https://rss.feedspot.com/arizona_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "AZ Plant Lady Blog",
+      "feed_url": "https://www.azplantlady.com/feed",
+      "website_url": "https://www.azplantlady.com/desert-garden-blog",
+      "description": "I'm Noelle Johnson - horticulturist, landscape consultant, and garden writer and I help people learn how to create, grow, and maintain beautiful landscapes that thrive in a hot, arid climate.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4948062.jpg?t=1621407955"
+    },
+    {
+      "title": "Tucson Organic Gardeners",
+      "feed_url": "https://www.tucsonorganicgardeners.org/feed/",
+      "website_url": "https://www.tucsonorganicgardeners.org/news/",
+      "description": "Check the blog for helpful articles on all things Organic Gardening. Tucson Organic Gardeners have been helping Tucsonans grow gardens organically for over 40 years!",
+      "followers": {
+        "facebook": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5311550.jpg?t=1628688539"
+    },
+    {
+      "title": "Phoenix Home & Garden \u00bb Landscape + Garden",
+      "feed_url": "https://www.phgmag.com/category/landscape-design/feed/",
+      "website_url": "https://www.phgmag.com/category/landscape-design/",
+      "description": "The following section of Phoenix Home & Garden is dedicated to landscape and gardening. Filled with inspiring articles, breathtaking photography and more, Phoenix Home & Garden is the ultimate guide to the affluent Southwest lifestyle.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 4900,
+        "instagram": 17000
+      },
+      "image_url": "https://i1.feedspot.com/5311537.jpg?t=1628686856"
+    },
+    {
+      "title": "Tucson Lifestyle \u00bb Home & Garden",
+      "feed_url": "https://www.tucsonlifestyle.com/search/?f=rss&t=article&c=hg&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.tucsonlifestyle.com/hg/",
+      "description": "The following section of the Tucson Lifestyle is dedicated to home & garden. The mission of Tucson Lifestyle is to: celebrate the people, cultural and nonprofit organizations, events, homes, gardens, landscapes, activities, food, and businesses that make living in Tucson unique and fulfilling.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 12400,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/5311555.jpg?t=1628689200"
+    },
+    {
+      "title": "Native-Seeds-Search Blog",
+      "feed_url": "https://www.nativeseeds.org/blogs/blog-news.atom",
+      "website_url": "https://www.nativeseeds.org/blogs/blog-news/",
+      "description": "We provide education on seed-saving, sustainable agriculture, and desert gardening. Native Seeds Search is a non-profit that conserves and sells heirloom seeds, foods, and Native American art and jewelry from the Southwest.",
+      "followers": {
+        "facebook": 123500,
+        "twitter": 2500,
+        "instagram": 26200
+      },
+      "image_url": "https://i1.feedspot.com/5311545.jpg?t=1628687629"
+    },
+    {
+      "title": "True Garden Blog",
+      "feed_url": "https://truegarden.com/feed/",
+      "website_url": "https://truegarden.com/tower-garden-blog/",
+      "description": "True Garden is a vertical aeroponic farm offering seedlings, supplies, fresh produce, and Tower Gardens systems for residential & commercial use.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 292,
+        "instagram": 22300
+      },
+      "image_url": "https://i1.feedspot.com/5311602.jpg?t=1628748918"
+    },
+    {
+      "title": "Phoenix Gardening Blog",
+      "feed_url": "https://phxgardening.com/feed/",
+      "website_url": "https://phxgardening.com/blog/",
+      "description": "Your Phoenix Gardening Resource: How to grow vegetables, fruits, and flowers in the low desert! Information about plants, DIY garden projects, how to attract hummingbirds and butterflies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311532.jpg?t=1628686140"
+    },
+    {
+      "title": "Spadefoot Nursery Blog",
+      "feed_url": "https://www.spadefootnursery.com/spadefoot-news?format=rss",
+      "website_url": "https://www.spadefootnursery.com/spadefoot-news",
+      "description": "News on current classes and articles about plants and gardening in the desert. Spadefoot aims to help you create a safe space in your own corner of the world for the wild to exist; whether you live in the desert, foothills, or in an urban area.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/5311568.jpg?t=1628691157"
+    },
+    {
+      "title": "Mortimer Nursery Blog",
+      "feed_url": "https://www.mortimernursery.com/blog-feed.xml",
+      "website_url": "https://www.mortimernursery.com/blog/",
+      "description": "The friendly choice for all your gardening and landscaping needs! Gary started Mortimer Landscaping Company in 1987.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5311533.jpg?t=1628686414"
+    }
+  ]
+}

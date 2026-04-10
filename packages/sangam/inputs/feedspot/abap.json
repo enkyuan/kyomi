@@ -1,0 +1,58 @@
+{
+  "category": "ABAP",
+  "source_url": "https://rss.feedspot.com/abap_rss_feeds",
+  "feeds": [
+    {
+      "title": "Discovering ABAP",
+      "feed_url": "https://discoveringabap.com/feed/",
+      "website_url": "https://discoveringabap.com/",
+      "description": "Learn ABAP the easy way with our resources and informative articles dedicated completely to ABAP. The author- Jagdish is a SAP ABAP Consultant with 14 years of ABAP experience with hands on experience in ABAP areas like Core ABAP (RICEFW) , ABAP on HANA, ABAP on Cloud, SAP Gateway / ODATA, OOABAP and SAP UI5/Fiori.",
+      "followers": {
+        "facebook": 41
+      },
+      "image_url": "https://i1.feedspot.com/5434523.jpg?t=1662489972"
+    },
+    {
+      "title": "Zapyard \u00bb ABAP",
+      "feed_url": "https://www.zapyard.com/category/abap/feed/",
+      "website_url": "https://www.zapyard.com/category/abap/",
+      "description": "Explore our ABAP Tutorials, Training, Technical Tips, Solutions and more. ZAPYard is another source of learning for ERP Technical & related topics. We make learning complex ERP concepts Fun.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 125,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5434524.jpg?t=1661238473"
+    },
+    {
+      "title": "SAP ABAP Central",
+      "feed_url": "https://sapabapcentral.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sapabapcentral.blogspot.com/",
+      "description": "SAP ABAP is widely used in industry and it is booming of job opportunity. They serve SAP ABAP tutorial and material to help candidate to start with entry point.",
+      "followers": {
+        "facebook": 951
+      },
+      "image_url": "https://i1.feedspot.com/4656183.jpg?t=1617372468"
+    },
+    {
+      "title": "ABAP Academy Blog",
+      "feed_url": "https://abapacademy.com/blog/feed/",
+      "website_url": "https://abapacademy.com/blog/",
+      "description": "Explore free resource of knowledge about ABAP programming and administration. ABAP Academy is Online International Educational Platform. Educational materials are designed from the best practices on real ABAP project implementations and reviewed by SAP professionals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434526.jpg?t=1661238968"
+    },
+    {
+      "title": "SAP Blog \u00bb ABAP",
+      "feed_url": "https://content.services.sap.com/feed?type=blogpost&tags=833755570260738661924709785639136&title=Latest%20blog%20posts%20for%20ABAP%20Development",
+      "website_url": "https://community.sap.com/t5/c-khhcw49343/ABAP+Development/pd-p/833755570260738661924709785639136",
+      "description": "Stay up to date with the latest Community news, projects, and features in ABAP. As the market leader in enterprise application software, we're helping companies of all sizes and in all industries run better by redefining ERP and creating networks of intelligent enterprises that provide transparency, resiliency, and sustainability across supply chains.",
+      "followers": {
+        "facebook": 117600,
+        "twitter": 100300,
+        "instagram": 334100
+      },
+      "image_url": "https://i1.feedspot.com/5434525.jpg?t=1661238480"
+    }
+  ]
+}

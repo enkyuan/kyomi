@@ -1,0 +1,74 @@
+{
+  "category": "Arkansas Politics",
+  "source_url": "https://rss.feedspot.com/arkansas_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Arkansas Times Blog",
+      "feed_url": "https://arktimes.com/feed",
+      "website_url": "https://arktimes.com/",
+      "description": "Daily Arkansas news, politics and entertainment. Featuring the state's most trusted blog, dining guides and dining reviews, movie times and more.",
+      "followers": {
+        "facebook": 85500,
+        "twitter": 61700,
+        "instagram": 18400
+      },
+      "image_url": "https://i1.feedspot.com/4804789.jpg?t=1628515085"
+    },
+    {
+      "title": "KARK 4 News - Politics",
+      "feed_url": "https://www.kark.com/news/politics/feed/",
+      "website_url": "https://www.kark.com/news/politics/",
+      "description": "KARK 4 News delivers local news that matters to Central Arkansans 24 hours a day on-air, online, and on the go. This section of the blog covers Political updates and news.",
+      "followers": {
+        "facebook": 564400,
+        "twitter": 142000,
+        "instagram": 60400
+      },
+      "image_url": "https://i1.feedspot.com/5310628.jpg?t=1628515673"
+    },
+    {
+      "title": "Talk Business & Politics \u00bb Politics",
+      "feed_url": "https://talkbusiness.net/category/politics/feed/",
+      "website_url": "https://talkbusiness.net/category/politics/",
+      "description": "Talk Business & Politics is a news website that covers business, politics, and culture across all the Arkansas regions. With 16 years of experience, TB&P represents the most respected and resourced media in the Arkansas news industry.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5310629.jpg?t=1628515846"
+    },
+    {
+      "title": "KUAR Public Radio Arkansas Politics",
+      "feed_url": "https://www.ualrpublicradio.org/tags/arkansas-politics.rss",
+      "website_url": "https://www.ualrpublicradio.org/tags/arkansas-politics",
+      "description": "The mission of KUAR is to deepen insight into the human experience, empower decision-making and enrich lives through quality news & cultural programs. It covers Arkansas Political news and updates.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5310637.jpg?t=1628516519"
+    },
+    {
+      "title": "Arkansas Money & Politics Politics",
+      "feed_url": "https://armoneyandpolitics.com/category/politics/feed/",
+      "website_url": "https://armoneyandpolitics.com/category/politics/",
+      "description": "Read up on Arkansas politics, with news on topics ranging from policy and lawmaking, the state legislature, and city, county, and state councils. They bring you in-depth campaign coverage, candidate profiles, and election coverage in real-time.",
+      "followers": {
+        "facebook": 31100,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5310630.jpg?t=1628516064"
+    },
+    {
+      "title": "Politics",
+      "feed_url": "https://www.fox16.com/news/politics/",
+      "website_url": "https://www.fox16.com/news/politics/",
+      "description": "FOX16 News tells local Little Rock news & weather stories, and what they do to make Little Rock and the rest of Arkansas a better place to live. Covers the latest News and Updates in Politics are brought to you by the team at FOX16 News.",
+      "followers": {
+        "facebook": 324700,
+        "twitter": 93100
+      },
+      "image_url": "https://i1.feedspot.com/5310711.jpg?t=1628518693"
+    }
+  ]
+}

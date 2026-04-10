@@ -1,0 +1,75 @@
+{
+  "category": "Sales Enablement",
+  "source_url": "https://rss.feedspot.com/sales_enablement_rss_feeds",
+  "feeds": [
+    {
+      "title": "Highspot Blog",
+      "feed_url": "https://www.highspot.com/blog/feed/",
+      "website_url": "https://www.highspot.com/blog/",
+      "description": "Highspot delivers the industry's most advanced sales enablement tools and software for improving marketing effectiveness and increasing sales. Stay up-to-date on all of the news in sales, marketing, and sales enablement and get product updates from the Highspot blog.",
+      "followers": {
+        "facebook": 419,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4927877.jpg?t=1621316224"
+    },
+    {
+      "title": "MindTickle Blog",
+      "feed_url": "https://www.mindtickle.com/blog/feed/",
+      "website_url": "https://www.mindtickle.com/blog/",
+      "description": "MindTickle's sales enablement platform empowers your reps by equipping them with the knowledge and tangible skills to drive revenue. Find out how top companies improve sales effectiveness and increase sales productivity with a sales enablement strategy.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4930863.jpg?t=1621316228"
+    },
+    {
+      "title": "Salesframe | Sales Enablement Blog",
+      "feed_url": "https://www.salesframe.com/news-blog?format=rss",
+      "website_url": "https://www.salesframe.com/news-blog",
+      "description": "Salesframe is a growth company focused on digital interaction solutions for B2B sales. We are a Sales Enablement company based in Helsinki, Finland. With our history in digital marketing and technology, we are pioneers of sales enablement in the Nordic countries.",
+      "followers": {
+        "facebook": 383,
+        "twitter": 973,
+        "instagram": 112
+      },
+      "image_url": "https://i1.feedspot.com/4940759.jpg?t=1621316232"
+    },
+    {
+      "title": "Streamz AI Blog",
+      "feed_url": "https://www.streamz.ai/feed/",
+      "website_url": "https://www.streamz.ai/blogs/",
+      "description": "Streamz Blog sharing ideas, customer stories, and concepts on sales readiness and enablement. Streamz is an AI-based Sales Readiness platform that empowers companies to build and maintain a highly prepared, engaged and differentiated sales team.",
+      "followers": {
+        "facebook": 52,
+        "twitter": 95
+      },
+      "image_url": "https://i1.feedspot.com/5386757.jpg?t=1648789845"
+    },
+    {
+      "title": "Prezentor Blog",
+      "feed_url": "https://www.prezentor.com/feed/",
+      "website_url": "https://www.prezentor.com/blog/",
+      "description": "Find guides, the latest articles, and news in sales enablement and digitalization of sales. Prezentor is a sales enablement tool for customer engagement, seller efficiency & business intelligence.",
+      "followers": {
+        "facebook": 288,
+        "twitter": 76,
+        "instagram": 65
+      },
+      "image_url": "https://i1.feedspot.com/5289571.jpg?t=1625058781"
+    },
+    {
+      "title": "Showpad Blog",
+      "feed_url": "https://www.showpad.com/blog/feed/",
+      "website_url": "https://www.showpad.com/blog/",
+      "description": "The latest news, opinions, and insights on sales enablement, sales, and marketing. Blog posts cover AR, Events, Coaching, Integrations, Learning, and Modern Selling. Showpad is a global leader in revenue enablement technology, providing teams with a modern selling solution for maximizing hybrid sales.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 4600,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5340710.jpg?t=1636365068"
+    }
+  ]
+}

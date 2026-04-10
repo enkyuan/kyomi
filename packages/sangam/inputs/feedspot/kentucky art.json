@@ -1,0 +1,54 @@
+{
+  "category": "Kentucky Art",
+  "source_url": "https://rss.feedspot.com/kentucky_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Glema Mahr Center for the Arts",
+      "feed_url": "https://www.glemacenter.org/?feed=rss2",
+      "website_url": "https://www.glemacenter.org/",
+      "description": "Glema Mahr Center for the Arts is an entertainment, art, and event venue.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7271046.jpg?t=1710160250"
+    },
+    {
+      "title": "WheelHouse Art Blog",
+      "feed_url": "https://wheelhouse.art/blogs/whats-up-wha.atom",
+      "website_url": "https://wheelhouse.art/blogs/whats-up-wha",
+      "description": "Founded in 1990, WheelHouse Art is driven by the belief in art's transformative power. Their mission is to democratize art, making it accessible to all while supporting artists to continue creating for the benefit of society.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/7271045.jpg?t=1710160124"
+    },
+    {
+      "title": "Kayla Weber Art Blog",
+      "feed_url": "https://www.kaylaweberart.com/blog?format=rss",
+      "website_url": "https://www.kaylaweberart.com/blog",
+      "description": "Dive into a world of vibrant colors with Kayla Weber Nord's equine, abstract, and landscape prints. Each piece is meticulously crafted, lending vivid abstraction with captivating landscapes. Perfect for any home or as a standout gift. Explore her gallery and add a splash of creativity to your life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7271043.jpg?t=1710160319"
+    },
+    {
+      "title": "Gateway Regional Arts Center",
+      "feed_url": "https://www.grackentucky.org/news?format=rss",
+      "website_url": "https://www.grackentucky.org/news",
+      "description": "The Gateway Regional Arts Center is a multicultural center between the Central and Eastern regions of Kentucky. It offers a variety of affordable programs and services. It provides a variety of opportunities for people to learn about and experience the arts.",
+      "followers": {
+        "facebook": 7100
+      },
+      "image_url": "https://i1.feedspot.com/7271044.jpg?t=1710160119"
+    },
+    {
+      "title": "Roger Snell Blog",
+      "feed_url": "https://data.fineartstudioonline.com/rssfeed.asp?id=103041",
+      "website_url": "https://www.rogersnell.com/blog",
+      "description": "Roger Snell, a seasoned landscape oil painter and published author, brings a wealth of experience from his 15-year tenure as a reporter and pioneering efforts in Kentucky Proud for 19 years, bridging connections in the agricultural industry.",
+      "followers": {
+        "facebook": 328,
+        "twitter": 65
+      },
+      "image_url": "https://i1.feedspot.com/5756152.jpg?t=1705474173"
+    }
+  ]
+}

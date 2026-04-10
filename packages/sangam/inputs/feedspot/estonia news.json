@@ -1,0 +1,114 @@
+{
+  "category": "Estonia News",
+  "source_url": "https://rss.feedspot.com/estonia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Postimees",
+      "feed_url": "https://news.postimees.ee/rss",
+      "website_url": "https://news.postimees.ee/",
+      "description": "Postimees explains to the world the everyday of Estonian life: news, politics, economy, sports, culture and entertainment.",
+      "followers": {
+        "facebook": 183500,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/3479119.jpg?t=1753684927"
+    },
+    {
+      "title": "L\u00e4\u00e4ne Elu",
+      "feed_url": "https://online.le.ee/feed/",
+      "website_url": "https://online.le.ee/",
+      "description": "L\u00e4\u00e4ne Elu is a newspaper of L\u00e4\u00e4ne County, the first issue of which was published on July 13, 1989. The newspaper was one of the first in Estonia to introduce modern journalism practices.s",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355973.jpg?t=1640090110"
+    },
+    {
+      "title": "gazeta.ee",
+      "feed_url": "https://gazeta.ee/feed/",
+      "website_url": "https://gazeta.ee/",
+      "description": "Read articles on Estonia, Politics, Society, Economy, Sport, Employment, Culture, etc.",
+      "followers": {
+        "facebook": 12700,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5355974.jpg?t=1640090109"
+    },
+    {
+      "title": "\u00c4rip\u00e4ev",
+      "feed_url": "https://feeds.feedburner.com/aripaev-rss",
+      "website_url": "https://www.aripaev.ee/",
+      "description": "\u00c4rip\u00e4ev is Estonia's leading business newspaper. Find business news from Estonia and abroad, research articles, stock market news, photos, videos, comments, investing, TOPs, radio shows and podcasts, conferences and events, and more.",
+      "followers": {
+        "facebook": 33800,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4740222.jpg?t=1642173625"
+    },
+    {
+      "title": "S\u00f5numitooja",
+      "feed_url": "https://sonumitooja.ee/feed/",
+      "website_url": "https://sonumitooja.ee/",
+      "description": "S\u00f5numitooja is a weekly newspaper in Ida-Harju that has been published since 1994 and belongs to the Association of Estonian Media Companies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355976.jpg?t=1640090107"
+    },
+    {
+      "title": "Keskn\u00e4dal",
+      "feed_url": "https://kesknadal.ee/feed/",
+      "website_url": "https://kesknadal.ee/",
+      "description": "Keskn\u00e4dal brings you the latest news from Estonia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355975.jpg?t=1640091618"
+    },
+    {
+      "title": "Koiduaeg",
+      "feed_url": "https://koiduaeg.ee/feed/",
+      "website_url": "https://koiduaeg.ee/",
+      "description": "Discover an endless library of fresh, timeless stories, opinions, and news analyses of current events and developments from Estonia. Koiduaeg.ee is a national news and commentary portal featuring in-depth, intellectual articles of plethora of topics concerning the national discourse.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5662270.jpg?t=1693570927"
+    },
+    {
+      "title": "Estonian World",
+      "feed_url": "https://estonianworld.com/feed/",
+      "website_url": "https://estonianworld.com/",
+      "description": "Estonian World is a global independent online magazine, founded in London in 2012 and headquartered in Tallinn, Estonia. We've become the most engaging English-language online publication about Estonia, read in more than 200 countries and territories.",
+      "followers": {
+        "facebook": 49300,
+        "twitter": 15300,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5193828.jpg?t=1753687207"
+    },
+    {
+      "title": "Narva",
+      "feed_url": "https://narvaleht.ee/feed/",
+      "website_url": "https://narvaleht.ee/",
+      "description": "News, interviews, events, photos, videos from Narva and Estonia",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355985.jpg?t=1640090104"
+    },
+    {
+      "title": "Eesti Ekspress",
+      "feed_url": "https://ekspress.delfi.ee/",
+      "website_url": "https://ekspress.delfi.ee/",
+      "description": "The first issue of Eesti Ekspress was published in 1989, and in a short time, Ekspress became the flagship of investigative journalism. Eesti Ekspress offers investigative, analytical, experimental journalism to the demanding reader, who appreciates a witty presentation and a broad worldview and values the range of topics, different perspectives and interpretations in the newspaper.",
+      "followers": {
+        "facebook": 47300,
+        "twitter": 11500,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5355979.jpg?t=1640090102"
+    },
+    {
+      "title": "ERR News",
+      "feed_url": "https://news.err.ee/",
+      "website_url": "https://news.err.ee/",
+      "description": "The English-language online portal of Estonian Public Broadcasting. ERR is the only public media producer in Estonia, which includes three TV channels, five radio stations and almost 15 web portals.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/5355977.jpg?t=1640090574"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "category": "C Sharp",
+  "source_url": "https://rss.feedspot.com/c_sharp_rss_feeds",
+  "feeds": [
+    {
+      "title": "C# Latest Articles Blog",
+      "feed_url": "https://www.c-sharpcorner.com/rss/articles/csharp-programming-articles",
+      "website_url": "https://www.c-sharpcorner.com/technologies/csharp-programming",
+      "description": "C# Corner is an online social community for IT professionals and developers to exchange their knowledge and experience using various methods such as contributing articles, forums, blogs, and videos.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 119600
+      },
+      "image_url": "https://i1.feedspot.com/4653641.jpg"
+    },
+    {
+      "title": "Syncfusion \u00bb C#",
+      "feed_url": "https://www.syncfusion.com/blogs/category/c-sharp/feed",
+      "website_url": "https://www.syncfusion.com/blogs/category/c-sharp",
+      "description": "Syncfusion offers over 1,600 components and frameworks for mobile, web, and desktop development, and we're confident that our ready-to-deploy enterprise software will help get your products to market faster. Find the latest posts of our top contributors under the C# category.",
+      "followers": {
+        "facebook": 38300,
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/5272513.jpg?t=1619164501"
+    },
+    {
+      "title": "IT Tutorials with Example",
+      "feed_url": "https://www.ittutorialswithexample.com/feeds/posts/default",
+      "website_url": "https://www.ittutorialswithexample.com/",
+      "description": "IT Tutorials with Example is a Tech blog and provides Articles on HTML5, CSS3, Javascript, C#, SQL, WPF, Asp.Net, Android with Examples.",
+      "followers": {
+        "facebook": 230,
+        "twitter": 841
+      },
+      "image_url": "https://i1.feedspot.com/5225383.jpg?t=1607340734"
+    },
+    {
+      "title": "Fabulous adventures in coding",
+      "feed_url": "https://ericlippert.com/feed/",
+      "website_url": "https://ericlippert.com/",
+      "description": "Eric Lippert designs programming languages at Facebook, and is a former C# language design team member at Microsoft.",
+      "followers": {
+        "twitter": 19000
+      },
+      "image_url": "https://i1.feedspot.com/4649563.jpg"
+    },
+    {
+      "title": "Christian Nagel C#",
+      "feed_url": "https://csharp.christiannagel.com/feed/",
+      "website_url": "https://csharp.christiannagel.com/",
+      "description": "This is the blog from Christian Nagel and CN innovation with information for developers working with Microsoft technologies including .NET Core, Visual Studio, C#, Microsoft Azure, Universal Windows Platform (UWP), and ASP.NET Core.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4650184.jpg?t=1617190471"
+    },
+    {
+      "title": "Code with Shadman",
+      "feed_url": "https://codewithshadman.com/feed.xml",
+      "website_url": "https://codewithshadman.com/",
+      "description": "Easy-to-understand tutorials on the .NET stack with C# language.",
+      "followers": {
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/5031900.jpg?t=1617190447"
+    },
+    {
+      "title": "The Best C# Programmer In The World Benjamin Perkins",
+      "feed_url": "https://www.thebestcsharpprogrammerintheworld.com/feed/",
+      "website_url": "https://www.thebestcsharpprogrammerintheworld.com/",
+      "description": "A blog on C# programming language.",
+      "followers": {
+        "twitter": 236
+      },
+      "image_url": "https://i1.feedspot.com/4651769.jpg?t=1617190483"
+    },
+    {
+      "title": "How Not To Code Blog",
+      "feed_url": "https://hownot2code.com/feed/",
+      "website_url": "https://hownot2code.com/blog/",
+      "description": "Tips and tricks on how to avoid errors in C/C /C# on real examples and recommendations how to fix them.",
+      "followers": {
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/4653356.jpg"
+    },
+    {
+      "title": "Programming in CSharp",
+      "feed_url": "https://programmingcsharp.com/feed/",
+      "website_url": "https://programmingcsharp.com/",
+      "description": "Articles about C#, NET, and tips & tricks that will improve your programming skills and source code.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403267.jpg?t=1653303755"
+    },
+    {
+      "title": "CsharpStar Blog",
+      "feed_url": "https://www.csharpstar.com/feed/",
+      "website_url": "https://www.csharpstar.com/",
+      "description": "CsharpStar Blog is all about Tutorials, Tips and Tricks on Microsoft Technologies.",
+      "followers": {
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/4494159.jpg?t=1659000243"
+    },
+    {
+      "title": "ChristianFindlay.com",
+      "feed_url": "https://www.christianfindlay.com/feed/",
+      "website_url": "https://www.christianfindlay.com/tag/csharp/",
+      "description": "Cross Platform Apps with Microsoft Technology - .NET, UWP, WPF, Xamarin, Android, iOS.",
+      "followers": {
+        "facebook": 152,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5024536.jpg?t=1615025317"
+    },
+    {
+      "title": "Scott Lilly Blog",
+      "feed_url": "https://scottlilly.com/feed/",
+      "website_url": "https://scottlilly.com/",
+      "description": "Scott Lilly blog is about tutorials, tips, and techniques to program in C#.",
+      "followers": {
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/4653450.jpg?t=1617190462"
+    }
+  ]
+}

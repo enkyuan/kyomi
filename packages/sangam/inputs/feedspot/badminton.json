@@ -1,0 +1,600 @@
+{
+  "category": "Badminton",
+  "source_url": "https://rss.feedspot.com/badminton_rss_feeds",
+  "feeds": [
+    {
+      "title": "Badminton England",
+      "feed_url": "https://www.badmintonengland.co.uk/feed/",
+      "website_url": "https://www.badmintonengland.co.uk/news/",
+      "description": "Badminton England is the National Governing Body for badminton in England, dedicated to promoting the sport of badminton by enabling more people to play badminton and giving those with talent the opportunity to fulfil their potential.",
+      "followers": {
+        "facebook": 169500,
+        "twitter": 44500,
+        "instagram": 32500
+      },
+      "image_url": "https://i1.feedspot.com/4575610.jpg?t=1648817331"
+    },
+    {
+      "title": "Women's Badminton",
+      "feed_url": "https://womensbadminton.co.uk/feed/",
+      "website_url": "https://womensbadminton.co.uk/",
+      "description": "A home for badminton fans. I'm a writer who loves badminton. I have my own blog and contribute to other sites, including YonexAllEngland and Badminton Bladet.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5217645.jpg?t=1605785166"
+    },
+    {
+      "title": "Badminton Bladet Blog",
+      "feed_url": "https://badmintonbladet.dk/kategori/blog/feed/",
+      "website_url": "https://badmintonbladet.dk/kategori/blog/",
+      "description": "Lots of results and badminton news from both Denmark and abroad. Read about all the stars - new every single day.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4575635.jpg?t=1615185654"
+    },
+    {
+      "title": "Badminton Bay's Blog",
+      "feed_url": "https://blog.badmintonbay.com/feed/",
+      "website_url": "https://blog.badmintonbay.com/",
+      "description": "Badminton Bay's Blog is all about delivering Badminton to the World. Keep with the latest badminton updates, news, training, accessories, racket reviews, and much more.",
+      "followers": {
+        "facebook": 30600,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5265049.jpg?t=1617689136"
+    },
+    {
+      "title": "Times of India",
+      "feed_url": "https://timesofindia.indiatimes.com/rssfeeds/3413169.cms",
+      "website_url": "https://timesofindia.indiatimes.com/sports/badminton",
+      "description": "Get the latest Badminton News, Live Scores, Results, Schedules and more on The Times of India.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 106800
+      },
+      "image_url": "https://i1.feedspot.com/4575660.jpg?t=1618208421"
+    },
+    {
+      "title": "NDTV Sports \u00bb Badminton",
+      "feed_url": "https://sports.ndtv.com/rss/badminton",
+      "website_url": "https://sports.ndtv.com/badminton",
+      "description": "Latest Badminton info, breaking news updates from around the cricketing world. From long on to long off, drives, hooks, pulls, cuts, yorkers and doosra, Sports.NDTV.com is an all-rounder in World Badminton coverage. View best photos and videos.",
+      "followers": {
+        "facebook": 111800,
+        "twitter": 584000
+      },
+      "image_url": "https://i1.feedspot.com/4575634.jpg?t=1760618893"
+    },
+    {
+      "title": "Badminton Warehouse News",
+      "feed_url": "https://www.badmintonwarehouse.com/blogs/news.atom",
+      "website_url": "https://www.badmintonwarehouse.com/blogs/news",
+      "description": "Badminton Warehouse is your one-stop-shop for the lowest priced badminton rackets, pickleball paddles, shuttlecocks, badminton bags, badminton shoes, and accessories. Check out news, badminton reviews, and other interesting articles about Badminton by the experts at Badminton Warehouse!",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 39,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5294413.jpg?t=1624090878"
+    },
+    {
+      "title": "Guernsey Badminton Association",
+      "feed_url": "http://badminton.org.gg/feed/",
+      "website_url": "http://badminton.org.gg/",
+      "description": "The Guernsey Badminton Association is the sports governing body in the Bailiwick of Guernsey, and actively promotes and encourages its development from grass roots, through schools, clubs, local leagues, inter-insular matches and a county programme. Our aim with this site is to provide a variety of information in relation to the sport of badminton in Guernsey.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4575703.jpg?t=1615185979"
+    },
+    {
+      "title": "Badminton Becky",
+      "feed_url": "https://www.badmintonbecky.com/feed/",
+      "website_url": "https://www.badmintonbecky.com/",
+      "description": "A Badminton blog by an American girl Becky Ances living in China and learning to play competitive badminton.",
+      "followers": {
+        "facebook": 658
+      },
+      "image_url": "https://i1.feedspot.com/5265046.jpg?t=1617688788"
+    },
+    {
+      "title": "Sunrise badminton network Blog",
+      "feed_url": "https://sunrisebadminton.com/feed/",
+      "website_url": "https://sunrisebadminton.com/blog/",
+      "description": "We are a social and competitive club want to have fun during coaching badminton. Our team is a mix of many backgrounds; we are having teachers, a property professional, a guy mad on badminton (is registered and qualified L2 badminton coach) and a former accountant in our team. We are growing and looking for helpers and volunteers to our network.",
+      "followers": {
+        "facebook": 245
+      },
+      "image_url": "https://i1.feedspot.com/5165905.jpg?t=1763989612"
+    },
+    {
+      "title": "Badminton Canterbury",
+      "feed_url": "https://badmintoncanterbury.com/feed/",
+      "website_url": "https://badmintoncanterbury.com/",
+      "description": "Serving Badminton In Canterbury.",
+      "followers": {
+        "facebook": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4575626.jpg?t=1615185953"
+    },
+    {
+      "title": "Saskatchewan Badminton Association",
+      "feed_url": "https://saskbadminton.ca/feed/",
+      "website_url": "https://saskbadminton.ca/",
+      "description": "The SBA is a non-profit provincial sport-governing organization, dedicated to the development of badminton in Saskatchewan. Through various programs including tournaments series, clinics and camps, support to training centres and more, the SBA supports athletes of all ages as well as coaches and officials.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4575695.jpg?t=1615185982"
+    },
+    {
+      "title": "Volant Badminton Blog",
+      "feed_url": "https://volantbadminton.com/blogs/volant-community.atom",
+      "website_url": "https://volantbadminton.com/blogs/volant-community/",
+      "description": "Volant Badminton Blog & Community is an online blog, forum and platform for athletes, players and fans.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/8826312.jpg?t=1763990414"
+    },
+    {
+      "title": "Steve's Badminton",
+      "feed_url": "https://stevesbadminton.com/feed/",
+      "website_url": "https://stevesbadminton.com/",
+      "description": "Steve's Badminton is a training blog created by Steve in collaboration with former world champion Han Jian, offering clear guidance on technique, footwork, tactics and overall badminton fundamentals. It organizes lessons from Steve's YouTube channel into structured written material and includes insights from Han Jian's coaching approach.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8826315.jpg?t=1763990410"
+    },
+    {
+      "title": "BadmintonSkills Blog",
+      "feed_url": "https://badmintonskills.com/feed/",
+      "website_url": "https://badmintonskills.com/blog/",
+      "description": "BadmintonSkills' blog is a practical and up-to-date resource focused on improving your badminton game. It covers everything from training plans, footwork drills, and shot technique to mental resilience, injury recovery, and nutrition",
+      "followers": {
+        "facebook": 658
+      },
+      "image_url": "https://i1.feedspot.com/8826316.jpg?t=1763990418"
+    },
+    {
+      "title": "BadmintonPlanet.com",
+      "feed_url": "https://www.badmintonplanet.com/feed",
+      "website_url": "https://www.badmintonplanet.com/",
+      "description": "Badminton News, Badminton News Article, Badminton Videos, and Badminton Photos. Read the latest badminton news and badminton videos from around the world.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5386918.jpg?t=1648813687"
+    },
+    {
+      "title": "Sportshorizon Blog \u00bb Badminton",
+      "feed_url": "https://sportshorizon.com/blogs/badminton-blogs.atom",
+      "website_url": "https://sportshorizon.com/blogs/badminton-blogs/",
+      "description": "Badminton news, opinions, product reviews and latest development in the world of badminton. You can read about them all here in our badminton blog. Which rackets are more suitable for you? Which rackets are the most durable in the market? You can read all our thoughts and opinions about badminton, right here.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/8826310.jpg?t=1763990417"
+    },
+    {
+      "title": "Badminton Speak",
+      "feed_url": "https://www.badmintonspeak.com/feed/",
+      "website_url": "https://www.badmintonspeak.com/",
+      "description": "Badminton news and stories for the global badminton community. Read everything related to badminton, badminton players, rules & news",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8826314.jpg?t=1763990426"
+    },
+    {
+      "title": "BadmintonPB",
+      "feed_url": "https://badmintonpb.com/feed/",
+      "website_url": "https://badmintonpb.com/category/badminton/",
+      "description": "BadmintonPB's badminton category shares updates on major tournaments, player performances, coaching milestones, and news from the BWF circuit with a strong emphasis on Indian badminton.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/8826307.jpg?t=1763990424"
+    },
+    {
+      "title": "Altitude Badminton Blog",
+      "feed_url": "https://www.altitudebadminton.com/blog-feed.xml",
+      "website_url": "https://www.altitudebadminton.com/blog/",
+      "description": "Altitude Badminton's blog is a resource run by coach Daniel Hughes, focusing on coaching philosophy, training tips, and badminton development. Based in Norfolk, UK, the site offers insights into technique, fitness, and mindset for players of all levels.",
+      "followers": {
+        "facebook": 167
+      },
+      "image_url": "https://i1.feedspot.com/8826306.jpg?t=1763990432"
+    },
+    {
+      "title": "Isle of Man Badminton",
+      "feed_url": "https://www.iombadminton.com/feed/",
+      "website_url": "https://www.iombadminton.com/news/",
+      "description": "Isle of Man Badminton's news page shares updates on local badminton events, league results, junior/senior tournaments, and major tournaments on the island.",
+      "followers": {
+        "facebook": 946
+      },
+      "image_url": "https://i1.feedspot.com/8826313.jpg?t=1763990421"
+    },
+    {
+      "title": "Rajans Badminton Akademy Blog",
+      "feed_url": "https://www.rajansbadmintonakademy.com/blog-feed.xml",
+      "website_url": "https://www.rajansbadmintonakademy.com/blogpage/",
+      "description": "Explore the Rajans Badminton Akademy blog for expert badminton tips, coaching guides, training drills, player stories, and sports events in Belagavi & India.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8826304.jpg?t=1763990409"
+    },
+    {
+      "title": "Pro Badminton Academy Blog",
+      "feed_url": "https://probadmintonacademy.com/feed/",
+      "website_url": "https://probadmintonacademy.com/blog/",
+      "description": "Pro Badminton Academy's blog shares guidance for players of all ages, covering how to choose the right training program, the benefits of private versus group coaching, tips for building discipline in young athletes, and details about their holiday training camps.",
+      "followers": {
+        "facebook": 548
+      },
+      "image_url": "https://i1.feedspot.com/8826320.jpg?t=1763990437"
+    },
+    {
+      "title": "Play Badminton Blog",
+      "feed_url": "https://www.playbadminton.club/feed",
+      "website_url": "https://www.playbadminton.club/ourblog/",
+      "description": "Play Badminton Club's blog features updates from their badminton community, covering club competitions, newsletters, new rules, and fundraising, giving players insight into the club's activities and values.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8826318.jpg?t=1763990420"
+    },
+    {
+      "title": "Midlife Badminton Pune Blog",
+      "feed_url": "https://midlifebadmintonclub.com/feed/",
+      "website_url": "https://midlifebadmintonclub.com/blogs/",
+      "description": "blogs of Smart badminton tips for adults in Pune improve fitness, sharpen your game, and enjoy fun, mindful play with Midlife Badminton.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8826309.jpg?t=1763990440"
+    },
+    {
+      "title": "MJ Sports Academy Blog",
+      "feed_url": "https://mjsportsacademy.in/feed/",
+      "website_url": "https://mjsportsacademy.in/blog-badminton-academy-lucknow/",
+      "description": "Explore the world of Badminton Academy Lucknow excellence with our insightful blog on MJ Sports Academy in Lucknow. Discover the latest trends, expert tips, and success stories.",
+      "followers": {
+        "facebook": 385
+      },
+      "image_url": "https://i1.feedspot.com/8826308.jpg?t=1763990406"
+    },
+    {
+      "title": "Breath Badminton Blog",
+      "feed_url": "https://breathbadminton.com/feed/",
+      "website_url": "https://breathbadminton.com/blog-2/",
+      "description": "Welcome to Breath badminton, your one-stop destination for the latest updates in equipment trends, news, and all things related to the sport. Stay ahead of the game with our insights into the dynamic world of badminton.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8826324.jpg?t=1763990428"
+    },
+    {
+      "title": "USA Badminton",
+      "feed_url": "https://usabadminton.org/feed/",
+      "website_url": "https://usabadminton.org/category/news/",
+      "description": "USA Badminton (USAB) is the recognized national governing body for the sport of badminton in the United States. As the national governing body, USAB oversees a multitude of systems, but our ultimate goal is to create and foster increased participation in the sport of badminton nationwide as well as develop and support our American athletes. We are dedicated to serving our community while practicing our core values of integrity, diversity, equality, respect, and commitment to athletes.",
+      "followers": {
+        "facebook": 14200,
+        "twitter": 17600,
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5386915.jpg?t=1648815148"
+    },
+    {
+      "title": "Nydhi Blog",
+      "feed_url": "https://www.nydhi.com/blogs/news.atom",
+      "website_url": "https://www.nydhi.com/blogs/news/",
+      "description": "Find all the latest information, product reviews, news and tips. Trust the Nydhi.com as your one-stop destination for exploring the incredible world of products online.",
+      "followers": {
+        "facebook": 553
+      },
+      "image_url": "https://i1.feedspot.com/8826394.jpg?t=1763990406"
+    },
+    {
+      "title": "Badzine",
+      "feed_url": "http://www.badzine.net/feed/",
+      "website_url": "http://www.badzine.net/",
+      "description": "A reliable badminton news website for badminton enthusiasts. With regular updates of the latest happenings on the professional circuit, Badzine's main goal is to bring a brand new level of exposure to the sport as it so deserves. Badzine was founded in 2003, Since the launch of the Badzine has become the world's #1 badminton webzine.",
+      "followers": {
+        "facebook": 51800,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/940833.jpg?t=1615185631"
+    },
+    {
+      "title": "Paul Stewart Badminton Coach Articles Blog",
+      "feed_url": "https://badminton-coach.co.uk/badminton-coach-blog/feed/",
+      "website_url": "https://badminton-coach.co.uk/badminton-coach-blog/",
+      "description": "Paul Stewart International Badminton Coach Helping You To Win More Points & More Games I created this site in 2009 to share my passion and knowledge of badminton. As an Advanced International Badminton Coach, I mainly help players.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 1900,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4575501.jpg?t=1615185644"
+    },
+    {
+      "title": "Shuttle Smash",
+      "feed_url": "https://shuttlesmash.com/feed/",
+      "website_url": "https://shuttlesmash.com/",
+      "description": "A badminton blog for fans and enthusiasts",
+      "followers": {
+        "facebook": 591,
+        "twitter": 10,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5090425.jpg?t=1615185677"
+    },
+    {
+      "title": "Badminton World Federation Fansite",
+      "feed_url": "https://bwfbadminton.com/feed/",
+      "website_url": "https://bwfbadminton.com/",
+      "description": "The BWF is the governing body for the sport of badminton. BWF mission is to deliver quality service, world class events, and innovative development initiatives which showcase the sport at the highest levels and increase the active participations in badminton at all levels worldwide.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 432700
+      },
+      "image_url": "https://i1.feedspot.com/4575534.jpg?t=1615185616"
+    },
+    {
+      "title": "Badminton Professor",
+      "feed_url": "https://badmintonprofessor.com/feed/",
+      "website_url": "https://badmintonprofessor.com/",
+      "description": "A Blog Written by Ex-World's Top 30 Badminton Player and Experienced Instructor. Welcome to BadmintonProfessor.comBadmintonProfessor is a site dedicated to everything relating to badminton. From how-to guides and in-depth knowledge on different badminton topics to the latest gears review.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5220221.jpg?t=1615186609"
+    },
+    {
+      "title": "Badminton Insight Blog",
+      "feed_url": "https://badminton-insight.com/blog/feed/",
+      "website_url": "https://badminton-insight.com/blog/",
+      "description": "Welcome To Badminton Insight. We are Greg and Jenny, the creators of Badminton Insight. Badminton Insight aims to help you improve your badminton skills, knowledge, and overall game! Whether you are a player, coach, or just a badminton enthusiast, we will help you gain added insight into the world of badminton.",
+      "followers": {
+        "facebook": 32000,
+        "twitter": 2500,
+        "instagram": 110100
+      },
+      "image_url": "https://i1.feedspot.com/5294412.jpg?t=1763989769"
+    },
+    {
+      "title": "Padukone Sports Management Blog",
+      "feed_url": "https://padukonesportsmanagement.com/feed",
+      "website_url": "https://padukonesportsmanagement.com/blogs",
+      "description": "Padukone Sports Management was founded to actively participate in the process of popularizing badminton in the country. We aim to do that by coaching players at all levels & providing avenues to involve passionate badminton lovers, thereby promoting the sport. Our articles cover a wide range of topics on Badminton such as rules, history, psychology, etc. Hear from the experts on all topics related to Badminton.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 214,
+        "instagram": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5294411.jpg?t=1624091417"
+    },
+    {
+      "title": "Badminton Research",
+      "feed_url": "http://feeds.feedburner.com/BadmintonResearch",
+      "website_url": "http://badmintan.blogspot.com/",
+      "description": "Dedicated to mastering badminton skills and scientific research",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4575600.jpg?t=1615185694"
+    },
+    {
+      "title": "SportsCrunch",
+      "feed_url": "https://sportscrunch.in/feed/",
+      "website_url": "https://sportscrunch.in/hindi/badminton-hindi/",
+      "description": "SportsCrunch provides latest sports news. Read latest news of badminton. Live, Play, Inspire",
+      "followers": {
+        "facebook": 93000,
+        "instagram": 16800
+      },
+      "image_url": "https://i1.feedspot.com/4575652.jpg?t=1615186814"
+    },
+    {
+      "title": "Boston Badminton blogs",
+      "feed_url": "https://www.bostonbadminton.com/blog/feed",
+      "website_url": "https://www.bostonbadminton.com/",
+      "description": "latest news and information about tournaments of Boston Bandminton.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4575584.jpg?t=1615185697"
+    },
+    {
+      "title": "Northumberland Badminton Association",
+      "feed_url": "http://www.northumberlandbadminton.org/feed/",
+      "website_url": "https://www.northumberlandbadminton.org/news/",
+      "description": "Hello and welcome to Northumberland Badminton Graded Tournaments page where you can keep up to date with results, entries and forthcoming events.",
+      "followers": {
+        "facebook": 540,
+        "twitter": 116
+      },
+      "image_url": "https://i1.feedspot.com/4575697.jpg?t=1615185950"
+    },
+    {
+      "title": "An Yu Badminton Academy",
+      "feed_url": "http://an-yubadminton.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://an-yubadminton.blogspot.com/",
+      "description": "The page shows pictures of Yu Li's students from An Yu Badminton Academy in various tournaments.",
+      "followers": {
+        "facebook": 736
+      },
+      "image_url": "https://i1.feedspot.com/4575580.jpg?t=1615185960"
+    },
+    {
+      "title": "Nicholas Bonkowsky Badminton Blog",
+      "feed_url": "http://nicholasbonkowsky.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://nicholasbonkowsky.blogspot.com/",
+      "description": "Nicholas Bonkowsky sharing his journey. Ncholas is a International Badminton Player.",
+      "followers": {
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/4575495.jpg?t=1615185964"
+    },
+    {
+      "title": "Dorset Badminton",
+      "feed_url": "https://dorsetbadminton.com/feed/",
+      "website_url": "https://dorsetbadminton.com/",
+      "description": "news and information about Dorset Badminton. We train approximately 100 children a week from U11's through to U17's with league matches played at U11, U13, U15 and U17 level.",
+      "followers": {
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4575596.jpg?t=1615185976"
+    },
+    {
+      "title": "Badminton WAunder",
+      "feed_url": "http://badmintonwaunder15s.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://badmintonwaunder15s.blogspot.com/",
+      "description": "A blog by Raymond Wee Hock Tan about teams and events in Badminton WAunder .",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4575578.jpg?t=1615186688"
+    },
+    {
+      "title": "Of Badminton Things",
+      "feed_url": "http://everythinggoeshere.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://everythinggoeshere.blogspot.com/",
+      "description": "A badminton blog covering badminton racket reviews, equipment overdose, strategy exploration, and all things badminton.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5294409.jpg?t=1624089889"
+    },
+    {
+      "title": "Master Badminton",
+      "feed_url": "https://masterbadminton.com/how-to-play-badminton-blog.html/feed",
+      "website_url": "https://masterbadminton.com/how-to-play-badminton-blog.html",
+      "description": "Your complete resource on how to play badminton.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4575554.jpg"
+    },
+    {
+      "title": "Smash Racket Pro Blog \u00bb Badminton",
+      "feed_url": "https://smashuk.co/blogs/badminton.atom",
+      "website_url": "https://smashuk.co/blogs/badminton/",
+      "description": "Smash UK's Badminton Blog offers in-depth buying guides and practical advice for racket sport players, covering topics such as choosing the best Victor or Yonex rackets, racket balance for beginners vs intermediates, stringing tension, and common technique mistakes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8826311.jpg?t=1763990404"
+    },
+    {
+      "title": "KW FLEX Blog \u00bb Badminton",
+      "feed_url": "https://www.kwflex.nl/en/blogs/badminton-news.rss",
+      "website_url": "https://www.kwflex.nl/en/blogs/badminton-news/",
+      "description": "In this blog you can read different badminton news, from our own sponsor players to world top players such as Tai Tzu Ying or Viktor Axelsen.",
+      "followers": {
+        "facebook": 819
+      },
+      "image_url": "https://i1.feedspot.com/8826319.jpg?t=1763990407"
+    },
+    {
+      "title": "Badminton Centre Blog",
+      "feed_url": "https://www.badmintoncentre.co.uk/blog-feed.xml",
+      "website_url": "https://www.badmintoncentre.co.uk/blog/",
+      "description": "Badminton Centre's blog is part of their UK-based badminton hub in Solihull, run by coach Steve Kiernan. They share insights about coaching, training philosophy, community sessions, and badminton development tailored for players of all ages and levels.",
+      "followers": {
+        "facebook": 340
+      },
+      "image_url": "https://i1.feedspot.com/8826305.jpg?t=1763990422"
+    },
+    {
+      "title": "Bonbon Badminton Blog",
+      "feed_url": "https://www.bonbonbadminton.com/blogs/news.atom",
+      "website_url": "https://www.bonbonbadminton.com/blogs/news/",
+      "description": "Bonbon Badminton's news blog provides advice on badminton gear, equipment care, buying tips for beginners, and addresses common badminton myths.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8826303.jpg?t=1763990415"
+    },
+    {
+      "title": "Badminton Geelong Blog",
+      "feed_url": "https://badmintongeelong.asn.au/feed/",
+      "website_url": "https://badmintongeelong.asn.au/blog/",
+      "description": "Badminton Geelong's blog highlights major club and tournament updates including events like the Victor Oceania Championships, coaching achievements, competition results, and community growth.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8826317.jpg?t=1763990413"
+    },
+    {
+      "title": "Badminton Australia News",
+      "feed_url": "https://www.badminton.org.au/?format=feed&type=rss",
+      "website_url": "https://www.badminton.org.au/",
+      "description": "Badminton Australia is the national sports organisation for badminton in Australia. mission is to provide leadership through the delivery of quality sports services and programs which ensure increasing participation in badminton and international success for Australian players.",
+      "followers": {
+        "facebook": 18800,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4575621.jpg?t=1615186035"
+    },
+    {
+      "title": "BadmintonJustin",
+      "feed_url": "https://www.badmintonjustin.com/feed",
+      "website_url": "https://www.badmintonjustin.com/",
+      "description": "Justin Ma is a top US badminton player offering badminton tips, instruction, videos, and more to help people learn about badminton and get better at it!",
+      "followers": {
+        "facebook": 28,
+        "instagram": 44900
+      },
+      "image_url": "https://i1.feedspot.com/5206569.jpg?t=1602932031"
+    },
+    {
+      "title": "SV Lohhof Badminton",
+      "feed_url": "https://www.badminton-svlohhof.de/feed/",
+      "website_url": "http://badmintonmaldives.org.mv/",
+      "description": "Badminton in north Munich by SV Lohhof Badminton.",
+      "followers": {
+        "facebook": 114,
+        "twitter": 61
+      },
+      "image_url": "https://i1.feedspot.com/4575591.jpg?t=1615185989"
+    },
+    {
+      "title": "Badminton Association of Maldives",
+      "feed_url": "http://badmintonmaldives.org.mv/feed",
+      "website_url": "http://badmintonmaldives.org.mv/",
+      "description": "latest news with information on upcoming events, tournaments, about Badminton Association of Maldives.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 613
+      },
+      "image_url": "https://i1.feedspot.com/4575691.jpg?t=1615186001"
+    },
+    {
+      "title": "Badminton scotland",
+      "feed_url": "https://www.badmintonscotland.org.uk/index.php?format=feed&type=rss",
+      "website_url": "https://badmintonscotland.org.uk/news/",
+      "description": "Badminton scotland is the National Governing Body for the sport of badminton in Scotland with a wide remit to actively promote and encourage badminton development from grass roots through local leagues and competitions to the highest playing level, including providing services for players and coaches.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4575613.jpg?t=1615185657"
+    },
+    {
+      "title": "Badminton Ireland",
+      "feed_url": "https://www.badmintonireland.com/newsfeed/0",
+      "website_url": "https://www.badmintonireland.com/news",
+      "description": "Badminton Ireland is the National Governing Body for Badminton clubs and leagues in Ireland. Comprises Connacht Badminton, Leinster Badminton, Munster Badminton and Ulster Badminton.",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4575649.jpg?t=1615185651"
+    },
+    {
+      "title": "Badmintons Best Blog",
+      "feed_url": "https://www.badmintonsbest.com/rss.xml",
+      "website_url": "https://www.badmintonsbest.com/blog/",
+      "description": "Hi I'm Liam. I've been playing Badminton for over 17 years. Second only to my family, Badminton is my biggest passion in life. If I'm not with family I'm either playing or watching Badminton with the mission to be the best I can be. I'm a qualified Badminton coach with a UKCC Level 2 Certificate from Badminton England. This site is where I can share what I've learnt from playing, coaching and from watching the best in the world! BadmintonsBest.",
+      "followers": {
+        "facebook": 53,
+        "twitter": 293,
+        "instagram": 834
+      },
+      "image_url": "https://i1.feedspot.com/5167648.jpg?t=1615186844"
+    }
+  ]
+}

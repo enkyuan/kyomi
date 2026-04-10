@@ -1,0 +1,62 @@
+{
+  "category": "Cardiff City FC",
+  "source_url": "https://rss.feedspot.com/cardiff_city_fc_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cardiff City Online",
+      "feed_url": "https://www.cardiffcity-mad.co.uk/channel/rss",
+      "website_url": "https://www.cardiffcity-mad.co.uk/",
+      "description": "Cardiff City - A football fan's dream site: all the breaking news, live scores, results and match reports, prediction games, fanforums/messageboards, sports goods, competitions, in-depth statistics, and full playing squad detail. The Unofficial Cardiff City Footymad.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5184441.jpg?t=1617262173"
+    },
+    {
+      "title": "Cardiff City Supporters' Trust",
+      "feed_url": "https://www.ccfctrust.org/feed/",
+      "website_url": "https://www.ccfctrust.org/",
+      "description": "The Trust is a democratic, not-for-profit group of Cardiff City supporters, committed to giving City fans a voice in the decision-making process of the Club, and to strengthening the links between Cardiff City and the community it serves. If you're a Cardiff City fan, joining the Trust is a great way to express your commitment to the Bluebirds.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5269970.jpg?t=1618565521"
+    },
+    {
+      "title": "Cardiff City mauve and yellow army",
+      "feed_url": "https://mauveandyellowarmy.net/feed/",
+      "website_url": "https://mauveandyellowarmy.net/",
+      "description": "A Cardiff City blog covering seven decades of supporting the club in association with The Owl Centre.",
+      "followers": {
+        "twitter": 846
+      },
+      "image_url": "https://i1.feedspot.com/5263596.jpg?t=1617282556"
+    },
+    {
+      "title": "The Guardian \u00bb Cardiff City",
+      "feed_url": "https://www.theguardian.com/football/cardiffcity/rss",
+      "website_url": "https://www.theguardian.com/football/cardiffcity",
+      "description": "Get the Latest Cardiff City FC news and features from theguardian.com, the worlds leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5184438.jpg?t=1597866149"
+    },
+    {
+      "title": "Sports Mole \u00bb Cardiff City",
+      "feed_url": "https://www.sportsmole.co.uk/football/cardiff-city.xml",
+      "website_url": "https://www.sportsmole.co.uk/football/cardiff-city/",
+      "description": "Latest Cardiff results, live scores, news, rumours and gossip from Sports Mole.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 39000,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5269973.jpg?t=1618566201"
+    }
+  ]
+}

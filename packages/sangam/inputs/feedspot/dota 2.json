@@ -1,0 +1,72 @@
+{
+  "category": "Dota 2",
+  "source_url": "https://rss.feedspot.com/dota2_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Dotabuff Blog",
+      "feed_url": "https://www.dotabuff.com/blog.rss",
+      "website_url": "https://www.dotabuff.com/blog",
+      "description": "Dotabuff is the leading statistics and community website for Dota 2. It is the place where millions of Dota 2 players get in-depth statistics, share games, replays and better understand the game we all love.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 66700
+      },
+      "image_url": "https://i1.feedspot.com/4921611.jpg?t=1620191785"
+    },
+    {
+      "title": "ONE Esports \u00bb Dota 2",
+      "feed_url": "https://www.oneesports.gg/dota2/feed/",
+      "website_url": "https://www.oneesports.gg/dota2/",
+      "description": "ONE Esports brings you Dota 2 tournament coverage, match reports, player interviews, and patch notes. Our mission is to discover, create and unleash esports heroes who ignite the world with hope, strength, dreams, and inspiration.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 162700,
+        "instagram": 174100
+      },
+      "image_url": "https://i1.feedspot.com/5375855.jpg?t=1646026674"
+    },
+    {
+      "title": "Dot Esports \u00bb Dota 2",
+      "feed_url": "https://dotesports.com/dota-2/feed",
+      "website_url": "https://dotesports.com/dota-2",
+      "description": "The premier destination for Dota 2 esports coverage, including breaking news, features, analysis, opinion, tournament coverage, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375847.jpg?t=1646026639"
+    },
+    {
+      "title": "Dota Blast",
+      "feed_url": "https://dotablast.com/feed/",
+      "website_url": "https://dotablast.com/",
+      "description": "DotaBlast is fresh off the press Dota 2 news site. Our portal has everything from the latest news, to Dota 2 guides, arcana giveaways, VODs - all things Dota2.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4921829.jpg?t=1620811763"
+    },
+    {
+      "title": "Dota 2 Herald Blog",
+      "feed_url": "https://dota2hearld.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://dota2hearld.blogspot.com/",
+      "description": "I have made this blog for you guys so that you guys can know some of the concepts of Dota 2. I will be sharing guides and builds of hero and also focusing on various concepts which are important in Dota 2. I'm Akshaykumar Naresh Ambavat and I am a Dota 2 player just like you all and I have great knowledge about Dota 2.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375853.jpg?t=1646031074"
+    },
+    {
+      "title": "Game News 24 \u00bb Dota 2",
+      "feed_url": "https://game-news24.com/category/dota-2/feed/",
+      "website_url": "https://game-news24.com/category/dota-2/",
+      "description": "Get the latest news, updates, features, gaming guides and hero profiles from Dota 2. We love to play games and we love to write about games. Here you will find the latest news from the gaming industry. Cybersports, new game releases, updates on old games, high-profile events and more. At Game-News24, all the latest for you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375852.jpg?t=1646026655"
+    },
+    {
+      "title": "EGamersWorld Blog \u00bb Dota 2 Heroes",
+      "feed_url": "https://egamersworld.com/blog/tag/dota-2-heroes",
+      "website_url": "https://egamersworld.com/blog/tag/dota-2-heroes",
+      "description": "The blog features articles on Dota 2 heroes, their features, special abilities and where they can be used. Egamersworld.com is glad to greet you at the ultimate portal of the e-sports Universe! We provide guides, video records, live streams, market news, surveys of betting providers, and other information for your deep understanding of e-sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5375848.jpg?t=1646028121"
+    }
+  ]
+}

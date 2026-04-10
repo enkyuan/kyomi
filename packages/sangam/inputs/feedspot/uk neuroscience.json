@@ -1,0 +1,49 @@
+{
+  "category": "UK Neuroscience",
+  "source_url": "https://rss.feedspot.com/uk_neuroscience_rss_feeds",
+  "feeds": [
+    {
+      "title": "ACNR",
+      "feed_url": "https://acnr.co.uk/feed/",
+      "website_url": "https://acnr.co.uk/",
+      "description": "Advances in Clinical Neuroscience and Rehabilitation (ACNR) is a UK-based, international, peer reviewed journal which aims to keep busy practicing specialists up-to-date with the latest advances in their fields, including areas of neurology and neuroscience outside their main area of sub-specialty interest.",
+      "followers": {
+        "facebook": 501,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4710213.jpg?t=1604984905"
+    },
+    {
+      "title": "Centre for Educational Neuroscience",
+      "feed_url": "http://www.educationalneuroscience.org.uk/feed/",
+      "website_url": "http://www.educationalneuroscience.org.uk/",
+      "description": "We are a University-led research centre, combining the expertise of researchers in child development, neuroscience, and education at three world leading universities, Birkbeck, UCL Institute of Education, and University College London.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4912371.jpg?t=1620218019"
+    },
+    {
+      "title": "Neuro Central",
+      "feed_url": "https://www.neuro-central.com/feed/",
+      "website_url": "https://onlinelibrary.wiley.com/journal/10969861",
+      "description": "Neuro Central is a free online hub that bridges the gap between neuroscience and neurology. This online neurology network provides a high-class platform that makes it easy to keep up with the latest field developments.",
+      "followers": {
+        "facebook": 116900,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4712045.jpg?t=1604984729"
+    },
+    {
+      "title": "Wiley Online Library | Journal of Comparative Neurology",
+      "feed_url": "https://onlinelibrary.wiley.com/action/showFeed?jc=10969861",
+      "website_url": "https://onlinelibrary.wiley.com/journal/10969861",
+      "description": "JCN is a journal devoted to research in systems neuroscience understanding communication within systems of neurons, and the relationship of these to function, development, plasticity, degeneration, and repair. JCN covers both basic research in systems neurosciences and clinical aspects of neurology, neuropathology, psychiatry, or psychology.",
+      "followers": {
+        "facebook": 242000,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/156656.jpg?t=1604985571"
+    }
+  ]
+}

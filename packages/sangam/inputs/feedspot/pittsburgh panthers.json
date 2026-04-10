@@ -1,0 +1,65 @@
+{
+  "category": "Pittsburgh Panthers",
+  "source_url": "https://rss.feedspot.com/pittsburgh_panthers_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pitt POV",
+      "feed_url": "https://pittpov.com/feed/",
+      "website_url": "https://pittpov.com/",
+      "description": "This blog follows the University of Pittsburgh and its football and basketball programs. It is intended to generate civil and detailed discussions on every issue about Pitt athletics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5465255.jpg?t=1668082575"
+    },
+    {
+      "title": "The Athletic \u00bb Pittsburgh Panthers",
+      "feed_url": "https://www.nytimes.com/athletic/rss/college-football/pittsburgh-panthers-college-football/",
+      "website_url": "https://www.nytimes.com/athletic/college-football/team/pittsburgh-panthers-college-football/",
+      "description": "Get the latest injury updates, Pittsburgh Panthers news, and in-depth analysis from the best newsroom in sports. The Athletic delivers powerful stories and smart analyses that bring sports fans closer to the heart of the game. From breaking news and live commentary to deeply-reported long reads and exclusive interviews, subscribers rely on it for every sports story that matters.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5465267.jpg?t=1668082834"
+    },
+    {
+      "title": "DreamBackfield.com",
+      "feed_url": "https://pittsburgh.sportswar.com/feed/",
+      "website_url": "https://pittsburgh.sportswar.com/",
+      "description": "DreamBackfield.com is a member of the SportsWar network of college sports websites. It publishes news on football, basketball, wrestling, and other sports. Rob founded DreamBackfield.com on his birthday to share his Pitt fever with the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5465259.jpg?t=1668082712"
+    },
+    {
+      "title": "Cardiac Hill",
+      "feed_url": "https://www.cardiachill.com/rss/current.xml",
+      "website_url": "https://www.cardiachill.com/",
+      "description": "We are your best source for quality Pittsburgh Panthers news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5465258.jpg?t=1668082800"
+    },
+    {
+      "title": "Sports Illustrated \u00bb Inside The Panthers",
+      "feed_url": "https://www.si.com/college/pittsburgh/.rss/full/",
+      "website_url": "https://www.si.com/college/pittsburgh/",
+      "description": "Inside The Panthers is a Sports Illustrated channel bringing you the latest news, highlights, and analysis surrounding the Pittsburgh Panthers. SI.com provides sports news, expert analysis, highlights, stats, and scores for the NFL, NBA, MLB, NHL, college football, soccer, fantasy, gambling, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5465257.jpg?t=1668082388"
+    },
+    {
+      "title": "Saturday Blitz \u00bb Pittsburgh Panthers",
+      "feed_url": "https://saturdayblitz.com/acc/pitt-panthers/feed/",
+      "website_url": "https://saturdayblitz.com/acc/pitt-panthers/",
+      "description": "Stay updated on Pittsburgh Panthers. Welcome to Saturday Blitz, the NCAA news and opinions site brought to you by the FanSided Network. Saturday Blitz is dedicated to providing top-notch NCAA news, views, and original content.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5465256.jpg?t=1668082460"
+    }
+  ]
+}

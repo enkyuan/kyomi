@@ -1,0 +1,107 @@
+{
+  "category": "Disney Food",
+  "source_url": "https://rss.feedspot.com/disney_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Disney Food Blog",
+      "feed_url": "https://feeds.feedburner.com/disneyfoodblog/feed",
+      "website_url": "https://www.disneyfoodblog.com/the-latest/",
+      "description": "Launched in March 2009, the Disney Food Blog has grown exponentially. DFB offers in-depth news, reviews, and information about food and restaurants in Disney's parks, resorts, and cruise ships, along with reviews and photographs of and about anything food-related in Disney parks, resorts, movies, and events.",
+      "followers": {
+        "facebook": 888400,
+        "twitter": 233100
+      },
+      "image_url": "https://i1.feedspot.com/165669.jpg?t=1624888804"
+    },
+    {
+      "title": "Vegan Disney Food Blog",
+      "feed_url": "https://vegandisneyfood.com/feed/",
+      "website_url": "https://vegandisneyfood.com/blog/",
+      "description": "Here at 'Vegan Disney Food', you'll find mouth watering food photos, videos, news, up-to-date comprehensive guides and thoughtful, unbiased reviews of the vegan options being offered at all of the Walt Disney World theme parks and resort hotels.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 218,
+        "instagram": 38100
+      },
+      "image_url": "https://i1.feedspot.com/5362243.jpg?t=1642071959"
+    },
+    {
+      "title": "Disney Parks Blog \u00bb Disney Dining",
+      "feed_url": "https://disneyparksblog.com/section/disney-eats/feed/",
+      "website_url": "https://disneyparksblog.com/section/disney-eats/",
+      "description": "Follow for everything Disney Parks Food & Beverage, from Foodie Guides and recipes to announcements, round-ups, and more! The blog is the official Disney Parks Blog.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/5362244.jpg?t=1642069945"
+    },
+    {
+      "title": "AllEars.Net \u00bb Walt Disney World Dining",
+      "feed_url": "https://allears.net/category/dining/feed/",
+      "website_url": "https://allears.net/category/walt-disney-world/dining/",
+      "description": "News & Updates for Walt Disney World, Dining. AllEars.Net is a comprehensive website with information on Walt Disney World, Universal, Disneyland, Disney Cruise Line, and more.",
+      "followers": {
+        "facebook": 243600,
+        "twitter": 115800,
+        "instagram": 375400
+      },
+      "image_url": "https://i1.feedspot.com/5362242.jpg?t=1642070697"
+    },
+    {
+      "title": "DisneyLists.com \u00bb Dining",
+      "feed_url": "https://www.disneylists.com/category/dining/feed/",
+      "website_url": "https://www.disneylists.com/category/dining/",
+      "description": "Lists, tips and information on dining at Walt Disney World. We love Walt Disney World and all things Disney. While our first love will always be Walt Disney World, we have also fallen in love with Disney Cruise Line and Disneyland Resort. We strive to bring you information and tips so you can have the best Disney vacation - no matter where that is.",
+      "followers": {
+        "facebook": 611300,
+        "instagram": 59500
+      },
+      "image_url": "https://i1.feedspot.com/5362240.jpg?t=1642071804"
+    },
+    {
+      "title": "MickeyBlog.com \u00bb Disney Food",
+      "feed_url": "https://mickeyblog.com/tag/food/feed/",
+      "website_url": "https://mickeyblog.com/tag/food/",
+      "description": "This section features articles on Disney food. MickeyBlog.com is your definitive guide to all things Disney!",
+      "followers": {
+        "facebook": 363600,
+        "twitter": 1900,
+        "instagram": 78300
+      },
+      "image_url": "https://i1.feedspot.com/5362237.jpg?t=1642071457"
+    },
+    {
+      "title": "Cooking with Character",
+      "feed_url": "https://cookingwithcharacter.com/feed/",
+      "website_url": "https://cookingwithcharacter.com/",
+      "description": "Welcome to Cooking with Character! I'm Vanessa. If you're here, you probably are like me and have a love of Disney and a love of food! Here you'll find recipes of all kinds - gluten free, Disney inspired, historical, and more! You may also find things related to urban homesteading, eating local, and frugal tips.",
+      "followers": {
+        "facebook": 224,
+        "instagram": 857
+      },
+      "image_url": "https://i1.feedspot.com/5362239.jpg?t=1642072984"
+    },
+    {
+      "title": "Unlock Your Own Magic",
+      "feed_url": "https://bethanyvinton.com/feed/",
+      "website_url": "https://bethanyvinton.com/",
+      "description": "Unlock Your Own Magic is a Disney lifestyle blog run by me, Bethany. I'm a PNW transplant navigating the highs and lows of adulthood. I have a passion for traveling, dogs and craft beer and a bit of an obsession with all things Disney.",
+      "followers": {
+        "instagram": 177800
+      },
+      "image_url": "https://i1.feedspot.com/5362241.jpg?t=1642072993"
+    },
+    {
+      "title": "Disney Dishes Blog",
+      "feed_url": "https://disneydishesblog.com/feed/",
+      "website_url": "https://disneydishesblog.com/blog/",
+      "description": "We're a food blog with Disney inspired recipes, cooking demos, & restaurant reviews from Disney Parks, Disney Cruise Line, & Disney company movies!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 486
+      },
+      "image_url": "https://i1.feedspot.com/5362245.jpg?t=1642072366"
+    }
+  ]
+}

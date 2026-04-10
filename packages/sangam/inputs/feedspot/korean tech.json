@@ -1,0 +1,141 @@
+{
+  "category": "Korean Tech",
+  "source_url": "https://rss.feedspot.com/korean_tech_rss_feeds",
+  "feeds": [
+    {
+      "title": "Korea Tech Today",
+      "feed_url": "https://koreatechtoday.com/feed/",
+      "website_url": "https://koreatechtoday.com/",
+      "description": "Korea Tech Today will give Latest news on Corporate Open Innovation, private equity (PE), venture capital (VC), inbound & outbound deals, IPOs, mergers and acquisitions (M&A), and corporates and startup ecosystems in Korea",
+      "followers": {
+        "facebook": 229,
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5469280.jpg?t=1668774844"
+    },
+    {
+      "title": "Korea Tech Desk",
+      "feed_url": "https://www.koreatechdesk.com/feed/",
+      "website_url": "https://www.koreatechdesk.com/all-articles/",
+      "description": "KoreaTechDesk is a trustworthy source of news about the start-up industry in South Korea. Our goal is to build and serve Korea's tech and startup community. We focus on the fast-growing start-up environment in the country with news about various emerging tech companies.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5469276.jpg?t=1668776616"
+    },
+    {
+      "title": "Hakjuni",
+      "feed_url": "https://poem23.tistory.com/rss",
+      "website_url": "https://poem23.com/",
+      "description": "A blog dealing with overall IT, including security, mobile, cloud, and service.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 3400,
+        "instagram": 979
+      },
+      "image_url": "https://i1.feedspot.com/5469274.jpg?t=1668774659"
+    },
+    {
+      "title": "Samsung Developers Blog",
+      "feed_url": "https://developer.samsung.com/feed",
+      "website_url": "https://developer.samsung.com/blog/en-us",
+      "description": "The Samsung Developer Program is your gateway to design, development, and monetization of your content in the Samsung ecosystem. Join now to learn more about SDKs and APIs.",
+      "followers": {
+        "facebook": 229100,
+        "twitter": 38300,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4902150.jpg?t=1668777463"
+    },
+    {
+      "title": "Daily NK \u00bb Technology",
+      "feed_url": "https://www.dailynk.com/english/category/news/technology/feed/",
+      "website_url": "https://www.dailynk.com/english/category/news/technology/",
+      "description": "Daily NK's mission is to remain your trusted source of news generated from within North Korea, providing timely and accurate information about one of the most repressive regimes in human history. Read the latest news about technology in North Korea from our sources.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/5469278.jpg?t=1669006801"
+    },
+    {
+      "title": "Korea IT Times",
+      "feed_url": "https://www.koreaittimes.com/rss/S1N1.xml",
+      "website_url": "https://www.koreaittimes.com/news/articleList.html?sc_sub_section_code=S2N13&view_type=sm",
+      "description": "Korea IT Times has played a crucial role in promoting South Korea's IT technology and industry to the global market and introducing the world's IT industry to south Korea since its launch in 2004. Published in Korean and English, Korea IT Times covers the latest updates in the IT industry, technology, reviews, and industry analyses.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5472716.jpg?t=1669638122"
+    },
+    {
+      "title": "Tech in Asia \u00bb Korea",
+      "feed_url": "https://www.techinasia.com/tag/korea/feed",
+      "website_url": "https://www.techinasia.com/tag/korea",
+      "description": "Tech in Asia is the largest English- language technology media company that focuses on Asia. From the latest news to the hottest trends and the boldest startups to the strongest titans, we cover everything Tech in the region. Our goal is to build and serve Asia's tech and startup community. Read Korea's tech blog to find information about the leading IT developments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5472723.jpg?t=1669638967"
+    },
+    {
+      "title": "North Korea Tech",
+      "feed_url": "https://www.northkoreatech.org/feed/",
+      "website_url": "https://www.northkoreatech.org/",
+      "description": "North Korea Tech is dedicated to covering and collecting information regarding the state of information technology and related industry in North Korea. You can expect to find articles related to Internet connectivity in the country, North Korea's use of technology, like an expansion of KCTV broadcasting hours, North Korea's online IT exhibitions, Jonsung smartphones still yet to appear, and many more!",
+      "followers": {
+        "facebook": 28200,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5435153.jpg?t=1668777677"
+    },
+    {
+      "title": "PCP Inside",
+      "feed_url": "https://pcpinside.com/feed",
+      "website_url": "https://pcpinside.com/",
+      "description": "I am an IT blogger who wants to share stories that anyone can easily understand and use, which are deeply embedded in life. PCP Inside will continue until the day that IT, which feels close but distant, feels like a friend",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5469279.jpg?t=1668776083"
+    },
+    {
+      "title": "Under Kg",
+      "feed_url": "http://underkg.co.kr/news/rss",
+      "website_url": "http://underkg.co.kr/news",
+      "description": "Under kg blog, the page contains reviews of all products weighing less than 1KG in the world, smartphone unboxing, user ratings, usage videos, etc.",
+      "followers": {
+        "facebook": 34400,
+        "instagram": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5469271.jpg?t=1668774792"
+    },
+    {
+      "title": "Seoulz",
+      "feed_url": "https://www.seoulz.com/feed/",
+      "website_url": "https://www.seoulz.com/latest-news/",
+      "description": "Seoulz aims to be Korea's leading independent digital media resource covering the latest tech news, events, and trends for the Korean Startup Community. Our mission is to inform, educate, and connect the global startup community with the Koren startup community.",
+      "followers": {
+        "facebook": 986,
+        "twitter": 144
+      },
+      "image_url": "https://i1.feedspot.com/5469273.jpg?t=1668777616"
+    },
+    {
+      "title": "iWeb Solutions",
+      "feed_url": "https://iweb.co.ke/feed/",
+      "website_url": "https://iweb.co.ke/news-updates/",
+      "description": "Get the latest news and Articles from the ever-evolving world of web development. Stay on the edge with insights on a range of current topics including AI, WEb 3.0, and more. Interactive Web Solutions is one of the Best Web Designers in Nairobi committed to transforming your digital dreams into reality.",
+      "followers": {
+        "facebook": 825,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/5729843.jpg?t=1701919695"
+    },
+    {
+      "title": "NeoEarly \u00bb Tech",
+      "feed_url": "https://neoearly.net/category/N*%20Tech",
+      "website_url": "https://neoearly.net/category/N*%20Tech",
+      "description": "This blog started with a website I made while doing personal music broadcasting. Afterward, while struggling with management issues, I chose to migrate to a new form of media called blogging and passed through zero board-based ZOG to Tattertools and the current T-story. The main contents are IT, movies, music, etc. It is messy, but we are doing our best. Find all tech related blogs.",
+      "followers": {
+        "twitter": 854
+      },
+      "image_url": "https://i1.feedspot.com/5469397.jpg?t=1668777178"
+    }
+  ]
+}

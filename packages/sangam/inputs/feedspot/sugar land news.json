@@ -1,0 +1,28 @@
+{
+  "category": "Sugar Land News",
+  "source_url": "https://rss.feedspot.com/sugar_land_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Sugar Land, TX",
+      "feed_url": "https://www.sugarlandtx.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.sugarlandtx.gov/CivicAlerts.aspx",
+      "description": "The city of Sugar Land committed to doing things differently with bold, thoughtful thinking designed to make life sweeter and more refined for all. We provide information to the Sugar Land city and community. Follow this feed for the latest news, city alerts, economic, environment development, election news, and much more.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 14700,
+        "instagram": 12400
+      },
+      "image_url": "https://i1.feedspot.com/5143189.jpg?t=1626159782"
+    },
+    {
+      "title": "The Katy News \u00bb Sugar Land",
+      "feed_url": "https://thekatynews.com/category/sugar-land/feed/",
+      "website_url": "https://thekatynews.com/category/sugar-land/",
+      "description": "Katy's Only locally owned Community newspaper since 1989! Our paper focuses on the community events, school news, church events and other upbeat news that will interest our community and those visiting",
+      "followers": {
+        "facebook": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5143197.jpg"
+    }
+  ]
+}

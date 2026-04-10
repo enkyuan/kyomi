@@ -1,0 +1,71 @@
+{
+  "category": "Canadian Watch",
+  "source_url": "https://rss.feedspot.com/canadian_watch_rss_feeds",
+  "feeds": [
+    {
+      "title": "WatchFinder Blog",
+      "feed_url": "https://watchfinder.ca/blogs/blog.atom",
+      "website_url": "https://watchfinder.ca/blogs/blog",
+      "description": "WatchFinder Canada Blog is a go-to resource for watch enthusiasts, offering insights, reviews, and industry updates. Discover articles on luxury watches, watch care tips, and trends in the world of horology. The blog aims to provide a comprehensive guide to help readers make informed decisions when it comes to buying and maintaining timepieces.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 5300,
+        "instagram": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5574319.jpg?t=1684837407"
+    },
+    {
+      "title": "Redwood Watches Blog",
+      "feed_url": "https://www.redwoodwatches.com/blogs/blog.atom",
+      "website_url": "https://www.redwoodwatches.com/blogs/blog",
+      "description": "Redwood Watches Blog combines storytelling with horology, sharing unique perspectives and personal experiences in the world of watches. Discover articles on watch adventures, watch customization, and behind-the-scenes stories from watch enthusiasts. The blog aims to inspire readers to embrace the passion and adventure of watch collecting.",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5574316.jpg?t=1684837384"
+    },
+    {
+      "title": "Preferred Magazine \u00bb Watches",
+      "feed_url": "https://preferredmagazine.ca/category/watches/feed/",
+      "website_url": "https://preferredmagazine.ca/category/watches/",
+      "description": "Preferred Magazine's Watches section offers a blend of watch reviews, brand profiles, and industry highlights. Discover articles on luxury timepieces, watch trends, and interviews with watch experts. The blog aims to provide a luxurious and informative reading experience for watch enthusiasts and connoisseurs.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 5700,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5574315.jpg?t=1684837363"
+    },
+    {
+      "title": "Canada Watch House Blog",
+      "feed_url": "https://canadawatchhouse.ca/blogs/canada-watch-house-blog.atom",
+      "website_url": "https://canadawatchhouse.ca/blogs/canada-watch-house-blog",
+      "description": "Canada Watch House Blog showcases a wide range of watches, from affordable to high-end luxury brands. Explore articles on watch collections, watchmaking craftsmanship, and style inspiration. The blog aims to cater to watch enthusiasts of all budgets and tastes, providing valuable information for both new and seasoned collectors.",
+      "followers": {
+        "facebook": 408,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5574320.jpg?t=1684837435"
+    },
+    {
+      "title": "Benoit Watches Blog",
+      "feed_url": "https://benoitwatch.com/blogs/benoit-watches-in-canada.atom",
+      "website_url": "https://benoitwatch.com/blogs/benoit-watches-in-canada",
+      "description": "Benoit Watches Blog offers a mix of educational content and watch-related articles. Explore guides on watch terminology, watch care, and historical perspectives. The blog aims to educate readers about the intricacies of timepieces while showcasing a selection of curated watches from various brands.",
+      "followers": {
+        "facebook": 3100,
+        "instagram": 17400
+      },
+      "image_url": "https://i1.feedspot.com/5574317.jpg?t=1684995775"
+    },
+    {
+      "title": "Watch Straps Canada Blog",
+      "feed_url": "https://www.watchstrapscanada.ca/feed/",
+      "website_url": "https://www.watchstrapscanada.ca/blog-2/",
+      "description": "Watch Straps Canada Blog focuses on the often overlooked but essential element of watch straps. Explore articles on different types of watch straps, styling tips, and strap maintenance. The blog aims to help readers enhance their watch-wearing experience by providing guidance on selecting and caring for the perfect watch strap.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5574318.jpg?t=1684837399"
+    }
+  ]
+}

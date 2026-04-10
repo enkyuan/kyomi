@@ -1,0 +1,568 @@
+{
+  "category": "UK Finance",
+  "source_url": "https://rss.feedspot.com/uk_finance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Financial Times",
+      "feed_url": "https://www.ft.com/rss/home",
+      "website_url": "https://www.ft.com/",
+      "description": "News, analysis, and comment from the Financial Times. The Financial Times is one of the world's leading news organizations, recognized internationally for its authority, integrity, and accuracy. They provide essential news and analysis to ambitious individuals and companies around the world, alongside a suite of leadership services that put their content and expertise to practical use.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 7400000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5359994.jpg?t=1658493364"
+    },
+    {
+      "title": "Mouthy Money",
+      "feed_url": "https://www.mouthymoney.co.uk/feed/",
+      "website_url": "https://www.mouthymoney.co.uk/",
+      "description": "We're a money blog with a beating heart and a big mouth. We're made of real people talking about real dreams, successes, and failures.",
+      "followers": {
+        "facebook": 19100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5340094.jpg?t=1641886509"
+    },
+    {
+      "title": "The Humble Penny Blog",
+      "feed_url": "https://thehumblepenny.com/feed/",
+      "website_url": "https://thehumblepenny.com/blog/",
+      "description": "The Humble Penny is a personal finance site with the mission of helping you create financial independence and money joy in your life. We do money ethically.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2100,
+        "instagram": 31200
+      },
+      "image_url": "https://i1.feedspot.com/5227609.jpg?t=1641899152"
+    },
+    {
+      "title": "Skint Dad",
+      "feed_url": "https://skintdad.co.uk/feed/",
+      "website_url": "https://skintdad.co.uk/",
+      "description": "Skint Dad is the destination online where every penny counts.Whether you're looking to cut back on your food bill, save for a rainy day, or find inventive ways to up your income; Skint Dad has the answer.",
+      "followers": {
+        "facebook": 189400,
+        "twitter": 18500,
+        "instagram": 22200
+      },
+      "image_url": "https://i1.feedspot.com/4497816.jpg?t=1605263700"
+    },
+    {
+      "title": "Make Money Without A Job Blog",
+      "feed_url": "https://makemoneywithoutajob.com/feed/",
+      "website_url": "https://makemoneywithoutajob.com/blog/",
+      "description": "MakeMoneyWithoutAJob.Com offers real people real advice about how to really supercharge their earnings and make extra money. If you are looking to make extra money online, find ways to save money, and connect with like-minded people then you are in the right place.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/4746467.jpg?t=1641969215"
+    },
+    {
+      "title": "The Money Shed",
+      "feed_url": "https://blog.themoneyshed.co.uk/feed/",
+      "website_url": "https://blog.themoneyshed.co.uk/",
+      "description": "The Money Shed is the UK's largest community website dedicated to earning money online.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/4904106.jpg?t=1641968926"
+    },
+    {
+      "title": "Financial News",
+      "feed_url": "https://www.financial-news.co.uk/feed/",
+      "website_url": "https://www.financial-news.co.uk/",
+      "description": "FinancialNews is owned and operated by M2 Communications Group. The site is a dedicated financial news website, covering banking and finance and mergers and acquisitions on a global level, as well as a strong focus on business activity and economics in the United Kingdom.",
+      "followers": {
+        "facebook": 840,
+        "twitter": 366
+      },
+      "image_url": "https://i1.feedspot.com/5360008.jpg?t=1698055139"
+    },
+    {
+      "title": "The Money Pages",
+      "feed_url": "https://www.themoneypages.com/feed/",
+      "website_url": "https://www.themoneypages.com/",
+      "description": "Read about the latest personal finance news and opinion. The Money Pages offers advice on banking, debt, insurance, investments, retirement and savings.",
+      "followers": {
+        "twitter": 724
+      },
+      "image_url": "https://i1.feedspot.com/5360013.jpg?t=1641381324"
+    },
+    {
+      "title": "theweek.com \u00bb Personal Finance",
+      "feed_url": "https://theweek.com/feeds/tag/personal-finance",
+      "website_url": "https://theweek.com/personal-finance",
+      "description": "All latest articles about Personal Finance from theweek.com.",
+      "followers": {
+        "facebook": 162900,
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5360001.jpg?t=1746438865"
+    },
+    {
+      "title": "Wired \u00bb Fintech",
+      "feed_url": "https://www.wired.com/feed/rss",
+      "website_url": "https://www.wired.com/tag/fintech/",
+      "description": "The latest Fintech news from WIRED UK. WIRED brings you the future as it happens - the people, the trends, the big ideas that will change our lives.",
+      "followers": {
+        "facebook": 129900,
+        "twitter": 266500,
+        "instagram": 94900
+      },
+      "image_url": "https://i1.feedspot.com/5360012.jpg?t=1641381518"
+    },
+    {
+      "title": "Express.co.uk \u00bb Finance",
+      "feed_url": "https://feeds.feedburner.com/daily-express-finance-news",
+      "website_url": "https://www.express.co.uk/finance",
+      "description": "Read all the latest news and information from the world of finance and business. Discover expert coverage and analysis on Express.co.uk.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 1000000,
+        "instagram": 75400
+      },
+      "image_url": "https://i1.feedspot.com/5359993.jpg?t=1641367678"
+    },
+    {
+      "title": "Thrifty Family Blog",
+      "feed_url": "https://thriftyfamily.co.uk/blog/feed/",
+      "website_url": "https://thriftyfamily.co.uk/blog/",
+      "description": "Hi! I'm Jenni, a personal finance writer on a mission to help people be better with money. Whether you're looking for a breakdown of the best investing apps for beginners or you're wondering which Lifetime ISA to get, I have tons of guides to help you make a decision.",
+      "followers": {
+        "facebook": 516,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5359995.jpg?t=1641967327"
+    },
+    {
+      "title": "London Business News \u00bb Finance",
+      "feed_url": "https://londonlovesbusiness.com/business-news/finance/feed/",
+      "website_url": "https://londonlovesbusiness.com/business-news/finance/",
+      "description": "Looking for Finance news? We aim to bring you exciting and thought-provoking London business news, comment and culture, digging deep into the issues that really matter to London's business community.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 26400
+      },
+      "image_url": "https://i1.feedspot.com/5360007.jpg?t=1641381446"
+    },
+    {
+      "title": "My Money Cottage",
+      "feed_url": "https://mymoneycottage.com/feed/",
+      "website_url": "https://mymoneycottage.com/",
+      "description": "Family finances, family lifestyle and much more! My Money Cottage helps you to make extra money from home and stretch your finances that little bit further!",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5359992.jpg?t=1641969845"
+    },
+    {
+      "title": "Quietly Saving",
+      "feed_url": "http://quietlysaving.co.uk/feed/",
+      "website_url": "http://quietlysaving.co.uk/",
+      "description": "I'm Weenie. In 2014, I came across the term FIRE (Financial Independence, Retire Early). I set up this blog, devised a plan, began to save more and invest.I try to balance enjoying my life in the present while attempting to plan for the future. My plan is to be in a position to not have to work full-time (or at all) by 2025 (or 2024, depending on whether I want to do 'one more year').This blog is not a 'how-to' guide and doesn't give advice, it's just a journal documenting my progress, plus some of my occasionally mad thoughts and ideas.",
+      "followers": {
+        "twitter": 943
+      },
+      "image_url": "https://i1.feedspot.com/4547468.jpg?t=1609334445"
+    },
+    {
+      "title": "Thriftychap \u00bb Money",
+      "feed_url": "https://thriftychap.com/category/money/feed/",
+      "website_url": "https://thriftychap.com/category/money/",
+      "description": "I'm Joe. I've been banging on at my family & friends about cashback sites, thrifty tips and money saving ideas for a good few years. At the end of 2016 I created this blog to be somewhere I could write about these subjects & after a great year, I've decided to take the blog more seriously and hopefully help more people going forward. Let's get thrifty!",
+      "followers": {
+        "facebook": 166,
+        "twitter": 3900,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5359988.jpg?t=1641888118"
+    },
+    {
+      "title": "Easy Finance Tips",
+      "feed_url": "https://easyfinancetips.co.uk/feed/",
+      "website_url": "https://easyfinancetips.co.uk/",
+      "description": "EasyFinanceTips.co.uk is a financial news and tips blog set up to help you find the latest financial news and information available. Regular updates will cover the latest finance industry news from around the world, Europe, and the UK as well as information about the latest products and financial services available.",
+      "followers": {
+        "twitter": 337
+      },
+      "image_url": "https://i1.feedspot.com/5564421.jpg?t=1683786299"
+    },
+    {
+      "title": "Cactus Financial Planning News",
+      "feed_url": "https://cactusfp.co.uk/feed/",
+      "website_url": "https://cactusfp.co.uk/news/",
+      "description": "We are Independent Financial Advisers based in Cheltenham with clients throughout the South-West. Find all the financial news and views you need.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5360035.jpg?t=1641377318"
+    },
+    {
+      "title": "The Financial Wilderness",
+      "feed_url": "https://www.thefinancialwilderness.com/feed/",
+      "website_url": "https://www.thefinancialwilderness.com/",
+      "description": "Understanding Finance today can be a jungle. Luckily, you have a survival guide! The Financial Wilderness aims to build a repository of guides on how to navigate modern finance and save money in a friendly and easy format.",
+      "followers": {
+        "facebook": 226,
+        "twitter": 1200,
+        "instagram": 201
+      },
+      "image_url": "https://i1.feedspot.com/5091954.jpg?t=1641896950"
+    },
+    {
+      "title": "Money Savvy Daddy",
+      "feed_url": "https://moneysavvydaddy.com/feed/",
+      "website_url": "https://moneysavvydaddy.com/",
+      "description": "I'm Adam. My aim is to show just what one person can do to improve their personal finances. I will then share my findings in the clearest ways possible, so many other people, like yourself, can benefit by doing the same or similar. Or at least be inspired to achieve your own particular goals.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 3500,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5181022.jpg?t=1597238311"
+    },
+    {
+      "title": "Monevator",
+      "feed_url": "http://feeds.feedburner.com/Monevatorcom",
+      "website_url": "https://monevator.com/",
+      "description": "Monevator is a personal blog about money: making, saving, growing, and sometimes even spending it. From passive investing with index trackers funds to choosing the cheapest investment platform or broker, Monevator is essential reading for all British investors.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5359996.jpg?t=1669203186"
+    },
+    {
+      "title": "Dumb Funded",
+      "feed_url": "https://www.dumbfunded.co.uk/feed/",
+      "website_url": "https://www.dumbfunded.co.uk/",
+      "description": "A personal finance blog with a twist - Dumb Funded covers a range of modern finance topics from bitcoins to apps and software.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4444902.jpg?t=1626088111"
+    },
+    {
+      "title": "Mrs Mummypenny \u00bb Wealth",
+      "feed_url": "https://www.mrsmummypenny.co.uk/category/wealth/feed/",
+      "website_url": "https://www.mrsmummypenny.co.uk/category/wealth/",
+      "description": "My name is Lynn Beattie (previously James), mum of boys and cat living in Knebworth, Hertfordshire. I am the CEO & Founder of Mrs. Mummypenny, a personal finance expert website and brand. I help thousands of people to save money now and for the future working towards financial freedom.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 11100,
+        "instagram": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5359984.jpg?t=1641377002"
+    },
+    {
+      "title": "RTS Financial Planning Blog",
+      "feed_url": "https://rtsfinancialplanning.co.uk/feed/",
+      "website_url": "https://rtsfinancialplanning.co.uk/news-and-views/blog/",
+      "description": "Latest investment market commentary, financial planning tips and insights. We specialise in helping people who are retired or thinking about retiring in the next few years. This allows us to tailor our service and expertise to the unique needs of retirees.",
+      "followers": {
+        "facebook": 124,
+        "twitter": 437,
+        "instagram": 103
+      },
+      "image_url": "https://i1.feedspot.com/5360019.jpg?t=1641971117"
+    },
+    {
+      "title": "Rutherford Hughes Blog",
+      "feed_url": "https://rutherfordhughes.com/feed/",
+      "website_url": "https://rutherfordhughes.com/financial-advice-blog/",
+      "description": "Welcome to the Rutherford Hughes Financial Advice blog, where we publish regular articles, videos and podcasts related to Financial Advice, ESG Investing, Inheritance Tax and more. We are a firm of Independent Financial Advisers and Wealth Managers based in Newcastle upon Tyne.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5360028.jpg?t=1641378097"
+    },
+    {
+      "title": "The Fintech Times",
+      "feed_url": "https://thefintechtimes.com/feed/",
+      "website_url": "https://thefintechtimes.com/category/exclusive-content/fintech-ecosystems/",
+      "description": "The Fintech Times is the world's first and only newspaper dedicated to fintech. Published monthly, The Fintech Times explores the explosive world of financial technology, blending first hand insight, opinion and expertise with observational journalism to provide a balanced and comprehensive perspective of this rapidly evolving industry.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 19400,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4649115.jpg?t=1633525601"
+    },
+    {
+      "title": "MoneyWeek",
+      "feed_url": "https://moneyweek.com/feed/all",
+      "website_url": "https://moneyweek.com/investments/stocks-and-shares/energy-stocks",
+      "description": "MoneyWeek is the UK's best-selling financial magazine. Our readers primarily consist of private investors, city professionals, and those interested in intelligent, easy-to-read analysis of the week's financial news. Their mission is to bring you news, analysis, and information to help you make informed investment decisions as well as bring you the news that matters to your finances.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5323268.jpg?t=1658304321"
+    },
+    {
+      "title": "Finance Monthly",
+      "feed_url": "https://www.finance-monthly.com/feed/",
+      "website_url": "https://www.finance-monthly.com/",
+      "description": "Monthly Finance News Magazine is dedicated to reporting the key financial stories of the day from across the globe for an international corporate readership. Finance Monthly reports on the news and topics that matter to CEOs, CFOs, investors, company directors, entrepreneurs, and SMEs.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 7500,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4919506.jpg?t=1628315553"
+    },
+    {
+      "title": "Alternative Credit Investor",
+      "feed_url": "https://alternativecreditinvestor.com/feed/",
+      "website_url": "https://alternativecreditinvestor.com/",
+      "description": "Peer-to-Peer Finance News is the only magazine purely dedicated to the UK's fast-growing peer-to-peer finance industry. It offers high quality news, analysis, opinion and features relating to this exciting area of alternative finance.",
+      "followers": {
+        "facebook": 384,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4698985.jpg?t=1635592491"
+    },
+    {
+      "title": "Mums Savvy Savings",
+      "feed_url": "https://mumssavvysavings.com/feed/",
+      "website_url": "https://mumssavvysavings.com/",
+      "description": "Hi I am Emma, writer, teacher, public speaker and also the editor. Mums Savvy Savings is my new venture. I like the good things things in life, along with the rest of the family and in order to have that I need to be savvy. We are undergoing huge family changes as I swap the classroom for freelacing to give our family more quality time and more attention. Therefore this blog will document how I am saving money but still living the good life.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 7700,
+        "instagram": 20400
+      },
+      "image_url": "https://i1.feedspot.com/4904104.jpg?t=1613558177"
+    },
+    {
+      "title": "LifeUpswing",
+      "feed_url": "https://www.lifeupswing.com/feed/",
+      "website_url": "https://www.lifeupswing.com/",
+      "description": "Hey, I'm Chris. I have a degree in Business Economics from the University of Liverpool and run LifeUpswing. Give your life an Upswing by mastering your money. Make more money, save more money, and think about how money can give you back your freedom",
+      "followers": {
+        "facebook": 122,
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/5131120.jpg?t=1641970023"
+    },
+    {
+      "title": "Boost My Budget",
+      "feed_url": "https://www.boostmybudget.com/feed/",
+      "website_url": "https://www.boostmybudget.com/",
+      "description": "Hello! I'm Becca Whitestone, the founder and author of Boost My Budget. I'm a side hustle expert, professional blogger and online entrepreneur based near London in the UK. Boost My Budget is a UK money blog dedicated to helping you earn more through side hustling, making money online and working from home.",
+      "followers": {
+        "facebook": 248,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5359990.jpg?t=1641369945"
+    },
+    {
+      "title": "Stupid Is The Norm",
+      "feed_url": "https://www.stupidisthenorm.co.uk/feed",
+      "website_url": "https://www.stupidisthenorm.co.uk/",
+      "description": "We demonstrate how anyone can become wealthy, regardless of age, education or ability. Financial advice, life hacks and recommendations.",
+      "followers": {
+        "facebook": 801,
+        "twitter": 343,
+        "instagram": 719
+      },
+      "image_url": "https://i1.feedspot.com/5359987.jpg?t=1641369941"
+    },
+    {
+      "title": "Money for Monday",
+      "feed_url": "https://moneyformonday.com/family-finance/feed/",
+      "website_url": "https://moneyformonday.com/family-finance/",
+      "description": "I'm David. Whether it's making or saving more of your money or just getting to grips with the day to day finances, I'm here to help.With some simple tips and tricks, you can stop worrying about money and start focusing on what's really important to you.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 614
+      },
+      "image_url": "https://i1.feedspot.com/5359986.jpg?t=1641374404"
+    },
+    {
+      "title": "Disease Called Debt Blog",
+      "feed_url": "https://diseasecalleddebt.com/blog/feed/",
+      "website_url": "https://diseasecalleddebt.com/blog/",
+      "description": "Disease Called Debt is a personal finance blog that primarily focuses on getting out of debt, saving money and making money in order to build wealth.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4691732.jpg?t=1641444554"
+    },
+    {
+      "title": "Financial Wellness Group Blog",
+      "feed_url": "https://www.financialwellnessgroup.co.uk/feed/",
+      "website_url": "https://www.financialwellnessgroup.co.uk/blog/",
+      "description": "Our blog covers news, tips, information, and advice on debt. We are the Financial Wellness Group, helping people get out of debt. Our service is an effort to improve our customers' financial health. Our knowledge and expertise make us the safest pair of hands around.",
+      "followers": {
+        "facebook": 650,
+        "twitter": 422,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5360021.jpg?t=1641378323"
+    },
+    {
+      "title": "Smarter Finances",
+      "feed_url": "https://smarterfinances.co.uk/feed/",
+      "website_url": "https://smarterfinances.co.uk/",
+      "description": "This site is run by Sharne and James, a couple based in South East England. We have both picked up many money management and saving tips from being students and travelling, so much so that we managed to save a large deposit and buy our first home on the outskirts of London at the age of 23!We have, therefore, created this website with the sole aim of sharing our first hand experiences, guidance, and help to anyone seeking useful information on any and all financial related queries.",
+      "followers": {
+        "facebook": 127,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5233504.jpg?t=1609834977"
+    },
+    {
+      "title": "The Money Builders",
+      "feed_url": "https://themoneybuilders.co.uk/feed/",
+      "website_url": "https://themoneybuilders.co.uk/",
+      "description": "An impartial UK money blog featuring informed articles on savings, investments and making extra cash. Also includes calculators for ISAs and JISAs.",
+      "followers": {
+        "facebook": 133,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5063475.jpg?t=1605016990"
+    },
+    {
+      "title": "The Subtle Investor Blog",
+      "feed_url": "https://www.subtleinvestor.com/feed/",
+      "website_url": "https://www.subtleinvestor.com/blog/",
+      "description": "I am Sejuty, an investment enthusiast, currently working at an FTSE 100 Asset Management company in London, UK. I will be glad if my blog can encourage anyone, especially the first-timers, the cash hoarders, or someone from a minority group to understand the importance of investing and take that first leap of hitting 'Buy'.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 935
+      },
+      "image_url": "https://i1.feedspot.com/5206443.jpg?t=1603107525"
+    },
+    {
+      "title": "Money Bulldog",
+      "feed_url": "https://moneybulldog.co.uk/feed/",
+      "website_url": "https://moneybulldog.co.uk/",
+      "description": "Welcome to Money Bulldog! A UK Personal Finance Blog helping you to take control of your money.",
+      "followers": {
+        "facebook": 696,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4280669.jpg?t=1641375368"
+    },
+    {
+      "title": "Moneyhome.co.uk",
+      "feed_url": "https://www.moneyhome.co.uk/feed/",
+      "website_url": "https://www.moneyhome.co.uk/",
+      "description": "If you need a repair to your financial life or business, this blog includes the best information from a very successful man in the finance industry.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 218
+      },
+      "image_url": "https://i1.feedspot.com/4904147.jpg?t=1613558186"
+    },
+    {
+      "title": "Savvy Dad",
+      "feed_url": "https://savvydad.co.uk/feed/",
+      "website_url": "https://savvydad.co.uk/",
+      "description": "Hi, I'm Olly and I'm the founder of savvydad.co.uk. I write about family finance, affordable parenting, and ways of making and saving money.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 2600,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5148625.jpg?t=1613558211"
+    },
+    {
+      "title": "Morningstar",
+      "feed_url": "https://www.morningstar.co.uk/uk/feeds/rss.aspx",
+      "website_url": "https://www.morningstar.co.uk/uk/",
+      "description": "Investment education, tools, data, news and research on shares, funds, investment trusts and ETFs to help you make better investing decisions. Morningstar, Inc. is a leading provider of independent investment research.",
+      "followers": {
+        "facebook": 27500,
+        "twitter": 3100,
+        "instagram": 47000
+      },
+      "image_url": "https://i1.feedspot.com/5360018.jpg?t=1641377081"
+    },
+    {
+      "title": "Saving Ninja",
+      "feed_url": "https://thesavingninja.com/feed/",
+      "website_url": "https://thesavingninja.com/",
+      "description": "Welcome to SavingNinja, This is the place where I can connect with like-minded individuals and document my progress to financial independence. The place where a Ninja Clan can be created and sustained, where we can help each other earn more, invest, and live a life of fulfillment.",
+      "followers": {
+        "facebook": 89,
+        "twitter": 766
+      },
+      "image_url": "https://i1.feedspot.com/5269355.jpg?t=1641899758"
+    },
+    {
+      "title": "Finance Girl",
+      "feed_url": "https://www.financegirl.co.uk/feed/",
+      "website_url": "https://www.financegirl.co.uk/",
+      "description": "Finance Girl is Julie Cheung, a Manchester based (infrequent) blogger covering topics mainly on personal finance but personal posts make occasional appearances too \ud83d\ude42",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4474857.jpg?t=1669203232"
+    },
+    {
+      "title": "Money and Pensions Service",
+      "feed_url": "https://moneyandpensionsservice.org.uk/category/blog/feed/",
+      "website_url": "https://maps.org.uk/en/media-centre/press-releases#",
+      "description": "We are an arm's-length body, sponsored by the Department for Work and Pensions, with a joint commitment to ensuring that people throughout the UK have guidance and access to the information they need to make effective financial decisions over their lifetime.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5360033.jpg?t=1641378295"
+    },
+    {
+      "title": "OneFamily",
+      "feed_url": "https://www.onefamily.com/our-story/personal-finance/",
+      "website_url": "https://www.onefamily.com/our-story/personal-finance/",
+      "description": "Talking Finance is about everything related to modern family finance, from children's savings to life insurance and retirement planning.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5360023.jpg?t=1641381279"
+    },
+    {
+      "title": "Lotty Earns",
+      "feed_url": "https://www.lottyearns.co.uk/feed/",
+      "website_url": "https://www.lottyearns.co.uk/",
+      "description": "I'm Charlotte. I'm a personal finance journalist and have been in the industry for four years. Read tips, tricks and deals to save money while still living comfortable and sometimes fancy life.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 43200,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4965846.jpg?t=1641889866"
+    },
+    {
+      "title": "Frazer James",
+      "feed_url": "https://frazerjames.co.uk/resources/our-blog/feed/",
+      "website_url": "https://frazerjames.co.uk/resources/our-blog/",
+      "description": "On The FJ Blog, you can keep up to date with useful tips and financial insights from the Frazer James team. We're on a mission to fix financial advice, making it more affordable, accessible & available. We look at the big picture & focus on the financial decisions that you can make today, to enable you to achieve the lifestyle that you want in the future.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5360025.jpg?t=1641382421"
+    },
+    {
+      "title": "GreenSky Wealth Blog",
+      "feed_url": "https://greenskywealth.co.uk/feed/",
+      "website_url": "https://greenskywealth.co.uk/blog/",
+      "description": "GreenSky Wealth provides independent financial advice for individuals and businesses. With us it's simply honest and truly independent financial advice.",
+      "followers": {
+        "facebook": 123,
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/5360024.jpg?t=1641381345"
+    },
+    {
+      "title": "Local Financial Advice Blog",
+      "feed_url": "https://www.localfinancialadvice.co.uk/blog/rss.xml",
+      "website_url": "https://www.localfinancialadvice.co.uk/blog",
+      "description": "At Local Financial Advice, we're dedicated to helping users to connect to the highest quality financial advisors in their area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5360017.jpg?t=1641972760"
+    }
+  ]
+}

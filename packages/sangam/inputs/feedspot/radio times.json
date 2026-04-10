@@ -1,0 +1,269 @@
+{
+  "category": "Radio Times",
+  "source_url": "https://rss.feedspot.com/radiotimes_rss_feeds",
+  "feeds": [
+    {
+      "title": "Radio Times",
+      "feed_url": "https://www.radiotimes.com/feed",
+      "website_url": "https://www.radiotimes.com/",
+      "description": "RadioTimes.com was founded in 1997, and offers trusted guidance, exclusive news, features and interviews for television and entertainment fans globally.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538559.jpg?t=1753353828"
+    },
+    {
+      "title": "Radio Times \u00bb TV",
+      "feed_url": "https://www.radiotimes.com/tv/feed",
+      "website_url": "https://www.radiotimes.com/tv/",
+      "description": "The latest TV, Netflix and Prime Video news, recommendations, interviews and features",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538558.jpg?t=1753091754"
+    },
+    {
+      "title": "Radio Times \u00bb What to Watch",
+      "feed_url": "https://www.radiotimes.com/tv/what-to-watch-tv/feed",
+      "website_url": "https://www.radiotimes.com/tv/what-to-watch-tv/",
+      "description": "All latest articles about What to Watch from Radio Times.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538566.jpg?t=1753091792"
+    },
+    {
+      "title": "Radio Times \u00bb Drama",
+      "feed_url": "https://www.radiotimes.com/tv/drama/feed",
+      "website_url": "https://www.radiotimes.com/tv/drama/",
+      "description": "The latest TV drama news, episode guides, interviews, trailers, comment and updates from RadioTimes.com.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538570.jpg?t=1753091812"
+    },
+    {
+      "title": "Radio Times \u00bb Comedy",
+      "feed_url": "https://www.radiotimes.com/tv/comedy/feed",
+      "website_url": "https://www.radiotimes.com/tv/comedy/",
+      "description": "The latest comedy news, comment, reviews, trailers and interviews from RadioTimes.com.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538569.jpg?t=1753091807"
+    },
+    {
+      "title": "Radio Times \u00bb Soaps",
+      "feed_url": "https://www.radiotimes.com/tv/soaps/feed",
+      "website_url": "https://www.radiotimes.com/tv/soaps/",
+      "description": "The latest soap news, spoilers and interviews on Coronation Street, EastEnders, Emmerdale, Hollyoaks, Neighbours and Home & Away from RadioTimes.com.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538578.jpg?t=1753091852"
+    },
+    {
+      "title": "Radio Times \u00bb Anime",
+      "feed_url": "https://www.radiotimes.com/tv/fantasy/anime/feed",
+      "website_url": "https://www.radiotimes.com/tv/fantasy/anime/",
+      "description": "All latest articles about Anime from Radio Times.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538575.jpg?t=1753091838"
+    },
+    {
+      "title": "Radio Times \u00bb Entertainment",
+      "feed_url": "https://www.radiotimes.com/tv/entertainment/feed",
+      "website_url": "https://www.radiotimes.com/tv/entertainment/",
+      "description": "All the latest entertainment news, breaking stories, comment, trailers and reviews from RadioTimes.com.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538560.jpg?t=1753091762"
+    },
+    {
+      "title": "Radio Times \u00bb Fantasy",
+      "feed_url": "https://www.radiotimes.com/tv/fantasy/feed",
+      "website_url": "https://www.radiotimes.com/tv/fantasy/",
+      "description": "All the latest TV fantasy news, breaking stories, comment, trailer and reviews from RadioTimes.com.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538565.jpg?t=1753091788"
+    },
+    {
+      "title": "Radio Times \u00bb Sci-Fi",
+      "feed_url": "https://www.radiotimes.com/tv/sci-fi/feed",
+      "website_url": "https://www.radiotimes.com/tv/sci-fi/",
+      "description": "The latest science fiction TV and Film news, episode guides, comment, reviews, interviews and trailers from RadioTimes.com",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538562.jpg?t=1753091772"
+    },
+    {
+      "title": "Radio Times \u00bb Movies",
+      "feed_url": "https://www.radiotimes.com/movies/feed",
+      "website_url": "https://www.radiotimes.com/movies/",
+      "description": "Keep up to date with the latest movie news, film releases, reviews and trailers as well as what to watch at the cinema, on Netflix and TV at RadioTimes.com.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538568.jpg?t=1753091803"
+    },
+    {
+      "title": "Radio Times \u00bb Sport",
+      "feed_url": "https://www.radiotimes.com/tv/sport/feed",
+      "website_url": "https://www.radiotimes.com/tv/sport/",
+      "description": "All the latest news on Sport, from how to watch the latest live stream to results and comment from RadioTimes.com.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538574.jpg?t=1753091832"
+    },
+    {
+      "title": "Radio Times \u00bb Football",
+      "feed_url": "https://www.radiotimes.com/tv/sport/football/feed",
+      "website_url": "https://www.radiotimes.com/tv/sport/football/",
+      "description": "All latest articles about Football from Radio Times.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538576.jpg?t=1753091842"
+    },
+    {
+      "title": "Radio Times \u00bb Rugby Union",
+      "feed_url": "https://www.radiotimes.com/tv/sport/rugby-union/feed",
+      "website_url": "https://www.radiotimes.com/tv/sport/rugby-union/",
+      "description": "All latest articles about Rugby Union from Radio Times.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538567.jpg?t=1753091798"
+    },
+    {
+      "title": "Radio Times \u00bb Cricket",
+      "feed_url": "https://www.radiotimes.com/tv/sport/cricket/feed",
+      "website_url": "https://www.radiotimes.com/tv/sport/cricket/",
+      "description": "All latest articles about Cricket from Radio Times.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538577.jpg?t=1753091847"
+    },
+    {
+      "title": "Radio Times \u00bb Formula 1",
+      "feed_url": "https://www.radiotimes.com/tv/sport/formula-1/feed",
+      "website_url": "https://www.radiotimes.com/tv/sport/formula-1/",
+      "description": "All latest articles about Formula 1 from Radio Times.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538563.jpg?t=1753091776"
+    },
+    {
+      "title": "Radio Times \u00bb Boxing",
+      "feed_url": "https://www.radiotimes.com/tv/sport/boxing/feed",
+      "website_url": "https://www.radiotimes.com/tv/sport/boxing/",
+      "description": "All latest articles about Boxing from Radio Times.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538572.jpg?t=1753091823"
+    },
+    {
+      "title": "Radio Times \u00bb Gaming",
+      "feed_url": "https://www.radiotimes.com/technology/gaming/feed",
+      "website_url": "https://www.radiotimes.com/technology/gaming/",
+      "description": "All the latest gaming news and video game reviews from RadioTimes.com whether you're looking to buy a PS5, or read the latest news and interviews.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600
+      },
+      "image_url": "https://i1.feedspot.com/8538564.jpg?t=1753791893"
+    },
+    {
+      "title": "Radio Times \u00bb Technology",
+      "feed_url": "https://www.radiotimes.com/technology/feed",
+      "website_url": "https://www.radiotimes.com/technology/",
+      "description": "All the latest technology news from RadioTimes.com from gaming to gadgets, social media trends, broadband, smart home and product reviews.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538561.jpg?t=1753091766"
+    },
+    {
+      "title": "Radio Times \u00bb Radio",
+      "feed_url": "https://www.radiotimes.com/radio/feed",
+      "website_url": "https://www.radiotimes.com/radio/",
+      "description": "All the latest radio news",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538573.jpg?t=1753091827"
+    },
+    {
+      "title": "Radio Times \u00bb Going Out",
+      "feed_url": "https://www.radiotimes.com/going-out/feed",
+      "website_url": "https://www.radiotimes.com/going-out/",
+      "description": "Find the latest ticket news and offers for theatre shows, musicals and immersive experiences.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538571.jpg?t=1753091818"
+    },
+    {
+      "title": "Radio Times \u00bb Quizzes",
+      "feed_url": "https://www.radiotimes.com/quizzes/feed",
+      "website_url": "https://www.radiotimes.com/quizzes/",
+      "description": "All latest articles about Quizzes from Radio Times.",
+      "followers": {
+        "facebook": 272700,
+        "twitter": 110600,
+        "instagram": 46300
+      },
+      "image_url": "https://i1.feedspot.com/8538579.jpg?t=1753091857"
+    }
+  ]
+}

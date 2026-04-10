@@ -172,7 +172,7 @@ export function SelectItem({
       data-slot="select-item"
       {...props}
     >
-      <SelectPrimitive.ItemIndicator className="col-start-1">
+      <SelectPrimitive.ItemIndicator className="col-start-1" data-slot="select-item-indicator">
         <svg
           aria-hidden="true"
           fill="none"
@@ -188,7 +188,7 @@ export function SelectItem({
           <path d="M5.252 12.7 10.2 18.63 18.748 5.37" />
         </svg>
       </SelectPrimitive.ItemIndicator>
-      <SelectPrimitive.ItemText className="col-start-2 min-w-0">
+      <SelectPrimitive.ItemText className="col-start-2 min-w-0" data-slot="select-item-text">
         {children}
       </SelectPrimitive.ItemText>
     </SelectPrimitive.Item>

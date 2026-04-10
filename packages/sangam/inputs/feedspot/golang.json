@@ -1,0 +1,144 @@
+{
+  "category": "Golang",
+  "source_url": "https://rss.feedspot.com/golang_rss_feeds",
+  "feeds": [
+    {
+      "title": "JetBrains",
+      "feed_url": "https://blog.jetbrains.com/go/feed/",
+      "website_url": "https://blog.jetbrains.com/go/",
+      "description": "Gogland, a Go IDE from JetBrains official blog.The World's Leading Vendor of Professional Development Tools.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100
+      },
+      "image_url": "https://i1.feedspot.com/4759924.jpg?t=1608559068"
+    },
+    {
+      "title": "Learn Go Programming",
+      "feed_url": "https://blog.learngoprogramming.com/feed",
+      "website_url": "https://blog.learngoprogramming.com/",
+      "description": "Wanna learn Go? You're in the right place! This will be a series of tutorials to teach you Golang! New tutorial every week!",
+      "followers": {
+        "facebook": 235,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4761299.jpg?t=1608559695"
+    },
+    {
+      "title": "GolangCode",
+      "feed_url": "https://www.golangcode.com/index.xml",
+      "website_url": "https://www.golangcode.com/",
+      "description": "#Go snippets for when you might need them. Tiny and to the point. A how-to guide of sorts, with less teaching more showing of code - great for people in full flow, coding away.",
+      "followers": {
+        "twitter": 199
+      },
+      "image_url": "https://i1.feedspot.com/4761408.jpg?t=1608559049"
+    },
+    {
+      "title": "Applied Go on",
+      "feed_url": "https://appliedgo.net/index.xml",
+      "website_url": "https://appliedgo.net/",
+      "description": "You are a Go programmer. You finished working through the basic Go documents and tutorials. And now you are searching for a way to broaden your knowledge and deepen your skills. In this Blog, I regularly publish tutorials on applying Go to selected IT topics, ranging from Computer Science fundamentals to today's bleeding edge technologies.",
+      "followers": {
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/4775639.jpg?t=1608559066"
+    },
+    {
+      "title": "Go Time: Golang, Software Engineering",
+      "feed_url": "https://changelog.com/gotime/feed",
+      "website_url": "https://changelog.com/gotime",
+      "description": "Your source for wide-ranging discussions from all around the Go community. Panelists include Mat Ryer, Jon Calhoun, Natalie Pistunovich, Johnny Boursiquot, Angelica Hill, Kris Brandow, and Ian Lopshire.We discuss cloud infrastructure, distributed systems, microservices, Kubernetes, Docker... oh and also Go!Some people search for GoTime or GoTimeFM and can't find the show, so now the strings GoTime and GoTimeFM are in our description too.",
+      "followers": {
+        "twitter": 32000,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/4759910.jpg?t=1752409013"
+    },
+    {
+      "title": "Golang By Example Blog",
+      "feed_url": "https://golangbyexample.com/feed/",
+      "website_url": "https://golangbyexample.com/blog/",
+      "description": "Blog posts cover Golang basics, Golang advanced topics, design patterns, and Data structures in Golang with examples.",
+      "followers": {
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/5322758.jpg?t=1631876386"
+    },
+    {
+      "title": "Jajal Doang",
+      "feed_url": "https://www.jajaldoang.com/index.xml",
+      "website_url": "https://www.jajaldoang.com/",
+      "description": "Covers articles related to software engineering with Golang as primary topic. Jajal Doang blog also contains other topics related to software engineer in general.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5329770.jpg?t=1633949850"
+    },
+    {
+      "title": "Golang",
+      "feed_url": "https://golang.ch/feed/",
+      "website_url": "https://golang.ch/",
+      "description": "Golang News, Libraries, Apps & more. golang News Blog for Go Dev's",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4761320.jpg?t=1608559106"
+    },
+    {
+      "title": "All things Tech",
+      "feed_url": "https://mariadesouza.com/category/golang/feed/",
+      "website_url": "https://mariadesouza.com/category/golang/",
+      "description": "GoLang tutorial",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4761353.jpg?t=1608559279"
+    },
+    {
+      "title": "GOSAMPLES",
+      "feed_url": "https://gosamples.dev/index.xml",
+      "website_url": "https://gosamples.dev/",
+      "description": "GOSAMPLES is a library of Golang code snippets that let you solve everyday code problems, providing answers through well thought and real code examples with extensive explanation.",
+      "followers": {
+        "facebook": 160,
+        "twitter": 151
+      },
+      "image_url": "https://i1.feedspot.com/5277308.jpg?t=1620285438"
+    },
+    {
+      "title": "Trinhhieu668",
+      "feed_url": "https://trinhhieu668.wordpress.com/category/big-data/golang/feed/",
+      "website_url": "https://trinhhieu668.wordpress.com/category/big-data/golang/",
+      "description": "My name's Hieu, i was a student at Ha Noi university of science and technology. And now, I am working at Azstack Pte.ltd company as backend developer and system admin. I really like learn more about new technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4761289.jpg?t=1608559535"
+    },
+    {
+      "title": "The Go Programming Language Blog",
+      "feed_url": "https://blog.golang.org/feed.atom?format=xml",
+      "website_url": "https://go.dev/blog/",
+      "description": "The Official blog page of Go Programming Language. Get the latest update, news, libraries and much more.",
+      "followers": {
+        "twitter": 172800
+      },
+      "image_url": "https://i1.feedspot.com/4467603.jpg?t=1608559057"
+    },
+    {
+      "title": "With Code Example",
+      "feed_url": "https://withcodeexample.com/feed",
+      "website_url": "https://withcodeexample.com/",
+      "description": "Learn Golang with the help of comprehensive guides and practical examples on the Golang With Code Example blog. Surf through a ream of articles and compelling posts on Golang arrays, appending, functions, code reviews, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5653313.jpg?t=1692699333"
+    },
+    {
+      "title": "Golangbot",
+      "feed_url": "https://golangbot.com/rss/",
+      "website_url": "https://golangbot.com/",
+      "description": "Golang tutorials for beginners with detailed explanation and lots of code samples. Learn Go step by step from the basics with these simple tutorials.",
+      "followers": {
+        "facebook": 652,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4759936.jpg?t=1608559053"
+    }
+  ]
+}

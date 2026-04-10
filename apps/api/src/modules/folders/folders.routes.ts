@@ -27,12 +27,8 @@ export function registerFolderRoutes(app: Elysia) {
     .post(
       "/folders",
       async (context) => {
-        const { body, db, logger, set, userId } = v1HandlerContext(context);
-        const name =
-          typeof body === "object" && body !== null && "name" in body
-            ? String((body as { name: unknown }).name)
-            : "";
-        const created = await createFolder(db, userId, name);
+        const { body, db, logger, set, userId } = v1HandlerContext<{ name: string }>(context);
+        const created = await createFolder(db, userId, body.name);
         logger.info("folders.created", { userId, folderId: created.id });
         set.status = 201;
         return created;
@@ -55,12 +51,12 @@ export function registerFolderRoutes(app: Elysia) {
     .put(
       "/folders/:folderId",
       async (context) => {
-        const { body, db, logger, params, userId } = v1HandlerContext(context);
-        const name =
-          typeof body === "object" && body !== null && "name" in body
-            ? String((body as { name: unknown }).name)
-            : "";
-        const updated = await updateFolder(db, userId, params.folderId, name);
+        const { body, db, logger, params, userId } = v1HandlerContext<
+          { name: string },
+          Record<string, unknown>,
+          { folderId: string }
+        >(context);
+        const updated = await updateFolder(db, userId, params.folderId, body.name);
         logger.info("folders.updated", { userId, folderId: params.folderId });
         return updated;
       },

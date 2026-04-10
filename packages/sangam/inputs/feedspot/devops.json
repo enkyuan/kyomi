@@ -1,0 +1,770 @@
+{
+  "category": "DevOps",
+  "source_url": "https://rss.feedspot.com/devops_rss_feeds",
+  "feeds": [
+    {
+      "title": "DevOps.com",
+      "feed_url": "https://devops.com/feed/",
+      "website_url": "https://devops.com/",
+      "description": "DevOps.com has the largest collection of original content related to DevOps on the web. DevOps is changing the way IT interacts with itself, other business units and customers.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 57700
+      },
+      "image_url": "https://i1.feedspot.com/4611721.jpg?t=1612783669"
+    },
+    {
+      "title": "Atlassian \u00bb DevOps",
+      "feed_url": "https://www.atlassian.com/blog/devops/feed",
+      "website_url": "https://www.atlassian.com/blog/devops",
+      "description": "Atlassian builds software that helps teams of all sizes build better products and services. Their suite of product management and product development software manages every aspect of a product's lifecycle, from concept to launch. Follow this blog to get tips, ideas, and how-tos for DevOps practices.",
+      "followers": {
+        "facebook": 391000,
+        "twitter": 104600
+      },
+      "image_url": "https://i1.feedspot.com/4900408.jpg?t=1612783715"
+    },
+    {
+      "title": "The Agile Admin",
+      "feed_url": "https://theagileadmin.com/feed/",
+      "website_url": "https://theagileadmin.com/",
+      "description": "The agile admins are Ernest Mueller, James Wickett, Karthik Gaekwad, and Peco Karayanev, a group of experienced engineers who met while working at National Instruments in Austin, TX. It is our vision to help turn systems work into a recognized and effective discipline. Some of our hot topics in this regard include DevOps and SRE, lean and agile operations, cloud computing, infrastructure automation, web security, monitoring and observability, web performance optimization, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/108435.jpg?t=1659098172"
+    },
+    {
+      "title": "Docker.com \u00bb All Blogs",
+      "feed_url": "https://www.docker.com/feed/",
+      "website_url": "https://www.docker.com/blog/",
+      "description": "Docker is an open platform for developers and system administrators to build, ship and run distributed applications. It enables developers and IT operations to build, secure and manage applications without technology or infrastructure lock-in. Follow this blog to stay up to date on Docker news, updates and learn from experts to get the most out of Docker.",
+      "followers": {
+        "facebook": 97800,
+        "twitter": 524300
+      },
+      "image_url": "https://i1.feedspot.com/5426898.jpg?t=1747391348"
+    },
+    {
+      "title": "Azure DevOps Blog",
+      "feed_url": "https://devblogs.microsoft.com/devops/feed/",
+      "website_url": "https://devblogs.microsoft.com/devops/",
+      "description": "Learn how DevOps unifies people, processes, and technology to bring better products to customers faster. Get the latest information and insights on DevOps, Git, and Agile updates from the team building Azure DevOps.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 83500
+      },
+      "image_url": "https://i1.feedspot.com/4874104.jpg?t=1642163685"
+    },
+    {
+      "title": "DevOps Online",
+      "feed_url": "https://devopsonline.co.uk/feed/",
+      "website_url": "https://devopsonline.co.uk/",
+      "description": "DevOps Online is your industry news website. We provide you with the latest news and thought leadership straight from the global world of DevOps. Follow us as we offer white papers, research, reports, trends, conferences & more on DevOps.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 11500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4611677.jpg?t=1612783680"
+    },
+    {
+      "title": "InfoQ \u00bb Devops",
+      "feed_url": "https://feed.infoq.com/Devops/articles/",
+      "website_url": "https://www.infoq.com/Devops/articles/",
+      "description": "Find the latest DevOps articles written by software developers for software developers. InfoQ provides software engineers with the opportunity to share experiences gained using innovator and early adopter stage techniques and technologies with the wider industry.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5360906.jpg?t=1641550723"
+    },
+    {
+      "title": "Urolime Blogs \u00bb DevOps",
+      "feed_url": "https://www.urolime.com/blogs/category/devops/feed/",
+      "website_url": "https://www.urolime.com/blogs/category/devops/",
+      "description": "Urolime Blog is the go-to place for DevOps, Cloud, Kubernetes News, and Updates. This segment in particular showcases all the latest trends in DevOps and DevSecOps. Urolime is one of the leading DevOps consulting companies with a handful of experience in supporting customers around the globe in adopting DevOps practices.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 657,
+        "instagram": 270
+      },
+      "image_url": "https://i1.feedspot.com/5587794.jpg?t=1685610868"
+    },
+    {
+      "title": "BestDevOps.com",
+      "feed_url": "https://www.bestdevops.com/feed/",
+      "website_url": "https://www.bestdevops.com/",
+      "description": "Learn and Get common doubts concerning DevOps, DevSecOps, DataOps, and AIOps solved from BestDevOps.com, a fully online resource, and classroom offering DevOps education to learners of all ages across the globe.",
+      "followers": {
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/5587792.jpg?t=1685610849"
+    },
+    {
+      "title": "Security Boulevard Blog \u00bb DevOps",
+      "feed_url": "https://securityboulevard.com/category/blogs/devops/feed/",
+      "website_url": "https://securityboulevard.com/category/blogs/devops/",
+      "description": "Explore the latest industry from the DevOps and DevSecOps world in the Security Boulevard Blog. Security Boulevard is the home of the Security Bloggers Network (SBN), promoting and distributing some of the leading bloggers' content in the security space.",
+      "followers": {
+        "facebook": 819,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5587800.jpg?t=1685610914"
+    },
+    {
+      "title": "DevOps.dev",
+      "feed_url": "https://blog.devops.dev/feed",
+      "website_url": "https://blog.devops.dev/",
+      "description": "Devops.dev is a community of DevOps enthusiasts sharing insight, stories, and the latest development in the field. Here you will find quality tutorials, how-to installation guides, useful code scripts and FAQs and many more insightful ideas.",
+      "followers": {
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5587783.jpg?t=1685610804"
+    },
+    {
+      "title": "ServiceNow Community \u00bb DevOps Blog",
+      "feed_url": "https://www.servicenow.com/community/s/cgfwn76974/rss/board?board.id=devops-blog",
+      "website_url": "https://www.servicenow.com/community/devops-blog/bg-p/devops-blog",
+      "description": "DevOps blog articles from ServiceNow Employees elaborating on the latest seminars from ServiceNow, Automation Talk, DevOps capabilities, and other topics. ServiceNow is a cloud-based platform and solutions that help digitize and unify organizations so that they can find smarter, faster, better ways to make work flow.",
+      "followers": {
+        "facebook": 38500,
+        "twitter": 51400,
+        "instagram": 58600
+      },
+      "image_url": "https://i1.feedspot.com/5587801.jpg?t=1685611377"
+    },
+    {
+      "title": "DevOpsSchool Blog",
+      "feed_url": "https://www.devopsschool.com/blog/feed/",
+      "website_url": "https://www.devopsschool.com/blog/",
+      "description": "Learn DevOps tricks and access the best tools for DevOps tasks via the latest articles in this blog. DevOpsSchool is a leading training provider/consultant company established together by a team of expert IT professionals. We provide training, support and consulting for DevOps, Big Data, Cloud and others to professionals & to enterprises.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 309,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5587796.jpg?t=1685611007"
+    },
+    {
+      "title": "BuildPiper",
+      "feed_url": "https://www.buildpiper.io/blogs/feed/",
+      "website_url": "https://www.buildpiper.io/blogs/",
+      "description": "Explore DevOps techniques that help manage to streamline architecture and CI/CD flows along with news updates from BuildPiper in this blog. BuildPiper is a niche Cloud & DevSecOps Engineering company that empowers business teams through their microservices delivery platform, Read more in the blog to stay connected.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5587798.jpg?t=1685610899"
+    },
+    {
+      "title": "Gearset Blog",
+      "feed_url": "https://gearset.com/rss.xml",
+      "website_url": "https://gearset.com/blog/",
+      "description": "Gather News, insights & events in the world of Salesforce DevOps. The Gearset blog is designed to be the standard news and information source for Devops. Gearset is a leading DevOps tool for Salesforce, with integrations with leading providers such as GitHub, Azure DevOps and Atlassian.",
+      "followers": {
+        "facebook": 87,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5587781.jpg?t=1685610796"
+    },
+    {
+      "title": "DEVOPSdigest Blog",
+      "feed_url": "https://www.devopsdigest.com/blog/feed",
+      "website_url": "https://www.devopsdigest.com/blog",
+      "description": "DEVOPSdigest's BizDevOps section is packed with News, Trends, from the DevOps culture. Catch details on Upcoming seminars, Analyst Reports, White papers, and more. DEVOPSdigest is an IT community blog that covers DevOps and related technologies and topics.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5587789.jpg?t=1685610835"
+    },
+    {
+      "title": "xMatters Blog \u00bb DevOps & SRE",
+      "feed_url": "https://www.xmatters.com/blog/category/devops-sre/feed",
+      "website_url": "https://www.xmatters.com/blog/category/devops-sre",
+      "description": "The right place for those interested in learning more about DevOps. Learn all you need to know about DevOps on the xMatters blog! Read here. xMatters combines with Everbridge Critical Event Management to power the industry's most robust enterprise-wide platform to enable organizations to manage digital and physical threats.",
+      "followers": {
+        "facebook": 894,
+        "twitter": 3000,
+        "instagram": 84
+      },
+      "image_url": "https://i1.feedspot.com/5587804.jpg?t=1685619614"
+    },
+    {
+      "title": "Appinventiv \u00bb DevOps",
+      "feed_url": "https://appinventiv.com/blog/category/devops/feed/",
+      "website_url": "https://appinventiv.com/blog/category/devops/",
+      "description": "Our experts dive into the latest tech news and events surrounding DevOps. Learn why adopting DevOps is extremely important for all modern industries and how it can speed up your companies efficiency rate. Appinventiv is a leading global App Development Firm empowering Startups & Fortune 500 Companies to bridge the gap between smaller tech cos.",
+      "followers": {
+        "facebook": 21300,
+        "twitter": 6000,
+        "instagram": 13500
+      },
+      "image_url": "https://i1.feedspot.com/5587788.jpg?t=1685610832"
+    },
+    {
+      "title": "DBI Services Blog",
+      "feed_url": "https://www.dbi-services.com/blog/category/devops/feed/",
+      "website_url": "https://www.dbi-services.com/blog/category/devops/",
+      "description": "Read all articles tackling the latest topics and trends from the DevOps sector in DBI's blog. Stay up-to-speed on what's happening through expert speculation and news. DBI Services is a company specializing in IT consulting and services. Its major focus is on innovative and efficient data infrastructures and platforms.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5632056.jpg?t=1689922377"
+    },
+    {
+      "title": "Bitrise Blog",
+      "feed_url": "https://bitrise.io/blog/post/rss.xml",
+      "website_url": "https://bitrise.io/blog",
+      "description": "Bitrise is a top mobile CI/CD platform, that streamlines build, testing, and deployment for mobile apps. It offers a user-friendly interface, robust integrations, and scalable infrastructure to simplify development and ensure the efficient deliver of high-quality apps.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5655381.jpg?t=1692852927"
+    },
+    {
+      "title": "Direct DevOps Blog",
+      "feed_url": "https://directdevops.blog/feed/",
+      "website_url": "https://directdevops.blog/",
+      "description": "Direct DevOps blog is a DevOps blog designed to simplify & explain crucial concepts and ideas from DevOps. Explore a library of classroom notes and other resources on DevOps, AWS, Azure, Kubernetes, Google Cloud, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5587786.jpg?t=1685611093"
+    },
+    {
+      "title": "ClickIT Blog",
+      "feed_url": "https://www.clickittech.com/feed/",
+      "website_url": "https://www.clickittech.com/blog/",
+      "description": "Browse ClickIT's DevOps & Software Development blog for illuminating perspectives and industrial thought leadership on DevOps, AWS, Cloud Infrastructure and other systems. ClickIT is a Mexican IT and Software Outsourcing Company providing top-notch solutions to all-sized companies around the world.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 324,
+        "instagram": 603
+      },
+      "image_url": "https://i1.feedspot.com/5587779.jpg?t=1685610787"
+    },
+    {
+      "title": "Red Hat Blog",
+      "feed_url": "https://www.redhat.com/en/rss/blog",
+      "website_url": "https://www.redhat.com/en/blog/",
+      "description": "This section features articles on DevOps. We're the world's leading provider of enterprise open source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies.",
+      "followers": {
+        "facebook": 560400,
+        "twitter": 297700
+      },
+      "image_url": "https://i1.feedspot.com/5360908.jpg?t=1642228022"
+    },
+    {
+      "title": "InformationWeek",
+      "feed_url": "https://informationweek.com/rss.xml",
+      "website_url": "https://www.informationweek.com/",
+      "description": "Articles on DevOps, covering major news, reports, and more. InformationWeek provides a trusted environment for IT decision-makers to learn from experienced journalists, subject matter experts, and their peers to explore new ideas, find answers to their business technology questions, and solve their most pressing problems.",
+      "followers": {
+        "facebook": 49900,
+        "twitter": 108500
+      },
+      "image_url": "https://i1.feedspot.com/5360913.jpg?t=1642226405"
+    },
+    {
+      "title": "Devon Blog \u00bb DevOps",
+      "feed_url": "https://devonblog.com/category/devops/feed/",
+      "website_url": "https://devonblog.com/category/devops/",
+      "description": "DevOps guides and tutorials for the uninitiated as well as deep advanced concepts and news updates regarding DevOps tools. DevOn is a technology company which accelerates an enterprise's journey to success in the digital world DevOps consultancy & transformation.",
+      "followers": {
+        "facebook": 284,
+        "twitter": 799
+      },
+      "image_url": "https://i1.feedspot.com/5587795.jpg?t=1685610874"
+    },
+    {
+      "title": "BizTech Magazine \u00bb DevOps",
+      "feed_url": "https://biztechmagazine.com/taxonomy/term/1512/feed?_wrapper_format=html",
+      "website_url": "https://biztechmagazine.com/management/devops",
+      "description": "Learn how Value management through DevOps and Platform Engineering can benefit IT companies. Explore all articles tagged DevOps. BizTech magazine explores technology and business issues that IT leaders and business managers face when they're evaluating and implementing a solution. BizTech is published by CDW corporation.",
+      "followers": {
+        "facebook": 116300,
+        "twitter": 43800,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5587793.jpg?t=1685610854"
+    },
+    {
+      "title": "Building Cloud cum DevOps architects",
+      "feed_url": "https://vskumar.blog/feed/",
+      "website_url": "https://vskumar.blog/",
+      "description": "Solutions and Practices for all things DevOps and Cloud. V S Kumar's Blog is a complete resource hub for DEvOPs architects, providing comprehensive coaching and articulated insights on key concepts, emerging tech and industry trends, Exhaustive guides on a number of topics from Machine Learning and AI.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5596783.jpg?t=1686657856"
+    },
+    {
+      "title": "KodeKloud Blog",
+      "feed_url": "https://kodekloud.com/blog/rss/",
+      "website_url": "https://kodekloud.com/blog/",
+      "description": "Read KodeKloud's latest thoughts and learn tips on all things related to DevOps, including Azure, Docker to Kubernetes. Learn all about DevOps and read about ways to improve your skills. KodeKloud is used by hundreds of thousands of people around the world. Learn more today.",
+      "followers": {
+        "twitter": 7700,
+        "instagram": 33500
+      },
+      "image_url": "https://i1.feedspot.com/5424073.jpg?t=1685610977"
+    },
+    {
+      "title": "Coveros Blog",
+      "feed_url": "https://www.coveros.com/feed/",
+      "website_url": "https://www.coveros.com/blog/",
+      "description": "Insight and analysis from thought leaders in agile development and testing, DevOps, security, test automation, and more. Coveros is a leading DevOps services expanse, with a track record for building, testing, and deploying thousands of enterprise-grade applications.",
+      "followers": {
+        "facebook": 118
+      },
+      "image_url": "https://i1.feedspot.com/5404209.jpg?t=1685611162"
+    },
+    {
+      "title": "Dynatrace \u00bb Devops",
+      "feed_url": "https://www.dynatrace.com/news/category/devops/feed/",
+      "website_url": "https://www.dynatrace.com/news/category/devops/",
+      "description": "This section of Dynatrace is dedicated to articles on DevOps. Dynatrace provides software intelligence to simplify cloud complexity and accelerate digital transformation through our all-in-one platform powered with automatic and intelligent observability.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 18700,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5360912.jpg?t=1641551459"
+    },
+    {
+      "title": "DEVOPSdigest",
+      "feed_url": "https://www.devopsdigest.com/industry-news/feed",
+      "website_url": "https://www.devopsdigest.com/",
+      "description": "DEVOPSdigest is an IT community blog that covers DevOps and related technologies and topics. DEVOPSdigest is one of the most popular websites focused on DevOps, and is also committed to providing the latest DevOps industry news. DEVOPSdigest is more than just an online magazine. It is a community in the DevOps space where analysts and consultants, users and vendors come together to discuss and debate the industry's hot topics, inform and educate each other, and ultimately strengthen and advance DevOps.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4998857.jpg?t=1685083554"
+    },
+    {
+      "title": "CodemotionWorld \u00bb DevOps",
+      "feed_url": "https://www.codemotion.com/magazine/devops/feed/",
+      "website_url": "https://www.codemotion.com/magazine/devops/",
+      "description": "All our expertise and insights on DevOps and GitOps tools can be found here. Stay updated with new posts on Automation, Machine Learning, and other Leading tech avenues. Codemotion is the leading platform that supports developers' professional growth and helps companies connect with them.",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 2300,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5587802.jpg?t=1685610922"
+    },
+    {
+      "title": "DevPro Journal \u00bb DevOps",
+      "feed_url": "https://www.devprojournal.com/category/software-development-trends/devops/feed/",
+      "website_url": "https://www.devprojournal.com/category/software-development-trends/devops/",
+      "description": "Inspirational and actionable thought leadership content to assist software developer leaders in growing a profitable, sustainable, and fulfilling business. DevPro Journal was created to fill a void in the B2B IT market with inspirational and actionable thought leadership content to assist software developer leaders in growing a profitable, sustainable, and fulfilling business.",
+      "followers": {
+        "facebook": 237,
+        "twitter": 327
+      },
+      "image_url": "https://i1.feedspot.com/5576577.jpg?t=1685083179"
+    },
+    {
+      "title": "FedTech Magazine \u00bb DevOps",
+      "feed_url": "https://fedtechmagazine.com/taxonomy/term/1512/feed?_wrapper_format=html",
+      "website_url": "https://fedtechmagazine.com/management/devops",
+      "description": "Stay current on the latest word about DevOps and DevSevOps. Learn how DevSecOps can benefit and defend your organization from API attacks. FedTech magazine covers and sheds light on the technology issues and successes that federal IT leaders and managers go through when implementing a solution.",
+      "followers": {
+        "facebook": 116300,
+        "twitter": 43800,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5587784.jpg?t=1685610808"
+    },
+    {
+      "title": "Spacelift Blog",
+      "feed_url": "https://spacelift.io/rss",
+      "website_url": "https://spacelift.io/blog",
+      "description": "Level up your IaC knowledge. Stay up to date with educational DevOps guides & news in infrastructure as code, cloud & more! Spacelift is a sophisticated and compliant infrastructure delivery platform focusing on openness, flexibility, and customization aiming for power users.",
+      "followers": {
+        "facebook": 119,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5642750.jpg?t=1691059363"
+    },
+    {
+      "title": "Scloud",
+      "feed_url": "https://scloud.work/feed/",
+      "website_url": "https://scloud.work/",
+      "description": "I am Florian Salzmann, a passionate Microsoft MVP and consultant from Switzerland. My focus is on the Microsoft cloud platforms, where I am particularly specialized in endpoint management with Intune.",
+      "followers": {
+        "twitter": 1000,
+        "instagram": 413
+      },
+      "image_url": "https://i1.feedspot.com/5657369.jpg?t=1692964800"
+    },
+    {
+      "title": "AWS \u00bb DevOps",
+      "feed_url": "https://aws.amazon.com/blogs/devops/feed/",
+      "website_url": "https://aws.amazon.com/blogs/devops/",
+      "description": "Amazon Web Services (AWS) delivers a set of services that together form a reliable, scalable, and inexpensive computing platform 'in the cloud'.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4522669.jpg?t=1642164005"
+    },
+    {
+      "title": "Arrested DevOps",
+      "feed_url": "https://www.arresteddevops.com/episode/index.xml",
+      "website_url": "https://www.arresteddevops.com/",
+      "description": "Arrested DevOps is the podcast that helps you achieve understanding, develop good practices, and operate your team and organization for maximum DevOps awesomeness.",
+      "followers": {
+        "facebook": 966,
+        "twitter": 9700,
+        "instagram": 109
+      },
+      "image_url": "https://i1.feedspot.com/4900207.jpg?t=1752408472"
+    },
+    {
+      "title": "BMC Blogs \u00bb DevOps",
+      "feed_url": "https://www.bmc.com/blogs/categories/devops/feed",
+      "website_url": "https://www.bmc.com/blogs/categories/devops/",
+      "description": "BMC helps customers run and reinvent their businesses with open, scalable, and modular solutions to complex IT problems. Get the latest posts and news about DevOps by following this feed.",
+      "followers": {
+        "facebook": 65400,
+        "twitter": 49500
+      },
+      "image_url": "https://i1.feedspot.com/5055334.jpg?t=1642164908"
+    },
+    {
+      "title": "Martin Fowler",
+      "feed_url": "https://www.martinfowler.com/feed.atom",
+      "website_url": "https://www.martinfowler.com/",
+      "description": "I am Martin Fowler: an author, speaker, essentially a loud-mouthed pundit on the topic of software development, primarily for Enterprise Applications. I've become a big fan of agile approaches and the resulting focus on evolutionary software architecture.",
+      "followers": {
+        "twitter": 349200
+      },
+      "image_url": "https://i1.feedspot.com/109443.jpg?t=1659098652"
+    },
+    {
+      "title": "Invensis Learning Blog | DevOps",
+      "feed_url": "https://www.invensislearning.com/blog/devops/feed/",
+      "website_url": "https://www.invensislearning.com/blog/devops/",
+      "description": "A practical, one-stop-shop destination to the blended world of software development and IT operations. It combines the best DevOps resources in the form of blogs, articles, infographics, free downloads, and case studies to help you sail through DevOps success.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 451
+      },
+      "image_url": "https://i1.feedspot.com/5263808.jpg?t=1617281635"
+    },
+    {
+      "title": "Kovair \u00bb DevOps Blog",
+      "feed_url": "https://www.kovair.com/blog/category/devops/feed/",
+      "website_url": "https://www.kovair.com/blog/category/devops/",
+      "description": "Read the latest information, news, and articles on DevOps from Kovair engineers and stay up-to-date with recent happenings.",
+      "followers": {
+        "facebook": 855,
+        "twitter": 998
+      },
+      "image_url": "https://i1.feedspot.com/5263820.jpg?t=1617282674"
+    },
+    {
+      "title": "Rapyder",
+      "feed_url": "https://www.rapyder.com/feed/",
+      "website_url": "https://www.rapyder.com/blogs/",
+      "description": "Latest DevOps Blogs, articles & resources. Read AWS DevOps case study, whitepapers & industry articles by industry experts.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/5426876.jpg?t=1659100436"
+    },
+    {
+      "title": "Devstringx Technologies \u00bb DevOps",
+      "feed_url": "https://www.devstringx.com/category/devops/feed",
+      "website_url": "https://www.devstringx.com/category/devops",
+      "description": "Troubleshoot all your DevOps problems and engage in meaningful learning techniques with the help of guides and resources provided in this part of Devstringx Technologies. Devstringx Technologies is India's most recommended IT company for the software product and mobile app development and independent software testing services.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 37,
+        "instagram": 694
+      },
+      "image_url": "https://i1.feedspot.com/5587806.jpg?t=1685611116"
+    },
+    {
+      "title": "Praveen Kumar Sreeram's Blog \u00bb Azure DevOps",
+      "feed_url": "https://praveenkumarsreeram.com/category/azure-devops/feed/",
+      "website_url": "https://praveenkumarsreeram.com/category/azure-devops/",
+      "description": "Explore Tips and Tricks for Azure DevOps. Learn how to optimize various tasks and generate business insights. Blogger Praveen Kumar Sreeram is an Author, Microsoft Certified Trainer, and a certified Azure Solutions architect. He likes writing articles and helping community members mostly on Microsoft Azure.",
+      "followers": {
+        "facebook": 425,
+        "twitter": 346
+      },
+      "image_url": "https://i1.feedspot.com/5587791.jpg?t=1685611151"
+    },
+    {
+      "title": "Knoldus Blogs \u00bb DevOps",
+      "feed_url": "https://blog.knoldus.com/category/devops/feed/",
+      "website_url": "https://blog.knoldus.com/category/devops/",
+      "description": "Insights and Perspectives on DevOps and Cloud Engineering to keep you updated. Knoldus, now part of NashTech is a global technology talent solutions business. We deliver smart solutions that solve business challenges and create value for commercial organizations.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1700,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/5587799.jpg?t=1685611193"
+    },
+    {
+      "title": "Devopsdays Blog",
+      "feed_url": "https://devopsdays.org/blog/index.xml",
+      "website_url": "https://devopsdays.org/blog/",
+      "description": "Recent articles in the devopsdays blog on DevOpsDays. Find news, industry opinions and more updates. Devopsdays is a worldwide series of technical conferences covering topics of software development, IT infrastructure operations, and the intersection between them. Each event is run by volunteers from the local area.",
+      "followers": {
+        "facebook": 141,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5587782.jpg?t=1685611324"
+    },
+    {
+      "title": "DevOps'ish",
+      "feed_url": "https://devopsish.com/index.xml",
+      "website_url": "https://devopsish.com/",
+      "description": "DevOps'ish is a news and content website covering Cloud Native, DevOps, Open Source, industry news, culture, and the 'ish between. Each post comes with a comprehensive weekly recap of the Tech and DevOps world, bringing readers up-to date all the latest happenings.",
+      "followers": {
+        "twitter": 17700
+      },
+      "image_url": "https://i1.feedspot.com/5587780.jpg?t=1685610791"
+    },
+    {
+      "title": "Sourced Group Blog",
+      "feed_url": "https://www.sourcedgroup.com/feed/",
+      "website_url": "https://www.sourcedgroup.com/resources-blog/",
+      "description": "This is the Sourced Group resources hub, where you can find whitepapers, videos, case studies, and more, developed to help you on your cloud journey. Sourced is a rapidly-growing global consultancy that provides consulting services to migrate enterprise customers to hyper-scale cloud providers.",
+      "followers": {
+        "twitter": 187
+      },
+      "image_url": "https://i1.feedspot.com/5192572.jpg?t=1685610968"
+    },
+    {
+      "title": "High Scalability",
+      "feed_url": "https://feeds.feedburner.com/HighScalability",
+      "website_url": "https://highscalability.com/",
+      "description": "High Scalability tries to bring together all the lore, art, science, practice, and experience of building scalable websites into one place so you can learn how to build your website with confidence.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5426844.jpg?t=1659099504"
+    },
+    {
+      "title": "Gruntwork Blog",
+      "feed_url": "https://blog.gruntwork.io/feed",
+      "website_url": "https://blog.gruntwork.io/",
+      "description": "Gruntwork provides DevOps as a Service. We can get you up and running on AWS with DevOps best practices & world-class infrastructure in 1-2 weeks.",
+      "followers": {
+        "facebook": 308,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5426819.jpg?t=1659098373"
+    },
+    {
+      "title": "Roost AI",
+      "feed_url": "https://roost.ai/blog/rss.xml",
+      "website_url": "https://roost.ai/blog",
+      "description": "Learn how environments as a service (EaaS) help developers to increase velocity and improve pull request merge success. Roost is an 'Environments as a Service' platform that creates instant and ephemeral pre-production environments which automatically validate applications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5386759.jpg?t=1648791700"
+    },
+    {
+      "title": "All Day DevOps",
+      "feed_url": "https://www.alldaydevops.com/blog/rss.xml",
+      "website_url": "https://www.alldaydevops.com/blog",
+      "description": "All Day DevOps is an online community responsible for creating the world's largest DevOps conference. Follow us and stay up to date on all things DevOps by AllDayDevOps.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5263803.jpg?t=1642231378"
+    },
+    {
+      "title": "DevOps Work Tutorials",
+      "feed_url": "https://workatdevops.blogspot.com/feeds/posts/default",
+      "website_url": "https://workatdevops.blogspot.com/",
+      "description": "DevOps interview question jenkins Ansible GIT AWS Terraform Docker Kubernets Python Shell script Tomcat Apache WebLogic Nginx Linux SSL Nagios Maven.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5130723.jpg?t=1642233058"
+    },
+    {
+      "title": "DevOps ABCs Blog",
+      "feed_url": "https://blog.devopsabcs.com/index.php/feed/",
+      "website_url": "https://blog.devopsabcs.com/",
+      "description": "A blog covering DevOps Best practices and advice.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5263827.jpg?t=1617283317"
+    },
+    {
+      "title": "Valewood Blog",
+      "feed_url": "https://www.valewood.org/blog/index.xml",
+      "website_url": "https://www.valewood.org/blog/",
+      "description": "A DevOps Blog is focused on the DevOps methodology and helping the industry understand how to improve their use of DevOps.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5466968.jpg?t=1668499260"
+    },
+    {
+      "title": "Czerniga.it",
+      "feed_url": "https://www.czerniga.it/pl/feed/",
+      "website_url": "https://www.czerniga.it/",
+      "description": "DevOps in the clouds - the technological blog of Patrycjusz Czerniga. Articles cover AWS, CI/CD, Docker, Kubernetes, and more.",
+      "followers": {
+        "facebook": 76,
+        "twitter": 23
+      },
+      "image_url": "https://i1.feedspot.com/5372235.jpg?t=1644920247"
+    },
+    {
+      "title": "DBmaestro",
+      "feed_url": "https://www3.dbmaestro.com/blog/rss.xml",
+      "website_url": "https://www3.dbmaestro.com/blog",
+      "description": "An industry leader in database DevOps, DBmaestro accelerates release cycles & supports agility across the entire IT ecosystem. DBmaestro brings DevOps best practices to the database, delivering a new level of speed, efficiency, security and process integration.",
+      "followers": {
+        "facebook": 375,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4994536.jpg?t=1642232286"
+    },
+    {
+      "title": "IT Revolution Blog",
+      "feed_url": "https://itrevolution.com/devops-blog/feed/",
+      "website_url": "https://dzone.com/devops-and-cicd",
+      "description": "IT Revolution assembles technology leaders and practitioners to identify and amplify IT best practices through publishing, events, and research. IT Revolution has continued to elevate the practice of IT organizations through DevOps principles and practices.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 52600
+      },
+      "image_url": "https://i1.feedspot.com/4900215.jpg?t=1612783695"
+    },
+    {
+      "title": "Palark Blog",
+      "feed_url": "https://blog.palark.com/feed/",
+      "website_url": "https://blog.palark.com/",
+      "description": "Discover DevOps & Kubernetes news and goodies in the Palark blog. Read these articles to get familiar with a myriad of Kubernetes tools and Github repos. Palark is a German IT company specializing in the Cloud-native Kubernetes space.",
+      "followers": {
+        "facebook": 96,
+        "twitter": 71
+      },
+      "image_url": "https://i1.feedspot.com/5587803.jpg?t=1685610928"
+    },
+    {
+      "title": "Devops University Blog",
+      "feed_url": "https://devopsuniversity.org/feed/",
+      "website_url": "https://devopsuniversity.org/blogs/",
+      "description": "Information blogs and articles on various DevOps and Cloud Technologies like AWS Cloud, Google Cloud Platform, DevOps, CI-CD, Continuous Deployment, Site Reliability Engineering, etc. DevOps University is a dedicated learning space for enhancing your DevOps knowledge and skills.",
+      "followers": {
+        "facebook": 831,
+        "twitter": 25,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5587797.jpg?t=1685610897"
+    },
+    {
+      "title": "SC Media \u00bb DevSecOps",
+      "feed_url": "https://www.scworld.com/topic/devsecops/",
+      "website_url": "https://www.scworld.com/topic/devsecops/",
+      "description": "Browse all DevOps articles from SC Media here. SC Media magazine is an essential resource for independent news analysis, forward-looking features, product reviews, events, and professional recognition programs. Sharing insight and guidance in partnership with, and for, top-level information security executives and their technical teams.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 119900
+      },
+      "image_url": "https://i1.feedspot.com/5587785.jpg?t=1685610812"
+    },
+    {
+      "title": "InfoWorld \u00bb Devops",
+      "feed_url": "https://www.infoworld.com/feed/",
+      "website_url": "https://www.infoworld.com/devops/",
+      "description": "A blog by InfoWorld covering DevOps news, how-tos, features, reviews, and videos.",
+      "followers": {
+        "facebook": 72300,
+        "twitter": 88400
+      },
+      "image_url": "https://i1.feedspot.com/5263785.jpg?t=1617280890"
+    },
+    {
+      "title": "Computerworld",
+      "feed_url": "https://www.computerworld.com/feed/",
+      "website_url": "https://www.computerworld.com/uk/enterprise-applications/",
+      "description": "Computerworld UK from IDG offers the latest technology features, analysis & expert advice for IT professionals. Follow this blog that offers DevOps the latest insights, news, tips, and tutorials.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4900312.jpg?t=1612783759"
+    },
+    {
+      "title": "Cherry Servers Blogs & Tutorials",
+      "feed_url": "https://www.cherryservers.com/blog/",
+      "website_url": "https://www.cherryservers.com/blog/",
+      "description": "Cherry Servers DevOps Blog shares in-depth content about the most relevant Cloud industry topics, DevOps culture, tools, and tutorials.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 417
+      },
+      "image_url": "https://i1.feedspot.com/5263736.jpg?t=1617280398"
+    },
+    {
+      "title": "Test House",
+      "feed_url": "https://www.testhouse.net/resources/",
+      "website_url": "https://www.testhouse.net/resources/",
+      "description": "Testhouse is a premier software quality assurance company that provides software testing & Quality assurance services. In this blog, Testhouse provides DevOps information and related practices.",
+      "followers": {
+        "facebook": 923,
+        "twitter": 810
+      },
+      "image_url": "https://i1.feedspot.com/5263730.jpg?t=1642223688"
+    },
+    {
+      "title": "Reblaze \u00bb DevOps",
+      "feed_url": "https://www.reblaze.com/blog/category/devops/feed/",
+      "website_url": "https://www.reblaze.com/blog/category/devops/",
+      "description": "This section features articles on DevOps. Reblaze is a cloud-based, fully managed protective shield for sites and web applications: a comprehensive web security solution.",
+      "followers": {
+        "facebook": 253,
+        "twitter": 556
+      },
+      "image_url": "https://i1.feedspot.com/5361527.jpg?t=1641817593"
+    },
+    {
+      "title": "VaST ITES Inc. Blog",
+      "feed_url": "https://vastites.ca/feed/",
+      "website_url": "https://vastites.ca/blog/",
+      "description": "VaST ITES Inc. is a leading global provider of outsourcing and offshoring DevOps technology solutions transforming your digital experience into cost-effective, functional, user-centric, and innovative technology solutions. Read their latest Thought-leadership, Technology and Industry updates through this blog.",
+      "followers": {
+        "facebook": 5,
+        "instagram": 498
+      },
+      "image_url": "https://i1.feedspot.com/5628051.jpg?t=1689591641"
+    },
+    {
+      "title": "VaporVM \u00bb DevOps",
+      "feed_url": "https://vaporvm.com/latest-blogs/devops/feed/",
+      "website_url": "https://developer.ibm.com/devpractices/devops/blogs/",
+      "description": "Recent articles on How to integrate different tools and components into your DevOps Pipeline. Discover new trends to watch and better DevOps implementation methods from VaporVM in their blog. VaporVM is a rapid-growth technology that helps businesses prepare for the digital age.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/5587805.jpg?t=1685624980"
+    },
+    {
+      "title": "Theodo DevOps Blog",
+      "feed_url": "https://cloud.theodo.com/en/blog/rss.xml",
+      "website_url": "https://cloud.theodo.com/en/blog/",
+      "description": "Padok Blog shares with you knowledge about DevOps and its technologies including Kubernetes, Docker, OpenShift, GCP, AWS, Azure, Terraform, Gitlab, and more.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5263713.jpg?t=1617279732"
+    },
+    {
+      "title": "Nsirap",
+      "feed_url": "https://nsirap.com/feed/feed.xml",
+      "website_url": "https://nsirap.com/",
+      "description": "Articles about DevOps, SRE, Kubernetes and some programming stuff.",
+      "followers": {
+        "twitter": 182
+      },
+      "image_url": "https://i1.feedspot.com/5362674.jpg?t=1642227378"
+    }
+  ]
+}

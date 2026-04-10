@@ -1,0 +1,30 @@
+{
+  "category": "Wichita Food",
+  "source_url": "https://rss.feedspot.com/wichita_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wichita By E.B.",
+      "feed_url": "https://www.wichitabyeb.com/feed",
+      "website_url": "https://www.wichitabyeb.com/",
+      "description": "Wichita By E.B. is free resource for restaurant reviews, dining suggestions, local business highlights, event, things to do away from home and anything Wichita. My name is Eddy and I've had this blog since 2011. I'm a local guy from Wichita who enjoys getting out of the house and seeing what the city has to offer whether it's things to do in town or trying restaurants and food trucks.",
+      "followers": {
+        "facebook": 92000,
+        "twitter": 4200,
+        "instagram": 42100
+      },
+      "image_url": "https://i1.feedspot.com/5314903.jpg?t=1629725170"
+    },
+    {
+      "title": "Wichita on the Cheap \u00bb Restaurants",
+      "feed_url": "https://wichitaonthecheap.com/category/restaurants/feed/",
+      "website_url": "https://wichitaonthecheap.com/category/restaurants/",
+      "description": "Save money when you dine out with all the latest restaurant coupons, deals, food specials, and affordable restaurants in Wichita. Wichita on the Cheap is all about living the good life no matter your budget. We help by spreading the word about fun, family-friendly events, local places, and deals you can get online or right here in Wichita.",
+      "followers": {
+        "facebook": 38100,
+        "twitter": 9800,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5449585.jpg?t=1664172790"
+    }
+  ]
+}

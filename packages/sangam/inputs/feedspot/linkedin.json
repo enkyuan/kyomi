@@ -1,0 +1,82 @@
+{
+  "category": "LinkedIn",
+  "source_url": "https://rss.feedspot.com/linkedin_rss_feeds",
+  "feeds": [
+    {
+      "title": "LinkedIn",
+      "feed_url": "https://news.linkedin.com/news.rss.html/feed",
+      "website_url": "https://news.linkedin.com/news",
+      "description": "The mission of LinkedIn is simple to connect the world's professionals to make them more productive and successful. Get all the latest news and updates on LinkedIn.",
+      "followers": {
+        "twitter": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4923561.jpg?t=1611042337"
+    },
+    {
+      "title": "Official LinkedIn Blog",
+      "feed_url": "https://www.linkedin.com/blog/member/",
+      "website_url": "https://www.linkedin.com/blog/member/",
+      "description": "This is your source for insights and information about LinkedIn. Unlock your professional potential. We share exclusive news, tips, insights, and inspiration that will help you achieve your professional goals.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/22118.jpg?t=1611042319"
+    },
+    {
+      "title": "Linkedin Blog \u00bb Talent",
+      "feed_url": "https://www.linkedin.com/business/talent/blog/",
+      "website_url": "https://www.linkedin.com/business/talent/blog/",
+      "description": "Looking for online training options for your organization's workforce? LinkedIn Learning helps develop talent and keep vital business skills current with engaging online training and courses. A better way for you and your employees to discover and develop skills.",
+      "followers": {
+        "twitter": 23800
+      },
+      "image_url": "https://i1.feedspot.com/4923549.jpg?t=1611042321"
+    },
+    {
+      "title": "LinkedIn \u00bb Sales Solutions",
+      "feed_url": "https://www.linkedin.com/business/sales/blog/",
+      "website_url": "https://www.linkedin.com/business/sales/blog/",
+      "description": "The LinkedIn Sales Blog is the best resource for sales professionals. Learn about social selling, top sales strategies, and Sales Navigator tips and tricks.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 48200
+      },
+      "image_url": "https://i1.feedspot.com/4923550.jpg?t=1611042323"
+    },
+    {
+      "title": "LinkedIn \u00bb Marketing & Advertising Blog",
+      "feed_url": "https://www.linkedin.com/business/marketing/blog/",
+      "website_url": "https://www.linkedin.com/business/marketing/blog/",
+      "description": "Inspiring marketers to succeed in business and their careers. Delivering daily insights on B2B content marketing, marketing on LinkedIn, and more.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 160100
+      },
+      "image_url": "https://i1.feedspot.com/4923551.jpg?t=1611042326"
+    },
+    {
+      "title": "Intero Advisory Blog",
+      "feed_url": "https://www.interoadvisory.com/blog/feed/",
+      "website_url": "https://www.interoadvisory.com/blog",
+      "description": "Keep up with the latest LinkedIn How to Tips on employee engagement, premium subscriptions, social recruiting, social selling and more!",
+      "followers": {
+        "facebook": 161,
+        "twitter": 179,
+        "instagram": 169
+      },
+      "image_url": "https://i1.feedspot.com/4923577.jpg?t=1611042335"
+    },
+    {
+      "title": "LinkedIn Makeover Blog",
+      "feed_url": "https://www.linkedin-makeover.com/feed/",
+      "website_url": "https://www.linkedin-makeover.com/blog/",
+      "description": "My name is Donna Serdula & in 2009, I pioneered my LinkedIn profile optimization methodology. Since then, my team & I have helped over six thousand professionals from all over the World tell their story & build a powerful professional brand.",
+      "followers": {
+        "facebook": 496,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5288651.jpg?t=1622801746"
+    }
+  ]
+}

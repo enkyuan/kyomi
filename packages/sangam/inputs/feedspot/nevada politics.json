@@ -1,0 +1,73 @@
+{
+  "category": "Nevada Politics",
+  "source_url": "https://rss.feedspot.com/nevada_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nevada Republican Party Blog",
+      "feed_url": "https://nevadagop.org/category/blog/feed/",
+      "website_url": "https://nevadagop.org/category/blog/",
+      "description": "Nevada Republican Party, founded in the 1850s by anti-slavery activists and proponents of free western land, continues its legacy today. Stay informed with insider news and updates, gaining insight into the party's ongoing evolution and its impact on American politics.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 31300
+      },
+      "image_url": "https://i1.feedspot.com/5316917.jpg?t=1630388936"
+    },
+    {
+      "title": "Nevada Current",
+      "feed_url": "https://nevadacurrent.com/feed/",
+      "website_url": "https://nevadacurrent.com/",
+      "description": "Nevada Current is a nonprofit online source of political and policy news and commentary.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5130710.jpg?t=1669812338"
+    },
+    {
+      "title": "The Nevada Independent",
+      "feed_url": "https://thenevadaindependent.com/feed/",
+      "website_url": "https://thenevadaindependent.com/",
+      "description": "View featured Local news stories, Videos, and Op-eds. The Nevada Independent is a local, nonpartisan, news and opinion website founded by veteran political journalist and commentator Jon Ralston. The site and its supporting channels focus on ethical, unbiased, and transparent journalism and aim to gather and disseminate important public information.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 46100,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4901364.jpg?t=1669783872"
+    },
+    {
+      "title": "Las Vegas Sun Politics",
+      "feed_url": "https://lasvegassun.com/feeds/headlines/politics/",
+      "website_url": "https://lasvegassun.com/news/politics/",
+      "description": "Southern Nevada's award-winning source for news, sports, politics, entertainment, and opinion. Covers the Latest News and Updates in Politics.",
+      "followers": {
+        "facebook": 162900,
+        "twitter": 249800
+      },
+      "image_url": "https://i1.feedspot.com/2287649.jpg?t=1630389615"
+    },
+    {
+      "title": "8 News Now Politics",
+      "feed_url": "https://www.8newsnow.com/news/politics/feed/",
+      "website_url": "https://www.8newsnow.com/news/politics/",
+      "description": "8 News Now tells local Las Vegas news & weather stories, and what they do to make Las Vegas and the rest of Nevada a better place to live. The Latest News and Updates in Politics brought to you by the team at KLAS:",
+      "followers": {
+        "facebook": 593100,
+        "twitter": 279100
+      },
+      "image_url": "https://i1.feedspot.com/5317005.jpg?t=1630391528"
+    },
+    {
+      "title": "Las Vegas Review-Journal Politics and Government",
+      "feed_url": "https://www.reviewjournal.com/news/politics-and-government/feed/",
+      "website_url": "https://www.reviewjournal.com/news/politics-and-government/",
+      "description": "The Las Vegas Review-Journal is Nevada's most trusted source for local news, Las Vegas sports, business news, gaming news, entertainment news, and more. This section of the news website covers political and government updates and news.",
+      "followers": {
+        "facebook": 429000,
+        "twitter": 321800
+      },
+      "image_url": "https://i1.feedspot.com/5317006.jpg?t=1630391835"
+    }
+  ]
+}

@@ -19,6 +19,14 @@ const domainRouteRegistrars = [
   registerQueueRoutes,
 ] as const;
 
+function applyDomainRoutes(app: Elysia): Elysia {
+  let current = app;
+  for (const register of domainRouteRegistrars) {
+    current = register(current) as unknown as Elysia;
+  }
+  return current;
+}
+
 /**
  * Versioned JSON API (`/api/v1/...`): shared adapters, session context, then domain routers.
  * Route order matches stable URL semantics (discovery → identity → content → feeds → imports).
@@ -31,9 +39,5 @@ export const apiV1Router = new Elysia({
     const authenticated = group.derive(async ({ request, set }) =>
       resolveSessionContext(request, set),
     );
-    let app = authenticated as unknown as Elysia;
-    for (const register of domainRouteRegistrars) {
-      app = register(app) as unknown as Elysia;
-    }
-    return app as unknown as typeof authenticated;
+    return applyDomainRoutes(authenticated as unknown as Elysia) as unknown as typeof authenticated;
   });

@@ -1,0 +1,29 @@
+{
+  "category": "Kankakee News",
+  "source_url": "https://rss.feedspot.com/kankakee_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Shaw Local News",
+      "feed_url": "https://www.shawlocal.com/arc/outboundfeeds/rss/?outputType=xml",
+      "website_url": "https://www.shawlocal.com/daily-journal/news/",
+      "description": "Founded in 1903, the Daily Journal is the only daily newspaper based in Kankakee, Illinois, the county seat for Kankakee County.",
+      "followers": {
+        "facebook": 39300,
+        "twitter": 5500,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5148665.jpg?t=1626155854"
+    },
+    {
+      "title": "CBS Chicago \u00bb Kankakee",
+      "feed_url": "https://chicago.cbslocal.com/tag/kankakee/feed/",
+      "website_url": "https://www.cbsnews.com/chicago/tag/kankakee/",
+      "description": "The latest news, weather & sports for all of Kankakee.",
+      "followers": {
+        "facebook": 400300,
+        "twitter": 213900
+      },
+      "image_url": "https://i1.feedspot.com/5148667.jpg?t=1588852495"
+    }
+  ]
+}

@@ -1,0 +1,712 @@
+{
+  "category": "Canadian News",
+  "source_url": "https://rss.feedspot.com/canadian_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Global News",
+      "feed_url": "https://globalnews.ca/feed/",
+      "website_url": "https://globalnews.ca/",
+      "description": "Global News provides breaking news & current latest Canadian news headlines; national weather forecasts & predictions, local news videos, money and financial news; sports stats and scores.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 971600,
+        "instagram": 333000
+      },
+      "image_url": "https://i1.feedspot.com/880246.jpg?t=1665559876"
+    },
+    {
+      "title": "rabble.ca",
+      "feed_url": "https://rabble.ca/feed/",
+      "website_url": "https://rabble.ca/",
+      "description": "Rabble.ca was built on the efforts of progressive journalists, writers, artists and activists across the country and has a unique role of reporting on stories from civil society while providing a counter balance to corporate-owned media. It provides a needed space for issues, a place to explore political passions and an opportunity to expand ideas.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 37900,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/591364.jpg?t=1611992011"
+    },
+    {
+      "title": "National Post",
+      "feed_url": "https://nationalpost.com/feed",
+      "website_url": "https://nationalpost.com/",
+      "description": "National Post is Canada's trusted source for national news, financial news, world news, blogging, twitter, tweets, opinion, vodcast, podcast, commentary, entertainment and sports.",
+      "followers": {
+        "facebook": 457200,
+        "twitter": 1100000,
+        "instagram": 101200
+      },
+      "image_url": "https://i1.feedspot.com/79098.jpg?t=1727170246"
+    },
+    {
+      "title": "Toronto Sun",
+      "feed_url": "https://torontosun.com/feed",
+      "website_url": "https://torontosun.com/",
+      "description": "Toronto's best local news, sports, comment, entertainment, photos and video. Breaking city news, sports scores, celeb gossip, daily SUNshine Girl & more from the Toronto Sun, your go-to source for local Toronto news.",
+      "followers": {
+        "facebook": 165600,
+        "twitter": 449500,
+        "instagram": 25500
+      },
+      "image_url": "https://i1.feedspot.com/1208.jpg"
+    },
+    {
+      "title": "Financial Post",
+      "feed_url": "https://feeds.feedburner.com/FP_TopStories",
+      "website_url": "https://financialpost.com/",
+      "description": "Financial Post has been Canada's most trusted source of financial news for more than 100 years. The Financial Post delivers all the news and analysis you need to operate in today's competitive business environment. Financial Post is your source for market news, investing, technology, economy and Canadian industry.",
+      "followers": {
+        "facebook": 236100,
+        "twitter": 107500
+      },
+      "image_url": "https://i1.feedspot.com/519813.jpg"
+    },
+    {
+      "title": "CityNews Toronto",
+      "feed_url": "https://toronto.citynews.ca/feed/",
+      "website_url": "https://toronto.citynews.ca/",
+      "description": "CityNews Toronto is all about Toronto's News, Entertainment, Lifestyle, Weather. City's unique combination of extremely cost-effective, original programming, and high-energy, award-winning news and lifestyle coverage is now heralded internationally as the television of the future. Their newsroom's mission: To tell the stories that touch hearts, as well as minds.",
+      "followers": {
+        "facebook": 822400,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/3775197.jpg"
+    },
+    {
+      "title": "Calgary Herald",
+      "feed_url": "https://calgaryherald.com/feed",
+      "website_url": "https://calgaryherald.com/",
+      "description": "The Calgary Herald was first published on August 31, 1883, by Andrew Armour and Thomas Braden as The Calgary Herald, Mining and Ranche Advocate, and General Advertiser. Read the latest breaking news, updates, and headlines. Calgary Herald offers information on the latest national and international events and more.",
+      "followers": {
+        "facebook": 159900,
+        "twitter": 217600,
+        "instagram": 44700
+      },
+      "image_url": "https://i1.feedspot.com/4630077.jpg?t=1672212571"
+    },
+    {
+      "title": "Edmonton Journal",
+      "feed_url": "https://edmontonjournal.com/feed",
+      "website_url": "https://edmontonjournal.com/",
+      "description": "Edmonton Journal provide relevant and reliable news and information to the Edmonton community. They remain Edmonton's most trusted voice, providing a professional perspective on news, business, sports and entertainment that's read by more northern Albertans than any other daily newspaper.",
+      "followers": {
+        "facebook": 139100,
+        "twitter": 195300,
+        "instagram": 85000
+      },
+      "image_url": "https://i1.feedspot.com/4630084.jpg?t=1646119085"
+    },
+    {
+      "title": "Windsor Star",
+      "feed_url": "https://windsorstar.com/feed",
+      "website_url": "https://windsorstar.com/",
+      "description": "Windsor Star provides Latest News, Breaking Headlines & Sports news about Windsor.",
+      "followers": {
+        "facebook": 109700,
+        "twitter": 139500,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4630095.jpg?t=1553496271"
+    },
+    {
+      "title": "The Province",
+      "feed_url": "https://theprovince.com/feed",
+      "website_url": "https://theprovince.com/",
+      "description": "The Province is the BC's source for local breaking news, photos and videos on Vancouver sports, politics, arts, life, health, real estate, opinion and more.",
+      "followers": {
+        "facebook": 106100,
+        "twitter": 188800
+      },
+      "image_url": "https://i1.feedspot.com/4520730.jpg?t=1553496236"
+    },
+    {
+      "title": "Calgary Sun",
+      "feed_url": "https://calgarysun.com/feed",
+      "website_url": "https://calgarysun.com/",
+      "description": "Calgary Sun provides breaking news, sports, life, and entertainment in Calgary, Alberta, and from around the world. Read the latest breaking news, updates, and headlines. Calgary Sun offers information on the latest national and international events & more.",
+      "followers": {
+        "facebook": 138500,
+        "twitter": 106700,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/3488.jpg?t=1709813835"
+    },
+    {
+      "title": "Ottawa Sun",
+      "feed_url": "https://ottawasun.com/feed",
+      "website_url": "https://ottawasun.com/",
+      "description": "The youngest of the Sun dailies, the Ottawa Sun began publishing shortly after the Toronto Sun Corp. Get Ottawa & Gatineau breaking news, celeb gossip, sports scores & your daily SUNshine Girl at the Ottawa Sun, your go-to local news source. The Ottawa Sun is a division of the Sun Media Corp.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1206.jpg"
+    },
+    {
+      "title": "The Tyee",
+      "feed_url": "https://thetyee.ca/rss2.xml",
+      "website_url": "https://thetyee.ca/",
+      "description": "The Tyee is the one of Canada's leading sources of independent news, culture and solutions. They're dedicated to publishing lively, credible news, views and solutions that inform the democratic conversation in Canada.",
+      "followers": {
+        "facebook": 29900,
+        "twitter": 71100
+      },
+      "image_url": "https://i1.feedspot.com/4632656.jpg"
+    },
+    {
+      "title": "The Star Phoenix",
+      "feed_url": "https://thestarphoenix.com/feed",
+      "website_url": "https://thestarphoenix.com/",
+      "description": "The StarPhoenix was first published as The Saskatoon Phenix on October 17th 1902. The Star Phoenix provides Saskatoon's latest news, breaking headlines & sports. The Star Phoenix puts out six editions each week, along with its 24-7 news outlet at TheStarPhoenix.com.",
+      "followers": {
+        "facebook": 97200,
+        "twitter": 69400,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4630125.jpg?t=1623820562"
+    },
+    {
+      "title": "Edmonton Sun",
+      "feed_url": "https://edmontonsun.com/feed",
+      "website_url": "https://edmontonsun.com/",
+      "description": "The best coverage in Edmonton, Alberta, Canada & more. Edmonton Sun provides Edmonton & Canadian breaking news, celebrity gossip, sports headlines, SUNshine Girl of the Day & more from the Edmonton Sun.",
+      "followers": {
+        "facebook": 74200,
+        "twitter": 85600
+      },
+      "image_url": "https://i1.feedspot.com/15368.jpg"
+    },
+    {
+      "title": "Canada.com",
+      "feed_url": "https://o.canada.com/feed",
+      "website_url": "https://o.canada.com/",
+      "description": "Canada.com is Canada's great, shareable stories. Canada.com is a great place for Canadians to discuss what's important to them with each other, and the people making and covering the news.",
+      "followers": {
+        "facebook": 73300,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/338023.jpg"
+    },
+    {
+      "title": "National Observer",
+      "feed_url": "https://www.nationalobserver.com/front/rss",
+      "website_url": "https://www.nationalobserver.com/",
+      "description": "Canada's National Observer publishes investigative reporting, in-depth analysis, solutions journalism, multi-media features, opinion, and daily news coverage. We are committed to producing journalism that is accurate, fair, and complete, and our journalists strive to act with honesty, transparency, and independence.",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 67900,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4905530.jpg?t=1638180129"
+    },
+    {
+      "title": "Business In Vancouver",
+      "feed_url": "https://www.biv.com/rss",
+      "website_url": "https://www.biv.com/",
+      "description": "Business in Vancouver is an award-winning weekly newspaper serving Greater Vancouver since 1989. Targeted at business decision-makers, it provides local business news and information to the Lower Mainland's business leaders every week. BIV provides a unique combination of business news, commentary, and information covering Metro Vancouver and the Fraser Valley.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 35300
+      },
+      "image_url": "https://i1.feedspot.com/4632660.jpg?t=1696914044"
+    },
+    {
+      "title": "Regina Leader Post",
+      "feed_url": "https://leaderpost.com/feed",
+      "website_url": "https://leaderpost.com/",
+      "description": "The Regina Leader-Post, established in 1883, provides Saskatchewan's most complete information package to its newspaper and online readers. The Leader-Post places a particular emphasis on events in the City of Regina, provincial politics, agricultural issues, and of course, the Saskatchewan Roughriders.",
+      "followers": {
+        "facebook": 61400,
+        "twitter": 75300,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4630133.jpg"
+    },
+    {
+      "title": "Owen Sound Sun Times",
+      "feed_url": "https://www.owensoundsuntimes.com/feed",
+      "website_url": "https://www.owensoundsuntimes.com/",
+      "description": "The Owen Sound Sun Times is a regional daily newspaper covering events and people within Grey and Bruce Counties in Southwestern Ontario.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/1250698.jpg"
+    },
+    {
+      "title": "Ottawa Citizen",
+      "feed_url": "https://ottawacitizen.com/feed",
+      "website_url": "https://ottawacitizen.com/",
+      "description": "Ottawa Citizen provides Ottawa latest news, breaking headlines & news about sports.",
+      "followers": {
+        "facebook": 196500,
+        "twitter": 255200,
+        "instagram": 48800
+      },
+      "image_url": "https://i1.feedspot.com/4630115.jpg?t=1553496217"
+    },
+    {
+      "title": "The Stratford Beacon Herald",
+      "feed_url": "https://www.stratfordbeaconherald.com/feed",
+      "website_url": "https://www.stratfordbeaconherald.com/",
+      "description": "Perth County's only daily newspaper. Startford Beacon Herald provides News, Local, Provincial, Canada, World, Sports, High School Sports etc.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/1250707.jpg"
+    },
+    {
+      "title": "The Georgia Straight",
+      "feed_url": "https://www.straight.com/content/rss",
+      "website_url": "https://www.straight.com/",
+      "description": "The Georgia Straight provides local Vancouver news and the premier guide for events, music, arts, movies, restaurants, food, dining, nightlife, and things to do in Vancouver, BC, Canada.",
+      "followers": {
+        "facebook": 102800,
+        "twitter": 147300,
+        "instagram": 65099
+      },
+      "image_url": "https://i1.feedspot.com/15638.jpg"
+    },
+    {
+      "title": "Grande Prairie Daily Herald Tribune",
+      "feed_url": "https://www.dailyheraldtribune.com/feed",
+      "website_url": "https://www.dailyheraldtribune.com/",
+      "description": "The Daily Herald-Tribune is Grande Prairie's only daily newspaper. It provides News, Local, Provincial, Canada, World, Sports etc.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/1757278.jpg"
+    },
+    {
+      "title": "YGK News",
+      "feed_url": "https://ygknews.ca/feed/",
+      "website_url": "https://ygknews.ca/",
+      "description": "Your Kingston, Your News. YGK News is a news platform that aims to bridge the resident and student communities in Kingston, Ontario. We publish news, politics, business, editorials, lifestyle, and campus content. We try to branch out into new mediums as much as possible, including through photojournalism, videography, and radio. Since starting, several stories have been broken that have been further reported on by national media outlets.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 4100,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5221059.jpg?t=1606887126"
+    },
+    {
+      "title": "Prince Albert Daily Herald",
+      "feed_url": "https://paherald.sk.ca/feed/",
+      "website_url": "https://paherald.sk.ca/",
+      "description": "The Prince Albert Daily Herald has been local news source for Prince Albert, Saskatchewan, since 1894. The Daily Herald provides local news, arts and sports every day and publishes Tuesday to Saturday., with a weekly supplement, Rural Roots North.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4632690.jpg"
+    },
+    {
+      "title": "Sunny South News",
+      "feed_url": "http://www.sunnysouthnews.com/feed/",
+      "website_url": "http://www.sunnysouthnews.com/",
+      "description": "The Sunny South News is a community newspaper published every Tuesday by the Alta Newspaper Group Limited Partnership. The News strives to present an accurate and interesting reflection of community affairs and a forum for public opinion. Market surveys have shown high readership levels as local residents tend to take an avid interest in the affairs of their community.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4630366.jpg"
+    },
+    {
+      "title": "The Afro News",
+      "feed_url": "https://theafronews.com/feed/",
+      "website_url": "https://theafronews.com/",
+      "description": "The Afro News (TAN) is an online and a tabloid size newspaper, based in Vancouver BC which covers daily news and updates on finance, food, business, technology, environment, travel and more.",
+      "followers": {
+        "facebook": 338,
+        "twitter": 1600,
+        "instagram": 297
+      },
+      "image_url": "https://i1.feedspot.com/5465248.jpg?t=1668080436"
+    },
+    {
+      "title": "www.thecanadianpressnews.ca - RSS Results",
+      "feed_url": "https://www.thecanadianpressnews.ca/search/?f=rss",
+      "website_url": "https://www.thecanadianpressnews.ca/",
+      "description": "www.thecanadianpressnews.ca - RSS Results",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7326989.jpg"
+    },
+    {
+      "title": "CBC News",
+      "feed_url": "https://rss.cbc.ca/lineup/topstories.xml",
+      "website_url": "https://www.cbc.ca/news",
+      "description": "CBC News services keep Canadians at home and abroad informed about their communities, their country, and the world. Top news stories, breaking news, features, and viewpoints from CBC News.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 661900
+      },
+      "image_url": "https://i1.feedspot.com/8607.jpg?t=1616762746"
+    },
+    {
+      "title": "The Vancouver Sun",
+      "feed_url": "https://vancouversun.com/feed/?x=1",
+      "website_url": "https://vancouversun.com/",
+      "description": "The Vancouver Sun is Vancouver's source for local news, breaking headlines, videos and images. The Vancouver Sun provides Vancouver News, Top Stories, Breaking Headlines & Videos.",
+      "followers": {
+        "facebook": 219300,
+        "twitter": 300600,
+        "instagram": 60200
+      },
+      "image_url": "https://i1.feedspot.com/88.jpg"
+    },
+    {
+      "title": "Montreal Gazette",
+      "feed_url": "https://www.montrealgazette.com/feed",
+      "website_url": "https://www.shawlocal.com/illinois-valley/",
+      "description": "Montreal Gazette provides the latest breaking news, updates, and headlines. Montreal Gazette offers information on the latest national and international events & more. The Montreal Gazette, founded in 1778, has reported on events dating back to the French Revolution.",
+      "followers": {
+        "facebook": 231100,
+        "twitter": 265200,
+        "instagram": 83600
+      },
+      "image_url": "https://i1.feedspot.com/4449948.jpg?t=1745837592"
+    },
+    {
+      "title": "Western Standard News",
+      "feed_url": "https://www.westernstandard.news//feed",
+      "website_url": "https://www.westernstandard.news/",
+      "description": "The Western Standard is an independent source of news and commentary, fighting for a strong and free Western Canada, committed to the truth even when it hurts, and forever pledged to refuse government funding.",
+      "followers": {
+        "facebook": 118200,
+        "twitter": 41700,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5212671.jpg?t=1604320069"
+    },
+    {
+      "title": "Castanet",
+      "feed_url": "https://www.castanet.net/rss/mostrecent.xml",
+      "website_url": "https://www.castanet.net/",
+      "description": "The Peachland View is a weekly community newspaper. \u2070It serves the community of Peachland, with reach into West Kelowna.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 310
+      },
+      "image_url": "https://i1.feedspot.com/4632464.jpg"
+    },
+    {
+      "title": "Pembroke Observer",
+      "feed_url": "https://www.pembrokeobserver.com/category/news/local-news/feed",
+      "website_url": "https://www.pembrokeobserver.com/",
+      "description": "Your Tuesday-Saturday daily paper, bringing local and regional news to the residents of the Upper Ottawa Valley since 1855.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/3586466.jpg?t=1553496352"
+    },
+    {
+      "title": "The Canadian Jewish News",
+      "feed_url": "https://thecjn.ca/feed/",
+      "website_url": "https://thecjn.ca/",
+      "description": "Canada's largest weekly Jewish newspaper. It is an independent community newspaper. To be a forum for diverse points of view on subjects of interest and relevance to the Jewish community, in Canada, Israel and throughout the world.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 13100,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4536737.jpg?t=1606480418"
+    },
+    {
+      "title": "CTV News",
+      "feed_url": "https://www.ctvnews.ca/rss/ctvnews-ca-top-stories-public-rss-1.822009",
+      "website_url": "https://www.ctvnews.ca/",
+      "description": "Canadian news and headlines from around the world. Live breaking news, national news, sports, business, entertainment, health, politics and more from CTV News",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 2400000,
+        "instagram": 486400
+      },
+      "image_url": "https://i1.feedspot.com/583582.jpg"
+    },
+    {
+      "title": "The Globe and Mail",
+      "feed_url": "https://www.theglobeandmail.com/?service=rss",
+      "website_url": "https://www.theglobeandmail.com/",
+      "description": "The Globe and Mail offers the most authoritative news in Canada, featuring national and international news.",
+      "followers": {
+        "facebook": 796300,
+        "twitter": 2000000,
+        "instagram": 249700
+      },
+      "image_url": "https://i1.feedspot.com/1192.jpg?t=1733220143"
+    },
+    {
+      "title": "The Toronto Star",
+      "feed_url": "https://www.thestar.com/",
+      "website_url": "https://www.thestar.com/",
+      "description": "Toronto Star is Canada's largest online news site. Stay current with sports, business, entertainment news and more from the Toronto Star. Today, it has become Canada's largest daily newspaper, with the largest readership in the country.",
+      "followers": {
+        "facebook": 499700,
+        "twitter": 1200000,
+        "instagram": 164000
+      },
+      "image_url": "https://i1.feedspot.com/4630028.jpg?t=1720699818"
+    },
+    {
+      "title": "HuffPost",
+      "feed_url": "https://www.huffpost.com/",
+      "website_url": "https://www.huffpost.com/",
+      "description": "The Huffington Post Canada is Canada's Internet newspaper. Huffington Post Canada provides Canadian News Stories, Breaking News, Opinion, world news, technology and comedy.",
+      "followers": {
+        "twitter": 10500000,
+        "instagram": 63700
+      },
+      "image_url": "https://i1.feedspot.com/1100528.jpg"
+    },
+    {
+      "title": "WOW-MAPLE",
+      "feed_url": "https://wow-maple.com/feed/",
+      "website_url": "https://wow-maple.com/",
+      "description": "Plan your Canadian adventure with Wow-Maple.com! Discover captivating destinations, uncover hidden gems, and stay updated with the latest travel news. From must-visit attractions to off-the-beaten-path wonders, our comprehensive platform is your gateway to exploring the best of Canada.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5628048.jpg?t=1689597309"
+    },
+    {
+      "title": "Maclean's Magazine",
+      "feed_url": "https://macleans.ca/feed/",
+      "website_url": "https://macleans.ca/",
+      "description": "Canada's national current affairs and news magazine since 1905, Maclean's enlightens, engages, and entertains millions of readers with strong investigative reporting and exclusive stories from leading journalists in the fields of international affairs, social issues, national politics, business and culture.",
+      "followers": {
+        "facebook": 196400,
+        "instagram": 27000
+      },
+      "image_url": "https://i1.feedspot.com/3774080.jpg?t=1521019683"
+    },
+    {
+      "title": "The Abbotsford News",
+      "feed_url": "https://www.abbynews.com/",
+      "website_url": "https://www.abbynews.com/",
+      "description": "Abbotsford's primary media source for 24/7 news and information.",
+      "followers": {
+        "facebook": 50400,
+        "twitter": 17900,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/4631246.jpg"
+    },
+    {
+      "title": "Victoria News",
+      "feed_url": "https://www.vicnews.com/",
+      "website_url": "https://www.vicnews.com/",
+      "description": "Victoria News covers people, news and events in the City of Victoria and the Township of Esquimalt on Vancouver Island.",
+      "followers": {
+        "facebook": 25200,
+        "twitter": 23100,
+        "instagram": 15200
+      },
+      "image_url": "https://i1.feedspot.com/4630073.jpg"
+    },
+    {
+      "title": "Saanich News",
+      "feed_url": "https://www.saanichnews.com/",
+      "website_url": "https://www.saanichnews.com/",
+      "description": "The Saanich News is an award-winning newspaper that strives to reflect the diversity and passion of Vancouver Island's largest municipality. Saanich News is a community news from Greater Victoria, with a focus on Saanich.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 16100
+      },
+      "image_url": "https://i1.feedspot.com/4630735.jpg"
+    },
+    {
+      "title": "Kelowna Capital News",
+      "feed_url": "https://www.kelownacapnews.com/",
+      "website_url": "https://www.kelownacapnews.com/",
+      "description": "Kelowna Capital News provides Kelowna news, weather, obituaries and classifieds to the Central Okanagan region. Published two times a week. Their aim is to provide a platform to share news and collect feedback from the community.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 12600,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4630828.jpg?t=1623824158"
+    },
+    {
+      "title": "Campbell River Mirror",
+      "feed_url": "https://www.campbellrivermirror.com/",
+      "website_url": "https://www.campbellrivermirror.com/",
+      "description": "The Campbell River Mirror is available twice weekly in print and instantly on the web and has been serving Campbell River and area since 1971. It provides news about the Campbell River and central Vancouver Island region.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 9300,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4632021.jpg"
+    },
+    {
+      "title": "Canadian Business",
+      "feed_url": "https://canadianbusiness.com/feed/",
+      "website_url": "https://canadianbusiness.com/",
+      "description": "Since its inception in 1928, Canadian Business has been a valued destination for business journalism in the country, covering the leaders and companies that matter most. It is your destination for savvy, progressive executives and entrepreneurs seeking advice, insights, inspiration, and networking opportunities.",
+      "followers": {
+        "facebook": 37900,
+        "twitter": 54200
+      },
+      "image_url": "https://i1.feedspot.com/1123357.jpg?t=1606367339"
+    },
+    {
+      "title": "Peace Arch News",
+      "feed_url": "https://www.peacearchnews.com/",
+      "website_url": "https://www.peacearchnews.com/",
+      "description": "News from White Rock and South Surrey are of British Columbia covering politics, entertainment, sports and more.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 7200,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4632640.jpg"
+    },
+    {
+      "title": "Kimberley Bulletin",
+      "feed_url": "https://www.kimberleybulletin.com/",
+      "website_url": "https://www.kimberleybulletin.com/",
+      "description": "Kimberley Bulletin is your leading source for community news and sports in Cranbrook, Kimberley and surrounds.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4632444.jpg"
+    },
+    {
+      "title": "Agassiz-Harrison Observer",
+      "feed_url": "https://www.agassizharrisonobserver.com/",
+      "website_url": "https://www.agassizharrisonobserver.com/",
+      "description": "The Agassiz-Harrison Observer is the voice of the growing communities of Agassiz and Harrison Hot Springs, publishing every Thursday to more than 3,000 homes and businesses. The Agassiz-Harrison Observer is committed to its communities and its readers through its ongoing support of such local events as the Harrison Festival of the Arts.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 2100,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4631418.jpg"
+    },
+    {
+      "title": "Oakville News",
+      "feed_url": "https://www.oakvillenews.org/api/rss/content.rss",
+      "website_url": "https://www.oakvillenews.org/",
+      "description": "Oakville News brings you the latest news, and events in Oakville Ontario. Our staff are dedicated to providing Oakville, Ontario residents with the most up-to-date information about our great town. News in Oakville including sports, events, fairs, restaurants, shopping, fashion, arts, live entertainment, politics, thinkers, movers and shakers.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 8900,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4729236.jpg?t=1506516739"
+    },
+    {
+      "title": "Oakville News",
+      "feed_url": "https://www.oakvillenews.org/api/rss/content.rss",
+      "website_url": "https://www.oakvillenews.org/",
+      "description": "Keep up with News in Oakville including sports, events, fairs, restaurants, shopping, fashion, arts, live entertainment, politics, thinkers, movers and shakers.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5099338.jpg?t=1612534057"
+    },
+    {
+      "title": "The Times Colonist",
+      "feed_url": "https://www.timescolonist.com/",
+      "website_url": "https://www.timescolonist.com/",
+      "description": "The Times Colonist is the oldest daily newspaper in Western Canada. Times Colonist is the dominant medium in the B.C. capital, reaching a quarter of a million households every week. It is a lively blend of local news and informed commentary make it a must-read for Victorians who want to know what is happening in the capital and on Vancouver Island.",
+      "followers": {
+        "facebook": 39700,
+        "twitter": 89000
+      },
+      "image_url": "https://i1.feedspot.com/3586438.jpg?t=1553496313"
+    },
+    {
+      "title": "Waterloo Region Record",
+      "feed_url": "https://www.therecord.com/",
+      "website_url": "https://www.therecord.com/",
+      "description": "he Waterloo Region Record (The Record) is a daily newspaper based in Kitchener, Ontario, and serving Waterloo Region, including the tri-cities, Kitchener, Waterloo and Cambridge, and the townships. It is a division of the Metroland Media Group, a subsidiary of Torstar Corporation.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 87400
+      },
+      "image_url": "https://i1.feedspot.com/3586511.jpg"
+    },
+    {
+      "title": "Vernon Morning Star",
+      "feed_url": "https://www.vernonmorningstar.com/",
+      "website_url": "https://www.vernonmorningstar.com/",
+      "description": "Vernon Morning Star covers the communities of Oyama, Coldstream, Lavington, Lumby, Cherryville, Vernon, Silver Star, Falkland, North Westside, the Okanagan Indian Band, Spallumcheen, Armstrong, the Splatsin First Nation, Enderby, Grindrod, Ashton Creek, Kingfisher and Mabel Lake.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 5900,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4632642.jpg"
+    },
+    {
+      "title": "Burns Lake District News",
+      "feed_url": "https://www.burnslakelakesdistrictnews.com/feed/",
+      "website_url": "https://www.burnslakelakesdistrictnews.com/",
+      "description": "Burns Lake District News provides latest news on local and national area across burns lake and Canada respectively.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 867
+      },
+      "image_url": "https://i1.feedspot.com/4631939.jpg"
+    },
+    {
+      "title": "North Thompson Star",
+      "feed_url": "https://www.barrierestarjournal.com/feed/",
+      "website_url": "https://www.barrierestarjournal.com/",
+      "description": "The North Thompson Star/Journal traces its origin back to 1974 and Barriere's first newspaper, the Barriere Bulletin. A handful of transitions later, in 1994 the Star/Journal became a Cariboo Press publication. The Star/Journal focuses on valley issues and events.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4631762.jpg"
+    },
+    {
+      "title": "Langley Advance Times",
+      "feed_url": "https://www.langleyadvancetimes.com/",
+      "website_url": "https://www.langleyadvancetimes.com/",
+      "description": "Get current local news, crime, politics, weather, sports, entertainment, arts, features, obituaries, real estate, and all other stories relevant to residents of Langley, B.C., Canada. Your No.1 News Source Langley Advance Times.",
+      "followers": {
+        "facebook": 26800,
+        "twitter": 8600,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4632451.jpg?t=1612514041"
+    },
+    {
+      "title": "North Shore News",
+      "feed_url": "https://www.nsnews.com/",
+      "website_url": "https://www.nsnews.com/",
+      "description": "The best source for local North and West Vancouver news, sports, business, community news and events, entertainment, lifestyles and opinion coverage.",
+      "followers": {
+        "facebook": 23800,
+        "twitter": 14800,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/3586543.jpg"
+    },
+    {
+      "title": "Daily Hive Vancouver",
+      "feed_url": "https://dailyhive.com/",
+      "website_url": "https://dailyhive.com/",
+      "description": "Torontoist is about Toronto News, Politics, Events, Culture and everything in between. Torontoist's goal is to capture the tenor and texture of life in Toronto, to evoke the daily experience of the city in words and images. This includes, especially, the physical shape of the city as it grows and changes, the political and civic developments.",
+      "followers": {
+        "facebook": 56100,
+        "twitter": 314400
+      },
+      "image_url": "https://i1.feedspot.com/48364.jpg"
+    },
+    {
+      "title": "The Post Millennial",
+      "feed_url": "https://thepostmillennial.com/feed/",
+      "website_url": "https://thepostmillennial.com/",
+      "description": "Daily The Post Millennial is your source for Canadian news content. We provide you with the latest news and opinions that matter.",
+      "followers": {
+        "facebook": 120900,
+        "twitter": 310100,
+        "instagram": 57900
+      },
+      "image_url": "https://i1.feedspot.com/4808863.jpg?t=1553496347"
+    }
+  ]
+}

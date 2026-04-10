@@ -1,0 +1,604 @@
+{
+  "category": "UK Interior Design",
+  "source_url": "https://rss.feedspot.com/uk_interior_design_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fresh Design Blog",
+      "feed_url": "https://feeds.feedburner.com/FreshDesignBlog",
+      "website_url": "https://www.freshdesignblog.com/",
+      "description": "Modern & contemporary home interior design blog. Helping you find fresh design ideas, decor inspiration & affordable buys for your home and garden.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 13800,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4843424.jpg?t=1607147223"
+    },
+    {
+      "title": "The Design Sheppard",
+      "feed_url": "https://www.thedesignsheppard.com/feed",
+      "website_url": "https://www.thedesignsheppard.com/#sthash.l3I6sWFo.dpbs",
+      "description": "A top UK interior design blog that rounds up the very best in interior home design today, written by Stacey Sheppard",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 19000,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4843462.jpg?t=1607147227"
+    },
+    {
+      "title": "Society of British and International Design Blog",
+      "feed_url": "https://www.sbid.org/feed/",
+      "website_url": "https://www.sbid.org/blog/",
+      "description": "At SBID, our objective is to promote the profession of interior design at the highest level of competence as well as providing accreditation. Check the blog for exploring the industry through interviews with expert interior designers, sharing professional perspectives, and inspiring projects.",
+      "followers": {
+        "facebook": 12000,
+        "instagram": 15300
+      },
+      "image_url": "https://i1.feedspot.com/4845094.jpg?t=1607147231"
+    },
+    {
+      "title": "Kitchen Warehouse Blog",
+      "feed_url": "https://kitchenwarehouseltd.com/blog/feed",
+      "website_url": "https://kitchenwarehouseltd.com/blog/",
+      "description": "Welcome to the Kitchen Warehouse Blog, Here we talk about all things kitchens and homeware. From the best tips and tricks for your kitchen all the way to the current trends and styles.",
+      "followers": {
+        "facebook": 30800,
+        "twitter": 101,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4677110.jpg?t=1607147235"
+    },
+    {
+      "title": "Interior Style Hunter",
+      "feed_url": "https://interiorstylehunter.com/feed/",
+      "website_url": "https://interiorstylehunter.com/",
+      "description": "A luxury interior design blog that gives you inspiration and tips to design a beautiful home. Grant Pierrus is a london based interior designer.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 32200,
+        "instagram": 4
+      },
+      "image_url": "https://i1.feedspot.com/4843621.jpg?t=1627637344"
+    },
+    {
+      "title": "Home and Garden Decor Blog",
+      "feed_url": "https://www.greendecore.co.uk/blogs/home-and-garden-decor.atom",
+      "website_url": "https://www.greendecore.co.uk/blogs/home-and-garden-decor",
+      "description": "Decorate your floor and outdoor spaces with beautiful Rugs and tips provided in Green Decore's Blog. Green Decore Blog is a friendly, organic, green d\u00e9cor brand specializing in eco-friendly rugs and other decorative home d\u00e9cor items.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 5100,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5605107.jpg?t=1687426180"
+    },
+    {
+      "title": "Design My Stairs Blog",
+      "feed_url": "https://designmystairs.co.uk/feed/",
+      "website_url": "https://designmystairs.co.uk/blog/",
+      "description": "Step into the world of timeless elegance and innovative design with our stair renovation and hallway design blog. Uncover expert tips, creative ideas, and practical advice on revitalizing your home's vertical and horizontal spaces. Design My Stairs is a family business based in the Wirral specializing in stair renovations throughout England and Wales.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 125,
+        "instagram": 828
+      },
+      "image_url": "https://i1.feedspot.com/5646158.jpg?t=1691669826"
+    },
+    {
+      "title": "Sophie Robinson Blog",
+      "feed_url": "https://www.sophierobinson.co.uk/feed/",
+      "website_url": "https://www.sophierobinson.co.uk/blog/",
+      "description": "Find lots of great guides to help you achieve the latest trends and stunning looks created by top designers. What's more, you'll find advice from some top designers via interesting interviews too.",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 21200,
+        "instagram": 252500
+      },
+      "image_url": "https://i1.feedspot.com/4843535.jpg?t=1607147257"
+    },
+    {
+      "title": "My Deco Marketing",
+      "feed_url": "https://mydecomarketing.com/feed/",
+      "website_url": "https://mydecomarketing.com/blog/",
+      "description": "My Deco Marketing provides content marketing, social media and PR services for interior design and home decor businesses. Follow the blog for marketing tips for interior design and home decor brands.",
+      "followers": {
+        "facebook": 163,
+        "twitter": 311,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5164774.jpg?t=1607147247"
+    },
+    {
+      "title": "TidyLife",
+      "feed_url": "https://www.tidyawaytoday.co.uk/feed/",
+      "website_url": "https://www.tidyawaytoday.co.uk/",
+      "description": "Tidylife is the place to discover all the latest UK home interior trends & design ideas, lush homeware and lifestyle inspiration.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 6600,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4843470.jpg?t=1607147289"
+    },
+    {
+      "title": "Dream of Home",
+      "feed_url": "https://www.dreamofhome.co.uk/feed/",
+      "website_url": "https://www.dreamofhome.co.uk/",
+      "description": "Dream of Home is a DIY, renovation, and home interiors blog run by Sarah Macklin, a first-time homeowner. Covers articles about all kinds of inspiration for your home as well as some budget DIY projects and upcycling ideas. Sarah is a content writer by day and loves to renovate her house on a budget using DIY ideas.",
+      "followers": {
+        "facebook": 233,
+        "twitter": 1200,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5201548.jpg?t=1635860891"
+    },
+    {
+      "title": "Topology Interiors Blog",
+      "feed_url": "https://www.topologyinteriors.com/feed",
+      "website_url": "https://www.topologyinteriors.com/topology-blog",
+      "description": "They are an award-winning interior design studio based in London centred around affordability. Set up in 2016, Topology has gone from strength to strength. It aims to be your guide to affordable interiors. On a mission to transform the UK's homes one at a time. It is an affordable interior blog, with house tours, DIY, tips and industry talk on anything interior-related.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4500,
+        "instagram": 41600
+      },
+      "image_url": "https://i1.feedspot.com/4844060.jpg?t=1607147261"
+    },
+    {
+      "title": "Sleek-chic UK Interiors Blog",
+      "feed_url": "https://www.sleek-chic.co.uk/feed",
+      "website_url": "https://www.sleek-chic.co.uk/",
+      "description": "A UK interiors blogger focusing on interior trends, DIY tutorials, interior styling ideas for all budgets, and snippets from her own Victorian renovation.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5417825.jpg?t=1656761291"
+    },
+    {
+      "title": "Interior Designer Magazine",
+      "feed_url": "https://interiordesignermagazine.co.uk/feed/",
+      "website_url": "https://interiordesignermagazine.co.uk/",
+      "description": "Interior Designer magazine is Britain's oldest magazine for professional interior designers and is firmly established as the premier source of inspiration for the interior community and discerning consumers. ID presents the best projects, products, and people that directly influence and shape the industry.",
+      "followers": {
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4845002.jpg?t=1607148927"
+    },
+    {
+      "title": "Fabric of my life",
+      "feed_url": "https://fabricofmylife.co.uk/feed/",
+      "website_url": "https://fabricofmylife.co.uk/",
+      "description": "Fabric of my Life is a UK interior design, travel and lifestyle blog founded by Kate Baxter, which features in The Times Online's Top 50 Design Blogs.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 15600,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4843400.jpg?t=1607147269"
+    },
+    {
+      "title": "Emily May",
+      "feed_url": "https://www.emilymaydesigns.com/feed/",
+      "website_url": "https://www.emilymaydesigns.com/search/label/lifestyle/",
+      "description": "Hey! My name is Emily, and I am in Interior Designer and blogger based in London. I originally started my blog while I was studying for my BA (Hons) Interior Design, as a place to share all the lovely things I came across! Since then, I have expanded my blog, to include other categories such as Travel, Fashion and lifestyle, as I love sharing everything that inspires me",
+      "followers": {
+        "facebook": 352,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4956593.jpg?t=1607147265"
+    },
+    {
+      "title": "Finnterior Designer",
+      "feed_url": "https://finnteriordesigner.com/feed",
+      "website_url": "https://finnteriordesigner.com/",
+      "description": "'Finnterior Designer' is a personal blog curated by a Finnish Londoner, Pia Orr, who likes to share her passion for interiors and home decorating through her website. Pia lives with her Irish husband and two daughters in a 1930s semi-detached house in a leafy suburb in South East London and started the blog with a sole purpose of giving useful tips and inspiration to people who are in the process of renovating their home.",
+      "followers": {
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5055511.jpg?t=1607148485"
+    },
+    {
+      "title": "Kit Kemp",
+      "feed_url": "https://kitkemp.com/feed/",
+      "website_url": "https://kitkemp.com/",
+      "description": "Kit Kemp, Founder and Creative Director of Firmdale Hotels and Kit Kemp Design Studio, is passionate about creating exciting and unique interiors. She is an author, a successful textile, homewares & fragrance designer and a respected champion of British art and craft. Discover a series of posts about their 'Dos and don'ts' to design any space and make it your own, from using strong colours to creating a timeless space.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 12700,
+        "instagram": 164600
+      },
+      "image_url": "https://i1.feedspot.com/5161338.jpg?t=1664885245"
+    },
+    {
+      "title": "BritishStyleUK",
+      "feed_url": "https://britishstyleuk.com/feed/",
+      "website_url": "https://britishstyleuk.com/",
+      "description": "BritishStyleUK is an interior design blog inspiring you with ideas for your home and garden with some stylish eats, stays, and getaways thrown in for good measure!",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4844792.jpg?t=1607148343"
+    },
+    {
+      "title": "Ireland's Homes Interiors & Living Magazine \u00bb Interiors",
+      "feed_url": "https://www.ihil.net/category/interiors/feed/",
+      "website_url": "https://www.ihil.net/category/interiors/",
+      "description": "Ireland's Homes Interiors & Living Magazine, a home design magazine, provides valuable information on interior decorating your home and sourcing suppliers in Northern Ireland and the Republic of Ireland.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 821,
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4844679.jpg?t=1607147964"
+    },
+    {
+      "title": "In Two Homes",
+      "feed_url": "https://intwohomes.co.uk/feed/",
+      "website_url": "https://intwohomes.co.uk/",
+      "description": "In Two Homes is a Homeware, Design, and Interiors blog aimed at renters and first-time buyers. Find every trending interior decor at a reasonable price. I'm Ricky, I share the latest on-trend homeware from online retailers and high-street brands. My ethos is finding the latest styles at affordable prices.",
+      "followers": {
+        "facebook": 87,
+        "twitter": 626,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5027576.jpg?t=1666270149"
+    },
+    {
+      "title": "Oh So Kel",
+      "feed_url": "https://www.ohsokel.com/feed/",
+      "website_url": "https://www.ohsokel.com/",
+      "description": "Kel is a Creative Designer, Stylist & Lifestyle Blogger who loves pastels & boho twists, sharing DIY celebrations and decor that are beautiful yet affordable.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 73,
+        "instagram": 36800
+      },
+      "image_url": "https://i1.feedspot.com/5022538.jpg?t=1607147995"
+    },
+    {
+      "title": "The House Directory Blog",
+      "feed_url": "https://www.thehousedirectory.com/feed/",
+      "website_url": "https://www.thehousedirectory.com/blog/",
+      "description": "Covers insightful blogs for design and decorating tips, practical guides and Q&As with the experts. TheHouseDirectory was the UK's first directory website for interior and garden design and decoration. Founded by a former deputy editor for The World of Interiors, Nicolette LePelley, and seasoned journalist and interior designer, Cheryl Knorr.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 14200,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/5360104.jpg?t=1641376970"
+    },
+    {
+      "title": "Dear Designer | The Home Of Inspiring Spaces and Places",
+      "feed_url": "https://deardesigner.co.uk/feed/",
+      "website_url": "https://deardesigner.co.uk/",
+      "description": "Dear Designer's blog is a design, lifestyle, shopping blog. It's where I document my current obsessions, my latest finds and anything that I find inspirational. Sometimes I might share a personal project too.",
+      "followers": {
+        "twitter": 32600,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4843407.jpg?t=1607147211"
+    },
+    {
+      "title": "Lobster And Swan",
+      "feed_url": "https://lobsterandswan.com/feed/",
+      "website_url": "https://lobsterandswan.com/",
+      "description": "Lobster and Swan, Homes & Interiors Blog & Online Portfolio of Jeska Hearne. Featuring design and photos from home decor, appartment decor, lifestyle, inspiration, ideas and more.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 5800,
+        "instagram": 69100
+      },
+      "image_url": "https://i1.feedspot.com/4406239.jpg?t=1607147239"
+    },
+    {
+      "title": "Abigail Ahern Blog",
+      "feed_url": "https://abigailahern.com/blogs/abigail-aherns-blog.atom",
+      "website_url": "https://abigailahern.com/blogs/abigail-aherns-blog",
+      "description": "Abigail Ahern shares with you all things interior. From transformative decorating tips to rule-breaking advice on styling, color, lighting, and scent.",
+      "followers": {
+        "facebook": 108200,
+        "twitter": 13200,
+        "instagram": 381200
+      },
+      "image_url": "https://i1.feedspot.com/4474310.jpg?t=1607147251"
+    },
+    {
+      "title": "Girl About House",
+      "feed_url": "http://www.girlabouthouse.com/feed/",
+      "website_url": "http://www.girlabouthouse.com/",
+      "description": "Exploring The Inspirational, The Interior Design & Style Blog By Sarah Mailer",
+      "followers": {
+        "facebook": 555,
+        "twitter": 639,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4843989.jpg?t=1607148639"
+    },
+    {
+      "title": "Pippa Jameson Interiors Blog",
+      "feed_url": "https://pippajamesoninteriors.co.uk/feed/",
+      "website_url": "https://pippajamesoninteriors.co.uk/blog/",
+      "description": "Pippa is also the founder and Editor of Pippa Jameson Interiors blog, one of the UK's leading Interior blogs.She has worked as an Interior Stylist in London and abroad for the past ten years working in all areas including advertising, editorial, commercials and TV.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 21000,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4843521.jpg?t=1607147293"
+    },
+    {
+      "title": "Maroc Tribal Blog",
+      "feed_url": "https://www.maroctribal.com/blog-moroccan-rugs?format=RSS",
+      "website_url": "https://www.maroctribal.com/blog-moroccan-rugs/",
+      "description": "Great blog from Maroc Tribal about all about vintage Moroccan Berber tribal carpets. Renowned online destination for rare & gorgeous vintage Moroccan Berber rugs. Mid-century 'one of a kind' carpets, sourced personally by us",
+      "followers": {
+        "facebook": 606,
+        "twitter": 243,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4940778.jpg"
+    },
+    {
+      "title": "Buildiro Magazine",
+      "feed_url": "https://buildiro.com/magazine/feed/",
+      "website_url": "https://buildiro.com/magazine/",
+      "description": "Buildiro.com is a direct-to-consumer online marketplace for tradespeople and DIY enthusiasts based in the UK to source building supplies and materials in minutes. Essentially Skyscanner for the construction industry, Buildiro helps builders locate suppliers to reduce procurement time, save money, and lower transportation costs.",
+      "followers": {
+        "facebook": 750,
+        "twitter": 220,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5384328.jpg?t=1648038019"
+    },
+    {
+      "title": "Interior Desire",
+      "feed_url": "https://www.interiordesire.net/feed/",
+      "website_url": "https://www.interiordesire.net/latest/",
+      "description": "UK based interior design blog.Find latest dining room, Kitchen,interior and exterior designs on this blog.",
+      "followers": {
+        "facebook": 74
+      },
+      "image_url": "https://i1.feedspot.com/4844857.jpg?t=1607147320"
+    },
+    {
+      "title": "Inspired Elements Blog",
+      "feed_url": "https://www.inspiredelements.co.uk/feed/",
+      "website_url": "https://www.inspiredelements.co.uk/blog/",
+      "description": "Covers the latest articles about fitted furniture and layout and all the ins and outs of designing your furniture & layout beforehand. Inspired Elements is bespoke furniture manufacturer offering modern kitchens, bedrooms, wardrobes sliding doors and bathroom furniture affordable price.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 3,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5330593.jpg?t=1634018126"
+    },
+    {
+      "title": "Greenbank Interiors",
+      "feed_url": "https://greenbankinteriors.com/feed/",
+      "website_url": "https://greenbankinteriors.com/blog/",
+      "description": "Greenbank Interiors is a Interior & Garden blog written by Kirsty Fletcher. Her award nominated UK blog features interior and garden inspiration tips & advice allowing Kirsty to share her passion for creating beautifully styled home interiors. Kirsty knows, from her own experiences, that planning renovations, decorating or styling your home can feel hugely overwhelming. The Greenbank interiors blog is here to offer you an abundance of interiors and gardening tips & advice to help start you on your journey to creating your dream home.",
+      "followers": {
+        "facebook": 922,
+        "twitter": 418,
+        "instagram": 94000
+      },
+      "image_url": "https://i1.feedspot.com/5264921.jpg?t=1617629595"
+    },
+    {
+      "title": "Design Soda: Interiors Blog",
+      "feed_url": "https://designsoda.co.uk/feed/",
+      "website_url": "https://designsoda.co.uk/",
+      "description": "Ruthie Matthews is the author of this blog.Find articles on interiors, design, d.i.y, make-overs, styling and sometimes pictures of the things that capture my imagination around my home city of London.",
+      "followers": {
+        "twitter": 1400,
+        "instagram": 48300
+      },
+      "image_url": "https://i1.feedspot.com/4844007.jpg?t=1607148366"
+    },
+    {
+      "title": "AZ Interiors",
+      "feed_url": "https://www.az-interiors.co.uk/blog/feed",
+      "website_url": "https://www.az-interiors.co.uk/blog",
+      "description": "AZ Interiors is a interior design company offer professional interior design services in Cambridge.This Blog is about interior design, art and good style.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/4844050.jpg?t=1607147945"
+    },
+    {
+      "title": "Caroline Rowland",
+      "feed_url": "http://carolinerowland.co.uk/blog?format=RSS",
+      "website_url": "http://carolinerowland.co.uk/blog",
+      "description": "Patchwork Harmony is an interiors and lifestyle brand, which publishes a popular blog, an online magazine, 91 Magazine and offers editorial services in freelance editing, writing, design and blogging.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4232728.jpg?t=1607148275"
+    },
+    {
+      "title": "Decoralist",
+      "feed_url": "https://decoralist.com/blogs/journal.atom",
+      "website_url": "https://decoralist.com/blogs/journal",
+      "description": "From the latest, interior design trends & home decorating ideas to home tours with highly sought after designers, discover a wealth of expert advice on our Journal.",
+      "followers": {
+        "facebook": 276
+      },
+      "image_url": "https://i1.feedspot.com/5183185.jpg?t=1607147959"
+    },
+    {
+      "title": "Green & Mustard | Interior Designer Inspiration & Ideas UK",
+      "feed_url": "http://greenandmustard.co.uk/feed/",
+      "website_url": "http://greenandmustard.co.uk/blog/",
+      "description": "Interior Design Blog by Green and Mustard. A curated interiors blog, we bring you ideas and inspiration for your home. We're mother and daughter-in-law with a shared love for interiors including mid century, luxe, boho and modern styling.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 369,
+        "instagram": 124500
+      },
+      "image_url": "https://i1.feedspot.com/4843365.jpg?t=1607147974"
+    },
+    {
+      "title": "On Trend Home",
+      "feed_url": "https://ontrendhome.com/feed/",
+      "website_url": "https://ontrendhome.com/",
+      "description": "An interior design blog in the UK featuring interior design on a budget, with quirky home accessories, unique home furnishings, and homeware. On Trend Home is a Blog by two sisters obsessed with home interiors hoping to create inspirational space to share style mood boards and favorite trends.",
+      "followers": {
+        "twitter": 5,
+        "instagram": 429
+      },
+      "image_url": "https://i1.feedspot.com/5146298.jpg?t=1607148004"
+    },
+    {
+      "title": "All These Interiors",
+      "feed_url": "https://www.alltheseinteriors.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.alltheseinteriors.com/",
+      "description": "Interior Design and country Lifestyles blog that gives you inspiration and tips on all things interiors. Follow the story of a girl on the path to her dream home.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 73,
+        "instagram": 305
+      },
+      "image_url": "https://i1.feedspot.com/5052111.jpg"
+    },
+    {
+      "title": "AKIVA Blog",
+      "feed_url": "https://www.akivaprojects.com/blog?format=rss",
+      "website_url": "https://www.akivaprojects.com/blog",
+      "description": "Akiva Projects are a multi award wining design build & project management company dedicated to helping you on your renovation Journey. Our team comprises experienced contractors, interior designers, architects, and project managers to deliver luxury solutions to our customers. Whatever your renovation project requirement, whether it's an extension to your existing home or a complete renovation to",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 714
+      },
+      "image_url": "https://i1.feedspot.com/4855412.jpg?t=1607147921"
+    },
+    {
+      "title": "Optimise Design",
+      "feed_url": "https://optimise-design.com/blog/feed/",
+      "website_url": "https://optimise-design.com/blog/",
+      "description": "Optimise Design is an architecture & interior design firm. We create beautifully designed homes that make people's lives better.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2200,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4844671.jpg?t=1607147933"
+    },
+    {
+      "title": "AlenaCDesign | Interior design Blog",
+      "feed_url": "https://www.alenacdesign.com/feed/",
+      "website_url": "https://www.alenacdesign.com/blog-interior-design/",
+      "description": "AlenaCDesign is co. Dublin & co.Laois Interior Design studio. Work with clients NATIONWIDE. With a focus on exceptional quality, we create Contemporary Interiors which reflect unique personality and lifestyle of our clients. Design Blog by Alena C is created to Inspire you with Design trends, Renovation Tips, Share design stories and Shopping Guide for best offers in Ireland!",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 72,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4844739.jpg?t=1607148722"
+    },
+    {
+      "title": "Designer Kitchens Blog",
+      "feed_url": "https://designer-kitchens.co.uk/feed/",
+      "website_url": "https://designer-kitchens.co.uk/blog/",
+      "description": "Designer Kitchens are leading supplier of luxury kitchens, stocking modern kitchens and contemporary kitchen brands like Rempp, Bauformat, Prentice kitchens. Read their blog to find kitchen design ideas.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4845070.jpg?t=1607148711"
+    },
+    {
+      "title": "Home Decor Ideas UK",
+      "feed_url": "https://homedecorideas.uk/feed/",
+      "website_url": "https://homedecorideas.uk/",
+      "description": "Home Decor Ideas UK, give you the best & latest home decoration idea with the help of images like Kitchen, bedroom, bathroom, dining room, living room, etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5264923.jpg?t=1617629910"
+    },
+    {
+      "title": "IQ Furniture",
+      "feed_url": "https://www.iqfurniture.co.uk/news/64/?rss=on",
+      "website_url": "https://www.spacemodern.co.uk/news/64/",
+      "description": "IQ Furniture showcases the very best in modern designer wardrobes, luxury furniture and lighting to fulfil your need for a timeless yet contemporary interior.",
+      "followers": {
+        "facebook": 182
+      },
+      "image_url": "https://i1.feedspot.com/4843880.jpg?t=1607147276"
+    },
+    {
+      "title": "Mad About The House",
+      "feed_url": "https://madaboutthehouse.com/feed/",
+      "website_url": "https://katewatsonsmyth.substack.com/",
+      "description": "Mad About The House was created by award-winning interior design journalist and author Kate Watson-Smyth, who has over 20 years of experience writing for publications. She is a journalist who's been writing about property, interiors and design in national newspapers. This blog provides expert advice and tips on all the components that go into making a house the perfect home.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 29500,
+        "instagram": 279400
+      },
+      "image_url": "https://i1.feedspot.com/4843318.jpg?t=1607147208"
+    },
+    {
+      "title": "Furniture in Fashion Blog",
+      "feed_url": "https://blog.furnitureinfashion.net/feed/",
+      "website_url": "https://blog.furnitureinfashion.net/",
+      "description": "Welcome to Furniture in Fashion Blog. We've got hundreds of style and interior design tips and ideas for your modern living room, dining room, kitchen and bedroom.",
+      "followers": {
+        "facebook": 156700,
+        "twitter": 5100,
+        "instagram": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4804070.jpg?t=1676466892"
+    },
+    {
+      "title": "Love Chic Living Blog",
+      "feed_url": "https://lovechicliving.co.uk/feed/",
+      "website_url": "https://lovechicliving.co.uk/",
+      "description": "Award Winning UK Home Interiors blog - inspirational home decor and interior design ideas for a family home.",
+      "followers": {
+        "facebook": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4843387.jpg?t=1607147219"
+    },
+    {
+      "title": "Copperline By Fiona Reid | Architecture, Interiors and Design Blog",
+      "feed_url": "https://www.copperline.co/feed/",
+      "website_url": "http://www.thisishut.com/",
+      "description": "Fiona Reid has been writing about design interiors, property and architecture for eighteen years, working as a journalist for newspapers and magazines across the UK.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4474164.jpg?t=1607147445"
+    },
+    {
+      "title": "Hut",
+      "feed_url": "https://thisishut.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.thisishut.com/",
+      "description": "A blog about small budget home interiors. Home makeover triumphs and fails. Eclectic boho luxe style. Cushion purveyor!",
+      "followers": {
+        "facebook": 59,
+        "twitter": 1100,
+        "instagram": 429
+      },
+      "image_url": "https://i1.feedspot.com/5041961.jpg?t=1607148352"
+    },
+    {
+      "title": "Nicholas Sunderland Interiors Blog",
+      "feed_url": "https://www.nsinteriors.com/feed/",
+      "website_url": "https://www.nsinteriors.com/blog/",
+      "description": "Nicholas Sunderland is high end luxury London Interior Designer specialising in luxury bespoke interiors and renovations for private clients in London.",
+      "followers": {
+        "facebook": 506,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4844020.jpg?t=1607147969"
+    },
+    {
+      "title": "The Atomic Wellness Company",
+      "feed_url": "https://www.theatomicwellnesscompany.co.uk/",
+      "website_url": "https://www.theatomicwellnesscompany.co.uk/",
+      "description": "South Hams Based Interior Stylist, I offer Interior Styling for your home or business. Including an online Interior Styling service. My Other services include, Event Planning, Personal Interior Shopping. I have a passion for interiors and am now an interior blogger.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/5008610.jpg?t=1607148009"
+    }
+  ]
+}

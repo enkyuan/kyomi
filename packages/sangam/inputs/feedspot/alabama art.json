@@ -1,0 +1,59 @@
+{
+  "category": "Alabama Art",
+  "source_url": "https://rss.feedspot.com/alabama_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kentuck Art Center Blog",
+      "feed_url": "https://www.kentuck.org/blog-feed.xml",
+      "website_url": "https://www.kentuck.org/blog",
+      "description": "The Kentuck Art Center and Festival, nestled in Historic Downtown Northport, Alabama, serves as a vibrant hub for arts and culture. Explore their diverse activities, community programs, and exhibitions through their engaging blog updates.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 1700,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5585925.jpg?t=1685449704"
+    },
+    {
+      "title": "Eastern Shore Art Center Blog",
+      "feed_url": "https://esartcenter.org/feed/",
+      "website_url": "https://esartcenter.org/about-us/blog/",
+      "description": "The Eastern Shore Art Center fosters artistic engagement through education, exhibitions, and outreach. Supported by private memberships, donations, and grants, it relies on community goodwill for sustainability. All contributions are tax-deductible, ensuring the centre's vital role in promoting the arts.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7277523.jpg?t=1710858915"
+    },
+    {
+      "title": "Alabama Art Casting Blog",
+      "feed_url": "https://alabamaartcasting.org/feed/",
+      "website_url": "https://alabamaartcasting.org/blog/",
+      "description": "Alabama Art Casting, a non-profit, educates the public on metal casting through workshops. From raw materials to furnace operation, they offer hands-on experiences, showcasing the art and history of metal casting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7277521.jpg?t=1710859040"
+    },
+    {
+      "title": "Alabama Center for the Arts",
+      "feed_url": "https://alabamacenterforthearts.org/category/news/feed/",
+      "website_url": "https://alabamacenterforthearts.org/category/news/",
+      "description": "The Alabama Center for the Arts, a collaborative venture between Calhoun Community College and Athens State University, offers affordable arts degrees in a nurturing environment. With modern facilities and a vibrant downtown setting, it welcomes students from diverse backgrounds to explore their creative passions.",
+      "followers": {
+        "facebook": 4400
+      },
+      "image_url": "https://i1.feedspot.com/7288982.jpg?t=1714466405"
+    },
+    {
+      "title": "Visit Huntsville Blog \u00bb Arts & Culture",
+      "feed_url": "https://www.huntsville.org/blog/list/category/arts-%26-culture/5cb4bdb4cb5a672a5d7451ff/",
+      "website_url": "https://www.huntsville.org/blog/list/category/arts-%26-culture/5cb4bdb4cb5a672a5d7451ff/",
+      "description": "As the premier resource for Huntsville tourism, conventions, and events, Visit Huntsville provide everything visitors need for an unforgettable experience in the Rocket City. Explore their blog for insights on arts and culture, ensuring a well-rounded visit to Huntsville.",
+      "followers": {
+        "facebook": 38000,
+        "twitter": 15700,
+        "instagram": 43900
+      },
+      "image_url": "https://i1.feedspot.com/7277505.jpg?t=1710854186"
+    }
+  ]
+}

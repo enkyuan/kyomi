@@ -1,0 +1,72 @@
+{
+  "category": "Singapore Business",
+  "source_url": "https://rss.feedspot.com/singapore_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Intracorp Blog",
+      "feed_url": "https://intracorp.com.sg/feed/",
+      "website_url": "https://intracorp.com.sg/news-and-blog/",
+      "description": "NTRACORP is a team of experienced professionals in business formation, accounting, and marketing who are able to provide efficient, quick, and economically sound solutions for the business needs of our clients in Singapore, Thailand, and the United States. Whether you're looking to expand your knowledge or find answers to a specific challenge, our posts are designed to provide valuable insights and practical advice.",
+      "followers": {
+        "facebook": 61,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5587852.jpg?t=1685611577"
+    },
+    {
+      "title": "SBO.sg",
+      "feed_url": "https://sbo.sg/feed/",
+      "website_url": "https://sbo.sg/",
+      "description": "Built by thought leaders and seasoned entrepreneurs, SBO.sg is dedicated to providing the answers, advice, and inspiration that all business owners are searching for. Get new business insights and inspirations!",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 134
+      },
+      "image_url": "https://i1.feedspot.com/5341265.jpg?t=1636513713"
+    },
+    {
+      "title": "Brendan Aw's Blog",
+      "feed_url": "https://brendanaw.com/feed",
+      "website_url": "https://brendanaw.com/blog",
+      "description": "I'm a Singaporean content marketer, creator, and SEO specialist passionate about marketing, Web 3.0, personal finance, & data science. I write articles that help content creators create, optimize, and monetize their content. You'll find detailed guides, reviews, case studies and more.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 197,
+        "instagram": 94
+      },
+      "image_url": "https://i1.feedspot.com/5551401.jpg?t=1682510508"
+    },
+    {
+      "title": "Osome Singapore Blog",
+      "feed_url": "https://osome.com/sg/blog/rss/",
+      "website_url": "https://osome.com/sg/blog/",
+      "description": "Osome Blog is the way Osome will tell you everything you need to know about how to start and run a business in Singapore and what services you may require to do it efficiently. Tame your paperwork with Osome. The human experts teamed up with the AI to bring you the best online service ever!",
+      "followers": {
+        "facebook": 44400,
+        "twitter": 164
+      },
+      "image_url": "https://i1.feedspot.com/5341258.jpg?t=1636510485"
+    },
+    {
+      "title": "Corporate Services Singapore Blog",
+      "feed_url": "https://www.corporateservicessingapore.com/feed/",
+      "website_url": "https://www.corporateservicessingapore.com/blog/",
+      "description": "Check out our blog to get updates for the latest news, events and regulatory changes that can impact Singapore Businesses. Corporate Services Singapore is the One-Stop Financial Solution for all your Business Needs.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 269
+      },
+      "image_url": "https://i1.feedspot.com/4701896.jpg?t=1636514071"
+    },
+    {
+      "title": "Singapore Company Incorporation Blog",
+      "feed_url": "https://www.singaporecompanyincorporation.sg/blog/feed/",
+      "website_url": "https://www.singaporecompanyincorporation.sg/blog/",
+      "description": "The Singapore Company Incorporation Blog features relevant articles about entrepreneurship, relocation options, and Singapore business in general. Singapore Company Incorporation is a corporate solutions provider that helps entrepreneurs setup a business in Singapore and offshore.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5341257.jpg?t=1636511309"
+    }
+  ]
+}

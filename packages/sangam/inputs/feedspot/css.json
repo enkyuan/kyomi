@@ -1,0 +1,103 @@
+{
+  "category": "CSS",
+  "source_url": "https://rss.feedspot.com/css_rss_feeds",
+  "feeds": [
+    {
+      "title": "CSS-Tricks",
+      "feed_url": "https://css-tricks.com/feed/",
+      "website_url": "https://css-tricks.com/",
+      "description": "Find the Tips, Tricks, and Techniques on using Cascading Style Sheets.",
+      "followers": {
+        "facebook": 75700,
+        "twitter": 276,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4487476.jpg?t=1741339328"
+    },
+    {
+      "title": "CSS Wizardry",
+      "feed_url": "https://feeds.feedburner.com/csswizardry",
+      "website_url": "https://csswizardry.com/",
+      "description": "Hi there, I'm Harry Roberts. I am an award-winning Consultant Web Performance Engineer, designer, developer, writer, and speaker from the UK. I write, tweet, speak, and share code about measuring and improving site speed.",
+      "followers": {
+        "facebook": 617,
+        "twitter": 69900
+      },
+      "image_url": "https://i1.feedspot.com/91858.jpg?t=1606108560"
+    },
+    {
+      "title": "Stack Overflow | css",
+      "feed_url": "https://stackoverflow.com/feeds/tag?tagnames=css",
+      "website_url": "https://stackoverflow.com/questions/tagged/css",
+      "description": "Stack Overflow is the largest, most trusted online community for developers to learn, share their programming knowledge and build their career.",
+      "followers": {
+        "facebook": 528800,
+        "twitter": 251500
+      },
+      "image_url": "https://i1.feedspot.com/124822.jpg?t=1617170836"
+    },
+    {
+      "title": "Ahmad Shadeed Blog",
+      "feed_url": "https://ishadeed.com/feed.xml",
+      "website_url": "https://ishadeed.com/articles/",
+      "description": "I'm Ahmad - an independent product designer and front end developer from Palestine. I enjoy working on large scale Product Design and Front End Projects, solving complex design problems.",
+      "followers": {
+        "twitter": 25100,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5152835.jpg?t=1627976823"
+    },
+    {
+      "title": "CSS { In Real Life }",
+      "feed_url": "https://css-irl.info/rss.xml",
+      "website_url": "https://css-irl.info/",
+      "description": "A blog about front-end technologies, with a particular focus on CSS. Find the latest tips, tricks, tutorials, and handy links related to CSS. Written & developed by Michelle Barker, Lead Front End Developer at Atomic Smash and CSS superfan.",
+      "followers": {
+        "twitter": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5152829.jpg?t=1627977273"
+    },
+    {
+      "title": "Modern CSS Solutions",
+      "feed_url": "https://moderncss.dev/feed",
+      "website_url": "https://moderncss.dev/",
+      "description": "A series examining modern CSS solutions for old CSS problems by Stephanie Eckles, a seasoned front-end developer.",
+      "followers": {
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5308378.jpg?t=1627977770"
+    },
+    {
+      "title": "CSS3",
+      "feed_url": "https://css3.com/feed/",
+      "website_url": "https://css3.com/",
+      "description": "Dive into a wonderful collection of CSS 3 guides your magical scrolls for transforming ordinary code into extraordinary web styling. CSS 3 Unwrapped Learn, Laugh, Level Up. CSS wizard and writer Calum West excitedly shares the latest Insights, Tips & Tricks about CSS 3 with a Joyful Twist.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5751067.jpg?t=1704782122"
+    },
+    {
+      "title": "CSS Weekly",
+      "feed_url": "https://css-weekly.com/feed/",
+      "website_url": "https://css-weekly.com/archives/",
+      "description": "CSS Weekly provides the latest CSS articles, tutorials, tools, and experiments curated by Zoran Jambor.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4540938.jpg?t=1618996865"
+    },
+    {
+      "title": "Envato Tuts Web Design \u00bb CSS",
+      "feed_url": "https://webdesign.tutsplus.com/categories/css.atom",
+      "website_url": "https://webdesign.tutsplus.com/c/htmlcss/s/css",
+      "description": "Browse the latest CSS Web Design Tutorials by Envato Tuts all online and free!",
+      "followers": {
+        "facebook": 142200,
+        "twitter": 113400
+      },
+      "image_url": "https://i1.feedspot.com/4532984.jpg"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "category": "Earthquake",
+  "source_url": "https://rss.feedspot.com/earthquake_rss_feeds",
+  "feeds": [
+    {
+      "title": "Earthquakes Today",
+      "feed_url": "https://www.earthquakenewstoday.com/feed/",
+      "website_url": "https://www.earthquakenewstoday.com/",
+      "description": "Information and facts about all earthquakes today. Earthquake breaking news and analysis on current events, Plate Tectonics, Seismometers, quake prediction, environment, Tsunamis, Seismologists, Prediction, live now, videos, information, pictures and much more.",
+      "followers": {
+        "facebook": 311700
+      },
+      "image_url": "https://i1.feedspot.com/3615527.jpg?t=1616233791"
+    },
+    {
+      "title": "Natural Resources Canada - Earthquakes Canada",
+      "feed_url": "https://www.earthquakescanada.nrcan.gc.ca/cache/earthquakes/canada-en.atom",
+      "website_url": "https://www.earthquakescanada.nrcan.gc.ca/index-en.php",
+      "description": "Get broadcast notifications related to earthquakes in Canada",
+      "followers": {
+        "twitter": 110500
+      },
+      "image_url": "https://i1.feedspot.com/4620754.jpg"
+    },
+    {
+      "title": "Quake Watch",
+      "feed_url": "https://qvsdata.com/feed/",
+      "website_url": "https://qvsdata.com/",
+      "description": "Quake Watch hopes to bring you details of the more major earthquakes from around the world. It is not intended to be an alert service and data may be delayed by up to a day before it appears on the blog, however appear it will.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4631735.jpg?t=1616233853"
+    },
+    {
+      "title": "The EQ Alert Guy",
+      "feed_url": "http://earthquakealert.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://earthquakealert.blogspot.com/",
+      "description": "Tracking Earthquake Energy All Around The World and have had accurate EQ Alerts out before all major earthquakes for 20 years now.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4630808.jpg?t=1616233888"
+    },
+    {
+      "title": "Utah Earthquakes Today",
+      "feed_url": "https://feeds.feedburner.com/UtahEarthquakesToday",
+      "website_url": "https://utahearthquakestoday.blogspot.com/",
+      "description": "The recent earth quakes that happened in Utah to day may be leading to something far more significant. We will be discussing these current events and where they may be leading us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5118753.jpg?t=1616234004"
+    },
+    {
+      "title": "The Extinction Protocol",
+      "feed_url": "https://theextinctionprotocol.wordpress.com/feed/",
+      "website_url": "https://theextinctionprotocol.wordpress.com/",
+      "description": "Earthchanges news and geological events enroute to the New Earth foretold by prophets, sages, and scriptures.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4632641.jpg"
+    },
+    {
+      "title": "QUAKETIPS",
+      "feed_url": "https://quaketips.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://quaketips.blogspot.com/",
+      "description": "A blog companion to Matt Springer's recurring San Francisco-based presentation. While earthquakes are not his official area of study, he has become very familiar with home earthquake preparations based on personal experience with several large California earthquakes and subsequent independent study of the topic.",
+      "followers": {
+        "facebook": 60,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4631472.jpg"
+    },
+    {
+      "title": "Emergency Essentials Blog",
+      "feed_url": "https://www.beprepared.com/blogs/articles/tagged/earthquake.atom",
+      "website_url": "https://www.beprepared.com/blogs/articles/tagged/earthquake",
+      "description": "BePrepared.com (Emergency Essentials) is your source for food storage & emergency preparedness items, like Freeze dried & dehydrated foods and more.",
+      "followers": {
+        "facebook": 189700,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4630653.jpg?t=1616233845"
+    },
+    {
+      "title": "Active Tectonics",
+      "feed_url": "http://activetectonics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://activetectonics.blogspot.com/",
+      "description": "Mostly research and commentary blog of J Ramon Arrowsmith, Professor of Geology in the School of Earth and Space Exploration at Arizona State University. Commentary, ideas, notes on active tectonics, tectonic geomorphology, earthquake geology, natural hazards, cyberinfrastructure for the geosciences, high resolution topography.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4632459.jpg?t=1616233963"
+    },
+    {
+      "title": "Christchurch Earthquake",
+      "feed_url": "http://christchurchearthquakenews.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://christchurchearthquakenews.blogspot.com/",
+      "description": "Christchurch Earthquake blog authored by Debbie Roome.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4632282.jpg"
+    },
+    {
+      "title": "U.S. Geological Survey \u00bb Earthquake Hazards",
+      "feed_url": "https://www.usgs.gov/programs/earthquake-hazards/news/",
+      "website_url": "https://www.usgs.gov/programs/earthquake-hazards/news/",
+      "description": "USGS Earthquake Hazards Program, responsible for monitoring, reporting, and researching earthquakes and earthquake hazards.",
+      "followers": {
+        "facebook": 680000,
+        "twitter": 3100,
+        "instagram": 307600
+      },
+      "image_url": "https://i1.feedspot.com/4620482.jpg?t=1616233812"
+    }
+  ]
+}

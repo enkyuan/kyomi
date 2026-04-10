@@ -1,0 +1,51 @@
+{
+  "category": "Borussia Dortmund",
+  "source_url": "https://rss.feedspot.com/borussia_dortmund_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fear The Wall",
+      "feed_url": "https://www.fearthewall.com/rss/current.xml",
+      "website_url": "https://www.fearthewall.com/",
+      "description": "Your best source for quality Borussia Dortmund news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 967,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5194183.jpg?t=1599469079"
+    },
+    {
+      "title": "Footie Central \u00bb Borussia Dortmund",
+      "feed_url": "https://www.footiecentral.com/tag/borussia-dortmund/feed/",
+      "website_url": "https://www.footiecentral.com/tag/borussia-dortmund/",
+      "description": "Footie Central was founded and launched in 2014 to provide a platform for talented upcoming writers and deliver great insightful articles and latest transfer stories to our intelligent, international audience. From the start, the main aim of our blog was to provide something different to our audience.",
+      "followers": {
+        "facebook": 141,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5194241.jpg?t=1599475036"
+    },
+    {
+      "title": "BVB Buzz",
+      "feed_url": "https://bvbbuzz.com/feed/",
+      "website_url": "https://bvbbuzz.com/",
+      "description": "The ultimate home for Borussia Dortmund news, rumors, updates, transfers, signings, injuries, commentary, analysis, editorials, and more!",
+      "followers": {
+        "facebook": 901,
+        "twitter": 106200,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5194188.jpg?t=1599470312"
+    },
+    {
+      "title": "Yardbarker \u00bb Borussia Dortmund",
+      "feed_url": "https://www.yardbarker.com/",
+      "website_url": "https://www.yardbarker.com/soccer/teams/borussia_dortmund/17477",
+      "description": "Borussia Dortmund rumors, news and videos from the best sources on the web. Sign up for the Borussia newsletter.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5194262.jpg?t=1599476856"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "category": "Florida Neurology",
+  "source_url": "https://rss.feedspot.com/florida_neurology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Premier Neurology Center Blog",
+      "feed_url": "https://premierneurologycenter.com/feed/",
+      "website_url": "https://premierneurologycenter.com/blogs-and-videos/",
+      "description": "Blog educates patients and keeps them informed about neurological issues that may affect them. Authored by Dr. Kashouty, a diplomate of the American Board of Psychiatry and Neurology (ABPN), practices general neurology with fellowship-trained specialization in clinical neurophysiology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5298256.jpg?t=1625146170"
+    },
+    {
+      "title": "Orlando Neurosurgery Blog",
+      "feed_url": "https://orlandoneurosurgery.com/feed/",
+      "website_url": "https://orlandoneurosurgery.com/blog/",
+      "description": "At Orlando Neurosurgery every patient receives the highest possible level of personalized and compassionate neurosurgical care to improve their quality of life.Our team of highly accomplished neurological surgeons represents the full spectrum of neurosurgical and spine conditions. Through our partnerships with the most advanced surgical centers in the region, we have been delivering positive outcomes for our patients for more than 20 years.",
+      "followers": {
+        "facebook": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5752723.jpg?t=1704951252"
+    },
+    {
+      "title": "Neurology Office Joseph Kandel M.D. & Associates Blog",
+      "feed_url": "https://neurologyoffice.com/feed/",
+      "website_url": "https://neurologyoffice.com/blog/",
+      "description": "Neurology Office was created to provide cost-effective quality care for all neurology conditions. Read their Blog for informative articles related to neurology and neuroscience.",
+      "followers": {
+        "facebook": 677
+      },
+      "image_url": "https://i1.feedspot.com/5752724.jpg?t=1704951257"
+    },
+    {
+      "title": "Coastal Pain & Neurology Centers Blog",
+      "feed_url": "https://www.coastalpaincenter.com//feed/rss2",
+      "website_url": "https://www.coastalpaincenter.com/blog",
+      "description": "At Coastal Pain & Neurology Centers, we provide a comprehensive plan of care that includes neurology, interventional pain management, and physical therapy rehabilitation. Get the support and recovery you deserve!",
+      "followers": {
+        "facebook": 517,
+        "twitter": 158
+      },
+      "image_url": "https://i1.feedspot.com/5752725.jpg?t=1704951264"
+    },
+    {
+      "title": "Ideal Neurology Blog",
+      "feed_url": "https://www.idealneurology.com/blog-feed.xml",
+      "website_url": "https://www.idealneurology.com/blog",
+      "description": "Boca Raton neurologist Dr. Renata Chalfin providing personalized, compassionate care for your loved ones in community-designed Ideal Neurology Clinic",
+      "followers": {
+        "facebook": 428,
+        "twitter": 169
+      },
+      "image_url": "https://i1.feedspot.com/5752726.jpg?t=1704951515"
+    }
+  ]
+}

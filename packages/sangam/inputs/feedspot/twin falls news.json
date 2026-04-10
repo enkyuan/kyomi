@@ -1,0 +1,29 @@
+{
+  "category": "Twin Falls News",
+  "source_url": "https://rss.feedspot.com/twin_falls_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Magicvalley.com",
+      "feed_url": "https://magicvalley.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://magicvalley.com/",
+      "description": "The magicvalley.com is an award-winning local news organization in Twin Falls, Idaho, founded in 1904. Get the news, sports, entertainment, crime, politics, health and weather of Twin Falls, Idaho, and beyond at magicvalley.com",
+      "followers": {
+        "facebook": 34900,
+        "twitter": 5200,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5150584.jpg?t=1589525752"
+    },
+    {
+      "title": "City of Twin Falls, ID",
+      "feed_url": "https://www.tfid.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.tfid.org/CivicAlerts.aspx?sort=date",
+      "description": "Twin Falls, ID is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5150587.jpg?t=1623156468"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "category": "Australian Ski",
+  "source_url": "https://rss.feedspot.com/australian_ski_rss_feeds",
+  "feeds": [
+    {
+      "title": "Falls Creek",
+      "feed_url": "https://www.fallscreek.com.au/category/uncategorized/feed/",
+      "website_url": "https://www.fallscreek.com.au/category/uncategorized/",
+      "description": "Falls Creek is Victoria's largest alpine resort and a major tourist destination in North East Victoria. The alpine resort is one of the most popular winter playgrounds in the country and offers a superb range of activities, attractions and events in every season throughout the year With ski-in/ski-out accommodation, skiing and snowboarding for all abilities and a huge range of daytime and night-time activities.",
+      "followers": {
+        "facebook": 132800,
+        "twitter": 8600,
+        "instagram": 54200
+      },
+      "image_url": "https://i1.feedspot.com/4924941.jpg?t=1673500360"
+    },
+    {
+      "title": "B'Rush Ski Club News",
+      "feed_url": "https://brushskiclub.com.au/feed/",
+      "website_url": "https://brushskiclub.com.au/news/",
+      "description": "Brush Ski Club is a not for profit people orientated club with a shared passion for snow sports that exists to provide a fun and environmentally friendly mountain experience for members, families and guests. This blog is designed by skiers for skiers, offering all the best in a skiing holiday.",
+      "followers": {
+        "facebook": 906,
+        "twitter": 102
+      },
+      "image_url": "https://i1.feedspot.com/4924755.jpg?t=1620892530"
+    },
+    {
+      "title": "Snowcentral News",
+      "feed_url": "https://www.snowcentral.com.au/blogs/news.atom",
+      "website_url": "https://www.snowcentral.com.au/blogs/news",
+      "description": "Snow central has Ski Gear, Snowboard Gear, Snow Accessories & Ski Equipment for all of your winter adventures. Here you will find review of the latest season's ski and snowboard gear. Whether you're in the market for a new board, or wondering how to pick your goggles, they've got a clip to help and make your decision a little easier!",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 31,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4924734.jpg?t=1620892510"
+    },
+    {
+      "title": "Blackbird Bespoke Ski Co News",
+      "feed_url": "https://blkbrd.ski/blogs/news.atom",
+      "website_url": "https://blkbrd.ski/blogs/news",
+      "description": "Find Australia's best range of all mountain, resort, backcountry and freeride skis under one roof. Here you will get ski educational information and ski equipment products to enhance ski performance.",
+      "followers": {
+        "facebook": 172,
+        "twitter": 197,
+        "instagram": 943
+      },
+      "image_url": "https://i1.feedspot.com/4924944.jpg?t=1620892550"
+    },
+    {
+      "title": "Aussie Skier Blog",
+      "feed_url": "https://blog.aussieskier.com/feed/",
+      "website_url": "https://blog.aussieskier.com/",
+      "description": "Aussie Skier blog documents their skiing adventures through trip reports. It evolved to include gear reviews and provide real reports of the resort conditions.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 1300,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4924801.jpg?t=1620892506"
+    },
+    {
+      "title": "Snow Fitness Blog",
+      "feed_url": "https://snowfitness.com.au/feed/",
+      "website_url": "https://snowfitness.com.au/blog/",
+      "description": "Snow Fitness is aimed specifically at skiers and snowboards who want to prepare their bodies to ski or board harder, longer and recover quicker. Subscribe to stay up-to-date with the latest news from Snow Fitness and also to keep up with their online snowboard & ski exercise programs.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4924934.jpg?t=1620892526"
+    },
+    {
+      "title": "Thredbo Ski Racing Club News",
+      "feed_url": "https://www.thredboskiracing.com/feed/",
+      "website_url": "https://www.thredboskiracing.com/news/",
+      "description": "The Thredbo Ski Racing Club has been a top provider of alpine ski race training in Australia for the past 3 decades. The TSRC helps facilitates the development of many ski racers, from young eager competent skiers, to the highest level racers.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4924961.jpg?t=1620892539"
+    },
+    {
+      "title": "Roller Ski Downunder Blog",
+      "feed_url": "https://www.nordicsportsaustralia.com.au/my-blog?format=RSS",
+      "website_url": "https://rollerskidownunder.com.au/my-blog/",
+      "description": "Everything Nordic sports in one Blog. Here you find lots of information about the Roller ski,Cross skating an Nordic walking community in Australia. Tips and trick for ski & skate maintenance, travel info and lots more.",
+      "followers": {
+        "facebook": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4924922.jpg?t=1620892545"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "category": "Hindustan Times",
+  "source_url": "https://rss.feedspot.com/hindustan_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hindustan Times \u00bb Trending",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/trending/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/trending",
+      "description": "Get your daily dose of trending news, funny memes, viral videos, bizarre stories from around the world. Browse feel good stories, solve puzzles and optical illusions, pet videos and more on Hindustan Times.",
+      "followers": {
+        "facebook": 7400000,
+        "twitter": 8700000,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7835312.jpg?t=1734087813"
+    },
+    {
+      "title": "Hindustan Times \u00bb Entertainment",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/entertainment/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/entertainment",
+      "description": "Entertainment News - Find latest Entertainment News and Celebrity Gossips today from the most popular industry Bollywood and Hollywood. In this way, catch exclusive interviews with celebrities and movie reviews at Hindustan Times.",
+      "followers": {
+        "facebook": 7400000,
+        "twitter": 8700000,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7835315.jpg?t=1734087816"
+    },
+    {
+      "title": "Hindustan Times \u00bb Education",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/education/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/education",
+      "description": "Education News: Read Education News. Get latest Board Exams, live results and insights into school and college admissions on The Hindustan Times. Discover all the Education News, Scholarship, career and jobs updates all in one place for students and parents.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7835316.jpg"
+    },
+    {
+      "title": "Hindustan Times \u00bb Lifestyle",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/lifestyle/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/lifestyle",
+      "description": "Lifestyle Get Latest Lifestyle News, Fashion Trends, Fashion Style Guide & Tips, India & World Events, Celebrity Style & Outfits, Beauty and Health Tips, Relationships Advice, Travel Guide and more at Hindustan Times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7835313.jpg"
+    },
+    {
+      "title": "Hindustan Times \u00bb Bengaluru News",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/cities/bengaluru-news/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/cities/bengaluru-news",
+      "description": "Bangalore News Read latest Bangalore news, Bangalore local news headlines, Bangalore breaking news, and Bangalore news live updates based on crime, education, business, politics, lifestyle, sports and more. Catch Bangalore News Live News Updates and Today's Top Viral News at hindustantimes.com.",
+      "followers": {
+        "facebook": 7400000,
+        "twitter": 8700000,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7835310.jpg?t=1734087838"
+    },
+    {
+      "title": "Hindustan Times \u00bb Mumbai News",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/cities/mumbai-news/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/cities/mumbai-news",
+      "description": "Mumbai News - Find latest Mumbai news and Headlines based from Mumbai City. Also check out latest news belongs to Mumbai crime, Mumbai education news, Mumbai real estate, Mumbai politics and more at Hindustan Times.",
+      "followers": {
+        "facebook": 7400000,
+        "twitter": 8700000,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7835311.jpg?t=1734087842"
+    },
+    {
+      "title": "Hindustan Times \u00bb Delhi News",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/cities/delhi-news/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/cities/delhi-news",
+      "description": "Delhi News - Find latest New Delhi news and Headlines from Delhi City. Also check out latest news belongs to Delhi crime, Delhi education news, Delhi real estate, Delhi politics and more at Hindustan Times.",
+      "followers": {
+        "facebook": 7400000,
+        "twitter": 8700000,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/7835314.jpg?t=1734087846"
+    },
+    {
+      "title": "Hindustan Times \u00bb Sports",
+      "feed_url": "https://www.hindustantimes.com/feeds/rss/sports/rssfeed.xml",
+      "website_url": "https://www.hindustantimes.com/sports",
+      "description": "Sports News - Check out latest sports news and headlines from Cricket, Football, Tennis, Badminton, sports coverage, live cricket score, match results and more at Hindustan Times",
+      "followers": {
+        "facebook": 7400000,
+        "twitter": 8700000,
+        "instagram": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/5404430.jpg?t=1753342772"
+    }
+  ]
+}

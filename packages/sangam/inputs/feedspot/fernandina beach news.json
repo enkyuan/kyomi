@@ -1,0 +1,29 @@
+{
+  "category": "Fernandina Beach News",
+  "source_url": "https://rss.feedspot.com/fernandina_beach_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Fernandina Beach Government",
+      "feed_url": "https://www.fbfl.us/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.fbfl.us/CivicAlerts.aspx",
+      "description": "The city of Fernandina Beach is dedicated to keeping residents informed with the latest news, information and community happenings.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 1600,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5156543.jpg?t=1590574404"
+    },
+    {
+      "title": "Fernandina Observer \u00bb City",
+      "feed_url": "https://www.fernandinaobserver.org/category/city-news/",
+      "website_url": "https://www.fernandinaobserver.org/category/city-news/",
+      "description": "Fernandina Observer, a news and opinion blog that focuses on the City of Fernandina Beach and the news and issues that impact the community.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 234
+      },
+      "image_url": "https://i1.feedspot.com/5156537.jpg?t=1590575032"
+    }
+  ]
+}

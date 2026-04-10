@@ -1,0 +1,406 @@
+{
+  "category": "Game Development",
+  "source_url": "https://rss.feedspot.com/game_development_rss_feeds",
+  "feeds": [
+    {
+      "title": "GameDev.net - Game Development and Technology Articles and Tutorials",
+      "feed_url": "https://www.gamedev.net/articles/feed/",
+      "website_url": "https://www.gamedev.net/articles/",
+      "description": "GameDev.net is a social platform about all things game development and design for hobbyists, indies, and industry professionals",
+      "followers": {
+        "facebook": 31000,
+        "twitter": 16700
+      },
+      "image_url": "https://i1.feedspot.com/4708469.jpg?t=1619675749"
+    },
+    {
+      "title": "Game From Scratch",
+      "feed_url": "https://gamefromscratch.com/feed/",
+      "website_url": "https://gamefromscratch.com/",
+      "description": "Game From Scratch blog covers all things game development related, with a focus on gaming news, tutorials, Game engines, art tools, and programming languages. After doing text-based tutorials for several years, they have started slowly making more video content.",
+      "followers": {
+        "twitter": 18800
+      },
+      "image_url": "https://i1.feedspot.com/130642.jpg?t=1664780790"
+    },
+    {
+      "title": "Games Errors",
+      "feed_url": "https://gameserrors.com/feed/?x=1",
+      "website_url": "https://gameserrors.com/",
+      "description": "Games Errors comes to your help with solutions and workarounds for your gaming issues. Stop getting those annoying errors and fix your game today.",
+      "followers": {
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/4709319.jpg?t=1619675776"
+    },
+    {
+      "title": "Grid Sage Games Blog",
+      "feed_url": "https://www.gridsagegames.com/blog/feed/",
+      "website_url": "https://www.gridsagegames.com/blog/",
+      "description": "Grid Sage Games is a one-man game development company based in Taiwan and run by Josh Ge.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4709069.jpg?t=1619675821"
+    },
+    {
+      "title": "Game Developer",
+      "feed_url": "https://www.gamedeveloper.com/rss.xml",
+      "website_url": "https://www.gamedeveloper.com/",
+      "description": "Game Developer Magazine is the game industry resource for breaking news and in-depth analysis of the latest game industry tech and trends. Game Developer was first founded in 1997 as Gamasutra and has strived since its inception to be a leading resource and reference for game development and industry knowledge. It publishes multiple stories daily to inform, empower, and inspire its game developer readership.",
+      "followers": {
+        "facebook": 48900,
+        "twitter": 479300
+      },
+      "image_url": "https://i1.feedspot.com/5324200.jpg?t=1633357594"
+    },
+    {
+      "title": "Codemagic Blog",
+      "feed_url": "https://blog.codemagic.io/index.xml",
+      "website_url": "https://blog.codemagic.io/",
+      "description": "Codemagic has been a helpful tool for all types of mobile app development teams. Explore the magic behind Codemagic. Browse our tutorials, mobile app industry-related articles, and news to take the maximum out of Codemagic CI/CD for Flutter apps.",
+      "followers": {
+        "facebook": 867,
+        "twitter": 6900,
+        "instagram": 303
+      },
+      "image_url": "https://i1.feedspot.com/5424786.jpg?t=1658745342"
+    },
+    {
+      "title": "GAMEDESIGNING - Become a Video Game Designer",
+      "feed_url": "https://feeds.feedburner.com/VideoGameDesigners",
+      "website_url": "https://www.gamedesigning.org/",
+      "description": "The aspiring video game designers guide to becoming a successful game designer, developer, or artist.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 245
+      },
+      "image_url": "https://i1.feedspot.com/4708497.jpg?t=1619675797"
+    },
+    {
+      "title": "Starloop Studios",
+      "feed_url": "https://starloopstudios.com/feed/",
+      "website_url": "https://starloopstudios.com/explore-our-gaming-blog/",
+      "description": "Starloop Studios is a leading game development outsourcing company, providing full game development and game art services to the global gaming industry. In this blog, you will get cutting-edge news and tips about today's technology of game development.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2700,
+        "instagram": 732
+      },
+      "image_url": "https://i1.feedspot.com/5209342.jpg?t=1603365614"
+    },
+    {
+      "title": "SmartFoxServer Blog",
+      "feed_url": "https://smartfoxserver.com/blog/feed/",
+      "website_url": "https://smartfoxserver.com/blog/",
+      "description": "SmartFoxServer Blog News, articles and recipes about SmartFoxServer and multiplayer game development. The leading technology to create realtime and turn-based multiplayer games, large scale MMOs and virtual communities for all popular platforms and languages.",
+      "followers": {
+        "facebook": 341,
+        "twitter": 852
+      },
+      "image_url": "https://i1.feedspot.com/4709173.jpg?t=1619675817"
+    },
+    {
+      "title": "Game Wisdom",
+      "feed_url": "http://game-wisdom.com/feed",
+      "website_url": "https://game-wisdom.com/",
+      "description": "Game Wisdom writes video game articles on game theory, game design, the game industry, and critical analysis of indie/mainstream games.",
+      "followers": {
+        "facebook": 528,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/1993713.jpg?t=1619675830"
+    },
+    {
+      "title": "Klabater",
+      "feed_url": "https://klabater.com/feed/",
+      "website_url": "https://klabater.com/",
+      "description": "Keep up with articles from Klabater.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 4500,
+        "instagram": 516
+      },
+      "image_url": "https://i1.feedspot.com/5192922.jpg?t=1599213987"
+    },
+    {
+      "title": "Keith Burgun",
+      "feed_url": "http://keithburgun.net/feed/",
+      "website_url": "http://keithburgun.net/",
+      "description": "Keith Burgun is a game designer, writer, composer and visual artist from Westchester, NY. He has written two books on game design and he is a founder of Dinofarm Games.",
+      "followers": {
+        "facebook": 29,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1134931.jpg?t=1619676222"
+    },
+    {
+      "title": "Rat King's Blog",
+      "feed_url": "https://ratking.de/blog/feed/",
+      "website_url": "https://ratking.de/blog/",
+      "description": "Rat King is a two-person game development studio. They write about games and other stuff.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4708575.jpg?t=1619676230"
+    },
+    {
+      "title": "Catnap Games",
+      "feed_url": "https://www.catnapgames.com/feed/",
+      "website_url": "https://www.catnapgames.com/",
+      "description": "My name is Tomas Andrle and I'm an independent iOS, Mac app & game developer located near Prague, Czech republic. Catnap Games is me making software.",
+      "followers": {
+        "twitter": 138
+      },
+      "image_url": "https://i1.feedspot.com/5066989.jpg"
+    },
+    {
+      "title": "Powerhoof",
+      "feed_url": "https://www.powerhoof.com/feed/",
+      "website_url": "https://www.powerhoof.com/?utm_source=feedspot",
+      "description": "Powerhoof is an independent games studio, located in Melbourne, Australia. Stay tuned for insightful articles, behind-the-scenes glimpses, and announcements that showcase their commitment to delivering innovative and immersive gaming experiences.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 25700
+      },
+      "image_url": "https://i1.feedspot.com/3850097.jpg?t=1619676269"
+    },
+    {
+      "title": "A16Z GAMES",
+      "feed_url": "https://speedrun.substack.com/feed",
+      "website_url": "https://a16zgames.substack.com",
+      "description": "Empowering founders to reinvent the games industry",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4910a5c7-023e-49c2-9ab4-3fad897013af_256x256.png"
+    },
+    {
+      "title": "Elite Game Developers",
+      "feed_url": "https://elitegamedevelopers.substack.com/feed",
+      "website_url": "https://elitegamedevelopers.substack.com/",
+      "description": "My personal Substack",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71943e74-91e5-4466-bd36-bddeb83395a9_840x840.png"
+    },
+    {
+      "title": "Push to Talk",
+      "feed_url": "https://www.pushtotalk.gg/feed",
+      "website_url": "https://www.pushtotalk.gg/",
+      "description": "A strategy guide for people who make video games, delivered every Friday.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F03cbd814-aa82-4934-b385-9bf174d0533b_800x800.png"
+    },
+    {
+      "title": "Joseph Maurer",
+      "feed_url": "https://medium.com/feed/@josephamaurer",
+      "website_url": "https://josephamaurer.medium.com/",
+      "description": "Beyond the lines of code and syntactical sugar endures the true complexity of being a software engineer. The bounds of technology never cease radiating out into every facet of our lives, continually innovating on everyday plights. To be a software engineer today is to be working at the junction of logic and creativity. Joseph Maureris a Game Development Software Engineer.",
+      "followers": {
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/5295099.jpg?t=1624280933"
+    },
+    {
+      "title": "Kongregate Developers Blog \u00bb Game Development",
+      "feed_url": "https://blog.kongregate.com/rss/",
+      "website_url": "https://blog.kongregate.com/tag/game-development/",
+      "description": "Kongregate Developers blog is aiming to be a shared source of learnings, data, and information for game developers. Kongregate brings fun to the world! As a leading game developer and architect of gaming portal Kongregate.com, we are a community of creators driven to share our passion with the world.",
+      "followers": {
+        "facebook": 181000,
+        "twitter": 40400
+      },
+      "image_url": "https://i1.feedspot.com/4709051.jpg?t=1619675792"
+    },
+    {
+      "title": "Awesome Tuts Blog",
+      "feed_url": "https://awesometuts.com/feed/",
+      "website_url": "https://awesometuts.com/blog/",
+      "description": "Provides quality educational articles about game and app development.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 281
+      },
+      "image_url": "https://i1.feedspot.com/5330370.jpg?t=1633953440"
+    },
+    {
+      "title": "Vionix Studio Blog",
+      "feed_url": "https://vionixstudio.com/feed/",
+      "website_url": "https://vionixstudio.com/blog-post/",
+      "description": "Vionix studio is a game developer help site. We consolidate all the details required for a game developer to develop and publish their games.",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5039316.jpg?t=1619675848"
+    },
+    {
+      "title": "Game Development Blog",
+      "feed_url": "https://www.gamedevelopment.blog/feed/",
+      "website_url": "https://www.gamedevelopment.blog/",
+      "description": "Game Development Blog is all about Tutorials, guides, game development and fun computer related projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4709075.jpg"
+    },
+    {
+      "title": "Game Design Aspect",
+      "feed_url": "http://gamedesignaspect.blogspot.com/feeds/posts/default",
+      "website_url": "http://gamedesignaspect.blogspot.com/",
+      "description": "Sande Chen is a writer and game designer whose game credits span 10 years in the industry. Her writing credits include 1999 Independent Games Festival winner Terminus and the PC RPG of the Year, The Witcher, for which she was nominated for a 2007 Writers Guild Award in Videogame Writing.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1042394.jpg?t=1619676226"
+    },
+    {
+      "title": "Joost's Dev Blog",
+      "feed_url": "http://joostdevblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.oogst3d.net/",
+      "description": "This blog is about random interesting things he learn while creating things (usually design, art, code and music for games, and often for Ronimo Games).",
+      "followers": {
+        "facebook": 279,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/1881783.jpg?t=1619676237"
+    },
+    {
+      "title": "Game Development Diary",
+      "feed_url": "https://gamedevelopmentdiary.wordpress.com/feed/",
+      "website_url": "https://gamedevelopmentdiary.wordpress.com/",
+      "description": "Dreaming about making your own game, then I have nothing to tell about me. Because I have that thought too. Follow to get updates on game development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5050218.jpg"
+    },
+    {
+      "title": "Games and Learning",
+      "feed_url": "http://gamesandlearning1.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://gamesandlearning1.blogspot.com/",
+      "description": "Steve Isaacs teachs Video Game Design and Development at William Annin Middle School in Basking Ridge, NJ. In addition, he developed and teach an online version of the Video Game Design and Development course for the VHS Collaborative.",
+      "followers": {
+        "twitter": 23300
+      },
+      "image_url": "https://i1.feedspot.com/4709349.jpg?t=1619676265"
+    },
+    {
+      "title": "Frictional Games - In The Games Of Madness",
+      "feed_url": "https://frictionalgames.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://frictionalgames.blogspot.com/",
+      "description": "In The Games Of Madness blog shares unspeakable thoughts on horror, design and game development. Frictional Games is a small game company located in the dark depths of Sweden. We are the creators of Penumbra, Amnesia and SOMA.",
+      "followers": {
+        "facebook": 28800,
+        "twitter": 48400
+      },
+      "image_url": "https://i1.feedspot.com/1814809.jpg?t=1619676274"
+    },
+    {
+      "title": "War Clicks Development Blog",
+      "feed_url": "https://blog.warclicks.com/feed",
+      "website_url": "https://blog.warclicks.com/",
+      "description": "WarClicks is the first community-based clicking game! It's a new generation of an incremental clicking game, intertwined with social and community elements. Your clicking helps all of your country mates in becoming the ultimate clicking force.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4791556.jpg?t=1619675808"
+    },
+    {
+      "title": "Gamesworld",
+      "feed_url": "https://www.gamesworld.de/",
+      "website_url": "https://www.gamesworld.de/",
+      "description": "Making Games is Central Europe's leading magazine for professionals in the video game industry, be it print or online. Topics include game development, business development, workshops, research and market analysis.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4709289.jpg?t=1619675760"
+    },
+    {
+      "title": "Ask a Game Dev",
+      "feed_url": "https://askagamedev.tumblr.com/rss",
+      "website_url": "https://askagamedev.tumblr.com/",
+      "description": "Ask a Game Dev is making games for a living and can answer your questions.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4000327.jpg?t=1501477787"
+    },
+    {
+      "title": "Unity Blog",
+      "feed_url": "https://unity.com/blog/feed",
+      "website_url": "https://unity.com/blog",
+      "description": "Unity is the ultimate game development platform. Use Unity to build high-quality 3D and 2D games, deploy them across mobile, desktop, VR/AR, consoles or the Web, and connect with loyal and enthusiastic players and customers.",
+      "followers": {
+        "facebook": 846100,
+        "twitter": 20400,
+        "instagram": 295100
+      },
+      "image_url": "https://i1.feedspot.com/4500004.jpg?t=1619675780"
+    },
+    {
+      "title": "Artoon Solutions Blog",
+      "feed_url": "https://artoonsolutions.com/feed/",
+      "website_url": "https://www.leadwerks.com/community/blogs",
+      "description": "Artoon Solutions Pvt. Ltd. provides a full array of services like Website, eCommerce development, game dev, gaming platform, and app development for mobile. This is a blog where you can read the latest development news and updates.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 532,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5383948.jpg?t=1647948436"
+    },
+    {
+      "title": "Marvelous USA Blog",
+      "feed_url": "https://marvelous-usa.com/feed/",
+      "website_url": "https://marvelous-usa.com/category/blog/",
+      "description": "XSEED Games was formed in November 2004 by a small group of industry veterans with a common vision; to cross pollinate the avid gaming culture of Japan and North America. Delivering unique, innovative titles across multiple platforms and genres, XSEED Games is dedicated to publishing products that appeal to and enrich the North American market.",
+      "followers": {
+        "facebook": 73200,
+        "twitter": 121100
+      },
+      "image_url": "https://i1.feedspot.com/4709158.jpg?t=1619675812"
+    },
+    {
+      "title": "Designer Notes",
+      "feed_url": "http://www.designer-notes.com/?feed=rss2",
+      "website_url": "http://www.designer-notes.com/",
+      "description": "This blog is about Soren Johnson's Game Design Journal.",
+      "followers": {
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/343742.jpg?t=1619675841"
+    },
+    {
+      "title": "GameAnalytics Blog",
+      "feed_url": "https://www.gameanalytics.com/feed?x=1",
+      "website_url": "https://www.gameanalytics.com/blog",
+      "description": "Game Analytics is a Free and Powerful Analytics Tool for Game Developers, that helps you understand player behavior and build better games. If you're focused on developing mobile games, this blog is essential reading.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 11300,
+        "instagram": 699
+      },
+      "image_url": "https://i1.feedspot.com/4615591.jpg?t=1615881459"
+    },
+    {
+      "title": "Juego Studios Blog",
+      "feed_url": "https://www.juegostudio.com/feed",
+      "website_url": "https://www.juegostudio.com/blog",
+      "description": "Started in 2011, Juego Studios has expanded from being a game design company to a full-fledged technology venture dealing with AR/VR, IoT, AI and other emerging technologies. Our forte is to design and develop 2D & 3D games for all the game genres across multiple platforms. We have talented game developers who are also hardcore gamers, cultivating innovation, creative, passionate and uniqueness in every game they develop.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2000,
+        "instagram": 804
+      },
+      "image_url": "https://i1.feedspot.com/4709140.jpg?t=1619675804"
+    },
+    {
+      "title": "AppLixir Blog",
+      "feed_url": "https://www.applixir.com/blog/feed/",
+      "website_url": "https://www.applixir.com/blog/",
+      "description": "We help creative people realize the true revenue potential by providing a simple & seamless Reward Video Ad integration that delivers results. AppLixir has been helping 100+ games monetize using Reward Video Ads on Web, Mobile Web and Mobile games & sites.",
+      "followers": {
+        "facebook": 709,
+        "twitter": 645
+      },
+      "image_url": "https://i1.feedspot.com/5017154.jpg?t=1607924469"
+    }
+  ]
+}

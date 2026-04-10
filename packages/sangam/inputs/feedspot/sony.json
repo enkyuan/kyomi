@@ -1,0 +1,85 @@
+{
+  "category": "Sony",
+  "source_url": "https://rss.feedspot.com/sony_rss_feeds",
+  "feeds": [
+    {
+      "title": "SonyAlphaRumors",
+      "feed_url": "https://www.sonyalpharumors.com/feed/",
+      "website_url": "https://www.sonyalpharumors.com/",
+      "description": "SonyAlphaRumors provides you with Sony news, rumors and reviews about the whole digital camera world. They also provide news about future Sony products.",
+      "followers": {
+        "facebook": 113900,
+        "twitter": 33600
+      },
+      "image_url": "https://i1.feedspot.com/4905923.jpg?t=1656072250"
+    },
+    {
+      "title": "PhoneArena \u00bb Sony",
+      "feed_url": "https://www.phonearena.com/feed/sony",
+      "website_url": "https://www.phonearena.com/sony",
+      "description": "PhoneArena is the premium website for new phone information such as full specifications, in-depth reviews, latest news, carrier available and upcoming phones. It features advanced phone filters, visual size comparison and 360-degree views of all hot phones.",
+      "followers": {
+        "facebook": 494300,
+        "twitter": 75200
+      },
+      "image_url": "https://i1.feedspot.com/4906088.jpg?t=1613711371"
+    },
+    {
+      "title": "Phillip Reeve Blog",
+      "feed_url": "https://phillipreeve.net/blog/feed/",
+      "website_url": "https://phillipreeve.net/blog/",
+      "description": "Follow this blog where Phillip Reeve and his team share their thoughts and reviews on mirrorless Sony Alphas, manual Lenses and much more.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/4583962.jpg?t=1611912334"
+    },
+    {
+      "title": "Sony Mirrorless Pro",
+      "feed_url": "https://sonymirrorlesspro.com/feed/",
+      "website_url": "https://sonymirrorlesspro.com/category/news/",
+      "description": "The leading news, tutorial and information site for Sony mirrorless photographers.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 124,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4906156.jpg?t=1613711400"
+    },
+    {
+      "title": "Sony Music News",
+      "feed_url": "https://www.sonymusic.com/feed/",
+      "website_url": "https://www.sonymusic.com/news/",
+      "description": "Official statements and announcements from Sony Music. Sony Music Entertainment is a global music company with a roster of current artists that includes both local & international superstars.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 751900,
+        "instagram": 864400
+      },
+      "image_url": "https://i1.feedspot.com/5283644.jpg?t=1621865352"
+    },
+    {
+      "title": "Xperia Blog",
+      "feed_url": "http://feeds.feedburner.com/XperiaBlog",
+      "website_url": "https://www.xperiablog.net/",
+      "description": "Follow this Xperia Blog to get all the latest news, reviews, tips and firmware updates for Sony Mobile's range of Xperia smartphones.",
+      "followers": {
+        "facebook": 42200,
+        "twitter": 60100
+      },
+      "image_url": "https://i1.feedspot.com/172914.jpg?t=1613711367"
+    },
+    {
+      "title": "XperiBlog",
+      "feed_url": "http://feeds.feedburner.com/XperiblogXperiaZ3XperiaZ3XperiaZ2XperiaNews",
+      "website_url": "https://www.xperiblog.com/",
+      "description": "Xperiblog gives you the latest technology news, reviews, giveaways, deals, tips, and tricks covering Android, Windows, Linux, and other systems.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/4906111.jpg?t=1613711407"
+    }
+  ]
+}

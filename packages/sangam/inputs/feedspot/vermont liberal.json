@@ -1,0 +1,60 @@
+{
+  "category": "Vermont Liberal",
+  "source_url": "https://rss.feedspot.com/vermont_liberal_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Vermont Political Observer",
+      "feed_url": "https://thevpo.org/feed/",
+      "website_url": "https://thevpo.org/",
+      "description": "John Walters, a seasoned author, journalist, and observer of Vermont politics, runs The Vermont Political Observer. With a background in radio journalism spanning Michigan, New Hampshire, and Vermont, he offers unique insights and opinions on political affairs through his blog.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4059329.jpg?t=1638447734"
+    },
+    {
+      "title": "The Vermont Progressive Party",
+      "feed_url": "https://www.progressiveparty.org/progressive-news-and-updates?format=rss",
+      "website_url": "https://www.progressiveparty.org/progressive-news-and-updates",
+      "description": "In Vermont, the Vermont Progressive Party stands as a unique model, championing grassroots organizing and independence from corporate-owned parties. Alongside issue-focused groups and 'small p' progressives within the Democratic party, they represent diverse approaches to political change. Some politicians opt to remain outside party structures by running as Independents, contributing to Vermont's varied political landscape.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 3000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5760356.jpg?t=1706013759"
+    },
+    {
+      "title": "RAD Movement \u00bb Vermont",
+      "feed_url": "https://radmovement.org/category/vermont/feed/",
+      "website_url": "https://radmovement.org/category/vermont/",
+      "description": "At RAD Movement, the focus is on harnessing collective voices to drive change. With a mission centred on justice and policy improvement, they tackle issues like livable wages, healthcare, and education access. By uniting people for action, they aim to shape government policies in alignment with community values, fostering healthier communities along the way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7270290.jpg?t=1709918956"
+    },
+    {
+      "title": "Vermont Democratic Party Blog",
+      "feed_url": "https://www.vtdemocrats.org/blog-feed.xml",
+      "website_url": "https://www.vtdemocrats.org/news",
+      "description": "Receive exclusive updates and insights from the Vermont Democratic Party blog. They've spearheaded movements for marriage equality, universal healthcare, and top-notch public education statewide. Amidst New England's Republican legislative shifts, Vermont stands out as a progressive beacon, thanks to the Vermont Democrats' dedicated efforts.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 6100,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5344955.jpg?t=1638446875"
+    },
+    {
+      "title": "WCAX",
+      "feed_url": "https://www.wcax.com/arcio/rss/category/news/?size=20",
+      "website_url": "https://www.wcax.com/",
+      "description": "WCAX is the premier source for news, weather, and local sports in Vermont and the surrounding region. As the CBS affiliate for the Burlington, Vermont Plattsburgh, New York market, WCAX-TV delivers up-to-the-minute updates to viewers, solidifying its status as a trusted leader in broadcasting.",
+      "followers": {
+        "facebook": 246000,
+        "twitter": 69500,
+        "instagram": 48200
+      },
+      "image_url": "https://i1.feedspot.com/5131244.jpg?t=1623300427"
+    }
+  ]
+}

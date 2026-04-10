@@ -1,0 +1,52 @@
+{
+  "category": "Vietnam Political",
+  "source_url": "https://rss.feedspot.com/vietnam_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tuoitre Vietnam News",
+      "feed_url": "https://news.tuoitre.vn/vietnam-news.rss",
+      "website_url": "https://news.tuoitre.vn/vietnam-news.htm/",
+      "description": "Breaking stories, latest news headlines on current affairs, new developments, government policies, corruption cases, international treaties, and more. Tuoi Tre News, an English online publication of Tuoi Tre Newspaper, serves as a reliable news source for international readers, foreigners living in Vietnam, Vietnamese living abroad, entrepreneurs, the general public, and everyone else interested.",
+      "followers": {
+        "facebook": 93300,
+        "twitter": 102700
+      },
+      "image_url": "https://i1.feedspot.com/5347295.jpg?t=1638513317"
+    },
+    {
+      "title": "The Diplomat \u00bb Vietnam Politics",
+      "feed_url": "https://thediplomat.com/tag/vietnam-politics/feed/",
+      "website_url": "https://thediplomat.com/tag/vietnam-politics/",
+      "description": "Track breaking Vietnam politics headlines & analyses on The Diplomat News and read daily updates and coverage. Since its launch in 2002, The Diplomat has been dedicated to quality analysis and commentary on events occurring in Asia and around the world.",
+      "followers": {
+        "facebook": 826300,
+        "twitter": 269700
+      },
+      "image_url": "https://i1.feedspot.com/5347274.jpg?t=1638510510"
+    },
+    {
+      "title": "N Guoi Dua Tin \u00bb Policy",
+      "feed_url": "https://www.nguoiduatin.vn/rss/toan-canh/chinh-sach.rss",
+      "website_url": "https://www.nguoiduatin.vn/toan-canh/chinh-sach.htm",
+      "description": "The latest current Vietnamese political news, the current political situation, and updates, analysis of Vietnamese and World politics. N Guoi Dua Tin is a digital platform for the latest news and reports from Vietnam on Economy, Life, Society, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5347293.jpg?t=1638514259"
+    },
+    {
+      "title": "VietnamPlus \u00bb Politics",
+      "feed_url": "https://en.vietnamplus.vn/rss/politics-291.rss",
+      "website_url": "https://en.vietnamplus.vn/politics/",
+      "description": "Read more about politics, ruling and opposition parties, the current political environment, and more in the Politics section of VietnamPlus. Other major news categories to read are Business, Society, Education, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5347296.jpg?t=1638514953"
+    },
+    {
+      "title": "Ap Bac \u00bb Politics",
+      "feed_url": "https://baoapbac.vn/english/politics/",
+      "website_url": "https://baoapbac.vn/english/politics/",
+      "description": "Ap Bac brings you news on the Communist Party of Vietnam, government, party committees, and more. Stay updated on the latest trends and information from Vietnam and read news on the Economy, Law, Sports, Education, Health, Science, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5347302.jpg?t=1638515308"
+    }
+  ]
+}

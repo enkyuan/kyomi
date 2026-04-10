@@ -1,0 +1,62 @@
+{
+  "category": "UK Postpartum",
+  "source_url": "https://rss.feedspot.com/uk_postpartum_rss_feeds",
+  "feeds": [
+    {
+      "title": "The SMILE Group Blog",
+      "feed_url": "https://smilegroup.org.uk/latest-news/feed/",
+      "website_url": "https://smilegroup.org.uk/latest-news/",
+      "description": "This website has been put together by mums who have all suffered postnatal depression (PND). We run local support groups, provide lots of self help resources.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4907752.jpg"
+    },
+    {
+      "title": "Mom's Fitness Boutique Blog",
+      "feed_url": "https://www.momsfitnessboutique.com/blog-feed.xml",
+      "website_url": "https://www.momsfitnessboutique.com/blog",
+      "description": "Mom's Fitness Boutique shows moms how to Love their baby bodies!",
+      "followers": {
+        "twitter": 46
+      },
+      "image_url": "https://i1.feedspot.com/4906367.jpg?t=1613737685"
+    },
+    {
+      "title": "Labyrinth of Nurture Blog",
+      "feed_url": "https://labyrinthofnurture.co.uk/category/blog/feed/",
+      "website_url": "https://labyrinthofnurture.co.uk/category/blog/",
+      "description": "The Blog about pre- and postnatal exercise birth preparation corrective exercises Suffolk.",
+      "followers": {
+        "facebook": 226,
+        "twitter": 263
+      },
+      "image_url": "https://i1.feedspot.com/4907740.jpg?t=1613737696"
+    },
+    {
+      "title": "&Breathe Blog",
+      "feed_url": "https://andbreathewellbeing.com/blog?format=RSS",
+      "website_url": "https://andbreathewellbeing.com/blog/",
+      "description": "We offer unique and award-winning retreats designed specifically for new mums and dads and their little ones, helping you to re-boot after having a baby.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 485,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4906383.jpg?t=1613737700"
+    },
+    {
+      "title": "Isablog",
+      "feed_url": "https://isablog.co.uk/category/mental-health/postnatal-depression/feed/",
+      "website_url": "https://isablog.co.uk/category/mental-health/postnatal-depression/",
+      "description": "I try to give advice, research, opinions, blogs, reviews and even the odd competition... All of which will be related to babies.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1900,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4907756.jpg?t=1613737706"
+    }
+  ]
+}

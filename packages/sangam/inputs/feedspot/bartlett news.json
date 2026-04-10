@@ -1,0 +1,17 @@
+{
+  "category": "Bartlett News",
+  "source_url": "https://rss.feedspot.com/bartlett_tennessee_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bartlett Express",
+      "feed_url": "https://bartlett-express.com/feed/",
+      "website_url": "https://bartlett-express.com/",
+      "description": "Bartlett Express is your resource for the best of what you need to know about Bartlett, Tennessee. It aggregates the most important news and stories and delivers them to you.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 992
+      },
+      "image_url": "https://i1.feedspot.com/5149357.jpg?t=1626440580"
+    }
+  ]
+}

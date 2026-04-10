@@ -1,0 +1,81 @@
+{
+  "category": "Crypto Tax",
+  "source_url": "https://rss.feedspot.com/crypto_tax_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ledgible Crypto Blog",
+      "feed_url": "https://ledgible.io/blog/feed/",
+      "website_url": "https://ledgible.io/blog/",
+      "description": "Stay up to date on everything happening in the world of Crypto Accounting. Ledgible Crypto Tax and Accounting platform provides professionals and individuals tools to monitor cryptocurrency along with tax reporting.",
+      "followers": {
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/5282562.jpg?t=1621502914"
+    },
+    {
+      "title": "CryptoTaxAudit Blog",
+      "feed_url": "https://www.cryptotaxaudit.com/blog.rss",
+      "website_url": "https://www.cryptotaxaudit.com/blog",
+      "description": "Stay informed with CryptoTaxAudit, your trusted source for the latest updates on cryptocurrency taxation. CryptoTaxAudit provides expert gain calculations, tax filing, and premier audit protection services explicitly created for crypto investors and traders. Stay ahead of IRS regulations and protect your digital assets through professional support and ongoing education designed to keep you compliant and protected.",
+      "followers": {
+        "facebook": 246,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5282539.jpg?t=1621605033"
+    },
+    {
+      "title": "Taxing Cryptocurrency Blog",
+      "feed_url": "https://www.taxingcryptocurrency.com/blog?format=rss",
+      "website_url": "https://www.taxingcryptocurrency.com/blog",
+      "description": "Taxing Cryptocurrency's blog is dedicated to providing readers with the latest and most up to date crypto world news and recommendations related to taxation. Covers cryptocurrency, tax and accounting. Jordan has an extensive background in financial accounting and taxation and is one of the leading crypto tax and accounting authorities for entrepreneurs and investors in the cryptocurrency and blockchain ecosystem",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5282451.jpg?t=1621491965"
+    },
+    {
+      "title": "CoinTracking Blog",
+      "feed_url": "https://cointracking.info/blog/",
+      "website_url": "https://cointracking.info/blog/",
+      "description": "Covers profit/loss reports, crypto charts, user statistics, and more! Take advantage of the best crypto software features, learn all about the recent tax updates, and discover the best tools to become a better crypto investor. CoinTracking is a portfolio manager for Bitcoins and all digital currencies.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5282572.jpg?t=1621506160"
+    },
+    {
+      "title": "Koinly Blog",
+      "feed_url": "https://koinly.io/blog/",
+      "website_url": "https://koinly.io/blog/",
+      "description": "Stay up to date with the latest crypto tax regulations: detailed tutorials and advice from industry leading tax accountants. Koinly solves crypto tracking & tax reporting for investors. We do this by pairing intuitive software with expert guidance from renowned tax consultants.",
+      "followers": {
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/5282563.jpg?t=1621503772"
+    },
+    {
+      "title": "Taxbit Insights",
+      "feed_url": "https://www.taxbit.com/resources/insights/?content_type=blogs/",
+      "website_url": "https://www.taxbit.com/resources/insights/?content_type=blogs/",
+      "description": "News and insight by Cryptocurrency Tax Attorneys and Blockchain CPA's. TaxBit is the official IRS partner for data and reporting on crypto taxes. Connect popular exchanges like BlockFi, Coinbase and Gemini.",
+      "followers": {
+        "facebook": 684,
+        "twitter": 15600,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5282449.jpg?t=1621491690"
+    },
+    {
+      "title": "NODE40 Blog",
+      "feed_url": "https://www.node40.com/feed/",
+      "website_url": "https://www.node40.com/blog/",
+      "description": "Find the latest news, tips and insights about how to manage crypto taxes, monitor digital assets and track performance more efficiently. NODE40 offers the industry's most comprehensive data analysis, accounting and crypto tax platform to create an independent, verifiable audit trail.",
+      "followers": {
+        "facebook": 238,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5447039.jpg?t=1663331516"
+    }
+  ]
+}

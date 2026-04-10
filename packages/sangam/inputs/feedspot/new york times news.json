@@ -1,0 +1,242 @@
+{
+  "category": "New York Times News",
+  "source_url": "https://rss.feedspot.com/new_york_times_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The New York Times",
+      "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+      "website_url": "https://www.nytimes.com/",
+      "description": "The New York Times features breaking news, multimedia, reviews & opinion on Washington, business, sports, movies, travel, books, jobs, education, real estate, cars & more.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/326090.jpg?t=1534564670"
+    },
+    {
+      "title": "The New York Times \u00bb World",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml",
+      "website_url": "https://www.nytimes.com/section/world",
+      "description": "The New York Times aims to create a space where readers can exchange intelligent and informed commentary that enhances the quality of our news and information. Find breaking news, world news and multimedia on Africa, Canada, Mexico, South and Central America, Asia, Europe, the Middle East and Iraq and more.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/4719130.jpg?t=1603890044"
+    },
+    {
+      "title": "The New York Times Magazine",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/magazine/rss.xml",
+      "website_url": "https://www.nytimes.com/section/magazine",
+      "description": "Welcome to The New York Times Magazine. It features columns, essays, photography and more from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 578700
+      },
+      "image_url": "https://i1.feedspot.com/4930838.jpg?t=1628834925"
+    },
+    {
+      "title": "The New York Times \u00bb Politics",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/politics/rss.xml",
+      "website_url": "https://www.nytimes.com/section/politics",
+      "description": "The New York Times offers breaking news and analysis on U.S. politics, covering the White House, Congress, and the Supreme Court. As a leading US daily, it provides expert, independent journalism to help readers understand the world through on-the-ground reporting.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4740230.jpg?t=1666933517"
+    },
+    {
+      "title": "The New York Times",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/technology/rss.xml",
+      "website_url": "https://www.nytimes.com/",
+      "description": "Follow us to keep up with all technological news and updates from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4823037.jpg?t=1534565421"
+    },
+    {
+      "title": "The New York Times \u00bb Lens",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/lens/rss.xml",
+      "website_url": "https://www.nytimes.com/section/lens",
+      "description": "Lens is the photojournalism blog of The New York Times, presenting the finest and most interesting visual and multimedia reporting photographs, videos and slide shows.",
+      "followers": {
+        "facebook": 525900,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4570796.jpg?t=1608298401"
+    },
+    {
+      "title": "The New York Times \u00bb Well",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/well/rss.xml",
+      "website_url": "https://www.nytimes.com/section/well",
+      "description": "Health news and thought-provoking stories from the Science desk of The New York Times.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4749610.jpg?t=1665381349"
+    },
+    {
+      "title": "The New York Times \u00bb Arts",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/arts/rss.xml",
+      "website_url": "https://www.nytimes.com/section/arts",
+      "description": "The Arts section of The New York Times Cultural news and reviews from our critics and reporters, including coverage of visual art, books, dance, movies, music, television and theater.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4927580.jpg?t=1621007647"
+    },
+    {
+      "title": "The New York Times \u00bb Business",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/business/rss.xml",
+      "website_url": "https://www.nytimes.com/search?query=Verizon",
+      "description": "Breaking news and analysis on business and the economy, including the latest news in technology, stock markets, media and finance. Read this section of the New York Times to keep up with news and articles on Business. The New York Times is dedicated to helping people understand the world through on-the-ground, expert and deeply reported independent journalism.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4788099.jpg?t=1534565068"
+    },
+    {
+      "title": "The New York Times \u00bb Food",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/food/rss.xml",
+      "website_url": "https://www.nytimes.com/section/food/",
+      "description": "Find Food & Wine news and reviews on restaurants, recipes, cooking, desserts, chefs, fine dining, cuisine, New York restaurants, four-star restaurants & more. As one of the nation's foremost news organizations, The New York Times is dedicated to helping people understand the world through on-the-ground, expert and deeply reported independent journalism.",
+      "followers": {
+        "facebook": 961400,
+        "twitter": 4400,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4872379.jpg?t=1669899243"
+    },
+    {
+      "title": "The New York Times \u00bb Science",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/science/rss.xml",
+      "website_url": "https://www.nytimes.com/section/science",
+      "description": "Science news from The New York Times features the latest developments about space, the environment, animal behavior, the brain, genetics, archaeology and robots.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4909313.jpg?t=1534565580"
+    },
+    {
+      "title": "The New York Times \u00bb T Magazine",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/t-magazine/rss.xml",
+      "website_url": "https://www.nytimes.com/section/t-magazine",
+      "description": "Subscribe us to keep up with Exclusive fashion, design, food, interiors and travel coverage from T: The New York Times Style Magazine.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/4940533.jpg?t=1534566217"
+    },
+    {
+      "title": "The New York Times \u00bb Opinion",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/opinion/rss.xml",
+      "website_url": "https://www.nytimes.com/section/opinion",
+      "description": "Follow us to keep up with the opinion section, editorials, and guest essays of The New York Times. The New York Times is an American daily newspaper with a worldwide readership. The New York Times seeks the truth and helps people understand the world.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4740287.jpg?t=1660203296"
+    },
+    {
+      "title": "The New York Times \u00bb Real Estate",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/realestate/rss.xml",
+      "website_url": "https://www.nytimes.com/section/realestate",
+      "description": "News on renting, buying, or selling a house, apartment or condo and stories on decorating, interior design, renovation and gardening in New York, New Jersey, Connecticut, California and beyond.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000,
+        "instagram": 19600000
+      },
+      "image_url": "https://i1.feedspot.com/4619936.jpg?t=1603804180"
+    },
+    {
+      "title": "The New York Times \u00bb Health",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/health/rss.xml",
+      "website_url": "https://www.nytimes.com/section/health",
+      "description": "Keep up with the health section of The New York Times for articles related to nutrition, fitness, diet and a lot more. The New York Times is dedicated to helping people understand the world through on-the-ground, expert and deeply reported independent journalism.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4749604.jpg?t=1534565675"
+    },
+    {
+      "title": "The New York Times \u00bb Book Review",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/books/review/rss.xml",
+      "website_url": "https://www.nytimes.com/section/books/review",
+      "description": "Follow us to keep up with Book reviews, news and features from our critics and reporters.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4621414.jpg?t=1534565938"
+    },
+    {
+      "title": "The New York Times \u00bb Fashion",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/fashion/rss.xml",
+      "website_url": "https://www.nytimes.com/section/fashion",
+      "description": "Follow us to keep up with News from the Styles, Fashion and Society desks from the New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4940525.jpg?t=1534566006"
+    },
+    {
+      "title": "The New York Times \u00bb Travel",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/travel/rss.xml",
+      "website_url": "https://www.nytimes.com/section/travel",
+      "description": "Follow us to keep up with Travel news, tips and photography from destinations all over the globe.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4940530.jpg?t=1534566122"
+    },
+    {
+      "title": "The New York Times \u00bb Obituaries",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/obituaries/rss.xml",
+      "website_url": "https://www.nytimes.com/section/obituaries",
+      "description": "Keep up with The New York Times obituaries and death notices - remembering lives that touched our own.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4940743.jpg?t=1534566330"
+    },
+    {
+      "title": "The New York Times \u00bb Sports",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/sports/rss.xml",
+      "website_url": "https://www.nytimes.com/section/sports",
+      "description": "Find breaking news & sports news on the NFL, the NBA, the NCAA, the NHL, baseball, golf, tennis, soccer, the World Series, Super Bowl, the Olympics and more from The New York Times. The New York Times is an American daily newspaper based in New York City with a worldwide readership. It was founded in 1851 by Henry Jarvis Raymond and George Jones and was initially published by Raymond, Jones & Company.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4940507.jpg?t=1666268059"
+    },
+    {
+      "title": "The New York Times \u00bb International Herald Tribune",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/column/iht-retrospective/rss.xml",
+      "website_url": "https://www.nytimes.com/column/iht-retrospective",
+      "description": "This page, a retrospective of news from 1877 to 2013, shares highlights and curiosities from The International Herald Tribune's storied reportage.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4940829.jpg?t=1534577402"
+    }
+  ]
+}

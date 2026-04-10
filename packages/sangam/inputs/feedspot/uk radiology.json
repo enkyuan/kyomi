@@ -1,0 +1,60 @@
+{
+  "category": "UK Radiology",
+  "source_url": "https://rss.feedspot.com/uk_radiology_rss_feeds",
+  "feeds": [
+    {
+      "title": "4ways diagnostics",
+      "feed_url": "https://4waysdiagnostics.co.uk/feed/",
+      "website_url": "https://4waysdiagnostics.co.uk/news-and-media/",
+      "description": "Follow this blog for UK radiology reporting news, views and insight, including stories at 4ways, events, clinical updates and industry news.",
+      "followers": {
+        "facebook": 120,
+        "twitter": 508
+      },
+      "image_url": "https://i1.feedspot.com/4919720.jpg?t=1620712299"
+    },
+    {
+      "title": "Radiological Heterodoxy",
+      "feed_url": "http://radiologicalheterodoxy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://radiologicalheterodoxy.blogspot.com/",
+      "description": "I'm a radiologist and writing helps me make sense of the world. A different view on the world of radiology by Paul McCoubrie.",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4919708.jpg?t=1620712307"
+    },
+    {
+      "title": "Maryann Hardy",
+      "feed_url": "https://maryannhardy.wordpress.com/feed/",
+      "website_url": "https://maryannhardy.wordpress.com/",
+      "description": "Maryann Hardy is Professor of Radiography at the University of Bradford, UK and an advocate of professional and personal advancement. Subscribe to keep up with latest updates from this blog.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4919693.jpg?t=1620712353"
+    },
+    {
+      "title": "Oryon Imaging Blog",
+      "feed_url": "https://oryon.co.uk/blog/feed/",
+      "website_url": "https://oryon.co.uk/blog/",
+      "description": "Oryon Imaging is a diagnostic imaging centre, based on Wimpole Street in London's world-renowned Harley Street district. We pride ourselves on offering the most accessible and affordable private MRI scans, Ultrasound scans, X-rays and DEXA scans possible. Our blog section is constantly being updated with articles written by renowned consultants, AHPs, and other healthcare practitioners. Check it out!",
+      "followers": {
+        "facebook": 730,
+        "twitter": 965
+      },
+      "image_url": "https://i1.feedspot.com/4919681.jpg?t=1606732973"
+    },
+    {
+      "title": "Radiology Cafe Blog",
+      "feed_url": "https://www.radiologycafe.com/blog/feed/rss/",
+      "website_url": "https://www.radiologycafe.com/blog/",
+      "description": "Radiology Cafe is a blog helping junior doctors applying for clinical radiology training in the UK and supporting radiology registrars in training. They have ST1 interview and application advice, information on competition ratios, improving CVs and portfolios and what its like working as a radiology trainee.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 6700,
+        "instagram": 43600
+      },
+      "image_url": "https://i1.feedspot.com/4699333.jpg?t=1606911889"
+    }
+  ]
+}

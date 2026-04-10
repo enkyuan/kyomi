@@ -1,0 +1,907 @@
+{
+  "category": "Houseplant",
+  "source_url": "https://rss.feedspot.com/houseplant_rss_feeds",
+  "feeds": [
+    {
+      "title": "Guide to House Plants - Tips for Growing Plants Indoors",
+      "feed_url": "https://www.guide-to-houseplants.com/house-plants.xml",
+      "website_url": "https://www.guide-to-houseplants.com/house-plants-blog.html",
+      "description": "House plants encyclopedia listed by common names with pictures and care tips. Plus ideas for easy-to-grow indoor house plants.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4809585.jpg?t=1610540500"
+    },
+    {
+      "title": "Ohio Tropics Houseplant",
+      "feed_url": "https://www.ohiotropics.com/feed/",
+      "website_url": "https://www.ohiotropics.com/",
+      "description": "This blog focuses on adventures in growing orchids and other tropical houseplants, as well as outdoor gardening in the Midwest with a tropical flair.",
+      "followers": {
+        "facebook": 81500,
+        "twitter": 165,
+        "instagram": 300100
+      },
+      "image_url": "https://i1.feedspot.com/4810200.jpg?t=1655986041"
+    },
+    {
+      "title": "NatureBring",
+      "feed_url": "https://www.naturebring.com/category/house-plant/feed/",
+      "website_url": "https://www.naturebring.com/category/house-plant/",
+      "description": "A Blog About House Plants.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4810331.jpg?t=1610540541"
+    },
+    {
+      "title": "Soltech Solutions Blog",
+      "feed_url": "https://soltech.com/blogs/blog.atom",
+      "website_url": "https://soltech.com/blogs/blog",
+      "description": "Covers articles that focus on different plants, the lighting they require, different soils and environments. We are a small plant light company and we are passionate about growing plants indoors!",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 573
+      },
+      "image_url": "https://i1.feedspot.com/5364637.jpg?t=1642759303"
+    },
+    {
+      "title": "House Plus Plant Blog",
+      "feed_url": "https://www.houseplusplant.com/blog?format=rss",
+      "website_url": "https://www.houseplusplant.com/blog",
+      "followers": {
+        "facebook": 281100,
+        "instagram": 731400
+      },
+      "image_url": "https://i1.feedspot.com/5725697.jpg?t=1701422435"
+    },
+    {
+      "title": "BricksnBlooms \u00bb Houseplant Care",
+      "feed_url": "https://stacyling.com/category/garden/houseplant-care/feed/",
+      "website_url": "https://stacyling.com/category/garden/houseplant-care/",
+      "description": "Bricks 'n Blooms",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725718.jpg?t=1701423337"
+    },
+    {
+      "title": "Plantclub Blog",
+      "feed_url": "https://www.plantclub.io/blog-en?format=rss",
+      "website_url": "https://www.plantclub.io/blog-en/",
+      "description": "Where inspiration blooms: from the benefits of green workplaces, to plant care, to design insights from industry experts - we've got you covered.",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5725701.jpg?t=1701423220"
+    },
+    {
+      "title": "Bloomscape",
+      "feed_url": "https://bloomscape.com/feed/",
+      "website_url": "https://bloomscape.com/plant-life/",
+      "description": "Plant Life",
+      "followers": {
+        "facebook": 41500,
+        "twitter": 6400,
+        "instagram": 164700
+      },
+      "image_url": "https://i1.feedspot.com/5725690.jpg?t=1701422396"
+    },
+    {
+      "title": "Plantflix Blog",
+      "feed_url": "https://www.plantflix.com/blogs/news.atom",
+      "website_url": "https://www.plantflix.com/blogs/news",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 75,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5725710.jpg?t=1701422507"
+    },
+    {
+      "title": "Bloombox Club Blog",
+      "feed_url": "https://bloomboxclub.com/blogs/news.atom",
+      "website_url": "https://bloomboxclub.com/blogs/news",
+      "description": "Bloombox Club Blog is a valuable resource for plant lovers seeking to bring nature indoors. The blog offers insights into houseplant care, well-being benefits of plants, and tips for creating harmonious plant-filled environments. Readers can expect informative articles, plant profiles, and guidance on how to choose the right plants for different living spaces. Visit the Bloombox Club Blog to enhance your plant knowledge, explore the positive impact of plants on well-being, and discover unique plant varieties for your indoor sanctuary.",
+      "followers": {
+        "facebook": 29300,
+        "instagram": 60300
+      },
+      "image_url": "https://i1.feedspot.com/5600823.jpg?t=1686916981"
+    },
+    {
+      "title": "Tumbleweed Plant Blog",
+      "feed_url": "https://tumbleweedplants.com/blogs/plant-blog.atom",
+      "website_url": "https://tumbleweedplants.com/blogs/plant-blog",
+      "description": "Follow our plant blog for the latest updates in the world of houseplants. Indoor plant care tips, how to keep your plants healthy and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725716.jpg?t=1701423378"
+    },
+    {
+      "title": "Sacred Elements Houseplant Care Blog",
+      "feed_url": "https://sacredelements.world/blogs/houseplant-care.atom",
+      "website_url": "https://sacredelements.world/blogs/houseplant-care",
+      "followers": {
+        "facebook": 14000,
+        "instagram": 28600
+      },
+      "image_url": "https://i1.feedspot.com/5725685.jpg?t=1701422365"
+    },
+    {
+      "title": "Beginner Houseplant",
+      "feed_url": "https://beginnerhouseplant.com/feed/",
+      "website_url": "https://beginnerhouseplant.com/",
+      "description": "Welcome to Beginner Houseplant, where we're all learning together. I'm Crystal, and I have a bit of an obsession with houseplants. I currently have over 50 houseplants. Beginner Houseplant is the ultimate houseplant blog resource! With tips and tricks for houseplant pests watering and all the info on indoor plant care.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 168
+      },
+      "image_url": "https://i1.feedspot.com/5701216.jpg?t=1698746306"
+    },
+    {
+      "title": "Houseplant Homebody",
+      "feed_url": "https://www.houseplant-homebody.com/blog-feed.xml",
+      "website_url": "https://www.houseplant-homebody.com/blog",
+      "description": "Your host, Holly, talks about plants, plant care, her experiences with plants and all things plant related! There is also a blog that corresponds with each podcast episode containing all the links and information discussed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725715.jpg?t=1746029602"
+    },
+    {
+      "title": "Leafy Living Spaces",
+      "feed_url": "https://leafylivingspaces.com/feed/",
+      "website_url": "https://leafylivingspaces.com/",
+      "description": "Discover articles on How to take care of your Gardening with ideas like Repottings, Houseplant tips, and much more. Leafy Living Spaces is the perfect resource to find all the help you need in this matter. Stay informed and aware about all Houseplanting insights with us.",
+      "followers": {
+        "facebook": 512,
+        "instagram": 177
+      },
+      "image_url": "https://i1.feedspot.com/5609461.jpg?t=1687857937"
+    },
+    {
+      "title": "The Botanical Bar Blog",
+      "feed_url": "https://thebotanicalbarindy.com/blogs/blog.atom",
+      "website_url": "https://thebotanicalbarindy.com/blogs/blog",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5725686.jpg?t=1701422372"
+    },
+    {
+      "title": "Happy Houseplants Blog",
+      "feed_url": "https://www.happyhouseplants.co.uk/blogs/houseplant-blog.atom",
+      "website_url": "https://www.happyhouseplants.co.uk/blogs/houseplant-blog",
+      "description": "Welcome to Happy Houseplants; we aim to create urban jungles - little spaces of calm at your home or place of work, to help you escape the stresses of everyday life. Follow the Happy Houseplant blog, Indoor Plant Passions to find out about the latest trends, insights, and plant obsessions from some of the leading experts in houseplants.",
+      "followers": {
+        "facebook": 8300,
+        "instagram": 66700
+      },
+      "image_url": "https://i1.feedspot.com/5600025.jpg?t=1686917225"
+    },
+    {
+      "title": "Wild Interiors Blog",
+      "feed_url": "https://www.wildinteriors.com/blog?format=rss",
+      "website_url": "https://www.wildinteriors.com/blog",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5725681.jpg?t=1701422340"
+    },
+    {
+      "title": "Inside Plants Blog",
+      "feed_url": "https://insideplants.net/feed/",
+      "website_url": "https://insideplants.net/plants-blog/",
+      "description": "Indoor Plant Services",
+      "followers": {
+        "facebook": 495,
+        "instagram": 738
+      },
+      "image_url": "https://i1.feedspot.com/5725683.jpg"
+    },
+    {
+      "title": "The Plant Runner Blog",
+      "feed_url": "https://theplantrunner.com/blogs/the-plant-runner-blog.atom",
+      "website_url": "https://theplantrunner.com/blogs/the-plant-runner-blog",
+      "followers": {
+        "facebook": 8800,
+        "instagram": 39600
+      },
+      "image_url": "https://i1.feedspot.com/5725714.jpg?t=1701422537"
+    },
+    {
+      "title": "ExecuFlora Blog",
+      "feed_url": "https://execuflora.co.za/feed/",
+      "website_url": "https://execuflora.co.za/indoor-plants-blog/",
+      "description": "Bringing The Outdoors Indoors",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 209,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5725721.jpg?t=1701422580"
+    },
+    {
+      "title": "We the Wild Blog",
+      "feed_url": "https://wethewild.co/blogs/plant-advice.atom",
+      "website_url": "https://wethewild.co/blogs/plant-advice",
+      "description": "Tips, tricks, advice and information to help indoor gardeners care for their houseplants better. We make it clear, simple and easy to understand how houseplants function, and how to best keep them alive and thriving. Plus, we're dedicated to bringing the most interesting indoor gardening related stories to you!",
+      "followers": {
+        "facebook": 18600,
+        "instagram": 40600
+      },
+      "image_url": "https://i1.feedspot.com/5725695.jpg?t=1701422425"
+    },
+    {
+      "title": "Treleaf Blog",
+      "feed_url": "https://treleaf.shop/blogs/news.atom",
+      "website_url": "https://treleaf.shop/blogs/news",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5725711.jpg?t=1701422514"
+    },
+    {
+      "title": "The Martha Stewart Blog \u00bb Houseplants",
+      "feed_url": "https://www.themarthablog.com/category/houseplants/feed",
+      "website_url": "https://www.themarthablog.com/category/houseplants",
+      "description": "It's a blog about Martha Stewart and her daily adventures.",
+      "followers": {
+        "twitter": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/5725682.jpg?t=1701422346"
+    },
+    {
+      "title": "Green Fresh Florals + Plant Blog",
+      "feed_url": "https://greenfreshflorals.com/blogs/flora-blog.atom",
+      "website_url": "https://greenfreshflorals.com/blogs/flora-blog",
+      "description": "The Flora | blog from Green Fresh Florals + Plants provides helpful plant and flower tips, timely trends and fun flower and plant topics. Read on and enjoy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725704.jpg?t=1701423015"
+    },
+    {
+      "title": "Pot & Bloom Blog",
+      "feed_url": "https://www.potandbloom.com/blogs/gardening-basics.atom",
+      "website_url": "https://www.potandbloom.com/blogs/gardening-basics",
+      "description": "Our Blogs are informative about Gardening Basics & Tips on different plants, vegetables, and flowers.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 15000
+      },
+      "image_url": "https://i1.feedspot.com/5725705.jpg?t=1701422480"
+    },
+    {
+      "title": "CleverBloom Blog",
+      "feed_url": "https://cleverbloom.com/feed/",
+      "website_url": "https://cleverbloom.com/blog/",
+      "description": "Plant Care - DIY - Decor",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725713.jpg?t=1701422533"
+    },
+    {
+      "title": "Houseplant UK Blog",
+      "feed_url": "https://www.houseplant.co.uk/blogs/houseplants.atom",
+      "website_url": "https://www.houseplant.co.uk/blogs/houseplants",
+      "description": "Houseplant UK Blog is a go-to resource for plant lovers in the UK. The blog offers a wealth of information on houseplants, including care guides, styling tips, and advice on choosing the right plants for your home. Founded with a mission to inspire and educate, Houseplant UK Blog aims to help readers create thriving indoor gardens and foster a deeper connection with nature. Visit their website and blog to explore a wide variety of houseplants and discover expert tips for keeping them healthy and happy.",
+      "followers": {
+        "facebook": 5400,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5600821.jpg?t=1686916965"
+    },
+    {
+      "title": "Blog",
+      "feed_url": "https://www.picturtop.com/blog-feed.xml",
+      "website_url": "https://www.picturtop.com/blog",
+      "description": "Welcome to Picturtop, your ultimate destination for indoor plants in Dubai! We're passionate about bringing nature indoors and transforming living spaces into green havens. With a focus on quality, expertise, and customer satisfaction, we aim to inspire and empower plant enthusiasts across Dubai.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7287211.jpg?t=1711963561"
+    },
+    {
+      "title": "Epic Gardening",
+      "feed_url": "https://www.epicgardening.com/houseplants/feed/",
+      "website_url": "https://www.epicgardening.com/houseplants/",
+      "description": "Learn how to grow anything, no matter where you live. The mission of Epic Gardening is to spread urban agriculture and innovative growing solutions through neighborhoods, cities and towns nationwide.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 39100
+      },
+      "image_url": "https://i1.feedspot.com/4810183.jpg?t=1610540390"
+    },
+    {
+      "title": "Bros with Hoes Plant Co. Blog",
+      "feed_url": "https://bwhplantco.com/blogs/houseplants-101.atom",
+      "website_url": "https://bwhplantco.com/blogs/houseplants-101/",
+      "description": "Read your daily dose of plantspirtation, care tips and a look at what's growing in the greenhouse on Bros with Hoes Plant Co.",
+      "followers": {
+        "facebook": 87300,
+        "instagram": 183700
+      },
+      "image_url": "https://i1.feedspot.com/5438769.jpg?t=1662442631"
+    },
+    {
+      "title": "House Plant Journal Blog",
+      "feed_url": "https://www.houseplantjournal.com/feed/",
+      "website_url": "https://www.houseplantjournal.com/blog/",
+      "description": "Hi, I'm Darryl, the creator of the House Plant Journal. House Plant Journal is an engineer's approach to house plants uncovering the true joys of houseplants with more science and realistic expectations. This blog is about the basics of responsible plant parenthood. I want to help you enjoy healthy, thriving plants for the long term (years). A green thumb isn't about luck but about being observant and knowing how Mother Nature takes care of her house plants - all plants!",
+      "followers": {
+        "facebook": 188900,
+        "twitter": 1000,
+        "instagram": 607500
+      },
+      "image_url": "https://i1.feedspot.com/5293644.jpg?t=1623852500"
+    },
+    {
+      "title": "LEAF n JOY",
+      "feed_url": "https://leafnjoy.com/feed/",
+      "website_url": "https://leafnjoy.com/guides/",
+      "description": "Find tips and tricks to keep your houseplants happy. We have a lovely DIY plants nursery and we try to source, propagate and thus, provide you the opportunity to get the most beautiful and rare plants and expand your own plant family!",
+      "followers": {
+        "facebook": 62,
+        "instagram": 23
+      },
+      "image_url": "https://i1.feedspot.com/5440027.jpg?t=1662708728"
+    },
+    {
+      "title": "Garden Within Doors",
+      "feed_url": "http://www.gardenwithindoors.org.uk/rss.xml",
+      "website_url": "http://www.gardenwithindoors.org.uk/",
+      "description": "Garden Within Doors is a blog that celebrates the beauty and possibilities of indoor gardening. Founded with a vision to inspire creativity and bring nature into homes, the blog provides guidance on cultivating indoor gardens, plant care, and creative plant display ideas. Readers can expect to find practical tips, DIY projects, and plant-related inspiration. Visit the Garden Within Doors blog to explore the world of indoor gardening and discover how to create your own botanical oasis at home.",
+      "followers": {
+        "facebook": 112
+      },
+      "image_url": "https://i1.feedspot.com/4810224.jpg?t=1610540668"
+    },
+    {
+      "title": "Leaf n Joy Guides",
+      "feed_url": "https://leafnjoy.com/guides/feed/",
+      "website_url": "https://leafnjoy.com/guides/",
+      "description": "The guide section gives insights and tips about the home plants, DIY nursery and more. Leaf n Joy is a website which gives ideas and inspirations related to home gardening & plantation, DIY nurseries and much more related to plants.",
+      "followers": {
+        "facebook": 62,
+        "instagram": 23
+      },
+      "image_url": "https://i1.feedspot.com/5451575.jpg?t=1664532872"
+    },
+    {
+      "title": "Greengrow",
+      "feed_url": "https://greengrowblog.wordpress.com/feed/",
+      "website_url": "https://greengrowblog.wordpress.com/",
+      "description": "Photo stories of plants.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4810210.jpg?t=1610540585"
+    },
+    {
+      "title": "Plants are the Strangest People",
+      "feed_url": "https://plantsarethestrangestpeople.blogspot.com/feeds/posts/default",
+      "website_url": "https://plantsarethestrangestpeople.blogspot.com/",
+      "description": "PATSP is a long-winded, intermittently humorous blog which is mostly about houseplants, particularly Anthuriums.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/575163.jpg?t=1610540451"
+    },
+    {
+      "title": "About Succulents",
+      "feed_url": "https://www.aboutsucculents.com/feed/",
+      "website_url": "https://www.aboutsucculents.com/",
+      "description": "On AboutSucculents, our mission is to help you learn everything about your favourite succulent, how to care for it and make it thrive.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5138998.jpg?t=1610540538"
+    },
+    {
+      "title": "Horti Blog",
+      "feed_url": "https://heyhorti.com/blogs/thedirt.atom",
+      "website_url": "https://heyhorti.com/blogs/thedirt",
+      "description": "Read about Happy Plants for a Healthy Planet, Plant Lingo Explained - Variegation & Fenestration, Plant Lingo Explained - Pet-friendly Plants and more on the Horti The Di",
+      "followers": {
+        "facebook": 4100,
+        "instagram": 61200
+      },
+      "image_url": "https://i1.feedspot.com/5725712.jpg?t=1701422518"
+    },
+    {
+      "title": "Prestigious Plantscapes Blog",
+      "feed_url": "https://www.prestigiousplantscapes.com.au/feed/",
+      "website_url": "https://www.prestigiousplantscapes.com.au/blog/",
+      "description": "Read our indoor plant blog discussing the health benefits as well as helpful tips and advice for choosing and keeping indoor plants in an office space.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725719.jpg"
+    },
+    {
+      "title": "The Indoor Nursery Blog",
+      "feed_url": "https://theindoornursery.com/feed/",
+      "website_url": "https://theindoornursery.com/blog/",
+      "description": "Answers to all your houseplant questions",
+      "followers": {
+        "facebook": 989
+      },
+      "image_url": "https://i1.feedspot.com/5725680.jpg?t=1701422335"
+    },
+    {
+      "title": "Houseplant Addicts",
+      "feed_url": "https://www.houseplantaddicts.com/feed/",
+      "website_url": "https://www.houseplantaddicts.com/",
+      "description": "A place to realize our addiction is real & relatable",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 701,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5725702.jpg?t=1701422463"
+    },
+    {
+      "title": "Wild About Houseplants",
+      "feed_url": "https://wildabouthouseplants.com/feed/",
+      "website_url": "https://www.wildabouthouseplants.com/",
+      "description": "Welcome to Wild About Houseplants, a website dedicated to all things green and leafy. My name is Ayla, and I am obsessed with bringing the beauty of the outdoors inside. I started Wild About Houseplants to share my knowledge and love of plants with people like you. Whether you're looking for advice on how to care for your plants or inspiration for your own indoor jungle, you'll find it all here.",
+      "followers": {
+        "instagram": 306
+      },
+      "image_url": "https://i1.feedspot.com/5584998.jpg?t=1685424000"
+    },
+    {
+      "title": "PlantKiss Blog",
+      "feed_url": "https://getplantkiss.com/blogs/plantlife.atom",
+      "website_url": "https://getplantkiss.com/blogs/plantlife",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725675.jpg?t=1701423466"
+    },
+    {
+      "title": "Dennis' 7 Dees \u00bb Indoor Plants",
+      "feed_url": "https://dennis7dees.com/category/indoor-plants/feed/",
+      "website_url": "https://dennis7dees.com/category/indoor-plants/",
+      "description": "Dennis' 7 Dees provides residential and commercial landscaping services and retail garden stores for all your gardening needs throughout Oregon and southwest Washington.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725703.jpg?t=1701423240"
+    },
+    {
+      "title": "Flora Grubb Gardens \u00bb Indoor Houseplants",
+      "feed_url": "https://www.floragrubb.com/indoor-house-plants-at-flora-grubb-gardens?format=rss",
+      "website_url": "https://www.floragrubb.com/indoor-house-plants-at-flora-grubb-gardens/",
+      "followers": {
+        "facebook": 16400,
+        "instagram": 58900
+      },
+      "image_url": "https://i1.feedspot.com/5725694.jpg?t=1701422419"
+    },
+    {
+      "title": "Leaf Envy Blog",
+      "feed_url": "https://www.leafenvy.co.uk/blogs/all-topics.atom",
+      "website_url": "https://www.leafenvy.co.uk/blogs/all-topics",
+      "description": "Leaf Envy Blog is a platform dedicated to celebrating the beauty and benefits of indoor plants. Founded with a mission to inspire and educate plant lovers, the blog offers plant care guides, styling tips, and information on unique and rare plant varieties. Readers can expect to find in-depth plant profiles, troubleshooting advice, and tips for plant propagation. Visit the Leaf Envy website and blog to explore the fascinating world of indoor plants and enhance your plant parenting skills.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 209,
+        "instagram": 49600
+      },
+      "image_url": "https://i1.feedspot.com/5600832.jpg?t=1686917045"
+    },
+    {
+      "title": "Planet Natural \u00bb Houseplants",
+      "feed_url": "https://www.planetnatural.com/category/indoor-garden/house-plants/feed/",
+      "website_url": "https://www.planetnatural.com/category/indoor-garden/house-plants/",
+      "description": "A living plant makes any house a cozy home. Growing houseplants gives pro gardeners some off-season pleasure and makes beginning plant care manageable. Our expert articles will teach you how to provide ideal lighting, when to water, how to overwinter prized plants, and the best ways manage pest control and more. Fill up your windowsills!...",
+      "followers": {
+        "facebook": 388800,
+        "twitter": 1200,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5725678.jpg?t=1701422325"
+    },
+    {
+      "title": "MicroVeggy",
+      "feed_url": "https://microveggy.com/feed/",
+      "website_url": "https://microveggy.com/",
+      "description": "At MicroVeggy, we're not just your average gardening blog. We're a team of dedicated plant lovers who eat, sleep, and breathe all things green. We've been in the game for years, honing our skills and spreading our love for indoor gardening like wildfire.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5611578.jpg?t=1687956861"
+    },
+    {
+      "title": "On The Ledge",
+      "feed_url": "https://www.janeperrone.com/blog?format=rss",
+      "website_url": "https://www.janeperrone.com/blog",
+      "description": "On The Ledge is a podcast all about indoor gardening - helping you to grow everything from Aloe vera to the ZZ plant.\u00a0 Presenter Jane Perrone has been nuts about houseplants since she was knee high to a Swiss cheese plant. She quizzes the experts, helps you find cool new stuff to grow and figures out how to fix your plant problems. For more information, email ontheledgepodcast@gmail.com or visit janeperrone.com.",
+      "followers": {
+        "facebook": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5600829.jpg?t=1746031051"
+    },
+    {
+      "title": "Cambridge Bee Blog",
+      "feed_url": "https://www.cambridgebee.com/blogs/news.atom",
+      "website_url": "https://www.cambridgebee.com/blogs/news",
+      "followers": {
+        "facebook": 992,
+        "instagram": 27700
+      },
+      "image_url": "https://i1.feedspot.com/5725687.jpg?t=1701422379"
+    },
+    {
+      "title": "My Tasteful Space Blog",
+      "feed_url": "https://blog.mytastefulspace.com/feed/",
+      "website_url": "https://blog.mytastefulspace.com/",
+      "description": "E-Design & Interior Plant Design",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725688.jpg?t=1701423442"
+    },
+    {
+      "title": "West Coast Gardens Blog \u00bb House",
+      "feed_url": "https://www.westcoastgardens.ca/blogs/tips-inspiration/tagged/house-home.atom",
+      "website_url": "https://www.westcoastgardens.ca/blogs/tips-inspiration/tagged/house-home",
+      "description": "Tips & inspiration for your garden year-round, indoor plant ideas and care, and decor inspiration!",
+      "followers": {
+        "facebook": 145200,
+        "instagram": 30500
+      },
+      "image_url": "https://i1.feedspot.com/5725689.jpg?t=1701422391"
+    },
+    {
+      "title": "Ruby Flora Plant Shop Blog",
+      "feed_url": "https://rubyflora.com/blogs/houseplant-care.atom",
+      "website_url": "https://rubyflora.com/blogs/houseplant-care",
+      "description": "A plant blog full of houseplant care tips for your urban jungle. Learn how to keep indoor plants alive and looking their best.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725699.jpg?t=1701422846"
+    },
+    {
+      "title": "Sloat Garden Center \u00bb Houseplants",
+      "feed_url": "https://sloatgardens.com/category/houseplants/feed/",
+      "website_url": "https://sloatgardens.com/category/houseplants/",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 1500,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5725679.jpg?t=1701422329"
+    },
+    {
+      "title": "Plant Savvy Blog",
+      "feed_url": "https://www.plantsavvy.com/blog?format=rss",
+      "website_url": "https://www.plantsavvy.com/blog",
+      "followers": {
+        "facebook": 316,
+        "instagram": 32500
+      },
+      "image_url": "https://i1.feedspot.com/5725696.jpg?t=1701422431"
+    },
+    {
+      "title": "Nick's Garden Center Blog \u00bb Houseplants",
+      "feed_url": "https://nicksgardencenter.com/gardening-blog/category/house-plants/feed/",
+      "website_url": "https://nicksgardencenter.com/gardening-blog/category/house-plants/",
+      "followers": {
+        "facebook": 24000,
+        "twitter": 1900,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5725707.jpg?t=1701422487"
+    },
+    {
+      "title": "Monstera Plant Resource Blog",
+      "feed_url": "https://monsteraplantresource.com/feed/",
+      "website_url": "https://monsteraplantresource.com/blog/",
+      "description": "Explore our blog expert tips, care guides, and more for nurturing your plant companions. Elevate your plant parenting journey.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5725684.jpg?t=1701422359"
+    },
+    {
+      "title": "Riza Plants Blog",
+      "feed_url": "https://rizaplants.com/blogs/news.atom",
+      "website_url": "https://rizaplants.com/blogs/news",
+      "followers": {
+        "facebook": 876,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5725691.jpg?t=1701422403"
+    },
+    {
+      "title": "Mulhall's Blog \u00bb Houseplants",
+      "feed_url": "https://mulhalls.com/garden-home/blog/category/houseplants/feed/",
+      "website_url": "https://mulhalls.com/garden-home/blog/category/houseplants/",
+      "description": "Cultivating the beautiful in Omaha, Nebraska",
+      "followers": {
+        "facebook": 39800,
+        "twitter": 1700,
+        "instagram": 45500
+      },
+      "image_url": "https://i1.feedspot.com/5725720.jpg?t=1701422565"
+    },
+    {
+      "title": "Plant In The Box Blog",
+      "feed_url": "https://plantinthebox.com/blogs/the-plant-lover-blog.atom",
+      "website_url": "https://plantinthebox.com/blogs/the-plant-lover-blog",
+      "description": "Discover a wealth of expert advice, insightful tips, and guides to nurture thriving indoor houseplants all year round. Explore content ranging from beginner-friendly succulents to more advanced air plants, & expand your gardening skills. Cultivate your green thumb with The Plant Lover Blog by PlantintheBox.com!",
+      "followers": {
+        "facebook": 209,
+        "instagram": 164
+      },
+      "image_url": "https://i1.feedspot.com/5725709.jpg?t=1701422499"
+    },
+    {
+      "title": "Pretty in Green Houseplant Blog",
+      "feed_url": "https://prettyingreen.com/blogs/houseplant-how-to-blog.atom",
+      "website_url": "https://prettyingreen.com/blogs/houseplant-how-to-blog",
+      "description": "Here we'll dig deeper into some of the selected Amazon Alexa Houseplant tips, and explain a bit more on each topic. We'll also be including a video to visually explain most of the houseplant topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725700.jpg?t=1701422988"
+    },
+    {
+      "title": "Houseplant Resource Center Blog",
+      "feed_url": "https://houseplantresourcecenter.com/feed/",
+      "website_url": "https://houseplantresourcecenter.com/blog/",
+      "description": "If you're not sure exactly how to care for your Jericho Rose plant or any houseplant, we're here to help! We provide articles on pruning, propagation, fertilizing and helpful tips for growing strong & healthy plants.",
+      "followers": {
+        "facebook": 942,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5311634.jpg?t=1628756777"
+    },
+    {
+      "title": "Houseplant House",
+      "feed_url": "https://houseplanthouse.com/feed/",
+      "website_url": "https://houseplanthouse.com/",
+      "description": "A blog for houseplant enthusiasts created by Dr. Laura Jenkins. Here, you will find a range of posts from houseplant guides, gardening, houseplant basics, plant care tips, repotting plants, plants styling, and photo diary.",
+      "followers": {
+        "instagram": 64900
+      },
+      "image_url": "https://i1.feedspot.com/5311635.jpg?t=1628755079"
+    },
+    {
+      "title": "Urban Jungle Bloggers",
+      "feed_url": "https://www.urbanjunglebloggers.com/feed/",
+      "website_url": "https://www.urbanjunglebloggers.com/all/",
+      "description": "Urban Jungle Bloggers is all about living with plants in your home, in other interiors, in public spaces.",
+      "followers": {
+        "facebook": 578500,
+        "twitter": 5100,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4809569.jpg?t=1610540555"
+    },
+    {
+      "title": "Le Botanist | The Greenery Gazette",
+      "feed_url": "https://lebotanist.com.au/blogs/greenerygazette.atom",
+      "website_url": "https://lebotanist.com.au/blogs/greenerygazette",
+      "description": "The greenery gazette blog features articles on botanical news, information and more related to plants that is worth perusing. Le Botanist brings you sustainable style & sophistication ideas to your interior and outdoor spaces.",
+      "followers": {
+        "facebook": 211
+      },
+      "image_url": "https://i1.feedspot.com/5448257.jpg?t=1663747803"
+    },
+    {
+      "title": "Living Room Jungle Blog",
+      "feed_url": "https://www.livingroomjungle.com/feed/",
+      "website_url": "https://www.livingroomjungle.com/indoor-gardening-blog/",
+      "description": "Your trusted source of indoor gardening know-how. From beginner to master, we will help you explore indoor gardening and learn how to create a beautiful indoor sanctuary.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5204286.jpg?t=1602064645"
+    },
+    {
+      "title": "The Plant Utopia",
+      "feed_url": "https://theplantutopia.com/feed/",
+      "website_url": "https://theplantutopia.com/",
+      "description": "Exotic, exciting, and beautiful house plants. Plant enthusiast and aspiring potter.",
+      "followers": {
+        "twitter": 104
+      },
+      "image_url": "https://i1.feedspot.com/5072331.jpg?t=1610540638"
+    },
+    {
+      "title": "The Indoor Garden",
+      "feed_url": "https://www.theindoorgarden.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.theindoorgarden.com/",
+      "description": "While working for over twenty years, in the world of retail and commercial horticulture,I learned hands-ons how to care for houseplants. Now I can share each plant's own unique instructions. As I go along in life, I take a picture of a plant I see, and let you in on all the specific secrets I've learned about that indoor plant. ~~ from the Producer and Host of 'The Indoor Garden', a 90's TV series",
+      "followers": {
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/5098073.jpg?t=1610540661"
+    },
+    {
+      "title": "Barlow's",
+      "feed_url": "https://barlowflowerfarm.com/blogs/gardening-blog/tagged/houseplant.atom",
+      "website_url": "https://barlowflowerfarm.com/blogs/gardening-blog/tagged/houseplant",
+      "description": "Find all of your garden and decorating needs at Barlow's Flower Farm in Sea Girt, New Jersey. Annuals, Perennials, Houseplants, Landscaping, Gifts & More!",
+      "followers": {
+        "facebook": 9500,
+        "instagram": 15300
+      },
+      "image_url": "https://i1.feedspot.com/4810189.jpg?t=1610540917"
+    },
+    {
+      "title": "Houseplant Advisor",
+      "feed_url": "https://www.houseplantadvisor.com/feed/",
+      "website_url": "https://www.houseplantadvisor.com/",
+      "description": "Houseplant Advisor provides the best indoor plant advice, products recommendations, and plant care guides. Our experts are constantly searching for the best houseplants and information to make your home plant growing adventures completely hassle-free.",
+      "followers": {
+        "facebook": 951,
+        "instagram": 464
+      },
+      "image_url": "https://i1.feedspot.com/5381882.jpg?t=1647500390"
+    },
+    {
+      "title": "PlantMaid",
+      "feed_url": "https://www.plantmaid.com/feed/",
+      "website_url": "https://www.plantmaid.com/blog/",
+      "description": "Latest articles on best ways to keep your indoor plants watered and other gardening tips. Use the PlantMaid to automatically water your indoor plants.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5178679.jpg?t=1610540552"
+    },
+    {
+      "title": "Lily's Indoor Jungle",
+      "feed_url": "https://lilysindoorjungle.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://lilysindoorjungle.blogspot.com/p/welcome-to-my-indoor-jungle.html",
+      "description": "I have had a passion for plants since I was little. I would follow my mom and grandma to their trips to the local nursery and would have to be pulled away from all of the flowers. This blog contains all the knowledge and know-how I have gained from building my own indoor jungle. Follow this blog to see all of the exciting things to come!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5054494.jpg"
+    },
+    {
+      "title": "Mod and Mint Plant Care",
+      "feed_url": "https://www.modandmint.com/feed/",
+      "website_url": "https://www.modandmint.com/",
+      "description": "Deborah Green teaches and writes about Plantcare at Mod and Mint.com, and runs her vintage shop on Etsy. Check out her Indoor plant blog with all the easy-to-follow tips and beginner guides to grow and care for your houseplants.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 2300,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4900637.jpg?t=1701089688"
+    },
+    {
+      "title": "Plant Store Blog",
+      "feed_url": "https://www.plantstore.ie/blogs/news.atom",
+      "website_url": "https://www.plantstore.ie/blogs/news",
+      "description": "The Plant Store offers a unique range of indoor and outdoor plants, available online. We also offer a range of employee gardening workshops and offer installation, designed to improve team morale, wellness, and productivity!",
+      "followers": {
+        "facebook": 908,
+        "twitter": 95,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5333375.jpg?t=1634640243"
+    },
+    {
+      "title": "My City Plants Blog",
+      "feed_url": "https://mycityplants.com/feed/",
+      "website_url": "https://mycityplants.com/blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5725706.jpg?t=1701423132"
+    },
+    {
+      "title": "The Houseplant Guru Blog",
+      "feed_url": "https://thehouseplantguru.com/blog/",
+      "website_url": "https://thehouseplantguru.com/blog/",
+      "description": "I am Lisa Eldred Steinkopf and am crazy about houseplants. My house is full and I keep adding more. This site is about houseplants and the plants I see when I travel, especially at conservatories.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 18300,
+        "instagram": 94
+      },
+      "image_url": "https://i1.feedspot.com/4809594.jpg?t=1610540380"
+    },
+    {
+      "title": "PlantSwap Blog",
+      "feed_url": "https://plantswap.uk/feed/",
+      "website_url": "https://www.joyusgarden.com/category/houseplants/",
+      "description": "Sharing plants and all things green as well as the tips and skills to keep them alive. Regular meet ups to swap house plants, garden plants and ideas.",
+      "followers": {
+        "twitter": 605
+      },
+      "image_url": "https://i1.feedspot.com/5030866.jpg?t=1610540416"
+    },
+    {
+      "title": "Joy Us Garden \u00bb Houseplants",
+      "feed_url": "https://www.joyusgarden.com/category/houseplants/feed/",
+      "website_url": "https://www.joyusgarden.com/category/houseplants/",
+      "description": "Hi, I'm Nell, and at Joy Us Garden, I celebrate all things garden and share my passion for plants, flowers, and the great outdoors. Houseplants make our homes a more welcome and happy place. They bring the outdoors in! Here is everything you need to know about our favorite houseplants at Joy Us Garden. We'll teach you how to care, propagate, and replant houseplants.",
+      "followers": {
+        "facebook": 93700,
+        "twitter": 9000,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5293640.jpg?t=1623852272"
+    },
+    {
+      "title": "Indoor Gardening",
+      "feed_url": "https://indoorgardening.com/feed/",
+      "website_url": "https://indoorgardening.com/",
+      "description": "New to indoor gardening? Just need a few tips and tricks? Either way, we're here to provide you with all the steps to make your indoor garden flourish!",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5225749.jpg?t=1610540544"
+    },
+    {
+      "title": "Actual Botanical Blog \u00bb Houseplants",
+      "feed_url": "https://actualbotanical.com/blogs/actual-plant-blog/tagged/houseplants.atom",
+      "website_url": "https://actualbotanical.com/blogs/actual-plant-blog/tagged/houseplants",
+      "followers": {
+        "instagram": 116
+      },
+      "image_url": "https://i1.feedspot.com/5725676.jpg?t=1701423490"
+    },
+    {
+      "title": "136 Home \u00bb Plants",
+      "feed_url": "https://www.136home.com/plants/feed",
+      "website_url": "https://www.136home.com/plants",
+      "description": "Home design decor and style",
+      "followers": {
+        "instagram": 207100
+      },
+      "image_url": "https://i1.feedspot.com/5725717.jpg?t=1701422553"
+    },
+    {
+      "title": "Plantboye",
+      "feed_url": "https://plantboye.com/feed/",
+      "website_url": "https://plantboye.wordpress.com/",
+      "description": "A blog dedicated to indoor plant care and creating aesthetically pleasing indoor spaces with plants.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5152459.jpg?t=1610540819"
+    },
+    {
+      "title": "Teak And Terracotta",
+      "feed_url": "https://www.teakandterracotta.com/feed/",
+      "website_url": "https://houseplantheaven.net/blog/",
+      "description": "Covering care and propagation of monsteras, philodendrons, anthuriums, rare houseplants, and some much loved common ones too.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5310586.jpg?t=1628503550"
+    },
+    {
+      "title": "Houseplant Heaven",
+      "feed_url": "https://houseplantheaven.net/feed/",
+      "website_url": "https://houseplantheaven.net/blog/",
+      "description": "Houseplant Heaven is a place for all things green. We provide plant care guides and tips to raising the most heavenly houseplants possible, so you can enjoy the beauty of nature in your home every day. Authored by Kate Inskeep.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311636.jpg?t=1628755767"
+    },
+    {
+      "title": "Healthy Houseplants Blog",
+      "feed_url": "https://www.healthyhouseplants.com/index.php/my-blog.feed?type=rss",
+      "website_url": "https://www.healthyhouseplants.com/healthy-houseplants-blog/",
+      "description": "Indoor Gardening - your number one website for up-to-date information on creating an amazing indoor garden. - Healthy Houseplants",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 560
+      },
+      "image_url": "https://i1.feedspot.com/4809558.jpg?t=1610540560"
+    },
+    {
+      "title": "Root Bridges",
+      "feed_url": "https://rootbridges.com/blogs/root-bridges-blog.atom",
+      "website_url": "https://rootbridges.com/blogs/root-bridges-blog",
+      "description": "Covers plant care tips, gardening ideas, DIYs, and nutrition information. Root Bridges likes to give every urban individual a new experience with nature. They grow handpicked potted home plants and are proud of the plants they sell.",
+      "followers": {
+        "facebook": 18500,
+        "twitter": 432
+      },
+      "image_url": "https://i1.feedspot.com/5331444.jpg?t=1634192215"
+    },
+    {
+      "title": "Tropics at Home Blog",
+      "feed_url": "https://tropicsathome.com/feed/",
+      "website_url": "https://tropicsathome.com/blog/",
+      "description": "Tropics at Home Blog is dedicated to bringing the beauty and diversity of the tropics into your home. The blog offers tips and advice on growing tropical plants indoors, along with insights into the latest tropical plant trends and innovations. The blog is run by a team of horticulturists and plant enthusiasts with years of experience in growing and caring for tropical plants.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 39,
+        "instagram": 984
+      },
+      "image_url": "https://i1.feedspot.com/4809725.jpg?t=1610540913"
+    },
+    {
+      "title": "House Plant Journal",
+      "feed_url": "https://www.houseplantjournal.com/home?format=RSS",
+      "website_url": "https://www.houseplantjournal.com/",
+      "description": "This blog is about the basics of responsible plant parenthood. I want to help you enjoy healthy, thriving plants for the long term (years). A green thumb isn't about luck but about being observant and knowing how Mother Nature takes care of her house plants all plants.",
+      "followers": {
+        "twitter": 1000,
+        "instagram": 607500
+      },
+      "image_url": "https://i1.feedspot.com/4809461.jpg?t=1610540903"
+    }
+  ]
+}

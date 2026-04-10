@@ -1,0 +1,60 @@
+{
+  "category": "Calculus",
+  "source_url": "https://rss.feedspot.com/calculus_rss_feeds",
+  "feeds": [
+    {
+      "title": "Teaching Calculus",
+      "feed_url": "https://teachingcalculus.com/feed/",
+      "website_url": "https://teachingcalculus.com/",
+      "description": "The pleasure lies not in discovering the truth, but in searching for it. This is a blog for high school calculus teachers and students. After many years of teaching, I have been fortunate enough to spend the last 30 some years working with calculus teachers around the country. If you are a calculus teacher or student, I hope the things I've learned and shared will be of use to you and your students.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4462088.jpg?t=1663047448"
+    },
+    {
+      "title": "Quantum Calculus",
+      "feed_url": "https://www.quantumcalculus.org/feed/",
+      "website_url": "https://www.quantumcalculus.org/",
+      "description": "Visit the website and learn about Calculus without limits. Quantum calculus deals with alternative flavors of calculus. It especially studies calculus on discrete or even finite sets. Examples of non-traditional calculus flavors are non-standard analysis, difference calculus or calculus on graphs or simplicial complexes.",
+      "followers": {
+        "twitter": 774
+      },
+      "image_url": "https://i1.feedspot.com/5441069.jpg?t=1663047928"
+    },
+    {
+      "title": "Math Medic Blog",
+      "feed_url": "https://blog.mathmedic.com/blog-feed.xml",
+      "website_url": "https://blog.mathmedic.com/",
+      "description": "Discover new lessons, education discussion, and answers to frequently asked Calc questions. As calculus teachers ourselves, we understand the difficulty of engaging students with exciting and relevant content. Calc Medic offers the teaching resources you need to get your students collaborating and communicating about calculus in a way that leads to deep conceptual understanding.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5441072.jpg?t=1663047501"
+    },
+    {
+      "title": "OPENCALCULUS",
+      "feed_url": "https://opencalculus.wordpress.com/feed/",
+      "website_url": "https://opencalculus.wordpress.com/",
+      "description": "Devoted to free calculus resources for students, free and open source materials for instructors, and active engagement for all. Read our blog and check out the different categories related to calculus.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1059032.jpg?t=1663047614"
+    },
+    {
+      "title": "I Speak Math \u00bb Calculus",
+      "feed_url": "https://ispeakmath.org/category/calculus/feed/",
+      "website_url": "https://ispeakmath.org/category/calculus/",
+      "description": "Read the posts about calculus written by I Speak Math. My name is Julie Reulbach and I love to teach! I am currently teaching AP Calculus AB at a private school in North Carolina. I love getting involved and helping other teachers! I am a Desmos Fellow, Cohort 1, and love speaking about math education at conferences.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5441070.jpg?t=1663047883"
+    },
+    {
+      "title": "Meryl's Magic of Math Blog",
+      "feed_url": "https://www.merylsmagicmath.com/blog-feed.xml",
+      "website_url": "https://www.merylsmagicmath.com/blog",
+      "description": "Read Meryl's latest blog posts on math tutoring, from tips for finding the best AP Calculus tutor to passing an upcoming test. At Meryl's Magic Math, we believe all students can learn math and be successful in it. We explain concepts simply and in multiple ways to ensure understanding. We help students improve their confidence, math understanding, and grades.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5441083.jpg?t=1663047296"
+    }
+  ]
+}

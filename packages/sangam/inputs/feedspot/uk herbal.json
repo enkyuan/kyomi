@@ -1,0 +1,162 @@
+{
+  "category": "UK Herbal",
+  "source_url": "https://rss.feedspot.com/uk_herbal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eatweeds Blog",
+      "feed_url": "https://www.eatweeds.co.uk/feed",
+      "website_url": "https://www.eatweeds.co.uk/blog",
+      "description": "Robin Harford is a plant ponderer & wanderer who loves foraging, wild nature, imagination and mystery. Eatweeds is a Forager's Wild Food Guide to the Edible Plants of Britain.",
+      "followers": {
+        "facebook": 32200
+      },
+      "image_url": "https://i1.feedspot.com/4647521.jpg?t=1615005041"
+    },
+    {
+      "title": "Botanica Medica Blog",
+      "feed_url": "https://www.botanicamedica.co.uk/blog/feed/",
+      "website_url": "https://www.botanicamedica.co.uk/blog/",
+      "description": "Botanica Medica is a traditional herbal apothecary providing professional herbal medicine individually tailored to your unique needs. We provide information on our herb walks and lovely herbal recipes to make at home and the latest scientific research into plant medicines.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4647685.jpg?t=1615007277"
+    },
+    {
+      "title": "Chestnut School of Herbal Medicine Blog",
+      "feed_url": "https://chestnutherbs.com/blog/feed/",
+      "website_url": "https://chestnutherbs.com/blog/",
+      "description": "The Chestnut School of Herbal Medicine located in the botanically rich Appalachian Mountains, just outside of Asheville, North Carolina offers online herbal education on Medicine Making, Foraging, and growing Medicinal Herbs. Blog topics include herbal remedies, growing herbs, foraging healing plants, food as medicine, botany, & more.",
+      "followers": {
+        "facebook": 222400,
+        "instagram": 305200
+      },
+      "image_url": "https://i1.feedspot.com/4573156.jpg?t=1615005023"
+    },
+    {
+      "title": "Thewildpharma",
+      "feed_url": "https://thewildpharma.wordpress.com/feed/",
+      "website_url": "https://thewildpharma.wordpress.com/",
+      "description": "I have been a professional practicing herbalist since 1998 and in training for many years before that. This blog has one simple aim is to share stories both good and bad (we learn so much from both!) of experiences with herbs and how they interact with the body, in illness, and in health, based on my personal experiences as a herbalist and natural remedy enthusiast.",
+      "followers": {
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5064669.jpg?t=1678354821"
+    },
+    {
+      "title": "National Institute of Medical Herbalists",
+      "feed_url": "https://nimh.org.uk/feed/",
+      "website_url": "https://nimh.org.uk/news-articles/",
+      "description": "The National Institute of Medical Herbalists is the UK's leading professional body of herbal practitioners. The Institute promotes the benefits, efficacy, and safe use of herbal medicine. We have operated a register for professional medical herbalists for over 100 years, and are the largest body of herbal practitioners in the UK.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511871.jpg?t=1677138570"
+    },
+    {
+      "title": "Seed Sistas Blog",
+      "feed_url": "https://seedsistas.co.uk/feed/",
+      "website_url": "https://seedsistas.co.uk/blog/",
+      "description": "Welcome herb lovers, We are Fi and Kazz, the Seed Sistas. Hang out with us to find your herbal roots. We combine medical training, and years of clinical practice with our passion for plants, and creativity to put herbal medicine back where it belongs: in your hands.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511883.jpg?t=1678356088"
+    },
+    {
+      "title": "Indigo Herbs Blog",
+      "feed_url": "https://feeds.feedburner.com/IndigoHerbsBlog",
+      "website_url": "https://www.indigo-herbs.co.uk/blog/all",
+      "description": "A Blog about Herbs, Superfoods and some other Natural Products that can can help improve your Health, Nutrition and your Lifestyle. Indigo Herbs aims to empower optimum health and nutrition. We believe that this is a cornerstone to personal and social development. We aim to continue to make pharmacopoeial grade herbs, superfoods and natural health ingredients affordable and available.",
+      "followers": {
+        "facebook": 25400,
+        "twitter": 5400,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/4910907.jpg?t=1528701201"
+    },
+    {
+      "title": "The Eldrum Tree",
+      "feed_url": "https://eldrum.co.uk/feed/",
+      "website_url": "https://eldrum.co.uk/",
+      "description": "Hi there! My name is Ali. I've been fascinated by herbs since I was 13, and finally qualified as a herbalist in 2009. I now write and teach about herbs regularly. I spend most of my time grubbing in the garden, rummaging in the hedgerows and writing down my finds, thoughts, opinions, plus any random words that pop into my head.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4910873.jpg"
+    },
+    {
+      "title": "Hackney Herbal Blog",
+      "feed_url": "https://www.hackneyherbal.com/blog?format=RSS",
+      "website_url": "https://www.hackneyherbal.com/blog",
+      "description": "Hackney Herbal is a social enterprise promoting health and wellbeing through herbs. We run creative herb-related events and activities. In this blog herb related information like its usage and medicinal importance is there. For more passionate learning about the wonders of herbs, follow us.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 2400,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4953637.jpg?t=1621603937"
+    },
+    {
+      "title": "The Master Herbalist Blog",
+      "feed_url": "https://www.themasterherbalist.co.uk/blogs/all-things-herbal.atom",
+      "website_url": "https://www.themasterherbalist.co.uk/blogs/all-things-herbal",
+      "description": "Fine herbal gifts and toiletries have been produced by The Master Herbalist for over 30 years. At the Master Herbalist, we focus on natural ingredients, herbs, spices, and fragrances to make beautiful and delightful smelling, scented products for the home.",
+      "followers": {
+        "facebook": 32,
+        "instagram": 987
+      },
+      "image_url": "https://i1.feedspot.com/5511866.jpg?t=1677138017"
+    },
+    {
+      "title": "Billericay Herbal Medicine Blog",
+      "feed_url": "https://billericayherbal.com/feed",
+      "website_url": "https://billericayherbal.com/blog",
+      "description": "I am Heidi, a fully qualified medical herbalist practicing in Billericay and Chelmsford, Essex. Medical herbalists approach illness in a holistic way - we take into account the whole of you and look for the underlying cause of the ailment rather than just getting rid of the symptoms.",
+      "followers": {
+        "facebook": 749,
+        "twitter": 140,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5511868.jpg?t=1677138030"
+    },
+    {
+      "title": "Healing Herbs Blog",
+      "feed_url": "https://healingherbsclinic.co.uk/feed/",
+      "website_url": "https://healingherbsclinic.co.uk/blog/",
+      "description": "Diploma in Reflexology 2000 and Reiki Master 2006. I love being a herbalist and helping people to resolve even long-standing health problems gently and safely. I am a member of the National Institute of Medical Herbalists (NIMH) which is the United Kingdom's leading professional body representing herbal practitioners.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5511874.jpg?t=1677138387"
+    },
+    {
+      "title": "Laura Stannard Medical Herbalist Blog",
+      "feed_url": "https://www.themedicalherbalist.co.uk/blog-feed.xml",
+      "website_url": "https://www.themedicalherbalist.co.uk/blog",
+      "description": "I am a fully qualified Medical Herbalist and provide holistic healthcare using medicinal herbs for the entire family. My aim is to get to the root of your problem and help you regain better health and transform your life so that you can do the things you want to. I am passionate about using herbal medicine to help people get well.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/5511869.jpg?t=1677138512"
+    },
+    {
+      "title": "Herbs Hands Healing Blog",
+      "feed_url": "https://shop.herbs-hands-healing.co.uk/feed",
+      "website_url": "https://shop.herbs-hands-healing.co.uk/blog",
+      "description": "Founded and led by naturopath and herbalist Jill Davies, the company has been selling herbal teas, botanicals, and body care products since 1978. Our ethos is quality and passion, with formulas devised out of clinical practice, research, and knowledge.",
+      "followers": {
+        "facebook": 28400,
+        "twitter": 636,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5511867.jpg?t=1677138024"
+    },
+    {
+      "title": "Namaste Herbal Healing",
+      "feed_url": "https://namasteherbalhealing.co.uk/feed/",
+      "website_url": "https://namasteherbalhealing.co.uk/",
+      "description": "My name is Mel Hornby. I am a practicing Medical Herbalist and I am a fully qualified member of the National Institute of Medical Herbalists. I am also a qualified yoga instructor with the British Wheel of Yoga. As a Medical Herbalist, I will combine the traditional use of herbs with modern scientific knowledge and research to create your very own individual herbal prescription which will not only treat your symptoms but also the underlying cause of ill health.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5511872.jpg?t=1677138344"
+    }
+  ]
+}

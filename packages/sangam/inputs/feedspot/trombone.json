@@ -1,0 +1,24 @@
+{
+  "category": "Trombone",
+  "source_url": "https://rss.feedspot.com/trombone_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Last Trombone",
+      "feed_url": "https://thelasttrombone.com/feed/",
+      "website_url": "https://thelasttrombone.com/",
+      "description": "I'm Douglas Yeo, a trombonist, teacher, and author living in Illinois. I share occasional thoughts on Life, Faith, and the Trombone.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4889065.jpg?t=1617107262"
+    },
+    {
+      "title": "Benjamin Yates Blog",
+      "feed_url": "https://www.benjaminyatestrombone.com/feed/",
+      "website_url": "https://www.benjaminyatestrombone.com/blog/",
+      "description": "A blog by Benjamin Yates. Trombonist and music educator Benjamin Yates is Assistant Professor of Trombone and Low Brass at the University of Louisiana at Lafayette. At UL Lafayette, Dr. Yates teaches lessons; coaches brass chamber music; conducts the trombone and tubaeuph ensembles, and performs with the Louisiana Brass Quintet.",
+      "followers": {
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5261671.jpg?t=1616666204"
+    }
+  ]
+}

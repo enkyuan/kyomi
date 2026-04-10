@@ -1,0 +1,106 @@
+{
+  "category": "Brazil Technology",
+  "source_url": "https://rss.feedspot.com/brazil_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Canaltech",
+      "feed_url": "https://feeds.feedburner.com/canaltechbr",
+      "website_url": "https://canaltech.com.br/",
+      "description": "Canaltech is your source for technology, science, and pop culture. Your guide to reviews, videos, podcasts, and news about products, stories, people, and the universe itself. Technology news for those who understand and for those who seek to understand.",
+      "followers": {
+        "facebook": 515500,
+        "twitter": 557200,
+        "instagram": 547600
+      },
+      "image_url": "https://i1.feedspot.com/5084873.jpg?t=1637739737"
+    },
+    {
+      "title": "Tudo Celular",
+      "feed_url": "https://www.tudocelular.com/feed/",
+      "website_url": "https://www.tudocelular.com/",
+      "description": "News about the mobile world, cell phones, videos, photos, reviews, and the best prices on the internet. Search your cell phone for functions such as Wi-Fi, GPS, TV, camera and others.",
+      "followers": {
+        "facebook": 261300,
+        "twitter": 59900
+      },
+      "image_url": "https://i1.feedspot.com/4674147.jpg?t=1637739863"
+    },
+    {
+      "title": "NextPit Brasil",
+      "feed_url": "https://www.nextpit.com.br/feed/main.xml",
+      "website_url": "https://www.nextpit.com.br/",
+      "description": "NextPit is the world's largest technology site. The best reviews, news and everything about mobiles, tablets, smartwatches and headphones for Android and iOS devices, including forum and community.",
+      "followers": {
+        "facebook": 350700,
+        "twitter": 14400,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5346228.jpg?t=1637739625"
+    },
+    {
+      "title": "Tecnoblog",
+      "feed_url": "https://tecnoblog.net/feed/",
+      "website_url": "https://tecnoblog.net/",
+      "description": "The Tecnoblog is a website about technology that was born in December 2005 and is today the largest technology and innovation blog in Brazil. The website covers news, reports, podcasts, interviews about the world of smartphones, games, behavior, social networks, gadgets, and more.",
+      "followers": {
+        "facebook": 266500,
+        "twitter": 408000,
+        "instagram": 124000
+      },
+      "image_url": "https://i1.feedspot.com/4955395.jpg?t=1637739509"
+    },
+    {
+      "title": "Oficina da Net",
+      "feed_url": "https://feeds.feedburner.com/oficinadanet_rss",
+      "website_url": "https://www.oficinadanet.com.br/",
+      "description": "Oficina da Net, a technology site in Brazil, created in 2005 by Nicolas Muller, today brings daily news, articles, tips and reviews of technology products such as smartphones, notebooks, peripherals and other gadgets.",
+      "followers": {
+        "facebook": 117300,
+        "twitter": 11800,
+        "instagram": 17100
+      },
+      "image_url": "https://i1.feedspot.com/5346227.jpg?t=1637739342"
+    },
+    {
+      "title": "OverBR",
+      "feed_url": "https://overbr.com.br/feed/atom",
+      "website_url": "https://overbr.com.br/tag/tecnologia",
+      "description": "OverBR provides daily and weekly updates on the latest happenings and events in the Brazil tech space through articles, videos, podcasts, and more",
+      "followers": {
+        "facebook": 24100,
+        "twitter": 479
+      },
+      "image_url": "https://i1.feedspot.com/5346229.jpg?t=1637739106"
+    },
+    {
+      "title": "Peq42 Blog",
+      "feed_url": "https://peq42.com/feed/",
+      "website_url": "https://peq42.com/blog/",
+      "description": "Peq42 is from Brazil and specializes in programming and video editing, offering their services through commissions. Always been passionate about computers and technology, so it's great to be able to use the knowledge they get to help people with their projects.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5642699.jpg?t=1691062190"
+    },
+    {
+      "title": "Google Brazil Blog",
+      "feed_url": "https://feeds.feedburner.com/OBlogDoGoogleBrasil",
+      "website_url": "https://blog.google/intl/pt-br/",
+      "description": "News about Google's products and technology in Brazil and worldwide.",
+      "followers": {
+        "instagram": 632800
+      },
+      "image_url": "https://i1.feedspot.com/31498.jpg?t=1637676112"
+    },
+    {
+      "title": "MacMagazine",
+      "feed_url": "https://feeds.feedburner.com/blogmacmagazine",
+      "website_url": "https://macmagazine.com.br/",
+      "description": "MacMagazine seeks to be the biggest and best reference about the Apple world in the Portuguese language, bringing news, rumors, opinion articles, posts from humor, reviews, comparisons, and much more, always joining quality with speed in the delivery of your content.",
+      "followers": {
+        "facebook": 192000,
+        "twitter": 103600,
+        "instagram": 56300
+      },
+      "image_url": "https://i1.feedspot.com/4215074.jpg?t=1637739410"
+    }
+  ]
+}

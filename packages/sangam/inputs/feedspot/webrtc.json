@@ -1,0 +1,85 @@
+{
+  "category": "WebRTC",
+  "source_url": "https://rss.feedspot.com/webrtc_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Blockchain Domain",
+      "feed_url": "https://rss.tmcnet.com/rss/grss.ashx?cnl=413",
+      "website_url": "https://www.theblockchaindomain.io/newsall.aspx",
+      "description": "Stay up to date on breaking news and success stories in blockchain and crypto!",
+      "followers": {
+        "facebook": 659
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/5673900/page/2074107/logo_1695229874.png"
+    },
+    {
+      "title": "webrtcHacks",
+      "feed_url": "https://webrtchacks.com/feed/",
+      "website_url": "https://webrtchacks.com/",
+      "description": "We are WebRTC technologists and enthusiasts. Our goals in this blog are to provide more detailed technical explanations on how WebRTC works, identify, review, and organize the rapidly expanding WebRTC tools market, document our experiments with various WebRTC applications and serve the needs of WebRTC developers.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5150292.jpg?t=1664363426"
+    },
+    {
+      "title": "BlogGeek.me",
+      "feed_url": "https://bloggeek.me/feed/",
+      "website_url": "https://bloggeek.me/blog/",
+      "description": "I am Tsahi Levent-Levi. The person behind BlogGeek.me. This is the place for my rumblings about technology. It usually boils down to WebRTC, CPaaS, Messaging, Disruption and other topics. To put food on the table, I also consult in these domains, publish my own reports and run a WebRTC training. Oh - and I am also the Chief Product Officer at Spearline.",
+      "followers": {
+        "facebook": 404,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5450633.jpg?t=1664361432"
+    },
+    {
+      "title": "Adobe Connect Support Blog \u00bb WebRTC",
+      "feed_url": "https://blogs.connectusers.com/connectsupport/category/meeting/webrtc/feed/",
+      "website_url": "https://blogs.connectusers.com/connectsupport/category/webrtc/",
+      "description": "Learn more about WebRTC with our articles along with features, technology and more! Adobe Connect allows you, the creator, to use its versatile stage to design and deliver virtual training, webinars, and meetings that stand out.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5450635.jpg?t=1664361439"
+    },
+    {
+      "title": "Trembit Blog \u00bb WebRTC",
+      "feed_url": "https://trembit.com/blog/category/webrtc/feed/",
+      "website_url": "https://trembit.com/blog/category/webrtc/",
+      "description": "Trembit is a video streaming app development company that provides first-class and cost-effective services to develop your business through IT technologies. Learn more about WebRTC with our articles, technologies, communication technology and more!",
+      "followers": {
+        "instagram": 104
+      },
+      "image_url": "https://i1.feedspot.com/5450637.jpg?t=1664363040"
+    },
+    {
+      "title": "Meetecho Blog",
+      "feed_url": "https://www.meetecho.com/blog/feed/",
+      "website_url": "https://www.meetecho.com/blog/",
+      "description": "Meetecho was born in 2009 as an official acamedic spin-off of the University of Napoli Federico II. Yes, we're proudly brewed in sunny Napoli! Since Day One we've been working hard on real-time multimedia applications over the Internet, ranging from VoIP to more advanced applications based on top of the emerging WebRTC technology. Get the latest news and updates from Meetecho, WebRTC and more!",
+      "followers": {
+        "facebook": 370,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5450639.jpg?t=1664361465"
+    },
+    {
+      "title": "RTCWeb Blog",
+      "feed_url": "https://rtcweb.in/feed/",
+      "website_url": "https://rtcweb.in/blog/",
+      "description": "Read our latest blogs on webrtc web/app development, voice/video chat solutions, CPaaS, technology & updates. RTCWeb is an end-to-end WebRTC powered hybrid app development company. We leverage the best in class technologies to build our high-performing WebRTC solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5457470.jpg?t=1666001408"
+    },
+    {
+      "title": "Ant Media Server Blog",
+      "feed_url": "https://antmedia.io/feed/",
+      "website_url": "https://antmedia.io/blog/",
+      "description": "Ant Media Server is a streaming engine software that provides adaptive, ultra low latency streaming by using WebRTC technology with ~0.5 seconds latency. Ant Media Server is highly scalable both horizontally and vertically. It can run on-promise or on-cloud.",
+      "followers": {
+        "facebook": 539,
+        "twitter": 802
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7574235/page/5450638/logo_1678791364.png"
+    }
+  ]
+}

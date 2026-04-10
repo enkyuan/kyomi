@@ -1,0 +1,89 @@
+{
+  "category": "Amsterdam Travel",
+  "source_url": "https://rss.feedspot.com/amsterdam_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Amsterdam Tips",
+      "feed_url": "https://www.amsterdamtips.com/feed",
+      "website_url": "https://www.amsterdamtips.com/",
+      "description": "Welcome! Since 2007, AmsterdamTips.com has been bringing up-to-date insider guides to Amsterdam, Netherlands from local experts - helping you to get more from your stay. Check out top Amsterdam tips from local experts on transport, hotels, things to do and more.",
+      "followers": {
+        "twitter": 992
+      },
+      "image_url": "https://i1.feedspot.com/4791377.jpg?t=1612264548"
+    },
+    {
+      "title": "Tours in Amsterdam",
+      "feed_url": "https://www.toursinamsterdam.com/amsterdam-travel-tips/feed/",
+      "website_url": "https://www.toursinamsterdam.com/amsterdam-travel-tips/",
+      "description": "Use our Amsterdam travel tips from our Amsterdam Travel Blog for your visit to the Netherlands. Things to see, what to do's, nightlife, and more.",
+      "followers": {
+        "facebook": 647
+      },
+      "image_url": "https://i1.feedspot.com/5363110.jpg?t=1642413937"
+    },
+    {
+      "title": "The Guardian \u00bb Amsterdam Holidays",
+      "feed_url": "https://www.theguardian.com/travel/amsterdam/rss",
+      "website_url": "https://www.theguardian.com/travel/amsterdam",
+      "description": "Latest US news, world news, sports, business, opinion, analysis, and reviews from the Guardian, the world's leading liberal voice. Follow blog entries and articles about Amsterdam including travel tips, events, attractions, apartments, and vacation rental tips.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4925399.jpg?t=1620906940"
+    },
+    {
+      "title": "Amsterdam Diary",
+      "feed_url": "https://amsterdamdiary.com/feed/",
+      "website_url": "https://amsterdamdiary.com/",
+      "description": "Amsterdam Diary, the place to be for all you need to know in preparation for your visit to Amsterdam. Follow this blog in that we guarantee that visitors know exactly where they should go, where they definitely should not go and allow them to return home with the positive memories of a fantastic experience.",
+      "followers": {
+        "facebook": 16,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/4925389.jpg?t=1620906945"
+    },
+    {
+      "title": "Dutch Amsterdam",
+      "feed_url": "https://www.dutchamsterdam.nl/feed",
+      "website_url": "https://www.dutchamsterdam.nl/",
+      "description": "Dutch Amsterdam is an independent travel guide made by locals - the Amsterdam Experts. It provides all the information about public transport, top museums, and other attractions.",
+      "followers": {
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/4791431.jpg?t=1609595466"
+    },
+    {
+      "title": "Amsterdam Yeah",
+      "feed_url": "https://amsterdamyeah.com/feed/",
+      "website_url": "https://amsterdamyeah.com/",
+      "description": "AmsterdamYeah is a travel blog and expat info guide for all visiting Amsterdam about what to do, tourism, 2020 events, tips, tourist attactions and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5082065.jpg?t=1613455468"
+    },
+    {
+      "title": "Things To Do In Amsterdam Blog",
+      "feed_url": "https://thingstodoinamsterdam.com/feed/",
+      "website_url": "https://thingstodoinamsterdam.com/blog/",
+      "description": "Find the best things to do in Amsterdam! On Things to do in Amsterdam website, you'll find all the highlights and hidden secrets, provided by locals. Museums, restaurants & more. It helps tourists discover all the best that Amsterdam has to offer as a city.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/4791509.jpg?t=1609595535"
+    },
+    {
+      "title": "Spotted by Locals",
+      "feed_url": "https://feeds.feedburner.com/Amsterdam-SpottedByLocals",
+      "website_url": "https://www.spottedbylocals.com/amsterdam/",
+      "description": "Spotted by Locals is a online Amsterdam city guide (and app) handpicked locals write about their favorite spots - with no or fewer tourists. Learn about our culture and help us keep our city liveable.",
+      "followers": {
+        "facebook": 47400,
+        "twitter": 9700,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/2382652.jpg?t=1620906935"
+    }
+  ]
+}

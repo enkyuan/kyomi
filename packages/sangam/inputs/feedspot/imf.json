@@ -1,0 +1,17 @@
+{
+  "category": "IMF",
+  "source_url": "https://rss.feedspot.com/imf_rss_feeds",
+  "feeds": [
+    {
+      "title": "PFMConnect Blog",
+      "feed_url": "https://blog-pfmconnect.com/feed/",
+      "website_url": "https://blog-pfmconnect.com/",
+      "description": "PFMConnect blog is improving public financial management globally. The blog is operated by the two founders of PFMConnect, David Fellows in United Kingdom and John Leonardo in Australia. PFMConnect is an international public sector financial management consultancy.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 383
+      },
+      "image_url": "https://i1.feedspot.com/5458998.jpg?t=1666261818"
+    }
+  ]
+}

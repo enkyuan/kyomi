@@ -1,0 +1,106 @@
+{
+  "category": "PBS NewsHour",
+  "source_url": "https://rss.feedspot.com/pbs_news_hour_rss_feeds",
+  "feeds": [
+    {
+      "title": "PBS News \u00bb Supreme COurt",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/economy",
+      "website_url": "https://www.pbs.org/newshour/tag/supreme-court/",
+      "description": "Read the latest news, reports, and analysis from PBS NewsHour. PBS NewsHour is a public media news organization with a nightly hour-long television broadcast and a robust digital footprint across the web and social media.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4873357.jpg?t=1760342044"
+    },
+    {
+      "title": "PBS NewsHour \u00bb Nation",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/nation",
+      "website_url": "https://www.pbs.org/newshour/nation",
+      "description": "Follow PBS NewsHour's complete coverage of U.S. news, reports, and analysis.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5256174.jpg?t=1615461185"
+    },
+    {
+      "title": "PBS NewsHour \u00bb World",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/world",
+      "website_url": "https://www.pbs.org/newshour/world",
+      "description": "Find all of PBS NewsHour's international reporting and analysis.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4873366.jpg?t=1615461460"
+    },
+    {
+      "title": "PBS NewsHour \u00bb Health",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/health",
+      "website_url": "https://www.pbs.org/newshour/health",
+      "description": "Follow PBS NewsHour's complete coverage of Health and Medicine.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4873368.jpg?t=1615462007"
+    },
+    {
+      "title": "PBS NewsHour \u00bb Economy",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/economy",
+      "website_url": "https://www.pbs.org/newshour/economy",
+      "description": "Follow PBS NewsHour's complete coverage of the Economy, Wall Street, and other financial stories.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4873365.jpg?t=1615461572"
+    },
+    {
+      "title": "PBS NewsHour \u00bb Politics",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/politics",
+      "website_url": "https://www.pbs.org/newshour/politics",
+      "description": "Follow PBS NewsHour's complete coverage of politics, Congress, the Supreme court, and the presidency.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5256157.jpg?t=1615460410"
+    },
+    {
+      "title": "PBS NewsHour \u00bb Science",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/science",
+      "website_url": "https://www.pbs.org/newshour/science",
+      "description": "Follow PBS NewsHour's complete coverage of Science and Technology stories.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4873367.jpg?t=1615461656"
+    },
+    {
+      "title": "PBS NewsHour \u00bb Education",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/education",
+      "website_url": "https://www.pbs.org/newshour/education",
+      "description": "Find all of the PBS NewsHour's education stories.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5256211.jpg?t=1615462997"
+    },
+    {
+      "title": "PBS NewsHour \u00bb Arts",
+      "feed_url": "https://www.pbs.org/newshour/feeds/rss/arts",
+      "website_url": "https://www.pbs.org/newshour/arts",
+      "description": "Follow PBS NewsHour's complete coverage of the art and entertainment world.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5256165.jpg?t=1615460691"
+    }
+  ]
+}

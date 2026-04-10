@@ -1,0 +1,71 @@
+{
+  "category": "Houston Investment",
+  "source_url": "https://rss.feedspot.com/houston_investment_rss_feeds",
+  "feeds": [
+    {
+      "title": "Robare & Jones Blog",
+      "feed_url": "https://robare-jones.com/blog/feed.xml",
+      "website_url": "https://robare-jones.com/blog",
+      "description": "The team at Robare & Jones brings you financial content driven by stocks, markets, and updates on current events in the financial world. Get real advice on your finances and create a path towards financial independence. Robare & Jones is an independent firm based in Houston, Texas, that offers a full range of financial planning and asset management services to individuals, families and businesses alike.",
+      "followers": {
+        "facebook": 60,
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/5589299.jpg?t=1685709142"
+    },
+    {
+      "title": "Best Ever CRE Blog",
+      "feed_url": "https://www.bestevercre.com/blog/rss.xml",
+      "website_url": "https://www.bestevercre.com/blog",
+      "description": "Joe Fairless is an expert in the real estate investing sector with years of experience. His blog Best Ever CRE covers everything you need to know in this industry. Learn and Understand the current Market trends and how to create balanced investment portfolio.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 7400,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5589295.jpg?t=1685709113"
+    },
+    {
+      "title": "Financial Synergies Blog",
+      "feed_url": "https://www.finsyn.com/feed/",
+      "website_url": "https://www.finsyn.com/blog/",
+      "description": "This is the Financial Synergies Blog (FinSyn Insights). Catch up on our latest financial planning, economic, and investment related articles and commentary. Financial Synergies Wealth Advisors is a fee-only financial advisor and wealth management firm located in Houston, Texas serving the financial needs of individuals, families, and businesses.",
+      "followers": {
+        "facebook": 567,
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/5589296.jpg?t=1685709183"
+    },
+    {
+      "title": "Gil Baumgarten Blog",
+      "feed_url": "https://gilbaumgarten.com/blog/feed/",
+      "website_url": "https://gilbaumgarten.com/blog/",
+      "description": "Learn about the world of investing from a 38-year industry veteran. Gil's Musings are inspired by Gil's thoughts on timely finance topics, stock market trends and the psychology behind smart investments. Gill Baumgarten is an experienced Wall street Investor and Wealth managment professional.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5589297.jpg?t=1685709227"
+    },
+    {
+      "title": "Makaan Index Blog",
+      "feed_url": "https://www.makaaninvestmentgroup.com/blog-feed.xml",
+      "website_url": "https://www.makaaninvestmentgroup.com/blog",
+      "description": "Get Makaan Investment Group updates, multi family investment news, and market trends details through the Blog. Makaan Investment Group partners with investors for whom the stability of real estate investment appeals but the stress of property ownership does not.",
+      "followers": {
+        "facebook": 92600,
+        "twitter": 2,
+        "instagram": 45000
+      },
+      "image_url": "https://i1.feedspot.com/5387739.jpg?t=1649308078"
+    },
+    {
+      "title": "MarketSpace Capital Blog",
+      "feed_url": "https://marketspace.capital/feed/",
+      "description": "MarketSpace Capital is a Private Equity Real Estate Firm headquartered in Houston, Texas that focuses on acquisitions and ground up developments of commercial real estate properties. Our blog provides critical insights and tactics for investors to leverage current market conditions.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 303,
+        "instagram": 346
+      },
+      "image_url": "https://i1.feedspot.com/5589298.jpg?t=1685709249"
+    }
+  ]
+}

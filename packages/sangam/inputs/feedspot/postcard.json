@@ -1,0 +1,588 @@
+{
+  "category": "Postcard",
+  "source_url": "https://rss.feedspot.com/postcard_rss_feeds",
+  "feeds": [
+    {
+      "title": "Postcrossing",
+      "feed_url": "https://www.postcrossing.com/blog/posts/feed",
+      "website_url": "https://www.postcrossing.com/blog",
+      "description": "Postcrossing is a project that allows you to send postcards and receive postcards back from random people around the world. The main idea is that: if you send a postcard, you will receive one back from a random Postcrosser from somewhere in the world.",
+      "followers": {
+        "facebook": 103400,
+        "twitter": 24100
+      },
+      "image_url": "https://i1.feedspot.com/4644064.jpg?t=1616569299"
+    },
+    {
+      "title": "Guelph in postcards",
+      "feed_url": "http://guelphpostcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://guelphpostcards.blogspot.com/",
+      "description": "Postcards of Guelph, Ontario, Canada, from my collection, spanning the early 20th century to the present.",
+      "followers": {
+        "twitter": 367
+      },
+      "image_url": "https://i1.feedspot.com/4644018.jpg?t=1616571174"
+    },
+    {
+      "title": "postcards from san antonio",
+      "feed_url": "https://postcardsfromsanantonio.com/feed/",
+      "website_url": "https://postcardsfromsanantonio.com/",
+      "description": "A blog on postcards by Gayle Brennan Spencer",
+      "followers": {
+        "twitter": 423
+      },
+      "image_url": "https://i1.feedspot.com/4644047.jpg?t=1616571146"
+    },
+    {
+      "title": "The Modern Postcard Blog",
+      "feed_url": "https://www.themodernpostcard.com/feed/",
+      "website_url": "https://www.themodernpostcard.com/the-modern-postcard-travel-blog/",
+      "description": "A modern postcard in these modern blogging times. A travel journal of tips, lessons learned and places worth a visit.",
+      "followers": {
+        "facebook": 95,
+        "twitter": 262
+      },
+      "image_url": "https://i1.feedspot.com/4643527.jpg?t=1616572169"
+    },
+    {
+      "title": "World Postcard collector",
+      "feed_url": "http://cartepostales1.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://cartepostales1.blogspot.com/",
+      "description": "My name is Per Erik Lantz and i live in Kristiansand, Norway. I am a collecting postcards from all over the world. I collect both used and unused postcards. I prefer postcards with 10x15cm format. As you see in my galleries i collect Postcards from towns and places and nature. And of course i want new postcards in my Postcard collection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4749866.jpg?t=1616570153"
+    },
+    {
+      "title": "Postcard Jar Travel Blog",
+      "feed_url": "https://postcardjar.com/feed/",
+      "website_url": "https://postcardjar.com/",
+      "description": "Midwestern couple blogging about extraordinary travel for everyday people.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4644031.jpg?t=1616569320"
+    },
+    {
+      "title": "Postcards A world Travelogue",
+      "feed_url": "http://postcardsandtravel.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://postcardsandtravel.blogspot.com/",
+      "description": "Postcards from every country and territory in the world. Each Blog shows a Postcard and a set of Stamps from each Territory or Country.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643598.jpg"
+    },
+    {
+      "title": "My UNESCO World Heritage Postcards",
+      "feed_url": "http://smspostcard3.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://smspostcard3.blogspot.com/",
+      "description": "A blog on postcards by SL Liew.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643872.jpg?t=1616570358"
+    },
+    {
+      "title": "World Postcards",
+      "feed_url": "https://73postcards73.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://73postcards73.blogspot.com/",
+      "description": "The blog features postcards from every country.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643692.jpg?t=1616570569"
+    },
+    {
+      "title": "Lighthouses on Post Cards",
+      "feed_url": "http://lighthousesonpostcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lighthousesonpostcards.blogspot.com/",
+      "description": "Here you will find a collection of covers / postcards with stamps and postcards featuring lighthouses on stamps, Lighthouses On post cards, Cars on stamps and Trains on post cards from around the world .",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643970.jpg?t=1616571914"
+    },
+    {
+      "title": "My postcard collection",
+      "feed_url": "http://martinha-cards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://martinha-cards.blogspot.com/",
+      "description": "Here you will find postcards from author's personal collection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643866.jpg?t=1616570391"
+    },
+    {
+      "title": "Namaste Postcards",
+      "feed_url": "https://nagi7.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://nagi7.blogspot.com/",
+      "description": "This blog shows wide varieties of Postcards from round the globe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643857.jpg?t=1616570535"
+    },
+    {
+      "title": "MY POSTCARD-PAGE",
+      "feed_url": "http://mypostcard-page.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mypostcard-page.blogspot.com/",
+      "description": "Find insights of written and stamped postcards to inspire your postcard collecting hobby.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643670.jpg?t=1616570771"
+    },
+    {
+      "title": "Collecting Postcards",
+      "feed_url": "https://collectingpostcardsblog.com/feed/",
+      "website_url": "https://collectingpostcardsblog.com/",
+      "description": "U.S. Diplomat/Foreign Service Officer in Mexico. RPCV Macedonia '02-'04. World traveler. All views my own. Follow the Collecting Postcards blog on here!",
+      "followers": {
+        "facebook": 321,
+        "twitter": 368
+      },
+      "image_url": "https://i1.feedspot.com/5269764.jpg?t=1618579767"
+    },
+    {
+      "title": "TANI'S POSTCARD CORNER",
+      "feed_url": "https://tanicards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://tanicards.blogspot.com/",
+      "description": "I mostly collect postcards through postcrossing and travelling. My favorite cards are single view cards. I love my postcards stamped and written, it tells a story on its own.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5029190.jpg?t=1616570492"
+    },
+    {
+      "title": "See it on a Postcard",
+      "feed_url": "https://seeitonapostcard.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://seeitonapostcard.blogspot.com/",
+      "description": "Find vintage and contemporary postcards and stamps from around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643629.jpg?t=1616571012"
+    },
+    {
+      "title": "World on Postcards",
+      "feed_url": "https://worldonpostcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://worldonpostcards.blogspot.com/",
+      "description": "This is a blog showing the world on postcards from 1990 to 2020 (and perhaps later).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643988.jpg"
+    },
+    {
+      "title": "Viridian's Postcard Blog",
+      "feed_url": "http://viridianpostcard.blogspot.com/feeds/posts/default",
+      "website_url": "http://viridianpostcard.blogspot.com/",
+      "description": "A blog about the love of postcards and stamps.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1094273.jpg?t=1616569627"
+    },
+    {
+      "title": "The World in a Postcard",
+      "feed_url": "https://rodeime.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://rodeime.blogspot.com/",
+      "description": "Find some of the standout postcards from significant and interesting locations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643883.jpg?t=1616569939"
+    },
+    {
+      "title": "D.O.A.P (Diary Of A Postcrosser)",
+      "feed_url": "https://krbhat-unescopostcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://krbhat-unescopostcards.blogspot.com/",
+      "description": "Diary Of A Postcrosser is a blog by Raghavendra Bhat showing his passion for postcrossing. Follow to find postcards of different countries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643919.jpg?t=1616571134"
+    },
+    {
+      "title": "A Postcard I Want",
+      "feed_url": "http://postcrossing-3lalat.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://postcrossing-3lalat.blogspot.com/",
+      "description": "A blog by Wak Tiga Lalat about postcrossing and other hobbies.",
+      "followers": {
+        "facebook": 15
+      },
+      "image_url": "https://i1.feedspot.com/4644156.jpg?t=1616571163"
+    },
+    {
+      "title": "Postcards From IvI",
+      "feed_url": "https://www.postcardsfromivi.com/feed/",
+      "website_url": "https://www.postcardsfromivi.com/",
+      "description": "The aim is to share stories behind the postcards and inspire you to see the world. In this blog you'll find city guides, useful tips, personal experiences and more.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1000,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4644104.jpg?t=1616569310"
+    },
+    {
+      "title": "Postcards of UNESCO world heritage sites",
+      "feed_url": "http://unescopostcard.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://unescopostcard.blogspot.com/",
+      "description": "The blog is to showcase my postcard collection of UNESCO world heritage sites",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5095991.jpg"
+    },
+    {
+      "title": "The Toronto Postcard Club | Canada's Largest Postcard Club",
+      "feed_url": "https://torontopostcardclub.com/blog/feed/",
+      "website_url": "https://torontopostcardclub.com/blog/",
+      "description": "The Toronto Postcard Club is a non-profit association of over 250 dedicated deltiologists. The Toronto Postcard Club has much to offer to anyone who is a collector of vintage postcards.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4643561.jpg?t=1616571128"
+    },
+    {
+      "title": "WORLD, COME TO MY HOME | A day without a postcard is a wasted day",
+      "feed_url": "https://worldcometomyhome.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://worldcometomyhome.blogspot.com/",
+      "description": "Find Contemporary postcards from around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643924.jpg?t=1616572857"
+    },
+    {
+      "title": "Podcast Postcards",
+      "feed_url": "http://www.podcastpostcards.com/postcards?format=RSS",
+      "website_url": "http://www.podcastpostcards.com/",
+      "description": "The blog showcases postcards from the Hello Internet Referendum.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4384124.jpg?t=1616569306"
+    },
+    {
+      "title": "A Journey of Postcards",
+      "feed_url": "https://postcardstravelaroundtheglobe.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://postcardstravelaroundtheglobe.blogspot.com/",
+      "description": "Here you will find a lot of images of postcards that will help you add to your knowledge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643659.jpg?t=1616570114"
+    },
+    {
+      "title": "Agnes' Postcard Collection",
+      "feed_url": "https://agnespostcardcollection.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://agnespostcardcollection.blogspot.com/",
+      "description": "Find collection of postcards from all over the world by following this feed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5156023.jpg"
+    },
+    {
+      "title": "POSTCARD ALBANIA",
+      "feed_url": "http://albaniapostcard.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://albaniapostcard.blogspot.com/",
+      "description": "Find collection of postcards from all over the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643674.jpg?t=1616570738"
+    },
+    {
+      "title": "My postcard and stamp week",
+      "feed_url": "http://postcardsblogatdustin.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://postcardsblogatdustin.blogspot.com/",
+      "description": "This blog provides information about stamps and covers. Follow to know more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643678.jpg?t=1616570018"
+    },
+    {
+      "title": "My Postcards Story",
+      "feed_url": "https://theworldthroughpostcards.com/feed/",
+      "website_url": "https://theworldthroughpostcards.com/",
+      "description": "Welcome to the world through postcards. In general, each postcard represents a plain, hard-paper picture. But when the sender is writing about his mood, his activities at that moment, the description of the postcard itself, where and why it was bought, then the postcard gets a soul.",
+      "followers": {
+        "facebook": 152
+      },
+      "image_url": "https://i1.feedspot.com/5269738.jpg?t=1618494659"
+    },
+    {
+      "title": "My Favorite Postcards",
+      "feed_url": "http://myfavoritepostcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://myfavoritepostcards.blogspot.com/",
+      "description": "This blog features thousands of Postcards from around the world, starting in the late 1800's. Postcards of images from around the world, famous people, movies, animals and more.",
+      "followers": {
+        "facebook": 612
+      },
+      "image_url": "https://i1.feedspot.com/4643638.jpg?t=1616569327"
+    },
+    {
+      "title": "My Received Postcards",
+      "feed_url": "http://myreceivedcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://myreceivedcards.blogspot.com/",
+      "description": "The blog showcases postcards received by the author from all around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643994.jpg?t=1616571883"
+    },
+    {
+      "title": "Postcards and Pretties",
+      "feed_url": "http://postcardsandpretties.blogspot.com/feeds/posts/default",
+      "website_url": "http://postcardsandpretties.blogspot.com/",
+      "description": "Postcards and Pretties is dedicated in providing daily wedding inspiration with inspiration boards, diy, fashion and beautiful photography.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/982512.jpg?t=1616569337"
+    },
+    {
+      "title": "A POSTCARD ALMANAC",
+      "feed_url": "http://apostcardalmanac.blogspot.com/feeds/posts/default",
+      "website_url": "http://apostcardalmanac.blogspot.com/",
+      "description": "Find ancient postcards, anonymous photographs, trade cards, and other ephemera.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4159500.jpg?t=1616569865"
+    },
+    {
+      "title": "NINU POSTCARDS",
+      "feed_url": "http://ninupostcards.blogspot.com/feeds/posts/default",
+      "website_url": "http://ninupostcards.blogspot.com/",
+      "description": "Keep up with latest collection of postcards.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5015827.jpg?t=1616569663"
+    },
+    {
+      "title": "CARTAS DEL MUNDO",
+      "feed_url": "https://cartasdelmundo.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://cartasdelmundo.blogspot.com/",
+      "description": "Small space for the exhibition and categorization of my collection of postcards received.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4802572.jpg?t=1616569393"
+    },
+    {
+      "title": "100 New Zealand First World War Postcards",
+      "feed_url": "http://100nzww1postcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://100nzww1postcards.blogspot.com/",
+      "description": "Find a wide collection of postcards including real photographic images, artistic depictions and some handwritten messages of heartache and sorrow.",
+      "followers": {
+        "twitter": 175
+      },
+      "image_url": "https://i1.feedspot.com/4644057.jpg?t=1616571150"
+    },
+    {
+      "title": "Janne's Postcards.",
+      "feed_url": "http://jannepostcrossing.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jannepostcrossing.blogspot.com/",
+      "description": "Find insights of postcards to inspire your hobby. Follow to find postcards of different countries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4644001.jpg?t=1616571155"
+    },
+    {
+      "title": "The World in Postcards - Sabine's Blog",
+      "feed_url": "http://sapphiredreamsxox.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sapphiredreamsxox.blogspot.com/",
+      "description": "Explore The World in Postcards blog to get a glimpse of stamped and written postcards shared by the author.",
+      "followers": {
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/4643901.jpg?t=1616571181"
+    },
+    {
+      "title": "Lost Greetings",
+      "feed_url": "https://lostgreetings.com/feed/",
+      "website_url": "https://lostgreetings.com/",
+      "description": "Curated blog of quirky, interesting messages from real vintage postcards.",
+      "followers": {
+        "facebook": 22,
+        "twitter": 238,
+        "instagram": 660
+      },
+      "image_url": "https://i1.feedspot.com/4749865.jpg?t=1616572130"
+    },
+    {
+      "title": "It Only Takes a Stamp",
+      "feed_url": "https://justonestamp.wordpress.com/feed/",
+      "website_url": "https://justonestamp.wordpress.com/",
+      "description": "A blog describing the adventures with postcrossing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4644136.jpg?t=1616573317"
+    },
+    {
+      "title": "POSTCARD EXCHANGE",
+      "feed_url": "http://postcards-exchange.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://postcards-exchange.blogspot.com/",
+      "description": "Blog about exchanging postcards. Postcard collection. Postcards from all over the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4734839.jpg?t=1616573166"
+    },
+    {
+      "title": "Matthew07 Postcards",
+      "feed_url": "http://matthew07postcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://matthew07postcards.blogspot.com/",
+      "description": "Matthew07 Postcards: Goal: Collecting postcards from every country and stamp issuing entity in the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4734842.jpg?t=1616573095"
+    },
+    {
+      "title": "Postcards from Heaven | Words and Pictures to help you hear from God",
+      "feed_url": "https://postcardsfromheaven.co.uk/feed/",
+      "website_url": "https://postcardsfromheaven.co.uk/",
+      "description": "Welcome! I pray that God will speak to you as you reflect on the words and pictures that make up each postcard, and that you would be encouraged and blessed. Sometimes there'll be ideas of things you could do to take that reflection journey on a little way.",
+      "followers": {
+        "facebook": 997
+      },
+      "image_url": "https://i1.feedspot.com/4788472.jpg?t=1616572159"
+    },
+    {
+      "title": "Postcards of Africa, Islands and Exotic Locales",
+      "feed_url": "http://africapostcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://africapostcards.blogspot.com/",
+      "description": "Here you will find some stunning postcards from among the world's most remote places and islands, with a special focus on the scenery, wildlife and culture of Africa.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643877.jpg"
+    },
+    {
+      "title": "BAD POSTCARDS",
+      "feed_url": "https://bad-postcards.tumblr.com/rss",
+      "website_url": "https://bad-postcards.tumblr.com/",
+      "description": "Vintage American Postcards, 1950 to 1975. Each image you see here is the scan of a card from the author's personal collection. They reflect a unique period in America's past, conveying the quirky spirit of those mid-century years in ways that are always distinct and often surprising",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 857
+      },
+      "image_url": "https://i1.feedspot.com/5296.jpg"
+    },
+    {
+      "title": "Sid Smith's Postcards From The Yellow Room",
+      "feed_url": "http://sidsmith.blogspot.com/atom.xml",
+      "website_url": "http://sidsmith.blogspot.com/",
+      "description": "Sid Smith is a freelance writer living in Whitley Bay. In this blog you will find postcards shared by him.",
+      "followers": {
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/2073954.jpg?t=1616572182"
+    },
+    {
+      "title": "Little Epistles | A (Mostly) Postcrossing Blog",
+      "feed_url": "http://littleepistles.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://littleepistles.blogspot.com/",
+      "description": "A blog about Postcrossing and postcards.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4644141.jpg?t=1616573209"
+    },
+    {
+      "title": "My postcard's world",
+      "feed_url": "https://feeds.feedburner.com/minnassieblogspot",
+      "website_url": "http://minnassie.blogspot.com/",
+      "description": "My name is Nastya and I'm from Russia! I have one interesting hobby: POSTCROSSING, which means postcards exchange all over the world! I like to collect postcards from all countries and to find international friends, but it's very difficult. So if you like traveling or just want to send postcard, I'll be very happy! And of course I will be very glad to send you back postcard from my native country.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4772271.jpg?t=1616569740"
+    },
+    {
+      "title": "Postcard Memories",
+      "feed_url": "http://postcardmemorieswwii.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://postcardmemorieswwii.blogspot.com/",
+      "description": "In this blog you will find stories from the book 'Postcard Memories From World War II: Finding Lost Keepsakes 70 Years Later'. Follow to know more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643607.jpg?t=1616571044"
+    },
+    {
+      "title": "Emaniuz Collection",
+      "feed_url": "http://feeds.feedburner.com/EmaniuzCollection",
+      "website_url": "https://emaniuz-collection.blogspot.com/",
+      "description": "My postcard and banknote collections from all over the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055328.jpg?t=1616573003"
+    },
+    {
+      "title": "*Postcard Gems",
+      "feed_url": "http://postcardgems.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://postcardgems.blogspot.com/",
+      "description": "The Best of Classic American Vintage Chrome Postcards.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643634.jpg?t=1616570848"
+    },
+    {
+      "title": "Coffeedoffs Coffeebreak",
+      "feed_url": "https://coffeedoffscoffeebreak.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://coffeedoffscoffeebreak.blogspot.com/",
+      "description": "The blog showcases postcards showing views of famous places.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643647.jpg?t=1616570807"
+    },
+    {
+      "title": "MY UNESCO WHS POSTCARDS COLLECTION",
+      "feed_url": "http://jan-unescopostcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jan-unescopostcards.blogspot.com/",
+      "description": "Get information about the postcards of different countries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643948.jpg"
+    },
+    {
+      "title": "Postcards around the world",
+      "feed_url": "http://travelbypostcards.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://travelbypostcards.blogspot.com/",
+      "description": "Get interesting information about postcards from around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643961.jpg?t=1616571640"
+    },
+    {
+      "title": "Gabi | Postcards Collection",
+      "feed_url": "http://postcards-gabralbn.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://postcards-gabralbn.blogspot.com/",
+      "description": "The blog features a wide collection of postcards. Also find the UNESCO collection shared by the author.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4643910.jpg?t=1616571563"
+    },
+    {
+      "title": "Tampere Universities \u00bb Exchange",
+      "feed_url": "https://blogs.tuni.fi/exchange/feed/",
+      "website_url": "https://blogs.tuni.fi/exchange/",
+      "description": "This blog is your window to the world. Here you will find postcards from different countries sent by the students of Tampere University of Applied Sciences (TAMK). The postcards will give you a glimpse of their everyday life.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4643580.jpg?t=1616569303"
+    },
+    {
+      "title": "Soviet Postcards",
+      "feed_url": "https://soviet-postcards.com/rss",
+      "website_url": "https://soviet-postcards.com/",
+      "description": "This blog is about old postcards, book illustration and all kinds of paper whimsy from the Soviet Union.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 35900,
+        "instagram": 835
+      },
+      "image_url": "https://i1.feedspot.com/4644025.jpg?t=1616569313"
+    },
+    {
+      "title": "Beautiful Illustrated",
+      "feed_url": "https://beautifulillustrated.blogspot.com/feeds/posts/default",
+      "website_url": "https://beautifulillustrated.blogspot.com/",
+      "description": "There's something special about opening up your mailbox and finding a postcard. A personal note, a hand-selected photograph from the other side of the world. Postcards in my blog come from postcrossers, my generous friends and some others from unknown persons met on my Instagram.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5669715.jpg?t=1694503949"
+    },
+    {
+      "title": "Inside my postbox",
+      "feed_url": "https://insidemypostbox.wordpress.com/feed/",
+      "website_url": "https://insidemypostbox.wordpress.com/",
+      "description": "Here to talk about the postcards and letters I receive from all over the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161799.jpg?t=1631014419"
+    },
+    {
+      "title": "The postcardblog",
+      "feed_url": "https://thepostcardblog.com/feed/",
+      "website_url": "https://thepostcardblog.com/",
+      "description": "True emotions on beautiful postcards from real people. This blog is a place for all our hard feelings to land safely. And even if you are not ready to share yours, just read what others are dealing with and see how your fears and anxiety get lighter. Others are as crazy as you.",
+      "followers": {
+        "twitter": 46
+      },
+      "image_url": "https://i1.feedspot.com/5196791.jpg?t=1600163332"
+    },
+    {
+      "title": "Postcards from the Pug Bus",
+      "feed_url": "http://www.pugbus.net/pugbus.xml",
+      "website_url": "https://mypicturepostcards.com/",
+      "description": "Postcards from the Pug Bus is a satire site that has been lifting a leg on popular culture since 2004. With more than 1,100 articles published on topics including politics, religion, sports, fashion, music, horoscopes, and more, Postcards is one of the most prolific and free-wheeling satire sites on the web. Laughter guaranteed or your money back.",
+      "followers": {
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/5083797.jpg?t=1616572155"
+    },
+    {
+      "title": "My Picture Postcards",
+      "feed_url": "https://mypicturepostcards.com/feeds/posts/default",
+      "website_url": "https://mypicturepostcards.com/",
+      "description": "Journey of a lifetime shared by My Picture Postcards.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5388916.jpg?t=1649674551"
+    },
+    {
+      "title": "Postsnap",
+      "feed_url": "https://blog.postsnap.com/feed/",
+      "website_url": "https://www.postsnap.com/blog",
+      "description": "Postsnap is a consumer commerce technology company focused on retailing personalised cards and gifts via mobile. Follow us to find ideas to create personalised postcard or greeting card using your own photos.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4643554.jpg"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "category": "F# Programming",
+  "source_url": "https://rss.feedspot.com/fsharp_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ploeh Blog - Mark Seemann",
+      "feed_url": "https://blog.ploeh.dk/rss.xml",
+      "website_url": "https://blog.ploeh.dk/",
+      "description": "Mark Seemann helps programmers make source code easier to maintain. Experienced programmer and international conference speaker, particularly interested in functional programming and object-oriented design with Haskell, F# and C#. Occasionally writes and speaks about various development topics.",
+      "followers": {
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/740453.jpg?t=1621941606"
+    },
+    {
+      "title": "Sergey Tihon's Blog",
+      "feed_url": "https://sergeytihon.com/feed/",
+      "website_url": "https://sergeytihon.com/",
+      "description": "Sergey Tihon's blog is all about F# programming language.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4973451.jpg?t=1621941615"
+    },
+    {
+      "title": "Mathias Brandewinder Blog",
+      "feed_url": "https://brandewinder.com/atom.xml?format=xml",
+      "website_url": "https://brandewinder.com/",
+      "description": "Mathias Brandewinder has been developing software on .NET for about 10 years, and loving every minute of it, except maybe for a few release days. His language of choice was C#, until he discovered F# and fell in love with it. He enjoys arguing about code and how to make it better, and gets very excited when discussing TDD or F#.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4973546.jpg?t=1621941628"
+    },
+    {
+      "title": "Tomas Petricek's Blog",
+      "feed_url": "https://tomasp.net/rss.xml",
+      "website_url": "https://tomasp.net/blog/",
+      "description": "Tomas Petricek writes about software development in F# and .NET, sharing materials from his F# trainings and talks. Tomas Petricek's latest blog posts about programming languages and tools, working with data, philosophy of science and more.",
+      "followers": {
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/2067427.jpg?t=1621941622"
+    },
+    {
+      "title": "Thinkbeforecoding - J\u00e9r\u00e9mie Chassaing",
+      "feed_url": "https://thinkbeforecoding.com/feed/atom",
+      "website_url": "https://thinkbeforecoding.com/",
+      "description": "J\u00e9r\u00e9mie Chassaing is the author of thinkbeforecoding, a blog dedicated to Domain Driven Design, CQRS and Event Sourcing and the CTO of Siriona (the startup behind Availpro, a channel manager for independent hotels) where F# has proven very efficient to implement Domain Driven Design and Event Sourcing, using it in production for more that a year now to increase scalability and reliability to match the company's rapid growth.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4973476.jpg?t=1621941797"
+    },
+    {
+      "title": "Fsharp.org Blog",
+      "feed_url": "http://fpish.net/rss/blogs/tag/1/f~23",
+      "website_url": "https://fsharp.org/",
+      "description": "F# is a mature, open source, cross-platform, functional-first programming language. It empowers users and organizations to tackle complex computing problems with simple, maintainable and robust code.",
+      "followers": {
+        "facebook": 968,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/1145540.jpg?t=1621941633"
+    },
+    {
+      "title": "Devon Burriss' Blog",
+      "feed_url": "https://devonburriss.me/rss",
+      "website_url": "https://devonburriss.me/",
+      "description": "An avid Domain-Driven Design practitioner and a closet functional-programmer, He spends free time writing F# code and planning how to sneak it into production.",
+      "followers": {
+        "twitter": 320
+      },
+      "image_url": "https://i1.feedspot.com/4973593.jpg"
+    },
+    {
+      "title": "Eirik Tsarpalis' blog",
+      "feed_url": "https://eiriktsarpalis.wordpress.com/feed/",
+      "website_url": "https://eiriktsarpalis.wordpress.com/",
+      "description": "Eirik George Tsarpalis is software engineer at Jet Dublin, a mathematician and .NET developer who's been writing F# for the past 6 years.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4973746.jpg?t=1621941651"
+    },
+    {
+      "title": "F# Scott Nimrod's Blog",
+      "feed_url": "https://bizmonger.wordpress.com/category/f/feed/",
+      "website_url": "https://bizmonger.wordpress.com/category/f/",
+      "description": "Scott Nimrod is fascinated with software craftsmanship. He has been practicing software development since 2003. He is a thriving entrepreneur, software consultant, and he blogs.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4973557.jpg?t=1621941656"
+    },
+    {
+      "title": "WTF# - Stachu Korick",
+      "feed_url": "https://feeds.fireside.fm/wtfsharp/rss",
+      "website_url": "https://www.wtfsharp.net/",
+      "description": "Curious as to what's happening in the F# ecosystem? Whether you're a long-time F# lover or functionally curious, this is a great means of keeping up to speed with functional programming on the .NET platform!",
+      "followers": {
+        "twitter": 464
+      },
+      "image_url": "https://i1.feedspot.com/4973533.jpg?t=1621941761"
+    },
+    {
+      "title": "Geek, Eh Blog - Shane Charles",
+      "feed_url": "https://geekeh.com/index.xml",
+      "website_url": "https://geekeh.com/",
+      "description": "Shane Charles is a software developer who is passionate about learning and trying new things. He likes to be active in the technology communities. He is currently a Microsoft MVP, mainly due to blogging and talking about F#.",
+      "followers": {
+        "twitter": 223
+      },
+      "image_url": "https://i1.feedspot.com/4973572.jpg?t=1621941667"
+    },
+    {
+      "title": "Demystify FP - Tamizhvendan S Blog",
+      "feed_url": "https://www.demystifyfp.com/index.xml",
+      "website_url": "https://www.tamizhvendan.in/blog/",
+      "description": "Tamizhvendan S is a Full-Stack solution provider and has a wealth of experience in solving complex problems using different programming languages and technologies. F#, Clojure & Haskell are some of his favourites.",
+      "followers": {
+        "twitter": 173
+      },
+      "image_url": "https://i1.feedspot.com/4973513.jpg?t=1621941662"
+    }
+  ]
+}

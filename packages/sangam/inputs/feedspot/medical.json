@@ -1,0 +1,618 @@
+{
+  "category": "Medical",
+  "source_url": "https://rss.feedspot.com/medical_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kevin MD",
+      "feed_url": "https://kevinmd.com/feed",
+      "website_url": "https://kevinmd.com/",
+      "description": "Founded in 2004 by Kevin Pho, MD, KevinMD.com is the web's leading platform where physicians, advanced practitioners, nurses, medical students, and patients share their insight and tell their stories.",
+      "followers": {
+        "facebook": 121000,
+        "twitter": 151300,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5392915.jpg?t=1650528215"
+    },
+    {
+      "title": "NPR \u00bb Health Shots",
+      "feed_url": "https://feeds.npr.org/1128/rss.xml",
+      "website_url": "https://www.npr.org/sections/health-shots/",
+      "description": "The health news division of NPR is your go-to source for the state of healthcare across the nation and around the world. NPR Shots will keep you in the know about everything from epidemics and public health concerns to the latest news about the insurance industry. You'll always be on top of current events in the wellness space if you follow this blog.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5232472.jpg?t=1615960765"
+    },
+    {
+      "title": "Common Sense Family Doctor",
+      "feed_url": "https://feeds.feedburner.com/CommonSenseFamilyDoctor",
+      "website_url": "https://commonsensemd.blogspot.com/",
+      "description": "Common sense thoughts on health and conservative medicine from a family doctor in Washington, DC. Kenny is a board-certified Family Physician and Public Health professional practicing in the Washington, DC area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5392990.jpg?t=1650536551"
+    },
+    {
+      "title": "Center on Health Insurance Reforms",
+      "feed_url": "https://chirblog.org/feed/",
+      "website_url": "https://chirblog.org/",
+      "description": "CHIRblog, a blog focused on health insurance coverage, insurance markets, and how people are affected by insurance reform. Our experts share a common mission: to improve access to affordable and adequate health insurance for individuals, families, employees, and employers across the country.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5393161.jpg?t=1755059789"
+    },
+    {
+      "title": "DrTalks Blog",
+      "feed_url": "https://drtalks.com/feed/",
+      "website_url": "https://drtalks.com/blog/",
+      "description": "DrTalks was created to give real people access to some of the world's foremost experts on various health, wellness, and medical topics. Through our exclusive partnership, we're able to bring you ongoing content curated to match whatever subject or condition interests you.",
+      "followers": {
+        "facebook": 29400,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5621252.jpg?t=1688984114"
+    },
+    {
+      "title": "Arrowmeds",
+      "feed_url": "https://www.arrowmeds.com/feed/",
+      "website_url": "https://www.arrowmeds.com/",
+      "description": "Arrowmeds is the best place to buy Generic Medicine Online with Easy Returns and 24x7 Support at Us, Uk, France, Australia, and Japan. We are one of the biggest worldwide online distributors of generic drugs. Our mission is to provide the best quality drugs at a popular price, that will meet the needs of patients.",
+      "followers": {
+        "facebook": 358,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/5733523.jpg?t=1702295883"
+    },
+    {
+      "title": "Medicine Matters",
+      "feed_url": "https://medicine-matters.blogs.hopkinsmedicine.org/feed/",
+      "website_url": "https://medicine-matters.blogs.hopkinsmedicine.org/",
+      "description": "Sharing successes, challenges and daily happenings in the department of medicine. Johns Hopkins Medicine are committed to promoting biomedical discovery, teaching the next generation of doctors, and improving health in our neighborhood and around the world.",
+      "followers": {
+        "facebook": 760,
+        "twitter": 638500,
+        "instagram": 186200
+      },
+      "image_url": "https://i1.feedspot.com/5303175.jpg?t=1626525466"
+    },
+    {
+      "title": "Medical Xpress",
+      "feed_url": "https://medicalxpress.com/rss-feed/",
+      "website_url": "https://medicalxpress.com/",
+      "description": "Medical and health news service that features the most comprehensive coverage in the fields of neuroscience, cardiology, cancer, HIV/AIDS, psychology, psychiatry, dentistry, genetics, diseases and conditions, medications and more.",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/224550.jpg?t=1650539375"
+    },
+    {
+      "title": "LITFL",
+      "feed_url": "https://litfl.com/feed/",
+      "website_url": "https://litfl.com/",
+      "description": "We are Australasian critical care physicians and nurses exploring the changing world of eLearning, emergency medicine, critical care and toxicology through clinical cases, fictionalized anecdotes and medical satire.",
+      "followers": {
+        "facebook": 42700,
+        "twitter": 21200,
+        "instagram": 15000
+      },
+      "image_url": "https://i1.feedspot.com/1920720.jpg?t=1650628524"
+    },
+    {
+      "title": "Board Vitals Blog",
+      "feed_url": "https://www.boardvitals.com/blog/feed/",
+      "website_url": "https://www.boardvitals.com/blog/",
+      "description": "BoardVitals brings together content from major publishers, universities, and top healthcare professionals, creating the largest training ecosystem in medicine. BoardVitals helps physicians prepare for medical board exams, re-certification exams (MOC), CME, and in-service exams offering high-yield content in over 30 specialities.",
+      "followers": {
+        "facebook": 26100,
+        "twitter": 3500,
+        "instagram": 25100
+      },
+      "image_url": "https://i1.feedspot.com/5393159.jpg?t=1650606637"
+    },
+    {
+      "title": "HHMI News",
+      "feed_url": "https://www.hhmi.org/news/rss20.xml",
+      "website_url": "https://www.hhmi.org/news",
+      "description": "HHMI is dedicated to advancing biomedical research and science education. HHMI is a science philanthropy whose mission is to advance basic biomedical research and science education for the benefit of humanity.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 50000
+      },
+      "image_url": "https://i1.feedspot.com/582860.jpg?t=1650606820"
+    },
+    {
+      "title": "Physicians Committee Blog",
+      "feed_url": "https://www.pcrm.org/taxonomy/term/27/feed",
+      "website_url": "https://www.pcrm.org/news/blog",
+      "description": "Find out what Dr. Barnard and other Physicians Committee experts have to say about trending nutrition news - from pop culture to peer-reviewed studies.Physicians Committee for Responsible Medicine promotes preventive medicine, conducts clinical research, and encourages higher standards in research.",
+      "followers": {
+        "facebook": 226500,
+        "twitter": 60000,
+        "instagram": 128600
+      },
+      "image_url": "https://i1.feedspot.com/5073033.jpg?t=1650606651"
+    },
+    {
+      "title": "Physician's Weekly",
+      "feed_url": "https://www.physiciansweekly.com/feed/",
+      "website_url": "https://www.physiciansweekly.com/",
+      "description": "For nearly 40 years, Physician's Weekly LLC, has been a trusted source of medical news and education for healthcare professionals. Physician's Weekly provides trusted medical news to healthcare professionals in over 10,000 top medical institutions, linking current and best healthcare practices to successfully meet today's challenges in the medical field.",
+      "followers": {
+        "facebook": 45000,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4882128.jpg?t=1650535862"
+    },
+    {
+      "title": "Dr. Smith's ECG Blog",
+      "feed_url": "http://hqmeded-ecg.blogspot.com/feeds/posts/default",
+      "website_url": "http://hqmeded-ecg.blogspot.com/",
+      "description": "Dr. Smith's ECG Blog features well-written pieces of Instructive ECGs in Emergency Medicine Clinical Context. His team of editors writes and highlights learning points from each case. Dr. Stephen W. Smith is a faculty physician in the Emergency Medicine Residency at Hennepin County Medical Center (HCMC) in Minneapolis, MN.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 50100
+      },
+      "image_url": "https://i1.feedspot.com/4632.jpg?t=1650628584"
+    },
+    {
+      "title": "Elite Medical Prep Blog",
+      "feed_url": "https://elitemedicalprep.com/feed/",
+      "website_url": "https://elitemedicalprep.com/blog/",
+      "description": "The #1 destination for medical school information resources! Find articles written by professional tutors about exam prep, residency & more. Elite Medical Prep is the premier online tutoring service for the USMLE, COMLEX, NBME, ABIM, and related medical exams. We provide the highest quality tutoring for these high-stakes exams.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 319,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5393393.jpg?t=1650630531"
+    },
+    {
+      "title": "MGH Center for Women's Mental Health Blog",
+      "feed_url": "https://womensmentalhealth.org/feed/",
+      "website_url": "https://womensmentalhealth.org/blog/",
+      "description": "MGH is the Center for Women's Mental Health provides state-of-the-art evaluation & treatment of psychiatric disorders associated with female reproductive functions. The blog post covers a range of topics including ADHD, Anxiety Disorders, Maternal Depression, PMDD, Depression in Women, Pregnancy, Miscarriage, and Mental Health.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4483893.jpg?t=1600755453"
+    },
+    {
+      "title": "HIStalk",
+      "feed_url": "https://histalk2.com/feed/",
+      "website_url": "https://histalk2.com/",
+      "description": "Get a glimpse of the latest Healthcare IT news and opinion. HIStalk has been bringing the healthcare IT industry together since 2003 with reader-contributed material such as interviews, guest articles, news and rumor reports, and advisory panel participation.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/1822385.jpg?t=1650539738"
+    },
+    {
+      "title": "Manhattan Medical Arts Blog",
+      "feed_url": "https://manhattanmedicalarts.com/feed",
+      "website_url": "https://manhattanmedicalarts.com/blog",
+      "description": "News, tips and health related topics. Manhattan Medical Arts is a full spectrum medical office with an emphasis on convenience, offering a wide variety of health services and specialties. Manhattan Medical Arts is part of Columbia Center for Family and Community Medicine.",
+      "followers": {
+        "facebook": 183,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5393390.jpg?t=1650630371"
+    },
+    {
+      "title": "Health Populi",
+      "feed_url": "https://www.healthpopuli.com/feed/",
+      "website_url": "https://www.healthpopuli.com/",
+      "description": "I'm a health economist, communicator, and trend weaver. Advising, writing, and speaking, I focus across the health/care ecosystem on consumers, health, technology, and policy. My clients include stakeholders across the health/care ecosystem.",
+      "followers": {
+        "twitter": 654
+      },
+      "image_url": "https://i1.feedspot.com/1862748.jpg?t=1600756613"
+    },
+    {
+      "title": "Global Health Council Blog",
+      "feed_url": "https://globalhealth.org/feed/",
+      "website_url": "https://globalhealth.org/blog/",
+      "description": "Global Health Council (GHC) is the leading membership organization supporting and connecting advocates, implementers and stakeholders around global health priorities worldwide. The organization is the collaborative voice of the global health community on global health issues; it convenes stakeholders around key global health priorities and actively engages key decision makers to influence health policy.",
+      "followers": {
+        "facebook": 64000,
+        "twitter": 48700,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5393371.jpg?t=1650628806"
+    },
+    {
+      "title": "Lablogatory Blog",
+      "feed_url": "https://labmedicineblog.com/feed/",
+      "website_url": "https://labmedicineblog.com/",
+      "description": "Lablogatory is a blog for medical laboratory professionals. It's dedicated to helping phlebotomists, clinical laboratory scientists, pathology residents, and pathologists perform their jobs better. We'll have information on new technologies, posts by lab professionals working in the field, and polls to gauge your opinion on various topics. The articles include information about molecular biology, microbiology, pathology, case studies, and transfusion medicine.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5186378.jpg?t=1628070107"
+    },
+    {
+      "title": "Doctors for America",
+      "feed_url": "https://doctorsforamerica.org/feed/",
+      "website_url": "https://doctorsforamerica.org/news/whats-new/",
+      "description": "Doctors for America is a national movement of physicians and medical students working together to improve the health of the nation and to ensure that everyone has access to affordable, high quality health care.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/5392991.jpg?t=1650536104"
+    },
+    {
+      "title": "Lisa Nelson RD Blog",
+      "feed_url": "https://www.lisanelsonrd.com/feed/",
+      "website_url": "https://www.lisanelsonrd.com/blog/",
+      "description": "Lisa is a dietitian and nutritionist specializing in diet and lifestyle to lower cholesterol and blood pressure. Heart Health Made Easy provides step-by-step guidance to lower cholesterol and lower blood pressure",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5393377.jpg?t=1650629459"
+    },
+    {
+      "title": "The Medical Care Blog",
+      "feed_url": "https://www.themedicalcareblog.com/feed/",
+      "website_url": "https://www.themedicalcareblog.com/",
+      "description": "The official blog of the peer-reviewed journal Medical Care, sponsored by the Medical Care Section of the American Public Health Association. The Medical Care Section is committed to improving the nation's health through practice, research, education and policy action.",
+      "followers": {
+        "facebook": 811,
+        "twitter": 376
+      },
+      "image_url": "https://i1.feedspot.com/5043385.jpg?t=1650630077"
+    },
+    {
+      "title": "The Natural Doctor Blog",
+      "feed_url": "https://thenaturaldoctor.org/feed/",
+      "website_url": "https://thenaturaldoctor.org/blog/",
+      "description": "At the Natural Doctor prevention is at the heart of everything we do because our aim is to strengthen the body against disease, illness, and aging in the most natural, non-invasive, and safe ways possible and using pioneering treatments, many of which have been designed as a result of my years of experience in conventional and natural medical practice and pharmacology. Its health blog brings you the latest in women's and men's health articles, natural medicines, healthy recipes, and anti-aging tips.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 919,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5393372.jpg?t=1650628728"
+    },
+    {
+      "title": "Aspiring Minority Doctor",
+      "feed_url": "http://www.aspiringminoritydoctor.com/feeds/posts/default",
+      "website_url": "http://www.aspiringminoritydoctor.com/",
+      "description": "I'm Danielle. I'm a goal-driven physician, and happily single mother of one with a passion for food, travel, science, and medicine. This blog consists of my journey through medical school and residency, along with helpful tips for both premedical and medical students alike. I hope it inspires and encourages you to reach for the stars (while having a little fun along the way)!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 2000,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/5392992.jpg?t=1650536039"
+    },
+    {
+      "title": "33 Charts Blog",
+      "feed_url": "https://33charts.com/feed/",
+      "website_url": "https://33charts.com/blog/",
+      "description": "With a mashup of writing that crosses the spaces of medicine, technology and culture, 33 Charts offers unique insight and analysis on the changing face of medicine. Dr Bryan Vartabedian is the founder of 33 charts, a site which has come to serve as a center of community surrounding physicians and their transition to a new digital world.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5125237.jpg?t=1650539630"
+    },
+    {
+      "title": "PEM Blog",
+      "feed_url": "https://pemcincinnati.com/blog/feed/",
+      "website_url": "https://pemcincinnati.com/blog/",
+      "description": "A Pediatric Emergency Medicine education destination. Authored by Brad. Brad Sobolewski, MD, MEd is an Associate Professor of Pediatric Emergency Medicine and an Assistant Director for the Pediatric Residency Training Program at Cincinnati Children's Hospital Medical Center.",
+      "followers": {
+        "facebook": 928,
+        "twitter": 2800,
+        "instagram": 307
+      },
+      "image_url": "https://i1.feedspot.com/4717186.jpg?t=1650628341"
+    },
+    {
+      "title": "Doc\u00b4s Opinion",
+      "feed_url": "https://www.docsopinion.com/feed/",
+      "website_url": "https://www.docsopinion.com/",
+      "description": "Doc's Opinion is a a website containing articles and blog about health, nutrition, healthy lifestyle and disease prevention.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1473633.jpg?t=1645265811"
+    },
+    {
+      "title": "Dr. Mike Sevilla Blog",
+      "feed_url": "https://feeds.feedburner.com/DrMikeSevilla",
+      "website_url": "https://www.drmikesevilla.com/blog/",
+      "description": "My name is Mike Sevilla, MD and I am a Family Physician (Primary Care Physician) and Social Media Enthusiast who lives in Salem, Ohio and works at the Family Practice Center of Salem and Salem Regional Medical Center.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 27200,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/3998748.jpg?t=1650534542"
+    },
+    {
+      "title": "KFF Health News",
+      "feed_url": "https://kffhealthnews.org/feed/",
+      "website_url": "https://kffhealthnews.org/",
+      "description": "KFF Health News is a national, editorially independent newsroom delivering in-depth, free-to-republish journalism on health care policy, politics, and the workings of the U.S. health system.",
+      "followers": {
+        "facebook": 41900,
+        "twitter": 194600,
+        "instagram": 29500
+      },
+      "image_url": "https://i1.feedspot.com/5676371.jpg?t=1695363659"
+    },
+    {
+      "title": "Everyday Health",
+      "feed_url": "https://feeds.everydayhealth.com/google-discover.xml",
+      "website_url": "https://www.everydayhealth.com/",
+      "description": "Everyday Health inspires and empowers people to live their healthiest lives, every day, through trusted, medically reviewed information and expert health advice from the nation's leading healthcare providers and patient advocates. Learn more about health.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 595700,
+        "instagram": 283600
+      },
+      "image_url": "https://i1.feedspot.com/7258606.jpg?t=1708600173"
+    },
+    {
+      "title": "Verywell Health",
+      "feed_url": "https://feeds-api.dotdashmeredith.com/v1/rss/google/e9bc2236-f9bf-46ed-8fb4-be30d91fd32f",
+      "website_url": "https://www.verywellhealth.com/",
+      "description": "Verywell Health is your destination for reliable, understandable, and credible health information and expert advice that always keeps why you came to us in mind.",
+      "followers": {
+        "facebook": 375800,
+        "instagram": 41800
+      },
+      "image_url": "https://i1.feedspot.com/8657969.jpg"
+    },
+    {
+      "title": "Healthcare Dive",
+      "feed_url": "https://www.healthcaredive.com/feeds/news/",
+      "website_url": "https://www.healthcaredive.com/",
+      "description": "Healthcare Dive provides news, trends, jobs and resources for health industry professionals. We cover topics like healthcare IT, hospital administration, polcy & regulation, practice management, health law, insurance, and more.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/3847602.jpg?t=1644319251"
+    },
+    {
+      "title": "The Canadian Medical",
+      "feed_url": "https://www.thecanadianmedical.com/blog-feed.xml",
+      "website_url": "https://www.thecanadianmedical.com/blog/",
+      "description": "Welcome to The Canadian Medical Blog, explore insightful articles, stay updated on healthcare trends, and empower yourself with knowledge curated by our expert team. Dive into a world of wellness and discovery with each new post.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8658003.jpg?t=1755064383"
+    },
+    {
+      "title": "The London General Practice",
+      "feed_url": "https://www.thelondongeneralpractice.com/feed/",
+      "website_url": "https://www.thelondongeneralpractice.com/blog/",
+      "description": "The London General Practice Blog: Up to date information on recent medical news and research both in the UK and worldwide.",
+      "followers": {
+        "facebook": 434
+      },
+      "image_url": "https://i1.feedspot.com/8658005.jpg?t=1755064855"
+    },
+    {
+      "title": "Deutsches \u00c4rzteblatt",
+      "feed_url": "https://www.aerzteblatt.de/rss/news",
+      "website_url": "https://www.aerzteblatt.de/",
+      "description": "Aktuelles aus der Gesundheitspolitik, neueste Studien aus der medizinischen Forschung, Nachrichten aus der \u00e4rztlichen Berufspolitik und den Hochschulen",
+      "followers": {
+        "facebook": 34200,
+        "twitter": 35100,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8658004.jpg?t=1755065099"
+    },
+    {
+      "title": "Express Healthcare",
+      "feed_url": "https://www.expresshealthcare.in/category/news/feed/",
+      "website_url": "https://www.expresshealthcare.in/category/news/",
+      "description": "Express Healthcare, first published as Express Healthcare Management in January 2000, has grown to become the No.1 Business News Magazine for the healthcare industry. The editorial contents include: news, views, analysis and interviews, under main segments:",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 5700,
+        "instagram": 262
+      },
+      "image_url": "https://i1.feedspot.com/8658101.jpg?t=1755002086"
+    },
+    {
+      "title": "Dr. Wes",
+      "feed_url": "https://feeds.feedburner.com/blogspot/TuRAx",
+      "website_url": "https://drwes.blogspot.com/",
+      "description": "Westby G. Fisher, MD, FACC is a board certified internist, cardiologist, and cardiac electrophysiologist practicing at NorthShore University HealthSystem in Evanston, IL, USA and is a Clinical Associate Professor of Medicine at University of Chicago's Pritzker School of Medicine.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5393024.jpg?t=1650539207"
+    },
+    {
+      "title": "Medical-Reference",
+      "feed_url": "https://www.medical-reference.net/feeds/posts/default",
+      "website_url": "https://www.medical-reference.net/",
+      "description": "Medical-Reference is an exclusive blog dedicated for individuals interested to expand their knowledge and expertise on medicine, health care, and pharmaceutical subjects.",
+      "followers": {
+        "facebook": 677,
+        "twitter": 339
+      },
+      "image_url": "https://i1.feedspot.com/5514187.jpg?t=1677579113"
+    },
+    {
+      "title": "Medical Projects Blog",
+      "feed_url": "https://medicprojects.com/feed/",
+      "website_url": "https://medicprojects.com/blog/",
+      "description": "The Medical Projects blog focuses on advancements and guidelines in healthcare design and management, particularly for intensive care units (ICUs) and IVF laboratories. Topics include innovations in infertility treatments, egg freezing, ICU equipment, and design guidelines for both IVF labs and ICUs. The blog aims to provide comprehensive insights into creating effective healthcare environments.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 54,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/7326195.jpg?t=1720444090"
+    },
+    {
+      "title": "Penn Medicine Blog",
+      "feed_url": "https://www.pennmedicine.org/news/news-blog/rss-feed",
+      "website_url": "https://www.pennmedicine.org/news/news-blog",
+      "description": "Get to know the news about biomedical research, patient care, and medical education at the University of Pennsylvania from the Penn Medicine Department of Communications. Penn Medicine is dedicated to high-quality patient care and service, advancing medical science through research, and educating the next generation of leaders in medicine.",
+      "followers": {
+        "facebook": 55000,
+        "twitter": 10600,
+        "instagram": 53200
+      },
+      "image_url": "https://i1.feedspot.com/5393367.jpg?t=1650628152"
+    },
+    {
+      "title": "Health IT Buzz Blog",
+      "feed_url": "https://feeds.feedburner.com/healthitbuzzblog",
+      "website_url": "https://www.healthit.gov/buzz-blog/",
+      "description": "Information on health IT from those at HHS's Office of the National Coordinator. Get in the know about the nation's transition to EHRs, and discover solutions to common issues. The Office of the National Coordinator for Health IT (ONC) improves the health & well-being of individuals through the use of technology & health information.",
+      "followers": {
+        "twitter": 96800
+      },
+      "image_url": "https://i1.feedspot.com/743971.jpg?t=1611820232"
+    },
+    {
+      "title": "Dr. Wes",
+      "feed_url": "https://feeds.feedburner.com/blogspot/TuRAx",
+      "website_url": "http://drwes.blogspot.com/",
+      "description": "Westby G. Fisher, MD, FACC is a board certified internist, cardiologist, and cardiac electrophysiologist (doctor specializing in heart rhythm disorders) practicing at NorthShore University HealthSystem in Evanston, IL, USA and is a Clinical Associate Professor of Medicine at University of Chicago's Pritzker School of Medicine.",
+      "followers": {
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/166284.jpg?t=1606460549"
+    },
+    {
+      "title": "Life of a Med Student",
+      "feed_url": "https://lifeofamedstudent.com/feed/",
+      "website_url": "https://lifeofamedstudent.com/",
+      "description": "A social media movement to amplify the voice of all those in medical education! Stick around for the humor, advice, financial tips, or just to learn more about what the #LifeofaMedStudent is all about!",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 52300,
+        "instagram": 41800
+      },
+      "image_url": "https://i1.feedspot.com/5302386.jpg?t=1626346952"
+    },
+    {
+      "title": "KFF Health News",
+      "feed_url": "https://khn.org/feed/",
+      "website_url": "https://kffhealthnews.org/",
+      "description": "KHN (Kaiser Health News) is a national newsroom that produces in-depth journalism about health issues. KHN reports on how the health care system - hospitals, doctors, nurses, insurers, governments, and consumers - works.",
+      "followers": {
+        "facebook": 39200,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/4483564.jpg?t=1600750867"
+    },
+    {
+      "title": "GE Healthcare",
+      "feed_url": "https://clinicalview.gehealthcare.com/resources/all/all",
+      "website_url": "https://clinicalview.gehealthcare.com/resources/all/all",
+      "description": "Clinical View is a free resource for medical professionals intended to provide educational materials and clinical information that advances best practices not limited to circulatory, respiratory, and neurological monitoring across a wide variety of care areas. The Clinical View is driven by GE Healthcare's ingenuity, purpose, and vision.",
+      "followers": {
+        "facebook": 173300,
+        "twitter": 114300,
+        "instagram": 76600
+      },
+      "image_url": "https://i1.feedspot.com/5451600.jpg?t=1755060671"
+    },
+    {
+      "title": "ICE Blog",
+      "feed_url": "https://icenet.blog/feed/",
+      "website_url": "https://icenet.blog/",
+      "description": "The ICE blog promotes discussion among Clinician Educators from around the world, archiving a variety of educational resources. We welcome anyone with an interest in health professions education.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4941807.jpg?t=1650536243"
+    },
+    {
+      "title": "Academic Life in EM",
+      "feed_url": "https://www.aliem.com/feed/",
+      "website_url": "https://www.aliem.com/",
+      "description": "This blog aims to disrupt how medical providers and trainees can gain public access to high-quality, educational content while also engaging in a dialogue about best-practices in EM and medical education. We strive to reshape medical education and academia in their evolution beyond the traditional classroom.",
+      "followers": {
+        "facebook": 25900,
+        "twitter": 24700,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4717120.jpg?t=1614169530"
+    },
+    {
+      "title": "Harvard Health Publishing",
+      "feed_url": "https://www.health.harvard.edu/blog/",
+      "website_url": "https://www.health.harvard.edu/blog/",
+      "description": "Harvard Health Publishing (HHP) is the consumer health education division of Harvard Medical School. For more than 200 years, HMS has been the most prestigious and trusted source of medical education in the world. Explore the blogs which will provide you information on topics covering ways to live a healthier lifestyle, foods to add to your diet, and more specific information on common health conditions.",
+      "followers": {
+        "facebook": 253800,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/22990.jpg?t=1622572546"
+    },
+    {
+      "title": "Bio Medical Central",
+      "feed_url": "http://blogs.biomedcentral.com/on-medicine/feed/",
+      "website_url": "https://blogs.biomedcentral.com/on-medicine/",
+      "description": "Insights and opinions on the latest medical research, clinical practices, and developments in the field. At BMC, research is always in progress. We are committed to continual innovation to better support the needs of our communities, ensuring the integrity of the research we publish & championing the benefits of open research.",
+      "followers": {
+        "facebook": 107100,
+        "twitter": 76200
+      },
+      "image_url": "https://i1.feedspot.com/4921958.jpg?t=1650606843"
+    },
+    {
+      "title": "Sg2 Blog",
+      "feed_url": "https://www.sg2.com/feed",
+      "website_url": "https://www.sg2.com/blog",
+      "description": "Gain valuable insights into health care market trends, business intelligence, and healthcare reform from Sg2's Industry's leading experts. Sg2, a Vizient company, is the healthcare industry's premier authority on healthcare trends, insights, and market analytics.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5026593.jpg?t=1650606217"
+    },
+    {
+      "title": "Med Scholarly",
+      "feed_url": "https://medscholarly.com/feed/",
+      "website_url": "https://medscholarly.com/",
+      "description": "Read featured articles that break down complex medical jargon into digestible information. Founded in 2023, Med Scholarly is a trusted source for in-depth medical research, studies, and expert insights. Stay informed with the latest advancements in healthcare.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5705438.jpg?t=1699253198"
+    },
+    {
+      "title": "AIHST Blog",
+      "feed_url": "https://aihstusa.com/feed/",
+      "website_url": "https://aihstusa.com/blog/",
+      "description": "Enhance your medical education with AIHST's comprehensive blog, offering valuable tips and advice for aspiring doctors. The American Institute of Health Science and Technology is a SCHEV-certified medical school in Springfield, United States, and offers programs helping aspirants on the road to their medical assisting dream job in the dynamic, demanding healthcare industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5755470.jpg?t=1705407074"
+    },
+    {
+      "title": "Cleveland Clinic Blog",
+      "feed_url": "https://health.clevelandclinic.org/feed",
+      "website_url": "https://health.clevelandclinic.org/",
+      "description": "Medical, health and wellness news, information and insights from Cleveland Clinic's experts, designed to help people make quality decisions about their healthcare. Cleveland Clinic is one of the largest and most respected hospitals in the country. Our mission is to provide better care of the sick, investigation into their problems, and further education of those who serve.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 1800000,
+        "instagram": 240600
+      },
+      "image_url": "https://i1.feedspot.com/4557900.jpg?t=1620985675"
+    },
+    {
+      "title": "The Sleep Doctor Blog",
+      "feed_url": "https://thesleepdoctor.com/feed/",
+      "website_url": "https://sleepdoctor.com/about/in-the-news",
+      "description": "Dr. Michael Breus is a Clinical Psychologist and both a Diplomat of the American Board of Sleep Medicine and a Fellow of The American Academy of Sleep Medicine. Most people could improve their sleep and many others are dealing with disorders, such as insomnia. We have advice, news and tools that can help you.",
+      "followers": {
+        "facebook": 60300,
+        "twitter": 28500,
+        "instagram": 114800
+      },
+      "image_url": "https://i1.feedspot.com/4882752.jpg?t=1612437837"
+    }
+  ]
+}

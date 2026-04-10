@@ -1,0 +1,30 @@
+{
+  "category": "Car Leasing",
+  "source_url": "https://rss.feedspot.com/car_leasing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Leasing Options Blog",
+      "feed_url": "https://www.leasingoptions.co.uk/news/blog",
+      "website_url": "https://www.leasingoptions.co.uk/news/blog",
+      "description": "Read the latest from Leasing Options on our car leasing blog, featuring our latest company updates and developments. One of the UK's leading car leasing companies and contract hire providers. In addition to flexible vehicle leasing packages, we offer alternative finance options for your lease car through the UK's best leasing funders.",
+      "followers": {
+        "facebook": 68300,
+        "twitter": 4000,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5414194.jpg?t=1656070224"
+    },
+    {
+      "title": "Easifleet Blog",
+      "feed_url": "https://www.easifleet.com.au/feed/",
+      "website_url": "https://www.easifleet.com.au/blog/",
+      "description": "Easi offers simple, straightforward salary packaging solutions to save you thousands. Easi has been in business since 1992, providing a range of vehicle fleet management and financial solutions to get people and businesses on the move. For individuals, our novated lease product in Australia is a great way to save money on the purchase of a new car for your private use.",
+      "followers": {
+        "facebook": 717,
+        "twitter": 67,
+        "instagram": 222
+      },
+      "image_url": "https://i1.feedspot.com/5415219.jpg?t=1656392541"
+    }
+  ]
+}

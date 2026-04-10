@@ -1,0 +1,122 @@
+{
+  "category": "Calibration",
+  "source_url": "https://rss.feedspot.com/calibration_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mensor Calibration Blog",
+      "feed_url": "https://blog.mensor.com/blog/rss.xml",
+      "website_url": "https://blog.mensor.com/blog",
+      "description": "Mensor has been designing and manufacturing precision pressure measuring and pressure calibration instruments and systems. In the Mensor Calibration blog, you can expect informative articles on pressure and temperature calibration, testing and precision measurement. You will find solutions for your calibration requirements through our articles on industry-specific applications and answers to common questions.",
+      "followers": {
+        "facebook": 360,
+        "twitter": 65
+      },
+      "image_url": "https://i1.feedspot.com/5051612.jpg?t=1622613628"
+    },
+    {
+      "title": "Beamex",
+      "feed_url": "https://blog.beamex.com/rss.xml",
+      "website_url": "https://blog.beamex.com/all",
+      "description": "BEAMEX is a leading, worldwide provider of calibration solutions that meet even the most demanding requirements of process instrumentation. Follow our blog that offers insightful information for calibration professionals, technical engineers as well as potential and existing Beamex users. Discover better ways to calibrate.",
+      "followers": {
+        "facebook": 29400,
+        "twitter": 946
+      },
+      "image_url": "https://i1.feedspot.com/5051588.jpg?t=1622613656"
+    },
+    {
+      "title": "AutomationForum \u00bb Calibration",
+      "feed_url": "https://automationforum.co/category/calibration/feed/",
+      "website_url": "https://automationforum.co/category/calibration/",
+      "description": "AutomationForum professionals share their experiences and provide solutions on any instrument based queries. Our goal is to provide Instrumentation engineering and industrial automation related information.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 309
+      },
+      "image_url": "https://i1.feedspot.com/5051632.jpg?t=1622613660"
+    },
+    {
+      "title": "MicronPA",
+      "feed_url": "https://micronpa.com/blog/feed/",
+      "website_url": "https://micronpa.com/blog/",
+      "description": "MicronPA is an accredited & experienced calibration, inspection, & testing services company. We provide accredited calibration & inspection services within 5 business days. Follow our blog that offers maintenance, calibration, best practices, and advice.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051748.jpg?t=1622613822"
+    },
+    {
+      "title": "Instrumentation Monthly \u00bb Calibration",
+      "feed_url": "https://instrumentation.co.uk/category/features/calibration/feed/",
+      "website_url": "https://instrumentation.co.uk/category/features/calibration/",
+      "description": "Instrumentation Monthly magazine is designed to provide an informative look at instrumentation products and technologies, giving enough information to enable the reader to make an informed decision about selecting and using the right solution for their application. Get articles on calibration by following this feed.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5051676.jpg?t=1622613691"
+    },
+    {
+      "title": "CompuCal Calibration Solutions",
+      "feed_url": "https://compucalcalibrations.com/feed/",
+      "website_url": "https://compucalcalibrations.com/blog/",
+      "description": "CompuCal is a high-performance software tool that meets all requirements regarding calibration management and implementation. The perfect tool to improve efficiency and increase the compliance of both small and large organizations. Follow our blog that focuses on calibration management software, instruments, compliance, calibration tips, and more.",
+      "followers": {
+        "facebook": 65,
+        "twitter": 602
+      },
+      "image_url": "https://i1.feedspot.com/5051604.jpg?t=1622613695"
+    },
+    {
+      "title": "Michelli Weighing & Measurement",
+      "feed_url": "https://www.michelli.com/feed/",
+      "website_url": "https://www.michelli.com/learn/blog/",
+      "description": "Michelli Weighing & Measurement provides services & equipment related to scales & measurement. Our mission is to show the world what measurement can do, by providing innovative & efficient ways to perform job functions, through the use of weighing & measurement technology. The Michelli Weighing & Measurement blog is full of helpful information from our experts & the manufacturers we represent.",
+      "followers": {
+        "twitter": 135
+      },
+      "image_url": "https://i1.feedspot.com/5547035.jpg?t=1682054292"
+    },
+    {
+      "title": "Pylon Electronics",
+      "feed_url": "https://pylonelectronics.com/feed/",
+      "website_url": "https://pylonelectronics.com/blog/",
+      "description": "Pylon Electronics is the largest Canadian owned calibration laboratory for calibration and repair of measurement instruments. Our calibration blog provides important information on a wide range of calibration service questions.",
+      "followers": {
+        "facebook": 178,
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/5051609.jpg?t=1622613711"
+    },
+    {
+      "title": "Calibration Awareness",
+      "feed_url": "https://calibrationawareness.com/feed",
+      "website_url": "https://calibrationawareness.com/",
+      "description": "Follow Calibration Awareness blog that covers topics such as in-house calibration management, mass calibration, pressure calibration, temperature calibration, electrical calibration, calibration procedures, setups, and internal calibration lab management guides and tips.",
+      "followers": {
+        "facebook": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5051602.jpg?t=1622613645"
+    },
+    {
+      "title": "Fluke Calibration Blog",
+      "feed_url": "https://us.flukecal.com/rss",
+      "website_url": "https://us.flukecal.com/blog",
+      "description": "Fluke Calibration produces the broadest range of electrical, RF, temperature, pressure & flow calibration instruments & software that help measurement professionals around the globe.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5169138.jpg?t=1622613685"
+    },
+    {
+      "title": "TEGAM",
+      "feed_url": "https://www.tegam.com/blog/feed/",
+      "website_url": "https://www.tegam.com/blog/",
+      "description": "TEGAM specializes in the design, manufacture, and support of a wide variety of test, measurement and calibration instruments. Follow our blog to get the information on our precision instruments for test, measurement and calibration needs.",
+      "followers": {
+        "facebook": 112,
+        "twitter": 261
+      },
+      "image_url": "https://i1.feedspot.com/5051705.jpg?t=1622613707"
+    }
+  ]
+}

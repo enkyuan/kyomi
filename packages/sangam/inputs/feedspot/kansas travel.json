@@ -1,0 +1,64 @@
+{
+  "category": "Kansas Travel",
+  "source_url": "https://rss.feedspot.com/kansas_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Visit Wichita Blog",
+      "feed_url": "https://www.visitwichita.com/blog/rss/",
+      "website_url": "https://www.visitwichita.com/blog/",
+      "description": "Learn more about what's happening in Wichita. Find upcoming events and insider tips that will help you get the most out of your trip to Wichita. Find vacation planning information about Wichita including hotels, restaurants, things to do, and events.",
+      "followers": {
+        "facebook": 40700,
+        "twitter": 17600,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/4923768.jpg?t=1611135372"
+    },
+    {
+      "title": "Wichita on the Cheap",
+      "feed_url": "https://wichitaonthecheap.com/feed/",
+      "website_url": "https://wichitaonthecheap.com/",
+      "description": "Free and inexpensive things to do in Wichita, along with restaurant specials, local deals, family-friendly activities, and more!",
+      "followers": {
+        "facebook": 38100,
+        "twitter": 9800,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4923800.jpg?t=1611135369"
+    },
+    {
+      "title": "This Kansas City Mama",
+      "feed_url": "http://thiskansascitymama.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thiskansascitymama.blogspot.com/",
+      "description": "I'm Andrea of This Kansas City Mama! I'm a mama, wife, blogger, DIY enthusiast, a self-professed fashionista, and mompreneur. On this blog I am sharing all of my favorite things from fashion to home decor, places to explore around Kansas City, and so much more.",
+      "followers": {
+        "facebook": 457,
+        "twitter": 476,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4898424.jpg?t=1633000835"
+    },
+    {
+      "title": "Krista From Kansas Blog",
+      "feed_url": "https://kristafromkansas.com/feed/",
+      "website_url": "https://kristafromkansas.com/travel-blog/",
+      "description": "Krista has created Krista from Kansas to share her personal travel experiences including detailed trip itineraries. Krista is a former NFL Cheerleader, aspiring photographer and current attorney turned travel addict.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5318879.jpg?t=1630672977"
+    },
+    {
+      "title": "Visit Ottawa Kansas Blog",
+      "feed_url": "https://visitottawakansas.com/feed/",
+      "website_url": "https://visitottawakansas.com/blog/",
+      "description": "Travel Tips and Advice for Ottawa, KS. In 1984, the community came together to better promote Franklin County and Ottawa as tourist destinations and serve visitors to our communities.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 489
+      },
+      "image_url": "https://i1.feedspot.com/5318892.jpg?t=1630674672"
+    }
+  ]
+}

@@ -1,0 +1,602 @@
+{
+  "category": "Bartender",
+  "source_url": "https://rss.feedspot.com/bartender_rss_feeds",
+  "feeds": [
+    {
+      "title": "Australian Bartender",
+      "feed_url": "https://australianbartender.com.au/feed/",
+      "website_url": "https://australianbartender.com.au/",
+      "description": "Australian Bartender is a website dedicated to the bar industry in Australia. It is the only national, monthly magazine dedicated to the bar industry, and the #1 bar trade website in Australia. The website features news, articles, interviews, recipes, and events for bartenders, bar operators, and bar enthusiasts.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 12100,
+        "instagram": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4790272.jpg?t=1651231570"
+    },
+    {
+      "title": "Bar Magazine",
+      "feed_url": "https://barmagazine.co.uk/feed/",
+      "website_url": "https://barmagazine.co.uk/",
+      "description": "Dating back to 1999, Bar Magazine is the leading monthly publication that represents the hospitality sector. Each issue is packed with invaluable guidance and business help for venue owners, operators and managers. The exclusive monthly content covers all aspects of creating and running a successful bar, pub or restaurant. From planning, design and installation through to training, law, finance and technology.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 28400
+      },
+      "image_url": "https://i1.feedspot.com/4790620.jpg?t=1609567904"
+    },
+    {
+      "title": "Chilled Magazine",
+      "feed_url": "https://chilledmagazine.com/feed/",
+      "website_url": "https://chilledmagazine.com/",
+      "description": "Chilled Magazine features new products within the drinking and nightlife community and stories on the founders, distilleries and breweries in the market. Also drink submissions by bartenders, mixologists and readers are also featured here. Follow this site to get to know about everything related to bar industry and latest liquor, beer, wine and drinking products.",
+      "followers": {
+        "facebook": 62100,
+        "twitter": 5800,
+        "instagram": 30600
+      },
+      "image_url": "https://i1.feedspot.com/4709022.jpg?t=1609567923"
+    },
+    {
+      "title": "Jeffrey Morgenthaler",
+      "feed_url": "https://jeffreymorgenthaler.com/feed/",
+      "website_url": "https://jeffreymorgenthaler.com/",
+      "description": "Jeffrey Morgenthaler is the bar manager at Clyde Common and Pepe Le Moko in Portland, Oregon, and the co-author of The Bar Book: Elements of Cocktail Technique. He writes about bartending and mixology.",
+      "followers": {
+        "twitter": 21300,
+        "instagram": 52200
+      },
+      "image_url": "https://i1.feedspot.com/4709437.jpg?t=1609567994"
+    },
+    {
+      "title": "A Bar Above Blog",
+      "feed_url": "https://abarabove.com/feed/",
+      "website_url": "https://abarabove.com/blog/",
+      "description": "Tips, tricks and techniques for making better craft cocktails at home and behind the pro bar. A Bar Above blog was created in 2012 by Chris Tunstall, a San Francisco Bartender and Mixologist with more than 10 years of experience behind the bar.",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 4100,
+        "instagram": 39700
+      },
+      "image_url": "https://i1.feedspot.com/4541978.jpg?t=1639825088"
+    },
+    {
+      "title": "Bartender Magazine",
+      "feed_url": "https://bartender.com/feed/",
+      "website_url": "https://bartender.com/",
+      "description": "The #1 source & authority on bartending, on premise and beyond! For more than 40 years, BARTENDER Magazine has proudly served the bartender and hospitality industry. And now, as we're all facing unprecedented challenges, our commitment and support for this community has never been stronger.",
+      "followers": {
+        "facebook": 206800,
+        "twitter": 2100,
+        "instagram": 34800
+      },
+      "image_url": "https://i1.feedspot.com/4790545.jpg?t=1609568002"
+    },
+    {
+      "title": "LBS Bartending School",
+      "feed_url": "https://localbartendingschool.com/top/feed/",
+      "website_url": "https://localbartendingschool.com/top/",
+      "description": "Covers the best tips and tricks for newbie and experienced bartenders from Local Bartending School master instructors. Local Bartending School has been providing in-person bartending classes all over US and Canada since 2011.",
+      "followers": {
+        "facebook": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5349863.jpg?t=1638517492"
+    },
+    {
+      "title": "Bartender.it",
+      "feed_url": "http://bartender.it/feed/",
+      "website_url": "https://bartender.it/",
+      "description": "Welcome to Bartender.it! The first Italian web magazine dedicated to the world of international mixology and bartending, with a particular focus on Italy's contribution to the world of mixed drinking.",
+      "followers": {
+        "facebook": 138600,
+        "twitter": 511,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/4790659.jpg?t=1609568356"
+    },
+    {
+      "title": "Free Spirits Hawaii",
+      "feed_url": "https://www.freespiritshawaii.com/feed/",
+      "website_url": "https://www.freespiritshawaii.com/blog-news/",
+      "description": "Hawaii Private Mobile Bartender Services. Free Spirits Mobile Bartenders is a mobile bartending service that is committed to providing a personalized and professional service together with convenience for your parties and events.",
+      "followers": {
+        "twitter": 158,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4790058.jpg?t=1609570848"
+    },
+    {
+      "title": "National Bartenders Schools Blog",
+      "feed_url": "https://www.nationalbartenders.com/feed/",
+      "website_url": "https://www.nationalbartenders.com/blog/",
+      "description": "National Bartenders Schools is a professional Bartenders Training institute in Southern California. Their blog recounts some fascinating accounts as well as Bartending experiences for readers to explore and become informed on the art of mixology.",
+      "followers": {
+        "facebook": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5690130.jpg?t=1697443413"
+    },
+    {
+      "title": "Tom Dyer Bartender Blog",
+      "feed_url": "https://tomdyerbartender.com/blog-1/f.atom",
+      "website_url": "https://tomdyerbartender.com/blog-1",
+      "description": "Find out all the news and updates from the flair bartending world and browse the shop to find all your flair and bar tools. Tom Dyer is a professional flair bartender who creates content about cocktails, bartending techniques, and flair bartending skills. Find out about his newest projects here.",
+      "followers": {
+        "twitter": 89,
+        "instagram": 776
+      },
+      "image_url": "https://i1.feedspot.com/5690129.jpg?t=1697443483"
+    },
+    {
+      "title": "My Bartender",
+      "feed_url": "https://mybartender.com/feed/",
+      "website_url": "https://mybartender.com/",
+      "description": "Discover the best cocktail recipes, tips for bartending, and industry news. MyBartender is a site by Paul Kushner and Brian Nagele, two seasoned veterans of the food and beverage industry, who immersed themselves in the intricate world of liquors and concoctions. Their extensive knowledge and innovative spirit have allowed them to craft unique and memorable cocktail menus that resonate with a diverse audience.",
+      "followers": {
+        "facebook": 522500,
+        "twitter": 266,
+        "instagram": 366400
+      },
+      "image_url": "https://i1.feedspot.com/5690127.jpg?t=1697443186"
+    },
+    {
+      "title": "Steve the Barman Blog",
+      "feed_url": "https://www.stevethebarman.com/blog-feed.xml",
+      "website_url": "https://www.stevethebarman.com/blog",
+      "description": "Enjoy blogs and videos providing value, knowledge, reviews, and an insight into Steve the Barman's world for providing Cocktail & Gin nights in and around Cambridge & Essex. Steve has been a Cocktail Bartender for over 25 years, excelling in Customer Service, Friendliness, and Amazing Drinks.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2500,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5505110.jpg?t=1675836130"
+    },
+    {
+      "title": "Hook Line and Drinker Blog",
+      "feed_url": "https://hldrinker.com/feed",
+      "website_url": "https://hldrinker.com/blog",
+      "description": "Read about the services provided by Hook Line and Drinker - an experienced Bartender in the Tampa Bay Area. Find tips for hiring and managing a mobile bartender. Hook Line & Drinker is a leading provider of skilled Event Bartenders.",
+      "followers": {
+        "instagram": 667
+      },
+      "image_url": "https://i1.feedspot.com/5690134.jpg?t=1697443531"
+    },
+    {
+      "title": "Mixologists Bartending Blog",
+      "feed_url": "https://mixologistsbartending.com/blog/feed/",
+      "website_url": "https://mixologistsbartending.com/blog/",
+      "description": "Mixologists Bartending is a team of experienced, professional bartenders who bring the class and show up to work hard. With Mixologists Bartending, your guests will feel that getting a drink at the bar is part of the experience, part of the entertainment, and a ton of fun. Learn about their latest events and services via their blog.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5690126.jpg?t=1697443162"
+    },
+    {
+      "title": "Le Cocktail Connoisseur",
+      "feed_url": "https://lecocktailconnoisseur.com/feed/",
+      "website_url": "https://lecocktailconnoisseur.com/",
+      "description": "Blog articles on bartenders, cocktails, whisky, rum, and more. Le Cocktail Connoisseur is a blog about bartenders and cocktails around the world. Delve into expertise on various facets of the bartending profession, including individual profiles, interviews bartending tips, and more.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 401,
+        "instagram": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4952066.jpg?t=1614577264"
+    },
+    {
+      "title": "Jeffrey Morgenthaler",
+      "feed_url": "https://jeffreymorgenthaler.com/feed",
+      "website_url": "https://jeffreymorgenthaler.com/",
+      "description": "My name is Jeffrey Morgenthaler and I've been tending bar since 1996 and writing about it since 2004. Over the years I have strived, both behind the bar and through this website, to elevate the experience of having a drink from something mundane to something more culinary.",
+      "followers": {
+        "twitter": 21300,
+        "instagram": 52200
+      },
+      "image_url": "https://i1.feedspot.com/8799138.jpg"
+    },
+    {
+      "title": "Cocktails With Suderman",
+      "feed_url": "https://cocktailswithsuderman.substack.com/feed",
+      "website_url": "https://cocktailswithsuderman.substack.com/",
+      "description": "The home bartender's guide. Tips, tricks, techniques, and recipes. A new edition most every Friday, and sometimes in between.",
+      "followers": {
+        "twitter": 31400
+      },
+      "image_url": "https://i1.feedspot.com/7848347.jpg?t=1762927623"
+    },
+    {
+      "title": "786-Bartend",
+      "feed_url": "https://786bartend.com/feed/",
+      "website_url": "https://786bartend.com/",
+      "description": "Discover Miami's top bartending school with our 40-hour bartending course. Expert training, job placement support, and hands-on classes await!",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/8799150.jpg"
+    },
+    {
+      "title": "American Bartenders School",
+      "feed_url": "https://www.barschool.com/feed/",
+      "website_url": "https://www.barschool.com/",
+      "description": "Learn how to bartend from the best bartending school in NYC! Our school teaches bartending classes and offers job training to start your bartender career!",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 191
+      },
+      "image_url": "https://i1.feedspot.com/8799139.jpg"
+    },
+    {
+      "title": "Bartend Lond Island",
+      "feed_url": "https://bartendlongisland.com/feed/",
+      "website_url": "https://bartendlongisland.com/bartenders-blog/?srsltid=AfmBOoqtL5tOCQxspdOAlamywXBsfk24VWGF9v-OGIHJVAg3qEiEZa20/",
+      "description": "Party planning guides for event coordinators and bartenders along with inspiration from Long Island's premier bartending service.",
+      "followers": {
+        "facebook": 61
+      },
+      "image_url": "https://i1.feedspot.com/8799142.jpg"
+    },
+    {
+      "title": "Taste & Trot",
+      "feed_url": "https://tasteandtrot.com/feed/",
+      "website_url": "https://tasteandtrot.com/home-2/blog/",
+      "description": "Join my bartending blog to learn about classic cocktails, great tips, and how to excel in your bartending career.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8799148.jpg"
+    },
+    {
+      "title": "The Pouring Tales",
+      "feed_url": "https://thepouringtales.com/feed/",
+      "website_url": "https://thepouringtales.com/",
+      "description": "The Pouring Tales explores the world's best bars and cocktails, led by speakeasy expert Dan and Martini lover Jean. Discover the people behind the pours, insider tips and unforgettable drinks. Because life's too short for shitty drinks!",
+      "followers": {
+        "facebook": 3400
+      },
+      "image_url": "https://i1.feedspot.com/8799149.jpg"
+    },
+    {
+      "title": "The Aging Bartender",
+      "feed_url": "https://theagingbartender.com/feed/",
+      "website_url": "https://theagingbartender.com/",
+      "description": "I'm a middle aged bartender who has been through most of the ups and downs of the restaurant business, worn all the hats. I love to cook, make drinks, and do an occasional review.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8799141.jpg?t=1762928761"
+    },
+    {
+      "title": "Alcademics",
+      "feed_url": "https://alcademics.com/feed/",
+      "website_url": "https://alcademics.com/blogs/",
+      "description": "Camper English is a San Francisco-based cocktails and spirits writer and educator who has contributed to publications including Popular Science, Saveur, Details, Whisky Advocate, Food & Wine, the San Francisco Chronicle, Drinks International, The Oxford Companion to Spirits & Cocktails, and many more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8799147.jpg"
+    },
+    {
+      "title": "National Bartender Staffing",
+      "feed_url": "https://nationalbartenderstaffing.com/feed/",
+      "website_url": "https://nationalbartenderstaffing.com/blog/",
+      "description": "Expert tips, insights, cocktail ideas, & advice on event bartender staffing for weddings, conventions, and more.",
+      "followers": {
+        "facebook": 95,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/8799146.jpg"
+    },
+    {
+      "title": "ABC Bartending School Phoenix",
+      "feed_url": "https://www.azabcschools.com/blog?format=rss",
+      "website_url": "https://www.azabcschools.com/blog/",
+      "description": "Information about becoming a bartender by ABC Bartending School in Phoenix, Arizona training bartenders nationwide since 1977.",
+      "followers": {
+        "facebook": 78
+      },
+      "image_url": "https://images.squarespace-cdn.com/content/v1/66e1fc3645dc344f74907503/75c4678b-ae0a-4dbd-b0a0-11a9783256bd/ABC_Bartending_School+LOGO+sample+1.png?format=1500w?t=1762928726"
+    },
+    {
+      "title": "The Art Of Shaking",
+      "feed_url": "https://theartofshaking.com/blogs/news.atom",
+      "website_url": "https://theartofshaking.com/blogs/news/",
+      "description": "TheArtOfShaking.com is your go-to destination for all things mixology. Explore expert cocktail recipes, bartending tips, barware guides, and the stories behind the craft. Whether you're a pro or just starting out, elevate your cocktail game with style and precision.",
+      "followers": {
+        "facebook": 3700
+      },
+      "image_url": "https://i1.feedspot.com/8799143.jpg?t=1762928293"
+    },
+    {
+      "title": "The Bare Barrel Blog",
+      "feed_url": "https://www.barebarrel.com/blogs/the-bare-barrel-blog.atom",
+      "website_url": "https://www.barebarrel.com/blogs/the-bare-barrel-blog?srsltid=AfmBOoqd3JE_JUy1HX0qODS8haLEAz5kcAIvR6JSqXotAl_KEb6UVXcB/",
+      "description": "We offer a range of bartender kits ideal for any budding home cocktail enthusiast. Whether you're a beginner or advanced mixologist, or looking for the perfect gift for your family or friends, we have something for you. Explore now.",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8799144.jpg?t=1762928217"
+    },
+    {
+      "title": "Fee Brothers",
+      "feed_url": "https://www.feebrothers.com/feed/",
+      "website_url": "https://www.feebrothers.com/news/",
+      "description": "The blog shares updates, behind-the-bar stories, and mixologist interviews, highlighting craftsmanship, innovation, and personal journeys in the bartending and cocktail industry. It caters to bartenders, mixologists, and cocktail enthusiasts interested in the culture and community behind cocktail making.",
+      "followers": {
+        "facebook": 7100
+      },
+      "image_url": "https://i1.feedspot.com/8799140.jpg?t=1762928206"
+    },
+    {
+      "title": "Crafty Bartending Blog",
+      "feed_url": "https://craftybartending.com/blog/feed/",
+      "website_url": "https://craftybartending.com/blog/",
+      "description": "The ULTIMATE resource for aspiring & professional bartenders. Become a bartender, make great money, travel the world, live the dream! Follow this blog to learn How to Become a Bartender.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 173,
+        "instagram": 705
+      },
+      "image_url": "https://i1.feedspot.com/4789111.jpg?t=1609567887"
+    },
+    {
+      "title": "BevSpot Blog",
+      "feed_url": "https://bevspot.com/feed/",
+      "website_url": "https://bevspot.com/blog/",
+      "description": "BevSpot is a Smarter Bar Inventory and Bar Management Software company. Follow this blog for trends, advice, data and big stories for the restaurant and bar industry, plus resources to help you grow your bar management strategy.",
+      "followers": {
+        "facebook": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4789142.jpg?t=1609567998"
+    },
+    {
+      "title": "Bar Patrol Blog",
+      "feed_url": "https://www.barpatrol.net/feed/",
+      "website_url": "https://www.barpatrol.net/blog/",
+      "description": "Hello, I'm Dave Allred, owner/CEO of Bar Patrol. I am also an author, blogger, husband, father and Duke basketball nut.",
+      "followers": {
+        "facebook": 607,
+        "twitter": 211
+      },
+      "image_url": "https://i1.feedspot.com/4790226.jpg?t=1609568005"
+    },
+    {
+      "title": "The Bartender Company Blog",
+      "feed_url": "https://www.bartendercompany.com/feed/",
+      "website_url": "https://www.bartendercompany.com/blog/",
+      "description": "Find out the latest cocktail recipes, news, mixology, private bartending, and other tidbits in this Bartending Blog! We are a provider of full-service bartending in the Bay Area.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 998
+      },
+      "image_url": "https://i1.feedspot.com/5316670.jpg?t=1630304008"
+    },
+    {
+      "title": "Gastronomista",
+      "feed_url": "http://www.gastronomista.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.gastronomista.com/",
+      "description": "Gastronomista is a website dedicated to the culture of drink. It is a place to test out cocktail recipes, share discoveries from travels around the world, and to share new and old delicious libations.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/994427.jpg?t=1609568010"
+    },
+    {
+      "title": "Get Bartender Blog",
+      "feed_url": "https://www.getbartender.com/en/feed/",
+      "website_url": "https://www.getbartender.com/en/blog/",
+      "description": "We mix quality craft cocktails for your event. We don't just serve drinks. We want to give your guests an experience! Here you will find Professional Cocktail and Flair bartenders.",
+      "followers": {
+        "facebook": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4789290.jpg?t=1609568054"
+    },
+    {
+      "title": "Bartender Magazine",
+      "feed_url": "https://bartendermagazine.wordpress.com/feed/",
+      "website_url": "https://bartendermagazine.wordpress.com/",
+      "description": "From the #1 bartending site In the world, and the #1 bartender trade magazine, with over 30 yrs experience tending bar!",
+      "followers": {
+        "facebook": 206800,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4790703.jpg?t=1697437075"
+    },
+    {
+      "title": "Canadian Professional Bartenders Association",
+      "feed_url": "http://canadianbartenders.com/feed/",
+      "website_url": "https://canadianbartenders.com/",
+      "description": "The Canadian Professional Bartenders Association (CPBA) is an organization formed in Vancouver in 2009 by a small group of Bartenders with a simple mission: to foster community and promote the advancement of the profession of Bartending in Canada.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 881
+      },
+      "image_url": "https://i1.feedspot.com/4790716.jpg?t=1697436983"
+    },
+    {
+      "title": "Bartender Barry Blog",
+      "feed_url": "https://www.bartenderbarry.com/blog?format=rss",
+      "website_url": "https://www.bartenderbarry.com/blog",
+      "description": "Get the latest insights on Cocktails, Dessert Cocktails, and Syrups. Bartender Barry is a RAMP and ServSafe certified bartender providing bartending services throughout the Philadelphia area.",
+      "followers": {
+        "facebook": 869,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5316669.jpg?t=1630303870"
+    },
+    {
+      "title": "The Real Barman Blog",
+      "feed_url": "https://therealbarman.com/blog/feed/",
+      "website_url": "https://therealbarman.com/blog/",
+      "description": "The online bartending school that actually works, from the bar management guy, Dave. Find tips and tricks for bartending.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4790215.jpg?t=1609568337"
+    },
+    {
+      "title": "Professional Bartending School Blog",
+      "feed_url": "https://www.bartending-school.com/bartender-blog/feed/",
+      "website_url": "https://www.bartending-school.com/bartender-blog/",
+      "description": "The Professional Bartending School has been the DC region's leading bartending school since 1968 serving students and employers for almost 50 years",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 601
+      },
+      "image_url": "https://i1.feedspot.com/4789870.jpg?t=1697436901"
+    },
+    {
+      "title": "Spin And Shake Blog",
+      "feed_url": "https://spinandshake.co.uk/feed",
+      "website_url": "https://spinandshake.co.uk/cocktail-blog",
+      "description": "Spin and Shake Mobile Bar Hire London is an award-winning mobile cocktail bar company. We provide over 500 events every year while making sure every single one go smoothly. Read our cocktail blog for info and curiosity about the awesome world of cocktails and bartending. Learn recipes and history about cocktails.",
+      "followers": {
+        "facebook": 882
+      },
+      "image_url": "https://i1.feedspot.com/5212997.jpg?t=1604407941"
+    },
+    {
+      "title": "Professional Bartenders Blog",
+      "feed_url": "https://probartenders.net/tucson-blog/feed/",
+      "website_url": "https://probartenders.net/tucson-blog/",
+      "description": "Licensed and insured professional mobile bartending in Tucson makes your next event classy and safe. From set up to service and clean up, we do it all.",
+      "followers": {
+        "instagram": 252
+      },
+      "image_url": "https://i1.feedspot.com/4952725.jpg?t=1609570853"
+    },
+    {
+      "title": "Mr. Boston Bartender's Guide",
+      "feed_url": "https://blog.mrbostondrinks.com/feed/",
+      "website_url": "https://blog.mrbostondrinks.com/",
+      "description": "Recipe lists, helpful mixology guides, cocktail history articles and bartending tips from the creators of Mr. Boston Bartender's Guide.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4789306.jpg?t=1697443357"
+    },
+    {
+      "title": "Uncorkd Blog",
+      "feed_url": "https://www.uncorkd.biz/blog/feed/",
+      "website_url": "https://www.uncorkd.biz/blog/",
+      "description": "Uncorkd provides iPad wine lists and drink menus, bar inventory and alcohol ordering software for restaurants & bars to manage their beverage programs. Electronic wine & beverage menus that take the guesswork out of finding the right wine in a restaurant.",
+      "followers": {
+        "facebook": 879,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4789330.jpg?t=1609570917"
+    },
+    {
+      "title": "Bols Cocktails Blog",
+      "feed_url": "https://bols.com/blogs/cocktail-blogs.atom",
+      "website_url": "https://bols.com/blogs/cocktail-blogs",
+      "description": "Get inspired with blogs written by the master bartenders at Bols Cocktails. They have decades of experience under their belt in the bartending scene. Indulge yourself in the delicious world of cocktails and tipsy bartending stories. Bols is a coveted cocktail brand that delivers amazing bar experiences to connoisseurs.",
+      "followers": {
+        "facebook": 124800,
+        "instagram": 24400
+      },
+      "image_url": "https://i1.feedspot.com/5689899.jpg?t=1697443434"
+    },
+    {
+      "title": "BarsandBartending.com Blog",
+      "feed_url": "https://barsandbartending.com/feed/",
+      "website_url": "https://barsandbartending.com/blog/",
+      "description": "Gorge upon everything you need to know about the bar and bartending industry. Whether its bar or bartending related, it's on BarsandBartending.com. Cocktail recipes, bar humor, bartender tutorials, bar tricks, bar resume advice, drinking games & more. Stay tuned for exciting stories!",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 194
+      },
+      "image_url": "https://i1.feedspot.com/5690138.jpg?t=1697443278"
+    },
+    {
+      "title": "DFW Bartending Blog",
+      "feed_url": "https://www.dfwbartending.com/blog-feed.xml",
+      "website_url": "https://www.dfwbartending.com/blog",
+      "description": "DFW Bartending is your premier Liquid Catering Company for the Greater Dallas/Fort Worth area. Dive into a treasure trove of expert knowledge, innovative techniques, and timeless traditions curated exclusively for passionate mixologists and cocktail connoisseurs.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5690128.jpg?t=1697443192"
+    },
+    {
+      "title": "Long Beach Bartending School Blog",
+      "feed_url": "https://www.longbeachbartendingschool.com//feed/rss2",
+      "website_url": "https://www.longbeachbartendingschool.com/blog",
+      "description": "Ready to learn more about bartending or just looking for useful tips? Be sure to check out the Long Beach Bartending School blog for the latest resources and blog posts. Long Beach Bartending School is the leader of Job Placement in the LA area.",
+      "followers": {
+        "facebook": 7900,
+        "instagram": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5690131.jpg?t=1697443623"
+    },
+    {
+      "title": "Fine Art Bartending Blog",
+      "feed_url": "https://fineartbartending.ca/blogs/bartending-tips.atom",
+      "website_url": "https://fineartbartending.ca/blogs/bartending-tips",
+      "description": "Fine Art Bartending School Vancouver has helped to launch thousands of graduates into successful careers in the hospitality industry. Check out their blog for cocktail recipes, events around Vancouver, or just entertaining stories about bartenders are all worth posting.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 178,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5690141.jpg?t=1697443643"
+    },
+    {
+      "title": "Bartending School Online Blog",
+      "feed_url": "https://bartenderschoolonline.com/feed/",
+      "website_url": "https://bartenderschoolonline.com/blog/",
+      "description": "Embark on an immersive learning experience led by industry veteran and seasoned mixologist Mark Unger. Here you will find the latest tips and tricks to help you land that first bartending job. Learn how to tend a bar and land that first job!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5690136.jpg?t=1697443662"
+    },
+    {
+      "title": "The Cocktail Camp Blog",
+      "feed_url": "https://www.thecocktailcamp.com/blog?format=rss",
+      "website_url": "https://www.thecocktailcamp.com/blog",
+      "description": "Take your mixology skills to the next level with The Cocktail Camp's informative and engaging blog! Explore their articles, tips, and resources and, unleash your creativity behind the bar. Get inspired today and elevate your craft with this blog! TCC is a comprehensive bartender-training program that is inspired by the past and built for the future.",
+      "followers": {
+        "facebook": 511,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5690132.jpg?t=1697443681"
+    },
+    {
+      "title": "Crafty Bartending",
+      "feed_url": "https://craftybartending.com/feed/",
+      "website_url": "https://craftybartending.com/blog/",
+      "description": "Read the latest articles and tips on craft bartending techniques, tools, and more. Enhance your skills and knowledge with our informative blog.",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 705
+      },
+      "image_url": "https://i1.feedspot.com/4673033.jpg?t=1762927994"
+    },
+    {
+      "title": "Bar Life UK",
+      "feed_url": "https://www.barlifeuk.com/index.php/feed/",
+      "website_url": "https://www.barschool.net/blog",
+      "description": "BarLifeUK launched in 2010, and quickly became one of the leading information resources for the bar trade, both at home in the UK, and overseas. Follow this site to know about everything related to bar and bar trade.",
+      "followers": {
+        "twitter": 12000,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4790711.jpg?t=1609567916"
+    },
+    {
+      "title": "Tipsy Bartender",
+      "feed_url": "https://tipsybartender.com/feed",
+      "website_url": "https://tipsybartender.com/",
+      "description": "Welcome to Tipsy Bartender - The largest social media gathering of drinking enthusiasts in the world! Whether you are looking for an epic jungle juice for your next party or a tasty new mimosa to brighten up brunch - you have come to the right place! From creative jello shots to spiked desserts -we have it all right here.",
+      "followers": {
+        "facebook": 34900000,
+        "twitter": 166200,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/4789921.jpg?t=1609567984"
+    },
+    {
+      "title": "\u00dcberbartools Blog",
+      "feed_url": "https://www.uberbartools.com.au/blogs/news.atom",
+      "website_url": "https://www.uberbartools.com.au/blogs/news",
+      "description": "\u00dcberbartools\u2122 is a trusted tool manufacturing source for bartenders, hospitality brands, and prosumers who love high-quality equipment. Explore their blog for a deep dive into Mixing techniques and crafty syrups, and Trends and innovations in the Bar industry.",
+      "followers": {
+        "facebook": 7000,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5690133.jpg?t=1697443267"
+    }
+  ]
+}

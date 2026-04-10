@@ -1,0 +1,76 @@
+{
+  "category": "Louisiana Music",
+  "source_url": "https://rss.feedspot.com/louisiana_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nola.com \u00bb Music",
+      "feed_url": "https://www.nola.com/search/?f=rss&t=article&c=entertainment_life/music&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.nola.com/entertainment_life/music/",
+      "description": "Up to the minute music listings, news and reviews from around New Orleans with photos, videos and streaming radio from NOLA.com and the Times-Picayune. NOLA.com is the exclusive online content provider of The Times-Picayune, New Orleans source for news, information, and online interaction.",
+      "followers": {
+        "facebook": 774800,
+        "twitter": 312300,
+        "instagram": 336000
+      },
+      "image_url": "https://i1.feedspot.com/5320267.jpg?t=1631163533"
+    },
+    {
+      "title": "The Advocate \u00bb Music",
+      "feed_url": "https://www.theadvocate.com/search/?f=rss&t=article&c=baton_rouge/entertainment_life/music&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.theadvocate.com/baton_rouge/entertainment_life/music/",
+      "description": "Read the latest music news and reviews from The Advocate.The Advocate is a daily newspaper with editions in Baton Rouge, Lafayette and New Orleans, LA.",
+      "followers": {
+        "facebook": 260100,
+        "twitter": 115100,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/5320272.jpg?t=1631164413"
+    },
+    {
+      "title": "Early Cajun Music",
+      "feed_url": "https://earlycajunmusic.blogspot.com/feeds/posts/default",
+      "website_url": "https://earlycajunmusic.blogspot.com/",
+      "description": "A unique window into the world of Cajun music between 1928 and 1965. Find compiled histories from websites, books, news articles, liner notes, and interviews. Most from the personal 78 collection.",
+      "followers": {
+        "facebook": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5322880.jpg?t=1631939493"
+    },
+    {
+      "title": "WWNO \u00bb Music",
+      "feed_url": "https://www.wwno.org/music.rss",
+      "website_url": "https://www.wwno.org/music",
+      "description": "Find the latest music news and reviews by New Orleans Public Radio. WWNO serves our communities by broadcasting NPR news, information, classical music, jazz, variety programs, and unique local content.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 15000,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5260746.jpg?t=1616567184"
+    },
+    {
+      "title": "NOLA School of Music Blog",
+      "feed_url": "https://nolaschoolofmusic.com/feed",
+      "website_url": "https://nolaschoolofmusic.com/blog",
+      "description": "Our blog has advice for music students and parents in the New Orleans area covering topics like practicing, buying an instrument, understanding music, local music events, taking music lessons, finding a teacher, and more. NOLA School of Music is the place to be to learn a new instrument.",
+      "followers": {
+        "facebook": 764,
+        "twitter": 726,
+        "instagram": 486
+      },
+      "image_url": "https://i1.feedspot.com/5320410.jpg?t=1631182845"
+    },
+    {
+      "title": "Cowboy Mouth Blog",
+      "feed_url": "https://www.cowboymouth.com/1/feed",
+      "website_url": "https://www.cowboymouth.com/blog",
+      "description": "Cowboy Mouth is a musical band that has dished up its unique style of rock & roll gumbo, mixing a rowdy spirit reflective of the band's hometown New Orleans.",
+      "followers": {
+        "facebook": 77100,
+        "twitter": 8300,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5320450.jpg?t=1631185769"
+    }
+  ]
+}

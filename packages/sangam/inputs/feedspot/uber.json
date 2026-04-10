@@ -1,0 +1,89 @@
+{
+  "category": "Uber",
+  "source_url": "https://rss.feedspot.com/uber_rss_feeds",
+  "feeds": [
+    {
+      "title": "Uber Investor",
+      "feed_url": "https://investor.uber.com/rss/PressRelease.aspx",
+      "website_url": "https://investor.uber.com/home/default.aspx",
+      "description": "Uber Investor will help you to stay updated on cover news, events, announcements, and financial reports. Uber Investor is helping millions of people move towards opportunity every day in over 700 cities around the world. We believe Good things happen when people can move, whether across town or towards their dreams.",
+      "followers": {
+        "facebook": 22000000,
+        "twitter": 1100000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5432098.jpg?t=1661771348"
+    },
+    {
+      "title": "Uber Design",
+      "feed_url": "https://medium.com/feed/uber-design",
+      "website_url": "https://medium.com/uber-design",
+      "description": "At Uber design, the design is different, we come to work each day inspired by the future and eager to be a part of it. Every project at Uber begins in an effort to improve both cities and the lives of people who live in them. As a diverse team of researchers, strategists, designers, and writers, we're focused on improving current features and imagining new futures for our technology through magical user experiences.",
+      "followers": {
+        "facebook": 22000000,
+        "twitter": 43400,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5049681.jpg?t=1660633073"
+    },
+    {
+      "title": "Uber Under the Hood",
+      "feed_url": "https://medium.com/feed/@UberPubPolicy",
+      "website_url": "https://uberpubpolicy.medium.com/",
+      "description": "Read writing from Uber Under the Hood on Medium. Insights and updates from the Uber public policy team. Every day, Uber Under the Hood and thousands of other voices read, write, and share important stories on Medium. We provide information on topics like unpacking congestion's causes, impacts, and solutions; the impact of third-party food delivery during covid, and more!",
+      "followers": {
+        "facebook": 22000000,
+        "twitter": 1100000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4369549.jpg?t=1661771832"
+    },
+    {
+      "title": "The Rideshare Guy Blog",
+      "feed_url": "https://therideshareguy.com/feed/",
+      "website_url": "https://therideshareguy.com/",
+      "description": "If you're looking for tips, tricks, and news on how to maximize your income while driving for companies like Doordash, Uber, Lyft, Instacart, and Postmates, we've got you covered! The Rideshare Guy is the number one destination for gig workers to stay up to date and informed on the gig economy. Here. I aim to help drivers earn more money by working smarter.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 14400,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4823840.jpg?t=1661776389"
+    },
+    {
+      "title": "Uber Privacy & Security",
+      "feed_url": "https://medium.com/feed/uber-security-privacy",
+      "website_url": "https://medium.com/uber-security-privacy",
+      "description": "Keep yourself informed on Insights and updates from Uber's security and privacy teams. Here at Uber Privacy and Security, we cover topics like celebrating data privacy, business-friendly vulnerability management metrics, introducing Uber's new privacy center, and many more!",
+      "followers": {
+        "facebook": 22000000,
+        "twitter": 1100000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5432100.jpg?t=1661773099"
+    },
+    {
+      "title": "Uber Blog",
+      "feed_url": "https://www.uber.com/blog/rss/",
+      "website_url": "https://www.uber.com/blog/",
+      "description": "Check out the official blog from Uber to get the latest news, announcements, and things to do in the US. Ten years ago, Uber was born out of a watershed moment in technology. The rise of smartphones, the advent of app stores, and the desire for on-demand work supercharged Uber's growth and created an entirely new standard of consumer convenience. Today, Uber accounts for less than 1% of all miles driven globally.",
+      "followers": {
+        "facebook": 22000000,
+        "twitter": 1100000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5416607.jpg?t=1656564464"
+    },
+    {
+      "title": "Uber Engineering Blog",
+      "feed_url": "https://www.uber.com/en-IN/blog/mumbai/engineering/rss/",
+      "website_url": "https://www.uber.com/en-IN/blog/mumbai/engineering/",
+      "description": "Read articles on AI, Machine Learning, Computer Vision and the technology behind Uber Engineering. The Engineering team at Uber builds the technologies that power our platform and reimagines the way the world moves for the better.",
+      "followers": {
+        "facebook": 72400,
+        "twitter": 54900
+      },
+      "image_url": "https://i1.feedspot.com/4410764.jpg?t=1619073525"
+    }
+  ]
+}

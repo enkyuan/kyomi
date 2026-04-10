@@ -1,0 +1,50 @@
+{
+  "category": "UK Epilepsy",
+  "source_url": "https://rss.feedspot.com/uk_epilepsy_rss_feeds",
+  "feeds": [
+    {
+      "title": "National Epilepsy Training Blog",
+      "feed_url": "https://www.nationalepilepsytraining.co.uk/feed/",
+      "website_url": "https://www.nationalepilepsytraining.co.uk/blog/",
+      "description": "The National Epilepsy Training advice centre is our online resource for free information and advice on epilepsy and our other services.",
+      "followers": {
+        "facebook": 111,
+        "twitter": 223
+      },
+      "image_url": "https://i1.feedspot.com/4919553.jpg?t=1620710754"
+    },
+    {
+      "title": "Epilepsy, Pregnancy, Motherhood & Me",
+      "feed_url": "https://fairyfaye1986.weebly.com/1/feed",
+      "website_url": "https://fairyfaye1986.weebly.com/",
+      "description": "My names Faye, This is my story of Pregnancy, Motherhood & Epilepsy.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4707260.jpg?t=1619610089"
+    },
+    {
+      "title": "Epilepsy Research UK",
+      "feed_url": "https://epilepsyresearch.org.uk/feed/",
+      "website_url": "https://epilepsy-institute.org.uk/eri/news/#",
+      "description": "Epilepsy Research UK supports ground-breaking independent research into the causes, treatment and prevention of epilepsy to help change the future for people with this condition.",
+      "followers": {
+        "facebook": 23200,
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/4708567.jpg?t=1629273480"
+    },
+    {
+      "title": "Epilepsy Action",
+      "feed_url": "https://www.epilepsy.org.uk/rss.xml",
+      "website_url": "https://www.epilepsy.org.uk/news",
+      "description": "Epilepsy Action is a charity that improves the lives of everyone affected by epilepsy. They give advice, improve healthcare, fund research and campaign for change and more.",
+      "followers": {
+        "facebook": 91900,
+        "twitter": 31500,
+        "instagram": 22200
+      },
+      "image_url": "https://i1.feedspot.com/4708001.jpg?t=1619610007"
+    }
+  ]
+}

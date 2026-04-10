@@ -1,0 +1,46 @@
+{
+  "category": "Sphynx Cat",
+  "source_url": "https://rss.feedspot.com/sphynx_cat_rss_feeds",
+  "feeds": [
+    {
+      "title": "Scantily Clad Sphynx Blog",
+      "feed_url": "https://scantilycladsphynx.com/feed/",
+      "website_url": "https://scantilycladsphynx.com/sphynx-blog/",
+      "description": "Scantily Clad Sphynx Cattery is the culmination of many long and exciting years of study and dedication about Sphynx cat. Health is of the utmost importance in their breeding program. All the cats they have are DNA tested via Optimal Selection for over 40 genetic diseases, DNA tested with NCSU for the recently identified Sphynx HCM risk gene. They also have a blog that features articles on cats, echocardiogram reports, DNA tests,Kitten vaccination and more essential information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488225.jpg?t=1672912643"
+    },
+    {
+      "title": "California Sphynx Blog",
+      "feed_url": "https://www.californiasphynx.org/blog-feed.xml",
+      "website_url": "https://www.californiasphynx.org/blog",
+      "description": "California Sphynx is a small TICA-registered breeder producing just a few litters each year. All kittens are raised with children and come well-socialized and ready to be a cherished part of your family for many years to come. Kittens come neutered, & vaccinated. The site's blog page shares information about Sphynx cats, litter boxes, grooming tips, and more.",
+      "followers": {
+        "facebook": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5488229.jpg?t=1672912327"
+    },
+    {
+      "title": "Yeswarmg Blog",
+      "feed_url": "https://www.yeswarmg.com/blog/feed/",
+      "website_url": "https://www.yeswarmg.com/blog/",
+      "description": "Yeswarmg is a professional sphynx fashion clothing store. Each set of Yeswarmg clothes is designed by Stephanie, a clothing designer. After countless pets try on feedback, the details of the products are constantly polished and improved, and finally, the products are out to sell. You can read their blog about sphynx cats which will answer the majority of your question and help you buy a proper product for your cat.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5488231.jpg?t=1672912389"
+    },
+    {
+      "title": "Sphynx Cat Corner",
+      "feed_url": "https://sphynxcatcorner.blogspot.com/feeds/posts/default",
+      "website_url": "https://sphynxcatcorner.blogspot.com/",
+      "description": "Welcome to the 'Sphynx Cat Corner,' a passion project turned into an online haven for Sphynx cat enthusiasts, curious readers, and soon-to-be Sphynx parents. This platform is dedicated to providing information, insights, and intriguing tales all about the unique and wonderful Sphynx cat breed.",
+      "followers": {
+        "facebook": 980,
+        "twitter": 21,
+        "instagram": 7
+      },
+      "image_url": "https://i1.feedspot.com/5664062.jpg?t=1693905613"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "category": "Johnson & Johnson",
+  "source_url": "https://rss.feedspot.com/johnson_and_johnson_rss_feeds",
+  "feeds": [
+    {
+      "title": "Johnson & Johnson Nursing",
+      "feed_url": "https://nursing.jnj.com/nursing-news-events/nurses-leading-innovation/index.rss",
+      "website_url": "https://nursing.jnj.com/nursing-news-events/nurses-leading-innovation",
+      "description": "Read articles that spotlight nurses leading innovation through new policies, programs and more. Discover how Johnson & Johnson empowers nurse-led innovation. Johnson & Johnson Nursing is proud to advocate for and support nurses who are profoundly changing human health.",
+      "followers": {
+        "facebook": 214800,
+        "twitter": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5435190.jpg?t=1661332579"
+    },
+    {
+      "title": "Johnson & Johnson",
+      "feed_url": "https://www.jnj.com/",
+      "website_url": "https://www.jnj.com/",
+      "description": "For over 130 years, Johnson & Johnson has maintained a tradition of quality and innovation. Learn about the products, people and history that make up our company. At Johnson & Johnson, we blend heart, science and ingenuity to profoundly change the trajectory of health for humanity.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 244800,
+        "instagram": 107700
+      },
+      "image_url": "https://i1.feedspot.com/5435051.jpg?t=1661322172"
+    },
+    {
+      "title": "Johnson & Johnson Investor News",
+      "feed_url": "https://www.investor.jnj.com/news/default.aspx/",
+      "website_url": "https://www.investor.jnj.com/news/default.aspx/",
+      "description": "Get all the news and updates from Johnson & Johnson investors, sales, research and more! Caring for the world, one person at a time, inspires and unites the people of Johnson & Johnson. We embrace research and science - bringing innovative ideas, products and services to advance the health and well-being of people.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 244800,
+        "instagram": 107700
+      },
+      "image_url": "https://i1.feedspot.com/5435050.jpg?t=1661324645"
+    }
+  ]
+}

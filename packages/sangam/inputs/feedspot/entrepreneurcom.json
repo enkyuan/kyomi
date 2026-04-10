@@ -1,0 +1,17 @@
+{
+  "category": "Entrepreneur.com",
+  "source_url": "https://rss.feedspot.com/entrepreneurdotcom_rss_feeds",
+  "feeds": [
+    {
+      "title": "Entrepreneur.com",
+      "feed_url": "https://www.entrepreneur.com/latest.rss",
+      "website_url": "https://www.entrepreneur.com/latest",
+      "description": "Get the latest news, updates, and business affairs as they happen. Entrepreneur seeks to inspire, inform and celebrate entrepreneurs. We offer real solutions to the challenges you face as an entrepreneur, including tips, tools, and insider news to help build - and grow - your business.",
+      "followers": {
+        "twitter": 3600000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4425104.jpg?t=1599311687"
+    }
+  ]
+}

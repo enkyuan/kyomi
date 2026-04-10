@@ -1,0 +1,88 @@
+{
+  "category": "Kpop Fashion",
+  "source_url": "https://rss.feedspot.com/kpop_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "InkiStyle",
+      "feed_url": "https://inkistyle.com/feed/",
+      "website_url": "https://inkistyle.com/",
+      "description": "Your no. 1 source for K-drama & K-pop Fashion. Information on all the K-Pop & K-Drama fashion, news, clothes, shoes, and accessories.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 342,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5347082.jpg?t=1638261843"
+    },
+    {
+      "title": "K-Style Files",
+      "feed_url": "http://www.kstylefiles.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.kstylefiles.com/",
+      "description": "K-Style Files is a team of writers who know about Korean fashion. We mostly post finds on K-pop fashion, but we also post on other things K-Style like Korean hip-hop, K-dramas, etc.",
+      "followers": {
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4719065.jpg?t=1607434994"
+    },
+    {
+      "title": "Official Korean Fashion",
+      "feed_url": "https://feeds.feedburner.com/OfficialKoreanFashionBlog",
+      "website_url": "http://officialkoreanfashion.blogspot.com/",
+      "description": "Providing information and pictures on the latest Korean fashion trend/style. Including Daily Fashion, K-pop Fashion, Street Fashion, Ulzzang Fashion, and Model Fashion.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 319,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4466465.jpg?t=1607435015"
+    },
+    {
+      "title": "Idol Fashion",
+      "feed_url": "https://idolfashion.tumblr.com/rss",
+      "website_url": "https://idolfashion.tumblr.com/",
+      "description": "A blog dedicated to finding clothing to those that idols have worn!.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4719005.jpg"
+    },
+    {
+      "title": "kpopstuff",
+      "feed_url": "https://kpopstuff.com/feed/",
+      "website_url": "https://kpopstuff.com/",
+      "description": "New trending hairstyles in Korea that can be seen on your favorite kpop idols, fashion looks and dupes seen on Korean celebrities, along with step-by-step how-to's can all be found on our blog.",
+      "followers": {
+        "facebook": 524,
+        "twitter": 22,
+        "instagram": 66
+      },
+      "image_url": "https://i1.feedspot.com/4718889.jpg?t=1610005219"
+    },
+    {
+      "title": "Fashion Chingu Blog",
+      "feed_url": "https://www.fashionchingu.com/blog/feed/",
+      "website_url": "https://www.fashionchingu.com/blog/",
+      "description": "KPop and KDrama Fashion Store. We are a couple from Germany, K-Culture fans, and love Korean Pop Culture. Through this blog, we share K-Pop Fashion, K-Drama Clothes, Korean Fashion, and a lot of happiness while enjoying the K-Culture.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 682,
+        "instagram": 144000
+      },
+      "image_url": "https://i1.feedspot.com/5347083.jpg?t=1638261844"
+    },
+    {
+      "title": "KPOP and KFashion",
+      "feed_url": "https://amberlpreston.tumblr.com/rss",
+      "website_url": "https://www.tumblr.com/amberlpreston",
+      "description": "Amber shares posts about Fashion and Music in the KPOP and Kfashion world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4467687.jpg?t=1583388083"
+    },
+    {
+      "title": "BTS Fashion",
+      "feed_url": "https://btsfashions.tumblr.com/rss",
+      "website_url": "https://btsfashions.tumblr.com/",
+      "description": "Welcome to btsfashion, here you will find exacts and inspireds of the K-Pop group BTS.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4719024.jpg"
+    }
+  ]
+}

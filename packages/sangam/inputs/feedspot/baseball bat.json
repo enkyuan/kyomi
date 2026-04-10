@@ -1,0 +1,47 @@
+{
+  "category": "Baseball Bat",
+  "source_url": "https://rss.feedspot.com/baseball_bat_rss_feeds",
+  "feeds": [
+    {
+      "title": "Smash It Sports Blog",
+      "feed_url": "https://smashitsports.com/blogs/smash-it-sports-blog.atom",
+      "website_url": "https://smashitsports.com/blogs/smash-it-sports-blog",
+      "description": "Smash It Sports is a family-owned business that started in 2013. We strive to provide the best customer service in the industry, paired with the highest quality equipment. Bats, gloves, training aids, apparel, and much more.",
+      "followers": {
+        "facebook": 134700,
+        "instagram": 28700
+      },
+      "image_url": "https://i1.feedspot.com/5590353.jpg?t=1685965541"
+    },
+    {
+      "title": "Baseball Bat Reviews Blog",
+      "feed_url": "https://www.baseballbatreviewsblog.com/feed/",
+      "website_url": "https://www.baseballbatreviewsblog.com/",
+      "description": "This blog is dedicated to providing you with quality information on baseball bats for the sole purpose of helping you make an informed decision. This site is run independently of any baseball bat manufacturer or retailer and prides itself in offering an independent non-biased opinion. Find the best baseball bat for your game with our comprehensive reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5590354.jpg?t=1685966670"
+    },
+    {
+      "title": "SAM BAT Blog",
+      "feed_url": "https://sambat.com/blogs/sam-bat-blog.atom",
+      "website_url": "https://sambat.com/blogs/sam-bat-blog",
+      "description": "SAM BAT grew out of a simple challenge. After researching tree species, reading hundreds of patents, and studying the physics and rules of baseball, Sam, whose creativity, craftsmanship, and eye for detail had been honed through years of work as a stagehand at the National Arts Centre, believed he had an answer: Maple. Our mission is to craft the highest quality wood baseball bats available anywhere.",
+      "followers": {
+        "facebook": 27400,
+        "twitter": 8100,
+        "instagram": 40200
+      },
+      "image_url": "https://i1.feedspot.com/5590341.jpg?t=1685966562"
+    },
+    {
+      "title": "The Bat Nerds \u00bb Bats",
+      "feed_url": "https://thebatnerds.com/bats/feed/",
+      "description": "The Bat Nerds is a baseball bat blog run by a group of friends. Our aim is to provide our expertise on everything you need to know when buying baseball & softball equipment. We review the best baseball bats in every category. Here, you'll find reviews for the best BBCOR bats, youth baseball bats, wood baseball bats, tee ball bats, fungo bats, slowpitch softball bats, fastpitch softball bats, Wiffle ball bats, and more!",
+      "followers": {
+        "facebook": 2,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5592461.jpg?t=1686142785"
+    }
+  ]
+}

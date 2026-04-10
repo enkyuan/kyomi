@@ -1,0 +1,29 @@
+{
+  "category": "DeSoto News",
+  "source_url": "https://rss.feedspot.com/desoto_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of DeSoto, TX",
+      "feed_url": "https://www.ci.desoto.tx.us/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.ci.desoto.tx.us/newslist.php",
+      "description": "Get the latest news, updates, information and important announcements from the official website of DeSoto, TX.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5148325.jpg?t=1588753860"
+    },
+    {
+      "title": "CBS Texas \u00bb DeSoto",
+      "feed_url": "https://dfw.cbslocal.com/tag/desoto/feed/",
+      "website_url": "https://www.cbsnews.com/texas/tag/desoto/",
+      "description": "Welcome to CBS DFW, your home for the latest news, weather, traffic, and sports along with great lifestyle content. CBS 11 is part of CBS Television Stations, a division of CBS Corporation, and is one of the largest network-owned station groups in the country. Follow this feed to get the latest news, crime, politics event and information in DeSoto, Texas.",
+      "followers": {
+        "facebook": 591600,
+        "twitter": 167300,
+        "instagram": 602
+      },
+      "image_url": "https://i1.feedspot.com/5148329.jpg?t=1588756623"
+    }
+  ]
+}

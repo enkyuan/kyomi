@@ -1,0 +1,599 @@
+{
+  "category": "Puzzle",
+  "source_url": "https://rss.feedspot.com/puzzle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Blaine's Puzzle Blog",
+      "feed_url": "https://puzzles.blainesville.com/feeds/posts/default",
+      "website_url": "https://puzzles.blainesville.com/",
+      "description": "Weekly discussion on the NPR puzzler, brain teasers, math problems and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1964211.jpg?t=1609311209"
+    },
+    {
+      "title": "Chess.com News",
+      "feed_url": "https://www.chess.com/rss/news",
+      "website_url": "https://www.chess.com/news",
+      "description": "Chess.com aims to provide a safe and enjoyable environment where chess players of all skill levels can learn, contribute, play, build, chat, and share.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 489300,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4416658.jpg?t=1609230747"
+    },
+    {
+      "title": "Jigsaw Explorer \u00bb News",
+      "feed_url": "https://www.jigsawexplorer.com/feed/",
+      "website_url": "https://www.jigsawexplorer.com/category/news/",
+      "description": "Explore and enjoy premium online Jigsaw puzzles as well as tips for solving them. Jigsaw Explorer provides jigsaw puzzle enthusiasts with a great selection of high quality, family friendly online jigsaw puzzles. We have thousands of hand picked puzzles available and new puzzles being added every day.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 359
+      },
+      "image_url": "https://i1.feedspot.com/4795338.jpg?t=1609230751"
+    },
+    {
+      "title": "Braingle",
+      "feed_url": "http://feeds.braingle.com/braingle/all",
+      "website_url": "https://www.braingle.com/",
+      "description": "Follow Braingle blog for User submitted and ranked brain teasers, riddles, quizzes, trivia, logic problems and mind puzzles.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/352232.jpg?t=1609230759"
+    },
+    {
+      "title": "PuzzlersWorld",
+      "feed_url": "https://feeds.feedburner.com/Puzzlersworld",
+      "website_url": "https://puzzlersworld.com/",
+      "description": "Looking for mind blowing Logical Puzzles, Interview Puzzles, Number Puzzles, Hacker Puzzle, Brain Teasers or Sequence Riddles then your search ends here.",
+      "followers": {
+        "twitter": 428
+      },
+      "image_url": "https://i1.feedspot.com/4795645.jpg?t=1609230766"
+    },
+    {
+      "title": "Rex Parker",
+      "feed_url": "https://rexwordpuzzle.blogspot.com/feeds/posts/default?alt=atom",
+      "website_url": "https://rexwordpuzzle.blogspot.com/",
+      "description": "Follow this blog for NYT Crossword Puzzle by Rex Parker.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/3869798.jpg?t=1609230815"
+    },
+    {
+      "title": "Mind Your Decisions Blog",
+      "feed_url": "https://mindyourdecisions.com/blog/feed/",
+      "website_url": "https://mindyourdecisions.com/blog/",
+      "description": "Mind Your Decisions blog shares Math Videos, Math Puzzles, Game Theory by Presh Talwalkar.",
+      "followers": {
+        "facebook": 19500,
+        "twitter": 17600,
+        "instagram": 108200
+      },
+      "image_url": "https://i1.feedspot.com/4780034.jpg?t=1609230820"
+    },
+    {
+      "title": "Stack Exchange - Puzzling",
+      "feed_url": "https://puzzling.stackexchange.com/feeds?format=xml",
+      "website_url": "https://puzzling.stackexchange.com/",
+      "description": "Puzzling Stack Exchange is a question and answer site for those who create, solve, and study puzzles.",
+      "followers": {
+        "facebook": 226,
+        "twitter": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4780128.jpg?t=1609230840"
+    },
+    {
+      "title": "Best Crosswords",
+      "feed_url": "https://www.bestcrosswords.com/syndication/feed/constructorgrid/rss/v1",
+      "website_url": "https://www.bestcrosswords.com/",
+      "description": "BestCrosswords.com offers a variety of online and printable crossword puzzles. All the crossword puzzles on this site are free and play directly in your web browser or tablet.",
+      "followers": {
+        "facebook": 832
+      },
+      "image_url": "https://i1.feedspot.com/4781418.jpg?t=1608720852"
+    },
+    {
+      "title": "Lovatts Crossword Puzzles Games & Trivia",
+      "feed_url": "https://lovattspuzzles.com/feed/",
+      "website_url": "https://lovattspuzzles.com/",
+      "description": "Play free online puzzles or shop for leading Lovatts crosswords & puzzle magazines. Cryptics, Sudoku, Word Search, Trivia Quizzes, Code Crackers and more...",
+      "followers": {
+        "facebook": 25200,
+        "instagram": 528
+      },
+      "image_url": "https://i1.feedspot.com/4795331.jpg?t=1609230861"
+    },
+    {
+      "title": "Diary of a Crossword Fiend",
+      "feed_url": "https://crosswordfiend.com/feed/",
+      "website_url": "https://crosswordfiend.com/",
+      "description": "Reviewing the best crosswords in newspapers and on the Web.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4780220.jpg?t=1609231410"
+    },
+    {
+      "title": "XWord Info",
+      "feed_url": "https://www.xwordinfo.com/feed",
+      "website_url": "https://www.xwordinfo.com/",
+      "description": "Daily commentary on New York Times crossword puzzles from xwordinfo.com",
+      "followers": {
+        "twitter": 918
+      },
+      "image_url": "https://i1.feedspot.com/4780193.jpg"
+    },
+    {
+      "title": "Grandmaster Puzzles Blog",
+      "feed_url": "https://www.gmpuzzles.com/blog/feed/",
+      "website_url": "https://www.gmpuzzles.com/blog/",
+      "description": "Follow this blog for Hand-crafted logic puzzles, by the best puzzle constructors, for all who love puzzles. A puzzle blog started by Thomas Snyder, aka 'Dr. Sudoku', 3-time world sudoku champion and author of many books of puzzles including 'The Art of Sudoku'.",
+      "followers": {
+        "facebook": 582,
+        "twitter": 81
+      },
+      "image_url": "https://i1.feedspot.com/4646185.jpg?t=1609230896"
+    },
+    {
+      "title": "Crazy4Jigsaws.com Blog",
+      "feed_url": "https://feeds.feedburner.com/dailyjigsaw",
+      "website_url": "https://www.crazy4jigsaws.com/blog/",
+      "description": "Crazy4Jigsaws.com is the best place to play free online jigsaw puzzles. Choose from over 2,000 stunning puzzle images and puzzle cuts ranging from 6 to 520 pieces.",
+      "followers": {
+        "facebook": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4781290.jpg?t=1609231573"
+    },
+    {
+      "title": "Mantastic Puzzle and Dragons",
+      "feed_url": "https://mantasticpad.com/feed/",
+      "website_url": "https://mantasticpad.com/",
+      "description": "Hello! I am Mantastic and Fantastic in both Puzzle and Dragons and in real life.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4780169.jpg?t=1609231556"
+    },
+    {
+      "title": "PuzzleMad",
+      "feed_url": "https://www.puzzlemad.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.puzzlemad.co.uk/",
+      "description": "A mechanical puzzle blog from a grown man who should know better!! This blog is aimed at charting my voyage through the world of mechanical puzzles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4780025.jpg?t=1613373922"
+    },
+    {
+      "title": "Puzzling In Wonderlands",
+      "feed_url": "http://puzzlinginwonderlands.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://puzzlinginwonderlands.blogspot.com/",
+      "description": "'Not every puzzle is intended to be solved.Some are in place to test your limits'. If you are a puzzle store or a puzzle designer and you want a review for some puzzles, you can also contact me, and we will see what we can do together.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4795145.jpg?t=1613373629"
+    },
+    {
+      "title": "Redhead64's Obscure Puzzle Blog!",
+      "feed_url": "http://redhead64puzzles.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://redhead64puzzles.blogspot.com/",
+      "description": "Ryan, AKA 'Redhead64', is a gamer, artist, cartoonist, and budding puzzle-maker with a little too much free time on his hands.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781108.jpg?t=1613373250"
+    },
+    {
+      "title": "Crossword14",
+      "feed_url": "https://crossword14.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://crossword14.blogspot.com/",
+      "description": "A blog about doing the New York Times Crossword. Some answers are revealed, but the review is not intended as a 'cheat sheet' for other solvers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4794373.jpg"
+    },
+    {
+      "title": "PuzzCulture",
+      "feed_url": "https://puzzculture.com/feed/",
+      "website_url": "https://puzzculture.com/",
+      "description": "PuzzleNation.com is the premier online destination for gamers looking to find high quality, fun and challenging puzzle-style games.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 385,
+        "instagram": 395
+      },
+      "image_url": "https://i1.feedspot.com/4780075.jpg?t=1609231612"
+    },
+    {
+      "title": "Brendan Emmett Quigley",
+      "feed_url": "https://feeds.feedburner.com/BrendanEmmettQuigley--CanIHaveAWordWithYou",
+      "website_url": "https://www.brendanemmettquigley.com/",
+      "description": "Free on-line off-beat modern crossword puzzles by New York Times constructor Brendan Emmett Quigley.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/2337523.jpg?t=1609231598"
+    },
+    {
+      "title": "Professor Puzzle Blog",
+      "feed_url": "https://professorpuzzle.com/feed/",
+      "website_url": "https://professorpuzzle.com/blog/",
+      "description": "Professor Puzzle Ltd is specialist in metal puzzle manufacturer in the UK.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1200,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4781397.jpg?t=1609231586"
+    },
+    {
+      "title": "A Cleverly - Titled Logic Puzzle Blog",
+      "feed_url": "http://mathgrant.blogspot.com/feeds/posts/default",
+      "website_url": "http://mathgrant.blogspot.com/",
+      "description": "Used to be a haven for free logic puzzles. Now that I freelance for World Puzzle Championship veteran Thomas Snyder, this is more of a word puzzle blog. Still worth checking out.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1955295.jpg?t=1613373220"
+    },
+    {
+      "title": "Xword Contest",
+      "feed_url": "https://xwordcontest.com/feed",
+      "website_url": "https://xwordcontest.com/",
+      "description": "Matt Gaffney's Weekly Crossword Contest. I'm Matt Gaffney, a professional crossword puzzle writer for the past 15 years. Welcome to my weekly crossword contest, posted every Friday afternoon.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4795070.jpg?t=1609232389"
+    },
+    {
+      "title": "Puzzle a Day",
+      "feed_url": "https://puzzleaday.wordpress.com/feed/",
+      "website_url": "https://puzzleaday.wordpress.com/",
+      "description": "A new puzzle, riddle, game or interesting tidbit posted every day. I'm Kyal Shepard and I'm from Adelaide, Australia. My goal is to post a different blog entry every single day. Topics will be broader than puzzles and will branch off into areas I find interesting.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5046297.jpg?t=1609233913"
+    },
+    {
+      "title": "Australian Crosswords Blog",
+      "feed_url": "http://www.australiancrosswords.com.au/WPblog/feed/",
+      "website_url": "http://www.australiancrosswords.com.au/WPblog/",
+      "description": "David Stickley has been writing crosswords professionally since 1995. His cryptic puzzle, The Stickler, reached number 4786 before being axed in July 2013 due to cutbacks. David has been published in the NYT and the UK's FT.",
+      "followers": {
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/4795770.jpg"
+    },
+    {
+      "title": "Joseph Young's Puzzleria!",
+      "feed_url": "http://puzzleria.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://puzzleria.blogspot.com/",
+      "description": "Every Friday at Joseph Young's Puzzle -ria! we publish a new menu of fresh word puzzles, number puzzles, logic puzzles, puzzles of all varieties and flavors. We cater to cravers of appetizing puzzles!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4794093.jpg?t=1613372792"
+    },
+    {
+      "title": "Bewilderingly Blog",
+      "feed_url": "http://blog.bewilderinglypuzzles.com/feeds/posts/default?alt=rss",
+      "website_url": "http://blog.bewilderinglypuzzles.com/",
+      "description": "I'm Will Nediger. I write erudite, witty indie puzzles and post them here every Monday.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4780985.jpg?t=1609232434"
+    },
+    {
+      "title": "Puzzlemanias jigsaw puzzles",
+      "feed_url": "https://puzzlemanie.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://puzzlemanie.blogspot.com/",
+      "description": "Jigsaw Puzzle Blog. Assembling since 2008 - and still busy in 2017 .",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4795214.jpg?t=1613372620"
+    },
+    {
+      "title": "Rebecca's Wooden Jigsaw Puzzles",
+      "feed_url": "http://rebeccaspuzzles.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://rebeccaspuzzles.blogspot.com/",
+      "description": "This is an experiment for me to share my adventures in wooden jigsaw puzzles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4795179.jpg?t=1613372687"
+    },
+    {
+      "title": "Notes from Puzzle Palace",
+      "feed_url": "https://ipp30.blogspot.com/feeds/posts/default",
+      "website_url": "https://ipp30.blogspot.com/",
+      "description": "This blog follows the adventures of George and Roxanne Miller as they travel the world purchasing puzzles for their Puzzle Palace Museum in Boca Raton Florida. They have the worlds largest collection of mechanical puzzles with over 50,000 individual items.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5338651.jpg?t=1635585740"
+    },
+    {
+      "title": "Genius Puzzles",
+      "feed_url": "https://feeds.feedburner.com/GpuzzlescomRssFeeds",
+      "website_url": "https://gpuzzles.com/",
+      "description": "This Blog is a collection of brain teasers, puzzles (maths, fun, brain, etc), riddles, games & online puzzles.",
+      "followers": {
+        "facebook": 95100
+      },
+      "image_url": "https://i1.feedspot.com/4795651.jpg?t=1609230738"
+    },
+    {
+      "title": "Puzzles Print Blog",
+      "feed_url": "https://puzzlesprint.com/feed/",
+      "website_url": "https://puzzlesprint.com/blog/",
+      "description": "Welcome to our jigsaw puzzle blog, where we share fascinating facts and fun tidbits about the world of puzzles. Whether you're a seasoned puzzle pro or just starting out, you'll find something interesting here to pique your curiosity. PuzzlesPrint specializes in jigsaw puzzle manufacturing. Using our services, you can upload your picture, design or artwork to order a bespoke jigsaw puzzle.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5547033.jpg?t=1682056430"
+    },
+    {
+      "title": "Puzzle Day",
+      "feed_url": "https://www.puzzledayfun.com//feed/rss2",
+      "website_url": "https://www.puzzledayfun.com/",
+      "description": "Puzzle Day, celebrated annually on January 29th, was founded by Jodi Jill over 30 years ago to honor the joy and educational value of puzzles. The official website, PuzzleDayFun.com, offers a variety of free resources, including word search puzzles, insights into jigsaw puzzle creation, and ideas for hosting puzzle-themed parties in schools and libraries. Puzzle enthusiasts can also explore unique activities like blindfolded puzzle solving and speed puzzling competitions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/8721484/page/7840857/logo_1761496203.png"
+    },
+    {
+      "title": "Matchstick Puzzles!",
+      "feed_url": "https://matchstickpuzzles.net/feed/",
+      "website_url": "https://matchstickpuzzles.net/",
+      "description": "Here is the collection of matchstick puzzles I have found since I was a child. The questions can be about triangles and squares, numbers and words, and even some special topics which you will never think about them. Please have a look and solve it one by one. You will find them very interesting.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5042574.jpg?t=1609232309"
+    },
+    {
+      "title": "Matchstick Puzzles",
+      "feed_url": "http://matchstickpuzzles.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://matchstickpuzzles.blogspot.com/",
+      "description": "I've always been intrigued by these little sticks with their rounded heads. There are just so many fun things you can do with them. I started collecting matchstick puzzles a long time ago and have decided to display them all on this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/486099.jpg?t=1609234208"
+    },
+    {
+      "title": "Puzzle Fry",
+      "feed_url": "https://puzzlefry.com/feed/",
+      "website_url": "https://puzzlefry.com/",
+      "description": "Puzzle Fry is the hub for interview puzzles, brain teasers, logic puzzles, brain games, riddles, Logical Questions, Math and Number Puzzles and quizzes.",
+      "followers": {
+        "facebook": 91900
+      },
+      "image_url": "https://i1.feedspot.com/4794085.jpg?t=1609230872"
+    },
+    {
+      "title": "The Best iphone, ipad Puzzle Apps and Mechanical Puzzles",
+      "feed_url": "http://gottasolveit.blogspot.com/feeds/posts/default",
+      "website_url": "http://gottasolveit.blogspot.com/",
+      "description": "This blog focuses on GREAT, FUN PUZZLE APPS for the ipad, iphone and ipod. No other apps! If you are creating your own puzzle app and want it reviewed, contact me. Tom Cutrofello",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/590657.jpg?t=1613373986"
+    },
+    {
+      "title": "The Puzzle Den",
+      "feed_url": "https://thepuzzleden.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thepuzzleden.blogspot.com/",
+      "description": "Follow this blog for Puzzle Resources for Teachers, Homeschooling and Parents.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781082.jpg?t=1609232002"
+    },
+    {
+      "title": "Gabriel Fernandes' Puzzle Collection",
+      "feed_url": "https://feeds.feedburner.com/MyPuzzleCollection",
+      "website_url": "http://mypuzzlecollection.blogspot.com/",
+      "description": "My favorite hobby and greatest interest is collecting and solving mechanical puzzles. I started my collection in August 2008 with... The Rubik's Cube, what else? I guess that's the puzzle many collectors will say that started their collections as well.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4780328.jpg?t=1676894652"
+    },
+    {
+      "title": "My Jigsaw Journal",
+      "feed_url": "https://myjigsawjournal.com/feed/",
+      "website_url": "https://myjigsawjournal.com/",
+      "description": "My jigsaw puzzle blog and the assembly of Memorable Disney Moments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4780291.jpg?t=1609311520"
+    },
+    {
+      "title": "Active Puzzles Blog",
+      "feed_url": "https://activepuzzles.com/blogs/news.atom",
+      "website_url": "https://activepuzzles.com/blogs/news",
+      "description": "Here at our Wooden Jigsaw Puzzle blog, you can read all our news, offers, facts, and curiosities about our puzzles. Active Puzzles is a global brand for high-quality wooden puzzles. We create puzzles that develop the creative ability of children and adults, fine motor skills, and the perseverance of hyperactive people.",
+      "followers": {
+        "facebook": 11500,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5408511.jpg?t=1654680196"
+    },
+    {
+      "title": "Grids These Days",
+      "feed_url": "http://gridsthesedays.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://gridsthesedays.blogspot.com/",
+      "description": "I'm Paolo Pasco, and I construct crosswords. Weekly puzzles by Paolo Pasco, released every Sunday at noon PT.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4795052.jpg?t=1609233942"
+    },
+    {
+      "title": "Geocaching Puzzle of the Day",
+      "feed_url": "http://geocachingpuzzleoftheday.blogspot.com/feeds/posts/default",
+      "website_url": "http://geocachingpuzzleoftheday.blogspot.com/",
+      "description": "If you are a puzzle solver looking for practice solving interesting puzzles, or a cache owner looking for a new twist on a puzzle cache.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3811921.jpg?t=1613372832"
+    },
+    {
+      "title": "National Post Cryptic Crossword Forum",
+      "feed_url": "https://natpostcryptic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://natpostcryptic.blogspot.com/",
+      "description": "A forum for solvers of cryptic crossword puzzles published in the National Post.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4794376.jpg"
+    },
+    {
+      "title": "Brain Easer",
+      "feed_url": "https://braineaser.com/feed/",
+      "website_url": "https://braineaser.com/posts/",
+      "description": "Brainteasers, puzzles, and other thought-provoking content carefully curated to hone your analytical skills, prepare for interviews and expand your knowledge.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 423,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5163253.jpg?t=1609232444"
+    },
+    {
+      "title": "The Puzzle Vault",
+      "feed_url": "https://www.thepuzzlevault.co.uk/blog-feed.xml",
+      "website_url": "https://www.thepuzzlevault.co.uk/",
+      "description": "The Puzzle Vault is the new home for Codeword and Sudoku puzzle books. Any expert crossword solver will see we're the best for games.",
+      "followers": {
+        "facebook": 49
+      },
+      "image_url": "https://i1.feedspot.com/5096991.jpg?t=1609232468"
+    },
+    {
+      "title": "Puzzle Critic",
+      "feed_url": "https://puzzlecritic.wordpress.com/feed/",
+      "website_url": "https://puzzlecritic.wordpress.com/",
+      "description": "Thoughts on mathematics problems from around the world. The plan is to post about puzzles as I come across them. From time to time I might also post about puzzles or mathematics in general.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4795034.jpg?t=1609232472"
+    },
+    {
+      "title": "JL Puzzles Blog",
+      "feed_url": "http://mechanical-puzzles.com/blog/feed/",
+      "website_url": "http://mechanical-puzzles.com/blog/",
+      "description": "Our puzzle shop has challenging puzzles and brain teasers for adults and kids, novices and experts. Come explore the fascinating world of mechanical puzzles",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4795042.jpg?t=1609232488"
+    },
+    {
+      "title": "Puzzle Fanatics",
+      "feed_url": "https://texaspuzzles.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://texaspuzzles.blogspot.com/",
+      "description": "A site for those who enjoy jigsaw puzzles of all shapes and sizes and want to learn more about puzzles and the companies who produce them. White Mountain, Ravensburger, Cobble Hill, Aquarius,SunsOut, D-Toys, Stave, Springbok, Pomegranate, Wentworth. A blog about jigsaw puzzles, puzzle companies, puzzle sellers, and those who build them. Blog includes puzzle reviews, company reviews, etc.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4902805.jpg?t=1609234045"
+    },
+    {
+      "title": "Math for Love Blog",
+      "feed_url": "https://mathforlove.com/blog/feed/",
+      "website_url": "https://mathforlove.com/blog/",
+      "description": "Math for Love is dedicated to giving everyone a chance and a reason to fall in love with mathematics.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 20800
+      },
+      "image_url": "https://i1.feedspot.com/4780133.jpg?t=1609234062"
+    },
+    {
+      "title": "Alok Goyal's Puzzles Page",
+      "feed_url": "https://alokgoyal1971.com/feed/",
+      "website_url": "https://alokgoyal1971.com/",
+      "description": "Alok Goyal's blog is all about puzzles.",
+      "followers": {
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4780960.jpg?t=1609232383"
+    },
+    {
+      "title": "Para's Puzzle Site",
+      "feed_url": "http://puzzleparasite.blogspot.com/feeds/posts/default",
+      "website_url": "http://puzzleparasite.blogspot.com/",
+      "description": "I'm Bram de Laat, long time logic puzzle enthusiast. I've been solving them for over 10 years, ever since running into a magazine during my preholiday puzzle booklet run. I've been posting puzzles on puzzlepicnic for a few years now and using this blog to share some of my other puzzles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2453155.jpg?t=1609231845"
+    },
+    {
+      "title": "Lichess's Blog",
+      "feed_url": "https://lichess.org/@/Lichess/blog.atom",
+      "website_url": "https://lichess.org/@/Lichess/blog/",
+      "description": "Play Chess now in a clean interface. No registration, no ads, no plugin required. Play Chess with the computer, friends or random opponents.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/4536713.jpg?t=1609230845"
+    },
+    {
+      "title": "LAXCrossword.com - Answers to the Los Angeles Times Crossword",
+      "feed_url": "https://laxcrossword.com/feed",
+      "website_url": "https://laxcrossword.com/",
+      "description": "The solution to the crossword in the Los Angeles Times, and the solution to the L.A. Times crossword in your local paper. Clues and answers explained!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4795197.jpg?t=1609231025"
+    },
+    {
+      "title": "Yelena Dembo's Blog",
+      "feed_url": "https://yelenadembo.com/feed",
+      "website_url": "https://yelenadembo.com/",
+      "description": "Helping you improve your chess.",
+      "followers": {
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/1831656.jpg?t=1609232418"
+    },
+    {
+      "title": "The BrightSprout Blog",
+      "feed_url": "https://blog.brightsprout.com/feed/",
+      "website_url": "https://blog.brightsprout.com/",
+      "description": "Our mission is to provide the best crossword puzzle and word search makers online. With our puzzle makers, anyone can easily make, solve, and share puzzles online or in person",
+      "followers": {
+        "facebook": 759,
+        "twitter": 204
+      },
+      "image_url": "https://i1.feedspot.com/4795192.jpg?t=1609230865"
+    },
+    {
+      "title": "PuzzleWarehouse Blog",
+      "feed_url": "https://www.puzzlewarehouse.com/blog/",
+      "website_url": "https://www.puzzlewarehouse.com/blog/",
+      "description": "Jigsaw Junkie is a blog and online reference for jigsaw puzzles. They post reviews, news, and reference information about puzzle brands.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 286
+      },
+      "image_url": "https://i1.feedspot.com/4780282.jpg?t=1609231560"
+    },
+    {
+      "title": "Puzzle Pirates Blog",
+      "feed_url": "https://blog.puzzlepirates.com/all/feed/entries/rss",
+      "website_url": "https://blog.puzzlepirates.com/",
+      "description": "Aggregation of all the Puzzle Pirates Ocean Master blogs, and the official Spyglass news blog.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4781139.jpg?t=1609230856"
+    },
+    {
+      "title": "Fun With Puzzles",
+      "feed_url": "http://feeds.feedburner.com/wpcstylepuzzles",
+      "website_url": "https://www.funwithpuzzles.com/2015/05/fun-puzzles.html",
+      "description": "Have Fun With Puzzles by solving Printable Puzzles like Picture Puzzles, Maths Riddles, Logical Brain Teasers, Rebus, Sudoku Puzzles and Brain IQ Tests.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 619,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4795658.jpg?t=1609230851"
+    },
+    {
+      "title": "Briddles",
+      "feed_url": "https://feeds.feedburner.com/blogspot/iDXEz",
+      "website_url": "https://www.briddles.com/",
+      "description": "This Blog is a collection of brain teasers, puzzles (maths, fun, brain, etc), riddles, games & online puzzles.",
+      "followers": {
+        "facebook": 95100
+      },
+      "image_url": "https://i1.feedspot.com/1318976.jpg?t=1609230891"
+    }
+  ]
+}

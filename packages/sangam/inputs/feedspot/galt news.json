@@ -1,0 +1,18 @@
+{
+  "category": "Galt News",
+  "source_url": "https://rss.feedspot.com/galt_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBS News \u00bb Galt",
+      "feed_url": "https://www.cbsnews.com/latest/rss/main",
+      "website_url": "https://www.cbsnews.com/sacramento/tag/galt-news/",
+      "description": "Read the latest Galt news. Get breaking news, events and information on sports, weather, entertainment, lifestyles and everything about the city at CBS Sacramento.",
+      "followers": {
+        "facebook": 353300,
+        "twitter": 151100,
+        "instagram": 76600
+      },
+      "image_url": "https://i1.feedspot.com/5172412.jpg?t=1595234753"
+    }
+  ]
+}

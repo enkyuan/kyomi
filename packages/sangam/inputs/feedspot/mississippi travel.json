@@ -1,0 +1,77 @@
+{
+  "category": "Mississippi Travel",
+  "source_url": "https://rss.feedspot.com/mississippi_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Fairview Inn",
+      "feed_url": "https://fairviewinn.com/feed/",
+      "website_url": "https://fairviewinn.com/blog/",
+      "description": "Discover a world of elegance in Fairview Inn's luxurious rooms & suites with spacious living areas and whirlpool tubs in select suites.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 1900,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5324147.jpg?t=1632303455"
+    },
+    {
+      "title": "Costal Mississippi Blog",
+      "feed_url": "https://www.coastalmississippi.com/blog/",
+      "website_url": "https://www.coastalmississippi.com/blog/",
+      "description": "Find information on Gulf Coast hotels, Bed & Breakfast Inns, vacation rentals, condos, campgrounds, world-class casinos, coastal dining, area attractions, and events.",
+      "followers": {
+        "facebook": 181400,
+        "twitter": 15300,
+        "instagram": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5324145.jpg?t=1632303148"
+    },
+    {
+      "title": "Visit Mississippi Blog",
+      "feed_url": "https://visitmississippi.org/blog/feed/",
+      "website_url": "https://visitmississippi.org/experiences/",
+      "description": "Explore the birthplace of America's most iconic music, as well as a region of picturesque towns, sites of historical significance, and more.",
+      "followers": {
+        "facebook": 171900,
+        "twitter": 33100,
+        "instagram": 41900
+      },
+      "image_url": "https://i1.feedspot.com/5324139.jpg?t=1632297184"
+    },
+    {
+      "title": "Discover Jackson Blog",
+      "feed_url": "https://discoverjxn.ms/category/news/feed/",
+      "website_url": "https://www.visitjackson.com/blog/",
+      "description": "Whether you are in the mood to explore Jackson's best restaurants or wondering how to navigate the city with your family, we have the perfect trip for you.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 9100,
+        "instagram": 22000
+      },
+      "image_url": "https://i1.feedspot.com/5324140.jpg?t=1632302742"
+    },
+    {
+      "title": "Tupelo Blog",
+      "feed_url": "https://www.tupelo.net/feed/",
+      "website_url": "https://www.tupelo.net/blog/",
+      "description": "Get the inside stories on Tupelo from those who know it best!Elvis Presley's birthplace has so much to offer! Get close to bison at the Tupelo Buffalo Park & Zoo, visit the Natchez Trace Parkway, and more!",
+      "followers": {
+        "facebook": 47900,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5324148.jpg?t=1632303727"
+    },
+    {
+      "title": "Devereaux Shields House Blog",
+      "feed_url": "https://www.dshieldsusa.com/natchez-blog/feed",
+      "website_url": "https://www.dshieldsusa.com/natchez-blog",
+      "description": "Read our Natchez, Mississippi travel blog for the latest activities, festivals, events, and more happening in and around town. Discover new packages and offerings from our historic Mississippi bed and breakfast and peruse detailed itineraries and day trips from the locals that know!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 39,
+        "instagram": 205
+      },
+      "image_url": "https://i1.feedspot.com/5324143.jpg?t=1632302882"
+    }
+  ]
+}

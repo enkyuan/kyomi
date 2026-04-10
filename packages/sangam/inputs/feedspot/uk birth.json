@@ -1,0 +1,87 @@
+{
+  "category": "UK Birth",
+  "source_url": "https://rss.feedspot.com/uk_birth_rss_feeds",
+  "feeds": [
+    {
+      "title": "thegoodbirthpractice",
+      "feed_url": "https://www.thegoodbirthpractice.co.uk/blog-feed.xml",
+      "website_url": "https://www.thegoodbirthpractice.co.uk/blogs",
+      "description": "The Good Birth Practice offers hypnobirthing & birth preparation classes for women who like to be prepared. Imagine feeling as confident & capable about your birth as you already do in other areas of your life. A good birth really is an option for you, with focus, confidence & ease.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5040304.jpg?t=1613999638"
+    },
+    {
+      "title": "The Calm Birth School Blog",
+      "feed_url": "https://www.thecalmbirthschool.com/blog/feed/",
+      "website_url": "https://www.thecalmbirthschool.com/blog/",
+      "description": "The Calm Birth School is the world's first video based hypnobirthing program. I designed the program for women like me who are super busy and don't have the time to get to in person classes whether that be because of work or children. Our mission is to inspire and empower women across the world to create the birth you want on your terms.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 803,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4907814.jpg?t=1613999592"
+    },
+    {
+      "title": "Edel Immersys Blog",
+      "feed_url": "https://www.edelimmersys.com/feed/",
+      "website_url": "https://www.edelimmersys.com/blog/",
+      "description": "Edel Immersys is a leading supplier of water birth pools that are designed to create an intimate and peaceful birthing experience. Subscribe to our blog and stay up-to-date with the latest news and updates from the water birth industry, and the Edel Immersys team.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4907798.jpg?t=1613999611"
+    },
+    {
+      "title": "Birthzang Blog",
+      "feed_url": "https://birthzang.co.uk/feed/",
+      "website_url": "https://birthzang.co.uk/blog/",
+      "description": "Providing parents with essential support and education to ensure they have an awesome pregnancy, birth and parenthood journey.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 633
+      },
+      "image_url": "https://i1.feedspot.com/4907804.jpg?t=1613999623"
+    },
+    {
+      "title": "Lillian Craze Birth Photography Blog",
+      "feed_url": "https://lcrazebirthphotography.co.uk/feed/",
+      "website_url": "https://lcrazebirthphotography.co.uk/blog-posts/",
+      "description": "I'm a birth photographer who specialises exclusively in capturing the profound details of childbirth. I document birth stories for mothers and families in South Wales and surrounding areas. I lovingly and artistically transform all my work into timeless black and white images.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 360,
+        "instagram": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4853333.jpg?t=1611741772"
+    },
+    {
+      "title": "The Positive Birth Company Blog",
+      "feed_url": "https://thepositivebirthcompany.co.uk/blog?format=RSS",
+      "website_url": "https://thepositivebirthcompany.com/blog/category/water+birth",
+      "description": "Committed to empowering women and their birth partners to create positive birth experiences.",
+      "followers": {
+        "facebook": 106400,
+        "twitter": 800,
+        "instagram": 254900
+      },
+      "image_url": "https://i1.feedspot.com/4853414.jpg?t=1613999587"
+    },
+    {
+      "title": "The Birth Company - Tips, Scans & Advice Blog",
+      "feed_url": "https://www.thebirthcompany.co.uk/blog/feed",
+      "website_url": "https://www.thebirthcompany.co.uk/blog",
+      "description": "The Birth Company has been a successful practice looking after pregnant mothers and women with fertility problems for the last 17 years. Our aim is to enable expectant mothers to have a positive and reassuring experience during fertility care, pregnancy and childbirth experience.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4907811.jpg?t=1613999618"
+    }
+  ]
+}

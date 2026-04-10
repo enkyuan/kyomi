@@ -1,0 +1,411 @@
+{
+  "category": "Navy",
+  "source_url": "https://rss.feedspot.com/navy_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Maritime Executive",
+      "feed_url": "https://maritime-executive.com/articles.rss",
+      "website_url": "https://maritime-executive.com/",
+      "description": "The maritime industry's leading source for breaking maritime and marine news including shipping news, offshore news, piracy news and more.",
+      "followers": {
+        "facebook": 37900,
+        "twitter": 56100
+      },
+      "image_url": "https://i1.feedspot.com/4305915.jpg?t=1615361485"
+    },
+    {
+      "title": "NAVALTODAY.COM",
+      "feed_url": "https://www.navaltoday.com/feed/",
+      "website_url": "https://www.navaltoday.com/",
+      "description": "Naval Today includes news and updates on operations, vessels, equipment, research, companies, and the authorities dominating the naval industry. From breaking news and technological advances to operations, Naval Today will keep you well informed. Whether you are an officer, admiral, manager, authority, or executive, the place to find the latest developments in the naval industry is on navaltoday.com",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/1317842.jpg?t=1660896433"
+    },
+    {
+      "title": "Naval Technology",
+      "feed_url": "https://www.naval-technology.com/news/feed/",
+      "website_url": "https://www.naval-technology.com/news/",
+      "description": "Navy news covering the latest stories in naval defence technology, new ships, submarines, aircraft carriers and trends in naval warfare and security. Naval Technology is a procurement and reference resource providing a one-stop-shop for professionals and decision makers within the naval defence industry.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/1166595.jpg?t=1615361473"
+    },
+    {
+      "title": "Naval Analyses",
+      "feed_url": "https://www.navalanalyses.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.navalanalyses.com/",
+      "description": "Analysis of naval ships, coast guard vessels, weapons, technologies and naval fleets",
+      "followers": {
+        "facebook": 33100,
+        "twitter": 46000
+      },
+      "image_url": "https://i1.feedspot.com/4589570.jpg?t=1615361519"
+    },
+    {
+      "title": "Navy Times",
+      "feed_url": "https://www.navytimes.com/arc/outboundfeeds/rss/?outputType=xml",
+      "website_url": "https://www.navytimes.com/",
+      "description": "Sailors and their families rely on Navy Times as a trusted, independent source for news and information on the most important issues affecting their careers and personal lives. Navy Times provides quality, unbiased reporting on important issues for the military community.",
+      "followers": {
+        "facebook": 620600,
+        "twitter": 123500
+      },
+      "image_url": "https://i1.feedspot.com/5355401.jpg?t=1660895942"
+    },
+    {
+      "title": "USNI News",
+      "feed_url": "https://news.usni.org/feed",
+      "website_url": "https://news.usni.org/",
+      "description": "USNI News is the U.S. Naval Institute's online news and analysis portal. Designed to be responsive to world events and 24-hour information cycles, USNI News seeks to provide germane analysis quickly on national security matters.",
+      "followers": {
+        "facebook": 769000,
+        "twitter": 37700,
+        "instagram": 51000
+      },
+      "image_url": "https://i1.feedspot.com/4440015.jpg?t=1640066516"
+    },
+    {
+      "title": "Naval News",
+      "feed_url": "https://www.navalnews.com/feed/",
+      "website_url": "https://www.navalnews.com/",
+      "description": "Founded by Xavier and Nathan, Naval News brings you news coverage of the latest naval defense shows & events. We are also reporting on naval technology from all over the world.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 47100,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5254998.jpg?t=1666012691"
+    },
+    {
+      "title": "Bosphorus Naval News",
+      "feed_url": "https://devrimyaylali.com/feed/",
+      "website_url": "https://devrimyaylali.com/",
+      "description": "Frequently updated news, photos, comments and links about naval issues in the Black Sea and Eastern Mediterranean region",
+      "followers": {
+        "facebook": 965,
+        "twitter": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4589835.jpg?t=1605275537"
+    },
+    {
+      "title": "Navy Matters",
+      "feed_url": "https://navy-matters.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://navy-matters.blogspot.com/",
+      "description": "Naval analysis provided by ComNavOps, Commander - Naval Opinions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/765581.jpg"
+    },
+    {
+      "title": "The New York Times",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/organization/us-navy/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/organization/us-navy",
+      "description": "News about the U.S. Navy. Commentary and archival information about the United States Navy from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4589948.jpg?t=1615361481"
+    },
+    {
+      "title": "U.S. Navy",
+      "feed_url": "https://www.navy.mil/DesktopModules/ArticleCS/RSS.ashx?ContentType=1&Site=1067&max=10",
+      "website_url": "https://www.navy.mil/",
+      "description": "This page is intended to provide updated information and discussion on the U.S. Navy. U.S. Navy live events, news, top stories, navy life, community and more. You will find here is a series of organizational charts designed to show the chain of command and the relationship of the three principal components of the Navy Department.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 1800000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/1310197.jpg?t=1615361502"
+    },
+    {
+      "title": "The National Maritime Historical Society",
+      "feed_url": "https://seahistory.org/feed/",
+      "website_url": "https://seahistory.org/resources/",
+      "description": "The National Maritime Historical Society is the national voice for America's maritime heritage, helping to raise awareness of our nation's history & the role seafaring has played in shaping the United States of America along with the rest of the worlds civilization, through publications, educational programs, & the preservation of historic ships.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4589743.jpg?t=1615361530"
+    },
+    {
+      "title": "Ex Crypto Captain",
+      "feed_url": "http://navycaptain-therealnavy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://navycaptain-therealnavy.blogspot.com/",
+      "description": "A blog covering musings, leadership tidbits, and quotes posted by a retired Navy Captain who hung up his uniform a bit too early. He still wears his Navy service on his sleeve. He needs to get over that. He keeps Cryptology alive-one day and Sailor at a time.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1310191.jpg?t=1618986834"
+    },
+    {
+      "title": "Naval Association of Canada",
+      "feed_url": "https://www.navalassoc.ca/feed/",
+      "website_url": "https://www.navalassoc.ca/",
+      "description": "NAC's roots go back to 1919 when the Naval Officers Association of British Columbia was formed by naval veterans of World War I. NAC seeks to educate the Canadian public on their Navy and what it needs if it is to continue to contribute effectively into the future to Canada's security, prosperity and other interests, not only in home waters but around the world.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5355410.jpg?t=1640071025"
+    },
+    {
+      "title": "Seapower Magazine",
+      "feed_url": "https://seapowermagazine.org/feed/",
+      "website_url": "https://seapowermagazine.org/",
+      "description": "Educating Congress and the American people about the activities, requirements, and accomplishments of the sea services. Seapower magazine is the official publication of the Navy League of the United States, an international organization founded in 1902 to support the U.S. sea services.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5334660.jpg?t=1660896031"
+    },
+    {
+      "title": "Canadian Naval Review",
+      "feed_url": "https://www.navalreview.ca/feed/",
+      "website_url": "https://www.navalreview.ca/",
+      "description": "Canadian Naval Review is published by the Brian Mulroney Institute of Government at St. Francis Xavier University. It is a professional journal examining a wide range of maritime security issues from a Canadian perspective. It focuses on strategic concepts, policies, historical perspectives, and operations of the Canadian Navy, plus oceans policy, marine affairs, and national security in general.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5355407.jpg?t=1640071212"
+    },
+    {
+      "title": "U.S Navy Aircraft History",
+      "feed_url": "https://thanlont.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thanlont.blogspot.com/",
+      "description": "My blog focuses on U.S. Navy Aircraft history. Hi! I'm Tommy H. Thomason. As a young boy in the 50s, I was always enamored with aeroplanes. However, I was not able to be a Naval Aviator because I was nearsighted, I instead became an aeronautical engineer and general aviation pilot. Now retired, I write books and monographs on U.S. Navy aircraft.",
+      "followers": {
+        "facebook": 20700,
+        "instagram": 85
+      },
+      "image_url": "https://i1.feedspot.com/5355406.jpg?t=1640071454"
+    },
+    {
+      "title": "Navy Reads",
+      "feed_url": "https://navyreads.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://navyreads.blogspot.com/",
+      "description": "Navy Read is an unofficial blog in support of the Navy Professional Reading Program and related books.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355404.jpg?t=1640071583"
+    },
+    {
+      "title": "Merchant Navy Decoded Blog",
+      "feed_url": "https://www.merchantnavydecoded.com/feed/",
+      "website_url": "https://www.merchantnavydecoded.com/blogs/",
+      "description": "Praneet Kumar Mehta has done B.E Marine Engineer from M.E.R.I Kolkata where he was selected based on his IIT Mains Rank in 2004. With over a decade of experience in the Shipping Industry, he decided to bring his experience into mentoring students and getting them selected in World's top Shipping Companies. With Merchant Navy Decoded, Praneet wants to realize his distant dream of mentoring young marine engineers.",
+      "followers": {
+        "instagram": 133400
+      },
+      "image_url": "https://i1.feedspot.com/5355400.jpg?t=1640070332"
+    },
+    {
+      "title": "Naval Academy Tourism Blog",
+      "feed_url": "https://navalacademytourism.com/blog/rss.xml",
+      "website_url": "https://navalacademytourism.com/blog",
+      "description": "We're the Naval Academy Business Services Division. We are the retail services arm of the U.S. Naval Academy. And we are the ones who provide the Midshipmen with over 100 extracurricular activities and club sports, as well as uniforms, haircuts, USNA textbooks, and more.",
+      "followers": {
+        "facebook": 18500,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5355397.jpg?t=1640070156"
+    },
+    {
+      "title": "American Connections Media Outreach",
+      "feed_url": "http://navyoutreach.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://navyoutreach.blogspot.com/",
+      "description": "Sharing Sailor stories through local connections like hometown, high school, family, etc on American Connections Media Outreach.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355398.jpg?t=1640070427"
+    },
+    {
+      "title": "Navy League of the United States",
+      "feed_url": "https://www.navyleague.org/feed/",
+      "website_url": "https://www.navyleague.org/news/",
+      "description": "The Navy League of the United States, founded in 1902 is a nonprofit civilian, educational and advocacy organization that supports America's sea services. Its mission focus is to be a powerful voice to educate the public and Congress of importance to our nation's defence, well-being and economic prosperity.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 8100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5355402.jpg?t=1640065554"
+    },
+    {
+      "title": "Russian Navy",
+      "feed_url": "https://russianfleetanalysis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://russianfleetanalysis.blogspot.com/",
+      "description": "Lieutenant Van Lokeren served for 7 years as an officer within the Belgian Navy and held several positions at different units, including a nine-month deployment as commanding officer of the BNS Lobelia, before returning back to civilian life. He currently combines his knowledge of maritime strategy and military operations with his keen interest in the Russian military in order to provide a deeper insight into the Russian maritime forces.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355393.jpg?t=1640065908"
+    },
+    {
+      "title": "The Guardian \u00bb Royal Navy",
+      "feed_url": "https://www.theguardian.com/uk/royal-navy/rss",
+      "website_url": "https://www.theguardian.com/uk/royal-navy",
+      "description": "Latest news and features on Royal Navy from The Guardian. The Guardian is the world's leading liberal voice, since 1821.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4589826.jpg?t=1640067585"
+    },
+    {
+      "title": "Offshore \u00bb Energy",
+      "feed_url": "https://feeds.feedburner.com/worldmaritimenews/Ltoh",
+      "website_url": "https://www.offshore-energy.biz/greenmarine/",
+      "description": "World Maritime News includes news & updates on markets, projects, vessels, equipment, research, shipyards, shipping companies & the authorities dominating these markets. From breaking news, technological advances to shipping activities, Its experienced & well-respected team of editors, columnists & correspondents will keep you well informed.",
+      "followers": {
+        "facebook": 76200,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/1591655.jpg?t=1615361462"
+    },
+    {
+      "title": "Navy CyberSpace Blog",
+      "feed_url": "https://www.navycs.com/blogs/feed",
+      "website_url": "https://www.navycs.com/blogs/",
+      "description": "A Navy recruiting blog that delves into the military enlistment process and benefits of service. This is NOT an official United States Navy or government web site. The opinions expressed are Tom Goering's own, and may not be in-line with any branches of the government or military.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4589653.jpg"
+    },
+    {
+      "title": "Defence Navy",
+      "feed_url": "http://rss4",
+      "website_url": "https://www.defence.gov.au/news-events/navy-news",
+      "description": "Navy Daily provides the online delivery of news stories about Royal Australian Navy's daily activities.",
+      "followers": {
+        "facebook": 208800,
+        "twitter": 63000
+      },
+      "image_url": "https://i1.feedspot.com/4129697.jpg?t=1615361510"
+    },
+    {
+      "title": "Naval Gazing",
+      "feed_url": "https://seanavalgazing.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://seanavalgazing.blogspot.com/",
+      "description": "Commentary from a wargamer and former submariner Dave S. on various topics but mostly about wargames and naval stuff, trying to stay up on current naval developments around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4589766.jpg?t=1615361721"
+    },
+    {
+      "title": "Aviation & Defence Universe - Navy News",
+      "feed_url": "https://www.aviation-defence-universe.com/navy-news/feed/",
+      "website_url": "https://www.aviation-defence-universe.com/navy-news/",
+      "description": "Daily news of Indian Navy is doing on their shores and in the global commons is being covered in this section. All the exercises within India and abroad, all visits of ships to friendly nations and all development and achievements",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4589923.jpg?t=1615361649"
+    },
+    {
+      "title": "NAVAL DRONES",
+      "feed_url": "http://feeds.feedburner.com/navaldrones/ZiDJ",
+      "website_url": "http://blog.navaldrones.com/",
+      "description": "A blog about unmanned naval drones including air, surface, and subsurface vehicles by Chris R a Navy Captain.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4589764.jpg?t=1615361604"
+    },
+    {
+      "title": "Civil War Navy",
+      "feed_url": "https://civilwarnavy.com/category/news/feed/",
+      "website_url": "https://civilwarnavy.com/category/news/",
+      "description": "The Magazine was founded and launched in 2012 by a group of friends from Savannah, GA. Our guiding principle is to provide authoritative documentation describing the strategies, the naval vessels and weapons, the naval operations and battles on rivers and oceans, and perspectives on the officers and sailors involved in this period of our naval history.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 485
+      },
+      "image_url": "https://i1.feedspot.com/5355412.jpg?t=1640071171"
+    },
+    {
+      "title": "DESA Blog",
+      "feed_url": "https://desanavy.wordpress.com/feed/",
+      "website_url": "https://desanavy.wordpress.com/",
+      "description": "DESA is committed to giving up-to-date and value-added information on policy matters, welfare schemes, rehabilitation, pension policies, health care and other associated issues to the retired naval community and widows/dependents. With aim of reaching out and establishing a bond of linkage for better and meaningful communication and rendering all possible assistance to keep in touch with our esteemed veterans, DESA BLOG, has been set up to provide a single-window interface for establishing a two-way communication,",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355395.jpg?t=1640066164"
+    },
+    {
+      "title": "Naval Historical Foundation Blog",
+      "feed_url": "https://navyhistory.org/feed/",
+      "website_url": "https://navyhistory.org/blog/",
+      "description": "The Naval Historical Foundation blog promotes the mission of NHF and publishes stories about the US Navy Museum and other news from the naval history community. The Naval Historical Foundation preserves and honours the legacy of those who came before us. We educate and inspire the generations who will follow.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5355396.jpg?t=1663228636"
+    },
+    {
+      "title": "Navy Lookout",
+      "feed_url": "https://www.navylookout.com/feed/",
+      "website_url": "https://navylookout.com/",
+      "description": "Save the Royal Navy is an independent online campaign to promote the RN and fight its decline. Aims to put pressure on the government to properly resource the RN, to promote the RN and to highlight the excellent work it does on a daily basis across the globe, to help correct the imbalance in media coverage of our armed forces, & see service personnel treated fairly, valued and properly paid.",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 114000
+      },
+      "image_url": "https://i1.feedspot.com/4589863.jpg?t=1615361516"
+    },
+    {
+      "title": "Naval Post",
+      "feed_url": "https://navalpost.com/feed/",
+      "website_url": "https://navalpost.com/",
+      "description": "Naval Post is an online defense media company, focused on Warships, Submarines, Naval Air and Naval Missiles.",
+      "followers": {
+        "facebook": 47500,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5323580.jpg?t=1640071313"
+    },
+    {
+      "title": "USNI Blog",
+      "feed_url": "https://blog.usni.org/feed",
+      "website_url": "https://blog.usni.org/",
+      "description": "The United States Naval Institute (USNI), based in Annapolis, Maryland, is a private, non-profit, professional military association that provides an open, independent, and nonpartisan forums for debate of national defense and security issues. In addition to publishing magazines and books, the Naval Institute holds several annual conferences.",
+      "followers": {
+        "facebook": 769000,
+        "twitter": 242600
+      },
+      "image_url": "https://i1.feedspot.com/4467161.jpg?t=1605275476"
+    },
+    {
+      "title": "Janes",
+      "feed_url": "https://www.janes.com/feeds/news",
+      "website_url": "https://www.janes.com/osint-insights/defence-news",
+      "description": "Read the latest defense and security news from Janes - the trusted source for defense intelligence. In a world crowded with increasingly unreliable information, our customers require timely, verified, validated, unbiased, and relevant defense, threat, and equipment intelligence. The interconnectivity of Janes assured open-source intelligence and analysis enables us to provide you with the unique insights required to make mission-critical decisions.",
+      "followers": {
+        "facebook": 49700,
+        "twitter": 77200
+      },
+      "image_url": "https://i1.feedspot.com/4589913.jpg?t=1647849737"
+    },
+    {
+      "title": "Maharashtra Academy of Naval Education and Training Blog",
+      "feed_url": "https://manetpune.edu.in/",
+      "website_url": "https://manetpune.edu.in/",
+      "description": "MAEER's Maharashtra Academy of Naval Education and Training, more popularly known as MANET Pune was founded in 2001. Its mission is to provide high-quality, cadet-centred education and lifelong learning opportunities for the communities we serve. At MANET Pune, students pursue their goals in an environment that values diversity, individuality, mutual respect and the free exchange of ideas.",
+      "followers": {
+        "facebook": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5355408.jpg?t=1640070030"
+    },
+    {
+      "title": "Navy Sports Nation",
+      "feed_url": "https://navysportsnation.com/feed/",
+      "website_url": "https://navysportsnation.com/",
+      "description": "My name is Karl Darden. I graduated from the U.S. Naval Academy and am a certified Navy Sports Junkie. I started this blog to shine a spotlight on some really good athletes in sports that fly just under the radar. They make just as many personal sacrifices as those from the higher visibility sports, so I figured they deserved some love too. Stop by any time to engage in the topic of the day. I'll try to take more of an in depth look at Navy sports and their terrific athletes.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 91
+      },
+      "image_url": "https://i1.feedspot.com/5355399.jpg?t=1640067755"
+    }
+  ]
+}

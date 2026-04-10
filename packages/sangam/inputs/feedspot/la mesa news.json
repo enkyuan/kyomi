@@ -1,0 +1,54 @@
+{
+  "category": "La Mesa News",
+  "source_url": "https://rss.feedspot.com/la_mesa_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "FOX 5 San Diego \u00bb La Mesa",
+      "feed_url": "https://fox5sandiego.com/tag/la-mesa/feed/",
+      "website_url": "https://fox5sandiego.com/tag/la-mesa/",
+      "description": "FOX 5 is San Diego's source for local news, breaking news, earthquake alerts, weather, traffic, entertainment, sports, politics, news video, and online streaming video. Subscribe for the latest news and updates in La Mesa brought to you by the team at FOX 5 San Diego.",
+      "followers": {
+        "facebook": 659200,
+        "twitter": 217500,
+        "instagram": 158000
+      },
+      "image_url": "https://i1.feedspot.com/5147780.jpg?t=1588591841"
+    },
+    {
+      "title": "KTLA 5 \u00bb La Mesa",
+      "feed_url": "https://ktla.com/tag/la-mesa/feed/",
+      "website_url": "https://ktla.com/tag/la-mesa/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond. Get the latest news, updates and everything about La Mesa city at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5147769.jpg?t=1588591586"
+    },
+    {
+      "title": "San Diego Union-Tribune \u00bb La Mesa",
+      "feed_url": "https://www.sandiegouniontribune.com/location/california/san-diego-county/east-county/la-mesa/",
+      "website_url": "https://www.sandiegouniontribune.com/location/california/san-diego-county/east-county/la-mesa/",
+      "description": "The San Diego Union-Tribune is the region's leading news source since 1868. Follow this feed to read the latest local and breaking news, updates, and everything that matters to you in the city of La Mesa, CA.",
+      "followers": {
+        "facebook": 259700,
+        "twitter": 217100,
+        "instagram": 75800
+      },
+      "image_url": "https://i1.feedspot.com/5147760.jpg?t=1588588625"
+    },
+    {
+      "title": "SDNews \u00bb La Mesa Courier",
+      "feed_url": "https://lamesacourier.com/feed/",
+      "website_url": "https://sdnews.com/la-mesa-courier/",
+      "description": "The community newspaper, La Mesa Courier, is the No.1 resource for information about La Mesa Community. It specializes in community news, business briefs, opinions, editorials, event calendars, entertainment, and much more.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 528,
+        "instagram": 621
+      },
+      "image_url": "https://i1.feedspot.com/4825181.jpg?t=1623300858"
+    }
+  ]
+}

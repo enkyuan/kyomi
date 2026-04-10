@@ -1,0 +1,17 @@
+{
+  "category": "Kennewick News",
+  "source_url": "https://rss.feedspot.com/kennewick_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kennewick, WA",
+      "feed_url": "https://www.go2kennewick.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.go2kennewick.com/CivicAlerts.aspx?sort=date",
+      "description": "Kennewick, WA is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5212046.jpg?t=1604071760"
+    }
+  ]
+}

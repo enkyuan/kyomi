@@ -1,0 +1,55 @@
+{
+  "category": "Canadian Weather",
+  "source_url": "https://rss.feedspot.com/canadian_weather_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mike's Southern Manitoba Weather Blog",
+      "feed_url": "https://southmbweather.blogspot.com/feeds/posts/default",
+      "website_url": "https://southmbweather.blogspot.com/",
+      "description": "Mike's Southern Manitoba Weather Blog provides weather information for all of Southern Manitoba. With a focus on the Winnipeg region and vicinity.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5584397.jpg?t=1685550128"
+    },
+    {
+      "title": "A Weather Moment",
+      "feed_url": "https://www.aweathermoment.com/feed/",
+      "website_url": "https://www.aweathermoment.com/",
+      "description": "A Weather Moment is a non-profit website focused on weather commentary for the greater Winnipeg region as well as delivering useful tools designed to help acquire weather data for decision-making processes. We occasionally share weather-related news or reviews.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5585171.jpg?t=1685425243"
+    },
+    {
+      "title": "Valley Weather",
+      "feed_url": "http://valleyweather.blogspot.com/feeds/posts/default",
+      "website_url": "http://valleyweather.blogspot.com/",
+      "description": "As Canadians we talk about the weather relentlessly, I just talk about it a little more! I hope to provide useful information to my family, friends and all those who simply enjoy talking about the weather. While I try to include information of interest from all over North America, my primary region of concern is the St. Lawrence Valley of Quebec, Ontario, and New York, as well as our neighbouring regions. This Blog is dedicated to my late father for inspiring my interest in weather.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5585734.jpg?t=1685442667"
+    },
+    {
+      "title": "The Epoch Times \u00bb WEATHER CANADA",
+      "feed_url": "https://www.theepochtimes.com/t-weather-canada/feed",
+      "website_url": "https://www.theepochtimes.com/focus/weather-canada",
+      "description": "Get the latest weather updates on Canada's climate. The Epoch Times is an independent voice in print and on the web. We report news responsibly and truthfully so that readers can improve their own lives and increase their understanding and respect for their neighbor's next door and around the globe.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5584394.jpg?t=1685442322"
+    },
+    {
+      "title": "Toronto Star",
+      "feed_url": "https://www.thestar.com/feeds.articles.news.starweather.rss",
+      "website_url": "https://www.thestar.com/news/gta/weather/",
+      "description": "Get the latest weather updates for the GTA and surrounding area. Founded in 1892, the Toronto Star has long been Canada's largest daily newspaper. Our purpose is to keep our customers informed about what matters most to them and to help make their life, community, country, and world better. Our mission is to deliver trusted news, information, and content on all platforms.",
+      "followers": {
+        "facebook": 499500,
+        "twitter": 1200000,
+        "instagram": 164000
+      },
+      "image_url": "https://i1.feedspot.com/5584393.jpg?t=1685425332"
+    }
+  ]
+}

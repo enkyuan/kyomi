@@ -1,0 +1,501 @@
+{
+  "category": "SAP",
+  "source_url": "https://rss.feedspot.com/sap_rss_feeds",
+  "feeds": [
+    {
+      "title": "SAP News Center",
+      "feed_url": "http://news.sap.com/feed/",
+      "website_url": "https://news.sap.com/",
+      "description": "SAP official site for latest news and information from SAP, Press Releases and Newsroom, In-depth feature articles on business & technology trends,Blogs.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 121300
+      },
+      "image_url": "https://i1.feedspot.com/4381585.jpg?t=1617371924"
+    },
+    {
+      "title": "ERPPrep blogs",
+      "feed_url": "https://www.erpprep.com/blog/feed",
+      "website_url": "https://www.erpprep.com/",
+      "description": "SAP Certification Sample Questions and Online Practice Exam for ERP, CRM, NetWeaver, BusinessObjects, HANA, SRM, Business One and Many Other SAP Solutions.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4656127.jpg?t=1617371956"
+    },
+    {
+      "title": "SAPYard",
+      "feed_url": "https://sapyard.com/feed/",
+      "website_url": "https://www.zapyard.com/",
+      "description": "SAPYard is all about SAP Technical Tips, Solutions and more.",
+      "followers": {
+        "facebook": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4656226.jpg?t=1617371963"
+    },
+    {
+      "title": "AWS for SAP",
+      "feed_url": "https://aws.amazon.com/blogs/awsforsap/feed/",
+      "website_url": "https://aws.amazon.com/blogs/awsforsap/",
+      "description": "Amazon Web Services (AWS) delivers a set of services that together form a reliable, scalable, and inexpensive computing platform in the cloud.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4656928.jpg?t=1617371977"
+    },
+    {
+      "title": "The SAP PRESS Blog",
+      "feed_url": "https://blog.sap-press.com/rss.xml",
+      "website_url": "https://blog.sap-press.com/",
+      "description": "As the world's leading SAP publisher, SAP PRESS' goal is to create resources that will help you accelerate your SAP journey. The SAP PRESS Blog is designed to provide helpful, actionable information on a variety of SAP topics, from SAP ERP to SAP S/4HANA.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 8300,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5153718.jpg?t=1617371992"
+    },
+    {
+      "title": "Vision33 Blog",
+      "feed_url": "https://blog.vision33.com/rss.xml",
+      "website_url": "https://blog.vision33.com/",
+      "description": "Vision33 company blog focusing on everything SAP Business One for Small to Mid-sized Enterprises.",
+      "followers": {
+        "facebook": 580,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4656285.jpg"
+    },
+    {
+      "title": "Innovapptive Blog",
+      "feed_url": "https://www.innovapptive.com/blog/rss.xml",
+      "website_url": "https://www.innovapptive.com/blog",
+      "description": "Here, you'll find exclusive information on the latest industry topics - told from the perspective of our subject matter experts, innovators, and fearless leaders.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5122031.jpg"
+    },
+    {
+      "title": "Rizing Blog",
+      "feed_url": "https://rizing.com/feed/",
+      "website_url": "https://rizing.com/blog/",
+      "description": "Rizing, LLC is an SAP Partner delivering the intelligent enterprise with SAP S/4HANA and SuccessFactors. Rizing enables businesses to achieve a truly intelligent enterprise. We do this for Human Capital Management, Enterprise Asset Management, Consumer Industries, and Geospatial Solutions with leading SAP technologies and our own deep industry experience.",
+      "followers": {
+        "facebook": 268,
+        "twitter": 306
+      },
+      "image_url": "https://i1.feedspot.com/4656482.jpg?t=1611809622"
+    },
+    {
+      "title": "SAP Docs",
+      "feed_url": "https://www.sapdocs.info/feed/",
+      "website_url": "https://www.sapdocs.info/",
+      "description": "SAP Docs Providing Best Resources for Your SAP Knowledge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4656227.jpg?t=1617373452"
+    },
+    {
+      "title": "Axxis Consulting Blog",
+      "feed_url": "https://axxis-consulting.com/feed/",
+      "website_url": "https://axxis-consulting.com/blog/",
+      "description": "Axixis Consulting is a technology and management consulting firm providing cost-effective, leading edge business solutions based on SAP and Oracle software.",
+      "followers": {
+        "facebook": 359,
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/4656486.jpg?t=1617372248"
+    },
+    {
+      "title": "Skillstek Blog",
+      "feed_url": "https://skillstek.com/feed/",
+      "website_url": "https://skillstek.com/blog/",
+      "description": "Keep up with articles from Skillstek.",
+      "followers": {
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/5053776.jpg?t=1617372476"
+    },
+    {
+      "title": "KBS Training Institue ERP Blog",
+      "feed_url": "https://www.kbstraining.com/blog/feed",
+      "website_url": "http://www.kbstraining.com/blog/",
+      "description": "KBS Training Institue provides online trainings are SAP Modules, Microsoft Dynamics AX, CRM, NAV, GP, SL, C5, Oracle, BigData, Hadoop, Salesforce, SAS, Service Now, IT Management Training.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4656283.jpg?t=1617372443"
+    },
+    {
+      "title": "Maruskin",
+      "feed_url": "https://blog.maruskin.eu/feeds/posts/default",
+      "website_url": "https://blog.maruskin.eu/",
+      "description": "Martin shares articles about SAP BW (classic SAP BW on anyDB, BW4/HANA), SAP NetWeaver, ABAP programming, HANA database, Basis administration.",
+      "followers": {
+        "twitter": 272
+      },
+      "image_url": "https://i1.feedspot.com/696703.jpg?t=1642055914"
+    },
+    {
+      "title": "Timo Elliott's Blog",
+      "feed_url": "https://timoelliott.com/blog/feed/atom",
+      "website_url": "https://timoelliott.com/blog/",
+      "description": "This blog tracks innovation in analytics and social media, including topics such as big data, collaborative decision-making, and social analytics. Timo Elliott is an innovation evangelist and international conference speaker who has presented to business and IT audiences in over fifty countries around the world.",
+      "followers": {
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/540128.jpg?t=1608191479"
+    },
+    {
+      "title": "IT Partners Inc.",
+      "feed_url": "https://itpfed.com/feed/",
+      "website_url": "https://itpfed.com/",
+      "description": "IT Partners has been providing trusted, cost-effective ERP Services to meet our customer's needs in the Commercial and Federal Marketplace for over 20 years.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/3715062.jpg?t=1622177019"
+    },
+    {
+      "title": "Ugur Hasdemir S/4HANA Blog",
+      "feed_url": "https://s4hanablog.com/feed/",
+      "website_url": "https://s4hanablog.com/",
+      "description": "This blog is everything about SAP's next big thing.",
+      "followers": {
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/4656281.jpg?t=1617372925"
+    },
+    {
+      "title": "Bramasol Blog",
+      "feed_url": "https://www.bramasol.com/feed/",
+      "website_url": "https://www.bramasol.com/blog/",
+      "description": "Stay up-to-date with content about SAP products and solutions. This Blog keeps updated as per the latest SAP trends and hot SAP topics.",
+      "followers": {
+        "facebook": 264,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4655635.jpg"
+    },
+    {
+      "title": "HackingSAP.com Blog",
+      "feed_url": "https://www.hackingsap.com/blog/feed",
+      "website_url": "https://www.hackingsap.com/blog/",
+      "description": "SAP BI consultant and author at Interdobs, working with the SAP BusinessObjects BI4 front-end tools and the SAP BW back-end. Specialized in SAP BusinessObjects Design Studio and Lumira.",
+      "followers": {
+        "facebook": 705,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/53739.jpg?t=1617372880"
+    },
+    {
+      "title": "Shyam Uthaman - Learn SAP HANA through easy tutorials",
+      "feed_url": "http://teachmehana.com/feed/",
+      "website_url": "http://teachmehana.com/category/sap-tutorials/",
+      "description": "Learn SAP HANA and SQL even if you have no background in SAP. Read and interact with the author too. Come in for 100% free SAP HANA Tutorial.",
+      "followers": {
+        "facebook": 687,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/4655524.jpg?t=1617373303"
+    },
+    {
+      "title": "E3zine",
+      "feed_url": "https://e3zine.com/feed/",
+      "website_url": "https://e3zine.com/",
+      "description": "The Independent and Global Webzine Devoted to the International SAP Community - SAP Trends, Analyses, Strategies and in-depth Reports from Business and IT.",
+      "followers": {
+        "facebook": 77,
+        "twitter": 833
+      },
+      "image_url": "https://i1.feedspot.com/4656040.jpg?t=1617371933"
+    },
+    {
+      "title": "SAP Virtualize Business Critical Applications",
+      "feed_url": "https://blogs.vmware.com/apps/sap/feed",
+      "website_url": "https://blogs.vmware.com/apps/sap",
+      "description": "This blog is for Applications owners, database admins, Exchange admins, vSphere admins and application architects.",
+      "followers": {
+        "facebook": 391400,
+        "twitter": 328200
+      },
+      "image_url": "https://i1.feedspot.com/4655627.jpg?t=1617371981"
+    },
+    {
+      "title": "SAP ABAP Central",
+      "feed_url": "https://sapabapcentral.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sapabapcentral.blogspot.com/",
+      "description": "SAP ABAP is widely used in industry and it is booming of job opportunity. They serve SAP ABAP tutorial and material to help candidate to start with entry point.",
+      "followers": {
+        "facebook": 951
+      },
+      "image_url": "https://i1.feedspot.com/4656183.jpg?t=1617372468"
+    },
+    {
+      "title": "SAP Steps",
+      "feed_url": "https://www.sapsteps.com/language/en/feed/",
+      "website_url": "https://www.sapsteps.com/language/en/",
+      "description": "Welcome to SAP Steps, an exclusive SAP information portal for all people interested in this incredible world. We will deal with technical issues, careers, tips, interviews, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5282509.jpg?t=1621496580"
+    },
+    {
+      "title": "SAP Expert Blog",
+      "feed_url": "https://www.sapexpert.co.uk/feed/",
+      "website_url": "https://www.sapexpert.co.uk/blog/",
+      "description": "This blog is intended to be a collection of useful articles and other materials which can help you understand how SAP works and how you can work with it.",
+      "followers": {
+        "twitter": 195
+      },
+      "image_url": "https://i1.feedspot.com/4655711.jpg"
+    },
+    {
+      "title": "Infonikka Blog",
+      "feed_url": "https://infonikka.com/feed/",
+      "website_url": "https://infonikka.com/blog/",
+      "description": "Infonikka is a global leader in providing best-in-class Salesforce Services, SAP Services, Integration Services and IT Services in India and US.",
+      "followers": {
+        "facebook": 76,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5118294.jpg?t=1617372438"
+    },
+    {
+      "title": "Techippo",
+      "feed_url": "https://www.techippo.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.techippo.com/",
+      "description": "Get information about SAP ABAP,SAPUI5,SAP HANA,SAP Fiori,OData,SAP Netweaver Gateway,SAP Workflow,SAP Web IDE,SMP,SAP Mobile Tutorials,Interview Questions and more.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4758731.jpg?t=1617372940"
+    },
+    {
+      "title": "Ripples Info Blog",
+      "feed_url": "https://www.ripplesinfo.com/feed/",
+      "website_url": "https://www.ripplesinfo.com/blog/",
+      "description": "Ripples Info fetures articles and information on SAP HANA Modeling HA300 & HANA Admin HA200 Training.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/4970791.jpg?t=1617372914"
+    },
+    {
+      "title": "SAPinsight Blog",
+      "feed_url": "https://blog.sapinsight.com/feed/",
+      "website_url": "https://blog.sapinsight.com/",
+      "description": "SAPinsight is a member organization that provides learning, networking, and knowledge sharing for the SAP Super User Community, including forums, content, national conferences and regional events.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4655619.jpg"
+    },
+    {
+      "title": "SAP Business One Blog",
+      "feed_url": "https://sap-business-one.us/blog/feed/",
+      "website_url": "https://sap-business-one.us/blog/",
+      "description": "SAP Business One services and support from MTC, a SAP certified reseller.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 17700
+      },
+      "image_url": "https://i1.feedspot.com/4656296.jpg"
+    },
+    {
+      "title": "SAP FICO BLOG",
+      "feed_url": "https://sapficoblog.com/feed/",
+      "website_url": "https://sapficoblog.com/",
+      "description": "SAP FICO BLOG is your ERP step-by-step guide to learn about various processes within the SAP FICO module and Central Finance (CFIN).",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5161852.jpg"
+    },
+    {
+      "title": "De Villiers Walton Blog",
+      "feed_url": "https://www.dvwsolutions.com/blog/feed",
+      "website_url": "https://www.dvwsolutions.com/blog",
+      "description": "De Villiers Walton is a specialist SAP consulting and software development company with a focus on Analytics and CRM",
+      "followers": {
+        "twitter": 302
+      },
+      "image_url": "https://i1.feedspot.com/4656289.jpg"
+    },
+    {
+      "title": "Techlorean. Life in Tech. SAP Consultant.",
+      "feed_url": "https://techlorean.com/feed/",
+      "website_url": "https://techlorean.com/",
+      "description": "Techlorean is a blog that aims to educate readers on SAP, Career Journey, Technology, Life in Tech, and more. It aims to help fellow SAP / IT Consultants and even those who are interested to pursue this career path. Together, let us create a community that thrives on continuous learning.",
+      "followers": {
+        "facebook": 341,
+        "twitter": 43
+      },
+      "image_url": "https://i1.feedspot.com/5124397.jpg?t=1617373286"
+    },
+    {
+      "title": "Dynamoinfotech Blog",
+      "feed_url": "https://dynamoinfotech.com/blog/feed/",
+      "website_url": "https://dynamoinfotech.com/blog/",
+      "description": "Dynamoinfotech is the best SAP implementation company in India, Bangalore, Hyderabad, offering various services like migration, integration, support, etc.",
+      "followers": {
+        "facebook": 542,
+        "twitter": 205,
+        "instagram": 33
+      },
+      "image_url": "https://i1.feedspot.com/5089794.jpg?t=1617372235"
+    },
+    {
+      "title": "SAP Recruiter Podcast",
+      "feed_url": "http://feeds.feedburner.com/AsapTalentServices",
+      "website_url": "http://asaptalentservices.blogspot.com/",
+      "description": "ASAP Talent Services recruits and hire SAP talent from the CIO level to team members in virtually every type of SAP/ERP skill set. They will shrink your recruiting cycle and ensure you have premium access to the non-active talent pool.",
+      "followers": {
+        "twitter": 339
+      },
+      "image_url": "https://i1.feedspot.com/4656544.jpg?t=1617373268"
+    },
+    {
+      "title": "Hybrismart",
+      "feed_url": "https://hybrismart.com/feed/",
+      "website_url": "https://hybrismart.com/",
+      "description": "SAP hybris under the hood: nothing is impossible. Challenges and opportunities, tips and tricks. Solution architecture notes from Rauf Aliev (EPAM hybris SA).",
+      "followers": {
+        "facebook": 507,
+        "twitter": 334
+      },
+      "image_url": "https://i1.feedspot.com/4655714.jpg?t=1617372231"
+    },
+    {
+      "title": "Globus Labs - SAP Business One Blogs",
+      "feed_url": "https://globuslabs.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://globuslabs.blogspot.com/",
+      "description": "Globus Labs is one of the leading SAP Partner in India. It offers SAP Business One, Cloud ERP Software, Implementation Services and support to small and Mid-size Enterprises.",
+      "followers": {
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/5051242.jpg?t=1617373277"
+    },
+    {
+      "title": "Ashfaque Ahmed's Blog",
+      "feed_url": "https://ahmedashfaque.wordpress.com/feed/",
+      "website_url": "https://ahmedashfaque.wordpress.com/category/sap/",
+      "description": "The best learning blog for SAP, software engineering and software project management: ranked 38th most popular in the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4656597.jpg"
+    },
+    {
+      "title": "ABAPblog.com - by \u0141ukasz P\u0119giel",
+      "feed_url": "https://abapblog.com/?format=feed&type=rss",
+      "website_url": "https://abapblog.com/",
+      "description": "ABAP Blog shares Tips & Tricks for ABAP language. A blog founded by Lukasz Pegiel in 2013 to provide code samples and ways of using ABAP hidden functions.",
+      "followers": {
+        "facebook": 108,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4656942.jpg?t=1617372454"
+    },
+    {
+      "title": "Protiviti",
+      "feed_url": "https://tcblog.protiviti.com/feed/",
+      "website_url": "https://tcblog.protiviti.com/",
+      "description": "SAP Insights is a community network sponsored by Protiviti's SAP Practice. The purpose of this blog site is to provide an unbiased source of information regarding SAP solutions around business process optimization, data and analytics, security and privacy, and risk and compliance.",
+      "followers": {
+        "facebook": 236,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4655675.jpg?t=1617371988"
+    },
+    {
+      "title": "Eursap Blog",
+      "feed_url": "https://eursap.eu/blog/",
+      "website_url": "https://eursap.eu/blog/",
+      "description": "Eursap's SAP blog covering SAP news, information, developments and the latest SAP trends and hot SAP topics. Top SAP bloggers and SAP blogs.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4655581.jpg"
+    },
+    {
+      "title": "SAP",
+      "feed_url": "https://blogs.sap.com/feed/",
+      "website_url": "https://community.sap.com/t5/all-sap-community-blogs/ct-p/all-blogs",
+      "description": "SAP blogs let you read about and share your own technical know-how, industry insights, and the latest buzz about technology, events, and all things SAP.",
+      "followers": {
+        "facebook": 117600,
+        "twitter": 100300,
+        "instagram": 334100
+      },
+      "image_url": "https://i1.feedspot.com/4655436.jpg?t=1626153901"
+    },
+    {
+      "title": "InsideSAP",
+      "feed_url": "https://insidesap.com/feed/",
+      "website_url": "https://insidesap.com/",
+      "description": "The Independent Magazine for SAP Professionals. Inside SAP delivers the ANZ SAP community a dedicated publication for strategies and techniques to help assist and maximise their company's investment in SAP.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4656045.jpg?t=1617371945"
+    },
+    {
+      "title": "Analytics from SAP",
+      "feed_url": "https://blogs.sap.com/tags/87817424-f4e7-46f2-af14-88bf0f4ba034/feed/",
+      "website_url": "https://community.sap.com/t5/c-khhcw49343/Data+and+Analytics/pd-p/87817424-f4e7-46f2-af14-88bf0f4ba034",
+      "description": "Analytics should set you free, not tie you down. SAP BusinessObjects delivers modern analytics for the digital enterprise that allow you to reimagine insights, collaboration, and your business. Whether on premise, in the cloud, or in the boardroom, SAP BusinessObjects is intuitive to use, easy to deploy, and results in better outcomes.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 75800,
+        "instagram": 334100
+      },
+      "image_url": "https://i1.feedspot.com/4426527.jpg?t=1618214570"
+    },
+    {
+      "title": "Approyo Blog",
+      "feed_url": "https://www.approyo.com/blog-feed.xml",
+      "website_url": "https://approyo.com/blog/",
+      "description": "Approyo is a leading global SAP HANA technology solution provider. They make it simple for companies to implement big data solutions or today and the future.",
+      "followers": {
+        "facebook": 124,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4656533.jpg?t=1617373314"
+    },
+    {
+      "title": "UKISUG News & Blog",
+      "feed_url": "https://www.sapusers.org/news-and-blog.html/",
+      "website_url": "https://www.sapusers.org/news-and-blog.html/",
+      "description": "The UK & Ireland SAP User Group is an independent 'not for profit' organisation. Over the years they have grown and now comprise of over 500 organisations and 4,000 professionals. Their aims is to facilitate networking, knowledge exchange and best practice amongst SAP users.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4655712.jpg?t=1617372739"
+    },
+    {
+      "title": "Tech Point",
+      "feed_url": "https://techpointsolution.com/feed/",
+      "website_url": "https://techpointsolution.com/blogs/",
+      "description": "Tech Point Solution Business (Tech Point) is an IT company known for our deep industry experience and high customer satisfaction.",
+      "followers": {
+        "facebook": 92,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5165823.jpg"
+    },
+    {
+      "title": "EV Technologies, Inc. Blog",
+      "feed_url": "https://evtechnologies.com/blog/feed/",
+      "website_url": "https://vedapointe.com/blog/",
+      "description": "The EV Technologies team regularly posts articles on the industry's most up-to-date trends & technologies. Subscribe to our blog for expert SAP insights.",
+      "followers": {
+        "facebook": 113,
+        "twitter": 615
+      },
+      "image_url": "https://i1.feedspot.com/4655699.jpg?t=1617372890"
+    }
+  ]
+}

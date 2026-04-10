@@ -1,0 +1,523 @@
+{
+  "category": "UK Movie",
+  "source_url": "https://rss.feedspot.com/uk_movie_rss_feeds",
+  "feeds": [
+    {
+      "title": "Back to the Movies",
+      "feed_url": "https://www.backtothemovies.com/feed/",
+      "website_url": "https://www.backtothemovies.com/news/",
+      "description": "Back To The Movies is a website featuring Reviews, Interviews, Trailers and much much more. We talk about movies the way you talk about movies. No 'critics' here. Just fans.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 38200
+      },
+      "image_url": "https://i1.feedspot.com/4665914.jpg?t=1605607343"
+    },
+    {
+      "title": "Home - Latest Movies, Trailers, Celebrity News & Gossips. | CGO",
+      "feed_url": "https://www.cgomovies.co.uk/feed/",
+      "website_url": "https://www.cgomovies.co.uk/",
+      "description": "CinemaGoTrailers UK is your movie and entertainment website. We provide you the latest movie news and videos straight from the entertainment industry.",
+      "followers": {
+        "facebook": 48700,
+        "twitter": 10200,
+        "instagram": 617
+      },
+      "image_url": "https://i1.feedspot.com/4905989.jpg?t=1605607348"
+    },
+    {
+      "title": "UK Film Review Blog",
+      "feed_url": "https://www.ukfilmreview.co.uk/blog-feed.xml",
+      "website_url": "https://www.ukfilmreview.co.uk/blog/",
+      "description": "Founded in 2012, this is an entertainment website dedicated to film reviews, movie trailers, film festivals, and indie film making. One of the most popular providers of short film reviews in the UK. Movies are their passion and they want to discuss the best and worst in the film industry.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 4100,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/4666201.jpg?t=1605607354"
+    },
+    {
+      "title": "Silent London Blog",
+      "feed_url": "https://silentlondon.co.uk/feed/",
+      "website_url": "https://silentlondon.co.uk/",
+      "description": "Silent London is a silent cinema blog based in... you can guess where. It began life as a listings site for silent film screenings in London. That is no longer the case.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4905917.jpg?t=1605607363"
+    },
+    {
+      "title": "Popcorn Cinema Show",
+      "feed_url": "https://www.popcorncinemashow.com/feed/",
+      "website_url": "https://www.popcorncinemashow.com/",
+      "description": "Popcorn Cinema Show is all about the movies, we love seeing older films being restored and released on Blu-ray. We review them and let you know whether its a good release. Plus we have all the upcoming new releases at the cinema and on Blu-ray / DVD.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4731558.jpg?t=1605607377"
+    },
+    {
+      "title": "Movie Metropolis",
+      "feed_url": "https://moviemetropolis.net/feed/",
+      "website_url": "https://moviemetropolis.net/",
+      "description": "Movie Metropolis UK has been a labour of love for me and since its creation in 2010, it has grown from a small blog attracting a minimal number of readers into something much larger, with a great community of people from across the globe who enjoy reading about the latest cinema releases. Constantly updated with all the relevant film news, Movie Metropolis really is the place to get the best of the silver-screen right at your fingertips.",
+      "followers": {
+        "facebook": 499,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/4943878.jpg?t=1605607383"
+    },
+    {
+      "title": "Blazing Minds",
+      "feed_url": "https://blazingminds.co.uk/feed/",
+      "website_url": "https://blazingminds.co.uk/category/news/",
+      "description": "Blazing Minds is an award winning site for entertainment with film reviews, movie news, trailers, giveaways, indie film and more.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 29500,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4665910.jpg?t=1605607393"
+    },
+    {
+      "title": "Independent",
+      "feed_url": "http://www.independent.co.uk/arts-entertainment/films/rss",
+      "website_url": "https://www.independent.co.uk/arts-entertainment/films",
+      "description": "The world's most free-thinking newspaper. It gives the latest movie review, releases, shows, concerts and much more.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/1038763.jpg?t=1605607423"
+    },
+    {
+      "title": "Cinema Chords",
+      "feed_url": "https://cinemachords.com/feed/",
+      "website_url": "https://cinemachords.com/",
+      "description": "Where Movies and Music Collide. Cinema Chords brings all the latest movie news, reviews and interviews and much more.",
+      "followers": {
+        "facebook": 646,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5502909.jpg?t=1675331946"
+    },
+    {
+      "title": "Movie Reviews 101",
+      "feed_url": "https://moviesreview101.com/feed/",
+      "website_url": "https://moviesreview101.com/",
+      "description": "Movie Reviews 101 is a place where we look at films, top 5 lists, trailers, stars and always open to look at more film based material, come and read our opinions and if you like what you see you can join the interaction.",
+      "followers": {
+        "facebook": 750,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4669868.jpg?t=1674536338"
+    },
+    {
+      "title": "Little White Lies",
+      "feed_url": "https://lwlies.com/feed/",
+      "website_url": "https://lwlies.com/",
+      "description": "A bi-monthly print magazine committed to championing great movies and the talented people who make them. Combining cutting-edge design, illustration and journalism, we've been described as being 'at the vanguard of the independent publishing movement.' Our reviews feature a unique tripartite ranking system that captures the different aspects of the movie-going experience. We believe in Truth & Movies.",
+      "followers": {
+        "facebook": 111700,
+        "twitter": 97800,
+        "instagram": 66300
+      },
+      "image_url": "https://i1.feedspot.com/4943895.jpg?t=1605607474"
+    },
+    {
+      "title": "The Upcoming",
+      "feed_url": "https://www.theupcoming.co.uk/category/culture/cinema/feed/",
+      "website_url": "https://www.theupcoming.co.uk/category/culture/cinema/",
+      "description": "The Upcoming is a daily online magazine founded in the summer of 2011 to publish and promulgate thought-provoking stories, cultural insights and interesting news. Our vibrant editorial unit works hard to bring you strong and stimulating reading. Relentless young journalists are trying to fight the bland and undistinctive style that is spreading all around the news world.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 9500,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4944207.jpg?t=1605607489"
+    },
+    {
+      "title": "Film News",
+      "feed_url": "https://www.film-news.co.uk/rss/UK/news",
+      "website_url": "https://www.film-news.co.uk/news",
+      "description": "A leading independent publisher featuring news, reviews, interviews, competitions, the latest releases, and all the gossip from the worldwide film and movie scene. Film News is formed from a wide-ranging collection of writers and journalists sharing a common love of film.",
+      "followers": {
+        "facebook": 10000,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5331055.jpg?t=1634186455"
+    },
+    {
+      "title": "Metro.co.uk \u00bb Film",
+      "feed_url": "https://metro.co.uk/entertainment/film/feed/",
+      "website_url": "https://metro.co.uk/entertainment/film/",
+      "description": "The biggest world news events to the most talked about trends. It is in the unique position of being able to harness the power of the social web and a young audience while still having the journalistic rigour of a legacy newspaper brand. It's a site that has a heart and soul. It is a site that cares, a site that can be funny, take risks and campaign about the issues it cares about, while making sure that no viral trends are missed.",
+      "followers": {
+        "facebook": 5400000,
+        "twitter": 357700,
+        "instagram": 305600
+      },
+      "image_url": "https://i1.feedspot.com/4944437.jpg?t=1605607431"
+    },
+    {
+      "title": "Sci-Fi Now",
+      "feed_url": "https://www.scifinow.co.uk/category/cinema/feed/",
+      "website_url": "https://www.scifinow.co.uk/category/cinema/",
+      "description": "Sci Fi News, Movie reviews, interviews and exclusive videos. SciFI Now breaks new ground with its cutting-edge approach to features, reviews and news. Brought to you by the Premier SciFi, Fantasy, Horror and cult magazine.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 44100
+      },
+      "image_url": "https://i1.feedspot.com/4944430.jpg?t=1605607536"
+    },
+    {
+      "title": "The Agency",
+      "feed_url": "https://theagency.co.uk/category/film/feed/",
+      "website_url": "https://theagency.co.uk/category/film/",
+      "description": "We represent all manner of writers and directors working in drama across film, television and theatre; from those at the peak of their careers to those at the very beginning. That range is reflected in the company too: the agents here are as varied in their taste as they are in age and experience.",
+      "followers": {
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4944218.jpg?t=1605607710"
+    },
+    {
+      "title": "Let's Go To The Movies",
+      "feed_url": "https://letsgotothemovies.com/feed/",
+      "website_url": "https://letsgotothemovies.com/",
+      "description": "I spend a lot of time at either the cinema or theatre. You will then find reviews from these films and shows. I absolutely love everything film and theatre so you have found the perfect place to read my latest thoughts and lists on all those things! I occasionally still become a total fangirl over certain things and I have thoroughly enjoyed my love for film expanding to the theatre and seeing some of my favorite actors and actresses on stage.",
+      "followers": {
+        "facebook": 574
+      },
+      "image_url": "https://i1.feedspot.com/4666060.jpg?t=1605607630"
+    },
+    {
+      "title": "The British Blacklist",
+      "feed_url": "http://thebritishblacklist.co.uk/category/we-rate-it-all-out-of-100/feed/",
+      "website_url": "http://thebritishblacklist.co.uk/category/we-rate-it-all-out-of-100/",
+      "description": "The British Blacklist offers reviews, news and social analysis striving to bring a voice to burgeoning talent, which rarely receive any visibility.Our service allows users to search for individuals by name or works, post casting opportunities, it acts as an online portfolio and is a source for the latest topical news from the British African and Caribbean entertainment industry from the UK and Global Diaspora.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 20000,
+        "instagram": 61600
+      },
+      "image_url": "https://i1.feedspot.com/4944338.jpg?t=1605607798"
+    },
+    {
+      "title": "Wyrd Britain",
+      "feed_url": "http://wyrdbritain.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://wyrdbritain.blogspot.com/",
+      "description": "Welcome to Wyrd Britain, a blog concerned with stories in, of, from and about a stranger Britain. Stories that explore a Britain other than the one we think we know. A Britain where the ghosts are unquiet, where the woods are alive and where distinctions between the present, the future and the past are permeable.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 760
+      },
+      "image_url": "https://i1.feedspot.com/4944395.jpg?t=1605608460"
+    },
+    {
+      "title": "One Mann's Movies",
+      "feed_url": "https://bob-the-movie-man.com/feed/",
+      "website_url": "https://bob-the-movie-man.com/",
+      "description": "Hi I'm Bob Mann. I have had a lifelong love of cinema since my mum took me to see Mary Poppins at the age of four. My 'Film Reviews' on this site are my own personal views on films seen at the cinema from 2013 onwards. 'DVD Reviews' are reviews of recent films that slipped through the net at the cinema.",
+      "followers": {
+        "facebook": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4948858.jpg?t=1605608635"
+    },
+    {
+      "title": "Emma @ The Movies",
+      "feed_url": "http://emmaatthemovies.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://emmaatthemovies.blogspot.com/",
+      "description": "I fell in love with movies many years ago and haven't looked back since, unless it was to shush someone who was talking in the row behind me.",
+      "followers": {
+        "facebook": 83
+      },
+      "image_url": "https://i1.feedspot.com/5038102.jpg?t=1605608492"
+    },
+    {
+      "title": "Through the Silver Screen",
+      "feed_url": "https://throughthesilverscreen.com/feed/",
+      "website_url": "https://throughthesilverscreen.com/",
+      "description": "Welcome to Through The Silver Screen! A blog all about movies and movie reviews, with a bit of Television thrown in there as well!",
+      "followers": {
+        "facebook": 239
+      },
+      "image_url": "https://i1.feedspot.com/5038104.jpg?t=1605608692"
+    },
+    {
+      "title": "Man Made Movies",
+      "feed_url": "https://blog.manmademovies.co.uk/feed/",
+      "website_url": "https://blog.manmademovies.co.uk/",
+      "description": "ManMadeMovies is an independent and un-official blog to keep you up to date with current and future projects from the makers of 'MOON' 'SOURCE CODE' 'WARCRAFT' & 'MUTE'",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/1317234.jpg?t=1605608761"
+    },
+    {
+      "title": "Horrorscreams Videovault",
+      "feed_url": "https://horrorscreamsvideovault.co.uk/feed",
+      "website_url": "https://horrorscreamsvideovault.co.uk/",
+      "description": "Supporting Independent Horror Movie News, Reviews, Interviews, Trailers, Articles and more.",
+      "followers": {
+        "facebook": 31300,
+        "twitter": 4400,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4940442.jpg?t=1605613705"
+    },
+    {
+      "title": "Ticketmaster UK",
+      "feed_url": "https://discover.ticketmaster.co.uk/theatre/feed/",
+      "website_url": "https://discover.ticketmaster.co.uk/theatre/",
+      "description": "On our Ticketmaster UK page you will find behind the scenes photos to your favourite shows, competitions. We have ticketing operations spanning 19 countries and are the world leader in event ticketing and ranks among the top five eCommerce sites globally. Ticketmaster is a division of Live Nation Entertainment, the world's leading live entertainment and eCommerce company, comprised of four market leaders. Get the latest Theatre news, gossip, features & announcements on the Ticketmaster UK Blog",
+      "followers": {
+        "facebook": 401900,
+        "twitter": 263600,
+        "instagram": 140200
+      },
+      "image_url": "https://i1.feedspot.com/4944091.jpg?t=1605607447"
+    },
+    {
+      "title": "ItGirl World UK",
+      "feed_url": "https://www.itgirlworld.co.uk/feed/",
+      "website_url": "https://www.itgirlworld.co.uk/tag/movie/",
+      "description": "I've been writing about Fashion, Beauty and lifestyle that will be of interest to the sassy, social female since 2006 on the blog of the same name, as well as reviewing Theatre , Music and Film on my entertainment blog YoungTalent UK.",
+      "followers": {
+        "facebook": 310,
+        "twitter": 2500,
+        "instagram": 12700
+      },
+      "image_url": "https://i1.feedspot.com/4944136.jpg?t=1605608783"
+    },
+    {
+      "title": "Games Radar Movies",
+      "feed_url": "https://www.gamesradar.com/movies/rss/",
+      "website_url": "https://www.gamesradar.com/entertainment/movies/",
+      "description": "To get the latest happenings in and around of UK movies, TV, and games. Follow our site.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4944417.jpg?t=1605607435"
+    },
+    {
+      "title": "The Northern Film Blog",
+      "feed_url": "https://www.thenorthernfilmblog.co.uk/feeds/posts/default",
+      "website_url": "https://www.thenorthernfilmblog.co.uk/",
+      "description": "My name is Rebecca I'm 28 and live in the north of England. I work full-time in retail but blogging and film are what I'm passionate about. I also love going to conventions, binging TV shows and travelling. I hope you enjoy your visit here.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 924
+      },
+      "image_url": "https://i1.feedspot.com/5548825.jpg?t=1682323741"
+    },
+    {
+      "title": "NME Blog",
+      "feed_url": "https://www.nme.com/blogs/the-movies-blog/feed",
+      "website_url": "https://www.nme.com/blogs/the-movies-blog",
+      "description": "NME Music News, Reviews, Videos, GalleNME.COM brings you the latest music news and reviews, along with music videos and galleries, plus band features, blogs on your favourite artists, concert tickets, competitions and more. Read the latest film blogs about your favourite franchises and new movie releases from around the world -written by the NME team. Read the latest film blogs about your favourite franchises and new movie releases from around the world - written by the NME team.",
+      "followers": {
+        "facebook": 956400,
+        "twitter": 859700,
+        "instagram": 571400
+      },
+      "image_url": "https://i1.feedspot.com/4944084.jpg?t=1605607444"
+    },
+    {
+      "title": "Phoenix Blog",
+      "feed_url": "https://www.phoenix.org.uk/blog/feed/",
+      "website_url": "https://www.phoenix.org.uk/blog/",
+      "description": "At Phoenix, we believe film and art have the power to enhance our lives. Watching a movie or visiting a gallery can entertain and inspire us, offering new perspectives on our lives and those of others. Phoenix is Leicester's centre for independent cinema, art and digital culture.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/4944111.jpg?t=1605607495"
+    },
+    {
+      "title": "Movies For Kids",
+      "feed_url": "https://www.movies4kids.co.uk/news/feed/",
+      "website_url": "https://www.movies4kids.co.uk/news/",
+      "description": "Movies4Kids.co.uk is a movie review website like no other. Packed with hundreds of reviews of children's movies, family films and blockbusters, it's aimed at grown-ups and kids looking for the perfect movie to spice up the summer holidays or perk up a wet Sunday afternoon.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4944441.jpg?t=1605607547"
+    },
+    {
+      "title": "Frankly My Dear | UK Film Blog",
+      "feed_url": "https://www.franklymydearuk.co.uk/category/film/feed/",
+      "website_url": "https://www.franklymydearuk.co.uk/category/film/",
+      "description": "Frankly My Dear is a UK entertainment blog founded in 2014. As you can gather by our name, we LOVE film, theatre, music and TV and cover everything from Hollywood blockbusters and low-budget indies to West End shows and regional theatre. So if you enjoy reading film and theatre news, reviews and interviews, you've come to the right place.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 1700,
+        "instagram": 191
+      },
+      "image_url": "https://i1.feedspot.com/4944356.jpg?t=1605608454"
+    },
+    {
+      "title": "Reyt Good | UK Film Magazine Blog",
+      "feed_url": "https://rgm.press/category/film/feed/",
+      "website_url": "https://rgm.press/category/film/",
+      "description": "RGM champions new music, film, comedy, sport and food and drink establishments. With a team based across the UK. RGM has become a influential force, and the place to be for people looking to find exciting new original content .",
+      "followers": {
+        "facebook": 8000,
+        "instagram": 21700
+      },
+      "image_url": "https://i1.feedspot.com/4944465.jpg?t=1605608598"
+    },
+    {
+      "title": "Portsmouth Film Society | Uk Film Blog",
+      "feed_url": "http://www.portsmouthfilmsociety.org.uk/category/pfs-blog/feed/",
+      "website_url": "http://www.portsmouthfilmsociety.org.uk/category/pfs-blog/",
+      "description": "Portsmouth Film society shows the best in world cinema, documentary, independent film, animation and classic movies. To encourage interest in film as a medium for public education, information and entertainment by means of the exhibition of films of artistic, cultural or informative character.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 2800,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4944363.jpg?t=1605608472"
+    },
+    {
+      "title": "One Sensational Shot",
+      "feed_url": "http://onesensationalshot.com/feed/",
+      "website_url": "http://onesensationalshot.com/",
+      "description": "We talk about the films that matter most to us. Classics from our DVD collections, and the latest releases that are getting us excited at the cinema. Films, movies, features. We discuss all three of those on our podcast and website.",
+      "followers": {
+        "facebook": 38,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4943890.jpg?t=1605608687"
+    },
+    {
+      "title": "Stephen Liddell",
+      "feed_url": "https://stephenliddell.co.uk/category/popular-culture/movies-and-films/feed/",
+      "website_url": "https://stephenliddell.co.uk/category/popular-culture/movies-and-films/",
+      "description": "Blogging has not just introduced me into a wonderful circle of people but also got me lucky breaks in the world of writing, radio and television. The thought that I might be an expert in anything is quite staggering but there you go.",
+      "followers": {
+        "facebook": 129
+      },
+      "image_url": "https://i1.feedspot.com/4944330.jpg?t=1605608712"
+    },
+    {
+      "title": "Cinemaattic",
+      "feed_url": "https://cinemaattic.com/blog/feed/",
+      "website_url": "https://cinemaattic.com/blog/",
+      "description": "CinemaAttic is the platform for Spanish, Iberian and Latin-American cinema in Scotland. Our main purpose is to raise the profile of Ibero-American cinema in Scotland and UK. By collaborating with key venues and institutions, we connect emerging filmmakers from Spain, Portugal and Latin America with British organisations and audiences.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 2100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4944192.jpg?t=1605608717"
+    },
+    {
+      "title": "Filmoria",
+      "feed_url": "https://www.filmoria.co.uk/movies/movie-reviews/feed/",
+      "website_url": "https://www.filmoria.co.uk/movies/movie-reviews/",
+      "description": "Movie & TV News, Reviews & Filmoria is a British entertainment blog that strives to give you the best in cinematic news, reviews about movies, gaming and much more. Films, TV and Games - news, reviews, features and more - making sure you never miss the best movies and TV programmes and never waste your hard earned cash on the flops.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4944462.jpg?t=1605608756"
+    },
+    {
+      "title": "Screenwords | Reviews Blog",
+      "feed_url": "https://screenwords.co.uk/category/reviews/feed/",
+      "website_url": "https://screenwords.co.uk/category/reviews/",
+      "description": "Film festivals and weekly releases. European cinema, American indie and documentary features by UK based Linda Marric.",
+      "followers": {
+        "facebook": 94,
+        "twitter": 984
+      },
+      "image_url": "https://i1.feedspot.com/4944365.jpg?t=1605608795"
+    },
+    {
+      "title": "Kermode Uncut Feed",
+      "feed_url": "https://www.bbc.co.uk/blogs/markkermode/rss",
+      "website_url": "https://www.bbc.co.uk/blogs/markkermode",
+      "description": "Outspoken, opinionated and never lost for words, Mark is the UK's leading film critic. This\u00a0twice-weekly video blog is the place where he airs his personal views on the things that most fire him up about cinema - and invites you to give your own opinions.",
+      "followers": {
+        "facebook": 66300,
+        "twitter": 148700
+      },
+      "image_url": "https://i1.feedspot.com/4944062.jpg?t=1605608801"
+    },
+    {
+      "title": "i News",
+      "feed_url": "https://edit.inews.co.uk/culture/film/feed",
+      "website_url": "https://inews.co.uk/category/culture/film",
+      "description": "With extra features like explainers of the big issues and videos that get to the point. More than ever, it also allows us to talk to you directly, and we hope you find I online interesting, informative, and insightful. It's more than breaking news. We'll aim to give you the context behind the news, with expert insights, answers to the key questions, and video and infographics that tell the whole story, not just the latest snapshot.",
+      "followers": {
+        "facebook": 437500,
+        "twitter": 131300,
+        "instagram": 93400
+      },
+      "image_url": "https://i1.feedspot.com/4944224.jpg?t=1605607452"
+    },
+    {
+      "title": "musicMagpie Blog",
+      "feed_url": "https://www.musicmagpie.co.uk/blog/category/movies/feed/",
+      "website_url": "https://www.musicmagpie.co.uk/blog/category/movies/",
+      "description": "Music Magpie is the fast and easy way to get know movies, its review, some facts, history and the best ones in any category of this business.",
+      "followers": {
+        "facebook": 58000
+      },
+      "image_url": "https://i1.feedspot.com/4944070.jpg?t=1613711581"
+    },
+    {
+      "title": "Geektown",
+      "feed_url": "https://www.geektown.co.uk/category/movie-news/feed/",
+      "website_url": "https://www.geektown.co.uk/category/movie-news/",
+      "description": "GeekTown is a UK based blog about UK Air Dates for US TV shows, cult tv, movies news & reviews, pc gaming, mmorpgs, mobile phones, gadgets, & geek t-shirts.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 7900,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4944325.jpg?t=1605607484"
+    },
+    {
+      "title": "Truffle Shuffle",
+      "feed_url": "https://blog.truffleshuffle.co.uk/feed/",
+      "website_url": "https://www.truffleshuffle.co.uk/retro-clothing-blog/tag/movie",
+      "description": "Subscribe to our newsletters to ensure you're the first to see our latest upates on movie releases, related news and much more.",
+      "followers": {
+        "facebook": 133100,
+        "twitter": 26900,
+        "instagram": 132900
+      },
+      "image_url": "https://i1.feedspot.com/4944130.jpg?t=1605607478"
+    },
+    {
+      "title": "The Spectator | UK Cinema Blog",
+      "feed_url": "https://www.spectator.co.uk/the-critics/film/feed/",
+      "website_url": "https://www.spectator.co.uk/the-critics/film/",
+      "description": "The Spectator comes into its own is assembling the best writers from Britain, and giving them the freedom to say what they want. There is no party line: our sole allegiance is to originality of thought and elegance of expression. The result is a quality of argument not to be found in any other publication.",
+      "followers": {
+        "facebook": 193000,
+        "twitter": 269500
+      },
+      "image_url": "https://i1.feedspot.com/4944310.jpg?t=1605607455"
+    },
+    {
+      "title": "JUMPCUT ONLINE",
+      "feed_url": "https://www.jumpcutonline.co.uk/feed/",
+      "website_url": "https://www.jumpcutonline.co.uk/",
+      "description": "JUMPCUT ONLINE features Entertainment reviews, news, trailers, & more written by our diverse team of writers from across the globe.",
+      "followers": {
+        "facebook": 858,
+        "twitter": 13600,
+        "instagram": 748
+      },
+      "image_url": "https://i1.feedspot.com/5038071.jpg?t=1605607730"
+    }
+  ]
+}

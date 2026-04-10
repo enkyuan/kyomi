@@ -1,0 +1,18 @@
+{
+  "category": "E! Online",
+  "source_url": "https://rss.feedspot.com/eonline_rss_feeds",
+  "feeds": [
+    {
+      "title": "E! Online",
+      "feed_url": "https://www.eonline.com/feed",
+      "website_url": "https://www.eonline.com/",
+      "description": "All latest articles from E! Online.",
+      "followers": {
+        "facebook": 14600000,
+        "twitter": 11500000,
+        "instagram": 25100000
+      },
+      "image_url": "https://i1.feedspot.com/7891762.jpg?t=1742882991"
+    }
+  ]
+}

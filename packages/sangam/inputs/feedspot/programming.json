@@ -1,0 +1,1415 @@
+{
+  "category": "Programming",
+  "source_url": "https://rss.feedspot.com/programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Crazy Programmer",
+      "feed_url": "https://www.thecrazyprogrammer.com/feed",
+      "website_url": "https://www.thecrazyprogrammer.com/",
+      "description": "The Crazy Programmer will guide you through the simplest basics of C, C , Android, PHP, SQL and many more coding languages.",
+      "followers": {
+        "facebook": 183100,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4542007.jpg"
+    },
+    {
+      "title": "CSS-Tricks",
+      "feed_url": "https://css-tricks.com/feed/",
+      "website_url": "https://css-tricks.com/",
+      "description": "Find the Tips, Tricks, and Techniques on using Cascading Style Sheets.",
+      "followers": {
+        "facebook": 75700,
+        "twitter": 276,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4487476.jpg?t=1741339328"
+    },
+    {
+      "title": "Stack Abuse",
+      "feed_url": "https://stackabuse.com/rss/",
+      "website_url": "https://stackabuse.com/",
+      "description": "Stack Abuse features News, articles, and ideas for software engineers and web developers.",
+      "followers": {
+        "facebook": 387,
+        "twitter": 804
+      },
+      "image_url": "https://i1.feedspot.com/4978843.jpg?t=1614339293"
+    },
+    {
+      "title": "JOOQ",
+      "feed_url": "https://blog.jooq.org/feed/",
+      "website_url": "https://blog.jooq.org/",
+      "description": "Best Practices and Lessons Learned from Writing Awesome Java and SQL Code. Get some hands-on insight on what's behind developing jOOQ.",
+      "followers": {
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4483351.jpg?t=1664784460"
+    },
+    {
+      "title": "Codrops",
+      "feed_url": "https://tympanus.net/codrops/feed/",
+      "website_url": "https://tympanus.net/codrops/",
+      "description": "Creative front-end resources and inspiration for web professionals. Codrops is a web design and development blog that publishes articles and tutorials about the latest web trends, techniques and new possibilities.",
+      "followers": {
+        "facebook": 81800,
+        "twitter": 180200,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/90418.jpg?t=1606107963"
+    },
+    {
+      "title": "CodePen Blog",
+      "feed_url": "https://blog.codepen.io/feed/",
+      "website_url": "https://blog.codepen.io/",
+      "description": "CodePen is a social development environment. In this blog, the CodePen team talks about the ins and outs of running a web software business. They focus primarily on front-end languages like HTML, CSS, JavaScript, and preprocessing syntaxes that turn into those things.",
+      "followers": {
+        "twitter": 186800,
+        "instagram": 64300
+      },
+      "image_url": "https://i1.feedspot.com/4540948.jpg?t=1606109385"
+    },
+    {
+      "title": "Hackr.io Blog",
+      "feed_url": "https://hackr.io/programming/rss.xml",
+      "website_url": "https://hackr.io/blog",
+      "description": "Hackr Blog presents insightful articles by the Hackr programming and Design community. We aim to inform, educate and enable programmers and designers so that they can do their job more efficiently and productively.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5178030.jpg?t=1679298330"
+    },
+    {
+      "title": "CodeSignal Blog",
+      "feed_url": "https://codesignal.com/feed/",
+      "website_url": "https://codesignal.com/blog/",
+      "description": "We are a technology company aiming to make talent accessible by creating software and standards for assessing the technical skills of software developers. Our mission is to discover, develop, and promote technical talent.",
+      "followers": {
+        "facebook": 324200,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4893686.jpg?t=1610969656"
+    },
+    {
+      "title": "Stack Overflow",
+      "feed_url": "https://stackoverflow.blog/feed/",
+      "website_url": "https://stackoverflow.blog/",
+      "description": "Essays, opinions, and advice on the act of computer programming. Stack Overflow empowers the world to develop technology through collective knowledge. Stack Overflow's public platform serves 100 million people every month, making it one of the 50 most popular websites in the world.",
+      "followers": {
+        "facebook": 528800,
+        "twitter": 251500,
+        "instagram": 50900
+      },
+      "image_url": "https://i1.feedspot.com/4744989.jpg?t=1760435691"
+    },
+    {
+      "title": "John D. Cook Consulting Blog",
+      "feed_url": "https://www.johndcook.com/blog/feed/",
+      "website_url": "https://www.johndcook.com/blog/",
+      "description": "The Endeavor gives readers a sense of how they might combine their programming skills with business, and/or use those skills to solve real-world problems. It is the popular computer science-themed blog of John Cook, a former math professor and programmer who has transitioned into consulting. He helps companies make better decisions by taking advantage of the data they have, combining it with expert opinion, creating mathematical models, overcoming computational difficulties, and interpreting the results.",
+      "followers": {
+        "twitter": 48600
+      },
+      "image_url": "https://i1.feedspot.com/103679.jpg?t=1665146302"
+    },
+    {
+      "title": "Computing & Technology",
+      "feed_url": "https://feeds.feedburner.com/helloacm",
+      "website_url": "https://helloacm.com/",
+      "description": "The Ultimate Computer Technology Blog - The Knowledgebase of Computing",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 968
+      },
+      "image_url": "https://i1.feedspot.com/4547384.jpg?t=1614339451"
+    },
+    {
+      "title": "Fueled Blog",
+      "feed_url": "https://fueled.com/feed/",
+      "website_url": "https://fueled.com/blog/",
+      "description": "The Fueled team is united by an unwavering passion for quality. We focus on development, design, and strategy to passionately pursue the bleeding, hairsplitting, cutting edge of mobile apps. We're not here to work on just any apps or for any client. We come to work in the morning to build the best apps for the best clients. It's what makes us tick.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 6400,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4781440.jpg?t=1614339420"
+    },
+    {
+      "title": "Eli Bendersky's website",
+      "feed_url": "https://eli.thegreenplace.net/feeds/all.atom.xml",
+      "website_url": "https://eli.thegreenplace.net/",
+      "description": "This blog began in 2003 as a personal online journal; in the past few years it became mostly an outlet for technical, programming-related posts. It's my way to document things I find interesting for my future self.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4541895.jpg"
+    },
+    {
+      "title": "Cat On Mat",
+      "feed_url": "https://catonmat.net/feed",
+      "website_url": "https://catonmat.net/",
+      "description": "My name is Peter and I'm a future rich person and ace programmer. I run a cross-browser testing company called Browserling and I'm a hacker-in-residence at Hackers/Founders - the world's largest startup network. The blog is about programming, hacking, software reuse, software ideas, computer security, google, and technology.",
+      "followers": {
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/22001.jpg?t=1662525716"
+    },
+    {
+      "title": "TutorialsMate | Your Tutor Friend!",
+      "feed_url": "https://www.tutorialsmate.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.tutorialsmate.com/",
+      "description": "Core & Advanced Java Tutorials, HTML, Android, Java Frameworks, Javascript, Ajax, SQL, PHP, C Language, Python Data Access, Pytorch, Matplotlib, Java Nio, Full Forms, Differences, Beginners and Career Guides.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5132109.jpg?t=1614339425"
+    },
+    {
+      "title": "Coding N Concepts",
+      "feed_url": "https://codingnconcepts.com/index.xml",
+      "website_url": "https://codingnconcepts.com/",
+      "description": "Coding N Concepts is a technical blog for developers by developers to help you with coding problems, puzzle-solving, interview preparation, learning concepts in a simplified way.",
+      "followers": {
+        "facebook": 202,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5194386.jpg?t=1599490083"
+    },
+    {
+      "title": "FusionReactor Blog",
+      "feed_url": "https://fusion-reactor.com/feed/",
+      "website_url": "https://fusion-reactor.com/blog/",
+      "description": "FusionReactor is an Application Performance Monitor for Java and ColdFusion, which goes beyond 'just monitoring' to actively minimize downtime and accelerate time to fix. Our mission is to provide products which make the lives of software developers and IT easier, by improving the quality, performance and service of software applications. Get the latest news and updates on release dates of software, application management tools, performance monitoring and more!",
+      "followers": {
+        "facebook": 425,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5050625.jpg?t=1661423885"
+    },
+    {
+      "title": "Techgoeasy",
+      "feed_url": "https://feeds.feedburner.com/Techgoeasy",
+      "website_url": "https://techgoeasy.com/",
+      "description": "Learn Oracle, PHP, HTML,CSS,Perl,UNIX shell scripts. We are a bunch of people who are working in various IT technology areas. We have extensive experience in various IT technology area and we want to help other IT by providing good tips and tricks so that they can excel in there respective fields. We believe in sharing the knowledge and helping in each other.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4781293.jpg"
+    },
+    {
+      "title": "End Your If Blog",
+      "feed_url": "https://feeds.feedburner.com/EndYourIf",
+      "website_url": "https://www.endyourif.com/blog/",
+      "description": "Helping Developers Solve Those Tough Coding Problems. Learn some great web development and web design tips and techniques through recipes that clearly define the problem being solved with a working solution.",
+      "followers": {
+        "facebook": 38,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/129456.jpg?t=1614345516"
+    },
+    {
+      "title": "Codingvila",
+      "feed_url": "https://www.codingvila.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.codingvila.com/",
+      "description": "Codingvila provides articles on asp.net, MVC, c#, vb.net, SQL server, angular, HTML, bootstrap, javascript, jquery, web API and SEO for beginners. The main purpose of this website is to help programmers/beginner by providing articles and blogs on web and software development and also for students to provide them free final year academic projects in various technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5032537.jpg?t=1614340541"
+    },
+    {
+      "title": "Vitosh Academy",
+      "feed_url": "https://www.vitoshacademy.com/feed/",
+      "website_url": "https://www.vitoshacademy.com/",
+      "description": "The idea is to show a little more knowledge about programming and when possible to link it to supply chain functions and problems such as forecasting and TCO analysis.",
+      "followers": {
+        "facebook": 143,
+        "twitter": 94
+      },
+      "image_url": "https://i1.feedspot.com/4907208.jpg?t=1614340337"
+    },
+    {
+      "title": "Abundant Code",
+      "feed_url": "https://feeds.feedburner.com/abundantcode",
+      "website_url": "https://abundantcode.com/",
+      "description": "All about Programming and Sourcecodes. Learn about programming and software developers and share knowledge with community.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5203398.jpg?t=1601961752"
+    },
+    {
+      "title": "Programe Secure",
+      "feed_url": "https://programesecure.com/feed/",
+      "website_url": "https://programesecure.com/",
+      "description": "This website share new programming related books and pdfs . This pdf will help you to learn language with easy way. Mission is to help programmers.",
+      "followers": {
+        "facebook": 487,
+        "twitter": 979
+      },
+      "image_url": "https://i1.feedspot.com/4779467.jpg?t=1614340329"
+    },
+    {
+      "title": "Yet Another Math Programming Consultant",
+      "feed_url": "http://yetanothermathprogrammingconsultant.blogspot.com/feeds/posts/default",
+      "website_url": "http://yetanothermathprogrammingconsultant.blogspot.com/",
+      "description": "So I am now a full time math programming consultant... I will try to post my (technical) notes here. Keeping a searchable list of them will make this useful for me in my daily life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/251164.jpg?t=1614340573"
+    },
+    {
+      "title": "Another Casual Coder",
+      "feed_url": "http://anothercasualcoder.blogspot.com/feeds/posts/default",
+      "website_url": "http://anothercasualcoder.blogspot.com/",
+      "description": "This is what I do after the kids go to bed and before Forensic Files. I casually write code.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5218637.jpg?t=1606130665"
+    },
+    {
+      "title": "John kilmister",
+      "feed_url": "https://www.blueboxes.co.uk/rss.xml",
+      "website_url": "https://www.blueboxes.co.uk/",
+      "description": "Hi, I am John, a software developer, and architect working in C# .NET and Azure. This is a place for me to share thoughts on code with others.",
+      "followers": {
+        "twitter": 650
+      },
+      "image_url": "https://i1.feedspot.com/5411161.jpg?t=1655380183"
+    },
+    {
+      "title": "Amit Merchant",
+      "feed_url": "https://www.amitmerchant.com/feed.xml",
+      "website_url": "https://www.amitmerchant.com/",
+      "description": "Keep up with articles from Amit Merchant.",
+      "followers": {
+        "facebook": 67,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4888574.jpg?t=1614339467"
+    },
+    {
+      "title": "cmsMinds Blog",
+      "feed_url": "https://cmsminds.com/feed/",
+      "website_url": "https://cmsminds.com/blogs/",
+      "description": "Latest Web Development News, Tips & Trick to help you and grow your knowledge.",
+      "followers": {
+        "facebook": 983,
+        "twitter": 158
+      },
+      "image_url": "https://i1.feedspot.com/5055349.jpg?t=1614345521"
+    },
+    {
+      "title": "Black Coding Adventures",
+      "feed_url": "https://kevinavignon.com/feed/",
+      "website_url": "https://kevinavignon.com/",
+      "description": "I have a huge interest in .net development as you can see in my blog. I only aim to take you with me on journey with the MSFT technology stack. Sometimes, I may not follow the path I've set and touch other things, but I think those moments are a crucial part of my development. I hope you find everything you were looking for here.",
+      "followers": {
+        "facebook": 15,
+        "twitter": 693,
+        "instagram": 109
+      },
+      "image_url": "https://i1.feedspot.com/5090323.jpg?t=1614340837"
+    },
+    {
+      "title": "Henrik Warne's blog | Thoughts on programming",
+      "feed_url": "https://henrikwarne.com/feed/?x=1",
+      "website_url": "https://henrikwarne.com/",
+      "description": "Senior software developer in Stockholm, Sweden. Loves coding, learning, reading.",
+      "followers": {
+        "twitter": 931
+      },
+      "image_url": "https://i1.feedspot.com/4781487.jpg?t=1614340873"
+    },
+    {
+      "title": "Hey There Buddo!",
+      "feed_url": "http://www.philipzucker.com/feed.xml",
+      "website_url": "http://www.philipzucker.com/",
+      "description": "Follow to get updates on programming from this blog to your inbox.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5067964.jpg"
+    },
+    {
+      "title": "Newtum Blog",
+      "feed_url": "https://blog.newtum.com/feed/",
+      "website_url": "https://blog.newtum.com/",
+      "description": "Start early and get an edge over others. Looking for computer coding for kids? Newtum is the right choice for you. Follow to get updates.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5060922.jpg?t=1614342565"
+    },
+    {
+      "title": "Techbeamers",
+      "feed_url": "https://techbeamers.com/feed/",
+      "website_url": "https://techbeamers.com/",
+      "description": "Guide to Java Programming, Software Testing Interviews. Read Selenium Webdriver Tutorials, Learn Python Programming, and Java Online. Practice Selenium Interview Questions, Python, and Java Online Quizzes.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4781302.jpg?t=1614343191"
+    },
+    {
+      "title": "MindFlash",
+      "feed_url": "https://www.mindflash.org/feed",
+      "website_url": "https://www.mindflash.org/",
+      "description": "MindFlash offers articles about technology, programming, and more from an Amazon software engineer. Read about code, interviewing and more on MindFlash!",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5149857.jpg?t=1614343289"
+    },
+    {
+      "title": "A List Apart",
+      "feed_url": "https://alistapart.com/main/feed/",
+      "website_url": "https://alistapart.com/",
+      "description": "Articles on Design, Process, User Experience, Responsive Design, Career, Creativity, Content Strategy, Usability, Code, JavaScript and more. A List Apart explores the design, development, and meaning of web content, with a special focus on web standards and best practices.",
+      "followers": {
+        "facebook": 36100,
+        "twitter": 133600
+      },
+      "image_url": "https://i1.feedspot.com/129498.jpg?t=1617284444"
+    },
+    {
+      "title": "Midnight Programmer",
+      "feed_url": "https://midnightprogrammer.net/index.xml",
+      "website_url": "https://midnightprogrammer.net/",
+      "description": "Programming For Fun",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5039301.jpg"
+    },
+    {
+      "title": "Scott Hanselman's Blog",
+      "feed_url": "http://feeds.hanselman.com/ScottHanselman",
+      "website_url": "https://www.hanselman.com/blog/",
+      "description": "Scott Hanselman writes about technology, culture, gadgets, diversity, code, the web, open-source, .NET, and the cloud.",
+      "followers": {
+        "twitter": 325000,
+        "instagram": 24200
+      },
+      "image_url": "https://i1.feedspot.com/127673.jpg?t=1640261789"
+    },
+    {
+      "title": "Better Programming",
+      "feed_url": "https://betterprogramming.pub/feed",
+      "website_url": "https://betterprogramming.pub/",
+      "description": "Advice for programmers. We cover code tutorials, leadership and management, productivity and coffee.",
+      "followers": {
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5063029.jpg"
+    },
+    {
+      "title": "Tech Incent",
+      "feed_url": "https://techincent.com/feed/",
+      "website_url": "https://techincent.com/",
+      "description": "Hi! I'm Md. Sajal Mia. I am a highly skilled and experienced web developer with a passion for creating visually appealing and user-friendly websites. With several years of experience in the field, I have a strong understanding of web development technologies and methodologies and am able to deliver high-quality, performant, and responsive websites that meet the needs of my clients. Tech Incent is a Web Application base programming tech blog. where I put example snippet codes and explanations for a better understanding",
+      "followers": {
+        "facebook": 110
+      },
+      "image_url": "https://i1.feedspot.com/5608107.jpg?t=1687774297"
+    },
+    {
+      "title": "Stephen Cleary",
+      "feed_url": "https://feeds.feedburner.com/NitoPrograms",
+      "website_url": "https://blog.stephencleary.com/",
+      "description": "Stephen Cleary's blog is a blog about async/await, programming, language design, and other sundry computer science topics. It is written by Stephen Cleary, a software engineer and author of several books on programming, including 'The C++ Programming Language' and 'The Pragmatic Programmer.'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5659348.jpg?t=1693307440"
+    },
+    {
+      "title": "David Ford's Programming blog",
+      "feed_url": "https://medium.com/feed/@daveford",
+      "website_url": "https://medium.com/@daveford",
+      "description": "Stories by David Ford on Medium",
+      "followers": {
+        "twitter": 304
+      },
+      "image_url": "https://i1.feedspot.com/4541998.jpg"
+    },
+    {
+      "title": "Reactgo",
+      "feed_url": "https://reactgo.com/rss.xml",
+      "website_url": "https://reactgo.com/",
+      "description": "Tutorials about modern JavaScript such as React, Vuejs, Angular, Algorithms, and all things related to Web development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5146409.jpg"
+    },
+    {
+      "title": "Coding Dojo Blog",
+      "feed_url": "https://www.codingdojo.com/blog/feed",
+      "website_url": "https://www.codingdojo.com/blog/",
+      "description": "At Coding Dojo, students quickly learn to code and think like software engineers and develop web applications as an end result. We cover HTML, CSS, JavaScript, PHP, MVC, Ruby on Rails, MySQL, .NET Core, OOP and much more.",
+      "followers": {
+        "facebook": 42200,
+        "twitter": 22,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4541856.jpg?t=1614339416"
+    },
+    {
+      "title": "David Walsh",
+      "feed_url": "https://davidwalsh.name/feed",
+      "website_url": "https://davidwalsh.name/",
+      "description": "A blog featuring tutorials about JavaScript, HTML5, AJAX, PHP, CSS, WordPress, and everything else development. David Walsh is Mozilla's senior web developer and the core developer for the MooTools Javascript Framework.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 86400
+      },
+      "image_url": "https://i1.feedspot.com/4431048.jpg?t=1606110743"
+    },
+    {
+      "title": "Code vs Color",
+      "feed_url": "https://www.codevscolor.com/rss.xml",
+      "website_url": "https://www.codevscolor.com/",
+      "description": "Follow Code vs Color to get articles and updates related to programming.",
+      "followers": {
+        "facebook": 164
+      },
+      "image_url": "https://i1.feedspot.com/5126659.jpg?t=1614343341"
+    },
+    {
+      "title": "Web Damn - Web Programming Blog",
+      "feed_url": "https://webdamn.com/feed/",
+      "website_url": "https://webdamn.com/",
+      "description": "Tutorial focused on Web Development, PHP, CodeIgniter, jQuery, JavaScript, and MySQL. Follow to get updates.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5067655.jpg?t=1614339445"
+    },
+    {
+      "title": "Geekstrick",
+      "feed_url": "https://geekstrick.com/feed/",
+      "website_url": "https://geekstrick.com/",
+      "description": "Get the latest articles on Angular 8, NodeJS, MongoDB, Javascript, Typescript and much more. Subscribe to geekstrick to get the latest news.",
+      "followers": {
+        "facebook": 152,
+        "twitter": 137,
+        "instagram": 50
+      },
+      "image_url": "https://i1.feedspot.com/5152439.jpg?t=1614340791"
+    },
+    {
+      "title": "Tutsplanet - How to guides making learning easy",
+      "feed_url": "https://tutsplanet.com/feed/",
+      "website_url": "https://tutsplanet.com/",
+      "description": "We tutsplanet provides tutorials for building websites. We are a good source of quality web development, digital marketing tutorials. We are helping to build great websites. Read very effective and helpful tutorials about technology, programming and marketing.",
+      "followers": {
+        "facebook": 765,
+        "twitter": 148
+      },
+      "image_url": "https://i1.feedspot.com/4732093.jpg?t=1614339461"
+    },
+    {
+      "title": "Codeamy",
+      "feed_url": "https://www.codeamy.in/feeds/posts/default?alt=rss",
+      "website_url": "https://www.codeamy.in/",
+      "description": "Codeamy.in is a programming and development blog that provides tutorials, programs, projects and interview questions for technologies related to a programming language.",
+      "followers": {
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/5087697.jpg"
+    },
+    {
+      "title": "CodeSnail Blog",
+      "feed_url": "https://www.codesnail.com/rss.xml",
+      "website_url": "https://www.codesnail.com/blog/",
+      "description": "Your awesome place to get knowledge about programming and technology.",
+      "followers": {
+        "facebook": 249,
+        "twitter": 103
+      },
+      "image_url": "https://i1.feedspot.com/5289565.jpg?t=1623070619"
+    },
+    {
+      "title": "EzzyLearning.net",
+      "feed_url": "https://www.ezzylearning.net/feed",
+      "website_url": "https://www.ezzylearning.net/blog",
+      "description": "My name is Waqas Anwar and I am a developer, blogger, teacher, speaker, quick learner, and the founder of the EzzyLearning.net website. EzzyLearning.net is an online tutorial website to learn about ASP.NET Core, ASP.NET MVC, AngularJS, C#, VB.NET, AJAX, JQuery, WCF, LINQ, Android, Java, and more.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 327,
+        "instagram": 101
+      },
+      "image_url": "https://i1.feedspot.com/5279906.jpg?t=1620806691"
+    },
+    {
+      "title": "Erik Bernhardsson",
+      "feed_url": "https://erikbern.com/index.xml",
+      "website_url": "https://erikbern.com/",
+      "description": "CTO (Chief Troll Officer) @betterdotcom. Ex-Spotify, co-organizing NYC ML meetup, open sourcing sometimes (Luigi, Annoy), blogging random stuff. Dad.",
+      "followers": {
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/4541891.jpg"
+    },
+    {
+      "title": "CreatifWerks",
+      "feed_url": "https://www.creatifwerks.com/feed/",
+      "website_url": "https://www.creatifwerks.com/blog/",
+      "description": "Hi there, I'm Khai Seng! currently an employed working Engineering Professional, Programmer, and a Part-time blogger. Basically, I write just about anything I have an interest in. The other purposes are self-documentation, technology change very drastically it is impossible to remember every, solution, problem you encounter.",
+      "followers": {
+        "facebook": 97
+      },
+      "image_url": "https://i1.feedspot.com/5221573.jpg?t=1606822716"
+    },
+    {
+      "title": "Discussdesk",
+      "feed_url": "https://www.discussdesk.com/feed",
+      "website_url": "https://www.discussdesk.com/",
+      "description": "Discussdesk is a programming blog mainly focus on topics ranges from PHP, Mysql, Javascript, Jquery, Ajax, Web development, Programming tips with their live demo and download. User can see live demo of web projects and download their code.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 743
+      },
+      "image_url": "https://i1.feedspot.com/4541983.jpg?t=1614339471"
+    },
+    {
+      "title": "Lambda the Ultimate - Programming Languages Weblog",
+      "feed_url": "http://lambda-the-ultimate.org/rss.xml",
+      "website_url": "http://lambda-the-ultimate.org/",
+      "description": "Programming languages news, articles and discussion",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/85434.jpg"
+    },
+    {
+      "title": "Jeremy Morgan",
+      "feed_url": "https://www.jeremymorgan.com/index.xml",
+      "website_url": "https://www.jeremymorgan.com/",
+      "description": "This is a programming blog from a veteran developer. Tutorials, tips, tricks, and opinions about programming, operating systems, data, and more.",
+      "followers": {
+        "twitter": 48800
+      },
+      "image_url": "https://i1.feedspot.com/5250515.jpg?t=1614749940"
+    },
+    {
+      "title": "PHPFOREVER",
+      "feed_url": "https://phpforever.com/feed/",
+      "website_url": "https://phpforever.com/",
+      "description": "PHPForever is an Opensource web development tutorial. Its aim is to provide free tutorials as well as a project on Opensource technology.",
+      "followers": {
+        "facebook": 73
+      },
+      "image_url": "https://i1.feedspot.com/5063757.jpg"
+    },
+    {
+      "title": "Codersee | Kotlin, Spring & Cloud Computing",
+      "feed_url": "https://codersee.com/feed/",
+      "website_url": "https://codersee.com/",
+      "description": "Hello, I'm Piotr Wolak. Learn programming through practice, a software engineer working mostly with Spring Boot & Kotlin and I've created Codersee to share my knowledge through practical, code-focused examples and videos. If you would like to learn Spring Boot, Ktor, Kotlin, and other related stuff, then this is just the right place for you.",
+      "followers": {
+        "facebook": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5367064.jpg?t=1643794943"
+    },
+    {
+      "title": "Soullabs Blog",
+      "feed_url": "https://www.soullabs.dev/blog-feed.xml",
+      "website_url": "https://www.soullabs.dev/blog",
+      "description": "Soullabs blogs are collections of premium developer content to help developers lookout for a rich solution to various frameworks, API, software development problems and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5478423.jpg?t=1670841628"
+    },
+    {
+      "title": "Techie Delight - Coding made easy",
+      "feed_url": "https://www.techiedelight.com/feed/",
+      "website_url": "https://www.techiedelight.com/",
+      "description": "Huge collection of data structure articles on various topics which are useful for technical interview preparation to crack interviews of top IT companies.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 719
+      },
+      "image_url": "https://i1.feedspot.com/4541887.jpg?t=1614339345"
+    },
+    {
+      "title": "Education Ecosystem Blog",
+      "feed_url": "https://feeds.feedburner.com/LivecodingtvBlog",
+      "website_url": "https://educationecosystem.com/blog/",
+      "description": "On the Education Ecosystem blog, we'll share stories about programming languages, skills and updates from coding industry, picked by our staff and broadcasters.",
+      "followers": {
+        "facebook": 34900,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4541851.jpg?t=1614339436"
+    },
+    {
+      "title": "Shell Tips!",
+      "feed_url": "https://www.shell-tips.com/rss.xml",
+      "website_url": "https://www.shell-tips.com/",
+      "description": "The one stop for hands-on people who love Scripting, Programming and other technical tidbits.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5168872.jpg?t=1614343238"
+    },
+    {
+      "title": "Codingface",
+      "feed_url": "https://codingface.com/feed/",
+      "website_url": "https://codingface.com/",
+      "description": "CodingFace is one of the leading independent programming tutorial portals providing simple programming in Java, Python, C, C++, PHP, and more.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5285429.jpg?t=1622723167"
+    },
+    {
+      "title": "Tech Tips",
+      "feed_url": "https://joeywhelan.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://joeywhelan.blogspot.com/",
+      "description": "Random ramblings on technical topics.",
+      "followers": {
+        "twitter": 495
+      },
+      "image_url": "https://i1.feedspot.com/5076765.jpg?t=1614340852"
+    },
+    {
+      "title": "ProDeveloperTutorial.com",
+      "feed_url": "https://prodevelopertutorial.com/feed/",
+      "website_url": "https://prodevelopertutorial.com/",
+      "description": "Tutorials and Programming Solutions. Competitive programing related articles that are easy to understand.",
+      "followers": {
+        "facebook": 293
+      },
+      "image_url": "https://i1.feedspot.com/5047534.jpg?t=1614340378"
+    },
+    {
+      "title": "The Fellow Programmer",
+      "feed_url": "https://thefellowprogrammer.blogspot.com/feeds/posts/default",
+      "website_url": "https://thefellowprogrammer.blogspot.com/",
+      "description": "The blog which makes you learn programming by yourself and also provides solutions for some famous platforms. It also provides you technology news and lots of tutorials as well.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5230191.jpg?t=1608634674"
+    },
+    {
+      "title": "BeTheProgrammer",
+      "feed_url": "https://betheprogrammmer.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://betheprogrammmer.blogspot.com/",
+      "description": "Get the knowledge of web designing, news of technology, learn how to code animation, and more. Follow BeTheProgrammer to get more updates.",
+      "followers": {
+        "facebook": 101
+      },
+      "image_url": "https://i1.feedspot.com/5187065.jpg?t=1598601302"
+    },
+    {
+      "title": "Code Underscored",
+      "feed_url": "https://www.codeunderscored.com/feed/",
+      "website_url": "https://www.codeunderscored.com/",
+      "description": "Code Underscored is number one source for all things Programming. We're dedicated to providing you the very best of programming resources on the web from trending programming languages. Code Underscored is your guide for the best computer programming tutorials on Python, Java, Machine Learning, C++, and Web development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5254701.jpg?t=1615275822"
+    },
+    {
+      "title": "Algoberry",
+      "feed_url": "https://www.algoberry.com/feeds/posts/default",
+      "website_url": "https://www.algoberry.com/",
+      "description": "Algoberry is a programming blog, focusing on PHP, C++, C, Java, Creating Software Tools, and many more.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5205439.jpg?t=1602507808"
+    },
+    {
+      "title": "Zhullyblog",
+      "feed_url": "https://zhullyblogg.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://zhullyblogg.blogspot.com/",
+      "description": "Zhullyblog is a blog about HTML, CSS, JavaScript , PHP , Python and any related coding tutorials",
+      "followers": {
+        "twitter": 119
+      },
+      "image_url": "https://i1.feedspot.com/5191696.jpg?t=1598964375"
+    },
+    {
+      "title": "Jogendra Kumar",
+      "feed_url": "https://jogendra.dev/feed.xml",
+      "website_url": "https://jogendra.dev/",
+      "description": "Jogendra Kumar, Class of 2020 Graduate and Post Graduate from Indian Institute of Technology (BHU) Varanasi. He is an iOS / Web Developer and an active Open Source contributor. He loves to work on different tech stacks. On this website, you will find about him and the technical things he find useful.",
+      "followers": {
+        "twitter": 443
+      },
+      "image_url": "https://i1.feedspot.com/5184239.jpg?t=1597832986"
+    },
+    {
+      "title": "Initial Commit Blog",
+      "feed_url": "https://initialcommit.com/blog/rss.xml",
+      "website_url": "https://initialcommit.com/blog",
+      "description": "The official blog of Initial Commit. Initial Commit is dedicated to empowering coders of all skill levels. We create educational resources, build helpful tools, and provide responsive coding support.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 1100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4979840.jpg?t=1606137283"
+    },
+    {
+      "title": "CodeBlogs",
+      "feed_url": "http://feeds.feedburner.com/blogspot/CZLCa",
+      "website_url": "https://codeblogs1708.blogspot.com/",
+      "description": "In this blog you will find programming related stuff, some tips & tricks, Specially for beginners.",
+      "followers": {
+        "facebook": 129,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5162372.jpg"
+    },
+    {
+      "title": "Micha\u0142 Komorowski",
+      "feed_url": "https://feeds.feedburner.com/BlogMichalaKomorowskiego",
+      "website_url": "https://www.michalkomorowski.com/",
+      "description": "The blog about programming, working in IT and not only.",
+      "followers": {
+        "facebook": 48
+      },
+      "image_url": "https://i1.feedspot.com/923435.jpg?t=1614340929"
+    },
+    {
+      "title": "Programming Chaska",
+      "feed_url": "https://feeds.feedburner.com/ProgrammingChaska",
+      "website_url": "https://programmingchaska.blogspot.com/",
+      "description": "This is a blog on Programming languages where you can get unique and different JAVA, C, and C++ programs logic and technique to apply the algorithm in programming. Here I am sharing my JAVA project and you can get programs with explanations and learn basic syntax, coding and programming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5158882.jpg"
+    },
+    {
+      "title": "Gritty Engineer Blog",
+      "feed_url": "https://grittyengineer.com/feed/",
+      "website_url": "https://grittyengineer.com/blog/",
+      "description": "Here at Gritty Engineer, the one thing we understand better than anyone else is that engineering is hard. The stuff we learn, the stuff we do is complicated and sometimes mind-bending. It takes a lot of grit to get through the grind of becoming an engineer. But now that you've made it the journey doesn't stop there. It's time to go from good to great.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5056711.jpg?t=1648728672"
+    },
+    {
+      "title": "Tutorial Land",
+      "feed_url": "https://ccpptutoriallands.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://ccpptutoriallands.blogspot.com/",
+      "description": "This blog is best for beginners. Top tutorials of various computers languages for beginners and developers",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5072170.jpg"
+    },
+    {
+      "title": "App Tech Store",
+      "feed_url": "https://apptechstore.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://apptechstore.blogspot.com/",
+      "description": "Keep up with articles from App Tech Store.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5082692.jpg"
+    },
+    {
+      "title": "Idiomatic Programmers",
+      "feed_url": "https://idiomaticprogrammers.com/index.xml",
+      "website_url": "https://idiomaticprogrammers.com/",
+      "description": "A place where you can get high quality tutorials, text based courses and tips related to Python, Machine Learning and Computer Science.",
+      "followers": {
+        "instagram": 55
+      },
+      "image_url": "https://i1.feedspot.com/5202266.jpg?t=1601448933"
+    },
+    {
+      "title": "A Story of a Programmer",
+      "feed_url": "https://storyofprogrammer.com/feed/",
+      "website_url": "https://storyofprogrammer.com/",
+      "description": "Answers for technology issues related to Magento, Laravel, and PHP based frameworks. Also, interesting details about life style such as pet care, hobbies and the latest updates of financial investing related to inside details of the Colombo stock exchange: CSE companies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5135923.jpg"
+    },
+    {
+      "title": "CODE WITH CODING RIDERS",
+      "feed_url": "https://codingriders.blogspot.com/feeds/posts/default",
+      "website_url": "https://codingriders.blogspot.com/",
+      "description": "Here are some blogs related to technology and languages like C, C++ , Python ,Web Development etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5156468.jpg?t=1614341969"
+    },
+    {
+      "title": "Techie Programmer",
+      "feed_url": "https://www.techieprogrammer.com/feeds/posts/default",
+      "website_url": "https://www.techieprogrammer.com/",
+      "description": "Tutorials focused on Algorithms, Programming, Java, C++, PHP, MySQL and Information Retrieval.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5156898.jpg?t=1614343179"
+    },
+    {
+      "title": "Mitul Suthar's Coding Blog",
+      "feed_url": "https://mscodingblog.blogspot.com/feeds/posts/default",
+      "website_url": "https://mscodingblog.blogspot.com/",
+      "description": "My name is Mitul Suthar and this is my coding blog. I have over 10 years of experience building software and I feel I can share a thing or two about coding. If you like the content on this blog then share it with others. Now go back and write some code!",
+      "followers": {
+        "twitter": 209
+      },
+      "image_url": "https://i1.feedspot.com/5161401.jpg?t=1614343184"
+    },
+    {
+      "title": "Programming Zone | Let's Code",
+      "feed_url": "https://itmasterminds.blogspot.com/feeds/posts/default",
+      "website_url": "https://itmasterminds.blogspot.com/",
+      "description": "The only way you can learn programming is by writing a lot of code. Follow my blog for the latest programming articles and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5181844.jpg?t=1614345889"
+    },
+    {
+      "title": "John's Blog",
+      "feed_url": "https://johnsbloghome00.blogspot.com/feeds/posts/default",
+      "website_url": "https://johnsbloghome00.blogspot.com/",
+      "description": "In this blog, you will find various articles and information on coding. Learn different aspects of coding by following the blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5192437.jpg?t=1599108167"
+    },
+    {
+      "title": "Anurag Roy,Programmer",
+      "feed_url": "https://anurag485.blogspot.com/feeds/posts/default",
+      "website_url": "https://anurag485.blogspot.com/",
+      "description": "Hi! I am Anurag and I have learned about coding from youtube and also from Google and many other apps. I know these programming skills will work in the very long run. In This Blog, You will be getting Programs and Source Codes Of Many Interesting Things Such as Games And many other Interfaces. The Programming languages That are to be used in this blog are Java and Python.",
+      "followers": {
+        "twitter": 321,
+        "instagram": 28400
+      },
+      "image_url": "https://i1.feedspot.com/5218639.jpg?t=1606131477"
+    },
+    {
+      "title": "CodeityWeb",
+      "feed_url": "https://codeityweb.blogspot.com/feeds/posts/default",
+      "website_url": "https://codeityweb.blogspot.com/",
+      "description": "A Website To Learn Coding, Get Mini Projects With Implementations, Competitive Programming, HackerRank Solutions, Sololearn Problem Solutions, and more.",
+      "followers": {
+        "instagram": 3
+      },
+      "image_url": "https://i1.feedspot.com/5239036.jpg?t=1611569313"
+    },
+    {
+      "title": "Tech Solutions",
+      "feed_url": "https://www.aayushsingh.in/feeds/posts/default?alt=rss",
+      "website_url": "https://www.aayushsingh.in/",
+      "description": "Solutions for Dynamics CRM, JavaScript, C#, Asp, .Net.",
+      "followers": {
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5040699.jpg?t=1614343208"
+    },
+    {
+      "title": "Programming Blog",
+      "feed_url": "https://m4513.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://m4513.blogspot.com/",
+      "description": "A blog about programs basically written in Java and C language.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4789967.jpg?t=1614345562"
+    },
+    {
+      "title": "Pragmatic Ways",
+      "feed_url": "https://pragmaticways.com/feed/",
+      "website_url": "https://pragmaticways.com/",
+      "description": "A blog for software engineers who want to learn about writing better code.",
+      "followers": {
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/5134505.jpg?t=1614343322"
+    },
+    {
+      "title": "EncodeDna.com",
+      "feed_url": "https://feeds.feedburner.com/Encodednadotcom/Feed",
+      "website_url": "https://www.encodedna.com/",
+      "description": "EncodeDna.com is an effort to present good, useful articles and codes for programmers, web developers, database designers and beginners. The articles and codes are kept simple and to the point. Free articles, tutorials, source code on Asp.Net, MVC, Angular, Angularjs, WCF, C#, Vb.Net, jQuery, JavaScript, Sql Server, Ms-Excel, WebGrid, GridView, CSS, Crystal Report, Browsers, HTML5, Google API, Google Chart",
+      "followers": {
+        "facebook": 634
+      },
+      "image_url": "https://i1.feedspot.com/4893703.jpg"
+    },
+    {
+      "title": "Mycodebit",
+      "feed_url": "https://mycodebit.com/feed/",
+      "website_url": "https://mycodebit.com/",
+      "description": "This blog is all about .Net Core Technology. We are a team of experienced .Net Core developers, and this is our little effort to give back to society. This blog will provide common problem solutions, discuss new libraries, approaches, and technologies with complete source code.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5374904.jpg?t=1645618289"
+    },
+    {
+      "title": "Rule Tag",
+      "feed_url": "https://www.ruletag.com/feed/",
+      "website_url": "https://www.ruletag.com/",
+      "description": "Get latest posts and articles related to programming tools, guidebooks, python, hosting, SEO and much more which will keep you updated. The author of the rule tag blog is Mohsin Sheikh who is experienced marketing & Microsoft excel professional with a demonstrated history of managing projects from conception through to delivery and evaluation.",
+      "followers": {
+        "instagram": 85
+      },
+      "image_url": "https://i1.feedspot.com/5475495.jpg?t=1670232869"
+    },
+    {
+      "title": "opencodez",
+      "feed_url": "https://www.opencodez.com/feed",
+      "website_url": "https://www.opencodez.com/",
+      "description": "At Opencodez.com we are working to share open source stuff. We share code, development tips and tricks, WordPress Themes. So far we have shared 3 free WordPress themes with premium features and we look forward to release many more. Opencodez is growing slowly and currently we have hundreds of visitors daily.",
+      "followers": {
+        "facebook": 466,
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/5031469.jpg?t=1614343299"
+    },
+    {
+      "title": "Archer Imagine",
+      "feed_url": "https://www.archerimagine.com/feeds/all.atom.xml",
+      "website_url": "https://www.archerimagine.com/archives",
+      "description": "The programming languages which this blogs will address are Algorithms, C, Java, Python, Android,Design Patterns,Object Oriented Programming and Design, Cloud & AWS. Programming is a mix of engineering and art, so listening music, photography are some of my hobbies which try to keep the art in me alive.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5267867.jpg?t=1618400494"
+    },
+    {
+      "title": "Alexey Golub",
+      "feed_url": "https://tyrrrz.me/blog/rss.xml",
+      "website_url": "https://tyrrrz.me/blog",
+      "description": "Alexey Golub is a software developer, open source maintainer, tech blogger and conference speaker.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5175192.jpg?t=1606111807"
+    },
+    {
+      "title": "Java Beginners Tutorial",
+      "feed_url": "https://javabeginnerstutorial.com/feed/",
+      "website_url": "https://javabeginnerstutorial.com/",
+      "description": "Java Beginners Tutorial provides an easy tutorial for beginners to learn online. This journey started in 2010 with an article on Core Java topic. Now we are increasing our database of tutorial adding the new article on new technology day by day.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/4947524.jpg?t=1614343317"
+    },
+    {
+      "title": "Code The Web",
+      "feed_url": "https://codetheweb.blog/feed.xml",
+      "website_url": "https://codetheweb.blog/",
+      "description": "Web development explained for normal people - Learn HTML, CSS and JavaScript in ways that you can actually understand!",
+      "followers": {
+        "twitter": 492
+      },
+      "image_url": "https://i1.feedspot.com/4825100.jpg?t=1614343337"
+    },
+    {
+      "title": "Techy Hunger",
+      "feed_url": "https://www.techyhunger.com/feed",
+      "website_url": "https://www.techyhunger.com/",
+      "description": "Tutorials on Web Development, Node.js, MongoDB, Express, Angular, Javascipt, React JS, Ionic, PHP, Ajax, Jquery, Web Design, and Hybrid Mobile App.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5082867.jpg"
+    },
+    {
+      "title": "Elex Tutorial",
+      "feed_url": "https://elextutorial.com/feed/",
+      "website_url": "https://elextutorial.com/",
+      "description": "Keep up with articles from Elex Tutorial.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5087705.jpg"
+    },
+    {
+      "title": "codippa.com",
+      "feed_url": "https://codippa.com/feed/",
+      "website_url": "https://codippa.com/",
+      "description": "For all developers stuck in for finding a solution to their problem, this is the place to explore. Java, python, angular, javascript, jQuery, MySql, Oracle programs & tutorials",
+      "followers": {
+        "facebook": 653
+      },
+      "image_url": "https://i1.feedspot.com/5083409.jpg?t=1614345510"
+    },
+    {
+      "title": "Techno Thirsty",
+      "feed_url": "http://feeds.feedburner.com/Technothirstycom",
+      "website_url": "https://www.technothirsty.com/",
+      "description": "TechnoThirsty is a technology sharing platform on which technology thirsty people can come and learn and share their knowledge & discuss all technologies",
+      "followers": {
+        "facebook": 405,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4907207.jpg?t=1614340864"
+    },
+    {
+      "title": "System Out Of Memory - The Programmer Blog",
+      "feed_url": "https://systemoutofmemory.com/blogs/the-programmer-blog.atom",
+      "website_url": "https://systemoutofmemory.com/blogs/the-programmer-blog",
+      "description": "The Programmer Blog is here to help you, the programmer. We do our best to provide useful resources that offer explanations to popular programming problems, across a variety of programming languages.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 98,
+        "instagram": 367
+      },
+      "image_url": "https://i1.feedspot.com/5047252.jpg?t=1614345542"
+    },
+    {
+      "title": "SitePoint Blog",
+      "feed_url": "https://www.sitepoint.com/feed/",
+      "website_url": "https://www.sitepoint.com/blog/",
+      "description": "The web's best resource for web developers and designers to keep up-to-date and learn JavaScript, CSS, UX, WordPress, PHP, and more. SitePoint is one of the largest online communities of web professionals.",
+      "followers": {
+        "facebook": 91700,
+        "twitter": 114600
+      },
+      "image_url": "https://i1.feedspot.com/4459886.jpg?t=1608799601"
+    },
+    {
+      "title": "Ray Wenderlich",
+      "feed_url": "https://www.raywenderlich.com/feed",
+      "website_url": "https://www.kodeco.com/library",
+      "description": "Keep your Swift & iOS skills up-to-date via hands-on tutorials. Ray Wenderlich is a favorite of everyone on the V-Play team. This is one of the best places on the internet for mobile game tutorials so give it a look as soon as you can. Ray has put together a very experienced team with expertise in a number of different areas, making this blog one of the biggest game development authorites online.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 167,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4431093.jpg?t=1608797979"
+    },
+    {
+      "title": "AIParabellum.com Blog",
+      "feed_url": "https://aiparabellum.com/feed/",
+      "website_url": "https://aiparabellum.com/category/blog/",
+      "description": "AIParabellum.com is your premier destination for discovering and showcasing cutting-edge AI tools. As the dedicated AI Tools Directory, we connect creators, innovators, and enthusiasts in the field of artificial intelligence. Here you'll find articles on various topics related to artificial intelligence and AI tools. We aim to inform readers of the latest developments in the field while maintaining an easy-to-digest and laid-back writing style.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5750654.jpg?t=1704709429"
+    },
+    {
+      "title": "Joshtronic Blog",
+      "feed_url": "https://joshtronic.com/atom.xml",
+      "website_url": "https://joshtronic.com/blog/",
+      "description": "Husband. Father. Pug dad. Born again Linux user. Founder of Holiday API and SceneKids, Senior Engineer and Emoji Specialist at Mailshake, and author of the best damn Lorem Ipsum Library for PHP.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4888632.jpg?t=1614339512"
+    },
+    {
+      "title": "Code4IT",
+      "feed_url": "https://www.code4it.dev/rss.xml",
+      "website_url": "https://www.code4it.dev/archive/",
+      "description": "Code4IT is a blog provided by Davide Bellone. The main topics are .NET development, C#, Azure, Clean code, and lots of different stuff.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5272112.jpg?t=1619067076"
+    },
+    {
+      "title": "Jeremy Kun",
+      "feed_url": "https://jeremykun.com/feed/",
+      "website_url": "https://www.jeremykun.com/",
+      "description": "My name is Jeremy Kun. I'm currently a software engineer at 21. co. I earned a Ph.D. in mathematics from the University of Illinois at Chicago, where my advisor was Lev Reyzin. This blog is a presentation of the interesting solutions I come across, and an exploration of the deeper mathematical ideas therein. Most often this means exploring the mathematical structure of a problem to lubricate the cogs of algorithm design.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4474659.jpg?t=1660032507"
+    },
+    {
+      "title": "Rahul Nath",
+      "feed_url": "https://www.rahulpnath.com/index.xml",
+      "website_url": "https://www.rahulpnath.com/",
+      "description": "I am Rahul. I am a programmer, blogger, youtuber and enjoy running. Blogs are usually technical and about life in general.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5149375.jpg?t=1614340653"
+    },
+    {
+      "title": "Nil Coalescing Blog",
+      "feed_url": "https://nilcoalescing.com/feed.rss",
+      "website_url": "https://nilcoalescing.com/blog/",
+      "description": "We are a software development company based in New Zealand passionate about iOS and iPadOS app development.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 335
+      },
+      "image_url": "https://i1.feedspot.com/5148269.jpg?t=1614340420"
+    },
+    {
+      "title": "w3technology",
+      "feed_url": "https://www.blogger.com/feeds/8488553694889765909/posts/default",
+      "website_url": "https://www.w3technology.info/",
+      "description": "W3technology is a technical blog with quality articles on various programming languages with appropriate source code,screenshots.",
+      "followers": {
+        "facebook": 552,
+        "twitter": 481
+      },
+      "image_url": "https://i1.feedspot.com/4781303.jpg?t=1614340934"
+    },
+    {
+      "title": "Harness Blog",
+      "feed_url": "https://www.harness.io/blog/rss.xml",
+      "website_url": "http://www.harness.io/blog/rss.xml",
+      "description": "OverOps was founded in 2011 by a team that had one goal in mind: to provide a better way to analyze, understand and act on issues within servers and applications, even in real-time. Overops' new blog, is richer in information, accurate and professional just the way you like it.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4149397.jpg?t=1614339495"
+    },
+    {
+      "title": "Coding Alpha",
+      "feed_url": "https://www.codingalpha.com/feed/",
+      "website_url": "https://www.codingalpha.com/",
+      "description": "Learn Programming Codes and Tutorials for C Programming, Data Structures, Java, How - To Tutorials for Beginners with Detailed Description and Algorithm Analysis.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/4583981.jpg"
+    },
+    {
+      "title": "Mission Impossible Code",
+      "feed_url": "https://missionimpossiblecode.io/rss.xml",
+      "website_url": "https://missionimpossiblecode.io/",
+      "description": "Darwin Sanoy is a Partner Solutions Architect at @GitLab who loves being an Enabler of Enablers thru Hyperscaling Enablement Content Architecture. In his blog, he talks about DevOps trends, Cloud Platform, and discusses strategies to navigate the intersection of Automation and Business.",
+      "followers": {
+        "twitter": 410
+      },
+      "image_url": "https://i1.feedspot.com/5605115.jpg?t=1687426230"
+    },
+    {
+      "title": "Hack The Developer Blog",
+      "feed_url": "https://hackthedeveloper.com/feed/",
+      "website_url": "https://techkluster.com/machine-learning/",
+      "description": "Hack The Developer is a go-to blog site for intermediate to advanced Golang and Python tutorials. With detailed articles covering a wide range of topics, including advanced concepts, best practices, performance optimization, and practical examples, Hack The Developer empowers developers to enhance their Golang skills. Stay up-to-date with the latest trends and take your Golang knowledge to new heights with Hack The Developer's comprehensive tutorials.",
+      "followers": {
+        "facebook": 214
+      },
+      "image_url": "https://i1.feedspot.com/5615492.jpg?t=1688370103"
+    },
+    {
+      "title": "Coding is Simple Blog",
+      "feed_url": "https://codingissimple.com/feed/",
+      "website_url": "https://www.developerindian.com/blogss",
+      "description": "Discover comprehensive guides to full stack development and many other coding-related careers. CodingisSimple Blog is an online platform that aims to break down complex programming concepts into simple, easy-to-understand tutorials and articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5735150.jpg?t=1702460476"
+    },
+    {
+      "title": "Shahed Nasser's Blog",
+      "feed_url": "https://blog.shahednasser.com/rss",
+      "website_url": "https://blog.shahednasser.com/",
+      "description": "Tutorials and Posts about Programming. With the daily continuous advancement of technology, the need for new websites, apps, or software is growing every day. In order to take your idea or business to the next step, you need the help of a professional developer who can bring your project to life. I am a freelance developer who has worked with clients on different projects in a variety of fields such as finances and event planning.",
+      "followers": {
+        "twitter": 11,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5221184.jpg?t=1606717714"
+    },
+    {
+      "title": "LEARN academy",
+      "feed_url": "https://www.learnacademy.org/feed",
+      "website_url": "https://www.learnacademy.org/blog",
+      "description": "Start Your Web Development Career in 4 Months at the Top Coding Bootcamp in San Diego. Become a Full-Stack Developer. Guaranteed Dev Internship. Stay up to date with all of our coding tips and tricks, plus special LEARN academy coding workshops and coding meetups by following our blog.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 903,
+        "instagram": 741
+      },
+      "image_url": "https://i1.feedspot.com/5209025.jpg?t=1603292561"
+    },
+    {
+      "title": "TechBriefers",
+      "feed_url": "https://techbriefers.com/feed/",
+      "website_url": "https://techbriefers.com/",
+      "description": "Learn PHP, MySQL,jQuery, SQL and more. Get tipcs and tricks for PHP, MySQL, Database, jQuery and programming slutions. Web development sevices in Delhi.",
+      "followers": {
+        "facebook": 257,
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/5049812.jpg?t=1614343345"
+    },
+    {
+      "title": "Code With Mike",
+      "feed_url": "https://www.codewithmike.com/feed/",
+      "website_url": "https://codewithmark.com/",
+      "description": "Hi. I'm Mike. I'm on a journey to learn code and I'm the creator of CodeWithMike. It's basically a code and tech blog with a learning journal attached. I created this blog to document what I'm learning, how I'm learning it and to post articles that I think will help others that are in a similar situation.",
+      "followers": {
+        "facebook": 14,
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/5067136.jpg?t=1614340354"
+    },
+    {
+      "title": "Programming Empire",
+      "feed_url": "https://www.programmingempire.com/feed/",
+      "website_url": "https://www.programmingthrowdown.com/",
+      "description": "This is a blog on robotics, artificial intelligence, automation, and advanced technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5196422.jpg?t=1600068264"
+    },
+    {
+      "title": "Programming Throwdown",
+      "feed_url": "https://www.programmingthrowdown.com/feeds/posts/default/",
+      "website_url": "https://www.programmingthrowdown.com/",
+      "description": "Programming Throwdown educates current and future Computer Scientists and Software Engineers on a cavalcade of programming and tech topics. Every show will cover a new programming language, so listeners will be able to speak intelligently about any programming language.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4045920.jpg?t=1614340426"
+    },
+    {
+      "title": "SinxLoud",
+      "feed_url": "https://sinxloud.com/feed/",
+      "website_url": "https://sinxloud.com/",
+      "description": "sinxLoud is a free resource designed to help you get the most out of your tech so that you can have fun with technology, fix what isnt working, and buy whats best for you. We started sinxLoud after becoming frustrated with the lack of support for beginners to get started with hosting their applications in the cloud. We are always happy to help find the solution for your needs.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 15,
+        "instagram": 158
+      },
+      "image_url": "https://i1.feedspot.com/4959470.jpg?t=1614340360"
+    },
+    {
+      "title": "QtLearn",
+      "feed_url": "https://blog.qtlearn.in/rss/",
+      "website_url": "https://serokell.io/blog",
+      "description": "In this blog, you will learn Coding and Robotics from experienced Coaches & 30,000 Kids. Powered by QtPi robotics.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 249,
+        "instagram": 605
+      },
+      "image_url": "https://i1.feedspot.com/5243340.jpg?t=1612850513"
+    },
+    {
+      "title": "Serokell Blog",
+      "feed_url": "https://serokell.io/blog.rss.xml",
+      "website_url": "https://serokell.io/blog",
+      "description": "Learn about the latest technologies, functional programming, and mathematics on our blog. Serokell provides full-stack functional programming (Haskell, Elixir, Rust, Agda) consulting and development services.",
+      "followers": {
+        "facebook": 387,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5081667.jpg?t=1614339490"
+    },
+    {
+      "title": "The Coders Blog",
+      "feed_url": "https://thecodersblog.com/feed",
+      "website_url": "https://thecodersblog.com/",
+      "description": "The Coders Blog is dedicate blogs for programmer and coders, for staying on current trends and standards.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5045353.jpg"
+    },
+    {
+      "title": "Coding Birds Online",
+      "feed_url": "https://codingbirdsonline.com/feed/",
+      "website_url": "https://codingbirdsonline.com/",
+      "description": "Coding Birds is a blogging website, minimizes the difficulties of coding and development that every new fresher faces in his career. We provide information on free resources, techniques of coding and problem-solving codes on our website.",
+      "followers": {
+        "facebook": 6,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5083639.jpg?t=1614342248"
+    },
+    {
+      "title": "Coding in Practice",
+      "feed_url": "https://codinginpractice.com/feed/",
+      "website_url": "https://codinginpractice.com/",
+      "description": "We are a group of programmers who likes sharing our learnings. This site is only for learning purposes and contributors keep posting if they find something useful and that can be helpful for others also.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5214212.jpg?t=1604760427"
+    },
+    {
+      "title": "WatchDown Programming",
+      "feed_url": "https://watchdown.com/programming/feed/",
+      "website_url": "https://watchdown.com/programming/",
+      "description": "A Zambian online newspaper with latest news specialising in investigative reporting and analysis. Want to learn about business techniques? Want to learn about programming? Follow us For latest articles.",
+      "followers": {
+        "facebook": 773200,
+        "twitter": 299
+      },
+      "image_url": "https://i1.feedspot.com/4732084.jpg?t=1614343214"
+    },
+    {
+      "title": "MAK CODE",
+      "feed_url": "https://www.makcode.in/feed",
+      "website_url": "https://www.makcode.in/",
+      "description": "A single site for all your tech needs.",
+      "followers": {
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/5164403.jpg"
+    },
+    {
+      "title": "Syntax Definition",
+      "feed_url": "https://www.syntaxdefinition.com/feed/",
+      "website_url": "https://www.syntaxdefinition.com/",
+      "description": "Community For programmers to help each other in issues which we face while developing web applications.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4756974.jpg?t=1614345525"
+    },
+    {
+      "title": "I'm Programmer",
+      "feed_url": "https://www.improgrammer.net/feed/",
+      "website_url": "https://ahsensaeed.com/",
+      "description": "Welcome to Computer Programming Blog for Programmers! Learn Programming languages with our tutorials. We have latest programming blogs with programming joke so you can have fun with coding - by I am Programmer.net",
+      "followers": {
+        "facebook": 33100,
+        "instagram": 274
+      },
+      "image_url": "https://i1.feedspot.com/4893693.jpg?t=1614340315"
+    },
+    {
+      "title": "Niraeth",
+      "feed_url": "https://niraeth.com/feed/",
+      "website_url": "https://ahsensaeed.com/",
+      "description": "Niraeth - Programming, Security and Tech. Self-taught programmer and reverse engineer for over 5 years.",
+      "followers": {
+        "twitter": 61
+      },
+      "image_url": "https://i1.feedspot.com/5152475.jpg?t=1614343349"
+    },
+    {
+      "title": "Ahsen Saeed | Just another Programming Nerd",
+      "feed_url": "https://ahsensaeed.com/cgi-sys/suspendedpage.cgi",
+      "website_url": "https://ahsensaeed.com/",
+      "description": "Hi, I'm Ahsen Saeed the founder of ahsensaeed.com. I live in Lahore, Pakistan. A senior Android Developer with 6+ years of experience. I mostly taught myself to learn to code. I've won three national prizes in Android app development. Subscribe now and get the latest articles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5068239.jpg"
+    },
+    {
+      "title": "OBJC Blog",
+      "feed_url": "https://www.objc.io/blog/",
+      "website_url": "https://www.objc.io/blog/",
+      "description": "Objc.io publishes books, videos, and articles on advanced techniques for iOS and macOS development. It provides a user-friendly and beautifully designed page with more than 20 issues on such topics as debugging, security, games, MVVM, and more. We also teach workshops, focusing on advanced Swift and SwiftUI topics.",
+      "followers": {
+        "twitter": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4542001.jpg?t=1659960682"
+    },
+    {
+      "title": "TechBlogStation",
+      "feed_url": "https://techblogstation.com/feed/",
+      "website_url": "https://techblogstation.com/",
+      "description": "The TechBlogStation believes to be strong platform to learn, understand and apply these state-of-the-art technologies and programming concepts.",
+      "followers": {
+        "facebook": 107,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5143243.jpg?t=1614343303"
+    },
+    {
+      "title": "codemummy",
+      "feed_url": "https://www.codemummy.com/feeds/posts/default?alt=rss",
+      "website_url": "https://codemummy.blogspot.com/",
+      "description": "codemummy is a coding site. This site helps computer science students to gain knowledge and prepare for the interview!!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5186649.jpg?t=1598513437"
+    },
+    {
+      "title": "Computer and Internet",
+      "feed_url": "https://netnic.org/feed/",
+      "description": "Computer and Internet - Learning computer programming language and technology tricks.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5451574.jpg?t=1664532121"
+    }
+  ]
+}

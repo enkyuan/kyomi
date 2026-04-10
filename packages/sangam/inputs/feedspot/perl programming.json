@@ -1,0 +1,133 @@
+{
+  "category": "Perl Programming",
+  "source_url": "https://rss.feedspot.com/perl_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Perl. org Blog",
+      "feed_url": "https://blogs.perl.org/atom.xml",
+      "website_url": "https://blogs.perl.org/",
+      "description": "blogs.perl.org is a common blogging platform for the Perl community. Written in Perl and offering the modern features you've come to expect in blog platforms, the site is hosted by Dave Cross and Aaron Crane, with a design donated by Six Apart, Ltd.",
+      "followers": {
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/98933.jpg"
+    },
+    {
+      "title": "Perl Weekly Newsletter",
+      "feed_url": "https://feeds.feedburner.com/PerlWeekly",
+      "website_url": "https://perlweekly.com/",
+      "description": "A free, once a week e-mail round-up of hand-picked news and articles about Perl. The Perl Weekly ( http://perlweekly.com/ ) is a newsletter including links to blog posts and other news items related to the Perl programming language. It is curated by Gabor Szabo who also includes short commentary with each item. The newsletter is distributed once a week on Monday. Usually between 8-10 am GMT.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/859564.jpg"
+    },
+    {
+      "title": "The Perl Foundation",
+      "feed_url": "https://news.perlfoundation.org/rss.xml",
+      "website_url": "https://news.perlfoundation.org/",
+      "description": "The Perl Foundation is dedicated to the advancement of the Perl programming language through open discussion, collaboration, design, and code. The Perl Foundation is a non-profit organization* based in Holland, Michigan",
+      "followers": {
+        "facebook": 2900
+      },
+      "image_url": "https://i1.feedspot.com/117605.jpg?t=1621604659"
+    },
+    {
+      "title": "Perl Jobs - Ask Bj\u00f8rn Hansen",
+      "feed_url": "https://jobs.perl.org/rss/standard.rss",
+      "website_url": "https://jobs.perl.org/",
+      "description": "The Perl Job Site. jobs.perl.org also attracts the worldwide talent from many of the Open Source communities including Linux, BSD, Apache and many others.",
+      "followers": {
+        "twitter": 440
+      },
+      "image_url": "https://i1.feedspot.com/4954334.jpg?t=1621604681"
+    },
+    {
+      "title": "Perl Hacks Blog",
+      "feed_url": "https://perlhacks.com/feed/",
+      "website_url": "https://perlhacks.com/",
+      "description": "Dave Cross is a Perl hacker. A blog about all Perl things. Dave Cross and I'm a Perl hacker. In 1998 he started the London Perl Mongers, the first Perl User Group outside of North America. I've been heavily involved in the Perl community ever since.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 484
+      },
+      "image_url": "https://i1.feedspot.com/4954359.jpg?t=1749624785"
+    },
+    {
+      "title": "Perl Maven",
+      "feed_url": "https://perlmaven.com/rss",
+      "website_url": "https://perlmaven.com/",
+      "description": "A maven is a trusted expert in a particular field, who seeks to pass knowledge on to others. The site contains lots of articles available free of charge, several Perl books and video courses for sale, and the Perl Maven Pro subscription with even more articles.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4954307.jpg?t=1621604664"
+    },
+    {
+      "title": "Perl.com - programming news, code and culture",
+      "feed_url": "https://www.perl.com/index.xml",
+      "website_url": "https://www.perl.com/",
+      "description": "Since 1997 Perl.com has been the home for quality articles about Perl programming, news and culture.",
+      "followers": {
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4954341.jpg?t=1621604669"
+    },
+    {
+      "title": "Linux Magazine Perl Columns by Mike Schilli",
+      "feed_url": "https://perlmeister.com/rss/rss-perl-eng.xml",
+      "website_url": "https://perlmeister.com/art_eng.html",
+      "description": "Mike Schilli is a Perl expert. Designs, implements, maintains 50 modules on CPAN and leads their development.",
+      "followers": {
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/4954315.jpg?t=1621604672"
+    },
+    {
+      "title": "6guts - Tales of Perl 6 guts hacking",
+      "feed_url": "https://6guts.wordpress.com/feed/",
+      "website_url": "https://6guts.wordpress.com/",
+      "description": "Jonathan Worthington is a part of the Perl 6 development team. He serve as architect for MoarVM (the leading runtime for Perl 6) and the Rakudo Perl 6 compiler. He is also heavily involved in the design and implementation of Perl 6's concurrency features. This blog is where he will share the ponderings, war stories, pain points, insights and triumphs he encounter in my Perl 6 work.",
+      "followers": {
+        "twitter": 960
+      },
+      "image_url": "https://i1.feedspot.com/4954404.jpg?t=1621604696"
+    },
+    {
+      "title": "LeoNerd's programming thoughts",
+      "feed_url": "http://leonerds-code.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://leonerds-code.blogspot.com/",
+      "description": "Paul is a Perl and C programmer. His CPAN user id is PEVANS. Having worked for a number of IT companies, both large and small, he is now self-employed and works as a contractor; primarily in Perl, but also dabbling in such diverse topics as C, systems design and small-scale electronics as the need arises.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4954411.jpg?t=1621604706"
+    },
+    {
+      "title": "PrePAN - Social Reviewing for Perl Modules",
+      "feed_url": "https://prepan.org/feed/",
+      "website_url": "https://prepan.org/",
+      "description": "PrePAN provides a place to discuss your modules.",
+      "followers": {
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/395531.jpg?t=1621604711"
+    },
+    {
+      "title": "As Thick As Two Short Planks - Mark Fowler's Perl Blog",
+      "feed_url": "http://blog.twoshortplanks.com/feed.xml",
+      "website_url": "http://blog.twoshortplanks.com/",
+      "description": "A stream of technical nonsense and Perl programming gumph thankfully subsumed by the trivialities of life of a Brit living in upsdate NY with a couple of kids",
+      "followers": {
+        "twitter": 363
+      },
+      "image_url": "https://i1.feedspot.com/4954592.jpg?t=1621604877"
+    },
+    {
+      "title": "Planet Perl",
+      "feed_url": "https://perl.theplanetarium.org/atom.xml",
+      "website_url": "https://perl.theplanetarium.org/",
+      "description": "The Perl firehose! The Web's biggest collection of Perl 5 blogs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/112126.jpg?t=1621604949"
+    }
+  ]
+}

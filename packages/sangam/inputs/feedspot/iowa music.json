@@ -1,0 +1,107 @@
+{
+  "category": "Iowa Music",
+  "source_url": "https://rss.feedspot.com/iowa_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "ListenIowa",
+      "feed_url": "https://listeniowa.com/category/music-news/feed/",
+      "website_url": "https://listeniowa.com/",
+      "description": "ListenIowa is an online music source, featuring news, reviews, images, and interviews with some of the biggest names in music, from Garth Brooks to Rob Halford.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1100,
+        "instagram": 105
+      },
+      "image_url": "https://i1.feedspot.com/5318508.jpg?t=1630584581"
+    },
+    {
+      "title": "Central Iowa Blues Society News",
+      "feed_url": "https://cibs.org/category/news/feed/",
+      "website_url": "https://cibs.org/category/news/",
+      "description": "The Central Iowa Blues Society (CIBS) is a volunteer non-profit arts organization dedicated to the education, preservation and celebration of blues and roots music throughout Iowa.",
+      "followers": {
+        "facebook": 10000,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5318516.jpg?t=1630585231"
+    },
+    {
+      "title": "Iowa Source \u00bb Music",
+      "feed_url": "https://www.iowasource.com/category/features/arts-entertainment/music-reviews-musicians-concerts/feed/",
+      "website_url": "https://www.iowasource.com/category/features/arts-entertainment/music-reviews-musicians-concerts/",
+      "description": "Latest music reviews, musicians, concerts, features, and events in Iowa by Iowa Source.The Iowa Source is Iowa's only free monthly arts and entertainment magazine featuring articles on everything from music, culture, and healthy living, to travel, technology, and food.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5318868.jpg?t=1630672477"
+    },
+    {
+      "title": "KBOE 104.9FM \u00bb Country Music News",
+      "feed_url": "https://kboeradio.com/category/news/country-music-news/feed/",
+      "website_url": "https://kboeradio.com/category/news/country-music-news/",
+      "description": "South central Iowa's country music radio connection.KBOE 104.9FM is your home for hot country hits, area sports coverage in Iowa.",
+      "followers": {
+        "facebook": 14700,
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/5318523.jpg?t=1630585801"
+    },
+    {
+      "title": "Music on the Move",
+      "feed_url": "https://mymusiconthemove.com/feed/",
+      "website_url": "https://mymusiconthemove.com/notes-news/",
+      "description": "News and notes by Music on the Move.Music on the Move provides early childhood music classes for families, schools, and daycares in the Cedar Rapids area.",
+      "followers": {
+        "facebook": 579,
+        "twitter": 58,
+        "instagram": 242
+      },
+      "image_url": "https://i1.feedspot.com/5318562.jpg?t=1630589309"
+    },
+    {
+      "title": "Iowa Bangerz",
+      "feed_url": "https://iowabangerz.blogspot.com/feeds/posts/default",
+      "website_url": "https://iowabangerz.blogspot.com/",
+      "description": "Iowa Bangerz is the #1 Iowa based hip-hop blog covering what's really banging. We empower local artists & events while still covering mainstream news and bringing America one step closer to you.",
+      "followers": {
+        "facebook": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5318719.jpg?t=1630651640"
+    },
+    {
+      "title": "Iowa Live Music Blog",
+      "feed_url": "https://www.iowalivemusic.com/blog-feed.xml",
+      "website_url": "https://www.iowalivemusic.com/blog",
+      "description": "Discover local live music in Cedar Rapids, Iowa City & Eastern Iowa. Raising awareness of all local live music in the state of Iowa.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 409,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5318709.jpg?t=1630650819"
+    },
+    {
+      "title": "Ragged Records Blog",
+      "feed_url": "http://www.raggedrecords.org/blog?format=rss",
+      "website_url": "http://www.raggedrecords.org/blog",
+      "description": "New & Used Vinyl, CDs, and more. Ragged Records is one of the Midwest's largest used record stores located a few blocks off of the Arsenal Bridge in downtown Davenport Iowa.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 187
+      },
+      "image_url": "https://i1.feedspot.com/5318420.jpg?t=1630577895"
+    },
+    {
+      "title": "Marion Music Academy Blog",
+      "feed_url": "https://www.marionmusicacademy.com/blog-feed.xml",
+      "website_url": "https://www.marionmusicacademy.com/blog",
+      "description": "Latest news, practice tips, music lessons tips, announcements and teacher spotlights. Marion Music Academy offers music lessons and classes for students of all ages and ability levels in the Marion and Cedar Rapids area.",
+      "followers": {
+        "facebook": 458,
+        "twitter": 49,
+        "instagram": 325
+      },
+      "image_url": "https://i1.feedspot.com/5318715.jpg?t=1630651274"
+    }
+  ]
+}

@@ -1,0 +1,939 @@
+{
+  "category": "Trucking",
+  "source_url": "https://rss.feedspot.com/trucking_rss_feeds",
+  "feeds": [
+    {
+      "title": "HDT Magazine",
+      "feed_url": "https://www.truckinginfo.com/rss",
+      "website_url": "https://www.truckinginfo.com/blogs/on-the-road",
+      "description": "Heavy Duty Trucking offers daily news and in-depth information on road equipment, operations, regulations, environmental issues, and more. It's the flagship of HDT's online and digital media offerings, which also include e-mail newsletters, webinars, HDT's headline news, blogs, and more.",
+      "followers": {
+        "facebook": 17000,
+        "twitter": 37800
+      },
+      "image_url": "https://i1.feedspot.com/3644255.jpg?t=1609838706"
+    },
+    {
+      "title": "Daniel S Bridger",
+      "feed_url": "https://feeds.feedburner.com/DanielSBridgersBlog",
+      "website_url": "https://dbridgerhot.blogspot.com/",
+      "description": "Having been a professional truck driver and trainer for more than 30 years, I find that you never, ever know it all. There are always new things to learn. My primary goal with this blog is to help other drivers (especially newer ones) with pertinent information and tips to enable them to work happier and more safely.",
+      "followers": {
+        "facebook": 19,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/4792166.jpg?t=1609839808"
+    },
+    {
+      "title": "eForm2290 Blog",
+      "feed_url": "https://www.eform2290.com/blog/feed/",
+      "website_url": "https://www.eform2290.com/blog/",
+      "description": "eForm2290 is an IRS-approved e-file service provider to truckers that uses a highly efficient electronic filing process to prepare your truck tax dues. Learn from their blog what are some of the trending topics in the Truck-driving Taxation realm along with tips for better truck management and handling.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 993
+      },
+      "image_url": "https://i1.feedspot.com/7279296.jpg?t=1711012899"
+    },
+    {
+      "title": "Trucking Office - Trucking Software Blog",
+      "feed_url": "http://www.truckingoffice.com/feed/",
+      "website_url": "https://www.truckingoffice.com/trucking-software-blog/",
+      "description": "Check out our trucking software blog to keep up with the latest industry trends and useful tips and advice. Trucking management software built to help truckers succeed. Our mission is to offer premier trucking management software that helps trucking companies improve their efficiency, DOT compliance, and profitability at a price that every trucking company big or small can afford.",
+      "followers": {
+        "facebook": 19200,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4794259.jpg?t=1609838714"
+    },
+    {
+      "title": "Maryland Trucking Accident Lawyer Blog",
+      "feed_url": "https://www.marylandtruckaccidentlawyerblog.com/feed/",
+      "website_url": "https://www.marylandtruckaccidentlawyerblog.com/",
+      "description": "Lebowitz & Mzhen, LLC handles serious personal injury and wrongful death cases arising from vehicle crashes. We believe that all clients deserve to be safe.",
+      "followers": {
+        "facebook": 140,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/4793774.jpg?t=1609839799"
+    },
+    {
+      "title": "DAT Blog",
+      "feed_url": "https://www.dat.com/blog/feed",
+      "website_url": "https://www.dat.com/blog",
+      "description": "The latest Trucking News, Industry Trends, Trucking Regulations, and Product Reviews from DAT Blog. DAT Freight & Analytics operates the largest truckload freight marketplace in North America.",
+      "followers": {
+        "facebook": 106200,
+        "twitter": 13800,
+        "instagram": 28000
+      },
+      "image_url": "https://i1.feedspot.com/5316341.jpg?t=1669795873"
+    },
+    {
+      "title": "Truck Junction Blog",
+      "feed_url": "https://trucks.tractorjunction.com/blog/feed/",
+      "website_url": "https://trucks.tractorjunction.com/blog/",
+      "description": "Truck Junction is a one-stop destination to find trucks & other commercial vehicles information. We help to buy/sell New & Used Trucks in India.",
+      "followers": {
+        "facebook": 192200,
+        "twitter": 158,
+        "instagram": 98600
+      },
+      "image_url": "https://i1.feedspot.com/5415118.jpg?t=1656334274"
+    },
+    {
+      "title": "CDLLife",
+      "feed_url": "https://cdllife.com/feed/",
+      "website_url": "https://cdllife.com/trucking",
+      "description": "Your source for trucking news, entertainment, truck driver jobs, truck driver recruiting, and more. CDLLife connects companies with the largest digital audience of truck drivers by creating engaging content and implementing industry-leading technology to increase your visibility to the workforce.",
+      "followers": {
+        "facebook": 517500,
+        "twitter": 9000,
+        "instagram": 46000
+      },
+      "image_url": "https://i1.feedspot.com/5340648.jpg?t=1637932250"
+    },
+    {
+      "title": "Transport Topics News",
+      "feed_url": "https://www.ttnews.com/rss.xml",
+      "website_url": "https://www.ttnews.com/",
+      "description": "Transport Topics is the nation's logistics and trucking news leader, with award-winning coverage of the regulatory, technology, business, and equipment sectors. Their goal is to be the premier source of news and information for the U.S. freight transportation industry, with an emphasis on trucking, logistics and intermodal operations.",
+      "followers": {
+        "facebook": 21400,
+        "twitter": 47100
+      },
+      "image_url": "https://i1.feedspot.com/3816087.jpg?t=1658815436"
+    },
+    {
+      "title": "PrePass - Trucking Industry Blog",
+      "feed_url": "https://prepass.com/feed/",
+      "website_url": "https://prepass.com/blog/",
+      "description": "Stay up-to-date on the latest trucking industry and PrePass news to improve commercial vehicle safety, compliance and efficiency. PrePass is the leading provider of weigh station bypass, toll payment services and trucking safety software. The most bypasses means the most savings.",
+      "followers": {
+        "facebook": 72500,
+        "twitter": 9800,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4794193.jpg?t=1609838883"
+    },
+    {
+      "title": "Commercial Carrier Journal",
+      "feed_url": "https://www.ccjdigital.com/feed/",
+      "website_url": "https://www.ccjdigital.com/",
+      "description": "Commercial Carrier Journal offers news, analysis and other information to managers of trucking companies and commercial truck fleets.",
+      "followers": {
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4792959.jpg?t=1609838861"
+    },
+    {
+      "title": "Truck News",
+      "feed_url": "https://www.trucknews.com/feed/",
+      "website_url": "https://www.trucknews.com/",
+      "description": "Truck News is Canada's leading trucking newspaper for the trucking industry and includes information on truckers' business needs and personal interests plus listings for truck driving jobs, used trucks, and trucking companies.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 28900
+      },
+      "image_url": "https://i1.feedspot.com/4792780.jpg?t=1669188155"
+    },
+    {
+      "title": "TruckLogics Blog",
+      "feed_url": "https://blog.trucklogics.com/feed/",
+      "website_url": "https://blog.trucklogics.com/",
+      "description": "TruckLogics is a web-based trucking management software. Browse their directory of blogs containing unique information and perception about trucking topics encircling around trucking news, truck tips, trucklogics features.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4793013.jpg?t=1609841847"
+    },
+    {
+      "title": "Roadmaster Blog - Drivers School and Trucking News",
+      "feed_url": "https://www.roadmaster.com/feed/",
+      "website_url": "https://www.roadmaster.com/blog/",
+      "description": "News and Articles about becoming a truck driver. Roadmaster is a hands-on truck driving school providing CDL Training at our locations nationwide.",
+      "followers": {
+        "facebook": 49200,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4793162.jpg?t=1609839085"
+    },
+    {
+      "title": "Truckers News",
+      "feed_url": "https://www.truckersnews.com/feed",
+      "website_url": "https://www.truckersnews.com/",
+      "description": "The latest news in the trucking industry, geared towards company drivers at Truckers News. Key topics covered are Trucking Jobs, Life, Trending Gear, How-Tos, and SheDrives. Truckers News delivers information to make life on the road easier & safer for company drivers.",
+      "followers": {
+        "facebook": 219100,
+        "twitter": 25200
+      },
+      "image_url": "https://i1.feedspot.com/4910427.jpg?t=1630068977"
+    },
+    {
+      "title": "Matrack Blog",
+      "feed_url": "https://matrackinc.com/feed/",
+      "website_url": "https://matrackinc.com/blogs/",
+      "description": "Matrack, one of the leading asset tracking, GPS tracking, trailor tracking and fleet management companies in San Francisco. We provide the best vehicle fleet management system. we strive to make the best and most reliable devices for GPS tracking.",
+      "followers": {
+        "facebook": 240,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5034059.jpg?t=1609838871"
+    },
+    {
+      "title": "Drive My Way - The latest in trucking industry news Blog",
+      "feed_url": "https://www.drivemyway.com/feed/",
+      "website_url": "https://www.drivemyway.com/blog/",
+      "description": "Drive My Way serves the trucking industry to ensure drivers find jobs that fit their lives and employers find drivers who best fit their opportunities.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2100,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4794136.jpg?t=1609839109"
+    },
+    {
+      "title": "AllTruckJobs.com Blog",
+      "feed_url": "https://www.alltruckjobs.com/blog/feed/",
+      "website_url": "https://www.alltruckjobs.com/blog/",
+      "description": "AllTruckJobs.com allows you to browse truck driver jobs, submit applications, and let trucking companies search for you!",
+      "followers": {
+        "facebook": 51200,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4793475.jpg?t=1609838874"
+    },
+    {
+      "title": "Women In Trucking Blog",
+      "feed_url": "https://www.womenintrucking.org/blog/rss.xml",
+      "website_url": "https://www.womenintrucking.org/blog",
+      "description": "A nonprofit organization that encourages the employment of women in trucking, celebrates their success, and minimizes obstacles. Blog posts cover Industry News, Life on the Road, Leadership, Driver Perspective, Health & Wellness, and Professional Development.",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 30800
+      },
+      "image_url": "https://i1.feedspot.com/5316340.jpg?t=1630069398"
+    },
+    {
+      "title": "Women In Trucking Blog",
+      "feed_url": "https://www.womenintrucking.org/blog/rss.xml",
+      "website_url": "https://www.womenintrucking.org/blog",
+      "description": "The Women In Trucking Association is a non-profit organization focused on the transportation and logistics industry. Their mission is to encourage the employment of women in the trucking industry, promote their accomplishments and minimize obstacles faced by women working in the trucking industry.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 30800
+      },
+      "image_url": "https://i1.feedspot.com/4791990.jpg?t=1609838888"
+    },
+    {
+      "title": "Women In Trucking - Drivers Blog",
+      "feed_url": "https://www.womenintrucking.org/blog/rss.xml",
+      "website_url": "https://www.womenintrucking.org/blog",
+      "description": "Ellen Voie is President of Women In Trucking, a group that encourages and supports women in the trucking industry and celebrates their successes!",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 30800
+      },
+      "image_url": "https://i1.feedspot.com/4791967.jpg?t=1609838879"
+    },
+    {
+      "title": "ExpeditersOnline.com - Expedited Trucking Owner Operator Careers and Truck Sales",
+      "feed_url": "https://www.expeditersonline.com/rss/",
+      "website_url": "https://www.expeditersonline.com/",
+      "description": "The expedited freight information center. North America's largest resource of information for individuals in the expedited, just-in-time freight industry. Stay connected to the largest marketplace and community of expedited trucking owner operators in North America!",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4792935.jpg?t=1609839081"
+    },
+    {
+      "title": "Trucks, Parts, Service",
+      "feed_url": "https://www.truckpartsandservice.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22%3A%22commentary%22%7D",
+      "website_url": "https://www.truckpartsandservice.com/commentary",
+      "description": "Truck Parts & Service is the oldest and only publication written and edited exclusively for the heavy-duty aftermarket. Truck Parts & Service helps readers keep customers trucks running by the most efficient and profitable means possible.",
+      "followers": {
+        "facebook": 923
+      },
+      "image_url": "https://i1.feedspot.com/4793438.jpg?t=1609838892"
+    },
+    {
+      "title": "Odyssey Logistics Blog",
+      "feed_url": "https://www.odysseylogistics.com/blog/feed/",
+      "website_url": "https://www.odysseylogistics.com/blog/",
+      "description": "The Odyssey Blog provides readers with up-to-date logistics news and current events, as well as years of detailed archives. From network optimization that organizes data into actionable cost efficiencies, to control tower implementations that provide greater control and visibility, Odyssey's Door-to-Done solutions help you navigate the ever-changing logistics landscape.",
+      "followers": {
+        "twitter": 753
+      },
+      "image_url": "https://i1.feedspot.com/5448173.jpg?t=1663743850"
+    },
+    {
+      "title": "Great Western Transportation Blog",
+      "feed_url": "https://www.gwtrans.com/feed/",
+      "website_url": "https://www.gwtrans.com/blog/",
+      "description": "Great Western Transportation is your complete trucking service. They will deliver personalized customer service. We have transportation solutions for all types of freight shipments.",
+      "followers": {
+        "facebook": 388,
+        "twitter": 932,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4795174.jpg?t=1609839456"
+    },
+    {
+      "title": "Western Truck Insurance Blog - Travel With Care",
+      "feed_url": "https://www.truckinsure.com/blog/feed/",
+      "website_url": "https://www.truckinsure.com/blog/",
+      "description": "Western Truck Insurance Services has evolved into a highly respected, professionally managed, truck and transportation insurance brokerage. Their mission is to provide high quality insurance and risk management by a staff dedicated to building the finest national truck insurance brokerage. They are committed to deliver exceptional value which results in more profits to our clients and companies.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 545
+      },
+      "image_url": "https://i1.feedspot.com/4794183.jpg?t=1609839443"
+    },
+    {
+      "title": "Ride Mission",
+      "feed_url": "https://ridemission.com/feed/",
+      "website_url": "https://ridemission.com/",
+      "description": "Ride Mission is an auto blog packed full of handy tips, guides, news, and reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5173556.jpg?t=1609840187"
+    },
+    {
+      "title": "Truck-Drivers-Money-Saving-Tips.com",
+      "feed_url": "https://truck-drivers-money-saving-tips.com/feed/",
+      "website_url": "https://truck-drivers-money-saving-tips.com/",
+      "description": "In telling others about us, Mike and Vicki Simons, we describe how we have blended our passion for truck driving and saving money. We believe that our frugal lifestyle and commercial driving experience serve well as a backdrop for sharing money-saving tips for professional truck drivers on Truck-Drivers-Money-Saving-Tips.com.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5448175.jpg?t=1663743866"
+    },
+    {
+      "title": "ArmadaTruckingGroup Blog",
+      "feed_url": "https://armadatrucking.com/category/blog/feed/",
+      "website_url": "https://armadatrucking.com/category/blog/",
+      "description": "Welcome To Armada Trucking Group! If you're looking for regional truck driving jobs in Los Angeles, CA we offer great flexability and benefits for our workforce.",
+      "followers": {
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/4793190.jpg?t=1609839802"
+    },
+    {
+      "title": "Schneider Jobs Blog",
+      "feed_url": "https://schneiderjobs.com/feed/blog/rss",
+      "website_url": "https://schneiderjobs.com/blog",
+      "description": "Schneider is a leading provider of premium truckload and intermodal services, and we're a company that's built to last. The blog is primarily focused around helping drivers learn about driving jobs and careers instead of about the nature of our services.",
+      "followers": {
+        "facebook": 191000,
+        "twitter": 15000,
+        "instagram": 28200
+      },
+      "image_url": "https://i1.feedspot.com/4953602.jpg?t=1609838866"
+    },
+    {
+      "title": "Trucks and Heavy Equipment Digital Magazine",
+      "feed_url": "https://trucksmag.co.za/feed/",
+      "website_url": "https://trucksmag.co.za/",
+      "description": "The bimonthly publication Trucks & Heavy Equipment, is available nationally every second month of the year and is a 'one-stop' source of news, comment and opinion for all those involved in the rapidly growing Business of Trucks. The magazine covers news about every weight segment for commercial vehicles - LCVs, medium trucks, heavy trucks and extra-heavy trucks, and buses.",
+      "followers": {
+        "facebook": 65,
+        "twitter": 529
+      },
+      "image_url": "https://i1.feedspot.com/4794387.jpg?t=1609839637"
+    },
+    {
+      "title": "Dynamic Transit | Over the Road (OTR) Trucking: A Blog for Truck Drivers",
+      "feed_url": "https://dynamictransit.com/feed/",
+      "website_url": "https://dynamictransit.com/blog/",
+      "description": "Truckers blog for over the road truck drivers. Dynamic Transit, a trucking transportation company, provides trucking tips, advice for new drivers, and more.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 367,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4793199.jpg?t=1609839105"
+    },
+    {
+      "title": "DriveABCO - Truck Driving Blog",
+      "feed_url": "https://www.driveabco.com/blog/feed/",
+      "website_url": "https://www.driveabco.com/blog/",
+      "description": "Check out our truck driving blog for freight, shipping and career news, stories and other information related to the trucking and logistics industry.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 4600,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4795153.jpg?t=1609839781"
+    },
+    {
+      "title": "Evan Transportation - Trucking & Shipping Blog",
+      "feed_url": "http://www.evantransportation.com/blog/feed/",
+      "website_url": "http://www.evantransportation.com/blog/",
+      "description": "Evan Transportation is an asset based, full service transportation and equipment provider. They specializes in next day deliveries and is experienced providing excellent service to customers in major metropolitan between New York and North Carolina.",
+      "followers": {
+        "facebook": 82,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/4792124.jpg?t=1609839791"
+    },
+    {
+      "title": "The Lead Pedal Podcast with Bruce Outridge Blog",
+      "feed_url": "https://theleadpedalpodcast.com/rss",
+      "website_url": "https://theleadpedalpodcast.com/blog",
+      "description": "The Lead Pedal Podcast aims to be a positive voice for truck drivers in the transportation industry. The Lead Pedal Podcast is a show for those in the trucking industry wanting to improve their trucking careers or businesses. We are hoping this information will help you become a professional driver faster than if you didn't know about many of these topics.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 4000,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4941004.jpg?t=1609840314"
+    },
+    {
+      "title": "Truck & Driver",
+      "feed_url": "https://www.truckanddriver.co.uk/feed/",
+      "website_url": "https://www.truckanddriver.co.uk/",
+      "description": "Truck & Driver presents the professional face of truck driving for readers who want to feel good about the vital jobs they do. From gutsy news stories to campaigns for better pay and conditions, the UK's best-selling truck magazine is always on the side of the driver. Our features cover a broad range of subjects, with need-to-know information to help drivers stay on the right side of the law and abreast of the latest legislation.",
+      "followers": {
+        "facebook": 68300,
+        "twitter": 36000,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/4793520.jpg?t=1684148541"
+    },
+    {
+      "title": "Land Line",
+      "feed_url": "https://landline.media/feed/",
+      "website_url": "https://landline.media/",
+      "description": "The top trucking news source for drivers, Land Line specializes in covering business, regulatory and legislative news affecting them. Land Line Media is the official news outlet of the Owner-Operator Independent Drivers Association specializing in trucking news for truck drivers.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/5014123.jpg?t=1669188729"
+    },
+    {
+      "title": "Len Dubois Trucking",
+      "feed_url": "http://lenduboistrucking.com/feed/",
+      "website_url": "http://lenduboistrucking.com/blog/",
+      "description": "Len Dubois Trucking is a family-run transportation and trucking company in Winnipeg. Specializing in full truck load, LTL and warehousing we can find your transportation solution.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 938
+      },
+      "image_url": "https://i1.feedspot.com/4795098.jpg?t=1609840923"
+    },
+    {
+      "title": "Baltimore Freightliner-Western Star",
+      "feed_url": "https://www.baltimorefreightliner.com/feed/",
+      "website_url": "https://www.baltimorefreightliner.com/blog/",
+      "description": "Check out the Baltimore Freightliner-Western Star Blog for News & Updates on freightliners, service, freightliner sales & parts in Maryland. Baltimore Freightliner-Western Star is an authorized dealer for new and used medium-duty and heavy-duty Freightliner and Western Star trucks and Sprinter Vans.",
+      "followers": {
+        "facebook": 158,
+        "twitter": 169
+      },
+      "image_url": "https://i1.feedspot.com/4795288.jpg?t=1609840932"
+    },
+    {
+      "title": "Trucking Partners",
+      "feed_url": "https://www.truckingpartners.com/feed/",
+      "website_url": "https://www.truckingpartners.com/blog/",
+      "description": "Trucking Partners specializes in providing freight invoice factoring solutions to motor carriers and owner-operators.",
+      "followers": {
+        "twitter": 181
+      },
+      "image_url": "https://i1.feedspot.com/5059562.jpg?t=1609841021"
+    },
+    {
+      "title": "Truck Training Schools of Ontario - Truck Training Schools of Ontario Blog",
+      "feed_url": "http://ttsao.com/feed/",
+      "website_url": "https://ttsao.com/ttsao-blog/",
+      "description": "The Truck Training Schools Association of Ontario is committed to providing the trucking industry with the highest quality driver training programs for entry-level individuals that earn and maintain public confidence, adhering to sound and ethical business practices.",
+      "followers": {
+        "facebook": 973,
+        "twitter": 2300,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4795185.jpg?t=1609841468"
+    },
+    {
+      "title": "TalkCDL - The Trucking Podcast from Truckers for Truckers",
+      "feed_url": "http://talkcdl.com/feed/",
+      "website_url": "http://talkcdl.com/",
+      "description": "TalkCDL is a Trucking Podcast from Truckers for Truckers, posting a new Trucking Podcast Episode every Friday. The Trucking Industry is in for a treat.",
+      "followers": {
+        "facebook": 422100,
+        "twitter": 267
+      },
+      "image_url": "https://i1.feedspot.com/4795230.jpg?t=1609841479"
+    },
+    {
+      "title": "Truck Report Geeks",
+      "feed_url": "https://truckreportgeeks.com/feed/",
+      "website_url": "https://truckreportgeeks.com/",
+      "description": "Truck Report Geeks is a go-to blog for truck owners and drivers seeking to stay informed about various aspects of the trucking industry. It features content on vehicle comparisons that help readers make educated purchasing decisions, maintenance advice to prolong the life of their trucks, and market trend analysis to keep up with industry changes. The blog's expert insights help truckers adapt to new challenges, maintain optimal vehicle performance, and capitalize on opportunities that can enhance their careers and operational success.",
+      "followers": {
+        "facebook": 70,
+        "twitter": 255,
+        "instagram": 56
+      },
+      "image_url": "https://i1.feedspot.com/5283428.jpg?t=1621849831"
+    },
+    {
+      "title": "PrePass Safety Alliance",
+      "feed_url": "https://www.prepassalliance.org/feed/",
+      "website_url": "https://www.prepassalliance.org/news/",
+      "description": "PrePass Safety Alliance is a non-profit public-private partnership of state agencies and trucking industry leaders devoted to the safe, secure, and efficient use of North America's highway system. Their services help increase safety, reduce delays and costs, and enhance the economic and environmental benefits that the trucking industry contributes to the nation. Discover more through their blog about the latest news, industry insights, services, resources, articles, and more.",
+      "followers": {
+        "facebook": 72500,
+        "twitter": 9800,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5448177.jpg?t=1663743878"
+    },
+    {
+      "title": "Real Women In Trucking",
+      "feed_url": "https://www.realwomenintrucking.org/blog-feed.xml",
+      "website_url": "https://www.realwomenintrucking.org/blog",
+      "description": "We are a 501 (c) 6 Non-Profit Organization. Our Mission is to empower the women of trucking and those entering the industry through outreach programs, continuing education, advocacy, mentoring, networking, and ongoing support to promote retention, encouragement, and unity between both new and seasoned female drivers.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 19000,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5448174.jpg?t=1663843073"
+    },
+    {
+      "title": "Three Horses Trailer Blog",
+      "feed_url": "https://www.3horsestrailer.com/feed/",
+      "website_url": "https://www.3horsestrailer.com/blog/",
+      "description": "Three Horses Trailer is a leading manufacturer of semi-trailers in China, including dump, flatbeds, lowboy, container, car carrier, skeleton, curtain, dropside, food trailers, car trailers, etc. And support customized services. Follow the blog to read about how-tos, vehicle functions, common uses, guides, and more.",
+      "followers": {
+        "facebook": 181
+      },
+      "image_url": "https://i1.feedspot.com/5363801.jpg?t=1642579779"
+    },
+    {
+      "title": "Smart Trucking",
+      "feed_url": "https://feeds.feedburner.com/SmartTrucking",
+      "website_url": "https://www.smart-trucking.com/blog-about-trucking/",
+      "description": "Smart Trucking is all about the trucker. Our trucker blog features our unedited thoughts and opinions about random topics in the trucking industry. Our mission is to share our passion for trucking and support the trucker, by providing the key players in this business with the tools and skills they need for ongoing career success.",
+      "followers": {
+        "facebook": 277400,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4792106.jpg?t=1609838702"
+    },
+    {
+      "title": "Trucking Blog | Truck Parking Trends, Insights & Expert Tips",
+      "feed_url": "https://bigrigparkingspaces.com/feed/",
+      "website_url": "https://bigrigparkingspaces.com/blog/",
+      "description": "The Big Rig Trucking blog shares insights about truck parking, truck parking trends, and tips and stories from OTR truckers. We provide over-the-road drivers guaranteed truck parking reservations at a secure, well-lit, gated facility. Our goal is to help alleviate stress caused by industry demands by offering a parking lot where drivers can truly rest at a fair price.",
+      "followers": {
+        "facebook": 370,
+        "twitter": 82,
+        "instagram": 88
+      },
+      "image_url": "https://i1.feedspot.com/5598723.jpg?t=1686814849"
+    },
+    {
+      "title": "Pedigree Truck Sales Blog",
+      "feed_url": "https://pedigreetrucksales.com/feed/",
+      "website_url": "https://pedigreetrucksales.com/blog/",
+      "description": "It's time to pull over, kick your feet up & read the latest news, tips, and trucker chatter. Pedigree Truck Sales blog offers readers insight into the world of semi-trucks, reefer trailers & so much more. Pedigree is the exclusive dealer of Prime Inc.'s fleet maintained, 1 owner, 18 wheelers, reefer trailers, flatbed trailers & tanker trailers.",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 4,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5763299.jpg?t=1706525115"
+    },
+    {
+      "title": "Drivewyze - Premiere Trucking Software Blog",
+      "feed_url": "https://drivewyze.com/feed/",
+      "website_url": "https://drivewyze.com/blog/",
+      "description": "Drivewyze is the best weigh station alert and bypass system for Truckers.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 1300,
+        "instagram": 610
+      },
+      "image_url": "https://i1.feedspot.com/4794091.jpg?t=1609839093"
+    },
+    {
+      "title": "Trucker Search | We help great drivers find great companies",
+      "feed_url": "https://www.truckersearch.com/blog/feed/",
+      "website_url": "https://www.truckersearch.com/blog/",
+      "description": "A nationwide employment database helping truck drivers find jobs and trucking companies find new hires.",
+      "followers": {
+        "facebook": 45900,
+        "twitter": 558
+      },
+      "image_url": "https://i1.feedspot.com/4794068.jpg?t=1609839795"
+    },
+    {
+      "title": "DATLA LOGISTICS Blog",
+      "feed_url": "https://www.datlalogistics.com/feed/",
+      "website_url": "https://www.datlalogistics.com/blog/",
+      "description": "DATLA LOGISTICS is a veteran-owned dynamic logistics company specializing in providing reliable Freight Dispatching Services and management nationwide. We are an OTR Owner-Operator Driven Company working with Class A CDL Owner-Operators & Box Truck Owner-Operators.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5473213.jpg"
+    },
+    {
+      "title": "Owner Operator Direct Blog",
+      "feed_url": "https://www.owneroperatordirect.com/blog?format=RSS",
+      "website_url": "https://www.owneroperatordirect.com/blog/",
+      "description": "Trucking news for the Owner Operator. At Owner Operator Direct, we've simplified commercial truck insurance for the owner operator by offering the best coverages, prices, claims expertise and customer service in the business.",
+      "followers": {
+        "facebook": 27800,
+        "twitter": 453,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4793055.jpg?t=1609839451"
+    },
+    {
+      "title": "Platinum Drivers Inc. - Commercial Truck Driver Staffing Blog",
+      "feed_url": "https://www.platinumdrivers.com/feed/",
+      "website_url": "https://www.platinumdrivers.com/blog/",
+      "description": "Platinum Drivers is a CDL driver placement service providing drivers in all areas of Florida, Georgia, Louisiana, Oklahoma, North Carolina and Texas.",
+      "followers": {
+        "facebook": 936,
+        "twitter": 73
+      },
+      "image_url": "https://i1.feedspot.com/4793173.jpg?t=1609839784"
+    },
+    {
+      "title": "Semi Services Blog - Trailer & Truck Equipment News",
+      "feed_url": "https://www.semiservice.com/blog/feed/",
+      "website_url": "http://www.semiservice.com/blog/",
+      "description": "Stay up-to-date on the latest semi trailer, truck, and van equipment news in the Salt Lake City, Utah area with the Semi Service blog!",
+      "followers": {
+        "facebook": 683
+      },
+      "image_url": "https://i1.feedspot.com/4795281.jpg?t=1609839788"
+    },
+    {
+      "title": "Trucking Answers",
+      "feed_url": "https://www.truckinganswersnation.com/1/feed",
+      "website_url": "https://www.truckinganswersnation.com/blog",
+      "description": "I'm Mark and I've been a professional truck driver for over 33 years. Through this blog, I am committed to providing the best information and training guides to drivers at all experience levels.",
+      "followers": {
+        "twitter": 214,
+        "instagram": 511
+      },
+      "image_url": "https://i1.feedspot.com/5340647.jpg?t=1637931409"
+    },
+    {
+      "title": "USA Breakdown",
+      "feed_url": "https://usabreakdown.com/feed/",
+      "website_url": "https://usabreakdown.com/",
+      "description": "National Semi Truck and Trailer Repair Directory. We have thousands of searches every day from Trucking companies and Owner Operators who are looking for roadside assistance.",
+      "followers": {
+        "twitter": 546
+      },
+      "image_url": "https://i1.feedspot.com/5069581.jpg?t=1609840326"
+    },
+    {
+      "title": "Freight Broker Agent School",
+      "feed_url": "https://www.freightbrokeragentschool.com/blog-feed.xml",
+      "website_url": "https://www.freightbrokeragentschool.com/",
+      "description": "Learn to become a Freight Broker or an Agent in the trucking industry.",
+      "followers": {
+        "facebook": 177
+      },
+      "image_url": "https://i1.feedspot.com/5014121.jpg?t=1609841030"
+    },
+    {
+      "title": "Truck Blog UK",
+      "feed_url": "https://truckblog.co.uk/feed/",
+      "website_url": "https://truckblog.co.uk/",
+      "description": "All things truck are welcome photos and a short description are all it takes.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 2300,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4793800.jpg?t=1684148544"
+    },
+    {
+      "title": "Commercial Trucking School Blog",
+      "feed_url": "https://www.commercialtruckingschool.com//feed/rss2",
+      "website_url": "https://www.commercialtruckingschool.com/blog",
+      "description": "Follow the specialist blog of Commercial Trucking School in Los Angeles for expert updates and tips on becoming a certified truck driver in California!",
+      "followers": {
+        "facebook": 428
+      },
+      "image_url": "https://i1.feedspot.com/4794314.jpg?t=1609841499"
+    },
+    {
+      "title": "Mid-States Utility Trailer Sales News",
+      "feed_url": "https://midstatesutility.wordpress.com/feed/",
+      "website_url": "https://midstatesutility.wordpress.com/",
+      "description": "Mid-States Utility Trailer Sales, Inc. is one of the largest semitrailer dealers in the U.S. today with four locations in Nebraska, Iowa and South Dakota.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5041290.jpg"
+    },
+    {
+      "title": "Truck Driver Center",
+      "feed_url": "https://truckdrivercenter.com/feed/",
+      "website_url": "https://truckdrivercenter.com/",
+      "description": "Truck driver center is a website guide that helps all truckers to succeed in their trucking career. And share our experience with them.",
+      "followers": {
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/5148595.jpg?t=1609841795"
+    },
+    {
+      "title": "Weigh Tec Blog",
+      "feed_url": "https://weightec.com/feed/",
+      "website_url": "https://weightec.com/blog/",
+      "description": "Weigh-Tec is a full-service industrial scale company who's driving purpose is customer service. Allow Weigh-Tec to handle all your scale needs, whether it's servicing and maintaining your existing equipment or coordinating future improvements.",
+      "followers": {
+        "facebook": 549,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5169146.jpg?t=1609841799"
+    },
+    {
+      "title": "TruckServicez Blog",
+      "feed_url": "https://www.truckservicez.com/blog/feed/",
+      "website_url": "https://www.truckservicez.com/blog/",
+      "description": "Truck servicez is directory of truck services, truck entrances, local truck repair shops, diesel mechanics, mobile mechanics, mobile tire repair near me, emergency tire services, tractor-trailer repair garages, roadside assistance, truck towing services, truck sale, roadside service, truck loan, truck wash, truck stops, trucking articles, and trucking-related services.",
+      "followers": {
+        "facebook": 796,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5087736.jpg?t=1609839123"
+    },
+    {
+      "title": "Fueloyal Blog",
+      "feed_url": "https://www.fueloyal.com/feed/",
+      "website_url": "https://www.fueloyal.com/blog/",
+      "description": "Find out the latest automotive IoT and connected vehicle solution news on Fueloyal's blog. Read more about in-vehicle and in-cloud software. Fueloyal is based in Chicago, IL. Founded in 2015, as an Automotive IoT and Connected Vehicle solution provider.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 156
+      },
+      "image_url": "https://i1.feedspot.com/4792819.jpg?t=1536575771"
+    },
+    {
+      "title": "About Truck Driving",
+      "feed_url": "https://abouttruckdriving.com/feed/",
+      "website_url": "https://abouttruckdriving.com/trucker-dump/",
+      "description": "Resources to help you understand the world of truck driving and trucking industry through the use of stories and a pathetic attempt at humor. Learn about the trucking lifestyle.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4793184.jpg?t=1609839463"
+    },
+    {
+      "title": "Apex Blog",
+      "feed_url": "https://www.apexcapitalcorp.com/feed/",
+      "website_url": "https://www.apexcapitalcorp.com/resources-blog/",
+      "description": "Apex Capital Corp covers trucking regulations, transportation news, and other information for truck drivers. The Apex blog is a trucking blog packed with news and information for truckers, small trucking companies, brokers, and more.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 1200,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4792182.jpg?t=1609841862"
+    },
+    {
+      "title": "ExpressTruckTax Blog",
+      "feed_url": "https://www.expresstrucktax.com/feed/",
+      "website_url": "https://www.expresstrucktax.com/blog/",
+      "description": "ExpressTruckTax's blog for the latest updates on e-filing IRS Federal Heavy Vehicle Use Tax Form 2290. Safely e-file your HVUT 2290 with ease!",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 1600,
+        "instagram": 483
+      },
+      "image_url": "https://i1.feedspot.com/4792739.jpg?t=1609841842"
+    },
+    {
+      "title": "Knight Transportation Blog",
+      "feed_url": "https://www.knighttrans.com/feed/",
+      "website_url": "https://www.knighttrans.com/knight-life/",
+      "description": "Knight Transportation is a publicly traded American truckload motor shipping carrier based in Phoenix, Arizona. It offers more choices for truck drivers than any other carrier in America. Each truck driver is paired with a dedicated and caring driver manager. Keep up to date on trucking industry news, trucker tips and tricks, the trucking lifestyle, and more through their blog.",
+      "followers": {
+        "facebook": 45900,
+        "twitter": 2600,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5315939.jpg?t=1629981743"
+    },
+    {
+      "title": "St. Christopher Truckers Relief Fund",
+      "feed_url": "https://truckersfund.org/feed/",
+      "website_url": "https://truckersfund.org/category/news/",
+      "description": "The St.Christopher Truckers Relief Fund is a non-profit organization that assists semi-truck drivers who's medical problems have caused financial difficulty.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 6700,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4794168.jpg?t=1609839623"
+    },
+    {
+      "title": "PowerTorque",
+      "feed_url": "https://powertorque.com.au/feed/",
+      "website_url": "https://powertorque.com.au/",
+      "description": "A bi-monthly for the Australian trucking industry taking on the tough topics and showcasing the diverse character of the trucking industry in Australia",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4794398.jpg?t=1609839735"
+    },
+    {
+      "title": "Commercial Truck Insurance Blog",
+      "feed_url": "https://commercialinssolutions.com/feed/",
+      "website_url": "https://commercialinssolutions.com/commercial-truck-insurance-owner-operators-carriers/",
+      "description": "Helping Independent Contractors and small Motor Carriers grow safely and profitably by offering the best insurance coverage and customer service in Expedited Freight, Hot Shot, LTL, Last Mile and Specialty Delivery.",
+      "followers": {
+        "facebook": 183
+      },
+      "image_url": "https://i1.feedspot.com/5032396.jpg?t=1609840892"
+    },
+    {
+      "title": "Manitoba Trucking Association News",
+      "feed_url": "https://trucking.mb.ca/feed/",
+      "website_url": "https://trucking.mb.ca/news/",
+      "description": "The Manitoba Trucking Association is an Industry Association that represents the interests of the Trucking Industry in Manitoba. The mandate of the MTA is to serve the needs of the trucking industry and its interested parties through promoting a healthy business environment and advocating for safety, education, and responsibility.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4793045.jpg?t=1609840895"
+    },
+    {
+      "title": "FleetOwner",
+      "feed_url": "https://www.fleetowner.com/for-the-driver",
+      "website_url": "https://www.fleetowner.com/for-the-driver",
+      "description": "American Trucker offers access to a large community of diverse trucking businesses providing valuable content for trucks, trailers, parts & equipment.",
+      "followers": {
+        "facebook": 15700
+      },
+      "image_url": "https://i1.feedspot.com/4793797.jpg?t=1609841838"
+    },
+    {
+      "title": "Trucking Truth",
+      "feed_url": "https://www.truckingtruth.com/trucking_blogs/feed",
+      "website_url": "https://www.truckingtruth.com/trucking_blogs/",
+      "description": "Truckingtruth's blog will help you understand the trucking industry, decide if truck driving is right for you, and get your career off to a great start! TruckingTruth is a website dedicated to helping those considering a career in truck driving.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 375
+      },
+      "image_url": "https://i1.feedspot.com/4792011.jpg?t=1609841827"
+    },
+    {
+      "title": "Freightech",
+      "feed_url": "https://www.freightech.us/feed",
+      "website_url": "https://www.freightech.us/blog",
+      "description": "Freightech blog covers industry-relates topics and helps people build a career in trucking. You will learn how to advance in your career as a truck driver as well as tips and tricks for local, regional and over the road driving.",
+      "followers": {
+        "facebook": 2500,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5285016.jpg?t=1628950492"
+    },
+    {
+      "title": "ELD Devices",
+      "feed_url": "https://elddevices.net/feed/",
+      "website_url": "https://elddevices.net/blog/",
+      "description": "A collection of articles about elogs and fleet management systems for truckers. Top providers in the market, last news and useful information.",
+      "followers": {
+        "facebook": 159,
+        "twitter": 94
+      },
+      "image_url": "https://i1.feedspot.com/5269728.jpg?t=1618493177"
+    },
+    {
+      "title": "Logiflex Blog",
+      "feed_url": "https://logiflexinc.com/blog/feed/",
+      "website_url": "https://www.arkansastrucking.com/",
+      "description": "Truck Driver Power is a mobile app that helps professional truck drivers find the information they need, connect with their peers, and advance their careers in unique and meaningful ways.",
+      "followers": {
+        "facebook": 25500,
+        "twitter": 105
+      },
+      "image_url": "https://i1.feedspot.com/5014128.jpg?t=1609839777"
+    },
+    {
+      "title": "Arkansas Trucking Association",
+      "feed_url": "https://www.arkansastrucking.com/?format=feed&type=rss",
+      "website_url": "https://www.arkansastrucking.com/",
+      "description": "The Arkansas Trucking Association serves to protect the interests of trucking companies, both in regulatory and political arenas.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4794412.jpg?t=1609840321"
+    },
+    {
+      "title": "K&J Trucking Blog",
+      "feed_url": "https://blog.drivekandj.com/rss.xml",
+      "website_url": "https://semitruckdriver.com/",
+      "description": "Learn more about the issues you care about with the K&J Trucking blog. Whether you are a truck driver, K & J customer, vendor or trucking enthusiast, welcome home. K & J Trucking has been owned and operated in Sioux Falls, South Dakota since Dave Koch founded it in 1979.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/4794077.jpg?t=1609840928"
+    },
+    {
+      "title": "Semi Truck Driver",
+      "feed_url": "https://semitruckdriver.com/feed/",
+      "website_url": "https://semitruckdriver.com/",
+      "description": "New Truck Driver Tips and helpful Veteran Trucker Insider Secrets all within ONE website! My name is Michael, I have been an Over The Road Truck Driver since January of 2000. I have primarily had experience in automobile transportation, dry box freight, as well as a couple of years of experience in Inter-modal Shipping Containers.",
+      "followers": {
+        "twitter": 634
+      },
+      "image_url": "https://i1.feedspot.com/5051937.jpg?t=1609841815"
+    },
+    {
+      "title": "Trucking Podcast - Helping You Make More Money and Rediscover The Adventure",
+      "feed_url": "https://www.truckingpodcast.com/feed/",
+      "website_url": "https://www.truckingpodcast.com/",
+      "description": "We are truckers, gear heads, garage dwellers and lovers of nearly anything with wheels and horsepower.",
+      "followers": {
+        "facebook": 699
+      },
+      "image_url": "https://i1.feedspot.com/4794417.jpg?t=1609841831"
+    },
+    {
+      "title": "Singh Lending Solutions",
+      "feed_url": "https://www.singhlending.com/feed/",
+      "website_url": "https://www.singhlending.com/blog/",
+      "description": "For Owner Operators and Businesses Singh Lending Solutions delivers hassle-free commercial truck and trailer financing at California, USA.",
+      "followers": {
+        "facebook": 75
+      },
+      "image_url": "https://i1.feedspot.com/5136569.jpg?t=1609839302"
+    },
+    {
+      "title": "Commercial Truck Trader Blog",
+      "feed_url": "https://www.commercialtrucktrader.com/blog/",
+      "website_url": "https://www.commercialtrucktrader.com/blog/",
+      "description": "Trucker News, Events, Videos, Pics, How To Articles, Semi Truck features. NextTruck is a division of TAP Publishing Company focused on the trucking industry. NextTruck is also a great resource for truckers to find industry services.",
+      "followers": {
+        "facebook": 347700,
+        "twitter": 10700,
+        "instagram": 23400
+      },
+      "image_url": "https://i1.feedspot.com/4794375.jpg?t=1609838803"
+    },
+    {
+      "title": "Only, Inc.",
+      "feed_url": "https://www.onlyinc.com/feed/",
+      "description": "Covers information on dump trucking, equipment sales industry updates, tips, resources and more. Only, Inc. is a one stop marketing source for commercial trucks and heavy equipment.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5504414.jpg?t=1675751097"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "category": "Canadian Staffing",
+  "source_url": "https://rss.feedspot.com/canadian_staffing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Liberty Staffing Blog",
+      "feed_url": "https://www.libertystaffing.ca/blog/rss.xml",
+      "website_url": "https://www.libertystaffing.ca/blog",
+      "description": "Liberty Staffing Services has been providing staffing solutions for businesses and job-seekers to southern Ontario since 1999. Liberty Staffing Services makes finding your next job easy with our Job Search tools.",
+      "followers": {
+        "facebook": 817,
+        "twitter": 4900,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4731330.jpg?t=1607939934"
+    },
+    {
+      "title": "LRO Staffing Blog",
+      "feed_url": "https://www.lrostaffing.com/feed/",
+      "website_url": "https://www.lrostaffing.com/blog/",
+      "description": "LRO Staffing is a full-service search & staffing agency in Ottawa, ON that specializes in the recruitment and placement of permanent, contract, and temporary positions.",
+      "followers": {
+        "facebook": 952,
+        "twitter": 618,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5259006.jpg?t=1616073858"
+    },
+    {
+      "title": "Stream Source",
+      "feed_url": "https://streamsource.ca/feed/",
+      "website_url": "https://streamsource.ca/blog/",
+      "description": "Stream Source is Canada's Indigenous Recruitment & Staffing Agency. The company specializes in a wide range of workforce solutions to its clients including recruitment services, contractor management, and payroll services.",
+      "followers": {
+        "facebook": 26
+      },
+      "image_url": "https://i1.feedspot.com/5259019.jpg?t=1616074741"
+    },
+    {
+      "title": "Winters Technical Staffing Blog",
+      "feed_url": "https://www.winterstaffing.com/feed/",
+      "website_url": "https://www.winterstaffing.com/blog/",
+      "description": "Winters Technical Staffing is a full-service recruitment & placement agency offering contract, full-time and temporary positions for qualified individuals in Toronto & the GTA. Follow our blog to learn more about effective job searching, how to succeed at your interview and information about various careers.",
+      "followers": {
+        "facebook": 424,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/5259020.jpg?t=1616074968"
+    }
+  ]
+}

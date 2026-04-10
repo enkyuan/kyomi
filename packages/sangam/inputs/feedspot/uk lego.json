@@ -1,0 +1,77 @@
+{
+  "category": "UK Lego",
+  "source_url": "https://rss.feedspot.com/uk_lego_rss_feeds",
+  "feeds": [
+    {
+      "title": "Brickset: LEGO set guide and database",
+      "feed_url": "https://brickset.com/feed/",
+      "website_url": "https://brickset.com/",
+      "description": "Brickset is the best online guide to LEGO sets old and new. It is the best LEGO database on the web, and to keep it updated with news, set information, photos and so on.",
+      "followers": {
+        "facebook": 47800,
+        "twitter": 51800,
+        "instagram": 86000
+      },
+      "image_url": "https://i1.feedspot.com/4241321.jpg?t=1614073157"
+    },
+    {
+      "title": "Brick Fanatics",
+      "feed_url": "https://www.brickfanatics.com/feed/",
+      "website_url": "https://www.brickfanatics.com/",
+      "description": "Brick Fanatics is the website dedicated to all things LEGO, bringing you the latest news and reviews, as well as the best features and builds from the LEGO community. Brick Fanatics was formed by Richard Hayes in 2010 and is today owned and managed by Tiro Media Ltd.",
+      "followers": {
+        "twitter": 32500,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/4908377.jpg?t=1614073163"
+    },
+    {
+      "title": "BricksFanz",
+      "feed_url": "https://bricksfanz.com/feed/",
+      "website_url": "https://bricksfanz.com/",
+      "description": "UK-based LEGO news site, offering a diverse selection of LEGO news, reviews and impressions",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 5500,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4919896.jpg?t=1614073168"
+    },
+    {
+      "title": "Bricks McGee Blog",
+      "feed_url": "https://www.bricksmcgee.com/blog/feed/",
+      "website_url": "https://www.bricksmcgee.com/blog/",
+      "description": "Bespoke LEGO model design and build, and LEGO\u00ae events and workshops for museums, libraries and companies.",
+      "followers": {
+        "facebook": 938,
+        "twitter": 605,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4908388.jpg?t=1614073177"
+    },
+    {
+      "title": "BRICKTANKS Blogs",
+      "feed_url": "https://bricktanks.co.uk/blogs/news.atom",
+      "website_url": "https://bricktanks.co.uk/blogs/news",
+      "description": "Passionate about military history, Lego, and replica construction kits of military vehicles, WW2 tanks, aircraft and other vehicles.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 342,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4908418.jpg?t=1614073185"
+    },
+    {
+      "title": "The New Elementary",
+      "feed_url": "https://feeds.feedburner.com/TheNewElementary",
+      "website_url": "https://www.newelementary.com/",
+      "description": "A blog about new LEGO parts with set reviews, building techniques and brick model ideas. You'll find posts about new pieces, new or returning colours, LEGO history.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 6800,
+        "instagram": 50800
+      },
+      "image_url": "https://i1.feedspot.com/2016995.jpg?t=1614073172"
+    }
+  ]
+}

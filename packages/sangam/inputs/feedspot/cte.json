@@ -1,0 +1,71 @@
+{
+  "category": "CTE",
+  "source_url": "https://rss.feedspot.com/cte_rss_feeds",
+  "feeds": [
+    {
+      "title": "Advance CTE Blog",
+      "feed_url": "https://careertech.org/feed/",
+      "website_url": "https://careertech.org/blog/",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5564312.jpg?t=1683783069"
+    },
+    {
+      "title": "CTeLearning Blog",
+      "feed_url": "https://www.ctelearning.com//feed/rss2",
+      "website_url": "https://www.ctelearning.com/blog",
+      "description": "Follow our blog page for the latest news on CTeLearning from students, teachers and collaborators. Contact us today for more information on our courses!",
+      "followers": {
+        "facebook": 97,
+        "twitter": 165,
+        "instagram": 36
+      },
+      "image_url": "https://i1.feedspot.com/5564601.jpg?t=1683791245"
+    },
+    {
+      "title": "We Go Public \u00bb CTE",
+      "feed_url": "https://www.wegopublic.com/category/programs/cte/feed/",
+      "website_url": "https://www.wegopublic.com/category/programs/cte/",
+      "description": "We share all that is wonderful about traditional public schools and promote our member districts. #PublicSchoolsProvide choices and opportunities!",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 6500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5564606.jpg?t=1683791161"
+    },
+    {
+      "title": "Houston ISD Blog \u00bb Career Technical Education",
+      "feed_url": "https://blogs.houstonisd.org/news/category/careertechnical-education-cte/feed/",
+      "website_url": "https://blogs.houstonisd.org/news/category/careertechnical-education-cte/",
+      "description": "The Houston Independent School District is the largest school district in Texas and the eighth-largest in the United States. It serves over 189,000 students at 274 campuses and is one of the largest employers in Houston, with about 27,000 team members.",
+      "followers": {
+        "facebook": 92700,
+        "twitter": 172800
+      },
+      "image_url": "https://i1.feedspot.com/5564602.jpg?t=1683791133"
+    },
+    {
+      "title": "CTE Policy Watch",
+      "feed_url": "https://ctepolicywatch.acteonline.org/atom.xml",
+      "website_url": "https://ctepolicywatch.acteonline.org/",
+      "description": "The Association for Career and Technical Education is the largest national education association dedicated to the advancement of education that prepares youth and adults for careers. Our mission is to provide educational leadership in developing a competitive workforce.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5564604.jpg?t=1683791220"
+    },
+    {
+      "title": "Edmentum",
+      "feed_url": "https://www.edmentum.com/intl/articles/",
+      "website_url": "https://www.edmentum.com/intl/articles/",
+      "description": "Creating innovative, proven learning technology solutions in partnership with educators to ignite student potential.",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 6400,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5564365.jpg?t=1683784916"
+    }
+  ]
+}

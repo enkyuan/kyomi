@@ -1,0 +1,103 @@
+{
+  "category": "Canadian Running",
+  "source_url": "https://rss.feedspot.com/canadian_running_rss_feeds",
+  "feeds": [
+    {
+      "title": "Canadian Running Magazine",
+      "feed_url": "https://runningmagazine.ca/feed/",
+      "website_url": "https://runningmagazine.ca/",
+      "description": "Canadian Running Magazine for running news, nutrition & training tips, gear, and race reviews for the Canadian running community.",
+      "followers": {
+        "facebook": 118900,
+        "twitter": 37300,
+        "instagram": 40500
+      },
+      "image_url": "https://i1.feedspot.com/4399780.jpg?t=1599814361"
+    },
+    {
+      "title": "Canada Running Series Blog",
+      "feed_url": "http://canadarunningseries.com/blog/feed/",
+      "website_url": "https://canadarunningseries.com/blog/",
+      "description": "Canada Running Series (CRS) is Canada's premier running series, composed currently of eight races from Quebec to British Columbia. Their blog is a selection of Canada's best runs.",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 13500,
+        "instagram": 19600
+      },
+      "image_url": "https://i1.feedspot.com/4461622.jpg?t=1599814939"
+    },
+    {
+      "title": "BMO Vancouver Marathon Blog",
+      "feed_url": "https://bmovanmarathon.ca/feed",
+      "website_url": "https://bmovanmarathon.ca/blog",
+      "description": "BMO Vancouver Marathon race weekend features races for everyone with Vancouver's only marathon, a fast Half Marathon, 8KM race, Relay, Walk and Kids Run. The mission is to deliver a marathon event that promotes Vancouver's active lifestyle, engaging participants and community partners to create a positive and memorable experience.",
+      "followers": {
+        "facebook": 56800,
+        "twitter": 9200,
+        "instagram": 26500
+      },
+      "image_url": "https://i1.feedspot.com/4671834.jpg?t=1599820135"
+    },
+    {
+      "title": "Soiled Sport",
+      "feed_url": "https://soiledsport.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://soiledsport.blogspot.com/",
+      "description": "Trail Running in London, Ontario and surrounding area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4675678.jpg?t=1599822718"
+    },
+    {
+      "title": "Do Things Always",
+      "feed_url": "https://www.dothingsalways.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.dothingsalways.com/",
+      "description": "I'm Susan, originally from Scotland now transplanted to beautiful Calgary, AB. Join me for adventures in running, fitness and the great outdoors. I'm sharing my journey from 5K to ultra and way out of my comfort zone.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4847741.jpg?t=1607329557"
+    },
+    {
+      "title": "GMacSpurr Coaching",
+      "feed_url": "https://gmacspurr.com/feed/",
+      "website_url": "https://gmacspurr.com/blog/",
+      "description": "GMacSpurr Coaching features Online running and nutrition coaching tips and articles.",
+      "followers": {
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5049726.jpg?t=1611581450"
+    },
+    {
+      "title": "Victoria Marathon",
+      "feed_url": "https://www.runvictoriamarathon.com/news?format=rss",
+      "website_url": "https://www.runvictoriamarathon.com/news",
+      "description": "The Victoria Marathon Society is a non-profit organization that was incorporated in 1982. Explore the blog to get knowledge of marathon events.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 4400,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4672292.jpg?t=1620382805"
+    },
+    {
+      "title": "Streamline Athletes",
+      "feed_url": "https://medium.com/feed/streamline-athletes",
+      "website_url": "https://medium.com/streamline-athletes",
+      "description": "The resource for university-bound track and field and XC student-athletes.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5043437.jpg?t=1611581349"
+    },
+    {
+      "title": "Michelle The Runnner",
+      "feed_url": "https://michelletherunner.com/feed/",
+      "website_url": "https://michelletherunner.com/",
+      "description": "Michelle is a competitive runner and fitness enthusiast in Toronto, Ontario. When she is not running, she is coaching others to achieve their fitness goals and find happiness in health.",
+      "followers": {
+        "facebook": 116,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4851874.jpg?t=1611581360"
+    }
+  ]
+}

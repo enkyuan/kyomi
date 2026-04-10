@@ -1,0 +1,87 @@
+{
+  "category": "Columbus Blue Jackets",
+  "source_url": "https://rss.feedspot.com/columbus_blue_jackets_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Cannon",
+      "feed_url": "https://www.jacketscannon.com/feed/",
+      "website_url": "https://www.jacketscannon.com/",
+      "description": "Your best source for quality Columbus Blue Jackets news, rumors, analysis, stats and scores from the fan perspective. Columbus Blue Jackets community at SBNation with in-depth analysis and game-day coverage.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5185048.jpg?t=1598246567"
+    },
+    {
+      "title": "1st Ohio Battery",
+      "feed_url": "https://www.1stohiobattery.com/rss.xml",
+      "website_url": "https://www.1stohiobattery.com/",
+      "description": "News, in-depth analysis, prospects, trade breakdowns and more for the Blue Jackets and NHL at large. Hometown coverage of the Columbus Blue Jackets. Where Columbus Blue Jackets fans gather.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 12600,
+        "instagram": 735
+      },
+      "image_url": "https://i1.feedspot.com/5373626.jpg?t=1645263621"
+    },
+    {
+      "title": "NBC4 \u00bb Columbus Blue Jackets",
+      "feed_url": "https://www.nbc4i.com/sports/blue-jackets/feed/",
+      "website_url": "https://www.nbc4i.com/sports/blue-jackets/",
+      "description": "Get the latest news and updates of the Columbus Blue Jackets hockey team, team players, rumors, game schedules and insights. NBC4 is Columbus' top source for news, weather, sports and entertainment.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 191800,
+        "instagram": 64200
+      },
+      "image_url": "https://i1.feedspot.com/5373625.jpg?t=1645263618"
+    },
+    {
+      "title": "Mega Sports News \u00bb Columbus Blue Jackets",
+      "feed_url": "https://megasportsnews.com/category/columbus-blue-jackets/feed/",
+      "website_url": "https://megasportsnews.com/category/columbus-blue-jackets/",
+      "description": "Get the latest news and updates from Columbus Blue Jackets including gameplays, real-time scores, news about players and coaches, team lineups and rumors. Mega Sports News is your network for multiple sports and entertainment.",
+      "followers": {
+        "facebook": 260,
+        "twitter": 512
+      },
+      "image_url": "https://i1.feedspot.com/5373634.jpg?t=1645268451"
+    },
+    {
+      "title": "Union and Blue",
+      "feed_url": "https://unionandblue.com/feed/",
+      "website_url": "https://unionandblue.com/",
+      "description": "The ultimate home for Columbus Blue Jackets news, rumors, updates, trades, signings, injuries, commentary, analysis, and more! Union and Blue is a FanSided entirely dedicated to the Columbus Blue Jackets. We talk the good, bad and the ugly of the CBJ.",
+      "followers": {
+        "facebook": 733,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5185388.jpg?t=1598246090"
+    },
+    {
+      "title": "Daily Faceoff \u00bb Columbus Blue Jacket",
+      "feed_url": "https://www.dailyfaceoff.com/teams/columbus-blue-jackets/news",
+      "website_url": "https://www.dailyfaceoff.com/teams/columbus-blue-jackets/news",
+      "description": "Get Columbus Blue Jacket insights & analysis, news, starting players, team lineups, betting advice & more!",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 9400,
+        "instagram": 145300
+      },
+      "image_url": "https://i1.feedspot.com/5373632.jpg?t=1645263662"
+    },
+    {
+      "title": "ESPN \u00bb Columbus Blue Jackets Hockey",
+      "feed_url": "https://www.espn.in/nhl/team/_/name/cbj/columbus-blue-jackets",
+      "website_url": "https://www.espn.in/nhl/team/_/name/cbj/columbus-blue-jackets",
+      "description": "Visit ESPN to view the latest Columbus Blue Jackets news, scores, stats, standings, rumors, and more. ESPN is one of the leading sports broadcasters across the globe.",
+      "followers": {
+        "facebook": 24200000,
+        "twitter": 59200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/5373629.jpg?t=1645267120"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "category": "G Suite",
+  "source_url": "https://rss.feedspot.com/g_suite_rss_feeds",
+  "feeds": [
+    {
+      "title": "Google Workspace Updates",
+      "feed_url": "https://feeds.feedburner.com/GoogleAppsUpdates",
+      "website_url": "https://workspaceupdates.googleblog.com/",
+      "description": "G Suite Updates is the official feed from the G Suite team that provides essential information about new features and improvements for G Suite customers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/22483.jpg"
+    },
+    {
+      "title": "Lexnet Blog",
+      "feed_url": "https://www.lexnetcg.com/feed/",
+      "website_url": "https://www.lexnetcg.com/blog/",
+      "description": "Covers blog topics about Google suite and other products and services from the Googleverse. Lexnet has resources and articles on G Suite Enterprise, G Suite CRM, G Suite pricing and much more.",
+      "followers": {
+        "facebook": 353,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4918872.jpg?t=1620644396"
+    },
+    {
+      "title": "Google Workspace Blog",
+      "feed_url": "https://blog.google/products/workspace/rss/",
+      "website_url": "https://blog.google/products/workspace/",
+      "description": "Get the latest news, updates, product info, and insights about Google Workspace on the official Google Workspace blog.",
+      "followers": {
+        "facebook": 822800,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4918865.jpg?t=1620644552"
+    },
+    {
+      "title": "G Suite Admins Blog",
+      "feed_url": "https://www.appsadmins.com/blog/rss.xml",
+      "website_url": "https://www.appsadmins.com/blog",
+      "description": "A Daily Blog for G Suite Admins and Google Cloud Platform Admins with how-to articles, Business App Reviews and cloud migration advice. Apps Admins provides solutions to help your business connect, collaborate, communicate, and grow.",
+      "followers": {
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/5298135.jpg?t=1625131170"
+    },
+    {
+      "title": "Rise Digital Blog",
+      "feed_url": "https://risedigital.tech/blog?format=rss",
+      "website_url": "https://risedigital.tech/blog",
+      "description": "Google Workspace tips, tutorials, and resources to make you more productive with Gmail, Google Calendar, Google Meet & Chat, Google Drive, Google Docs, Sheets, Slides, Forms, Sites, and more. At Rise Digital, we're Google Workspace experts that help companies across Canada improve productivity & performance with Google Workspace.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 990
+      },
+      "image_url": "https://i1.feedspot.com/5354617.jpg?t=1639738823"
+    },
+    {
+      "title": "Wursta Blog",
+      "feed_url": "https://wursta.com/feed/",
+      "website_url": "https://wursta.com/about/blog/",
+      "description": "Tips & tricks on how to improve secure collaboration along with news & updates about G Suite & the Google Cloud Platform. Wursta helps organizations maximize their use of the Cloud.",
+      "followers": {
+        "facebook": 162,
+        "twitter": 194
+      },
+      "image_url": "https://i1.feedspot.com/5354620.jpg?t=1639740480"
+    },
+    {
+      "title": "Goldy Arora Blog",
+      "feed_url": "https://www.goldyarora.com/feed",
+      "website_url": "https://www.goldyarora.com/",
+      "description": "Goldy Arora is a G-Suite Certified Consultant who has been helping businesses seamlessly move to G Suite since 2009. Through this blog. he writes about Google Workspace Setup, Migration, Support, Tips, Scripts, and Tools.",
+      "followers": {
+        "twitter": 694
+      },
+      "image_url": "https://i1.feedspot.com/5354618.jpg?t=1639740061"
+    }
+  ]
+}

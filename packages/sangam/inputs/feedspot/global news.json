@@ -1,0 +1,308 @@
+{
+  "category": "Global News",
+  "source_url": "https://rss.feedspot.com/globalnews_rss_feeds",
+  "feeds": [
+    {
+      "title": "Global News",
+      "feed_url": "https://globalnews.ca/feed/",
+      "website_url": "https://globalnews.ca/",
+      "description": "Global News provides breaking news & current latest Canadian news headlines; national weather forecasts & predictions, local news videos, money and financial news; sports stats and scores.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/880246.jpg?t=1665559876"
+    },
+    {
+      "title": "Global News \u00bb U.S.",
+      "feed_url": "https://globalnews.ca/us-news/feed/",
+      "website_url": "https://globalnews.ca/us-news/",
+      "description": "U.S. News - breaking news and headlines from the U.S. on GlobalNews.ca",
+      "followers": {
+        "instagram": 333000
+      },
+      "image_url": "https://i1.feedspot.com/8541965.jpg"
+    },
+    {
+      "title": "Global News \u00bb Politics",
+      "feed_url": "https://globalnews.ca/politics/feed/",
+      "website_url": "https://globalnews.ca/politics/",
+      "description": "Global News Politics - breaking news on municipal and federal politics & current Canadian political news headlines from GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb National",
+      "feed_url": "https://globalnews.ca/national/feed/",
+      "website_url": "https://globalnews.ca/national/",
+      "description": "Global News",
+      "followers": {
+        "instagram": 333000
+      },
+      "image_url": "https://i1.feedspot.com/8541966.jpg"
+    },
+    {
+      "title": "Global News \u00bb Canada",
+      "feed_url": "https://globalnews.ca/canada/feed/",
+      "website_url": "https://globalnews.ca/canada/",
+      "description": "All articles about Canada from Global News.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb World",
+      "feed_url": "https://globalnews.ca/world/feed/",
+      "website_url": "https://globalnews.ca/world/",
+      "description": "Get breaking international news & current world news headlines; international money news and business news on GlobalNews.ca.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Entertainment",
+      "feed_url": "https://globalnews.ca/entertainment/feed/",
+      "website_url": "https://globalnews.ca/entertainment/",
+      "description": "Get breaking celebrity news & Hollywood gossip headlines; TV listings on GlobalNews.ca.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Lifestyle",
+      "feed_url": "https://globalnews.ca/lifestyle/feed/",
+      "website_url": "https://globalnews.ca/lifestyle/",
+      "description": "Global News Lifestyle - breaking news & current news headlines on GlobalNews.ca",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Environment",
+      "feed_url": "https://globalnews.ca/environment/feed/",
+      "website_url": "https://globalnews.ca/environment/",
+      "description": "Keep up with Environment News, Videos & Headlines on Global News.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Money",
+      "feed_url": "https://globalnews.ca/money/feed/",
+      "website_url": "https://globalnews.ca/money/",
+      "description": "Global News Money - breaking financial and money news; latest stock market, business news headlines; national financial news from GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Tech",
+      "feed_url": "https://globalnews.ca/tech/feed/",
+      "website_url": "https://globalnews.ca/tech/",
+      "description": "Keep up with breaking tech and gadget news; get the latest news and updates on all things tech and digital on GlobalNews.ca.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Sports",
+      "feed_url": "https://globalnews.ca/sports/feed/",
+      "website_url": "https://globalnews.ca/sports/",
+      "description": "Global News Sports - breaking sports news & scores, stats and results; NHL, MLB, NBA, CFL news and updates on GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4884107.jpg?t=1753338835"
+    },
+    {
+      "title": "Global News \u00bb Health",
+      "feed_url": "https://globalnews.ca/health/feed/",
+      "website_url": "https://globalnews.ca/health/",
+      "description": "Global News Health - breaking health and lifestyle news & current medical headlines from GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Edmonton",
+      "feed_url": "https://globalnews.ca/edmonton/feed/",
+      "website_url": "https://globalnews.ca/edmonton/",
+      "description": "Global TV News Edmonton; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Halifax",
+      "feed_url": "https://globalnews.ca/halifax/feed/",
+      "website_url": "https://globalnews.ca/halifax/",
+      "description": "Global TV News Halifax & Maritimes ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Montreal",
+      "feed_url": "https://globalnews.ca/montreal/feed/",
+      "website_url": "https://globalnews.ca/montreal/",
+      "description": "Globalnews.ca offers Canadians from coast to coast a host of news and information - from breaking news in their community to deep engaging content that puts complex world issues in perspective. Get Montreal breaking news & headlines, local weather forecasts, sports, and traffic reports on Global News.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Okanagan",
+      "feed_url": "https://globalnews.ca/okanagan/feed/",
+      "website_url": "https://globalnews.ca/okanagan/",
+      "description": "Global TV News Okanagan ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb London",
+      "feed_url": "https://globalnews.ca/london/feed/",
+      "website_url": "https://globalnews.ca/london/",
+      "description": "Global TV News London ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Hamilton",
+      "feed_url": "https://globalnews.ca/hamilton/feed/",
+      "website_url": "https://globalnews.ca/hamilton/",
+      "description": "Global TV News Hamilton ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Calgary",
+      "feed_url": "https://globalnews.ca/calgary/feed/",
+      "website_url": "https://globalnews.ca/calgary/",
+      "description": "Global TV News Calgary ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Lethbridge",
+      "feed_url": "https://globalnews.ca/lethbridge/feed/",
+      "website_url": "https://globalnews.ca/lethbridge/",
+      "description": "Global TV News Lethbridge ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Toronto",
+      "feed_url": "https://globalnews.ca/toronto/feed/",
+      "website_url": "https://globalnews.ca/toronto/",
+      "description": "Global TV News Toronto ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Winnipeg",
+      "feed_url": "https://globalnews.ca/winnipeg/feed/",
+      "website_url": "https://globalnews.ca/winnipeg/",
+      "description": "Get Winnipeg breaking news & headlines, local weather forecasts, sports and traffic reports from Global News.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4884071.jpg?t=1752820144"
+    },
+    {
+      "title": "Global News \u00bb Regina",
+      "feed_url": "https://globalnews.ca/regina/feed/",
+      "website_url": "https://globalnews.ca/regina/",
+      "description": "Get Regina breaking news & headlines, local weather forecasts, sports and traffic reports from Global News.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Saskatoon",
+      "feed_url": "https://globalnews.ca/saskatoon/feed/",
+      "website_url": "https://globalnews.ca/saskatoon/",
+      "description": "Get Saskatoon breaking news & headlines, local weather forecasts, sports and traffic reports from Global News.",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb BC & Vancouver",
+      "feed_url": "https://globalnews.ca/bc/feed/",
+      "website_url": "https://globalnews.ca/bc/",
+      "description": "Global TV News BC ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca",
+      "followers": {
+        "facebook": 233000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828853"
+    },
+    {
+      "title": "Global News \u00bb Peterborough",
+      "feed_url": "https://globalnews.ca/peterborough/feed/",
+      "website_url": "https://globalnews.ca/peterborough/",
+      "description": "Global TV News Peterborough ; breaking news & headlines, local weather forecasts, sports and traffic reports; your source for 7 day weather conditions from GlobalNews.ca",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 971600
+      },
+      "image_url": "https://i1.feedspot.com/4883658.jpg?t=1750828858"
+    },
+    {
+      "title": "Global News \u00bb Perspectives",
+      "feed_url": "https://globalnews.ca/perspectives/feed/",
+      "website_url": "https://globalnews.ca/perspectives/",
+      "description": "Global News Perspectives - breaking news & current news headlines on GlobalNews.ca",
+      "followers": {
+        "instagram": 333000
+      },
+      "image_url": "https://i1.feedspot.com/8541964.jpg"
+    }
+  ]
+}

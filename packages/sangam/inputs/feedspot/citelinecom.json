@@ -1,0 +1,99 @@
+{
+  "category": "Citeline.com",
+  "source_url": "https://rss.feedspot.com/citeline_rss_feeds",
+  "feeds": [
+    {
+      "title": "Citeline \u00bb Generics Bulletin",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/generics-bulletin/",
+      "website_url": "https://insights.citeline.com/generics-bulletin/",
+      "description": "Stay updated with the latest news and insights on the generics market. Explore Citeline's Generics Bulletin for industry trends and analysis.",
+      "followers": {
+        "twitter": 3900,
+        "instagram": 287
+      },
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb Business",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/generics-bulletin/business/",
+      "website_url": "https://insights.citeline.com/generics-bulletin/business/",
+      "description": "Get in-depth analysis on business strategies, deals, manufacturing developments, and earnings reports in the generics, biosimilars and value-added medicines industry on Generics Bulletin",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb HBW Insight",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/hbw-insight/",
+      "website_url": "https://insights.citeline.com/hbw-insight/",
+      "description": "All HBW Insight from Citeline.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb In Vivo",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/in-vivo/",
+      "website_url": "https://insights.citeline.com/in-vivo/",
+      "description": "Explore expert insights and analysis in biopharma with In Vivo. Stay updated on the latest trends, innovations, and market dynamics in the healthcare sector.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb Medtech Insight",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/medtech-insight/",
+      "website_url": "https://insights.citeline.com/medtech-insight/",
+      "description": "Stay ahead in the Medtech industry with expert insights and analysis. Explore trends, innovations, and market intelligence from Citeline's Medtech Insight.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb Clinical Trials",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/scrip/r-and-d/clinical-trials/",
+      "website_url": "https://insights.citeline.com/scrip/r-and-d/clinical-trials/",
+      "description": "All articles about Clinical Trials from Citeline.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb Strategy",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/scrip/business/strategy/",
+      "website_url": "https://insights.citeline.com/scrip/business/strategy/",
+      "description": "Discover the latest business strategies and market analyses. Get insights into effective strategies and industry trends with Scrip.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb Business",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/scrip/business/",
+      "website_url": "https://insights.citeline.com/scrip/business/",
+      "description": "Explore comprehensive insights into business deals, financing, and strategic planning. Stay informed about earnings trends, manufacturing processes, supply chain management, and stock watch updates. Dive into the world of start-ups and SMEs, along with legal and intellectual property considerations.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb Scrip",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/scrip/",
+      "website_url": "https://insights.citeline.com/scrip/",
+      "description": "All articles about Scrip from Citeline.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    },
+    {
+      "title": "Citeline \u00bb Pink Sheet",
+      "feed_url": "https://insights.citeline.com/arc/outboundfeeds/rss/category/pink-sheet/",
+      "website_url": "https://insights.citeline.com/pink-sheet/",
+      "description": "All articles about Pink Sheet from Citeline.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7882753.jpg?t=1741086037"
+    }
+  ]
+}

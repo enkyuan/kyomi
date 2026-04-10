@@ -1,0 +1,98 @@
+{
+  "category": "Cleveland Music",
+  "source_url": "https://rss.feedspot.com/cleveland_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cleveland Rocks Blog",
+      "feed_url": "https://clevelandrocksppf.org/feed/",
+      "website_url": "https://clevelandrocksppf.org/blog/",
+      "description": "Read the latest Cleveland Rocks: Past, Present, and Future updates. The mission of the organization is to support and preserve Cleveland's popular music culture and enrich local social welfare and economic growth by stimulating music-centered initiatives.",
+      "followers": {
+        "facebook": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5460977.jpg?t=1667194462"
+    },
+    {
+      "title": "Cleveland Classical",
+      "feed_url": "https://clevelandclassical.com/feed/",
+      "website_url": "https://clevelandclassical.com/",
+      "description": "Supporting and advancing classical music in Northeast Ohio through information, advocacy, and education. Northeast Ohio's one-stop source for classical music previews, reviews, and comprehensive concert listings. The mission of ClevelandClassical.com is to support and advance classical music in Northeast Ohio through information, advocacy, and education.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5460980.jpg?t=1668016625"
+    },
+    {
+      "title": "The Cleveland Pops Orchestra Blog",
+      "feed_url": "https://www.clevelandpops.com/feed/",
+      "website_url": "https://www.clevelandpops.com/blog/",
+      "description": "The Cleveland Pops Orchestra with Carl Topilow performs the highest quality symphonic pop music to entertain and enrich a wide and diverse audience and provides educational programs to develop an enduring appreciation of music, both enhancing the richness and vibrancy of Northeast Ohio living.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 409,
+        "instagram": 858
+      },
+      "image_url": "https://i1.feedspot.com/5460979.jpg?t=1667194666"
+    },
+    {
+      "title": "Ultimate Classic Rock",
+      "feed_url": "https://ultimateclassicrock.com/feed/",
+      "website_url": "https://ultimateclassicrock.com/category/news/",
+      "description": "Ultimate Classic Rock is the world's largest classic rock site, exploring the past, present, and future of music's most legendary and enduring artists. Classic rock music news, interviews, pictures, songs, and lists from classic rock artists.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 342900,
+        "instagram": 39400
+      },
+      "image_url": "https://i1.feedspot.com/67940.jpg?t=1604486696"
+    },
+    {
+      "title": "Cleveland Country Magazine",
+      "feed_url": "https://clevelandcountrymagazine.com/feed/",
+      "website_url": "https://clevelandcountrymagazine.com/",
+      "description": "Cleveland Country Magazine (CCM) is devoted to country music, both local and national, and a country way of life. CCM features country music news, country dancing, and concert news along with many more regular features. Stay updated with the latest happenings in Country music with Cleveland Country Magazine.",
+      "followers": {
+        "facebook": 103500,
+        "twitter": 781,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5460975.jpg?t=1668020052"
+    },
+    {
+      "title": "Cleveland Scene \u00bb Music",
+      "feed_url": "https://www.clevescene.com/cleveland/Rss.xml?oid=1392924",
+      "website_url": "https://www.clevescene.com/music",
+      "description": "Cleveland local music, concerts, music events, ticket alerts, music venues, music festivals, and music series news. The Cleveland Scene has been dedicated to providing fearless, high-quality local journalism, especially in times of crisis.",
+      "followers": {
+        "facebook": 145200,
+        "twitter": 135000,
+        "instagram": 159800
+      },
+      "image_url": "https://i1.feedspot.com/5460973.jpg?t=1667194729"
+    },
+    {
+      "title": "CityMusic Cleveland Chamber Orchestra News",
+      "feed_url": "https://www.citymusiccleveland.org/news?format=rss",
+      "website_url": "https://www.citymusiccleveland.org/news",
+      "description": "CityMusic Cleveland is a professional chamber orchestra dedicated to making classical music accessible through free concerts and innovative programming. It has built partnerships with communities across Northeast Ohio, bringing exceptional performances to longtime classical music lovers and first-time audience members alike.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 1200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5460976.jpg?t=1667194590"
+    },
+    {
+      "title": "Michael McFarland Blog",
+      "feed_url": "https://michaelmcfarlandmusic.com/feed/",
+      "website_url": "https://michaelmcfarlandmusic.com/blog/",
+      "description": "Michael McFarland's Blog has aggressively catchy melodies paired with soul-filled lyrics in musical architect Michael McFarland's refreshing take on indie rock. He is an anthemic Indie Rock Singer-Songwriter from Cleveland, Ohio.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5460974.jpg?t=1667194695"
+    }
+  ]
+}

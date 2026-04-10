@@ -22,11 +22,14 @@ describe("feeds.service", () => {
           feedTitle: "Example",
           customTitle: null as string | null,
           link: "https://ex.com/" as string | null,
+          folderId: "folder_1" as string | null,
+          folderName: "Unsorted" as string | null,
           subscribedAt: createdAt,
         },
       ]),
     );
-    const innerJoin = mock(() => ({ where }));
+    const leftJoin = mock(() => ({ where }));
+    const innerJoin = mock(() => ({ leftJoin }));
     const from = mock(() => ({ innerJoin }));
     const select = mock(() => ({ from }));
     const fakeDb = { select } as unknown as Parameters<typeof listSubscribedFeeds>[0];
@@ -40,6 +43,8 @@ describe("feeds.service", () => {
         title: "Example",
         customTitle: null,
         link: "https://ex.com/",
+        folderId: "folder_1",
+        folderName: "Unsorted",
         subscribedAt: "2026-03-01T12:00:00.000Z",
       },
     ]);

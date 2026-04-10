@@ -1,0 +1,75 @@
+{
+  "category": "Fort Wayne News",
+  "source_url": "https://rss.feedspot.com/fort_wayne_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WANE 15",
+      "feed_url": "https://www.wane.com/feed/",
+      "website_url": "https://www.wane.com/",
+      "description": "We feature local Ft. Wayne news & weather stories, and we do what we do to make Ft. Wayne & the rest of Indiana a better place to live.",
+      "followers": {
+        "facebook": 240900,
+        "twitter": 74900,
+        "instagram": 34300
+      },
+      "image_url": "https://i1.feedspot.com/5133529.jpg?t=1669277672"
+    },
+    {
+      "title": "Today's Catholic",
+      "feed_url": "https://todayscatholic.org/feed/",
+      "website_url": "https://todayscatholic.org/",
+      "description": "Get local News, updates, and announcements from the Bishop and the Diocese of Fort Wayne. Today's Catholic is a diversified news content delivery brand that includes a website, a digital edition, and an app in addition to the printed newspaper serving the communities of Fort Wayne and South Bend.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3800,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5463271.jpg?t=1668401372"
+    },
+    {
+      "title": "The Waynedale News",
+      "feed_url": "https://waynedalenews.com/feed/",
+      "website_url": "https://waynedalenews.com/",
+      "description": "The Waynedale News is one of the few remaining locally-owned newspapers in Indiana. Here at The Waynedale News, our mission is to sustain, unite and enhance the Waynedale community and surrounding areas. Read breaking news, sports, local events, and area entertainment written by community authors.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 4800,
+        "instagram": 304
+      },
+      "image_url": "https://i1.feedspot.com/5462264.jpg?t=1667391227"
+    },
+    {
+      "title": "21Alive",
+      "feed_url": "https://wpta21.com/feed/",
+      "website_url": "https://www.21alivenews.com/",
+      "description": "ABC21 WPTA is your source for breaking news and severe weather coverage, plus news, weather and sports from Fort Wayne and surrounding communities.",
+      "followers": {
+        "facebook": 124200,
+        "twitter": 64700
+      },
+      "image_url": "https://i1.feedspot.com/5126529.jpg?t=1625742044"
+    },
+    {
+      "title": "The Journal Gazette",
+      "feed_url": "https://www.journalgazette.net/section?template=rss&profile=&mime=xml",
+      "website_url": "https://www.journalgazette.net/",
+      "description": "The Journal Gazette is locally owned newspaper in Fort Wayne covering news, sports and local entertainment.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 21000,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5139507.jpg?t=1623157432"
+    },
+    {
+      "title": "FortWayne.com",
+      "feed_url": "https://www.fortwayne.com/feed",
+      "website_url": "http://www.fortwayne.com/",
+      "description": "FortWayne.com is dedicated to bringing you everything you need to be a part of the Fort Wayne community and beyond.",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5139511.jpg?t=1669373531"
+    }
+  ]
+}

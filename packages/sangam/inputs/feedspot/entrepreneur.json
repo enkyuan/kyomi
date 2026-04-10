@@ -1,0 +1,938 @@
+{
+  "category": "Entrepreneur",
+  "source_url": "https://rss.feedspot.com/entrepreneur_rss_feeds",
+  "feeds": [
+    {
+      "title": "Entrepreneur.com",
+      "feed_url": "https://www.entrepreneur.com/latest.rss",
+      "website_url": "https://www.entrepreneur.com/latest",
+      "description": "Get the latest news, updates, and business affairs as they happen. Entrepreneur seeks to inspire, inform and celebrate entrepreneurs. We offer real solutions to the challenges you face as an entrepreneur, including tips, tools, and insider news to help build - and grow - your business.",
+      "followers": {
+        "twitter": 3600000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4425104.jpg?t=1599311687"
+    },
+    {
+      "title": "Seth's Blog",
+      "feed_url": "https://seths.blog/feed/",
+      "website_url": "https://seths.blog/",
+      "description": "Hi. I'm Seth Godin. I'm a teacher, and I do projects. For more than thirty years, I've been trying to turn on lights, inspire people and teach them how to level up. Topics covered are marketing, tribes and respect.",
+      "followers": {
+        "facebook": 521299,
+        "twitter": 739800,
+        "instagram": 412500
+      },
+      "image_url": "https://i1.feedspot.com/5270736.jpg?t=1633325456"
+    },
+    {
+      "title": "Gary Vaynerchuk Blog",
+      "feed_url": "https://garyvaynerchuk.com/feed/",
+      "website_url": "https://garyvaynerchuk.com/blog/",
+      "description": "Gary Vaynerchuk is a serial entrepreneur and serves as the Chairman of VaynerX and the CEO of VaynerMedia. Gary is considered one of the leading global minds on what's next in culture, relevance, and the internet. Known as 'GaryVee' he is described as one of the most forward thinkers in business.",
+      "followers": {
+        "facebook": 7300000,
+        "twitter": 3100000,
+        "instagram": 11000000
+      },
+      "image_url": "https://i1.feedspot.com/5269995.jpg?t=1618572959"
+    },
+    {
+      "title": "Mike Michalowicz Blog",
+      "feed_url": "https://mikemichalowicz.com/feed/",
+      "website_url": "https://mikemichalowicz.com/blog/",
+      "description": "Mike Michalowicz is the entrepreneur behind three multimillion-dollar companies and is the author of Profit First, Clockwork, The Pumpkin Plan, and his newest book, Fix This Next. Mike is a former small business columnist for The Wall Street Journal and regularly travels the globe as as an entrepreneurial advocate. To learn more about Mike and get access to a treasure trove of entrepreneurial tips, strategies & advice follow this blog feed.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 31200
+      },
+      "image_url": "https://i1.feedspot.com/4529876.jpg?t=1620283945"
+    },
+    {
+      "title": "Young Upstarts",
+      "feed_url": "https://www.youngupstarts.com/feed/",
+      "website_url": "https://www.youngupstarts.com/",
+      "description": "All about entrepreneurship, intrapreneurship, ideas, innovation, and small business. Young Upstarts is an exciting opportunity that supports young people aged 16-24 to set up their own small businesses. We dare young people to believe they can be successful entrepreneurs. We encourage them to turn their thoughts into a working business idea.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/122627.jpg?t=1640588041"
+    },
+    {
+      "title": "Soul of an Entrepreneur Blog",
+      "feed_url": "https://authordebbailey.com/feed/",
+      "website_url": "https://authordebbailey.com/",
+      "description": "I'm Deborah A. Bailey, AKA 'Coach Deb' on my Women Entrepreneurs Radio podcast. I'm a writer, but for the most part, I am a storyteller. I love to bring stories to life - real stories of the guests I interview on my podcast, the life experiences I write about, and the characters I create in my fictional worlds.",
+      "followers": {
+        "facebook": 778,
+        "twitter": 882,
+        "instagram": 218
+      },
+      "image_url": "https://i1.feedspot.com/4528608.jpg?t=1600236070"
+    },
+    {
+      "title": "The Fun Entrepreneur",
+      "feed_url": "https://www.thefunentrepreneur.com/feed/",
+      "website_url": "https://www.thefunentrepreneur.com/",
+      "description": "If you want to find out how to make running a business more fun then check out The Fun Entrepreneur's handy advice to start, grow and run a business.",
+      "followers": {
+        "facebook": 389,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/4528649.jpg?t=1600235213"
+    },
+    {
+      "title": "OnEntrepreneur Entrepreneurship, Startup and Business",
+      "feed_url": "https://onentrepreneur.com/feed/",
+      "website_url": "https://onentrepreneur.com/",
+      "description": "OnEntrepreneur is a media which explores the world of Entrepreneurship, Business, Startups, Marketing and other closely related fields.",
+      "followers": {
+        "facebook": 160,
+        "twitter": 647
+      },
+      "image_url": "https://i1.feedspot.com/4719494.jpg?t=1600236371"
+    },
+    {
+      "title": "Her Business",
+      "feed_url": "https://www.herbusiness.co.ke/feed/",
+      "website_url": "https://www.herbusiness.co.ke/",
+      "description": "A Magazine for young and savvy women entrepreneurs in Kenya to Launch, Grow and Expand their businesses.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 5000,
+        "instagram": 148
+      },
+      "image_url": "https://i1.feedspot.com/4862844.jpg?t=1600235298"
+    },
+    {
+      "title": "Female Entrepreneur Association Blog",
+      "feed_url": "https://femaleentrepreneurassociation.com/feed/",
+      "website_url": "https://femaleentrepreneurassociation.com/the-blog/",
+      "description": "An international hub for female entrepreneurs to get inspired and empowered to turn their ideas into a reality and build successful businesses. We publish inspiring stories about female entrepreneurs from around the world.",
+      "followers": {
+        "facebook": 797500,
+        "twitter": 14000,
+        "instagram": 257000
+      },
+      "image_url": "https://i1.feedspot.com/779943.jpg?t=1606457912"
+    },
+    {
+      "title": "The Total Entrepreneurs",
+      "feed_url": "https://thetotalentrepreneurs.com/feed/",
+      "website_url": "https://thetotalentrepreneurs.com/",
+      "description": "TheTotalEntrepreneurs is a weblog for emerging entrepreneurs, startups and business gurus seeking new ways of exploring the internet world, new marketing strategies, latest business news etc. We provide relevant information, tips and business news for entrepreneurs. Also grant entrepreneurs interviews, share success stories and new technology trends.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/4771024.jpg?t=1755768651"
+    },
+    {
+      "title": "She Owns It Blog",
+      "feed_url": "https://sheownsit.com/feed/",
+      "website_url": "https://sheownsit.com/",
+      "description": "Welcome to She Owns it! My name is Melissa Stewart. I'm a coffee-drinking, side hustle-juggling, entrepreneur-enabling, purveyor of possibility. Behind every successful woman is her story and that's what She Owns It is all about. Empowering women to write their own success stories.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 122300,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7949712/page/43289/logo_1691426171.png"
+    },
+    {
+      "title": "Epic Launch",
+      "feed_url": "https://www.epiclaunch.com/feed/",
+      "website_url": "https://www.epiclaunch.com/",
+      "description": "Hi. I'm Jeff Wiener. I'm going to show you how to launch a business, improve profits, and ultimately, how to create wealth. I've built many businesses over my career, all from the ground up. I've also sold businesses. I started my largest business in 1991, ran the company for almost 28-years, built it to a 50-person operation, and sold the company in 2017 to private equity for 8-figures.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5270746.jpg?t=1620279872"
+    },
+    {
+      "title": "Brian Solis",
+      "feed_url": "https://briansolis.com/feed/",
+      "website_url": "https://briansolis.com/category/articles/",
+      "description": "Brian Solis is a globally recognized, independent digital analyst and anthropologist. He is also an award-winning author, prominent blogger/writer, and world-renowned keynote speaker. He is Global Innovation Evangelist at Salesforce, the global leader in Customer Relationship Management (CRM). His work at Salesforce focuses on thought leadership and research that explores digital transformation, innovation and disruption, CX, commerce, and the cognitive enterprise.",
+      "followers": {
+        "facebook": 60500,
+        "twitter": 271300,
+        "instagram": 64500
+      },
+      "image_url": "https://i1.feedspot.com/25654.jpg?t=1618811589"
+    },
+    {
+      "title": "Startup Stories - Mixergy",
+      "feed_url": "https://mixergy.com/?feed=mixergy_feed",
+      "website_url": "https://mixergy.com/",
+      "description": "Andrew asks challenging questions, which leads to real stories behind how startups made it.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 36800
+      },
+      "image_url": "https://i1.feedspot.com/4528755.jpg?t=1745431026"
+    },
+    {
+      "title": "Enterprise Podcast Network",
+      "feed_url": "https://feedpress.me/ePodcastNetwork",
+      "website_url": "https://epodcastnetwork.com/category/blog/",
+      "description": "Inspiring & informing entrepreneurs and business owners",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4528591.jpg?t=1745431027"
+    },
+    {
+      "title": "Lilie Blog",
+      "feed_url": "https://entrepreneurship.rice.edu/feed",
+      "website_url": "https://entrepreneurship.rice.edu/blog",
+      "description": "The Liu Idea Lab for Innovation and Entrepreneurship (Lilie) is the home of experiential learning and co-curricular activities in entrepreneurship and innovation at Rice University. Our mission is to equip Rice students with both entrepreneurial skills and the entrepreneurial mindset to prepare them to be entrepreneurs and innovators in whatever industry they choose.",
+      "followers": {
+        "facebook": 773,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5392148.jpg?t=1650343934"
+    },
+    {
+      "title": "C. Wordsworth",
+      "feed_url": "https://cwordsworth.com/feed/",
+      "website_url": "https://cwordsworth.com/",
+      "description": "Hello there, welcome to Club Wordsworth! This website is created to share the stories for the nobody to help us as an entrepreneur and as a person.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5126863.jpg?t=1600236590"
+    },
+    {
+      "title": "The CEO Views",
+      "feed_url": "https://theceoviews.com/feed/",
+      "website_url": "https://theceoviews.com/",
+      "description": "The CEO Views aims at providing the perfect platform for entrepreneurs to connect with the peers of their industry. Our passion and thirst for knowledge in the field of business and technology have been the dominant reason we have emerged and continue to thrive in the marketplace.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 1000,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5286679.jpg?t=1622458102"
+    },
+    {
+      "title": "The Entrepreneur's Source Blog",
+      "feed_url": "http://entrepreneurssource.com/blog/feed/",
+      "website_url": "https://entrepreneurssource.com/blog/",
+      "description": "The Entrepreneur's Source has over 30 years of experience in Alternative Career Coaching that can transform your life from Employment to Empowerment.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4528744.jpg?t=1646462322"
+    },
+    {
+      "title": "Sramana Mitra",
+      "feed_url": "http://www.sramanamitra.com/feed",
+      "website_url": "https://www.sramanamitra.com/entrepreneurship-case-studies",
+      "description": "Sramana Mitra's Strategy Blog written from the cultural context of Silicon Valley and Entrepreneurship.",
+      "followers": {
+        "facebook": 23300,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4476271.jpg?t=1671431623"
+    },
+    {
+      "title": "The Multifaceted Journey",
+      "feed_url": "https://satishjawale.blogspot.com/feeds/posts/default",
+      "website_url": "https://satishjawale.blogspot.com/",
+      "description": "Welcome to the captivating world of Satish Jawale, a remarkable individual who wears multiple hats with exceptional grace. Satish is a technocrat, author, and Director of IT Operations, possessing a wealth of expertise in the ever-evolving realm of technology. Beyond his professional accomplishments, he is an avid blogger, an adventurous biker, and most importantly, As an entrepreneur, influencer, speaker, and leader, Satish's journey is nothing short of inspiring.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7245001.jpg?t=1707217447"
+    },
+    {
+      "title": "Alberta Women Entrepreneurs Blog",
+      "feed_url": "https://www.awebusiness.com/blog?format=RSS",
+      "website_url": "https://www.awebusiness.com/blog/",
+      "description": "Are you an entrepreneur who is passionate about your business, committed to your success and prepared to do what it takes to realize your dream?Alberta Women Entrepreneurs (AWE) provides tools to help women across Alberta succeed in business.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 10300,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4529452.jpg?t=1600235249"
+    },
+    {
+      "title": "Entrepreneurship Life",
+      "feed_url": "https://feeds.feedburner.com/entrepreneurshiplife/feed",
+      "website_url": "https://www.entrepreneurshiplife.com/",
+      "description": "Entrepreneurship Life is a blog dedicated to providing information, advice, and resources for entrepreneurs and small business owners. The blog covers a wide range of topics, including business finance, leadership, technology, and productivity. It aims to create a community of like-minded individuals, offering tools and insights to help them succeed in their entrepreneurial ventures. The focus on both business strategies and the entrepreneur's lifestyle makes it a comprehensive resource for aspiring and established entrepreneurs.",
+      "followers": {
+        "facebook": 637,
+        "twitter": 692
+      },
+      "image_url": "https://i1.feedspot.com/4529394.jpg?t=1752654540"
+    },
+    {
+      "title": "Blogtrepreneur",
+      "feed_url": "https://www.blogtrepreneur.com/feed/",
+      "website_url": "https://www.blogtrepreneur.com/",
+      "description": "Blogtrepreneur.com is a leading Entrepreneurship Blog, helping you turn your entrepreneurial dream into a reality with the absolute latest tips, news, and advice! We exist to provide the insight and knowledge necessary for entrepreneurs and business owners to make their entrepreneurial dreams a reality.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1293898.jpg?t=1650350027"
+    },
+    {
+      "title": "Foundr",
+      "feed_url": "https://foundr.com/feed",
+      "website_url": "https://foundr.com/articles",
+      "description": "Foundr is the go-to resource for helping today's entrepreneurs build tomorrow's leading businesses. We are an independently published global media and education company. We work with the greatest founders of our time, distilling their lessons into magazines, blogs, podcasts, books, and courses. We're about actionable advice, not theory. our mission is to build a household name entrepreneurial brand that impacts 10's of millions of entrepreneurs every single week with our content and bring true entrepreneurial education to the masses to drive humanity forward.",
+      "followers": {
+        "facebook": 978000,
+        "twitter": 133200,
+        "instagram": 3900000
+      },
+      "image_url": "https://i1.feedspot.com/5270737.jpg?t=1618830651"
+    },
+    {
+      "title": "BE Lean Blog",
+      "feed_url": "https://www.beleanbusiness.com/blog?format=rss",
+      "website_url": "https://www.beleanbusiness.com/blog",
+      "description": "Hi! I'm Brad Eisenberg. I'm a business operations consultant and growth strategist. I help founders, CEOs, and small business owners see what's REALLY happening in their business, fix what isn't working, and create custom, scalable operating systems so that they can get out of the weeds and actually grow their business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5392146.jpg?t=1650351054"
+    },
+    {
+      "title": "Location Independent Entrepreneurship The Tropical MBA",
+      "feed_url": "https://feeds.fireside.fm/tropicalmba/rss",
+      "website_url": "https://tropicalmba.com/articles",
+      "description": "Location Independent Entrepreneurship. Start And Grow A Global Business From Your Laptop.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 17800
+      },
+      "image_url": "https://i1.feedspot.com/1306272.jpg?t=1600234914"
+    },
+    {
+      "title": "LiftFund Blog",
+      "feed_url": "https://www.liftfund.com/feed/",
+      "website_url": "https://www.liftfund.com/blog/",
+      "description": "LiftFund is a non-profit organization that helps finance new small business and startup companies. Get small business loans, SBA loans, and microloans in Texas and South Eastern USA.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 1000,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4528729.jpg?t=1600235050"
+    },
+    {
+      "title": "Shopkeepers Insight Blog",
+      "feed_url": "https://shopkeepersinsight.com/feed/",
+      "website_url": "https://shopkeepersinsight.com/blog/",
+      "description": "An entrepreneurial blog targeted at small businesses and those with a small business mindset. We are changing the way Entrepreneurs see Business!",
+      "followers": {
+        "facebook": 93,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5228590.jpg?t=1608191025"
+    },
+    {
+      "title": "Pango Financial Blog",
+      "feed_url": "https://pangofinancial.com/blog/feed/",
+      "website_url": "https://pangofinancial.com/blog/",
+      "description": "Insights for Entrepreneurial success. You'll find business resources, financing resources, company featured updates and success stories.Pango Financial is the leader in providing online and on-the-go launch and growth solutions to entrepreneurs and small businesses at the lowest cost without compromising value. Our mission is to help your business dreams come true - for less!",
+      "followers": {
+        "facebook": 157,
+        "twitter": 458
+      },
+      "image_url": "https://i1.feedspot.com/4574980.jpg?t=1615015463"
+    },
+    {
+      "title": "Vlad's Newsletter",
+      "feed_url": "https://www.vladsnewsletter.com/feed",
+      "website_url": "https://www.vladsnewsletter.com/",
+      "description": "A newsletter about modern entrepreneurship, AI, business, and meaningful success. Click to read Vlad's Newsletter, by Vladyslav Podoliako, a Substack publication with thousands of subscribers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8522241.jpg?t=1753049880"
+    },
+    {
+      "title": "Both Sides of the Table",
+      "feed_url": "https://bothsidesofthetable.com/feed",
+      "website_url": "https://bothsidesofthetable.com/",
+      "description": "Perspectives of a 2x entrepreneur turned VC at @UpfrontVC, the largest and most active early-stage fund in Southern California.",
+      "followers": {
+        "twitter": 333500
+      },
+      "image_url": "https://i1.feedspot.com/4468161.jpg?t=1600240729"
+    },
+    {
+      "title": "Chris Ducker Blog",
+      "feed_url": "https://chrisducker.com/feed/",
+      "website_url": "https://chrisducker.com/blog",
+      "description": "Chris is a bestselling author, keynote speaker, serial entrepreneur, biz coach, blogger and podcaster! Chris Ducker helps entrepreneurs catapult their small business into the 21st century by utilizing 'New Business' marketing strategies such as blogging, online video, podcasting, outsourcing, social media, and more!",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 49900,
+        "instagram": 35000
+      },
+      "image_url": "https://i1.feedspot.com/5270739.jpg?t=1618830233"
+    },
+    {
+      "title": "Women on Business",
+      "feed_url": "https://feeds.feedblitz.com/WomenonBusiness",
+      "website_url": "https://www.womenonbusiness.com/",
+      "description": "Women on Business, is an award-winning online destination for the news and information women need to be successful in the business world from an international team of contributors. Business women can be a powerful network online. The goal of Women on Business is to see that power grow and to broaden the online discussion between today's male and female business thought leaders.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 39300
+      },
+      "image_url": "https://i1.feedspot.com/1458469.jpg?t=1669791149"
+    },
+    {
+      "title": "Fernando Raymond Blog",
+      "feed_url": "https://www.fernandoraymond.com/feed/",
+      "website_url": "https://www.fernandoraymond.com/blog/",
+      "description": "Digital Entrepreneurship Blog sharing how to live the location independent, digital nomadic lifestyle and work online while traveling with a laptop. Fernando Raymond is passionate about promoting digital entrepreneurship, delivering and teaching profitable and powerful marketing strategies and 'industry best practices' based on the principles of Honesty, Integrity, and Transparency.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5392150.jpg?t=1650348455"
+    },
+    {
+      "title": "NoHatDigital.com",
+      "feed_url": "https://www.nohatdigital.com/feed/",
+      "website_url": "https://www.nohatdigital.com/",
+      "description": "Our mission is to be on the cutting edge of online marketing, to innovate and find bold new ways to drive online traffic and conversions, to test these methods at unprecedented scale, and to teach the results of this testing for free to anyone willing to put in the work to learn them through our internships and the NoHatDigital community.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 838
+      },
+      "image_url": "https://i1.feedspot.com/5024017.jpg?t=1600236421"
+    },
+    {
+      "title": "The Mastering Entrepreneurship Blog",
+      "feed_url": "https://masteringentrepreneurship.blog.jbs.cam.ac.uk/feed/",
+      "website_url": "https://masteringentrepreneurship.blog.jbs.cam.ac.uk/",
+      "description": "The goal of the Mastering Entrepreneurship blog is to encourage dialogue about the challenges of entrepreneurship and to present reliable solutions to shared problems. By spreading the word about the reality of the entrepreneurial journey we can increase awareness and help entrepreneurs recognize obstacles for what they are, necessary learning steps on the road to success.",
+      "followers": {
+        "facebook": 228,
+        "twitter": 3000,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/5296836.jpg?t=1624861909"
+    },
+    {
+      "title": "ShowMeDamani",
+      "feed_url": "https://showmedamani.com/feed/",
+      "website_url": "https://showmedamani.com/blogs/",
+      "description": "An Investor, Entrepreneur and Diver. As a door to door salesman, my journey of knocking on over 100,000 homes, 20,000 businesses, recruiting & training 1000s of sales agents, seriously influenced my outlook towards consumer psychology, marketing & entrepreneurship. Today, I employ the hard-earned lessons of selling energy contracts on the streets of Texas, Illinois, New York, etc. to help startup founders understand their customers,sell their products & services, negotiate contracts & much more.",
+      "followers": {
+        "facebook": 323,
+        "twitter": 10400,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5043183.jpg?t=1600235097"
+    },
+    {
+      "title": "Orestis Biz Blog",
+      "feed_url": "https://orestisbiz.wordpress.com/feed/",
+      "website_url": "https://orestisbiz.wordpress.com/blog/",
+      "description": "What if there really were a series of simple, easily teachable, and very duplicatable techniques, you could learn to quickly build your success, in Network Marketing. Would you be interested to learn those skills? If you answer is yes then let the journey begins.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4952141.jpg?t=1600236455"
+    },
+    {
+      "title": "Think Entrepreneurship",
+      "feed_url": "https://www.thinkentrepreneurship.com/feed/",
+      "website_url": "https://www.thinkentrepreneurship.com/blog-2/",
+      "description": "Think Entrepreneurship is a resource to both inspire and help entrepreneurs in their ventures. The blog and content will be an invaluable tool for any business. We provide free tips, advice, and inspiration for Entrepreneurs. Learn about online business, business software, and ways to stay motivated.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5270744.jpg?t=1618829961"
+    },
+    {
+      "title": "Center for Entrepreneurship Blog",
+      "feed_url": "https://cfe.umich.edu/category/blog/feed/",
+      "website_url": "https://cfe.umich.edu/category/blog/",
+      "description": "The mission of The Center for Entrepreneurship (CFE) is to inspire and transform the Michigan community into entrepreneurial thinkers and doers. The CFE is an innovation hub where the ideas, people, resources, and technology meet and create the future.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 5800,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5392149.jpg?t=1650343941"
+    },
+    {
+      "title": "OkDork Blog",
+      "feed_url": "https://okdork.com/blog/feed/",
+      "website_url": "https://okdork.com/blog/",
+      "description": "Hola, I am the Chief Sumo at Sumo Group - where we help entrepreneurs kick more ass. Before that, I was employee #30 at Facebook,#4 at Mint, and worked at Intel. This site is about actionable business advice for entrepreneurs and businesspeople. Learn how to start a business, marketing, and more. I've failed and succeeded over the years, and these are my stories.",
+      "followers": {
+        "facebook": 39900,
+        "twitter": 164900
+      },
+      "image_url": "https://i1.feedspot.com/4767560.jpg?t=1606814779"
+    },
+    {
+      "title": "Braid Creative & Consulting Blog",
+      "feed_url": "https://braidcreative.com/feed/",
+      "website_url": "https://braidcreative.com/blog/",
+      "description": "Branding & visioning for creative entrepreneurs to close the gap between their dream & their actual creative business vision.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 4400,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/1100806.jpg?t=1600236412"
+    },
+    {
+      "title": "Entrepreneurship The Secrets of Entrepreneurship",
+      "feed_url": "https://www.entrepreneurshipsecret.com/category/entrepreneurship/feed/",
+      "website_url": "https://www.entrepreneurshipsecret.com/category/entrepreneurship/",
+      "description": "Get detailed articles on Importance of Entrepreneurship, Sources of Business Ideas, Feasibility Reports, Characteristics of Services, Types of Entrepreneurs etc.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 3000,
+        "instagram": 53
+      },
+      "image_url": "https://i1.feedspot.com/4528652.jpg?t=1600233956"
+    },
+    {
+      "title": "Entrepreneur's Handbook",
+      "feed_url": "https://entrepreneurshandbook.co/feed",
+      "website_url": "https://ehandbook.com/",
+      "description": "Hi, I'm Dave. In 2014, I started Entrepreneur's Handbook to write stories about cool startups, the entrepreneurship process, tech innovations, and design theory. Entrepreneur's Handbook is a publication dedicated to helping entrepreneurs succeed. It features founder stories, design articles, startup deep dives, hard life experiences, advice, and creative thinking.",
+      "followers": {
+        "facebook": 645,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4865667.jpg?t=1650350920"
+    },
+    {
+      "title": "Epic Brand Storytelling Blog",
+      "feed_url": "http://turndog.co/feed/",
+      "website_url": "http://turndog.co/blog/",
+      "description": "Literally... I'm all about transparency and honesty, and I strive to share every aspect of this writing & entrepreneurial journey I'm on with you.",
+      "followers": {
+        "facebook": 212,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5024027.jpg?t=1600235262"
+    },
+    {
+      "title": "TheBrandBoy.com Blog",
+      "feed_url": "https://thebrandboy.com/feed/",
+      "website_url": "https://thebrandboy.com/blog/",
+      "description": "TheBrandboy.com is a creative Business blog on business ideas, Marketing, Advertising, Naming idea and Technology for Entrepreneur and Marketer.",
+      "followers": {
+        "facebook": 575,
+        "twitter": 91,
+        "instagram": 395
+      },
+      "image_url": "https://i1.feedspot.com/4720118.jpg?t=1600233877"
+    },
+    {
+      "title": "Inspirery",
+      "feed_url": "https://inspirery.com/feed/",
+      "website_url": "https://inspirery.com/",
+      "description": "Inspirery features interviews with entrepreneurs and executives. I've always been interested in how people make money and I especially love to hear people who are following their dreams talk about what they do. I hope the stories here inspire you to go for it, no matter what your passion is.",
+      "followers": {
+        "facebook": 31,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/5294082.jpg?t=1623997422"
+    },
+    {
+      "title": "The Business Goals",
+      "feed_url": "https://thebusinessgoals.com/feed/",
+      "website_url": "https://thebusinessgoals.com/",
+      "description": "The basic goal of 'The Business Goals' is to help the business community in achieving their business goals and objectives by providing the authentic and latest business tips, ideas, news, and trends. The Business Goals will help entrepreneurs, startups, and people who want to make money online or make money from home by adopting legitimate ways.",
+      "followers": {
+        "facebook": 477,
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/5175883.jpg?t=1650345968"
+    },
+    {
+      "title": "HBSBlog",
+      "feed_url": "https://www.hbsblog.ca/blog-feed.xml",
+      "website_url": "https://www.hbsblog.ca/stories",
+      "description": "Humble Beginning Stories | EST. 2017 HBS is an INCLUSIVE ecosystem where inspirational and diverse stories are shared by ENTREPRENEURS & COMMUNITY INFLUENCERS, DIRECTORS, MENTORS, VETERANS, CIVIL SERVANTS ETC whose stories haven't been heard. Engaging stories from various communities: First Nations, LGBTTTQQIAA, Minorities, Diaspora and Person with a Disability etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/fsppublisher/9105869/page/4955585/logo_1739995873.jpg"
+    },
+    {
+      "title": "The Entrepreneurial Mind",
+      "feed_url": "https://drjeffcornwall.com/feed/",
+      "website_url": "https://drjeffcornwall.com/",
+      "description": "A digital platform where entrepreneurs & small business owners can get the answers they need to launch and grow their businesses.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/585499.jpg?t=1600235157"
+    },
+    {
+      "title": "Penelope Trunk Blog",
+      "feed_url": "https://feeds.feedburner.com/BrazenCareerist",
+      "website_url": "https://blog.penelopetrunk.com/",
+      "description": "Hi! I'm Penelope Trunk. I am the founder of four start-ups and I write. A lot. I'm a full-time writer so I did not have to leave my apartment. And I focus on giving career advice instead of writing about myself. I started writing career advice for a new generation of workers just as Generation Y was becoming a hot topic.",
+      "followers": {
+        "twitter": 106400
+      },
+      "image_url": "https://i1.feedspot.com/8315.jpg?t=1650350856"
+    },
+    {
+      "title": "Rocket Business Builder",
+      "feed_url": "https://www.rocketbusinessbuilder.com/feed/",
+      "website_url": "https://www.rocketbusinessbuilder.com/",
+      "description": "Advice and tips on how to start and grow your own business. Become an entrepreneur. Learn how to start your own home-based business.",
+      "followers": {
+        "facebook": 377
+      },
+      "image_url": "https://i1.feedspot.com/4898537.jpg?t=1600235303"
+    },
+    {
+      "title": "Prabin Gautam Blog",
+      "feed_url": "https://prabingautam.com.au/feed/",
+      "website_url": "https://prabingautam.com.au/blog/",
+      "description": "Helping you to achieve business, sales and marketing success faster.",
+      "followers": {
+        "facebook": 484,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5024023.jpg?t=1600236082"
+    },
+    {
+      "title": "The Wise Entrepreneur",
+      "feed_url": "https://www.thewiseentrepreneur.co.ug/feed/",
+      "website_url": "https://www.thewiseentrepreneur.co.ug/",
+      "description": "Clayton W. L. Mwaka is a Ugandan chartered accountant, organizational consultant, motivational speaker, author, and entrepreneur. TheWiseEntrepreneur is a leading entrepreneurship blog where you get the best business ideas, tips, knowledge & info to successfully start, run & grow business-wise.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 445
+      },
+      "image_url": "https://i1.feedspot.com/5280518.jpg?t=1620909183"
+    },
+    {
+      "title": "Grove City Entrepreneurship Blog",
+      "feed_url": "https://gccentrepreneurship.com/feed/",
+      "website_url": "https://gccentrepreneurship.com/blog/",
+      "description": "Grove City College is committed to being a leading entrepreneurship educator and program of distinction among faith-based private colleges. Surrounded by rich natural beauty and classic architecture, our emphasis on challenging academics and spiritual reflection creates a special campus environment to explore the transformative power of entrepreneurship.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5392151.jpg?t=1650343949"
+    },
+    {
+      "title": "Rise of the Innerpreneur",
+      "feed_url": "https://www.elasticmind.ca/innerpreneur/index.php/feed/",
+      "website_url": "https://www.elasticmind.ca/innerpreneur/",
+      "description": "I am an author, blogger, and innerpreneur. I write about love, business, and the spaces in-between. A blog by Tara Joyce.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/3455667.jpg"
+    },
+    {
+      "title": "Holistic Entrepreneur Association \u2014 Tools for Today's Holistic Entrepreneur Blog",
+      "feed_url": "https://www.holisticentrepreneurassociation.com/feed/",
+      "website_url": "https://www.holisticentrepreneurassociation.com/blog/",
+      "description": "The HEA is an online community that provides holistic entrepreneurs actionable resources & tools to build successful and authentic businesses & practices.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4529388.jpg?t=1600236272"
+    },
+    {
+      "title": "Late Blooming Entrepreneurs",
+      "feed_url": "https://latebloomingentrepreneurs.wordpress.com/feed/",
+      "website_url": "https://latebloomingentrepreneurs.wordpress.com/",
+      "description": "Making it big in business after age 40. Freelance writer, blogger and author of Late-Blooming Entrepreneurs: Eight Principles for Starting a Business After Age 40. A blog by Lynne Strang.",
+      "followers": {
+        "facebook": 334
+      },
+      "image_url": "https://i1.feedspot.com/4528713.jpg?t=1600236076"
+    },
+    {
+      "title": "Lifestyle Entrepreneurs Press Blog",
+      "feed_url": "https://www.lifestyleentrepreneurspress.com/feed/",
+      "website_url": "https://www.lifestyleentrepreneurspress.com/blog/",
+      "description": "Lifestyle Entrepreneurs Press is the Publisher for the Passionate. Our mission is to help authors become entrepreneurs, and entrepreneurs become best-selling authors.",
+      "followers": {
+        "facebook": 34900,
+        "twitter": 5100,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5270745.jpg?t=1618827789"
+    },
+    {
+      "title": "The Suitcase Entrepreneur - What Type Of Entrepreneur Are You? Blog",
+      "feed_url": "http://suitcaseentrepreneur.com/feed/",
+      "website_url": "http://suitcaseentrepreneur.com/entrepreneurs-blog/",
+      "description": "Natalie Sisson's Suitcase Entrepreneur website is the number one destination for those of you wanting to build an online business you love from anywhere.",
+      "followers": {
+        "twitter": 18800
+      },
+      "image_url": "https://i1.feedspot.com/2551758.jpg"
+    },
+    {
+      "title": "Entrepreneurial Spark Blog",
+      "feed_url": "https://www.entrepreneurial-spark.com/blog?format=rss",
+      "website_url": "https://www.entrepreneurial-spark.com/blog",
+      "description": "Entrepreneurial Spark is the world's largest free business accelerator for start-up and scaleup businesses. Our vision it to inspire and enable positive social change through the action of Entrepreneuring.",
+      "followers": {
+        "facebook": 24300,
+        "twitter": 34900,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4528743.jpg?t=1600236007"
+    },
+    {
+      "title": "Under30CEO Blog",
+      "feed_url": "https://www.under30ceo.com/category/blog/feed/",
+      "website_url": "https://www.under30ceo.com/category/blog/",
+      "description": "Under30CEO.com is the leading media property for entrepreneurs, inspiring the world's next generation of business leaders. Under30CEO features direct interviews with the most successful young people on the planet, profiles twenty-something startups, provides advice from those who have done it before and publishes cutting edge news for the young entrepreneur.",
+      "followers": {
+        "facebook": 32700,
+        "twitter": 39400
+      },
+      "image_url": "https://i1.feedspot.com/4529877.jpg?t=1670917919"
+    },
+    {
+      "title": "Yaro Starak Blog",
+      "feed_url": "https://yaro.blog/feed/",
+      "website_url": "https://yaro.blog/blog/",
+      "description": "Access all of Yaro's free training, including blog, podcast, and step-by-step guides to help you succeed with your online business.",
+      "followers": {
+        "twitter": 27000
+      },
+      "image_url": "https://i1.feedspot.com/4453088.jpg?t=1607578845"
+    },
+    {
+      "title": "Entrepreneur Resources - Your source for small business information",
+      "feed_url": "https://feeds.feedburner.com/EntrepreneurResourcesSmallBusinessBlog",
+      "website_url": "https://www.entrepreneur-resources.net/",
+      "description": "Entrepreneur Resources is a PR-friendly blog written for current and aspiring business owners who do not have access to traditional business education.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3200,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4529369.jpg?t=1600234972"
+    },
+    {
+      "title": "Adrian Tan Blog",
+      "feed_url": "https://adriantan.com.sg/feed/",
+      "website_url": "https://adriantan.com.sg/blog/",
+      "description": "Adrian Tan is a prominent HR tech influencer and B2B marketing expert with over 20 years of experience. He is the founder and Chief Market Strategist of Marketing Sumo, a B2B marketing agency focused on serving HR tech companies.",
+      "followers": {
+        "facebook": 181,
+        "twitter": 988,
+        "instagram": 598
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/2281955/page/4459023/logo_1702281374.jpg"
+    },
+    {
+      "title": "Forbes - Entrepreneurs",
+      "feed_url": "https://www.forbes.com/entrepreneurs/feed2/",
+      "website_url": "https://www.forbes.com/entrepreneurs/",
+      "description": "Forbes is a leading source for reliable entrepreneur news and updated analysis on Entrepreneurs. Read the breaking Entrepreneurs coverage and top headlines on Forbes.com",
+      "followers": {
+        "facebook": 8000000,
+        "twitter": 20700000
+      },
+      "image_url": "https://i1.feedspot.com/617463.jpg?t=1600233833"
+    },
+    {
+      "title": "Metapreneurship Blog",
+      "feed_url": "https://www.cjcornell.net/site/feed/",
+      "website_url": "http://metapreneurship.net/blog/",
+      "description": "Welcome to the Age of Metapreneurship: Modern entrepreneurship: Entrepreneurship 3.0. They are the new leaders and visionaries of entrepreneurship 3.0. The Modern Revolutionaries. Fast paced, lean, rapid concept to mass market - but it's much more than that. Modern entrepreneurs collaborate, they share, they self-organize and work in ways that were never possible in prior generations.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/58545.jpg?t=1600235985"
+    },
+    {
+      "title": "Official Fiverr Blog",
+      "feed_url": "https://blog.fiverr.com/feed",
+      "website_url": "https://blog.fiverr.com/",
+      "description": "Whether you're scaling up your small business or building a brand from scratch, we've got the resources you need to keep you at the top of your game.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 456200,
+        "instagram": 619100
+      },
+      "image_url": "https://i1.feedspot.com/4643478.jpg?t=1600233841"
+    },
+    {
+      "title": "Prospective Ideas",
+      "feed_url": "https://www.blogger.com/feeds/6447108467103939145/posts/default",
+      "website_url": "http://hollalaycan.blogspot.com/",
+      "description": "A dedicated blog to aspiring entrepreneurs. Here, you will learn how to start small and grow big plus other exciting information as you navigate. If you desire to achieve greatness and success in starting a business of your own, you are at the right place.",
+      "followers": {
+        "facebook": 788
+      },
+      "image_url": "https://i1.feedspot.com/5171972.jpg"
+    },
+    {
+      "title": "Cobuild Lab Blog",
+      "feed_url": "https://cobuildlab.com/rss.xml",
+      "website_url": "https://cobuildlab.com/blog",
+      "description": "At Cobuild Lab, we've been helping Business Owners, Managers, CTO's, COO's and IT leaders automate business processes with custom software solutions, artificial Intelligence models and IOT hardware. The Blog for Software Entrepreneurs of Miami.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 2100,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5252303.jpg?t=1614841610"
+    },
+    {
+      "title": "Jay Sreekumar",
+      "feed_url": "https://jaysreekumar.com/feed/",
+      "website_url": "https://jaysreekumar.com/",
+      "description": "Jay Sreekumar is a brand consultant, strategist, and author of over 10 books on branding, innovation, and marketing, that deal with brand identity, and design.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/7285119.jpg?t=1711620749"
+    },
+    {
+      "title": "Nashville Entrepreneur Center",
+      "feed_url": "https://ec.co/news/category/blog-posts/feed/",
+      "website_url": "https://ec.co/category/programs/",
+      "description": "The Nashville Entrepreneur Center is a non-profit connecting entrepreneurs with critical resources to create, launch and grow businesses.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 12800,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4528756.jpg?t=1620397049"
+    },
+    {
+      "title": "The Grasshopper Blog",
+      "feed_url": "https://grasshopper.com/blog/feed/atom/index.xml",
+      "website_url": "https://grasshopper.com/blog/",
+      "description": "Get tips, read case studies, and learn how to grow your business with entrepreneurial insights from Grasshopper.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4528707.jpg?t=1600233873"
+    },
+    {
+      "title": "For Entrepreneurs",
+      "feed_url": "https://www.forentrepreneurs.com/feed/",
+      "website_url": "https://www.forentrepreneurs.com/",
+      "description": "forEntrepreneurs offers advice on the key issues founders and their teams face in getting started, getting funded, and building a successful company.",
+      "followers": {
+        "twitter": 52600
+      },
+      "image_url": "https://i1.feedspot.com/108560.jpg?t=1662550027"
+    },
+    {
+      "title": "StartUp 101",
+      "feed_url": "https://startup101.com/feed/",
+      "website_url": "https://startup101.com/",
+      "description": "StartingYourBusiness.com is a free resource to help people understand the steps to start a business like starting a business with writing a business plan, selecting a legal structure, registering a business name, getting a business license, etc.",
+      "followers": {
+        "facebook": 24
+      },
+      "image_url": "https://i1.feedspot.com/5085745.jpg?t=1600234559"
+    },
+    {
+      "title": "The Penny Matters Blog",
+      "feed_url": "https://thepennymatters.com/feed/",
+      "website_url": "https://thepennymatters.com/blog/",
+      "description": "The Penny Matters is a home of content creators and online entrepreneurs who want to create value with great content. We empower you to write to their hearts, and not their heads.",
+      "followers": {
+        "facebook": 923
+      },
+      "image_url": "https://i1.feedspot.com/4821690.jpg?t=1618385585"
+    },
+    {
+      "title": "The Colab Life Blog",
+      "feed_url": "https://www.thecolablife.com/blog/feed/",
+      "website_url": "https://thecolablife.com/blog",
+      "description": "CoLab helps entrepreneurs and business owners build profitable businesses by focusing on working together and growth through teamwork. Everything you need to know about Entrepreneurship, Business growth, Personal Development, Financial Freedom, Work-Life Balance, and more!",
+      "followers": {
+        "facebook": 290,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5243995.jpg?t=1613030007"
+    },
+    {
+      "title": "Frugal Entrepreneur",
+      "feed_url": "https://frugalentrepreneur.com/feed/",
+      "website_url": "https://frugalentrepreneur.com/",
+      "description": "The Frugal Entrepreneur provides business tips, resources, and tools for frugal small and home-based business owners.",
+      "followers": {
+        "facebook": 732,
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/4528581.jpg?t=1600234900"
+    },
+    {
+      "title": "Hack the Entrepreneur with Jon Nastor Blog",
+      "feed_url": "https://hacktheentrepreneur.com/feed/",
+      "website_url": "https://blog.eonetwork.org/",
+      "description": "Hack The Entrepreneur is a podcast that reveals the fears, habits, and inner-battles behind big name entrepreneurs and those on the path to success.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4529367.jpg?t=1618385521"
+    },
+    {
+      "title": "Octane Blog The official blog of the Entrepreneurs' Organization",
+      "feed_url": "https://blog.eonetwork.org/feed/",
+      "website_url": "https://blog.eonetwork.org/",
+      "description": "The Entrepreneurs' Organization (EO) is a global, peer-to-peer network of more than 12,000 influential business owners with 160 chapters in 50 countries. Founded in 1987, EO is the catalyst that enables leading entrepreneurs to learn and grow, leading to greater success in business and beyond.",
+      "followers": {
+        "facebook": 165000,
+        "twitter": 92400
+      },
+      "image_url": "https://i1.feedspot.com/43705.jpg?t=1600233671"
+    },
+    {
+      "title": "Entrepreneur interviews",
+      "feed_url": "https://www.entrepreneurship-interviews.com/feed/",
+      "website_url": "https://www.entrepreneurship-interviews.com/",
+      "description": "Entrepreneurship-interviews.com is about finding out true stories about real life entrepreneur and their businesses. It's about business ideas, funding, opportunities, putting together teams, starting up and failure. It's the Entrepreneurs 'reality-show'. Entrepreneurship-interviews.com is out there because business owners love to tell their stories.",
+      "followers": {
+        "facebook": 25
+      },
+      "image_url": "https://i1.feedspot.com/4529880.jpg"
+    },
+    {
+      "title": "Disabled Entrepreneurs - Inspiring Business Potential \u2022 Supporting Disabled Entrepreneurs Blog",
+      "feed_url": "https://www.disabledentrepreneurs.co.uk/feed.xml",
+      "website_url": "https://www.disabledentrepreneurs.co.uk/blog",
+      "description": "Are you disabled? Thinking of a business? Disability putting you off? want to meet other disabled entrepreneurs? Need finance? public speaker? Join Us? Inspiring and supporting disabled people through up-to-date news, networking business ideas, public speaking and inspirational stories.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4529393.jpg?t=1600236358"
+    },
+    {
+      "title": "Soulful Selling Blog",
+      "feed_url": "https://www.soulfulselling.com/blog.rss",
+      "website_url": "https://www.soulfulselling.com/blog/",
+      "description": "Soulful Selling empowers introverts to become more visible and promote themselves with confidence & authenticity.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 774
+      },
+      "image_url": "https://i1.feedspot.com/4585132.jpg?t=1600236059"
+    },
+    {
+      "title": "Virgin - Entrepreneur",
+      "feed_url": "https://www.virgin.com/taxonomy/term/2413/feed",
+      "website_url": "https://www.virgin.com/entrepreneur",
+      "description": "Inspiration, innovation and advice. An entrepreneur blog by Virgin.",
+      "followers": {
+        "facebook": 389600,
+        "twitter": 242700,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/4529354.jpg?t=1642227456"
+    }
+  ]
+}

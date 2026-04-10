@@ -1,0 +1,45 @@
+{
+  "category": "USPS",
+  "source_url": "https://rss.feedspot.com/usps_rss_feeds",
+  "feeds": [
+    {
+      "title": "Postal Posts",
+      "feed_url": "https://uspsblog.com/feed/",
+      "website_url": "https://uspsblog.com/",
+      "description": "Through Postal Posts, you'll learn about our products, services, technological innovations, history, customers, and employees - including real-life postal heroes who go above and beyond the call of duty every day. Please visit regularly to read our stories and share your own thoughts, observations, and recommendations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5459281.jpg?t=1666333131"
+    },
+    {
+      "title": "Postal Times",
+      "feed_url": "https://postaltimes.com/feed/",
+      "website_url": "https://postaltimes.com/",
+      "description": "We are your one-stop shop for all things postal. We scour the internet for all the news that you need to know about the United States Postal Service. Sign up for our daily news blast that sends the latest and most comprehensive postal service news on the internet to know before you hit the street!",
+      "followers": {
+        "facebook": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5459282.jpg?t=1666333243"
+    },
+    {
+      "title": "Stamps.com",
+      "feed_url": "https://www.stamps.com/feed/",
+      "website_url": "https://www.stamps.com/articles/",
+      "description": "Stamps.com is a leading provider of Internet-based postage services. Stamps.com's online postage service enables small businesses, enterprises, and online retailers to print U.S. Postal Service-approved postage with just a computer, printer, and Internet connection, right from their home or office. Get the latest information on the mailing and shipping industry.",
+      "followers": {
+        "facebook": 89700,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5459280.jpg?t=1666333648"
+    },
+    {
+      "title": "PostalNews Blog",
+      "feed_url": "https://postalnews.com/blog/feed/",
+      "website_url": "https://postalnews.com/blog/",
+      "description": "Postalnews.com is produced by Brian Sheehan, a retired postal employee. Postalnews.com was founded in 1998 and is the original daily news digest of the postal world. We are not associated with the US Postal Service. Any opinions expressed are solely those of the authors, not the US Postal Service.",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5459279.jpg?t=1666333592"
+    }
+  ]
+}

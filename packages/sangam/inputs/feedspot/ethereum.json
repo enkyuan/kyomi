@@ -1,0 +1,125 @@
+{
+  "category": "Ethereum",
+  "source_url": "https://rss.feedspot.com/ethereum_rss_feeds",
+  "feeds": [
+    {
+      "title": "Enterprise Ethereum Alliance",
+      "feed_url": "https://entethalliance.org/feed/",
+      "website_url": "https://entethalliance.org/",
+      "description": "The Enterprise Ethereum Alliance is a member-led industry organization whose objective is to drive the use of Enterprise Ethereum and Mainnet Ethereum blockchain technology as an open-standard to empower all enterprises. Our mission is to enable organizations to adopt and use Ethereum technology in their day-to-day business operations.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 25400
+      },
+      "image_url": "https://i1.feedspot.com/4950660.jpg?t=1609933285"
+    },
+    {
+      "title": "Bitcoinist \u00bb Ethereum",
+      "feed_url": "https://bitcoinist.com/category/ethereum/feed/",
+      "website_url": "https://bitcoinist.com/category/ethereum/",
+      "description": "Read the breaking news on Ethereum along with analysis, price prediction and other important updates about Ethereum to stay up to date in the crypto market. Bitcoinist is a Bitcoin news portal providing breaking news, guides, price analysis about decentralized digital money & blockchain technology.",
+      "followers": {
+        "facebook": 42700,
+        "twitter": 67500
+      },
+      "image_url": "https://i1.feedspot.com/5476160.jpg?t=1670322196"
+    },
+    {
+      "title": "Ethereum France",
+      "feed_url": "https://www.ethereum-france.com/feed/",
+      "website_url": "https://www.ethereum-france.com/blogs/",
+      "description": "A French reference site dedicated to Ethereum and its ecosystem. They are a small team fans of cryptosmonnaies and created this page in order to give information on developments of BTC and ETH. The artic less they publish is about Ethereum events of 2023, DevCon VI Recap, Ethereum's consensus mechanism after the Merger, and similar topics.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/4818339.jpg?t=1609933288"
+    },
+    {
+      "title": "BTC Ethereum Crypto Currency Blog \u00bb Ethereum",
+      "feed_url": "https://www.btcethereum.com/blog/category/ethereum/feed/",
+      "website_url": "https://www.btcethereum.com/blog/category/ethereum/",
+      "description": "Full crypto currency market outlook and real time monitoring. Blockchain Initial Coin Offering ICO information. Buy bitcoin with Paypal. Blog about forex, cryptocurrency and investments.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4800852.jpg?t=1609933306"
+    },
+    {
+      "title": "Ethereum Wisdom Blog",
+      "feed_url": "https://blog.ethereumwisdom.com/feed/",
+      "website_url": "https://blog.ethereumwisdom.com/",
+      "description": "the blog of ethereumwisdom.com",
+      "followers": {
+        "facebook": 931,
+        "twitter": 840
+      },
+      "image_url": "https://i1.feedspot.com/4950664.jpg?t=1609933467"
+    },
+    {
+      "title": "Etherplan Blog",
+      "feed_url": "https://etherplan.com/feed/",
+      "website_url": "https://etherplan.com/blog/",
+      "description": "Find the latest research, articles, and podcasts about Ethereum Classic, Bitcoin, and other topics of interest. I am Donald McIntyre and here at Etherplan, I research, write articles, and podcast about cryptocurrencies and other topics of interest.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5476161.jpg?t=1670322228"
+    },
+    {
+      "title": "Ethereum Blog",
+      "feed_url": "https://blog.ethereum.org/feed.xml",
+      "website_url": "https://blog.ethereum.org/",
+      "description": "Get the latest news and announcements from the Ethereum Foundation. Ethereum can be used to codify, decentralize, secure and trade just about anything: voting, domain names, financial exchanges, crowdfunding, company governance, contracts and agreements of most kind, intellectual property, and even smart property thanks to hardware integration.",
+      "followers": {
+        "facebook": 240600,
+        "twitter": 3100000
+      },
+      "image_url": "https://i1.feedspot.com/4950662.jpg?t=1609933274"
+    },
+    {
+      "title": "CryptoSlate \u00bb Ethereum (ETH)",
+      "feed_url": "https://cryptoslate.com/news/ethereum/feed/",
+      "website_url": "https://cryptoslate.com/news/ethereum/",
+      "description": "This section of the CryptoSlate blog features the latest Ethereum (ETH) News. CryptoSlate is a destination for cryptocurrency & blockchain researchers featuring crypto news, coin prices, and a directory for companies & people.",
+      "followers": {
+        "twitter": 55000,
+        "instagram": 102800
+      },
+      "image_url": "https://i1.feedspot.com/5321799.jpg?t=1631613376"
+    },
+    {
+      "title": "NewsBTC \u00bb Ethereum (ETH)",
+      "feed_url": "https://www.newsbtc.com/news/ethereum/feed/",
+      "website_url": "https://www.newsbtc.com/news/ethereum/",
+      "description": "Latest Ethereum (ETH) news, we cover price forecasts and today's updates. NewsBTC is a cryptocurrency news service that covers the latest bitcoin news, technical analysis & price for bitcoin & other altcoins.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 61900
+      },
+      "image_url": "https://i1.feedspot.com/5316172.jpg?t=1630050024"
+    },
+    {
+      "title": "DC Forecasts \u00bb Ethereum",
+      "feed_url": "https://www.dcforecasts.com/ethereum-news/feed/",
+      "website_url": "https://www.dcforecasts.com/ethereum-news/",
+      "description": "Browse latest bitcoin news about business, technology, company and regulations of bitcoin. Latest crypto currency news, talks and new start up related to bitcoin and other crypto currency.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 303,
+        "instagram": 121
+      },
+      "image_url": "https://i1.feedspot.com/4833880.jpg?t=1670321915"
+    },
+    {
+      "title": "EthereumPrice",
+      "feed_url": "https://ethereumprice.ca/feed/",
+      "website_url": "https://ethereumprice.ca/",
+      "description": "A Canadian Ethereum site with the latest cryptocurrency news and prices. The Ethereum Blog covers a wide range of topic including news, current pricing and a beginners guide to understanding Ethereum.",
+      "followers": {
+        "facebook": 900,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4799721.jpg?t=1670322160"
+    }
+  ]
+}

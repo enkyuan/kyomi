@@ -1,0 +1,68 @@
+{
+  "category": "LISP Programming",
+  "source_url": "https://rss.feedspot.com/lisp_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Planet Lisp",
+      "feed_url": "http://planet.lisp.org/rss20.xml",
+      "website_url": "http://planet.lisp.org/",
+      "description": "Planet Lisp is a metablog that collects the contents of various Lisp-related blogs.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/77204.jpg?t=1621596807"
+    },
+    {
+      "title": "Planet SBCL",
+      "feed_url": "https://planet.sbcl.org/rss20.xml",
+      "website_url": "http://planet.sbcl.org/",
+      "description": "Planet SBCLSteel Bank Common Lisp (SBCL) is a high-performance Common Lisp compiler. It is open-source/free software, with a permissive license. In addition to the compiler and runtime system for ANSI Common Lisp, it provides an interactive environment including a debugger, a statistical profiler, a code coverage tool, and many other extensions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/118460.jpg?t=1621596465"
+    },
+    {
+      "title": "Zach Beane Common Lisp",
+      "feed_url": "https://lispblog.xach.com/rss",
+      "website_url": "https://lispblog.xach.com/",
+      "description": "Zach Beane is working on Common Lisp since 2001. In 2010, he made Quicklisp, the most popular library manager for Common Lisp.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4953627.jpg"
+    },
+    {
+      "title": "Fernando Borretti",
+      "feed_url": "https://borretti.me/feed",
+      "website_url": "https://borretti.me/article/",
+      "description": "Fernando Borretti's long term goal is to make Common Lisp a viable language for web development, and most of the code you'll see here reflects this.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4953865.jpg?t=1621596620"
+    },
+    {
+      "title": "Lisp Journey Blog",
+      "feed_url": "https://lisp-journey.gitlab.io/blog/index.xml",
+      "website_url": "https://lisp-journey.gitlab.io/blog/",
+      "description": "Stay updated with my Lisp journey and find out more about Lisp Programming with my blog. I'm Vincent and I write about my Common Lisp journey here. I started the blog when I was discovering the language and the ecosystem, wishing more people wrote about CL. I write intensively about Common Lisp on collaborative resources. My hidden plan is to make Common Lisp popular again.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4953654.jpg?t=1676453880"
+    },
+    {
+      "title": "Steve Losh Blog",
+      "feed_url": "https://feeds.feedburner.com/stevelosh",
+      "website_url": "https://stevelosh.com/blog/",
+      "description": "Steve Losh is a Programmer, photographer, dancer, bassist currently living in Rochester, New York.",
+      "followers": {
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/104443.jpg?t=1621596484"
+    },
+    {
+      "title": "Xah Emacs Blog",
+      "feed_url": "http://ergoemacs.org/emacs/blog.xml?format=xml",
+      "website_url": "http://xahlee.info/emacs/emacs/blog.html",
+      "description": "Get a few tips a day about Emacs and ErgoEmacs from this blog.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4431804.jpg?t=1621596700"
+    }
+  ]
+}

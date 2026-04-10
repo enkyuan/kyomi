@@ -1,0 +1,29 @@
+{
+  "category": "Paramount News",
+  "source_url": "https://rss.feedspot.com/paramount_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KTLA 5 \u00bb Paramount",
+      "feed_url": "https://ktla.com/tag/paramount/feed/",
+      "website_url": "https://ktla.com/tag/paramount/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond. Follow this feed to read the latest news and updates in Paramount brought to you by the team at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5148245.jpg?t=1588743543"
+    },
+    {
+      "title": "CBS Los Angeles \u00bb Paramount",
+      "feed_url": "https://losangeles.cbslocal.com/tag/paramount/feed/",
+      "website_url": "https://www.cbsnews.com/losangeles/tag/paramount/",
+      "description": "CBS Los Angeles provides news, sports, weather, traffic and the best of LA & OC! Subscribe this feed for the latest local and breaking news alerts from the City of Paramount.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 329
+      },
+      "image_url": "https://i1.feedspot.com/5148246.jpg?t=1588743828"
+    }
+  ]
+}

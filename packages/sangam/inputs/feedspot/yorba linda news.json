@@ -1,0 +1,54 @@
+{
+  "category": "Yorba Linda News",
+  "source_url": "https://rss.feedspot.com/yorba_linda_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Yorba Linda",
+      "feed_url": "https://www.yorbalindaca.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.yorbalindaca.gov/CivicAlerts.aspx",
+      "description": "Get the latest news and happenings in Yorba Linda, CA and around area.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 3400,
+        "instagram": 14700
+      },
+      "image_url": "https://i1.feedspot.com/5148284.jpg?t=1625658989"
+    },
+    {
+      "title": "Voice of OC \u00bb Yorba Linda",
+      "feed_url": "https://voiceofoc.org/category/regions/north-county/yorba-linda/feed/",
+      "website_url": "https://voiceofoc.org/category/regions/north-county/yorba-linda/",
+      "description": "Read local news stories and events from Yorba Linda, Orange County. This page provides timely, insightful, and objective news updates for the city and region beyond. The Voice of OC is a non-profit digital newspaper striving to inform and empower residents with essential Orange County news.",
+      "followers": {
+        "facebook": 36000,
+        "twitter": 23400,
+        "instagram": 21800
+      },
+      "image_url": "https://i1.feedspot.com/5516436.jpg?t=1677848683"
+    },
+    {
+      "title": "The Orange County Register \u00bb Yorba Linda",
+      "feed_url": "https://www.ocregister.com/location/california/orange-county/yorba-linda/feed/",
+      "website_url": "https://www.ocregister.com/location/california/orange-county/yorba-linda/",
+      "description": "The Orange County Register is one of the most essential news publications serving the County and covers local news from Yorba Linda, CA, including city government, crime, breaking news, and surfing news. The paper is owned by and part of the larger Southern California News Group media company.",
+      "followers": {
+        "facebook": 186400,
+        "twitter": 262600,
+        "instagram": 107300
+      },
+      "image_url": "https://i1.feedspot.com/5516435.jpg?t=1677848679"
+    },
+    {
+      "title": "KTLA 5 \u00bb Yorba Linda",
+      "feed_url": "https://ktla.com/tag/yorba-linda/feed/",
+      "website_url": "https://ktla.com/tag/yorba-linda/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5148286.jpg?t=1588748269"
+    }
+  ]
+}

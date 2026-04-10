@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+  <title>My feeds</title>
+</head>
+<body>
+<outline text="Feeds" title="Feeds">
+  <outline title="Tania Rascia | RSS Feed" category="English" type="rss" xmlUrl="https://www.taniarascia.com/rss.xml" />
+  <outline title="Acko.net" category="English" type="rss" xmlUrl="https://acko.net/atom.xml" />
+  <outline title="Nicky's Blog" category="English" type="rss" xmlUrl="https://blog.ncase.me/rss/" />
+  <outline title="On Substack" category="English" type="rss" xmlUrl="https://on.substack.com/feed" />
+  <outline title="Verbal to Visual" category="English" type="rss" xmlUrl="https://www.verbaltovisual.com/feed/" />
+  <outline title="Stratechery by Ben Thompson" category="English" type="rss" xmlUrl="https://stratechery.com/feed/" />
+  <outline title="Forte Labs" category="English" type="rss" xmlUrl="https://praxis.fortelabs.co/feed/" />
+  <outline title="胡涂说" category="Chinese" type="rss" xmlUrl="https://hutusi.com/feed.xml" />
+  <outline title="ByteByteGo System Design" category="English" type="rss" xmlUrl="https://blog.bytebytego.com/feed" />
+  <outline title="构建我的被动收入" category="Chinese" type="rss" xmlUrl="https://www.bmpi.dev/index.xml" />
+  <outline title="程序员的喵" category="Chinese" type="rss" xmlUrl="https://catcoding.me/atom.xml" />
+  <outline title="é…· å£³ – CoolShell" category="Chinese" type="rss" xmlUrl="https://coolshell.cn/feed" />
+  <outline title="GeekPlux" category="Chinese" type="rss" xmlUrl="https://geekplux.com/atom.xml" />
+  <outline title="Raspberry Pi" category="English" type="rss" xmlUrl="http://www.raspberrypi.org/feed" />
+  <outline title="Hristiyan Dodov" category="English" type="rss" xmlUrl="https://dodov.dev/feed" />
+  <outline title="炜晨" category="Chinese" type="rss" xmlUrl="https://weichen.blog/index.xml" />
+  <outline title="Substack Reads" category="English" type="rss" xmlUrl="https://read.substack.com/feed" />
+  <outline title="少数派 -- Matrix" category="Chinese" type="rss" xmlUrl="https://rsshub.app/sspai/matrix" />
+  <outline title="Owen的博客" category="Chinese" type="rss" xmlUrl="https://www.owenyoung.com/atom.xml" />
+  <outline title="阮一峰的网络日志" category="Chinese" type="rss" xmlUrl="http://www.ruanyifeng.com/blog/atom.xml" />
+  <outline title="Drew DeVault's blog" category="English" type="rss" xmlUrl="https://drewdevault.com/feed.xml" />
+  <outline title="Randy's Blog" category="Chinese" type="rss" xmlUrl="https://lutaonan.com/rss.xml" />
+  <outline title="王垠的博客 - 当然我在扯淡" category="Chinese" type="rss" xmlUrl="https://rsshub.app/blogs/wangyin" />
+  <outline title="月光博客" category="Chinese" type="rss" xmlUrl="http://feed.williamlong.info/" />
+  <outline title="Annals of Technology: Science and Technology News, Commentary, and Analysis" category="English" type="rss" xmlUrl="http://www.newyorker.com/online/blogs/frontal-cortex/rss.xml" />
+  <outline title="Replit Blog" category="English" type="rss" xmlUrl="https://blog.replit.com/feed.xml" />
+  <outline title="The New Yorker (Daily Cartoon)" category="English" type="rss" xmlUrl="https://rss.app/feeds/br4KUPkcxXz2vhFp.xml" />
+  <outline title="Tinyfool的个人网站" category="Chinese" type="rss" xmlUrl="http://feeds.feedburner.com/Tinyfoolblog" />
+  <outline title="raspberry pi – Hackaday" category="English" type="rss" xmlUrl="http://hackaday.com/tag/raspberry-pi/feed/" />
+  <outline title="Blog - Eva-Lotta Lamm" category="English" type="rss" xmlUrl="http://sketchnotesbook.com/blog?format=rss" />
+  <outline title="Indie Hackers: Work Together to Build Profitable Online Businesses" category="English" type="rss" xmlUrl="https://rss.app/feeds/faq798zw7eJuer9w.xml" />
+  <outline title="Scribbled Notes on Pradyun Gedam" category="English" type="rss" xmlUrl="https://pradyunsg.me/blog/index.xml" />
+  <outline title="Readwise Blog" category="English" type="rss" xmlUrl="https://blog.readwise.io/rss/" />
+  <outline title="Well Balanced" category="English" type="rss" xmlUrl="https://anchor.fm/s/bebe26c0/podcast/rss" />
+  <outline title="54321 Weekly" category="Chinese" type="rss" xmlUrl="https://54321.substack.com/feed" />
+  <outline title="Blog · Codeanywhere" category="English" type="rss" xmlUrl="http://blog.codeanywhere.com/feed/" />
+  <outline title="blog · arcana.computer" category="English" type="rss" xmlUrl="https://new-arcana-computer.vercel.app/rss/blog.xml" />
+  <outline title="Idle Words" category="English" type="rss" xmlUrl="https://idlewords.com/index.xml" />
+  <outline title="Codecademy News" category="English" type="rss" xmlUrl="https://www.codecademy.com/resources/blog/rss/" />
+  <outline title="home" category="English" type="rss" xmlUrl="https://justingarrison.com/index.xml" />
+  <outline title="Monday Musings by David Perell" category="English" type="rss" xmlUrl="https://davidperell.substack.com/feed" />
+  <outline title="David Perell" category="English" type="rss" xmlUrl="https://perell.com/feed/" />
+  <outline title="James Clear" category="English" type="rss" xmlUrl="https://jamesclear.com/feed" />
+  <outline title="25iq" category="English" type="rss" xmlUrl="https://25iq.com/feed/" />
+  <outline title="Josh Comeau's blog" category="English" type="rss" xmlUrl="https://www.joshwcomeau.com/rss.xml" />
+  <outline title="Simon Willison's Weblog" category="English" type="rss" xmlUrl="https://simonwillison.net/atom/everything/" />
+  <outline title="fabiensanglard.net" category="English" type="rss" xmlUrl="https://fabiensanglard.net/rss.xml" />
+  <outline title="Viking Zhang, 一个前端开发工程师以及独立开发者的故事" category="Chinese" type="rss" xmlUrl="https://vikingz.me/rss.xml" />
+  <outline title="Paul Graham: Essays" category="English" type="rss" xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.rss" />
+  <outline title="内核恐慌" category="Chinese" type="rss" xmlUrl="https://pan.icu/feed" />
+  <outline title="Lenny's Newsletter" category="Emails" type="rss" xmlUrl="https://www.lennysnewsletter.com/feed" />
+  <outline title="Index on SqrtMinusOne" category="English" type="rss" xmlUrl="https://sqrtminusone.xyz/index.xml" />
+  <outline title="" category="English" type="rss" xmlUrl="https://every.to/everything/feed.xml" />
+  <outline title="Time Out Chicago" category="English" type="rss" xmlUrl="https://www.timeout.com/chicago/blog/feed.rss" />
+  <outline title="Stefan Judis Web Development" category="English" type="rss" xmlUrl="https://www.stefanjudis.com/rss.xml" />
+  <outline title="Tyler Cipriani: blog" category="English" type="rss" xmlUrl="https://tylercipriani.com/blog/index.rss" />
+  <outline title="Huberman Lab" category="English" type="rss" xmlUrl="https://hubermanlab.com/feed/" />
+  <outline title="Armin Ronacher's Thoughts and Writings" category="English" type="rss" xmlUrl="https://lucumr.pocoo.org/feed.atom" />
+  <outline title="Jason Fried" category="English" type="rss" xmlUrl="https://world.hey.com/jason/feed.atom" />
+  <outline title="Rands in Repose" category="English" type="rss" xmlUrl="https://randsinrepose.com/feed/" />
+  <outline title="News Minimalist" category="News" type="rss" xmlUrl="https://rss.beehiiv.com/feeds/4aF2pGVAEN.xml" />
+  <outline title="Press Releases" category="English" type="rss" xmlUrl="http://www.apa.org/news/press/releases/press-release-rss.xml" />
+  <outline title="Julia Evans" category="English" type="rss" xmlUrl="https://jvns.ca/atom.xml" />
+  <outline title="The Desolation of Blog" category="English" type="rss" xmlUrl="https://lapcatsoftware.com/articles/atom.xml" />
+  <outline title="Weekly Thing" category="English" type="rss" xmlUrl="https://weekly.thingelstad.com/rss" />
+  <outline title="Jamie Thingelstad" category="English" type="rss" xmlUrl="https://www.thingelstad.com/feed.xml" />
+  <outline title="Writing" category="English" type="rss" xmlUrl="https://brianlovin.com/writing/rss" />
+  <outline title="云风的 BLOG" category="Chinese" type="rss" xmlUrl="http://blog.codingnow.com/atom.xml" />
+  <outline title="The cron.weekly newsletter on ma.ttias.be" category="English" type="rss" xmlUrl="https://ma.ttias.be/cronweekly/index.xml" />
+  <outline title="Brad Woods' Digital Garden" category="English" type="rss" xmlUrl="https://garden.bradwoods.io/rss.xml" />
+  <outline title="More Pablo: all" category="English" type="rss" xmlUrl="https://morepablo.com/feeds/all.atom.xml" />
+  <outline title="TLDR RSS Feed" category="English" type="rss" xmlUrl="https://www.tldrnewsletter.com/rss" />
+  <outline title="The Imperfectionist - Oliver Burkeman" category="English" type="rss" xmlUrl="https://kill-the-newsletter.com/feeds/73qx5sv51gbdg3zy.xml" />
+  <outline title="Hacker News 热门" category="Buzzing" type="rss" xmlUrl="https://hn.buzzing.cc/rss.xml" />
+  <outline title="Big Think" category="News" type="rss" xmlUrl="https://bigthink.buzzing.cc/feed.xml" />
+  <outline title="业余项目分享交流" category="News" type="rss" xmlUrl="https://sideproject.buzzing.cc/feed.xml" />
+  <outline title="Dev.to 热门" category="Buzzing" type="rss" xmlUrl="https://dev.buzzing.cc/feed.xml" />
+  <outline title="Product Hunt 热门" category="News" type="rss" xmlUrl="https://ph.buzzing.cc/rss.xml" />
+  <outline title="Show HN" category="News" type="rss" xmlUrl="https://showhn.buzzing.cc/feed.xml" />
+  <outline title="生活科学" category="News" type="rss" xmlUrl="https://livescience.buzzing.cc/feed.xml" />
+  <outline title="Bear Blog" category="Buzzing" type="rss" xmlUrl="https://bearblog.buzzing.cc/feed.xml" />
+  <outline title="Irrational Exuberance" category="English" type="rss" xmlUrl="http://lethain.com/feeds.xml" />
+</outline>
+</body>
+</opml>

@@ -1,0 +1,76 @@
+{
+  "category": "Dallas Education",
+  "source_url": "https://rss.feedspot.com/dallas_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Shake Up Learning",
+      "feed_url": "https://shakeuplearning.com/feed/",
+      "website_url": "https://shakeuplearning.com/",
+      "description": "The Shake Up Learning Blog by Kasey Bell offers tips and tricks, and tutorials to educators across the globe. At Shake Up Learning, we provide teachers with practical resources using today's technology. We'll share free resources, online courses, lesson plans, books, and so much more to inspire your students.",
+      "followers": {
+        "facebook": 31300,
+        "twitter": 95200,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4470609.jpg?t=1645533444"
+    },
+    {
+      "title": "Art Class Curator Blog",
+      "feed_url": "https://artclasscurator.com/feed/",
+      "website_url": "https://artclasscurator.com/blog/",
+      "description": "Art Class Curator is dedicated to empowering you to embrace teaching art with works of art. Explore art teacher tips, discover new art and innovative art lessons to make art history and art appreciation fun for you and your students!",
+      "followers": {
+        "facebook": 26000,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4529253.jpg?t=1620980790"
+    },
+    {
+      "title": "TheHappyTeacher",
+      "feed_url": "http://www.thehappyteacher.co/feeds/posts/default?alt=rss",
+      "website_url": "http://www.thehappyteacher.co/",
+      "description": "I'm Liz! I am a former elementary school teacher. TheHappyTeacher blog provides teachers and parents with creative, fun, and inspiring ideas. I love sharing teaching tips and tricks through my blog posts, videos, and time-saving TpT resources. Here you will find classroom management tools, organization tips, as well as games, activities, printables, and worksheets for your K-2 classroom or homeschool.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 39,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4714801.jpg?t=1620980748"
+    },
+    {
+      "title": "The Bilingual Marketplace",
+      "feed_url": "https://www.bilingualmarketplace.com/blogs/news.atom",
+      "website_url": "https://www.bilingualmarketplace.com/blogs/news",
+      "description": "Educational resources marketplace for bilingual, dual language teachers! Get new ideas, research, activities, and resources for bilingual teachers.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4924342.jpg?t=1608184428"
+    },
+    {
+      "title": "Pre-K Pages Blog",
+      "feed_url": "https://www.pre-kpages.com/blog/feed/",
+      "website_url": "https://www.pre-kpages.com/blog/",
+      "description": "Pre-K Pages is a resource site for Pre-K and Preschool teachers offering activities, printable lesson plans, and themes for learning in your classroom.",
+      "followers": {
+        "facebook": 992500,
+        "twitter": 12700,
+        "instagram": 68500
+      },
+      "image_url": "https://i1.feedspot.com/4926199.jpg?t=1620980728"
+    },
+    {
+      "title": "Dallas Observer \u00bb Education",
+      "feed_url": "https://www.dallasobserver.com/topic/education-7019573.rss",
+      "website_url": "https://www.dallasobserver.com/topic/education-7019573",
+      "description": "Original reporting and compelling writing on local news, restaurants, arts, and culture have made the Dallas Observer a vital resource for readers who want to understand and engage with their community.",
+      "followers": {
+        "facebook": 180400,
+        "twitter": 231400,
+        "instagram": 137800
+      },
+      "image_url": "https://i1.feedspot.com/4926185.jpg?t=1620980753"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "category": "Levittown News",
+  "source_url": "https://rss.feedspot.com/levittown_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "LevittownNow.com",
+      "feed_url": "https://levittownnow.com/feed/",
+      "website_url": "http://levittownnow.com/",
+      "description": "LevittownNow.com features the up-to-the-minute news on local police, fire, courts, government, schools, sports, community events, as well as features on community residents and businesses.",
+      "followers": {
+        "facebook": 64500,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5150221.jpg?t=1589433213"
+    }
+  ]
+}

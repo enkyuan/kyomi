@@ -1,0 +1,528 @@
+{
+  "category": "Public Health",
+  "source_url": "https://rss.feedspot.com/public_health_rss_feeds",
+  "feeds": [
+    {
+      "title": "ScienceDaily",
+      "feed_url": "https://www.sciencedaily.com/rss/science_society/public_health.xml",
+      "website_url": "https://www.sciencedaily.com/news/science_society/public_health/",
+      "description": "Read about scientific research on a wide array of public health issues.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4750564.jpg?t=1612966965"
+    },
+    {
+      "title": "KHN",
+      "feed_url": "https://kffhealthnews.org/topics/public-health/feed/",
+      "website_url": "https://kffhealthnews.org/topics/public-health/",
+      "description": "Kaiser Health News (KHN.org) is a nonprofit news service covering health policy issues. Our stories appear in media outlets nationwide.",
+      "followers": {
+        "facebook": 39200,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/4749662.jpg?t=1612966987"
+    },
+    {
+      "title": "The New York Times \u00bb Well",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/well/rss.xml",
+      "website_url": "https://www.nytimes.com/section/well",
+      "description": "Health news and thought-provoking stories from the Science desk of The New York Times.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4749610.jpg?t=1665381349"
+    },
+    {
+      "title": "Public Health Update",
+      "feed_url": "https://publichealthupdate.com/feed/",
+      "website_url": "https://publichealthupdate.com/",
+      "description": "This blog is about public health updates. The mission is to provide Public health Information for all public health professionals.",
+      "followers": {
+        "facebook": 48200,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4753993.jpg?t=1612967014"
+    },
+    {
+      "title": "Tobacco News Analysis and Commentary",
+      "feed_url": "http://tobaccoanalysis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tobaccoanalysis.blogspot.com/",
+      "description": "Tobacco News Analysis and Commentary is providing the whole story behind tobacco news and industry. For incisive commentary on issues regarding tobacco and public health, there's nothing else like it.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/1423018.jpg?t=1612967033"
+    },
+    {
+      "title": "The Network for Public Health Law Blog",
+      "feed_url": "https://www.networkforphl.org/news-insights/feed/",
+      "website_url": "https://www.networkforphl.org/news-insights/",
+      "description": "The Network for Public Health Law offers insightful legal assistance, accessile resources and a community focused on public health law issues all at no cost.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4483846.jpg?t=1600768064"
+    },
+    {
+      "title": "PUBLIC HEALTH INSIDER",
+      "feed_url": "https://publichealthinsider.com/feed/",
+      "website_url": "https://publichealthinsider.com/",
+      "description": "Your local source for timely and useful health information you can trust -- from Public Health - Seattle & King County.",
+      "followers": {
+        "facebook": 49900,
+        "twitter": 26200,
+        "instagram": 25300
+      },
+      "image_url": "https://i1.feedspot.com/4750293.jpg?t=1612967087"
+    },
+    {
+      "title": "Workers Comp Insider",
+      "feed_url": "http://workerscompinsider.com/feed/",
+      "website_url": "http://workerscompinsider.com/",
+      "description": "Lynch Ryan's weblog about workers' compensation, risk management, business insurance, workplace health & safety, occupational medicine, injured workers, insurance web tools & technology and related topics",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4749689.jpg?t=1538999248"
+    },
+    {
+      "title": "Stayin' Alive",
+      "feed_url": "http://healthvsmedicine.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://healthvsmedicine.blogspot.com/",
+      "description": "Discussion of public health and health care policy, from a public health perspective. The U.S. spends more on medical services than any other country, but we get less for it. Major reasons include lack of universal access, unequal treatment, and underinvestment in public health and social welfare. We will critically examine the economics, politics and sociology of health and illness in the U.S. and the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4750265.jpg?t=1612967660"
+    },
+    {
+      "title": "Better Health For All",
+      "feed_url": "https://betterhealthforall.org/feed/",
+      "website_url": "https://betterhealthforall.org/",
+      "description": "The award-winning blog of the Faculty of Public Health. The aim to promote and protect the health of the population, and improve health services by maintaining professional and educational standards, advocating on key public health issues, and providing practical information and guidance for public health professionals.",
+      "followers": {
+        "facebook": 29
+      },
+      "image_url": "https://i1.feedspot.com/4749763.jpg?t=1612967127"
+    },
+    {
+      "title": "Environmental and Public Health Watch",
+      "feed_url": "https://feeds.feedburner.com/EnvironmentalHealthWatch",
+      "website_url": "https://tsaftarmuhalli.blogspot.com/",
+      "description": "This blog brings environmental and Public health issues as it happens in Nigeria.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4750523.jpg?t=1612967610"
+    },
+    {
+      "title": "Health Populi",
+      "feed_url": "https://www.healthpopuli.com/feed/",
+      "website_url": "https://www.healthpopuli.com/",
+      "description": "I'm a health economist, communicator, and trend weaver. Advising, writing, and speaking, I focus across the health/care ecosystem on consumers, health, technology, and policy. My clients include stakeholders across the health/care ecosystem.",
+      "followers": {
+        "twitter": 654
+      },
+      "image_url": "https://i1.feedspot.com/1862748.jpg?t=1600756613"
+    },
+    {
+      "title": "Environmental Health News",
+      "feed_url": "https://www.ehn.org/feeds/feed.rss",
+      "website_url": "https://www.ehn.org/tag/health",
+      "description": "We are a publication of Environmental Health Sciences, a nonprofit, nonpartisan organization dedicated to driving science into public discussion and policy on environmental health issues, including climate change. We push good science and journalism into public discussion and public policy on environmental health issues, including climate change.",
+      "followers": {
+        "facebook": 43300,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4923652.jpg?t=1664523370"
+    },
+    {
+      "title": "Monday Morning",
+      "feed_url": "https://mondaymorning.web.unc.edu/feed/",
+      "website_url": "https://mondaymorning.web.unc.edu/",
+      "description": "A blog by UNC Gillings School of Global Public Health Dean Barbara K. Rimer. Stay up-to-date on news and happenings related to the Department of Health Behavior!",
+      "followers": {
+        "facebook": 642,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4749825.jpg?t=1612967004"
+    },
+    {
+      "title": "Meritech Blog",
+      "feed_url": "https://www.meritech.com/blog/rss.xml",
+      "website_url": "https://www.meritech.com/blog",
+      "description": "Meritech is the industry leader in automated hand washing stations. Employee hygiene is more efficient and effective than ever before.",
+      "followers": {
+        "facebook": 405,
+        "twitter": 253
+      },
+      "image_url": "https://i1.feedspot.com/4782213.jpg?t=1612967026"
+    },
+    {
+      "title": "The Pollution Blog",
+      "feed_url": "http://feeds.feedburner.com/ThePollutionBlog",
+      "website_url": "https://www.pureearth.org/the-pollution-blog/",
+      "description": "At Pure Earth/Blacksmith, our mission is to identify and clean up the poorest communities throughout the developing world where high concentrations of toxins have devastating health effects.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4749668.jpg?t=1612967030"
+    },
+    {
+      "title": "Public healthy",
+      "feed_url": "https://publichealthy.co.uk/feed/",
+      "website_url": "https://publichealthy.co.uk/",
+      "description": "I'm Andy Turner, a Public Health Specialty Registrar in the North West of England. I hope that this blog will be of interest not only to those working in public health, but a wider audience too. Those of us working in public health are not always successful at describing what we do and why we do it, often assuming that long, technical reports or complicated statistics are enough to get our messages across.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5093313.jpg?t=1612967037"
+    },
+    {
+      "title": "Institute of Public Health Bengaluru Blog",
+      "feed_url": "https://iphindia.org/feed/",
+      "website_url": "https://iphindia.org/blog/",
+      "description": "The Institute of Public Health, Bengaluru is a public health research and training institute based in Bengaluru, India.We are a non-profit organization established with a vision of creating an equitable, integrated, decentralized and participatory health system within a just and empowered society.",
+      "followers": {
+        "facebook": 22000,
+        "twitter": 2800,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4749840.jpg?t=1612967040"
+    },
+    {
+      "title": "Managed Care Matters",
+      "feed_url": "https://www.joepaduda.com/feed/",
+      "website_url": "https://www.joepaduda.com/",
+      "description": "Joseph Paduda's weblog on managed care for group health, workers compensation & auto insurance, covering health care cost containment, health policy, health research, and medical news for insurers, employers, and healthcare providers.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/1552141.jpg?t=1612967044"
+    },
+    {
+      "title": "Health Care Policy and Marketplace Review",
+      "feed_url": "https://healthpolicyandmarket.blogspot.com/feeds/posts/default",
+      "website_url": "https://healthpolicyandmarket.blogspot.com/",
+      "description": "Bob Laszewski's review of the latest developments in federal health policy, health care reform, and marketplace activities in the health care financing business.",
+      "followers": {
+        "twitter": 75
+      },
+      "image_url": "https://i1.feedspot.com/780043.jpg?t=1612967095"
+    },
+    {
+      "title": "Get Ready",
+      "feed_url": "https://getreadyforflu.blogspot.com/feeds/posts/default",
+      "website_url": "http://getreadyforflu.blogspot.com/",
+      "description": "The Blog is run by the American Public Health Association. The blog has been active since 2006, and it currently sees 1-2 new posts a week. The topics on the blog range greatly, from seasonal health tips to important health policy releases. Primarily, the Blog is designed to prepare people for infectious diseases and help them avoid health issues in the future.",
+      "followers": {
+        "twitter": 13900
+      },
+      "image_url": "https://i1.feedspot.com/921318.jpg?t=1612967102"
+    },
+    {
+      "title": "Kentucky Health News",
+      "feed_url": "https://kyhealthnews.blogspot.com/feeds/posts/default",
+      "website_url": "https://kyhealthnews.blogspot.com/",
+      "description": "Events, trends, issues, ideas and journalism about health care and health in Kentucky",
+      "followers": {
+        "facebook": 23100,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/1789158.jpg?t=1612967106"
+    },
+    {
+      "title": "HealthBlawg",
+      "feed_url": "https://healthblawg.com/feed",
+      "website_url": "https://healthblawg.com/",
+      "description": "HealthBlawg will give you current developments articles in healthcare law and policy together with the observations and analysis of David Harlow, principal of The Harlow Group LLC, a healthcare law and consulting firm based near Boston, Massachusetts.",
+      "followers": {
+        "facebook": 969,
+        "twitter": 17400
+      },
+      "image_url": "https://i1.feedspot.com/4749692.jpg?t=1608717777"
+    },
+    {
+      "title": "HIA",
+      "feed_url": "http://feeds.feedburner.com/HIABlog",
+      "website_url": "http://healthimpactassessment.blogspot.com/",
+      "description": "News and information on Health Impact Assessment (HIA).",
+      "followers": {
+        "facebook": 618,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/2341102.jpg?t=1612967116"
+    },
+    {
+      "title": "NPHR",
+      "feed_url": "https://nphr.wordpress.com/posts/feed/",
+      "website_url": "https://nphr.wordpress.com/posts/",
+      "description": "The NPHR was founded in 2013 by students at Northwestern University who was interested in creating a platform for students and faculty to share their histories, perspectives, and ideas about public health. Our goal is to stimulate interdisciplinary public health conversations.",
+      "followers": {
+        "facebook": 182,
+        "twitter": 287
+      },
+      "image_url": "https://i1.feedspot.com/4749856.jpg?t=1612967130"
+    },
+    {
+      "title": "Louisiana Department of Health",
+      "feed_url": "http://ladepthealth.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ladepthealth.blogspot.com/",
+      "description": "The Louisiana Department of Health Blogspot for the latest updates on what our department is doing to improve the health of Louisiana residents.",
+      "followers": {
+        "twitter": 28200
+      },
+      "image_url": "https://i1.feedspot.com/4750504.jpg?t=1612967579"
+    },
+    {
+      "title": "Theatre Safety Blog",
+      "feed_url": "https://theatresafetyblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://theatresafetyblog.blogspot.com/",
+      "description": "A discussion of safety in the Performing Arts for professionals, students, teachers, and administrators. A sometimes terrifying look at some surprising conditions, what you might do about them; and how to plan for better safety in your facility, teaching program, and career.",
+      "followers": {
+        "twitter": 61
+      },
+      "image_url": "https://i1.feedspot.com/4750271.jpg"
+    },
+    {
+      "title": "Public health and health policy through an Economist's Lens",
+      "feed_url": "http://economistlens.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://economistlens.blogspot.com/",
+      "description": "A blog about business, policy, and economics with some focus on health written by a Vice Dean at the Johns Hopkins Carey Business School",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2114349.jpg?t=1612967553"
+    },
+    {
+      "title": "Climate for Health Blog",
+      "feed_url": "https://climateforhealth.org/blog/feed/",
+      "website_url": "https://climateforhealth.org/blog/",
+      "description": "Climate for Health is a national initiative led by a diverse network of health leaders from across the health sector representing key health care, public health, clinical, and medical institutions and associations.",
+      "followers": {
+        "facebook": 534,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4750199.jpg?t=1612967373"
+    },
+    {
+      "title": "DHW",
+      "feed_url": "https://dhwblog.com/feed/",
+      "website_url": "https://healthandwelfare.idaho.gov/dhw-voice",
+      "description": "The Department of Health and Welfare is designed to help families in crisis become as self-reliant as possible and to offer assistance to vulnerable children and adults who cannot solve their problems alone. Our mission is to promote and protect the health and safety of Idahoans.",
+      "followers": {
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4750339.jpg?t=1612967177"
+    },
+    {
+      "title": "THET",
+      "feed_url": "http://thetblogging.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thetblogging.blogspot.com/",
+      "description": "THET is a specialist global health organization that educates, trains and supports health workers through global health partnerships, strengthening health systems and enabling people in low and middle-income countries to access essential healthcare.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4750485.jpg?t=1612967487"
+    },
+    {
+      "title": "Martin McKee's blog",
+      "feed_url": "http://martinmckeesblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://martinmckeesblog.blogspot.com/",
+      "description": "Tales from a traveling public health professor Martin McKee.",
+      "followers": {
+        "twitter": 41900
+      },
+      "image_url": "https://i1.feedspot.com/4750495.jpg"
+    },
+    {
+      "title": "Maine Public Health",
+      "feed_url": "http://mainepublichealth.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mainepublichealth.blogspot.com/",
+      "description": "Maine Center for Disease Control & Prevention (Maine CDC) is the state's public health agency.",
+      "followers": {
+        "twitter": 19800
+      },
+      "image_url": "https://i1.feedspot.com/4750333.jpg?t=1608294745"
+    },
+    {
+      "title": "States of Mind: Epidemiology",
+      "feed_url": "https://epistates.tumblr.com/rss",
+      "website_url": "https://epistates.tumblr.com/",
+      "description": "I am a graduate student in public health; this is my blog about epidemiology, an awesome subject in public health that affects everything we do. I will be posting pictures and thoughts about current happenings in the public health world, as well as answering prompts for my class every once in a while.'This blog was created for a graduate-level epidemiology project and does not officially represent the views of the Unive",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4750533.jpg"
+    },
+    {
+      "title": "Global bioethics",
+      "feed_url": "http://globalbioethics.blogspot.com/feeds/posts/default",
+      "website_url": "http://globalbioethics.blogspot.com/",
+      "description": "This blog focuses on covering public health information and ethical issues that occur in Africa and the Middle East. There are posts about new research studies occurring in bioethics, promoting reflection on bioethics and research ethics.",
+      "followers": {
+        "facebook": 3400
+      },
+      "image_url": "https://i1.feedspot.com/602410.jpg?t=1612967199"
+    },
+    {
+      "title": "Drake's Public Health, Literature Review Blog",
+      "feed_url": "http://publichealthpanicattackz.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://publichealthpanicattackz.blogspot.com/",
+      "description": "A Public Health and Literature Review Blog authored by Drake Gossi.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4750456.jpg?t=1612967763"
+    },
+    {
+      "title": "Dimensions Of Public Health",
+      "feed_url": "https://publichealthinnepal.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://publichealthinnepal.blogspot.com/",
+      "description": "This is an educative blog for public health professionals.This page focuses on the issues of public health importance. It mainly focuses on the various aspects of public health especially in low-income countries like Nepal.",
+      "followers": {
+        "facebook": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4750434.jpg?t=1612967685"
+    },
+    {
+      "title": "Popular Logistics",
+      "feed_url": "https://popularlogistics.com/feed/",
+      "website_url": "https://popularlogistics.com/",
+      "description": "On Popular Logistics we explore the long-term national security and community security ramifications of energy, environmental, economic, emergency preparedness, and public health policy, and the interrelationships between the people, the companies, and the various systems involved in implementing or holding back the paradigm shift to sustainable models.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4750243.jpg?t=1622612500"
+    },
+    {
+      "title": "GIS Use in Public Health & Healthcare",
+      "feed_url": "https://healthmap.wordpress.com/feed/",
+      "website_url": "https://healthmap.wordpress.com/",
+      "description": "This blog shows how GIS gives new meaning to public health professionals who need to utilize the technology as part of their daily research activities.",
+      "followers": {
+        "twitter": 25500
+      },
+      "image_url": "https://i1.feedspot.com/4750366.jpg?t=1612967204"
+    },
+    {
+      "title": "Healthy Travel Blog",
+      "feed_url": "https://www.healthytravelblog.com/feed",
+      "website_url": "https://gcassociation.org/healthy-travel-blog/",
+      "description": "Welcome to Healthy Travel Blog. It is our hope that this forum helps you understand the interplay between travel and health and lets you share your insights with your fellow travelers. We encourage you to check in often for updates on news, trends, issues, and solutions everything you should consider before you pack your bags for a vacation, business trip, study abroad program, or ex-pat assignment.",
+      "followers": {
+        "facebook": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5449768.jpg?t=1664188810"
+    },
+    {
+      "title": "Public health matters",
+      "feed_url": "https://publichealthmatters.blog.gov.uk/feed/",
+      "website_url": "https://ukhsa.blog.gov.uk/",
+      "description": "The official blog of Public Health England, providing insight and commentary on all aspects of public health, including health protection, health improvement, well being, data and knowledge.Public health England works with national and international partners to safeguard public health.",
+      "followers": {
+        "facebook": 165100
+      },
+      "image_url": "https://i1.feedspot.com/3707756.jpg?t=1600750872"
+    },
+    {
+      "title": "Health Journalism",
+      "feed_url": "https://healthjournalism.org/feed/",
+      "website_url": "https://healthjournalism.org/health-beat/",
+      "description": "Health care articles on aging, children, covid-19, freelancing, government, health care reforms, public health, health journalism, mental health and more.The Association of Health Care Journalists, Inc. is an independent, nonprofit organization dedicated to advancing public understanding of health care issues. They aim to improve the quality, accuracy and visibility of health care reporting, writing and editing.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/2341104.jpg?t=1600755490"
+    },
+    {
+      "title": "Healthcare Economist",
+      "feed_url": "https://www.healthcare-economist.com/feed/",
+      "website_url": "https://www.rwjf.org/en/insights/blog.html",
+      "description": "Jason's research interests include all issues related to healthcare policy and economics, value-based purchasing, the health insurance market, and Medicare policy research.",
+      "followers": {
+        "twitter": 381
+      },
+      "image_url": "https://i1.feedspot.com/312803.jpg?t=1610611119"
+    },
+    {
+      "title": "CDC",
+      "feed_url": "https://blogs.cdc.gov/publichealthmatters/feed/",
+      "website_url": "https://blogs.cdc.gov/publichealthmatters/",
+      "description": "Sharing our stories on preparing for and responding to public health events by Disease Control and Prevention (CDC)",
+      "followers": {
+        "facebook": 4200000,
+        "twitter": 5500000
+      },
+      "image_url": "https://i1.feedspot.com/4749642.jpg?t=1539170719"
+    },
+    {
+      "title": "Maternal Health Task Force Blog",
+      "feed_url": "https://www.mhtf.org/blog/feed/",
+      "website_url": "https://www.mhtf.org/blog/",
+      "description": "The Maternal Health Task Force (MHTF) \u2014 a project of the Women and Health Initiative at the Harvard T.H. Chan School of Public Health \u2014 works to create a strong, well-informed and integrated community of individuals around the globe focused on ending preventable maternal mortality and morbidity worldwide.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 19800
+      },
+      "image_url": "https://i1.feedspot.com/4750375.jpg?t=1612967019"
+    },
+    {
+      "title": "Public Health Newswire",
+      "feed_url": "http://www.publichealthnewswire.org/?feed=rss2&amp;amp;tag=school",
+      "website_url": "http://www.publichealthnewswire.org/",
+      "description": "A leading source of news covering public health events, trends and advocacy. Published by the American Public Health Association, Public Health Newswire reports on a wide spectrum of public health topics.",
+      "followers": {
+        "facebook": 129800,
+        "twitter": 484300
+      },
+      "image_url": "https://i1.feedspot.com/4750277.jpg?t=1612967083"
+    },
+    {
+      "title": "The Health Beat Blog",
+      "feed_url": "http://www.healthbeatblog.org/feed/",
+      "website_url": "http://www.healthbeatblog.org/",
+      "description": "The Health Beat Blog covers public health and its effects on economy and politics. It shows what causes roadblocks for public healthcare, and it also tells what they can do to advance public health.",
+      "followers": {
+        "facebook": 46400,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4750287.jpg?t=1612967109"
+    },
+    {
+      "title": "Monash School of Public Health",
+      "feed_url": "https://www.monash.edu/monash-mango/_web_services/news/rss?site=370504",
+      "website_url": "https://www.monash.edu/medicine/news",
+      "description": "SPHPM is a public health leader in Australia and internationally. The School comprises of many experts in the field of public health, producing innovative and dynamic research and projects in the areas of epidemiology, biostatistics, clinical trials, clinical registries, evidence synthesis and health social science.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4750418.jpg?t=1612967139"
+    },
+    {
+      "title": "Juba Health | Blog",
+      "feed_url": "https://jubahealth.com/blog/feed/",
+      "website_url": "https://jubahealth.com/blog/",
+      "description": "Welcome to Juba Health, your number one source for all public health published articles on South Sudan and Africa . We're dedicated to giving you the very best of thoroughly well research and insightful articles, with a focus on primary health care, nutrition and hygiene, and broader public health provision.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 175,
+        "instagram": 268
+      },
+      "image_url": "https://i1.feedspot.com/5033169.jpg?t=1612967186"
+    },
+    {
+      "title": "Pumphandle LLC",
+      "feed_url": "https://pumphandle.me/blog/f.rss",
+      "website_url": "https://pumphandle.me/blog",
+      "description": "Helping clients make sense of their public health data sets, specializing in R programming solutions. Follow to get updates.",
+      "followers": {
+        "twitter": 149
+      },
+      "image_url": "https://i1.feedspot.com/5063760.jpg"
+    },
+    {
+      "title": "Health Care Renewal",
+      "feed_url": "https://hcrenewal.blogspot.com/",
+      "website_url": "https://hcrenewal.blogspot.com/",
+      "description": "Addressing threats to health care's core values, especially those stemming from concentration and abuse of power. Advocating for accountability, integrity, transparency, honesty, and ethics in leadership and governance of health care.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/1007678.jpg?t=1600755627"
+    }
+  ]
+}

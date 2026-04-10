@@ -1,0 +1,90 @@
+{
+  "category": "PBS Wisconsin",
+  "source_url": "https://rss.feedspot.com/pbs_wisconsin_rss_feeds",
+  "feeds": [
+    {
+      "title": "PBS Wisconsin \u00bb Politics",
+      "feed_url": "https://pbswisconsin.org/news-category/politics/feed/",
+      "website_url": "https://pbswisconsin.org/news-category/politics/",
+      "description": "View the latest political news and updates from PBS Wisconsin.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 12000,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5250318.jpg?t=1614684586"
+    },
+    {
+      "title": "PBS Wisconsin \u00bb Economy",
+      "feed_url": "https://pbswisconsin.org/news-category/economy/feed/",
+      "website_url": "https://pbswisconsin.org/news-category/economy/",
+      "description": "Get the latest Economy news and updates from PBS Wisconsin.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 12000,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5250339.jpg?t=1614687476"
+    },
+    {
+      "title": "PBS Wisconsin \u00bb Health",
+      "feed_url": "https://pbswisconsin.org/news-category/health/feed/",
+      "website_url": "https://pbswisconsin.org/news-category/health/",
+      "description": "Get the latest health news and updates from PBS Wisconsin.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 12000,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5250332.jpg?t=1614686998"
+    },
+    {
+      "title": "PBS Wisconsin \u00bb Social Issues",
+      "feed_url": "https://pbswisconsin.org/news-category/social-issues/feed/",
+      "website_url": "https://pbswisconsin.org/news-category/social-issues/",
+      "description": "Discover the latest Social Issues news and updates from PBS Wisconsin.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 12000,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5250336.jpg?t=1614687325"
+    },
+    {
+      "title": "PBS Wisconsin \u00bb Education",
+      "feed_url": "https://pbswisconsin.org/news-category/education/feed/",
+      "website_url": "https://pbswisconsin.org/news-category/education/",
+      "description": "View the latest Education news and updates from PBS Wisconsin.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 12000,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5250343.jpg?t=1614687903"
+    },
+    {
+      "title": "PBS Wisconsin \u00bb Environment",
+      "feed_url": "https://pbswisconsin.org/news-category/environment/feed/",
+      "website_url": "https://pbswisconsin.org/news-category/environment/",
+      "description": "The latest Environment news, updates, and stories from PBS Wisconsin.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 12000,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5250349.jpg?t=1614688074"
+    },
+    {
+      "title": "PBS Wisconsin \u00bb Science",
+      "feed_url": "https://pbswisconsin.org/news-category/science/feed/",
+      "website_url": "https://pbswisconsin.org/news-category/science/",
+      "description": "View the latest Science news and updates from PBS Wisconsin.",
+      "followers": {
+        "facebook": 80500,
+        "twitter": 12000,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5250355.jpg?t=1614689321"
+    }
+  ]
+}

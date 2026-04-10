@@ -1,0 +1,144 @@
+{
+  "category": "Seattle Tech",
+  "source_url": "https://rss.feedspot.com/seattle_tech_rss_feeds",
+  "feeds": [
+    {
+      "title": "GoEBITS Blog",
+      "feed_url": "https://goebits.com/feed/",
+      "website_url": "https://goebits.com/blog/",
+      "description": "Apple Authorized Service | Computer Repair Seattle",
+      "followers": {
+        "facebook": 887,
+        "twitter": 37,
+        "instagram": 110
+      },
+      "image_url": "https://i1.feedspot.com/5625392.jpg?t=1689249455"
+    },
+    {
+      "title": "Redapt Blog",
+      "feed_url": "https://www.redapt.com/blog/rss.xml",
+      "website_url": "https://www.redapt.com/blog",
+      "description": "Articles, insights, and adoption strategies about technology from infrastructure to cloud engineering to business transformation written by our team of experts.",
+      "followers": {
+        "facebook": 533,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5625394.jpg?t=1689249859"
+    },
+    {
+      "title": "Caisson Blog",
+      "feed_url": "https://www.caissontechnologies.com/blog?format=rss",
+      "website_url": "https://www.caissontechnologies.com/blog",
+      "description": "The Caisson blog provides tips, tricks, and advice for improving business telecom.",
+      "followers": {
+        "facebook": 72,
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/5625397.jpg?t=1689249945"
+    },
+    {
+      "title": "New Tech Northwest Blog",
+      "feed_url": "https://www.newtechnorthwest.com/feed/",
+      "website_url": "https://www.newtechnorthwest.com/blog/",
+      "description": "The Heart of the Northwest's Tech Community.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 5100,
+        "instagram": 441
+      },
+      "image_url": "https://i1.feedspot.com/5625396.jpg?t=1689250031"
+    },
+    {
+      "title": "Seattle Data Guy Blog",
+      "feed_url": "https://www.theseattledataguy.com/feed/",
+      "website_url": "https://www.theseattledataguy.com/data-science-consulting-blog/",
+      "description": "Tips about analytics & data science and how to implement them! At Seattle Data Guy, our background and experience revolve heavily around data modeling, analytics, machine learning, and data science.",
+      "followers": {
+        "facebook": 629,
+        "twitter": 18400
+      },
+      "image_url": "https://i1.feedspot.com/5282702.jpg?t=1689250081"
+    },
+    {
+      "title": "425 Business \u00bb Tech",
+      "feed_url": "https://www.425business.com/search/?f=rss&t=article&c=tech&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.425business.com/tech/",
+      "description": "www.425business.com - RSS Results in section(s) tech only for asset type(s) of article",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2100,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5625399.jpg?t=1689250506"
+    },
+    {
+      "title": "GeekWire",
+      "feed_url": "https://www.geekwire.com/feed/",
+      "website_url": "https://www.geekwire.com/",
+      "description": "GeekWire is a fast-growing, national technology news site with strong roots in the Seattle region and a large audience of loyal, tech-savvy readers around the globe, who follow the site for breaking news, expert analysis, and unique insights into the technology industry.",
+      "followers": {
+        "facebook": 141300,
+        "twitter": 169200,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4462539.jpg?t=1689250135"
+    },
+    {
+      "title": "Tech Talk",
+      "feed_url": "https://techtalk.seattle.gov/feed/",
+      "website_url": "https://techtalk.seattle.gov/category/news/",
+      "description": "Seattle Information Technology",
+      "followers": {
+        "facebook": 928,
+        "twitter": 874
+      },
+      "image_url": "https://i1.feedspot.com/5625395.jpg?t=1689250178"
+    },
+    {
+      "title": "Interplay Blog",
+      "feed_url": "https://www.interplayit.com/feed/",
+      "website_url": "https://www.interplayit.com/blog/",
+      "description": "Seattle IT Managed Services",
+      "followers": {
+        "facebook": 465,
+        "twitter": 157,
+        "instagram": 158
+      },
+      "image_url": "https://i1.feedspot.com/5626609.jpg?t=1689333780"
+    },
+    {
+      "title": "Seattle Met \u00bb Technology",
+      "feed_url": "https://www.seattlemet.com/news-and-city-life/technology/feed",
+      "website_url": "https://www.seattlemet.com/news-and-city-life/technology",
+      "description": "Stories about science and technology in Seattle and Washington, including tech start-ups, aerospace, the environment, and industry.",
+      "followers": {
+        "facebook": 66600,
+        "twitter": 183100,
+        "instagram": 82800
+      },
+      "image_url": "https://i1.feedspot.com/5625393.jpg?t=1689249646"
+    },
+    {
+      "title": "Seattle Times \u00bb Technology",
+      "feed_url": "https://www.seattletimes.com/business/technology/feed/",
+      "website_url": "https://www.seattletimes.com/business/technology/",
+      "description": "Find the latest technology news from Seattle, the Northwest and U.S. by technology reporter Rachel Lerman, Microsoft reporter Matt Day, Amazon reporter \u00c1ngel Gonz\u00e1lez and the Seattle Times business staff.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900
+      },
+      "image_url": "https://i1.feedspot.com/5625391.jpg?t=1689249702"
+    },
+    {
+      "title": "Digital Seattle Blog",
+      "feed_url": "https://www.digitalseattle.com/blog?format=feed",
+      "website_url": "https://www.itsasap.com/blog",
+      "description": "Blog entries categorized under Technology",
+      "followers": {
+        "facebook": 71,
+        "twitter": 158
+      },
+      "image_url": "https://i1.feedspot.com/5625402.jpg?t=1689332229"
+    }
+  ]
+}

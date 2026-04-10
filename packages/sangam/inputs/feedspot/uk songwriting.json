@@ -1,0 +1,64 @@
+{
+  "category": "UK Songwriting",
+  "source_url": "https://rss.feedspot.com/uk_songwriting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Songwriting Magazine",
+      "feed_url": "https://www.songwritingmagazine.co.uk/feed",
+      "website_url": "https://www.songwritingmagazine.co.uk/interviews",
+      "description": "Songwriting Magazine is dedicated to the art and craft of successful songwriting. Find Songwriting interviews, inspirational stories, new artist showcases and more. We talk to artists and big names alike to get the inside story on their songwriting techniques and on how they got to where they are today, while experienced hired songwriters share some of their ideas to help you.",
+      "followers": {
+        "facebook": 35700,
+        "twitter": 23500,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4780996.jpg?t=1642569670"
+    },
+    {
+      "title": "The Song Academy Blog",
+      "feed_url": "https://www.songacademy.co.uk/feed/",
+      "website_url": "https://www.songacademy.co.uk/blog/",
+      "description": "Song Academy is a vibrant community of young songwriters aged 8-18. We develop their songwriting talents, build their confidence & get their songs in front of key people in the music industry. We run the leading nationwide songwriting competition for young people. Follow to find out the latest news from The Song Academy.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 3900,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4913143.jpg?t=1620306231"
+    },
+    {
+      "title": "The Ivors Academy",
+      "feed_url": "https://ivorsacademy.com/feed/",
+      "website_url": "https://ivorsacademy.com/news",
+      "description": "The Ivors Academy is the UK's independent professional association for music creators. We are a community of diverse, talented songwriters and composers across all styles. Their talent creates the music that the world loves.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 18200,
+        "instagram": 31300
+      },
+      "image_url": "https://i1.feedspot.com/4913162.jpg?t=1613050957"
+    },
+    {
+      "title": "The UK Songwriting Contest Blog",
+      "feed_url": "https://www.songwritingcontest.co.uk/1/feed",
+      "website_url": "https://www.songwritingcontest.co.uk/blog",
+      "description": "The UK Songwriting Contest is one of the world's most popular, longest running and estabished songwriting events. It discovers and encourages new songwriting talent and promoting the craft of songwriting. Find posts and updates by the UK Songwriting Contest.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 2700,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4779130.jpg?t=1609143987"
+    },
+    {
+      "title": "Beatles Songwriting Academy",
+      "feed_url": "https://beatlessongwriting.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://beatlessongwriting.blogspot.com/",
+      "description": "Matt Blick is a singer songwriter, music teacher and blogger from Nottingham UK. Find his posts and updates on songwriting.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/1400040.jpg?t=1642654149"
+    }
+  ]
+}

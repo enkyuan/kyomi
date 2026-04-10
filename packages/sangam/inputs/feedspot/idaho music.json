@@ -1,0 +1,111 @@
+{
+  "category": "Idaho Music",
+  "source_url": "https://rss.feedspot.com/idaho_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Boise State Public Radio \u00bb Music",
+      "feed_url": "https://www.boisestatepublicradio.org/music.rss",
+      "website_url": "https://www.boisestatepublicradio.org/music",
+      "description": "Latest music news, reviews, and album releases on Boise State Public Radio.Boise State Public Radio is southern and central Idaho's listener-supported NPR member station.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 7600,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5316625.jpg?t=1630299087"
+    },
+    {
+      "title": "Treefort Music Fest News",
+      "feed_url": "https://treefortmusicfest.com/feed/",
+      "website_url": "https://treefortmusicfest.com/news/",
+      "description": "Stay up to date with the latest news from Treefort Music Fest.Treefort Music Fest is a Multi-venue, emerging artist music festival in downtown Boise, Idaho.",
+      "followers": {
+        "facebook": 32100,
+        "twitter": 12000,
+        "instagram": 50200
+      },
+      "image_url": "https://i1.feedspot.com/5316681.jpg?t=1630304658"
+    },
+    {
+      "title": "Boise Rock School",
+      "feed_url": "https://boiserockschool.com/feed/",
+      "website_url": "https://boiserockschool.com/news/",
+      "description": "Stay up to date with the latest from Boise Rock School here. Boise Rock School is a local independent music school in downtown Boise. We help kids become creative powerhouses that will shape the future of rock.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 1200,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5316648.jpg?t=1630301037"
+    },
+    {
+      "title": "The Idaho Press \u00bb Music",
+      "feed_url": "https://www.idahopress.com/search/?f=rss&t=article&c=boiseweekly/music&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.idahopress.com/boiseweekly/music/",
+      "description": "Latest music news from The Idaho Press. The Idaho Press is your source for local news, sports, and community information for the entire Treasure Valley Idaho region.",
+      "followers": {
+        "facebook": 41200,
+        "twitter": 17100,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5316635.jpg?t=1630300463"
+    },
+    {
+      "title": "The Idahoan Blog",
+      "feed_url": "https://theidahoandj.com/feed/",
+      "website_url": "https://theidahoandj.com/blog/",
+      "description": "My blog will address many different topics including gigs I've performed at, gear reviews, musings, local entertainment and more.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/7900340.jpg?t=1744872004"
+    },
+    {
+      "title": "The Bad Penny Blog",
+      "feed_url": "https://thebadpennyblog.com/feed/",
+      "website_url": "https://thebadpennyblog.com/",
+      "description": "Kurt Orzeck's musings on music and more",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7900580.jpg?t=1744893091"
+    },
+    {
+      "title": "Idaho Bluegrass Association",
+      "feed_url": "https://www.idahobluegrassassociation.org/jasons-bibj/feed",
+      "website_url": "https://www.idahobluegrassassociation.org/jasons-bibj/",
+      "description": "If you like to play acoustic music in the bluegrass genre and a few other styles then join us each week for a relaxed, friendly jam session. We also play in other jams around the Treasure Valley and across the State.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7900583.jpg?t=1744893261"
+    },
+    {
+      "title": "The Record Exchange Blog",
+      "feed_url": "https://www.therecordexchange.com/feed/",
+      "website_url": "https://www.therecordexchange.com/blog/",
+      "description": "Idaho's Largest Independent Music Store Since 1977.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7900579.jpg?t=1744891528"
+    },
+    {
+      "title": "This Is Boise \u00bb Music and Entertainment",
+      "feed_url": "https://thisisboise.com/category/music-entertainment/feed/",
+      "website_url": "https://thisisboise.com/category/music-entertainment/",
+      "description": "This Is Boise is the top local guide for events, restaurants, and hangouts. We believe that Boise is full of stories worth telling- and we're here to share them.",
+      "followers": {
+        "facebook": 60700
+      },
+      "image_url": "https://i1.feedspot.com/7900582.jpg?t=1744893476"
+    },
+    {
+      "title": "Idaho Magazine \u00bb Music",
+      "feed_url": "https://www.idahomagazine.com/article-tags/music/feed/",
+      "website_url": "https://www.idahomagazine.com/article-tags/music/",
+      "description": "A monthly print and digital magazine written by its readers, who tell true stories of their experiences in Idaho.",
+      "followers": {
+        "facebook": 85100
+      },
+      "image_url": "https://i1.feedspot.com/7900581.jpg?t=1744893631"
+    }
+  ]
+}

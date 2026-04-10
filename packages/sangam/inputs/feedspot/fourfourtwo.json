@@ -1,0 +1,29 @@
+{
+  "category": "FourFourTwo",
+  "source_url": "https://rss.feedspot.com/fourfourtwo_rss_feeds",
+  "feeds": [
+    {
+      "title": "FourFourTwo \u00bb Benfica",
+      "feed_url": "https://www.fourfourtwo.com/feeds.xml",
+      "website_url": "https://www.fourfourtwo.com/benfica/",
+      "description": "The S.L. Benfica page on FourFourTwo offers a concise club profile alongside up-to-date news, features and match coverage of Portugal's most decorated football club.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 494000
+      },
+      "image_url": "https://i1.feedspot.com/7913838.jpg?t=1761818800"
+    },
+    {
+      "title": "FourFourTwo \u00bb Buying Guide",
+      "feed_url": "https://www.fourfourtwo.com/feeds/tag/buying-guide",
+      "website_url": "https://www.fourfourtwo.com/buying-guide",
+      "description": "Get all the latest Buying guide news, plus in-depth features and interviews. Keep up to-to-date with all Buying guide news with FourFourTwo.com.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 494000,
+        "instagram": 103300
+      },
+      "image_url": "https://i1.feedspot.com/7913837.jpg"
+    }
+  ]
+}

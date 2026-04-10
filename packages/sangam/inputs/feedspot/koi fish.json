@@ -1,0 +1,87 @@
+{
+  "category": "Koi Fish",
+  "source_url": "https://rss.feedspot.com/koi_fish_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kodama Koi Farm Blog",
+      "feed_url": "https://www.kodamakoifarm.com/feed/",
+      "website_url": "https://www.kodamakoifarm.com/blog/",
+      "description": "Kodama Koi - a source of high-quality Japanese Koi, premium koi food, koi education, and care supplies imported exclusively. Subscribe to get updates.",
+      "followers": {
+        "facebook": 41400,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5049850.jpg?t=1622557294"
+    },
+    {
+      "title": "Quality Nishikigoi Blog",
+      "feed_url": "https://qualitynishikigoi.com/feed/",
+      "website_url": "https://qualitynishikigoi.com/news-blog/",
+      "description": "Quality Nishikigoi is based in the North West of England. We specialize in Koi Carp from Japan along with a full range of Koi related dry goods. We also export our Koi Worldwide. Follow our blog for more information and regular updates.",
+      "followers": {
+        "facebook": 20300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5049904.jpg?t=1622557309"
+    },
+    {
+      "title": "World of Nishikigoi",
+      "feed_url": "https://www.worldofnishikigoi.com/blog-feed.xml",
+      "website_url": "https://www.worldofnishikigoi.com/",
+      "description": "World of Nishikigoi has been a work in progress for quite some time, my aim is to promote and support the koi hobby, share things I find interesting and relevant in the hope of sparking debate and maybe provoking some thought.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5172399.jpg?t=1622557439"
+    },
+    {
+      "title": "Everything Koi Blog",
+      "feed_url": "https://everythingkoi.com/blog/feed/",
+      "website_url": "https://everythingkoi.com/blog/",
+      "description": "Everything Koi is an online retailer of Japanese Koi Fish, Pond equipment as well as Fish & Plant care products. Follow now to receive Everything Koi articles in your inbox.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5049838.jpg"
+    },
+    {
+      "title": "Totally Koi",
+      "feed_url": "https://totallykoi.com/feed/",
+      "website_url": "https://quenikoiblog.co.uk/",
+      "description": "If your are new to the world of Koi fish or an avid fan of this beautiful creature. This should be your first stop. In here you will find the resources and support to help you with your Koi adventure.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 26
+      },
+      "image_url": "https://i1.feedspot.com/5273728.jpg?t=1619698562"
+    },
+    {
+      "title": "Queni Koi",
+      "feed_url": "https://quenikoiblog.co.uk/feed/",
+      "website_url": "https://quenikoiblog.co.uk/",
+      "description": "Queni Koi are specialist growers of quality Koi & suppliers of quality Koi food. Follow this blog and receive notifications of new posts directly to your inbox.",
+      "followers": {
+        "facebook": 22100,
+        "twitter": 150
+      },
+      "image_url": "https://i1.feedspot.com/5049902.jpg?t=1622557305"
+    },
+    {
+      "title": "Gatwick Koi \u00bb Japan",
+      "feed_url": "https://gatwickkoi.com/category/japan-blog/",
+      "website_url": "https://gatwickkoi.com/category/japan-blog/",
+      "description": "Gatwick Koi is a family run business supplying Japanese Koi to the public and the trade. We also stock most Koi related products. Subscribe to keep up with our blog.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5049909.jpg?t=1622557314"
+    },
+    {
+      "title": "Koi To The World",
+      "feed_url": "https://www.koitotheworld.com/blogs/news.atom",
+      "description": "Koi To The World is an expert and industry leader in supplying and shipping Beautiful American Bred Koi, Butterfly Koi, and Premium Goldfish. Follow to get updates about Koi fish.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 177
+      },
+      "image_url": "https://i1.feedspot.com/5049841.jpg?t=1622557318"
+    }
+  ]
+}

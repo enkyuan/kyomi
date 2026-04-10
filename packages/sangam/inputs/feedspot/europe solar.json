@@ -1,0 +1,105 @@
+{
+  "category": "Europe Solar",
+  "source_url": "https://rss.feedspot.com/europe_solar_rss_feeds",
+  "feeds": [
+    {
+      "title": "PV Magazine",
+      "feed_url": "https://www.pv-magazine.com/feed/",
+      "website_url": "https://www.pv-magazine.com/",
+      "description": "PV Magazine is a magazine and online platform that covers news and developments in the solar power industry. Founded in 2008, their mission is to promote the use of solar power worldwide. Their blog covers a wide range of topics related to solar power, including industry news, technology updates, and policy changes.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 56300
+      },
+      "image_url": "https://i1.feedspot.com/4983681.jpg?t=1655880202"
+    },
+    {
+      "title": "Bluetti Blog",
+      "feed_url": "https://www.bluettipower.eu/blogs/news.atom",
+      "website_url": "https://www.bluettipower.com/blogs/news/tagged/product-reviews",
+      "description": "Bluetti Blog is a blog by Bluetti, a company that provides portable solar power solutions. Their blog covers various topics related to solar power, including product reviews, tips for using solar-powered products, and industry news.",
+      "followers": {
+        "facebook": 184200,
+        "twitter": 12600,
+        "instagram": 38000
+      },
+      "image_url": "https://i1.feedspot.com/5525044.jpg?t=1679485056"
+    },
+    {
+      "title": "SolarQuarter \u00bb Europe",
+      "feed_url": "https://solarquarter.com/tag/europe/feed/",
+      "website_url": "https://solarquarter.com/tag/europe/",
+      "description": "SolarQuarter is a blog by SolarQuarter, a platform that provides news and updates related to the solar power industry. Their blog covers various topics related to solar power in Europe, including industry news, technology updates, and policy changes.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 3400,
+        "instagram": 998
+      },
+      "image_url": "https://i1.feedspot.com/5525046.jpg?t=1679484940"
+    },
+    {
+      "title": "IBC SOLAR Blog",
+      "feed_url": "https://blog.ibc-solar.com/feed/",
+      "website_url": "https://blog.ibc-solar.com/",
+      "description": "IBC SOLAR was founded in 1982 in Germany and has since been working towards making solar energy more affordable, available, and easy to use for everyone. The company offers solar solutions for homes, businesses, and utility-scale projects. Their blog covers various aspects of solar energy, including technology, innovations, and industry news.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 930
+      },
+      "image_url": "https://i1.feedspot.com/5525045.jpg?t=1679485160"
+    },
+    {
+      "title": "Solarity Blog",
+      "feed_url": "https://solarity.eu/feed/",
+      "website_url": "https://solarity.eu/blog/",
+      "description": "Solarity is a US-based company that provides solar energy solutions for homes and businesses. Their blog covers various topics related to solar energy, including technology, installations, and maintenance. Their mission is to provide solar power solutions that are reliable, affordable, and easy to use.",
+      "followers": {
+        "facebook": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5525866.jpg?t=1679569186"
+    },
+    {
+      "title": "Tiendo Solar Blog",
+      "feed_url": "https://tienda-solar.es/blog/en/feed/",
+      "website_url": "https://tienda-solar.es/blog/en/",
+      "description": "Tienda Solar is a Spanish company that specializes in the distribution of solar panels and other solar energy products. Their blog covers various topics related to solar energy, including technology, installations, and maintenance. Their mission is to promote the use of renewable energy sources and provide customers with high-quality and affordable solar energy products.",
+      "followers": {
+        "facebook": 617
+      },
+      "image_url": "https://i1.feedspot.com/5525865.jpg?t=1679569232"
+    },
+    {
+      "title": "Solar Heat Europe",
+      "feed_url": "http://solarheateurope.eu/feed/",
+      "website_url": "https://solarheateurope.eu/",
+      "description": "Solar Heat Europe is a European industry association that represents companies involved in the production and distribution of solar thermal systems. Their blog covers various topics related to solar thermal energy, including technology, policy, and market developments. Their mission is to promote the use of solar thermal energy and increase awareness of its potential in Europe.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5525864.jpg?t=1679569373"
+    },
+    {
+      "title": "Metsolar Blog",
+      "feed_url": "https://metsolar.eu/blog/feed/",
+      "website_url": "https://www.solarpowerportal.co.uk/category/blogs/",
+      "description": "Metsolar Blog is a blog by Metsolar, a company that provides solar power solutions. Their blog covers various topics related to solar power, including industry news, product reviews, and case studies. Metsolar Blog provides with solar technology, news, trends and Insights in one place. Also custom solar panels for any application, various power, size, color and more options possible.",
+      "followers": {
+        "facebook": 322,
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/4961272.jpg?t=1614672374"
+    },
+    {
+      "title": "The Renewable Energy Hub Blog",
+      "feed_url": "https://www.renewableenergyhub.co.uk/blog/feed",
+      "website_url": "https://www.renewableenergyhub.co.uk/blog",
+      "description": "The Renewable Energy Hub Blog is a blog by The Renewable Energy Hub, a company that provides renewable energy solutions, including solar panels. Their blog covers various topics related to renewable energy, including solar power, wind power, and energy efficiency.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5525048.jpg?t=1679484950"
+    }
+  ]
+}

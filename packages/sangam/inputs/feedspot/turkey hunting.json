@@ -1,0 +1,50 @@
+{
+  "category": "Turkey Hunting",
+  "source_url": "https://rss.feedspot.com/turkey_hunting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Colorado Outdoors Online \u00bb Turkey Hunting",
+      "feed_url": "https://coloradooutdoorsmag.com/category/hunting/turkey-hunting/feed/",
+      "website_url": "https://coloradooutdoorsmag.com/category/turkey-hunting/",
+      "description": "Colorado Outdoors, Colorado Parks and Wildlife's magazine, features a wealth of information for hunters, anglers and outdoors enthusiasts.",
+      "followers": {
+        "facebook": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5273010.jpg?t=1619431395"
+    },
+    {
+      "title": "Heartlandlodge.com \u00bb Corey's Whitetail & Turkey Hunting Blog",
+      "feed_url": "https://www.heartlandlodge.com/coreys-whitetail-turkey/feed/",
+      "website_url": "https://www.heartlandlodge.com/coreys-whitetail-turkey/",
+      "description": "Whitetail and Turkey expert Corey Wilkinson shares his tips and secrets on harvesting mature whitetails and spring gobblers.",
+      "followers": {
+        "facebook": 172700,
+        "twitter": 287
+      },
+      "image_url": "https://i1.feedspot.com/5162547.jpg?t=1619430172"
+    },
+    {
+      "title": "Realtree Nation",
+      "feed_url": "https://realtree.com/blogs/",
+      "website_url": "https://realtree.com/blogs/",
+      "description": "Realtree is not only your #1 resource for camouflage, but provides you with the latest hunting tips and tactics. From deer and turkey hunting articles to outdoor viral videos, Realtree has something for every outdoor enthusiast!",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 322100,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5272935.jpg?t=1619422289"
+    },
+    {
+      "title": "Jason Tome Outdoors",
+      "feed_url": "https://jasontomeoutdoors.com/feed/",
+      "website_url": "https://jasontomeoutdoors.com/",
+      "description": "Jason Tome Outdoors is for those who are fueled by adventure and the freedom, aliveness, and growth that comes from hunting challenging wild places and animals.",
+      "followers": {
+        "facebook": 259,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5273967.jpg?t=1619611429"
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "category": "Aquarium",
+  "source_url": "https://rss.feedspot.com/aquarium_rss_feeds",
+  "feeds": [
+    {
+      "title": "Reef Builders",
+      "feed_url": "https://reefbuilders.com/feed/",
+      "website_url": "https://reefbuilders.com/",
+      "description": "The Reef and Saltwater Aquarium Blog provide us with the inside scoop on the saltwater aquarium industry. Ryan Gripp founded Reef Builders. Established in 2006, Reef Builders covers the aquatics industry for keeping saltwater tanks.",
+      "followers": {
+        "facebook": 72200,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4533372.jpg?t=1673257046"
+    },
+    {
+      "title": "Aquarium Co-Op",
+      "feed_url": "https://www.aquariumcoop.com/blogs/aquarium.atom",
+      "website_url": "https://www.aquariumcoop.com/blogs/aquarium",
+      "description": "At Aquarium Co-Op, we focus on your aquariums. We specialize in aquatic plants, freshwater tropical fish, and the overall betterment of the freshwater fish-keeping hobby. On our blog, we provide knowledge to further your own knowledge and confidence, taking you from just keeping fish to creating an aquarium hobby.",
+      "followers": {
+        "facebook": 482500,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5273262.jpg?t=1619501037"
+    },
+    {
+      "title": "Reefs.com",
+      "feed_url": "https://reefs.com/feed/",
+      "website_url": "https://reefs.com/",
+      "description": "Since 1984, Reefs.com is the world's leading destination for sustainable coral reef farming and the aquarium hobby. They offer a free open forum and reef-related news and data to better educate aquarists.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 4600,
+        "instagram": 781
+      },
+      "image_url": "https://i1.feedspot.com/4533677.jpg?t=1618475554"
+    },
+    {
+      "title": "New England Aquarium Blog",
+      "feed_url": "https://www.neaq.org/news-and-stories/feed/",
+      "website_url": "https://www.neaq.org/news-and-stories/",
+      "description": "The New England Aquarium is a global leader in ocean exploration and marine conservation. With more than 1.3 million visitors a year, the Aquarium is one of the premier visitor attractions in Boston and a major public education resource for the region. We are a catalyst for global change through public engagement, commitment to marine animal conservation, leadership in education, innovative scientific research, and effective advocacy for vital and vibrant oceans.",
+      "followers": {
+        "facebook": 220100,
+        "twitter": 29300,
+        "instagram": 111100
+      },
+      "image_url": "https://i1.feedspot.com/5273824.jpg?t=1619595293"
+    },
+    {
+      "title": "Tropical Fish Care Guides Blog",
+      "feed_url": "https://www.tropicalfishcareguides.com/feed/",
+      "website_url": "https://www.tropicalfishcareguides.com/tfcg-blog/",
+      "description": "My name is Jack Dempsey, and I created this website to help beginners avoid the biggest mistakes and teach them how to look after tropical fish the right way. I've been taking care of tropical fish since I was five years old. Now in my forties with two children of my own, I'm sharing my love for the hobby with them. Want to learn how to care for tropical fish? follow this blog feed.",
+      "followers": {
+        "twitter": 152
+      },
+      "image_url": "https://i1.feedspot.com/5273802.jpg?t=1619602596"
+    },
+    {
+      "title": "Seattle Aquarium",
+      "feed_url": "https://www.seattleaquarium.org/feed/",
+      "website_url": "https://www.seattleaquarium.org/stories/",
+      "description": "Seattle Aquarium is the premier resource for hands-on marine experiences and conservation education, the Seattle Aquarium offers fun, exciting ways to discover more about the amazing Puget Sound and our world's one big ocean. Join us in our mission: Inspiring Conservation of Our Marine Environment.",
+      "followers": {
+        "facebook": 130699,
+        "twitter": 24100,
+        "instagram": 105000
+      },
+      "image_url": "https://i1.feedspot.com/5273825.jpg?t=1619595139"
+    },
+    {
+      "title": "Oregon Coast Aquarium",
+      "feed_url": "https://aquarium.org/feed/",
+      "website_url": "https://aquarium.org/about/news/",
+      "description": "The Oregon Coast Aquarium is a 501(c)3 nonprofit organization located in Newport, on the beautiful Oregon Coast. Our mission is to create unique and engaging experiences that connect you to the Oregon coast and inspire ocean conservation. The Oregon Coast Aquarium is a captivating destination and a trusted resource for ocean education and conservation in the Pacific Northwest.",
+      "followers": {
+        "facebook": 135600,
+        "twitter": 9400,
+        "instagram": 73800
+      },
+      "image_url": "https://i1.feedspot.com/4533391.jpg?t=1619594898"
+    },
+    {
+      "title": "Clearwater Marine Aquarium",
+      "feed_url": "https://mission.cmaquarium.org/feed/",
+      "website_url": "https://mission.cmaquarium.org/news/",
+      "description": "Clearwater Marine Aquarium is a non-profit working marine animal hospital. We believe in preserving our environment while inspiring the human spirit through leadership in the rescue, rehabilitation, and release of marine life. Read the latest rescue, rehab, and release updates, inspirational stories, announcements, and conservation efforts by following this blog feed.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 41700,
+        "instagram": 261899
+      },
+      "image_url": "https://i1.feedspot.com/5273800.jpg?t=1619603324"
+    },
+    {
+      "title": "Aquarium Friend",
+      "feed_url": "https://aquariumfriend.com/feed/",
+      "website_url": "https://aquariumfriend.com/",
+      "description": "Make friends with your fish and aquarium. Here you will find articles on the latest aquarium equipment, the latest fish care guides, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5240421.jpg?t=1611929785"
+    },
+    {
+      "title": "The Cichlid Stage",
+      "feed_url": "https://thecichlidstage.com/feed/",
+      "website_url": "https://thecichlidstage.com/",
+      "description": "My name is Scott. As an amateur freshwater aquarist for more than 20 years, I've kept many types of fish. I'm just a hobbyist whose fish keeping interests focus on cichlids, specifically dwarf species. The blog covers everything from aquarium livestock to the various equipment I use, aquarium equipment available to hobbyists, and various cichlid resources helpful to fellow hobbyists.",
+      "followers": {
+        "twitter": 73
+      },
+      "image_url": "https://i1.feedspot.com/5273804.jpg?t=1620903986"
+    },
+    {
+      "title": "Fish Tank Setups",
+      "feed_url": "https://fishtanksetups.com/feed/",
+      "website_url": "https://fishtanksetups.com/",
+      "description": "Hi, my name is Jordan. I've owned fish during my childhood and took a deeper interest after my girlfriend and I purchased a 10-gallon tank for our daughter. In my blog, I cover top-rated aquarium products & reviews.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 18,
+        "instagram": 79
+      },
+      "image_url": "https://i1.feedspot.com/5273799.jpg?t=1619604035"
+    },
+    {
+      "title": "National Marine Aquarium Blog",
+      "feed_url": "https://www.national-aquarium.co.uk/blog/feed/",
+      "website_url": "https://www.national-aquarium.co.uk/blog/",
+      "description": "The National Marine Aquarium is the largest aquarium in the UK, situated in Plymouth. We are dedicated to driving marine conservation through engagement.",
+      "followers": {
+        "facebook": 155500,
+        "twitter": 14000,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/4533699.jpg?t=1618473712"
+    },
+    {
+      "title": "Saltwater Aquarium Blog",
+      "feed_url": "https://www.saltwateraquariumblog.com/feed/",
+      "website_url": "https://www.saltwateraquariumblog.com/articles/",
+      "description": "A blog for the saltwater aquarium hobbyist by Albert B Ulrich III. Saltwater Aquarium Blog is a guide for building a better saltwater aquarium and suggests the right set of equipment. Get the latest info on saltwater fish, coral, phytoplankton culture, and more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4533383.jpg?t=1655378187"
+    },
+    {
+      "title": "Aquariadise",
+      "feed_url": "https://www.aquariadise.com/feed/",
+      "website_url": "https://www.aquariadise.com/",
+      "description": "Freshwater aquariums & more!",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4533433.jpg?t=1618473728"
+    },
+    {
+      "title": "Betta Reef Blog",
+      "feed_url": "https://bettareef.com/feed/",
+      "website_url": "https://bettareef.com/blog/",
+      "description": "Elevate your betta fish care with BettaReef. On this website, you'll find a wealth of information about caring for betta fish, including tank setup, feeding, breeding, and more. Whether you're a seasoned betta owner or just starting, Betta Reef site is here to help you provide the best care possible for your finned friends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5744814.jpg?t=1703765189"
+    },
+    {
+      "title": "Art's Fish Room",
+      "feed_url": "https://artsfishroom.co.za/feed/",
+      "website_url": "https://artsfishroom.co.za/discover/",
+      "description": "Explore comprehensive guides on Aquarium maintenance and Fish-keeping. This page offers incisive information and knowledge on how to rear and keep your pet fish in optimal conditions. Find out more about the various species of fish currently bred by Art's Fish Room, ongoing projects, and ideas for success in the aquarium hobby.",
+      "followers": {
+        "facebook": 385,
+        "instagram": 213
+      },
+      "image_url": "https://i1.feedspot.com/5744821.jpg?t=1703767063"
+    },
+    {
+      "title": "Fluvico",
+      "feed_url": "https://fluvico.com/feed/",
+      "website_url": "https://fluvico.com/",
+      "description": "Fluvico's aquarium guides are designed to cover a wide spectrum of topics in aquatics. They provide you with comprehensive information on everything from the basics of setting up an aquarium, to the nuances of fish and plant care. These guides are your go-to resource, helping you at every stage of your aquarium journey.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7247881.jpg?t=1707379588"
+    },
+    {
+      "title": "Modest Fish",
+      "feed_url": "https://modestfish.com/feed/",
+      "website_url": "https://modestfish.com/",
+      "description": "Modest Fish was created in order to make it easy for anyone to start their own aquarium. Our mission is to provide a wealth of information for new and seasoned aquatic hobbyists. Here, you can find helpful information on owning an aquarium, types of fish and other aquatic animals, guides, and fun!",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5273797.jpg?t=1620905237"
+    },
+    {
+      "title": "Blue Fish Aquarium",
+      "feed_url": "https://bluefishaquarium.com/blogs/aquarium-tips.atom",
+      "website_url": "https://bluefishaquarium.com/blogs/aquarium-tips",
+      "description": "Blue Fish Aquarium offers the best in all of your aquatic needs! Fish, tanks, food, supplies, and more!",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 984,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4533575.jpg?t=1618473738"
+    },
+    {
+      "title": "ReefBum Blog",
+      "feed_url": "https://www.reefbum.com/feed/",
+      "website_url": "https://www.reefbum.com/blog/",
+      "description": "Hi, I'm Keith Berkelhamer. I'm the founder of ReefBum. ReefBum helps hobbyists create the reef tank of their dreams, offering cultivated SPS frags, an educational blog, and inspirational photos and videos. My blog, online course, and book are the educational tools I use to share the knowledge I have accumulated over the years, providing a roadmap for success.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 62,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5273805.jpg?t=1619605274"
+    },
+    {
+      "title": "The Fish Tank Expert",
+      "feed_url": "https://fishtankexpert.com/feed/",
+      "website_url": "https://fishtankexpert.com/",
+      "description": "Answering all of your fish tank questions. Follow to get updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5069786.jpg"
+    },
+    {
+      "title": "AquaNerd",
+      "feed_url": "https://aquanerd.com/feed",
+      "website_url": "https://aquanerd.com/",
+      "description": "At AquaNerd learn about the coral reefs, saltwater aquariums, aquarium fish, saltwater fish, corals, fish aquariums, marine aquariums, and reef aquariums. Our goal is to not only educate saltwater aquarium hobbyists, but also bring them aquarium-related news, product information, equipment reviews, and livestock care tips.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4533390.jpg?t=1618473745"
+    },
+    {
+      "title": "Aquarium Adventure Columbus Blog",
+      "feed_url": "https://www.aquariumadventurecolumbus.com/blog?format=rss",
+      "website_url": "https://www.aquariumadventurecolumbus.com/blog",
+      "description": "Aquarium Adventure Columbus offers a large supply of aquatic products and services. Our services include the design, delivery, installation, and maintenance of aquariums, ponds, and water gardens. Hear from experts about everything from fish care to how to take care of the plant life in your pond.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 375,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5273798.jpg?t=1619603064"
+    },
+    {
+      "title": "Fishaholic",
+      "feed_url": "https://www.fishaholic.net/feeds/posts/default",
+      "website_url": "https://www.fishaholic.net/",
+      "description": "Fishaholic offers a combination of written articles and video tutorials to help build cheap DIY aquarium projects at home such as aquarium filter, stand, lighting and more. Learning also covers how to setup and maintain beautiful planted tanks with community fish.",
+      "followers": {
+        "facebook": 860
+      },
+      "image_url": "https://i1.feedspot.com/5121215.jpg"
+    },
+    {
+      "title": "Aquarium Works",
+      "feed_url": "https://aquariumworks.org/feed/",
+      "website_url": "https://aquariumworks.org/",
+      "description": "News, ideas, adventures. A blog centered around quality aquarium keeping.",
+      "followers": {
+        "twitter": 17200,
+        "instagram": 46600
+      },
+      "image_url": "https://i1.feedspot.com/4533403.jpg?t=1618474659"
+    },
+    {
+      "title": "Keeping Catfish",
+      "feed_url": "https://keepingcatfish.com/feed/",
+      "website_url": "https://keepingcatfish.com/the-catfish-blog/",
+      "description": "Hello, I am Thijs, and I am the founder of Keeping Catfish. With Keeping Catfish, we are dedicated to keeping Catfish in your aquarium, for both beginners and advanced fish keepers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5390817.jpg?t=1649932531"
+    },
+    {
+      "title": "Aquarium Tidings",
+      "feed_url": "https://aquariumtidings.com/feed/",
+      "website_url": "https://aquariumtidings.com/",
+      "description": "The source for aquarium information. From tropical to cold-water fish, you will find all the information here.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 32
+      },
+      "image_url": "https://i1.feedspot.com/5273806.jpg?t=1619603471"
+    },
+    {
+      "title": "Discus Guy Blog",
+      "feed_url": "https://discusguy.com/feed/",
+      "website_url": "https://discusguy.com/blog/",
+      "description": "Keep up with articles from Discus Guy",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5056962.jpg"
+    },
+    {
+      "title": "Salt Tank Report",
+      "feed_url": "https://salttankreport.com/feed/",
+      "website_url": "https://salttankreport.com/",
+      "description": "Hey everyone, I'm David, the guy behind Salt Tank Report. That is my 32-gallon Biocube tank above. I've owned many saltwater aquariums over the years and have become obsessed with them. I'm always working on and improving my tanks at home, but when I'm not, I'm here writing about saltwater tanks. To be successful with saltwater tanks, you need to educate yourself and know what to expect. This is what I will share with you. My goal is to grow the Salt Tank Report into the best resource online helping millions of saltwater hobbyists like you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5130389.jpg"
+    },
+    {
+      "title": "That Fish Blog",
+      "feed_url": "https://feeds.feedburner.com/ThatFishBlog",
+      "website_url": "http://blogs.thatpetplace.com/thatfishblog/",
+      "description": "Aquarium advice, information, articles, and news from the marine biologists and aquarium fish experts at That Fish Place.",
+      "followers": {
+        "facebook": 97900,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5273795.jpg?t=1619605383"
+    },
+    {
+      "title": "Monterey Bay Aquarium",
+      "feed_url": "https://montereybayaquarium.tumblr.com/rss",
+      "website_url": "https://montereybayaquarium.tumblr.com/",
+      "description": "Get the latest news about animals, exhibits and conservation efforts on the Monterey Bay Aquarium's blog.",
+      "followers": {
+        "twitter": 226200
+      },
+      "image_url": "https://i1.feedspot.com/6713.jpg"
+    },
+    {
+      "title": "Fish Informer",
+      "feed_url": "https://fishinformer.com/feed",
+      "website_url": "https://fishinformer.com/",
+      "description": "Covers interesting facts, information about fishes, types of fishes, fishing guides and marine life.",
+      "followers": {
+        "facebook": 4
+      },
+      "image_url": "https://i1.feedspot.com/5341563.jpg?t=1636550485"
+    },
+    {
+      "title": "Birch Aquarium Blog",
+      "feed_url": "https://aquarium.ucsd.edu/newsroom",
+      "website_url": "https://aquarium.ucsd.edu/newsroom",
+      "description": "Public exploration center for Scripps Institution of Oceanography at UC San Diego.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 18800,
+        "instagram": 80000
+      },
+      "image_url": "https://i1.feedspot.com/4533397.jpg?t=1618473725"
+    },
+    {
+      "title": "Fishkeeping World Blog",
+      "feed_url": "https://www.fishkeepingworld.com/blog/feed/",
+      "website_url": "https://www.aquariumsource.com/",
+      "description": "The Fishkeeping World was created by a school of fish fanatics. Our aim is to help educate anyone who wants to keep fish. Here, you can find out everything you need to know about keeping fish and aquarium maintenance.",
+      "followers": {
+        "facebook": 24700
+      },
+      "image_url": "https://i1.feedspot.com/5001946.jpg?t=1619508468"
+    },
+    {
+      "title": "Aquarium Source",
+      "feed_url": "https://www.aquariumsource.com/feed/",
+      "website_url": "https://www.aquariumsource.com/",
+      "description": "Aquarium Source is a resource where aquarists can find valuable information to help them build thriving aquatic ecosystems.",
+      "followers": {
+        "facebook": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5054737.jpg?t=1618473793"
+    },
+    {
+      "title": "Aquatails Blog",
+      "feed_url": "https://www.aquatails.net/blog-feed.xml",
+      "website_url": "https://www.mysticaquarium.org/whats-new/blog/",
+      "description": "Family run online aquatic store. We care about our hobby and love what we do. We deliver quality live fish, tropical plants and goods to your door",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5468412.jpg?t=1668594096"
+    },
+    {
+      "title": "Aquarium Tales",
+      "feed_url": "https://aquariumtales.com/feed/",
+      "website_url": "https://aquariumtales.com/",
+      "description": "The 'Aquarium Tales' helps you in your aquarium journey, from the initial build-up to keep your aquarium in good shape. On our website, we provide essential information for the aquarists and reviews of different aquarium items.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5184611.jpg?t=1597920441"
+    },
+    {
+      "title": "AquaExpose Blog",
+      "feed_url": "https://aquaexpose.com/feed/",
+      "website_url": "https://aquaexpose.com/blog/",
+      "description": "Aquarium Environments Specialist. Aquarium decor & Filtering & Fish Health! We here are a bunch of hobbyists who Care Aquarium's Fish as a passion. We are not professionals but we know more than most of them (Yeah, that's right).",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5212669.jpg?t=1604319666"
+    },
+    {
+      "title": "Around The Reef",
+      "feed_url": "https://aroundthereef.com/feed/",
+      "website_url": "https://aroundthereef.com/",
+      "description": "Stay up to date on the latest news and products in the reef hobby. We cover everything from aquariums to coral care. Come join the fun!",
+      "followers": {
+        "facebook": 109
+      },
+      "image_url": "https://i1.feedspot.com/5246832.jpg?t=1613737279"
+    }
+  ]
+}

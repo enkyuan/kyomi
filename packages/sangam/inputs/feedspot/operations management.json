@@ -1,0 +1,82 @@
+{
+  "category": "Operations Management",
+  "source_url": "https://rss.feedspot.com/operations_management_rss_feeds",
+  "feeds": [
+    {
+      "title": "INFORMS Blog",
+      "feed_url": "https://www.informs.org/rss/feed/iol_news",
+      "website_url": "https://www.informs.org/",
+      "description": "INFORMS is the leading international association for professionals in analytics and operations research.",
+      "followers": {
+        "facebook": 8200,
+        "twitter": 13200,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4433906.jpg?t=1622182239"
+    },
+    {
+      "title": "USC Consulting Group Blog",
+      "feed_url": "https://usccg.com/feed/",
+      "website_url": "http://usccg.com/blog/",
+      "description": "USC Consulting Group is a global operation management consulting firm committed to processing improvement across various industries. The Metrics Blog is all about business performance improvement. Read our latest thinking on a variety of process improvement topics across many industries.",
+      "followers": {
+        "facebook": 58,
+        "twitter": 214
+      },
+      "image_url": "https://i1.feedspot.com/4654973.jpg?t=1622182245"
+    },
+    {
+      "title": "OpsMan",
+      "feed_url": "https://www.opsman.co.za/feed/",
+      "website_url": "https://www.opsman.co.za/",
+      "description": "This site is run by Warren Kahn. I currently work at Microsoft, headquartered in Johannesburg South Africa, as a Senior Premier Field Engineer focused on server monitoring technologies. My current role encompasses working with the customer as a trusted adviser to support and maintain the IT infrastructure of the company's clients as well as installation, configuration and administration of Microsoft System Center Operations Manager and its related components and infrastructure.",
+      "followers": {
+        "twitter": 314
+      },
+      "image_url": "https://i1.feedspot.com/5089789.jpg"
+    },
+    {
+      "title": "The Operations Blog",
+      "feed_url": "https://theoperationsblog.com/feed/",
+      "website_url": "https://theoperationsblog.com/",
+      "description": "Follow The Operations Blog to get blog posts on customer support, customer experience, service operations, leadership and employee experience.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5000124.jpg"
+    },
+    {
+      "title": "Hola! OBM Blog",
+      "feed_url": "https://holaobm.com/feed/",
+      "website_url": "https://holaobm.com/blog/",
+      "description": "Find tips and ideas for successfully running your business through HolaOBM's business advice blog. Subscribe to our feed to stay up to date with the latest news, articles, and stories from us. Hola!OBM is a trusted Online Business Manager service provided by Nuria F Munne.",
+      "followers": {
+        "facebook": 151,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5618893.jpg?t=1688646255"
+    },
+    {
+      "title": "McKinsey & Company",
+      "feed_url": "https://www.mckinsey.com/Insights/rss.aspx",
+      "website_url": "https://www.mckinsey.com/featured-insights",
+      "description": "McKinsey & Company is the trusted advisor and counselor to many of the world's most influential businesses and institutions. We help our clients make lasting improvements to their performance and realize their most important goals. Get our latest thinking on the issues that matter most in business and management.",
+      "followers": {
+        "facebook": 492300,
+        "twitter": 655100
+      },
+      "image_url": "https://i1.feedspot.com/953639.jpg?t=1617363674"
+    },
+    {
+      "title": "Micro Focus Community \u00bb IT Operations Management",
+      "feed_url": "https://community.microfocus.com/it_ops_mgt/b/sws-571/rss",
+      "website_url": "https://blogs.opentext.com/",
+      "description": "Micro Focus is a global software company delivering and supporting enterprise software solutions that help customers innovate faster with lower risk. Learn how IT operations management (ITOM) solutions fuel digital business performance through automation, orchestration, and transformation.",
+      "followers": {
+        "facebook": 58700,
+        "twitter": 38900
+      },
+      "image_url": "https://i1.feedspot.com/5000122.jpg?t=1622182235"
+    }
+  ]
+}

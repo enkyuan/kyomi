@@ -1,0 +1,48 @@
+{
+  "category": "Caffeine",
+  "source_url": "https://rss.feedspot.com/caffeine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Medical Xpress \u00bb Caffeine",
+      "feed_url": "https://medicalxpress.com/rss-feed/tags/caffeine/",
+      "website_url": "https://medicalxpress.com/tags/caffeine/",
+      "description": "This section features articles on caffeine, caffeine addiction, treatments and more! Medical Xpress internet news portal provides the latest news on science including: Physics, Nanotechnology, Life Sciences, Space Science, Earth Science, Environment, Health and Medicine.",
+      "followers": {
+        "facebook": 183500,
+        "twitter": 170600
+      },
+      "image_url": "https://i1.feedspot.com/5387670.jpg?t=1650262537"
+    },
+    {
+      "title": "Savorista Coffee Blog",
+      "feed_url": "https://savorista.com/blogs/savorista-blog.atom",
+      "website_url": "https://savorista.com/blogs/savorista-blog",
+      "description": "Savorista Coffee blog with stories, adventures and interesting tidbits on caffeine conscious coffee and those who love a great coffee, without all the caffeine. Savorista crafts astonishingly delicious decaf and half caf coffee. All of the flavor, none of the frantic.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5387668.jpg?t=1649135413"
+    },
+    {
+      "title": "FoodInsight.org \u00bb Caffeine",
+      "feed_url": "https://foodinsight.org/caffeine/feed/",
+      "website_url": "https://foodinsight.org/caffeine/in-the-news/",
+      "description": "Your go-to resource for Caffeine safety, production, nutritional values and effects. Incorporated as a public education foundation in 1991 and based in Washington, DC, the International Food Information Council Foundation is independent and not-for-profit. Our vision is a global environment where credible science drives food policy and consumer choice.",
+      "followers": {
+        "facebook": 527700,
+        "twitter": 44600,
+        "instagram": 39500
+      },
+      "image_url": "https://i1.feedspot.com/5387669.jpg?t=1649135416"
+    },
+    {
+      "title": "Caffeine Addiction Help",
+      "feed_url": "https://caffeineaddictionhelp.com/feed/",
+      "website_url": "https://caffeineaddictionhelp.com/",
+      "description": "Caffeine Addiction Help features articles on caffeine addiction, withdrawals and how to deal with it and heal from it!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5315340.jpg?t=1649136211"
+    }
+  ]
+}

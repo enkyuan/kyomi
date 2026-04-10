@@ -1,0 +1,29 @@
+{
+  "category": "Bloomington News",
+  "source_url": "https://rss.feedspot.com/bloomington_minnesota_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sun Current \u00bb Bloomington",
+      "feed_url": "https://www.hometownsource.com/search/?f=rss&t=article&c=sun_current/community/bloomington&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.hometownsource.com/sun_current/community/bloomington/",
+      "description": "The Sun Current Central group encompasses coverage from the Minnesota cities of Bloomington, Richfield, Edina and Eden Prairie.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5147025.jpg?t=1588415877"
+    },
+    {
+      "title": "CBS Minnesota \u00bb Bloomington",
+      "feed_url": "https://minnesota.cbslocal.com/tag/bloomington/feed/",
+      "website_url": "https://www.cbsnews.com/minnesota/tag/bloomington/",
+      "description": "News, Sports, Weather, Traffic, and the Best of Minnesota, and the Twin Cities of Minneapolis-St. Paul.",
+      "followers": {
+        "facebook": 484700,
+        "twitter": 269700,
+        "instagram": 87900
+      },
+      "image_url": "https://i1.feedspot.com/5147022.jpg"
+    }
+  ]
+}

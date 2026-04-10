@@ -1,0 +1,53 @@
+{
+  "category": "Kentucky Cannabis",
+  "source_url": "https://rss.feedspot.com/kentucky_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kentucky Botanical Co Blog",
+      "feed_url": "https://www.kybotanicalco.com/blog-feed.xml",
+      "website_url": "https://www.kybotanicalco.com/blog",
+      "description": "Kentucky Botanical Co. offers high-quality organic CBD products to customers across the nation. Their blog delivers must-read insights into new products, consumption methods, medical research, policy changes, and the latest from their budtenders.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7284559.jpg?t=1711549143"
+    },
+    {
+      "title": "Kentucky Cannabis Clinic Blog",
+      "feed_url": "https://www.kentuckycannabis.clinic/blog?format=rss",
+      "website_url": "https://www.kentuckycannabis.clinic/blog",
+      "description": "Find out the latest about Kentucky's medical marijuana scene from the Kentucky Cannabis Clinic blog! Level up with strain profiles, ingestion tips, wellness articles, policy breakdowns, entertaining stories and store spotlights. Kentucky Cannabis Clinic provides state-licensed Kentucky doctors, with extensive medical marijuana experience, to certify patients through Governor Andy Beshear's executive order.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7284561.jpg?t=1711549159"
+    },
+    {
+      "title": "Kentucky Marijuana Card Blog",
+      "feed_url": "https://www.kentuckymarijuanacard.com/blog-feed.xml",
+      "website_url": "https://www.kentuckymarijuanacard.com/blog",
+      "description": "Stay up-to-date with the latest news, updates, and insights on medical cannabis in Kentucky through the Kentucky Marijuana Card blog. Explore valuable resources and educational content. Kentucky Marijuana Card helps qualifying patients obtain their medical marijuana card.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7284557.jpg?t=1711549175"
+    },
+    {
+      "title": "MJBizDaily \u00bb Kentucky",
+      "feed_url": "https://mjbizdaily.com/news-by-state/kentucky/feed/",
+      "website_url": "https://mjbizdaily.com/news-by-state/kentucky/",
+      "description": "Get Kentucky Cannabis Industry News and Marijuana legislation updates at Marijuana Business Daily, the leading publication in the cannabis world. Founded in 2011, MJBiz\u2122 is the most trusted, independent publisher and event producer serving America's cannabis industry entrepreneurs and investors.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 77900,
+        "instagram": 73600
+      },
+      "image_url": "https://i1.feedspot.com/7284560.jpg?t=1711549195"
+    },
+    {
+      "title": "Bluegrass Cannabis Blog",
+      "feed_url": "https://www.bluegrasscannabis.com/blog-feed.xml",
+      "website_url": "https://www.bluegrasscannabis.com/bluegrass-cannabis-blog",
+      "description": "Bluegrass Cannabis is a native Podcast and Dispensary that has been delivering the latest news, and educating on Kentucky Cannabis. advocate for home grow, transparency in licensing, and more; making sure that legislators, industry operators, and farmers are held accountable.",
+      "followers": {
+        "facebook": 371,
+        "twitter": 176
+      },
+      "image_url": "https://i1.feedspot.com/7284558.jpg?t=1711549080"
+    }
+  ]
+}

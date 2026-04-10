@@ -1,0 +1,38 @@
+{
+  "category": "Ted",
+  "source_url": "https://rss.feedspot.com/ted_rss_feeds",
+  "feeds": [
+    {
+      "title": "TED-Ed Blog",
+      "feed_url": "https://blog.ed.ted.com/feed/",
+      "website_url": "https://blog.ed.ted.com/",
+      "description": "Explore our blog packed with ideas and resources for bettering education. We talk about current news, education policies, and inspiring stories shared with us by students and educators. Ted-Ed is full of educational videos on a variety of general education topics that can be accessed for free. TED-Ed's mission is to capture and amplify the voices of great educators around the world.",
+      "followers": {
+        "facebook": 8600000,
+        "twitter": 537300,
+        "instagram": 680100
+      },
+      "image_url": "https://i1.feedspot.com/635685.jpg?t=1605788175"
+    },
+    {
+      "title": "Ideas.ted.com",
+      "feed_url": "https://ideas.ted.com/feed/",
+      "website_url": "https://ideas.ted.com/",
+      "description": "Our blog shares interesting tips, strategies, and practices that encourage positivity and help you live a better, healthy, and joyful life. TED is a nonprofit devoted to spreading ideas, usually in the form of short, powerful talks. Our most discussed topics include Tech, Science, Business, Arts, and Human Beings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4839815.jpg?t=1660732447"
+    },
+    {
+      "title": "TEDxVienna Magazine",
+      "feed_url": "https://magazine.tedxvienna.at/feed/",
+      "website_url": "https://magazine.tedxvienna.at/",
+      "description": "Get to know us better and stay up to date with our inspiring articles, beyond the ideas of TEDx. Our team of talented writers, editors, and proofreaders is dedicated to creating interesting content, for the intellectually curious who are eager to learn more about the ever-changing world around them.",
+      "followers": {
+        "facebook": 27400,
+        "twitter": 5900,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5377283.jpg?t=1646369875"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "category": "Spain Farming",
+  "source_url": "https://rss.feedspot.com/spain_farming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Twins Farm",
+      "feed_url": "https://www.twins-farm.com/feeds/posts/default",
+      "website_url": "https://www.twins-farm.com/",
+      "description": "A blog where you can look up some information about Spanish farming and more specifically about garlic, cereal, legumes, sunflowers, etc. You can find pictures of tractors like John Deere, Fendt and Deutz-Farh and other machinery brands.",
+      "followers": {
+        "twitter": 1600,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5485265.jpg?t=1672375211"
+    },
+    {
+      "title": "Truffle Farming",
+      "feed_url": "https://trufflefarming.wordpress.com/feed/",
+      "website_url": "https://trufflefarming.wordpress.com/",
+      "description": "CEO of Micolog\u00eda Forestal & Aplicada, a private center who does research on truffles since 1989. My background is scientific but I've been planting truffle orchards and managing them since 1995. I will discuss new research on truffles and I'll try to digest and transform all-new technical data from scientific papers into tools that any farmer can use to improve their truffle crops.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5485266.jpg?t=1672375254"
+    },
+    {
+      "title": "Agro Investment Spain Blog",
+      "feed_url": "https://www.agroinvestspain.com/feed/",
+      "website_url": "https://www.agroinvestspain.com/blogs/",
+      "description": "We have been in the agriculture industry for over 30 years and we believe that success in this industry comes with innovation and know-how. We have planted so far over 12 Million sm2 area of Almond, Walnut and Pistachio Farms internationally with our over 200 dedicated staff. We always look for methods which will bring the highest amount of profitability and sustainability in our farms. Check out our blogs for the latest news and updates on farming and agriculture in Spain, investment tips and insights and more!",
+      "followers": {
+        "facebook": 994,
+        "instagram": 907
+      },
+      "image_url": "https://i1.feedspot.com/5499827.jpg?t=1674652246"
+    }
+  ]
+}

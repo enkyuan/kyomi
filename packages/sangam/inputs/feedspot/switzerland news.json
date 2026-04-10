@@ -1,0 +1,131 @@
+{
+  "category": "Switzerland News",
+  "source_url": "https://rss.feedspot.com/switzerland_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Local Switzerland",
+      "feed_url": "https://feeds.thelocal.com/rss/ch",
+      "website_url": "https://www.thelocal.ch/",
+      "description": "The Local is the largest English-language news network in Europe, with six million readers every month. Our entertaining blend of daily news, business, and features has made the site essential reading for foreign professionals in Europe.",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5081433.jpg?t=1634020567"
+    },
+    {
+      "title": "NZZ \u00bb Neueste Artikel",
+      "feed_url": "https://www.nzz.ch/recent.rss",
+      "website_url": "https://www.nzz.ch/neueste-artikel/",
+      "description": "Alle neuesten Artikel \u00fcber Neueste Artikel von der NZZ.",
+      "followers": {
+        "facebook": 303300,
+        "twitter": 514700,
+        "instagram": 212600
+      },
+      "image_url": "https://i1.feedspot.com/5330529.jpg?t=1748414811"
+    },
+    {
+      "title": "Le News",
+      "feed_url": "https://lenews.ch/feed/",
+      "website_url": "https://lenews.ch/",
+      "description": "Le News fills a gap in local Swiss media for the numerous English-speakers living and visiting Switzerland. We aim to provide useful engaging information and news that matters to those living across Switzerland wherever they come from.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 2500,
+        "instagram": 776
+      },
+      "image_url": "https://i1.feedspot.com/4927654.jpg?t=1621008087"
+    },
+    {
+      "title": "Beobachter",
+      "feed_url": "https://www.beobachter.ch/rss_feed",
+      "website_url": "https://www.beobachter.ch/",
+      "description": "Know what is important? What are the latest rip-off tricks? Which companies and politicians do you have to watch out for? Find out here at Beobachter.",
+      "followers": {
+        "facebook": 63700,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5330576.jpg?t=1634017008"
+    },
+    {
+      "title": "Appenzell24.ch",
+      "feed_url": "https://appenzell24.ch/feed/",
+      "website_url": "https://appenzell24.ch/",
+      "description": "The news portal in Appenzellerland. Covers news, sports, and much more.",
+      "followers": {
+        "facebook": 765,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5330595.jpg?t=1634018426"
+    },
+    {
+      "title": "Schweizerzeit Verlag",
+      "feed_url": "https://schweizerzeit.ch/feed/",
+      "website_url": "https://schweizerzeit.ch/",
+      "description": "The Schweizerzeit is the newspaper that most consistently stands up for freedom, independence and federalism.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 412
+      },
+      "image_url": "https://i1.feedspot.com/5330622.jpg?t=1634019843"
+    },
+    {
+      "title": "Fintech News Switzerland",
+      "feed_url": "https://fintechnews.ch/feed/",
+      "website_url": "https://fintechnews.ch/",
+      "description": "Launched in 2014, Fintech News Switzerland provides a source of timely, deep insights and the latest local and global news about Fintech. Fintech News Network team works very hard to deliver fintech-centric content in various forms to an audience looking for updates on fintech events and webinars.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 23100,
+        "instagram": 760
+      },
+      "image_url": "https://i1.feedspot.com/4649929.jpg?t=1617100731"
+    },
+    {
+      "title": "The New York Times \u00bb Switzerland",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/switzerland/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/destination/switzerland",
+      "description": "News about Switzerland, including commentary and archival articles published in The New York Times. The New York Times covers international news, politics, business, technology, science, health, arts, sports, and more.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/5330570.jpg?t=1634016328"
+    },
+    {
+      "title": "Financial Times \u00bb Switzerland",
+      "feed_url": "https://www.ft.com/stream/11315556-89e9-443b-b7a8-3c038f70374f?format=rss",
+      "website_url": "https://www.ft.com/stream/11315556-89e9-443b-b7a8-3c038f70374f",
+      "description": "News, analysis, and comment from the Financial Times, the world's leading global business publication.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5330574.jpg?t=1634016630"
+    },
+    {
+      "title": "Expatica News",
+      "feed_url": "https://www.expatica.com/ch/feed/?post_type=post",
+      "website_url": "https://www.expatica.com/ch/news/",
+      "description": "Get the latest English-language news in Switzerland covering both domestic and global current events, curated especially for expats.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 8100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5330569.jpg?t=1634016124"
+    },
+    {
+      "title": "CNBC \u00bb Switzerland",
+      "feed_url": "https://www.cnbc.com/id/10000287/device/rss",
+      "website_url": "https://www.cnbc.com/switzerland/",
+      "description": "Covers articles on Switzerland Regional News and much more. CNBC is the world leader in business news and real-time financial market coverage.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000
+      },
+      "image_url": "https://i1.feedspot.com/5330609.jpg?t=1634019044"
+    }
+  ]
+}

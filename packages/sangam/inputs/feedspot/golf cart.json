@@ -1,0 +1,545 @@
+{
+  "category": "Golf Cart",
+  "source_url": "https://rss.feedspot.com/golf_cart_rss_feeds",
+  "feeds": [
+    {
+      "title": "Golf Car News",
+      "feed_url": "https://www.golfcarnews.com/feed/",
+      "website_url": "https://www.golfcarnews.com/",
+      "description": "Golf Car News Magazine started in 1972 and is the oldest and original publication for the golf, turf, and industrial vehicle dealer network worldwide. It is an industry 'must-have' and a rich resource for golf car dealers. From insights into top news and events, product information, profiles, and key trends, Golf Car News offers you an easy source of reference for your business.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5385135.jpg?t=1648645468"
+    },
+    {
+      "title": "Golf Cart Stuff Blog",
+      "feed_url": "https://golfcartstuff.com/blogs/news.atom",
+      "website_url": "https://golfcartstuff.com/blogs/news",
+      "description": "Golf Cart Stuff offers affordable, high-quality golf cart accessories, parts, wheels and tires, and more for club car, EZGO and Yamaha golf cars.",
+      "followers": {
+        "facebook": 10000,
+        "instagram": 980
+      },
+      "image_url": "https://i1.feedspot.com/5385126.jpg?t=1648269684"
+    },
+    {
+      "title": "Central Coast Carts",
+      "feed_url": "https://centralcoastcarts.com/feed/",
+      "website_url": "https://centralcoastcarts.com/",
+      "description": "Dive into an extensive and diverse inventory of street legal golf cart content - guides, reviews exclusive collections, and more exciting tidbits. Central Coast Carts is a booming Gold Cart Rental and Seller service in California providing an exquisite range of Gold Cart models that remarkably blend style, functionality, and performance.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5671833.jpg?t=1694692726"
+    },
+    {
+      "title": "Central Valley Carts",
+      "feed_url": "https://centralvalleycarts.com/feed/",
+      "website_url": "https://centralvalleycarts.com/articles/",
+      "description": "Explore and master the world of Gold Carts - browse essential maintenance tips, buying guidance, and more from experts at Central Valley Carts. Located in the beautiful city of Visalia, California, Central Valley Carts is a Premier Golf Cart Retailer also offering comprehensive maintenance services for vehicles.",
+      "followers": {
+        "facebook": 262,
+        "instagram": 316
+      },
+      "image_url": "https://i1.feedspot.com/5718317.jpg?t=1700650447"
+    },
+    {
+      "title": "Golf Carting",
+      "feed_url": "https://golfcarting.com/feed/",
+      "website_url": "https://golfcarting.com/",
+      "description": "Golf Carting Magazine delivers in-depth new vehicle reviews, cutting-edge custom vehicle reviews, new products, product reviews, industry news, and everything in between. The Magazine is a passionate leader in the golf cart industry. We show the world the golf cart lifestyle and infuse it with high-impact photography and a simple reader interactive layout.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 166,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5385133.jpg?t=1648645518"
+    },
+    {
+      "title": "Golf Car Options",
+      "feed_url": "https://golfcaroptions.com/feed/",
+      "website_url": "https://golfcaroptions.com/",
+      "description": "Golf Car Options is the leading innovator when it comes to golf cart magazine publishing and marketing. We feature up-to-the-minute golf cart news, reviews, repair tips, custom builds, and golf cart-related content.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 281,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5385138.jpg?t=1648269755"
+    },
+    {
+      "title": "GOLFCARTS.COM Blog",
+      "feed_url": "https://golfcarts.com/blog/feed/",
+      "website_url": "https://golfcarts.com/blog/",
+      "description": "You Can Do It All With GOLFCARTS.COM",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://golfcarts.com/wp-content/uploads/sites/4/2022/05/Untitled-design-1-150x150.png?t=1717161470"
+    },
+    {
+      "title": "ICON EV Blog",
+      "feed_url": "https://iconev.com/feed/",
+      "website_url": "https://iconev.com/blog/",
+      "description": "Where will your ICON Golf Cart take you?",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/7318846.jpg?t=1717161503"
+    },
+    {
+      "title": "Bright EV",
+      "feed_url": "https://brightev.com/feed/",
+      "website_url": "https://brightev.com/golf-cart-articles/",
+      "description": "Bright EV is a Premier Golf Cart Dealership",
+      "followers": {
+        "facebook": 283
+      },
+      "image_url": "https://i1.feedspot.com/7318872.jpg?t=1717419645"
+    },
+    {
+      "title": "South Florida Golf Carts Blog",
+      "feed_url": "https://southfloridagolfcarts.com/feed/",
+      "website_url": "https://southfloridagolfcarts.com/blog/",
+      "followers": {
+        "facebook": 594
+      },
+      "image_url": "https://i1.feedspot.com/7318875.jpg?t=1717419406"
+    },
+    {
+      "title": "Hartville Golf Carts Blog",
+      "feed_url": "https://hartvillegolfcarts.com/feed/",
+      "website_url": "https://hartvillegolfcarts.com/blog/",
+      "description": "If you are looking for a golf cart blog, we have the insight you need for making an informed decision on buying and upkeeping your golf cart.",
+      "followers": {
+        "facebook": 235
+      },
+      "image_url": "https://i1.feedspot.com/7318863.jpg?t=1717162990"
+    },
+    {
+      "title": "Nevada Golf Carts Blog",
+      "feed_url": "https://nevadagolfcarts.com/feed/",
+      "website_url": "https://nevadagolfcarts.com/golf-cart-blog/",
+      "description": "Nevada Golf Carts is a Premier Golf Cart Dealership",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7318869.jpg?t=1717162067"
+    },
+    {
+      "title": "La Jolla Golf Carts Blog",
+      "feed_url": "https://lajollagolfcarts.com/feed/",
+      "website_url": "https://lajollagolfcarts.com/golf-cart-blog/",
+      "description": "La Jolla Golf Carts is a Premier Golf Cart Dealership",
+      "followers": {
+        "facebook": 152,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/7318877.jpg?t=1717418109"
+    },
+    {
+      "title": "10L0L Golf Cart Blog",
+      "feed_url": "https://10l0l.com/blogs/blog.atom",
+      "website_url": "https://10l0l.com/blogs/blog",
+      "description": "Discover the latest insights, tips, and trends in the golf cart industry with the 10L0L blog. From golf cart covers and enclosures to parts and battery chargers, our informative articles will help you enhance performance, protect your investment, and stay up-to-date with all things golf cart.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 129
+      },
+      "image_url": "https://i1.feedspot.com/7318862.jpg?t=1717162897"
+    },
+    {
+      "title": "Cart Tek Golf Carts Blog",
+      "feed_url": "https://www.carttek.com/blogs/golf-equipment-blog.atom",
+      "website_url": "https://www.carttek.com/blogs/golf-equipment-blog",
+      "description": "Leader in remote control golf caddies and electric golf trolleys, Cart Tek, discusses many different topics.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/7318850.jpg?t=1717161874"
+    },
+    {
+      "title": "808 Golf Carts Blog",
+      "feed_url": "https://808golfcarts.com/feed/",
+      "website_url": "https://808golfcarts.com/blog/",
+      "description": "Read our blog and find out how to take care of your new golf cart, the best ways to use it and stay up to date on the latest trends in the industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7318861.jpg?t=1717162803"
+    },
+    {
+      "title": "Buggies Unlimited",
+      "feed_url": "https://blog.buggiesunlimited.com/feed/",
+      "website_url": "https://blog.buggiesunlimited.com/",
+      "description": "Buggies Garage provides essential resources and support for golf cart owners. Unleash the full potential of your cart with our expert tips.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 233
+      },
+      "image_url": "https://i1.feedspot.com/7318854.jpg?t=1717162213"
+    },
+    {
+      "title": "Easy Ride Golf Cars Blog",
+      "feed_url": "https://easyridegolfcars.com/feed/",
+      "website_url": "https://easyridegolfcars.com/easy-ride-golf-car-blog/",
+      "description": "Yamaha Golf Cars and EVolution Electric Vehicle Carts",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7318844.jpg?t=1717161318"
+    },
+    {
+      "title": "Lake Livingston Golf Cars Blog",
+      "feed_url": "https://lakelivingstongolfcars.com/feed/",
+      "website_url": "https://lakelivingstongolfcars.com/blog/",
+      "description": "Golf Carts",
+      "followers": {
+        "facebook": 954
+      },
+      "image_url": "https://i1.feedspot.com/7318842.jpg?t=1717161931"
+    },
+    {
+      "title": "Lacey's Golf Carts Blog",
+      "feed_url": "https://www.laceysgolfcarts.com//feed/rss2",
+      "website_url": "https://www.laceysgolfcarts.com/blog",
+      "followers": {
+        "facebook": 14300
+      },
+      "image_url": "https://i1.feedspot.com/7318870.jpg?t=1717412250"
+    },
+    {
+      "title": "Saera Golf Cart Blog",
+      "feed_url": "https://saeragolfcart.com/feed/",
+      "website_url": "https://saeragolfcart.com/blog/",
+      "description": "Explore our blog for expert tips, insights, and news about golf carts. Stay updated on the latest trends and innovations with Saera Golf Cart. Read to know more.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://graph.facebook.com/people/Saera-Golf-Cart/100091537241509/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1717412743"
+    },
+    {
+      "title": "Tigon Golf Carts Blog",
+      "feed_url": "https://tigongolfcarts.com/feed/",
+      "website_url": "https://tigongolfcarts.com/blog/",
+      "description": "Active Golf Cart Inventory. Golf Carts Sales, Rentals And Service.",
+      "followers": {
+        "facebook": 556100
+      },
+      "image_url": "https://i1.feedspot.com/7318856.jpg?t=1717162369"
+    },
+    {
+      "title": "Total Golf Cart Blog",
+      "feed_url": "https://www.totalgolfcart.com//feed/rss2",
+      "website_url": "https://www.totalgolfcart.com/blog",
+      "description": "Visit our blog to see the latest news and updates from Total Golf Cart LLC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7318864.jpg?t=1717163051"
+    },
+    {
+      "title": "Diamond Golf Cars Blog",
+      "feed_url": "https://diamondgolfcars.com/feed/",
+      "website_url": "https://diamondgolfcars.com/blog/",
+      "description": "Established September 2012 Diamond Golf Cars has raised the bar in golf car sales and service. We at Diamond Golf Cars pride ourselves in providing the highest quality golf car services in the state of Alabama.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5386396.jpg?t=1648703336"
+    },
+    {
+      "title": "WHEELZ Golf Cart Blog",
+      "feed_url": "https://wheelzllc.com/blogs/golf-cart-news.atom",
+      "website_url": "https://wheelzllc.com/blogs/golf-cart-news",
+      "description": "A place for golf cart enthusiasts to learn about and contribute to golf cart news, technologies, and innovative products. WHEELZ Custom Carts & Accessories is a leading name in online custom golf cart parts. We pride ourselves on delivering the best prices on quality parts to assist with your DIY cart project.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5385127.jpg?t=1648703578"
+    },
+    {
+      "title": "Street Legal Golf Cart Rentals Blog",
+      "feed_url": "https://streetlegalgolfcartrentals.com/feed/",
+      "website_url": "https://streetlegalgolfcartrentals.com/blog/",
+      "description": "All you need to know about selecting and renting a street legal golf cart for your vacation on the Street Legal Golf Cart rentals Blog",
+      "followers": {
+        "facebook": 790
+      },
+      "image_url": "https://i1.feedspot.com/5385131.jpg?t=1648300557"
+    },
+    {
+      "title": "Build Your Golf Cart Software Blog",
+      "feed_url": "https://buildyourgolfcart.com/feed/",
+      "website_url": "https://buildyourgolfcart.com/blog/",
+      "description": "Every golf cart dealer knows the grind of constantly creating, working with, and closing leads. With the Build Your Golf Cart software, you'll have a simple tool that allows you to generate quality leads and sell higher-value custom carts.",
+      "followers": {
+        "facebook": 304,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5385123.jpg?t=1648269668"
+    },
+    {
+      "title": "Garrett's Golf Cars Blog",
+      "feed_url": "https://info.gowithgarretts.com/blog/rss.xml",
+      "website_url": "https://info.gowithgarretts.com/blog",
+      "description": "Learn the best ways to care for your golf cart, find fun new ways to use it, and stay up to date on the latest golf cart trends with Garrett's Blog!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 247,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7318843.jpg?t=1717414116"
+    },
+    {
+      "title": "RMI Golf Carts Blog",
+      "feed_url": "https://www.rmigolfcarts.com/blogs/news.atom",
+      "website_url": "https://www.rmigolfcarts.com/blogs/news",
+      "description": "The RMI Golf Carts blog is here to help you learn how to take care of you golf cart, learn about buying a new golf cart, or tips on giving your cart a facelift.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 275
+      },
+      "image_url": "https://i1.feedspot.com/7318860.jpg?t=1717162709"
+    },
+    {
+      "title": "Golf Cart Max Blog",
+      "feed_url": "https://www.golfcartmax.com/blog-feed.xml",
+      "website_url": "https://www.golfcartmax.com/thegolfcartsblog",
+      "description": "We bring together pleasure & quality, and what better than any electric golf carts, leaders among street legal golf carts.",
+      "followers": {
+        "facebook": 324
+      },
+      "image_url": "https://i1.feedspot.com/7318857.jpg?t=1717162430"
+    },
+    {
+      "title": "Kingman Golf Carts Blog",
+      "feed_url": "https://kingmangolfcarts.com/feed/",
+      "website_url": "https://kingmangolfcarts.com/golf-cart-blog/",
+      "description": "Kingman Golf Carts is a Premier Golf Cart Dealership",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7318876.jpg?t=1717420135"
+    },
+    {
+      "title": "Golf Carts of ATX Blog",
+      "feed_url": "https://golfcartsofatx.com/feed/",
+      "website_url": "https://golfcartsofatx.com/blog/",
+      "description": "Explore our Golf Carts Blog for the latest tips, trends, and updates on golf carts in Texas. Stay informed with Golf Carts of ATX!",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/7318855.jpg?t=1717162306"
+    },
+    {
+      "title": "Street Legal Golf Carts Blog",
+      "feed_url": "https://streetlegalgolfcarts.com/blog/feed/",
+      "website_url": "https://streetlegalgolfcarts.com/blog/",
+      "description": "Street Legal Golf Cart Sales, Rental and Service for Destin, 30A and Santa Rosa Beach",
+      "followers": {
+        "facebook": 855
+      },
+      "image_url": "https://i1.feedspot.com/7318840.jpg?t=1717161267"
+    },
+    {
+      "title": "Converted Carts Blog",
+      "feed_url": "https://www.convertedcarts.com/blogs/news.atom",
+      "website_url": "https://www.convertedcarts.com/blogs/news",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/7318853.jpg?t=1717162121"
+    },
+    {
+      "title": "Gorilla Rides EV Blog",
+      "feed_url": "https://gorillaridesev.com/blogs/news.atom",
+      "website_url": "https://gorillaridesev.com/blogs/news",
+      "followers": {
+        "facebook": 635,
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/7318845.jpg?t=1717161410"
+    },
+    {
+      "title": "Elite Custom Golf Carts Blog",
+      "feed_url": "https://www.elitecustomgolfcarts.com//feed/rss2",
+      "website_url": "https://www.elitecustomgolfcarts.com/blog",
+      "description": "Your one-stop shop for all golf cart information",
+      "followers": {
+        "facebook": 5700
+      },
+      "image_url": "https://i1.feedspot.com/7318841.jpg?t=1717161271"
+    },
+    {
+      "title": "Golf Cart Resource",
+      "feed_url": "https://golfcartresource.com/category/helpful-articles/feed/",
+      "website_url": "https://golfcartresource.com/category/helpful-articles/",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/7318859.jpg?t=1717162616"
+    },
+    {
+      "title": "Electric Golf Carts Cincy Blog",
+      "feed_url": "https://electricgolfcartscincy.com/blogs/electric-golf-cart-blog.atom",
+      "website_url": "https://electricgolfcartscincy.com/blogs/electric-golf-cart-blog",
+      "description": "Dive into the world of Gorilla EV Electric Golf Carts. Discover how our eco-friendly, high-performance electric golf carts are revolutionizing the game. With advanced battery technology, impressive speed, and a commitment to sustainability, learn why Gorilla EV is the future of golfing mobility",
+      "followers": {
+        "facebook": 149
+      },
+      "image_url": "https://i1.feedspot.com/7318849.jpg?t=1717161781"
+    },
+    {
+      "title": "Cart Part Source Blog",
+      "feed_url": "https://cartpartsource.com/golf-cart-blog/f.rss",
+      "website_url": "https://cartpartsource.com/golf-cart-blog",
+      "description": "Cart Part Source",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7318848.jpg?t=1717412938"
+    },
+    {
+      "title": "Best Golf Cart Reviews Blog",
+      "feed_url": "https://bestgolfcart.com/feed/",
+      "website_url": "https://bestgolfcart.com/blogs/",
+      "description": "Everything Golf Carts",
+      "followers": {
+        "facebook": 195,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/7318865.jpg?t=1717163112"
+    },
+    {
+      "title": "SuneCarts Blog",
+      "feed_url": "https://sunecarts.com/feed/",
+      "website_url": "https://sunecarts.com/blog/",
+      "description": "Discover the best golf cart dealer specializing in cart models and custom golf carts. Learn about our passion for golf cart excellence.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7318878.jpg?t=1717411351"
+    },
+    {
+      "title": "Colorado Kustom Carts Blog",
+      "feed_url": "https://www.coloradokustoms.com//feed/rss2",
+      "website_url": "https://www.coloradokustoms.com/blog",
+      "description": "Colorado Kustom Carts sells and services new and used Club Car golf carts. We also sell golf cart batteries, parts, and accessories. We even offer pick up and delivery of your golf cart! Stop by our huge Fort Collins showroom today!",
+      "followers": {
+        "facebook": 10200
+      },
+      "image_url": "https://i1.feedspot.com/7318858.jpg?t=1717162523"
+    },
+    {
+      "title": "DeBary Golf Carts Blog",
+      "feed_url": "https://debarygolfcart.com/blog/feed/",
+      "website_url": "https://debarygolfcart.com/blog/",
+      "description": "Debary Golf Cart Dealer",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7318839.jpg?t=1717408597"
+    },
+    {
+      "title": "Masek Golf Car Company Blog",
+      "feed_url": "https://coloradogolfcars.com/feed/",
+      "website_url": "https://coloradogolfcars.com/masek-blog/",
+      "description": "Colorado Golf Car Sales & Off Road Vehicle Sales",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/7318852.jpg?t=1717162027"
+    },
+    {
+      "title": "Golf Cart Factory Blog",
+      "feed_url": "https://golfcartfactory.com/feed/",
+      "website_url": "https://golfcartfactory.com/blog-news/",
+      "followers": {
+        "facebook": 257
+      },
+      "image_url": "https://graph.facebook.com/golfcartfactory/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77?t=1717407259"
+    },
+    {
+      "title": "GolfCarts.org",
+      "feed_url": "https://golfcarts.org/feed/",
+      "website_url": "https://golfcarts.org/",
+      "description": "GolfCarts.org was created to help consumers and dealers find the easiest ways and get all the information need to better help their golf cart research, purchases, maintenance, services and businesses.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 701
+      },
+      "image_url": "https://i1.feedspot.com/5385124.jpg?t=1648269673"
+    },
+    {
+      "title": "Fort Lauderdale Golf Cart Rental Blog",
+      "feed_url": "https://fortlauderdalegolfcartrental.com/index.php/feed/",
+      "website_url": "https://fortlauderdalegolfcartrental.com/index.php/blog/",
+      "description": "At Fort Lauderdale Golf Cart Rental, we have one of the largest and most reliable fleets of golf cart rentals in South Florida.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5385136.jpg?t=1648279575"
+    },
+    {
+      "title": "GolfCartsGuide Blog",
+      "feed_url": "https://golfcartsguide.com/feed/",
+      "website_url": "https://golfcartsguide.com/blog/",
+      "description": "Welcome to GolfCartsGuide, your ultimate resource for all things related to golf carts! Our website provides golf enthusiasts with reliable and comprehensive information on the best golf carts, accessories, and maintenance tips. Stay up-to-date on the latest golf news, tips, and insights with our expert blog. From swing mechanics to equipment reviews, we cover it all.",
+      "followers": {
+        "facebook": 7,
+        "twitter": 157,
+        "instagram": 75
+      },
+      "image_url": "https://i1.feedspot.com/5619037.jpg?t=1688709679"
+    },
+    {
+      "title": "PILOTCAR Blog",
+      "feed_url": "https://pilotcar.com.tr/en/blog",
+      "website_url": "https://pilotcar.com.tr/en/blog",
+      "description": "Pilotcar Blog covers articles on electric golf carts and utility vehicles. With our comprehensive design and R&D studies, we produce Pilotcar Car vehicles with superior care and hard work in integrated production lines in our own facilities.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2200,
+        "instagram": 589
+      },
+      "image_url": "https://i1.feedspot.com/5385455.jpg?t=1648442234"
+    },
+    {
+      "title": "Golfer Watch",
+      "feed_url": "https://golferwatch.com/feed/",
+      "website_url": "https://mattscustomgolfcarts.com/blog/",
+      "description": "Welcome to Golferwatch, your number one source for all things about golf items such as golf carts, bags, clubs, everything related to golf. We're dedicated to providing you the very best information and tips related to golf along with the very best of golf equipment, from various sellers with an emphasis on amazon, golfer watch, aliexpress.",
+      "followers": {
+        "facebook": 65
+      },
+      "image_url": "https://i1.feedspot.com/5385132.jpg?t=1648269710"
+    },
+    {
+      "title": "Matt's Custom Golf Carts Blog",
+      "feed_url": "https://www.mattscustomgolfcarts.com//feed/rss2",
+      "website_url": "https://mattscustomgolfcarts.com/blog/",
+      "followers": {
+        "facebook": 6200
+      },
+      "image_url": "https://i1.feedspot.com/7318874.jpg?t=1717162188"
+    },
+    {
+      "title": "Legacy Carts Blog",
+      "feed_url": "https://legacycarts.com/blog?format=rss",
+      "website_url": "https://legacycarts.com/blog",
+      "description": "Browse our available golf cart models on our site. Follow our Golf Cart BLOG to receive tips tricks and recommendations",
+      "followers": {
+        "facebook": 359
+      },
+      "image_url": "https://i1.feedspot.com/7318868.jpg?t=1717419045"
+    },
+    {
+      "title": "PILOTCAR Blog",
+      "feed_url": "https://pilotcar.com.tr/en/blog",
+      "website_url": "https://pilotcar.com.tr/en/blog",
+      "description": "Global climate change endangers the life of living beings. That's why we're doing our part to ensure that future generations will have a cleaner world. As an important part of our business start-up, we produce environmentally friendly vehicles with '0' emissions that are 100% powered by electric motors.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2200,
+        "instagram": 589
+      },
+      "image_url": "https://i1.feedspot.com/7318837.jpg?t=1717407002"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "category": "Tennessee Political",
+  "source_url": "https://rss.feedspot.com/tennessee_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Tennessee Tribune \u00bb Politics",
+      "feed_url": "https://tntribune.com/category/politics/feed/",
+      "website_url": "https://tntribune.com/category/politics/",
+      "description": "The Tennessee Tribune keeps a watchful eye on news and events shaping our community. The Tribune offers a fresh and encouraging view of people and events that have a positive impact. Get the latest political news in Tennessee and politics news featured in the local politics news column of TN Tribune.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5344645.jpg?t=1638426673"
+    },
+    {
+      "title": "Herald Courier \u00bb Govt & Politics",
+      "feed_url": "https://heraldcourier.com/search/?f=rss",
+      "website_url": "https://heraldcourier.com/news/state-regional/government-politics/",
+      "description": "HeraldCourier.com is the new website of the Bristol Herald Courier. The news team provides coverage of the region and delivers it online, in print, and on your favorite mobile device. In the Govt & Politics read the latest headlines on Bristol Govt. and Politics from Bristol, Tri-Cities, Virginia, and the surrounding metropolitan area.",
+      "followers": {
+        "facebook": 40900,
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5344649.jpg?t=1638427080"
+    },
+    {
+      "title": "WKRN News \u00bb Tennessee Politics",
+      "feed_url": "https://www.wkrn.com/news/tennessee-politics/feed/",
+      "website_url": "https://www.wkrn.com/news/tennessee-politics/",
+      "description": "WKRN-TV News 2, is the ABC affiliate in Nashville, Tennessee. In the Tennessee Politics section get political news, from Governor Bill Lee to local offices throughout the Volunteer State, WKRN News 2 has you covered.",
+      "followers": {
+        "facebook": 604500,
+        "twitter": 216200
+      },
+      "image_url": "https://i1.feedspot.com/5538376.jpg?t=1681198505"
+    },
+    {
+      "title": "Tennessee Star \u00bb Politics",
+      "feed_url": "https://tennesseestar.com/politics/feed/",
+      "website_url": "https://tennesseestar.com/politics/",
+      "description": "TN Star is an online local newspaper in Tennessee. It is Tennessee's best source for Investigative news, thoughtful opinion, and more. Explore the Politics section and stay updated with Latest Political News.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5538375.jpg?t=1681198492"
+    },
+    {
+      "title": "Tennessee Lookout \u00bb Politics",
+      "feed_url": "https://tennesseelookout.com/category/politics/feed/",
+      "website_url": "https://tennesseelookout.com/category/politics/",
+      "description": "Keeping our eyes on the Volunteer State",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 20900
+      },
+      "image_url": "https://i1.feedspot.com/5600461.jpg?t=1686907221"
+    }
+  ]
+}

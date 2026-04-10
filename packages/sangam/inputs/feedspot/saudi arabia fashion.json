@@ -1,0 +1,40 @@
+{
+  "category": "Saudi Arabia Fashion",
+  "source_url": "https://rss.feedspot.com/saudi_arabia_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "AMUSED Co Blog",
+      "feed_url": "https://amusedco.com/blogs/news.atom",
+      "website_url": "https://amusedco.com/blogs/news/",
+      "description": "Digital platform that connects buyers and sellers of authenticated and curated pre-loved luxury. AMUSED is disrupting the community in Saudi Arabia by changing the way people think, feel and consume luxury.",
+      "followers": {
+        "twitter": 430300,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/7252605.jpg?t=1707974570"
+    },
+    {
+      "title": "Arab News \u00bb Fashion",
+      "feed_url": "https://www.arabnews.com/taxonomy/term/52/feed",
+      "website_url": "https://www.arabnews.com/lifestyle/fashion",
+      "description": "The Voice of a Changing Region. Established in 1975, Arab News is the Middle East's leading English daily. Arab News brings you news on celebrity style and fashion trends from the region and beyond. Find fashion week updates, the latest trends and more updates.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 512500,
+        "instagram": 706900
+      },
+      "image_url": "https://i1.feedspot.com/7252606.jpg?t=1707974400"
+    },
+    {
+      "title": "Destination KSA \u00bb Fashion Trends",
+      "feed_url": "https://destinationksa.com/en/category/style-shopping/fashion-trends/feed/",
+      "website_url": "https://destinationksa.com/en/category/style-shopping/fashion-trends/",
+      "description": "Destination KSA is an online platform celebrating Saudi Arabia's culture, traditions, and travel destinations. It features articles, events, and insights for residents and visitors alike.",
+      "followers": {
+        "facebook": 15500,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/7252608.jpg?t=1707974523"
+    }
+  ]
+}

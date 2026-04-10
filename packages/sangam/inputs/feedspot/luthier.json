@@ -1,0 +1,66 @@
+{
+  "category": "Luthier",
+  "source_url": "https://rss.feedspot.com/luthier_rss_feeds",
+  "feeds": [
+    {
+      "title": "A Luthier's Blog",
+      "feed_url": "http://guitar-maker.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://guitar-maker.blogspot.com/",
+      "description": "I'm Gary Nava, a professional luthier making mandolins and guitars by hand, to the highest standards, in my analog workshop. here are various tales from my workbench.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5401015.jpg?t=1652783174"
+    },
+    {
+      "title": "Luthiers Blog",
+      "feed_url": "https://luthiers.com/feed/",
+      "website_url": "https://luthiers.com/luthiers-blog/",
+      "description": "Discover our articles, luthiers interviews, the tips of repairers, and the talent and secrets of restorers of old instruments. Be the first to know about future lutherie events, internships, masterclasses, and jobs. Discover the infinite universe of wood and supplies dealers, who, in the shadow of the luthiers provide you with the best products for your instruments.",
+      "followers": {
+        "facebook": 15000,
+        "instagram": 22500
+      },
+      "image_url": "https://i1.feedspot.com/5401019.jpg?t=1652781999"
+    },
+    {
+      "title": "Lichty Guitars",
+      "feed_url": "https://lichtyguitars.com/feed/",
+      "website_url": "https://soundcloud.com/guitarbuilder-3",
+      "description": "Luthier Jay Lichty builds one-of-a-kind custom handmade acoustic guitars, ukuleles, fiddles, and mandolins in his North Carolina shop. Crafted from the finest quality tonewoods and acoustic components, Lichty's custom instruments are played and praised by both casual players and world-renowned performing artists. Contact Jay today to begin customizing the guitar, uke, or fiddle of your dreams.",
+      "followers": {
+        "twitter": 585,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4537926.jpg?t=1610957982"
+    },
+    {
+      "title": "Wilson Burnham Guitars",
+      "feed_url": "https://www.wilsonburnhamguitars.net/feeds/posts/default?alt=rss",
+      "website_url": "https://www.wilsonburnhamguitars.net/",
+      "description": "Hello! I am Wilson Burnham and welcome to my blog! I handcraft classical guitars in a small studio in Denver, Colorado. I use only hand tools and high-quality wood to make my guitars. As a classical guitar player myself, I know the joy of playing a truly wonderful guitar - one that sings, is responsive to your playing style, with a voice that reaches the last row of seats in a recital or concert hall, and most of all, a guitar that you fall in love with so much you never want to stop playing it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4185587.jpg?t=1653298657"
+    },
+    {
+      "title": "Mr Glyn's guitar repair",
+      "feed_url": "https://mrglyn.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mrglyn.blogspot.com/",
+      "description": "A guitar repair blog by Glyn Evans. Mr. Glyn has been a full-time luthier for 20 years. An ex-lecturer in Guitar making and Repair at The City of Leeds College of Music in the North of England.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4536276.jpg?t=1610960015"
+    },
+    {
+      "title": "Mr Glyn's Pickups Blog",
+      "feed_url": "https://mrglynspickups.com/feed/",
+      "website_url": "https://mrglynspickups.com/blog/",
+      "description": "My name is Glyn Evans. I have been a full-time pickup winder and luthier since 1995. I specialize in making and repairing electric guitar pickups. The blog contains articles on repairing vintage pickups as well as circuit diagrams and new products.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5624453.jpg?t=1689224163"
+    }
+  ]
+}

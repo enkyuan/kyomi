@@ -1,0 +1,68 @@
+{
+  "category": "Alaska Music",
+  "source_url": "https://rss.feedspot.com/alaska_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "KSUA 91.5FM Blog",
+      "feed_url": "https://www.ksuaradio.com/blog?format=rss",
+      "website_url": "https://www.ksuaradio.com/blog",
+      "description": "KSUA is a student-operated college music group that serves the University of Alaska Fairbanks delivering programming and music that is desired by the students of UAF. Browse and get the latest news on song releases and album releases.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1300,
+        "instagram": 910
+      },
+      "image_url": "https://i1.feedspot.com/5311200.jpg?t=1663061524"
+    },
+    {
+      "title": "Marian Call Blog",
+      "feed_url": "https://mariancall.com/category/blog/feed/",
+      "website_url": "https://mariancall.com/category/blog/",
+      "description": "Singer-songwriter Marian Call makes her home in Juneau, Alaska. Her work ranges from somber elegies to playful parodies, most Marian Call songs are built on the same foundational themes: courage and cowardice, insecurity and boldness.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5534355.jpg?t=1680692720"
+    },
+    {
+      "title": "Northern Culture Exchange Blog",
+      "feed_url": "https://www.northerncultureexchange.org/blog-feed.xml",
+      "website_url": "https://www.northerncultureexchange.org/blog",
+      "description": "Music Alaska builds and supports the Alaskan music industry through publishing regular posts by and for those with a stake in the 49th state music scene.Northern Culture Exchange (NCE) works as an umbrella organization for a number of like-minded Alaskan and circumpolar creative art and education programs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311219.jpg?t=1663061470"
+    },
+    {
+      "title": "Miriah May Music Blog",
+      "feed_url": "https://www.miriahmaymusic.com/blog?format=rss",
+      "website_url": "https://www.miriahmaymusic.com/blog",
+      "description": "Here at Miriah May Music, I offer a variety of musical services from private one-on-one lessons to recitals and group jam sessions. Based on your interests and levels, we can develop an individualized skill-development plan to help you reach your musical goals; from the classic Suzuki Method to fiddle tunes to finding your own creative voice.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5311206.jpg?t=1629186039"
+    },
+    {
+      "title": "Anchorage Press \u00bb Music",
+      "feed_url": "https://www.anchoragepress.com/search/?f=rss&t=article&c=music&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.anchoragepress.com/music/",
+      "description": "Anchorage Press provides the latest news, opinion, features, arts, entertainment, food, and recreation paper in Anchorage, Alaska. In the Music section find the latest news, events, and releases in the Music industry by the Anchorage Press.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 13700,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5312800.jpg?t=1629187200"
+    },
+    {
+      "title": "Pamyua Blog",
+      "feed_url": "http://www.pamyua.com/blog?format=rss",
+      "website_url": "http://www.pamyua.com/blog",
+      "description": "Welcome to the world of PAMYUA! We are an Inuit-soul musical group that blends our culture with influences from around the world. We are proud to represent our ancestors, our history, and our people through music and dance.",
+      "followers": {
+        "facebook": 11700,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5534356.jpg?t=1680692759"
+    }
+  ]
+}

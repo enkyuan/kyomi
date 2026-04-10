@@ -1,0 +1,512 @@
+{
+  "category": "UK Investment",
+  "source_url": "https://rss.feedspot.com/uk_investment_rss_feeds",
+  "feeds": [
+    {
+      "title": "Monevator",
+      "feed_url": "https://monevator.com/feed/",
+      "website_url": "https://monevator.com/",
+      "description": "Covers articles on making more money, investing profitably, property and retire early. Get advice and tips on controlling your money. From passive investing with index trackers funds to choosing the cheapest investment platform or broker, Monevator is essential reading for all British investors.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/1890239.jpg?t=1608180514"
+    },
+    {
+      "title": "The Motley Fool UK - Share Tips, Investing and Stock Market News",
+      "feed_url": "http://www.fool.co.uk/feed/",
+      "website_url": "https://www.fool.co.uk/",
+      "description": "Fool UK has online newsletters providing share tips and portfolio guidance, plus a share dealing service. We also cover investing and stock market news. Follow this site to get Tips, Investing and Stock Market News.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 19600
+      },
+      "image_url": "https://i1.feedspot.com/4209959.jpg?t=1609334112"
+    },
+    {
+      "title": "Daily Mail Online \u00bb Money",
+      "feed_url": "https://www.dailymail.co.uk/money/index.rss",
+      "website_url": "https://www.dailymail.co.uk/money/index.html",
+      "description": "This is Money is your complete guide to personal finance and investing with news, predictions, advice, guides, and opinions from the financial website of the year. Here you can keep up with financial predictions, advice, and tips. The aim of This is Money is to win justice for its readers and arm them with the best possible financial advice and information, empowering them to make the right choices.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 62400
+      },
+      "image_url": "https://i1.feedspot.com/1038430.jpg?t=1761822622"
+    },
+    {
+      "title": "Property Investments UK",
+      "feed_url": "https://www.propertyinvestmentsuk.co.uk/feed/",
+      "website_url": "https://www.propertyinvestmentsuk.co.uk/articles/",
+      "description": "Here you will find property investment tips, training, mentorship, guides or videos. Property investing, like any investment carries risks. It's important to note that Results achieved in property or using our training course is only a typical and may vary from user to user. Follow this blog to discover Personalised Property Investment Deals, News, Insights and In-Depth Training.",
+      "followers": {
+        "facebook": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4785105.jpg?t=1611212014"
+    },
+    {
+      "title": "Vincenzo Stefanini",
+      "feed_url": "https://www.vincenzostefanini.it/feed/",
+      "website_url": "https://www.vincenzostefanini.it/blog/",
+      "description": "Popular Investor at eToro | Founder at Osom One Digital Agency | Personal Finance, Investing, Money and Motivation",
+      "followers": {
+        "facebook": 261,
+        "twitter": 681,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5436513.jpg?t=1661766791"
+    },
+    {
+      "title": "Investment Week",
+      "feed_url": "https://www.investmentweek.co.uk/feeds/rss",
+      "website_url": "https://www.investmentweek.co.uk/",
+      "description": "Investment Week provides the latest investment news, analysis and opinion for wealth managers and the UK funds industry.",
+      "followers": {
+        "facebook": 586,
+        "twitter": 22300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4920371.jpg?t=1609334348"
+    },
+    {
+      "title": "Investing in the Web",
+      "feed_url": "https://investingintheweb.com/feed/",
+      "website_url": "https://investingintheweb.com/articles/",
+      "description": "Investing in the Web was founded after struggling to find and compare the hundreds of different fintechs available, as well as noticing some scams and lack of transparency in this industry. To solve our own problem, we created a website that helps investors find, learn and compare the different platforms to save and invest online.",
+      "followers": {
+        "facebook": 85
+      },
+      "image_url": "https://i1.feedspot.com/5242546.jpg?t=1612534171"
+    },
+    {
+      "title": "Progressive Property",
+      "feed_url": "https://www.progressiveproperty.co.uk/feed/",
+      "website_url": "https://www.progressiveproperty.co.uk/blog/",
+      "description": "Progressive Property is a personal, nationwide networking and educational community for any property investor or entrepreneur who is hungry to make more money, invest more reliably, and lay a path to greater freedom, choice and profit.",
+      "followers": {
+        "facebook": 56300,
+        "twitter": 12600,
+        "instagram": 48800
+      },
+      "image_url": "https://i1.feedspot.com/4786030.jpg?t=1609334386"
+    },
+    {
+      "title": "SevenCapital News",
+      "feed_url": "https://sevencapital.com/news-and-insights/news/feed/",
+      "website_url": "https://sevencapital.com/news-and-insights/news/",
+      "description": "Get the latest property investment news from SevenCapital. You'll find property news, useful guides & the latest company updates right here. SevenCapital is a forward-thinking property investment company transforming commercial spaces in key city center locations into stunning residential apartments.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4893756.jpg?t=1609334369"
+    },
+    {
+      "title": "Investment Idiocy",
+      "feed_url": "https://qoppac.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://qoppac.blogspot.com/",
+      "description": "I am Rob Carver; an ex Hedge fund manager and derivatives trader, economist and statistics/finance geek. Robert Carver writes about investment and trading. Systematic Trading, Quantitative Finance, Investing, Financial Activism, Economic decision making.",
+      "followers": {
+        "facebook": 470,
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/4786594.jpg?t=1609334391"
+    },
+    {
+      "title": "Master Investor",
+      "feed_url": "https://masterinvestor.co.uk/feed/",
+      "website_url": "https://masterinvestor.co.uk/",
+      "description": "Master Investor empowers private investors to take charge of their financial destiny. We cover a range of subjects, from shares to pensions. The unique platform dedicated to all things investment related. Independent news, tips and daily blog.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 4800,
+        "instagram": 28300
+      },
+      "image_url": "https://i1.feedspot.com/4785804.jpg?t=1609334440"
+    },
+    {
+      "title": "FJP Investment",
+      "feed_url": "https://www.fjpinvestment.co.uk/feed/",
+      "website_url": "https://www.fjpinvestment.co.uk/news/",
+      "description": "Property Investments Made Easy. FJP Investment offers investment opportunities to retail investors interested in alternative investments. UK and Overseas property investments available.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 12600
+      },
+      "image_url": "https://i1.feedspot.com/4786758.jpg?t=1609334396"
+    },
+    {
+      "title": "Quietly Saving",
+      "feed_url": "http://quietlysaving.co.uk/feed/",
+      "website_url": "http://quietlysaving.co.uk/",
+      "description": "I'm Weenie. In 2014, I came across the term FIRE (Financial Independence, Retire Early). I set up this blog, devised a plan, began to save more and invest.I try to balance enjoying my life in the present while attempting to plan for the future. My plan is to be in a position to not have to work full-time (or at all) by 2025 (or 2024, depending on whether I want to do 'one more year').This blog is not a 'how-to' guide and doesn't give advice, it's just a journal documenting my progress, plus some of my occasionally mad thoughts and ideas.",
+      "followers": {
+        "twitter": 943
+      },
+      "image_url": "https://i1.feedspot.com/4547468.jpg?t=1609334445"
+    },
+    {
+      "title": "Deep Value Investments",
+      "feed_url": "https://deepvalueinvestments.wordpress.com/feed/",
+      "website_url": "https://deepvalueinvestments.wordpress.com/",
+      "description": "Get the latest updates on investments. Deep Value Investments Blog by Rob Mahan.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4474765.jpg?t=1609334519"
+    },
+    {
+      "title": "DIY Investor",
+      "feed_url": "http://www.diyinvestor.net/feed/",
+      "website_url": "https://www.diyinvestor.net/",
+      "description": "Take Control of your Finances. Our mission is to define and unite a community of self-directed investors; give them the information and education they require to make informed investment decisions and take control of their financial futures.",
+      "followers": {
+        "facebook": 48,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4785579.jpg?t=1609334458"
+    },
+    {
+      "title": "Investomania",
+      "feed_url": "https://www.investomania.co.uk/feed/",
+      "website_url": "https://www.investomania.co.uk/",
+      "description": "Investomania focuses on FTSE 100 share prices and FTSE 250 share prices. It is a UK investment site which focuses on news regarding shares and share prices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4949939.jpg"
+    },
+    {
+      "title": "IW Capital",
+      "feed_url": "https://iwcapital.co.uk/resources/feed/",
+      "website_url": "https://iwcapital.co.uk/resources/",
+      "description": "We are a private equity house that provides investors with tax efficient investment opportunities in exciting, high-growth businesses.",
+      "followers": {
+        "facebook": 44,
+        "twitter": 596
+      },
+      "image_url": "https://i1.feedspot.com/4785982.jpg?t=1609335800"
+    },
+    {
+      "title": "The Ethical Entrepreneur",
+      "feed_url": "https://theethicalentrepreneur.com/feed/",
+      "website_url": "https://theethicalentrepreneur.com/blog/",
+      "description": "Welcome to my blog! My name is Henry Viola, I'm an investor, communications expert, and personal finance writer based in the UK. I started writing this blog back in 2015 and since then have written more than 100 articles about income investing, personal finance and communication as well as a smattering of political commentary.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4984697.jpg?t=1609335806"
+    },
+    {
+      "title": "Snippet Finance",
+      "feed_url": "https://snippet.finance/feed/",
+      "website_url": "https://snippet.finance/",
+      "description": "This blog consists of snippets on stocks, macroeconomics, and personal finance.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5056248.jpg?t=1609336416"
+    },
+    {
+      "title": "Maynard Paton",
+      "feed_url": "https://maynardpaton.com/feed/",
+      "website_url": "https://maynardpaton.com/",
+      "description": "Quality UK Investment Blog. Some of you may already recognise my name, as I wrote investment articles and e-mails for The Motley Fool UK between 1999 and 2014. At the start of 2015, I became a full-time private investor. I created this Blog simply to collate all my investment posts in one place, rather than have them spread over various websites.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4786546.jpg"
+    },
+    {
+      "title": "The Financial Bodyguard",
+      "feed_url": "https://thefinancialbodyguard.com/feed/",
+      "website_url": "https://thefinancialbodyguard.com/",
+      "description": "I started my financial services career back in 1987, and have been providing a wide range of clients with financial planning advice for more than 25 years.This Blog enables me to write about the things which interest me the most not always to do with personal finance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4949946.jpg?t=1609336554"
+    },
+    {
+      "title": "South River Asset Management blog",
+      "feed_url": "https://southriveram.com/feed/",
+      "website_url": "https://southriveram.com/news/",
+      "description": "South River Asset Management is a specialist fund management company which brings together a team of highly experienced investment managers. Based in the City of London, we manage a range of mixed asset, bond, and equity funds. We are investment specialists with dedicated expertise across a range of themes and sectors. Read the blog to know more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4786559.jpg?t=1611844072"
+    },
+    {
+      "title": "Financial Expert",
+      "feed_url": "https://www.financial-expert.co.uk/feed/",
+      "website_url": "https://www.financial-expert.co.uk/investing-blog/",
+      "description": "Financial Expert offers free learning experiences which combine articles, interactive experiences and assessments. Become an investing expert with us!",
+      "followers": {
+        "facebook": 298
+      },
+      "image_url": "https://i1.feedspot.com/5047704.jpg?t=1609336748"
+    },
+    {
+      "title": "Crow Knows",
+      "feed_url": "https://www.crowknows.co.uk/feed/",
+      "website_url": "https://www.crowknows.co.uk/category/blog/",
+      "description": "Personal Investment Blog. Crow Knows is a website about personal investment. Its main purpose is to improve the investment performance of the author by setting out his investment rules and observations in public in the hope that he is obliged to stick to the former and can benefit from the logical implications of the latter.",
+      "followers": {
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/4785919.jpg?t=1609336811"
+    },
+    {
+      "title": "Retirement Investing Today",
+      "feed_url": "https://feeds.feedburner.com/RetirementInvestingToday",
+      "website_url": "http://www.retirementinvestingtoday.com/",
+      "description": "RetirementInvestingToday analyses the economic data, market data and and investing strategies that I am using to reach Early Retirement. Our mission is to achieve Early Retirement by maximising salary contributions, minimising fees, minimising taxes, maximising return through tactical allocations and minimising investing mistakes.",
+      "followers": {
+        "facebook": 611,
+        "twitter": 638
+      },
+      "image_url": "https://i1.feedspot.com/761703.jpg?t=1611206493"
+    },
+    {
+      "title": "7 Circles",
+      "feed_url": "https://the7circles.uk/feed/",
+      "website_url": "https://the7circles.uk/",
+      "description": "Articles on annuities, investment trust, income tax, interest rate, property and more. 7 Circles provides the information and tools to allow the private investor to look after their own money by making their own decisions.",
+      "followers": {
+        "facebook": 138,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4634070.jpg?t=1609334123"
+    },
+    {
+      "title": "UK Value Investor | For dividend-focused value investors",
+      "feed_url": "https://ukvalueinvestor.com/feed/",
+      "website_url": "https://ukvalueinvestor.com/",
+      "description": "Hello. My name is John Kingham and I'm the founder and editor of UK Value Investor. I publish a monthly investment newsletter for defensive and dividend-focused value investors. It's mission is to provide investors with tools and information to help them build high quality, high yield portfolios. Follow my website as I provide investors with dividend focused information.",
+      "followers": {
+        "facebook": 259,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4749811.jpg?t=1608268160"
+    },
+    {
+      "title": "MoneyGrower",
+      "feed_url": "https://moneygrower.co.uk/feed/",
+      "website_url": "https://moneygrower.co.uk/investing/",
+      "description": "This blog will act as a real time version of my actions, investments and thoughts that will help me achieve this goal. So why don't you come on this journey with me by following my story and seeing how you can achieve financial freedom as well.",
+      "followers": {
+        "twitter": 184
+      },
+      "image_url": "https://i1.feedspot.com/4948739.jpg"
+    },
+    {
+      "title": "Foxy Monkey",
+      "feed_url": "https://www.foxymonkey.com/feed/",
+      "website_url": "https://www.foxymonkey.com/all-posts/",
+      "description": "Learn how to deal with personal finance, investments & savings in a simple way. This blog provides some great side income tips and career-building articles.",
+      "followers": {
+        "facebook": 152,
+        "twitter": 513
+      },
+      "image_url": "https://i1.feedspot.com/4785060.jpg?t=1609334452"
+    },
+    {
+      "title": "theFIREstarter",
+      "feed_url": "http://thefirestarter.co.uk/feed/",
+      "website_url": "http://thefirestarter.co.uk/",
+      "description": "Financial Independence and Early Retirement blog. Read about life hacks, money saving tips, frugal food, general views on life and of course the occasional rant.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4280592.jpg?t=1609335795"
+    },
+    {
+      "title": "Best Price FS",
+      "feed_url": "https://www.bestpricefs.co.uk/blog/feed/",
+      "website_url": "https://www.bestpricefs.co.uk/blog/",
+      "description": "Offers the best value life insurance, Income Protection, Motor Legal Protection, Breakdown Cover, Travel Insurance and investments from all the leading product providers. Best Price Financial Services is a leading online execution-only discount broker of financial services products.",
+      "followers": {
+        "facebook": 453,
+        "twitter": 348
+      },
+      "image_url": "https://i1.feedspot.com/4953454.jpg?t=1609335835"
+    },
+    {
+      "title": "Wexboy",
+      "feed_url": "https://wexboy.wordpress.com/feed/",
+      "website_url": "https://wexboy.wordpress.com/",
+      "description": "A blog about value investing. Interested in individual company stocks, investment funds, risk arbitrage, event driven/special situations, fixed income and even some natural resource stocks. Only when I learned of value investing did I finally discover a quantitative approach, plus a set of tools, that appealed to me and equipped me better for investing.",
+      "followers": {
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4749702.jpg?t=1609335849"
+    },
+    {
+      "title": "ACCESS - Social Investment",
+      "feed_url": "https://access-socialinvestment.org.uk/blog/feed/",
+      "website_url": "https://access-socialinvestment.org.uk/blog/",
+      "description": "The Foundation for Social Investment. We Increase access to social investment, providing charities and social enterprises with finance and support at the beginning of their development.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4785936.jpg?t=1609336404"
+    },
+    {
+      "title": "ECf Solutions | Fantasy Equity Crowdfunding",
+      "feed_url": "http://fantasyequitycrowdfunding.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://fantasyequitycrowdfunding.blogspot.com/",
+      "description": "A blog about UK equity crowdfunding and how platforms like Crowdcube are using business plans to deceive investors. FCA unwilling to act.",
+      "followers": {
+        "facebook": 187,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4690024.jpg?t=1609336411"
+    },
+    {
+      "title": "Investing Sidekick",
+      "feed_url": "https://investingsidekick.com/feed/",
+      "website_url": "https://investingsidekick.com/",
+      "description": "A value investing blog which uncovers investing opportunities. This blog contains detailed research on investments and contributes to a network of value investors, all provided for free.",
+      "followers": {
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/1926636.jpg"
+    },
+    {
+      "title": "Occam Investing",
+      "feed_url": "https://occaminvesting.co.uk/feed/",
+      "website_url": "https://occaminvesting.co.uk/",
+      "description": "Welcome to Occam Investing. This site takes a common sense approach to investing, using a simple, unbiased, and evidence-based philosophy. Its aim is to help its readers understand the world of investing, and improve their investment decisions.",
+      "followers": {
+        "twitter": 235
+      },
+      "image_url": "https://i1.feedspot.com/5132106.jpg"
+    },
+    {
+      "title": "The Subtle Investor Blog",
+      "feed_url": "https://www.subtleinvestor.com/feed/",
+      "website_url": "https://www.subtleinvestor.com/blog/",
+      "description": "I am Sejuty, an investment enthusiast, currently working at an FTSE 100 Asset Management company in London, UK. I will be glad if my blog can encourage anyone, especially the first-timers, the cash hoarders, or someone from a minority group to understand the importance of investing and take that first leap of hitting 'Buy'.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 935
+      },
+      "image_url": "https://i1.feedspot.com/5206443.jpg?t=1603107525"
+    },
+    {
+      "title": "DIY Income Investor",
+      "feed_url": "https://feeds.feedburner.com/TheDiyIncomeInvestor",
+      "website_url": "https://www.propertyinvestmentproject.co.uk/blog/",
+      "description": "A simple approach to successful personal investing with the goal of generating a growing income from a portfolio including cash savings, shares, corporate bonds and government-backed investments, using online savings and brokerage accounts and shielding your investments from tax wherever possible. This approach will be mainly targeted at UK investors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/842880.jpg?t=1613388085"
+    },
+    {
+      "title": "Property Investment Project Blog",
+      "feed_url": "https://www.propertyinvestmentproject.co.uk/blog/",
+      "website_url": "https://www.propertyinvestmentproject.co.uk/blog/",
+      "description": "Covers articles on Landlord Legal Issues, Marketing & Finding Tenants, Managing Your Rental Property, Selling Your House Tips & Advice, Letting Agents and more. Documenting one man's struggle to financial success through Property & Buy-to-Let. From Property Idiot, to Property Landlord. Follow this site to get landlord information and advice.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/3811970.jpg?t=1610774363"
+    },
+    {
+      "title": "Pounds and Sense",
+      "feed_url": "https://www.poundsandsense.com/blog/feed/",
+      "website_url": "https://www.poundsandsense.com/blog/",
+      "description": "Welcome to Pounds and Sense. My name is Nick, and I am a 60-something with a particular interest in personal finance and investment matters. I am a semi-retired freelance writer living near Lichfield in Staffordshire, UK.",
+      "followers": {
+        "facebook": 629,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4785046.jpg?t=1609334463"
+    },
+    {
+      "title": "Bond Vigilantes",
+      "feed_url": "https://bondvigilantes.com/feed/",
+      "website_url": "https://bondvigilantes.com/",
+      "description": "Commentary on bond markets by M&G's retail bond team. Follow this blog as it shares our views on the things that matter to bond investors - inflation, interest rates and the global economy as well as talking about the bond markets themselves.",
+      "followers": {
+        "twitter": 40800
+      },
+      "image_url": "https://i1.feedspot.com/4785948.jpg?t=1609334622"
+    },
+    {
+      "title": "Schroders | The Value Perspective",
+      "feed_url": "https://www.schroders.com/en/uk/the-value-perspective/blog/rss/",
+      "website_url": "https://www.schroders.com/en-gb/uk/intermediary/insights/",
+      "description": "Schroders value investment team aims to provide greater insight into the area of equity investing and TVP. It is now the definitive resource on value investing in UK equities. UK based value investors share their thoughts and opinions on value investing on our blog. Follow us to keep up with insights on equity investing in UK.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4785736.jpg?t=1609334307"
+    },
+    {
+      "title": "Nutmegonomics - Personal finance with a twist",
+      "feed_url": "https://www.nutmeg.com/nutmegonomics/feed",
+      "website_url": "https://www.nutmeg.com/nutmegonomics",
+      "description": "Nutmeg is an online investment management service. Personal finance with a twist. The online investment service that's intelligent, straightforward & fair. Specialising in investments, ISAs & pensions. Capital at risk. Follow this site to get easy tips and tricks to investing that delivers excellent performance and value.",
+      "followers": {
+        "facebook": 28000,
+        "twitter": 21100
+      },
+      "image_url": "https://i1.feedspot.com/4786542.jpg?t=1609334342"
+    },
+    {
+      "title": "Mazars UK Trusted Advisers",
+      "feed_url": "https://blogs.mazars.com/uktrustedadvisers/feed/",
+      "website_url": "https://trustedadvisers-uk.forvismazars.com/",
+      "description": "Talking investments, tax and personal finance with Mazars Private Clients. Mazars is an international, independent and integrated organisation specialising in audit, accounting, tax and advisory services.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4785836.jpg?t=1609334362"
+    },
+    {
+      "title": "Invstr",
+      "feed_url": "https://invstr.com/feed/",
+      "website_url": "https://www.trendscoutuk.com/blog/",
+      "description": "Investing for Everyone. Our mission is to empower people to take charge of their financial lives by providing them with the education, resources and opportunity to become real investors.",
+      "followers": {
+        "facebook": 55200,
+        "twitter": 9700,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4786785.jpg?t=1609334355"
+    },
+    {
+      "title": "Buy2LetCars",
+      "feed_url": "https://www.buy2letcars.com/about-us/blog/feed",
+      "website_url": "https://www.trendscoutuk.com/blog/",
+      "description": "Buy2LetCars offer high return investments and provide investors with a way to fund brand new vehicles. It's a great way of making your money work harder.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5217421.jpg?t=1605709319"
+    },
+    {
+      "title": "TrendScout UK Blog",
+      "feed_url": "https://www.trendscoutuk.com/blog/",
+      "website_url": "https://www.trendscoutuk.com/blog/",
+      "description": "The latest investment news and updates from TrendScout. Our thoughts on investing in high growth startups and the enterprise investment scheme.",
+      "followers": {
+        "facebook": 25,
+        "twitter": 173
+      },
+      "image_url": "https://i1.feedspot.com/5218036.jpg?t=1633935598"
+    },
+    {
+      "title": "The Evidence-Based Investor",
+      "feed_url": "https://www.evidenceinvestor.com/feed/",
+      "website_url": "https://www.evidenceinvestor.com/blog/",
+      "description": "Buffett and Bogle are right - the best way to invest is to buy and hold a low-cost and highly diversified portfolio of assets for a very long time. My goal is to inform investors about what the evidence says; to explain why we don't hear more about it; and to help like-minded financial advisers to communicate the benefits of an evidence-based approach.",
+      "followers": {
+        "facebook": 595,
+        "twitter": 23600,
+        "instagram": 63
+      },
+      "image_url": "https://i1.feedspot.com/4786039.jpg?t=1609336559"
+    }
+  ]
+}

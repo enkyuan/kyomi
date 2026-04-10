@@ -1,0 +1,38 @@
+{
+  "category": "San Francisco Soccer",
+  "source_url": "https://rss.feedspot.com/san_francisco_soccer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Soccer Bay Area",
+      "feed_url": "https://www.soccerbayarea.com/feed/",
+      "website_url": "https://www.soccerbayarea.com/",
+      "description": "Soccer Bay Area blog offers comprehensive coverage of the Bay Area soccer scene, featuring teams like Oakland Roots, Bay Cities FC, and San Jose Earthquakes, along with lower division leagues. From match analyses to player insights, it's your go-to source for all things soccer in the vibrant Bay Area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5695521.jpg?t=1698065536"
+    },
+    {
+      "title": "Girls Unite San Francisco Soccer Club",
+      "feed_url": "https://girlsunite.org/feed/",
+      "website_url": "https://girlsunite.org/news-events/",
+      "description": "Girls Unite soccer club fosters a female-centred training ethos, nurturing youth players across all levels and aspirations. From Microsoccer to NorCal Premier Competitive Travel, Futsal to Sand Soccer, it empowers young women through organized sports, competitive play, and a safe platform for sharing ideas and opinions.",
+      "followers": {
+        "facebook": 841,
+        "twitter": 144,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5695520.jpg?t=1698065525"
+    },
+    {
+      "title": "San Francisco Glens SC",
+      "feed_url": "https://www.sfglens.com/news_rss_feed?tags=310975",
+      "website_url": "https://www.sfglens.com/",
+      "description": "The San Francisco Glens, established in 1961, stands as the city's largest and most diverse soccer club with 90 teams and 1,100 players. From historic league victories to USL League Two and USL W League teams, their comprehensive youth academy offers pathways to MLS NEXT. Their community-centric ethos, aided by a soccer-specific facility on Treasure Island, ensures inclusivity through scholarships and fundraising, embodying their nonprofit status.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2600,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5695522.jpg?t=1698065545"
+    }
+  ]
+}

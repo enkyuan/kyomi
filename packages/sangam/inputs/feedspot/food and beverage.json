@@ -1,0 +1,234 @@
+{
+  "category": "Food and Beverage",
+  "source_url": "https://rss.feedspot.com/food_and_beverage_rss_feeds",
+  "feeds": [
+    {
+      "title": "Food Business News",
+      "feed_url": "https://www.foodbusinessnews.net/rss/articles",
+      "website_url": "https://www.foodbusinessnews.net/",
+      "description": "Food Business News is the leading media platform covering all aspects of the food and beverage industry. It is a publication of Sosland Publishing Company, a B2B trade publishing company focused on producing and delivering indispensable content for the food and beverage industries it serves.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 9600,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5035691.jpg?t=1627637520"
+    },
+    {
+      "title": "Food Dive",
+      "feed_url": "https://www.fooddive.com/feeds/news/",
+      "website_url": "https://www.fooddive.com/",
+      "description": "Food Dive provides news and analysis for food industry executives. We cover food manufacturing, R&D, regulation, food processing, GMOs, innovation, marketing, retail, sustainability, and more. Food Dive is a leading publication operated by Industry Dive. Our business journalists spark ideas and shape agendas for 10+ million decision makers in competitive industries.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4826464.jpg?t=1626337708"
+    },
+    {
+      "title": "F&B News",
+      "feed_url": "http://www.fnbnews.com/xml/Top-NewsRSS.XML",
+      "website_url": "http://www.fnbnews.com/",
+      "description": "F&B News is India's first website and newspaper for the Indian Food & Beverage industry.",
+      "followers": {
+        "facebook": 101,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4900611.jpg?t=1627638305"
+    },
+    {
+      "title": "Food Magazine",
+      "feed_url": "https://www.foodmag.com.au/feed/",
+      "website_url": "https://www.foodmag.com.au/",
+      "description": "Food & Beverage Industry News provides analytical feature-driven content directly related to the concerns and interests of food and drink manufacturers in production and technical roles. It has up-to-date news on what makes the industry tick and reaches key decision-makers who offer up insights into the latest trends within the industry.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5307159.jpg?t=1643279756"
+    },
+    {
+      "title": "Food and Drink Business",
+      "feed_url": "https://www.fdbusiness.com/feed/",
+      "website_url": "https://www.fdbusiness.com/",
+      "description": "Food and Drink Business News is the ultimate source for food and drink industry news and analysis. Dive into articles on Finance, Energy, Food Safety & Hygiene, and more. Food & Drink Business Europe is a long-established business magazine for the food and drinks processing industries. It is read by key decision makers and by buyers in the major retailers and food service operators.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5436390.jpg?t=1663240265"
+    },
+    {
+      "title": "Food & Beverage Asia",
+      "feed_url": "https://foodbeverageasia.com/feed/",
+      "website_url": "https://foodbeverageasia.com/",
+      "description": "Food & Beverage Asia is an indispensable source of information for the F&B industry and acts as a vital guide for Asia's fast-changing landscape of innovation. Having served the dynamic market since 2002, the publication covers the latest trends and developments in areas such as the manufacture of ingredients for the F&B industry, product design and processing & packaging technology.",
+      "followers": {
+        "facebook": 682,
+        "instagram": 578
+      },
+      "image_url": "https://i1.feedspot.com/5501444.jpg?t=1675158786"
+    },
+    {
+      "title": "Vegconomist Magazine \u00bb Food & Beverage",
+      "feed_url": "https://vegconomist.com/category/food-and-beverage/feed/",
+      "website_url": "https://vegconomist.com/category/food-and-beverage/",
+      "description": "At vegconomist, the first vegan business magazine, you don't have to search for relevant news, because we report on the latest innovations and developments in our category Food & Beverage several times per week. We receive emails from leading companies and market researchers in the vegan business world and guarantee for first-class vegan food news articles and interviews.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5501441.jpg?t=1675159013"
+    },
+    {
+      "title": "Food & Drink News",
+      "feed_url": "https://www.foodanddrinknews.co.uk/feed/",
+      "website_url": "https://www.foodanddrinknews.co.uk/",
+      "description": "One of the leading voices in the FoodAndDrink industry for over 19 years. Featuring in depth company profiles and informative news from all over the industry!",
+      "followers": {
+        "facebook": 271
+      },
+      "image_url": "https://i1.feedspot.com/4946844.jpg?t=1675158476"
+    },
+    {
+      "title": "Food & Beverage Reporter",
+      "feed_url": "https://fbreporter.co.za/feed/",
+      "website_url": "https://fbreporter.co.za/latest-news/",
+      "description": "Food & Beverage Reporter is one of the leading journals for the food, beverage, and packaging industries in southern Africa.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 207,
+        "instagram": 80
+      },
+      "image_url": "https://i1.feedspot.com/5452941.jpg?t=1675158566"
+    },
+    {
+      "title": "FoodGrads Blog",
+      "feed_url": "https://foodgrads.com/feed/",
+      "website_url": "https://foodgrads.com/blog/",
+      "description": "FoodGrads is an interactive platform for the Food & Beverage Industry. We focus on closing the gap between students/recent graduates and employers. From Food Scientists to Farmers, Chefs to Plant Managers, QA Technicians to Dietitians, and R&D to Sales, no matter what your passion - there is something for everyone in Food - we will help you find it!",
+      "followers": {
+        "facebook": 899,
+        "twitter": 2000,
+        "instagram": 988
+      },
+      "image_url": "https://i1.feedspot.com/5501436.jpg?t=1675159797"
+    },
+    {
+      "title": "Food & Beverage Manitoba Blog",
+      "feed_url": "https://foodbeveragemb.ca/feed/",
+      "website_url": "https://foodbeveragemb.ca/blog/",
+      "description": "Food and Beverage Manitoba's mission is to provide services and resources to members to ensure the elevation and strengthening of the local food and beverage processing industry. We are here to ensure that your business has what it needs to survive the day-to-day and understand the opportunities and challenges that will help you thrive tomorrow. Food & Beverage MBnnBlognnFind out the latest about Food and Beverage Manitoba and the top industry news.",
+      "followers": {
+        "facebook": 436,
+        "twitter": 463
+      },
+      "image_url": "https://i1.feedspot.com/5501424.jpg?t=1753177486"
+    },
+    {
+      "title": "Food & Beverage Magazine",
+      "feed_url": "https://www.fb101.com/feed/",
+      "website_url": "https://www.fb101.com/",
+      "description": "Food and Beverage Magazine is the premiere destination for restaurants and hospitality influencers for ideas, trends, and quality. We are the leading online magazine resource for the Food & Beverage industry with our signature celebrity features with over 20 years of valuable reputation.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5092220.jpg?t=1627742579"
+    },
+    {
+      "title": "Mezcal Pro Blog",
+      "feed_url": "https://mezcalpro.com/feed/",
+      "website_url": "https://mezcalpro.com/blog/",
+      "description": "Latest news, tips, and recipes for Mezcal lovers. Mezcal is a spirit made and distilled from the heart of agave plants. On mezcalpros.com you will find an overview of the best mezcals and manufacturers in their respective subtypes and also where to find a certain mezcal online.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5731040.jpg?t=1701979437"
+    },
+    {
+      "title": "Titan Brands Blog",
+      "feed_url": "https://www.titanbrands.co.uk//feed/rss2",
+      "website_url": "https://www.titanbrands.co.uk/blog",
+      "description": "Titan Brands was founded by Gavin McLean, a highly motivated commercial leader with more than 25 years of experience in the Food & Beverage sector. When you work with us, you'll get dedicated, focused support that's based on understanding your brand, your product, your values, and your opportunities. Have a key insight into the world of Food and Beverage by reading the latest news and updates featured in Titan Brands' online blogs.",
+      "followers": {
+        "facebook": 84,
+        "instagram": 140
+      },
+      "image_url": "https://i1.feedspot.com/5501446.jpg?t=1675158423"
+    },
+    {
+      "title": "Mallot Creek Group Blog",
+      "feed_url": "https://www.mallotcreek.com/feed/",
+      "website_url": "https://www.mallotcreek.com/blog/",
+      "description": "In 1999, founders Bruce Cowper and Tito Guglielmi created Mallot Creek Group to provide the food and beverage industry with a resource that was like no other. You'll find professional news and information from the food and beverage industry such as Engineering, Food Safety, Process Improvement, and Business Strategy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5501433.jpg?t=1675159317"
+    },
+    {
+      "title": "ESCP Business School",
+      "feed_url": "https://www.escp-foodbeverage-blog.eu/feed/",
+      "website_url": "https://www.escp-foodbeverage-blog.eu/",
+      "description": "Welcome to the MSc in International Food & Beverage Management Blog! Become an expert in your favorite field:Food & Beverage Management. Established in 1819, ESCP is the world's first business school and has educated generations of leaders and forefront thinkers.",
+      "followers": {
+        "twitter": 36700,
+        "instagram": 63900
+      },
+      "image_url": "https://i1.feedspot.com/5501434.jpg?t=1675157885"
+    },
+    {
+      "title": "CMTC Manufacturing Blog \u00bb Food And Beverage",
+      "feed_url": "https://www.cmtc.com/blog/topic/food-and-beverage/rss.xml",
+      "website_url": "https://www.cmtc.com/blog/topic/food-and-beverage",
+      "description": "California Manufacturing Technology Consulting is a non-profit organization that delivers a broad array of technical, consulting, and workforce development services to small and medium-sized manufacturers in California. CMTC's Manufacturing blog provides readers with news about California manufacturing as well as tips for manufacturers in California.",
+      "followers": {
+        "facebook": 893,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5501428.jpg?t=1675159544"
+    },
+    {
+      "title": "M Source Ideas \u00bb Food & Beverage Blog",
+      "feed_url": "https://msourceideas.com/category/news-blog/feed/",
+      "website_url": "https://msourceideas.com/category/news-blog/",
+      "description": "Whether you're just seeking a little professional help developing a strategy to grow your consumer product business, or need a full team and tools to execute a winning marketing campaign, MSource Ideas can help. For anyone launching a new food product follow expert advice on noncommercial food service markets: airport concessions, colleges, universities, hotels, and hospitals.",
+      "followers": {
+        "facebook": 503,
+        "twitter": 62
+      },
+      "image_url": "https://i1.feedspot.com/5501432.jpg?t=1675159583"
+    },
+    {
+      "title": "CORE Food & Beverage Profit Consulting Blog",
+      "feed_url": "https://corefoodconsulting.com/feed/",
+      "website_url": "https://corefoodconsulting.com/blog/",
+      "description": "Curiosity and a passion for food led Patrick McClary to over 35 years in the food and beverage service industry. CORE works alongside food and beverage service professionals to develop and execute custom solutions to improve profits, reduce costs, and create a foundation for long-term excellence. Connect with us on our blog for food & beverage, hospitality, and restaurant tips, news, and information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5501430.jpg?t=1675159638"
+    },
+    {
+      "title": "Nourishing Food Marketing Blog",
+      "feed_url": "https://www.nourishingfoodmarketing.com/feed/",
+      "website_url": "https://www.nourishingfoodmarketing.com/food-brands-blog/",
+      "description": "We help new and emerging food and beverage brands take flight and scale. At Nourishing Food Marketing, we've taken classical marketing frameworks from Big Food and right-sized them for fast-paced, resource-constrained businesses. With DIY tools, workshops, and done-for-you services, we help you establish your Brand DNA, develop product positioning, and get really clear and consistent with your messaging.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5501425.jpg?t=1675160243"
+    },
+    {
+      "title": "FoodBev Media",
+      "feed_url": "https://www.foodbev.com/",
+      "website_url": "https://www.foodbev.com/",
+      "description": "The latest news, trends, analysis, interviews and podcasts from the global food and beverage industry, interpreted to help you improve your business. FoodBev Media provides actionable insights that empower, educate and provide direction to food and beverage industry decision-makers.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 29300,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5306601.jpg?t=1627635308"
+    },
+    {
+      "title": "Specialty Food & Beverage Insurance Blog",
+      "feed_url": "https://www.specialtyfoodbeverage.com/feed/",
+      "website_url": "https://www.specialtyfoodbeverage.com/blog/",
+      "description": "A Specialty food & beverage insurance broker who stands out from the rest. We may be one of the few insurance providers out there that are passionate and focused on your industry, specialty foods, and beverages. Get all the information you need to keep yourself and your business safe.",
+      "followers": {
+        "facebook": 81
+      },
+      "image_url": "https://i1.feedspot.com/5501447.jpg?t=1675158316"
+    }
+  ]
+}

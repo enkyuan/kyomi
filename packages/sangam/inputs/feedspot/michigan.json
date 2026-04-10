@@ -1,0 +1,890 @@
+{
+  "category": "Michigan",
+  "source_url": "https://rss.feedspot.com/michigan_rss_feeds",
+  "feeds": [
+    {
+      "title": "MGoBlog | Michigan sports blog",
+      "feed_url": "https://mgoblog.com/fbfeed",
+      "website_url": "https://mgoblog.com/",
+      "description": "MGoBlog is a Michigan sports blog that promises to cover football, hockey, basketball, baseball, and all other Michigan sports in various levels of detail.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 59300
+      },
+      "image_url": "https://i1.feedspot.com/1076095.jpg?t=1611122410"
+    },
+    {
+      "title": "Detroit Metro Times",
+      "feed_url": "https://www.metrotimes.com/detroit/Rss.xml/feed",
+      "website_url": "https://www.metrotimes.com/",
+      "description": "Metro Times has been Detroit's premier alternative source for news, arts, culture, music, film, food, fashion and more. Hard-hitting journalism, in-depth profiles of local artists, musicians, and cultural icons - and the area's most comprehensive club and concert listings - have made MT the most sought after news and entertainment resource for metro Detroiters.",
+      "followers": {
+        "facebook": 127300,
+        "twitter": 91900,
+        "instagram": 99600
+      },
+      "image_url": "https://i1.feedspot.com/4836109.jpg?t=1609597169"
+    },
+    {
+      "title": "Michigan Auto Law Blog",
+      "feed_url": "https://www.michiganautolaw.com/feed/",
+      "website_url": "https://www.michiganautolaw.com/blog/",
+      "description": "Covers a range of topics, including Car Accidents, Motorcycle Accidents, Car Insurance, Auto Safety, and more. Michigan Auto Law primarily focuses on helping people injured in car, truck, and motorcycle accidents throughout the state.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4836759.jpg?t=1611122421"
+    },
+    {
+      "title": "Michigan Future Inc.",
+      "feed_url": "https://michiganfuture.org/feed/",
+      "website_url": "https://michiganfuture.org/michigan-future-blog/",
+      "description": "Michigan Future Inc. is a non-partisan non-profit think tank dedicated to producing ideas and research to create a prosperous Michigan.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4836747.jpg?t=1611122427"
+    },
+    {
+      "title": "Traverse City Travel Blog",
+      "feed_url": "https://www.traversecity.com/blog/rss/",
+      "website_url": "https://www.traversecity.com/blog/",
+      "description": "Check out our posts on the best of what Northern Michigan has to offer for your next vacation. Find information on hotels, events, restaurants and things to do in Traverse City, Michigan. Start Planning your trip to Traverse City today.",
+      "followers": {
+        "facebook": 144900,
+        "twitter": 22800,
+        "instagram": 77400
+      },
+      "image_url": "https://i1.feedspot.com/4636618.jpg?t=1611122431"
+    },
+    {
+      "title": "Selective Potential Blog",
+      "feed_url": "https://www.selectivepotential.com/blog?format=rss",
+      "website_url": "https://www.selectivepotential.com/blog/",
+      "description": "Hi, I am Tieka Ellis. I live in Grand Rapids, Michigan. I graduated with my BFA in digital media with a focus in interactive design from Kendall College of Art & Design. I started Selective Potential in September 2009 as a way to discover my own sense of personal style. Now I share my outfits, travels, and everyday life here on the blog. A personal blog based in Grand Rapids, Michigan featuring style, travel and daily life.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4837387.jpg?t=1597932638"
+    },
+    {
+      "title": "Eater Detroit",
+      "feed_url": "https://detroit.eater.com/rss/index.xml",
+      "website_url": "https://detroit.eater.com/",
+      "description": "The Detroit Restaurant, Bar, and Nightlife Blog. Food news and dining guides for Detroit.",
+      "followers": {
+        "facebook": 47400,
+        "twitter": 9400,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4837708.jpg?t=1611122672"
+    },
+    {
+      "title": "UM Hoops.com",
+      "feed_url": "https://umhoops.com/feed/",
+      "website_url": "https://umhoops.com/",
+      "description": "UM Hoops.com provides Michigan Wolverines basketball recruiting, news & video! UM Hoops was born on December 15th, 2007, working independently since.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 21600,
+        "instagram": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4836707.jpg?t=1669358617"
+    },
+    {
+      "title": "The Awesome Mitten",
+      "feed_url": "https://www.awesomemitten.com/feed/",
+      "website_url": "https://www.awesomemitten.com/",
+      "description": "Discover the best that Michigan has to offer with the Awesome Mitten. At Awesome Mitten, we strive to create content, guides, itineraries, and bucket lists that you fall more in love with Michigan. That way no matter where you choose to spend your anniversary, vacation, Saturday, or a couple of hours, you'll be confident that it will be a great experience.",
+      "followers": {
+        "facebook": 303700,
+        "twitter": 40800,
+        "instagram": 107800
+      },
+      "image_url": "https://i1.feedspot.com/4836953.jpg?t=1611124212"
+    },
+    {
+      "title": "Michigan Crossroads Council",
+      "feed_url": "https://michiganscouting.org/feed/",
+      "website_url": "https://michiganscouting.org/",
+      "description": "The mission of the Boy Scouts of America is to prepare young people to make ethical and moral choices over their lifetimes by instilling in them the values of the Scout Oath and Scout Law.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 371,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4836859.jpg?t=1611122716"
+    },
+    {
+      "title": "Detroit Moms Blog",
+      "feed_url": "https://detroitmom.com/feed/",
+      "website_url": "https://detroitmom.com/",
+      "description": "Detroit Mom is a locally-focused parenting resource for moms and families. Passionate about parenting and our community, Detroit Mom strives to connect area moms to relevant resources, local businesses, can't-miss happenings, and most of all - each other!",
+      "followers": {
+        "facebook": 32700,
+        "twitter": 1300,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4837754.jpg?t=1610547598"
+    },
+    {
+      "title": "Greater Lansing Michigan Blog",
+      "feed_url": "https://www.lansing.org/blog/rss/",
+      "website_url": "https://www.lansing.org/blog/",
+      "description": "We want to share with you all the exciting things that Greater Lansing has to offer our visitors. From world-class museums to locally owned boutiques and diverse dining, Greater Lansing welcomes you. Find big city offerings with small town charm and hospitality.",
+      "followers": {
+        "facebook": 23800,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4918194.jpg?t=1611122736"
+    },
+    {
+      "title": "Carley Creative Concepts Blog",
+      "feed_url": "https://carleycreativeconcepts.com/feed/",
+      "website_url": "https://carleycreativeconcepts.com/blog/",
+      "description": "Carley Creative Concepts Blog provides information on variety of health, wellness and business topics. I am Mary Carley, dedicated and highly insightful population health leader with multi-industry experience.",
+      "followers": {
+        "facebook": 276,
+        "twitter": 2600,
+        "instagram": 116800
+      },
+      "image_url": "https://i1.feedspot.com/5054411.jpg?t=1673343105"
+    },
+    {
+      "title": "Omega Computer Services",
+      "feed_url": "https://www.ocs.help/blog?format=RSS",
+      "website_url": "https://www.ocs.help/blog/",
+      "description": "Our mission is to provide complete hardware, software and support solutions, enabling clients to operate their businesses more successfully.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5054983.jpg"
+    },
+    {
+      "title": "Stepping Into a Purposeful, Faith-Driven Life",
+      "feed_url": "https://michelehowe.wordpress.com/feed/",
+      "website_url": "https://michelehowe.wordpress.com/",
+      "description": "Michele Howe is a reviewer for Publishers Weekly, FaithfulReader.com, Christian Market, TeenReads.com, KidReads.com, among many others national and international publications. She has published over 3000 reviews/articles and has been featured on numerous radio shows across the country speaking on topics such as parenting and a diverse range of women's health issues.",
+      "followers": {
+        "twitter": 856,
+        "instagram": 63
+      },
+      "image_url": "https://i1.feedspot.com/5088795.jpg?t=1611122780"
+    },
+    {
+      "title": "Blonde Bedhead",
+      "feed_url": "https://www.blondebedhead.com/feed/",
+      "website_url": "https://www.blondebedhead.com/",
+      "description": "Hi, I am Andrea Kerbuski and I started Blonde Bedhead in January 2010 to share my daily outfits and has expanded to cover lifestyle, fashion, beauty, travel and more. Follow along for edgy personal style inspiration mixing low and high fashion, Midwest travel and minimalist beauty picks and tips.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2700,
+        "instagram": 19800
+      },
+      "image_url": "https://i1.feedspot.com/188457.jpg?t=1597932401"
+    },
+    {
+      "title": "Hello West Michigan",
+      "feed_url": "https://hellowestmichigan.com/feed/",
+      "website_url": "https://hellowestmichigan.com/mireason-blog-2/",
+      "description": "Read more about things we love to do and places we like to visit in West Michigan. Our blog posts are written from first hand experiences of real things you can do when you live here.",
+      "followers": {
+        "twitter": 3500,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4837719.jpg?t=1611122961"
+    },
+    {
+      "title": "Maize & Blue Nation",
+      "feed_url": "https://feeds.feedburner.com/MaizeBlueNation",
+      "website_url": "https://www.maizenbluenation.com/",
+      "description": "A blog about University of Michigan football news, discussion and fanfare. Check out the latest games news, statistics, predictions and more!",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 14900,
+        "instagram": 738
+      },
+      "image_url": "https://i1.feedspot.com/4836665.jpg?t=1669616217"
+    },
+    {
+      "title": "Life In Michigan",
+      "feed_url": "https://lifeinmichigan.com/feed/",
+      "website_url": "https://lifeinmichigan.com/",
+      "description": "Promoting Michigan one story at a time.",
+      "followers": {
+        "facebook": 17100,
+        "twitter": 1500,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4838418.jpg?t=1611122985"
+    },
+    {
+      "title": "State Games of Michigan Blog",
+      "feed_url": "https://www.stategamesofmichigan.com/blog?format=rss",
+      "website_url": "https://www.stategamesofmichigan.com/blog/",
+      "description": "The Meijer State Games of Michigan is a multi-sport, Olympic-style event that welcomes athletes regardless of age or ability.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 949,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4836936.jpg?t=1758626524"
+    },
+    {
+      "title": "Greater Lansing Sports Authority",
+      "feed_url": "https://www.lansingsports.org/blog/rss/",
+      "website_url": "https://www.lansingsports.org/blog/",
+      "description": "The Greater Lansing Sports Authority is your resource for sports tournament planning in Michigan. No event is too large or too small for our staff.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 925,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4836993.jpg?t=1611123034"
+    },
+    {
+      "title": "Thumbwind",
+      "feed_url": "https://thumbwind.com/feed/",
+      "website_url": "https://thumbwind.com/",
+      "description": "Thumbwind is a personal project to show the high lites of a true gem in the backyard of Metro-Detroit. You can expect commentary, observations and event following about Huron County Michigan, Caseville, Sailing on Saginaw Bay, Water Quality and a favorite topic; Lake Township politics.",
+      "followers": {
+        "facebook": 69300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5022618.jpg?t=1611123269"
+    },
+    {
+      "title": "Michigan Audubon",
+      "feed_url": "https://www.michiganaudubon.org/feed/",
+      "website_url": "https://www.michiganaudubon.org/news/blog/",
+      "description": "The Michigan Audubon Blog contains all things birds and conservation. Page includes action alerts, news, and special information, posted by Michigan Audubon staff.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4836811.jpg?t=1611123285"
+    },
+    {
+      "title": "Michigan Legacy Art Park",
+      "feed_url": "https://michlegacyartpark.org/blog/feed/",
+      "website_url": "https://michlegacyartpark.org/blog/",
+      "description": "Where art, nature and history meet. An inspiring outdoor sculpture park located in northern Michigan.",
+      "followers": {
+        "facebook": 4400,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4838302.jpg?t=1611123291"
+    },
+    {
+      "title": "Mid City Love",
+      "feed_url": "http://midcitylove.com/blog?format=RSS",
+      "website_url": "http://midcitylove.com/",
+      "description": "A couple in love and in love with their mid sized city. Sharing what it's like to live, work, and play in Grand Rapids, Michigan.",
+      "followers": {
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/4838353.jpg?t=1611123300"
+    },
+    {
+      "title": "Erin Schmidt Photography | Detroit Wedding Photographer",
+      "feed_url": "https://erinschmidtphoto.com/feed/",
+      "website_url": "https://erinschmidtphoto.com/",
+      "description": "Erin Schmidt is a Custom, Authentic, and award-winning Detroit Wedding Photographer. Check out her posts now.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 49,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4837503.jpg?t=1611123313"
+    },
+    {
+      "title": "The Big House Blog",
+      "feed_url": "https://feeds.feedburner.com/thebighouseblog",
+      "website_url": "http://www.bighouseblog.com/",
+      "description": "The Big House Blog is your No. 1 stop for everything Michigan Football with some Michigan Basketball sprinkled in.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4836657.jpg?t=1611124030"
+    },
+    {
+      "title": "Traci Gresham",
+      "feed_url": "https://www.greshamrealty.com/blog-feed.xml",
+      "website_url": "https://www.greshamrealty.com/blog",
+      "description": "As a full time real estate agent with Coldwell Banker Woodland Schmidt, Traci utilizes the most innovative marketing tactics to get the greatest results for her clients. Whether you are buying or selling, Traci welcomes the opportunity to assist you in making your real estate goals a reality.",
+      "followers": {
+        "facebook": 682,
+        "twitter": 80,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4838061.jpg?t=1611123356"
+    },
+    {
+      "title": "Artist & Facilitator Pamela Alderman",
+      "feed_url": "https://pamelaalderman.com/feed/",
+      "website_url": "https://pamelaalderman.com/",
+      "description": "Alderman creates a new kind of artist/citizen work that invites audience collaboration. Her artwork lets others speak and respond.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 8,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4838273.jpg?t=1758626542"
+    },
+    {
+      "title": "Michigan Quarterly Review",
+      "feed_url": "https://sites.lsa.umich.edu/mqr/feed/",
+      "website_url": "https://sites.lsa.umich.edu/mqr/",
+      "description": "Michigan Quarterly Review is an eclectic, interdisciplinary journal of arts and culture seeking to combine the best of poetry, short fiction, and creative nonfiction as well as critical essays related to literature, culture, and current events.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 5500,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4838291.jpg?t=1609396841"
+    },
+    {
+      "title": "Homes2MoveYou.com - Farmington Hills Realtor-Tom Gilliam Blog",
+      "feed_url": "https://homes2moveyou.com/feed/",
+      "website_url": "https://homes2moveyou.com/",
+      "description": "Farmington Hills Realtor-Tom Gilliam Blog is full of information for home buyers and home sellers within the Farmington Hills and Oakland County area.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/4838168.jpg?t=1611124101"
+    },
+    {
+      "title": "Leelanau Up North",
+      "feed_url": "http://www.mostbeautifulplaceinamerica.com/feeds/posts/default",
+      "website_url": "http://www.mostbeautifulplaceinamerica.com/",
+      "description": "A lively look at life, inspired by one of the most beautiful places in America - Leelanau, Michigan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5297017.jpg?t=1624879655"
+    },
+    {
+      "title": "Detroit Fashion News",
+      "feed_url": "https://detroitfashionnews.com/feed/",
+      "website_url": "https://detroitfashionnews.com/",
+      "description": "Our writers take fashion seriously and focus on bringing the latest and greatest fashionably hip news to our readers one awesome story at a time.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 5,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5056612.jpg?t=1611122940"
+    },
+    {
+      "title": "A Healthier Michigan",
+      "feed_url": "https://feeds.feedburner.com/bcbsm-ahealthiermichigan",
+      "website_url": "https://www.ahealthiermichigan.org/",
+      "description": "Our mission is to help everyone in Michigan get healthier from the inside out. This means everything from giving you resources to help you make better decisions about diet and exercise, as well as information on creating and sustaining nurturing communities and successful businesses - everything you need to help create a healthier Michigan. Blog topics include healthy lifestyle, community, business, health reform, seniors, and events.",
+      "followers": {
+        "facebook": 244600,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4837007.jpg?t=1611122698"
+    },
+    {
+      "title": "US Mobile Home Pro Blog - DIY, Investing, Selling Tips and More!",
+      "feed_url": "https://www.mobilehomesell.com/feed/",
+      "website_url": "https://www.mobilehomesell.com/manufactured-home-blog/",
+      "description": "Check out our mobile home blog for the latest DIY steps to sprucing up your home, investing tips, how to sell your mobile homes and MUCH more!",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 183
+      },
+      "image_url": "https://i1.feedspot.com/4864918.jpg?t=1611124194"
+    },
+    {
+      "title": "good life",
+      "feed_url": "https://feeds.feedburner.com/TheGoodLifeForLess",
+      "website_url": "https://goodlifeforless.blogspot.com/",
+      "description": "A personal style blog featuring simple and casual style for moms and women in western michigan. good life is written by Jill Gott-Gleason, a mother and fashionista that believes that style should be fun, affordable and never boring.",
+      "followers": {
+        "facebook": 25500,
+        "twitter": 1200,
+        "instagram": 83100
+      },
+      "image_url": "https://i1.feedspot.com/1658514.jpg?t=1610693809"
+    },
+    {
+      "title": "Simply Every",
+      "feed_url": "https://www.simplyevery.com/feed/",
+      "website_url": "https://www.simplyevery.com/",
+      "description": "Hi and welcome to Simply + Every! My name is JeeYoung, work at home mom to three boys. Consultant, Content Creator, Chaos Coordinator. I love writing about the latest mom style trends, family travel tips, and guides, and our overall lifestyle stories to connect, entertain, encourage, and inspire those who come across my everyday posts. Subscribe and keep up with the latest from this blog.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 3000,
+        "instagram": 52700
+      },
+      "image_url": "https://i1.feedspot.com/4837494.jpg?t=1599467926"
+    },
+    {
+      "title": "Kristin Jones",
+      "feed_url": "https://www.kristinjones.co/feed/",
+      "website_url": "https://www.kristinjones.co/",
+      "description": "Hey There! I am Kristin. I live in Grand Rapids, Michigan with my husband, Matt, and our pup, Millie. At the moment, I am a Blogger, DIYer, Creative, all that messy fun jazz. My goal here is to encourage and empower women in all aspects of their lives. I am always striving to create inspiring content that is beautiful, relatable and attainable.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 443
+      },
+      "image_url": "https://i1.feedspot.com/4837372.jpg?t=1597814140"
+    },
+    {
+      "title": "The GR Guide",
+      "feed_url": "https://www.thegrguide.com/feed/",
+      "website_url": "https://www.thegrguide.com/",
+      "description": "Hello! I'm Sara. As a Grand Rapids girl (born and raised) I am excited to be your guide around this city, and also share more about my life. I am extremely passionate about the growth of this city and share insights about my life living here.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 819,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/4838389.jpg?t=1597842786"
+    },
+    {
+      "title": "Jessie Girl",
+      "feed_url": "https://jessiegirlblog.com/feed/",
+      "website_url": "https://jessiegirlblog.com/",
+      "description": "This blog is an outlet for me to share my ideas, thoughts, and tips with you from what I've learned about overall wellness. For me, this includes everything related to having a healthy mind, body and spirit; finding creative restaurant options (specifically ones that accommodate food allergies and use organic, locally sourced ingredients); and even extending that to my love for the color pink.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5029470.jpg?t=1611123191"
+    },
+    {
+      "title": "Traveling Michigan",
+      "feed_url": "https://www.travel-mi.com/traveling-michigan.xml",
+      "website_url": "https://www.travel-mi.com/",
+      "description": "A blog by Sherry and Chris of Traveling Michigan, a leading Michigan adventure travel blog. Be a part of this amazing community of travelers! We'll send you the best local adventures, upcoming events, tips, and inspiration right to your inbox!",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 636,
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5072134.jpg?t=1597910348"
+    },
+    {
+      "title": "Detroit Music Magazine",
+      "feed_url": "https://www.detroitmusicmag.com/feed/",
+      "website_url": "https://www.detroitmusicmag.com/",
+      "description": "Detroit Music Magazine is Detroit's premier music blog. The blog contains news, reviews, music, interviews, features and events.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 1900,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4838444.jpg?t=1611122979"
+    },
+    {
+      "title": "Michael Murphy Photography | Northern Michigan Wedding, Lifestyle, & Portrait Photographer",
+      "feed_url": "https://www.michaelmurphyiv.com/blog?format=RSS",
+      "website_url": "https://www.michaelmurphyiv.com/blog/",
+      "description": "Northern Michigan Wedding and Portrait Photography by Michael Murphy IV. Based in the beautiful Charlevoix, MI.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 50,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4837432.jpg?t=1611122996"
+    },
+    {
+      "title": "Production Realty - Real Estate Blog",
+      "feed_url": "https://productionrealty.com/blog/feed/",
+      "website_url": "https://productionrealty.com/blog/",
+      "description": "Production Realty is a local, family-owned company specializing in selling Jackson MI Real Estate.",
+      "followers": {
+        "facebook": 684,
+        "twitter": 439
+      },
+      "image_url": "https://i1.feedspot.com/4838490.jpg?t=1611123276"
+    },
+    {
+      "title": "Jenn Anibal - Michigan Lifestyle Weddings Portrait Photographer",
+      "feed_url": "https://jennanibal.com/blog/feed",
+      "website_url": "https://jennanibal.com/blog",
+      "description": "Jenn Anibal is a photographer of life love in michigan and beyond!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 511,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4837085.jpg?t=1611123327"
+    },
+    {
+      "title": "I'd Rather Cook",
+      "feed_url": "https://idrathercook.com/feed/",
+      "website_url": "https://idrathercook.com/",
+      "description": "I'm not a foodie, and I'm not into fine dining. I'm just someone who loves the challenge of cooking. Cook, gardener, nature lover, hiker, fisherman, traveler, pilot, and a lifelong learner. Enjoying retirement on 20 acres near Saugatuck in Southwest Michigan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5062937.jpg?t=1611123890"
+    },
+    {
+      "title": "A Glimpse At Grace",
+      "feed_url": "https://glimpseatgrace.com/feed/",
+      "website_url": "https://glimpseatgrace.com/",
+      "description": "A lifestyle blog focused on motherhood & marriage, wellness, food, and organization",
+      "followers": {
+        "facebook": 421,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5042247.jpg?t=1611123381"
+    },
+    {
+      "title": "Peter Erdi",
+      "feed_url": "https://aboutranking.com/feed/",
+      "website_url": "https://aboutranking.com/",
+      "description": "My hope is to provide a platform for the book and help bidirectional interaction with potential Readers.",
+      "followers": {
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/5050049.jpg?t=1611123395"
+    },
+    {
+      "title": "Hannah Marie Photography",
+      "feed_url": "https://www.hannahmariephotographyllc.com/blog-feed.xml",
+      "website_url": "https://www.hannahmariephotographyllc.com/metrodetroitphotographyblog",
+      "description": "Hannah Marie Photography, LLC is a Wedding, Newborn, Portrait Photgrapher servicing all of Michigan and beyond.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5165058.jpg?t=1611124266"
+    },
+    {
+      "title": "Detroit Debutante Fashion & Lifestyle Blogger",
+      "feed_url": "https://www.detroitdebutante.com/feed/",
+      "website_url": "https://www.detroitdebutante.com/",
+      "description": "Fashion & Lifestyle Blogger | Detroit, Michigan",
+      "followers": {
+        "twitter": 35700
+      },
+      "image_url": "https://i1.feedspot.com/4837078.jpg?t=1611123409"
+    },
+    {
+      "title": "Trish Hartwick Petoskey Harbor Springs Realtor",
+      "feed_url": "https://www.trishhartwick.com/blog/feed/",
+      "website_url": "https://www.trishhartwick.com/blog/",
+      "description": "Get pofessional Real Estate advise, community events, local attractions, Buying, Selling in Petoskey, Harbor Springs, Bay Harbor, Charlevoix all of Northern Michigan Realtor Trish Hartwick.",
+      "followers": {
+        "facebook": 386,
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/4838233.jpg?t=1611123419"
+    },
+    {
+      "title": "Michigan Local Attracts | Explore the all seasons beauty",
+      "feed_url": "https://michiganlocalattracts.wordpress.com/feed/",
+      "website_url": "https://michiganlocalattracts.wordpress.com/",
+      "description": "Explore the all seasons beauty by reading articles from Michigan Local Attracts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4981043.jpg?t=1611124221"
+    },
+    {
+      "title": "Compagner Real Estate Consulting Group",
+      "feed_url": "https://susancompagner.com/blog/feed/",
+      "website_url": "https://susancompagner.com/blog/",
+      "description": "Keep up with real estate news, events and developments in Holland and throughout West Michigan with the blog by Holland, MI realtor Susan Compagner.",
+      "followers": {
+        "facebook": 342,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4838068.jpg?t=1611124107"
+    },
+    {
+      "title": "Right to Life of Michigan's Blog",
+      "feed_url": "http://rlmblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://rlmblog.blogspot.com/",
+      "description": "A blog about prolife issues in Michigan focused on abortion, stem cell research and end-of-life issues!",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 4300,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4836823.jpg?t=1611124113"
+    },
+    {
+      "title": "Megan Hannon Photography",
+      "feed_url": "https://meganhannonphotography.com/blog/feed/",
+      "website_url": "https://meganhannonphotography.com/blog/",
+      "description": "My name is Megan Hannon and to say that I love photography is an understatement. I am a natural light photographer who strives to give you an experience, not just a photo session. I specialize in: Weddings, Seniors, Family & Boudoir.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4837570.jpg?t=1611124158"
+    },
+    {
+      "title": "Beth Erin Photography | Michigan and Ohio Natural Lifestyle Photographer",
+      "feed_url": "http://www.betherinphotography.com/blog/feed/",
+      "website_url": "http://www.betherinphotography.com/blog/",
+      "description": "Beth Erin Photography is a South East Michigan (Monroe, Temperance, Ida, Bedford) and Northern Ohio lifestyle photographer.",
+      "followers": {
+        "facebook": 311
+      },
+      "image_url": "https://i1.feedspot.com/4837594.jpg?t=1611124165"
+    },
+    {
+      "title": "CC King Entertainment",
+      "feed_url": "https://www.cckingent.com/feed/",
+      "website_url": "https://www.cckingent.com/wedding-planning-tips-and-ideas/",
+      "description": "Keep up with articles from CC King Entertainment.",
+      "followers": {
+        "twitter": 725
+      },
+      "image_url": "https://i1.feedspot.com/5064172.jpg?t=1611124190"
+    },
+    {
+      "title": "Crain's Grand Rapids Business",
+      "feed_url": "https://www.crainsgrandrapids.com/feed/",
+      "website_url": "https://www.crainsgrandrapids.com/",
+      "description": "The business newspaper of Grand Rapids & West Michigan since 1983. Grand Rapids Business News provides the same trusted and objective business reporting that the Business Journal is known for -- plus real-time original content, timely e-news letters / alerts, exclusive blogs and more.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 24000
+      },
+      "image_url": "https://i1.feedspot.com/4837779.jpg"
+    },
+    {
+      "title": "Maize n Brew",
+      "feed_url": "https://www.maizenbrew.com/rss/index.xml",
+      "website_url": "https://www.maizenbrew.com/",
+      "description": "Your best source for quality Michigan Wolverines news, rumors, analysis, stats, and scores from the fan perspective. MaizenBrew.com is a Michigan Wolverines community powered by SB Nation.",
+      "followers": {
+        "facebook": 47100,
+        "twitter": 42200
+      },
+      "image_url": "https://i1.feedspot.com/4836645.jpg?t=1669358088"
+    },
+    {
+      "title": "The Only Colors",
+      "feed_url": "https://www.theonlycolors.com/rss/index.xml",
+      "website_url": "https://www.theonlycolors.com/",
+      "description": "The Only Colors, a Michigan State Spartans community! A blog community devoted to Michigan State football and basketball.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/4836874.jpg?t=1611122730"
+    },
+    {
+      "title": "Discover Kalamazoo",
+      "feed_url": "https://www.discoverkalamazoo.com/blog/rss/",
+      "website_url": "https://www.discoverkalamazoo.com/blog/",
+      "description": "Get updates about Kalamazoo and things to do on Kalamazoo!",
+      "followers": {
+        "facebook": 76000,
+        "twitter": 11900,
+        "instagram": 37900
+      },
+      "image_url": "https://i1.feedspot.com/4837741.jpg?t=1611122740"
+    },
+    {
+      "title": "REVUE - Magazine, West Michigan's Arts and Entertainment Guide",
+      "feed_url": "https://revuewm.com/features/news?format=feed",
+      "website_url": "https://revuewm.com/",
+      "description": "Find events, music, restaurants, breweries and more in Grand Rapids, Kalamazoo and Holland.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/4838502.jpg?t=1517488362"
+    },
+    {
+      "title": "Local Difference",
+      "feed_url": "https://www.localdifference.org/feed/",
+      "website_url": "https://www.localdifference.org/blog/",
+      "description": "Taste the Local Difference\u00ae is Michigan's local food marketing agency.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 1000,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4836976.jpg?t=1611122763"
+    },
+    {
+      "title": "Michigan Public",
+      "feed_url": "https://www.michiganradio.org/rss.xml",
+      "website_url": "https://www.michiganpublic.org/",
+      "description": "Michigan Radio is dedicated to covering the news stories that affect our lives as citizens of Michigan, and helping our listeners better understand their state, nation and world.",
+      "followers": {
+        "facebook": 56900,
+        "twitter": 44500,
+        "instagram": 70
+      },
+      "image_url": "https://i1.feedspot.com/2058650.jpg?t=1609597133"
+    },
+    {
+      "title": "Michigan House Republicans",
+      "feed_url": "https://gophouse.org/feed/atom",
+      "website_url": "https://gophouse.org/blog",
+      "description": "Get Republican Caucus news and updates!",
+      "followers": {
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/3889502.jpg?t=1611122493"
+    },
+    {
+      "title": "Experience Grand Rapids | Insider's Guide to Grand Rapids MI",
+      "feed_url": "https://www.experiencegr.com/blog/rss/",
+      "website_url": "https://www.experiencegr.com/blog/",
+      "description": "See all the latest events and things happening in Grand Rapids, Michigan or experience our unique city from a local's perspective.",
+      "followers": {
+        "facebook": 141600,
+        "twitter": 39800,
+        "instagram": 105000
+      },
+      "image_url": "https://i1.feedspot.com/4838055.jpg?t=1611122692"
+    },
+    {
+      "title": "Mark Z Real Estate Experts Blog",
+      "feed_url": "https://blog.markzproperties.com/rss.xml",
+      "website_url": "https://www.markzproperties.com/blog",
+      "description": "Metro Detroit real estate blog with news, statistics, buyer tips, seller tips, pricing comparable, mortgage rates, and market updates. Mark Z. is the boot-strapping Realtor- CEO of Mark Z. Real Estate Expert. The team will help you to sell your home, or they will buy it.",
+      "followers": {
+        "twitter": 830,
+        "instagram": 381200
+      },
+      "image_url": "https://i1.feedspot.com/4838481.jpg?t=1632136400"
+    },
+    {
+      "title": "Michigan for You",
+      "feed_url": "https://michigan4you.com/feeds/posts/default?alt=rss",
+      "website_url": "https://michigan4you.com/",
+      "description": "Offering the best unique and interesting stories about Michigan's places, events, and other fun in the Great Lake State.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5030782.jpg?t=1604036691"
+    },
+    {
+      "title": "Breezy and Brazen",
+      "feed_url": "https://breezyandbrazen.com/feed/",
+      "website_url": "https://breezyandbrazen.com/",
+      "description": "Breezy and Brazen is a lifestyle blog featuring musings around music city.",
+      "followers": {
+        "facebook": 390,
+        "twitter": 617
+      },
+      "image_url": "https://i1.feedspot.com/4837563.jpg?t=1611122933"
+    },
+    {
+      "title": "Hirzel Law",
+      "feed_url": "https://michiganrelaw.com/feed/",
+      "website_url": "https://micondolaw.com/",
+      "description": "Features Articles exclusively on Real Estate Law. Hirzel Law, PLC posts articles on the latest legal issues impacting Michigan Condos and Homeowners Associations and discuss issues related to condo association bylaw amendments, condo association bylaw violations, and condo association collections.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 3200,
+        "instagram": 298
+      },
+      "image_url": "https://i1.feedspot.com/200/4838477.jpg?t=1611123121"
+    },
+    {
+      "title": "Tifani Lyn Photography",
+      "feed_url": "https://tifanilyn.com/feed/",
+      "website_url": "https://sbmblog.typepad.com/",
+      "description": "Tifani Lyn is a wedding and portrait artist in Grand Rapids, Michigan. Her signature style is creating luminous imagery of laughter, joy, & love.",
+      "followers": {
+        "facebook": 1900,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4837109.jpg?t=1611122971"
+    },
+    {
+      "title": "State Bar of Michigan Blog",
+      "feed_url": "https://sbmblog.typepad.com/sbm-blog/atom.xml",
+      "website_url": "https://sbmblog.typepad.com/",
+      "description": "Daily Comment on News and Issues of Interest to Michigan Lawyers!",
+      "followers": {
+        "facebook": 94,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/969939.jpg?t=1611123008"
+    },
+    {
+      "title": "The HSS Feed | Michigan Fashion Blog | Affordable Style Blogger",
+      "feed_url": "https://www.thehssfeed.com/feed",
+      "website_url": "https://themichiganmom.com/blog/",
+      "description": "The HSS Feed is a Michigan-based fashion and lifestyle blog about happiness, success and style, written by Nina Rand.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4837483.jpg?t=1611123014"
+    },
+    {
+      "title": "The Michigan Mom - Mom Lifestyle Blog",
+      "feed_url": "https://themichiganmom.com/blog?format=RSS",
+      "website_url": "https://themichiganmom.com/blog/",
+      "description": "The Michigan Mom is a lifestyle blog based in Detroit, Michigan with a focus on healthy living, healthy recipes, wellness, and tips for busy moms.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4837043.jpg?t=1601539365"
+    },
+    {
+      "title": "Liz Braga | A Detroit lifestyle blog",
+      "feed_url": "https://lizbraga.com/feed/",
+      "website_url": "https://www.edconstable.com/news-blog/",
+      "description": "Based in the midwest, all we are blog features fashion, family and fun in and around Metro - Detroit.",
+      "followers": {
+        "facebook": 358,
+        "instagram": 27100
+      },
+      "image_url": "https://i1.feedspot.com/4837046.jpg?t=1611123307"
+    },
+    {
+      "title": "EdConstable.com - Real Estate News and Blog",
+      "feed_url": "https://www.edconstable.com/news-blog/feed/",
+      "website_url": "https://www.edconstable.com/news-blog/",
+      "description": "Ed Constable's Real estate blog give you in depth information into the Home buying and Homes Selling process.",
+      "followers": {
+        "facebook": 2300,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4838427.jpg?t=1611123320"
+    },
+    {
+      "title": "Southeast Michigan Real Estate Blog | Canton, Plymouth, Northville MI. Real Estate Info",
+      "feed_url": "https://blog.sandypattockbeeler.com/feed/",
+      "website_url": "https://www.collectiveimagephoto.com/blog",
+      "description": "Canton, Plymouth, Northville MI. Real Estate Info",
+      "followers": {
+        "facebook": 89
+      },
+      "image_url": "https://i1.feedspot.com/4838139.jpg?t=1611123361"
+    },
+    {
+      "title": "Collective Image Photography",
+      "feed_url": "https://www.collectiveimagephoto.com/blog.rss",
+      "website_url": "https://www.collectiveimagephoto.com/blog",
+      "description": "Michigan based Photographer specialized in Weddings, Engagement, Family, infant and more kind of photography.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/4837464.jpg?t=1611124170"
+    },
+    {
+      "title": "Sarah Brithinee",
+      "feed_url": "https://sarahbrithinee.com/feed",
+      "website_url": "https://sarahbrithinee.com/",
+      "description": "Michigan Fashion, Fitness, & Beauty Blog.",
+      "followers": {
+        "facebook": 777,
+        "twitter": 408,
+        "instagram": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4837053.jpg?t=1611124177"
+    },
+    {
+      "title": "YITSOL",
+      "feed_url": "https://www.yitsol.com/feed/",
+      "description": "YITSOL is a technology company founded by enterprise product experts with development centers in the US and India. YITSOL offers digital solutions to enterprises across the globe. Experts in Design, implementation, support & managed services on Telecom OSS/BSS solutions.",
+      "followers": {
+        "facebook": 457,
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/5149812.jpg?t=1611122723"
+    }
+  ]
+}

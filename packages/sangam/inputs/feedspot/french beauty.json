@@ -1,0 +1,83 @@
+{
+  "category": "French Beauty",
+  "source_url": "https://rss.feedspot.com/french_beauty_rss_feeds",
+  "feeds": [
+    {
+      "title": "Anti-Age Magazine",
+      "feed_url": "https://en.anti-age-magazine.com/feed/",
+      "website_url": "https://en.anti-age-magazine.com/",
+      "description": "Anti Age Magazine is the first and the leading magazine for anti-aging medicine and medical aesthetics. Here you can find all the information you are looking for on cosmetic surgery or cosmetic medicine.",
+      "followers": {
+        "facebook": 31800,
+        "twitter": 399,
+        "instagram": 27100
+      },
+      "image_url": "https://i1.feedspot.com/5329053.jpg?t=1713867109"
+    },
+    {
+      "title": "Premium Beauty News",
+      "feed_url": "https://www.premiumbeautynews.com/spip.php?page=backend",
+      "website_url": "https://www.premiumbeautynews.com/",
+      "description": "PremiumBeautyNews.com is a website devoted to professionals of the cosmetics and beauty industries and related sectors. PremiumBeautyNews.com selects and analyzes news from an international point of view and focuses on the information that may impact the international trade of cosmetic products or affect the industry at a global level.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5328994.jpg?t=1633514898"
+    },
+    {
+      "title": "Kodd Magazine \u00bb Beauty",
+      "feed_url": "https://kodd-magazine.com/en/beauty-allure/feed/",
+      "website_url": "https://kodd-magazine.com/en/beauty-allure/",
+      "description": "Discover all the articles, videos, files, slideshows. All the info is on kodd-magazine.com! KODD is a magazine whose aim is to highlight creatives, brands, and companies that share our ideal of excellence. We promote actors from the fields of fashion, beauty, and culture.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5329052.jpg?t=1633518564"
+    },
+    {
+      "title": "Alpol le Magazine",
+      "feed_url": "https://blog.alpol-cosmetique.com/en/feed/",
+      "website_url": "https://blog.alpol-cosmetique.com/en/",
+      "description": "Thanks to more than 70 years of expertise in the cosmetic field, ALPOL Cosm\u00e9tique supports you every day in your project. With 'Le mag' we decrypt sector news for you and let you know all about news and changes. Through 4 thematics, you can trust our opinions and eye expert to know and understand everything! Market, consumer and product trends, regulatory changes, etc: everything will be known about designing the product of the future!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5329000.jpg?t=1633514279"
+    },
+    {
+      "title": "Joleen Emory Blog",
+      "feed_url": "https://joleenemory.com/feed/",
+      "website_url": "https://joleenemory.com/beauty-blog/",
+      "description": "I'm Joleen, a Franco-American makeup artist in Paris, France. Originally from California, I've been traveling and creating beauty around the world for many years. Whether I'm with you on your wedding day or working on an editorial photoshoot, I'm passionate about what I do.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5328996.jpg?t=1633515636"
+    },
+    {
+      "title": "Superga Beauty",
+      "feed_url": "https://supergabeauty.com/en/feed/",
+      "website_url": "https://supergabeauty.com/en/",
+      "description": "Superga Beauty is a family business that has managed to maintain a human scale. Our 6 industrial sites in France and our strategic international presence allow us to be agile and, above all, to meet all the demands of beauty brands. We offer global solutions for the creation of perfumes, skincare, and make-up, with a flexible and competitive 'time to market'",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5329045.jpg?t=1633518733"
+    },
+    {
+      "title": "Greentech",
+      "feed_url": "https://www.greentech.fr/en/feed/",
+      "website_url": "https://www.greentech.fr/en/",
+      "description": "Pioneer in plant biotechnology, GREENTECH develops and produces for cosmetic, pharmaceutical, and nutraceutical fields high-tech active ingredients from plant, marine, and microbial worlds.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5328997.jpg?t=1633514600"
+    },
+    {
+      "title": "Codage Paris Blogs",
+      "feed_url": "https://www.codageparis.com/en-cz/blogs/news.atom",
+      "website_url": "https://www.codageparis.com/en-cz/blogs/news/",
+      "description": "Thanks to Codage expertise, learn to listen to your skin, to understand it, to decode it. CODAGE Paris is a contemporary cosmetology house, with a skin nutrition approach, a pioneer in tailor-made products.",
+      "followers": {
+        "facebook": 31200,
+        "instagram": 53700
+      },
+      "image_url": "https://i1.feedspot.com/5329001.jpg?t=1633516931"
+    }
+  ]
+}

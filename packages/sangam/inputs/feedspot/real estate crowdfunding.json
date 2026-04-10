@@ -1,0 +1,40 @@
+{
+  "category": "Real Estate Crowdfunding",
+  "source_url": "https://rss.feedspot.com/real_estate_crowdfunding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Crowdfund Insider \u00bb Real Estate",
+      "feed_url": "https://www.crowdfundinsider.com/category/real-estate/feed/",
+      "website_url": "https://www.crowdfundinsider.com/category/real-estate/",
+      "description": "Find all the latest industry news, announcements, tips and more on real estate crowdfunding on the Fund Raising Scripts Blog. Crowdfund Insider is the leading news and information website covering the emerging global industry of disruptive finance including investment crowdfunding, blockchain, online lending, and other forms of Fintech.",
+      "followers": {
+        "facebook": 17500,
+        "twitter": 41600,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5386787.jpg?t=1648791555"
+    },
+    {
+      "title": "Brickstarter Blog",
+      "feed_url": "https://brickstarter.com/en/blog/feed/xml",
+      "website_url": "https://brickstarter.com/en/blog",
+      "description": "Brickstarter is the real estate investment crowdfunding platform specialized in vacation rental properties where you can achieve the highest Return with no effort.We analyze the whole real estate market to find the most profitable investment opportunities.",
+      "followers": {
+        "facebook": 436,
+        "twitter": 813
+      },
+      "image_url": "https://i1.feedspot.com/5386789.jpg?t=1651488195"
+    },
+    {
+      "title": "Fund Raising Scripts \u00bb Real Estate Crowdfunding",
+      "feed_url": "https://www.fundraisingscript.com/blog/category/real-estate-crowdfunding/feed/",
+      "website_url": "https://www.fundraisingscript.com/blog/category/real-estate-crowdfunding/",
+      "description": "Fund Raising Scripts is a white label crowdfunding software development solution to empower your custom crowdfunding platform ideas. Find all the latest news, announcements, tips and more on real estate crowdfunding on the Fund Raising Scripts Blog.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 709
+      },
+      "image_url": "https://i1.feedspot.com/5386788.jpg?t=1648792937"
+    }
+  ]
+}

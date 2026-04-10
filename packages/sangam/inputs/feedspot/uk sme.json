@@ -1,0 +1,158 @@
+{
+  "category": "UK SME",
+  "source_url": "https://rss.feedspot.com/uk_sme_rss_feeds",
+  "feeds": [
+    {
+      "title": "SME Magazine",
+      "feed_url": "https://www.smeweb.com/feed/",
+      "website_url": "https://www.smeweb.com/",
+      "description": "SME Web is the website for SME business coverage produced by Publications UK. We bring you content from around the web which is relevant for you and tell you what it means for your business. SME brings you news stories, features and expert blogs examining the key issues affecting your small or medium-sized business.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4718990.jpg?t=1609939879"
+    },
+    {
+      "title": "Business Matters Magazine",
+      "feed_url": "https://bmmagazine.co.uk/feed/",
+      "website_url": "https://bmmagazine.co.uk/",
+      "description": "UK's largest business magazine for the entrepreneur, start-up and small and medium-enterprise (SME). Business Matters is read for its news coverage, analysis, interviews with key opinion formers and leading entrepreneurs and opinion on the UK small business sector.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 35200,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4719858.jpg?t=1607409121"
+    },
+    {
+      "title": "Small Business Blog",
+      "feed_url": "https://smallbusiness.co.uk/feed/",
+      "website_url": "https://smallbusiness.co.uk/blog/",
+      "description": "Small Business provides advice and useful guides to UK sole traders and small businesses to start, run, grow, and succeed in business, helping turn your business idea into a profitable business. Their goal is to help owner-managers and entrepreneurs start, run, grow, and succeed in business, helping turn your business idea into a profitable business. Check out their blog and learn more about the latest news, guides, tips, key topics, business management, technology, office and home working, marketing, and more.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 42400
+      },
+      "image_url": "https://i1.feedspot.com/4526638.jpg?t=1607409113"
+    },
+    {
+      "title": "Fleximize",
+      "feed_url": "https://fleximize.com/feeds/rss",
+      "website_url": "https://fleximize.com/articles",
+      "description": "The Fleximize Knowledge Hub is THE place to go for small business advice articles and expertise on topics including law, finance, employment and marketing.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4987726.jpg?t=1620051878"
+    },
+    {
+      "title": "Engine Room Blog",
+      "feed_url": "https://yourengineroom.com/feed/",
+      "website_url": "https://yourengineroom.com/blog/",
+      "description": "Engine Room shares Next Level BD's core values of a bespoke, modular and personal approach to SME business development, combining commercial nous and marketing expertise to deliver results which will help grow your business. Our blog tells you everything you need to know about the ins and outs of marketing, without all of the complex jargon.",
+      "followers": {
+        "twitter": 249
+      },
+      "image_url": "https://i1.feedspot.com/4910632.jpg?t=1620051892"
+    },
+    {
+      "title": "Sage Advice UK Blog",
+      "feed_url": "https://www.sage.com/en-gb/blog/feed/",
+      "website_url": "https://www.sage.com/en-gb/blog/",
+      "description": "We provide small and medium-sized organizations with a range of easy-to-use, secure, and efficient business management software and service. Sage Advice UK provides the best advice on everything from managing money to people. Tailored advice for startups, small businesses, enterprises and accountants.",
+      "followers": {
+        "facebook": 819900,
+        "twitter": 50500,
+        "instagram": 32100
+      },
+      "image_url": "https://i1.feedspot.com/4719864.jpg?t=1607409152"
+    },
+    {
+      "title": "Price Bailey",
+      "feed_url": "https://www.pricebailey.co.uk/feed/",
+      "website_url": "https://www.pricebailey.co.uk/contenthub/blogs/",
+      "description": "A leading firm of accountants and business advisers serving local SMEs, private clients and regional, national and international businesses. Find all the latest business and finance news for SME's to corporates. Easy-to-understand tips, advice, podcasts and guides from the Price Bailey blog.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4793132.jpg?t=1620051896"
+    },
+    {
+      "title": "EC2IT Blog",
+      "feed_url": "https://www.ec2it.co.uk/it-support-news-and-blog/blog/feed/rss/",
+      "website_url": "https://www.ec2it.co.uk/it-support-news-and-blog/blog/",
+      "description": "A collection of our thoughts and miscellania which will hopefully be of help and interest. You'll find everything from helpful informational articles to opinion pieces on issues affecting the London based SME.",
+      "followers": {
+        "facebook": 19,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/4981443.jpg?t=1620051900"
+    },
+    {
+      "title": "Venn Accounts Blog",
+      "feed_url": "https://vennaccounts.com/feed/",
+      "website_url": "https://vennaccounts.com/blog/",
+      "description": "Venn Accounts are a London based chartered management accountancy firm, specializing in accounting services for startup businesses. As a CIMA partner, we can provide your business with a variety of services from annual accounts, self-assessments, bookkeeping, corporation tax, and payroll management. View the latest accounting news, as well as tips and expert advice for UK-based SME's & startup businesses from Venn Accounts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5222669.jpg?t=1607069115"
+    },
+    {
+      "title": "Holden Associates",
+      "feed_url": "https://holdenassociates.co.uk/feed/",
+      "website_url": "https://holdenassociates.co.uk/news/",
+      "description": "A family run firm of Award Winning professionally qualified accountants, business and tax advisers who through the use of cloud technology are already advising and supporting clients throughout the UK. Our clients are not the big business type, but they are the every day smaller and medium sized businesses of sole traders, partnerships between relatives or friends, etc.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4719852.jpg?t=1607410581"
+    },
+    {
+      "title": "Workhorse Blog",
+      "feed_url": "https://blog.goworkhorse.com/blog/rss.xml",
+      "website_url": "https://blog.goworkhorse.com/blog",
+      "description": "Small business news about helping small businesses grow with the right technology, processes and people. We chat about small businesses challenges here.",
+      "followers": {
+        "facebook": 39,
+        "twitter": 220
+      },
+      "image_url": "https://i1.feedspot.com/5076317.jpg?t=1620051909"
+    },
+    {
+      "title": "Warren Knight Blog",
+      "feed_url": "https://warren-knight.com/blog/feed/",
+      "website_url": "https://warren-knight.com/blog/",
+      "description": "Warren is helping to create a radical rethinking though his certified professional speaking and training on how organisations use technology in pursuits of building brand awareness and new revenue streams. This blog is for Business Owners on Digital Marketing, Entrepreneurship, Business Growth Strategies and Social Media News.",
+      "followers": {
+        "facebook": 862,
+        "twitter": 30600
+      },
+      "image_url": "https://i1.feedspot.com/4910623.jpg?t=1620051932"
+    },
+    {
+      "title": "Stewart Accounting UK Blog",
+      "feed_url": "https://stewartaccounting.co.uk/feed/",
+      "website_url": "https://stewartaccounting.co.uk/blogs/",
+      "description": "Services was set up by Mark Stewart to provide small and medium sized businesses with sound accounting, bookkeeping and taxation advice so you can concentrate on developing your business. Find blogs on accounting, bookkeeping, taxation, VAT, social media.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4718951.jpg?t=1607409596"
+    },
+    {
+      "title": "Jo Long Consulting",
+      "feed_url": "https://www.jolongconsulting.com/feed/",
+      "website_url": "https://www.jolongconsulting.com/news/",
+      "description": "Hi, I'm Jo and I love to inspire and excite small and medium sized businesses in creating clarity, goals & strategy alongside a manageable marketing plan. Follow this blog to to find out more about the business support services offered, hints and tips plus views from the industry.",
+      "followers": {
+        "facebook": 492,
+        "twitter": 359,
+        "instagram": 514
+      },
+      "image_url": "https://i1.feedspot.com/4910665.jpg?t=1620051913"
+    }
+  ]
+}

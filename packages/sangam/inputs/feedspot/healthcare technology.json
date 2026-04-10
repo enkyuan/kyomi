@@ -1,0 +1,931 @@
+{
+  "category": "Healthcare Technology",
+  "source_url": "https://rss.feedspot.com/healthcare_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Digital Health",
+      "feed_url": "https://www.digitalhealth.net/news/feed/",
+      "website_url": "https://www.digitalhealth.net/",
+      "description": "Digital Health News is specialist news service that covers the digital transformation of health and social care, from big NHS systems to the mobile app in your hand. Digital Health provides independent business, policy and technology news, research and events focused on developments in health IT in the NHS and UK health. Their coverage is focused, original and authoritative. Over 20,000 readers subscribe to Digital Health's newsletters.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 34000
+      },
+      "image_url": "https://i1.feedspot.com/4671522.jpg?t=1611819769"
+    },
+    {
+      "title": "33 Charts Blog",
+      "feed_url": "https://33charts.com/blog/feed/",
+      "website_url": "https://33charts.com/blog/",
+      "description": "33 charts is a mashup of original and curated stuff that crosses medicine, media, tech, and culture. Follow their blog and explore the crazy undercurrents of medicine and technology. Follow the 33c newsletter for the week's best finds in medicine and technology.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4855394.jpg?t=1611819773"
+    },
+    {
+      "title": "KevinMD.com",
+      "feed_url": "https://feeds.feedburner.com/KevinMd-MedicalWeblog",
+      "website_url": "https://kevinmd.com/",
+      "description": "Dr. Kevin Pho is a board-certified internal medicine physician and founder of KevinMD.com, which Forbes called a must-read health blog. Founded in 2004, KevinMD.com is the web's leading platform where physicians, advanced practitioners, nurses, medical students, and patients share their insight and tell their stories.",
+      "followers": {
+        "facebook": 121000,
+        "twitter": 151300,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4855273.jpg?t=1611819793"
+    },
+    {
+      "title": "HIT Consultant",
+      "feed_url": "https://hitconsultant.net/feed/",
+      "website_url": "https://hitconsultant.net/",
+      "description": "HIT Consultant is the leading publication source of healthcare technology news, analysis, and insights for healthcare executives, physicians, and providers. Our content provides editorial insights on health IT, EHRs, population health management, digital health, telehealth, accountable care, patient engagement, and startups.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4237011.jpg?t=1611819802"
+    },
+    {
+      "title": "FierceHealthcare",
+      "feed_url": "https://www.fiercehealthcare.com/rss/xml",
+      "website_url": "https://www.fiercehealthcare.com/hospitals-health-systems",
+      "description": "Fierce Healthcare delivers healthcare news at the intersection of business and policy. Our journalists strive to bring our readers breaking industry news, exclusive interviews, and thoughtfully reported stories that offer a deeper insight into how changes in the industry impact their corner of the healthcare world.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 58400
+      },
+      "image_url": "https://i1.feedspot.com/4855403.jpg?t=1611819849"
+    },
+    {
+      "title": "Perficient",
+      "feed_url": "https://feeds.feedburner.com/HealthcareIndustryTrendsBlog",
+      "website_url": "https://blogs.perficient.com/healthcare/",
+      "description": "Perspectives and insights on healthcare technology and healthcare industry trends and topics. Perficient are the leading global digital consultancy transforming how the world's largest enterprises & biggest brands connect with customers & grow their businesses.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 5700,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4856904.jpg?t=1611819846"
+    },
+    {
+      "title": "Healthcare Dive",
+      "feed_url": "https://www.healthcaredive.com/feeds/news/",
+      "website_url": "https://www.healthcaredive.com/topic/health-it/",
+      "description": "provides news, trends, jobs and resources for health industry professionals. We cover topics like healthcare IT, hospital administration, polcy & regulation, practice management, health law, insurance, and more.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4855565.jpg?t=1611820245"
+    },
+    {
+      "title": "The Healthcare Guys",
+      "feed_url": "https://healthcareguys.com/feed/",
+      "website_url": "https://healthcareguys.com/",
+      "description": "At Healthcareguys, they provide news and useful information about exploring business in healthcare and technology.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4474526.jpg?t=1611820240"
+    },
+    {
+      "title": "Health Works Collective - Technology",
+      "feed_url": "https://www.healthworkscollective.com/category/technology/feed/",
+      "website_url": "https://www.healthworkscollective.com/category/technology/",
+      "description": "Find news, analysis on healthcare marketing, policy and law as well as full resource to public health. HealthWorks Collective is a blogger-based community that gives healthcare industry professionals a unique platform to share insights and knowledge. HealthWorks Collective is the leading destination for smart healthcare discussions between peers.",
+      "followers": {
+        "facebook": 595,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4854957.jpg?t=1611820253"
+    },
+    {
+      "title": "HealthTech Magazine",
+      "feed_url": "https://healthtechmagazine.net/taxonomy/term/9/feed?_wrapper_format=html",
+      "website_url": "https://healthtechmagazine.net/news",
+      "description": "HealthTech Magazine explores technology and healthcare issues relevant to IT leaders and managers at healthcare organizations evaluating and implementing technology solutions. Key topics covered are cloud, data analytics, data center, digital workspace, hardware, internet, networking, patient-centered care, security, and software.",
+      "followers": {
+        "facebook": 116300,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5323399.jpg?t=1632135465"
+    },
+    {
+      "title": "ReferralMD",
+      "feed_url": "https://getreferralmd.com/feed/",
+      "website_url": "https://getreferralmd.com/blog/",
+      "description": "Discover comprehensive content about the business side of healthcare technology, medical marketing, health news, and medical technology reviews for healthcare professionals. ReferralMD is the leading patient engagement & provider management platform for healthcare providers.",
+      "followers": {
+        "facebook": 316,
+        "twitter": 20
+      },
+      "image_url": "https://i1.feedspot.com/5312423.jpg?t=1629097739"
+    },
+    {
+      "title": "Nextech Blog",
+      "feed_url": "https://www.nextech.com/blog/rss.xml",
+      "website_url": "https://www.nextech.com/blog",
+      "description": "The latest news and information regarding electronic medical records, practice management software, and ICD-10. Nextech is the complete healthcare technology solution for clinical specialties of Ophthalmology, Plastic Surgery, Dermatology, and Orthopedics.",
+      "followers": {
+        "facebook": 425,
+        "twitter": 741
+      },
+      "image_url": "https://i1.feedspot.com/4955656.jpg?t=1627732033"
+    },
+    {
+      "title": "HIStalk",
+      "feed_url": "https://histalk2.com/feed/",
+      "website_url": "https://histalk2.com/",
+      "description": "Cynical healthcare IT blowhard in the HIT trenches by day, at a keyboard by night. Find all news and opinions on Healthcare IT. Learn more about the health care industry, medical professionals, medical news and updates.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4854783.jpg?t=1611820280"
+    },
+    {
+      "title": "Medsphere Systems Corporation | Health IT Blog",
+      "feed_url": "https://www.medsphere.com/blog/feed/",
+      "website_url": "https://www.medsphere.com/blog/",
+      "description": "Stay up to date with the latest industry news articles to keep you informed, new product & feature announcements from the Medsphere product team, and educational content to help make your organization more efficient.",
+      "followers": {
+        "twitter": 95
+      },
+      "image_url": "https://i1.feedspot.com/4855294.jpg?t=1604899883"
+    },
+    {
+      "title": "Healthcare IT Leaders Blog",
+      "feed_url": "https://www.healthcareitleaders.com/feed/",
+      "website_url": "https://www.healthcareitleaders.com/blog/",
+      "description": "Find the latest health IT news, career tips and consultant resources.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4857134.jpg?t=1611820970"
+    },
+    {
+      "title": "sueschade",
+      "feed_url": "https://sueschade.com/feed/",
+      "website_url": "https://sueschade.com/",
+      "description": "Find updates on healthcare technology and also articles on topics related to Health IT. Sue Schade has been in Health Care Information Technology Management for over 30 years; it's been her life's work and my passion. She tries to remember every day that the purpose of all the technological and organizational changes she have seen is to improve the quality, safety and accessibility of health care for everyone.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4855425.jpg?t=1611821032"
+    },
+    {
+      "title": "KANINI",
+      "feed_url": "https://kanini.com/feed/",
+      "website_url": "https://kanini.com/blog/",
+      "description": "Kanini is a digital transformation enabler with expertise in ServiceNow, Cloud Enablement, Data Analytics & AI, and Product Engineering. KANINI blog discusses how artificial intelligence-powered recommendation engines (Health Recommender Systems) might assist patients and providers. Learn about the challenges and requirements for integrating AI in healthcare.",
+      "followers": {
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/5405527.jpg?t=1654079443"
+    },
+    {
+      "title": "The HCITExperts Blog",
+      "feed_url": "https://hcitexpert.com/feed/",
+      "website_url": "https://hcitexpert.com/",
+      "description": "At Healthcare IT Experts Blog, we are Healthcare IT & Digital Health Fans. We want to showcase the Innovations in Digital Health and Health Tech from India.",
+      "followers": {
+        "facebook": 143,
+        "twitter": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5141368.jpg?t=1611820976"
+    },
+    {
+      "title": "HealthPopuli",
+      "feed_url": "https://www.healthpopuli.com/feed/",
+      "website_url": "https://www.healthpopuli.com/",
+      "description": "This blog, founded by health economist Jane Sarason-Kahn, is home to tons of in-depth analysis of healthcare policy and its effect on costs and outcomes.",
+      "followers": {
+        "twitter": 29000
+      },
+      "image_url": "https://i1.feedspot.com/4854920.jpg?t=1611821007"
+    },
+    {
+      "title": "Electronic Health Reporter",
+      "feed_url": "https://electronichealthreporter.com/feed/",
+      "website_url": "https://electronichealthreporter.com/",
+      "description": "Electronic Health Reporter covers news articles, editorials, and other stories about healthcare technology and the people that make it all happen.EHR produces and publishes articles about healthcare IT, as well as opinion and guest editorial from the industry's thought leaders.",
+      "followers": {
+        "facebook": 576,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4387295.jpg?t=1600751129"
+    },
+    {
+      "title": "Myezcare",
+      "feed_url": "https://www.myezcare.com/feed/",
+      "website_url": "https://www.myezcare.com/healthcare-homecare-blog/",
+      "description": "Provider of healthcare software to healthcare and homecare agencies. Features: Cloud-based, Patient and Employee Management, Scheduling, Reports, Billing. Looking for the latest information on the healthcare and home care market? Learn how to improve your healthcare and home care operations.",
+      "followers": {
+        "facebook": 430,
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/5243362.jpg?t=1612854191"
+    },
+    {
+      "title": "Healthcare Exchange Standards",
+      "feed_url": "https://feeds.feedburner.com/HealthcareSecurity/Privacy",
+      "website_url": "https://healthcaresecprivacy.blogspot.com/",
+      "description": "Discussions of Interoperability Exchange, Privacy, and Security in Healthcare by John Moehrke. Healthcare Exchange Standards discusses Interoperability, Privacy, and Security in Healthcare: CyberPrivacy, HIE, XDS, mHealth, Provenance, Patient, Directory, FHIR, Consent, Blockchain.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2340860.jpg?t=1611821011"
+    },
+    {
+      "title": "MEDITECH Blog",
+      "feed_url": "https://blog.meditech.com/rss.xml",
+      "website_url": "https://blog.meditech.com/",
+      "description": "MEDITECH's Blog provides healthcare IT resources to inform and empower healthcare professionals all over the world. MEDITECH develops EHRs to simplify and enhance clinicians' interactions with patients.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 8300,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5312442.jpg?t=1629100262"
+    },
+    {
+      "title": "Ankota: Ushering in the Next Generation of Homecare Blog",
+      "feed_url": "https://www.ankota.com/blog/rss.xml",
+      "website_url": "https://www.ankota.com/blog",
+      "description": "Ankota is the industry's first Home Healthcare Delivery Management solution. Ankota creates technology to improve the delivery of healthcare to patients outside of the hospital setting.",
+      "followers": {
+        "facebook": 115,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4857025.jpg?t=1611820995"
+    },
+    {
+      "title": "Action Products Blog",
+      "feed_url": "https://www.actionproducts.com/blog/rss/index/store_id/1",
+      "website_url": "https://www.actionproducts.com/blog",
+      "description": "Pressure Injury Prevention education to assist medical professionals in the quest for zero tolerance of pressure injuries. Action Products is the manufacturer of pressure relieving support surfaces to prevent pressure ulcers.",
+      "followers": {
+        "facebook": 859,
+        "twitter": 377
+      },
+      "image_url": "https://i1.feedspot.com/5122705.jpg?t=1611821017"
+    },
+    {
+      "title": "Healthcare Standards",
+      "feed_url": "https://feeds.feedburner.com/MotorcycleGuy",
+      "website_url": "https://motorcycleguy.blogspot.com/",
+      "description": "A blog about healthcare standards; including HL7 CDA and FHIR and IHE XDS standards, with occasionally lapses into Meaningful Use and politics.",
+      "followers": {
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/2340861.jpg?t=1611821022"
+    },
+    {
+      "title": "Health Tech Newspaper",
+      "feed_url": "https://htn.co.uk/feed/",
+      "website_url": "https://htn.co.uk/",
+      "description": "HTN is an innovative platform for the health tech community. Through our website, newspaper, live events, Health Tech Awards and Features, HTN offers a unique depth, breadth and perspective on health technology.",
+      "followers": {
+        "facebook": 155,
+        "twitter": 7000,
+        "instagram": 485
+      },
+      "image_url": "https://i1.feedspot.com/4857077.jpg?t=1671513220"
+    },
+    {
+      "title": "Australian Health Information Technology",
+      "feed_url": "https://feeds.feedburner.com/AustralianHealthInformationTechnology",
+      "website_url": "https://aushealthit.blogspot.com/",
+      "description": "The main aim of his blog is to inform readers of news and happenings in the e-Health domain, both here in Australia and worldwide. This blog is totally independent, unpaid and has only three major objectives. The first is to inform readers of news and happenings in the e-Health domain, both here in Australia and world-wide. The second is to provide commentary on e-Health in Australia and to foster improvement where I can.The third is to encourage discussion of the matters raised in the blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1007645.jpg?t=1611821187"
+    },
+    {
+      "title": "Healthcare IT Today",
+      "feed_url": "https://www.healthcareittoday.com/feed/",
+      "website_url": "https://www.healthcareittoday.com/",
+      "description": "Healthcare IT Today (HITT) is an online-only publication that analyzes daily events to create actionable insights for our readers. We provide Healthcare and Health IT commentary in our social feeds, produce quick-hit videos on YouTube and deliver answers to unasked questions about current healthcare trends.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4856923.jpg?t=1627019235"
+    },
+    {
+      "title": "ScienceSoft | Healthcare IT Blogs",
+      "feed_url": "https://www.scnsoft.com/blog/category/healthcare-it/atom",
+      "website_url": "https://www.scnsoft.com/blog/category/healthcare-it",
+      "description": "ScienceSoft's IT healthcare blog covers healthcare data analytics, information security, patient and hospital mobile app development and other acute IT healthcare topics.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4958952.jpg?t=1611819841"
+    },
+    {
+      "title": "healthcare.digital",
+      "feed_url": "https://www.healthcare.digital/blog-feed.xml",
+      "website_url": "https://www.healthcare.digital/",
+      "description": "Find information on healthcare technology and articles of its related field.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4857248.jpg?t=1611821001"
+    },
+    {
+      "title": "Advanced Health Information Exchange Resources",
+      "feed_url": "http://ahier.blogspot.com/feeds/posts/default",
+      "website_url": "http://ahier.blogspot.com/",
+      "description": "These are Brian Ahier's views and information on Healthcare, Technology and Government.",
+      "followers": {
+        "twitter": 53800
+      },
+      "image_url": "https://i1.feedspot.com/2340858.jpg?t=1611821285"
+    },
+    {
+      "title": "Docnotes",
+      "feed_url": "https://docnotes.net/feed",
+      "website_url": "https://docnotes.net/",
+      "description": "Docnotes is a full suite of products to help you stay in style, whether on your desktop, laptop, smartphone, or tablet. Lear more about the health care industry, technological updates, medical sections nd more through their site.",
+      "followers": {
+        "twitter": 343800
+      },
+      "image_url": "https://i1.feedspot.com/5679296.jpg?t=1695792243"
+    },
+    {
+      "title": "Nalashaa Healthcare Blogs",
+      "feed_url": "https://blog.nalashaahealth.com/feed/",
+      "website_url": "https://blog.nalashaahealth.com/",
+      "description": "A software service company catering to all your IT requirements, specialized in US healthcare and CRM services, developing quality technology at less cost. We have been steadily moving into various areas of US Healthcare, starting off from Meaningful Use Stage 2. With time we have traversed the journey from the clinical space to financial aspects of healthcare.",
+      "followers": {
+        "facebook": 516,
+        "twitter": 321
+      },
+      "image_url": "https://i1.feedspot.com/5321436.jpg?t=1631517783"
+    },
+    {
+      "title": "Productive Edge Blog",
+      "feed_url": "https://www.productiveedge.com/blog/rss.xml",
+      "website_url": "https://www.productiveedge.com/blog",
+      "description": "Productive Edge is a Digital Consultancy leveraging global talent and a metrics-driven approach to turn business opportunities into software solutions. Follow their Productive Edge Blog and Explore their latest insights including free articles, guides, blogs, research, videos, and more.",
+      "followers": {
+        "facebook": 451,
+        "twitter": 936,
+        "instagram": 230
+      },
+      "image_url": "https://i1.feedspot.com/5679295.jpg?t=1696329839"
+    },
+    {
+      "title": "Optimum Healthcare IT Blog",
+      "feed_url": "https://optimumhit.com/feed/",
+      "website_url": "https://optimumhit.com/insights/blog/",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 672,
+        "instagram": 393
+      },
+      "image_url": "https://i1.feedspot.com/5679292.jpg?t=1695792077"
+    },
+    {
+      "title": "ClinTech Systems Blog",
+      "feed_url": "https://clintechsystems.com/blog/f.atom",
+      "website_url": "https://clintechsystems.com/blog",
+      "description": "Our IT blog provides the latest information related to Information Technology. Blogs are written by our staff for an insider perspective about the industry.",
+      "followers": {
+        "facebook": 121,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5679291.jpg?t=1695792070"
+    },
+    {
+      "title": "The Health Care Blog's Podcasts",
+      "feed_url": "https://thehealthcareblog.com/blog/category/health-tech/feed/",
+      "website_url": "https://thehealthcareblog.com/blog/category/health-tech/",
+      "description": "Everything you always wanted to know about the Health Care system. But were afraid to ask.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 36100,
+        "instagram": 20
+      },
+      "image_url": "https://i1.feedspot.com/5679293.jpg?t=1745503806"
+    },
+    {
+      "title": "HealthTech Magazines",
+      "feed_url": "https://www.healthtechmagazines.com/feed/",
+      "website_url": "https://www.healthtechmagazines.com/",
+      "description": "HealthTech Magazines serves as the leading source of information for forward-thinking professionals involved in the planning, development, and implementation of strategies that define tomorrow's. It serves as the leading source of information for forward-thinking professionals involved in the healthcare.",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4983058.jpg?t=1611932763"
+    },
+    {
+      "title": "Health Tech Digital",
+      "feed_url": "https://www.healthtechdigital.com/feed/",
+      "website_url": "https://www.healthtechdigital.com/",
+      "description": "Digital health technology news featuring UK healthcare technology, digital health, security, case studies, solutions, and NHS technology news and information. Health Tech Digital is a healthcare technology marketing agency that offers clients a complete marketing and media solution.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/5323400.jpg?t=1632131853"
+    },
+    {
+      "title": "Canadian Healthcare Technology",
+      "feed_url": "https://www.canhealth.com/feed/",
+      "website_url": "https://www.canhealth.com/",
+      "description": "Canadian Healthcare Technology is a News magazine covering the new and noteworthy in healthcare technology. It is written and edited by a team of experienced business journalists, and computer and healthcare consultants.",
+      "followers": {
+        "facebook": 704,
+        "twitter": 505
+      },
+      "image_url": "https://i1.feedspot.com/4234518.jpg?t=1606367292"
+    },
+    {
+      "title": "iMedicalApps - Reviews of Medical apps & Healthcare Technology",
+      "feed_url": "https://www.imedicalapps.com/feed/",
+      "website_url": "https://www.imedicalapps.com/",
+      "description": "Physician reviews of medical apps, health apps, fitness apps, and wearables. iMedicalApps is an independent online medical publication for medical professionals, patients, and analysts interested in mobile medical technology and health care apps.",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 23800
+      },
+      "image_url": "https://i1.feedspot.com/4855464.jpg?t=1611819786"
+    },
+    {
+      "title": "Cisco Blog Healthcare",
+      "feed_url": "https://feeds.feedburner.com/CiscoBlogHealthcare",
+      "website_url": "https://blogs.cisco.com/healthcare",
+      "description": "Cisco Health empowers global innovation for healthcare organizations.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 740700,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4854843.jpg?t=1611820351"
+    },
+    {
+      "title": "Health IT Buzz Blog",
+      "feed_url": "https://feeds.feedburner.com/healthitbuzzblog",
+      "website_url": "https://www.healthit.gov/buzz-blog/",
+      "description": "Information on health IT from those at HHS's Office of the National Coordinator. Get in the know about the nation's transition to EHRs, and discover solutions to common issues. The Office of the National Coordinator for Health IT (ONC) improves the health & well-being of individuals through the use of technology & health information.",
+      "followers": {
+        "twitter": 96800
+      },
+      "image_url": "https://i1.feedspot.com/743971.jpg?t=1611820232"
+    },
+    {
+      "title": "Healthcare IT Skills | Health Information Technology Job Advice & Articles",
+      "feed_url": "https://healthcareitskills.com/feed/",
+      "website_url": "https://healthcareitskills.com/",
+      "description": "Healthcare IT Skills provides Health Information Technology Articles, Healthcare IT Job Tips, Healthcare Technology Project Management, Healthcare IT Certification Tips and Career Advice. Learn about Healthcare IT from experts who have succeeded.",
+      "followers": {
+        "facebook": 212,
+        "twitter": 178
+      },
+      "image_url": "https://i1.feedspot.com/4971290.jpg?t=1611820962"
+    },
+    {
+      "title": "MediFusion",
+      "feed_url": "https://medifusion.com/feed/",
+      "website_url": "https://medifusion.com/blog/",
+      "description": "Covers latest news related to medical practice and hospital industry to keep practitioners informed with new EHR &PMS. MediFusio offers AI-Driven health care software solutions that suits your business needs to let you deliver more flexible and personalized care.",
+      "followers": {
+        "facebook": 708,
+        "twitter": 14,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5342269.jpg?t=1636637863"
+    },
+    {
+      "title": "Boston Software Systems Blog",
+      "feed_url": "https://blog.bostonsoftwaresystems.com/feed/",
+      "website_url": "https://blog.bostonsoftwaresystems.com/blog-feed/",
+      "description": "Covers articles about healthcare automation, solutions, digital workforce for EHR/EMR data migrations, revenue cycle management, organizational efficiency, and more. Boston Software Systems is the only company with a pure focus in healthcare automation, that is dedicated to the success of hospitals, health systems and provider organizations worldwide.",
+      "followers": {
+        "facebook": 229,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5302493.jpg?t=1626349875"
+    },
+    {
+      "title": "Hay on FHIR",
+      "feed_url": "https://fhirblog.com/feed/",
+      "website_url": "https://fhirblog.com/",
+      "description": "Hay on FHIR blogs has useful information fo ti's users as it provides valuable Thoughts and comments on the emerging HL7 FHIR standard, from an FHIR Evangelist.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4855439.jpg?t=1611822834"
+    },
+    {
+      "title": "Pivot Point Consulting - Healthcare IT Consulting",
+      "feed_url": "http://pivotpointconsulting.com/feed/",
+      "website_url": "https://pivotpointconsulting.com/insights/",
+      "description": "Pivot Point Consulting, is a national Healthcare IT consulting firm, provides implementation, staff augmentation, and advisory services. Pivot Point assists healthcare organizations in maximizing the value of their technology and resources. Follow thie rsite and Stay ahead of the curve. Keep up-to-date with Pivot Point Consulting's healthcare IT insights, and learn which trends to watch.",
+      "followers": {
+        "facebook": 428,
+        "twitter": 852
+      },
+      "image_url": "https://i1.feedspot.com/4655915.jpg?t=1611822768"
+    },
+    {
+      "title": "HealthBlawg",
+      "feed_url": "https://healthblawg.com/feed",
+      "website_url": "https://healthblawg.com/",
+      "description": "HealthBlawg will give you current developments articles in healthcare law and policy together with the observations and analysis of David Harlow, principal of The Harlow Group LLC, a healthcare law and consulting firm based near Boston, Massachusetts.",
+      "followers": {
+        "facebook": 969,
+        "twitter": 17400
+      },
+      "image_url": "https://i1.feedspot.com/4749692.jpg?t=1608717777"
+    },
+    {
+      "title": "The Healthcare Data, Technology & Services Blog",
+      "feed_url": "https://www.blogger.com/feeds/5553795965038906281/posts/default",
+      "website_url": "https://www.shimcode.com/",
+      "description": "A blog about health care healthcare information technology IT for payers payors and providers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4667755.jpg?t=1611821557"
+    },
+    {
+      "title": "New Age Healthcare",
+      "feed_url": "https://newagehealthcare.wordpress.com/feed/",
+      "website_url": "https://newagehealthcare.wordpress.com/",
+      "description": "This page highlights the 'new age' trends and emerging initiatives in the world of healthcare technology and how it is helping consumers and providers of healthcare.",
+      "followers": {
+        "facebook": 99,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/4855568.jpg?t=1610549205"
+    },
+    {
+      "title": "Maia Consulting",
+      "feed_url": "https://www.maiaplanning.com/category/blog/feed/",
+      "website_url": "https://www.maiaplanning.com/category/blog/",
+      "description": "Maia Consulting are a full-service medical equipment planning firm, based in Denver Colorado, with a focus on healthcare design, construction, and renovation projects. Follow to get the latest updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051245.jpg?t=1645533413"
+    },
+    {
+      "title": "Candid CIO",
+      "feed_url": "https://candidcio.com/feed/",
+      "website_url": "https://candidcio.com/",
+      "description": "This is the Blog of Will Weider. This is the place where I share what I have learned through my mistakes and other crazy things in the life of a healthcare CIO.",
+      "followers": {
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4855363.jpg?t=1611821042"
+    },
+    {
+      "title": "On Health Care Technology",
+      "feed_url": "http://feeds.feedburner.com/blogspot/FUXciP",
+      "website_url": "https://onhealthtech.blogspot.com/",
+      "description": "Health Care IT entrepreneur and Blogger without a cause.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4856901.jpg?t=1611821277"
+    },
+    {
+      "title": "CS Eye",
+      "feed_url": "https://www.cseye.biz/blog-feed.xml",
+      "website_url": "https://www.cseye.biz/blog-ophthalmology-billing",
+      "description": "Covers information about medical credentialing, insurance credentialing, and everything else related to ophthalmology billing services. CS Eye is committed to enhancing and protecting your profits by partnering and in-sourcing your credentialing and medical billing.",
+      "followers": {
+        "facebook": 327,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5320111.jpg?t=1631096353"
+    },
+    {
+      "title": "DocEngage",
+      "feed_url": "https://blogs.docengage.in/feed",
+      "website_url": "https://blogs.docengage.in/",
+      "description": "DocEngage is a world-class suite of healthcare softwares, providing solutions for Practice Management, Powerful EHR, #1 Healthcare CRM, Home Healthcare\u00a0, Best Patient Engagement & Experience solutions for large corporate hospitals to clinic chains.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 229
+      },
+      "image_url": "https://i1.feedspot.com/5056904.jpg?t=1611820267"
+    },
+    {
+      "title": "EHR Blog",
+      "feed_url": "https://www.americanehr.com/blog/feed/",
+      "website_url": "https://www.americanehr.com/blog/",
+      "description": "AmericanEHR Partners provides tools to identify, implement, and effectively use Electronic Health Records (EHRs) and other healthcare technologies.",
+      "followers": {
+        "facebook": 911,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4407638.jpg?t=1611821222"
+    },
+    {
+      "title": "Bikham | Outsource Medical Billing and Coding Company",
+      "feed_url": "https://www.bikham.com/blog/feed/",
+      "website_url": "https://www.bikham.com/blog/",
+      "description": "Want finance and accounting/bookkeeping services, IT helpdesk support services and medical billing coding news or weekly Updates?Bikham provides Medical Billing, Financial Accounting and Bookkeeping services. A one-stop Medical billing and Bookkeeping solution for healthcare business.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 130,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5034353.jpg?t=1611821261"
+    },
+    {
+      "title": "OnShift - Long-Term Care & Senior Living Dedicated to Operational Success Blog",
+      "feed_url": "https://www.onshift.com/blog/rss.xml",
+      "website_url": "https://www.onshift.com/resources/blog",
+      "description": "The long-term care and senior living OnShift blog features best practices so providers can deliver high-quality care and service. OnShift provides next-generation human capital management software purpose-built for post-acute care & senior living. Explore industry insights and workforce management best practices for the long-term care & senior living industry through their site.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 760,
+        "instagram": 168
+      },
+      "image_url": "https://i1.feedspot.com/4855222.jpg?t=1611820249"
+    },
+    {
+      "title": "Med-Tech Insights",
+      "feed_url": "https://med-techinsights.com/feed/",
+      "website_url": "https://med-techinsights.com/",
+      "description": "The homepage of Med-Tech Innovation. The central hub of all news related to medical devices, medical manufacturing and news for the MedTech industry. Latest news, insights, opinion and analysis on the Medtech industry from Medtech Innovation News - covering medical devices, medical manufacturing, covid-19, regulations, diagnostics, digital in healthcare, AI, VR and more",
+      "followers": {
+        "facebook": 355,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4857212.jpg?t=1611820272"
+    },
+    {
+      "title": "Healthcare Economist",
+      "feed_url": "https://www.healthcare-economist.com/feed/",
+      "website_url": "https://redoxengine.com/blog/",
+      "description": "Jason's research interests include all issues related to healthcare policy and economics, value-based purchasing, the health insurance market, and Medicare policy research.",
+      "followers": {
+        "twitter": 381
+      },
+      "image_url": "https://i1.feedspot.com/312803.jpg?t=1610611119"
+    },
+    {
+      "title": "Redox Blog",
+      "feed_url": "https://redoxengine.com/feed/",
+      "website_url": "https://redoxengine.com/blog/",
+      "description": "Redox is a full-service integration platform for healthcare data exchange. Learn more about the healthcare organizations and technology providers using Redox.",
+      "followers": {
+        "facebook": 599,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4857122.jpg?t=1611820208"
+    },
+    {
+      "title": "Intelerad",
+      "feed_url": "https://www.intelerad.com/en/feed/",
+      "website_url": "https://www.intelerad.com/en/blog/",
+      "description": "Think RADical is Ambra Health's blog dedicated to educating and discussing the latest news and thought leadership in medical imaging.",
+      "followers": {
+        "facebook": 478,
+        "twitter": 2500,
+        "instagram": 147
+      },
+      "image_url": "https://i1.feedspot.com/4855173.jpg?t=1611820259"
+    },
+    {
+      "title": "Alora Home Health Software Blog",
+      "feed_url": "https://www.alorahealth.com/feed/",
+      "website_url": "https://www.alorahealth.com/alora-home-health-software-blog/",
+      "description": "Alora home health software helps agencies perform better by simplifying their delivery and management of home health care. Alora's cloud-based, mobile-ready home care software covers all aspects of home health care agency operation, from frontline care to back-office administration.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/5128051.jpg?t=1611820966"
+    },
+    {
+      "title": "DXC Technology",
+      "feed_url": "https://dxc.com/us/en/insights/perspectives/",
+      "website_url": "https://dxc.com/us/en/insights/perspectives/",
+      "description": "DXC Technology is the world's leading independent, end-to-end IT services company, helping clients harness the power of innovation to thrive on change.",
+      "followers": {
+        "facebook": 138500,
+        "twitter": 39400
+      },
+      "image_url": "https://i1.feedspot.com/4856909.jpg?t=1611819837"
+    },
+    {
+      "title": "AHRQ Views",
+      "feed_url": "https://www.ahrq.gov/rss.xml",
+      "website_url": "https://www.ahrq.gov/news/blog/ahrqviews/index.html",
+      "description": "The Agency for Healthcare Research and Quality's (AHRQ) mission is to produce evidence to make health care safer, higher quality, more accessible, equitable, and affordable, and to work with the U.S. Department of Health and Human Services and other partners to make sure that the evidence is understood and used.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 75200
+      },
+      "image_url": "https://i1.feedspot.com/4855355.jpg?t=1611821292"
+    },
+    {
+      "title": "RAAPID",
+      "feed_url": "https://www.raapidinc.com/feed/",
+      "website_url": "https://www.raapidinc.com/blogs/",
+      "description": "Stay in touch with the latest technology solution updates and news with RAAPID Blogs especially designed for the healthcare risk adjustment space.",
+      "followers": {
+        "facebook": 89,
+        "instagram": 240
+      },
+      "image_url": "https://i1.feedspot.com/5679297.jpg?t=1695792112"
+    },
+    {
+      "title": "Healthcare IT News",
+      "feed_url": "https://www.healthcareitnews.com/",
+      "website_url": "https://www.healthcareitnews.com/",
+      "description": "Healthcare IT news blog delivers cutting-edge info and crucial business insights into Health care. Check out routine updates and more. Healthcare IT News is the industry's authoritative source covering the people, policy & technology driving next-generation healthcare in the U.S.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 120700
+      },
+      "image_url": "https://i1.feedspot.com/743988.jpg?t=1611819777"
+    },
+    {
+      "title": "Healthcare Innovation",
+      "feed_url": "https://www.hcinnovationgroup.com/__rss/website-scheduled-content.xml?input={&#34;sectionAlias&#34;:&#34;home&#34;}",
+      "website_url": "https://www.hcinnovationgroup.com/",
+      "description": "Healthcare Innovation is a CIO-level healthIT media brand built on the success of its predecessors - Healthcare Informatics & Health Management Technology. Together, Healthcare Innovation's growing community, comprised of its readers and Summit attendees, includes industry leaders and senior executives from across the country such as CIOs, CISOs, CMIOs, CEOs, CFOs, physicians, IT directors, and many more thought leaders, game changers, and influencers who are driving change by shaping innovations that point the way to the future of healthcare. Read the articles now.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/4854951.jpg?t=1611820692"
+    },
+    {
+      "title": "Optum Business",
+      "feed_url": "https://business.optum.com/en/insights.html/",
+      "website_url": "https://business.optum.com/en/insights.html/",
+      "description": "Change Healthcare is a healthcare technology company that offers software, analytics, network solutions, and technology-enabled services.",
+      "followers": {
+        "twitter": 37200
+      },
+      "image_url": "https://i1.feedspot.com/4843616.jpg?t=1611819797"
+    },
+    {
+      "title": "Infor Healthcare",
+      "feed_url": "https://blogs.infor.com/healthcare/feed",
+      "website_url": "https://www.infor.com/blog?subject=healthcare",
+      "description": "Infor's healthcare experts are on hand to share relevant information that matters to Infor healthcare customers.",
+      "followers": {
+        "facebook": 27700,
+        "twitter": 1200,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4857014.jpg?t=1611819833"
+    },
+    {
+      "title": "Journal of AHIMA",
+      "feed_url": "https://journal.ahima.org/feed/",
+      "website_url": "https://journal.ahima.org/",
+      "description": "In this web series, HIM professionals working in emerging roles give advice on tackling difficult HIM problems.",
+      "followers": {
+        "facebook": 69300,
+        "twitter": 17700,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4855414.jpg?t=1611820236"
+    },
+    {
+      "title": "Cabot Solutions",
+      "feed_url": "https://www.cabotsolutions.com/blog-rss.xml",
+      "website_url": "https://www.cabotsolutions.com/blog",
+      "description": "Cabot is an offshore software development company crafting smart solutions in Mobile, Web, and Enterprise sectors in the Unites States,Canada, and other regions of the world. Here you will find our blog & get latest updates on software development trends, tools and many more.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5264914.jpg?t=1617629191"
+    },
+    {
+      "title": "Access EFM",
+      "feed_url": "https://accessefm.com/blog/rss.xml",
+      "website_url": "https://hcldr.wordpress.com/",
+      "description": "Access is the world's leading electronic forms management, automation & workflow provider. Our healthcare technology experts in the field of eForms & patient electronic Signatures explore new trends & offer insights on medical technology, operations & patient satisfaction.",
+      "followers": {
+        "facebook": 286,
+        "twitter": 302
+      },
+      "image_url": "https://i1.feedspot.com/5312662.jpg?t=1629123496"
+    },
+    {
+      "title": "HCLDR",
+      "feed_url": "https://hcldr.wordpress.com/",
+      "website_url": "https://hcldr.wordpress.com/",
+      "description": "HCLDR is an online community that shares a passion to improve healthcare. Our community includes healthcare executives, non-healthcare, patients and many more. The HCLDR community gathers for a weekly tweet chat to discuss a healthcare-related topic. Read the blog to know more.",
+      "followers": {
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4550288.jpg?t=1607491421"
+    },
+    {
+      "title": "Kaiser Permanente Center for Total Health",
+      "feed_url": "https://centerfortotalhealth.org/blog/feed/",
+      "website_url": "https://centerfortotalhealth.org/blog/",
+      "description": "We are dedicated to sharing, developing, and accelerating ideas that improve total health around the world.",
+      "followers": {
+        "facebook": 643,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4855376.jpg?t=1611821048"
+    },
+    {
+      "title": "CureMD Blog",
+      "feed_url": "https://blog.curemd.com/feed/",
+      "website_url": "https://blog.curemd.com/",
+      "description": "Articles cover expert analysis, opinions, and updates related to the latest innovations and ideas including Telehealth, and EHR technologies along with Digital Healthcare risks and challenges. CureMD is a leading provider of innovative health information systems and services that transform the administrative and clinical operations of healthcare organizations.",
+      "followers": {
+        "facebook": 252,
+        "twitter": 5200,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4854849.jpg?t=1625727675"
+    },
+    {
+      "title": "Health Catalyst",
+      "feed_url": "https://www.healthcatalyst.com/feed",
+      "website_url": "https://www.healthcatalyst.com/learn/insights",
+      "description": "Health Catalyst is a leading provider of data and analytics technology and services to healthcare organizations committed to be the catalyst for massive, measurable, data-informed healthcare improvement.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4855544.jpg?t=1612450265"
+    },
+    {
+      "title": "AAMI Blog",
+      "feed_url": "https://aamiblog.org/feed/",
+      "website_url": "https://array.aami.org/blog",
+      "description": "Read conversational, thoughtful, engaging, and timely posts from AAMI discussing the advances in the Healthcare IT industry. The Association for the Advancement of Medical Instrumentation (AAMI) is a nonprofit dedicated to increasing the safe and effective use of healthcare technology.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4855484.jpg?t=1663657102"
+    },
+    {
+      "title": "trugeny",
+      "feed_url": "https://trugeny.in/blog/feed",
+      "website_url": "https://www.medtechimpact.com/news/",
+      "description": "truGeny was founded with the passion to improve people's access to a longer and healthier life. At truGeny we believe it is time for people to take control of their health destiny.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 884,
+        "instagram": 72
+      },
+      "image_url": "https://i1.feedspot.com/5139656.jpg?t=1611821214"
+    },
+    {
+      "title": "Medtech Impact On Wellness | Medical Technology Blog",
+      "feed_url": "https://www.medtechimpact.com/feed/",
+      "website_url": "https://www.medtechimpact.com/news/",
+      "description": "Medical technology news and insights, covering the latest in how medtech is redefining and impacting the way you practice medicine.",
+      "followers": {
+        "facebook": 258,
+        "twitter": 380
+      },
+      "image_url": "https://i1.feedspot.com/4857037.jpg?t=1611822742"
+    },
+    {
+      "title": "XCare",
+      "feed_url": "https://www.xcare.app/feed/",
+      "website_url": "https://www.coronishealth.com/blog/",
+      "description": "Covers articles about clinic management, patient management, manage patient communication, clinic safety protocols, appointments and billing. XCarePro is a risk-free patient acquisition tool for both dental practices and end-users looking for a great dentist.",
+      "followers": {
+        "facebook": 65,
+        "twitter": 4,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5319140.jpg?t=1630753627"
+    },
+    {
+      "title": "Coronis Health Blog",
+      "feed_url": "https://www.coronishealth.com/blog/",
+      "website_url": "https://www.coronishealth.com/blog/",
+      "description": "Help medical practices to make more money by improving medical billing processes, marketing their practice to add more patients and by adding ancillary services. By improving medical billing processes, marketing medical practices to add more patients,",
+      "followers": {
+        "facebook": 185,
+        "twitter": 288,
+        "instagram": 34
+      },
+      "image_url": "https://i1.feedspot.com/4955125.jpg?t=1611820213"
+    },
+    {
+      "title": "HITRUST Blog",
+      "feed_url": "https://hitrustalliance.net/feed/",
+      "website_url": "https://hitrustalliance.net/blog",
+      "description": "HITRUST provides proven, trusted approaches & education for information protection and cybersecurity risk management programs in the healthcare industry.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4855479.jpg?t=1611820286"
+    },
+    {
+      "title": "Talking Healthcare Technology Blog",
+      "feed_url": "https://healtech.blog/feed/",
+      "website_url": "https://healtech.blog/",
+      "description": "Opinion and Insight on Healthcare Technology",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5679294.jpg?t=1695792088"
+    }
+  ]
+}

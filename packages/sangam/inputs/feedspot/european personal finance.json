@@ -1,0 +1,56 @@
+{
+  "category": "European Personal Finance",
+  "source_url": "https://rss.feedspot.com/european_personal_finance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Monevator",
+      "feed_url": "http://feeds.feedburner.com/Monevatorcom",
+      "website_url": "https://monevator.com/",
+      "description": "Monevator is a personal blog about money: making, saving, growing, and sometimes even spending it. From passive investing with index trackers funds to choosing the cheapest investment platform or broker, Monevator is essential reading for all British investors.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5359996.jpg?t=1669203186"
+    },
+    {
+      "title": "Salto Mentale",
+      "feed_url": "https://saltomentale.it/feed/",
+      "website_url": "https://saltomentale.it/",
+      "description": "A mind leap is an idea that changes the way we see the world. We talk about psychology, finance, relationships, social context, work and everything that impacts our lives.",
+      "followers": {
+        "facebook": 23,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5470974.jpg?t=1669203312"
+    },
+    {
+      "title": "Total Balance Blog",
+      "feed_url": "https://totalbalance.blog/feed/",
+      "website_url": "https://totalbalance.blog/",
+      "description": "Hi, I'm Nick! I'm working towards becoming financially independent -while still living as 'normal' a life as possible. If you're eager to learn more about me and my quest to become financially independent, you can start by reading my blogs. The content that you read on this blog is my own personal preference and is merely intended as inspiration for you to pursue your own goals and dreams.",
+      "followers": {
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/5267741.jpg?t=1669203603"
+    },
+    {
+      "title": "Investidor Frugal",
+      "feed_url": "https://www.investidorfrugal.com/feed/",
+      "website_url": "https://www.investidorfrugal.com/",
+      "description": "Our mission at Investidor frugal is to share knwoledege that improves the financial well being of the readers. the blogs will help you from accumulating money an dthe need to understabd how to make it work, the interest in creating articles that helps readers lead a more prosperous and comfortable life arises.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470975.jpg?t=1669203664"
+    },
+    {
+      "title": "Finance Girl",
+      "feed_url": "https://www.financegirl.co.uk/feed/",
+      "website_url": "https://www.financegirl.co.uk/",
+      "description": "Finance Girl is Julie Cheung, a Manchester based (infrequent) blogger covering topics mainly on personal finance but personal posts make occasional appearances too \ud83d\ude42",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4474857.jpg?t=1669203232"
+    }
+  ]
+}

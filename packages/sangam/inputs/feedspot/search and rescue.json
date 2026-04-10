@@ -1,0 +1,95 @@
+{
+  "category": "Search and Rescue",
+  "source_url": "https://rss.feedspot.com/search_and_rescue_rss_feeds",
+  "feeds": [
+    {
+      "title": "Colorado Search & Rescue Association",
+      "feed_url": "https://coloradosar.org/feed/",
+      "website_url": "https://coloradosar.org/",
+      "description": "The Colorado Search and Rescue Association empowers Colorado search and rescue teams and partners through advocacy, coordination, collaboration, and education.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 721
+      },
+      "image_url": "https://i1.feedspot.com/5406387.jpg?t=1654250116"
+    },
+    {
+      "title": "Teton County Search and Rescue",
+      "feed_url": "http://www.tetoncountysar.org/latest-news?format=rss",
+      "website_url": "http://www.tetoncountysar.org/latest-news",
+      "description": "Stay up to date on the latest news from Teton County Search and Rescue Foundation. Teton County Search and Rescue (CSAR) was started in 1993 by the Teton County Sheriff's Department to provide vital emergency search and rescue services for Teton County and surrounding areas to those in need. Together, we create an organization that works to keep Teton County residents and visitors safe in the backcountry 24 hours a day, 7 days a week, 365 days a year.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 463,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/5406391.jpg?t=1654249347"
+    },
+    {
+      "title": "Deschutes County Search and Rescue",
+      "feed_url": "https://www.deschutessearchandrescue.org/feed/",
+      "website_url": "https://www.deschutessearchandrescue.org/dc-sar-news/",
+      "description": "The Deschutes County Sheriff's SAR mission is to provide professional, high-quality search and rescue assistance to citizens of Deschutes County, visitors who recreate locally, and mutual aid to other counties as requested. The unit consists of general volunteers and a number of specialty teams, including swift water rescue, mountain rescue, winter search, medical evacuation, water operations, and canine search.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 257,
+        "instagram": 477
+      },
+      "image_url": "https://i1.feedspot.com/5406389.jpg?t=1654249337"
+    },
+    {
+      "title": "Grand County Search and Rescue",
+      "feed_url": "https://www.grandcountysar.com/news?format=rss",
+      "website_url": "https://www.grandcountysar.com/news",
+      "description": "The men and women who make up the Grand County Search and Rescue (GCSAR) team are tied together by one common goal - helping people. We often help people who are lost or injured in our mountain terrain. We are available 24 hours a day, 7 days a week, 365 days a year with a fully qualified team of trained personnel to deal with any search or rescue within our scope.",
+      "followers": {
+        "facebook": 10900,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5406388.jpg?t=1654249595"
+    },
+    {
+      "title": "San Bernardino County Sheriff's SAR",
+      "feed_url": "https://sbsar.org/news-information/rss.xml",
+      "website_url": "https://sbsar.org/",
+      "description": "San Bernardino County Sheriff's SAR blog shares the news from the San Bernardino County SAR Effort.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5406395.jpg?t=1654249882"
+    },
+    {
+      "title": "Jefferson Search and Rescue Blog",
+      "feed_url": "https://www.jsar.org/feed/",
+      "website_url": "https://www.jsar.org/blog/",
+      "description": "JSAR was founded in 1976. Search and rescue missions in Jefferson County are directed by the Jefferson County Sheriff's Office, utilizing Jefferson Search and Rescue (JSAR) and other groups as resources. JSAR members also routinely assist search and rescue teams in neighboring counties as well as forest rangers on missions and cooperative training exercises.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5406392.jpg?t=1654249528"
+    },
+    {
+      "title": "Superior Search & Rescue",
+      "feed_url": "https://www.superiorsar.org/stories?format=rss",
+      "website_url": "https://www.superiorsar.org/stories",
+      "description": "Superior Search & Rescue is a 501(c)(3) nonprofit emergency response organization headquartered in Houghton, Michigan. We serve all citizens and visitors in Houghton, Keweenaw, and Ontonagon Counties and deploy at the request of law enforcement agencies. We provide specialized services such as ground search and rescue; UAV support and mapping; disaster relief services; Event Emergency Response Planning.",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 124
+      },
+      "image_url": "https://i1.feedspot.com/5406390.jpg?t=1654250080"
+    },
+    {
+      "title": "Suzanne Elshult",
+      "feed_url": "https://suzanneelshult.com/feed/",
+      "website_url": "https://suzanneelshult.com/",
+      "description": "Hi! I'm Suzanne Elshult. After almost twenty years immersed in K9 search and rescue and deployment on hundreds of missions with my three labrador retrievers, I am recognized both regionally in the Pacific Northwest and beyond as a seasoned K9 handler committed to finding the lost and the missing.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 1100,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5406394.jpg?t=1654250184"
+    }
+  ]
+}

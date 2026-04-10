@@ -1,0 +1,37 @@
+{
+  "category": "Vancouver Business",
+  "source_url": "https://rss.feedspot.com/vancouver_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Business in Vancouver",
+      "feed_url": "https://www.biv.com/rss",
+      "website_url": "https://www.biv.com/",
+      "description": "Business in Vancouver is an award-winning news source that has been covering the business community in Vancouver and beyond since 1989. We provide local business information that helps keep readers ahead of their competition.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 35300
+      },
+      "image_url": "https://i1.feedspot.com/4908005.jpg?t=1649919467"
+    },
+    {
+      "title": "Douglas Magazine",
+      "feed_url": "https://www.douglasmagazine.com/feed/",
+      "website_url": "https://www.douglasmagazine.com/",
+      "description": "Douglas is Vancouver Island's premier business magazine and media brand. It is essential reading for business leaders and innovators in Victoria and on Vancouver Island. Our in-depth, local coverage of the key people and issues affecting our region has earned a highly engaged, loyal, and always-growing readership.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 11200,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5390406.jpg?t=1649919569"
+    },
+    {
+      "title": "Incrementa (un)consulting Blog",
+      "feed_url": "https://www.incrementa.ca/feed/",
+      "website_url": "https://www.incrementa.ca/blog/",
+      "description": "We believe that every company has the right to be successful. Read on for business vision, planning, company culture, growth, and succession strategies. At Incrementa (un)consulting, We help business owners build the right foundations and guide them down the path to predictable, sustainable growth and a great business that they love.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5390382.jpg?t=1649918927"
+    }
+  ]
+}

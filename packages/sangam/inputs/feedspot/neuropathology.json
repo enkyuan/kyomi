@@ -1,0 +1,58 @@
+{
+  "category": "Neuropathology",
+  "source_url": "https://rss.feedspot.com/neuropathology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Journal of Neuropathology & Experimental Neurology",
+      "feed_url": "https://academic.oup.com/rss/site_5406/3267.xml",
+      "website_url": "https://academic.oup.com/jnen/issue",
+      "description": "The journal publishes peer-reviewed studies on neuropathology and experimental neuroscience, book reviews, letters, and Association news, covering a broad spectrum of fields in basic neuroscience with an emphasis on human neurological diseases.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 113200
+      },
+      "image_url": "https://i1.feedspot.com/4839199.jpg?t=1611205299"
+    },
+    {
+      "title": "Surgical Neurology International \u00bb Neuropathology",
+      "feed_url": "https://surgicalneurologyint.com/category/article-categories/neuropathology/feed/",
+      "website_url": "https://surgicalneurologyint.com/category/article-categories/neuropathology/",
+      "description": "Highlighting neuropathology articles and case reports. Surgical Neurology International is an Internet-only journal that rapidly publishes the latest developments in the field of neurosurgery and related clinical and basic neurosciences.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5349073.jpg?t=1638360753"
+    },
+    {
+      "title": "Neuropathology blog",
+      "feed_url": "http://neuropathologyblog.blogspot.com/feeds/posts/default",
+      "website_url": "http://neuropathologyblog.blogspot.com/",
+      "description": "Author Brian E. Moore discusses issues about the practice of neuropathology including nervous system tumors, neuroanatomy, neurodegenerative disease, muscle and nerve disorders, ophthalmologic pathology, neuro trivia, neuropathology gossip, job listings and anything else that might be of interest to a blue-collar neuropathologist.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1085780.jpg?t=1611205341"
+    },
+    {
+      "title": "Johns Hopkins Medicine Blog \u00bb Neuropathology",
+      "feed_url": "https://blogs.pathology.jhu.edu/neuropathology/feed/",
+      "website_url": "https://blogs.pathology.jhu.edu/neuropathology/",
+      "description": "The Division of Neuropathology at Johns Hopkins is committed to diagnosing and curing diseases affecting the brain. With the explosion in knowledge of basic neurobiology and the advances in the understanding of the genetic, molecular and cellular bases of diseases, there has been no time of greater promise for discovering how to treat patients suffering from conditions affecting the nervous system.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4839139.jpg?t=1611205305"
+    },
+    {
+      "title": "Neuropedia \u00bb Neuropathology",
+      "feed_url": "https://neuropedia.net/category/articles/neuroscience/neuropathology/feed/",
+      "website_url": "https://neuropedia.net/category/articles/neuroscience/neuropathology/",
+      "description": "Featuring articles that have to do exclusively with Neuropathology. NeuroPedia.net is an open-access, educational platform designed to provide scientific content through a structured curriculum. It encompasses basic science, clinical procedures, the latest updates, and answers to frequently asked questions regarding different disciplines of neuroscience.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 1100,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5349075.jpg?t=1638360582"
+    }
+  ]
+}

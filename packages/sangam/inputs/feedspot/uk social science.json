@@ -1,0 +1,58 @@
+{
+  "category": "UK Social Science",
+  "source_url": "https://rss.feedspot.com/uk_social_science_rss_feeds",
+  "feeds": [
+    {
+      "title": "The London School of Economics and Political Science (LSE) Blog",
+      "feed_url": "https://feeds.feedburner.com/ImpactOfSocialSciences",
+      "website_url": "https://blogs.lse.ac.uk/impactofsocialsciences/",
+      "description": "A blog for those interested in increasing the impact of social sciences on government policy, society and business.Views are not those of the LSE.",
+      "followers": {
+        "facebook": 776900,
+        "twitter": 58500
+      },
+      "image_url": "https://i1.feedspot.com/1089287.jpg?t=1606199873"
+    },
+    {
+      "title": "Social Sciences Birmingham Blog",
+      "feed_url": "https://blog.bham.ac.uk/socialsciencesbirmingham/feed/",
+      "website_url": "https://blog.bham.ac.uk/socialsciencesbirmingham/",
+      "description": "Our research makes a real difference and our teaching ensures the next generation of social scientists will continue to transform their knowledge into policies and practices for individuals, organisations and governments alike in the UK and internationally. Get the expert view from the College of Social Sciences at the University of Birmingham.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4917948.jpg?t=1606199953"
+    },
+    {
+      "title": "Academy of Social Sciences",
+      "feed_url": "https://acss.org.uk/news-category/general-news/feed/",
+      "website_url": "https://acss.org.uk/",
+      "description": "The Campaign for Social Science aim is to raise the profile of social science in the public, media and Parliament. We campaign for the restoration of the post of Government Chief Social Science Advisor, promote social science in the media and on the web, and organise roadshows and other events to emphasise the value of social science.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4697760.jpg?t=1606199883"
+    },
+    {
+      "title": "HaSS Research Impact Blog",
+      "feed_url": "https://blogs.ncl.ac.uk/hassimpact/feed/",
+      "website_url": "https://blogs.ncl.ac.uk/hassimpact/",
+      "description": "This blog presents Newcastle University research in arts, humanities and social sciences. Our blog will showcase the positive impact that our research has on wider society, culture and the economy;share research outcomes and outputs that will be of interest to non-academic audiences; and highlight the different ways that researchers share their research outcomes and engage with external research users.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4917966.jpg?t=1620629498"
+    },
+    {
+      "title": "SQA Blog",
+      "feed_url": "https://blogs.sqa.org.uk/socialsciences/feed/",
+      "website_url": "https://blogs.sqa.org.uk/socialsciences/",
+      "description": "This is the blog for SQA's Social Sciences team, where you will find all the latest news, information and updates relating to the work that we do. Get the Latest events, news, information and updates for all things Social Sciences.",
+      "followers": {
+        "twitter": 45900
+      },
+      "image_url": "https://i1.feedspot.com/4698393.jpg?t=1606200055"
+    }
+  ]
+}

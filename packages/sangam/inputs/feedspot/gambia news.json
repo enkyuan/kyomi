@@ -1,0 +1,103 @@
+{
+  "category": "Gambia News",
+  "source_url": "https://rss.feedspot.com/gambia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Standard",
+      "feed_url": "https://standard.gm/feed/",
+      "website_url": "https://standard.gm/",
+      "description": "The Standard Newspaper brings the latest news from the Gambia, Africa, and the World. Get live news and the latest stories from Politics, Business, Technology, Sports, and more.",
+      "followers": {
+        "facebook": 51700
+      },
+      "image_url": "https://i1.feedspot.com/5358149.jpg?t=1640850334"
+    },
+    {
+      "title": "The Point",
+      "feed_url": "https://thepoint.gm/posts/rss/xml",
+      "website_url": "https://thepoint.gm/",
+      "description": "The Point is an independent newspaper that promotes divergent views and issues on democracy and human rights. The Paper covers national issues on politics, economics, business and development, as well as world affairs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5358148.jpg?t=1640850455"
+    },
+    {
+      "title": "The Fatu Network",
+      "feed_url": "https://fatunetwork.net/feed/",
+      "website_url": "https://fatunetwork.net/",
+      "description": "The Fatu Network is the leading online news provider in The Gambia. It reports events from an independent and detached point of view. The Fatu Network is hugely committed to principles of justice, individual freedoms and liberties and for the state to defend and protect the fundamental rights and freedoms of citizens.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5358146.jpg?t=1640850212"
+    },
+    {
+      "title": "Foroyaa",
+      "feed_url": "https://foroyaa.net/feed/",
+      "website_url": "https://foroyaa.net/",
+      "description": "FOROYAA Newspaper is the premier Gambian community portal delivering news on politics, legal affairs, and more. We provide you with the latest breaking news and videos straight from The Gambia and the rest of the world. Read about Sports, Legal Affairs and pressing national issues in the Gambia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5476430.jpg?t=1670332102"
+    },
+    {
+      "title": "Malagen",
+      "feed_url": "https://malagen.org/feed/",
+      "website_url": "https://malagen.org/",
+      "description": "Featuring investigative news stories on major national and local issues, Malagen offers sharp and incisive coverage of all nationally important matters. Malagen is The Gambia's first ever investigative journalism media organization, published by Open Media Centre (OMC), a non-profit organization that focuses on open government and anti-corruption.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5476429.jpg?t=1670416513"
+    },
+    {
+      "title": "The Voice Newspaper",
+      "feed_url": "https://www.voicegambia.com/feed/",
+      "website_url": "https://www.voicegambia.com/",
+      "description": "Discover Top stories reporting the latest situation in local Politics, Sports, and Economy as well as Op-eds and trending articles on Entertainment and Lifestyle section. Established in 2008, The Voice is an Independent newspaper, non-political and non-partisan delivering unbiased and authentic news coverage both in print and digital media.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5476427.jpg?t=1670332145"
+    },
+    {
+      "title": "KAIRO NEWS",
+      "feed_url": "https://kaironews.com/feed/",
+      "website_url": "https://kaironews.com/",
+      "description": "Kairo News/Radio was born on February 18, 2014. Its ultimate is to inform, educate and entertain people. The team comprises of professionals from diverse fields. Kairo comes to add meaning to Gambian online journalism. It seeks to cover news and current affairs with professionalism and objectivity.",
+      "followers": {
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5358151.jpg?t=1640850523"
+    },
+    {
+      "title": "The Progress Newspaper",
+      "feed_url": "http://theprogressnewspaper.com/feed/",
+      "website_url": "http://theprogressnewspaper.com/",
+      "description": "Stay current on the latest news and events in the Gambia. The Progress Newspaper is The Gambia's independent newspaper on politics, investigation, current affairs, human interest stories, and breaking news. We provide news in-depth, objective, andimpartial journalism to educate our readers on topics that matter.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5476426.jpg?t=1670332399"
+    },
+    {
+      "title": "Gambia Today",
+      "feed_url": "https://gambia-today.com/feed/",
+      "website_url": "https://gambia-today.com/",
+      "description": "Gambia News Today brings you the latest Gambian News and Opinions covering and discussing Political & Current affairs, Economy, Sports, Women's issues, Music, Entertainment & Sports, and more relevant topics. Gambia News Today is an online newsroom based in Bakau Newtown in The Gambia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5476431.jpg?t=1670332312"
+    },
+    {
+      "title": "The Gambia Times",
+      "feed_url": "https://www.thegambiatimes.com/feed/",
+      "website_url": "https://www.gunjuronline.com/",
+      "description": "Delivering comprehensive national and international coverage on a range of trending topics and issues. The Gambia Times is a leading national daily and strives to report credible news by conducting investigative journalism for Gambians to be informed about their government to hold its leaders accountable.",
+      "followers": {
+        "facebook": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5476432.jpg?t=1670332322"
+    },
+    {
+      "title": "The Daily News",
+      "feed_url": "https://dailynewsgm.com/feed/",
+      "website_url": "https://whatson-gambia.com/category/news/",
+      "description": "The Daily News is your news, and entertainment website. We provide you with the latest breaking news and videos straight from the media industry.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/5358147.jpg?t=1640850030"
+    }
+  ]
+}

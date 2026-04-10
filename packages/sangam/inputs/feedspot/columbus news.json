@@ -1,0 +1,41 @@
+{
+  "category": "Columbus News",
+  "source_url": "https://rss.feedspot.com/columbus_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WRBL News 3 \u00bb Columbus",
+      "feed_url": "https://www.wrbl.com/tag/columbus/feed/",
+      "website_url": "https://www.wrbl.com/tag/columbus/",
+      "description": "WRBL News 3 is The News Team On Your Side! WRBL is the CBS affiliate for Columbus, GA and surrounding areas. The Latest News, Entertainment, Sports, Alerts, and Updates in Columbus brought to you by the team at WRBL.",
+      "followers": {
+        "facebook": 113700,
+        "twitter": 11600,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5135650.jpg?t=1586348722"
+    },
+    {
+      "title": "WRBL News 3",
+      "feed_url": "https://www.wrbl.com/feed/",
+      "website_url": "https://www.wrbl.com/",
+      "description": "Explore wrbl.com for Top Breaking News stories and articles. Get Weather Forecasts, Crime News, and more news from Georgia and Alabama. WRBL News 3 is a broadcast media company based in Columbus, Georgia, serving east Alabama and west Georgia.",
+      "followers": {
+        "facebook": 113700,
+        "twitter": 11600,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5508176.jpg?t=1676448444"
+    },
+    {
+      "title": "The Ledger-Enquirer",
+      "feed_url": "https://feeds.mcclatchy.com/ledger-enquirer/sections/latest-news/stories",
+      "website_url": "https://chattvoice.com/",
+      "description": "Follow the Columbus Ledger-Enquirer for the latest headlines on Southeastnews. Find daily local breaking news, opinion columns, videos and community events.",
+      "followers": {
+        "facebook": 68000,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5135649.jpg?t=1586346927"
+    }
+  ]
+}

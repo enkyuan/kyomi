@@ -1,0 +1,28 @@
+{
+  "category": "Abacus",
+  "source_url": "https://rss.feedspot.com/abacus_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Abacus Club Blog",
+      "feed_url": "https://theabacusclub.co.uk/feed/",
+      "website_url": "https://theabacusclub.co.uk/blog/",
+      "description": "The Abacus Club was established in May 2011 by Dr. Nisih Freeman. It started following a visit to Indonesia where she saw primary school children computing sums mentally at great speed. She is currently looking at how the abacus might help children learn place value differently and how this might impact on their numerical abilities.",
+      "followers": {
+        "facebook": 217,
+        "instagram": 80
+      },
+      "image_url": "https://i1.feedspot.com/4718328.jpg?t=1607425270"
+    },
+    {
+      "title": "Ideal Play Abacus India Blog",
+      "feed_url": "https://www.playabacusindia.com/feed/",
+      "website_url": "https://www.playabacusindia.com/blog/",
+      "description": "Learn basics of Abacus with IPA India Blog. Ideal Play Abacus India (IPA) was set up in 2003 by women entrepreneurs in order to develop the Mathematical and Brain skills of young children using the magic tool 'Abacus'.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5347049.jpg?t=1638261821"
+    }
+  ]
+}

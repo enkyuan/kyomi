@@ -1,0 +1,79 @@
+{
+  "category": "Hotstar",
+  "source_url": "https://rss.feedspot.com/hotstar_rss_feeds",
+  "feeds": [
+    {
+      "title": "Disney+ Hotstar Blog",
+      "feed_url": "https://blog.hotstar.com/feed",
+      "website_url": "https://blog.hotstar.com/",
+      "description": "Product and Engineering notes from Disney+ Hotstar, India's leading OTT service.",
+      "followers": {
+        "facebook": 5100000,
+        "twitter": 602100
+      },
+      "image_url": "https://i1.feedspot.com/5159151.jpg?t=1625818118"
+    },
+    {
+      "title": "Hotstar App",
+      "feed_url": "https://hotstarapp.live/blog/feed/",
+      "website_url": "https://hotstarapp.live/blog/",
+      "description": "Hotstar App is a blog by Jacob and his friends. This blog is the basis to share about the Hotstar app and its usage, which will help many users.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5159128.jpg"
+    },
+    {
+      "title": "Pakaoo \u00bb\u00a0Disney Plus Hotstar",
+      "feed_url": "https://pakaoo.in/movie_cat/hotstar/feed/",
+      "website_url": "https://pakaoo.in/movie_cat/hotstar/",
+      "description": "Explore Disney Plus Hotstar web series, TV shows, and movie reviews online. Check release date, trailers, and star cast name on Pakaoo.",
+      "followers": {
+        "twitter": 16,
+        "instagram": 114
+      },
+      "image_url": "https://i1.feedspot.com/5159252.jpg?t=1625818157"
+    },
+    {
+      "title": "Blog To Bollywood \u00bb\u00a0Hotstar",
+      "feed_url": "https://blogtobollywood.com/search/hotstar/feed/rss2",
+      "website_url": "https://blogtobollywood.com/?s=hotstar",
+      "description": "Follow Blog to Bollywood and know all about the movies and series streaming on Hotstar.",
+      "followers": {
+        "facebook": 160700,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5159175.jpg?t=1625818162"
+    },
+    {
+      "title": "The Wiki \u00bb\u00a0Hotstar",
+      "feed_url": "https://wikiwiki.in/search/hotstar/feed/rss2",
+      "website_url": "https://wikiwiki.in/?s=hotstar",
+      "description": "Get the detailed information about the web series and television shows streaming on Hotstar.",
+      "followers": {
+        "twitter": 630
+      },
+      "image_url": "https://i1.feedspot.com/5159232.jpg?t=1625818170"
+    },
+    {
+      "title": "Social Talky \u00bb\u00a0Hotstar",
+      "feed_url": "https://socialtalky.com/search/hotstar/feed/rss2",
+      "website_url": "https://socialtalky.com/?s=hotstar",
+      "description": "Get updates on exciting promo codes, coupons, subscriptions, gift cards, membership, and must-watch series for Hotstar.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5159283.jpg?t=1625818177"
+    },
+    {
+      "title": "EntNetwrk \u00bb\u00a0Hotstar",
+      "feed_url": "https://blog.entnetwrk.com/tag/hotstar/feed/",
+      "description": "EntNetwrk brings together a common digital social networking platform for Entertainers and Entertainment industries from across the globe. Get the latest information on Hotstar, here!",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1200,
+        "instagram": 12600
+      },
+      "image_url": "https://i1.feedspot.com/5159164.jpg?t=1625818174"
+    }
+  ]
+}

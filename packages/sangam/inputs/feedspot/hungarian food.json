@@ -1,0 +1,170 @@
+{
+  "category": "Hungarian Food",
+  "source_url": "https://rss.feedspot.com/hungarian_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Zserbo.com",
+      "feed_url": "https://zserbo.com/feed/",
+      "website_url": "https://zserbo.com/",
+      "description": "This blog presents the Hungarian cuisine, traditional and lesser-known homemade Hungarian recipes. Hearty stews, soul-warming soups & delicious desserts. I'm Eszter Tokai, the author behind this blog.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/5454609.jpg?t=1665384406"
+    },
+    {
+      "title": "The Hungary Soul",
+      "feed_url": "https://thehungarysoul.com/feed/",
+      "website_url": "https://thehungarysoul.com/",
+      "description": "Hi, my name is Rose. I like to take you on a journey to explore my cultural background, hence the title, more specifically the home-cooked ethnic meals that were once prepared by my mother and grandmother. I will also share recipes that I have created and adapted over the years as an educator. To further explore my trips to Budapest, Italy, France, Spain, and South Africa. Hopefully, you will be inspired and learn something in the process.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454628.jpg?t=1742451194"
+    },
+    {
+      "title": "Hungary Today \u00bb Food",
+      "feed_url": "https://hungarytoday.hu/category/lifestyle/food/feed/",
+      "website_url": "https://hungarytoday.hu/category/lifestyle/food/",
+      "description": "Explore the latest news and updates on food scenes on Hungary, restaurants, recipes and more! The goal of Hungary Today is to become the leading English-language news portal of Hungary. We dedicate our articles to everyone interested in Hungary, regardless of where they reside in the world. Although our news site focuses mostly on a single country, we are consistently committed to finding and presenting Hungary's relationship to the European Union and regionally, with respect to the Central European region.",
+      "followers": {
+        "facebook": 131900,
+        "twitter": 11400,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5454625.jpg?t=1665383492"
+    },
+    {
+      "title": "Julia Kravianszky Private Tour Guide \u00bb Food",
+      "feed_url": "https://lovefromhungary.com/category/food/feed/",
+      "website_url": "https://lovefromhungary.com/category/food/",
+      "description": "My name is Julia Kravianszky and I adore Hungary. Hopefully, I can answer all your questions about Budapest. I'm a passionate and enthusiastic private tour guide with fluent English and French and I would like to show you around my beautiful country that I hope you'll never forget. Explore the food tours, virtual tours, classes on food and recipes and more!",
+      "followers": {
+        "facebook": 140,
+        "instagram": 337
+      },
+      "image_url": "https://i1.feedspot.com/5454621.jpg?t=1665383396"
+    },
+    {
+      "title": "One Sweet Harmony \u00bb Hungarian",
+      "feed_url": "https://onesweetharmony.com/feed/",
+      "website_url": "https://onesweetharmony.com/",
+      "description": "I'm a Hungarian Chef and Food Blogger. Creating recipes influenced by my Hungarian heritage and also baking goodies it just makes me happy. Find my recipes, Hungarian cuisine in this section.",
+      "followers": {
+        "facebook": 163,
+        "instagram": 647
+      },
+      "image_url": "https://i1.feedspot.com/5454617.jpg?t=1665384275"
+    },
+    {
+      "title": "My Pure Plants \u00bb Hungarian Recipes",
+      "feed_url": "https://mypureplants.com/feed/",
+      "website_url": "https://mypureplants.com/",
+      "description": "We are Hungarians. We grew up in Hungary (well, most of the time). The recipes we share here are Hungarian dishes we have been eating since childhood. Weare Emese and Nandi. We welcome you to My Pure Plants! We will share what we cook and bake in our kitchen for ourselves and for our two daughters. All recipes are plant-based and gluten-free.",
+      "followers": {
+        "facebook": 22800,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5454613.jpg?t=1665382776"
+    },
+    {
+      "title": "Cooking County \u00bb Hungarian food",
+      "feed_url": "https://cookingcounty.top/hungarian-food/feed/",
+      "website_url": "https://cookingcounty.top/hungarian-food/",
+      "description": "I am Shayan, a 22-year-old cooking enthusiast who is interested in trying new foods. I come from Iran, the land of tasty dishes and countless unique desserts. In Cooking County, I try to introduce different foods of my country to you, including starters, main courses, and desserts. You will find a dozen recipes here so that you always have a good answer to this common question of 'what should I cook today?' Explore the food and cuisine of Hungary, recipes, stories behind dishes and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454630.jpg?t=1665386525"
+    },
+    {
+      "title": "Best of Hungary Blog \u00bb Recipes",
+      "feed_url": "https://www.bestofhungary.co.uk/blogs/recipes.atom",
+      "website_url": "https://www.bestofhungary.co.uk/blogs/recipes",
+      "description": "A collection of delicious recipes for traditional Hungarian dishes as well as for simple contemporary meals. Whether you are looking for a classical Goulash soup recipe or inspiration for a quick dinner idea, you will find it all here. We are two Hungarian foodies living in Wales, and with Best of Hungary we bring you healthy gourmet food with an award-winning pedigree from the heartland of Hungary straight to your door.",
+      "followers": {
+        "facebook": 435,
+        "twitter": 805,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5454623.jpg?t=1665382839"
+    },
+    {
+      "title": "Cook Like Czechs \u00bb Hungarian Recipes",
+      "feed_url": "https://www.cooklikeczechs.com/hungarian-recipes/feed/",
+      "website_url": "https://www.cooklikeczechs.com/hungarian-recipes/",
+      "description": "I'm Petra, a Czech mom of two teen boys with more than 20 years of cooking experience. I am here to share traditional recipes from the Czech Republic, a small country in the very heart of Europe. Explore my Hungarian recipes, authentic delicacies and more!",
+      "followers": {
+        "facebook": 26300
+      },
+      "image_url": "https://i1.feedspot.com/5454622.jpg?t=1665387304"
+    },
+    {
+      "title": "Hungarian Tidbits",
+      "feed_url": "https://www.hungariantidbits.com/feed/",
+      "website_url": "https://www.hungariantidbits.com/",
+      "description": "I'm Eva, a Hungarian based in the UK who enjoys cooking and illustrating recipes. Some of these are family recipes from parents and grandparents and some are ambitious experiments to recreate an authentic taste I grew up with. I'm hoping to grow the collection bit by bit over time.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454620.jpg?t=1665387612"
+    },
+    {
+      "title": "Travel Food Atlas \u00bb Hungary",
+      "feed_url": "https://travelfoodatlas.com/europe/hungary/feed",
+      "website_url": "https://travelfoodatlas.com/europe/hungary",
+      "description": "Hungarian recipes, foods, cuisines, dishes and blogs. Discover a whole host of travel inspiration and food delicacies from Hungary. For the past 10 years Travel Food Atlas has pioneered the way in showcasing the most incredible, unique and unusual dishes from all over the world. We have strived to shine a light on the cuisines of other cultures and bring you authentic recipes to bring the flavors of the world to your kitchen. Every week we feature new dishes and examine more cuisines in depth.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454619.jpg?t=1665382916"
+    },
+    {
+      "title": "International Menu \u00bb Hungarian",
+      "feed_url": "https://internationalmenu.com/category/by-country/hungarian/feed/",
+      "website_url": "https://internationalmenu.com/category/by-country/hungarian/",
+      "description": "I am Olya. Explore Hungarian recipes I have made myself, photographed, tested and tasty. I try various recipes from across the world.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 24,
+        "instagram": 802
+      },
+      "image_url": "https://i1.feedspot.com/5454616.jpg?t=1665386956"
+    },
+    {
+      "title": "The Daring Gourmet \u00bb Eastern Europe",
+      "feed_url": "https://www.daringgourmet.com/food/by-country/eastern-european/feed/",
+      "website_url": "https://www.daringgourmet.com/food/by-country/eastern-european/",
+      "description": "I'm Kimberly and I share delicious originals, revitalized classics and authentic dishes from around the world. Come travel the world through your taste buds! Check out my Hungarian recipes, delicacies and more in this section.",
+      "followers": {
+        "facebook": 46200,
+        "twitter": 7200,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5454611.jpg?t=1665384913"
+    },
+    {
+      "title": "Taste Hungary",
+      "feed_url": "https://tastehungary.com/journal/feed/",
+      "website_url": "https://tastehungary.com/journal/",
+      "description": "The Taste Hungary Blog is authored by a group of expat and local writers, intent on making sense of Hungary's traditional foodways, its emerging wine industry, and Budapest's food scene. We focus on telling the stories of the deliciously complex foods and wines of Hungary, the people and places that fascinate us, and all of the cultural details which make Hungary such a memorable place to visit (or live).",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 1000,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5454627.jpg?t=1665384687"
+    },
+    {
+      "title": "Hungarian Eats",
+      "feed_url": "https://hungarianeats.com/feed/",
+      "website_url": "https://hungarianeats.com/",
+      "description": "Hello, I am Kata. I love cooking, creating something delicious and sharing it with my loved ones. I am also passionate about photography, especially food photography. Through this blog I would like to share the joy of authentic Hungarian cooking. How simple it could be to create delicious meals using mostly everyday ingredients. The wonder of soups, the different vegetable stews and casseroles, the divine cookies and cakes, the pickles and so much more!",
+      "followers": {
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5454615.jpg?t=1665387841"
+    },
+    {
+      "title": "Euro Food Seattle \u00bb Hungarian Cuisine",
+      "feed_url": "https://www.eurofoodseattle.com/category/hungarian-cuisine/feed/",
+      "website_url": "https://www.eurofoodseattle.com/category/hungarian-cuisine/",
+      "description": "Euro Food is a joint venture of two Europeans- Ludmila and Gregory. They serve everything from smoked meats or fish, European cheese, dairy, chocolates, German breads, marinated vegetables, to the best pierogi in town. Their collection of European beer and wine is simply the best. Explore their take on Hungarian Cuisine, know more about authentic Hungarian food and drinks and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454608.jpg?t=1665387794"
+    }
+  ]
+}

@@ -1,0 +1,738 @@
+{
+  "category": "Library",
+  "source_url": "https://rss.feedspot.com/library_rss_feeds",
+  "feeds": [
+    {
+      "title": "Internet Archive Blogs",
+      "feed_url": "https://blog.archive.org/feed/",
+      "website_url": "https://blog.archive.org/",
+      "description": "All latest blogs from Internet Archive Blogs",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3655243.jpg?t=1761731946"
+    },
+    {
+      "title": "Teen Librarian Toolbox",
+      "feed_url": "http://teenlibrariantoolbox.com/feed/",
+      "website_url": "https://teenlibrariantoolbox.com/",
+      "description": "Teen Librarian Toolbox is a professional development website for teen librarians, created by Karen Jensen. Our mission is to to help libraries serving teens and to foster a community of professional development and resource sharing by providing quality information, discussions, book reviews and more.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 19900
+      },
+      "image_url": "https://i1.feedspot.com/4733557.jpg?t=1604395667"
+    },
+    {
+      "title": "Librarian",
+      "feed_url": "https://www.librarian.net/feed/",
+      "website_url": "https://www.librarian.net/",
+      "description": "Hi, My name is Jessamyn West and I'm a library technologist living in Vermont. This is my professional blog where I occasionally write about library-oriented things and about my own work within the library profession.",
+      "followers": {
+        "twitter": 415,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/35096.jpg?t=1604395915"
+    },
+    {
+      "title": "Association for Library Service to Children Blog",
+      "feed_url": "https://feeds.feedburner.com/AlscBlog",
+      "website_url": "https://www.alsc.ala.org/blog/",
+      "description": "The Association for Library Service to Children (ALSC) is a network of more than 4,000 children's and youth librarians, children's literature experts, publishers, education and library school faculty members, and other adults committed to improving and ensuring the future of the nation through exemplary library service to children, their families, and others who work with children.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 17300
+      },
+      "image_url": "https://i1.feedspot.com/1163533.jpg?t=1644312317"
+    },
+    {
+      "title": "Princeton Public Library Blog",
+      "feed_url": "https://princetonlibrary.org/feed/",
+      "website_url": "https://princetonlibrary.org/home/blog/",
+      "description": "The Princeton Public Library Foundation stands as a pillar of support for the library's noble mission. Their dedication to fostering connections and enriching lives through ideas, resources, and technology resonates deeply. With unwavering commitment, they empower individuals to pursue their aspirations and cultivate a vibrant community of learning and growth.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 8900,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5370301.jpg?t=1706025566"
+    },
+    {
+      "title": "A Library Writer's Blog",
+      "feed_url": "http://librarywriting.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://librarywriting.blogspot.com/",
+      "description": "The resource will help librarians identify publishing and presentation opportunities in library & information science, as well as other related fields. I will also include calls for papers, presentations, participation, reviewers, and other relevant notices that I find on the web.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1374970.jpg?t=1604397318"
+    },
+    {
+      "title": "The Distant Librarian",
+      "feed_url": "https://feeds.feedburner.com/blogs/distlib",
+      "website_url": "https://distlib.blogs.com/",
+      "description": "I'm the Public Services Systems Librarian (aka webmaster) at the University of Calgary, in Alberta, Canada. A blog about a librarian.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/578555.jpg?t=1604397018"
+    },
+    {
+      "title": "Johns Hopkins Sheridan Libraries Blogs",
+      "feed_url": "https://blogs.library.jhu.edu/feed/",
+      "website_url": "https://blogs.library.jhu.edu/",
+      "description": "News, information and more from the Sheridan Libraries of Johns Hopkins University",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2400,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5370316.jpg?t=1761822101"
+    },
+    {
+      "title": "Duke University Libraries",
+      "feed_url": "https://blogs.library.duke.edu/feed/",
+      "website_url": "https://blogs.library.duke.edu/",
+      "description": "Welcome to the Duke University Libraries! Here you will find not only a rich array of resources assembled to support the learning, teaching and research of the Duke community, but also talented, knowledgeable people to assist you along with inspiring, comfortable spaces in which to read, write, reflect, create and collaborate.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2800,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/1419451.jpg?t=1604395971"
+    },
+    {
+      "title": "Emory Libraries Blog",
+      "feed_url": "https://scholarblogs.emory.edu/woodruff/feed",
+      "website_url": "https://scholarblogs.emory.edu/woodruff/",
+      "description": "The Emory Libraries Blog covers important news and information about library resources, services, and events. Examples include descriptions of collections, reviews of scholarly apps, and reminders about our research support services such as workshops, consultations, inter-library loans, course reserves, article repositories, data management, and copyright information.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5370306.jpg?t=1644401286"
+    },
+    {
+      "title": "The Open Library Blog",
+      "feed_url": "https://blog.openlibrary.org/feed/",
+      "website_url": "https://blog.openlibrary.org/",
+      "description": "We lend ebooks worldwide, for free. Over two million free ebooks available and 1M more in our lending library. A web page for every book.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 43600
+      },
+      "image_url": "https://i1.feedspot.com/5180732.jpg?t=1604395976"
+    },
+    {
+      "title": "Fordham Library News",
+      "feed_url": "https://librarynews.blog.fordham.edu/feed/",
+      "website_url": "https://librarynews.blog.fordham.edu/",
+      "description": "This blog is dedicated to sharing the latest updates, resources, and research from the Fordham University Libraries. It is the mission of the Fordham University Libraries to support the schools and programs of the University",
+      "followers": {
+        "facebook": 978,
+        "twitter": 1800,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5370308.jpg?t=1644403987"
+    },
+    {
+      "title": "Free Library of Philadelphia Blog",
+      "feed_url": "https://libwww.freelibrary.org/blog/rss.cfm",
+      "website_url": "https://libwww.freelibrary.org/blog/",
+      "description": "Blog posts cover libraries in the news, history minute, literacy, literary history, literature, online learning, picture book highlights, recommendations, and exhibitions. Free Library of Philadelphia is one of the largest public library systems in the world that advances literacy, guides learning and inspires curiosity.",
+      "followers": {
+        "facebook": 48300,
+        "twitter": 29100,
+        "instagram": 48500
+      },
+      "image_url": "https://i1.feedspot.com/5314921.jpg?t=1632232582"
+    },
+    {
+      "title": "American Libraries Magazine",
+      "feed_url": "https://americanlibrariesmagazine.org/feed/",
+      "website_url": "https://americanlibrariesmagazine.org/",
+      "description": "American Libraries is the voice of the profession and the flagship magazine of the American Library Association. Stay tuned to get the latest updates.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 92900
+      },
+      "image_url": "https://i1.feedspot.com/4733642.jpg?t=1622619138"
+    },
+    {
+      "title": "Librarians Matter Blog",
+      "feed_url": "https://librariansmatter.com/blog/feed/",
+      "website_url": "https://librariansmatter.com/blog/",
+      "description": "I'm Kathryn Greenhill. A blog about Musing, enthusing, libraries, technology, creativity, balancing, being mum.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4734627.jpg?t=1604396534"
+    },
+    {
+      "title": "Princh Blog",
+      "feed_url": "https://princh.com/feed/",
+      "website_url": "https://princh.com/blog/",
+      "description": "Princh makes the lives of library staff and patrons a little easier by offering a user friendly and innovative printing solution that was built in collaboration with Danish libraries - it's now spreading quickly internationally.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4897851.jpg?t=1604396151"
+    },
+    {
+      "title": "LMU Library News",
+      "feed_url": "https://librarynews.lmu.edu/feed/",
+      "website_url": "https://librarynews.lmu.edu/",
+      "description": "The official blog of the William H. Hannon Library at Loyola Marymount University. Founded in 1911, LMU is a top-ranked national university rooted in the Catholic, Jesuit, and Marymount traditions.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1500,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5370300.jpg?t=1644398889"
+    },
+    {
+      "title": "Coates Library Blog",
+      "feed_url": "https://lib.trinity.edu/feed/",
+      "website_url": "https://lib.trinity.edu/blog/",
+      "description": "Trinity's library will be more than just a building or a collection. It will offer a combination of carefully selected and managed resources, dedicated and knowledgeable professionals who teach and offer other essential services, spaces for students and faculty to study and explore ideas individually and with others, and a symbol of the University's commitment to the expansion and expression of knowledge.",
+      "followers": {
+        "facebook": 911,
+        "twitter": 897,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5370310.jpg?t=1644403424"
+    },
+    {
+      "title": "Super Library Marketing",
+      "feed_url": "https://superlibrarymarketing.com/feed/",
+      "website_url": "https://superlibrarymarketing.com/",
+      "description": "Keep up with All kinds of marketing ideas for all kinds of libraries.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4947415.jpg?t=1604397224"
+    },
+    {
+      "title": "Public Libraries Online",
+      "feed_url": "https://publiclibrariesonline.org/feed/",
+      "website_url": "https://publiclibrariesonline.org/",
+      "description": "Focuses on issues and topics that matter to public libraries and public librarianship, and provides readers with frequent updates, op-ed pieces, e-book reviews, and author interviews. Public Libraries Online is a publication of the Public Library Association.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/1481208.jpg?t=1632224596"
+    },
+    {
+      "title": "In the Library with the Lead Pipe",
+      "feed_url": "http://www.inthelibrarywiththeleadpipe.org/feed/",
+      "website_url": "http://www.inthelibrarywiththeleadpipe.org/",
+      "description": "In the Library with the Lead Pipe is a bi-monthly, digital publication. Our intent is to help improve our communities, our libraries, and our professional organizations. In the Library with the Lead Pipe is an open access, peer reviewed journal.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/430819.jpg?t=1604396422"
+    },
+    {
+      "title": "Oakland Public Library",
+      "feed_url": "https://oaklandlibrary.org/feed/",
+      "website_url": "https://oaklandlibrary.org/blogs/",
+      "description": "The Oakland Public Library has been a part of the City of Oakland since 1878. It includes 16 branches, the Main Library, a Second Start Adult Literacy Program, the Oakland Tool Lending Library, and the African-American Museum and Library at Oakland (AAMLO). Oakland Public Library empowers all people to explore, connect, and grow.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 5900,
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5370299.jpg?t=1644400002"
+    },
+    {
+      "title": "Librarianship Studies & Information Technology",
+      "feed_url": "https://www.librarianshipstudies.com/feeds/posts/default",
+      "website_url": "https://www.librarianshipstudies.com/",
+      "description": "Librarianship Studies is the best internationally acclaimed Library and Information Science blog for libraries, librarians, catalogers, i-School Master of Library and Information Science (MLIS) & Ph.D. students, researchers, and LIS professionals. Find posts and updates on Library.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 2400,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4809615.jpg?t=1611040450"
+    },
+    {
+      "title": "Kent District Library",
+      "feed_url": "https://kdl.org/feed/",
+      "website_url": "https://kdl.org/blogs/",
+      "description": "At Kent District Library, we challenge the traditional concept of a library. KDL aims to connect people with what inspires them. We consider our success determined by whether you, our customer, found the library useful in helping you achieve your goals.",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 4000,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5370304.jpg?t=1644400701"
+    },
+    {
+      "title": "Did You Ever Stop To Think Blog",
+      "feed_url": "https://didyoueverstoptothink.com/blog/feed/",
+      "website_url": "https://didyoueverstoptothink.com/blog/",
+      "description": "Reviewing and talking about children's literature, graphic novels & bookish things. Shiny.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4800488.jpg?t=1604402633"
+    },
+    {
+      "title": "Librarian by Day",
+      "feed_url": "https://librarianbyday.net/feed/",
+      "website_url": "https://librarianbyday.net/",
+      "description": "Bobbi Newman is a librarian, writer, consultant, library advocate, and an international speaker. I am available, and delighted, to speak on a variety of library, technology, and innovation related topics.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/4734547.jpg?t=1604397489"
+    },
+    {
+      "title": "Disruptive Library Technology Jester",
+      "feed_url": "https://feeds.dltj.org/DisruptiveLibraryTechnologyJester",
+      "website_url": "https://dltj.org/",
+      "description": "The Disruptive Library Technology Jester (DLTJ) blog is all about exploring the expanse between those two points, with a tendency towards the disruptive (but not destructive) side of the spectrum.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/679477.jpg?t=1604398039"
+    },
+    {
+      "title": "Teen Librarian",
+      "feed_url": "http://teenlibrarian.co.uk/feed/",
+      "website_url": "https://teenlibrarian.co.uk/",
+      "description": "Teen Librarian is a blog about libraries (public & school), focusing on working with teens. TL also carries book reviews mostly young adult with crime, mystery, horror books & graphic novels.",
+      "followers": {
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/1712698.jpg?t=1608631250"
+    },
+    {
+      "title": "Van Meter Library Voice",
+      "feed_url": "https://vanmeterlibraryvoice.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://vanmeterlibraryvoice.blogspot.com/",
+      "description": "Shannon McClintock Miller is an international speaker, consultant, and author who has a passion for education, librarianship, advocacy, technology, social media, and making a difference in the world and lives of others, especially children. A place to be heard through creating, technology, connecting, reading, collaborating, and noise.",
+      "followers": {
+        "twitter": 65600,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/660222.jpg?t=1644393950"
+    },
+    {
+      "title": "The Clerk Manifesto",
+      "feed_url": "https://www.clerkmanifesto.com/feeds/posts/default",
+      "website_url": "http://www.clerkmanifesto.com/",
+      "description": "A daily library blog by someone who believes the glass is half full even though it's really empty.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5144978.jpg?t=1611040579"
+    },
+    {
+      "title": "John J. Burns Library's Blog",
+      "feed_url": "https://johnjburnslibrary.wordpress.com/feed/",
+      "website_url": "https://johnjburnslibrary.wordpress.com/",
+      "description": "The Burns Library serves the research needs of external scholars, hosting researchers from around the globe interested in using the collections. The University's special collections, including the University's Archives, are housed at John J. Burns Library of Rare Books and Special Collections.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5370309.jpg?t=1644402875"
+    },
+    {
+      "title": "The Travelin' Librarian",
+      "feed_url": "https://travelinlibrarian.info/feed/",
+      "website_url": "https://travelinlibrarian.info/",
+      "description": "Michael Sauers is currently the Director of Technology for Do Space in Omaha, NE. The blog of Technology Innovation Librarian and Author Michael P. Sauers.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4733687.jpg?t=1644321385"
+    },
+    {
+      "title": "libfocus - Irish library blog",
+      "feed_url": "https://feeds.feedburner.com/Libfocus",
+      "website_url": "https://www.libfocus.com/",
+      "description": "Libfocus is a communal blog with a broad and open-minded take on the subject of library and information management.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5058134.jpg?t=1644324734"
+    },
+    {
+      "title": "Rauner Special Collections Library",
+      "feed_url": "https://raunerlibrary.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://raunerlibrary.blogspot.com/",
+      "description": "Rauner Library's blog includes resources and collections of manuscripts, rare books, Dartmouth History, records, and much more.",
+      "followers": {
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5370312.jpg?t=1644402878"
+    },
+    {
+      "title": "Walt at Random",
+      "feed_url": "https://walt.lishost.org/feed/",
+      "website_url": "https://walt.lishost.org/",
+      "description": "Walt Crawford is a semi-retired library writer, editor, speaker, researcher, and systems analyst. The motto for this blog used to be 'Libraries, music, net media, cruising, policy, and other stuff not quite ready for Cites & Insights.'",
+      "followers": {
+        "twitter": 530
+      },
+      "image_url": "https://i1.feedspot.com/4733695.jpg?t=1604401758"
+    },
+    {
+      "title": "Krafty Librarian",
+      "feed_url": "https://kraftylibrarian.com/feed/",
+      "website_url": "https://kraftylibrarian.com/",
+      "description": "I am a medical librarian who enjoys writing about medical librarianship, information retrieval, and user education. My thoughts and writings tend to have more a techie slant to them because I really enjoy using and seeing how all types of technology can help us find, judge and process medical information better.",
+      "followers": {
+        "facebook": 734,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4733706.jpg?t=1604402137"
+    },
+    {
+      "title": "Kiss The Book Blog",
+      "feed_url": "https://kissthebook.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://kissthebook.blogspot.com/",
+      "description": "Kiss the Book was started back in 2003 by Cindy Mitchell, the librarian at South Jordan Middle School in Utah. She decided to share her book thoughts online with her friends and colleagues in her state, especially after they found out how many books she really does read in a year.",
+      "followers": {
+        "twitter": 746
+      },
+      "image_url": "https://i1.feedspot.com/5370297.jpg?t=1657603462"
+    },
+    {
+      "title": "Justin The Librarian",
+      "feed_url": "https://justinthelibrarian.com/feed/",
+      "website_url": "https://justinthelibrarian.com/",
+      "description": "Hello. My name is Justin Hoenke. A blog about a librarian.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4464254.jpg?t=1604402472"
+    },
+    {
+      "title": "Jenny Arch",
+      "feed_url": "https://jenny-arch.com/feed/",
+      "website_url": "https://jenny-arch.com/",
+      "description": "After college, I lived in Brooklyn and worked in publishing for a few years. I moved back to Massachusetts to go to library school, and now I'm a librarian. I like to read contemporary literary fiction, young adult and middle grade, graphic novels, and narrative nonfiction.",
+      "followers": {
+        "twitter": 675
+      },
+      "image_url": "https://i1.feedspot.com/4464253.jpg"
+    },
+    {
+      "title": "Falmouth Public Library Blog",
+      "feed_url": "https://www.falmouthpubliclibrary.org/feed/",
+      "website_url": "https://www.falmouthpubliclibrary.org/blog/",
+      "description": "The Falmouth Public Library is committed to providing the community with free and impartial access to sources of knowledge, information, and entertainment. These include reference services; books and other printed materials, media, databases, as well as a diverse spectrum of programs, exhibits, and activities that serve the need for lifelong learning, cultural enrichment, and intellectual stimulation. The library provides access to and assistance in using emerging technologies that serve as a gateway to information resources within and beyond our walls.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5370311.jpg?t=1644392305"
+    },
+    {
+      "title": "Abby the Librarian",
+      "feed_url": "https://feeds.feedburner.com/abbythelibrarian/jEsv",
+      "website_url": "http://www.abbythelibrarian.com/",
+      "description": "My name is Abby Johnson. I'm By day, youth librarian in Southern Indiana and By night, blogger extraordinaire. I blog about new librarians and library school students which is a passion of mine and you'll find many of my posts written with that audience in mind.",
+      "followers": {
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/2175251.jpg?t=1604395796"
+    },
+    {
+      "title": "Not So Distant Future",
+      "feed_url": "https://futura.edublogs.org/feed/",
+      "website_url": "https://futura.edublogs.org/",
+      "description": "I'm passionate about how technology tools can transform schools and libraries, fascinated by library design for 21st century schools and interested in school reform. I'm a high school and district librarian at a suburban high school who loves to explore the intersection of technology, libraries, and schools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4734616.jpg?t=1504871583"
+    },
+    {
+      "title": "Smithsonian Libraries Blog",
+      "feed_url": "https://blog.library.si.edu/feed/",
+      "website_url": "https://blog.library.si.edu/",
+      "description": "The Smithsonian Libraries are a hidden national treasure, where experts come to test and expand knowledge and where America and the world can turn for authentic answers. At the center of research across the Smithsonian are the specialized branches and librarians of the Smithsonian Libraries.",
+      "followers": {
+        "facebook": 41800,
+        "twitter": 81600,
+        "instagram": 78400
+      },
+      "image_url": "https://i1.feedspot.com/2171277.jpg?t=1644399283"
+    },
+    {
+      "title": "SCIS Schools Catalogue Information Service",
+      "feed_url": "https://scis.edublogs.org/feed/",
+      "website_url": "https://scis.edublogs.org/",
+      "description": "SCIS (Schools Catalogue Information Service) provides schools with consistent, high-quality catalogue records, in order to reduce the cost and duplication of effort of cataloguing resources in schools. Mission to improve the quality and consistency of cataloguing materials for schools.",
+      "followers": {
+        "facebook": 27100,
+        "twitter": 3500,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4753196.jpg?t=1604395981"
+    },
+    {
+      "title": "Librarian to Librarian",
+      "feed_url": "https://librariantolibrarian.wordpress.com/feed/",
+      "website_url": "https://librariantolibrarian.wordpress.com/",
+      "description": "Brodart's librarians are eager to share their passion and knowledge for library-related issues, current topics, and book reviews to spark new ideas and offer fresh insight on library themes large and small.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4897848.jpg?t=1604401066"
+    },
+    {
+      "title": "The Daring Librarian",
+      "feed_url": "https://www.thedaringlibrarian.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.thedaringlibrarian.com/",
+      "description": "The Daring Librarian is a Mover, Shaker, Blogger, Tweeter, Instagrammer, International Keynote EdTech & Librarian speaker, Trope and Meme archivist, Creator of Content, a Citizen of Advocacy, and a Resident of Distance Learning.",
+      "followers": {
+        "twitter": 32200,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5149962.jpg?t=1644393647"
+    },
+    {
+      "title": "Vancouver Law Librarian",
+      "feed_url": "http://feeds.feedburner.com/VancouverLawLibrarianBlog",
+      "website_url": "http://vancouverlawlib.blogspot.com/",
+      "description": "This blog consists pints of interest to the west coast law librarian. Highlighted sources on km, web development, and law library management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1376032.jpg?t=1611552980"
+    },
+    {
+      "title": "Eliterate Librarian",
+      "feed_url": "http://e-literatelibrarian.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://e-literatelibrarian.blogspot.com/",
+      "description": "My experiences as a former librarian, edtech geek and instructional technologist. A blog about my experiences as a wannabe edtech geek and middle school librarian.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/659493.jpg?t=1604402147"
+    },
+    {
+      "title": "Maktabios",
+      "feed_url": "https://feeds.feedburner.com/Maktabios",
+      "website_url": "https://maktabios.blogspot.com/",
+      "description": "A Blog for every news focus on libraries in the whole world and all sources inside Heritage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5161104.jpg?t=1644385278"
+    },
+    {
+      "title": "Library For All",
+      "feed_url": "https://libraryforall.org/feed/",
+      "website_url": "https://libraryforall.org/",
+      "description": "Library For All is a nonprofit organization that has built a digital library to deliver quality educational materials in developing countries.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 296,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4734730.jpg?t=1604403038"
+    },
+    {
+      "title": "From the Morrill Memorial Library",
+      "feed_url": "http://fromthelibrarycolumn.blogspot.com/feeds/posts/default",
+      "website_url": "http://fromthelibrarycolumn.blogspot.com/",
+      "description": "Over a Decade of 535+ Newspaper Columns by Librarians in Norwood, Massachusetts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5127971.jpg?t=1611040510"
+    },
+    {
+      "title": "Feral Librarian",
+      "feed_url": "https://chrisbourg.wordpress.com/feed/",
+      "website_url": "https://chrisbourg.wordpress.com/",
+      "description": "Chris is a US Army veteran, erstwhile sociologist and feral librarian. I like to write about libraries, scholarly publishing, social justice issues, sports, and music.",
+      "followers": {
+        "twitter": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4729044.jpg?t=1607611244"
+    },
+    {
+      "title": "Free Range Librarian",
+      "feed_url": "https://freerangelibrarian.com/feed/",
+      "website_url": "https://freerangelibrarian.com/",
+      "description": "I am the Dean of the Library at Sonoma State University, an august entity that disavows everything written on this blog. K.G. Schneider's blog on librarianship, writing, and everything else.",
+      "followers": {
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/430818.jpg?t=1604403292"
+    },
+    {
+      "title": "Librarian's Quest",
+      "feed_url": "http://librariansquest.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://librariansquest.blogspot.com/",
+      "description": "A place where students, educators, and parents can exchange and express views about the best of books, new technologies, and libraries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3981728.jpg?t=1644394464"
+    },
+    {
+      "title": "Kendriya Vidyalaya DRDO Library",
+      "feed_url": "https://kvdrdolibrary.wordpress.com/feed/",
+      "website_url": "https://kvdrdolibrary.wordpress.com/",
+      "description": "A blog written by Libranian Vilas Vernekar.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5150437.jpg?t=1604397971"
+    },
+    {
+      "title": "500 Hats",
+      "feed_url": "https://500hats.edublogs.org/feed/",
+      "website_url": "https://500hats.edublogs.org/",
+      "description": "This blog will offer ideas, information and insight that can be used by others to enrich and enhance teaching and learning in the school. Underpinning what is offered will be a solid basis of knowing how learners learn and the pedagogy that supports this.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4733623.jpg?t=1604396091"
+    },
+    {
+      "title": "Tays JH Library",
+      "feed_url": "https://k0401955.edublogs.org/feed/",
+      "website_url": "https://k0401955.edublogs.org/",
+      "description": "The mission of the Tays Junior High Library is to provide a welcoming environment rich in literature and resources, which incorporates curriculum, technology, and staffing. A Titans library blog.",
+      "followers": {
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/4734623.jpg?t=1604403476"
+    },
+    {
+      "title": "Mighty Little Librarian",
+      "feed_url": "http://www.mightylittlelibrarian.com/?feed=rss2",
+      "website_url": "http://www.mightylittlelibrarian.com/",
+      "description": "Tiffany Whitehead, the Mighty Little Librarian, is an obsessive reader, social media user, and technology geek. The Mighty Little Librarian blog shares Tiff's adventures as a teacher-librarian and ed-tech nerd.",
+      "followers": {
+        "facebook": 309,
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/818104.jpg?t=1644397869"
+    },
+    {
+      "title": "The MHMS Daring School Library Blog",
+      "feed_url": "https://daringlibrary.edublogs.org/feed/",
+      "website_url": "https://daringlibrary.edublogs.org/",
+      "description": "Gwyneth Jones is a blogger, a Tweeter, an international Ed Tech speaker, trope and meme archivist, creator of content, a citizen of advocacy, and a resident of social media. She is a Google Certified Teacher, and the author of the award winning The Daring Librarian blog.",
+      "followers": {
+        "twitter": 32200
+      },
+      "image_url": "https://i1.feedspot.com/1308528.jpg?t=1604395995"
+    },
+    {
+      "title": "The Book Nest",
+      "feed_url": "https://tompkinslibrary.edublogs.org/feed/",
+      "website_url": "https://tompkinslibrary.edublogs.org/",
+      "description": "Welcome to the Tompkins High School Library! We are here to help with your reading, research, and technology needs. We are excited to be building a collection of books, ebooks, and audio-visual resources that support all facets of the high school curriculum!",
+      "followers": {
+        "twitter": 666
+      },
+      "image_url": "https://i1.feedspot.com/4734562.jpg?t=1611040485"
+    },
+    {
+      "title": "Librarian And Information Science News",
+      "feed_url": "https://lisnews.org/rss.xml",
+      "website_url": "https://lisnews.org/",
+      "description": "LISNews is a collaborative weblog devoted to current events and news in the world of Library and Information Science.",
+      "followers": {
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/79149.jpg?t=1604395611"
+    },
+    {
+      "title": "The New York Public Library Blog",
+      "feed_url": "https://www.nypl.org/blog",
+      "website_url": "https://www.nypl.org/blog",
+      "description": "The mission of The New York Public Library is to inspire lifelong learning, advance knowledge, and strengthen our communities. The New York Public Library has been an essential provider of free books, information, ideas, and education for all New Yorkers for more than 100 years.",
+      "followers": {
+        "facebook": 339800,
+        "twitter": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/4734541.jpg?t=1608298269"
+    },
+    {
+      "title": "Cornell University Library",
+      "feed_url": "https://www.library.cornell.edu/about/all-news/",
+      "website_url": "https://www.library.cornell.edu/about/all-news/",
+      "description": "Welcome! In a time of rapid change, Cornell University Library continues to stand at the center of intellectual life on campus. With world-class collections and services print, online, and in-person our Library serves as an indispensable partner in the study, teaching, and research at the university.",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 4500,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4733665.jpg?t=1604395687"
+    },
+    {
+      "title": "David Lee King",
+      "feed_url": "https://davidleeking.com/feed/",
+      "website_url": "https://davidleeking.com/",
+      "description": "David Lee King is the Digital Services Director at Topeka & Shawnee County Public Library, where he plans, implements, and experiments with emerging technology trends. I create, write, think, and speak about the social web, emerging trends, and libraries.",
+      "followers": {
+        "twitter": 11900,
+        "instagram": 851
+      },
+      "image_url": "https://i1.feedspot.com/437555.jpg?t=1604397263"
+    },
+    {
+      "title": "University of Michigan Library Blog",
+      "feed_url": "https://blogs.lib.umich.edu/rss.xml",
+      "website_url": "https://blogs.lib.umich.edu/",
+      "description": "Our mission is to support, enhance, and collaborate in the instructional, research, and service activities of the faculty, students, and staff, and contribute to the common good by collecting, organizing, preserving, communicating, and sharing the record of human knowledge.Also find blogs from the University of Michigan Library.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4733548.jpg?t=1604395966"
+    },
+    {
+      "title": "Shelf Talk Blog",
+      "feed_url": "https://blog.spl.org/feed/",
+      "website_url": "https://blog.spl.org/",
+      "description": "Shelf Talk is created and maintained by the staff of The Seattle Public Library. Shelf Talk is a blog aimed at serving our lively and diverse community of readers. Here you will find book reviews and discussions, topics of local interest and human interest, literary events, and links to the world of readers here in the Queen/Jet/Emerald/Rainy City, and beyond.",
+      "followers": {
+        "facebook": 58000,
+        "twitter": 26700,
+        "instagram": 60500
+      },
+      "image_url": "https://i1.feedspot.com/5370302.jpg?t=1644400354"
+    },
+    {
+      "title": "Notes Between Us",
+      "feed_url": "https://notesbetweenuscom.wordpress.com/feed/",
+      "website_url": "https://notesbetweenuscom.wordpress.com/",
+      "description": "Notes Between Us (NBU) is a blog about conversations and topics of interest to the writers. The writers are expressing their personal opinions solely. Their essays represent their personal beliefs and not that of their workplaces or any organization they are associated with.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5558282.jpg?t=1683541568"
+    },
+    {
+      "title": "Library Policy and Advocacy Blog",
+      "feed_url": "https://blogs.ifla.org/lpa/feed/",
+      "website_url": "https://blogs.ifla.org/lpa/",
+      "description": "An informal forum for sharing ideas about the key policy and advocacy challenges and opportunities for libraries around the world",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370315.jpg?t=1644403783"
+    },
+    {
+      "title": "LIBRARY RETURNERS",
+      "feed_url": "https://libraryreturners.com/feed",
+      "website_url": "https://libraryreturners.com/",
+      "description": "A blog for those thinking about, on or returning from a career break in librarianship.",
+      "followers": {
+        "facebook": 57,
+        "twitter": 219
+      },
+      "image_url": "https://i1.feedspot.com/5127439.jpg?t=1604401572"
+    },
+    {
+      "title": "Stump The Librarian",
+      "feed_url": "https://stumpthelibrarian.com/feed/",
+      "website_url": "https://stumpthelibrarian.com/",
+      "description": "Hi I'm Alan Samry. I write about being an amputee and a public librarian. I posts and updates on library.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4809624.jpg?t=1604402953"
+    },
+    {
+      "title": "Venn Librarian",
+      "feed_url": "https://lpearle.wordpress.com/feed/",
+      "website_url": "https://lpearle.wordpress.com/",
+      "description": "School librarian, book lover, computer user since 1977's Commodore Pet. Reflections about the intersection of schools, libraries, and technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5370298.jpg?t=1644393233"
+    }
+  ]
+}

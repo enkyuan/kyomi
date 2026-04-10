@@ -1,0 +1,50 @@
+{
+  "category": "Firstpost",
+  "source_url": "https://rss.feedspot.com/firstpost_rss_feeds",
+  "feeds": [
+    {
+      "title": "Firstpost \u00bb Sports",
+      "feed_url": "https://www.firstpost.com/commonfeeds/v1/mfp/rss/sports.xml",
+      "website_url": "https://www.firstpost.com/category/sports/",
+      "description": "Get all the sports news coverage including live cricket scores, football updates, latest hockey news, tennis, badminton, NBA and more. Find live blogs, previews, analysis and results on Indian Sports and many more on Firstpost.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 2200000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7887849.jpg?t=1753336734"
+    },
+    {
+      "title": "Firstpost \u00bb Web Stories",
+      "feed_url": "https://www.firstpost.com/commonfeeds/v1/mfp/rss/web-stories.xml",
+      "website_url": "https://www.firstpost.com/web-stories/",
+      "description": "Get Webstories News in firstpost, Find Webstories Latest News on Firstpost.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887860.jpg?t=1741784153"
+    },
+    {
+      "title": "Firstpost \u00bb First Cricket",
+      "feed_url": "https://www.firstpost.com/commonfeeds/v1/mfp/rss/firstcricket.xml",
+      "website_url": "https://www.firstpost.com/firstcricket/",
+      "description": "Get all the latest cricket news, live cricket scores, cricket match series with full schedule, photos, videos, match results, highlights and more on Firstcricket of Firstpost.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887860.jpg?t=1741784153"
+    },
+    {
+      "title": "Firstpost \u00bb tech",
+      "feed_url": "https://www.firstpost.com/commonfeeds/v1/mfp/rss/tech.xml",
+      "website_url": "https://www.firstpost.com/tech/",
+      "description": "Get Tech News in firstpost, Find Tech Latest News on Firstpost.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887860.jpg?t=1741784153"
+    },
+    {
+      "title": "Firstpost \u00bb Entertainment",
+      "feed_url": "https://www.firstpost.com/commonfeeds/v1/mfp/rss/entertainment.xml",
+      "website_url": "https://www.firstpost.com/entertainment/",
+      "description": "Entertainment news, celebrity news and gossips from Bollywood, Hollywood and regional film industries including latest news on trending movies and more at Firstpost.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7887860.jpg?t=1741784153"
+    }
+  ]
+}

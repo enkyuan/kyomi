@@ -1,0 +1,48 @@
+{
+  "category": "South Dakota Gardening",
+  "source_url": "https://rss.feedspot.com/south_dakota_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Parkview Nursery Blog",
+      "feed_url": "https://parkviewnursery.com/feed/",
+      "website_url": "https://parkviewnursery.com/blog/",
+      "description": "Stay updated on industry trends to provide you with the most progressive and up-to-date blog. Whether you're looking for a particular tomato plant or you're putting in your first flower bed, you're in good hands with Parkview Nursery experts. Not only do we understand our product options, but we can also teach you how to plant, care for and maintain them as well.",
+      "followers": {
+        "facebook": 5100,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5325542.jpg?t=1632722148"
+    },
+    {
+      "title": "Minnehaha Master Gardeners",
+      "feed_url": "https://minnehahamastergardeners.org/feed/",
+      "website_url": "https://minnehahamastergardeners.org/",
+      "description": "The SDSU Extension Master Gardener program provides research-based knowledge to and develops the leadership abilities of volunteers who, in turn, enable others to improve the quality of their lives by enhancing their home and community environments through horticultural education and activities.",
+      "followers": {
+        "facebook": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5325520.jpg?t=1632720157"
+    },
+    {
+      "title": "Groundwater Landscape & Irrigation Blog",
+      "feed_url": "https://groundwaterinc.com/landscaping-blog/f.rss",
+      "website_url": "https://groundwaterinc.com/landscaping-blog",
+      "description": "Groundwater Landscape & Irrigation blog shares valuable landscape design information. From design through installation, each project is managed personally by an owner. Our Sioux Falls irrigation and landscaping professionals' broad range of skills and expertise will sure meet your vision of a newly refined and creative outdoor space.",
+      "followers": {
+        "facebook": 277
+      },
+      "image_url": "https://i1.feedspot.com/5325561.jpg?t=1632726034"
+    },
+    {
+      "title": "Nature Supply Co Blog",
+      "feed_url": "https://www.naturesupplyco.com/blogs/news.atom",
+      "website_url": "https://www.naturesupplyco.com/blogs/news",
+      "description": "Follow the Nature Supply blog to learn about soil and its different types and which would be best as per your climatic condition to grow the best plants. Nature Supply Co was founded by Lindsey Huber in 2016 after realizing the impact our current food system had on not only her own health but also on the health of the planet. Her research and personal health journey led her to become a nature-lover, foodie, and environmentalist.",
+      "followers": {
+        "facebook": 37900,
+        "instagram": 50500
+      },
+      "image_url": "https://i1.feedspot.com/5325519.jpg?t=1632719129"
+    }
+  ]
+}

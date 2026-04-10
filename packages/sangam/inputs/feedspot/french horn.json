@@ -1,0 +1,85 @@
+{
+  "category": "French Horn",
+  "source_url": "https://rss.feedspot.com/french_horn_rss_feeds",
+  "feeds": [
+    {
+      "title": "Horn Matters",
+      "feed_url": "https://www.hornmatters.com/feed/",
+      "website_url": "https://www.hornmatters.com/",
+      "description": "Horn Matters is an online magazine co-founded by John Ericson and Bruce Hembd. They bring together a wide range of experiences, tips, and stories to Horn Matters. Follow this blog to find information on the French horn, brass related topics, and the field of classical music.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4883017.jpg?t=1612501384"
+    },
+    {
+      "title": "Colin Dorman",
+      "feed_url": "https://colindorman.com/feed/",
+      "website_url": "https://colindorman.com/topic/horn/",
+      "description": "A blog about the French horn, horn playing and teaching, tech, and just about anything else!",
+      "followers": {
+        "facebook": 171,
+        "twitter": 176,
+        "instagram": 280
+      },
+      "image_url": "https://i1.feedspot.com/4883034.jpg?t=1612501392"
+    },
+    {
+      "title": "Houghton Horns",
+      "feed_url": "https://houghtonhorns.com/blogs/articles.atom",
+      "website_url": "https://houghtonhorns.com/blogs/articles",
+      "description": "Houghton Horns was founded in 1985 to provide high quality repair, restoration and custom services for brass players. Follow this blog to find some of the best french horn related articles.",
+      "followers": {
+        "facebook": 18900,
+        "twitter": 289,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4883447.jpg?t=1612501410"
+    },
+    {
+      "title": "James Boldin's Horn World",
+      "feed_url": "https://jamesboldin.com/feed/",
+      "website_url": "https://jamesboldin.com/",
+      "description": "James Boldin's thoughts on teaching and playing the Horn.",
+      "followers": {
+        "twitter": 196
+      },
+      "image_url": "https://i1.feedspot.com/4883022.jpg?t=1612501398"
+    },
+    {
+      "title": "Living with Embouchure Dystonia",
+      "feed_url": "https://focalembouchuredystonia.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://focalembouchuredystonia.blogspot.com/",
+      "description": "A blog on Embouchure Dystonia; sharing my documented rehabilitation journal in-depth through videos and writing. Also to promote valuable research articles on embouchure dystonia, performance-related injuries, shared resources, and to provide guidance and hope.",
+      "followers": {
+        "facebook": 848
+      },
+      "image_url": "https://i1.feedspot.com/4883408.jpg?t=1612501406"
+    },
+    {
+      "title": "The Balanced Embouchure for Horn",
+      "feed_url": "http://beforhorn.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://beforhorn.blogspot.com/",
+      "description": "This blog is authored by Valerie Wells, a horn player sharing her success using The Balanced Embouchure (BE) and to provide a place for other horn players to share their positive experiences with BE.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4883010.jpg?t=1612501931"
+    },
+    {
+      "title": "Tubbshornstudio",
+      "feed_url": "https://tubbshornstudio.wordpress.com/feed/",
+      "website_url": "https://tubbshornstudio.wordpress.com/",
+      "description": "Tubbs horn studio provides articles on french horn testing and reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4883044.jpg?t=1612501859"
+    },
+    {
+      "title": "Online French Horn Lessons Blog",
+      "feed_url": "https://www.onlinehornlessons.com/1/feed",
+      "website_url": "https://www.onlinehornlessons.com/studio-blog",
+      "description": "Online French Horn Lessons is the online horn studio of Erika Wilsen, a professional horn performer and teacher based in San Diego. Here you will find tips and lessons for French horn students covering scales, basic theory, tunes and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4883392.jpg?t=1612501471"
+    }
+  ]
+}

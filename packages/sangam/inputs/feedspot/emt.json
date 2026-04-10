@@ -1,0 +1,165 @@
+{
+  "category": "EMT",
+  "source_url": "https://rss.feedspot.com/emt_rss_feeds",
+  "feeds": [
+    {
+      "title": "JEMS",
+      "feed_url": "https://www.jems.com/feed/",
+      "website_url": "https://www.jems.com/",
+      "description": "JEMS is your home for emergency medical services industry-leading news, information and training. Access EMS and paramedic news, training, and education. JEMS leads the industry in providing the EMS advanced provider, instructor and administrator with clinical breakthroughs, product reviews, continuing education and more.",
+      "followers": {
+        "facebook": 413600,
+        "twitter": 30600,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/1476774.jpg?t=1662375487"
+    },
+    {
+      "title": "EMS News",
+      "feed_url": "https://www.ems1.com/news.rss",
+      "website_url": "https://www.ems1.com/news",
+      "description": "EMS1 News for EMTs, paramedics, and other EMS and ambulance company professionals including current events and breaking news. We are deeply committed to providing resources and cutting-edge information to help first responders stay safer, become better informed, and more effectively protect their communities.",
+      "followers": {
+        "facebook": 320800,
+        "twitter": 26800,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5466322.jpg?t=1668418323"
+    },
+    {
+      "title": "Stem \u00bb EMS Blog",
+      "feed_url": "https://www.stem.it/en/feed/",
+      "website_url": "https://www.stem.it/en/the-ems-blog/",
+      "description": "The EMS Blog collects information and news from the rescue and medical care world. It reviews devices and equipment, technical innovations, procedures, and regulations; it involves organizations and people and gives a voice to authoritative sources. The stem is a leading company in the market of stretcher supports and retractable steps for professional vehicles.",
+      "followers": {
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5466320.jpg?t=1669120182"
+    },
+    {
+      "title": "NAEMSP Blog",
+      "feed_url": "https://naemsp.org/feed/",
+      "website_url": "https://naemsp.org/naemsp-blog/",
+      "description": "EMS MEd is the official FOAMed blog of the National Association of EMS Physicians (NAEMSP). We are passionate about advancing EMS Medicine by publishing high-quality educational content covering prehospital emergency medicine. Our blog is all about EMS medicine and education.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5466318.jpg?t=1669120320"
+    },
+    {
+      "title": "EMS Leadership Academy Blog",
+      "feed_url": "https://emsleadershipacademy.com/feed/",
+      "website_url": "https://emsleadershipacademy.com/blog/",
+      "description": "The EMS Leadership Academy has many free resources and articles designed for Emergency Medical Services leaders, both current and future. We design and deliver training programs to expand the communication & leadership capacity of EMS personnel.",
+      "followers": {
+        "facebook": 10000,
+        "instagram": 829
+      },
+      "image_url": "https://i1.feedspot.com/5466316.jpg?t=1669119449"
+    },
+    {
+      "title": "Firefighters and EMS Fund Blog",
+      "feed_url": "https://www.fireandemsfund.com/feed/",
+      "website_url": "https://www.fireandemsfund.com/blog/",
+      "description": "The mission of the Firefighters and EMS Fund is simple: to provide a grassroots voice for firefighters across the country in the state and local political process. Read our blog to know how we are always ready to help in times of need.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5298792.jpg?t=1668418279"
+    },
+    {
+      "title": "EMCrit Blog",
+      "feed_url": "https://emcrit.org/feed/",
+      "website_url": "https://emcrit.org/",
+      "description": "EMCrit is devoted to Maximally Aggressive Care: Maximally Aggressive Curative Care and Maximally Aggressive Palliative Care. To that end, we bring the best evidence-based information from the fields of critical care, resuscitation, and trauma and translate it for bedside use in the Emergency Department and the ICU. A blog & podcast for medical education on ED Intensive Care, Trauma, and Resuscitation.",
+      "followers": {
+        "facebook": 41400,
+        "twitter": 75900
+      },
+      "image_url": "https://i1.feedspot.com/5091950.jpg?t=1669119937"
+    },
+    {
+      "title": "SSCOR Blog \u00bb EMS Professionals",
+      "feed_url": "https://blog.sscor.com/topic/ems-professionals/rss.xml",
+      "website_url": "https://blog.sscor.com/topic/ems-professionals",
+      "description": "Latest in Hospital and EMS news including information on SSCOR portable suction products. We'll share information on current industry news, tips, as well as the latest and greatest in SSCOR products. SSCOR is a manufacturer of medical devices designed to aid the healthcare professional in clearing the patient airway.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5409125.jpg?t=1654842893"
+    },
+    {
+      "title": "Timer EMT Blog",
+      "feed_url": "https://www.timeremt.com/feed/",
+      "website_url": "https://www.timeremt.com/blog/",
+      "description": "Explore our blog for more information on first aid, emergency rescue, our courses and more. TIMER was founded by Monte Posner in 1980. Initially, we were a loosely knit group of REMSCO instructors before NYS launched its official curriculum for instructors. Our faculty members have extensive experience teaching emergency courses in southern Brooklyn, Staten Island, and other areas of New York.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 940
+      },
+      "image_url": "https://i1.feedspot.com/5409124.jpg?t=1654842889"
+    },
+    {
+      "title": "The Unitek EMT Blog",
+      "feed_url": "https://www.unitekemt.com/blog/feed/",
+      "website_url": "https://www.unitekemt.com/blog/",
+      "description": "The Unitek EMT Blog Includes Posts About EMT Training, EMT Courses, and EMT School. Dedicated to training the next generation of Emergency Medical Technicians, utilizing cutting-edge techniques and practical experience",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/5409123.jpg?t=1654842884"
+    },
+    {
+      "title": "EMT Training Station Blog",
+      "feed_url": "https://emttrainingstation.com/feed/",
+      "website_url": "https://emttrainingstation.com/blog/",
+      "description": "Find EMT Training Tips and Information. A Path Into The Medical Career Field. Read about the exciting career fields that open up once you become a licensed Emergency Medical Technician.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5409121.jpg?t=1658082186"
+    },
+    {
+      "title": "Everyday EMS Tips",
+      "feed_url": "https://everydayemstips.com/feed/",
+      "website_url": "https://everydayemstips.com/",
+      "description": "Tips, Resources, and Study Aids for EMTs, Paramedics, Students, and Educators. I started this blog in April 2009. Since its humble beginnings this blog became one of the leading independent blogs for EMS professionals from around the world.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5409119.jpg?t=1654842863"
+    },
+    {
+      "title": "National Center for Outdoor & Adventure Education Blog \u00bb EMT",
+      "feed_url": "https://ncoae.org/blog/tag/emt/feed/",
+      "website_url": "https://ncoae.org/blog/tag/emt/",
+      "description": "Browse through our EMT articles on our courses, EMT training, expeditions and more. We are the values-based outdoor adventure and education provider for teens and adults interested in personal growth and professional development.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 851
+      },
+      "image_url": "https://i1.feedspot.com/5409116.jpg?t=1654842849"
+    },
+    {
+      "title": "US Patriot Tactical Blog",
+      "feed_url": "https://www.uspatriottactical.com/blog",
+      "website_url": "https://www.uspatriottactical.com/blog",
+      "description": "We have articles just for you that cover current events that affect your work, new practices & equipment available, and the most current industry-specific information you need to be most effective in the field. We'll even do deep dives into new product lines available for paramedics and what situations those have proven to be most effective. Since 2000, USP has served America's heroes at home and abroad. As a veteran-owned and managed company, we understand the meaning of service and placing the needs of others above your own.",
+      "followers": {
+        "facebook": 319600,
+        "twitter": 1300,
+        "instagram": 36400
+      },
+      "image_url": "https://i1.feedspot.com/5409120.jpg?t=1654842868"
+    },
+    {
+      "title": "THEEMTSPOT",
+      "feed_url": "https://www.theemtspot.org/blood-pressure/news/",
+      "website_url": "https://www.theemtspot.org/blood-pressure/news/",
+      "description": "TheEMTSpot will be your one-stop solution for all queries you have. Your delicate heart needs total care, and that's why you need an all-in-one spot to know everything about your blood pressure and heart health.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5466317.jpg?t=1669119237"
+    }
+  ]
+}

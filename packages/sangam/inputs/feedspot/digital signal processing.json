@@ -1,0 +1,63 @@
+{
+  "category": "Digital Signal Processing",
+  "source_url": "https://rss.feedspot.com/digital_signal_processing_rss_feeds",
+  "feeds": [
+    {
+      "title": "DSP Related Blogs",
+      "feed_url": "https://www.dsprelated.com/blogs_rss.php/feed",
+      "website_url": "https://www.dsprelated.com/blogs.php",
+      "description": "A blog is all about Digital Signal Processing, white papers, business directory, free PDF downloads, code snippets, etc.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 831
+      },
+      "image_url": "https://i1.feedspot.com/4958591.jpg?t=1621855659"
+    },
+    {
+      "title": "Ecstuff4u",
+      "feed_url": "https://www.ecstuff4u.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.ecstuff4u.com/",
+      "description": "This page is for Electronics related stuff and some useful information about electronics & electrical engineering.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 35300
+      },
+      "image_url": "https://i1.feedspot.com/4958753.jpg?t=1621855664"
+    },
+    {
+      "title": "Cyclostationary Signal Processing Blog",
+      "feed_url": "https://cyclostationary.blog/feed/",
+      "website_url": "https://cyclostationary.blog/",
+      "description": "The purpose of this blog is to talk about cyclostationary signals and cyclostationary signal processing (CSP). Understanding and Using the Statistics of Communication Signals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4958917.jpg?t=1621855739"
+    },
+    {
+      "title": "Joceli Mayer",
+      "feed_url": "https://mayerdsp.wordpress.com/feed/",
+      "website_url": "https://mayerdsp.wordpress.com/",
+      "description": "This blog is about DSP. Links, demonstrations, and discussions on fundamentals of Digital Signal Processing. The posts aim to help students and practitioners as well as to motivate people to understand and apply DSP algorithms. Joceli Mayer is a Professor of Electrical Engineering from the Federal University of Santa Catarina, Brazil.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3947765.jpg?t=1679895812"
+    },
+    {
+      "title": "The Numerix-DSP Blog",
+      "feed_url": "https://blog.numerix-dsp.com/feeds/posts/default",
+      "website_url": "https://blog.numerix-dsp.com/",
+      "description": "The Numerix-DSP Blog discusses all things DSP, AI, ML, IoT, and more. Author Real Gone Geeks is a Telecommunications Engineer and they write about an array of topics related to Signal Processing some of them being DSP using TensorFlow, DSP in C/C++, and the fundamentals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5523947.jpg?t=1679385427"
+    },
+    {
+      "title": "IEEE Signal Processing Society",
+      "feed_url": "https://signalprocessingsociety.org/rss.xml",
+      "website_url": "https://signalprocessingsociety.org/",
+      "description": "The IEEE Signal Processing Society is the world's premier association for signal processing engineers and industry professionals.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4602990.jpg?t=1621855676"
+    }
+  ]
+}

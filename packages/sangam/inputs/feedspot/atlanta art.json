@@ -1,0 +1,83 @@
+{
+  "category": "Atlanta Art",
+  "source_url": "https://rss.feedspot.com/atlanta_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Burnaway",
+      "feed_url": "https://burnaway.org/feed/",
+      "website_url": "https://burnaway.org/",
+      "description": "Through essays, artist projects, exhibitions, and interviews, Burnaway both documents and participates in the vibrant cultural landscape of the South today. Burnaway is an Atlanta-based, non-profit magazine of contemporary art and criticism from the American South, published online weekly and in print annually.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 4500,
+        "instagram": 23500
+      },
+      "image_url": "https://i1.feedspot.com/3485008.jpg?t=1663159714"
+    },
+    {
+      "title": "Distillery of Modern Art Blog",
+      "feed_url": "https://distilleryofmodernart.com/feed/",
+      "website_url": "https://distilleryofmodernart.com/blog/",
+      "description": "Distillery of Modern Art is an experience unlike any in the world, combining a modern art gallery supporting local artists and installations, a cocktail lounge featuring drinks from journeyed mixologists, and a 2,800 sq. ft. event space hosting memorable celebrations. Our blog talks about murals, drinks, and other arts of different shapes to give you an insider's knowledge of the goings-on here at the Distillery. Seek more and start reading about art.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 105,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5441789.jpg?t=1666080186"
+    },
+    {
+      "title": "Dawn Kinney Martin Blog",
+      "feed_url": "https://www.dawnart.com/dawnart?format=rss",
+      "website_url": "https://www.dawnart.com/dawnart",
+      "description": "Dawn Kinney Martin is an award-winning artist from Atlanta with national and international collectors. An artist and teacher, Dawn opened DawnArt Studios LLC in Atlanta and is teaching classes and workshops there. Her Blog showcases her thoughts, latest projects, art tips and experiences she has throughout her work.",
+      "followers": {
+        "facebook": 798,
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/5441791.jpg?t=1663158989"
+    },
+    {
+      "title": "ArtsATL",
+      "feed_url": "https://www.artsatl.org/feed/",
+      "website_url": "https://www.artsatl.org/",
+      "description": "ARTS ATL offers comprehensive coverage of Atlanta's arts scene, including music, film and TV, books, theater, dance, and the visual arts, while supporting arts in Atlanta through independent journalism and programs. ArtsATL is a non-profit that provides comprehensive coverage of the arts in metro Atlanta and has grown to become an essential part of the city's arts community.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 8000,
+        "instagram": 43600
+      },
+      "image_url": "https://i1.feedspot.com/4819004.jpg?t=1669707284"
+    },
+    {
+      "title": "Erickson_Artroom Art Blog",
+      "feed_url": "https://ericksonartroom.weebly.com/1/feed",
+      "website_url": "https://ericksonartroom.weebly.com/",
+      "description": "Sarah Erickson shares her journey with you in her Artroom Blog. She shares, tips, reports, and vivid experiences she has with kids as a teacher. Sarah is a Fine and Performing Arts Support Teacher, engaged in creatively highlighting the remarkable work of teachers and students in Atlanta through her blog.",
+      "followers": {
+        "twitter": 656
+      },
+      "image_url": "https://i1.feedspot.com/5441790.jpg?t=1663158984"
+    },
+    {
+      "title": "Katie Phillips Fine Art Blog",
+      "feed_url": "https://www.katiephillipsart.com/blog-feed.xml",
+      "website_url": "https://www.katiephillipsart.com/blog",
+      "description": "Katie Phillips takes you on her adventures navigating the world of art in her blog. She tackles topics like shows, painting workshops, interior design trends, and spotlight galleries near Atlanta. Katie is an artist and loves creating texture and unique blends of colors. Her favorite subjects include elegant abstracts, soft feminine florals, and inviting landscapes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5441794.jpg?t=1663159351"
+    },
+    {
+      "title": "Jackson Fine Art",
+      "feed_url": "https://www.jacksonfineart.com/news/",
+      "website_url": "https://www.jacksonfineart.com/news/",
+      "description": "Get access to Press releases, Events, and Archives from Jackson Fine Art Gallery. Find information on eclectic and distinguished pieces of art by renowned artists from all over the world exhibiting at Jackson Fine Art. We support fine art photography artists. Our services include curating, managing collections, framing, and installing.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 2200,
+        "instagram": 23200
+      },
+      "image_url": "https://i1.feedspot.com/5441801.jpg?t=1663160050"
+    }
+  ]
+}

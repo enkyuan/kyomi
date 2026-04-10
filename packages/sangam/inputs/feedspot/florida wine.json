@@ -1,0 +1,82 @@
+{
+  "category": "Florida Wine",
+  "source_url": "https://rss.feedspot.com/florida_wine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Keel Farms Blog",
+      "feed_url": "https://www.keelfarms.com/blog?format=rss",
+      "website_url": "https://www.keelfarms.com/blog",
+      "description": "Keel Farms is home to Keel + Curley Winery and Keel Farms Agrarian Ales and Ciders. At Keel Farms we exist to share our farm and grow the family through remarkable products and experiences. We offer tours, tastings, dining, events, and many farm activities year-round! Explore our blog to know more about our farm, experiences, wines and more!",
+      "followers": {
+        "facebook": 58400
+      },
+      "image_url": "https://i1.feedspot.com/5490107.jpg?t=1673250916"
+    },
+    {
+      "title": "History & Wine",
+      "feed_url": "https://historyandwine.com/feed/",
+      "website_url": "https://historyandwine.com/",
+      "description": "Jacqueline Coleman is a published wine + travel writer, podcast host, wine judge, & consultant. Explore her Wine Reviews & Musings about the 'Wine Lifestyle' in South Florida and Beyond.",
+      "followers": {
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/1821481.jpg?t=1605161646"
+    },
+    {
+      "title": "Schnebly Redland's Winery Blog",
+      "feed_url": "https://schneblywinery.com/bookings/feed/",
+      "website_url": "https://schneblywinery.com/bookings/blog/",
+      "description": "Wine Blogging is the best kind of blogging for true Wine lovers! Learn more about the world of exotic fruit Wines with our blog. Schnebly Winery, the Southernmost Winery in the United States, offers a unique selection of exotic tropical fruit wines in a paradisiac setting featuring gorgeous waterfalls surrounded by tiki huts. Enjoy wine tastings, farm-to-table food, live music and much more!",
+      "followers": {
+        "facebook": 38100,
+        "instagram": 49200
+      },
+      "image_url": "https://i1.feedspot.com/5490106.jpg?t=1673250911"
+    },
+    {
+      "title": "Ed's Fine Wine Blog",
+      "feed_url": "https://www.edsfinewines.com/feed/",
+      "website_url": "https://www.edsfinewines.com/brunellos-blog/",
+      "description": "Our knowledgeable staff has years of experience and pride themselves in providing outstanding customer service. Whether you're looking for everyday or extraordinary we've got you covered. Besides our extensive selection of fine wines we also offer many other services such as private wine tastings, custom wine labels, wine shipping and lots more. Learn more about wines, history, news and more!",
+      "followers": {
+        "facebook": 946
+      },
+      "image_url": "https://i1.feedspot.com/5490110.jpg?t=1673250945"
+    },
+    {
+      "title": "Small Wine Shop Blog",
+      "feed_url": "https://smallwineshop.com/feed/",
+      "website_url": "https://smallwineshop.com/blog/",
+      "description": "Get access to the latest happenings, and wine stories. Come explore the world of wine with us! At the small wine shop, we recommend and provide you with one of the finest wines, from interesting wines that are as comfortable hanging out with you in your flip-flops to special occasion dinners, we have it all!",
+      "followers": {
+        "facebook": 560,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5529947.jpg?t=1680159541"
+    },
+    {
+      "title": "Island Grove Wine Blog",
+      "feed_url": "https://www.islandgrovewinecompany.com/blog-feed.xml",
+      "website_url": "https://www.islandgrovewinecompany.com/blog",
+      "description": "Here at Island Grove we specialize in fine blueberry wines using the freshest blueberries from our own Florida plantations. Along the way we began making different wines and now several years later, we have a whole portfolio of fun, fresh and exciting wines. Browse through our blog to know more about wines, our winery, tips to drink your wine and more!",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 94,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5490108.jpg?t=1673251056"
+    },
+    {
+      "title": "Florida Wine Academy Blog",
+      "feed_url": "https://floridawineacademy.com/blogs/blog.atom",
+      "website_url": "https://floridawineacademy.com/blogs/blog/",
+      "description": "Florida Wine Academy is the leading provider of wine, spirits and sake education in Florida. We offer WSET (Wine & Spirit Education Trust) courses as an Approved Program Provider. WSET is globally recognized as the international standard in wine and spirit knowledge. Check out our courses, press release and articles on wine education.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 361,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5490109.jpg?t=1673250932"
+    }
+  ]
+}

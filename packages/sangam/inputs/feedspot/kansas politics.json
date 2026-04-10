@@ -1,0 +1,104 @@
+{
+  "category": "Kansas Politics",
+  "source_url": "https://rss.feedspot.com/kansas_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kansas Reflector",
+      "feed_url": "https://kansasreflector.com/feed/",
+      "website_url": "https://kansasreflector.com/category/politics-government/",
+      "description": "Kansas Reflector is a non-profit news outlet that was founded in 2020 by a group of veteran journalists. Its mission is to provide investigative journalism, explanatory reporting, and analysis of public policy issues affecting the Kansas community. Its focus areas include healthcare, education, social justice, and the environment.",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/5314051.jpg?t=1629460842"
+    },
+    {
+      "title": "Insight Kansas",
+      "feed_url": "https://insightkansas.wordpress.com/feed/",
+      "website_url": "https://insightkansas.wordpress.com/",
+      "description": "Insight Kansas is the central link repository for statewide syndicated columns on Kansas politics by political scientists in Kansas.",
+      "followers": {
+        "twitter": 315
+      },
+      "image_url": "https://i1.feedspot.com/5313966.jpg?t=1629455736"
+    },
+    {
+      "title": "Kansas Policy Institute",
+      "feed_url": "https://kansaspolicy.org/feed/",
+      "website_url": "https://kansaspolicy.org/",
+      "description": "Kansas Policy Institute is an independent non-profit organization that advocates for free enterprise solutions and the protection of personal freedom. They are focused on state and local economic issues in Kansas.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5313969.jpg?t=1629455996"
+    },
+    {
+      "title": "KSN TV Politics",
+      "feed_url": "https://www.ksn.com/news/politics/feed/",
+      "website_url": "https://www.ksn.com/news/politics/",
+      "description": "KSN TV covers local Wichita Kansas news & weather stories. This section of the news website covers political updates and news.",
+      "followers": {
+        "facebook": 190300,
+        "twitter": 79100
+      },
+      "image_url": "https://i1.feedspot.com/5313961.jpg?t=1629455209"
+    },
+    {
+      "title": "Mainstream Coalition Blog",
+      "feed_url": "https://www.mainstreamcoalition.org/blog.rss",
+      "website_url": "https://www.mainstreamcoalition.org/blog",
+      "description": "Mainstream Coalition is dedicated to creating a more representative and responsive government by empowering informed participation and meaningful action in the political process.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5313928.jpg?t=1629454529"
+    },
+    {
+      "title": "Voice For Liberty",
+      "feed_url": "https://www.wichitaliberty.org/feed/",
+      "website_url": "https://www.wichitaliberty.org/category/politics/",
+      "description": "Voice For Liberty by Bob Weeks explores and reports on issues of government, media, and individual liberty in Wichita, Sedgwick County, the State of Kansas, and, to a lesser degree, the United States.",
+      "followers": {
+        "facebook": 621,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5314041.jpg?t=1629459714"
+    },
+    {
+      "title": "KSNT News Election News",
+      "feed_url": "https://www.ksnt.com/elections/feed/",
+      "website_url": "https://www.ksnt.com/elections/",
+      "description": "KSNT News covers local Topeka and Northeast Kansas News & Weather stories. This section covers Election news and updates.",
+      "followers": {
+        "facebook": 188700,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5313962.jpg?t=1629455334"
+    },
+    {
+      "title": "KSNT News Politics",
+      "feed_url": "https://www.ksnt.com/news/politics/feed/",
+      "website_url": "https://www.ksnt.com/news/politics/",
+      "description": "The Latest News and Updates in Politics brought to you by the team at KSNT News.",
+      "followers": {
+        "facebook": 188700,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5313986.jpg?t=1629459025"
+    },
+    {
+      "title": "Kansas Republican Party",
+      "feed_url": "https://www.kansas.gop/blog-feed.xml",
+      "website_url": "https://www.kansas.gop/news",
+      "description": "Updates from the official Kansas Republican Party. The Kansas Republican Party was organized in May 1859 and has often been the dominant political party in the state",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5313988.jpg?t=1629458464"
+    }
+  ]
+}

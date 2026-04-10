@@ -1,0 +1,53 @@
+{
+  "category": "Singapore Immigration",
+  "source_url": "https://rss.feedspot.com/singapore_immigration_rss_feeds",
+  "feeds": [
+    {
+      "title": "Singapore Top Immigration Blog",
+      "feed_url": "https://singaporetopimmigration.sg/feed/",
+      "website_url": "https://singaporetopimmigration.sg/blogs/",
+      "description": "We are a Singapore-based immigration consultancy firm, with highly skilled professionals of more than 8 years of experience in the industry. Singapore Top Immigration is specially established to provide professional immigration services that are tailored to varied individuals, who aspire to be Singapore PR or Singapore Citizens.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5569118.jpg?t=1684309703"
+    },
+    {
+      "title": "Immigration@SG",
+      "feed_url": "https://iasg.com.sg/feed/",
+      "website_url": "https://iasg.com.sg/news-articles/",
+      "description": "Immigration@SG LLP (IASG) is a Singapore-based immigration consultancy firm providing comprehensive immigration services to cater to the varying needs of businesses and individuals. Our in-depth knowledge of Singapore immigration laws and policies, as well as extensive experience in handling a myriad of unique and complex immigration cases, allow IASG to offer clients sound and strategic immigration advice with full compliance with the local laws and regulations.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 21,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5569167.jpg?t=1684310255"
+    },
+    {
+      "title": "Migrations Blog",
+      "feed_url": "https://migrations.sg/feed/",
+      "website_url": "https://migrations.sg/blogs/",
+      "description": "Over the years, we have amassed a wealth of knowledge and experience in the migration industry through our international engagements with clients, immigration lawyers, registered migration agents, immigration case officers, partners, attorneys, and stakeholders. Our continued presence allows us an opportunity to enable a change in your and your family's lifestyle.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5569117.jpg?t=1684309575"
+    },
+    {
+      "title": "Singapore Immigration Services",
+      "feed_url": "https://singaporeimmigrationservices.com/feed/",
+      "website_url": "https://singaporeimmigrationservices.com/insights/",
+      "description": "As a leading immigrating consultancy firm in Singapore, we provide a wide range of solutions to help you get your Singapore Citizenship or Permanent Resident application status. Our team of professionals is knowledgeable about Singapore immigration policies and is here to help you in every step of the application process with ICA.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5569115.jpg?t=1684309671"
+    },
+    {
+      "title": "The Immigration People Blog",
+      "feed_url": "https://theimmigrationpeople.home.blog/feed/",
+      "website_url": "https://theimmigrationpeople.home.blog/",
+      "description": "We are The Immigration People (TIP) - a superstar team comprising dedicated staff with more than 15 years of collective experience in Singapore immigration matters. We at TIP, approach all cases in a highly personalized way and see them through to fruition with pure grit to achieve the best results in Bringing Singapore Closer to our clients.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5569114.jpg?t=1684309259"
+    }
+  ]
+}

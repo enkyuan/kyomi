@@ -1,0 +1,30 @@
+{
+  "category": "Amazon",
+  "source_url": "https://rss.feedspot.com/amazon_rss_feeds",
+  "feeds": [
+    {
+      "title": "Amazon Fire TV Blog",
+      "feed_url": "https://amazonfiretv.blog/feed",
+      "website_url": "https://amazonfiretv.blog/",
+      "description": "Get the latest news, updates, information, and reviews about Amazon Fire TV. Amazon Fire TV is a line of digital media players and micro consoles developed by Amazon. The device is available in two form factors, a set-top box, and a HDMI plug-in stick. Fire TV Stick simplifies streaming with power, volume, and mute buttons in a single remote.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 65800,
+        "instagram": 78900
+      },
+      "image_url": "https://i1.feedspot.com/5432243.jpg?t=1660652772"
+    },
+    {
+      "title": "Amazon Luna Blog",
+      "feed_url": "https://amazonluna.blog/feed",
+      "website_url": "https://amazonluna.blog/",
+      "description": "Find the latest updates, information announcements, and more from team luna. Amazon Luna is a cloud gaming platform developed and operated by Amazon. Amazon Luna makes it easy to play your favorite games across devices without waiting for lengthy downloads and updates.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 37600,
+        "instagram": 33000
+      },
+      "image_url": "https://i1.feedspot.com/5432244.jpg?t=1660652679"
+    }
+  ]
+}

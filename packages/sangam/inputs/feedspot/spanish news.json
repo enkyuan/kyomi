@@ -1,0 +1,209 @@
+{
+  "category": "Spanish News",
+  "source_url": "https://rss.feedspot.com/spanish_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "EL PA\u00cdS",
+      "feed_url": "https://feeds.elpais.com/mrss-s/pages/ep/site/english.elpais.com/portada",
+      "website_url": "https://english.elpais.com/",
+      "description": "English version of EL PA\u00cdS to read online: breaking news, opinion and editorial, reviews, features, science, business, culture, sports, travel, education & more with EL PA\u00cdS, the global newspaper in Spanish.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 8900000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/1711492.jpg?t=1721368045"
+    },
+    {
+      "title": "Elmundo",
+      "feed_url": "https://e00-elmundo.uecdn.es/rss/portada.xml",
+      "website_url": "https://www.elmundo.es/",
+      "description": "El Mundo provides a comprehensive look at current events, offering in-depth coverage of both national and international news. The site includes sections on politics, economy, sports, culture, and technology. It features investigative journalism, opinion pieces, and multimedia content such as videos and photo galleries to keep readers informed about significant global and local developments.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 4700000
+      },
+      "image_url": "https://i1.feedspot.com/4740259.jpg?t=1721721254"
+    },
+    {
+      "title": "El Diario",
+      "feed_url": "https://www.eldiario.es/rss",
+      "website_url": "https://www.eldiario.es/",
+      "description": "elDiario.es provides in-depth news coverage with a focus on Spanish and international affairs. It features sections on politics, economy, culture, technology, and society. The site includes opinion pieces, investigative journalism, and multimedia content such as videos and podcasts. Additionally, it offers localized editions for various regions in Spain, ensuring comprehensive and diverse reporting.",
+      "followers": {
+        "facebook": 729900,
+        "twitter": 1500000,
+        "instagram": 731200
+      },
+      "image_url": "https://i1.feedspot.com/5129369.jpg?t=1721720816"
+    },
+    {
+      "title": "The Local Spain",
+      "feed_url": "https://feeds.thelocal.com/rss/es",
+      "website_url": "https://www.thelocal.es/",
+      "description": "The Local is the largest Spain's News source in English. Our entertaining blend of daily news, business and features has made the site essential reading for foreign professionals in Europe.",
+      "followers": {
+        "facebook": 73200,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/4478771.jpg?t=1603890627"
+    },
+    {
+      "title": "Euro Weekly News",
+      "feed_url": "https://euroweeklynews.com/feed/",
+      "website_url": "https://euroweeklynews.com/",
+      "description": "The EWN Media Group (EWNMG) has 13 weekly titles in its portfolio of English-language newspapers in southern Spain. While consistently providing first class coverage of local news and features to hundreds of thousands of readers every week, it is also constantly making headline news in publishing by expanding at a time when globally the news media industry is more used to closures.",
+      "followers": {
+        "facebook": 87300,
+        "twitter": 9400,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4868891.jpg?t=1522061522"
+    },
+    {
+      "title": "The Olive Press",
+      "feed_url": "https://www.theolivepress.es/feed/",
+      "website_url": "https://www.theolivepress.es/",
+      "description": "The Olive Press is the English language newspaper for Andalucia. Local news from Costa del Sol and inland Andalucia plus national news from around Spain.",
+      "followers": {
+        "facebook": 49000,
+        "twitter": 10100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/1012849.jpg?t=1635251285"
+    },
+    {
+      "title": "The Canary News",
+      "feed_url": "https://thecanarynews.com/feed/",
+      "website_url": "https://thecanarynews.com/",
+      "description": "The Canary News. The only English language newspaper, for residents and visitors, reporting direct from Gran Canaria.",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4635090.jpg"
+    },
+    {
+      "title": "El Diario NY",
+      "feed_url": "https://eldiariony.com/feed/",
+      "website_url": "https://eldiariony.com/",
+      "description": "El Diario NY offers the latest news in Spanish from New York, the U.S., and around the world. The site covers a variety of topics including politics, immigration, entertainment, sports, and health. It features breaking news, in-depth reports, opinion pieces, and multimedia content to keep readers well-informed and engaged.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 53200
+      },
+      "image_url": "https://i1.feedspot.com/7327505.jpg?t=1721720513"
+    },
+    {
+      "title": "Majorca Daily Bulletin",
+      "feed_url": "https://www.majorcadailybulletin.com/feed.rss",
+      "website_url": "https://www.majorcadailybulletin.com/",
+      "description": "All the very latest local news, sport, crime, comment, tourism and what's on for English-speaking residents in the Balearic Islands. Information in English since 1962.",
+      "followers": {
+        "facebook": 43600,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/4635151.jpg"
+    },
+    {
+      "title": "The Leader Newspaper",
+      "feed_url": "https://theleader.info/feed/",
+      "website_url": "https://theleader.info/",
+      "description": "Leader Newspaper offers News, Sport, Advertising, Property, Classifieds for Costa Blanca, Costa del Sol, Costa Calida, Costa de Almeria, Spain.",
+      "followers": {
+        "facebook": 85100,
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/4635218.jpg"
+    },
+    {
+      "title": "Seaside Gazette",
+      "feed_url": "https://www.theseasidegazette.com/feed/",
+      "website_url": "https://www.theseasidegazette.com/",
+      "description": "The Seaside Gazette - up to date news & views on all aspects of life in the Costa Tropical, Andalucia, Spain including Almu\u00f1ecar, Salobre\u00f1a, Motril and La.",
+      "followers": {
+        "facebook": 437,
+        "twitter": 208
+      },
+      "image_url": "https://i1.feedspot.com/4635184.jpg"
+    },
+    {
+      "title": "Madrid Metropolitan",
+      "feed_url": "https://www.madridmetropolitan.com/feed/",
+      "website_url": "https://www.madridmetropolitan.com/",
+      "description": "Madrid's only English language magazine. Get Madrid News, Madrid Lifestyle, Madrid Whats On, Madrid Features, Madrid Interviews, Madrid Interviews, Spain News In English.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 409,
+        "instagram": 709
+      },
+      "image_url": "https://i1.feedspot.com/5156332.jpg?t=1590483426"
+    },
+    {
+      "title": "Valencia International",
+      "feed_url": "https://valencia-international.com/feed/",
+      "website_url": "http://valencia-international.com/",
+      "description": "Valencia International is an English language newspaper about all the good news from Valencia, Spain.",
+      "followers": {
+        "facebook": 455,
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/4635232.jpg?t=1553497229"
+    },
+    {
+      "title": "Valencian",
+      "feed_url": "https://valencian.es/feed/",
+      "website_url": "https://valencian.es/",
+      "description": "Valencia News is an online news site that features the most recent headlines from Valencia, La Comunidad Valenciana, and Spain in general. We publish not only news about daily life in Valencia, but also news about business, tourism, real estate, entertainment, lifestyle, and events, with a special focus on foreigners living here as well as people preparing to make the move.",
+      "followers": {
+        "facebook": 59,
+        "twitter": 72,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5270563.jpg?t=1618653746"
+    },
+    {
+      "title": "Costa News",
+      "feed_url": "https://www.costa-news.com/feed/",
+      "website_url": "https://www.costa-news.com/",
+      "description": "Founded in 1971 by Brian Sumner, the Costa Blanca News started life as an English page in the Ciudad newspaper in Alcoy. The Costa Blanca News website includes a selection of news stories and features from the main publication as well as all the classified adverts. Updated everyday, the website receives thousands of visits.",
+      "followers": {
+        "facebook": 25800,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4635077.jpg"
+    },
+    {
+      "title": "Tenerife News",
+      "feed_url": "https://www.tenerifenews.com/feed/",
+      "website_url": "https://www.tenerifenews.com/",
+      "description": "TENERIFE NEWS, was founded in 1994 for English-speaking readers. At present the circulation exceeds 14,000 copies. We are bi-weekly and free distribution.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4635107.jpg?t=1635332988"
+    },
+    {
+      "title": "The Resident",
+      "feed_url": "http://theresident.eu/feed/",
+      "website_url": "https://theresident.eu/",
+      "description": "The Resident brings you news, information and articles on the western Costa del Sol, in Spain's southernmost region of Andalucia, including Marbella, Estepona, Manilva, Casares, Gibraltar, Sotogrande and more.",
+      "followers": {
+        "facebook": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4635221.jpg"
+    },
+    {
+      "title": "ButterWord",
+      "feed_url": "https://butterword.com/feeds/posts/default",
+      "website_url": "https://butterword.com/",
+      "description": "ButterWord is a Spanish news publishing blog. We publish quality latest Spanish news posts on world, lifestyle, business, politics, entertainment, travel, sports, and tech categories. ButterWord is a leading Spanish publication. Most millions of readers come from Latin America to read latest news in Spanish. They are enjoying to read daily truth and authentic news updates. ButterWord delivers most trusted news from America and around the world.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 98
+      },
+      "image_url": "https://i1.feedspot.com/5761129.jpg?t=1706099484"
+    }
+  ]
+}

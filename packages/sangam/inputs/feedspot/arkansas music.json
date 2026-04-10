@@ -1,0 +1,65 @@
+{
+  "category": "Arkansas Music",
+  "source_url": "https://rss.feedspot.com/arkansas_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Symphony of Northwest Arkansas Blog",
+      "feed_url": "https://www.sonamusic.org/blog?format=rss",
+      "website_url": "https://www.sonamusic.org/blog",
+      "description": "Latest news, collaborations, events and announcements by Symphony of Northwest Arkansas.The Symphony of Northwest Arkansas (SoNA) has provided classical and pops musical performances and educational across Northwest Arkansas",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 120,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5311753.jpg?t=1673247245"
+    },
+    {
+      "title": "The Arkansas Traveler \u00bb Music",
+      "feed_url": "https://www.uatrav.com/search/?f=rss&t=article&c=lifestyles/music&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.uatrav.com/lifestyles/music/",
+      "description": "Get the latest local music news, releases, festivals and reviews on the Arkansas Traveler.The Arkansas Traveler is an award-winning student newspaper striving to serve The University of Arkansas with reliable news source and to identify and protect student interests.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 11300,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5319249.jpg?t=1630765219"
+    },
+    {
+      "title": "Music Moves Arkansas Blog",
+      "feed_url": "https://musicmovesar.com/feed/",
+      "website_url": "https://musicmovesar.com/blog/",
+      "description": "Music Moves develops curriculum, programs, and performances to share the the extraordinary contributions of African Americans in all musical genres. Our mission is to make Black music accessible to students and to our entire community.",
+      "followers": {
+        "facebook": 4700,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5441802.jpg?t=1663159217"
+    },
+    {
+      "title": "NWA Rocks",
+      "feed_url": "https://www.nwarocks.com/feed/",
+      "website_url": "https://www.nwarocks.com/news/",
+      "description": "Stay up to date with Northwest Arkansas Music news on NWArocks.com. Covers articles on world music news, festivals, events and industry news.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 332,
+        "instagram": 433
+      },
+      "image_url": "https://i1.feedspot.com/5319246.jpg?t=1663159557"
+    },
+    {
+      "title": "The Domestic Musician Blog",
+      "feed_url": "https://www.thedomesticmusician.com/feed/",
+      "website_url": "https://www.thedomesticmusician.com/elementary-music-education-blog/",
+      "description": "An elementary music education blog and elementary music teacher blog. You'll find inspiration and ideas for your elementary music teaching and classroom.At The Domestic Musician, you'll find elementary music education resources and ideas for you to use in your music classroom.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1200,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4755011.jpg?t=1606991392"
+    }
+  ]
+}

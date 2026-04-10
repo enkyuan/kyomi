@@ -1,0 +1,68 @@
+{
+  "category": "Corporate Governance",
+  "source_url": "https://rss.feedspot.com/corporate_governance_rss_feeds",
+  "feeds": [
+    {
+      "title": "CLS Blue Sky Blog \u00bb Corporate Governance",
+      "feed_url": "https://clsbluesky.law.columbia.edu/category/corporate-governance/feed/",
+      "website_url": "https://clsbluesky.law.columbia.edu/category/corporate-governance/",
+      "description": "All latest articles about Corporate Governance from CLS Blue Sky Blog.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5174781.jpg?t=1764322804"
+    },
+    {
+      "title": "The Guardian \u00bb Corporate Governance",
+      "feed_url": "https://www.theguardian.com/business/corporate-governance/rss",
+      "website_url": "https://www.theguardian.com/business/corporate-governance",
+      "description": "Latest Corporate governance news from the Guardian, the world's leading liberal voice.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5174814.jpg?t=1626265815"
+    },
+    {
+      "title": "Financial Times \u00bb Corporate Governance",
+      "feed_url": "https://www.ft.com/stream/324fbfe6-b453-46f1-92ed-315aea70de27?format=rss",
+      "website_url": "https://www.ft.com/corporate-governance",
+      "description": "News, analysis, and comment from the Financial Times, the world's leading global business publication.",
+      "followers": {
+        "twitter": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5174824.jpg?t=1626265820"
+    },
+    {
+      "title": "The Conversation \u00bb Corporate governance",
+      "feed_url": "https://theconversation.com/topics/corporate-governance-1051/articles.atom",
+      "website_url": "https://theconversation.com/topics/corporate-governance-1051/",
+      "description": "Curated by professional editors, The Conversation offers informed commentary and debate on the issues affecting our world. Plus a Plain English guide to the latest developments and discoveries from the university and research sector. Browse Corporate governance news, research and analysis from The Conversation.",
+      "followers": {
+        "facebook": 118100,
+        "twitter": 65300
+      },
+      "image_url": "https://i1.feedspot.com/5174818.jpg?t=1626265846"
+    },
+    {
+      "title": "CorpGov.net",
+      "feed_url": "https://www.corpgov.net/feed/",
+      "website_url": "https://www.corpgov.net/",
+      "description": "Corporate Governance (CorpGov.net) was founded in 1995 to provide news, commentary and a network for those interested in transforming an arcane subject, discussed at a snail's pace in academia and by a few dozen practitioners, to a more practical discipline where knowledge is shared and put into practice by investors and corporations at much closer to the speed of light.",
+      "followers": {
+        "facebook": 91,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5040777.jpg?t=1612168055"
+    },
+    {
+      "title": "Integrity Governance",
+      "feed_url": "https://integritygovernance.co.uk/feed/",
+      "website_url": "https://integritygovernance.co.uk/insights/",
+      "description": "The team at Integrity Governance discuss current topics and news, provide commentary, business insights, analysis, and perspectives. Founded over 17 years ago, Integrity Governance provides governance consultancy services that adds value to boards, which includes helping them to move beyond compliance and focus on performance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5484150.jpg?t=1672135263"
+    }
+  ]
+}

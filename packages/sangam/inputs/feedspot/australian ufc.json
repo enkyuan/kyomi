@@ -1,0 +1,28 @@
+{
+  "category": "Australian UFC",
+  "source_url": "https://rss.feedspot.com/australian_ufc_rss_feeds",
+  "feeds": [
+    {
+      "title": "FIGHTMAG \u00bb UFC",
+      "feed_url": "https://www.fightmag.com/ufc/feed/",
+      "website_url": "https://www.fightmag.com/ufc/",
+      "description": "FIGHTMAG is a media outlet that covers all things related to combat sports, including boxing, MMA, bare-knuckle fighting, and other combat disciplines. It's the go-to place for fans seeking the latest news, interviews, event coverage, and more from the world of fighting sports.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5408925.jpg?t=1654772840"
+    },
+    {
+      "title": "Gold Coast Bulletin \u00bb UFC",
+      "feed_url": "https://www.goldcoastbulletin.com.au/sport/ufc",
+      "website_url": "https://www.goldcoastbulletin.com.au/sport/ufc",
+      "description": "Get all the latest UFC news, results, rankings, schedule and inside details on the most trending UFC fighters. goldcoastbulletin.com.au, along with The Gold Coast Bulletin print edition, gives you the best and latest news, information and entertainment about the Gold Coast - Australia's sixth largest city.",
+      "followers": {
+        "facebook": 232200,
+        "twitter": 47500,
+        "instagram": 64900
+      },
+      "image_url": "https://i1.feedspot.com/5408924.jpg?t=1654772837"
+    }
+  ]
+}

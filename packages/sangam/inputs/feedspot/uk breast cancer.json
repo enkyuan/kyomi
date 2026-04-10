@@ -1,0 +1,61 @@
+{
+  "category": "UK Breast Cancer",
+  "source_url": "https://rss.feedspot.com/uk_breast_cancer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Prevent Breast Cancer",
+      "feed_url": "https://preventbreastcancer.org.uk/feed/",
+      "website_url": "https://preventbreastcancer.org.uk/",
+      "description": "Prevent Breast Cancer is the only UK breast cancer charity researching how to predict, prevent and protect future generations from developing breast cancer.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 4200,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4908862.jpg?t=1669956448"
+    },
+    {
+      "title": "Against Breast Cancer",
+      "feed_url": "https://www.againstbreastcancer.org.uk/feed",
+      "website_url": "https://www.againstbreastcancer.org.uk/news",
+      "description": "The latest charity and research news and stories from the supporters and research team of Against Breast Cancer",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 18100
+      },
+      "image_url": "https://i1.feedspot.com/4908857.jpg?t=1669956517"
+    },
+    {
+      "title": "Breast-Surgeon.co.uk Blog",
+      "feed_url": "https://breast-surgeon.co.uk/feed/",
+      "website_url": "https://breast-surgeon.co.uk/breast-surgery-stories/",
+      "description": "Click here to discover breast surgery stories, tips, and advice. Get the skills and knowledge to help you make great decisions about your breasts. I'm Dr. Lucy Khan, I am a consultant oncoplastic and cosmetic breast surgeon working in the UK. I live in Edinburgh with my family and love travel, cinema, cooking, and eating!",
+      "followers": {
+        "facebook": 32,
+        "twitter": 207,
+        "instagram": 578
+      },
+      "image_url": "https://i1.feedspot.com/5474629.jpg?t=1669902187"
+    },
+    {
+      "title": "Breast Cancer Kent",
+      "feed_url": "https://www.breastcancerkent.org.uk/news-and-events/feed/",
+      "website_url": "https://www.breastcancerkent.org.uk/news-and-events/",
+      "description": "The charity Breast Cancer Kent raises vital funds for breast cancer diagnosis and treatment in Tunbridge Wells and Maidstone. Raising money to help patients affected by breast cancer.",
+      "followers": {
+        "facebook": 423
+      },
+      "image_url": "https://i1.feedspot.com/4908874.jpg?t=1669956510"
+    },
+    {
+      "title": "Naren Basu Blog",
+      "feed_url": "https://www.narenbasu.com/blog/updates.atom",
+      "website_url": "https://www.narenbasu.com/blog/",
+      "description": "Naren Basu was previously the Lead Consultant Oncoplastic Breast Surgeon at the QE Hospital, Good Hope Hospital, and Solihull Hospital in Birmingham - one of the biggest breast services in the UK. His specialist area is exclusively breast care, breast cancer surgery, breast cancer genetics, and all breast-related problems.",
+      "followers": {
+        "twitter": 388
+      },
+      "image_url": "https://i1.feedspot.com/5474626.jpg?t=1669902168"
+    }
+  ]
+}

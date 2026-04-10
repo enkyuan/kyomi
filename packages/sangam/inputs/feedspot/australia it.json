@@ -1,0 +1,218 @@
+{
+  "category": "Australia IT",
+  "source_url": "https://rss.feedspot.com/australia_it_rss_feeds",
+  "feeds": [
+    {
+      "title": "Steadfast Solutions",
+      "feed_url": "https://www.steadfastsolutions.com.au/feed/",
+      "website_url": "https://www.steadfastsolutions.com.au/insights/",
+      "description": "Technology Insights from Steadfast Solutions offers insights on the latest technology trends, information about emerging technologies, and insights. Steadfast Solutions is your trusted IT support company in Melbourne, Brisbane, Perth, and across Australia.",
+      "followers": {
+        "facebook": 41,
+        "twitter": 45
+      },
+      "image_url": "https://i1.feedspot.com/7290573.jpg?t=1712224054"
+    },
+    {
+      "title": "Infinity Cloud Blog",
+      "feed_url": "https://infinitycloud.com.au/feed/",
+      "website_url": "https://infinitycloud.com.au/news-blog/",
+      "description": "Browse up-to-the-minute coverage on everything from cutting-edge software and hardware developments to emerging cybersecurity threats and data privacy concerns. Infinity Cloud, based in Melbourne is a strategic IT partner helping businesses in navigating the dynamic landscape of technology.",
+      "followers": {
+        "facebook": 3
+      },
+      "image_url": "https://i1.feedspot.com/7290575.jpg?t=1712212796"
+    },
+    {
+      "title": "iTnews",
+      "feed_url": "https://www.itnews.com.au/rss/rss.ashx",
+      "website_url": "https://www.itnews.com.au/",
+      "description": "Explore the newest developments and trends in IT. As the premier source of enterprise IT and telecommunications news, iTnews delivers timely, insightful, and authoritative coverage of the latest industry developments, emerging trends, innovative solutions, and regulatory updates for Australian CIOs, IT managers, and IT professionals.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/4572353.jpg?t=1664271924"
+    },
+    {
+      "title": "Computing Australia",
+      "feed_url": "https://computingaustralia.com.au/feed/",
+      "website_url": "https://computingaustralia.com.au/articles/",
+      "description": "Explore innovative solutions and expert insights in IT services. Discover the latest trends with Computing Australia Group's insightful blog. Dedicated to excellent service, Computing Australia is a Managed IT Service, Web Development, and Creative Service Provider located in Belmont, Western Australia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290574.jpg?t=1712215715"
+    },
+    {
+      "title": "Australia Wide I.T. Blog",
+      "feed_url": "https://australiawideit.com.au/blog/feed/",
+      "website_url": "https://australiawideit.com.au/blog/",
+      "description": "Dive into the forefront of the IT field as Australia Wide I.T. keeps you updated on what's cooking across the computer services sector. Browse anti-cyber attack strategies, productivity and security tips, and awareness insights. Australia Wide I.T. is a managed IT service provider committed to proactively monitoring, maintaining, and securing your IT infrastructure.",
+      "followers": {
+        "facebook": 244,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/7290587.jpg?t=1712212898"
+    },
+    {
+      "title": "NEC Australia Blog",
+      "feed_url": "https://www.nec.com.au/rss/blog",
+      "website_url": "https://www.nec.com.au/insights/blog",
+      "description": "Unlock the right guidance to navigate the digital age with compelling articles on topics like cloud computing and cybersecurity to 5G networks, data analytics, and digital transformation strategies. NEC Australia is a leading technology company, delivering a portfolio of ICT solutions and services to large enterprise, small business & government customers.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1800,
+        "instagram": 624
+      },
+      "image_url": "https://i1.feedspot.com/7290582.jpg?t=1712212864"
+    },
+    {
+      "title": "Dicker Data Blog",
+      "feed_url": "https://www.dickerdata.com.au/blog/rss.xml",
+      "website_url": "https://www.dickerdata.com.au/blog",
+      "description": "Uncover emerging breakthroughs and industry buzz with regular updates on the Dicker Data Blog. Stay informed of the newest developments at the company. Dicker Data (ASX: DDR) is an Australian-owned and operated, ASX-listed hardware distributor and offers a wide portfolio of products from the world's leading technology vendors",
+      "followers": {
+        "facebook": 910,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/7290571.jpg?t=1712212766"
+    },
+    {
+      "title": "ZircoDATA Blog",
+      "feed_url": "https://www.zircodata.com/au/category/blog/feed/",
+      "website_url": "https://www.zircodata.com/au/category/blog/",
+      "description": "Learn all about secure document storage and destruction for modern business needs. ZircoDATA is a market leader in Records and Information Management (RIM), providing secure document storage and records lifecycle solutions from information governance and digital conversion through to storage, translation services",
+      "followers": {
+        "facebook": 275,
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/7290577.jpg?t=1712212814"
+    },
+    {
+      "title": "Database Consultants Australia Blog",
+      "feed_url": "https://data.com.au/data-services/blog/feed/",
+      "website_url": "https://data.com.au/data-services/blog/",
+      "description": "Uncover the latest trends and perspectives shaping the Data services landscape. Database Consultants Australia or DCA are data specialists and information technology experts who specialize in providing data solutions by analysing, collecting, storing, and creating electronic data.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290583.jpg?t=1712215793"
+    },
+    {
+      "title": "9Yards Blog",
+      "feed_url": "https://9yds.com.au/feed/",
+      "website_url": "https://9yds.com.au/blogs/",
+      "description": "9Yards is an Australian professional advisory company that provides solutions across Digital Transformation, Solution Architecture, Business Architecture, and Change Management. Their blog is your gateway to cutting-edge insights, groundbreaking trends, and thought-provoking analysis from our team of industry experts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290586.jpg?t=1712228179"
+    },
+    {
+      "title": "Technetics Consulting Blog",
+      "feed_url": "https://www.technetics.com.au/feed/",
+      "website_url": "https://www.technetics.com.au/blog/",
+      "description": "Technetics Consulting is a leader in managed IT services in Melbourne and the rest of Australia. Read through the latest blog posts here. Uncover step-by-step guides on modern IT processes and how to successfully manage the workforce across different IT streams and projects.",
+      "followers": {
+        "facebook": 968,
+        "twitter": 64
+      },
+      "image_url": "https://i1.feedspot.com/7290572.jpg?t=1712212778"
+    },
+    {
+      "title": "Cloud Ready Solutions Blog",
+      "feed_url": "https://www.cloudreadysolutions.com.au/blog//feed/blog-feed.xml",
+      "website_url": "https://www.cloudreadysolutions.com.au/blog/",
+      "description": "Discover the Latest Industry Best Practices and Enterprise IT Trends with CRS IT Blog, Providing Valuable Insights and Thought Leadership on Managed IT Services. Cloud Ready Solutions is a trusted partner in IT distribution, specializing in providing innovative and reliable cloud-based solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290578.jpg?t=1712215987"
+    },
+    {
+      "title": "OzHosting Blog",
+      "feed_url": "https://www.ozhosting.com.au/blog/feed/",
+      "website_url": "https://www.ozhosting.com.au/blog/",
+      "description": "OzHosting in their blog shares expert tips, tricks, and industry knowledge to help you build, launch, and grow a successful online presence. As one of the top Cloud Solution partners in Australia, OzHosting helps businesses and professionals understand the niche so that they can make the most of their IT services.",
+      "followers": {
+        "twitter": 316
+      },
+      "image_url": "https://i1.feedspot.com/7290576.jpg?t=1712230145"
+    },
+    {
+      "title": "Office Solutions IT Blog",
+      "feed_url": "https://www.officesolutionsit.com.au/blog/rss.xml",
+      "website_url": "https://www.officesolutionsit.com.au/blog",
+      "description": "From increasing your cyber security and business reliability to industry-leading IT support, The OSIT team has a wealth of IT support services for Australian businesses. This blog shares the latest news and trends in business and IT news.",
+      "followers": {
+        "facebook": 666,
+        "twitter": 32,
+        "instagram": 225
+      },
+      "image_url": "https://i1.feedspot.com/7290570.jpg?t=1712212761"
+    },
+    {
+      "title": "Melbourne IT Blog",
+      "feed_url": "https://melbourneit.au/feed/",
+      "website_url": "https://melbourneit.au/blog/",
+      "description": "Discover Melbourne IT's suite of tips, tricks, and cutting-edge tools designed to propel your business to new heights. From marketing strategies that captivate your target audience to operational efficiencies that streamline your processes, our expert-curated resources equip you with the insights and solutions you need to drive sustainable growth.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 661
+      },
+      "image_url": "https://i1.feedspot.com/7290581.jpg?t=1712212845"
+    },
+    {
+      "title": "Technetics Blog",
+      "feed_url": "https://www.techneticsdata.com.au/feed/",
+      "website_url": "https://www.techneticsdata.com.au/blog",
+      "description": "Enjoy reading deeply insightful data recovery hacks and tips from industry experts at Technetics. Established in 2004, Technetics Data Recovery is a highly specialized Australian Owned firm operating in the Professional Data Recovery Industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290588.jpg?t=1712212912"
+    },
+    {
+      "title": "Empower IT Solutions Blog",
+      "feed_url": "https://www.empowerit.com.au/blog/feed/",
+      "website_url": "https://www.empowerit.com.au/blog/",
+      "description": "Subscribe to Empower IT Solutions for the latest news, blogs, trends, and updates in business and technology for Australian businesses. Empower IT Solutions is an Australian-owned and operated Information Technology company that provides managed IT services, cloud computing, mobile device management, and software services to businesses in Australia.",
+      "followers": {
+        "facebook": 93,
+        "twitter": 457
+      },
+      "image_url": "https://i1.feedspot.com/7290579.jpg?t=1712212830"
+    },
+    {
+      "title": "Onsite Helper Blog",
+      "feed_url": "https://onsitehelper.com/feed/",
+      "website_url": "https://onsitehelper.com/blog/",
+      "description": "Onsite Helper provides managed IT services, Google Workspace migration and support, cloud services, and other IT solutions in Australia. Immerse yourself in the latest trends in the Techworld with constant updates, detailed breakdowns, and veteran insights from the industry here in the blog.",
+      "followers": {
+        "facebook": 430
+      },
+      "image_url": "https://i1.feedspot.com/7290589.jpg?t=1712212924"
+    },
+    {
+      "title": "Super I.T. Solutions Blog",
+      "feed_url": "https://superitsolutions.com.au/feed/",
+      "website_url": "https://superitsolutions.com.au/blog/",
+      "description": "Super I.T. Solutions's blog aims to equip business owners and leaders with the knowledge and strategies necessary to navigate these complexities successfully. They are a leading IT support Computer technicians company providing excellent service for networking and reliable cloud backup.",
+      "followers": {
+        "facebook": 522
+      },
+      "image_url": "https://i1.feedspot.com/7290585.jpg?t=1712216118"
+    },
+    {
+      "title": "Catalyst IT Australia Blog",
+      "feed_url": "https://www.catalyst-au.net/feed",
+      "website_url": "https://www.catalyst-au.net/blog/",
+      "description": "Read the latest insights & tips, covering topics on open-source application design, migration, integration, accessibility, and managed services. Catalyst IT is a leading Open Source specialist company that develops, designs and supports open source solutions for enterprise-level and growing organisations.",
+      "followers": {
+        "twitter": 429
+      },
+      "image_url": "https://i1.feedspot.com/7290569.jpg?t=1712212915"
+    },
+    {
+      "title": "Experteq Blog",
+      "feed_url": "https://experteq.com/category/blog/feed/",
+      "website_url": "https://experteq.com/category/blog/",
+      "description": "Read IT wisdom from Experteq's specialists on a broad range of topics and trends. With decades of history and expertise in managed and professional servicesExperteq offers unparalleled quality and reliable IT solutions to our clients across the finance, healthcare, government, and corporate sectors.",
+      "followers": {
+        "facebook": 21
+      },
+      "image_url": "https://i1.feedspot.com/7290580.jpg?t=1712212842"
+    }
+  ]
+}

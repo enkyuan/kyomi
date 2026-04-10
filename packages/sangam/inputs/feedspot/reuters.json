@@ -1,0 +1,18 @@
+{
+  "category": "Reuters",
+  "source_url": "https://rss.feedspot.com/reuters_rss_feeds",
+  "feeds": [
+    {
+      "title": "Reuters \u00bb World",
+      "feed_url": "https://www.reuters.com/world/",
+      "website_url": "https://www.reuters.com/world/",
+      "description": "Find late-breaking world news from every corner of the globe at Reuters.com, your online source for international news coverage.",
+      "followers": {
+        "facebook": 8500000,
+        "twitter": 624300,
+        "instagram": 5300000
+      },
+      "image_url": "https://i1.feedspot.com/30969.jpg?t=1614233200"
+    }
+  ]
+}

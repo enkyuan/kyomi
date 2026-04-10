@@ -1,0 +1,93 @@
+{
+  "category": "Ottawa Food",
+  "source_url": "https://rss.feedspot.com/ottawa_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Delightful Adventures",
+      "feed_url": "https://delightfuladventures.com/feed/",
+      "website_url": "https://delightfuladventures.com/",
+      "description": "Hi! I'm Gwen and if you're looking for easy-to-make, delicious plant-based and gluten-free recipes you'll want to make over and over again, you've landed in the right place!",
+      "followers": {
+        "facebook": 24900,
+        "twitter": 1900,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4860961.jpg?t=1611914772"
+    },
+    {
+      "title": "Constantly Cooking",
+      "feed_url": "https://constantlycooking.com/feed/",
+      "website_url": "https://constantlycooking.com/",
+      "description": "As a freelance writer and Food Editor of Ottawa at Home magazine, Paula plays with words and with food. She loves simple dishes prepared with passion and is always seeking new methods and inspiration to make food as fun and flavourful as possible. She is also an enthusiastic explorer of faraway lands and cuisines.",
+      "followers": {
+        "facebook": 988,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5008040.jpg?t=1622205330"
+    },
+    {
+      "title": "Salt and Serenity",
+      "feed_url": "https://www.saltandserenity.com/feed/",
+      "website_url": "https://www.saltandserenity.com/",
+      "description": "A food writer and former professional cook, living, baking and creating memories in Ottawa, Canada.",
+      "followers": {
+        "twitter": 38,
+        "instagram": 15200
+      },
+      "image_url": "https://i1.feedspot.com/5008059.jpg?t=1622205334"
+    },
+    {
+      "title": "Culinarily Inclined",
+      "feed_url": "https://www.culinarilyinclined.com/blog-feed.xml",
+      "website_url": "https://www.culinarilyinclined.com/",
+      "description": "Culinarily Inclined is a food blog that focuses on recipes that showcase local foods that are in season. We love supporting local businesses and farmers!!",
+      "followers": {
+        "twitter": 450
+      },
+      "image_url": "https://i1.feedspot.com/5008043.jpg?t=1622205353"
+    },
+    {
+      "title": "Just Food",
+      "feed_url": "https://justfood.ca/feed/",
+      "website_url": "https://justfood.ca/newsbites-archive/",
+      "description": "Just Food is a local, non-profit, community-based organization that works on both rural and urban food and farming issues in Ottawa and the region.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1700,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5008177.jpg?t=1622206268"
+    },
+    {
+      "title": "Glebe Kitchen",
+      "feed_url": "https://glebekitchen.com/feed/",
+      "website_url": "https://glebekitchen.com/",
+      "description": "Hii! I'm Romain. I've been cooking for over 40 years. I have more cookbooks than a book store. I shop for food every day. I'm constantly thinking about my next meal. What you will find is a scratch or nearly scratch recipes that have been tested until I am convinced they work. Something you can cook. And be proud of it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5096524.jpg?t=1622205468"
+    },
+    {
+      "title": "Franklin on Food",
+      "feed_url": "https://franklin-on-food.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://franklin-on-food.blogspot.com/",
+      "description": "An Ottawa-based husband, father, public servant gives his take on food, recipes, and cooking.",
+      "followers": {
+        "facebook": 72,
+        "twitter": 625
+      },
+      "image_url": "https://i1.feedspot.com/5008047.jpg?t=1622205347"
+    },
+    {
+      "title": "Ottawa Food Bank Blog",
+      "feed_url": "https://www.ottawafoodbank.ca/blog/feed/",
+      "website_url": "https://www.ottawafoodbank.ca/blog/",
+      "description": "Ottawa Food Bank is the central food distribution center. The mission is to work in partnership to create a healthier city by empowering people and increasing access to healthy food.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 13500,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5008006.jpg?t=1622205361"
+    }
+  ]
+}

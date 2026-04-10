@@ -1,0 +1,27 @@
+{
+  "category": "Vacuum Truck",
+  "source_url": "https://rss.feedspot.com/vacuum_truck_rss_feeds",
+  "feeds": [
+    {
+      "title": "GreenLines Blog",
+      "feed_url": "https://greenlinees.com/feed/",
+      "website_url": "https://greenlinees.com/blog/",
+      "description": "GreenLine Environmental Solutions specializes in sewer and drainage system cleaning, industrial cleaning, and the removal, transportation, and disposal of hazardous and non-hazardous waste in full compliance with all federal, state, and local regulations. They promote cost-effective project management to minimize client costs and provide services on scheduled maintenance, as-needed, or emergency basis.",
+      "followers": {
+        "facebook": 171
+      },
+      "image_url": "https://i1.feedspot.com/5482349.jpg?t=1671627019"
+    },
+    {
+      "title": "FlowMark",
+      "feed_url": "https://flowmark.com/feed/",
+      "website_url": "https://flowmark.com/news/",
+      "description": "FlowMark is the Nation's Largest Source of In-Stock, Ready to Go Vacuum Trucks. It was born with a single goal: to create the highest-quality vacuum trucks in the industry. And their dedication to quality is backed by industry-leading warranties. Stay updated with the latest news about our wide selection of new vacuum trucks & parts stores.",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5453560.jpg?t=1671626783"
+    }
+  ]
+}

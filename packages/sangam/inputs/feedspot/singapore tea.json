@@ -1,0 +1,59 @@
+{
+  "category": "Singapore Tea",
+  "source_url": "https://rss.feedspot.com/singapore_tea_rss_feeds",
+  "feeds": [
+    {
+      "title": "Travelling Teapot",
+      "feed_url": "http://teapotnews.blogspot.com/feeds/posts/default",
+      "website_url": "http://teapotnews.blogspot.com/",
+      "description": "Travelling Teapot shares musings of a habitual Tea Drinker. Explore Tea Cakes, Special Tea recipes and more. Have a chuckle when you read this author's thoughts on tea, whether it's silly or politically incorrect.",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/1132231.jpg?t=1604643048"
+    },
+    {
+      "title": "Everything Good Singapore Blog",
+      "feed_url": "https://www.everythinggood.com.sg/blogs/news.atom",
+      "website_url": "https://www.everythinggood.com.sg/blogs/news",
+      "description": "Discover unique facts and tips about Tea, Tea-gifting an other associated practices via the blog. Everything Good Singapore is a Singapore brand that believes in creating value with unique quality products to cater to the market.",
+      "followers": {
+        "facebook": 6000,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5633245.jpg?t=1690176957"
+    },
+    {
+      "title": "Petale Tea Blog",
+      "feed_url": "https://www.petaletea.com/blog-feed.xml",
+      "website_url": "https://www.petaletea.com/blog",
+      "description": "Learn more about artisan blooming teas and everything that has to do with them here! P\u00e9tale specializes in hand-sewn blooming tea & world-famous flower infusions. Enjoy a great cup of infusion & wonderful experience with tea connoisseurs.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5633248.jpg?t=1690176979"
+    },
+    {
+      "title": "The 1872 Clipper Tea Co. Blog",
+      "feed_url": "https://clippertea.com.sg/blogs/blog.atom",
+      "website_url": "https://clippertea.com.sg/blogs/blog",
+      "description": "Embark on the journey of tea making and find out how The 1872 Clipper Tea blends are widely appreciated for their consistency in quality, signature aroma, and refined taste. The 1872 Clipper Tea Co. is a family-run Tea producing business and one of the oldest in Singapore.",
+      "followers": {
+        "facebook": 10800,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5633246.jpg?t=1690176964"
+    },
+    {
+      "title": "Haflong Tea Blog",
+      "feed_url": "https://haflongtea.com/blogs/haflong-magazine.atom",
+      "website_url": "https://haflongtea.com/blogs/haflong-magazine",
+      "description": "Stay tuned and read blogs from Haflong Tea to get more information about the benefits of staying healthy by consuming a cup of tea every day. Haflong Tea is a Singaporean brand founded by tea sommelier and CEO Sharmistha Sen and works with the best tea masters and gardeners from all over the world to create some of the finest tea experiences for you.",
+      "followers": {
+        "facebook": 2500,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5633247.jpg?t=1690176971"
+    }
+  ]
+}

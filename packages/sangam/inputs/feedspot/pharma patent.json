@@ -1,0 +1,90 @@
+{
+  "category": "Pharma Patent",
+  "source_url": "https://rss.feedspot.com/pharma_patent_rss_feeds",
+  "feeds": [
+    {
+      "title": "Patent Docs",
+      "feed_url": "https://feeds.feedburner.com/PatentDocs",
+      "website_url": "https://www.patentdocs.org/",
+      "description": "Patent Docs is a weblog authored by patent practitioners, which focuses on biotech/pharma patent law, including reports on changes in USPTO rules and procedures, recent court decisions, newly filed patent litigation, and recently issued patents.",
+      "followers": {
+        "facebook": 209,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/794880.jpg?t=1611906650"
+    },
+    {
+      "title": "Pharma in Brief",
+      "feed_url": "https://www.pharmainbrief.com/feed/",
+      "website_url": "https://www.pharmainbrief.com/",
+      "description": "Pharma in Brief is written by Norton Rose Fulbright litigation and regulatory lawyers covering topics such as patent and class action disputes, drug advertising & reimbursement, and compliance with Health Canada's governing laws and guidelines. Stay up-to-date with legal and regulatory developments affecting the pharmaceutical industry.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 19000
+      },
+      "image_url": "https://i1.feedspot.com/4858386.jpg?t=1611906654"
+    },
+    {
+      "title": "Kluwer Patent Blog \u00bb Pharma",
+      "feed_url": "https://patentblog.kluweriplaw.com/category/pharma/feed/",
+      "website_url": "https://patentblog.kluweriplaw.com/category/pharma/",
+      "description": "Pharma, an abbreviation commonly used for the pharmaceutical industry, discovers, develops, produces and markets drugs or pharmaceutical drugs for use as medication. Stay up to date on case law and developments in IP Law on the pharma industry via Kluwer Patent Blog.",
+      "followers": {
+        "facebook": 33400,
+        "twitter": 18300
+      },
+      "image_url": "https://i1.feedspot.com/4858339.jpg?t=1659010896"
+    },
+    {
+      "title": "IPWatchdog \u00bb Pharmaceutical",
+      "feed_url": "https://ipwatchdog.com/tag/pharmaceuticals/feed/",
+      "website_url": "https://ipwatchdog.com/tag/pharmaceuticals/",
+      "description": "IPWatchdog is the leading IP law publication on the Internet. Our focus is on the law and policy of patents, technology, and innovation. Find updates on Pharma Patent from IPWatchdog.com.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4858360.jpg?t=1611906667"
+    },
+    {
+      "title": "Pharma IP Circle",
+      "feed_url": "http://pharmaipcircle.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://pharmaipcircle.blogspot.com/",
+      "description": "A niche blog dedicated to 'Drug Patent Litigation' decisions from all over the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4858916.jpg?t=1611906936"
+    },
+    {
+      "title": "BioPharma Law Group, PLLC Blog",
+      "feed_url": "http://www.biopharmalaw.com/blog/feed",
+      "website_url": "http://www.biopharmalaw.com/blog",
+      "description": "Innovators in life sciences, BioPharma Law Group's team of professionals has the industry knowledge and in-house experience to identify critical issues and provide strategic solutions that address the client's legal and business needs.",
+      "followers": {
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/4858723.jpg?t=1611907565"
+    },
+    {
+      "title": "DrugPatentWatch Blog",
+      "feed_url": "https://www.drugpatentwatch.com/blog/feed/",
+      "website_url": "https://www.drugpatentwatch.com/blog/",
+      "description": "DrugPatentWatch serves leading companies ranging from biopharmaceutical R&D to healthcare delivery and has been cited by CNN, NEJM, Nature Journals, and many other leading publications. Business intelligence on pharmaceutical and biologic drugs - patents, generics, pricing, sales, litigation, and more. Make Better Decisions with DrugPatentWatch.",
+      "followers": {
+        "facebook": 245,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/4994716.jpg?t=1611906672"
+    },
+    {
+      "title": "Foley & Lardner LLP Blog \u00bb PharmaPatents",
+      "feed_url": "https://www.foley.com/insights/category/blogs/pharmapatents/feed/",
+      "website_url": "https://www.foley.com/insights/category/blogs/pharmapatents/",
+      "description": "PharmaPatents is an online resource for up-to-date information to help you devise strategies that will maximize the value of your intellectual property in the chemical, biotech, and pharmaceutical fields. Building and maintaining a strong global patent portfolio requires an understanding of the latest legal developments affecting your industry. Foley & Lardner LLP looks beyond the law to focus on the constantly evolving demands facing clients and their industries.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5331527.jpg?t=1634199561"
+    }
+  ]
+}

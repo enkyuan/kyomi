@@ -1,0 +1,693 @@
+{
+  "category": "Automation Testing",
+  "source_url": "https://rss.feedspot.com/automation_testing_rss_feeds",
+  "feeds": [
+    {
+      "title": "TestGuild Blog",
+      "feed_url": "https://testguild.com/feed/",
+      "website_url": "https://testguild.com/blog/",
+      "description": "Automation Testing, like all development efforts, is difficult. Most projects don't succeed. You can do better. Discover how to create end-end performance, security, and automation testing awesomeness. This is your blog, video, podcast guide to succeed with software testing.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4610301.jpg?t=1611987865"
+    },
+    {
+      "title": "Ultimate QA Blog",
+      "feed_url": "https://ultimateqa.com/feed/",
+      "website_url": "https://ultimateqa.com/blog/",
+      "description": "Nikolay Advolodkin is a self-driven Test Automation Engineer. His passion to the work he does helps with all sort of automation tests and quality assurance tasks. Nik is also a software testing instructor on his blog.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4948869.jpg?t=1621492230"
+    },
+    {
+      "title": "Gurock Quality Hub Blog",
+      "feed_url": "https://feeds.feedburner.com/gurock",
+      "website_url": "https://www.testrail.com/blog/",
+      "description": "Gurock is the creator of one of our favorite test case management softwares, TestRail. We find ourselves tweeting its blog posts all the time! The Gurock Quality Hub is dedicated to software quality, QA, testing and security with over 34,000 subscribers.",
+      "followers": {
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/4949062.jpg?t=1621495451"
+    },
+    {
+      "title": "TestingXperts Blog",
+      "feed_url": "https://www.testingxperts.com/feed/",
+      "website_url": "https://www.testingxperts.com/blog/",
+      "description": "TestingXperts is a Specialist QA & Software Testing Company, and an Independent Software Testing division of Damco Group, which is a leading IT Solutions and Services company working with Fortune Enterprises globally. Our experienced & expert testing professionals share their knowledge. Keep on reading the TestingXperts blog to learn more about testing and its value.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 709
+      },
+      "image_url": "https://i1.feedspot.com/4949138.jpg?t=1621492270"
+    },
+    {
+      "title": "Abstracta Blog",
+      "feed_url": "https://abstracta.us/blog/feed/",
+      "website_url": "https://abstracta.us/blog/",
+      "description": "Follow this blog for further your knowledge in software testing from test automation, to performance engineering, how-to's, Agile practices and more. Abstracta is a world leader in quality assurance and testing focused on improving the performance of software applications.",
+      "followers": {
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4949042.jpg?t=1650451682"
+    },
+    {
+      "title": "Codoid Blog",
+      "feed_url": "https://codoid.com/feed/",
+      "website_url": "https://codoid.com/blogs/",
+      "description": "A blog on software testing concepts, test automation techniques, agile testing and continuous testing by software testing company - Codoid",
+      "followers": {
+        "facebook": 1,
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/4949130.jpg?t=1621492559"
+    },
+    {
+      "title": "Automation Panda Blog",
+      "feed_url": "https://automationpanda.com/feed/",
+      "website_url": "https://automationpanda.com/",
+      "description": "Automation Panda is a blog about software, testing, and (most importantly) automation from Andrew Knight's career experiences.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/4949099.jpg?t=1621492296"
+    },
+    {
+      "title": "LoadFocus Blog",
+      "feed_url": "https://loadfocus.com/blog/feed",
+      "website_url": "https://loadfocus.com/blog/",
+      "description": "All-In-One cloud testing platform for load testing and performance testing, Website Speed Testing, Automated Website Testing for Websites, Mobile Applications and API Endpoints.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4949418.jpg?t=1621492578"
+    },
+    {
+      "title": "Developsense - Michael Bolton Blog",
+      "feed_url": "https://developsense.com/blog/feed/atom",
+      "website_url": "https://developsense.com/blog",
+      "description": "DevelopSense was founded in 1998 in Los Angeles, California, to provide testing and consulting services. In the RST class, Michale train testers to perform the fastest, least expensive testing that completely fulfills the mission of testing. Testers develop skill in evaluating the product by learning about it through exploration and experimentation and then editing, narrating, and justifying the testing story.",
+      "followers": {
+        "twitter": 24300
+      },
+      "image_url": "https://i1.feedspot.com/117497.jpg?t=1621492582"
+    },
+    {
+      "title": "Agile Testing with Lisa Crispin",
+      "feed_url": "https://lisacrispin.com/feed/",
+      "website_url": "https://lisacrispin.com/",
+      "description": "Lisa Crispin is a tester who enjoys sharing her experiences and learning from others. Lisa is a tester on a fabulous agile team. She specializes in showing testers and agile teams how testers can add value and how to guide development with business-facing tests.",
+      "followers": {
+        "twitter": 22300
+      },
+      "image_url": "https://i1.feedspot.com/4948805.jpg?t=1621492593"
+    },
+    {
+      "title": "LambdaTest Blog",
+      "feed_url": "https://www.lambdatest.com/blog/feed/",
+      "website_url": "https://www.lambdatest.com/blog/",
+      "description": "LambdaTest Blog share posts all about testing. LambdaTest enables you to test all your web apps on the cloud. You can perform Cross-browser compatibility testing and Visual layout testing with LambdaTest.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4949101.jpg?t=1621492241"
+    },
+    {
+      "title": "Applitools - Automated visual application testing and monitoring Blog",
+      "feed_url": "https://applitools.com/blog/feed/",
+      "website_url": "https://applitools.com/blog/",
+      "description": "Applitools provides Application Visual Management (AVM) & AI powered visual UI testing and monitoring for web & mobile apps. Applitools has developed the first cloud based software testing tool that automatically validates all the visual aspects of any Web, Mobile and Native app like a manual tester does.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4949055.jpg?t=1621492265"
+    },
+    {
+      "title": "Testim.io Blog",
+      "feed_url": "https://www.testim.io/feed/",
+      "website_url": "https://www.testim.io/blog/",
+      "description": "Testim is the ultimate testing automation platform, designed to provide a complete testing solution, all in one place.Testim lets you quickly create tests, report bugs, and run tests in the cloud for your web apps. Using testim, you can get setup and start creating test scenarios and bugs within minutes, easily replicate and reproduce them, while everything is running on premise or in the cloud. We designed testim with testing efficiency in mind.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4949451.jpg?t=1621492260"
+    },
+    {
+      "title": "Webomates Blog",
+      "feed_url": "https://www.webomates.com/feed/",
+      "website_url": "https://www.webomates.com/blog/",
+      "description": "The Webomates Blog provides the latest technology/trends in the software testing industry. Webomates provides a cloud-based AI software testing as a service platform to carry out software functional testing in guaranteed timeframes. The platform creates test cases & scripts and executes them using multiple testing execution techniques like AI Automation, Automation, Crowdsource & AI enhanced manual.",
+      "followers": {
+        "facebook": 517
+      },
+      "image_url": "https://i1.feedspot.com/5476876.jpg?t=1670411103"
+    },
+    {
+      "title": "Testlio Blog",
+      "feed_url": "https://testlio.com/blog/feed/",
+      "website_url": "https://testlio.com/blog/",
+      "description": "Testlio software testing empowers businesses to deliver amazing customer experiences with high-quality QA services.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4948935.jpg?t=1621492284"
+    },
+    {
+      "title": "LEAPWORK Blog",
+      "feed_url": "https://www.leapwork.com/blog/rss.xml",
+      "website_url": "https://www.leapwork.com/blog",
+      "description": "LEAPWORK Test automation and RPA - the all-in-one platform that empowers testers and other specialists to implement fast, efficient, and codeless automation of tests and processes across systems and technologies.",
+      "followers": {
+        "facebook": 776,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4949291.jpg?t=1621492288"
+    },
+    {
+      "title": "Automate The Planet - Anton Angelov Blog",
+      "feed_url": "https://www.automatetheplanet.com/feed/",
+      "website_url": "https://www.automatetheplanet.com/blog/",
+      "description": "Anton is an active blogger and one of the best rated topics contributors about Selenium's WebDriver on Stack Overflow. He is also a founder of the Automate The Planet project. Anton is passionate about improving software quality through the integration of the best practices, QA and Automation Testing.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4948916.jpg?t=1621492540"
+    },
+    {
+      "title": "On Test Automation - Bas Dijkstra Blog",
+      "feed_url": "https://www.ontestautomation.com/feed.xml",
+      "website_url": "https://www.ontestautomation.com/blog/",
+      "description": "Bas Dijkstra is an independent test automation professional. He has been in the test automation and service virtualization field for over 10 years now, designing and developing test automation and service virtualization solutions that enhance and improve test teams and test processes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4948873.jpg?t=1621493564"
+    },
+    {
+      "title": "Evil Tester - Alan Richardson Blog",
+      "feed_url": "https://www.eviltester.com/index.xml",
+      "website_url": "https://www.eviltester.com/blog/",
+      "description": "The Evil Tester helps teams to deliver, automate and test better with his special blend of skill, attitude, and pragmatism. You can find several how-to's on his blog, several of them accompanied by helpful videos.",
+      "followers": {
+        "facebook": 804,
+        "twitter": 8800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/1351103.jpg?t=1621492568"
+    },
+    {
+      "title": "BrowserStack Blog",
+      "feed_url": "https://www.browserstack.com/blog/rss/",
+      "website_url": "https://www.browserstack.com/blog/",
+      "description": "Speed up your release cycles and deploy bug-free websites and mobile apps with BrowserStack, the industry's most reliable cloud web, and mobile testing platform. Read about the latest innovation and trends in testing.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5070841.jpg?t=1650441196"
+    },
+    {
+      "title": "Synapse QA",
+      "feed_url": "https://synapse-qa.com/feed/",
+      "website_url": "https://synapse-qa.com/",
+      "description": "Building a better QA Community",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5131224.jpg?t=1621493124"
+    },
+    {
+      "title": "Responsible Automation - Paul Grizzaffi",
+      "feed_url": "https://responsibleautomation.wordpress.com/feed/",
+      "website_url": "https://responsibleautomation.wordpress.com/",
+      "description": "Paul is passionate to quality and testing. He plans and implements automation program architecture for platforms, frameworks and tools. His techniques are widely used in such niches as telecom, stock trading, e-commerce and healthcare.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4948903.jpg?t=1621493142"
+    },
+    {
+      "title": "Excelon Development - Matthew Heusser Blog",
+      "feed_url": "https://xndev.com/feed/",
+      "website_url": "https://xndev.com/blog/",
+      "description": "Matt Heusser is a Consultant and Writer on Software Delivery and Testing.",
+      "followers": {
+        "facebook": 224,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/1723021.jpg?t=1621493147"
+    },
+    {
+      "title": "James Marcus Bach's - The Consulting Software Tester Blog",
+      "feed_url": "https://www.satisfice.com/blog/feed/atom",
+      "website_url": "https://www.satisfice.com/blog/",
+      "description": "James Bach's blog also known as satisfice caters testing with his unique style of describing things. Read James Bach's blog to learn and improve testing and inspire yourself to understand testing in a better way.",
+      "followers": {
+        "facebook": 526,
+        "twitter": 18200
+      },
+      "image_url": "https://i1.feedspot.com/1541923.jpg?t=1621492574"
+    },
+    {
+      "title": "Software tester Blog",
+      "feed_url": "https://www.softwaretester.blog/blog.rss",
+      "website_url": "https://www.softwaretester.blog/",
+      "description": "Software testing and development blog by Benjamin Bischoff, Test Automation Engineer at trivago.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5217923.jpg?t=1605866201"
+    },
+    {
+      "title": "Testsigma Blog",
+      "feed_url": "https://testsigma.com/blog/feed/",
+      "website_url": "https://testsigma.com/blog/",
+      "description": "Testsigma is an AI-Driven automated testing tool for web, mobile applications.",
+      "followers": {
+        "facebook": 403,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4949082.jpg?t=1621492292"
+    },
+    {
+      "title": "Adventures in Automation - T.J. Maher",
+      "feed_url": "https://www.tjmaher.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.tjmaher.com/",
+      "description": "TJ Maher, a tester, Techbeacon contributor, and Ministry of Testing Boston Organizer created his blog for manual testers looking to make the switch to automation. Browse his table of contents to easily navigate or check out posts from various categories ranging from 'beginner' to 'Appium' to 'code examples' and more!",
+      "followers": {
+        "facebook": 780,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4734437.jpg?t=1621493201"
+    },
+    {
+      "title": "ACCELQ Blog",
+      "feed_url": "https://www.accelq.com/feed/",
+      "website_url": "https://www.accelq.com/blog/",
+      "description": "Learn about testing, test automation, AI, ML, and No-code to upskill testers to stay relevant for the future of technological innovation. ACCELQ is the only cloud-based continuous testing platform that seamlessly automates API and web testing without writing a single line of code. IT teams of all sizes use ACCELQ to accelerate their testing by automating critical aspects of lifecycle like test design, planning, test generation, and execution.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 1300,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5484121.jpg?t=1672134773"
+    },
+    {
+      "title": "EuroSTAR Huddle - Online Software Testing Community Blog",
+      "feed_url": "https://huddle.eurostarsoftwaretesting.com/feed/",
+      "website_url": "https://huddle.eurostarsoftwaretesting.com/blog/",
+      "description": "A guide to all that is happening in the TEST Huddle community including upcoming events, a weekly roundup and featured blog posts.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4609935.jpg?t=1615789227"
+    },
+    {
+      "title": "SoftwareTestPro",
+      "feed_url": "https://www.softwaretestpro.com/category/testing-automation/feed/",
+      "website_url": "https://www.softwaretestpro.com/category/testing-automation/",
+      "description": "Software Test Professional serves the global software testing and quality assurance community, providing more than 50,000 professionals with information, education, training and professional networking opportunities.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4948831.jpg?t=1621492589"
+    },
+    {
+      "title": "Real World Test Automation - Greg Paskal",
+      "feed_url": "https://www.realworldtestautomation.com/feed/",
+      "website_url": "https://www.realworldtestautomation.com/articles/",
+      "description": "Greg Paskal shares some of his best insights learned as a successful test automation engineer. With over 30 years in software development and test engineering, Greg has experience first hand what works and what ends up problematic when implementing test automation across the enterprise.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4948881.jpg?t=1621492609"
+    },
+    {
+      "title": "SQAWebinars",
+      "feed_url": "http://www.sqawebinars.com/feed/",
+      "website_url": "http://www.sqawebinars.com/webinars/",
+      "description": "SQA Webinars ensures that you never miss a rated technical webinar.",
+      "followers": {
+        "twitter": 5000,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4966875.jpg?t=1621493699"
+    },
+    {
+      "title": "Trish Khoo consulting Blog",
+      "feed_url": "http://trishkhoo.com/blog/feed/",
+      "website_url": "http://trishkhoo.com/blog/",
+      "description": "Trish Khoo is a global leader in the software testing space and have given keynotes, workshops and talks all around the world.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4948742.jpg?t=1621493018"
+    },
+    {
+      "title": "Eggplant Blog \u00bb EMR testing",
+      "feed_url": "https://blog.eggplantsoftware.com/rss.xml",
+      "website_url": "https://blog.eggplantsoftware.com/topic/emr-testing",
+      "description": "At Eggplant we help businesses to test, monitor and analyze their end-to-end customer experience and continuously improve their business outcomes. On the blog, our pool of Software Development authorities share the latest trends, tips, and insight to support your automation journey. Check out now.",
+      "followers": {
+        "facebook": 348,
+        "twitter": 7700,
+        "instagram": 204
+      },
+      "image_url": "https://i1.feedspot.com/4949125.jpg?t=1621493581"
+    },
+    {
+      "title": "Red Green Refactor",
+      "feed_url": "https://red-green-refactor.com/feed/",
+      "website_url": "https://red-green-refactor.com/",
+      "description": "A technology blog about Automation & DevOps",
+      "followers": {
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5172626.jpg?t=1621493136"
+    },
+    {
+      "title": "Mr.Slavchev Blog - The cave of the testing troll",
+      "feed_url": "https://mrslavchev.com/feed/",
+      "website_url": "https://mrslavchev.com/",
+      "description": "This blog is about 'The cave of the tester troll,' is where Mr. Slavchev goes to ruminate testing, especially the scientific aspects and also the critical thinking involved.",
+      "followers": {
+        "facebook": 395
+      },
+      "image_url": "https://i1.feedspot.com/4949068.jpg?t=1621493152"
+    },
+    {
+      "title": "Offbeattesting Blog",
+      "feed_url": "https://offbeattesting.com/feed/",
+      "website_url": "https://offbeattesting.com/blog/",
+      "description": "Dave Westerveld is a highly technical tester who uses his blog to continue learning and shares his thoughts and experiences in a fun way. He relates testing to daily life in several posts, to get us to think out of the box.",
+      "followers": {
+        "twitter": 593
+      },
+      "image_url": "https://i1.feedspot.com/4949071.jpg?t=1621493157"
+    },
+    {
+      "title": "Testing Excellence - Software Testing",
+      "feed_url": "https://testingexcellence.com/feed.xml",
+      "website_url": "https://testingexcellence.com/",
+      "description": "TestingExcellence.com 's mission is to bring you useful daily information related to Software Testing and Quality Assurance published around the web.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 734
+      },
+      "image_url": "https://i1.feedspot.com/2175432.jpg?t=1615790016"
+    },
+    {
+      "title": "Continuous Testing for Mobile And Web Apps - Eran Kinsbruner Blog",
+      "feed_url": "https://continuoustesting.dev/feed/",
+      "website_url": "https://continuoustesting.blog/",
+      "description": "Eran Kinsbruner is an influential blogger and speaker at global conferences like StarEast, StarWest, DevOps West, AndroidSummit, Eurostar, Automation Guild and QAI Quest, he is trying to provide valuable practices to developers and testers at organizations large and small.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4948930.jpg?t=1621493186"
+    },
+    {
+      "title": "AskTester",
+      "feed_url": "https://asktester.com/feed/",
+      "website_url": "https://asktester.com/",
+      "description": "AskTester is not just another forum. AskTester is a community of professional testers where we can freely ask questions about testing, speak up your opinions, show your interests and sharing stuffs. Not like forum, AskTester will make sure your voice is listened.",
+      "followers": {
+        "facebook": 425,
+        "twitter": 193
+      },
+      "image_url": "https://i1.feedspot.com/4949059.jpg?t=1621493206"
+    },
+    {
+      "title": "Abode QA - A Hub For Testing Minds",
+      "feed_url": "https://abodeqa.com/feed/",
+      "website_url": "https://abodeqa.com/",
+      "description": "Abode QA is a place where a bunch of passionate Software Professionals use to publish/write blogs, tutorials and articles on various software testing topics.",
+      "followers": {
+        "facebook": 722,
+        "twitter": 594
+      },
+      "image_url": "https://i1.feedspot.com/4091676.jpg?t=1621492585"
+    },
+    {
+      "title": "Katrina the Tester - Katrina Clokie",
+      "feed_url": "http://katrinatester.blogspot.com/feeds/posts/default",
+      "website_url": "http://katrinatester.blogspot.com/",
+      "description": "Katrina Clokie leads a team of around 100 testers as a Test Practice Manager in Wellington, New Zealand. Katrina is an active contributor to the international testing community as the author of A Practical Guide to Testing in DevOps, an international keynote speaker, a co-founder of the WeTest New Zealand testing community, the founder of Testing Trapeze magazine, frequent blogger.",
+      "followers": {
+        "twitter": 95
+      },
+      "image_url": "https://i1.feedspot.com/3916403.jpg?t=1621492597"
+    },
+    {
+      "title": "John Ferguson Smart Blog",
+      "feed_url": "https://johnfergusonsmart.com/feed/",
+      "website_url": "https://johnfergusonsmart.com/blog/",
+      "description": "John is an international speaker, consultant, author and trainer well known in the Agile community for his many books, articles and presentations, particularly in areas such as BDD, TDD, test automation, software craft and team collaboratio",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4948878.jpg?t=1621493210"
+    },
+    {
+      "title": "AutomationQAHub",
+      "feed_url": "https://automationqahub.com/feed/",
+      "website_url": "https://automationqahub.com/",
+      "description": "This blog is dedicated to QA fraternity. Covers latest topics on selenium, Appium, Jenkins and API testing. Also provides curated list of interview questions and answers. Lets Start Learning Together.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5499522.jpg?t=1674639304"
+    },
+    {
+      "title": "Chris Kenst",
+      "feed_url": "https://www.kenst.com/feed/",
+      "website_url": "https://www.kenst.com/",
+      "description": "My name is Chris Kenst. I'm a Lead Automation Engineer who is passionate about helping teams accelerate their achievement of shippable quality.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5172416.jpg?t=1621492301"
+    },
+    {
+      "title": "SauceLabs Blog",
+      "feed_url": "https://saucelabs.com/resources/blog/",
+      "website_url": "https://saucelabs.com/resources/blog/",
+      "description": "The world's largest continuous testing cloud of web and mobile applications. Access web browsers, mobile emulators and simulators, and real mobile devices. Sauce Labs provides the world's largest cloud-based platform for the automated testing of web and mobile applications.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4948773.jpg?t=1621492255"
+    },
+    {
+      "title": "Grafana Labs \u00bb k6",
+      "feed_url": "https://grafana.com/tags/k6/index.xml",
+      "website_url": "https://grafana.com/tags/k6/",
+      "description": "Load Impact is a leading online load and performance testing service that lets you test your website, web-app, mobile app or API over the Internet.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4949097.jpg?t=1621492280"
+    },
+    {
+      "title": "Cycle Labs Blog",
+      "feed_url": "https://www.cycleautomation.com/feed/",
+      "website_url": "https://cyclelabs.io/blog/",
+      "description": "Cycle is your all-in-one testing solution for mission-critical enterprise applications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5076354.jpg?t=1673774626"
+    },
+    {
+      "title": "Ranorex - Test Automation for GUI Testing Blog",
+      "feed_url": "https://www.ranorex.com/feed/",
+      "website_url": "https://www.ranorex.com/blog/",
+      "description": "Visit the Ranorex blog for test automation insights and best practices. Get insider tips on automating tests with Ranorex Studio, read about new features in the latest release, and more.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4949323.jpg?t=1650447829"
+    },
+    {
+      "title": "TestFort - Testing & QA Company Blog",
+      "feed_url": "https://testfort.com/feed",
+      "website_url": "https://testfort.com/blog",
+      "description": "TestFort is the leading software testing & QA company with 17 years of experience, has been providing a full range of outsourcing software testing services: manual and automated testing, QA outsourcing and QA consulting.",
+      "followers": {
+        "facebook": 337,
+        "twitter": 495
+      },
+      "image_url": "https://i1.feedspot.com/4948859.jpg?t=1621493182"
+    },
+    {
+      "title": "Testbirds",
+      "feed_url": "https://www.testbirds.com/feed/",
+      "website_url": "https://www.testbirds.com/en/blog/testbirds-blog-testing-reality/",
+      "description": "All about trends within the digital industry Learn how to get a best in class digital experience with the help of innovative QA and UX testing solutions.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 1500,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4948762.jpg?t=1621492203"
+    },
+    {
+      "title": "Testing Curator Blog",
+      "feed_url": "http://blog.testingcurator.com/feed/",
+      "website_url": "https://reqtest.com/en/blog/",
+      "description": "Matt Hutchison put together Testing Bits on a weekly basis sharing news, articles, and blog postings that testers may find of value.",
+      "followers": {
+        "facebook": 496
+      },
+      "image_url": "https://i1.feedspot.com/3965604.jpg?t=1621492208"
+    },
+    {
+      "title": "ReQtest Blog",
+      "feed_url": "https://reqtest.com/feed/",
+      "website_url": "https://reqtest.com/en/blog/",
+      "description": "The official blog of ReQtest with information about ReQtest, instructional articles about the world of software testing and requirements management, and more. ReQtest is a top reporting and software testing tool for bug tracking, requirements, and test management, providing the software testing help you need!",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4948751.jpg?t=1619173375"
+    },
+    {
+      "title": "TestProject",
+      "feed_url": "https://blog.testproject.io/feed/",
+      "website_url": "https://www.tricentis.com/learn",
+      "description": "TestProject is a free community-powered platform for recording, developing, and analyzing test automation. On the TestProject blog, discover authentic opinions, tutorials, best practices and stay up-to-date with all the latest test automation trends.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5214257.jpg?t=1624003513"
+    },
+    {
+      "title": "Testbytes Blog",
+      "feed_url": "https://www.testbytes.net/feed/",
+      "website_url": "https://www.testbytes.net/software-testing-blog/",
+      "description": "Testbytes provides latest articles, discussions and updates about topics on software testing industry, web application testing and mobile app testing services.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 577
+      },
+      "image_url": "https://i1.feedspot.com/4949085.jpg?t=1621495821"
+    },
+    {
+      "title": "Neotys Blog",
+      "feed_url": "http://feeds.feedburner.com/neotys/Kftt",
+      "website_url": "https://www.tricentis.com/blog",
+      "description": "Neotys has nearly 15 years of development investment into NeoLoad the performance testing platform designed to accelerate Agile and DevOps processes. It's built by engineers who recognized that to achieve their Agile adoption objective; they needed to create a product that could facilitate superior load and performance testing continuously. Automated Load Testing tool enabling you to run Continuous Performance Testing on all your applications & APIs.",
+      "followers": {
+        "facebook": 546,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4949332.jpg?t=1621492545"
+    },
+    {
+      "title": "Beaufort Fairmont - Paul Merrill Blog",
+      "feed_url": "https://beaufortfairmont.com/blog/feed/",
+      "website_url": "https://beaufortfairmont.com/blog/",
+      "description": "Paul has 15 years of experience in software development, design of frameworks and testing automation. His level of efficiency and problem solving ability may impress even experienced guru. Paul is the founder and CTO/CIO of Beaufort Fairmont Automated Testing Service.",
+      "followers": {
+        "facebook": 862,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4948912.jpg?t=1621493014"
+    },
+    {
+      "title": "TestCraft Blog",
+      "feed_url": "https://www.testcraft.io/feed/",
+      "website_url": "https://www.perfecto.io/blog",
+      "description": "TestCraft is a test automation platform for regression and continuous testing, as well as monitoring of web applications. Our revolutionary AI technology eliminates maintenance time and cost as it automatically overcomes changes in the app.",
+      "followers": {
+        "facebook": 220,
+        "twitter": 481
+      },
+      "image_url": "https://i1.feedspot.com/4949301.jpg?t=1621493195"
+    },
+    {
+      "title": "ToolsQA Blogs - QA Automation Tools Tutorials",
+      "feed_url": "https://www.toolsqa.com/category/blogs/feed/",
+      "website_url": "https://toolsqa.com/categories/blogs",
+      "description": "ToolsQA is an automation testing blog containing various tutorials about Selenium IDE, Katalon Studio, Cucumber, TestNG, Mobile Application Testing, Java, Appium, Manual Software Testing Apart from providing tutorials, it also has a Question and Answer section for users to share the problems and difficulties in automation testing and get the answers from other users.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 473
+      },
+      "image_url": "https://i1.feedspot.com/4948826.jpg?t=1621492245"
+    },
+    {
+      "title": "Katalon Studio Blog",
+      "feed_url": "https://katalon.com/resources-center/blog/feed",
+      "website_url": "https://katalon.com/resources-center/blog",
+      "description": "Katalon Studio is a powerful automation solution to help address the challenge of lacking the integration among open-source test automation frameworks amid unaffordable commercial solutions. Katalon Studio revolutionizes the use of open-source test automation frameworks such as Selenium and Appium. It also offers a viable alternative to commercial test automation solutions that are unaffordable to many small and medium-sized teams.",
+      "followers": {
+        "facebook": 23,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/4949316.jpg?t=1621492250"
+    },
+    {
+      "title": "Qmetry Blog",
+      "feed_url": "https://www.qmetry.com/blog/feed/",
+      "website_url": "https://www.qmetry.com/insights?categories=19",
+      "description": "QMetry is a suite of most comprehensive test management products to provide agile testing teams innovative technology platforms to deploy better Quality Software faster with confidence. It has more than 20 integrations. QMetry brand is trusted by 400 customers globally across many industries including Finance, Healthcare Services, Travel & Hospitality, Retail, Education and High Technology.",
+      "followers": {
+        "facebook": 512,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4949298.jpg?t=1621492305"
+    },
+    {
+      "title": "Froglogic - Automated GUI Testing and Code Coverage Blog",
+      "feed_url": "https://www.froglogic.com/category/blog/feed",
+      "website_url": "https://www.qt.io/blog/tag/testing",
+      "description": "Automated GUI Testing and Code Coverage blog with information and tips to Squish GUI Tester and Coco Code Coverage.",
+      "followers": {
+        "facebook": 200700,
+        "twitter": 325
+      },
+      "image_url": "https://i1.feedspot.com/4610505.jpg?t=1615789218"
+    },
+    {
+      "title": "Bitbar - Enterprise Mobile DevOps and App Testing Blog",
+      "feed_url": "https://bitbar.com/feed/",
+      "website_url": "https://smartbear.com/blog/",
+      "description": "Bitbar Testing blog provides lots of useful best practices, tips, tricks and hands-on example of how to use test automation for mobile app testing.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4948922.jpg?t=1621493174"
+    },
+    {
+      "title": "Parasoft - Automated Software Testing Insights Blog",
+      "feed_url": "https://blog.parasoft.com/rss.xml",
+      "website_url": "https://www.parasoft.com/blog/",
+      "description": "Learn how to supercharge your software testing by expanding your test automation, leveraging AI, and adopting time-efficient testing tools. From static analysis, to unit testing, to API testing, to service virtualization, get the latest tips and techniques here.",
+      "followers": {
+        "facebook": 682,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4949106.jpg?t=1621493191"
+    },
+    {
+      "title": "Angie Jones Blog",
+      "feed_url": "https://angiejones.tech/feed/",
+      "website_url": "https://angiejones.tech/blog/",
+      "description": "Angie Jones is a Senior Developer Advocate who specializes in test automation strategies and techniques. She shares her wealth of knowledge by speaking and teaching at software conferences all over the world.",
+      "followers": {
+        "twitter": 115000
+      },
+      "image_url": "https://i1.feedspot.com/4948901.jpg?t=1621492555"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "category": "Gabon News",
+  "source_url": "https://rss.feedspot.com/gabon_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gabon actu",
+      "feed_url": "https://gabonactu.com/feed/",
+      "website_url": "https://gabonactu.com/",
+      "description": "We are a true source of reliable information collected, processed, and disseminated by a team of professional journalists. We are based in Libreville, Gabon.",
+      "followers": {
+        "facebook": 134000,
+        "instagram": 730
+      },
+      "image_url": "https://i1.feedspot.com/5355957.jpg?t=1640085525"
+    },
+    {
+      "title": "Gabonews",
+      "feed_url": "https://www.gabonews.com/spip.php?page=backend",
+      "website_url": "https://www.gabonews.com/",
+      "description": "News and information on Gabon: economy, society, politics, sport, culture, health, education.",
+      "followers": {
+        "facebook": 33400,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5355958.jpg?t=1640085892"
+    },
+    {
+      "title": "Infos Gabon",
+      "feed_url": "https://fr.infosgabon.com/feed/",
+      "website_url": "https://fr.infosgabon.com/",
+      "description": "The Infos Gabon press agency is one of the first private Gabonese online agencies, specializing in the dissemination of news, reports and editorials of the world. It addresses several areas such as politics, economy, social, gender, the situation of children, HIV / AIDS, health, environment, culture, human rights, etc.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 16100
+      },
+      "image_url": "https://i1.feedspot.com/5355959.jpg?t=1640086387"
+    },
+    {
+      "title": "Direct Infos Gabon",
+      "feed_url": "https://directinfosgabon.com/feed/",
+      "website_url": "https://directinfosgabon.com/",
+      "description": "All economic and financial news on Gabon. Direct Infos Gabon is aimed at all persons or organizations seeking information on the Gabonese economy, its place in the CEMAC sub-region, in Africa and in the world.",
+      "followers": {
+        "facebook": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5355954.jpg?t=1640089873"
+    },
+    {
+      "title": "Info Plus Gabon",
+      "feed_url": "https://www.infosplusgabon.com/index.php?format=feed&type=atom",
+      "website_url": "https://www.infosplusgabon.com/",
+      "description": "Infos Plus Gabon is a news portal featuring coverages on Economy, Politics, Business, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5355953.jpg?t=1642087260"
+    },
+    {
+      "title": "Journal du Gabon",
+      "feed_url": "https://www.journaldugabon.com/feed/",
+      "website_url": "https://www.journaldugabon.com/",
+      "description": "Journal du Gabon is Gabon's premier newspaper covering the latest breaking news and headlines on Eco & Business, Society, Sports, Culture, Health, and more.",
+      "followers": {
+        "facebook": 410,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5355955.jpg?t=1640086721"
+    },
+    {
+      "title": "Agence Gabonaise de Presse",
+      "feed_url": "https://agpgabon.ga/feed/",
+      "website_url": "https://agpgabon.ga/",
+      "description": "Agence Gabonaise de Presse (AGP) is a Gabonese general provider of information for the media and the public.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 106
+      },
+      "image_url": "https://i1.feedspot.com/5355956.jpg?t=1640086113"
+    },
+    {
+      "title": "Gabon Media Time",
+      "feed_url": "https://www.gabonmediatime.com/feed/",
+      "website_url": "https://gabonmediatime.com/",
+      "description": "Gabon Media Time is your news site. It was put online on July 4, 2016 at the initiative of young Gabonese. We decipher and analyze political, legal, social, cultural, international news, etc. in whatever form it is in a style close to its readers, educational, and entertaining.",
+      "followers": {
+        "facebook": 277800,
+        "twitter": 22800,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/5355960.jpg?t=1640085280"
+    }
+  ]
+}

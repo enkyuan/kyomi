@@ -1,0 +1,48 @@
+{
+  "category": "Omaha Fashion",
+  "source_url": "https://rss.feedspot.com/omaha_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "Omaha Fashion Camp Blog",
+      "feed_url": "https://www.omahafashioncamp.com/blog?format=rss",
+      "website_url": "https://www.omahafashioncamp.com/blog",
+      "description": "Omaha's coolest camp for stylish kids, ages 6-17. Kids learn beginning sewing techniques, modeling, sketching, photography and create a garment for a mini-fashion show at the end of the week. Top looks from camp are featured at Omaha Fashion Week!",
+      "followers": {
+        "facebook": 301
+      },
+      "image_url": "https://i1.feedspot.com/5742497.jpg?t=1703573746"
+    },
+    {
+      "title": "Omaha Fashion Week Blog",
+      "feed_url": "https://omahafashionweek.com/blog?format=RSS",
+      "website_url": "https://omahafashionweek.com/blog",
+      "description": "Omaha Fashion Week is a talent incubator that connects designers, stylists, photographers, artists, and models through engaging opportunities. It is the Midwest's premier fashion event, spotlighting fashion innovations and celebrating creative excellence.",
+      "followers": {
+        "facebook": 25400,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/4958008.jpg?t=1621853710"
+    },
+    {
+      "title": "Sustainably LB Blog",
+      "feed_url": "https://www.sustainablylb.com/blog?format=rss",
+      "website_url": "https://www.sustainablylb.com/blog",
+      "description": "Lauren is a freelance journalist, sustainable fashion advocate, storyteller and activist who seeks progress over perfection. Her enthusiasm for sustainability, ethics, travel, exploration and community\u2014and how they are interwoven\u2014largely stems from over 20 years of progressive experience in the fashion industry.",
+      "followers": {
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/5742498.jpg?t=1703573637"
+    },
+    {
+      "title": "Fabulous Fashions Boutique Blog",
+      "feed_url": "https://www.fabulousfashionsomaha.com/blogs/fabulous-fashions-blog.atom",
+      "website_url": "https://www.fabulousfashionsomaha.com/blogs/fabulous-fashions-blog",
+      "description": "The Fabulous Fashions Boutique Blog provides styling advice and clothing recommendations to ensure you look your best. Are you looking for something fabulous to add to your closet? Fabulous Fashions Boutique is a women's clothing boutique in Omaha selling contemporary clothes and accessories online.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5742496.jpg?t=1703573688"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "category": "Netflix",
+  "source_url": "https://rss.feedspot.com/netflix_rss_feeds",
+  "feeds": [
+    {
+      "title": "Netflix Junkie",
+      "feed_url": "https://www.netflixjunkie.com/feed/",
+      "website_url": "https://www.netflixjunkie.com/",
+      "description": "Netflix Junkie is the fansite of Netflix streaming service and you can find TV shows, specials and more, daily, weekly and monthly update.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/5132658.jpg?t=1620370767"
+    },
+    {
+      "title": "TechRadar \u00bb Netflix",
+      "feed_url": "https://www.techradar.com/feeds/tag/netflix",
+      "website_url": "https://www.techradar.com/streaming/netflix",
+      "followers": {
+        "facebook": 655000,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/7311937.jpg?t=1715095292"
+    },
+    {
+      "title": "The Verge \u00bb Netflix",
+      "feed_url": "https://www.theverge.com/rss/netflix/index.xml",
+      "website_url": "https://www.theverge.com/netflix",
+      "description": "With nearly 150 million subscribers around the world, Netflix has a commanding lead in the streaming wars. But it's also facing heavy competition from deep-pocketed conglomerates like Disney, Apple, and AT&T, and an ongoing wave of narrow, targeted streaming sites like CBS All Access and DC Universe, which can draw on popular existing franchises for original content. As fewer companies are willing to license out their films and shows to other streaming sites, Netflix is pouring billions of dollars annually into its own original content...",
+      "followers": {
+        "twitter": 22900000
+      },
+      "image_url": "https://i1.feedspot.com/7311938.jpg"
+    },
+    {
+      "title": "Netflix Tech Blog",
+      "feed_url": "https://netflixtechblog.com/feed",
+      "website_url": "https://netflixtechblog.com/",
+      "description": "Learn about Netflix's world-class engineering efforts, company culture, product developments, and more. Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more, on thousands of internet-connected devices.",
+      "followers": {
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5272150.jpg?t=1715095610"
+    },
+    {
+      "title": "Netflix Life",
+      "feed_url": "https://netflixlife.com/feed",
+      "website_url": "https://netflixlife.com/",
+      "description": "The ultimate home for the best and the latest Netflix news, original series, movies, television shows, commentary and Netflix new releases & stories.",
+      "followers": {
+        "facebook": 676700
+      },
+      "image_url": "https://i1.feedspot.com/5187783.jpg?t=1764763814"
+    },
+    {
+      "title": "Mashable India",
+      "feed_url": "https://in.mashable.com/netflix.xml",
+      "website_url": "https://in.mashable.com/netflix/",
+      "description": "Mashable is a global, multi-platform media and entertainment company.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/8836519.jpg"
+    },
+    {
+      "title": "Decider \u00bb Netflix",
+      "feed_url": "https://decider.com/platform/netflix/feed/",
+      "website_url": "https://decider.com/platform/netflix/",
+      "description": "Decider is the first entertainment and pop culture destination site created to help today's on-demand generation discover the best streaming content through a unique blend of pop culture expertise and hilarious insight. It is part of the Post Digital Network.",
+      "followers": {
+        "facebook": 122700,
+        "twitter": 47900,
+        "instagram": 95700
+      },
+      "image_url": "https://i1.feedspot.com/4909969.jpg?t=1764763906"
+    },
+    {
+      "title": "Ready Steady Cut",
+      "feed_url": "https://readysteadycut.com/feed/",
+      "website_url": "https://readysteadycut.com/",
+      "description": "Ready Steady Cut is an independent website that provides Movie and TV coverage, including reviews, recaps, explainers, news, and more.",
+      "followers": {
+        "facebook": 832,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5190066.jpg?t=1764763922"
+    },
+    {
+      "title": "Collider",
+      "feed_url": "https://collider.com/feed",
+      "website_url": "https://collider.com/",
+      "description": "Collider is the ultimate source for impactful entertainment news. We deliver the biggest, most important industry happenings, and provide deep analysis and sharp commentary through interviews, reviews, and much more. Since the site began, we've been dedicated to delivering content that is thoughtful, analytical, and all-encompassing, with a tinge of personality for good measure...",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 153100,
+        "instagram": 137600
+      },
+      "image_url": "https://i1.feedspot.com/5205982.jpg?t=1764763863"
+    }
+  ]
+}

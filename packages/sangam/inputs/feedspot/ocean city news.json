@@ -1,0 +1,27 @@
+{
+  "category": "Ocean City News",
+  "source_url": "https://rss.feedspot.com/ocean_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ocean City Sentinel",
+      "feed_url": "http://ocnjsentinel.com/category/news/feed/",
+      "website_url": "http://ocnjsentinel.com/category/news/",
+      "description": "Keep up with the latest local news and information for the Ocean City from Ocean City Sentinel.",
+      "followers": {
+        "facebook": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5171221.jpg"
+    },
+    {
+      "title": "OCNJ Daily",
+      "feed_url": "https://ocnjdaily.com/feed/",
+      "website_url": "https://ocnjdaily.com/",
+      "description": "OCNJ Daily provides news and content on everything you need to know about Ocean City: daily news coverage and comprehensive information on the island's events, businesses and services, attractions, real estate, beach and boardwalk, and more.",
+      "followers": {
+        "facebook": 138800,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5171210.jpg"
+    }
+  ]
+}

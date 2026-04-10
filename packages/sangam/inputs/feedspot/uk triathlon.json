@@ -1,0 +1,106 @@
+{
+  "category": "UK Triathlon",
+  "source_url": "https://rss.feedspot.com/uk_triathlon_rss_feeds",
+  "feeds": [
+    {
+      "title": "220Triathlon",
+      "feed_url": "https://www.220triathlon.com/feed/atom",
+      "website_url": "https://www.220triathlon.com/",
+      "description": "220 Triathlon is the UK's longest-running and most popular magazine for all things triathlon-related, with each issue providing the latest news, race coverage, training/nutrition advice and gear reviews.",
+      "followers": {
+        "facebook": 80300,
+        "twitter": 43300
+      },
+      "image_url": "https://i1.feedspot.com/4402670.jpg?t=1617984907"
+    },
+    {
+      "title": "Tri247.com",
+      "feed_url": "https://www.tri247.com/feed",
+      "website_url": "https://www.tri247.com/",
+      "description": "Tri247.com is the leading triathlon news destination delivering athlete interviews, features, product reviews, events listings, results & training advice.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/4671186.jpg?t=1617986076"
+    },
+    {
+      "title": "Coach Cox",
+      "feed_url": "http://feeds.feedburner.com/TrainsTravels",
+      "website_url": "https://www.coachcox.co.uk/",
+      "description": "Endurance and triathlon coach. Russell Cox blogs about Ironman training and racing. To provide highly individualised coaching and help athletes achieve their performance targets.",
+      "followers": {
+        "facebook": 776,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4670396.jpg?t=1617985887"
+    },
+    {
+      "title": "Irontwit",
+      "feed_url": "https://irontwit.creativeblogs.net/feed/",
+      "website_url": "https://irontwit.creativeblogs.net/",
+      "description": "A blog by John Sutton featuring useful information on triathlon sport.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4670408.jpg?t=1617985577"
+    },
+    {
+      "title": "Fat Girl to Ironman",
+      "feed_url": "https://fatgirltoironman.co.uk/feed/",
+      "website_url": "https://fatgirltoironman.co.uk/",
+      "description": "Running coach & fitness instructor Tamsyn Smith writes about her journey from being a non-swimming, novice cyclist with limited running ability to completely pro swimmer and runnner.",
+      "followers": {
+        "facebook": 775,
+        "twitter": 2500,
+        "instagram": 835
+      },
+      "image_url": "https://i1.feedspot.com/4460401.jpg?t=1599815180"
+    },
+    {
+      "title": "Paddle Pedal Pace",
+      "feed_url": "https://www.paddlepedalpace.co.uk/feed/",
+      "website_url": "https://www.paddlepedalpace.co.uk/",
+      "description": "UK based triathlon blog. Life is more fun when you swim, bike and run! Paddle Pedal Pace is an award-winning fitness blog with content related to living an active, healthy lifestyle. You'll find articles about endurance sports including triathlon, the outdoors and active travel.",
+      "followers": {
+        "facebook": 826,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4843950.jpg?t=1658986311"
+    },
+    {
+      "title": "Glenn Tait",
+      "feed_url": "https://glenntait.co.uk/feed/",
+      "website_url": "https://glenntait.co.uk/",
+      "description": "This blog is about me and my running obsession. I started running to lose weight. The running continued and this blog details everything that I do, experience, and feel like a runner and now triathloner.",
+      "followers": {
+        "twitter": 584
+      },
+      "image_url": "https://i1.feedspot.com/4911205.jpg?t=1620122287"
+    },
+    {
+      "title": "Trigirl - Triathlon Clothing for Women",
+      "feed_url": "http://www.trigirl.co.uk/blog/feed/",
+      "website_url": "http://www.trigirl.co.uk/blog/",
+      "description": "Explore the blog to find information regarding triathlon clothing for women, advice to get you through your first (or fastest) triathlon and fun articles about all things triathlon.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 633,
+        "instagram": 943
+      },
+      "image_url": "https://i1.feedspot.com/4670495.jpg?t=1650024872"
+    },
+    {
+      "title": "SISU Racing Blog",
+      "feed_url": "https://www.sisuracing.co.uk/blog-feed.xml",
+      "website_url": "https://www.sisuracing.co.uk/blog",
+      "description": "SISU Racing provides professional endurance coaching specialising in Triathlon coaching and ultra endurance events.",
+      "followers": {
+        "facebook": 467,
+        "twitter": 223,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5440491.jpg?t=1662966778"
+    }
+  ]
+}

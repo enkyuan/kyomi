@@ -1,0 +1,83 @@
+{
+  "category": "Microsoft Exchange Server",
+  "source_url": "https://rss.feedspot.com/microsoft_exchange_server_rss_feeds",
+  "feeds": [
+    {
+      "title": "EighTwOne",
+      "feed_url": "https://eightwone.com/feed/",
+      "website_url": "https://eightwone.com/",
+      "description": "My name is Michel de Rooij and I'm an Office Apps & Services MVP, and aid organizations in their journeys with Microsoft Exchange and related products and technologies as well as in the scripting space by developing project or administration supporting tools. In this blog, I share articles, news, tips, and info on Microsoft Exchange, Office 365 and PowerShell.",
+      "followers": {
+        "facebook": 504,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4924011.jpg?t=1611136197"
+    },
+    {
+      "title": "ALI TAJRAN Blog",
+      "feed_url": "https://www.alitajran.com/feed/",
+      "website_url": "https://www.alitajran.com/blog/",
+      "description": "On our popular IT blog, you can find articles on how to solve IT problems, the latest trends, tech guides, tutorials, tips, and useful scripts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5639420.jpg?t=1690806106"
+    },
+    {
+      "title": "Collaborationpro.com",
+      "feed_url": "https://www.collaborationpro.com/feed/",
+      "website_url": "https://www.collaborationpro.com/",
+      "description": "HI!! I am Edward. Collaboration Pro is my contribution to the community, sharing of knowledge and articles relating to Exchange, Lync, Web Application Proxy and Active Directory Federation Services.",
+      "followers": {
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/5056196.jpg?t=1611136204"
+    },
+    {
+      "title": "MSExchangeGuru.com",
+      "feed_url": "https://msexchangeguru.com/feed/",
+      "website_url": "https://msexchangeguru.com/",
+      "description": "Follow this blog to get regular updates on infrastructure-related products. The blog provides high-quality articles which would help us turn to a one-stop site for all your Exchange related queries to be Exchanged.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/712366.jpg?t=1610971098"
+    },
+    {
+      "title": "Exchange Server and Active Directory Blog",
+      "feed_url": "https://smtp25.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://smtp25.blogspot.com/",
+      "description": "This blog contains information and articles on Exchange 2016, Exchange 2013, Exchange 2010 and Active Directory.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4923847.jpg?t=1611136468"
+    },
+    {
+      "title": "Microsoft Exchange Server Made Easy",
+      "feed_url": "https://exchange-server-guide.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://exchange-server-guide.blogspot.com/",
+      "description": "Exchange Guide is the complete encyclopedia for all the possible queries related to MS Exchange Server. It contains expert solutions, tips, tricks and explanations to frequently asked terms/questions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4923899.jpg?t=1611136261"
+    },
+    {
+      "title": "CodeTwo Blog",
+      "feed_url": "https://www.codetwo.com/admins-blog/feed/",
+      "website_url": "https://www.codetwo.com/admins-blog/",
+      "description": "A spam-free diet of tech articles, tips and tricks and how-to's on administering Microsoft 365, Office 365, Exchange and Windows Server. CodeTwo develops software solutions for Office 365, Exchange and Sharepoint.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4924116.jpg?t=1611136210"
+    },
+    {
+      "title": "Microsoft Community Hub \u00bb Exchange Team Blog",
+      "feed_url": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=Exchange",
+      "website_url": "https://techcommunity.microsoft.com/category/exchange/blog/exchange/",
+      "description": "Get the latest information, insights, announcements, and news from Microsoft Exchange Team experts and IT professionals in this blog.",
+      "followers": {
+        "twitter": 64900
+      },
+      "image_url": "https://i1.feedspot.com/4674550.jpg?t=1609586800"
+    }
+  ]
+}

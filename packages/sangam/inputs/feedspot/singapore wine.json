@@ -1,0 +1,96 @@
+{
+  "category": "Singapore Wine",
+  "source_url": "https://rss.feedspot.com/singapore_wine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pure The Winery Blog",
+      "feed_url": "https://sg.purethewinery.com/blogs/news.atom",
+      "website_url": "https://sg.purethewinery.com/blogs/news",
+      "description": "Pure The Winery Blog provides wine enthusiasts with a wealth of information on the art of winemaking and wine tasting. From vineyard stories to wine pairing tips, this blog offers a deep dive into the world of fine wines. Explore the Pure The Winery Blog and enhance your appreciation for the beauty and complexity of wine.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5569739.jpg?t=1684325655"
+    },
+    {
+      "title": "Grand Vin Blog",
+      "feed_url": "https://www.grandvin.com.sg/blogs/news.atom",
+      "website_url": "https://www.grandvin.com.sg/blogs/news",
+      "description": "Grand Vin Blog is a treasure trove of wine knowledge, featuring articles on various wine regions, grape varieties, and winemaking techniques. Whether you're a seasoned sommelier or a curious wine novice, this blog offers insights to expand your understanding and enjoyment of wine. Indulge in the Grand Vin Blog and discover the world of wine through informative and engaging content.",
+      "followers": {
+        "facebook": 30300,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5569748.jpg?t=1684326023"
+    },
+    {
+      "title": "Ric's Wine Journal",
+      "feed_url": "https://winebyric.com/feed/",
+      "website_url": "https://winebyric.com/",
+      "description": "Ric's Wine Journal is a personal blog where wine enthusiast Ric shares his experiences, tasting notes, and recommendations. From exploring unique wine varietals to visiting wineries, this blog offers a personal perspective on the world of wine. Engage with Ric's Wine Journal and gain insights from his wine journeys and discoveries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5569741.jpg?t=1684325985"
+    },
+    {
+      "title": "Singapore Wine Vault Blog",
+      "feed_url": "https://www.singaporewinevault.com/feed/",
+      "website_url": "https://www.singaporewinevault.com/blog/",
+      "description": "Singapore Wine Vault Blog caters to wine collectors and enthusiasts, offering insights into wine storage, investment, and appreciation. From cellar management tips to market trends, this blog provides valuable information for those passionate about wine. Stay connected with the Singapore Wine Vault Blog and elevate your wine collecting and storing experience.",
+      "followers": {
+        "facebook": 17400,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5569751.jpg?t=1684326282"
+    },
+    {
+      "title": "Singapore Wines Wholesales Blog",
+      "feed_url": "https://www.wineswholesales.com.sg/blogs/news.atom",
+      "website_url": "https://www.wineswholesales.com.sg/blogs/news",
+      "description": "Wines Wholesales Blog caters to wine retailers and wholesalers, offering industry insights, market trends, and tips for running a successful wine business. From sourcing wines to managing inventory, this blog provides valuable information to navigate the wholesale wine industry. Stay connected with the Wines Wholesales Blog and elevate your wine business to new heights.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5569744.jpg?t=1684325681"
+    },
+    {
+      "title": "Eclectique Wines & Spirits Blog",
+      "feed_url": "https://ecwines.sg/blogs/news.atom",
+      "website_url": "https://ecwines.sg/blogs/news",
+      "description": "Eclectique Wines Sg Blog celebrates the diversity and uniqueness of wines, showcasing hidden gems and emerging wine producers. From boutique wineries to rare varietals, this blog offers a curated selection of wines for the discerning palate. Engage with the Eclectique Wines Sg Blog and broaden your wine horizons with their handpicked selections.",
+      "followers": {
+        "facebook": 582,
+        "instagram": 940
+      },
+      "image_url": "https://i1.feedspot.com/5569743.jpg?t=1684325596"
+    },
+    {
+      "title": "La Cosecha Wine Shop Blog",
+      "feed_url": "https://lacosechashop.online/feed",
+      "website_url": "https://lacosechashop.online/blog",
+      "description": "La Cosecha Wine Shop Blog is dedicated to promoting and showcasing the finest wines from around the world. From tasting notes to food and wine pairings, this blog offers a curated selection of wines for every occasion. Explore the La Cosecha Wine Shop Blog and discover their passion for quality wines and exceptional taste.",
+      "followers": {
+        "facebook": 500,
+        "instagram": 224
+      },
+      "image_url": "https://i1.feedspot.com/5569752.jpg?t=1684325695"
+    },
+    {
+      "title": "Wine Xin",
+      "feed_url": "https://winexin.sg/feed/",
+      "website_url": "https://winexin.sg/",
+      "description": "Wine Xin Blog is a platform for wine lovers to discover new wines, learn about winemaking techniques, and explore wine regions around the world. From wine reviews to travel stories, this blog offers a rich tapestry of wine-related content. Engage with the Wine Xin Blog and embark on a global wine adventure.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5569742.jpg?t=1684325910"
+    },
+    {
+      "title": "Pop Up Wine Blog",
+      "feed_url": "https://popupwine.com.sg/blogs/pop-up-wine-blog.atom",
+      "website_url": "https://popupwine.com.sg/blogs/pop-up-wine-blog",
+      "description": "Pop Up Wine Blog is a platform that celebrates the joy of discovering and enjoying wine. From wine reviews to food and wine pairings, this blog offers inspiration and recommendations for wine lovers. Immerse yourself in the Pop Up Wine Blog and join the community of wine enthusiasts exploring new flavors and experiences.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 49,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5569740.jpg?t=1684325582"
+    }
+  ]
+}

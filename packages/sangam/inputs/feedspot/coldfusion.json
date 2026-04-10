@@ -1,0 +1,211 @@
+{
+  "category": "ColdFusion",
+  "source_url": "https://rss.feedspot.com/coldfusion_rss_feeds",
+  "feeds": [
+    {
+      "title": "TeraTech Blog",
+      "feed_url": "https://teratech.com/feed/",
+      "website_url": "https://teratech.com/blog/",
+      "description": "We are ColdFusion experts. In addition to 19 years working with ColdFusion, we ran the CFUnited International Conference, and we've been awarded the 'Best ColdFusion Consulting Firm' by the CFDJ (ColdFusion Developers' Journal) 5 times in a row. Need help with a maintenance, site crash, to build a new ColdFusion website or app, or updates?",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4785626.jpg?t=1609338575"
+    },
+    {
+      "title": "Ben Nadel's Blog",
+      "feed_url": "https://www.bennadel.com/index.cfm?event=blog.rss",
+      "website_url": "https://www.bennadel.com/index.cfm",
+      "description": "This blog posts covering JavaScript, User Experience (UX), ColdFusion, Node.js, and other topics.",
+      "followers": {
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/4638729.jpg?t=1609338361"
+    },
+    {
+      "title": "Adobe ColdFusion Blog",
+      "feed_url": "https://coldfusion.adobe.com/feed/",
+      "website_url": "https://coldfusion.adobe.com/",
+      "description": "Adobe\u00ae ColdFusion\u00ae software solves the day-to-day challenges of Internet application development, allowing you to be extremely productive as you create and deliver engaging online applications.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/817511.jpg?t=1609338367"
+    },
+    {
+      "title": "Adobe ColdFusion",
+      "feed_url": "https://coldfusion.adobe.com/feed/",
+      "website_url": "https://coldfusion.adobe.com/blogs/",
+      "description": "Adobe ColdFusion software solves the day-to-day challenges of Internet application development, allowing you to be extremely productive as you create and deliver engaging online applications. Follow this blog to know the latest in Technical Marketing, eLearning and ColdFusion.",
+      "followers": {
+        "facebook": 16600,
+        "twitter": 864
+      },
+      "image_url": "https://i1.feedspot.com/4785645.jpg?t=1609338372"
+    },
+    {
+      "title": "Ortus Solutions Blog",
+      "feed_url": "https://www.ortussolutions.com/blog/rss",
+      "website_url": "https://www.ortussolutions.com/blog",
+      "description": "Ortus Solutions offers a comprehensive suite of products and services for empowering, building, running and managing ColdFusion applications. We are the creators of ColdBox, ContentBox CMS and much more.",
+      "followers": {
+        "facebook": 496,
+        "twitter": 994
+      },
+      "image_url": "https://i1.feedspot.com/4785059.jpg?t=1609338378"
+    },
+    {
+      "title": "FusionReactor Blog",
+      "feed_url": "https://fusion-reactor.com/feed/",
+      "website_url": "https://fusion-reactor.com/blog/",
+      "description": "FusionReactor is an Application Performance Monitor for Java and ColdFusion, which goes beyond monitoring to actively minimize downtime and accelerate time to fix.",
+      "followers": {
+        "facebook": 425,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4528298.jpg?t=1628493264"
+    },
+    {
+      "title": "Raymond Camden's Blog",
+      "feed_url": "https://feeds.feedburner.com/raymondcamdensblog",
+      "website_url": "https://www.raymondcamden.com/",
+      "description": "Blog by Raymond Camden. My primary technical focus is on LoopBack, Node.js, web standards and client-side development. Most of my time is spent writing, researching, or presenting. When I'm not behind a computer, I'm an avid XBox/PS4 player, enjoy movies, and read like crazy.",
+      "followers": {
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/4341002.jpg?t=1609338813"
+    },
+    {
+      "title": "Pete Freitag",
+      "feed_url": "https://www.petefreitag.com/rss/",
+      "website_url": "https://www.petefreitag.com/",
+      "description": "Covering ColdFusion, Java, Web Development, and other topics.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5134489.jpg?t=1609338820"
+    },
+    {
+      "title": "Chris Tierney",
+      "feed_url": "https://christierney.com/feed/",
+      "website_url": "https://christierney.com/",
+      "description": "ColdFusion specialist and AWS Solutions Architect Associate at CF Webtools. Chris Tierney has been developing ColdFusion applications since 1997 with additional strengths in JavaScript and server maintenance. His blog focuses on technical challenges he has overcome, which allows for future reference among CF Webtools staff and the developer community.",
+      "followers": {
+        "twitter": 292
+      },
+      "image_url": "https://i1.feedspot.com/4784934.jpg?t=1609338824"
+    },
+    {
+      "title": "Adam Cameron's Dev Blog",
+      "feed_url": "https://blog.adamcameron.me/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.adamcameron.me/",
+      "description": "Adam Cameron's discusses his investigations into issues/challenges he has encountered with CFML, PHP and other languages. I've been a web developer since 2001. I have spent 13yrs as a CFML developer, and until Sept 2014, that was the main subject matter here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4784836.jpg?t=1613388210"
+    },
+    {
+      "title": "CFWheels Blog",
+      "feed_url": "https://cfwheels.org/blog/feed/",
+      "website_url": "https://cfwheels.org/blog/",
+      "description": "CFWheels is an open source CFML (ColdFusion Markup Language) framework inspired by Ruby on Rails that provides fast application development, a great organization system for your code, and is just plain fun to use. One of our biggest goals is for you to be able to get up and running with CFWheels quickly. We want for you to be able to learn it as rapidly as it is to write applications with it.",
+      "followers": {
+        "facebook": 287,
+        "twitter": 207
+      },
+      "image_url": "https://i1.feedspot.com/4784896.jpg?t=1609338836"
+    },
+    {
+      "title": "Gregory's Blog",
+      "feed_url": "http://gregoryalexander.com/blog/rss.cfm?mode=full",
+      "website_url": "https://www.gregoryalexander.com/blog/index.cfm",
+      "description": "Gregory's Blog is intended to be the most beautiful and functional open sourced ColdFusion based blog in the world. While I can't go toe to toe with WordPress functionality, I believe that Gregory's Blog competes with WordPress in core functionality, especially with its abundant theme related features. This blog was built from the ground up to be eminently themeable. Gregory's Blog is a responsive web application, and should be fully functional and work on any modern device.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5031667.jpg?t=1609339152"
+    },
+    {
+      "title": "Akbarsait's Blog",
+      "feed_url": "https://akbarsait.com/blog.rss",
+      "website_url": "https://akbarsait.com/",
+      "description": "A blog for ColdFusion Development, web development and web technologies by Akbarsait.",
+      "followers": {
+        "twitter": 705
+      },
+      "image_url": "https://i1.feedspot.com/4785759.jpg?t=1609338920"
+    },
+    {
+      "title": "South of Shasta Blog",
+      "feed_url": "https://southofshasta.com/index.cfm/_api/feed/v1/southofshasta/?feedID=05ED0808-DA70-D025-4DAF6D9D2B5EBC63",
+      "website_url": "https://southofshasta.com/blog/",
+      "description": "Nolan Erck has been developing software for 19 years. Nolan manages the SacInteractive User Group, teaches classes on aspects of software development, and regularly gives presentations at conferences and user groups across the country. Things we use: ColdFusion, CFML, Lucee, JavaScript, C#, AngularJS, VueJS, breakfast burritos, coffee.",
+      "followers": {
+        "twitter": 506
+      },
+      "image_url": "https://i1.feedspot.com/4785117.jpg?t=1609338841"
+    },
+    {
+      "title": "Rey Bango",
+      "feed_url": "https://feeds.feedburner.com/reybango/zSyW",
+      "website_url": "https://blog.reybango.com/",
+      "description": "Rey Bango blogger, Web developer, honey badger focusing primarily on Internet Explorer and web development with the primary goal of being an advocate for the web development community.",
+      "followers": {
+        "twitter": 23200
+      },
+      "image_url": "https://i1.feedspot.com/4785133.jpg?t=1609338846"
+    },
+    {
+      "title": "FW/1 - The Invisible Framework Blog",
+      "feed_url": "https://framework-one.github.io/atom.xml?format=xml",
+      "website_url": "https://framework-one.github.io/blog/",
+      "description": "FW/1 4.1.0 has been released! This is a maintenance release for FW/1 4.0.0 that includes a number of bug fixes and some minor enhancements.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4784968.jpg?t=1609338962"
+    },
+    {
+      "title": "ColdFusion Muse",
+      "feed_url": "https://www.coldfusionmuse.com/rss.cfm?mode=full",
+      "website_url": "https://www.coldfusionmuse.com/",
+      "description": "Musings and Other Things from CF Guru Mark Kruger. Mark writes a blog on ColdFusion called ColdFusion Muse that is widely read among other developers.",
+      "followers": {
+        "twitter": 685
+      },
+      "image_url": "https://i1.feedspot.com/4784921.jpg?t=1609338873"
+    },
+    {
+      "title": "Danwatt Cold Fusion",
+      "feed_url": "http://www.danwatt.org/category/programming/cold-fusion/feed/",
+      "website_url": "http://www.danwatt.org/category/programming/cold-fusion/",
+      "description": "Dan Watt Blogger, Web Developer for Dave Ramsey, Christian, Husband, Father, Photographer and more",
+      "followers": {
+        "twitter": 291
+      },
+      "image_url": "https://i1.feedspot.com/4785699.jpg"
+    },
+    {
+      "title": "Coder's Revolution - Do you want a revolution? Blog",
+      "feed_url": "https://wwvv.codersrevolution.com/blog/rss",
+      "website_url": "https://wwvv.codersrevolution.com/blog",
+      "description": "Brad Wood's musings on ColdFusion, Lucee, CFML, Couchbase, ColdBox and Adobe.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4784916.jpg?t=1609338930"
+    },
+    {
+      "title": "Charlie Arehart's ColdFusion Troubleshooting Blog",
+      "feed_url": "http://www.carehart.org/blog/client/rss.cfm?mode=full",
+      "website_url": "https://www.carehart.org/blog/client/index.cfm",
+      "description": "CArehart.org is the site of veteran ColdFusion troubleshooter Charlie Arehart, who serves the community with consulting, tuning, and configuration support and training. He's also a frequent author and speaker. Here you'll find such resources as his blog, past articles and presentations, UGTV, CF411, and more.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4793464.jpg?t=1609338384"
+    },
+    {
+      "title": "Cutter's Crossing Blog",
+      "feed_url": "https://cutterscrossing.com/rss.cfm?mode=full",
+      "website_url": "https://cutterscrossing.com/blog/",
+      "description": "Blog by Steve, Husband, Father, Singer, Photographer, Poet, Priest, & Occasional Developer of ColdFusion Applications. I am an Adobe Certified Expert as an Advanced ColdFusion Developer, and co-author of two books on Sencha's Ext JS library, most recent being Learning Ext JS 3.2 .",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4785073.jpg?t=1609339054"
+    }
+  ]
+}

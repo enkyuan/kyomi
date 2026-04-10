@@ -1,0 +1,60 @@
+{
+  "category": "Jam Band",
+  "source_url": "https://rss.feedspot.com/jam_band_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jambands",
+      "feed_url": "https://jambands.com/feed/",
+      "website_url": "https://jambands.com/news/",
+      "description": "Jambands.com was founded in 1998 by Dean Budnick and a team of individuals eager to spread the good word about a variety of bands then ignored by the mainstream media. Featuring daily news, features, set lists, reviews, charts, columns, audio, video, merchandise and more.",
+      "followers": {
+        "facebook": 349200,
+        "twitter": 81400,
+        "instagram": 158600
+      },
+      "image_url": "https://i1.feedspot.com/5472461.jpg?t=1669617207"
+    },
+    {
+      "title": "Leeway's Home Grown Music Network",
+      "feed_url": "http://feeds.feedburner.com/LeewaysHomeGrownMusicNetwork",
+      "website_url": "https://www.homegrownmusic.net/",
+      "description": "Leeway's Home Grown Music Network is about independent bands, reps, venues, stores and fans like you, all working together to make the music scene stronger. Leeway's Home Grown Music Network is a shared collective of people, independent jam bands, live music venues, and businesses working together to make the independent music scene stronger.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 678
+      },
+      "image_url": "https://i1.feedspot.com/5472466.jpg?t=1669617742"
+    },
+    {
+      "title": "JamBase",
+      "feed_url": "https://www.jambase.com/feed",
+      "website_url": "https://www.jambase.com/articles",
+      "description": "JamBase exists to connect music fans everywhere with the music they love. Expose music of true substance and character, and promote it everywhere JamBase is deeply committed to supporting and growing the live music community. Find concerts near you, buy concert tickets, and get news & updates about the bands you love at JamBase.",
+      "followers": {
+        "facebook": 188600,
+        "twitter": 94400
+      },
+      "image_url": "https://i1.feedspot.com/5472465.jpg?t=1669618182"
+    },
+    {
+      "title": "Rock Cellar Magazine \u00bb Jam Band",
+      "feed_url": "https://rockcellarmagazine.com/tag/jam-band/feed/",
+      "website_url": "https://rockcellarmagazine.com/tag/jam-band/",
+      "description": "MagazineRock Cellar is deep with content and includes the latest-breaking music, celebrity and national news, interviews, videos, a new music marketplace, a record store and much more. Rock Cellar will be the first news outlet to take this information to subscribers on a daily basis. Not wait for them to look for it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5477392.jpg?t=1670501437"
+    },
+    {
+      "title": "The Jamwich",
+      "feed_url": "https://www.thejamwich.com/feed/",
+      "website_url": "https://www.thejamwich.com/",
+      "description": "The Jamwich Ltd. is a company invested in creating positive movement in the music and art community through promotion and participation. They post new and unique content on a nearly daily basis like festival reviews and previews, weekly digests of upcoming live music, musical debuts and news, and more.",
+      "followers": {
+        "facebook": 20200,
+        "twitter": 1900,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5472468.jpg?t=1669617551"
+    }
+  ]
+}

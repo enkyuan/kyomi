@@ -1,0 +1,42 @@
+{
+  "category": "The Atlantic",
+  "source_url": "https://rss.feedspot.com/the_atlantic_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Atlantic",
+      "feed_url": "https://www.theatlantic.com/feed/all/",
+      "website_url": "https://www.theatlantic.com/world/",
+      "description": "The Atlantic covers news, politics, culture, technology, health, and more, through its articles, podcasts, videos, and flagship magazine. The Atlantic has shaped the national debate on politics, business, foreign affairs, and cultural trends.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 2000000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5232981.jpg?t=1642422126"
+    },
+    {
+      "title": "The Atlantic \u00bb Politics",
+      "feed_url": "https://www.theatlantic.com/feed/channel/politics/",
+      "website_url": "https://www.theatlantic.com/politics/",
+      "description": "Get the latest news, commentary, and updates for political events, politics, and the government. For more than 150 years, The Atlantic has shaped the national debate on politics, business, foreign affairs, and cultural trends.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 2000000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4555082.jpg?t=1750839949"
+    },
+    {
+      "title": "The Atlantic \u00bb Ideas",
+      "feed_url": "https://www.theatlantic.com/feed/channel/ideas/",
+      "website_url": "https://www.theatlantic.com/ideas/",
+      "description": "All articles about Ideas from The Atlantic.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 2000000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/4555082.jpg?t=1750839949"
+    }
+  ]
+}

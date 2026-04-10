@@ -1,0 +1,85 @@
+{
+  "category": "Nebraska Food",
+  "source_url": "https://rss.feedspot.com/nebraska_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gastronom Blog",
+      "feed_url": "https://www.gastronomblog.com/feed/",
+      "website_url": "https://www.gastronomblog.com/",
+      "description": "Hi, we are Jay and Leah, a couple who love to share our love of cocktails, great food, restaurants, and spirited travel! Both of us love to entertain, and believe that food and drink not only nourish us but feed the soul! Here on Gastronom Cocktails, you'll not only find dessert and dinner recipes but also cocktails and alcohol recipes. We have also spiced it up with our travel experiences.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 1900,
+        "instagram": 36000
+      },
+      "image_url": "https://i1.feedspot.com/4541995.jpg?t=1614577069"
+    },
+    {
+      "title": "BuyNebraska.com",
+      "feed_url": "https://buynebraska.com/blogs/news.atom",
+      "website_url": "https://buynebraska.com/blogs/news",
+      "description": "Learn more about products originating from Nebraska. This Buy Nebraska Blog and News features GROW Nebraska Members and their products. The GROW Nebraska program carries a wide variety of handmade, gourmet food items from all over Nebraska.",
+      "followers": {
+        "facebook": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5319899.jpg?t=1631017787"
+    },
+    {
+      "title": "No Kid Hungry",
+      "feed_url": "https://state.nokidhungry.org/nebraska/feed/",
+      "website_url": "https://state.nokidhungry.org/nebraska/the-latest/",
+      "description": "Here you'll find blog posts, press releases, newsletters, and more that help show the effect that hunger has on kids in your community. 'No child should be hungry at Nebraska', at No Kid Hungry, that's our promise.",
+      "followers": {
+        "facebook": 342600,
+        "twitter": 448500
+      },
+      "image_url": "https://i1.feedspot.com/5319914.jpg?t=1631018968"
+    },
+    {
+      "title": "BBQ Tourist",
+      "feed_url": "https://bbqnewsletter.substack.com/feed",
+      "website_url": "https://bbqnewsletter.substack.com/",
+      "description": "Hello, I'm Ryan, founder of BBQ Tourist. I'm an Omaha-based barbecue enthusiast, blogger, and co-founder of The Smoke Sheet BBQ Newsletter. Follow me for the latest news and information on barbecue restaurants, events, backyard cooking, and more.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 685,
+        "instagram": 64200
+      },
+      "image_url": "https://i1.feedspot.com/5319918.jpg?t=1631019446"
+    },
+    {
+      "title": "Visit Omaha \u00bb Dining",
+      "feed_url": "https://www.visitomaha.com/blog/category/dining/55d623dc4b240aa4199309ae/rss/",
+      "website_url": "https://www.visitomaha.com/blog/category/dining/55d623dc4b240aa4199309ae/",
+      "description": "Omaha city has been a dynamic city, Visit Omaha gives you all the experiences you can have in the city, be it enjoying a simple dinner with your family or a luxurious one with your friends. Covering romantic dinners and festivals during your visit. Use our suggestions to build your perfect itinerary. Find the best Omaha hotels, restaurants, events, and things to do. We'll help plan your Omaha trip w/ relevant content, answers to questions & valuable tips.",
+      "followers": {
+        "facebook": 131600,
+        "twitter": 18100,
+        "instagram": 58300
+      },
+      "image_url": "https://i1.feedspot.com/5319886.jpg?t=1631017397"
+    },
+    {
+      "title": "Nebraska Star Beef Blog",
+      "feed_url": "https://nebraskastarbeef.com/feed/",
+      "website_url": "https://nebraskastarbeef.com/category/blog/",
+      "description": "Get delicious recipes from Nebraska Star Beef. They are a Nebraska based, family owned and operated company dedicated to providing the highest quality, premium angus beef.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 391,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5319922.jpg?t=1631019676"
+    },
+    {
+      "title": "Lincoln by mouth",
+      "feed_url": "https://lincolnbymouth.com/feed/",
+      "website_url": "https://lincolnbymouth.com/",
+      "description": "A Lincoln food blog exploring Lincoln Nebraska and the surrounding area for good eats and tasty drinks. Joel is a web developer & designer who has lived in Lincoln since 1999 when he came here for college. As life worked out, he got to stay here and now he is a Lincolnite for life.",
+      "followers": {
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/5319929.jpg?t=1631020542"
+    }
+  ]
+}

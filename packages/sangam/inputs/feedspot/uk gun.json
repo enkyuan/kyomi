@@ -1,0 +1,73 @@
+{
+  "category": "UK Gun",
+  "source_url": "https://rss.feedspot.com/uk_gun_rss_feeds",
+  "feeds": [
+    {
+      "title": "Just BB Guns Blog",
+      "feed_url": "https://www.justbbguns.co.uk/feed/",
+      "website_url": "https://www.justbbguns.co.uk/blog/",
+      "description": "Just BB Guns is one of the largest airsoft BB gun providers in the UK. Subscribe to keep up with the latest products news, special offers and sales information on up and coming airsoft products and developments in the world of Airsoft.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 1300,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4920075.jpg?t=1620714394"
+    },
+    {
+      "title": "Westley Richards",
+      "feed_url": "https://www.westleyrichards.com/us/theexplora/feed/",
+      "website_url": "https://www.westleyrichards.com/theexplora/",
+      "description": "Westley Richards has been credited with some of the greatest designs in both military and sporting firearm history, most notably the solid drawn brass cartridge case, monkey tail breech loading rifle, Anson & Deeley hammerless gun, the hand detachable lock action and more. Subscribe to get latest updates from this blog in your inbox.",
+      "followers": {
+        "facebook": 30300
+      },
+      "image_url": "https://i1.feedspot.com/4920097.jpg?t=1620714408"
+    },
+    {
+      "title": "Firearms UK",
+      "feed_url": "http://firearmsuk.org/feed/",
+      "website_url": "http://firearmsuk.org/",
+      "description": "Firearms UK is an Association campaigning for the protection of firearms ownership within the UK. Primary objectives are to encourage unity and positive action within the shooting community and to promote and defend individual firearms ownership and the shooting sports.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4612005.jpg?t=1615799388"
+    },
+    {
+      "title": "Carl Russell & Co Gunmakers Blog",
+      "feed_url": "https://www.carlrussellandco.com/feed/",
+      "website_url": "https://www.carlrussellandco.com/news/",
+      "description": "Carl Russell & Co can advise on all aspects of guns and shooting, we speacilise in British shotguns having established our reputation with one of Englands top makers. Subscribe to get latest updates from this blog in your inbox.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 375,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4920116.jpg?t=1620714418"
+    },
+    {
+      "title": "Pellpax Blog",
+      "feed_url": "https://www.pellpax.co.uk/blog/feed/",
+      "website_url": "https://pellpax.blog/",
+      "description": "Pellpax is a leading air rifles, air pistols, shooting, archery and outdoors retailer. Follow this blog for all the latest reviews, features, interview and much more.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4920094.jpg?t=1620714404"
+    },
+    {
+      "title": "Sportsman Gun Centre",
+      "feed_url": "https://www.sportsmanguncentre.co.uk/blog/feed",
+      "website_url": "https://www.sportsmanguncentre.co.uk/blog",
+      "description": "The Sportsman Gun Centre is the UK's largest shooting mail order and internet company, supplying to both the trade and retail markets. Subscribe to keep up with latest updates from this blog.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 686
+      },
+      "image_url": "https://i1.feedspot.com/4611940.jpg?t=1615798606"
+    }
+  ]
+}

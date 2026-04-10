@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>Martin subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Blogs" title="Blogs">
+            <outline type="rss" text="Vitali Kremez | Ethical Hacker | Reverse Engineer" title="Vitali Kremez | Ethical Hacker | Reverse Engineer" xmlUrl="http://www.vkremez.com/feeds/posts/default" htmlUrl="https://www.vkremez.com/"/>
+            <outline type="rss" text="AADInternals.com" title="AADInternals.com" xmlUrl="https://aadinternals.com/index.xml" htmlUrl="https://aadinternals.com/"/>
+            <outline type="rss" text="Decoder's Blog" title="Decoder's Blog" xmlUrl="https://decoder.cloud/feed/" htmlUrl="https://decoder.cloud"/>
+            <outline type="rss" text="Hackerman's Hacking Tutorials" title="Hackerman's Hacking Tutorials" xmlUrl="https://parsiya.net/index.xml" htmlUrl="https://parsiya.net/"/>
+            <outline type="rss" text="Huntress Blog" title="Huntress Blog" xmlUrl="https://www.huntress.com/blog/rss.xml" htmlUrl="https://www.huntress.com/blog"/>
+            <outline type="rss" text="Bill Demirkapi's Blog" title="Bill Demirkapi's Blog" xmlUrl="https://billdemirkapi.me/feed/" htmlUrl="https://billdemirkapi.me/"/>
+            <outline type="rss" text="dirkjanm.io" title="dirkjanm.io" xmlUrl="https://dirkjanm.io/feed.xml" htmlUrl="https://dirkjanm.io/"/>
+            <outline type="rss" text="Penetration Testing Lab" title="Penetration Testing Lab" xmlUrl="http://pentestlab.wordpress.com/feed/" htmlUrl="https://pentestlab.blog"/>
+            <outline type="rss" text="Posts By SpecterOps Team Members" title="Posts By SpecterOps Team Members" xmlUrl="https://posts.specterops.io/feed" htmlUrl="https://posts.specterops.io?source=rss----f05f8696e3cc---4"/>
+            <outline type="rss" text="Martin Haller, Blog o ochraně a správě firemního IT" title="Martin Haller, Blog o ochraně a správě firemního IT" xmlUrl="https://martinhaller.cz/feed/" htmlUrl="https://martinhaller.cz/"/>
+            <outline type="rss" text="Blog" title="Blog" xmlUrl="https://vavrusa.blog.idnes.cz/rss.aspx" htmlUrl="http://vavrusa.blog.idnes.cz/rss.aspx"/>
+            <outline type="rss" text="itm4n's blog" title="itm4n's blog" xmlUrl="https://itm4n.github.io/feed.xml" htmlUrl="https://itm4n.github.io/"/>
+            <outline type="rss" text="ALTAIR.blog" title="ALTAIR.blog" xmlUrl="http://www.aspnet.cz/feed.rss" htmlUrl="https://www.altair.blog/"/>
+            <outline type="rss" text="Wilbur Security" title="Wilbur Security" xmlUrl="https://www.jimwilbur.com/feed/" htmlUrl="https://www.wilbursecurity.com"/>
+            <outline type="rss" text="Advanced Intelligence, LLC" title="Advanced Intelligence, LLC" xmlUrl="https://www.advintel.io/blog-feed.xml" htmlUrl="https://www.advintel.io/blog"/>
+            <outline type="rss" text="Ethical Hacking &amp; Incident Response - RiskInsight" title="Ethical Hacking &amp; Incident Response - RiskInsight" xmlUrl="https://www.riskinsight-wavestone.com/en/category/sections/cybersecurity-digital-trust/ethical-hacking-indicent-response-en/feed/" htmlUrl="https://www.riskinsight-wavestone.com/en/category/sections/cybersecurity-digital-trust/ethical-hacking-indicent-response-en/"/>
+            <outline type="rss" text="Fox-IT International blog" title="Fox-IT International blog" xmlUrl="http://blog.fox-it.com/feed/" htmlUrl="https://blog.fox-it.com"/>
+            <outline type="rss" text="Ondrej Sevecek's Blog: Site Pages" title="Ondrej Sevecek's Blog: Site Pages" xmlUrl="https://www.sevecek.com/_layouts/listfeed.aspx?List=eb770b5f%2D118a%2D4521%2D8a64%2D15a8ad9c0199" htmlUrl="https://www.sevecek.com/SitePages/Forms/AllPages.aspx"/>
+            <outline type="rss" text="IFCR - Medium" title="IFCR - Medium" xmlUrl="https://research.ifcr.dk/feed" htmlUrl="https://research.ifcr.dk?source=rss----9372536d3084---4"/>
+            <outline type="rss" text="GCIT" title="GCIT" xmlUrl="https://gcits.com/feed/" htmlUrl="https://gcits.com/"/>
+            <outline type="rss" text="home" title="home" xmlUrl="https://kelvinsecteamcyber.wixsite.com/my-site/blog-feed.xml" htmlUrl="https://kelvinsecteamcyber.wixsite.com/my-site/blog"/>
+        </outline>
+        <outline text="Security" title="Security">
+            <outline type="rss" text="Darknet – Hacking Tools, Hacker News &amp; Cyber Security" title="Darknet – Hacking Tools, Hacker News &amp; Cyber Security" xmlUrl="http://feeds.feedburner.com/darknethackers" htmlUrl="https://www.darknet.org.uk"/>
+            <outline type="rss" text="Fire Eye Threat Research " title="Fire Eye Threat Research " xmlUrl="http://www.fireeye.com/blog/feed" htmlUrl="https://www.fireeye.com/blog/threat-research.html"/>
+            <outline type="rss" text="Krebs on Security" title="Krebs on Security" xmlUrl="http://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com"/>
+            <outline type="rss" text="Unit 42" title="Unit 42" xmlUrl="http://feeds.feedburner.com/Unit42" htmlUrl="https://unit42.paloaltonetworks.com/"/>
+            <outline type="rss" text="BleepingComputer" title="BleepingComputer" xmlUrl="http://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/"/>
+        </outline>
+    </body>
+</opml>

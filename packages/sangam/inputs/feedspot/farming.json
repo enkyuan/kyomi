@@ -1,0 +1,568 @@
+{
+  "category": "Farming",
+  "source_url": "https://rss.feedspot.com/farming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Farms.com",
+      "feed_url": "https://www.farms.com/Portals/_default/RSS_Portal/Featured_All.xml",
+      "website_url": "https://www.farms.com/",
+      "description": "Each day, our website, Farms.com, welcomes up to 25,000 farmers and agri-business professionals helping them to find the latest agriculture information, farming news, commentaries, weather, auctions, markets, & new products information.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 115400
+      },
+      "image_url": "https://i1.feedspot.com/4504816.jpg?t=1614591481"
+    },
+    {
+      "title": "Hobby Farms",
+      "feed_url": "https://www.hobbyfarms.com/feed/",
+      "website_url": "https://www.hobbyfarms.com/",
+      "description": "Hobby Farms is a bimonthly magazine highlighting rural living for pleasure and profit for hobby farmers, small-production farmers, and those passionate about the country. Here you will find inspiration and advice for growing fruits and vegetables, raising farm animals, and back-to-basics living on farms.",
+      "followers": {
+        "facebook": 436300,
+        "twitter": 16600,
+        "instagram": 38500
+      },
+      "image_url": "https://i1.feedspot.com/4669836.jpg?t=1614591486"
+    },
+    {
+      "title": "Modern Farmer",
+      "feed_url": "https://modernfarmer.com/feed/",
+      "website_url": "https://modernfarmer.com/",
+      "description": "There has been a movement afoot in recent years to make connections between what we eat, how we live and the planet. Modern Farmer exists for people who want to be a part of that movement.",
+      "followers": {
+        "facebook": 189300,
+        "twitter": 68600,
+        "instagram": 179400
+      },
+      "image_url": "https://i1.feedspot.com/1305724.jpg?t=1614591490"
+    },
+    {
+      "title": "The Farmer's Daughter USA Blog",
+      "feed_url": "http://thefarmersdaughterusa.com/feed/",
+      "website_url": "http://thefarmersdaughterusa.com/blog/",
+      "description": "My goal is to help educate consumers about conventional farming - especially about my favorite topics of biotechnology, organic, and animal agriculture",
+      "followers": {
+        "facebook": 75800,
+        "twitter": 5000,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4502637.jpg?t=1614591502"
+    },
+    {
+      "title": "Soil Learning Center Blog",
+      "feed_url": "https://soillearningcenter.com/feed/",
+      "website_url": "https://soillearningcenter.com/learningtype/blog/",
+      "description": "Soil Learning Center Blog is a one-stop shop for news and info for farmers and growers who are curious and keen to discover more about regenerative agriculture.",
+      "followers": {
+        "facebook": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5572339.jpg?t=1684498500"
+    },
+    {
+      "title": "Greenhill Farm Blog",
+      "feed_url": "https://feeds.feedburner.com/the-dogs-of-greenhill-farm",
+      "website_url": "http://www.greenhillfarmblog.com/",
+      "description": "A blog about the adventures of one human, three dogs, a pony and many sheep in the stunning Northern Irish countryside.",
+      "followers": {
+        "facebook": 114
+      },
+      "image_url": "https://i1.feedspot.com/4908071.jpg?t=1614591636"
+    },
+    {
+      "title": "The Farmer's Wifee",
+      "feed_url": "https://www.thefarmerswifee.com/feed/",
+      "website_url": "https://www.thefarmerswifee.com/",
+      "description": "Loving this life as a dairy farmer's wife. Krista Stauffer shares all her experience about dairy farming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4549200.jpg?t=1614592001"
+    },
+    {
+      "title": "The Misfit Farmer",
+      "feed_url": "https://misfitfarmer.com/feed/",
+      "website_url": "https://misfitfarmer.com/",
+      "description": "Stephen Bishop is a writer of humor, specializing in agricultural antics. For his day job, he works at his local agriculture office and has met many outstanding farmers, a few middling to fair, and one or two outright scoundrels.",
+      "followers": {
+        "twitter": 494
+      },
+      "image_url": "https://i1.feedspot.com/5206347.jpg?t=1602852328"
+    },
+    {
+      "title": "Curiousfarmer",
+      "feed_url": "https://curiousfarmer.com/feed/",
+      "website_url": "https://curiousfarmer.com/",
+      "description": "The Best Grass-Finished Beef and Pastured Pork is found right here. I'm Matthew, still indulging my curiosity and hoping to never lose my sense of wonder about this amazing world.",
+      "followers": {
+        "facebook": 235
+      },
+      "image_url": "https://i1.feedspot.com/5123206.jpg?t=1614591683"
+    },
+    {
+      "title": "Agri. Education Pakistan Blog",
+      "feed_url": "https://agrieducation.pk/feed/",
+      "website_url": "https://agrieducation.pk/blog-pos/",
+      "description": "Agri. Education Pakistan is an online subsidiary of BinQain Agro Services to educate the masses and spread awareness about sustainable farming and plant care techniques. We offer sustainability in happiness, health and economy by producing a new breed of Agripreneurs.",
+      "followers": {
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/5138575.jpg?t=1614592273"
+    },
+    {
+      "title": "The Milk House",
+      "feed_url": "https://www.themilkhouse.org/feed/",
+      "website_url": "https://www.themilkhouse.org/",
+      "description": "A rural writing collective, The Milk features writing that explores what it means to be from the countryside. Contributing authors include everything from farmers to National Book Award winners.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4120520/page/5142533/logo_1666176879.jpg"
+    },
+    {
+      "title": "My Maryland Farmers Blog",
+      "feed_url": "https://mymdfarmers.com/category/blog/feed/",
+      "website_url": "https://mymdfarmers.com/category/blog/",
+      "description": "Meet the farmers growing the highest quality food, feed and fiber products for their families and yours on Maryland family farms. This website is brought to you by Maryland farmers. Farmer checkoffs fund the Maryland Soybean Board and the Maryland Grain Producers Utilization Board. Maryland farmers contribute to the checkoff each time they sell their soybeans and grain to provide funding for research, marketing and education.",
+      "followers": {
+        "facebook": 55300,
+        "twitter": 438
+      },
+      "image_url": "https://i1.feedspot.com/5393059.jpg?t=1650545122"
+    },
+    {
+      "title": "CommonGround Blog",
+      "feed_url": "https://findourcommonground.com/feed/",
+      "website_url": "https://findourcommonground.com/blog/",
+      "description": "We aim to clear up confusion about how food is grown or raised so that consumers can understand and trust the people and the process behind their food. CommonGround is all about starting a conversation between women who grow food, and people who buy it. It's a conversation based on the volunteer's personal experience as a farmer, but also on science and research.",
+      "followers": {
+        "facebook": 60000,
+        "twitter": 3400,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5393068.jpg?t=1650545168"
+    },
+    {
+      "title": "Life on a Colorado Farm",
+      "feed_url": "https://coloradofarmlife.com/feed/",
+      "website_url": "https://coloradofarmlife.com/",
+      "description": "My name is Linda Brown. I live on a farm on the western slope of Colorado, in the high mountain desert. I've lived here all my life, hailing back four generations on my father's side. Today I blog about our farm, the everyday activities that keep the farm going. I also write about my thoughts and dreams and goals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3330678.jpg?t=1650604167"
+    },
+    {
+      "title": "Tiny Farm Blog",
+      "feed_url": "https://tinyfarmblog.com/feed/",
+      "website_url": "https://tinyfarmblog.com/",
+      "description": "A day-to-day photo-journal of organic market gardening: growing local food with two acres and some tools! I started this tiny farming blog in earnest about a year ago, with the clear idea that it was simply about my gardening efforts, about growing stuff. I didn't begin with a cause or a philosophical platform. I wasn't blogging with any audience in mind, it was just a personal field journal, available online, and as such, there was no central spot for politics.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4520585.jpg?t=1672380466"
+    },
+    {
+      "title": "Farmer's Weekly \u00bb Pigs",
+      "feed_url": "https://www.farmersweekly.co.za/animals/pigs/feed/",
+      "website_url": "https://www.farmersweekly.co.za/animals/pigs/",
+      "description": "Farmer's Weekly brings you the latest pig farming and production news and updates from South Africa and the rest of Africa.",
+      "followers": {
+        "facebook": 170300,
+        "twitter": 49900,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4638889.jpg?t=1614591529"
+    },
+    {
+      "title": "Northview Diary",
+      "feed_url": "https://feeds.feedburner.com/blogspot/hMofD",
+      "website_url": "https://northviewdiary.blogspot.com/",
+      "description": "Embracing agricultural diversity, one species at a time. Follow the daily life and experiences of the author through the blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5393063.jpg?t=1650862275"
+    },
+    {
+      "title": "Defra's Farming and Countryside Programme Blog",
+      "feed_url": "https://defrafarming.blog.gov.uk/feed/",
+      "website_url": "https://defrafarming.blog.gov.uk/",
+      "description": "Defra's Future Farming Blog is a blog by the UK's Department for Environment, Food and Rural Affairs. The blog aims to provide information and updates on the government's plans for sustainable agriculture and food production in the UK.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 180000,
+        "instagram": 37400
+      },
+      "image_url": "https://i1.feedspot.com/5362150.jpg?t=1641991952"
+    },
+    {
+      "title": "Fruit Growers Supply Company Blog",
+      "feed_url": "https://fruitgrowers.com/feed/",
+      "website_url": "https://fruitgrowers.com/blog/",
+      "description": "Check out the Fruit Growers Supply Company's blog to stay up to date on useful tips, tricks, and techniques in the agricultural industry. At Fruit Growers Supply Company, we've been creating innovative solutions that help growers get their products to market with confidence, since 1907.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 856
+      },
+      "image_url": "https://i1.feedspot.com/5386971.jpg?t=1648811048"
+    },
+    {
+      "title": "Quality Farm Supply Blog",
+      "feed_url": "https://www.qualityfarmsupply.com/blogs/news.atom",
+      "website_url": "https://www.qualityfarmsupply.com/blogs/news",
+      "description": "Quality Farm Supply is a local family-owned business, stretching back generations. Since 1966, we've been selling a wide range of farm and utility parts from our retail store in Jonesboro, Arkansas to customers in our region, including farmers of all types, repair shops, implement dealers, contractors, and industrial businesses. Our goal is to make agricultural part shopping as easy as possible!",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 18,
+        "instagram": 428
+      },
+      "image_url": "https://i1.feedspot.com/5247175.jpg?t=1613821987"
+    },
+    {
+      "title": "Small Farmer's Journal",
+      "feed_url": "https://smallfarmersjournal.com/feed/",
+      "website_url": "https://smallfarmersjournal.com/",
+      "description": "The Small Farmer's Journal has steadfastly held that the most important, useful and vital component of all agriculture is the independent family farm, that operation which is held close for comfort, care and fertility; that operation which is held dear, near and tightly as it is truly part of the family.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/4669213.jpg?t=1614591544"
+    },
+    {
+      "title": "Farmbrite Blog",
+      "feed_url": "https://www.farmbrite.com/blog-feed.xml",
+      "website_url": "https://www.farmbrite.com/blog",
+      "description": "Covers useful and interesting farm and livestock information, agriculture tips and tricks, resources, advice and inspiration to get started farming or improve your current operation. Farmbrite is focused on helping people get started and succeed in farming.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 498,
+        "instagram": 524
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/1518377/page/5308354/logo_1740159840.png"
+    },
+    {
+      "title": "Grass-Fed Cattle | Iowa | United States",
+      "feed_url": "https://www.iowa-farm.com/blog-feed.xml",
+      "website_url": "https://www.iowa-farm.com/",
+      "description": "Iowa Farm is a blog about our great adventure leaving San Francisco and moving back to John's family's 580-acre farm in Iowa. He will be the 5th generation of his family farming the land and we are converting it to a more diversified, grass-fed cattle operation.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5049957.jpg?t=1614591631"
+    },
+    {
+      "title": "Cotton Farming",
+      "feed_url": "https://www.cottonfarming.com/feed/",
+      "website_url": "https://www.cottonfarming.com/",
+      "description": "Cotton Farming magazine, which was started in 1957, is a premier vertical publication that covers all aspects of cotton production. The magazine communicates with producers, ginners, and all segments in cotton production.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 4900,
+        "instagram": 653
+      },
+      "image_url": "https://i1.feedspot.com/4669802.jpg?t=1761220870"
+    },
+    {
+      "title": "Full Belly Farm",
+      "feed_url": "https://fullbellyfarm.com/feed/",
+      "website_url": "https://fullbellyfarm.com/",
+      "description": "Get the latest news and events schedules from our articles along with information on our organic farming. Full Belly Farm is a certified organic farm located in the beautiful Capay Valley of northern California. We are committed to fostering sustainability on all levels, from fertility in our soil and care for the environment to stable employment for our farmworkers.",
+      "followers": {
+        "facebook": 12800,
+        "instagram": 45100
+      },
+      "image_url": "https://i1.feedspot.com/5393071.jpg?t=1650607859"
+    },
+    {
+      "title": "The Life of a Farmer",
+      "feed_url": "https://thelifeofafarmer.com/feed/",
+      "website_url": "https://thelifeofafarmer.com/",
+      "description": "My name is Jake Leguee, and I am a 3rd-generation farmer from southern Saskatchewan, Canada. I farm with several family members, and we grow canola, durum, wheat, lentils, peas and flax. This blog is about having a conversation. As a farmer, I will share my views on the challenges we face as a society, with the perspective of someone who makes his living from Mother Nature and world markets dominated by economics, politics , and human emotion.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5287371.jpg?t=1622543565"
+    },
+    {
+      "title": "Twins Farm",
+      "feed_url": "https://www.twins-farm.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.twins-farm.com/",
+      "description": "Twins' Farm is a blog where you can look up some information about Spanish farming and more specifically about garlic, cereal, legumes, sunflowers. You can find pictures of tractors like John Deere, Fendt and Deutz-Farh and other machinery brands.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5287370.jpg?t=1622543253"
+    },
+    {
+      "title": "Agricology Blog",
+      "feed_url": "https://agricology.co.uk/feed/",
+      "website_url": "https://agricology.co.uk/blog/",
+      "description": "All the latest happenings in the world of sustainable farming. Agricology is about restoring soils, using fewer chemicals, tackling climate change and replenishing wildlife and natural habitats. Our focus is on building a more diverse, more resilient system that restores the land, from the ground up, and ensures a secure supply of food.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 13100,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5351158.jpg?t=1638944163"
+    },
+    {
+      "title": "Bee Haven Acres... Tales From The Farm",
+      "feed_url": "https://beehavenacres.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://beehavenacres.blogspot.com/",
+      "description": "Old soul, young at heart - blissfully rooted in the countryside, walking hand in hand with Mother Nature while caring for my large animal family on a 140 acre hobby farm. Follow my farming journey through this blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5393061.jpg?t=1650865322"
+    },
+    {
+      "title": "New to the Market Land & Farm Listings | Farms For Sale Ireland",
+      "feed_url": "https://farmsforsaleireland.com/feed/",
+      "website_url": "https://farmsforsaleireland.com/",
+      "description": "Looking to buy Irish rural property, farms or agricultural land?. The latest Estate Agent 'For Sale' & 'Public / Online Auctions' listings across Ireland.",
+      "followers": {
+        "facebook": 12200
+      },
+      "image_url": "https://i1.feedspot.com/8536546.jpg?t=1753084404"
+    },
+    {
+      "title": "Beginning Farmers",
+      "feed_url": "https://www.beginningfarmers.org/feed/",
+      "website_url": "https://www.beginningfarmers.org/",
+      "description": "Welcome to Beginning Farmers! Your online resource on how to start a farm, planning a new farm, funding resources and finding land to start your farm on. We cover all areas of farming from raising chickens and goats to mushroom production, and urban farms to business farming. Internships and employment opportunities posted regularly.",
+      "followers": {
+        "facebook": 19600,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/768578.jpg?t=1614591498"
+    },
+    {
+      "title": "Sand Creek Farm",
+      "feed_url": "https://sandcreekfarm.net/feed/",
+      "website_url": "https://sandcreekfarm.net/",
+      "description": "Sand Creek Farm was the 1st raw Cow Milk dairy in the history of Texas, beginning with our license in 2004. Now, we are building this blog as a place to sharing all information about Farming Method, Livestock, Planting, Stall Management.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5233125.jpg?t=1621859344"
+    },
+    {
+      "title": "DRTS Blog",
+      "feed_url": "https://drts.com/feed/",
+      "website_url": "https://drts.com/blog/",
+      "description": "Get the latest industry news & manufacturing trends for drip irrigation, pipe extrusion & leach mining on DRTS' continually updated blog. DRTS offers turnkey production lines for round, flat, thin-wall and thick-wall drip irrigation pipe as well as for PE, PVC, and PPR pipes. We also provide round and flat irrigation drippers and offer a range of heap leach mining project services.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5048555.jpg?t=1610547750"
+    },
+    {
+      "title": "Fable Farms",
+      "feed_url": "https://fablefarms.wordpress.com/feed/",
+      "website_url": "https://fablefarms.wordpress.com/",
+      "description": "This page is where we chronicle (and whine) about our real life farm adventures. Like old Clint, we include it all, the good, the bad and the ugly. We raise and grow as much of our food as we can and try to be as self-sufficient as possible.",
+      "followers": {
+        "facebook": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5031515.jpg?t=1614591671"
+    },
+    {
+      "title": "Weigh Tec Blog",
+      "feed_url": "https://weightec.com/feed/",
+      "website_url": "https://weightec.com/blog/",
+      "description": "Weigh-Tec is a full-service industrial scale company who's driving purpose is customer service. Allow Weigh-Tec to handle all your scale needs, whether it's servicing and maintaining your existing equipment or coordinating future improvements.",
+      "followers": {
+        "facebook": 549,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5169146.jpg?t=1609841799"
+    },
+    {
+      "title": "Gro Guru Blog",
+      "feed_url": "https://www.groguru.com/feed/",
+      "website_url": "https://www.groguru.com/blog/",
+      "description": "Real-time precision soil and irrigation monitoring systems that provide growers with irrigation recommendations, improve crop yields and save money. We are a San Diego based company focused on injecting science into the art of growing plants.",
+      "followers": {
+        "facebook": 423,
+        "twitter": 1300,
+        "instagram": 645
+      },
+      "image_url": "https://i1.feedspot.com/4968093.jpg?t=1614592286"
+    },
+    {
+      "title": "The Peterson Farm Brothers",
+      "feed_url": "https://petersonfarmbrothers.com/blog/feed/",
+      "website_url": "https://petersonfarmbrothers.com/",
+      "description": "Articles feature info about misunderstood topics in agriculture along with news articles about farming, advice, farm pictures, and other farming related things.",
+      "followers": {
+        "facebook": 711900,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4502648.jpg?t=1614592291"
+    },
+    {
+      "title": "Youth in Farming",
+      "feed_url": "https://www.youthinfarming.org/feeds/posts/default",
+      "website_url": "https://www.youthinfarming.org/",
+      "description": "African blog with a focus on encouraging youth to successful Agricultural businesses with the help of Information communication technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5405875.jpg?t=1654170896"
+    },
+    {
+      "title": "The J's Farm",
+      "feed_url": "https://thejsfarm.wixsite.com/website/blog-feed.xml",
+      "website_url": "https://thejsfarm.wixsite.com/website",
+      "description": "A unique blog here for you to explore. I created this as a place I could document and share my journey. A single mom moving from the city to the country to start a farm.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5170446.jpg?t=1654262567"
+    },
+    {
+      "title": "America's Farm Report",
+      "feed_url": "http://americasfarmreport.com/feed/",
+      "website_url": "http://americasfarmreport.com/",
+      "description": "America's Farm Report provides Farm news, agriculture news, farm features, and related content from across America.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4950673.jpg?t=1614591624"
+    },
+    {
+      "title": "Hickery Holler Farm",
+      "feed_url": "http://hickeryhollerfarm.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://hickeryhollerfarm.blogspot.com/",
+      "description": "I'm a die hard southern girl born in the mountains of north Georgia and raised on a farm in southeastern Louisiana. He's a smooth talking 'Yankee' born and raised on the prairies of Missouri. We started this blog on a midwest farmstead that we call Hickery Holler.The day to day joys and sorrows of living simply,growing a garden,quilting, canning and living off the beaten path.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5393057.jpg?t=1650606388"
+    },
+    {
+      "title": "farmingGeorge's Farming Blog",
+      "feed_url": "http://farminggeorge.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://farminggeorge.blogspot.com/",
+      "description": "George Young, aka farmingGeorge, is an agroecological farmer from Fobbing Farm in Essex. He is motivated to create a genuinely bio-diverse farming system: producing as diverse a range of nutrition and fibre as possible, as well as plenty of interconnected areas for nature to breathe and play its part. This monthly blog follows what George is up to on the farm and off.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5393060.jpg?t=1650866700"
+    },
+    {
+      "title": "Applied Mythology",
+      "feed_url": "https://appliedmythology.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://appliedmythology.blogspot.com/",
+      "description": "What if much that you think you know about agriculture, farming and food isn't actually true? What if there are 'myths' that have been intentionally and mostly unintentionally spread about these issues? What if the truth about these issues matters for the future of humanity? That is what this blog is about.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5393062.jpg?t=1650867291"
+    },
+    {
+      "title": "Hartwood Farm Blog",
+      "feed_url": "https://www.hartwoodfarm.com/farm-blog?format=rss",
+      "website_url": "https://www.hartwoodfarm.com/farm-blog",
+      "description": "Follow along on our farming journey, with the ups and downs of growing and sharing delicious food from our fields to Central New York. Sometimes it's a recipe or favorite cooking tool, other times its a success or a failure. Hartwood Farm grows CSA (community supported agriculture) shares of delicious local vegetables and eggs for the Syracuse, Fayetteville, Liverpool, Manlius, Cazenovia, and Chittenango areas.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5393058.jpg?t=1650545116"
+    },
+    {
+      "title": "Pennsylvania Association for Sustainable Agriculture Blog",
+      "feed_url": "https://pasafarming.org/feed/",
+      "website_url": "https://pasafarming.org/blog/",
+      "description": "Blog posts cover agroforestry, agriculture business, dairy, farm life, farmer training, farmers markets, flowers, food system, livestock, policy, research, soil health, and vegetables. Pasa Sustainable Agriculture is a community of farmers and supporters, focused on education and evidence-based research, to build a more economically, environmentally regenerative, and community-focused food system.",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 3100,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/4978476.jpg?t=1622033736"
+    },
+    {
+      "title": "Bump N' Drive Blog",
+      "feed_url": "https://bumpndrive.com/feed/",
+      "website_url": "https://bumpndrive.com/blog/",
+      "description": "The Bump N' Drive Kit opens and closes gates without exiting the vehicle. Keep up with articles from Bump N' Drive.",
+      "followers": {
+        "facebook": 190
+      },
+      "image_url": "https://i1.feedspot.com/5051860.jpg?t=1614591614"
+    },
+    {
+      "title": "Farmers Weekly",
+      "feed_url": "https://www.fwi.co.uk/",
+      "website_url": "https://www.fwi.co.uk/",
+      "description": "Farmers Weekly is the leading multimedia information service for farmers and agricultural businesses. It provide news, market prices, technical advice, opinion and a range of vital interactive services for farm businesses of all shapes and sizes.",
+      "followers": {
+        "facebook": 415200,
+        "twitter": 110100,
+        "instagram": 260200
+      },
+      "image_url": "https://i1.feedspot.com/4504810.jpg?t=1614002485"
+    },
+    {
+      "title": "African Farming News",
+      "feed_url": "https://www.africanfarming.com/feed/",
+      "website_url": "https://www.highcountryfarmhouse.com/",
+      "description": "African Farming tells the success stories of the country's new generation commercial black farmers and also shares advice on the do's and don'ts with new entrants to the agriculture sector.",
+      "followers": {
+        "facebook": 169600,
+        "twitter": 31100
+      },
+      "image_url": "https://i1.feedspot.com/5287372.jpg?t=1628493293"
+    },
+    {
+      "title": "High Country Farmhouse",
+      "feed_url": "https://www.highcountryfarmhouse.com/feed/",
+      "website_url": "https://www.highcountryfarmhouse.com/",
+      "description": "Hi, I'm Marilyn. My family and I live in Northern Alberta, where the winters are cold and the growing season short. We live on a small sheep and grain farm, with our five children. In the summer you'll find us taking on too many projects, and enjoying the weather. Turning a Small Farm Into a Profitable Venture.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5243794.jpg?t=1672380894"
+    },
+    {
+      "title": "Agri Direct",
+      "feed_url": "https://www.agridirect.ie/blog/feed/",
+      "website_url": "https://blackfieldfarm.com/category/blog/",
+      "description": "Welcome to the Agridirect blog where we take a step back and look and the farming life of the past and present and try and predict the future",
+      "followers": {
+        "facebook": 50600,
+        "twitter": 437
+      },
+      "image_url": "https://i1.feedspot.com/4908075.jpg?t=1614591517"
+    },
+    {
+      "title": "Black field farm Blog",
+      "feed_url": "https://blackfieldfarm.com/feed/",
+      "website_url": "https://blackfieldfarm.com/category/blog/",
+      "description": "Welcome to my blog. I will be blogging about farming in Ireland today and the issues it is facing. These are my opinion only and my views are my own.",
+      "followers": {
+        "twitter": 1500,
+        "instagram": 75
+      },
+      "image_url": "https://i1.feedspot.com/5217639.jpg?t=1605784757"
+    },
+    {
+      "title": "The Hallelujah House Blog",
+      "feed_url": "https://tammycarteradams.com/feed/",
+      "website_url": "https://thehallelujahhouse.com/blog/",
+      "description": "The Hallelujah House is a multi-writer blog focused on Christian preparation of three areas the heart (faith blogs), home (preparing your home for troubling times), and harvest (children and missions). We believe in wise stewardship and preparing from a place of wisdom--not fear.",
+      "followers": {
+        "twitter": 15,
+        "instagram": 325
+      },
+      "image_url": "https://i1.feedspot.com/5037928.jpg?t=1602586537"
+    },
+    {
+      "title": "Fainting Fox Farm | Simple. Modern. Farm Living",
+      "feed_url": "https://www.faintingfox.com/feed/",
+      "website_url": "https://www.faintingfox.com/",
+      "description": "My name is Melissa & I will be your tour guide on this farm journey, so please keep your hands & feet inside the farm truck at all times. Fainting Fox Farm began almost ten years ago as a hobby. Here at Fainting Fox Farm, we are finding ways to balance the modern world with all its demands for our time & attention, with the slower pace & intentional living of a farm lifestyle. The farm is our way of reconnecting with a simpler world and preserving our family's farming heritage.",
+      "followers": {
+        "facebook": 928,
+        "instagram": 134
+      },
+      "image_url": "https://i1.feedspot.com/5055533.jpg?t=1614592281"
+    },
+    {
+      "title": "National Young Farmers Coalition",
+      "feed_url": "https://www.youngfarmers.org/category/latest-from-nyfc/feed/",
+      "website_url": "https://www.youngfarmers.org/category/latest-from-nyfc/",
+      "description": "The National Young Farmers Coalition supports practices and policies that will sustain young, independent and prosperous farmers now and in the future. NYFC is focused on supporting America's next generation of sustainable farmers and ranchers. We use 'young farmers' to include all people who are kicking off a career in agriculture, typically in their first 10 years of growing.",
+      "followers": {
+        "facebook": 75000,
+        "twitter": 18700,
+        "instagram": 76400
+      },
+      "image_url": "https://i1.feedspot.com/4669234.jpg?t=1609572037"
+    }
+  ]
+}

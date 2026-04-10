@@ -1,0 +1,39 @@
+{
+  "category": "Hacienda Heights News",
+  "source_url": "https://rss.feedspot.com/hacienda_heights_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "San Gabriel Valley Tribune \u00bb Hacienda Heights",
+      "feed_url": "https://www.sgvtribune.com/location/california/los-angeles-county/san-gabriel-valley/hacienda-heights/feed/",
+      "website_url": "https://www.sgvtribune.com/location/california/los-angeles-county/san-gabriel-valley/hacienda-heights/",
+      "description": "The San Gabriel Valley Tribune is the local news source for Los Angeles County's San Gabriel Valley region providing breaking news, sports, business, entertainment, things to do, opinion, photos and more on the SGV.",
+      "followers": {
+        "facebook": 40300,
+        "twitter": 40400
+      },
+      "image_url": "https://i1.feedspot.com/5157513.jpg?t=1590822150"
+    },
+    {
+      "title": "KTLA \u00bb Hacienda Heights",
+      "feed_url": "https://ktla.com/tag/hacienda-heights/feed/",
+      "website_url": "https://ktla.com/tag/hacienda-heights/",
+      "description": "The Latest News and Updates in Hacienda Heights brought to you by the team at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5157517.jpg?t=1590822274"
+    },
+    {
+      "title": "SGV CityWatch \u00bb Hacienda Heights",
+      "feed_url": "https://www.sgvcitywatch.com/21/feed",
+      "website_url": "https://www.sgvcitywatch.com/hacienda-heights",
+      "description": "SGV CityWatch is a locally-owned, private news organization bringing breaking public safety news to the San Gabriel Valley communities.",
+      "followers": {
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5157524.jpg?t=1590822593"
+    }
+  ]
+}

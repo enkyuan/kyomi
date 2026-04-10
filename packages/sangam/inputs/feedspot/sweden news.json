@@ -1,0 +1,307 @@
+{
+  "category": "Sweden News",
+  "source_url": "https://rss.feedspot.com/sweden_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dagens Nyheter",
+      "feed_url": "https://www.dn.se/rss/",
+      "website_url": "https://www.dn.se/",
+      "description": "News, in-depth study, sports news, economic news, foreign news, debate, leaders, culture and web TV. Dagens Nyheter is Sweden's leading morning newspaper.",
+      "followers": {
+        "facebook": 300100,
+        "twitter": 308000,
+        "instagram": 276100
+      },
+      "image_url": "https://i1.feedspot.com/5340949.jpg?t=1645783930"
+    },
+    {
+      "title": "Svenska Dagbladet",
+      "feed_url": "https://www.svd.se/feed/articles.rss",
+      "website_url": "https://www.svd.se/",
+      "description": "Svenska Dagbladet stands for serious and fact-based quality journalism that challenges, questions and inspires.",
+      "followers": {
+        "facebook": 142700,
+        "twitter": 277800,
+        "instagram": 99800
+      },
+      "image_url": "https://i1.feedspot.com/5340947.jpg?t=1636441811"
+    },
+    {
+      "title": "Barometern-OT",
+      "feed_url": "https://www.barometern.se/feed",
+      "website_url": "https://www.barometern.se/",
+      "description": "Barometern is Sm\u00e5land's largest local daily newspaper with news, sports and entertainment from all over Kalmar County.",
+      "followers": {
+        "facebook": 48100,
+        "twitter": 4900,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/5341065.jpg?t=1636451521"
+    },
+    {
+      "title": "Bor\u00e5s Tidning",
+      "feed_url": "https://www.bt.se/feed",
+      "website_url": "https://www.bt.se/",
+      "description": "Bor\u00e5s Tidning is Sjuh\u00e4rad's leading magazine with news, sports and entertainment.",
+      "followers": {
+        "facebook": 40000,
+        "twitter": 4700,
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/5341064.jpg?t=1636451613"
+    },
+    {
+      "title": "Kristianstadsbladet",
+      "feed_url": "https://www.kristianstadsbladet.se/feed",
+      "website_url": "https://www.kristianstadsbladet.se/",
+      "description": "Kristianstadsbladet is northeastern Sk\u00e5ne's leading newspaper with news, sports and entertainment.",
+      "followers": {
+        "facebook": 34300,
+        "twitter": 3200,
+        "instagram": 19600
+      },
+      "image_url": "https://i1.feedspot.com/5341063.jpg?t=1636451659"
+    },
+    {
+      "title": "Nya Wermlands-Tidningen",
+      "feed_url": "https://www.nwt.se/feed/",
+      "website_url": "https://www.nwt.se/",
+      "description": "Nya Wermlands-Tidningen is V\u00e4rmland's largest morning newspaper. We keep you updated around the clock with local news, blue lights, sports news and much more!",
+      "followers": {
+        "facebook": 57900,
+        "twitter": 6200,
+        "instagram": 29700
+      },
+      "image_url": "https://i1.feedspot.com/4974629.jpg?t=1637298250"
+    },
+    {
+      "title": "Helsingborgs Dagblad",
+      "feed_url": "https://www.hd.se/feeds/feed.xml",
+      "website_url": "https://www.hd.se/",
+      "description": "Read unbiased news and headlines in Sweden about daily happenings, economy, entertainment, politics, sports, and more!",
+      "followers": {
+        "facebook": 61900,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/5340952.jpg?t=1636450304"
+    },
+    {
+      "title": "Sydsvenskan",
+      "feed_url": "https://www.sydsvenskan.se/feeds/feed.xml",
+      "website_url": "https://www.sydsvenskan.se",
+      "description": "Sydsvenskan.se is the leading news magazine in Sk\u00e5ne and the \u00d6resund region. Read news and headlines about sports, business, culture, opinion, and more.",
+      "followers": {
+        "facebook": 102500,
+        "twitter": 100800
+      },
+      "image_url": "https://i1.feedspot.com/5340951.jpg?t=1636450360"
+    },
+    {
+      "title": "Nerikes Allehanda",
+      "feed_url": "https://www.na.se/feeds/feed.xml",
+      "website_url": "https://www.na.se/",
+      "description": "Nerikes Allehanda is a regional media house in \u00d6rebro County and one of Sweden's largest rural newspapers and largest news sites outside the metropolitan areas. NA conveys news and events in \u00d6rebro County - reviews, reveals, touches and takes a stand.",
+      "followers": {
+        "facebook": 70200,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5340956.jpg?t=1636450586"
+    },
+    {
+      "title": "Arbetarbladet",
+      "feed_url": "https://www.arbetarbladet.se/feeds/feed.xml",
+      "website_url": "https://www.arbetarbladet.se/",
+      "description": "Arbetarbladet is a local newspaper for G\u00e4strikland and Norduppland founded in 1902.",
+      "followers": {
+        "facebook": 22800,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5341072.jpg?t=1636452122"
+    },
+    {
+      "title": "Dala-Demokraten",
+      "feed_url": "https://www.dalademokraten.se/feeds/feed.xml",
+      "website_url": "https://www.dalademokraten.se/",
+      "description": "We cover Dalarna. Dala-Demokraten is a daily newspaper that has been published since 1917.",
+      "followers": {
+        "facebook": 16400,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5341070.jpg?t=1636452189"
+    },
+    {
+      "title": "J\u00f6nk\u00f6pings-Posten",
+      "feed_url": "https://www.jp.se/feeds/feed.xml",
+      "website_url": "https://www.jp.se/",
+      "description": "J\u00f6nk\u00f6pings-Posten is the leading news media in V\u00e4tterbygden. Stay up to date on what's happening in the J\u00f6nk\u00f6ping area!",
+      "followers": {
+        "facebook": 52800,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5341082.jpg?t=1636452609"
+    },
+    {
+      "title": "Sk\u00e5nska Dagbladet",
+      "feed_url": "https://www.skd.se/feeds/feed.xml",
+      "website_url": "https://www.skd.se/",
+      "description": "Sk\u00e5nska Dagbladet is the site for the daily newspaper Sk\u00e5nska Dagbladet. We cover and write about Mellansk\u00e5ne and southern Sk\u00e5ne.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 4600,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5341073.jpg?t=1636452519"
+    },
+    {
+      "title": "Dagen",
+      "feed_url": "https://www.dagen.se/arc/outboundfeeds/rss/",
+      "website_url": "https://www.dagen.se/",
+      "description": "Read timely, accurate, and community-oriented reporting covering Politics, Society, Culture, and lifestyle in Sweden. Dagen is Sweden's largest Conservative newspaper focusing on recent events from a Christian perspective. Read the latest news, the debates, and more at dagen.se.",
+      "followers": {
+        "facebook": 24300,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5532940.jpg?t=1680589887"
+    },
+    {
+      "title": "Nyheter Idag",
+      "feed_url": "https://nyheteridag.se/feed/",
+      "website_url": "https://nyheteridag.se/",
+      "description": "Nyheter Idag is an independent news site in tabloid form, created by Chang Frick and Jakob Bergman. Our news reporting focuses on politics, gossip, social media and foreign news. The focus is to create your own news through interviews, be on site to film/photograph and follow what is happening in social media.",
+      "followers": {
+        "facebook": 50700
+      },
+      "image_url": "https://i1.feedspot.com/5532941.jpg?t=1680589891"
+    },
+    {
+      "title": "SVT",
+      "feed_url": "https://www.svt.se/rss.xml",
+      "website_url": "https://www.svt.se/",
+      "description": "SVT Nyheter is an independently run news station in Sweden producing content that engages, entertains, and enriches all ages and interests. We help keep the pulse on Political, Commercial, and other interests in society. Catch minute-by-minute news updates, as well as comprehensive reports, investigative stories, and other trending topics in Sweden.",
+      "followers": {
+        "facebook": 819400
+      },
+      "image_url": "https://i1.feedspot.com/5532938.jpg?t=1758192232"
+    },
+    {
+      "title": "TV4",
+      "feed_url": "https://www.tv4.se/rss",
+      "website_url": "https://www.tv4.se/",
+      "description": "News, sports, weather, and the best from TV4's programs. AS Sweden's largest News and Media organization, TV4 brings together broad entertainment, extended news, and current affairs programs to its viewers. Discover updating news and other content here at our digital channel, tv4.se.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3639399.jpg?t=1680590053"
+    },
+    {
+      "title": "TT News Agency's Blog",
+      "feed_url": "https://blogg.tt.se/feed/",
+      "website_url": "https://blogg.tt.se/",
+      "description": "TT News Agency's and Via TT's blog. Find PR tips, read about our product news, and be inspired by our content. We strive to make others better informed through objective and piercing coverage of issues that matter. Tidningarnas Telegrambyr\u00e5 (TT) is a nationwide news agency delivering unbiased and objective news to newspapers all over the country.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 87500,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5532939.jpg?t=1680590074"
+    },
+    {
+      "title": "ABC Nyheter",
+      "feed_url": "https://www.abcnyheter.se/feed/",
+      "website_url": "https://www.abcnyheter.se/",
+      "description": "Stay connected to the public conversation with regular updates on Sweden's Politics, entertainment, finance, entertainment, travel, and much more. ABC News is an emerging news portal for Sweden and gives you the latest news updates from Sweden and abroad.",
+      "followers": {
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5532944.jpg?t=1680589920"
+    },
+    {
+      "title": "Nkpg.News",
+      "feed_url": "https://nkpg.news/feed/",
+      "website_url": "https://nkpg.news/",
+      "description": "Norrkoping's source of Daily News, Analysis, Official press releases and other fun stuff. NkpgNews, sprung from the news portal Nyhetswebben focuses on emergency news from Norrk\u00f6ping and the surrounding area as well as important and interesting social information.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 128
+      },
+      "image_url": "https://i1.feedspot.com/5532942.jpg?t=1680590144"
+    },
+    {
+      "title": "Skaraborgs Nyheter",
+      "feed_url": "https://www.skaraborgsnyheter.se/feed/",
+      "website_url": "https://www.skaraborgsnyheter.se/",
+      "description": "News that affects the whole of Skaraborg. Skaraborgs Nyheter is a local newspaper covering and reporting on the latest Crimes, Political events, Community news, and everything you need to know to stay updated on the region. Read all our Skaraborg as well as National news coverage updates here.",
+      "followers": {
+        "facebook": 30700
+      },
+      "image_url": "https://i1.feedspot.com/5532943.jpg?t=1680589913"
+    },
+    {
+      "title": "Stockholms Fria",
+      "feed_url": "https://www.stockholmsfria.se//feed",
+      "website_url": "https://www.stockholmsfria.se/",
+      "description": "Find in-depth, bold, and striking reporting on pressing global and local matters. The paper and website especially offer coverage and commentary of social and political actors and events that contribute to open, democratic, peaceful, solitary, and ecological social development. Stockholms Fria Tidningen is publishedby Mediehuset Gr\u00f6nt AB.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 350
+      },
+      "image_url": "https://i1.feedspot.com/5532937.jpg?t=1680589860"
+    },
+    {
+      "title": "Arvika Nyheter",
+      "feed_url": "https://www.arvikanyheter.se//feed",
+      "website_url": "https://www.arvikanyheter.se/",
+      "description": "Arvika Nyheter is a three-day newspaper published in the area surrounding western V\u00e4rmland. The homepage, arvikanyheter.se showcases articles and round-the-clock updates on the most critical matters currently in public disclosure. Stay informed on the latest developments from local communities, sports, entertainment and cultural events.",
+      "followers": {
+        "facebook": 9200,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5532936.jpg?t=1680589847"
+    },
+    {
+      "title": "The Local Sweden",
+      "feed_url": "https://www.thelocal.se/feed/",
+      "website_url": "https://www.thelocal.se/",
+      "description": "Latest news, essential insights and practical guides to life in Sweden from The Local, Europe's leading independent voice.",
+      "followers": {
+        "facebook": 178900,
+        "twitter": 60900,
+        "instagram": 19300
+      },
+      "image_url": "https://i1.feedspot.com/5340948.jpg?t=1636450073"
+    },
+    {
+      "title": "G\u00f6teborgs-Posten",
+      "feed_url": "https://www.gp.se/",
+      "website_url": "https://www.gp.se/",
+      "description": "G\u00f6teborgs-Posten reports news from Gothenburg, Sweden & the world.",
+      "followers": {
+        "facebook": 171800,
+        "twitter": 112200,
+        "instagram": 86900
+      },
+      "image_url": "https://i1.feedspot.com/5340954.jpg?t=1636450470"
+    },
+    {
+      "title": "Ttela",
+      "feed_url": "https://www.ttela.se/",
+      "website_url": "https://www.ttela.se/",
+      "description": "Ttela is the local newspaper for Trollh\u00e4ttan, V\u00e4nersborg, Mellerud and Lilla Edet.",
+      "followers": {
+        "facebook": 28300,
+        "twitter": 3100,
+        "instagram": 16500
+      },
+      "image_url": "https://i1.feedspot.com/5341069.jpg?t=1636451766"
+    },
+    {
+      "title": "V\u00e4rmlands Folkblad",
+      "feed_url": "https://www.vf.se/",
+      "website_url": "https://www.vf.se/",
+      "description": "V\u00e4rmlands Folkblad helps you keep track of what's happening in V\u00e4rmland right now.",
+      "followers": {
+        "twitter": 5000,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5341068.jpg?t=1636451852"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "category": "Notre Dame Fighting Irish",
+  "source_url": "https://rss.feedspot.com/notre_dame_fighting_irish_rss_feeds",
+  "feeds": [
+    {
+      "title": "One Foot Down",
+      "feed_url": "https://www.onefootdown.com/rss/current.xml",
+      "website_url": "https://www.onefootdown.com/",
+      "description": "One Foot Down is one of the top sources for quality Notre Dame Fighting Irish news, rumors, analysis, stats, and scores from the fan perspective. Igniting and Carrying forward a never-ending discussion about Notre Dame and the greater CFB landscape, One Foot Down is a Fan Community blog dedicated to the Notre Dame Fighting Irish from the SB Nation network.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 17700
+      },
+      "image_url": "https://i1.feedspot.com/5464674.jpg?t=1667989094"
+    },
+    {
+      "title": "NDNation",
+      "feed_url": "https://ndnation.com/feed/",
+      "website_url": "https://ndnation.com/",
+      "description": "Explore Notre Dame News & fan community on this site. Gather the latest news updates, trending stories, match schedules, and more. Formed in the early days of the web by a handful of Notre Dame Alumni, NDNation.com is a popular alumni site for Notre Dame football, basketball, baseball, and recruiting.",
+      "followers": {
+        "twitter": 620
+      },
+      "image_url": "https://i1.feedspot.com/5464676.jpg?t=1667988395"
+    },
+    {
+      "title": "The Athletic \u00bb Notre Dame Fighting Irish",
+      "feed_url": "https://www.nytimes.com/athletic/college-football/team/notre-dame-fighting-irish-college-football/",
+      "website_url": "https://www.nytimes.com/athletic/college-football/team/notre-dame-fighting-irish-college-football/",
+      "description": "Breaking Notre Dame Fighting Irish news and in-depth analysis from one of the fastest newsrooms in sports. Follow your favorite club coverage, get the latest injury updates, player news, and more from around the league. The Athletic delivers powerful stories and smart analysis that bring sports fans closer to the heart of the game.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 612600,
+        "instagram": 328300
+      },
+      "image_url": "https://i1.feedspot.com/5464686.jpg?t=1667989416"
+    },
+    {
+      "title": "Sports Illustrated \u00bb Notre Dame Fighting Irish",
+      "feed_url": "https://www.si.com/college/notredame/.rss/full/",
+      "website_url": "https://www.si.com/college/notredame/",
+      "description": "Gather Top Football Stories, Updates, and Key Moments from matches. IrishBreakdown is a Sports Illustrated channel featuring Bryan Driskell to bring you the latest News, Highlights, Analysis, and Recruiting surrounding the Notre Dame Fighting Irish.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 36400
+      },
+      "image_url": "https://i1.feedspot.com/5464673.jpg?t=1667989045"
+    },
+    {
+      "title": "Fighting Irish Wire",
+      "feed_url": "https://fightingirishwire.usatoday.com/feed/",
+      "website_url": "https://fightingirishwire.usatoday.com/",
+      "description": "Get the latest Notre Dame Fighting Irish football and basketball news, schedules, photos, and rumors. Fighting Irish Wire is the exclusory fansite from USA Today News Media Group dedicated to covering all Notre Dame Fighting Irish News stories and games.",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5464675.jpg?t=1667989741"
+    }
+  ]
+}

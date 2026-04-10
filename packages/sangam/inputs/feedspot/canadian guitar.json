@@ -1,0 +1,90 @@
+{
+  "category": "Canadian Guitar",
+  "source_url": "https://rss.feedspot.com/canadian_guitar_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vancouver Classic Guitar Society Blog",
+      "feed_url": "https://www.vancouverguitar.org/blog?format=rss",
+      "website_url": "https://www.vancouverguitar.org/blog",
+      "description": "Stay up-to-date on VCGS's newest projects and spotlights. The Vancouver Classic Guitar Society is a non-profit dedicated to building a community among classical guitar enthusiasts and educating and increasing the public's understanding and appreciation of classical guitar music.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 861
+      },
+      "image_url": "https://i1.feedspot.com/5656202.jpg?t=1692881933"
+    },
+    {
+      "title": "Frank Brothers Guitar Blog",
+      "feed_url": "https://www.frankbrothersguitars.com/stay-tuned-newsletter-blogs?format=rss",
+      "website_url": "https://www.frankbrothersguitars.com/stay-tuned-newsletter-blogs",
+      "description": "Elevate your Guitar skills and knowledge via the Frank Brothers Guitar Blog. From fingerpicking techniques that'll make your melodies sing to amp settings that'll elevate your sound, you are covered. The Frank Brothers Guitar Company is a first-choice Guitar store based in Ontario, Canada.",
+      "followers": {
+        "instagram": 45000
+      },
+      "image_url": "https://i1.feedspot.com/5656198.jpg?t=1692882324"
+    },
+    {
+      "title": "This is Classical Guitar",
+      "feed_url": "https://www.thisisclassicalguitar.com/feed/",
+      "website_url": "https://www.thisisclassicalguitar.com/",
+      "description": "This is Classical Guitar explores classical guitar featuring new videos by professional guitarists, free lessons, sheet music with videos, and interesting articles. The blog showcases the culture and education of the classical guitar to help students and viewers stay inspired.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 396,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4537998.jpg?t=1692882572"
+    },
+    {
+      "title": "Guitareo Riff",
+      "feed_url": "https://www.guitareo.com/riff/articles/feed/",
+      "website_url": "https://www.guitareo.com/riff/articles/",
+      "description": "Enter the rich and addictive world of Guitar and Pedal collections. Guitareo Riff's blog page offers resources and beginner guides to help you navigate the trimming sounds and learn how to play your favorite songs. Guitareo is a website by a community of guitarists who are passionate about learning and playing the guitar.",
+      "followers": {
+        "facebook": 320200,
+        "instagram": 18500
+      },
+      "image_url": "https://i1.feedspot.com/5656196.jpg?t=1692881519"
+    },
+    {
+      "title": "Folkway Music Blog",
+      "feed_url": "https://folkwaymusic.com/topics/blog/feed/",
+      "website_url": "https://folkwaymusic.com/topics/blog/",
+      "description": "Get set to further your musical journey through innovative hacks, expert tips, comprehensive guides, and unbiased product reviews. The Folkway Music Blog is a complete resource on Guitar models of the past and present. Folkway Music is a local fretted instrument repair shop based in Waterloo.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 1700,
+        "instagram": 48500
+      },
+      "image_url": "https://i1.feedspot.com/5656204.jpg?t=1692882006"
+    },
+    {
+      "title": "Toronto Guitar School Blog",
+      "feed_url": "https://www.torontoguitarschool.com/feed/",
+      "website_url": "https://www.torontoguitarschool.com/category/blog/",
+      "description": "Revel in useful Guitar music practice tips and professional playing advice. Founded in 2014 the Toronto Guitar School is a musical institution known for offering an enjoyable, rewarding, and professionally conducted musical experience to its students.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5656203.jpg?t=1692882228"
+    },
+    {
+      "title": "Dave Kirby Music Blog",
+      "feed_url": "https://davekirbymusic.com/blogs/news.atom",
+      "website_url": "https://davekirbymusic.com/blogs/news",
+      "description": "Dave Kirby is a professional guitarist from Toronto, Canada who offers private Guitar Lessons via Skype. His website serves as a platform to exhibit and share his passion for playing the guitar with the widest audience that he can reach.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5656199.jpg?t=1692882521"
+    },
+    {
+      "title": "Guitar Dojo Blog",
+      "feed_url": "https://guitardojo.ca/blogs/the-official-blog-of-the-guitar-dojo-helping-intermediate-guitarists-get-better-faster-with-awesome-tips-tricks-and-fun-guitar-content.atom",
+      "website_url": "https://guitardojo.ca/blogs/the-official-blog-of-the-guitar-dojo-helping-intermediate-guitarists-get-better-faster-with-awesome-tips-tricks-and-fun-guitar-content",
+      "description": "The Guitar Dojo is an online resource for guitarists of any age and all abilities to learn guitar, music theory, ear training, and all things music. Enjoy Video Lessons, books, Streams, and exclusive content from the Guitar Dojo family.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 192,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5656200.jpg?t=1692882649"
+    }
+  ]
+}

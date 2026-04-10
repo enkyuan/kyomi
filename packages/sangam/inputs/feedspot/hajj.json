@@ -1,0 +1,66 @@
+{
+  "category": "Hajj",
+  "source_url": "https://rss.feedspot.com/hajj_rss_feeds",
+  "feeds": [
+    {
+      "title": "The New York Times \u00bb Hajj",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/subject/hajj/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/hajj",
+      "description": "All the latest, news, updates, and information on Mecca & Medina, Hajj, Umrah, and more on The New York Times! an American daily newspaper based in New York City with a worldwide readership.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5465762.jpg?t=1668162352"
+    },
+    {
+      "title": "Musafir Services Haj & Umrah Packages Blog",
+      "feed_url": "https://www.musafirservices.com/feed/",
+      "website_url": "https://www.musafirservices.com/blog/",
+      "description": "Get all the latest updates on Saudi Arabia, Umrah pilgrimages, tourists, and more! Our Umrah services are available to our clients throughout the Umrah season, starting from Mohram including the month of Ramadhan.",
+      "followers": {
+        "facebook": 756,
+        "twitter": 77
+      },
+      "image_url": "https://i1.feedspot.com/5465760.jpg?t=1668162425"
+    },
+    {
+      "title": "Zamzam Blog \u00bb Hajj Information",
+      "feed_url": "https://zamzam.com/blog/hajj-information/feed/",
+      "website_url": "https://zamzam.com/blog/hajj-information/",
+      "description": "You will get the all Hajj information and experience-related updates and blogs! Zamzam.com is owned by United Experts, KSA a certified and licensed online travel agency, based in Saudi Arabia. Our booking platform is advanced, user-friendly, and reliable for both B2B & B2C bookings that allow customers to search and book all travel needs making the Umrah pilgrimage as simple and easy as possible",
+      "followers": {
+        "twitter": 2600,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5465765.jpg?t=1668163527"
+    },
+    {
+      "title": "Labbaik Hajj Umrah Blog",
+      "feed_url": "https://www.labbaikhajjumrah.co.uk/feed/",
+      "website_url": "https://www.labbaikhajjumrah.co.uk/blog/",
+      "description": "In our Blog, read all the necessary information about Hajj and Umrah rituals & Holy places. How to and when to do it, all you want to know is just one click away! Labbaik Hajj Umrah is a brand of efficient agents, who are gathered together for the services related to hajj and Umrah.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 192
+      },
+      "image_url": "https://i1.feedspot.com/5465763.jpg?t=1668163358"
+    },
+    {
+      "title": "Hajj Umrah Packages US Blog",
+      "feed_url": "https://www.hajjumrahpackages.us/blog/feed/",
+      "website_url": "https://www.hajjumrahpackages.us/blog/",
+      "description": "Learn informative Islamic articles, Sunnah of Prophet Muhammad, Look out for Hajj and Umrah Guidelines, and More Articles on Islam. The Hajj Umrah Packages US Inc. endeavors its excellence by keeping its creed of providing the best through its most reasonable yet exclusive Hajj and Umrah packages.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/5465761.jpg?t=1668163449"
+    },
+    {
+      "title": "UmrahTrip Blog",
+      "feed_url": "https://www.umrahtrip.com/web/feed/",
+      "website_url": "https://www.umrahtrip.com/web/blogs/",
+      "description": "We at Umrahtrip.com understand that searching for the right information can be draining and time-consuming. Hence, we prepare blogs that cover almost every subject matter and research for you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5465766.jpg?t=1668163565"
+    }
+  ]
+}

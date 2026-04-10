@@ -1,0 +1,39 @@
+{
+  "category": "Berea News",
+  "source_url": "https://rss.feedspot.com/berea_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "ABC 36 News \u00bb Berea",
+      "feed_url": "https://www.wtvq.com/tag/berea/feed/",
+      "website_url": "https://www.wtvq.com/tag/berea/",
+      "description": "Get the latest local news, weather alerts, updates, entertainment and sports-related news about Berea, KY from ABC 36 News.",
+      "followers": {
+        "facebook": 91800,
+        "twitter": 31400
+      },
+      "image_url": "https://i1.feedspot.com/5171203.jpg"
+    },
+    {
+      "title": "The Berea Citizen | Local News",
+      "feed_url": "https://nolangroupmedia.com/search/?f=rss&t=article&c=berea_citizen&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.nolangroupmedia.com/berea_citizen/news/local/",
+      "description": "The Berea Citizen has been the source of local news since 1899. We strive to highlight the citizens, government, and the people who make Berea so great!",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 48
+      },
+      "image_url": "https://i1.feedspot.com/5171200.jpg?t=1628055812"
+    },
+    {
+      "title": "City of Berea",
+      "feed_url": "https://bereaky.gov/news/",
+      "website_url": "https://bereaky.gov/news/",
+      "description": "This is the official website for the City of Berea. Keep up to date with the latest local news and happenings in Berea, KY.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 560
+      },
+      "image_url": "https://i1.feedspot.com/5171201.jpg?t=1623160711"
+    }
+  ]
+}

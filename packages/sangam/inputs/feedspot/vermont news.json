@@ -1,0 +1,152 @@
+{
+  "category": "Vermont News",
+  "source_url": "https://rss.feedspot.com/vermont_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Seven Days",
+      "feed_url": "https://www.sevendaysvt.com/vermont/Rss.xml/feed",
+      "website_url": "https://www.sevendaysvt.com/",
+      "description": "Seven Days is independent Vermont newspaper and website covering news, politics, food, arts, and culture.",
+      "followers": {
+        "facebook": 86400,
+        "twitter": 57100,
+        "instagram": 42600
+      },
+      "image_url": "https://i1.feedspot.com/4979631.jpg?t=1623300051"
+    },
+    {
+      "title": "My NBC5",
+      "feed_url": "https://www.mynbc5.com/topstories-rss",
+      "website_url": "https://www.mynbc5.com/",
+      "description": "My NBC 5 brings you the latest news, weather and events in Vermont, northern New York and New Hampshire's Upper Valley.",
+      "followers": {
+        "facebook": 201800,
+        "twitter": 37300,
+        "instagram": 36500
+      },
+      "image_url": "https://i1.feedspot.com/5131250.jpg?t=1626531321"
+    },
+    {
+      "title": "Boston.com \u00bb Vermont",
+      "feed_url": "https://www.boston.com/tag/vermont/feed/",
+      "website_url": "https://www.boston.com/tag/vermont/",
+      "description": "Boston's source for the latest breaking news, sports scores, traffic updates, weather, culture, events and more.",
+      "followers": {
+        "facebook": 482800,
+        "twitter": 459600,
+        "instagram": 503800
+      },
+      "image_url": "https://i1.feedspot.com/5131253.jpg?t=1694069508"
+    },
+    {
+      "title": "WHDH \u00bb Vermont",
+      "feed_url": "https://whdh.com/regional/vermont/feed/",
+      "website_url": "https://whdh.com/regional/vermont/",
+      "description": "Stay up to date on topics such as local news, politics, business, and crime in Vermont.",
+      "followers": {
+        "facebook": 529800,
+        "twitter": 364800
+      },
+      "image_url": "https://i1.feedspot.com/5131251.jpg?t=1694069560"
+    },
+    {
+      "title": "NEWS10 ABC \u00bb Vermont",
+      "feed_url": "https://www.news10.com/news/vt-news/feed/",
+      "website_url": "https://www.news10.com/news/vt-news/",
+      "description": "The Latest News and Updates in Vermont brought to you by the team at NEWS10 ABC.",
+      "followers": {
+        "facebook": 246000,
+        "twitter": 90100,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5131248.jpg?t=1585120604"
+    },
+    {
+      "title": "Addison Independent",
+      "feed_url": "https://www.addisonindependent.com/feed/",
+      "website_url": "https://www.addisonindependent.com/",
+      "description": "Addison Independent is a family-owned local independent newspaper that covers Addison County and the nearby Region in Vermont with a unique, public-focused perspective. On this website, you will find News in categories dedicated to Sports, Politics, Health Arts & Leisure, OPiniosn, Classifieds, and more about Vermont.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 3600,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5477878.jpg?t=1671521175"
+    },
+    {
+      "title": "The Vermont Standard",
+      "feed_url": "https://thevermontstandard.com/feed/",
+      "website_url": "https://thevermontstandard.com/",
+      "description": "Get the latest local news in the Woodstock Vermont area. From local events, news, and obituaries, they provide the information people need to know right to their doorstep as well as screens. Vermont Weekly is a Community Newspaper with robust print and digital editions, that consist of locally-produced news, information, photography, and advertising.",
+      "followers": {
+        "facebook": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5477877.jpg?t=1671520710"
+    },
+    {
+      "title": "The Mountain Times",
+      "feed_url": "https://mountaintimes.info/feed/",
+      "website_url": "https://mountaintimes.info/",
+      "description": "The Mountain Times is a weekly community newspaper that covers local events from a unique, local perspective. The aim is to inform readers about their neighborhood events, local government, schools, sports, and local businesses. Read updates and uncensored cover stories from anywhere through our website.",
+      "followers": {
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5477876.jpg?t=1671520925"
+    },
+    {
+      "title": "ABC22 & FOX44",
+      "feed_url": "https://www.mychamplainvalley.com/feed/",
+      "website_url": "https://www.mychamplainvalley.com/",
+      "description": "Get your daily dose of updated news, weather, and sports in the Champlain Valley, Upper Valley, North Country, Adirondacks, and Montreal. ABC22 & FOX44 stations owned by Nexstar Broadcasting Inc, provide local news, network, syndicated entertainment, and local programming.",
+      "followers": {
+        "facebook": 42000,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/5148319.jpg?t=1671521225"
+    },
+    {
+      "title": "NBC Boston \u00bb Local",
+      "feed_url": "https://www.nbcboston.com/?rss=y",
+      "website_url": "https://www.nbcboston.com/news/local/",
+      "description": "Local news, weather, traffic, entertainment, breaking news from around the state of Vermont.",
+      "followers": {
+        "facebook": 188400,
+        "twitter": 104800,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/5131252.jpg?t=1585113712"
+    },
+    {
+      "title": "WCAX",
+      "feed_url": "https://www.wcax.com/arcio/rss/category/news/?size=20",
+      "website_url": "https://www.wcax.com/",
+      "description": "WCAX is the premier source for news, weather, and local sports in Vermont and the surrounding region. As the CBS affiliate for the Burlington, Vermont Plattsburgh, New York market, WCAX-TV delivers up-to-the-minute updates to viewers, solidifying its status as a trusted leader in broadcasting.",
+      "followers": {
+        "facebook": 246000,
+        "twitter": 69500,
+        "instagram": 48200
+      },
+      "image_url": "https://i1.feedspot.com/5131244.jpg?t=1623300427"
+    },
+    {
+      "title": "Burlington Free Press",
+      "feed_url": "http://rssfeeds.burlingtonfreepress.com/burlington/home",
+      "website_url": "https://www.burlingtonfreepress.com/",
+      "description": "Burlington Free Press provides you in-depth and updated local news, sports, things to do, investigative journalism and opinions.",
+      "followers": {
+        "facebook": 103100,
+        "twitter": 61600,
+        "instagram": 18600
+      },
+      "image_url": "https://i1.feedspot.com/5131247.jpg?t=1626531317"
+    },
+    {
+      "title": "The World Online",
+      "feed_url": "https://www.vt-world.com/feed",
+      "website_url": "https://www.vt-world.com/",
+      "description": "The WORLD newspaper is locally owned, independent, and committed to the central Vermont community. We provide the best source for community news in order to attract quality readership and generate positive conversations that strengthen our sense of connection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5477879.jpg?t=1671520661"
+    }
+  ]
+}

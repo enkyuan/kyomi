@@ -1,0 +1,62 @@
+{
+  "category": "Apple Stock",
+  "source_url": "https://rss.feedspot.com/apple_stock_rss_feeds",
+  "feeds": [
+    {
+      "title": "9to5Mac \u00bb AAPL",
+      "feed_url": "https://9to5mac.com/guides/aapl/feed/",
+      "website_url": "https://9to5mac.com/guides/aapl/",
+      "description": "All latest articles about AAPL from 9to5Mac.",
+      "followers": {
+        "facebook": 280600,
+        "twitter": 1000000,
+        "instagram": 174100
+      },
+      "image_url": "https://i1.feedspot.com/4849776.jpg?t=1758879904"
+    },
+    {
+      "title": "Apple Stock News",
+      "feed_url": "https://apple-stock-news.com/feed/",
+      "website_url": "https://apple-stock-news.com/",
+      "description": "Apple Stock News by I Know First provides readers with the latest news involving Apple Inc. (AAPL) that has potential impacts on its share value.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 4200,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4849231.jpg?t=1666848093"
+    },
+    {
+      "title": "deagol's AAPL model",
+      "feed_url": "http://aaplmodel.blogspot.com/feeds/posts/default",
+      "website_url": "http://aaplmodel.blogspot.com/",
+      "description": "Here you'll find my latest AAPL estimates based on my financial model of Apple Inc's business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/310208.jpg?t=1611556434"
+    },
+    {
+      "title": "The Street \u00bb Apple News",
+      "feed_url": "https://www.thestreet.com/apple/.rss/full/news",
+      "website_url": "https://www.thestreet.com/apple/news",
+      "description": "Follow the stock market today on TheStreet. Get business news that moves markets, award-winning stock analysis, market data, and stock trading ideas.Get all the information and news related to Apple Stock at The Apple Maven",
+      "followers": {
+        "facebook": 313300,
+        "twitter": 848800,
+        "instagram": 123000
+      },
+      "image_url": "https://i1.feedspot.com/5289042.jpg?t=1622890610"
+    },
+    {
+      "title": "Nasdaq \u00bb Apple",
+      "feed_url": "https://www.nasdaq.com/market-activity/stocks/aapl",
+      "website_url": "https://www.nasdaq.com/market-activity/stocks/aapl",
+      "description": "Nasdaq offers stock quotes & market activity data for US and global markets. Nasdaq is a global technology company that champions inclusive growth and prosperity, creating opportunity for markets and economies of all sizes.",
+      "followers": {
+        "facebook": 825600,
+        "twitter": 148000,
+        "instagram": 594700
+      },
+      "image_url": "https://i1.feedspot.com/5459945.jpg?t=1666848018"
+    }
+  ]
+}

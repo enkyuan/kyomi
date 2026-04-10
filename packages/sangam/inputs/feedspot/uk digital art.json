@@ -1,0 +1,61 @@
+{
+  "category": "UK Digital Art",
+  "source_url": "https://rss.feedspot.com/uk_digital_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "CreativeBloq",
+      "feed_url": "https://www.creativebloq.com/feed",
+      "website_url": "https://www.creativebloq.com/",
+      "description": "Creative Bloq delivers a daily balance of creative tips and inspiration across web design, graphic design, 3D and more. Bringing the very best design work to our audience and offering the insight that enables them to keep up to date with the latest trends and developments in global design and to create their best work.",
+      "followers": {
+        "facebook": 346700,
+        "twitter": 199000,
+        "instagram": 17500
+      },
+      "image_url": "https://i1.feedspot.com/4907150.jpg?t=1613975115"
+    },
+    {
+      "title": "Spoon Graphics",
+      "feed_url": "https://feeds.feedburner.com/SpoonGraphics",
+      "website_url": "https://blog.spoongraphics.co.uk/",
+      "description": "Covers tutorials on how to create awesome designs, free resources to use in your own artwork, and articles that share theory and inspiration from various creative genres. Every week you'll find a new post that falls into one of these categories, alongside periodic updates letting you know about cool deals and site news. Chris Spooner is the guy behind Spoon Graphics helping you create cool stuff by sharing tips, inspiration and resources to fuel your creative passion.",
+      "followers": {
+        "facebook": 32800,
+        "twitter": 78500
+      },
+      "image_url": "https://i1.feedspot.com/76817.jpg?t=1608798962"
+    },
+    {
+      "title": "3DTotal.com",
+      "feed_url": "https://3dtotal.com/rss.xml",
+      "website_url": "https://store.3dtotal.com/blogs/news",
+      "description": "3DTotal.com mission is to provide daily gallery and news updates to keep 3dtotal the CG artist's homepage of choice! We have staff around the world dedicated to finding the best news for the site, and our in-house team are adding plenty of tutorials, interviews and making of weekly for your enjoyment.",
+      "followers": {
+        "facebook": 190800,
+        "twitter": 50000,
+        "instagram": 121200
+      },
+      "image_url": "https://i1.feedspot.com/4650872.jpg?t=1604584082"
+    },
+    {
+      "title": "antCGi Ltd. Blog",
+      "feed_url": "https://www.antcgi.com/feed/?x=1",
+      "website_url": "https://www.antcgi.com/blog/",
+      "description": "antCGi boasts over two decades of experience in digital media, as well as a vast suite of courses available through Digital Tutors, 3DWorld and CGTuts . Its with this backbone of knowledge and expertise that I supply quality digital art, game art, animation, rigging, scripting and tutoring services to a wide range of clients.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 1600,
+        "instagram": 13300
+      },
+      "image_url": "https://i1.feedspot.com/4650880.jpg?t=1604584364"
+    },
+    {
+      "title": "Phill Hosking's art blog",
+      "feed_url": "https://www.phillhosking.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.phillhosking.co.uk/",
+      "description": "I am a digital sculptor and 2d artist working in the toy and collectables industry in the UK. I always have my eye open for new collaborations with artists to get my work to a larger audience. Often I work on a one off sculpt basis, the more interesting the better, but I also take on more extensive ranges and can deliver almost any style the client desires",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4910801.jpg?t=1546928591"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "category": "Poland Trucking",
+  "source_url": "https://rss.feedspot.com/poland_trucking_rss_feeds",
+  "feeds": [
+    {
+      "title": "Frogstrans Blog",
+      "feed_url": "https://www.frogstrans.pl/en/feed/",
+      "website_url": "https://www.frogstrans.pl/en/blog/",
+      "description": "Read about domestic and international transport in the Frogstrans Blog. Frogstrans is a forwarding company specializing in domestic and international transport. Their main assumption is that transport is always on time and at the lowest price. Due to the continuous development, they have created a database of regular suppliers, which has largely influenced their unrivalled position and allows them to approach each transport individually.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297521.jpg?t=1712919930"
+    },
+    {
+      "title": "Schwerlast A.L. Blog",
+      "feed_url": "https://zezwoleniatransportowe.pl/en/feed/",
+      "website_url": "https://zezwoleniatransportowe.pl/en/blog/",
+      "description": "Visit the Schwerlast A.L. Blog for tips and articles about trucking. Schwerlast A.L. is one of the largest Polish companies dealing with permits for oversized transports. They organize, among others: permits, civil and police pilots, route diversions, and adaptation of road infrastructure to transport needs.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/7297520.jpg?t=1712919923"
+    },
+    {
+      "title": "Indeka",
+      "feed_url": "https://indeka.pl/en/news/feed/",
+      "website_url": "https://indeka.pl/en/news/",
+      "description": "In a dynamic business world, flexibility and continuous development are the keys to success. The INDEKA Group understands this principle very well, as evidenced by their latest step, i.e. implementation of oversized transport services. Their offering expansion is aimed at meeting the growing needs of their clients and opening up new perspectives in the transport sector.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7297519.jpg?t=1712920021"
+    }
+  ]
+}

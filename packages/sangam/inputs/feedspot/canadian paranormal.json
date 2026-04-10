@@ -1,0 +1,25 @@
+{
+  "category": "Canadian Paranormal",
+  "source_url": "https://rss.feedspot.com/canadian_paranormal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Haunted Montreal Blog",
+      "feed_url": "https://hauntedmontreal.com/feed",
+      "website_url": "https://hauntedmontreal.com/blog/",
+      "description": "Haunted Montreal Ghost Tours take place on Mount Royal, Downtown and in Griffin town! The monthly Haunted Montreal Blog complements the ghost walks.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/4789728.jpg?t=1609571484"
+    },
+    {
+      "title": "Northern Paranormal Investigations",
+      "feed_url": "http://northernparanormalinvestigations.blogspot.com/feeds/posts/default",
+      "website_url": "http://northernparanormalinvestigations.blogspot.com/",
+      "description": "We will investigate, evaluate and explain occurrences of possible paranormal activity.We will help those who experience the unexplainable by developing a deep understanding of their situation.We will seek to resolve your issue and explain any activity clearly, concisely and logically.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5343417.jpg?t=1645513190"
+    }
+  ]
+}

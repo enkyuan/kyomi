@@ -1,0 +1,108 @@
+{
+  "category": "FC Dallas",
+  "source_url": "https://rss.feedspot.com/fc_dallas_rss_feeds",
+  "feeds": [
+    {
+      "title": "3rd Degree",
+      "feed_url": "https://3rddegree.net/feed",
+      "website_url": "https://3rddegree.net/",
+      "description": "3rd Degree is the independent North Texas soccer news blog with a focus on FC Dallas and Major League Soccer. Founded in 1997 by Buzz Carrick, 3rd Degree has provided professional-level coverage of soccer on a consistent basis.",
+      "followers": {
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5185557.jpg?t=1598248772"
+    },
+    {
+      "title": "Dallas Sports Nation \u00bb FC Dallas",
+      "feed_url": "https://dalsportsnation.com/category/fc-dallas/feed/",
+      "website_url": "https://dalsportsnation.com/category/fc-dallas/",
+      "description": "Dallas Sports Nation is a sports media website that looks to provide updates on the latest FC Dallas sports news and happenings across our network of social accounts and platforms.",
+      "followers": {
+        "facebook": 999,
+        "twitter": 2700,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5185562.jpg?t=1598251064"
+    },
+    {
+      "title": "Yahoo Sports \u00bb FC Dallas",
+      "feed_url": "https://sports.yahoo.com/soccer/teams/dallas/rss/",
+      "website_url": "https://sports.yahoo.com/soccer/teams/dallas/",
+      "description": "The latest FC Dallas news from Yahoo Sports. Find FC Dallas fixtures, results, top scorers, transfer rumours and player profiles, with exclusive photos and video highlights.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5185606.jpg?t=1598257298"
+    },
+    {
+      "title": "SportSpyder.com \u00bb FC Dallas",
+      "feed_url": "https://sportspyder.com/mls/fc-dallas/news.xml",
+      "website_url": "https://sportspyder.com/mls/fc-dallas/news",
+      "description": "The Latest FC Dallas MLS news articles from around the web.",
+      "followers": {
+        "facebook": 701,
+        "twitter": 873
+      },
+      "image_url": "https://i1.feedspot.com/5185608.jpg?t=1598257780"
+    },
+    {
+      "title": "Dallas Sports Fanatic \u00bb FC Dallas",
+      "feed_url": "https://www.dallassportsfanatic.com/category/fc-dallas/feed/",
+      "website_url": "https://www.dallassportsfanatic.com/category/fc-dallas/",
+      "description": "Get the latest FC Dallas news, analysis, rumors, stats, and more.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 18500
+      },
+      "image_url": "https://i1.feedspot.com/5185643.jpg?t=1598268078"
+    },
+    {
+      "title": "FC Dallas",
+      "feed_url": "https://www.fcdallas.com/rss.xml",
+      "website_url": "https://www.fcdallas.com/",
+      "description": "Your ultimate source for the latest and official FC Dallas news, analysis, stats, schedule, tickets, videos, and more.",
+      "followers": {
+        "facebook": 463100,
+        "twitter": 190200,
+        "instagram": 473400
+      },
+      "image_url": "https://i1.feedspot.com/5185596.jpg?t=1598252166"
+    },
+    {
+      "title": "Big D Soccer",
+      "feed_url": "https://www.bigdsoccer.com/rss/index.xml/",
+      "website_url": "https://www.bigdsoccer.com/",
+      "description": "Your best source for quality FC Dallas news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 4800,
+        "instagram": 293
+      },
+      "image_url": "https://i1.feedspot.com/5185390.jpg?t=1598247071"
+    },
+    {
+      "title": "MLS Multiplex \u00bb FC Dallas",
+      "feed_url": "https://mlsmultiplex.com/mls-western-conference/fc-dallas/feed/",
+      "website_url": "https://mlsmultiplex.com/mls-western-conference/fc-dallas/",
+      "description": "The latest FC Dallas news, rumors, GIFs, predictions, and more from MLS Multiplex.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5185601.jpg?t=1598255671"
+    },
+    {
+      "title": "Yardbarker \u00bb FC Dallas",
+      "feed_url": "https://www.yardbarker.com/",
+      "website_url": "https://www.yardbarker.com/soccer/teams/fc_dallas/17320",
+      "description": "Get the latest FC Dallas news, rumors, scores, and highlights from Yardbarker, your source for the best FC Dallas content on the web.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5185622.jpg?t=1598264235"
+    }
+  ]
+}

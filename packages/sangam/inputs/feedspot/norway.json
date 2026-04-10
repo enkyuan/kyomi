@@ -1,0 +1,765 @@
+{
+  "category": "Norway",
+  "source_url": "https://rss.feedspot.com/norway_rss_feeds",
+  "feeds": [
+    {
+      "title": "Aftenposten",
+      "feed_url": "https://www.aftenposten.no/rss/",
+      "website_url": "https://www.aftenposten.no/",
+      "description": "All latest articles from Aftenposten.",
+      "followers": {
+        "facebook": 866700,
+        "twitter": 181800
+      },
+      "image_url": "https://i1.feedspot.com/3459784.jpg?t=1621403378"
+    },
+    {
+      "title": "Life in Norway",
+      "feed_url": "https://feeds.feedburner.com/lifeinnorwayfeed",
+      "website_url": "https://www.lifeinnorway.net/",
+      "description": "Life in Norway is an English-language online magazine about real life in Norway. The blog introduces the world to the quirks of the Norwegian lifestyle, from what to say and what not to say to the type of food and drink you can expect.",
+      "followers": {
+        "facebook": 69400,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/3484548.jpg?t=1621403357"
+    },
+    {
+      "title": "NewsInEnglish.no",
+      "feed_url": "https://feeds.feedburner.com/newsinenglish/AzQS",
+      "website_url": "https://www.newsinenglish.no/",
+      "description": "Newsinenglish.no is a news website dedicated to serve international readers in Norway and around the world.",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/2105840.jpg?t=1621403131"
+    },
+    {
+      "title": "NRK",
+      "feed_url": "https://www.nrk.no/toppsaker.rss",
+      "website_url": "https://www.nrk.no/",
+      "description": "NRK.no is Norway's leading website for news from Norway and the world, local news, radio and television shows, podcasts, weather, health, culture, entertainment, humor and debate.",
+      "followers": {
+        "facebook": 479700,
+        "twitter": 172300
+      },
+      "image_url": "https://i1.feedspot.com/4947705.jpg?t=1621403143"
+    },
+    {
+      "title": "World of O",
+      "feed_url": "http://worldofo.com/news/index.xml",
+      "website_url": "http://worldofo.com/",
+      "description": "World of O is dedicated to giving you the latest news, orienteering maps and other information from the Orienteering world.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/466568.jpg?t=1621403475"
+    },
+    {
+      "title": "Highcharts Blog",
+      "feed_url": "https://www.highcharts.com/blog/feed/",
+      "website_url": "https://www.highcharts.com/blog/",
+      "description": "Highcharts has quickly become one of the industry leaders in JavaScript based data visualization in web pages and web applications.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4669106.jpg?t=1621403150"
+    },
+    {
+      "title": "Politico \u00bb Norway",
+      "feed_url": "https://www.politico.eu/country/norway/feed/",
+      "website_url": "https://www.politico.eu/country/norway/",
+      "description": "Latest politics, government and election news for Norway. POLITICO strives to be the dominant source for news on politics and policy in power centers across every continent where access to reliable information, nonpartisan journalism, and real-time tools create, inform and engage a global citizenry.",
+      "followers": {
+        "facebook": 240600,
+        "twitter": 358700
+      },
+      "image_url": "https://i1.feedspot.com/4947682.jpg?t=1638367956"
+    },
+    {
+      "title": "Bergens Tidende",
+      "feed_url": "https://www.bt.no/rss",
+      "website_url": "https://www.bt.no/",
+      "description": "Subscribe to us to keep up with foreign, domestic, local, economic news, culture news, opinions, and sports.",
+      "followers": {
+        "facebook": 176900,
+        "twitter": 65400
+      },
+      "image_url": "https://i1.feedspot.com/2748178.jpg?t=1621403157"
+    },
+    {
+      "title": "Scandinavia Standard",
+      "feed_url": "https://www.scandinaviastandard.com/tag/norway/feed/",
+      "website_url": "https://www.scandinaviastandard.com/tag/norway/",
+      "description": "Scandinavia Standard is your one-stop destination for Scandinavian lifestyle. Subscribe us to know about travel, lifestyle, design, aesthetics, and events for locals, travellers and scandiphiles, in Norway.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 6500,
+        "instagram": 44600
+      },
+      "image_url": "https://i1.feedspot.com/4947649.jpg?t=1621403463"
+    },
+    {
+      "title": "Capture Landscapes",
+      "feed_url": "https://www.capturelandscapes.com/category/landscape-photography-tips/feed/",
+      "website_url": "https://www.capturelandscapes.com/category/landscape-photography-tips/",
+      "description": "Capture Landscapes is a provider of Landscape Photography Tutorials & Resources. Regardless of your ambitions and skill level, Capture Landscapes has what you need to improve your photography.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4684666.jpg?t=1621405170"
+    },
+    {
+      "title": "ScandiKitchen",
+      "feed_url": "https://www.scandikitchen.co.uk/feed/",
+      "website_url": "https://www.scandikitchen.co.uk/",
+      "description": "ScandiKitchen is one of the leading Scandinavian food outlets, providing freshly made food and groceries from Scandinavia. We're all about bringing the best of Nordic cuisine to you.",
+      "followers": {
+        "facebook": 47000,
+        "twitter": 15000,
+        "instagram": 34300
+      },
+      "image_url": "https://i1.feedspot.com/4834012.jpg?t=1610978386"
+    },
+    {
+      "title": "Daily Scandinavian",
+      "feed_url": "https://www.dailyscandinavian.com/feed/",
+      "website_url": "https://www.dailyscandinavian.com/",
+      "description": "Our aim is to share with you the exciting destinations in Scandinavia, what's going on and tell you about places, traditions, design, architecture and food. Spend your business trip or next holidays in Scandinavia & discover the best places with Daily Scandinavian travel guide.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 166,
+        "instagram": 81
+      },
+      "image_url": "https://i1.feedspot.com/4823563.jpg?t=1610945756"
+    },
+    {
+      "title": "Arne & Carlos Blog",
+      "feed_url": "https://arnecarlos.com/blog/feed",
+      "website_url": "https://arnecarlos.com/blog/",
+      "description": "Scandinavians Arne Nerjordet and Carlos Zachrison are highly regarded designers, textile artists and authors. They are best known for their craft books and their original, colourful and visually striking designs. Their work is highly influenced by their Scandinavian background and their everyday life in rural Norway.",
+      "followers": {
+        "facebook": 115900,
+        "twitter": 1500,
+        "instagram": 142100
+      },
+      "image_url": "https://i1.feedspot.com/4492240.jpg?t=1600179567"
+    },
+    {
+      "title": "A Frog in the Fjord",
+      "feed_url": "https://afroginthefjord.com/feed/",
+      "website_url": "https://afroginthefjord.com/?v=c86ee0d9d7ed",
+      "description": "My name is Lorelou Desjardins. I am The Frog in the Fjord: a French lady who lived in Denmark for a bit before moving to Norway for good. This blog is about all these new realities foreigners like me face when trying to adapt to a new culture, language, country and most of all to new people.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 1300,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4947425.jpg?t=1621403483"
+    },
+    {
+      "title": "The Meditation Blog",
+      "feed_url": "https://www.themeditationblog.com/feed/",
+      "website_url": "https://www.themeditationblog.com/",
+      "description": "Explores meditative practice, experience, and research. The bloggers practice Acem Meditation but represent their own views here.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/4474594.jpg?t=1605691367"
+    },
+    {
+      "title": "Oslo.com Blog",
+      "feed_url": "https://www.oslo.com/blog/feed/",
+      "website_url": "https://www.oslo.com/blog/",
+      "description": "Oslo city travel guide with tours, hotels, flight and car bookings. A complete guide to hotels, flights to Oslo, skiing, entertainment, properties in Oslo, news and more on Oslo, Norway.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 388
+      },
+      "image_url": "https://i1.feedspot.com/4825079.jpg?t=1610945771"
+    },
+    {
+      "title": "Helle's Kitchen",
+      "feed_url": "https://helleskitchen.org/feed/",
+      "website_url": "https://helleskitchen.org/",
+      "description": "Helles Kitchen is a food blog by norwegian blogger Helle \u00d8der Valebrokk. Here you will find good recipes for food and cocktails and also receive travel recommendations and restaurant tips abroad, interviews with exciting people and other food and drink related articles.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 253,
+        "instagram": 20400
+      },
+      "image_url": "https://i1.feedspot.com/4947719.jpg?t=1621403487"
+    },
+    {
+      "title": "Ny Tid",
+      "feed_url": "https://www.nytid.no/feed/",
+      "website_url": "https://www.nytid.no/",
+      "description": "The purpose of Ny Tid is to contribute to a Norwegian internationally oriented orientation, and to be an arena for views on both freedom and brotherhood.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 2100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4947673.jpg?t=1621405785"
+    },
+    {
+      "title": "Spiselandslaget",
+      "feed_url": "https://spiselandslaget.com/feed/",
+      "website_url": "https://spiselandslaget.com/",
+      "description": "Spiselandslag is a food blog by Maj-Britt Aagaard featuring his untiring food made from the bottom with true love and passion for proper ingredients, seductive flavors and the good life. Follow to keep up with meat, fish and vegetarian recipes.",
+      "followers": {
+        "facebook": 4800,
+        "instagram": 21700
+      },
+      "image_url": "https://i1.feedspot.com/4947727.jpg?t=1621404002"
+    },
+    {
+      "title": "Oslo Birder",
+      "feed_url": "http://oslobirder.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://oslobirder.blogspot.com/",
+      "description": "Oslo Birder is a blog by Simon Rix that features the sightings and occasional thoughts of an English birder in Oslo, Norway.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4629767.jpg?t=1616156042"
+    },
+    {
+      "title": "Nordic Music Review Blog",
+      "feed_url": "https://www.nordicmusicreview.com/blog-feed.xml",
+      "website_url": "https://www.nordicmusicreview.com/",
+      "description": "Nordic Music Review is a blog about Nordic Indie music reviews. It aims to find the best new as well as old music from the Nordic Regions.",
+      "followers": {
+        "twitter": 3700,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4855929.jpg?t=1621405694"
+    },
+    {
+      "title": "Stavanger Aftenblad",
+      "feed_url": "https://www.aftenbladet.no/rss",
+      "website_url": "https://www.aftenbladet.no/",
+      "description": "Stavanger Aftenblad is the largest regional newspaper with always up-to-date news in domestic, foreign, sport and culture. Follow to keep up with news about what's happening in Norway.",
+      "followers": {
+        "facebook": 82800,
+        "twitter": 20400,
+        "instagram": 50500
+      },
+      "image_url": "https://i1.feedspot.com/4947664.jpg?t=1621403455"
+    },
+    {
+      "title": "Life in Norway",
+      "feed_url": "https://www.lifeinnorway.net/feed/",
+      "website_url": "https://www.lifeinnorway.net/",
+      "description": "All things Norway, in English Hei hei! I'm David, a British guy who moved to Norway in 2011, and became a Norwegian citizen in 2022. Welcome! Life in Norway ?? is your English language guide",
+      "followers": {
+        "facebook": 69400
+      },
+      "image_url": "https://i1.feedspot.com/8655808.jpg?t=1754466158"
+    },
+    {
+      "title": "Varden",
+      "feed_url": "https://www.varden.no/rss",
+      "website_url": "https://www.varden.no/",
+      "description": "Read the news today? Varden gives you news, sports, culture, entertainment, features, and opinions from Telemark.",
+      "followers": {
+        "facebook": 51400,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5332888.jpg?t=1634553827"
+    },
+    {
+      "title": "Norwegian SciTech News",
+      "feed_url": "https://norwegianscitechnews.com/feed/",
+      "website_url": "https://norwegianscitechnews.com/",
+      "description": "Research news written for the general public about technology, energy and environment, science, fish and aquaculture, innovation, health, the social sciences and humanities. Norwegian SciTech News is published jointly by the Norwegian University of Science and Technology and SINTEF, Scandinavia's largest independent research institute.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5348190.jpg?t=1638262611"
+    },
+    {
+      "title": "Utrop",
+      "feed_url": "https://www.utrop.no/feed/",
+      "website_url": "https://www.utrop.no/",
+      "description": "Utrop er en flerkulturell avis i Norge som fokuserer faktabasert integrerings- og innvandringdebatt og derigjennom bidrar til integrering og inkludering.",
+      "followers": {
+        "facebook": 35700,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8655809.jpg?t=1754466677"
+    },
+    {
+      "title": "K & M",
+      "feed_url": "https://www.kateandmikestravels.com/norway-blogs/feed/blog-feed.xml",
+      "website_url": "https://www.kateandmikestravels.com/norway-blogs/",
+      "description": "Kate & Mikes Travels",
+      "followers": {
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/8655807.jpg"
+    },
+    {
+      "title": "Outdoor Adventures",
+      "feed_url": "https://www.outdoornorway.com/blog/rss.xml",
+      "website_url": "https://www.outdoornorway.com/blog/",
+      "description": "Outdoor Blog with interesting advice from our team of professionals with decades of experience in outdoors activities.",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/8655810.jpg"
+    },
+    {
+      "title": "The Guardian | Scandinavian food and drink",
+      "feed_url": "https://www.theguardian.com/food/scandinavian/rss",
+      "website_url": "https://www.theguardian.com/food/scandinavian",
+      "description": "The Guardian features news, sports, business, opinion, analysis and reviews. Follow to know more about Scandinavian food and drink from the Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4947536.jpg?t=1621404527"
+    },
+    {
+      "title": "North Wild Kitchen",
+      "feed_url": "https://northwildkitchen.com/feed/",
+      "website_url": "https://northwildkitchen.com/recipe-index/",
+      "description": "Covers articles about seasonal cooking, local ingredients, local artisans, Norwegian traditions, stories, recipes, seasons and history. North Wild Kitchen is a Norwegian cooking blog at its simplest and most elaborate.",
+      "followers": {
+        "facebook": 31500,
+        "twitter": 452,
+        "instagram": 37100
+      },
+      "image_url": "https://i1.feedspot.com/4671227.jpg?t=1610978634"
+    },
+    {
+      "title": "The Social Guidebook",
+      "feed_url": "https://www.thesocialguidebook.no/blogs/norwegian-culture.atom",
+      "website_url": "https://www.thesocialguidebook.no/blogs/norwegian-culture",
+      "description": "The Social Guidebook to Norway is a book series explaining the local social expectations and unwritten social rules of the Norwegian society with entertaining illustrations. It provides insights into the everyday life of Norwegian people and their social codes.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 13,
+        "instagram": 711
+      },
+      "image_url": "https://i1.feedspot.com/4947461.jpg?t=1621403139"
+    },
+    {
+      "title": "Ha det Mamma",
+      "feed_url": "https://www.hadetmamma.com/blog-feed.xml",
+      "website_url": "https://www.hadetmamma.com/posts",
+      "description": "Ha det Mamma's blog posts cover various destinations, experiences, and recommendations related to travel in Norway. Some of the topics discussed include budget travel in Oslo, saunas in Norway, stave churches, the town of Hell, weekend getaways, language learning, Norwegian culture, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5727618.jpg?t=1701688325"
+    },
+    {
+      "title": "Fashion Junkiie",
+      "feed_url": "https://nouw.com/blog/rss/1441888",
+      "website_url": "https://nouw.com/fashionjunkiie",
+      "description": "Fashion Junkiie is a fashion, beauty and lifestyle blog from Norway. Follow to keep up with articles from Fashion Junkie.",
+      "followers": {
+        "twitter": 141,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4667437.jpg?t=1617891172"
+    },
+    {
+      "title": "Transparent Language",
+      "feed_url": "https://feeds.feedblitz.com/norwegianblog",
+      "website_url": "https://blogs.transparent.com/norwegian/",
+      "description": "Transparent Language is a Norwegian Language Blog that features information about language and culture of the Norwegian-speaking world.",
+      "followers": {
+        "facebook": 41300,
+        "twitter": 20500,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4947440.jpg"
+    },
+    {
+      "title": "Heart My Backpack",
+      "feed_url": "https://www.heartmybackpack.com/category/norway/feed/",
+      "website_url": "https://www.heartmybackpack.com/norway/",
+      "description": "Heart My Backpack is a travel blog by Silvia Lawrence about backpacking solo through Iran, hitchhiking in the Stans and living in Norway! Follow to keep up with expat life in Norway.",
+      "followers": {
+        "facebook": 39000,
+        "twitter": 19300,
+        "instagram": 63900
+      },
+      "image_url": "https://i1.feedspot.com/4947475.jpg?t=1621403459"
+    },
+    {
+      "title": "Peace Research Institute Oslo Blog",
+      "feed_url": "https://blogs.prio.org/feed/",
+      "website_url": "https://blogs.prio.org/category/humanitarianism/",
+      "description": "The Peace Research Institute Oslo (PRIO) conducts research on the conditions for peaceful relations between states, groups and people.",
+      "followers": {
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/4947688.jpg?t=1621403467"
+    },
+    {
+      "title": "Nordic Design",
+      "feed_url": "https://nordicdesign.ca/feed/",
+      "website_url": "https://nordicdesign.ca/articles/",
+      "description": "Nordic Design is a leading, award-wining blog dedicated to Scandinavian-inspired design and interiors. Updated regularly, Nordic Design presents a curated selection of innovative products, beautiful home tours, travel tips, shopping destinations, interviews, styling inspiration and decorating ideas.",
+      "followers": {
+        "facebook": 50300,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4828968.jpg?t=1610978406"
+    },
+    {
+      "title": "Travel Addicts",
+      "feed_url": "https://traveladdicts.net/europe/norway/feed/",
+      "website_url": "https://traveladdicts.net/europe/norway/",
+      "description": "Travel Addicts travel blog features travel tips, stories, photos, and travel itineraries. Subscribe us to know more about Norway and the wide range of activities offered in both summer and winter.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 4300,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4947501.jpg?t=1621404513"
+    },
+    {
+      "title": "One Step Checkout",
+      "feed_url": "https://blog.onestepcheckout.com/feed/",
+      "website_url": "https://blog.onestepcheckout.com/",
+      "description": "OneStepCheckout is a Norwegian company about ecommerce, cart abandonment, checkout processes and Magento.",
+      "followers": {
+        "facebook": 309,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4641886.jpg?t=1616591685"
+    },
+    {
+      "title": "SharePoint JavaScripts",
+      "feed_url": "https://spjsblog.com/feed/",
+      "website_url": "https://spjsblog.com/",
+      "description": "Alexander Bautz's blog is all about JavaScript tricks for SharePoint.",
+      "followers": {
+        "twitter": 357
+      },
+      "image_url": "https://i1.feedspot.com/277162.jpg?t=1616145810"
+    },
+    {
+      "title": "Fjords & Beaches",
+      "feed_url": "https://www.fjordsandbeaches.com/category/destinations-en/norway-en/feed/",
+      "website_url": "https://www.fjordsandbeaches.com/category/destinations-en/norway-en/",
+      "description": "Fjords & Beaches is a travel blog by Lisa focusing on staying curious and young at heart through adventures and experiences. Follow to keep up with updates on Norway travel.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2400,
+        "instagram": 36400
+      },
+      "image_url": "https://i1.feedspot.com/4947842.jpg?t=1621403979"
+    },
+    {
+      "title": "Lene Orvik",
+      "feed_url": "https://leneorvik.blogg.no/feed",
+      "website_url": "https://leneorvik.blogg.no/",
+      "description": "A blog about fashion, travel, food and more by Lene Orvik.",
+      "followers": {
+        "facebook": 3300,
+        "instagram": 92700
+      },
+      "image_url": "https://i1.feedspot.com/4946882.jpg?t=1621403955"
+    },
+    {
+      "title": "First Class Sailing Blog | Norway Archives",
+      "feed_url": "https://www.firstclasssailing.com/blog/category/norway/feed/",
+      "website_url": "https://www.firstclasssailing.com/blog/category/norway/",
+      "description": "First Class Sailing is an RYA recognised sailing school. Follow to know more about sailing in Norway from First Class Sailing.",
+      "followers": {
+        "twitter": 900,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4947465.jpg?t=1621405848"
+    },
+    {
+      "title": "Norway Designs",
+      "feed_url": "https://www.norwaydesigns.no/blogs/news.atom",
+      "website_url": "https://www.norwaydesigns.no/blogs/news",
+      "description": "Norway Designs is a lifestyle store focusing on Norwegian design, crafts and unique small scale products from Norway and the Nordic region.",
+      "followers": {
+        "facebook": 10700,
+        "instagram": 33800
+      },
+      "image_url": "https://i1.feedspot.com/4947696.jpg?t=1621404063"
+    },
+    {
+      "title": "Lars Spiser",
+      "feed_url": "http://larsspiser.no/feed/",
+      "website_url": "http://larsspiser.no/",
+      "description": "Lars Spiser is a food blog by Lars Fredriksen featuring recipes, good ingredients and more.",
+      "followers": {
+        "twitter": 389
+      },
+      "image_url": "https://i1.feedspot.com/4947722.jpg?t=1621405491"
+    },
+    {
+      "title": "Tom Dyring Wildlife Photography.",
+      "feed_url": "http://tomdyring.blogspot.com/feeds/posts/default",
+      "website_url": "http://tomdyring.blogspot.com/",
+      "description": "I am a semi professional nature photographer living close to Oslo in southern Norway. I am a landscape architect by profession but most of the time i do is photography, and with photography I work only and exclusively with wildlife, my only mission is : wild animals. I have projects all over the world, and accordingly I spend a lot of my time travelling.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/862943.jpg?t=1610600218"
+    },
+    {
+      "title": "Bilivoka \u00bb Norway",
+      "feed_url": "https://bilivoka.com/en/category/countries/europe/norway/feed/",
+      "website_url": "https://bilivoka.com/en/category/countries/europe/norway/",
+      "description": "We are two travel-loving people enjoying new places and seeing more of the world. Follow to know about our trips, tips, and experience with a focus on those who do not have the luxury of traveling anytime for any duration.",
+      "followers": {
+        "facebook": 212
+      },
+      "image_url": "https://i1.feedspot.com/4827538.jpg?t=1610965294"
+    },
+    {
+      "title": "My New Norwegian Home",
+      "feed_url": "http://norwegianhome.blogspot.com/feeds/posts/default",
+      "website_url": "http://norwegianhome.blogspot.com/",
+      "description": "My New Norwegian Home is a blog by Evelyn Sand who writes about her experience about living in Norway.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/2482132.jpg?t=1621404443"
+    },
+    {
+      "title": "Lee Harrison Climbing",
+      "feed_url": "http://leeharrisonclimbing.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://leeharrisonclimbing.blogspot.com/",
+      "description": "Lee Harrison Climbing is a blog by Lee who is a Oslo-based climber, photographer, and writer enthusiast.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4556714.jpg?t=1614853990"
+    },
+    {
+      "title": "The Hills In Norway",
+      "feed_url": "https://www.thehillsinnorway.com/feed/",
+      "website_url": "https://www.thehillsinnorway.com/blog/",
+      "description": "The Hills In Norway is a blog by S\u00f8ster Hill who blogs about stories from the Hills in Norway.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4947480.jpg?t=1621404967"
+    },
+    {
+      "title": "Nordic Fox Design Co. Blog",
+      "feed_url": "https://www.nordicfoxdesignco.com/blog?format=RSS",
+      "website_url": "https://www.nordicfoxdesignco.com/blog/",
+      "description": "Nordic Fox Design is a lifestyle blog by Heidi Smith including posts about Nordic Fox Design Co. products and events, travel, DIY, custom design and all things Scandinavian.",
+      "followers": {
+        "facebook": 734,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4835287.jpg?t=1610978717"
+    },
+    {
+      "title": "Elder Easton Egan | Norway Oslo Mission",
+      "feed_url": "http://eastoneganmission.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://eastoneganmission.blogspot.com/",
+      "description": "This is a blog by Elder Easton Egan about Norway Oslo Mission.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4947848.jpg?t=1621404485"
+    },
+    {
+      "title": "Norwegian Halloween",
+      "feed_url": "https://norwegianhalloween.com/feed/",
+      "website_url": "https://norwegianhalloween.com/",
+      "description": "Norwegian Halloween is a blog by a Halloween Addict From Norway.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/4947878.jpg?t=1621404488"
+    },
+    {
+      "title": "A Newbie in Norway",
+      "feed_url": "https://anewbieinnorway.com/feed/",
+      "website_url": "https://anewbieinnorway.com/",
+      "description": "A Newbie in Norway is a blog by Kimberly L Singleton who is learning to live in the land of the Midnight Sun.",
+      "followers": {
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/4947521.jpg?t=1621404497"
+    },
+    {
+      "title": "Knut Albert's beer blog",
+      "feed_url": "https://knutalbert.wordpress.com/feed/",
+      "website_url": "https://knutalbert.wordpress.com/",
+      "description": "Knut Albert is a 54 year old Norwegian, based in Oslo who blogs about brews, pubs and travel.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 832
+      },
+      "image_url": "https://i1.feedspot.com/4947692.jpg?t=1621404516"
+    },
+    {
+      "title": "Modern Plans",
+      "feed_url": "https://feeds.feedburner.com/ModernHousePlansByGregoryLaVarderaArchitect",
+      "website_url": "http://blog.lamidesign.com/",
+      "description": "We are committed to making modern home designs available to a wider community of homeowners who can not find modern houses through the usual sources where you buy a home, or shop for house plans. This is an affordable alternative to hiring a designer to create a custom design for those who can not afford such services.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/709639.jpg?t=1621405451"
+    },
+    {
+      "title": "Roamaroo",
+      "feed_url": "https://www.roamaroo.com/category/europe/norway/feed/",
+      "website_url": "https://www.roamaroo.com/category/europe/norway/",
+      "description": "Roamaroo is a travel blog by Collette and Scott focusing on luxury and adventure. Follow to know more about romantic destinations, luxurious getaways, & awesome adventures in Norway from Roamaroo.",
+      "followers": {
+        "facebook": 109000,
+        "twitter": 51500,
+        "instagram": 515299
+      },
+      "image_url": "https://i1.feedspot.com/4947648.jpg?t=1621404503"
+    },
+    {
+      "title": "The Culture Map",
+      "feed_url": "https://theculturemap.com/category/norway/feed/",
+      "website_url": "https://theculturemap.com/category/norway/",
+      "description": "The Culture Map is a travel blog by Shing specialising in Scandinavia and the Arctic regions. Follow to keep up with plenty of information and tips needed for your Norway trip from The Culture Map.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1500,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4947434.jpg?t=1621404522"
+    },
+    {
+      "title": "Guide to Europe \u00bb Norway",
+      "feed_url": "https://guidetoeurope.com/norway/",
+      "website_url": "https://guidetoeurope.com/norway/",
+      "description": "Norway Travel Guide's mission is to bring Norway and all of its fjordy wonderfulness right to your doorstep and make your trip here as perfect as possible. Subscribe us to get all the information you need, services with unbeatable value and priceless insider tips.",
+      "followers": {
+        "facebook": 76600
+      },
+      "image_url": "https://i1.feedspot.com/4947457.jpg?t=1621403370"
+    },
+    {
+      "title": "Vers Libre",
+      "feed_url": "https://verslibreradio.tumblr.com/rss",
+      "website_url": "https://verslibreradio.tumblr.com/",
+      "description": "A new independent internet radio station based in Bergen, Norway",
+      "followers": {},
+      "image_url": "?t=1697793304"
+    },
+    {
+      "title": "The Norwegian American",
+      "feed_url": "https://www.norwegianamerican.com/category/food/feed/",
+      "website_url": "https://www.norwegianamerican.com/category/food/",
+      "description": "The Norwegian American is proud to bring our readers news from Norway and the Norwegian-American community. Follow to keep with with food recipes from Norway.",
+      "followers": {
+        "facebook": 20600,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4947839.jpg?t=1621403605"
+    },
+    {
+      "title": "That Scandinavian Feeling",
+      "feed_url": "https://www.thatscandinavianfeeling.com/feed",
+      "website_url": "https://www.thatscandinavianfeeling.com/all-articles",
+      "description": "That Scandinavian Feeling is a blog founded by Ingrid Opstad, a Norwegian freelance writer, and photographer based in the UK. The blog is all about sharing Scandinavian lifestyle and design, with a focus on simplicity, minimalism, and hygge. Ingrid features home tours, product reviews, travel tips, and interviews with Scandinavian designers and creatives.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1300,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4827510.jpg?t=1610978452"
+    },
+    {
+      "title": "MeaWallet",
+      "feed_url": "https://www.meawallet.com/blog/feed",
+      "website_url": "https://www.meawallet.com/en/news",
+      "description": "Mea has built a Digital Payment Platform to enable a range of digital payment services, such as Tokenization, HCE, OEM Pays and Secure Remote Commerce. Built to support any payment schemes, the platform enables card digitization to any wallet application and wearable device for mobile and digital payments; all through a single connection. In our blog we share our thoughts about the latest innovations, changes in the market, regulatory changes and their impact and much more.",
+      "followers": {
+        "facebook": 135,
+        "twitter": 286
+      },
+      "image_url": "https://i1.feedspot.com/4867493.jpg?t=1617101692"
+    },
+    {
+      "title": "Passion 4 baking",
+      "feed_url": "https://www.passionforbaking.com/feed/",
+      "website_url": "https://www.passionforbaking.com/",
+      "description": "Passion 4 baking is a baking blog by Manuela Kjeilen who is a Norwegian full-time blogger, baker, TV-presenter, author, lecturer and photographer. She blogs about her passion for baking and cooking and of all the excitement one might find in the kitchen with cakes, cupcakes, cakepops and various frost-ins.",
+      "followers": {
+        "twitter": 831,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/1870509.jpg?t=1621403470"
+    },
+    {
+      "title": "Camilla Pihl",
+      "feed_url": "https://www.camillapihl.no/feed/",
+      "website_url": "https://camillapihl.com/about",
+      "description": "Camilla Pihl is Norway's award-winning blogger and a passionate designer, dreamer, entrepreneur, and model, who shares tips about travel, beauty, food, fashion, and lifestyle.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 2100,
+        "instagram": 145000
+      },
+      "image_url": "https://i1.feedspot.com/4509872.jpg?t=1639030696"
+    },
+    {
+      "title": "This Big Wild World \u00bb Europe",
+      "feed_url": "https://www.thisbigwildworld.com/europe/",
+      "website_url": "https://www.thisbigwildworld.com/europe/",
+      "description": "This Big Wild World is a travel blog that features travel stories from around the world. Follow to keep up with Norway travel stories.",
+      "followers": {
+        "facebook": 715,
+        "twitter": 6900,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4947814.jpg?t=1621404013"
+    },
+    {
+      "title": "Vers Libre",
+      "feed_url": "https://verslibreradio.tumblr.com/rss",
+      "website_url": "https://verslibreradio.tumblr.com/",
+      "description": "A new independent internet radio station based in Bergen, Norway",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5030038.jpg?t=1621404840"
+    },
+    {
+      "title": "Sunny Gandara",
+      "feed_url": "https://sunnygandara.com/feed/",
+      "website_url": "https://sunnygandara.com/",
+      "description": "Sunny is a food & wine consultant, plant based chef, writer, Norwegian food blogger, organic and vegan wine specialist & Animal lover. Follow to keep up with her house of food, wine, travel, inspiration around plant based eating and vegan lifestyle tips sprinkled with her Norwegian touches!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 15,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4947527.jpg?t=1621404477"
+    },
+    {
+      "title": "The Norwegian Hausfrau",
+      "feed_url": "https://www.thenorwegianhausfrau.com/feed",
+      "website_url": "https://thenorwegianhausfrau.com/",
+      "description": "The Norwegian Hausfrau is a food blog by Therese Moser-R\u00f8nning featuring food recipes.",
+      "followers": {
+        "facebook": 304,
+        "twitter": 161
+      },
+      "image_url": "https://i1.feedspot.com/4947538.jpg"
+    },
+    {
+      "title": "Sportquest Holidays \u00bb Norway Sea Fishing",
+      "feed_url": "https://www.sportquestholidays.com/destinations/norway-sea-fishing/",
+      "website_url": "https://www.sportquestholidays.com/destinations/norway-sea-fishing/",
+      "description": "At Sportquest Holidays we know how important finding the right fishing or shooting holiday can be, and as such we aim to provide you with the unique holiday experience that has been tailor made to fulfill your personal expectations. Subscribe us to discover your next great adventure in Norway with Sportquest Holidays.",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 1600,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4947861.jpg?t=1621403975"
+    }
+  ]
+}

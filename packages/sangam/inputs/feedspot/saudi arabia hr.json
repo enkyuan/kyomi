@@ -1,0 +1,45 @@
+{
+  "category": "Saudi Arabia HR",
+  "source_url": "https://rss.feedspot.com/saudi_arabia_hr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tharwah Blog",
+      "feed_url": "https://www.tharwah.net/blog-feed.xml",
+      "website_url": "https://www.tharwah.net/hr-blog",
+      "description": "Tharwah, a Saudi firm established in 2012, offers Human Capital Advisory Services to align organizational goals with human potential. Through their blog, curated insights from HR executives provide a diverse perspective for readers, fostering growth and innovation in the field.",
+      "followers": {
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/7280793.jpg?t=1711131378"
+    },
+    {
+      "title": "Partners & Beyond Blog",
+      "feed_url": "https://partnersandbeyond.com/feed/",
+      "website_url": "https://partnersandbeyond.com/blog/",
+      "description": "Partners and Beyond, a leading management consulting firm, offers comprehensive services in recruitment, HR, IT, and events management. Their certified team is committed to strategic partnerships, ensuring the success of corporations and employees. Stay informed with their insightful blog, guiding you towards success in the dynamic business landscape.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7280792.jpg?t=1711131347"
+    },
+    {
+      "title": "The ZenHR Blog",
+      "feed_url": "https://blog.zenhr.com/en/rss.xml",
+      "website_url": "https://blog.zenhr.com/en/",
+      "description": "ZenHR, a cloud-based HRMS tailored for MENA businesses, caters to SMEs and Enterprises with localized features. Their blog offers valuable insights into HR automation, software, and tools, empowering HR professionals with the latest trends and advice for effective HR management.",
+      "followers": {
+        "instagram": 22600
+      },
+      "image_url": "https://i1.feedspot.com/4983487.jpg?t=1611034550"
+    },
+    {
+      "title": "Idaratech HR Blog",
+      "feed_url": "https://www.idaratech.net/blog/feed/",
+      "website_url": "https://www.idaratech.net/blog/",
+      "description": "IdaraTech revolutionizes HR processes with an AI-powered all-in-one platform, simplifying tasks for employees and managers via ESS and MSS apps. By embracing cutting-edge technology, they foster positive organizational cultures across the Kingdom, pioneering a new era in HR management.",
+      "followers": {
+        "twitter": 66,
+        "instagram": 13700
+      },
+      "image_url": "https://i1.feedspot.com/7280794.jpg?t=1711131441"
+    }
+  ]
+}

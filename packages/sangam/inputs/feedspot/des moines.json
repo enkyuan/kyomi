@@ -1,0 +1,75 @@
+{
+  "category": "Des Moines",
+  "source_url": "https://rss.feedspot.com/des_moines_rss_feeds",
+  "feeds": [
+    {
+      "title": "dsm Magazine",
+      "feed_url": "https://dsmmagazine.com/feed/",
+      "website_url": "https://dsmmagazine.com/",
+      "description": "dsm magazine is an elegant and essential journal of local arts and culture. Each issue celebrates the breadth of culture in Central Iowa from fashion to philanthropy, from dining and d\u00e9cor to lifestyle and social issues. Their mission is not to flatter but to reflect Greater Des Moines at its best. dsm Magazine aims to inform, inspire, elevate, and celebrate Greater Des Moines, Iowa.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 12800,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4925509.jpg?t=1620907847"
+    },
+    {
+      "title": "Amelia Renee Photography | Des Moines Wedding Blog",
+      "feed_url": "https://www.ameliareneephoto.com/blog?format=RSS",
+      "website_url": "https://www.ameliareneephoto.com/blog/",
+      "description": "Amelia Renee is a professional photographer specializing in lifestyle newborn & family photos, senior photos, & wedding photography in Des Moines, Iowa. She specializes in adventurous, modern, joyful, and timeless photography. Amelia primarily photographs in central Iowa, including Ames, Clive, Johnston, Ankeny, Norwalk, Waukee & West Des Moines.",
+      "followers": {
+        "twitter": 249,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4925554.jpg?t=1620907870"
+    },
+    {
+      "title": "Des Moines Outdoor Fun Blog",
+      "feed_url": "https://outdoorfun.desmoinesparent.com/blog/feed/",
+      "website_url": "https://outdoorfun.desmoinesparent.com/blog/",
+      "description": "Get outside! See places to play, hike, walk, and explore - all in the greater Des Moines area.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 869
+      },
+      "image_url": "https://i1.feedspot.com/4925604.jpg?t=1620907875"
+    },
+    {
+      "title": "Culp, Doran & Genest | Des Moines Legal Issues Blog",
+      "feed_url": "https://cdsglaw.com/feed/",
+      "website_url": "https://cdsglaw.com/blog/",
+      "description": "Culp & Doran P.L.C. in Des Moines, Iowa, provides experienced and knowledgeable representation in family law, personal injury and criminal defense. This blog discusses legal issues related to child custody, criminal, divorce and family law in Des Moines.",
+      "followers": {
+        "facebook": 252,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/4925501.jpg?t=1620907879"
+    },
+    {
+      "title": "Catch Des Moines Blog",
+      "feed_url": "https://www.catchdesmoines.com/blog/rss/",
+      "website_url": "https://www.catchdesmoines.com/blog/",
+      "description": "Explore all there is to do and see in Greater Des Moines from arts and culture to a buzz-worthy restaurant scene. Let us help you plan a safe fun trip to Des Moines.",
+      "followers": {
+        "facebook": 61200,
+        "twitter": 55300,
+        "instagram": 44800
+      },
+      "image_url": "https://i1.feedspot.com/4925536.jpg?t=1629723786"
+    },
+    {
+      "title": "Des Moines Foodster",
+      "feed_url": "https://desmoinesfoodster.com/feed/",
+      "website_url": "https://desmoinesfoodster.com/",
+      "description": "Des Moines Foodster is a local food blog highlighting the food, restaurants, craft breweries, events that make Des Moines the greatest city in the world.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2900,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4925516.jpg?t=1620907867"
+    }
+  ]
+}

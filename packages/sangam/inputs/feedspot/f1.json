@@ -1,0 +1,711 @@
+{
+  "category": "F1",
+  "source_url": "https://rss.feedspot.com/formula_one_rss_feeds",
+  "feeds": [
+    {
+      "title": "Formula 1",
+      "feed_url": "https://www.formula1.com/en/latest/all.xml",
+      "website_url": "https://www.formula1.com/en/latest/",
+      "description": "Don't miss a Formula 1 moment with the latest news, videos, standings and results. Go behind the scenes and get analysis straight from the paddock.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5234751.jpg?t=1617109875"
+    },
+    {
+      "title": "RACER \u00bb Formula 1",
+      "feed_url": "https://racer.com/f1/feed/",
+      "website_url": "https://racer.com/f1/",
+      "description": "RACER's top team of international auto racing journalists cover IndyCar, Formula 1, NASCAR, sports car racing, and more. Subscribe to this feed for the latest Formula 1 news and analysis.",
+      "followers": {
+        "facebook": 375500,
+        "twitter": 65600,
+        "instagram": 54800
+      },
+      "image_url": "https://i1.feedspot.com/5262223.jpg?t=1616762170"
+    },
+    {
+      "title": "FIA",
+      "feed_url": "https://www.fia.com/rss/press-release",
+      "website_url": "https://www.fia.com/",
+      "description": "FIA is the governing body of motor sport and aims to safeguard the rights and promote the interests of motorists and motor sport. It works across three areas: Sport, Mobility and Campaigns.",
+      "followers": {
+        "facebook": 701600,
+        "twitter": 1200000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/2931627.jpg?t=1609306601"
+    },
+    {
+      "title": "JoeBlogsF1",
+      "feed_url": "https://joesaward.wordpress.com/feed/",
+      "website_url": "https://joesaward.wordpress.com/",
+      "description": "The real stories from inside the F1 paddock",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 41500
+      },
+      "image_url": "https://i1.feedspot.com/4424217.jpg?t=1609306674"
+    },
+    {
+      "title": "The New York Times \u00bb Formula One",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/organization/formula-one/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/organization/formula-one",
+      "description": "News about Formula One. Commentary and archival information about Formula One from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4481189.jpg?t=1609306619"
+    },
+    {
+      "title": "F1Technical.net",
+      "feed_url": "https://www.f1technical.net/rss/news.xml",
+      "website_url": "https://www.f1technical.net/",
+      "description": "Formula One website aiming to provide insightful and technical information on Formula One. Working as a distributed team to provide up-to-date news every single day.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 31300
+      },
+      "image_url": "https://i1.feedspot.com/118199.jpg?t=1609306656"
+    },
+    {
+      "title": "GPToday",
+      "feed_url": "http://feeds.feedburner.com/totalf1-recent",
+      "website_url": "https://www.gptoday.com/",
+      "description": "GPToday.com (formally TotalF1.com) has all the Formula 1 news from all over the web, 24 hours a day, 365 days a year and it is updated every 15 minutes. It is the biggest F1 news portal on the internet!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1482470.jpg?t=1653464994"
+    },
+    {
+      "title": "Racecar Engineering Blog",
+      "feed_url": "https://www.racecar-engineering.com/category/blogs/feed/",
+      "website_url": "https://www.racecar-engineering.com/category/blogs/",
+      "description": "The leading motorsport technology magazine | F1, Le Mans, Formula Student, Super GT",
+      "followers": {
+        "facebook": 25300,
+        "twitter": 34100
+      },
+      "image_url": "https://i1.feedspot.com/4481201.jpg?t=1653478674"
+    },
+    {
+      "title": "Mirror \u00bb Formula 1",
+      "feed_url": "https://www.mirror.co.uk/sport/formula-1/?service=rss",
+      "website_url": "https://www.mirror.co.uk/sport/formula-1/",
+      "description": "Get the latest stories from the formula 1 column of the Mirror, All the latest news, sport and celebrity gossip at Mirror.co.uk. Get all the big headlines, pictures, analysis, opinion and video on the stories that matter to you.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4480522.jpg?t=1609306638"
+    },
+    {
+      "title": "F1 Reader",
+      "feed_url": "http://www.f1reader.com/rss/f1r",
+      "website_url": "http://www.f1reader.com/",
+      "description": "F1 Reader - Formula 1 - Your daily F1 news fix - refresh every 5 minutes, teams, drivers, standings",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4481202.jpg"
+    },
+    {
+      "title": "F1Destinations.com",
+      "feed_url": "https://f1destinations.com/feed/",
+      "website_url": "https://f1destinations.com/",
+      "description": "Comprehensive travel guides covering the key Formula 1 races around the world, rankings, F1 travel and calendar news, blog, trip reports and more!",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4480520.jpg"
+    },
+    {
+      "title": "NewsOnF1",
+      "feed_url": "https://www.newsonf1.com/feed/",
+      "website_url": "https://www.newsonf1.com/",
+      "description": "The latest Formula 1 racing news, results, statistics, books, race information and analysis on the current and past Formula One racing seasons, the drivers, the cars and the teams. We also provide Formula 1 Merchandise, Tickets, Tours, Books, Videos and Games.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4481177.jpg?t=1609306746"
+    },
+    {
+      "title": "Motor1 \u00bb Motorsport",
+      "feed_url": "https://www.motor1.com/rss/category/motorsport/",
+      "website_url": "https://www.motor1.com/news/category/motorsport/",
+      "description": "Get all the news updates related to F1, Read in-depth reviews to see the pros and cons of any vehicle, view auto show photos and videos, preview concept car designs and new model launches.",
+      "followers": {
+        "facebook": 707100,
+        "twitter": 17900,
+        "instagram": 241400
+      },
+      "image_url": "https://i1.feedspot.com/4481965.jpg?t=1609306612"
+    },
+    {
+      "title": "Autosport \u00bb F1",
+      "feed_url": "https://www.autosport.com/rss/f1/news/",
+      "website_url": "https://www.autosport.com/f1/news/",
+      "description": "Get the latest Formula 1 news, analysis, results, and more from the team of international journalists. Autosport has been seeking out and providing all the big news and best stories from the world of motorsport for more than 70 years. Since 1950 it has covered the rich diversity of the sport, from the Formula 1 world championship to UK club racing, via the Le Mans 24 Hours, Indianapolis 500, World Rally Championship, and much more.",
+      "followers": {
+        "facebook": 750500,
+        "twitter": 660900,
+        "instagram": 651200
+      },
+      "image_url": "https://i1.feedspot.com/4480506.jpg?t=1647857578"
+    },
+    {
+      "title": "Sports Mole \u00bb Formula 1",
+      "feed_url": "https://www.sportsmole.co.uk/formula-1/rss.xml",
+      "website_url": "https://www.sportsmole.co.uk/formula-1/",
+      "description": "Articles from Sports Mole about Formula 1 - Sports Mole.",
+      "followers": {
+        "facebook": 202100,
+        "twitter": 39000,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4481208.jpg"
+    },
+    {
+      "title": "RacingNews365",
+      "feed_url": "https://racingnews365.com/feed/news.xml",
+      "website_url": "https://racingnews365.com/",
+      "description": "RacingNews365 provides you with the latest F1 news as well as news from other motorsport disciplines. Follow F1 live with breaking news, exclusive interviews and in-depth videos & analysis. We bring you news from all over the world, including the latest on drivers such as Lewis Hamilton, Max Verstappen, Fernando Alonso and Charles Leclerc.",
+      "followers": {
+        "facebook": 147600,
+        "twitter": 10700,
+        "instagram": 40700
+      },
+      "image_url": "https://i1.feedspot.com/5306293.jpg?t=1627547359"
+    },
+    {
+      "title": "F1-Fansite",
+      "feed_url": "https://www.f1-fansite.com/feed/",
+      "website_url": "https://www.f1-fansite.com/",
+      "description": "The goal for F1-Fansite.com is to be the best website about Formula 1 and give you as much information as possible about your favourite F1 driver, F1 team, grand prix and all other F1 items. Follow this site to check out our daily news, FREE pictures, videos, merchandise, tickets, statistics & results.",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 5000,
+        "instagram": 389
+      },
+      "image_url": "https://i1.feedspot.com/4955953.jpg?t=1609306604"
+    },
+    {
+      "title": "Grandprix.com",
+      "feed_url": "https://www.grandprix.com/rss.xml",
+      "website_url": "https://www.grandprix.com/",
+      "description": "Get the latest Formula 1 news, features, photos, results, history on drivers and teams in our encyclopedia - all on Grandprix.com",
+      "followers": {
+        "facebook": 399600,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/118202.jpg?t=1605953054"
+    },
+    {
+      "title": "TheJudge13",
+      "feed_url": "https://thejudge13.com/feed/",
+      "website_url": "https://thejudge13.com/",
+      "description": "TheJudge13 is a passionate investigation into all that is F1. Follow this blog for F1 Daily International News roundup, inside whispers and insight together with thoughts and opinion.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4480498.jpg?t=1609306766"
+    },
+    {
+      "title": "F1 Chronicle",
+      "feed_url": "https://f1chronicle.com/feed/",
+      "website_url": "https://f1chronicle.com/",
+      "description": "F1 Chronicle is an independent and high-quality Formula 1 resource for F1 content from around the world.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5186927.jpg?t=1598550405"
+    },
+    {
+      "title": "Kym Illman \u00bb F1",
+      "feed_url": "https://www.kymillman.com/feed",
+      "website_url": "https://www.kymillman.com/f1-diaries/",
+      "description": "Kym Illman has an insatiable appetite for capturing some of life's most extraordinary scenes. He's traversed some of the world's most breathtaking lands, capturing everything from candid wildlife, bustling cityscapes and pristine seaside vistas using a mix of textbook- and unconventional techniques. Kym doesn't sell his time, instead choosing to sell his art. The Formula 1 Blog gives stories behind events in the paddock, pits and on the track along with the best of Kym's images from each day.",
+      "followers": {
+        "facebook": 162900,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/4879830.jpg?t=1653466915"
+    },
+    {
+      "title": "OneStopStrategy F1",
+      "feed_url": "https://onestopstrategy.com/feed/",
+      "website_url": "https://onestopstrategy.com/",
+      "description": "OneStopStrategy.com - The most recent news from Formula 1. Everything you need to know about the queen of motorsport.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 230
+      },
+      "image_url": "https://i1.feedspot.com/1525646.jpg"
+    },
+    {
+      "title": "Soumil Arora \u00bb F1",
+      "feed_url": "https://www.soumilarora.com/category/sports/formula-1/feed/",
+      "website_url": "https://www.soumilarora.com/category/sports/formula-1/",
+      "description": "Formula One has found new owners in the form of Liberty Media. The American broadcasting giants bought F1 in the past week for a reported sum of 8 Million USD.",
+      "followers": {
+        "facebook": 17900,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4481565.jpg?t=1609306881"
+    },
+    {
+      "title": "F1 Analysis",
+      "feed_url": "https://f1-analysis.com/feed/",
+      "website_url": "https://f1-analysis.com/",
+      "description": "This blog is dedicated to providing a unique analysis of Formula One. This includes using a developed mathematical model, along with statistics from the sport. The author has a Master's degree in Physics and Astrophysics and has been an avid F1 fan for over 25 years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5421866.jpg?t=1657865619"
+    },
+    {
+      "title": "Talking about F1",
+      "feed_url": "http://feeds.feedburner.com/talkingaboutf1/YSJn",
+      "website_url": "http://www.talkingaboutf1.com/",
+      "description": "My name is Graham Keilloh and I am a massive F1 fan. On my blog I share my musings on the sport. I write researched and in-depth articles on F1. This includes race and qualifying reports, race previews, analysis of current F1 issues and historical pieces.",
+      "followers": {
+        "facebook": 12300
+      },
+      "image_url": "https://i1.feedspot.com/595919.jpg?t=1609306727"
+    },
+    {
+      "title": "Las Motorsport",
+      "feed_url": "https://las-motorsport.com/feed/gn",
+      "website_url": "https://las-motorsport.com/",
+      "description": "Sign Up for Our Newsletters Get the latest news to your inbox.",
+      "followers": {
+        "facebook": 10800
+      },
+      "image_url": "https://i1.feedspot.com/8643204.jpg?t=1753130684"
+    },
+    {
+      "title": "Autosport \u00bb Formula 1",
+      "feed_url": "https://www.autosport.com/rss/google/",
+      "website_url": "https://www.autosport.com/f1/",
+      "description": "The latest Formula 1 news, analysis, results and more from our team of international journalists",
+      "followers": {
+        "facebook": 750500,
+        "twitter": 660900,
+        "instagram": 651200
+      },
+      "image_url": "https://i1.feedspot.com/8643206.jpg?t=1753130687"
+    },
+    {
+      "title": "CMC Motorsports Blog",
+      "feed_url": "https://www.cmcmotorsports.com/blogs/the-drift.atom",
+      "website_url": "https://www.cmcmotorsports.com/blogs/the-drift/",
+      "description": "An F1 blog from CMC Motorsports so you can learn more about the sport, F1 cars explained, your favorite drivers, and more thrills from the track. Read on now.",
+      "followers": {
+        "facebook": 45500,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/8537872.jpg?t=1753089399"
+    },
+    {
+      "title": "EverythingF1",
+      "feed_url": "https://www.everythingf1.com/feed/",
+      "website_url": "https://www.everythingf1.com/formula-1-news/",
+      "description": "EverythingF1 provides all the latest news and updates across many different motorsport disciplines, from the latest in F1, F2 and F3 to W Series & IndyCar. We are a growing community of Formula 1 fans, found on social media and on our Formula 1 Podcast. We have character and aren't just another news source! We aim to have fun, spark debate and keep you informed of the latest goings on around the F1 paddock.",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5505584.jpg?t=1675857429"
+    },
+    {
+      "title": "Alvin's Formula One Blog",
+      "feed_url": "https://lewisf1.blogspot.com/feeds/posts/default",
+      "website_url": "https://lewisf1.blogspot.com/",
+      "description": "Alvin's F1 Blog: Lewis Hamilton Ferrari news, 2025 F1 updates, race insights & fan takes. Follow Lewis's full journey here!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8643205.jpg?t=1753130686"
+    },
+    {
+      "title": "Destination Formula 1 Blog",
+      "feed_url": "https://destinationformula1.com/feed/",
+      "website_url": "https://destinationformula1.com/blog/",
+      "description": "Stay updated with the latest Formula 1 news, race results, standings, and exclusives about all your favourite drivers and teams.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8643212.jpg?t=1753130709"
+    },
+    {
+      "title": "GRANDPRIX247",
+      "feed_url": "https://www.grandprix247.com/feed/",
+      "website_url": "https://www.grandprix247.com/",
+      "description": "In-Depth & Independent Formula 1 News All The Time",
+      "followers": {
+        "facebook": 56400,
+        "twitter": 846
+      },
+      "image_url": "https://i1.feedspot.com/8643210.jpg?t=1753130697"
+    },
+    {
+      "title": "The F1 Spectator Blog",
+      "feed_url": "https://www.thef1spectator.com/feed/",
+      "website_url": "https://www.thef1spectator.com/blog/",
+      "description": "The F1 Spectator Blog is a passionate fan\u2011led travel guide offering insider tips, ticket advice, packing checklists, and destination-specific info to help you plan and enjoy your next Formula\u202f1 race weekend anywhere in the world",
+      "followers": {
+        "facebook": 658,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/8643209.jpg?t=1753130693"
+    },
+    {
+      "title": "Adam Cooper F1",
+      "feed_url": "https://adamcooperf1.com/feed/",
+      "website_url": "https://adamcooperf1.com/",
+      "description": "Adam Cooper F1 is the personal blog of veteran British motor-racing journalist Adam Cooper, who has covered Formula\u202f1 full-time since 1994, attended every Grand Prix since then, and contributes expert analysis, history, and commentary on the sport.",
+      "followers": {
+        "twitter": 102700
+      },
+      "image_url": "https://i1.feedspot.com/1080479.jpg?t=1752758022"
+    },
+    {
+      "title": "Lights Out",
+      "feed_url": "https://www.lightsoutblog.com/feed/",
+      "website_url": "https://www.lightsoutblog.com/",
+      "description": "F1 Statistics, Facts and Trivia",
+      "followers": {
+        "facebook": 103,
+        "twitter": 19900,
+        "instagram": 157
+      },
+      "image_url": "https://i1.feedspot.com/8643203.jpg?t=1753130683"
+    },
+    {
+      "title": "Santander Formula 1",
+      "feed_url": "https://www.formulasantander.com/feed/",
+      "website_url": "https://www.formulasantander.com/",
+      "description": "Santander is a proud sponsor of Scuderia Ferrari. Follow us for a different way to live, understand and feel the F1. Learn more about F1 Racing.",
+      "followers": {
+        "facebook": 137400,
+        "twitter": 44100
+      },
+      "image_url": "https://i1.feedspot.com/5007697.jpg?t=1630332177"
+    },
+    {
+      "title": "Along the Racing Line \u00bb F1",
+      "feed_url": "https://www.alongtheracingline.com/category/f1/feed/",
+      "website_url": "https://www.alongtheracingline.com/category/f1/",
+      "description": "Along the Racing Line was founded in 2021 with the focus of talking about the important news the fans want to talk about. Motorsports is a changing industry and we want to keep our readers updated on every aspect, from the daily updates to the news not often talked about. Stay up to date with the latest news and updates from F1, formula series, drivers and more!",
+      "followers": {
+        "twitter": 624
+      },
+      "image_url": "https://i1.feedspot.com/5505586.jpg?t=1675856991"
+    },
+    {
+      "title": "Speedcafe.com \u00bb F1",
+      "feed_url": "https://speedcafe.com/f1/feed/",
+      "website_url": "https://speedcafe.com/f1/",
+      "description": "Speedcafe has been established to provide a daily motorsport news service to the industry and fans in Australia and internationally. Stay up to date with the latest news on Supercars, Formula 1, Moto GP, NASCAR and motorsport in Australia and around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8643211.jpg"
+    },
+    {
+      "title": "MotorRacing",
+      "feed_url": "https://motorracing.com/feed/",
+      "website_url": "https://motorracing.com/",
+      "description": "Your source for global motorsport news, results, stats, fan videos, and betting insights\u2014covering NASCAR, F1, IndyCar, and more!",
+      "followers": {
+        "facebook": 477,
+        "instagram": 58
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/9228011/page/8672616/logo_1757974328.png"
+    },
+    {
+      "title": "The Guardian \u00bb Formula One",
+      "feed_url": "https://www.theguardian.com/sport/formulaone/rss",
+      "website_url": "https://www.theguardian.com/sport/formulaone",
+      "description": "All articles about Formula One from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4480497.jpg?t=1609306622"
+    },
+    {
+      "title": "WTF1",
+      "feed_url": "https://www.wtf1.com/feed/",
+      "website_url": "https://www.wtf1.com/",
+      "description": "The Alternative F1 Blog. Find Viral videos, memes, quizzes, lists, artwork, video games and more from the world of motorsport.",
+      "followers": {
+        "facebook": 655200,
+        "twitter": 1100000,
+        "instagram": 948600
+      },
+      "image_url": "https://i1.feedspot.com/1265917.jpg?t=1609306701"
+    },
+    {
+      "title": "Motorsport Broadcasting",
+      "feed_url": "https://motorsportbroadcasting.com/feed/",
+      "website_url": "https://motorsportbroadcasting.com/",
+      "description": "The F1 Broadcasting Blog The inside line on motor sport and broadcasting.",
+      "followers": {
+        "facebook": 987,
+        "twitter": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4480503.jpg?t=1609306722"
+    },
+    {
+      "title": "The Independent \u00bb Formula 1",
+      "feed_url": "https://www.independent.co.uk/sport/motor-racing/formula1/rss",
+      "website_url": "https://www.independent.co.uk/sport/motor-racing/formula1",
+      "description": "The latest breaking news, comment and features from The Independent. It is world's most free-thinking newspaper.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/4481137.jpg?t=1609306630"
+    },
+    {
+      "title": "The Checkered Flag \u00bb Formula 1",
+      "feed_url": "https://www.thecheckeredflag.co.uk/open-wheel/formula-1/feed/",
+      "website_url": "https://www.thecheckeredflag.co.uk/open-wheel/formula-1/",
+      "description": "Dedicated to bringing you the latest news from the world of motor sport including F1, WEC, WRC, Rallycross, BTCC, Le Mans, TUSCC, MotoGP and more",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 19200,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4481981.jpg?t=1653466802"
+    },
+    {
+      "title": "Kunal's F1 Blog",
+      "feed_url": "https://www.kunalsf1blog.com/feed/",
+      "website_url": "https://www.kunalsf1blog.com/",
+      "description": "All the latest news from kunal shah's formula 1 blog.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4480492.jpg?t=1605953232"
+    },
+    {
+      "title": "Forever F1",
+      "feed_url": "http://foreverf1.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://foreverf1.blogspot.com/",
+      "description": "Here we aim to take a brand new perspective on Formula One Racing and provide it to you, the viewer, in the most interesting way possible.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5208701.jpg?t=1603272509"
+    },
+    {
+      "title": "The F1 Stat Blog",
+      "feed_url": "https://f1statblog.co.uk/feed/",
+      "website_url": "https://f1statblog.co.uk/",
+      "description": "Find News, features and commentary from F1 stats, with coverage of F1, IndyCar, Pre race stats and formula E racing.",
+      "followers": {
+        "facebook": 100,
+        "twitter": 7000,
+        "instagram": 122
+      },
+      "image_url": "https://i1.feedspot.com/2197423.jpg?t=1609306740"
+    },
+    {
+      "title": "SomersF1",
+      "feed_url": "http://www.somersf1.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "http://www.somersf1.co.uk/",
+      "description": "Matt Somerfield aka SomersF1 explains the Technical aspects of Formula One in a way that the novice or casual fan may be able to engage with.",
+      "followers": {
+        "facebook": 395,
+        "twitter": 29500
+      },
+      "image_url": "https://i1.feedspot.com/4480504.jpg?t=1609306802"
+    },
+    {
+      "title": "Stefan Johansson H3 Blog",
+      "feed_url": "https://stefanjohansson.art/blogs/news.atom",
+      "website_url": "https://stefanjohansson.art/blogs/news",
+      "description": "F1 news from Stefan Johansson. He is a former F1 driver, long time painting artist and watchmaker. He spent over 30 years racing at the highest levels of Motorsport where he continuously tried to perfect the craft of driving a race car at the limits of it's performance.",
+      "followers": {
+        "facebook": 37800,
+        "twitter": 10400,
+        "instagram": 36400
+      },
+      "image_url": "https://i1.feedspot.com/4481966.jpg?t=1609306863"
+    },
+    {
+      "title": "Jack Leslie F1",
+      "feed_url": "http://www.jackleslief1.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "http://www.jackleslief1.co.uk/",
+      "description": "News, reports, features, opinion and general motorsport and F1-related adventures on Jack Leslie's F1 Blog.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4480510.jpg?t=1609306878"
+    },
+    {
+      "title": "F1virtual",
+      "feed_url": "http://f1virtual.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://f1virtual.blogspot.com/",
+      "description": "F1virtual is a team dedicated to GP4 track editing. Founded in november 2007.",
+      "followers": {
+        "facebook": 275,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4481545.jpg?t=1653474549"
+    },
+    {
+      "title": "AllF1.in",
+      "feed_url": "https://allf1.in/feed/",
+      "website_url": "https://allf1.in/",
+      "description": "F1 analyzed, rumored, and explained.",
+      "followers": {
+        "facebook": 2700,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5422582.jpg?t=1658147575"
+    },
+    {
+      "title": "Peterwindsor.com",
+      "feed_url": "https://peterwindsor.com/feed/",
+      "website_url": "https://peterwindsor.com/",
+      "description": "Award-winning F1 Journalist, Broadcaster and Manager. Host of The Racer's Edge with F1 Racing. Championship-winning Race and Test Team Manager, Williams, 1991-92; Race-winning General Manager, Ferrari, 1989-90. Snr Columnist and Feature writer, F1 Racing magazine. Director, Clarksport Productions.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 82400
+      },
+      "image_url": "https://i1.feedspot.com/4481568.jpg?t=1609306795"
+    },
+    {
+      "title": "The F1 News",
+      "feed_url": "https://thef1news.com/feed/",
+      "website_url": "https://thef1news.com/",
+      "description": "Formula 1 news, rankings, photos and more on The F1 News.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4480507.jpg?t=1653478791"
+    },
+    {
+      "title": "Formula Fanatics Blog",
+      "feed_url": "https://formulafanatics.com/blogs/blog.atom",
+      "website_url": "https://formulafanatics.com/blogs/blog/",
+      "description": "Fuel your passion for motorsport racing with premium racing-inspired apparel and accessories. Designed by fans, for fans\u2014shop now and bring the thrill of racing and speed to your everyday style!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8643208.jpg?t=1753130691"
+    },
+    {
+      "title": "RaceFans",
+      "feed_url": "https://www.racefans.net/feed/",
+      "website_url": "https://www.bbc.com/sport/formula1",
+      "description": "F1 news and more independent motorsport new and feature coverage from RaceFans including IndyCar, WEC, Formula E, and Formula Two.",
+      "followers": {
+        "facebook": 75700,
+        "twitter": 112500,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/74513.jpg?t=1609306608"
+    },
+    {
+      "title": "BBC Sport \u00bb Formula 1",
+      "feed_url": "https://www.bbc.com/sport/formula1/rss.xml",
+      "website_url": "https://www.bbc.com/sport/formula1",
+      "description": "The latest stories from the Formula 1 section of the BBC Sport web site.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 42100000
+      },
+      "image_url": "https://i1.feedspot.com/4432115.jpg?t=1609306615"
+    },
+    {
+      "title": "Crash \u00bb F1",
+      "feed_url": "https://www.crash.net/crash_f1.xml",
+      "website_url": "https://www.crash.net/f1",
+      "description": "We give you the latest news, results, qualifying information, photos, videos and more across F1, MotoGP, WSBK, BSB, Road Racing, IndyCar and more!",
+      "followers": {
+        "facebook": 93200,
+        "twitter": 137300
+      },
+      "image_url": "https://i1.feedspot.com/954620.jpg?t=1609306648"
+    },
+    {
+      "title": "Beyond the Flag \u00bb Formula One",
+      "feed_url": "https://beyondtheflag.com/formula-one/feed/",
+      "website_url": "https://beyondtheflag.com/formula-one/",
+      "description": "The ultimate home for NASCAR news, rumors, updates, injuries, commentary, and analysis. We cover NASCAR, Indy Car, Formula One, and more!",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 3800,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4481511.jpg?t=1609306696"
+    },
+    {
+      "title": "F1 News",
+      "feed_url": "https://en.f1i.com/news/feed",
+      "website_url": "https://www.gpblog.com/en",
+      "description": "Keep informed with all the latest Formula 1 news, reports and results from F1i.com. Also bringing you features, historical articles, classic content, videos and pictures.",
+      "followers": {
+        "facebook": 63300,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4481173.jpg?t=1653459100"
+    },
+    {
+      "title": "GPblog.com",
+      "feed_url": "https://www.gpblog.com/en/rss",
+      "website_url": "https://www.gpblog.com/en",
+      "description": "GPblog.com is the fastest and most complete Formula 1 news website. With a great passion for Formula 1 and motorsport, it is our goal to provide our visitors with the latest news, the hottest rumors, and the best video's as quickly as possible. In addition, as an independent news website, we are not afraid to give our opinion on the latest rumors and developments.",
+      "followers": {
+        "facebook": 47800,
+        "twitter": 2400,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/5261591.jpg?t=1616656844"
+    },
+    {
+      "title": "PlanetF1 News",
+      "feed_url": "https://www.planetf1.com/news/feed",
+      "website_url": "https://www.planetf1.com/news",
+      "description": "PlanetF1 is the place to go for F1 news, from race weekends to contract talks, new Grands Prix to schedule changes.",
+      "followers": {
+        "twitter": 65200,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/5306292.jpg?t=1627547841"
+    },
+    {
+      "title": "News.com.au \u00bb F1",
+      "feed_url": "https://www.news.com.au/sport/motorsport/formula-one/feed",
+      "website_url": "https://www.news.com.au/sport/motorsport/formula-one",
+      "description": "Read the latest Formula 1 News and F1 Grand Prix Race Results including F1 News and Driver information. Read more Formula 1 News and Results at News.com.au. News headlines from Australia and the world. The latest national, world, business, sport, entertainment and technology news from News Limited news papers.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 711600,
+        "instagram": 320200
+      },
+      "image_url": "https://i1.feedspot.com/4481144.jpg"
+    },
+    {
+      "title": "theWPTformula",
+      "feed_url": "https://thewptformula.com/feed/",
+      "website_url": "https://sidepodcast.com/blog",
+      "description": "Motorsport and technology analysis through the use of illustrations",
+      "followers": {
+        "facebook": 277,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4480513.jpg?t=1609306799"
+    },
+    {
+      "title": "Sidepodcast Blog",
+      "feed_url": "https://feeds.sidepodcast.com/latest",
+      "website_url": "https://sidepodcast.com/blog",
+      "description": "Comprehensive F1 coverage, quality Formula 1 video and audio, driver rankings, race previews, live coverage and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4481183.jpg?t=1609306947"
+    }
+  ]
+}

@@ -1,0 +1,811 @@
+{
+  "category": "Pop Culture",
+  "source_url": "https://rss.feedspot.com/pop_culture_rss_feeds",
+  "feeds": [
+    {
+      "title": "PopMatters",
+      "feed_url": "https://www.popmatters.com/feed",
+      "website_url": "https://www.popmatters.com/",
+      "description": "PopMatters is an international magazine of cultural criticism and analysis, which has been independently owned and operated since its inception. Our scope is broadly cast on all things pop culture and we are the largest site that bridges academic and popular writing in the world.",
+      "followers": {
+        "facebook": 37800,
+        "twitter": 30600,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/4856025.jpg?t=1613479533"
+    },
+    {
+      "title": "The Mary Sue",
+      "feed_url": "https://www.themarysue.com/feed/",
+      "website_url": "https://www.themarysue.com/",
+      "description": "The Mary Sue is the premier destination for entertainment geeks, female or otherwise. Coverage includes movies, comics, tv/movie fandom, and other cool stuff.",
+      "followers": {
+        "facebook": 135000,
+        "twitter": 68800,
+        "instagram": 16200
+      },
+      "image_url": "https://i1.feedspot.com/4902961.jpg?t=1613479619"
+    },
+    {
+      "title": "Christ and Pop Culture \u00bb Music",
+      "feed_url": "https://christandpopculture.com/category/music/feed/",
+      "website_url": "https://christandpopculture.com/category/music/",
+      "description": "Christ and Pop Culture seeks to acknowledge the signs by discussing and demonstrating exactly how we ought to think about and interact with pop culture.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4748462.jpg?t=1607500712"
+    },
+    {
+      "title": "But Why Tho?",
+      "feed_url": "https://butwhytho.net/feed/",
+      "website_url": "https://butwhytho.net/",
+      "description": "But Why Tho? is a website dedicated to covering pop culture. We cover news, reviews, and interviews across gaming, comics, film, TV, and more.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 6500,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5470374.jpg?t=1669102125"
+    },
+    {
+      "title": "NPR \u00bb Culture",
+      "feed_url": "https://feeds.npr.org/1008/rss.xml",
+      "website_url": "https://www.npr.org/sections/culture/",
+      "description": "Art and entertainment commentary plus interviews, book reviews, movie reviews, music reviews, comedy, and visual art. Follow this feed and stay updated on trends in music, painting, art, architecture, photography, and design.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "Pop Culture Beast",
+      "feed_url": "http://www.popculturebeast.com/feed/",
+      "website_url": "http://www.popculturebeast.com/",
+      "description": "Pop Culture Beast is your source for news, reviews, opinion, and commentary from a variety of perspectives from across the country. Formed in 2007 as a place for founder Garon Cockrell to write about his love of entertainment, Pop Culture Beast has come to be known as an unbiased and independent view of popular culture from movies to music to games to books and everything in between.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5521579.jpg?t=1678955334"
+    },
+    {
+      "title": "The Honey POP",
+      "feed_url": "https://thehoneypop.com/feed/",
+      "website_url": "https://thehoneypop.com/",
+      "description": "The Honey Pop, LLC is a pop culture magazine geared towards finding the sweetest news and sharing it with the world. Trust us, Honey. You don't want to miss the drip.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 12900,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5390151.jpg?t=1649851037"
+    },
+    {
+      "title": "Epic Heroes",
+      "feed_url": "https://www.epicheroes.com/feed/",
+      "website_url": "https://www.epicheroes.com/",
+      "description": "Keep up with articles from Epic Heroes .",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 10900,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4509490.jpg?t=1613479578"
+    },
+    {
+      "title": "PopCultHQ.com",
+      "feed_url": "https://popculthq.com/feed/",
+      "website_url": "https://popculthq.com/",
+      "description": "Your Pop Culture Headquarters and all things Comics, Cosplay, and Conventions!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1800,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5096011.jpg?t=1613479566"
+    },
+    {
+      "title": "Culture Fix",
+      "feed_url": "https://www.culturefix.co.uk/?feed=rss2",
+      "website_url": "https://www.culturefix.co.uk/",
+      "description": "Culture Fix is a freelance, UK-based popular culture site. Our passions are film, music, and theatre. Established in 2010, we aim to give a fun and balanced look at some of the most talked about cinematic, independent and home video releases.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5172365.jpg?t=1613479582"
+    },
+    {
+      "title": "The Pop Blog",
+      "feed_url": "https://thepopblogph.com/feed/",
+      "website_url": "https://thepopblogph.com/category/pop-culture-news/",
+      "description": "Featuring Art and Culture that define the Filipino taste.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 232,
+        "instagram": 877
+      },
+      "image_url": "https://i1.feedspot.com/5121670.jpg?t=1597727872"
+    },
+    {
+      "title": "Zombies In My Blog",
+      "feed_url": "https://zombiesinmyblog.com/feed/",
+      "website_url": "https://zombiesinmyblog.com/",
+      "description": "Zombies In My Blog is an online blog that covers everything in pop culture, Geek Culture and horror. We're all about Zombies and Other Monsters.",
+      "followers": {
+        "facebook": 504,
+        "twitter": 965
+      },
+      "image_url": "https://i1.feedspot.com/4688908.jpg?t=1613479585"
+    },
+    {
+      "title": "Pop Culture and Theology",
+      "feed_url": "https://popularcultureandtheology.com/feed/",
+      "website_url": "https://popularcultureandtheology.com/",
+      "description": "The purpose of the blog is to use pop culture (TV, movies, music, etc.) to teach theology (and related fields like Religious Studies and Philosophy of Religion) and to understand different theologians and religious texts.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4902912.jpg?t=1613479751"
+    },
+    {
+      "title": "Culled Culture",
+      "feed_url": "https://www.culledculture.com/feed/",
+      "website_url": "https://www.culledculture.com/",
+      "description": "Culled Culture is devoted to bringing you a unique perspective on all things pop culture related. Whether it's film, literature, art, music or unlikely comparisons, no cultural stone remains unturned.",
+      "followers": {
+        "facebook": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5120534.jpg?t=1650535122"
+    },
+    {
+      "title": "Writer of Pop",
+      "feed_url": "https://writerofpop.com/feed/",
+      "website_url": "https://writerofpop.com/",
+      "description": "Cool and refreshing news about pop culture, movies, TV, and music from a Christian point of view.",
+      "followers": {
+        "facebook": 428,
+        "twitter": 769,
+        "instagram": 237
+      },
+      "image_url": "https://i1.feedspot.com/5097757.jpg?t=1613479760"
+    },
+    {
+      "title": "Hip Hop 411",
+      "feed_url": "https://hiphop411.tv/feed/",
+      "website_url": "https://hiphop411.tv/",
+      "description": "Hip-Hop 411 is a full service media production agency that is focused on content creation for social media, events, marketing, web and television based in Johannesburg.",
+      "followers": {
+        "twitter": 2400,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5174479.jpg?t=1601042429"
+    },
+    {
+      "title": "House Inhabit",
+      "feed_url": "https://jessicareedkraus.substack.com/feed",
+      "website_url": "https://jessicareedkraus.substack.com/",
+      "description": "Where pop culture deep dives mingle with quality conspiracy theories, lifestyle highlights, and trending water cooler gossip",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Ffe356484-b98d-4e67-b835-b8186dc8096e_500x500.png"
+    },
+    {
+      "title": "Hung Up",
+      "feed_url": "https://hunterharris.substack.com/feed",
+      "website_url": "https://hunterharris.substack.com/",
+      "description": "A newsletter about movies, tv, the celebrity industrial complex, and personal pop culture obsessions. Delivered twice a week to your inbox, written by Hunter Harris.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F99eb9216-03fd-48f2-b29b-5b21d5e58d93_1280x1280.png"
+    },
+    {
+      "title": "Mia Freedman\u00e2\u0080\u0099s Babble",
+      "feed_url": "https://miafreedman.substack.com/feed",
+      "website_url": "https://miafreedman.substack.com/",
+      "description": "The zeitgeist but make it a newsletter.Pop culture. Thoughts. Feelings. Outfits.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e48df04-e152-4ca3-9429-20c7f7ee6575_500x500.png"
+    },
+    {
+      "title": "SHUT UP EVAN: THE NEWSLETTER",
+      "feed_url": "https://evanrosskatz.substack.com/feed",
+      "website_url": "https://evanrosskatz.substack.com/",
+      "description": "An ad-free space where we can cleanly unpack the messiness of pop culture - from cultural commentator, recovering theater kid and fashion columnist Evan Ross Katz.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7844152.jpg"
+    },
+    {
+      "title": "Drinks With Broads",
+      "feed_url": "https://drinkswithbroads.substack.com/feed",
+      "website_url": "https://drinkswithbroads.substack.com/",
+      "description": "A Pop Culture Cocktail Served by the Fug Girls",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F57509307-7f5c-47fa-b7b0-ca7293ef4708_500x500.png"
+    },
+    {
+      "title": "The Squawk",
+      "feed_url": "https://thesquawk.substack.com/feed",
+      "website_url": "https://thesquawk.substack.com/",
+      "description": "A LaineyGossip community for discerning gossips to squawk together and discuss all things pop culture.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8df4dc82-8a4d-421a-9cb3-b03dbac85743_1280x1280.png"
+    },
+    {
+      "title": "Culture House Newsletter",
+      "feed_url": "https://culturehouse.substack.com/feed",
+      "website_url": "https://culturehouse.substack.com/",
+      "description": "A weekly newsletter from Culture House Media, a women owned film, TV and immersive experiences company making narrative work at the intersection of pop culture and politics.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe638396f-57c0-46aa-8685-fa68661bea0d_835x834.png"
+    },
+    {
+      "title": "The Culture Study Podcast",
+      "feed_url": "https://culturestudypod.substack.com/feed",
+      "website_url": "https://culturestudypod.substack.com/",
+      "description": "A podcast about the culture that surrounds you \u00e2\u0080\u0094 with Anne Helen Petersen and a bunch of very smart co-hosts",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff0481f45-caa1-4244-943c-e33d70acaf94_1280x1280.png"
+    },
+    {
+      "title": "Over the Influence",
+      "feed_url": "https://jopiazza.substack.com/feed",
+      "website_url": "https://jopiazza.substack.com/",
+      "description": "A hilarious and often factual romp through the world of social media, old-school media, publishing and whatever else catches our fancy.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fea571851-ee59-4d0d-b897-d669356ae9ae_1280x1280.png"
+    },
+    {
+      "title": "The Weekly Work",
+      "feed_url": "https://culturework.substack.com/feed",
+      "website_url": "https://culturework.substack.com/",
+      "description": "A weekly drop of mostly unfiltered, always un-controversial media, pop culture, & political commentary (\u00e2\u0080\u00a6and beauty, and travel, and life thoughts) from the perspective of a definitely overqualified and slightly jaded industry girl.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe09b86d9-5b4a-4c71-8cb7-a5f534668944_924x924.png"
+    },
+    {
+      "title": "Bad Brain",
+      "feed_url": "https://ashleyreese.substack.com/feed",
+      "website_url": "https://ashleyreese.substack.com/",
+      "description": "A newsletter about life, death, pop culture, and the internet.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff3ecb8fa-72b2-488c-af95-98612141e7af_256x256.png"
+    },
+    {
+      "title": "twobossydames",
+      "feed_url": "https://twobossydames.substack.com/feed",
+      "website_url": "https://twobossydames.substack.com/",
+      "description": "In which Margaret & Sophie & Karen boss the Internet with impeccable discernment & insouciant charm. Cultural recommendations & commentary every Friday evening.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8b6b1764-fa7a-4a53-9d6a-9362048644ce_256x256"
+    },
+    {
+      "title": "Coco Mocoe",
+      "feed_url": "https://cocomocoe.substack.com/feed",
+      "website_url": "https://cocomocoe.substack.com/",
+      "description": "The place to talk trends, marketing and pop culture!",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6b7b7903-2c04-4e89-ab63-c8da2621afc6_714x714.png"
+    },
+    {
+      "title": "deep trouble",
+      "feed_url": "https://www.deeptrouble.net/feed",
+      "website_url": "https://deeptrouble.substack.com/",
+      "description": "the trouble with culture, art, media and me today",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7943937b-b89d-4a97-a488-5beecafde350_500x500.png"
+    },
+    {
+      "title": "Cattywampus",
+      "feed_url": "https://theheatherhogan.substack.com/feed",
+      "website_url": "https://theheatherhogan.substack.com/",
+      "description": "queer life, pop culture, politics, nerd stuff, cats!",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1a104147-46bd-439e-9172-8b09b5e079e7_1080x1080.png"
+    },
+    {
+      "title": "pavlina_speaks",
+      "feed_url": "https://pavlinaspeaks.substack.com/feed",
+      "website_url": "https://pavlinaspeaks.substack.com/",
+      "description": "trendy a internety",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F206a4672-0f58-4353-90a7-777739b69e39_853x853.png"
+    },
+    {
+      "title": "HeinOnline Blog \u00bb Pop Culture",
+      "feed_url": "https://home.heinonline.org/blog/category/pop-culture/feed/",
+      "website_url": "https://home.heinonline.org/blog/category/pop-culture/",
+      "description": "Music, film, tv, social media, holidays, sports, hot topic news that doesn't fall into another research topic.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 6600,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/7902393.jpg?t=1745407149"
+    },
+    {
+      "title": "NME Magazine",
+      "feed_url": "https://www.nme.com/feed",
+      "website_url": "https://www.nme.com/",
+      "description": "The world's defining voice in music and pop culture: breaking what's new and what's next since 1952.",
+      "followers": {
+        "facebook": 956400,
+        "twitter": 859700,
+        "instagram": 571400
+      },
+      "image_url": "https://i1.feedspot.com/29315.jpg?t=1745844066"
+    },
+    {
+      "title": "Pop Junctions",
+      "feed_url": "http://henryjenkins.org/blog?format=rss",
+      "website_url": "https://henryjenkins.org/",
+      "description": "Pop Junctions has evolved from Henry Jenkins' Confessions of an Aca-Fan into a platform of diverse content generated by a collective editorial board focused on entertainment, pop culture, activism, media literacy, fandom and more.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 37000
+      },
+      "image_url": "https://i1.feedspot.com/5483767.jpg?t=1672059130"
+    },
+    {
+      "title": "Entertainment Weekly",
+      "feed_url": "https://feeds-api.dotdashmeredith.com/v1/rss/google/06e092d0-4dff-468a-93db-8d6a995730b4",
+      "website_url": "https://ew.com/",
+      "description": "For more than three decades, Entertainment Weekly has run the pop culture alphabet from Anaconda to Zendaya.",
+      "followers": {
+        "facebook": 4900000,
+        "twitter": 6300000,
+        "instagram": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/7892785.jpg?t=1750244776"
+    },
+    {
+      "title": "PopCult Blog",
+      "feed_url": "https://popcultblog.com/feed",
+      "website_url": "https://popcultblog.com/",
+      "description": "Rudy Panucci On Pop Culture",
+      "followers": {},
+      "image_url": "https://graph.facebook.com/events/24709987875316654/picture?type=large&access_token=209523309173150%7C9f53f68c8f98385e734157c82f6fad77"
+    },
+    {
+      "title": "Great Pop Culture Debate Blog",
+      "feed_url": "https://www.greatpopculturedebate.com/blog?format=rss",
+      "website_url": "https://www.greatpopculturedebate.com/blog/",
+      "description": "The Great Pop Culture Debate is a podcast where a panel of so-called experts aim to name the best things in music, movies, tv.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539591.jpg?t=1753095055"
+    },
+    {
+      "title": "A Collection of Unmitigated Pedantry Blog",
+      "feed_url": "https://acoup.blog/feed/",
+      "website_url": "https://acoup.blog/",
+      "description": "Take a look at history and popular culture in A Collection of Unmitigated Pedantry blog by Dr. Bret C. Devereaux, an ancient historian specializing in the Roman economy and military.",
+      "followers": {
+        "twitter": 33500
+      },
+      "image_url": "https://i1.feedspot.com/5380634.jpg?t=1750243417"
+    },
+    {
+      "title": "Entertainment Junkie Blog \u00bb Pop Culture",
+      "feed_url": "https://ejunkieblog.com/category/pop-culture/feed/",
+      "website_url": "https://ejunkieblog.com/category/pop-culture/",
+      "description": "Blogs about miscellaneous subjects connected to the entertainment industry.",
+      "followers": {
+        "twitter": 6400,
+        "instagram": 262
+      },
+      "image_url": "https://i1.feedspot.com/8539577.jpg?t=1753094993"
+    },
+    {
+      "title": "Popdose",
+      "feed_url": "https://popdose.com/feed/",
+      "website_url": "https://popdose.com/",
+      "description": "your daily dose of pop culture",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539593.jpg?t=1753095061"
+    },
+    {
+      "title": "Pop Culture Weekly Blog",
+      "feed_url": "https://podcast.popcultureweekly.com/blog/feed/",
+      "website_url": "https://podcast.popcultureweekly.com/blog/",
+      "description": "This is the Pop Culture Weekly blog. So far there are 27 blog posts published.",
+      "followers": {
+        "facebook": 550,
+        "twitter": 644
+      },
+      "image_url": "https://i1.feedspot.com/8539589.jpg?t=1753095041"
+    },
+    {
+      "title": "Pop Culture Hall Blog",
+      "feed_url": "https://www.popculturehall.com/blog/feed/",
+      "website_url": "https://www.popculturehall.com/blog/",
+      "description": "Pop Culture Hall Blog is a growing awards event to give the many dedicated fan communities the celebration they deserve.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 65
+      },
+      "image_url": "https://i1.feedspot.com/8539592.jpg?t=1753095059"
+    },
+    {
+      "title": "Pussy Pop Culture Blog",
+      "feed_url": "https://www.pussypopculture.com/blog-feed.xml",
+      "website_url": "https://www.pussypopculture.com/",
+      "description": "Pussy Pop Culture is dedicated to bringing you all things pop culture from unapologetic reviews and raving rants to editorial pieces and well-researched lists. We also provide freelance writing services for websites and blogs in need of original, high-quality content.",
+      "followers": {
+        "twitter": 31,
+        "instagram": 86
+      },
+      "image_url": "https://i1.feedspot.com/8539595.jpg?t=1753095074"
+    },
+    {
+      "title": "Andphilosophy.com",
+      "feed_url": "https://andphilosophy.com/feed/",
+      "website_url": "https://andphilosophy.com/",
+      "description": "The Blackwell Philosophy and Pop Culture Series",
+      "followers": {
+        "facebook": 995
+      },
+      "image_url": "https://i1.feedspot.com/8539586.jpg?t=1753095024"
+    },
+    {
+      "title": "What's On Tonight & Pop Culture",
+      "feed_url": "https://thepopculturists.blogspot.com/feeds/posts/default",
+      "website_url": "https://thepopculturists.blogspot.com/",
+      "description": "You Got A 'Community' Notification For This?",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539581.jpg?t=1753095008"
+    },
+    {
+      "title": "The Beat",
+      "feed_url": "https://www.comicsbeat.com/feed/",
+      "website_url": "https://www.comicsbeat.com/",
+      "description": "The Comics Beat is the premier comics news blog. Started by esteemed editor and reporter Heidi MacDonald, The Beat keeps you in the loop on everything comics related from books to television and film. Our reporters conduct insightful interviews, review comics and movies, and write longform op-eds that weigh in on the issues of the day.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 16700,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/9390.jpg?t=1615895034"
+    },
+    {
+      "title": "Pop Culture Uncovered",
+      "feed_url": "https://popcultureuncovered.com/feed/",
+      "website_url": "https://popcultureuncovered.com/",
+      "description": "The Place For All Things Geeky",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539585.jpg?t=1753095019"
+    },
+    {
+      "title": "The Pop Culture Retrospective Blog",
+      "feed_url": "https://feeds.buzzsprout.com/1114817.rss",
+      "website_url": "https://www.popcultureretrospective.com/blog/",
+      "description": "Join me as we board a time machine and travel back to the retro pop culture of the 1980s, 1990s and early 2000s! On each episode, I take a deep dive into the backstory behind topics such as music, tv shows, movies, technology, regrettable fashions, and events from this unique period of time. This show is inspired by and dedicated to the memory of my older sister, Rebecca who I lost tragically in 2019. I want to learn the back story, the story behind the story, the hidden secrets, and fun facts of all of the things that she was into. This show is my love letter to my big sister...",
+      "followers": {
+        "twitter": 856,
+        "instagram": 528
+      },
+      "image_url": "https://i1.feedspot.com/5297381.jpg?t=1747830043"
+    },
+    {
+      "title": "WWD \u00bb Pop Culture",
+      "feed_url": "https://wwd.com/pop-culture/feed/",
+      "website_url": "https://wwd.com/pop-culture/",
+      "description": "{'txt':'','bg':''}",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 2700000,
+        "instagram": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/8539580.jpg?t=1753095005"
+    },
+    {
+      "title": "Pop Culture Maniacs",
+      "feed_url": "https://popculturemaniacs.com/feed/",
+      "website_url": "https://popculturemaniacs.com/",
+      "description": "Your home for entertainment",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539594.jpg?t=1753095063"
+    },
+    {
+      "title": "Pop Culture Press \u00bb Pop Culture News",
+      "feed_url": "https://popculturepress.org/category/pop-culture-news/feed/",
+      "website_url": "https://popculturepress.org/category/pop-culture-news/",
+      "description": "Pop Culture Press provides latest updated about Pop Culture News.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539582.jpg?t=1753095011"
+    },
+    {
+      "title": "Bleeding Cool News \u00bb Pop Culture",
+      "feed_url": "https://bleedingcool.com/pop-culture/feed/",
+      "website_url": "https://bleedingcool.com/pop-culture/",
+      "description": "News and analysis about Pop Culture - Pop Culture - Bleeding Cool News",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539578.jpg?t=1753094994"
+    },
+    {
+      "title": "Zero Dark Nerdy News",
+      "feed_url": "https://feeds.simplecast.com/7W2TlInR",
+      "website_url": "https://www.popculturepodcast.com/news/",
+      "description": "Pop Culture Podcast that's highly suspect, yet unusually entertaining, with some spoilers and swearing involved. Besides our incredibly fun interviews with guests from all over the entertainment spectrum, we also chat, review, and debate Movies, TV Shows, Video Games, Music, Cosplay, Cartoons, Comics, Comiccons, and more. Follow us Zero Dark Nerdy on all Social Media Formats and our website is www.popculturepodcast.com.",
+      "followers": {
+        "twitter": 200,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/6664040.jpg?t=1750234308"
+    },
+    {
+      "title": "The Direct \u00bb Pop Culture",
+      "feed_url": "https://thedirect.com/culture/rss",
+      "website_url": "https://thedirect.com/culture/",
+      "description": "Are you looking to keep up with the latest pop culture news? If yes, then this is the site for you. \u2713 Stay up to date on everything pop culture here today!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 23900,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/8539590.jpg?t=1753095045"
+    },
+    {
+      "title": "Consequence \u00bb Pop Culture",
+      "feed_url": "https://consequence.net/category/pop-culture/feed/",
+      "website_url": "https://consequence.net/category/pop-culture/",
+      "description": "Find the latest pop culture news published by Consequence. Articles on memes, trending topics, and other viral content.",
+      "followers": {
+        "facebook": 2200000,
+        "twitter": 268500
+      },
+      "image_url": "https://i1.feedspot.com/8539579.jpg?t=1753095000"
+    },
+    {
+      "title": "The Grand Narrative",
+      "feed_url": "https://thegrandnarrative.com/feed/",
+      "website_url": "https://thegrandnarrative.com/",
+      "description": "A blog on Korean Feminism, Sexuality, Popular Culture.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4902851.jpg?t=1613479563"
+    },
+    {
+      "title": "The Pop Culture Blog",
+      "feed_url": "https://www.thepopculture.co/blogs/the-pop-culture-blog.atom",
+      "website_url": "https://www.thepopculture.co/blogs/the-pop-culture-blog",
+      "description": "The Pop Culture blog recounts some of the most popular and watershed Pop Culture moments created by Kanye West in recent history. The Pop Culture is an unofficial Merch brand selling iconic moments printed on Tshirts, Pants and other type of Clothing.",
+      "followers": {
+        "facebook": 582,
+        "twitter": 701,
+        "instagram": 503
+      },
+      "image_url": "https://i1.feedspot.com/5521581.jpg?t=1678955260"
+    },
+    {
+      "title": "Gazette \u00bb Pop Culture",
+      "feed_url": "https://gazette.com/",
+      "website_url": "https://gazette.com/blogs/pop-culture/",
+      "description": "Our section on Pop Culture gives you your dose of local media mashup. Discover the best Movies, and TV shows, Revisit the classics, and more via The Gazette. As one of the most essential newspapers in Colorado Springs, The Gazette continues to influence the market's identity as one of the nation's most coveted destinations to live, work and play.",
+      "followers": {
+        "facebook": 179200,
+        "twitter": 71700,
+        "instagram": 44100
+      },
+      "image_url": "https://i1.feedspot.com/5521582.jpg?t=1678955278"
+    },
+    {
+      "title": "poptransmission",
+      "feed_url": "https://poptransmission.com/feed/",
+      "website_url": "https://poptransmission.com/",
+      "description": "poptransmission is highlighting the new in popular culture while honoring the influence of the past music, movies, TV, and books.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5283052.jpg?t=1621600047"
+    },
+    {
+      "title": "Pop Cultural Studies",
+      "feed_url": "https://popculturalstudies.wordpress.com/feed/",
+      "website_url": "https://popculturalstudies.wordpress.com/",
+      "description": "Find all the latest news, gossips, reviews and more about pop culture from Pop Cultural Studies.",
+      "followers": {
+        "twitter": 49
+      },
+      "image_url": "https://i1.feedspot.com/4903071.jpg?t=1613479811"
+    },
+    {
+      "title": "A Bigger Park",
+      "feed_url": "https://abiggerpark.com/feed/",
+      "website_url": "https://abiggerpark.com/",
+      "description": "A Sideways Perspective on pop culture. We all live in a bigger park which we are cultivating in the community as designers, surfers, artists, skateboarders, bmxers, musicians, artisans, citizens and outlaws, mountain people praising the sea and old spirits young at heart. So this is your read!",
+      "followers": {
+        "facebook": 833,
+        "twitter": 16,
+        "instagram": 543
+      },
+      "image_url": "https://i1.feedspot.com/5049667.jpg?t=1613479747"
+    },
+    {
+      "title": "Pop Culture Nerd",
+      "feed_url": "https://popculturenerd.com/feed",
+      "website_url": "https://popculturenerd.com/",
+      "description": "Find news and opinions about pop culture from inside Hollywood, advance reviews of books and movies.",
+      "followers": {
+        "facebook": 464,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1480978.jpg?t=1613479763"
+    },
+    {
+      "title": "Pop Culture Collab",
+      "feed_url": "https://popcollab.org/feed/",
+      "website_url": "https://popcollab.org/latest-news/",
+      "description": "Elevating authentic narratives in pop culture to empower people of color, immigrants and refugees, Muslims.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3600,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4902889.jpg?t=1613479784"
+    },
+    {
+      "title": "New On The Block",
+      "feed_url": "https://newontheblocktv.com/feed/",
+      "website_url": "https://newontheblocktv.com/",
+      "description": "New Millie is a passionate keeper and curator of Hip-Hop, Street & Pop Culture. Stay tuned in to NEWONTHEBLOCK.TV for everything new on the block. All new entertainment website.",
+      "followers": {
+        "facebook": 170,
+        "twitter": 397,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5193765.jpg?t=1599306620"
+    },
+    {
+      "title": "Pop Culture Allusions",
+      "feed_url": "https://popcultureallusions.com/feed/",
+      "website_url": "https://popcultureallusions.com/",
+      "description": "Pop Culture Allusions is a website and blog dedicated to Pop Culture.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5295342.jpg?t=1624355885"
+    },
+    {
+      "title": "The Pop Culture Experiment",
+      "feed_url": "https://popcultureexperiment.com/feed/",
+      "website_url": "https://popcultureexperiment.com/",
+      "description": "The Pop Culture Experiment is a playground for nerds to geek out on music, movies, TV & more. Find all information related to pop culture.",
+      "followers": {
+        "twitter": 250
+      },
+      "image_url": "https://i1.feedspot.com/4903060.jpg?t=1613479777"
+    },
+    {
+      "title": "Perfectly Imperfect",
+      "feed_url": "https://www.perfectlyimperfect.fyi/feed",
+      "website_url": "https://www.perfectlyimperfect.fyi/",
+      "description": "A Taste of Someone's Taste 2ish times a week.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff9aef46a-3a8b-40f9-9fdb-9c831be4090f_902x902.png"
+    },
+    {
+      "title": "The Pop Culture Philosopher",
+      "feed_url": "https://popculturephilosopher.com/feed/",
+      "website_url": "https://popculturephilosopher.com/",
+      "description": "Books, Music, Movies and Philosophy (Updates Thursdays)",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8539596.jpg?t=1753095075"
+    },
+    {
+      "title": "Lobo Pop Art Blog",
+      "feed_url": "https://lobopopart.com.br/en/feed/",
+      "website_url": "https://lobopopart.com.br/en/art-blog/",
+      "description": "Meet the Brazilian Plastic Artist Lobo. Custom Frames, Murals, and a lot of Pop Art! Biography, Exhibitions and Works. Pop Art Brazilian!",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 668,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/4949516.jpg?t=1621500576"
+    },
+    {
+      "title": "The Music Essentials \u00bb Pop Culture",
+      "feed_url": "https://themusicessentials.com/trending-pop-culture-news/feed/",
+      "website_url": "https://themusicessentials.com/trending-pop-culture-news/",
+      "description": "Stay updated with Trending Pop Culture News. Explore viral stories, celebrity buzz, entertainment highlights, and must-know current events.",
+      "followers": {
+        "facebook": 191900,
+        "instagram": 74100
+      },
+      "image_url": "https://i1.feedspot.com/8539587.jpg?t=1753095034"
+    },
+    {
+      "title": "Mopop",
+      "feed_url": "https://www.mopop.org/blog/",
+      "website_url": "https://www.mopop.org/blog/",
+      "description": "The Museum of Pop Culture is a leading-edge nonprofit museum, dedicated to the ideas and risk-taking that fuel contemporary popular culture. With its roots in rock 'n' roll, MoPOP serves as a gateway museum, reaching multigenerational audiences through our collections, exhibitions, and educational programs, using interactive technologies to engage and empower our visitors.",
+      "followers": {
+        "facebook": 135800,
+        "twitter": 444,
+        "instagram": 76800
+      },
+      "image_url": "https://i1.feedspot.com/4902925.jpg?t=1613479549"
+    },
+    {
+      "title": "PopCulture.com",
+      "feed_url": "https://popculture.com/feed/rss/",
+      "website_url": "https://popculture.com/",
+      "description": "PopCulture.com is a Paramount brand delivering premium content to audiences across emerging media platforms. Through its apt reporting and storytelling, PopCulture has proven to be a leading authority for a generation of readers passionate about larger-than-life characters, celebrities, and entertainment franchises.",
+      "followers": {
+        "facebook": 5500000,
+        "twitter": 11100,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5521577.jpg?t=1678955247"
+    },
+    {
+      "title": "Hmm That's Interesting",
+      "feed_url": "https://colormeloverly.substack.com/feed",
+      "website_url": "https://colormeloverly.substack.com/",
+      "description": "Culture thoughts of/for/by the Chronically Online, from that girl you may have seen on Instagram or TikTok (alas). Essays, pop culture, interviews, and literature.",
+      "followers": {},
+      "image_url": "https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F85063fa3-c9d5-4b81-ac6f-9a9d4a67e843_1280x1280.png"
+    },
+    {
+      "title": "The Ringer \u00bb Pop Culture",
+      "feed_url": "https://www.theringer.com/rss/pop-culture/index.xml",
+      "website_url": "https://www.theringer.com/pop-culture",
+      "description": "A blog on Pop Culture by The Ringer.",
+      "followers": {
+        "facebook": 213700,
+        "twitter": 525300
+      },
+      "image_url": "https://i1.feedspot.com/4903013.jpg?t=1678954894"
+    },
+    {
+      "title": "Everyday Sociology Blog",
+      "feed_url": "https://www.everydaysociologyblog.com/",
+      "website_url": "https://www.everydaysociologyblog.com/",
+      "description": "A site that features interesting, informative, and, most importantly, entertaining commentary from sociologists all over the United States on topics such as pop culture, news, and everyday life.",
+      "followers": {
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/1097323.jpg?t=1630496895"
+    },
+    {
+      "title": "Popdust",
+      "feed_url": "https://www.popdust.com/feeds/feed.rss",
+      "website_url": "https://www.popdust.com/",
+      "description": "POPDUST brings you entertainment news and reviews, from hot new music to celebrity gossip, exclusive interviews, art, film, television and more. We report the best, worst and weirdest in pop culture.",
+      "followers": {
+        "facebook": 473000,
+        "twitter": 55000,
+        "instagram": 22200
+      },
+      "image_url": "https://i1.feedspot.com/4651849.jpg?t=1615871901"
+    },
+    {
+      "title": "SODA & TELEPATHS",
+      "feed_url": "https://sodaandtelepaths.com/feed/",
+      "website_url": "https://sodaandtelepaths.com/",
+      "description": "Soda and Telepaths covers Comics and Culture from the 1990s until now. Expect to find regular News, Reviews, Feature Articles and the occasional Satire.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4970496.jpg?t=1613479570"
+    },
+    {
+      "title": "The Yellow Wall",
+      "feed_url": "https://theyellowwallmag.com/feed/",
+      "website_url": "https://altpoprepeat.com/",
+      "description": "Just a bunch of feminists fighting the patriarchy, one article at a time. We also write about lgbtq , mental health, race, music, books and so on.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 21,
+        "instagram": 119
+      },
+      "image_url": "https://i1.feedspot.com/4926071.jpg?t=1613479766"
+    },
+    {
+      "title": "Alt.Pop.Repeat",
+      "feed_url": "https://altpoprepeat.com/feed/podcast/",
+      "website_url": "https://altpoprepeat.com/",
+      "description": "Join hosts Marie and Chrissy along with their celebrity guests, as they take you on a journey to understand pop culture through the countercultures that formed it. altpoprepeat.com. #AltPopRepeat",
+      "followers": {},
+      "image_url": "https://storage.buzzsprout.com/variants/ifbj5oeh8ooen529a1hnutzo48rl/60854458c4d1acdf4e1c2f79c4137142d85d78e379bdafbd69bd34c85f5819ad.jpg"
+    }
+  ]
+}

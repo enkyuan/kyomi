@@ -1,0 +1,49 @@
+{
+  "category": "UK Fertility",
+  "source_url": "https://rss.feedspot.com/uk_fertility_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Cuckoo Mama",
+      "feed_url": "https://thecuckoomama.co.uk/feed/",
+      "website_url": "https://thecuckoomama.co.uk/",
+      "description": "Hello and welcome to The Cuckoo Mama! I'm Caro, mama to Sam and Pepper pup and wife to Hugh. I'm a stay at home mama, IVF warrior, ruler of the household and, like to think, all round good egg! Welcome to my, somewhat traditional, blog, where it's all about me, all about us, all about infertility and all about my many accidental musings along the way, because, in life; we really are all just trying our best!",
+      "followers": {
+        "facebook": 230,
+        "twitter": 1500,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4910290.jpg?t=1620046171"
+    },
+    {
+      "title": "Be Fertility Aware Blog",
+      "feed_url": "https://www.befertilityaware.co.uk/blog/feed",
+      "website_url": "https://www.befertilityaware.co.uk/blog",
+      "description": "Sarah is a Fertility awareness (natural family planning) practitioner and advocate working in London. Wants to see fertility awareness become a routine contraceptive option, not the only option.",
+      "followers": {
+        "twitter": 734
+      },
+      "image_url": "https://i1.feedspot.com/4910313.jpg?t=1620046402"
+    },
+    {
+      "title": "London IVF Genetics Centre Blog",
+      "feed_url": "https://www.londonivfandgenetics.co.uk/feed/?x=1",
+      "website_url": "https://www.londonivfandgenetics.co.uk/blog/",
+      "description": "The London IVF and Genetics Centre provides an unparalleled attention to detail - irrespective of how simple or complex your medical history might be. We commit ourselves to provide the best possible success rates - regardless of where you are in your assisted fertility journey. London IVF and Genetics Centre Blog POSTS Regular articles and videos prepared by London Fertility Expert, Ms Shipra Krishna, MD MRCOG.",
+      "followers": {
+        "facebook": 82,
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/4616494.jpg?t=1615880734"
+    },
+    {
+      "title": "Amber Izzo",
+      "feed_url": "https://amberizzo.com/feed/",
+      "website_url": "https://amberizzo.com/",
+      "description": "Hello! I'm Amber, and welcome to my blog! I currently live in the East of England with my husband, life partner and all round best friend, Marco, and our red fox Labrador, Bruce. My blog initially started as a way to document my infertility journey, however it has evolved into much more than that. It is a space where I share all my thoughts, things I love, and speak up about women's issues.",
+      "followers": {
+        "twitter": 197
+      },
+      "image_url": "https://i1.feedspot.com/5249888.jpg?t=1614600410"
+    }
+  ]
+}

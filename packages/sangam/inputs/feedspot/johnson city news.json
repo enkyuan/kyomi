@@ -1,0 +1,49 @@
+{
+  "category": "Johnson City News",
+  "source_url": "https://rss.feedspot.com/johnson_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WJHL",
+      "feed_url": "https://www.wjhl.com/feed/",
+      "website_url": "https://www.wjhl.com/",
+      "description": "WJHL is the source for breaking local, weather and sports news in the Tri-Cities, TN/VA region. Find the latest breaking news and updates of Johnson City at WJHL.",
+      "followers": {
+        "facebook": 310300,
+        "twitter": 29600,
+        "instagram": 38500
+      },
+      "image_url": "https://i1.feedspot.com/5142132.jpg?t=1680008235"
+    },
+    {
+      "title": "Johnson City Times",
+      "feed_url": "https://johnsoncitytimes.com/stories.rss",
+      "website_url": "https://johnsoncitytimes.com/",
+      "description": "Dive into our community-focused timely and impactful coverage of Johnson City. Johnson City Times is a local community newspaper in Johnson city committed to covering all major and minor stories, events, and current topics that warrant public attention. It is owned and operated by Metric Media LLC publishing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5512572.jpg?t=1677223848"
+    },
+    {
+      "title": "Johnson-online.us",
+      "feed_url": "https://news.johnson-online.us/",
+      "website_url": "https://news.johnson-online.us/",
+      "description": "Find all the latest and breaking news, weather updates, and all relevant information from Johnson City. johnson-online.us is the city's No.1 portal that provides resources for Businesses, General users, and Visitors to Stamford. It is part of the USA Online Network of city portal catering to local information and digital advertisement needs.",
+      "followers": {
+        "facebook": 8,
+        "twitter": 429,
+        "instagram": 40
+      },
+      "image_url": "https://i1.feedspot.com/5512574.jpg?t=1677223825"
+    },
+    {
+      "title": "Johnson City Press",
+      "feed_url": "https://www.johnsoncitypress.com/",
+      "website_url": "https://www.johnsoncitypress.com/",
+      "description": "Get the breaking news and complete coverage for Johnson City and all of Northeast Tennessee. Read the news, events and information on weather, politics, education, entertainment and lifestyles.",
+      "followers": {
+        "facebook": 61500,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5142125.jpg?t=1587530849"
+    }
+  ]
+}

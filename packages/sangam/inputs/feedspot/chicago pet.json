@@ -1,0 +1,204 @@
+{
+  "category": "Chicago Pet",
+  "source_url": "https://rss.feedspot.com/chicago_pet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Canine Sports Dog Training Blog",
+      "feed_url": "https://www.mycaninesports.com/training-tips?format=rss",
+      "website_url": "https://www.mycaninesports.com/training-tips",
+      "description": "Canine Sports Dog Training is Chicago's premier dog training school specializing in off-leash training which helps owners have a command over their dogs. They also feature dog training tips and tricks from Chicago's favorite dog trainers in their helpful blog.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5682443.jpg?t=1696326087"
+    },
+    {
+      "title": "Steve Dale Pet World Blog",
+      "feed_url": "https://stevedalepetworld.com/feed/",
+      "website_url": "https://stevedalepetworld.com/blog/",
+      "description": "Steve Dale Pet World is a pet blog that features Steve Dale, a certified animal behavior specialist. the blog shares some valuable information about pets, pet parenting, health care, pet grooming, fun activities to do with pets, pet-related events, pet news and more.",
+      "followers": {
+        "facebook": 47900,
+        "twitter": 7700,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5682452.jpg?t=1696326302"
+    },
+    {
+      "title": "PUPS Pet Club Blog",
+      "feed_url": "https://pupspetclub.com/feed/",
+      "website_url": "https://pupspetclub.com/blog/",
+      "description": "PUPS Pet Club is a pet care store and wellness center. They offer a variety of services, such as Daycare, Grooming, Training, Pet sitting, Veterinary services, Transportation, Retail, Puppy playcare, Walking. In their blog, they talk about the services offered, facilities provided, and helpful articles about pet health and pet care.",
+      "followers": {
+        "facebook": 941,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5682445.jpg?t=1696325972"
+    },
+    {
+      "title": "Sparky Steps Blog",
+      "feed_url": "https://sparkysteps.com/blogs/blog.atom",
+      "website_url": "https://sparkysteps.com/blogs/blog",
+      "description": "Sparky Steps is managed by a couple of pet sitters in Chicago helping animals in need and selling cool tees that give back. They offer Dog walking and cat siting services. Read their blog and learn about Pet care, pet health, pet training tips, dog walking devices, and more.",
+      "followers": {
+        "facebook": 623,
+        "twitter": 1600,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5682441.jpg?t=1696325943"
+    },
+    {
+      "title": "Chicago Dog Trainer Blog",
+      "feed_url": "https://www.chicagodogtrainer.com/about/blog.feed?type=rss",
+      "website_url": "https://www.chicagodogtrainer.com/about/blog.html",
+      "description": "Chicago Dog Trainer is owned and operated by Marc Goldberg, a professional dog trainer in Chicago and published co-author of worldwide dog training books. They have a Chicago Dog Trainer Blog that features posts on dog training tips, dog grooming, dog health, activities, dog walking devices and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5682450.jpg?t=1696326618"
+    },
+    {
+      "title": "Hilarious Hound Blog",
+      "feed_url": "https://hilarioushound.com/feed/",
+      "website_url": "https://hilarioushound.com/blog/",
+      "description": "The Hilarious Hound Dog Blog is more than just pet photography. Here they share tips and tricks to keep your pup happy and healthy, along with recommendations on all things dog. They are Chicago's premier pet photography studio, offering vibrant and bold pet portraits.",
+      "followers": {
+        "facebook": 651
+      },
+      "image_url": "https://i1.feedspot.com/4772994.jpg?t=1699444555"
+    },
+    {
+      "title": "Chicago Pet Sitters",
+      "feed_url": "https://chicagopetsitters.com/feed/",
+      "website_url": "https://chicagopetsitters.com/news/",
+      "description": "Chicago Pet Sitters is dedicated to providing the best quality care for your pet. They offer daily visits for your pet, which may include walks, feedings, play times, or just good company, depending on your needs. Read their blogs and Stay updated on news and information regarding the well-being of your furry loved one. Topics covered include food issues, training, and medical questions.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5682438.jpg?t=1696325923"
+    },
+    {
+      "title": "West Loop Veterinary Care Blog",
+      "feed_url": "https://westloopvet.com/feed/",
+      "website_url": "https://westloopvet.com/blog/",
+      "description": "West Loop Veterinary Care is an organized, state of the art, American Animal Hospital Association (AAHA) accredited & Cat Friendly Certified practice conveniently located near public transportation in Chicago's West Loop Neighborhood. The team at West Loop Veterinary Care in Chicago has a veterinary blog with helpful information about your pet's care. Read our veterinary blog today!",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5288106.jpg?t=1622705738"
+    },
+    {
+      "title": "Windy City Paws Blog",
+      "feed_url": "https://windycitypaws.com/feed/",
+      "website_url": "https://windycitypaws.com/blog/",
+      "description": "Windy City Paws provides professional dog walking services for busy Chicagoans seeking a balance between their love for their pets and their work demands. Check out their blog featuring exciting and informative guides for training and playing with your dog.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5682451.jpg?t=1699444491"
+    },
+    {
+      "title": "Chicago Black Cat Blog",
+      "feed_url": "https://www.chicagoblackcat.com/blog-feed.xml",
+      "website_url": "https://www.chicagoblackcat.com/blog",
+      "description": "Chicago Black Cat Blog represents the life of two black cats Mikita and Dahlia, living in Chicago. The blog is managed by their parents who share their daily activities, adventures, funny stories, and experiences.",
+      "followers": {
+        "facebook": 43500,
+        "instagram": 319000
+      },
+      "image_url": "https://i1.feedspot.com/5682454.jpg?t=1696326175"
+    },
+    {
+      "title": "Dog's Life on Damen Blog",
+      "feed_url": "https://www.dogslifedamen.com//feed/atom",
+      "website_url": "https://www.dogslifedamen.com/blog",
+      "description": "Since 1992, Dog's Life on Damen has been serving Chicagoland and providing excellent pet daycare and boarding facilities. Dog's Life on Damen Blog shares information about the services and facilities provided along with helpful articles on pet care, pet health, dog boarding, and more.",
+      "followers": {
+        "facebook": 827
+      },
+      "image_url": "https://i1.feedspot.com/5682448.jpg?t=1696326213"
+    },
+    {
+      "title": "Majestic Paws John Porcaro Blog",
+      "feed_url": "https://www.majesticpaws.com/feed/",
+      "website_url": "https://www.majesticpaws.com/blog/",
+      "description": "Majestic Paws is a dog walking company in Chicago, they have designed their services not only around your pet's needs but around what you want for your pet. Visit their informative blog as Majestic Paws has training tips, nutrition advice, animal behavior wisdom, and pet-of-the-month profiles to share.",
+      "followers": {
+        "facebook": 324,
+        "instagram": 917
+      },
+      "image_url": "https://i1.feedspot.com/5682444.jpg?t=1701324532"
+    },
+    {
+      "title": "Mella Pet Care Blog",
+      "feed_url": "https://www.mella.ai/blog-feed.xml",
+      "website_url": "https://www.mella.ai/blog-all-posts",
+      "description": "Mella Pet Care is a Chicago-based startup that offers diagnostic products and technology for pet parents and vets. You can learn more about their products, services offered, past client reviews, pet care & health tips.",
+      "followers": {
+        "facebook": 518,
+        "twitter": 212,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5682456.jpg?t=1696326422"
+    },
+    {
+      "title": "Candice C. Cusic Photography Blog",
+      "feed_url": "https://cusicphoto.com/blog/feed/",
+      "website_url": "https://cusicphoto.com/blog/",
+      "description": "Candice C. Cusic Photography is a Chicago-based Wedding, Family and Pet Portrait Photographer specializing in pet and family portraits.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 270,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5682442.jpg?t=1696326480"
+    },
+    {
+      "title": "Urban Tailz Blog",
+      "feed_url": "https://urbantailz.com/feed/",
+      "website_url": "https://urbantailz.com/about-us/blog/",
+      "description": "Urban Tailz is know for Providing Dog Walking, Cat Sitting, And Other Pet Care Services In Chicago Since 2000. Explore their blog and Read what's new in the Urban Tailz world as well as tips for dog or cat owners. They also like to highlight our favorite pets with a Pet of the Month.",
+      "followers": {
+        "facebook": 580,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5682440.jpg?t=1696325936"
+    },
+    {
+      "title": "Chicago Urban Pets Blog",
+      "feed_url": "https://chicagourbanpets.com/feed/",
+      "website_url": "https://chicagourbanpets.com/blog/",
+      "description": "Chicago Urban Pets is a dog walking and pet-sitting company in Chicago. They are experts in pet care and customer service offering modern-day solutions for pet parents. They also share pet care tips, pet training guides, fun activities to do with your pets and more.",
+      "followers": {
+        "facebook": 351,
+        "instagram": 715
+      },
+      "image_url": "https://i1.feedspot.com/5682446.jpg?t=1696325975"
+    },
+    {
+      "title": "Urban PetRx Blog",
+      "feed_url": "https://urbanpetrx.com/feed/",
+      "website_url": "https://urbanpetrx.com/blog/",
+      "description": "Urban PetRx is a locally and independently owned veterinary clinic providing modern veterinary medicine with traditional sensibilities to the Bridgeport neighborhood of Chicago, IL. The veterinary team at Urban Petrx has written reliable blogs for you to learn new information to improve your pet's quality of life!",
+      "followers": {
+        "facebook": 441,
+        "instagram": 323
+      },
+      "image_url": "https://i1.feedspot.com/5682447.jpg?t=1696325982"
+    },
+    {
+      "title": "Pet Care Plus Blog",
+      "feed_url": "https://www.petcp.com/blog/feed",
+      "website_url": "https://www.petcp.com/blog",
+      "description": "Pet Care Plus is a dog grooming business. They offer quality dog daycare, dog boarding, dog training, and dog grooming services in Chicago. Their blog showcases their groom business, their facilities, services provided, client reviews, pet care details, pet grooming tips, and more.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 609,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5682449.jpg?t=1696325994"
+    }
+  ]
+}

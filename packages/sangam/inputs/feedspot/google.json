@@ -1,0 +1,311 @@
+{
+  "category": "Google",
+  "source_url": "https://rss.feedspot.com/google_rss_feeds",
+  "feeds": [
+    {
+      "title": "Google Blog",
+      "feed_url": "https://blog.google/rss/",
+      "website_url": "https://blog.google/",
+      "description": "Discover all the latest news and information about our products, technology, and Google culture from our official blog. Google's mission is to organize the world's information and make it universally accessible and useful.",
+      "followers": {
+        "facebook": 34800000,
+        "twitter": 32799999,
+        "instagram": 15700000
+      },
+      "image_url": "https://i1.feedspot.com/4621860.jpg?t=1622472786"
+    },
+    {
+      "title": "Google Cloud Blog",
+      "feed_url": "https://cloudblog.withgoogle.com/rss/",
+      "website_url": "https://cloud.google.com/blog",
+      "description": "Get official news, features, and announcements for all Google Cloud products including Google Cloud Platform, Workspace, and much more. The mission of the Google Cloud blog is to be your definitive, trusted source for news, guidance, and perspectives from Google on cloud computing. This blog covers a variety of Google Cloud products and services, including Google Cloud Platform, Workspace, Google Maps Platform, and Chrome Enterprise.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 522400,
+        "instagram": 364400
+      },
+      "image_url": "https://i1.feedspot.com/4969615.jpg?t=1659353695"
+    },
+    {
+      "title": "Google Research Blog",
+      "feed_url": "https://research.google/blog/rss/",
+      "website_url": "https://research.google/blog/",
+      "description": "Google AI is focused on bringing the benefits of AI to everyone. In conducting and applying our research, we advance the state-of-the-art in many domains.The latest news and updates directly from Google bring the benefits of AI to everyone.",
+      "followers": {
+        "twitter": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4971488.jpg?t=1660037143"
+    },
+    {
+      "title": "Android Developers Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/hsDu",
+      "website_url": "https://android-developers.googleblog.com/",
+      "description": "Latest Android and Google Play news and tips for the app and game developers. It also features modern tools and resources to help you build experiences that people love, faster and easier, across every Android device.",
+      "followers": {
+        "facebook": 60200,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4536233.jpg?t=1625736476"
+    },
+    {
+      "title": "Google Developers Blog",
+      "feed_url": "https://feeds.feedburner.com/GDBcode",
+      "website_url": "https://developers.googleblog.com/",
+      "description": "Blog posts on the latest news, updates, and stories from Google Developers Blog. It is your source for announcements, pro tips from product experts, and the resources to support your development efforts.",
+      "followers": {
+        "facebook": 249600,
+        "twitter": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/5042524.jpg?t=1625736709"
+    },
+    {
+      "title": "The Verge",
+      "feed_url": "https://www.theverge.com/rss/google/index.xml",
+      "website_url": "https://www.theverge.com/google",
+      "description": "Latest news and stories on Google from The Verge. The Verge was founded in 2011 in partnership with Vox Media and covers the intersection of technology, science, art, and culture.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 3500000,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/5041476.jpg?t=1622472805"
+    },
+    {
+      "title": "Google Earth",
+      "feed_url": "https://medium.com/feed/google-earth",
+      "website_url": "https://medium.com/google-earth",
+      "description": "For developers, scientists, explorers and storytellers.You want to change the world, we want to help. Explore the far reaches of the world with Google Earth for Chrome and Android.",
+      "followers": {
+        "facebook": 191400,
+        "twitter": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/5429689.jpg?t=1659934887"
+    },
+    {
+      "title": "9to5Google",
+      "feed_url": "https://9to5google.com/guides/google/feed/",
+      "website_url": "https://9to5google.com/guides/google/",
+      "description": "Breaking news on all things about Google and Android including a range of topics such as Google Pixel news, Android, Google Home, Google apps, Chromebooks, and more. 9to5Google provides news and updates on Alphabet, Google, Android, Pixel, Home, Chrome, and more.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 163200,
+        "instagram": 20200
+      },
+      "image_url": "https://i1.feedspot.com/5042394.jpg?t=1622472813"
+    },
+    {
+      "title": "Chromium Blog",
+      "feed_url": "https://blog.chromium.org/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.chromium.org/",
+      "description": "Google Chrome OS is the operating system created by Google. Follow this blog for news and developments from the open-source browser project.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 392900
+      },
+      "image_url": "https://i1.feedspot.com/4569417.jpg?t=1620048767"
+    },
+    {
+      "title": "Google Workspace Updates Blog",
+      "feed_url": "https://feeds.feedburner.com/GoogleAppsUpdates",
+      "website_url": "https://workspaceupdates.googleblog.com/",
+      "description": "This official feed from the G Suite team provides essential information about new features and improvements for G Suite customers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4965231.jpg?t=1659935272"
+    },
+    {
+      "title": "Maps Mania Blog",
+      "feed_url": "https://feeds.feedburner.com/GoogleMapsMania",
+      "website_url": "https://googlemapsmania.blogspot.com/",
+      "description": "Maps Mania is a blog dedicated to tracking the very best digital interactive maps on the internet and the tools used to create them.",
+      "followers": {
+        "twitter": 16900
+      },
+      "image_url": "https://i1.feedspot.com/5429688.jpg?t=1659934803"
+    },
+    {
+      "title": "Google Nest Community Blog",
+      "feed_url": "https://www.googlenestcommunity.com/unqkr23473/rss/boardmessages?board.id=blog",
+      "website_url": "https://www.googlenestcommunity.com/t5/Blog/bg-p/blog",
+      "description": "Made to be helpful. The Google Nest Community Blog is an active and collaborative place to learn more about events and ask questions to fellow fans! Check out our most popular conversations happening right now!s",
+      "followers": {
+        "facebook": 784900,
+        "twitter": 853900,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5429698.jpg?t=1659937074"
+    },
+    {
+      "title": "Firebase Blog",
+      "feed_url": "https://firebase.blog/rss.xml",
+      "website_url": "https://firebase.blog/",
+      "description": "News, tutorials, and updates from the Firebase team. Firebase helps make your app the best it can be for users and your business. It is an app development platform that helps you build and grow apps and games users love. Backed by Google and trusted by millions of businesses around the world.",
+      "followers": {
+        "facebook": 65,
+        "twitter": 173600
+      },
+      "image_url": "https://i1.feedspot.com/5429696.jpg?t=1659936937"
+    },
+    {
+      "title": "Google Fiber Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/oObXp",
+      "website_url": "https://fiber.google.com/blog/",
+      "description": "The latest news from the Fiber team. Everyone deserves fast, reliable internet. That's why the folks at Google Fiber, Google Fiber Webpass, and Google Fiber Business are working to get as many people connected as we can.",
+      "followers": {
+        "facebook": 238700,
+        "twitter": 89300,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5429687.jpg?t=1659934176"
+    },
+    {
+      "title": "EmbedSocial \u00bb Google Business Profile",
+      "feed_url": "https://embedsocial.com/blog/category/google-business-profile/feed/",
+      "website_url": "https://embedsocial.com/blog/category/google-business-profile/",
+      "description": "News, tips, solutions to common issues, and tools to successfully manage Google Business Profile and win in local SEO for any business.",
+      "followers": {
+        "facebook": 3900,
+        "instagram": 848
+      },
+      "image_url": "https://i1.feedspot.com/8662627.jpg"
+    },
+    {
+      "title": "Website.com Blog \u00bb Google & SEO",
+      "feed_url": "https://blog.website.com/category/promote-your-site/google-and-seo/feed/",
+      "website_url": "https://blog.website.com/category/promote-your-site/google-and-seo/",
+      "description": "The Google and SEO section offers step-by-step guides on boosting your search presence. From verifying your site with Google Search Console and optimizing page speed to crafting effective pop-ups, SEO checklists, and UX tips that help your site get found and engage visitors.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662629.jpg?t=1755877928"
+    },
+    {
+      "title": "Mashable India \u00bb Google",
+      "feed_url": "https://in.mashable.com/google.xml",
+      "website_url": "https://in.mashable.com/google/",
+      "description": "Mashable is a go-to search for all the Tech, Culture and Development content about Google. Follow to stay updated!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5042534.jpg?t=1755877587"
+    },
+    {
+      "title": "Android Headlines \u00bb Google",
+      "feed_url": "https://www.androidheadlines.com/category/google-news/feed",
+      "website_url": "https://www.androidheadlines.com/category/google-news/",
+      "description": "Dive into the latest Google news, reviews, and app updates. From Photos to Maps, get the insights you need.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 467000,
+        "instagram": 51000
+      },
+      "image_url": "https://i1.feedspot.com/8662630.jpg"
+    },
+    {
+      "title": "Ghacks \u00bb Google",
+      "feed_url": "https://www.ghacks.net/category/companies/google/feed/",
+      "website_url": "https://www.ghacks.net/category/companies/google/",
+      "description": "For internet lovers, Google often stands out among companies that deliver top browsing and mobile tech. If you want to keep up to date with the latest news, updates, tools, and drama surrounding this industry mogul, be sure to check this content.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/8662631.jpg"
+    },
+    {
+      "title": "Tech Trend Watch \u00bb Google",
+      "feed_url": "https://techtrendwatch.io/category/google/feed/",
+      "website_url": "https://techtrendwatch.io/category/google/",
+      "description": "Stay informed with Google News! Explore breaking news, in-depth articles, and personalized updates on the topics that matter most to you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662628.jpg?t=1755877968"
+    },
+    {
+      "title": "Jamie McKaye \u00bb Google Updates",
+      "feed_url": "https://jamiemckaye.com/category/google-updates/feed/",
+      "website_url": "https://jamiemckaye.com/category/google-updates/",
+      "description": "The Latest Google Algorithm Updates and Rumblings",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662626.jpg"
+    },
+    {
+      "title": "Google Developers",
+      "feed_url": "https://medium.com/feed/google-developers",
+      "website_url": "https://medium.com/google-developers",
+      "description": "Engineering and technology articles for developers, written and curated by Googlers. The blog covers articles on the Google cloud platform, Actions on Google, Firebase and more. The views expressed are those of the authors and don't necessarily reflect those of Google.",
+      "followers": {
+        "facebook": 520799,
+        "twitter": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/4430970.jpg?t=1625737571"
+    },
+    {
+      "title": "Google Play Apps & Games",
+      "feed_url": "https://medium.com/feed/googleplaydev",
+      "website_url": "https://medium.com/googleplaydev",
+      "description": "Tips, trends, and industry thoughts for app & game developers building businesses on Google Play.",
+      "followers": {
+        "twitter": 105800
+      },
+      "image_url": "https://i1.feedspot.com/5429697.jpg?t=1659937993"
+    },
+    {
+      "title": "Chrome Unboxed",
+      "feed_url": "https://chromeunboxed.com/web-stories/feed/",
+      "website_url": "https://chromeunboxed.com/",
+      "description": "A Space for All Things Chrome, Google, and More! Chrome Unboxed is a space for All Things Chrome! News, updates, reviews and unboxings: we cover it all! Chrome Unboxed was created in January 2015 when Robby decided it was time to start documenting his tech gadget addiction.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 26500,
+        "instagram": 19600
+      },
+      "image_url": "https://i1.feedspot.com/5429686.jpg?t=1659935476"
+    },
+    {
+      "title": "Bubble SEO \u00bb Google Tips",
+      "feed_url": "https://www.bubbleseo.com/blog/category/google-tips/feed/",
+      "website_url": "https://www.bubbleseo.com/blog/category/google-tips/",
+      "description": "Check out our latest blog posts covering everything you need to know about SEO, content marketing, link building, and guest posting. Stay updated with the newest strategies and tips to boost your online presence!",
+      "followers": {
+        "facebook": 20
+      },
+      "image_url": "https://i1.feedspot.com/8662632.jpg"
+    },
+    {
+      "title": "ZDNET \u00bb Google",
+      "feed_url": "https://www.zdnet.com/topic/google/rss.xml",
+      "website_url": "https://www.zdnet.com/topic/google/",
+      "description": "News and updates about Google from ZDNet. ZDNet is the online destination for professionals seeking to solve business technology problems and find new opportunities.",
+      "followers": {
+        "facebook": 3,
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5042563.jpg?t=1686814207"
+    },
+    {
+      "title": "GoogBlogs.com",
+      "feed_url": "https://www.googblogs.com/feed/",
+      "website_url": "https://www.googblogs.com/",
+      "description": "Blog posts on Google Ads development, Adwords agency, Android development, and more from googblogs.com.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5041581.jpg?t=1625737134"
+    },
+    {
+      "title": "Chrome Developers Blog",
+      "feed_url": "https://developer.chrome.com/feeds/blog.xml",
+      "website_url": "https://developer.chrome.com/blog/",
+      "description": "News & guidance for developers from the Google Chrome Developer Relations team.",
+      "followers": {
+        "twitter": 392900
+      },
+      "image_url": "https://i1.feedspot.com/5355417.jpg?t=1659935796"
+    },
+    {
+      "title": "Computerworld",
+      "feed_url": "https://www.computerworld.com/category/google/index.rss",
+      "website_url": "https://www.computerworld.com/in/",
+      "description": "This section of the blog covers news, updates, opinions, how-tos, features, reviews, android intelligence, and videos about Google. Computerworld is the leading source of technology news and information for IT professionals.",
+      "followers": {
+        "facebook": 865000,
+        "twitter": 244800
+      },
+      "image_url": "https://i1.feedspot.com/5041631.jpg?t=1622472817"
+    }
+  ]
+}

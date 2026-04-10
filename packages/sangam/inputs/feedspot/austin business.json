@@ -1,0 +1,77 @@
+{
+  "category": "Austin Business",
+  "source_url": "https://rss.feedspot.com/austin_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Austin Business Woman Blog",
+      "feed_url": "https://www.austinbusinesswoman.com/rss",
+      "website_url": "https://www.austinbusinesswoman.com/blogs",
+      "description": "Austin Business Woman Blog is a platform founded by Katie Kime, a designer, and entrepreneur, with a mission to empower and inspire women in business. The blog features articles on business strategies, entrepreneurship, and self-care for women. They help people find all women-owned businesses of Austin in one place.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 134,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5511407.jpg?t=1677063273"
+    },
+    {
+      "title": "Economic Growth Business Incubator Blog",
+      "feed_url": "https://egbi.org/feed/",
+      "website_url": "https://egbi.org/blog/",
+      "description": "Economic Growth Business Incubator Blog is a subpage of the Economic Growth Business Incubator, a non-profit organization founded in 1989 to support and mentor entrepreneurs in Central Texas. Our blog features some of the prominent entrepreneurs we have helped over the years to grow in businesses. Find insights, tips and resources from their stories.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5516233.jpg?t=1677838452"
+    },
+    {
+      "title": "Sunbelt Business Brokers Blog",
+      "feed_url": "https://sunbeltaustin.com/feed/",
+      "website_url": "https://sunbeltaustin.com/blog/",
+      "description": "Established in 1998, Sunbelt Business Brokers of Austin is one of Austin's oldest business brokerage firms. As part of the world's largest business brokerage network, with offices throughout the U.S. and in nine countries, Sunbelt sells thousands of businesses of all sizes every year, spanning a wide range of industries. Discover our business insights, news, tips and more in the blog.",
+      "followers": {
+        "facebook": 12
+      },
+      "image_url": "https://i1.feedspot.com/5516232.jpg?t=1677838249"
+    },
+    {
+      "title": "Texas Association of Business",
+      "feed_url": "https://www.txbiz.org/feed/",
+      "website_url": "https://www.txbiz.org/chamber-news/",
+      "description": "Texas Association of Business Blog is an organization founded in 1922 with a mission to improve the state's business climate and promote economic growth. Their blog features news and insights on business and policy issues in Texas. Keep up to date with the latest news coverage of the business industry, trades, meetings and more with the blog.",
+      "followers": {
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5516234.jpg?t=1677838405"
+    },
+    {
+      "title": "Austin Startups",
+      "feed_url": "https://austinstartups.com/feed",
+      "website_url": "https://austinstartups.com/",
+      "description": "Austin Startups is a community platform founded in 2014 with a mission to connect and support entrepreneurs and startups in Austin. Their blog features articles on local business news, events, and resources, along with startup stories and interviews.",
+      "followers": {
+        "facebook": 770,
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4531368.jpg?t=1600243572"
+    },
+    {
+      "title": "The Kumar Law Firm PLLC Blog",
+      "feed_url": "https://thekumarlawfirm.com/rssfeed.aspx?CustID=1360",
+      "website_url": "https://thekumarlawfirm.com/blog/",
+      "description": "Kumar Law Firm Blog is run by an experienced attorney, Sanjeev Kumar, who founded the firm in 2001 with a mission to provide legal solutions to individuals and businesses in Texas. The blog features articles on legal matters related to business, immigration, and family law.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5516030.jpg?t=1677830765"
+    },
+    {
+      "title": "ZenBusiness Blog",
+      "feed_url": "https://www.zenbusiness.com/feed/",
+      "website_url": "https://www.zenbusiness.com/blog/",
+      "description": "ZenBusiness Blog is a platform founded in 2015 with a mission to help small businesses start, run, and grow. Looking for the best free small business resources available? We've got you covered. Check out new topics discussed weekly and stay tuned to for more!",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1600,
+        "instagram": 77400
+      },
+      "image_url": "https://i1.feedspot.com/5400967.jpg?t=1652773031"
+    }
+  ]
+}

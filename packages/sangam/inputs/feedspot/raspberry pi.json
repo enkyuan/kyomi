@@ -1,0 +1,259 @@
+{
+  "category": "Raspberry Pi",
+  "source_url": "https://rss.feedspot.com/raspberry_pi_rss_feeds",
+  "feeds": [
+    {
+      "title": "Raspberry Pi Blog",
+      "feed_url": "https://www.raspberrypi.org/blog/feed/",
+      "website_url": "https://www.raspberrypi.org/blog/",
+      "description": "The Raspberry Pi is a tiny and affordable computer that you can use to learn programming through fun, practical projects. The Raspberry Pi Foundation is a UK-based charity. They provide free learning resources, outreach and educator training to help more people use digital technology to do the things they want.",
+      "followers": {
+        "facebook": 406700,
+        "twitter": 604200,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4622592.jpg?t=1616069606"
+    },
+    {
+      "title": "Jeff Geerling Blog",
+      "feed_url": "https://www.jeffgeerling.com/blog.xml",
+      "website_url": "https://www.jeffgeerling.com/blog",
+      "description": "Hello, I am Jeff Geerling, welcome to my blogs. I am a software developer and author. I am specialized in website and application scalability and performance, front-end design, and plenty of buzzwords and acronyms. I'm deeply involved in open source, especially in the Ansible, Linux, Raspberry Pi, and Drupal communities. By reading my blogs you will get to know all the latest information related to technology and software.",
+      "followers": {
+        "twitter": 47500
+      },
+      "image_url": "https://i1.feedspot.com/5048445.jpg?t=1616069615"
+    },
+    {
+      "title": "Hack a Day",
+      "feed_url": "https://hackaday.com/category/raspberry-pi-2/feed/",
+      "website_url": "https://hackaday.com/category/raspberry-pi-2/",
+      "description": "Hackaday serves up Fresh Hacks Every Day from around the Internet. Their playful posts are the gold-standard in entertainment for engineers and engineering enthusiasts. They strive to promote the free and open exchange of ideas and information. They educate those just learning the art of Hack, and provide inspiration for the seasoned veterans.",
+      "followers": {
+        "facebook": 202000,
+        "twitter": 265400
+      },
+      "image_url": "https://i1.feedspot.com/710863.jpg?t=1616069645"
+    },
+    {
+      "title": "Pi My Life Up",
+      "feed_url": "https://pimylifeup.com/category/projects/feed/",
+      "website_url": "https://pimylifeup.com/category/projects/",
+      "description": "Pi My Life Up, run by Little Big Byte, a small business located in Hobart, Tasmania, Australia, is your source for Raspberry Pi projects & tech tutorials. Check out this ever-growing list of cool and useful Raspberry Pi projects. Learn what this affordable and small computer is capable of.",
+      "followers": {
+        "facebook": 99000,
+        "twitter": 3400,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5289595.jpg?t=1623070935"
+    },
+    {
+      "title": "RaspberryTips",
+      "feed_url": "https://raspberrytips.com/feed/",
+      "website_url": "https://raspberrytips.com/",
+      "description": "Covers guides, projects and tutorials about the Raspberry Pi. RaspberryTips is a website about the Raspberry Pi, a single board computer.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5322922.jpg?t=1631946444"
+    },
+    {
+      "title": "Alex Ellis' Blog",
+      "feed_url": "https://blog.alexellis.io/rss/",
+      "website_url": "https://blog.alexellis.io/",
+      "description": "Articles on OSS, Cloud Native & Raspberry Pi. Alex Ellis creates independent Open Source tools. He helps companies understand & explain their value and unique benefits to developers.",
+      "followers": {
+        "twitter": 30000
+      },
+      "image_url": "https://i1.feedspot.com/4723403.jpg?t=1640006329"
+    },
+    {
+      "title": "peppe8o",
+      "feed_url": "https://peppe8o.com/feed/",
+      "website_url": "https://peppe8o.com/",
+      "description": "peppe8o is the place where Raspberry PI and electronics projects made easy for beginners.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5197564.jpg?t=1616069656"
+    },
+    {
+      "title": "Stephen Smith's Blog \u00bb Raspberry Pi",
+      "feed_url": "https://smist08.wordpress.com/tag/raspberry-pi/feed/",
+      "website_url": "https://smist08.wordpress.com/tag/raspberry-pi/",
+      "description": "I'm Stephen. I'm a retired Software Architect, located in Gibsons, BC, Canada. I've been developing software since high school, or way too many years to record. In this section, find articles on raspberry pi.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5355687.jpg?t=1640063274"
+    },
+    {
+      "title": "Raspberry Pi Spy",
+      "feed_url": "https://www.raspberrypi-spy.co.uk/feed/",
+      "website_url": "https://www.raspberrypi-spy.co.uk/",
+      "description": "Raspberry Pi Spy is devoted to the Raspberry Pi credit card sized computer offering tutorials, guides, resources and downloads. They hope to help others get the most out of their Pi by providing clear, simple articles on configuring, programming and operating it.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 18000,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/129623.jpg?t=1616069611"
+    },
+    {
+      "title": "The Pi Hut",
+      "feed_url": "https://thepihut.com/blogs/raspberry-pi-roundup.atom",
+      "website_url": "https://thepihut.com/blogs/raspberry-pi-roundup",
+      "description": "The Pi Hut is the no.1 store for all your Raspberry Pi accessories. They believe that the Raspberry Pi is one of the most exciting things to happen in Computing for many years. Their aim is to help Raspberry Pi owners get the most out of their Rpi experience. Their team has a special fondness for the Raspberry Pi computer, Raspberry Pi accessories, and even the occasional Arduino project.",
+      "followers": {
+        "facebook": 30700,
+        "twitter": 52500
+      },
+      "image_url": "https://i1.feedspot.com/4622622.jpg?t=1616069619"
+    },
+    {
+      "title": "Pimoroni",
+      "feed_url": "https://blog.pimoroni.com/rss/",
+      "website_url": "https://blog.pimoroni.com/",
+      "description": "We are a company of makers and educators based in Sheffield, UK. Creators of the Pibow case for Raspberry Pi and the UK's largest Adafruit reseller. We manufacture all our own products locally.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 39200
+      },
+      "image_url": "https://i1.feedspot.com/4623632.jpg?t=1616069623"
+    },
+    {
+      "title": "Raspberry PiPod Blog",
+      "feed_url": "https://www.recantha.co.uk/blog/?feed=rss2",
+      "website_url": "https://www.recantha.co.uk/blog/",
+      "description": "Michael Horne is a a ColdFusion/SQL web developer living and working in Bedfordshire, UK with his wife and step-children. He is a Raspberry Pi enthusiast and performer, director and writer for amateur theatre.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/244799.jpg?t=1616069633"
+    },
+    {
+      "title": "pi3g.com Blog",
+      "feed_url": "https://pi3g.com/feed/",
+      "website_url": "https://pi3g.com/blog/",
+      "description": "Computers today are complex machines that require well-matched components. The Raspberry Pi is a powerful microcomputer, but it also requires the right components (power supply, microSD card) - otherwise unexpected problems may occur.We provide you with well-coordinated Raspberry Pi solutions, and the right service to go with it. We believe that the future lies in artificial intelligence and offer you individual solutions according to your requirements.",
+      "followers": {
+        "facebook": 422,
+        "twitter": 89
+      },
+      "image_url": "https://i1.feedspot.com/5355675.jpg?t=1640004918"
+    },
+    {
+      "title": "Circuit Specialists Blog \u00bb Raspberry Pi",
+      "feed_url": "https://www.circuitspecialists.com/blog/category/single-board-computers/raspberry-pi/feed/",
+      "website_url": "https://www.circuitspecialists.com/blog/category/single-board-computers/raspberry-pi/",
+      "description": "The blog was created to bring our visitors knowledgeable articles on products, tools, and fields in which products may be used. Circuit Specialists provides you with quality electronic equipment, components, and accessories at remarkably low prices since 1971.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 785
+      },
+      "image_url": "https://i1.feedspot.com/5355676.jpg?t=1640062381"
+    },
+    {
+      "title": "SwitchDoc Labs \u00bb Raspberry Pi",
+      "feed_url": "https://www.switchdoc.com/category/raspberrypicat/feed/",
+      "website_url": "https://www.switchdoc.com/category/raspberrypicat/",
+      "description": "Articles on Raspberry Pi. SwitchDoc Labs, LLC is a software and hardware engineering company producing specialized products and designs for the small computer industry maker movement (Raspberry Pi, Arduinos and others).",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5355684.jpg?t=1640002367"
+    },
+    {
+      "title": "Ozzmaker",
+      "feed_url": "https://ozzmaker.com/category/raspberry-pi/feed/",
+      "website_url": "https://ozzmaker.com/category/raspberry-pi/",
+      "description": "Ozzmaker.com is a DIY electronics and guides for the Raspberry Pi and Arduino. They are engineers who like to prototype with the Raspberry Pi, build autonomous robots and are inspired by anything Star Wars.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4623663.jpg?t=1616069704"
+    },
+    {
+      "title": "Raspberryblog.de",
+      "feed_url": "https://raspberryblog.de/?feed=rss2",
+      "website_url": "https://raspberryblog.de/",
+      "description": "Raspberryblog.de blogger is a long time Linux enthusiast (since 1996) who has taken a great interest in the Raspberry Pi board. You'll find some posts about Arduino and other Amtel AVR microcontrollers on my project pages.",
+      "followers": {
+        "twitter": 163
+      },
+      "image_url": "https://i1.feedspot.com/4623729.jpg"
+    },
+    {
+      "title": "PiCockpit \u00bb Raspberry Pi",
+      "feed_url": "https://picockpit.com/raspberry-pi/feed/",
+      "website_url": "https://picockpit.com/raspberry-pi/",
+      "description": "PiCockpit is an easy to use web-interface for your Raspberry Pi. Check your Pi's health state, control your GPIO pins, run commands and get real-time info on CPU load, SoC temperature and more.",
+      "followers": {
+        "facebook": 422,
+        "twitter": 89
+      },
+      "image_url": "https://i1.feedspot.com/5355673.jpg?t=1640062405"
+    },
+    {
+      "title": "Cat Lamin",
+      "feed_url": "https://catlamin.com/category/education/raspberry-pi/feed/",
+      "website_url": "https://catlamin.com/category/education/raspberry-pi/",
+      "description": "Cat Lamin's passion is to share my knowledge and enjoyment of computing science and coding. She is determined to help people one way or another you can find her at events involving sharing of ideas or else sharing my love of all things Raspberry Pi. She has worked as a facilitator for the Raspberry Pi Foundation's free CPD, Picademy, as well as working for the National Stem Centre in York.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4623705.jpg?t=1616069720"
+    },
+    {
+      "title": "Embedded Lab",
+      "feed_url": "https://embedded-lab.com/blog/category/raspberry-pie/feed/",
+      "website_url": "https://embedded-lab.com/blog/category/raspberry-pie/",
+      "description": "Embedded Lab is an online teaching laboratory for Microcontrollers, Arduino, Raspberry Pi and Embedded Systems. This website is aimed at anyone who is curious to learn how these things work on fundamental level and who wants to get started with embedded system design on their own.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 289
+      },
+      "image_url": "https://i1.feedspot.com/4623672.jpg?t=1616069661"
+    },
+    {
+      "title": "The Rantings and Ravings of a Madman",
+      "feed_url": "http://feeds.feedburner.com/TheRantingsAndRavingsOfAMadman",
+      "website_url": "https://sirlagz.net/category/raspberry-pi/",
+      "description": "The Rantings and Ravings of a Madman is a blog about tech, Raspberry pi, android, games and linux.",
+      "followers": {
+        "twitter": 294
+      },
+      "image_url": "https://i1.feedspot.com/1026687.jpg?t=1616069745"
+    },
+    {
+      "title": "FactoryForward",
+      "feed_url": "https://www.factoryforward.com/category/raspberry-pi/feed/",
+      "website_url": "https://www.factoryforward.com/category/raspberry-pi/",
+      "description": "FactoryForward is an Electronics Distributor and E-commerce Store, with a goal to bring new technology and latest microcontroller development boards and sensors to all age groups.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/4918160.jpg?t=1616069713"
+    },
+    {
+      "title": "Raspberry Pi Maker",
+      "feed_url": "http://raspberrypimaker.com/feed/",
+      "website_url": "http://raspberrypimaker.com/",
+      "description": "All albout making interesting things with the Raspberry Pi.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4821660.jpg"
+    },
+    {
+      "title": "Adafruit Industries",
+      "feed_url": "https://blog.adafruit.com/category/raspberry-pi/feed",
+      "website_url": "https://blog.adafruit.com/category/raspberry-pi/",
+      "description": "Adafruit was founded in 2005 by MIT engineer, Limor 'Ladyada' Fried. Her goal was to create the best place online for learning electronics and making the best designed products for makers of all ages and skill levels. Adafruit makes all-original DIY electronics kits and is a New York City based company that sells kits and parts for original, open source hardware electronics projects.",
+      "followers": {
+        "facebook": 142200,
+        "twitter": 222000
+      },
+      "image_url": "https://i1.feedspot.com/4622612.jpg?t=1616069640"
+    }
+  ]
+}

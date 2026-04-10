@@ -1,0 +1,51 @@
+{
+  "category": "Mississippi Politics",
+  "source_url": "https://rss.feedspot.com/mississippi_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Jackson Government",
+      "feed_url": "https://www.jacksonms.gov/feed/",
+      "website_url": "https://www.jacksonms.gov/news/",
+      "description": "The City of Jackson is the official Municipal Government website of Mississippi. Find recent news about the city.",
+      "followers": {
+        "facebook": 27600,
+        "twitter": 2100,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5315948.jpg?t=1630040349"
+    },
+    {
+      "title": "SuperTalk Mississippi Politics",
+      "feed_url": "https://www.supertalk.fm/category/news/politics/feed/",
+      "website_url": "https://www.supertalk.fm/category/news/politics/",
+      "description": "SuperTalk Mississippi strives to provide statewide coverage of Mississippi news, politics, and events that keeps you informed and educated.",
+      "followers": {
+        "facebook": 64800,
+        "twitter": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5315899.jpg?t=1630040012"
+    },
+    {
+      "title": "WJTV 12 News Politics",
+      "feed_url": "https://www.wjtv.com/news/politics/feed/",
+      "website_url": "https://www.wjtv.com/news/politics/",
+      "description": "WJTV 12 News is Mississippi's first and most trusted source for local news, weather, and breaking news. It Covers political updates and news under this section.",
+      "followers": {
+        "facebook": 408900,
+        "twitter": 93800
+      },
+      "image_url": "https://i1.feedspot.com/5315929.jpg?t=1630041079"
+    },
+    {
+      "title": "Jackson Free Press Politics",
+      "feed_url": "https://www.jacksonfreepress.com/rss/headlines/politics/",
+      "website_url": "https://www.jacksonfreepress.com/categories/news/politics/",
+      "description": "Jackson Free Press in Jackson, Mississippi's smart alternative news source. This section of the news website covers political updates and news.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 39200
+      },
+      "image_url": "https://i1.feedspot.com/5315876.jpg?t=1630039468"
+    }
+  ]
+}

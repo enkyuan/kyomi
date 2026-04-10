@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+    <head>
+        <title>Whirlpool Archive 2006 - RSS Feed Collection</title>
+        <dateCreated>Sat, 13 Mar 2006 00:00:00 GMT</dateCreated>
+        <ownerName>Whirlpool Forum Users</ownerName>
+    </head>
+    <body>
+        <outline text="Tech &amp; Computing">
+            <outline type="rss" text="Slashdot" title="Slashdot" xmlUrl="http://rss.slashdot.org/Slashdot/slashdot" htmlUrl="http://slashdot.org"/>
+            <outline type="rss" text="Engadget" title="Engadget" xmlUrl="http://www.engadget.com/rss.xml" htmlUrl="http://www.engadget.com"/>
+            <outline type="rss" text="Gizmodo" title="Gizmodo" xmlUrl="http://www.gizmodo.net/index.xml" htmlUrl="http://www.gizmodo.com"/>
+            <outline type="rss" text="Techdirt" title="Techdirt" xmlUrl="http://www.techdirt.com/techdirt_rss.xml" htmlUrl="http://www.techdirt.com"/>
+            <outline type="rss" text="Wired News: Top Stories" title="Wired News" xmlUrl="http://www.wired.com/news_drop/netcenter/netcenter.rdf" htmlUrl="http://www.wired.com"/>
+            <outline type="rss" text="The Register" title="The Register" xmlUrl="http://www.theregister.co.uk/excerpts.rss" htmlUrl="http://www.theregister.co.uk"/>
+            <outline type="rss" text="CNET News.com" title="CNET News.com" xmlUrl="http://news.com.com/2547-1_3-0-20.xml" htmlUrl="http://news.com.com"/>
+            <outline type="rss" text="Digg" title="Digg" xmlUrl="http://digg.com/rss/index.xml" htmlUrl="http://digg.com"/>
+            <outline type="rss" text="Ars Technica (implied)" title="The Raw Feed" xmlUrl="http://www.therawfeed.com/therawfeed.xml" htmlUrl="http://www.therawfeed.com"/>
+            <outline type="rss" text="Download Squad" title="Download Squad" xmlUrl="http://www.downloadsquad.com/rss.xml" htmlUrl="http://www.downloadsquad.com"/>
+            <outline type="rss" text="Hack a Day" title="Hack a Day" xmlUrl="http://www.hackaday.com/rss.xml" htmlUrl="http://www.hackaday.com"/>
+            <outline type="rss" text="Lifehacker" title="Lifehacker" xmlUrl="http://lifehacker.com/index.xml" htmlUrl="http://www.lifehacker.com"/>
+            <outline type="rss" text="PC Magazine" title="PC Magazine" xmlUrl="http://rssnewsapps.ziffdavis.com/pcmag.xml" htmlUrl="http://www.pcmag.com"/>
+            <outline type="rss" text="Tom's Networking" title="Tom's Networking" xmlUrl="http://www.tomsnetworking.com/TNfeaturesRSS.php" htmlUrl="http://www.tomsnetworking.com"/>
+            <outline type="rss" text="Official Google Blog" title="Official Google Blog" xmlUrl="http://googleblog.blogspot.com/atom.xml" htmlUrl="http://googleblog.blogspot.com"/>
+            <outline type="rss" text="Microsoft Watch" title="Microsoft Watch" xmlUrl="http://rssnewsapps.ziffdavis.com/msw.xml" htmlUrl="http://www.microsoft-watch.com"/>
+            <outline type="rss" text="Neowin.net" title="Neowin.net" xmlUrl="http://feeds.feedburner.com/neowin-main" htmlUrl="http://www.neowin.net"/>
+            <outline type="rss" text="NewsForge" title="NewsForge" xmlUrl="http://www.newsforge.com/index.rss" htmlUrl="http://www.newsforge.com"/>
+            <outline type="rss" text="OSNews" title="OSNews" xmlUrl="http://osnews.com/files/recent.rdf" htmlUrl="http://www.osnews.com"/>
+            <outline type="rss" text="TechSpot" title="TechSpot" xmlUrl="http://www.techspot.com/backend.xml" htmlUrl="http://www.techspot.com"/>
+            <outline type="rss" text="ZDNET.com.au" title="ZDNET.com.au" xmlUrl="http://www.zdnet.com.au/feeds/rss" htmlUrl="http://www.zdnet.com.au"/>
+            <outline type="rss" text="Schneier on Security" title="Schneier on Security" xmlUrl="http://www.schneier.com/blog/index.rdf" htmlUrl="http://www.schneier.com"/>
+            <outline type="rss" text="eWEEK" title="eWEEK" xmlUrl="http://rssnewsapps.ziffdavis.com/tech.xml" htmlUrl="http://www.eweek.com"/>
+            <outline type="rss" text="MajorGeeks.com" title="MajorGeeks.com" xmlUrl="http://www.majorgeeks.com/news.xml" htmlUrl="http://www.majorgeeks.com"/>
+        </outline>
+        
+        <outline text="News &amp; Business">
+            <outline type="rss" text="ABC News (AU): Top Stories" title="ABC News" xmlUrl="http://www.abc.net.au/news/syndicate/topstoriesrss.xml" htmlUrl="http://www.abc.net.au/news"/>
+            <outline type="rss" text="The Age Business Headlines" title="The Age Business" xmlUrl="http://feeds.theage.com.au/rssheadlines/business.rss" htmlUrl="http://www.theage.com.au"/>
+            <outline type="rss" text="The Age National Headlines" title="The Age National" xmlUrl="http://feeds.theage.com.au/rssheadlines/national.rss" htmlUrl="http://www.theage.com.au"/>
+            <outline type="rss" text="BBC News" title="BBC News" xmlUrl="http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml" htmlUrl="http://news.bbc.co.uk"/>
+            <outline type="rss" text="Reuters News" title="Reuters News" xmlUrl="http://today.reuters.com/rss/topNews" htmlUrl="http://today.reuters.com"/>
+            <outline type="rss" text="Crooks and Liars" title="Crooks and Liars" xmlUrl="http://www.crooksandliars.com/rss.xml" htmlUrl="http://www.crooksandliars.com"/>
+            <outline type="rss" text="Wall Street Journal" title="WSJ" xmlUrl="http://online.wsj.com/xml/rss/3_7085.xml" htmlUrl="http://online.wsj.com/public/page/0_0813.html"/>
+            <outline type="rss" text="Google News Australia" title="Google News Australia" xmlUrl="http://news.google.com/news?ned=au&amp;output=rss" htmlUrl="http://news.google.com.au"/>
+        </outline>
+
+        <outline text="Blogs, Lifestyle &amp; Culture">
+            <outline type="rss" text="Boing Boing" title="Boing Boing" xmlUrl="http://boingboing.net/rss.xml" htmlUrl="http://www.boingboing.net"/>
+            <outline type="rss" text="ProBlogger" title="ProBlogger" xmlUrl="http://www.problogger.net/feed/rss2" htmlUrl="http://www.problogger.net"/>
+            <outline type="rss" text="Gridskipper" title="Gridskipper" xmlUrl="http://www.gridskipper.com/index.xml" htmlUrl="http://www.gridskipper.com"/>
+            <outline type="rss" text="Luxist" title="Luxist" xmlUrl="http://www.luxist.com/rss.xml" htmlUrl="http://www.luxist.com"/>
+            <outline type="rss" text="Tomato (Foodie)" title="Tomato" xmlUrl="http://feeds.feedburner.com/Tomatom" htmlUrl="http://www.tomatom.com"/>
+            <outline type="rss" text="Metroblogging Melbourne" title="Metroblogging Melbourne" xmlUrl="http://melbourne.metblogs.com/index2.xml" htmlUrl="http://melbourne.metblogs.com"/>
+            <outline type="rss" text="Damn Interesting" title="Damn Interesting" xmlUrl="http://www.damninteresting.com/?feed=rss2" htmlUrl="http://www.damninteresting.com"/>
+            <outline type="rss" text="New Scientist Online" title="New Scientist" xmlUrl="http://www.newscientist.com/feed/online-news" htmlUrl="http://www.newscientist.com"/>
+            <outline type="rss" text="Internet Infidels" title="Internet Infidels" xmlUrl="http://www.infidels.org/wire/wire.xml" htmlUrl="http://www.infidels.org"/>
+            <outline type="rss" text="WikiHow: How-to of the Day" title="WikiHow" xmlUrl="http://www.ehow.com/ehow_feed.rss" htmlUrl="http://www.ehow.com"/>
+        </outline>
+
+        <outline text="Entertainment &amp; Humor">
+            <outline type="rss" text="Fark" title="Fark" xmlUrl="http://www.fark.com/fark.rss" htmlUrl="http://www.fark.com"/>
+            <outline type="rss" text="Cockeyed.com" title="Cockeyed" xmlUrl="http://cockeyed.com/index.xml" htmlUrl="http://www.cockeyed.com"/>
+            <outline type="rss" text="Defamer" title="Defamer" xmlUrl="http://defamer.com/index.xml" htmlUrl="http://www.defamer.com"/>
+            <outline type="rss" text="TV Squad" title="TV Squad" xmlUrl="http://www.tvsquad.com/rss.xml" htmlUrl="http://www.tvsquad.com"/>
+            <outline type="rss" text="TVgasm" title="TVgasm" xmlUrl="http://www.tvgasm.com/index.xml" htmlUrl="http://www.tvgasm.com"/>
+            <outline type="rss" text="IMDb News" title="IMDb News" xmlUrl="http://rss.imdb.com/news" htmlUrl="http://www.imdb.com"/>
+            <outline type="rss" text="ShoutWire" title="ShoutWire" xmlUrl="http://www.shoutwire.com/RSS.xml" htmlUrl="http://www.shoutwire.com"/>
+            <outline type="rss" text="YouTube Most Viewed" title="YouTube" xmlUrl="http://youtube.com/rss/global/top_viewed_today.rss" htmlUrl="http://youtube.com"/>
+        </outline>
+
+        <outline text="Podcasts &amp; Audio">
+            <outline type="rss" text="Dr Karl on triple j" title="Dr Karl" xmlUrl="http://abc.net.au/science/k2/podcast/drk_rss.xml" htmlUrl="http://abc.net.au/science/k2"/>
+            <outline type="rss" text="Enough Rope with Andrew Denton" title="Enough Rope" xmlUrl="http://abc.net.au/tv/enoughrope/podcast.xml" htmlUrl="http://abc.net.au/tv/enoughrope"/>
+            <outline type="rss" text="Betty in the Sky with a Suitcase" title="Betty in the Sky" xmlUrl="http://betty.libsyn.com/rss" htmlUrl="http://betty.libsyn.com"/>
+            <outline type="rss" text="The CoffeeGeek Podcast" title="The CoffeeGeek" xmlUrl="http://www.coffeegeek.com/podcasts/cgpodcast.xml" htmlUrl="http://www.coffeegeek.com"/>
+            <outline type="rss" text="CoasterRadio.com" title="CoasterRadio" xmlUrl="http://coasterradio.libsyn.com/rss" htmlUrl="http://coasterradio.com"/>
+            <outline type="rss" text="Fly With Me" title="Fly With Me" xmlUrl="http://joepodcaster.libsyn.com/rss" htmlUrl="http://joepodcaster.libsyn.com"/>
+            <outline type="rss" text="NYT Tech Talk" title="NYT Tech Talk" xmlUrl="http://www.nytimes.com/services/xml/rss/podcasts/techtalk.xml" htmlUrl="http://www.nytimes.com"/>
+            <outline type="rss" text="The Restaurant Guys" title="The Restaurant Guys" xmlUrl="http://www.restaurantguysradio.com/rss/podcasts.xml" htmlUrl="http://www.restaurantguysradio.com"/>
+            <outline type="rss" text="Triple J Hack Daily" title="Triple J Hack" xmlUrl="http://www.abc.net.au/triplej/hack/podcast/hack_daily.xml" htmlUrl="http://www.abc.net.au/triplej/hack"/>
+            <outline type="rss" text="New York Mets Baseball Podcast" title="NY Mets Podcast" xmlUrl="http://feeds.feedburner.com/NewYorkMetsPodcast" htmlUrl="http://newyorkmetspodcast.wordpress.com"/>
+        </outline>
+        
+        <outline text="Forum Specific">
+            <outline type="rss" text="Whirlpool Unofficial Feed (2006)" title="Whirlpool Forum" xmlUrl="http://whirlpool.net.au/whirlpool.rdf" htmlUrl="http://whirlpool.net.au"/>
+            <outline type="rss" text="Internode Advisories" title="Internode" xmlUrl="http://cgi.internode.on.net/advisories/list.rss" htmlUrl="http://www.internode.on.net"/>
+        </outline>
+    </body>
+</opml>

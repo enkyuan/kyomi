@@ -1,0 +1,64 @@
+{
+  "category": "Jewish Music",
+  "source_url": "https://rss.feedspot.com/jewish_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jewish Insights",
+      "feed_url": "https://www.thejewishinsights.com/wp/feed/",
+      "website_url": "https://www.thejewishinsights.com/wp/",
+      "description": "Jewish Music aficionados will immediately recognize Yossi Zweig's name as the publisher of JE Magazine, the first full colour monthly that gave over 30,000 Jewish music fans a unique front-stage back stage perspective to the occasionally wild, sometimes wacky, always wonderful world of Jewish music.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/3863710.jpg?t=1630653345"
+    },
+    {
+      "title": "One Israeli Song a Week",
+      "feed_url": "http://1israelisong.blogspot.com/feeds/posts/default",
+      "website_url": "http://1israelisong.blogspot.com/",
+      "description": "Articles exclusively on Israeli songs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4037852.jpg?t=1630654648"
+    },
+    {
+      "title": "MyIsraeliMusic.com Blog",
+      "feed_url": "https://www.myisraelimusic.com/blog/feed/",
+      "website_url": "https://www.myisraelimusic.com/blog/",
+      "description": "If you like Israeli music, you will love Israel Hour Radio. Hosted for nearly 25 years by Josh Shron, Israel Hour Radio is the BEST place to experience Israeli music.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 268
+      },
+      "image_url": "https://i1.feedspot.com/5318457.jpg?t=1630580472"
+    },
+    {
+      "title": "Yehudas Jewish Music Blog",
+      "feed_url": "https://yehudasjewishmusicblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://yehudasjewishmusicblog.blogspot.com/",
+      "description": "The blog covers the whole Jewish music scene so you can get all your Jewish music news in one place. The aim of this blog is to publish all new Jewish songs, regardless of the style (no matter if it's in Hebrew, English, or if it's chassidish, Mizrachi, Israeli or Ashkenazi) to promote achdus.",
+      "followers": {
+        "twitter": 119
+      },
+      "image_url": "https://i1.feedspot.com/5317169.jpg?t=1630415721"
+    },
+    {
+      "title": "The Newest Jewish Music Video Blog",
+      "feed_url": "https://newjewishmusicvideo.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://newjewishmusicvideo.blogspot.com/",
+      "description": "A blog where you can see the best of Jewish music videos & more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5319620.jpg?t=1630931821"
+    },
+    {
+      "title": "The Times of Israel \u00bb Jewish Music",
+      "feed_url": "https://blogs.timesofisrael.com/topic/jewish-music/feed/",
+      "website_url": "https://blogs.timesofisrael.com/topic/jewish-music/",
+      "description": "This section features articles that have to do exclusively with Jewish Music. The Times of Israel is a Jerusalem-based online newspaper founded in 2012 to document developments in Israel, the Middle East and around the Jewish world.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 619300
+      },
+      "image_url": "https://i1.feedspot.com/5317150.jpg?t=1630404520"
+    }
+  ]
+}

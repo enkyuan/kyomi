@@ -1,0 +1,51 @@
+{
+  "category": "Arizona Running",
+  "source_url": "https://rss.feedspot.com/arizona_running_rss_feeds",
+  "feeds": [
+    {
+      "title": "Run Tucson",
+      "feed_url": "https://runtucson.net/feed/",
+      "website_url": "https://runtucson.net/",
+      "description": "Run Tucson is where everyone runs or walks 5k to half marathons. Pick a vacation race in Southern Arizona or at the Grand Canyon. In partnership with the non-profit Southern Arizona Roadrunners, Run Tucson has developed running events in locations Downtown and in tourist destinations like Saguaro National Park and Old Tucson Studios. They use the sport of running to bring people together and raise the human spirit, we recognize that not everyone can run, jog, even walk in safety, without fear.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 769,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5675064.jpg?t=1695211218"
+    },
+    {
+      "title": "Shendo Cat Racing",
+      "feed_url": "https://shendocatracing.com/feed/",
+      "website_url": "https://shendocatracing.com/",
+      "description": "Shendo Cat Racing and AZ Trail Race LLC is a small local event company striving to put on the best trail running events in the valley. As an official race company of the National XTERRA Trail Race Series in Arizona, they welcome runners from all over the world and of all experience levels.",
+      "followers": {
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5675067.jpg?t=1697616972"
+    },
+    {
+      "title": "Southern Arizona Roadrunners Blog",
+      "feed_url": "https://runsar.org/feed/",
+      "website_url": "https://runsar.org/blog/",
+      "description": "The Southern Arizona Roadrunners is a not-for-profit organization dedicated to promoting health and fitness in Tucson and Southern Arizona through running and walking. Their vision is to strengthen and support the running and walking community in Southern Arizona through high-quality, affordable, and family-friendly events and programming that empower people of all backgrounds, abilities, and ages to pursue a healthier lifestyle. Go through their blog and learn about their running events, highlights, race details, news and more.",
+      "followers": {
+        "facebook": 9000,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5675065.jpg?t=1695211223"
+    },
+    {
+      "title": "Aravaipa Running Blog",
+      "feed_url": "https://www.aravaiparunning.com/feed/",
+      "website_url": "https://www.aravaiparunning.com/blog/",
+      "description": "Born and bred in the Arizona desert. Run our trail & ultra events year-round in Colorado, Utah & Nevada.Visit the Aravaipa Running Blog and read articles on race updates, event details, running tips, health, wellness, feature stories and more.",
+      "followers": {
+        "facebook": 32500,
+        "twitter": 20200,
+        "instagram": 82800
+      },
+      "image_url": "https://i1.feedspot.com/5675063.jpg?t=1695211232"
+    }
+  ]
+}

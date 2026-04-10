@@ -1,0 +1,52 @@
+{
+  "category": "Handball",
+  "source_url": "https://rss.feedspot.com/handball_rss_feeds",
+  "feeds": [
+    {
+      "title": "Handball Planet",
+      "feed_url": "https://www.handball-planet.com/feed/",
+      "website_url": "https://www.handball-planet.com/",
+      "description": "Handball Planet provides Handball news around the Globe. Follow this blog that offers all the information on handball for its fans around the world.",
+      "followers": {
+        "facebook": 61900,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/5016071.jpg?t=1622284350"
+    },
+    {
+      "title": "Stregspiller",
+      "feed_url": "https://www.stregspiller.com/news-forum/feed/",
+      "website_url": "https://www.stregspiller.com/news-forum/",
+      "description": "Stregspiller will focus on the challenges, opportunities, and controversies surrounding the sport of handball today. On this website, you will find the images and stories of the athletes, coaches, referees, journalists, and officials - in short, all the figures that shape public perception of handball today.",
+      "followers": {
+        "facebook": 227,
+        "twitter": 3200,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5016075.jpg?t=1622284354"
+    },
+    {
+      "title": "Team Handball News",
+      "feed_url": "https://teamhandballnews.com/feed/",
+      "website_url": "https://teamhandballnews.com/",
+      "description": "Team Handball News (THN) is an independent news and opinion website focused on the Olympic sport of Team Handball. The focus is both on Developing Nations and World-Wide Handball news with an Independent perspective.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 3300,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5016072.jpg?t=1622284364"
+    },
+    {
+      "title": "Ghana Handball",
+      "feed_url": "https://ghanahandball.wordpress.com/feed/",
+      "website_url": "https://ghanahandball.wordpress.com/",
+      "description": "The Ghana Handball blog is designed to disseminate information online on handball in Ghana.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 471
+      },
+      "image_url": "https://i1.feedspot.com/5016076.jpg?t=1758106174"
+    }
+  ]
+}

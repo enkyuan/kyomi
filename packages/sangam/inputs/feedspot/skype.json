@@ -1,0 +1,80 @@
+{
+  "category": "Skype",
+  "source_url": "https://rss.feedspot.com/skype_rss_feeds",
+  "feeds": [
+    {
+      "title": "The thoughtstuff Blog",
+      "feed_url": "https://blog.thoughtstuff.co.uk/feed/",
+      "website_url": "https://blog.thoughtstuff.co.uk/",
+      "description": "I'm Tom Morgan. I blog at ThoughtStuff about Microsoft Skype for Business development. I'm passionate about building great applications for Microsoft Skype for Business, and I'd like to show you how to do it as well.",
+      "followers": {
+        "facebook": 98,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4922376.jpg?t=1620818390"
+    },
+    {
+      "title": "Tom Talks Blog",
+      "feed_url": "https://tomtalks.blog/feed/",
+      "website_url": "https://tomtalks.blog/",
+      "description": "Tom Arbuthnot is a specialist Unified Communications Solutions Architect, Microsoft Certified Master and MVP, with a number of years' experience in the field working with many companies across different verticals on global UC projects. Follow this blog where he shares his thoughts and news on Microsoft Teams and Skype for Business .",
+      "followers": {
+        "twitter": 12100
+      },
+      "image_url": "https://i1.feedspot.com/4922268.jpg?t=1620818398"
+    },
+    {
+      "title": "Luca Vitali",
+      "feed_url": "https://lucavitali.wordpress.com/feed/",
+      "website_url": "https://lucavitali.wordpress.com/",
+      "description": "Luca Vitali is a Microsoft MVP, Skype for Business and Teams Enterprise Voice Specialist. Follow this blog where he shares his thoughts on Microsoft UC, Skype for Business, Teams, Exchange and Sonus SBC.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4922274.jpg?t=1620818437"
+    },
+    {
+      "title": "Skaip Org",
+      "feed_url": "http://www.skaip.org/rss.xml",
+      "website_url": "http://www.skaip.org/",
+      "description": "This unofficial blog is dedicated to the popular program Skype, a free, multifunctional Internet messenger, which allows users to make audio and video calls, write instant messages using chat, send files, share the screen, make group calls, call to mobile and landline phones and receive calls from them, send SMS-messages and use other interesting features.",
+      "followers": {
+        "facebook": 79,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/4922123.jpg?t=1620818394"
+    },
+    {
+      "title": "Jeff Schertz",
+      "feed_url": "http://blog.schertz.name/feed/",
+      "website_url": "http://blog.schertz.name/category/sfb/",
+      "description": "Jeff Schertz is a lead Microsoft Solutions Architect at Polycom and Skype for Business MVP. Follow this blog to find articles on Skype for Business.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/3334922.jpg?t=1620818403"
+    },
+    {
+      "title": "Skype Blog",
+      "feed_url": "https://www.skype.com/en/blogs/",
+      "website_url": "https://www.skype.com/en/blogs/",
+      "description": "Skype by Microsoft is for doing things together, whenever you're apart. Skype makes it simple to share experiences with the people that matter to you, wherever they are. Follow this blog to get product news, user stories and updates from Skype.",
+      "followers": {
+        "facebook": 25600000,
+        "twitter": 4900000,
+        "instagram": 674500
+      },
+      "image_url": "https://i1.feedspot.com/4758987.jpg?t=1612448658"
+    },
+    {
+      "title": "TheArgyleMVP",
+      "feed_url": "https://theargylemvp.com/rss.xml",
+      "website_url": "https://theargylemvp.com/",
+      "description": "These are just some random thoughts and ideas from a Microsoft MVP. We might cover everything from Development, to Teams, to Skype and might even through in a random bit of Azure and AWS.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/1053391.jpg?t=1620818407"
+    }
+  ]
+}

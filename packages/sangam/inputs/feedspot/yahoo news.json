@@ -1,0 +1,106 @@
+{
+  "category": "Yahoo News",
+  "source_url": "https://rss.feedspot.com/yahoo_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yahoo News",
+      "feed_url": "https://www.yahoo.com/news/rss",
+      "website_url": "https://www.yahoo.com/news/",
+      "description": "The latest news and headlines from Yahoo! News. Get breaking news stories and in-depth coverage with videos and photos.",
+      "followers": {
+        "facebook": 7500000,
+        "twitter": 1000000,
+        "instagram": 618000
+      },
+      "image_url": "https://i1.feedspot.com/4633676.jpg?t=1613125729"
+    },
+    {
+      "title": "Yahoo Finance",
+      "feed_url": "https://finance.yahoo.com/news/rssindex",
+      "website_url": "https://finance.yahoo.com/",
+      "description": "At Yahoo Finance, you get free stock quotes, up-to-date news, portfolio management resources, international market data, social interaction and mortgage rates that help you manage your financial life.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4633676.jpg?t=1613125729"
+    },
+    {
+      "title": "Yahoo Sports",
+      "feed_url": "https://sports.yahoo.com/rss/",
+      "website_url": "https://sports.yahoo.com/",
+      "description": "Yahoo! Sports - Comprehensive news, scores, standings, fantasy games, rumors, and more.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 618000
+      },
+      "image_url": "https://i1.feedspot.com/4633676.jpg?t=1613125729"
+    },
+    {
+      "title": "Yahoo News \u00bb Entertainment",
+      "feed_url": "https://www.yahoo.com/entertainment/rss",
+      "website_url": "https://www.yahoo.com/entertainment/",
+      "description": "Yahoo Entertainment is your source for the latest TV, movies, music, and celebrity news, including interviews, trailers, photos, and first looks.",
+      "followers": {
+        "twitter": 585200,
+        "instagram": 386500
+      },
+      "image_url": "https://i1.feedspot.com/4633676.jpg?t=1613125729"
+    },
+    {
+      "title": "Yahoo News \u00bb Lifestyle",
+      "feed_url": "https://www.yahoo.com/lifestyle/rss",
+      "website_url": "https://www.yahoo.com/lifestyle/",
+      "description": "Yahoo Life is your source for style, beauty, and wellness, including health, inspiring stories, and the latest fashion trends.",
+      "followers": {
+        "instagram": 135600
+      },
+      "image_url": "https://i1.feedspot.com/4633676.jpg?t=1613125729"
+    },
+    {
+      "title": "Yahoo News \u00bb College Basketball",
+      "feed_url": "https://sports.yahoo.com/college-basketball/rss/",
+      "website_url": "https://sports.yahoo.com/college-basketball/",
+      "description": "Comprehensive College Basketball news, scores, standings, fantasy games, rumors, and more. Yahoo Sports covers Sports news for the sports-obsessed. Dedicated to bringing you more of the stories, highlights and features you love.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5434303.jpg?t=1661235071"
+    },
+    {
+      "title": "Yahoo News \u00bb College Football",
+      "feed_url": "https://sports.yahoo.com/college-football/rss/",
+      "website_url": "https://sports.yahoo.com/college-football/",
+      "description": "Yahoo! Sports provides comprehensive College Football news, scores, standings, fantasy games, rumors, and more. Yahoo! Sports publishes daily content on sports, fantasy, NFL, NBA, MLB, Tennis, Golf, and more.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5416850.jpg?t=1656581000"
+    },
+    {
+      "title": "Yahoo News \u00bb Soccer",
+      "feed_url": "https://sports.yahoo.com/soccer/rss",
+      "website_url": "https://sports.yahoo.com/soccer/",
+      "description": "Get the latest Soccer football results, fixtures and exclusive video highlights from Yahoo Sports including live scores, match stats and team news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4633676.jpg?t=1613125729"
+    },
+    {
+      "title": "Yahoo News \u00bb NBA",
+      "feed_url": "https://sports.yahoo.com/nba/rss/",
+      "website_url": "https://sports.yahoo.com/nba/",
+      "description": "Comprehensive National Basketball Association news, scores, standings, fantasy games, rumors from Yahoo News.",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/4633676.jpg?t=1613125729"
+    }
+  ]
+}

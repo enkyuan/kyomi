@@ -1,0 +1,41 @@
+{
+  "category": "Educational Gaming",
+  "source_url": "https://rss.feedspot.com/educational_gaming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Filament Games Blog",
+      "feed_url": "https://www.filamentgames.com/feed/",
+      "website_url": "https://www.filamentgames.com/blog/",
+      "description": "The Filament Games blog covers the latest in game-based learning, education technology, and game design from the perspective of a veteran educational game developer. Filament Games is an industry-leading educational game developer.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 5400,
+        "instagram": 815
+      },
+      "image_url": "https://i1.feedspot.com/5301679.jpg?t=1626262479"
+    },
+    {
+      "title": "Kinems Blog",
+      "feed_url": "https://blog.kinems.com/rss/",
+      "website_url": "https://blog.kinems.com/",
+      "description": "Play, Learn and Improve. Kinect educational games for special education & primary education. Active learning with memory games, math games, motifs, for improving motor planning, linguistics and gross motor skills.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 393
+      },
+      "image_url": "https://i1.feedspot.com/5301691.jpg?t=1626263700"
+    },
+    {
+      "title": "PlayShifu Blog",
+      "feed_url": "https://www.playshifu.com/blog/feed",
+      "website_url": "https://www.playshifu.com/blog?cco=IN",
+      "description": "Leveraging Augmented Reality to merge learning & fun! PlayShifu aims to make screen time more meaningful and learning more empathetic for Gen Alpha. Inspire your kids with interactive learning toys that build foundational skills! Shifu has math, geography, space, music, and many more fun & educational gifts for kids.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 1100,
+        "instagram": 27800
+      },
+      "image_url": "https://i1.feedspot.com/5301702.jpg?t=1626264266"
+    }
+  ]
+}

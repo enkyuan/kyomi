@@ -1,0 +1,62 @@
+{
+  "category": "Shopper Marketing",
+  "source_url": "https://rss.feedspot.com/shopper_marketing_rss_feeds",
+  "feeds": [
+    {
+      "title": "WSL Strategic Retail Blog",
+      "feed_url": "https://wslstrategicretail.com/feed/",
+      "website_url": "https://wslstrategicretail.com/wsl-blog/",
+      "description": "Retail Strategy and Market Research Consultants",
+      "followers": {
+        "facebook": 40,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/7316001.jpg?t=1716227196"
+    },
+    {
+      "title": "Shopperations Blog",
+      "feed_url": "https://blog.shopperations.com/rss.xml",
+      "website_url": "https://blog.shopperations.com/",
+      "description": "Shopperations is the first of a kind software for the Shopper Marketing industry that is currently mired by Excel and Powerpoint as a primary means of communication and planning. Follow this blog that offers practical advice, best practices and industry news for retail and CPG shopper marketing professionals.",
+      "followers": {
+        "facebook": 272,
+        "twitter": 394
+      },
+      "image_url": "https://i1.feedspot.com/4931130.jpg?t=1716228180"
+    },
+    {
+      "title": "Tokinomo Blog",
+      "feed_url": "https://www.tokinomo.com/blog/rss.xml",
+      "website_url": "https://www.tokinomo.com/blog",
+      "description": "Tokinomo blog covers hot retail topics such as shopper activation trends, grocery retail technologies and experiential marketing solutions for FMCG brands.",
+      "followers": {
+        "facebook": 969,
+        "twitter": 1400,
+        "instagram": 658
+      },
+      "image_url": "https://i1.feedspot.com/5164090.jpg?t=1611147948"
+    },
+    {
+      "title": "Mike Anthony Blog",
+      "feed_url": "https://mikeanthony.me/feed/",
+      "website_url": "https://mikeanthony.me/blog/",
+      "description": "Mike Anthony is a consumer Marketing and shopper marketing expert, speaker, writer, consultant, trainer, and coacher. He aims to change the way people think about shopper marketing, and demonstrate that this can transform performance by creating a truly integrated approach to marketing by sharing his thoughts through this blog.",
+      "followers": {
+        "facebook": 710,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4930826.jpg?t=1716227737"
+    },
+    {
+      "title": "Cliffedge Marketing Blog",
+      "feed_url": "https://cliffedgemarketing.com/blog/",
+      "website_url": "https://cliffedgemarketing.com/blog/",
+      "description": "Shopper Marketing for CPG Brands",
+      "followers": {
+        "facebook": 200,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/5734619.jpg?t=1702445704"
+    }
+  ]
+}

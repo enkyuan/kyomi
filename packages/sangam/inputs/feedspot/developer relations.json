@@ -1,0 +1,34 @@
+{
+  "category": "Developer Relations",
+  "source_url": "https://rss.feedspot.com/developer_relations_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tessa Kriesel",
+      "feed_url": "https://www.tessakriesel.com/rss/",
+      "website_url": "https://www.tessakriesel.com/",
+      "description": "Developer Relations Leader Tessa Kriesel writes about the DevRel Job market, Strategies to keep in mind, and the latest community updates. Tessa has been an advisor to many early-stage startups. She also has many years of experience as a self-taught, open-source web developer previous to shifting into DevRel over 6 years ago.",
+      "followers": {
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5436153.jpg?t=1661518448"
+    },
+    {
+      "title": "DevRelCore",
+      "feed_url": "https://devrelcore.com/feed/",
+      "website_url": "https://devrelcore.com/insights/",
+      "description": "The DevRel Core insights page features the latest thought leadership, tips, and best practices for building effective developer relations programs. Our blog covers topics like community building, event organizing, content creation, developer marketing, advocacy, recruitment, and measuring the impact of developer initiatives.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5687856.jpg?t=1697110738"
+    },
+    {
+      "title": "AnswerHub Blog",
+      "feed_url": "https://www.answerhub.com/feed/",
+      "website_url": "https://ignitetech.ai/softwarelibrary/answerhub",
+      "description": "Our blog is where developer marketers, community managers, and dev relations professionals go looking for development best practices, community support and answers. Find guides, tips & tricks, and other valuable information. Answerhub is a platform purpose-built to capture, curate, and distribute your software and technical team's expertise, insights, and knowledge directly to your local and distributed teams.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5436155.jpg?t=1661518572"
+    }
+  ]
+}

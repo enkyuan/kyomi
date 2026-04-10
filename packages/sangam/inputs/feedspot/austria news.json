@@ -1,0 +1,149 @@
+{
+  "category": "Austria News",
+  "source_url": "https://rss.feedspot.com/austria_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kronen Zeitung",
+      "feed_url": "https://api.krone.at/v1/rss/rssfeed-google.xml?id=2311992",
+      "website_url": "https://www.krone.at/",
+      "description": "Current news, weather information, horoscope and news related to politics, sports, stars & society and health.",
+      "followers": {
+        "facebook": 413800,
+        "twitter": 150700,
+        "instagram": 192300
+      },
+      "image_url": "https://i1.feedspot.com/5343565.jpg?t=1757923497"
+    },
+    {
+      "title": "Salzburger Nachrichten",
+      "feed_url": "https://www.sn.at/xml/rss",
+      "website_url": "https://www.sn.at/",
+      "description": "The most interesting topics from politics, economy, culture & sport. Stay informed with news from all over the world, Austria and Salzburg.",
+      "followers": {
+        "facebook": 144500,
+        "twitter": 12800,
+        "instagram": 52000
+      },
+      "image_url": "https://i1.feedspot.com/5344015.jpg?t=1637154173"
+    },
+    {
+      "title": "O\u00d6Nachrichten",
+      "feed_url": "https://www.nachrichten.at/storage/rss/rss/nachrichten.xml",
+      "website_url": "https://www.nachrichten.at/",
+      "description": "Faster and more up-to-date information. Topics covered are politics, economy, sports, culture, opinions, and more.",
+      "followers": {
+        "facebook": 142500,
+        "twitter": 8200,
+        "instagram": 64800
+      },
+      "image_url": "https://i1.feedspot.com/1881022.jpg?t=1637154606"
+    },
+    {
+      "title": "N\u00d6N",
+      "feed_url": "https://www.noen.at/xml/rss",
+      "website_url": "https://www.noen.at/",
+      "description": "News, photos and service information from Lower Austria and surrounding region.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344043.jpg?t=1637158485"
+    },
+    {
+      "title": "OTS",
+      "feed_url": "https://www.ots.at/rss/index",
+      "website_url": "https://www.ots.at/",
+      "description": "Austria's largest portal for multimedia press information covering topics like sports, politics, finance, economy and more!",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 11300,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5344131.jpg?t=1637213492"
+    },
+    {
+      "title": "Die Presse",
+      "feed_url": "https://www.diepresse.com/rss//",
+      "website_url": "https://www.diepresse.com/",
+      "description": "Latest news and headlines related to economy, politics, sports, technology, culture, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5343872.jpg?t=1637149002"
+    },
+    {
+      "title": "Yeni Vatan Gazetesi",
+      "feed_url": "https://www.yenivatan.at/feed/",
+      "website_url": "https://www.yenivatan.at/",
+      "description": "Your news source in Austria. Articles on Austria, world, economy, culture, and more.",
+      "followers": {
+        "facebook": 128900,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5344129.jpg?t=1637588453"
+    },
+    {
+      "title": "Der Ennstaler",
+      "feed_url": "https://www.derennstaler.at/rss.xml",
+      "website_url": "https://www.derennstaler.at/",
+      "description": "Since 1906, Der Ennstaler is an independent weekly paper for the entire Enns, Palten and Liesing valley as well as the Salzkammergut and Salzburg.",
+      "followers": {
+        "facebook": 5100,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5344127.jpg?t=1637212391"
+    },
+    {
+      "title": "salzi.at",
+      "feed_url": "https://www.salzi.at/feed/",
+      "website_url": "https://www.thelocal.at/",
+      "description": "The best news from the Salzkammergut. Covering politics, economy, culture, sports, and more.",
+      "followers": {
+        "facebook": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5344128.jpg?t=1637212736"
+    },
+    {
+      "title": "The Local Austria",
+      "feed_url": "https://www.thelocal.at/",
+      "website_url": "https://www.thelocal.at/",
+      "description": "Daily news from Austria written in English by native English-speaking journalists. An entertaining blend of Austria's latest news headlines, politics, sport, business, and features.",
+      "followers": {
+        "facebook": 20300,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5343564.jpg?t=1637149186"
+    },
+    {
+      "title": "Wiener Zeitung",
+      "feed_url": "https://www.wienerzeitung.at/",
+      "website_url": "https://www.wienerzeitung.at/",
+      "description": "Independent reporting, analyzes, comments from politics, business, knowledge, culture and sport.",
+      "followers": {
+        "facebook": 52800,
+        "twitter": 61700,
+        "instagram": 40400
+      },
+      "image_url": "https://i1.feedspot.com/5299645.jpg?t=1637157713"
+    },
+    {
+      "title": "Die Tagespresse",
+      "feed_url": "https://dietagespresse.com/",
+      "website_url": "https://dietagespresse.com/",
+      "description": "Find out about news before it happens. Topics covered are politics, life, world, sports, and more.",
+      "followers": {
+        "facebook": 363900,
+        "twitter": 155600,
+        "instagram": 257600
+      },
+      "image_url": "https://i1.feedspot.com/1968230.jpg?t=1637214319"
+    },
+    {
+      "title": "Kleine Zeitung",
+      "feed_url": "https://www.kleinezeitung.at/",
+      "website_url": "https://www.kleinezeitung.at/",
+      "description": "Austria's largest provincial newspaper. Breaking news, unique regional content and news from Austria and around the world.",
+      "followers": {
+        "facebook": 261800,
+        "twitter": 74900,
+        "instagram": 109000
+      },
+      "image_url": "https://i1.feedspot.com/5343570.jpg?t=1637151443"
+    }
+  ]
+}

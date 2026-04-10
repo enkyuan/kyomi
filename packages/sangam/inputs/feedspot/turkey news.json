@@ -1,0 +1,272 @@
+{
+  "category": "Turkey News",
+  "source_url": "https://rss.feedspot.com/turkey_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sabah",
+      "feed_url": "https://www.sabah.com.tr/rss/anasayfa.xml",
+      "website_url": "https://www.sabah.com.tr/",
+      "description": "Sabah Newspaper's goal is to convey unbiased and reliable news, funny videos, and breaking news in the fastest way possible.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 2300000,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/1840476.jpg?t=1634642952"
+    },
+    {
+      "title": "Haber7",
+      "feed_url": "https://i12.haber7.net/sondakika/newsstand/latest.xml",
+      "website_url": "https://www.haber7.com/",
+      "description": "Haber7 covers breaking news from Turkey and the world, the latest news, newspaper headlines and columnists, prayer times from province to province; local news, politics, sports, economy, and more.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/5333446.jpg?t=1634643437"
+    },
+    {
+      "title": "Haberler.com",
+      "feed_url": "https://rss.haberler.com/rss.asp",
+      "website_url": "https://www.haberler.com/",
+      "description": "T\u00fcrkiye'nin en kapsaml\u0131 haber portal\u0131. Haber ve son dakika haberleri, magazin, spor ve ekonomi g\u00fcndemi, yerel ve d\u00fcnya haberleri.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 250600,
+        "instagram": 873100
+      },
+      "image_url": "https://i1.feedspot.com/5333448.jpg?t=1748436224"
+    },
+    {
+      "title": "Star.com.tr",
+      "feed_url": "https://www.star.com.tr/rss/rss.asp?cid=124",
+      "website_url": "https://www.star.com.tr/",
+      "description": "You can follow the latest news developments from Turkey and the World instantly. Flash news, breaking news from the world, the latest sports, politics, magazines, economy news, Weather, Dead Prayer Times, columnists, newspaper headlines of Turkey the best and up-to-date news is at star.com.tr.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 1300000,
+        "instagram": 189400
+      },
+      "image_url": "https://i1.feedspot.com/5258956.jpg?t=1634707052"
+    },
+    {
+      "title": "Cumhuriyet",
+      "feed_url": "https://www.cumhuriyet.com.tr/rss/1.xml",
+      "website_url": "https://www.cumhuriyet.com.tr/",
+      "description": "Cumhuriyet news is the only address for accurate news in Turkey with its experience of more than 90 years.",
+      "followers": {
+        "facebook": 2400000,
+        "twitter": 3700000,
+        "instagram": 486800
+      },
+      "image_url": "https://i1.feedspot.com/4207469.jpg?t=1634707198"
+    },
+    {
+      "title": "Gazete Vatan",
+      "feed_url": "https://www.gazetevatan.com/rss/gundem.xml",
+      "website_url": "https://www.gazetevatan.com/",
+      "description": "Vatan is Turkey's fastest internet news site.",
+      "followers": {
+        "facebook": 578800,
+        "twitter": 185900
+      },
+      "image_url": "https://i1.feedspot.com/5034900.jpg?t=1634707304"
+    },
+    {
+      "title": "Haber3",
+      "feed_url": "https://www.haber3.com/rss",
+      "website_url": "https://www.haber3.com/",
+      "description": "Haber 3 publishes news under the headings of current, economic, sports, culture-art, media, magazine, health, and the world.",
+      "followers": {
+        "facebook": 266900,
+        "twitter": 22700
+      },
+      "image_url": "https://i1.feedspot.com/1996467.jpg?t=1634707401"
+    },
+    {
+      "title": "EGE HABER",
+      "feed_url": "https://www.egehaber.com/feed/",
+      "website_url": "https://www.egehaber.com/",
+      "description": "Check the agenda from EGE for breaking news! Last Minute National, Economy, Politics, Magazine, Regional and all Izmir news with Ege News.",
+      "followers": {
+        "facebook": 603700,
+        "twitter": 13000
+      },
+      "image_url": "https://i1.feedspot.com/5333454.jpg?t=1634707746"
+    },
+    {
+      "title": "T24",
+      "feed_url": "https://t24.com.tr/rss/haberler",
+      "website_url": "https://t24.com.tr/",
+      "description": "T24 covers articles on daily news, sports updates, economic news, world updates, weather forecast, magazines, and more.",
+      "followers": {
+        "facebook": 345400,
+        "twitter": 2000000,
+        "instagram": 168200
+      },
+      "image_url": "https://i1.feedspot.com/1891350.jpg?t=1634708032"
+    },
+    {
+      "title": "61Saat",
+      "feed_url": "https://www.61saat.com/rss",
+      "website_url": "https://www.61saat.com/",
+      "description": "61Saat covers articles on Local news, sports, political updates, health, world news, entertainment, culture, and football updates.",
+      "followers": {
+        "facebook": 169600,
+        "twitter": 121100,
+        "instagram": 197800
+      },
+      "image_url": "https://i1.feedspot.com/5333456.jpg?t=1634708308"
+    },
+    {
+      "title": "Sol Haber",
+      "feed_url": "https://haber.sol.org.tr/rss.xml",
+      "website_url": "https://haber.sol.org.tr/",
+      "description": "Sol Haber covers Turkey news and updates along with International news.",
+      "followers": {
+        "facebook": 804500,
+        "twitter": 896500
+      },
+      "image_url": "https://i1.feedspot.com/653143.jpg?t=1634708616"
+    },
+    {
+      "title": "CNN Turk",
+      "feed_url": "https://www.cnnturk.com/feed/rss/turkiye/news",
+      "website_url": "https://www.cnnturk.com/",
+      "description": "News, breaking news, all developments from the world and Turkey, sports, economy, magazines, everything about life.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 5700000,
+        "instagram": 569200
+      },
+      "image_url": "https://i1.feedspot.com/4926641.jpg?t=1634708861"
+    },
+    {
+      "title": "NationalTurk",
+      "feed_url": "https://www.nationalturk.com/en/feed/",
+      "website_url": "https://www.nationalturk.com/en/",
+      "description": "Turkey and the world of news, the latest in politics, life, health news, breaking news and developments, interesting headlines in the NationalTurk!",
+      "followers": {
+        "facebook": 42000,
+        "twitter": 3700,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/519651.jpg?t=1634704672"
+    },
+    {
+      "title": "Defence Turkey Magazine",
+      "feed_url": "https://www.defenceturkey.com/rss.xml",
+      "website_url": "https://www.defenceturkey.com/",
+      "description": "Defense Turkey magazine is published in English every two months in the field of defense and aviation.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 38000
+      },
+      "image_url": "https://i1.feedspot.com/5333465.jpg?t=1635166322"
+    },
+    {
+      "title": "Insight Turkey",
+      "feed_url": "https://www.insightturkey.com/services/rss/articles/all",
+      "website_url": "https://www.insightturkey.com/",
+      "description": "Insight Turkey is a quarterly peer-reviewed journal covering a broad range of topics related to Turkish and international politics, published by the SETA Foundation in Turkey. Published since 1999, Insight Turkey has been a leading journal in the area of Middle Eastern and Islamic Studies.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 17900,
+        "instagram": 732
+      },
+      "image_url": "https://i1.feedspot.com/5333470.jpg?t=1634705523"
+    },
+    {
+      "title": "Habert\u00fcrk",
+      "feed_url": "https://www.haberturk.com/rss",
+      "website_url": "https://www.haberturk.com/",
+      "description": "Haberler, son dakika haberleri ve en son geli\u015fmeler Habert\u00fcrk'te! Gazete haberleri, g\u00fcncel olaylar ve ekonomi, magazin, g\u00fcndem, spor haberi T\u00fcrkiye'nin en b\u00fcy\u00fck internet gazetesinde!",
+      "followers": {
+        "facebook": 2700000,
+        "twitter": 5000000,
+        "instagram": 960600
+      },
+      "image_url": "https://i1.feedspot.com/5034829.jpg?t=1748496950"
+    },
+    {
+      "title": "Doing Business in Turkey",
+      "feed_url": "https://doingbusinessinturkey.com/feed/",
+      "website_url": "https://doingbusinessinturkey.com/in-the-news/",
+      "description": "Doing Business in Turkey is the leading business news and information portal that provides lots of resources for global entrepreneurs and corporates who consider starting or operating a business in Turkey.",
+      "followers": {
+        "facebook": 659,
+        "twitter": 32,
+        "instagram": 67
+      },
+      "image_url": "https://i1.feedspot.com/4994518.jpg?t=1622102193"
+    },
+    {
+      "title": "Duvar English",
+      "feed_url": "https://www.duvarenglish.com/export/rss",
+      "website_url": "https://www.duvarenglish.com/",
+      "description": "Turkey's own independent gazette. Covers articles on Women, the Economy, Politics, Human Rights, Education, and more.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 22900,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5333473.jpg?t=1634704981"
+    },
+    {
+      "title": "Bianet",
+      "feed_url": "https://bianet.org/english.rss",
+      "website_url": "https://bianet.org/english",
+      "description": "The Bianet approaches the current agenda of Turkey with the perspective of the news about rights and people.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 359900
+      },
+      "image_url": "https://i1.feedspot.com/40115.jpg?t=1634705974"
+    },
+    {
+      "title": "S\u00f6zc\u00fc Gazetesi",
+      "feed_url": "https://www.sozcu.com.tr/",
+      "website_url": "https://www.sozcu.com.tr/",
+      "description": "S\u00f6zc\u00fc Gazetesi covers articles on daily news, science & technology, world updates, economy, sports, astrology, automotive, and more.",
+      "followers": {
+        "facebook": 4000000,
+        "twitter": 4099999,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5034881.jpg?t=1634706317"
+    },
+    {
+      "title": "SonDakika.com",
+      "feed_url": "https://www.sondakika.com/",
+      "website_url": "https://www.sondakika.com/",
+      "description": "You can find breaking news quickly and impartially on SonDakika.com. Last-minute news and new developments on the agenda are here with all the details.",
+      "followers": {
+        "facebook": 39000,
+        "twitter": 25700
+      },
+      "image_url": "https://i1.feedspot.com/5333452.jpg?t=1634707481"
+    },
+    {
+      "title": "Bursada Bug\u00fcn",
+      "feed_url": "https://www.bursadabugun.com/rss/?feed=haberler",
+      "website_url": "https://www.bursadabugun.com/",
+      "description": "Bursa news is Bursa's most-followed Internet newspaper, where public safety, economy, sports, magazine, education, health, politics, current and special news are published the fastest and live.",
+      "followers": {
+        "facebook": 298000,
+        "twitter": 71800
+      },
+      "image_url": "https://i1.feedspot.com/5333455.jpg?t=1634707844"
+    },
+    {
+      "title": "Ahval",
+      "feed_url": "https://ahvalnews.com/feeds",
+      "website_url": "https://ahvalnews.com/",
+      "description": "Unique independent and free source of news, analysis, comment. Ahval is designed to connect with readers' demand for well-informed and well-edited analysis and opinion about Turkey.",
+      "followers": {
+        "facebook": 107300,
+        "twitter": 29600
+      },
+      "image_url": "https://i1.feedspot.com/5054610.jpg?t=1634706088"
+    }
+  ]
+}

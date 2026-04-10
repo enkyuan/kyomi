@@ -1,0 +1,40 @@
+{
+  "category": "Tacoma News",
+  "source_url": "https://rss.feedspot.com/tacoma_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Tacoma Daily Index",
+      "feed_url": "http://www.tacomadailyindex.com/feed/",
+      "website_url": "https://www.tacomadailyindex.com/",
+      "description": "A compendium of news and data useful to those engaged in business and commerce in the Tacoma area and also Serving Tacoma's business and legal community since 1890.",
+      "followers": {
+        "facebook": 546,
+        "twitter": 524
+      },
+      "image_url": "https://i1.feedspot.com/4923035.jpg?t=1620886413"
+    },
+    {
+      "title": "Tacoma News Tribune",
+      "feed_url": "https://tacomaweekly.com/",
+      "website_url": "https://tacomaweekly.com/",
+      "description": "Read local news stories about Tacoma Washington and the surrounding areas. Enjoy today's coverage on topics including crime, weather, sports, community events and more from around Pierce County.",
+      "followers": {
+        "facebook": 108500,
+        "twitter": 94300
+      },
+      "image_url": "https://i1.feedspot.com/5131544.jpg?t=1669813030"
+    },
+    {
+      "title": "Tacoma Weekly",
+      "feed_url": "https://tacomaweekly.com/feed/",
+      "website_url": "https://tacomaweekly.com/",
+      "description": "Our philosophy is to cover local news and events tailored to the communities we serve. While other newspapers often stretch out their coverage over a wide geographic area, we choose to focus on specific cities.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 13200,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4922695.jpg?t=1620886388"
+    }
+  ]
+}

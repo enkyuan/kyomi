@@ -1,0 +1,508 @@
+{
+  "category": "Music News",
+  "source_url": "https://rss.feedspot.com/music_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Billboard.com",
+      "feed_url": "https://www.billboard.com/feed/",
+      "website_url": "https://www.billboard.com/",
+      "description": "Stay up to date with the latest music industry news and updates on the Billboard. Billboard is the world's most influential music media brand, with an unmatched authority among artists, fans and the industry.",
+      "followers": {
+        "facebook": 14600000,
+        "twitter": 14300000,
+        "instagram": 17600000
+      },
+      "image_url": "https://i1.feedspot.com/4819098.jpg?t=1743156784"
+    },
+    {
+      "title": "Loudwire",
+      "feed_url": "https://loudwire.com/feed/",
+      "website_url": "https://loudwire.com/category/news/",
+      "description": "Discover buzzing Rock music news, interviews, reviews, and more from rock artists. Follow the latest stories and events across the Rock and Heavy Metal world. Loudwire is the No. 1 source for rock and metal subculture. It is owned by Townsquare Media.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 573300,
+        "instagram": 969900
+      },
+      "image_url": "https://i1.feedspot.com/815658.jpg?t=1657630544"
+    },
+    {
+      "title": "NPR \u00bb Music",
+      "feed_url": "https://feeds.npr.org/1039/rss.xml",
+      "website_url": "https://www.npr.org/music/",
+      "description": "NPR is an independent, nonprofit media organization that was founded on a mission to create a more informed public. Every day, NPR connects with millions of Americans to explore the news, ideas, and what it means to be human. In the following segment, NPR features Music news, streams, live concerts, and more.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5206758.jpg?t=1717487044"
+    },
+    {
+      "title": "Digital Music News",
+      "feed_url": "https://www.digitalmusicnews.com/feed/?format=rss",
+      "website_url": "https://www.digitalmusicnews.com/",
+      "description": "Digital Music News is the music industry's leading source for news on developments, technology, and trends. DMN is for people in music!",
+      "followers": {
+        "facebook": 25300,
+        "twitter": 87000,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/4819766.jpg?t=1639745695"
+    },
+    {
+      "title": "Music-News.com",
+      "feed_url": "https://www.music-news.com/rss/c5RAS2tkYoRTvbRq/UK/news",
+      "website_url": "https://www.music-news.com/news/",
+      "description": "Music-News.com features news, reviews, interviews, competitions, the latest releases, and all the gossip from the worldwide music scene including unsigned.",
+      "followers": {
+        "facebook": 122200,
+        "twitter": 66000,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4819116.jpg?t=1639833440"
+    },
+    {
+      "title": "HipHopDX",
+      "feed_url": "https://hiphopdx.com/rss/news.xml",
+      "website_url": "https://hiphopdx.com/news",
+      "description": "HipHopDX is the internet's #1 source for Hip Hop news, interviews, music & reviews. Find about Hip Hop music, Hip Hop news & all things Rap & Hip Hop.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 787800,
+        "instagram": 919400
+      },
+      "image_url": "https://i1.feedspot.com/4819187.jpg?t=1629118299"
+    },
+    {
+      "title": "Ultimate Classic Rock",
+      "feed_url": "https://ultimateclassicrock.com/feed/",
+      "website_url": "https://ultimateclassicrock.com/category/news/",
+      "description": "Ultimate Classic Rock is the world's largest classic rock site, exploring the past, present, and future of music's most legendary and enduring artists. Classic rock music news, interviews, pictures, songs, and lists from classic rock artists.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 342900,
+        "instagram": 39400
+      },
+      "image_url": "https://i1.feedspot.com/67940.jpg?t=1604486696"
+    },
+    {
+      "title": "Metal Underground.com",
+      "feed_url": "https://feeds.feedburner.com/metalunderground",
+      "website_url": "http://www.metalunderground.com/",
+      "description": "MetalUnderground.com has been faithfully serving mainstream and underground metal news for almost ten years. In addition to comprehensive news coverage, Metalunderground.com also features reviews, interviews, band info, live concert reports, photos, and more, updated daily by a dedicated staff of die-hard metalheads.",
+      "followers": {
+        "facebook": 1000000,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/1042.jpg?t=1605257210"
+    },
+    {
+      "title": "EDM.com",
+      "feed_url": "https://edm.com/.rss/full/",
+      "website_url": "https://edm.com/",
+      "description": "EDM.com is the definitive voice of electronic dance music. Our mission is to inspire and inform members of our community and the general public by providing balanced coverage of the worldwide EDM movement.",
+      "followers": {
+        "facebook": 2100000,
+        "twitter": 172700,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4443965.jpg?t=1600507200"
+    },
+    {
+      "title": "The Daily Music Report",
+      "feed_url": "https://thedailymusicreport.com/feed/",
+      "website_url": "https://thedailymusicreport.com/",
+      "description": "The Daily Music Report showcases music news on upcoming albums, tours, and more. We offer music news from across the web in a simple, easy-to-read website.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 333
+      },
+      "image_url": "https://i1.feedspot.com/5282555.jpg?t=1621501036"
+    },
+    {
+      "title": "XXL Magazine",
+      "feed_url": "https://www.xxlmag.com/feed/",
+      "website_url": "https://www.xxlmag.com/",
+      "description": "A leading voice in hip-hop since 1997, XXL delivers the latest hip-hop music, news and features to a highly engaged urban audience in print and online.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 4800000,
+        "instagram": 9400000
+      },
+      "image_url": "https://i1.feedspot.com/274305.jpg?t=1608539228"
+    },
+    {
+      "title": "TJPL News",
+      "feed_url": "https://www.tjplnews.com/blog-feed.xml",
+      "website_url": "https://www.tjplnews.com/",
+      "description": "Discover TJPL News, your ultimate music destination. Explore reviews of hip-hop, rap, R&B, dance, pop, acoustic, indie rock, and guitar riffs. Get exclusive artist interviews, discover rising stars, and stay updated with the latest music trends and news",
+      "followers": {
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5672039.jpg?t=1694782047"
+    },
+    {
+      "title": "NME \u00bb Music",
+      "feed_url": "https://www.nme.com/news/music/feed",
+      "website_url": "https://www.nme.com/news/music",
+      "description": "Get the latest music news, music videos and music releases from your favourite bands and artists around the world.",
+      "followers": {
+        "facebook": 956400,
+        "twitter": 859700,
+        "instagram": 579200
+      },
+      "image_url": "https://i1.feedspot.com/4754626.jpg?t=1515580612"
+    },
+    {
+      "title": "Spin",
+      "feed_url": "https://www.spin.com/feed/",
+      "website_url": "https://www.spin.com/",
+      "description": "From the concert stage to the dressing room, from the recording studio to the digital realm, SPIN surveys the modern musical landscape and the culture around it with reporting, interviews, and a discerning critical ear.",
+      "followers": {
+        "facebook": 907700,
+        "twitter": 488800,
+        "instagram": 868900
+      },
+      "image_url": "https://i1.feedspot.com/4786773.jpg?t=1609402703"
+    },
+    {
+      "title": "Music Business Worldwide",
+      "feed_url": "https://www.musicbusinessworldwide.com/feed/",
+      "website_url": "https://www.musicbusinessworldwide.com/",
+      "description": "Music Business Worldwide (MBW) is the leading information service for the global music industry. Established in 2015, MBW provides news, insight and jobs to the worldwide business.",
+      "followers": {
+        "facebook": 64400,
+        "twitter": 29200
+      },
+      "image_url": "https://i1.feedspot.com/4718721.jpg?t=1639740250"
+    },
+    {
+      "title": "FACT Magazine",
+      "feed_url": "https://feeds.feedburner.com/factmag",
+      "website_url": "https://www.factmag.com/",
+      "description": "The world's most on-it music blog and magazine, home of the weekly FACt mix series and FACT TV.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/698755.jpg?t=1659417024"
+    },
+    {
+      "title": "TheMusic.com.au",
+      "feed_url": "https://themusic.com.au/feed.rss",
+      "website_url": "https://themusic.com.au/news",
+      "description": "Features music news, interviews, reviews and opinions. The Music aims to be a point of difference in the independent Australian music media; to provide considered, engaging stories built on an unwavering adherence to high ethical standards and respect for our audience.",
+      "followers": {
+        "facebook": 127200,
+        "twitter": 23500,
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4820211.jpg?t=1620109777"
+    },
+    {
+      "title": "Rock Sound",
+      "feed_url": "https://rocksound.tv/feed",
+      "website_url": "https://rocksound.tv/",
+      "description": "Rock Sound Magazine brings you the latest rock, metal, pop-punk and metalcore music news and reviews, music videos and pictures.",
+      "followers": {
+        "facebook": 710300,
+        "twitter": 400900,
+        "instagram": 278000
+      },
+      "image_url": "https://i1.feedspot.com/4821435.jpg?t=1628577124"
+    },
+    {
+      "title": "Relix",
+      "feed_url": "https://relix.com/feed/",
+      "website_url": "https://relix.com/",
+      "description": "Catch up on live music with a focus on band interviews, album reviews, concert festivals, music videos, podcasts, musician classifieds, and show reviews. Relix Magazine is a print and online publication that focuses on the live music scene and features a wide spectrum of artists ranging from Phish and Tedeschi Trucks Band to Tame Impala and more.",
+      "followers": {
+        "facebook": 349200,
+        "twitter": 81400,
+        "instagram": 158600
+      },
+      "image_url": "https://i1.feedspot.com/4820052.jpg?t=1670565116"
+    },
+    {
+      "title": "Louder Than War",
+      "feed_url": "https://louderthanwar.com/feed/",
+      "website_url": "https://louderthanwar.com/",
+      "description": "Louder Than War is the UK's fastest growing and award-winning music and culture website. It brings latest music news and reviews, interviews and features as well as discussion on international punk rock and pop culture.",
+      "followers": {
+        "facebook": 50300,
+        "twitter": 40700,
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/1526535.jpg?t=1662974369"
+    },
+    {
+      "title": "UNCUT",
+      "feed_url": "https://www.uncut.co.uk/feed/",
+      "website_url": "https://www.uncut.co.uk/",
+      "description": "Uncut Magazine is the spiritual home of great rock music. The magazine features Classic interviews, in-depth new album reviews, essential news stories, live reviews, films, DVDs, and much more.",
+      "followers": {
+        "facebook": 137000,
+        "twitter": 54200,
+        "instagram": 27100
+      },
+      "image_url": "https://i1.feedspot.com/4820853.jpg?t=1678882475"
+    },
+    {
+      "title": "Complete Music Update",
+      "feed_url": "https://completemusicupdate.com/rss/",
+      "website_url": "https://completemusicupdate.com/",
+      "description": "CMU - or Complete Music Update - helps people to navigate and understand the music business through media, training, research, and events. Founded in London in 1998, CMU brings together, informs, and educates the global music community, and champions great music, music-makers, and music businesses.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 17800,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/3886434.jpg?t=1611221199"
+    },
+    {
+      "title": "Bluegrass Today",
+      "feed_url": "https://bluegrasstoday.com/feed/",
+      "website_url": "https://bluegrasstoday.com/category/bluegrass-at-large/",
+      "description": "Your independent source of bluegrass news. Follow the latest news on all of your favorite bluegrass artists from yesterday to today. View the concert calendar & read album reviews. Discover something new today!",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 16800,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4714893.jpg?t=1607335185"
+    },
+    {
+      "title": "UnderTheRadar",
+      "feed_url": "https://feeds.feedburner.com/UndertheradarconzNews",
+      "website_url": "https://www.undertheradar.co.nz/utr/news",
+      "description": "New Zealand based independent music website focused on alternative music from home and abroad through daily editorial, a nationwide gig guide, and ticketing service.",
+      "followers": {
+        "facebook": 36900,
+        "twitter": 8200,
+        "instagram": 18100
+      },
+      "image_url": "https://i1.feedspot.com/1853981.jpg?t=1634363527"
+    },
+    {
+      "title": "American Blues Scene",
+      "feed_url": "https://www.americanbluesscene.com/category/news/feed/",
+      "website_url": "https://www.americanbluesscene.com/",
+      "description": "You can get the latest in awesome quality music and blues news at AmericanBluesScene.com.",
+      "followers": {
+        "facebook": 170800,
+        "twitter": 30400,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4820184.jpg"
+    },
+    {
+      "title": "World Music Network Blog",
+      "feed_url": "https://worldmusic.net/blogs/news.atom",
+      "website_url": "https://worldmusic.net/blogs/news",
+      "description": "World Music Network is one of the leading forces on the international music scene for over 25 years, World Music Network/Riverboat Records specializes in world, jazz, blues, folk, and a treasure-trove of undiscovered sounds.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4820677.jpg?t=1675924070"
+    },
+    {
+      "title": "Aipate",
+      "feed_url": "https://aipate.com/category/news/feed/",
+      "website_url": "https://aipate.com/",
+      "description": "Kenyan music blog providing access to popular music through reviews, insights, interviews, videos, and albums and news.",
+      "followers": {
+        "facebook": 3600,
+        "instagram": 864
+      },
+      "image_url": "https://i1.feedspot.com/4820731.jpg?t=1647323507"
+    },
+    {
+      "title": "Noisecreep",
+      "feed_url": "https://noisecreep.com/feed/",
+      "website_url": "https://noisecreep.com/category/news/",
+      "description": "From metal to rock, we've got the latest music videos, songs and exclusive interviews with hard rock, classic rock and metal bands.",
+      "followers": {
+        "twitter": 48600
+      },
+      "image_url": "https://i1.feedspot.com/4671283.jpg?t=1604488895"
+    },
+    {
+      "title": "Alternative Press",
+      "feed_url": "https://www.altpress.com/feed/",
+      "website_url": "https://www.altpress.com/",
+      "description": "A leader in alternative culture news covering everything from new music releases to exclusive artist merchandise. Alternative Press is an American music magazine based in Cleveland, Ohio.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 628200,
+        "instagram": 853800
+      },
+      "image_url": "https://i1.feedspot.com/5015702.jpg?t=1608539209"
+    },
+    {
+      "title": "EDM Nations",
+      "feed_url": "https://edmnations.com/feed/",
+      "website_url": "https://edmnations.com/",
+      "description": "We are your reliable source of EDM News about your favorite DJ's, festivals, producers and software & hardware updates.",
+      "followers": {
+        "facebook": 124700,
+        "twitter": 32299,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4709896.jpg?t=1619692024"
+    },
+    {
+      "title": "MetalSucks",
+      "feed_url": "https://feeds.feedburner.com/Metalsucks",
+      "website_url": "https://www.metalsucks.net/",
+      "description": "The most trusted source for metal opinion, analysis and up-to-date breaking news on tour dates and new music from artists ranging from the biggest in the world to the underground.",
+      "followers": {
+        "facebook": 511300,
+        "twitter": 102300,
+        "instagram": 86400
+      },
+      "image_url": "https://i1.feedspot.com/168460.jpg?t=1600507371"
+    },
+    {
+      "title": "Country Music Rocks",
+      "feed_url": "https://countrymusicrocks.net/feed/",
+      "website_url": "https://countrymusicrocks.net/",
+      "description": "Bringing You Everything Country!! We've Got Your Latest Country Music News, Reviews, Interviews, Contests & More...",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 46300,
+        "instagram": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4715064.jpg?t=1620026737"
+    },
+    {
+      "title": "Clash Magazine",
+      "feed_url": "https://www.clashmusic.com/feed/",
+      "website_url": "https://www.clashmusic.com/",
+      "description": "ClashMusic.com is a definitive online guide to leading music and music trends - covering the best of breaking to established artists alongside news, reviews, features, photo galleries and video exclusives.",
+      "followers": {
+        "facebook": 213700,
+        "twitter": 88100,
+        "instagram": 360500
+      },
+      "image_url": "https://i1.feedspot.com/54.jpg?t=1628577355"
+    },
+    {
+      "title": "Music Feeds",
+      "feed_url": "https://musicfeeds.com.au/feed/",
+      "website_url": "https://musicfeeds.com.au/news/",
+      "description": "Covering Australia's Indie Music Scene and Beyond - Music News, Reviews, Interviews and Culture.",
+      "followers": {
+        "facebook": 213200,
+        "twitter": 30500
+      },
+      "image_url": "https://i1.feedspot.com/4819994.jpg?t=1620109740"
+    },
+    {
+      "title": "Top40-Charts.com",
+      "feed_url": "https://top40-charts.com/allnewsfeed.php",
+      "website_url": "https://top40-charts.com/",
+      "description": "Top40-Charts.com provides music charts from all over the world, like US / UK Albums and Singles, Bilboard Chart, Dance charts and more. Read the latest music news on rock, pop, country, jazz, rap, hip hop and more, get ringtones and lyrics...",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/1968018.jpg"
+    },
+    {
+      "title": "Avant Music News",
+      "feed_url": "https://avantmusicnews.com/feed/",
+      "website_url": "https://avantmusicnews.com/",
+      "description": "A source for news on music that is challenging, interesting, different, progressive, introspective, or just plain weird. Since 2003, Avant Music News has been the daily source of new about weird, non-mainstream, complex music. We publish daily links to articles regarding tour dates, releases, reviews, interviews, and various other items of interest. From time to time, we also publish our own reviews and interviews.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4819917.jpg?t=1653910584"
+    },
+    {
+      "title": "Warner Music Ireland",
+      "feed_url": "https://www.warnermusic.ie/news/feed/",
+      "website_url": "https://www.warnermusic.ie/news/",
+      "description": "Latest News from Warner Music Ireland Artists.",
+      "followers": {
+        "twitter": 22000
+      },
+      "image_url": "https://i1.feedspot.com/4820099.jpg?t=1516259336"
+    },
+    {
+      "title": "Jamaicans music",
+      "feed_url": "http://jamaicansmusic.com/rss/news",
+      "website_url": "https://jamaicansmusic.com/news",
+      "description": "An unequalled mega hub for all things Reggae & Dancehall related; spanning music, videos, interviews, artworks, tracklists, news, and much more.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 46600,
+        "instagram": 30300
+      },
+      "image_url": "https://i1.feedspot.com/4820107.jpg"
+    },
+    {
+      "title": "The Boombox",
+      "feed_url": "https://theboombox.com/feed/",
+      "website_url": "https://theboombox.com/",
+      "description": "Follow us to keep up with Top R&B and hip hop news, music videos, newest songs and exclusive interviews with the hottest rappers and R&B artists.",
+      "followers": {
+        "facebook": 174600,
+        "twitter": 29800,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/1819383.jpg?t=1601042600"
+    },
+    {
+      "title": "Blabbermouth.net",
+      "feed_url": "https://blabbermouth.net/feed.rss",
+      "website_url": "https://blabbermouth.net/news",
+      "description": "Blabbermouth.net is the CNN of heavy metal and hard rock news, reviews and music featuring the latest news, reviews, tour dates, release dates and rss heavy metal and hard rock feeds",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 251100
+      },
+      "image_url": "https://i1.feedspot.com/2346118.jpg?t=1604487785"
+    },
+    {
+      "title": "The Industry Observer",
+      "feed_url": "https://theindustryobserver.thebrag.com/feed/",
+      "website_url": "https://themusicnetwork.com/news/",
+      "description": "The Industry Observer is Australia's leading music industry news resource for music professionals, musicians and students.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4820141.jpg?t=1515419320"
+    },
+    {
+      "title": "Music Times Now",
+      "feed_url": "https://musictimesnow.com/feed/",
+      "website_url": "https://musictimesnow.com/",
+      "description": "Featuring Music and Musician News Worldwide. Get all about Music, Lifestyle, Movies, and Entertainment on this site.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5380825.jpg?t=1647331285"
+    },
+    {
+      "title": "The Industry.Biz",
+      "feed_url": "https://tidbiz.com/",
+      "website_url": "https://www.indiecentralmusic.com/news/",
+      "description": "Radio Facts provides the lastest music industry and radio industry news. Latest hip hop news, Charlamagne, Rickey Smiley , Black Lives Matter and Steve Harvey.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5174496.jpg?t=1595859375"
+    },
+    {
+      "title": "IndieCentralMusic",
+      "feed_url": "https://www.indiecentralmusic.com/news/",
+      "website_url": "https://www.indiecentralmusic.com/news/",
+      "description": "Welcome to IndieCentralMusic, the central hub for indie music! Check out all the latest news, reviews and discoveries, along with radio, TV & gigs!",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 3400,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4819871.jpg"
+    }
+  ]
+}

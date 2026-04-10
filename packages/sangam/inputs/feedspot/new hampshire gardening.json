@@ -1,0 +1,81 @@
+{
+  "category": "New Hampshire Gardening",
+  "source_url": "https://rss.feedspot.com/new_hampshire_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "New Hampshire Gardening Blog",
+      "feed_url": "https://vegetablegarden.home.blog/feed/",
+      "website_url": "https://vegetablegarden.home.blog/",
+      "description": "Get all necessary local, vegetable gardening tips and information from John Kittredge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5321838.jpg?t=1631619058"
+    },
+    {
+      "title": "Wentworth Greenhouses Blog",
+      "feed_url": "https://wentworthgreenhouses.com/category/blog/feed/",
+      "website_url": "https://wentworthgreenhouses.com/category/blog/",
+      "description": "Here at Wentworth Greenhouses, located in Seacoast area New Hampshire, we enjoy sharing with our customers over fifty years of experience in growing quality plants; including houseplants, flowering potted plants, annuals, vegetables, perennials, and herbs in our 6+ acres of production greenhouses.",
+      "followers": {
+        "facebook": 15000,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5321840.jpg?t=1631619046"
+    },
+    {
+      "title": "Sea of Green Lawn Care Blog",
+      "feed_url": "https://seaofgreenlawncare.com/blog/feed/",
+      "website_url": "https://seaofgreenlawncare.com/blog/",
+      "description": "Check out our blog page for helpful tips and ideas on lawn care & pest control services. Sea of Green's mission is to provide the North Shore with trusted and knowledgeable lawn care service.",
+      "followers": {
+        "facebook": 126,
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/5324144.jpg?t=1632297393"
+    },
+    {
+      "title": "Three Rivers \u00bb Gardening",
+      "feed_url": "https://threeriversfundraising.com/blog/category/gardening/feed/",
+      "website_url": "https://threeriversfundraising.com/blog/category/gardening/",
+      "description": "The following section of Three Rivers is dedicated to gardening. Established in 1991, we offer premium quality wreaths, flower bulbs, and potted plants for fundraising. We also supply wholesale wreaths to garden centers and other retailers.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 283
+      },
+      "image_url": "https://i1.feedspot.com/5321818.jpg?t=1631615378"
+    },
+    {
+      "title": "Mainely Grass Blog",
+      "feed_url": "https://www.mainelygrass.com/feed/",
+      "website_url": "https://www.mainelygrass.com/blog",
+      "description": "A deep dive into lawn care tips and tricks that we've learned over the course of our 20+ year history of servicing local lawns. Mainely Grass is a local New England lawn care company, dedicated to meeting and exceeding customer expectations.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5321817.jpg?t=1631615374"
+    },
+    {
+      "title": "Alliance Landscaping Blog",
+      "feed_url": "https://alliancelandscaping.com/feed/",
+      "website_url": "https://alliancelandscaping.com/blog",
+      "description": "Learn the tips and tricks of the trade from our variety of blog topics. Learn why we're the best landscaping services in New Hampshire! Alliance Landscaping is a locally owned and operated New Hampshire lawn and turf care business.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 28,
+        "instagram": 321
+      },
+      "image_url": "https://i1.feedspot.com/5324136.jpg?t=1632296252"
+    },
+    {
+      "title": "Old Farmer's Almanac \u00bb Gardening",
+      "feed_url": "https://www.almanac.com/gardening",
+      "website_url": "https://www.almanac.com/gardening",
+      "description": "Vegetable gardening for beginners, planting guides, garden planting, gardening tips. The Old Farmer's Almanac is your trusted source for long-range weather forecasts, moon phases, full moon dates and times, gardening tips, sunrise and sunset times, Best Days, tide charts, home remedies, folklore, and more.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 31000,
+        "instagram": 310800
+      },
+      "image_url": "https://i1.feedspot.com/5324132.jpg?t=1632295270"
+    }
+  ]
+}

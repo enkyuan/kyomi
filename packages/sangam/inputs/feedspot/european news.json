@@ -1,0 +1,196 @@
+{
+  "category": "European News",
+  "source_url": "https://rss.feedspot.com/european_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Euronews",
+      "feed_url": "https://feeds.feedburner.com/euronews/en/home/",
+      "website_url": "https://www.euronews.com/",
+      "description": "Latest breaking news available as free video on demand. Stay informed of European and World news about economy, politics, diplomacy with Euronews.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 586000,
+        "instagram": 765100
+      },
+      "image_url": "https://i1.feedspot.com/150969.jpg?t=1553497009"
+    },
+    {
+      "title": "European Newsroom",
+      "feed_url": "https://europeannewsroom.com/feed/",
+      "website_url": "https://europeannewsroom.com/",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/7326988.jpg?t=1721205047"
+    },
+    {
+      "title": "POLITICO Europe",
+      "feed_url": "https://www.politico.eu/feed/",
+      "website_url": "https://www.politico.eu/latest/",
+      "description": "Read commentary on European Politics, Policy, and Government News. POLITICO covers the politics, policy, and personalities of the European Union. With reporting assets across the Continent, POLITICO's coverage includes video features, regular columns, photo galleries, cartoons, and political forums.",
+      "followers": {
+        "facebook": 236500,
+        "twitter": 358700
+      },
+      "image_url": "https://i1.feedspot.com/4293089.jpg?t=1666935827"
+    },
+    {
+      "title": "Trend News Agency",
+      "feed_url": "https://en.trend.az/feeds/index.rss",
+      "website_url": "https://en.trend.az/",
+      "description": "Trend News Agency is a leading news provider from the Caucasus, Caspian and Central Asian regions. Latest news from Azerbaijan, Georgia, Kazakhstan, Turkmenistan, Uzbekistan, Iran and Turkey.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/3987329.jpg"
+    },
+    {
+      "title": "EU Reporter",
+      "feed_url": "https://www.eureporter.co/feed/",
+      "website_url": "https://www.eureporter.co/",
+      "description": "EU Reporter is a Brussels based European multimedia news platform, providing online news and video comment on EU and world affairs in all EU official languages.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5025283.jpg?t=1558958936"
+    },
+    {
+      "title": "France 24 \u00bb Europe",
+      "feed_url": "https://www.france24.com/en/europe/rss",
+      "website_url": "https://www.france24.com/en/europe/",
+      "description": "The Europe section of France24 covers a wide range of news and events across European countries. It provides detailed reports on political developments, economic issues, social changes, and cultural happenings. The section includes articles, videos, and live updates, aiming to keep readers informed about significant events and trends within Europe.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 445600,
+        "instagram": 481800
+      },
+      "image_url": "https://i1.feedspot.com/5081442.jpg?t=1721204904"
+    },
+    {
+      "title": "Euractiv",
+      "feed_url": "https://www.euractiv.com/?feed=mcfeed",
+      "website_url": "https://www.euractiv.com/",
+      "description": "Euractiv is an independent pan-European media network specializing in EU affairs. It covers a wide range of topics related to European Union policies and political developments. The site offers in-depth news articles, analysis, and reports on various subjects including politics, economy, energy, environment, and technology.",
+      "followers": {
+        "facebook": 72400,
+        "twitter": 161000
+      },
+      "image_url": "https://i1.feedspot.com/4634048.jpg?t=1720787848"
+    },
+    {
+      "title": "Radio Free Europe/Radio Liberty",
+      "feed_url": "https://www.rferl.org/api/",
+      "website_url": "https://www.rferl.org/",
+      "description": "Radio Free Europe / Radio Liberty is an international news and broadcast organization serving Central and Eastern Europe, the Caucasus, Central Asia, Russia, the Middle East and Balkan countries.",
+      "followers": {
+        "facebook": 832000,
+        "twitter": 207000,
+        "instagram": 52800
+      },
+      "image_url": "https://i1.feedspot.com/4634068.jpg"
+    },
+    {
+      "title": "Voxeurop",
+      "feed_url": "https://voxeurop.eu/en/feed/",
+      "website_url": "https://voxeurop.eu/en/",
+      "description": "VoxEurop is a non-profit European news and debate website in ten languages. It aims to provide current affairs coverage to the widest possible European audience.",
+      "followers": {
+        "facebook": 46000,
+        "twitter": 21800
+      },
+      "image_url": "https://i1.feedspot.com/4235362.jpg"
+    },
+    {
+      "title": "Electropiknik CZ",
+      "feed_url": "https://electropiknik.cz/feed/",
+      "website_url": "https://electropiknik.cz/",
+      "description": "Electropiknik CZ covers a broad range of topics related to lifestyle, art, news from around the world, as well as local news from the Czech Republic, and promoting a healthy way of life. Our team is dedicated to providing our readers with high-quality content on various aspects of life such as travel, food, fashion, and wellness. We also provide a platform for artists, designers, and creatives to showcase their work and inspire others.",
+      "followers": {
+        "facebook": 38800,
+        "twitter": 588
+      },
+      "image_url": "https://i1.feedspot.com/5546459.jpg?t=1681984596"
+    },
+    {
+      "title": "The Baltic Times",
+      "feed_url": "https://feeds.feedburner.com/TheBalticTimesNews",
+      "website_url": "https://www.baltictimes.com/",
+      "description": "The Baltic Times is an independent newspaper that covers the latest news about politics, business, culture and sport in Estonia, Latvia, and Lithuania.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4367309.jpg?t=1553497002"
+    },
+    {
+      "title": "The European Times News",
+      "feed_url": "https://europeantimes.news/feed/",
+      "website_url": "https://europeantimes.news/",
+      "description": "The European Times is a news provider trademark and offers European news, breaking news, opinions and stories, and some stories that you will not find anywhere else. We aim to cover news that matter to increase the awareness of citizens all around geographical Europe and beyond.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 1300,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5298167.jpg?t=1625133284"
+    },
+    {
+      "title": "Brussels Morning",
+      "feed_url": "https://brusselsmorning.com/feed/",
+      "website_url": "https://brusselsmorning.com/",
+      "description": "Brussels Morning is a daily electronic newspaper based in Belgium, Covering European Affairs with a special focus on EU politics such as European Parliament, the Commission, and the Council.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5210089.jpg?t=1635225220"
+    },
+    {
+      "title": "The Local Spain",
+      "feed_url": "https://feeds.thelocal.com/rss/es",
+      "website_url": "https://www.thelocal.es/",
+      "description": "The Local is the largest Spain's News source in English. Our entertaining blend of daily news, business and features has made the site essential reading for foreign professionals in Europe.",
+      "followers": {
+        "facebook": 73200,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/4478771.jpg?t=1603890627"
+    },
+    {
+      "title": "EUobserver",
+      "feed_url": "https://xml.euobserver.com/rss.xml",
+      "website_url": "https://euobserver.com/",
+      "description": "EUobserver is an online not-for-profit newspaper reporting on the European Union. It is financially and editorially independent of the EU institutions. Our team of experienced journalists file daily news reports from the EU capital and do in-depth investigations on topics of special interest.",
+      "followers": {
+        "facebook": 129900,
+        "twitter": 201900,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4622250.jpg?t=1552647871"
+    },
+    {
+      "title": "The Brussels Times",
+      "feed_url": "https://www.brusselstimes.com/",
+      "website_url": "https://www.brusselstimes.com/",
+      "description": "Provides expats, foreigners and internationally oriented Belgians with continuous high quality coverage of Belgian news, EU Affairs and opinion pieces. The Brussels Times seeks to present the news fair-mindedly and offer a wide range of analysis and opinion pieces.",
+      "followers": {
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5084923.jpg?t=1637216523"
+    },
+    {
+      "title": "Euronewsweek",
+      "feed_url": "https://euronewsweek.co.uk/feed/",
+      "website_url": "https://euronewsweek.co.uk/",
+      "description": "EuroNewsweek is a dynamic news platform featuring leadership, creative marketing, tech, businesses, and the brilliant people behind them.",
+      "followers": {
+        "facebook": 550,
+        "twitter": 207,
+        "instagram": 791
+      },
+      "image_url": "https://i1.feedspot.com/5437992.jpg?t=1662113225"
+    }
+  ]
+}

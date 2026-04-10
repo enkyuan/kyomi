@@ -1,0 +1,85 @@
+{
+  "category": "UK Motorsport",
+  "source_url": "https://rss.feedspot.com/uk_motorsport_rss_feeds",
+  "feeds": [
+    {
+      "title": "Race Tech Magazine",
+      "feed_url": "http://www.racetechmag.com/feed",
+      "website_url": "http://www.racetechmag.com/",
+      "description": "RACE TECH magazine is the primary source of racing technical information with every aspect of the race car covered. Features in-depth articles written by engineers for engineers. News, features and blogs on all aspects of motorsport engineering; from Le Mans to NASCAR, World Rally to World Touring Cars, Formula One to Formula Student.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4791626.jpg?t=1605953236"
+    },
+    {
+      "title": "I Watch Too Much Racing",
+      "feed_url": "https://toomuchracing.com/feed/",
+      "website_url": "https://toomuchracing.com/",
+      "description": "A blog for people who like all sorts of motorsport. For people who watch too much racing. More than F1 and NASCAR. Motorsport stories, videos & comment from around the web. MotoGP, IndyCar, Sportscars, etc.",
+      "followers": {
+        "facebook": 409,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4792755.jpg?t=1605953271"
+    },
+    {
+      "title": "The Checkered Flag",
+      "feed_url": "https://www.thecheckeredflag.co.uk/feed/",
+      "website_url": "https://www.thecheckeredflag.co.uk/",
+      "description": "The Checkered Flag was set up in August 2009 and is dedicated to providing daily news and features from around the world of motor sport including F1, WEC, WRC, Rallycross, BTCC, Le Mans, TUSCC, MotoGP and more",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 19200,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4789872.jpg?t=1605953078"
+    },
+    {
+      "title": "The Paddock Magazine",
+      "feed_url": "https://www.thepaddockmagazine.com/feed/",
+      "website_url": "https://www.thepaddockmagazine.com/",
+      "description": "The Paddock is the only business and lifestyle magazine in Formula One. The Paddock will guide readers through the twisting and turning investment routes in F1 whilst comparing the opportunities in the sport to those of its rivals.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 654
+      },
+      "image_url": "https://i1.feedspot.com/4791652.jpg?t=1605953051"
+    },
+    {
+      "title": "Slide Motorsport Blog",
+      "feed_url": "https://www.slidemotorsport.co.uk/blog/feed/",
+      "website_url": "https://www.slidemotorsport.co.uk/blog/",
+      "description": "Slide Motorsport can offer a very wide range of services from a basic oil change right up to a full competition drift car build to any specification.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/4911638.jpg?t=1620189830"
+    },
+    {
+      "title": "RaceFans",
+      "feed_url": "https://www.racefans.net/feed/",
+      "website_url": "https://www.racefans.net/",
+      "description": "RaceFans specializes in Formula One news and has a journalist attending most of the races on the 2018 F1 calendar. We also cover Formula E from the paddock and report on IndyCar, the World Endurance Championship and Formula Two among other racing championships.",
+      "followers": {
+        "facebook": 75700,
+        "twitter": 112500,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4911408.jpg?t=1606973801"
+    },
+    {
+      "title": "F1 | Formula One",
+      "feed_url": "https://www.formulawoman.co.uk/news?format=rss",
+      "website_url": "https://www.formulawoman.co.uk/news",
+      "description": "A website dedicated to keeping you up to date with all the latest news, features and more in the World of Motorsport!",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4790120.jpg?t=1605953304"
+    }
+  ]
+}

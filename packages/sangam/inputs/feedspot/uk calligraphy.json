@@ -1,0 +1,39 @@
+{
+  "category": "UK Calligraphy",
+  "source_url": "https://rss.feedspot.com/uk_calligraphy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Creative Calligraphy Blog",
+      "feed_url": "https://creative-calligraphy.co.uk/feed/",
+      "website_url": "https://creative-calligraphy.co.uk/blog/",
+      "description": "Creative Calligraphy is based in the north east of England, calligrapher Angela Reed offers a bespoke calligraphy service for weddings and events.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4908322.jpg?t=1614067202"
+    },
+    {
+      "title": "Moon & Tide Blog",
+      "feed_url": "http://calligraphy-for-weddings.com/feed/",
+      "website_url": "http://calligraphy-for-weddings.com/calligraphy-blog/",
+      "description": "Calligraphy workshops, calligraphy kits, wedding services and bespoke calligraphy work in the UK and worldwide.",
+      "followers": {
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4502312.jpg?t=1606283571"
+    },
+    {
+      "title": "Olive & Reid Studio Blog",
+      "feed_url": "https://www.oliveandreid.com/blog?format=rss",
+      "website_url": "https://www.oliveandreid.com/blog/",
+      "description": "Delve into the wonderful world of tips, events and supplies for UK calligraphers and lettering artists.",
+      "followers": {
+        "facebook": 993,
+        "twitter": 596,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4908340.jpg?t=1614067208"
+    }
+  ]
+}

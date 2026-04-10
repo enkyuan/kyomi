@@ -1,0 +1,42 @@
+{
+  "category": "Mesquite News",
+  "source_url": "https://rss.feedspot.com/mesquite_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mesquite News",
+      "feed_url": "https://starlocalmedia.com/search/?f=rss&t=article&c=mesquitenews&l=50&s=start_time&sd=desc",
+      "website_url": "https://starlocalmedia.com/mesquitenews/",
+      "description": "The Mesquite News started in 1882 as The Texas Mesquiter. The newspaper covers the city of Mesquite, Texas, and the surrounding community. Get a closer look at Mesquite news, events, sports, and schools.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 1200,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5139482.jpg?t=1587014634"
+    },
+    {
+      "title": "City of Mesquite, TX",
+      "feed_url": "https://www.cityofmesquite.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.nbcdfw.com/tag/mesquite/",
+      "description": "The City of Mesquite is located within the Dallas/Ft. Worth region of Texas. We provide you the latest news, city alert, environmental events, economic development, neighborhood news and much more.",
+      "followers": {
+        "facebook": 27900,
+        "twitter": 4500,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5139484.jpg?t=1587015754"
+    },
+    {
+      "title": "NBC 5 Dallas-Fort Worth \u00bb Mesquite",
+      "feed_url": "https://www.nbcdfw.com/tag/mesquite/feed/",
+      "website_url": "https://www.nbcdfw.com/tag/mesquite/",
+      "description": "NBC 5 was founded in September 1948 as WBAP-TV, Texas' first television station. In 2018, we celebrated 70 years of local broadcasting. NBC 5 Dallas-Fort Worth is the best place in DFW to go for exclusive local stories, the latest breaking news and weather updates. Subscribe this feed to stay up to date on topics such as local news, politics, business, and crime in Mesquite city.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 526900,
+        "instagram": 174400
+      },
+      "image_url": "https://i1.feedspot.com/5139486.jpg?t=1587016324"
+    }
+  ]
+}

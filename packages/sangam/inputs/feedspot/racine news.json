@@ -1,0 +1,28 @@
+{
+  "category": "Racine News",
+  "source_url": "https://rss.feedspot.com/racine_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Racine County Eye",
+      "feed_url": "https://racinecountyeye.com/feed/",
+      "website_url": "https://racinecountyeye.com/",
+      "description": "Racine County Eye is an online news website that delivers timely and up-to-date news for residents of eastern Racine County.",
+      "followers": {
+        "facebook": 30800,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5140395.jpg?t=1671424588"
+    },
+    {
+      "title": "My Racine County",
+      "feed_url": "https://www.myracinecounty.com/",
+      "website_url": "https://www.myracinecounty.com/",
+      "description": "Your portal for news from the Racine County, Wisconsin.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5140398.jpg?t=1671425048"
+    }
+  ]
+}

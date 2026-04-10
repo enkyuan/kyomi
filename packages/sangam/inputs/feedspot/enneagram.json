@@ -1,0 +1,60 @@
+{
+  "category": "Enneagram",
+  "source_url": "https://rss.feedspot.com/enneagram_rss_feeds",
+  "feeds": [
+    {
+      "title": "web3 with a16z crypto",
+      "feed_url": "https://theenneagraminbusiness.com/feed/",
+      "website_url": "https://theenneagraminbusiness.com/blog/",
+      "description": "'web3 with a16z' is a show about the next generation of the internet, and about how builders and users -- whether artists, coders, creators, developers, companies, organizations, or communities -- now have the ability to not just 'read' (web1) + 'write' (web2) but 'own' (web3) pieces of the internet, unlocking a new wave of creativity and entrepreneurship. Brought to you by a16z crypto, this show is the definitive resource for understanding and going deeper on all things crypto and web3...",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1600,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5087748.jpg?t=1745505020"
+    },
+    {
+      "title": "Inspired Enneagram",
+      "feed_url": "https://www.inspiredenneagram.com/blog-1?format=rss",
+      "website_url": "https://www.inspiredenneagram.com/blog-1",
+      "description": "Through one-on-one meetings, workshops, retreats, and organizational consultations we help people understand where we get stuck in our old patterns. By learning how the enneagram works as a map, we can all find our inner authority to make decisions that serve in our growth.",
+      "followers": {
+        "facebook": 539,
+        "twitter": 208
+      },
+      "image_url": "https://i1.feedspot.com/5087750.jpg?t=1623063261"
+    },
+    {
+      "title": "Enneagrammer Blog",
+      "feed_url": "https://www.enneagrammer.com/-blog?format=rss",
+      "website_url": "https://www.enneagrammer.com/-blog",
+      "description": "Enneagrammer is dedicated to providing a space for new and modern approaches to the Enneagram of Personality. It aims to integrate the works of researchers within the enneagram world and outside it. It wants to add new, fresh approaches to the study of type and instinct which take into account scientific research and nuance. It also incorporates art within the study of personality.",
+      "followers": {
+        "facebook": 767
+      },
+      "image_url": "https://i1.feedspot.com/5087765.jpg?t=1623063274"
+    },
+    {
+      "title": "One Foot Coaching Blog",
+      "feed_url": "https://www.onefootcoaching.com/blog?format=rss",
+      "website_url": "https://www.onefootcoaching.com/blog",
+      "description": "I'm Danielle Allen - Transformational Impact Strategist and Enneagram Coach. I'm passionate about coaching and training leaders. On my blog, you will find practical tips and strategies for discovering who you are, what is holding you back and how to create a lasting impact using the wisdom of the Enneagram in your everyday life.",
+      "followers": {
+        "facebook": 269,
+        "twitter": 8,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5087768.jpg?t=1623063265"
+    },
+    {
+      "title": "New York Enneagram",
+      "feed_url": "https://newyorkenneagram.com/feed/",
+      "description": "New York Enneagram is Julie Harris and John Luckovich bringing an organic approach to utilizing the power of the Enneagram for transformation, based in NY. Subscribe to our e-mail list to stay in touch about all things Enneagram.",
+      "followers": {
+        "facebook": 608
+      },
+      "image_url": "https://i1.feedspot.com/5087751.jpg?t=1623063269"
+    }
+  ]
+}

@@ -1,0 +1,550 @@
+{
+  "category": "Ruby On Rails",
+  "source_url": "https://rss.feedspot.com/ruby_on_rails_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ruby on Rails Blog",
+      "feed_url": "https://rubyonrails.org/feed.xml",
+      "website_url": "https://rubyonrails.org/blog/",
+      "description": "Rail is a full-stack framework. It ships with all the tools needed to build amazing web apps on both the front and back end. Rendering HTML templates, updating databases, sending and receiving emails, maintaining live pages via WebSockets, enqueuing jobs for asynchronous work, storing uploads in the cloud, and providing solid security protections for common attacks. Rails do it all and so much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440597.jpg?t=1663590582"
+    },
+    {
+      "title": "Ruby Flow",
+      "feed_url": "https://rubyflow.com/rss",
+      "website_url": "https://rubyflow.com/",
+      "description": "The Ruby and Rails community linklog.",
+      "followers": {
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4334264.jpg?t=1620647801"
+    },
+    {
+      "title": "Everyday Rails",
+      "feed_url": "http://feeds.feedburner.com/EverydayRails",
+      "website_url": "https://everydayrails.com/",
+      "description": "A blog about using the Ruby on Rails web application framework to get stuff done as a web developer. New content every few weeks.",
+      "followers": {
+        "facebook": 986,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/90976.jpg"
+    },
+    {
+      "title": "Drifting Ruby",
+      "feed_url": "https://www.driftingruby.com/episodes/feed.atom",
+      "website_url": "https://www.driftingruby.com/",
+      "description": "Drifing Ruby Screencasts, DRS, is a collection of tutorial videos and documentation for accomplishing functional concepts. While these videos are not designed for beginners to learn Ruby or one of the accompanying frameworks, it does provide use cases that are commonly found when architecting and developing your application. The main topics covered with these screencasts will be Ruby, Ruby on Rail",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4644154.jpg?t=1616660222"
+    },
+    {
+      "title": "Railsware Blog",
+      "feed_url": "https://railsware.com/blog/feed/",
+      "website_url": "https://railsware.com/blog/",
+      "description": "Railsware Blog is related to favorite framework Ruby On Rails.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2200,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1964448.jpg?t=1616659697"
+    },
+    {
+      "title": "Ruby LibHunt",
+      "feed_url": "https://ruby.libhunt.com/newsletter/feed",
+      "website_url": "https://ruby.libhunt.com/",
+      "description": "A weekly overview of the most popular Ruby news, articles and gems.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4643870.jpg?t=1616659731"
+    },
+    {
+      "title": "Rubyland",
+      "feed_url": "http://rubyland.news/feed.rss",
+      "website_url": "http://rubyland.news/",
+      "description": "A Rubyland Blog news, opinion, tutorials, about ruby, aggregated.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4644060.jpg?t=1616659681"
+    },
+    {
+      "title": "RailsNotes Blog",
+      "feed_url": "https://railsnotes.xyz/feed.xml",
+      "website_url": "https://railsnotes.xyz/blog",
+      "description": "Hi, Harrison here. I run RailsNotes. RailsNotes is a passion project of mine. I started writing here on RailsNotes to help teach people like you about Ruby on Rails, and its different parts.",
+      "followers": {
+        "twitter": 767
+      },
+      "image_url": "https://i1.feedspot.com/5613266.jpg?t=1688043611"
+    },
+    {
+      "title": "Arkency Blog",
+      "feed_url": "https://feeds.feedburner.com/arkency.xml",
+      "website_url": "https://blog.arkency.com/",
+      "description": "Arkency Blog is all about ruby on rails.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/162150.jpg?t=1616659685"
+    },
+    {
+      "title": "Ruby",
+      "feed_url": "https://www.ruby-lang.org/en/feeds/news.rss",
+      "website_url": "https://www.ruby-lang.org/en/",
+      "description": "Ruby is a language of careful balance. Its creator, Yukihiro 'Matz' Matsumoto, blended parts of his favorite languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/2137453.jpg?t=1618550648"
+    },
+    {
+      "title": "JetBrains - RubyMine Blog",
+      "feed_url": "https://blog.jetbrains.com/ruby/feed/",
+      "website_url": "https://blog.jetbrains.com/ruby/",
+      "description": "The World's Leading Vendor of Professional Development Tools. Creators of IntelliJ, ReSharper, RubyMine, TeamCity and much more.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100
+      },
+      "image_url": "https://i1.feedspot.com/4644176.jpg"
+    },
+    {
+      "title": "BigBinary Blog",
+      "feed_url": "https://www.bigbinary.com/blog/feed.xml",
+      "website_url": "https://www.bigbinary.com/blog",
+      "description": "BigBinary is a Ruby on Rails Web and Mobile development and consulting Company based in San Francisco, Miami and Florida. They build Applications using Ruby on Rails, React and React Native.",
+      "followers": {
+        "facebook": 222,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4334254.jpg?t=1616659703"
+    },
+    {
+      "title": "Planet Argon Blog",
+      "feed_url": "https://blog.planetargon.com/blog/entries.rss",
+      "website_url": "https://blog.planetargon.com/blog",
+      "description": "Official blog of Planet Argon. Our thoughts on web design, development, and business.",
+      "followers": {
+        "facebook": 504,
+        "twitter": 2200,
+        "instagram": 320
+      },
+      "image_url": "https://i1.feedspot.com/241258.jpg?t=1616660075"
+    },
+    {
+      "title": "Boring Rails",
+      "feed_url": "https://boringrails.com/feed.xml",
+      "website_url": "https://boringrails.com/",
+      "description": "Learn about the boring tools and practices used by Basecamp, GitHub, and Shopify to keep you as happy and productive as the day you typed 'rails new'. Tips about Ruby on Rails, StimulusJS, Tailwind, Hotwire, and building products.",
+      "followers": {
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/5257104.jpg?t=1615552190"
+    },
+    {
+      "title": "Rubyroid Labs Blog",
+      "feed_url": "https://rubyroidlabs.com/blog/feed/",
+      "website_url": "https://rubyroidlabs.com/blog/",
+      "description": "We regularly update our Ruby on Rails blog. Check out RoR news and new posts about tech tips and freebies, outsourcing, business and project management. Rubyroid Labs is a great outsourcing team with profound Ruby on Rails development skills and many years of experience.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 553
+      },
+      "image_url": "https://i1.feedspot.com/5354002.jpg?t=1640086562"
+    },
+    {
+      "title": "Tosbourn",
+      "feed_url": "https://tosbourn.com/feed.xml",
+      "website_url": "https://tosbourn.com/articles/",
+      "description": "We're a team of experienced engineers who have built and supported web apps for startups and enterprises. A full list of our writings on topics such as Ruby, Web Development, and more.",
+      "followers": {
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5353996.jpg?t=1639632503"
+    },
+    {
+      "title": "Maciej Mensfeld - Running with Ruby",
+      "feed_url": "https://mensfeld.pl/feed/",
+      "website_url": "https://mensfeld.pl/",
+      "description": "A blog Mostly on Ruby and Rails - but not only! Also a bit of Karafka, Sinatra, Python and Linux admin stuff.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4644038.jpg?t=1616660095"
+    },
+    {
+      "title": "David Heinemeier Hansson",
+      "feed_url": "https://world.hey.com/dhh/feed.atom",
+      "website_url": "https://world.hey.com/dhh",
+      "description": "I am the creator of Ruby on Rails, cofounder of Basecamp & HEY, best-selling author, Le Mans class-winning racing driver, antitrust advocate, an investor in Danish startups, frequent podcast guest, and family man.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440601.jpg?t=1663590420"
+    },
+    {
+      "title": "Schneems",
+      "feed_url": "https://schneems.com/feed.xml",
+      "website_url": "https://schneems.com/",
+      "description": "Hi, I'm Richard Schneeman. I write about Programming and Open Source. I run CodeTriage, the best way to get involved with OSS.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5440600.jpg?t=1662969869"
+    },
+    {
+      "title": "Tender Lovemaking",
+      "feed_url": "https://tenderlovemaking.com/atom.xml",
+      "website_url": "https://tenderlovemaking.com/",
+      "description": "I want Ruby and Rails to be a great choice for people to use in production. I want others to experience the same joy I felt writing Ruby, and I want to make sure there are businesses that will employ those people. I love to teach people things I know. I also love learning new things. As I hack on language and framework internals, I try to take that knowledge and disseminate it to as many people as I can.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440596.jpg?t=1663591063"
+    },
+    {
+      "title": "Pat Shaughnessy",
+      "feed_url": "https://feeds.feedburner.com/patshaughnessy",
+      "website_url": "https://patshaughnessy.net/",
+      "description": "Pat Shaughnessy is a Blogger, Rubyist, and aspiring author who shares his in-depth knowledge on topics concerning Ruby.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5287092.jpg?t=1663590331"
+    },
+    {
+      "title": "Martin Fowler",
+      "feed_url": "https://www.martinfowler.com/feed.atom",
+      "website_url": "https://www.martinfowler.com/",
+      "description": "I am Martin Fowler: an author, speaker, essentially a loud-mouthed pundit on the topic of software development, primarily for Enterprise Applications. I've become a big fan of agile approaches and the resulting focus on evolutionary software architecture.",
+      "followers": {
+        "twitter": 349200
+      },
+      "image_url": "https://i1.feedspot.com/109443.jpg?t=1659098652"
+    },
+    {
+      "title": "Bibliographic Wilderness",
+      "feed_url": "https://bibwild.wordpress.com/feed/",
+      "website_url": "https://bibwild.wordpress.com/",
+      "description": "Bibliographic Wilderness is a blog by Jonathan Rochkind about library matters of digital systems and services, metadata, cataloging, and our collective effort to help people navigate the 'information wilderness' we find ourselves spending increasing time in.",
+      "followers": {
+        "twitter": 52300
+      },
+      "image_url": "https://i1.feedspot.com/421954.jpg?t=1663575712"
+    },
+    {
+      "title": "JetRuby - Ruby on Rails and Mobile Development Company Blog",
+      "feed_url": "https://jetruby.com/feed/",
+      "website_url": "https://jetruby.com/blog/",
+      "description": "JetRuby is a Ruby on Rails and Mobile Development Company with seven-year experience in the business and satisfied clients from all over the world.",
+      "followers": {
+        "facebook": 538,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4644536.jpg?t=1616660084"
+    },
+    {
+      "title": "Avdi Codes",
+      "feed_url": "https://avdi.codes/feed/",
+      "website_url": "https://avdi.codes/",
+      "description": "Avdi Grimm equips software developers to work more effectively. Author of 'Exceptional Ruby' and 'Confident Ruby'. Head chef at RubyTapas.",
+      "followers": {
+        "facebook": 97,
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4643041.jpg?t=1616660071"
+    },
+    {
+      "title": "Karol Galanciak Blog",
+      "feed_url": "https://karolgalanciak.com/atom.xml?format=xml",
+      "website_url": "https://karolgalanciak.com/blog/",
+      "description": "Karol Galanciak - Ruby on Rails and Ember.js consultant, building ambitious and high performant web applications.",
+      "followers": {
+        "twitter": 434
+      },
+      "image_url": "https://i1.feedspot.com/4644066.jpg?t=1616660151"
+    },
+    {
+      "title": "Pragmatic Pineapple",
+      "feed_url": "https://pragmaticpineapple.com/rss.xml",
+      "website_url": "https://pragmaticpineapple.com/",
+      "description": "Hi. I am Nikola and I run the Pragmatic Pineapple tech blog you are currently reading. My goal is to educate, teach and question the status quo of JavaScript & Ruby. I break down complicated and overlooked JS & Ruby problems into actionable take-aways for beginners and advanced coders. That includes multiple perspectives which encourage my readers to reflect, evaluate and choose a solution that fits.",
+      "followers": {
+        "twitter": 700
+      },
+      "image_url": "https://i1.feedspot.com/5353997.jpg?t=1639632195"
+    },
+    {
+      "title": "RubyGarage Blog",
+      "feed_url": "https://rubygarage.org/blog.rss",
+      "website_url": "https://rubygarage.org/blog",
+      "description": "RubyGarage is a top-of-the-line software development and consulting company that builds custom web and mobile products. Follow our Ruby blog to keep up with the latest industry news and learn everything you need about Ruby and the development process in general.",
+      "followers": {
+        "facebook": 323,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4643068.jpg?t=1616660219"
+    },
+    {
+      "title": "Abhimanyu Singh",
+      "feed_url": "https://medium.com/feed/@avmnusng",
+      "website_url": "https://medium.com/@avmnusng",
+      "description": "Keep up with articles from Abhimanyu Singh.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5060701.jpg"
+    },
+    {
+      "title": "AWS Developer Blog \u00bb Ruby",
+      "feed_url": "https://aws.amazon.com/blogs/developer/category/programing-language/ruby/feed/",
+      "website_url": "https://aws.amazon.com/blogs/developer/category/programing-language/ruby/",
+      "description": "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5279158.jpg?t=1620649243"
+    },
+    {
+      "title": "Bacancy \u00bb Ruby on Rails",
+      "feed_url": "https://www.bacancytechnology.com/blog/ruby-on-rails/feed",
+      "website_url": "https://www.bacancytechnology.com/blog/ruby-on-rails/",
+      "description": "Our Blog will provide you in-depth knowledge about the Ruby on Rails framework. Bacancy is a new-age IT services company focused on empowering organizations to 'Agility Solution' through state-of-the-art technology solutions.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 1100,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5353999.jpg?t=1640085932"
+    },
+    {
+      "title": "GoRails",
+      "feed_url": "https://gorails.com/blog.rss",
+      "website_url": "https://gorails.com/blog",
+      "description": "Chris Oliver is the author of GoRails. He has been programming since 7th grade, getting involved with the Linux, Python, Ruby, and Rails communities. GoRails was started as a way to learn web development and the problem-solving strategies behind it. It provides a fresh approach to learning by showing our learning, problem-solving, design, and development processes.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4075011.jpg?t=1620648499"
+    },
+    {
+      "title": "Nopio Blog",
+      "feed_url": "https://www.nopio.com/blog/feed/",
+      "website_url": "https://www.nopio.com/blog/",
+      "description": "Experienced Ruby on Rails developers providing Web Development and Consulting Services, ready to take on any challenge you throw our way! Learn Ruby on Rails, Angular and other Web Development technologies with our tutorials and articles for beginners written by Nopio developers.",
+      "followers": {
+        "facebook": 965,
+        "twitter": 182,
+        "instagram": 81
+      },
+      "image_url": "https://i1.feedspot.com/4746965.jpg?t=1616660047"
+    },
+    {
+      "title": "Moncef Belyamani",
+      "feed_url": "https://www.moncefbelyamani.com/feed.xml",
+      "website_url": "https://www.moncefbelyamani.com/archives/",
+      "description": "I'm Moncef. I'm passionate about solving problems, learning by doing, and giving back to the community. My tutorial for setting up a Ruby on Rails development environment on a Mac has helped thousands of people since 2012. I have extensive experience across both government and private sectors, and helped shape best practices on various engineering teams.I write guides to help you become a more confident coder.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5353998.jpg?t=1639632772"
+    },
+    {
+      "title": "Benito Serna Blog",
+      "feed_url": "https://bhserna.com/feed.xml",
+      "website_url": "https://bhserna.com/",
+      "description": "Tips and articles for Ruby on Rails developers",
+      "followers": {
+        "twitter": 535
+      },
+      "image_url": "https://i1.feedspot.com/5402985.jpg?t=1653135854"
+    },
+    {
+      "title": "Mike Perham",
+      "feed_url": "https://www.mikeperham.com/index.xml",
+      "website_url": "https://www.mikeperham.com/",
+      "description": "I'm Mike. I'm an independent open source software developer based in Portland, OR. I've been writing software since 1993 and open source since 1995. Today I'm the founder and CEO of Contributed Systems, my own company dedicated to building and supporting open-source-based application infrastructure. I hope to share my web development experience on this blog, and hope it can help future readers.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5152755.jpg?t=1639631775"
+    },
+    {
+      "title": "BootRails",
+      "feed_url": "https://bootrails.com/feed.xml",
+      "website_url": "https://bootrails.com/",
+      "description": "Blog posts contain all of the information you need to get started with Ruby-on-Rails. Authored by David Boureau, a web developer based in Paris, France.",
+      "followers": {
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/5306002.jpg?t=1627535668"
+    },
+    {
+      "title": "On Rails Blog",
+      "feed_url": "https://onrails.blog/feed/",
+      "website_url": "https://onrails.blog/",
+      "description": "The blog is dedicated to sharing everything about Rails.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5279254.jpg?t=1620655599"
+    },
+    {
+      "title": "RubyGuides",
+      "feed_url": "https://www.rubyguides.com/feed/",
+      "website_url": "https://www.rubyguides.com/",
+      "description": "Become an expert Ruby developer one guide at a time! Ruby tutorials, guides, and videos for the serious Ruby developer. Start improving your Ruby skills today.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4643346.jpg?t=1616660171"
+    },
+    {
+      "title": "Ruby Yagi",
+      "feed_url": "https://rubyyagi.com/feed.xml",
+      "website_url": "https://rubyyagi.com/archive/",
+      "description": "Howdy! My name is Axel Kee. I am a software developer based in Kuala Lumpur, Malaysia. I used to work on iOS using Objective-C and Swift, now my day job is as a developer (mainly Ruby/Rails, frontend and Ansible) for an enterprise. I hope to share my web development experience on this blog, and hope it can help future readers.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5354000.jpg?t=1639633020"
+    },
+    {
+      "title": "The Evolving Ultrasaurus",
+      "feed_url": "https://ultrasaurus.com/feed/",
+      "website_url": "https://ultrasaurus.com/",
+      "description": "Sarah Allen is a technical leader and open source contributor. She founded Blazing Cloud, a mobile development firm, and Bridge Foundry, diversity and inclusion nonprofit. She previously served as Presidential Innovation Fellow in the Obama Administration at the Smithsonian Institution and was an early engineer on After Effects, Shockwave, and Flash video.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5440599.jpg?t=1663575561"
+    },
+    {
+      "title": "Stackify Blog",
+      "feed_url": "https://stackify.com/feed/",
+      "website_url": "https://stackify.com/blog/",
+      "description": "Get the latest software and programming news, best practices, and use cases to help you and your team build better applications. Stackify develops Application Performance Management (APM) solutions to show how, and why, applications underperform.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/5440598.jpg?t=1662969861"
+    },
+    {
+      "title": "APIdock - Notes posted to Ruby on Rails",
+      "feed_url": "https://apidock.com/rails/notes.rss",
+      "website_url": "https://apidock.com/rails/notes",
+      "description": "APIdock is a web app that provides a rich and usable interface for searching, perusing and improving the documentation of selected Ruby projects.",
+      "followers": {
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/4643899.jpg?t=1616659693"
+    },
+    {
+      "title": "RubyTapas Blog",
+      "feed_url": "https://www.rubytapas.com/feed/",
+      "website_url": "https://www.rubytapas.com/",
+      "description": "RubyTapas is for the busy Ruby or Rails developer who is ready to reach the next level of code mastery. Short, focused screencasts twice a week will introduce you to a wide variety of intermediate to advanced Ruby concepts and techniques, Object-Oriented design principles, testing practices, refactoring skills, and much more.",
+      "followers": {
+        "facebook": 112,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4643049.jpg"
+    },
+    {
+      "title": "A Fresh Cup",
+      "feed_url": "https://www.afreshcup.com/atom.xml",
+      "website_url": "https://www.afreshcup.com/",
+      "description": "A Fresh Cup is Mike Gunderloy's software development weblog, covering Ruby on Rails and whatever else I find interesting in the universe of software. He is a full-time software developer: most of my time in recent years has been spent writing Rails, though I've dabbled in many other things and like most people who have been writing code for decades can learn new stuff as needed.",
+      "followers": {
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/129883.jpg?t=1616660105"
+    },
+    {
+      "title": "RailsBridge Blog",
+      "feed_url": "https://blog.railsbridge.org/feed/",
+      "website_url": "https://blog.railsbridge.org/",
+      "description": "RailsBridge is working to make tech more diverse and welcoming by teaching programming, connecting human beings, and listening to people's needs. They organize and teach free workshops on Rails, Ruby, and HTML & CSS in cities all over the world, targeted at groups of people that are underrepresented in tech.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4643052.jpg?t=1616660054"
+    },
+    {
+      "title": "Ruby Weekly",
+      "feed_url": "https://rubyweekly.com/rss/",
+      "website_url": "https://rubyweekly.com/issues",
+      "description": "A free, once-weekly e-mail round-up of Ruby and Rails news, tutorials, demos and articles.",
+      "followers": {
+        "twitter": 461
+      },
+      "image_url": "https://i1.feedspot.com/5269819.jpg?t=1618551113"
+    },
+    {
+      "title": "RailsCarma Ruby on Rails Development Company specializing in Offshore Development Blog",
+      "feed_url": "https://www.railscarma.com/feed/",
+      "website_url": "https://www.railscarma.com/blog/",
+      "description": "RailsCarma is a Ruby on Rails Development Company in Bangalore. We specialize in Offshore Ruby on Rails Development based out in USA and India. Hire experienced Ruby on Rails developers for the ultimate Web Experience.",
+      "followers": {
+        "facebook": 768,
+        "twitter": 359
+      },
+      "image_url": "https://i1.feedspot.com/4643921.jpg?t=1616660164"
+    },
+    {
+      "title": "Railwaymen Blog",
+      "feed_url": "https://railwaymen.org/blog/",
+      "website_url": "https://railwaymen.org/blog/",
+      "description": "Railwaymen is the best software development company to hire when it comes to Ruby on Rails technology. Learn more about where you will have the opportunity to meet the Railwaymen's Team, grab a cup of coffee and chat about the latest technology.",
+      "followers": {
+        "facebook": 612,
+        "twitter": 357
+      },
+      "image_url": "https://i1.feedspot.com/5049933.jpg?t=1616660249"
+    },
+    {
+      "title": "Tim Riley",
+      "feed_url": "https://timriley.info/feed.xml",
+      "website_url": "https://timriley.info/",
+      "description": "Tim is a director of engineering at Culture Amp, a co-founder of dry-rb, and a core team member of Hanami and rom-rb. He's excited by small libraries, first-class functions, and pushing forward web app development with Ruby.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5353995.jpg?t=1639632499"
+    },
+    {
+      "title": "makandra Blog",
+      "feed_url": "https://makandra.de/en/blog-6/",
+      "website_url": "https://makandra.de/en/blog-6/",
+      "description": "The blog of makandra, a Ruby on Rails development team.",
+      "followers": {
+        "facebook": 201,
+        "twitter": 284
+      },
+      "image_url": "https://i1.feedspot.com/4644385.jpg?t=1616660175"
+    },
+    {
+      "title": "reinteractive's Ruby on Rails developers blog posts",
+      "feed_url": "https://reinteractive.com/feeds.atom",
+      "website_url": "https://reinteractive.com/blog",
+      "description": "Posts by the reinteractive team about web apps & Ruby on Rails development, Rails Ops, User Experience & Design.",
+      "followers": {
+        "facebook": 278,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4644020.jpg?t=1616660080"
+    },
+    {
+      "title": "Official Ruby on Rails Blog",
+      "feed_url": "https://weblog.rubyonrails.org/feed/atom.xml",
+      "website_url": "https://rubyonrails.org/blog/",
+      "description": "The official blog of Ruby on Rails. Ruby on Rails, or simply Rails, is a server-side web application framework written in Ruby under the MIT License. Rails is a model view controller (MVC) framework, providing default structures for a database, a web service, and web pages.",
+      "followers": {
+        "twitter": 137900
+      },
+      "image_url": "https://i1.feedspot.com/91644.jpg"
+    }
+  ]
+}

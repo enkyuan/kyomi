@@ -1,0 +1,18 @@
+{
+  "category": "Wooster News",
+  "source_url": "https://rss.feedspot.com/wooster_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "FOX 8 \u00bb Wooster",
+      "feed_url": "https://fox8.com/tag/wooster-news/feed/",
+      "website_url": "https://fox8.com/tag/wooster-news/",
+      "description": "Cleveland's own Fox 8 provides breaking news, weather alerts, and topics that impact you. Read the latest news and updates in Wooster brought to you by the team at Fox 8 by following this feed.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5156858.jpg"
+    }
+  ]
+}

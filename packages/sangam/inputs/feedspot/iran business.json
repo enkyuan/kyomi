@@ -1,0 +1,42 @@
+{
+  "category": "Iran Business",
+  "source_url": "https://rss.feedspot.com/iran_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "Iran Front Page \u00bb Business News",
+      "feed_url": "https://ifpnews.com/category/news/business/feed/",
+      "website_url": "https://ifpnews.com/category/news/business/",
+      "description": "Latest Business News in Iran - News and reports about all things to do with commerce, trade, banking and industry in Iran and the world. Covering ongoing developments, market news, contracts, joint ventures, trade delegations, chambers of commerce, manufacturing, labour news, and resource management.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 18300,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5344305.jpg?t=1637220197"
+    },
+    {
+      "title": "Living in Tehran \u00bb Business",
+      "feed_url": "https://livingintehran.com/category/living-in-tehran/doing_business/feed/",
+      "website_url": "https://livingintehran.com/category/living-in-tehran/doing_business/",
+      "description": "Doing Business in Iran is very different. We provide you the guide (in English) on how to do it easier. Living in Tehran (LiT) is the brainchild of media professionals, who, over several years of being based in Tehran and working with the local and expatriate business community noticed a serious need for a quality English language information portal about this city of over 12 million people.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 18100,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5480098.jpg?t=1671100210"
+    },
+    {
+      "title": "Financial Tribune \u00bb Business & Markets",
+      "feed_url": "https://financialtribune.com/markets.xml",
+      "website_url": "https://financialtribune.com/iran-business-markets-news",
+      "description": "Iran Business And Markets News. Get the latest business news about Iran including banking, stock market, real estate market, steel industry, mining, trade finance, fintech, and insurance.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 3900,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5344304.jpg?t=1637220078"
+    }
+  ]
+}

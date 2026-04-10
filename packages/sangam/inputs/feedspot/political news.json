@@ -1,0 +1,404 @@
+{
+  "category": "Political News",
+  "source_url": "https://rss.feedspot.com/political_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Nation \u00bb Politics",
+      "feed_url": "https://www.thenation.com/subject/politics/feed/",
+      "website_url": "https://www.thenation.com/subject/politics/",
+      "description": "Political News and Analysis from The Nation Magazine. Read the latest cutting-edge commentary and updates on the Political Scene in the country. Home to tenacious muckraking, provocative commentary and spirited debate about politics and culture, The Nation empowers readers to fight for justice and equality for all.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460469.jpg?t=1666932564"
+    },
+    {
+      "title": "ProPublica",
+      "feed_url": "https://www.propublica.org/feeds/propublica/main",
+      "website_url": "https://www.propublica.org/",
+      "description": "ProPublica is an independent, nonprofit newsroom that produces investigative journalism with moral force. We dig deep into important issues, shining a light on abuses of power and betrayals of public trust - and we stick with those issues as long as it takes to hold power to account.",
+      "followers": {
+        "facebook": 535700,
+        "twitter": 875900,
+        "instagram": 351300
+      },
+      "image_url": "https://i1.feedspot.com/5400961.jpg?t=1652772346"
+    },
+    {
+      "title": "NPR \u00bb Politics",
+      "feed_url": "https://feeds.npr.org/1014/rss.xml",
+      "website_url": "https://www.npr.org/sections/politics/",
+      "description": "NPR's expanded coverage of U.S. and world politics, the latest news from Congress and the White House, and elections. NPR is an independent, nonprofit media organization that was founded on a mission to create a more informed public. We produce, acquire, and distribute programming that meets the highest standards of public service in journalism.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5460472.jpg?t=1666933356"
+    },
+    {
+      "title": "Slate \u00bb News & Politics",
+      "feed_url": "https://slate.com/feeds/news-and-politics.rss",
+      "website_url": "https://slate.com/news-and-politics",
+      "description": "Slate is an Online magazine of news, politics, technology, and culture. Featured articles beautifully combine humor and insight in thoughtful analyses of current events and political news. Founded in 1996, we are a general-interest publication offering analysis and commentary about politics, news, business, technology, and culture.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1600000,
+        "instagram": 108200
+      },
+      "image_url": "https://i1.feedspot.com/5460470.jpg?t=1686810687"
+    },
+    {
+      "title": "RealClearPolitics",
+      "feed_url": "https://www.realclearpolitics.com/index.xml",
+      "website_url": "https://www.realclearpolitics.com/",
+      "description": "RealClearPolitics.com (RCP) is one of America's premier independent political websites. Updated every morning and throughout the day, RCP culls and publishes the best commentary, news, polling data, and links to important resources from all points of the political compass and covering all the important issues of the day.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 220100
+      },
+      "image_url": "https://i1.feedspot.com/5046426.jpg?t=1666932952"
+    },
+    {
+      "title": "National Review",
+      "feed_url": "https://www.nationalreview.com/feed/",
+      "website_url": "https://www.nationalreview.com/",
+      "description": "National Review is a leading conservative magazine and website covering news, politics, current events, and culture with detailed analysis and commentary. Founded in 1955, as a magazine of conservative opinion, The magazine has defined the modern conservative movement and enjoys readership among American conservatives.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 368500,
+        "instagram": 127200
+      },
+      "image_url": "https://i1.feedspot.com/4927390.jpg?t=1747982073"
+    },
+    {
+      "title": "POLITICO",
+      "feed_url": "https://www.politico.com/rss/politicopicks.xml",
+      "website_url": "https://www.politico.com/",
+      "description": "POLITICO is the global authority on the intersection of politics, policy, and power. It is one of the most robust news operations and information services in the world specializing in politics and policy, which informs the most influential audience in the world with insight, edge, and authority.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 4500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/4884214.jpg?t=1658724401"
+    },
+    {
+      "title": "The New York Times \u00bb Politics",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/politics/rss.xml",
+      "website_url": "https://www.nytimes.com/section/politics",
+      "description": "The New York Times offers breaking news and analysis on U.S. politics, covering the White House, Congress, and the Supreme Court. As a leading US daily, it provides expert, independent journalism to help readers understand the world through on-the-ground reporting.",
+      "followers": {
+        "facebook": 21200000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4740230.jpg?t=1666933517"
+    },
+    {
+      "title": "Foreign Policy Magazine",
+      "feed_url": "https://foreignpolicy.com/feed/",
+      "website_url": "https://foreignpolicy.com/category/latest/",
+      "description": "Foreign Policy is an American news publication, founded in 1970 and focused on global affairs, current events, and domestic and foreign policy. Explore News, Analysis, Podcasts, and more in this feed. Foreign Policy is published by the FP Group, a division of Graham Holdings Company.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1300000,
+        "instagram": 216000
+      },
+      "image_url": "https://i1.feedspot.com/4231604.jpg?t=1666935748"
+    },
+    {
+      "title": "Fox News \u00bb Politics",
+      "feed_url": "https://moxie.foxnews.com/google-publisher/politics.xml",
+      "website_url": "https://www.foxnews.com/politics",
+      "description": "Read all about the political news happening with Fox News. Learn about political parties, political campaigns, and international politics today. The Fox News Channel is a leading Cable News Network providing commentary and in-depth reporting on all major issues of national and global interest.",
+      "followers": {
+        "facebook": 30300000,
+        "twitter": 26900000,
+        "instagram": 10800000
+      },
+      "image_url": "https://i1.feedspot.com/5460503.jpg?t=1666935979"
+    },
+    {
+      "title": "Rolling Stone \u00bb Politics",
+      "feed_url": "https://www.rollingstone.com/politics/feed/",
+      "website_url": "https://www.rollingstone.com/politics/",
+      "description": "View Political News Coverage featuring Op-eds, Lists, and Videos from Rolling Stone Magazine. Uncovering some of the biggest stories in Art, Culture, Music, and Politics, Rolling Stone is considered one of the most influential magazines in recent times. It is a monthly magazine owned by Penske Media Corporation.",
+      "followers": {
+        "facebook": 5400000,
+        "twitter": 6100000,
+        "instagram": 8199999
+      },
+      "image_url": "https://i1.feedspot.com/5460502.jpg?t=1666935407"
+    },
+    {
+      "title": "World Politics Review \u00bb Iraq",
+      "feed_url": "https://www.worldpoliticsreview.com/feed/",
+      "website_url": "https://www.worldpoliticsreview.com/region/iraq/",
+      "description": "World Politics Review provides an uncompromising analysis of critical global trends to give policymakers, analysts, academics, and readers with a deep interest in international affairs. Written by a network of leading experts and on-the-ground influencers, our substantive content gives you access to comprehensive and detailed perspectives.",
+      "followers": {
+        "facebook": 380800,
+        "twitter": 89400,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5460500.jpg?t=1761643144"
+    },
+    {
+      "title": "Mother Jones \u00bb Politics",
+      "feed_url": "https://www.motherjones.com/politics/feed/",
+      "website_url": "https://www.motherjones.com/politics/",
+      "description": "Mother Jones, a prominent independent news organization, delivers groundbreaking coverage across politics, the environment, health, and human rights. Renowned for investigative journalism and innovative reporting, it offers insightful analysis and occasionally employs a sarcastic tone to engage readers.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 757200,
+        "instagram": 625700
+      },
+      "image_url": "https://i1.feedspot.com/1784304.jpg?t=1635605937"
+    },
+    {
+      "title": "PolitiFact",
+      "feed_url": "https://www.politifact.com/rss/all/",
+      "website_url": "https://www.politifact.com/",
+      "description": "PolitiFact is a fact-checking website that rates the accuracy of claims by elected officials and others on its Truth-O-Meter. It focuses on looking at specific statements made by politicians and rating them for accuracy. PolitiFact is run by experienced editors and journalists and owned by the nonprofit Poynter Institute for Media Studies.",
+      "followers": {
+        "facebook": 831000,
+        "twitter": 641500
+      },
+      "image_url": "https://i1.feedspot.com/5460501.jpg?t=1666935692"
+    },
+    {
+      "title": "POLITICO Europe",
+      "feed_url": "https://www.politico.eu/feed/",
+      "website_url": "https://www.politico.eu/latest/",
+      "description": "Read commentary on European Politics, Policy, and Government News. POLITICO covers the politics, policy, and personalities of the European Union. With reporting assets across the Continent, POLITICO's coverage includes video features, regular columns, photo galleries, cartoons, and political forums.",
+      "followers": {
+        "facebook": 240600,
+        "twitter": 358700
+      },
+      "image_url": "https://i1.feedspot.com/4293089.jpg?t=1666935827"
+    },
+    {
+      "title": "Florida Politics Blog",
+      "feed_url": "https://floridapolitics.com/feed/",
+      "website_url": "https://floridapolitics.com/blog/",
+      "description": "Discover sharp, outspoken Florida Politics analysis and commentary with insights on the latest Legislative, Policy-making changes. Florida Politics is a statewide, new media platform covering campaigns, elections, government, policy, and lobbying in Florida. The platform and all of its content are owned by Extensive Enterprises Media.",
+      "followers": {
+        "facebook": 30200,
+        "twitter": 50300,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4813172.jpg?t=1610630350"
+    },
+    {
+      "title": "Baltimore Sun \u00bb Politics",
+      "feed_url": "https://www.baltimoresun.com/news/politics/feed/",
+      "website_url": "https://www.baltimoresun.com/news/politics/",
+      "description": "Dive into our coverage of Politics, Election results, Supreme Court, and Current issues. The Baltimore Sun is one of the largest daily newspapers in Maryland. We bring you the stories that matter most, written without bias, so you can make informed decisions. We are headquartered in Baltimore, Maryland, and are part of the Tribune company portfolio.",
+      "followers": {
+        "facebook": 331200,
+        "twitter": 335300
+      },
+      "image_url": "https://i1.feedspot.com/5460560.jpg?t=1666937873"
+    },
+    {
+      "title": "Talk Business & Politics",
+      "feed_url": "https://talkbusiness.net/feed/",
+      "website_url": "https://talkbusiness.net/",
+      "description": "Talk Business & Politics is a news website that covers business, politics, and culture across all the Arkansas regions. The Talk Business & Politics publication reaches affluent decision-makers across the state and is an essential resource guide for new entrepreneurs and leaders at all levels of government.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 17600
+      },
+      "image_url": "https://i1.feedspot.com/5460553.jpg?t=1666937339"
+    },
+    {
+      "title": "Mediaite \u00bb Politics",
+      "feed_url": "https://www.mediaite.com/category/politics/feed/",
+      "website_url": "https://www.mediaite.com/category/politics/",
+      "description": "Mediaite, a trusted source at the political-media intersection, provides breaking news, analysis, and expert opinions with lightning-quick speed. Delivering the latest political updates and diverse perspectives, Mediaite is relied upon for its comprehensive coverage and rapid reporting.",
+      "followers": {
+        "facebook": 229600,
+        "twitter": 171500,
+        "instagram": 62800
+      },
+      "image_url": "https://i1.feedspot.com/5460552.jpg?t=1666937805"
+    },
+    {
+      "title": "The 19th News",
+      "feed_url": "https://19thnews.org/feed/",
+      "website_url": "https://19thnews.org/",
+      "description": "The 19th News is an independent, nonprofit newsroom reporting on gender, politics, and policy. Here, you will find deep-dive, evidence-based reporting that exposes gender inequity and injustice, and reveals surprising and original stories on the issues of women and LGBTQ+ people. We aim to be a source of news and information for those who have been underserved by and underrepresented in American media.",
+      "followers": {
+        "facebook": 51400,
+        "twitter": 81200,
+        "instagram": 92400
+      },
+      "image_url": "https://i1.feedspot.com/5310151.jpg?t=1666937248"
+    },
+    {
+      "title": "Los Angeles Daily News \u00bb Politics",
+      "feed_url": "https://www.dailynews.com/news/politics/feed/",
+      "website_url": "https://www.dailynews.com/news/politics/",
+      "description": "Covers Political news from the city of Los Angeles, L.A. County, Sacramento, and the U.S. government. The Los Angeles Daily News is the local news source for Los Angeles and the San Fernando Valley region, providing breaking news, sports, business, entertainment, things to do, opinion, photos, videos, and more from L.A.",
+      "followers": {
+        "facebook": 64500,
+        "twitter": 66000
+      },
+      "image_url": "https://i1.feedspot.com/5311065.jpg?t=1666937410"
+    },
+    {
+      "title": "Politics NY",
+      "feed_url": "https://politicsny.com/feed/",
+      "website_url": "https://politicsny.com/",
+      "description": "In-depth local coverage of politics across the five boroughs of New York City. PoliticsNY is a hyper-local daily news site covering the elected officials and government that serves New York. We are one of the most influential voices of its kind reaching elected officials, those in the halls of government, and the general public passionate about politics.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 4600,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5318302.jpg?t=1666936811"
+    },
+    {
+      "title": "Salon.com \u00bb News & Politics",
+      "feed_url": "https://www.salon.com/category/news-and-politics/feed",
+      "website_url": "https://www.salon.com/category/news-and-politics",
+      "description": "Salon covers national news and politics through investigations, insightful reporting, commentary, and analysis. Salon is an independent publication covering news and politics through a progressive, nonpartisan editorial lens, alongside our rigorous and inquisitive coverage of culture and entertainment, science and health, and food.",
+      "followers": {
+        "facebook": 935000,
+        "twitter": 877300,
+        "instagram": 45700
+      },
+      "image_url": "https://i1.feedspot.com/4922523.jpg?t=1666937739"
+    },
+    {
+      "title": "Alabama Political Reporter",
+      "feed_url": "https://www.alreporter.com/feed/",
+      "website_url": "https://www.alreporter.com/category/news/",
+      "description": "Alabama Political Reporter is a political news site devoted to Alabama politics providing accurate, reliable coverage of policy, elections, and government. It is a political news organization that gives citizens, lawmakers, business leaders, and organizations one place where they can find thorough coverage of all the political news.",
+      "followers": {
+        "facebook": 18600,
+        "twitter": 14000,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4891394.jpg?t=1666937897"
+    },
+    {
+      "title": "Newsmax \u00bb Politics",
+      "feed_url": "https://www.newsmax.com/rss/Politics/1/",
+      "website_url": "https://www.newsmax.com/politics/",
+      "description": "Newsmax.com covers the latest developments in politics, national and world news, health, faith, personal finance, and technology with a unique American perspective and topics that the major media often ignore. Newsmax is an independent American Online News publication.",
+      "followers": {
+        "facebook": 5600000,
+        "twitter": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4886930.jpg?t=1750762825"
+    },
+    {
+      "title": "CBS Texas \u00bb Politics",
+      "feed_url": "https://www.cbsnews.com/latest/rss/politics",
+      "website_url": "https://www.cbsnews.com/texas/politics/",
+      "description": "All latest articles about Politics from CBS Texas",
+      "followers": {
+        "facebook": 319200,
+        "twitter": 9000000,
+        "instagram": 78400
+      },
+      "image_url": "https://i1.feedspot.com/4873162.jpg?t=1764241242"
+    },
+    {
+      "title": "Arizona Capitol Times",
+      "feed_url": "https://azcapitoltimes.com/feed/",
+      "website_url": "https://azcapitoltimes.com/",
+      "description": "The Arizona Capitol Times is your inside source for the Arizona government, politics, and business. Get updates on Arizona politics & political news, covering elections, the governor, legislature, courts, agencies & campaigns in print and online. Our coverage influences policy defines important issues and connects the various communities that makeup state government.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 29300
+      },
+      "image_url": "https://i1.feedspot.com/4825729.jpg?t=1666937432"
+    },
+    {
+      "title": "Politics Home \u00bb News",
+      "feed_url": "https://www.politicshome.com/news/rss",
+      "website_url": "https://www.politicshome.com/news.htm",
+      "description": "Gather all the latest political news, opinion, interviews, and analysis from Westminster, Whitehall, and beyond. Fast, impartial, and respected, PoliticsHome offers comprehensive, non-partisan coverage of politics in Westminster and exclusive editorials from MPs, peers, and policy stakeholders.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 115100,
+        "instagram": 120
+      },
+      "image_url": "https://i1.feedspot.com/5179468.jpg?t=1666937046"
+    },
+    {
+      "title": "AP News \u00bb Politics",
+      "feed_url": "https://apnews.com/politics.rss",
+      "website_url": "https://apnews.com/politics",
+      "description": "Read breaking political news today from The Associated Press. Get sweeping election coverage, news from Democratic and Republican parties, the Congress, Supreme Court, and more. The Associated Press is an independent global news organization dedicated to factual reporting and one of the most trusted sources of fast, accurate, unbiased news in all formats.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 15800000
+      },
+      "image_url": "https://i1.feedspot.com/5460479.jpg?t=1666932692"
+    },
+    {
+      "title": "ABC News \u00bb Politics",
+      "feed_url": "https://abcnews.go.com/politics",
+      "website_url": "https://abcnews.go.com/politics",
+      "description": "Nate Silver's FiveThirtyEight uses statistical analysis and hard numbers to tell compelling stories about elections, politics, sports, science, economics, and lifestyle. We employ publicly gathered data and evidence to advance public knowledge adding certainty where we can and uncertainty where we must.",
+      "followers": {
+        "facebook": 390100,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5460471.jpg?t=1666933051"
+    },
+    {
+      "title": "The Hill",
+      "feed_url": "https://thehill.com/feed/",
+      "website_url": "https://thehill.com/",
+      "description": "The Hill is the premier source for policy and political coverage, reporting on every aspect of the business of Washington and the campaign trail. The Hill is known among those who influence policy as an essential source in print and online.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 4300000,
+        "instagram": 304700
+      },
+      "image_url": "https://i1.feedspot.com/5424682.jpg?t=1658726475"
+    },
+    {
+      "title": "AllSides",
+      "feed_url": "https://www.allsides.com/news/rss",
+      "website_url": "https://www.allsides.com/unbiased-balanced-news",
+      "description": "AllSides is a news website that offers a Balanced News Feed featuring Top news stories from the Left, Center, and Right wings of American Politics, allowing readers to analyze and form an informed, rational opinion. We use media bias ratings to provide balanced news, perspectives, and issues across the political spectrum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5214225.jpg?t=1666935374"
+    },
+    {
+      "title": "The Washington Post \u00bb Post Politics",
+      "feed_url": "https://www.washingtonpost.com/politics/",
+      "website_url": "https://www.washingtonpost.com/politics/",
+      "description": "Post Politics from The Washington Post is the source for political news headlines, in-depth political coverage, and political opinion, plus breaking news on the federal government, administration and White House, Congress, the Supreme Court, elections, and more.",
+      "followers": {
+        "facebook": 577400,
+        "twitter": 400700
+      },
+      "image_url": "https://i1.feedspot.com/80113.jpg?t=1666933470"
+    },
+    {
+      "title": "The Seattle Times \u00bb Nation & World Politics",
+      "feed_url": "https://www.seattletimes.com/nation-world/nation-politics/feed/",
+      "website_url": "https://www.seattletimes.com/nation-world/nation-politics/",
+      "description": "Get the lowdown on politics, entertainment, travel, restaurants, and opinions for Seattle and the Pacific Northwest. Our coverage directly impacts our local community and has changed public policy. We, at The Seattle Times, are steadfast in our commitment to provide principled, quality, public-service journalism and to ensure the future of the local free press.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900
+      },
+      "image_url": "https://i1.feedspot.com/5460504.jpg?t=1666935556"
+    },
+    {
+      "title": "SayfieReview",
+      "feed_url": "https://feeds.feedburner.com/sayfiereview/todaysstories",
+      "website_url": "https://www.sayfiereview.com/",
+      "description": "Sayfie Review is one of Florida's top political news websites providing brilliant coverage of current and pressing political issues and news stories. It is published online by Sayfie Media, founded and run by Justin Sayfie. Sayfie Review is read by a wide readership of some of the most influential people in Florida.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/5459994.jpg?t=1666937303"
+    }
+  ]
+}

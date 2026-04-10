@@ -1,0 +1,82 @@
+{
+  "category": "ERM",
+  "source_url": "https://rss.feedspot.com/erm_rss_feeds",
+  "feeds": [
+    {
+      "title": "Enterprise Risk Magazine",
+      "feed_url": "https://enterpriseriskmag.com/feed/",
+      "website_url": "https://enterpriseriskmag.com/",
+      "description": "Enterprise Risk Magazine is the leading quarterly title for risk managers and enterprise risk, with a print circulation of over 5,500. Enterprise Risk is the best resource to meet this key target market. As the magazine of the IRM it is an essential read to keep members informed of institute initiatives as well as leading industry thought and debate.",
+      "followers": {
+        "twitter": 5800,
+        "instagram": 16
+      },
+      "image_url": "https://i1.feedspot.com/5411872.jpg?t=1655536649"
+    },
+    {
+      "title": "The Enterprise Risk Management Blog",
+      "feed_url": "https://www.theirmindia.org/blog/feed/",
+      "website_url": "https://www.theirmindia.org/blog/",
+      "description": "Ideas, thoughts, insights and interviews for the growing community of enterprise risk management professionals. The Institute of Risk Management (IRM) is the world's leading professional body for enterprise risk management.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 891,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5411713.jpg?t=1655531597"
+    },
+    {
+      "title": "LogicManager",
+      "feed_url": "https://www.logicmanager.com/feed/",
+      "website_url": "https://www.logicmanager.com/resources/",
+      "description": "The ultimate hub for governance, risk, and compliance resources. LogicManager is the leading ERM software provider. Through innovative solutions and top-rated customer experience, LogicManager helps organizations manage surprises before they happen - ensuring a positive impact on the community at large.",
+      "followers": {
+        "facebook": 274,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4633531.jpg?t=1655530404"
+    },
+    {
+      "title": "Aclaimant Blog \u00bb ERM",
+      "feed_url": "https://www.aclaimant.com/blog/tag/enterprise-risk-management-erm/rss.xml",
+      "website_url": "https://www.aclaimant.com/blog/tag/enterprise-risk-management-erm",
+      "description": "Check out stories and information on Enterprise Risk Management (ERM). Aclaimant was born out of the belief that businesses need a better way to manage risk. Aclaimant was created not by technology people but by risk management practitioners who were frustrated by current practices and needed a better way to manage their business.",
+      "followers": {
+        "twitter": 125
+      },
+      "image_url": "https://i1.feedspot.com/5411709.jpg?t=1655529510"
+    },
+    {
+      "title": "Corporate Compliance Insights \u00bb Enterprise Risk Management",
+      "feed_url": "https://www.corporatecomplianceinsights.com/tag/enterprise-risk-management/feed/",
+      "website_url": "https://www.corporatecomplianceinsights.com/tag/enterprise-risk-management/",
+      "description": "Enterprise Risk Management (ERM) articles and news stories from the team at Corporate Compliance Insights. New compliance articles and events are posted daily. Corporate Compliance Insights is a news website featuring articles from top compliance professionals with topics related to corporate compliance, risk management, compliance and business ethics, FCPA compliance, audit, and corporate governance.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 15300
+      },
+      "image_url": "https://i1.feedspot.com/5411711.jpg?t=1655531871"
+    },
+    {
+      "title": "International Institute of Enterprise Risk Practitioners Blog",
+      "feed_url": "https://insterp.com/feed/",
+      "website_url": "https://insterp.com/blog/",
+      "description": "The Institute of Enterprise Risk Practitioners (IERP\u00ae) is the world's first and leading certification institute for Enterprise Risk Management (ERM).",
+      "followers": {
+        "facebook": 463,
+        "twitter": 213
+      },
+      "image_url": "https://i1.feedspot.com/5411871.jpg?t=1655537293"
+    },
+    {
+      "title": "Strategic Decision Solutions Blog",
+      "feed_url": "https://strategicdecisionsolutions.com/feed/",
+      "website_url": "https://strategicdecisionsolutions.com/blog/",
+      "description": "As an enterprise risk management consultant, my goal - and a real passion! - is ensuring companies have the tools they need to identify and properly manage threats and opportunities to business objectives.",
+      "followers": {
+        "twitter": 109
+      },
+      "image_url": "https://i1.feedspot.com/5411710.jpg?t=1655530256"
+    }
+  ]
+}

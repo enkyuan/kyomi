@@ -1,0 +1,526 @@
+{
+  "category": "VPN",
+  "source_url": "https://rss.feedspot.com/vpn_rss_feeds",
+  "feeds": [
+    {
+      "title": "ProPrivacy",
+      "feed_url": "https://proprivacy.com/feed",
+      "website_url": "https://proprivacy.com/vpn",
+      "description": "We research and investigate tools and companies that can help you keep your privacy online. We also uncover data breaches, hold people to account, investigate the privacy industry (VPNs, ad blockers), so you know who to trust.",
+      "followers": {
+        "facebook": 23700,
+        "twitter": 2100,
+        "instagram": 527
+      },
+      "image_url": "https://i1.feedspot.com/4882744.jpg?t=1669957624"
+    },
+    {
+      "title": "ExpressVPN Blog",
+      "feed_url": "https://www.expressvpn.com/blog/feed/",
+      "website_url": "https://www.expressvpn.com/blog/",
+      "description": "ExpressVPN helps you use the internet your way. Access websites and stream videos from anywhere in the world with privacy, security, and freedom. The best internet privacy and online security blog. Follow this blog for regular news, opinion, and product updates from the fastest VPN service.",
+      "followers": {
+        "facebook": 92200,
+        "twitter": 41100,
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4754276.jpg?t=1669957721"
+    },
+    {
+      "title": "vpnMentor Blog",
+      "feed_url": "https://www.vpnmentor.com/feed/",
+      "website_url": "https://www.vpnmentor.com/blog/",
+      "description": "This blog is your source for honest user & expert reviews on VPNs - Speed, Price, Features and comparison of the best VPNs for each country and need.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4882726.jpg?t=1669957860"
+    },
+    {
+      "title": "hide.me Blog",
+      "feed_url": "https://hide.me/en/blog/feed/",
+      "website_url": "https://hide.me/en/blog/",
+      "description": "Hide.me VPN offers privacy protection, wi-fi security, and encryption for a truly private web browser experience, regardless of your location. Follow this blog to keep yourself informed with all the latest in Internet privacy and security with the hide.me VPN blog.",
+      "followers": {
+        "facebook": 21000,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4882245.jpg?t=1669957970"
+    },
+    {
+      "title": "CyberInsider",
+      "feed_url": "https://cyberinsider.com/feed/",
+      "website_url": "https://cyberinsider.com/",
+      "description": "Reliable cybersecurity news and in-depth resources, written by industry experts. Explore news topics Cyberinsider resources.",
+      "followers": {
+        "facebook": 75
+      },
+      "image_url": "https://i1.feedspot.com/5224874.jpg?t=1756297035"
+    },
+    {
+      "title": "CoverMeVPN Blog",
+      "feed_url": "https://covermevpn.com/feed/",
+      "website_url": "https://covermevpn.com/blog/",
+      "description": "CoverMeVPN is a premium VPN service provider. We offer the service and knowledge to protect your online presence. CoverMeVPN is the best VPN service provider that gives highly secure and private entry to the Internet. We are devoted to helping users with maximum freedom and security while browsing, streaming, or working online. Our team is committed to supplying the best VPN service that protects you from hackers, trackers, and censorship.",
+      "followers": {
+        "facebook": 7,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/7267595.jpg?t=1709710749"
+    },
+    {
+      "title": "HideMyTraffic",
+      "feed_url": "https://www.hidemytraffic.com/feed/",
+      "website_url": "https://www.hidemytraffic.com/category/news/",
+      "description": "HideMyTraffic came about as an offshoot of a tech news site. With the increasing focus on cybersecurity, people wanted to know more about how to stay safe on the Internet.",
+      "followers": {
+        "facebook": 116,
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/5123167.jpg?t=1669958220"
+    },
+    {
+      "title": "Mullvad VPN Blog",
+      "feed_url": "https://mullvad.net/en/blog/feed/atom/",
+      "website_url": "https://mullvad.net/en/blog",
+      "description": "Keep up to date on developments at Mullvad. New versions of our client, security updates, job posts - find it all here. Mullvad VPN AB is owned by parent company Amagicom AB. Mullvad VPN provides you with secure server so you can browse without any threat.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/5474785.jpg?t=1669959278"
+    },
+    {
+      "title": "ProtonVPN Blog",
+      "feed_url": "https://protonvpn.com/blog/feed/",
+      "website_url": "https://protonvpn.com/blog/",
+      "description": "All the latest privacy news and features from the Proton VPN team. Learn how we protect online privacy, security, and freedom through technology. The Proton VPN project was born out of a need to better protect the activists and journalists that use Proton Mail. In the years since we began as a crowdfunded project, Proton Mail and Proton VPN continue to be primarily supported by our community and developed with community input.",
+      "followers": {
+        "facebook": 116600,
+        "twitter": 122800,
+        "instagram": 81200
+      },
+      "image_url": "https://i1.feedspot.com/4991460.jpg?t=1669974896"
+    },
+    {
+      "title": "IPVanish Blog",
+      "feed_url": "https://www.ipvanish.com/blog/feed/",
+      "website_url": "https://www.ipvanish.com/blog/",
+      "description": "Visit the IPVanish VPN blog for the latest trends, tips, and tools you need to take control of your online privacy and data security. With IPVanish, your internet traffic is routed through the secure server of your choosing. This helps protect your online identity and helps prevent advertisers, and network hackers from monitoring your activity.",
+      "followers": {
+        "facebook": 34700,
+        "twitter": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5474765.jpg?t=1669975028"
+    },
+    {
+      "title": "VPN Tracker Blog",
+      "feed_url": "https://blog.vpntracker.com/feed/",
+      "website_url": "https://blog.vpntracker.com/",
+      "description": "Discover all the latest news and info about VPN Tracker for Mac, iPhone and iPad - plus exclusive productivity tips, VPN tricks, tutorials, and configuration guides. VPN Tracker creates a secure connection to a router, firewall or VPN server on your network and supports all major VPN gateway vendors, including SonicWall, Sophos, NETGEAR, Cisco, and Synology, as well as all leading protocols.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474791.jpg?t=1669975424"
+    },
+    {
+      "title": "PrivacySavvy \u00bb VPN",
+      "feed_url": "https://privacysavvy.com/vpn/feed/",
+      "website_url": "https://privacysavvy.com/vpn/",
+      "description": "We are on a mission to make every internet user privacy savvy and enable them to stay safe online. The site features security guides, VPN reviews, and more. The mission of PrivacySavvy is to provide you with all the information and tools that you need to ensure your safety and privacy on internet.",
+      "followers": {
+        "facebook": 234
+      },
+      "image_url": "https://i1.feedspot.com/5474780.jpg?t=1669975816"
+    },
+    {
+      "title": "VPN Account Blog",
+      "feed_url": "https://www.vpn-accounts.com/feed/",
+      "website_url": "https://www.vpn-accounts.com/blog/",
+      "description": "Here you can read on different VPN topics. VPN encryption, security, privacy, etc. VPN-accounts.com offers a premium VPN service for internet security, anonymity & Privacy! Using VPN accounts you route all your internet traffic via your ISP in an encrypted format to via our VPN servers.",
+      "followers": {
+        "facebook": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5474773.jpg?t=1669976088"
+    },
+    {
+      "title": "TechRadar \u00bb VPN Coverage",
+      "feed_url": "https://www.techradar.com/feeds/tag/vpn",
+      "website_url": "https://www.techradar.com/vpn/",
+      "description": "Up-to-the-minute technology news covering VPN, security, cyberattacks and more. TechRadar helps up to 70 million people around the globe find the tech they love every month. Our world-class experts live and breathe the latest technology, offering clear, unbiased, useful advice, as well as tips, tricks, and secrets culled from our rigorous in-depth testing.",
+      "followers": {
+        "facebook": 655000,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5474778.jpg?t=1669976157"
+    },
+    {
+      "title": "Comparitech",
+      "feed_url": "https://www.comparitech.com/feed/",
+      "website_url": "https://www.comparitech.com/blog/vpn-privacy/",
+      "description": "Read the latest news and opinion on information security, online privacy, VPNs and cloud backup on the Comparitech blog. Comparitech is a pro-consumer website providing information, tools, reviews and comparisons to help our readers in the US, UK and the rest of the world improve their cyber security and privacy online. Founded in 2015, we're now a team of 30 security researchers, writers, developers, and editors covering a wide range of cybersecurity topics.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4963782.jpg?t=1669975582"
+    },
+    {
+      "title": "AdGuard VPN Blog",
+      "feed_url": "https://adguard-vpn.com/blog/rss-en.xml",
+      "website_url": "https://adguard-vpn.com/en/blog/index.html",
+      "description": "Read the most up-to-date news from AdGuard VPN. Install AdGuard VPN and improve your privacy. Surf the web securely, be safe and anonymous. AdGuard VPN is a virtual private network (VPN) that is a secure tunnel between two or more devices. Historically, user privacy and safety have been AdGuard's top priority. It's backed up with 10 years of spotless reputation. It's inherently reflected in AdGuard VPN: we use our own fast and secure protocol and provide you with unique privacy-focused features.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474784.jpg?t=1669976249"
+    },
+    {
+      "title": "TunnelBear Blog",
+      "feed_url": "https://www.tunnelbear.com/blog/rss/",
+      "website_url": "https://www.tunnelbear.com/blog/",
+      "description": "The TunnelBear posts about online privacy, ongoing projects, and new features. TunnelBear is a virtual private network (or VPN for short). We believe in an open and uncensored internet. Our easy-to-use VPN technology has enabled millions of users to browse a private and secure internet.",
+      "followers": {
+        "facebook": 70200,
+        "twitter": 203800
+      },
+      "image_url": "https://i1.feedspot.com/5474767.jpg?t=1669976311"
+    },
+    {
+      "title": "Mashable India \u00bb VPN",
+      "feed_url": "https://in.mashable.com/vpn.xml",
+      "website_url": "https://in.mashable.com/vpn",
+      "description": "Get all the latest news and updates from VPN industry, security tips, tips to use VPN and more! Mashable India is obsessed with culture and tech, offering smart, spirited coverage of the products and innovations that shape our connected lives and the digital trends that keep us talking.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5474772.jpg?t=1669976438"
+    },
+    {
+      "title": "PrivadoVPN Blog",
+      "feed_url": "https://blog.privadovpn.com/feed/",
+      "website_url": "https://blog.privadovpn.com/",
+      "description": "PrivadoVPN is a Switzerland-based company that abides by a strict no-log policy. This means that all of our customers can use our service knowing that their privacy and online activity is protected from any unwanted intruders. Follow our posts to learn the latest in privacy, online security, & virtual private network updates. Stay informed on advances in data and identity protection.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474763.jpg?t=1669976718"
+    },
+    {
+      "title": "Astrill VPN Blog",
+      "feed_url": "https://www.astrill.com/blog/feed/",
+      "website_url": "https://www.astrill.com/blog/",
+      "description": "Astrill provides free easy-to-use VPN applications for Windows, macOS, Linux, iOS, Android and router. Enjoy website and device filters, app guard, smart mode and other features. Stay up to date with the latest articles on security, cyber crimes, Vpn technology and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474779.jpg?t=1669976801"
+    },
+    {
+      "title": "OpenVPN Blog",
+      "feed_url": "https://blog.openvpn.net/rss.xml",
+      "website_url": "https://blog.openvpn.net/",
+      "description": "Read the latest company news, industry studies, and security tips here brought you by the team at OpenVPN. OpenVPN is a leading global private networking and cybersecurity company that allows organizations to truly safeguard their assets in a dynamic, cost effective, and scalable way.",
+      "followers": {
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/5474768.jpg?t=1669959013"
+    },
+    {
+      "title": "NordVPN Blog",
+      "feed_url": "https://nordvpn.com/blog/feed/",
+      "website_url": "https://nordvpn.com/blog/",
+      "description": "NordVPN is your secure gateway to the Internet. If you want to take control of your network and have 100% private access to the Internet, you are at the right place. Follow this blog to know more about VPN.",
+      "followers": {
+        "facebook": 157000,
+        "twitter": 135300,
+        "instagram": 46400
+      },
+      "image_url": "https://i1.feedspot.com/4882234.jpg?t=1612442225"
+    },
+    {
+      "title": "Cactus VPN Blog",
+      "feed_url": "https://www.cactusvpn.com/feed/",
+      "website_url": "https://www.cactusvpn.com/blog/",
+      "description": "We believe everyone deserves privacy and freedom, and the internet should be safe for everyone. Cactusvpn.com has a wide selection of VPNs. Your privacy online is essential. Improve it using Our integrated VPN. In our VPN blog security experts offer you their knowledge about VPN, online privacy, security, Smart DNS, and bypassing restrictions. You will also find the latest news and promotions that we run here at CactusVPN.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/573489.jpg?t=1686546040"
+    },
+    {
+      "title": "CactusVPN Blog",
+      "feed_url": "https://www.cactusvpn.com/blog/feed/",
+      "website_url": "https://www.cactusvpn.com/blog/",
+      "description": "CactusVPN services helps to hide your IP address, encrypt your internet connection and secure connections to public hotspots. In our VPN blog you will find news about CactusVPN services, promotions and giveaways. Also we write about online privacy and bypassing restrictions.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4882738.jpg?t=1612442280"
+    },
+    {
+      "title": "VPN Helpers Blog",
+      "feed_url": "https://www.vpnhelpers.com/feed/",
+      "website_url": "https://www.vpnhelpers.com/blog/",
+      "description": "VPN analysis, guides, reviews, tips, tricks, and more important Internet security updates. At VPNHelpers.com we provide VPN advice you can count on so you'll choose the best VPN perfect for your needs.",
+      "followers": {
+        "facebook": 112,
+        "instagram": 10
+      },
+      "image_url": "https://i1.feedspot.com/5205805.jpg?t=1669958198"
+    },
+    {
+      "title": "SwitchVPN Blog",
+      "feed_url": "https://switchvpn.net/blog/rss/",
+      "website_url": "https://switchvpn.net/blog/",
+      "description": "SwitchVPN provides Virtual Private Network services to protect your identity, secure your network on hotspots, bypass ISP and much more. Follow this blog to get all the news, trends and practical tips from the world of Internet privacy and security and the important updates on SwitchVPN services.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4882267.jpg?t=1612443527"
+    },
+    {
+      "title": "VPN Pick",
+      "feed_url": "https://vpnpick.com/feed/",
+      "website_url": "https://vpnpick.com/category/news/",
+      "description": "VPN Pick blog provides reviews on the best VPN service providers to help you pick your favorite, cool articles and tutorials to keep you safe online and latest news on online security and privacy.",
+      "followers": {
+        "facebook": 296,
+        "twitter": 452
+      },
+      "image_url": "https://i1.feedspot.com/4883037.jpg?t=1669958438"
+    },
+    {
+      "title": "CompareMyVPN",
+      "feed_url": "https://www.comparemyvpn.com/feed/",
+      "website_url": "https://www.comparemyvpn.com/",
+      "description": "Keep up with our unbiased in-depth reviews put together by our trusted team of experts. Browse our recommendations and secure your online privacy today.",
+      "followers": {
+        "twitter": 311,
+        "instagram": 253
+      },
+      "image_url": "https://i1.feedspot.com/5146337.jpg?t=1612443544"
+    },
+    {
+      "title": "VPN Critic",
+      "feed_url": "https://vpncritic.com/feed/",
+      "website_url": "https://vpncritic.com/",
+      "description": "VPN Critic provides useful reviews, tutorials and news on vpn services.",
+      "followers": {
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4883103.jpg?t=1669958607"
+    },
+    {
+      "title": "Ghost Path VPN Blog",
+      "feed_url": "https://ghostpath.com/blog/feed/",
+      "website_url": "https://ghostpath.com/blog/",
+      "description": "Welcome to Ghost Path's VPN Blog, where we write about online security and privacy, as well as Ghost Path VPN service updates. GhostPath is a full-service Virtual Private Networking (VPN) provider.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/5474782.jpg?t=1669974672"
+    },
+    {
+      "title": "HideIPVPN Blog",
+      "feed_url": "https://www.hideipvpn.com/feed/",
+      "website_url": "https://www.hideipvpn.com/blog/",
+      "description": "In our VPN blog, we will share with you the latest news about VPN and Smart DNS, online privacy and breaking restrictions, app updates and many more. HideIPVPN offers fast and safe VPN & SmartDNS, with servers located in US, UK, NL, DE and RU.",
+      "followers": {
+        "facebook": 11,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5474781.jpg?t=1669959031"
+    },
+    {
+      "title": "Hotspot Shield Blog",
+      "feed_url": "https://www.hotspotshield.com/blog/feed/",
+      "website_url": "https://www.hotspotshield.com/blog/",
+      "description": "Get latest internet security news and updates on Hotspot Shield VPN blog. Read information, articles and expert reviews about VPN technology, VPN services for Windows, Mac, iPhone and Android. Learn more about internet security and privacy. Hotspot Shield's free app provides secure, private, & unrestricted web browsing. Protect your sensitive data & enable access to information by downloading the free app for your mobile & desktop device.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 86900,
+        "instagram": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5474764.jpg?t=1669975197"
+    },
+    {
+      "title": "StrongVPN.com Blog",
+      "feed_url": "https://blog.strongvpn.com/feed/",
+      "website_url": "https://blog.strongvpn.com/",
+      "description": "Explore Helpful information, Network Status Updates, StrongVPN News and more! With StrongVPN, you'll have exclusive access to all the benefits of the strongest VPN in the industry. StrongVPN is providing high-speed VPN services to the world with astounding customer service!",
+      "followers": {
+        "facebook": 169200,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5474771.jpg?t=1669976361"
+    },
+    {
+      "title": "vpnXpert Blog",
+      "feed_url": "https://vpnxpert.com/blog/feed/",
+      "website_url": "https://vpnxpert.com/vpn/",
+      "description": "We've compiled the top news, reviews, and comparisons on our blog. To make it easy for you to find verified information. Our team consists of experienced experts who know all the latest trends in VPN, privacy, and cybersecurity. Our goal is to show that anyone can use a VPN without any restrictions. And everyone has the right to a private Internet.",
+      "followers": {
+        "facebook": 13
+      },
+      "image_url": "https://i1.feedspot.com/5474775.jpg?t=1669975767"
+    },
+    {
+      "title": "Perimeter 81 Blog",
+      "feed_url": "https://www.perimeter81.com/feed",
+      "website_url": "https://www.perimeter81.com/blog",
+      "description": "Level up your Cyber Security knowledge and stay up to date with news in cloud, network security, cyber security & more! At Perimeter 81, our mission is to simplify secure network, cloud and application access for the modern and mobile workforce. To do so, we are transforming traditional network security technology with one unified Zero Trust Network as a Service.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5388801.jpg?t=1669976544"
+    },
+    {
+      "title": "VPNStore Blog",
+      "feed_url": "https://vpnstore.com/vpn-blog/feed/",
+      "website_url": "https://vpnstore.com/vpn-blog/",
+      "description": "Read our VPN blog and stay informed with all the latest news on VPN industry, Data privacy, Cybersecurity, Internet safety and much more. VPNStore is a VPN community to educate VPN users by writing about current affairs of VPN industry and other information.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 607
+      },
+      "image_url": "https://i1.feedspot.com/5474774.jpg?t=1669977211"
+    },
+    {
+      "title": "TorGuard VPN Blog",
+      "feed_url": "https://blog.torguard.net/",
+      "website_url": "https://blog.torguard.net/",
+      "description": "Follow this TorGuard VPN Blog for resources and articles on VPN and privacy.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 12200,
+        "instagram": 614
+      },
+      "image_url": "https://i1.feedspot.com/4882336.jpg?t=1669958020"
+    },
+    {
+      "title": "Best Reviews",
+      "feed_url": "https://bestreviews.net/articles/feed/",
+      "website_url": "https://bestreviews.net/articles/",
+      "description": "Follow this blog to get expert and user reviews of the best VPN service providers. Discover the best VPNs to protect your privacy and unblock content, and get free trials.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 218,
+        "instagram": 185
+      },
+      "image_url": "https://i1.feedspot.com/4882901.jpg?t=1669979563"
+    },
+    {
+      "title": "VPN Creative",
+      "feed_url": "https://vpncreative.net/feed/",
+      "website_url": "https://vpncreative.net/news/",
+      "description": "VPN Creative blog is about online security, online freedom and reviews about the best tools for an open and equal Internet.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4882888.jpg?t=1612443862"
+    },
+    {
+      "title": "UrbanVPN Blog",
+      "feed_url": "https://www.urban-vpn.com/blog/",
+      "website_url": "https://www.urban-vpn.com/blog/",
+      "description": "UrbanVPN is the biggest global network for anonymous web users. Through IP sharing we deliver premium-level VPN speed & safety for totally free. Read more here! Check out the latest security news, learn more about VPN",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474787.jpg?t=1669959354"
+    },
+    {
+      "title": "CyberGhost Privacy Hub",
+      "feed_url": "https://www.cyberghostvpn.com/privacyhub/",
+      "website_url": "https://www.cyberghostvpn.com/privacyhub/",
+      "description": "Let us help you navigate the ever-changing world of privacy and cybersecurity. Read our articles, in-depth guides and get our tips & tricks. CyberGhost VPN encrypts your online traffic and hides your real IP address, whether you're streaming, torrenting, gaming, shopping, banking, or simply browsing.",
+      "followers": {
+        "facebook": 53200,
+        "twitter": 17300,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5474777.jpg?t=1669974717"
+    },
+    {
+      "title": "Private Internet Access Blog",
+      "feed_url": "https://www.privateinternetaccess.com/blog/feed",
+      "website_url": "https://www.privateinternetaccess.com/blog/",
+      "description": "Private Internet Access is a anonymous VPN Service Provider. It provides VPN Tunnel services to encrypt your Internet connection and hide your IP address online. This will effectively allow you to remain anonymous and secure on all of your devices. Follow this blog to learn how an anonymous VPN can help you protect you and your family along with other top news and info.",
+      "followers": {
+        "facebook": 913000,
+        "twitter": 144300,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/1367335.jpg?t=1612442206"
+    },
+    {
+      "title": "VPNRanks Blog",
+      "feed_url": "https://www.vpnranks.com/blog/feed/",
+      "website_url": "https://www.vpnranks.com/blog/",
+      "description": "VPNRanks is a VPN review website that gives rank to each VPN provider according to its speciality in particular domain. Follow this blog to get detailed VPN reviews, unblocking guides, privacy & security solutions and much more.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4882917.jpg?t=1612442233"
+    },
+    {
+      "title": "VPN Selector",
+      "feed_url": "https://vpnselector.com/feed/",
+      "website_url": "https://lxcenter.org/vpn-reviews/",
+      "description": "We compare speed, security, Netflix and torrent support and price. Pick the best VPN for you and browse anonymously.",
+      "followers": {
+        "twitter": 58
+      },
+      "image_url": "https://i1.feedspot.com/5099006.jpg?t=1612442242"
+    },
+    {
+      "title": "Ivacy VPN Blog",
+      "feed_url": "https://www.ivacy.com/blog/feed/",
+      "website_url": "https://www.ivacy.com/blog/category/ivacy-updates/",
+      "description": "Ivacy provides the best VPN service that allows you to access blocked content from anywhere in the world. Ivacy VPN Blog brings you the latest news, tips, tricks and information related to the world of online security, privacy and torrenting.",
+      "followers": {
+        "facebook": 32600,
+        "twitter": 1700,
+        "instagram": 552
+      },
+      "image_url": "https://i1.feedspot.com/4882983.jpg?t=1669979506"
+    },
+    {
+      "title": "BestVPNRating",
+      "feed_url": "https://feeds.feedburner.com/Bestvpnrating",
+      "website_url": "https://cooltechzone.com/",
+      "description": "BestVPNRating is an online platform which allows you to browse the best VPN providers. The site is structured to provide a top of the best VPNs. It has ranked and reviewed 150 and more VPN providers. Follow this blog to find useful tips and advice on how to use VPN services, how to get the best of the tool by configuring it properly and information on data restricted countries and VPNs.",
+      "followers": {
+        "facebook": 906,
+        "twitter": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4882930.jpg?t=1612443561"
+    },
+    {
+      "title": "VPNOverview.com",
+      "feed_url": "https://vpnoverview.com/news/feed/",
+      "website_url": "https://vpnoverview.com/news/",
+      "description": "Click here to find out the latest international news about VPNs, privacy, censorship, and safe internet. We all have the right to privacy and the protection of our personal data. That was the fundamental thought on which we built our website. Our site contains information on VPNs, online privacy, security, and responsible internet use. With a small dedicated team of professionals we strive to post current and high-quality content on our platform.",
+      "followers": {
+        "facebook": 146800,
+        "twitter": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5474766.jpg?t=1669975245"
+    },
+    {
+      "title": "Bright VPN Blog",
+      "feed_url": "https://brightvpn.com/blog/feed",
+      "website_url": "https://brightvpn.com/blog",
+      "description": "When large companies do research on the web, they are often misled & blocked by websites, so they can't see the Web as an everyday person would. Bright Data (Bright VPN's parent company) collects public information from the web for them and pays for your VPN. Check out our blog for security and privacy news, solutions, technology and more!",
+      "followers": {
+        "facebook": 213,
+        "twitter": 154
+      },
+      "image_url": "https://i1.feedspot.com/5474776.jpg?t=1669975270"
+    },
+    {
+      "title": "The VPN Coupon Blog",
+      "feed_url": "https://thevpncoupon.com/blog/feed/",
+      "website_url": "https://thevpncoupon.com/blog/",
+      "description": "'The VPN Coupon' is a website from where you can learn about the latest VPNs, deals, and about their reviews by real users. We also share several guides on using these VPNs effectively. This website is developed using various VPN affiliate providers to earn a few bucks by recommending the products on our site, and we only review or recommend those products which are beneficial for our readers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5474770.jpg?t=1669977261"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "category": "Leica",
+  "source_url": "https://rss.feedspot.com/leica_rss_feeds",
+  "feeds": [
+    {
+      "title": "Leica",
+      "feed_url": "https://feeds2.feedburner.com/LeicaRumors",
+      "website_url": "https://leicarumors.com/",
+      "description": "A blog for Leica enthusiasts. We report Leica rumors and news, and all the hot photographic stuff on the web.",
+      "followers": {
+        "facebook": 38900,
+        "twitter": 25700,
+        "instagram": 34300
+      },
+      "image_url": "https://i1.feedspot.com/4921039.jpg?t=1620804891"
+    },
+    {
+      "title": "Red Dot Forum",
+      "feed_url": "https://www.reddotforum.com/feed/",
+      "website_url": "https://www.reddotforum.com/",
+      "description": "Red Dot Forum is an online Leica community with news, reviews, blogs and a discussion forum.",
+      "followers": {
+        "twitter": 6100,
+        "instagram": 27600
+      },
+      "image_url": "https://i1.feedspot.com/4921129.jpg?t=1620804961"
+    },
+    {
+      "title": "Hexagon Geosystems Blog",
+      "feed_url": "https://blog.hexagongeosystems.com/feed/",
+      "website_url": "https://blog.hexagongeosystems.com/",
+      "description": "Leica Geosystems is committed to innovative product and solution development. Learn how these solutions are helping professionals to shape the future of our world in a diverse mix of industries.",
+      "followers": {
+        "facebook": 115300,
+        "twitter": 16700,
+        "instagram": 55700
+      },
+      "image_url": "https://i1.feedspot.com/4921061.jpg?t=1620805221"
+    },
+    {
+      "title": "LHSA-The International Leica Society Blog",
+      "feed_url": "https://leicasocietyinternational.org/blog",
+      "website_url": "https://leicasocietyinternational.org/blog",
+      "description": "The International Leica Society is a non-profit organization, dedicated to the appreciation, use, and study of LEICA photographic products, their history, and the people that have made LEICA what it is today.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 2000,
+        "instagram": 20200
+      },
+      "image_url": "https://i1.feedspot.com/4921138.jpg?t=1620804918"
+    },
+    {
+      "title": "Leica Store Blog",
+      "feed_url": "https://blog.camerawest.com/category/leica/feed/",
+      "website_url": "https://blog.camerawest.com/category/leica/",
+      "description": "Leica Store San Francisco is a premier specialty Leica dealer, gallery, and store. From rare and used Leica to new Leica, we offer one of the widest ranges of fine Leica equipment on the market today. The blog features reviews of Leica cameras, accessories and shares photography tips with Leica cameras.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 562,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5292451.jpg?t=1623421767"
+    },
+    {
+      "title": "Leica Camera Blog",
+      "feed_url": "https://leica-camera.blog/feed/",
+      "website_url": "https://leica-camera.blog/",
+      "description": "The Leica Camera Blog, available at leica-camera.blog, is a dedicated platform celebrating the art of photography through the lens of Leica cameras. The blog features captivating stories, artist interviews, and showcases of photography projects that span genres such as street, nature, and architecture. Leica Camera, a renowned name in the photography industry, curates content that highlights the works of both established and emerging photographers. The blog serves as an inspirational and educational resource for photography enthusiasts and professionals alike.",
+      "followers": {
+        "facebook": 1000000,
+        "twitter": 277100,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/211581.jpg?t=1620805303"
+    },
+    {
+      "title": "LEICA Barnack Berek Blog",
+      "feed_url": "https://www.blogger.com/feeds/1320126156594375642/posts/default",
+      "website_url": "https://gmpphoto.blogspot.com/",
+      "description": "A blog dedicated to Leica cameras, lenses, and their history. Through this blog, Heinz Richter, a Leica enthusiast & collector, offers a balance between contemporary and historical items of interest.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5344530.jpg?t=1637239094"
+    },
+    {
+      "title": "Leica Biosystems",
+      "feed_url": "https://www.leicabiosystems.com/rss.xml",
+      "website_url": "https://www.leicabiosystems.com/news-events/",
+      "description": "Leica Biosystems is a global leader in workflow solutions and automation, integrating each step in the workflow from biopsy to diagnosis.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4921067.jpg?t=1620805082"
+    }
+  ]
+}

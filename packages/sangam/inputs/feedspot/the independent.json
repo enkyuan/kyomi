@@ -1,0 +1,336 @@
+{
+  "category": "The Independent",
+  "source_url": "https://rss.feedspot.com/independent_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Independent",
+      "feed_url": "http://www.independent.co.uk/rss",
+      "website_url": "https://www.independent.co.uk/",
+      "description": "The Independent is world's most free-thinking newspaper. Find all the latest news, comment and features from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb UK",
+      "feed_url": "http://www.independent.co.uk/news/uk/rss",
+      "website_url": "https://www.independent.co.uk/news/uk",
+      "description": "Subscribe to keep up with Breaking News Stories Within the UK from The Independent.",
+      "followers": {
+        "facebook": 11000000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb US",
+      "feed_url": "https://www.independent.co.uk/us/rss",
+      "website_url": "https://www.independent.co.uk/us",
+      "description": "Latest news, comment and features from The Independent US.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb UK Politics",
+      "feed_url": "https://www.independent.co.uk/news/uk/politics/rss",
+      "website_url": "https://www.independent.co.uk/news/uk/politics",
+      "description": "All articles about UK Politics from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Sports",
+      "feed_url": "http://www.independent.co.uk/sport/rss",
+      "website_url": "https://www.independent.co.uk/sport",
+      "description": "Follow the latest sports news and breaking sports stories including Football, Tennis, F1, Golf and Rugby from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/4887576.jpg?t=1753339438"
+    },
+    {
+      "title": "The Independent \u00bb Lifestyle",
+      "feed_url": "http://www.independent.co.uk/life-style/rss",
+      "website_url": "https://www.independent.co.uk/life-style",
+      "description": "Get updated with all Lifestyle news & articles including celebrities, fashion, hot trends & more from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Education",
+      "feed_url": "http://www.independent.co.uk/news/education/rss",
+      "website_url": "https://www.independent.co.uk/news/education",
+      "description": "Get information and news related to education from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Travel",
+      "feed_url": "http://www.independent.co.uk/travel/rss",
+      "website_url": "https://www.independent.co.uk/travel",
+      "description": "Get travel tips and inspiration with insider guides, fascinating stories, video experiences and stunning photos from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Science",
+      "feed_url": "http://www.independent.co.uk/news/science/rss",
+      "website_url": "https://www.independent.co.uk/news/science",
+      "description": "Get Latest Science News and Information from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/4887546.jpg?t=1753686192"
+    },
+    {
+      "title": "The Independent \u00bb Climate and Environment",
+      "feed_url": "https://www.independent.co.uk/climate-change/news/rss",
+      "website_url": "https://www.independent.co.uk/climate-change/news",
+      "description": "The Independent Environment section features climate change, green living and nature.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Voices",
+      "feed_url": "http://www.independent.co.uk/voices/rss",
+      "website_url": "https://www.independent.co.uk/voices",
+      "description": "The Independent Voices section features opinion articles, newspaper editorials and letters to the editor on the issues of the day.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Money",
+      "feed_url": "https://www.independent.co.uk/money/rss",
+      "website_url": "https://www.independent.co.uk/money",
+      "description": "All articles about Money from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Business",
+      "feed_url": "http://www.independent.co.uk/news/business/rss",
+      "website_url": "https://www.independent.co.uk/news/business",
+      "description": "Latest Business Information, News and Events from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb World",
+      "feed_url": "http://www.independent.co.uk/news/world/rss",
+      "website_url": "https://www.independent.co.uk/news/world",
+      "description": "Get Latest World News and Events from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Football",
+      "feed_url": "https://www.independent.co.uk/sport/football/rss",
+      "website_url": "https://www.independent.co.uk/sport/football",
+      "description": "All articles about Football from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Health",
+      "feed_url": "https://www.independent.co.uk/news/health/rss",
+      "website_url": "https://www.independent.co.uk/news/health",
+      "description": "All articles about Health from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Video",
+      "feed_url": "http://www.independent.co.uk/video/rss",
+      "website_url": "https://www.independent.co.uk/video",
+      "description": "Latest trending news and video on Independent TV, from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Culture",
+      "feed_url": "http://www.independent.co.uk/arts-entertainment/rss",
+      "website_url": "https://www.independent.co.uk/arts-entertainment",
+      "description": "Keep up with Arts and Entertainment, Film, Music, Architecture, Theater and Books from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Media",
+      "feed_url": "http://www.independent.co.uk/news/media/rss",
+      "website_url": "https://www.independent.co.uk/news/media",
+      "description": "Get news and information on media from The Independent.",
+      "followers": {
+        "facebook": 11000000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Tech",
+      "feed_url": "https://www.independent.co.uk/tech/rss",
+      "website_url": "https://www.independent.co.uk/tech",
+      "description": "All articles about Tech from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Beauty",
+      "feed_url": "https://www.independent.co.uk/beauty/rss",
+      "website_url": "https://www.independent.co.uk/beauty",
+      "description": "The latest breaking news, comment and features from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/8541659.jpg"
+    },
+    {
+      "title": "The Independent \u00bb Music",
+      "feed_url": "https://www.independent.co.uk/arts-entertainment/music/rss",
+      "website_url": "https://www.independent.co.uk/arts-entertainment/music",
+      "description": "All articles about Music from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb TV",
+      "feed_url": "https://www.independent.co.uk/arts-entertainment/tv/rss",
+      "website_url": "https://www.independent.co.uk/arts-entertainment/tv",
+      "description": "All articles about TV from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Films",
+      "feed_url": "https://www.independent.co.uk/arts-entertainment/films/rss",
+      "website_url": "https://www.independent.co.uk/arts-entertainment/films",
+      "description": "All articles about Films from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Rugby Union",
+      "feed_url": "https://www.independent.co.uk/sport/rugby/rugby-union/rss",
+      "website_url": "https://www.independent.co.uk/sport/rugby/rugby-union",
+      "description": "Rugby Union news, previews and analysis",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/8541662.jpg"
+    },
+    {
+      "title": "The Independent \u00bb Tennis",
+      "feed_url": "https://www.independent.co.uk/sport/tennis/rss",
+      "website_url": "https://www.independent.co.uk/sport/tennis",
+      "description": "All articles about Tennis from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    },
+    {
+      "title": "The Independent \u00bb Formula 1",
+      "feed_url": "https://www.independent.co.uk/f1/rss",
+      "website_url": "https://www.independent.co.uk/f1",
+      "description": "F1 2024 latest news, live results and constructors standings",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/8541661.jpg"
+    },
+    {
+      "title": "The Independent \u00bb Cricket",
+      "feed_url": "https://www.independent.co.uk/sport/cricket/rss",
+      "website_url": "https://www.independent.co.uk/sport/cricket",
+      "description": "The latest breaking news, comment and features from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/8541660.jpg"
+    },
+    {
+      "title": "The Independent \u00bb Bulletin",
+      "feed_url": "https://www.independent.co.uk/bulletin/rss",
+      "website_url": "https://www.independent.co.uk/bulletin",
+      "description": "News for seriously busy people. The latest in news, sport, culture and lifestyle from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/8541658.jpg"
+    },
+    {
+      "title": "The Independent \u00bb Obituaries",
+      "feed_url": "http://www.independent.co.uk/news/obituaries/rss",
+      "website_url": "https://www.independent.co.uk/news/obituaries",
+      "description": "Get obituaries news and information from The Independent.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/160943.jpg?t=1524052514"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "category": "Edmonton Journal",
+  "source_url": "https://rss.feedspot.com/edmontonjournal_rss_feeds",
+  "feeds": [
+    {
+      "title": "Edmonton Journal",
+      "feed_url": "https://edmontonjournal.com/feed",
+      "website_url": "https://edmontonjournal.com/",
+      "description": "Find regular updates on the latest happenings in the city of Edmonton. Get insights on events, news, headlines and more.We remain Edmonton's most trusted voice, providing a professional perspective on news, business, sports and entertainment that's read by more northern Albertans than any other daily newspaper",
+      "followers": {
+        "facebook": 139100,
+        "twitter": 195300,
+        "instagram": 85000
+      },
+      "image_url": "https://i1.feedspot.com/4921075.jpg?t=1749549290"
+    },
+    {
+      "title": "Edmonton Journal \u00bb Health",
+      "feed_url": "https://edmontonjournal.com/category/health/feed.xml",
+      "website_url": "https://edmontonjournal.com/category/health/",
+      "description": "Take care of your health and wellness and with the latest news, tips and advice from wellness experts in Canada.",
+      "followers": {
+        "facebook": 139100,
+        "twitter": 195300,
+        "instagram": 85000
+      },
+      "image_url": "https://i1.feedspot.com/8536806.jpg?t=1753085395"
+    },
+    {
+      "title": "Edmonton Journal \u00bb Opinion",
+      "feed_url": "https://edmontonjournal.com/category/opinion/feed.xml",
+      "website_url": "https://edmontonjournal.com/category/opinion/",
+      "description": "Read opinions, editorials and columns. We feature a variety of viewpoints and trending topics to keep you informed about important issues.",
+      "followers": {
+        "facebook": 139100,
+        "twitter": 195300,
+        "instagram": 85000
+      },
+      "image_url": "https://i1.feedspot.com/8536805.jpg?t=1753085391"
+    },
+    {
+      "title": "Edmonton Journal \u00bb NBA",
+      "feed_url": "https://edmontonjournal.com/category/sports/basketball/nba/",
+      "website_url": "https://edmontonjournal.com/category/sports/basketball/nba/",
+      "description": "Read the latest National Basketball Association (NBA) news in Canada, featuring NBA scores, game updates, schedules and athlete news.",
+      "followers": {
+        "facebook": 139100,
+        "twitter": 195300,
+        "instagram": 85000
+      },
+      "image_url": "https://i1.feedspot.com/5464080.jpg?t=1749549299"
+    },
+    {
+      "title": "Edmonton Journal \u00bb Real Estate",
+      "feed_url": "https://edmontonjournal.com/category/business/real-estate/",
+      "website_url": "https://edmontonjournal.com/category/business/real-estate/",
+      "description": "We got you covered on Alberta's real estate industry. Read our stories and tips on the housing market, mortgage rates, homebuyer planning and more.",
+      "followers": {
+        "facebook": 139100,
+        "twitter": 195300,
+        "instagram": 85000
+      },
+      "image_url": "https://i1.feedspot.com/5513511.jpg?t=1749549296"
+    }
+  ]
+}

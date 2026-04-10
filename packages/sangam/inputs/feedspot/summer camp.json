@@ -1,0 +1,604 @@
+{
+  "category": "Summer Camp",
+  "source_url": "https://rss.feedspot.com/summer_camp_rss_feeds",
+  "feeds": [
+    {
+      "title": "Everything Summercamp Blog",
+      "feed_url": "https://everythingsummercamp.com/blogs/news.atom",
+      "website_url": "https://everythingsummercamp.com/blogs/news",
+      "description": "Your one-stop shop for summer camp. Get camp trunks, duffles, clothing name labels, camp gear, apparel, and more.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 1300,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5266525.jpg?t=1617968766"
+    },
+    {
+      "title": "Camp Live Oak Blog",
+      "feed_url": "https://www.campliveoakfl.com/category/blog/feed/",
+      "website_url": "https://www.campliveoakfl.com/category/blog/",
+      "description": "Camp Live Oak is a children's summer day camp working in a cooperative effort with Florida's State Park System to provide an environmental experience. We offer a unique opportunity for kids to experience the wonder and joy of curiosity, discovery and new knowledge in regards to nature.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 59,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5269448.jpg?t=1618469620"
+    },
+    {
+      "title": "The Official CECBR Summer Camp Blog",
+      "feed_url": "https://www.cecbr.com/blog/feed/",
+      "website_url": "https://www.cecbr.com/blog/",
+      "description": "Welcome to Camps Equinunk and Blue Ridge. Since 1920, our traditional summer camps have been at the forefront of resident camping and have served as a summer home to hundreds of campers, staff, and alumni. We are passionate about the camping experience and value the history and traditions that continue to shape us.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 1300,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5269658.jpg?t=1618486252"
+    },
+    {
+      "title": "Camp Pathfinder Blog",
+      "feed_url": "https://www.camppathfinder.com/blog-feed.xml",
+      "website_url": "https://www.camppathfinder.com/blog",
+      "description": "Camp Pathfinder, est. 1914 is a historic boys' summer camp in Algonquin Park, Ontario Canada. Boys ages 7 - 16 attend from across North America and around the world in order to have a rustic, tech-free summer experience.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 106,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5269731.jpg?t=1618493635"
+    },
+    {
+      "title": "Camp Sonshine Blog",
+      "feed_url": "https://campsonshine.org/feed/",
+      "website_url": "https://campsonshine.org/blog/",
+      "description": "Camp Sonshine is an award-winning, county, and state licensed Christian day camp in Maryland. Our programs are tailored to meet the developmental needs of each age group that we serve. We handpick our staff from all over the world that love working with youth and who intentionally model the kind of behavior parents want their children to emulate.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 494,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5269852.jpg?t=1618554076"
+    },
+    {
+      "title": "Rockbrook Camp for Girls Blog",
+      "feed_url": "https://www.rockbrookcamp.com/feed/",
+      "website_url": "https://www.rockbrookcamp.com/blog/",
+      "description": "Rockbrook is an overnight summer camp for girls located in the mountains of western North Carolina. Established in 1921, it is one of the area's best and oldest sleepaway summer camps. Rockbrook provides multi-week overnight camp sessions for girls ages 6 through 16. Each session accommodates 200 campers. Rockbrook is well known for its diverse program of activities, including horseback riding, outdoor adventure, crafts, sports, drama, swimming, and more.",
+      "followers": {
+        "twitter": 735,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5267176.jpg?t=1618236283"
+    },
+    {
+      "title": "International Sports Training Camp Blog",
+      "feed_url": "https://www.international-sports.com/blog/feed/",
+      "website_url": "https://www.international-sports.com/blog/",
+      "description": "ISTC is a one-of-a-kind sports camp that combines traditional summer camp experiences with a one-week sports camp experience! Stay up to date on ITSC year-round with photos, stories, news articles, and videos by following our blog.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 1300,
+        "instagram": 13000
+      },
+      "image_url": "https://i1.feedspot.com/5267032.jpg?t=1618217862"
+    },
+    {
+      "title": "Camp Walt Whitman Blog",
+      "feed_url": "https://www.campwalt.com/blog/feed/",
+      "website_url": "https://www.campwalt.com/blog/",
+      "description": "Camp Walt Whitman is a coed children's summer sleepaway camp located in New Hampshire. Its holistic approach to summer camp combines world-class adventure, hands-on exposure to sports and the arts while developing a sense of community that lasts for a lifetime. Follow the Camp Walt Whitman blog to learn about camp related news, articles, events, and stay up to date with camp happenings.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 552
+      },
+      "image_url": "https://i1.feedspot.com/5267120.jpg?t=1618223700"
+    },
+    {
+      "title": "URJ Jacobs Camp Blog",
+      "feed_url": "https://jacobscamp.org/feed/",
+      "website_url": "https://jacobscamp.org/blog/",
+      "description": "Jacobs Camp is the Reform Jewish summer camp in Utica, Mississippi serving children from the Deep South.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 843,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5267880.jpg?t=1618401757"
+    },
+    {
+      "title": "Laurel South Blog",
+      "feed_url": "https://www.camplaurelsouth.com/feed/",
+      "website_url": "https://www.camplaurelsouth.com/blog/",
+      "description": "At Laurel South, we take this responsibility very seriously by maintaining an environment that encourages safety, healthy living and a growth mindset. We believe this reinforces a positive self-image. We provide campers with opportunities for emotional and physical growth, encourage their natural abilities, enhance curiosity and instill the benefits of group living. Our goal is to provide an enjoyable, exciting summer experience that motivates our campers to approach the future with courage, confidence and a feeling of self-worth.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 883,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5269612.jpg?t=1618483761"
+    },
+    {
+      "title": "Camp Woodland Blog",
+      "feed_url": "https://www.campwoodland.com/blog/feed/",
+      "website_url": "https://www.campwoodland.com/blog/",
+      "description": "Woodland is a fun-filled summer camp for girls located near Eagle River in Wisconsin\\'s great North Woods.",
+      "followers": {
+        "facebook": 569,
+        "instagram": 818
+      },
+      "image_url": "https://i1.feedspot.com/5269628.jpg?t=1618484950"
+    },
+    {
+      "title": "North Star Reach",
+      "feed_url": "https://www.northstarreach.org/feed/",
+      "website_url": "https://www.northstarreach.org/",
+      "description": "North Star Reach provides life-changing camp experiences for children with serious health challenges and their families, free of charge. Discover fresh insights from our staff members, friends, and partners.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 772
+      },
+      "image_url": "https://i1.feedspot.com/5269621.jpg?t=1618484359"
+    },
+    {
+      "title": "Camp Pa-Qua-Tuck Blog",
+      "feed_url": "https://camppaquatuck.com/category/blog/feed/",
+      "website_url": "https://camppaquatuck.com/category/blog/",
+      "description": "Camp Pa-Qua-Tuck is a summer sleep away camp for children and young adults with physical and developmental disabilities located in Center Moriches, New York.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 227
+      },
+      "image_url": "https://i1.feedspot.com/5269971.jpg?t=1618565740"
+    },
+    {
+      "title": "Camp Shohola Blog",
+      "feed_url": "https://www.shohola.com/feed/",
+      "website_url": "https://www.shohola.com/home/blogs/",
+      "description": "Camp Shohola is a great option for sleepaway camp for boys in the Country. If you're looking for a summer camp for boys that highlights activities like land sports, water sports, outdoor adventures, equestrian, communications and technology, and the arts in the Northeast area: New York, New Jersey, Pennsylvania, Maryland, and the District of Columbia.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 56,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5267070.jpg?t=1618220938"
+    },
+    {
+      "title": "The Official Camp Weequahic Blog",
+      "feed_url": "https://www.weequahic.com/feed/",
+      "website_url": "https://www.weequahic.com/blog/",
+      "description": "Camp Weequahic offers a complete traditional co-ed camping experience in either our two Three Week sessions or Super Six Week option. Check back regularly for all Camp Weequahic news and reminders to take lessons learned at camp and apply them to our lives outside the camp.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 809,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5267102.jpg?t=1618223252"
+    },
+    {
+      "title": "Camp Fircom Blog",
+      "feed_url": "https://www.fircom.ca/blog?format=rss",
+      "website_url": "https://www.fircom.ca/blog",
+      "description": "Located on Gambier Island in British Columbia, Canada, Camp Fircom curates outdoor BC summer camp programming that focuses on providing unique experiences to participants. We celebrate the outdoors and an outdoor lifestyle and encourage participants to find time to relax in the fresh air of our 120-acre waterfront property.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 185,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5267745.jpg?t=1618399280"
+    },
+    {
+      "title": "Chestnut Lake Camp and News Blog",
+      "feed_url": "https://www.chestnutlakecamp.com/blog/feed",
+      "website_url": "https://www.chestnutlakecamp.com/blog/",
+      "description": "Discover Chestnut Lake Camp, a 3, 4, or 7-week overnight summer camp in Pennsylvania. A summer home where boys and girls ages 7-15 will enjoy various popular summer camp activities.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 846,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5266555.jpg?t=1617972833"
+    },
+    {
+      "title": "Takodah YMCA Blog",
+      "feed_url": "https://www.camptakodah.org/blog/feed/",
+      "website_url": "https://www.camptakodah.org/blog/",
+      "description": "Get the latest news and updates from the Takodah YMCA, including summer camp updates, outdoor education program ideas and branch insights.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 432,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5269653.jpg?t=1626785916"
+    },
+    {
+      "title": "Camps 'R' Us Blog",
+      "feed_url": "https://www.campsrus.org/feed/",
+      "website_url": "https://www.campsrus.org/blog/",
+      "description": "Camps 'R' Us is a community of campers, parents and staff members who come together each summer to create a safe, nurturing environment that supports healthy learning by promoting physical, intellectual and emotional and social growth.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 274,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5269599.jpg?t=1618483015"
+    },
+    {
+      "title": "Green Camp Bali Blog",
+      "feed_url": "https://www.greencampbali.com/feed/",
+      "website_url": "https://www.greencampbali.com/blog-2/",
+      "description": "Green Camp is set in one of the world's greenest and most innovative campus at the Green School in Bali. We provide experiences that cultivate people's understanding and appreciation of nature, community, and self through an unforgettable learning adventure.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 357,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5266567.jpg?t=1617974393"
+    },
+    {
+      "title": "Happiness Is Camping Blog",
+      "feed_url": "https://www.happinessiscamping.org/feed/",
+      "website_url": "https://www.happinessiscamping.org/blog/",
+      "description": "We are a free camp for children with cancer and their siblings, ages 6-16. HIC's summer camp operates for five weeklong sessions each summer, and campers are eligible to attend any and all sessions depending on their doctor's approval. Our main goal is to simply lets kids with cancer be kids again. Therefore, our program is designed like any traditional camp.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 222,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5269338.jpg?t=1618409467"
+    },
+    {
+      "title": "Camp Takajo",
+      "feed_url": "https://www.camptakajo.com/feed/",
+      "website_url": "https://www.camptakajo.com/tak-talk/",
+      "description": "Camp Takaj is a seven-week sleepaway camp for boys. Takajo is renowned for its carefully designed, diverse program and exceptional facilities which combine to offer boys a breadth of experience that is unique in camping.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 217,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5267058.jpg?t=1618219813"
+    },
+    {
+      "title": "Camp Robin Hood Blog",
+      "feed_url": "https://www.camprobinhood.com/blog/feed",
+      "website_url": "https://www.camprobinhood.com/blog/",
+      "description": "Robin Hood has provided an encouraging, inviting, and supportive summer environment for our campers. That environment is created in large part by our caring and attentive staff, composed almost entirely of young men and women who grew up as campers in the Robin Hood community. Camp Robin Hood is a traditional summer camp for both girls and boys.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 427,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5267536.jpg?t=1618341437"
+    },
+    {
+      "title": "Summer 365 Blog",
+      "feed_url": "https://www.summer365.com/feed/",
+      "website_url": "https://www.summer365.com/resources/blogs/",
+      "description": "As Summer 365 Counselors, we wear lots of hats. From advisors and translators to navigators and researchers, our roles may vary-but our commitment to finding the best summer experience for your child never wavers. At Simply Summer we share our insider info, tips, trends, and fun interviews that celebrate and educate about our favorite season of the year! Welcome to our world where we think and plan for summer all day everyday.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 813,
+        "instagram": 17400
+      },
+      "image_url": "https://i1.feedspot.com/5266532.jpg?t=1617969572"
+    },
+    {
+      "title": "Camp Thurman Blog",
+      "feed_url": "https://campthurman.org/feed/",
+      "website_url": "https://campthurman.org/",
+      "description": "Camp Thurman is a nonprofit ministry-minded summer camp dedicated to sharing God's love and helping people pursue their identity in Christ.",
+      "followers": {
+        "facebook": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5269591.jpg?t=1618482051"
+    },
+    {
+      "title": "Maine Summer Camps Blog",
+      "feed_url": "https://mainecamps.org/summer-camp-blog/feed/",
+      "website_url": "https://mainecamps.org/summer-camp-blog/",
+      "description": "Maine Summer Camp's mission is to support and promote meaningful developmental, educational, environmental, and recreational experiences for children. Learn about camps from the inside! Camp directors and staff, plus parents, address everything from beating homesickness to favorite camp foods to how camp fosters resilience and independence, all in blogs dedicated exclusively to Maine summer camps.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5269958.jpg?t=1618562846"
+    },
+    {
+      "title": "Camp Laurel Blog",
+      "feed_url": "https://www.camplaurel.com/feed/",
+      "website_url": "https://www.camplaurel.com/blog/",
+      "description": "Camp Laurel, a coed summer camp on Echo Lake in Readfield, Maine, has been home to thousands of children for six decades. From the moment you arrive at sleepaway camp, you will be part of the Laurel family. Camp Laurel is among the best Maine sleepaway camps.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 1100,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5266520.jpg?t=1617968257"
+    },
+    {
+      "title": "Fernwood Cove Blog",
+      "feed_url": "https://www.fernwoodcove.com/blog/feed/",
+      "website_url": "https://www.fernwoodcove.com/blog/",
+      "description": "Fernwood Cove is a premier overnight camp for girls in Maine with a focus on age-appropriate skill development and personal growth. It is more than a girls summer camp, it's more than an experience. Choosing Fernwood Cove is preparing your daughter for her future. It's helping her become the best version of herself. The experiential structure of summer camp at Fernwood Cove provides a multitude of opportunities to develop important 21st Century Skills.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 404,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5269757.jpg?t=1618496586"
+    },
+    {
+      "title": "Cool Kids Camps Blog",
+      "feed_url": "https://www.coolkidscamps.com/feed/",
+      "website_url": "https://www.coolkidscamps.com/blog/",
+      "description": "Cool Kids Camps Blog shares the best summer camps from all over the US. Select from sleepway, sport, dance, STEM, art, dance and so much more. Discover the perfect camp for your family.",
+      "followers": {
+        "twitter": 1700,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5547427.jpg?t=1682064470"
+    },
+    {
+      "title": "Camp Cody Blog",
+      "feed_url": "https://campcody.com/blog/feed/",
+      "website_url": "https://campcody.com/blog/",
+      "description": "Camp Cody offers a summer experience rich in fun, friendship, learning, and adventure. Cody is a traditional summer camp for both girls and boys - campers range in age from seven to fifteen. Follow the Camp Cody Blog to stay up to date with exciting camp news, stories, photos, videos, and more.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 415,
+        "instagram": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5269862.jpg?t=1618555613"
+    },
+    {
+      "title": "BB&N Summer Camp Blog",
+      "feed_url": "https://bbnsummer.com/blog/feed/",
+      "website_url": "https://bbnsummer.com/blog/",
+      "description": "BB&N offers a wide variety of in-person and virtual camp and enrichment programs for pre-K through Grade 12.",
+      "followers": {
+        "facebook": 552,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5267538.jpg?t=1618342415"
+    },
+    {
+      "title": "Explorer International Kids' Camps Blog",
+      "feed_url": "https://www.explorercamps.com/feed/",
+      "website_url": "https://www.explorercamps.com/blog/",
+      "description": "Explorer Camps is an international summer camp for children aged 6-17 with a huge variety of outdoor activities that build real-life skills away from technology.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5267664.jpg?t=1618386776"
+    },
+    {
+      "title": "Odyssey Teen Camp Blog",
+      "feed_url": "https://www.odysseyteencamp.com/feed/",
+      "website_url": "https://www.odysseyteencamp.com/blog/",
+      "description": "Odyssey Teen Camp started in 2002 as an experiment in what can happen when kindness and compassion intentionally replace judgment. Being in an accepting community like OTC allows all teenagers to relax, connect, have fun and re-imagine their place in the world. Stay in the loop with the latest news happening now at OTC, including tips on making the most from your teen camp experience!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 76,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5267850.jpg?t=1618401094"
+    },
+    {
+      "title": "Campenings Blog",
+      "feed_url": "https://campenings.wordpress.com/category/blog/feed/",
+      "website_url": "https://campenings.wordpress.com/category/blog/",
+      "description": "Myself Jennifer Wolff, I am a journalist, and the mom of a sleep away camper. Campenings is now your news source for all things camp during the COVID-19 pandemic and beyond. I will post updates from camps around the country for you to see what's happening both at your child's camp, and at camps in other states, where health mandates may be different. You'll be able to see how your child's camp compares to others around the nation when it comes to safety measures.",
+      "followers": {
+        "facebook": 614,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5267090.jpg?t=1618222057"
+    },
+    {
+      "title": "Camp Starlight Blog",
+      "feed_url": "https://www.campstarlight.com/blog/feed/",
+      "website_url": "https://www.campstarlight.com/blog/",
+      "description": "Camp Starlight is a Traditional Brother/Sister Sleepaway Camp located in the beautiful mountains of Northeastern Pennsylvania. Spirit, Tradition, Adventure, Family, and Fun! A camping tradition for over 70 years!",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 1400,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5267085.jpg?t=1618220932"
+    },
+    {
+      "title": "Camp Woodstock YMCA Blog",
+      "feed_url": "https://www.campwoodstock.org/feed/",
+      "website_url": "https://www.campwoodstock.org/blog/",
+      "description": "At Camp Woodstock, our aim is to provide skilled leadership and facilities and equipment that are clean, attractive, and safe, which afford individuals and groups the opportunity to act in situations that are physically wholesome, mentally stimulating, and socially and spiritually sound.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 183,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5269423.jpg?t=1618468921"
+    },
+    {
+      "title": "Camp Specialists Blog",
+      "feed_url": "https://www.campspecialists.com/feed/",
+      "website_url": "https://www.campspecialists.com/blog/",
+      "description": "Since 1992, Camp Specialists has been a trusted partner connecting camps and families, free of charge. Our success means that your child has the summer of their dreams.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 381,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5269561.jpg?t=1618481265"
+    },
+    {
+      "title": "Camp Echo Lake Blog",
+      "feed_url": "https://campecholake.com/blog/feed/",
+      "website_url": "https://campecholake.com/blog/",
+      "description": "Welcome to Camp Echo Lake, a full season co-ed sleep away camp located in the heart of Adirondack Park. Since 1946, the Stein family has been providing summer camp experiences that are built upon a passionate dedication to human development. Camp Echo Lake is a loving and supportive camp community that looks for - and cultivates - the best in every camper and staff member.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 426
+      },
+      "image_url": "https://i1.feedspot.com/5269597.jpg?t=1618482557"
+    },
+    {
+      "title": "Camp Champions",
+      "feed_url": "https://blog.campchampions.com/rss.xml",
+      "website_url": "https://blog.campchampions.com/",
+      "description": "Camp Champions is a traditional, residential summer camp. We are in the ideal location on Lake LBJ in Marble Falls, Texas and provide the perfect place to spend a summer!",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1100,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5266968.jpg?t=1618208342"
+    },
+    {
+      "title": "CampSearch.com Blog",
+      "feed_url": "https://www.campsearch.com/blog/rss",
+      "website_url": "https://www.campsearch.com/blog",
+      "description": "Welcome to CampSearch.com, the #1 website for helping parents find the best summer programs for their kids. Our website also serves as a phenomenal camper recruitment tool for programs wanting to increase camper enrollment this summer. Camp Search is owned and operated by real-life camp directors of an American Camp Association Accredited Camp and parents of three kids, so you can be sure we understand what you want when choosing a camp.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5269413.jpg?t=1618467113"
+    },
+    {
+      "title": "Pine Lake Fellowship Camp Blog",
+      "feed_url": "https://www.pinelakecamp.com/category/articles/feed/",
+      "website_url": "https://www.pinelakecamp.com/category/articles/",
+      "description": "PLFC is a Christian camping ministry that provides summer camps for children ages 7-17 and facility rentals for churches and family groups.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 60,
+        "instagram": 861
+      },
+      "image_url": "https://i1.feedspot.com/5269963.jpg?t=1618565090"
+    },
+    {
+      "title": "Roughing It Day Camp Blog",
+      "feed_url": "https://www.roughingit.com/feed/",
+      "website_url": "https://www.roughingit.com/blog/",
+      "description": "Roughing It is an all-outdoor day camp operated at the beautiful Lafayette Reservoir. Our camp is open to campers ages 4 to 16 and offers a variety of activities from swimming, and horseback riding to crafts and fishing. Since 1972, Roughing It Day Camp has been creating summer memories that remain in the hearts of our campers, influencing their values into adulthood.",
+      "followers": {
+        "facebook": 712,
+        "twitter": 62,
+        "instagram": 392
+      },
+      "image_url": "https://i1.feedspot.com/5266591.jpg?t=1617977433"
+    },
+    {
+      "title": "America's Finest Summer Camps Blog",
+      "feed_url": "https://www.americasfinestsummercamps.com/feed/",
+      "website_url": "https://www.americasfinestsummercamps.com/blog/",
+      "description": "America's Finest Summer Camps provide summer camp experiences to fit everyone's needs by offering three, four, five, and seven week sessions at campuses in ME and PA.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 136,
+        "instagram": 309
+      },
+      "image_url": "https://i1.feedspot.com/5266564.jpg?t=1617973744"
+    },
+    {
+      "title": "Camp Pennbrook Blog",
+      "feed_url": "https://camppennbrook.com/feed/",
+      "website_url": "https://camppennbrook.com/about/camp-blog/",
+      "description": "Camp Pennbrook is an all-girls weight loss camp. It's a camp that challenges the mind as well as the body to be healthy. We are just like any other weight-loss camp only we have more fun. Our staff is very supportive and motivational. Don't miss out on the best summer of your life!!",
+      "followers": {
+        "facebook": 830,
+        "twitter": 7,
+        "instagram": 77
+      },
+      "image_url": "https://i1.feedspot.com/5269526.jpg?t=1618475265"
+    },
+    {
+      "title": "Kumbuka Summer Camp Blog",
+      "feed_url": "https://kumbuka.ca/feed/",
+      "website_url": "https://kumbuka.ca/blog-2/",
+      "description": "At Kumbuka Summer Camp, we believe in broadening the vision for children. Kids are full of unique, original, and innovative ideas, and are constantly looking for ways to ignite change in the world around them. Through a platform that bridges their imagination with real-world experiences, we provide them the ability to develop life skills to navigate the world and overcome challenges. It is our goal for all our campers to enjoy the same safe, inclusive, creative, and energetic camp experience for a memorable and adventurous summer.",
+      "followers": {
+        "facebook": 95,
+        "twitter": 4,
+        "instagram": 151
+      },
+      "image_url": "https://i1.feedspot.com/5267889.jpg?t=1618404378"
+    },
+    {
+      "title": "Lake Owego Camp Blog",
+      "feed_url": "https://www.lakeowego.com/blog/feed",
+      "website_url": "http://www.lakeowego.com/blog/",
+      "description": "Lake Owego Camp provides each camper the opportunity to learn new skills, improve, compete and grow in a nurturing, supportive environment. Located in the Pocono Mountains of Pennsylvania, it is proud to be one of the oldest boys overnight summer camps in the United States that is still owned and operated by its founding family.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 188
+      },
+      "image_url": "https://i1.feedspot.com/5269498.jpg?t=1618472404"
+    },
+    {
+      "title": "AmeriCamp Blog",
+      "feed_url": "https://www.americamp.co.uk/about/blogs",
+      "website_url": "https://www.americamp.co.uk/about/blogs",
+      "description": "AmeriCamp Canada was founded on the belief that Summer Camp is for everyone, and that we all deserve the chance to travel, work and experience another culture. And that Canadian Summer Camps are the perfect place to spend your summer earning and learning.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 11900,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5267027.jpg?t=1618214089"
+    },
+    {
+      "title": "CYO Camp Rancho Framasa Blog",
+      "feed_url": "https://www.campranchoframasa.org/blog/feed",
+      "website_url": "https://www.campranchoframasa.org/rancho-musings",
+      "description": "Nestled in the beautiful hills of Brown County, Indiana, Cyo camp rancho framasa is an entity of the Catholic Youth Organization within the Archdiocese of Indianapolis, Indiana. Since 1946, CYO Camp has served Indiana and the outlying tri-state area of the Ohio Valley through its summer camping programs, outdoor education programs, and retreats throughout the year. Our mission is to enhance the emotional and spiritual development of youth and adults through experiences in the outdoors.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 69,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5266958.jpg?t=1618206424"
+    },
+    {
+      "title": "Camp Modin Blog",
+      "feed_url": "https://www.modin.com/feed/",
+      "website_url": "https://www.modin.com/sections/blog-archive/",
+      "description": "Camp Modin, a traditional summer camp for kids ages 7-16, in beautiful Belgrade Lakes, Maine, is the oldest Jewish summer camp in New England.",
+      "followers": {
+        "twitter": 283,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5266960.jpg?t=1618206973"
+    },
+    {
+      "title": "Retreat and Camping Ministries of the Baltimore Blog",
+      "feed_url": "https://bwccampsandretreats.com/feed/",
+      "website_url": "https://bwccampsandretreats.com/about-us/blog/",
+      "description": "Our three locations are conveniently located around the Baltimore-Washington area. Each site offers guests spectacular views, wonderful service, and a place to renew your spirit, grow in friendships and have fun.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5269327.jpg?t=1619099606"
+    },
+    {
+      "title": "Camp Sewataro Blog",
+      "feed_url": "https://sewataro.com/blog/feed",
+      "website_url": "https://sewataro.com/blog",
+      "description": "Camp Sewataro brings young people (ages 3-15) together to discover, play, and create - outdoors and unplugged - in a safe, supportive, and inclusive environment. Campers and counselors develop resilience, build lasting friendships, and gain the skills needed to become the best versions of themselves.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 200
+      },
+      "image_url": "https://i1.feedspot.com/5269666.jpg?t=1618486770"
+    },
+    {
+      "title": "Canadian Adventure Camp Blog",
+      "feed_url": "https://www.canadianadventurecamp.com/blog/posts/rss",
+      "website_url": "https://www.canadianadventurecamp.com/blog/",
+      "description": "Privately owned and directed by founder Skip Connett, Canadian Adventure Camp has been focusing on the growth and development of children since 1975. With the vision to create unique summer experiences for boys and girls from around the world, Canadian Adventure Camp is rich in tradition and is recognized as one of Canada's finest children's overnight summer camps. Year after year, campers attend Canadian Adventure Camp to experience a summer of building character, learning new skills and creating memories and friendships that will last a lifetime.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5195186.jpg?t=1617973296"
+    }
+  ]
+}

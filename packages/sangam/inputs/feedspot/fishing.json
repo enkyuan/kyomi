@@ -1,0 +1,865 @@
+{
+  "category": "Fishing",
+  "source_url": "https://rss.feedspot.com/fishing_rss_feeds",
+  "feeds": [
+    {
+      "title": "MidCurrent - Fly-Fishing News",
+      "feed_url": "https://midcurrent.com/news/feed/",
+      "website_url": "https://midcurrent.com/news/",
+      "description": "Daily fly fishing news, reviews, and tips from fly fishing's most authoritative source. MidCurrent is the most popular media channel in fly fishing, with more than 20,000 pages of video, art, photography, travel, reviews, tips and daily news.",
+      "followers": {
+        "facebook": 36800,
+        "twitter": 19600,
+        "instagram": 44700
+      },
+      "image_url": "https://i1.feedspot.com/4515028.jpg?t=1609223965"
+    },
+    {
+      "title": "Irish Angling Update",
+      "feed_url": "https://fishinginireland.info/news/category/pike-reports/feed/",
+      "website_url": "https://fishinginireland.info/news/category/pike-reports/",
+      "description": "Fishing in Ireland. A fisherman's guide to angling in Ireland. Includes information on trout fishing, salmon fishing, coarse fishing and sea fishing in Ireland",
+      "followers": {
+        "facebook": 26100,
+        "twitter": 83
+      },
+      "image_url": "https://i1.feedspot.com/4515082.jpg"
+    },
+    {
+      "title": "Hatch Magazine",
+      "feed_url": "https://www.hatchmag.com/rss.xml",
+      "website_url": "https://www.hatchmag.com/",
+      "description": "Hatch Magazine is an online magazine / site / blog / photoblog / etc dedicated to the sport of fly fishing.",
+      "followers": {
+        "facebook": 53800,
+        "twitter": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4778986.jpg?t=1609224067"
+    },
+    {
+      "title": "Fishingmegastore Blog",
+      "feed_url": "https://blog.fishingmegastore.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.fishingmegastore.com/",
+      "description": "Here you'll find all the very latest product news and reviews, upcoming events, images and stories from the fishing community, and lots more.",
+      "followers": {
+        "facebook": 112600,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4858183.jpg?t=1611898221"
+    },
+    {
+      "title": "The Fiberglass Manifesto",
+      "feed_url": "http://thefiberglassmanifesto.blogspot.com/feeds/posts/default",
+      "website_url": "http://thefiberglassmanifesto.blogspot.com/",
+      "description": "The Fiberglass Manifesto is a blog which updated daily keeping up with news and stories of fiberglass fly rod builders and really anything else in the fly fishing industry that I think is notable as well.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/1201335.jpg?t=1613796769"
+    },
+    {
+      "title": "Fishishere",
+      "feed_url": "https://fishishere.com/feed",
+      "website_url": "https://fishishere.com/",
+      "description": "Welcome to Fishishere.com, your go-to online destination for all things fishing! We are a passionate team of anglers who have been dedicated to providing you with the latest and greatest fishing news, tips, and gear since our establishment in 2012.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1200,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5522776.jpg?t=1679053946"
+    },
+    {
+      "title": "Strike and Catch",
+      "feed_url": "https://strikeandcatch.com/feed/",
+      "website_url": "https://strikeandcatch.com/category/fishing-news/",
+      "description": "Hi, I'm Max. I have been an avid angler for over 20 years and I just could not imagine a life without this wonderful hobby! To me, fishing is a passion and a lifestyle. The joy of the catch, the bait, the tackle and the outdoors in general is what Strike and Catch is all about.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5554245.jpg?t=1683021411"
+    },
+    {
+      "title": "The Great Lakes Fisherman",
+      "feed_url": "https://thegreatlakesfisherman.com/feed/",
+      "website_url": "https://thegreatlakesfisherman.com/",
+      "description": "The Great Lakes Fisherman is a hub for articles and resources aimed at anglers in the Great Lakes region.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5500138.jpg?t=1674825582"
+    },
+    {
+      "title": "FishingBooker Blog",
+      "feed_url": "https://fishingbooker.com/blog/feed/",
+      "website_url": "https://fishingbooker.com/blog/",
+      "description": "FishingBooker is an online community that enables you to list, find and book the best fishing trips worldwide.",
+      "followers": {
+        "facebook": 252700,
+        "instagram": 30000
+      },
+      "image_url": "https://i1.feedspot.com/4866091.jpg?t=1613796781"
+    },
+    {
+      "title": "On The Water",
+      "feed_url": "https://onthewater.com/feed",
+      "website_url": "https://onthewater.com/",
+      "description": "Written by fishermen for fishermen, On the Water Magazine covers fishing and boating in the Northeast. Articles cover topics like saltwater, freshwater, boating, surfcasting, gear, and cooking.",
+      "followers": {
+        "facebook": 190700,
+        "twitter": 3300,
+        "instagram": 117300
+      },
+      "image_url": "https://i1.feedspot.com/5296203.jpg?t=1624601018"
+    },
+    {
+      "title": "USAngler",
+      "feed_url": "https://usangler.com/feed/",
+      "website_url": "https://usangler.com/",
+      "description": "USAngler is a website completely dedicated to fishing tips, guides, and reviews. We have compiled all of the best fishing information available to create a complete fishing guide on numerous different species. Our goal is to educate our readers so that they can go out and have a great day on the water. For the more advanced anglers, we have a comprehensive review section where we review and rate fishing equipment and products. Our tips and reviews are written by avid fishermen who simply love to be on the water.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5163922.jpg"
+    },
+    {
+      "title": "Tactical Bassin' - Bass Fishing Blog",
+      "feed_url": "https://www.tacticalbassin.com/blog?format=RSS",
+      "website_url": "https://www.tacticalbassin.com/",
+      "description": "A bass fishing blog dedicated to teaching everyone to catch more and bigger fish. This is accomplished by combining videos with technical insights into the bass fishing industry.",
+      "followers": {
+        "facebook": 157000,
+        "twitter": 2500,
+        "instagram": 128500
+      },
+      "image_url": "https://i1.feedspot.com/4515093.jpg?t=1613796797"
+    },
+    {
+      "title": "Duranglers Fly Shop Blog",
+      "feed_url": "https://duranglers.com/feed/",
+      "website_url": "https://duranglers.com/fly-fishing-blog",
+      "description": "Posts feature up-to-date articles on local conditions, tips and tricks, events, and all the news and advice related to fly fishing in Southwest Colorado. Duranglers is the Four Corners' area premier outfitter for all the fly fishing needs.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 756,
+        "instagram": 15400
+      },
+      "image_url": "https://i1.feedspot.com/4515473.jpg?t=1609224012"
+    },
+    {
+      "title": "Henry Gilbey Blog",
+      "feed_url": "https://feeds.feedburner.com/Blog-HenryGilbey",
+      "website_url": "https://www.henry-gilbey.com/blog/",
+      "description": "Henry Gilbey's fishing blog. Fishing pictures, photos and photography",
+      "followers": {
+        "facebook": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4515101.jpg?t=1611898233"
+    },
+    {
+      "title": "Surf Fishing In So Cal",
+      "feed_url": "https://surffishingsocalsd.com/feed/",
+      "website_url": "https://surffishingsocalsd.com/surf-fishing-report-socal/",
+      "description": "My name is Nick and my fishing blog is specific to surf fishing. I started out just writing reports and through my reports, I discovered a passion for storytelling. I eventually created a website with all the posts that I published and I use the website to educate anglers across Southern California on surf fishing. I try to take relevant news and seasonal info and turn them into entertaining reads.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5265020.jpg?t=1617955740"
+    },
+    {
+      "title": "Georgia Wildlife Blog \u00bb Fishing",
+      "feed_url": "https://georgiawildlife.blog/category/fishing/feed/",
+      "website_url": "https://georgiawildlife.blog/category/fishing/",
+      "description": "This section of the blog shares articles on fishing written by The Wildlife Resources Division of the Georgia Department of Natural Resources (GA DNR). GA DNR manages hunting, fishing, and protection of nongame and endangered wildlife.",
+      "followers": {
+        "facebook": 206800,
+        "twitter": 16100,
+        "instagram": 32800
+      },
+      "image_url": "https://i1.feedspot.com/5296204.jpg?t=1624601185"
+    },
+    {
+      "title": "Ace Charters Blog",
+      "feed_url": "https://www.acecharters.com/feed/",
+      "website_url": "https://www.acecharters.com/blog/",
+      "description": "Our blog for our Lake Ontario fishing charters out of Oswego, NY containing reports, pictures, and useful information from fishing Lake Ontario daily. We specialize in family fishing fun.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5122048.jpg"
+    },
+    {
+      "title": "Against Men and Fish",
+      "feed_url": "https://www.againstmenandfish.com/feed/",
+      "website_url": "https://www.againstmenandfish.com/",
+      "description": "Against men and fish is all about Jamie's match fishing exploits. Find tackle reviews, interviews, South West match results, fishing in Thailand, and venue reports.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 2600,
+        "instagram": 985
+      },
+      "image_url": "https://i1.feedspot.com/1712126.jpg?t=1653044967"
+    },
+    {
+      "title": "Fishing The Midwest",
+      "feed_url": "https://fishingthemidwest.com/feed/",
+      "website_url": "https://fishingthemidwest.com/news/",
+      "description": "Featuring fishing tips, and techniques, news, and fun fishing stories. Bob Jensen and Mike Frisch are two of the Midwest's most respected fishing educators and hosts of Fishing the Midwest, which is one of the Midwest's longest-running and highest-rated television fishing shows.",
+      "followers": {
+        "facebook": 25400,
+        "twitter": 74,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5329074.jpg?t=1633520536"
+    },
+    {
+      "title": "Bonefish on the Brain",
+      "feed_url": "https://bonefishonthebrain.com/feed/",
+      "website_url": "https://bonefishonthebrain.com/",
+      "description": "A blog devoted to bonefish (a little about tarpon) and all that relates.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4301547.jpg"
+    },
+    {
+      "title": "Fish'n Canada",
+      "feed_url": "https://fishncanada.com/feed/",
+      "website_url": "https://fishncanada.com/",
+      "description": "Canada's source for everything related to fishing and the outdoors! If you're looking to learn about fishing this is the place for you.",
+      "followers": {
+        "facebook": 46100,
+        "twitter": 712,
+        "instagram": 20700
+      },
+      "image_url": "https://i1.feedspot.com/5186316.jpg?t=1598425142"
+    },
+    {
+      "title": "Fishing Industry News SA",
+      "feed_url": "https://www.fishingindustrynewssa.com/feed/",
+      "website_url": "https://www.fishingindustrynewssa.com/",
+      "description": "Fishing Industry News Southern Africa is the only journal in Southern Africa dedicated solely to the commercial fishing and aquaculture industries.",
+      "followers": {
+        "facebook": 698
+      },
+      "image_url": "https://i1.feedspot.com/5206978.jpg?t=1603109450"
+    },
+    {
+      "title": "Outdoornews \u00bb Ice Fishing",
+      "feed_url": "https://www.outdoornews.com/fishing//feed",
+      "website_url": "https://www.outdoornews.com/fishing/",
+      "description": "Subscribe to Outdoor News, your No. 1 source for hunting and fishing related news and information.",
+      "followers": {
+        "facebook": 52300,
+        "twitter": 57200,
+        "instagram": 18700
+      },
+      "image_url": "https://i1.feedspot.com/5083449.jpg?t=1613796789"
+    },
+    {
+      "title": "Thomas Turner Fishing Antiques Blog",
+      "feed_url": "https://www.thomasturner.com/feed/",
+      "website_url": "https://www.thomasturner.com/vintage-tackle-blog/",
+      "description": "Selling antique and vintage fishing tackle including British made rods and reels.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4998367.jpg?t=1613796863"
+    },
+    {
+      "title": "SEGKBF Blog",
+      "feed_url": "https://segkbf.com/feed/",
+      "website_url": "https://segkbf.com/blog/",
+      "description": "Find out everything you need to know about Kayak Fishing with SEGKBF. The mission of SEGKBF is a kayak fishing organization dedicated to promoting the sport of kayak bass fishing. SEGKBF's primary objective is to educate and encourage others in the pursuit of kayak bass fishing.",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 986
+      },
+      "image_url": "https://i1.feedspot.com/5201742.jpg?t=1671607623"
+    },
+    {
+      "title": "Trout and Stream Blog",
+      "feed_url": "https://troutandstream.com/feed/",
+      "website_url": "https://troutandstream.com/fishing-blog/",
+      "description": "A fishing blog where you will find fishing stories, gear reviews and a tip or two for catching wild trout in rivers with ultralight gear",
+      "followers": {
+        "facebook": 2300,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5205433.jpg?t=1602505840"
+    },
+    {
+      "title": "Mad River Outfitters",
+      "feed_url": "https://madriveroutfitters.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://madriveroutfitters.blogspot.com/",
+      "description": "A fly fishing specialty shop located in Columbus, Ohio brings to you blogs on all the latest gears and equipments needed for fishing.",
+      "followers": {
+        "facebook": 85400,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4515177.jpg?t=1611898246"
+    },
+    {
+      "title": "SwittersB & Exploring",
+      "feed_url": "https://swittersb.com/feed/",
+      "website_url": "https://swittersb.com/",
+      "description": "SwittersB's Weblog was started to share my passion for fly fishing and the associated pursuits of fly tying, travel, camping and photography. I love stillwater fly fishing and the magical flow of streams and rivers, as well.",
+      "followers": {
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/4515031.jpg?t=1622005964"
+    },
+    {
+      "title": "The Urban Fly Fisher",
+      "feed_url": "https://feeds.feedburner.com/urbanflyfisher",
+      "website_url": "https://urbanflyfisher.com/",
+      "description": "Alistair Stewart has been writing about brownlining for nearly ten years. His favorite rivers around Glasgow and the West of Scotland to fly fish for trout are: The River Kelvin, The Clyde, The Tummel and any other wee urban rivers he can find.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 720
+      },
+      "image_url": "https://i1.feedspot.com/765463.jpg"
+    },
+    {
+      "title": "Bow River Blog",
+      "feed_url": "https://www.bowriverblog.com/feed/",
+      "website_url": "https://www.bowriverblog.com/",
+      "description": "I am Mike- writer and trout fisherman in Calgary, Alberta Canada. Trout fishing guide on the Lower Bow River. Blogging about my passion, sport fishing the Bow River.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4515050.jpg?t=1613796920"
+    },
+    {
+      "title": "Piscatorial Quagswagging....",
+      "feed_url": "http://calamitymn.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://calamitymn.blogspot.com/",
+      "description": "....the diary of a specialist angler in and around the Warwickshire Avon and its tributaries.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149777.jpg?t=1613796934"
+    },
+    {
+      "title": "Fishing Sun Blog",
+      "feed_url": "https://fishingsun.com/a/blog/feed?limit=10",
+      "website_url": "https://fishingsun.com/a/blog",
+      "description": "Fishing Sun Blog is the sunniest fishing blog where size does matter. Provides the best fishing information, tips & tricks, new fishing skills, boating resources, latest product news and reviews, upcoming events, how-to guides, surfcasting, gear, and even recipes. Fishing Sun strives to educate readers to go out and have a fantastic day on the water.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362498.jpg?t=1642154900"
+    },
+    {
+      "title": "Steps2Fishing",
+      "feed_url": "https://steps2fishing.com/feed/",
+      "website_url": "https://steps2fishing.com/",
+      "description": "Steps2Fishing.com is a top resource for anglers everywhere, providing valuable information to enhance your fishing experience. Join along as Steps2Fishing's team of experts explores the exciting world of fishing and learn how to make the most of your next fishing trip.",
+      "followers": {
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/5705443.jpg?t=1699264536"
+    },
+    {
+      "title": "Freshwater Fishing Advice",
+      "feed_url": "https://freshwaterfishingadvice.com/feed/",
+      "website_url": "https://freshwaterfishingadvice.com/",
+      "description": "I'm Eric Matechak, an avid angler & outdoorsman. I grew up fishing for anything that swims but really cut my teeth fishing for trout, chain pickerel, bass, and bullheads in my teenage years. This blog is a place where I share my freshwater fishing adventures and take my passion for fishing to a new level.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5080239.jpg?t=1634040301"
+    },
+    {
+      "title": "Premier Angler",
+      "feed_url": "https://premierangler.com/feed/",
+      "website_url": "https://premierangler.com/",
+      "description": "Features freshwater fishing news, tips, techniques and resources. Premier Angler is a multi-species online magazine and brand created, curated, written, and edited by fishing enthusiasts for fishing enthusiasts.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2300,
+        "instagram": 765
+      },
+      "image_url": "https://i1.feedspot.com/5315875.jpg?t=1629974875"
+    },
+    {
+      "title": "OnTrack Fishing Blog",
+      "feed_url": "https://www.ontrackfishing.com/feed/",
+      "website_url": "https://www.ontrackfishing.com/blog/",
+      "description": "Learn Smart & Responsible Fishing from OnTrack Fishing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5075940.jpg"
+    },
+    {
+      "title": "Fishing My Way",
+      "feed_url": "https://fishingmyway.co/feed/",
+      "website_url": "https://fishingmyway.co/",
+      "description": "I'm Paul. My intention with FishingMyWay is to document my fishing sessions, provide tips and information for fellow anglers, and just share my passion with other like-minded fisher-folk!",
+      "followers": {
+        "twitter": 228
+      },
+      "image_url": "https://i1.feedspot.com/5087284.jpg?t=1634040172"
+    },
+    {
+      "title": "Ask the Fisherman",
+      "feed_url": "https://ask-the-fisherman.com/feed/",
+      "website_url": "https://ask-the-fisherman.com/category/general-fishing/",
+      "description": "In my articles, there will be information on where to find the fish. The equipment best suited for specific species of fish. Besides, I'll try to include some things that may have not been considered by some anglers. My goal is to share general information along with some tips. The varied tips will focus on many items. Such as the correct use of lures and other facets of fishing that are often overlooked.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5162869.jpg"
+    },
+    {
+      "title": "AnglerWise",
+      "feed_url": "https://anglerwise.com/feed/",
+      "website_url": "https://anglerwise.com/",
+      "description": "A blog that's all about ultralight fishing. We feature gear and tackle reviews, interesting videos, great articles, how-to guides, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4515042.jpg?t=1613797047"
+    },
+    {
+      "title": "Current Angler Blog",
+      "feed_url": "https://thecurrentangler.com/feed/",
+      "website_url": "https://thecurrentangler.com/blog/",
+      "description": "Covering a wide range of fishing-related topics like fly fishing, spin fishing, freshwater, saltwater, fly tying, conservation, gear reviews, and trips.",
+      "followers": {
+        "instagram": 509
+      },
+      "image_url": "https://i1.feedspot.com/5307175.jpg?t=1627711403"
+    },
+    {
+      "title": "Fishstainable",
+      "feed_url": "https://www.fishstainable.com/feed/",
+      "website_url": "https://www.fishstainable.com/tips-tricks/",
+      "description": "Helping you catch many fish and enjoying it without harming the planet.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 356
+      },
+      "image_url": "https://i1.feedspot.com/5156937.jpg?t=1613796802"
+    },
+    {
+      "title": "Riptidefish Blog",
+      "feed_url": "https://riptidefish.com/seattle-fishing-blog/feed/",
+      "website_url": "https://riptidefish.com/seattle-fishing-blog/",
+      "description": "The blog shares information on fishing reports, how-to tutorials, and detailed reviews of Washington's fishing locations. Andrew Moravec launched Riptidefish.com as a way to share his passion for fishing with anyone in the Pacific Northwest that would find it motivating.",
+      "followers": {
+        "facebook": 866,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5296207.jpg?t=1628229170"
+    },
+    {
+      "title": "Orvis - Fly-Fishing Blog",
+      "feed_url": "https://news.orvis.com/fly-fishing/feed",
+      "website_url": "https://news.orvis.com/fly-fishing",
+      "description": "Get the latest fly-fishing news, helpful fly-fishing tips and a host of entertaining articles from the Orvis Fly-Fishing Blog. Your go to fly-fishing resource.",
+      "followers": {
+        "facebook": 324500,
+        "twitter": 62500,
+        "instagram": 364900
+      },
+      "image_url": "https://i1.feedspot.com/4515072.jpg?t=1609224006"
+    },
+    {
+      "title": "Fishin Money",
+      "feed_url": "https://fishinmoney.com/feed/",
+      "website_url": "https://fishinmoney.com/",
+      "description": "Keep up with artices from Fishin Money. Darren Enns and his family are fishing experts who created this site to share their experiences as they learned how to fish for many different species. They share fishing adventures that are fun and educational and also answers to the questions they've come across along their journey.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5075717.jpg?t=1604383145"
+    },
+    {
+      "title": "Fin & Flame Blog",
+      "feed_url": "https://finandflame.com/feed/",
+      "website_url": "https://finandflame.com/blog/",
+      "description": "Articles feature antique Fishing Lures, Rods, Reels, Line Spool & Ephemera. Fin and Flame is an Antique Fishing Lure Reel and Fishing related theme and they also buy and appraise old lures.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 114,
+        "instagram": 350
+      },
+      "image_url": "https://i1.feedspot.com/7039.jpg?t=1627561847"
+    },
+    {
+      "title": "Trizily Blog",
+      "feed_url": "https://trizily.com/feed/",
+      "website_url": "https://trizily.com/blog/",
+      "description": "Trizily's experts guide you through the basics, from essential equipment and knot-tying skills to understanding local regulations and choosing the perfect gear and charter for your experience level. Trizily is an excellent online resource for fishermen offering helpful guides on Saltwater fishing, Freshwater fishing, Fly fishing, Casting and much more.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 665,
+        "instagram": 157
+      },
+      "image_url": "https://i1.feedspot.com/4994493.jpg?t=1613796808"
+    },
+    {
+      "title": "Flyfishmagazine",
+      "feed_url": "https://feeds.feedburner.com/Flyfishmagazine",
+      "website_url": "http://flyfishmagazine.blogspot.com/",
+      "description": "Flyfishmagazine is a Fly fishing Blog and the sister publication to the e-zine www.flyfishmagazine.com. We will use our little corner of the blogosphere to keep our readers up to date on whats new and news in the world of fly fishing.",
+      "followers": {
+        "twitter": 15300
+      },
+      "image_url": "https://i1.feedspot.com/765441.jpg?t=1613796908"
+    },
+    {
+      "title": "Fishing Zeal Blog",
+      "feed_url": "https://fishingzeal.com/feed/",
+      "website_url": "https://fishingzeal.com/blog/",
+      "description": "FishingZeal.com is created with the intention of building a community of fishing enthusiasts. You will find useful fishing tips, interesting facts, and the latest info about fishing gadgets and reviews to help you make an informed decision.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5285046.jpg?t=1622100240"
+    },
+    {
+      "title": "Cobham River Lodge Blog",
+      "feed_url": "https://fishingmanitoba.com/feed/",
+      "website_url": "https://fishingmanitoba.com/best-trophy-northern-pike-blog/",
+      "description": "Best Northern Pike fishing report, fishing equipment reviews and best pike lures information available. Our Manitoba fishing lodge offers a world-class, remote fly in fishing experience in Manitoba, Canada. Our news site is to bring up-to-date information for guests fishing Cobham River Lodge. From our northern pike fishing reports, fishing tips, news, recipes, and the latest fishing gear reviews, Cobham River Lodge has you covered.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 349
+      },
+      "image_url": "https://i1.feedspot.com/5269584.jpg?t=1679912204"
+    },
+    {
+      "title": "Fishing with Rod Blog",
+      "feed_url": "http://www.fishingwithrod.com/blog/feed/",
+      "website_url": "http://www.fishingwithrod.com/blog/",
+      "description": "Get your latest British Columbia fishing reports, news, photographs and videos here! Fishing with Rod is an online fishing resource based in Vancouver, British Columbia. Our goal is to share our passion in recreational fishing, promote educated angling and inspire others to appreciate our precious natural resource.",
+      "followers": {
+        "facebook": 40800,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4515128.jpg?t=1633068436"
+    },
+    {
+      "title": "CatchMeFishing",
+      "feed_url": "https://www.catchmefishing.com/feed/",
+      "website_url": "https://www.catchmefishing.com/",
+      "description": "Fishing tips and Angling tutorials. Discounted, cheap fishing equipment on sale in our angling store. Lots of fishing guides for beginners to expert.",
+      "followers": {
+        "facebook": 506,
+        "twitter": 538
+      },
+      "image_url": "https://i1.feedspot.com/5168548.jpg?t=1613796865"
+    },
+    {
+      "title": "Danny's Angling Blog",
+      "feed_url": "https://feeds.feedburner.com/DannysAnglingBlog",
+      "website_url": "http://satonmyperch.blogspot.com/",
+      "description": "Welcome to my weekly blog following my Adventures on the bank, from rivers to ponds its all part of my angling year",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4515075.jpg"
+    },
+    {
+      "title": "The Classical Angler",
+      "feed_url": "http://classicangler.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://classicangler.blogspot.com/",
+      "description": "A blog about the art of fly fishing through the written word. The finer things in angling.",
+      "followers": {
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/4998368.jpg?t=1613796870"
+    },
+    {
+      "title": "Country Hookers: Fishing and Hunting tips, tricks and techniques",
+      "feed_url": "https://countryhookers.com/feed/",
+      "website_url": "https://countryhookers.com/category/fishing/",
+      "description": "Your source for everything fishing and hunting related. Tips, tricks, techniques and the latest hunting, fishing and outdoors gear.",
+      "followers": {
+        "facebook": 341,
+        "twitter": 627
+      },
+      "image_url": "https://i1.feedspot.com/4866093.jpg?t=1613796875"
+    },
+    {
+      "title": "Aspiring Fly Fishing Blog",
+      "feed_url": "https://www.aspiringflyfishing.co.nz/blog?format=RSS",
+      "website_url": "https://www.aspiringflyfishing.co.nz/blog",
+      "description": "Check out the latest New Zealand trout fishing news and stories from on the rivers & streams of the South Island of NZ with Aspiring Fly Fishing. Paul Macandrew is a Wanaka based fly fishing guide, who will customise your fly fishing adventure to suit your experience, from a keen beginner needing attentive tuition, to the advanced angler exploring the back country wilderness.",
+      "followers": {
+        "facebook": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4515080.jpg?t=1692345631"
+    },
+    {
+      "title": "Kayak Fishing Blog",
+      "feed_url": "https://payneoutdoors.com/feed/",
+      "website_url": "https://payneoutdoors.com/",
+      "description": "A kayak fishing blog for beginners to experts, sharing how to videos and writing about rigging and adventures.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4449769.jpg?t=1609390300"
+    },
+    {
+      "title": "FISHSURFING",
+      "feed_url": "https://fishsurfing.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://fishsurfing.blogspot.com/",
+      "description": "A great place to find article related to fishing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5064685.jpg?t=1613796941"
+    },
+    {
+      "title": "Fishing geek Blog",
+      "feed_url": "https://fishinggeek.weebly.com/blog/feed",
+      "website_url": "https://fishinggeek.weebly.com/blog",
+      "description": "Best fishing gear and accessories reviews side by comparison by a team of professional anglers check our complete guide and resources now!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4720110.jpg?t=1613796945"
+    },
+    {
+      "title": "watchyourbackcast",
+      "feed_url": "https://www.watchyourbackcast.com/blog-feed.xml",
+      "website_url": "https://www.watchyourbackcast.com/blog-1",
+      "description": "I have lived in small New England towns for over 30 years. My wife, Cheryl Bascomb, and I enjoy outdoor sports & activities on the rivers, lakes, and coast, as well as in the Adirondacks and the White Mountains. After 30+ years working as an environmental professional in government, business & consulting, I am now a writer & photographer.",
+      "followers": {
+        "twitter": 77
+      },
+      "image_url": "https://i1.feedspot.com/4866094.jpg?t=1652349002"
+    },
+    {
+      "title": "Top Water Charters Fishing Reports",
+      "feed_url": "http://fishtopwatercharters.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://fishtopwatercharters.blogspot.com/",
+      "description": "The daily fishing reports from Capt. Marty Moore of Top Water Charters. Plus, news and notes from Capt. Marty.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4515174.jpg?t=1613796990"
+    },
+    {
+      "title": "Fishing & Travel Adventures in India",
+      "feed_url": "https://passageenclave.wordpress.com/feed/",
+      "website_url": "https://passageenclave.wordpress.com/",
+      "description": "From practical tips on fishing to travel stories along India's remote coast.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5135328.jpg?t=1613797007"
+    },
+    {
+      "title": "BOGSTALKER",
+      "feed_url": "https://bogstalker.blogspot.com/feeds/posts/default",
+      "website_url": "https://bogstalker.blogspot.com/",
+      "description": "First and foremost I am an angler, fishing the muddy and dingy lakes I call bogs of northeastern Nebraska. I'm also a lure and tackle builder who loves to paint bass and walleye crankbaits, pour soft plastics for all species, and build and customize salmon lures, flashers, and dodgers, etc. I love to travel to wild places, forgotten frontiers, and overlooked fisheries in my quest for hot bites and awesome fish. Throw that in with a love for writing, well, we have an adventure waiting to happen.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5227678.jpg?t=1608028666"
+    },
+    {
+      "title": "Fishing For Sport",
+      "feed_url": "https://fishingforsport.com/feed/",
+      "website_url": "https://fishingforsport.com/",
+      "description": "Fishing For Sport always focuses on adding value to your fishing experience. We provide completely honest reviews with proper information so that you can spend less time reading and more time on actual Angling!",
+      "followers": {
+        "twitter": 119,
+        "instagram": 96
+      },
+      "image_url": "https://i1.feedspot.com/5203048.jpg?t=1601719347"
+    },
+    {
+      "title": "Fly Tying and Fly Fishing -- Articles and videos on fly fishing and fly tying Blog",
+      "feed_url": "http://www.rakkenes.com/feed/",
+      "website_url": "http://www.rakkenes.com/blog/",
+      "description": "Fly tying and fly fishing is a collection of fly tying patterns and a blog about fly tying and fly fishing. Off season on fly tying - in season fly fishing",
+      "followers": {
+        "twitter": 689
+      },
+      "image_url": "https://i1.feedspot.com/4785912.jpg"
+    },
+    {
+      "title": "Fishaholics Northwest",
+      "feed_url": "https://fishaholicsnw.com/feed/",
+      "website_url": "https://fishaholicsnw.com/",
+      "description": "Fishaholics Northwest offers fishing reports, fishing news, forums forums and a sport fishing directory with listings of fishing guides, and more.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 402
+      },
+      "image_url": "https://i1.feedspot.com/4785909.jpg?t=1613797019"
+    },
+    {
+      "title": "Cooper Landing Fishing Guide Blog",
+      "feed_url": "https://cooperlandingfishingguide.com/blog?format=rss",
+      "website_url": "https://cooperlandingfishingguide.com/blog",
+      "description": "Hey there! We are Jack and Dave and welcome to our blog space! read about various fishing trips, experiences, many interesting posts on the Kenai River, and much more in our blog posts. We created 'cooper landing fishing guide, LLC' to live out our dream of sharing our love for the Kenai River and fishing the various rivers of Alaska on guided fishing trips with visitors from around the globe.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 248,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5233755.jpg?t=1658320690"
+    },
+    {
+      "title": "WeFish Blog \u00bb Fishing",
+      "feed_url": "https://wefish.app/en/feed/",
+      "website_url": "https://wefish.app/en/fishing-blog/",
+      "description": "On the WeFish fishing blog, you can find guides on fishing species or techniques along with fishing news, equipment information, fishing spots and fishing types. WeFish helps you to discover the best times and areas to fish, plan your days, create your fishing logbooks with a private location, buy and sell material.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 673,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5296208.jpg?t=1624600344"
+    },
+    {
+      "title": "Tailored Tackle Blog",
+      "feed_url": "https://tailoredtackle.com/fishing-resources/blog/feed/",
+      "website_url": "https://tailoredtackle.com/fishing-resources/blog/",
+      "description": "Tailored Tackle is dedicated to providing new and average anglers with fishing tackle that is engaging and convenient. Tailored Tackle Fishing Kits designed by Fishing Guides gives you all the right fishing tackle. Learn to fish in our Fishing Blog and Fishing PDF Library.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 50
+      },
+      "image_url": "https://i1.feedspot.com/5030137.jpg?t=1613796791"
+    },
+    {
+      "title": "Fishmadpro",
+      "feed_url": "https://www.fishmadpro.com/feed/",
+      "website_url": "https://www.fishmadpro.com/",
+      "description": "Welcome to my blog page and I hope you will enjoy reading it, as much as I enjoy writing it. What is my blog about? Well, it's about everything that is related to sea and fish: fishing equipment, best countries to fish in, big catch stories, boats, videos, fishing games, night fishing, You name it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5011478.jpg?t=1613796835"
+    },
+    {
+      "title": "Bass Fishing Hub Blog",
+      "feed_url": "https://www.bassfishinghub.com/blogs/bass-fishing.atom",
+      "website_url": "https://www.bassfishinghub.com/blogs/bass-fishing",
+      "description": "Articles feature the latest trends and in-depth fishing articles with bass fishing tips, best bass fishing lures, and fishing how-tos to help you catch more fish. Bass Fishing Hub is a site designed to educate and inform anglers across the world of everything bass fishing.",
+      "followers": {
+        "facebook": 7800,
+        "instagram": 140
+      },
+      "image_url": "https://i1.feedspot.com/5159659.jpg?t=1613797009"
+    },
+    {
+      "title": "Field & Stream - Fishing",
+      "feed_url": "https://www.fieldandstream.com/category/fishing",
+      "website_url": "https://www.fieldandstream.com/category/fishing",
+      "description": "Read up on the latest fishing news, including fishing reports and fishing gear reviews, or watch the latest fishing videos and photos at Field and Stream.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 111200,
+        "instagram": 415700
+      },
+      "image_url": "https://i1.feedspot.com/4515086.jpg?t=1613796767"
+    },
+    {
+      "title": "Pacific Angler Blogs \u00bb Learn",
+      "feed_url": "https://www.pacificangler.ca/blogs/learn.atom",
+      "website_url": "https://www.pacificangler.ca/blogs/learn/",
+      "description": "Pacific Angler is your source for premium brand fly fishing gear blogs and conventional tackles in Vancouver.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 1400,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4515133.jpg?t=1613796825"
+    },
+    {
+      "title": "Sarasota Quality Products Blog",
+      "feed_url": "https://sarasotaqp.com/feed/",
+      "website_url": "https://www.takemefishing.org/blog/",
+      "description": "We Offer A Complete Line Of Marine & Boat Hardware Including Including Boat Latches And Locks, Hinges, And Lifts. And The Key Captain Boat Locking System.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 372
+      },
+      "image_url": "https://i1.feedspot.com/4998364.jpg"
+    },
+    {
+      "title": "Take Me Fishing Blog",
+      "feed_url": "https://www.takemefishing.org/blog/?rss=posts",
+      "website_url": "https://www.takemefishing.org/blog/",
+      "description": "Check our inspiring and educational blog articles about fishing and boating written by experts. Get fishing tips and tricks and read personal stories from anglers who live and breathe fishing and boating. Learn new fishing skills, boating resources, fishing etiquette, conservation and more.",
+      "followers": {
+        "facebook": 241800,
+        "twitter": 64599,
+        "instagram": 44200
+      },
+      "image_url": "https://i1.feedspot.com/4449766.jpg?t=1613796761"
+    },
+    {
+      "title": "Sensibe Fishing",
+      "feed_url": "https://sensiblefishing.com/feed/",
+      "website_url": "http://",
+      "description": "Seek Out The Best Fishing Tips & Tricks. Sensible Fishing was founded with the idea of being able to help Fishing enthusiasts to pick the necessary fishing equipment to catch more fish. On this website, we publish Fishing Guides, tips, and reviews about Fishing Gear.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371262.jpg?t=1644581049"
+    },
+    {
+      "title": "Shop Karl's - Karl's Fishing Blog",
+      "feed_url": "https://shopkarls.com/blog/feed",
+      "website_url": "https://shopkarls.com/blog",
+      "description": "Fishing tips & tricks, news, resources, how-to guides, and more from the legend Karl VonDibble. Karl loves the outdoors, and especially fishing. He also launched Karl's Bait & Tackle as a way for passionate anglers like him to discover amazing new fishing products.",
+      "followers": {
+        "facebook": 31,
+        "twitter": 38600,
+        "instagram": 285100
+      },
+      "image_url": "https://i1.feedspot.com/4857780.jpg?t=1611033091"
+    },
+    {
+      "title": "Slo-fishing",
+      "feed_url": "https://www.slo-fishing.si/?format=feed&type=rss",
+      "website_url": "https://www.slo-fishing.si/",
+      "description": "I'm Sina, the guy behind Slo-fishing. This site is the base camp for fishing enthusiasts from all over the world. I love fishing and want to share all my stories, knowledge, and my experience with any and all potential anglers.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 43,
+        "instagram": 920
+      },
+      "image_url": "https://i1.feedspot.com/5237314.jpg?t=1611042143"
+    },
+    {
+      "title": "Global Fishing Reports",
+      "feed_url": "https://www.globalfishingreports.com/feed/",
+      "website_url": "https://www.globalfishingreports.com/",
+      "description": "Global Fishing Reports provides fishing information from professional charter captains. Detail reports of the best lures and fishing tactics to catch the most popular game fish is provided. In-depth reviews of the best fishing gear is also found in the reports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5194691.jpg"
+    },
+    {
+      "title": "The Wandle Piscators Blog",
+      "feed_url": "http://www.wandlepiscators.net/?feed=rss2",
+      "website_url": "http://wandlepiscators.net/blog/",
+      "description": "he Wandle Piscators is a mixed-species, mixed-method fishing club based on South London's River Wandle. Founded in 2004.",
+      "followers": {
+        "facebook": 809,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4515125.jpg?t=1613796901"
+    },
+    {
+      "title": "High Octane Fishing",
+      "feed_url": "https://www.highoctanefishing.com/feed",
+      "website_url": "https://www.highoctanefishing.com/fishing-report",
+      "description": "Inshore & Offshore Fishing Charters Guided by Capt. Nick Warrington in Crystal River Florida. Snook, Grouper, Redfish, Trout, Tarpon, Cobia, & Shark Trips.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4989800.jpg?t=1613796906"
+    },
+    {
+      "title": "Florida Keys Fishing Reports Blog",
+      "feed_url": "http://www.budnmarysblog.com/fishing-reportss/atom.xml",
+      "website_url": "https://www.budnmarys.com/blog",
+      "description": "Posting fishing related events, catches, media publications, and overall news concerning Bud N' Mary's here, so keep tuned in!",
+      "followers": {
+        "facebook": 101,
+        "twitter": 1700,
+        "instagram": 128000
+      },
+      "image_url": "https://i1.feedspot.com/4515188.jpg?t=1613796922"
+    },
+    {
+      "title": "NWOOutdoors Blog",
+      "feed_url": "https://nwooutdoors.ca/f.rss",
+      "website_url": "https://nwooutdoors.ca/blog",
+      "description": "NWOOutdoors is an Outdoors and Fishing Blog, offering fishing tips, stories, as well as outdoor and fishing photography.",
+      "followers": {
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5128357.jpg?t=1613796943"
+    },
+    {
+      "title": "Go Get a Fish",
+      "feed_url": "https://gogetafish.com/",
+      "website_url": "https://gogetafish.com/",
+      "description": "We are Andy and Johann. The guys behind Go Get a Fish. This site is base camp for fishing enthusiasts from all over the world. We love the great outdoors and we want to share our stories and impart our experience with any and all potential anglers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4998362.jpg?t=1613797033"
+    }
+  ]
+}

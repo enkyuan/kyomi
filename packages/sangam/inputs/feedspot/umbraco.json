@@ -1,0 +1,52 @@
+{
+  "category": "Umbraco",
+  "source_url": "https://rss.feedspot.com/umbraco_rss_feeds",
+  "feeds": [
+    {
+      "title": "ProWorks Blog",
+      "feed_url": "https://www.proworks.com/blog/rss",
+      "website_url": "https://www.proworks.com/blog",
+      "description": "ProWorks' Umbraco experts will give you honest answers, no strings attached. We can address highly technical questions or respond in understandable terms for non-technical roles. Our goal is to help people be successful with Umbraco. We can't promise to solve every problem, but we have over ten years of Umbraco experience and we are willing to share it with you.",
+      "followers": {
+        "facebook": 473,
+        "twitter": 680,
+        "instagram": 130
+      },
+      "image_url": "https://i1.feedspot.com/5434804.jpg?t=1662725264"
+    },
+    {
+      "title": "ZpqrtBnk",
+      "feed_url": "https://www.zpqrtbnk.net/rss",
+      "website_url": "https://www.zpqrtbnk.net/",
+      "description": "I am Stephan aka ZpqrtBnk. I scratch software itches. I love to fix, improve, and make things happen. I code, speak and listen, learn, and help people with their architectures and projects. On my blog, I write tales of FGPA, courses of NULL, and many more!",
+      "followers": {
+        "twitter": 822
+      },
+      "image_url": "https://i1.feedspot.com/5434801.jpg?t=1662725478"
+    },
+    {
+      "title": "Andy Butland",
+      "feed_url": "https://www.andybutland.dev/feeds/posts/default?alt=rss",
+      "website_url": "https://www.andybutland.dev/",
+      "description": "Hello, I'm Andy Butland, senior developer and head of DXP at Umbraco. The projects I work on for a range of clients involved. NET-based CMS platforms, such as Umbraco, EPiServer, and Sitecore, in addition to web applications and micro-services, are built using DDD/CQRS techniques. This blog is used as a repository for various tips, tricks, issues, and impressions drawn from the use of technology in my work and interests.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434802.jpg?t=1661258360"
+    },
+    {
+      "title": "Mark Downie Blog",
+      "feed_url": "https://markdevelopmentblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://markdevelopmentblog.blogspot.com/",
+      "description": "I am Mark Downie a web developer who uses the Umbraco CMS. On my blog, I share information about Umbraco's text output, pagination, date formatting, Navi hide, and many more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434803.jpg?t=1661258829"
+    },
+    {
+      "title": "Adolfi Dev \u00bb Umbraco",
+      "feed_url": "https://adolfi.dev/tags/umbraco/rss",
+      "website_url": "https://adolfi.dev/tags/umbraco",
+      "description": "Adolf Dev is a blog about Umbraco, Unit Testing, and random things. Here Adolf Dev provides articles about automated testing, .NET, DevOps, Kubernetes, and much more about her and how these help in app development, and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434800.jpg?t=1661258177"
+    }
+  ]
+}

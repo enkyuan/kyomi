@@ -1,0 +1,546 @@
+{
+  "category": "Agile",
+  "source_url": "https://rss.feedspot.com/agile_rss_feeds",
+  "feeds": [
+    {
+      "title": "Agile Alliance Blog",
+      "feed_url": "https://www.agilealliance.org/feed/",
+      "website_url": "https://www.agilealliance.org/blog/",
+      "description": "Agile Alliance is a global nonprofit organization dedicated to promoting the concepts of Agile software development as outlined in the Agile Manifesto. Follow this blog to get the latest and greatest articles from the Agile community like how-to's, best practices, and more!",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 46600
+      },
+      "image_url": "https://i1.feedspot.com/4836048.jpg?t=1611063978"
+    },
+    {
+      "title": "Mountain Goat Software Blog",
+      "feed_url": "https://www.mountaingoatsoftware.com/blog/rss",
+      "website_url": "https://www.mountaingoatsoftware.com/blog",
+      "description": "Mike Cohn provides certified ScrumMaster training and agile training to build extremely high-performance development organizations. Learn agile and Scrum tips and techniques from expert ScrumMaster, educator, and author Mike Cohn of Mountain Goat Software.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 59600
+      },
+      "image_url": "https://i1.feedspot.com/72554.jpg?t=1611063989"
+    },
+    {
+      "title": "LeadingAgile - Agile Transformation Blog",
+      "feed_url": "https://www.leadingagile.com/blog/feed/",
+      "website_url": "https://www.leadingagile.com/resources/",
+      "description": "We believe in safe, incremental, pragmatic change and improving the business drivers executives repeatedly tell us are behind their desire to adopt agile. Follow this blog to get information on Agile Training, Agile Coaching, Agile Transformation.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 7900,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4836019.jpg?t=1611063998"
+    },
+    {
+      "title": "Scrum.org Blog",
+      "feed_url": "https://www.scrum.org/resources/blog/rss.xml",
+      "website_url": "https://www.scrum.org/resources/blog",
+      "description": "The Scrum.org blog helps those new to Scrum and those who are experienced learn more from our Professional Scrum Trainer community. Scrum.org is on a mission to help people and teams solve complex problems. We do this by enabling people to apply Professional Scrum through training courses, certifications, and ongoing learning all based on a common competency model.",
+      "followers": {
+        "facebook": 21300,
+        "twitter": 49000
+      },
+      "image_url": "https://i1.feedspot.com/4836069.jpg?t=1611064005"
+    },
+    {
+      "title": "Age of Product",
+      "feed_url": "https://age-of-product.com/feed/",
+      "website_url": "https://age-of-product.com/",
+      "description": "Tools, practices and insights for agile product development. From Scrum and Kanban to Lean Startup. Learn about dual-track agile & other best practices.",
+      "followers": {
+        "facebook": 543,
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4457135.jpg?t=1611064014"
+    },
+    {
+      "title": "Planview Blog",
+      "feed_url": "https://blog.planview.com/feed/",
+      "website_url": "https://blog.planview.com/",
+      "description": "Get insight from subject matter experts in the areas of portfolio and resource management, project collaboration, and enterprise architecture. Planview is uniquely positioned to help organizations transform the way they streamline the delivery of strategic initiatives and enable their teams to do their very best work.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 3200,
+        "instagram": 831
+      },
+      "image_url": "https://i1.feedspot.com/5286677.jpg?t=1622459343"
+    },
+    {
+      "title": "Apiumhub Blog \u00bb Agile Web and App Development",
+      "feed_url": "https://apiumhub.com/tech-blog-barcelona/category/agile-web-and-mobile-development/feed/",
+      "website_url": "https://apiumhub.com/tech-blog-barcelona/category/agile-web-and-mobile-development/",
+      "description": "Apiumhub is a software development hub solving complex problems with our high-quality solutions. Our purpose is to build scalable software, helping our clients to strengthen their business with powerful technology. In this category, you will find articles related to agile web and app development, from case studies to interviews and tutorials.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 11800,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5285251.jpg?t=1622115731"
+    },
+    {
+      "title": "AgileConnection",
+      "feed_url": "https://www.agileconnection.com/rss-agileconnection",
+      "website_url": "https://www.agileconnection.com/",
+      "description": "Your agile software development resource with content and conversations about agile principles & practices, Scrum, kanban, enterprise agile, DevOps practices, agile leadership. AgileConnection.com brings together the latest agile ideas and practices from experienced software professionals and thought leaders. AgileConnection.com offers how-to advice on the latest agile development principles.",
+      "followers": {
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/4611665.jpg?t=1611063984"
+    },
+    {
+      "title": "The agile42 Blog",
+      "feed_url": "https://www.agile42.com/en/blog/feed",
+      "website_url": "https://www.agile42.com/en/blog",
+      "description": "agile42 has a proven approach to successful agile implementations. We support you with a full range of coaching services and specialized trainings.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4836725.jpg?t=1611064403"
+    },
+    {
+      "title": "AgileSparks Blog",
+      "feed_url": "https://agilesparks.com/feed/",
+      "website_url": "https://agilesparks.com/blog/",
+      "description": "AgileSparks is providing Agile/Scrum/Kanban solutions including training, coaching, assessment, and All things Agile/Lean, focused on Agile Transformations, Scaling, Organizational Agility, Agile Marketing, DevOps, Kanban, and Lean Startup. Follow this blog to know more about Agile and read informative articles such as Best of Artificial Intelligence, Business Agility, EOS, and Agile, Kanban and more.",
+      "followers": {
+        "twitter": 346
+      },
+      "image_url": "https://i1.feedspot.com/4837115.jpg?t=1611064399"
+    },
+    {
+      "title": "Scrum Expert",
+      "feed_url": "https://www.scrumexpert.com/feed/",
+      "website_url": "https://www.scrumexpert.com/",
+      "description": "Scrum Expert provides Agile knowledge for the Scrum Masters, Product Owners and Agile Software Developers: Backlog, User Stories, Sprint, Retrospectives. Scrum Expert presents industry news, articles, blog posts, book reviews, tools, videos and other resources about agile software development project management with the Scrum approach.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/378372.jpg?t=1611064009"
+    },
+    {
+      "title": "Agile Testing with Lisa Crispin",
+      "feed_url": "https://lisacrispin.com/feed/",
+      "website_url": "https://lisacrispin.com/",
+      "description": "Lisa Crispin is a tester who enjoys sharing her experiences and learning from others.In 2012, she was voted by her peers as the Most Influential Agile Testing Professional Person, and given this award at Agile Testing Days.This blog of her provides practical agile testing guidance and contains in depth information on agile testing.",
+      "followers": {
+        "twitter": 22300
+      },
+      "image_url": "https://i1.feedspot.com/1722949.jpg?t=1611064738"
+    },
+    {
+      "title": "Fail Fast, Move On",
+      "feed_url": "https://failfastmoveon.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://failfastmoveon.blogspot.com/",
+      "description": "'Agile' is not a silver bullet. When using an empirical process, there are many failures on the way to success. In this blog, I want to share the experiences I made so that others may also learn.",
+      "followers": {
+        "twitter": 212
+      },
+      "image_url": "https://i1.feedspot.com/5145876.jpg?t=1611064728"
+    },
+    {
+      "title": "Lean Agile Training Blog",
+      "feed_url": "https://leanagiletraining.com/feed/",
+      "website_url": "https://leanagiletraining.com/blog/",
+      "description": "Scrum Courses, Consulting Coaching, Lean Agile Scrum Transformations-Agile Software Development, New Product Development, Project Management. Follow this blog to gain in depth knowledge on scrum and agile.",
+      "followers": {
+        "twitter": 940
+      },
+      "image_url": "https://i1.feedspot.com/4836229.jpg?t=1611064785"
+    },
+    {
+      "title": "Agile and Scrum Blog",
+      "feed_url": "https://agile-scrum.com/feed/",
+      "website_url": "https://agile-scrum.com/",
+      "description": "Agile and Scrum help companies and individuals to be more successful. Teaching teams and their managers how to be more efficient, how to provide better quality, and how to communicate and organize teams so that people have fun, they are motivated, and have high commitment. Head straight to their blog to read more about Performance Review and Rewards System, Agile conferences to attend in 2023, Psychological Safety, Motivation, Growth, and more.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4837507.jpg?t=1611064710"
+    },
+    {
+      "title": "Scrum Master Toolbox Podcast",
+      "feed_url": "https://scrum-master-toolbox.org/feed/",
+      "website_url": "https://scrum-master-toolbox.org/",
+      "description": "Scrum Master Toolbox is a daily podcast for Scrum Masters and Agile Coaches. My name is Vasco Duarte and I try to give back to the community every single day in an effort to improve the IT and product industry all over the world. Product Manager, Scrum Master, Project Manager, Director, Agile Coach are only some of the roles that I've taken in software development organizations.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4836330.jpg?t=1611064705"
+    },
+    {
+      "title": "Ryan Ripley - Agile for Humans",
+      "feed_url": "https://ryanripley.com/feed/",
+      "website_url": "https://ryanripley.com/",
+      "description": "This podcast contains the discussions in the agile world focus on process and tools. However, this is a podcast dedicated to the individuals & interactions that make agile work.",
+      "followers": {
+        "facebook": 718,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4836342.jpg?t=1611065095"
+    },
+    {
+      "title": "Adventures with Agile Blog",
+      "feed_url": "https://www.adventureswithagile.com/feed/",
+      "website_url": "https://www.adventureswithagile.com/blog/",
+      "description": "We believe agile ways of working contribute to a better working life & products. We do this through agile coaching, agile training & agile community events. Follow this blog to get articles, podcasts and webinars on Agile and much more.",
+      "followers": {
+        "twitter": 2900,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4836187.jpg?t=1611064019"
+    },
+    {
+      "title": "Scaled Agile",
+      "feed_url": "https://scaledagile.com/blog/feed/",
+      "website_url": "https://scaledagile.com/resources/blog-posts/",
+      "description": "The Scaled Agile Framework is the world's leading framework for enterprise agility. In 2011, it all came together. Scaled Agile, Inc. was formed. The Big Picture was christened as the Scaled Agile Framework and a website, scaledagileframework.com was loaded up with guidance articles. We are well on our way to fulfilling our mission to improve the lives of those building the world's most important systems, and to improve business outcomes of the enterprises who build and depend on these systems.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5285250.jpg?t=1622116078"
+    },
+    {
+      "title": "Scrum Inc Blog",
+      "feed_url": "https://www.scruminc.com/feed/",
+      "website_url": "https://www.scruminc.com/scrum-blog/",
+      "description": "Scrum Inc. is the premier provider of Scrum training and consulting. We help companies and individuals dramatically increase productivity and quality. Scrum Inc. is the global authority on the most widely used Agile Framework.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4836158.jpg?t=1611064376"
+    },
+    {
+      "title": "Innolution | Agile and Scrum Blog",
+      "feed_url": "https://innolution.com/site/rss",
+      "website_url": "https://innolution.com/blog",
+      "description": "Stay in tune with agile and Scrum topics at the Innolution blog by Ken Rubin. Topics covered are agile principles, risk management, ScrumMaster, Scrum framework, Scrum guide, agile transition, and more. Innolution offers corporate agile software development training and coaching using the Scrum framework.",
+      "followers": {
+        "facebook": 540,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5309853.jpg?t=1628836622"
+    },
+    {
+      "title": "Agile For All Blog",
+      "feed_url": "https://agileforall.com/feed/",
+      "website_url": "https://agileforall.com/blog/",
+      "description": "With agile training from Agile For All, you can learn to deliver maximum impact with minimum time and effort, and dramatically increase the flow of value.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/4836213.jpg?t=1611064388"
+    },
+    {
+      "title": "101 Ways is a product-focused, technology consultancy",
+      "feed_url": "https://www.101ways.com/feed/",
+      "website_url": "https://www.101ways.com/news-insights/",
+      "description": "At 101 Ways we work on the basis of selecting the best individuals for a specific project. We build teams of highly skilled people who share our philosophy and values and we actively manage and support our people through the life of a project. Follow this blog to know about Agile adoption, agile leadership, agile planning, agile project management and much more.",
+      "followers": {
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/4836259.jpg?t=1611064682"
+    },
+    {
+      "title": "RGalen Consulting Group",
+      "feed_url": "https://rgalen.com/agile-training-news?format=RSS",
+      "website_url": "https://rgalen.com/agile-training-news",
+      "description": "Bob's Blog Bob is a prolific blogger who simply enjoys sharing his experiences with colleagues in the Agile Community. Topics revolve around Scrum, XP, Kanban, Project Management, Business Analysis, Testing, Leadership and General Musings. \u00a0 Check back often as we've always got something to say...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5037513.jpg?t=1611064426"
+    },
+    {
+      "title": "Agile Uprising Podcast",
+      "feed_url": "http://podcast.agileuprising.com/feed/",
+      "website_url": "http://podcast.agileuprising.com/",
+      "description": "Agile Uprising is a purpose-built network that focuses on the advancement of the agile mindset and global professional networking between and among practicing agilists. Agile Uprising Podcast is a podcast for agilists.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4836306.jpg?t=1611064522"
+    },
+    {
+      "title": "Ben Linders - Sharing my Experience",
+      "feed_url": "https://www.benlinders.com/feed/",
+      "website_url": "https://www.benlinders.com/category/english/",
+      "description": "Ben Linders shares his experience on Agile, Lean, Quality and Continuous Improvement in Software Development.",
+      "followers": {
+        "facebook": 200,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4836809.jpg?t=1611064416"
+    },
+    {
+      "title": "3Back",
+      "feed_url": "https://3back.com/feed/",
+      "website_url": "https://3back.com/",
+      "description": "We are experts in Agile Theory.Our training transforms the fundamentals of Agile Theory into practical implementation. By exploring real world, client-driven experiences, we give you the right Agile tools and techniques to use with your team. Follow this blog to know about Agile and scrum in depth.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4836778.jpg?t=1611064672"
+    },
+    {
+      "title": "Agile Podcast Network",
+      "feed_url": "https://agilepodcastnetwork.com/rss",
+      "website_url": "https://agilepodcastnetwork.com/",
+      "description": "The best agile-centric podcasts, all in one place! Agile Coffee Agile For Humans Deliver It The Meta-Cast Reflection as a Service.",
+      "followers": {
+        "twitter": 180
+      },
+      "image_url": "https://i1.feedspot.com/4836296.jpg?t=1611064751"
+    },
+    {
+      "title": "The Agile Times",
+      "feed_url": "https://theagiletimes.com/feed/",
+      "website_url": "https://theagiletimes.com/",
+      "description": "The Agile Times provides a series of expert opinions, advice on Agile insights, book reviews, and software usage tips, as well as training certifications and recommendations.",
+      "followers": {
+        "facebook": 46,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5185641.jpg?t=1611065057"
+    },
+    {
+      "title": "Lutz Mueller | Agile Insights",
+      "feed_url": "https://www.lutz-mueller.com/feed/",
+      "website_url": "https://www.lutz-mueller.com/",
+      "description": "Get Agile related posts from Agile Insights blog by Lutz Mueller.",
+      "followers": {
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/5179395.jpg?t=1611065065"
+    },
+    {
+      "title": "The Agile Revolution Podcast | The Podcast That Is Everything Agile, Lean and Kanban",
+      "feed_url": "https://theagilerevolution.com/feed/",
+      "website_url": "https://theagilerevolution.com/",
+      "description": "The Agile Revolution podcast is your one-stop podcast for all things Agile!",
+      "followers": {
+        "twitter": 761
+      },
+      "image_url": "https://i1.feedspot.com/4836352.jpg?t=1611065100"
+    },
+    {
+      "title": "Agile For Growth Blog",
+      "feed_url": "https://agileforgrowth.com/feed/",
+      "website_url": "https://agileforgrowth.com/blog/",
+      "description": "We offer corporate, on-site and public Scrum Training. CSM Certification Workshop, CSPO Certification Workshop, and custom Scrum Master and Scrum Product Owner workshops. Kamlesh Ravlani - Scrum Trainer and Agile Coach brings vast experience conducting in-house custom workshops to suit your needs. Our most popular workshops are Agile Team Boot Camp and much more.",
+      "followers": {
+        "facebook": 996,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4837540.jpg?t=1611065171"
+    },
+    {
+      "title": "Illustrated Agile",
+      "feed_url": "https://illustratedagile.com/feed/",
+      "website_url": "https://illustratedagile.com/",
+      "description": "Looking simply and creatively at the world of organizational change. Organizational Change Coach, Blogger and Podcast Host at The Illustrated Agile Company.",
+      "followers": {
+        "facebook": 774,
+        "twitter": 972
+      },
+      "image_url": "https://i1.feedspot.com/5085911.jpg?t=1611064733"
+    },
+    {
+      "title": "EBG Consulting",
+      "feed_url": "https://www.ebgconsulting.com/feed/",
+      "website_url": "https://www.ebgconsulting.com/blog/",
+      "description": "EBG Consulting is a group of world-renowned experts helping product and development communities create valuable outcomes through product agility. EBG's coaching, discovery workshops, training, and consulting help you amplify discovery to accelerate delivery.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5085958.jpg?t=1611064715"
+    },
+    {
+      "title": "Sprint Agile",
+      "feed_url": "https://sprintagile.com.au/feed/",
+      "website_url": "https://sprintagile.com.au/blog/",
+      "description": "Keep up with articles from Sprint Agile.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/4997776.jpg?t=1611065166"
+    },
+    {
+      "title": "Luis Gon\u00e7alves - Agile, Scrum and Agile Retrospectives Blog",
+      "feed_url": "https://luis-goncalves.com/feed/",
+      "website_url": "https://luis-goncalves.com/blog/",
+      "description": "Agile, Agile Retrospectives & Scrum. In this site from Luis Gon\u00e7alves who is a Agile Coach you will find different tips and tricks to help you to succeed with Agile.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4836675.jpg?t=1611065153"
+    },
+    {
+      "title": "SAFe Blog",
+      "feed_url": "https://framework.scaledagile.com/feed",
+      "website_url": "https://framework.scaledagile.com/blog/",
+      "description": "SAFe is an online freely revealed knowledge base of proven, integrated patterns for implementing Lean-Agile development. It provides comprehensive guidance for work at the Portfolio, Large Solution, Program, and Team Levels. Follow this blog to get resources on lean agile.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4836094.jpg?t=1611064359"
+    },
+    {
+      "title": "Kanban Zone Blog",
+      "feed_url": "https://kanbanzone.com/feed/",
+      "website_url": "https://kanbanzone.com/blog/",
+      "description": "Read this blog for the latest insights on productivity with Kanban. Topics include Kanban, Lean Thinking, Agile methods, Scrumban, Kaizen and more. Kanban Zone is a visual process management solution that leverages every aspect of the Kanban methodology. We promote prioritization, focus and clarity.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 1400,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5129936.jpg?t=1611064370"
+    },
+    {
+      "title": "Agile Pain Relief\u2014Certified ScrumMaster Training and Consulting Blog",
+      "feed_url": "https://agilepainrelief.com/feed",
+      "website_url": "https://agilepainrelief.com/blog/",
+      "description": "Agile Pain Relief provides Certified ScrumMaster training courses and Agile Consulting to help individuals, teams, and organizations learn Agile and Scrum. Follow this blog to get the latest Agile news, tips, resources and much more.",
+      "followers": {
+        "facebook": 213
+      },
+      "image_url": "https://i1.feedspot.com/4836836.jpg?t=1611064026"
+    },
+    {
+      "title": "Pretty Agile Blog",
+      "feed_url": "https://prettyagile.com.au/blog/",
+      "website_url": "https://prettyagile.com.au/blog/",
+      "description": "Written by SAFe Fellow Em Campbell-Pretty, the Pretty Agile Blog explores real-world lessons from scaling agility in large enterprises. It shares practical insights on Lean, Agile, and SAFe transformation, leadership, and culture. Drawing on experience from global clients and case studies, it focuses on outcomes, respect for people, and delivering value through flow and systems thinking.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4139730/page/4837475/logo_1762147296.jpg"
+    },
+    {
+      "title": "Home - Custom Software Developers II Patterwal DevOps Engineers Blog",
+      "feed_url": "https://patterwal.com/feed/",
+      "website_url": "https://patterwal.com/blog/",
+      "description": "Patterwal DevOps Engineers is a business-driven organization that delivers quality software-as-a-service solutions. With a sustained focus on client goals, we help you achieve outstanding business results and gain a strategic advantage in your market. Your trusted experts for seamless deployment and efficient operations. Maximize productivity and scale effortlessly. Find out more now!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5745367.jpg?t=1703826089"
+    },
+    {
+      "title": "SCRUMstudy Blog",
+      "feed_url": "https://blog.scrumstudy.com/wp-admin/install.php",
+      "website_url": "https://www.scrumstudy.com/freeresources/free-blogs-and-articles",
+      "description": "The Best in Scrum Master Certification and Agile Certification - SCRUMstudy provides High Quality Training and Certification for Agile and Scrum Master. We provide Interactive Training which covers all Project Management Roles and Core Principles.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 20400
+      },
+      "image_url": "https://i1.feedspot.com/4836144.jpg?t=1611064364"
+    },
+    {
+      "title": "Easy Agile Blog",
+      "feed_url": "https://www.easyagile.com/feed/feed.xml",
+      "website_url": "https://www.easyagile.com/blog/",
+      "description": "Agile Tips to help you live a more balanced life. Blog posts cover Customer Experience, PI Planning, Scaled Agile, Product Management, Scrum, and User Experience. Easy Agile creates tools for agile software development teams so that they can make their customers successful.",
+      "followers": {
+        "twitter": 657
+      },
+      "image_url": "https://i1.feedspot.com/5295900.jpg?t=1628837982"
+    },
+    {
+      "title": "Vacuumlabs",
+      "feed_url": "https://vacuumlabs.com/feed/",
+      "website_url": "https://vacuumlabs.com/blog",
+      "description": "We put the tech in fintech Vacuumlabs is a software development company that builds modern full stack fintech solutions for startups, scale-ups and incumbent banks See our recent success stories.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2100,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5267656.jpg?t=1618383034"
+    },
+    {
+      "title": "Scrum Breakfast",
+      "feed_url": "https://feeds.feedburner.com/ScrumBreakfast",
+      "website_url": "https://saat-network.ch/blog/",
+      "description": "Blog about Scrum: Getting started, Crisis Project Management, and Transforming IT into a Lean Organization.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/535103.jpg?t=1611065231"
+    },
+    {
+      "title": "Growing Agile",
+      "feed_url": "https://growingagile.co.za/feed/",
+      "website_url": "https://growingagile.co.za/",
+      "description": "We are Karen and Sam. We love agile and want to share it with the world. We do that is by planting seeds and nurturing them to help grow more agile coaches.",
+      "followers": {
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4837388.jpg?t=1611064719"
+    },
+    {
+      "title": "Agilitirix - High Performance Leadership Training with Michael Sahota Blog",
+      "feed_url": "http://agilitrix.com/feed/",
+      "website_url": "https://evolve2b.com/blog/",
+      "description": "Michael Sahota is a Certified Agile Leadership (CAL) Trainer and Enterprise Coach and has learned how to achieve high performance (in any culture) and overcome 90% of the top Agile challenges. Follow this blog to get information on Agile leadership, Agile mindset,Agile transformation and much more.",
+      "followers": {
+        "facebook": 90,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/2382625.jpg?t=1611065042"
+    },
+    {
+      "title": "Agiless",
+      "feed_url": "https://agiless.com/feed",
+      "website_url": "https://agiless.com/",
+      "description": "Agile approach, Lean thinking, Scrum, Kanban, and Development.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5145467.jpg"
+    },
+    {
+      "title": "Agile Guru",
+      "feed_url": "https://www.agileguru.xyz/feed/",
+      "website_url": "https://www.agileguru.xyz/",
+      "description": "Mohammad Aziz is an experienced Scrum Master and Agile coach who started his career as a programmer then moved into traditional software project management. Mohammad has spent last 8 years working within the Agile project management. He is certified, Scrum Master, Product Owner, AgilePM, Prince 2, SAFe practitioner and in Nexus.",
+      "followers": {
+        "twitter": 3100,
+        "instagram": 290
+      },
+      "image_url": "https://i1.feedspot.com/4858835.jpg?t=1611065134"
+    },
+    {
+      "title": "Atlassian Blog \u00bb Jira Align",
+      "feed_url": "https://www.atlassian.com/blog/jira-align/feed",
+      "website_url": "https://www.atlassian.com/blog/jira-align/",
+      "description": "Learn best practices and explore the future of enterprise scaled agile development.",
+      "followers": {
+        "facebook": 998,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4837486.jpg?t=1611065147"
+    },
+    {
+      "title": "tryScrum",
+      "feed_url": "https://tryscrum.com/feed/",
+      "website_url": "https://tryscrum.com/blogs/",
+      "description": "tryScrum mission is to Humanize Organizations by going deeper to unlock prescience to challenge the established thinking and drive transformation. Follow to get updates from this blog directly to your inbox.",
+      "followers": {
+        "facebook": 540,
+        "twitter": 280,
+        "instagram": 229
+      },
+      "image_url": "https://i1.feedspot.com/5180281.jpg?t=1611064394"
+    }
+  ]
+}

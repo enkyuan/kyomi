@@ -1,0 +1,139 @@
+{
+  "category": "UK Architecture",
+  "source_url": "https://rss.feedspot.com/uk_architecture_rss_feeds",
+  "feeds": [
+    {
+      "title": "Architects' Journal",
+      "feed_url": "https://www.architectsjournal.co.uk/feed",
+      "website_url": "https://www.architectsjournal.co.uk/",
+      "description": "Architecture news including building reviews, insight on running a successful practice and the latest architectural competitions.The Architects Journal is the UK's leading architecture magazine that publish the best of British architecture, from small projects to mega masterplans, the sole practitioner to the multi-disciplinary.",
+      "followers": {
+        "facebook": 41800,
+        "twitter": 343000,
+        "instagram": 137700
+      },
+      "image_url": "https://i1.feedspot.com/4478537.jpg?t=1609825006"
+    },
+    {
+      "title": "Dezeen",
+      "feed_url": "https://www.dezeen.com/feed/",
+      "website_url": "https://www.dezeen.com/",
+      "description": "The world's most influential architecture, interiors, and design magazine. Our mission is to bring you a carefully edited selection of the best architecture, design, and interiors projects and news from around the world.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 1000000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/4649618.jpg?t=1613657118"
+    },
+    {
+      "title": "Architecture Today",
+      "feed_url": "https://architecturetoday.co.uk/feed/",
+      "website_url": "https://architecturetoday.co.uk/",
+      "description": "Find Insight, Analysis and Building Case Studies for Architects by Architects.",
+      "followers": {
+        "twitter": 92000,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4905802.jpg?t=1613657127"
+    },
+    {
+      "title": "Architect Projects Magazine",
+      "feed_url": "https://architectprojects.co.uk/feed/",
+      "website_url": "https://architectprojects.co.uk/",
+      "description": "Architect Projects is a leading trade publication within the architectural and construction industry that is an effective marketing tool for our advertisers.",
+      "followers": {
+        "twitter": 732
+      },
+      "image_url": "https://i1.feedspot.com/4905807.jpg?t=1613657139"
+    },
+    {
+      "title": "Clare Nash Architecture Green Blog",
+      "feed_url": "https://clarenasharchitecture.co.uk/feed/",
+      "website_url": "https://clarenasharchitecture.co.uk/our-blog/",
+      "description": "Clare Nash Architecture Ltd is based in Brackley in rural South Northamptonshire on the Oxfordshire border. Specialising in rural architectural design, particularly eco-refurbishment and new build, CNA design focus takes inspiration from the vernacular. Focusing on people, site, climate, location, context, sustainable and beautiful materials to produce buildings that sit well in their surroundings and suit the people who reside in them.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 920
+      },
+      "image_url": "https://i1.feedspot.com/4478550.jpg?t=1609825858"
+    },
+    {
+      "title": "Jonathan Reeves Architects Blog",
+      "feed_url": "https://www.jr-architecture.co.uk/news/feed",
+      "website_url": "https://www.jr-architecture.co.uk/news",
+      "description": "The latest news from Jonathan Reeves Architects based in Loughborough, Leicestershire and working throughout the UK.",
+      "followers": {
+        "facebook": 552,
+        "twitter": 439
+      },
+      "image_url": "https://i1.feedspot.com/4905765.jpg?t=1613657144"
+    },
+    {
+      "title": "e-architect",
+      "feed_url": "https://www.e-architect.com/feed",
+      "website_url": "https://www.e-architect.com/",
+      "description": "A global architecture website & resource. Features the latest architecture news, buildings, events, competitions, photos, jobs, awards, and products. We also feature a range of building types from houses to skyscrapers, plus major landscape and interior projects.",
+      "followers": {
+        "facebook": 347700,
+        "twitter": 148000,
+        "instagram": 18400
+      },
+      "image_url": "https://i1.feedspot.com/5332655.jpg?t=1634552717"
+    },
+    {
+      "title": "The Orangery Blog",
+      "feed_url": "https://theorangeryblog.com/",
+      "website_url": "https://theorangeryblog.com/",
+      "description": "Architecture student blog and resources. Keep up to date with the latest architecture and design trends, news, blogs, reviews, and articles.",
+      "followers": {
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/5280163.jpg?t=1620877383"
+    },
+    {
+      "title": "First In Architecture",
+      "feed_url": "https://www.firstinarchitecture.co.uk/feed/",
+      "website_url": "https://www.firstinarchitecture.co.uk/",
+      "description": "Helping Architecture students with tips, tutorials and guides to do the best in their degree.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 792,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4905748.jpg?t=1613657123"
+    },
+    {
+      "title": "Architecture & Design Scotland Blog",
+      "feed_url": "https://www.ads.org.uk/feed/",
+      "website_url": "https://www.ads.org.uk/news-events-blog",
+      "description": "We're here to promote the benefit of well-design places and the value good architecture and design adds to our lives.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4905758.jpg?t=1613657131"
+    },
+    {
+      "title": "Real Life Architecture",
+      "feed_url": "https://www.reallifearchitecture.co.uk/blog-feed.xml",
+      "website_url": "https://www.reallifearchitecture.co.uk/blog/",
+      "description": "N\u00edall is a Consultant Architect in the UK with extensive experience altering, extending, and refurbishing private homes. In his blog Real Life Architect, Niall explores, analyses, and provides his knowledge and experience to UK homeowners needing advice before altering their homes or building new houses.",
+      "followers": {
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/5674203.jpg?t=1695189839"
+    },
+    {
+      "title": "World Architecture News",
+      "feed_url": "https://www.worldarchitecturenews.com/rss/home",
+      "website_url": "https://www.worldarchitecturenews.com/",
+      "description": "A place to come for inspiration and practical insights into the architecture and interior design, showcasing the very best projects and practices across the globe.",
+      "followers": {
+        "facebook": 704900,
+        "twitter": 243000
+      },
+      "image_url": "https://i1.feedspot.com/5323873.jpg?t=1632218296"
+    }
+  ]
+}

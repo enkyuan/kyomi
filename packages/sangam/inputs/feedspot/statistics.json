@@ -1,0 +1,447 @@
+{
+  "category": "Statistics",
+  "source_url": "https://rss.feedspot.com/statistics_rss_feeds",
+  "feeds": [
+    {
+      "title": "free range statistics",
+      "feed_url": "http://freerangestats.info/feed",
+      "website_url": "http://freerangestats.info/",
+      "description": "I write about applications of data and analytical techniques like statistical modelling and simulation to real-world situations. I show how to access and use data, and provide examples of analytical products and the code that produced them.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4570114.jpg?t=1614935194"
+    },
+    {
+      "title": "Error Statistics Philosophy",
+      "feed_url": "https://errorstatistics.com/feed/",
+      "website_url": "https://errorstatistics.com/",
+      "description": "Professor of philosophy of science, logic, experiment, statistical inference; now an independent philosopher & stock trader; split time in NYC & Va (and London)",
+      "followers": {
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4499579.jpg?t=1614935316"
+    },
+    {
+      "title": "Eran Raviv Blog",
+      "feed_url": "https://eranraviv.com/category/blog/feed/",
+      "website_url": "https://eranraviv.com/category/blog/",
+      "description": "Modern statistics and econometrics with application to capital markets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4739527.jpg?t=1614935473"
+    },
+    {
+      "title": "Statistical Modeling, Causal Inference, and Social Science",
+      "feed_url": "https://statmodeling.stat.columbia.edu/feed/",
+      "website_url": "https://statmodeling.stat.columbia.edu/",
+      "description": "Blog on Statistics by Andrew Gelman, a professor of statistics and political science and director of the Applied Statistics Center at Columbia University. He has received the Outstanding Statistical Application award from the American Statistical Association.",
+      "followers": {
+        "twitter": 49700
+      },
+      "image_url": "https://i1.feedspot.com/57686.jpg?t=1659933450"
+    },
+    {
+      "title": "Hyndsight",
+      "feed_url": "https://robjhyndman.com/index.xml",
+      "website_url": "https://robjhyndman.com/hyndsight/",
+      "description": "A blog by Rob J Hyndman. Rob is a Professor of Statistics in the Department of Econometrics and Business Statistics at Monash University, and Editor-in-Chief of the International Journal of Forecasting. He develops statistical models, algorithms and software for forecasting, analysing and visualizing data.",
+      "followers": {
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/835338.jpg"
+    },
+    {
+      "title": "FlowingData Blog",
+      "feed_url": "https://flowingdata.com/feed/",
+      "website_url": "https://flowingdata.com/",
+      "description": "FlowingData explores how statisticians, designers, and computer scientists are using data to help us understand more about ourselves and surroundings, mainly through visualization.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 83500
+      },
+      "image_url": "https://i1.feedspot.com/43384.jpg?t=1614935179"
+    },
+    {
+      "title": "Freakonometrics | An Open Lab-Notebook Experiment",
+      "feed_url": "https://freakonometrics.hypotheses.org/feed",
+      "website_url": "https://freakonometrics.hypotheses.org/",
+      "description": "Freakonometrics deals with academic matters, as well as issues in concerning the economy and those relevant to mathematics.",
+      "followers": {
+        "twitter": 27000
+      },
+      "image_url": "https://i1.feedspot.com/1270567.jpg?t=1614935185"
+    },
+    {
+      "title": "Xi'an's Og",
+      "feed_url": "https://xianblog.wordpress.com/feed/",
+      "website_url": "https://xianblog.wordpress.com/",
+      "description": "A French university professor blogs about statistics (mostly of the computational and Bayesian variety), climbing, travel, running, books, and fatherhood. Occasionally reviews books on statistics as well. Definitely worth checking out.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4570069.jpg"
+    },
+    {
+      "title": "AnnMaria's Blog",
+      "feed_url": "https://www.thejuliagroup.com/blog/feed/",
+      "website_url": "https://www.thejuliagroup.com/blog/",
+      "description": "The blog of Dr. AnnMaria De Mars, president of the online statistics education company The Julia Group, is attractively designed and frequently updated. Interesting, well written, and generally accessible reflections on statistics, mathematics, technology and other related topics are the norm.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/55174.jpg?t=1614935290"
+    },
+    {
+      "title": "Statistics By Jim",
+      "feed_url": "https://statisticsbyjim.com/feed/",
+      "website_url": "https://statisticsbyjim.com/",
+      "description": "A statistics blog by Jim Frost covering a wide range of topics including Basic statistical concepts, Hypothesis Testing, Regression, ANOVA, Probability, and Time Series. If you are interested in learning statistics at a deeply intuitive level, you're at the right place!",
+      "followers": {
+        "facebook": 16400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5275575.jpg?t=1620049467"
+    },
+    {
+      "title": "Stats Chat",
+      "feed_url": "https://feeds.feedburner.com/StatsChat",
+      "website_url": "https://www.statschat.org.nz/",
+      "description": "'Statistical thinking will one day be as necessary for efficient citizenship as the ability to read and write.' - H.G. Wells",
+      "followers": {
+        "facebook": 588,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/773512.jpg"
+    },
+    {
+      "title": "Radical Statistics Group | Using statistics to support progressive social change",
+      "feed_url": "https://www.radstats.org.uk/blog/feed/",
+      "website_url": "https://www.radstats.org.uk/blog/",
+      "description": "A left-leaning UK group blog on the uses of statistics in society. The official blog of the Radical Statistics Group, which is devoted to using statistics to support movements for progressive social change. Includes many interesting critiques of the use and abuse of stats by government and corporate officials.",
+      "followers": {
+        "facebook": 583,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4570085.jpg?t=1614935319"
+    },
+    {
+      "title": "Doing Bayesian Data Analysis",
+      "feed_url": "http://doingbayesiandataanalysis.blogspot.com/feeds/posts/default",
+      "website_url": "http://doingbayesiandataanalysis.blogspot.com/",
+      "description": "This site features multiple exercises for practicing Bayesian data analysis (answers included), as well as lists of upcoming workshops at universities across the US.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/746948.jpg"
+    },
+    {
+      "title": "StatAnalytica Blog",
+      "feed_url": "https://statanalytica.com/blog/feed/",
+      "website_url": "https://statanalytica.com/blog/",
+      "description": "Statanalytica blog will help you to learn the concept behind all the statistics and data analysis. You'll get self-learning about assignment papers. Statanalytica is a platform where we provide data science, data analytics, accounts & statistics live tutoring & consultation to our clients around the world.",
+      "followers": {
+        "facebook": 17700,
+        "instagram": 527
+      },
+      "image_url": "https://i1.feedspot.com/5261764.jpg?t=1616675063"
+    },
+    {
+      "title": "John D. Cook | Singular Value Consulting",
+      "feed_url": "https://www.johndcook.com/blog/feed/",
+      "website_url": "https://www.johndcook.com/blog/",
+      "description": "A blog by John. D Cook, statistician, mathematician, consultant, manager and professor. While not all posts are directly concerned with statistics, they are all typically engaging and worthwhile.",
+      "followers": {
+        "twitter": 48600
+      },
+      "image_url": "https://i1.feedspot.com/4570073.jpg"
+    },
+    {
+      "title": "Not awful ideas for teaching statistics",
+      "feed_url": "http://notawfulandboring.blogspot.com/feeds/posts/default",
+      "website_url": "http://notawfulandboring.blogspot.com/",
+      "description": "Mostly ideas for teaching Statistics in a manner that is not awful. Mom, wife, and social psychologist at Gannon University. By Jessica Hartnett.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/594333.jpg?t=1614935755"
+    },
+    {
+      "title": "Agricultural Statistics",
+      "feed_url": "https://agriculturalstatistic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://agriculturalstatistic.blogspot.com/",
+      "description": "I am a PhD student at Anand Agricultural University, Anand. I am blogging to help researchers to apply Statistics in their research work. Would love to interact with researchers so that I can encounter novel application of Statistics.",
+      "followers": {
+        "twitter": 42
+      },
+      "image_url": "https://i1.feedspot.com/5182948.jpg?t=1597640264"
+    },
+    {
+      "title": "Win Vector LLC",
+      "feed_url": "https://win-vector.com/feed/",
+      "website_url": "https://win-vector.com/",
+      "description": "Win-Vector Blog is a data science blog which gives tips and tricks for using R programming in data science.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/109790.jpg?t=1612588523"
+    },
+    {
+      "title": "Stats With Cats",
+      "feed_url": "https://statswithcats.net/feed/",
+      "website_url": "https://statswithcats.net/",
+      "description": "Who can resist statistical analysis mixed with adorable felines? Hasn't been updated in a while, but some really excellent posts explaining basic statistics in an engaging and understandable way. Charlie Kufs has been crunching numbers for over thirty years, first as a hydrogeologist and since the 1990s, as a statistician. He is certified as a Six Sigma Green Belt by the American Society for Quality and is a Certified Professional Geologist in Pennsylvania. Charlie currently works as a statistician for the Federal Government and he is here to help you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4570075.jpg?t=1664363806"
+    },
+    {
+      "title": "Radford Neal's blog",
+      "feed_url": "https://radfordneal.wordpress.com/feed/",
+      "website_url": "https://radfordneal.wordpress.com/",
+      "description": "Neal is a Professors of Statistics and Computer Science at the University of Toronto. Most posts are directly concerned with statistics, with the occasional foray into more general and personal topics. Lots of good stuff for people interested in R programming as well.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4570104.jpg"
+    },
+    {
+      "title": "teaching statistics is awesome a blog for statistics teachers",
+      "feed_url": "https://teaching.statistics-is-awesome.org/feed/",
+      "website_url": "https://teaching.statistics-is-awesome.org/blog/",
+      "description": "The goal of this blog is to support statistics teachers and share some statistics love \u2665 Authored by Anna-Marie Fergusson.",
+      "followers": {
+        "facebook": 150,
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/4569286.jpg?t=1614935747"
+    },
+    {
+      "title": "Statistics.com Blog",
+      "feed_url": "https://www.statistics.com/feed/",
+      "website_url": "https://www.statistics.com/blog/",
+      "description": "The Institute for Statistics Education, Statistics.com offers academic and professional education in statistics, analytics, and data science at beginner and advanced levels. This blog by Statistics.com covers everything related to statistics.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5261763.jpg?t=1616675778"
+    },
+    {
+      "title": "Sabermetric Research",
+      "feed_url": "http://blog.philbirnbaum.com/feeds/posts/default",
+      "website_url": "http://blog.philbirnbaum.com/",
+      "description": "Don't let the title throw you off. There's a lot more than just baseball stats here. Phil Birnbaum takes on everything (and everyone) from Warren Buffett, to the stock market, to sports predictors and subjects them to a rigorous statistical analysis.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/3758658.jpg"
+    },
+    {
+      "title": "R-statistics blog",
+      "feed_url": "https://www.r-statistics.com/feed/",
+      "website_url": "https://www.r-statistics.com/",
+      "description": "Statistics with R, and open source stuff (software, data, community)",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4563907.jpg"
+    },
+    {
+      "title": "bayesianbiologist | Corey Chivers on P(A|B) \u221dP(B|A)P(A)",
+      "feed_url": "https://bayesianbiologist.com/feed/",
+      "website_url": "https://bayesianbiologist.com/",
+      "description": "Bayesianbiologist is run by Corey Chivers, a PhD candidate at McGill University in Montreal. He blogs on statistics, biology, and other areas of interest relevant to science.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4569292.jpg"
+    },
+    {
+      "title": "The Stats Guy | A blog about statistics, medicine, science, and other stuff",
+      "feed_url": "http://www.statsguy.co.uk/feed/",
+      "website_url": "http://www.statsguy.co.uk/",
+      "description": "I'm Adam Jacobs, welcome to my blog. I'm a medical statistician, and I've worked in clinical research since 1996. This blog is a collection of my random thoughts about statistics, medicine, science, and other stuff. In my spare time, I recently did a degree in social sciences with the Open University, so you may also find the occasional post on social science stuff as well.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4372159.jpg?t=1614935778"
+    },
+    {
+      "title": "Robin Ryder's blog | Statistics and other stuff",
+      "feed_url": "https://robinryder.wordpress.com/feed/",
+      "website_url": "https://robinryder.wordpress.com/",
+      "description": "A professor at Universite Paris Dauphine, Ryder blogs on 'statistics and other stuff', but mainly about statistics. Postings are not very frequent, but usually include interesting questions or insights regarding the statistical world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4570084.jpg"
+    },
+    {
+      "title": "Jeromy Anglim's Blog: Psychology and Statistics",
+      "feed_url": "http://feeds.feedburner.com/jeromyanglim",
+      "website_url": "http://jeromyanglim.blogspot.com/",
+      "description": "Posts on statistics, study design, statistical computing, R, and more with a focus on research applications in psychology.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/1086023.jpg?t=1610688252"
+    },
+    {
+      "title": "Statistical Consulting Blog Statistics Solutions",
+      "feed_url": "https://www.statisticssolutions.com/statistical-consulting-blog/feed/",
+      "website_url": "https://www.statisticssolutions.com/statistical-consulting-blog/",
+      "description": "Our statistical consulting blog covers a wide range of topics from selecting the appropriate statistical analysis to motivational articles.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4569268.jpg"
+    },
+    {
+      "title": "StatLect",
+      "feed_url": "https://www.statlect.com/rss.xml",
+      "website_url": "https://www.statlect.com/",
+      "description": "Statlect is a collection of lectures on probability theory and mathematical statistics. It is offered as a free service to the mathematical community. Statlect is written by Marco Taboga, an expert in mathematical and statistical methods applied to finance. Marco is a Director in the Economics and Statistics Department of the Bank of Italy, where he has led teams of PhDs in mathematics and economics.",
+      "followers": {
+        "facebook": 20400
+      },
+      "image_url": "https://i1.feedspot.com/4744831.jpg?t=1664363312"
+    },
+    {
+      "title": "Blog about Stats All about Dissemination of (Official) Statistics",
+      "feed_url": "https://blogstats.wordpress.com/feed/",
+      "website_url": "https://blogstats.wordpress.com/",
+      "description": "A blog where professional statisticians from around the globe gather to share information, discuss new developments, and help each other find better ways to disseminate statistical information to the public. Most of the posts focus on data visualization, which means lots of interesting statistics related graphics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4569284.jpg"
+    },
+    {
+      "title": "Statisfaction",
+      "feed_url": "https://statisfaction.wordpress.com/feed/",
+      "website_url": "https://statisfaction.wordpress.com/",
+      "description": "Statisfaction is maintained by several PhD students with the goal of sharing statistics information. They primarily share tips and tricks for use at work, interesting articles, and any upcoming conferences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4570064.jpg?t=1614936639"
+    },
+    {
+      "title": "Statistical Sage Blog | Dedicated to Teaching Statistics",
+      "feed_url": "https://statisticalsage.wordpress.com/feed/",
+      "website_url": "https://statisticalsage.wordpress.com/",
+      "description": "A group blog about the role of statistics in the behavioral sciences. Written by current and retired academics, many of the posts are directed towards explaining difficult statistical concepts to students. An excellent resource for newcomers to the statistical world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4570076.jpg"
+    },
+    {
+      "title": "Realizations in Biostatistics",
+      "feed_url": "http://feeds.feedburner.com/RealizationsInBiostatistics",
+      "website_url": "http://realizationsinbiostatistics.blogspot.com/",
+      "description": "Biostatistics, clinical trial design, critical thinking about drugs and healthcare, skepticism, the scientific process.",
+      "followers": {
+        "twitter": 856
+      },
+      "image_url": "https://i1.feedspot.com/336609.jpg?t=1614935769"
+    },
+    {
+      "title": "The LoveStats Blog",
+      "feed_url": "https://lovestats.wordpress.com/feed/",
+      "website_url": "https://lovestats.wordpress.com/",
+      "description": "Opinions about surveys, sampling, big data, charts, statistics, and more. Authored by Annie Pettit.",
+      "followers": {
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4570072.jpg?t=1614935805"
+    },
+    {
+      "title": "The Analysis Factor",
+      "feed_url": "https://www.theanalysisfactor.com/feed/",
+      "website_url": "https://www.theanalysisfactor.com/",
+      "description": "The founder and president of The Analysis Factor, a statistics consulting company, tackles issues in applied statistics and data analysis on her blog. Complex statistical concepts and analysis are explained with clarity, though some background in stats is needed to understand most posts",
+      "followers": {
+        "facebook": 400,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4570077.jpg?t=1614935222"
+    },
+    {
+      "title": "Statistical Aid",
+      "feed_url": "https://www.statisticalaid.com/feeds/posts/default",
+      "website_url": "https://www.statisticalaid.com/",
+      "description": "Statistical aid is a site which provides statistical content, data analysis content and also discuss the various fields of statistics.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/5232032.jpg?t=1609392754"
+    },
+    {
+      "title": "NCES Blogs",
+      "feed_url": "https://nces.ed.gov/national-center-education-statistics-nces/blogs",
+      "website_url": "https://nces.ed.gov/national-center-education-statistics-nces/blogs",
+      "description": "The National Center for Education Statistics (NCES) collects, analyzes, and makes available data related to education in the U.S. and other nations.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 25200
+      },
+      "image_url": "https://i1.feedspot.com/5297738.jpg?t=1625048785"
+    },
+    {
+      "title": "Numbers Rule Your World",
+      "feed_url": "https://junkcharts.typepad.com/numbersruleyourworld/atom.xml",
+      "website_url": "https://junkcharts.typepad.com/numbersruleyourworld/",
+      "description": "Comments on using statistical thinking in current events, by Kaiser Fung, author of 'Numbers Rule Your World: the hidden influence of probability and statistics in everything you do'",
+      "followers": {
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/32077.jpg?t=1614935284"
+    },
+    {
+      "title": "William College Mathematics & Statistics Blog",
+      "feed_url": "https://math.williams.edu/category/blog/feed/",
+      "website_url": "https://math.williams.edu/category/blog/",
+      "description": "A group blog by students and faculty at Williams College. Posts are generally thoughtful and well written, with a good mix of math, stats and education focused pieces.",
+      "followers": {
+        "facebook": 29700,
+        "twitter": 20500,
+        "instagram": 34100
+      },
+      "image_url": "https://i1.feedspot.com/4470065.jpg?t=1638445558"
+    },
+    {
+      "title": "Revolutions",
+      "feed_url": "https://blog.revolutionanalytics.com/atom.xml",
+      "website_url": "https://blog.revolutionanalytics.com/",
+      "description": "Revolutions is a blog dedicated to news and information of interest to members of the R community. Follow to keep up with daily news about using open source R for data analysis, predictive modeling, data science, and visualization.",
+      "followers": {
+        "twitter": 31000
+      },
+      "image_url": "https://i1.feedspot.com/57631.jpg?t=1612588519"
+    },
+    {
+      "title": "Andrey Akinshin's Blog",
+      "feed_url": "https://aakinshin.net/posts/index.xml",
+      "website_url": "https://aakinshin.net/",
+      "description": "Andrey is a Ph.D. in computer science. He is involved in a research project at the Sobolev Institute of Mathematics SB RAS related to the mathematical biology and bifurcation theory. Previously, he worked as a postdoctoral research fellow at the Weizmann Institute of Science.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5214368.jpg?t=1604895325"
+    },
+    {
+      "title": "nQuery",
+      "feed_url": "https://www.statsols.com/articles/rss.xml",
+      "website_url": "https://www.statsols.com/articles",
+      "description": "Resources for calculating sample size for clinical trials. Insights from our sample size experts.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5058848.jpg?t=1614935308"
+    },
+    {
+      "title": "Fandom FanFiction Statistics",
+      "feed_url": "https://phantomstatistician.tumblr.com/rss",
+      "website_url": "https://phantomstatistician.tumblr.com/",
+      "description": "Crunching numbers so you don't have to.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4570110.jpg"
+    },
+    {
+      "title": "Statistics How To",
+      "feed_url": "https://www.statisticshowto.com/feed/",
+      "website_url": "https://www.statisticshowto.com/",
+      "description": "Looking for elementary statistics help? You've come to the right place. Statistics How To has more than 1,000 articles and hundreds of videos for elementary statistics, probability, AP statistics and advanced statistics topics.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/1575090.jpg?t=1614935176"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "category": "Toledo News",
+  "source_url": "https://rss.feedspot.com/toledo_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WTOL 11",
+      "feed_url": "https://feeds.feedblitz.com/wtol/news",
+      "website_url": "https://www.wtol.com/",
+      "description": "WTOL 11 proudly serves the Northwest Ohio and Southeastern Michigan area with top-rated news, entertainment and sports programming. Get Toledo news, weather, traffic and sports updates from WTOL 11.",
+      "followers": {
+        "facebook": 503200,
+        "twitter": 120500
+      },
+      "image_url": "https://i1.feedspot.com/5130485.jpg?t=1623161289"
+    },
+    {
+      "title": "FOX 8 News \u00bb Toledo",
+      "feed_url": "https://fox8.com/tag/toledo-news/feed/",
+      "website_url": "https://fox8.com/tag/toledo-news/",
+      "description": "The Latest News and Updates in toledo news brought to you by the team at fox8.com.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5133897.jpg?t=1585806873"
+    },
+    {
+      "title": "FOX36 Toledo",
+      "feed_url": "https://fox36.com/feed/",
+      "website_url": "https://fox36.com/",
+      "description": "Fox 36 Toledo Now is the premier news provider in Toledo and nearby areas. Our website features Sports and Entertainment news, Weather alerts, Trending videos, Calendars, and Local community events and updates. Know more about Toledo and its people with FOX36's news coverage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5490466.jpg?t=1673269505"
+    },
+    {
+      "title": "Toledo Legal News",
+      "feed_url": "https://feeds.feedburner.com/toledolegalnews/news_rss",
+      "website_url": "https://www.toledolegalnews.com/",
+      "description": "Toledo Legal News is the official legal journal for Toledo & Lucas County. It provides information on law suits filed in the county.",
+      "followers": {
+        "facebook": 325,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5133903.jpg?t=1585807363"
+    },
+    {
+      "title": "The Blade",
+      "feed_url": "https://www.blademediakit.com/the-blade-contacts/",
+      "website_url": "https://www.toledoblade.com/",
+      "description": "The Blade covers Toledo's news, sports, weather and entertainment scene, including most of northwest Ohio and southeast Michigan.",
+      "followers": {
+        "facebook": 73400,
+        "twitter": 81700,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/1868349.jpg?t=1585806547"
+    }
+  ]
+}

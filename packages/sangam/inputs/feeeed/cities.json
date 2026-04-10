@@ -1,0 +1,1098 @@
+{
+  "id": "cities",
+  "display_name": "Cities",
+  "feeds": [
+    {
+      "id": "substack:top:paris_by_mouth__-_meg_zimbeck",
+      "title": "PARIS BY MOUTH  - Meg Zimbeck",
+      "cleaned_title": "PARIS BY MOUTH",
+      "summary": "PARIS BY MOUTH serves as an essential guide to dining in Paris, featuring the latest recommendations and insider tips about where to eat.",
+      "kind": "feed",
+      "feed_url": "https://parisbymouth.substack.com/feed",
+      "details": "Travel",
+      "sources": [
+        "substack_top",
+        "original_feed_db"
+      ],
+      "tags": [
+        "Living",
+        "Cities",
+        "Europe",
+        "France"
+      ],
+      "cleaned_author": "Meg Zimbeck",
+      "language": "en",
+      "keywords": [
+        "Paris",
+        "restaurants",
+        "foodie guide",
+        "insider tips",
+        "dining"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "substack:top:the_contender_-_david_coggins",
+      "title": "The Contender - David Coggins",
+      "cleaned_title": "The Contender",
+      "summary": "The Contender explores a blend of travel, style, and fishing narratives, all while offering thoughtful reflections on the way of life.",
+      "kind": "feed",
+      "feed_url": "https://thecontender.substack.com/feed",
+      "details": "Travel",
+      "sources": [
+        "substack_top"
+      ],
+      "tags": [
+        "Living",
+        "Cities"
+      ],
+      "cleaned_author": "David Coggins",
+      "language": "en",
+      "keywords": [
+        "travel",
+        "style",
+        "fishing",
+        "reflections",
+        "lifestyle"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:feeds.feedburner.com:Eater - New York",
+      "cleaned_title": "Eater",
+      "summary": "A blog offering insights into New York City's vibrant restaurant and nightlife scene. Readers can discover the latest openings and notable culinary highlights.",
+      "title": "Eater - New York",
+      "kind": "feed",
+      "feed_url": "http://feeds.feedburner.com/eater/nyc",
+      "details": "Popular",
+      "sources": [
+        "original_feed_db",
+        "crowdsourced_popular"
+      ],
+      "popularity_score": 2.7595419669077423,
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Local",
+        "Restaurants",
+        "Cities",
+        "NYC"
+      ],
+      "language": "en",
+      "keywords": [
+        "restaurants",
+        "New York",
+        "nightlife",
+        "food"
+      ],
+      "top_level_category": "News & Current Events"
+    },
+    {
+      "id": "youtube:Wolters World",
+      "cleaned_title": "Wolters World",
+      "summary": "A travel YouTube channel that offers honest and informative travel advice, destination guides, and cultural insights.",
+      "title": "Wolters World",
+      "kind": "youtube",
+      "channel_id": "UCFr3sz2t3bDp6Cux08B93KQ",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqNs9qDq5xXhPlIx6s8ZOnZByqUYeZjktMqsIK8QvA=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Travel > Hotels & Accommodation",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:telegraph.co.uk:Travel",
+      "cleaned_title": "Travel",
+      "summary": "An aggregator of travel news and information, featuring articles on destinations, accommodations, and travel tips for every adventurer.",
+      "title": "Travel",
+      "kind": "feed",
+      "feed_url": "http://www.telegraph.co.uk/travel/rss",
+      "details": "Travel",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:bbc.com:BBC Travel",
+      "cleaned_title": "BBC Travel",
+      "summary": "A platform offering travel guides, tips, and articles from BBC experts, highlighting unique travel experiences and insights across the globe.",
+      "title": "BBC Travel",
+      "kind": "feed",
+      "feed_url": "http://www.bbc.com/travel/feed.rss",
+      "details": "Travel",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Arts & Culture",
+        "Cities",
+        "Wanderlust"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "guides",
+        "articles"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:feeds.guardian.co.uk:Travel | The Guardian",
+      "cleaned_title": "Travel",
+      "summary": "A well-rounded source for travel news and reviews, providing local guides to major cities and insightful tips for global travelers.",
+      "title": "Travel | The Guardian",
+      "kind": "feed",
+      "feed_url": "http://feeds.guardian.co.uk/theguardian/travel/rss",
+      "details": "Travel",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": "The Guardian",
+      "tags": [
+        "Living",
+        "News",
+        "USA",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "guides",
+        "reviews"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:nytimes.com:New York Times - Travel",
+      "cleaned_title": "New York Times Travel",
+      "summary": "The travel section of the New York Times provides comprehensive coverage of travel news, interesting destinations, and practical advice for travelers.",
+      "title": "New York Times - Travel",
+      "kind": "feed",
+      "feed_url": "http://www.nytimes.com/services/xml/rss/nyt/Travel.xml",
+      "details": "Travel",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "News",
+        "Living",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel news",
+        "insights",
+        "advice"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "youtube:European Coffee Trip",
+      "cleaned_title": "European Coffee Trip",
+      "summary": "A YouTube channel that explores the European coffee scene, featuring cafe tours, interviews with coffee professionals, and brewing tutorials.",
+      "title": "European Coffee Trip",
+      "kind": "youtube",
+      "channel_id": "UC3KGOt3IfrVxDNtz5o7H-5A",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMy_P8ShmzA3G_BqpdXRmzMPPvpOZFB5abFmgDWxQ=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Food & Drink > Coffee & Tea",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "European coffee scene",
+        "caf\u00e9 tours",
+        "brewing tutorials"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "reddit:JapanTravel",
+      "cleaned_title": "JapanTravel",
+      "summary": "A subreddit dedicated to travel in Japan, with tips, recommendations, and discussions about visiting different regions in the country.",
+      "title": "JapanTravel",
+      "kind": "reddit",
+      "subreddit": "JapanTravel",
+      "details": "Local > Asia",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Local",
+        "Asia",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "Japan",
+        "tourism",
+        "tips"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "youtube:Rick Steves' Europe",
+      "cleaned_title": "Rick Steves' Europe",
+      "summary": "A YouTube channel hosted by travel expert Rick Steves, featuring videos about European travel destinations, culture, and history.",
+      "title": "Rick Steves' Europe",
+      "kind": "youtube",
+      "channel_id": "UCchgIh8Tc4sTmBfnMQ5pDdg",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMx_-Mkmuil3vVoHCg6KgDpC-5EUzGr616CwhTg7g=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Local > Europe",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": "Rick Steves",
+      "tags": [
+        "Living",
+        "Cities",
+        "Wanderlust"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "Europe",
+        "culture"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "youtube:Eater",
+      "cleaned_title": "Eater",
+      "summary": "A YouTube channel that features food and dining content, including restaurant reviews, food trends, and local culinary news in Los Angeles.",
+      "title": "Eater",
+      "kind": "youtube",
+      "channel_id": "UCRzPUBhXUZHclB7B5bURFXw",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqMjL5MMEDDpOHmmKdqabvkc7qcBApjQ_nbRImMvEvc=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Local > Los Angeles",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Restaurants",
+        "Cooking",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "food",
+        "dining",
+        "restaurants",
+        "Los Angeles"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:latimes.com:News from California, the nation and world  - Los Angeles Times",
+      "cleaned_title": "Los Angeles Times",
+      "summary": "The largest daily newspaper in Los Angeles, covering local news, politics, entertainment, and more.",
+      "title": "News from California, the nation and world  - Los Angeles Times",
+      "kind": "feed",
+      "feed_url": "http://www.latimes.com/rss2.0.xml",
+      "details": "Local > Los Angeles",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "USA",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "Los Angeles",
+        "news",
+        "politics",
+        "entertainment"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "youtube:Discover Los Angeles",
+      "cleaned_title": "Discover Los Angeles",
+      "summary": "The official YouTube channel of Discover Los Angeles, featuring videos showcasing the city's attractions, events, and culture.",
+      "title": "Discover Los Angeles",
+      "kind": "youtube",
+      "channel_id": "UCpLtpCJjGK61rzqD_frYsNA",
+      "thumbnail_url": "https://yt3.ggpht.com/ytc/AGIKgqOTYulmtTzput88txmtLJ8vTZ6Tz_99SiddZqswOw=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Local > Los Angeles",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Cities",
+        "USA"
+      ],
+      "language": "en",
+      "keywords": [
+        "Los Angeles",
+        "attractions",
+        "events",
+        "culture"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:news.google.com:\"tripadvisor\" - Google News",
+      "cleaned_title": "tripadvisor",
+      "summary": "A platform that offers user-generated reviews and recommendations for hotels, restaurants, and attractions worldwide.",
+      "title": "\"tripadvisor\" - Google News",
+      "kind": "feed",
+      "feed_url": "http://news.google.com/news?hl=en&gl=us&q=tripadvisor&um=1&ie=UTF-8&output=rss",
+      "details": "Travel > Hotels & Accommodation",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities",
+        "USA"
+      ],
+      "language": "en",
+      "keywords": [
+        "user reviews",
+        "travel recommendations",
+        "hotels"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "youtube:the Luxury Travel Expert",
+      "cleaned_title": "the Luxury Travel Expert",
+      "summary": "A YouTube channel that showcases luxury hotels and accommodations around the world, providing detailed reviews and recommendations.",
+      "title": "the Luxury Travel Expert",
+      "kind": "youtube",
+      "channel_id": "UCYxsXxbjJO1YYa9yQ3lKC8w",
+      "thumbnail_url": "https://yt3.ggpht.com/8pTWfgrXfrGin2LbwiuSARil48hGkyml2P2a-bRFCrWodkiA3sfnSjGl0aa2uFhXxGtSgazmEW0=s240-c-k-c0xffffffff-no-rj-mo",
+      "details": "Travel > Hotels & Accommodation",
+      "sources": [
+        "original_feed_db"
+      ],
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Arts & Culture",
+        "Cities",
+        "Restaurants",
+        "Wanderlust"
+      ],
+      "language": "en",
+      "keywords": [
+        "luxury travel",
+        "hotel reviews",
+        "travel guides"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "curated:gothamist",
+      "title": "Gothamist",
+      "kind": "feed",
+      "sources": [
+        "curated"
+      ],
+      "summary": "Local news and culture from New York City.",
+      "feed_url": "https://gothamist.com/feed",
+      "cleaned_title": "Gothamist",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Cities",
+        "Activism",
+        "NYC"
+      ],
+      "language": "en",
+      "keywords": [
+        "New York City",
+        "local news",
+        "culture"
+      ]
+    },
+    {
+      "id": "feed:https://www.europebyrail.eu/europe-by-rail-rss-feed.rss",
+      "title": "Europe by Rail | The Definitive Guide",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.europebyrail.eu/europe-by-rail-rss-feed.rss",
+      "summary": "Exploring Europe by rail is easy and enjoyable.",
+      "details": "Recreation > Vehicles",
+      "cleaned_title": "Europe by Rail",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Real Estate",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "Europe",
+        "rail travel",
+        "trains",
+        "trips"
+      ],
+      "top_level_category": "Automotive & Transport"
+    },
+    {
+      "id": "feed:https://melbourneontransit.blogspot.com/feeds/posts/default",
+      "title": "Melbourne on Transit",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://melbourneontransit.blogspot.com/feeds/posts/default",
+      "summary": "A blog about the service aspects of public transport in Melbourne, Australia.",
+      "details": "Recreation > Public Transport",
+      "cleaned_title": "Melbourne on Transit",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "Melbourne",
+        "public transport",
+        "transport planning"
+      ],
+      "top_level_category": "Automotive & Transport"
+    },
+    {
+      "id": "feed:https://futuresoutheastasia.com/feed/",
+      "title": "Southeast Asia construction, transport, and infrastructure",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://futuresoutheastasia.com/feed/",
+      "summary": "Transport and urban development in Southeast Asia.",
+      "details": "Humanities > Urbanism",
+      "cleaned_title": "Southeast Asia construction, transport, and infrastructure",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Urban",
+        "Social",
+        "Urban",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "Southeast Asia",
+        "transport",
+        "infrastructure",
+        "railways",
+        "urban development"
+      ],
+      "top_level_category": "Society, Law & History"
+    },
+    {
+      "id": "feed:https://www.taiwanquest.com/rss/",
+      "title": "Taiwan Quest",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.taiwanquest.com/rss/",
+      "summary": "A blog about moving to Taiwan in 2023.",
+      "details": "Countries",
+      "cleaned_title": "Taiwan Quest",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Asia",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "Taiwan",
+        "relocation",
+        "expat life",
+        "travel",
+        "culture"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://www.somebits.com/linkblog/index.atom",
+      "title": "Nelson's Linkblog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.somebits.com/linkblog/index.atom",
+      "details": "Uncategorizable",
+      "cleaned_title": "Nelson's Linkblog",
+      "cleaned_author": "Nelson",
+      "summary": "A collection of engaging and thought-provoking links curated daily by Nelson, offering insights into culture, history, and current events.",
+      "tags": [
+        "Arts & Culture",
+        "History",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "links",
+        "history",
+        "culture"
+      ],
+      "top_level_category": "Home & Hobbies"
+    },
+    {
+      "id": "feed:https://cdn.dnalounge.com/backstage/log/feed/",
+      "title": "DNA Lounge: DNA Sequencing",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://cdn.dnalounge.com/backstage/log/feed/",
+      "summary": "A late-night, all ages San Francisco nightclub featuring live music, DJ dancing, burlesque shows, and private parties.",
+      "details": "Countries > USA",
+      "cleaned_title": "DNA Lounge: DNA Sequencing",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Music",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "nightlife",
+        "San Francisco",
+        "live music"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://fastestslowguy.blogspot.com/feeds/posts/default",
+      "title": "The Fastest Slow Guy You Know",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://fastestslowguy.blogspot.com/feeds/posts/default",
+      "summary": "A blog about bicycles, Oakland, California, roads, trails, history.",
+      "details": "Countries > USA",
+      "cleaned_title": "The Fastest Slow Guy You Know",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities",
+        "History"
+      ],
+      "language": "en",
+      "keywords": [
+        "bicycles",
+        "Oakland",
+        "California",
+        "trails",
+        "history"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://livinglondonhistory.com/feed/",
+      "title": "Living London History",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://livinglondonhistory.com/feed/",
+      "summary": "Your one stop London history blog sharing suggested historical walks, hidden gems and activity recommendations.",
+      "details": "Countries > UK > London",
+      "cleaned_title": "Living London History",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Arts & Culture",
+        "History",
+        "Cities",
+        "UK",
+        "London"
+      ],
+      "language": "en",
+      "keywords": [
+        "London history",
+        "historical walks",
+        "hidden gems"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://transitmap.net/feed/",
+      "title": "Transit Maps",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://transitmap.net/feed/",
+      "summary": "A site devoted to the design and social impact of transit maps - subway maps, metro maps, bus maps, rail maps, ferry maps and more!",
+      "details": "Recreation > Public Transport",
+      "cleaned_title": "Transit Maps",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Design",
+        "Urban",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "transit maps",
+        "subway maps",
+        "urban design"
+      ],
+      "top_level_category": "Automotive & Transport"
+    },
+    {
+      "id": "feed:https://www.southernrockiesnatureblog.com/feeds/posts/default",
+      "title": "Southern Rockies Nature Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.southernrockiesnatureblog.com/feeds/posts/default",
+      "summary": "Where Nature Meets Culture\u2014Plus Wildfire, Dogs, Environmental News, and Writing with a Southern Rockies Perspective.",
+      "details": "Science > Natural World",
+      "cleaned_title": "Southern Rockies Nature Blog",
+      "cleaned_author": null,
+      "tags": [
+        "Science",
+        "Cities",
+        "History"
+      ],
+      "language": "en",
+      "keywords": [],
+      "top_level_category": "Science & Nature"
+    },
+    {
+      "id": "feed:https://britishcoast.wordpress.com/feed/",
+      "title": "Round the Island",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://britishcoast.wordpress.com/feed/",
+      "summary": "Walking round the coast of Mainland Britain.",
+      "details": "Countries > UK",
+      "cleaned_title": "Round the Island",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities",
+        "UK"
+      ],
+      "language": "en",
+      "keywords": [
+        "walking",
+        "coast",
+        "Britain",
+        "travel",
+        "nature"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://coastalwalker.co.uk/feed/",
+      "title": "Ruth's Coastal Walk (UK)",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://coastalwalker.co.uk/feed/",
+      "summary": "Coastalwalker.co.uk - walking around the British coastline, very SLOWLY.",
+      "details": "Countries > UK",
+      "cleaned_title": "Ruth's Coastal Walk (UK)",
+      "cleaned_author": "Ruth",
+      "tags": [
+        "Living",
+        "Cities",
+        "UK"
+      ],
+      "language": "en",
+      "keywords": [
+        "walking",
+        "coastline",
+        "slow travel",
+        "nature",
+        "England"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://www.trailspotting.com/feeds/posts/default",
+      "title": "Trailspotting",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.trailspotting.com/feeds/posts/default",
+      "summary": "Curated trail reviews, route maps and recommendations for day hikes and rail trails.",
+      "details": "Recreation > Walking",
+      "cleaned_title": "Trailspotting",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities",
+        "Real Estate"
+      ],
+      "language": "en",
+      "keywords": [
+        "hiking",
+        "trails",
+        "California",
+        "Massachusetts",
+        "New Hampshire"
+      ],
+      "top_level_category": "Health & Wellness"
+    },
+    {
+      "id": "feed:https://justalittlefurther.com/just-a-little-further?format=rss",
+      "title": "Our Blog \u2014 Just a Little Further",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://justalittlefurther.com/just-a-little-further?format=rss",
+      "summary": "It's not just travel...it's our lifestyle.",
+      "details": "Recreation > Travel",
+      "cleaned_title": "Just a Little Further",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Local",
+        "Cities",
+        "Wanderlust"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "lifestyle",
+        "adventure"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://www.packing-up-the-pieces.com/feed/",
+      "title": "Packing Up The Pieces | Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.packing-up-the-pieces.com/feed/",
+      "summary": "Travel. Make the Most of Life's Grand Adventure.",
+      "details": "Recreation > Travel",
+      "cleaned_title": "Packing Up The Pieces",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Local",
+        "Cities",
+        "Wanderlust"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "itinerary",
+        "Camino de Santiago"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://baileysbeerblog.blogspot.com/feeds/posts/default",
+      "title": "Paul's Beer & Travel Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://baileysbeerblog.blogspot.com/feeds/posts/default",
+      "summary": "A blog about beer,  travel and the enjoyment of  them both.",
+      "details": "Recreation > Food And Drink > Drink > Beer",
+      "cleaned_title": "Paul's Beer & Travel Blog",
+      "cleaned_author": "Paul",
+      "tags": [
+        "Living",
+        "Drinks",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "beer",
+        "travel",
+        "restaurants"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:https://randomwire.com/feed/",
+      "title": "Randomwire",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://randomwire.com/feed/",
+      "summary": "Exploring Asia since 2003.",
+      "details": "Recreation > Travel",
+      "cleaned_title": "Randomwire",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities",
+        "Wanderlust"
+      ],
+      "language": "en",
+      "keywords": [
+        "Asia",
+        "travel",
+        "culture"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://sinclairtrails.com/feed/",
+      "title": "Sinclair Trails",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://sinclairtrails.com/feed/",
+      "summary": "The travels of David and Jennifer Sinclair, full-timing in their Tiffin Allegro Bus 40SP motorhome.",
+      "details": "Recreation > Travel",
+      "cleaned_title": "Sinclair Trails",
+      "cleaned_author": "David and Jennifer Sinclair",
+      "tags": [
+        "Living",
+        "Cities",
+        "Wanderlust"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "motorhome",
+        "nature"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://driftingclouds.net/feed/",
+      "title": "Drifting Clouds \u7247\u96f2\u306e\u98a8",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://driftingclouds.net/feed/",
+      "summary": "Travels with Jani.",
+      "details": "Recreation > Food And Drink",
+      "cleaned_title": "Drifting Clouds \u7247\u96f2\u306e\u98a8",
+      "cleaned_author": "Jani",
+      "tags": [
+        "Living",
+        "Cities",
+        "Restaurants"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "food",
+        "culture"
+      ],
+      "top_level_category": "Food & Drink"
+    },
+    {
+      "id": "feed:http://bureboyblog.blogspot.com/feeds/posts/default",
+      "title": "Bureboyblog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "http://bureboyblog.blogspot.com/feeds/posts/default",
+      "summary": "Mostly fishing, mainly North Norfolk.",
+      "details": "Recreation > Sport > Fishing",
+      "cleaned_title": "Bureboyblog",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities",
+        "Sports"
+      ],
+      "language": "en",
+      "keywords": [
+        "fishing",
+        "North Norfolk",
+        "dace",
+        "chub"
+      ],
+      "top_level_category": "Home & Hobbies"
+    },
+    {
+      "id": "feed:https://disneyparksblog.com/feed/",
+      "title": "Disney Parks Blog",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://disneyparksblog.com/feed/",
+      "summary": "The official blog for Disneyland Resort, Walt Disney World and Disney Cruise Line.",
+      "details": "Recreation > Travel > Disney Parks",
+      "cleaned_title": "Disney Parks Blog",
+      "cleaned_author": null,
+      "tags": [
+        "Local",
+        "Cities",
+        "Social",
+        "Journalism"
+      ],
+      "language": "en",
+      "keywords": [
+        "Disney",
+        "parks",
+        "guides"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://www.magicaltrash.com/rss",
+      "title": "Magical Trash",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://www.magicaltrash.com/rss",
+      "summary": "Documenting the trash cans of Disney theme parks and resorts for 13 years.",
+      "details": "Recreation > Travel > Disney Parks",
+      "cleaned_title": "Magical Trash",
+      "cleaned_author": "Steve Tanner",
+      "tags": [
+        "Living",
+        "Humor",
+        "Social",
+        "Cities"
+      ],
+      "language": "en",
+      "keywords": [
+        "Disney",
+        "trash",
+        "humor"
+      ],
+      "top_level_category": "Travel & Geography"
+    },
+    {
+      "id": "feed:https://alondoninheritance.com/feed/",
+      "title": "A London Inheritance",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://alondoninheritance.com/feed/",
+      "summary": "A Private History of a Public City.",
+      "details": "Countries > UK > London",
+      "cleaned_title": "A London Inheritance",
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Local",
+        "Cities",
+        "History",
+        "London"
+      ],
+      "language": "en",
+      "keywords": [
+        "London",
+        "history",
+        "urban exploration"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:https://thelostbyway.com/feed",
+      "title": "the lost byway",
+      "kind": "feed",
+      "sources": [
+        "ooh_directory"
+      ],
+      "feed_url": "https://thelostbyway.com/feed",
+      "details": "Countries > UK > London",
+      "cleaned_title": "the lost byway",
+      "cleaned_author": null,
+      "summary": "An explorative blog that showcases various walks and experiences around London and beyond, encouraging discovery of less-trodden paths.",
+      "tags": [
+        "Living",
+        "Arts & Culture",
+        "Cities",
+        "London"
+      ],
+      "language": "en",
+      "keywords": [
+        "walking",
+        "exploration",
+        "London"
+      ],
+      "top_level_category": "Regional & Local"
+    },
+    {
+      "id": "feed:atlasobscura.com:Atlas Obscura - Latest Articles and Places",
+      "cleaned_title": "Atlas Obscura",
+      "summary": "A curious exploration of the world, Atlas Obscura introduces readers to off-the-beaten-path destinations and fascinating stories behind various locations.",
+      "title": "Atlas Obscura - Latest Articles and Places",
+      "kind": "feed",
+      "feed_url": "https://www.atlasobscura.com/feeds/latest",
+      "details": "Travel",
+      "sources": [
+        "original_feed_db",
+        "crowdsourced_popular",
+        "ooh_directory"
+      ],
+      "popularity_score": 1.9696687370600412,
+      "cleaned_author": null,
+      "tags": [
+        "Living",
+        "Cities",
+        "Wanderlust",
+        "World News"
+      ],
+      "language": "en",
+      "keywords": [
+        "travel",
+        "curiosities",
+        "history",
+        "locations"
+      ],
+      "top_level_category": "Travel & Geography"
+    }
+  ],
+  "child_categories": []
+}

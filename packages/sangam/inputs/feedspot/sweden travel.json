@@ -1,0 +1,81 @@
+{
+  "category": "Sweden Travel",
+  "source_url": "https://rss.feedspot.com/sweden_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Slow Travel Stockholm",
+      "feed_url": "https://www.slowtravelstockholm.com/feed/",
+      "website_url": "https://www.slowtravelstockholm.com/",
+      "description": "Slow Travel Stockholm is run and managed by award-winning travel writer and photographer Lola Akinmade \u00c5kerstr\u00f6m. The aim is to establish a repository of eclectic information about the city from a range of perspectives to encourage deeper, more varied exploration.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4824935.jpg?t=1610945766"
+    },
+    {
+      "title": "Swedentips",
+      "feed_url": "https://www.swedentips.se/feed/",
+      "website_url": "https://www.swedentips.se/",
+      "description": "The best travel destinations in Sweden, including Stockholm, Gothenburg, and Malm\u00f6, as well as personal and useful travel tips. An online travel guide and booking portal, promising to open up the very best of Sweden to English speaking travelers around the world.",
+      "followers": {
+        "facebook": 3000,
+        "instagram": 102
+      },
+      "image_url": "https://i1.feedspot.com/4824551.jpg?t=1610947206"
+    },
+    {
+      "title": "The Stockholm Tourist",
+      "feed_url": "http://stockholmtourist.blogspot.com/feeds/posts/default",
+      "website_url": "http://stockholmtourist.blogspot.com/",
+      "description": "Greetings! My name is Sean Naughton. I will not be listing everything that Stockholm has to offer; instead, I will add day by day experiences and thoughts exploring this great city, along with practical tips and upcoming events. I hope that you, as a future visitor to Stockholm, will find the information and experiences listed here of use in planning what to do and see during your visit.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4796678.jpg?t=1610945952"
+    },
+    {
+      "title": "Fantasiresor",
+      "feed_url": "https://fantasiresor.se/feed/",
+      "website_url": "https://fantasiresor.se/restips/",
+      "description": "Fantasies is a Swedish travel blog for dreamy more vagabond. Fantasiresor has among other things won Sweden's best blogs about travel.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1400,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4824519.jpg?t=1611209803"
+    },
+    {
+      "title": "Anderson Scandinavian Tours Blog",
+      "feed_url": "https://www.toursweden.com/blog-feed.xml",
+      "website_url": "https://www.toursweden.com/blog",
+      "description": "Since 1989 Anderson Scandinavian Tours has been offering the most affordable and exciting tour packages to Sweden, Norway, and Denmark. See and experience the best of these Nordic countries.",
+      "followers": {
+        "facebook": 116,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/4824168.jpg?t=1610967719"
+    },
+    {
+      "title": "MEcamping",
+      "feed_url": "https://mecamping.se/feed/",
+      "website_url": "https://mecamping.se/",
+      "description": "Hello and welcome to Eva & Majk's camping site! We have camped together for many years, both figuratively and literally. When our children were small we had caravans but the older they got the less interest they had to accompany us on adventures.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5122677.jpg?t=1610967733"
+    },
+    {
+      "title": "Swedish Nomad",
+      "feed_url": "https://www.swedishnomad.com/feed/",
+      "website_url": "https://www.swedishnomad.com/",
+      "description": "Swedish Nomad is a popular travel blog that focuses on valuable tips and helpful guides with everything you need to travel more and better.",
+      "followers": {
+        "facebook": 119200,
+        "twitter": 37200,
+        "instagram": 110500
+      },
+      "image_url": "https://i1.feedspot.com/4827645.jpg?t=1607580355"
+    }
+  ]
+}

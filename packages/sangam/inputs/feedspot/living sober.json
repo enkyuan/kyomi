@@ -1,0 +1,812 @@
+{
+  "category": "Living Sober",
+  "source_url": "https://rss.feedspot.com/living_sober_rss_feeds",
+  "feeds": [
+    {
+      "title": "AA Agnostica",
+      "feed_url": "https://aaagnostica.org/feed/?x=1",
+      "website_url": "https://aaagnostica.org/",
+      "description": "AA Agnostica is meant to be a helping hand for the alcoholic who reaches out to Alcoholics Anonymous for help and finds that she or he is disturbed by the religious content of many AA meetings. Our only wish is to ensure suffering alcoholics that they can find sobriety in AA without having to accept anyone else's beliefs or having to deny their own. Follow this site to get articles on living sober.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4832248.jpg?t=1611041539"
+    },
+    {
+      "title": "Sober Catholic",
+      "feed_url": "https://www.sobercatholic.com/feed/",
+      "website_url": "https://www.sobercatholic.com/",
+      "description": "I started Sober Catholic back in 2007 after I had unsuccessfully searched all over for a blog or discussion site that focused on alcoholism and sobriety/recovery from a Catholic perspective. I am a sober alcoholic and revert to the Church who found continued sobriety and serenity in the Faith. Follow my blog to get articles on Catholicism, Sobriety, Conversion and much more.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1128732.jpg?t=1611041254"
+    },
+    {
+      "title": "New Life House Blog",
+      "feed_url": "https://newlifehouse.com/feed/",
+      "website_url": "https://newlifehouse.com/blog/",
+      "description": "New Life House has been a leader in providing sober living communities for recovering men. Follow our recovery blog and read to get the latest in addiction information.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1300,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4833910.jpg?t=1611041259"
+    },
+    {
+      "title": "This Naked Mind Blog",
+      "feed_url": "https://thisnakedmind.com/feed/",
+      "website_url": "https://thisnakedmind.com/blog/",
+      "description": "After three to four months of sober living, why do I suddenly have a new wave of stress induced cravings crashing down on me? Annie Grace answers this reader's question by explaining the impact stress can have on our minds.",
+      "followers": {
+        "facebook": 132100,
+        "twitter": 17200,
+        "instagram": 165900
+      },
+      "image_url": "https://i1.feedspot.com/4832202.jpg?t=1611041644"
+    },
+    {
+      "title": "Thanks For Letting Me Share",
+      "feed_url": "https://thanksforlettingmeshare.substack.com/feed",
+      "website_url": "https://thanksforlettingmeshare.substack.com/",
+      "description": "Welcome to Breakfast with an Alcoholic! I'm an alcoholic and every week I have breakfast with friends and we talk about addiction, recovery, how we got sober, and how we stay sober - all from one of the Upper East Side's finest diners. Pour yourself a cup of coffee and join us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5414180.jpg?t=1656065326"
+    },
+    {
+      "title": "Sober College Blog",
+      "feed_url": "https://sobercollege.com/feed/",
+      "website_url": "https://sobercollege.com/addiction-blog/",
+      "description": "Sober Living Substance Abuse Treatment. Sober College is a drug, alcohol and substance abuse rehabilitation center specializing in recovery programs for teens and young adults. Follow this blog to gain knowledge from professionals and families about drug and alcohol problems in young adults.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4833844.jpg?t=1611045196"
+    },
+    {
+      "title": "Pacific Beach Recovery Sober Blog",
+      "feed_url": "https://pacificbeachsoberliving.com/feed/",
+      "website_url": "https://pacificbeachsoberliving.com/blog/",
+      "description": "Pacific Beach Recovery sober living San Diego sets the standard of sober living, sober outpatient, and sober living environments (SLEs) for drug and alcohol addiction in California. We firmly advocate permanent sobriety and successful outcomes through a culture of community, leadership, and evidence-based practices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5568057.jpg?t=1684223993"
+    },
+    {
+      "title": "Monarch Recovery Centers Blog",
+      "feed_url": "https://monarchrecoverycenters.com/feed/",
+      "website_url": "https://monarchrecoverycenters.com/blog/",
+      "description": "We are a network of luxury residential recovery homes led by experienced and motivated professionals working to provide the best in supportive recovery services to each of our residents. Monarch is committed to providing those who are ready, with the tools, the resources, and the expanded support necessary to help get you to where you want to be.",
+      "followers": {
+        "twitter": 679
+      },
+      "image_url": "https://i1.feedspot.com/5568078.jpg?t=1684223323"
+    },
+    {
+      "title": "New You Sober Living Blog",
+      "feed_url": "https://newyousoberliving.com/feed/",
+      "website_url": "https://newyousoberliving.com/blog/",
+      "description": "We are a top-rated transitional living residence for men and women to recover safely that offers co-ed and men's Oakland Park, FL sober living homes. Our mission is to prioritize reducing the incident and prevalence of substance abuse. We strive to improve the quality of life for those in the early stages of recovery, leading to a brighter future.",
+      "followers": {
+        "facebook": 999
+      },
+      "image_url": "https://i1.feedspot.com/5568058.jpg?t=1684222508"
+    },
+    {
+      "title": "Newcomers Keep Coming",
+      "feed_url": "https://newcomerskeepcoming.org/blog-%26-socials/f.rss",
+      "website_url": "https://newcomerskeepcoming.org/blog-%26-socials",
+      "description": "Welcome to the Newcomers Keep Coming (NKC) Alcoholics Anonymous (AA) website, the place where newcomers and old-timers can find the support they need to overcome alcohol addiction and join our transformative meetings. If you or someone you know is seeking help, you've come to the right place. Our website serves as an essential resource for newcomers, providing valuable information about AA meetings and the support available to you.",
+      "followers": {
+        "facebook": 261,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5612555.jpg?t=1688044019"
+    },
+    {
+      "title": "Sober Grace",
+      "feed_url": "https://sobergrace.wordpress.com/feed/",
+      "website_url": "https://sobergrace.wordpress.com/",
+      "description": "My name is Jami DeLoe Olive and I am a recovering alcoholic. I have found that the only way I can stay sober is by the grace of God, so I thought that I would try my hand at blogging about some of my thoughts, experiences, and challenges in sobriety.",
+      "followers": {
+        "twitter": 147
+      },
+      "image_url": "https://i1.feedspot.com/4974342.jpg?t=1684223873"
+    },
+    {
+      "title": "Acceptance House Sober Living Blog",
+      "feed_url": "https://acceptancehousesoberliving.com/feed/",
+      "website_url": "https://acceptancehousesoberliving.com/blogs/",
+      "description": "At Acceptance House our mission is to provide a safe and structured sober living environment to individuals in recovery from substance use disorder. We strive to help our residents build healthy, independent, and productive lives while staying sober one day at a time. The Acceptance House Sober Living blog features insightful articles, motivational tips, and resources to help you through long-term sobriety.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5568055.jpg?t=1684223961"
+    },
+    {
+      "title": "Normandy House Sober Living Blog",
+      "feed_url": "https://normandysoberliving.org/feed/",
+      "website_url": "https://normandysoberliving.org/blog/",
+      "description": "Normandy House Sober Living offers a nurturing home environment. Normandy House offers the benefits of living in an urban location without easy access to drugs. Our properties offer access to employment and volunteer opportunities and proximity to recovery resources, including 12-step meetings and outpatient treatment.",
+      "followers": {
+        "facebook": 149,
+        "instagram": 65
+      },
+      "image_url": "https://i1.feedspot.com/5568071.jpg?t=1684223797"
+    },
+    {
+      "title": "Scottsdale Sober Apartment Blog",
+      "feed_url": "https://www.soberapartmentliving.org/feed/",
+      "website_url": "https://www.soberapartmentliving.org/blog/",
+      "description": "SAL is a 501(c)(3) nonprofit organization that provides this exact solution: independent-living apartment complexes complemented with an array of support resources. Our affordable sober apartments in Scottsdale not only allow residents to gain strength, confidence, and conviction to overcome their daily challenges, but SAL also helps prepare them for lifelong sobriety.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 78,
+        "instagram": 601
+      },
+      "image_url": "https://i1.feedspot.com/5568077.jpg?t=1684223314"
+    },
+    {
+      "title": "Dallas Sober Living Solutions Blog",
+      "feed_url": "https://dallassoberliving.com/feed/",
+      "website_url": "https://dallassoberliving.com/blog/",
+      "description": "Dallas Sober Living Solutions is committed to aiding recovering addicts and alcoholics in achieving wholeness and happiness by addressing the deeper issues of the heart through a comprehensive program based on 12-Step philosophies. Our mission is to empower men and women to achieve long-term sobriety with a serene and structured living environment while learning life skills, setting goals and having fun in recovery with weekly activities.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5568056.jpg?t=1684222494"
+    },
+    {
+      "title": "Sobriety Hub Blog",
+      "feed_url": "https://www.sobrietyhub.com/our-blog/rss.xml",
+      "website_url": "https://www.sobrietyhub.com/our-blog",
+      "description": "The Sobriety Hub Blog keeps you in the know about the latest in Sober Living news, tips, tricks, and innovations in the Sober Living Community. Our mission is to set a new standard by providing an intuitive solution built from the ground up for sober living owners, operators, and managers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5568084.jpg?t=1684224117"
+    },
+    {
+      "title": "Find Addiction Rehabs \u00bb Staying Sober",
+      "feed_url": "https://findaddictionrehabs.com/category/staying-sober/feed/",
+      "website_url": "https://findaddictionrehabs.com/category/staying-sober/",
+      "description": "Find Addiction Rehabs began with a vision to provide a better quality resource for those seeking addiction treatment, their families, and their loved ones. We help people struggling with addiction and mental health. Our goal is to help find the best treatment facilities nationwide for every person seeking recovery!",
+      "followers": {
+        "facebook": 195,
+        "twitter": 17,
+        "instagram": 454
+      },
+      "image_url": "https://i1.feedspot.com/5568052.jpg?t=1684222477"
+    },
+    {
+      "title": "Sober Living America Blog",
+      "feed_url": "https://soberlivingamerica.org/feed/",
+      "website_url": "https://soberlivingamerica.org/blog/",
+      "description": "Sober Living America (SLA) is a non-profit organization that provides support and resources for individuals recovering from substance abuse and addiction. The organization aims to assist individuals in their transition from addiction treatment programs to a healthier and more fulfilling life in recovery. Read the blog to stay up to date about drug and alcohol addiction treatment.",
+      "followers": {
+        "facebook": 6000,
+        "instagram": 819
+      },
+      "image_url": "https://i1.feedspot.com/5568065.jpg?t=1684222562"
+    },
+    {
+      "title": "Turning Point Recovery Network Blog",
+      "feed_url": "https://turningpointrecoverynetwork.com/feed/",
+      "website_url": "https://turningpointrecoverynetwork.com/",
+      "description": "We emphasize a 12-step program of recovery, a balanced lifestyle, and accountability. This framework provides the optimal opportunity for our residents to begin a new life of fulfillment and purpose. Read our sober living blog to learn more about sober living in Dallas and Plano, addiction recovery tips, events, and more.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 278
+      },
+      "image_url": "https://i1.feedspot.com/5568066.jpg?t=1684222578"
+    },
+    {
+      "title": "Sober Not Subtle",
+      "feed_url": "https://sobernotsubtle.com/feed/",
+      "website_url": "https://sobernotsubtle.com/",
+      "description": "Sober Not Subtle is a community committed to breaking the stigma around addiction, recovery, and mental health. Through personal stories, self-care tips, podcast recommendations, insights into the peer movement, and an online merch shop that supports charity, we aim to spark conversation, inspire hope, and keep it real about the challenges and triumphs of recovery. We recover loud, proud, and never subtle!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7843375.jpg?t=1736169716"
+    },
+    {
+      "title": "Tired of Thinking About Drinking Blog",
+      "feed_url": "https://www.tiredofthinkingaboutdrinking.com/blog/feed/",
+      "website_url": "https://www.tiredofthinkingaboutdrinking.com/blog/",
+      "description": "Female, 40s. Currently living in Europe. The day I started this blog, my day 9, I wrote: 'I want to put this online, to hold myself accountable. I want to document the noise in my head. I'm tired of thinking about drinking.' I started this blog to document my own sober journey. I was desperate for information and for support.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4833152.jpg?t=1611041969"
+    },
+    {
+      "title": "The Sober School Blog",
+      "feed_url": "https://thesoberschool.com/feed/",
+      "website_url": "https://thesoberschool.com/kates-blog/",
+      "description": "I'm Kate, the founder of The Sober School. This is my blog about getting sober and the wonders of alcohol free living. The Sober School helps women who want to quit drinking or take a break from booze.",
+      "followers": {
+        "facebook": 32100,
+        "twitter": 2500,
+        "instagram": 30000
+      },
+      "image_url": "https://i1.feedspot.com/4829049.jpg?t=1673942356"
+    },
+    {
+      "title": "Real Recovery",
+      "feed_url": "https://realrecoveryfl.com/feed/",
+      "website_url": "https://realrecoveryfl.com/sobriety-blog/category/sober-living/",
+      "description": "Articles on 12 Steps programs, Addiction Recovery, Addiction Warning Signs, Alcohol Addiction, Alcoholism Treatment, Cocaine Abuse, Cocaine Addiction, Crystal Meth Addiction, Drug Addiction, Drug Treatment, Mental Health, and Sober Living. Real Recovery is Florida's top-rated 12-step-based sober living for men community, dedicated to long-term sobriety success.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 39,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5287471.jpg?t=1628158990"
+    },
+    {
+      "title": "Jody Lamb Blog",
+      "feed_url": "https://www.jodylamb.com/feed/",
+      "website_url": "https://www.jodylamb.com/blog/",
+      "description": "Adult child of an alcoholic on a healing journey. Author. Volunteer. Story lover. Believer in the power of hope.",
+      "followers": {
+        "facebook": 690,
+        "twitter": 1100,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4831970.jpg?t=1611041708"
+    },
+    {
+      "title": "October Road Blog",
+      "feed_url": "https://www.octoberroadinc.net/feed/",
+      "website_url": "https://www.octoberroadinc.net/blog/",
+      "description": "At our Asheville sober living & recovery residences, sobriety is never boring. Engage in positive and fun activities together on a daily basis. Check out the Real Recovery blog. Stay up to date on what's happening in addiction treatment and learn about our upcoming events.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/4833778.jpg?t=1611041742"
+    },
+    {
+      "title": "The Sober Curator",
+      "feed_url": "https://thesobercurator.com/feed/",
+      "website_url": "https://thesobercurator.com/",
+      "description": "The Sober Curator is an online resource guide for those seeking content related to alcohol-free & drug-free lifestyles. We'll show you how to get plugged in with the latest swag, podcasts, books, movies, fashion, music, and events, proving that sobriety and life without alcohol are never boring.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1000,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7933777/page/5240690/logo_1690862337.png"
+    },
+    {
+      "title": "Drunky Drunk Girl",
+      "feed_url": "https://drunkydrunkgirl.com/feed/",
+      "website_url": "https://drunkydrunkgirl.com/",
+      "description": "I'm a woman who loves (or, loved) wine and writes about getting sober. Follow this blog to get articles on getting sober.",
+      "followers": {
+        "twitter": 174
+      },
+      "image_url": "https://i1.feedspot.com/4831812.jpg?t=1611042117"
+    },
+    {
+      "title": "Ditched the Drink Blog",
+      "feed_url": "https://www.ditchedthedrink.com/blog.rss",
+      "website_url": "https://www.ditchedthedrink.com/blog",
+      "description": "I was a party girl through high school and college. Enough was never enough, when it came to drinking. As a new mom, I fit right into our Mommy Juice/Wine Culture, with Coffee until Wine and Ros\u00e9 all Day. Drinking took the edge off my new mom anxiety. We live in a society that tells us drinking wine helps us be better Moms.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 12700,
+        "instagram": 14100
+      },
+      "image_url": "https://i1.feedspot.com/5150203.jpg?t=1611044454"
+    },
+    {
+      "title": "Jumping Thru Darkness For Sobriety Blog",
+      "feed_url": "https://jtdbooks.com/feed/",
+      "website_url": "https://jtdbooks.com/blog/",
+      "description": "JTD books is a concept that you must fight for in life. Jumping thru darkness is a concept of poems, short stories, and spoken words all written to help anyone stay sober and clean.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5399382.jpg?t=1652177029"
+    },
+    {
+      "title": "Sober Girl Society Blog",
+      "feed_url": "https://sobergirlsociety.com/blogs/news.atom",
+      "website_url": "https://sobergirlsociety.com/blogs/news",
+      "description": "Sober Girl Society was founded by Millie Gooch in September 2018 with one simple purpose - to show the world that you can still live a fun and fulfilled life after you break up with booze. Sober Girl Society is now one of the largest communities for sober women around the planet providing tips, resources, and events for anyone who wants to bin the gin for good.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5433872.jpg?t=1675253080"
+    },
+    {
+      "title": "New Method Wellness",
+      "feed_url": "https://www.newmethodwellness.com/feed/",
+      "website_url": "https://www.newmethodwellness.com/sober-living-blog/",
+      "description": "New Method Wellness' Living Sober Blog provides encouragement and understanding for anyone who has a substance abuse addiction. Follow this blog to get education on substance abuse and living sober.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 1000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4829038.jpg?t=1611041232"
+    },
+    {
+      "title": "Trinity Sober Homes Blog",
+      "feed_url": "https://www.trinitysoberhomes.org/feed/",
+      "website_url": "https://www.trinitysoberhomes.org/blog/",
+      "description": "Read recent news and activities from Trinity Sober Homes including New Homes, Featured Articles, Podcasts, and more! Trinity Sober Homes is a catholic sober home that provides a unique aftercare environment to advice and encourage residents all life long",
+      "followers": {
+        "facebook": 78,
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/7287489.jpg?t=1711973743"
+    },
+    {
+      "title": "Shimmer and Shame",
+      "feed_url": "https://shimmerandshame.com/feed/",
+      "website_url": "https://shimmerandshame.com/",
+      "description": "Shimmer & Shame is a blog dedicated to helping people live their most authentic lives. I inspire and support people on transformational journeys by sharing my own story from a brutally honest and funny lens. I strive to help people become the best versions of themselves.",
+      "followers": {
+        "twitter": 1,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/5639847.jpg?t=1690865122"
+    },
+    {
+      "title": "Tribe Sober",
+      "feed_url": "https://www.tribesober.com/category/guest-blogs/feed/",
+      "website_url": "https://www.tribesober.com/2020/02/16/inspirational-story/",
+      "description": "Since 2015 we have built a community of people who are changing their relationship with alcohol. We provide workshops, coaching, and challenges - but most of all we offer the community.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 1600,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5568062.jpg?t=1684222542"
+    },
+    {
+      "title": "Sober Living App Blog",
+      "feed_url": "https://soberlivingapp.com/sober-living-app-blog?format=rss",
+      "website_url": "https://soberlivingapp.com/blog",
+      "description": "At BehaveHealth we're spending our days tackling some of society's most pressing issues, addiction, and mental health, and building the best operating platform for behavioral health treatment centers. The Sober Living App offers all the tools you need to manage your sober living home, recovery residence, halfway house, or transitional housing\u00a0operations.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5568054.jpg?t=1684223843"
+    },
+    {
+      "title": "Choose Life Sober Adventures Blog",
+      "feed_url": "https://www.chooselifeadventures.com/feed/",
+      "website_url": "https://www.chooselifeadventures.com/blogs/",
+      "description": "Choose Life Sober Adventures believes that travel and community are vital to leading a healthy and positive life. Through community-focused adventures, our small groups of like-minded sober travelers can discover the world, discover others and discover themselves. Cole Bressler, Founder of Choose Life, posts about his adventures, tips, and advice on how to use travel to stay sober.",
+      "followers": {
+        "facebook": 238,
+        "instagram": 913
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/7806798/page/5568053/logo_1686076650.png"
+    },
+    {
+      "title": "Love Sober Blog",
+      "feed_url": "https://www.lovesober.com/blog.rss",
+      "website_url": "https://www.lovesober.com/blog",
+      "description": "As a coach, a woman, a mother of teenagers, a wife, and a menopause I know about transitions, and this midlife one is a biggie for women. But with the right tools and support, we can land in our power and claim our well-being and empowerment through information, boundaries, connection, and expression.",
+      "followers": {
+        "facebook": 78600,
+        "twitter": 12700,
+        "instagram": 111400
+      },
+      "image_url": "https://i1.feedspot.com/5568085.jpg?t=1684224371"
+    },
+    {
+      "title": "Love Life Sober Blog",
+      "feed_url": "https://www.lovelifesober.co.uk/blog.rss",
+      "website_url": "https://www.lovelifesober.co.uk/blog/",
+      "description": "I'm Christy Osborne. After years of sobriety and two-life coaching certifications, I help women take a supported break from alcohol with my signature 30-day course, as well as bespoke 1:1 and group coaching. The methodology I practice has helped hundreds of thousands of people across the globe change their relationship with alcohol.",
+      "followers": {
+        "instagram": 25900
+      },
+      "image_url": "https://i1.feedspot.com/5568171.jpg?t=1684225647"
+    },
+    {
+      "title": "Sun and Moon Sober Living Blog",
+      "feed_url": "https://sunandmoonsoberliving.com/feed/",
+      "website_url": "https://sunandmoonsoberliving.com/blog/",
+      "description": "I'm Mary Tilson, a certified Addiction Recovery Coach, Yoga & Meditation Teacher, and International Retreat Leader. Sun & Moon Sober Living is a space I created to explore the well-proven pathways of recovery, drawing on the ancient wisdom of yoga philosophy, mindfulness, the science of behavior change, neuroscience, trauma theory, and the power of community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5568059.jpg?t=1684231418"
+    },
+    {
+      "title": "Fit Recovery Blog",
+      "feed_url": "https://fitrecovery.com/feed/",
+      "website_url": "https://fitrecovery.com/blog/",
+      "description": "Chris Scott shares informative posts with tips, tricks and things learned in his own alcoholism recovery journey. His mission is to help people dominate alcohol addiction using nutrition, fitness, and lifestyle strategies. Chris Scott founded Fit Recovery to help people from around the world transcend alcohol and optimize their health. He has been addiction-free since 2014.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5302635.jpg?t=1626413853"
+    },
+    {
+      "title": "Sober Senorita Blog",
+      "feed_url": "https://sobersenorita.com/blog?format=RSS",
+      "website_url": "https://sobersenorita.com/blog/",
+      "description": "Hi, I'm Kelly Fitzgerald Junco. I am a Certified Coach, writer, and creator. My mission is to encourage everyone to live their truth, to break the stigma of addiction, to let others know help is available for substance use disorders, and that you do not have to suffer in silence.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 4100,
+        "instagram": 62
+      },
+      "image_url": "https://i1.feedspot.com/4832975.jpg?t=1673942097"
+    },
+    {
+      "title": "New Jersey Sober Living Homes Blog",
+      "feed_url": "https://www.njsoberlivinghome.com/feed/",
+      "website_url": "https://www.njsoberlivinghome.com/sober-living-blog/",
+      "description": "Our mission is to show those suffering from addiction that living a sober life can be rewarding and happy. We'll demonstrate what that life looks like, 24 hours at a time. Because we've been where you are now. We've lived that life of pain, detox, and weeks and weeks and weeks of treatment. But best of all, we know there's a light at the end of the tunnel. That's why we've created a structured sober living environment that is built on love, respect, and dignity.",
+      "followers": {
+        "facebook": 93
+      },
+      "image_url": "https://i1.feedspot.com/5287472.jpg?t=1684220530"
+    },
+    {
+      "title": "Real Deal Sober Living Blog",
+      "feed_url": "https://rdsoberliving.com/blog/feed",
+      "website_url": "https://rdsoberliving.com/blog",
+      "description": "Real Deal Sober Living is dedicated to helping drug addicts and alcoholics find a solution to sobriety.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 263
+      },
+      "image_url": "https://i1.feedspot.com/5119075.jpg?t=1611045191"
+    },
+    {
+      "title": "UnPickled",
+      "feed_url": "https://unpickledblog.com/feed/",
+      "website_url": "https://unpickledblog.com/",
+      "description": "My name is Jean, and I am UnPickled. I am learning to walk without the crutch of alcohol. I began writing this blog on my first day of sobriety. I drank quietly in private and have managed to quit just as privately. I didn't stay quiet about it, though. My story is all here. The purpose of this blog is to help make me accountable and, as it turns out, to encourage others along the way.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4832868.jpg?t=1661324501"
+    },
+    {
+      "title": "Girl & Tonic",
+      "feed_url": "https://girlandtonic.co.uk/feed/",
+      "website_url": "https://girlandtonic.co.uk/blog/",
+      "description": "This is my space to write and is my raw, honest journey towards loving myself more, exploring the world stone-cold sober and improving my wellbeing.",
+      "followers": {
+        "twitter": 5300,
+        "instagram": 20800
+      },
+      "image_url": "https://i1.feedspot.com/4832787.jpg?t=1611041699"
+    },
+    {
+      "title": "Stairway To Freedom Blog",
+      "feed_url": "https://stairwaysoberliving.com/feed",
+      "website_url": "https://stairwaysoberliving.com/blog",
+      "description": "Sober living in Chicago starts with Stairway To Freedom, a network of addiction recovery homes offering structure & support for a fresh start. Visit the Stairway to Freedom blog for real-world insights into the addiction recovery process and practical advice for living sober in Chicago.",
+      "followers": {
+        "facebook": 133,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/5242539.jpg?t=1612533709"
+    },
+    {
+      "title": "Ainsobriety",
+      "feed_url": "https://ainsobriety.wordpress.com/feed/",
+      "website_url": "https://ainsobriety.wordpress.com/",
+      "description": "I'm a 42-year-old mom of 2 who has finally taken action to make my life better. I put down the wine glass on December 1, 2013. I have a nice therapist, a supportive family, and have found yoga as the path for me.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/4834084.jpg?t=1611041923"
+    },
+    {
+      "title": "Veronica Valli Blog",
+      "feed_url": "https://www.veronicavalli.com/blog?format=rss",
+      "website_url": "https://www.veronicavalli.com/blog/",
+      "description": "I'm a coach for people who feel like alcohol has hijacked their lives. Although they can't imagine life without it, they wake up feeling ashamed, guilty and frightened whenever they drink or fail to control their drinking. I help them eliminate alcohol, so they are free to socialize, have fun and restore their health without ever feeling like they are 'missing out.'",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4832176.jpg?t=1611041732"
+    },
+    {
+      "title": "Mrs D Is Going Without",
+      "feed_url": "http://livingwithoutalcohol.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://livingwithoutalcohol.blogspot.com/",
+      "description": "I am a 47-year-old wife, mother, author, blogger & recovery advocate. Sober since September 2011. I used to be a boozy housewife. Now I'm not. This is my blog.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4789778.jpg?t=1660279038"
+    },
+    {
+      "title": "Last Call Blog",
+      "feed_url": "https://lastcallblog.me/feed/",
+      "website_url": "https://lastcallblog.me/blog/",
+      "description": "My blog is to bring awareness to others about alcoholism, addiction and recovery. I've been sober since May 11, 2004 and its been an amazing journey - one that I never could have even dreamed of.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4832280.jpg?t=1673942534"
+    },
+    {
+      "title": "Rebellion Dogs Blog",
+      "feed_url": "https://rebelliondogspublishing.com/blogs/rebellion-dogs-blog.rss",
+      "website_url": "https://rebelliondogspublishing.com/blog",
+      "description": "Addiction and recovery site devoted to secular 12 Step (Twelve Step) life, less dogma - more bite",
+      "followers": {
+        "facebook": 891,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4843406.jpg?t=1611042129"
+    },
+    {
+      "title": "Sober Words",
+      "feed_url": "https://retrometrogirl.wordpress.com/feed/",
+      "website_url": "https://retrometrogirl.wordpress.com/",
+      "description": "My name is Mary Ellin and I write about addiction and recovery. Every once in a while I create a new website with a a new twist. This blog, Sober Words, is dedicated to the many sayings we learn in sobriety. I hope these short writings will amuse or be helpful to you, whether or not you consider yourself to be in recovery.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055105.jpg?t=1611042984"
+    },
+    {
+      "title": "The Miracle of the Mundane",
+      "feed_url": "https://www.markgoodson.com/feed/",
+      "website_url": "https://www.markgoodson.com/",
+      "description": "Welcome to my web write-space. I'm Mark David Goodson. My poetry, essays, and creative non-fiction exalt every day and qualify the quotidian. Writing has made being sober more than just being sober. I invite you to follow this blog and connect with me on social media - to join me in discovering what makes the ordinary so extraordinary, and the mundane miraculous.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4831950.jpg?t=1660280595"
+    },
+    {
+      "title": "The Unruffled Blog",
+      "feed_url": "https://www.theunruffled.com/new-blog?format=RSS",
+      "website_url": "https://www.theunruffled.com/new-blog/",
+      "description": "I'm Sondra Primeaux and I'm a mom, a wife, a sister, a daughter, a maker, and an idealist. The Unruffled explores the ways we use creativity to help fuel recovery. We offer stories and photos of artists, makers, and writers in recovery and creative ideas on the blog.",
+      "followers": {
+        "facebook": 786,
+        "twitter": 215,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4833140.jpg?t=1611042153"
+    },
+    {
+      "title": "Women For Sobriety",
+      "feed_url": "https://womenforsobriety.org/feed/",
+      "website_url": "https://womenforsobriety.org/blog/",
+      "description": "Women for Sobriety, Inc. is a non-profit organization dedicated to helping women overcome alcoholism and other addictions. It is, in fact, the first national self-help recovery program for women alcoholics. The WFS 'New Life' Program helps women achieve sobriety and sustain ongoing recovery.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 964,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4833242.jpg?t=1611045755"
+    },
+    {
+      "title": "TheCJToday",
+      "feed_url": "https://thecjtodays.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thecjtodays.blogspot.com/",
+      "description": "I am a 39 year old stay at home Mom of one gorgeous son. I am trying to reclaim my life, a life that has been derailed by my past, and by my unhealthy coping mechanisms. I am overweight, I eat too much, I drink too much, I am an occasional self harmer, and this is me trying to quit the unhealthy and go from existing to living.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4980848.jpg?t=1611042837"
+    },
+    {
+      "title": "Recovery Rain",
+      "feed_url": "https://recoveryrain.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://recoveryrain.blogspot.com/",
+      "description": "I have been rescued from alcoholism since January 7th, 2006. The miracle of God's grace and restoration continues to prove itself. Follow my alcohol recovery journey in the blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4910280.jpg?t=1653557960"
+    },
+    {
+      "title": "Quit Wining",
+      "feed_url": "http://quitwining.com/feed/",
+      "website_url": "http://quitwining.com/",
+      "description": "My name is Laura Ward. I used to write under the pen name Emily Crawford. I am an alcoholic in recovery, sharing my story with those who may be interested.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/4834062.jpg?t=1611042199"
+    },
+    {
+      "title": "Soberistas",
+      "feed_url": "https://soberistas.wordpress.com/feed/",
+      "website_url": "https://soberistas.wordpress.com/",
+      "description": "My journey, from wine lover to sober and happy -There are thousands of people over at Soberistas.com supporting one another in achieving a happy and healthy alcohol-free life.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4832012.jpg?t=1611043119"
+    },
+    {
+      "title": "The Sober Cycling Chef",
+      "feed_url": "https://sobercyclingchef.com/feed/",
+      "website_url": "https://sobercyclingchef.com/",
+      "description": "Drinking was a problem from the beginning for me. I'm sober now and I'm excited about my alcohol free adventure. This blog is about my life, my cycling, my passion for food, being a Chef and my holistic recovery life. This is not about my past. I will share about events, day to day things in a Chef's life and resources I use to stay on my path of recovery.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4834021.jpg?t=1611044209"
+    },
+    {
+      "title": "Sober At Sixty",
+      "feed_url": "https://soberatsixty.wordpress.com/feed/",
+      "website_url": "https://soberatsixty.wordpress.com/",
+      "description": "I'm 62 years old and finally decided to get sober. I'm a wife, mother, grandmother, dog lover, etc\u2026 I went to high school in the late 60's and college in the 70's so I used to know a lot about sex, alcohol and marijuana. I was really mousey and afraid so I didn't smoke much weed. I quit smoking cigarettes at 30. Quit drinking for good on July 28, 2013.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4833935.jpg?t=1611044130"
+    },
+    {
+      "title": "Feeling My Way Back In To Life",
+      "feed_url": "https://feelingmywaybackintolife.wordpress.com/feed/",
+      "website_url": "https://feelingmywaybackintolife.wordpress.com/",
+      "description": "Living without alcohol, living again.I stopped drinking alcohol on the 25 of August 2014 and I hope to never drink again. Nobody in my private life knew that my drinking was as bad as it was. Up to a year after quitting nobody in my private life knew had to quit and could not moderate.",
+      "followers": {
+        "facebook": 570700,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4834075.jpg?t=1611044065"
+    },
+    {
+      "title": "Busy Living Sober",
+      "feed_url": "https://www.busylivingsober.com/how-am-i-staying-sober?format=RSS",
+      "website_url": "https://www.busylivingsober.com/how-am-i-staying-sober/",
+      "description": "Busy Living Sober is an organization dedicated to educating youth, teens, adults and families on the topics of addiction, recovery and clean, healthy living.",
+      "followers": {
+        "facebook": 859,
+        "twitter": 437,
+        "instagram": 76300
+      },
+      "image_url": "https://i1.feedspot.com/4833303.jpg?t=1611044420"
+    },
+    {
+      "title": "One Wineless Woman",
+      "feed_url": "https://onewinelesswoman.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://onewinelesswoman.blogspot.com/",
+      "description": "keep up with the articles from One Wineless Woman.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5166497.jpg?t=1684317372"
+    },
+    {
+      "title": "Miracles Are Brewing Blog",
+      "feed_url": "http://www.miraclesarebrewing.com/blog/feed/",
+      "website_url": "http://www.miraclesarebrewing.com/blog/",
+      "description": "Sobriety Coaching & Lifestyle Inspiration.Carly Benson is a motivational writer, speaker, RYT & Certified Life Coach offering Sobriety Coaching to help her clients create & sustain lasting change.",
+      "followers": {
+        "facebook": 36000,
+        "twitter": 5,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4832111.jpg?t=1611045204"
+    },
+    {
+      "title": "Laura McKowen Blog",
+      "feed_url": "https://www.lauramckowen.com/blog?format=RSS",
+      "website_url": "https://www.lauramckowen.com/blog",
+      "description": "Laura McKowen writes about her struggle with addiction, her sobriety journey, recovery and love of all kinds.",
+      "followers": {
+        "facebook": 23200,
+        "instagram": 97200
+      },
+      "image_url": "https://i1.feedspot.com/4832141.jpg?t=1611041649"
+    },
+    {
+      "title": "Sober Julie \u00bb\u00a0Sober doesn't Suck!",
+      "feed_url": "https://soberjulie.com/category/soberdoesntsuck/feed/",
+      "website_url": "https://soberjulie.com/category/soberdoesntsuck/",
+      "description": "Julie Elsdon-Height is a Mum to 2 wonderful little ladies, wife to an amazing man, blogger, speaker, Christ-follower who faced her Alcoholism and got fed up and decided to learn how to experience this journey of life fully.",
+      "followers": {
+        "facebook": 19300,
+        "twitter": 29400,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4832929.jpg?t=1684317533"
+    },
+    {
+      "title": "Untipsyteacher.com Now On WordPress",
+      "feed_url": "http://tipsynomore.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tipsynomore.blogspot.com/",
+      "description": "A retired teacher has quit drinking. I am a retired, public-school teacher. I am happily married. I can be very funny at times! This is my journey on how I stopped drinking! My e-mail is",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4834093.jpg?t=1611045378"
+    },
+    {
+      "title": "SoberPunks",
+      "feed_url": "https://soberpunks.co.uk/feed/",
+      "website_url": "https://soberpunks.co.uk/",
+      "description": "Soberpunks.co.uk is a sweary alcohol recovery blog that is written by mid-thirties ex-drinker Jon Turner. Soberpunks.co.uk was launched in September 2016, to mark his first year of sobriety. Since its launch, Jon's blog has received praise for its honesty, wanking jokes, and non-patronizing approach to offering advice and support.",
+      "followers": {
+        "facebook": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4905513.jpg?t=1613649692"
+    },
+    {
+      "title": "Drunkmummysobermummy Blog",
+      "feed_url": "https://www.drunkmummysobermummy.com/blog-feed.xml",
+      "website_url": "https://www.drunkmummysobermummy.com/drunkmummysobermummy",
+      "description": "Hello - I'm Vic, I live on The Sunshine Coast in Australia with three uncontrollable brats, a scruffy dog, and a very patient husband. I'm from the UK originally and have been writing about motherhood and my zig zaggy journey to sobriety for two years. I started writing on the exact day I quit drinking alcohol, it became my outlet and my distraction from peering in the fridge at cold bottles of wine.",
+      "followers": {
+        "instagram": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5494699.jpg?t=1673941694"
+    },
+    {
+      "title": "Living Sober",
+      "feed_url": "https://livingsober.org.nz/feed",
+      "website_url": "https://livingsober.org.nz/articles",
+      "description": "A community website designed to support people who wish to free themselves from the clutches of alcohol. Living Sober is not for profit, nor is it concerned with alcohol reform or public policy. It is about self-education and empowerment, based firmly around the concept of community. Follow this blog to get education on living sober.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4829033.jpg?t=1611041227"
+    },
+    {
+      "title": "Addiction Recovery and Sober Living Blog",
+      "feed_url": "https://designforrecovery.com/blog/rss.xml",
+      "website_url": "https://designforrecovery.com/blog",
+      "description": "We offer men a safe place to live at one of our sober living housing facilities, as well as job and life skills to help graduates transition back into society. Our blog has all the resources you need. You can find sober living ideas, news about events happening",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 435,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5311828.jpg?t=1628778219"
+    },
+    {
+      "title": "Bridges Sober Living Apartments Blog",
+      "feed_url": "https://soberapartmentsla.com/feed/",
+      "website_url": "https://soberapartmentsla.com/blog",
+      "description": "At Bridges Sober Living, we provide both women and men with a safe and supportive residence in our sober living apartments. Moreover, we help them rebuild their lives by working with them as they develop new life skills and seek employment. Learn more about sober living apartments in Los Angeles, CA through our news, events, and other resources on our blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5568072.jpg?t=1684222934"
+    },
+    {
+      "title": "Sober Sistas",
+      "feed_url": "https://sobersistas.co.uk/feed/",
+      "website_url": "https://soberlifesd.com/blog/",
+      "description": "Hello there, my name is Jules, and welcome to Sobersistas. I founded Sobersistas because I wanted to talk to other women about my feelings and experiences of being sober. I want you to discover how easy it can be to give up drinking for good and change your life for the better.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5568060.jpg?t=1684224043"
+    },
+    {
+      "title": "Help In Recovery Blog",
+      "feed_url": "https://www.helpinrecovery.com/feed/",
+      "website_url": "https://sobersammy.com/blog",
+      "description": "Help In Recovery is a growing community and a beacon of hope for anyone grappling with addiction and mental health concerns. Here, the author shares not just his own experiences but also the collective wisdom of a community in recovery. Expect heartfelt stories, actionable advice, and a shoulder to lean on.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5755468.jpg?t=1705403158"
+    },
+    {
+      "title": "Off Dry",
+      "feed_url": "https://offdry.com/feed/",
+      "website_url": "https://sobersammy.com/blog",
+      "description": "Hi! I'm Kristi Coulter, a writer living in Seattle. Off-Dry is my blog about getting and staying sober in a world that's often three sheets to the wind. It's also about music and running and my neurosis du jour, but it was born when I decided to clean up my act in June 2013, and sobriety is still at its heart.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 7100,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4835174.jpg?t=1673942670"
+    },
+    {
+      "title": "Sober Sammy",
+      "feed_url": "https://sobersammy.com/f.rss",
+      "website_url": "https://sobersammy.com/blog",
+      "description": "My personal blog aims to provide some insight into what goes on inside an addict's mind. It's pure insanity or it's pure beauty. It's all connected. This blog came from my experiences, and I intend to keep it as authentic as possible. To stay sober, I have to stay honest, and I REALLY want to stay sober.",
+      "followers": {
+        "facebook": 530
+      },
+      "image_url": "https://i1.feedspot.com/5179061.jpg"
+    },
+    {
+      "title": "Tharros House Blog",
+      "feed_url": "https://tharroshouse.com/blog-old/feed/",
+      "website_url": "https://tharroshouse.com/blog-old/",
+      "description": "Mens Sober living. So you've decided to get sober and now you're hearing the term ' Sober Living '. Maybe you're in a treatment center or detox facility. Maybe a friend or family member is suggesting sober housing as an alternative to living at home.",
+      "followers": {
+        "facebook": 636
+      },
+      "image_url": "https://i1.feedspot.com/4833709.jpg?t=1611041718"
+    }
+  ]
+}

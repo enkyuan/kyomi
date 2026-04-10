@@ -1,0 +1,366 @@
+{
+  "category": "Seattle Times",
+  "source_url": "https://rss.feedspot.com/seattle_times_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Seattle Times",
+      "feed_url": "https://www.seattletimes.com/feed/",
+      "website_url": "https://www.seattletimes.com/",
+      "description": "Local news, sports, business, politics, entertainment, travel, restaurants, and opinion for Seattle and the Pacific Northwest.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4747005.jpg?t=1614604309"
+    },
+    {
+      "title": "The Seattle Times \u00bb Nation",
+      "feed_url": "https://www.seattletimes.com/nation-world/nation/feed/",
+      "website_url": "https://www.seattletimes.com/nation/",
+      "description": "Read all the latest news about the nation from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250208.jpg?t=1614672830"
+    },
+    {
+      "title": "The Seattle Times \u00bb World",
+      "feed_url": "https://www.seattletimes.com/nation-world/world/feed/",
+      "website_url": "https://www.seattletimes.com/world/",
+      "description": "Latest world news, international news, world video, international video on The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250232.jpg?t=1614677860"
+    },
+    {
+      "title": "The Seattle Times \u00bb Local Politics",
+      "feed_url": "https://www.seattletimes.com/seattle-news/politics/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/politics/",
+      "description": "The Seattle Times covers politics and government in Seattle, the Eastside, Washington state, and the Northwest.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5249985.jpg?t=1614668068"
+    },
+    {
+      "title": "The Seattle Times \u00bb Local News",
+      "feed_url": "https://www.seattletimes.com/seattle-news/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/",
+      "description": "The Seattle Times Local section covers Seattle, the Eastside, Snohomish County, the Puget Sound region, and the Pacific Northwest. Coverage includes breaking news, crime, transportation, politics, education, health and medical, the environment, science, and legalized marijuana.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879162.jpg?t=1614604382"
+    },
+    {
+      "title": "The Seattle Times \u00bb Business",
+      "feed_url": "https://www.seattletimes.com/business/feed/",
+      "website_url": "https://www.seattletimes.com/business/",
+      "description": "The Seattle Times business section covers Seattle, and the Eastside including Bellevue, Snohomish County, the Puget Sound region, and Pacific Northwest. The Seattle Times enlightens, informs, and engages with storytelling that is as dynamic and vibrant as our region. We are always steadfast in our commitment to providing principled, quality, public-service journalism.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879165.jpg?t=1614678015"
+    },
+    {
+      "title": "The Seattle Times \u00bb Law & Justice",
+      "feed_url": "https://www.seattletimes.com/seattle-news/law-justice/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/law-justice/",
+      "description": "Read all the latest Law & Justice news from Seattle, Bellevue, and the Eastside, the Puget Sound area, the Pacific Northwest, and nationally.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5249934.jpg?t=1614604563"
+    },
+    {
+      "title": "The Seattle Times \u00bb Data",
+      "feed_url": "https://www.seattletimes.com/seattle-news/data/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/data/",
+      "description": "Find out what the numbers tell us about Seattle and the Pacific Northwest from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5249945.jpg?t=1614604943"
+    },
+    {
+      "title": "The Seattle Times \u00bb Education",
+      "feed_url": "https://www.seattletimes.com/seattle-news/education/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/education/",
+      "description": "Read all the latest education news from the Seattle area, the Pacific Northwest, and across the nation from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5249949.jpg?t=1614605073"
+    },
+    {
+      "title": "The Seattle Times \u00bb Education Lab",
+      "feed_url": "https://www.seattletimes.com/education-lab/feed/",
+      "website_url": "https://www.seattletimes.com/education-lab/",
+      "description": "The Seattle Times covers the Local, sports, business, politics, entertainment, travel, restaurants, and opinion news from Seattle and the Pacific Northwest region. They have an education page called Education Lab, a project of the Seattle Times that spotlights promising approaches to persistent challenges in public education. Our team reports on issues like improving school discipline, parent education, math instruction, and more",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879193.jpg?t=1614605376"
+    },
+    {
+      "title": "The Seattle Times \u00bb Eastside",
+      "feed_url": "https://www.seattletimes.com/seattle-news/eastside/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/eastside/",
+      "description": "Read all the latest news from Bellevue, Redmond, Kirkland, Woodinville, Issaquah, Sammamish, Newcastle, Mercer Island, and other Eastside cities from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5249963.jpg?t=1614605645"
+    },
+    {
+      "title": "The Seattle Times \u00bb Health",
+      "feed_url": "https://www.seattletimes.com/seattle-news/health/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/health/",
+      "description": "Read stories on pandemics, health policy, medicine, brain and cancer research, diseases, health, immunization, medical safety, and health insurance in the Northwest and U.S from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5249978.jpg?t=1614606299"
+    },
+    {
+      "title": "The Seattle Times \u00bb Northwest",
+      "feed_url": "https://www.seattletimes.com/seattle-news/northwest/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/northwest/",
+      "description": "Read news from around the Pacific Northwest only on The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5225938.jpg?t=1614606615"
+    },
+    {
+      "title": "The Seattle Times \u00bb Marijuana",
+      "feed_url": "https://www.seattletimes.com/seattle-news/marijuana/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/marijuana/",
+      "description": "Read full coverage of marijuana as Washington and Colorado experiment with legal, recreational markets for the drug from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5249979.jpg?t=1614606504"
+    },
+    {
+      "title": "The Seattle Times \u00bb Obituaries",
+      "feed_url": "https://www.seattletimes.com/seattle-news/obituaries/feed/",
+      "website_url": "https://www.seattletimes.com/obituaries/",
+      "description": "Find the latest on the deaths of notable people. These news stories recount the lives that made them prominent locally, nationally, and worldwide from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5249983.jpg?t=1614606769"
+    },
+    {
+      "title": "The Seattle Times \u00bb Puget Sound",
+      "feed_url": "https://www.seattletimes.com/seattle-news/puget-sound/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/puget-sound/",
+      "description": "Read news from around the Puget Sound region from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250173.jpg?t=1614670674"
+    },
+    {
+      "title": "The Seattle Times \u00bb Transportation",
+      "feed_url": "https://www.seattletimes.com/seattle-news/transportation/feed/",
+      "website_url": "https://www.seattletimes.com/seattle-news/transportation/",
+      "description": "Read all the news about Seattle-area traffic, transit, and transportation issues, including the Bertha tunnel digger and Highway 99 viaduct replacement project, Washington state ferries, railroads, roads, and Interstate 5 and I-405.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250204.jpg?t=1614672565"
+    },
+    {
+      "title": "The Seattle Times \u00bb Nation & World",
+      "feed_url": "https://www.seattletimes.com/nation-world/feed/",
+      "website_url": "https://www.seattletimes.com/nation-world/",
+      "description": "The Seattle Times Nation & World section highlights national and international content of interest to Seattle, including breaking news; crime; the U.S. military, and the war on terror, including ISIS; oddities; consumer news; education; space exploration; and the economy.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879163.jpg?t=1614677969"
+    },
+    {
+      "title": "The Seattle Times \u00bb Agriculture",
+      "feed_url": "https://www.seattletimes.com/business/agriculture/feed/",
+      "website_url": "https://www.seattletimes.com/agriculture/",
+      "description": "Read the latest Agriculture news about Washington state's top crops, apples, and pears, wheat, milk and beef, hay, cherries, grapes, and hops from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250237.jpg?t=1614678365"
+    },
+    {
+      "title": "The Seattle Times \u00bb Amazon",
+      "feed_url": "https://www.seattletimes.com/business/amazon/feed/",
+      "website_url": "https://www.seattletimes.com/business/amazon/",
+      "description": "Find the latest news about Amazon, the nation's largest online retailer, from reporter Angel Gonzalez and The Seattle Times business staff.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250241.jpg?t=1614678862"
+    },
+    {
+      "title": "The Seattle Times \u00bb Boeing & Aerospace",
+      "feed_url": "https://www.seattletimes.com/business/boeing-aerospace/feed/",
+      "website_url": "https://www.seattletimes.com/business/boeing-aerospace/",
+      "description": "Read the latest news about Boeing and the aerospace industry from Dominic Gates and The Seattle Times business staff.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250254.jpg?t=1614679657"
+    },
+    {
+      "title": "The Seattle Times \u00bb Microsoft",
+      "feed_url": "https://www.seattletimes.com/business/microsoft/feed/",
+      "website_url": "https://www.seattletimes.com/business/microsoft/",
+      "description": "Read all the latest news about Microsoft from reporter Matt Day and The Seattle Times business staff.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250256.jpg?t=1614680322"
+    },
+    {
+      "title": "The Seattle Times \u00bb Technology",
+      "feed_url": "https://www.seattletimes.com/business/technology/feed/",
+      "website_url": "https://www.seattletimes.com/business/technology/",
+      "description": "Find the latest technology news from Seattle, the Northwest, and the U.S. by technology reporter Rachel Lerman, Microsoft reporter Matt Day, Amazon reporter Angel Gonzalez and the Seattle Times business staff.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250257.jpg?t=1614680594"
+    },
+    {
+      "title": "The Seattle Times \u00bb Real Estate",
+      "feed_url": "https://www.seattletimes.com/homes-real-estate/feed/",
+      "website_url": "https://www.seattletimes.com/business/real-estate/",
+      "description": "Read the latest news about residential and commercial real estate in the Seattle area and Pacific Northwest from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250260.jpg?t=1614680929"
+    },
+    {
+      "title": "The Seattle Times \u00bb Retail",
+      "feed_url": "https://www.seattletimes.com/business/retail/feed/",
+      "website_url": "https://www.seattletimes.com/business/retail/",
+      "description": "Read all the latest news about retailers, including\u00a0Starbucks, Nordstrom, and Costco from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/5250281.jpg?t=1614681587"
+    },
+    {
+      "title": "The Seattle Times \u00bb Sports",
+      "feed_url": "https://www.seattletimes.com/sports/feed/",
+      "website_url": "https://www.seattletimes.com/sports/",
+      "description": "The Seattle Times Sports section covers teams and athletes in the Seattle area and Pacific Northwest, including the Seahawks, Mariners, UW Huskies, WSU Cougars, Seattle Sounders FC, Seattle Storm, Seattle Reign, high-school teams, and coverage of plans for an NBA/NHL arena.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879169.jpg?t=1753339084"
+    },
+    {
+      "title": "The Seattle Times \u00bb Entertainment",
+      "feed_url": "https://www.seattletimes.com/entertainment/feed/",
+      "website_url": "https://www.seattletimes.com/entertainment/",
+      "description": "Follow movies, music, theater, books, dance, visual arts, and the people who make them in Seattle and the Pacific Northwest from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879170.jpg?t=1614681788"
+    },
+    {
+      "title": "The Seattle Times \u00bb Life",
+      "feed_url": "https://www.seattletimes.com/life/feed/",
+      "website_url": "https://www.seattletimes.com/life/",
+      "description": "Find stories on food and drink, Northwest lifestyle, travel, outdoors, gardening, wellness, pets, advice, and local character in Pacific Northwest Magazine from The Seattle Times.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879174.jpg?t=1614682015"
+    },
+    {
+      "title": "The Seattle Times \u00bb Opinion",
+      "feed_url": "https://www.seattletimes.com/opinion/feed/",
+      "website_url": "https://www.seattletimes.com/opinion/",
+      "description": "Read The Seattle Times Opinion section for staff editorials, columns, and reader commentary on issues important to the local community. As northwest's comprehensive news source, The Seattle Times provides clarity above the clutter, delivering news that matters where, when, and how readers want it.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879180.jpg?t=1614682522"
+    },
+    {
+      "title": "The Seattle Times \u00bb Photo & Video",
+      "feed_url": "https://www.seattletimes.com/photo-video/feed/",
+      "website_url": "https://www.seattletimes.com/photo-video/",
+      "description": "Immerse yourself in the Pacific Northwest with photos, videos, visual essays and photography lessons from The Seattle Times staff.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879184.jpg?t=1614682641"
+    }
+  ]
+}

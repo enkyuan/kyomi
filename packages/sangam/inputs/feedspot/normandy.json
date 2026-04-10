@@ -1,0 +1,29 @@
+{
+  "category": "Normandy",
+  "source_url": "https://rss.feedspot.com/normandy_rss_feeds",
+  "feeds": [
+    {
+      "title": "JoeBlogsF1",
+      "feed_url": "https://joesaward.wordpress.com/feed/",
+      "website_url": "https://joesaward.wordpress.com/",
+      "description": "The real stories from inside the F1 paddock",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 41500
+      },
+      "image_url": "https://i1.feedspot.com/4424217.jpg?t=1609306674"
+    },
+    {
+      "title": "MY FRENCH COUNTRY HOME",
+      "feed_url": "http://sharonsantoni.com/feed/",
+      "website_url": "https://sharonsantoni.com/",
+      "description": "My name is Sharon Santoni and this is the place where I get to give you a taste of authentic French living. Launched in 2010, My French Country Home is for all of you who love French home d\u00e9cor and long to know more about authentic French country living as well as buying French antiques; enjoying French food; talking about home and garden design and now and again just to chat about family life. Follow my site to get ideas on French decor and living.",
+      "followers": {
+        "facebook": 715400,
+        "twitter": 598,
+        "instagram": 192600
+      },
+      "image_url": "https://i1.feedspot.com/4082738.jpg?t=1606974116"
+    }
+  ]
+}

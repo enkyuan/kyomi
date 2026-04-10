@@ -1,0 +1,195 @@
+{
+  "category": "Stanford",
+  "source_url": "https://rss.feedspot.com/stanford_rss_feeds",
+  "feeds": [
+    {
+      "title": "Stanford Daily",
+      "feed_url": "https://stanforddaily.com/feed/",
+      "website_url": "https://stanforddaily.com/category/news/",
+      "description": "The Stanford Daily is the independent, student-run newspaper of Stanford University and one of the first college newspapers published on the Internet. The site is live and continuously updated throughout the year. It features content from the print edition, along with special Web-only content often including live blogs of sporting events and major campus events.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 19600,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/1245853.jpg?t=1663244470"
+    },
+    {
+      "title": "Stanford Medicine Children's Health",
+      "feed_url": "https://healthier.stanfordchildrens.org/en/feed/",
+      "website_url": "https://healthier.stanfordchildrens.org/",
+      "description": "Healthier, Happy Lives Blog by Lucile Packard Children's Hospital at Stanford presents information from CDC on safety and health measures. Read our stories and ideas for making yours a healthier, happy life, too. Stanford Medicine Children's Health is a health care system in the San Francisco Bay Area exclusively dedicated to pediatric and obstetric care.",
+      "followers": {
+        "facebook": 254300,
+        "twitter": 22900
+      },
+      "image_url": "https://i1.feedspot.com/5442308.jpg?t=1673940408"
+    },
+    {
+      "title": "Theory Dish Blog",
+      "feed_url": "https://theorydish.blog/feed/",
+      "website_url": "https://theorydish.blog/",
+      "description": "Theory Dish is offered by The Theory of Computing group at Stanford University and its extended community of theoreticians as a forum for exchanging information and ideas. We dedicate the blog to celebrating our warm and vibrant community here as well as the TOC community at large.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5442307.jpg?t=1663245695"
+    },
+    {
+      "title": "Stanford Blood Center Blog",
+      "feed_url": "https://stanfordbloodcenter.org/feed/",
+      "website_url": "https://stanfordbloodcenter.org/sbc-stories/sbc-blog/",
+      "description": "Our blog covers posts on Blood donation, Transplants, Community partners, Platelets, Research/Innovation Blood products, and more. It also features Donor stories and Patient stories. Stanford Blood Center was created with a vision of connecting our communities to provide hope for healing and continues to do so more steadfastly than ever.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 2500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5039292.jpg?t=1663245661"
+    },
+    {
+      "title": "Stanford PACS News",
+      "feed_url": "https://pacscenter.stanford.edu/feed/",
+      "website_url": "https://pacscenter.stanford.edu/news/",
+      "description": "Gather news and updates from the Stanford Center on Philanthropy and Civil Society (Stanford PACS). Our blog discerns socially and economically significant issues and shares knowledge to improve general understanding. Stanford PACS is a research center for students, scholars, and practitioners to explore and share ideas that create social change.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5442325.jpg?t=1663246435"
+    },
+    {
+      "title": "SSIR",
+      "feed_url": "https://ssir.org/site/rss_2.0",
+      "website_url": "https://ssir.org/",
+      "description": "Stanford Social Innovation Review (SSIR) is an award-winning magazine and website that covers cross-sector solutions to global problems. SSIR's mission is to advance, educate, and inspire the field of social innovation by seeking out, cultivating, and disseminating the best in research- and practice-based knowledge.",
+      "followers": {
+        "facebook": 81200,
+        "twitter": 135800
+      },
+      "image_url": "https://i1.feedspot.com/5004393.jpg?t=1663246505"
+    },
+    {
+      "title": "Stanford PD Community Blog",
+      "feed_url": "https://parkinsonsblog.stanford.edu/feed/",
+      "website_url": "https://parkinsonsblog.stanford.edu/",
+      "description": "Stanford Parkinson's Community Blog by Stanford School of Medicine. Read this blog for the latest news, research on Parkinson's, exercise, monthly webinars, and much more. A leader in the biomedical revolution, Stanford Medicine is a pioneer in advancing research, creative teaching protocols, and effective clinical therapies.",
+      "followers": {
+        "facebook": 57300,
+        "twitter": 40000
+      },
+      "image_url": "https://i1.feedspot.com/5281091.jpg?t=1621074723"
+    },
+    {
+      "title": "CCRMA News",
+      "feed_url": "https://ccrma.stanford.edu/recent-news/feed",
+      "website_url": "https://ccrma.stanford.edu/recent-news/",
+      "description": "Read and enjoy recent news articles from the Stanford Center for Computer Research in Music and Acoustics (CCRMA). CCRMA is a Multi-disciplinary facility where composers and researchers use computer-based technology as an artistic medium and as a research tool.",
+      "followers": {
+        "facebook": 4000
+      },
+      "image_url": "https://i1.feedspot.com/1893698.jpg?t=1663245016"
+    },
+    {
+      "title": "EJ @ Stanford",
+      "feed_url": "https://medium.com/feed/@ejwgstanford",
+      "website_url": "https://ejwgstanford.medium.com/",
+      "description": "Read writings from the Environmental Justice team @ Stanford on Medium. Our Environmental Justice (EJ) community shares our blog series to highlight our most pressing & timely EJ issues. The Environmental Justice Working Group (EJWG) at Stanford is an intergenerational collective working to embed environmental justice into our research, teaching, and community-engagement at Stanford.",
+      "followers": {
+        "facebook": 730,
+        "twitter": 566
+      },
+      "image_url": "https://i1.feedspot.com/5442309.jpg?t=1663245535"
+    },
+    {
+      "title": "The Stanford AI Lab Blog",
+      "feed_url": "https://ai.stanford.edu/blog/feed.xml",
+      "website_url": "https://ai.stanford.edu/blog/",
+      "description": "The Stanford AI Lab (SAIL) Blog is a place for SAIL students, faculty, and researchers to share our work with the general public. We write about our latest research, discussions, and talks held at SAIL, and other interesting updates from our labs. The Stanford Artificial Intelligence Laboratory (SAIL) is a center of excellence for Artificial Intelligence research, teaching, theory, and practice.",
+      "followers": {
+        "twitter": 145200
+      },
+      "image_url": "https://i1.feedspot.com/5442306.jpg?t=1663245741"
+    },
+    {
+      "title": "Stanford Medicine Scope Blog",
+      "feed_url": "https://scopeblog.stanford.edu/feed/",
+      "website_url": "https://scopeblog.stanford.edu/latest/",
+      "description": "Scope blog was founded in 2009 and is produced by the Office of Communications at Stanford Medicine. If you're curious about the latest advances in medicine and health and enjoy compelling, fresh, and easily digestible news and features, then we've got just the thing. Browse from popular, handpicked articles on a range of topics.",
+      "followers": {
+        "facebook": 128100,
+        "twitter": 354900,
+        "instagram": 208100
+      },
+      "image_url": "https://i1.feedspot.com/3391121.jpg?t=1663245179"
+    },
+    {
+      "title": "Stanford Biotech Insights Blog",
+      "feed_url": "https://www.stanfordbiotechgroup.com/insights?format=rss",
+      "website_url": "https://www.stanfordbiotechgroup.com/insights",
+      "description": "Read the latest insights into pharma & biotech brought to you by the Stanford Biotech Group. Our writers talk about grants, organizations, and seminars here at Stanford. Stanford Biotechnology Group helps Stanford University students explore career opportunities, build industry connections, and promote diversity and inclusion in biotech.",
+      "followers": {
+        "twitter": 797
+      },
+      "image_url": "https://i1.feedspot.com/5380810.jpg?t=1647319094"
+    },
+    {
+      "title": "Stanford News",
+      "feed_url": "https://news.stanford.edu/feed/",
+      "website_url": "https://news.stanford.edu/",
+      "description": "Stanford News brings you the latest news from and about Stanford University. Discover stories about people, research, and innovation across Stanford as well as comprehensive coverage of local as well as global issues. Stanford University is a place of discovery, creativity, and innovation located in the San Francisco Bay Area.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4989231.jpg?t=1663244823"
+    },
+    {
+      "title": "The Stanford Review",
+      "feed_url": "https://stanfordreview.org/rss/",
+      "website_url": "https://stanfordreview.org/tag/breaking-news/",
+      "description": "The Stanford Review is Stanford's Independent Newspaper. We aim to present alternative views on a wide range of issues, create a forum for rational debate on campus, and challenge those who disagree to participate. We publish news and opinion pieces during the academic year.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 2700,
+        "instagram": 942
+      },
+      "image_url": "https://i1.feedspot.com/5442300.jpg?t=1663244834"
+    },
+    {
+      "title": "DREME News",
+      "feed_url": "https://dreme.stanford.edu/news/feed/",
+      "website_url": "https://dreme.stanford.edu/news/",
+      "description": "The Development and Research in Early Math Education Blog helps your child learn early math skills. Our projects and resources are aimed at developing confidence and the intellect necessary to tackle basic math problems at a young age. The DREME Network advances the field of early mathematics research and improves young children's opportunities to develop math skills.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5442329.jpg?t=1663246829"
+    },
+    {
+      "title": "Stanford University Press Blog",
+      "feed_url": "https://stanfordpress.typepad.com/blog/atom.xml",
+      "website_url": "https://stanfordpress.typepad.com/blog/",
+      "description": "The Stanford University Press blog showcases new books and Press news in addition to serving as a forum for our authors from past and present, to expound on issues related to their scholarship. SUP focuses on innovating new publishing practices to better serve the scholarly community. The Press prides itself on being an academic publisher of creative and sophisticated scholarship.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/4338909.jpg?t=1663244740"
+    },
+    {
+      "title": "Stanford University Athletics",
+      "feed_url": "https://gostanford.com/rss.aspx",
+      "website_url": "https://gostanford.com/news",
+      "description": "Go Stanford is the official source for all the latest news items about Stanford University Athletics. Get updates on all Men and Women's sports, Tickets, stories, Fans, and more. This website is sponsored by Stanford medicine.",
+      "followers": {
+        "facebook": 51500,
+        "twitter": 49600
+      },
+      "image_url": "https://i1.feedspot.com/5442301.jpg?t=1663244935"
+    },
+    {
+      "title": "Go Mighty Card",
+      "feed_url": "https://www.gomightycard.com/atom.xml",
+      "website_url": "https://www.gomightycard.com/",
+      "description": "Go Mighty Card takes an in-depth look at Stanford Cardinal football, focusing on the present but also looking towards the future and thinking back on the past from time to time, uncovering the intellectual brutality of Stanford football as chronicled by Hank Waddles.",
+      "followers": {
+        "facebook": 545
+      },
+      "image_url": "https://i1.feedspot.com/5442302.jpg?t=1663244980"
+    }
+  ]
+}

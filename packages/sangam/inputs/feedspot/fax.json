@@ -1,0 +1,100 @@
+{
+  "category": "Fax",
+  "source_url": "https://rss.feedspot.com/fax_rss_feeds",
+  "feeds": [
+    {
+      "title": "FaxBurner Blog",
+      "feed_url": "https://www.faxburner.com/blog/feed/",
+      "website_url": "https://www.faxburner.com/blog/",
+      "description": "Keep up to date with latest faxing technology, business, and entrepreneurship tips. FaxBurner is the creation of Networx Online, a software and communications company founded in 2010 with a simple mission: to modernize the fax experience and make it affordable for all.",
+      "followers": {
+        "facebook": 246,
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/5436921.jpg?t=1661841864"
+    },
+    {
+      "title": "FaxCore Blog",
+      "feed_url": "https://faxcore.com/blog/feed/",
+      "website_url": "https://faxcore.com/blog/",
+      "description": "FaxCore provides leading HIPAA-compliant fax solutions for businesses. Find information about all things cloud, fax, cybersecurity, and more on our blog! Faxcore has been a leading provider of fax server and cloud-managed fax since 2002, supporting fortune 500 and fortune global 500 companies across numerous industries.",
+      "followers": {
+        "facebook": 98,
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/5436922.jpg?t=1661841908"
+    },
+    {
+      "title": "Concord Blog",
+      "feed_url": "https://concord.net/feed/",
+      "website_url": "https://concord.net/blog/",
+      "description": "Get to know Concord: We're industry experts on Cloud Fax, Document Workflow, and Intelligent Data Extraction for healthcare and enterprises. Concord is leading the development of new Artificial Intelligence technologies to extract data from documents and ease the burden of managing fax communications.",
+      "followers": {
+        "twitter": 167
+      },
+      "image_url": "https://i1.feedspot.com/5436918.jpg?t=1661842161"
+    },
+    {
+      "title": "iFax Blog",
+      "feed_url": "https://www.ifaxapp.com/feed/",
+      "website_url": "https://www.ifaxapp.com/blog/",
+      "description": "Read about how the simple fax machine has evolved, how to send faxes from your phone, and all the new online fax features you can use today. iFax is the world's most popular online and mobile app fax platform. iFax provides fax service from Mobile Apps, Computers and internet.",
+      "followers": {
+        "facebook": 581,
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/5436919.jpg?t=1661842195"
+    },
+    {
+      "title": "Dingtone Fax Blog",
+      "feed_url": "https://www.topfax.net/blog/feed/",
+      "website_url": "https://www.topfax.net/blog/",
+      "description": "If you want to know where to fax near you or looking for reliable online fax service, here are all the possible solutions and tips for faxing, locally or online. Fax is made by Dingtone.Inc, a team full of people who work hard to create innovative apps that you won't find elsewhere. In the past 10 years, Dingtone, another mobile app developed by our team, has been trusted and liked by tens of millions of users, which makes Dingtone one of the best-selling applications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5436920.jpg?t=1661842454"
+    },
+    {
+      "title": "GoFax Blog",
+      "feed_url": "https://blog.gofax.com.au/rss.xml",
+      "website_url": "https://blog.gofax.com.au/",
+      "description": "Get the latest GoFax news, best practices, tips and technologies available in the online fax and SMS market for business. GoFax is Australia's #1 choice for true business grade online fax & SMS services. With email to fax, fax to email, secure fax sending and receiving, fax and SMS automation via API, email to SMS, fax and SMS desktop software, 1300, 13, 1800 fax numbers. GoFax are your complete cloud based fax and SMS provider.",
+      "followers": {
+        "facebook": 227
+      },
+      "image_url": "https://i1.feedspot.com/5436923.jpg?t=1661842477"
+    },
+    {
+      "title": "Faxination",
+      "feed_url": "https://faxination.com/feed/",
+      "website_url": "https://faxination.com/resources/",
+      "description": "Faxination's Digital Business Platform helps companies all over the world to transform into a digital business and integrate all business document flows with connected systems. Know more about cloud faxing, faxination and the services provided by us.",
+      "followers": {
+        "facebook": 61,
+        "twitter": 149
+      },
+      "image_url": "https://i1.feedspot.com/5436924.jpg?t=1661841666"
+    },
+    {
+      "title": "eFax Blog",
+      "feed_url": "https://www.efax.com/feed",
+      "website_url": "https://www.efax.com/blog",
+      "description": "eFax Corporate enables your business to reliably and securely send and receive business critical information to intended targets via the cloud. Explore our blog to know more about cloud fax services, online documents verification and more!",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 1300,
+        "instagram": 462
+      },
+      "image_url": "https://i1.feedspot.com/5436917.jpg?t=1661842243"
+    },
+    {
+      "title": "Faxaroo Blog",
+      "feed_url": "https://faxaroo.com/au/feed",
+      "website_url": "https://faxaroo.com/au/blog",
+      "description": "Hop right into your go-to resource for helpful insights on everything fax. Keep up-to-date with the latest self service, online faxing tips. Faxaroo is a Pay-as-you-go online faxing - the easiest way to bounce off a fax! No sign-up required - pay only for the pages you send. It's as easy as uploading your fax document to our self service portal and we'll handle the rest",
+      "followers": {
+        "facebook": 13
+      },
+      "image_url": "https://i1.feedspot.com/5436925.jpg?t=1661841824"
+    }
+  ]
+}

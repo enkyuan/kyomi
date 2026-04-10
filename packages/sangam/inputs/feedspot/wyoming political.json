@@ -1,0 +1,54 @@
+{
+  "category": "Wyoming Political",
+  "source_url": "https://rss.feedspot.com/wyoming_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "SweetwaterNOW \u00bb Politics",
+      "feed_url": "https://www.sweetwaternow.com/category/politics/feed/",
+      "website_url": "https://www.sweetwaternow.com/category/politics/",
+      "description": "Founded in 2013, SweetwaterNOW has become Southwest Wyoming's most-read news source and website. We are a team of diligent writers, creative thinkers, marketing gurus, skilled designers, and digital creators that enjoy building relationships. Browse through our Politics section and get all the latest news and updates from all around the world.",
+      "followers": {
+        "facebook": 52600,
+        "twitter": 1400,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/5534503.jpg?t=1680695710"
+    },
+    {
+      "title": "Wyoming Public Radio \u00bb Politics & Government",
+      "feed_url": "https://www.wyomingpublicmedia.org/politics-government.rss",
+      "website_url": "https://www.wyomingpublicmedia.org/politics-government",
+      "description": "Wyoming Public Media connects Wyoming through news and cultural programming that informs, inspires, and educates. Read about full coverage of the Wyoming State Legislature in the Politics & Government section on the website.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 8200,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5534501.jpg?t=1680695435"
+    },
+    {
+      "title": "The Wyoming Truth \u00bb Politics",
+      "feed_url": "https://wyomingtruth.org/category/politics/feed/",
+      "website_url": "https://wyomingtruth.org/category/politics/",
+      "description": "Giving Voice to the Voiceless",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 3600,
+        "instagram": 542
+      },
+      "image_url": "https://i1.feedspot.com/5600547.jpg?t=1686909766"
+    },
+    {
+      "title": "Oil City News \u00bb Politics",
+      "feed_url": "https://oilcity.news/category/wyoming/politics/feed/",
+      "website_url": "https://oilcity.news/category/wyoming/politics/",
+      "description": "Oil City News LLC is a nonpartisan media organization and Central Wyoming's largest locally owned, independent news platform. We specialize in hyperlocal coverage of the people, places, and events that shape the community we love. Through our Politics section, we strive to provide our readers with impartial, informative reporting, and an outlet for civic engagement and discourse on matters of community concern.",
+      "followers": {
+        "facebook": 67600,
+        "twitter": 1600,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5534505.jpg?t=1680695451"
+    }
+  ]
+}

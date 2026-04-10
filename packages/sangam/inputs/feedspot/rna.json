@@ -1,0 +1,88 @@
+{
+  "category": "RNA",
+  "source_url": "https://rss.feedspot.com/rna_rss_feeds",
+  "feeds": [
+    {
+      "title": "RNA-Seq Blog",
+      "feed_url": "https://www.rna-seqblog.com/feed/",
+      "website_url": "https://www.rna-seqblog.com/blog/",
+      "description": "RNA-Seq is a transcriptome research & industry news blog. The optimum goal of the site is to provide readers with updated and most recent research news, analysis, and results. On the site, you can come across countless articles debating and informing covering topics such as data analysis, technology, statistical analysis, and more.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/769978.jpg?t=1607346492"
+    },
+    {
+      "title": "RNAi Therapeutics Blog",
+      "feed_url": "http://rnaitherapeutics.blogspot.com/feeds/posts/default",
+      "website_url": "http://rnaitherapeutics.blogspot.com/",
+      "description": "I am an independent expert in the field of RNAi Therapeutics with an emphasis on science and business development strategy. Trained in RNAi molecular biology at the universities of Edinburgh (BSc Hons 2000-2002), Oxford (DPhil 2002-2005), and Stanford (post-doctoral research), I have lived and breathed RNA(i) Therapeutics development for the last 18 years.",
+      "followers": {
+        "twitter": 20500
+      },
+      "image_url": "https://i1.feedspot.com/2022130.jpg?t=1685519337"
+    },
+    {
+      "title": "RNAcentral Blog",
+      "feed_url": "https://blog.rnacentral.org/feeds/posts/default",
+      "website_url": "https://blog.rnacentral.org/",
+      "description": "RNAcentral is powered by a PostgreSQL database, which is publicly available. We are now making dumps of the latest release publically available in our FTP site. We intend to keep only the latest dump available.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4734793.jpg?t=1685519376"
+    },
+    {
+      "title": "Exosome RNA Blog",
+      "feed_url": "https://exosome-rna.com/feed/",
+      "website_url": "https://exosome-rna.com/blog/",
+      "description": "Exosomes are cell-derived vesicles that are present in many and perhaps all biological fluids, including blood, urine, and cultured medium of cell cultures. Exosomes contain various molecular constituents of their cell of origin, including proteins and RNA.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5586505.jpg?t=1685519212"
+    },
+    {
+      "title": "RNA Society",
+      "feed_url": "https://rnajournal.cshlp.org/rss/current.xml",
+      "website_url": "https://rnajournal.cshlp.org/",
+      "description": "RNA serves as an international forum for publishing original reports on RNA research in the broadest sense. The journal aims to unify this field by cutting across established disciplinary lines and focusing on 'RNA-centered' science.",
+      "followers": {
+        "twitter": 7200
+      },
+      "image_url": "https://i1.feedspot.com/273326.jpg?t=1685519431"
+    },
+    {
+      "title": "MIT \u00bb RNA",
+      "feed_url": "https://news.mit.edu/topic/mitrna-rss.xml",
+      "website_url": "https://news.mit.edu/topic/rna",
+      "description": "Read the latest news research, and innovation related to RNA by MIT Community. The MIT community is united by a common goal: to improve the world through education, research, and innovation.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1400000,
+        "instagram": 500
+      },
+      "image_url": "https://i1.feedspot.com/5590566.jpg?t=1685971398"
+    },
+    {
+      "title": "exRNA Blog",
+      "feed_url": "https://exrna.org/feed/",
+      "website_url": "https://exrna.org/blog/",
+      "description": "The goals of the ERC consortium are to discover fundamental biological principles about the mechanisms of exRNA generation, secretion, and transport; to identify and develop a catalog of exRNA found in normal human body fluids; and to investigate the potential for using exRNAs in the clinic as therapeutic molecules or biomarkers of disease.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5586506.jpg?t=1685519301"
+    },
+    {
+      "title": "Nature \u00bb RNA",
+      "feed_url": "https://www.nature.com/subjects/rna.atom",
+      "website_url": "https://www.nature.com/subjects/rna",
+      "description": "Browse our blogs for RNA articles. Nature Portfolio is here to serve the research community by publishing its most significant discoveries-findings that advance knowledge and address some of the greatest challenges that we face as a society today.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5586502.jpg?t=1685519418"
+    }
+  ]
+}

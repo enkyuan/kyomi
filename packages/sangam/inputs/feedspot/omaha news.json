@@ -1,0 +1,50 @@
+{
+  "category": "Omaha News",
+  "source_url": "https://rss.feedspot.com/omaha_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Omaha Daily Record",
+      "feed_url": "https://www.omahadailyrecord.com/rss.xml",
+      "website_url": "https://www.omahadailyrecord.com/",
+      "description": "News and information that connects legal, business and real estate professionals with information they need to be successful in their practices. Locally owned and operated, The Daily Record is a Nebraska legal and business newspaper serving Douglas County and the Omaha metropolitan area.",
+      "followers": {
+        "facebook": 901,
+        "twitter": 79,
+        "instagram": 63
+      },
+      "image_url": "https://i1.feedspot.com/5480419.jpg?t=1671173591"
+    },
+    {
+      "title": "The Omaha News",
+      "feed_url": "https://unomahanews.com/feed/",
+      "website_url": "https://unomahanews.com/",
+      "description": "With a deep focus on stories about Omaha's people and communities, The Omaha News brings forth objective coverage of events from Sports, Entertainment, Lifestyle and Business societies of Omaha. Features original reporting by University of Nebraska at Omaha students.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5480418.jpg?t=1671173688"
+    },
+    {
+      "title": "The Omaha Star",
+      "feed_url": "https://theomahastar.com/feed/",
+      "website_url": "https://theomahastar.com/",
+      "description": "Proudly serving the local community with extensive News, Opinions, and Public announcements, The Omaha Star focuses on in-depth analysis and investigative stories of all local and national issues that matter to the people. Read the latest news covering Sports, Entertainment, Lifestyle, and special Op-eds.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 799,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5480417.jpg?t=1671173611"
+    },
+    {
+      "title": "NOISE",
+      "feed_url": "https://www.noiseomaha.com/",
+      "website_url": "https://www.noiseomaha.com/",
+      "description": "Explore the latest news and investigative stories on current events from an objective, non-profit journalistic POV. NORTH OMAHA INFORMATION SUPPORT EVERYONE (NOISE) is a community-led news organization committed to strengthening information creation and sharing throughout North Omaha.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 2900,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5480421.jpg?t=1671173635"
+    }
+  ]
+}

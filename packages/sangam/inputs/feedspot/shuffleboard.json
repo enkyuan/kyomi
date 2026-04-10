@@ -1,0 +1,41 @@
+{
+  "category": "Shuffleboard",
+  "source_url": "https://rss.feedspot.com/shuffleboard_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Shuffleboard Table Blog",
+      "feed_url": "https://www.shuffleboard.net/blog/feed/",
+      "website_url": "https://www.shuffleboard.net/blog/",
+      "description": "Specializes in quality shuffleboard tables and offers information about shuffleboard table history, rules, accessories, and maintenance. Follow this blog that covers all about shuffleboard tables including shuffleboard rules, where to play, how to choose the best shuffleboard.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5022205.jpg?t=1622293748"
+    },
+    {
+      "title": "ZieglerWorld",
+      "feed_url": "https://zieglerworld.com/blogs/table-shuffleboard-blog.atom",
+      "website_url": "https://zieglerworld.com/blogs/table-shuffleboard-blog",
+      "description": "ZieglerWorld is a leading supplier of table shuffleboard, billiards and darts products. Zieglerworld Shuffleboard & Game Room Products. Get ideas and tips to make your game more fun!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/5022207.jpg?t=1622293528"
+    },
+    {
+      "title": "Recreation Insider \u00bb Shuffleboard",
+      "feed_url": "https://recreationinsider.com/shuffleboard/feed/",
+      "website_url": "https://recreationinsider.com/shuffleboard/",
+      "description": "Recreation Insider is your inside resource to all things recreation. Find reviews, insights and more on a variety of topics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5022206.jpg?t=1622293694"
+    },
+    {
+      "title": "Yuma Shuffle Board District 3",
+      "feed_url": "http://yumashuffleboarddistrict3.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://yumashuffleboarddistrict3.blogspot.com/",
+      "description": "This Blog is designed for the use of Yuma Shuffle Boarders. Know more in detail about the shuffleboard.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5022343.jpg?t=1622293615"
+    }
+  ]
+}

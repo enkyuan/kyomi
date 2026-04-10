@@ -1,0 +1,65 @@
+{
+  "category": "Cancer Diet",
+  "source_url": "https://rss.feedspot.com/cancer_diet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cancer Dietitian Blog",
+      "feed_url": "https://cancerdietitian.com/feed",
+      "website_url": "https://cancerdietitian.com/blog",
+      "description": "Lifestyle tips for prevention and survivorship. Covers Cancer Prevention, Cancer side effect tips, Recipes Low FODMAP diet, Meal planning Cancer diets, and Organic food discussions. Author Julie Lanford is a registered dietitian, licensed nutritionist, and board-certified specialist in oncology nutrition, providing a practical and positive approach to healthy eating.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 1100,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4502485.jpg?t=1625470968"
+    },
+    {
+      "title": "Jean LaMantia Blog",
+      "feed_url": "https://jeanlamantia.com/feed/",
+      "website_url": "https://jeanlamantia.com/cancer-bites-diet-blog/",
+      "description": "Covers credible information about cancer diets, recipes for cancer risk reduction, and lymphedema. Author Jean LaMantia is a registered dietitian, author, cancer survivor, and professional speaker.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 1300,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5299194.jpg?t=1625467135"
+    },
+    {
+      "title": "Food To Glow",
+      "feed_url": "https://kelliesfoodtoglow.com/feed/",
+      "website_url": "https://kelliesfoodtoglow.com/",
+      "description": "Covers articles on Gluten-free, Sauce, soft food diet,, Vegan, easy recipe, lower carb and more. Food To Glow is a healthy, plant-focused omnivore with an occasional decadent twist. Kellie Anderson is a health educator, food writer and recipe developer.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3600,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4496673.jpg?t=1611292309"
+    },
+    {
+      "title": "The Anti Cancer Kitchen",
+      "feed_url": "https://www.theanticancerkitchen.com/feed/",
+      "website_url": "https://www.theanticancerkitchen.com/",
+      "description": "Covers a range of topics including Cancer Fighting Foods, Cancer Lifestyle, Raw Plant-based recipes, and more. The authors want to raise awareness about the connection between cancer and food.",
+      "followers": {
+        "facebook": 4500,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5299297.jpg?t=1625479423"
+    },
+    {
+      "title": "American Institute for Cancer Research Blog",
+      "feed_url": "https://www.aicr.org/feed/",
+      "website_url": "https://www.cookforyourlife.org/category/blog/blog/",
+      "description": "Blog posts contain information on how to persevere when experiencing the long-term effects of cancer as well as healthy lifestyle choices. The American Institute for Cancer Research funds cutting-edge research to help prevent and survive cancer.",
+      "followers": {
+        "facebook": 27200,
+        "twitter": 7900,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/1180875.jpg?t=1625469816"
+    }
+  ]
+}

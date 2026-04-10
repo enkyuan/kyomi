@@ -1,0 +1,270 @@
+{
+  "category": "Dallas Food",
+  "source_url": "https://rss.feedspot.com/dallas_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Eater Dallas",
+      "feed_url": "https://dallas.eater.com/rss/index.xml",
+      "website_url": "https://dallas.eater.com/",
+      "description": "Food news and dining guides for Dallas.",
+      "followers": {
+        "facebook": 35600,
+        "twitter": 24700,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4820094.jpg?t=1610777401"
+    },
+    {
+      "title": "Joy + Oliver Blog",
+      "feed_url": "https://joyoliver.com/feed/",
+      "website_url": "https://joyoliver.com/blog/",
+      "description": "Browse hundreds of delicious and decadent cookie, cake, and baking recipes sure to make an impression. Bring Joy to your life and your kitchen with techniques and tutorials from a trained pastry chef!",
+      "followers": {
+        "facebook": 785,
+        "twitter": 6,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5011459.jpg?t=1606204727"
+    },
+    {
+      "title": "The Urben Life",
+      "feed_url": "https://theurbenlife.com/feed/",
+      "website_url": "https://theurbenlife.com/",
+      "description": "Find hundreds of quick, easy, and healthy meal ideas! All recipes are dairy-free and egg free, with several gluten-free and vegan options. You will also find allergy-friendly travel guides and entertaining tips. I'm Jenna Urben. I started The Urben Life is 2016 with a simple mission, to share dairy free recipes the entire family will enjoy.",
+      "followers": {
+        "facebook": 31100,
+        "twitter": 612,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4918261.jpg?t=1610027945"
+    },
+    {
+      "title": "Dallas Food Nerd",
+      "feed_url": "https://www.dallasfoodnerd.com/feed/",
+      "website_url": "https://www.dallasfoodnerd.com/",
+      "description": "We are a community of food nerds in Dallas chronicling the best restaurants in Dallas, the best food in Dallas, and even our own creations and favorite kitchen gadgets!",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 10300,
+        "instagram": 59000
+      },
+      "image_url": "https://i1.feedspot.com/5011315.jpg?t=1622275312"
+    },
+    {
+      "title": "Living Locurto \u00bb Food",
+      "feed_url": "https://www.livinglocurto.com/category/food/feed/",
+      "website_url": "https://www.livinglocurto.com/category/food/",
+      "description": "Easy recipes for dinner and dessert along with cute party food ideas. Instant Pot recipes, low carb, appetizers, snacks and more!",
+      "followers": {
+        "facebook": 365300,
+        "twitter": 11400,
+        "instagram": 55100
+      },
+      "image_url": "https://i1.feedspot.com/4717308.jpg?t=1622275317"
+    },
+    {
+      "title": "Soulgood Blog",
+      "feed_url": "https://www.tinyrenaissancehomes.com/blog-feed.xml",
+      "website_url": "https://www.tinyrenaissancehomes.com/blog",
+      "description": "Find helpful tips for living your best vegan or vegetarian life on our Soulgood blog. Feed your mind, body and soul good stuff and choose the lifestyle that makes you happy. Soulgood is an innovative organic and eco-friendly vegan takeout restaurant, food truck, vegan bakery and vegan catering company.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 616,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5434014.jpg?t=1661149834"
+    },
+    {
+      "title": "Y.O. Ranch Steakhouse",
+      "feed_url": "https://www.yoranchsteakhouse.com/feed/",
+      "website_url": "https://www.yoranchsteakhouse.com/",
+      "description": "Explore our articles on cooking and food, recipes, cooking techniques and more! Best Downtown Dallas Steakhouse located in Dallas West End. Y.O. Ranch Steakhouse masters true Texas elegance in a warm, relaxing atmosphere with an award-winning five-star dining experience as a whole.",
+      "followers": {
+        "facebook": 14000,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5434005.jpg?t=1661149758"
+    },
+    {
+      "title": "Just Microwave It",
+      "feed_url": "https://justmicrowaveit.com/feed/",
+      "website_url": "https://justmicrowaveit.com/",
+      "description": "Find all the popular and regular recipes with a microwave twist to them. A Dallas food blog dedicated to microwave cooking when you don't have access to other kitchen appliances.",
+      "followers": {
+        "facebook": 573,
+        "twitter": 213,
+        "instagram": 862
+      },
+      "image_url": "https://i1.feedspot.com/5434010.jpg?t=1661149796"
+    },
+    {
+      "title": "The GEM Blog",
+      "feed_url": "https://feeds.feedburner.com/insidethegemcom",
+      "website_url": "https://insidethegem.com/blog/",
+      "description": "Learn more about GEM juice, organic eating lifestyle and more! The first free-standing organic juice bar in Dallas, The GEM was founded in 2012 by Mary Kathryn Bass and Leslie Needleman, CHHC.",
+      "followers": {
+        "facebook": 33,
+        "twitter": 714,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/5434009.jpg?t=1661149789"
+    },
+    {
+      "title": "The Defined Dish",
+      "feed_url": "https://thedefineddish.com/feed/",
+      "website_url": "https://thedefineddish.com/",
+      "description": "Find Healthy and wholesome meals by recipe developer and New York Times best seller, Alexandra Snodgrass. Alex is a recipe developer for simple, healthy recipes and NYT bestselling author.",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 1500,
+        "instagram": 918000
+      },
+      "image_url": "https://i1.feedspot.com/5434006.jpg?t=1661151295"
+    },
+    {
+      "title": "CraveDFW",
+      "feed_url": "https://cravedfw.com/feed/",
+      "website_url": "https://cravedfw.com/",
+      "description": "Find out the latest about food, and entertainment in Dallas and Fort Worth. Get to know about food, morning news, our magazine, restaurants, and things to do in Dallas. CraveDFW is a fun way to learn about our city. We created CraveDFW because we all Crave something delicious and each day we will explore these things, and hopefully something that you Crave as well.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4820142.jpg?t=1610777574"
+    },
+    {
+      "title": "D Magazine \u00bb Food & Drink",
+      "feed_url": "https://www.dmagazine.com/section/food-drink/feed/",
+      "website_url": "https://www.dmagazine.com/section/food-drink/",
+      "description": "Covering local food and drink news in Dallas. We've got comprehensive restaurant and bar reviews with inside scopes from local chefs and bartenders. Our dining guides will help you find the best restaurants, best brunches, best happy hours, and more.",
+      "followers": {
+        "facebook": 167300,
+        "twitter": 323600,
+        "instagram": 229200
+      },
+      "image_url": "https://i1.feedspot.com/5011313.jpg?t=1622275304"
+    },
+    {
+      "title": "The Dallas Socials \u00bb Food and Drinks",
+      "feed_url": "https://www.thedallassocials.com/category/food-2/feed/",
+      "website_url": "https://www.thedallassocials.com/category/food-2/",
+      "description": "Dallas Socials is your site for all things to do in Dallas, TX. From the Dallas life to where to eat in DFW - we are your Big D resource.",
+      "followers": {
+        "facebook": 30900,
+        "twitter": 69600,
+        "instagram": 23800
+      },
+      "image_url": "https://i1.feedspot.com/5011443.jpg?t=1622275322"
+    },
+    {
+      "title": "Fortuitous Foodies \u00bb Food",
+      "feed_url": "https://fortuitousfoodies.com/category/food/feed/",
+      "website_url": "https://fortuitousfoodies.com/category/food/",
+      "description": "We are two sisters who love getting together to enjoy a good meal, whether we are trying out new recipes at home, exploring new restaurants, or enjoying our tried and true foodie favourites.",
+      "followers": {
+        "facebook": 659,
+        "twitter": 1800,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/5011314.jpg"
+    },
+    {
+      "title": "A Lo Profile \u00bb Food + Drink",
+      "feed_url": "https://aloprofile.com/topics/fooddrink/feed/",
+      "website_url": "https://aloprofile.com/topics/fooddrink/",
+      "description": "A Dallas based lifestyle blog featuring effortless style and everyday fashion, travel, fitness and health, whole 30 tips, food, and more serving as a daily source of inspiration.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 593,
+        "instagram": 186200
+      },
+      "image_url": "https://i1.feedspot.com/5011444.jpg?t=1622275325"
+    },
+    {
+      "title": "hi Sugarplum! \u00bb Food",
+      "feed_url": "https://hisugarplum.com/category/lifestyle/food/feed/",
+      "website_url": "https://hisugarplum.com/category/lifestyle/food/",
+      "description": "I'm Cassie, a DIY and design-obsessed Texas girl, and lover of travel, fashion, sarcasm, and Mexican food. This is my happy, creative corner of the world to share simple and inexpensive projects, colorful fashion, budget travels and life as it comes.",
+      "followers": {
+        "facebook": 140900,
+        "instagram": 303700
+      },
+      "image_url": "https://i1.feedspot.com/5011445.jpg?t=1622275329"
+    },
+    {
+      "title": "Plant Based Dallas Blog",
+      "feed_url": "http://www.plantbaseddallas.com/blog?format=rss",
+      "website_url": "http://www.plantbaseddallas.com/blog",
+      "description": "Hop over to the blog to see regular posts on recipe ideas, kitchen and cooking tips, and a peek on how to easily incorporate delicious plant-based meals into your daily life! Plant Based Dallas is devoted to leading a whole foods plant based lifestyle.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5434011.jpg?t=1661149803"
+    },
+    {
+      "title": "Dallas Vegan Blog",
+      "feed_url": "https://www.dallasvegan.com/blog-feed.xml",
+      "website_url": "https://www.dallasvegan.com/blog-1",
+      "description": "Dallas Vegan is a non-profit organization formed for the vegan and vegetarian community in the greater Dallas, Fort Worth area to find other community members and support for veganism with like-minded people. Explore restaurant guides, events, educational info, articles, reviews, and more on veganism in the Dallas, Fort Worth Metroplex.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5434012.jpg?t=1661149817"
+    },
+    {
+      "title": "1530 Main Blog",
+      "feed_url": "https://1530main.com/blogs/news.atom",
+      "website_url": "https://1530main.com/blogs/news/",
+      "description": "1530 Main explores up-and-coming, little-known, and beloved Dallas neighborhoods, all through the eyes of The Joule. 1530 Main is a publication of The Joule. Whether you're a spurred-boot local or just checking in for the night, we invite you to experience Downtown Dallas from our perspective.",
+      "followers": {
+        "facebook": 671,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5434008.jpg?t=1661149782"
+    },
+    {
+      "title": "Taste Texas Blog",
+      "feed_url": "https://tastetexas.net/blogs/news.atom",
+      "website_url": "https://tastetexas.net/blogs/news",
+      "description": "I'm Will, the founder of TasteTexas. I have lived in Texas my entire life (25 years). I've lived in Dallas for 22 years and spent 3 years in college near Austin. I started TasteTexas to highlight all our state has to offer and to provide a hub of resources so locals and tourists alike can enjoy their time in The Lone Star State.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434004.jpg?t=1661152261"
+    },
+    {
+      "title": "A Pleasant Little Kitchen",
+      "feed_url": "https://apleasantlittlekitchen.com/feed/",
+      "website_url": "https://apleasantlittlekitchen.com/",
+      "description": "A Pleasant Little Kitchen is a resource for recipes, menus and methods to showcase the beauty of food and to develop cooking skills. On this site you will find seasonal recipes, topical menus and hosting advice that is designed to make your kitchen more pleasant. Rebecca White is a freelance recipe developer, food photographer and food writer. Rebecca is a frequent Special Contributor to The Dallas Morning News, blogger for Market Street and United grocery stores and author of an upcoming cookbook published by Page Street Publishing.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 111,
+        "instagram": 21400
+      },
+      "image_url": "https://i1.feedspot.com/5178448.jpg?t=1661156453"
+    },
+    {
+      "title": "Dallas Observer \u00bb Food & Drink",
+      "feed_url": "https://www.dallasobserver.com/restaurants.rss",
+      "website_url": "https://www.dallasobserver.com/restaurants",
+      "description": "Discover new restaurants and where to find the best food in Dallas. Some of the city's finest food writers cover the restaurant industry for the Dallas Observer, reporting on openings and closings, reviewing restaurants, interviewing chefs and recommending the best food and drink.",
+      "followers": {
+        "facebook": 180400,
+        "twitter": 231400,
+        "instagram": 137800
+      },
+      "image_url": "https://i1.feedspot.com/5011442.jpg?t=1622275308"
+    },
+    {
+      "title": "CultureMap Dallas \u00bb Restaurants & Bars",
+      "feed_url": "https://dallas.culturemap.com/feeds/news/restaurants-bars/",
+      "website_url": "https://dallas.culturemap.com/news/restaurants-bars/",
+      "description": "The essential source for daily restaurant and nightlife news and the best restaurants, bars, food, drinks and nightclubs in Dallas. CultureMap is your source for local lifestyle news.",
+      "followers": {
+        "facebook": 85600,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/5434007.jpg?t=1661155583"
+    }
+  ]
+}

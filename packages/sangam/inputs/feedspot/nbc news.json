@@ -1,0 +1,18 @@
+{
+  "category": "NBC News",
+  "source_url": "https://rss.feedspot.com/nbc_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "NBC News",
+      "feed_url": "https://feeds.nbcnews.com/nbcnews/public/news",
+      "website_url": "https://www.nbcnews.com/",
+      "description": "Go to NBCNews.com for breaking news, videos, and the latest top stories in world news, business, politics, health and pop culture.",
+      "followers": {
+        "facebook": 124800,
+        "twitter": 9400000,
+        "instagram": 55600
+      },
+      "image_url": "https://i1.feedspot.com/5245929.jpg?t=1751450716"
+    }
+  ]
+}

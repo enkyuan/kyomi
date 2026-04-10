@@ -1,0 +1,146 @@
+{
+  "category": "InfoMoney",
+  "source_url": "https://rss.feedspot.com/infomoney_rss_feeds",
+  "feeds": [
+    {
+      "title": "InfoMoney \u00bb Latest News",
+      "feed_url": "https://www.infomoney.com.br/ultimas-noticias/feed/",
+      "website_url": "https://www.infomoney.com.br/ultimas-noticias/feed/",
+      "description": "All Latest News from InfoMoney.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Market",
+      "feed_url": "https://www.infomoney.com.br/mercados/feed/",
+      "website_url": "https://www.infomoney.com.br/mercados/",
+      "description": "Financial market today. Latest news about Stocks, Stock Exchanges and Currencies. Follow quotes, economic calendar, results, dividends and much more.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 572900,
+        "instagram": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Where to Invest",
+      "feed_url": "https://www.infomoney.com.br/onde-investir/feed/",
+      "website_url": "https://www.infomoney.com.br/onde-investir/",
+      "description": "Discover a trove of robust, evidence-based strategies to consistently outperform the market. InfoMoney is the largest and most complete communication ecosystem specialized in markets, investments and business in the country. A pioneer in the digital universe since 2000, the portal was born with the mission of democratizing access to quality financial information to improve people's lives.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 572900,
+        "instagram": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/7269588.jpg?t=1709890396"
+    },
+    {
+      "title": "InfoMoney \u00bb Policy",
+      "feed_url": "https://www.infomoney.com.br/politica/feed/",
+      "website_url": "https://www.infomoney.com.br/politica/",
+      "description": "Latest news about Politics in Brazil and around the world. Follow the events that affect your finances; analysis, research, elections and much more.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 572900,
+        "instagram": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Economy",
+      "feed_url": "https://www.infomoney.com.br/economia/feed/",
+      "website_url": "https://www.infomoney.com.br/economia/",
+      "description": "All articles about Economy from InfoMoney.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb World",
+      "feed_url": "https://www.infomoney.com.br/mundo/feed/",
+      "website_url": "https://www.infomoney.com.br/mundo/",
+      "description": "Latest news on the most important events in the world. Follow the main crises and conflicts that impact international politics and economy.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 572900,
+        "instagram": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Career",
+      "feed_url": "https://www.infomoney.com.br/carreira/feed/",
+      "website_url": "https://www.infomoney.com.br/carreira/",
+      "description": "All articles about Career from InfoMoney.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Consumption",
+      "feed_url": "https://www.infomoney.com.br/consumo/feed/",
+      "website_url": "https://www.infomoney.com.br/consumo/",
+      "description": "All articles about Consumption from InfoMoney.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Advisor",
+      "feed_url": "https://www.infomoney.com.br/advisor/feed/",
+      "website_url": "https://www.infomoney.com.br/advisor/",
+      "description": "All articles about Advisor from InfoMoney.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Trader",
+      "feed_url": "https://www.infomoney.com.br/tudo-sobre/trader/feed/",
+      "website_url": "https://www.infomoney.com.br/tudo-sobre/trader/",
+      "description": "All InfoMoney publications about Traders; news, analysis, interviews, guides, exclusive content and more.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 572900,
+        "instagram": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Brazil",
+      "feed_url": "https://www.infomoney.com.br/brasil/feed/",
+      "website_url": "https://www.infomoney.com.br/brasil/",
+      "description": "All articles about Brazil from InfoMoney.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Sports",
+      "feed_url": "https://www.infomoney.com.br/esportes/feed/",
+      "website_url": "https://www.infomoney.com.br/esportes/",
+      "description": "All articles about Sports from InfoMoney.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb Business",
+      "feed_url": "https://www.infomoney.com.br/business/feed/",
+      "website_url": "https://www.infomoney.com.br/business/",
+      "description": "Latest Business News: coverage of companies and the business world, with a focus on corporate audiences. Industry analysis, interviews, innovation, marketing, management and more.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 572900,
+        "instagram": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    },
+    {
+      "title": "InfoMoney \u00bb My Finances",
+      "feed_url": "https://www.infomoney.com.br/minhas-financas/feed/",
+      "website_url": "https://www.infomoney.com.br/minhas-financas/",
+      "description": "Latest Personal Finance news: planning, retirement, credit cards and more. Everything you need to know about money.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 572900,
+        "instagram": 2700000
+      },
+      "image_url": "https://i1.feedspot.com/7896743.jpg?t=1744273801"
+    }
+  ]
+}

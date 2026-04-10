@@ -1,0 +1,78 @@
+{
+  "category": "UK Chef",
+  "source_url": "https://rss.feedspot.com/uk_chef_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mindful Chef Blog",
+      "feed_url": "https://www.mindfulchef.com/blog/feed/",
+      "website_url": "https://www.mindfulchef.com/blog/",
+      "description": "Check out delicious healthy cooking recipes along with articles on nutrition and lifestyle. Myles and Giles founded Mindful Chef in 2015 with one mission to make healthy eating easy. They deliver a range of balanced, delicious recipe boxes, frozen ready meals, broths and smoothie mixes nationwide.",
+      "followers": {
+        "facebook": 90000,
+        "twitter": 10600,
+        "instagram": 171500
+      },
+      "image_url": "https://i1.feedspot.com/4589553.jpg?t=1607324531"
+    },
+    {
+      "title": "The Online Pastry School Blog",
+      "feed_url": "https://becomeapastrychef.co.uk/feed/",
+      "website_url": "https://becomeapastrychef.co.uk/blog/",
+      "description": "Keep up with Pastry Chef Inspiration and Guidance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5074389.jpg?t=1613657035"
+    },
+    {
+      "title": "Home Angry Chef Food Pseudoscience science",
+      "feed_url": "https://angry-chef.com/rss.xml",
+      "website_url": "https://angry-chef.com/blog",
+      "description": "Exposing lies, pretensions and stupidity in the world of food. The rantings of a angry chef, sick of the lies told about food and health.",
+      "followers": {
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/4468145.jpg?t=1607325686"
+    },
+    {
+      "title": "Learn How To Become A Chef Blog",
+      "feed_url": "https://becomingachef.co.uk/feed/",
+      "website_url": "https://becomingachef.co.uk/become-a-chef-blog/",
+      "description": "Hi, I'm Chris I have over 20 years experience working in professional kitchens all over the UK. This includes experience in rosette restaurants, 5-star hotels and event caterers. Working with a wide range of foods that specialise in the British/European style. If you want to find out what a commis chef is, or learning some building block cooking skills. I have built this website and continue to develop the site to get info, advice and tips out there.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5156865.jpg?t=1613656923"
+    },
+    {
+      "title": "Insight Flavour",
+      "feed_url": "https://www.insightflavour.com/blog-feed.xml",
+      "website_url": "https://www.insightflavour.com/",
+      "description": "Lukasz Babral is a Polish Chef and a Food Blogger who lives in the United Kingdom. Check out this website to see cool recipes and tips on cooking healthy and energizing dishes.",
+      "followers": {
+        "twitter": 30,
+        "instagram": 644
+      },
+      "image_url": "https://i1.feedspot.com/5183980.jpg?t=1597756422"
+    },
+    {
+      "title": "Chefs for London",
+      "feed_url": "http://chefsforlondon.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://chefsforlondon.blogspot.com/",
+      "description": "Culinary recruitment & management company, introducing culinary trained chefs and students to London's leading restaurants.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4905809.jpg?t=1613656984"
+    },
+    {
+      "title": "Great British Chefs",
+      "feed_url": "https://www.greatbritishchefs.com/rss/recipe",
+      "website_url": "https://www.greatbritishchefs.com/recipes",
+      "description": "View over 3,000 recipes from Great British Chefs including recipe ideas for every occasion from quick weeknight meals ideas to elaborate dinner parties.",
+      "followers": {
+        "facebook": 220000,
+        "twitter": 102600,
+        "instagram": 227400
+      },
+      "image_url": "https://i1.feedspot.com/4905724.jpg?t=1613656882"
+    }
+  ]
+}

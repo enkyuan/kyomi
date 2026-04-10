@@ -1,11 +1,18 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
+import { enforceRateLimitForContext } from "@adapters/rate-limit/rate-limit.plugin";
 import { AppError } from "@shared/errors/app-error";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { taskIdParam, uuidParam } from "@shared/http/v1-stub";
 import { importOpmlFeedUrls } from "./opml.import-feeds";
 import { parseOpmlFeeds } from "./opml.parse";
 import { deleteOpmlTask, getOpmlTask, listOpmlTasksForUser, saveOpmlTask } from "./opml.task-store";
+
+const opmlImportRateLimit = {
+  name: "opml.import",
+  max: 5,
+  windowMs: 15 * 60_000,
+} as const;
 
 const failureItem = t.Object({
   url: t.String(),
@@ -59,18 +66,15 @@ export function registerOpmlRoutes(app: Elysia) {
     .post(
       "/opml/imports",
       async (context) => {
-        const { body, db, logger, set, userId } = v1HandlerContext(context);
-        const xml =
-          typeof body === "object" && body !== null && "xml" in body
-            ? String((body as { xml: unknown }).xml)
-            : "";
-        if (!xml.trim()) {
+        const { body, db, logger, set, userId } = v1HandlerContext<{ xml: string }>(context);
+        await enforceRateLimitForContext(context, userId, opmlImportRateLimit);
+        if (!body.xml.trim()) {
           throw new AppError("xml is required", { status: 400, code: "OPML_XML_REQUIRED" });
         }
 
         const taskId = crypto.randomUUID();
         const createdAt = new Date().toISOString();
-        const urls = parseOpmlFeeds(xml);
+        const urls = parseOpmlFeeds(body.xml);
         logger.info("opml.import.started", { userId, taskId, urlCount: urls.length });
 
         const summary = await importOpmlFeedUrls(db, userId, urls);

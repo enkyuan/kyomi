@@ -1,0 +1,71 @@
+{
+  "category": "UK IOT",
+  "source_url": "https://rss.feedspot.com/uk_iot_rss_feeds",
+  "feeds": [
+    {
+      "title": "IoT Now",
+      "feed_url": "https://www.iot-now.com/feed/",
+      "website_url": "https://www.iot-now.com/iot-insights/",
+      "description": "IoT Now is the leading global magazine and online news source covering machine-to-machine communications in a whole host of industry verticals. Daily IoT news, white papers, product reviews and a bi-monthly magazine focused on the IoT.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 29300
+      },
+      "image_url": "https://i1.feedspot.com/4666681.jpg?t=1614850306"
+    },
+    {
+      "title": "IoT Tech News",
+      "feed_url": "https://iottechnews.com/feed/",
+      "website_url": "https://iottechnews.com/news/",
+      "description": "A practical resource providing news, analysis, and opinion on the burgeoning Internet of Things ecosystem, from standardization to business use cases, and development opportunities. Explore industry research and reports from the frontline of IoT technology news.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4666817.jpg?t=1617952302"
+    },
+    {
+      "title": "Computerworld \u00bb Networking",
+      "feed_url": "https://www.computerworld.com/uk/networking/",
+      "website_url": "https://www.computerworld.com/uk/networking/",
+      "description": "Internet of Things - latest IoT insight, news, tips, and tutorials.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4910800.jpg?t=1620114109"
+    },
+    {
+      "title": "IoT Horizon Blog",
+      "feed_url": "https://iothorizon.com/feed/",
+      "website_url": "https://iothorizon.com/category/blog/",
+      "description": "Blog about IoT projects and ideas that can make smart solutions for the future. IoT Horizon is an IoT Specialists providing solutions for social distancing, asset tracking, preventative & condition monitoring, bespoke & off-the-shelf sensors & more.",
+      "followers": {
+        "facebook": 97,
+        "twitter": 580
+      },
+      "image_url": "https://i1.feedspot.com/5351087.jpg"
+    },
+    {
+      "title": "IoT Security Foundation (IoTSF) Blog",
+      "feed_url": "https://www.iotsecurityfoundation.org/blog/feed/",
+      "website_url": "https://iotsecurityfoundation.org/blog/",
+      "description": "IoTSF is a collaborative, non-profit, international response to the complex challenges posed by cybersecurity in the expansive hyper-connected IoT world. It is a destination for IoT users & technology providers including IoT security professionals, IoT hardware & software product vendors, network operators, retailers, government agencies, and other stakeholders.",
+      "followers": {
+        "twitter": 641
+      },
+      "image_url": "https://i1.feedspot.com/4666841.jpg?t=1617953611"
+    },
+    {
+      "title": "floLIVE News",
+      "feed_url": "https://flolive.net/feed/",
+      "website_url": "https://flolive.net/news/",
+      "description": "Connecting ideas, thought leadership, news, and people through IoT. floLIVE News has tons of articles, insights, press releases, and interviews for anyone who wants to know about IoT. floLIVE provides local connectivity for IoT chipsets and device manufacturers anywhere in the world.",
+      "followers": {
+        "facebook": 220,
+        "twitter": 232
+      },
+      "image_url": "https://i1.feedspot.com/5351089.jpg?t=1638874879"
+    }
+  ]
+}

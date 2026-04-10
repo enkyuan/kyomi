@@ -1,0 +1,66 @@
+{
+  "category": "Centrifuge",
+  "source_url": "https://rss.feedspot.com/centrifuge_rss_feeds",
+  "feeds": [
+    {
+      "title": "Henderson Biomedical Blog",
+      "feed_url": "https://henderson-biomedical.co.uk/feed/",
+      "website_url": "https://henderson-biomedical.co.uk/blog/",
+      "description": "Henderson Biomedical is certified to ISO standards, meaning we are committed to continually improving our service, as well as providing UKAS calibrations to the highest standard. Keep up to date with the latest medical developments, technologies, opinions, and news by visiting the Henderson Biomedical blog.",
+      "followers": {
+        "facebook": 145,
+        "twitter": 397
+      },
+      "image_url": "https://i1.feedspot.com/5468398.jpg?t=1668593928"
+    },
+    {
+      "title": "Lab Centrifuges Blog",
+      "feed_url": "https://labcentrifuges.net/blogs/blog.atom",
+      "website_url": "https://labcentrifuges.net/blogs/blog",
+      "description": "LabCentrifuges.net is about one thing and one thing only - ensuring that you can find the best Centrifuge for your lab quickly and easily, all in one place. Read the blogs to stay updated and get various kinds of information regarding Centrifuges.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5468399.jpg?t=1668593805"
+    },
+    {
+      "title": "Separators Blog",
+      "feed_url": "https://www.separatorsinc.com/blog/rss.xml",
+      "website_url": "https://www.separatorsinc.com/blog",
+      "description": "Since 1985, we've provided customers with their perfect balance of service, equipment, and parts. We believe in doing what it takes to help every customer's facility achieve optimal separation. The blog posts is your inside view for industry information and resources.",
+      "followers": {
+        "facebook": 227,
+        "twitter": 146
+      },
+      "image_url": "https://i1.feedspot.com/5468402.jpg?t=1668593998"
+    },
+    {
+      "title": "Whirler Blog",
+      "feed_url": "https://www.whirlercentrifugals.com/blog-feed.xml",
+      "website_url": "https://www.whirlercentrifugals.com/blog",
+      "description": "Whirler Centrifugals Pvt Ltd started its operation in 1987 to manufacture and supply peeler centrifuges to the starch industry. Since then, whirler has added numerous separation technologies to its portfolio, such as pusher centrifuges, decanter centrifuges, vertical basket centrifuges, etc. Find about Water Treatment Equipment to Solutions in the blogs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5468403.jpg?t=1668594065"
+    },
+    {
+      "title": "Tomy Blog \u00bb Centrifuges",
+      "feed_url": "https://tomy.amuzainc.com/blog/category/centrifuges/feed/",
+      "website_url": "https://tomy.amuzainc.com/blog/category/centrifuges/",
+      "description": "TOMY has dedicated itself to providing high-quality instruments and superior services to labs. Our products, designed for research labs, help enhance human lives through science. Read the centrifuges category in our blogs to find articles like 'What are Rotors in a Centrifuge?', 'How to set up your Laboratory; choosing a centrifuge.', and many more.",
+      "followers": {
+        "facebook": 762,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5468401.jpg?t=1668594310"
+    },
+    {
+      "title": "Dynamica Scientific Blog",
+      "feed_url": "https://dynamica-sci.com/feed/",
+      "website_url": "https://dynamica-sci.com/blogs/",
+      "description": "Dynamica is an international company that specializes in the development, production, and provision of tools and services for use in life science research, analytical and academic purposes. We focus on advancing the technologies of the centrifuge and DNA analyzer. We aim to create technological and business advantages for our customers to enable advancement in human health, environmental and resource management, and production efficiency.",
+      "followers": {
+        "facebook": 164,
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5468400.jpg?t=1668594350"
+    }
+  ]
+}

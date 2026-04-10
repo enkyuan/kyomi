@@ -1,0 +1,53 @@
+{
+  "category": "Enterprise SEO",
+  "source_url": "https://rss.feedspot.com/enterprise_seo_rss_feeds",
+  "feeds": [
+    {
+      "title": "seoClarity",
+      "feed_url": "https://www.seoclarity.net/blog/rss.xml",
+      "website_url": "https://www.seoclarity.net/seo-content-learning-center",
+      "description": "SEO industry news, research, guide, case study and webinar. Also covers topics such as enterprise SEO platform, rankings, technical SEO, site audits, page speed, content marketing, keyword research, link management, mobile SEO, local SEO and more. seoClarity solves complex marketing challenges by providing users with an all-in-one platform solution packed with AI-driven insights and big SEO data you need to propel your business forward.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4471788.jpg?t=1605070349"
+    },
+    {
+      "title": "Rio SEO Blog",
+      "feed_url": "https://www.rioseo.com/feed/",
+      "website_url": "https://www.rioseo.com/blog/",
+      "description": "Rio SEO is the leading provider for Local Search tools and services for enterprise brands looking to claim their presence online through SEO and local listing management. Follow the local marketing blog and see the best practices for local listings management.",
+      "followers": {
+        "facebook": 16,
+        "twitter": 3300,
+        "instagram": 517
+      },
+      "image_url": "https://i1.feedspot.com/4859484.jpg?t=1611920306"
+    },
+    {
+      "title": "Pi Datametrics Blog",
+      "feed_url": "https://pi-datametrics.com/blog/feed/",
+      "website_url": "https://pi-datametrics.com/blog/",
+      "description": "Pi Datametrics provides clients with 200 times more data than other leading enterprise SEO platforms. Know your customers, your competitors, and the value of the opportunity with Pi's Digital Intelligence and content marketing platform. Get the latest SEO news, Pi platform updates and sector insights all from the Pi Datametrics blog.",
+      "followers": {
+        "facebook": 409,
+        "twitter": 1400,
+        "instagram": 284
+      },
+      "image_url": "https://i1.feedspot.com/4859543.jpg?t=1611920314"
+    },
+    {
+      "title": "John Doherty Blog",
+      "feed_url": "https://www.johnfdoherty.com/feed/",
+      "website_url": "https://www.johnfdoherty.com/blog/",
+      "description": "This is the personal website of John Doherty, founder of Credo and a growth marketing professional in Denver, CO. We connect businesses with the right marketing provider to help grow their business. Our marketing focuses on driving traffic that impacts business and works to meet those business objectives.",
+      "followers": {
+        "facebook": 210,
+        "twitter": 34100,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4859489.jpg?t=1611920310"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "category": "Vietnam Real Estate",
+  "source_url": "https://rss.feedspot.com/vietnam_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Central Vietnam Realty News",
+      "feed_url": "https://cvr.com.vn/news/feed/",
+      "website_url": "https://cvr.com.vn/news/",
+      "description": "Vietnam Real Estate Resources.CVR - Central Vietnam Realty Ltd. is a professional real estate services provider operating in Central Vietnam. They focus on Da Nang, Hoi An, Hue, and the surrounding areas.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5334455.jpg?t=1634816026"
+    },
+    {
+      "title": "Vietlong Housing Blog",
+      "feed_url": "https://vietlonghousing.com/feed/",
+      "website_url": "https://vietlonghousing.com/blog/",
+      "description": "Vietlong Housing is a real estate agency, specializing in helping Expatriates find their new Home in Hanoi city to rent and also to buy.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 125
+      },
+      "image_url": "https://i1.feedspot.com/5334456.jpg?t=1634816360"
+    },
+    {
+      "title": "Realty In Vietnam Blog",
+      "feed_url": "https://realtyinvietnam.com/blog/feed/",
+      "website_url": "https://realtyinvietnam.com/blog/",
+      "description": "Realty in Vietnam is local & international real estate agency based in Ho Chi Minh City, Vietnam; providing long-term leasing.",
+      "followers": {
+        "facebook": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5334457.jpg?t=1634817279"
+    },
+    {
+      "title": "CBRE Vietnam",
+      "feed_url": "https://www.cbrevietnam.com/feed",
+      "website_url": "https://www.cbrevietnam.com/insights#insights",
+      "description": "CBRE Group, Inc. (NYSE:CBRE), a Fortune 500 and S&P 500 company headquartered in Dallas, is the world's largest commercial real estate services and investment firm (based on 2020 revenue).",
+      "followers": {
+        "facebook": 33100,
+        "twitter": 809,
+        "instagram": 342
+      },
+      "image_url": "https://i1.feedspot.com/5334458.jpg?t=1634816701"
+    }
+  ]
+}

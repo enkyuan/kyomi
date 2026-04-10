@@ -1,0 +1,42 @@
+{
+  "category": "Florida Whiskey",
+  "source_url": "https://rss.feedspot.com/florida_whiskey_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Capital City Bourbon Blog",
+      "feed_url": "https://capitalcitybourbon.com/feed/",
+      "website_url": "https://capitalcitybourbon.com/blog/",
+      "description": "I'm Luke. This is a very simple blog. The reality is that I absolutely love bourbon and whiskey in general. And I love talking about these spirits almost as much as I love drinking them, so a blog seemed like the next logical step.I intend on sharing tasting notes, reviews, recommendations, and various other topics related to bourbon.",
+      "followers": {
+        "facebook": 749,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5399452.jpg?t=1652187278"
+    },
+    {
+      "title": "Warren Delray Blog",
+      "feed_url": "https://warrendelray.com/feed/",
+      "website_url": "https://warrendelray.com/blog/",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7285638.jpg?t=1711684729"
+    },
+    {
+      "title": "2brothersdistillers Blog",
+      "feed_url": "https://www.2brothersdistillers.com/feed/",
+      "website_url": "https://www.2brothersdistillers.com/blog/",
+      "description": "James Two Brothers Distillery is a micro distillery for small boutique-style production of beverage. James Two Brothers Distillers is a local distillery in Ocala, FL. They make and sell handcrafted spirits",
+      "followers": {
+        "facebook": 619
+      },
+      "image_url": "https://i1.feedspot.com/7251726.jpg?t=1710331097"
+    },
+    {
+      "title": "Liquor Depot Tampa",
+      "feed_url": "https://www.liquordepottampa.com/depot-news?format=rss",
+      "website_url": "https://www.liquordepottampa.com/depot-news",
+      "description": "Liquor Depot all began 30 years ago and has continued to flourish in to the family owned and operated establishment it is today. Beginning with a single location, Frank Lawson began to build the business and acquire more locations. Up until two years ago, there were four different locations with a wide variety of names. (Liquor Depot / City Liquors / Pix Liquors / VIP Liquors) As the business and industry evolved it was time for Frank to either sell the business or offer an opportunity to his son, Trey.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7251725.jpg?t=1707827537"
+    }
+  ]
+}

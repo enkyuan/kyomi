@@ -1,0 +1,66 @@
+{
+  "category": "Delaware Music",
+  "source_url": "https://rss.feedspot.com/delaware_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mix 99.5 WJBR",
+      "feed_url": "https://wjbr.com/feed/",
+      "website_url": "https://wjbr.com/category/music/",
+      "description": "Your mix from The 80's to now. Covers music news, releases and latest albums.",
+      "followers": {
+        "facebook": 16000,
+        "twitter": 3000,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5314092.jpg?t=1629464841"
+    },
+    {
+      "title": "The Honey Badgers Blog",
+      "feed_url": "https://www.honeybadgerfolk.com/blog?format=rss",
+      "website_url": "https://www.honeybadgerfolk.com/blog",
+      "description": "Latest news, concerts and Q&As by The Honey Badgers.The Honey Badgers is a contemporary folk duo bringing distinctive harmonies and sincere Americana sounds to stages across the east coast.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 938,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5314052.jpg?t=1629461002"
+    },
+    {
+      "title": "OperaDelaware Blog",
+      "feed_url": "https://www.operade.org/odblog?format=rss",
+      "website_url": "https://www.operade.org/odblog",
+      "description": "Get the latest on OD events, ticket deals & more.OperaDelaware is a professional non-profit opera company with a reputation for excellence in both opera and arts education.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 1100,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5314062.jpg?t=1629462105"
+    },
+    {
+      "title": "IN Wilmington \u00bb Music",
+      "feed_url": "https://inwilmde.com/blog/category/music/feed/",
+      "website_url": "https://inwilmde.com/blog/category/music/",
+      "description": "Get up to date information on live music events.IN Wilmington covers information on everything from arts, culture, live music events, and more.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 7600,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5314071.jpg?t=1629462927"
+    },
+    {
+      "title": "Solfeg.io Blog",
+      "feed_url": "https://solfeg.io/feed",
+      "website_url": "https://solfeg.io/blog",
+      "description": "Lesson plans, practical teacher's guides videos, and blog articles.Solfeg.io is an interactive app for learning and teaching music. Built for a truly immersive learning experience that excites the senses.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 114,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5314069.jpg?t=1629462437"
+    }
+  ]
+}

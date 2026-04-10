@@ -1,0 +1,29 @@
+{
+  "category": "Green News",
+  "source_url": "https://rss.feedspot.com/green_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Green, Ohio",
+      "feed_url": "https://www.cityofgreen.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofgreen.org/civicalerts.aspx",
+      "description": "Get the latest news, city highlights, community events, and economic development news from the City of Green, Ohio.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5157389.jpg?t=1590759211"
+    },
+    {
+      "title": "FOX 8 \u00bb Green",
+      "feed_url": "https://fox8.com/tag/green-news/feed/",
+      "website_url": "https://fox8.com/tag/green-news/",
+      "description": "Cleveland's own Fox 8 provides breaking news, weather alerts and topics that impact you. Get the latest news and updates about Green brought to you by the team at fox8.com.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5157381.jpg"
+    }
+  ]
+}

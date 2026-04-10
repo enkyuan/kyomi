@@ -1,0 +1,34 @@
+{
+  "category": "Australian Songwriting",
+  "source_url": "https://rss.feedspot.com/australian_songwriting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Australian Songwriters Association",
+      "feed_url": "https://www.asai.org.au/feed/",
+      "website_url": "https://www.asai.org.au/news/",
+      "description": "Australian songwriters association was founded in Melbourne in 1979 by Tom Louch. It is a national, non-profit organization with members that supports songwriters and their craft by giving emerging Australian songwriters opportunities for encouragement and instruction, by recognizing and promoting its established members. They want to help members improve professionally by offering information, general guidance, performance opportunities. Go through their blog to know about their magazines, events, news, videos, contests, and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4780192.jpg?t=1609144008"
+    },
+    {
+      "title": "Surviving Childlessness \u00bb Songwriting",
+      "feed_url": "https://stephpenny.com.au/category/songwriting/feed/",
+      "website_url": "https://stephpenny.com.au/category/songwriting/",
+      "description": "Browse the blog to know about Steph Penny's music, books, experiences, articles, and more. She is a singer and songwriter and publish her original songs online. Her writing is a little quirky and always honest, and seeks to inspire Christians to live for Christ. In her spare time she works as a psychologist and helps individuals struggling with addiction and mental health issues.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5662497.jpg?t=1693916040"
+    },
+    {
+      "title": "Abbey Road Institute Blog",
+      "feed_url": "https://abbeyroadinstitute.com.au/blog/feed/",
+      "website_url": "https://abbeyroadinstitute.com.au/blog/",
+      "description": "Abbey Road Institute is a specialist music production school established at the world-famous Abbey Road Studios in London in 2015. They combine that heritage with a unique collaboration with Australia's most iconic and longest-running recording facility studios to deliver a professional one-year advanced Diploma of Music. They will develop you as a rounded music industry professional, with technical skills, knowledge and expertise. Take a walk through their blog and learn more about music, courses, articles, experiences, programs, etc.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 1700,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5662495.jpg?t=1693574303"
+    }
+  ]
+}

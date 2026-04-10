@@ -1,0 +1,100 @@
+{
+  "category": "Opinion News",
+  "source_url": "https://rss.feedspot.com/opinion_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The New York Times \u00bb Opinion",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/opinion/rss.xml",
+      "website_url": "https://www.nytimes.com/section/opinion",
+      "description": "Follow us to keep up with the opinion section, editorials, and guest essays of The New York Times. The New York Times is an American daily newspaper with a worldwide readership. The New York Times seeks the truth and helps people understand the world.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4740287.jpg?t=1660203296"
+    },
+    {
+      "title": "News-Herald \u00bb Opinion",
+      "feed_url": "https://www.news-herald.com/opinion/feed/",
+      "website_url": "https://www.news-herald.com/opinion/",
+      "description": "Get opinions, breaking news, latest headlines, local news, crime & safety news, sports, and entertainment coverage that fits your life. The News-Herald is a local news organization that covers Lake and Geauga counties.",
+      "followers": {
+        "facebook": 39700,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/5431261.jpg?t=1660203576"
+    },
+    {
+      "title": "Los Angeles Times \u00bb Opinion",
+      "feed_url": "https://www.latimes.com/opinion.rss",
+      "website_url": "https://www.latimes.com/opinion",
+      "description": "Get opinions, op-eds, letters to the editor, analyses, and policy ideas from the Los Angeles Times. The Los Angeles Times is the leading news organization in the West with the resources and commitment to cover important stories including breaking news, entertainment, sports, politics, and more.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5431260.jpg?t=1660203602"
+    },
+    {
+      "title": "Boston Herald \u00bb Opinion",
+      "feed_url": "https://www.bostonherald.com/opinion/feed/",
+      "website_url": "https://www.bostonherald.com/opinion/",
+      "description": "Explore the opinion, editorials, op-eds, and commentary, columns from Howie Carr, Adriana Cohen, the Boston Herald editorial board, and more. Get breaking news, local news, sports, politics, entertainment, opinion, and weather reports in Boston Herald daily newspaper.",
+      "followers": {
+        "facebook": 158300,
+        "twitter": 145000,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/5240746.jpg?t=1661408427"
+    },
+    {
+      "title": "The Guardian \u00bb Opinion",
+      "feed_url": "https://www.theguardian.com/uk/commentisfree/rss",
+      "website_url": "https://www.theguardian.com/uk/commentisfree",
+      "description": "Read the latest opinion, analysis, and discussion from The Guardian. The Guardian is a British daily newspaper that brings you news, documentaries, and explainers about current global issues.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/5042457.jpg?t=1660203793"
+    },
+    {
+      "title": "The Seattle Times \u00bb Opinion",
+      "feed_url": "https://www.seattletimes.com/opinion/feed/",
+      "website_url": "https://www.seattletimes.com/opinion/",
+      "description": "Read The Seattle Times Opinion section for staff editorials, columns, and reader commentary on issues important to the local community. As northwest's comprehensive news source, The Seattle Times provides clarity above the clutter, delivering news that matters where, when, and how readers want it.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900,
+        "instagram": 186900
+      },
+      "image_url": "https://i1.feedspot.com/4879180.jpg?t=1614682522"
+    },
+    {
+      "title": "The Daily Telegraph \u00bb Opinion",
+      "feed_url": "https://www.dailytelegraph.com.au/news/opinion/feed",
+      "website_url": "https://www.dailytelegraph.com.au/news/opinion",
+      "description": "Get the complete analysis, comments, editorial columns, and opinions on national and international issues by leading columnists. The Daily Telegraph, known online and elsewhere as The Telegraph, is a daily broadsheet newspaper with trusted news that matters to you. We strive every day to make the lives of our readers better by keeping them informed and advocating on their behalf.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 227500,
+        "instagram": 240900
+      },
+      "image_url": "https://i1.feedspot.com/5431262.jpg?t=1660203705"
+    },
+    {
+      "title": "The San Diego Union-Tribune \u00bb Opinion",
+      "feed_url": "https://www.sandiegouniontribune.com/opinion.rss",
+      "website_url": "https://www.sandiegouniontribune.com/opinion/",
+      "description": "Explore San Diego's most informed opinions, editorials, commentary, and insight into local & national politics, campaigns, elections, and government. The San Diego Union-Tribune is a metropolitan daily newspaper published in San Diego. Get top headlines from the Union-Tribune on sports, business, and more.",
+      "followers": {
+        "facebook": 259700,
+        "twitter": 217100,
+        "instagram": 75800
+      },
+      "image_url": "https://i1.feedspot.com/5431259.jpg?t=1660203160"
+    }
+  ]
+}

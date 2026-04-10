@@ -1,0 +1,91 @@
+{
+  "category": "Disco Music",
+  "source_url": "https://rss.feedspot.com/disco_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "FEEL MY BICEP",
+      "feed_url": "http://www.feelmybicep.com/feed/",
+      "website_url": "http://www.feelmybicep.com/",
+      "description": "FEEL MY BICEP Blog includes mix tapes and tracks of various electronic music genres.",
+      "followers": {
+        "twitter": 62400,
+        "instagram": 419100
+      },
+      "image_url": "https://i1.feedspot.com/327010.jpg?t=1610972017"
+    },
+    {
+      "title": "The World Of The Disco Orchestral",
+      "feed_url": "http://disco-orchestral.blogspot.com/feeds/posts/default",
+      "website_url": "http://disco-orchestral.blogspot.com/",
+      "description": "This blog is dedicated only to the Disco music in instrumental and orchestral version with renowned arrangers and concert artists from the 70's and 80's, this is the essence, the base, the glamor and the wonderful symphony that lasts over time.",
+      "followers": {
+        "twitter": 113
+      },
+      "image_url": "https://i1.feedspot.com/3918467.jpg?t=1622273126"
+    },
+    {
+      "title": "House of Disco Blog",
+      "feed_url": "http://thehouseofdisco.com/feed/",
+      "website_url": "http://thehouseofdisco.com/blog/",
+      "description": "A London based blog, record label and events series that leans heavily on Disco & House.",
+      "followers": {
+        "facebook": 36200,
+        "twitter": 9100,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5010393.jpg?t=1622273110"
+    },
+    {
+      "title": "Disco Classic Blog",
+      "feed_url": "http://discoclassic70s.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://discoclassic70s.blogspot.com/",
+      "description": "This blog describes the classic disco music scene in the 70's.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5010427.jpg"
+    },
+    {
+      "title": "70 Disco Nights Blog",
+      "feed_url": "http://70disconights.blogspot.com/feeds/posts/default",
+      "website_url": "http://70disconights.blogspot.com/",
+      "description": "This blog gives information on disco music in the 70's.",
+      "followers": {
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/455002.jpg?t=1622273206"
+    },
+    {
+      "title": "Classic 70s and 80s Disco London Blog",
+      "feed_url": "http://www.sheen-resistance.com/feed/",
+      "website_url": "https://www.sheen-resistance.com/blog/",
+      "description": "The Sheen Resistance bring funktastic nights of disco, funk, soul and 70s & 80s dance classics to venues across London and the South East.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 834,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5010436.jpg?t=1622273140"
+    },
+    {
+      "title": "Haute Mobile Disco Blog",
+      "feed_url": "https://www.hautemobiledisco.com/musicblog?format=RSS",
+      "website_url": "https://www.hautemobiledisco.com/musicblog",
+      "description": "A music and event blog for Haute Mobile Disco.\u00a0 Our blog is where we share our latest music jams, event tips and images from our parties.\u00a0 Our style is: Indie, Electronic, Soul, Funk, Hip Hop, DJ, Remix, Rustic, Modern, Music, and more.",
+      "followers": {
+        "facebook": 220,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5010396.jpg?t=1622273153"
+    },
+    {
+      "title": "Discobelle",
+      "feed_url": "http://www.discobelle.net/feed/",
+      "website_url": "https://www.bjornjeffery.com/category/blog-archive/",
+      "description": "Discobelle.net is a blog that focuses on free downloads of club music. We post MP3, videos or just fun stuff that we find.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 14100
+      },
+      "image_url": "https://i1.feedspot.com/199176.jpg?t=1619692054"
+    }
+  ]
+}

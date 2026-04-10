@@ -1,0 +1,28 @@
+{
+  "category": "Weymouth News",
+  "source_url": "https://rss.feedspot.com/weymouth_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wicked Local",
+      "feed_url": "https://www.wickedlocal.com/",
+      "website_url": "https://www.wickedlocal.com/",
+      "description": "Weymouth News delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5150936.jpg?t=1589612789"
+    },
+    {
+      "title": "Town of Weymouth",
+      "feed_url": "https://www.weymouth.ma.us/news/111/feed",
+      "website_url": "https://www.weymouth.ma.us/news",
+      "description": "Keep up to date with the latest local news and alerts about the Town of Weymouth, Massachusetts.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5150935.jpg?t=1589612571"
+    }
+  ]
+}

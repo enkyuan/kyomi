@@ -1,0 +1,53 @@
+{
+  "category": "UK Women Running",
+  "source_url": "https://rss.feedspot.com/uk_women_running_rss_feeds",
+  "feeds": [
+    {
+      "title": "Women's Running",
+      "feed_url": "https://www.womensrunning.co.uk/feed/",
+      "website_url": "https://www.womensrunning.co.uk/",
+      "description": "Women's Running focuses on women's running training advice for 5K, 10K, half marathons and marathons, female-specific kit reviews, and women's running shoe reviews. Women's Running Magazine is the UK's lifestyle magazine for women who run. The magazine has been going for more than 12 years, and in that time it has inspired thousands of women to enjoy running and to progress further than they ever thought possible.",
+      "followers": {
+        "facebook": 231900,
+        "twitter": 45000,
+        "instagram": 65800
+      },
+      "image_url": "https://i1.feedspot.com/4842068.jpg?t=1607327428"
+    },
+    {
+      "title": "The Runner Beans",
+      "feed_url": "https://therunnerbeans.com/feed/",
+      "website_url": "https://therunnerbeans.com/",
+      "description": "Focuses on marathon training, running tips, recipes, nutrition advice, and kit reviews. Authored by Charlie Watson, a Registered Dietitian, author of Cook Eat Run, and thirteen-time marathoner.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 12000,
+        "instagram": 86500
+      },
+      "image_url": "https://i1.feedspot.com/4399832.jpg?t=1611237995"
+    },
+    {
+      "title": "Lazy Girl Running Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/RZFvG",
+      "website_url": "https://www.lazygirlrunning.com/blog",
+      "description": "The blog ran by Laura Fountain who is a UK Athletics coach in running fitness, aims to provide practical running advice on run coaching, marathon running, injuries, and running gears.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 6100,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4399625.jpg?t=1607145334"
+    },
+    {
+      "title": "The PhD Runner",
+      "feed_url": "https://thephdrunner.com/feed/",
+      "website_url": "https://thephdrunner.com/",
+      "description": "Emma Neachell is a running blogger based between London and Birmingham, England. She writes about running, fitness, food, and the trials and tribulations of life.",
+      "followers": {
+        "facebook": 36,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4473118.jpg?t=1658986701"
+    }
+  ]
+}

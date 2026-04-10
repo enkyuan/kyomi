@@ -1,0 +1,64 @@
+{
+  "category": "Castle Rock News",
+  "source_url": "https://rss.feedspot.com/castle_rock_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Town of Castle Rock",
+      "feed_url": "https://www.crgov.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.crgov.com/CivicAlerts.aspx?CID=1",
+      "description": "Nestled between Denver and Colorado Springs, the Town of Castle Rock is a flourishing community. Home to roughly 70,000 residents, the Town boasts gorgeous mountain views, more than 6,000 acres of coveted open spaces, and plenty of hometown charm. Here, we provide information to the Castle Rock city and community. Follow this feed for the latest news, city alerts, economic, environment development, election news, and much more.",
+      "followers": {
+        "facebook": 32000,
+        "twitter": 9800,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5147089.jpg?t=1626333757"
+    },
+    {
+      "title": "FOX31 Denver \u00bb Castle Rock",
+      "feed_url": "https://kdvr.com/tag/castle-rock/feed/",
+      "website_url": "https://kdvr.com/tag/castle-rock/",
+      "description": "FOX31 Denver is the FOX television affiliate in Denver, Colorado, broadcasting 8 1/2 hours of live programming each weekday. In the past three years, FOX31 Denver has won 15 Emmys from the National Academy of Television Arts and Sciences including Emmys for general assignment reporting, program promotion, and investigative journalism. Subscribe this feed for the latest news and updates in castle rock brought to you by the team at FOX31 Denver.",
+      "followers": {
+        "facebook": 773700,
+        "twitter": 219600,
+        "instagram": 73300
+      },
+      "image_url": "https://i1.feedspot.com/5147081.jpg?t=1588579694"
+    },
+    {
+      "title": "Denver7 \u00bb Castle Rock",
+      "feed_url": "https://www.thedenverchannel.com/news/front-range/castle-rock.rss",
+      "website_url": "https://www.denver7.com/news/front-range/castle-rock",
+      "description": "Founded in 1953 and acquired by the E.W. Scripps Company in 2011, Denver7 has for decades been dedicated to broadcasting news and information that matters to Coloradans. We will be relentless in providing accurate, unbiased coverage of relevant issues from multiple perspectives. We will approach news through a lens that is reflective of the world in which we live and is presented with heart and compassion.",
+      "followers": {
+        "facebook": 830800,
+        "twitter": 323900,
+        "instagram": 107900
+      },
+      "image_url": "https://i1.feedspot.com/5147080.jpg?t=1588579042"
+    },
+    {
+      "title": "Castle Rock News Press",
+      "feed_url": "https://coloradocommunitymedia.com/castle-rock-news-press//rss/",
+      "website_url": "https://coloradocommunitymedia.com/castle-rock-news-press/",
+      "description": "The Castle Rock News-Press is one of 20 community newspapers published by Colorado Community Media. We are Colorado's largest local community media outlet. We reach and actively engage more than 300,000 local community members each week with our digital channels and our 18 metro Denver print publications. As the only local news resource in the Metro-Denver area focused on helping readers and community members enjoy a better life, we are integral to the fabric of the communities. We are trusted and local.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5147079.jpg"
+    },
+    {
+      "title": "CBS Colorado \u00bb Castle Rock",
+      "feed_url": "https://denver.cbslocal.com/tag/castle-rock/feed/",
+      "website_url": "https://www.cbsnews.com/colorado/tag/castle-rock/",
+      "description": "Colorado is a special place. All of us who live here take an active interest in protecting our state, and working together to make it even better. Our state is facing many difficult issues -- violence in our cities, exploding growth, affordable housing, energy development, and more.We do not shy away from reporting on those issues -- and report on the issues that impact.",
+      "followers": {
+        "facebook": 531300,
+        "twitter": 231700
+      },
+      "image_url": "https://i1.feedspot.com/5147082.jpg?t=1588580966"
+    }
+  ]
+}

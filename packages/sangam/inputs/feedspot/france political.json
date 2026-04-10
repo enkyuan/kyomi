@@ -1,0 +1,42 @@
+{
+  "category": "France Political",
+  "source_url": "https://rss.feedspot.com/france_political_rss_feeds",
+  "feeds": [
+    {
+      "title": "Midi Libre \u00bb Politics",
+      "feed_url": "https://www.midilibre.fr/actu/politique/rss.xml",
+      "website_url": "https://www.midilibre.fr/actu/politique/",
+      "description": "News from the south and in pictures by Midi Libre! This section features articles on politics.",
+      "followers": {
+        "facebook": 383900,
+        "twitter": 177800,
+        "instagram": 102100
+      },
+      "image_url": "https://i1.feedspot.com/5347959.jpg?t=1638262474"
+    },
+    {
+      "title": "L'Humanit\u00e9 \u00bb Politics",
+      "feed_url": "https://www.humanite.fr/sections/politique/feed",
+      "website_url": "https://www.humanite.fr/sections/politique",
+      "description": "L'Humanit\u00e9, the newspaper founded by Jean Jaur\u00e8s, is a free medium at the service of progressive alternatives. Read the latest news about politics, political parties and more",
+      "followers": {
+        "facebook": 872400,
+        "twitter": 399100,
+        "instagram": 322500
+      },
+      "image_url": "https://i1.feedspot.com/5348048.jpg?t=1638262506"
+    },
+    {
+      "title": "The Local \u00bb Politics",
+      "feed_url": "https://www.thelocal.fr/tag/politics/feed/",
+      "website_url": "https://www.thelocal.fr/tag/politics",
+      "description": "Daily news from France written in English by native English-speaking journalists. The Local provides an entertaining blend of France's latest news headlines, politics, sport, business, and features.",
+      "followers": {
+        "facebook": 124100,
+        "twitter": 27700,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5347946.jpg?t=1638262463"
+    }
+  ]
+}

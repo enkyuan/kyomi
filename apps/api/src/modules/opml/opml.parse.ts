@@ -40,39 +40,37 @@ function dedupeXmlUrls(entries: OpmlOutlineEntry[]): string[] {
   return urls;
 }
 
-/**
- * Parse OPML 1.x/2.x body outlines and return deduped feed URLs (order preserved).
- */
-export function parseOpmlFeeds(xml: string): string[] {
-  if (xml.length > OPML_MAX_BYTES) {
-    throw new AppError("OPML payload exceeds maximum size", {
-      status: 413,
-      code: "OPML_TOO_LARGE",
-      details: { maxChars: OPML_MAX_BYTES },
-    });
+function assertWithinSizeLimit(xml: string): void {
+  if (xml.length <= OPML_MAX_BYTES) {
+    return;
   }
+  throw new AppError("OPML payload exceeds maximum size", {
+    status: 413,
+    code: "OPML_TOO_LARGE",
+    details: { maxChars: OPML_MAX_BYTES },
+  });
+}
 
+function parseOpmlXml(xml: string): unknown {
   const parser = new XMLParser({
     ignoreAttributes: false,
     attributeNamePrefix: "",
   });
-
-  let parsed: unknown;
   try {
-    parsed = parser.parse(xml);
+    return parser.parse(xml);
   } catch {
     throw new AppError("Could not parse OPML XML", { status: 400, code: "OPML_PARSE_FAILED" });
   }
+}
 
+function getOpmlBody(parsed: unknown): Record<string, unknown> {
   if (typeof parsed !== "object" || parsed === null) {
     throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
   }
-
   const root = (parsed as Record<string, unknown>).opml;
   if (typeof root !== "object" || root === null) {
     throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
   }
-
   const body = (root as Record<string, unknown>).body;
   if (body === undefined || body === null) {
     throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
@@ -83,9 +81,30 @@ export function parseOpmlFeeds(xml: string): string[] {
   if (typeof body !== "object") {
     throw new AppError("Invalid OPML document", { status: 400, code: "OPML_INVALID" });
   }
+  return body as Record<string, unknown>;
+}
+
+function assertOutlineCountLimit(urls: string[]): void {
+  if (urls.length <= OPML_MAX_OUTLINES) {
+    return;
+  }
+  throw new AppError("Too many feeds in OPML", {
+    status: 400,
+    code: "OPML_TOO_MANY",
+    details: { max: OPML_MAX_OUTLINES, found: urls.length },
+  });
+}
+
+/**
+ * Parse OPML 1.x/2.x body outlines and return deduped feed URLs (order preserved).
+ */
+export function parseOpmlFeeds(xml: string): string[] {
+  assertWithinSizeLimit(xml);
+  const parsed = parseOpmlXml(xml);
+  const body = getOpmlBody(parsed);
 
   const collected: OpmlOutlineEntry[] = [];
-  for (const o of asOutlineArray((body as Record<string, unknown>).outline)) {
+  for (const o of asOutlineArray(body.outline)) {
     collectFromOutline(o, collected);
   }
 
@@ -93,13 +112,7 @@ export function parseOpmlFeeds(xml: string): string[] {
   if (urls.length === 0) {
     throw new AppError("No feed URLs found in OPML", { status: 400, code: "OPML_NO_FEEDS" });
   }
-  if (urls.length > OPML_MAX_OUTLINES) {
-    throw new AppError("Too many feeds in OPML", {
-      status: 400,
-      code: "OPML_TOO_MANY",
-      details: { max: OPML_MAX_OUTLINES, found: urls.length },
-    });
-  }
+  assertOutlineCountLimit(urls);
 
   return urls;
 }

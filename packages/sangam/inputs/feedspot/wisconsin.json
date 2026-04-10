@@ -1,0 +1,517 @@
+{
+  "category": "Wisconsin",
+  "source_url": "https://rss.feedspot.com/wisconsin_rss_feeds",
+  "feeds": [
+    {
+      "title": "Isthmus",
+      "feed_url": "https://isthmus.com/api/rss/content.rss",
+      "website_url": "https://isthmus.com/",
+      "description": "Isthmus is a Madison, Wisconsin's alt-weekly covering local news, politics, restaurants, beer, music, movies, arts and entertainment, restaurants, dining, and events.",
+      "followers": {
+        "facebook": 32200,
+        "twitter": 42000,
+        "instagram": 35900
+      },
+      "image_url": "https://i1.feedspot.com/4923339.jpg?t=1620824716"
+    },
+    {
+      "title": "WisPolitics",
+      "feed_url": "https://www.wispolitics.com/feed/",
+      "website_url": "https://www.wispolitics.com/",
+      "description": "WisPolitics is a Wisconsin's premier online political news source, with thousands of pages of useful information and articles that are a resource to anyone who wants to be informed about Wisconsin politics. Get accurate, balanced, and timely inside information delivered to your desktop from WisPolitics.com",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 17500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4922369.jpg?t=1620824723"
+    },
+    {
+      "title": "WEDC",
+      "feed_url": "https://wedc.org/feed/",
+      "website_url": "https://wedc.org/",
+      "description": "In Wisconsin is dedicated to providing the information needed to those looking to relocate or expand their business to Wisconsin.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4922626.jpg?t=1620824733"
+    },
+    {
+      "title": "State Bar of Wisconsin | Wisconsin Law Blog",
+      "feed_url": "https://feeds.feedburner.com/SBW_News",
+      "website_url": "https://www.wisbar.org/Pages/default.aspx",
+      "description": "State Bar of Wisconsin provides the delivery of legal services and promoting the professional interests of Wisconsin lawyers.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4922969.jpg?t=1620824741"
+    },
+    {
+      "title": "Wisconsin DNR Forestry News",
+      "feed_url": "https://forestrynews.blogs.govdelivery.com/feed/",
+      "website_url": "https://forestrynews.blogs.govdelivery.com/",
+      "description": "The Wisconsin DNR Forestry News is for everyone who enjoys and cares about Wisconsin forests. The posts will share highlights of the Wisconsin DNR Division of Forestry programs and management of the forest resources in Wisconsin.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4922681.jpg?t=1620824816"
+    },
+    {
+      "title": "Wisconsin Law Journal",
+      "feed_url": "https://wislawjournal.com/feed/",
+      "website_url": "https://wislawjournal.com/",
+      "description": "Wisconsin Law Journal is a legal newspaper dedicated to providing court opinions, verdicts, settlements, appellate decisions, and also legal news to give lawyers information essential to the practice of law in Wisconsin. Since 1986, the Wisconsin Law Journal has provided the latest in news and information lawyers and judges need to stay up-to-date.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4922905.jpg?t=1680249424"
+    },
+    {
+      "title": "What I'd Rather Be Talking About",
+      "feed_url": "https://abbeyalgiers.substack.com/feed",
+      "website_url": "https://abbeyalgiers.substack.com/",
+      "description": "What I'd Rather Be Talking About is a weekly newsletter highlighting things that caught my attention in wellness, travel, career, and life. This includes podcasts, streaming, reads, and more. I've also been known to get a little deep at times.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5621251.jpg?t=1688983323"
+    },
+    {
+      "title": "Wisconsin Athletics | University of Wisconsin",
+      "feed_url": "https://uwbadgers.com/rss",
+      "website_url": "https://uwbadgers.com/",
+      "description": "This is an official website for the athletics in Wisconsin and also find latest news items for Wisconsin Badgers and University of Wisconsin.",
+      "followers": {
+        "facebook": 839000,
+        "twitter": 384100,
+        "instagram": 329500
+      },
+      "image_url": "https://i1.feedspot.com/4922611.jpg?t=1599296294"
+    },
+    {
+      "title": "WisPolitics \u00bb Opinion | Wisconsin Politics Blog",
+      "feed_url": "https://www.wispolitics.com/category/opinion/feed/",
+      "website_url": "https://www.wispolitics.com/category/opinion/",
+      "description": "This blog provides you latest updates, news and opinion regarding politics in Wisconsin.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 17500
+      },
+      "image_url": "https://i1.feedspot.com/4923486.jpg?t=1620824920"
+    },
+    {
+      "title": "Wisconsin Watch",
+      "feed_url": "https://wisconsinwatch.org/feed/",
+      "website_url": "https://wisconsinwatch.org/",
+      "description": "Wisconsin Watch is a nonpartisan, nonprofit investigative news outlet. They increase the quality and quantity of investigative reporting in Wisconsin while training current and future investigative journalists. Its work fosters an informed citizenry and strengthens democracy.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 10800,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4922759.jpg?t=1750309324"
+    },
+    {
+      "title": "Wisconsin Mommy",
+      "feed_url": "https://www.wisconsinmommy.com/feed/",
+      "website_url": "https://www.wisconsinmommy.com/",
+      "description": "Maureen Fitzgerald is a Milwaukee, Wisconsin influencer, brand enthusiast, and strategist. Wisconsin Mommy is a friendly lifestyle blog in the Milwaukee area that shares parenting tips, reviews, travel, recipes as well as local events for Wisconsin parents.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 45500,
+        "instagram": 25100
+      },
+      "image_url": "https://i1.feedspot.com/4923506.jpg?t=1597752185"
+    },
+    {
+      "title": "Miss Northerner Blog",
+      "feed_url": "https://www.missnortherner.com/feed/",
+      "website_url": "https://www.missnortherner.com/blog/",
+      "description": "Hi, my name is Kristen! I'm a photographer, travel writer, and entrepreneur currently living in Wisconsin with my husband and our cat Luna. I created Miss Northerner in 2017 and since then, it's become one of the largest personal travel & lifestyle blogs dedicated to the Midwest. I love showcasing the beauty of this part of the US and all it has to offer. From beautiful outdoor landscapes to unique stays, my goal is to share my personal travel experiences to help inspire others.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 281,
+        "instagram": 180200
+      },
+      "image_url": "https://i1.feedspot.com/4923142.jpg?t=1620824936"
+    },
+    {
+      "title": "Special Olympics Wisconsin",
+      "feed_url": "https://specialolympicswisconsin.org/feed/",
+      "website_url": "https://specialolympicswisconsin.org/",
+      "description": "Special Olympics Wisconsin provides year-round sports opportunities to more than 10,000 athletes of any age and skill level, across the state.",
+      "followers": {
+        "facebook": 34600,
+        "twitter": 4100,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4922341.jpg?t=1620824949"
+    },
+    {
+      "title": "RENEW Wisconsin",
+      "feed_url": "https://www.renewwisconsin.org/feed/",
+      "website_url": "https://www.renewwisconsin.org/blog/",
+      "description": "RENEW Wisconsin is a nonprofit organization that promotes renewable energy in Wisconsin. Find here the latest updates on policies and programs that expand solar power, wind power, biogas, local hydropower and geothermal energy.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4922741.jpg?t=1620824954"
+    },
+    {
+      "title": "On Point",
+      "feed_url": "https://www.wisconsinappeals.net/feed/",
+      "website_url": "https://www.wisconsinappeals.net/",
+      "description": "On Point is the law blog of the Wisconsin State Public Defender that provides information about important developments in the law. The Wisconsin State Public Defender's Office (SPD) provides legal representation for persons who are accused of crimes or are defendants in certain specified civil matters, and who meet statutory financial eligibility criteria.",
+      "followers": {
+        "facebook": 230,
+        "twitter": 95
+      },
+      "image_url": "https://i1.feedspot.com/4922292.jpg?t=1680250454"
+    },
+    {
+      "title": "Miles Paddled | Wisconsin Kayaking & Canoeing River Trips and Reviews",
+      "feed_url": "https://milespaddled.com/feed/",
+      "website_url": "https://milespaddled.com/",
+      "description": "Miles Paddled documents canoe and kayak trips on rivers and creeks throughout Wisconsin.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 290
+      },
+      "image_url": "https://i1.feedspot.com/4922711.jpg?t=1620824968"
+    },
+    {
+      "title": "Wisconsin Family Law Info Blog",
+      "feed_url": "https://wisconsinfamilylaw.info/table-of-contents/feed/",
+      "website_url": "https://wisconsinfamilylaw.info/table-of-contents/",
+      "description": "Wisconsin Family Law info is a blog that provides up-to-date legal information related to all aspects of divorce and family law in Wisconsin.",
+      "followers": {
+        "facebook": 264
+      },
+      "image_url": "https://i1.feedspot.com/4923515.jpg?t=1620824976"
+    },
+    {
+      "title": "Recollection Wisconsin | Wisconsin History Blog",
+      "feed_url": "https://recollectionwisconsin.org/feed",
+      "website_url": "https://recollectionwisconsin.org/",
+      "description": "This site brings together digital cultural heritage resources from Wisconsin libraries, archives, museums and historical societies and shares them with the world.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4923215.jpg?t=1620824980"
+    },
+    {
+      "title": "Wisconsin Humanities Council",
+      "feed_url": "https://wisconsinhumanities.org/feed/",
+      "website_url": "https://wisconsinhumanities.org/",
+      "description": "The Wisconsin Humanities Council supports and creates programs that use history, culture and discussion to strengthen community life for everyone in Wisconsin.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 853
+      },
+      "image_url": "https://i1.feedspot.com/4922961.jpg?t=1620825570"
+    },
+    {
+      "title": "Wisconsin Farmers Union",
+      "feed_url": "https://www.wisconsinfarmersunion.com/blog-feed.xml",
+      "website_url": "https://www.wisconsinfarmersunion.com/",
+      "description": "Wisconsin Farmers Union is a member-driven organization committed to enhancing the quality of life for farmers, rural communities and all people. Follow this blog to know more about Wisconsin Farmers.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 1600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4923079.jpg?t=1620825582"
+    },
+    {
+      "title": "Wisconsin Justice Initiative Blog",
+      "feed_url": "https://www.wjiinc.org/blog/feed",
+      "website_url": "https://www.wjiinc.org/blog",
+      "description": "WJI works to improve the quality of justice in Wisconsin by encouraging civic engagement and debate about the justice system.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 300
+      },
+      "image_url": "https://i1.feedspot.com/4922285.jpg?t=1620825591"
+    },
+    {
+      "title": "Common Cause Wisconsin | Wisconsin Campaign Finance, Ethics and Law",
+      "feed_url": "https://www.commoncausewisconsin.org/feeds/posts/default?alt=rss",
+      "website_url": "https://www.commoncausewisconsin.org/",
+      "description": "Common Cause Wisconsin focus on campaign finance, ethics and lobby reform, open meetings law and other issues concerning the promotion and maintenance of clean, open, responsive and accountable government.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4923048.jpg?t=1620825634"
+    },
+    {
+      "title": "Snapshot Wisconsin Blog",
+      "feed_url": "https://blog.snapshotwisconsin.org/feed/",
+      "website_url": "https://blog.snapshotwisconsin.org/",
+      "description": "Snapshot Wisconsin monitor wildlife year-round, using a statewide network of trail cameras and provide data needed for wildlife management decisions.",
+      "followers": {
+        "facebook": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4923353.jpg?t=1665031192"
+    },
+    {
+      "title": "SCOWstats | Blog of Statistical Analyses on the Wisconsin Supreme Court.",
+      "feed_url": "https://scowstats.com/feed/",
+      "website_url": "https://scowstats.com/",
+      "description": "SCOWstats is a blog that offers numerical analysis of the voting by Wisconsin Supreme Court justices on diverse issues.",
+      "followers": {
+        "twitter": 312
+      },
+      "image_url": "https://i1.feedspot.com/4922886.jpg?t=1620825660"
+    },
+    {
+      "title": "Wisconsin Explorer | Wisconsin Places, Activities, Adventures, History",
+      "feed_url": "https://wisconsin-explorer.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://wisconsin-explorer.blogspot.com/",
+      "description": "Wisconsin Explorer is a journal of travel and leisure to destinations in Wisconsin and the Midwest.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4922671.jpg?t=1620824930"
+    },
+    {
+      "title": "What Riva Wore",
+      "feed_url": "https://whatrivawore.com/feed/",
+      "website_url": "https://whatrivawore.com/",
+      "description": "My name is Riva Treasure. I've created this blog to share my personal style and my daily outfits. I love styling and mixing unexpected pieces. I'm a Milwaukee-based fashion and lifestyle blogger on good hair days, on bad hair days I believe in the restorative magic of wine and dry shampoo.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 96
+      },
+      "image_url": "https://i1.feedspot.com/5234162.jpg?t=1610004822"
+    },
+    {
+      "title": "One Wisconsin Now | Wisconsin Non-Profit Blog",
+      "feed_url": "https://onewisconsinnow.org/feed/",
+      "website_url": "https://onewisconsinnow.org/",
+      "description": "One Wisconsin Now is a non-profit, non-partisan issue advocacy organization with a vision of a Wisconsin with equal economic opportunity for all and is an affiliate of ProgressNow.",
+      "followers": {
+        "facebook": 33000,
+        "twitter": 14000,
+        "instagram": 752
+      },
+      "image_url": "https://i1.feedspot.com/4922912.jpg?t=1620824958"
+    },
+    {
+      "title": "Fromagination | Wisconsin Cheese Blog",
+      "feed_url": "https://fromagination.com/feed/",
+      "website_url": "https://fromagination.com/cheese-blog/",
+      "description": "Fromagination to see, smell and taste the cheese and learn about how and where it is made in Wisconsin.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 8,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/4923499.jpg?t=1620824986"
+    },
+    {
+      "title": "Wisconsin | The Badger Catholic Blog",
+      "feed_url": "http://badgercatholic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://badgercatholic.blogspot.com/",
+      "description": "The Badger Catholic Blog of Wisconsin brethren, stand fast and hold the traditions which you have learned, whether by word or by our epistle.",
+      "followers": {
+        "facebook": 399,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4755147.jpg?t=1620825586"
+    },
+    {
+      "title": "Urban and Taylor | Wisconsin Injury Law Blog",
+      "feed_url": "https://wisconsininjury.com/blog/feed/",
+      "website_url": "https://wisconsininjury.com/blog/",
+      "description": "Urban & Taylor s.c. is a Wisconsin personal injury law firm dedicated to the professional representation of individuals and families concentrating in personal injury and employee rights litigation.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 85
+      },
+      "image_url": "https://i1.feedspot.com/4923247.jpg?t=1620825609"
+    },
+    {
+      "title": "Southworth & Stamman | Criminal Defense Blog",
+      "feed_url": "https://www.wisdellslaw.com/blog/feed",
+      "website_url": "https://www.wisdellslaw.com/blog",
+      "description": "Southworth & Stamman is a Wisconsin Dells law firm specializing in criminal defense, estate planning, nonprofit representation and immigration law.",
+      "followers": {
+        "facebook": 305,
+        "twitter": 43
+      },
+      "image_url": "https://i1.feedspot.com/4922994.jpg?t=1620825613"
+    },
+    {
+      "title": "Wisconsin Election Integrity Blog",
+      "feed_url": "https://wisconsinelectionintegrity.org/feed/",
+      "website_url": "https://wisconsinelectionintegrity.org/blog/",
+      "description": "Wisconsin Election Integrity focus on the appropriate use and management of election technology and also dedicated to making sure Wisconsin's elections always reflect the will of the People.",
+      "followers": {
+        "facebook": 216
+      },
+      "image_url": "https://i1.feedspot.com/4922966.jpg?t=1620825909"
+    },
+    {
+      "title": "Southeast Wisconsin Fishing Report",
+      "feed_url": "http://sewisconsinfishingreport.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sewisconsinfishingreport.blogspot.com/",
+      "description": "This blog publishes fishing reports for lakes of Southeastern Wisconsin focusing primarily on the lakes in the Oconomowoc, Wisconsin area. Check out regularly for the latest fishing reports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4923104.jpg?t=1620825754"
+    },
+    {
+      "title": "Wisconsin Fishing Reports | Wisconsin Fishing Blog",
+      "feed_url": "http://feeds.feedburner.com/FishingReportsAndProductReviews",
+      "website_url": "http://midwestfisherman.blogspot.com/",
+      "description": "Wisconsin Fishing Reports is a blog that provides fishing reports, fishing techniques and fishing discussion on the lakes and rivers of Northeast Wisconsin.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4923519.jpg?t=1620825717"
+    },
+    {
+      "title": "Food Love Affair",
+      "feed_url": "https://foodloveaffair.com/feed/",
+      "website_url": "https://foodloveaffair.com/",
+      "description": "I am Janet. Welcome to my brand new Wisconsin food blog, where I share recipes from classically simple to healthy and experimental. Join me on my new journey!",
+      "followers": {
+        "facebook": 19,
+        "instagram": 4
+      },
+      "image_url": "https://i1.feedspot.com/5292633.jpg?t=1630078310"
+    },
+    {
+      "title": "Bucky's 5th Quarter",
+      "feed_url": "https://www.buckys5thquarter.com/rss/index.xml",
+      "website_url": "https://www.buckys5thquarter.com/",
+      "description": "Your best source for quality Wisconsin Badgers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 22700,
+        "twitter": 24200
+      },
+      "image_url": "https://i1.feedspot.com/4922314.jpg?t=1668085413"
+    },
+    {
+      "title": "WIwrestle",
+      "feed_url": "https://wiwrestle.com/feed/",
+      "website_url": "https://wiwrestle.com/",
+      "description": "Wisconsin Wrestling is a Wisconsin's number 1 Wrestling Community. Find here the latest updates, news and information regarding wrestling in Wisconsin.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 3800,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4922635.jpg?t=1620824924"
+    },
+    {
+      "title": "Badger of Honor | Wisconsin Badgers Blog & News Website",
+      "feed_url": "https://badgerofhonor.com/feed/",
+      "website_url": "https://badgerofhonor.com/",
+      "description": "Badger of Honor is dedicated to providing top-notch Badgers news, views and original content. This site also serves as a community for like-minded fans to come together to catch up on the latest news and to discuss their passion.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2000,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4922599.jpg?t=1599298108"
+    },
+    {
+      "title": "Wisconsin Frights | Wisconsin hauntings, legends and mysteries",
+      "feed_url": "https://www.wisconsinfrights.com/feed/",
+      "website_url": "https://www.wisconsinfrights.com/",
+      "description": "The Wisconsin Frights blog explores the dark nooks and crannies of these legends and lore, while keeping up with the latest halloween, haunted house and horror news from the backwoods.",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 703,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4923014.jpg?t=1620824971"
+    },
+    {
+      "title": "Kids Forward \u00bb Budget & Taxes",
+      "feed_url": "https://kidsforward.org/feed/",
+      "website_url": "https://kidsforward.org/home/budget-taxes/",
+      "description": "Wisconsin Budget Project is an independent Madison based research group that focuses on tax and budget policy.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4923225.jpg?t=1620825574"
+    },
+    {
+      "title": "Explore Central Wisconsin | Things to Do, Attractions and Events in Central Wisconsin",
+      "feed_url": "https://explorecentralwisconsin.com/",
+      "website_url": "https://explorecentralwisconsin.com/",
+      "description": "Explore Central Wisconsin is your source for event and attraction coverage that matters to you.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4922713.jpg?t=1620824727"
+    },
+    {
+      "title": "Master Gardener Program",
+      "feed_url": "https://mastergardener.extension.wisc.edu/",
+      "website_url": "https://mastergardener.extension.wisc.edu/",
+      "description": "Checkout this site for interesting and latest gardening programs in Wisconsin.",
+      "followers": {
+        "facebook": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4923119.jpg?t=1620824748"
+    },
+    {
+      "title": "Wisconsin Dental Association",
+      "feed_url": "https://www.wda.org/feed",
+      "website_url": "https://www.wda.org/",
+      "description": "Wisconsin Dental Association advance the interests of dental profession by promoting professional excellence and quality oral health care for the public in Wisconsin.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 5700,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4923317.jpg?t=1620824905"
+    },
+    {
+      "title": "Wisconsin State AFL-CIO Blog",
+      "feed_url": "https://wisaflcio.typepad.com/wisconsin-state-afl-cio-blog/index.rdf",
+      "website_url": "https://wisaflcio.typepad.com/",
+      "description": "Wisconsin State AFL-CIO Blog aims to improve the lives of working families to bring economic justice to the workplace and social justice to state and the nation.",
+      "followers": {
+        "facebook": 87700
+      },
+      "image_url": "https://i1.feedspot.com/4922640.jpg?t=1620824945"
+    },
+    {
+      "title": "Wisconsin DUI Law Blog",
+      "feed_url": "https://www.melowskilaw.com/blog/atom.xml",
+      "website_url": "https://www.melowskilaw.com/blog/",
+      "description": "Wisconsin DUI Law blog provides news and other information regarding drunk and driving in Wisconsin.",
+      "followers": {
+        "facebook": 186,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/4923004.jpg?t=1620826160"
+    },
+    {
+      "title": "Madison Eats Food Tours Blog",
+      "feed_url": "https://madisoneatsfoodtours.com/blog/feed/",
+      "website_url": "https://madisoneatsfoodtours.com/blog/",
+      "description": "Madison Eats gives you a taste of Madison, WI's incredible food scene through walking and biking restaurant tours and culinary events. It is locally owned and operated, with award-winning local food writer Otehlia Cassidy at the helm.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 978
+      },
+      "image_url": "https://i1.feedspot.com/4923510.jpg?t=1620825601"
+    },
+    {
+      "title": "Wisconsin Healthcare Financial Mannagement Association Blog",
+      "feed_url": "http://www.hfmawisconsin.com/wi-hfma-blog/feed",
+      "description": "The Wisconsin Chapter of HFMA is the leading personal professional membership organization for healthcare financial managers in and for the state of Wisconsin.",
+      "followers": {
+        "facebook": 120,
+        "twitter": 70
+      },
+      "image_url": "https://i1.feedspot.com/4922936.jpg?t=1620826017"
+    }
+  ]
+}

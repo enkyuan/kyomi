@@ -1,0 +1,18 @@
+{
+  "category": "CNN",
+  "source_url": "https://rss.feedspot.com/cnn_rss_feeds",
+  "feeds": [
+    {
+      "title": "CNN",
+      "feed_url": "https://edition.cnn.com/",
+      "website_url": "https://edition.cnn.com/",
+      "description": "Find the latest breaking news and information on the top stories, weather, business, entertainment, politics, and more. For in-depth coverage, CNN provides special reports, video, audio, photo galleries, and interactive guides.",
+      "followers": {
+        "facebook": 22000000,
+        "twitter": 63600000,
+        "instagram": 21800000
+      },
+      "image_url": "https://i1.feedspot.com/8642358.jpg?t=1752652225"
+    }
+  ]
+}

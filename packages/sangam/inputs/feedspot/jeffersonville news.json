@@ -1,0 +1,30 @@
+{
+  "category": "Jeffersonville News",
+  "source_url": "https://rss.feedspot.com/jeffersonville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "News and Tribune",
+      "feed_url": "https://www.newsandtribune.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.newsandtribune.com/",
+      "description": "News and Tribune focus is on local news, with areas of emphasis on education, government, crime/courts, business and sports reporting. Along with the five-day print content, you'll find regular updates, breaking news, special publications, exclusive video and e-edition online. The News and Tribune is your best source for Southern Indiana news, features and sports.",
+      "followers": {
+        "facebook": 27000,
+        "twitter": 7400,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5155685.jpg?t=1590389180"
+    },
+    {
+      "title": "WISH-TV \u00bb Jeffersonville",
+      "feed_url": "https://www.wishtv.com/tag/jeffersonville-indiana/feed/",
+      "website_url": "https://www.wishtv.com/tag/jeffersonville-indiana/",
+      "description": "WISH-TV delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more. Get the latest news and updates of Jeffersonville city.",
+      "followers": {
+        "facebook": 533,
+        "twitter": 4,
+        "instagram": 25000
+      },
+      "image_url": "https://i1.feedspot.com/5155687.jpg?t=1623157501"
+    }
+  ]
+}

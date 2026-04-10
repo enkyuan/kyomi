@@ -1,0 +1,54 @@
+{
+  "category": "Ex-Mormon",
+  "source_url": "https://rss.feedspot.com/ex_mormon_rss_feeds",
+  "feeds": [
+    {
+      "title": "Concerned Christians Blog",
+      "feed_url": "https://concernedchristians.com/feed/",
+      "website_url": "https://concernedchristians.com/blog/",
+      "description": "Explore our blog to know more about our faith and how we help exmormons. Concerned Christians is a ministry dedicated to helping people to leave Mormonism and embrace Biblical Christianity.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5403696.jpg?t=1653628218"
+    },
+    {
+      "title": "Proud Ex-Mormon",
+      "feed_url": "https://fearlessapostate.tumblr.com/rss",
+      "website_url": "https://fearlessapostate.tumblr.com/",
+      "description": "This is a blog about my religious trauma. I am an ex Mormon with autism, Stubbornly finding my place in the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403700.jpg?t=1653998970"
+    },
+    {
+      "title": "Ex-Mormon Domme Blog",
+      "feed_url": "https://www.exmormondomme.com/blog-feed.xml",
+      "website_url": "https://www.exmormondomme.com/blog",
+      "description": "Ex-Mormon Domme is your Your Go-To Source for BDSM Services in the SLC Valley. Explore the blog for resources on kink/fetish of various kinds.",
+      "followers": {
+        "twitter": 30
+      },
+      "image_url": "https://i1.feedspot.com/5403697.jpg?t=1653458533"
+    },
+    {
+      "title": "Wasmormon.org Blog",
+      "feed_url": "https://wasmormon.org/feed/",
+      "website_url": "https://wasmormon.org/blog/",
+      "description": "Latest blog posts and thoughts about mormon faith crisis and finding support for doubters. Also read was mormon stories, or those who have stepped away from the faith for various reasons.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 660,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5591145.jpg?t=1686045695"
+    },
+    {
+      "title": "Letters from a Broad Blog",
+      "feed_url": "http://lfab-uvm.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lfab-uvm.blogspot.com/",
+      "description": "The Adventures of a Friendly French-American ExMormon Atheist Mom Living in Switzerland.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403699.jpg?t=1653629419"
+    }
+  ]
+}

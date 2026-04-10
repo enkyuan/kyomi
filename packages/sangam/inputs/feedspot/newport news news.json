@@ -1,0 +1,40 @@
+{
+  "category": "Newport News News",
+  "source_url": "https://rss.feedspot.com/newport_news_virginia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WAVY.com \u00bb Newport",
+      "feed_url": "https://www.wavy.com/news/local-news/newport-news/feed/",
+      "website_url": "https://www.wavy.com/news/local-news/newport-news/",
+      "description": "WAVY.com is known and respected website for breaking news, weather sports, and streaming video. We tell local Norfolk news & weather stories, and we do what we do to make Norfolk, Chesapeake, Newport News, Hampton, Portsmouth, Virginia Beach, and Suffolk & the rest of Virginia a better place to live.",
+      "followers": {
+        "facebook": 642900,
+        "twitter": 254800,
+        "instagram": 129800
+      },
+      "image_url": "https://i1.feedspot.com/5139586.jpg?t=1587029137"
+    },
+    {
+      "title": "Daily Press",
+      "feed_url": "https://www.dailypress.com/feed/",
+      "website_url": "https://www.dailypress.com/",
+      "description": "Part of the Tribune Publishing, the Daily Press News Feed brings forward the latest news stories covering local Crime, Politics, Business, Sports, Arts & Entertainment scenes. Founded in 1896, The Daily Press delivers you the stories that matter most, written without bias, so you can make informed decisions.",
+      "followers": {
+        "facebook": 62300,
+        "twitter": 65500
+      },
+      "image_url": "https://i1.feedspot.com/5470642.jpg?t=1669121052"
+    },
+    {
+      "title": "The Virginian-Pilot \u00bb Newport",
+      "feed_url": "https://www.pilotonline.com/location/virginia/newport-news/feed/",
+      "website_url": "https://www.pilotonline.com/location/virginia/newport-news/",
+      "description": "Dive into the top news stories from Newport updated daily. The Virginian-Pilot builds upon a legacy of commitment to community, ethics, and strong journalism to report original, timely, and accurate news information. Through our webpage, we deliver fast and happening news stories right to your screens.",
+      "followers": {
+        "facebook": 177000,
+        "twitter": 143200
+      },
+      "image_url": "https://i1.feedspot.com/5499772.jpg?t=1674650817"
+    }
+  ]
+}

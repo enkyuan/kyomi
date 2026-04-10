@@ -1,0 +1,52 @@
+{
+  "category": "York News",
+  "source_url": "https://rss.feedspot.com/york_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "ABC27 News \u00bb York",
+      "feed_url": "https://www.abc27.com/news/local/york/feed/",
+      "website_url": "https://www.abc27.com/news/local/york/",
+      "description": "ABC27 is a local source for breaking news, latest headlines, severe weather, sports, and traffic in Harrisburg. We cover the following Pennsylvania counties: Dauphin, Lancaster, York, Adams, Cumberland, Perry, and Lebanon. We're Central PA's leader in news, sports & information. follow this feed to read the latest news and breaking headlines on what's happening in York city, Pennsylvania.",
+      "followers": {
+        "facebook": 297200,
+        "twitter": 110900
+      },
+      "image_url": "https://i1.feedspot.com/5133569.jpg"
+    },
+    {
+      "title": "abc27 \u00bb York",
+      "feed_url": "https://www.abc27.com/local-news/york/feed/",
+      "website_url": "https://www.abc27.com/local-news/york/",
+      "description": "Get York daily news headlines, breaking news stories, and in-depth reports around the clock here. Abc27.com is Your Local News Source for Central PA. It represents the digital home of ABC27 News and provides nonstop critical news and weather information to Pennsylvanians online.",
+      "followers": {
+        "facebook": 297200,
+        "twitter": 110900,
+        "instagram": 25900
+      },
+      "image_url": "https://i1.feedspot.com/5507323.jpg?t=1676290991"
+    },
+    {
+      "title": "York Daily Record",
+      "feed_url": "https://www.ydr.com/",
+      "website_url": "https://www.ydr.com/",
+      "description": "Serving more readers more often in more ways than ever before. The York Daily Record connects the people of York, Pa., with the news and information they need, using the internet, mobile platforms, e-editions, social media, email alerts, magazines and, of course, newspapers. Read the latest crime, entertainment, food, traffic and weather news from York, Pa.",
+      "followers": {
+        "facebook": 136100,
+        "twitter": 37500,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5133568.jpg?t=1585735149"
+    },
+    {
+      "title": "York Dispatch",
+      "feed_url": "https://www.yorkdispatch.com/",
+      "website_url": "https://www.yorkdispatch.com/",
+      "description": "The York Dispatch is the best source for news about York County, Pa. Our mission is to be the key provider of news that helps residents of York County, Pennsylvania, make intelligent decisions as citizens and consumers and to be the preferred information source for matters of significant community interest.",
+      "followers": {
+        "facebook": 59100,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/5133570.jpg?t=1585734481"
+    }
+  ]
+}

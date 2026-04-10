@@ -1,0 +1,96 @@
+{
+  "category": "Australian Museum",
+  "source_url": "https://rss.feedspot.com/australian_museum_rss_feeds",
+  "feeds": [
+    {
+      "title": "Queensland Museum Blog",
+      "feed_url": "https://blog.qm.qld.gov.au/feed/",
+      "website_url": "https://blog.qm.qld.gov.au/",
+      "description": "Queensland Museum is a museum of natural history, cultural heritage, science and human achievement that tells the changing story of Queensland.",
+      "followers": {
+        "facebook": 80300,
+        "twitter": 11500,
+        "instagram": 36800
+      },
+      "image_url": "https://i1.feedspot.com/5335806.jpg?t=1751278151"
+    },
+    {
+      "title": "Abbey Museum Blog",
+      "feed_url": "https://abbeymuseum.com.au/feed/",
+      "website_url": "https://abbeymuseum.com.au/blog/",
+      "description": "The Abbey Museum of Art and Archaeology is an historical museum with unique collections located in North Brisbane.",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 804,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5335810.jpg?t=1635245299"
+    },
+    {
+      "title": "Hellenic Museum Blog",
+      "feed_url": "https://www.hellenic.org.au/blog-feed.xml",
+      "website_url": "https://www.hellenic.org.au/blog",
+      "description": "This blog features articles that have to do exclusively with the Australian Museum. Hellenic Museum is Australia's only museum dedicated to preserving and showcasing Greek art, history, and culture. One of the largest Greek diaspora communities in the world, our mission is to inspire a passion for Hellenic culture from the ancient to the contemporary.",
+      "followers": {
+        "facebook": 9800,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/5341025.jpg?t=1664876153"
+    },
+    {
+      "title": "Australian National Surfing Museum Blog",
+      "feed_url": "https://australiannationalsurfingmuseum.com.au/feed/",
+      "website_url": "https://australiannationalsurfingmuseum.com.au/blog/",
+      "description": "The Australian National Surfing Museum is recognised as the worlds largest surfing museum and the home of Australian surfing heritage and beach culture.",
+      "followers": {
+        "facebook": 12300,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5335808.jpg?t=1635246220"
+    },
+    {
+      "title": "SA Maritime Museum",
+      "feed_url": "https://maritime.history.sa.gov.au/feed/",
+      "website_url": "https://maritime.history.sa.gov.au/",
+      "description": "The SA Maritime Museum preserves the oldest nautical collection in Australia, a collection that was begun in 1872. The Museum presents its exhibition gallery, lighthouse and boats in the heart of Port Adelaide, South Australia's first heritage precinct.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5335809.jpg?t=1635242408"
+    },
+    {
+      "title": "Queanbeyan Museum Blog",
+      "feed_url": "https://queanbeyanmuseum.org.au/feed/",
+      "website_url": "https://queanbeyanmuseum.org.au/museum-blog/",
+      "description": "At the Queanbeyan Museum, we tell the stories of the place and the people who lived here in those early days before Australia was a nation right up until the present day. The Queanbeyan Historical Museum was first established in 1969 and is located in the historic Police Sergeant's Residence, 10 Farrer Pl, Queanbeyan, constructed in 1876.",
+      "followers": {
+        "facebook": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5335807.jpg?t=1635241577"
+    },
+    {
+      "title": "Western Australian Museum",
+      "feed_url": "https://museum.wa.gov.au/feed",
+      "website_url": "https://museum.wa.gov.au/explore/blogs",
+      "description": "This blog features articles that have to do exclusively with Australian Museum. The Western Australian Museum's mission is to inspire and challenge people to explore and share their identity, culture, environment and sense of place, and to experience and contribute to the diversity and creativity of their world.",
+      "followers": {
+        "facebook": 60800,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/5341083.jpg?t=1636453198"
+    },
+    {
+      "title": "Sydney Jewish Museum Blog",
+      "feed_url": "https://sydneyjewishmuseum.com.au/feed/",
+      "website_url": "https://sydneyjewishmuseum.com.au/blog/",
+      "description": "The Sydney Jewish Museum gives history a voice through collecting and preserving historic objects, commemorating and educating, with a mission to challenge visitors' perceptions of morality, social justice, democracy and human rights.",
+      "followers": {
+        "facebook": 20400,
+        "twitter": 2100,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4922454.jpg?t=1620817602"
+    }
+  ]
+}

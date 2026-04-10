@@ -1,0 +1,16 @@
+{
+  "category": "Patchogue News",
+  "source_url": "https://rss.feedspot.com/patchogue_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Patchogue Today",
+      "feed_url": "https://patchogue.today/category/news/feed",
+      "description": "Local news, events and reporting right from the streets of Patchogue, NY.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/5171569.jpg?t=1594968408"
+    }
+  ]
+}

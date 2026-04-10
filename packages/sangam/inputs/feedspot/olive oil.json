@@ -1,0 +1,511 @@
+{
+  "category": "Olive Oil",
+  "source_url": "https://rss.feedspot.com/olive_oil_rss_feeds",
+  "feeds": [
+    {
+      "title": "Figaro Olive Oil Blog",
+      "feed_url": "https://figarooliveoil.com/blogs/feed",
+      "website_url": "https://figarooliveoil.com/blogs/",
+      "description": "Explore our blog section to find the latest recipes and health benefits of extra virgin olive oil by Figaro. Visit Figaro now to get authentic Italian, and Indian cuisines and recipes. Figaro Olive Oil is an excellent all-purpose cooking oil brand dedicated to enriching and healthifying dishes on your table everyday.",
+      "followers": {
+        "facebook": 115200,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5502497.jpg?t=1675257131"
+    },
+    {
+      "title": "The Olive Oil Company Blog",
+      "feed_url": "https://theoliveoilcompany.ca/blogs/blog.atom",
+      "website_url": "https://theoliveoilcompany.ca/blogs/blog",
+      "description": "Welcome to The Olive Oil Co., a family business owned and operated by Mark and Noreen Borne. Our goal is to provide our customers with the freshest Ultra Premium Extra Virgin Olive Oil from around the world. We follow the crush in the northern and southern hemispheres to bring you fresh EVOO from countries like Portugal, Spain, Greece, Italy, the United States, Chile, and Australia, to name a few.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 44,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5502474.jpg?t=1675256974"
+    },
+    {
+      "title": "Corto Olive Oil Blog",
+      "feed_url": "https://corto-olive.com/blogs/corto-blog.atom",
+      "website_url": "https://corto-olive.com/blogs/corto-blog#news",
+      "description": "At Corto, we do right by our fruit, producing only the freshest and most honest olive oil around. Our farming family's food traditions reach back generations to Lucca, Italy. Knowing how fresh olive oil is supposed to taste created our passion for crafting exceptionally fresh Fall harvest olive oil at the peak of flavor.",
+      "followers": {
+        "facebook": 9200,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/5524705.jpg?t=1679468427"
+    },
+    {
+      "title": "EXAU Olive Oil Blog",
+      "feed_url": "https://exauoliveoil.com/blogs/recipes.atom",
+      "website_url": "https://exauoliveoil.com/blogs/recipes",
+      "description": "EXAU Olive Oil specializes in the production of high-quality Italian extra virgin olive oil and was founded by us, husband and wife, Giuseppe and Skyler. At EXAU Olive Oil we produce and share incredible Italian EVOO. We believe in transparency. And we celebrate family traditions.",
+      "followers": {
+        "facebook": 899,
+        "instagram": 17000
+      },
+      "image_url": "https://i1.feedspot.com/5524699.jpg?t=1679468377"
+    },
+    {
+      "title": "The Olive Press",
+      "feed_url": "https://www.theolivepress.com/recipes/rss.xml",
+      "website_url": "https://www.theolivepress.com/recipes",
+      "description": "We believe sustainable practices, carefully tended fruit and mindful farming builds the foundation for quality. Our mission is to always delight our customers with artisan foods and collectibles that they can enjoy and savor as part of their healthy and happy life. We insist on using only the best hand-harvested fruit, traditional milling, patient racking, taste evaluation, and small lot bottling.",
+      "followers": {
+        "facebook": 7100,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5524703.jpg?t=1679469052"
+    },
+    {
+      "title": "Rocky Mountain Olive Oil Blog",
+      "feed_url": "https://rockymountainoliveoil.com/blogs/recipes.atom",
+      "website_url": "https://rockymountainoliveoil.com/blogs/recipes",
+      "description": "Hi, we're Andi and Shaun! We're a wife and husband team with a blended family that loves living a healthy lifestyle. Rocky Mountain Olive Oil was founded in 2011 and in 2020 when we had the opportunity to buy it, we jumped! After years of cooking and baking healthy meals using Extra Virgin Olive Oil from places like Italy, Greece, Chile, and Argentina and Balsamics from Modena, Italy, we decided it was time to help growers, pressers, and makers bring ultra-premium, delicious Extra Virgin Olive Oil and Balsamic Vinegar to the US market.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5524704.jpg?t=1679468418"
+    },
+    {
+      "title": "International Olive Council Blog",
+      "feed_url": "https://www.internationaloliveoil.org/feed/",
+      "website_url": "https://www.internationaloliveoil.org/blog/",
+      "description": "The International Olive Council is the world's only international intergovernmental organization in the field of olive oil and table olives. It was set up in Madrid, Spain, in 1959, under the auspices of the United Nations. It produces olives or products derived from olives, such as olive oil.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5524533.jpg?t=1679460602"
+    },
+    {
+      "title": "Fresh Pressed Olive Oil",
+      "feed_url": "https://freshpressedoliveoil.com/category/newsletters/feed/",
+      "website_url": "https://freshpressedoliveoil.com/category/newsletters/",
+      "description": "T.J. Robinson is one of the world's most respected authorities on all matters of olive oil. He is dedicated to importing rare fresh-pressed olive oil, the most flavorful and most healthful extra virgin olive oil on the planet.",
+      "followers": {
+        "facebook": 13600,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5524700.jpg?t=1679468953"
+    },
+    {
+      "title": "Passolivo",
+      "feed_url": "https://www.pasolivo.com/collections/recipes.atom",
+      "website_url": "https://www.pasolivo.com/collections/recipes/",
+      "description": "Hand-crafted extra virgin olive oils at Pasolivo are made from our 6000 olive trees, hand-picked, and pressed in our own mill. Get Olive oil recipes that taste like golden liquid sunshine from Pasolivo in Paso Robles, California.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 1800,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5524715.jpg?t=1679468490"
+    },
+    {
+      "title": "Stonehouse Olive Oil Blog",
+      "feed_url": "https://www.stonehouseoliveoil.com/blogs/news.atom",
+      "website_url": "https://www.stonehouseoliveoil.com/blogs/news",
+      "description": "Since 1996, we have been proud to be a part of the farmer's market revolution in the United States. As high-quality foods are often expensive to produce, being able to sell our products directly to customers enables us to keep prices as low as possible, while maintaining sound farming and fair labor practices.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5524698.jpg?t=1679468850"
+    },
+    {
+      "title": "Judy Ridgway",
+      "feed_url": "https://www.judyridgway.co.uk/feed/",
+      "website_url": "https://www.judyridgway.co.uk/",
+      "description": "Judy Ridgway is an author, journalist, and broadcaster and one of the few independent experts on olive oil outside the producing countries. Here she imparts valuable insights and experiences gained from traveling the olive oil world and tasting oils from the around the Mediterranean as well as from North America and the southern hemisphere.",
+      "followers": {
+        "twitter": 733
+      },
+      "image_url": "https://i1.feedspot.com/7295118.jpg?t=1712750090"
+    },
+    {
+      "title": "NAOOA",
+      "feed_url": "https://www.aboutoliveoil.org/rss.xml",
+      "website_url": "https://www.aboutoliveoil.org/",
+      "description": "The North American Olive Oil Association is committed to supplying North American consumers with quality products in a fair and competitive environment; fostering a clear understanding of the different grades of olive oil; and to expounding the benefits of olive oil in nutrition, health, and the culinary arts.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 4600,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5502476.jpg?t=1675256987"
+    },
+    {
+      "title": "Rich Glen Olive Estate Blog",
+      "feed_url": "https://richglenoliveoil.com/blogs/recipes.atom",
+      "website_url": "https://richglenoliveoil.com/blogs/recipes",
+      "description": "Our story begins in a small shop with a small team. With nothing but passion and a dream, our brand was born. Our passionate, innovative, and rapidly growing team now creates over 170 products on the farm. We offer Victorian regional food experiences on the Murray & olive oil products in Australia.",
+      "followers": {
+        "facebook": 72900,
+        "instagram": 22200
+      },
+      "image_url": "https://i1.feedspot.com/5502471.jpg?t=1675256957"
+    },
+    {
+      "title": "The Olive Oil Lovers Blog",
+      "feed_url": "https://grapevineoliveoilcompany.com/the-olive-oil-lovers-blog/f.rss",
+      "website_url": "https://grapevineoliveoilcompany.com/the-olive-oil-lovers-blog",
+      "description": "Grapevine Olive Oil Company was opened in the Spring of 2010 in Historic, Grapevine, TX. We offer the best selection of small farm olive oils, artisan vinegar, spices, a fantastic selection of locally roasted whole bean coffee, specialty foods you won't find at the local grocery store, olive oil skin care, local honey, gourmet chocolates, kitchen decor, and gadgets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5502475.jpg?t=1675257274"
+    },
+    {
+      "title": "Critida Blog",
+      "feed_url": "https://critida.com/feed/",
+      "website_url": "https://critida.com/blog/",
+      "description": "CRITIDA Bio Cretan Olive Oil's vision is to continue to export our products to existing markets and to expand our export business to new ones. Our participation in international food and beverage fairs is an integral part of this vision. Our goal is for our company to be a model production unit for Greek olive oil standardization companies and to establish itself in the domestic and international olive oil market.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 30,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5502484.jpg?t=1675257034"
+    },
+    {
+      "title": "Italica Blog",
+      "feed_url": "https://italicaoliveoil.com/feed/",
+      "website_url": "https://italicaoliveoil.com/blog-health/",
+      "description": "We are located on the old stomping grounds of the ancient Roman province of Italica, historically renowned for producing the world's finest olives. We are keeping their tradition alive by ensuring authenticity like no other, rooted in premium quality. We cultivate our olives with keen attention to detail, ensuring olives and olive oil with unsurpassed taste and versatility. Discover some content about our olive oil & health benefits for skin, for our lips, personal care, and ancient uses of olive oil.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5502480.jpg?t=1675257819"
+    },
+    {
+      "title": "Selo Olive Oil Blog",
+      "feed_url": "https://seloolive.com/blogs/olive-oil.atom",
+      "website_url": "https://seloolive.com/blogs/olive-oil",
+      "description": "My name is Martin. I grew up in Canada. Selo Olive Oil is my family's ultra-premium extra virgin olive oil. Our premium extra virgin olive oil is hand-picked and first cold pressed in the Dalmatia region of Croatia, in Zadar County.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 1800,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5502489.jpg?t=1675257916"
+    },
+    {
+      "title": "The Virgin Olive Oiler Blog",
+      "feed_url": "https://www.thevirginoliveoiler.com/blogs/julies-blog.atom",
+      "website_url": "https://www.thevirginoliveoiler.com/blogs/julies-blog",
+      "description": "The Virgin Olive Oiler is an online shop and a blog, selling and writing about olive oil. One can find articles, delicious recipes, health tips, and more.",
+      "followers": {
+        "facebook": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5502478.jpg?t=1675257717"
+    },
+    {
+      "title": "North Conway Olive Oil Blog",
+      "feed_url": "https://ncoliveoil.com/blogs/blog-and-recipe-collection.atom",
+      "website_url": "https://ncoliveoil.com/blogs/blog-and-recipe-collection",
+      "description": "Our friendly staff will share their knowledge of oils and vinegars and make recommendations based on your cooking habits and tastes. We offer some of the freshest extra virgin olive oils and balsamics in the world, most crushed within the past few months, and we encourage you to sample as many of our 85 varieties as you like. Discover how a dash of the right fresh olive oil, infused with flavors that complement your dish, can bring your cooking to another level.",
+      "followers": {
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5502477.jpg?t=1677106672"
+    },
+    {
+      "title": "Rocky Mountain Olive Oil Company Blog",
+      "feed_url": "https://rockymountainoliveoil.com/blogs/lifestyle-blog.atom",
+      "website_url": "https://rockymountainoliveoil.com/blogs/lifestyle-blog",
+      "description": "Hi, we're Andi and Shaun! We're a wife and husband team with a blended family that loves living a healthy lifestyle. Here at Rocky Mountain Olive Oil, we value health above all things and integrate this value into all of our products. Our ultra-premium Extra Virgin Olive Oils have high polyphenol contents and aren't without flavor.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5502481.jpg?t=1677106919"
+    },
+    {
+      "title": "Love & Olive Oil",
+      "feed_url": "https://www.loveandoliveoil.com/feed",
+      "website_url": "https://www.loveandoliveoil.com/",
+      "description": "Sharing delicious food and easy recipes for sweet desserts, easy dinners, creative canning, and more! The culinary adventures of Lindsay and Taylor. They share a love of cooking and found that it was much more enjoyable (and affordable!) for them to cook for themselves instead of going out to eat.",
+      "followers": {
+        "facebook": 185700,
+        "twitter": 16000,
+        "instagram": 124000
+      },
+      "image_url": "https://i1.feedspot.com/5304811.jpg?t=1675257181"
+    },
+    {
+      "title": "Spanish Oil Blog",
+      "feed_url": "https://www.spanish-oil.com/blog/feed/",
+      "website_url": "https://www.spanish-oil.com/blog/",
+      "description": "On Spanish-oil.com you can find a large selection of extra virgin olive oils, directly from Spain. We always guarantee the new harvest olive oil and freshly filled products, thanks to the direct transport from Spain to all over the World.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5502490.jpg?t=1675257081"
+    },
+    {
+      "title": "Havasu Olive And Garlic Blog",
+      "feed_url": "https://havasuoliveandgarlic.com/feed/",
+      "website_url": "https://havasuoliveandgarlic.com/blog/",
+      "description": "We are a family-owned business offering the freshest Extra Virgin Olive Oils from all over the world and the highest quality aged balsamic vinegar from Modena, Italy. We pride ourselves on providing top-notch customer service, and knowledgeable usage suggestions and we are constantly striving to exceed the expectations of all who walk thru our doors or shop with us online!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5502506.jpg?t=1676875738"
+    },
+    {
+      "title": "The Olive Basket Blog",
+      "feed_url": "https://olivebasketonline.com/blogs/news.atom",
+      "website_url": "https://olivebasketonline.com/blogs/news",
+      "description": "At The Olive Basket, we specialize in carrying the freshest possible Extra Virgin Olive oils, authentic Aged Italian Balsamic Vinegars, and a whole lot more to please your palate! Whether you are searching for the perfect gift for the foodie in your life or looking for your next favorite flavor, you are in the right place!",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 564
+      },
+      "image_url": "https://i1.feedspot.com/5502485.jpg?t=1675257471"
+    },
+    {
+      "title": "Olive Oils From Spain",
+      "feed_url": "https://oliveoilsfromspain.org/olive-oil-news/feed/",
+      "website_url": "https://oliveoilsfromspain.org/olive-oil-news/",
+      "description": "Discover their characteristic flavors and aromas, and learn how to recognize them and their Extra Virgin Olive Oils. In our blog, you will find out news, recipes, tips, tricks, and curiosities for liquid gold from Spain. Also, explore tasty recipes for olive oil.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 14900,
+        "instagram": 23100
+      },
+      "image_url": "https://i1.feedspot.com/5502493.jpg?t=1675257100"
+    },
+    {
+      "title": "Olive Oil Lovers Blog",
+      "feed_url": "https://oliveoillovers.com/blogs/our-journal.atom",
+      "website_url": "https://oliveoillovers.com/blogs/our-journal",
+      "description": "Olive Oil Lovers began in 2012 with a love, a passion - perhaps even an obsession - with olive oil. Today, we are the bridge between thousands of consumers and the world's best olive oil producers. We aim to eliminate the confusion by offering a comprehensive selection of the best oils in the world and providing you with the critical information necessary to find the right oil for you.",
+      "followers": {
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5502501.jpg?t=1676871283"
+    },
+    {
+      "title": ".Green",
+      "feed_url": "https://enjoymediterranean.com/feed/",
+      "website_url": "https://enjoymediterranean.com/",
+      "description": "Here you'll never find something made in large food processing plants. We offer natural fresh olive oil, olives, and other farm products. Well, and some wine from independent family wineries in Slovenia. Our stories about olive oil, natural farm products, mediterranean food, mediterranean diet, new products, promotions and sales.",
+      "followers": {
+        "facebook": 106,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/5502488.jpg?t=1675257562"
+    },
+    {
+      "title": "Laconiko Blog",
+      "feed_url": "https://laconiko.com/feed/",
+      "website_url": "https://laconiko.com/blog/",
+      "description": "The love and respect our land, our olive trees, and our traditions while going above and beyond what is expected of us. Our Olive Oil is the reflection of that Passion! We are committed to you and ourselves in offering the highest quality,health-focused product, service, and integrity.",
+      "followers": {
+        "facebook": 7100,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5524702.jpg?t=1679468403"
+    },
+    {
+      "title": "California Olive Oil Council Blog",
+      "feed_url": "https://cooc.com/feed/",
+      "website_url": "https://cooc.com/blog/",
+      "description": "The California Olive Oil Council (COOC) is a trade association dedicated to promoting certified California extra virgin olive oil through education, outreach, and communication. The COOC is committed to upholding the highest standards within the olive oil industry through its Seal Certification Program.",
+      "followers": {
+        "facebook": 4800,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5524696.jpg?t=1679468367"
+    },
+    {
+      "title": "The Olive Oil Taproom",
+      "feed_url": "https://theoliveoiltaproom.com/feed/",
+      "website_url": "https://theoliveoiltaproom.com/news-events/",
+      "description": "The Olive Oil Taproom is an Ultra Premium Extra Virgin Olive Oil & Aged Balsamic Vinegar FREE Tasting Room. We educate about the wonderful health benefits of Ultra Premium Extra Virgin Olive Oil and Aged Balsamic Vinegar. We explain how olive oil should smell, taste and feel. The white pepper sensation and grassiness are indicative of its Bio-phenol content (anti-oxidants) still being in the oil.",
+      "followers": {
+        "twitter": 824,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5524708.jpg?t=1679468661"
+    },
+    {
+      "title": "Tastefully Olive Blog",
+      "feed_url": "https://tastefullyolive.com/blogs/articles.atom",
+      "website_url": "https://tastefullyolive.com/blogs/articles",
+      "description": "Tastefully Olive offers exceptional olive oils and barrel-aged balsamic vinegar that are crafted with a passion for authentic Mediterranean flavors. We take pride in our high standards of sustainability, using eco-friendly practices in our production process. Our olive oil and balsamic vinegar are perfect for any culinary creation, from salad dressings to marinades to drizzling over fresh bread.",
+      "followers": {
+        "facebook": 335,
+        "twitter": 51,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5524532.jpg?t=1679460577"
+    },
+    {
+      "title": "Calolea Olive Oil Blog",
+      "feed_url": "https://calolea.com/feed/",
+      "website_url": "https://calolea.com/blog/",
+      "description": "Calolea's handcrafted olive oil has been certified 'extra virgin' by the California Olive Oil Council and has an acidity level of 0.13%. The olives on the Keller's 100-year-old Mission, Manzanillo, and newly planted Tuscan olive trees are handpicked, custom-milled, and cold-pressed within 24 hours to create the highest quality olive oil possible. Calolea uses organic growing methods only and has grass and olive-fed cattle that graze and sustain their orchards.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5524707.jpg?t=1679468619"
+    },
+    {
+      "title": "Fiore Blog",
+      "feed_url": "https://www.fioreoliveoils.com/blogs/news.atom",
+      "website_url": "https://www.fioreoliveoils.com/blogs/news",
+      "description": "FIORE, which means 'the blossoming flower' in Italian, truly captures the essence of our venture into the education and exploration of extra virgin olive oils and aged balsamic kinds of vinegar in our tasting room. Our tasting rooms enable you to take a global tour of the freshest extra virgin olive oils and the most flavorful balsamic vinegar of Modena, Italy while benefiting from the numerous attributes of health first-hand.",
+      "followers": {
+        "facebook": 7000,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5524701.jpg?t=1679468395"
+    },
+    {
+      "title": "Olio Mio Blog",
+      "feed_url": "https://oliomio.com.au/feed/",
+      "website_url": "https://oliomio.com.au/blog/",
+      "description": "Captivated by the sheer beauty of the property and its spectacular gardens and sweeping views, Lawrie and Lee purchased Olio Mio Estate in 2021, realising their dream of a retreat from city life and a place to welcome family and friends on weekends and holidays. With the support of the small but dedicated Olio Mio Estate team, Lawrie and Lee are continuing the legacy of fine olive oil production started by the estate's former owners.",
+      "followers": {
+        "instagram": 172
+      },
+      "image_url": "https://i1.feedspot.com/5502492.jpg?t=1675257604"
+    },
+    {
+      "title": "Jamonarium Blog",
+      "feed_url": "https://oilarium.com/feed/",
+      "website_url": "https://oilarium.com/blog/",
+      "description": "Jamonarium is an online shop and blog dedicated to catering to those looking for olive oil. Find delicious recipes and order your stock of oil from the Jamonarium.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 422,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5502486.jpg?t=1675257055"
+    },
+    {
+      "title": "Cape Schanck Olive Estate Blog",
+      "feed_url": "https://www.capeschanckestate.com.au/blog/feed/",
+      "website_url": "https://www.capeschanckestate.com.au/blog/",
+      "description": "Our highly acclaimed, single-varietal oils are made from one of five distinct varieties grown and bottled on our family-owned estate. Explore a selection of seasonal, healthy, and easy recipes from our family kitchen to yours.",
+      "followers": {
+        "facebook": 495,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5502487.jpg?t=1675257674"
+    },
+    {
+      "title": "Rancho Azul Y Oro Olive Farm Blog",
+      "feed_url": "https://www.ranchoazulyoro.com/blog-feed.xml",
+      "website_url": "https://www.ranchoazulyoro.com/blog",
+      "description": "Our goal was, and always will be, to produce great olive oil. We encountered challenges, stumbling blocks, and setbacks, but we remained focused on our goal. What we offer is day-to-day meal inspiration, a dynamic, ever-changing recipe page on our website, newsletters providing recipes for seasonal dishes, and active social media pages, combined with our personal standards of excellence in producing world-class extra-virgin olive oil.",
+      "followers": {
+        "facebook": 416,
+        "instagram": 413
+      },
+      "image_url": "https://i1.feedspot.com/5502491.jpg?t=1675257087"
+    },
+    {
+      "title": "Masia El Altet Blog",
+      "feed_url": "https://masiaelaltet.com/blog/feed/",
+      "website_url": "https://masiaelaltet.com/blog/",
+      "description": "Masia El Altet offers olive oil with a unique flavor. They serve oil with the highest quality only. Their blog posts provide information on nutritional value, beauty tips, and recipes for olive oil.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5502510.jpg?t=1675257779"
+    },
+    {
+      "title": "Garlic & Olive Oil Blog",
+      "feed_url": "https://garlicandoliveoil.com/category/blog/feed/",
+      "website_url": "https://garlicandoliveoil.com/category/blog/",
+      "description": "Welcome to Garlic & Olive Oil; I'm your host, Emily Vannoni. I started this blog because I love food. I love to cook, I love to eat and I want you to love it too. Food has always been a huge part of my life. It brings us all together. There is nothing like sitting around the table with your loved ones and truly enjoying a meal, the people, the conversation, the atmosphere, and, of course, the food. I am a home cook, cooking in my actual kitchen, and taking most of the pictures you see with my phone.",
+      "followers": {
+        "facebook": 226,
+        "instagram": 675
+      },
+      "image_url": "https://i1.feedspot.com/5502482.jpg?t=1675257016"
+    },
+    {
+      "title": "Olive Oil People Blog",
+      "feed_url": "https://oliveoil-people.com/blogs/news.atom",
+      "website_url": "https://oliveoil-people.com/blogs/news",
+      "description": "We know firsthand the triumphs and tribulations of olive farming, which means we can empathically represent the growers we work with while ensuring our customers truly appreciate the value of great olive oil. Learn beneficial health tips relating to extra virgin olive oils and stay updated with the latest happenings and events at Olive Oil People Singapore.",
+      "followers": {
+        "instagram": 437
+      },
+      "image_url": "https://i1.feedspot.com/5502473.jpg?t=1675257885"
+    },
+    {
+      "title": "The Olive Scene Blog",
+      "feed_url": "https://theolivescene.com/blogs/the-olive-scene-blog.atom",
+      "website_url": "https://theolivescene.com/blogs/the-olive-scene-blog",
+      "description": "Every one of our olive oils is fresh as we follow the growing seasons of olives in the northern and southern hemispheres. Our producers are setting the bar on the technique of harvesting and pressing olives by using the best of both traditional and modern methods. This combination yields fresh, healthy, and flavorful extra virgin olive oils that are perfect for all types of cuisine.",
+      "followers": {
+        "twitter": 404,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5502498.jpg?t=1675257137"
+    },
+    {
+      "title": "La Panza Olive Oil Blog",
+      "feed_url": "https://lapanzaoliveoil.com/blogs/news.atom",
+      "website_url": "https://lapanzaoliveoil.com/blogs/news",
+      "description": "At La Panza Ranch, we weave together intentional farming practices with state-of-the-art oil presses to produce the award-winning La Panza Olive Oils. Our super-high-density orchards improve consistency in our olive production and fruit quality. Check out our blog section for all information and news related to olive oil, La Panza Ranch, and much more!",
+      "followers": {
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5502483.jpg?t=1675257023"
+    },
+    {
+      "title": "Directo Del Olivar Blog",
+      "feed_url": "https://www.directodelolivar.com/en/olive-oil-blog/feed/",
+      "website_url": "https://www.directodelolivar.com/en/olive-oil-blog/",
+      "description": "DirectodelOlivar.com is a pioneering project for the digital transformation of our traditional cooperative model. To this end, we have made a firm commitment to the Internet and E-commerce, so that you can buy Spanish extra virgin olive oil online, direct from the olive grove to the consumer.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5502500.jpg?t=1675258105"
+    },
+    {
+      "title": "Deoleo",
+      "feed_url": "https://deoleo.com/en/news/feed/",
+      "website_url": "https://greekliquidgold.com/news/",
+      "description": "In households around the world, our olive oil is loved and trusted by consumers to enhance their meals. We are on a mission to inspire everyone involved in the olive oil industry to make a positive difference every single day. As the world's number one olive oil company, we have a valuable opportunity to utilize our scale to encourage change, advocating to protect the heritage of olive oil, and leading our industry in prioritizing responsible business.",
+      "followers": {
+        "twitter": 807
+      },
+      "image_url": "https://i1.feedspot.com/5524695.jpg?t=1679468361"
+    },
+    {
+      "title": "Greek Liquid Gold",
+      "feed_url": "https://greekliquidgold.com/feed/",
+      "website_url": "https://greekliquidgold.com/news/",
+      "description": "Greek Liquid Gold: Authentic Extra Virgin Olive Oil provides information and news about Greek extra virgin olive oil, its quality, health benefits, producers, bottlers, and exporters, the places where it is made, and other facets of the Greek olive oil world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5524534.jpg?t=1679460566"
+    },
+    {
+      "title": "Atlas Olive Oils",
+      "feed_url": "https://www.atlasoliveoils.com/en/news/",
+      "website_url": "https://www.atlasoliveoils.com/en/news/",
+      "description": "Respect for territory and people's love for tradition, and passion for innovation are the fundamental values our extra virgin olive oils hold and retrieve for the real gourmet of all the world. But we are not satisfied with it. We always aim for the highest possible quality to achieve this excellence. That is our belief, our commitment, an ever-new direction towards which we want to go.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5524710.jpg?t=1679468822"
+    },
+    {
+      "title": "The Village Press Blog",
+      "feed_url": "https://thevillagepress.co.nz/feed/",
+      "website_url": "https://thevillagepress.co.nz/blog-recipes/",
+      "description": "The Village Press Ltd is New Zealand's leading extra virgin olive oil producer and sets the standard for fresh and delicious extra virgin olive oil. With more than 20 years' experience producing the highest quality extra virgin olive oil, The Village Press Ltd is an industry pioneer on a mission to show New Zealand what premium extra virgin olive oil really tastes like.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5524706.jpg?t=1679468770"
+    },
+    {
+      "title": "Forest Edge Farm Blog",
+      "feed_url": "https://www.forestedgefarm.com.au/feed/",
+      "website_url": "https://www.forestedgefarm.com.au/our-blog/",
+      "description": "We are a family-owned Olive Grove located in Mount Barker Western Australia. We run our farm on sustainable principles without the use of chemicals. We are also an online shop selling the best quality olive oil. Browse our blog to more about us and how to produce oil.",
+      "followers": {
+        "facebook": 293,
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5502503.jpg?t=1675257230"
+    }
+  ]
+}

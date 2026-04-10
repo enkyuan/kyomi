@@ -1,0 +1,669 @@
+{
+  "category": "Kolkata",
+  "source_url": "https://rss.feedspot.com/kolkata_rss_feeds",
+  "feeds": [
+    {
+      "title": "Deck and Dine",
+      "feed_url": "https://www.deckanddine.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.deckanddine.com/",
+      "description": "Food, travel are essential parts of life,..dressing and styling have been made so..so here we are..with all that we love about the above.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 59,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4748408.jpg?t=1607592192"
+    },
+    {
+      "title": "Keya Seth Aromatherapy",
+      "feed_url": "https://keyaseth.in/blogs/blog.atom",
+      "website_url": "https://keyaseth.in/blogs/blog",
+      "description": "Keya Seth Aromatherapy one of the most trusted names in the Natural Beauty & Wellness sector of India. Keya Seth offers authentic Aromatherapy and Ayurvedic Treatment products for Skin, Hair, and Body.",
+      "followers": {
+        "facebook": 851600,
+        "instagram": 83100
+      },
+      "image_url": "https://i1.feedspot.com/5283444.jpg?t=1621845827"
+    },
+    {
+      "title": "The Times of Bengal",
+      "feed_url": "https://thetimesofbengal.com/feed/",
+      "website_url": "https://thetimesofbengal.com/",
+      "description": "A fully infotainment based news portal working only to promote West Bengal as dreamed by our Chief Minister Mamata Bannerjee.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 516
+      },
+      "image_url": "https://i1.feedspot.com/4748523.jpg?t=1506760271"
+    },
+    {
+      "title": "Debjanir Rannaghar",
+      "feed_url": "https://kitchenofdebjani.com/feed/",
+      "website_url": "https://kitchenofdebjani.com/",
+      "description": "I have started my blog 'Debjanir Rannaghar' in 2011 with an intention to keep records of my cooking ventures and life-stories related to food and obviously, for sharing those with like-minded foodies/food bloggers and to be precise the Blog Debjanir Rannaghar is a novice attempt for sharing Food thoughts",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 1600,
+        "instagram": 102700
+      },
+      "image_url": "https://i1.feedspot.com/4667765.jpg?t=1677670224"
+    },
+    {
+      "title": "Sundarban National Tourism Blog",
+      "feed_url": "https://sundarbannationaltourism.com/blog/feed/",
+      "website_url": "https://sundarbannationaltourism.com/blog/",
+      "description": "Sundarban National Tourism is one of the best sundarban tour operators in West Bengal for experiencing the true essence as well as the charm of Sundarban",
+      "followers": {
+        "facebook": 39
+      },
+      "image_url": "https://i1.feedspot.com/5680032.jpg?t=1695819015"
+    },
+    {
+      "title": "Exploring on Salesforce",
+      "feed_url": "http://santanuboral.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://santanuboral.blogspot.com/",
+      "description": "Santanu Boral is Salesforce MVP and 15 times certified. He is Salesforce certified Application Architect, System Architect, Platform Developer II, Sales Cloud Consultant, Service Cloud Consultant and much more. Follow this Salesforce Developer blog to get tips and tricks for learning Salesforce.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4900614.jpg?t=1608785070"
+    },
+    {
+      "title": "Logo Design India Blog",
+      "feed_url": "https://www.logo-design-india.com/feed/",
+      "website_url": "https://www.logo-design-india.com/blog/",
+      "description": "Logo Design India specializes in designing logos, brochures, flyers, business cards.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 4700,
+        "instagram": 759
+      },
+      "image_url": "https://i1.feedspot.com/4681630.jpg?t=1618646561"
+    },
+    {
+      "title": "Thatware Blog",
+      "feed_url": "https://thatware.co/feed/",
+      "website_url": "https://thatware.co/blogs/",
+      "description": "There are many technical seo companies around the world but THATWARE is recognized as a leader in it. From advanced off page services to professional seo services we are the market leader.Our main value added proposition is ai seo optimization & business seo with cutting edge technologies such as data science, machine learning, semantic engineering, advanced search, and much more. THATWARE offers various types of services. Look around the best offerings across each & get in touch with us to take your online marketing into a whole new level.",
+      "followers": {
+        "facebook": 504200,
+        "twitter": 213,
+        "instagram": 15400
+      },
+      "image_url": "https://i1.feedspot.com/5257116.jpg?t=1615552781"
+    },
+    {
+      "title": "Cherry on Top Blog",
+      "feed_url": "https://cherryontopblog.com/feed",
+      "website_url": "https://cherryontopblog.com/",
+      "description": "Cherry On Top is a beauty and lifestyle blog which specializes in reviewing various beauty and makeup products as well as fashion brands and websites. We provide our readers with forthright views based on personal experiences.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1700,
+        "instagram": 19000
+      },
+      "image_url": "https://i1.feedspot.com/4673589.jpg?t=1606915019"
+    },
+    {
+      "title": "MBBS in Bangladesh Blog",
+      "feed_url": "https://www.mbbsbangladesh.com/feed/",
+      "website_url": "https://www.mbbsbangladesh.com/blog/",
+      "description": "Blog about MBBS Admission in Bangladesh for Indian medical aspirants. Most trusted and visited information portal for foreign Students seeking MBBS abroad from Bangladesh with Low Affordable Fees. Smile Education exclusively promotes Bangladesh Medical Education in the Best Colleges in Bangladesh, from 2011 Smile Education is helping students in none Other than Bangladesh.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5454902.jpg?t=1665403858"
+    },
+    {
+      "title": "Gaylaxy Magazine",
+      "feed_url": "http://www.gaylaxymag.com/feed/",
+      "website_url": "https://www.gaylaxymag.com/articles/",
+      "description": "Gaylaxy is India's leading gay e-magazine. The magazine covers events of gay importance happening in India. The articles range from health, cinema, major LGBT news from India and the world, user stories to issues of importance for the LGBT people.",
+      "followers": {
+        "facebook": 36000,
+        "twitter": 4800,
+        "instagram": 37600
+      },
+      "image_url": "https://i1.feedspot.com/4837712.jpg?t=1611126268"
+    },
+    {
+      "title": "Lizard's Skin Tattoos Blog",
+      "feed_url": "https://www.lizardsskintattoos.com/feed/",
+      "website_url": "https://www.lizardsskintattoos.com/blog/",
+      "description": "Get the latest blog posts about tattoos. Discover tips, news, designs and the history of each style, and secrets about the tattoo world. Lizard's Skin Tattoos is the pioneer Tattoo Studio / Tattoo Parlor in Kolkata.",
+      "followers": {
+        "facebook": 29100,
+        "instagram": 30400
+      },
+      "image_url": "https://i1.feedspot.com/5402996.jpg?t=1653135916"
+    },
+    {
+      "title": "Call Arup",
+      "feed_url": "https://blog.callarup.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.callarup.com/",
+      "description": "Hire your Dedicated Virtual Personal Assistant for manage your all types of General Administrative, Marketing and Business related tasks.",
+      "followers": {
+        "facebook": 559,
+        "twitter": 129,
+        "instagram": 119
+      },
+      "image_url": "https://i1.feedspot.com/4825193.jpg?t=1610792089"
+    },
+    {
+      "title": "Yoga2all",
+      "feed_url": "https://yoga2all.com/feed/",
+      "website_url": "https://yoga2all.com/",
+      "description": "Yoga2all is a complete healthcare blog about yoga, meditation, pranayama, common disease and remedies. This blog has been providing reliable information that is strictly educational that have been helping students, professionals, amateur and families.",
+      "followers": {
+        "facebook": 484,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5086895.jpg?t=1604406506"
+    },
+    {
+      "title": "Go4Expert \u00bb Python",
+      "feed_url": "https://www.go4expert.com/forums/python/index.rss",
+      "website_url": "https://www.go4expert.com/forums/python/",
+      "description": "Join this Python programming help forum, learn to change hairstyles using AI, classify images using Tensorflow, Mobilenet, or Python, and get advice on your questions coupled with a vast variety of tutorials and articles.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5167460.jpg?t=1623647493"
+    },
+    {
+      "title": "World Of Sudoku",
+      "feed_url": "https://akashdoulani.blogspot.com/feeds/posts/default",
+      "website_url": "https://akashdoulani.blogspot.com/",
+      "description": "World Of Sudoku is a blog page by Akash Doulani and here you'll get the most amazing and useful sudoku puzzle. You'll find different volumes of sudoku and others like classic sudoku, hybrid sudoku, odd even cube sudoku, and many more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434987.jpg?t=1661317302"
+    },
+    {
+      "title": "MBA Project Guide Blog",
+      "feed_url": "https://mbaprojectguide.com/feed/",
+      "website_url": "https://mbaprojectguide.com/blog/",
+      "description": "Mba Project Guide provides one stop project writing help for MBA Students on all specializations all over Indian universities. They have collaborated with leading Academic Writers inhouse team to help students crack MBA projects with Mind-blowing content and great score.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5047528.jpg?t=1617259136"
+    },
+    {
+      "title": "StockManiacs Blog",
+      "feed_url": "https://www.stockmaniacs.net/blog/feed/",
+      "website_url": "https://www.stockmaniacs.net/blog/",
+      "description": "StockManiacs is your Guide To The Stock Market. We can show you the exact technique to generate serious income.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5046025.jpg?t=1622804342"
+    },
+    {
+      "title": "Aludecor Blog",
+      "feed_url": "https://blogs.aludecor.com/feed/",
+      "website_url": "https://blogs.aludecor.com/",
+      "description": "Aludecor is a Premium Aluminum Composite Panels manufacturing company with its complete coating and lamination plant in India.",
+      "followers": {
+        "facebook": 94900,
+        "twitter": 2700,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5245061.jpg?t=1613376758"
+    },
+    {
+      "title": "English Blog",
+      "feed_url": "https://englishliteratures.com/feed/",
+      "website_url": "https://englishliteratures.com/",
+      "description": "I am Anupriya Ahmed, mentor of this blog. I welcome you to this wonderful blog on the English language and literature. I completed my Masters in English literature and took up the profession of teaching. I am here to help learners build knowledge of the content and methods of the Language and literature.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5353834.jpg?t=1639569702"
+    },
+    {
+      "title": "Search Engine Magazine",
+      "feed_url": "https://www.searchenginemagazine.com/feed",
+      "website_url": "https://www.searchenginemagazine.com/",
+      "description": "Search Engine Magazine aims to proclaim the latest search news, the best guides and how-tos for the SEO and marketer community",
+      "followers": {
+        "facebook": 511,
+        "instagram": 104
+      },
+      "image_url": "https://i1.feedspot.com/4970975.jpg?t=1623647277"
+    },
+    {
+      "title": "Capital Numbers Blog",
+      "feed_url": "https://www.capitalnumbers.com/blog/feed/",
+      "website_url": "https://www.capitalnumbers.com/blog/",
+      "description": "Capital Numbers is a Digital Production Outsourcing Company. We offer Web, Mobile and Digital Marketing Solutions to start ups, small businesses and to those companies that prefer to either keep their in-house team small or, sub-contract any overflow work they cannot handle with their existing team.",
+      "followers": {
+        "facebook": 14700,
+        "twitter": 1200,
+        "instagram": 873
+      },
+      "image_url": "https://i1.feedspot.com/4764013.jpg?t=1608537622"
+    },
+    {
+      "title": "Poker Guru Forum",
+      "feed_url": "https://pokerguru.in/forums/feed/",
+      "website_url": "https://pokerguru.in/forums/",
+      "description": "Best Online Poker Sites in India. Tap into India's largest online poker resource today! We have poker news, online poker games, poker guides, live coverage, forums, and blogs.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5225904.jpg?t=1607523764"
+    },
+    {
+      "title": "Learning Technology (L & T)",
+      "feed_url": "https://learningtechnologyofficial.com/feed/",
+      "website_url": "https://learningtechnologyofficial.com/",
+      "description": "India's largest educational resources gallery exclusively for Engineers. This website is authored and maintained by Mukesh Sah, He is a B.Tech in Civil Engineering and the founder of LearningTechnology.com. This website offers technical lectures on 'Civil Engineering' from personal field experience.",
+      "followers": {
+        "facebook": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4657034.jpg?t=1617430106"
+    },
+    {
+      "title": "Ganit Charcha",
+      "feed_url": "https://www.ganitcharcha.com/feed/",
+      "website_url": "https://www.ganitcharcha.com/",
+      "description": "Ganit Charcha does not teach Mathematics, it ensures growth of mathematical mind so that we learn to enjoy Mathematics.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 320
+      },
+      "image_url": "https://i1.feedspot.com/5015927.jpg?t=1608213420"
+    },
+    {
+      "title": "MintsRecipes",
+      "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC-N2GFf6Dmna8NZ51vO--Lg",
+      "website_url": "https://www.mintsrecipes.com/all-recipes/",
+      "description": "I am a Food YouTuber from Kolkata, Reshu Drolia. Get best Indian vegetarian only food recipes in Hindi. My channel has all kinds of Indian food ranging from breakfast, snacks, Healthy, lunch and dinner, kids tiffin box recipes , party recipes and many more. Find best Indian breakfast, lunch and dinner recipes here all in Hindi.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 140,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4862268.jpg?t=1623148806"
+    },
+    {
+      "title": "Street Food Loves You",
+      "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCfMrnx4UpYI5PaWhQYtb5jQ",
+      "website_url": "https://streetfoodloves.blogspot.com/",
+      "description": "This Channel is based on basically street food videos. So viewers those who loves street food,fast food,village food specially outside of home food, must watch my channel.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 397
+      },
+      "image_url": "https://i1.feedspot.com/4832299.jpg?t=1623155403"
+    },
+    {
+      "title": "HealthResource4U \u2014 Health Article Blog",
+      "feed_url": "https://www.healthresource4u.com/category/health-and-fitness/feed",
+      "website_url": "https://www.healthresource4u.com/category/health-and-fitness",
+      "description": "The biggest collection of online Health Article blog Resource which mainly focus on general health, fitness, diseases, medicine, treatment, nutrition, health care and many more",
+      "followers": {
+        "facebook": 199100,
+        "twitter": 19000
+      },
+      "image_url": "https://i1.feedspot.com/4839717.jpg?t=1605768875"
+    },
+    {
+      "title": "Stock Market Charts | India Mutual Funds Investment",
+      "feed_url": "https://feeds.feedburner.com/StockMarketChartsIndiaMutualFundsInvestment",
+      "website_url": "http://investmentsfordummieslikeme.blogspot.com/",
+      "description": "Fundamental analysis, technical analysis indicators, BSE Sensex, NSE Nifty, S&P 500, FTSE 100 index chart pattern, Gold and Silver charts, WTI and Brent Crude Oil charts, sharing 25 years experience of investment in stocks and mutual funds for investor education",
+      "followers": {
+        "twitter": 481
+      },
+      "image_url": "https://i1.feedspot.com/389750.jpg?t=1610098031"
+    },
+    {
+      "title": "HealthResource4U",
+      "feed_url": "https://www.healthresource4u.com/feed",
+      "website_url": "https://www.healthresource4u.com/",
+      "description": "Online Health article blog, resource which mainly focus on general health, fitness, diseases, medicine, treatment, nutrition, health care and more.Health Resource is a health and fitness site providing up to date research based health information and news with the emphasis on nutrition and complementary medicine.",
+      "followers": {
+        "facebook": 199100,
+        "twitter": 19000,
+        "instagram": 56
+      },
+      "image_url": "https://i1.feedspot.com/4483976.jpg?t=1600751214"
+    },
+    {
+      "title": "VynZ Research",
+      "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCzz_TShB9odh9MmqEJ7UB3A",
+      "website_url": "https://www.vynzresearch.com/blog",
+      "description": "VynZ Research is a global market research firm offering research, analytics, and consulting services on business strategies. The company focuses on providing valuable insights on various technology verticals.",
+      "followers": {
+        "facebook": 691,
+        "twitter": 90
+      },
+      "image_url": "https://i1.feedspot.com/4999441.jpg"
+    },
+    {
+      "title": "Cult Critic",
+      "feed_url": "https://www.hlc-cultcritic.com/feed/",
+      "website_url": "https://www.hlc-cultcritic.com/",
+      "description": "Cult Critic Film Magazine is the digital publication, created by industry professionals that focuses on the art and business of independent filmmaking.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 199,
+        "instagram": 473
+      },
+      "image_url": "https://i1.feedspot.com/4667512.jpg?t=1668774227"
+    },
+    {
+      "title": "Go4Expert Forum \u00bb Jobs",
+      "feed_url": "https://www.go4expert.com/forums/jobs/index.rss",
+      "website_url": "https://www.go4expert.com/forums/jobs/",
+      "description": "Looking out for jobs & career-related chat boards? Join Go4Expert, a community of tech professionals that provides free help and advice to your questions coupled with a vast variety of tutorials and articles. Learn to create an impressive CV, discuss the opportunities, and ask which career option will suit you.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5178006.jpg?t=1604644305"
+    },
+    {
+      "title": "Django Central",
+      "feed_url": "https://djangocentral.com/feed/",
+      "website_url": "https://djangocentral.com/articles/",
+      "description": "Django Central is an educational site providing content on Python programming and web development to all the programmers and budding programmers across the internet. The main goal of this site is to provide quality tips, tricks, hacks, and other Programming resources that allows beginners to improve their skills.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5289562.jpg?t=1623071515"
+    },
+    {
+      "title": "Go Fitness PRO",
+      "feed_url": "https://gofitnesspro.in/feed/",
+      "website_url": "https://gofitnesspro.in/",
+      "description": "Go Fitness PRO is a health blog that brings you tips and guides to staying fit and success stories, straight from the PROs in the fitness industry. Here we regularly post new articles and news about the latest exercise equipment and insiders' knowledge about the fitness industry!",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5202348.jpg?t=1601455832"
+    },
+    {
+      "title": "Indian Apparel",
+      "feed_url": "https://www.indian-apparel.com/feed/",
+      "website_url": "https://www.indian-apparel.com/",
+      "description": "Indian Apparel Blog that talks about apparel and textile news, events, and fairs. It is India's B2B Apparel hub aiding garment manufacturers, wholesalers, and retailers to trade with each other. Their commitment to ground-breaking editorial remains as strong as ever, and Indian apparel is rightly acknowledged as the essential business tool for apparel and textile agents, distributors, exporters, retailers, and manufacturers around India and other parts of the World. Visit their blog and learn more about news in the dynamic world of apparel and textiles in India and worldwide.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 655
+      },
+      "image_url": "https://i1.feedspot.com/4609889.jpg?t=1615787272"
+    },
+    {
+      "title": "Backpack & Explore",
+      "feed_url": "https://www.backpacknxplore.com/feed",
+      "website_url": "https://www.backpacknxplore.com/blogroll",
+      "description": "Travel Inspiration for people with full-time jobs. Join us as we write the story of our life through Backpack & Explore - our way of discovering life",
+      "followers": {
+        "facebook": 983,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5134726.jpg?t=1608127450"
+    },
+    {
+      "title": "Anurag Roy,Programmer",
+      "feed_url": "https://anurag485.blogspot.com/feeds/posts/default",
+      "website_url": "https://anurag485.blogspot.com/",
+      "description": "Hi! I am Anurag and I have learned about coding from youtube and also from Google and many other apps. I know these programming skills will work in the very long run. In This Blog, You will be getting Programs and Source Codes Of Many Interesting Things Such as Games And many other Interfaces. The Programming languages That are to be used in this blog are Java and Python.",
+      "followers": {
+        "twitter": 321,
+        "instagram": 28400
+      },
+      "image_url": "https://i1.feedspot.com/5218639.jpg?t=1606131477"
+    },
+    {
+      "title": "Multi Vendor Marketplace Platform Blog",
+      "feed_url": "https://wc-marketplace.com/feed/",
+      "website_url": "https://wc-marketplace.com/blog/",
+      "description": "WC Marketplace blog features marketplace ideas, seller strategy, analysis, and discussions on e-commerce multi-vendor web stores.",
+      "followers": {
+        "facebook": 725,
+        "twitter": 636
+      },
+      "image_url": "https://i1.feedspot.com/5288980.jpg?t=1622876424"
+    },
+    {
+      "title": "Moner Alo Blog",
+      "feed_url": "https://moneralo.com/feed/",
+      "website_url": "https://moneralo.com/blog/",
+      "description": "Key topics covered in the blog are stress, anxiety, depression, addiction, yoga, meditation, and child counselling. At Moner Alo, we are devoted to providing quality comprehensive psychiatric services and delivering excellent high quality mental health care.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5299956.jpg?t=1625641212"
+    },
+    {
+      "title": "Uplift Professionals Blog \u00bb US CMA exam",
+      "feed_url": "https://www.upliftprofessionals.in/blog/tag/us-cma-exam/feed/",
+      "website_url": "https://www.upliftprofessionals.in/blog/tag/us-cma-exam/",
+      "description": "We provide 360 degree study support and resources for the prestigious and globally demanded US CMA certification. Uplift Pro is founded by Bhaswati Bhattacharya, an engineer-edupreneur, who believes in a never-say-die passion. We provide study support for the US CMA, CPA and CIA programs by profound faculties from India and abroad.",
+      "followers": {
+        "facebook": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5390205.jpg?t=1650091679"
+    },
+    {
+      "title": "Electric Vehicle Today Blog",
+      "feed_url": "https://electricvehicletoday.com/feed/",
+      "website_url": "https://electricvehicletoday.com/blog/",
+      "description": "Electric vehicle today is the top electric vehicle blog site to get you updated on all the latest developments in the industry. We provide you with the latest news, reviews, and trends on electric cars, bikes and more.",
+      "followers": {
+        "facebook": 72
+      },
+      "image_url": "https://i1.feedspot.com/5422012.jpg?t=1657883698"
+    },
+    {
+      "title": "FLAGS and STAMPS",
+      "feed_url": "http://flagstamps.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://flagstamps.blogspot.com/",
+      "description": "In this blog you will find stamps with flags of the world and all other information related to philately.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4641574.jpg?t=1616497729"
+    },
+    {
+      "title": "Moople Blog",
+      "feed_url": "https://www.moople.in/blog/feed/",
+      "website_url": "https://www.moople.in/blog/",
+      "description": "Hitech Academy is a leading Animation Institute. Their blog provides tips and how to's about animation.",
+      "followers": {
+        "facebook": 53800,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4484173.jpg?t=1607404753"
+    },
+    {
+      "title": "JILS Blog | Journal of Indian Law and Society",
+      "feed_url": "https://jils.blog/feed/",
+      "website_url": "https://jilsblognujs.wordpress.com/",
+      "description": "Journal of Indian Law & Society (formerly the 'Indian Juridical Review' and 'Juridical Review') is a peer-reviewed and student-edited Journal of interdisciplinary studies on law and society. The Journal seeks to present a dedicated forum of debate for work bearing upon the cultural, economic, political and social lives of law in India.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 710
+      },
+      "image_url": "https://i1.feedspot.com/4857594.jpg?t=1611813508"
+    },
+    {
+      "title": "Mommy Tincture",
+      "feed_url": "https://mommytincture.com/feed/",
+      "website_url": "https://mommytincture.com/",
+      "description": "Anupriya shares her experiences and invites parents to share theirs as they grow up with their kids. She is a multitasking and multi passions parenting blogger who writes about every under the sun that relates to kids, women, books and wellness.",
+      "followers": {
+        "facebook": 782,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4767168.jpg?t=1606914410"
+    },
+    {
+      "title": "Travel And Tour World \u00bb Europe",
+      "feed_url": "https://www.travelandtourworld.com/news/article/category/europe-travel-news/feed/",
+      "website_url": "https://www.travelandtourworld.com/news/article/category/europe-travel-news/",
+      "description": "Travel And Tour World, a travel trade media and an information platform, is an all-inclusive and far-reaching B2B online travel magazine. It aspires to build a network of travel professionals across the globe to mark its presence in this increasingly competitive market. Read latest tourism news, online magazine, exclusive interviews and current updates here.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5220830.jpg?t=1639978017"
+    },
+    {
+      "title": "CCLP Worldwide",
+      "feed_url": "https://cclpworldwide.com/?feed=rss2",
+      "website_url": "https://cclpworldwide.com/",
+      "description": "Advancing effective principled education policies in Governments, Higher Education Institutes and Civil Societies for improving Better sustainable Livelihood.",
+      "followers": {
+        "facebook": 849,
+        "twitter": 57
+      },
+      "image_url": "https://i1.feedspot.com/5120797.jpg?t=1620893787"
+    },
+    {
+      "title": "Banking Finance",
+      "feed_url": "https://www.bankingfinance.in/feed",
+      "website_url": "https://godial.cc/blog/",
+      "description": "Banking Finance covers latest banking news, banking articles, finance news, finance articles, Nationalized banks, cooperative banks, Reserve Bank of India, payment banks, credit card, GST news, mutual fund news, stock market, banking statistics and more.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 441
+      },
+      "image_url": "https://i1.feedspot.com/5247743.jpg?t=1614078542"
+    },
+    {
+      "title": "Godial Blog",
+      "feed_url": "https://godial.cc/blog/rss/",
+      "website_url": "https://godial.cc/blog/",
+      "description": "GoDial is an automatic call dialer app for your mobile. It turns your phone into a call center. Import an excel file and start dialing in seconds. Inbuilt advance CRM tracks payments, callbacks, notes, and much more.",
+      "followers": {
+        "facebook": 904,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5220414.jpg?t=1606374979"
+    },
+    {
+      "title": "Travel And Tour World \u00bb Travel Technology",
+      "feed_url": "https://www.travelandtourworld.com/news/article/category/travel-technology-news/feed/",
+      "website_url": "https://www.travelandtourworld.com/news/article/category/travel-technology-news/",
+      "description": "Travel And Tour World publishes news, insight reports, updates, and more on Travel Technology. Travel And Tour World, a travel trade news network and an information platform, is an all-inclusive and far-reaching B2B online travel magazine.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5401204.jpg?t=1652849334"
+    },
+    {
+      "title": "Live Laugh Dressup",
+      "feed_url": "http://www.livelaughdressup.in//feeds/posts/default",
+      "website_url": "http://www.livelaughdressup.in/",
+      "description": "Live Laugh Dressup is a fashion and lifestyle blog for style inspiration, small DIY projects and lot more.",
+      "followers": {
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/4673573.jpg?t=1618232703"
+    },
+    {
+      "title": "Football Monk",
+      "feed_url": "https://footballmonk.com/feed",
+      "website_url": "https://footballmonk.com/",
+      "description": "Football Monk is a one-stop shop for Indian football fans and followers. Sports has always been one of the ancient and best ways to unite mankind. Thus we believe these tough times have set the stage for the 'monks of football' to set on their voyage to preach the beautiful game of football to unite people across the continent.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2300,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5466515.jpg?t=1668426942"
+    },
+    {
+      "title": "ExpandERP Blog",
+      "feed_url": "https://www.expanderp.com/feed",
+      "website_url": "https://www.expanderp.com/blog",
+      "description": "Business model evolution through Information technology. These blogs demonstrate how ExpandERP grew strategically by helping our customers reach their goals. ExpandERP is specially designed for manufacturing business and export business. Manage multi -currency and GST accounting. Omni-channel sales enabled.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 471
+      },
+      "image_url": "https://i1.feedspot.com/5033221.jpg?t=1606459335"
+    },
+    {
+      "title": "EasyReports \u00bb Tally",
+      "feed_url": "https://www.easyreports.in/category/tally-2/feed/",
+      "website_url": "https://www.easyreports.in/category/tally-2/",
+      "description": "EasyReports is an easy to use Business Intelligence Solution which provides scalable, flexible and affordable reporting solutions. It is the best BI for Tally MIS reports & dashboard. They also offer Tally ERP 9 dashboard personalization.",
+      "followers": {
+        "facebook": 965,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5214390.jpg?t=1604907794"
+    },
+    {
+      "title": "Inviya Blog",
+      "feed_url": "https://www.inviya.com/feed",
+      "website_url": "https://www.inviya.com/blog",
+      "description": "Get all the latest updates & information about elastomeric yarn in our recent spandex blogs. Also, you can learn about air covered yarn, core spun yarn, and stretch fabric. Our mission is to revolutionize the world of fashion with outstanding performance of The New Freedom Fiber, Inviya, satisfying the desire of self-expression.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 1100,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5441817.jpg?t=1663160935"
+    },
+    {
+      "title": "FastTrack Blog \u00bb Sunglasses",
+      "feed_url": "https://eyewear.fastrack.in/blog/category/sunglasses/feed/",
+      "website_url": "https://www.fastrackeyewear.com/blog/category/sunglasses/",
+      "description": "Fastrack was launched in 1998 and became an independent urban youth brand in 2005. Since then, it has carved a niche for itself with watches and sunglasses that are both fashionable and affordable.",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 107800,
+        "instagram": 783200
+      },
+      "image_url": "https://i1.feedspot.com/5361940.jpg?t=1641969995"
+    },
+    {
+      "title": "Social Media Magazine",
+      "feed_url": "https://www.socialmediamagazine.org/feed",
+      "website_url": "https://www.socialmediamagazine.org/",
+      "description": "Social Media Magazine aims to proclaim the news, trends and best practices around social media marketing in the most efficient and convenient way.",
+      "followers": {
+        "facebook": 543
+      },
+      "image_url": "https://i1.feedspot.com/4688243.jpg?t=1614261511"
+    },
+    {
+      "title": "Fusion Analytics World",
+      "feed_url": "http://fusionanalyticsworld.com/feed/",
+      "website_url": "https://kolkatahindinews.com/",
+      "description": "Fusion Analytics World is the Leading Digital Platform for News, Industry Analysis, Jobs, Courses, Events & much more. Covering Research & Analytics across Industries.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/4892621.jpg?t=1615188245"
+    },
+    {
+      "title": "Kolkata Hindi News",
+      "feed_url": "https://kolkatahindinews.com/feed/",
+      "website_url": "https://kolkatahindinews.com/",
+      "description": "Kolkata Hindi News is Bengal's leading Hindi news portal that brings to you the latest news, breaking news, daily news as well as the news about politics, literature, art, culture, entertainment, spirituality, business, technology, employment, agriculture, health, sports, fashion and knowledge science.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 514
+      },
+      "image_url": "https://i1.feedspot.com/5278165.jpg?t=1620382971"
+    },
+    {
+      "title": "RegaloCasila.com",
+      "feed_url": "https://www.regalocasila.com/blogs/feed/",
+      "website_url": "https://www.regalocasila.com/blogs/",
+      "description": "Regalocasila.com provides a wide range of custom gifts to suit every occasion.",
+      "followers": {
+        "facebook": 17000,
+        "twitter": 28
+      },
+      "image_url": "https://i1.feedspot.com/4669826.jpg?t=1617973601"
+    }
+  ]
+}

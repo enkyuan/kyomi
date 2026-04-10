@@ -1,0 +1,83 @@
+{
+  "category": "Edmonton Food",
+  "source_url": "https://rss.feedspot.com/edmonton_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Tomato",
+      "feed_url": "https://thetomato.ca/feed",
+      "website_url": "https://thetomato.ca/",
+      "description": "The Tomato food & drink magazine celebrates Edmonton's food culture. Our timely, in-depth coverage of all things food and drink actively engage readers in print, online at thetomato.ca, in our weekly newsletter called the Bite, and on our popular Facebook page.",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5408648.jpg?t=1654691629"
+    },
+    {
+      "title": "Only Here For The Food",
+      "feed_url": "https://onlyhereforthefood.ca/feed/",
+      "website_url": "https://onlyhereforthefood.ca/",
+      "description": "Food4Good is the food programming division of the Jasper Place Wellness Centre, a community development organization in Edmonton. We strive to create communities where food is a driving connector for learning, sharing, growing, and celebrating.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 619,
+        "instagram": 33700
+      },
+      "image_url": "https://i1.feedspot.com/4921080.jpg?t=1752226818"
+    },
+    {
+      "title": "Eat With Sharon",
+      "feed_url": "https://eatwithshar0n.com/feed/",
+      "website_url": "https://eatwithshar0n.com/",
+      "description": "Eat with Sharon was created in 2017 and became a creative space to share my love of food, writing, and photography. On this blog, you'll find snippets of my foodie adventures through reviews, photos, and more. I primarily blog about spots but you might find travel-related posts here and there because like I said, I'm always on the hunt for good food!",
+      "followers": {
+        "facebook": 215,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5408642.jpg?t=1654691597"
+    },
+    {
+      "title": "River City Sisters Blog",
+      "feed_url": "https://www.rivercitysisters.com/feed/",
+      "website_url": "https://www.rivercitysisters.com/",
+      "description": "River City Sisters was born from our love of our city, Edmonton, and each other! Our goal was to create a unique space to celebrate and showcase our favorite recipes, DIY crafts, fashion finds, travel experiences, d\u00e9cor ideas, parenting tips, and local hot spots. We hope you enjoy following along on this sister adventure of ours!",
+      "followers": {
+        "facebook": 402,
+        "instagram": 73500
+      },
+      "image_url": "https://i1.feedspot.com/5408641.jpg?t=1654691592"
+    },
+    {
+      "title": "Chrissy Meets World",
+      "feed_url": "https://chrissymeetsworld.com/feed/",
+      "website_url": "https://chrissymeetsworld.com/",
+      "description": "My name is Chrissy. I am a former science teacher and turned accountant. I was born and raised in Edmonton, Alberta, and am the oldest child in a Lebanese family. If you've ever seen 'My Big Fat Greek Wedding' you have a sense of what my upbringing was like. This blog is a reconciliation of my thoughts and opinions based on my experience. I am by no means an expert, although I like to think I am.",
+      "followers": {
+        "facebook": 209,
+        "instagram": 25400
+      },
+      "image_url": "https://i1.feedspot.com/5408640.jpg?t=1654691588"
+    },
+    {
+      "title": "Ms. Hangry Foodie",
+      "feed_url": "https://mshangryfoodie.com/feed/",
+      "website_url": "https://mshangryfoodie.com/",
+      "description": "Hello there! I am one of Edmonton's food bloggers known as Ms. Hangry Foodie. I LOVE food. I mainly write about food places in Edmonton but sometimes I take my adventures to a different place. Hope you enjoy reading about my food adventures.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 64700
+      },
+      "image_url": "https://i1.feedspot.com/5408650.jpg?t=1654691639"
+    },
+    {
+      "title": "Edmonton Chinatown",
+      "feed_url": "https://edmontonchinatown.ca/feed/",
+      "website_url": "https://edmontonchinatown.ca/",
+      "description": "Edmonton Chinatown holds a Chinatown Dining Week event, featuring 18 restaurants where they sit down with restaurant owners and managers to know more about the restaurants, their history, special food, what it is famous for, and more. Read their articles to know more about these restaurants and their special offers.",
+      "followers": {
+        "facebook": 173
+      },
+      "image_url": "https://i1.feedspot.com/5408643.jpg?t=1655209747"
+    }
+  ]
+}

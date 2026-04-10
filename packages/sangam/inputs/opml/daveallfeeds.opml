@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<opml version="2.0">
+  <head>
+    <title>Dave's feeds</title>
+    <description>All the feeds Dave follows in FeedLand.</description>
+    <dateModified>Mon, 01 Sep 2025 18:25:02 GMT</dateModified>
+    <generator>opml v0.5.2 (npmjs.com/package/opml)</generator>
+    <link>https://news.scripting.com/</link>
+    <whenCreated>16 Feb 2024 5:00:00 GMT</whenCreated>
+    <whenModified>09 Aug 2025 12:33:39 GMT</whenModified>
+  </head>
+  <body>
+    <outline type="rss" text="links.daveverse.org" xmlUrl="https://wordland.dev/scripting/246529703/rss.xml" htmlUrl="https://links.daveverse.org" category="all,daveverse"/>
+    <outline type="rss" text="News – The White House" xmlUrl="https://www.whitehouse.gov/news/feed" htmlUrl="https://www.whitehouse.gov/news/" category="all,blogroll,politics"/>
+    <outline type="rss" text="Las Culturistas with Matt Rogers and Bowen Yang" xmlUrl="https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/f6816727-c503-47ac-a7ac-ae2700391b1e/935c500f-8bb0-436b-ba7f-ae2700391b49/podcast.rss" htmlUrl="https://twitter.com/LasCulturistas" category="all,podcasts"/>
+    <outline type="rss" text="The Lever" xmlUrl="https://www.levernews.com/rss/" htmlUrl="https://www.levernews.com/" category="all,blogroll,podcasts,radiofree"/>
+    <outline type="rss" text="Floodlines" xmlUrl="https://feeds.megaphone.fm/floodlines" htmlUrl="https://www.theatlantic.com/podcasts/floodlines" category="all,podcasts"/>
+    <outline type="rss" text="Prison Journalism Project" xmlUrl="https://prisonjournalismproject.org/feed/" htmlUrl="https://prisonjournalismproject.org/" category="all,blogroll,politics,bloggers"/>
+    <outline type="rss" text="Bingeworthy" xmlUrl="https://tv.bingeworthy.org/rss.xml" htmlUrl="https://tv.bingeworthy.org/" category="all,blogroll"/>
+    <outline type="rss" text="pbump" xmlUrl="https://www.pbump.net/o/feed/" htmlUrl="https://www.pbump.net/o" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="Open Culture" xmlUrl="https://www.openculture.com/feed" htmlUrl="https://www.openculture.com/" category="all,blogroll"/>
+    <outline type="rss" text="AramZS's Amplify RSS Feed" xmlUrl="https://aramzs.xyz/amplify/feed.xml" htmlUrl="https://aramzs.xyz/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Links feed • Cory Dransfeldt" xmlUrl="https://www.coryd.dev/feeds/links.xml" htmlUrl="https://www.coryd.dev/feeds/links.xml" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Tim Chambers" xmlUrl="https://www.timothychambers.net/feed" htmlUrl="https://www.timothychambers.net/" category="all,blogroll,tech"/>
+    <outline type="rss" text="Paolo’s Weblog" xmlUrl="https://val.demar.in/feed/" htmlUrl="https://val.demar.in/" category="blogroll,daveverse,tech,bloggers"/>
+    <outline type="rss" text="Great art on Bluesky (daily)" xmlUrl="https://artdaily.feediverse.org/" htmlUrl="https://bsky.app/profile/art.feediverse.org" category="all,blogroll,daveverse"/>
+    <outline type="rss" text="We Distribute" xmlUrl="https://wedistribute.org/feed/" htmlUrl="https://wedistribute.org/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="daveverse" xmlUrl="https://daveverse.org/feed/" htmlUrl="https://daveverse.org/" category="all,daveverse"/>
+    <outline type="rss" text="Scripting News" xmlUrl="http://scripting.com/rss.xml" htmlUrl="http://scripting.com/" category="blogroll,daveverse,tech,politics,podcasts,bloggers,dave"/>
+    <outline type="rss" text="McSweeney’s" xmlUrl="https://feeds.feedburner.com/mcsweeneys" htmlUrl="https://www.mcsweeneys.net/" category="all,blogroll"/>
+    <outline type="rss" text="The New Stack | DevOps, Open Source, and Cloud Native News" xmlUrl="https://thenewstack.io/blog/feed/" htmlUrl="https://thenewstack.io/blog/" category="all,blogroll,tech"/>
+    <outline type="rss" text="blog.lmorchard.com" xmlUrl="https://blog.lmorchard.com/feed" htmlUrl="https://blog.lmorchard.com/" category="all,blogroll,tech"/>
+    <outline type="rss" text="My Handsome Cloud-enabled Blog" xmlUrl="https://rsscloud.wordpress.com/feed/" htmlUrl="https://rsscloud.wordpress.com/" category="all,daveverse"/>
+    <outline type="rss" text="Fight Club for Tech" xmlUrl="https://techfightclub.wpcomstaging.com/feed/" htmlUrl="https://techfightclub.wpcomstaging.com/" category="all"/>
+    <outline type="rss" text="@art.feediverse.org - Great art on Bluesky" xmlUrl="https://bsky.app/profile/did:plc:iwl32vekohccji6khfdt3clw/rss" htmlUrl="https://bsky.app/profile/art.feediverse.org" category="all,art,blogroll,dave"/>
+    <outline type="rss" text="WBUR News" xmlUrl="https://www.wbur.org/wbur/rss" htmlUrl="https://www.wbur.org/news" category="all,blogroll,politics"/>
+    <outline type="rss" text="Parker Ortolani" xmlUrl="https://parkerortolani.blog/feed" htmlUrl="https://parkerortolani.blog/" category="all,bloggers,blogroll,devs,tech"/>
+    <outline type="rss" text="@scripting.com - Dave Winer" xmlUrl="https://bsky.app/profile/did:plc:oety7qbfx7x6exn2ytrwikmr/rss" htmlUrl="https://bsky.app/profile/scripting.com" category="all,bloggers,blogroll,dave"/>
+    <outline type="rss" text="The David Frum Show" xmlUrl="https://feeds.megaphone.fm/thedavidfrumshow" category="all,blogroll,podcasts,politics,radiofree"/>
+    <outline type="rss" text="The Daily Show: Ears Edition" xmlUrl="https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/e5e49f91-be9b-42f1-a426-ae3c00026e8b/04b51c34-8028-49a3-b42f-ae3c00026e95/podcast.rss" htmlUrl="https://www.iheart.com/podcast/888-the-daily-show-with-trevor-29213961/" category="all,podcasts,radiofree"/>
+    <outline type="rss" text="The New Yorker Radio Hour" xmlUrl="https://feeds.simplecast.com/TRuO_SRo" htmlUrl="https://www.wnycstudios.org/podcasts/tnyradiohour" category="all,podcasts,politics,radiofree"/>
+    <outline type="rss" text="On the Media" xmlUrl="https://feeds.simplecast.com/o4jAFXaw" htmlUrl="https://www.wnycstudios.org/podcasts/otm" category="all,podcasts,radiofree"/>
+    <outline type="rss" text="The Daily" xmlUrl="https://feeds.simplecast.com/54nAGcIl" htmlUrl="https://www.nytimes.com/the-daily" category="all,blogroll,nyt,podcasts,radiofree"/>
+    <outline type="rss" text="@prisonjournalism.bsky.social - Prison Journalism Project" xmlUrl="https://bsky.app/profile/did:plc:xoiyhpjul3r3vlbhslhjemon/rss" htmlUrl="https://bsky.app/profile/prisonjournalism.bsky.social" category="all,blogroll,politics,radiofree"/>
+    <outline type="rss" text="FrameLab" xmlUrl="https://www.theframelab.org/latest/rss/" htmlUrl="https://www.theframelab.org/" category="all,blogroll,politics,radiofree"/>
+    <outline type="rss" text="Interconnected" xmlUrl="https://interconnected.org/home/feed" htmlUrl="https://interconnected.org/home" category="all,bloggers,blogroll"/>
+    <outline type="rss" text="@davidfrum.bsky.social - David Frum" xmlUrl="https://bsky.app/profile/did:plc:bf4lpnw2sqnezixt3k7xqxfj/rss" htmlUrl="https://bsky.app/profile/davidfrum.bsky.social" category="all,blogroll,radiofree"/>
+    <outline type="rss" text="Ars Technica" xmlUrl="https://arstechnica.com/feed" htmlUrl="https://arstechnica.com/" category="all,blogroll,tech"/>
+    <outline type="rss" text="@theframelab.bsky.social - FrameLab" xmlUrl="https://bsky.app/profile/did:plc:fs5pzgiqlhmg3mfmhxilsj55/rss" htmlUrl="https://bsky.app/profile/theframelab.bsky.social" category="all,blogroll,politics,radiofree"/>
+    <outline type="rss" text="Remarkable People" xmlUrl="https://guykawasaki.substack.com/feed" htmlUrl="https://guykawasaki.substack.com/" category="all,bloggers,blogroll,starters"/>
+    <outline type="rss" text="SCOTUSblog" xmlUrl="http://www.scotusblog.com/feed/" htmlUrl="https://www.scotusblog.com/" category="all,politics,radiofree,starters"/>
+    <outline type="rss" text="Open Letters, from Anne Applebaum" xmlUrl="https://anneapplebaum.substack.com/feed" htmlUrl="https://anneapplebaum.substack.com/" category="all,bloggers,politics,radiofree"/>
+    <outline type="rss" text="404 Media" xmlUrl="https://www.404media.co/rss/" htmlUrl="https://www.404media.co/" category="all,bloggers,blogroll,radiofree,tech"/>
+    <outline type="rss" text="The Texas Observer" xmlUrl="https://www.texasobserver.org/feed/" htmlUrl="https://www.texasobserver.org/" category="all,blogroll,politics,radiofree"/>
+    <outline type="rss" text="TorrentFreak" xmlUrl="https://torrentfreak.com/feed" htmlUrl="https://torrentfreak.com/" category="all,bloggers,blogroll,radiofree,tech"/>
+    <outline type="rss" text="Letters from an American" xmlUrl="https://heathercoxrichardson.substack.com/feed" htmlUrl="https://heathercoxrichardson.substack.com/" category="all,bloggers,blogroll,radiofree"/>
+    <outline type="rss" text="Paul Krugman" xmlUrl="https://paulkrugman.substack.com/feed" htmlUrl="https://paulkrugman.substack.com/" category="all,blogroll,politics,radiofree"/>
+    <outline type="rss" text="emptywheel" xmlUrl="https://www.emptywheel.net/feed/" htmlUrl="https://www.emptywheel.net/about/home/" category="all,bloggers,blogroll,politics,radiofree"/>
+    <outline type="rss" text="Countdown with Keith Olbermann" xmlUrl="https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/4cab918b-b4e7-4a21-8300-aec3011bf3f1/e7682aaf-443f-41d8-945f-aec3011c5127/podcast.rss" htmlUrl="https://www.iheart.com/podcast/1119-countdown-with-keith-olbe-99705496/" category="all,blogroll,podcasts,radiofree"/>
+    <outline type="rss" text="The Brian Lehrer Show" xmlUrl="http://feeds.wnyc.org/wnyc_bl" htmlUrl="https://www.wnyc.org/shows/bl" category="all,blogroll,podcasts,radiofree"/>
+    <outline type="rss" text="THE DAILY BLAST with Greg Sargent" xmlUrl="https://feeds.megaphone.fm/dailyblast2024" htmlUrl="https://newrepublic.com/" category="all,blogroll,podcasts,politics,radiofree"/>
+    <outline type="rss" text="The Political Scene | The New Yorker" xmlUrl="https://publicfeeds.net/f/6165/newyorker-the-political-scene" htmlUrl="https://the-political-scene-the-new-yorker.simplecast.com/" category="all,podcasts,radiofree"/>
+    <outline type="rss" text="The Bulwark: The Bulwark Podcast" xmlUrl="https://www.thebulwark.com/feed?sectionId=87957" htmlUrl="https://www.thebulwark.com/s/bulwarkpodcast" category="all,podcasts,politics,radiofree"/>
+    <outline type="rss" text="@hillaryclinton.bsky.social - Hillary Rodham Clinton" xmlUrl="https://bsky.app/profile/did:plc:6lf2nnxikz3bdhn42dugqxly/rss" htmlUrl="https://bsky.app/profile/hillaryclinton.bsky.social" category="all,radiofree"/>
+    <outline type="rss" text="@teslatakedown.com - #TeslaTakedown" xmlUrl="https://bsky.app/profile/did:plc:hljkd4e73ttz5xjjywsvebzz/rss" htmlUrl="https://bsky.app/profile/teslatakedown.com" category="all,radiofree"/>
+    <outline type="rss" text="Radio Atlantic" xmlUrl="https://feeds.megaphone.fm/radioatlantic" htmlUrl="https://www.theatlantic.com/podcasts/the-ticket" category="all,podcasts,radiofree"/>
+    <outline type="rss" text="Mother Jones" xmlUrl="https://www.motherjones.com/feed/" htmlUrl="https://www.motherjones.com/" category="all,politics,radiofree"/>
+    <outline type="rss" text="@altnps.bsky.social - Alt National Park Service" xmlUrl="https://bsky.app/profile/did:plc:xgiwtxbtt6xc7low5vdz7dq4/rss" htmlUrl="https://bsky.app/profile/altnps.bsky.social" category="blogroll,radiofree"/>
+    <outline type="rss" text="@factpostnews.bsky.social - FactPost" xmlUrl="https://bsky.app/profile/did:plc:h7qtoo7nxqxarrsijohjhbw4/rss" htmlUrl="https://bsky.app/profile/factpostnews.bsky.social" category="all,blogroll,politics,radiofree"/>
+    <outline type="rss" text="Sacha Chua" xmlUrl="https://sachachua.com/blog/feed" htmlUrl="https://sachachua.com/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="On my Om – Daily Blog" xmlUrl="https://blog.om.co/feed/" htmlUrl="https://streamomco.wpcomstaging.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Data Rescue Project" xmlUrl="https://www.datarescueproject.org/rss/" htmlUrl="https://www.datarescueproject.org/" category="all,blogroll"/>
+    <outline type="rss" text="@crockett.house.gov - Congresswoman Jasmine Crockett" xmlUrl="https://bsky.app/profile/did:plc:tax3e7cjn3dzxpgfjslqq56y/rss" htmlUrl="https://bsky.app/profile/crockett.house.gov" category="all,blogroll,politics"/>
+    <outline type="rss" text="THE CITY – NYC News" xmlUrl="https://www.thecity.nyc/feed/" htmlUrl="https://www.thecity.nyc/" category="all,blogroll,politics"/>
+    <outline type="rss" text="Cursor - All Updates" xmlUrl="https://www.cursor.com/rss.xml" htmlUrl="https://cursor.com/" category="all,blogroll,tech,devs"/>
+    <outline type="rss" text="@petebuttigieg.bsky.social - Pete Buttigieg" xmlUrl="https://bsky.app/profile/did:plc:2q2hs5o42jhbd23pp6lkiauh/rss" htmlUrl="https://bsky.app/profile/petebuttigieg.bsky.social" category="all,blogroll"/>
+    <outline type="rss" text="The Overlook" xmlUrl="https://theoverlooknews.com/feed" htmlUrl="https://theoverlooknews.com/" category="all,blogroll"/>
+    <outline type="rss" text="WIRED" xmlUrl="https://www.wired.com/feed/rss" htmlUrl="https://www.wired.com/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="The Nation" xmlUrl="https://www.thenation.com/feed/" htmlUrl="https://www.thenation.com/" category="all"/>
+    <outline type="rss" text="Julia Evans" xmlUrl="https://jvns.ca/atom.xml" htmlUrl="http://jvns.ca/" category="all,blogroll,tech,bloggers,devs"/>
+    <outline type="rss" text="Simon Willison's Weblog" xmlUrl="https://simonwillison.net/atom/everything/" htmlUrl="http://simonwillison.net/" category="all,blogroll,devs"/>
+    <outline type="rss" text="ongoing by Tim Bray" xmlUrl="https://www.tbray.org/ongoing/ongoing.atom" htmlUrl="https://www.tbray.org/ongoing/" category="all,blogroll,devs"/>
+    <outline type="rss" text="Scripting News podcast" xmlUrl="http://scripting.com/podcast.xml" htmlUrl="https://this.how/scriptingNewsPodcast/" category="all,blogroll,tech,podcasts,bloggers,dave"/>
+    <outline type="rss" text="New York Daily News" xmlUrl="https://www.nydailynews.com/feed/" htmlUrl="https://www.nydailynews.com/" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; Sports &amp;gt; Basketball" xmlUrl="https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/sports/basketball/rss.xml" htmlUrl="https://www.nytimes.com/section/sports/basketball" category="all,nba"/>
+    <outline type="rss" text="SB Nation" xmlUrl="https://www.sbnation.com/rss/index.xml" htmlUrl="https://www.sbnation.com/" category="all,nba"/>
+    <outline type="rss" text="Pluralistic: Daily links from Cory Doctorow" xmlUrl="https://pluralistic.net/feed/" htmlUrl="https://pluralistic.net/" category="all,blogroll,devs"/>
+    <outline type="rss" text="Techdirt" xmlUrl="https://www.techdirt.com/feed" htmlUrl="https://www.techdirt.com/" category="all,blogroll,tech,politics,bloggers,devs"/>
+    <outline type="rss" text="Manton Reece" xmlUrl="http://www.manton.org/feed" htmlUrl="https://www.manton.org/" category="all,blogroll,devs"/>
+    <outline type="rss" text="@nytpitchbot.bsky.social - NY Times Pitchbot" xmlUrl="https://bsky.app/profile/did:plc:ny5mscvguz4r636nekozpqac/rss" htmlUrl="https://bsky.app/profile/nytpitchbot.bsky.social" category="all,politics"/>
+    <outline type="rss" text="Missouri Independent" xmlUrl="https://missouriindependent.com/feed/" htmlUrl="https://missouriindependent.com/" category="all,blogroll,politics"/>
+    <outline type="rss" text="Reuters News Agency" xmlUrl="https://www.reutersagency.com/feed/?post_type=reuters-best" htmlUrl="https://www.reutersagency.com/en/" category="all"/>
+    <outline type="rss" text="DW's Podcast0 feed" xmlUrl="http://scripting.com/podcast0/rss.xml" htmlUrl="https://this.how/podcast0/" category="all,dave"/>
+    <outline type="rss" text="@mcuban.bsky.social - Mark Cuban" xmlUrl="https://bsky.app/profile/did:plc:y5xyloyy7s4a2bwfeimj7r3b/rss" htmlUrl="https://bsky.app/profile/mcuban.bsky.social" category="all,blogroll,tech,politics,bloggers"/>
+    <outline type="rss" text="Dave Winer" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCIKA6QNSb56qnA5Enn2BOXw" htmlUrl="https://www.youtube.com/channel/UCIKA6QNSb56qnA5Enn2BOXw" category="all,blogroll,bloggers,dave"/>
+    <outline type="rss" text="Berkeleyside" xmlUrl="http://www.berkeleyside.com/feed/" htmlUrl="https://www.berkeleyside.org/" category="all,blogroll,politics"/>
+    <outline type="rss" text="Berkeleyside" xmlUrl="https://www.berkeleyside.org/feed" htmlUrl="https://www.berkeleyside.org/" category="all"/>
+    <outline type="rss" text="This Week in the IndieWeb" xmlUrl="https://indieweb.org/this-week/feed.xml" htmlUrl="https://indieweb.org/this-week" category="all,tech"/>
+    <outline type="rss" text="Tantek Çelik" xmlUrl="https://tantek.com/updates.atom" htmlUrl="https://tantek.com/" category="all,tech"/>
+    <outline type="rss" text="Guy Kawasaki's Remarkable People" xmlUrl="https://rss.art19.com/guy-kawasakis-remarkable-people" htmlUrl="https://art19.com/shows/guy-kawasakis-remarkable-people" category="all,blogroll,tech,podcasts,bloggers"/>
+    <outline type="rss" text="The Guardian" xmlUrl="https://www.theguardian.com/rss" htmlUrl="https://www.theguardian.com/uk" category="all,tech,politics,bighugga"/>
+    <outline type="rss" text="TechCrunch" xmlUrl="http://techcrunch.com/feed/" htmlUrl="https://techcrunch.com/" category="all,tech,bighugga"/>
+    <outline type="rss" text="NYT &amp;gt; Most Recent Headlines" xmlUrl="http://nytimes.com/timeswire/feeds/" htmlUrl="https://www.nytimes.com/timeswire" category="all,nyt,bighugga"/>
+    <outline type="rss" text="PBS NewsHour - Politics" xmlUrl="https://www.pbs.org/newshour/feeds/rss/politics" htmlUrl="https://www.pbs.org/newshour/politics" category="all,bighugga"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/world/rss.xml" htmlUrl="https://www.bbc.co.uk/news/world" category="all,politics,bighugga"/>
+    <outline type="rss" text="NYT &amp;gt; Top Stories" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" htmlUrl="https://www.nytimes.com/" category="all,nyt,bighugga"/>
+    <outline type="rss" text="Pocket Casts Blog" xmlUrl="https://blog.pocketcasts.com/feed/" htmlUrl="https://blog.pocketcasts.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Press Watch" xmlUrl="https://presswatchers.org/feed/" htmlUrl="https://presswatchers.org/" category="all,blogroll,politics,bloggers"/>
+    <outline type="rss" text="Book Overflow" xmlUrl="https://anchor.fm/s/f5bbb69c/podcast/rss" htmlUrl="https://bookoverflow.io/" category="all"/>
+    <outline type="rss" text="Crazy/Genius" xmlUrl="https://feeds.megaphone.fm/crazygenius" htmlUrl="https://www.theatlantic.com/podcasts/" category="all"/>
+    <outline type="rss" text="The Big Interview with Dan Rather" xmlUrl="https://www.omnycontent.com/d/playlist/8e6d7e9c-00fb-4434-b699-b07a012cac5b/1c515561-6a90-4cfb-8f70-b07d0142b4bf/34077f42-ce99-472a-9884-b07d0149f32f/podcast.rss" htmlUrl="https://omny.fm/shows/the-big-interview-with-dan-rather" category="all"/>
+    <outline type="rss" text="Atlantic Fellows" xmlUrl="https://feeds.soundcloud.com/users/soundcloud:users:415400187/sounds.rss" htmlUrl="https://www.atlanticfellows.org/" category="all"/>
+    <outline type="rss" text="The Bill Simmons Podcast" xmlUrl="https://feeds.megaphone.fm/the-bill-simmons-podcast" htmlUrl="https://www.theringer.com/" category="all"/>
+    <outline type="rss" text="FrameLab Podcast" xmlUrl="https://feed.podbean.com/framelab/feed.xml" htmlUrl="https://framelab.podbean.com/" category="all"/>
+    <outline type="rss" text="Wild Card with Rachel Martin" xmlUrl="https://feeds.npr.org/510379/podcast.xml" htmlUrl="https://www.npr.org/podcasts/510379/wild-card-with-rachel-martin" category="all"/>
+    <outline type="rss" text="The Wirecutter Show" xmlUrl="https://feeds.simplecast.com/tI57z_LN" htmlUrl="https://www.nytimes.com/wirecutter/the-wirecutter-show-podcast/" category="all"/>
+    <outline type="rss" text="Sing Out! Radio Magazine" xmlUrl="https://singout.podomatic.com/rss2.xml" htmlUrl="https://www.podomatic.com/podcasts/singout" category="all"/>
+    <outline type="rss" text="Defector" xmlUrl="https://defector.com/feed" htmlUrl="https://defector.com/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="The Weekly Show with Jon Stewart" xmlUrl="https://feeds.megaphone.fm/BVLLC2163264914" htmlUrl="https://art19.com/shows/jon-stewart" category="all,politics,podcasts"/>
+    <outline type="rss" text="The Wolf – Hudson Valley’s New Country" xmlUrl="https://hudsonvalleycountry.com/rss" htmlUrl="https://hudsonvalleycountry.com/" category="all,blogroll"/>
+    <outline type="rss" text="Platformonomics" xmlUrl="https://platformonomics.com/feed/" htmlUrl="https://platformonomics.com/" category="all,blogroll,tech"/>
+    <outline type="rss" text="Social Web Foundation" xmlUrl="https://socialwebfoundation.org/feed" htmlUrl="https://socialwebfoundation.org/" category="all,blogroll,tech"/>
+    <outline type="rss" text="The Torment Nexus" xmlUrl="https://tormentnexus.substack.com/feed" htmlUrl="https://tormentnexus.substack.com/" category="all,blogroll,tech,politics,bloggers"/>
+    <outline type="rss" text="Manuel Moreale" xmlUrl="https://manuelmoreale.com/feed/rss" htmlUrl="https://manuelmoreale.com" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Autocracy in America" xmlUrl="https://feeds.megaphone.fm/autocracyinamerica" htmlUrl="https://www.theatlantic.com/podcasts/autocracy-in-america" category="all,blogroll,politics,podcasts"/>
+    <outline type="rss" text="Admissible: Shreds of Evidence" xmlUrl="https://feeds.megaphone.fm/VPM8171479269" htmlUrl="https://admissible.vpm.org/" category="all,podcasts"/>
+    <outline type="rss" text="Contempt of Court with Elie Mystal" xmlUrl="https://feeds.redcircle.com/f9c785e1-8d8e-45c3-9524-57049112a76c" htmlUrl="https://redcircle.com/shows/contempt-of-court-with-elie-mystal" category="all,podcasts"/>
+    <outline type="rss" text="The Atlantic Interview" xmlUrl="https://feeds.megaphone.fm/theinterview" htmlUrl="https://www.theatlantic.com/podcasts/" category="all,podcasts"/>
+    <outline type="rss" text="The Ezra Klein Show" xmlUrl="https://feeds.simplecast.com/82FI35Px" htmlUrl="https://www.nytimes.com/ezra-klein-podcast" category="all,podcasts"/>
+    <outline type="rss" text="Here &amp;amp; Now Anytime" xmlUrl="https://feeds.npr.org/510051/podcast.xml" htmlUrl="https://www.npr.org/podcasts/510051/here-x26-now" category="all,podcasts"/>
+    <outline type="rss" text="HBO's Succession Podcast" xmlUrl="https://feeds.megaphone.fm/WMHY5283085212" htmlUrl="https://www.hbo.com/succession/hbos-succession-podcast" category="all,podcasts"/>
+    <outline type="rss" text="The Gist" xmlUrl="https://feeds.megaphone.fm/slatesthegist" htmlUrl="http://www.mikepesca.com/" category="all,podcasts"/>
+    <outline type="rss" text="In Our Time: Culture" xmlUrl="https://podcasts.files.bbci.co.uk/p01drwny.rss" htmlUrl="http://www.bbc.co.uk/programmes/p01drwny" category="all,podcasts"/>
+    <outline type="rss" text="In Our Time: History" xmlUrl="https://podcasts.files.bbci.co.uk/p01dh5yg.rss" htmlUrl="http://www.bbc.co.uk/programmes/p01dh5yg" category="all,podcasts"/>
+    <outline type="rss" text="In Our Time: Philosophy" xmlUrl="https://podcasts.files.bbci.co.uk/p01f0vzr.rss" htmlUrl="http://www.bbc.co.uk/programmes/p01f0vzr" category="all,podcasts"/>
+    <outline type="rss" text="In Our Time: Science" xmlUrl="https://podcasts.files.bbci.co.uk/p01gyd7j.rss" htmlUrl="http://www.bbc.co.uk/programmes/p01gyd7j" category="all,podcasts"/>
+    <outline type="rss" text="McCartney: A Life in Lyrics" xmlUrl="https://rss.pdrl.fm/091863/www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/c4c8bc3c-054b-4c4f-a4b5-b03d0111a20c/0f3346d9-a2d7-4c41-827b-b03d0112826f/podcast.rss" htmlUrl="https://www.pushkin.fm/" category="all,podcasts"/>
+    <outline type="rss" text="Metacast: Behind the scenes" xmlUrl="https://feeds.transistor.fm/metacast-behind-the-scenes" htmlUrl="https://metacast.app/behind-the-scenes" category="all,podcasts"/>
+    <outline type="rss" text="The New Yorker: Fiction" xmlUrl="https://publicfeeds.net/f/6232/new-yorker-fiction" htmlUrl="https://the-new-yorker-fiction-4473086b.simplecast.com/" category="all,podcasts"/>
+    <outline type="rss" text="The New Yorker: The Writer's Voice - New Fiction from The New Yorker" xmlUrl="https://publicfeeds.net/f/6198/the-writers-voice" htmlUrl="https://the-new-yorker-the-writers-voice-new-fiction-from-the-ne.simplecast.com/" category="all,podcasts"/>
+    <outline type="rss" text="Now &amp;amp; Then" xmlUrl="https://feeds.megaphone.fm/VMP8436744812" htmlUrl="http://cafe.com/" category="all,podcasts"/>
+    <outline type="rss" text="The Official Jinx Podcast" xmlUrl="https://feeds.megaphone.fm/WMHY4266495144" category="all,podcasts"/>
+    <outline type="rss" text="On with Kara Swisher" xmlUrl="https://feeds.megaphone.fm/VMP1684715893" htmlUrl="http://nymag.com/" category="all,podcasts"/>
+    <outline type="rss" text="Open Source with Christopher Lydon" xmlUrl="https://radioopensource.org/feed/" htmlUrl="https://radioopensource.org/" category="all,podcasts"/>
+    <outline type="rss" text="Rolling Stone's 500 Greatest Albums" xmlUrl="https://rss.art19.com/alternate_feeds/user/7e0678e3-b293-4a27-b295-c8af5faebb98/nIJz1pscbDBkwhgIOIOQJXTnhoi5e_dY" htmlUrl="https://music.amazon.com/" category="all,podcasts"/>
+    <outline type="rss" text="The Rewatchables" xmlUrl="https://feeds.megaphone.fm/the-rewatchables" htmlUrl="https://www.theringer.com/" category="all,podcasts"/>
+    <outline type="rss" text="Rolling Stone's 500 Greatest Songs" xmlUrl="https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/3c989afe-e48b-4e96-b798-b11c013b61bf/0f73dd63-f7a1-4bba-b81a-b11c013c8f64/podcast.rss" htmlUrl="https://www.iheart.com/podcast/1119-rolling-stones-500-greate-156412458/" category="all,podcasts"/>
+    <outline type="rss" text="Wiser Than Me with Julia Louis-Dreyfus" xmlUrl="https://www.omnycontent.com/d/playlist/796469f9-ea34-46a2-8776-ad0f015d6beb/6bf95617-5ffc-4269-a957-afcc015a4d66/ca180b09-a8bc-4612-92fe-afcc015ae720/podcast.rss" htmlUrl="https://www.lemonadamedia.com/" category="all,podcasts"/>
+    <outline type="rss" text="This American Life" xmlUrl="http://feed.thisamericanlife.org/talpodcast" htmlUrl="https://www.thisamericanlife.org/podcast/rss.xml" category="all,podcasts"/>
+    <outline type="rss" text="Who Killed JFK?" xmlUrl="https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/0fcd407b-5ce7-44a7-bcb6-b0a60117b7cf/96ca1fed-8f12-4f70-a713-b0a6012027c4/podcast.rss" htmlUrl="https://www.iheart.com/podcast/1119-who-killed-jfk-127000428/" category="all"/>
+    <outline type="rss" text="The San Francisco Standard" xmlUrl="https://sfstandard.com/feed/" htmlUrl="https://sfstandard.com/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="Kamala HQ (@kamalahq) • Threads, Say more" xmlUrl="https://rss.app/feeds/RorGA9Ks7YtmaJCz.xml" htmlUrl="https://www.threads.net/@kamalahq" category="all,blogroll,politics"/>
+    <outline type="rss" text="Daily Kos" xmlUrl="https://www.dailykos.com/rss/index.xml" htmlUrl="https://www.dailykos.com" category="all,blogroll,politics"/>
+    <outline type="rss" text="FRONTLINE: Film Audio Track | PBS" xmlUrl="https://feeds.soundcloud.com/users/soundcloud:users:24528116/sounds.rss" htmlUrl="http://pbs.org/frontline" category="all,blogroll,tech,politics,podcasts"/>
+    <outline type="rss" text="Balloon Juice" xmlUrl="https://balloon-juice.com/feed" htmlUrl="https://balloon-juice.com/" category="all,blogroll,politics,bloggers"/>
+    <outline type="rss" text="Nicholas Carlini" xmlUrl="https://nicholas.carlini.com/writing/feed.xml" htmlUrl="https://nicholas.carlini.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Silver Bulletin" xmlUrl="https://www.natesilver.net/feed" htmlUrl="https://www.natesilver.net/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="The Brian Lehrer Show" xmlUrl="https://feeds.simplecast.com/C8a1jmw4" htmlUrl="https://www.wnyc.org/shows/bl" category="all"/>
+    <outline type="rss" text="TPM – Talking Points Memo" xmlUrl="https://talkingpointsmemo.com/feed" htmlUrl="https://talkingpointsmemo.com/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="Thinking about..." xmlUrl="https://snyder.substack.com/feed" htmlUrl="https://snyder.substack.com/" category="all,blogroll,politics,bloggers"/>
+    <outline type="rss" text="Techmeme Ride Home" xmlUrl="http://feeds.feedburner.com/TechmemeRideHome" htmlUrl="https://www.ridehome.info/show/techmeme-ride-home/" category="all,blogroll,tech"/>
+    <outline type="rss" text="Latest articles from Crooks and Liars" xmlUrl="https://crooksandliars.com/feeds/latest" htmlUrl="https://crooksandliars.com" category="all,blogroll,politics"/>
+    <outline type="rss" text="Eugen Rochko" xmlUrl="https://mastodon.social/@Gargron.rss" htmlUrl="https://mastodon.social/@Gargron" category="all,blogroll,tech"/>
+    <outline type="rss" text="Josh Betz" xmlUrl="https://josh.blog/feed" htmlUrl="https://josh.blog/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Nathan Knowler" xmlUrl="https://knowler.dev/feed.xml" htmlUrl="https://knowler.dev/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Scripting News for email" xmlUrl="http://scripting.com/rssNightly.xml" htmlUrl="http://scripting.com/" category="all,blogroll,tech,bloggers,dave"/>
+    <outline type="rss" text="Zettelkasten.de" xmlUrl="https://zettelkasten.de/feed" htmlUrl="https://zettelkasten.de/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Andrew's Blog" xmlUrl="https://sheep.horse/rss.xml" htmlUrl="https://sheep.horse/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Building ActivityPub" xmlUrl="https://activitypub.ghost.org/rss/" htmlUrl="https://activitypub.ghost.org/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Butterfly Mind" xmlUrl="https://andreabadgley.blog/feed/" htmlUrl="https://andreabadgley.blog/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="Machine Society" xmlUrl="https://machinesociety.ai/feed" htmlUrl="https://machinesociety.ai/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Citation Needed" xmlUrl="https://www.citationneeded.news/rss/" htmlUrl="https://www.citationneeded.news/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="A Working Library" xmlUrl="https://aworkinglibrary.com/feed/index.xml" htmlUrl="https://aworkinglibrary.com/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="Cara - Artist Social &amp;amp; Portfolio Platform" xmlUrl="https://cara.app/blog/atom.xml" htmlUrl="https://blog.cara.app/" category="all"/>
+    <outline type="rss" text="smays.com" xmlUrl="https://www.smays.com/feed/" htmlUrl="https://www.smays.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Zeroth Principles of AI" xmlUrl="https://zerothprinciples.substack.com/feed" htmlUrl="https://zerothprinciples.substack.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="AI and I" xmlUrl="https://anchor.fm/s/ed1f5584/podcast/rss" htmlUrl="https://every.to/" category="all,blogroll,tech,podcasts"/>
+    <outline type="rss" text="wwwd – John's World Wide Wall Display" xmlUrl="https://feeds.feedburner.com/johnjohnston" htmlUrl="https://johnjohnston.info/blog" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Stephen Wolfram Writings" xmlUrl="https://writings.stephenwolfram.com/feed/" htmlUrl="https://writings.stephenwolfram.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Phil Windley's Technometria" xmlUrl="https://www.windley.com/rss" htmlUrl="https://www.windley.com" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="@chuck.kilroy.tech - Chuck Shotton" xmlUrl="https://bsky.app/profile/did:plc:exdjygrguuzbfwjyg3rf5pl6/rss" htmlUrl="https://bsky.app/profile/chuck.kilroy.tech" category="all"/>
+    <outline type="rss" text="Continuations" xmlUrl="https://continuations.com/rss" htmlUrl="https://paragraph.com/@continuations" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Robert Alexander's Tech Blog" xmlUrl="https://alexsci.com/blog/rss.xml" htmlUrl="https://alexsci.com/blog/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Rest of World -" xmlUrl="https://restofworld.org/feed" htmlUrl="https://restofworld.org/" category="all,blogroll"/>
+    <outline type="rss" text="i.webthings hub" xmlUrl="https://iwebthings.joejenett.com/feed.xml" htmlUrl="https://iwebthings.joejenett.com/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="Nelio Software" xmlUrl="https://neliosoftware.com/rss" htmlUrl="https://neliosoftware.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="All Things Distributed" xmlUrl="https://www.allthingsdistributed.com/index.xml" htmlUrl="https://www.allthingsdistributed.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Mea Vita: Carpe Diem" xmlUrl="http://blog.joemoreno.com/feeds/posts/default" htmlUrl="http://blog.joemoreno.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Electrek" xmlUrl="https://electrek.co/feed/" htmlUrl="https://electrek.co/" category="all,blogroll,tech"/>
+    <outline type="rss" text="Radar" xmlUrl="https://www.oreilly.com/radar/feed/index.xml" htmlUrl="https://www.oreilly.com/radar" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="Molly White's activity feed" xmlUrl="https://www.mollywhite.net/feed/feed.xml" htmlUrl="https://mollywhite.net/feed" category="all"/>
+    <outline type="rss" text="Flickr Foundation" xmlUrl="https://www.flickr.org/feed" htmlUrl="https://www.flickr.org/" category="all"/>
+    <outline type="rss" text="Rich Tabor" xmlUrl="https://rich.blog/feed/" htmlUrl="https://rich.blog/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Allen Wirfs-Brock" xmlUrl="http://mastodon.social/@allenwb.rss" htmlUrl="https://mastodon.social/@allenwb" category="all,tech,bloggers"/>
+    <outline type="rss" text="Dan Gillmor" xmlUrl="https://dangillmor.com/feed/" htmlUrl="https://dangillmor.com/" category="all,blogroll,tech,politics,bloggers"/>
+    <outline type="rss" text="Kansas Reflector" xmlUrl="https://kansasreflector.com/feed/" htmlUrl="https://kansasreflector.com/" category="all,blogroll,politics"/>
+    <outline type="rss" text="Logic(s) Magazine" xmlUrl="https://logicmag.io/rss.xml" htmlUrl="https://logicmag.io/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="Michael Moore" xmlUrl="https://www.michaelmoore.com/feed" htmlUrl="https://www.michaelmoore.com/" category="all,blogroll,politics"/>
+    <outline type="rss" text="On my Om" xmlUrl="http://om.co/feed/" htmlUrl="https://om.co/" category="all,blogroll,om,tech,bloggers"/>
+    <outline type="rss" text="blog - aows" xmlUrl="https://aows.co/blog/rss.xml" htmlUrl="https://aows.co/blog/" category="all,blogroll,om"/>
+    <outline type="rss" text="35hunter" xmlUrl="https://35hunter.blog/feed/" htmlUrl="https://35hunter.blog/" category="all,om"/>
+    <outline type="rss" text="Guy Tal | Photographer, Author" xmlUrl="https://guytal.blog/feed/" htmlUrl="https://guytal.blog/" category="all,om"/>
+    <outline type="rss" text="ShootTokyo" xmlUrl="https://shoottokyo.com/blog/rss.xml" htmlUrl="https://shoottokyo.com/" category="all,om"/>
+    <outline type="rss" text="George Hahn" xmlUrl="https://georgehahn.com/feed/" htmlUrl="https://georgehahn.com/" category="all,om"/>
+    <outline type="rss" text="Die, Workwear!" xmlUrl="https://dieworkwear.com/feed/" htmlUrl="http://oxs.335.myftpupload.com/" category="all,om"/>
+    <outline type="rss" text="The Orbital Index" xmlUrl="https://orbitalindex.com/feed.xml" htmlUrl="https://orbitalindex.com/" category="all,om"/>
+    <outline type="rss" text="Flow State" xmlUrl="https://www.flowstate.fm/feed" htmlUrl="https://www.flowstate.fm/" category="all,om"/>
+    <outline type="rss" text="Li's Newsletter" xmlUrl="https://www.lisnewsletter.com/feed" htmlUrl="https://www.lisnewsletter.com/" category="all,om"/>
+    <outline type="rss" text="HEATED" xmlUrl="https://heated.world/feed" htmlUrl="https://heated.world/" category="all,om"/>
+    <outline type="rss" text="Text and Page" xmlUrl="https://elizabethbelsky.substack.com/feed" htmlUrl="https://elizabethbelsky.substack.com/" category="all,om"/>
+    <outline type="rss" text="Femstreet" xmlUrl="https://femstreet.substack.com/feed" htmlUrl="https://femstreet.substack.com/" category="all,om"/>
+    <outline type="rss" text="Above the Crowd" xmlUrl="https://abovethecrowd.com/feed/" htmlUrl="https://abovethecrowd.com/" category="all,om"/>
+    <outline type="rss" text="The Big Picture" xmlUrl="http://ritholtz.com/feed/" htmlUrl="https://ritholtz.com/" category="all,om"/>
+    <outline type="rss" text="Feld Thoughts" xmlUrl="https://feld.com/feed" htmlUrl="https://feld.com/" category="all,om"/>
+    <outline type="rss" text="AVC" xmlUrl="https://avc.com/feed/" htmlUrl="https://avc.com/" category="all,om"/>
+    <outline type="rss" text="Daring Fireball" xmlUrl="https://daringfireball.net/feeds/main" htmlUrl="https://daringfireball.net/" category="all,blogroll,om,tech,bloggers"/>
+    <outline type="rss" text="The Brooks Review" xmlUrl="https://brooksreview.net/feed/" htmlUrl="https://brooksreview.net/" category="all,om"/>
+    <outline type="rss" text="Pete Warden's blog" xmlUrl="https://petewarden.com/feed/" htmlUrl="https://petewarden.com/" category="all,om"/>
+    <outline type="rss" text="Kellblog" xmlUrl="https://kellblog.com/feed/" htmlUrl="https://kellblog.com/" category="all,om"/>
+    <outline type="rss" text="Idle Words" xmlUrl="https://idlewords.com/index.xml" htmlUrl="http://idlewords.com" category="all,om"/>
+    <outline type="rss" text="Christian Heilmann" xmlUrl="https://christianheilmann.com/feed/" htmlUrl="https://christianheilmann.com/" category="all,om"/>
+    <outline type="rss" text="Casey Handmer's blog" xmlUrl="https://caseyhandmer.wordpress.com/feed/" htmlUrl="https://caseyhandmer.wordpress.com/" category="all,om"/>
+    <outline type="rss" text="Anil Dash" xmlUrl="https://www.anildash.com/feed.xml" htmlUrl="https://anildash.com/" category="all,blogroll,om"/>
+    <outline type="rss" text="blog maverick" xmlUrl="https://blogmaverick.com/feed/" htmlUrl="https://blogmaverick.com/" category="all,om"/>
+    <outline type="rss" text="Adactio: Journal" xmlUrl="https://adactio.com/journal/rss" htmlUrl="https://adactio.com/journal/" category="all,om"/>
+    <outline type="rss" text="SMBlog -- Steve Bellovin's Blog" xmlUrl="https://www.cs.columbia.edu/~smb/blog/control/blog.xml" htmlUrl="https://www.cs.columbia.edu/~smb/blog" category="all,om"/>
+    <outline type="rss" text="ROUGH TYPE" xmlUrl="https://www.roughtype.com/?feed=rss2" htmlUrl="https://www.roughtype.com/" category="all,om"/>
+    <outline type="rss" text="Robin Sloan" xmlUrl="https://www.robinsloan.com/feed.xml" htmlUrl="https://www.robinsloan.com/" category="all,om"/>
+    <outline type="rss" text="Shawn Blanc" xmlUrl="https://shawnblanc.net/feed/" htmlUrl="https://shawnblanc.net/" category="all,om"/>
+    <outline type="rss" text="Matt Mullenweg" xmlUrl="https://ma.tt/feed/" htmlUrl="https://ma.tt/" category="all,blogroll,om,tech,bloggers"/>
+    <outline type="rss" text="The Marginalian" xmlUrl="https://feeds.feedburner.com/brainpickings/rss" htmlUrl="https://www.themarginalian.org/" category="all,om"/>
+    <outline type="rss" text="swissmiss" xmlUrl="https://www.swiss-miss.com/feed" htmlUrl="https://www.swiss-miss.com/" category="all,om"/>
+    <outline type="rss" text="Lefsetz Letter" xmlUrl="https://lefsetz.com/wordpress/feed/" htmlUrl="https://lefsetz.com/wordpress" category="all,om"/>
+    <outline type="rss" text="Chuck Grimmett" xmlUrl="https://cagrimmett.com/feed/" htmlUrl="https://cagrimmett.com/"/>
+    <outline type="rss" text="Changelog" xmlUrl="https://ghost.org/changelog/rss/" htmlUrl="https://ghost.org/changelog/" category="all,blogroll"/>
+    <outline type="rss" text="The Warning with Steve Schmidt" xmlUrl="https://steveschmidt.substack.com/feed" htmlUrl="https://steveschmidt.substack.com/" category="all,blogroll,politics,bloggers"/>
+    <outline type="rss" text="TWiT.tv" xmlUrl="https://feeds.twit.tv/latest.xml" htmlUrl="https://twit.tv/" category="all,blogroll,tech"/>
+    <outline type="rss" text="And me? I'm Leo Laporte" xmlUrl="https://leo.fm/index.xml" htmlUrl="https://leo.fm/" category="all"/>
+    <outline type="rss" text="tomcritchlow.com" xmlUrl="https://tomcritchlow.com/feed.xml" htmlUrl="https://tomcritchlow.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Jeffrey Zeldman Presents" xmlUrl="https://zeldman.com/feed/" htmlUrl="https://zeldman.com/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="Jeffrey Zeldman Presents" xmlUrl="https://www.zeldman.com/feed" htmlUrl="https://zeldman.com/" category="all"/>
+    <outline type="rss" text="Zach Seward" xmlUrl="https://www.zachseward.com/blog/rss/" htmlUrl="https://www.zachseward.com/" category="all,blogroll,nyt"/>
+    <outline type="rss" text="This American Life" xmlUrl="https://www.thisamericanlife.org/podcast/rss.xml" htmlUrl="https://www.thisamericanlife.org/podcast/rss.xml" category="all"/>
+    <outline type="rss" text="The Fediverse Report" xmlUrl="https://fediversereport.com/feed/" htmlUrl="https://fediversereport.com/" category="all,blogroll,tech"/>
+    <outline type="rss" text="Mitch's Blog" xmlUrl="https://mitchw.blog/feed" htmlUrl="https://mitchw.blog/" category="blogroll,bloggers"/>
+    <outline type="rss" text="Chris Coyier" xmlUrl="https://chriscoyier.net/feed/" htmlUrl="https://chriscoyier.net/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="indieblog.page daily random posts" xmlUrl="https://indieblog.page/dailyfeed" htmlUrl="https://indieblog.page" category="all"/>
+    <outline type="rss" text="Threads Archives | Meta Newsroom" xmlUrl="https://about.fb.com/news/category/threads/feed/" htmlUrl="https://about.fb.com/news/category/technologies/threads/" category="all,blogroll,tech"/>
+    <outline type="rss" text="Bluesky" xmlUrl="https://bsky.social/about/rss.xml" htmlUrl="https://bsky.social/about" category="all,blogroll,tech"/>
+    <outline type="rss" text="Doc Searls Weblog" xmlUrl="https://doc.searls.com/feed" htmlUrl="https://doc.searls.com/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="Slashdot" xmlUrl="http://rss.slashdot.org/Slashdot/slashdotMain" htmlUrl="https://slashdot.org/" category="all,tech,politics"/>
+    <outline type="rss" text="Hacker News: Best" xmlUrl="https://hnrss.org/best" htmlUrl="https://news.ycombinator.com/best" category="all,tech,politics"/>
+    <outline type="rss" text="TechRepublic" xmlUrl="https://www.techrepublic.com/rssfeeds/articles/" htmlUrl="https://www.techrepublic.com/" category="all,tech,politics"/>
+    <outline type="rss" text="Mediagazer" xmlUrl="http://mediagazer.com/feed.xml" htmlUrl="http://mediagazer.com/" category="all,tech,politics"/>
+    <outline type="rss" text="SCOTUSblog" xmlUrl=" https://scotusblog.com/feed" htmlUrl="https://www.scotusblog.com/" category="all,blogroll,politics"/>
+    <outline type="rss" text="STAT" xmlUrl="https://www.statnews.com/feed/" htmlUrl="https://www.statnews.com/" category="all,tech,politics"/>
+    <outline type="rss" text="Laughing Squid" xmlUrl="http://laughingsquid.com/feed/" htmlUrl="https://laughingsquid.com/" category="all,bloggers"/>
+    <outline type="rss" text="PBS NewsHour - The Latest" xmlUrl="https://www.pbs.org/newshour/feeds/rss/headlines" htmlUrl="https://www.pbs.org/newshour/" category="all,tech,politics"/>
+    <outline type="rss" text="MSNBC Top Stories" xmlUrl="http://www.msnbc.com/feeds/latest" htmlUrl="https://www.msnbc.com/" category="all,politics"/>
+    <outline type="rss" text="Yahoo Tech" xmlUrl="https://www.yahoo.com/tech/rss" htmlUrl="https://finance.yahoo.com/tech" category="all,tech,politics"/>
+    <outline type="rss" text="Just In News" xmlUrl="https://thehill.com/news/feed/" htmlUrl="https://thehill.com/" category="all,politics"/>
+    <outline type="rss" text="Vanity Fair" xmlUrl="https://www.vanityfair.com/feed/rss" htmlUrl="https://www.vanityfair.com/" category="all,politics"/>
+    <outline type="rss" text="QNS" xmlUrl="https://qns.com/feed" htmlUrl="https://qns.com/" category="all,politics"/>
+    <outline type="rss" text="Texas Monthly" xmlUrl="http://www.texasmonthly.com/feed/" htmlUrl="https://www.texasmonthly.com/" category="all,politics"/>
+    <outline type="rss" text="Truthout" xmlUrl="http://truth-out.org/feed?format=feed" htmlUrl="https://truthout.org/" category="all,politics"/>
+    <outline type="rss" text="Techmeme" xmlUrl="http://www.techmeme.com/feed.xml" htmlUrl="http://www.techmeme.com/" category="all,tech"/>
+    <outline type="rss" text="Semafor" xmlUrl="https://www.semafor.com/rss.xml" htmlUrl="https://www.semafor.com/" category="all,politics"/>
+    <outline type="rss" text="Gizmodo" xmlUrl="http://gizmodo.com/index.xml" htmlUrl="https://gizmodo.com/" category="all,tech"/>
+    <outline type="rss" text="The Verge" xmlUrl="https://www.theverge.com/rss/index.xml" htmlUrl="https://www.theverge.com/" category="all,politics"/>
+    <outline type="rss" text="memeorandum" xmlUrl="http://www.memeorandum.com/feed.xml" htmlUrl="http://www.memeorandum.com/" category="all,politics"/>
+    <outline type="rss" text="xkcd.com" xmlUrl="http://xkcd.com/rss.xml" htmlUrl="https://xkcd.com/" category="all,blogroll,tech,politics,bloggers"/>
+    <outline type="rss" text="Reuters News Agency" xmlUrl="https://www.reutersagency.com/feed/?taxonomy=best-sectors&amp;amp;post_type=best" htmlUrl="https://www.reutersagency.com/en/" category="all"/>
+    <outline type="rss" text="Six Colors" xmlUrl="http://feedpress.me/sixcolors" htmlUrl="https://sixcolors.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="B I J A N" xmlUrl="https://bijansabet.com/feed" htmlUrl="https://bijansabet.com/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="John Battelle's Search Blog" xmlUrl="https://battellemedia.com/feed" htmlUrl="https://battellemedia.com/" category="all,blogroll"/>
+    <outline type="rss" text="WP Tavern" xmlUrl="https://wptavern.com/feed" htmlUrl="https://wptavern.com/" category="all,blogroll"/>
+    <outline type="rss" text="Schneier on Security" xmlUrl="https://www.schneier.com/feed/" htmlUrl="https://www.schneier.com/" category="all,blogroll,tech,politics,bloggers"/>
+    <outline type="rss" text="KCPW" xmlUrl="https://kcpw.org/feed" htmlUrl="https://kcpw.org/?post_type=post&amp;amp;p=125715" category="all,blogroll"/>
+    <outline type="rss" text="Whatever" xmlUrl="http://whatever.scalzi.com/feed/" htmlUrl="https://whatever.scalzi.com/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="Waxy.org" xmlUrl="http://waxy.org/feed/" htmlUrl="https://waxy.org/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="The GitHub Blog" xmlUrl="https://github.blog/feed/" htmlUrl="https://github.blog/" category="all,blogroll"/>
+    <outline type="rss" text="The Editorial Board." xmlUrl="https://www.editorialboard.com/feed/" htmlUrl="https://www.editorialboard.com/" category="all,blogroll,politics"/>
+    <outline type="rss" text="WordPress.com News" xmlUrl="https://wordpress.com/blog/feed/" htmlUrl="https://wordpress.com/blog" category="all,blogroll"/>
+    <outline type="rss" text="Tedium" xmlUrl="https://tedium.co/feed" htmlUrl="https://tedium.co/" category="all,blogroll"/>
+    <outline type="rss" text="Post Reports" xmlUrl="https://podcast.posttv.com/itunes/post-reports.xml" category="all,blogroll,politics,podcasts"/>
+    <outline type="rss" text="FrameLab" xmlUrl="https://georgelakoff.substack.com/feed" htmlUrl="https://www.theframelab.org/" category="all,blogroll,politics,bloggers"/>
+    <outline type="rss" text="The Oaklandside" xmlUrl="http://oaklandside.org/feed/" htmlUrl="https://oaklandside.org/" category="all,politics"/>
+    <outline type="rss" text="Open Source with Christopher Lydon" xmlUrl="https://radioopensource.org/feed" htmlUrl="https://radioopensource.org/" category="all,blogroll,podcasts"/>
+    <outline type="rss" text="Platformer" xmlUrl="https://www.platformer.news/rss/" htmlUrl="https://www.platformer.news/" category="all,blogroll"/>
+    <outline type="rss" text="Kevin Drum" xmlUrl="https://jabberwocking.com/feed/" htmlUrl="https://jabberwocking.com/" category="all,blogroll"/>
+    <outline type="rss" text="Fresh Air" xmlUrl="https://feeds.npr.org/381444908/podcast.xml" htmlUrl="https://www.npr.org/podcasts/381444908/fresh-air" category="all,blogroll"/>
+    <outline type="rss" text="Roland Tanglao" xmlUrl="http://rolandtanglao.com/feed.xml" htmlUrl="http://rolandtanglao.com/" category="all,blogroll"/>
+    <outline type="rss" text="Social Warming by Charles Arthur" xmlUrl="https://socialwarming.substack.com/feed" htmlUrl="https://socialwarming.substack.com/" category="all,blogroll"/>
+    <outline type="rss" text="That Trippi Show" xmlUrl="https://feeds.megaphone.fm/trippishow" htmlUrl="https://redcircle.com/shows/that-trippi-show" category="all,blogroll"/>
+    <outline type="rss" text="Thejesh GN" xmlUrl="https://thejeshgn.com/rss" htmlUrl="https://thejeshgn.com/" category="all,blogroll"/>
+    <outline type="rss" text="Seth's Blog" xmlUrl="https://seths.blog/feed" htmlUrl="https://seths.blog/" category="all,blogroll"/>
+    <outline type="rss" text="Longreads" xmlUrl="http://longreads.com/rss" htmlUrl="https://longreads.com/" category="all,blogroll"/>
+    <outline type="rss" text="EV Grieve" xmlUrl="http://evgrieve.com/feeds/posts/default?alt=rss" htmlUrl="http://evgrieve.com/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="TorrentFreak" xmlUrl="http://feeds.feedburner.com/Torrentfreak" htmlUrl="https://torrentfreak.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Poynter" xmlUrl="http://www.poynter.org/feed/" htmlUrl="https://www.poynter.org/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="ProPublica" xmlUrl="https://newsie.social/@ProPublica.rss" htmlUrl="https://newsie.social/@ProPublica" category="all,blogroll"/>
+    <outline type="rss" text="A History of Rock Music in 500 Songs" xmlUrl="https://500songs.com/feed/podcast/" htmlUrl="https://500songs.com/series/a-history-of-rock-music-in-500-songs/" category="all,blogroll,podcasts"/>
+    <outline type="rss" text="Ars Technica - All content" xmlUrl="http://feeds.arstechnica.com/arstechnica/index/" htmlUrl="https://arstechnica.com/" category="all,blogroll"/>
+    <outline type="rss" text="PRINT Magazine" xmlUrl="https://www.printmag.com/feed" htmlUrl="https://www.printmag.com/" category="all,blogroll"/>
+    <outline type="rss" text="US news | The Guardian" xmlUrl="http://www.guardian.co.uk/world/usa/rss" htmlUrl="https://www.theguardian.com/us-news" category="all"/>
+    <outline type="rss" text="kottke.org" xmlUrl="http://feeds.kottke.org/main" htmlUrl="https://kottke.org/" category="all,blogroll,bloggers"/>
+    <outline type="rss" text="Political Wire" xmlUrl="https://politicalwire.com/feed/" htmlUrl="https://politicalwire.com/" category="all,blogroll,politics"/>
+    <outline type="rss" text="Nieman Lab" xmlUrl="https://feeds.feedburner.com/NiemanJournalismLab" htmlUrl="https://www.niemanlab.org/" category="all,blogroll,tech,politics"/>
+    <outline type="rss" text="BuzzMachine" xmlUrl="https://buzzmachine.com/feed/" htmlUrl="https://buzzmachine.com/" category="all,blogroll,tech,politics,bloggers"/>
+    <outline type="rss" text="PressThink" xmlUrl="https://pressthink.org/feed/" htmlUrl="https://pressthink.org/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="John O'Nolan" xmlUrl="https://mastodon.xyz/@johnonolan.rss" htmlUrl="https://mastodon.xyz/@johnonolan" category="all,blogroll"/>
+    <outline type="rss" text="Memex 1.1" xmlUrl="https://memex.naughtons.org/feed/" htmlUrl="https://memex.naughtons.org/" category="all,blogroll,tech,politics,bloggers"/>
+    <outline type="rss" text="inessential.com" xmlUrl="https://inessential.com/feed" htmlUrl="https://inessential.com/" category="all,blogroll,tech,bloggers"/>
+    <outline type="rss" text="Mastodon Blog" xmlUrl="https://blog.joinmastodon.org/index.xml" htmlUrl="https://blog.joinmastodon.org/" category="all,blogroll"/>
+    <outline type="rss" text="English (UK)" xmlUrl="https://blog.x.com/feeds/posts/default" htmlUrl="https://blog.x.com/en_gb" category="all,blogroll"/>
+    <outline type="rss" text="A List Apart: The Full Feed" xmlUrl="https://alistapart.com/main/feed/" htmlUrl="https://alistapart.com" category="all,blogroll"/>
+    <outline type="rss" text="Amazin' Avenue" xmlUrl="https://www.amazinavenue.com/rss/current.xml" htmlUrl="https://www.amazinavenue.com/" category="mlb"/>
+    <outline type="rss" text="Flutterby!" xmlUrl="https://www.flutterby.com/main.rdf" htmlUrl="https://www.flutterby.com/"/>
+    <outline type="rss" text="Web3 is Going Just Great" xmlUrl="https://web3isgoinggreat.com/feed.xml" htmlUrl="https://web3isgoinggreat.com/" category="all,tech,politics"/>
+    <outline type="rss" text="Trust &amp;amp; Safety Professional Association" xmlUrl="https://www.tspa.org/feed" htmlUrl="https://www.tspa.org/" category="all,wp-projects"/>
+    <outline type="rss" text="NOVOS" xmlUrl="http://novoslabs.com/feed" htmlUrl="https://novoslabs.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Neosensory" xmlUrl="https://neosensory.com/feed" htmlUrl="" category="all,wp-projects"/>
+    <outline type="rss" text="Neal Mueller" xmlUrl="https://nealmueller.com/feed" htmlUrl="https://nealmueller.com/" category="all,wp-projects"/>
+    <outline type="rss" text="noma" xmlUrl="https://noma.dk/feed" htmlUrl="https://noma.dk/" category="all,wp-projects"/>
+    <outline type="rss" text="Muslim Girl" xmlUrl="https://muslimgirl.com/feed" htmlUrl="https://muslimgirl.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Moms Demand Action" xmlUrl="http://momsdemandaction.org/feed" htmlUrl="https://momsdemandaction.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Multidisciplinary Association for Psychedelic Studies – MAPS" xmlUrl="https://maps.org/feed" htmlUrl="https://maps.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Mountain Cloud Zen Center" xmlUrl="https://www.mountaincloud.org/feed" htmlUrl="https://www.mountaincloud.org/" category="all,wp-projects"/>
+    <outline type="rss" text="MetaGrrrl" xmlUrl="http://metagrrrl.com/feed" htmlUrl="https://metagrrrl.com/" category="all,wp-projects"/>
+    <outline type="rss" text="McKenna Academy" xmlUrl="https://mckenna.academy/feed" htmlUrl="https://mckenna.academy/" category="all,wp-projects"/>
+    <outline type="rss" text="Michael Pollan" xmlUrl="https://michaelpollan.com/feed" htmlUrl="https://michaelpollan.com/" category="all,wp-projects"/>
+    <outline type="rss" text="MishMoments" xmlUrl="https://mishmoments.com/feed" htmlUrl="https://mishmoments.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Lowercarbon Capital" xmlUrl="https://lowercarboncapital.com/feed" htmlUrl="https://lowercarbon.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Letters of Note" xmlUrl="https://lettersofnote.com/feed" htmlUrl="https://lettersofnote.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Mamoní Valley Preserve" xmlUrl="https://mamonivalleypreserve.org/feed" htmlUrl="https://mamonivalleypreserve.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Killscreen" xmlUrl="https://killscreen.com/feed" htmlUrl="https://www.killscreen.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Jeff Gothelf" xmlUrl="https://jeffgothelf.com/feed" htmlUrl="https://jeffgothelf.com/" category="all,wp-projects"/>
+    <outline type="rss" text="ITKAN" xmlUrl="https://itkan.cloud/feed" htmlUrl="https://itkan.cloud/" category="all,wp-projects"/>
+    <outline type="rss" text="Heart Hackers Club" xmlUrl="https://hearthackersclub.com/feed" htmlUrl="https://hearthackersclub.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Hugh Howey" xmlUrl="https://hughhowey.com/feed" htmlUrl="https://hughhowey.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Hunter Walk" xmlUrl="https://hunterwalk.com/feed" htmlUrl="https://hunterwalk.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Hey Shayla" xmlUrl="https://www.heyshayla.com/feed" htmlUrl="https://www.heyshayla.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Feminist Frequency" xmlUrl="https://feministfrequency.com/feed" htmlUrl="https://feministfrequency.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Forms of life, forms of mind" xmlUrl="https://thoughtforms.life/feed" htmlUrl="https://thoughtforms.life/" category="all,wp-projects"/>
+    <outline type="rss" text="Distributed.blog" xmlUrl="https://distributed.blog/feed" htmlUrl="https://distributed.blog/" category="all,wp-projects"/>
+    <outline type="rss" text="Day One | Your Journal for Life" xmlUrl="https://dayoneapp.com/feed" htmlUrl="https://dayoneapp.com/" category="all,wp-projects"/>
+    <outline type="rss" text="David Perell" xmlUrl="https://perell.com/feed" htmlUrl="https://perell.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Community Tech Network" xmlUrl="https://communitytechnetwork.org/feed" htmlUrl="https://communitytechnetwork.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Conscious City Guide" xmlUrl="https://consciouscityguide.com/feed" htmlUrl="https://consciouscityguide.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Copyleft Currents" xmlUrl="https://heathermeeker.com/feed" htmlUrl="https://heathermeeker.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Genius | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/series/genius/rss" htmlUrl="https://www.theguardian.com/crosswords/series/genius" category="all"/>
+    <outline type="rss" text="Throw Out The Manual" xmlUrl="https://blog.timowens.io/rss" htmlUrl="https://blog.timowens.io/" category="all"/>
+    <outline type="rss" text="zen habits" xmlUrl="http://zenhabits.net/feed/" htmlUrl="https://zenhabits.net/" category="all"/>
+    <outline type="rss" text="Women | The Guardian" xmlUrl="http://www.theguardian.com/lifeandstyle/women/rss" htmlUrl="https://www.theguardian.com/lifeandstyle/women" category="all"/>
+    <outline type="rss" text="United Kingdom holidays | The Guardian" xmlUrl="http://www.theguardian.com/travel/uk/rss" htmlUrl="https://www.theguardian.com/travel/uk" category="all"/>
+    <outline type="rss" text="Wildlife | The Guardian" xmlUrl="http://www.theguardian.com/environment/wildlife/rss" htmlUrl="https://www.theguardian.com/environment/wildlife" category="all"/>
+    <outline type="rss" text="Moritz F. Fürst — Microblog Feed" xmlUrl="https://moritzfuerst.net/feed/micro/rss" htmlUrl="https://moritzfuerst.net/" category="all"/>
+    <outline type="rss" text="Projects Archive - British Antarctic Survey" xmlUrl="https://www.bas.ac.uk/feed/?post_type=project" htmlUrl="https://www.bas.ac.uk/project/" category="all"/>
+    <outline type="rss" text="Quiptic | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/series/quiptic/rss" htmlUrl="https://www.theguardian.com/crosswords/series/quiptic" category="all"/>
+    <outline type="rss" text="NBA | The Guardian" xmlUrl="http://www.theguardian.com/sport/nba/rss" htmlUrl="https://www.theguardian.com/sport/nba" category="all"/>
+    <outline type="rss" text="NFL | The Guardian" xmlUrl="http://www.theguardian.com/sport/nfl/rss" htmlUrl="https://www.theguardian.com/sport/nfl" category="all"/>
+    <outline type="rss" text="Quick | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/series/quick/rss" htmlUrl="https://www.theguardian.com/crosswords/series/quick" category="all"/>
+    <outline type="rss" text="Food | The Guardian" xmlUrl="http://www.theguardian.com/lifeandstyle/food-and-drink/rss" htmlUrl="https://www.theguardian.com/food" category="all"/>
+    <outline type="rss" text="Health &amp;amp; wellbeing | The Guardian" xmlUrl="http://www.theguardian.com/lifeandstyle/health-and-wellbeing/rss" htmlUrl="https://www.theguardian.com/lifeandstyle/health-and-wellbeing" category="all"/>
+    <outline type="rss" text="Crossword blog | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/crossword-blog/rss" htmlUrl="https://www.theguardian.com/crosswords/crossword-blog" category="all"/>
+    <outline type="rss" text="Cryptic | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/series/cryptic/rss" htmlUrl="https://www.theguardian.com/crosswords/series/cryptic" category="all"/>
+    <outline type="rss" text="Energy | The Guardian" xmlUrl="http://www.theguardian.com/environment/energy/rss" htmlUrl="https://www.theguardian.com/environment/energy" category="all"/>
+    <outline type="rss" text="Diversity And Equality | The Guardian" xmlUrl="http://www.theguardian.com/business/diversity-and-equality/rss" htmlUrl="https://www.theguardian.com/business/diversity-and-equality" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/politics/rss.xml" htmlUrl="https://www.bbc.co.uk/news/politics" category="all"/>
+    <outline type="rss" text="Australia news | The Guardian" xmlUrl="http://www.theguardian.com/australia-news/rss" htmlUrl="https://www.theguardian.com/australia-news" category="all"/>
+    <outline type="rss" text="Cities | The Guardian" xmlUrl="http://www.theguardian.com/cities/rss" htmlUrl="https://www.theguardian.com/cities" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml" htmlUrl="https://www.bbc.co.uk/news/entertainment_and_arts" category="all"/>
+    <outline type="rss" text="scruffian" xmlUrl="https://ben.blog/feed" htmlUrl="https://ben.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Tiniaco Leyba" xmlUrl="https://tiniacoleyba.com/feed" htmlUrl="https://tiniacoleyba.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Fedibblety" xmlUrl="https://fedibblety.com/feed" htmlUrl="https://www.fedibblety.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="uiFromMars" xmlUrl="https://www.uifrommars.com/feed" htmlUrl="https://www.uifrommars.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="New Orleans Mom" xmlUrl="https://neworleansmom.com/feed" htmlUrl="https://neworleansmom.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Lomeraniel Audiobook Reviews" xmlUrl="https://lomeraniel.com/feed" htmlUrl="https://lomeraniel.mystagingwebsite.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Derek Hanson" xmlUrl="https://derekhanson.blog/feed" htmlUrl="https://derekhanson.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Gamebits" xmlUrl="https://www.gamebits.net/feed" htmlUrl="https://www.gamebits.net/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Something Odd!" xmlUrl="https://odd.blog/feed" htmlUrl="https://odd.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Artur Piszek" xmlUrl="https://substack.piszek.com/feed" htmlUrl="https://piszek.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Roadbits" xmlUrl="https://roadbits.net/feed" htmlUrl="https://roadbits.net/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Karen Roldan" xmlUrl="https://karenroldan.net/feed" htmlUrl="https://karenroldan.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Cesar Abeid" xmlUrl="https://cesar.blog/feed" htmlUrl="https://cesar.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Butterfly Mind" xmlUrl="https://andreabadgley.blog/feed" htmlUrl="https://andreabadgley.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Me, Myself &amp;amp; The Doctor" xmlUrl="https://rossana.blog/feed" htmlUrl="https://rossana.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Daniel Bachhuber" xmlUrl="https://danielbachhuber.com/feed" htmlUrl="https://danielbachhuber.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="{ Code Journey; }" xmlUrl="https://rosiecodes.blog/feed" htmlUrl="https://codejourney.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Brezo.blog" xmlUrl="https://brezo.blog/feed" htmlUrl="https://brezo.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="pyjammy dot blog" xmlUrl="https://pyjammy.blog/feed" htmlUrl="https://pyjammy.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Kidz Creations" xmlUrl="https://kidzcreations.blog/feed" htmlUrl="https://kidzcreations.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="MacManX.com" xmlUrl="https://macmanx.com/feed" htmlUrl="https://macmanx.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="In Photos dot Org" xmlUrl="https://inphotos.org/feed" htmlUrl="https://inphotos.org/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Artur Piszek" xmlUrl="https://piszek.com/feed" htmlUrl="https://piszek.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Vasily Belolapotkov" xmlUrl="https://vbelolapotkov.com/feed" htmlUrl="https://vbelolapotkov.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Paolo Belcastro" xmlUrl="https://paolo.blog/feed" htmlUrl="https://paolo.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Tess Needham" xmlUrl="https://tessneedham.blog/feed" htmlUrl="https://tessneedham.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Morfternight" xmlUrl="https://good.morfternight.com/feed" htmlUrl="https://good.morfternight.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Remotely Productive" xmlUrl="https://mokagio.substack.com/feed" htmlUrl="https://www.giolodi.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Data for Breakfast" xmlUrl="https://data.blog/feed" htmlUrl="https://data.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Fedibblety" xmlUrl="https://www.fedibblety.com/feed" htmlUrl="https://www.fedibblety.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Life on Mars" xmlUrl="https://martiandaze.net/feed" htmlUrl="https://martiandaze.net/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Get On With It" xmlUrl="https://getonwithit.blog/feed" htmlUrl="https://getonwithit.blog/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="Remotely Productive" xmlUrl="https://giolodi.com/feed" htmlUrl="https://www.giolodi.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="coriander in pho" xmlUrl="https://corianderinpho.com/feed" htmlUrl="https://corianderinpho.com/" category="all,a8c-blogs,bloggers"/>
+    <outline type="rss" text="agm" xmlUrl="https://nomad.blog/feed" htmlUrl="https://nomad.blog/" category="all,tech,bloggers"/>
+    <outline type="rss" text="Bix dot Blog" xmlUrl="https://bix.blog/feed/" htmlUrl="https://bix.blog" category="all"/>
+    <outline type="rss" text="The Overspill: when there's more that I want to say" xmlUrl="https://theoverspill.blog/feed/" htmlUrl="https://theoverspill.blog/" category="all"/>
+    <outline type="rss" text="Al Jazeera – Breaking News, World News and Video from Al Jazeera" xmlUrl="https://www.aljazeera.com/xml/rss/all.xml" htmlUrl="https://www.aljazeera.com/" category="all"/>
+    <outline type="rss" text="gabrielle is a grumpy cow" xmlUrl="https://rss.firesky.tv/?filter=from:moosebegab.bsky.social" htmlUrl="https://firesky.tv/?filter=from%3Amoosebegab.bsky.social" category="all,bluesky"/>
+    <outline type="rss" text="@artshow.bsky.social" xmlUrl="https://rss.firesky.tv/?filter=from%3Aartshow.bsky.social" htmlUrl="https://firesky.tv/?filter=from%3Aartshow.bsky.social" category="all"/>
+    <outline type="rss" text="The Good in Us by Mary L. Trump" xmlUrl="https://marytrump.substack.com/feed/" htmlUrl="https://www.marytrump.org/" category="all"/>
+    <outline type="rss" text="The Enlightened Economist" xmlUrl="http://www.enlightenmenteconomics.com/blog/index.php/feed/" htmlUrl="http://www.enlightenmenteconomics.com/blog" category="all"/>
+    <outline type="rss" text="Classical music | The Guardian" xmlUrl="http://www.theguardian.com/music/classicalmusicandopera/rss" htmlUrl="https://www.theguardian.com/music/classical-music-and-opera" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/business/rss.xml" htmlUrl="https://www.bbc.co.uk/news/business" category="all,politics"/>
+    <outline type="rss" text="Frank X. Shaw" xmlUrl="https://rss.firesky.tv?filter=from%3Afxshaw.com" htmlUrl="https://firesky.tv/?filter=from%3Afxshaw.com" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; Diagnosis" xmlUrl="https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/column/diagnosis/rss.xml" htmlUrl="https://www.nytimes.com/column/diagnosis" category="all"/>
+    <outline type="rss" text="PBS NewsHour - Health" xmlUrl="https://www.pbs.org/newshour/feeds/rss/health" htmlUrl="https://www.pbs.org/newshour/health" category="all"/>
+    <outline type="rss" text="ooh.directory recently added blogs" xmlUrl="https://ooh.directory/feeds/recently-added.xml" htmlUrl="https://ooh.directory/" category="all"/>
+    <outline type="rss" text="SpaceNews" xmlUrl="https://spacenews.com/feed/" htmlUrl="https://spacenews.com/" category="all"/>
+    <outline type="rss" text="David Heinemeier Hansson" xmlUrl="https://world.hey.com/dhh/feed.atom" htmlUrl="https://world.hey.com/dhh" category="all"/>
+    <outline type="rss" text="37signals Dev" xmlUrl="https://dev.37signals.com/feed/posts.xml" htmlUrl="https://dev.37signals.com/" category="all"/>
+    <outline type="rss" text="David Weinberger" xmlUrl="https://mastodon.social/@dweinberger.rss" htmlUrl="https://mastodon.social/@dweinberger" category="all"/>
+    <outline type="rss" text="Tesla Oracle" xmlUrl="https://www.teslaoracle.com/feed/" htmlUrl="https://www.teslaoracle.com/" category="all,tech"/>
+    <outline type="rss" text="Ganjapreneur" xmlUrl="https://www.ganjapreneur.com/feed/" htmlUrl="https://ganjapreneur.com/" category="all"/>
+    <outline type="rss" text="The Oatmeal - Comics by Matthew Inman" xmlUrl="https://theoatmeal.com/feed/rss" htmlUrl="http://theoatmeal.com/" category="all"/>
+    <outline type="rss" text="Eater" xmlUrl="https://www.eater.com/rss/index.xml" htmlUrl="https://www.eater.com/" category="all"/>
+    <outline type="rss" text="Tedium" xmlUrl="https://tedium.co/feed/" htmlUrl="https://tedium.co/" category="all"/>
+    <outline type="rss" text="The SEO MBA" xmlUrl="https://newsletter.seomba.com/feed/" htmlUrl="https://newsletter.seomba.com/" category="all"/>
+    <outline type="rss" text="showRSS additions feed" xmlUrl="https://showrss.info/other/shows.rss" htmlUrl="https://showrss.info" category="all"/>
+    <outline type="rss" text="Words by Robin" xmlUrl="https://blog.josh.tel/feed/" htmlUrl="https://blog.riley.pub/" category="all"/>
+    <outline type="rss" text="A Whole Lotta Nothing" xmlUrl="https://a.wholelottanothing.org/feed/" htmlUrl="https://a.wholelottanothing.org/" category="all,bloggers"/>
+    <outline type="rss" text="Dave Winer" xmlUrl="https://dave.micro.blog/feed.xml" htmlUrl="https://dave.micro.blog/" category="all"/>
+    <outline type="rss" text="The Register" xmlUrl="http://www.theregister.co.uk/headlines.atom" htmlUrl="https://www.theregister.com/" category="all,tech"/>
+    <outline type="rss" text="Dan Goodin – Ars Technica" xmlUrl="https://arstechnica.com/author/dan-goodin/feed/" htmlUrl="https://arstechnica.com/" category="all"/>
+    <outline type="rss" text="C'est la Z" xmlUrl="https://cestlaz.github.io/rss.xml" htmlUrl="https://cestlaz.zamansky.net/" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; Technology" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/Technology.xml" htmlUrl="https://www.nytimes.com/section/technology" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; Global Warming" xmlUrl="https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/subject/global-warming-climate-change/rss.xml" htmlUrl="https://www.nytimes.com/topic/subject/global-warming-climate-change" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; 36 Hours" xmlUrl="https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/column/36-hours/rss.xml" htmlUrl="https://www.nytimes.com/column/36-hours" category="all"/>
+    <outline type="rss" text="NYT Cooking" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC1rIOwTqDuWkFj87HZYRFOg" htmlUrl="https://www.youtube.com/channel/UC1rIOwTqDuWkFj87HZYRFOg" category="all"/>
+    <outline type="rss" text="The Bulwark" xmlUrl="https://plus.thebulwark.com/feed" htmlUrl="https://www.thebulwark.com/" category="all,politics"/>
+    <outline type="rss" text="Must Love Garlic" xmlUrl="https://must-love-garlic.com/feed/" htmlUrl="https://must-love-garlic.com/" category="all"/>
+    <outline type="rss" text="NYT Open - Medium" xmlUrl="https://open.nytimes.com/feed" htmlUrl="https://open.nytimes.com/?source=rss----51e1d1745b32---4" category="all"/>
+    <outline type="rss" text="Kaatscast: the Catskills Podcast" xmlUrl="https://anchor.fm/s/120b0330/podcast/rss" htmlUrl="https://www.kaatscast.com/" category="all"/>
+    <outline type="rss" text="Dan Sinker's Blog" xmlUrl="https://dansinker.com/feed.xml" htmlUrl="https://dansinker.com/" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; Business &amp;gt; Economy" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Economy.xml" htmlUrl="https://www.nytimes.com/section/business/economy" category="all"/>
+    <outline type="rss" text="Open Culture (Official)" xmlUrl="https://toot.community/@openculture.rss" htmlUrl="https://toot.community/@openculture" category="all"/>
+    <outline type="rss" text="Tedium: The Dull Side of the Internet." xmlUrl="https://feed.tedium.co/" htmlUrl="https://tedium.co/" category="all"/>
+    <outline type="rss" text="The GitHub Blog" xmlUrl="https://github.blog/all.atom" htmlUrl="https://github.blog/" category="all"/>
+    <outline type="rss" text="The Mozilla Blog" xmlUrl="https://blog.mozilla.org/feed/" htmlUrl="https://blog.mozilla.org/en/" category="all"/>
+    <outline type="rss" text="AWS Architecture Blog" xmlUrl="https://aws.amazon.com/blogs/architecture/feed/" htmlUrl="https://aws.amazon.com/blogs/architecture/" category="all"/>
+    <outline type="rss" text="Bootstrap Blog" xmlUrl="https://blog.getbootstrap.com/feed.xml" htmlUrl="https://blog.getbootstrap.com/" category="all"/>
+    <outline type="rss" text="The Daily Dot" xmlUrl="http://www.dailydot.com/feed/summary/latest/" htmlUrl="https://www.dailydot.com/" category="all"/>
+    <outline type="rss" text="jwz" xmlUrl="http://www.jwz.org/blog/feed/" htmlUrl="https://www.jwz.org/blog/" category="all,tech,bloggers"/>
+    <outline type="rss" text="danah boyd" xmlUrl="https://mastodon.social/@zephoria.rss" htmlUrl="https://mastodon.social/@zephoria" category="all"/>
+    <outline type="rss" text="snarfed.org" xmlUrl="https://snarfed.org/feed" htmlUrl="https://snarfed.org/" category="all,bloggers"/>
+    <outline type="rss" text="Nova | PBS" xmlUrl="https://www.pbs.org/wgbh/nova/rss/all/" htmlUrl="https://www.pbs.org/wgbh/nova/" category="all"/>
+    <outline type="rss" text="Global Guerrillas" xmlUrl="https://johnrobb.substack.com/feed" htmlUrl="https://johnrobb.substack.com/" category="all,bloggers"/>
+    <outline type="rss" text="Mastodon" xmlUrl="https://mastodon.social/@Mastodon.rss" htmlUrl="https://mastodon.social/@Mastodon" category="all"/>
+    <outline type="rss" text="Fedi.Tips – An Unofficial Guide to Mastodon and the Fediverse" xmlUrl="https://fedi.tips/feed/" htmlUrl="https://fedi.tips/" category="all,bloggers"/>
+    <outline type="rss" text="The Pragmatic Engineer" xmlUrl="http://feeds.feedburner.com/ThePragmaticEngineer" htmlUrl="https://blog.pragmaticengineer.com/" category="all"/>
+    <outline type="rss" text="The Nevada Independent" xmlUrl="https://thenevadaindependent.com/feed/" htmlUrl="https://thenevadaindependent.com/" category="all,politics"/>
+    <outline type="rss" text="Dave Winer" xmlUrl="https://mastodon.social/@davew.rss" htmlUrl="https://mastodon.social/@davew" category="all,bloggers,dave"/>
+    <outline type="rss" text="A True History of the Internet" xmlUrl="https://paravirtualization.blogspot.com/feeds/posts/default" htmlUrl="https://paravirtualization.blogspot.com/" category="all"/>
+    <outline type="rss" text="Hell Gate" xmlUrl="https://hellgatenyc.com/feed/" htmlUrl="https://hellgatenyc.com/" category="all,politics,bloggers"/>
+    <outline type="rss" text="Diary of a Crossword Fiend" xmlUrl="https://crosswordfiend.com/feed/" htmlUrl="https://crosswordfiend.com/" category="all"/>
+    <outline type="rss" text="Artemis - NASA" xmlUrl="https://blogs.nasa.gov/artemis/feed/" htmlUrl="https://www.nasa.gov/" category="all"/>
+    <outline type="rss" text="tecnologia" xmlUrl="http://wok.oblomov.eu/tecnologia/index.rss" htmlUrl="https://wok.oblomov.eu/tecnologia/" category="all"/>
+    <outline type="rss" text="The Fresh Toast" xmlUrl="https://thefreshtoast.com/feed/" htmlUrl="https://thefreshtoast.com/" category="all"/>
+    <outline type="rss" text="NetNewsWire" xmlUrl="https://nnw.ranchero.com/feed" htmlUrl="https://netnewswire.blog/" category="all"/>
+    <outline type="rss" text="Crooked Timber" xmlUrl="https://crookedtimber.org/feed/" htmlUrl="https://crookedtimber.org/" category="all"/>
+    <outline type="rss" text="Marginal Revolution" xmlUrl="https://feeds.feedblitz.com/marginalrevolution" htmlUrl="https://marginalrevolution.com/" category="all"/>
+    <outline type="rss" text="Brad Ideas" xmlUrl="http://ideas.4brad.com/index.rdf" htmlUrl="https://ideas.4brad.com/" category="all"/>
+    <outline type="rss" text="Ken Smith's linkblog" xmlUrl="http://data.feedland.org/feeds/KenSmith.xml" htmlUrl="http://feedland.org/?river=http://data.feedland.org/feeds/KenSmith.xml" category="all"/>
+    <outline type="rss" text="The Ringer -  All" xmlUrl="https://www.theringer.com/rss/index.xml" htmlUrl="https://www.theringer.com/" category="all"/>
+    <outline type="rss" text="Truth and Consequences" xmlUrl="https://truthandcons.substack.com/feed" htmlUrl="https://truthandcons.substack.com/" category="all"/>
+    <outline type="rss" text="Routine Revelations" xmlUrl="https://frankmcpherson.blog/feed.xml" htmlUrl="https://frankmcpherson.blog/" category="all"/>
+    <outline type="rss" text="Bluesky" xmlUrl="https://blueskyweb.org/rss.xml" htmlUrl="https://bsky.social/about" category="all"/>
+    <outline type="rss" text="Tesla: Current and upcoming models, prices, specs, and more | Electrek" xmlUrl="https://electrek.co/guides/tesla/feed/" htmlUrl="https://electrek.co/guides/tesla/" category="all"/>
+    <outline type="rss" text="NPR Programs: All Things Considered" xmlUrl="https://feeds.npr.org/2/rss.xml" htmlUrl="https://www.npr.org/templates/story/story.php?storyId=2" category="all"/>
+    <outline type="rss" text="Audiobooks Archives - Libro.fm Audiobooks" xmlUrl="https://blog.libro.fm/category/audiobooks/feed/" htmlUrl="https://blog.libro.fm/category/audiobooks/" category="all"/>
+    <outline type="rss" text="FeedLand likes for moosebegab" xmlUrl="http://data.feedland.org/likes/moosebegab.xml" htmlUrl="http://feedland.org/?likes" category="all"/>
+    <outline type="rss" text="Ars Technica" xmlUrl="https://arstechnica.com/feed/" htmlUrl="https://arstechnica.com/" category="all"/>
+    <outline type="rss" text="Zettelkasten.de" xmlUrl="https://zettelkasten.de/feed.atom" htmlUrl="https://zettelkasten.de/" category="all"/>
+    <outline type="rss" text="The Berkeley Scanner" xmlUrl="https://www.berkeleyscanner.com/rss/" htmlUrl="https://www.berkeleyscanner.com/" category="all"/>
+    <outline type="rss" text="Between Rock and a Hard Place" xmlUrl="https://gregmitchell.substack.com/feed" htmlUrl="https://gregmitchell.substack.com/" category="all"/>
+    <outline type="rss" text="Steady" xmlUrl="https://steady.substack.com/feed" htmlUrl="https://steady.substack.com/" category="all"/>
+    <outline type="rss" text="FeedLand" xmlUrl="http://data.feedland.org/changenotes/rss.xml" htmlUrl="http://data.feedland.org/changenotes/" category="all"/>
+    <outline type="rss" text="FeedLand likes for gwthompson" xmlUrl="http://data.feedland.org/likes/gwthompson.xml" htmlUrl="http://feedland.org/?likes" category="all"/>
+    <outline type="rss" text="Bluesky" xmlUrl="https://blueskyweb.xyz/rss.xml" htmlUrl="https://bsky.social/about" category="all"/>
+    <outline type="rss" text="Feedbin" xmlUrl="http://blog.feedbin.me/atom.xml" htmlUrl="https://feedbin.com/" category="all"/>
+    <outline type="rss" text="Excursions by Amit Gawande" xmlUrl="http://amitgawande.com/index.xml" htmlUrl="https://www.amitgawande.com/" category="all"/>
+    <outline type="rss" text="MacStories" xmlUrl="https://www.macstories.net/feed/" htmlUrl="https://www.macstories.net/" category="all"/>
+    <outline type="rss" text="Science &amp;amp; technology" xmlUrl="https://www.economist.com/science-and-technology/rss.xml" htmlUrl="https://www.economist.com/science-and-technology" category="all"/>
+    <outline type="rss" text="Rubenerd" xmlUrl="https://rubenerd.com/feed/" htmlUrl="https://rubenerd.com/" category="all"/>
+    <outline type="rss" text="MacRumors: Mac News and Rumors - All Stories" xmlUrl="https://feeds.macrumors.com/MacRumors-All" htmlUrl="https://www.macrumors.com/" category="all,tech"/>
+    <outline type="rss" text="Ed Zitron's Where's Your Ed At" xmlUrl="https://ez.substack.com/feed" htmlUrl="https://ez.substack.com/" category="all,tech"/>
+    <outline type="rss" text="AppleInsider News" xmlUrl="http://www.appleinsider.com/appleinsider.rss" htmlUrl="https://appleinsider.com/rss/news" category="all"/>
+    <outline type="rss" text="FeedLand likes for all users" xmlUrl="http://data.feedland.org/likes.xml" htmlUrl="http://feedland.org/?likes" category="all,tech,starters"/>
+    <outline type="rss" text="iFixit News" xmlUrl="http://feeds.ifixit.com/ifixitorg" htmlUrl="https://www.ifixit.com/News" category="all"/>
+    <outline type="rss" text="WordPress News" xmlUrl="https://wordpress.org/news/feed/" htmlUrl="https://wordpress.org/news" category="all,tech,starters"/>
+    <outline type="rss" text="Jason Fried" xmlUrl="https://world.hey.com/jason/feed.atom" htmlUrl="https://world.hey.com/jason" category="all,tech,bloggers,starters"/>
+    <outline type="rss" text="Humans of New York" xmlUrl="http://www.humansofnewyork.com/rss" htmlUrl="https://www.humansofnewyork.com/" category="all,bloggers,starters"/>
+    <outline type="rss" text="Dries Buytaert" xmlUrl="https://dri.es/rss.xml" htmlUrl="https://dri.es/" category="all,starters"/>
+    <outline type="rss" text="inessential.com" xmlUrl="http://inessential.com/xml/rss.xml" htmlUrl="https://inessential.com/" category="all,tech,bloggers,starters"/>
+    <outline type="rss" text="Paul Graham: Essays" xmlUrl="http://www.aaronsw.com/2002/feeds/pgessays.rss" htmlUrl="http://www.paulgraham.com/" category="all,starters"/>
+    <outline type="rss" text="AVC" xmlUrl="http://feeds.feedburner.com/avc" htmlUrl="https://avc.com/" category="all,tech,bloggers,starters"/>
+    <outline type="rss" text="Blog - Ethan Zuckerman" xmlUrl="http://www.ethanzuckerman.com/blog/?feed=rss2" htmlUrl="https://ethanzuckerman.com/blog/" category="all,starters"/>
+    <outline type="rss" text="Tech – Ars Technica" xmlUrl="https://feeds.arstechnica.com/arstechnica/gadgets" htmlUrl="https://arstechnica.com/" category="all,starters"/>
+    <outline type="rss" text="David Walsh Blog" xmlUrl="http://feeds2.feedburner.com/Bludice" htmlUrl="https://davidwalsh.name/" category="all,tech,bloggers,starters"/>
+    <outline type="rss" text="The Adventures of Accordion Guy in the 21st Century" xmlUrl="https://www.joeydevilla.com/feed/" htmlUrl="https://www.joeydevilla.com/" category="all,starters"/>
+    <outline type="rss" text="POLITICO" xmlUrl="https://www.politico.eu/feed/" htmlUrl="https://www.politico.eu/" category="all,starters"/>
+    <outline type="rss" text="DER SPIEGEL - International" xmlUrl="http://www.spiegel.de/international/index.rss" htmlUrl="https://www.spiegel.de/" category="all,politics,starters"/>
+    <outline type="rss" text="BGR - Industry-Leading Insights In Tech And Entertainment" xmlUrl="http://feeds.feedburner.com/TheBoyGeniusReport" htmlUrl="https://www.bgr.com/" category="all,starters"/>
+    <outline type="rss" text="Contrarian Thinking" xmlUrl="https://contrarianthinking.co/feed/" htmlUrl="https://contrarianthinking.co/" category="all"/>
+    <outline type="rss" text="Yegor Bugayenko" xmlUrl="https://www.yegor256.com/rss.xml" htmlUrl="https://www.yegor256.com/" category="all"/>
+    <outline type="rss" text="The Verge" xmlUrl="http://www.theverge.com/rss/index.xml" htmlUrl="https://www.theverge.com/" category="all,starters"/>
+    <outline type="rss" text="Scientific American Content: Global" xmlUrl="http://rss.sciam.com/ScientificAmerican-Global" htmlUrl="https://www.scientificamerican.com/" category="all,starters"/>
+    <outline type="rss" text="Derek Sivers blog" xmlUrl="https://sive.rs/en.atom" htmlUrl="https://sive.rs/en.atom" category="all"/>
+    <outline type="rss" text="Ness Labs" xmlUrl="https://nesslabs.com/feed" htmlUrl="https://nesslabs.com/" category="all"/>
+    <outline type="rss" text="NPR Topics: Law" xmlUrl="https://feeds.npr.org/1070/rss.xml" htmlUrl="https://www.npr.org/templates/story/story.php?storyId=1070" category="all"/>
+    <outline type="rss" text="Gateway Journalism Review" xmlUrl="https://gatewayjr.org/feed/" htmlUrl="https://gatewayjr.org/" category="all"/>
+    <outline type="rss" text="New York Knicks News, Scores, Stats &amp;amp; Rumors | New York Post" xmlUrl="http://nypost.com/tag/new-york-knicks/feed/" htmlUrl="https://nypost.com/" category="nba"/>
+    <outline type="rss" text="Dorian Taylor VERSO FEED" xmlUrl="https://doriantaylor.com/3f36c30c-6096-454a-8a22-c062100ae41f" htmlUrl="https://doriantaylor.com/" category="all"/>
+    <outline type="rss" text="Make Things. Make Sense." xmlUrl="https://doriantaylor.com/f07f5044-01bc-472d-9079-9b07771b731c" htmlUrl="https://doriantaylor.com/" category="all"/>
+    <outline type="rss" text="Brooklyn Nets News, Scores, Stats &amp;amp; Rumors | New York Post" xmlUrl="http://nypost.com/tag/brooklyn-nets/feed/" htmlUrl="https://nypost.com/" category="nba"/>
+    <outline type="rss" text="Really Specific Stories" xmlUrl="https://www.rsspod.net/rss" htmlUrl="https://www.rsspod.net" category="all"/>
+    <outline type="rss" text="CMA Thinker - Medium" xmlUrl="https://medium.com/feed/cma-thinker/" htmlUrl="https://medium.com/cma-thinker?source=rss----19e8decacd04---4" category="all"/>
+    <outline type="rss" text="Artists Among Us" xmlUrl="https://whitney.org/podcasts/aau/aau.xml" htmlUrl="https://whitney.org/podcast" category="all"/>
+    <outline type="rss" text="Scientific American Blog: Observations" xmlUrl="http://rss.sciam.com/observations/feed" htmlUrl="https://www.scientificamerican.com/section/observations/" category="all"/>
+    <outline type="rss" text="Sidedoor" xmlUrl="http://feeds.si.edu/SmithsonianSidedoor" htmlUrl="https://www.si.edu/sidedoor" category="all"/>
+    <outline type="rss" text="One Man &amp;amp; His Blog" xmlUrl="https://feedpress.me/oneman" htmlUrl="https://onemanandhisblog.com/" category="all,bloggers"/>
+    <outline type="rss" text="Ye Olde Blogroll — Firehose" xmlUrl="https://blogroll.org/feed/" htmlUrl="https://blogroll.org" category="all,bloggers"/>
+    <outline type="rss" text="NYT Open - Medium" xmlUrl="http://open.blogs.nytimes.com/feed/" htmlUrl="https://open.nytimes.com/?source=rss----51e1d1745b32---4" category="all"/>
+    <outline type="rss" text="Library Talks" xmlUrl="http://newyorkpubliclibrary.libsyn.com/rss" htmlUrl="http://www.nypl.org/podcast" category="all"/>
+    <outline type="rss" text="CogDogBlog" xmlUrl="http://cogdogblog.com/feed/" htmlUrl="https://cogdogblog.com/" category="all,bloggers"/>
+    <outline type="rss" text="Nackblog" xmlUrl="http://jnack.com/blog/feed/" htmlUrl="http://jnack.com/blog" category="all,bloggers"/>
+    <outline type="rss" text="Marijuana Moment" xmlUrl="https://www.marijuanamoment.net/feed/" htmlUrl="https://www.marijuanamoment.net/" category="all,politics"/>
+    <outline type="rss" text="Latest - Reason.com" xmlUrl="https://reason.com/latest/feed/" htmlUrl="https://reason.com/latest/" category="all"/>
+    <outline type="rss" text="Exponential View" xmlUrl="https://www.exponentialview.co/feed" htmlUrl="https://www.exponentialview.co/" category="all,tech,bloggers"/>
+    <outline type="rss" text="The Zuiker Chronicles" xmlUrl="http://zuiker.com/rss/" htmlUrl="http://zuiker.com/" category="all"/>
+    <outline type="rss" text="Variety" xmlUrl="http://feeds.feedburner.com/variety/news/frontpage" htmlUrl="https://variety.com/" category="all"/>
+    <outline type="rss" text="CelticsBlog -  All Posts" xmlUrl="http://www.celticsblog.com/rss/current" htmlUrl="https://www.celticsblog.com/" category="nba"/>
+    <outline type="rss" text="Signal Blog" xmlUrl="https://signal.org/blog/rss.xml" htmlUrl="https://signal.org/blog/" category="all,tech"/>
+    <outline type="rss" text="Democracy Now!" xmlUrl="https://www.democracynow.org/democracynow.rss" htmlUrl="http://www.democracynow.org/" category="all,politics"/>
+    <outline type="rss" text="NPR Topics: Music News" xmlUrl="http://www.npr.org/rss/rss.php?id=1106" htmlUrl="https://www.npr.org/templates/story/story.php?storyId=1106" category="all"/>
+    <outline type="rss" text="FOX Sports Digital" xmlUrl="https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&amp;amp;size=30&amp;amp;tags=fs/nba" htmlUrl="https://www.foxsports.com/" category="all,nba"/>
+    <outline type="rss" text="Patently-O" xmlUrl="http://feeds.feedburner.com/PatentlyO" htmlUrl="https://patentlyo.com/" category="all"/>
+    <outline type="rss" text="Interdependent Thoughts" xmlUrl="https://www.zylstra.org/blog/feed/" htmlUrl="https://www.zylstra.org/blog" category="all,tech,bloggers"/>
+    <outline type="rss" text="Trunk Line" xmlUrl="https://blogs.harvard.edu/trunk/feed/" htmlUrl="https://trunkli.org/" category="all"/>
+    <outline type="rss" text="Google Alert - project kuiper" xmlUrl="https://www.google.com/alerts/feeds/16275940053249417217/456631927723350186" category="all"/>
+    <outline type="rss" text="Americas | The Guardian" xmlUrl="http://www.theguardian.com/world/americas/rss" htmlUrl="https://www.theguardian.com/world/americas" category="all"/>
+    <outline type="rss" text="American Civil Liberties Union" xmlUrl="http://www.aclu.org/blog/feed/" htmlUrl="https://www.aclu.org/" category="all,politics"/>
+    <outline type="rss" text="Slate Magazine" xmlUrl="http://feeds.slate.com/slate-3184" htmlUrl="https://slate.com/" category="all"/>
+    <outline type="rss" text="L.A. Times - Movie Reviews" xmlUrl="http://feeds.latimes.com/movies/reviews/" htmlUrl="https://www.latimes.com/" category="all"/>
+    <outline type="rss" text="Opinion | The Guardian" xmlUrl="https://www.theguardian.com/commentisfree/rss" htmlUrl="https://www.theguardian.com/us/commentisfree" category="all,tech,bloggers"/>
+    <outline type="rss" text="NYT &amp;gt; Education" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Education.xml" htmlUrl="https://www.nytimes.com/section/education" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; U.S. &amp;gt; Politics" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml" htmlUrl="https://www.nytimes.com/section/politics" category="all,politics"/>
+    <outline type="rss" text="ruk.ca - Peter Rukavina's Weblog" xmlUrl="https://ruk.ca/rss/feedburner.xml" htmlUrl="https://ruk.ca/" category="all"/>
+    <outline type="rss" text="CITP Blog" xmlUrl="https://freedom-to-tinker.com/feed/" htmlUrl="https://blog.citp.princeton.edu/" category="all,tech"/>
+    <outline type="rss" text="Pi My Life Up" xmlUrl="https://pimylifeup.com/feed/" htmlUrl="https://pimylifeup.com/" category="all"/>
+    <outline type="rss" text="West Side Rag" xmlUrl="https://www.westsiderag.com/feed" htmlUrl="https://www.westsiderag.com/" category="all"/>
+    <outline type="rss" text="Palladium" xmlUrl="https://www.palladiummag.com/feed/" htmlUrl="https://www.palladiummag.com/" category="all"/>
+    <outline type="rss" text="Squishy Computer" xmlUrl="https://subconscious.substack.com/feed" htmlUrl="https://newsletter.squishy.computer/" category="all"/>
+    <outline type="rss" text="Everything" xmlUrl="http://www.newyorker.com/services/rss/feeds/movies.xml" htmlUrl="https://www.newyorker.com/" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; Most Popular" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/MostShared.xml" htmlUrl="https://www.nytimes.com/" category="all"/>
+    <outline type="rss" text="The Online Photographer" xmlUrl="http://feeds.feedburner.com/typepad/ZSjz" htmlUrl="https://theonlinephotographer.typepad.com/the_online_photographer/" category="all"/>
+    <outline type="rss" text="Intelligencer - Daily News, Politics, Business, and Tech" xmlUrl="http://feeds.feedburner.com/nymag/intelligencer" htmlUrl="https://www.nymag.com/intelligencer" category="all"/>
+    <outline type="rss" text="The Straits Times Asia News" xmlUrl="https://www.straitstimes.com/news/asia/rss.xml" htmlUrl="https://www.straitstimes.com/" category="all"/>
+    <outline type="rss" text="SmartLess" xmlUrl="https://rss.art19.com/smartless" htmlUrl="https://www.smartless.com/" category="all"/>
+    <outline type="rss" text="Silver Screen and Roll -  All Posts" xmlUrl="http://www.silverscreenandroll.com/rss/current" htmlUrl="https://www.silverscreenandroll.com/" category="all,nba"/>
+    <outline type="rss" text="VICE US - Motherboard" xmlUrl="https://motherboard.vice.com/en_us/rss" htmlUrl="https://www.vice.com/en%2Fsection%2Ftech%3Flocale%3Den_us" category="all,tech"/>
+    <outline type="rss" text="Direct Current - An Energy.gov Podcast" xmlUrl="http://energy.gov/podcasts/direct-current-energygov-podcast?format=itunes" htmlUrl="https://www.energy.gov/podcasts/direct-current-energygov-podcast" category="all,bloggers"/>
+    <outline type="rss" text="Denver Nuggets news, rumors, stats, photos, video — The Denver Post" xmlUrl="http://feeds.denverpost.com/dp-sports-nuggets" htmlUrl="https://www.denverpost.com/" category="all,nba"/>
+    <outline type="rss" text="KnickerBlogger" xmlUrl="http://knickerblogger.net/feed/" htmlUrl="https://knickerblogger.net/" category="all,nba"/>
+    <outline type="rss" text="Hot Takes" xmlUrl="https://adamsinger.substack.com/feed" htmlUrl="https://www.hottakes.space/" category="all,tech,bloggers"/>
+    <outline type="rss" text="Internet Archive Blogs" xmlUrl="https://blog.archive.org/feed/?format=xml" htmlUrl="https://blog.archive.org/" category="all"/>
+    <outline type="rss" text="The Band: A History" xmlUrl="https://feeds.simplecast.com/dXMikdlU" htmlUrl="https://feeds.megaphone.fm/www.thebandpodcast.com" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/education/rss.xml" htmlUrl="https://www.bbc.co.uk/news/education" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/health/rss.xml" htmlUrl="https://www.bbc.co.uk/news/health" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/science_and_environment/rss.xml" htmlUrl="https://www.bbc.co.uk/news/science_and_environment" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/technology/rss.xml" htmlUrl="https://www.bbc.co.uk/news/technology" category="all,tech"/>
+    <outline type="rss" text="Coding Horror" xmlUrl="http://feeds.feedburner.com/codinghorror" htmlUrl="https://blog.codinghorror.com/" category="all,tech,bloggers"/>
+    <outline type="rss" text="US small business | The Guardian" xmlUrl="http://www.theguardian.com/business/series/us-small-business/rss" htmlUrl="https://www.theguardian.com/business/us-small-business" category="all"/>
+    <outline type="rss" text="Azed | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/series/azed/rss" htmlUrl="https://www.theguardian.com/crosswords/series/azed" category="all"/>
+    <outline type="rss" text="Everyman | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/series/everyman/rss" htmlUrl="https://www.theguardian.com/crosswords/series/everyman" category="all"/>
+    <outline type="rss" text="Prize | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/series/prize/rss" htmlUrl="https://www.theguardian.com/crosswords/series/prize" category="all"/>
+    <outline type="rss" text="Speedy | The Guardian" xmlUrl="http://www.theguardian.com/crosswords/series/speedy/rss" htmlUrl="https://www.theguardian.com/crosswords/series/speedy" category="all"/>
+    <outline type="rss" text="Pollution | The Guardian" xmlUrl="http://www.theguardian.com/environment/pollution/rss" htmlUrl="https://www.theguardian.com/environment/pollution" category="all"/>
+    <outline type="rss" text="MLS | The Guardian" xmlUrl="http://www.theguardian.com/football/mls/rss" htmlUrl="https://www.theguardian.com/football/mls" category="all"/>
+    <outline type="rss" text="Home And Garden | The Guardian" xmlUrl="http://www.theguardian.com/lifeandstyle/home-and-garden/rss" htmlUrl="https://www.theguardian.com/lifeandstyle/home-and-garden" category="all"/>
+    <outline type="rss" text="Stage | The Guardian" xmlUrl="http://www.theguardian.com/stage/rss" htmlUrl="https://www.theguardian.com/stage" category="all"/>
+    <outline type="rss" text="Games | The Guardian" xmlUrl="http://www.theguardian.com/technology/games/rss" htmlUrl="https://www.theguardian.com/games" category="all"/>
+    <outline type="rss" text="Europe holidays | The Guardian" xmlUrl="http://www.theguardian.com/travel/europe/rss" htmlUrl="https://www.theguardian.com/travel/europe" category="all"/>
+    <outline type="rss" text="Skiing holidays | The Guardian" xmlUrl="http://www.theguardian.com/travel/skiing/rss" htmlUrl="https://www.theguardian.com/travel/skiing" category="all"/>
+    <outline type="rss" text="TV and radio | The Guardian" xmlUrl="http://www.theguardian.com/tv-and-radio/rss" htmlUrl="https://www.theguardian.com/us/tv-and-radio" category="all"/>
+    <outline type="rss" text="UK news | The Guardian" xmlUrl="http://www.theguardian.com/uk-news/rss" htmlUrl="https://www.theguardian.com/uk-news" category="all"/>
+    <outline type="rss" text="Africa | The Guardian" xmlUrl="http://www.theguardian.com/world/africa/rss" htmlUrl="https://www.theguardian.com/world/africa" category="all"/>
+    <outline type="rss" text="Europe | The Guardian" xmlUrl="http://www.theguardian.com/world/europe-news/rss" htmlUrl="https://www.theguardian.com/world/europe-news" category="all"/>
+    <outline type="rss" text="Middle East and north Africa | The Guardian" xmlUrl="http://www.theguardian.com/world/middleeast/rss" htmlUrl="https://www.theguardian.com/world/middleeast" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/world/asia/rss.xml" htmlUrl="https://www.bbc.co.uk/news/world/asia" category="all"/>
+    <outline type="rss" text="Art and design | The Guardian" xmlUrl="http://www.theguardian.com/artanddesign/rss" htmlUrl="https://www.theguardian.com/artanddesign" category="all"/>
+    <outline type="rss" text="Books | The Guardian" xmlUrl="http://www.theguardian.com/books/rss" htmlUrl="https://www.theguardian.com/books" category="all"/>
+    <outline type="rss" text="Economics | The Guardian" xmlUrl="http://www.theguardian.com/business/economics/rss" htmlUrl="https://www.theguardian.com/business/economics" category="all"/>
+    <outline type="rss" text="Global development | The Guardian" xmlUrl="http://www.theguardian.com/global-development/rss" htmlUrl="https://www.theguardian.com/global-development" category="all"/>
+    <outline type="rss" text="Family | The Guardian" xmlUrl="http://www.theguardian.com/lifeandstyle/family/rss" htmlUrl="https://www.theguardian.com/lifeandstyle/family" category="all"/>
+    <outline type="rss" text="Music | The Guardian" xmlUrl="http://www.theguardian.com/music/rss" htmlUrl="https://www.theguardian.com/music" category="all"/>
+    <outline type="rss" text="Film | The Guardian" xmlUrl="http://www.theguardian.com/us/film/rss" htmlUrl="https://www.theguardian.com/us/film" category="all"/>
+    <outline type="rss" text="Slate Magazine" xmlUrl="https://slate.com/feeds/all.rss" htmlUrl="https://slate.com/" category="all"/>
+    <outline type="rss" text="Business - Slate Magazine" xmlUrl="https://slate.com/feeds/business.rss" htmlUrl="https://slate.com/business" category="all"/>
+    <outline type="rss" text="Culture - Slate Magazine" xmlUrl="https://slate.com/feeds/culture.rss" htmlUrl="https://slate.com/culture" category="all"/>
+    <outline type="rss" text="News and Politics - Slate Magazine" xmlUrl="https://slate.com/feeds/news-and-politics.rss" htmlUrl="https://slate.com/news-and-politics" category="all,politics"/>
+    <outline type="rss" text="Technology - Slate Magazine" xmlUrl="https://slate.com/feeds/technology.rss" htmlUrl="https://slate.com/technology" category="all,tech"/>
+    <outline type="rss" text="Homepage - MPR News" xmlUrl="https://www.mprnews.org/feed/homepage" htmlUrl="https://www.mprnews.org/homepage" category="all"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/rss.xml" htmlUrl="https://www.bbc.co.uk/news" category="all,politics"/>
+    <outline type="rss" text="BBC News" xmlUrl="http://feeds.bbci.co.uk/news/uk/rss.xml" htmlUrl="https://www.bbc.co.uk/news/uk" category="all,testing"/>
+    <outline type="rss" text="Climate crisis | The Guardian" xmlUrl="http://www.theguardian.com/environment/climate-change/rss" htmlUrl="https://www.theguardian.com/environment/climate-crisis" category="all"/>
+    <outline type="rss" text="Asia news | The Guardian" xmlUrl="http://www.theguardian.com/world/asia/rss" htmlUrl="https://www.theguardian.com/world/asia" category="all"/>
+    <outline type="rss" text="9to5Linux" xmlUrl="https://9to5linux.com/feed" htmlUrl="https://9to5linux.com/" category="all,tech"/>
+    <outline type="rss" text="Features – Ars Technica" xmlUrl="https://feeds.arstechnica.com/arstechnica/features" htmlUrl="https://arstechnica.com/" category="all,tech"/>
+    <outline type="rss" text="Real Python" xmlUrl="https://realpython.com/atom.xml" htmlUrl="https://realpython.com/" category="all,tech"/>
+    <outline type="rss" text="Hi, I'm Heather Burns" xmlUrl="https://webdevlaw.uk/feed/ " htmlUrl="https://heatherburns.tech/" category="all,bloggers"/>
+    <outline type="rss" text="NASA Image of the Day" xmlUrl="https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss" htmlUrl="https://www.nasa.gov/image-of-the-day/" category="all,tech"/>
+    <outline type="rss" text="Royals Review" xmlUrl="https://www.royalsreview.com/rss/index.xml" htmlUrl="https://www.royalsreview.com/" category="mlb"/>
+    <outline type="rss" text="Bucs Dugout -  All Posts" xmlUrl="http://www.bucsdugout.com/rss/current" htmlUrl="https://www.bucsdugout.com/" category="mlb"/>
+    <outline type="rss" text="Purple Row" xmlUrl="https://www.purplerow.com/rss/index.xml" htmlUrl="https://www.purplerow.com/" category="mlb"/>
+    <outline type="rss" text="Red Reporter" xmlUrl="https://www.redreporter.com/rss/index.xml" htmlUrl="https://www.redreporter.com/" category="mlb"/>
+    <outline type="rss" text="Dodgers" xmlUrl="http://www.latimes.com/sports/dodgers/rss2.0.xml" htmlUrl="https://www.latimes.com/" category="mlb"/>
+    <outline type="rss" text="Pirates Feed" xmlUrl="http://www.post-gazette.com/rss/sports/pirates" htmlUrl="https://www.post-gazette.com/" category="mlb"/>
+    <outline type="rss" text="Oakland A's RSS Feed" xmlUrl="http://www.sfgate.com/athletics/feed/Oakland-A-s-RSS-Feed-488.php" htmlUrl="https://www.sfgate.com/athletics/feed/oakland-a-s-rss-feed-488.php" category="mlb"/>
+    <outline type="rss" text="San Francisco Giants RSS Feed" xmlUrl="http://www.sfgate.com/sports/feed/San-Francisco-Giants-RSS-Feed-428.php" htmlUrl="https://www.sfgate.com/sports/feed/san-francisco-giants-rss-feed-428.php" category="mlb"/>
+    <outline type="rss" text="Bless You Boys" xmlUrl="https://www.blessyouboys.com/rss/index.xml" htmlUrl="https://www.blessyouboys.com/" category="mlb"/>
+    <outline type="rss" text="MLB | The Guardian" xmlUrl="http://www.theguardian.com/sport/mlb/rss" htmlUrl="https://www.theguardian.com/sport/mlb" category="mlb"/>
+    <outline type="rss" text="FOX Sports Digital" xmlUrl="https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&amp;amp;size=30&amp;amp;tags=fs/mlb" htmlUrl="https://www.foxsports.com/" category="mlb"/>
+    <outline type="rss" text="Metsmerized Online" xmlUrl="https://metsmerizedonline.com/feed/" htmlUrl="https://metsmerizedonline.com/" category="mlb"/>
+    <outline type="rss" text="The Long Game" xmlUrl="https://mollyknight.substack.com/feed" htmlUrl="https://mollyknight.substack.com/" category="all,mlb,nba"/>
+    <outline type="rss" text="www.espn.com - MLB" xmlUrl="https://www.espn.com/espn/rss/mlb/news" htmlUrl="https://www.espn.com" category="mlb"/>
+    <outline type="rss" text="MLB Trade Rumors" xmlUrl="http://www.mlbtraderumors.com/feed" htmlUrl="https://www.mlbtraderumors.com/" category="mlb"/>
+    <outline type="rss" text="Dave Winer" xmlUrl="https://rss.firesky.tv/?filter=from:scripting.com" htmlUrl="https://firesky.tv/?filter=from%3Ascripting.com" category="all"/>
+    <outline type="rss" text="City of Awe" xmlUrl="http://illuminate.org/feed" htmlUrl="https://illuminate.org/" category="all"/>
+    <outline type="rss" text="Charlie's Diary" xmlUrl="http://www.antipope.org/charlie/blog-static/atom.xml" htmlUrl="http://www.antipope.org/charlie/blog-static/" category="all"/>
+    <outline type="rss" text="Scott Hanson" xmlUrl="https://norden.social/@ScottHansonDE.rss" htmlUrl="https://norden.social/@ScottHansonDE" category="all"/>
+    <outline type="rss" text="Scott Hanson" xmlUrl="https://rss.firesky.tv/?filter=from:scotthanson.de" htmlUrl="https://firesky.tv/?filter=from%3Ascotthanson.de" category="all"/>
+    <outline type="rss" text="CBSSports.com Headlines" xmlUrl="https://www.cbssports.com/rss/headlines/nba/" htmlUrl="https://www.cbssports.com/" category="all,nba"/>
+    <outline type="rss" text="PBS NewsHour - Arts" xmlUrl="https://www.pbs.org/newshour/feeds/rss/arts" htmlUrl="https://www.pbs.org/newshour/arts" category="all"/>
+    <outline type="rss" text="PBS NewsHour - Economy" xmlUrl="https://www.pbs.org/newshour/feeds/rss/economy" htmlUrl="https://www.pbs.org/newshour/economy" category="all"/>
+    <outline type="rss" text="PBS NewsHour - Education" xmlUrl="https://www.pbs.org/newshour/feeds/rss/education" htmlUrl="https://www.pbs.org/newshour/education" category="all"/>
+    <outline type="rss" text="PBS NewsHour - Nation" xmlUrl="https://www.pbs.org/newshour/feeds/rss/nation" htmlUrl="https://www.pbs.org/newshour/nation" category="all"/>
+    <outline type="rss" text="PBS NewsHour - Science" xmlUrl="https://www.pbs.org/newshour/feeds/rss/science" htmlUrl="https://www.pbs.org/newshour/science" category="all"/>
+    <outline type="rss" text="PBS NewsHour - World" xmlUrl="https://www.pbs.org/newshour/feeds/rss/world" htmlUrl="https://www.pbs.org/newshour/world" category="all"/>
+    <outline type="rss" text="swyx's site RSS Feed" xmlUrl="https://www.swyx.io/rss.xml" htmlUrl="https://www.swyx.io/" category="all"/>
+    <outline type="rss" text="www.espn.com - NBA" xmlUrl="http://sports.espn.go.com/espn/rss/nba/news" htmlUrl="https://www.espn.com" category="nba,starters"/>
+    <outline type="rss" text="Micro.blog News" xmlUrl="https://news.micro.blog/feed.xml" htmlUrl="https://news.micro.blog/" category="all"/>
+    <outline type="rss" text="Springwise" xmlUrl="https://www.springwise.com/rss" htmlUrl="https://springwise.com/" category="all"/>
+    <outline type="rss" text="Techlore Forum - Topics tagged news" xmlUrl="https://discuss.techlore.tech/tag/news.rss" htmlUrl="https://discuss.techlore.tech/tag/news" category="all"/>
+    <outline type="rss" text="SingularityHub" xmlUrl="https://singularityhub.com/feed/" htmlUrl="https://cms.singularityhub.com/" category="all"/>
+    <outline type="rss" text="The Markup" xmlUrl="https://themarkup.org/feeds/rss.xml" htmlUrl="https://themarkup.org/" category="all"/>
+    <outline type="rss" text="No Bullshit Bitcoin" xmlUrl="https://www.nobsbitcoin.com/rss/" htmlUrl="https://www.nobsbitcoin.com/" category="all"/>
+    <outline type="rss" text="TESLARATI" xmlUrl="https://www.teslarati.com/feed/" htmlUrl="https://www.teslarati.com/" category="all"/>
+    <outline type="rss" text="Barking Up The Wrong Tree" xmlUrl="http://www.bakadesuyo.com/feed/" htmlUrl="https://bakadesuyo.com/" category="all"/>
+    <outline type="rss" text="CleanTechnica" xmlUrl="https://cleantechnica.com/feed/" htmlUrl="https://cleantechnica.com/" category="all"/>
+    <outline type="rss" text="IntelTechniques Blog" xmlUrl="https://inteltechniques.com/blog/feed/" htmlUrl="https://inteltechniques.com/blog" category="all"/>
+    <outline type="rss" text="Joshua Spodek" xmlUrl="https://joshuaspodek.com/feed/" htmlUrl="https://joshuaspodek.com/" category="all"/>
+    <outline type="rss" text="New Atlas - New Technology &amp;amp; Science News" xmlUrl="https://newatlas.com/index.rss" htmlUrl="https://newatlas.com/" category="all"/>
+    <outline type="rss" text="Disconnect" xmlUrl="https://www.disconnect.blog/feed" htmlUrl="https://disconnect.blog/" category="all"/>
+    <outline type="rss" text="Freethink" xmlUrl="https://www.freethink.com/feed/all" htmlUrl="https://www.freethink.com//feed/all" category="all"/>
+    <outline type="rss" text="Beckley Academy" xmlUrl="https://beckleyacademy.com/feed" htmlUrl="https://www.beckleyacademy.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Bobulate" xmlUrl="https://bobulate.com/feed" htmlUrl="https://bobulate.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Ben Casnocha" xmlUrl="https://casnocha.com/feed" htmlUrl="https://casnocha.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Peekskill Exurbanist" xmlUrl="https://exurbanist.com/feed" htmlUrl="https://exurbanist.com/" category="peekskill"/>
+    <outline type="rss" text="River Journal Online – News for Tarrytown, Sleepy Hollow, Irvington, Ossining, Briarcliff Manor, Croton-on-Hudson, Cortlandt and Peekskill" xmlUrl="https://riverjournalonline.com/feed/" htmlUrl="https://riverjournalonline.com/" category="peekskill"/>
+    <outline type="rss" text="Brodo Broth Co™" xmlUrl="https://www.brodo.com/feed" htmlUrl="https://www.brodo.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Peekskill, NY - Pages" xmlUrl="https://www.cityofpeekskill.com/RSSFeed.aspx?ModID=76&amp;amp;CID=All-0/feed" htmlUrl="https://www.cityofpeekskillny.gov/AlertCenter.aspx" category="peekskill"/>
+    <outline type="rss" text="ATypI" xmlUrl="http://atypi.org/feed" htmlUrl="https://atypi.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Pocket Casts Blog" xmlUrl="http://blog.pocketcasts.com/feed" htmlUrl="https://blog.pocketcasts.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Awesome! – Our Awesome Planet" xmlUrl="https://awesome.blog/feed" htmlUrl="https://awesome.blog/" category="all,wp-projects"/>
+    <outline type="rss" text="WNDR LN" xmlUrl="https://wndrln.com/feed" htmlUrl="https://wndrln.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Women Talk Design" xmlUrl="https://womentalkdesign.com/feed" htmlUrl="https://womentalkdesign.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Write of Passage" xmlUrl="https://writeofpassage.school/feed" htmlUrl="https://writeofpassage.school/" category="all,wp-projects"/>
+    <outline type="rss" text="Writer Beware" xmlUrl="https://writerbeware.blog/feed" htmlUrl="https://writerbeware.blog/" category="all,wp-projects"/>
+    <outline type="rss" text="Zephyr Adventures" xmlUrl="https://www.zephyradventures.com/feed" htmlUrl="https://www.zephyradventures.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Open Source Initiative" xmlUrl="https://opensource.org/feed" htmlUrl="https://opensource.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Pogo Park" xmlUrl="https://pogopark.org/feed" htmlUrl="https://pogopark.org/" category="all,wp-projects"/>
+    <outline type="rss" text="ProjectVRM" xmlUrl="https://projectvrm.org/feed" htmlUrl="https://projectvrm.org/" category="all,wp-projects"/>
+    <outline type="rss" text="PostSecret" xmlUrl="https://postsecret.com/feed" htmlUrl="https://postsecret.com/" category="all,wp-projects"/>
+    <outline type="rss" text="The Scholar's Stage" xmlUrl="https://scholars-stage.org/feed" htmlUrl="https://scholars-stage.org/" category="all,wp-projects"/>
+    <outline type="rss" text="sf.citi" xmlUrl="https://sfciti.org/feed" htmlUrl="https://sfciti.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Shire" xmlUrl="https://shire.blue/feed" htmlUrl="https://www.shire.blue/" category="all,wp-projects"/>
+    <outline type="rss" text="Six Colors" xmlUrl="https://sixcolors.com/feed" htmlUrl="https://sixcolors.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Slow My Age" xmlUrl="https://slowmyage.com/feed" htmlUrl="https://slowmyage.com/" category="all,wp-projects"/>
+    <outline type="rss" text="smitten kitchen" xmlUrl="https://smittenkitchen.com/feed" htmlUrl="https://smittenkitchen.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Student Press Law Center" xmlUrl="https://splc.org/feed" htmlUrl="https://splc.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Stop AAPI Hate" xmlUrl="https://stopaapihate.org/feed" htmlUrl="https://stopaapihate.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Stuck in Customs" xmlUrl="https://stuckincustoms.com/feed" htmlUrl="https://stuckincustoms.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Studio Drift" xmlUrl="https://studiodrift.com/feed" htmlUrl="https://studiodrift.com/" category="all,wp-projects"/>
+    <outline type="rss" text="TasteFood" xmlUrl="https://tastefoodblog.com/feed" htmlUrl="https://tastefoodblog.com/" category="all,wp-projects"/>
+    <outline type="rss" text="The Anti-Slavery Collective" xmlUrl="https://theantislaverycollective.org/feed" htmlUrl="https://theantislaverycollective.org/" category="all,wp-projects"/>
+    <outline type="rss" text="The Bloggess" xmlUrl="https://thebloggess.com/feed" htmlUrl="https://thebloggess.com/" category="all,wp-projects"/>
+    <outline type="rss" text="The Carbon Almanac" xmlUrl="https://thecarbonalmanac.org/feed" htmlUrl="https://thecarbonalmanac.org/" category="all,wp-projects"/>
+    <outline type="rss" text="Therapy for Black Girls" xmlUrl="https://therapyforblackgirls.com/feed" htmlUrl="https://therapyforblackgirls.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Travel Montana &amp;amp; Yellowstone" xmlUrl="https://travelmontana.com/feed" htmlUrl="https://travelmontana.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Trunk Line" xmlUrl="https://trunkli.org/feed" htmlUrl="https://trunkli.org/" category="all,wp-projects"/>
+    <outline type="rss" text="the ulterior epicure" xmlUrl="https://ulteriorepicure.com/feed" htmlUrl="https://ulteriorepicure.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Jon Udell" xmlUrl="http://blog.jonudell.net/feed" htmlUrl="https://blog.jonudell.net/" category="all,tech,bloggers"/>
+    <outline type="rss" text="John J’s FeedLand Feed" xmlUrl="http://data.feedland.org/feeds/johnjohnston.xml" htmlUrl="http://feedland.org/?river=http://data.feedland.org/feeds/johnjohnston.xml" category="all"/>
+    <outline type="rss" text="Chris Aldrich" xmlUrl="https://boffosocko.com/feed/" htmlUrl="https://boffosocko.com/" category="all"/>
+    <outline type="rss" text="Core Intuition" xmlUrl="https://coreint.org/podcast.xml" htmlUrl="http://www.coreint.org/" category="all"/>
+    <outline type="rss" text="Washington Free Beacon" xmlUrl="https://freebeacon.com/feed/" htmlUrl="https://freebeacon.com/" category="all"/>
+    <outline type="rss" text="James Van Dyne" xmlUrl="https://jamesvandyne.com/feed/" htmlUrl="https://jamesvandyne.com/" category="all"/>
+    <outline type="rss" text="dsearls" xmlUrl="https://rss.firesky.tv/?filter=from:dsearls.bsky.social" htmlUrl="https://firesky.tv/?filter=from%3Adsearls.bsky.social" category="all,art"/>
+    <outline type="rss" text="MrWheat" xmlUrl="https://rss.firesky.tv/?filter=from:mrwheat.bsky.social" htmlUrl="https://firesky.tv/?filter=from%3Amrwheat.bsky.social" category="all"/>
+    <outline type="rss" text="Wait But Why" xmlUrl="https://waitbutwhy.com/feed" htmlUrl="https://waitbutwhy.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Whatever" xmlUrl="https://whatever.scalzi.com/feed" htmlUrl="https://whatever.scalzi.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Essays - Benedict Evans" xmlUrl="https://www.ben-evans.com/benedictevans?format=RSS" htmlUrl="https://www.ben-evans.com/benedictevans/" category="all"/>
+    <outline type="rss" text="raftr" xmlUrl="https://www.raftr.com/feed" htmlUrl="https://www.raftr.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Shareable" xmlUrl="https://www.shareable.net/feed" htmlUrl="https://www.shareable.net/" category="all,wp-projects"/>
+    <outline type="rss" text="Taste Vacations®" xmlUrl="https://www.tastevacations.com/feed" htmlUrl="https://www.tastevacations.com/" category="all,wp-projects"/>
+    <outline type="rss" text="Andrew Shell's Weblog" xmlUrl="https://blog.andrewshell.org/rss.xml" htmlUrl="https://blog.andrewshell.org/" category="all"/>
+    <outline type="rss" text="FeedLand likes for all users" xmlUrl="https://data.feedland.com/likes/all.xml" htmlUrl="http://feedland.org/?likes" category="all"/>
+    <outline type="rss" text="On with Kara Swisher" xmlUrl="https://feeds-origin.megaphone.fm/VMP1684715893" htmlUrl="http://nymag.com/" category="all,podcasts"/>
+    <outline type="rss" text="Escalation" xmlUrl="https://feeds.acast.com/public/shows/5d28ef74d3cc3f013778b13b" htmlUrl="https://www.lawfaremedia.org/" category="all,podcasts"/>
+    <outline type="rss" text="In Our Time" xmlUrl="https://podcasts.files.bbci.co.uk/b006qykl.rss" htmlUrl="http://www.bbc.co.uk/programmes/b006qykl" category="all,podcasts"/>
+    <outline type="rss" text="Andrew Hickey" xmlUrl="https://rss.firesky.tv/?filter=from:andrewhickey.bsky.social" htmlUrl="https://firesky.tv/?filter=from%3Aandrewhickey.bsky.social" category="all,bloggers"/>
+    <outline type="rss" text="On Point | Podcast" xmlUrl="https://rss.wbur.org/onpoint/podcast" htmlUrl="https://www.wbur.org/radio/programs/onpoint" category="all,podcasts"/>
+    <outline type="rss" text="The West Wing Weekly" xmlUrl="http://feeds.thewestwingweekly.com/westwingweekly" htmlUrl="https://thewestwingweekly.com/" category="all,politics,podcasts"/>
+    <outline type="rss" text="The Mother Jones Podcast – Mother Jones" xmlUrl="https://www.motherjones.com/topics/the-mother-jones-podcast/feed/" htmlUrl="https://www.motherjones.com/" category="all,politics,podcasts"/>
+    <outline type="rss" text="Geek's Guide to the Galaxy - A Science Fiction Podcast" xmlUrl="http://www.davidbarrkirtley.com/podcast/geeksguideshow.xml" htmlUrl="http://geeksguideshow.com/" category="all,podcasts"/>
+    <outline type="rss" text="NPR Topics: Politics" xmlUrl="http://www.npr.org/rss/rss.php?id=1014" htmlUrl="https://www.npr.org/templates/story/story.php?storyId=1014" category="all,politics"/>
+    <outline type="rss" text="Jeff (Gutenberg Parenthesis) Jarvis" xmlUrl="https://rss.firesky.tv/?filter=from:jeffjarvis.bsky.social" htmlUrl="https://firesky.tv/?filter=from%3Ajeffjarvis.bsky.social" category="all,politics,bloggers"/>
+    <outline type="rss" text="Accidental Tech Podcast" xmlUrl="https://atp.fm/episodes?format=rss" htmlUrl="https://atp.fm/" category="all"/>
+    <outline type="rss" text="The Bulwark Podcast" xmlUrl="https://audioboom.com/channels/5114286.rss" htmlUrl="https://www.thebulwark.com/podcast/the-bulwark-podcast/" category="all"/>
+    <outline type="rss" text="Bastian Allgeier’s Journal" xmlUrl="https://bastianallgeier.com/feed" htmlUrl="https://bastianallgeier.com/" category="all"/>
+    <outline type="rss" text="You Must Remember This" xmlUrl="https://feeds.megaphone.fm/YMRT7068253588" htmlUrl="http://youmustrememberthispodcast.com/" category="all,podcasts"/>
+    <outline type="rss" text="The New Republic" xmlUrl="https://newrepublic.com/rss.xml" htmlUrl="https://newrepublic.com/" category="all,politics"/>
+    <outline type="rss" text="Bucks County Beacon" xmlUrl="https://buckscountybeacon.com/feed/" htmlUrl="https://buckscountybeacon.com/" category="politics"/>
+    <outline type="rss" text="9to5Mac Daily" xmlUrl="https://feedpress.me/9to5macdaily" htmlUrl="https://www.9to5mac.com/" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; World &amp;gt; Asia Pacific" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/AsiaPacific.xml" htmlUrl="https://www.nytimes.com/section/world/asia" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Theater" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Theater.xml" htmlUrl="https://www.nytimes.com/section/theater" category="all,nyt"/>
+    <outline type="rss" text="Paste Magazine" xmlUrl="https://www.pastemagazine.com/rss.xml" htmlUrl="https://www.pastemagazine.com/" category="all"/>
+    <outline type="rss" text="NYT &amp;gt; World &amp;gt; Africa" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Africa.xml" htmlUrl="https://www.nytimes.com/section/world/africa" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; World &amp;gt; Americas" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Americas.xml" htmlUrl="https://www.nytimes.com/section/world/americas" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Arts &amp;gt; Art &amp;amp; Design" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/ArtandDesign.xml" htmlUrl="https://www.nytimes.com/section/arts/design" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Arts" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Arts.xml" htmlUrl="https://www.nytimes.com/section/arts" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Food" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/DiningandWine.xml" htmlUrl="https://www.nytimes.com/section/food" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Style" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/FashionandStyle.xml" htmlUrl="https://www.nytimes.com/section/style" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; World &amp;gt; Middle East" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/MiddleEast.xml" htmlUrl="https://www.nytimes.com/section/world/middleeast" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Movies" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Movies.xml" htmlUrl="https://www.nytimes.com/section/movies" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Arts &amp;gt; Music" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Music.xml" htmlUrl="https://www.nytimes.com/section/arts/music" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; New York" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/NYRegion.xml" htmlUrl="https://www.nytimes.com/section/nyregion" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Obituaries" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Obituaries.xml" htmlUrl="https://www.nytimes.com/section/obituaries" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Science" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Science.xml" htmlUrl="https://www.nytimes.com/section/science" category="all,nyt,tech"/>
+    <outline type="rss" text="NYT &amp;gt; Sports &amp;gt; Soccer" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Soccer.xml" htmlUrl="https://www.nytimes.com/section/sports/soccer" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; U.S. News" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/US.xml" htmlUrl="https://www.nytimes.com/section/us" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; World News" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/World.xml" htmlUrl="https://www.nytimes.com/section/world" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Health" xmlUrl="https://www.nytimes.com/services/xml/rss/nyt/Health.xml" htmlUrl="https://www.nytimes.com/section/health" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; David Brooks" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/david-brooks/rss.xml" htmlUrl="https://www.nytimes.com/column/david-brooks" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Ezra Klein" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/ezra-klein/rss.xml" htmlUrl="https://www.nytimes.com/column/ezra-klein" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Automobiles" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Automobiles.xml" htmlUrl="https://www.nytimes.com/section/automobiles" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Books" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Books.xml" htmlUrl="https://www.nytimes.com/section/books" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Business" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Business.xml" htmlUrl="https://www.nytimes.com/section/business" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Climate and Environment" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Climate.xml" htmlUrl="https://www.nytimes.com/section/climate" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Arts &amp;gt; Dance" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Dance.xml" htmlUrl="https://www.nytimes.com/section/arts/dance" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Business &amp;gt; DealBook" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Dealbook.xml" htmlUrl="https://www.nytimes.com/section/business/dealbook" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Business &amp;gt; Energy &amp;amp; Environment" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/EnergyEnvironment.xml" htmlUrl="https://www.nytimes.com/section/business/energy-environment" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Real Estate" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/RealEstate.xml" htmlUrl="https://www.nytimes.com/section/realestate" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Business &amp;gt; Small Business" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/SmallBusiness.xml" htmlUrl="https://www.nytimes.com/section/business/small-business" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Books &amp;gt; Book Review" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/SundayBookReview.xml" htmlUrl="https://www.nytimes.com/section/books/review" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Technology" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml" htmlUrl="https://www.nytimes.com/section/technology" category="all,nyt,tech"/>
+    <outline type="rss" text="NYT &amp;gt; Well" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Well.xml" htmlUrl="https://www.nytimes.com/section/well" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Travel" xmlUrl="https://www.nytimes.com/services/xml/rss/nyt/Travel.xml" htmlUrl="https://www.nytimes.com/section/travel" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Bret Stephens" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/bret-stephens/rss.xml" htmlUrl="https://www.nytimes.com/column/bret-stephens" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Charles M. Blow" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/charles-m-blow/rss.xml" htmlUrl="https://www.nytimes.com/column/charles-m-blow" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Frank Bruni" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/frank-bruni/rss.xml" htmlUrl="https://www.nytimes.com/column/frank-bruni" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Gail Collins" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/gail-collins/rss.xml" htmlUrl="https://www.nytimes.com/column/gail-collins" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Jamelle Bouie" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/jamelle-bouie/rss.xml" htmlUrl="https://www.nytimes.com/column/jamelle-bouie" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Maureen Dowd" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/maureen-dowd/rss.xml" htmlUrl="https://www.nytimes.com/column/maureen-dowd" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Michelle Goldberg" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/michelle-goldberg/rss.xml" htmlUrl="https://www.nytimes.com/column/michelle-goldberg" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Nicholas Kristof" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/nicholas-kristof/rss.xml" htmlUrl="https://www.nytimes.com/column/nicholas-kristof" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Paul Krugman" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/paul-krugman/rss.xml" htmlUrl="https://www.nytimes.com/column/paul-krugman" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Ross Douthat" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/ross-douthat/rss.xml" htmlUrl="https://www.nytimes.com/column/ross-douthat" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Sports &amp;gt; Golf" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Golf.xml" htmlUrl="https://www.nytimes.com/section/sports/golf" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Jobs" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Jobs.xml" htmlUrl="https://www.nytimes.com/section/jobs" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Lens" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Lens.xml" htmlUrl="https://www.nytimes.com/section/lens" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Business &amp;gt; Media" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/MediaandAdvertising.xml" htmlUrl="https://www.nytimes.com/section/business/media" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Sports &amp;gt; Basketball" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/ProBasketball.xml" htmlUrl="https://www.nytimes.com/section/sports/basketball" category="all,nyt,nba"/>
+    <outline type="rss" text="NYT &amp;gt; Sports &amp;gt; N.F.L." xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/ProFootball.xml" htmlUrl="https://www.nytimes.com/section/sports/football" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Opinion &amp;gt; Sunday Opinion" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/sunday-review.xml" htmlUrl="https://www.nytimes.com/section/opinion/sunday" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Your Money" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/YourMoney.xml" htmlUrl="https://www.nytimes.com/section/your-money" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Fashion &amp;gt; Love" xmlUrl="https://www.nytimes.com/services/xml/rss/nyt/Weddings.xml" htmlUrl="https://www.nytimes.com/section/fashion/weddings" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; Sports &amp;gt; Baseball" xmlUrl="http://rss.nytimes.com/services/xml/rss/nyt/Baseball.xml" htmlUrl="https://www.nytimes.com/section/sports/baseball" category="all,nyt,mlb"/>
+    <outline type="rss" text="NYT &amp;gt; Thomas L. Friedman" xmlUrl="http://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/column/thomas-l-friedman/rss.xml" htmlUrl="https://www.nytimes.com/column/thomas-l-friedman" category="all,nyt"/>
+    <outline type="rss" text="bleeding edge" xmlUrl="https://bleedingedge.ai/rss/feed.xml" htmlUrl="https://bleedingedge.ai" category="all,ai"/>
+    <outline type="rss" text="Stories by Donald G. McNeil Jr. on Medium" xmlUrl="https://donaldgmcneiljr1954.medium.com/feed" htmlUrl="https://medium.com/@donaldgmcneiljr1954?source=rss-d58b26425136------2" category="all,nyt,tech,politics,starters"/>
+    <outline type="rss" text="That Trippi Show" xmlUrl="https://feeds.megaphone.fm/EMPBC7757230545" htmlUrl="https://redcircle.com/shows/that-trippi-show" category="all,politics,podcasts"/>
+    <outline type="rss" text="NYT &amp;gt; World &amp;gt; Europe" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Europe.xml" htmlUrl="https://www.nytimes.com/section/world/europe" category="all,nyt,politics"/>
+    <outline type="rss" text="NYT &amp;gt; Most Popular" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/MostEmailed.xml" htmlUrl="https://www.nytimes.com/" category="all,nyt,starters"/>
+    <outline type="rss" text="NYT &amp;gt; Technology &amp;gt; Personal Tech" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/PersonalTech.xml" htmlUrl="https://www.nytimes.com/section/technology/personaltech" category="all,nyt,tech"/>
+    <outline type="rss" text="NYT &amp;gt; Science &amp;gt; Space &amp;amp; Cosmos" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Space.xml" htmlUrl="https://www.nytimes.com/section/science/space" category="all,nyt,tech"/>
+    <outline type="rss" text="NYT &amp;gt; Arts &amp;gt; Television" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Television.xml" htmlUrl="https://www.nytimes.com/section/arts/television" category="all,nyt,starters"/>
+    <outline type="rss" text="NYT &amp;gt; T Magazine" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/tmagazine.xml" htmlUrl="https://www.nytimes.com/section/t-magazine" category="all,nyt"/>
+    <outline type="rss" text="NYT &amp;gt; The Upshot" xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/Upshot.xml" htmlUrl="https://www.nytimes.com/section/upshot" category="all,nyt"/>
+    <outline type="rss" text="Windows Copilot Newsletter" xmlUrl="https://windowscopilotnewsletter.substack.com/feed" htmlUrl="https://windowscopilotnewsletter.substack.com/" category="all,ai"/>
+    <outline type="rss" text="McCartney: A Life in Lyrics" xmlUrl="https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/c4c8bc3c-054b-4c4f-a4b5-b03d0111a20c/0f3346d9-a2d7-4c41-827b-b03d0112826f/podcast.rss" htmlUrl="https://www.pushkin.fm/" category="all,podcasts"/>
+    <outline type="rss" text="Friday Night Comedy from BBC Radio 4" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/p02pc9pj" category="all,podcasts"/>
+    <outline type="rss" text="On the Media" xmlUrl="http://feeds.wnyc.org/onthemedia" htmlUrl="https://www.wnycstudios.org/podcasts/otm" category="all"/>
+    <outline type="rss" text="Radiolab" xmlUrl="http://feeds.wnyc.org/radiolab" htmlUrl="https://www.wnycstudios.org/podcasts/radiolab/projects/podcasts" category="podcasts"/>
+    <outline type="rss" text="TED Radio Hour" xmlUrl="http://www.npr.org/rss/podcast.php?id=510298" htmlUrl="https://www.npr.org/podcasts/510298/ted-radio-hour" category="all,podcasts"/>
+    <outline type="rss" text="Politics War Room with James Carville &amp;amp; Al Hunt" xmlUrl="https://audioboom.com/channels/5033739.rss" htmlUrl="http://www.politicon.com/" category="all,podcasts"/>
+    <outline type="rss" text="Building Slack" xmlUrl="https://buildingslack.com/rss/" htmlUrl="https://buildingslack.com/" category="all"/>
+    <outline type="rss" text="Planet Money" xmlUrl="https://feeds.npr.org/510289/podcast.xml" htmlUrl="https://www.npr.org/podcasts/510289/planet-money" category="all,podcasts"/>
+    <outline type="rss" text="Foreign Policy" xmlUrl="https://foreignpolicy.com/feed" htmlUrl="https://foreignpolicy.com/" category="all"/>
+    <outline type="rss" text="Grist" xmlUrl="https://grist.org/feed" htmlUrl="https://grist.org/" category="all,bloggers"/>
+    <outline type="rss" text="Megnut" xmlUrl="https://megnut.com/feed/" htmlUrl="https://megnut.com/" category="all"/>
+    <outline type="rss" text="UC Berkeley Center for the Science of Psychedelics" xmlUrl="https://psychedelics.berkeley.edu/feed" htmlUrl="https://psychedelics.berkeley.edu/" category="all"/>
+    <outline type="rss" text="Stratechery by Ben Thompson" xmlUrl="https://stratechery.com/feed/" htmlUrl="https://stratechery.com/" category="all,tech,bloggers"/>
+    <outline type="rss" text="Tangle" xmlUrl="https://www.readtangle.com/rss/" htmlUrl="https://www.readtangle.com/" category="all"/>
+  </body>
+</opml>

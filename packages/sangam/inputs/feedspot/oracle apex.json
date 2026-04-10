@@ -1,0 +1,189 @@
+{
+  "category": "Oracle Apex",
+  "source_url": "https://rss.feedspot.com/oracle_apex_rss_feeds",
+  "feeds": [
+    {
+      "title": "DSP Explorer",
+      "feed_url": "https://content.dsp.co.uk/apex/rss.xml",
+      "website_url": "https://content.dsp.co.uk/apex",
+      "description": "DSP Explorer is an Enterprise Database Management specialist that delivers innovative support, managed services & consulting for Oracle Apex. We pride ourselves on employing world-class Oracle technologists, using best practice methodology, and delivering services both on spec and on budget.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5413640.jpg?t=1655904310"
+    },
+    {
+      "title": "Maxapex Blog",
+      "feed_url": "https://www.maxapex.com/feed/",
+      "website_url": "https://www.maxapex.com/blogs/",
+      "description": "Established in 2008, MaxAPEX is an Oracle APEX hosting company providing diverse and customized hosting solutions for its clients. MaxAPEX's expertise, commitment, and subsequent benefits for its clients enabled the hosting company to quickly expand its operations.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 579
+      },
+      "image_url": "https://i1.feedspot.com/5413636.jpg?t=1655903214"
+    },
+    {
+      "title": "Oracle Apex Trainer Blog",
+      "feed_url": "https://www.oracleapextrainer.com/blog-feed.xml",
+      "website_url": "https://www.oracleapextrainer.com/blog",
+      "description": "Hi! I'm Naveen Aggarwal. This page is about articles published on Oracle Apex and knowledge sharing based on my personal experience. Do you need training on Oracle Application Express to enhance your career? I'm a Certified Coaching Professional with 17+ years of IT industry experience, and my mission is to find your hidden potential and give you all the necessary tools to develop and grow.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413634.jpg?t=1655961091"
+    },
+    {
+      "title": "APEX stuff in one place",
+      "feed_url": "http://lschilde.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://lschilde.blogspot.com/",
+      "description": "Hi! I'm an Oracle APEX consultant with 15+ years of experience. I have also Consulted for APEX R&D. If you are interested or simply want to learn the latest about Oracle APEX as a low code tool these apex tips are not to be missed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413632.jpg?t=1655960008"
+    },
+    {
+      "title": "Notes on Oracle",
+      "feed_url": "https://nuijten.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://nuijten.blogspot.com/",
+      "description": "Hi! This is Alex Nuijten. Because of my numerous contributions to the Oracle community, knowledge, and expertise, I was named Oracle ACE Director in 2010. My contributions include being a frequent speaker at national and international conferences, and many local Oracle User Groups, regularly writing articles in Oracle-focused magazines and responding to questions on Oracle forums.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5099252.jpg?t=1655963869"
+    },
+    {
+      "title": "Low-Code Development",
+      "feed_url": "https://nielsdebr.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://nielsdebr.blogspot.com/",
+      "description": "Hi! I'm Niels de Bruijn. This blog is my personal view on things happening in the IT industry with a clear focus on Low-Code Rapid Application Development, APEX, Oracle Application Express, Oracle Database, Rapid Prototyping, Consultancy, and IT.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413631.jpg?t=1655966868"
+    },
+    {
+      "title": "One Oracle Developer",
+      "feed_url": "http://www.oneoracledeveloper.com/feeds/posts/default",
+      "website_url": "http://www.oneoracledeveloper.com/",
+      "description": "Covers code snippets, tips and tricks and thoughts for Oracle developers, SQL, PL/SQL, APEX, clean code, certifications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5349097.jpg?t=1638354040"
+    },
+    {
+      "title": "MaxPrint Blog",
+      "feed_url": "https://maxprint.io/feed/",
+      "website_url": "https://maxprint.io/blogs/",
+      "description": "MaxPrint is an easy-to-use APEX Plugin enabling you to create stunning PDF, Dockx, and HTML reports. Once installed, you can generate a printed report from anywhere in your APEX application.",
+      "followers": {
+        "facebook": 121,
+        "twitter": 64
+      },
+      "image_url": "https://i1.feedspot.com/5413641.jpg?t=1655969956"
+    },
+    {
+      "title": "Qaium's IT Demonstration",
+      "feed_url": "https://qaiumer.blogspot.com/feeds/posts/default",
+      "website_url": "https://qaiumer.blogspot.com/",
+      "description": "Here I post Oracle Apex and Oracle SQL, PL/SQL related solutions and technics. Muhammad Abdul Qaium is a Database Engineer/Oracle Apex Developer/BI Developer (in Atlanta, USA) who is an Oracle certified cloud architect professional, OCI autonomous DB specialist as well as Oracle Business Intelligence Foundation Suite 11g certified implementation specialist with extensive expertise in database design, PL/SQL, Oracle Apex, Microsoft SSIS, ETL, Power BI, Qlik Sense, OBIEE. qaiuminfo@gmail.com",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460763.jpg?t=1666959251"
+    },
+    {
+      "title": "APEX App Lab",
+      "feed_url": "https://apexapplab.dev/feed/",
+      "website_url": "https://apexapplab.dev/",
+      "description": "From developers to developers. Oracle APEX all the way. Hi! I'm Plamen Mushkov. APEX App Lab Covers articles dedicated primarily to Oracle APEX, you will also find topics about Oracle Database, PL/SQL, and other application development articles.",
+      "followers": {
+        "twitter": 860
+      },
+      "image_url": "https://i1.feedspot.com/5337516.jpg?t=1655961933"
+    },
+    {
+      "title": "HardLikeSoftware Blog",
+      "feed_url": "https://hardlikesoftware.com/weblog/feed/",
+      "website_url": "https://hardlikesoftware.com/weblog/",
+      "description": "Hi! I'm Stefan Dobr, a member of the Oracle APEX Development Team. I share information about the new updates and features of oracle apex. To get detailed insights on oracle apex read my blogs.",
+      "followers": {
+        "twitter": 918
+      },
+      "image_url": "https://i1.feedspot.com/5407084.jpg?t=1655902966"
+    },
+    {
+      "title": "Dimitri Gielis Blog",
+      "feed_url": "https://dgielis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://dgielis.blogspot.com/",
+      "description": "Hi! I'm Dimitri Gielis. Passionate about bringing ideas to life with code. Founder and CEO of United Codes and APEX R&D. I created this Blog to share my knowledge, especially on Oracle Application Express (APEX), and my personal opinion on it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5121728.jpg?t=1655901528"
+    },
+    {
+      "title": "About Oracle and Oracle \u0101'p\u011bks",
+      "feed_url": "http://orclking.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://orclking.blogspot.com/",
+      "description": "Hi! I'm Karkuvelraja Thangamariappan.I am an Oracle Certified Professional having 6.5 years of experience involving Oracle APEX Applications. I actively participate in the Oracle community by publishing technical posts on my blog.",
+      "followers": {
+        "twitter": 396
+      },
+      "image_url": "https://i1.feedspot.com/5296070.jpg?t=1655965394"
+    },
+    {
+      "title": "Barry's IT Development Blog",
+      "feed_url": "http://barrybrierley.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://barrybrierley.blogspot.com/",
+      "description": "Hi! I'm Barry, an Oracle Apex Software Engineer. I hate reading manuals. I find most of my answers on forum posts and blogs. But there's a lot of incorrect and outdated information out there. In my blogs, I share all the latest information about Oracle apex. This is what worked for me and I'm sure it will be of great benefit to you too!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413629.jpg?t=1655970121"
+    },
+    {
+      "title": "Oracle Knowledge Street",
+      "feed_url": "https://akilramesh.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://akilramesh.blogspot.com/",
+      "description": "Hi! I'm Akhil, an Oracle Certified APEX Developer. In my blogs, I share information on how you can implement various tasks using oracle apex and also share some quick tips on oracle apex functions.",
+      "followers": {
+        "twitter": 125
+      },
+      "image_url": "https://i1.feedspot.com/5413635.jpg?t=1655961668"
+    },
+    {
+      "title": "Anton Nielsen",
+      "feed_url": "http://c2anton.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://c2anton.blogspot.com//",
+      "description": "Hi! I'm Anton Nielsen. This blog is mostly about random experiences with Oracle technologies. Of those, it is mostly specific solutions to isolated problems. If you would like assistance with anything related to Oracle technologies click on the My Work link present on the right side of the website.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413630.jpg?t=1655966077"
+    },
+    {
+      "title": "APEXUTIL Blog",
+      "feed_url": "https://apexutil.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://apexutil.blogspot.com/",
+      "description": "APEXUTIL Blog provides information about the whole Oracle APEX ECOsystem in one place. It includes content on APEX development, APEX infrastructure, and a wide range of APEX services, and experience.",
+      "followers": {
+        "twitter": 219
+      },
+      "image_url": "https://i1.feedspot.com/5413633.jpg?t=1655964730"
+    },
+    {
+      "title": "Ontoor Solutions",
+      "feed_url": "https://blogs.ontoorsolutions.com/index.xml",
+      "website_url": "https://blogs.ontoorsolutions.com/",
+      "description": "Ontoor Solutions is an Organised Network Technology openness-oriented online directory to learn, implement, document, and share concepts of applications using Oracle APEX. Reporting in SAP, Project management, Consulting, and coaching. We can help you with APEX, and PLSQL. One place to your all projects, set up a meeting with us.",
+      "followers": {
+        "facebook": 22,
+        "twitter": 24
+      },
+      "image_url": "https://i1.feedspot.com/5299019.jpg?t=1655964963"
+    },
+    {
+      "title": "Jari's APEX Blog",
+      "feed_url": "https://cloud.jaris.fi/ords/r/jaris/blog/pgm?request=application_process=rss.xml",
+      "website_url": "https://www.expertos-oracle-apex.com/blog/",
+      "description": "Hi! I'm Jari Lainey. I'm Oracle Certified Application Express Developer since 2011. Here I share information about Oracle Application Express (APEX) and Related Stuff. I'm also Oracle Certified Application Express Developer since 2011.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413637.jpg?t=1655978045"
+    },
+    {
+      "title": "EOAPEX Blog",
+      "feed_url": "https://www.expertos-oracle-apex.com/feed/",
+      "website_url": "https://www.expertos-oracle-apex.com/blog/",
+      "description": "At Oracle Apex Experts, we are dedicated 100% of our time to satisfying the needs and requirements of our customers and business partners. It doesn't matter if your organization's needs are small or large, complex or simple. Our interest is to be able to offer you a solution so that these needs become strengths of your organization and your concerns become the peace of mind and satisfaction.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5413642.jpg?t=1655967376"
+    }
+  ]
+}

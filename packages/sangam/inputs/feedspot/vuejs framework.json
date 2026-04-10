@@ -1,0 +1,169 @@
+{
+  "category": "Vue.js Framework",
+  "source_url": "https://rss.feedspot.com/vuejs_framework_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bits and Pieces Blog",
+      "feed_url": "https://blog.bitsrc.io/feed",
+      "website_url": "https://blog.bitsrc.io/",
+      "description": "Bit is a collaborative open source project, actively developed and maintained by a venture-backed team and used by more teams and communities every day.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4952408.jpg?t=1621934828"
+    },
+    {
+      "title": "jQWidgets Blog",
+      "feed_url": "https://www.jqwidgets.com/feed/",
+      "website_url": "https://www.jqwidgets.com/blog/",
+      "description": "jQWidgets specializes in the development of platform independent and cross-browser compatible UI Components for Angular, Vue, React, ASP .NET MVC and jQuery.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 829
+      },
+      "image_url": "https://i1.feedspot.com/4972310.jpg?t=1621934683"
+    },
+    {
+      "title": "Raymond Camden Blog",
+      "feed_url": "https://www.raymondcamden.com/feed.xml",
+      "website_url": "https://www.raymondcamden.com/",
+      "description": "Raymond is a senior developer evangelist for Adobe. He focuses on document services, JavaScript, and enterprise cat demos.",
+      "followers": {
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/4972273.jpg?t=1621934692"
+    },
+    {
+      "title": "Webf Blog",
+      "feed_url": "https://blog.webf.zone/feed",
+      "website_url": "https://blog.webf.zone/",
+      "description": "Web/F is here to highlight the need for specialization in User Interface Development, including the front-end design in the project planning, to spread the awareness about un-parallel challenges this stream carries and more importantly, building the much deserved respect for Front-end Engineering in the world of Software Development.",
+      "followers": {
+        "twitter": 412
+      },
+      "image_url": "https://i1.feedspot.com/4972209.jpg"
+    },
+    {
+      "title": "Vue.js Developers Blog",
+      "feed_url": "https://vuejsdevelopers.com/feed.xml",
+      "website_url": "https://vuejsdevelopers.com/blog/",
+      "description": "Vue.js Developers is a community of web developers passionate about learning and building with VueJS. Check out articles or join the discussion to keep up-to-date with everything Vue!",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 45700,
+        "instagram": 9200
+      },
+      "image_url": "https://i1.feedspot.com/4758796.jpg?t=1621934661"
+    },
+    {
+      "title": "Vue.js Examples",
+      "feed_url": "https://vuejsexamples.com/rss/",
+      "website_url": "https://vuejsexamples.com/",
+      "description": "A nice collection of often useful examples done in Vue.js.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4972181.jpg?t=1621934861"
+    },
+    {
+      "title": "The Official Vue News",
+      "feed_url": "https://feeds.fireside.fm/vuenews/rss",
+      "website_url": "https://vuenews.fireside.fm/",
+      "description": "They cover the latest Vue news and tutorials in about 5 minutes. Their goal is to give you the information you need to stay on top of your game as a Vue developer. Links to all the stories we talk about can be found in weekly newsletter and on http://news.vuejs.org",
+      "followers": {
+        "twitter": 44300
+      },
+      "image_url": "https://i1.feedspot.com/4972427.jpg?t=1621934673"
+    },
+    {
+      "title": "Zelig880",
+      "feed_url": "https://zelig880.com/feed",
+      "website_url": "https://zelig880.com/",
+      "description": "Explore how to deploy powerful tools and the latest bug fixes in the Vue.js framework. Here you will find in-depth advice and news about everything related to Vue.js. Simone Cuomo aka 'Zelig880' is an Italian Senior Javascript engineer who mentors developers and likes to discuss various Vue.js topics on his blog.",
+      "followers": {
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5705441.jpg?t=1699258032"
+    },
+    {
+      "title": "LogRocket \u00bb Vue",
+      "feed_url": "https://blog.logrocket.com/tag/vue/feed/",
+      "website_url": "https://blog.logrocket.com/tag/vue/",
+      "description": "Information on Vuejs basics, how-tos, guides & tutorials, error fixes, and best practices. LogRocket empowers software teams to create the ideal product experience by combining session replay, performance monitoring, and product analytics.",
+      "followers": {
+        "facebook": 884,
+        "twitter": 15200
+      },
+      "image_url": "https://i1.feedspot.com/5298062.jpg?t=1625233380"
+    },
+    {
+      "title": "Vue.js Feed",
+      "feed_url": "https://vuejsfeed.com/feed",
+      "website_url": "https://vuejsfeed.com/",
+      "description": "The latest News, Tutorials, Plugins, Showcases, and more, regarding Vue, in one place.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 34400
+      },
+      "image_url": "https://i1.feedspot.com/4972171.jpg?t=1621934728"
+    },
+    {
+      "title": "MadeWith Vue.js Blog",
+      "feed_url": "https://madewithvuejs.com/rss-feed?format=xml",
+      "website_url": "https://madewithvuejs.com/blog",
+      "description": "A collection of projects made with Vue.js Websites, UI Components, Frameworks, Apps and more!",
+      "followers": {
+        "facebook": 957,
+        "twitter": 37100
+      },
+      "image_url": "https://i1.feedspot.com/4972161.jpg?t=1621934737"
+    },
+    {
+      "title": "The Vue Point",
+      "feed_url": "https://medium.com/feed/the-vue-point",
+      "website_url": "https://medium.com/the-vue-point",
+      "description": "Vue.js is an open-source JavaScript framework for building user interfaces and single-page applications.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 289400
+      },
+      "image_url": "https://i1.feedspot.com/4972160.jpg?t=1621934742"
+    },
+    {
+      "title": "VueJobs",
+      "feed_url": "https://vuejobs.com/feed",
+      "website_url": "https://vuejobs.com/",
+      "description": "Vue.js jobs is the best place to hire or get hired as Vue.js developer. Find Vue.js talent and reach to thousands of developers.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/4972248.jpg?t=1621934669"
+    },
+    {
+      "title": "Mike Street Blog",
+      "feed_url": "https://www.mikestreety.co.uk/rss",
+      "website_url": "https://www.mikestreety.co.uk/blog/",
+      "description": "Mike Street is a Brighton based front end developer specialising in Preprocessors, HTML and Gulp.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4972212.jpg?t=1621934704"
+    },
+    {
+      "title": "CodingTheSmartWay",
+      "feed_url": "https://codingthesmartway.com/feed/",
+      "website_url": "https://codingthesmartway.com/",
+      "description": "CodingTheSmartWay.com is a blog about latest technologies in web development, including vue.js, Node.js, Meteor, React and Angular!",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4972238.jpg?t=1621934688"
+    },
+    {
+      "title": "LearnVue",
+      "feed_url": "https://learnvue.co/feed/",
+      "website_url": "https://learnvue.co/articles",
+      "description": "Easy to Follow Tips and Tutorials for All Developers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5085320.jpg"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "category": "Anticancer",
+  "source_url": "https://rss.feedspot.com/anticancer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Anticancer Lifestyle Program Blog",
+      "feed_url": "https://anticancerlifestyle.org/feed/",
+      "website_url": "https://anticancerlifestyle.org/blog/",
+      "description": "Covers blog posts on lifestyle transformation program for people diagnosed with cancer. Also covers articles on Diet, Fitness, Mindset, and Environment. The Anticancer Lifestyle Program (ACLP) is a comprehensive online lifestyle transformation course for cancer survivors and those who seek to reduce their risk of cancer and other chronic illnesses.",
+      "followers": {
+        "facebook": 42300,
+        "twitter": 2700,
+        "instagram": 15300
+      },
+      "image_url": "https://i1.feedspot.com/5299345.jpg?t=1625483781"
+    },
+    {
+      "title": "Admac Oncology Blog",
+      "feed_url": "https://www.admaconcology.com/feed/",
+      "website_url": "https://www.admaconcology.com/blog/",
+      "description": "Covers blog posts on cancer drugs updates, oncology products and more. Admac aims at providing innovative World-Standard medicines for all, at affordable prices.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5299444.jpg?t=1625491182"
+    },
+    {
+      "title": "Anticancer Living",
+      "feed_url": "https://anticancer-living.com/feed/",
+      "website_url": "https://anticancer-living.com/",
+      "description": "Anticancer living is built on a belief that self-care is health care and that greater wellness is available to us all. Covers topics such as Diet, Fitness, Environment and more.",
+      "followers": {
+        "twitter": 4500,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5299405.jpg?t=1625487744"
+    }
+  ]
+}

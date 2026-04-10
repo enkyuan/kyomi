@@ -1,0 +1,217 @@
+{
+  "category": "Canadian Soccer",
+  "source_url": "https://rss.feedspot.com/canadian_soccer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sportsnet \u00bb Soccer",
+      "feed_url": "https://www.sportsnet.ca/soccer/feed",
+      "website_url": "https://www.sportsnet.ca/soccer/",
+      "description": "All latest articles about Soccer from Sportsnet.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 1100000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5173606.jpg?t=1745828271"
+    },
+    {
+      "title": "Ontario Soccer",
+      "feed_url": "https://www.ontariosoccer.net/news_rss_feed?tags=3131373,3131362,3131363,3068939,3131357,3068981,3131348,3000261,3131349,3131347,3131310",
+      "website_url": "https://www.ontariosoccer.net/",
+      "description": "Ontario Soccer was founded in 1901 and is one of the oldest and largest sport organizations in Canada. They provide support to District Associations, Associate Members as well as Clubs, Private Academies, Coaches and Match Officials. Ontario Soccer's blog gives updates about and information about clubs, matches, events, key notes and more.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 14000,
+        "instagram": 40100
+      },
+      "image_url": "https://i1.feedspot.com/5322598.jpg?t=1631802379"
+    },
+    {
+      "title": "AFTN - Away From The Numbers",
+      "feed_url": "https://aftn.ca/feed/",
+      "website_url": "https://aftn.ca/",
+      "description": "AFTN is a soccer website that covers the beautiful game in Canada. The AFTN Canada blog made the move onto Canadian Soccer News in 2011, taking our brand of news and commentary to a bigger Canadian wide audience and soon becoming a key component to the overall site.",
+      "followers": {
+        "facebook": 399,
+        "twitter": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5322466.jpg?t=1631788638"
+    },
+    {
+      "title": "Alberta Soccer",
+      "feed_url": "https://albertasoccer.com/feed/",
+      "website_url": "https://www.albertasoccer.com/media/news/",
+      "description": "Alberta Soccer is the province's largest individual sports association. It is the center of excellence for the game, providing opportunities for all players to reach their full potential. Alberta soccer blog gives news and updates on soccer happening around the city.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 5800,
+        "instagram": 12600
+      },
+      "image_url": "https://i1.feedspot.com/5322691.jpg?t=1631864072"
+    },
+    {
+      "title": "Canadian Soccer League",
+      "feed_url": "https://canadiansoccerleague.ca/feed/",
+      "website_url": "https://canadiansoccerleague.ca/",
+      "description": "The Canadian Soccer League is long-standing and is one of two professional soccer leagues in Canada. It is a continuation of earlier forerunner leagues. It is Canada's only Professional Soccer League. Follow their blog to get all the latest news, updates and information related to Canadian soccer teams and league details.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5173587.jpg?t=1595502803"
+    },
+    {
+      "title": "TFC REPUBLIC",
+      "feed_url": "https://www.tfcrepublic.ca/rss/",
+      "website_url": "https://www.tfcrepublic.ca/",
+      "description": "TFC Republic is a website dedicated to in-depth coverage and analysis of Toronto FC. TFC will garner the majority of the focus, the website also gives updates on the Canadian men's and women's teams, the Canadian Premier League, and Canadian soccer as a whole. They also cover information regarding the latest drafts, transfers, recent addition to the rosters, key moments of the games, and more.",
+      "followers": {
+        "twitter": 13600,
+        "instagram": 362
+      },
+      "image_url": "https://i1.feedspot.com/5322401.jpg?t=1673871499"
+    },
+    {
+      "title": "Canadian Soccer Daily",
+      "feed_url": "https://canadiansoccerdaily.com/feed",
+      "website_url": "https://canadiansoccerdaily.com/",
+      "description": "Canadian Soccer Daily is a sports news website covering the major soccer action in the Canadian circuit. The cover news related to Canadian soccer leagues and tournaments along with tracking the native players making a name for themselves in other parts of the world.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5486510.jpg?t=1672665953"
+    },
+    {
+      "title": "FootyNarrative Blog",
+      "feed_url": "https://footynarrative.com/blog?format=rss",
+      "website_url": "https://footynarrative.com/blog/",
+      "description": "FootyNarrative is a publication dedicated to covering the beautiful game through unique stories, interviews, and collaborations with people shaping the future of football. They aim to have championing football culture in Canada.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 354,
+        "instagram": 792
+      },
+      "image_url": "https://i1.feedspot.com/5486504.jpg?t=1672666006"
+    },
+    {
+      "title": "Northern Tribune",
+      "feed_url": "https://northerntribune.ca/feed/",
+      "website_url": "https://northerntribune.ca/",
+      "description": "Northern Tribune is a soccer news blog operated by Canadian soccer fans. The topics they report in their blog are about the Canadian premier league, major league soccer, national teams, abroad signing of players, women's soccer, and also their podcast.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5486509.jpg?t=1672666160"
+    },
+    {
+      "title": "Canadian Premier League",
+      "feed_url": "https://canpl.ca/feed?postType=post",
+      "website_url": "https://canpl.ca/",
+      "description": "The Canadian Premier League is a professional men's soccer league in Canada. The league consists of eight teams, from five of Canada's ten provinces. Follow The Canadian Premier League blog for the latest league updates, news, and other information.",
+      "followers": {
+        "facebook": 89400,
+        "twitter": 41300,
+        "instagram": 76700
+      },
+      "image_url": "https://i1.feedspot.com/5173609.jpg?t=1595501152"
+    },
+    {
+      "title": "TAC Academy Blog",
+      "feed_url": "https://tacacademy.ca/blog/feed/",
+      "website_url": "https://tacacademy.ca/blog/",
+      "description": "The TAC Academy was founded in 2015. Toronto Athletic F.C. Academy aims to inspire and foster a lifelong love of the sport in a safe, inclusive, and instructional environment. The Academy's sports blog covers topics like How to do well in soccer tryouts, Soccer drills to do on your own, The story of Pele, and other soccer-related articles.",
+      "followers": {
+        "facebook": 133
+      },
+      "image_url": "https://i1.feedspot.com/5486505.jpg?t=1672665987"
+    },
+    {
+      "title": "Montreal Gazette \u00bb Soccer",
+      "feed_url": "https://www.montrealgazette.com/category/sports/soccer/feed.xml",
+      "website_url": "https://thethirdsub.ca/",
+      "description": "The Montreal Gazette, founded in 1778, is the only English-language daily newspaper published in Montreal, Quebec, Canada. It publishes articles on all the major genre as sports, lifestyle, politics, business and more. You can also get regular soccer news, schedules, trade rumors, and scores on the soccer section of their website.",
+      "followers": {
+        "facebook": 231100,
+        "twitter": 265200,
+        "instagram": 83600
+      },
+      "image_url": "https://i1.feedspot.com/5173619.jpg?t=1632743340"
+    },
+    {
+      "title": "The Third Sub",
+      "feed_url": "https://thethirdsub.ca/feed/",
+      "website_url": "https://thethirdsub.ca/",
+      "description": "Between The Sticks is a project created by passionate fans. BTS provides stories and content for other fans out there, whether you want to learn more about what's going on or to come to discuss the various happenings around the club. You can follow their blog to get regular content, ranging from player profiles to post-game reviews and other in-depth articles",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5486511.jpg?t=1672666135"
+    },
+    {
+      "title": "The Star \u00bb Toronto FC",
+      "feed_url": "http://www.thestar.com/content/thestar/feed.RSSManagerServlet.articles.sports.tfc.rss",
+      "website_url": "https://www.thestar.com/sports/tfc.html",
+      "description": "Founded in 1892, the Toronto Star has long been Canada's largest daily newspaper. Now a multi-platform news organization, the Star publishes a newspaper seven days a week in the Greater Toronto Area and publishes ongoing news and information to a global audience on thestar.com on web and mobile applications. The star is also the lead coverage partner of the Toronto FC team. It tracks down all the details of the club, its players, and their campaigns.",
+      "followers": {
+        "facebook": 499700,
+        "twitter": 1200000,
+        "instagram": 164000
+      },
+      "image_url": "https://i1.feedspot.com/5322769.jpg?t=1631876581"
+    },
+    {
+      "title": "Waking The Red",
+      "feed_url": "https://wakingthered.com/rss/current.xml",
+      "website_url": "https://wakingthered.com/",
+      "description": "Waking the Red is SB Nation's Toronto FC blog which also covers Canada's National Teams and the Canadian Premier League. It is the best source for quality Toronto FC news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 7700,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5322314.jpg?t=1631771472"
+    },
+    {
+      "title": "Eighty Six Forever",
+      "feed_url": "https://www.eightysixforever.com/rss/index.xml",
+      "website_url": "https://thethirdsub.ca/",
+      "description": "Eighty-Six Forever is a fan site for Vancouver Whitecaps Fans. They deliver all the latest news, analysis, and opinion on the Vancouver Whitecaps. They cover topics such as The Athletic Bilbao of Canada, Mathias Laborda: Deep Dive, 2023 Whitecaps MLS SuperDraft preview and more.",
+      "followers": {
+        "facebook": 353,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5173604.jpg?t=1595501941"
+    },
+    {
+      "title": "Mount Royal Soccer",
+      "feed_url": "https://www.mountroyalsoccer.com/rss/index.xml",
+      "website_url": "https://www.mountroyalsoccer.com/",
+      "description": "Mount Royal Soccer is your best source for quality Montreal Impact news, rumors, analysis, stats, and scores from the fan's perspective. The news featured on their site are CF Montr\u00e9al: Schedule Release and New Playoffs, Victor Wanyama Re-Signs With CF Montr\u00e9al, CF Montr\u00e9al Sign George Campbell, and more essential updates.",
+      "followers": {
+        "facebook": 509,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5173599.jpg?t=1595502127"
+    },
+    {
+      "title": "Rush Canada Soccer Academy",
+      "feed_url": "https://www.rushcanada.com/feed",
+      "website_url": "https://www.rushcanada.com/",
+      "description": "Rush Canada is part of the global Rush Soccer family. Rush Canada develops youth footballers from the grassroots level turning them into professional footballers. Rush is the largest youth soccer organization in the world. They also feature important news on the site regarding matches, tryouts, ALL STAR LIST, International Cup, new signings, the latest drafts, and more.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 706,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5322644.jpg?t=1631858391"
+    },
+    {
+      "title": "My Three Points",
+      "feed_url": "https://www.mythreepoints.com/blog-feed.xml",
+      "website_url": "https://www.mythreepoints.com/",
+      "description": "My Three Points majorly covers news about Canadian football, CFL, Canadian Soccer, Canadian Men's National Team, and the FIFA World Cup. They present their data in a unique three-pointer way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5486506.jpg?t=1672666221"
+    }
+  ]
+}

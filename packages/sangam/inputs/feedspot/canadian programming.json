@@ -1,0 +1,141 @@
+{
+  "category": "Canadian Programming",
+  "source_url": "https://rss.feedspot.com/canadian_programming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wandering Thoughts Blog",
+      "feed_url": "https://utcc.utoronto.ca/~cks/space/blog/?atom",
+      "website_url": "https://utcc.utoronto.ca/~cks/space/blog/",
+      "description": "Chris Siebenmann is a Unix herder who now works at the Department of Computer Science, where you can find his nominal new home page. Chris is keeping a tech blog called Wandering Thoughts inside his wiki-thing. Most of his recent writing is found here or in CSpace in general.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5152808.jpg?t=1633614503"
+    },
+    {
+      "title": "Julia Evans",
+      "feed_url": "https://jvns.ca/atom.xml",
+      "website_url": "https://jvns.ca/",
+      "description": "Hey! I'm Julia. This blog is about being delighted about programming,showing how topics traditionally considered 'hard' and 'scary' are actually accessible and interesting and fun (TCP! / Kernel hacking! / Traceroute! / gzip! / databases! / SSL!).",
+      "followers": {
+        "twitter": 209700
+      },
+      "image_url": "https://i1.feedspot.com/4888634.jpg?t=1633615678"
+    },
+    {
+      "title": "Eclipse Foundation Blog",
+      "feed_url": "https://blogs.eclipse.org/blog/feed",
+      "website_url": "https://blogs.eclipse.org/",
+      "description": "Eclipse is a community for individuals and organizations who wish to collaborate on commercially-friendly open source software. The Eclipse Foundation provides our global community of individuals and organizations with a mature, scalable, and business-friendly environment for open source software collaboration and innovation.",
+      "followers": {
+        "facebook": 85400,
+        "twitter": 32299
+      },
+      "image_url": "https://i1.feedspot.com/4974571.jpg?t=1621946982"
+    },
+    {
+      "title": "Planet Eclipse",
+      "feed_url": "https://planeteclipse.org/planet/rss20.xml",
+      "website_url": "https://planeteclipse.org/planet/",
+      "description": "Planet Eclipse is a window into the world, work and lives of Eclipse hackers and contributors. The Eclipse Foundation provides individuals and organizations with a business-friendly environment for open source software collaboration and innovation.",
+      "followers": {
+        "facebook": 85400,
+        "twitter": 32299
+      },
+      "image_url": "https://i1.feedspot.com/437323.jpg?t=1621946986"
+    },
+    {
+      "title": "MakerKids Blog",
+      "feed_url": "https://makerkids.com/feed/",
+      "website_url": "https://makerkids.com/blog/",
+      "description": "Learn how to become a maker! Discover the latest news in innovation, tech and creativity (in Toronto and the world) on the MakerKids Blog. MakerKids runs award-winning programs on coding, robotics & Minecraft that help kids ages 6-13 learn technical & social-emotional skills.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 4100,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5334060.jpg?t=1634737320"
+    },
+    {
+      "title": "AppStudio Blog",
+      "feed_url": "https://www.appstudio.ca/blog/feed/",
+      "website_url": "https://www.appstudio.ca/blog/",
+      "description": "Check out the latest blogs post, business news, trends, and technology launches related to Mobile & web application development and other services. At AppStudio, we are a full-service software design and development firm, dedicated to providing innovative solutions and services for your technology requirements.",
+      "followers": {
+        "facebook": 658,
+        "twitter": 26,
+        "instagram": 112
+      },
+      "image_url": "https://i1.feedspot.com/5335528.jpg?t=1635164565"
+    },
+    {
+      "title": "Real Programming 4 Kids Blog",
+      "feed_url": "https://realprogramming.com/feed/",
+      "website_url": "https://realprogramming.com/blog/",
+      "description": "Our vision is to be the best in the world at teaching game programming to kids. We have taught game programming to over 14,000 students who have cumulatively inputted over 5 million lines of code.",
+      "followers": {
+        "facebook": 884,
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/5329541.jpg?t=1633617027"
+    },
+    {
+      "title": "CodeProject",
+      "feed_url": "https://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=1",
+      "website_url": "https://www.codeproject.com/script/Articles/Latest.aspx",
+      "description": "CodeProject is one of the world's largest independent communities of developers and coders. It is a great source for code, answers, articles, and community -- all for professional developers.",
+      "followers": {
+        "facebook": 45900,
+        "twitter": 16100
+      },
+      "image_url": "https://i1.feedspot.com/4891390.jpg?t=1633615504"
+    },
+    {
+      "title": "Studioweb Blog",
+      "feed_url": "https://blog.studioweb.com/feed/",
+      "website_url": "https://blog.studioweb.com/",
+      "description": "StudioWeb 5 inspires students as they easily learn real-world code in HTML5, CSS3, JavaScript, Python, SQL, and PHP. Support your students with our interactive learning platform, where you follow their progress and check their results.",
+      "followers": {
+        "facebook": 188,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5334059.jpg?t=1634737319"
+    },
+    {
+      "title": "Brian Cline",
+      "feed_url": "https://www.brcline.com/feed",
+      "website_url": "https://www.brcline.com/articles",
+      "description": "Brian is a full stack software engineer, strategic advisor, and entrepreneur with a passion for technology, business, and automation.Brian has been really blessed to work on a variety of projects and websites. Many of the websites he's worked on can be found through out companies located in the Niagara Region, parts of the Greater Toronto Area, and the world. A lot of Brian's consulting work is subcontracted to various web design and development agencies, and nonprofit organizations.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5329547.jpg?t=1633615795"
+    },
+    {
+      "title": "Tech Stuff and Notes",
+      "feed_url": "https://feeds.feedburner.com/blogspot/gMRk",
+      "website_url": "https://blog.carsoncheng.ca/",
+      "description": "Programming, software development, computing science, software technologies, learning, &c.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5329544.jpg?t=1635163902"
+    },
+    {
+      "title": "gtkDcoding",
+      "feed_url": "https://gtkdcoding.com/feed.xml",
+      "website_url": "https://gtkdcoding.com/",
+      "description": "Simple examples of how to use GtkD to build GUI applications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5329533.jpg"
+    },
+    {
+      "title": "Sikilabs Blog",
+      "feed_url": "https://sikilabs.com/blog/feed/",
+      "description": "We solve real business challenges by writing custom code in Python. Founded in 2013, we specialize in back-end development centered on the user experience. We work with major corporations, start-ups, and everything in between.",
+      "followers": {
+        "facebook": 56,
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5334057.jpg?t=1634737318"
+    }
+  ]
+}

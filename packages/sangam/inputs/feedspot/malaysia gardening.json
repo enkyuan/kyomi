@@ -1,0 +1,44 @@
+{
+  "category": "Malaysia Gardening",
+  "source_url": "https://rss.feedspot.com/malaysia_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Serbajadi Blog",
+      "feed_url": "https://serbajadi.com.my/feed/",
+      "website_url": "https://serbajadi.com.my/blog/",
+      "description": "Learn Gardening Tips, Plant Care Guides, and more information on troubleshooting Common Garden Pests. The Serbajadi blog contains resources to help you increase your garden's efficiency. Founded in 1988, Serbajadi is a household brand in Malaysia specializing in Gardening supplies and OEM Contract Manufacturing.",
+      "followers": {
+        "facebook": 37300,
+        "twitter": 36,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5465542.jpg?t=1668154710"
+    },
+    {
+      "title": "Garden Chronicles of James David",
+      "feed_url": "https://jamesmissier.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://jamesmissier.blogspot.com/",
+      "description": "Keep up with articles from James Missier. In this blog, he focuses on cultivating unique and colorful plants ranging from rare to common plants all around the tropical belt across the world. Check out the latest posts illustrating exotic varieties of tropical plants supplemented with name and images.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5072147.jpg?t=1668154487"
+    },
+    {
+      "title": "Tropical Gardening",
+      "feed_url": "http://tropicalhorticulture.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tropicalhorticulture.blogspot.com/",
+      "description": "The Tropical Gardening blog follows Consultant Botanist Dr. Francis Ng's opinions and expert insights into Plant care and Growth studies. Dr. Francis researches plants and gardens, manages the rooftop garden known as the Secret Garden of 1 Utama, writes books and scientific papers, and edits a forestry journal.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5465541.jpg?t=1668154543"
+    },
+    {
+      "title": "Baba Shop Blog",
+      "feed_url": "https://babashop.com.my/blogs/news.atom",
+      "website_url": "https://babashop.com.my/blogs/news",
+      "description": "Browse blog articles covering tips on How to grow your own leafy vegetables, Sustainable Gardening practices and more helpful insight. Baba is a garden distributor & manufacturer of gardening supplies intended to meet all your gardening needs and is one of Malaysia's biggest garden product suppliers online.",
+      "followers": {
+        "facebook": 87100
+      },
+      "image_url": "https://i1.feedspot.com/5467190.jpg?t=1668510541"
+    }
+  ]
+}

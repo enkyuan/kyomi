@@ -1,0 +1,64 @@
+{
+  "category": "Alabama Music",
+  "source_url": "https://rss.feedspot.com/alabama_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mason Music Blog",
+      "feed_url": "https://masonmusic.com/feed/",
+      "website_url": "https://masonmusic.com/music-blog/",
+      "description": "Mason Music teach guitar, piano, voice, drum and violin lessons to students of all ages in Birmingham, Alabama.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 451,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5439620.jpg?t=1709031623"
+    },
+    {
+      "title": "Alabama Worship Blog",
+      "feed_url": "https://alabamaworship.org/feed/",
+      "website_url": "https://alabamaworship.org/blog/",
+      "description": "Alabama Worship Blog seeks to help identify and equip your church with any Worship Leadership needs to proclaim the gospel through music. That includes music, worship events, instrumental needs, sound consultations, networking and more. Read the blog to get updates.",
+      "followers": {
+        "facebook": 980,
+        "twitter": 13,
+        "instagram": 140
+      },
+      "image_url": "https://i1.feedspot.com/5439621.jpg?t=1662621116"
+    },
+    {
+      "title": "HuntsvilleMusic.com",
+      "feed_url": "https://huntsvillemusic.com/feed/",
+      "website_url": "https://huntsvillemusic.com/stay-updated/",
+      "description": "Huntsville Alabama's single source for live music, artist, venue and festival directory, and a local music related blog.HuntsvilleMusic.com makes local music easy to reach and accessible to everyone, both Huntsville natives and music-lovers nationwide.",
+      "followers": {
+        "facebook": 62600,
+        "twitter": 42100,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/5310682.jpg?t=1662620345"
+    },
+    {
+      "title": "Dawson Music Academy Blog",
+      "feed_url": "https://dawsonmusicacademy.org/feed/",
+      "website_url": "https://dawsonmusicacademy.org/blog/",
+      "description": "Find resources, tips and music lessons on the Dawson Music Academy Blog.The Dawson Music Academy provides a Christian environment for students of all ages to learn about music and improve his or her musical skills.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5312447.jpg?t=1629099961"
+    },
+    {
+      "title": "AL.com \u00bb Music",
+      "feed_url": "https://www.al.com/topic/music/",
+      "website_url": "https://www.al.com/topic/music/",
+      "description": "Find the latest music news, festivals, events on Alabama.com.AL.com is Alabama's source for news, sports, entertainment, weather and more.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 420300,
+        "instagram": 119500
+      },
+      "image_url": "https://i1.feedspot.com/5310700.jpg?t=1628514551"
+    }
+  ]
+}

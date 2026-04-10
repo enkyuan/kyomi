@@ -1,0 +1,35 @@
+{
+  "category": "Peru Motorcycle",
+  "source_url": "https://rss.feedspot.com/peru_motorcycle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Suzuki Motos Blog",
+      "feed_url": "https://suzukimotos.pe/feed/",
+      "website_url": "https://suzukimotos.pe/blog/",
+      "description": "Michio Suzuki's legacy begins with 'Suzuki Loom Works' in Hamamatsu, Japan. Explore the latest news, updates, motorcycles, services, and more on their blog. Stay connected with Suzuki's rich history and innovative offerings.",
+      "followers": {
+        "facebook": 130699,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/7282854.jpg?t=1711453619"
+    },
+    {
+      "title": "Peru Moto Tours Blog",
+      "feed_url": "https://www.perumototours.com/blog/en/feed/",
+      "website_url": "https://www.perumototours.com/blog/en/",
+      "description": "Peru Moto Tours has been the premier choice for motorcycle tours and rentals in Peru since 2004. Renowned for excellent customer service, top-quality bikes, and extensive regional knowledge, they offer unforgettable adventures both locally and beyond.",
+      "followers": {
+        "facebook": 4500
+      },
+      "image_url": "https://i1.feedspot.com/7282853.jpg?t=1711449360"
+    },
+    {
+      "title": "Haojue Motorcycles Blog",
+      "feed_url": "https://haojuemotos.pe/feed/",
+      "website_url": "https://haojuemotos.pe/blog/",
+      "description": "Since its 1992 inception, Haojue Holding has dominated China's motorcycle sales, earning 5-star customer satisfaction for 14 years. As China's largest motorcycle manufacturer, their joint venture with Suzuki, Changzhou Haojue Suzuki Motorcycle Co., Ltd., is a leading foreign-invested manufacturer. With strong domestic sales and exports to over 80 countries, they've led the industry in production and sales for 18 years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282855.jpg?t=1711449590"
+    }
+  ]
+}

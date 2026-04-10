@@ -1,0 +1,57 @@
+{
+  "category": "Qatar Food",
+  "source_url": "https://rss.feedspot.com/qatar_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Life on the Wedge",
+      "feed_url": "https://lifeonthewedge.net/feed/",
+      "website_url": "https://lifeonthewedge.net/",
+      "description": "Life on the Wedge is your essential guide to all the good things - eating, drinking and traveling in Qatar and beyond. Rachel Morris is a food and travel blogger who has called Doha, Qatar her home since 2007.",
+      "followers": {
+        "twitter": 7600,
+        "instagram": 22400
+      },
+      "image_url": "https://i1.feedspot.com/4836288.jpg?t=1666000519"
+    },
+    {
+      "title": "Qatar Foodie",
+      "feed_url": "https://qatarfoodie.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://qatarfoodie.blogspot.com/",
+      "description": "Explore blogs about food, drinks and all the things in between. Find food recipes, restaurants listings, reviews and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5457460.jpg?t=1666001249"
+    },
+    {
+      "title": "Essence Of Qatar \u00bb Food Guide",
+      "feed_url": "https://essenceofqatar.com/category/food-guide/feed/",
+      "website_url": "https://essenceofqatar.com/category/food-guide/",
+      "description": "Essence Of Qatar is a one stop platform for everything Qutar. Explore all the restaurants, reviews, food stalls and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5457462.jpg?t=1666000627"
+    },
+    {
+      "title": "Lemon & Mint",
+      "feed_url": "https://lemonandmint.co/feed/",
+      "website_url": "https://lemonandmint.co/",
+      "description": "Real reviews and honest insights about food in Qatar. This is the Qatar food blog for tips and advice on eating out and finding great food in Doha. One of us hails from Wales. The other's roots are planted in Pakistan. Yet we share similar tastes in life and mainly what to put on our plates. Here in Doha we found something we are both extremely fond of: the refreshingly, zingy lemon and mint drink that accompanies most of our meals. So it felt right to pay homage to this delicious food combination.",
+      "followers": {
+        "facebook": 112,
+        "twitter": 1200,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5457464.jpg?t=1666000483"
+    },
+    {
+      "title": "Cooking With Camilla",
+      "feed_url": "https://www.cookingwithcamilla.com/feed/",
+      "website_url": "https://www.cookingwithcamilla.com/",
+      "description": "Welcome! Whether you're simply trying to introduce more plant-based recipes into your weekly meal plan or you are transitioning to a full vegan diet and lifestyle, you will find all you need here from easy-to-follow, delicious vegan and gluten-free recipes to helpful information and advice. This is your one-stop shop for simple, healthy and extremely tasty recipes for busy family lives and stress-free entertaining.",
+      "followers": {
+        "facebook": 277,
+        "twitter": 12,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5619038.jpg?t=1688637015"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "category": "San Antonio Food",
+  "source_url": "https://rss.feedspot.com/san_antonio_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "San Antonio Current \u00bb Food & Drink",
+      "feed_url": "https://www.sacurrent.com/sanantonio/Rss.xml?oid=2240580",
+      "website_url": "https://www.sacurrent.com/food-drink",
+      "description": "Read San Antonio restaurant reviews, restaurant openings, dining, local breweries, and local wineries news. We dig deep into the issues that affect our community and we fearlessly cover the most important things happening in San Antonio's cultural landscape. We are the alternative voice for San Antonio.",
+      "followers": {
+        "facebook": 212800,
+        "twitter": 140000,
+        "instagram": 259399
+      },
+      "image_url": "https://i1.feedspot.com/5393639.jpg?t=1650871312"
+    },
+    {
+      "title": "San Antonio Magazine \u00bb Eat & Drink",
+      "feed_url": "https://www.sanantoniomag.com/category/eat-drink/feed/",
+      "website_url": "https://www.sanantoniomag.com/category/eat-drink/",
+      "description": "San Antonio Magazine is your food & drink guide, featuring the restaurants & cafes to visit, food to try, chef interview, and more. San Antonio Magazine examines a city at the intersection of old and new, celebrating its dynamic culture, rich heritage and collaborative spirit of community building toward the future.",
+      "followers": {
+        "facebook": 31900,
+        "twitter": 53800,
+        "instagram": 81800
+      },
+      "image_url": "https://i1.feedspot.com/5393643.jpg?t=1650871327"
+    },
+    {
+      "title": "Flicks and Food",
+      "feed_url": "https://flicksandfood.com/feed/",
+      "website_url": "https://flicksandfood.com/",
+      "description": "Hi, I'm Johnnie De La Garza. Since 2009 I have been writing about my dining & travel experiences. Find great places to eat & see and the best places to stay when you get there. My mission is to bring 100% honest and unbiased reviews.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 35900
+      },
+      "image_url": "https://i1.feedspot.com/5393642.jpg?t=1650873866"
+    },
+    {
+      "title": "JC Food Mart Blog",
+      "feed_url": "https://www.jcfoodmart.com/feed/",
+      "website_url": "https://www.jcfoodmart.com/blog/",
+      "description": "San Antonio mothers in search of WIC-inspired blog content can discover a variety of WIC-inspired recipes, shopping tips, and information. JC Food Mart is a San Antonio-based grocery store that sells WIC-authorized foods to customers in a convenient and friendly environment.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5393650.jpg?t=1650873135"
+    },
+    {
+      "title": "San Antonio Food Shed",
+      "feed_url": "https://sanantoniofoodshed.com/feed/",
+      "website_url": "https://sanantoniofoodshed.com/",
+      "description": "San Antonio Food Shed serves as a food guide to all the foodies when traveling to San Antonio. The blog covers every aspect of food life. Read articles on catering, food, restaurants, wine & drinks, and chef, and also share cooking tips and recipes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5393641.jpg?t=1650873772"
+    },
+    {
+      "title": "Female Foodie \u00bb San Antonio",
+      "feed_url": "https://www.femalefoodie.com/category/restaurant-reviews/texas/san-antonio/feed/",
+      "website_url": "https://www.femalefoodie.com/category/restaurant-reviews/texas/san-antonio/",
+      "description": "Brooke Eliason shares her experience, thoughts, reviews, and recommends food to try while in San Antonio. I'm Brooke. I started Female Foodie in 2010 and now we have hundreds of restaurant guides and restaurant-inspired recipes powered by yours truly and our incredibly talented team of food writers across the country.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1100,
+        "instagram": 471000
+      },
+      "image_url": "https://i1.feedspot.com/5393640.jpg?t=1650871314"
+    },
+    {
+      "title": "Twenty Something SA \u00bb Food",
+      "feed_url": "https://twentysomethingsa.com/category/food/feed/",
+      "website_url": "https://twentysomethingsa.com/category/food/",
+      "description": "Discover the new restaurant and cafe opening in the San Antonio areas, plus recipes and famous food. Twenty-Something SA is a brand dedicated to supporting local businesses in San Antonio, Texas as well as encouraging the community to mindfully vote + get involved.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2600,
+        "instagram": 30500
+      },
+      "image_url": "https://i1.feedspot.com/5393646.jpg?t=1650871346"
+    },
+    {
+      "title": "Food Policy SA Blog",
+      "feed_url": "https://www.foodpolicysa.org/feed/",
+      "website_url": "https://www.foodpolicysa.org/blog/",
+      "description": "The FPCSA blog features policies, success stories, challenges, events, various perspectives, and other happenings regarding the FPCSA and the budding local food system in San Antonio. The Food Policy Council of San Antonio (FPCSA) is an organization dedicated to addressing the root causes of an unhealthy food system and helping people work for the food environment they want to have.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/5393638.jpg?t=1650871299"
+    },
+    {
+      "title": "CultureMap \u00bb Restaurants + Bars",
+      "feed_url": "https://sanantonio.culturemap.com/feeds/news/restaurants-bars/",
+      "website_url": "https://sanantonio.culturemap.com/news/restaurants-bars/",
+      "description": "The essential source for daily restaurant and nightlife news and the best restaurants, bars, food, drinks, and nightclubs. CultureMap is your source for the local lifestyle news. We report on the things that matter to you most, like where to eat and what to do.",
+      "followers": {
+        "facebook": 23000,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5393645.jpg?t=1650871778"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "category": "Linux Gaming",
+  "source_url": "https://rss.feedspot.com/linux_gaming_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gaming On Linux",
+      "feed_url": "https://www.gamingonlinux.com/article_rss.php",
+      "website_url": "https://www.gamingonlinux.com/",
+      "description": "We are GamingOnLinux, the world's biggest Linux gaming news and community website.GamingOnLinux is the home of Linux and SteamOS gaming. Covering Linux games, SteamOS, reviews and more.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 66800
+      },
+      "image_url": "https://i1.feedspot.com/4402022.jpg?t=1609821922"
+    },
+    {
+      "title": "Linux Game Consortium",
+      "feed_url": "https://linuxgameconsortium.com/feed/",
+      "website_url": "https://linuxgameconsortium.com/",
+      "description": "Linux Game Consortium covers the latest gaming news for Linux and Ubuntu. Plus community support and upcoming games.",
+      "followers": {
+        "facebook": 548,
+        "twitter": 2400,
+        "instagram": 310
+      },
+      "image_url": "https://i1.feedspot.com/5302329.jpg?t=1626326915"
+    },
+    {
+      "title": "Linux Game Network",
+      "feed_url": "https://www.linuxgame.net/blog/rss",
+      "website_url": "https://www.linuxgame.net/",
+      "description": "Linux Game Network is a place to share recent news in the world of Linux gaming. Covering new game releases, hardware, and more in-depth reviews.",
+      "followers": {
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/5302339.jpg?t=1626327908"
+    },
+    {
+      "title": "Unixmen \u00bb Gaming On Linux",
+      "feed_url": "https://www.unixmen.com/category/gaming-on-linux/feed/",
+      "website_url": "https://www.unixmen.com/category/gaming-on-linux/",
+      "description": "Get all the latest Linux gaming news, tips and tricks. Unixmen provide Linux Howtos, Tutorials, Tips & Tricks, Opensource News. It cover most popular distros like Ubuntu, LinuxMint, Fedora, Centos.",
+      "followers": {
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/5302367.jpg?t=1626334086"
+    },
+    {
+      "title": "Boiling Steam",
+      "feed_url": "https://boilingsteam.com/feed/",
+      "website_url": "https://boilingsteam.com/",
+      "description": "BoilingSteam is all about the Linux Gaming World! Covering articles, reviews, interviews and opinions.",
+      "followers": {
+        "twitter": 459
+      },
+      "image_url": "https://i1.feedspot.com/5302347.jpg?t=1626330264"
+    }
+  ]
+}

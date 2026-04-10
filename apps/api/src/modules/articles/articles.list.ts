@@ -34,36 +34,48 @@ function baseJoins(userId: string) {
   };
 }
 
-export async function listArticlesForUser(
-  database: DB,
-  userId: string,
-  opts: ListArticlesOptions,
-): Promise<ArticlesCursorListResponseDto> {
-  const limit = Math.min(Math.max(opts.limit, 1), 200);
+function normalizeLimit(limit: number): number {
+  return Math.min(Math.max(limit, 1), 200);
+}
 
-  const rows = await listArticleRows(database, userId, opts, limit + 1);
+function paginateRows(rows: RawRow[], limit: number) {
   const hasMore = rows.length > limit;
   const page = hasMore ? rows.slice(0, limit) : rows;
   const nextCursor = hasMore && page.length > 0 ? page[page.length - 1].id : null;
+  return { hasMore, page, nextCursor };
+}
 
-  if (
-    opts.autoRefreshEmpty &&
-    opts.feedId &&
-    !opts.cursor &&
-    page.length === 0 &&
-    env.DATABASE_URL
-  ) {
-    const refreshed = await runFeedRefresh(env.DATABASE_URL, opts.feedId, {
-      url: env.MEILI_URL ?? "",
-      masterKey: env.MEILI_MASTER_KEY,
-      indexUid: env.MEILI_INDEX_FEEDS,
-    });
-    if (refreshed.ok && refreshed.itemCount > 0) {
-      return listArticlesForUser(database, userId, { ...opts, autoRefreshEmpty: false });
-    }
+function shouldAutoRefreshEmpty(
+  opts: ListArticlesOptions,
+  pageLength: number,
+): opts is ListArticlesOptions & { feedId: string } {
+  return Boolean(
+    opts.autoRefreshEmpty && opts.feedId && !opts.cursor && pageLength === 0 && env.DATABASE_URL,
+  );
+}
+
+async function maybeRefreshEmptyFeed(
+  database: DB,
+  userId: string,
+  opts: ListArticlesOptions,
+  pageLength: number,
+): Promise<ArticlesCursorListResponseDto | null> {
+  if (!shouldAutoRefreshEmpty(opts, pageLength)) {
+    return null;
   }
+  const refreshed = await runFeedRefresh(env.DATABASE_URL, opts.feedId, {
+    url: env.MEILI_URL ?? "",
+    masterKey: env.MEILI_MASTER_KEY,
+    indexUid: env.MEILI_INDEX_FEEDS,
+  });
+  if (!refreshed.ok || refreshed.itemCount <= 0) {
+    return null;
+  }
+  return listArticlesForUser(database, userId, { ...opts, autoRefreshEmpty: false });
+}
 
-  const items: ArticleListItemDto[] = page.map((r) => ({
+function toArticleListItems(page: RawRow[]): ArticleListItemDto[] {
+  return page.map((r) => ({
     id: r.id,
     title: r.title,
     link: r.link,
@@ -75,7 +87,24 @@ export async function listArticlesForUser(
     isSaved: r.isSaved,
     articleType: "feed" as const,
   }));
+}
 
+export async function listArticlesForUser(
+  database: DB,
+  userId: string,
+  opts: ListArticlesOptions,
+): Promise<ArticlesCursorListResponseDto> {
+  const limit = normalizeLimit(opts.limit);
+
+  const rows = await listArticleRows(database, userId, opts, limit + 1);
+  const { hasMore, page, nextCursor } = paginateRows(rows, limit);
+
+  const refreshedResponse = await maybeRefreshEmptyFeed(database, userId, opts, page.length);
+  if (refreshedResponse) {
+    return refreshedResponse;
+  }
+
+  const items = toArticleListItems(page);
   return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
 }
 
@@ -91,6 +120,72 @@ type RawRow = {
   isSaved: boolean;
 };
 
+function pushBaseFilters(filters: SQL[], opts: ListArticlesOptions): void {
+  if (opts.feedId) {
+    filters.push(eq(feedItems.feedId, opts.feedId));
+  }
+  if (opts.folderId) {
+    filters.push(eq(feedSubscriptions.folderId, opts.folderId));
+  }
+}
+
+function pushReadSavedFilters(filters: SQL[], opts: ListArticlesOptions): void {
+  if (opts.isRead === true) {
+    filters.push(sql`(${articleIsReadSql}) = true`);
+  } else if (opts.isRead === false) {
+    filters.push(sql`(${articleIsReadSql}) = false`);
+  }
+  if (opts.isSaved === true) {
+    filters.push(sql`${feedItemUserState.isSaved} IS TRUE`);
+  }
+}
+
+function pushPublishedDateFilters(filters: SQL[], opts: ListArticlesOptions): void {
+  if (opts.publishedAfter) {
+    filters.push(gte(feedItems.publishedAt, opts.publishedAfter));
+  }
+  if (opts.publishedBefore) {
+    filters.push(lt(feedItems.publishedAt, opts.publishedBefore));
+  }
+}
+
+async function pushCursorFilter(
+  database: DB,
+  userId: string,
+  opts: ListArticlesOptions,
+  feedSubscriptionsJoin: SQL<unknown> | undefined,
+  filters: SQL[],
+): Promise<void> {
+  if (!opts.cursor || !feedSubscriptionsJoin) {
+    return;
+  }
+  const cur = await database
+    .select({
+      publishedAt: feedItems.publishedAt,
+      id: feedItems.id,
+    })
+    .from(feedItems)
+    .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
+    .where(
+      and(
+        eq(feedItems.id, opts.cursor),
+        eq(feedSubscriptions.userId, userId),
+        opts.folderId ? eq(feedSubscriptions.folderId, opts.folderId) : undefined,
+      ),
+    )
+    .limit(1);
+  const c = cur[0];
+  if (!c) {
+    return;
+  }
+  filters.push(
+    or(
+      lt(feedItems.publishedAt, c.publishedAt),
+      and(eq(feedItems.publishedAt, c.publishedAt), lt(feedItems.id, c.id)),
+    )!,
+  );
+}
+
 async function listArticleRows(
   database: DB,
   userId: string,
@@ -100,53 +195,10 @@ async function listArticleRows(
   const { feedSubscriptionsJoin, userStateJoin } = baseJoins(userId);
 
   const filters: SQL[] = [];
-  if (opts.feedId) {
-    filters.push(eq(feedItems.feedId, opts.feedId));
-  }
-  if (opts.folderId) {
-    filters.push(eq(feedSubscriptions.folderId, opts.folderId));
-  }
-  if (opts.isRead === true) {
-    filters.push(sql`(${articleIsReadSql}) = true`);
-  } else if (opts.isRead === false) {
-    filters.push(sql`(${articleIsReadSql}) = false`);
-  }
-  if (opts.isSaved === true) {
-    filters.push(sql`${feedItemUserState.isSaved} IS TRUE`);
-  }
-  if (opts.publishedAfter) {
-    filters.push(gte(feedItems.publishedAt, opts.publishedAfter));
-  }
-  if (opts.publishedBefore) {
-    filters.push(lt(feedItems.publishedAt, opts.publishedBefore));
-  }
-
-  if (opts.cursor) {
-    const cur = await database
-      .select({
-        publishedAt: feedItems.publishedAt,
-        id: feedItems.id,
-      })
-      .from(feedItems)
-      .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
-      .where(
-        and(
-          eq(feedItems.id, opts.cursor),
-          eq(feedSubscriptions.userId, userId),
-          opts.folderId ? eq(feedSubscriptions.folderId, opts.folderId) : undefined,
-        ),
-      )
-      .limit(1);
-    const c = cur[0];
-    if (c) {
-      filters.push(
-        or(
-          lt(feedItems.publishedAt, c.publishedAt),
-          and(eq(feedItems.publishedAt, c.publishedAt), lt(feedItems.id, c.id)),
-        )!,
-      );
-    }
-  }
+  pushBaseFilters(filters, opts);
+  pushReadSavedFilters(filters, opts);
+  pushPublishedDateFilters(filters, opts);
+  await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, filters);
 
   return database
     .select({

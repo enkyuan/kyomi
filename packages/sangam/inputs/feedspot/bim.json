@@ -1,0 +1,335 @@
+{
+  "category": "BIM",
+  "source_url": "https://rss.feedspot.com/bim_rss_feeds",
+  "feeds": [
+    {
+      "title": "BIM Today",
+      "feed_url": "http://www.pbctoday.co.uk/news/category/bim-news/feed/",
+      "website_url": "https://www.pbctoday.co.uk/news/category/bim-news/",
+      "description": "The latest BIM News from BIM Today featuring updates,software, implementation and everything BIM. Planning & Building Control Today is the leading online news portal focusing on Construction, Planning, Development, BIM and Building Control News.",
+      "followers": {
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4642803.jpg?t=1616654270"
+    },
+    {
+      "title": "Tejjy Blog",
+      "feed_url": "https://www.tejjy.com/feed/",
+      "website_url": "https://www.tejjy.com/blog/",
+      "description": "Tejjy team share blog on Building Information Modeling (BIM) Services, Engineering Services, Autocad Designing, CAD Drafting and Construction Management.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 691,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5084786.jpg?t=1616654784"
+    },
+    {
+      "title": "Bim Corner",
+      "feed_url": "https://bimcorner.com/feed/",
+      "website_url": "https://bimcorner.com/articles/",
+      "description": "BIM Corner is a blog mainly focused on Building Information Modeling technology. Our main goal is to spread knowledge in the field of BIM and its practical use in construction projects.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 704
+      },
+      "image_url": "https://i1.feedspot.com/5267496.jpg?t=1618319694"
+    },
+    {
+      "title": "United-BIM Blog",
+      "feed_url": "https://www.united-bim.com/feed/",
+      "website_url": "https://www.united-bim.com/blogs/",
+      "description": "We try to contribute to the BIM community with the exchange of knowledge and experience. Check out our Blogs with insights into the world of BIM Modeling and Drafting",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 614,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5046029.jpg?t=1616654291"
+    },
+    {
+      "title": "BibLus Blog",
+      "feed_url": "https://biblus.accasoftware.com/en/feed/",
+      "website_url": "https://biblus.accasoftware.com/en/",
+      "description": "ACCA provides software solutions for the architecture, engineering and construction sectors. BibLus is a Blog regarding Architecture Engineering Construction industry software and know-how. proudly made by ACCA software",
+      "followers": {
+        "facebook": 439300,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4643056.jpg?t=1616654277"
+    },
+    {
+      "title": "BIM Chapters",
+      "feed_url": "https://bimchapters.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bimchapters.blogspot.com/",
+      "description": "I am an author, blogger, educator, BIM administrator and Wisconsin registered architect. I work full-time at lhb, a 250 person full-service design firm. In this blog, I am sharing my passion for all things BIM.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5040341.jpg?t=1643703324"
+    },
+    {
+      "title": "UniquesCadd Blog",
+      "feed_url": "https://www.uniquescadd.com/feed/",
+      "website_url": "https://www.uniquescadd.com/blog/",
+      "description": "Explore our blog at Uniquecadd to delve into a world of architectural and design insights. Our carefully curated articles cover a wide spectrum of topics, from the latest industry trends and project showcases to expert tips and technology innovations. Stay inspired, informed, and up-to-date with the ever-evolving world of architecture and design through our engaging blog posts.",
+      "followers": {
+        "facebook": 213,
+        "twitter": 150,
+        "instagram": 387
+      },
+      "image_url": "https://i1.feedspot.com/5665605.jpg?t=1694062487"
+    },
+    {
+      "title": "VDEC Blog",
+      "feed_url": "https://vdengg.com/feed/",
+      "website_url": "https://vdengg.com/blog/",
+      "description": "VDEC is one of the top BIM providers in the USA & Middle East supplying a host of solutions to the Construction Industry in the area of Virtual Design and Construction (VDC). Learn more about how VDEDC's solutions are shaping modern in the latest blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7246115.jpg?t=1707294298"
+    },
+    {
+      "title": "AEC Magazine",
+      "feed_url": "https://aecmag.com/feed/",
+      "website_url": "https://aecmag.com/",
+      "description": "Building Information Modelling (BIM) technology for Architecture, Engineering and Construction.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4642822.jpg?t=1616654266"
+    },
+    {
+      "title": "The BIMsider",
+      "feed_url": "https://thebimsider.com/feed/",
+      "website_url": "https://thebimsider.com/",
+      "description": "BIM convert in Cowtown since 2008, Blogger since 2014, Podcast co-host since 2017 on The Simply Complex Podcast hosted by Marcello Sgambelluri. Senior Applications Expert with IMAGINiT.",
+      "followers": {
+        "facebook": 419,
+        "twitter": 4100,
+        "instagram": 740
+      },
+      "image_url": "https://i1.feedspot.com/4642177.jpg?t=1616654392"
+    },
+    {
+      "title": "Break with an architect Blog",
+      "feed_url": "https://www.breakwithanarchitect.com//blog-feed.xml",
+      "website_url": "https://www.breakwithanarchitect.com/blog",
+      "description": "This blog aims to share perspectives related to processes and technologies that support the digital future of the construction industry. In this blog you will find articles related to BIM process, Autodesk technology and BIM events.This blog is linked to BIM Design Hub, a training center specializing in BIM and Autodesk software training.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 128,
+        "instagram": 173
+      },
+      "image_url": "https://i1.feedspot.com/4957947.jpg?t=1616654395"
+    },
+    {
+      "title": "BIM model by Eurosia Blog",
+      "feed_url": "https://www.bimmodel.co/blog-feed.xml/",
+      "website_url": "https://www.bimmodel.co/blog",
+      "description": "Find articles dedicated to BIM modeling and BIM applications along with the latest news on the BIM revolution. Our Team of BIM engineers and architects create your BIM model 3D and 4D in Architecture, MEP and Structure as well as BIM objects.",
+      "followers": {
+        "facebook": 24,
+        "twitter": 161
+      },
+      "image_url": "https://i1.feedspot.com/4642993.jpg?t=1616654508"
+    },
+    {
+      "title": "DebunkTheBIM",
+      "feed_url": "http://debunkthebim.blogspot.com/feeds/posts/default",
+      "website_url": "http://debunkthebim.blogspot.com/",
+      "description": "I am a manager of construction information, tools and people .I believe that hands-on manipulating of project information by all project participants is the key to achieving any meaningful improvement of the AEC industry operating within the post-gambling-era. I consider myself to be a model-based construction information practitioner ( 'BIM- meddler') rather than an 'expert' o 'specialist'.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/585916.jpg?t=1616654594"
+    },
+    {
+      "title": "BIM 42",
+      "feed_url": "https://www.bim42.com/feed",
+      "website_url": "https://www.bim42.com/",
+      "description": "BIM 42 provides the Answer to the Great Question of BIM, the Universe and Everything.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/1677404.jpg?t=1643720818"
+    },
+    {
+      "title": "Benchmarq Blog",
+      "feed_url": "https://www.bmarq.co.uk/blog/feed/",
+      "website_url": "https://www.bmarq.co.uk/blog/",
+      "description": "We've been working hard over the past couple of months to put together four new training courses, designed specifically to help you get started - or reacquainted - with your software, and achieve maximum impact for your business.",
+      "followers": {
+        "twitter": 536
+      },
+      "image_url": "https://i1.feedspot.com/4658016.jpg?t=1616654384"
+    },
+    {
+      "title": "The AEC Associates Blog",
+      "feed_url": "https://theaecassociates.com/blog/feed/",
+      "website_url": "https://theaecassociates.com/blog/",
+      "description": "The AEC Associates is an Architectural and Engineering Outsourcing Company providing architectural CAD services, BIM outsourcing services to clients across the globe.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 533
+      },
+      "image_url": "https://i1.feedspot.com/5266350.jpg?t=1617951294"
+    },
+    {
+      "title": "BIM Innovations Blog",
+      "feed_url": "https://biminnovations.com/our-blog/f.rss",
+      "website_url": "https://biminnovations.com/our-blog",
+      "description": "We are BIM /Architecture Outsourcing service provider | AEC Industry | Cad & Revit Services provider | Documentation in BIM | Scan to BIM | BIM Experts | MEP Services | 4D/5D/6D/7D BIM | Rendering | MEP | Structural | AR/VR Based Modeling and many more. Outsource your project to us today, at the most affordable price with assured quality work",
+      "followers": {
+        "facebook": 90
+      },
+      "image_url": "https://i1.feedspot.com/5267495.jpg?t=1622199056"
+    },
+    {
+      "title": "Trimble MEP",
+      "feed_url": "http://mep.trimble.co.uk/blog/feed",
+      "website_url": "https://mep.trimble.com/en/resources/mep-blogs",
+      "description": "Amtech is the UK market leading manufacturer of specialist software for the building services industry. Their range of software is designed specifically for the needs of Building Service Engineers and Contractors and includes the most well known brands in the industry, including: Amtech, Luckins, Estimation & ArtrA.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4642754.jpg?t=1616654517"
+    },
+    {
+      "title": "There's no BIM like home",
+      "feed_url": "https://bimblog.house/blogs/feed/",
+      "website_url": "https://bimblog.house/blogs/",
+      "description": "I am doing so to document my experience in applying the Building Information Modelling (BIM) and Smart Building processes to my own home. This is my first attempt at writing a blog, so please be gentle; any constructive criticisms are welcome. Blog by Dan Rossiter.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4735856.jpg?t=1616654530"
+    },
+    {
+      "title": "Graphisoft News",
+      "feed_url": "https://graphisoft.com/us/feed",
+      "website_url": "https://graphisoft.com/us/why-graphisoft/latest-news",
+      "description": "ARCHICAD is an architectural BIM / CAD software for Mac and Windows developed by GRAPHISOFT. ARCHICAD is recognized as the first CAD product on a personal computer able to create both 2D and 3D drawings. In its debut in 1987 ARCHICAD also became the first implementation of BIM under GRAPHISOFT's Virtual Building concept.",
+      "followers": {
+        "facebook": 281200,
+        "twitter": 23200
+      },
+      "image_url": "https://i1.feedspot.com/4642176.jpg?t=1616654280"
+    },
+    {
+      "title": "Autodesk Blog \u00bb Revit",
+      "feed_url": "http://blogs.autodesk.com/revit/feed/",
+      "website_url": "https://www.autodesk.com/blogs/aec/?redirected=1",
+      "description": "Autodesk Revit is software for BIM (Building Information Modeling). The official Autodesk Revit blog is your source for information on the direction of software development, insider tips and tricks, and industry trends that can help you get the most from the software and work better with cloud-connected BIM.",
+      "followers": {
+        "facebook": 351000,
+        "twitter": 94400,
+        "instagram": 120100
+      },
+      "image_url": "https://i1.feedspot.com/4643027.jpg?t=1616654273"
+    },
+    {
+      "title": "BIMIreland.ie",
+      "feed_url": "https://bimireland.ie/feed/",
+      "website_url": "https://bimireland.ie/",
+      "description": "BIMIreland.ie is Ireland's only dedicated Building Information Modelling exclsuive resource. Daily news & information on the local & international BIM sector.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4642833.jpg?t=1616654801"
+    },
+    {
+      "title": "Revizto",
+      "feed_url": "https://revizto.com/en/resources/news/",
+      "website_url": "https://revizto.com/en/resources/news/",
+      "description": "Find information about BIM technologies in architecture, construction & other industries, and workflows from Revizto experts. Revizto is a real-time, 3D model-based issue tracking software for AEC teams that focuses on collaboration and BIM project coordination.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 9700,
+        "instagram": 782
+      },
+      "image_url": "https://i1.feedspot.com/5306004.jpg?t=1627466858"
+    },
+    {
+      "title": "LetsBuild Blog",
+      "feed_url": "https://www.letsbuild.com/feed",
+      "website_url": "https://www.letsbuild.com/blog",
+      "description": "The founders and partners of LetsBuild are passionate about helping construction to become better, cleaner and more efficient. We want to build a great company, to help construction to digitalise and become Connected Construction. Read more about LetsBuild, construction industry, news, insights and more!",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4643084.jpg?t=1616654295"
+    },
+    {
+      "title": "Axiom",
+      "feed_url": "https://www.axiomint.com/feed/",
+      "website_url": "https://www.axiomint.com/cad-bim-tips-tricks/",
+      "description": "We regularly post interesting articles that are relevant and helpful to members of the CAD/BIM commuunity. Get tips and tricks for AutoCAD, MicroStation and Revit users that helps increase efficiency, reduce redundant tasks, and more.",
+      "followers": {
+        "facebook": 878,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5293720.jpg?t=1623926806"
+    },
+    {
+      "title": "BIM Institute",
+      "feed_url": "https://www.biminstitute.org.za/feed/",
+      "website_url": "http://www.biminstitute.org.za/blog/",
+      "description": "The BIM Institute serves as Africa's business voice for the education community and owners who are working collectively with all information technologies in a construction management environment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4754730.jpg?t=1616654387"
+    },
+    {
+      "title": "Building Information Modeling - BIM Services",
+      "feed_url": "https://revit-bim-services.tumblr.com/rss",
+      "website_url": "https://revit-bim-services.tumblr.com/",
+      "description": "Hi-Tech CADD Services is specialize in delivering building information modeling - BIM services to revolutionize building design, engineering, and construction processes. Our BIM expertise lies in virtual design & construction (VDC) and Revit BIM services for residential, commercial, industrial, educational and public building facilities as well as infrastructure projects like airports, tunnels, dams and bridges. For more",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4643379.jpg?t=1616654502"
+    },
+    {
+      "title": "zhukoven",
+      "feed_url": "https://zhukoven.com/feed/",
+      "website_url": "https://zhukoven.com/",
+      "description": "My name is Konstantin Zhukoven, and this is my blog about innovative technologies that we use on a daily basis to boost our productivity. Acting as BIM Manager with structural engineering in the background, I am keen on cutting edge technology. I believe that sharing and open source phylosophy would drive our AEC industry forward.",
+      "followers": {
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/4883559.jpg?t=1616654514"
+    },
+    {
+      "title": "BIMserver.center",
+      "feed_url": "https://blog.bimserver.center/feed/",
+      "website_url": "https://blog.bimserver.center/",
+      "description": "With BIMserver.center you can manage, share and update your architecture, engineering and construction projects in the cloud. The blog shares all the latest BIM news and information on topics like architecture, structure, project management and R&D.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 786,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5295913.jpg?t=1624515174"
+    },
+    {
+      "title": "VRcollab Blog",
+      "feed_url": "https://vrcollab.com/blog/rss/",
+      "website_url": "https://infr.ai/blog/",
+      "description": "Take BIM and VDC coordination to the next level. Read this blog to get the latest scoops into the architect, engineer and construction industry.",
+      "followers": {
+        "facebook": 447,
+        "twitter": 127
+      },
+      "image_url": "https://i1.feedspot.com/5119448.jpg?t=1616654380"
+    },
+    {
+      "title": "Tesla Outsourcing Services: CAD and BIM Blog",
+      "feed_url": "https://www.teslaoutsourcingservices.com/blog/",
+      "website_url": "https://www.teslaoutsourcingservices.com/blog/",
+      "description": "Tesla Outsourcing Services offers high end 3D BIM, Revit MEP services for building construction. We offer Point cloud BIM, Construction drawing services to USA, UK, Europe, Canada & Australia.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 268
+      },
+      "image_url": "https://i1.feedspot.com/4642741.jpg?t=1616654298"
+    }
+  ]
+}

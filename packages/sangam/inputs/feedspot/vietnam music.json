@@ -1,0 +1,50 @@
+{
+  "category": "Vietnam Music",
+  "source_url": "https://rss.feedspot.com/vietnam_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kenh14.vn \u00bb Music",
+      "feed_url": "https://kenh14.vn/musik.rss",
+      "website_url": "https://kenh14.vn/musik.chn",
+      "description": "Read the latest music news, concert, artists, music releases and reviews by Kenh14.vnKenh14.vn is the leading entertainment information channel for young people in Vietnam covering fashion news, star videos, movies, love, school, and social movements.",
+      "followers": {
+        "facebook": 8800000,
+        "twitter": 2100,
+        "instagram": 923900
+      },
+      "image_url": "https://i1.feedspot.com/5303250.jpg?t=1635506567"
+    },
+    {
+      "title": "Billboard Vietnam",
+      "feed_url": "https://billboardvn.vn/feed/",
+      "website_url": "https://vietbao.vn/404?r=https://vietbao.vn/giai-tri/am-nhac/feed",
+      "description": "Latest music news, Vietnamese music, exclusive interview, concerts, reviews and charts by Billboard Vietnam. Billboard Vietnam is the world's most influential music brand providing you with all the music news.",
+      "followers": {
+        "facebook": 618100,
+        "instagram": 32900
+      },
+      "image_url": "https://i1.feedspot.com/5338240.jpg?t=1665138435"
+    },
+    {
+      "title": "Viet Bao \u00bb Music",
+      "feed_url": "https://vietbao.vn/404?r=https://vietbao.vn/giai-tri/am-nhac/feed",
+      "website_url": "https://vietbao.vn/404?r=https://vietbao.vn/giai-tri/am-nhac/feed",
+      "description": "The latest news on the music market of famous domestic and foreign singers. Viet Bao covers articles on entertainment, health, sports, technology, tips, and reviews.",
+      "followers": {
+        "facebook": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/5338357.jpg?t=1635513193"
+    },
+    {
+      "title": "Yeah1 News \u00bb Music",
+      "feed_url": "https://yeah1.com/am-nhac",
+      "website_url": "https://yeah1.com/am-nhac",
+      "description": "Summary of the latest articles, videos, pictures about the latest music news, the hottest singers and musicians of Vietnam and the world.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5338354.jpg?t=1635512241"
+    }
+  ]
+}

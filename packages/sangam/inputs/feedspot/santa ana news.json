@@ -1,0 +1,52 @@
+{
+  "category": "Santa Ana News",
+  "source_url": "https://rss.feedspot.com/santa_ana_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "New Santa Ana",
+      "feed_url": "https://newsantaana.com/feed/",
+      "website_url": "https://newsantaana.com/",
+      "description": "The New Santa Ana blog was created in 2009. The New Santa Ana blog has become a runaway success - with over 157,000 page views per month and a popular Facebook page with over 36,000 followers. This is the best place to find out what is going on in and around Santa Ana - from charitable events to all kinds of entertainment.",
+      "followers": {
+        "facebook": 42900,
+        "twitter": 770
+      },
+      "image_url": "https://i1.feedspot.com/4953922.jpg?t=1692174282"
+    },
+    {
+      "title": "NBC Los Angeles \u00bb Santa Ana",
+      "feed_url": "https://www.nbclosangeles.com/tag/santa-ana/feed/",
+      "website_url": "https://www.nbclosangeles.com/tag/santa-ana/",
+      "description": "We provide the best in local breaking news, entertainment, sports and stories that matter to you, for you at NBC Los Angeles. Get current local Santa Ana news, crime, politics, weather, sports, entertainment, arts, features, obituaries, real estate and more.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 598900,
+        "instagram": 369800
+      },
+      "image_url": "https://i1.feedspot.com/5132880.jpg?t=1585631191"
+    },
+    {
+      "title": "KTLA 5 News \u00bb Santa Ana",
+      "feed_url": "https://ktla.com/tag/santa-ana/feed/",
+      "website_url": "https://ktla.com/tag/santa-ana/",
+      "description": "The first commercial TV station licensed west of the Mississippi, Los Angeles-based KTLA has been keeping Southern Californians informed since 1947. KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic, and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond. Read the latest news and updates in Santa Ana brought to you by the team at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5132888.jpg?t=1585632173"
+    },
+    {
+      "title": "CBS News \u00bb Santa Ana",
+      "feed_url": "https://losangeles.cbslocal.com/tag/santa-ana/feed/",
+      "website_url": "https://www.cbsnews.com/losangeles/tag/santa-ana/",
+      "description": "CBSLA brings you local and breaking news, sports, weather and the best of LA and OC. Read the latest news and breaking headlines on what's happening in Santa Ana. Stay up to date on topics such as local news, politics, business, and crime.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 329
+      },
+      "image_url": "https://i1.feedspot.com/5132892.jpg?t=1585633625"
+    }
+  ]
+}

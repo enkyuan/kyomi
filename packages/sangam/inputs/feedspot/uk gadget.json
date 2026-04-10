@@ -1,0 +1,86 @@
+{
+  "category": "UK Gadget",
+  "source_url": "https://rss.feedspot.com/uk_gadget_rss_feeds",
+  "feeds": [
+    {
+      "title": "Scargill's Tech Blog",
+      "feed_url": "https://tech.scargill.net/feed/",
+      "website_url": "https://tech.scargill.net/",
+      "description": "Anything to do with gadgets - the stuff that gets me up in the morning full of enthusiasm.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4907078.jpg?t=1613978064"
+    },
+    {
+      "title": "GadgetsBoy",
+      "feed_url": "https://www.gadgetsboy.co.uk/feed/",
+      "website_url": "https://www.gadgetsboy.co.uk/",
+      "description": "GadgetsBoy is a website dedicated to gadgets, technology. We review them, take them apart in some cases, test them and bring you latest news. We bring you some gadgets and technology you haven't seen before. We have a team of reviewers, reporters, and team members who surf the web and look out for breaking news.",
+      "followers": {
+        "facebook": 38500,
+        "twitter": 48100
+      },
+      "image_url": "https://i1.feedspot.com/4241000.jpg?t=1613978094"
+    },
+    {
+      "title": "GadgetyNews.com",
+      "feed_url": "https://gadgetynews.com/feed/",
+      "website_url": "https://gadgetynews.com/",
+      "description": "Keeping gadget reviews and technology news easy to read and friendly. Find out what's happening in the world of smartphones, laptops, tablets, gaming and other shiny areas of gadgety loveliness. UK-based, global coverage.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1000,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1714932.jpg?t=1611150939"
+    },
+    {
+      "title": "The Red Ferret Journal",
+      "feed_url": "https://feeds.feedburner.com/redferret/nDEQ",
+      "website_url": "https://www.redferret.net/",
+      "description": "The world's premiere eclectic tech blog! Gadgets, free software, games, weird stuff.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/157146.jpg?t=1613978070"
+    },
+    {
+      "title": "Mighty Gadget",
+      "feed_url": "https://mightygadget.com/feed/",
+      "website_url": "https://mightygadget.com/",
+      "description": "Mighty Gadget is the UK leading gadget blog covering everything new in gadgets, phones, gaming, TVs and other consumer electronics.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 6900,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4629310.jpg?t=1669017899"
+    },
+    {
+      "title": "Coolest Gadgets",
+      "feed_url": "https://www.coolest-gadgets.com/",
+      "website_url": "https://www.coolest-gadgets.com/",
+      "description": "Reporting on all the latest cool gadgets in the ongoing quest for the coolest gadget. Find the Coolest Gadgets in the world today and the future.",
+      "followers": {
+        "facebook": 955,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/38902.jpg?t=1611150835"
+    },
+    {
+      "title": "Pocket-lint",
+      "feed_url": "https://www.pocket-lint.com/rss/all.xml",
+      "website_url": "https://www.gadgetwiz.co.uk/blog",
+      "description": "Gadget news and reviews website founded by Stuart Miles in the UK in 2003. We cover everything from digital cameras, to mobile phones, to Twitter and everything in between.",
+      "followers": {
+        "facebook": 33600,
+        "twitter": 28900,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4818590.jpg?t=1613978085"
+    }
+  ]
+}

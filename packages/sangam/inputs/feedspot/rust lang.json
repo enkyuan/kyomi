@@ -1,0 +1,42 @@
+{
+  "category": "Rust Lang",
+  "source_url": "https://rss.feedspot.com/rust_lang_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Rust Blog",
+      "feed_url": "https://blog.rust-lang.org/feed.xml",
+      "website_url": "https://blog.rust-lang.org/",
+      "description": "Rust Language is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. Follow this blog for words from the Rust team.",
+      "followers": {
+        "twitter": 129400
+      },
+      "image_url": "https://i1.feedspot.com/4653778.jpg?t=1612007112"
+    },
+    {
+      "title": "Steve Klabnik",
+      "feed_url": "https://feeds.feedburner.com/steveklabnik/words",
+      "website_url": "https://steveklabnik.com/writing",
+      "description": "The platform includes everything you need to organize, develop, and share your thoughts, stories, and ideas with the world.",
+      "followers": {
+        "twitter": 40000
+      },
+      "image_url": "https://i1.feedspot.com/89591.jpg"
+    },
+    {
+      "title": "Embedded in Rust",
+      "feed_url": "http://blog.japaric.io/index.xml",
+      "website_url": "http://blog.japaric.io/",
+      "description": "A blog about Rust and embedded stuff.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4862989.jpg?t=1612007264"
+    },
+    {
+      "title": "Piston - A modular game engine written in Rust",
+      "feed_url": "http://blog.piston.rs/atom.xml",
+      "website_url": "http://blog.piston.rs/",
+      "description": "A user-friendly game engine is written in Rust.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4261850.jpg?t=1612007207"
+    }
+  ]
+}

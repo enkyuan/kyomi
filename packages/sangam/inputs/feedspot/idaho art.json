@@ -1,0 +1,74 @@
+{
+  "category": "Idaho Art",
+  "source_url": "https://rss.feedspot.com/idaho_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Paige Weber Art Blog",
+      "feed_url": "https://www.paigeweber.net/blog?format=rss",
+      "website_url": "https://www.paigeweber.net/blog",
+      "description": "On Paige Weber Art Blog you will find information on Paige's upcoming art shows, new work, special print releases, exciting projects, community developments, and behind-the-scenes videos of her at work.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7264055.jpg?t=1709212127"
+    },
+    {
+      "title": "Susan Gutting Fine Art Blog",
+      "feed_url": "https://data.fineartstudioonline.com/rssfeed.asp?id=11597",
+      "website_url": "https://www.susangutting.com/blog",
+      "description": "7'x14' oil/linen sourcetek panelThe wind was brisk, the clouds were flying by and the trees bent every which wayNorthern Idaho is our home. We travel the western lands regularly to experience the landscapes, wildlife and wide open skies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5541041.jpg?t=1709212079"
+    },
+    {
+      "title": "Idaho Press \u00bb Arts & Culture",
+      "feed_url": "https://www.idahopress.com/search/?f=rss&t=article&c=boiseweekly/arts_and_culture&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.idahopress.com/boiseweekly/arts_and_culture/",
+      "description": "The Idaho Press is Idaho's largest printed newspaper, covering news, politics, sports and community events in Treasure Valley. Tips: reporters@idahopress.com",
+      "followers": {
+        "facebook": 41200,
+        "twitter": 17100,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/7264051.jpg?t=1709212028"
+    },
+    {
+      "title": "Arts Idaho",
+      "feed_url": "https://arts.idaho.gov/press/feed/",
+      "website_url": "https://arts.idaho.gov/press/",
+      "description": "Arts Idaho create a diverse network of arts champions throughout Idaho by bringing stakeholders together for conversation, collaboration, and creative visioning. We convene local and regional gatherings for artists and arts administrators, provide grants and technical assistance to arts and cultural organizations, and facilitate capacity building in communities to support arts jobs and businesses.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7264054.jpg?t=1712742424"
+    },
+    {
+      "title": "Boise Art Scene Blog",
+      "feed_url": "https://boiseartscene.com/blog?format=rss",
+      "website_url": "https://boiseartscene.com/blog",
+      "description": "A place to come for the full interviews I do with artists. This give you a more in depth dive in a text format that makes it easier to digest on your own time while at work or in other situations where a video might not be the best option.",
+      "followers": {
+        "facebook": 772
+      },
+      "image_url": "https://i1.feedspot.com/7264052.jpg?t=1709212145"
+    },
+    {
+      "title": "Boise City Department of Arts & History Blog",
+      "feed_url": "https://www.boiseartsandhistory.org/blog/feed/",
+      "website_url": "https://www.boiseartsandhistory.org/blog/",
+      "description": "Boise Arts and History blog enhances Boise's community by providing leadership, advocacy, education, services, and support for arts & history.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 5000,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4922960.jpg?t=1620887874"
+    },
+    {
+      "title": "Chanred Willow Art Blog",
+      "feed_url": "https://www.chanredwillowart.org/blog-feed.xml",
+      "website_url": "https://www.chanredwillowart.org/blog",
+      "description": "my art is recognizably mine.Chinese with wide range of subjects. i have managed to keep this style in my other media as well. and for many paintings I combine both the free style and the Gong bi or detail. i had not even noticed until several master Chinese artists commented on this.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/7264053.jpg?t=1709212188"
+    }
+  ]
+}

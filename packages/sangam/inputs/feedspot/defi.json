@@ -1,0 +1,376 @@
+{
+  "category": "deFi",
+  "source_url": "https://rss.feedspot.com/defi_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bancor",
+      "feed_url": "https://blog.bancor.network/feed",
+      "website_url": "https://blog.bancor.network/",
+      "description": "Bancor is an on-chain liquidity protocol that enables automated, decentralized exchange on Ethereum and across blockchains.",
+      "followers": {
+        "facebook": 59000,
+        "twitter": 157800
+      },
+      "image_url": "https://i1.feedspot.com/4818189.jpg?t=1637563851"
+    },
+    {
+      "title": "Synthetix Blog",
+      "feed_url": "https://blog.synthetix.io/rss/",
+      "website_url": "https://blog.synthetix.io/",
+      "description": "A new financial primitive enabling the creation of synthetic assets, offering unique derivatives and exposure to real-world assets on the blockchain. The derivatives liquidity protocol providing the backbone for derivatives trading in DeFi.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 230800
+      },
+      "image_url": "https://i1.feedspot.com/5212387.jpg?t=1637563711"
+    },
+    {
+      "title": "DeFi Rate",
+      "feed_url": "https://defirate.com/feed/",
+      "website_url": "https://milkroad.com/news/",
+      "description": "Here at DeFi Rate, we're focused on providing strong resources to explain the value of decentralized financial applications in a digestible manner.As a group of crypto enthusiasts, we aim to demystify DeFi in an attempt to teach non-technical users how to access the endless opportunities we write about each day.",
+      "followers": {
+        "twitter": 30900
+      },
+      "image_url": "https://i1.feedspot.com/5095584.jpg?t=1637561120"
+    },
+    {
+      "title": "Coin Metrics' State of the Network",
+      "feed_url": "https://coinmetrics.substack.com/feed",
+      "website_url": "https://coinmetrics.substack.com/",
+      "description": "Crypto data for the decentralized economy.",
+      "followers": {
+        "twitter": 92100
+      },
+      "image_url": "https://i1.feedspot.com/5345579.jpg?t=1637836744"
+    },
+    {
+      "title": "DeFiChain Blog",
+      "feed_url": "https://blog.defichain.com/rss/",
+      "website_url": "https://blog.defichain.com/",
+      "description": "DeFi services run on blockchain technology. The DeFi Chain was created exactly for DeFi Services, while providing the optimal infrastructure for security, speed, and access, to name a few.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 72600
+      },
+      "image_url": "https://i1.feedspot.com/5345733.jpg?t=1637570907"
+    },
+    {
+      "title": "Rhino.fi Blog",
+      "feed_url": "https://rhino.fi/feed/",
+      "website_url": "https://rhino.fi/blog/",
+      "description": "Visit our blog and check out the latest DeFi and layer 2 news. Rhino.fi is the first frictionless gateway to multi-chain DeFi. Rrhino.fi, formerly DeversiFi, is a multi-chain, self-custodial DeFi platform hosted on layer 2, on top of the Ethereum blockchain. This provides all the best opportunities in the DeFi realm: swaps, yield, staking and trading.",
+      "followers": {
+        "twitter": 108300
+      },
+      "image_url": "https://i1.feedspot.com/5488590.jpg?t=1672923038"
+    },
+    {
+      "title": "DeFi Saver Blog",
+      "feed_url": "https://blog.defisaver.com/rss/",
+      "website_url": "https://blog.defisaver.com/",
+      "description": "This is you one-stop dashboard for creating, managing and tracking your DeFi positions. Check out the blog to know about products, featured articles, guides, news, and much more. DeFi Saver is a one-stop management solution for decentralized finance protocols.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488587.jpg?t=1672923158"
+    },
+    {
+      "title": "DeFi Tutorials",
+      "feed_url": "https://defitutorials.substack.com/feed",
+      "website_url": "https://defitutorials.substack.com/",
+      "description": "DeFi Tutorials is where you can find walk-through guides using popular DeFi instruments to highlight some of the best use-cases & risks involved. I built this site because people are scared to try new DeFi products until they see someone else do it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488577.jpg?t=1672923723"
+    },
+    {
+      "title": "Defi Education Fund Blog",
+      "feed_url": "https://www.defieducationfund.org/blog-feed.xml",
+      "website_url": "https://www.defieducationfund.org/blog",
+      "description": "The DeFi Education Fund explains decentralized finance to policymakers around the world and advocates for policies welcoming of DeFi infrastructure. The DeFi Education Fund is a nonpartisan research and advocacy group working to explain the benefits of DeFi, achieve regulatory clarity for the future of the global digital economy, and help realize the transformative potential of DeFi for everyone.",
+      "followers": {
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5488575.jpg?t=1672923780"
+    },
+    {
+      "title": "The Crypto Times \u00bb DeFi",
+      "feed_url": "https://www.cryptotimes.io/category/defi-news/feed/",
+      "website_url": "https://www.cryptotimes.io/category/defi-news/",
+      "description": "Get all the DeFi updates, research, analysis, and trends from The Crypto Times. Every second, the crypto world is updating itself with advancements, market competencies, and the adoption of new cryptos. Our mission is to meet the challenges posed by this disruptive technology as well as the dynamic global virtual currencies by providing our audience with vital, relevant, and up-to-date information.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 7100,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5488576.jpg?t=1672924220"
+    },
+    {
+      "title": "Compound",
+      "feed_url": "https://medium.com/feed/compound-finance",
+      "website_url": "https://medium.com/compound-finance",
+      "description": "Compound is an algorithmic, autonomous interest rate protocol built for developers, to unlock a universe of open financial applications.",
+      "followers": {
+        "facebook": 159,
+        "twitter": 255300
+      },
+      "image_url": "https://i1.feedspot.com/5345574.jpg?t=1637568568"
+    },
+    {
+      "title": "DeFi Pulse Farmer",
+      "feed_url": "https://yieldfarmer.substack.com/feed",
+      "website_url": "https://yieldfarmer.substack.com/",
+      "description": "Find weekly trends on the latest yield farming opportunities along with an overview of the top stories in Defi, and emerging Yield Farming opportunities.",
+      "followers": {
+        "twitter": 158000
+      },
+      "image_url": "https://i1.feedspot.com/5345456.jpg?t=1651728418"
+    },
+    {
+      "title": "Dose of DeFi",
+      "feed_url": "https://doseofdefi.substack.com/feed",
+      "website_url": "https://doseofdefi.substack.com/",
+      "description": "Dose of DeFi is a newsletter focused on Decentralized finance. It is written by Chris Powers with help from Denis Suslov and Financial Content Lab.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5345457.jpg?t=1637561517"
+    },
+    {
+      "title": "Finematics",
+      "feed_url": "https://finematics.com/feed/",
+      "website_url": "https://finematics.com/category/defi/",
+      "description": "Hi! I'm Jakub. I'm a software engineer passionate about decentralized finance and cryptocurrencies. DeFi is one of the most interesting and fastest growing movements with an amazing potential of completely disrupting traditional finance. I started Finematics to make it easier to understand this new, fascinating world.",
+      "followers": {
+        "twitter": 35600
+      },
+      "image_url": "https://i1.feedspot.com/5203599.jpg?t=1637570668"
+    },
+    {
+      "title": "InsurAce.io Blog",
+      "feed_url": "https://blog.insurace.io/feed",
+      "website_url": "https://blog.insurace.io/",
+      "description": "InsureAce.io is a leading multi-chain decentralized insurance protocol, aiming to provide reliable, robust, and carefree DeFi insurance services to DeFi users with very low premium and sustainable investment returns.",
+      "followers": {
+        "facebook": 165,
+        "twitter": 42300,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5345572.jpg?t=1637566507"
+    },
+    {
+      "title": "Light DeFi Blog",
+      "feed_url": "https://lightdefi.org/feed/",
+      "website_url": "https://lightdefi.org/blog/",
+      "description": "LIGHT has a permanent liquidity mechanism maintained by the token network through a purchase and redistribution program.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 22900,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5345570.jpg?t=1637565223"
+    },
+    {
+      "title": "DeFi Consulting Group Blog",
+      "feed_url": "https://deficonsultinggroup.com/feed/",
+      "website_url": "https://deficonsultinggroup.com/blog/",
+      "description": "We provide educational content, training, and consulting services to institutions looking to expand their expertise in the cryptocurrency, digital assets, and decentralized finance (DeFi) space.",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5345734.jpg?t=1637571179"
+    },
+    {
+      "title": "The CoinList \u00bb DeFi",
+      "feed_url": "https://blog.coinlist.co/tag/defi/rss/",
+      "website_url": "https://blog.coinlist.co/tag/defi/",
+      "description": "CoinList is the trusted platform for new crypto offerings. Where early adopters invest in and trade the best digital assets.",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 206800
+      },
+      "image_url": "https://i1.feedspot.com/5345567.jpg?t=1637566396"
+    },
+    {
+      "title": "Blocknative \u00bb DeFi",
+      "feed_url": "https://www.blocknative.com/blog/tag/defi/rss.xml",
+      "website_url": "https://www.blocknative.com/blog/tag/defi",
+      "description": "The latest from Blocknative. Blocknative builds infrastructure to monitor and manage the complexity of the mempool - making it available to every builder and trader.",
+      "followers": {
+        "facebook": 102,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5345739.jpg?t=1637571649"
+    },
+    {
+      "title": "Moralis Academy Blog \u00bb Defi News",
+      "feed_url": "https://academy.moralis.io/blog/defi-news/feed",
+      "website_url": "https://academy.moralis.io/blog/defi-news",
+      "description": "Get the latest decentralized finance news here at Moralis Academy blog. Our experts cover the most talked about topics in the blockchain space. Moralis Academy was founded in 2017 by Ivan Liljeqvist and Filip Martinsson in Stockholm, Sweden. Their mission is to empower people all over the world by educating them about blockchain and programming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488585.jpg?t=1672922865"
+    },
+    {
+      "title": "Meta Pool Blog \u00bb DeFi",
+      "feed_url": "https://blog.metapool.app/category/defi/feed/",
+      "website_url": "https://blog.metapool.app/category/defi/",
+      "description": "In the Meta Pool Blog, you can read about Liquid Staking, stNEAR, APY, DeFi & Meta Yield. Meta Pool is the 1st Liquid Staking solution for the NEAR Protocol and Aurora network (EVM compatible) that enables $NEAR crypto token holders to leverage their holdings by allowing them to earn traditional staking rewards and participate in DeFi protocols simultaneously.",
+      "followers": {
+        "twitter": 23300
+      },
+      "image_url": "https://i1.feedspot.com/5488588.jpg?t=1672923580"
+    },
+    {
+      "title": "QuillAudits Blog",
+      "feed_url": "https://www.quillaudits.com/blog/",
+      "website_url": "https://www.quillaudits.com/blog/",
+      "description": "The latest and exclusive publications, updates, and trends on and around the Blockchain bandwagon. Get the most of Etherium, Defi, tokenization, supply chain, and other Blockchain verticals. Quillhash is a pioneer in building the custom decentralised ecosystem for enterprises and startups. With Our industry rich experience, you can leverage blockchain technology to deploy and secure your business by harnessing the power of Decentralized Technology.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 738,
+        "instagram": 169
+      },
+      "image_url": "https://i1.feedspot.com/5057035.jpg?t=1612000984"
+    },
+    {
+      "title": "The Defiant",
+      "feed_url": "https://newsletter.thedefiant.io/feed/",
+      "website_url": "https://thedefiant.io/news/defi",
+      "description": "The Defiant is the essential content platform for DeFi. It curates, digests, and analyzes all the major developments in DeFi, so that you can stay informed and knowledgeable about the most cutting edge and fastest-changing corner of crypto and finance.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 115800
+      },
+      "image_url": "https://i1.feedspot.com/5345455.jpg?t=1637835253"
+    },
+    {
+      "title": "DeFi Weekly",
+      "feed_url": "https://defiweekly.substack.com/feed/",
+      "website_url": "https://defiweekly.substack.com/",
+      "description": "I'm Kerman and I've been making and shipping products for over a decade. Apart from launching ventures, I've also worked in many venture funded companies that have raised tens of millions of dollars from top investors. This newsletter synthesises my unique learnings from being an entrepreneur, maker and engineer for the community of people wanting an edge in DeFi. Many takes, cynical or optimistic, are derived from experiences I've had or seen in the industry.",
+      "followers": {
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5345454.jpg?t=1637835395"
+    },
+    {
+      "title": "Today in DeFi",
+      "feed_url": "https://todayindefi.substack.com/feed",
+      "website_url": "https://todayindefi.substack.com/",
+      "description": "DeFi moves at the speed of light. Everyday several projects are launched, and new ones are kicked into development.Today In DeFi keeps you up to date at the speed of DeFi.",
+      "followers": {
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/5345580.jpg?t=1637567214"
+    },
+    {
+      "title": "De.Fi",
+      "feed_url": "https://de.fi/blog/feed",
+      "website_url": "https://de.fi/blog/",
+      "description": "Manage your digital assets with a full suite of innovative tools. Invest confidently, supported by our auditing experts. The DEFIYIELD ecosystem is the best place for anyone to participate in DeFi because it has been built by yield farming experts who want as many people as possible to stay safe and succeed in the Finance 3.0 revolution.",
+      "followers": {
+        "twitter": 319
+      },
+      "image_url": "https://i1.feedspot.com/5345576.jpg?t=1637570715"
+    },
+    {
+      "title": "0x",
+      "feed_url": "https://0x.org/blog/",
+      "website_url": "https://0x.org/blog/",
+      "description": "Read the blog for project and ecosystem updates. 0x is an important infrastructure for the emerging crypto economy and enables markets to be created that couldn't have existed before. As more assets become tokenized, public blockchains provide the opportunity to establish a new financial stack that is more efficient, transparent, and equitable than any system in the past.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 269000
+      },
+      "image_url": "https://i1.feedspot.com/5345568.jpg?t=1637565085"
+    },
+    {
+      "title": "DeversiFi Blog",
+      "feed_url": "https://deversifi.com/feed/",
+      "website_url": "https://rhino.fi/blog/",
+      "description": "Latest DeFi News, Trends & Guides. Learn more about DeversiFi, chat with the team, others in the community, and have your say in shaping the future of DeversiFi. We help you make the most of DeFi.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 51600
+      },
+      "image_url": "https://i1.feedspot.com/5345581.jpg?t=1637570287"
+    },
+    {
+      "title": "DeFi Planet",
+      "feed_url": "https://defi-planet.com/category/articles/feed/",
+      "website_url": "https://defi-planet.com/category/articles/",
+      "description": "DeFi Planet is a digital platform focused on Blockchain Technology, Cryptocurrencies and Decentralized Finance (DeFi). Our purpose is to inform and educate investors, technologists, policymakers, and enthusiasts from traditional professional sectors about blockchain technology, cryptocurrencies, and decentralized finance.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 8000,
+        "instagram": 592
+      },
+      "image_url": "https://i1.feedspot.com/5423318.jpg?t=1658223814"
+    },
+    {
+      "title": "Bake Blog",
+      "feed_url": "https://blog.bake.io/rss/",
+      "website_url": "https://blog.bake.io/",
+      "description": "Less banking, more baking. Learn all about the world of crypto, passive income opportunities, and a high yield / low-risk strategies from the official Cake DeFi Blog. Cake is a platform that empowers you to be in control of your finances by creating cashflow and harnessing the potentials of Decentralized Finance.",
+      "followers": {
+        "facebook": 31900,
+        "twitter": 45600
+      },
+      "image_url": "https://i1.feedspot.com/5273722.jpg?t=1619587327"
+    },
+    {
+      "title": "Zerion Blog",
+      "feed_url": "https://zerion.io/blog/rss/",
+      "website_url": "https://zerion.io/blog/",
+      "description": "Zerion is the simplest way to track and manage your entire DeFi portfolio from one place.",
+      "followers": {
+        "facebook": 583,
+        "twitter": 2000,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5345573.jpg?t=1637567015"
+    },
+    {
+      "title": "DeFi Pulse Blog",
+      "feed_url": "https://www.defipulse.com/blog/feed",
+      "website_url": "https://www.defipulse.com/blog",
+      "description": "DeFi Pulse is a site where you can find the latest analytics and rankings of DeFi protocols. Our rankings track the total value locked into the smart contracts of popular DeFi applications and protocols. Additionally, we curate The DeFi List, a collection of the best resources in DeFi, DeFi Pulse Farmer, a newsletter covering the latest news and opportunities in DeFi.",
+      "followers": {
+        "facebook": 198,
+        "twitter": 158000
+      },
+      "image_url": "https://i1.feedspot.com/5240867.jpg?t=1637560579"
+    },
+    {
+      "title": "Bank Frick",
+      "feed_url": "https://www.bankfrick.li/de/news-und-insights/",
+      "website_url": "https://www.bankfrick.li/de/news-und-insights/",
+      "description": "With our newsletters, you get press releases about our company, views on developments in the crypto industry, and the latest expert blog articles sent straight to your inbox. Bank Frick specialises in banking for intermediaries. The Liechtenstein bank provides a fully integrated offering of classic banking and blockchain banking services.",
+      "followers": {
+        "facebook": 87,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5345583.jpg?t=1637568076"
+    },
+    {
+      "title": "Crypto.news \u00bb DeFi",
+      "feed_url": "https://crypto.news/news/defi/feed/",
+      "website_url": "https://crypto.news/news/defi/",
+      "description": "Decentralized Finance or DeFi is changing fast, with more projects promising to disrupt regular finance every day. Here's what's happening! Crypto.news is a leading publication media resource in the cryptocurrency industry. We are committed to providing you with the information you need to be successful in the rapidly emerging digital assets space.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 66800,
+        "instagram": 47400
+      },
+      "image_url": "https://i1.feedspot.com/5488589.jpg?t=1672923222"
+    },
+    {
+      "title": "Exponential DeFi Blog",
+      "feed_url": "https://exponential.fi/blog/feed",
+      "website_url": "https://exponential.fi/blog",
+      "description": "Exponential is an investment platform that makes it easy to discover, assess, and invest in decentralized finance (DeFi) yield opportunities. We believe by simplifying DeFi investing, anyone can access high-yield opportunities previously reserved for banks. We are on a mission to make decentralized finance accessible to all by building the easiest way to invest in DeFi.",
+      "followers": {
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5488579.jpg?t=1672923630"
+    }
+  ]
+}

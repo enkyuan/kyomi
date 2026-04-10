@@ -1,0 +1,155 @@
+{
+  "category": "Jira Software",
+  "source_url": "https://rss.feedspot.com/jira_software_rss_feeds",
+  "feeds": [
+    {
+      "title": "Idalko Blog",
+      "feed_url": "https://idalko.com/feed/",
+      "website_url": "https://idalko.com/blogs/",
+      "description": "Learn more about all things Atlassian and Jira. The Platinum Atlassian Partner for Belgium & France.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 354
+      },
+      "image_url": "https://i1.feedspot.com/4950187.jpg?t=1621513064"
+    },
+    {
+      "title": "Valiantys",
+      "feed_url": "https://valiantys.com/en/feed/",
+      "website_url": "https://valiantys.com/en/",
+      "description": "The Valiantys blog provides tips, tricks, and updates on how to navigate the Atlassian ecosystem from the experts themselves.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4950635.jpg?t=1621513103"
+    },
+    {
+      "title": "Strategy for Jira",
+      "feed_url": "https://www.jirastrategy.com/feed/",
+      "website_url": "https://www.jirastrategy.com/",
+      "description": "Rachel Wright is an entrepreneur, process engineer, and Atlassian Certified Jira Administrator. The JIRA Strategy Admin Workbook is different -- it's not documentation, it's strategy! It's about what you should do, what you shouldn't do, and why.",
+      "followers": {
+        "facebook": 558,
+        "twitter": 701,
+        "instagram": 115
+      },
+      "image_url": "https://i1.feedspot.com/4950622.jpg?t=1621513076"
+    },
+    {
+      "title": "The Jira Guy",
+      "feed_url": "https://thejiraguy.com/feed/",
+      "website_url": "https://thejiraguy.com/",
+      "description": "A blog about JIRA - and sometimes Atlassian stuff too. Join us weekly as we post tricks, tips, and hacks to get the most out of your JIRA Instance.",
+      "followers": {
+        "facebook": 224,
+        "twitter": 696,
+        "instagram": 182
+      },
+      "image_url": "https://i1.feedspot.com/5229240.jpg?t=1608372089"
+    },
+    {
+      "title": "Deviniti Blog",
+      "feed_url": "https://deviniti.com/blog//feed",
+      "website_url": "https://deviniti.com/blog/",
+      "description": "Learn of new possibilities for digital transformation with our ever-growing knowledge base on the Deviniti Technology-Driven Blog! Deviniti is a software development company guiding businesses through their digital transformation, offerings services that range from consultation and business analysis, through implementation, to maintenance and support.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 830,
+        "instagram": 651
+      },
+      "image_url": "https://i1.feedspot.com/5700205.jpg?t=1698658413"
+    },
+    {
+      "title": "Cprime \u00bb Atlassian Jira",
+      "feed_url": "https://www.cprime.com/resources/blog/category/atlassian-software/atlassian-jira/feed/",
+      "website_url": "https://www.cprime.com/resources/blog/category/atlassian-software/atlassian-jira/",
+      "description": "Cprime is a global consulting firm transforming businesses with Agile & DevOps solutions, breaking silos between people and technology. We help visionary business leaders compose solutions, execute implementations, and exceed business goals. Learn about Atlassian Jira, Jira Align, Advanced Roadmaps, Jira Service Desk, Jira Data Center, Jira Cloud, and much more.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 520
+      },
+      "image_url": "https://i1.feedspot.com/5294970.jpg?t=1624261622"
+    },
+    {
+      "title": "SD Times \u00bb JIRA",
+      "feed_url": "https://sdtimes.com/tag/jira/feed/",
+      "website_url": "https://sdtimes.com/tag/jira/",
+      "description": "Software Development Times is the leading magazine for the software development industry. SD Times reaches more than 79,000 subscribers in 131 countries with both print and digital editions each month. Follow us for timely, in-depth, and focused news & analysis from the leading magazine for software developers and development managers.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 24900
+      },
+      "image_url": "https://i1.feedspot.com/5294971.jpg?t=1624262477"
+    },
+    {
+      "title": "Praecipio",
+      "feed_url": "https://www.praecipio.com/resources/rss.xml",
+      "website_url": "https://www.praecipio.com/resources?topics=all&types=articles/",
+      "description": "Praecipio Consulting is an IT and business process consulting firm focused on the Atlassian product suite. Specializing in IT processes, best practices, and frameworks including ITIL and various ALM models, Praecipio Consulting provides first-class services to clients of all industries and sizes for superior, consistently delivered solutions. This section of the blog features articles on Jira, Atlassian technology news, and trends.",
+      "followers": {
+        "facebook": 398,
+        "twitter": 845,
+        "instagram": 217
+      },
+      "image_url": "https://i1.feedspot.com/5294972.jpg?t=1624262623"
+    },
+    {
+      "title": "Atlassian Blog",
+      "feed_url": "https://www.atlassian.com/blog",
+      "website_url": "https://www.atlassian.com/blog",
+      "description": "Work Life by Atlassian - Teamwork tips, product announcements, and how-tos that unleash more of your team's potential. Jira is a proprietary issue tracking product developed by Atlassian which allows bug tracking and agile project management.",
+      "followers": {
+        "facebook": 391000,
+        "twitter": 104600,
+        "instagram": 91900
+      },
+      "image_url": "https://i1.feedspot.com/4787158.jpg?t=1621513047"
+    },
+    {
+      "title": "Xray Blog",
+      "feed_url": "https://www.getxray.app/blog/feed/",
+      "website_url": "https://www.getxray.app/blog",
+      "description": "The #1 Manual & Automated Testing App for Jira. Plan, Execute and Track your Quality Assurance with Requirements Traceability. Follow Xray's blog to get the news, updates, tips, and tricks about Xray, Test Management and Software Testing.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4950161.jpg?t=1621513051"
+    },
+    {
+      "title": "Tempo Blog",
+      "feed_url": "https://www.tempo.io/blog/rss.xml",
+      "website_url": "https://www.tempo.io/blog",
+      "description": "Tempo started as an internal time tracking and reporting tool that grew out of an innovation day. Our mission-critical solutions are designed to help teams and managers collaborate, plan, track & work smarter in JIRA.",
+      "followers": {
+        "facebook": 13800,
+        "twitter": 1800,
+        "instagram": 578
+      },
+      "image_url": "https://i1.feedspot.com/4950170.jpg?t=1621513056"
+    },
+    {
+      "title": "Isos Technology Blogs",
+      "feed_url": "https://www.isostech.com/blogs/feed",
+      "website_url": "https://blog.isostech.com/",
+      "description": "Build Something Remarkable. Whether you need advice from a trusted Atlassian Solution Partner, customized Atlassian product training, or Agile process expertise for Jira Service Desk, the expert Jira Software and Confluence Consultants at Isos Technology is here for you every step of the way for all Atlassian products.",
+      "followers": {
+        "facebook": 567,
+        "twitter": 598,
+        "instagram": 328
+      },
+      "image_url": "https://i1.feedspot.com/4950147.jpg?t=1621513060"
+    },
+    {
+      "title": "Spartez Software Blog",
+      "feed_url": "https://spartez.com/feed",
+      "website_url": "https://appfire.com/resources/blog",
+      "description": "We are Atlassian Platinum Marketplace Partner, offering apps for Jira that help teams work smarter. We develop apps for Jira that help teams to work faster, and more efficiently.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 610
+      },
+      "image_url": "https://i1.feedspot.com/5294973.jpg?t=1624262321"
+    }
+  ]
+}

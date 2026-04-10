@@ -1,0 +1,26 @@
+{
+  "category": "Ericsson",
+  "source_url": "https://rss.feedspot.com/ericsson_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cradlepoint Blog",
+      "feed_url": "https://cradlepoint.com/feed/",
+      "website_url": "https://cradlepoint.com/resources/blog/",
+      "description": "Get the latest info and insights about wireless edge networking using cloud-managed LTE and 5G for business solutions. Explore the reliability, flexibility, and security of cellular networks for branch, mobile, and IoT network deployments. Cradlepoint enables the freedom to connect people, places, and things that drive more experiences, more ways to work, and better business results - anywhere.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 4800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5436876.jpg?t=1661838418"
+    },
+    {
+      "title": "Ericsson Blog",
+      "feed_url": "https://www.ericsson.com/en/blog/feed",
+      "website_url": "https://www.ericsson.com/en/blog/",
+      "description": "Welcome to the Ericsson Blog. Get insights, news and opinions that explore and explain complex ideas on technology, business and innovation. Ericsson is one of the leading providers of Information and Communication Technology (ICT) to service providers. We enable the full value of connectivity by creating game-changing technology and services that are easy to use, adopt, and scale, making our customers successful in a fully connected world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4988964.jpg?t=1661838621"
+    }
+  ]
+}

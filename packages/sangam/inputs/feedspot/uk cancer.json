@@ -1,0 +1,101 @@
+{
+  "category": "UK Cancer",
+  "source_url": "https://rss.feedspot.com/uk_cancer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kidney Cancer UK",
+      "feed_url": "https://www.kcuk.org.uk/feed/",
+      "website_url": "https://www.kcuk.org.uk/",
+      "description": "Kidney Cancer UK is the leading specialist kidney cancer charity. It seeks to help reduce the harm caused by kidney cancer by increasing knowledge and awareness, providing patient information and by supporting research into the causes, prevention and treatment of the disease. Support and information on all matter relating to kidney cancer.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4905509.jpg?t=1613649291"
+    },
+    {
+      "title": "Childhood Eye Cancer Trust Blog",
+      "feed_url": "https://chect.org.uk/feed/",
+      "website_url": "https://chect.org.uk/blog/",
+      "description": "Retinoblastoma news, research updates, and real life stories. The Childhood Eye Cancer Trust is a UK charity dedicated to helping people affected by retinoblastoma, a rare form of eye cancer. Their mission is to support people affected by retinoblastoma and to raise awareness of the signs and symptoms of the condition.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4463567.jpg?t=1613649300"
+    },
+    {
+      "title": "Melanoma UK News",
+      "feed_url": "https://www.melanomauk.org.uk/handlers/rss.ashx?feed=1",
+      "website_url": "https://www.melanomauk.org.uk/Pages/News/",
+      "description": "Covers patient stories health and fitness tips fundraising ideas and charity news. Melanoma UK is a patient support group set up to raise awareness of the causes of Melanoma skin cancer and help sufferers.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 8200,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4464165.jpg?t=1613649316"
+    },
+    {
+      "title": "The Bag for Life Blog",
+      "feed_url": "https://www.thebagforlife.co.uk/blog-feed.xml",
+      "website_url": "https://www.thebagforlife.co.uk/blog",
+      "description": "This is a personal blog written by a bowel cancer patient with the aim to raise awareness about what life with cancer is like. These are light-hearted personal accounts, aiming to give hope to those afflicted by cancer and their friends and families.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5212890.jpg?t=1604392507"
+    },
+    {
+      "title": "Chris's Cancer Community",
+      "feed_url": "https://www.chris-cancercommunity.com/feed/",
+      "website_url": "https://www.chris-cancercommunity.com/",
+      "description": "Chris's Cancer Community is a platform for all people affected by cancer to share their experiences and opinions about cancer support.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 37700
+      },
+      "image_url": "https://i1.feedspot.com/4905503.jpg?t=1613649307"
+    },
+    {
+      "title": "Knob.",
+      "feed_url": "https://www.knob.blog/feed/",
+      "website_url": "https://www.knob.blog/category/penile-cancer-journal/",
+      "description": "This blog is all about my journey living with cancer. But it's probably not what you're thinking... Penile cancer is rare, only two people are diagnosed each day in the UK. But it's a killer.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5229909.jpg?t=1608558488"
+    },
+    {
+      "title": "The Institute of Cancer Research",
+      "feed_url": "https://www.icr.ac.uk/feeds/rss",
+      "website_url": "https://www.icr.ac.uk/about-us/icr-news/",
+      "description": "The Institute of Cancer Research, London, is one of the world's most influential cancer research organisations, with an outstanding record of achievement. Their mission is to make the discoveries that defeat cancer.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 23000,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4905512.jpg?t=1653917160"
+    },
+    {
+      "title": "Cancer Survivorship",
+      "feed_url": "https://aftercancers.com/feed/",
+      "website_url": "https://aftercancers.com/",
+      "description": "Cancer survivor, skincare specialist magazine editor and author on dog books.",
+      "followers": {
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/5082500.jpg?t=1613649313"
+    },
+    {
+      "title": "Brain Tumour Support News",
+      "feed_url": "https://www.braintumoursupport.co.uk/blog-feed.xml",
+      "website_url": "https://www.braintumoursupport.co.uk/news/",
+      "description": "Brain Tumour Support is the only charity in the South West & Midlands dedicated to supporting anyone affected by any type of brain tumour.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 6000,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4558370.jpg?t=1613649320"
+    }
+  ]
+}

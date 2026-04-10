@@ -1,0 +1,16 @@
+{
+  "category": "Highland News",
+  "source_url": "https://rss.feedspot.com/highland_utah_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Highland City, UT",
+      "feed_url": "https://www.highlandut.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "description": "Get the latest news, updates, and alerts in Highland, Utah.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 737
+      },
+      "image_url": "https://i1.feedspot.com/5169614.jpg"
+    }
+  ]
+}

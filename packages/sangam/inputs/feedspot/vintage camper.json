@@ -1,0 +1,37 @@
+{
+  "category": "Vintage Camper",
+  "source_url": "https://rss.feedspot.com/vintage_camper_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vintage Camper Trailers Blog",
+      "feed_url": "https://vintagecampertrailers.com/blog/feed/",
+      "website_url": "https://vintagecampertrailers.com/blog/",
+      "description": "For all admirers, dreamers, collectors and restorers of vintage camper trailers and mid-century memorabilia. In 2012 the authors started the first publication in the United States dedicated to rescuing, restoring and rallying with mid-century trailers of all shapes and sizes.",
+      "followers": {
+        "facebook": 591200,
+        "twitter": 1200,
+        "instagram": 212200
+      },
+      "image_url": "https://i1.feedspot.com/5274166.jpg?t=1629117343"
+    },
+    {
+      "title": "Little Vintage Trailer",
+      "feed_url": "https://feeds.feedburner.com/LittleVintageTrailer",
+      "website_url": "https://www.littlevintagetrailer.com/",
+      "description": "A blog about vintage trailers and glamping. Little Vintage Trailer is where you can find trailers for sale, read tutorials, and all things vintage camping related.",
+      "followers": {
+        "facebook": 50000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/1147090.jpg?t=1629117536"
+    },
+    {
+      "title": "Good Old RVs Blog",
+      "feed_url": "https://goodoldrvs.ning.com/profiles/blog/feed?xn_auth=no",
+      "website_url": "https://goodoldrvs.ning.com/profiles/blog/list",
+      "description": "Explore the blog for everything on vintage RVs, stories from people around the world, reviews of RVs and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5312755.jpg?t=1629182632"
+    }
+  ]
+}

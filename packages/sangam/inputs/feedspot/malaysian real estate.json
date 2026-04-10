@@ -1,0 +1,71 @@
+{
+  "category": "Malaysian Real Estate",
+  "source_url": "https://rss.feedspot.com/malaysian_real_estate_rss_feeds",
+  "feeds": [
+    {
+      "title": "Kopiandproperty.com",
+      "feed_url": "https://kopiandproperty.com/feed/",
+      "website_url": "https://kopiandproperty.com/",
+      "description": "Kopiandproperty.com is a leading independent property blog/site in Malaysia dedicated to thoughts about the property, property investment, and everything property related.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 377
+      },
+      "image_url": "https://i1.feedspot.com/4751664.jpg?t=1606999904"
+    },
+    {
+      "title": "Penang Property Talk",
+      "feed_url": "https://www.penangpropertytalk.com/feed/",
+      "website_url": "https://www.penangpropertytalk.com/",
+      "description": "PenangPropertyTalk.com is a site aiming to provide quality, accurate and update-to-date information to anyone who are keen on property news and new launches in Penang. As the name of our domain name suggests, we are determine to provide you a space to discuss anything about Penang properties.",
+      "followers": {
+        "facebook": 83600
+      },
+      "image_url": "https://i1.feedspot.com/1552025.jpg?t=1603807527"
+    },
+    {
+      "title": "NextSix Blog",
+      "feed_url": "https://blog.nextsix.com/feed/",
+      "website_url": "https://blog.nextsix.com/",
+      "description": "Malaysia's #1 Pioneer GPS Property Website",
+      "followers": {
+        "facebook": 19900
+      },
+      "image_url": "https://i1.feedspot.com/7318527.jpg?t=1717091749"
+    },
+    {
+      "title": "Dot Property Malaysia Blog",
+      "feed_url": "https://www.dotproperty.com.my/blog/feed",
+      "website_url": "https://www.dotproperty.com.my/blog/",
+      "description": "Search for the best property to buy & rent in Malaysia from the country's top property agents, real estate developers & private sellers - Dot Property.",
+      "followers": {
+        "facebook": 485800,
+        "twitter": 11,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5178987.jpg?t=1597054772"
+    },
+    {
+      "title": "PROPCAFE",
+      "feed_url": "https://propcafe.net/feed/",
+      "website_url": "https://propcafe.net/",
+      "description": "PROPCAFE.NET is a Malaysia Real Estate Property Talk & Review Portal. Follow to get updates from this blog.",
+      "followers": {
+        "facebook": 13500
+      },
+      "image_url": "https://i1.feedspot.com/5173121.jpg?t=1606999434"
+    },
+    {
+      "title": "IProperty.com.my News",
+      "feed_url": "https://malaysia.lifestyle.prod.content.iproperty.com/news/feed/",
+      "website_url": "https://www.iproperty.com.my/news/",
+      "description": "Read the latest Malaysia property news, updates on the property market, and real estate trends.",
+      "followers": {
+        "facebook": 429800,
+        "twitter": 8500,
+        "instagram": 33700
+      },
+      "image_url": "https://i1.feedspot.com/5178970.jpg"
+    }
+  ]
+}

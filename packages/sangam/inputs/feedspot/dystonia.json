@@ -1,0 +1,60 @@
+{
+  "category": "Dystonia",
+  "source_url": "https://rss.feedspot.com/dystonia_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dystonia UK News",
+      "feed_url": "https://www.dystonia.org.uk/handlers/rss.ashx?feed=1&IDModule=58a7a3e8-32d7-49ac-8fa0-6028844a8b44",
+      "website_url": "https://www.dystonia.org.uk/Pages/News/Category/sbs-news",
+      "description": "We were established in 1983 as The Dystonia Society, and in 2019 we rebranded to become Dystonia UK to better reflect our growing community. We provide support, information, and advocacy for anyone affected by the neurological movement disorder known as dystonia.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 3300,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5410059.jpg?t=1655183314"
+    },
+    {
+      "title": "News Medical \u00bb Dystonia",
+      "feed_url": "https://www.news-medical.net/tag/feed/Dystonia.aspx",
+      "website_url": "https://www.news-medical.net/?tag=/Dystonia",
+      "description": "Dystonia is a neurological movement disorder, in which sustained muscle contractions cause twisting and repetitive movements or abnormal postures. Read the latest Dystonia news and research. Since 2004, We are a tight-knit community of scientific, medical, and life sciences experts that produce and share the latest information, in a readable, understandable way.",
+      "followers": {
+        "facebook": 254300,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5410056.jpg?t=1655183294"
+    },
+    {
+      "title": "Medical Xpress \u00bb Dystonia",
+      "feed_url": "https://medicalxpress.com/rss-feed/tags/dystonia/",
+      "website_url": "https://medicalxpress.com/tags/dystonia/",
+      "description": "In the following section of Medical Xpress, the experts share articles related to Dystonia. Medical Xpress internet news portal provides the latest news on science including Physics, Nanotechnology, Life Sciences, Space Science, Earth Science, Environment, Health, and Medicine.",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/5410055.jpg?t=1655183289"
+    },
+    {
+      "title": "Dystonia Blog",
+      "feed_url": "https://dystonia-rehab.com/en/feed/",
+      "website_url": "https://dystonia-rehab.com/en/blog/",
+      "description": "We offer the latest news on dystonia and articles related to music performances. This website is set up by Dr. Monica Chen. She is the first practitioner of musician dystonia in Asia and she is also the first practitioner of the Farias Technique. Since she herself is DMA in violin performance, she can better understand the difficulties of musicians and can give advice specific to the music performing movements.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5410058.jpg?t=1655205272"
+    },
+    {
+      "title": "Pacific Neuroscience Institute \u00bb Dystonia",
+      "feed_url": "https://www.pacificneuroscienceinstitute.org/blog/category/dystonia/feed/",
+      "website_url": "https://www.pacificneuroscienceinstitute.org/blog/category/dystonia/",
+      "description": "Read news, research, new updates, case study, and articles on and about Dystonia in the following segment of Pacific Neuroscience Institute. Pacific Neuroscience Institute provides precision leading-edge care for patients with a wide spectrum of neurological and cranial disorders. We provide a unique combination of highly specialized and experienced medical professionals, leading-edge technology, and a personalized compassionate approach that puts our patients first.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 838,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5410057.jpg?t=1655183299"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "category": "UK Sketch",
+  "source_url": "https://rss.feedspot.com/uk_sketch_rss_feeds",
+  "feeds": [
+    {
+      "title": "SeanBriggs Blog",
+      "feed_url": "http://www.seanbriggs.co.uk/feed/",
+      "website_url": "http://www.seanbriggs.co.uk/blog/",
+      "description": "Sketch a day. Drawings and illustrations of artist Sean Briggs.",
+      "followers": {
+        "facebook": 284,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4910664.jpg?t=1620107927"
+    },
+    {
+      "title": "Line And Wash",
+      "feed_url": "http://www.lineandwash.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "http://www.lineandwash.co.uk/",
+      "description": "Daily drawings and ideas from my online sketchbook - an art, illustration and sketch blog.",
+      "followers": {
+        "twitter": 2500,
+        "instagram": 27200
+      },
+      "image_url": "https://i1.feedspot.com/4910650.jpg?t=1620107932"
+    },
+    {
+      "title": "Wild Yorkshire Blog",
+      "feed_url": "http://wildyorkshire.blog/feed/",
+      "website_url": "http://wildyorkshire.blog/",
+      "description": "Richard Bell's nature sketchbook since 1998.",
+      "followers": {
+        "twitter": 421
+      },
+      "image_url": "https://i1.feedspot.com/4910658.jpg?t=1620107935"
+    },
+    {
+      "title": "Urban Sketchers London",
+      "feed_url": "https://urbansketchers-london.blogspot.com/feeds/posts/default",
+      "website_url": "https://urbansketchers-london.blogspot.com/",
+      "description": "Drawing on location - around and about London. Urban Sketchers is a network of artists around the world who draw the cities where they live and travel to.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/338666.jpg?t=1614839043"
+    },
+    {
+      "title": "Mostly drawing",
+      "feed_url": "https://mostlydrawing.com/feed/",
+      "website_url": "https://mostlydrawing.com/",
+      "description": "Daily sketching from life, based in Bath, UK",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4554051.jpg"
+    },
+    {
+      "title": "Joe Bean Blog",
+      "feed_url": "https://www.beancreating.co.uk/blog/feed/",
+      "website_url": "https://www.beancreating.co.uk/blog/",
+      "description": "I'm a graphic designer and illustrator living in Leeds in the UK. I am also an urban sketcher and sketch whenever I get the opportunity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4916061.jpg?t=1620107994"
+    },
+    {
+      "title": "James Hobbs",
+      "feed_url": "https://www.james-hobbs.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.james-hobbs.co.uk/news",
+      "description": "Drawing in a small black sketchbook with a thick black pen, working at the UCL Institute of Education library.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1500,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4910652.jpg?t=1620107919"
+    }
+  ]
+}

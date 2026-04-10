@@ -1,0 +1,42 @@
+{
+  "category": "Schenectady News",
+  "source_url": "https://rss.feedspot.com/schenectady_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "NEWS10 ABC \u00bb Schenectady County",
+      "feed_url": "https://www.news10.com/news/schenectady-county/feed/",
+      "website_url": "https://www.news10.com/news/schenectady-county/",
+      "description": "The Latest News and Updates in Schenectady County brought to you by the team at NEWS10 ABC.",
+      "followers": {
+        "facebook": 246000,
+        "twitter": 90100,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5149274.jpg?t=1589175729"
+    },
+    {
+      "title": "Spotlight News \u00bb Schenectady County",
+      "feed_url": "https://spotlightnews.com/category/towns/schenectady-county/feed/",
+      "website_url": "https://spotlightnews.com/category/towns/schenectady-county/",
+      "description": "Regular News updates Community announcements, Obituaries, and more from Schenectady County. Browse the latest news articles here. Spotlight News is your source for Local News, Sports, Election Coverage, Albany, Schenectady, Saratoga, Troy, Capital District, Region, NY",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 1900,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5517619.jpg?t=1678280459"
+    },
+    {
+      "title": "WNYT NewsChannel 13 \u00bb Schenectady",
+      "feed_url": "https://wnyt.com/tag/schenectady/feed/",
+      "website_url": "https://wnyt.com/tag/schenectady/",
+      "description": "Find all Schenectady-related coverage - local news, weather reports, sports, and business on this page. NewsChannel 13, WNYT is the NBC affiliate in Albany, NY. You can get the latest news, weather, sports, and other information for New York's Capital Region from NewsChannel 13 and WNYT.com.",
+      "followers": {
+        "facebook": 406400,
+        "twitter": 126000,
+        "instagram": 48500
+      },
+      "image_url": "https://i1.feedspot.com/5517621.jpg?t=1678280525"
+    }
+  ]
+}

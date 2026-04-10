@@ -1,0 +1,54 @@
+{
+  "category": "Basketball Sneaker",
+  "source_url": "https://rss.feedspot.com/basketball_sneaker_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nice Kicks",
+      "feed_url": "https://www.nicekicks.com/feed/",
+      "website_url": "https://www.nicekicks.com/",
+      "description": "Nice Kicks provides shoe enthusiasts with authoritative, accurate, and credible news, information, culture, and history about sneakers. Also covers sneaker release dates and expert opinion. Get all the news, stories, and information on the latest dops, popular styles, and more!",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 1600000,
+        "instagram": 4900000
+      },
+      "image_url": "https://i1.feedspot.com/9126.jpg?t=1603300411"
+    },
+    {
+      "title": "SLAM \u00bb Kicks",
+      "feed_url": "https://www.slamonline.com/category/kicks/feed/",
+      "website_url": "https://www.slamonline.com/category/kicks/",
+      "description": "Welcome to SLAM! We're passionate about basketball and guess so are you. From game and player highlights to the latest in NBA news to upcoming stars in high school basketball - we've got you covered.",
+      "followers": {
+        "facebook": 3900000,
+        "twitter": 1300000,
+        "instagram": 642
+      },
+      "image_url": "https://i1.feedspot.com/4953388.jpg?t=1621601204"
+    },
+    {
+      "title": "Sneaker News \u00bb Basketball",
+      "feed_url": "https://sneakernews.com/category/basketball/feed/",
+      "website_url": "https://sneakernews.com/category/basketball/",
+      "description": "Catch the latest updates in the performance Basketball sneakers space. Sneaker News is a sneaker media outlet that provides daily coverage of the most coveted sneaker releases and the newest sneakers on the market. In addition to providing regular updates on the very latest, it also provides \\resources to assist consumers in making purchases.",
+      "followers": {
+        "facebook": 804200,
+        "twitter": 1400000,
+        "instagram": 10100000
+      },
+      "image_url": "https://i1.feedspot.com/4478991.jpg?t=1679314191"
+    },
+    {
+      "title": "WearTesters \u00bb Kicks On Court",
+      "feed_url": "https://weartesters.com/category/kicks-on-court/feed/",
+      "website_url": "https://weartesters.com/category/kicks-on-court/",
+      "description": "Wear Testers bring you our kicks on court section, updating you on the latest basketball shoes and accessories along with the best performance reviews and performance product reviews on the net.",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 16800,
+        "instagram": 114500
+      },
+      "image_url": "https://i1.feedspot.com/4953281.jpg?t=1621601184"
+    }
+  ]
+}

@@ -1,0 +1,1183 @@
+{
+  "category": "New York Food",
+  "source_url": "https://rss.feedspot.com/new_york_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Grub Street",
+      "feed_url": "https://feeds.feedburner.com/nymag/grubstreet",
+      "website_url": "https://www.grubstreet.com/",
+      "description": "Featuring articles about restaurant reviews, chef interviews, restaurant-openings news, and food-trend coverage.",
+      "followers": {
+        "facebook": 270900,
+        "twitter": 403500,
+        "instagram": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/571957.jpg?t=1608298615"
+    },
+    {
+      "title": "Eating In Translation",
+      "feed_url": "https://feeds.feedburner.com/EatingInTranslation",
+      "website_url": "https://www.eatingintranslation.com/",
+      "description": "Dave Cook shares his adventures of trying food from all over the world that happens to be located in and around New York. Along with covering local restaurants in the city, Cook hits the road and makes day trips to Jersey City or Port Chester to attend fairs and festivals. The majority of the food is foreign and items he's never tried, and he always accepts tips on where to go and what to order. Cook's work has also appeared in the New York Times Dining.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 2700,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/967698.jpg?t=1612270957"
+    },
+    {
+      "title": "The New York Times \u00bb Food",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/food/rss.xml",
+      "website_url": "https://www.nytimes.com/section/food/",
+      "description": "Find Food & Wine news and reviews on restaurants, recipes, cooking, desserts, chefs, fine dining, cuisine, New York restaurants, four-star restaurants & more. As one of the nation's foremost news organizations, The New York Times is dedicated to helping people understand the world through on-the-ground, expert and deeply reported independent journalism.",
+      "followers": {
+        "facebook": 961400,
+        "twitter": 4400,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4872379.jpg?t=1669899243"
+    },
+    {
+      "title": "Eater NY",
+      "feed_url": "https://ny.eater.com/rss/index.xml",
+      "website_url": "https://ny.eater.com/",
+      "description": "Food news and dining guides for New York City. Explore various food and dining option in New York city from street vendors to Micheline star restaurants along with their specialty. Eater is a digital media brand dedicated to all things food and dining. The Eater brand comprises a national site covering food and dining culture.",
+      "followers": {
+        "facebook": 619200,
+        "twitter": 432400,
+        "instagram": 528300
+      },
+      "image_url": "https://i1.feedspot.com/4716442.jpg?t=1608298274"
+    },
+    {
+      "title": "Skinnytaste",
+      "feed_url": "https://www.skinnytaste.com/feed/",
+      "website_url": "https://www.skinnytaste.com/",
+      "description": "I'm Gina Homolka, author, photographer and recipe developer here at Skinnytaste.com. My food philosophy is to eat seasonal, whole foods and maintain good portion control (everything in moderation!). Let me help you navigate your way around the kitchen and teach you how to prepare delicious, light, fresh meals your whole family will love!",
+      "followers": {
+        "facebook": 6300000,
+        "twitter": 39600,
+        "instagram": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4788371.jpg?t=1609842022"
+    },
+    {
+      "title": "SAVEUR Magazine",
+      "feed_url": "https://www.saveur.com/feed/",
+      "website_url": "https://www.saveur.com/",
+      "description": "SAVEUR is the global guide to cooking, entertaining, and food travel. Bring the world's best recipes, drinks, seasonal dishes, and kitchen tips to your home.",
+      "followers": {
+        "facebook": 538200,
+        "twitter": 642300,
+        "instagram": 802700
+      },
+      "image_url": "https://i1.feedspot.com/4871886.jpg?t=1612270966"
+    },
+    {
+      "title": "Alison Roman",
+      "feed_url": "https://www.alisoneroman.com/recipes?format=rss",
+      "website_url": "https://www.alisoneroman.com/recipes",
+      "followers": {
+        "twitter": 70900,
+        "instagram": 779500
+      },
+      "image_url": "https://i1.feedspot.com/5731617.jpg?t=1702028010"
+    },
+    {
+      "title": "Smitten Kitchen",
+      "feed_url": "https://feeds.feedburner.com/smittenkitchen",
+      "website_url": "https://smittenkitchen.com/",
+      "description": "The Smitten Kitchen is a 14 year-old food blog celebrating triumphant but unfussy cooking. It. wants to be the place you go to find your new favorite thing to cook.",
+      "followers": {
+        "facebook": 666200,
+        "twitter": 95900,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/27231.jpg?t=1600345359"
+    },
+    {
+      "title": "Gluten-Free on a Shoestring",
+      "feed_url": "https://feeds.feedburner.com/GlutenFreeOnAShoestring",
+      "website_url": "https://glutenfreeonashoestring.com/",
+      "description": "Gluten-free food is really expensive. And if you're in the 99%, cost matters to you. Gluten-Free on a Shoestring helps make feeding your family a gluten-free diet enjoyable and affordable.",
+      "followers": {
+        "facebook": 648700,
+        "twitter": 3300,
+        "instagram": 22100
+      },
+      "image_url": "https://i1.feedspot.com/4870244.jpg?t=1612270978"
+    },
+    {
+      "title": "Grumpy's Honey Bunch",
+      "feed_url": "https://grumpyshoneybunch.com/feed/",
+      "website_url": "https://grumpyshoneybunch.com/",
+      "description": "Grumpy's Honey Bunch is a Family and Food Blog, sharing memories from past and creating new ones with those I love!",
+      "followers": {
+        "facebook": 144000,
+        "twitter": 6900,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4978352.jpg?t=1612270981"
+    },
+    {
+      "title": "Alexandra's Kitchen",
+      "feed_url": "https://alexandracooks.com/feed/",
+      "website_url": "https://alexandracooks.com/",
+      "description": "I write this blog and live in Upstate New York with my husband and four children. I also write weekly about weeknight cooking for Food52, and my cookbook, Bread Toast Crumbs, was just published in April by Clarkson Potter.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 2600,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4870288.jpg?t=1612270973"
+    },
+    {
+      "title": "Cooking with Cocktail Rings",
+      "feed_url": "https://cookingwithcocktailrings.com/feed/",
+      "website_url": "https://cookingwithcocktailrings.com/",
+      "description": "Choose from 900+ recipes on Cooking with Cocktail Rings to inspire your cooking and elevate your meals from appetizers to weeknight dinners.",
+      "followers": {
+        "facebook": 187900,
+        "instagram": 295500
+      },
+      "image_url": "https://i1.feedspot.com/5731615.jpg?t=1702032127"
+    },
+    {
+      "title": "The Clever Carrot",
+      "feed_url": "https://feeds.feedblitz.com/theclevercarrot",
+      "website_url": "https://www.theclevercarrot.com/",
+      "description": "Find Beginner sourdough bread recipes, plus hundreds of simple, made-from-scratch recipes, easy and fun baking ideas and delicious dishes anyone can prepare at home. Emilie Raffa is a cook, baker, and author of IACP finalist and bestselling book: Artisan Sourdough Made Simple.",
+      "followers": {
+        "facebook": 26400,
+        "twitter": 791,
+        "instagram": 121900
+      },
+      "image_url": "https://i1.feedspot.com/4870729.jpg?t=1612270969"
+    },
+    {
+      "title": "The Full Helping",
+      "feed_url": "https://www.thefullhelping.com/feed/",
+      "website_url": "https://www.thefullhelping.com/",
+      "description": "I'm Gena, voice of The Full Helping, certified nutritionist, cookbook author, and passionate vegan food educator. This space is where I share nourishing plant-based recipes, stories of self-care and self-discovery, and resources to help you explore an informed and compassionate relationship with food.",
+      "followers": {
+        "facebook": 49400,
+        "twitter": 79,
+        "instagram": 89000
+      },
+      "image_url": "https://i1.feedspot.com/4784946.jpg?t=1605251691"
+    },
+    {
+      "title": "Organize Yourself Skinny",
+      "feed_url": "https://www.organizeyourselfskinny.com/feed/",
+      "website_url": "https://www.organizeyourselfskinny.com/",
+      "description": "Dedicated to helping busy people eat healthier and lose weight by combining calorie awareness with menu planning, freezer cooking, and others make head meal cooking strategies.",
+      "followers": {
+        "facebook": 402800,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4477038.jpg?t=1600346206"
+    },
+    {
+      "title": "Tasting Table",
+      "feed_url": "https://www.tastingtable.com/feed/",
+      "website_url": "https://www.tastingtable.com/",
+      "description": "Tasting Table - Not your typical food site",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 106100
+      },
+      "image_url": "https://i1.feedspot.com/5429569.jpg?t=1702026448"
+    },
+    {
+      "title": "Brooklyn Farm Girl",
+      "feed_url": "https://brooklynfarmgirl.com/feed/",
+      "website_url": "https://brooklynfarmgirl.com/",
+      "description": "Brooklyn Farm Girl shows you that it's possible to grow your own food anywhere, even without a backyard. Pamela, the girl behind the blog, is a film director by day and wrangles kids and cooks recipes by night. Discover hundreds of easy recipe ideas cooked from scratch with homegrown vegetables. From urban gardening to Motherhood, she writes about it all.",
+      "followers": {
+        "facebook": 82900,
+        "twitter": 8200,
+        "instagram": 67600
+      },
+      "image_url": "https://i1.feedspot.com/4953959.jpg?t=1606283894"
+    },
+    {
+      "title": "A Cup of Jo \u00bb Food",
+      "feed_url": "https://cupofjo.com/category/food/feed/",
+      "website_url": "https://cupofjo.com/category/food/",
+      "description": "Fashion, Beauty, Design, Culture, Food, Relationships, Motherhood",
+      "followers": {
+        "facebook": 67600,
+        "twitter": 53700,
+        "instagram": 300300
+      },
+      "image_url": "https://i1.feedspot.com/5731614.jpg?t=1702026383"
+    },
+    {
+      "title": "New York Post \u00bb Food & Drink",
+      "feed_url": "https://nypost.com/food-and-drink/feed/",
+      "website_url": "https://nypost.com/food-and-drink/",
+      "description": "Your source for breaking news, news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/5731613.jpg?t=1702026376"
+    },
+    {
+      "title": "Socarrat NYC Blog",
+      "feed_url": "https://socarratnyc.com/feed/",
+      "website_url": "https://socarratnyc.com/blog/",
+      "description": "Discover the latest on Spanish food and culture from Socarrat NYC. Read our blog for insights and updates.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1400,
+        "instagram": 16400
+      },
+      "image_url": "https://i1.feedspot.com/5731616.jpg?t=1702026396"
+    },
+    {
+      "title": "Edible Brooklyn",
+      "feed_url": "https://ediblebrooklyn.com/feed/",
+      "website_url": "https://ediblebrooklyn.com/",
+      "description": "Edible Brooklyn is a quarterly print magazine that puts the local food scene right into your hands. Explore the latest food events, vendors, new restaurants, and more in Brooklyn and New York. Edible Brooklyn explores one of NYC's most vibrant boroughs through the stories of food, drink, and the people behind them.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 31900,
+        "instagram": 59400
+      },
+      "image_url": "https://i1.feedspot.com/5620255.jpg?t=1688723341"
+    },
+    {
+      "title": "1,000 low-calorie recipes Blog",
+      "feed_url": "https://jackienewgent.com/feed/",
+      "website_url": "https://jackienewgent.com/plant-based-recipe-blog/",
+      "description": "Jackie Newgent, RDN, CDN, is a chef, registered dietitian nutritionist, cookbook author, media personality, culinary instructor, recipe developer, and writer.",
+      "followers": {
+        "facebook": 703,
+        "twitter": 4500,
+        "instagram": 10200
+      },
+      "image_url": "https://i1.feedspot.com/3596236.jpg?t=1612271170"
+    },
+    {
+      "title": "Eat This NY",
+      "feed_url": "https://eatthisny.com/feed/",
+      "website_url": "https://eatthisny.com/",
+      "description": "A guide to the most iconic foods of New York and beyond, through reviews, photos, and comedic videos.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1900,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4953333.jpg?t=1612271182"
+    },
+    {
+      "title": "Food Lover Girl",
+      "feed_url": "https://www.foodlovergirl.com/category/new-york-city/feed/",
+      "website_url": "https://www.foodlovergirl.com/category/new-york-city/",
+      "description": "Food lover girl! For the Love of Food. I am on a mission to find all the amazing food around NYC.",
+      "followers": {
+        "facebook": 174,
+        "twitter": 319
+      },
+      "image_url": "https://i1.feedspot.com/4953372.jpg?t=1612271178"
+    },
+    {
+      "title": "Eating With Ziggy",
+      "feed_url": "https://eatingwithziggy.com/category/new-york-city/feed/",
+      "website_url": "https://eatingwithziggy.com/category/new-york-city/",
+      "description": "Hi, I'm Ziggy and I love to eat. From street food to Michelin star-rated restaurants, I love them all. Leads walking tours of Hell's Kitchen, East Village and Brooklyn.",
+      "followers": {
+        "facebook": 480,
+        "twitter": 637
+      },
+      "image_url": "https://i1.feedspot.com/4953294.jpg?t=1612271192"
+    },
+    {
+      "title": "Dessert Correspondents",
+      "feed_url": "https://dessertcorrespondents.com/feed/",
+      "website_url": "https://dessertcorrespondents.com/",
+      "description": "We are dessert explorers, originally from Melbourne & now based in NYC! We chronicle dessert adventures from nibbling brunch desserts at trendy cafes to baked goodies from patisseries, savoring plated artistry at restaurants to partaking in lavish high teas. We highlight the newest & most fabulous desserts worthy of a visit, showcase emerging dessert trends, & take you on a photographic journey. While we do have an NYC focus, we will also take you on a dessert adventure around the world.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 304,
+        "instagram": 529
+      },
+      "image_url": "https://i1.feedspot.com/4959424.jpg?t=1612271209"
+    },
+    {
+      "title": "The Brunch Boys",
+      "feed_url": "https://www.thebrunchboys.com/blog-feed.xml",
+      "website_url": "https://www.thebrunchboys.com/",
+      "description": "Brunch Boys is a new media company focused on everything brunch! Just in the past year, Brunch Boys has exploded with its head Brunch Boy, Jeremy, being named one of NYC's Most Eligible Bachelors, throwing the first ever Puppy Brunch, and the launch of two original shows, 'Can You Fry It?' and 'WaFULLED'.",
+      "followers": {
+        "facebook": 120600,
+        "twitter": 2,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/4871347.jpg?t=1612271226"
+    },
+    {
+      "title": "Food Curated",
+      "feed_url": "https://foodcurated.com/feed/",
+      "website_url": "https://foodcurated.com/",
+      "description": "'All good food has a story. We tell it. On video.' Food. Curated. believes in stories. We believe in the people & passion behind good food. We document these inspiring food artisans and make videos to help them get discovered.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 285,
+        "instagram": 20000
+      },
+      "image_url": "https://i1.feedspot.com/720889.jpg?t=1612271250"
+    },
+    {
+      "title": "The Colorful Kitchen",
+      "feed_url": "https://thecolorfulkitchen.com/feed/",
+      "website_url": "https://thecolorfulkitchen.com/",
+      "description": "I'm Ilene and I make, photograph (and eat!) all the recipes you see on the site. I'm a certified health coach, recipe developer and food photographer. I'm an NYC-based health coach here to share plant-based recipes that are colorful, not complicated.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 1500,
+        "instagram": 56100
+      },
+      "image_url": "https://i1.feedspot.com/4140438.jpg?t=1609245420"
+    },
+    {
+      "title": "Feed Me Phoebe",
+      "feed_url": "https://feedmephoebe.com/feed/",
+      "website_url": "https://feedmephoebe.com/",
+      "description": "Browse hundreds of Gluten Free healthy recipes and wellness tips from food writer, chef, and competitive French fry eater Phoebe Lapine! She is obsessed with the sweet spot where health and hedonism intersect, in the kitchen and beyond.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 5800,
+        "instagram": 45400
+      },
+      "image_url": "https://i1.feedspot.com/3935975.jpg?t=1646807352"
+    },
+    {
+      "title": "Gluten Free on a Shoestring",
+      "feed_url": "https://glutenfreeonashoestring.com/feed/",
+      "website_url": "https://glutenfreeonashoestring.com/",
+      "description": "Gluten-free recipes that really work for everything from bread, pasta and cakes to DIY flour blends, and appetizers. It's all here! I'm Nicole Hunn. I started this blog, Gluten-Free on a Shoestring, in March 2009. Gluten-Free on a Shoestring helps make feeding your family a gluten-free diet enjoyable and affordable.",
+      "followers": {
+        "facebook": 648700,
+        "twitter": 3300,
+        "instagram": 22100
+      },
+      "image_url": "https://i1.feedspot.com/1269089.jpg?t=1652860273"
+    },
+    {
+      "title": "Edible Manhattan",
+      "feed_url": "https://www.ediblemanhattan.com/feed/",
+      "website_url": "https://www.ediblemanhattan.com/",
+      "description": "Edible Manhattan tells the story of how the city eats. Through editorial and at events where their stories come to life, the magazine celebrates the people who are building the sort of food culture people want - one that's diverse, accessible, sustainable and delicious.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 30100,
+        "instagram": 45800
+      },
+      "image_url": "https://i1.feedspot.com/1232627.jpg?t=1646807659"
+    },
+    {
+      "title": "Simply Quinoa",
+      "feed_url": "https://www.simplyquinoa.com/feed/",
+      "website_url": "https://www.simplyquinoa.com/",
+      "description": "Hey there, I'm Alyssa! I'm a certified Holistic Nutritionist and creator of Simply Quinoa. My goal with this website is to teach you how to cook healthy, delicious meals at home. Inspire you to create simple habits that will transform the way you feel. And ultimately, be your cheerleader and help you live a healthier and happier life.",
+      "followers": {
+        "facebook": 665300,
+        "twitter": 3100,
+        "instagram": 296200
+      },
+      "image_url": "https://i1.feedspot.com/4686357.jpg?t=1619070326"
+    },
+    {
+      "title": "Apple Eats",
+      "feed_url": "https://appleeats.com/feed/",
+      "website_url": "https://appleeats.com/",
+      "description": "AppleEats is your one-stop blog for food news, reviews of New York restaurants, great recipes (including some by New York's top chefs), nifty kitchen tips, and more.",
+      "followers": {
+        "facebook": 2400,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5379365.jpg?t=1646800915"
+    },
+    {
+      "title": "Eat Your World Blog",
+      "feed_url": "https://eatyourworld.com/blog/feed/",
+      "website_url": "https://eatyourworld.com/blog/",
+      "description": "Launched in December 2011, Eat Your World is a guide to regional food and drinks around the globe founded on the principle that what you eat depends on where you are. Our mission is to spotlight foods and drinks that are native or traditional to particular places around the world and tell readers where to find them.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 3700,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5313067.jpg?t=1629268909"
+    },
+    {
+      "title": "Mike Bakes NYC",
+      "feed_url": "https://mikebakesnyc.com/feed/",
+      "website_url": "https://mikebakesnyc.com/",
+      "description": "Hi, and welcome! I'm Mike. I'm a self-taught baker, recipe developer, cookbook author, and food photographer. Mike Bakes NYC focuses on indulgent yet approachable comfort foods and desserts. My blog's mission is to encourage home-bakers of all experience levels to have fun in the kitchen.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2200,
+        "instagram": 170300
+      },
+      "image_url": "https://i1.feedspot.com/5278248.jpg?t=1646806270"
+    },
+    {
+      "title": "A Taste of New York \u00bb Food",
+      "feed_url": "https://www.tasteofny.com/food?format=rss",
+      "website_url": "https://www.tasteofny.com/food",
+      "description": "A Taste of New York features articles on food covering a wide range of New York specialities and help people with their next meal and ingredients. A Taste of New York-A weekly TV show airing on Spectrum/TimeWarner and giving insight on Food, Health, Travel, Home Design, Money Matters, Real Estate & more.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5379362.jpg?t=1646800899"
+    },
+    {
+      "title": "Black Girls Eat \u00bb Recipes",
+      "feed_url": "https://blackgirlseat.com/category/recipes/feed/",
+      "website_url": "https://blackgirlseat.com/category/recipes/",
+      "description": "Let's go from plant-curious to plant-focused. Visit often for recipes, shopping ideas and advice to help you and your family transition to a healthier lifestyle. The goal is to eat well, feel well and live well! Hi, I'm LA! My name might remind you of red carpets and palm trees but I'm a Bronx girl through and through, here to take you from plant-curious to plant-focused.",
+      "followers": {
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5379368.jpg?t=1646806808"
+    },
+    {
+      "title": "In Jennie's Kitchen",
+      "feed_url": "https://www.injennieskitchen.com/feed/",
+      "website_url": "https://www.injennieskitchen.com/",
+      "description": "In Jennie's Kitchen helps you plan your meals in an easier way through its well-crafted recipe. It is your one-stop shop to learn one recipe at a time.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 12400,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5379363.jpg?t=1646807265"
+    },
+    {
+      "title": "Fifteen Spatulas",
+      "feed_url": "https://www.fifteenspatulas.com/feed/",
+      "website_url": "https://www.fifteenspatulas.com/",
+      "description": "Hi, I'm Joanne! Welcome to Fifteen Spatulas. I created this blog in 2010 for people who love to try new recipes and appreciate a little guidance when they're cooking. I have step-by-step photos of the process so you know how things are supposed to look every step of the way, plus recipe videos, helpful techniques, tidbits about the how's and why's of cooking, and more.",
+      "followers": {
+        "facebook": 533800,
+        "twitter": 2800,
+        "instagram": 15600
+      },
+      "image_url": "https://i1.feedspot.com/1019522.jpg?t=1646805128"
+    },
+    {
+      "title": "Busy in Brooklyn",
+      "feed_url": "https://feeds.feedburner.com/busyinbrooklyn",
+      "website_url": "https://busyinbrooklyn.com/",
+      "description": "Hi, I'm Chanie and I'm a full-time food writer/photographer with five beautiful kids. I work as a recipe developer, cooking instructor, brand ambassador, cookbook author, food photographer and blogger.",
+      "followers": {
+        "facebook": 18500,
+        "twitter": 1700,
+        "instagram": 120800
+      },
+      "image_url": "https://i1.feedspot.com/3907281.jpg?t=1646802272"
+    },
+    {
+      "title": "The Mom 100",
+      "feed_url": "https://themom100.com/feed/",
+      "website_url": "https://themom100.com/",
+      "description": "I'm Katie Workman, and I'm very happy you're here! If fussiness and stress in the kitchen are not your friends, you have come to the right place. Let's get dinner on the table, make our friends feel welcome, find some new inspiration, and get a bit more cooking know-how under our belts.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 6600,
+        "instagram": 25200
+      },
+      "image_url": "https://i1.feedspot.com/4794400.jpg?t=1609842378"
+    },
+    {
+      "title": "The Full Helping Blog",
+      "feed_url": "https://www.thefullhelping.com/feed/",
+      "website_url": "https://www.thefullhelping.com/blog/",
+      "description": "Space for comforting, wholesome vegan recipes, along with musings on nutrition and self-care from Gena Hamshaw, a vegan dietitian, and writer behind The Full Helping. The Full Helping is a space for comforting, wholesome vegan recipes, along with musings on nutrition and self-care from a vegan dietitian.",
+      "followers": {
+        "facebook": 49400,
+        "twitter": 79,
+        "instagram": 89000
+      },
+      "image_url": "https://i1.feedspot.com/4418696.jpg?t=1609245321"
+    },
+    {
+      "title": "Post Punk Kitchen",
+      "feed_url": "https://www.theppk.com/feed/",
+      "website_url": "https://www.theppk.com/",
+      "description": "Vegan cooking and baking for the masses. Covers Appetizer, Breakfast, Gluten-Free recipes, Quickbreads, and Vegan Cheese. Isa Moskowitz is a restaurant owner, food photography, recipe developer, and author behind Post Punk Kitchen.",
+      "followers": {
+        "facebook": 92800,
+        "twitter": 42600,
+        "instagram": 26100
+      },
+      "image_url": "https://i1.feedspot.com/5257432.jpg?t=1615785128"
+    },
+    {
+      "title": "VegansBaby",
+      "feed_url": "http://vegansbaby.com/feed/",
+      "website_url": "https://vegansbaby.com/",
+      "description": "Vegans Baby by Diana Edelman provides comprehensive vegan dining and lifestyle information. It is a business dedicated to making vegan life easier and vegan dining more approachable.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 976,
+        "instagram": 16
+      },
+      "image_url": "https://i1.feedspot.com/4689536.jpg?t=1658810490"
+    },
+    {
+      "title": "Best of Vegan",
+      "feed_url": "https://bestofvegan.com/feed/",
+      "website_url": "https://bestofvegan.com/",
+      "description": "Best of Vegan is a culinary & lifestyle publication featuring the best vegan food, decor, style & destinations. Best of Vegan is a digital culinary publication dedicated to vegan recipes and the plant-based culinary scene. Since January of 2014, our main goal has been to showcase all that vegan food has to offer and show people that you don't have to sacrifice taste when you adopt a vegan lifestyle.",
+      "followers": {
+        "facebook": 53900,
+        "twitter": 2500,
+        "instagram": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/5425094.jpg?t=1658810416"
+    },
+    {
+      "title": "Liv Vegan Strong",
+      "feed_url": "https://www.livveganstrong.com/feed/",
+      "website_url": "https://www.livveganstrong.com/",
+      "description": "Liv Vegan Strong is a plant based blog with a focus on vegan comfort food recipes that are easy, approachable and far from boring!",
+      "followers": {
+        "facebook": 250,
+        "twitter": 6800,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5425096.jpg?t=1658811213"
+    },
+    {
+      "title": "Veggiekins Blog",
+      "feed_url": "https://veggiekinsblog.com/feed/",
+      "website_url": "https://veggiekinsblog.com/blog/",
+      "description": "Vegan and gluten-free recipes and tips to live your best balanced and holistic life. Remy Park is a vegan recipe developer, food photographer, & blogger based in NYC.",
+      "followers": {
+        "facebook": 5000,
+        "instagram": 226000
+      },
+      "image_url": "https://i1.feedspot.com/5257523.jpg?t=1658811611"
+    },
+    {
+      "title": "New York Foodie",
+      "feed_url": "http://www.newyorkfoodiee.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.newyorkfoodiee.com/",
+      "description": "New York Foodie is one of New York's top independent food blog and your guide, sharing best places to eat, top dishes to try, recipes, and more all in one place.",
+      "followers": {
+        "instagram": 559500
+      },
+      "image_url": "https://i1.feedspot.com/5437027.jpg?t=1661855088"
+    },
+    {
+      "title": "The Holy Mess Blog",
+      "feed_url": "https://theholymess.com/feed/",
+      "website_url": "https://theholymess.com/blog/",
+      "description": "Step into The Holy Mess, where Sara extends a warm welcome to all seeking delicious recipes and healthy lifestyle solutions. With a treasure trove of options including Weight Watchers recipes tailored to Personal Points and MyWW Green, Blue, and Purple plans, meal prep guides, and Instant Pot and Air Fryer inspirations, Sara ensures every meal of your week is a culinary delight. From low-calorie weight loss recipes to indulgent desserts, The Holy Mess is your go-to destination for nourishing and satisfying dishes that cater to your wellness goals.",
+      "followers": {
+        "facebook": 26400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5437031.jpg?t=1701782088"
+    },
+    {
+      "title": "Food Tank",
+      "feed_url": "https://foodtank.com/feed/",
+      "website_url": "https://foodtank.com/",
+      "description": "We're building a global community for safe, healthy, nourished eaters. We aim to educate, inspire, advocate, and create change. We spotlight and support environmentally, socially, and economically sustainable ways of alleviating hunger, obesity, and poverty and create networks of people, organizations, and content to push for food system change.",
+      "followers": {
+        "facebook": 316600,
+        "twitter": 211200,
+        "instagram": 61300
+      },
+      "image_url": "https://i1.feedspot.com/5437039.jpg?t=1661846516"
+    },
+    {
+      "title": "Shared Appetite",
+      "feed_url": "https://sharedappetite.com/feed/",
+      "website_url": "https://sharedappetite.com/",
+      "description": "Hi! I'm Chris. Cooking is so much fun. Eating a fantastic meal is one of life's greatest joys. But to me, what makes food so special is its ability to bring people together - sharing food with friends and family, creating memories. This blog is a tribute to the great food I've eaten, the fanstastic recipes I've cooked, and the awesome people I've gotten to share it with.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/1878128.jpg?t=1661853431"
+    },
+    {
+      "title": "Slow Food NYC Blog",
+      "feed_url": "http://www.slowfoodnyc.org/blog?format=rss",
+      "website_url": "http://www.slowfoodnyc.org/blog",
+      "description": "Slow Food NYC is the New York City chapter of Slow Food, a global, grassroots organization, founded in 1989 to prevent the disappearance of local food cultures and traditions, counteract the rise of fast life, and combat people's dwindling interest in the food they eat, where it comes from and how our food choices affect the world around us.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 17600,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/5379359.jpg?t=1646800883"
+    },
+    {
+      "title": "NYC BBQ Blog",
+      "feed_url": "https://www.nycbbq.com/blog?format=rss",
+      "website_url": "https://www.nycbbq.com/blog",
+      "description": "Sean Ludwig is a Brooklyn-based tech and food writer and photographer with an enormous appetite. Sean hails from Kansas City, Missouri, where he was raised on some of the best barbecue in the country. He never lost his taste for smoked meats and has been eating at New York City's best BBQ restaurants for more than 10 years.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 591,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5400574.jpg?t=1652693895"
+    },
+    {
+      "title": "The Hunter College New York City Food Policy Center",
+      "feed_url": "https://www.nycfoodpolicy.org/feed/",
+      "website_url": "https://www.nycfoodpolicy.org/",
+      "description": "-The Hunter College New York City Food Policy Center develops intersectoral, innovative and evidence-based solutions to prevent diet-related diseases and promote food security in New York City and other urban centers.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4600,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5437032.jpg?t=1661846478"
+    },
+    {
+      "title": "The Blog That Ate Manhattan",
+      "feed_url": "https://feeds.feedburner.com/tbtam",
+      "website_url": "https://tbtam.com/",
+      "description": "Hi! I'm Margaret Polaneczky. I'm a board-certified obstetrician-gynecologist and Associate Professor of Clinical Obstetrics and Gynecology. This blog is written for both health professionals and laypersons, women and men, New Yorkers and those who love New York, those who love to cook, and those who love to eat.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/1259629.jpg?t=1661851305"
+    },
+    {
+      "title": "Jazzy Vegetarian Blog",
+      "feed_url": "https://jazzyvegetarian.com/feed/",
+      "website_url": "https://jazzyvegetarian.com/blog/",
+      "description": "Welcome to the Jazzy Vegetarian website, where I share delectable 100% vegan recipes, jazzylicious news and inspirational thoughts. Many of the dishes I share on this website are prepared with easily accessible ingredients, or can be adapted to use items from your pantry or freezer. My mission is to share nutritiously dense recipes and plant-based ideas for your home kitchen",
+      "followers": {
+        "facebook": 42800,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4786918.jpg?t=1605765017"
+    },
+    {
+      "title": "Workweek Lunch Blog",
+      "feed_url": "https://workweeklunch.com/category/blog/feed/",
+      "website_url": "https://workweeklunch.com/category/blog/",
+      "description": "WWL is an online meal plan subscription, food blog and cookbook dedicated to helping people all over the world make meal prep happen to get more out of life. Our food philosophy is aligned with Intuitive Eating and we're here to help you develop a system around food that supports the lifestyle you want.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 2200,
+        "instagram": 456200
+      },
+      "image_url": "https://i1.feedspot.com/5437029.jpg?t=1661852537"
+    },
+    {
+      "title": "A Little Beacon Blog \u00bb Food",
+      "feed_url": "https://www.alittlebeaconblog.com/blog/category/Food?format=rss",
+      "website_url": "https://www.alittlebeaconblog.com/blog/category/Food",
+      "description": "A Little Beacon Blog shares insightful articles and reviews on the finest places to eat in New York. A Little Beacon Blog is a local media news source with an eye for detail and discovery, which we deliver to a broad audience. We are a storyteller of the history of this area, and of the news and events happening here now.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1100,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5437033.jpg?t=1661846482"
+    },
+    {
+      "title": "Brooklyn Active Mama \u00bb Recipes",
+      "feed_url": "https://brooklynactivemama.com/category/in-the-kitchen/feed/",
+      "website_url": "https://brooklynactivemama.com/category/in-the-kitchen/",
+      "description": "Hi, I'm Nellie! Read a varied range of recipes from Brooklyn Active Mama here. I blog about running, fitness, family, food & travel while living in Brooklyn, NYC. I share my adventures as an African American mom raising multi-cultural boys in the city that never sleeps.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 24100,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5437038.jpg?t=1661855467"
+    },
+    {
+      "title": "Bon Appetit",
+      "feed_url": "https://www.bonappetit.com/feed/rss",
+      "website_url": "https://www.bonappetit.com/",
+      "description": "Cook with confidence. Enjoy your food. Find recipes, search our encyclopedia of cooking tips and ingredients, watch food videos, and more.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 3500000,
+        "instagram": 5000000
+      },
+      "image_url": "https://i1.feedspot.com/4902354.jpg?t=1702026432"
+    },
+    {
+      "title": "The Amateur Gourmet",
+      "feed_url": "https://www.amateurgourmet.com/blog?format=rss",
+      "website_url": "https://www.amateurgourmet.com/",
+      "description": "I am Adam Roberts and I created this here food blog back in 2004 to share recipes, cooking tips, and restaurant reviews. I am an author of two books and produce web content for The Food Network. Upon graduating, I moved to New York to get an MFA in dramatic writing at NYU's Tisch School of the Arts. It was there that I met my future husband, Craig Johnson.",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 3,
+        "instagram": 89400
+      },
+      "image_url": "https://i1.feedspot.com/4887322.jpg?t=1702026569"
+    },
+    {
+      "title": "EatingNYC",
+      "feed_url": "https://eating.nyc/feed/",
+      "website_url": "https://eating.nyc/",
+      "description": "Alexa Mehraban is a born and raised New Yorker, a professional eater and the founder of @EatingNYC, a food-focused brand that covers restaurants, travel, fitness and luxury lifestyle around the world. Founded in 2014, @EatingNYC has quickly become one of the most influential digital brands in New York, boasting over 280,000 followers on Instagram alone.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 1400,
+        "instagram": 319800
+      },
+      "image_url": "https://i1.feedspot.com/4845783.jpg?t=1612270954"
+    },
+    {
+      "title": "Cheat Day Eats",
+      "feed_url": "https://cheatday.life/feed/",
+      "website_url": "https://cheatday.life/",
+      "description": "Content Creator Focused on Food, Travel, and Fitness",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 2100,
+        "instagram": 559300
+      },
+      "image_url": "https://i1.feedspot.com/5731618.jpg?t=1702026524"
+    },
+    {
+      "title": "Cheftini Blog",
+      "feed_url": "https://cheftini.com/category/cheftini-says/feed/",
+      "website_url": "https://cheftini.com/category/cheftini-says/",
+      "description": "Magical Meals In Minutes",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5731619.jpg?t=1702026420"
+    },
+    {
+      "title": "Joanne Eats Well With Others",
+      "feed_url": "https://feeds.feedburner.com/EatsWellWithOthers",
+      "website_url": "https://joanne-eatswellwithothers.com/",
+      "description": "I'm Joanne, the writer, photographer, and eater behind Eats Well With Others. I started this blog back in 2009 during my senior year in college as a way to teach myself how to cook and avoid dorm food (and, consequently, high cholesterol) at all costs. Eats Well With Others is a place where we take a vegetable-and-cupcake laden approach to life (always with a bit of laughter on the side)!",
+      "followers": {
+        "twitter": 3900,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/721049.jpg?t=1640150745"
+    },
+    {
+      "title": "Hungry Blonde",
+      "feed_url": "https://feeds.feedburner.com/HungryBlonde",
+      "website_url": "https://hungry-blonde.com/",
+      "description": "Gracie Gordon is the blonde behind Hungry Blonde: a food and lifestyle blog that shows the balance between healthy living and indulging in everything New York City (and beyond) has to offer.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 36,
+        "instagram": 138500
+      },
+      "image_url": "https://i1.feedspot.com/4677555.jpg?t=1612271003"
+    },
+    {
+      "title": "\u200bGoodie Goodie Gluten-Free",
+      "feed_url": "https://goodiegoodieglutenfree.com/feed/",
+      "website_url": "https://goodiegoodieglutenfree.com/",
+      "description": "Hi! I'm Julie the certified health coach, photographer, recipe developer, gluten-free expert, food sensitivity queen, and spiritual coach behind Goodie Goodie Gluten-Free. Here you'll find tons of tasty gluten-free, plant-forward, dairy-free, nut-free, allergy-friendly healthy recipes, wellness tips and a side of soul.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1500,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5029765.jpg?t=1607323907"
+    },
+    {
+      "title": "Restaurant Girl",
+      "feed_url": "http://www.restaurantgirl.com/feed/atom/",
+      "website_url": "http://www.restaurantgirl.com/",
+      "description": "Here youll find whole-food recipes for the busy home cook. My approach to food and cooking is simple and stress-free. This blog was created in 2012 to document my journey towards a more healthy and balanced lifestyle. My work has been featured in Oprah Magazine, Redbook Magazine, Clean Eating, Women Health Magazine, The Huffington Post, Food 52, Saveur, Food & Wine, Today Food, and in the pages of Artful Blogging Magazine.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4634577.jpg?t=1602509966"
+    },
+    {
+      "title": "Fun Foodie NYC Blog",
+      "feed_url": "https://abarrelabove.com/blog?format=rss",
+      "website_url": "https://abarrelabove.com/blog/",
+      "description": "Offering you my native New York City via walking food tours through its history & culture rich neighborhoods.",
+      "followers": {
+        "facebook": 625,
+        "twitter": 729
+      },
+      "image_url": "https://i1.feedspot.com/4953321.jpg?t=1612271201"
+    },
+    {
+      "title": "The Dishelin Guide",
+      "feed_url": "http://dishelinguide.com/feed/",
+      "website_url": "http://dishelinguide.com/",
+      "description": "Keep up with articles from The Dishelin Guide.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 52700
+      },
+      "image_url": "https://i1.feedspot.com/5078574.jpg?t=1612271219"
+    },
+    {
+      "title": "NYC Food Guy",
+      "feed_url": "http://nycfoodguy.com/feed/",
+      "website_url": "http://nycfoodguy.com/",
+      "description": "I'm Lawrence Weibman and I am the NYC Food Guy! Food and fun are my passions and telling great stories is my expertise. There's no one in the world of food with my ability to host, produce, direct, draw, cook, lead food tours, and make people laugh and have fun with food! I'm an adventurous food TV show host for Thrillist.com and NYC TV, a sports food expert with many TV appearances to back that up, and an award winning food TV producer who has worked with big chefs, celebs and Michelle Obama.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4900,
+        "instagram": 17600
+      },
+      "image_url": "https://i1.feedspot.com/315364.jpg?t=1612271241"
+    },
+    {
+      "title": "FUSSYlittleBLOG",
+      "feed_url": "https://fussylittleblog.com/feed/",
+      "website_url": "https://fussylittleblog.com/",
+      "description": "I used to live in a town that was all about food. Then I moved to a town far far away. If I can show people what good food is, in all of its forms. If I can point out why some fancier things are overrated. If I can demonstrate that great food doesn't need to be expensive.",
+      "followers": {
+        "facebook": 798,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4953340.jpg?t=1612271245"
+    },
+    {
+      "title": "Meatless Makeovers",
+      "feed_url": "https://www.meatlessmakeovers.com/feed/",
+      "website_url": "https://www.meatlessmakeovers.com/",
+      "description": "Hi! Steve and Alissa here. We started this blog because we like to cook and eat. But we also love to share our recipes and our passion for following a plant-based diet and we are so glad that you are here.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 39,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4943701.jpg?t=1612171355"
+    },
+    {
+      "title": "Mantry \u00bb Recipes",
+      "feed_url": "https://mantry.com/blogs/recipes.atom",
+      "website_url": "https://mantry.com/blogs/recipes",
+      "description": "We've put together some dead simple, crowd-pleasing recipes for men that will leave your guests wondering if you are related to Jamie Oliver. Check out our delicious recipes today! Mantry is a food-of-the-month club that helps you discover American Artisan Food and what to do with it.",
+      "followers": {
+        "facebook": 30200,
+        "twitter": 3700,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5311524.jpg?t=1628743571"
+    },
+    {
+      "title": "Dom N' The City Blog",
+      "feed_url": "https://www.domnthecity.com/blog-1?format=rss",
+      "website_url": "https://www.domnthecity.com/blog-1/",
+      "description": "Dominek is known as the go-to guide for eating your way through NYC, and several other cities, among her friends. She always has a place in mind that will match any scene you're in the mood for.",
+      "followers": {
+        "facebook": 352,
+        "twitter": 4400,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5115658.jpg?t=1622122508"
+    },
+    {
+      "title": "Female Foodie \u00bb New York",
+      "feed_url": "https://www.femalefoodie.com/category/restaurant-reviews/new-york/feed/",
+      "website_url": "https://www.femalefoodie.com/category/restaurant-reviews/new-york/",
+      "description": "Female Foodie helps you pick the next restaurant or food place to pick in New York through her blog. Hi there. I'm Brooke Eliason. I started Female Foodie in 2010 and decided to document my experiences trying every single restaurant in town. Twelve years later, we have hundreds of restaurant guides and restaurant-inspired recipes for you.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1100,
+        "instagram": 471000
+      },
+      "image_url": "https://i1.feedspot.com/5379366.jpg?t=1646800921"
+    },
+    {
+      "title": "Jonathan's Ristorante Blog",
+      "feed_url": "https://jonathansristorante.com/category/blog/feed/",
+      "website_url": "https://jonathansristorante.com/category/blog/",
+      "description": "There are many restaurants in Huntington NY coming and going, but Jonathan's has been a landmark in the village of Huntington since its opening in 1994. Jonathan's delightful atmosphere combines European flavour with a casual yet sophisticated look, contemporary Italian menu.",
+      "followers": {
+        "facebook": 8400,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5067977.jpg?t=1602510741"
+    },
+    {
+      "title": "NY Foodie Family",
+      "feed_url": "https://nyfoodiefamily.com/feed/",
+      "website_url": "https://nyfoodiefamily.com/",
+      "description": "Welcome to NY Foodie Family! We are a food-loving family of four living in Northern Westchester County, New York. We bring you the best in all things food, family and fun! Follow along with us as we eat, travel and explore the Hudson Valley and beyond!",
+      "followers": {
+        "twitter": 6100,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/5379367.jpg?t=1646805035"
+    },
+    {
+      "title": "Spinach for Breakfast",
+      "feed_url": "https://www.spinach4breakfast.com/feed/",
+      "website_url": "https://www.spinach4breakfast.com/",
+      "description": "Maria and Alyssa are two sisters in Manhattan with a passion for sharing their health and wellness journey. They created Spinach for Breakfast as a recipe and lifestyle resource for anyone looking to make positive changes. They value the importance of clean eating and healthy living but believe it is all about a realistic balance.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 469
+      },
+      "image_url": "https://i1.feedspot.com/4788481.jpg?t=1605765725"
+    },
+    {
+      "title": "The Iron You",
+      "feed_url": "https://feeds.feedburner.com/theironyou/VraN",
+      "website_url": "https://www.theironyou.com/",
+      "description": "I'm Mike: triathlete, yogi, health enthusiast and food lover. I fill these pages with healthy recipes and ramblings about everything and nothing!",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/1693098.jpg?t=1646802488"
+    },
+    {
+      "title": "Beyond Sushi Blog",
+      "feed_url": "https://beyondsushi.com/feed/",
+      "website_url": "https://beyondsushi.com/blog/",
+      "description": "Beyond Sushi is New York City's leading vegan restaurant chain best known for our innovative plant-based offerings. Our diverse options are kosher certified and pack robust flavor and high quality ingredients.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 2200,
+        "instagram": 70500
+      },
+      "image_url": "https://i1.feedspot.com/5425066.jpg?t=1658755510"
+    },
+    {
+      "title": "Medium \u00bb Stories by Yossi Hoffman",
+      "feed_url": "https://medium.com/feed/@yossi-hoffman",
+      "website_url": "https://yossi-hoffman.medium.com/",
+      "description": "Stay up to date about vegan, vegetarian, and/or certified kosher restaurants in Manhattan. I love biking, I have a passion for food, and I photograph my dinner way too often.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5425099.jpg?t=1658811415"
+    },
+    {
+      "title": "NYC Veg Food Fest Blog",
+      "feed_url": "https://www.nycvegfoodfest.com/index.php/blog?format=feed",
+      "website_url": "https://www.nycvegfoodfest.com/index.php/blog",
+      "description": "We bring together all manner of vegan food and products while showcasing expert speakers, chefs, kids activities, and more to celebrate the delight of plant-based food and cruelty-free living at the NYC Vegetarian Food Festival.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 5400,
+        "instagram": 13600
+      },
+      "image_url": "https://i1.feedspot.com/5425097.jpg?t=1658811570"
+    },
+    {
+      "title": "Lisa's Project: Vegan",
+      "feed_url": "https://lisasprojectvegan.com/feed/",
+      "website_url": "https://lisasprojectvegan.com/",
+      "description": "Easy vegan meals made with love and compassion. Hey, I'm Lisa! This is my vegan food project and record of my recipes.",
+      "followers": {
+        "facebook": 1800,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4482144.jpg?t=1658810897"
+    },
+    {
+      "title": "Coletta Blog",
+      "feed_url": "https://www.colettanyc.com/feed/",
+      "website_url": "https://www.colettanyc.com/blog/",
+      "description": "Coletta is an intimate vegan and kosher dining experience that offers a fresh culinary perspective to Italian cuisine.",
+      "followers": {
+        "facebook": 710,
+        "instagram": 24300
+      },
+      "image_url": "https://i1.feedspot.com/5425098.jpg?t=1658811008"
+    },
+    {
+      "title": "Munaty Cooking",
+      "feed_url": "https://www.munatycooking.com/feed/",
+      "website_url": "https://www.munatycooking.com/",
+      "description": "Hello there! I'm Muna, the voice behind this food blog. I'm the writer, editor, cook, food photographer, and videographer at Munaty Cooking food blog. Munaty Cooking is a food blog with budget-friendly and easy dinner recipes. Find delicious southern recipes, scrumptious dessert recipes, and outstanding breakfast ideas.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3100,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4828798.jpg?t=1610804622"
+    },
+    {
+      "title": "Eat the World NYC",
+      "feed_url": "http://www.eattheworldnyc.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.eattheworldnyc.com/",
+      "description": "Eat the World NYC is your travel guide to explore the world right here at home, journeys via food.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5437025.jpg?t=1661846423"
+    },
+    {
+      "title": "Chef Taffy Elrod Blog",
+      "feed_url": "https://www.cheftaffyelrod.com/blog?format=rss",
+      "website_url": "https://www.cheftaffyelrod.com/blog/",
+      "description": "I'm Chef Taffy. I'm a professional chef, cooking instructor, recipe developer, food writer and former restaurant owner, with over 20 years experience in the food industry. My passion is sharing what I know about food and cooking with others.",
+      "followers": {
+        "facebook": 284,
+        "twitter": 3400,
+        "instagram": 19900
+      },
+      "image_url": "https://i1.feedspot.com/5437028.jpg?t=1661854820"
+    },
+    {
+      "title": "Brooklyn Food Monkey",
+      "feed_url": "https://www.brooklynfoodmonkey9.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.brooklynfoodmonkey9.com/",
+      "description": "This is a blog about the food in my life. what I eat, what I wanna eat, what I make, what I bake, what I wanna make and bake, ideas and recipes. it's also my thoughts on food or stories behind the meals. the lyric references are from my lifelong love of classic rock and funk and from working a hunnerd years in music retail.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437030.jpg?t=1661853099"
+    },
+    {
+      "title": "Brooklyn Supper",
+      "feed_url": "https://feeds.feedburner.com/brooklynsupper/sXCf",
+      "website_url": "https://brooklynsupper.com/",
+      "description": "A food and recipe blog dedicated to exploring the very best of local, seasonal eating, started by married couple Elizabeth Stark and Brian Campbell in 2008. Here on BKS, they share fancy food sometimes, but mostly, they want to make simple, straightforward recipes for home cooks at all levels. It's their mission to help readers to better understand the season and how ingredients can change throughout.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 4,
+        "instagram": 27400
+      },
+      "image_url": "https://i1.feedspot.com/5165878.jpg?t=1661851967"
+    },
+    {
+      "title": "Katie's Bliss \u00bb Food",
+      "feed_url": "https://katiesbliss.com/category/lifestyle/food/feed",
+      "website_url": "https://katiesbliss.com/category/lifestyle/food",
+      "description": "A Nashville lifestyle blog covering affordable fashion, baby finds, home d\u00e9cor and more. In this segment read about the places to eat and food to try in New York. Katie Manwaring is the voice behind life and style blog, Katie's Bliss. Launched in 2011 and based in New York City, KatiesBliss.com is a destination for affordable outfit ideas, travel inspiration, beauty tips and real world advice.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 4100,
+        "instagram": 274800
+      },
+      "image_url": "https://i1.feedspot.com/5437023.jpg?t=1661846413"
+    },
+    {
+      "title": "Greenpoint Vegan",
+      "feed_url": "https://greenpoint-vegan.com/feed/",
+      "website_url": "https://greenpoint-vegan.com/",
+      "description": "Hi, I'm Miriam! I'm an art director/designer by trade and have only recently gotten into cooking but I'm enjoying learning. I'm using this blog as a way to document my cooking experiences, save recipes and talk about restaurants I love. I ultimately wanted to have a place to admire the hard work that goes into creating each bite.",
+      "followers": {
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5437024.jpg?t=1661854747"
+    },
+    {
+      "title": "e2 bakes brooklyn",
+      "feed_url": "https://e2bakesbrooklyn.com/feed/",
+      "website_url": "https://e2bakesbrooklyn.com/",
+      "description": "Hi, I'm Liz. I am an avid home baker living in Brooklyn, New York. I love developing and baking simple, straightforward recipes and experimenting with new ingredients and the chemistry of baking. It's the only chemistry I've ever remotely understood!",
+      "followers": {
+        "facebook": 806,
+        "twitter": 37,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/5437026.jpg?t=1661851636"
+    },
+    {
+      "title": "Lyssy in the City \u00bb Food",
+      "feed_url": "https://lyssyinthecity.com/category/food/feed/",
+      "website_url": "https://lyssyinthecity.com/category/food/",
+      "description": "In the following section Lyssy shares her adventure trying different food around New York. Hey there! I'm Lyssy and welcome to my blog! I'm a Michigan native living in NYC with a passion for food, travel, yoga, puppies, and fitness. I hope to inspire you to travel as much as you can and try new things.",
+      "followers": {
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5437035.jpg?t=1661855544"
+    },
+    {
+      "title": "Food of NY Blog",
+      "feed_url": "https://www.foodsofny.com/feed/",
+      "website_url": "https://www.foodsofny.com/blog/",
+      "description": "NYC's original and #1 rated food tours. Indulge in New York City's most delicious & historic neighborhoods. It's so much more than just a food tour.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 2000,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4953288.jpg?t=1612270995"
+    },
+    {
+      "title": "Ahoy New York Tours and Tasting Blog",
+      "feed_url": "https://www.ahoynewyorkfoodtours.com/blog/feed/",
+      "website_url": "https://www.ahoynewyorkfoodtours.com/blog/",
+      "description": "Read our blog and get the latest foodie news in the Big Apple and important information about our tours at Ahoy New York Tours & Tasting.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1600,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5379361.jpg?t=1646800896"
+    },
+    {
+      "title": "Main Street Vegan",
+      "feed_url": "https://mainstreetvegan.com/blog/",
+      "website_url": "https://mainstreetvegan.com/blog/",
+      "description": "The latest information on veganism diet information, recipe ideas and answers to all your vegan questions. We get it: you're passionate.You're determined to bring about a vegan world. At Main Street Vegan Academy, we share this passion, and we know that equipping you for the task ahead demands a personalized, professional, in-depth experience.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 9100,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5066703.jpg?t=1658755287"
+    },
+    {
+      "title": "Total Food Service",
+      "feed_url": "https://totalfood.com/",
+      "website_url": "https://totalfood.com/",
+      "description": "Since 1990, Total Food Service has been serving the Metro New York foodservice industry, including restaurant operators, chefs, dealers, consultants, suppliers, and distributors. Each month, we deliver the latest news, insights, and interviews focused exclusively on the world's largest food service and hospitality capital of the word, Metro New York.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5100,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4871901.jpg?t=1612270533"
+    },
+    {
+      "title": "Not Eating Out in New York",
+      "feed_url": "https://noteatingoutinny.com/wp-admin/install.php",
+      "website_url": "https://noteatingoutinny.com/",
+      "description": "Cathy Erway has become the local expert on saving money and eating in, despite being surrounded by some of the best restaurants in the world. Her blog features a collection of original recipes, tips and cooking events with an emphasis on sustainability and locally-sourced ingredients. Erway has a radio show, 'Let's Eat In' on Heritage Radio Network and wrote The Art of Eating In: How I learned to Stop Spending and Love the Stove.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/360767.jpg?t=1612271007"
+    },
+    {
+      "title": "Sweetcycle \u00bb Recipes and Events",
+      "feed_url": "http://www.sweetcyclebrooklyn.com/recipes-1?format=rss",
+      "website_url": "http://www.sweetcyclebrooklyn.com/recipes",
+      "description": "Kate Zuckerman is a veteran NYC chef who cares deeply about what people eat, their health and the world around them. After years of working in the food industry, handling vegetables and fruits from all over the world, Kate is now focused on education and awareness about our precious food supply.",
+      "followers": {
+        "instagram": 606
+      },
+      "image_url": "https://i1.feedspot.com/5437034.jpg?t=1661852413"
+    },
+    {
+      "title": "Secret NYC \u00bb Food Drink",
+      "feed_url": "https://secretnyc.co/food-drink/feed/",
+      "website_url": "https://secretnyc.co/food-drink/",
+      "description": "Whether it's a Michelin-star spot or an intimate speakeasy, we're sharing everything you need to know about NYC's food scene. From can't-miss deals and delicious pop ups to food festivals and rooftop bars these guides are guaranteed to help you have a great dining experience. Secret NYC is the ultra-shareable online guide to news, events, and things to do in New York City.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 4600,
+        "instagram": 2300000
+      },
+      "image_url": "https://i1.feedspot.com/5437036.jpg?t=1661846497"
+    }
+  ]
+}

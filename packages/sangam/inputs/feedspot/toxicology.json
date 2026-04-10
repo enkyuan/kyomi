@@ -1,0 +1,62 @@
+{
+  "category": "Toxicology",
+  "source_url": "https://rss.feedspot.com/toxicology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Superior Toxicology & Wellness Blog",
+      "feed_url": "https://www.superiortoxicology.com/feed/",
+      "website_url": "https://www.superiortoxicology.com/blog/",
+      "description": "Features articles that have to do exclusively with Toxicology, Wellness, and related topics. Superior Toxicology provides services to pharma & biotech companies, expert witness in legal cases and personal drug profile evaluations to improve quality of life in users of multiple medications.",
+      "followers": {
+        "facebook": 326
+      },
+      "image_url": "https://i1.feedspot.com/5347142.jpg?t=1638261925"
+    },
+    {
+      "title": "The Toxicologist Today",
+      "feed_url": "http://thetoxicologisttoday.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://thetoxicologisttoday.blogspot.com/",
+      "description": "A modern science blog always with something for everyone who likes knowing more about their health, current research and above all Toxicology!",
+      "followers": {
+        "facebook": 365
+      },
+      "image_url": "https://i1.feedspot.com/4901518.jpg?t=1612866379"
+    },
+    {
+      "title": "The Dose Makes The Poison",
+      "feed_url": "http://dosemakespoison.blogspot.com/feeds/posts/default",
+      "website_url": "http://dosemakespoison.blogspot.com/",
+      "description": "The ramblings of a forensic toxicologist and drug chemist.",
+      "followers": {
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/4330517.jpg?t=1612867006"
+    },
+    {
+      "title": "Carolinas Electronic Compendium - Tox Blog",
+      "feed_url": "https://www.cmcedmasters.com/tox-blog/feed",
+      "website_url": "https://www.cmcedmasters.com/tox-blog",
+      "description": "Toxicology Blog authored by Dr. Chrissy Zauner.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4901558.jpg?t=1612869294"
+    },
+    {
+      "title": "Elite Diagnostics Blog",
+      "feed_url": "https://elitediagnostics.com/feed/",
+      "website_url": "https://elitediagnostics.com/blog/",
+      "description": "Stay up to date on all toxicology and clinical lab information. We provide the most updated news regarding how to run the most effective and compliant practice.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4901559.jpg?t=1612869202"
+    },
+    {
+      "title": "UMass Division of Medical Toxicology Blog",
+      "feed_url": "https://umasstox.com/blog/feed/",
+      "website_url": "https://umasstox.com/blog/",
+      "description": "We are committed to improving the future of toxicology through progressive research, clinical practice, and education. Follow us to keep up with articles on Medical Toxicology.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4901455.jpg?t=1612867060"
+    }
+  ]
+}

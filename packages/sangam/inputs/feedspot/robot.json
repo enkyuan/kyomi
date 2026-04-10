@@ -1,0 +1,725 @@
+{
+  "category": "Robot",
+  "source_url": "https://rss.feedspot.com/robot_rss_feeds",
+  "feeds": [
+    {
+      "title": "Robohub",
+      "feed_url": "https://robohub.org/feed/",
+      "website_url": "https://robohub.org/category/news/",
+      "description": "Robohub is a non-profit online communication platform that brings together experts in robotics research, start-ups, business, and education with news, views from around the world.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 23900
+      },
+      "image_url": "https://i1.feedspot.com/319475.jpg?t=1614944255"
+    },
+    {
+      "title": "Robotiq",
+      "feed_url": "https://blog.robotiq.com/rss.xml",
+      "website_url": "https://blog.robotiq.com/",
+      "description": "A blog about emerging applications in industrial and service robotics. Robotiq's mission is to free human hands from tedious tasks so companies and workers can focus where they truly create value.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 9500,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4567782.jpg?t=1614944266"
+    },
+    {
+      "title": "Unite.AI \u00bb Robotics",
+      "feed_url": "https://www.unite.ai/category/robotics/feed/",
+      "website_url": "https://www.unite.ai/category/robotics/",
+      "description": "Unite AI offers detailed analysis and news on the latest advancements in robotics, machine learning and AI technology.",
+      "followers": {
+        "facebook": 721,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5262264.jpg?t=1616764938"
+    },
+    {
+      "title": "New Atlas",
+      "feed_url": "https://newatlas.com/robotics/index.rss",
+      "website_url": "https://newatlas.com/robotics/",
+      "description": "The latest news and developments in the world of robotics by New Atlas.",
+      "followers": {
+        "facebook": 254200,
+        "twitter": 7700,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4569771.jpg?t=1614944277"
+    },
+    {
+      "title": "Roboticmagazine",
+      "feed_url": "http://www.roboticmagazine.com/feed",
+      "website_url": "http://www.roboticmagazine.com/",
+      "description": "Robotic Magazine is one of the most visited information and news websites about robots. Follow the latest developments on Robotic Magazine!",
+      "followers": {
+        "twitter": 938
+      },
+      "image_url": "https://i1.feedspot.com/3976863.jpg?t=1614947547"
+    },
+    {
+      "title": "RobotShop Blog",
+      "feed_url": "https://community.robotshop.com/rss",
+      "website_url": "https://community.robotshop.com/blog",
+      "description": "Read expert opinions, news, ethics and foresights on a varietyof robotics technology. The RobotShop Community is the ultimate community where you can learn about robotics, see what others have built, ask questions and get to know community members.",
+      "followers": {
+        "facebook": 56300,
+        "twitter": 16300,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4567748.jpg?t=1614944295"
+    },
+    {
+      "title": "Tech Xplore \u00bb Robotics",
+      "feed_url": "https://techxplore.com/rss-feed/robotics-news/",
+      "website_url": "https://techxplore.com/robotics-news/",
+      "description": "This section features the latest news on robotics, robots, robotics sciences, and technology science. Tech Xplore, a division of Science X Network, covers the latest engineering, electronics, and technology advances.",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/4567842.jpg?t=1629984666"
+    },
+    {
+      "title": "Make",
+      "feed_url": "https://makezine.com/category/technology/robotics/feed/",
+      "website_url": "https://makezine.com/category/technology/robotics/",
+      "description": "Magazine that celebrates your right to tweak, hack, and bend any technology to your own will. blog post covers 'The latest DIY ideas, techniques and tools in robotics, from building them to surviving the singularity.",
+      "followers": {
+        "facebook": 267600,
+        "twitter": 236100,
+        "instagram": 50100
+      },
+      "image_url": "https://i1.feedspot.com/4567879.jpg?t=1614944280"
+    },
+    {
+      "title": "The Robot Report",
+      "feed_url": "https://www.therobotreport.com/feed/",
+      "website_url": "https://www.therobotreport.com/",
+      "description": "The Robot Report delivers first-hand reports, and features news and stories focusing on general robotics, industrial robots, AI for robots, robot software, and mobile robots of all types. It covers the full range of innovations in robotics and intelligent systems, including the latest research and breakthroughs coming from universities and research institutions.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 31300,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4576760.jpg?t=1670238701"
+    },
+    {
+      "title": "RoboDK Blog",
+      "feed_url": "https://robodk.com/blog/feed/",
+      "website_url": "https://robodk.com/blog/",
+      "description": "RoboDK is a powerful and cost-effective simulator for industrial robots and robot programming. With RoboDK you can program robots directly from your computer and eliminate production downtime. In this blog, you'll get the latest news about RoboDK, industrial robots, simulation, and robot programming.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1800,
+        "instagram": 296
+      },
+      "image_url": "https://i1.feedspot.com/5276520.jpg?t=1620192864"
+    },
+    {
+      "title": "RoboticsTomorrow News",
+      "feed_url": "https://www.roboticstomorrow.com/rss/news",
+      "website_url": "https://www.roboticstomorrow.com/stream/news/",
+      "description": "A news and information resource for the Industrial Automation, Robots and Unmanned Vehicles Industry. Topics covered are Robotics, Robotics Industry, Robotics technology, Robotics Companies, Robotics conferences, industrial robots, events, and more.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4142984.jpg?t=1634122897"
+    },
+    {
+      "title": "Techman Robot Blog",
+      "feed_url": "https://www.tm-robot.com/en/feed/",
+      "website_url": "https://www.tm-robot.com/en/blog/",
+      "description": "Features articles that have to do exclusively with Robotics. Techman Robot is a leading collaborative robot and vision technologies company dedicated to improving the world of work through robotic applications.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 628,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5297737.jpg?t=1625048209"
+    },
+    {
+      "title": "Clearpath Robotics Blog",
+      "feed_url": "https://clearpathrobotics.com/feed/",
+      "website_url": "https://clearpathrobotics.com/blog/",
+      "description": "The Clearpath Blog is your home to compelling robotics research, news, tutorials, support resources, and announcements.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/5260963.jpg?t=1616587480"
+    },
+    {
+      "title": "Modular Robotics Blog",
+      "feed_url": "https://modrobotics.com/blog/feed/",
+      "website_url": "https://modrobotics.com/blog/",
+      "description": "Read more about the epic nature behind the design, engineering and manufacturing of Cubelets and MOSS from Modular Robotics.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 4300,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4567789.jpg?t=1614944313"
+    },
+    {
+      "title": "IEEE Spectrum \u00bb Robotics",
+      "feed_url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
+      "website_url": "https://spectrum.ieee.org/topic/robotics/",
+      "description": "All articles about Robotics from IEEE Spectrum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7898721.jpg?t=1744800323"
+    },
+    {
+      "title": "Geek+ Blog \u00bb Robotics",
+      "feed_url": "https://blog.geekplus.com/en/robotics-blog/rss.xml",
+      "website_url": "https://blog.geekplus.com/en/robotics-blog",
+      "description": "Robotic Academy provides robotic automation knowledge in the warehouse. The Academy offers the latest trend and fundamental robotic automation knowledge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282206.jpg?t=1711384441"
+    },
+    {
+      "title": "MassRobotics",
+      "feed_url": "https://www.massrobotics.org/news/feed/",
+      "website_url": "https://www.massrobotics.org/news/",
+      "description": "We Bring Robotics to Life.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/7282189.jpg?t=1711384353"
+    },
+    {
+      "title": "Amtec Solutions Group Blog",
+      "feed_url": "https://www.amtecsolutionsgroup.com/feed/",
+      "website_url": "https://www.amtecsolutionsgroup.com/robotics-blog/",
+      "description": "Robotics, Machining, Assemblies, Minitec",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282205.jpg?t=1711384319"
+    },
+    {
+      "title": "Productive Robotics Blog",
+      "feed_url": "https://www.productiverobotics.com/blog-feed.xml",
+      "website_url": "https://www.productiverobotics.com/blog",
+      "description": "Productive Robotics",
+      "followers": {
+        "facebook": 632,
+        "twitter": 148
+      },
+      "image_url": "https://i1.feedspot.com/7282198.jpg?t=1711383617"
+    },
+    {
+      "title": "Kawasaki Robotics Blog",
+      "feed_url": "https://kawasakirobotics.com/feed/",
+      "website_url": "https://kawasakirobotics.com/blog/",
+      "description": "Discover how Kawasaki's industrial robots are improving manufacturing processes and transforming industries.",
+      "followers": {
+        "facebook": 12700,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/7282203.jpg?t=1711384281"
+    },
+    {
+      "title": "Viam Blog",
+      "feed_url": "https://www.viam.com/post/rss.xml",
+      "website_url": "https://www.viam.com/blog",
+      "description": "Get the latest news about Viam, and the smart machine industry.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/7282191.jpg?t=1711447791"
+    },
+    {
+      "title": "EVS Robot Blog",
+      "feed_url": "https://www.evsint.com/feed/",
+      "website_url": "https://www.evsint.com/blogs/",
+      "description": "EVS TECH CO., LTD, an industrial robots and robot positioner&linear tracks supplier in China.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/7282192.jpg?t=1711383579"
+    },
+    {
+      "title": "Quasi Robotics Blog",
+      "feed_url": "https://www.quasi.ai/feed/",
+      "website_url": "https://www.quasi.ai/blog/",
+      "description": "Artificial Intelligence / Integrated Automation",
+      "followers": {
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/7282201.jpg?t=1711384017"
+    },
+    {
+      "title": "Robotnik Blog",
+      "feed_url": "https://robotnik.eu/feed/",
+      "website_url": "https://robotnik.eu/blog-en/",
+      "description": "Autonomous & Collaborative Mobile Robots",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 5300,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/7282207.jpg?t=1711383980"
+    },
+    {
+      "title": "Smart Robotics Blog",
+      "feed_url": "https://smart-robotics.io/feed/",
+      "website_url": "https://smart-robotics.io/blog/",
+      "description": "Your Pick & Place Partner",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/7282200.jpg?t=1711383895"
+    },
+    {
+      "title": "NVIDIA Blog \u00bb Robotics",
+      "feed_url": "https://blogs.nvidia.com/blog/category/robotics/feed/",
+      "website_url": "https://blogs.nvidia.com/blog/category/robotics/",
+      "description": "All latest articles about Robotics from NVIDIA Blog.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 2200000,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/7282190.jpg?t=1763631188"
+    },
+    {
+      "title": "Rover Robotics Blog",
+      "feed_url": "https://roverrobotics.com/blogs/news.atom",
+      "website_url": "https://roverrobotics.com/blogs/news",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/7282195.jpg?t=1711383599"
+    },
+    {
+      "title": "ScienceDaily \u00bb Robotics",
+      "feed_url": "https://www.sciencedaily.com/rss/computers_math/robotics.xml",
+      "website_url": "https://www.sciencedaily.com/news/computers_math/robotics/",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/1688961.jpg?t=1711450165"
+    },
+    {
+      "title": "MIT News \u00bb Robotics",
+      "feed_url": "https://news.mit.edu/topic/mitrobotics-rss.xml",
+      "website_url": "https://news.mit.edu/topic/robotics",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1400000,
+        "instagram": 972700
+      },
+      "image_url": "https://i1.feedspot.com/1495487.jpg?t=1711450690"
+    },
+    {
+      "title": "Robotics & Automation News",
+      "feed_url": "https://roboticsandautomationnews.com/feed/",
+      "website_url": "https://roboticsandautomationnews.com/tag/robot/",
+      "description": "Robotics and Automation News covers the robotics and automation industries around the world. We mainly concentrate on robotic and automation technologies in industrial sectors such as logistics and manufacturing.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4606449.jpg?t=1670239671"
+    },
+    {
+      "title": "The Guardian | Robots",
+      "feed_url": "https://www.theguardian.com/technology/robots/rss",
+      "website_url": "https://www.theguardian.com/technology/robots",
+      "description": "Latest news on Robots from The Guardian.",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000,
+        "instagram": 6200000
+      },
+      "image_url": "https://i1.feedspot.com/4567866.jpg?t=1614944288"
+    },
+    {
+      "title": "Dorna Robotics Blog",
+      "feed_url": "https://dorna.ai/feed/",
+      "website_url": "https://dorna.ai/blog/",
+      "description": "Stay fresh on modern advances and research in the field of robotics. You will find Dorna news, product launch announcements, and general discussions on robotics on this page. Dorna is a leading provider of robotic arms efficient for material handling applications.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7253421.jpg?t=1708003556"
+    },
+    {
+      "title": "FIRST Blog",
+      "feed_url": "https://www.firstinspires.org/robotics/frc/blog-rss",
+      "website_url": "https://www.firstinspires.org/robotics/frc/blog",
+      "description": "FIRST is a global robotics community preparing young people for the future and the world's leading youth-serving nonprofit advancing STEM education. This is your source of season information for the FIRST Robotics Competition (FRC).",
+      "followers": {
+        "facebook": 106000,
+        "twitter": 57200,
+        "instagram": 118600
+      },
+      "image_url": "https://i1.feedspot.com/5276519.jpg?t=1620193492"
+    },
+    {
+      "title": "RobotLAB Blog",
+      "feed_url": "https://www.robotlab.com/blog/rss.xml",
+      "website_url": "https://www.robotlab.com/blog",
+      "description": "RobotLAB is an award-winning company that sells robots to teachers that they then use as tools to enhance student engagement and bring learning to life. It is leading the Robotics market with an innovative approach that makes Robotics truly useful in the hands of companies. RobotLAB Blog has everything you need to know about robotics in education & businesses.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4808617.jpg?t=1610524320"
+    },
+    {
+      "title": "Asian Robotics Review",
+      "feed_url": "https://asianroboticsreview.com/feed",
+      "website_url": "https://asianroboticsreview.com/article-index-2019-2",
+      "description": "Asian Robotics Review is an online publication offering news, analysis, research and opinion on the global technology and business issues of robotics, robotics-driven automation, and artificial intelligence (AI) as it applies to and affects Asia (East Asia, Southeast Asia, Asia/Pacific (Australia & New Zealand), and India). Literally from Hokkaido to Chennai; and most prominently the epicenter of the Fourth Industrial Revolution, East Asia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5078547.jpg?t=1629986326"
+    },
+    {
+      "title": "Collaborative Robotics Trends",
+      "feed_url": "https://www.cobottrends.com/feed/",
+      "website_url": "https://www.cobottrends.com/category/news/",
+      "description": "Collaborative Robotics Trends, produced by the publishers of The Robot Report, is the essential guide for users of collaborative robot arms and mobile robots. Collaborative Robotics Trends provides news and analysis about emerging collaborative robotics capabilities, powerful enabling technologies, cobot applications, and insights into future innovations.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 460
+      },
+      "image_url": "https://i1.feedspot.com/5276521.jpg?t=1620193806"
+    },
+    {
+      "title": "AIRoboticsPro",
+      "feed_url": "https://airoboticsprof.blogspot.com/feeds/posts/default",
+      "website_url": "https://airoboticsprof.blogspot.com/",
+      "description": "We can make Robots as smart as a human by using a cloud brain. Helpful humanoid robots will be affordable for homes by 2025. This will be achieved by cloud-connected robots, where diverse models of robots share a brain hosted on a cloud platform. In this blog, we will discuss such topics. You will be provided with the latest information on robotics and artificial intelligence.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5194667.jpg?t=1599566028"
+    },
+    {
+      "title": "Vision & Robotics",
+      "feed_url": "http://vision-robotics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://vision-robotics.blogspot.com/",
+      "description": "Visionary trends in robotics and beyond. Latest news, videos, articles, talks and other related material in the area of robotics.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4567906.jpg?t=1711455307"
+    },
+    {
+      "title": "A&R Technology",
+      "feed_url": "https://automationarblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://automationarblog.blogspot.com/",
+      "description": "A&R Technology is one of the world's leading manufacturers and suppliers of industrial robots, Collaborative Robots and Scara Robot robots.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5064023.jpg?t=1614947742"
+    },
+    {
+      "title": "ServoDriven",
+      "feed_url": "https://servodriven.com/feed/",
+      "website_url": "https://servodriven.com/",
+      "description": "ServoDriven.com is a community website for robotics.",
+      "followers": {
+        "facebook": 267
+      },
+      "image_url": "https://i1.feedspot.com/5427892.jpg?t=1659439811"
+    },
+    {
+      "title": "Intuition Robotics",
+      "feed_url": "https://blog.intuitionrobotics.com/rss.xml",
+      "website_url": "https://blog.intuitionrobotics.com/",
+      "description": "Read our blog to learn more about digital companion technology, including cognitive computing, smart mobility, AI, HMI, NLP, and more. The company was founded by former corporate executives and entrepreneurs who previously founded and managed CloudBand, a disruptive cloud telecom venture within Alcatel-Lucent.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1400,
+        "instagram": 523
+      },
+      "image_url": "https://i1.feedspot.com/4569617.jpg?t=1614946422"
+    },
+    {
+      "title": "Classroom Robotics",
+      "feed_url": "http://classroomrobotics.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://classroomrobotics.blogspot.com/",
+      "description": "Content for teachers and students about robotics in our world. Is robotics the Perfect Platform for 21st Century Learning? Read on!.. Would you like your student robotics activities presented here?",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4567904.jpg?t=1614947784"
+    },
+    {
+      "title": "DIY Robotics Blog",
+      "feed_url": "https://diy-robotics.com/feed/",
+      "website_url": "https://diy-robotics.com/blog/",
+      "description": "Welcome to the DIY-Robotics blog about industrial robotics. Keep up to date with the latest news and trends in industrial robotics. DIY-Robotics offers a range of pre-engineered, mobile and modular industrial robotic cells, and is also a community of engineers and programmers who want to build the largest open-source knowledge base for DIY industrial robotics.",
+      "followers": {
+        "facebook": 746
+      },
+      "image_url": "https://i1.feedspot.com/5339679.jpg?t=1635925669"
+    },
+    {
+      "title": "Learn Robotics Blog",
+      "feed_url": "https://www.learnrobotics.org/feed/",
+      "website_url": "https://www.learnrobotics.org/blog/",
+      "description": "Upgrade Your Future with Robotics",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 74,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/7282204.jpg?t=1711384736"
+    },
+    {
+      "title": "Robots For Roboticists Blog",
+      "feed_url": "https://www.robotsforroboticists.com/feed/",
+      "website_url": "https://www.robotsforroboticists.com/",
+      "description": "Robotics Blog for the Professional Roboticist",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282210.jpg?t=1711384711"
+    },
+    {
+      "title": "AWS Blog \u00bb Robotics",
+      "feed_url": "https://aws.amazon.com/blogs/robotics/feed/",
+      "website_url": "https://aws.amazon.com/blogs/robotics/",
+      "description": "Just another Amazon Web Services site",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000,
+        "instagram": 673000
+      },
+      "image_url": "https://i1.feedspot.com/5263035.jpg?t=1711384611"
+    },
+    {
+      "title": "SoftBank Robotics Blog",
+      "feed_url": "https://emea.softbankrobotics.com/blog/rss.xml",
+      "website_url": "https://emea.softbankrobotics.com/blog",
+      "description": "Keep up with the latest insights and updates on robotics and automation from SoftBank Robotics America.",
+      "followers": {
+        "twitter": 477,
+        "instagram": 114
+      },
+      "image_url": "https://i1.feedspot.com/7282208.jpg?t=1711384559"
+    },
+    {
+      "title": "Ally Robotics Blog",
+      "feed_url": "https://allyrobotics.com/feed/",
+      "website_url": "https://allyrobotics.com/blog/",
+      "description": "Enhancing the Human Experience",
+      "followers": {
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/7282209.jpg?t=1711384468"
+    },
+    {
+      "title": "Bear Robotics Blog",
+      "feed_url": "https://www.bearrobotics.ai/blog?format=rss",
+      "website_url": "https://www.bearrobotics.ai/blog",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 729
+      },
+      "image_url": "https://i1.feedspot.com/7282193.jpg?t=1711383586"
+    },
+    {
+      "title": "Robotic Automation Systems Blog",
+      "feed_url": "https://www.roboticautomationsystems.com/company/blogs/feed/",
+      "website_url": "https://www.roboticautomationsystems.com/company/blogs/",
+      "description": "Robotic Automation Systems is a leader and innovator in integrating automation and robotics. Here are the latest news and robotics questions answered.",
+      "followers": {
+        "facebook": 20
+      },
+      "image_url": "https://i1.feedspot.com/7282188.jpg?t=1711384220"
+    },
+    {
+      "title": "SHERPA Mobile Robotics Blog",
+      "feed_url": "https://www.sherpa-mr.com/en/blog-feed.xml",
+      "website_url": "https://www.sherpa-mr.com/en/le-blog-de-la-robotique-mobile",
+      "description": "Concepteur et fabricant de robots mobiles autonomes - Made In France",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282194.jpg?t=1711384062"
+    },
+    {
+      "title": "Warehouse Robotics Blog",
+      "feed_url": "https://www.primerobotics.com/feed/",
+      "website_url": "https://www.primerobotics.com/blog/",
+      "description": "Warehouse Automation",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282197.jpg?t=1711448744"
+    },
+    {
+      "title": "The Robot Report",
+      "feed_url": "https://www.therobotreport.com/feed/",
+      "website_url": "https://www.therobotreport.com/",
+      "description": "Robotics Business Review covers the global automation ecosystem to help industry decision makers successfully build, invest in, and use robots, artificial intelligence, and unmanned systems. Engineers, managers, and end users will better understand how to advance their businesses through our analysis, research, and events.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 31300,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4403079.jpg?t=1614947521"
+    },
+    {
+      "title": "ZDNET \u00bb Artificial Intelligence",
+      "feed_url": "https://www.zdnet.com/topic/artificial-intelligence/",
+      "website_url": "https://www.zdnet.com/topic/artificial-intelligence/",
+      "description": "On the threshold of our robotic future, Greg Nichols dishes robot industry news, opinions, and projections. ZDNet's breaking news, analysis, and research keeps business technology professionals in touch with the latest IT trends, issues and events with robotics.",
+      "followers": {
+        "twitter": 456200,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4569621.jpg?t=1614944273"
+    },
+    {
+      "title": "PAL Robotics Blog",
+      "feed_url": "https://pal-robotics.com/blog/",
+      "website_url": "https://pal-robotics.com/blog/",
+      "description": "PAL Robotic's is a company that makes humanoid service robots. Our blog offers you the lastest news in events, robotics and gives you a look inside our company.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 14200,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4567924.jpg?t=1711433391"
+    },
+    {
+      "title": "SingularityHub \u00bb Robotics",
+      "feed_url": "https://singularityhub.com/feed/",
+      "website_url": "https://singularityhub.com/category/robotics/",
+      "description": "SingularityHub chronicles technological progress by highlighting the breakthroughs, players, and issues shaping the future as well as supporting a global community of smart, passionate, action-oriented people who want to change the world. Read this blog for the latest significant advancements in robots and robotics. We also report on the far-reaching impacts of robotics on society & humanity.",
+      "followers": {
+        "facebook": 157600,
+        "twitter": 113900,
+        "instagram": 23000
+      },
+      "image_url": "https://i1.feedspot.com/5276517.jpg?t=1620194288"
+    },
+    {
+      "title": "WeRobotics Blog",
+      "feed_url": "https://werobotics.org/articles/feed.rss",
+      "website_url": "https://werobotics.org/blog/",
+      "description": "We co-create and support a growing network of independent & locally-led knowledge hubs across Africa, Asia, Latin America, and beyond to build on existing expertise in drones, robotics, data, and AI. Follow us and stay in touch with the latest robotics news by WeRobotics.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 5100,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5276527.jpg?t=1620192645"
+    },
+    {
+      "title": "Hudson Blog",
+      "feed_url": "https://hudsonlabautomation.com/feed/",
+      "website_url": "https://hudsonlabautomation.com/blog/",
+      "description": "Hudson Robotics produces robotic instruments to solve specific lab automation needs in the areas of microplate and liquid handling. We also offer complete work cells in which our products are integrated with third-party equipment to solve complex laboratory protocols. Follow us & read the latest from Hudson Robotics.",
+      "followers": {
+        "twitter": 187
+      },
+      "image_url": "https://i1.feedspot.com/5276522.jpg?t=1620207361"
+    },
+    {
+      "title": "Frontiers \u00bb Robotics and AI",
+      "feed_url": "https://www.frontiersin.org/news/category/robotics-and-ai/",
+      "website_url": "https://www.frontiersin.org/news/category/robotics-and-ai/",
+      "description": "Frontiers, an open access publisher, publishes several of the most-cited journals in the world. blog post covers robotics and AI.",
+      "followers": {
+        "twitter": 90200,
+        "instagram": 64900
+      },
+      "image_url": "https://i1.feedspot.com/4569607.jpg?t=1711455849"
+    },
+    {
+      "title": "Agility Robotics",
+      "feed_url": "https://www.agilityrobotics.com/about/press",
+      "website_url": "https://www.agilityrobotics.com/about/press",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 20900
+      },
+      "image_url": "https://i1.feedspot.com/7282196.jpg?t=1711383838"
+    },
+    {
+      "title": "Universal Robots Blog",
+      "feed_url": "https://www.universal-robots.com/blog/",
+      "website_url": "https://www.universal-robots.com/blog/",
+      "description": "Robotics within Reach - that's what this blog is all about. Here you'll find inspiring stories on how collaborative robots - or cobots - are lowering the automation barrier. And learn how the UR cobots can benefit your business.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 26900,
+        "instagram": 114900
+      },
+      "image_url": "https://i1.feedspot.com/4567765.jpg?t=1617795828"
+    },
+    {
+      "title": "RoboGlobal Insights",
+      "feed_url": "https://insights.roboglobal.com/rss.xml",
+      "website_url": "https://www.automationexpo.com/article/",
+      "description": "ROBO Global is an index, advisory, and research company focused on helping investors capture the unique opportunities of fast-growing robotics, automation, and artificial intelligence (RAAI) companies around the world. Read our blog to explore the rapidly evolving universe of Robotics, Automation & Artificial Intelligence.",
+      "followers": {
+        "facebook": 309
+      },
+      "image_url": "https://i1.feedspot.com/5276518.jpg?t=1620194002"
+    },
+    {
+      "title": "Into Robotics",
+      "feed_url": "https://intorobotics.com/feed/",
+      "website_url": "https://intorobotics.com/",
+      "description": "IntoRobotics is a magazine about intelligent and connected robots with an audience of DIY makers, hackers, designers, and perfectionists in robotics.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4567770.jpg?t=1614944302"
+    },
+    {
+      "title": "Gecko Robotics Blog",
+      "feed_url": "https://www.geckorobotics.com/resources/blog",
+      "website_url": "https://www.geckorobotics.com/resources/blog",
+      "description": "Gecko Robotics (Gecko) makes inspection robots for industrial services, starting with inspections. Our technology and services perform safe, fast, and accurate inspections on civilizations' most critical infrastructure. Read our blog for the latest updates in industrial robotics and automation.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 1700,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5276523.jpg?t=1620193095"
+    },
+    {
+      "title": "Symbotic Blog",
+      "feed_url": "https://www.symbotic.com/innovation-insights/blog/",
+      "website_url": "https://www.symbotic.com/innovation-insights/blog/",
+      "description": "Veo Robotics is transforming manufacturing with products that incorporate advanced computer vision, 3D sensing, and AI. Our first product lets high-performance industrial robots work collaboratively with people to enable much more flexible, productive, and efficient manufacturing work cells.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5276525.jpg?t=1620192528"
+    },
+    {
+      "title": "Robo Wunderkind Blog",
+      "feed_url": "https://blog.robowunderkind.com/feed/",
+      "website_url": "https://www.robowunderkind.com/blog",
+      "description": "Robo Wunderkind builds tools that change the way kids play, learn, and create with tech in school and at home. Our award-winning robotics kits empower kids to learn to code through the joy of play.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4569758.jpg?t=1617797921"
+    },
+    {
+      "title": "Robotic Blog",
+      "feed_url": "https://robotic.blog/feed/",
+      "website_url": "https://www.intermodalics.ai/robotics-blog",
+      "description": "Blogging about Robots, Drones, Electronics, AI and Robotics",
+      "followers": {
+        "facebook": 11,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/7282199.jpg?t=1711383622"
+    },
+    {
+      "title": "Relay Robotics Blog",
+      "feed_url": "https://www.relayrobotics.com/blog?format=rss",
+      "website_url": "http://relayrobotics.com/blog/",
+      "description": "Blog Articles about Relay and Our Delivery Robots Read all about Relay delivery robots in action, success stories and how our technology keeps evolving.",
+      "followers": {
+        "facebook": 44,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/7282202.jpg?t=1711383634"
+    }
+  ]
+}

@@ -26,6 +26,12 @@ export async function resolveRemoteFeed(rawUrl: string): Promise<ResolvedRemoteF
 
   const fetched = await fetchFeedDocument(initial.href);
   if (!fetched.ok) {
+    if (fetched.code === "BLOCKED_URL") {
+      throw new AppError(fetched.error || "Invalid feed URL", {
+        status: 400,
+        code: "FEED_URL_FORBIDDEN",
+      });
+    }
     throw new AppError(fetched.error || "Could not fetch feed", {
       status: 503,
       code: "FEED_FETCH_FAILED",

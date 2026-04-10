@@ -1,0 +1,39 @@
+{
+  "category": "UK Down Syndrome",
+  "source_url": "https://rss.feedspot.com/uk_down_syndrome_rss_feeds",
+  "feeds": [
+    {
+      "title": "Coraline & Us Blog",
+      "feed_url": "https://www.coralineandus.com/blog?format=RSS",
+      "website_url": "https://www.coralineandus.com/blog",
+      "description": "Liz Arriens shares her journey of growth. After the birth of her daughter Coraline in 2017, Liz and her husband Kevin discovered unexpectedly within hours that Coraline has Down's Syndrome and two holes in the heart. Through this blog, Liz shares the positive life wisdom she has gained through her daughter.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4915698.jpg?t=1620370018"
+    },
+    {
+      "title": "awesomeaudreyemily",
+      "feed_url": "https://awesomeaudreyemily.com/feed/",
+      "website_url": "https://awesomeaudreyemily.com/",
+      "description": "This blog is the story of an elf with Down's Syndrome and her family.",
+      "followers": {
+        "twitter": 249
+      },
+      "image_url": "https://i1.feedspot.com/4687497.jpg?t=1618983906"
+    },
+    {
+      "title": "Baby Brain Memoirs \u00bb Down's Syndrome Awareness",
+      "feed_url": "https://babybrainmemoirs.com/category/t21/feed/",
+      "website_url": "https://babybrainmemoirs.com/category/t21/",
+      "description": "A British born Indian mummy to two - one who happens to have an extra chromosome!",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 2000,
+        "instagram": 15700
+      },
+      "image_url": "https://i1.feedspot.com/4915702.jpg?t=1620370027"
+    }
+  ]
+}

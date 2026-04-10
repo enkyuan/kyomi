@@ -1,0 +1,48 @@
+{
+  "category": "UK Book Marketing",
+  "source_url": "https://rss.feedspot.com/uk_book_marketing_rss_feeds",
+  "feeds": [
+    {
+      "title": "Self Published Author",
+      "feed_url": "https://www.selfpublishedauthor.com/rss.xml",
+      "website_url": "https://www.selfpublishedauthor.com/",
+      "description": "Here at Self Published Author.com, we offer tools, advice, and resources to help you through the publishing process. Bowker is the official ISBN agency in the US and Australia. We're excited about authors taking the publishing process into their own hands, and we're here to help however you need it.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4821545.jpg?t=1610703846"
+    },
+    {
+      "title": "Gina Lucia Blog",
+      "feed_url": "https://ginalucia.co.uk/blog/feed/",
+      "website_url": "https://ginalucia.co.uk/blog/",
+      "description": "Author marketing made simple. I'm Gina, an expert in online marketing for authors. My 'thing' is teaching authors like you how to sell more books without that marketing stuff taking over your life. Market less, stress less & sell more books.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4908118.jpg?t=1614062258"
+    },
+    {
+      "title": "The Creative Penn Blog",
+      "feed_url": "https://www.thecreativepenn.com/blog/feed/",
+      "website_url": "https://www.thecreativepenn.com/category/creativity/",
+      "description": "I'm Joanna. I love books and since you're here, I guess you do too! This site is for writers just starting out in need of craft advice, as well as for authors further ahead on the journey looking for business help and a glimpse into the future of creativity.I've been sharing my writing and publishing experience since 2008 so you can learn from my mistakes and be more successful in your creative life.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 82400,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4819145.jpg?t=1610798308"
+    },
+    {
+      "title": "Neetsmarketing Blog",
+      "feed_url": "https://www.neetsmarketingblog.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.neetsmarketingblog.com/",
+      "description": "A blog on social media for writers and book marketing, by Anita Chapman.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 6900,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4822805.jpg?t=1610798670"
+    }
+  ]
+}

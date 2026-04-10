@@ -1,0 +1,65 @@
+{
+  "category": "Endocrinology",
+  "source_url": "https://rss.feedspot.com/endocrinology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Endocrine News",
+      "feed_url": "https://endocrinenews.endocrine.org/feed/",
+      "website_url": "https://endocrinenews.endocrine.org/",
+      "description": "Endocrine News is a monthly news and feature magazine published by the Endocrine Society as a benefit for members and other interested parties. We unite, lead, and grow the global endocrine community to accelerate scientific breakthroughs and improve health worldwide.",
+      "followers": {
+        "facebook": 40500,
+        "twitter": 31800
+      },
+      "image_url": "https://i1.feedspot.com/4977870.jpg?t=1622027157"
+    },
+    {
+      "title": "Endocrinology Advisor",
+      "feed_url": "https://www.endocrinologyadvisor.com/feed/",
+      "website_url": "https://www.endocrinologyadvisor.com/",
+      "description": "Endocrinology Advisor is an online resource that provides health care professionals with comprehensive information on important principles of care in endocrinology as well as up-to-date clinical news on the diagnosis and treatment of endocrine conditions.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4977924.jpg?t=1622027193"
+    },
+    {
+      "title": "Endocrine Ethics Blog",
+      "feed_url": "http://endocrineethicsblog.org/feed/",
+      "website_url": "http://endocrineethicsblog.org/",
+      "description": "Endocrine Ethics Blog is about the intersection of bioethics and endocrinology. Created by M. Sara Rosenthal, Ph.D., a bioethicist who has published widely on endocrine ethics issues, this blog is designed to provide short commentaries to raise ethical questions and issues.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4977889.jpg"
+    },
+    {
+      "title": "Hormones Demystified",
+      "feed_url": "https://hormonesdemystified.com/feed/",
+      "website_url": "https://hormonesdemystified.com/",
+      "description": "A blog explaining about the hormones. Subscribe to this blog and receive notifications of new posts from Hormones Demystified.",
+      "followers": {
+        "twitter": 446
+      },
+      "image_url": "https://i1.feedspot.com/4977878.jpg?t=1622027401"
+    },
+    {
+      "title": "Insulearning with Antonia",
+      "feed_url": "https://insulearning.com/feed/",
+      "website_url": "https://touchendocrinology.com/",
+      "description": "I have recently been diagnosed as being Type 1 Diabetic hence why I have set up Insulearning with Antonia to share my Type 1 Diabetes journey with you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5170766.jpg?t=1622027316"
+    },
+    {
+      "title": "touch ENDOCRINOLOGY Journal",
+      "feed_url": "https://touchendocrinology.com/feed/",
+      "website_url": "https://touchendocrinology.com/",
+      "description": "European Endocrinology and US Endocrinology are peer-reviewed, open access, bi-annual journals specializing in the publication of balanced and comprehensive review articles written by leading authorities to address the most important and salient developments in the field of endocrinology.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4977921.jpg?t=1622027179"
+    }
+  ]
+}

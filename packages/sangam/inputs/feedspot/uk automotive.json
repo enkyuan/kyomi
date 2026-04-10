@@ -1,0 +1,50 @@
+{
+  "category": "UK Automotive",
+  "source_url": "https://rss.feedspot.com/uk_automotive_rss_feeds",
+  "feeds": [
+    {
+      "title": "Automotive Blog",
+      "feed_url": "https://automotiveblog.co.uk/feed/",
+      "website_url": "https://automotiveblog.co.uk/",
+      "description": "Automotive Blog brings you the latest news, car reviews and information on the automotive industry.",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 4100,
+        "instagram": 405
+      },
+      "image_url": "https://i1.feedspot.com/4761937.jpg?t=1608620448"
+    },
+    {
+      "title": "Automotive World",
+      "feed_url": "https://www.automotiveworld.com/feed/",
+      "website_url": "https://www.automotiveworld.com/",
+      "description": "Automotive World is a leading provider of automotive industry information. Our news, analysis, research and forecasts have been informing the decisions of automotive stakeholders, including all of the world's major vehicle manufacturers, since 1992.",
+      "followers": {
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4762225.jpg?t=1608620376"
+    },
+    {
+      "title": "Anything Motor",
+      "feed_url": "http://anythingmotor.com/feed",
+      "website_url": "http://anythingmotor.com/",
+      "description": "Anything Motor is a UK car blog and automotive news portal where you will find the biggest stories in the industry, reviews and motorsport reports.",
+      "followers": {
+        "facebook": 508,
+        "twitter": 447
+      },
+      "image_url": "https://i1.feedspot.com/4910359.jpg?t=1620047976"
+    },
+    {
+      "title": "JustAuto",
+      "feed_url": "https://www.just-auto.com/alerts/rssarticle.aspx",
+      "website_url": "https://www.just-auto.com/",
+      "description": "Get expert automotive industry analysis from just-auto.com. Read the latest news, market research and exclusive reports from the global auto industry.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4762052.jpg?t=1608620408"
+    }
+  ]
+}

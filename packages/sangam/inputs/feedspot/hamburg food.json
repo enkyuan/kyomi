@@ -1,0 +1,117 @@
+{
+  "category": "Hamburg Food",
+  "source_url": "https://rss.feedspot.com/hamburg_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hamburg is cooking!",
+      "feed_url": "https://hamburgkocht.blogspot.com/feeds/posts/default",
+      "website_url": "https://hamburgkocht.blogspot.com/",
+      "description": "A Blog of a Hamburg hobby cook around cooking, eating, drinking and whatever else is part of life.",
+      "followers": {
+        "facebook": 286,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/2035235.jpg?t=1619501243"
+    },
+    {
+      "title": "FeiertaGlich Blog",
+      "feed_url": "https://feiertaeglich.de/feed/",
+      "website_url": "https://feiertaeglich.de/blog/",
+      "description": "My name is Sarah, I'm a designer, and I'm living and working in Hamburg, Germany. With my blog, I'm looking for Recipes, inspirations, and suggestions, or all the big and small happy moments in our all day life.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 119,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/4702324.jpg?t=1754629312"
+    },
+    {
+      "title": "Tinastausendschon",
+      "feed_url": "https://www.tinastausendschoen.de/feed/",
+      "website_url": "https://www.tinastausendschoen.de/",
+      "description": "Tinastausendschon is the food blog with over 350 delicious, sure-fire, and sophisticated recipes. Great food photography is also included.",
+      "followers": {
+        "facebook": 13100,
+        "instagram": 75700
+      },
+      "image_url": "https://i1.feedspot.com/4702331.jpg?t=1619501258"
+    },
+    {
+      "title": "Foodfreak",
+      "feed_url": "https://foodfreak.de/feed/",
+      "website_url": "https://foodfreak.de/",
+      "description": "The adventures of a Foodie in Hamburg and the World",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4693571.jpg?t=1619501336"
+    },
+    {
+      "title": "The Vegetarian Diaries",
+      "feed_url": "https://vegetarian-diaries.de/feed/",
+      "website_url": "https://vegetarian-diaries.de/",
+      "description": "Vegan & Vegetarian Recipes, Tips on Vegetarian Restaurants & Veggie Guides, Food Science - Physical & Mathematical Aspects in the Kitchen and Much More by Arne a Hamburg based Food blogger.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 328,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4701978.jpg?t=1619501222"
+    },
+    {
+      "title": "hafenmaedchen Food",
+      "feed_url": "http://hafenmaedchen.de/category/food/feed/",
+      "website_url": "http://hafenmaedchen.de/category/food/",
+      "description": "I blog about food, DIY, lifestyle and, of course, Hamburg. I present a monthly favorite, which can be a shop or a caf\u00e9 in Hamburg and the surrounding area. Recipes and suggestions are regularly shared.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 935,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4701813.jpg?t=1619501236"
+    },
+    {
+      "title": "Hamburger Deern",
+      "feed_url": "https://hamburgerdeernblog.com/feed/",
+      "website_url": "https://hamburgerdeernblog.com/",
+      "description": "What is going on here is quite easy to explain: For delicious food. And around Hamburg. Why? Because my whole life revolves around it. I'll show you delicious recipes and exciting people, give you great gastro-tips, and prepare your children's birthday or your party .",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4701806.jpg?t=1619501366"
+    },
+    {
+      "title": "It's a Coco life - Food",
+      "feed_url": "https://coco-collmann.de/food/feed/",
+      "website_url": "https://coco-collmann.de/food/",
+      "description": "It's a Coco life is about a Healthy Lifestyle: fitness, food and motivation, tips and tricks.n.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 85
+      },
+      "image_url": "https://i1.feedspot.com/4702358.jpg?t=1619501248"
+    },
+    {
+      "title": "Kitchen Guerilla",
+      "feed_url": "https://www.kitchenguerilla.com/feed/",
+      "website_url": "https://www.kitchenguerilla.com/",
+      "description": "We are a mobile cooking unit. We hunt unusual venues from Hamburg to Paris and offer culinary experience in an out-of-the-ordinary atmosphere.",
+      "followers": {
+        "facebook": 31400,
+        "twitter": 1400,
+        "instagram": 16100
+      },
+      "image_url": "https://i1.feedspot.com/4701803.jpg"
+    },
+    {
+      "title": "Typisch Hamburch - Delights",
+      "feed_url": "https://typisch-hamburch.de/category/koestlichkeiten/feed/",
+      "website_url": "https://typisch-hamburch.de/category/koestlichkeiten/",
+      "description": "We report on the most popular places, current events, Hamburg specialties and shopping tips. Things that are 'typical Hamburch'.",
+      "followers": {
+        "facebook": 66300,
+        "twitter": 5100,
+        "instagram": 84400
+      },
+      "image_url": "https://i1.feedspot.com/4701840.jpg?t=1619501225"
+    }
+  ]
+}

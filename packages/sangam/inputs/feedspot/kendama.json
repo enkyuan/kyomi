@@ -1,0 +1,75 @@
+{
+  "category": "Kendama",
+  "source_url": "https://rss.feedspot.com/kendama_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sweets Kendamas Blog",
+      "feed_url": "https://sweetskendamas.com/blogs/blog.atom",
+      "website_url": "https://sweetskendamas.com/blogs/blog",
+      "description": "Sweets Kendamas is a custom Kendama company based out of Minneapolis, MN. We have specialization in Hand-painting Kendamas and High quality hand-painted Kendamas since 2010. Follow us for the latest updates from Sweets Kendamas and the world of Kendama.",
+      "followers": {
+        "facebook": 47500,
+        "twitter": 9400,
+        "instagram": 122000
+      },
+      "image_url": "https://i1.feedspot.com/5040334.jpg?t=1622462692"
+    },
+    {
+      "title": "Kendama Europe Blog",
+      "feed_url": "https://www.kendama.de/en/blog/?sRss=1/feed",
+      "website_url": "https://www.kendama.de/en/blog/",
+      "description": "Kendama Europe is constantly developing new Kendama models and innovations for the market by promoting and pushing the Kendama to the markets Follow to read articles on Kendama.",
+      "followers": {
+        "facebook": 7900,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5039852.jpg?t=1622462699"
+    },
+    {
+      "title": "Kendama USA",
+      "feed_url": "http://kendamausa.com/feed/",
+      "website_url": "https://kendamausa.com/",
+      "description": "Kendama USA is America's original and most trusted Kendama source. It creates some of the best Kendamas on the planet. Follow to keep up with new/latest updates from Kendama USA.",
+      "followers": {
+        "facebook": 39400,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5039847.jpg?t=1622462703"
+    },
+    {
+      "title": "YoYoExpert \u00bb Kendama",
+      "feed_url": "https://yoyoexpert.com/blog/category/kendama/feed/",
+      "website_url": "https://yoyoexpert.com/blog/category/kendama/",
+      "description": "Learn more about kendamas - its history, types, choosing a good kendama, pro models used, latest kendamas and many more at the YoYo Expert.",
+      "followers": {
+        "facebook": 25700,
+        "twitter": 5600,
+        "instagram": 23200
+      },
+      "image_url": "https://i1.feedspot.com/5039728.jpg?t=1622462707"
+    },
+    {
+      "title": "Cereal Kendama Blog",
+      "feed_url": "https://cerealkendama.com/blogs/news.atom",
+      "website_url": "https://cerealkendama.com/blogs/news",
+      "description": "Cereal Kendama Blog. Features the latest news and updates on Kendama and related topics. Cereal Kendama is a Global Kendama brand based in Singapore.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 70,
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/5333168.jpg?t=1634620701"
+    },
+    {
+      "title": "Honed Media Blog",
+      "feed_url": "https://honedmedia.com/feed/",
+      "description": "The only kendama blog where it's not all about the tricks. We stay up to date on what's newin the world of kendama and offer content centered around kendama culture.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 57,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5039726.jpg?t=1622462695"
+    }
+  ]
+}

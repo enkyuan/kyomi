@@ -1,0 +1,100 @@
+{
+  "category": "Milwaukee Music",
+  "source_url": "https://rss.feedspot.com/milwaukee_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Breaking And Entering",
+      "feed_url": "https://breakingandentering.net/feed/",
+      "website_url": "https://breakingandentering.net/category/music/milwaukee/",
+      "description": "Breaking And Entering is your guide to Milwaukee's music scene and beyond. Find new music, as well as interviews, concert reviews, and much more.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 3500,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5551688.jpg?t=1682578429"
+    },
+    {
+      "title": "EAST SIDE VIBES",
+      "feed_url": "https://eastsidevibess.com/feed/",
+      "website_url": "https://eastsidevibess.com/category/music/",
+      "description": "Welcome to the East Side Vibes blog! This site will be covering all types of music, New or classic, with a focus on independent or local artists from the Midwest! Keep up with the latest music releases and get interesting song recommendations. Get to know about rising artists and announcements from the best in the industry.",
+      "followers": {
+        "twitter": 52,
+        "instagram": 438
+      },
+      "image_url": "https://i1.feedspot.com/5551683.jpg?t=1682578428"
+    },
+    {
+      "title": "OnMilwaukee \u00bb Music",
+      "feed_url": "https://onmilwaukee.com/on/music.rss",
+      "website_url": "https://onmilwaukee.com/on/music",
+      "description": "OnMilwaukee is a highly engaged, all-digital, award-winning entertainment publication, which illuminates everything from local personalities, news, and events, to national pop culture moments. The team of 20 committed professionals is passionate and committed to delivering great stories with cutting-edge presentations.",
+      "followers": {
+        "facebook": 111800,
+        "twitter": 95800,
+        "instagram": 76500
+      },
+      "image_url": "https://i1.feedspot.com/5551689.jpg?t=1682578424"
+    },
+    {
+      "title": "Milwaukee Magazine \u00bb Music",
+      "feed_url": "https://www.milwaukeemag.com/category/style/music/feed/",
+      "website_url": "https://www.milwaukeemag.com/category/style/music/",
+      "description": "Milwaukee Magazine's spirited coverage of issues, personalities, and events has made it one of the most honored city magazines in the United States, with more than 250 national and local awards to its credit. But their real goal is to make a difference in Milwaukee.",
+      "followers": {
+        "facebook": 35500,
+        "twitter": 60100,
+        "instagram": 53600
+      },
+      "image_url": "https://i1.feedspot.com/5551687.jpg?t=1682578423"
+    },
+    {
+      "title": "Shepherd Express \u00bb Music",
+      "feed_url": "https://shepherdexpress.com/music/index.rss",
+      "website_url": "https://shepherdexpress.com/music",
+      "description": "For 35 years the Shepherd Express has been Milwaukee's voice for news, events, and culture. At ShepherdExpress.com, we bring the functions of participatory media to familiar features from the Shepherd Express plus additional commentary by our most popular writers and opportunities for readers to network and share their own opinions.",
+      "followers": {
+        "facebook": 31000,
+        "twitter": 19600,
+        "instagram": 15700
+      },
+      "image_url": "https://i1.feedspot.com/5551685.jpg?t=1682578423"
+    },
+    {
+      "title": "FM106.1 \u00bb Music",
+      "feed_url": "https://fm106.iheart.com/topic/music-news.rss/",
+      "website_url": "https://fm106.iheart.com/topic/music-news/",
+      "description": "We love country music in Milwaukee! Browse through the website and get all the information about the latest contests, events, and the best of #MkeCountry!",
+      "followers": {
+        "facebook": 58500,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/5551682.jpg?t=1682578415"
+    },
+    {
+      "title": "Radio Milwaukee \u00bb Discover Music",
+      "feed_url": "https://radiomilwaukee.org/discover-music.rss",
+      "website_url": "https://radiomilwaukee.org/discover-music",
+      "description": "Through music and stories created for a culturally open-minded community, Radio Milwaukee is a catalyst for creating a better, more inclusive, and engaged Milwaukee. Radio Milwaukee exists to be a catalyst for creating a better, more inclusive, and engaged Milwaukee.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 23400,
+        "instagram": 39300
+      },
+      "image_url": "https://i1.feedspot.com/5551684.jpg?t=1682578427"
+    },
+    {
+      "title": "Milwaukee Record \u00bb Music",
+      "feed_url": "https://milwaukeerecord.com/category/music/feed/",
+      "website_url": "https://milwaukeerecord.com/music/",
+      "description": "Milwaukee Record is your source for smart, opinionated, and irreverent coverage of all things Milwaukee. Our site offers feature stories, exclusive song streams, restaurant reviews, off-kilter first-person reporting, and much more.",
+      "followers": {
+        "facebook": 43100,
+        "twitter": 9600,
+        "instagram": 19300
+      },
+      "image_url": "https://i1.feedspot.com/5551686.jpg?t=1682578427"
+    }
+  ]
+}

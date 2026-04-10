@@ -1,0 +1,105 @@
+{
+  "category": "Jacksonville News",
+  "source_url": "https://rss.feedspot.com/jacksonville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "First Coast News",
+      "feed_url": "http://rssfeeds.firstcoastnews.com/wtlv/firstcoastnews-topstories",
+      "website_url": "https://www.firstcoastnews.com/",
+      "description": "Jacksonville's Leading Local News: Weather, Traffic, Sports and more.",
+      "followers": {
+        "facebook": 562500,
+        "twitter": 160200
+      },
+      "image_url": "https://i1.feedspot.com/5130963.jpg?t=1669874099"
+    },
+    {
+      "title": "Jacksonville Today",
+      "feed_url": "https://jaxtoday.org/feed/",
+      "website_url": "https://jaxtoday.org/",
+      "description": "The Jacksonville area's weekday email for news and ways to get involved. Jacksonville Today is a nonprofit local journalism service that includes a weekday email newsletter. Our goal is to help our readers feel more connected to where we live and to each other, so they can make those decisions in a more informed way.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5464702.jpg?t=1668490430"
+    },
+    {
+      "title": "Jacksonville Free Press",
+      "feed_url": "https://jacksonvillefreepress.com/feed/",
+      "website_url": "https://jacksonvillefreepress.com/",
+      "description": "The Free Press of Jacksonville was first published as the Jacksonville Free Press in September 1986. The newspaper has since come to be recognized as a major link to the African-American community. We provide local, state, and national news that is of interest to and directly and/or indirectly affects its readers.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 327
+      },
+      "image_url": "https://i1.feedspot.com/5464700.jpg?t=1669874276"
+    },
+    {
+      "title": "The Tributary",
+      "feed_url": "https://jaxtrib.org/feed/",
+      "website_url": "https://jaxtrib.org/",
+      "description": "The Tributary is a nonprofit, nonpartisan newsroom that investigates Jacksonville's entrenched problems and proposed solutions through collaboration with existing local media. We complement existing local news by focusing on under-reported topics such as redistricting, children's issues, infrastructure, racial inequities, and the criminal justice system.",
+      "followers": {
+        "facebook": 971,
+        "twitter": 2200,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5464699.jpg?t=1668490105"
+    },
+    {
+      "title": "BUZZ Media",
+      "feed_url": "https://iwantabuzz.com/feed/",
+      "website_url": "https://iwantabuzz.com/",
+      "description": "IwantaBUZZ has all of the latest buzz-worthy trending news stories and events from Jacksonville. Buzz Media Group is your news, entertainment, music, and general information website. We provide you with the latest breaking news and videos.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4902998.jpg?t=1613481486"
+    },
+    {
+      "title": "Jacksonville Business Journal",
+      "feed_url": "http://feeds.bizjournals.com/bizj_jacksonville?format=xml",
+      "website_url": "https://www.bizjournals.com/jacksonville/",
+      "description": "The Jacksonville Business Journal features local business news about Jacksonville. We also provide tools to help businesses grow, network, and hire. Access business resources, company profiles, business advice columns, local jobs, and more. It is some of the best sources for breaking business news in Northeast Florida.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 37300
+      },
+      "image_url": "https://i1.feedspot.com/3389675.jpg?t=1669874163"
+    },
+    {
+      "title": "News4JAX",
+      "feed_url": "https://www.news4jax.com/arcio/rss/category/news/?size=10",
+      "website_url": "https://www.news4jax.com/",
+      "description": "Breaking news in Jacksonville, Florida from News4Jax and WJXT Channel 4. Jacksonville breaking news, headlines, weather, and sports. Local Jacksonville news and more from The Local Station in Jacksonville, Florida, WJXT - Jacksonville's Channel 4.",
+      "followers": {
+        "facebook": 740500,
+        "twitter": 288200,
+        "instagram": 244100
+      },
+      "image_url": "https://i1.feedspot.com/5130967.jpg?t=1669874134"
+    },
+    {
+      "title": "Florida Times-Union",
+      "feed_url": "https://www.jacksonville.com/",
+      "website_url": "https://www.jacksonville.com/",
+      "description": "jacksonville.com delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 165900,
+        "twitter": 85700,
+        "instagram": 26100
+      },
+      "image_url": "https://i1.feedspot.com/5130985.jpg?t=1669874330"
+    },
+    {
+      "title": "Jacksonville Daily Record",
+      "feed_url": "https://www.jaxdailyrecord.com/article/rss/all/all/",
+      "website_url": "https://www.jaxdailyrecord.com/",
+      "description": "The Daily Record publishes news, profiles and articles of interest to the Jacksonville urban core's business, financial and legal communities.",
+      "followers": {
+        "facebook": 36600,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4903065.jpg?t=1613481490"
+    }
+  ]
+}

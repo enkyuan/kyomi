@@ -1,0 +1,100 @@
+{
+  "category": "Cincinnati Music",
+  "source_url": "https://rss.feedspot.com/cincinnati_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "KISS 107.1 Cincinnati \u00bb Music News",
+      "feed_url": "https://kisscincinnati.iheart.com/topic/music-news.rss/",
+      "website_url": "https://kisscincinnati.iheart.com/topic/music-news/",
+      "description": "music-news",
+      "followers": {
+        "facebook": 100000,
+        "twitter": 23100,
+        "instagram": 25800
+      },
+      "image_url": "https://i1.feedspot.com/5537183.jpg?t=1681106398"
+    },
+    {
+      "title": "Inhailer",
+      "feed_url": "https://www.inhailer.com/blog-feed.xml",
+      "website_url": "https://www.inhailer.com/",
+      "description": "Founded in 2017 to fill the void left by the beloved independent radio station WNKU, Inhaler Radio is an independent radio station and online community serving Cincinnati City Music and Entertainment News. Catch the latest news and updates from Inhaler here online.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1000,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5537191.jpg?t=1681106467"
+    },
+    {
+      "title": "Cincinnati Magazine \u00bb Music",
+      "feed_url": "https://www.cincinnatimagazine.com/category/culture/music/feed/",
+      "website_url": "https://www.cincinnatimagazine.com/category/culture/music/",
+      "description": "News and updates chronicling Cincinnati's Musical culture. Cincinnati Magazine is the definitive guide to living well in Greater Cincinnati, connecting sophisticated, educated readers with the region's most interesting people, cultural issues, food, arts, fashion, and history via print, digital, and events.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 43800,
+        "instagram": 62400
+      },
+      "image_url": "https://i1.feedspot.com/5537190.jpg?t=1681106459"
+    },
+    {
+      "title": "Janelle's Notes \u00bb Classical Music",
+      "feed_url": "https://janellesnotes.wordpress.com/category/classical-music/feed/",
+      "website_url": "https://janellesnotes.wordpress.com/category/classical-music/",
+      "description": "Read Cincinnati-based Classical Music Critic Janelle Gelfand's writings on Classical Music, arts, and more. Janelle has written about Music for over two decades and plays the Piano. Explore more posts from her blog to stay connected to Ohio's Classical Music scene.",
+      "followers": {
+        "facebook": 380,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5537184.jpg?t=1681106485"
+    },
+    {
+      "title": "Cincinnati People Music Blog",
+      "feed_url": "https://www.cincypeople.com/music-blog?format=rss",
+      "website_url": "https://www.cincypeople.com/music-blog/",
+      "description": "From baseball to books and music to murals, get an inside look at what's happening in our amazing city. Cincinnati People Music Blog serves as a digital digest for Cincinnati featuring personality profiles, and trend stories along with shots of cheer, food, culture, and travel. Discover more at CincyPeople.com.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 494,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5537186.jpg?t=1681106417"
+    },
+    {
+      "title": "Cincinnati CityBeat \u00bb Music",
+      "feed_url": "https://www.citybeat.com/cincinnati/Rss.xml?oid=11962261",
+      "website_url": "https://www.citybeat.com/music",
+      "description": "Live music in Cincinnati this week and local music, concerts, music events, ticket alerts, music venues, music festivals, and music series news. Cincinnati CityBeat is the place to find informed analysis of city events, offering engaging, enlightening, and entertaining writing and reporting of the city's most interesting parts.",
+      "followers": {
+        "facebook": 109400,
+        "twitter": 50000,
+        "instagram": 132300
+      },
+      "image_url": "https://i1.feedspot.com/5537189.jpg?t=1681106447"
+    },
+    {
+      "title": "Cincy Groove",
+      "feed_url": "https://cincygroove.com/feed/",
+      "website_url": "https://cincygroove.com/",
+      "description": "Keep up with trending music, events, and news from Cincinnati's music industry. Cincy Groove is your spot for all things music in the Cincinnati area. From interviews, to concert photos, to music news, you will find everything covered at Cincy Groove.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 2600,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5537185.jpg?t=1681106414"
+    },
+    {
+      "title": "Toedtman School of Music Blog",
+      "feed_url": "https://toedtmanschoolofmusic.com/feed/",
+      "website_url": "https://toedtmanschoolofmusic.com/blog/",
+      "description": "Find News and articles about Cincinnati music lessons at the Toedtman School of Music. The blog also features Information about guitar lessons, piano lessons, drum lessons, and more. The Toedtman School of Music is one of Cincinnati's oldest private music schools and provides instruction to people of all ages and talents.",
+      "followers": {
+        "facebook": 532,
+        "twitter": 19
+      },
+      "image_url": "https://i1.feedspot.com/5537187.jpg?t=1681106424"
+    }
+  ]
+}

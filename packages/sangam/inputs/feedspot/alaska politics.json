@@ -1,0 +1,39 @@
+{
+  "category": "Alaska Politics",
+  "source_url": "https://rss.feedspot.com/alaska_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dermot Cole",
+      "feed_url": "https://www.dermotcole.com/reportingfromalaska?format=rss",
+      "website_url": "https://www.dermotcole.com/",
+      "description": "Veteran Alaska newspaper columnist and author Dermot Cole offers news and commentary about Alaska politics. Keep up to date on the latest news and analytical articles diving into Alaska's current social and political landscape from Dermot Cole.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4891331.jpg?t=1612593480"
+    },
+    {
+      "title": "Must Read Alaska Politics",
+      "feed_url": "https://mustreadalaska.com/category/politics/feed/",
+      "website_url": "https://mustreadalaska.com/category/politics/",
+      "description": "Must Read Alaska is news of people, politics, policy, culture, and happenings in Alaska. Author Suzanne Downing is a Happy Alaskan, Newspaper veteran, Conservative writer, and Experienced speech coach.",
+      "followers": {
+        "facebook": 55300,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5309953.jpg?t=1628315276"
+    },
+    {
+      "title": "The Midnight Sun",
+      "feed_url": "https://midnightsunak.com/feed/",
+      "website_url": "https://midnightsunak.com/",
+      "description": "The Midnight Sun is a political news blog with insightful and irreverent coverage of Alaska's political world.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5309952.jpg?t=1628315036"
+    }
+  ]
+}

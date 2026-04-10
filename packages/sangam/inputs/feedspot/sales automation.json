@@ -1,0 +1,72 @@
+{
+  "category": "Sales Automation",
+  "source_url": "https://rss.feedspot.com/sales_automation_rss_feeds",
+  "feeds": [
+    {
+      "title": "SalesNexus Blog",
+      "feed_url": "https://www.salesnexus.com/blog/feed",
+      "website_url": "https://www.salesnexus.com/blog",
+      "description": "Covers topics such as sales management, sales training, marketing automation, lead generation, CRM software, integrations, email marketing and more. SalesNexus is Online CRM and Email Marketing for organizations from sales teams.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4453120.jpg?t=1641807840"
+    },
+    {
+      "title": "PandaDoc Blog",
+      "feed_url": "https://www.pandadoc.com/blog/feed/",
+      "website_url": "https://www.pandadoc.com/blog/",
+      "description": "Delivers software that empowers sellers to easily connect and transact with their customers through dynamic personalized documents that build meaningful customer relationships and win more business.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 19500
+      },
+      "image_url": "https://i1.feedspot.com/4930241.jpg?t=1621261615"
+    },
+    {
+      "title": "LeadFuze Blog",
+      "feed_url": "https://www.leadfuze.com/blog/feed/",
+      "website_url": "https://www.leadfuze.com/blog/",
+      "description": "A blog from LeadFuze provides articles and information on automated sales prospecting and lead generation to increase sales.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4930106.jpg?t=1621261619"
+    },
+    {
+      "title": "Growbots Blog",
+      "feed_url": "https://www.growbots.com/feed/",
+      "website_url": "https://www.growbots.com/blog/",
+      "description": "Growbots is an all in one solution for driving predictable revenue growth. With our AI-based platform, anyone who needs to generate leads, from sales to marketing, can reach out to hundreds of potential customers in minutes. Check out this blog to fully automate your outbound sales process and forget about empty pipelines and grow faster.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4930515.jpg?t=1621261624"
+    },
+    {
+      "title": "Salesmate Blog",
+      "feed_url": "https://www.salesmate.io/blog/feed/",
+      "website_url": "https://www.salesmate.io/blog/",
+      "description": "Salesmate is an intelligent CRM for smart sales team which enables to increase the sales with its dynamic features.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4930095.jpg?t=1621261606"
+    },
+    {
+      "title": "Agile CRM Blog \u00bb Sales",
+      "feed_url": "https://www.agilecrm.com/blog/category/sales-2/feed/",
+      "website_url": "https://www.agilecrm.com/blog/category/sales-2/",
+      "description": "Agile CRM Software is the best, easy, powerful yet affordable Customer Relationship Management with sales and marketing automation for small businesses.",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4930143.jpg?t=1621261611"
+    }
+  ]
+}

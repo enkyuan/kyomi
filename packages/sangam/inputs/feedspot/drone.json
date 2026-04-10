@@ -1,0 +1,653 @@
+{
+  "category": "Drone",
+  "source_url": "https://rss.feedspot.com/drone_rss_feeds",
+  "feeds": [
+    {
+      "title": "sUAS News",
+      "feed_url": "https://www.suasnews.com/feed/",
+      "website_url": "https://www.suasnews.com/",
+      "description": "sUAS News is the leading news and information source for unmanned aviation. started and collated by UAS pilots and professionals. Separating the wheat from the chaff in a snake oil filled market. stay informed and learn how to earn in the business of drones with sUAS News.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 43100,
+        "instagram": 633
+      },
+      "image_url": "https://i1.feedspot.com/4554869.jpg?t=1625738709"
+    },
+    {
+      "title": "DroneLife",
+      "feed_url": "https://dronelife.com/feed/",
+      "website_url": "https://dronelife.com/",
+      "description": "DroneLife is one of the most popular and professional publication in the industry. The prime resource for news and commentary on the commercial drone market: the people, products, events, and trends that are driving the UAV industry.",
+      "followers": {
+        "facebook": 192600,
+        "twitter": 41500
+      },
+      "image_url": "https://i1.feedspot.com/4367104.jpg?t=1625738317"
+    },
+    {
+      "title": "Dronesters",
+      "feed_url": "https://dronesters.org/feed/",
+      "website_url": "https://dronesters.org/",
+      "description": "Dronesters is dedicated to everything related to drones. It serves as an informational source as well as a community for Drone enthusiasts to interact, collaborate, and celebrate Drone technological advancements together. Dive into the latest articles on the site for more information.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7258960.jpg?t=1708652410"
+    },
+    {
+      "title": "Oscar Liang",
+      "feed_url": "https://oscarliang.com/feed/?format=xml",
+      "website_url": "https://oscarliang.com/",
+      "description": "Oscar Liang's blog is perfect for the DIY drone builder and operator. He has some of the sharpest technical drone knowledge I've seen online. Oscar's blog is a must-read, especially if you're into FPV drone racing.",
+      "followers": {
+        "facebook": 32000,
+        "twitter": 699,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4554890.jpg?t=1614064446"
+    },
+    {
+      "title": "The Drone Girl",
+      "feed_url": "https://www.thedronegirl.com/feed/",
+      "website_url": "https://www.thedronegirl.com/",
+      "description": "If you're interested in the evolution of drones and their uses, and you want a fresh, professional outlook on the industry, check out Sally's blog. Drone Girl is run by Sally French, a journalist and self-proclaimed 'geek girl' who loves drones. Her blog provides a nice balance of advice, news updates, and features of new and amazing drone applications in society.",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 24100,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4448834.jpg?t=1614841773"
+    },
+    {
+      "title": "Droneblog",
+      "feed_url": "https://www.droneblog.com/feed/",
+      "website_url": "https://www.droneblog.com/",
+      "description": "Droneblog is an awesome place to catch up on everything drone-related. They feature the widest array of article topics I've seen in the industry, and they also bring on a ton of writers to provide different perspectives and advice for their readers.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 35400
+      },
+      "image_url": "https://i1.feedspot.com/4327503.jpg?t=1614841889"
+    },
+    {
+      "title": "DIY Drones",
+      "feed_url": "https://diydrones.com/profiles/blogs/feed/all",
+      "website_url": "https://diydrones.com/profiles/blogs",
+      "description": "DIY Drones was started by Chris Anderson, the CEO of 3D Robotics. It's a massive online community discussing and breaking down unmanned systems. Their blog features posts (written by community members, DIY Drones team members, and Chris himself) with questions, builds, and insights into drone technology.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 87100
+      },
+      "image_url": "https://i1.feedspot.com/3496507.jpg"
+    },
+    {
+      "title": "Ask Drone U",
+      "feed_url": "https://www.thedroneu.com/feed/podcast",
+      "website_url": "https://www.thedroneu.com/",
+      "description": "We're Drone U, a group of guys who have turned their passion for flight into a profitable business. We love hearing from our fans, and we love helping by answering their questions. That's why we started the Ask Drone U podcast in 2015. Since then, we are one of the largest, most popular DAILY drone podcasts out there. Each episode features an actual question submitted from someone just like you! We wish we could answer everyone's question(s), but we'll do our best to get through as many of them as we can...",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 5700,
+        "instagram": 90000
+      },
+      "image_url": "https://i1.feedspot.com/4998867.jpg?t=1752396725"
+    },
+    {
+      "title": "AEROMOTUS",
+      "feed_url": "https://www.aeromotus.com/feed/",
+      "website_url": "https://www.aeromotus.com/newhome/blog/",
+      "description": "Wide range of drones and accessories in Dubai. Industrial Drones and Solutions. Proffesional service. Drone repair Service.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4999396.jpg?t=1614841894"
+    },
+    {
+      "title": "DroneVideos.com",
+      "feed_url": "https://dronevideos.com/category/drone-blogs/feed/",
+      "website_url": "https://dronevideos.com/category/drone-blogs/",
+      "description": "We are a Nationwide Drone Media Company that Films Affordable High Quality Custom Drone Videos and Aerial Photography for Real Estate, Construction, Farms & More. DroneVideos also has Drone Stock Footage, a daily blog covering Drone & Aerial Photography, Viral Videos & More.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 559
+      },
+      "image_url": "https://i1.feedspot.com/4852680.jpg?t=1611896198"
+    },
+    {
+      "title": "Quadcopter Flyers",
+      "feed_url": "https://www.firstquadcopter.com/feed/",
+      "website_url": "https://www.firstquadcopter.com/",
+      "description": "Quadcopter Flyers is an excellent resource for quadcopter and other multirotor tutorials and reviews. What sets them apart is the shear amount of drones they cover, including the latest models from almost every manufacturer. It's a great source for pilots looking to expand their fleet of drones.",
+      "followers": {
+        "facebook": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4327515.jpg?t=1614841777"
+    },
+    {
+      "title": "Small UAV Coalition",
+      "feed_url": "https://smalluavcoalition.org/feed/",
+      "website_url": "https://smalluavcoalition.org/",
+      "description": "The Small UAV Coalition is a partnership between consumer and technology companies who believe that U.S. leadership in the research, development, production, and application of unmanned aerial vehicles (UAVs) will benefit consumers in all walks of life. They support and advocate for many law and policy changes that will help progress UAV applications in society.",
+      "followers": {
+        "twitter": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4554883.jpg?t=1654862544"
+    },
+    {
+      "title": "Delair | Drone Blog",
+      "feed_url": "https://delair.aero/feed/",
+      "website_url": "https://delair.aero/drone-blog/",
+      "description": "Delair is the leading international provider of high-performance drone-based solutions, enabling companies and governments to achieve their specific drone project objectives by working with our team of professional pilots, engineers, and worldwide support centers. With over a decade of experience in designing and manufacturing several generations of professional drones - including the world's first commercially certified BVLOS drone - Delair is uniquely positioned to assist industry, military, and security verticals adopt drone technology.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5293566.jpg?t=1623846963"
+    },
+    {
+      "title": "DARTdrones",
+      "feed_url": "https://www.dartdrones.com/blog/feed/",
+      "website_url": "https://www.dartdrones.com/blog/",
+      "description": "DARTdrones is a drone flight school dedicated to training drone pilots to fly drones effectively, safely, and legally. DARTdrones is the national leader in drone training, consultation, and expert support for new drone pilots.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 3600,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4555773.jpg?t=1614841788"
+    },
+    {
+      "title": "Drone Flyers",
+      "feed_url": "https://www.droneflyers.com/feed/",
+      "website_url": "https://www.droneflyers.com/",
+      "description": "This site is all about helping beginning and intermediate pilots with buying and flying quadcopters and other multirotors. In general, we will focus on toy grade, hobby grade and prosumer models costing from as little as $20 up to a maximum of $3000. We cover RTF and ARF (ready to fly and almost ready to fly) machines and leave the more technical build your own and DIY stuff to other site.",
+      "followers": {
+        "facebook": 35700
+      },
+      "image_url": "https://i1.feedspot.com/4327507.jpg?t=1614841877"
+    },
+    {
+      "title": "DroneXL.co",
+      "feed_url": "https://dronexl.co/feed/",
+      "website_url": "https://dronexl.co/",
+      "description": "Stay Ahead of the Game with DroneXL - Your Daily Source for the Latest Drone News, DJI Rumors, Reviews, and Updates! Get in-depth news coverage of top drone brands like DJI, Autel Robotics, Skydio, Parrot, and others from drone specialists. Stay informed on FAA drone regulations, including Part 107, BVLOS, Remote ID, and more.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5492091.jpg?t=1673519594"
+    },
+    {
+      "title": "Rotor Drone",
+      "feed_url": "https://www.rotordronepro.com/feed/",
+      "website_url": "https://www.rotordronepro.com/",
+      "description": "Rotor Drone Magazine is a print and digital magazine primarily covering consumer and racing drones. On their blog, you will find reviews of the latest products, news in the drone racing world, and events going on in the industry.",
+      "followers": {
+        "facebook": 429300,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4554918.jpg?t=1614841703"
+    },
+    {
+      "title": "Drone Racing Life",
+      "feed_url": "https://racing.dronelife.com/feed/",
+      "website_url": "https://racing.dronelife.com/",
+      "description": "The trusted source for drone racing news and Information. Drone Life is the number one site that provides news and content for the commercial and high recreational Drone marketplace.",
+      "followers": {
+        "facebook": 39900,
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/4554862.jpg?t=1614841741"
+    },
+    {
+      "title": "Skyward Wings",
+      "feed_url": "https://skywardwings.com/feed/",
+      "website_url": "https://skywardwings.com/",
+      "description": "Skywardwings was born out of desperation and frustration to find quality information about drones online. As someone who recently got interested in the world of drones, I found myself reading countless articles that provided no value or proper guidance. This site, however, is specifically built to help someone who is a novice like me to learn more about the world of drones through our Beginner Guide, Best Drones, Comparisons, Drone Laws, and Product Reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5763384.jpg?t=1706530924"
+    },
+    {
+      "title": "Volatus Unmanned Services Blog",
+      "feed_url": "https://connexicore.com/feed/",
+      "website_url": "https://connexicore.com/blog/",
+      "description": "Volatus is a leading provider of integrated commercial drone services and solutions across the US and Canada with specialized expertise across a range of industries. Tune into the blog to learn how drones are transforming safety inspection, exploration, and the science behind them shared in informative chunks.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 685,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/7283332.jpg?t=1711506579"
+    },
+    {
+      "title": "DroneZon",
+      "feed_url": "https://www.dronezon.com/feed/",
+      "website_url": "https://www.dronezon.com/",
+      "description": "DroneZon is an old favorite that has been around for some time now. It is constantly updated with aerial photography/videography tips, news about drone technology, drone reviews, and drone videos. The author, Fintan Corrigan, has a wealth of UAV knowledge to share.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4555030.jpg?t=1614841737"
+    },
+    {
+      "title": "Dronegenuity Blog",
+      "feed_url": "https://www.dronegenuity.com/feed/",
+      "website_url": "https://www.dronegenuity.com/robots-and-artists/",
+      "description": "Dronegenuity is a leading national provider of aerial drone photography, video production, and mapping services.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1200,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4759485.jpg?t=1611300799"
+    },
+    {
+      "title": "Your drone reviews",
+      "feed_url": "https://yourdronereviews.com/feed",
+      "website_url": "https://yourdronereviews.com/",
+      "description": "Your drone reviews is a site dedicated to bringing you the best reviews and updates in all drone-related news.",
+      "followers": {
+        "instagram": 402
+      },
+      "image_url": "https://i1.feedspot.com/4759486.jpg?t=1614843314"
+    },
+    {
+      "title": "Quadcopter Guide",
+      "feed_url": "https://www.quadcopterguide.com/feed/",
+      "website_url": "https://www.quadcopterguide.com/",
+      "description": "Quadcopter Guide offers readers a nice balance of industry news updates and reviews/tutorials on a ton of different quadcopter models. Along with the many drone models he writes about, the author has experience with nitro fuel powered planes, electric planes, and electric helicopters.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 528
+      },
+      "image_url": "https://i1.feedspot.com/4327530.jpg?t=1614841916"
+    },
+    {
+      "title": "Best Drone for the Job",
+      "feed_url": "https://bestdroneforthejob.com/feed/",
+      "website_url": "https://bestdroneforthejob.com/",
+      "description": "ndrew Nixon runs Best Drone for the Job, a blog that's jam packed with awesome drone reviews. What makes his reviews unique are that many are job-specific or for specific purposes. So if you've been struggling to find a rig to suit your purposes, Andrew might have a review for you.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4555015.jpg?t=1614841858"
+    },
+    {
+      "title": "XavDrone",
+      "feed_url": "http://www.xavdrone.com/feed/",
+      "website_url": "https://www.xavdrone.com/",
+      "description": "XavDrone helps you discover the drones and quadricopters through tests, tutorials and news with photos and online videos.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4555774.jpg?t=1614841874"
+    },
+    {
+      "title": "DronesInsite",
+      "feed_url": "https://www.dronesinsite.com/feed/",
+      "website_url": "https://www.dronesinsite.com/",
+      "description": "DronesInsite was created for you, the drone expert, the drone beginner, the professional photographer, the amateur videographer, the hobbyist. This site is for all different drone flyers, catering to any and all information you need regarding drones. Everything you need to know about the latest drones and trends in the drone world. Reviews and guides to help you choose your drone.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 113,
+        "instagram": 37
+      },
+      "image_url": "https://i1.feedspot.com/4738660.jpg?t=1614841919"
+    },
+    {
+      "title": "Drone Deliver",
+      "feed_url": "https://dronedeliver.co.uk/feed/",
+      "website_url": "https://dronedeliver.co.uk/",
+      "description": "We review the best drones to buy as well as bring you all the latest news on using drones for delivery in the UK. Our drone community it growing by the day.",
+      "followers": {
+        "facebook": 172,
+        "twitter": 351
+      },
+      "image_url": "https://i1.feedspot.com/4667415.jpg?t=1614841922"
+    },
+    {
+      "title": "Earth Of Drones",
+      "feed_url": "https://earthofdrones.com/feed/",
+      "website_url": "https://earthofdrones.com/",
+      "description": "This website is created to provide all needed information for drone rules and drone regulations for all countries in the world.",
+      "followers": {
+        "facebook": 1300,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5122096.jpg?t=1614841942"
+    },
+    {
+      "title": "Job For Drones",
+      "feed_url": "http://www.jobfordrones.com/feed/",
+      "website_url": "http://www.jobfordrones.com/",
+      "description": "JobForDrones is a commercial drone network, designed to help commercial drone customers find qualified drone operators and to help qualified drone operators find jobs.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 63
+      },
+      "image_url": "https://i1.feedspot.com/4554860.jpg?t=1614841945"
+    },
+    {
+      "title": "The UAV Digest",
+      "feed_url": "https://theuavdigest.com/feed/",
+      "website_url": "https://theuavdigest.com/",
+      "description": "The UAV Digest is a fantastic drone podcast. They put out weekly interviews, news updates, and commentary on the drone industry, and they cover both the recreational and commercial sides. The hosts, David Vanderhoof and Max Flight, also put a big emphasis on the ever-expanding applications for UAS. You can't go wrong with a weekly dose of this podcast.",
+      "followers": {
+        "facebook": 790,
+        "twitter": 17200
+      },
+      "image_url": "https://i1.feedspot.com/4555001.jpg"
+    },
+    {
+      "title": "Drone Analyst",
+      "feed_url": "https://droneanalyst.com/feed",
+      "website_url": "https://droneanalyst.com/blog",
+      "description": "The Drone Analyst team conducts research studies and market analytics to help drone companies make smarter investment decisions. Their blog offers a ton of useful insight behind this data, along with expert commentary on the commercial side of the drone industry.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 40100
+      },
+      "image_url": "https://i1.feedspot.com/3985860.jpg"
+    },
+    {
+      "title": "Personal Drones",
+      "feed_url": "http://www.personal-drones.net/feed/",
+      "website_url": "http://www.personal-drones.net/",
+      "description": "Personal Drones has been around since August 2013, and it's a great resource for consumer drone news, reviews, and updates. They feature self-published work, as well as guest articles from industry experts. If you're looking for updates on the latest models, advice on which drones to buy, and multirotor news in general, check out Personal Drones.",
+      "followers": {
+        "twitter": 21100
+      },
+      "image_url": "https://i1.feedspot.com/4327533.jpg"
+    },
+    {
+      "title": "LearningRC",
+      "feed_url": "https://learningrc.com/feed/",
+      "website_url": "https://learningrc.com/",
+      "description": "Technical information for the RC community, focusing on multirotors.",
+      "followers": {
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/4738663.jpg?t=1614841934"
+    },
+    {
+      "title": "Dronethusiast",
+      "feed_url": "https://www.dronethusiast.com/feed/",
+      "website_url": "https://www.dronethusiast.com/",
+      "description": "Dronethusiast is dedicated to providing its readers with the best information on all things drones. Our team of experts has years of experience studying and flying drones and is here to provide you with their expertise. Through the latest industry news and product reviews, Dronethusiast has built a passionate following of like-minded drone enthusiasts.",
+      "followers": {
+        "facebook": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4327518.jpg?t=1623848488"
+    },
+    {
+      "title": "DroneGuru | Personal Drone Reviews, News and Videos",
+      "feed_url": "https://www.droneguru.net/feed/",
+      "website_url": "https://www.droneguru.net/",
+      "description": "DroneGuru provides information about personal drones and commercial drones that is useful to both beginners and experts in the field. This is a fast moving business and we do our best to make sure the articles are continuously updated to stay relevant. DroneGuru also features drone reviews where the reader also gets a chance to rate and review. See our tips section to find information such as how to get better at aerial photography with camera drones, and how to extend your flight time.",
+      "followers": {
+        "facebook": 450,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/4881603.jpg?t=1614841785"
+    },
+    {
+      "title": "How To Drones",
+      "feed_url": "https://howtodrones.com/feed/",
+      "website_url": "https://howtodrones.com/",
+      "description": "If you want to buy a drone for the first time and looking for budget options, This is for you. We selected the best drones under 100 Dollars for you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4750464.jpg?t=1614844442"
+    },
+    {
+      "title": "Center for the Study of the Drone",
+      "feed_url": "https://dronecenter.bard.edu/feed/",
+      "website_url": "https://dronecenter.bard.edu/",
+      "description": "The Center for the Study of the Drone is a subset of Bard College dedicated to studying drones. They send out a weekly roundup that curates some of the hottest stories and updates in the drone industry, including fixed wing, commercial, and military drones.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4164340.jpg?t=1614841734"
+    },
+    {
+      "title": "Dronemade | Travel with your drone.",
+      "feed_url": "https://www.drone-made.com/blog-feed.xml",
+      "website_url": "https://www.drone-made.com/blog",
+      "description": "A blog for knowledge, tips & how to's about aerial footage & photography. We aim to provide accurate drone info for all to fly & operate safely anywhere around the world. Dronemade is an award-winning drone imagery website, featuring aerial photos & videos, drone travel tips & resources.",
+      "followers": {
+        "facebook": 357
+      },
+      "image_url": "https://i1.feedspot.com/4993543.jpg?t=1614841886"
+    },
+    {
+      "title": "Drone Nodes",
+      "feed_url": "https://dronenodes.com/feed/",
+      "website_url": "https://dronenodes.com/",
+      "description": "Drone Nodes is online communication platform that brings together experts in drone research, start-ups, business, and education from across the globe",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4861634.jpg?t=1614841770"
+    },
+    {
+      "title": "Drone Fishing Central",
+      "feed_url": "https://dronefishingcentral.com/feed/",
+      "website_url": "https://dronefishingcentral.com/",
+      "description": "Keep up with articles from Drone Fishing Central.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5043142.jpg"
+    },
+    {
+      "title": "Drone Laws Blog by Antonelli Law",
+      "feed_url": "https://dronelawsblog.com/feed/",
+      "website_url": "https://dronelawsblog.com/",
+      "description": "Drone law is a hot topic in the industry, and for good reason. It affects everything we do with our UAVs. Drone Laws Blog is run by Jeffrey Antonelli, a lawyer who specializes in the legal side of drones. Read his blog to make sense of the laws surrounding sUAS in the U.S.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4448836.jpg?t=1614844223"
+    },
+    {
+      "title": "RC Drone Arena",
+      "feed_url": "https://www.rcdronearena.com/feed/",
+      "website_url": "https://www.rcdronearena.com/",
+      "description": "News, reviews and more about the latest and greatest in the world of drones!",
+      "followers": {
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/4555804.jpg?t=1614844022"
+    },
+    {
+      "title": "Drone Deploy",
+      "feed_url": "https://www.dronedeploy.com/blog",
+      "website_url": "https://www.dronedeploy.com/blog",
+      "description": "Drone Deploy is an app that allows drone pilots to easily create aerial maps and 3D models. Their blog, Aerial Acuity, is a favorite among professional pilots, as it provides a ton of great insight into the commercial drone industry.",
+      "followers": {
+        "facebook": 42400,
+        "twitter": 34100,
+        "instagram": 25400
+      },
+      "image_url": "https://i1.feedspot.com/4554924.jpg?t=1614841730"
+    },
+    {
+      "title": "DSLRPros Blog",
+      "feed_url": "https://www.dslrpros.com/pages/blog",
+      "website_url": "https://www.dslrpros.com/pages/blog",
+      "description": "DSLRPros specializes in industrial drone solutions. Our main focus is aerial thermal imaging, utilizing drones to carry thermal cameras for search and rescue and equipment inspection. In our blog, we cover drone news, learning centers, and buying guides.",
+      "followers": {
+        "facebook": 19800,
+        "twitter": 1800,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5293565.jpg?t=1623847885"
+    },
+    {
+      "title": "Unmanned Tech Blog",
+      "feed_url": "https://blog.unmanned.tech/rss/",
+      "website_url": "https://blog.unmanned.tech/",
+      "description": "Drone Trest is primarily a forum of dronebuilders and drone pilots, but we wanted a place to highlight or favourite guides and articles so we started the dronetrest blog. On this blog many of our dronetrest members share tips, news and helpful tips and guides to help you become a drone master.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4555761.jpg?t=1614841749"
+    },
+    {
+      "title": "Dronestagram",
+      "feed_url": "https://www.drone-pictures.com/feed/",
+      "website_url": "https://www.dronestagr.am/",
+      "description": "Dronestagram is a drone photography social network. People can post up news, tips, tricks, and showcase their aerial photography work. They host regular contests and showcase events. If you're into drone photography, check out Dronestagram.",
+      "followers": {
+        "facebook": 38100,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4217586.jpg?t=1614841727"
+    },
+    {
+      "title": "Android Authority \u00bb Drones",
+      "feed_url": "https://www.dronerush.com/feed/",
+      "website_url": "https://www.androidauthority.com/tag/drones/",
+      "description": "Drone Rush is your source for news, reviews and more on the best drones, UAV and other things that fly.",
+      "followers": {
+        "facebook": 19500,
+        "twitter": 330
+      },
+      "image_url": "https://i1.feedspot.com/5261581.jpg?t=1616655901"
+    },
+    {
+      "title": "Inside Unmanned Systems",
+      "feed_url": "https://insideunmannedsystems.com/feed/",
+      "website_url": "https://insideunmannedsystems.com/",
+      "description": "Inside Unmanned Systems is a great blog for commercial drone news and resources. Their articles are in-depth and professional, and they know what they're talking about when it comes to the business side of the drone industry.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4555018.jpg?t=1614844488"
+    },
+    {
+      "title": "The UAS Magazine",
+      "feed_url": "https://uasmagazine.com/rss.xml",
+      "website_url": "https://uasmagazine.com/",
+      "description": "UAS Magazine is a full-color monthly magazine, published in both print and online editions that reports on how emerging technologies and policy affect unmanned aerial systems in the civil, agriculture defense and commercial markets, worldwide.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4554979.jpg?t=1654866371"
+    },
+    {
+      "title": "DroneTrader Blog",
+      "feed_url": "https://blog.dronetrader.com/feed/",
+      "website_url": "https://blog.dronetrader.com/",
+      "description": "DroneTrader.com is a free drone classified listing service for the USA and Canada. We provide an organized, searchable listing service for you to sell or buy used, customer, specialty, broken, and refurbished drones and UAVs.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5293562.jpg?t=1623848470"
+    },
+    {
+      "title": "Falcon Eye Drones",
+      "feed_url": "https://www.feds.ae/blog?feed",
+      "website_url": "https://dronesafestore.com/blog",
+      "description": "Falcon Eye Drones brings you the latest news, tips and drones projects across all industries in the Middle East and Africa Region. The case studies and articles published weekly aim to help industry professionals and educate the general public.",
+      "followers": {
+        "facebook": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5220600.jpg?t=1615277109"
+    },
+    {
+      "title": "Drone Riot",
+      "feed_url": "https://www.droneriot.com/feed/",
+      "website_url": "https://www.droneriot.com/",
+      "description": "We love all things drone. We review drone accessories and publish regular content focused around the drone industry.",
+      "followers": {
+        "facebook": 86,
+        "twitter": 54
+      },
+      "image_url": "https://i1.feedspot.com/4738646.jpg?t=1614844038"
+    },
+    {
+      "title": "Droneality | Latest drone news",
+      "feed_url": "https://www.droneality.com/feed",
+      "website_url": "https://www.droneality.com/",
+      "description": "Droneality is your drone news website. We provide you with the latest breaking news and videos straight from the drones industry. Read the most authoritative, up-to-date drone news and headlines from the UAV world!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/4555791.jpg?t=1654859687"
+    },
+    {
+      "title": "Connex Drones",
+      "feed_url": "https://connexdrones.com/feed/",
+      "website_url": "https://connexdrones.com/",
+      "description": "Stay up to date with the latest drone news. Get the best drone reviews, buying guides, tips, resources and watch drone videos.",
+      "followers": {
+        "facebook": 102,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5098982.jpg?t=1614842584"
+    },
+    {
+      "title": "Dronesblog.org",
+      "feed_url": "http://dronesblog.org/feed/",
+      "website_url": "https://dronesblog.org/",
+      "description": "All about Drones information, news, technology.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 737
+      },
+      "image_url": "https://i1.feedspot.com/4946332.jpg?t=1614842816"
+    },
+    {
+      "title": "AllDroneSchool",
+      "feed_url": "https://www.alldroneschool.com/feed/",
+      "website_url": "https://www.alldroneschool.com/",
+      "description": "Hi!, My name is AJ Keil from the state of Michigan in the USA. I have always been intrigued and fascinated with drones and what they can do. A couple of years ago I purchased a drone to learn how they work for first hand. Drones can do a lot of good things if used the right way, and of course, they can do a lot of bad things if they are used the wrong way. I share my experiences and those of others that I have learned along the way with this great hobby of drones on this site.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5081633.jpg?t=1654862521"
+    },
+    {
+      "title": "Drone Lifestyle",
+      "feed_url": "https://dronelifestyle.com/feed/",
+      "website_url": "https://dronelifestyle.com/",
+      "description": "Do you live that drone lifestyle? If you do, you should check out Drone Lifestyle, a nice blog run by three friends, Chase, Chris, and Michael. It's clean and easy to navigate, and their information is top-notch. You will find reviews, in-depth tutorials, cool videos, and a whole lot more.",
+      "followers": {
+        "facebook": 218,
+        "twitter": 379,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4555008.jpg"
+    },
+    {
+      "title": "Drone Uplift",
+      "feed_url": "https://www.droneuplift.com/feed/",
+      "website_url": "https://www.droneuplift.com/",
+      "description": "Drone Uplift is full of product reviews, from the most popular drones all the way down to specific parts and accessories. They also comment on industry news and put together tips and tutorials.",
+      "followers": {
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4555026.jpg?t=1614841911"
+    },
+    {
+      "title": "Unmanned Aerial Online",
+      "feed_url": "https://unmanned-aerial.com/feed",
+      "website_url": "https://unmanned-aerial.com/",
+      "description": "Unmanned Aerial Online is a solid drone publication. They cover the expanding drone applications and evolution of this technology in both the commercial and civil aerial vehicle sectors. If you're looking for expert analysis and thought leadership, make sure to give them a read.",
+      "followers": {
+        "facebook": 851,
+        "twitter": 6000,
+        "instagram": 132
+      },
+      "image_url": "https://i1.feedspot.com/4455839.jpg?t=1614842854"
+    },
+    {
+      "title": "Drone Tech Planet",
+      "feed_url": "https://www.dronetechplanet.com/feed/",
+      "website_url": "https://www.dronetechplanet.com/",
+      "description": "Hey, I'm Mario. I've been involved in Drones for over the last 6 years. I started Drone Tech Planet for one simple reason drones are AWESOME. On this website, I will share with you some of the really cool things that I've learned about drones over the last years. Discover the innovative world of Drones, breaking industry updates, news, products and trends that are driving the UAV industry. Share our knowledge!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5063712.jpg?t=1614841926"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "category": "Thailand Photography",
+  "source_url": "https://rss.feedspot.com/thailand_photography_rss_feeds",
+  "feeds": [
+    {
+      "title": "Koro Studio",
+      "feed_url": "https://korostudio.com/feed",
+      "website_url": "https://korostudio.com/",
+      "description": "Bangkok based wedding photography studio. Enjoy your wedding and let us create and capture your beautiful moments in pictures.",
+      "followers": {
+        "facebook": 20000,
+        "twitter": 39,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5335900.jpg?t=1635255205"
+    },
+    {
+      "title": "Daniel Baci Photography Blog",
+      "feed_url": "https://www.dbaciphotography.com/feed/",
+      "website_url": "https://www.dbaciphotography.com/thailand-wedding-blog/",
+      "description": "Award-winning Phuket wedding photographer Daniel Baci captures your entire wedding celebration from start to finish, by various cameras to ensure that no special moment is missed!",
+      "followers": {
+        "facebook": 17000,
+        "twitter": 3,
+        "instagram": 16700
+      },
+      "image_url": "https://i1.feedspot.com/5335899.jpg?t=1635254975"
+    },
+    {
+      "title": "Aidan Dockery",
+      "feed_url": "https://aidandockery.com/feed/",
+      "website_url": "https://aidandockery.com/journal/",
+      "description": "Based between the UK & Southeast Asia, I'm a documentary photographer who has photographed weddings in a dozen countries. I work in a documentary style, capturing moments as they unfold, and as unobtrusively as possible.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 279,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5347312.jpg?t=1638262017"
+    },
+    {
+      "title": "Thomas De Cian Photography",
+      "feed_url": "https://www.thomasdecian.com/feed/",
+      "website_url": "https://www.thomasdecian.com/news/",
+      "description": "Thomas is an Italian-born editorial and commercial photographer based in Bangkok. His work has been published worldwide in newspapers, magazines, and online media and spans different fields of photography: interior and architectural, lifestyle and portraiture, food and product photography.",
+      "followers": {
+        "facebook": 429
+      },
+      "image_url": "https://i1.feedspot.com/5347314.jpg?t=1638262018"
+    },
+    {
+      "title": "Indian Wedding Thailand Photo",
+      "feed_url": "https://indianweddingthailandphoto.com/feed",
+      "website_url": "https://indianweddingthailandphoto.com/",
+      "description": "We're a team of professional Indian wedding photographers and films based in Thailand. Our passion is love for shooting wedding photos and videos since 2009.",
+      "followers": {
+        "facebook": 61,
+        "instagram": 301
+      },
+      "image_url": "https://i1.feedspot.com/5335933.jpg?t=1637916030"
+    },
+    {
+      "title": "Phuket Photoshoot",
+      "feed_url": "https://www.phuketphotoshoot.com/feed/",
+      "website_url": "https://phuketphotoshoot.com/",
+      "description": "Hi there, I'm Deen! I'm a photographer experienced in wedding photoshoots, family shooting, food, interior, event photography, and more. I capture simple, natural yet dramatic images that would otherwise be forgotten and lost.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5347310.jpg?t=1638262016"
+    }
+  ]
+}

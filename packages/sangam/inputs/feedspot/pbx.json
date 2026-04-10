@@ -1,0 +1,97 @@
+{
+  "category": "PBX",
+  "source_url": "https://rss.feedspot.com/pbx_rss_feeds",
+  "feeds": [
+    {
+      "title": "VirtualPBX Blog",
+      "feed_url": "https://www.virtualpbx.com/blog/feed/",
+      "website_url": "https://www.virtualpbx.com/blog/",
+      "description": "The VirtualPBX Blog is your destination for quality insight on the mattes impacting VoIP and the digital office communication space.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 5800,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4984823.jpg?t=1622125287"
+    },
+    {
+      "title": "FreePBX Blog",
+      "feed_url": "https://www.freepbx.org/feed/",
+      "website_url": "https://www.freepbx.org/category/blog/",
+      "description": "The FreePBX EcoSystem has developed over the past decade to be the most widely deployed Open Source PBX platform in use across the world today.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4985492.jpg?t=1622125283"
+    },
+    {
+      "title": "Bicom Systems Blog",
+      "feed_url": "https://blog.bicomsystems.com/feed/",
+      "website_url": "https://blog.bicomsystems.com/",
+      "description": "Bicom Systems has deployed flexible, reliable, and scalable New Generation Communication Systems to SMBs, enterprises, and governments worldwide by unifying the most advanced of latest technologies.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1000,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4984836.jpg?t=1615292024"
+    },
+    {
+      "title": "3CX Blog",
+      "feed_url": "https://www.3cx.com/blog/feed/",
+      "website_url": "https://www.3cx.com/blog/",
+      "description": "3CX is an open-platform PBX for Windows, Linux and the Cloud. The phone system delivers a complete Unified Communications (UC) solution which can be integrated with other applications such as Salesforce, Google Contacts, Office 365 and more.",
+      "followers": {
+        "facebook": 83700,
+        "twitter": 25100
+      },
+      "image_url": "https://i1.feedspot.com/4984333.jpg?t=1622125266"
+    },
+    {
+      "title": "Matt Landis Windows PBX & UC Report",
+      "feed_url": "https://feeds.feedburner.com/MattLandisWindowsPbxUcReport",
+      "website_url": "http://windowspbx.blogspot.com/",
+      "description": "This blog is about Microsoft Lync and other Windows-based phone systems and communication solutions like snom One.",
+      "followers": {
+        "facebook": 753,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/1053455.jpg?t=1622125296"
+    },
+    {
+      "title": "Freshworks Blog",
+      "feed_url": "https://www.freshworks.com/freshcaller-cloud-pbx/blog/articles/feed/",
+      "website_url": "https://www.freshworks.com/newsroom/press-releases/",
+      "description": "Freshworks Inc. is the parent company behind the suite of products which includes Freshdesk, Freshservice, Freshsales, Freshcaller, Freshteam, Freshchat and Freshmarketer. The company's suite of products is designed to work tightly together to increase collaboration and help teams better connect and communicate with their customers and co-workers.",
+      "followers": {
+        "facebook": 17600,
+        "twitter": 18500
+      },
+      "image_url": "https://i1.feedspot.com/4984953.jpg?t=1622125290"
+    },
+    {
+      "title": "Loway QueueMetrics Blog",
+      "feed_url": "https://www.queuemetrics.com/rss.jsp",
+      "website_url": "https://www.queuemetrics.com/blog/",
+      "description": "QueueMetrics is the Call-Center Software Management Solution for your Asterisk based PBX.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4984957.jpg?t=1622125274"
+    },
+    {
+      "title": "Xorcom Blog",
+      "feed_url": "https://www.xorcom.com/feed/",
+      "website_url": "https://www.xorcom.com/voip-pbx-news-and-blog/",
+      "description": "Xorcom is a developer of business phone systems, virtual PBX and hotel phone systems, with customers in over 100 countries, including government, banks, hotels, services and more. Xorcom's CompletePBX operating system drives a wide line of PBX appliances as well as a flexible virtual PBX system.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1800,
+        "instagram": 249
+      },
+      "image_url": "https://i1.feedspot.com/4985528.jpg?t=1622125270"
+    }
+  ]
+}

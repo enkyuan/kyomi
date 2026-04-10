@@ -1,0 +1,37 @@
+{
+  "category": "Montana Conservative",
+  "source_url": "https://rss.feedspot.com/montana_conservative_rss_feeds",
+  "feeds": [
+    {
+      "title": "Flathead County Republicans",
+      "feed_url": "https://flatheadrepublicans.com/feed/",
+      "website_url": "https://flatheadrepublicans.com/news/",
+      "description": "Stay informed with the latest updates, news, and articles from the Flathead Republicans. Discover key insights, and upcoming events, and endorse true platform conservatives in local primary races through their blog.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5762122.jpg?t=1706184001"
+    },
+    {
+      "title": "Montana Republican Party",
+      "feed_url": "https://mtgop.org/feed/",
+      "website_url": "https://mtgop.org/news/",
+      "description": "The Montana Republican Party is dedicated to advocating for smaller government, lower taxes, and stronger families. Stay informed on MTGOP news, press releases, and events by signing up for updates. Join the movement for a stronger nation through the principles of the GOP.",
+      "followers": {
+        "facebook": 17200,
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/5316672.jpg?t=1630307415"
+    },
+    {
+      "title": "Conservative News From Montana",
+      "feed_url": "https://conservativenewsfrommontana.news/index.php/feed/",
+      "website_url": "https://conservativenewsfrommontana.news/",
+      "description": "Conservative News From Montana provides Montanans with the latest updates impacting their lives and work. Montana Viewpoint offers a platform for citizens to voice their opinions on local events. Stay informed and engaged with news and viewpoints relevant to Montana's community.",
+      "followers": {
+        "facebook": 346
+      },
+      "image_url": "https://i1.feedspot.com/5762121.jpg?t=1711540476"
+    }
+  ]
+}

@@ -49,7 +49,7 @@ export function registerErrorHandlers(app: Elysia) {
 
     const isAppError = error instanceof AppError;
     const context = {
-      url: request.url,
+      path: new URL(request.url).pathname,
       method: request.method,
       requestId,
       error: error instanceof Error ? error.message : "Unknown error",

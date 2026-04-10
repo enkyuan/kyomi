@@ -1,0 +1,41 @@
+{
+  "category": "Chainsaw",
+  "source_url": "https://rss.feedspot.com/chainsaw_rss_feeds",
+  "feeds": [
+    {
+      "title": "Arbotec Blog",
+      "feed_url": "https://arbortec.com/blogs/news.atom",
+      "website_url": "https://arbortec.com/blogs/news",
+      "description": "The Arbotec blog dives into Chainsaw footwear and related accessories. Walk along as we create, collaborate, and enjoy activities in nature. Arbortec is a manufacturer of chainsaw protective footwear and apparel, based in the United Kingdom. We believe in bringing the finest materials and innovative designs together to create the best protective footwear, clothing, and accessories within the industry.",
+      "followers": {
+        "facebook": 347800,
+        "twitter": 2200,
+        "instagram": 107700
+      },
+      "image_url": "https://i1.feedspot.com/5433741.jpg?t=1660912697"
+    },
+    {
+      "title": "Chainsaw Journal",
+      "feed_url": "https://www.chainsawjournal.com/feed/",
+      "website_url": "https://www.chainsawjournal.com/",
+      "description": "Browse educational articles on lawn & garden tools, power equipment, chainsaws, generators, & home improvement products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5455542.jpg?t=1665562113"
+    },
+    {
+      "title": "Chainsaw Guru",
+      "feed_url": "https://chainsawguru.com/feed/",
+      "website_url": "https://chainsawguru.com/",
+      "description": "We share the latest Buying Guides, Chainsaw Reviews, Trending Products, and training manual articles in our blog. Here at Chainsaw Guru, we help homeowners find the right cutting tool according to their needs and requirements. Our aim is to keep our audience updated with daily-life chainsaw problems and their solutions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5433739.jpg?t=1660913017"
+    },
+    {
+      "title": "Chainsaw Magazine",
+      "feed_url": "https://chainsawmag.com/feed/",
+      "description": "The Chainsaw Magazine is designed to be your place for anything Chainsaw related. Whether you are just starting out or are a seasoned veteran in the Chainsaw community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5455543.jpg?t=1665561162"
+    }
+  ]
+}

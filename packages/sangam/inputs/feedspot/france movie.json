@@ -1,0 +1,72 @@
+{
+  "category": "France Movie",
+  "source_url": "https://rss.feedspot.com/france_movie_rss_feeds",
+  "feeds": [
+    {
+      "title": "East European Film Bulletin",
+      "feed_url": "https://eefb.org/feed/",
+      "website_url": "https://eefb.org/",
+      "description": "A monthly online journalistic and literary project dedicated to the criticism of films related to Eastern Europe.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 483
+      },
+      "image_url": "https://i1.feedspot.com/4946046.jpg?t=1605606894"
+    },
+    {
+      "title": "Movie in the air",
+      "feed_url": "https://movieintheair.com/en/feed/",
+      "website_url": "https://movieintheair.com/en/blog-2/",
+      "description": "With Movie In The Air: Read Reviews, analysis, releases: all the news and trends of films, series and festivals.",
+      "followers": {
+        "facebook": 413,
+        "instagram": 992
+      },
+      "image_url": "https://i1.feedspot.com/5350835.jpg?t=1638786660"
+    },
+    {
+      "title": "France Today \u00bb Cinema & Film",
+      "feed_url": "https://francetoday.com/category/culture/cinema-film/feed/",
+      "website_url": "https://francetoday.com/category/culture/cinema-film/",
+      "description": "A guide for French cinema and film buffs, featuring French cinema and television reviews, must-see movie recommendations, articles and exclusive interviews.",
+      "followers": {
+        "facebook": 17700,
+        "twitter": 17400,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5349583.jpg?t=1638474809"
+    },
+    {
+      "title": "Festival de Cannes",
+      "feed_url": "https://feeds.feedburner.com/festival-cannes/OUkz",
+      "website_url": "https://www.festival-cannes.com/en/",
+      "description": "The latest news from the Festival de Cannes. The international Festival de Cannes is one of the world's most widely publicized events and certainly the most important film festival in terms of worldwide impact.",
+      "followers": {
+        "facebook": 939000,
+        "twitter": 540900,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/5349581.jpg?t=1638475252"
+    },
+    {
+      "title": "A look at French \u00bb Films",
+      "feed_url": "https://regardsurlefrancais.com/category/culture/films/feed/",
+      "website_url": "https://regardsurlefrancais.com/category/culture/films/",
+      "description": "Articles about Films written by Derek Trudel. He shares with you his discoveries and learning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5349578.jpg?t=1638782256"
+    },
+    {
+      "title": "The Local \u00bb Film",
+      "feed_url": "https://www.thelocal.fr/tag/film/feed/",
+      "website_url": "https://www.thelocal.fr/tag/film",
+      "description": "The latest news on film and cinema from France. The Local is the largest English-language news network in Europe, with six million readers every month.",
+      "followers": {
+        "facebook": 124100,
+        "twitter": 27700,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5349579.jpg?t=1638474410"
+    }
+  ]
+}

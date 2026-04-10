@@ -1,0 +1,70 @@
+{
+  "category": "Sheet Music",
+  "source_url": "https://rss.feedspot.com/sheet_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Take Note | The Official Blog of Sheet Music Plus",
+      "feed_url": "https://blog.sheetmusicplus.com/feed/",
+      "website_url": "https://blog.sheetmusicplus.com/",
+      "description": "Sheet Music Plus offers musicians a full spectrum of sheet music, with fast delivery and trained musicians offering customer service. It is home to the world's largest sheet music selection for all abilities, styles, genres, and instruments. Follow to get the latest updates.",
+      "followers": {
+        "facebook": 38500,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5208194.jpg?t=1603196892"
+    },
+    {
+      "title": "Sheet Music Direct Blog",
+      "feed_url": "https://blog.sheetmusicdirect.com/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.sheetmusicdirect.com/",
+      "description": "Sheet Music Direct is the world's premier destination for online sheet music. It offers a huge library of more than 300,000 accurate, affordable, and artist-approved arrangements for 35 different instruments. Follow to get updates.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 63200,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5208195.jpg?t=1603197226"
+    },
+    {
+      "title": "Flute Sheet Music",
+      "feed_url": "http://flutersmusic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://flutersmusic.blogspot.com/",
+      "description": "Get the latest sheet music for over 600 songs for the flute at Fluters Music!",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/4747473.jpg?t=1612959969"
+    },
+    {
+      "title": "The Music Notes Blog",
+      "feed_url": "https://www.music-for-music-teachers.com/free-sheet-music.xml",
+      "website_url": "https://www.music-for-music-teachers.com/free-sheet-music-blog.html",
+      "description": "Find free guitar, piano, vocal, and a bit of violin & fiddle sheet music, & lead sheets for ALL instruments.",
+      "followers": {
+        "facebook": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5208197.jpg?t=1603200750"
+    },
+    {
+      "title": "Musicnotes Now Blog",
+      "feed_url": "https://feedpress.me/musicnotesnow",
+      "website_url": "https://www.musicnotes.com/blog/",
+      "description": "Musicnotes Now world's leading digital sheet music retailer, providing an unparalleled catalog of content for every instrument and skill level. Get the latest news, tips, and products to help nourish their love for music..",
+      "followers": {
+        "facebook": 353600,
+        "twitter": 13700,
+        "instagram": 119100
+      },
+      "image_url": "https://i1.feedspot.com/5208196.jpg?t=1603198330"
+    },
+    {
+      "title": "Pianolicious",
+      "feed_url": "https://pianolicious.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://pianolicious.blogspot.com/",
+      "description": "The purpose of this blog is to help musicians (especially pianists) improve their musical skills. All the files are provided by the web hosts hence you will be using this information only for personal, educational, and NON-commercial purposes!! Find all the latest free sheet music and music notes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5208198.jpg?t=1603201314"
+    }
+  ]
+}

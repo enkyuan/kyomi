@@ -1,0 +1,81 @@
+{
+  "category": "Blockchain & Cryptocurrency Security",
+  "source_url": "https://rss.feedspot.com/blockchain_and_cryptocurrency_security_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vault12 Blog",
+      "feed_url": "https://vault12.com/feeds/blog.rss",
+      "website_url": "https://vault12.com/blog/",
+      "description": "Read our blog covering Vault12 Web3 Personal Security, articles that help you recover, back up, and inherit all your Web3 assets stored in your Vault including Bitcoin, Ethereum, crypto, private keys, seed phrases, NFTs, digital art, DAOs, DeFi, and the Metaverse. Vault12 Digital Inheritance is the first solution to offer a simple, direct, and secure way to ensure cryptocurrency, NFTs and other Web3 digital assets can be inherited by future generations.",
+      "followers": {
+        "facebook": 389,
+        "twitter": 1900,
+        "instagram": 573
+      },
+      "image_url": "https://i1.feedspot.com/5436321.jpg?t=1661753714"
+    },
+    {
+      "title": "Schneier on Security \u00bb Cryptocurrency",
+      "feed_url": "https://www.schneier.com/tag/cryptocurrency/feed/",
+      "website_url": "https://www.schneier.com/tag/cryptocurrency/",
+      "description": "I am a public-interest technologist, working at the intersection of security, technology, and people. I've been writing about security issues on my blog since 2004, and in my monthly newsletter since 1998. Stay up to date with the latest insights on crypto currency, market trends, security tips and more!",
+      "followers": {
+        "facebook": 24800,
+        "twitter": 146400
+      },
+      "image_url": "https://i1.feedspot.com/5436379.jpg?t=1661840530"
+    },
+    {
+      "title": "Qualys Blog \u00bb Cryptocurrency",
+      "feed_url": "https://blog.qualys.com/tag/cryptocurrency/feed",
+      "website_url": "https://blog.qualys.com/tag/cryptocurrency",
+      "description": "Browse expert network security guidance and news. Qualys, Inc. is a pioneer and leading provider of disruptive cloud-based security, compliance and IT solutions with more than 10,000 subscription customers worldwide, including a majority of the Forbes Global 100 and Fortune 100.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 33000
+      },
+      "image_url": "https://i1.feedspot.com/5436320.jpg?t=1661754707"
+    },
+    {
+      "title": "ImmuneBytes Blog",
+      "feed_url": "https://immunebytes.com/blog/feed/",
+      "website_url": "https://immunebytes.com/blog/",
+      "description": "ImmuneBytes expediates blockchain security by employing cutting-edge techniques in auditing smart contracts and decentralized applications. We aim to deliver smart contract auditing services for businesses of all scales and end clients around the globe. Know more about cryptocurrency security, blockchain and more!",
+      "followers": {
+        "facebook": 115,
+        "twitter": 723,
+        "instagram": 142
+      },
+      "image_url": "https://i1.feedspot.com/5436437.jpg?t=1661758449"
+    },
+    {
+      "title": "Ackee Blockchain Blog",
+      "feed_url": "https://ackee.xyz/blog/feed/",
+      "website_url": "https://ackee.xyz/blog/",
+      "description": "Welcome to our blog dedicated to smart contracts auditing. We plan share here our procedures, findings and open source tooling - everything to make a stronger blockchain community! Ackee Blockchain is a team of auditors and white hat hackers who perform security audits and assessments. Our mission is to contribute to a stronger blockchain ecosystem by sharing our knowledge.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5436699.jpg?t=1661778579"
+    },
+    {
+      "title": "CipherTrace Blog",
+      "feed_url": "https://ciphertrace.com/feed/",
+      "website_url": "https://www.mastercard.com/news/perspectives/featured-topics/digital-currencies/",
+      "description": "Stay up to date with CipherTrace and see how CipherTrace detects money laundering, powers law enforcement investigations, and enables regulatory supervision. CipherTrace develops cryptocurrency Anti-Money Laundering, cryptocurrency forensics, and blockchain threat intelligence solutions.",
+      "followers": {
+        "facebook": 396,
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5285937.jpg?t=1622264030"
+    },
+    {
+      "title": "Halborn \u00bb Blockchain Security",
+      "feed_url": "https://www.halborn.com/category/blockchain-security/feed",
+      "website_url": "https://halborn.com/category/blockchain-security/",
+      "description": "Halborn was founded in 2019 by renowned ethical hacker Steven Walbroehl and growth hacker Rob Behnke. The fully remote organization has since grown to over 50 of the best and brightest offensive security engineers in the world. Learn more about blockchain security with our articles in this section.",
+      "followers": {
+        "twitter": 388900
+      },
+      "image_url": "https://i1.feedspot.com/5436675.jpg?t=1661778447"
+    }
+  ]
+}

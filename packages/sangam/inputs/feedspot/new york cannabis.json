@@ -1,0 +1,67 @@
+{
+  "category": "New York Cannabis",
+  "source_url": "https://rss.feedspot.com/new_york_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cannabis Workforce Initiative Blog",
+      "feed_url": "https://cannabisworkforce.org/feed/",
+      "website_url": "https://cannabisworkforce.org/blog/",
+      "description": "The New York State Cannabis Workforce Initiative (CWI) fosters social equity in the adult-use cannabis market. It provides workforce development, legal education, and entrepreneurial services, prioritizing diversity and quality jobs. Leveraging expertise from Cornell ILR and WDI, CWI aims to create high-road career pathways.",
+      "followers": {
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/7292640.jpg?t=1712422872"
+    },
+    {
+      "title": "The New York Times \u00bb Marijuana and Medical Marijuana",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/subject/marijuana-and-medical-marijuana/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/marijuana-and-medical-marijuana",
+      "description": "Explore The New York Times blog for the latest on Marijuana and Medical Marijuana. Dive into insightful articles, updates, and news, offering comprehensive coverage and expert analysis on the evolving landscape of cannabis.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5374683.jpg?t=1712423883"
+    },
+    {
+      "title": "Medical Mikes Blog",
+      "feed_url": "https://medicalmikes.com/blogs/medical-mikes-blog.atom",
+      "website_url": "https://medicalmikes.com/blogs/medical-mikes-blog",
+      "description": "Medical Mikes offers a range of premium CBD products sourced from upstate New York. From full-spectrum oils to pet tinctures, they prioritize exceptional quality and natural healing. With organic options and nationwide shipping, they educate on dosage and hemp oil varieties for optimal wellness.",
+      "followers": {
+        "facebook": 316
+      },
+      "image_url": "https://i1.feedspot.com/7292635.jpg?t=1712422839"
+    },
+    {
+      "title": "AlphaRoot",
+      "feed_url": "https://alpharoot.com/feed/",
+      "website_url": "https://alpharoot.com/insights/",
+      "description": "AlphaRoot specializes in guiding cannabis companies through industry risks, unlike traditional insurance companies. They curate powerful risk management solutions tailored to the cannabis sector. Stay informed with their selection of top cannabis blogs, designed to support canna-business owners in navigating industry complexities.",
+      "followers": {
+        "twitter": 120
+      },
+      "image_url": "https://i1.feedspot.com/7292637.jpg?t=1712423956"
+    },
+    {
+      "title": "Fluent Cannabis Blog",
+      "feed_url": "https://getfluent.com/feed/",
+      "website_url": "https://getfluent.com/blog/",
+      "description": "Etain, a women-founded company in New York, focuses on quality medical cannabis products. Inspired by their grandmother, Frances 'Granny Franny' Keeffe, they infuse joy into every creation. Explore their strains and products at local dispensaries and meet fellow changemakers in the New York medical cannabis community.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 734
+      },
+      "image_url": "https://i1.feedspot.com/7292595.jpg?t=1712324927"
+    },
+    {
+      "title": "MJBizDaily \u00bb New York",
+      "feed_url": "https://mjbizdaily.com/news-by-state/new-york/feed/",
+      "website_url": "https://mjbizdaily.com/news-by-state/new-york/",
+      "description": "Stay informed with MJBiz, a trusted source for cannabis business information since 2011. Access New York cannabis industry news and marijuana legislation updates on Marijuana Business Daily, the foremost publication in the cannabis industry.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 77900,
+        "instagram": 73600
+      },
+      "image_url": "https://i1.feedspot.com/7292639.jpg?t=1712422859"
+    }
+  ]
+}

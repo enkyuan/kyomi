@@ -1,0 +1,105 @@
+{
+  "category": "UK Graffiti",
+  "source_url": "https://rss.feedspot.com/uk_graffiti_rss_feeds",
+  "feeds": [
+    {
+      "title": "GraffitiStreet",
+      "feed_url": "https://www.graffitistreet.com/feed/",
+      "website_url": "https://www.graffitistreet.com/news/",
+      "description": "GraffitiStreet is a brand new urban art store selling limited edition screen prints and original artwork from the world's best graffiti and street artists.",
+      "followers": {
+        "facebook": 55000,
+        "twitter": 1200,
+        "instagram": 45000
+      },
+      "image_url": "https://i1.feedspot.com/4570024.jpg?t=1614948185"
+    },
+    {
+      "title": "Inspiring City",
+      "feed_url": "https://inspiringcity.com/feed/",
+      "website_url": "https://inspiringcity.com/",
+      "description": "Inspiring City is a Street art blog featuring the best artists, interviews, murals, and graffiti from London and around the world. Discover new and emerging artists on the London Street Art scene.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4855156.jpg?t=1611755860"
+    },
+    {
+      "title": "London Calling Blog",
+      "feed_url": "https://londoncallingblog.net/feed/",
+      "website_url": "https://londoncallingblog.net/",
+      "description": "London Calling Blog have set to share our passion for and love of Street Art around our home of London. We have taken our love of documenting the scene and ventured into trying to facilitate the addition of Street Art around London, setting to brighten and add expression to the local communities they adorn.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4569711.jpg?t=1675849064"
+    },
+    {
+      "title": "Shoreditch Street Art Tours Blog",
+      "feed_url": "https://www.shoreditchstreetarttours.co.uk/feed/",
+      "website_url": "https://www.shoreditchstreetarttours.co.uk/blog/",
+      "description": "Updates on new street art and graffiti from Shoreditch London including photographs and text about art, artists, techiques, locations, alternative viewpoints. Shoreditch Street Art Tours is London's top ranked street art tour. We know the culture, the art and more!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5505392.jpg?t=1675849239"
+    },
+    {
+      "title": "Graffoto",
+      "feed_url": "https://graffoto.co.uk/feed/",
+      "website_url": "https://graffoto.co.uk/",
+      "description": "Graffito is dedicated for those who love street art and graffiti and are prepared to go beyond murals. Follow along as we explore UK's streets for graffiti by artists, interesting wall murals and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5505395.jpg?t=1675849324"
+    },
+    {
+      "title": "Graffiti Life Blog",
+      "feed_url": "http://graffitilife.co.uk/feed/",
+      "website_url": "https://graffitilife.co.uk/blog/",
+      "description": "With a clear vision of promoting public art, but no established blueprint to follow, the group went on to create an industry from street art and graffiti, creating opportunities for artists that previously had not existed.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 14000,
+        "instagram": 43400
+      },
+      "image_url": "https://i1.feedspot.com/4911427.jpg?t=1675849126"
+    },
+    {
+      "title": "Hookedblog",
+      "feed_url": "https://feeds.feedburner.com/Hooked",
+      "website_url": "https://www.hookedblog.co.uk/",
+      "description": "Hookedblog is a Street Art News site established in 2005 as a place for us to share our love of Street Art from London and beyond. Covering Street and Urban Art, Stencils, Pasteups, Murals, Graffiti, Zines, Screen Printing, Illustration and everything and anything else in between!",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 13000,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/355869.jpg?t=1602850742"
+    },
+    {
+      "title": "DS Art Blog",
+      "feed_url": "https://www.dsart.co.uk/feed/",
+      "website_url": "https://www.dsart.co.uk/blog/",
+      "description": "David Schmidt aka 'DS' is a US national, UK-bred urban artist, striving to create visually attractive, mentally engaging art all wrapped up in rich colour and form. Check out his range of DS Art, the latest news and thoughts and more!",
+      "followers": {
+        "facebook": 11900,
+        "twitter": 18200,
+        "instagram": 15200
+      },
+      "image_url": "https://i1.feedspot.com/5505396.jpg?t=1675849494"
+    },
+    {
+      "title": "Graffiti Artists To Hire Blog",
+      "feed_url": "https://graffitiartists2hire.co.uk/category/blog/feed/",
+      "website_url": "https://graffitiartists2hire.co.uk/category/blog/",
+      "description": "Our aim is to deliver creative and professional workmanship along with a 1st class service. Working closely with you to assist - design and deliver outstanding artwork. Find more about our works, workshops, events, projects and more!",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 411
+      },
+      "image_url": "https://i1.feedspot.com/5505398.jpg?t=1675849347"
+    }
+  ]
+}

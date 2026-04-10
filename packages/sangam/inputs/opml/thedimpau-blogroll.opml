@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>ian - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Manton Reece" xmlUrl="https://www.manton.org/feed.xml" htmlUrl="https://www.manton.org" category="Recommendations"/>
+    <outline type="rss" text="The History Blog" xmlUrl="https://www.thehistoryblog.com/feed" htmlUrl="https://www.thehistoryblog.com" category="Recommendations"/>
+    <outline type="rss" text="Verso Books" xmlUrl="https://www.versobooks.com/en-gb/blogs/news.atom" htmlUrl="https://www.versobooks.com/en-gb/blogs/news" category="Recommendations"/>
+    <outline type="rss" text="George Monbiot" xmlUrl="" htmlUrl="https://www.monbiot.com" category="Recommendations"/>
+    <outline type="rss" text="Freedom Press" xmlUrl="" htmlUrl="https://freedomnews.org.uk/category/news/" category="Recommendations"/>
+    <outline type="rss" text="Jeremy Cherfas" xmlUrl="https://www.jeremycherfas.net/blog.atom" htmlUrl="https://www.jeremycherfas.net" category="Recommendations"/>
+    <outline type="rss" text="Maique Madeira" xmlUrl="https://maique.eu/feed.xml" htmlUrl="https://maique.eu" category="Recommendations"/>
+    <outline type="rss" text="Denny Henke" xmlUrl="https://beardystarstuff.net/feed.xml" htmlUrl="https://beardystarstuff.net" category="Recommendations"/>
+    <outline type="rss" text="Situationniste Blog" xmlUrl="https://situationnisteblog.wordpress.com/feed/" htmlUrl="https://situationnisteblog.wordpress.com" category="Recommendations"/>
+    <outline type="rss" text="Yanis Varoufakis" xmlUrl="https://www.yanisvaroufakis.eu/feed/" htmlUrl="https://www.yanisvaroufakis.eu" category="Recommendations"/>
+    <outline type="rss" text="Darcy Moore" xmlUrl="https://www.darcymoore.net/feed/" htmlUrl="https://www.darcymoore.net" category="Recommendations"/>
+    <outline type="rss" text="Existential Comics" xmlUrl="https://existentialcomics.com/rss.xml" htmlUrl="https://existentialcomics.com" category="Recommendations"/>
+    <outline type="rss" text="Jean MacDonald" xmlUrl="https://micro.welltempered.net/feed.xml" htmlUrl="https://micro.welltempered.net" category="Recommendations"/>
+    <outline type="rss" text="Jessica Smith" xmlUrl="https://www.jayeless.net/posts/index.xml" htmlUrl="https://www.jayeless.net" category="Recommendations"/>
+    <outline type="rss" text="Romanticism Blog" xmlUrl="https://wordsworth.org.uk/feed/" htmlUrl="https://wordsworth.org.uk/blog/" category="Recommendations"/>
+    <outline type="rss" text="Cory Doctorow" xmlUrl="https://pluralistic.net/feed/" htmlUrl="https://pluralistic.net" category="Recommendations"/>
+    <outline type="rss" text="Dave Winer" xmlUrl="http://scripting.com/rss.xml" htmlUrl="http://scripting.com/" category="Recommendations"/>
+    <outline type="rss" text="Valerie" xmlUrl="https://val.micro.blog/feed.xml" htmlUrl="https://val.micro.blog" category="Recommendations"/>
+  </body>
+</opml>

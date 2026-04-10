@@ -1,0 +1,319 @@
+{
+  "category": "Peru News",
+  "source_url": "https://rss.feedspot.com/peru_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "La Raz\u00f3n",
+      "feed_url": "https://larazon.pe/feed/",
+      "website_url": "https://larazon.pe/",
+      "description": "La Raz\u00f3n is the leading newspaper in Peru with more than 27 years informing Peruvians and the world with the most important news of national and international events.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5339521.jpg?t=1635859274"
+    },
+    {
+      "title": "Caretas Magazine",
+      "feed_url": "https://caretas.pe/feed/",
+      "website_url": "https://caretas.pe/",
+      "description": "Hot news, research and humor since 1950. Topics covered are politics, economy, world, entertainment, sports, and more.",
+      "followers": {
+        "facebook": 359800,
+        "twitter": 770100,
+        "instagram": 54900
+      },
+      "image_url": "https://i1.feedspot.com/5339518.jpg?t=1635860738"
+    },
+    {
+      "title": "Per\u00fa21",
+      "feed_url": "https://peru21.pe/rss/?q=html%2Fcms%2Fweb%2Frss%2F",
+      "website_url": "https://peru21.pe/",
+      "description": "Per\u00fa21 will keep you informed of the latest national and world events.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 807300
+      },
+      "image_url": "https://i1.feedspot.com/5339429.jpg?t=1635854540"
+    },
+    {
+      "title": "Peru Reports",
+      "feed_url": "https://perureports.com/feed/",
+      "website_url": "https://perureports.com/",
+      "description": "Peru Reports is an English-language news service. Our mission is to objectively report the news in Peru to a foreign audience.",
+      "followers": {
+        "facebook": 8500,
+        "instagram": 84
+      },
+      "image_url": "https://i1.feedspot.com/4930298.jpg?t=1621238160"
+    },
+    {
+      "title": "El Buho",
+      "feed_url": "https://elbuho.pe/feed/",
+      "website_url": "https://elbuho.pe/",
+      "description": "El Buho is the digital newspaper of Arequipa. Our mission is to generate relevant information and offer a point of view on crucial issues for the development of the region. We deal with national issues from our own perspective and our gaze extends to the global.",
+      "followers": {
+        "facebook": 373300,
+        "twitter": 30700,
+        "instagram": 56500
+      },
+      "image_url": "https://i1.feedspot.com/5339562.jpg?t=1635862171"
+    },
+    {
+      "title": "El Men",
+      "feed_url": "https://elmen.pe/feed/",
+      "website_url": "https://elmen.pe/",
+      "description": "El Men has a wide spectrum of public, which ranges from young people looking for entertainment and celebrity news to people looking for information on retirement pensions, information on procedures, etc.It covers a great variety of topics, focusing on mass entertainment, but also on helping the public with health issues, pension information and other useful articles.",
+      "followers": {
+        "facebook": 12500,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5339554.jpg?t=1635861945"
+    },
+    {
+      "title": "La Hora",
+      "feed_url": "https://lahora.pe/feed/",
+      "website_url": "https://lahora.pe/",
+      "description": "Get the latest national and international news from La Hora.",
+      "followers": {
+        "facebook": 360400,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5339557.jpg?t=1635862786"
+    },
+    {
+      "title": "Diario UNO",
+      "feed_url": "https://diariouno.pe/feed/",
+      "website_url": "https://diariouno.pe/",
+      "description": "Latest news from Peru covering politics, current affairs, economy, world, special reports, sports and more.",
+      "followers": {
+        "facebook": 48300,
+        "twitter": 117500
+      },
+      "image_url": "https://i1.feedspot.com/5339559.jpg?t=1635862917"
+    },
+    {
+      "title": "Generaccion",
+      "feed_url": "http://www.generaccion.com/noticia/rss/",
+      "website_url": "http://www.generaccion.com/",
+      "description": "Find last minute news about Peru and the world, about current affairs, politics, sports, entertainment, technology, health, ecology, tourism, entertainment, Hollywood, and more.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/1365759.jpg?t=1635859450"
+    },
+    {
+      "title": "Diario Voces",
+      "feed_url": "https://diariovoces.com.pe/feed/",
+      "website_url": "https://diariovoces.com.pe/",
+      "description": "Articles, interviews, political forum, research and culture. Everything that is happening in our department of San Mart\u00edn and how we face it as a community.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5339565.jpg?t=1635862056"
+    },
+    {
+      "title": "Prensa Regional",
+      "feed_url": "https://prensaregional.pe/feed/",
+      "website_url": "https://prensaregional.pe/",
+      "description": "Prensa Regional is a Moquegua regional newspaper. Get the latest news from Moquegua and Arequipa region.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 986
+      },
+      "image_url": "https://i1.feedspot.com/5339556.jpg?t=1635861845"
+    },
+    {
+      "title": "EnLinea.pe",
+      "feed_url": "https://enlinea.pe/feed/",
+      "website_url": "https://enlinea.pe/",
+      "description": "News from Peru and the world. Get the latest news on politics, sports, TV, soccer, economy, world and more.",
+      "followers": {
+        "facebook": 366600,
+        "twitter": 57400
+      },
+      "image_url": "https://i1.feedspot.com/5339558.jpg?t=1635861709"
+    },
+    {
+      "title": "El Diario del Cusco",
+      "feed_url": "https://diariodelcusco.pe/feed/",
+      "website_url": "https://diariodelcusco.pe/",
+      "description": "All the news from Cuzco, Machupicchu, Peru and the world. The latest, complete information on tourism, judicial and current affairs.",
+      "followers": {
+        "facebook": 65200,
+        "twitter": 2500,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5339564.jpg?t=1635864225"
+    },
+    {
+      "title": "Pro & Contra",
+      "feed_url": "https://proycontra.com.pe/feed/",
+      "website_url": "https://proycontra.com.pe/",
+      "description": "Pro & Contra is a news newspaper that has its information center in Iquitos, capital of the Loreto region, in the Peruvian Amazon. Our vision is to bring information in the most plural way.",
+      "followers": {
+        "facebook": 122600,
+        "twitter": 4100,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5339553.jpg?t=1635862432"
+    },
+    {
+      "title": "Cr\u00f3nica Viva",
+      "feed_url": "https://www.cronicaviva.com.pe/feed/",
+      "website_url": "https://www.cronicaviva.com.pe/",
+      "description": "Cr\u00f3nica Viva is a digital Newspaper that shares the latest news from Peru and the world.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5339566.jpg?t=1646133341"
+    },
+    {
+      "title": "Diario los Andes",
+      "feed_url": "https://losandes.com.pe/feed/",
+      "website_url": "https://losandes.com.pe/",
+      "description": "A leading newspaper in southern Peru, a space for reflection on human development and its relationship with the environment, society and the economy.",
+      "followers": {
+        "facebook": 104800
+      },
+      "image_url": "https://i1.feedspot.com/5339520.jpg?t=1635860394"
+    },
+    {
+      "title": "Trujillo Informa",
+      "feed_url": "https://trujilloinforma.com/feed/",
+      "website_url": "https://trujilloinforma.com/",
+      "description": "Latest news and headlines from Trujillo, Peru.",
+      "followers": {
+        "facebook": 33700
+      },
+      "image_url": "https://i1.feedspot.com/5339561.jpg?t=1635863410"
+    },
+    {
+      "title": "El Chino",
+      "feed_url": "https://elchino.pe/feed/",
+      "website_url": "https://elchino.pe/",
+      "description": "Diario El Chino is a fresh and daring newspaper that is focused on entertainment, humor, entertainment and, of course, unusual data.",
+      "followers": {
+        "facebook": 12000,
+        "twitter": 891
+      },
+      "image_url": "https://i1.feedspot.com/5339555.jpg?t=1635861598"
+    },
+    {
+      "title": "Peruvian Times",
+      "feed_url": "https://feeds.feedburner.com/PeruvianTimes-NewsFromPeru",
+      "website_url": "https://www.peruviantimes.com/",
+      "description": "Peruvian Times, for nearly 100 years Peru's newspaper source for English-language local news and analysis.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 912
+      },
+      "image_url": "https://i1.feedspot.com/5339431.jpg?t=1635848987"
+    },
+    {
+      "title": "El Comercio",
+      "feed_url": "https://elcomercio.pe/arcio/rss/",
+      "website_url": "https://elcomercio.pe/",
+      "description": "El Comercio, one of the widely known news portal in Peru. Read news and headlines about sports, politics, economy, astronomy, technology and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5339428.jpg?t=1635855318"
+    },
+    {
+      "title": "Ojo",
+      "feed_url": "https://ojo.pe/arcio/rss/",
+      "website_url": "https://ojo.pe/",
+      "description": "Since 1968, your OJO diary has accompanied you with all the information you need including politics, sports, current headlines and more!",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 465300
+      },
+      "image_url": "https://i1.feedspot.com/5339515.jpg?t=1635859605"
+    },
+    {
+      "title": "Gesti\u00f3n",
+      "feed_url": "https://gestion.pe/arcio/rss/",
+      "website_url": "https://gestion.pe/",
+      "description": "Gesti\u00f3n is the Peruvian economy and business newspaper.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/5339516.jpg?t=1635859770"
+    },
+    {
+      "title": "Diario Correo",
+      "feed_url": "https://diariocorreo.pe/arcio/rss/",
+      "website_url": "https://diariocorreo.pe/",
+      "description": "From its 14 newsrooms, Correo instantly informs you of everything that happens in politics, news, sports, entertainment, technology and much more.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5339426.jpg?t=1635849300"
+    },
+    {
+      "title": "Per\u00fa Informa",
+      "feed_url": "https://www.peruinforma.com/feed/",
+      "website_url": "https://www.chaski.pe/",
+      "description": "Peruvian portal of national and international news, covering categories such as current affairs, politics, health, business, entertainment and opinion.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 943
+      },
+      "image_url": "https://i1.feedspot.com/5339560.jpg?t=1635862281"
+    },
+    {
+      "title": "Latina",
+      "feed_url": "https://www.latina.pe/feed",
+      "website_url": "https://www.latina.pe/",
+      "description": "Latina Televisi\u00f3n is a Peruvian open television channel that seeks to bring a wide variety of content to the audience through formats that entertain and invite all members of the family.",
+      "followers": {
+        "facebook": 8300000,
+        "twitter": 3300000,
+        "instagram": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/5339430.jpg?t=1635855628"
+    },
+    {
+      "title": "Diario Expreso",
+      "feed_url": "https://www.expreso.com.pe/",
+      "website_url": "https://www.expreso.com.pe/",
+      "description": "We inform what happens in Peru and the world. Find articles on entertainment, politics, economy, sports, weather and more.",
+      "followers": {
+        "facebook": 494700,
+        "twitter": 495200,
+        "instagram": 61300
+      },
+      "image_url": "https://i1.feedspot.com/5339517.jpg?t=1635860584"
+    },
+    {
+      "title": "Peru.com",
+      "feed_url": "https://peru.com/",
+      "website_url": "https://peru.com/",
+      "description": "We are the web portal for all Peruvians. We spread the news from Peru to the world to always keep you informed.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 662
+      },
+      "image_url": "https://i1.feedspot.com/1365779.jpg?t=1635848790"
+    },
+    {
+      "title": "ConNuestroPeru.com",
+      "feed_url": "https://connuestroperu.com/?format=feed&type=atom",
+      "website_url": "https://connuestroperu.com/",
+      "description": "Latest news and headlines from Peru covering politics, weather, economy, technology and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5339563.jpg?t=1635862563"
+    },
+    {
+      "title": "Jornada",
+      "feed_url": "https://jornada.com.pe/",
+      "website_url": "https://jornada.com.pe/",
+      "description": "Peruvian portal of national and international news, covering topics such as current affairs, politics, health, business, entertainment and opinion.",
+      "followers": {
+        "facebook": 105100,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5339570.jpg?t=1635863911"
+    }
+  ]
+}

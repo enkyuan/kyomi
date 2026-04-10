@@ -1,0 +1,322 @@
+{
+  "category": "Cryptocurrency Wallet",
+  "source_url": "https://rss.feedspot.com/cryptocurrency_wallet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Trezor Blog",
+      "feed_url": "https://blog.trezor.io/feed",
+      "website_url": "https://blog.trezor.io/",
+      "description": "Intrigues and stories on online security, privacy and the development of the world's most secure and ubiquitous hardware wallet for Bitcoin the TREZOR",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 205,
+        "instagram": 53600
+      },
+      "image_url": "https://i1.feedspot.com/4648863.jpg?t=1616769107"
+    },
+    {
+      "title": "ZebPay Blog",
+      "feed_url": "https://zebpay.com/feed",
+      "website_url": "https://zebpay.com/blog/",
+      "description": "Covers the latest articles on Bitcoin, Ethereum, and other cryptos. Learn everything about blockchain technology and stay updated with the trends in the crypto world. ZebPay is a one-stop shop to invest in Bitcoin and other digital currencies.",
+      "followers": {
+        "facebook": 35600,
+        "twitter": 83400,
+        "instagram": 27900
+      },
+      "image_url": "https://i1.feedspot.com/5293080.jpg?t=1623751726"
+    },
+    {
+      "title": "CoolWallet Blog",
+      "feed_url": "https://www.coolwallet.io/blogs/blog.atom",
+      "website_url": "https://www.coolwallet.io/blogs/blog/",
+      "description": "Covers News Guides from CoolWallet. CoolWallet is the most secure crypto hardware wallet for Bitcoin, Ethereum, Litecoin, Bitcoin Cash, and ERC20 Token.",
+      "followers": {
+        "facebook": 23200,
+        "twitter": 18600
+      },
+      "image_url": "https://i1.feedspot.com/4950858.jpg?t=1611138688"
+    },
+    {
+      "title": "Edge Blog",
+      "feed_url": "https://edge.app/blog/feed/",
+      "website_url": "https://edge.app/blog/",
+      "description": "The Edge team's mission is to provide the world's most innovative tools and systems for secure and private data storage of your bitcoin and other digital currency.",
+      "followers": {
+        "twitter": 28200,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4951348.jpg?t=1670392900"
+    },
+    {
+      "title": "Coinme Blog \u00bb Crypto Wallets",
+      "feed_url": "https://coinme.com/crypto-wallets/feed/",
+      "website_url": "https://coinme.com/blog/crypto-wallets/",
+      "description": "Coinme is an easy-to-use platform trusted by thousands of users daily.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 7800,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5466159.jpg?t=1670393770"
+    },
+    {
+      "title": "BitDegree \u00bb Crypto Wallet",
+      "feed_url": "https://www.bitdegree.org/crypto/news/wallets/rss",
+      "website_url": "https://www.bitdegree.org/crypto/news/wallets",
+      "description": "BitDegree reports the most recent & relevant crypto wallet news out there. Always stay secure & informed with the latest crypto wallet news and in-depth analyses. BitDegree Crypto Reviews is a learning hub that aims to research, uncover & simplify everything about the latest crypto services.",
+      "followers": {
+        "facebook": 86400,
+        "twitter": 3800,
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/5476664.jpg?t=1670394458"
+    },
+    {
+      "title": "AMLBot Blog",
+      "feed_url": "https://blog.amlbot.com/rss/",
+      "website_url": "https://blog.amlbot.com/",
+      "description": "Cryptocurrency blog of AMLBot. We provide the latest news, guides, and investigations in blockchain and cyber security risks. Discover security guides, the best Crypto exchanges, and more ideas. AMLBot is a full-fledged crypto compliance company that protects businesses and users from malicious assets and actors.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5476662.jpg?t=1670393711"
+    },
+    {
+      "title": "Blockchain",
+      "feed_url": "https://medium.com/feed/blockchain",
+      "website_url": "https://www.blockchain.com/blog",
+      "description": "With the largest bitcoin wallet platform in the world, Blockchain's software has powered over 100M transactions and empowered users in 130 countries across the globe to transact quickly and without costly intermediaries. We also offer tools for developers and real time transaction data for users to analyse the burgeoning digital economy.",
+      "followers": {
+        "facebook": 482500,
+        "twitter": 1400000,
+        "instagram": 111200
+      },
+      "image_url": "https://i1.feedspot.com/4320405.jpg?t=1612000446"
+    },
+    {
+      "title": "The BitPay Blog",
+      "feed_url": "https://bitpay.com/blog/rss/",
+      "website_url": "https://www.bitpay.com/blog",
+      "description": "A staff-driven look into enterprise bitcoin development. Accept bitcoin, store and spend bitcoin securely, or turn bitcoin into dollars with the BitPay Card.",
+      "followers": {
+        "facebook": 47900,
+        "twitter": 370100
+      },
+      "image_url": "https://i1.feedspot.com/4648742.jpg?t=1616769119"
+    },
+    {
+      "title": "Ledger Cryptocurrency Wallet Blog",
+      "feed_url": "https://www.ledger.com/category/blog-posts/feed",
+      "website_url": "https://www.ledger.com/category/blog-posts",
+      "description": "Founded in 2014, Ledger is a leader in security and infrastructure solutions for cryptocurrencies and blockchain applications.",
+      "followers": {
+        "facebook": 75200,
+        "twitter": 455
+      },
+      "image_url": "https://i1.feedspot.com/4904169.jpg?t=1670392671"
+    },
+    {
+      "title": "Jaxx Liberty Blog",
+      "feed_url": "https://blog.jaxx.io/feed/",
+      "website_url": "https://blog.jaxx.io/",
+      "description": "Jaxx Liberty, is a digital asset wallet that allows users to manage and exchange multiple cryptocurrencies. The blog provides news and insights related to the world of cryptocurrencies, including updates on new digital assets, market trends, and technology developments.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 40700,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4951346.jpg?t=1621580723"
+    },
+    {
+      "title": "The CPAY Blog",
+      "feed_url": "https://medium.com/feed/cpayfoundation",
+      "website_url": "https://medium.com/cpayfoundation",
+      "description": "They are a blockchain enabled payment gateway providing bitcoin wallets, debit cards and innovative merchant processing. Get News and Opinions on Bitcoin & Blockchain.",
+      "followers": {
+        "facebook": 17100,
+        "twitter": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4884889.jpg?t=1675163919"
+    },
+    {
+      "title": "Stories by BWP Wallet",
+      "feed_url": "https://medium.com/feed/@bwp-wallet",
+      "website_url": "https://bwp-wallet.medium.com/",
+      "description": "Covers articles about crypto payments, integrated banking. BWP seeks to overcome the challenges of operating online businesses and international payments by offering a one stop solution for online e-commerce businesses.",
+      "followers": {
+        "twitter": 2100,
+        "instagram": 136
+      },
+      "image_url": "https://i1.feedspot.com/5365996.jpg?t=1643367974"
+    },
+    {
+      "title": "Lumi Wallet Blog",
+      "feed_url": "https://medium.com/feed/lumiwallet",
+      "website_url": "https://medium.com/lumiwallet",
+      "description": "Secure, easy-to-use crypto wallet. We deliver valuable content to our users and let you stay tuned with our development.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4951381.jpg?t=1670394803"
+    },
+    {
+      "title": "Coindelta",
+      "feed_url": "https://medium.com/feed/coindelta",
+      "website_url": "https://medium.com/coindelta",
+      "description": "Coindelta is a trading platform for cryptocurrencies and digital tokens, including Bitcoin, Ethereum, EOS, Litecoin, XRP, NEO, QTUM and many more. They also offer secure wallets for you to store your cryptocurrencies at the lowest withdrawal fee.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4951654.jpg?t=1621580753"
+    },
+    {
+      "title": "Trust Wallet",
+      "feed_url": "https://medium.com/feed/@trustwallet",
+      "website_url": "https://trustwallet.medium.com/",
+      "description": "Trust wallet is a fast, secure and simple Ethereum & ERC20 Wallet which stores your digital currencies securely.",
+      "followers": {
+        "facebook": 66,
+        "twitter": 22700
+      },
+      "image_url": "https://i1.feedspot.com/4951357.jpg?t=1621580832"
+    },
+    {
+      "title": "Tezro Blog \u00bb Crypto Wallets",
+      "feed_url": "https://blog.tezro.com/category/crypto-wallets/feed/",
+      "website_url": "https://blog.tezro.com/category/crypto-wallets/",
+      "description": "All in one Cryptocurrency solution",
+      "followers": {
+        "facebook": 65,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5466153.jpg?t=1670393639"
+    },
+    {
+      "title": "Coinremitter Wallet Blog",
+      "feed_url": "https://blog.coinremitter.com/category/wallet-coinremitter/feed/",
+      "website_url": "https://blog.coinremitter.com/category/wallet-coinremitter/",
+      "description": "CoinRemitter Blog",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5466154.jpg?t=1668417777"
+    },
+    {
+      "title": "CoinFunda \u00bb Wallets",
+      "feed_url": "https://coinfunda.com/wallets/feed/",
+      "website_url": "https://coinfunda.com/wallets/",
+      "description": "A Cryptocurrency Blog",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5466155.jpg?t=1670394292"
+    },
+    {
+      "title": "Yada Wallets Blog",
+      "feed_url": "https://www.yadawallets.com/feed/",
+      "website_url": "https://www.yadawallets.com/blog/",
+      "description": "Find your Crypto Wallet",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5466162.jpg?t=1670394330"
+    },
+    {
+      "title": "WalletConnect",
+      "feed_url": "https://medium.com/feed/walletconnect",
+      "website_url": "https://medium.com/walletconnect",
+      "description": "Get Company News, Product updates, and guides for developers in our Medium Blog. The communications protocol for web3, WalletConnect brings the ecosystem together by enabling hundreds of wallets and apps to securely connect and interact.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5401891.jpg?t=1670394740"
+    },
+    {
+      "title": "Plutus",
+      "feed_url": "https://medium.com/feed/plutus",
+      "website_url": "https://medium.com/plutus",
+      "description": "Read Market reports, analyses, informative articles and announcements from Plutus in their Medium blog. Plutus is a Finance app that offers banking features combined with a non-custodial wallet.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 37500
+      },
+      "image_url": "https://i1.feedspot.com/5476663.jpg?t=1670394488"
+    },
+    {
+      "title": "CoinGate Blog",
+      "feed_url": "https://coingate.com/feed",
+      "website_url": "https://coingate.com/blog/",
+      "description": "Stories from the easiest and most trusted place to buy, sell, and use crypto. Coinbase is a digital currency wallet and platform where merchants and consumers can transact with new digital currencies like bitcoin and ethereum.",
+      "followers": {
+        "facebook": 415500,
+        "twitter": 6500000
+      },
+      "image_url": "https://i1.feedspot.com/4648314.jpg?t=1611148034"
+    },
+    {
+      "title": "CoinJar Blog",
+      "feed_url": "https://www.coinjar.com/global/blog/",
+      "website_url": "https://www.coinjar.com/global/blog/",
+      "description": "CoinJar provides simple tools to manage digital currencies. They use multi-factor authentication (e.g. password plus SMS verification) to ensure that the customers' bitcoins are safe, even if their password is compromised. As an additional layer of protection, they store the majority of customer bitcoin holdings offline.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4648438.jpg?t=1616769155"
+    },
+    {
+      "title": "Freewallet Blog",
+      "feed_url": "https://freewallet.org/blog/feed/",
+      "website_url": "https://www.cypherock.com/blogs",
+      "description": "Multi-currency Online Crypto Wallet for BTC, ETH, XMR and more",
+      "followers": {
+        "facebook": 13700,
+        "twitter": 15900
+      },
+      "image_url": "https://i1.feedspot.com/5466156.jpg?t=1670394254"
+    },
+    {
+      "title": "Uphold Blog",
+      "feed_url": "https://uphold.com/blog",
+      "website_url": "https://uphold.com/blog",
+      "description": "Uphold combines a platform app model with payment connectivity to offer financial services to a global market.",
+      "followers": {
+        "facebook": 32400,
+        "twitter": 135500,
+        "instagram": 62700
+      },
+      "image_url": "https://i1.feedspot.com/4951354.jpg?t=1621580733"
+    },
+    {
+      "title": "ZenGo Wallet Blog",
+      "feed_url": "https://zengo.com/feed",
+      "website_url": "https://zengo.com/blog/",
+      "description": "ZenGo is the first keyless Bitcoin and cryptocurrency wallet and the most simple and secure way to manage crypto assets. The ZenGo Wallet Blog features articles on cryptocurrency wallets, tips for securing and managing cryptocurrencies, guides on using the Zengo wallet, updates on new cryptocurrencies and blockchain projects, and general information about the technology and its potential applications.",
+      "followers": {
+        "twitter": 36400
+      },
+      "image_url": "https://i1.feedspot.com/5401901.jpg?t=1670393802"
+    },
+    {
+      "title": "Samourai Wallet",
+      "feed_url": "https://blog.samouraiwallet.com/rss",
+      "website_url": "https://blog.samouraiwallet.com/",
+      "description": "Samourai Wallet is the first Bitcoin Wallet for Android that has been designed and built with the sole purpose of keeping you and your bitcoin private and secure.",
+      "followers": {
+        "facebook": 646,
+        "twitter": 44800
+      },
+      "image_url": "https://i1.feedspot.com/4951390.jpg?t=1621580749"
+    },
+    {
+      "title": "Technoloader Blog \u00bb Cryptocurrency Wallet Development Services",
+      "feed_url": "https://www.technoloader.com/cgi-sys",
+      "website_url": "https://www.technoloader.com/blog/category/cryptocurrency-wallet-development-services/",
+      "description": "We offers cryptocurrency wallet development services like NFT wallet, DeFi wallet, Tron wallet, Ethereum wallet, coin specific wallet, centralized wallet and multi currency wallet development services.",
+      "followers": {
+        "facebook": 942,
+        "twitter": 211,
+        "instagram": 930
+      },
+      "image_url": "https://i1.feedspot.com/5466152.jpg?t=1670394068"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "category": "UK Chemistry",
+  "source_url": "https://rss.feedspot.com/uk_chemistry_rss_feeds",
+  "feeds": [
+    {
+      "title": "Compound Chem",
+      "feed_url": "https://www.compoundchem.com/feed/",
+      "website_url": "https://www.compoundchem.com/",
+      "description": "Compound Interest' is a blog producing easy-to-understand graphics on a variety of chemistry topics, focusing particularly on the chemistry we come across on an everyday basis.",
+      "followers": {
+        "facebook": 354700,
+        "twitter": 109600
+      },
+      "image_url": "https://i1.feedspot.com/3785080.jpg?t=1614166875"
+    },
+    {
+      "title": "ReAgent Blog",
+      "feed_url": "https://www.chemicals.co.uk/feed",
+      "website_url": "https://www.chemicals.co.uk/blog",
+      "description": "ReAgent is a leading UK chemical manufacturing company specializing in services such as chemical blending, contract packing, contract manufacturing, ampoule filling, and more. Read the Chemistry Blog for chemical industry news, chemical information uses, and explanations from the UK's leading chemical supplier, ReAgent Chemicals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5038000.jpg?t=1673522791"
+    },
+    {
+      "title": "Chemistry World",
+      "feed_url": "https://www.chemistryworld.com/413.rss",
+      "website_url": "https://www.chemistryworld.com/",
+      "description": "Chemistry magazine bringing you the latest chemistry news and research every day. This magazine covers science news, research, reviews, features and opinions. Read Chemistry World to keep up with stories from across the chemical sciences.",
+      "followers": {
+        "facebook": 889000,
+        "twitter": 452700,
+        "instagram": 95
+      },
+      "image_url": "https://i1.feedspot.com/4912461.jpg?t=1745504334"
+    },
+    {
+      "title": "Nature Chemistry",
+      "feed_url": "https://www.nature.com/nchem.rss",
+      "website_url": "https://www.nature.com/nchem/",
+      "description": "Nature Chemistry is a monthly journal dedicated to publishing high-quality papers that describe significant research in all areas of chemistry. Discover the world's best science and medicine from this blog.",
+      "followers": {
+        "facebook": 40600,
+        "twitter": 277000
+      },
+      "image_url": "https://i1.feedspot.com/4912519.jpg?t=1620220063"
+    },
+    {
+      "title": "The Chronicle Flask",
+      "feed_url": "https://chronicleflask.com/feed/",
+      "website_url": "https://chronicleflask.com/",
+      "description": "My name is DR Kat Day and I have a PhD in chemistry and over a decade's experience as a chemistry teacher. This blog is about Tales of interesting chemical tidbits and chemistry coursework.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 18300
+      },
+      "image_url": "https://i1.feedspot.com/4518976.jpg?t=1669986488"
+    },
+    {
+      "title": "Picture it..| Chemistry",
+      "feed_url": "https://chempics.wordpress.com/feed/",
+      "website_url": "https://chempics.wordpress.com/",
+      "description": "This blog is a project of staff and students of the School of Chemistry at the University of Bristol. Picture It... Chemistry is a blog combining photographs of familiar objects taken in a laboratory setting with information about some of the key molecules contributing to their properties and uses. We hope it will stimulate your interest in chemistry.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4517845.jpg?t=1614167704"
+    },
+    {
+      "title": "Crystals And Catalysts",
+      "feed_url": "https://www.crystalsandcatalysts.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.crystalsandcatalysts.com/",
+      "description": "Hello, I'm Mariam, the author of Crystals and Catalysts chemistry blog. Created out of a passion for all things chemistry and biology related, Crystals & Catalysts is a science & health blog that is inspired by the latest updates in science news such as the as the Ebola outbreak to the benefits of coconut water. I hope you enjoy your read and make this website your primary destination for all your science and health news!",
+      "followers": {
+        "facebook": 704
+      },
+      "image_url": "https://i1.feedspot.com/4912454.jpg?t=1620220137"
+    },
+    {
+      "title": "Scientific Update",
+      "feed_url": "https://www.scientificupdate.com/blog/",
+      "website_url": "https://www.scientificupdate.com/blog/",
+      "description": "Scientific Update, established in 1989 by Dr. Trevor Laird, organises conferences and training courses for industrial chemists and chemical engineers in chemical development and scale-up and many other specialist topics in organic chemistry.",
+      "followers": {
+        "facebook": 709,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4912533.jpg?t=1620220131"
+    },
+    {
+      "title": "Chemistry Hall",
+      "feed_url": "https://chemistryhall.com/feed/",
+      "website_url": "https://chemistryhall.com/",
+      "description": "Chemistry Hall discusses how to do chemistry experiments at home, how to work in a lab, educational science experiments, the best chemistry equipment, and ground-breaking research news.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5043827.jpg"
+    },
+    {
+      "title": "Syrris Chemistry Blog",
+      "feed_url": "https://blog.syrris.com/feed/",
+      "website_url": "https://blog.syrris.com/",
+      "description": "The latest chemistry news, tips, and tricks. Covering batch chemistry, flow chemistry, reaction calorimetry, and scale-up chemistry.",
+      "followers": {
+        "facebook": 279,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4912452.jpg?t=1620220140"
+    }
+  ]
+}

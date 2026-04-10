@@ -1,0 +1,18 @@
+{
+  "category": "Hackernoon",
+  "source_url": "https://rss.feedspot.com/hackernoon_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hackernoon",
+      "feed_url": "https://hackernoon.com/feed",
+      "website_url": "https://hackernoon.com/",
+      "description": "Covers blog posts on programming, technology, cryptocurrency, javascript, blockchain, gaming, AI, startups, security, and the internet. Hacker Noon reflects the technology industry with unfettered stories and opinions written by real tech professionals.",
+      "followers": {
+        "facebook": 42400,
+        "twitter": 89000,
+        "instagram": 21700
+      },
+      "image_url": "https://i1.feedspot.com/4482395.jpg?t=1747375334"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "category": "Netrunner",
+  "source_url": "https://rss.feedspot.com/netrunner_rss_feeds",
+  "feeds": [
+    {
+      "title": "Null Signal Games Blog",
+      "feed_url": "https://nullsignal.games/blog/feed/",
+      "website_url": "https://nullsignal.games/blog/",
+      "description": "Null Signal Games is a games publisher operating as a registered nonprofit company. Our only current product is the expandable card game Netrunner, which we are continuing following the end of its support by its previous publisher, Fantasy Flight Games. Explore our blog to know more about our games, updates and more on Netrunner.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 3700,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5454644.jpg?t=1665384818"
+    },
+    {
+      "title": "StimHack",
+      "feed_url": "https://stimhack.com/feed/",
+      "website_url": "https://stimhack.com/",
+      "description": "This is an unofficial fansite of the Android: Netrunner game. Stimhack is the top Netrunner strategy site online, containing articles, tournament decklists, gameplay videos, a huge forum and more for the benefit of the Netrunner community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2253971.jpg?t=1665385314"
+    },
+    {
+      "title": "Netrunner Scribbling Blog",
+      "feed_url": "https://netrunnerscribbler.wordpress.com/feed/",
+      "website_url": "https://netrunnerscribbler.wordpress.com/blog/",
+      "description": "Assorted thoughts on Netrunner, and other things that might come to mind. Netrunner player on/off between 2014-present (2020). Started playing good decks in 2019, trying to avoid my Shaper tendencies. In the real world am a Chemist and self-taught programmer, primarily for data processing and analysis.",
+      "followers": {
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5454641.jpg?t=1665385070"
+    },
+    {
+      "title": "Sneakdoor Melbourne",
+      "feed_url": "https://sneakdoor.wordpress.com/feed/",
+      "website_url": "https://sneakdoor.wordpress.com/",
+      "description": "Sneakdoor Melbourne is a Melbourne-based blog about Android: Netrunner, the greatest card game around. The blog features reviews, gameplay and more on Netrunner.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454642.jpg?t=1665384960"
+    },
+    {
+      "title": "Run the Net",
+      "feed_url": "https://runthenet.wordpress.com/feed/",
+      "website_url": "https://runthenet.wordpress.com/",
+      "description": "'The cards do something different when he plays them' This statement, along with a few requests to see more of my approach to Netrunner, is the impetus behind this blog. My point of view in this blog will be that you can build a strong deck, make solid in-game decisions, and ultimately win a game of Netrunner even when the poker-esque epistemic-luck factors and random access RNG fail you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454643.jpg?t=1665385203"
+    },
+    {
+      "title": "Find The Truth",
+      "feed_url": "https://algebraicnetrunner.wordpress.com/feed/",
+      "website_url": "https://algebraicnetrunner.wordpress.com/",
+      "description": "Analyzing the mathematics and statistics of the Android: Netrunner card game with our articles. Explore the gameplays of Netrunners from the perspective of statistics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454647.jpg?t=1665386598"
+    }
+  ]
+}

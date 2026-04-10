@@ -1,0 +1,29 @@
+{
+  "category": "Vacaville News",
+  "source_url": "https://rss.feedspot.com/vacaville_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Reporter",
+      "feed_url": "https://www.thereporter.com/feed/",
+      "website_url": "https://www.thereporter.com/",
+      "description": "Vacaville Reporter is the leading source of news and information. Get the breaking news, sports, business, entertainment and Vacaville news.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5144867.jpg?t=1623732405"
+    },
+    {
+      "title": "NBC Bay Area \u00bb Vacaville",
+      "feed_url": "https://www.nbcbayarea.com/tag/vacaville/feed/",
+      "website_url": "https://www.nbcbayarea.com/tag/vacaville/",
+      "description": "Read the latest Vacaville news. Get breaking news, events and information on sports, weather, entertainment and lifestyles.",
+      "followers": {
+        "facebook": 667900,
+        "twitter": 399300,
+        "instagram": 229000
+      },
+      "image_url": "https://i1.feedspot.com/5144903.jpg?t=1587977642"
+    }
+  ]
+}

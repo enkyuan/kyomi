@@ -1,0 +1,29 @@
+{
+  "category": "Nursing Informatics",
+  "source_url": "https://rss.feedspot.com/nursing_informatics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nursing Informatics Learning Center Blog",
+      "feed_url": "https://nursing-informatics.com/blog/feed/",
+      "website_url": "https://nursing-informatics.com/blog/",
+      "description": "This website was first created in 2000 by June Kaminski as a medium for sharing nursing informatics information and to encourage nurses to learn more about this evolving field. It is the author's firm belief that all nurses around the planet need informatics knowledge and skills.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5342546.jpg?t=1636722982"
+    },
+    {
+      "title": "Australian College of Nursing Blog",
+      "feed_url": "https://www.acn.edu.au/feed",
+      "website_url": "https://www.acn.edu.au/blog",
+      "description": "NurseClick is a blog on nursing practice, policy developments, and professional issues, run by the Australian of College of Nursing (ACN). The Australian College of Nursing (ACN) is the national voice of the nursing profession focused on policy, advocacy, and education to advance the status, recognition, and respect for nurses.",
+      "followers": {
+        "facebook": 45300,
+        "twitter": 5800,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5383702.jpg?t=1647923948"
+    }
+  ]
+}

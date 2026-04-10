@@ -1,0 +1,18 @@
+{
+  "category": "Plymouth News",
+  "source_url": "https://rss.feedspot.com/plymouth_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBS Minnesota \u00bb Plymouth",
+      "feed_url": "https://minnesota.cbslocal.com/tag/plymouth/feed/",
+      "website_url": "https://www.cbsnews.com/minnesota/tag/plymouth/",
+      "description": "WCCO - CBS Minnesota is Minneapolis's source for breaking news, weather, traffic, and sports. Get all the local news and information you need plus other fun stuff across the city of Plymouth from the team at WCCO and CBS Minnesota.",
+      "followers": {
+        "facebook": 484700,
+        "twitter": 269700,
+        "instagram": 87900
+      },
+      "image_url": "https://i1.feedspot.com/5146897.jpg"
+    }
+  ]
+}

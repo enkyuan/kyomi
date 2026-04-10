@@ -1,0 +1,36 @@
+{
+  "category": "Screen Recording",
+  "source_url": "https://rss.feedspot.com/screen_recording_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bandicam Blog",
+      "feed_url": "https://www.bandicam.com/blog/feed/",
+      "website_url": "https://www.bandicam.com/blog/",
+      "description": "Bandicam Blog is the perfect place to get Product News, Tips, and Guides. Bandicam Company is one of the most popular multimedia companies that develop screen recording and video editing software.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 719
+      },
+      "image_url": "https://i1.feedspot.com/5501504.jpg?t=1675160109"
+    },
+    {
+      "title": "Filmora \u00bb Screen Record",
+      "feed_url": "https://filmora.wondershare.com/screen-record/",
+      "website_url": "https://filmora.wondershare.com/screen-record/",
+      "description": "The Filmora screen recording blog shares some amazing tips and tricks on topics like video editing, audio editing and covers topics like Best Game Screen Recorders, How to Record YouTube Videos, How to Screen Record on Mac, How to Screen Record on Hp Laptop. Filmora is a cross-platform for making videos anywhere for all creators!",
+      "followers": {
+        "facebook": 443900,
+        "twitter": 13300,
+        "instagram": 18100
+      },
+      "image_url": "https://i1.feedspot.com/5501513.jpg?t=1675160156"
+    },
+    {
+      "title": "Screen Record Tool Blog",
+      "feed_url": "https://screenrecordtool.com/feed/",
+      "description": "A user-friendly online screen recorder tool that not only HD records your computer screen but also records video calls with the inbuilt webcam recorder software. Screen Record Tool Blog shares information on Free MAC Webcam Recorders, How To Record YouTube Live Stream, Screen Record On Laptop With Audio, Online Cam Screen Recorder For Chrome, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5501506.jpg?t=1675160558"
+    }
+  ]
+}

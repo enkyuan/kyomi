@@ -1,0 +1,65 @@
+{
+  "category": "Australian Style",
+  "source_url": "https://rss.feedspot.com/australian_style_rss_feeds",
+  "feeds": [
+    {
+      "title": "Inside Out Style Blog",
+      "feed_url": "https://insideoutstyleblog.com/feed",
+      "website_url": "https://insideoutstyleblog.com/blog-posts",
+      "description": "Style Tips for Tall Women. Imogen Lamport is a certified Image consultant and personal stylist. Helping all women of every stage and age, size and shape discover the clothes and style that suits them with easy, practical everyday style solutions.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 1600,
+        "instagram": 11000
+      },
+      "image_url": "https://i1.feedspot.com/4685265.jpg?t=1629099657"
+    },
+    {
+      "title": "The Styling You Blog",
+      "feed_url": "https://www.stylingyou.com.au/blog/feed/",
+      "website_url": "https://www.stylingyou.com.au/blog/",
+      "description": "Styling You is all about giving you the tools so that you can unlock and build a personal style that gives you complete confidence in all aspects of your life. Follow this blog to find simple tips that help you feel confident in your everyday style.",
+      "followers": {
+        "facebook": 94300,
+        "twitter": 11000,
+        "instagram": 102200
+      },
+      "image_url": "https://i1.feedspot.com/4924977.jpg?t=1620903636"
+    },
+    {
+      "title": "Modern Legacy",
+      "feed_url": "http://www.modernlegacy.com.au/feed/atom?alt=rss",
+      "website_url": "http://www.modernlegacy.com.au/",
+      "description": "Modern Legacy is an australian fashion and personal style blog. Here you will find all the latest trends, style, quirky outfits and fashion reviews.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1800,
+        "instagram": 264300
+      },
+      "image_url": "https://i1.feedspot.com/4555878.jpg?t=1605075172"
+    },
+    {
+      "title": "South Australian Style Magazine",
+      "feed_url": "https://southaustralianstyle.com/blog/feed/",
+      "website_url": "https://southaustralianstyle.com/blog-2/",
+      "description": "Adelaide's very own premier fashion, beauty and living magazine is friendly, fun, intelligent, accessible and exudes effortless style and confidence.",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 3500,
+        "instagram": 24600
+      },
+      "image_url": "https://i1.feedspot.com/4925168.jpg?t=1620903641"
+    },
+    {
+      "title": "Twice Blessed \u00bb Style",
+      "feed_url": "https://www.twiceblessed.com.au/category/style/feed/",
+      "website_url": "https://www.twiceblessed.com.au/category/style/",
+      "description": "Melbourne-based Fashion Blog by Marissa and Rebecca Karagiorgos. Sharing their daily outfits, monochromatic street style, travel and lifestyle inspiration!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/4555863.jpg?t=1614851660"
+    }
+  ]
+}

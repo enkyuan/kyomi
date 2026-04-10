@@ -1,0 +1,94 @@
+{
+  "category": "Nebraska Politics",
+  "source_url": "https://rss.feedspot.com/nebraska_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Civic Nebraska",
+      "feed_url": "https://civicnebraska.org/feed/",
+      "website_url": "https://civicnebraska.org/news/",
+      "description": "Civic Nebraska creates a more modern, robust democracy for all Nebraskans via youth civic leadership, civic health programs, and voting rights initiatives.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/5316737.jpg?t=1630324001"
+    },
+    {
+      "title": "Bold Nebraska News",
+      "feed_url": "https://boldnebraska.org/feed/",
+      "website_url": "https://boldnebraska.org/news/",
+      "description": "Bold Nebraska's mission is to change the political landscape and restore political balance to Nebraska. A network of small but mighty groups who work for clean energy solutions.",
+      "followers": {
+        "facebook": 31600,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/5316777.jpg?t=1630324961"
+    },
+    {
+      "title": "Lincoln Journal Star Government and Politics",
+      "feed_url": "https://journalstar.com/search/?f=rss",
+      "website_url": "https://journalstar.com/news/local/government-politics/",
+      "description": "News, sports, entertainment, and weather updates from the Lincoln Journal Star newspaper in southeast Nebraska. It Covers government and political updates and news under this section.",
+      "followers": {
+        "facebook": 79800,
+        "twitter": 88800
+      },
+      "image_url": "https://i1.feedspot.com/5316781.jpg?t=1630325099"
+    },
+    {
+      "title": "Norfolk Daily News Commentary",
+      "feed_url": "https://norfolkdailynews.com/search/?f=rss&t=article&c=commentary&l=50&s=start_time&sd=desc",
+      "website_url": "https://norfolkdailynews.com/commentary/",
+      "description": "Locally owned and independent, the Norfolk Daily News strives to publish editorials and columns that are thought-provoking and politically conservative while also affirming and respectful. Covers the latest on what's happening in Norfolk, Northeast, and North Central Nebraska.",
+      "followers": {
+        "facebook": 37800,
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5316782.jpg?t=1630325297"
+    },
+    {
+      "title": "Omaha World-Herald Government and Politics",
+      "feed_url": "https://omaha.com/search/?f=rss",
+      "website_url": "https://omaha.com/news/local/government-politics/",
+      "description": "Read the latest headlines on Omaha Politics & Government in Omaha, Douglas County, Nebraska, and the surrounding metropolitan area. Omaha World-Herald is the news and information provider of choice for individuals and businesses in the Midlands.",
+      "followers": {
+        "facebook": 130900,
+        "twitter": 171200
+      },
+      "image_url": "https://i1.feedspot.com/5316785.jpg?t=1630325475"
+    },
+    {
+      "title": "KMTV 3 News Now Politics",
+      "feed_url": "https://www.3newsnow.com/news/political.rss",
+      "website_url": "https://www.3newsnow.com/news/political",
+      "description": "3 News Now is the CBS affiliate for western Iowa and eastern Nebraska. Covers the Latest News and Updates in Politics.",
+      "followers": {
+        "facebook": 157300,
+        "twitter": 74600
+      },
+      "image_url": "https://i1.feedspot.com/5316788.jpg?t=1630325623"
+    },
+    {
+      "title": "Seeing Red",
+      "feed_url": "https://seeingrednebraska.com/feed/",
+      "website_url": "https://seeingrednebraska.com/category/nebraska-politics/",
+      "description": "Seeing Red delivers commentary on Nebraska politics from the left. They are unpaid citizen volunteers concerned about where Nebraska is headed under the direction of a one-percenter power-hungry ideologue governor, especially in the current national political climate.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5316736.jpg?t=1630323865"
+    },
+    {
+      "title": "The Beatrice Daily Sun Government and Politics",
+      "feed_url": "https://beatricedailysun.com/search/?f=rss&t=article&c=news/local/govt-and-politics&l=50&s=start_time&sd=desc",
+      "website_url": "https://beatricedailysun.com/news/local/govt-and-politics/",
+      "description": "The Beatrice Daily Sun covers news, sports, and entertainment in a five-county area in southeast Nebraska. It Covers government and political updates and news under this section.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5316770.jpg?t=1630324847"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "category": "UK Acne",
+  "source_url": "https://rss.feedspot.com/uk_acne_rss_feeds",
+  "feeds": [
+    {
+      "title": "Notes by Alice",
+      "feed_url": "https://notesbyalice.co.uk/feed/",
+      "website_url": "https://notesbyalice.co.uk/",
+      "description": "When I was suffering with acne, I decided to open up about my self-esteem struggles on the internet. Something about being honest, sharing my feelings and connecting with others who'd experience similar issues brought me a lot of joy. Plus, it seemed to help a few people along the way. So, I decided it was about time to make a bigger, better and more varied blog, sharing my notes on navigating life, building confidence and, of course, dealing with acne and here it is!",
+      "followers": {
+        "twitter": 183,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5130740.jpg?t=1620392122"
+    },
+    {
+      "title": "The London Dermatologist \u00bb Acne",
+      "feed_url": "http://www.londondermatologist.co.uk/category/acne/feed/",
+      "website_url": "https://www.londondermatologist.co.uk/category/acne/",
+      "description": "londerma is the London Dermatologist is a partnership of experienced Consultant Dermatologists who are passionate about providing excellent care, be it medical, surgical or cosmetic. Subscribe to get latest articles from this blog.",
+      "followers": {
+        "facebook": 268,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4917434.jpg?t=1620392135"
+    },
+    {
+      "title": "SkinBase\u2122 Facial | Acne & Acne Scarring",
+      "feed_url": "https://skinbase.co.uk/blog/category/acne-acne-scarring/feed/",
+      "website_url": "https://skinbase.co.uk/blog/category/acne-acne-scarring/",
+      "description": "The SkinBase microdermabrasion treatment is the UK's leading microdermabrasion treatment on effectively managing, reducing and getting rid of acne and acne scarring. Subscribe to keep up with latest articles from this blog.",
+      "followers": {
+        "facebook": 26000,
+        "twitter": 1300,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4917426.jpg?t=1620392125"
+    }
+  ]
+}

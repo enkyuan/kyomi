@@ -1,0 +1,425 @@
+{
+  "category": "UK Wine",
+  "source_url": "https://rss.feedspot.com/uk_wine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Wine & Spirit Education Trust Blog",
+      "feed_url": "https://www.wsetglobal.com/knowledge-centre/blog/rss/",
+      "website_url": "https://www.wsetglobal.com/knowledge-centre/blog/",
+      "description": "The Wine & Spirit Education Trust provides globally recognised education and qualifications in wines, spirits and sake, for professionals and enthusiasts.",
+      "followers": {
+        "facebook": 87200,
+        "twitter": 20000,
+        "instagram": 184900
+      },
+      "image_url": "https://i1.feedspot.com/4955473.jpg?t=1605159913"
+    },
+    {
+      "title": "Wine Alchemy",
+      "feed_url": "https://www.winealchemy.co.uk/feed/",
+      "website_url": "https://www.winealchemy.co.uk/",
+      "description": "Wine Alchemy by Paul Howard. Independent writing about wine, travel and food. Wine events and tourism. Wine, travel and food reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4860971.jpg?t=1611921309"
+    },
+    {
+      "title": "Virgin Wines Blog",
+      "feed_url": "https://www.virginwines.co.uk/hub/blog/feed/",
+      "website_url": "https://www.virginwines.co.uk/hub/blog/",
+      "description": "Virgin Wines discover the best wines worldwide and delivers your wine for home delivery in UK.",
+      "followers": {
+        "facebook": 36000,
+        "twitter": 22800,
+        "instagram": 23400
+      },
+      "image_url": "https://i1.feedspot.com/4859960.jpg?t=1611921322"
+    },
+    {
+      "title": "Lea & Sandeman Wine Merchants Blog",
+      "feed_url": "https://www.leaandsandeman.co.uk/blog/feed/",
+      "website_url": "https://www.leaandsandeman.co.uk/blog/",
+      "description": "We are independent wine merchants based in London, UK with an award winning wine list carefully selected over 30 years. Our latest wine news & wine offers from Bordeaux, Burgundy, Champagne, Italy and other wine producing regions around the world.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 7300,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4860914.jpg?t=1611921328"
+    },
+    {
+      "title": "Great British Wine",
+      "feed_url": "http://www.greatbritishwine.com/feed/",
+      "website_url": "http://www.greatbritishwine.com/news/",
+      "description": "GreatBritishWine.com is dedicated to exploring the English, UK and Great British Wine Industry. With wine reviews, articles and visits to Wineries and Vineyards Across UK.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 7500,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4860788.jpg?t=1611921337"
+    },
+    {
+      "title": "The Sourcing Table",
+      "feed_url": "https://thesourcingtable.com/blogs/learn.atom",
+      "website_url": "https://thesourcingtable.com/blogs/learn",
+      "description": "Insights into all things wine written by leaders in the wine industry and the winemakers themselves. The Sourcing Table is an online wine shop and wine club bringing accessible modern fine wines to households across the UK. The Sourcing Table showcases wines with personality.",
+      "followers": {
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5300619.jpg?t=1625811477"
+    },
+    {
+      "title": "The Pinotage Club",
+      "feed_url": "http://www.pinotage.org/feeds/posts/default?alt=rss",
+      "website_url": "http://www.pinotage.org/",
+      "description": "Peter F May is the founder of The Pinotage Club, an international cyber-based fan club for wines made from the Pinotage variety.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4861059.jpg?t=1611921414"
+    },
+    {
+      "title": "Mid-Week Wines",
+      "feed_url": "https://www.midweekwines.co.uk/feed/",
+      "website_url": "https://www.midweekwines.co.uk/",
+      "description": "Brian Elliott is an established wine journalist, taster, judge and writer with a weekly column in Scottish newspapers. Follow this blog where he shares his thoughts and reviews various types of Wines.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4948816.jpg?t=1611921367"
+    },
+    {
+      "title": "Get Tasting",
+      "feed_url": "https://www.gettasting.com/feed/",
+      "website_url": "https://www.gettasting.com/blog/",
+      "description": "Join wine experts for amazing wine tasting experiences. Enjoy wine events at home, online or near you. Check out our upcoming virtual events and wine courses!",
+      "followers": {
+        "facebook": 74,
+        "twitter": 68
+      },
+      "image_url": "https://i1.feedspot.com/5178164.jpg?t=1611921371"
+    },
+    {
+      "title": "12\u00d775 Wine Blog - News, Reviews & Food",
+      "feed_url": "https://www.12x75.com/feed/",
+      "website_url": "http://www.12x75.com/",
+      "description": "12x75 is a light hearted, comical wine blog which focuses on wine news, reviews, food & interviews with leading figures in the world of wine.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4468149.jpg?t=1611921573"
+    },
+    {
+      "title": "The Wine Sleuth - Always looking for the good stuff...",
+      "feed_url": "http://thewinesleuth.co.uk/feed/",
+      "website_url": "http://thewinesleuth.co.uk/",
+      "description": "I'm a London based wineblogger from California. Follow me on my vinous adventures in London, Europe and beyond. I look for obscure or relatively unknown varietals as well as getting to know the big names in wine, be it Argentina, Bordeaux or California, I want to see it all.",
+      "followers": {
+        "facebook": 664,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/3382794.jpg?t=1611921589"
+    },
+    {
+      "title": "Fareham Wine Cellar",
+      "feed_url": "https://farehamwinecellar.co.uk/feed/",
+      "website_url": "https://farehamwinecellar.co.uk/category/news/",
+      "description": "Fareham Wine Cellar is a small business that provides fine wine and spirits to clients throughout the UK.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4300,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4860703.jpg?t=1611921613"
+    },
+    {
+      "title": "Aurel Istrate",
+      "feed_url": "https://www.aurelsommelier.co.uk/rss.xml",
+      "website_url": "https://www.aurelsommelier.co.uk/blog",
+      "description": "My name is Aurel, born in Romania and living in UK. I am in the wine business for some years and now trying to share what I've learned to the rest of the world.",
+      "followers": {
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5244927.jpg?t=1613301969"
+    },
+    {
+      "title": "www.vinolent.net | V\u012aN'OLENT ADJ (OBS): ADDICTED TO WINE",
+      "feed_url": "https://www.vinolent.net/feed/",
+      "website_url": "https://www.vinolent.net/",
+      "description": "Wine loving misanthrope. I taste wine, drink wine, love wine. I also sell wine and buy wine, talk about wine, write about wine and occasionally deliver wine. I've been doing it for a while now and like to think that I know my onions.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4861371.jpg?t=1611921637"
+    },
+    {
+      "title": "Jamie Goode's Wine Blog",
+      "feed_url": "https://www.wineanorak.com/wineblog/feed",
+      "website_url": "https://www.wineanorak.com/wineblog/",
+      "description": "This is the blog of wine journalist Jamie Goode. The wine blog of Jamie Goode, featuring wine reviews, producer profiles, tastings, wine photography and reports from the road. Jamie Goode is a London-based winewriter who is currently wine columnist with UK national newspaper The Sunday Express.",
+      "followers": {
+        "twitter": 59900,
+        "instagram": 55800
+      },
+      "image_url": "https://i1.feedspot.com/434102.jpg?t=1605159933"
+    },
+    {
+      "title": "The Cork Reporter",
+      "feed_url": "https://corkreporter.wordpress.com/feed/",
+      "website_url": "https://corkreporter.wordpress.com/",
+      "description": "The Cork Reporter is a wine blog with tastibgnites. Wine estate profiles, vantage information, articles about vineyards & appellations.",
+      "followers": {
+        "twitter": 118,
+        "instagram": 490
+      },
+      "image_url": "https://i1.feedspot.com/5629032.jpg?t=1689673413"
+    },
+    {
+      "title": "Jura Wine, Food and Travel",
+      "feed_url": "https://jurawine.co.uk/feed/",
+      "website_url": "https://jurawine.co.uk/",
+      "description": "Wink Lorch explores this bijou wine region in eastern France. This helped to gather her thoughts and information to write the very first book in English on Jura wines, local food and travel in the wine region.",
+      "followers": {
+        "twitter": 758
+      },
+      "image_url": "https://i1.feedspot.com/4860882.jpg?t=1611921347"
+    },
+    {
+      "title": "WineUncorked: Wine Reviews and Tips",
+      "feed_url": "https://www.wineuncorked.co.uk/?format=feed&type=rss",
+      "website_url": "https://www.wineuncorked.co.uk/articles",
+      "description": "How to buy great value wine: reviews and tips from wine writer Paula Goddard.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5139772.jpg?t=1611921374"
+    },
+    {
+      "title": "The Wine Ninjas",
+      "feed_url": "https://wineninjas.org/feed/",
+      "website_url": "https://wineninjas.org/",
+      "description": "Welcome to : a wine-flavoured online magazine, pouring out irreverent wine food and travel features for those who want to know more about what's in their glass.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 4500,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4713463.jpg?t=1605161087"
+    },
+    {
+      "title": "The Cambridge Wine Blogger",
+      "feed_url": "http://cambridgewineblogger.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://cambridgewineblogger.blogspot.com/",
+      "description": "The Cambridge Wine Blog was launched in 2009. It features recording impressions of various wine events and more.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4859892.jpg?t=1611921498"
+    },
+    {
+      "title": "Three Wine Men",
+      "feed_url": "https://threewinemen.co.uk/feed/",
+      "website_url": "https://threewinemen.co.uk/news/",
+      "description": "Discover wine tasting skills from the Three Wine Men experts and make drinking wine an even more rewarding experience, one step at a time.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 22000
+      },
+      "image_url": "https://i1.feedspot.com/4860836.jpg?t=1611921510"
+    },
+    {
+      "title": "Knackered Mother's Wine Club",
+      "feed_url": "https://www.knackeredmotherswineclub.com/feed/",
+      "website_url": "https://www.knackeredmotherswineclub.com/category/theblog/",
+      "description": "I'm Helen McGinn, author of The Knackered Mother's Wine Club, an award winning wine blog and now best-selling wine book. I'm an ex-supermarket wine buyer and spent almost a decade sourcing wines around the world. I post here on the blog every week, with at least two wine recommendations each week. Mother, wino, sometimes in that order. Strictly no insipid wines allowed. Unless too tired to care.",
+      "followers": {
+        "facebook": 31700,
+        "twitter": 14900,
+        "instagram": 133100
+      },
+      "image_url": "https://i1.feedspot.com/4860146.jpg?t=1611921515"
+    },
+    {
+      "title": "Quentin Sadler's Wine Page",
+      "feed_url": "https://quentinsadler.wordpress.com/feed/",
+      "website_url": "https://quentinsadler.wordpress.com/",
+      "description": "I'm a wine educator who enjoys wine, food and travel, I love history, literature and music as well as wine. I am sharing thoughts on wine, food and travel.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4861067.jpg?t=1611921520"
+    },
+    {
+      "title": "Matt Walls Wine Blog",
+      "feed_url": "https://www.mattwalls.co.uk/feed/",
+      "website_url": "https://www.mattwalls.co.uk/articles-archive/",
+      "description": "Practical tips, tricks and info to help you get the most out of wine.",
+      "followers": {
+        "twitter": 12100,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4467722.jpg?t=1611921525"
+    },
+    {
+      "title": "Henry's World of Booze | For the impecunious amateur",
+      "feed_url": "https://worldofbooze.wordpress.com/feed/",
+      "website_url": "https://worldofbooze.wordpress.com/",
+      "description": "I'm Henry Jeffreys. My aim in this blog is to have something interesting to say about booze once a week. I am going to write 500 words or so on a wine-related topic. There will be guest reviewers to keep things lively but mainly it will be me talking about wine or occasionally other drinks.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4860125.jpg?t=1611921898"
+    },
+    {
+      "title": "BYWine - know more, buy better",
+      "feed_url": "http://www.bywine.co.uk/feed/",
+      "website_url": "http://www.bywine.co.uk/blog/",
+      "description": "Richard Bampfield MW and Laura Clay offer Impartial, independent wine advice and fun wine events.",
+      "followers": {
+        "facebook": 109,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4860144.jpg?t=1611921547"
+    },
+    {
+      "title": "Premier Estates Wine Blog",
+      "feed_url": "https://www.premierestateswine.co.uk/blogs/news.atom",
+      "website_url": "https://www.premierestateswine.co.uk/blogs/news",
+      "description": "Here at Premier Estates Wine, we like to keep things simple because we know that some people can find wine a little too complicated. Our wine experts source great quality wines from all around the globe which are sold by thousands of retailers and some of the largest wholesalers all throughout the UK.",
+      "followers": {
+        "facebook": 45500,
+        "twitter": 30100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4860950.jpg?t=1611921563"
+    },
+    {
+      "title": "MARLO",
+      "feed_url": "https://marlo.wine/blogs/blog.atom",
+      "website_url": "https://marlo.wine/blogs/blog",
+      "description": "MARLO exists to bring better wine to our friends, born out of a vision to allow people to access serious wine by the bottle without the baffling wine chat. With over ten years of experience in the wine trade, we saw a need to deliver a new concept, offering a concise selection of hero wines accessible via your phone and quickly couriered to your door.",
+      "followers": {
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/5225375.jpg?t=1607338563"
+    },
+    {
+      "title": "Brett, the Wine Maestro",
+      "feed_url": "http://feeds.feedburner.com/co/alNM",
+      "website_url": "https://thewinemaestro.co.uk/",
+      "description": "I work in the world of wine and am usually based in Essex, east of London in the UK as well as eastern France twixt the Jura and Savoie wine regions. I enjoy sharing my wine discoveries with wine tastings and through my wine club, offering a regular mix of wine delivered anywhere in the UK.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4013330.jpg?t=1611921585"
+    },
+    {
+      "title": "mywinespace Blog",
+      "feed_url": "http://www.mywinespace.co.uk/blog?format=RSS",
+      "website_url": "http://www.mywinespace.co.uk/blog/",
+      "description": "The online wine website that helps wine drinkers become wine lovers! Wine reviews blog and information on what to buy. Usually educational, sometimes humorous, occasionally libellous.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4860959.jpg?t=1611921602"
+    },
+    {
+      "title": "Wined Up",
+      "feed_url": "https://winedup.blog/feed/",
+      "website_url": "https://winedup.blog/blog/",
+      "description": "Wined Up is a celebration of wine and how it should be accessible to everyone. Our aim is to give people confidence when navigating a wine list or buying a bottle for a special occasion, as well as exploring what we love about the wine world in a down to earth, human way.",
+      "followers": {
+        "facebook": 246,
+        "twitter": 168,
+        "instagram": 252
+      },
+      "image_url": "https://i1.feedspot.com/5052131.jpg?t=1611921542"
+    },
+    {
+      "title": "Humble Yard English Wines",
+      "feed_url": "http://www.humbleyardenglishwine.co.uk/feed/",
+      "website_url": "https://www.humbleyardenglishwine.co.uk/news/",
+      "description": "Humbleyard English wines are proud to be part of the new and exciting English wine movement. Crisp whites, elegant roses, sparkling classics and more.",
+      "followers": {
+        "twitter": 512
+      },
+      "image_url": "https://i1.feedspot.com/4860720.jpg?t=1611921643"
+    },
+    {
+      "title": "Wines With Attitude Wine Blog",
+      "feed_url": "https://www.wineswithattitude.co.uk/feed/",
+      "website_url": "https://www.wineswithattitude.co.uk/blogs/",
+      "description": "Online wine merchant for amazingly tasty wines, passionate about good quality wine. Sharing my passion for wine via my blog & through hosting wine tastings.",
+      "followers": {
+        "facebook": 197,
+        "twitter": 944,
+        "instagram": 385
+      },
+      "image_url": "https://i1.feedspot.com/4860974.jpg?t=1611921568"
+    },
+    {
+      "title": "The Wine Detective",
+      "feed_url": "https://thewinedetective.co.uk/feed",
+      "website_url": "https://thewinedetective.co.uk/?cat=1",
+      "description": "I am an award-winning freelance wine writer, blogger, educator and judge, with a particular interest in the wines of Australia & Portugal.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4860777.jpg?t=1611921144"
+    },
+    {
+      "title": "The Beach Sommelier",
+      "feed_url": "https://thebeachsommelier.com/",
+      "website_url": "https://thebeachsommelier.com/",
+      "description": "SipSwooshSpit is a journalist and wine writer who has a passion for wine - from how it tastes to how it\\'s made.",
+      "followers": {
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4861072.jpg?t=1611921356"
+    },
+    {
+      "title": "Goedhuis Blog",
+      "feed_url": "https://www.goedhuis.com/blogs/news.atom",
+      "website_url": "https://goedhuiswaddesdon.com/blogs/news",
+      "description": "Goedhuis & Co is an engaging team of specialist fine wine merchants providing fellow wine lovers with an inspiring personal service that is a better way to buy and enjoy wine.",
+      "followers": {
+        "facebook": 934,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4860909.jpg?t=1611921351"
+    },
+    {
+      "title": "WineTrust100.co.uk - Wine Blog",
+      "feed_url": "http://winetrust100.co.uk/feed/",
+      "website_url": "https://winetrust.co.uk/blog/",
+      "description": "100 Incredible wines selected for pure quality and value by our Masters of Wine. Find here all our latest blog releases. Explore our products, try new recipes and discover the weird and wonderful world of wine",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4860746.jpg"
+    },
+    {
+      "title": "Vin-X Fine Wine Investment | Expert Advice for Fine Wine Investors",
+      "feed_url": "https://www.vin-x.com/blog/feed",
+      "website_url": "https://www.vin-x.com/blog",
+      "description": "Vin-X is recognised as a market-leading specialist broker of fine wine, offering a bespoke portfolio management service to investors. Our goal is to maximise investment potential by ensuring access to the most promising Bordeaux vintages available, and providing essential information to monitor the performance of their investment over time.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 856
+      },
+      "image_url": "https://i1.feedspot.com/4861498.jpg?t=1611921529"
+    },
+    {
+      "title": "Yapp Brothers Wine Blog",
+      "feed_url": "https://www.yapp.co.uk/blog//feed",
+      "website_url": "https://www.yapp.co.uk/blog/",
+      "description": "Yapp Brothers Wine Merchants - News, updates and musings from the world of french wine. Yapp Brothers is an award-winning independent Wine Merchant specialising in distinctive wines from regional France especially the Rhone, Loire and Provence.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4300,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4468086.jpg?t=1611921556"
+    }
+  ]
+}

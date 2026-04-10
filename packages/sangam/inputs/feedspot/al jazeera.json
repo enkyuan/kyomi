@@ -1,0 +1,18 @@
+{
+  "category": "AL Jazeera",
+  "source_url": "https://rss.feedspot.com/al_jazeera_rss_feeds",
+  "feeds": [
+    {
+      "title": "Al Jazeera \u00bb Congo",
+      "feed_url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "website_url": "https://www.aljazeera.com/where/democratic-republic-of-the-congo/",
+      "description": "The Al Jazeera page on the Democratic Republic of the Congo delivers up-to-date news, analysis and features focused on the country's politics, conflict zones, health crises and social issues.",
+      "followers": {
+        "facebook": 19400000,
+        "twitter": 8900000,
+        "instagram": 6900000
+      },
+      "image_url": "https://i1.feedspot.com/4823177.jpg?t=1761733727"
+    }
+  ]
+}

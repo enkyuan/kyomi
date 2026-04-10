@@ -1,0 +1,45 @@
+{
+  "category": "NZ Running",
+  "source_url": "https://rss.feedspot.com/nz_running_rss_feeds",
+  "feeds": [
+    {
+      "title": "Running Medicine Blog",
+      "feed_url": "https://runningmedicine.co.nz/blog/feed/",
+      "website_url": "https://runningmedicine.co.nz/blog/",
+      "description": "Get to know the benefits of running and why it is good for you with the Running Medicine Blog. Dr John Molloy is a specialist Sport & Exercise Physician.",
+      "followers": {
+        "facebook": 323
+      },
+      "image_url": "https://i1.feedspot.com/5527904.jpg?t=1679918381"
+    },
+    {
+      "title": "Life In Motion Blog",
+      "feed_url": "https://www.lifeinmotion.co.nz/blog-feed.xml",
+      "website_url": "https://www.lifeinmotion.co.nz/blog",
+      "description": "Life In Motion Run Club race reports and running blog posts. Hi runner! I'm Eve and I created LIM Run Club in 2016. It started as a social group run session and has evolved into a vibrant online community, full of run specific strength training, support and knowledge.",
+      "followers": {
+        "facebook": 5900,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5527899.jpg?t=1679918369"
+    },
+    {
+      "title": "Jog around the Blog",
+      "feed_url": "https://jogaroundtheblog.co.nz/feed/",
+      "website_url": "https://jogaroundtheblog.co.nz/",
+      "description": "Jog around the Blog brings you mumblings from the back of the pack gang. Jog around the Blog is a a long-form love letter to running, jogging, hiking and tramping. And sometimes even cycling, swimming, or whatever other activity tickles our collective fancy.",
+      "followers": {
+        "facebook": 127
+      },
+      "image_url": "https://i1.feedspot.com/5527898.jpg?t=1679918326"
+    },
+    {
+      "title": "Dawn Tuffery Blog",
+      "feed_url": "https://dawntuffery.com/feed/",
+      "website_url": "https://dawntuffery.com/running-blog/",
+      "description": "Visit the Dawn Tuffery Blog to find out reasons to keep running. Check out my drawing and writing on running. I love ultrarunning and look forward to exploring many more events in beautiful places. My first ultramarathon was the NZ 100k champs in Taupo in 2010, which was great fun and got me hooked.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5527897.jpg?t=1679918288"
+    }
+  ]
+}

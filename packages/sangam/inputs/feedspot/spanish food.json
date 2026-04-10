@@ -1,0 +1,103 @@
+{
+  "category": "Spanish Food",
+  "source_url": "https://rss.feedspot.com/spanish_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Barcelona Food Experience Blog",
+      "feed_url": "https://www.barcelonafoodexperience.com/blog?format=rss",
+      "website_url": "https://www.barcelonafoodexperience.com/blog",
+      "description": "Blog about eating in Barcelona: best restaurants, cool bars, foodie experiences, and healthy eating too. Hi! here in Barcelona Food Experience, we are gathering all the places we love. My main goals are to have happy readers who find useful and interesting content on the website and social media, and restaurants who receive the attention they deserve thanks to their dedication and hard work.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 1500,
+        "instagram": 107800
+      },
+      "image_url": "https://i1.feedspot.com/4641625.jpg?t=1609575150"
+    },
+    {
+      "title": "MY KITCHEN IN SPAIN",
+      "feed_url": "http://mykitcheninspain.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mykitcheninspain.blogspot.com/",
+      "description": "Janet Mendel an American-born journalist and cookbook author who has lived in southern Spain for many years shares amazing Spanish dishes made by her.",
+      "followers": {
+        "twitter": 270
+      },
+      "image_url": "https://i1.feedspot.com/27116.jpg"
+    },
+    {
+      "title": "Foodie in Barcelona",
+      "feed_url": "https://foodieinbarcelona.com/feed/?x=1",
+      "website_url": "https://foodieinbarcelona.com/",
+      "description": "Foodie in Barcelona is Suzy's quest to explore the shops, restaurants and cafes of Barcelona with the goal of finding the best places to eat and drink. This blog is about discovering Barcelona through its eateries",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 2100,
+        "instagram": 24600
+      },
+      "image_url": "https://i1.feedspot.com/4640381.jpg?t=1609575200"
+    },
+    {
+      "title": "MAMA \u00cdA",
+      "feed_url": "https://www.natachasanzcaballero.com/feed/",
+      "website_url": "https://www.natachasanzcaballero.com/",
+      "description": "Natacha Sanz Caballero is a writer, cook and Author of the blog 'Mama \u00cda, Cooking Spanish in the Midwest'.",
+      "followers": {
+        "twitter": 6,
+        "instagram": 453
+      },
+      "image_url": "https://i1.feedspot.com/4641405.jpg?t=1616504198"
+    },
+    {
+      "title": "mooninspain",
+      "feed_url": "https://mooninspain.com/feed/",
+      "website_url": "https://mooninspain.com/",
+      "description": "Food, Travel , Life and more Food in Spain",
+      "followers": {
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/5029232.jpg?t=1616504469"
+    },
+    {
+      "title": "Spanish Sabores - Recipes",
+      "feed_url": "https://feeds.feedburner.com/spanishsabores/wmCs",
+      "website_url": "https://spanishsabores.com/recipes/",
+      "description": "Spanish Sabores brings you the best in simple Spanish recipes and travel tips for food lovers. Also offering food tours in Madrid, Barcelona and Seville",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 3500,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4639770.jpg?t=1616504162"
+    },
+    {
+      "title": "Everyday Food Blog",
+      "feed_url": "https://everydayfoodblog.com/feed/",
+      "website_url": "https://everydayfoodblog.com/",
+      "description": "I'm David, the brains and tongue behind the Everyday Food Blog. I'm originally from the avocado-drenched city of Brisbane, Australia, but currently live in the south of Spain. Here, I am sharing step-by-step video recipes for cakes, desserts and everyday meals!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5043355.jpg?t=1616504299"
+    },
+    {
+      "title": "Annie B's Spanish Kitchen",
+      "feed_url": "https://www.anniebspain.com/blog-spanish-food/feed/",
+      "website_url": "https://www.anniebspain.com/blog-spanish-food/",
+      "description": "Looking to get under the skin of Spanish food? Annie B's food blog explores everything from recipes and cooking tips to the best places to eat and drink.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 4200,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4640373.jpg?t=1616504189"
+    },
+    {
+      "title": "Julia Eats",
+      "feed_url": "https://juliaeats.com/category/recipes/feed/",
+      "website_url": "https://juliaeats.com/category/recipes/",
+      "description": "Julia B. Wilde exploring Spanish Culture through Food.",
+      "followers": {
+        "facebook": 58
+      },
+      "image_url": "https://i1.feedspot.com/4640779.jpg?t=1610796728"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "category": "Australia Life Sciences",
+  "source_url": "https://rss.feedspot.com/australia_life_sciences_rss_feeds",
+  "feeds": [
+    {
+      "title": "EZZ Life News",
+      "feed_url": "https://ezzlife.com.au/feed/",
+      "website_url": "https://ezzlife.com.au/in-the-news/",
+      "description": "EZZ Life Science Holding Limited is a genomic life science company with a mission to improve quality of life and human health. It focuses on research and development to address four key health challenges - genetic longevity, human papillomavirus, helicobacter pylori, and weight management.",
+      "followers": {
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5353544.jpg?t=1639574241"
+    },
+    {
+      "title": "Life Sciences WA",
+      "feed_url": "https://www.lifescienceswa.com.au/blog-feed.xml",
+      "website_url": "https://www.lifescienceswa.com.au/news/",
+      "description": "Keep updated with the latest news and information from the WA Life Science Industry. With a prosperous start-up scene, world-class infrastructure and a pipeline of research providing a strong supply of opportunities, Western Australia's thriving life sciences industry deliver innovation and excellence globally.",
+      "followers": {
+        "twitter": 244
+      },
+      "image_url": "https://i1.feedspot.com/5353546.jpg?t=1639574464"
+    }
+  ]
+}

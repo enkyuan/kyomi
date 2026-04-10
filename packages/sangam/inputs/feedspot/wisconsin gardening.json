@@ -1,0 +1,105 @@
+{
+  "category": "Wisconsin Gardening",
+  "source_url": "https://rss.feedspot.com/wisconsin_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "PlantPostings",
+      "feed_url": "https://plantpostings.blogspot.com/feeds/posts/default",
+      "website_url": "https://plantpostings.blogspot.com/",
+      "description": "Notes about a USDA zone 5 shade garden in southern Wisconsin.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 207
+      },
+      "image_url": "https://i1.feedspot.com/5328408.jpg?t=1633427266"
+    },
+    {
+      "title": "North Country MGV Blog",
+      "feed_url": "https://www.northcountrymgv.org/blog/feed",
+      "website_url": "https://www.northcountrymgv.org/blog",
+      "description": "Gardening posts from North Country MGV. Welcome to the North Country Master Gardeners Volunteers (NCMGV). The association, comprised of members from Burnett, Sawyer, and Washburn Counties, became the 31st local association admitted to the Wisconsin Master Gardener Association (WIMGA) in 2001.",
+      "followers": {
+        "facebook": 997
+      },
+      "image_url": "https://i1.feedspot.com/5328407.jpg?t=1633420843"
+    },
+    {
+      "title": "Garden.True.North",
+      "feed_url": "http://www.gardentruenorth.com/1/feed",
+      "website_url": "http://www.gardentruenorth.com/",
+      "description": "Sue Reinardy, the gal behind Garden.True.North, is a Zone 3 gardener. She is a life-long gardener, grew up on a farm, is a University of Wisconsin Extension Master Gardener Volunteer, and is an adjunct instructor at the Wisconsin Indianhead Technical College. You will find her garden near Hayward Wisconsin where she enjoys the north woods with her husband Don.",
+      "followers": {
+        "facebook": 20
+      },
+      "image_url": "https://i1.feedspot.com/5328495.jpg?t=1633431902"
+    },
+    {
+      "title": "Leader-Telegram \u00bb Gardening",
+      "feed_url": "https://www.leadertelegram.com/search/?f=rss&t=article&c=country-today/country-life/gardening&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.leadertelegram.com/country-today/country-life/gardening/",
+      "description": "The following section of Leader-Telegram is dedicated to Gardening. Leader-Telegram is your local news, sports, and information leader for Eau Claire and the Chippewa Valley.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5328498.jpg?t=1633431717"
+    },
+    {
+      "title": "Birds and Blooms \u00bb Gardening",
+      "feed_url": "https://www.birdsandblooms.com/gardening/feed/",
+      "website_url": "https://www.birdsandblooms.com/gardening/",
+      "description": "Make the backyard garden of your dreams a reality with these gardening tips and ideas from our experts. Birds & Blooms is the #1 bird and garden magazine in North America with more than 1 million subscribers. Our magazine covers a wide range of topics such as attracting hummingbirds, building birdhouses, gardening for butterflies, feeding birds for less, growing veggies, tales of readers' birding experiences, plus a whole lot more.",
+      "followers": {
+        "facebook": 899000,
+        "twitter": 15100,
+        "instagram": 67700
+      },
+      "image_url": "https://i1.feedspot.com/5328404.jpg?t=1633420184"
+    },
+    {
+      "title": "Creative Vegetable Gardener Blog",
+      "feed_url": "https://www.creativevegetablegardener.com/blog/feed/",
+      "website_url": "https://www.creativevegetablegardener.com/blog/",
+      "description": "Learn how to grow more food with less work, enjoy the fruits of your labor and appreciate the beauty all around you. Creative Vegetable Gardener encourages and educates people to successfully grow their own food and get the most from their gardens.",
+      "followers": {
+        "facebook": 5500,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4666160.jpg?t=1617886022"
+    },
+    {
+      "title": "Master Gardener Program",
+      "feed_url": "https://mastergardener.extension.wisc.edu/feed/",
+      "website_url": "https://mastergardener.extension.wisc.edu/articles/",
+      "description": "The Extension Master Gardener Program educates, empowers, and supports volunteers to use university research-based information to extend the Wisconsin Idea, making a positive difference in lives and communities.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5328410.jpg?t=1633430830"
+    },
+    {
+      "title": "Nature Net Blog",
+      "feed_url": "https://naturenet.org/feed/",
+      "website_url": "https://naturenet.org/blog/",
+      "description": "Nature Net's monthly blog highlights seasonal topics and helps you feel like the expert. Each edition features tips for educators and families, and links to exciting, nature-focused websites. Nature Net is a not-for-profit environmental learning network comprised of nineteen area nature centers, museums, gardens, and parks offering experiential, place-based environmental education to the schoolchildren, teachers, and families of south-central Wisconsin.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 372
+      },
+      "image_url": "https://i1.feedspot.com/5328409.jpg?t=1633431081"
+    },
+    {
+      "title": "The Impatient Gardener Blog",
+      "feed_url": "https://www.theimpatientgardener.com/feed/",
+      "website_url": "https://www.theimpatientgardener.com/blog/",
+      "description": "Do you love gardening? Me too! I'm Erin and I garden in Southeastern Wisconsin, zone 5. The Impatient Gardener is all about real-life gardening: the good parts, the bad bits and even the funny stuff. It's part information, part inspiration and a little bit commiseration.",
+      "followers": {
+        "facebook": 37900,
+        "twitter": 1400,
+        "instagram": 109900
+      },
+      "image_url": "https://i1.feedspot.com/4457336.jpg?t=1627451474"
+    }
+  ]
+}

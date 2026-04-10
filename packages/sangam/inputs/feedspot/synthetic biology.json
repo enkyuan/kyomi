@@ -1,0 +1,97 @@
+{
+  "category": "Synthetic Biology",
+  "source_url": "https://rss.feedspot.com/synthetic_biology_rss_feeds",
+  "feeds": [
+    {
+      "title": "EBRC",
+      "feed_url": "https://ebrc.org/feed/",
+      "website_url": "https://ebrc.org/",
+      "description": "EBRC is a non-profit, public-private partnership dedicated to bringing together an inclusive community committed to advancing engineering biology to address national and global needs. Get more information about synthetic biology by following our feed",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5051996.jpg"
+    },
+    {
+      "title": "EUSynBioS",
+      "feed_url": "https://www.eusynbios.org/blogs?format=rss",
+      "website_url": "https://www.eusynbios.org/blogs",
+      "description": "The European Synthetic Biology Society (EUSynBioS) represents the European Community of researchers in the scientific discipline of Synthetic Biology. Follow to get the latest articles from this feed in your inbox.",
+      "followers": {
+        "facebook": 185,
+        "twitter": 4400,
+        "instagram": 350
+      },
+      "image_url": "https://i1.feedspot.com/5051985.jpg?t=1622615494"
+    },
+    {
+      "title": "OpenPlant Blog",
+      "feed_url": "https://www.openplant.org/blog?format=RSS",
+      "website_url": "https://www.openplant.org/news",
+      "description": "OpenPlant is a joint initiative in plant synthetic biology between the University of Cambridge, John Innes Centre and the Earlham Institute, funded by the BBSRC and EPSRC as part of the UK Synthetic Biology for Growth program. Follow this blog for open technologies in plant synthetic biology, news, opportunities, and events.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5051965.jpg?t=1622615498"
+    },
+    {
+      "title": "CSHL Synthetic Biology",
+      "feed_url": "https://cshlsynbio.wordpress.com/feed/",
+      "website_url": "https://cshlsynbio.wordpress.com/",
+      "description": "COLD SPRING HARBOR LABORATORY(CSHL) is a prestigious, world-renowned research facility steeped in a rich history of biological discovery. Follow this blog to learn the practical and theoretical underpinnings of cutting edge research in the area of Synthetic Biology.",
+      "followers": {
+        "twitter": 821
+      },
+      "image_url": "https://i1.feedspot.com/5051963.jpg?t=1622615534"
+    },
+    {
+      "title": "nature.com \u00bb Synthetic biology",
+      "feed_url": "https://www.nature.com/subjects/synthetic-biology.rss/feed",
+      "website_url": "https://www.nature.com/subjects/synthetic-biology",
+      "description": "Nature Research is a portfolio of high-quality products and services across the life, physical, chemical, and applied sciences, including journals, online databases and researcher services, which are dedicated to serving the scientific community. Follow this blog for the latest news and research on the topic of Synthetic biology.",
+      "followers": {
+        "facebook": 792300,
+        "twitter": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/5052017.jpg?t=1622615508"
+    },
+    {
+      "title": "The Official PLOS Blog",
+      "feed_url": "https://theplosblog.plos.org/feed/",
+      "website_url": "https://theplosblog.plos.org/",
+      "description": "PLOS (The Public Library of Science) is a nonprofit publisher and advocacy organization on a mission to lead a transformation in research communication. As synthetic biology advances, researchers should spend less time in the lab and more time on designing and evaluating constructs. Follow to get the updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051956.jpg?t=1622615516"
+    },
+    {
+      "title": "Bioethics.com \u00bb Synthetic Biology",
+      "feed_url": "https://bioethics.com/synthetic-biology/feed",
+      "website_url": "https://bioethics.com/archives/category/synthetic-biology",
+      "description": "Bioethics.com is a public service provided by the Center for Bioethics & Human Dignity (CBHD) to stay up-to-date with news, issues, and events in bioethics that span the spectrum of medicine, science, and technology. Follow this blog to know more about synthetic biology.",
+      "followers": {
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5052031.jpg"
+    },
+    {
+      "title": "Engineering Biology in Cambridge",
+      "feed_url": "https://www.engbio.cam.ac.uk/news/feed",
+      "website_url": "https://www.engbio.cam.ac.uk/news",
+      "description": "The Synthetic Biology Strategic Research Initiative provides a hub for anyone interested in Synthetic Biology at the University of Cambridge, including researchers, commercial partners, and external collaborators. Follow to get regular updates from this blog in your inbox.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051980.jpg"
+    },
+    {
+      "title": "SynBioBeta",
+      "feed_url": "https://www.synbiobeta.com/feed",
+      "website_url": "https://www.synbiobeta.com/",
+      "description": "SynBioBeta is the premier innovation network for innovators, investors, thinkers, and engineers who share a passion for using synthetic biology to build a better, more sustainable universe. Follow this blog for stories of how synthetic biology will heal, fuel, feed, and build the future.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 52300,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5051959.jpg?t=1622615489"
+    }
+  ]
+}

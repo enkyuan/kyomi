@@ -1,0 +1,502 @@
+{
+  "category": "Office 365",
+  "source_url": "https://rss.feedspot.com/office_365_rss_feeds",
+  "feeds": [
+    {
+      "title": "Practical 365 Blog",
+      "feed_url": "https://practical365.com/blog/feed/",
+      "website_url": "https://practical365.com/blog/",
+      "description": "Get the latest Office 365 news, practical tips, and real world tutorials to stay cloud-ready. Our popular Office 365 blog helps IT pros learn about Exchange Online, Azure AD, Groups, Teams, PowerShell, and much more. Practical 365 is a leading source of Office 365 and Exchange Server news, tips and tutorials by Microsoft MVP Paul Cunningham.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 21800
+      },
+      "image_url": "https://i1.feedspot.com/4633489.jpg?t=1616154013"
+    },
+    {
+      "title": "Office 365 for IT Pros",
+      "feed_url": "https://office365itpros.com/feed/",
+      "website_url": "https://office365itpros.com/",
+      "description": "The only always up-to-date book about the cloud Office system in Microsoft 365 covering Exchange Online, SharePoint Online, OneDrive for Business, Microsoft Teams, Planner, Azure Active Directory, and more.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/5178195.jpg?t=1616154058"
+    },
+    {
+      "title": "Office 365 Reports",
+      "feed_url": "https://o365reports.com/feed/",
+      "website_url": "https://o365reports.com/",
+      "description": "A dedicated page for Office 365 related reports.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 202
+      },
+      "image_url": "https://i1.feedspot.com/5318598.jpg?t=1642248772"
+    },
+    {
+      "title": "Tracy van der Schyff",
+      "feed_url": "https://tracyvanderschyff.com/feed/",
+      "website_url": "https://tracyvanderschyff.com/",
+      "description": "Covers blog posts on SharePoint Online, Office 365, Microsoft Teams, and Microsoft Lists. My life mission is to facilitate the evolution of human capabilities. It is about enabling others to serve themselves better, expand their possibilities, increase their capacity to learn, act more effectively and better design their future.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4626287.jpg?t=1616154139"
+    },
+    {
+      "title": "Imaginet blog",
+      "feed_url": "https://imaginet.com/feed/",
+      "website_url": "https://imaginet.com/blog/",
+      "description": "The software professionals at Imaginet deliver the latest technical trends and talking points with in-depth discussions right here. Read the latest insights. Imaginet is your trusted technology partner for all things Microsoft 365, Teams, SharePoint, App Dev, and Power BI.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5697015.jpg?t=1698229673"
+    },
+    {
+      "title": "threesixfive DGTL",
+      "feed_url": "https://threesixfiveuk.com/feed",
+      "website_url": "https://threesixfiveuk.com/category/all-posts",
+      "description": "We offer a range of digital collaboration services for businesses, from small start-ups to multinational organizations. We build on top of the Microsoft 365 product range, like SharePoint, PowerApps, Power Automate, PowerBI, and Azure to build custom business solutions.",
+      "followers": {
+        "facebook": 83
+      },
+      "image_url": "https://i1.feedspot.com/5665767.jpg?t=1694069680"
+    },
+    {
+      "title": "365 by Thijs",
+      "feed_url": "https://365bythijs.be/feed/",
+      "website_url": "https://365bythijs.be/",
+      "description": "Thijs is a passionate Modern Workplace Consultant. Born and raised in Belgium, he currently works at The Collective Consulting as a Senior Microsoft 365 Consultant. On this blog, he shares insights and tips on topics ranging from Microsoft Endpoint Manager to Azure Sentinel and Logic Apps.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5359740.jpg?t=1641297570"
+    },
+    {
+      "title": "Quest \u00bb Office 365 / Microsoft 365",
+      "feed_url": "https://blog.quest.com/topic/office-365-microsoft-365/feed/",
+      "website_url": "https://blog.quest.com/topic/office-365-microsoft-365/",
+      "description": "The latest insights and best practices for using, managing, securing and migrating Office 365 and Microsoft 365 environments for IT professionals. Since 1987, we've provided software solutions for the constantly evolving world of enterprise IT. Quest solutions protect and empower users and data, streamline IT operations and harden cybersecurity from the inside out.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 17700,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5359731.jpg?t=1641296057"
+    },
+    {
+      "title": "Imperial College \u00bb Office 365",
+      "feed_url": "https://blogs.imperial.ac.uk/office365/feed/",
+      "website_url": "https://blogs.imperial.ac.uk/office365/",
+      "description": "Office 365 feature and product updates, news and enhancements. Imperial is a global top ten university with a world-class reputation in science, engineering, business and medicine.",
+      "followers": {
+        "facebook": 231400,
+        "twitter": 181700,
+        "instagram": 207400
+      },
+      "image_url": "https://i1.feedspot.com/5359744.jpg?t=1641296164"
+    },
+    {
+      "title": "Office 365 Blog",
+      "feed_url": "https://office365.thorpick.de/feed",
+      "website_url": "https://office365.thorpick.de/",
+      "description": "My name is Thorsten Pickhan. I started my IT career about 20 years ago as a trainee in a small IT shop. This blog is based on my experience and knowledge of several projects in the Microsoft UC world. It should help other admins and interested people to stay informed and to solve problems around Office 365 and in particular Microsoft UC and Audiocodes topics.",
+      "followers": {
+        "twitter": 782
+      },
+      "image_url": "https://i1.feedspot.com/5359736.jpg?t=1641301269"
+    },
+    {
+      "title": "Office365Update",
+      "feed_url": "https://office365updates.nl/feed/",
+      "website_url": "https://office365updates.nl/",
+      "description": "Welcome to the Office365Update blog. My name is Marcel Croonen and this is my personal blog where I give updates on what's new in Microsoft 365, including my views and thoughts.",
+      "followers": {
+        "twitter": 740
+      },
+      "image_url": "https://i1.feedspot.com/5359738.jpg?t=1641295952"
+    },
+    {
+      "title": "Virtually Amazing",
+      "feed_url": "https://tomorrowsva.com/feed/",
+      "website_url": "https://tomorrowsva.com/blog/",
+      "description": "Join Shelley Fishel of tomorrow's VA and Jo Brianti of JLBSupportSolutions as they chat about there week in the virtual world. Join the Guest Expert to get tips tricks and insights into the different elements of being a Virtual Assistant. Hear about our App of The Moment and the tips we have to share. All aimed at helping you grow your VA Business. Shelley is an IT Trainer with over 20 years' experience and Jo is a Virtual Assistant of some years standing. Join us every other week to find out what is going on in the world of Virtual Assistants.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6581923.jpg?t=1746027162"
+    },
+    {
+      "title": "MSB365 | The Microsoft Blog",
+      "feed_url": "https://www.msb365.blog/?feed=rss2",
+      "website_url": "https://www.msb365.blog/",
+      "description": "Get the latest Office 365 news, practical tips, and real world tutorials to stay cloud-ready. Key topics covered are Exchange, Office 365, Azure, PowerShell, Events, MS Teams, and more. MSB365 is a leading site for Office 365 Microsoft Azure and Exchange Server run by Drago Petrovic and Dominic Manning.",
+      "followers": {
+        "facebook": 98,
+        "twitter": 131,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5017159.jpg?t=1616154028"
+    },
+    {
+      "title": "LazyAdmin | Office 365",
+      "feed_url": "https://lazyadmin.nl/category/office-365/feed/",
+      "website_url": "https://lazyadmin.nl/category/office-365/",
+      "description": "Everything about Office & Microsoft 365, PowerShell and Smart Home networks. Written by a SysAdmin with more then 15 years of experience.",
+      "followers": {
+        "twitter": 700
+      },
+      "image_url": "https://i1.feedspot.com/4944176.jpg?t=1616154045"
+    },
+    {
+      "title": "Sherweb \u00bb Office 365",
+      "feed_url": "https://www.sherweb.com/blog/category/office-365/feed/",
+      "website_url": "https://www.sherweb.com/blog/category/office-365/",
+      "description": "Blog section covers all of the Office Suite, best practices, news, and trends. Sherweb is a cloud solutions provider that helps to stay ahead with the latest tech trends and best practices, so clients can make informed decisions about the future of their business.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 2400,
+        "instagram": 799
+      },
+      "image_url": "https://i1.feedspot.com/5263417.jpg?t=1617198675"
+    },
+    {
+      "title": "CiraSync",
+      "feed_url": "https://cirasync.com/feed/",
+      "website_url": "https://cirasync.com/blog/",
+      "description": "CiraSync is a SaaS platform that makes everyone reachable. It syncs GAL, public folder, and CRM contacts to Office 365 users and smartphones in about a minute",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/5048562.jpg"
+    },
+    {
+      "title": "Efficiency 365 Blog",
+      "feed_url": "https://efficiency365.com/feed/",
+      "website_url": "https://efficiency365.com/",
+      "description": "Covers blog posts on Teams, Power BI, Excel, Word, PowerPoint, Outlook, OneDrive, OneNOte, and Office 365. Dr Nitin Paranjape can help you improve work efficiency using his FACT method. His methodology is highly effective, easy to implement and provides tangible results quickly.",
+      "followers": {
+        "facebook": 786,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4633547.jpg?t=1616154074"
+    },
+    {
+      "title": "Elio Struyf - MVP Office Servers and Services",
+      "feed_url": "https://feeds.feedburner.com/estruyf",
+      "website_url": "https://www.eliostruyf.com/",
+      "description": "Elio Struyf an Office Server and Services MVP working at U2U - https://www.u2u.be as a lead trainer and architect.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4626233.jpg"
+    },
+    {
+      "title": "Vasil Michev's Blog",
+      "feed_url": "https://www.michev.info/feed",
+      "website_url": "https://www.michev.info/",
+      "description": "Covers blog posts on Office 365, Azure AD, OneDrive, MS Teams, PowerShell, Skype for Business Online, Exchange Online, Graph API, and more. I'm Vasil Michev. My Microsoft transcript includes certifications for Office 365, Server 2012 and Server Virtualization.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5125793.jpg?t=1621247411"
+    },
+    {
+      "title": "AddIn365",
+      "feed_url": "https://www.addin365.com/feed/",
+      "website_url": "https://www.addin365.com/",
+      "description": "Addin365 are a team of Microsoft Office 365 specialists. We help employees use the right parts of Office 365 & to collaborate within the workplace, using the Microsoft features that benefit your company such as Microsoft Teams.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5209836.jpg?t=1603460003"
+    },
+    {
+      "title": "Nuno \u00c1rias Silva Blog",
+      "feed_url": "https://www.nuno-silva.net/feed",
+      "website_url": "https://www.nuno-silva.net/",
+      "description": "Blog about Microsoft Office 365 and other technologies. Key topics covered are Office 365, Exchange, Infrastructure, Architect, MVP Office Apps, and more. Nuno Arias Silva has more than 20 years of working in IT, with a Master in Information Technologies, The last projects have more focused on Office 365, Infrastructures and Security within Microsoft Infrastructure Products.",
+      "followers": {
+        "twitter": 806
+      },
+      "image_url": "https://i1.feedspot.com/4633627.jpg?t=1616154171"
+    },
+    {
+      "title": "Jasper Oosterveld",
+      "feed_url": "https://www.jasperoosterveld.com/feed/",
+      "website_url": "https://www.jasperoosterveld.com/",
+      "description": "Jasper Oosterveld is a frequently booked speaker and he writes blogs and articles about the topic that makes his heart beat faster: SharePoint and Office 365. At Sparked he provides seamless implementations of SharePoint Online and Office 365 as Cloud Consultant.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4626226.jpg?t=1616154034"
+    },
+    {
+      "title": "Michelcarlo",
+      "feed_url": "https://michelcarlo.com/feed/",
+      "website_url": "https://michelcarlo.com/",
+      "description": "Microsoft 365, Power Platform and SharePoint related thoughts. Author of this blog Michel Mendes is a Microsoft 365 Consultant.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5281084.jpg?t=1621063509"
+    },
+    {
+      "title": "JanBakker.tech",
+      "feed_url": "https://janbakker.tech/feed/",
+      "website_url": "https://janbakker.tech/",
+      "description": "I'm a Cloud Consultant, based in the Netherlands. I work for Rapid Circle. This website is all about sharing knowledge and insights on how to use the Microsoft 365 features.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5163244.jpg?t=1616154159"
+    },
+    {
+      "title": "Warner Digital",
+      "feed_url": "https://warner.digital/feed/",
+      "website_url": "https://warner.digital/",
+      "description": "Follow Warner Digital to get Office 365 and SharePoint latest updates, news, practical tips and more.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5099332.jpg?t=1616154153"
+    },
+    {
+      "title": "Joseph Velliah",
+      "feed_url": "https://blog.josephvelliah.com/feed.xml",
+      "website_url": "https://blog.josephvelliah.com/",
+      "description": "I'm a Sr. Staff SW Engineer with a focus on Cloud Computing, Microsoft 365, Azure, AWS, and SharePoint. On my website, I write articles about leveraging technology to improve employee experience and productivity.",
+      "followers": {
+        "twitter": 308
+      },
+      "image_url": "https://i1.feedspot.com/4948824.jpg?t=1616146327"
+    },
+    {
+      "title": "Beyond Key Blog",
+      "feed_url": "https://www.beyondintranet.com/blog/feed/",
+      "website_url": "https://www.beyondintranet.com/blog/",
+      "description": "Founded in 2005, Beyond Key incubated Beyond Intranet as its strategic division, to ensure that their clients get the most out of Microsoft technologies, including SharePoint, Teams, Dynamics 365, and Power Platform (Power BI, Power Apps, and Power Automate).",
+      "followers": {
+        "facebook": 604,
+        "twitter": 79
+      },
+      "image_url": "https://i1.feedspot.com/5175922.jpg?t=1616145646"
+    },
+    {
+      "title": "Leon Armston's Blog",
+      "feed_url": "https://www.leonarmston.com/feed/",
+      "website_url": "https://www.leonarmston.com/",
+      "description": "Key topics covered are Power Automate, SharePoint, Power Platform, Microsoft/Office 365, and Azure. Leon is an experienced SharePoint and Microsoft 365 Consultant. Predominately working with SharePoint but also adept with most apps in the Microsoft 365 suite and Azure.",
+      "followers": {
+        "twitter": 878
+      },
+      "image_url": "https://i1.feedspot.com/5194264.jpg?t=1599477780"
+    },
+    {
+      "title": "Microsoft 365 Security",
+      "feed_url": "https://m365internals.com/feed/",
+      "website_url": "https://m365internals.com/",
+      "description": "Everything about Microsoft Security. Huy is a cybersecurity professional with a primary focus on Microsoft Technologies. He has a strong background in Windows system administration and has developed himself in the security field. Huy likes to design solutions to tackle problems, whether it is IT or security-related. He is always eager to help others and strives to improve himself day by day.",
+      "followers": {
+        "twitter": 40400
+      },
+      "image_url": "https://i1.feedspot.com/5359727.jpg?t=1641299221"
+    },
+    {
+      "title": "MyDock 365 \u00bb Office 365",
+      "feed_url": "https://blog.mydock365.com/tag/office-365/rss.xml",
+      "website_url": "https://blog.mydock365.com/tag/office-365",
+      "description": "Our blog is a great resource for SharePoint Tips, productivity tips, collaboration tools and insights on SharePoint Templates for Office 365. Dock 365 is committed to providing you with tools and information you can use to take your business to the next level.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 592,
+        "instagram": 557
+      },
+      "image_url": "https://i1.feedspot.com/5359733.jpg?t=1641301339"
+    },
+    {
+      "title": "Petri \u00bb Microsoft 365",
+      "feed_url": "https://petri.com/category/office/office-365/feed/",
+      "website_url": "https://petri.com/category/microsoft-365/",
+      "description": "Read articles on Office 365 in this section of Petri. The Petri IT Knowledgebase has served as one of the world's leading content and community resources for more than 15 years. It has always been focused on serving the needs of IT professionals by providing information to help them solve problems.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/5359737.jpg?t=1641296960"
+    },
+    {
+      "title": "Microsoft 365 Pro",
+      "feed_url": "https://microsoft365pro.co.uk/feed/",
+      "website_url": "https://microsoft365pro.co.uk/",
+      "description": "Modern Work Blog focusing on Microsoft Teams & Microsoft 365. Chris Hoard has over 13 years of cloud computing experience in Provisioning and Professional Services, he now delivers skilling and enablement experiences to over 500 Microsoft partners for Vuzion. His focus areas include Microsoft Teams, Microsoft 365, Security & Compliance & Power Platform integration.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5359742.jpg?t=1641297488"
+    },
+    {
+      "title": "Nate Chamberlain",
+      "feed_url": "https://natechamberlain.com/feed/",
+      "website_url": "https://natechamberlain.com/",
+      "description": "Nate Chamberlain is an award-winning, certified technical content creator, product marketer, and trainer who specializes in the administration, governance, and adoption of Microsoft 365 (M365) apps and services. Background as an IT professional in business analysis and systems administration roles across several industries.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5201796.jpg?t=1661851793"
+    },
+    {
+      "title": "Ms Outlook World Blog",
+      "feed_url": "http://feeds.feedburner.com/blogspot/nHbKjx",
+      "website_url": "https://msoutlookworld.blogspot.com/",
+      "description": "MS-Outlook world provides information about Microsoft Outlook and related problem or errors and gives better solutions by its easy tips & tricks.",
+      "followers": {
+        "facebook": 418,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/4633518.jpg?t=1616154182"
+    },
+    {
+      "title": "Dux Raymond Sy",
+      "feed_url": "https://meetdux.com/feed/",
+      "website_url": "https://meetdux.com/",
+      "description": "With over 20 years of business & technology experience, Dux is a CTO at AvePoint, the Microsoft Cloud expert with solutions for SharePoint backup, administration and Office 365 management.",
+      "followers": {
+        "twitter": 15800,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/3769615.jpg?t=1616154215"
+    },
+    {
+      "title": "Rez's Blog Spot",
+      "feed_url": "https://khamis.net/feed/",
+      "website_url": "https://khamis.net/",
+      "description": "Rez is a Microsoft Office 365 / SharePoint Server MVP and Solutions Architect who enjoys working with the most cutting-edge Microsoft technologies.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4633929.jpg?t=1616154163"
+    },
+    {
+      "title": "KMartins Cloud Technology",
+      "feed_url": "https://kmartins.com/feed/",
+      "website_url": "https://kmartins.com/",
+      "description": "Advice through experience in Office 365, Security, and Azure.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5120793.jpg?t=1616154210"
+    },
+    {
+      "title": "AADInternals.com",
+      "feed_url": "https://aadinternals.com/index.xml",
+      "website_url": "https://aadinternals.com/",
+      "description": "Everything about Microsoft 365 security. The site for Microsoft 365 and Azure AD administrators. Key topics covered are Azure, Office 365, security, ADDInternals, MFA, DNS, and more.",
+      "followers": {
+        "twitter": 20200
+      },
+      "image_url": "https://i1.feedspot.com/5263416.jpg?t=1617198415"
+    },
+    {
+      "title": "SharePains \u00bb Microsoft SharePoint Online",
+      "feed_url": "https://sharepains.com/feed",
+      "website_url": "https://sharepains.com/sharepoint-online",
+      "description": "SharePains is the blog with posts about Microsoft Technology such as Microsoft 365, Power Platform, SharePoint, OneDrive, PowerShell, Teams, Azure and Dynamics.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4700752.jpg?t=1616146001"
+    },
+    {
+      "title": "Cloudficient Blog \u00bb Microsoft 365",
+      "feed_url": "https://www.cloudficient.com/blog/rss.xml",
+      "website_url": "https://www.cloudficient.com/blog/tag/microsoft-365/",
+      "description": "Take a look at our latest blog posts for insights on the latest in business transformation, migration and Office 365. At Cloudficient, we're all about Empowering Digital Transformation - helping organizations as they evolve throughout the enterprise lifecycle.",
+      "followers": {
+        "facebook": 188,
+        "twitter": 91
+      },
+      "image_url": "https://i1.feedspot.com/5359743.jpg?t=1641297236"
+    },
+    {
+      "title": "CodeTwo Blog",
+      "feed_url": "https://www.codetwo.com/admins-blog/feed/",
+      "website_url": "https://www.codetwo.com/admins-blog/",
+      "description": "A spam-free diet of tech articles, tips and tricks and how-to's on administering Microsoft 365, Office 365, Exchange and Windows Server. CodeTwo develops software solutions for Office 365, Exchange and Sharepoint.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4924116.jpg?t=1611136210"
+    },
+    {
+      "title": "Quest Blogs \u00bb Microsoft Platform Management",
+      "feed_url": "https://www.quest.com/community/blogs/b/microsoft-platform-management/rss",
+      "website_url": "https://www.quest.com/community/blogs/b/microsoft-platform-management/",
+      "description": "Articles on Smarter Office 365 migration, reporting, security, and management. Quadrotech empowers you with expert Office 365 migration services and dynamic management software.",
+      "followers": {
+        "facebook": 713,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/1984603.jpg?t=1619086791"
+    },
+    {
+      "title": "Rick's Blog",
+      "feed_url": "https://www.rickvanrousselt.com/feed/",
+      "website_url": "https://www.rickvanrousselt.com/",
+      "description": "Rick Van Rousselt is a SharePoint / Office 365 consultant living in Belgium. He is working with SharePoint since 2007 and recently made the transition to Office 365.",
+      "followers": {
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4625567.jpg"
+    },
+    {
+      "title": "SPO Scripts",
+      "feed_url": "https://sposcripts.com/powershell-archive/",
+      "website_url": "https://sposcripts.com/powershell-archive/",
+      "description": "Covers useful scripts, which can help you on your daily business as an administrator. SPOScripts delivers SharePoint PowerShell scripts, which enable SharePoint users to make use of PowerShell to automate processes.",
+      "followers": {
+        "facebook": 2
+      },
+      "image_url": "https://i1.feedspot.com/5320122.jpg?t=1631096858"
+    },
+    {
+      "title": "Mirco Ing{e}nito",
+      "feed_url": "https://enito.ch/feed/",
+      "website_url": "https://enito.ch/",
+      "description": "Covers articles related to Microsoft cloud technologies from a holistic point of view. Mirco is a Senior System Engineer/Solution Consultant, passionate about Microsoft 365, information technology, collaboration, stand-up-paddle surfing and pizza!",
+      "followers": {
+        "twitter": 17,
+        "instagram": 148
+      },
+      "image_url": "https://i1.feedspot.com/5338723.jpg?t=1635595334"
+    },
+    {
+      "title": "Sharegate Blog",
+      "feed_url": "https://sharegate.com/blog/feed",
+      "website_url": "https://sharegate.com/blog",
+      "description": "The ShareGate blog is an industry-leading source for news, best practices, tips, how-tos and insights on all things SharePoint, Microsoft Teams and Microsoft 365 environments.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 7400,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4626214.jpg?t=1608549414"
+    },
+    {
+      "title": "MS Expert Talk",
+      "feed_url": "https://msexperttalk.com/feed/",
+      "website_url": "https://msexperttalk.com/",
+      "description": "The purpose of this blog is to share latest technology updates, installation, configuration, troubleshooting of server technologies and their customization. We will be focusing on Office 365, Exchange Server, Intune, Azure and a bit of Skype for Business.",
+      "followers": {
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4626281.jpg?t=1616154228"
+    },
+    {
+      "title": "Microsoft office 365 Support",
+      "feed_url": "https://www.microsoftoffice365support.co/blog/feed/",
+      "website_url": "https://www.microsoftoffice365support.co/blog/",
+      "description": "We are an independent, trusted and successful third party technical support service provider, having rich troubleshooting experience for fixing all usual and typical hindrances in the main operating system like MS office and its related version.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5082105.jpg"
+    }
+  ]
+}

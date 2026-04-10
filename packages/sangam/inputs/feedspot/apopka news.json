@@ -1,0 +1,29 @@
+{
+  "category": "Apopka News",
+  "source_url": "https://rss.feedspot.com/apopka_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Apopka Chief",
+      "feed_url": "https://theapopkachief.com/feed/",
+      "website_url": "https://theapopkavoice.com/",
+      "description": "The Apopka Chief is the weekly community newspapers serving the greater Apopka, Florida area. It is committed to generating comprehensive coverage of news and events as well as effective retail, classified and legal advertising for total community readership. It features up-to-date editorial content with opinion, lifestyle, and sports pages, as well as classified and legal sections each week.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 304
+      },
+      "image_url": "https://i1.feedspot.com/5150765.jpg"
+    },
+    {
+      "title": "The Apopka Voice",
+      "feed_url": "https://theapopkavoice.com/",
+      "website_url": "https://theapopkavoice.com/",
+      "description": "The Apopka Voice is the first draft of local news. Our mission is to inform, engage, and make a difference in the community. Get the local news, weather, traffic and community events coverage for Apopka, FL",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 481,
+        "instagram": 517
+      },
+      "image_url": "https://i1.feedspot.com/5150769.jpg?t=1589611720"
+    }
+  ]
+}

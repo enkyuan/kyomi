@@ -1,0 +1,30 @@
+{
+  "category": "Huntington News",
+  "source_url": "https://rss.feedspot.com/huntington_west_virginia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Herald-Dispatch",
+      "feed_url": "https://www.herald-dispatch.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.herald-dispatch.com/",
+      "description": "Get the latest news, sports, business and financial stories, events, opinion, obituaries, entertainment and more from The Herald-Dispatch.",
+      "followers": {
+        "facebook": 45300,
+        "twitter": 20400,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5139275.jpg?t=1586933521"
+    },
+    {
+      "title": "WOWK 13 News",
+      "feed_url": "https://www.wowktv.com/feed/",
+      "website_url": "https://www.wowktv.com/",
+      "description": "Check out the WOWK 13 News website for trending Charleston-Huntington news & weather stories, as well as concise reporting covering local sports, community, education, and more topics. WOWK is the CBS affiliate for Charleston-Huntington, WV Channel 13 provides coverage of news, weather, and sports for the southwestern part of the state.",
+      "followers": {
+        "facebook": 405300,
+        "twitter": 80300,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5140546.jpg?t=1671425114"
+    }
+  ]
+}

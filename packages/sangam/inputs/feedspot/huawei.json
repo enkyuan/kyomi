@@ -1,0 +1,83 @@
+{
+  "category": "Huawei",
+  "source_url": "https://rss.feedspot.com/huawei_rss_feeds",
+  "feeds": [
+    {
+      "title": "HuaweiUpdate.com",
+      "feed_url": "https://www.huaweiupdate.com/feed/",
+      "website_url": "https://www.huaweiupdate.com/category/huawei-news/",
+      "description": "At HuaweiUpdate.com, you/users will get complete information on Huawei news, Huawei's new product launch, registered trademarks of Huawei, EMUI update news, and How-to guides.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 369
+      },
+      "image_url": "https://i1.feedspot.com/5354050.jpg?t=1639654482"
+    },
+    {
+      "title": "Huaweinewos.com",
+      "feed_url": "https://www.huaweinewos.com/feed",
+      "website_url": "https://www.huaweinewos.com/",
+      "description": "Covers the latest product news, product features, new models, updates, and many details about Huawei. HuaweiNewOS examines and researches Huawei products regularly for those who use or are considering using Huawei technology products and want to stay up to date on the latest Huawei product news.",
+      "followers": {
+        "twitter": 143
+      },
+      "image_url": "https://i1.feedspot.com/5354049.jpg?t=1639656114"
+    },
+    {
+      "title": "Huawei Central",
+      "feed_url": "https://www.huaweicentral.com/feed/",
+      "website_url": "https://www.huaweicentral.com/",
+      "description": "Offers the most active and comprehensive reports on Huawei and covers in-depth topics about Phones, Computers, Tablets, TVs, Wearables, Software, Technologies, Business, Enterprise Solutions, and more. Throughout time, Huawei Central has become the hub of every news related to Huawei.",
+      "followers": {
+        "facebook": 49700,
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5354048.jpg?t=1639656534"
+    },
+    {
+      "title": "PhoneArena \u00bb Huawei",
+      "feed_url": "https://www.phonearena.com/feed/huawei",
+      "website_url": "https://www.phonearena.com/huawei",
+      "description": "PhoneArena is the premium website for new phone information such as full specifications, in-depth reviews, latest news, carrier available and upcoming phones. It features advanced phone filters, visual size comparison and 360-degree views of all hot phones.",
+      "followers": {
+        "facebook": 494300,
+        "twitter": 75200
+      },
+      "image_url": "https://i1.feedspot.com/4910388.jpg?t=1620047784"
+    },
+    {
+      "title": "Huawei Advices",
+      "feed_url": "https://feeds.feedburner.com/Huaweiadvices",
+      "website_url": "https://huaweiadvices.com/",
+      "description": "At HuaweiAdvices.com, we share complete information on Huawei latest news, launches, firmware update guides, rooting procedure and best how to guides.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 249
+      },
+      "image_url": "https://i1.feedspot.com/5286749.jpg?t=1622463381"
+    },
+    {
+      "title": "Huawei News",
+      "feed_url": "https://blog.huawei.com/",
+      "website_url": "https://blog.huawei.com/",
+      "description": "Huawei's official news feed, bringing you real first-hand information. Huawei is a leading global provider of ICT infrastructure and smart devices.",
+      "followers": {
+        "facebook": 31500000,
+        "twitter": 10600000,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/5354047.jpg?t=1639656291"
+    },
+    {
+      "title": "Huawei Blog",
+      "feed_url": "https://blog.huawei.com/feed/",
+      "website_url": "https://blog.huawei.com/",
+      "description": "Huawei is dedicated to innovating around the needs of our customers, continuously pushing the boundaries of ICT. We are connecting systems, businesses, cities, societies and people around the globe; improving efficiencies, transforming industries and ultimately creating better experiences for everyone.",
+      "followers": {
+        "facebook": 31500000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4910329.jpg?t=1620047779"
+    }
+  ]
+}

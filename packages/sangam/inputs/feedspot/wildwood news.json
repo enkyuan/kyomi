@@ -1,0 +1,18 @@
+{
+  "category": "Wildwood News",
+  "source_url": "https://rss.feedspot.com/wildwood_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Wildwood, MO",
+      "feed_url": "https://www.cityofwildwood.com/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofwildwood.com/CivicAlerts.aspx",
+      "description": "Get the latest news, events and alerts in Wildwood, MO.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 2000,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5157766.jpg?t=1590996062"
+    }
+  ]
+}

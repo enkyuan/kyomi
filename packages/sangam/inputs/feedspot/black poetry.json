@@ -1,0 +1,47 @@
+{
+  "category": "Black Poetry",
+  "source_url": "https://rss.feedspot.com/black_poetry_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cultural Front \u00bb Poetry",
+      "feed_url": "https://www.culturalfront.org/feeds/posts/default?alt=rss",
+      "website_url": "https://www.culturalfront.org/p/poetry.html",
+      "description": "This section of our blog shares African American poetries. Hi, I'm Howard Rambsy II. This blog serves as a venue for extended conversations about African American literature and artistic culture. Cultural Front provides you with opportunities to exchange ideas about the convergence of literary art, technology, cultural production, and active citizenship.",
+      "followers": {
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5422334.jpg?t=1658124269"
+    },
+    {
+      "title": "The New Black Bart Poetry Society \u00bb Poetry Blog",
+      "feed_url": "https://thenewblackbartpoetrysociety.wordpress.com/tag/poetry-blogs/feed/",
+      "website_url": "https://thenewblackbartpoetrysociety.wordpress.com/tag/poetry-blogs/",
+      "description": "This section of our blog shares poetry that is related to Black people. The New Black Bart Poetry Society will entertain most any presentation on the art of poetry, its past, its present, and its future. Explications, delineations, categorizations, taxonomies, and various sundry groupings of poets and their work are of vital interest to the Society membership.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5422336.jpg?t=1658122097"
+    },
+    {
+      "title": "uHlanga",
+      "feed_url": "http://uhlangapress.co.za/blog?format=RSS",
+      "website_url": "http://uhlangapress.co.za/",
+      "description": "uHlanga focuses on publishing single-author collections. We also publish a small number of edited anthologies and chapbooks. uHlanga was founded in 2014 as a magazine of poetry from KwaZulu-Natal. Our books have won most major South African and African poetry awards, including three Ingrid Jonker Prizes for Poetry in English, and more.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 501,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4963519.jpg?t=1621846686"
+    },
+    {
+      "title": "Tweetspeak \u00bb Black-Poets",
+      "feed_url": "https://www.tweetspeakpoetry.com/category/black-poets/feed/",
+      "website_url": "https://www.tweetspeakpoetry.com/category/black-poets/",
+      "description": "In this section of our blog, you can discover the beautiful work of black poets from the past and present. Countee Cullen, Lucille Clifton, Ashley M. Jones, Major Jackson, Edward Holmes, and more. At Tweetspeak Poetry, we are committed to nurturing totally fun literary citizens and, in so doing, to help people become who they are. We believe in the power of community reading, writing, playing, and just plain living, to accomplish this.",
+      "followers": {
+        "facebook": 6400,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5422341.jpg?t=1658125863"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "category": "Denmark Movie",
+  "source_url": "https://rss.feedspot.com/denmark_movie_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lars Skree Blog",
+      "feed_url": "https://www.larsskree.com/feed/",
+      "website_url": "https://www.larsskree.com/blog/",
+      "description": "Lars Skree graduated as Director of Photography from the National Film School of Denmark in 1997. He has filmed a number of feature and documentary films.",
+      "followers": {
+        "twitter": 183,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5351688.jpg?t=1638991230"
+    },
+    {
+      "title": "Sephira \u00bb Film & TV",
+      "feed_url": "https://www.sephira.dk/category/film-and-tv/feed/",
+      "website_url": "https://www.sephira.dk/category/film-and-tv/",
+      "description": "Hello there I'm Leah (Sephira), My blog has been my little world of rambles and mumbles since 2009. My little piece of the world is filled with personal thoughts, movie reviews, beauty reviews, life updates, and photographs.",
+      "followers": {
+        "facebook": 132,
+        "twitter": 129,
+        "instagram": 731
+      },
+      "image_url": "https://i1.feedspot.com/5351691.jpg?t=1638991469"
+    },
+    {
+      "title": "MineHubs Studios Blog",
+      "feed_url": "https://minehubsstudios.com/blog/",
+      "website_url": "https://minehubsstudios.com/blog/",
+      "description": "MineHubs Studios is an entertainment company located in the heart of Copenhagen. MineHubs Studios was founded in the fall of 2019, and is created by young upcoming film and video creators from Denmark. We all share the big passion for creating entertainment, storytelling and video production.",
+      "followers": {
+        "facebook": 217,
+        "instagram": 156
+      },
+      "image_url": "https://i1.feedspot.com/5351690.jpg?t=1638990703"
+    }
+  ]
+}

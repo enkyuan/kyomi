@@ -1,0 +1,293 @@
+{
+  "category": "Space News",
+  "source_url": "https://rss.feedspot.com/space_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Space.com",
+      "feed_url": "https://www.space.com/feeds.xml",
+      "website_url": "https://www.space.com/",
+      "description": "Space.com is the news coverage and conversation about space science, astronomy, and exploration. Get the latest space exploration, innovation, and astronomy news. It celebrates humanity's ongoing expansion across the final frontier.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 1600000,
+        "instagram": 147700
+      },
+      "image_url": "https://i1.feedspot.com/4707531.jpg?t=1609308890"
+    },
+    {
+      "title": "Space News",
+      "feed_url": "https://spacenews.com/feed/",
+      "website_url": "https://spacenews.com/",
+      "description": "Established in 1989, SpaceNews is the most trusted and comprehensive source of news and analysis of the companies, agencies, technologies and trends shaping the global space industry. Space professionals rely on our experienced reporters to deliver timely, accurate and engaging coverage of civil, military and commercial space programs.",
+      "followers": {
+        "facebook": 24500,
+        "twitter": 134400
+      },
+      "image_url": "https://i1.feedspot.com/4360956.jpg?t=1616135739"
+    },
+    {
+      "title": "Astronomy Magazine",
+      "feed_url": "https://www.astronomy.com/feed/",
+      "website_url": "https://www.astronomy.com/",
+      "description": "Astronomy.com is for anyone who wants to learn more about astronomy and space, including planets, galaxies, asteroids, and NASA.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 264800,
+        "instagram": 31800
+      },
+      "image_url": "https://i1.feedspot.com/1390890.jpg?t=1753867622"
+    },
+    {
+      "title": "Spaceflight Now",
+      "feed_url": "https://spaceflightnow.com/feed/",
+      "website_url": "https://spaceflightnow.com/",
+      "description": "Spaceflight Now is a popular online publication that focuses on providing up-to-date news and information related to space exploration, satellite launches, rocket launches, and other space-related activities.",
+      "followers": {
+        "facebook": 143000,
+        "twitter": 494000
+      },
+      "image_url": "https://i1.feedspot.com/4624932.jpg?t=1616135700"
+    },
+    {
+      "title": "Astronomy Now Magazine",
+      "feed_url": "https://astronomynow.com/feed/",
+      "website_url": "https://astronomynow.com/",
+      "description": "Astronomy Now is the UK's biggest astronomy magazine. For over 25 years Astronomy Now magazine has provided a monthly source of information for amateur and professional astronomers alike. A wide range of feature articles cover subjects such as observing, cosmology, the history of astronomy and space science.",
+      "followers": {
+        "facebook": 532000,
+        "twitter": 116800
+      },
+      "image_url": "https://i1.feedspot.com/4624223.jpg?t=1616135705"
+    },
+    {
+      "title": "SpaceQ",
+      "feed_url": "https://spaceq.ca/feed/",
+      "website_url": "https://spaceq.ca/",
+      "description": "SpaceQ is an independent online news service reporting real news related to the Canadian and international space sectors.",
+      "followers": {
+        "facebook": 22500
+      },
+      "image_url": "https://i1.feedspot.com/4625430.jpg?t=1616136038"
+    },
+    {
+      "title": "SpaceDaily",
+      "feed_url": "https://www.spacedaily.com/spacedaily.xml",
+      "website_url": "https://www.spacedaily.com/",
+      "description": "Space News from across the world and distant stars and planets.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/108902.jpg?t=1616136172"
+    },
+    {
+      "title": "sciencenews.org \u00bb Space",
+      "feed_url": "https://www.sciencenews.org/topic/space/feed",
+      "website_url": "https://www.sciencenews.org/topic/space",
+      "description": "The Science News 'Space' section provides in-depth coverage of the latest discoveries and research in astronomy, planetary science, and cosmology. Articles discuss recent space missions, celestial phenomena, and theoretical advancements. This section keeps readers informed about the universe beyond Earth, featuring updates on solar activity, lunar exploration, and potential life on other planets.",
+      "followers": {
+        "facebook": 2600000,
+        "twitter": 5300000,
+        "instagram": 102400
+      },
+      "image_url": "https://i1.feedspot.com/7326975.jpg?t=1746525858"
+    },
+    {
+      "title": "CBS News \u00bb Space",
+      "feed_url": "https://www.cbsnews.com/latest/rss/space",
+      "website_url": "https://www.cbsnews.com/space/",
+      "description": "The CBS News 'Space' section covers a wide array of space-related topics, focusing on recent developments in space exploration, astronaut missions, and technological advancements. It features news about NASA activities, SpaceX launches, international space missions, and significant scientific discoveries related to space. The section provides readers with detailed reports, analysis, and updates on the latest events in the space industry.",
+      "followers": {
+        "facebook": 10100000,
+        "twitter": 9000000,
+        "instagram": 2600000
+      },
+      "image_url": "https://i1.feedspot.com/7326974.jpg?t=1762949712"
+    },
+    {
+      "title": "Phys.org",
+      "feed_url": "https://phys.org/rss-feed/",
+      "website_url": "https://phys.org",
+      "description": "Daily science news on research developments, technological breakthroughs and the latest scientific innovations.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4558430.jpg?t=1753681706"
+    },
+    {
+      "title": "European Space Agency",
+      "feed_url": "https://www.esa.int/rssfeed/TopNews",
+      "website_url": "https://www.esa.int/Newsroom",
+      "description": "The European Space Agency portal features the latest news in space exploration, human spaceflight, launchers, telecommunications, navigation, monitoring and space science.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1800000,
+        "instagram": 3100000
+      },
+      "image_url": "https://i1.feedspot.com/709383.jpg?t=1616135672"
+    },
+    {
+      "title": "EarthSky",
+      "feed_url": "https://earthsky.org/feed/",
+      "website_url": "https://earthsky.org/",
+      "description": "Based in Austin, TX, the EarthSky team has a blast bringing you daily updates on Earth, Space, Science news, great photos,and sky alerts.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 832300,
+        "instagram": 118900
+      },
+      "image_url": "https://i1.feedspot.com/79933.jpg?t=1513776319"
+    },
+    {
+      "title": "Space Foundation",
+      "feed_url": "https://www.spacefoundation.org/feed/",
+      "website_url": "https://www.spacefoundation.org/news/",
+      "description": "The preeminent resource for space education, a trusted source of space information, and a provider of exceptional forums for the exchange of ideas.Also find space news on this site.",
+      "followers": {
+        "facebook": 26600,
+        "twitter": 26300,
+        "instagram": 43000
+      },
+      "image_url": "https://i1.feedspot.com/4803411.jpg?t=1513935421"
+    },
+    {
+      "title": "AmericaSpace",
+      "feed_url": "https://www.americaspace.com/feed/",
+      "website_url": "https://www.americaspace.com/",
+      "description": "America Space is a spaceflight news media which delivers the latest news, in-depth reporting, live launch coverage, weekend history articles, interviews with industry experts and great images on a daily basis.",
+      "followers": {
+        "facebook": 21600,
+        "twitter": 13100
+      },
+      "image_url": "https://i1.feedspot.com/3954233.jpg?t=1626519017"
+    },
+    {
+      "title": "The Space Review",
+      "feed_url": "https://www.thespacereview.com/articles.xml",
+      "website_url": "https://www.thespacereview.com/",
+      "description": "Find latest news on space and astronomy.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/325974.jpg?t=1513860574"
+    },
+    {
+      "title": "Universe Today",
+      "feed_url": "https://www.universetoday.com/feed/",
+      "website_url": "https://www.universetoday.com/",
+      "description": "Find latest Space and astronomy news on this site.",
+      "followers": {
+        "facebook": 126100,
+        "twitter": 300400,
+        "instagram": 174100
+      },
+      "image_url": "https://i1.feedspot.com/4803364.jpg?t=1706162809"
+    },
+    {
+      "title": "NASA Watch",
+      "feed_url": "https://nasawatch.com/feed/",
+      "website_url": "https://nasawatch.com/",
+      "description": "NASA Watch is focused on the space sector that is a pioneer in news aggregation it also creates original content in the form of timely news stories, coverage of ongoing events and unique editorial content.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 112700
+      },
+      "image_url": "https://i1.feedspot.com/92047.jpg?t=1609308900"
+    },
+    {
+      "title": "Mars Daily",
+      "feed_url": "https://www.marsdaily.com/marsdaily.xml",
+      "website_url": "https://www.marsdaily.com/",
+      "description": "Find latest news related to mars on this site.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/192457.jpg?t=1758024040"
+    },
+    {
+      "title": "Sky & Telescope \u00bb Astronomy",
+      "feed_url": "https://skyandtelescope.org/astronomy-news/feed/",
+      "website_url": "https://skyandtelescope.org/astronomy-news/",
+      "description": "Keep up to date with the latest astronomy news and observing tips. For astronomy enthusiasts, Sky & Telescope articles is your source celestial events.",
+      "followers": {
+        "facebook": 606500,
+        "twitter": 127000,
+        "instagram": 24300
+      },
+      "image_url": "https://i1.feedspot.com/4804307.jpg?t=1706163358"
+    },
+    {
+      "title": "Satelit.web.id",
+      "feed_url": "https://feeds.feedburner.com/satelit",
+      "website_url": "https://satelit.web.id/",
+      "description": "Satelit.web.id collects and archives freely available satellite-related news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4804133.jpg?t=1706158101"
+    },
+    {
+      "title": "SpaceRef",
+      "feed_url": "https://spaceref.com/feed/",
+      "website_url": "https://spaceref.com/",
+      "description": "Founded in 1999, SpaceRef is a new media company focused on the space sector and based out of Reston, Virginia. SpaceRef is a pioneer in news aggregation but also creates original content in the form of timely news stories, coverage of ongoing events and unique editorial content.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 46700
+      },
+      "image_url": "https://i1.feedspot.com/1457.jpg?t=1616135991"
+    },
+    {
+      "title": "Spacetoday.net",
+      "feed_url": "https://spacetoday.net/summaries.rdf",
+      "website_url": "https://www.spacetoday.net/",
+      "description": "Space news summaries and links to space news articles published throughout the web, updated daily.",
+      "followers": {
+        "twitter": 940
+      },
+      "image_url": "https://i1.feedspot.com/1816222.jpg"
+    },
+    {
+      "title": "Irish Space Blog",
+      "feed_url": "http://irishspaceblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://irishspaceblog.blogspot.com/",
+      "description": "Irish Space Blog features news about Space Exploration and Astronomy. Bringing you the latest news from around the universe!",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4624418.jpg?t=1616136376"
+    },
+    {
+      "title": "NASA",
+      "feed_url": "https://www.nasa.gov/rss/dyn/breaking_news.rss",
+      "website_url": "https://www.nasa.gov/news/",
+      "description": "NASA.gov brings you the latest news, images and videos from America's space agency, pioneering the future in space exploration, scientific discovery and aeronautics research.",
+      "followers": {
+        "facebook": 26900000,
+        "twitter": 88100000,
+        "instagram": 96800000
+      },
+      "image_url": "https://i1.feedspot.com/4604403.jpg?t=1706160907"
+    },
+    {
+      "title": "NASA Science \u00bb Hubble",
+      "feed_url": "https://science.nasa.gov/feed/",
+      "website_url": "https://science.nasa.gov/mission/hubble/hubble-news/",
+      "description": "Find latest space news on this site.",
+      "followers": {
+        "facebook": 646300,
+        "twitter": 413300,
+        "instagram": 109900
+      },
+      "image_url": "https://i1.feedspot.com/4677669.jpg?t=1706166066"
+    },
+    {
+      "title": "Rocket Lab",
+      "feed_url": "https://www.rocketlabusa.com/updates/",
+      "website_url": "https://www.rocketlabusa.com/updates/",
+      "description": "Keep up with the latest news related to space from Rocket Lab.",
+      "followers": {
+        "facebook": 106300,
+        "twitter": 579800
+      },
+      "image_url": "https://i1.feedspot.com/4804630.jpg?t=1706158399"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "category": "Fashion Technology",
+  "source_url": "https://rss.feedspot.com/fashion_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Glossy",
+      "feed_url": "https://www.glossy.co/feed/",
+      "website_url": "https://www.glossy.co/",
+      "description": "Glossy is a publication from Digiday Media that covers how technology is modernizing the fashion and luxury industries. The evolution of fashion and beauty through the lens of digital and technology.",
+      "followers": {
+        "facebook": 14300,
+        "twitter": 10200,
+        "instagram": 53600
+      },
+      "image_url": "https://i1.feedspot.com/4865438.jpg?t=1612182433"
+    },
+    {
+      "title": "Techpacker Blog",
+      "feed_url": "https://techpacker.com/blog/rss/",
+      "website_url": "https://techpacker.com/blog/",
+      "description": "Thought-provoking content to encourage better product development processes between designers and manufacturers. Techpacker is a product development and production management application for modern fashion brands.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 793,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5298108.jpg?t=1625136477"
+    },
+    {
+      "title": "Fashill Blog",
+      "feed_url": "https://www.fashill.com/blog-feed.xml",
+      "website_url": "https://www.fashill.com/blog",
+      "description": "Fashill brings you fundamental optimized guidelines, templates, and resources for fashion designers to bridge the gap of fashion tech and drive innovation in the fashion industry.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5134082.jpg?t=1612182743"
+    },
+    {
+      "title": "Alley girl \u00bb Technology",
+      "feed_url": "https://alleygirl.com/technology/feed/",
+      "website_url": "https://alleygirl.com/technology/",
+      "description": "Alley Girl, fashion technology and New York lifestyle blog. Alleygirl.com is the ultimate guide for Silicon Alley's fashion technology atmosphere's latest news.",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 1500,
+        "instagram": 73000
+      },
+      "image_url": "https://i1.feedspot.com/4865612.jpg?t=1612182424"
+    },
+    {
+      "title": "Virtual Fashion Technology",
+      "feed_url": "https://fashiontech.wordpress.com/feed/",
+      "website_url": "https://fashiontech.wordpress.com/",
+      "description": "I established this blog to document the transition and expansion from 2D traditional to 2D Digital to 3D virtual for apparel textile product design, development and retailing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4865652.jpg?t=1612182533"
+    },
+    {
+      "title": "Luxor Finch Blog",
+      "feed_url": "https://www.luxorandfinch.com/lfblog?format=RSS",
+      "website_url": "https://www.luxorandfinch.com/lfblog/",
+      "description": "Luxor & Finch provides business and technology consulting services for retailers. Luxor & Finch champions the new era of retail innovation by redefining the relationship between the human body, retail, and technology. This Fashion tech blog dedicated to fit technology, retail technology, bespoke and all things related.",
+      "followers": {
+        "facebook": 311,
+        "twitter": 240
+      },
+      "image_url": "https://i1.feedspot.com/4865643.jpg?t=1612182768"
+    },
+    {
+      "title": "3DLOOK",
+      "feed_url": "https://3dlook.me/feed/",
+      "website_url": "https://3dlook.ai/content-hub/",
+      "description": "Latest news, insightful whitepapers, and blog posts about fit & sizing body scanning technology, and sustainable fashion e-commerce. 3DLOOK provides AI-first mobile body measuring and fit solutions.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 440,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5298105.jpg?t=1625135810"
+    }
+  ]
+}

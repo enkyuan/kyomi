@@ -1,0 +1,17 @@
+{
+  "category": "Laredo News",
+  "source_url": "https://rss.feedspot.com/laredo_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Laredo Morning Times",
+      "feed_url": "https://www.lmtonline.com/default/feed/news-rss-1512.php",
+      "website_url": "https://www.lmtonline.com/",
+      "description": "Laredo Morning Times delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 169000,
+        "twitter": 16000
+      },
+      "image_url": "https://i1.feedspot.com/5136567.jpg?t=1603888852"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "category": "Iran Technology",
+  "source_url": "https://rss.feedspot.com/iran_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "mobile.ir",
+      "feed_url": "https://www.mobile.ir/news/rss.aspx",
+      "website_url": "https://www.mobile.ir/news/index.aspx",
+      "description": "Mobile Iran Reference (mobile.ir) is an independent website in the field of mobile. The purpose of this website is to create a comprehensive information platform and provide various services in the field of mobile phones to users and mobile enthusiasts as well as business activists in this field.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/735002.jpg?t=1638187986"
+    },
+    {
+      "title": "Zoomit",
+      "feed_url": "https://www.zoomit.ir/feed/",
+      "website_url": "https://www.zoomit.ir/tech/",
+      "description": "Founded on September 27, 1989, Zoomit, now has become a source of technology news, shopping guide articles, product reviews and analytical articles. Zomit is the most trusted media for technology events, gadget reviews and coverage of domestic and foreign exhibitions for Iranian users.",
+      "followers": {
+        "twitter": 55900,
+        "instagram": 949800
+      },
+      "image_url": "https://i1.feedspot.com/5054675.jpg?t=1637846267"
+    },
+    {
+      "title": "Tarfandestan",
+      "feed_url": "https://www.tarfandestan.com/rss",
+      "website_url": "https://www.tarfandestan.com/",
+      "description": "Windows 10 trick references, Android tricks, Telegram tricks, Instagram tricks, game tricks, and more!",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 64,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/5003149.jpg?t=1637847560"
+    },
+    {
+      "title": "Iran News Daily \u00bb Technology",
+      "feed_url": "https://irannewsdaily.com/category/technology/feed/",
+      "website_url": "https://irannewsdaily.com/category/technology/",
+      "description": "Latest news and headlines from the technology field. Since it hit newsstands in October 1994, Iran News Daily has kept its standing as the only private-run English-language paper in the Iranian capital.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5347141.jpg?t=1638261925"
+    }
+  ]
+}

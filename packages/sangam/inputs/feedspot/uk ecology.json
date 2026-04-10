@@ -1,0 +1,70 @@
+{
+  "category": "UK Ecology",
+  "source_url": "https://rss.feedspot.com/uk_ecology_rss_feeds",
+  "feeds": [
+    {
+      "title": "British Ecological Society",
+      "feed_url": "https://www.britishecologicalsociety.org/content-type/news-and-opinion/feed/",
+      "website_url": "https://www.britishecologicalsociety.org/content-type/news-and-opinion/",
+      "description": "We are the British Ecological Society: the oldest ecological society in the world. A world inspired, informed and influenced by #ecology. We generate, communicate and promote ecological knowledge and solutions.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 42800,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4916310.jpg?t=1620385090"
+    },
+    {
+      "title": "The Applied Ecologist's blog",
+      "feed_url": "https://appliedecologistsblog.com/feed/",
+      "website_url": "https://appliedecologistsblog.com/",
+      "description": "Bridging the gap between researchers, and practitioners, and policymakers. As the official blog for Journal of Applied Ecology, this is a place for authors to promote their research through written posts, podcasts, videos and images.",
+      "followers": {
+        "facebook": 26800,
+        "twitter": 34200
+      },
+      "image_url": "https://i1.feedspot.com/4593808.jpg?t=1613555229"
+    },
+    {
+      "title": "Naturally Speaking Blog",
+      "feed_url": "https://naturallyspeaking.blog/feed/",
+      "website_url": "https://naturallyspeaking.blog/",
+      "description": "Cutting edge research and ecology banter from the Institute of Biodiversity, Animal Health & Comparative Medicine",
+      "followers": {
+        "facebook": 383,
+        "twitter": 768
+      },
+      "image_url": "https://i1.feedspot.com/4593856.jpg?t=1613556005"
+    },
+    {
+      "title": "The Ecologist",
+      "feed_url": "https://theecologist.org/highlights/feed",
+      "website_url": "https://theecologist.org/",
+      "description": "The Ecologist provides a mix of in-depth analysis and practical campaigns that appeal to a global community of individuals who are committed to social and environmental change. Since it was founded in 1970 the Ecologist has helped set environmental and political agendas around the world by focusing on the root causes, not just the after-effects, of current events.",
+      "followers": {
+        "facebook": 236600,
+        "twitter": 138400
+      },
+      "image_url": "https://i1.feedspot.com/4916318.jpg?t=1620385085"
+    },
+    {
+      "title": "The Centre for Ecology & Hydrology",
+      "feed_url": "https://www.ceh.ac.uk/rss",
+      "website_url": "https://www.ceh.ac.uk/news-and-media/blogs",
+      "description": "Ecology, hydrology and environmental science updates from the Centre for Ecology & Hydrology (UK). New research, publications, events and more.",
+      "followers": {
+        "facebook": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4593836.jpg?t=1613555960"
+    },
+    {
+      "title": "Jeff Clarke Ecology",
+      "feed_url": "http://www.jeffclarkeecology.co.uk/blog/latest?format=feed&type=rss",
+      "description": "WELCOME TO MY WEBSITE! I have a passion for the natural world and I love sharing that enthusiasm with as many people as possible. As an environmental educator with 26 years of experience I can bring innovation, inspiration and fun to lessons",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4593874.jpg?t=1613555512"
+    }
+  ]
+}

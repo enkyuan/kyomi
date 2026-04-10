@@ -1,0 +1,89 @@
+{
+  "category": "Text Analytics",
+  "source_url": "https://rss.feedspot.com/text_analytics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Provalis Research Blog",
+      "feed_url": "https://provalisresearch.com/feed/",
+      "website_url": "https://provalisresearch.com/blog/",
+      "description": "In this blog, we will be sharing news and tips on our software and the industry, new applications for research and business for text analytics.",
+      "followers": {
+        "facebook": 908,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4899134.jpg?t=1612770263"
+    },
+    {
+      "title": "Keatext Blog",
+      "feed_url": "https://www.keatext.ai/en/blog/feed/",
+      "website_url": "https://www.keatext.ai/en/blog/",
+      "description": "Keatext is a text analytics and reporting app that transforms your unstructured customer feedback analysis into actionable insights.Get information about customer experience insights, news and thoughts on how text analytics can help businesses enhance the customer experience.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4899218.jpg?t=1612770336"
+    },
+    {
+      "title": "On GATE, Text and Social Media Analysis, and Detecting Misinformation Online",
+      "feed_url": "https://gate4ugc.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://gate4ugc.blogspot.com/",
+      "description": "Posts about our text and social media analysis work and latest news on GATE (http://gate.ac.uk) - our open source text and social media analysis platform. Also find posts about the PHEME project (http://pheme.eu) and our work on automatic detection of rumours in social media.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4899171.jpg?t=1612770420"
+    },
+    {
+      "title": "Rosette Text Analytics",
+      "feed_url": "https://www.rosette.com/feed/",
+      "website_url": "https://www.babelstreet.com/resources/blog?category=text-analytics",
+      "description": "Rosette brings the power of AI to text analysis components within search, business intelligence, e-discovery, social media, financial compliance, and enterprises.",
+      "followers": {
+        "twitter": 198
+      },
+      "image_url": "https://i1.feedspot.com/4899066.jpg?t=1612770272"
+    },
+    {
+      "title": "Lexalytics",
+      "feed_url": "https://www.lexalytics.com/blog/",
+      "website_url": "https://www.lexalytics.com/blog/category/text-analytics/",
+      "description": "We are the industry leader in translating text into profitable decisions; we make state-of-the-art cloud and on-prem text and sentiment analysis technologies that transform customers' thoughts and conversations into actionable insights.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/4899117.jpg?t=1612770292"
+    },
+    {
+      "title": "SearchBlox Blog",
+      "feed_url": "https://www.searchblox.com/blog/feed/",
+      "website_url": "https://www.searchblox.com/blog",
+      "description": "SearchBlox is an enterprise search, sentiment analysis and text analytics platform for websites, intranets, file folders, databases and social content. Follow our blog to learn more about enterprise search, sentiment analysis and text analytics use cases for your organization.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4899169.jpg?t=1612770307"
+    },
+    {
+      "title": "National Centre for Text Mining \u2014 Text Mining Tools and Text Mining Services",
+      "feed_url": "https://www.nactem.ac.uk/rss_featured.php",
+      "website_url": "https://www.nactem.ac.uk/news.php",
+      "description": "Find information about news and events of text mining tools and services from NaCTeM.",
+      "followers": {
+        "twitter": 375
+      },
+      "image_url": "https://i1.feedspot.com/4899527.jpg?t=1612770485"
+    },
+    {
+      "title": "Linguamatics Blog",
+      "feed_url": "https://www.linguamatics.com/blog/rss-feed",
+      "website_url": "https://www.linguamatics.com/blog",
+      "description": "Linguamatics provides a high performance Natural Language Processing (NLP)-based text mining software that rapidly reveals high quality, structured facts and relationships from text. It helps to extract insights and connections from unstructured text and big data for key decision-making.",
+      "followers": {
+        "facebook": 243,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4899206.jpg?t=1612770333"
+    }
+  ]
+}

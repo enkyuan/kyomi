@@ -1,0 +1,104 @@
+{
+  "category": "UK Ecommerce",
+  "source_url": "https://rss.feedspot.com/uk_ecommerce_rss_feeds",
+  "feeds": [
+    {
+      "title": "Trusted Shops | E-Commerce Blog",
+      "feed_url": "https://business.trustedshops.com/blog/rss.xml",
+      "website_url": "https://business.trustedshops.com/blog",
+      "description": "Our blog is dedicated to e-commerce news. Use our tips about legislation, conversion and online marketing to improve your online shopping experience.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4907655.jpg"
+    },
+    {
+      "title": "ThoughtShift",
+      "feed_url": "https://www.thoughtshift.co.uk/feed/",
+      "website_url": "https://www.thoughtshift.co.uk/",
+      "description": "ThoughtShift is a digital marketing agency specialising in eCommerce sales and online lead generation.",
+      "followers": {
+        "facebook": 226,
+        "twitter": 1300,
+        "instagram": 124
+      },
+      "image_url": "https://i1.feedspot.com/4907659.jpg"
+    },
+    {
+      "title": "Ecommerce-Platforms.com Blog",
+      "feed_url": "https://ecommerce-platforms.com/feed",
+      "website_url": "https://ecommerce-platforms.com/blog",
+      "description": "Ecommerce Platforms is an unbiased review site that shows the good, great, bad, and ugly of online store building and ecommerce shopping cart software.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 11900
+      },
+      "image_url": "https://i1.feedspot.com/4419583.jpg?t=1613996547"
+    },
+    {
+      "title": "Bluepark's eCommerce Blog",
+      "feed_url": "https://www.bluepark.co.uk/rss.xml",
+      "website_url": "https://www.bluepark.co.uk/blog/",
+      "description": "Bluepark's ecommerce software, hosted on fast and reliable UK servers, provides comprehensive online shop solutions for both startups and professionals. Our blog features regular posts regarding our latest news, software tutorials, and our best practice ecommerce advice.",
+      "followers": {
+        "facebook": 293,
+        "twitter": 577,
+        "instagram": 399
+      },
+      "image_url": "https://i1.feedspot.com/4907654.jpg?t=1613996559"
+    },
+    {
+      "title": "We Are Superb",
+      "feed_url": "https://wearesuperb.com/news/feed/",
+      "website_url": "https://wearesuperb.com/news/",
+      "description": "We're Superb, a Magento Commerce Agency. We provide bespoke Magento Open Source & Enterprise Solutions, Magento Development, PIM, ERP and technical integrations, performance optimisation & custom application development.",
+      "followers": {
+        "facebook": 989,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4988958.jpg?t=1613996572"
+    },
+    {
+      "title": "Littledata | Ecommerce",
+      "feed_url": "https://blog.littledata.io/category/ecommerce/feed/",
+      "website_url": "https://blog.littledata.io/category/ecommerce/",
+      "description": "Littledata is a Popular blog about Google Analytics updates and how to set up accurate ecommerce tagging and tracking, including Facebook marketing and user behaviour.",
+      "followers": {
+        "facebook": 760,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4626262.jpg?t=1613996586"
+    },
+    {
+      "title": "Confer With",
+      "feed_url": "https://conferwith.io/feed/",
+      "website_url": "https://conferwith.io/video-shopping-knowledge-base/",
+      "description": "Livestream Shopping is a new way to shop - it's the bridge between retail and online. Here we explore how in-store video streamed live to shoppers can be used to help shoppers find what they need better and retailers to be more effective for their customers.",
+      "followers": {
+        "twitter": 59
+      },
+      "image_url": "https://i1.feedspot.com/5235252.jpg?t=1610430975"
+    },
+    {
+      "title": "ChannelX \u00bb Ecommerce",
+      "feed_url": "https://channelx.world/category/ecommerce/feed/",
+      "website_url": "https://channelx.world/category/ecommerce/",
+      "description": "Tamebay is the leading provider of intelligence & news for all businesses. It provides News, views, hints and tips for ecommerce merchants.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/4626607.jpg?t=1613996555"
+    },
+    {
+      "title": "Chris Turton Ecommerce",
+      "feed_url": "https://www.christurtonecommerce.com/feed/",
+      "website_url": "https://www.christurtonecommerce.com/blog-2/",
+      "description": "Ecommerce consultant based in Shropshire, UK. A Passionate individual driven by organisation, structure and processes. I would like to define myself as a specialist in Ecommerce but I have worked with various online businesses.",
+      "followers": {
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/5027383.jpg?t=1613996581"
+    }
+  ]
+}

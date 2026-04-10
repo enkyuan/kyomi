@@ -1,0 +1,147 @@
+{
+  "category": "Slack",
+  "source_url": "https://rss.feedspot.com/slack_rss_feeds",
+  "feeds": [
+    {
+      "title": "Slack Engineering",
+      "feed_url": "https://slack.engineering/feed/",
+      "website_url": "https://slack.engineering/",
+      "description": "Read stories about collaboration, the future at Slack from Slack Engineering blog. Slack is the collaboration hub that brings the right people together with all the right information and tools to get work done.",
+      "followers": {
+        "facebook": 139200,
+        "twitter": 461300,
+        "instagram": 97400
+      },
+      "image_url": "https://i1.feedspot.com/4641015.jpg?t=1640262751"
+    },
+    {
+      "title": "TechCrunch",
+      "feed_url": "https://techcrunch.com/tag/slack/feed/",
+      "website_url": "https://techcrunch.com/tag/slack/",
+      "description": "Slack News and updates from TechCrunch. TechCrunch is a website dedicated to obsessively profiling and reviewing new Internet products and companies.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5039723.jpg?t=1621509746"
+    },
+    {
+      "title": "Mashable",
+      "feed_url": "https://in.mashable.com/slack.xml",
+      "website_url": "https://in.mashable.com/slack",
+      "description": "Articles on slack from Mashable. Mashable is a global media and entertainment company that's passionate about entertainment, culture, and tech",
+      "followers": {
+        "facebook": 8199999,
+        "twitter": 8800000,
+        "instagram": 993900
+      },
+      "image_url": "https://i1.feedspot.com/5039750.jpg?t=1621509767"
+    },
+    {
+      "title": "GeekWire",
+      "feed_url": "https://www.geekwire.com/tag/slack/feed/",
+      "website_url": "https://www.geekwire.com/tag/slack/",
+      "description": "Stories and news about Slack from GeekWire. GeekWire is a fast-growing, technology news site featuring breaking news, expert analysis, and unique insights into the technology industry",
+      "followers": {
+        "facebook": 141300,
+        "twitter": 169200,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5039729.jpg?t=1621509771"
+    },
+    {
+      "title": "Medium Blog",
+      "feed_url": "https://medium.com/feed/slack-developer-blog",
+      "website_url": "https://medium.com/slack-developer-blog",
+      "description": "Discover more about the platform, possible and recent API changes, Announcements, development stories, etc. from Slack Platform Blog.",
+      "followers": {
+        "twitter": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4383837.jpg?t=1621509752"
+    },
+    {
+      "title": "Threatpost",
+      "feed_url": "https://threatpost.com/tag/slack/feed/",
+      "website_url": "https://threatpost.com/tag/slack/",
+      "description": "Posts on Slack from Threatpost. Threatpost is an independent news site that covers IT and business security for professionals worldwide.",
+      "followers": {
+        "facebook": 21800,
+        "twitter": 225000,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5039743.jpg?t=1621509805"
+    },
+    {
+      "title": "The Register",
+      "feed_url": "https://feed.theregister.co.uk/atom?q=slack",
+      "website_url": "https://www.theregister.com/Tag/slack",
+      "description": "Articles about slack from The Register. The Register covers the issues they face at work every day in software, hardware, networking, and IT security.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 102100
+      },
+      "image_url": "https://i1.feedspot.com/5039546.jpg?t=1621509800"
+    },
+    {
+      "title": "Gizmodo",
+      "feed_url": "https://gizmodo.com/tag/slack/rss",
+      "website_url": "https://gizmodo.com/tag/slack",
+      "description": "Slack Tips, Reviews, News, and updates from Gizmodo. Gizmodo is a news and opinion website about gadgets, technology, science, environmental news, entertainment, and culture.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 2600000,
+        "instagram": 123500
+      },
+      "image_url": "https://i1.feedspot.com/5039538.jpg?t=1625562940"
+    },
+    {
+      "title": "VICE",
+      "feed_url": "https://www.vice.com/en_us/rss/topic/slack",
+      "website_url": "https://www.vice.com/en/search?q=slack",
+      "description": "Blog posts on Slack from VICE. VICE is a global media channel focusing on investigative journalism and enlightening videos about everything from world news, travel, art, drugs, politics, sports, fashion, sex, and super cute animals.",
+      "followers": {
+        "facebook": 11400000,
+        "twitter": 1900000,
+        "instagram": 5200000
+      },
+      "image_url": "https://i1.feedspot.com/5039541.jpg?t=1621509775"
+    },
+    {
+      "title": "Entrepreneur",
+      "feed_url": "https://www.entrepreneur.com/topic/slack/rss",
+      "website_url": "https://www.entrepreneur.com/topic/slack",
+      "description": "The latest news, videos, and discussions on Slack from The Entrepreneur. The Entrepreneur features Information, insights, and inspiration for entrepreneurs to start, manage and grow businesses successfully in India and globally.",
+      "followers": {
+        "facebook": 517799,
+        "twitter": 33200,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/5039724.jpg?t=1621509783"
+    },
+    {
+      "title": "Android Police",
+      "feed_url": "https://www.androidpolice.com/tags/slack/feed/",
+      "website_url": "https://www.uctoday.com/?s=Slack",
+      "description": "Slack news and updates from Android Police. Android Police is your source for the latest Android news, application and game reviews, and upcoming phones.",
+      "followers": {
+        "facebook": 197700,
+        "twitter": 701300,
+        "instagram": 15200
+      },
+      "image_url": "https://i1.feedspot.com/5039764.jpg?t=1621509792"
+    },
+    {
+      "title": "UC Today",
+      "feed_url": "https://www.uctoday.com/brands/slack/feed/",
+      "website_url": "https://www.uctoday.com/?s=Slack",
+      "description": "Latest Slack news, stories, reviews, and market analysis from UC Today. UC Today is the leading online publication for Unified Communications and Collaboration technology.",
+      "followers": {
+        "facebook": 548,
+        "twitter": 17200,
+        "instagram": 74
+      },
+      "image_url": "https://i1.feedspot.com/5039763.jpg?t=1621509809"
+    }
+  ]
+}

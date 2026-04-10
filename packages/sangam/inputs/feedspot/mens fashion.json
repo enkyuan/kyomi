@@ -1,0 +1,912 @@
+{
+  "category": "Mens Fashion",
+  "source_url": "https://rss.feedspot.com/mens_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "GQ",
+      "feed_url": "https://www.gq.com/feed/rss",
+      "website_url": "https://www.gq.com/",
+      "description": "Articles on men's style, grooming, fitness, best products, travel destinations and more. Find politics, sports and entertainment news. GQ is the most influential men's magazine in the world, reaching out to the world in 21 editions.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 1300000,
+        "instagram": 7000000
+      },
+      "image_url": "https://i1.feedspot.com/4922716.jpg?t=1745316102"
+    },
+    {
+      "title": "Valet",
+      "feed_url": "https://www.valetmag.com/distribution/rss_all.xml",
+      "website_url": "https://valetmag.com/",
+      "description": "Delivers daily news on style, grooming, health, fitness, living and culture. Valet. is an independently-published lifestyle website for the 21st-century gentleman.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 19300,
+        "instagram": 32200
+      },
+      "image_url": "https://i1.feedspot.com/28118.jpg?t=1601734273"
+    },
+    {
+      "title": "Men Style Fashion",
+      "feed_url": "https://menstylefashion.com/feed/",
+      "website_url": "https://menstylefashion.com/",
+      "description": "Articles on style tips, travel destinations, beauty, fashion, wellness, lifestyle hotel & restaurant reviews, car news and gadgets. Men Style Fashion is UK's leading online fashion magazine for Men",
+      "followers": {
+        "facebook": 620500,
+        "twitter": 193300,
+        "instagram": 31300
+      },
+      "image_url": "https://i1.feedspot.com/1051203.jpg?t=1605103468"
+    },
+    {
+      "title": "DMARGE",
+      "feed_url": "https://www.dmarge.com/feed",
+      "website_url": "https://www.dmarge.com/style",
+      "description": "DMARGE is an online platform founded in 2011 by Luc Wiesman in Melbourne, Australia, designed to cater to modern men's interests across various life aspects. The publication has built a reputation for delivering breaking news and insightful content in areas such as entertainment, sport, health, watches, cars, travel, and men's fashion. With a commitment to high editorial standards, DMARGE aims to provide content that entertains and informs its audience, backed by insights from over 50 experts...",
+      "followers": {
+        "facebook": 68000,
+        "twitter": 5600,
+        "instagram": 192900
+      },
+      "image_url": "https://i1.feedspot.com/4637047.jpg?t=1605102501"
+    },
+    {
+      "title": "The Fashionisto",
+      "feed_url": "https://www.thefashionisto.com/feed/",
+      "website_url": "https://www.thefashionisto.com/",
+      "description": "Blog posts on campaigns, editorials, eyewear, lookbooks, fashion and style. The Fashionisto offers the latest fashion candy from around the globe.",
+      "followers": {
+        "facebook": 63500,
+        "twitter": 40700,
+        "instagram": 28400
+      },
+      "image_url": "https://i1.feedspot.com/4637843.jpg?t=1601734189"
+    },
+    {
+      "title": "Gentleman's Gazette",
+      "feed_url": "https://www.gentlemansgazette.com/feed/",
+      "website_url": "https://www.gentlemansgazette.com/archive/",
+      "description": "The Gentleman's Gazette aims to entertain the elegant gentleman with interesting articles and pictures on a regular basis. The Gentleman's Gazette is an award winning online magazine for classic men's clothing, accessories & Style.",
+      "followers": {
+        "facebook": 347600,
+        "twitter": 24200,
+        "instagram": 211300
+      },
+      "image_url": "https://i1.feedspot.com/4638232.jpg?t=1605102486"
+    },
+    {
+      "title": "The Second Button",
+      "feed_url": "https://thesecondbutton.com/rss/",
+      "website_url": "https://thesecondbutton.com/",
+      "description": "The Second Button a men's style blog here to help you see what menswear enthusiasts love about clothing. I share guides, inspiration, deeper articles, and reviews all to help you explore and connect with a style that's personal to you.",
+      "followers": {
+        "instagram": 113200
+      },
+      "image_url": "https://i1.feedspot.com/5553193.jpg?t=1682679143"
+    },
+    {
+      "title": "Ape To Gentleman",
+      "feed_url": "https://www.apetogentleman.com/feed/",
+      "website_url": "https://www.apetogentleman.com/",
+      "description": "Covers topics on style, grooming, hair, lifestyle, and watches. Ape to Gentleman Magazine helps modern man continue his evolution through a focus on style, quality, and value. Ape to Gentleman Magazine is the online evolution of a traditional men's magazine, dedicated to timeless yet contemporary style, intelligent living, and value.",
+      "followers": {
+        "facebook": 16900,
+        "twitter": 13100,
+        "instagram": 43400
+      },
+      "image_url": "https://i1.feedspot.com/4638728.jpg?t=1669012907"
+    },
+    {
+      "title": "Michael 84",
+      "feed_url": "https://www.michael84.co.uk/feed/",
+      "website_url": "https://www.michael84.co.uk/",
+      "description": "Covers topics on travel, tech, male grooming and the latest menswear trends for stylish guys. Men's Fashion & Lifestyle Blog with style advice and tips.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 3600,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4638715.jpg?t=1601734470"
+    },
+    {
+      "title": "Mr Porter",
+      "feed_url": "https://www.mrporter.com/en-in/journal/rss",
+      "website_url": "https://www.mrporter.com/en-in/journal",
+      "description": "Blog posts on fashion, grooming, watches, travel and lifestyle. Mr Porter has established itself as the world's leading, award-winning online destination for men's style, with an unparalleled product offering from the best menswear and luxury brands.",
+      "followers": {
+        "facebook": 575900,
+        "twitter": 207000
+      },
+      "image_url": "https://i1.feedspot.com/5280623.jpg?t=1620968984"
+    },
+    {
+      "title": "FashionBeans \u00bb Men's Fashion and Style",
+      "feed_url": "https://www.fashionbeans.com/category/mens-fashion/feed/",
+      "website_url": "https://www.fashionbeans.com/category/mens-fashion/",
+      "description": "A comprehensive guide to men's fashion and style, from the latest trends and hottest pieces to building a capsule wardrobe.",
+      "followers": {
+        "facebook": 618800,
+        "twitter": 47400
+      },
+      "image_url": "https://i1.feedspot.com/5007298.jpg?t=1622201107"
+    },
+    {
+      "title": "Real Men Real Style",
+      "feed_url": "https://feeds.feedburner.com/RealMenRealStyle",
+      "website_url": "https://www.realmenrealstyle.com/",
+      "description": "Tips and advice on men's style, fashion, grooming, accessories, lifestyle and career. Real Men Real Style is a community where men freely educate themselves about timeless male style rules and fashion advice. Real Men Real Style helps you leverage the Science of Style to build unshakable confidence, attract new opportunities and earn more money.",
+      "followers": {
+        "facebook": 110700,
+        "twitter": 29700,
+        "instagram": 184800
+      },
+      "image_url": "https://i1.feedspot.com/436303.jpg?t=1605102496"
+    },
+    {
+      "title": "Dappered",
+      "feed_url": "https://dappered.com/feed/",
+      "website_url": "https://dappered.com/",
+      "description": "Articles on latest deals, essential shops, reviews and style. Dappered is for guys who value and feel most comfortable in a classic, sharp, tailored style. The mission is to provide men with a resource for finding the best and most affordable clothes, booze, and travel options on the internet.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 31600,
+        "instagram": 19200
+      },
+      "image_url": "https://i1.feedspot.com/4549340.jpg?t=1601734279"
+    },
+    {
+      "title": "The Modest Man Blog",
+      "feed_url": "https://www.themodestman.com/feed/",
+      "website_url": "https://www.themodestman.com/blog/",
+      "description": "Blog articles on clothing & style, outfit ideas, fitness, product reviews, dating & confidence and grooming The Modest Man helps men under who are below average height dress better and feel more confident by shopping at the right stores, altering clothes for a better fit, and choosing custom clothing.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 7300,
+        "instagram": 50300
+      },
+      "image_url": "https://i1.feedspot.com/4637876.jpg?t=1605156979"
+    },
+    {
+      "title": "Bespoke Unit",
+      "feed_url": "https://bespokeunit.com/feed/",
+      "website_url": "https://bespokeunit.com/",
+      "description": "Articles on suits, style, shoes, watches, grooming, hairstyles, beards, fragrances and lifestyle. Bespoke Unit is a new kind of men's lifestyle and fashion magazine focused on providing readers with the most in-depth content on the web.",
+      "followers": {
+        "facebook": 244100,
+        "twitter": 1000,
+        "instagram": 131800
+      },
+      "image_url": "https://i1.feedspot.com/4734531.jpg?t=1601734285"
+    },
+    {
+      "title": "Permanent Style",
+      "feed_url": "https://www.permanentstyle.com/feed",
+      "website_url": "https://www.permanentstyle.com/",
+      "description": "Blog posts on brand, style, fashion, clothing, accessories and more. Permanent Style is the UK authority on classic and luxury menswear. Founded by professional journalist and editor Simon Crompton, Permanent Style has been listed as one of the best men's sites in the world by GQ, Esquire, The Times, How to Spend It, The New York Times, and many others.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 8800,
+        "instagram": 207500
+      },
+      "image_url": "https://i1.feedspot.com/4512654.jpg?t=1628243110"
+    },
+    {
+      "title": "KOBI KOACHMAN",
+      "feed_url": "https://www.mrkoachman.com/feed/",
+      "website_url": "https://www.mrkoachman.com/",
+      "description": "Stay tuned for classic men's fashion tips, style advice, and lifestyle contents that will inspire you to stay classy and live like a true gentleman.",
+      "followers": {
+        "facebook": 21100,
+        "twitter": 945,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4920199.jpg?t=1601734456"
+    },
+    {
+      "title": "The Dapper Chapper",
+      "feed_url": "http://dapperchapper.com/feed/",
+      "website_url": "http://dapperchapper.com/",
+      "description": "Articles on fashion, styling, grooming, travel, alcohol and much more. The Dapper Chapper is a community of writers from London and Edinburgh, led by Adam Tanous, covering a range of interests for the modern man. It is a Men's luxury and lifestyle blog.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 11600,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4640198.jpg?t=1601734736"
+    },
+    {
+      "title": "Heddels",
+      "feed_url": "https://www.heddels.com/feed/",
+      "website_url": "https://www.heddels.com/",
+      "description": "Find well-made, enduring denim, footwear, and other clothing that improves with wear. Heddels helps people own things they want to use forever. Whether it's a pair of jeans, a wallet, or a frying pan; Heddels helps you to find something that you love enough that you never want to replace it and teach you the maintenance skills so that you hopefully never have to.",
+      "followers": {
+        "facebook": 24000,
+        "twitter": 8300,
+        "instagram": 79600
+      },
+      "image_url": "https://i1.feedspot.com/5280624.jpg?t=1620972100"
+    },
+    {
+      "title": "A Continuous Lean.",
+      "feed_url": "https://feeds.feedburner.com/acontinuouslean/",
+      "website_url": "https://www.acontinuouslean.com/",
+      "description": "A Continuous Lean is a blog about the considered and interesting things in a man's life. Be that a finely made suit, a pair of nice leather shoes, a great old car or an excellent hotel.",
+      "followers": {
+        "facebook": 16300,
+        "twitter": 24300,
+        "instagram": 68400
+      },
+      "image_url": "https://i1.feedspot.com/104212.jpg?t=1601734360"
+    },
+    {
+      "title": "TheUnstitchd",
+      "feed_url": "https://www.theunstitchd.com/feed/",
+      "website_url": "https://www.theunstitchd.com/category/fashion/",
+      "description": "Covers the latest Men's Style and Men's Fashion Tips. TheUnstitchd is one of the Best Men's Fashion Blog in India.",
+      "followers": {
+        "facebook": 6900,
+        "twitter": 180,
+        "instagram": 27300
+      },
+      "image_url": "https://i1.feedspot.com/4419577.jpg?t=1601734316"
+    },
+    {
+      "title": "The Everyday Man",
+      "feed_url": "https://theeverydayman.co.uk/feed/",
+      "website_url": "https://theeverydayman.co.uk/category/fashion/",
+      "description": "Daily fashion trends, lifestyle news, cars, art, music, travel & grooming for men. The Everyday Man is UK men's fashion blog, men lifestyle blog & men fitness blog.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 1300,
+        "instagram": 41400
+      },
+      "image_url": "https://i1.feedspot.com/4638708.jpg?t=1605590281"
+    },
+    {
+      "title": "Your Average Guy",
+      "feed_url": "https://youraverageguystyle.com/feed/",
+      "website_url": "https://youraverageguystyle.com/",
+      "description": "Articles on men's clothing, designer suits, jeans, footwear, watches, reviews, new trends, men's personal style & fashion tips. A men's fashion blog is by your average guy, Adam York. Covering everyday wearable, yet fashionable menswear for the ordinary man.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 265,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/4549365.jpg?t=1601734388"
+    },
+    {
+      "title": "Pinoy Guy Guide",
+      "feed_url": "https://www.pinoyguyguide.com/feed",
+      "website_url": "https://www.pinoyguyguide.com/",
+      "description": "Covers topics on men's fashion, lifestyle, grooming, high-tech gadgets, chart-topping music, interesting men's hobbies and so on. Pinoy Guy Guide is the Ultimate Men's Fashion and Lifestyle Blog.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 566,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4928957.jpg?t=1672731935"
+    },
+    {
+      "title": "Men's Style Pro",
+      "feed_url": "https://mensstylepro.com/feed/",
+      "website_url": "https://mensstylepro.com/",
+      "description": "Blog posts on how-to of menswear, lifestyle, grooming, food, accessories & the best ways to upgrade your overall style. Sabir took the opportunity to create Men's Style Pro to help men understand, breakdown and expand their personal style.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 8800,
+        "instagram": 83300
+      },
+      "image_url": "https://i1.feedspot.com/721249.jpg?t=1601734365"
+    },
+    {
+      "title": "The DCFashion Fool",
+      "feed_url": "https://www.dcfashionfool.com/feed/",
+      "website_url": "https://www.dcfashionfool.com/",
+      "description": "Covers articles and news on fashion, grooming and lifestyle. The DCFashion Fool is a DC-based Men's lifestyle and fashion blog. Get inspired by the tips to grab life and look great at The DCFashion Fool.",
+      "followers": {
+        "facebook": 682,
+        "twitter": 827,
+        "instagram": 103100
+      },
+      "image_url": "https://i1.feedspot.com/4688491.jpg?t=1601735271"
+    },
+    {
+      "title": "He Spoke Style Blog",
+      "feed_url": "https://hespokestyle.com/feed/",
+      "website_url": "https://hespokestyle.com/blog/",
+      "description": "Covers Men's Style, Fashion, Grooming, Tips and Advice. He Spoke Style was created as a way to blend men's style inspiration with men's style information, to provide practical style advice, and to offer approachable, honest and relatable content for regular guys interested in menswear.",
+      "followers": {
+        "facebook": 179000,
+        "twitter": 7700,
+        "instagram": 353300
+      },
+      "image_url": "https://i1.feedspot.com/1389067.jpg?t=1605103337"
+    },
+    {
+      "title": "Twenty First Century Gent",
+      "feed_url": "https://www.twentyfirstcenturygent.com/feed",
+      "website_url": "https://www.twentyfirstcenturygent.com/search/label/fashion",
+      "description": "Covers men's fashion, travel, lifestyle tip, guide, and more. Ben AKA The Gentleman, nearing his thirties, started this blog four years ago attempting to cover all things, man.",
+      "followers": {
+        "facebook": 646,
+        "twitter": 3200,
+        "instagram": 39900
+      },
+      "image_url": "https://i1.feedspot.com/5280627.jpg?t=1620970861"
+    },
+    {
+      "title": "Gentleman Within",
+      "feed_url": "https://www.gentlemanwithin.com/feed/",
+      "website_url": "https://www.gentlemanwithin.com/blog-posts/",
+      "description": "An online resource dedicated to helping men dress better, level up their style, and live their best life. Khoi's goal is to provide practical and helpful tips, advice and inspiration to help men level up their style.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 1100,
+        "instagram": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5295065.jpg?t=1624365632"
+    },
+    {
+      "title": "Man For Himself",
+      "feed_url": "https://manforhimself.com/feed/",
+      "website_url": "https://manforhimself.com/",
+      "description": "Man For Himself is a men's style, lifestyle, grooming and hair blog, featuring how to hair tutorials, grooming recommendations and style staples.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 6000,
+        "instagram": 131400
+      },
+      "image_url": "https://i1.feedspot.com/4585871.jpg?t=1601734356"
+    },
+    {
+      "title": "The Coolector Magazine",
+      "feed_url": "https://www.thecoolector.com/feed/",
+      "website_url": "https://www.thecoolector.com/",
+      "description": "The Coolector is a lifestyle magazine which, as the name suggests, is all about cool stuff. We spend an awful lot of time scouring the web in search of the latest and greatest products in the world of tech, design, architecture, travel, fashion and men's gear in general like watches, wallets and more. We aim to be the first port of call for any man who is on the hunt for the next essential product to spend their loot upon.",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 3000,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/3577517.jpg?t=1601734320"
+    },
+    {
+      "title": "OnPointFresh",
+      "feed_url": "https://onpointfresh.com/feed/",
+      "website_url": "https://onpointfresh.com/",
+      "description": "Men's fashion & grooming blog, featuring fashion guides, accessories, men's hairstyles, sneakers, and streetwear. Authored by Anthony Romano.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5297859.jpg?t=1625053055"
+    },
+    {
+      "title": "Style Girlfriend Blog",
+      "feed_url": "https://stylegirlfriend.com/feed/",
+      "website_url": "https://stylegirlfriend.com/blog/",
+      "description": "Covers style, grooming, and lifestyle topics to keep you on your game. Style Girlfriend is all about guys' style from a girl's perspective. It helps millennial guys improve their style and show up in their lives with more confidence.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 16000,
+        "instagram": 32400
+      },
+      "image_url": "https://i1.feedspot.com/4637964.jpg?t=1601734327"
+    },
+    {
+      "title": "Articles of Style",
+      "feed_url": "https://articlesofstyle.com/blogs/news.atom",
+      "website_url": "https://articlesofstyle.com/blogs/news",
+      "description": "Articles of Style provides an online bespoke menswear service for gentlemen of all shapes & sizes who want to improve their style and live their best lives.",
+      "followers": {
+        "facebook": 29600,
+        "twitter": 26200,
+        "instagram": 111100
+      },
+      "image_url": "https://i1.feedspot.com/5280628.jpg?t=1620971969"
+    },
+    {
+      "title": "Stay Classic",
+      "feed_url": "https://stayclassicblog.com/feed/",
+      "website_url": "https://stayclassicblog.com/",
+      "description": "Blog articles on men's fashion, menswear, formal, casual and more. Stay Classic is an affordable approach to classic men's style blog by Tim.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 1300,
+        "instagram": 59400
+      },
+      "image_url": "https://i1.feedspot.com/4637370.jpg?t=1605105512"
+    },
+    {
+      "title": "Club Seven Menswear",
+      "feed_url": "https://wearclubseven.com/blogs/men-underwear-blogs.atom",
+      "website_url": "https://wearclubseven.com/blogs/men-underwear-blogs/",
+      "description": "\u200bClub Seven Menswear was founded to address the gap between comfort and sexiness in men's underwear. Recognizing that many sexy designs lack comfort for extended wear, they created underwear that is both comfortable for daily use and appealing for special occasions. Their products feature a 3D pouch design for enhanced comfort and a flattering fit. Committed to environmental responsibility, Club Seven uses eco-friendly fabrics and packaging and partners with One Tree Planted to plant a tree for every order placed.",
+      "followers": {
+        "twitter": 7500,
+        "instagram": 12900
+      },
+      "image_url": "https://i1.feedspot.com/7896971.jpg?t=1744290480"
+    },
+    {
+      "title": "Alpha M",
+      "feed_url": "https://alpham.com/topic/style/feed/",
+      "website_url": "https://alpham.com/topic/style/",
+      "description": "Aaron Marino (alpha m.) is the number 1 men's lifestyle influencer with over 8 million followers combined across multiple social media channels.",
+      "followers": {
+        "facebook": 86700,
+        "twitter": 29600,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/8640570.jpg?t=1752469054"
+    },
+    {
+      "title": "The Trend Spotter",
+      "feed_url": "https://www.thetrendspotter.net/category/mens-fashion-trends/feed/",
+      "website_url": "https://www.thetrendspotter.net/category/mens-fashion-trends/",
+      "description": "TheTrendSpotter is a leading Australia fashion blog covering local and international fashion trends, news, beauty, designers, runway and street style. Get the latest men's fashion trends, and style advice here.",
+      "followers": {
+        "facebook": 26500,
+        "twitter": 3800,
+        "instagram": 106600
+      },
+      "image_url": "https://i1.feedspot.com/4734533.jpg?t=1601734265"
+    },
+    {
+      "title": "TREND STYLED",
+      "feed_url": "http://www.trendstyled.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.trendstyled.com/",
+      "description": "A lifestyle blog by Saul Rasco covering all things men's style, grooming, fitness, fashion, lifestyle and travel.",
+      "followers": {
+        "facebook": 3700,
+        "instagram": 51200
+      },
+      "image_url": "https://i1.feedspot.com/4637988.jpg?t=1601735369"
+    },
+    {
+      "title": "TIPTOPGENTS",
+      "feed_url": "https://www.tiptopgents.com/feed",
+      "website_url": "https://www.tiptopgents.com/",
+      "description": "Covers articles and information on Men's grooming, accessories, apparel, outfit ideas andlifestyle. TIPTOPGENTS is a men's fashion site dedicated to assisting men in becoming more trendy.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 54,
+        "instagram": 469900
+      },
+      "image_url": "https://i1.feedspot.com/5226509.jpg?t=1607595292"
+    },
+    {
+      "title": "A Gentleman's World",
+      "feed_url": "https://agentlemans.world/feed/",
+      "website_url": "https://agentlemans.world/fashion/",
+      "description": "A Gentleman's World by Ralph Widmer is about fashion, timepieces, cars and sophisticated luxuries of a modern gentleman.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 81
+      },
+      "image_url": "https://i1.feedspot.com/4637824.jpg?t=1601735326"
+    },
+    {
+      "title": "The Gentleman Blogger",
+      "feed_url": "http://www.thegentlemanblogger.com/feed",
+      "website_url": "http://www.thegentlemanblogger.com/",
+      "description": "UK's No1 Menswear Fashion Blog, By Matthew Zorpas. The Gentleman Blogger is not just a fashion blog it is an exploration about what it means to be a gentleman in the 21st century.",
+      "followers": {
+        "facebook": 23100,
+        "twitter": 6700,
+        "instagram": 183100
+      },
+      "image_url": "https://i1.feedspot.com/4397486.jpg?t=1605598619"
+    },
+    {
+      "title": "Modello Bespoke Blog",
+      "feed_url": "https://www.modellobespoke.com/blog?format=rss",
+      "website_url": "https://www.modellobespoke.com/blog",
+      "description": "Get all the latest styles and trends related to custom suits, overcoats, tuxedos, blazers, shoe styles and more on the blog. Modello Bespoke is a custom suit designer who is passionate about craftsmanship and attention to detail and believes that everyone is unique and they should get a suit that fits their own personal taste.",
+      "followers": {
+        "facebook": 917,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/5470348.jpg?t=1669101769"
+    },
+    {
+      "title": "One Dapper Street",
+      "feed_url": "http://onedapperstreet.com/feed/",
+      "website_url": "http://onedapperstreet.com/",
+      "description": "This blog offers you guys interesting and relevant posts from dapper combinations to edgy streetwear and from daily outfit inspirations to curated shopping selections.",
+      "followers": {
+        "facebook": 46800,
+        "twitter": 4500,
+        "instagram": 551300
+      },
+      "image_url": "https://i1.feedspot.com/3600856.jpg?t=1601735292"
+    },
+    {
+      "title": "The Simple Gentleman",
+      "feed_url": "https://www.thesimplegentleman.com/feed/",
+      "website_url": "https://www.thesimplegentleman.com/category/menswear/",
+      "description": "I'm a Larry, A lifestyle blogger; specifically about styling for men, fashion, travel & lifestyle. I showcase my personal styling through different looks and share products that will take your styling to the next level. Keep upto date with style tips, menswear, mens advice, grooming, suits and travel.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4637798.jpg?t=1601734844"
+    },
+    {
+      "title": "Grey Fox",
+      "feed_url": "https://www.greyfoxblog.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.greyfoxblog.com/",
+      "description": "Covers topics on lifestyle, style inspiration, watches, sustainable style, accessories, grooming and more. Grey Fox Blog is about fashion, style and menswear for the older men of about forty or more and those whose hair is turning grey.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 13800,
+        "instagram": 1
+      },
+      "image_url": "https://i1.feedspot.com/4512666.jpg?t=1605597294"
+    },
+    {
+      "title": "LifeByDylan",
+      "feed_url": "https://dylan.lifebylee.com/feed/",
+      "website_url": "https://dylan.lifebylee.com/category/fashion/",
+      "description": "The goal with this lifestyle blog is to give a glimpse into the ups and downs of my life as an entrepreneur and maybe even convince some people to make the jump and follow their dreams too.",
+      "followers": {
+        "twitter": 488,
+        "instagram": 41700
+      },
+      "image_url": "https://i1.feedspot.com/4765621.jpg?t=1607509116"
+    },
+    {
+      "title": "Dappertude",
+      "feed_url": "https://dappertude.com/feed/",
+      "website_url": "https://dappertude.com/",
+      "description": "Blog posts on lifestyle, accessories and style. A men's accessories brand turned lifestyle and community which aims to help guide men onto the dapper path. Educate, Inspire & Network.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 108,
+        "instagram": 30000
+      },
+      "image_url": "https://i1.feedspot.com/4903007.jpg?t=1601734867"
+    },
+    {
+      "title": "THE PREP GUY",
+      "feed_url": "https://tpgstyle.com/feed/",
+      "website_url": "https://tpgstyle.com/category/style/",
+      "description": "The Prep Guy is a men's fashion and lifestyle blog created by Canada's leading plus-size male model, Syed Sohail. We are a men's fashion and lifestyle destination for Modern Canadian and American males. It focuses on providing fashion, lifestyle, beauty, grooming, and self-confidence advice for men of all shapes and body types.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 17800,
+        "instagram": 22900
+      },
+      "image_url": "https://i1.feedspot.com/4551009.jpg?t=1689673839"
+    },
+    {
+      "title": "Spaceboy98",
+      "feed_url": "https://spaceboy98.wordpress.com/feed/",
+      "website_url": "https://spaceboy98.wordpress.com/",
+      "description": "The spaceboy98 is a fashion blogger which help you guys to be in touch with the latest style and fashion.",
+      "followers": {
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5000668.jpg?t=1612789192"
+    },
+    {
+      "title": "ARPIT.",
+      "feed_url": "https://forarpit.wordpress.com/feed/",
+      "website_url": "https://forarpit.wordpress.com/",
+      "description": "Just a random 16 year old boy talking about fashion. Hope you all will find it useful. Follow to get updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5067646.jpg?t=1613485610"
+    },
+    {
+      "title": "Cup of Couple",
+      "feed_url": "https://www.cupofcouple.com/feed/",
+      "website_url": "https://www.cupofcouple.com/category/fashion/",
+      "description": "Fashion and lifestyle inspiration for creative and curious minds. Curated by Mike Madrid & Gabriel Garc\u00eda.",
+      "followers": {
+        "facebook": 42400,
+        "twitter": 17500,
+        "instagram": 298200
+      },
+      "image_url": "https://i1.feedspot.com/2375590.jpg?t=1601734464"
+    },
+    {
+      "title": "Oh Anthonio",
+      "feed_url": "https://ohanthonio.com/feed/",
+      "website_url": "https://ohanthonio.com/",
+      "description": "Hey! What's Up? Hello, I'm Anthony Urbano and welcome to my blog! A creative space to share my perspective on all things fashion, lifestyle, food, travel and fun, I'm excited to take you with me so I hope you'll stick around!",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 3000,
+        "instagram": 77400
+      },
+      "image_url": "https://i1.feedspot.com/4638212.jpg?t=1601734732"
+    },
+    {
+      "title": "ZACK TANCK",
+      "feed_url": "http://zacktanck.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://zacktanck.blogspot.com/",
+      "description": "This blog covers style, creativity and inspiration about men's wear.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4637992.jpg?t=1601735314"
+    },
+    {
+      "title": "Alexander Liang",
+      "feed_url": "https://alexanderliang.com/feed/",
+      "website_url": "https://alexanderliang.com/category/fashion/",
+      "description": "Blog articles on fashion, lifestyle, travel and cars. Alexander Liang is a style and travel blogger, entrepreneur and one-half of Style Together with his partner, Justine Iaboni.",
+      "followers": {
+        "facebook": 51300,
+        "twitter": 82700,
+        "instagram": 243400
+      },
+      "image_url": "https://i1.feedspot.com/4637157.jpg?t=1601734480"
+    },
+    {
+      "title": "Notoriously Dapper Blog",
+      "feed_url": "http://notoriouslydapper.com/feed/",
+      "website_url": "https://notoriouslydapper.com/category/blog/",
+      "description": "Notoriously Dapper is a Body Positive Men's Fashion Blog and Style Guide.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 1200,
+        "instagram": 125900
+      },
+      "image_url": "https://i1.feedspot.com/4464395.jpg?t=1601735305"
+    },
+    {
+      "title": "Men's Fashion & Styles",
+      "feed_url": "https://newmensstyles.com/feed/",
+      "website_url": "https://newmensstyles.com/",
+      "description": "Get expert advice on Fashion Tips, Grooming Tips, Beard Styles, Haircuts and Hairstyles ideas for men. You can get daily recommendations from the specialists on all the most recent Fashion Trends and News.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 31
+      },
+      "image_url": "https://i1.feedspot.com/5185684.jpg?t=1601734462"
+    },
+    {
+      "title": "Classic Boutique Blog",
+      "feed_url": "https://classic.ee/blog.rss",
+      "website_url": "https://classic.ee/blog",
+      "description": "Classic Boutique is a men's clothing boutique specialising in clothing, shoes and accessories in Tallinn Old Town, Estonia since 1995.",
+      "followers": {
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5153641.jpg?t=1652090838"
+    },
+    {
+      "title": "Styles for Men",
+      "feed_url": "https://stylesmen.com/feed/",
+      "website_url": "https://stylesmen.com/",
+      "description": "Follow us to keep up with the latest men's style from around the globe featured on stylesmen.com",
+      "followers": {
+        "facebook": 12600,
+        "twitter": 10,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5027606.jpg?t=1652088491"
+    },
+    {
+      "title": "VanityForbes",
+      "feed_url": "https://www.vanityforbes.com/feed/",
+      "website_url": "https://www.vanityforbes.com/",
+      "description": "VanityForbes is a men's fashion blog with one goal helping you pursue the perfect wardrobe. Discover the latest trends, fashion and style note that we offer.",
+      "followers": {
+        "facebook": 41
+      },
+      "image_url": "https://i1.feedspot.com/5180255.jpg?t=1601734760"
+    },
+    {
+      "title": "Off the Cuff",
+      "feed_url": "https://offthecuffdc.com/feed",
+      "website_url": "https://offthecuffdc.com/",
+      "description": "Off The Cuff (OTC) provides informative advice on incorporating classic menswear and timeless style into their modern lives. Off The Cuff is an award-winning site dedicated to the principle that classic style and modern life can live quite comfortably with each other.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/434045.jpg?t=1601735381"
+    },
+    {
+      "title": "Hommage",
+      "feed_url": "https://www.hommage.com/blogs/news.atom",
+      "website_url": "https://www.hommage.com/blogs/news",
+      "description": "Explore luxury male skincare, shave care and grooming products including luxury razors. Innovative design Gillette compatible razors.",
+      "followers": {
+        "facebook": 19800
+      },
+      "image_url": "https://i1.feedspot.com/5156879.jpg?t=1601734421"
+    },
+    {
+      "title": "Effortless Gent",
+      "feed_url": "https://effortlessgent.com/feed/",
+      "website_url": "https://effortlessgent.com/",
+      "description": "Articles on style tips, smart casual, business attire, accessories, lifestyle, grooming and trendy fashion. EG aims to assist the everyday man with useful advice and insights on clothing and lifestyle without the stuffiness or frills, because the everyday man knows that efficiency and straight-forwardness is priceless.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 18900,
+        "instagram": 23500
+      },
+      "image_url": "https://i1.feedspot.com/4638751.jpg?t=1605103495"
+    },
+    {
+      "title": "Well Spent",
+      "feed_url": "http://well-spent.com/feed/",
+      "website_url": "http://well-spent.com/",
+      "description": "Well Spent features responsibly made products that look good and don't cost an arm and a leg.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 7000,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/322062.jpg?t=1601735287"
+    },
+    {
+      "title": "Bazaar Pk",
+      "feed_url": "https://bazaapk.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bazaapk.blogspot.com/",
+      "description": "The blog covers topics such as men's fashion, leather fashion, branded harem etc.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5076944.jpg?t=1601735554"
+    },
+    {
+      "title": "Restart Your Style Blog",
+      "feed_url": "https://restartyourstyle.com/feed/",
+      "website_url": "https://restartyourstyle.com/blog/",
+      "description": "Blog posts on style tips, grooming, footwear, clothing and more. Find here the latest articles from men's style blog Restart Your Style, which will help you pick the best clothes and look good wearing them.",
+      "followers": {
+        "twitter": 393
+      },
+      "image_url": "https://i1.feedspot.com/5275305.jpg?t=1620023997"
+    },
+    {
+      "title": "BARABAS Blog",
+      "feed_url": "https://barabasmen.com/blogs/news.atom",
+      "website_url": "https://barabasmen.com/blogs/news",
+      "description": "Covers Men's Clothing Guide, Fall Fashion Tips, Style Guides, Bottom Wear Tips, Clothing for Autumn, and more. Barabas is a Los Angeles based premium brand apparel company.",
+      "followers": {
+        "facebook": 62700,
+        "twitter": 535,
+        "instagram": 33400
+      },
+      "image_url": "https://i1.feedspot.com/5367383.jpg?t=1643804569"
+    },
+    {
+      "title": "Gentleman's Gazette \u00bb Fashion Illustration",
+      "feed_url": "https://www.gentlemansgazette.com/category/fashion-illustrations/feed/",
+      "website_url": "https://www.gentlemansgazette.com/category/fashion-illustrations/",
+      "description": "When browsing through the internet it seems that quality, luxury & durability are omnipresent terms, but few explain what they really mean and even fewer actually offer it. For us, quality starts with the design of a product.",
+      "followers": {
+        "facebook": 347600,
+        "instagram": 211300
+      },
+      "image_url": "https://i1.feedspot.com/8640569.jpg?t=1752472923"
+    },
+    {
+      "title": "Mens Fashion Magazine",
+      "feed_url": "http://www.mensfashionmagazine.com/feed",
+      "website_url": "https://www.mensfashionmagazine.com/",
+      "description": "Covers a wide variety of topics such as trends, health & fitness, style tips, fashion news, grooming, accessories, lifestyle and the latest sale offers, MFM has been labelled the number one online resource for men's fashion.",
+      "followers": {
+        "facebook": 331400,
+        "twitter": 53500,
+        "instagram": 127000
+      },
+      "image_url": "https://i1.feedspot.com/4404301.jpg?t=1605103833"
+    },
+    {
+      "title": "Men's LifeStyle Blog",
+      "feed_url": "https://menstyle1.com/rss",
+      "website_url": "https://menstyle1.com/",
+      "description": "Covers men's style guide and men's fashion tips and everything a man needs. The MenStyle1 blog, founded in 2014, is dedicated to men's fashion, style, and everything a man needs. The MS1 Team believes that style is about more than the clothes you wear - a fact echoed our unrelenting commitment to dishing out quality Men's Fashion content.",
+      "followers": {
+        "twitter": 645,
+        "instagram": 53700
+      },
+      "image_url": "https://i1.feedspot.com/1356828.jpg?t=1605103770"
+    },
+    {
+      "title": "TGAVY Blog",
+      "feed_url": "https://www.tgavy.com/feed",
+      "website_url": "https://www.tgavy.com/blog",
+      "description": "20-year-old living in Belfast getting to grips with Blogging and City Life.",
+      "followers": {
+        "facebook": 264,
+        "twitter": 202,
+        "instagram": 430400
+      },
+      "image_url": "https://i1.feedspot.com/4661450.jpg?t=1610718859"
+    },
+    {
+      "title": "Marco Moratti",
+      "feed_url": "https://marcomoratti.com/blogs/articles.atom",
+      "website_url": "https://marcomoratti.com/blogs/articles/",
+      "description": "Marco Moratti was founded in Los Angeles and brings to life designers' ideas from all over the world by creating unique and lucrative jewelry for men. Follow to get updates.",
+      "followers": {
+        "facebook": 21900,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5057925.jpg?t=1601734726"
+    },
+    {
+      "title": "Pinstripe Magazine - Men's Fashion",
+      "feed_url": "https://pinstripemag.com/style/mens-fashion/feed/",
+      "website_url": "https://pinstripemag.com/topics/style/mens-fashion/",
+      "description": "A Guys Guide covering mens fashion, gadgets for guys and sexy women we love. Articles about relationships, dating, advice, men's health and more.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1800,
+        "instagram": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4654277.jpg?t=1601735278"
+    },
+    {
+      "title": "The London Man Blog",
+      "feed_url": "https://www.thelondonmanblog.com/blog-feed.xml",
+      "website_url": "https://thelondonmanblog.wixsite.com/thelondonmanblog/my-blog",
+      "description": "Get the lifestyle news, fashion, health, art, cars, music, travel & grooming. News & Tips for the Modern Man. The London Man Blog is UK Men's lifestyle & fashion blog.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 1600,
+        "instagram": 52400
+      },
+      "image_url": "https://i1.feedspot.com/4903036.jpg?t=1601734860"
+    },
+    {
+      "title": "Valextino",
+      "feed_url": "https://www.valextino.com/feed/",
+      "website_url": "https://valuxxo.com/category/style-and-fashion/",
+      "description": "Men's Fashion Blog with the latest fashion trends, fashion news, Tips and hints, Male grooming advice and a lot more. Valextino is a qualified Image Consultant & Fashion Stylist.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 217,
+        "instagram": 21400
+      },
+      "image_url": "https://i1.feedspot.com/5065774.jpg?t=1601734406"
+    },
+    {
+      "title": "Gallucks",
+      "feed_url": "https://gallucks.com/feed/",
+      "website_url": "https://gallucks.com/",
+      "description": "Mens Fashion blogger & Youtuber.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 7400,
+        "instagram": 306200
+      },
+      "image_url": "https://i1.feedspot.com/4549381.jpg?t=1601735297"
+    },
+    {
+      "title": "The Essential Man Blog",
+      "feed_url": "https://www.theessentialman.com/feed/",
+      "website_url": "https://www.theessentialman.com/blog/",
+      "description": "Blog posts on spring/summer style, fall/winter style, work style, dating style and grooming. Peter Nguyen is a Private Personal Stylist for men in NYC and the founder of The Essential Man. He helps professional men look good and feel confident by improving their style.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5280622.jpg?t=1620987126"
+    },
+    {
+      "title": "The Male Stylist - Men's Style, Fashion & Grooming Blogger",
+      "feed_url": "https://themalestylist.com/feed/",
+      "website_url": "https://themalestylist.com/category/mens-fashion/",
+      "description": "A men's fashion, style and male grooming blogger aimed at developing personal style and rediscovering the modern gentleman. The latest in men's fashion including new styles, seasonal trends and the latest shows.",
+      "followers": {
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4638702.jpg?t=1613485641"
+    },
+    {
+      "title": "Gentleman's Code Magazine",
+      "feed_url": "https://gentlemanscodes.com/category-page/style",
+      "website_url": "https://gentlemanscodes.com/category-page/style",
+      "description": "Provides the latest in elegance, lifestyle, culture, travel, dining, chivalrous, and royal to ensure you become the best gentlemen. GC Magazine is Malaysia's leading voice of gentleman's style, elegance, and class.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 27,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5056368.jpg?t=1601734829"
+    }
+  ]
+}

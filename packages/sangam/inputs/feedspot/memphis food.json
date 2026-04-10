@@ -1,0 +1,91 @@
+{
+  "category": "Memphis Food",
+  "source_url": "https://rss.feedspot.com/memphis_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Ken's Food Find",
+      "feed_url": "https://www.kensfoodfind.com/feeds/posts/default",
+      "website_url": "https://www.kensfoodfind.com/",
+      "description": "Ken's Food Find is devoted to highlighting the restaurants in the Greater Memphis, Tennessee area. I do this as a hobby, having no vested interest in restaurants that I write about. My goal for this blog is to enlighten others about the diversity of Memphis dining establishments.",
+      "followers": {
+        "facebook": 51,
+        "twitter": 401,
+        "instagram": 254
+      },
+      "image_url": "https://i1.feedspot.com/5324849.jpg?t=1632461663"
+    },
+    {
+      "title": "Rob's (mostly) Food Blog",
+      "feed_url": "http://rrmemphis.blogspot.com/feeds/posts/default",
+      "website_url": "http://rrmemphis.blogspot.com/",
+      "description": "My name is Rob and I eat out too much, but it's something I enjoy and decided to start a food blog, so here it is: Reviews of restaurants that I've been to. This is my personal web page. Read my personal opinions and stuff about my hobbies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5449722.jpg?t=1664188028"
+    },
+    {
+      "title": "Memphis Magazine \u00bb Food",
+      "feed_url": "https://memphismagazine.com/food/index.rss",
+      "website_url": "https://memphismagazine.com/food",
+      "description": "Visit our food category to know about the latest and best food places around the city. Founded in April 1976, Memphis magazine continues the work of enlightening, informing, and entertaining readers.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 14200,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5449725.jpg?t=1664188044"
+    },
+    {
+      "title": "Central BBQ News",
+      "feed_url": "https://eatcbq.com/blogs/news.atom",
+      "website_url": "https://eatcbq.com/blogs/news",
+      "description": "Central BBQ is an award-winning barbecue restaurant based out of Memphis. Our secret ingredients to success include our delicious, fall-off-the-bone meat, smoked in southern hospitality, and doused with good times. And since it opened in 2002, Central BBQ has been ranked as the number one spot for BBQ in Memphis.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 12400,
+        "instagram": 21700
+      },
+      "image_url": "https://i1.feedspot.com/5449726.jpg?t=1664188052"
+    },
+    {
+      "title": "Daily Memphian \u00bb Food",
+      "feed_url": "https://dailymemphian.com/feed/section/food",
+      "website_url": "https://dailymemphian.com/section/food",
+      "description": "Memphis is known for its food scene. From fine dining to trendy eats, and food trucks to food festivals, we have the local food reviews and news for you. View our blog to get the latest articles from our Food section. Launched in September 2018, The Daily Memphian is the must-read, primary daily online publication for intelligent, in-depth journalism in the Memphis community.",
+      "followers": {
+        "facebook": 52300,
+        "twitter": 37200,
+        "instagram": 53700
+      },
+      "image_url": "https://i1.feedspot.com/5449728.jpg?t=1664188067"
+    },
+    {
+      "title": "QueDaVeggie",
+      "feed_url": "https://www.quedaveggie.com/blog-feed.xml",
+      "website_url": "https://www.quedaveggie.com/",
+      "description": "QueDaVeggie is a food blog that follows Quela 'Que,' a seasonal vegetarian, who loves capturing and sharing photos and recipes of amazing delectable dishes found across the nation and in her very own kitchen. Check out her blog and try out some of her amazing recipes.",
+      "followers": {
+        "instagram": 92
+      },
+      "image_url": "https://i1.feedspot.com/5449729.jpg?t=1664188796"
+    },
+    {
+      "title": "Memphis Food Trotter Chapter 1",
+      "feed_url": "https://memphisfoodtrotter.blogspot.com/feeds/posts/default",
+      "website_url": "https://memphisfoodtrotter.blogspot.com/",
+      "description": "Check out my blog for the best food spots around the Memphis area. I am a wife and a mother as well as a teacher. I am a self-proclaimed foodie wannabe who loves food from different cultures and is always looking for the lowest prices for the highest quality items.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5449723.jpg?t=1664188559"
+    },
+    {
+      "title": "Edible Memphis",
+      "feed_url": "https://www.ediblememphis.com/stories?format=rss",
+      "website_url": "https://www.ediblememphis.com/",
+      "description": "Find the best local online guides on the Memphis area with the help of Edible Memphis. Get to know what are the best restaurants, breweries, night life, and more. Edible Memphis is a quarterly magazine that celebrates abundance of local foods, season by season in Memphis.",
+      "followers": {
+        "facebook": 40900,
+        "instagram": 46400
+      },
+      "image_url": "https://i1.feedspot.com/5449724.jpg?t=1664188038"
+    }
+  ]
+}

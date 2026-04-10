@@ -1,0 +1,497 @@
+{
+  "category": "Huffington Posts",
+  "source_url": "https://rss.feedspot.com/huffingtonpost_rss_feeds",
+  "feeds": [
+    {
+      "title": "HuffPost News",
+      "feed_url": "https://www.huffpost.com/section/front-page/feed",
+      "website_url": "https://www.huffpost.com/",
+      "description": "Read the latest headlines, news stories, and opinions from Politics, Entertainment, Life, Perspectives, and more.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879731.jpg?t=1614771155"
+    },
+    {
+      "title": "HuffPost \u00bb World News",
+      "feed_url": "https://www.huffpost.com/section/world-news/feed",
+      "website_url": "https://www.huffpost.com/news/world-news",
+      "description": "Catch up on the latest World News news, photos, videos, and opinion.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879827.jpg?t=1614771532"
+    },
+    {
+      "title": "HuffPost \u00bb Politics",
+      "feed_url": "https://www.huffpost.com/section/politics/feed",
+      "website_url": "https://www.huffpost.com/news/politics",
+      "description": "The latest news on Congress, campaigns, elections, policy, and everything politics from HuffPost.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879818.jpg?t=1614771297"
+    },
+    {
+      "title": "HuffPost \u00bb Health",
+      "feed_url": "https://www.huffpost.com/section/health/feed",
+      "website_url": "https://www.huffpost.com/section/health",
+      "description": "Stay informed on all things health with special features and analysis on public health, health policy and medicine.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879741.jpg?t=1760505607"
+    },
+    {
+      "title": "HuffPost \u00bb Money",
+      "feed_url": "https://www.huffpost.com/section/money/feed",
+      "website_url": "https://www.huffpost.com/life/money",
+      "description": "Everything about personal finance, saving, real estate, and real-world money management that you should have learned in school.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5250712.jpg?t=1614774842"
+    },
+    {
+      "title": "HuffPost \u00bb Business",
+      "feed_url": "https://www.huffpost.com/section/business/feed",
+      "website_url": "https://www.huffpost.com/impact/business",
+      "description": "Keep up with the latest business news and insights on the changing economy. Including topics such as labor and employment, inequality, and more.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879729.jpg?t=1614771579"
+    },
+    {
+      "title": "HuffPost \u00bb Crime",
+      "feed_url": "https://www.huffpost.com/section/crime/feed",
+      "website_url": "https://www.huffpost.com/news/crime",
+      "description": "Get the latest on crime and justice. Follow missing person cases, the hunt for serial killers, breaking crime news, and reports on newsworthy trials.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879733.jpg?t=1614840359"
+    },
+    {
+      "title": "HuffPost \u00bb Tech",
+      "feed_url": "https://www.huffpost.com/section/technology/feed",
+      "website_url": "https://www.huffpost.com/impact/technology",
+      "description": "Subscribe to get the latest news on technology and opinion.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879765.jpg?t=1614840496"
+    },
+    {
+      "title": "HuffingtonPost \u00bb Science",
+      "feed_url": "https://www.huffpost.com/section/science/feed",
+      "website_url": "https://www.huffpost.com/impact/science",
+      "description": "Join the discussion with top scientists on the latest news in spaceflight, brain/body research, evolution, and the influence of science on culture.",
+      "followers": {
+        "twitter": 34400,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/166798.jpg?t=1614841293"
+    },
+    {
+      "title": "HuffPost \u00bb Environment",
+      "feed_url": "https://www.huffpost.com/section/green/feed",
+      "website_url": "https://www.huffpost.com/impact/green",
+      "description": "The planet is changing. Learn more about how that's changing us through our news, special reports, and investigations.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879803.jpg?t=1614771640"
+    },
+    {
+      "title": "HuffPost \u00bb Social Justice",
+      "feed_url": "https://www.huffpost.com/topic/social-justice/feed",
+      "website_url": "https://www.huffpost.com/impact/topic/social-justice",
+      "description": "Explore stories on racism, civil rights, white supremacy, and many other topics that contribute to modern inequality.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5250675.jpg?t=1614773136"
+    },
+    {
+      "title": "HuffPost \u00bb Sports",
+      "feed_url": "https://www.huffpost.com/section/sports/feed",
+      "website_url": "https://www.huffpost.com/section/sports",
+      "description": "Keep up with sports news and opinion.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879759.jpg?t=1614781385"
+    },
+    {
+      "title": "HuffPost \u00bb Style and Beauty",
+      "feed_url": "https://www.huffpost.com/section/style/feed",
+      "website_url": "https://www.huffpost.com/life/style",
+      "description": "All the latest trends in fashion and beauty, with diverse and attainable looks, expert tips, and honest product reviews.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879821.jpg?t=1614773924"
+    },
+    {
+      "title": "HuffPost \u00bb Education",
+      "feed_url": "https://www.huffpost.com/section/education/feed",
+      "website_url": "https://www.huffpost.com/news/education",
+      "description": "The most comprehensive and interactive Web destination for education and opinion about U.S. schools, teaching and education reform. Its mission is to inform and empower Americans to make a difference in the field of education.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 402800,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/86796.jpg?t=1614846792"
+    },
+    {
+      "title": "HuffPost \u00bb Food and Drink",
+      "feed_url": "https://www.huffpost.com/section/taste/feed",
+      "website_url": "https://www.huffpost.com/life/taste",
+      "description": "Recipes that are worth your time, useful kitchen how-tos, and all the food facts you need to feed your body and mind.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879847.jpg?t=1614774008"
+    },
+    {
+      "title": "HuffPost \u00bb Entertainment",
+      "feed_url": "https://www.huffpost.com/dept/entertainment/feed",
+      "website_url": "https://www.huffpost.com/entertainment/",
+      "description": "Dig into the real stories that impact our everyday lives across film, TV, music, books, arts, and pop culture.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879737.jpg?t=1614771399"
+    },
+    {
+      "title": "HuffPost \u00bb Parenting",
+      "feed_url": "https://www.huffpost.com/section/parents/feed",
+      "website_url": "https://www.huffpost.com/life/parents",
+      "description": "Explore real-life adventures in modern parenting for a community trying to raise good people.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879751.jpg?t=1614774153"
+    },
+    {
+      "title": "HuffPost \u00bb Travel",
+      "feed_url": "https://www.huffpost.com/section/travel/feed",
+      "website_url": "https://www.huffpost.com/life/travel",
+      "description": "How to vacation well from planning your time off to finding flight deals and hotel hacks on a real person's budget.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4839910.jpg?t=1614774238"
+    },
+    {
+      "title": "HuffPost \u00bb Wellness",
+      "feed_url": "https://www.huffpost.com/section/healthy-living/feed",
+      "website_url": "https://www.huffpost.com/life/healthy-living",
+      "description": "Your guide to taking care of your mind and body so you can take on the world.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879805.jpg?t=1614774355"
+    },
+    {
+      "title": "HuffPost \u00bb Home And Living",
+      "feed_url": "https://www.huffpost.com/section/huffpost-home/feed",
+      "website_url": "https://www.huffpost.com/life/huffpost-home",
+      "description": "Discover clever home hacks to life-enhancing tech, smart strategies for modern living.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879743.jpg?t=1614774916"
+    },
+    {
+      "title": "HuffPost \u00bb Work/Life",
+      "feed_url": "https://www.huffpost.com/section/worklife/feed",
+      "website_url": "https://www.huffpost.com/life/worklife",
+      "description": "Catch up on the latest news, photos, videos, and more on Work/Life.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5250738.jpg?t=1614842904"
+    },
+    {
+      "title": "HuffPost \u00bb Culture and Arts",
+      "feed_url": "https://www.huffpost.com/section/arts/feed",
+      "website_url": "https://www.huffpost.com/entertainment/arts",
+      "description": "Expect to be delighted and outraged by our incisive and sprawling coverage of culture and arts.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4784698.jpg?t=1614780234"
+    },
+    {
+      "title": "HuffPost \u00bb Media",
+      "feed_url": "https://www.huffpost.com/section/media/feed",
+      "website_url": "https://www.huffpost.com/news/media",
+      "description": "Keep up with the ever-changing world of media with our insightful and engaging coverage.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879748.jpg?t=1614780441"
+    },
+    {
+      "title": "HuffPost \u00bb Celebrity",
+      "feed_url": "https://www.huffpost.com/section/celebrity/feed",
+      "website_url": "https://www.huffpost.com/entertainment/celebrity",
+      "description": "Enjoy our news, smart commentary, in-depth interviews and profiles on all things celebrity and culture.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879783.jpg?t=1760505607"
+    },
+    {
+      "title": "HuffPost \u00bb TV",
+      "feed_url": "https://www.huffpost.com/section/tv/feed",
+      "website_url": "https://www.huffpost.com/entertainment/tv",
+      "description": "Stay ahead of the curve with the latest news and scoops about your favorite TV shows and movies.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5250770.jpg?t=1760505606"
+    },
+    {
+      "title": "HuffPost \u00bb Black Voices",
+      "feed_url": "https://www.huffpost.com/section/black-voices/feed",
+      "website_url": "https://www.huffpost.com/voices/black-voices",
+      "description": "Amplifying African American voices through political, social justice, entertainment, and cultural news. All black lives deserve to tell their stories.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879779.jpg?t=1614841858"
+    },
+    {
+      "title": "HuffPost \u00bb Religion",
+      "feed_url": "https://www.huffpost.com/section/religion/feed",
+      "website_url": "https://www.huffpost.com/voices/religion",
+      "description": "Subscribe to keep up with religious news and opinion from HuffPost.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879754.jpg?t=1614781352"
+    },
+    {
+      "title": "HuffPost \u00bb Women",
+      "feed_url": "https://www.huffpost.com/section/women/feed",
+      "website_url": "https://www.huffpost.com/voices/women",
+      "description": "Women's news about politics, feminism, sex, gender, work, culture, body image and other topics that matter. We amplify diverse voices and their stories.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879775.jpg?t=1614781605"
+    },
+    {
+      "title": "HuffPost \u00bb Impact",
+      "feed_url": "https://www.huffpost.com/dept/impact/feed",
+      "website_url": "https://www.huffpost.com/impact/",
+      "description": "Get impact news and opinion from HuffPost.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879745.jpg?t=1614838943"
+    },
+    {
+      "title": "HuffPost \u00bb Comedy",
+      "feed_url": "https://www.huffpost.com/section/comedy/feed",
+      "website_url": "https://www.huffpost.com/entertainment/comedy",
+      "description": "Follow to get comedy news and opinion from Huffpost.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879785.jpg?t=1614838973"
+    },
+    {
+      "title": "Huffpost \u00bb Divorce",
+      "feed_url": "https://www.huffpost.com/topic/divorce/feed",
+      "website_url": "https://www.huffpost.com/life/topic/divorce",
+      "description": "Catch up on the latest news, photos, videos, and more on Divorce.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879796.jpg?t=1614840526"
+    },
+    {
+      "title": "HuffPost \u00bb Post Fifty",
+      "feed_url": "https://www.huffpost.com/section/fifty/feed",
+      "website_url": "https://www.huffpost.com/voices/fifty",
+      "description": "Post-Fifty news, photos, videos, and opinion.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879797.jpg?t=1614840585"
+    },
+    {
+      "title": "HuffPost \u00bb Weddings",
+      "feed_url": "https://www.huffpost.com/topic/weddings/feed",
+      "website_url": "https://www.huffpost.com/life/topic/weddings",
+      "description": "Catch up on the latest news, photos, videos, and more on Weddings.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879825.jpg?t=1614840618"
+    },
+    {
+      "title": "HuffPost \u00bb Latino Voices",
+      "feed_url": "https://www.huffpost.com/section/latino-voices/feed",
+      "website_url": "https://www.huffpost.com/voices/latino-voices",
+      "description": "News about Latino and Hispanic politics especially immigration, art, culture, entertainment, and life. We give a voice to the underserved.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879810.jpg?t=1614840652"
+    },
+    {
+      "title": "HuffPost \u00bb Weird News",
+      "feed_url": "https://www.huffpost.com/section/weird-news/feed",
+      "website_url": "https://www.huffpost.com/section/weird-news",
+      "description": "The source for all things bizarre, strange and odd in the world. Check out the latest unusual headlines.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879849.jpg?t=1614841068"
+    },
+    {
+      "title": "HuffPost \u00bbAsian Voices",
+      "feed_url": "https://www.huffpost.com/section/asian-voices/feed",
+      "website_url": "https://www.huffpost.com/voices/asian-voices",
+      "description": "Asian-American Pacific Islander news, culture, and lifestyle. We make AAPI issues mainstream, explore identity, bust stereotypes, and unite cultures.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5252323.jpg?t=1614845578"
+    },
+    {
+      "title": "HuffPost \u00bb Queer Voices",
+      "feed_url": "https://www.huffpost.com/section/queer-voices/feed",
+      "website_url": "https://www.huffpost.com/voices/queer-voices",
+      "description": "Examine issues, explore the culture and enjoy commentary on the latest LGBTQ news that matters most to the queer community and their allies.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5252327.jpg?t=1614846222"
+    },
+    {
+      "title": "HuffPost \u00bb Black Voices",
+      "feed_url": "https://www.huffpost.com/section/black-voices/feed",
+      "website_url": "https://www.huffpost.com/voices/black-voices",
+      "description": "Amplifying African American voices through political, social justice, entertainment, and cultural news. All black lives deserve to tell their stories.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5161628.jpg?t=1614846527"
+    },
+    {
+      "title": "HuffPost \u00bb Book",
+      "feed_url": "https://www.huffpost.com/section/books/feed",
+      "website_url": "https://www.huffpost.com/entertainment/books",
+      "description": "Get a sneak peek of the newest titles, find your next read and learn how to improve your writing.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5252345.jpg?t=1614852273"
+    },
+    {
+      "title": "HuffPost \u00bb College",
+      "feed_url": "https://www.huffpost.com/topic/college/feed",
+      "website_url": "https://www.huffpost.com/entertainment/books",
+      "description": "Get a sneak peek of the newest titles, find your next read and learn how to improve your writing.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/5252349.jpg?t=1614852529"
+    },
+    {
+      "title": "HuffPost \u00bb Videos",
+      "feed_url": "https://www.huffpost.com/section/video/feed",
+      "website_url": "https://www.huffpost.com/section/video",
+      "description": "The latest breaking news video and visual storytelling from HuffPost.",
+      "followers": {
+        "facebook": 11700000,
+        "twitter": 10500000,
+        "instagram": 3400000
+      },
+      "image_url": "https://i1.feedspot.com/4879771.jpg?t=1614840678"
+    }
+  ]
+}

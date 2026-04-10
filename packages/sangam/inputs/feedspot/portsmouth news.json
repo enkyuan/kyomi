@@ -1,0 +1,27 @@
+{
+  "category": "Portsmouth News",
+  "source_url": "https://rss.feedspot.com/portsmouth_ohio_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Scioto County Daily News \u00bb Portsmouth",
+      "feed_url": "https://sciotocountydailynews.com/tag/portsmouth/feed/",
+      "website_url": "https://sciotocountydailynews.com/tag/portsmouth/",
+      "description": "We're a local news organization focused on bringing the most relevant, local news and events to Portsmouth city, Scioto County and our neighboring communities. Our coverage includes breaking news and events as well as many of the great things members of the community are doing to help our area recover from the challenges we've faced in recent years.",
+      "followers": {
+        "twitter": 135
+      },
+      "image_url": "https://i1.feedspot.com/5162450.jpg"
+    },
+    {
+      "title": "AmericanTowns.com \u00bb Portsmouth News",
+      "feed_url": "https://www.americantowns.com/portsmouth-oh/rss/news/",
+      "website_url": "https://www.americantowns.com/portsmouth-oh/news/",
+      "description": "AmericanTowns is a virtual 'town square', connecting you to all the events and news happening in Portsmouth Ohio. Whether it's town issues and community activism, or school calendars and sports schedules, AmericanTowns delivers the information faster and helps you use it better.",
+      "followers": {
+        "facebook": 44600,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5162458.jpg?t=1592316984"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "category": "Vintage Trailer",
+  "source_url": "https://rss.feedspot.com/vintage_trailer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Little Vintage Trailer",
+      "feed_url": "https://feeds.feedburner.com/LittleVintageTrailer",
+      "website_url": "https://www.littlevintagetrailer.com/",
+      "description": "A blog about vintage trailers and glamping. Little Vintage Trailer is where you can find trailers for sale, read tutorials, and all things vintage camping related.",
+      "followers": {
+        "facebook": 50000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/1147090.jpg?t=1629117536"
+    },
+    {
+      "title": "Tin Can Tourists \u00bb News",
+      "feed_url": "https://tincantourists.com/category/news/feed/",
+      "website_url": "https://tincantourists.com/category/news/",
+      "description": "Read our articles on various camper rallies across the country, the history of campers, campers' stories and more. The Tin Can Tourists is an organization committed to the celebration of classic trailers and motor coaches through annual gatherings of owners and friends.",
+      "followers": {
+        "twitter": 3500,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5384097.jpg?t=1648012872"
+    },
+    {
+      "title": "Good Old RVs Blog",
+      "feed_url": "https://goodoldrvs.ning.com/profiles/blog/feed?xn_auth=no",
+      "website_url": "https://goodoldrvs.ning.com/profiles/blog/list",
+      "description": "Explore the blog for everything on vintage RVs, stories from people around the world, reviews of RVs and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5312755.jpg?t=1629182632"
+    },
+    {
+      "title": "Blueberry Hill Classics Blog",
+      "feed_url": "https://blueberryhillclassics.com/bhc-blog?format=rss",
+      "website_url": "https://blueberryhillclassics.com/bhc-blog",
+      "description": "Explore the blog for all our latest news, vintage trailer articles, and other fun stuff. Blueberry Hill Classics is a vintage travel trailer restoration company. Our experience in restoring goes back to 2006. We typically choose mid-century trailers for restoration - those produced between the 40's and the 60's.",
+      "followers": {
+        "facebook": 372,
+        "instagram": 72
+      },
+      "image_url": "https://i1.feedspot.com/5384096.jpg?t=1648017866"
+    },
+    {
+      "title": "Boler",
+      "feed_url": "https://boler-3ten.tumblr.com/rss",
+      "website_url": "https://boler-3ten.tumblr.com/",
+      "description": "The life of our 1972 boler: the restoration, the road and the ridiculousness along the way and other bolers we can't help but spruce up and share with the world.",
+      "followers": {
+        "twitter": 45,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5384098.jpg?t=1648017962"
+    }
+  ]
+}

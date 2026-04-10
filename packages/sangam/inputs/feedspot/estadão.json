@@ -1,0 +1,94 @@
+{
+  "category": "Estad\u00e3o",
+  "source_url": "https://rss.feedspot.com/estadao_rss_feeds",
+  "feeds": [
+    {
+      "title": "Estad\u00e3o \u00bb Politics",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/politica/",
+      "website_url": "https://www.estadao.com.br/politica/",
+      "description": "All articles about Politics from Estad\u00e3o.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb Economy",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/economia/",
+      "website_url": "https://www.estadao.com.br/economia/",
+      "description": "All articles about Economy from Estad\u00e3o.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb Brazil",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/brasil/",
+      "website_url": "https://www.estadao.com.br/brasil/",
+      "description": "All articles about Brazil from Estad\u00e3o.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb International",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/internacional/",
+      "website_url": "https://www.estadao.com.br/internacional/",
+      "description": "All articles about International from Estad\u00e3o.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb Sustainability",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/sustentabilidade/",
+      "website_url": "https://www.estadao.com.br/sustentabilidade/",
+      "description": "Stay up to date with the latest and main news about sustainability in Estad\u00e3o.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 7500000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb Education",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/educacao/",
+      "website_url": "https://www.estadao.com.br/educacao/",
+      "description": "All articles about Education from Estad\u00e3o.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb Science",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/ciencia/",
+      "website_url": "https://www.estadao.com.br/ciencia/",
+      "description": "Check out the latest information on advances in the fields of science here at Estad\u00e3o.",
+      "followers": {
+        "facebook": 3700000,
+        "twitter": 7500000,
+        "instagram": 2500000
+      },
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb Health",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/saude/",
+      "website_url": "https://www.estadao.com.br/saude/",
+      "description": "All articles about Health from Estad\u00e3o.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb Sports",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/esportes/",
+      "website_url": "https://www.estadao.com.br/esportes/",
+      "description": "All articles about Sports from Estad\u00e3o.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    },
+    {
+      "title": "Estad\u00e3o \u00bb Culture",
+      "feed_url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/cultura/",
+      "website_url": "https://www.estadao.com.br/cultura/",
+      "description": "Follow the world of music, cinema, literature, theater and TV, as well as great food and travel tips in Estad\u00e3o's culture section.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7889512.jpg?t=1742298203"
+    }
+  ]
+}

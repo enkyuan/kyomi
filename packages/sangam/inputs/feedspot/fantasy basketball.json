@@ -1,0 +1,74 @@
+{
+  "category": "Fantasy Basketball",
+  "source_url": "https://rss.feedspot.com/fantasy_basketball_rss_feeds",
+  "feeds": [
+    {
+      "title": "Razzball",
+      "feed_url": "https://basketball.razzball.com/feed/",
+      "website_url": "https://basketball.razzball.com/",
+      "description": "Razzball is a fantasy sports website that provides analysis, rankings, projections, and advice to help players succeed in their fantasy leagues. Its basketball section offers player insights, waiver wire tips, and game analysis focused on fantasy basketball performance. The site is known for its humorous tone and data-driven fantasy tools.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 26000
+      },
+      "image_url": "https://i1.feedspot.com/4983466.jpg?t=1762318442"
+    },
+    {
+      "title": "SportsEthos \u00bb Fantasy Basketball",
+      "feed_url": "https://sportsethos.com/tag/fantasy-basketball/feed/",
+      "website_url": "https://sportsethos.com/tag/fantasy-basketball/",
+      "description": "The Fantasy Basketball section on SportsEthos features articles covering player trends, draft guides, waiver wire moves, strategy tips, and weekly updates to help fantasy managers improve their NBA teams.",
+      "followers": {
+        "facebook": 357,
+        "twitter": 6700,
+        "instagram": 345
+      },
+      "image_url": "https://i1.feedspot.com/8789998.jpg?t=1762318147"
+    },
+    {
+      "title": "FantasyPros \u00bb NBA",
+      "feed_url": "https://partners.fantasypros.com/api/v1/articles.php?output=xml&sport=NBA",
+      "website_url": "https://www.fantasypros.com/nba/articles/",
+      "description": "The website section for NBA articles on FantasyPros offers timely fantasy basketball content including daily lineup advice, waiver-wire pickups, trade suggestions, and DFS (daily fantasy sports) strategy.",
+      "followers": {
+        "facebook": 58000,
+        "twitter": 472600,
+        "instagram": 279000
+      },
+      "image_url": "https://i1.feedspot.com/8790000.jpg?t=1762318145"
+    },
+    {
+      "title": "FantraxHQ \u00bb NBA Fantasy Basketball",
+      "feed_url": "https://fantraxhq.com/category/nba-fantasy-basketball/feed/",
+      "website_url": "https://fantraxhq.com/category/nba-fantasy-basketball/",
+      "description": "FantraxHQ covers all your fantasy basketball needs, with the rankings and analysis to get you ready fro the draft.",
+      "followers": {
+        "facebook": 264,
+        "twitter": 22700,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/8789999.jpg?t=1762318143"
+    },
+    {
+      "title": "Roto Baller \u00bb Fantasy Basketball",
+      "feed_url": "https://www.rotoballer.com/category/nba/nba-fantasy-basketball-advice/feed",
+      "website_url": "https://www.rotoballer.com/category/nba/nba-fantasy-basketball-advice/",
+      "description": "All fantasy basketball articles, news and analysis for fantasy NBA season-long leagues and DFS contests on DraftKings and FanDuel.",
+      "followers": {
+        "facebook": 208,
+        "twitter": 28000
+      },
+      "image_url": "https://i1.feedspot.com/8789997.jpg?t=1762318146"
+    },
+    {
+      "title": "Elite Fantasy Basketball",
+      "feed_url": "https://elitefantasybasketball.com/articles/feed/",
+      "website_url": "https://elitefantasybasketball.com/articles/",
+      "description": "Our detailed, creative analysis is led by Adam Stock, the Fantasy Sports Writers Association's 2020 and 2024 Fantasy Basketball Writer of the Year. Our content goes above and beyond anything you've seen before. We are proud to have helped countless EFB users bring home fantasy championships.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/8790013.jpg?t=1762318148"
+    }
+  ]
+}

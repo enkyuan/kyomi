@@ -1,0 +1,58 @@
+{
+  "category": "Tar Heel Basketball",
+  "source_url": "https://rss.feedspot.com/tar_heel_basketball_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yahoo Sports \u00bb North Carolina Tar Heels",
+      "feed_url": "https://sports.yahoo.com/ncaab/teams/nav/rss/",
+      "website_url": "https://sports.yahoo.com/ncaab/teams/north-carolina/",
+      "description": "Comprehensive and up-to-date North Carolina Tar Heels news, scores, schedule, stats and roster",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/5626155.jpg?t=1689322425"
+    },
+    {
+      "title": "University of North Carolina \u00bb Men's Basketball",
+      "feed_url": "https://goheels.com/rss?path=mbball",
+      "website_url": "https://goheels.com/sports/mens-basketball",
+      "description": "Latest news items for University of North Carolina Athletics",
+      "followers": {
+        "instagram": 589100
+      },
+      "image_url": "https://i1.feedspot.com/5626151.jpg?t=1689322955"
+    },
+    {
+      "title": "Tar Heel Tribune \u00bb Basketball",
+      "feed_url": "https://tarheeltribune.com/category/basketball/feed/",
+      "website_url": "https://tarheeltribune.com/category/basketball/",
+      "description": "Covering Carolina sports beyond just men's basketball and football \u2014 with the most complete women's basketball coverage",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5626152.jpg?t=1689323112"
+    },
+    {
+      "title": "Keeping It Heel \u00bb UNC Basketball",
+      "feed_url": "https://keepingitheel.com/unc-basketball/feed/",
+      "website_url": "https://keepingitheel.com/unc-basketball/",
+      "description": "A North Carolina Tar Heels Fan Site - News, Blogs, Opinion and more.",
+      "followers": {
+        "facebook": 36500,
+        "twitter": 38100
+      },
+      "image_url": "https://i1.feedspot.com/5626154.jpg?t=1689322032"
+    },
+    {
+      "title": "Tar Heels Wire \u00bb Basketball",
+      "feed_url": "https://tarheelswire.usatoday.com/category/basketball/feed/",
+      "website_url": "https://tarheelswire.usatoday.com/basketball/",
+      "description": "Get the latest University of North Carolina Tar Heels news, schedule, photos and rumors from Tar Heels Wire, the definitive source for Tar Heels fans.",
+      "followers": {
+        "facebook": 31700,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5626157.jpg?t=1689322091"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "category": "Segway",
+  "source_url": "https://rss.feedspot.com/segway_rss_feeds",
+  "feeds": [
+    {
+      "title": "Segway Commercial Blog",
+      "feed_url": "https://b2b.segway.com/feed/",
+      "website_url": "https://b2b.segway.com/blog/",
+      "description": "Covers Company news, Insights and Segway Technology. Across the world, micro-mobility is becoming the new frontier of the automotive industry. Segway Commercial's goal is to help entrepreneurs, corporations, and universities launch their own micro-mobility operations.",
+      "followers": {
+        "facebook": 121,
+        "twitter": 198
+      },
+      "image_url": "https://i1.feedspot.com/5297779.jpg?t=1625039354"
+    },
+    {
+      "title": "Engadget \u00bb Segway",
+      "feed_url": "https://www.engadget.com/tag/segway/rss.xml",
+      "website_url": "https://www.engadget.com/tag/segway/",
+      "description": "Engadget is the original home for technology news and reviews. Get the latest articles about Segway from Engadget.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2300000,
+        "instagram": 367700
+      },
+      "image_url": "https://i1.feedspot.com/5053404.jpg?t=1622619367"
+    },
+    {
+      "title": "TechCrunch \u00bb Segway",
+      "feed_url": "https://techcrunch.com/tag/segway/feed/",
+      "website_url": "https://techcrunch.com/tag/segway/",
+      "description": "TechCrunch provides the latest news and reports on the business of technology, startups, venture capital funding, and Silicon Valley. Get updates about Segway from TechCrunch.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000,
+        "instagram": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/5053408.jpg?t=1622619371"
+    },
+    {
+      "title": "SeeWay Tour Blog",
+      "feed_url": "https://seewaytour.com/category/blog-en/feed/",
+      "website_url": "https://seewaytour.com/category/blog-en/",
+      "description": "Follow us for an incredible guided Segway tour in Paris. Make the experience of exploring the city of lights in a creative and easy way.",
+      "followers": {
+        "twitter": 24,
+        "instagram": 252
+      },
+      "image_url": "https://i1.feedspot.com/5053402.jpg?t=1622619364"
+    },
+    {
+      "title": "Swegwayfun Blog",
+      "feed_url": "https://www.segwayfun.uk/blogs/latest-news.atom",
+      "website_url": "https://www.segwayfun.uk/blogs/latest-news",
+      "description": "Get latest news about Hoverboards, Electric scooters, attachments and ninebots. Swegwayfun is innovator and the #1 brand of electric e-rideables from Hoverboards to e-bikes, E-gokarts and scooters.",
+      "followers": {
+        "facebook": 5800,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5053390.jpg?t=1622619352"
+    },
+    {
+      "title": "Segway Fun Rome",
+      "feed_url": "https://www.segwayfunrome.com/feed/",
+      "website_url": "https://www.segwayfunrome.com/blog/",
+      "description": "Segway Fun Rome is an effortless way to see the City with Rome segway tours. Follow to get updates about the tours and the segway fun.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5053251.jpg?t=1622619380"
+    },
+    {
+      "title": "Segway Sights Blog",
+      "feed_url": "https://segwaysights.com/blog/feed/",
+      "website_url": "https://segwaysights.com/blog/",
+      "description": "We are a Segway tour company. We deliver outstanding tour experiences. Follow to keep up with our blog.",
+      "followers": {
+        "facebook": 338,
+        "instagram": 301
+      },
+      "image_url": "https://i1.feedspot.com/5053189.jpg?t=1622619385"
+    }
+  ]
+}

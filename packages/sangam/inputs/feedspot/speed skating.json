@@ -1,0 +1,37 @@
+{
+  "category": "Speed Skating",
+  "source_url": "https://rss.feedspot.com/speed_skating_rss_feeds",
+  "feeds": [
+    {
+      "title": "NorthShore Inline Marathon Blog",
+      "feed_url": "https://www.northshoreinline.com/blog-feed.xml",
+      "website_url": "https://www.northshoreinline.com/blog",
+      "description": "As you prepare for the NorthShore race series, check out our blog for skating, running, and skiing advice. NorthShore Inline Marathon was launched in the year 1996. Our mission is to professionally produce inline skating and rollerskating and to host events and competitions that are inviting and attractive to our local community",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 711,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/5411993.jpg?t=1655554831"
+    },
+    {
+      "title": "Hamilton Speed Skating Club Blog",
+      "feed_url": "https://hamiltonspeedskating.ca/feed/",
+      "website_url": "https://hamiltonspeedskating.ca/blog/",
+      "description": "Hamilton Speed Skating Club began in October 2004. Activities in our club involve a mix of skills development for a general well-rounded skating technique and racing training to prepare participants for race meets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411995.jpg?t=1655556182"
+    },
+    {
+      "title": "Evolution Speed Skating Blog",
+      "feed_url": "https://evolutionspeedskating.eu/feed/",
+      "website_url": "https://evolutionspeedskating.eu/blog-en/",
+      "description": "Through its blog, Evolution Speed Skating disseminates information on the sport's rules and equipment. I am M\u00e1rton Tamus. Evolution Speed Skating was incorporated in 2011. The goal is to make high-quality speed skating equipment and to ensure that the skates and all equipment live to the highest possible level and last a long time.",
+      "followers": {
+        "facebook": 797,
+        "instagram": 608
+      },
+      "image_url": "https://i1.feedspot.com/5411990.jpg?t=1655550772"
+    }
+  ]
+}

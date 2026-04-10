@@ -1,0 +1,75 @@
+{
+  "category": "Hydrology",
+  "source_url": "https://rss.feedspot.com/hydrology_rss_feeds",
+  "feeds": [
+    {
+      "title": "AboutHydrology",
+      "feed_url": "http://abouthydrology.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://abouthydrology.blogspot.com/",
+      "description": "My reflections and notes about hydrology and being a hydrologist in academia. The daily evolution of my work. Especially for my students, but also for anyone with the patience to read them.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4977088.jpg?t=1622022316"
+    },
+    {
+      "title": "Hatari Labs Blog",
+      "feed_url": "https://hatarilabs.com/ih-en?format=RSS",
+      "website_url": "https://hatarilabs.com/ih-en",
+      "description": "HatariLabs is an initiative focused on bringing you the newest information related to the use of different software related to water and the environment.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4977116.jpg?t=1622022160"
+    },
+    {
+      "title": "tonyladson",
+      "feed_url": "https://tonyladson.wordpress.com/feed/",
+      "website_url": "https://tonyladson.wordpress.com/",
+      "description": "Tony Ladson has 30 years experience in hydrology and river management and has worked on projects throughout Australia and in the US, Taiwan and PNG. He has a PhD from the University of Melbourne and a Master of Science from the University of Minnesota.",
+      "followers": {
+        "twitter": 139
+      },
+      "image_url": "https://i1.feedspot.com/4977109.jpg?t=1622022206"
+    },
+    {
+      "title": "Enzygo",
+      "feed_url": "https://enzygo.com/feed/",
+      "website_url": "https://enzygo.com/news/",
+      "description": "Enzygo is Environmental Consultancy working in Waste, Planning, Environmental Permitting, Hydrology & Flood Risk, Hydrogeology, Landscape, Traffic, Acoustics, & Ecology. Keep up to date with the latest news from Enzygo.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4977137.jpg?t=1622022357"
+    },
+    {
+      "title": "WEHA LABS",
+      "feed_url": "https://agualabs.edublogs.org/feed/",
+      "website_url": "https://agualabs.edublogs.org/",
+      "description": "Welcome to a brand new blog called Agua Labs by Dr. Kedir Mohammed who has a Ph.D. degree in Environmental earth science- Integrated hydrogeologic modeling.",
+      "followers": {
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4979624.jpg?t=1622022350"
+    },
+    {
+      "title": "Hidden Hydrology Blog",
+      "feed_url": "https://www.hiddenhydrology.org/feed/",
+      "website_url": "https://www.hiddenhydrology.org/blog/",
+      "description": "Hidden Hydrology, a resource for exploring lost rivers, buried creeks and disappeared streams in urban areas and reconnecting historic ecology to the modern metropolis. Exploring lost rivers, buried creeks & disappeared streams. Connecting historic ecology and modern metropolis.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4977112.jpg?t=1622022181"
+    },
+    {
+      "title": "Mountain hydrology",
+      "feed_url": "https://mountainhydrology.org/feed/",
+      "website_url": "https://mountainhydrology.org/category/our-news/",
+      "description": "Studying the intricate interconnection between mountains, climate, water cycle, social impacts and more.",
+      "followers": {
+        "twitter": 151
+      },
+      "image_url": "https://i1.feedspot.com/4977151.jpg?t=1622022165"
+    }
+  ]
+}

@@ -1,0 +1,805 @@
+{
+  "category": "Sports Medicine",
+  "source_url": "https://rss.feedspot.com/sports_medicine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mike Reinold Blog",
+      "feed_url": "https://mikereinold.com/feed/",
+      "website_url": "https://mikereinold.com/blog/",
+      "description": "Mike Reinold's award-winning blog for physical therapy, fitness, and sports performance training articles, how-to videos, and more. Mike is a physical therapist, strength coach, and performance enhancement specialist. Stay informed and motivated to exercise.",
+      "followers": {
+        "facebook": 111800,
+        "twitter": 32200,
+        "instagram": 126900
+      },
+      "image_url": "https://i1.feedspot.com/4584832.jpg?t=1613468966"
+    },
+    {
+      "title": "Foothills Sports Medicine Physical Therapy Blog",
+      "feed_url": "https://foothillsrehab.com/feed/",
+      "website_url": "https://foothillsrehab.com/blog/",
+      "description": "We're dedicated to providing hands-on physical therapy with integrity and accountability, to ensure the best possible patient results. Whether you've suffered a sports injury, were injured at work, or hurt in an auto accident, our physical therapists will get you back to doing the things you love.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 382,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4802520.jpg?t=1610113750"
+    },
+    {
+      "title": "ScienceDaily - Sports Medicine News",
+      "feed_url": "https://www.sciencedaily.com/rss/health_medicine/sports_medicine.xml",
+      "website_url": "https://www.sciencedaily.com/news/health_medicine/sports_medicine/",
+      "description": "Read the latest research on competitive and recreational sports, including information on the occurrence and treatment of sports injuries.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 306500
+      },
+      "image_url": "https://i1.feedspot.com/4803208.jpg?t=1610113859"
+    },
+    {
+      "title": "The British Journal of Sports Medicine Blog",
+      "feed_url": "https://blogs.bmj.com/bjsm/feed/",
+      "website_url": "https://blogs.bmj.com/bjsm/",
+      "description": "BJSM is the leading, peer-reviewed journal in sports medicine, with additional multimedia resources. From the latest research on sports injuries to experiences & insights of those working at the coalface of the Sport & Exercise world, we aim to provide cutting-edge content to the Sport & Exercise Medicine community around the world.",
+      "followers": {
+        "facebook": 135800,
+        "twitter": 103700,
+        "instagram": 96900
+      },
+      "image_url": "https://i1.feedspot.com/1562366.jpg?t=1628152573"
+    },
+    {
+      "title": "Medical.Net - Sports Medicine News Feed",
+      "feed_url": "https://www.news-medical.net/tag/feed/Sports-Medicine.aspx",
+      "website_url": "https://www.news-medical.net/?tag=/Sports-Medicine",
+      "description": "News-Medical.Net aims to segment, profile and distribute medical news to the widest possible audience of potential beneficiaries worldwide and to provide a forum for ideas, debate and learning, and to facilitate interaction between all parts of the medical health sciences community worldwide.",
+      "followers": {
+        "facebook": 254300,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4803212.jpg?t=1610113889"
+    },
+    {
+      "title": "Clinics in Sports Medicine",
+      "feed_url": "https://www.sportsmed.theclinics.com/current.rss",
+      "website_url": "https://www.sportsmed.theclinics.com/inpress",
+      "description": "Clinics in Sports Medicine offers the latest in patient management trends and updates on the newest advances in the field.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1562368.jpg?t=1610114136"
+    },
+    {
+      "title": "Science for Sport Blog",
+      "feed_url": "https://www.scienceforsport.com/feed/",
+      "website_url": "https://www.scienceforsport.com/blog/",
+      "description": "Science for Sport is a company that provides science-based information, education, and consultancy services to sports coaches and athletes. Their blog provides information and advice on various topics related to sports science, including physiology, nutrition, and psychology.",
+      "followers": {
+        "facebook": 177400,
+        "twitter": 31200,
+        "instagram": 358500
+      },
+      "image_url": "https://i1.feedspot.com/4952257.jpg?t=1658741245"
+    },
+    {
+      "title": "Sports Medicine Review Blog",
+      "feed_url": "https://www.sportsmedreview.com/feed/",
+      "website_url": "https://www.sportsmedreview.com/blog/",
+      "description": "A weekly blog on contemporary, exciting, and relevant topics in sports medicine. We cover content for physicians, athletic trainers, physical therapists, coaches, and the entire sports medicine team. Sports Medicine Review is a website dedicated to all things primary care sports medicine.",
+      "followers": {
+        "facebook": 22500,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5305652.jpg?t=1627387186"
+    },
+    {
+      "title": "Physio Logic Blog",
+      "feed_url": "https://physiologicnyc.com/blog/feed/",
+      "website_url": "https://physiologicnyc.com/blog/",
+      "description": "Located in Downtown Brooklyn, Physio Logic offers sports medicine, integrative medicine, physical therapy, chiropractic, medical massage, acupuncture, nutrition, and Pilates. Part of Physio Logic's mission is to educate and empower patients to live healthier lives and put a stronger emphasis on holistic wellness.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 159,
+        "instagram": 10500
+      },
+      "image_url": "https://i1.feedspot.com/4803066.jpg?t=1610114289"
+    },
+    {
+      "title": "Dr. David Geier Sports Medicine Simplified Blog",
+      "feed_url": "https://drdavidgeier.com/feed/",
+      "website_url": "https://drdavidgeier.com/injury-blog/",
+      "description": "Orthopedic surgeon, sports medicine specialist and author of That's Gotta Hurt, providing education and commentary on sports and exercise injuries, injury treatments and prevention for athletes and active people so you can stay healthy and perform your best.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 9000
+      },
+      "image_url": "https://i1.feedspot.com/4802620.jpg?t=1610113929"
+    },
+    {
+      "title": "Dynamic Sports Medicine Blog",
+      "feed_url": "http://dynamicsportsmedicine.com/feed/",
+      "website_url": "http://dynamicsportsmedicine.com/blog/",
+      "description": "The latest news to keep your mind & body fit. Covers a range of Sports Medicine topics, with a focus on Athletes, Fitness, Health, Sports Injuries, Preventing Injury, and Sports Performance. We are leaders in sports medicine technology & sports injury rehabilitation with Texas.",
+      "followers": {
+        "facebook": 2800,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5305664.jpg?t=1627450349"
+    },
+    {
+      "title": "Jaffe Sports Medicine",
+      "feed_url": "https://jaffesportsmedicine.com/feed/",
+      "website_url": "https://jaffesportsmedicine.com/blog/",
+      "description": "Features articles that have to do exclusively with Sports Medicine. Jaffe Sports Medicine is a medical practice with board-certified physicians in Physical Medicine & Rehabilitation, Orthopedic Surgeons, and specialists in Interventional Pain Management.",
+      "followers": {
+        "facebook": 728,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5305662.jpg?t=1627384283"
+    },
+    {
+      "title": "US Center for Sports Medicine",
+      "feed_url": "http://uscenterforsportsmedicine.com/blog/feed/",
+      "website_url": "http://uscenterforsportsmedicine.com/blog/",
+      "description": "Whether you're an athlete of amateur or renowned status a patient, coach, administrator you'll find that our staff of physicians, registered nurses, technicians, support specialists, and office personnel are all committed to your well-being and satisfaction.",
+      "followers": {
+        "twitter": 21
+      },
+      "image_url": "https://i1.feedspot.com/4803306.jpg?t=1610114327"
+    },
+    {
+      "title": "Plancher Orthopedics",
+      "feed_url": "https://plancherortho.com/feed/",
+      "website_url": "https://plancherortho.com/news/",
+      "description": "Plancher Orthopaedics & Sports Medicine offers advice, relief from pain, and a return to activities. Following an initial evaluation, we employ the latest techniques and technology for diagnosis, treatment and recovery.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4802768.jpg?t=1610114331"
+    },
+    {
+      "title": "Hampton Roads Orthopaedics and Sports Medicine Blog",
+      "feed_url": "https://www.hrosm.com/blog/feed/",
+      "website_url": "https://www.hrosm.com/blog/",
+      "description": "Hampton Roads Orthopaedics and Sports Medicine in Newport News and Williamsburg Virginia - Spine specialist, Innovative procedures and on-site technology.",
+      "followers": {
+        "facebook": 5000,
+        "twitter": 1400,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4802580.jpg?t=1610114441"
+    },
+    {
+      "title": "South Carolina Sports Medicine Blog",
+      "feed_url": "https://scsportsmedicine.com/feed",
+      "website_url": "https://scsportsmedicine.com/blog",
+      "description": "Get expertise advice on sports medicine, knee surgery, shoulder surgery, arthroscopic surgery, hand surgery, surgery of the upper and lower extremities, reconstructive joint replacement, and surgical and nonoperative treatment of the spine.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 53
+      },
+      "image_url": "https://i1.feedspot.com/4803330.jpg?t=1610114459"
+    },
+    {
+      "title": "Collegiate Sports Medicine Blog",
+      "feed_url": "https://collegiatesportsmedicine.ca/feed/",
+      "website_url": "https://collegiatesportsmedicine.ca/sports-medicine-blog-2/",
+      "description": "Collegiate Sports Medicine, Sports Medicine Blog: Find Information about Foot Pain, Ankle Sprians, Elbow Pain, Knee Pain, Shoulder Pain, Hip Pain, and more.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4802696.jpg?t=1610114468"
+    },
+    {
+      "title": "Tarpon Orthopedics | Orthopedic Surgery & Sports Medicine",
+      "feed_url": "https://tarponpa.com/category/blog/feed/",
+      "website_url": "https://tarponpa.com/category/blog/",
+      "description": "Our practice is devoted to helping families, weekend warriors, and athletes in the Dallas area with the best possible joint and spinal care services available.",
+      "followers": {
+        "facebook": 568
+      },
+      "image_url": "https://i1.feedspot.com/4802717.jpg?t=1610114475"
+    },
+    {
+      "title": "Louisville Bones \u00bb Joint Pain",
+      "feed_url": "https://louisvillebones.com/category/arthritis-2/joint-pains-arthritis-2/feed/",
+      "website_url": "https://louisvillebones.com/category/arthritis-2/joint-pains-arthritis-2/",
+      "description": "Louisville Orthopaedic Specialistshas a Sports Medicine Blog covering the latest research in orthopedic medicine and sports medicine.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 65
+      },
+      "image_url": "https://i1.feedspot.com/4802495.jpg?t=1610114479"
+    },
+    {
+      "title": "Dr. Julie",
+      "feed_url": "https://drjuliewellness.com/feed/",
+      "website_url": "https://drjuliewellness.com/",
+      "description": "As a family Chiropractor, I offer natural treatments to relieve your pain and help you achieve optimal health. An athlete myself, I also practice Sports Medicine to guide you in healing and preventing injury, and improving your athletic performance.",
+      "followers": {
+        "facebook": 54,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4803076.jpg?t=1610114558"
+    },
+    {
+      "title": "Sports Medicine",
+      "feed_url": "https://www.vpsmedicine.co.uk/advice?format=rss",
+      "website_url": "https://www.vpsmedicine.co.uk/advice",
+      "description": "Our award-winning therapists deal with a range of conditions including back pain, shoulder issues, sports injuries, runner's knee, and more. We also help with improved athletic performance, running gait analysis, stretching & strengthening advice, lifestyle & dietary advice, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5385226.jpg?t=1648281667"
+    },
+    {
+      "title": "Dr. Bill Sterett Blog",
+      "feed_url": "https://drsterett.com/sports-medicine-blog?format=rss",
+      "website_url": "https://drsterett.com/sports-medicine-blog",
+      "description": "Dr. Sterett gives advice and tips on Sports Medicine Topics in the blog section. Dr. Sterett is dual-fellowship trained with an added certificate in sports medicine. His training and experience in treating knee and shoulder injuries surgically make him a top expert in repairing injuries to this vital part of the body.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 1000,
+        "instagram": 734
+      },
+      "image_url": "https://i1.feedspot.com/5385218.jpg?t=1648292810"
+    },
+    {
+      "title": "Rebalance Sports Medicine Blog",
+      "feed_url": "https://rebalancetoronto.com/feed/",
+      "website_url": "https://rebalancetoronto.com/blog/",
+      "description": "This blog includes posts from our therapists on common injuries we treat, exercises, and tips to help prevent injury. Rebalance Sports Medicine is a multidisciplinary sports medicine clinic. Our team of Physiotherapists, Sports Medicine Physicians, Chiropractors, Registered Massage Therapists, Naturopaths, and Pilates instructors work together to provide you with comprehensive care and cutting-edge treatment solutions.",
+      "followers": {
+        "facebook": 440,
+        "twitter": 336,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5385231.jpg?t=1648280635"
+    },
+    {
+      "title": "Stay Tuned Sports Medicine Blog",
+      "feed_url": "https://www.staytuned.com.au/feed/",
+      "website_url": "https://www.staytuned.com.au/blog/",
+      "description": "Established in 1999, we are dedicated to helping people of all ages and abilities to achieve their best health, fitness, and quality of life possible. We have experienced health professionals in various modalities committed to treating, educating, and motivating each individual on their journey to health and wellbeing, whether you are recovering from surgery or an Olympic Athlete preparing to win a gold medal.",
+      "followers": {
+        "facebook": 1600,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5385232.jpg?t=1648280647"
+    },
+    {
+      "title": "Shasta Orthopaedics \u00bb Sports Medicine",
+      "feed_url": "https://shastaortho.com/category/sports-medicine/feed/",
+      "website_url": "https://shastaortho.com/category/sports-medicine/",
+      "description": "Shasta Orthopaedics shares news articles about sports medicine in the following section of the blog. Since 1993, Shasta Orthopaedics has grown to become the largest orthopedic and sports medicine practice in the North State region of California. We are dedicated to a complete approach that combines the expertise of a diverse team of specialists to determine and deliver orthopedic care, including the latest proven surgical and non-surgical techniques.",
+      "followers": {
+        "twitter": 910
+      },
+      "image_url": "https://i1.feedspot.com/5385234.jpg?t=1648280656"
+    },
+    {
+      "title": "Medical Xpress \u00bb Sports Kinesiology News",
+      "feed_url": "https://medicalxpress.com/rss-feed/sports-kinesiology-news/",
+      "website_url": "https://medicalxpress.com/sports-kinesiology-news/",
+      "description": "Featuring the latest news on sports medicine and kinesiology. Medical Xpress provides medical and health news with the most comprehensive coverage in the fields of neuroscience, cardiology, cancer, HIV/AIDS, psychology, psychiatry, dentistry, genetics, diseases and conditions, and medications.",
+      "followers": {
+        "facebook": 183500,
+        "twitter": 170600
+      },
+      "image_url": "https://i1.feedspot.com/5316677.jpg?t=1630305045"
+    },
+    {
+      "title": "Orthopedic & Sports Medicine Blog",
+      "feed_url": "https://orthosportsmed.com/feed/",
+      "website_url": "https://orthosportsmed.com/blog/",
+      "description": "Our expert physicians provide leading-edge, comprehensive care in the diagnosis and treatment of orthopedic conditions, including total joint replacement and sports medicine. Our mission is to return our patients to pain-free mobility and full strength as quickly and as painlessly as possible using both surgical and non-surgical orthopedic procedures.",
+      "followers": {
+        "facebook": 195
+      },
+      "image_url": "https://i1.feedspot.com/5385207.jpg?t=1648280532"
+    },
+    {
+      "title": "Charleston Sports Medicine Blog",
+      "feed_url": "https://www.charlestonsportsmed.com/feed/",
+      "website_url": "https://www.charlestonsportsmed.com/blog/",
+      "description": "Charleston Sports Medicine's founding physician, Bright McConnell, III, MD, is board-certified in orthopedic surgery and specializes in sports and regenerative medicine. He uses the latest treatments and technologies including minimally invasive procedures and surgical solutions to treat general orthopedic, sports injuries, and degenerative disease and specializes in the treatment of knee and shoulder disorders.",
+      "followers": {
+        "facebook": 492,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5385214.jpg?t=1648298223"
+    },
+    {
+      "title": "Tennessee Sports Medicine Blog",
+      "feed_url": "https://tennsportsmed.com/feed/",
+      "website_url": "https://tennsportsmed.com/health-blog/",
+      "description": "For all the latest on health and wellness tips, industry insights, and more, please read our informative blog posts written by our therapists. At Tennessee Sports Medicine Group, our goal is to provide you with healing, injury prevention, and pain relief through our unique, customized treatment plans.",
+      "followers": {
+        "facebook": 976,
+        "instagram": 763
+      },
+      "image_url": "https://i1.feedspot.com/5385230.jpg?t=1648293944"
+    },
+    {
+      "title": "NY Orthopedics Blog",
+      "feed_url": "https://newyorkorthopedics.com/blog/feed/",
+      "website_url": "https://newyorkorthopedics.com/blog/",
+      "description": "Get the latest news on new procedures, sports medicine topics, injury prevention, and more from NY Orthopedics on our blog. NY Orthopedics is the premier orthopedic practice serving active New Yorkers of all ages. We offer state-of-the-art facilities at our seven orthopedics practice locations in the New York City area as well as the most advanced surgical techniques, including minimally invasive microscopic and arthroscopic surgeries.",
+      "followers": {
+        "facebook": 453,
+        "twitter": 331
+      },
+      "image_url": "https://i1.feedspot.com/5385209.jpg?t=1648280541"
+    },
+    {
+      "title": "Sports Medicine Research Blog",
+      "feed_url": "https://www.sportsmedres.org/feed/",
+      "website_url": "https://www.sportsmedres.org/blog/",
+      "description": "The mission of SMR is to bridge the gap between research and clinical practice related to sports medicine.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4802552.jpg?t=1610114649"
+    },
+    {
+      "title": "Howard J. Luks, MD Blog",
+      "feed_url": "https://www.howardluksmd.com/blog/feed/",
+      "website_url": "https://www.howardluksmd.com/blog/",
+      "description": "Expert articles on orthopedic surgery, recovery, and sports medicine by Dr. Howard J. Luks, MD",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 62200
+      },
+      "image_url": "https://i1.feedspot.com/4802419.jpg?t=1610113741"
+    },
+    {
+      "title": "Turbulence Training",
+      "feed_url": "http://turbulencetraining.blogspot.com/feeds/posts/default",
+      "website_url": "http://turbulencetraining.blogspot.com/",
+      "description": "Turbulence Training provides workout and lifestyle solutions to busy men and women who want to transform their lives.",
+      "followers": {
+        "facebook": 240700
+      },
+      "image_url": "https://i1.feedspot.com/358288.jpg?t=1610113847"
+    },
+    {
+      "title": "Clinical Journal of Sport Medicine",
+      "feed_url": "https://cjsmblog.com/feed/",
+      "website_url": "https://cjsmblog.com/",
+      "description": "\u200bClinical Journal of Sport Medicine is an international refereed journal published for clinicians with a primary interest in sports medicine practice. The journal publishes original research and reviews covering diagnostics, therapeutics, and rehabilitation in healthy and physically challenged individuals of all ages and levels of sport and exercise participation.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 19600
+      },
+      "image_url": "https://i1.feedspot.com/4802515.jpg?t=1610113855"
+    },
+    {
+      "title": "Bradpilon.com - Eat Stop Eat | Intermittent fasting | Weight Loss | The pursuit of happiness",
+      "feed_url": "https://bradpilon.com/feed/",
+      "website_url": "https://bradpilon.com/",
+      "description": "Brad is an expert on intermittent fasting as it relates to losing weight and gaining muscle. He's also the author of Eat Stop Eat.",
+      "followers": {
+        "facebook": 15400,
+        "twitter": 16600,
+        "instagram": 7600
+      },
+      "image_url": "https://i1.feedspot.com/349951.jpg?t=1610113927"
+    },
+    {
+      "title": "Dr. Yessis SportLab",
+      "feed_url": "https://doctoryessis.com/resources/articles/feed/",
+      "website_url": "https://doctoryessis.com/resources/articles/",
+      "description": "Dr. Michael Yessis received his Ph.D. from the University of Southern California and his B.S. and M.S. from City University of New York. He is president of Sports Training, Inc., a diverse sports and fitness company. Dr. Yessis is also Professor Emeritus at California State University, Fullerton, where he was a multi-sports specialist in biomechanics and sports conditioning and training.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4802490.jpg?t=1610114296"
+    },
+    {
+      "title": "Spine and Sports Medicine - Pain Management Blog",
+      "feed_url": "https://www.spineandsports.com/feed/",
+      "website_url": "https://www.spineandsports.com/blog/",
+      "description": "We offer innovative soft-tissue treatments for lengthening and strengthening muscles, research-based rehabilitation protocols and advanced chiropractic manipulative techniques all under one roof.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/4802394.jpg?t=1610114588"
+    },
+    {
+      "title": "Football Medicine",
+      "feed_url": "https://footballmedicine.net/blog/feed/",
+      "website_url": "https://footballmedicine.net/blog/",
+      "description": "Get to know all the news from Football Medicine. We have many interesting articles regarding typical football injuries and recovery methods.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 10200,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/4803022.jpg?t=1610114317"
+    },
+    {
+      "title": "Boston Sports Medicine",
+      "feed_url": "https://www.bostonsportsmed.com/blog/feed/",
+      "website_url": "https://www.bostonsportsmed.com/blog/",
+      "description": "Best Boston physical therapy clinic and physical therapist in Boston.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 441
+      },
+      "image_url": "https://i1.feedspot.com/4803301.jpg?t=1610114322"
+    },
+    {
+      "title": "Carolina Hand Sports Medicine",
+      "feed_url": "https://carolinahand.com/blog/feed/",
+      "website_url": "https://carolinahand.com/blog/",
+      "description": "Carolina Hand and Sports Medicine is dedicated to your overall well-being. Keep up with our latest blog posts about how to maintain mobility and well-being.",
+      "followers": {
+        "facebook": 424
+      },
+      "image_url": "https://i1.feedspot.com/4802704.jpg?t=1610114483"
+    },
+    {
+      "title": "Move to Improve",
+      "feed_url": "http://aclprevention.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://aclprevention.blogspot.com/",
+      "description": "Dr. Nessler shares his calling and passion for injury prevention and performance enhancement using the most current research and technologies available.",
+      "followers": {
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4803286.jpg?t=1610114531"
+    },
+    {
+      "title": "POWERING THROUGH",
+      "feed_url": "https://feeds.feedburner.com/PoweringThrough",
+      "website_url": "http://williamwayland.blogspot.com/",
+      "description": "A blog about strength and conditioning for Chelmsford Essex based coach William Wayland, discussing health, fitness, Combat Sports, MMA, BJJ and life!",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 15200
+      },
+      "image_url": "https://i1.feedspot.com/4802488.jpg?t=1610114538"
+    },
+    {
+      "title": "Jersey Shore Sports Medicine | News & Events",
+      "feed_url": "https://jerseyshoresportsmedicine.com/news-blog/feed/",
+      "website_url": "https://jerseyshoresportsmedicine.com/news-blog/",
+      "description": "With a talent for putting patients at ease and an expertise in the fine details of orthopedics and sports medicine, Dr. Brian Sokalsky is the physician at the helm of Jersey Shore Sports Medicine.",
+      "followers": {
+        "facebook": 334,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/4803053.jpg?t=1610114554"
+    },
+    {
+      "title": "Science & Medicine in Sports",
+      "feed_url": "http://georgenassis.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://georgenassis.blogspot.com/",
+      "description": "Translating science into effective practice.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4803277.jpg?t=1610114565"
+    },
+    {
+      "title": "Kensington Physio & Sports Medicine",
+      "feed_url": "https://www.kenphysio.com/blog/feed/",
+      "website_url": "https://www.kenphysio.com/blog/",
+      "description": "We are a group of practices in Central and West London, including Chelsea, Kensington, Notting Hill and Wandsworth. We have a long, proud history of treating and rehabilitating local patients and Olympic athletes. Welcome to the Kensington Physio blog. Here you will find the latest company news, information on injury and recovery, and other advice. Take a look today!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 793,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4803322.jpg?t=1610114574"
+    },
+    {
+      "title": "CISM Blog",
+      "feed_url": "https://www.cismpt.com/blog?format=rss",
+      "website_url": "https://www.cismpt.com/blog",
+      "description": "A blog for articles and information written by the Physical Therapists at Colorado Institute of Sports Medicine in Colorado Springs, CO. Our highly educated and experienced team work with each of our patients to set up an individualized therapy plan. We take the time to involve each patient in the decision-making process and help set realistic goals for you or your loved ones to return to the highest level of function possible.",
+      "followers": {
+        "facebook": 880,
+        "twitter": 19,
+        "instagram": 621
+      },
+      "image_url": "https://i1.feedspot.com/5385235.jpg?t=1648280660"
+    },
+    {
+      "title": "Gymnastics Medicine Blog",
+      "feed_url": "https://gymnasticsmedicine.org/feed/",
+      "website_url": "https://gymnasticsmedicine.org/blog/",
+      "description": "We are a nonprofit comprised of a collaborative team of specialized healthcare experts who drive research, promote evidence-based outcomes, and provide education around gymnastics-specific injuries by transforming the diagnosis, treatment, and injury preventative care of gymnasts.",
+      "followers": {
+        "facebook": 792,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5385237.jpg?t=1648289565"
+    },
+    {
+      "title": "Bayside Sports Medicine Group Blog",
+      "feed_url": "https://www.baysidesportsmedicinegroup.com.au/blog-feed.xml",
+      "website_url": "https://www.baysidesportsmedicinegroup.com.au/blog-1",
+      "description": "Follow and read top tips, information, and resources from our highly qualified physiotherapists, massage therapists, and dieticians. Bayside Sports Medicine Group provides expert, focused treatment for the individual. Our goal is to get you back doing what you love as quickly as possible. Our team of highly qualified allied health professionals specializes in relief from injury, pain management, rehabilitation and strength, and conditioning.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 870
+      },
+      "image_url": "https://i1.feedspot.com/5385240.jpg?t=1648290106"
+    },
+    {
+      "title": "Reagan Integrated Blog",
+      "feed_url": "https://www.reagansportsmed.com/health-blog/feed/",
+      "website_url": "https://www.reagansportsmed.com/health-blog/",
+      "description": "This blog will also be used to post updates about our practice and keep in touch with our patients. We invite you to share this information with your friends and family. At Reagan Integrated Sports Medicine, we understand sitting out is no fun. We are dedicated to helping you get past the pain and back to the life you love. We offer a unique array of techniques and services specifically assembled to get you better without surgery.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5385211.jpg?t=1648292518"
+    },
+    {
+      "title": "Strive Blog",
+      "feed_url": "https://striveto.ca/feed/",
+      "website_url": "https://striveto.ca/the-blog/",
+      "description": "Strive's articles focus on wellness and improving quality of life through exercise, fostering a positive mindset, and spreading awareness. At Strive, we are a highly-skilled, multidisciplinary team that is dedicated to helping restore and improve your ability to move and feel better. Fostering a therapeutic relationship is fundamental in our approach to health care.",
+      "followers": {
+        "facebook": 52,
+        "twitter": 11,
+        "instagram": 874
+      },
+      "image_url": "https://i1.feedspot.com/5385215.jpg?t=1648280569"
+    },
+    {
+      "title": "All-Pro Blog",
+      "feed_url": "https://www.allproorthopedics.com/feed/",
+      "website_url": "https://www.allproorthopedics.com/blog/",
+      "description": "All-Pro Orthopedics & Sports Medicine is a medical office with locations in Pembroke Pines, Hollywood, and Hialeah Florida. Our practice specializes in Hip replacement, Shoulder and Reverse shoulder replacement, Knee Arthroscopy, and Ligament reconstruction surgery. All-Pro Orthopedics also offers Sports Medicine for adults as well as youths.",
+      "followers": {
+        "facebook": 991,
+        "instagram": 432
+      },
+      "image_url": "https://i1.feedspot.com/5385229.jpg?t=1648293177"
+    },
+    {
+      "title": "3D Sports Med Blog",
+      "feed_url": "https://www.3dsportsmed.com/feed/",
+      "website_url": "https://www.3dsportsmed.com/blog/",
+      "description": "No matter what level athlete or fitness enthusiast you are, 3D Sports Medicine can help you recover from an athletic injury and learn how to prevent the injury from happening again. Dr. David Dominguez is a highly-skilled, Fellow-shipped trained Orthopaedic Surgeon in sports medicine.",
+      "followers": {
+        "facebook": 887,
+        "instagram": 437
+      },
+      "image_url": "https://i1.feedspot.com/5385210.jpg?t=1648280544"
+    },
+    {
+      "title": "Center for Advanced Orthopaedics Blog",
+      "feed_url": "https://caoortho.com/rss/blog",
+      "website_url": "https://caoortho.com/blog",
+      "description": "The blog of Center for Advanced Orthopaedics and Sports Medicine, a division of the Centers for Advanced Orthopaedics. Established in 1982, the Center for Advanced Orthopedics is a medical practice devoted to the diagnosis and treatment of injuries and diseases of the body's bones, muscles, joints, ligaments, and tendons.",
+      "followers": {
+        "facebook": 99
+      },
+      "image_url": "https://i1.feedspot.com/5385219.jpg?t=1648294045"
+    },
+    {
+      "title": "Progressive Sports Medicine Blog",
+      "feed_url": "https://progressivesportsmedicine.ca/feed/",
+      "website_url": "https://progressivesportsmedicine.ca/health-blog/",
+      "description": "From the day Progressive Sports Medicine opened its doors we have worked with professional athletes from all levels and sports with great success. We treat all conditions that fall under our extensive scope of practice ranging from orthopedic injuries to everyday maintenance care. Our therapists and doctors assess, treat, and rehabilitate everything from minor injuries to a more serious debilitating condition.",
+      "followers": {
+        "facebook": 575,
+        "twitter": 2300,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5385236.jpg?t=1648280664"
+    },
+    {
+      "title": "USA Sports Medicine Blog",
+      "feed_url": "https://usasportsmedicine.com/feed/",
+      "website_url": "https://usasportsmedicine.com/blog",
+      "description": "USA Sports Medicine's blog has several articles dedicated to a variety of topics. Learn more and read on here. USA Sports Medicine has an integrated, multidisciplinary team approach from doctors with different types of medical training. We offer medical, alternative, and regenerative options that give our patients the best chance of obtaining their healthcare goals, not just mask their symptoms.",
+      "followers": {
+        "facebook": 182
+      },
+      "image_url": "https://i1.feedspot.com/5385212.jpg?t=1648280553"
+    },
+    {
+      "title": "Sports Medicine Associates Blog",
+      "feed_url": "https://www.sportsmedsa.com/blog?format=rss",
+      "website_url": "https://www.sportsmedsa.com/blog",
+      "description": "Keep up with the Doctors of Sports Medicine Associates of San Antonio. Learn about SMASA in the media, new partnerships, and information about specific sports-related injuries. As experts in our field, we treat a variety of professional and amateur athletes, occupational injuries in addition to concussion therapies. In addition to treating athletic injuries and chronic problems, we make sure we give you all the education you need to prevent more injuries in the future.",
+      "followers": {
+        "facebook": 3400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5385213.jpg?t=1648280556"
+    },
+    {
+      "title": "Orthopedic Associates \u00bb Sports Medicine",
+      "feed_url": "https://orthopedicassociates.org/category/sports-medicine/feed/",
+      "website_url": "https://orthopedicassociates.org/category/sports-medicine/",
+      "description": "The following section of Orthopedic Associates is dedicated to Sports Medicine. Since 1976, Orthopedic Associates has provided all-inclusive orthopedic services and expertise to Flower Mound and Denton. We offer a full spectrum of musculoskeletal care, along with in-house physical therapy, state-of-the-art technology including our digital imaging and open MRI, and an on-site surgical center for more patient convenience.",
+      "followers": {
+        "facebook": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5385216.jpg?t=1648280574"
+    },
+    {
+      "title": "Sports Medicine Weekly Blog",
+      "feed_url": "https://sportsmedicineweekly.com/product-category/blog/feed/",
+      "website_url": "https://sportsmedicineweekly.com/product-category/blog/",
+      "description": "SportsMedicineWeekly is a half hour ESPN radio talk show that focuses on the most recent and relevant sports injuries that affect athletes ranging from the professional to the weekend warrior.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4802596.jpg?t=1610113755"
+    },
+    {
+      "title": "Central Chiropractic & Sports Medicine Blog",
+      "feed_url": "https://cdn.vortala.com/gen/blogs-2926-feed.xml",
+      "website_url": "https://www.centralchiropractor.com/blog/",
+      "description": "Our primary focus in chiropractic is to optimize and harmonize the 'central' nervous system. We feature gentle techniques and life modification that deliver results.",
+      "followers": {
+        "facebook": 236,
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/4802741.jpg?t=1610114551"
+    },
+    {
+      "title": "Croydon Sports Injury Clinic Ltd Blog",
+      "feed_url": "https://cdn.vortala.com/gen/blogs-1379-feed.xml",
+      "website_url": "https://www.croydonsportsinjuryclinic.co.uk/blog/",
+      "description": "Croydon Chiropractor, Osteopath and Physiotherapists bring combination therapy for a whole body approach to wellness.",
+      "followers": {
+        "facebook": 962,
+        "twitter": 118
+      },
+      "image_url": "https://i1.feedspot.com/4803379.jpg?t=1610114578"
+    },
+    {
+      "title": "SportsMD Blog",
+      "feed_url": "https://www.sportsmd.com/blog/feed/",
+      "website_url": "https://www.sportsmd.com/blog/",
+      "description": "The top resource on Sports Injuries: Prevention, Diagnosis, Treatment, Rehabilitation and how to enhance Sports Performance. Our content was created by the top sports medicine doctors specifically for athletes.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 17400
+      },
+      "image_url": "https://i1.feedspot.com/5015910.jpg?t=1610113745"
+    },
+    {
+      "title": "Sports Injury Clinic - Preventing Sports Injuries",
+      "feed_url": "https://www.sportsinjuryclinic.net/feed",
+      "website_url": "https://www.sportsinjuryclinic.net/",
+      "description": "Sports injury blog covering sports injury prevention, treatment, motivation and exercises.",
+      "followers": {
+        "facebook": 15300,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4802401.jpg?t=1610113905"
+    },
+    {
+      "title": "Mueller Sports Medicine | Stay In The Game",
+      "feed_url": "https://blog.muellersportsmed.com/rss.xml",
+      "website_url": "https://blog.muellersportsmed.com/",
+      "description": "Mueller Sports Medicine is the global leader in providing braces, supports and sport care to athletes of every level.",
+      "followers": {
+        "facebook": 688200,
+        "twitter": 7700,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4802508.jpg?t=1610113913"
+    },
+    {
+      "title": "Advancing Your Health \u00bb Sports Medicine",
+      "feed_url": "https://advancingyourhealth.org/category/musculoskeletal-health/sports-medicine/feed/",
+      "website_url": "https://aimsportsmedicine.com/aim-blog/",
+      "description": "This section of the blog features articles related to Sports Medicine. Emory Healthcare is the clinical arm of the Robert W. Woodruff Health Sciences Center of Emory University, which focuses on patient care, education of health professionals, research addressing health and illness, and health policies for prevention and treatment of disease.",
+      "followers": {
+        "facebook": 73100,
+        "twitter": 28100
+      },
+      "image_url": "https://i1.feedspot.com/4802570.jpg?t=1613468972"
+    },
+    {
+      "title": "Saudi Journal of Sports Medicine",
+      "feed_url": "https://journals.lww.com/sjsm/pages/default.aspx",
+      "website_url": "https://aimsportsmedicine.com/aim-blog/",
+      "description": "It publishes original articles, both research and review articles, case reports, editorials, 'letters to the editor', abstracts from international and national conferences and symposia, in all fields relevant to sports medicine, including sports orthopedics, sports medicine, sports nutrition, sport psychology, drugs in sports (doping), exercise science, physical activity (exercise) and health.",
+      "followers": {
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/4803178.jpg?t=1610114285"
+    },
+    {
+      "title": "Aim Sports Medicine",
+      "feed_url": "https://aimsportsmedicine.com/feed/",
+      "website_url": "https://aimsportsmedicine.com/aim-blog/",
+      "description": "Learn more about sports medicine conditions, treatment, and wellness tips from our experts. Aim Sports Medicine was borne out of a need to gather the best manual therapists & trainers in the South Bay.",
+      "followers": {
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5305661.jpg?t=1627383175"
+    },
+    {
+      "title": "Newcastle Sports Injury Clinic",
+      "feed_url": "https://www.newcastlesportsinjury.co.uk/news/feed/",
+      "website_url": "https://athletetrainingandhealth.com/blogs/#/",
+      "description": "Newcastle Sports Injury Clinic is one of the UK's leading musculoskeletal injury treatment centres. We built our reputation on our work with elite athletes across a range of sports, and we offer the same top-level treatments and attention to people of all backgrounds, ages and lifestyles. From Olympians to the totally non-sporting, we can help you.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4803366.jpg?t=1610114463"
+    },
+    {
+      "title": "Athlete Training and Health Blog",
+      "feed_url": "https://athletetrainingandhealth.com/feed/",
+      "website_url": "https://athletetrainingandhealth.com/blogs/#/",
+      "description": "The latest blog on sports medicine, sports nutrition, athlete development (youth, student, amateur, collegiate and professional) & sports performance training.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 3000,
+        "instagram": 10400
+      },
+      "image_url": "https://i1.feedspot.com/4803031.jpg?t=1610114472"
+    },
+    {
+      "title": "Medical News Today | Fitness News - Sports Medicine",
+      "feed_url": "https://rss.medicalnewstoday.com/sports_medicine.xml",
+      "website_url": "https://www.medicalnewstoday.com/categories/sports_medicine",
+      "description": "The latest sports medicine and fitness research from prestigious universities and journals throughout the world.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4803217.jpg?t=1610114184"
+    },
+    {
+      "title": "Coastal Orthopedics Blog",
+      "feed_url": "https://coastalorthopedics.com/blog/feed/",
+      "website_url": "https://coastalorthopedics.com/blog/",
+      "description": "Check out educational and informative medical blogs on Health & Nutrition, Orthopedics, Pain Management, Sports Medicine, Physical Therapy and more on Coastal Orthopedics.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 2000,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4698808.jpg?t=1610113921"
+    },
+    {
+      "title": "Elite Sports Medicine + Orthopedics Blog",
+      "feed_url": "https://www.eliteorthopaedic.com/contents/resources/blog/",
+      "website_url": "https://www.eliteorthopaedic.com/contents/resources/blog/",
+      "description": "The mission of Elite Sports Medicine and Orthopaedic Center is to provide unsurpassed orthopaedic care, so that patients may pursue and maintain more healthy and active lifestyles.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 690,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4802610.jpg?t=1610114582"
+    },
+    {
+      "title": "Sports and Ortho Physical Therapy Blog",
+      "feed_url": "https://sportsandortho.net/feed/",
+      "website_url": "https://sportsandortho.net/health-blog/",
+      "description": "Sports and Ortho Physical Therapy and Sports Medicine are here for you to provide pain relief, healing, and injury prevention with custom treatment plans. The only mission they have at their practice is to help you reach your highest physical potential. Treatment plans are individualized for each patient and are aimed toward the achievement of your goals. For all the latest health and wellness tips, industry insights, and more, please read their informative health blog posts!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/5385227.jpg?t=1648280619"
+    },
+    {
+      "title": "Sport Doctor London",
+      "feed_url": "https://sportdoctorlondon.com/feed/",
+      "website_url": "https://sportdoctorlondon.com/",
+      "description": "Here are some topics, discussions, and debates in the world of Sports Medicine. Sports and Exercise Medicine professionals see a variety of injuries and disorders. What we learn from treating athletes also helps us to treat and improve the quality of life for many active individuals.",
+      "followers": {
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/5385208.jpg?t=1648299245"
+    }
+  ]
+}

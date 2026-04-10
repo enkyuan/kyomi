@@ -1,0 +1,51 @@
+{
+  "category": "Bodyboarding",
+  "source_url": "https://rss.feedspot.com/bodyboarding_rss_feeds",
+  "feeds": [
+    {
+      "title": "Surfer Today \u00bb Bodyboarding",
+      "feed_url": "https://www.surfertoday.com/bodyboarding?format=feed&type=rss",
+      "website_url": "https://www.surfertoday.com/bodyboarding",
+      "description": "The latest breaking news from the bodyboarding world. Top stories from bodyboarders and bodyboard competitions. Daily bodyboard news updates. SurferToday.com features the latest news from the world of wave and water sports, including surfing, bodyboarding, skateboarding, kiteboarding, windsurfing, and skimboarding, as well as updated content on environmental issues and surf travel.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 5800,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4969160.jpg?t=1652693370"
+    },
+    {
+      "title": "Morey BodyBoards Blog",
+      "feed_url": "https://moreybodyboards.com/blogs/lets-boogie.atom",
+      "website_url": "https://moreybodyboards.com/blogs/lets-boogie",
+      "description": "The bodyboard blog that gets you all the bodyboarding info you need to get started in the water. Grab your bodyboards to surf in the ocean now. Established by the father of bodyboard Thomas Hugh Morey in 1971, Morey Bodyboards has been offering professional bodyboards, swimfins, and bodyboard accessories for all boogie boarders.",
+      "followers": {
+        "facebook": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5400192.jpg?t=1652436254"
+    },
+    {
+      "title": "Inverted Bodyboarding Blog",
+      "feed_url": "https://www.bodyboardshop.com.au/blogs/news.atom",
+      "website_url": "https://www.bodyboardshop.com.au/blogs/news",
+      "description": "Australian-owned, though home to bodyboarders around the world - Inverted Bodyboarding is the first point of contact for millions of bodyboarders when it comes to information and hardware. A community for bodyboarders built by bodyboarders. Inverted supports the sport we all love by stocking the best in brands and sponsoring the best in athletes & events.",
+      "followers": {
+        "facebook": 73800,
+        "instagram": 67200
+      },
+      "image_url": "https://i1.feedspot.com/5400194.jpg?t=1652436276"
+    },
+    {
+      "title": "eBodyboarding Blog",
+      "feed_url": "https://www.ebodyboarding.com/blogs/bodyboarding-blog.atom",
+      "website_url": "https://www.ebodyboarding.com/blogs/bodyboarding-blog",
+      "description": "Bodyboarding Blog covers every aspect of bodyboarding from how-to, to product reviews, to insights into the sport that started with the boogie board in 1971 and is now one of the most popular ocean sports in the world!",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 2500,
+        "instagram": 15100
+      },
+      "image_url": "https://i1.feedspot.com/5400191.jpg?t=1652436249"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "category": "Car Auction",
+  "source_url": "https://rss.feedspot.com/car_auction_rss_feeds",
+  "feeds": [
+    {
+      "title": "RideSafely News",
+      "feed_url": "https://auction.ridesafely.com/feed/",
+      "website_url": "https://auction.ridesafely.com/news/",
+      "description": "Get the latest in the Auto Auction World, including upcoming auctions of the best deals on used autos and salvage cars on the auction market. We, at RideSafely, believe in assisting our customers at every possible step of the way. Bidding on an auction can seem like a daunting and complicated task, but we are here to tell you that it is not. We believe in creating a process that is easy to understand from beginning to end.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 2000,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/5415396.jpg?t=1656410210"
+    },
+    {
+      "title": "Car Auction Buying Service",
+      "feed_url": "https://carauctionbuyingservice.blogspot.com/feeds/posts/default",
+      "website_url": "https://carauctionbuyingservice.blogspot.com/",
+      "description": "Read the latest blogs and news about car auction on Car Auction Buying Service.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5415398.jpg?t=1656410937"
+    },
+    {
+      "title": "VanDerBrink Auctions Blog",
+      "feed_url": "https://www.vanderbrinkauctions.com/feed/",
+      "website_url": "https://www.vanderbrinkauctions.com/blog/",
+      "description": "VanDerBrink Auctions specializes in collector car parts auctions, older salvage yard liquidations, auto related items, antique tractors, estates and private collections- conducting auctions of all kinds. We also have a proven track record in selling farm land and other real estate at auction.",
+      "followers": {
+        "facebook": 47600,
+        "twitter": 530
+      },
+      "image_url": "https://i1.feedspot.com/5415395.jpg?t=1656410713"
+    },
+    {
+      "title": "Public Auto Auctions Blog",
+      "feed_url": "https://classicvehicleauctions.com/blog/feed/",
+      "website_url": "https://www.carstrucksandboats.com/blog",
+      "description": "Public Auto Auctions, opened in 2001 in Austin, Texas with the vision of helping small charities benefit from car, truck, boat and RV donations. We are committed to finding the right buyer for each vehicle which results in higher resale prices and customer satisfaction. We have a long list of loyal auction clients including dealers, exporters, and individuals.",
+      "followers": {
+        "facebook": 104900
+      },
+      "image_url": "https://i1.feedspot.com/5415397.jpg?t=1671107169"
+    }
+  ]
+}

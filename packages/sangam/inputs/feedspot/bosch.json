@@ -1,0 +1,28 @@
+{
+  "category": "Bosch",
+  "source_url": "https://rss.feedspot.com/bosch_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bosch Press Room",
+      "feed_url": "https://pressroom.boschtools.com/news-releases?pagetemplate=rss",
+      "website_url": "https://pressroom.boschtools.com/",
+      "description": "The Power Tools Division of the Bosch Group is the world market leader for power tools and power tool accessories. Follow this site to know the latest news about power tools and accessories at Bosch.",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 35400
+      },
+      "image_url": "https://i1.feedspot.com/4918861.jpg?t=1620642994"
+    },
+    {
+      "title": "Bosch India Blog",
+      "feed_url": "https://blog.boschindia.com/feed/",
+      "website_url": "https://www.bosch.in/stories/",
+      "description": "Bosch in India is a leading supplier of technology & services in the areas of automotive & industrial technology, consumer goods & building technology.",
+      "followers": {
+        "facebook": 424400,
+        "twitter": 39000
+      },
+      "image_url": "https://i1.feedspot.com/4918713.jpg?t=1620642975"
+    }
+  ]
+}

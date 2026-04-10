@@ -1,0 +1,52 @@
+{
+  "category": "UK Organic Food",
+  "source_url": "https://rss.feedspot.com/uk_organic_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Planet Organic Blog",
+      "feed_url": "https://www.planetorganic.com/blogs/blog.atom",
+      "website_url": "https://www.planetorganic.com/blogs/blog",
+      "description": "The UK's largest fully certified organic supermarket, Planet Organic is a celebration of nature, overflowing with mouth-watering, inspiring and ecologically great ideas. We believe wholeheartedly that safe, seasonal and sustainable organic food is fundamental to good health and natural vitality.",
+      "followers": {
+        "facebook": 40400,
+        "twitter": 62100,
+        "instagram": 132800
+      },
+      "image_url": "https://i1.feedspot.com/4509920.jpg?t=1612018476"
+    },
+    {
+      "title": "Real Food Lover",
+      "feed_url": "https://realfoodlover.uk/feed/",
+      "website_url": "https://realfoodlover.uk/",
+      "description": "Welcome to Real Food Lover by Elisabeth Winkler. I am a journalist, writer, editor and communications consultant, based in Bristol and London, UK. For eight years I was editor of the Soil Association magazine and now help organic and green companies, and social justice causes.",
+      "followers": {
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4908048.jpg?t=1614059591"
+    },
+    {
+      "title": "Biona Blog",
+      "feed_url": "https://biona.co.uk/blogs/blog.atom",
+      "website_url": "https://biona.co.uk/blogs/blog",
+      "description": "Healthy food and organic eating blog covering a variety of topics such as the roots of good food, reducing waste, vegan, recipes, wellbeing, and sustainability. Biona Organic is an organic food company that believes in thoughtfully prepared food that complements an ethical lifestyle with 100% traceability.",
+      "followers": {
+        "facebook": 24700,
+        "twitter": 7100,
+        "instagram": 65500
+      },
+      "image_url": "https://i1.feedspot.com/5355472.jpg?t=1640590792"
+    },
+    {
+      "title": "Ombar",
+      "feed_url": "https://www.ombar.co.uk/blogs/news.atom",
+      "website_url": "https://www.ombar.com/lowdown",
+      "description": "We produce Raw, organic, Ecuadorian chocolate made with all natural, plant-based and ethically-sourced ingredients. Our mission is to introduce people to the power of raw cacao. We do this by creating a healthier, more nourishing chocolate without compromising on taste.",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 13400,
+        "instagram": 52700
+      },
+      "image_url": "https://i1.feedspot.com/4547506.jpg?t=1612018484"
+    }
+  ]
+}

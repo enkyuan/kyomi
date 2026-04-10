@@ -1,0 +1,111 @@
+{
+  "category": "Cincinnati News",
+  "source_url": "https://rss.feedspot.com/cincinnati_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "WCPO 9 Cincinnati \u00bb News",
+      "feed_url": "https://www.wcpo.com/news.rss",
+      "website_url": "https://www.wcpo.com/news",
+      "description": "Get Local News, National News, Video, Government and Politics News, Business News, Crime and Justice News, Education News, Health News, Ohio News, Kentucky News, US and World News, Obituaries, Traffic, Sports, Cincinnati, Ohio, Northern Kentucky, Indiana, WCPO 9 News on WCPO.com",
+      "followers": {
+        "facebook": 412900,
+        "twitter": 223000
+      },
+      "image_url": "https://i1.feedspot.com/5130481.jpg?t=1585545647"
+    },
+    {
+      "title": "Soapbox Cincinnati",
+      "feed_url": "https://feeds.feedburner.com/soapboxmedia",
+      "website_url": "https://www.soapboxmedia.com/",
+      "description": "An online publication about the people and places moving Cincinnati forward with news about tech, entrepreneurship, arts, innovation, neighborhood development news and more.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 13700,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5132653.jpg?t=1585546210"
+    },
+    {
+      "title": "Cincinnati Magazine",
+      "feed_url": "https://www.cincinnatimagazine.com/category/news/feed/",
+      "website_url": "https://www.cincinnatimagazine.com/",
+      "description": "Cincinnati Magazine is the definitive guide to living well in Greater Cincinnati, connecting sophisticated, educated readers with the region's most interesting people, cultural issues, food, arts, fashion, news and history via print, digital, and events.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 43800,
+        "instagram": 62400
+      },
+      "image_url": "https://i1.feedspot.com/5132655.jpg?t=1585546671"
+    },
+    {
+      "title": "The Cincinnati Herald",
+      "feed_url": "https://thecincinnatiherald.com/feed/",
+      "website_url": "https://thecincinnatiherald.com/",
+      "description": "The Cincinnati Herald publishes local news articles, covering Sports, Politics, Community, and other content, such as local events, classified ads, and opinion pieces on their online platform. A community news leader, The Cincinnati Herald is one of the longest-running African American Publications keeping people aware of the latest happenings in the community.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 3800,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5483373.jpg?t=1672041216"
+    },
+    {
+      "title": "WLWT",
+      "feed_url": "https://www.wlwt.com/-/9838586/9838828/-/format/rss_2.0/view/asFeed/-/68f33gz/-/index.xml",
+      "website_url": "https://www.wlwt.com/",
+      "description": "WLWT.com is leading the way with Cincinnati breaking news, weather and important local news coverage. Look to WLWT for political coverage, viral videos and more from Cincinnati's NBC affiliate.",
+      "followers": {
+        "facebook": 947800,
+        "twitter": 174200
+      },
+      "image_url": "https://i1.feedspot.com/1850792.jpg?t=1623161286"
+    },
+    {
+      "title": "Cincinnati Enquirer",
+      "feed_url": "http://rssfeeds.cincinnati.com/cincinnati-news",
+      "website_url": "https://www.cincinnati.com/",
+      "description": "Enquirer Media has been providing news, sports and entertainment coverage in Greater Cincinnati for 174 years. Breaking Cincinnati news, traffic, weather and local headlines from The Cincinnati Enquirer newspaper.",
+      "followers": {
+        "facebook": 267800,
+        "twitter": 151900,
+        "instagram": 97300
+      },
+      "image_url": "https://i1.feedspot.com/5132652.jpg?t=1585545600"
+    },
+    {
+      "title": "Cincinnati CityBeat",
+      "feed_url": "https://www.citybeat.com/",
+      "website_url": "https://www.citybeat.com/",
+      "description": "CityBeat Cincinnati provides updates on the latest News, Voice, Music, Arts & Culture, News, Food & Drink.",
+      "followers": {
+        "facebook": 109400,
+        "twitter": 50000,
+        "instagram": 132300
+      },
+      "image_url": "https://i1.feedspot.com/4902500.jpg?t=1585546441"
+    },
+    {
+      "title": "WVXU",
+      "feed_url": "https://www.wvxu.org/",
+      "website_url": "https://www.wvxu.org/",
+      "description": "91.7 WVXU connects you to a world of ideas with NPR, local news from our award-winning news team, and music/entertainment programs heard only on public radio. WVXU keeps you up to date on current happening 24/7 in Cincinnati.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 25000
+      },
+      "image_url": "https://i1.feedspot.com/5132657.jpg?t=1585546939"
+    },
+    {
+      "title": "Cincinnati Business Courier",
+      "feed_url": "https://www.bizjournals.com/cincinnati/",
+      "website_url": "https://www.bizjournals.com/cincinnati/",
+      "description": "At the Cincinnati Business Courier, you'll find the latest breaking business news, updated throughout the day, this week's top stories from the Cincinnati Business Courier, and other popular features from the print edition. The CBC is part of American City Business Journals, a national publishing company operating a number of Local Business Journals.",
+      "followers": {
+        "facebook": 30800,
+        "twitter": 29700,
+        "instagram": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5483378.jpg?t=1672040984"
+    }
+  ]
+}

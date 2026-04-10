@@ -1,0 +1,53 @@
+{
+  "category": "Kombucha",
+  "source_url": "https://rss.feedspot.com/kombucha_rss_feeds",
+  "feeds": [
+    {
+      "title": "Health-Ade Kombucha Blog",
+      "feed_url": "https://health-ade.com/blogs/blog.atom",
+      "website_url": "https://health-ade.com/blogs/blog",
+      "description": "At Health-Ade, our goal is to expand Kombucha beyond the realm of health enthusiasts and into the mainstream so that everyone has access to the benefits of this bubbly, delicious, probiotic tea.",
+      "followers": {
+        "facebook": 29500,
+        "twitter": 7500,
+        "instagram": 161700
+      },
+      "image_url": "https://i1.feedspot.com/4926997.jpg?t=1621003087"
+    },
+    {
+      "title": "Real Kombucha",
+      "feed_url": "https://realdrinks.co/blogs/know-how.atom",
+      "website_url": "https://realdrinks.co/blogs/know-how",
+      "description": "At Real Kombucha, we see kombucha as the perfect alcohol replacement. Spreading the good word is an ongoing journey, however. On this blog, you'll see how our story started, where it has been, and where it is headed, as we attempt to help people change the way they drink.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4926994.jpg?t=1621003094"
+    },
+    {
+      "title": "Kombucha Brewers International Blog",
+      "feed_url": "https://kombuchabrewers.org/feed/",
+      "website_url": "https://kombuchabrewers.org/blog/",
+      "description": "KombuchaBrewers.org is the online hub for Kombucha Brewers International, a nonprofit trade association committed to promoting and protecting commercial Kombucha Brewers around the world. Our mission is to educate consumers and retailers about the benefits of Kombucha through setting ethical industry and labeling standards, engaging in class marketing and pioneering research.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 794,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4927033.jpg?t=1621003090"
+    },
+    {
+      "title": "Booch Organic Kombucha",
+      "feed_url": "https://boochorganickombucha.com/blogs/news.atom",
+      "website_url": "https://boochorganickombucha.com/blogs/news",
+      "description": "Energizing, immune-boosting, probiotic-rich, organic kombucha handcrafted with love. Booch is an Ontario craft kombucha brewery making traditional healing kombucha with a new age twist.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 2800,
+        "instagram": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4927020.jpg?t=1621003101"
+    }
+  ]
+}

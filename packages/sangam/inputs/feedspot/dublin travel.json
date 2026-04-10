@@ -1,0 +1,29 @@
+{
+  "category": "Dublin Travel",
+  "source_url": "https://rss.feedspot.com/dublin_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Irish Sun \u00bb Travel",
+      "feed_url": "https://www.thesun.ie/topic/travel/feed/",
+      "website_url": "https://www.thesun.ie/topic/travel/",
+      "description": "Find all the latest travel news and guide by the Irish Sun.Get the latest Irish and world news, sport, celebrity gossip, showbiz, pictures, videos, virals and podcasts from The Irish Sun.",
+      "followers": {
+        "facebook": 298700,
+        "twitter": 22600
+      },
+      "image_url": "https://i1.feedspot.com/5357655.jpg?t=1640674996"
+    },
+    {
+      "title": "The Savvy Backpacker \u00bb Dublin",
+      "feed_url": "https://thesavvybackpacker.com/city-guide-location/dublin/feed/",
+      "website_url": "https://thesavvybackpacker.com/city-guide-location/dublin/",
+      "description": "Hi, I'm James and I want to teach you how to travel to Europe on a budget. Join me and start learning the skills to travel more while spending less! In this section, read the latest information and ultimate guide and tips for budget friendly travel to Dublin.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 5300,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5357636.jpg?t=1640673799"
+    }
+  ]
+}

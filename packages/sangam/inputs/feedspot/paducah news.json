@@ -1,0 +1,39 @@
+{
+  "category": "Paducah News",
+  "source_url": "https://rss.feedspot.com/paducah_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Paducah Sun",
+      "feed_url": "https://www.paducahsun.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.paducahsun.com/",
+      "description": "The Paducah Sun, and its website, paducahsun.com, is the No. 1 source of in-depth news and information in the Paducah, Jackson Purchase and Pennyrile regions of western Kentucky and five counties in southern Illinois. The Paducah Sun touches the lives of 300,000 people weekly. Through the Associated Press, the newspaper's stories and photos are seen throughout the Southeast, Midwest, and coast-to-coast.",
+      "followers": {
+        "facebook": 25100,
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5149293.jpg"
+    },
+    {
+      "title": "WPSD Local 6",
+      "feed_url": "https://www.wpsdlocal6.com/search/?f=rss&t=article&k=paducah&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.wpsdlocal6.com/",
+      "description": "Paxton Media Group LLC (PMG) traces its roots to 1896 when a group of investors headed by W. P. Today, PMG is a diversified media company with interests in newspapers, printing, and broadcasting and is still owned and managed by third and fourth generation members of the Paxton family. PMG owns 32 daily newspapers and numerous weekly newspapers across the mid-western and southeastern United States. In addition, PMG operates WPSD Local 6, an NBC affiliate television station in Paducah, and a specialty publishing division.",
+      "followers": {
+        "facebook": 292200,
+        "twitter": 71200
+      },
+      "image_url": "https://i1.feedspot.com/5149284.jpg?t=1589184251"
+    },
+    {
+      "title": "ABC 36 News \u00bb Paducah",
+      "feed_url": "https://www.wtvq.com/tag/paducah/feed/",
+      "website_url": "https://www.wtvq.com/tag/paducah/",
+      "description": "We live, work, and play right here in Central Kentucky. We are your neighbors. We celebrate community and we tell your stories. We are the most trusted source for local news. Subscribe for interesting tidbits to breaking news in the Paducah community.",
+      "followers": {
+        "facebook": 91800,
+        "twitter": 31400
+      },
+      "image_url": "https://i1.feedspot.com/5149287.jpg"
+    }
+  ]
+}

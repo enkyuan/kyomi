@@ -1,0 +1,931 @@
+{
+  "category": "Urban Planning",
+  "source_url": "https://rss.feedspot.com/urban_planning_rss_feeds",
+  "feeds": [
+    {
+      "title": "Next City Inspiring Better Cities",
+      "feed_url": "https://nextcity.org/feeds/features",
+      "website_url": "https://nextcity.org/",
+      "description": "The latest stories from Next City's Forefront series. Next City is a nonprofit organization with a mission to inspire social, economic and environmental change in cities through journalism and events around the world.",
+      "followers": {
+        "facebook": 39700,
+        "twitter": 117100
+      },
+      "image_url": "https://i1.feedspot.com/4700134.jpg?t=1605961202"
+    },
+    {
+      "title": "The City Fix",
+      "feed_url": "https://thecityfix.com/blog/tag/sustainability/feed/",
+      "website_url": "https://thecityfix.com/blog/tag/sustainability/",
+      "description": "WRI Ross Center for Sustainable Cities catalyzes environmentally and financially sustainable urban solutions to improve quality for millions of people.",
+      "followers": {
+        "twitter": 32400,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/972887.jpg?t=1605961307"
+    },
+    {
+      "title": "Planetizen - The independent resource for people passionate about planning and related fields",
+      "feed_url": "https://www.planetizen.com/frontpage/feed",
+      "website_url": "https://www.planetizen.com/news",
+      "description": "Planning: A professional practice and an academic study focused on the future of built environments and connected natural environments from the smallest towns to the largest cities and everything in between.Planetizen: The independent resource for people passionate about planning and related fields.",
+      "followers": {
+        "facebook": 23300,
+        "twitter": 74200
+      },
+      "image_url": "https://i1.feedspot.com/4699997.jpg?t=1605961215"
+    },
+    {
+      "title": "Strong Towns | Strong Towns Media",
+      "feed_url": "https://www.strongtowns.org/journal?format=RSS",
+      "website_url": "https://www.strongtowns.org/journal/",
+      "description": "Strong Towns is a non-profit organization working to support a model of development that allows America's cities, towns and neighborhoods to become financially strong and resilient.",
+      "followers": {
+        "facebook": 124000,
+        "twitter": 91000
+      },
+      "image_url": "https://i1.feedspot.com/4700292.jpg?t=1605961219"
+    },
+    {
+      "title": "Urban Land Magazine",
+      "feed_url": "https://urbanland.uli.org/index.rss",
+      "website_url": "https://urbanland.uli.org/",
+      "description": "Urban Land Magazine is the flagship publication of the Urban Land Institute, a member-based organization with global headquarters in Washington, D.C. Popular features include ULX, Developments, Trends, Awards, and other topics on the built environment, urbanism and commercial real estate.",
+      "followers": {
+        "twitter": 129400
+      },
+      "image_url": "https://i1.feedspot.com/4700212.jpg?t=1620125853"
+    },
+    {
+      "title": "Architecture Lab",
+      "feed_url": "https://www.architecturelab.net/feed/",
+      "website_url": "https://www.architecturelab.net/",
+      "description": "The goal of Architecture Lab is to make architecture more connected and bring together architects/designers from around the world searching for the latest architectural news: projects, products, events, interviews, and competitions among others.",
+      "followers": {
+        "facebook": 759200,
+        "twitter": 74100,
+        "instagram": 5800
+      },
+      "image_url": "https://i1.feedspot.com/4700450.jpg?t=1660897780"
+    },
+    {
+      "title": "Urban & Regional Planning Blog",
+      "feed_url": "https://urbanplanninginformation.blogspot.com/feeds/posts/default",
+      "website_url": "https://urbanplanninginformation.blogspot.com/",
+      "description": "Urban, Town & Country Planning Information.",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 8000
+      },
+      "image_url": "https://i1.feedspot.com/5523081.jpg?t=1679297740"
+    },
+    {
+      "title": "Urban Design Lab",
+      "feed_url": "https://urbandesignlab.in/feed/",
+      "website_url": "https://urbandesignlab.in/publication/articles/",
+      "description": "Urban Design Lab research publication platform serves as a space for researchers, urban planners, architects, and designers to share their findings and insights on urban design and showcase their work and engage in intellectual discussions with other professionals. It offers a variety of formats, including research papers, case studies, and visual presentations, to share their work and engage with the wider urban design community.",
+      "followers": {
+        "facebook": 30800,
+        "twitter": 65
+      },
+      "image_url": "https://i1.feedspot.com/5657933.jpg?t=1693202385"
+    },
+    {
+      "title": "The Urbanist",
+      "feed_url": "https://www.theurbanist.org/feed/",
+      "website_url": "https://www.theurbanist.org/",
+      "description": "The Urbanist was founded in early 2014 in order to examine and influence urban policies. We believe that cities provide unique opportunities for addressing many of the most difficult problems we face. Our website serves as a resource for promoting and disseminating ideas, creating community, and improving the places we live in.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 30600,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4591898.jpg?t=1605961264"
+    },
+    {
+      "title": "Streets.MN",
+      "feed_url": "https://streets.mn/feed/",
+      "website_url": "https://streets.mn/",
+      "description": "Our mission is to expand and improve the dialogue about land use, transportation, the environment and governance in Minnesota.",
+      "followers": {
+        "facebook": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4700421.jpg?t=1605961273"
+    },
+    {
+      "title": "CityTalk",
+      "feed_url": "https://talkofthecities.iclei.org/feed/",
+      "website_url": "https://talkofthecities.iclei.org/",
+      "description": "Opinions, ideas and knowledge you can apply to local and regional sustainable development.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 41300
+      },
+      "image_url": "https://i1.feedspot.com/4201324.jpg?t=1605961439"
+    },
+    {
+      "title": "ICIC",
+      "feed_url": "http://icic.org/feed/",
+      "website_url": "https://icic.org/",
+      "description": "ICIC's mission is to drive economic prosperity in America's inner cities through private sector investment to create jobs, income and wealth for local residents.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4753181.jpg?t=1605961534"
+    },
+    {
+      "title": "Planning Tank",
+      "feed_url": "https://planningtank.com/feed",
+      "website_url": "https://planningtank.com/",
+      "description": "Planning Tank is the Urban, Regional, and Rural planning knowledge base useful for professionals and students of planning profession. Website provides information on various topics, theories, schemes and concepts of Urban Planning.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 233,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4705707.jpg?t=1605961245"
+    },
+    {
+      "title": "Child in the City | Urban planning",
+      "feed_url": "https://www.childinthecity.org/category/urban-planning/feed/",
+      "website_url": "https://www.childinthecity.org/category/urban-planning/",
+      "description": "We are dedicated to improve well-being of children worldwide and share knowledge and expertise to transform lives of children and young people.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 3000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4701321.jpg?t=1605961478"
+    },
+    {
+      "title": "Seattle Transit Blog | Covering Transit and Land Use in the Greater Seattle Area",
+      "feed_url": "https://seattletransitblog.com/feed/",
+      "website_url": "https://seattletransitblog.com/",
+      "description": "Seattle Transit Blog is an independent, award-winning publication covering transit and land use issues in Seattle and the Puget Sound area since 2007.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 24600
+      },
+      "image_url": "https://i1.feedspot.com/4701311.jpg?t=1610961886"
+    },
+    {
+      "title": "BLDGBLOG",
+      "feed_url": "https://www.bldgblog.com/feed/",
+      "website_url": "https://www.bldgblog.com/",
+      "description": "BLDGBLOG (building blog) was launched in 2004 and is written by Geoff Manaugh. In addition to this site, I'm the author of two books the New York Times-bestselling A Burglar's Guide to the City and The BLDGBLOG Book as well as editor of a third, Landscape Futures: Instruments, Devices, and Architectural Inventions.",
+      "followers": {
+        "twitter": 347
+      },
+      "image_url": "https://i1.feedspot.com/4401407.jpg?t=1605961621"
+    },
+    {
+      "title": "The Antiplanner",
+      "feed_url": "http://ti.org/antiplanner/?feed=rss2",
+      "website_url": "http://ti.org/antiplanner/",
+      "description": "Welcome to the Antiplanner, a blog dedicated to ending government land-use regulation, comprehensive planning, and transportation boondoggles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/972886.jpg?t=1605961486"
+    },
+    {
+      "title": "Human Transit - The professional blog of public transit consultant Jarrett Walker",
+      "feed_url": "https://humantransit.org/feed",
+      "website_url": "https://humantransit.org/",
+      "description": "I'm Jarrett Walker, and this is my professional blog. Since 1991 I've been a consulting transit planner, helping to design transit networks and policies for a huge range of communities. My goal here is to start conversations about how transit works, and how we can use it to create better cities and towns.",
+      "followers": {
+        "twitter": 44100
+      },
+      "image_url": "https://i1.feedspot.com/4639622.jpg?t=1605961495"
+    },
+    {
+      "title": "Michael Geller's Blog",
+      "feed_url": "http://gellersworldtravel.blogspot.com/feeds/posts/default",
+      "website_url": "http://gellersworldtravel.blogspot.com/",
+      "description": "Michael Geller is a Vancouver based architect, planner, real estate consultant and property developer with four decades' experience in the public, private and institutional sectors.",
+      "followers": {
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/2152943.jpg"
+    },
+    {
+      "title": "Rebuilding Place in the Urban Space by Richard Layman",
+      "feed_url": "http://urbanplacesandspaces.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://urbanplacesandspaces.blogspot.com/",
+      "description": "I am an urban/commercial district revitalization and transportation/mobility advocate and consultant. Urban economic competitiveness is dependent on efficient transit and mixed use, compact places. Therefore, I end up writing mostly about mobility and urban design authored by Richard Laymen.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1020439.jpg?t=1605961649"
+    },
+    {
+      "title": "PlanningResource | Independent Intelligence For Planning Proffessionals",
+      "feed_url": "https://www.planningresource.co.uk/rss/news",
+      "website_url": "https://www.planningresource.co.uk/news",
+      "description": "Follow us to keep up with news, appeals decisions & best practice for development management & strategic planners on PlanningResource.",
+      "followers": {
+        "twitter": 23200
+      },
+      "image_url": "https://i1.feedspot.com/1387191.jpg?t=1605961738"
+    },
+    {
+      "title": "New Geography",
+      "feed_url": "https://feeds.feedburner.com/Newgeography",
+      "website_url": "http://www.newgeography.com/blogs",
+      "description": "NewGeography.com is a site devoted to analyzing and discussing the places where we live and work. We want to know not only what is happening, but also how you, your company and your community can best adapt to rapidly changing conditions. We welcome your writing, your thoughts on the site, and your insights on economic development, metropolitan demographics, and community leadership.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/334135.jpg?t=1607698110"
+    },
+    {
+      "title": "Transportist",
+      "feed_url": "https://transportist.org/feed/",
+      "website_url": "https://transportist.org/",
+      "description": "It is a blog about Networks, Economics and Urban Systems and Transport in Sydney.",
+      "followers": {
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4640689.jpg?t=1658820708"
+    },
+    {
+      "title": "Community Architect",
+      "feed_url": "http://archplanbaltimore.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://archplanbaltimore.blogspot.com/",
+      "description": "This is an urban design, architecture and cities blog exploring design, art, culture, planning, transportation and cultural landscapes.Articles from this blog have been published on ArchDaily, Jan Gehl's blog, Sustainable Cities, Project for Public Spaces, the NOMA magazine and elsewhere.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4700848.jpg"
+    },
+    {
+      "title": "Decisions, Decisions, Decisions",
+      "feed_url": "https://andrewlainton.wordpress.com/feed/",
+      "website_url": "https://andrewlainton.wordpress.com/",
+      "description": "A blog about better decisions, better urban planning and better economics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4333789.jpg"
+    },
+    {
+      "title": "Building Salt Lake",
+      "feed_url": "https://buildingsaltlake.com/feed/",
+      "website_url": "https://buildingsaltlake.com/",
+      "description": "Building Salt Lake is the premiere source for urban development news happening along the Wasatch Front. Because smart growth starts with us, Building Salt Lake seeks to engage readers and encourage its audience to become active participants in the development of their communities.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 3300,
+        "instagram": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4791456.jpg?t=1756205662"
+    },
+    {
+      "title": "UQ",
+      "feed_url": "https://uq-urbanplanning.org/feed/",
+      "website_url": "https://uq-urbanplanning.org/",
+      "description": "UQ|UP is part of the leading School of Earth and Environmental Sciences (SEES) at the University of Queensland - a university in the world's top 50 and one of Australia's Group of Eight. This is their informal Blog. All UQ|UP staff and HDR students contribute news, opinions, and research papers to this Blog.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2200,
+        "instagram": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4701946.jpg?t=1605961756"
+    },
+    {
+      "title": "parCitypatory",
+      "feed_url": "https://parcitypatory.org/feed/",
+      "website_url": "https://parcitypatory.org/",
+      "description": "Consultancy & blog advocating for more participation in cities from all over the world.",
+      "followers": {
+        "facebook": 183,
+        "twitter": 278,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5152556.jpg?t=1605961764"
+    },
+    {
+      "title": "Aaron M. Renn All Things Aaron",
+      "feed_url": "https://www.aaronrenn.com/feed",
+      "website_url": "https://www.aaronrenn.com/",
+      "description": "Aaron M. Renn is a Senior Fellow at the Manhattan Institute and an opinion-leading urban analyst, writer, and speaker on a mission to help America's cities thrive and find sustainable success in the 21st century.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 34
+      },
+      "image_url": "https://i1.feedspot.com/573804.jpg?t=1607698222"
+    },
+    {
+      "title": "WHA Blog | Value, Insight and Conversation On Architecture, Planning and Design",
+      "feed_url": "https://www.whablog.com/feed/",
+      "website_url": "https://www.whablog.com/",
+      "description": "WHA is a land planning and architectural design firm that specializes in shaping new communities, and reshaping urban and existing in-town neighborhoods.",
+      "followers": {
+        "facebook": 721,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4700828.jpg?t=1605961774"
+    },
+    {
+      "title": "Stephen Rees's blog",
+      "feed_url": "https://stephenrees.blog/feed/",
+      "website_url": "https://stephenrees.blog/",
+      "description": "Thoughts about the relationships between transport and the urban area it serves by a transportation economist and regional planner Stephen Rees.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4699678.jpg?t=1619424529"
+    },
+    {
+      "title": "NewCastle University Blog",
+      "feed_url": "http://nclurbandesign.org/feed/",
+      "website_url": "http://nclurbandesign.org/blog/",
+      "description": "Welcome to our blog! We are a group of postgraduate students studying Urban Design at Newcastle University with backgrounds consisting of Architecture, Urban Planning and Landscape. We are a diverse cohort coming from India, China, Malaysia, Turkey and England, and we are going to share a variety of elements of urban design.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4700382.jpg?t=1605961970"
+    },
+    {
+      "title": "Urban Choreography",
+      "feed_url": "https://urbanchoreography.net/feed/",
+      "website_url": "https://urbanchoreography.net/",
+      "description": "Exploring how we create an enhanced user experience in leisure, retail, urban and landscape environments and collaborate together to build our common future authored by Landscape Architect DonovanGillman specializing in the experience design of Retail, Leisure, Urban , Landscape Environments.",
+      "followers": {
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/4700330.jpg?t=1605961988"
+    },
+    {
+      "title": "The Black Urbanist | The Placemaking Blog of Kristen Jeffers",
+      "feed_url": "https://theblackurbanist.com/blog/feed/",
+      "website_url": "https://theblackurbanist.com/blog/",
+      "description": "Black Urbanist is a forum about ideas, for solutions , ideas and for dreams about what our cities, our diverse cities, and all the places that support them, can be.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 14300
+      },
+      "image_url": "https://i1.feedspot.com/4701353.jpg?t=1605962008"
+    },
+    {
+      "title": "UrbanCincy | Connecting The Region With Its Urban Core.",
+      "feed_url": "https://www.urbancincy.com/feed/",
+      "website_url": "https://www.urbancincy.com/",
+      "description": "UrbanCincy has served as the source for news on Cincinnati's dynamic urban core. UrbanCincy's team offers a unique collection of professional perspectives that make the website a destination for diverse ideas and engaging conversation. In addition to original news content, our bi-weekly podcast, photographs, videos and events make UrbanCincy.com the region's premier urban lifestyle website.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 19700
+      },
+      "image_url": "https://i1.feedspot.com/1281703.jpg?t=1605962547"
+    },
+    {
+      "title": "Reflections on Auckland Planning by Joel Cayford",
+      "feed_url": "http://joelcayford.blogspot.com/feeds/posts/default",
+      "website_url": "http://joelcayford.blogspot.com/",
+      "description": "Joel is a Strategic Planner specializing in urban, infrastructure, and economic development planning policy. He has provided advice to project teams wanting a critical review of work in progress, or requiring a 'challenge team' input. In Auckland, Joel has taken a leading role in public policy decisions influencing transport, urban form and development, waterfront development and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2702782.jpg"
+    },
+    {
+      "title": "The Pop-Up City",
+      "feed_url": "https://popupcity.net/feed/",
+      "website_url": "https://popupcity.net/",
+      "description": "Golfstromen is an Amsterdam-based urban design and communications agency that launched Pop-Up City in 2008, out of a fascination for the ways in which citizens, organizations, enterprises, and governments were coming up with creative and flexible solutions to deal with this new urban dynamic.",
+      "followers": {
+        "twitter": 16400,
+        "instagram": 6500
+      },
+      "image_url": "https://i1.feedspot.com/83258.jpg"
+    },
+    {
+      "title": "The Naked City Blog",
+      "feed_url": "https://nakedcityblog.blogspot.com/feeds/posts/default",
+      "website_url": "https://nakedcityblog.blogspot.com/",
+      "description": "Exploring life in the city Charlotte and the greater metro region. Looking at urban design, transportation, growth, the built environment and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1549172.jpg?t=1605961746"
+    },
+    {
+      "title": "Millennial Cities",
+      "feed_url": "https://millennialcities.com/feed/",
+      "website_url": "https://millennialcities.com/",
+      "description": "Millennial Cities is an online urban planning resource that seeks to serve as an all-purpose hub for interactive, data-driven visualization tools, create articles using the tools, and serve as a research medium for planners, changemakers, and curious observers. A hub for interactive data tools that explore demographics, climate change, sustainability, social justice, environment, housing, and more.",
+      "followers": {
+        "facebook": 16,
+        "twitter": 274
+      },
+      "image_url": "https://i1.feedspot.com/5275393.jpg?t=1620033616"
+    },
+    {
+      "title": "GiGi The Planner",
+      "feed_url": "https://www.gigitheplanner.com/blog-feed.xml",
+      "website_url": "https://www.gigitheplanner.com/",
+      "description": "GiGi The Planner LLC is an organization whose mission is to increase the number of black planners in America by exposing, empowering, and engaging youth is African descent to pursue a degree in urban planning.",
+      "followers": {
+        "facebook": 951,
+        "twitter": 605,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5203257.jpg?t=1605961879"
+    },
+    {
+      "title": "The Overhead Wire",
+      "feed_url": "https://feeds.feedburner.com/overheadwire",
+      "website_url": "http://theoverheadwire.blogspot.com/",
+      "description": "The Overhead Wire is a consulting firm owned and operated by Jeff Wood in San Francisco California. Their projects include podcasts such as the weekly Talking Headways on Streetsblog, news sites, cartography and data analysis, and research on transit modes and land use strategies.",
+      "followers": {
+        "twitter": 173100
+      },
+      "image_url": "https://i1.feedspot.com/100094.jpg?t=1616656009"
+    },
+    {
+      "title": "Reprogramming The City",
+      "feed_url": "https://reprogrammingthecity.com/feed/",
+      "website_url": "https://reprogrammingthecity.com/",
+      "description": "Reprogramming The City is a global overview of ways in which existing urban structures, surfaces and systems are being re-imagined, re-purposed and re-invented to do more in the city. Created by urban strategist Scott Burnham FRSA, the initiative is a catalyst of ideas showing how cities can do more with the infrastructure, assets, and systems they already have.",
+      "followers": {
+        "facebook": 158
+      },
+      "image_url": "https://i1.feedspot.com/5030588.jpg?t=1605961804"
+    },
+    {
+      "title": "The Corner Side Yard",
+      "feed_url": "http://cornersideyard.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://cornersideyard.blogspot.com/",
+      "description": "I've been a planner for more than 20 years now, based in Chicago. I've had the opportunity to work in the private, public and nonprofit sectors. Currently I'm a planning consultant. My bonafides: I have a bachelors in urban planning from Indiana University in Bloomington, IN, and a masters in urban planning and policy from the Universsity of Illinois at Chicago.",
+      "followers": {
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/4701434.jpg?t=1605961964"
+    },
+    {
+      "title": "Urban Indy",
+      "feed_url": "https://urbanindy.com/feed/",
+      "website_url": "https://urbanindy.com/",
+      "description": "Urban Indy is a collaborative blog featuring authors with a passion for urban design in Indianapolis.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/1817519.jpg?t=1605961955"
+    },
+    {
+      "title": "Mi Diario Urbano",
+      "feed_url": "http://midiariourbano.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://midiariourbano.blogspot.com/",
+      "description": "Degree in Socio-territorial Studies in the UAM-Cuajimalpa and Urbanism in the UAA. Currently, candidate for Master in Planning and Metropolitan Politics authored by Jos\u00e9 Manuel Landin.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4700306.jpg?t=1605961959"
+    },
+    {
+      "title": "Car Free America | City Planning, Transportation Policy, Sustainable Life",
+      "feed_url": "http://carfreeamerica.net/feed/",
+      "website_url": "https://carfreeamerica.net/",
+      "description": "Articles on City Planning, Transportation Policy and Sustainability by Mark R. Brown, AICP, PTP, a city planner and complete streets designer who has been car free since 2010.",
+      "followers": {
+        "facebook": 365,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4701328.jpg?t=1605961982"
+    },
+    {
+      "title": "Urban Life Signs",
+      "feed_url": "https://urbanlifesigns.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://urbanlifesigns.blogspot.com/",
+      "description": "Urban Life Signs blog about urban planning, transportation, maps, and life in a city.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4701991.jpg?t=1605962012"
+    },
+    {
+      "title": "Portlanders for Parking Reform Better Parking Policy For The City of Roses",
+      "feed_url": "https://pdxshoupistas.com/feed/",
+      "website_url": "https://pdxshoupistas.com/posts/",
+      "description": "Professor Donald Shoup is a retired Distinguished Professor of Urban Planning from UCLA. For almost 40 years he has been promoting parking policy that leads to less automobile cruising, more affordable housing, a better allocation of the right of way, and safer streets and sidewalks. His seminal publication The High Cost of Free Parking has influenced thousands of urban planners and politicians.",
+      "followers": {
+        "facebook": 543,
+        "twitter": 981
+      },
+      "image_url": "https://i1.feedspot.com/4701447.jpg?t=1605962016"
+    },
+    {
+      "title": "Urban Design Australia Blog",
+      "feed_url": "https://urbandesignaustralia.wordpress.com/feed/",
+      "website_url": "https://urbandesignaustralia.wordpress.com/",
+      "description": "International Urban Design Conference Series.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4700430.jpg?t=1605962026"
+    },
+    {
+      "title": "Town Planning by Ashish Kelkar",
+      "feed_url": "https://townplanning111.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://townplanning111.blogspot.com/",
+      "description": "The blog is about different concepts in Town Planning.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4866292.jpg?t=1605962217"
+    },
+    {
+      "title": "Maine Architecture",
+      "feed_url": "http://mainearchitecture.blogspot.com/feeds/posts/default",
+      "website_url": "http://mainearchitecture.blogspot.com/",
+      "description": "Blog focusing on town planning and architecture in Maine.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/3446075.jpg"
+    },
+    {
+      "title": "Civic Blogger",
+      "feed_url": "http://civicblogger.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://civicblogger.blogspot.com/",
+      "description": "Civic Blogger is about sharing information on Planning, citizen engagement, design, and organizational development. This is not about simply informing Planners, Politicians & the Public, but empowerment with tools that can steer outcomes authored by Robert Voigt. He is often invited speak at local, national and international events on urban design, community engagement and active transportation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4701777.jpg?t=1605962121"
+    },
+    {
+      "title": "Entrapped Spaces",
+      "feed_url": "https://entrappedspaces.tumblr.com/rss",
+      "website_url": "https://entrappedspaces.tumblr.com/",
+      "description": "I like to feature kick-ass buildings/urbanism concepts/installations and explore issues that cities.",
+      "followers": {
+        "twitter": 352
+      },
+      "image_url": "https://i1.feedspot.com/1527013.jpg"
+    },
+    {
+      "title": "City Notes by Daniel Kay Hertz",
+      "feed_url": "https://danielkayhertz.com/feed/",
+      "website_url": "https://danielkayhertz.com/",
+      "description": "I am a Senior Policy Analyst at the Chicago-based Center for Tax and Budget Accountability, and write about urban issues here and in several other publications, including City Observatory.",
+      "followers": {
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4701373.jpg?t=1605962059"
+    },
+    {
+      "title": "Hashtag Urbanism",
+      "feed_url": "https://hashtagurbanismblog.wordpress.com/feed/",
+      "website_url": "https://hashtagurbanismblog.wordpress.com/",
+      "description": "Hashtag Urbanism is a city blog that aims to create and curate all content that can be tagged with the #urbanism. Through our posts, we aim to highlight how one encounters design and architecture in simple ways in a city and its potential in transforming our perceptions of the place. Based in Chennai, Hashtag Urbanism is also a chronicler of all stories that make this beautiful city what it is.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4707209.jpg?t=1605962504"
+    },
+    {
+      "title": "Itinerant Urbanist",
+      "feed_url": "https://itineranturbanist.wordpress.com/feed/",
+      "website_url": "https://itineranturbanist.wordpress.com/",
+      "description": "A Footloose Take on Cities, Transit, and Some Other Random Things",
+      "followers": {
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4398098.jpg"
+    },
+    {
+      "title": "Urban Design Collective | Calling all Urbanophiles!",
+      "feed_url": "https://urbandesigncollective.wordpress.com/feed/",
+      "website_url": "https://urbandesigncollective.wordpress.com/",
+      "description": "Urban Design Collective(UDC) is a collaborative platform for the creation of livable & sustainable cities through community engagement.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 931
+      },
+      "image_url": "https://i1.feedspot.com/4701829.jpg?t=1605962515"
+    },
+    {
+      "title": "Urban Issues",
+      "feed_url": "https://urbissues.blogspot.com/feeds/posts/default",
+      "website_url": "https://urbissues.blogspot.com/",
+      "description": "A blog about Urban Planning, Landscape Planning and social factors associated with it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5142444.jpg?t=1605963213"
+    },
+    {
+      "title": "IDEAS SWA Group",
+      "feed_url": "http://www.ideas.swagroup.com/feed/",
+      "website_url": "http://www.ideas.swagroup.com/category/performance-planning/",
+      "description": "IDEAS blog by SWA Group is a place to explore, share, and document our thinking, work, and current research. They explore several new and long-standing concepts in landscape architecture, planning, and urban design from the creation of great urban landscapes, urban ecologies, and landscape infrastructure.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 3800,
+        "instagram": 20800
+      },
+      "image_url": "https://i1.feedspot.com/4701845.jpg?t=1605962544"
+    },
+    {
+      "title": "YCSPL Insight",
+      "feed_url": "https://ycspl.in/insight/feed/",
+      "website_url": "https://ycspl.in/insight/",
+      "description": "The insight section features articles on urban planning, corporate organization, GIS and more. YCSPL specializes in providing customized consulting solutions in Engineering Infrastructural Design, Drawing & Estimation, Urban Planning on GIS applications, etc.",
+      "followers": {
+        "facebook": 548,
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5438766.jpg?t=1662441787"
+    },
+    {
+      "title": "Let's Go LA",
+      "feed_url": "https://letsgola.wordpress.com/feed/",
+      "website_url": "https://letsgola.wordpress.com/",
+      "description": "Transportation, Land Use, and Economics in the Southland.",
+      "followers": {
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4701406.jpg?t=1605961733"
+    },
+    {
+      "title": "Topos Magazine",
+      "feed_url": "https://toposmagazine.com/feed/",
+      "website_url": "https://toposmagazine.com/",
+      "description": "Topos is the definitive international publication about landscape architecture and urban design. Topos covers a broad range of topics and scales, from urban landscapes to rural areas, from infrastructure to gardens.",
+      "followers": {
+        "facebook": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4701870.jpg?t=1605961509"
+    },
+    {
+      "title": "Peter Gordon's Blog",
+      "feed_url": "http://www.petergordonsblog.com/feeds/posts/default",
+      "website_url": "http://www.petergordonsblog.com/",
+      "description": "A blog exploring the intersection of economic thinking and urban planning/real estate development and related big-think themes.Gordon's research interests are in applied urban economics.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2077605.jpg?t=1605961857"
+    },
+    {
+      "title": "Second Ave. Sagas - A New York City Subway Blog",
+      "feed_url": "http://secondavenuesagas.com/feed/",
+      "website_url": "https://secondavenuesagas.com/",
+      "description": "Second Ave. Sagas is the premier news blog for all things New York City subways. It is the home for news, views and commentary on the subway system, MTA and transportation in New York City.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 40700,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/40649.jpg?t=1605961448"
+    },
+    {
+      "title": "Streets Blog NYC",
+      "feed_url": "https://nyc.streetsblog.org/feed",
+      "website_url": "https://nyc.streetsblog.org/",
+      "description": "Streetsblog connects people to information about how to reduce dependence on private automobiles and improve conditions for walking, biking, and transit. Streetsblog NYC covers the five boroughs of New York City.",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 50000
+      },
+      "image_url": "https://i1.feedspot.com/74640.jpg?t=1669369357"
+    },
+    {
+      "title": "Brandon Donnelly",
+      "feed_url": "https://brandondonnelly.com/feed/",
+      "website_url": "https://brandondonnelly.com/",
+      "description": "I'm an architect-trained and tech-obsessed real estate developer based in Toronto. This is my daily blog for city builders.",
+      "followers": {
+        "twitter": 7600,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5093486.jpg?t=1678445571"
+    },
+    {
+      "title": "Market Urbanism",
+      "feed_url": "https://marketurbanism.com/feed/",
+      "website_url": "https://marketurbanism.com/",
+      "description": "Market Urbanism examines how market forces and property rights enable complex, yet vibrant and economically robust communities and regions to emerge through the 'spontaneous order' of the land use and transportation marketplace.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 47800
+      },
+      "image_url": "https://i1.feedspot.com/529956.jpg?t=1605961490"
+    },
+    {
+      "title": "Landezine",
+      "feed_url": "https://landezine.com/index.php/feed/",
+      "website_url": "http://landezine.com/",
+      "description": "Landezine was started in June of 2009. Since then it has been showcasing landscape architecture projects made by landscape architects and architects from around the globe. Today, Landezine is internationally renowned landscape architecture website and one of the most visible in the profession.",
+      "followers": {
+        "facebook": 47100,
+        "twitter": 11100,
+        "instagram": 38800
+      },
+      "image_url": "https://i1.feedspot.com/1228711.jpg?t=1605961252"
+    },
+    {
+      "title": "ATL Urbanist",
+      "feed_url": "https://atlurbanist.tumblr.com/rss",
+      "website_url": "https://atlurbanist.tumblr.com/",
+      "description": "Darin Givens lives in Downtown Atlanta with his family and writes about urbanism. Co-founder of ThreadATL, an urbanism advocacy group. ThreadATL.org",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/3906271.jpg?t=1500549853"
+    },
+    {
+      "title": "OUR FUTURE CITIES",
+      "feed_url": "https://www.ourfuturecities.co/news",
+      "website_url": "https://www.ourfuturecities.co/news",
+      "description": "Future Cape Town is a platform that promotes democracy around the future of cities.",
+      "followers": {
+        "facebook": 30,
+        "twitter": 10
+      },
+      "image_url": "https://i1.feedspot.com/4700162.jpg?t=1605963334"
+    },
+    {
+      "title": "City Planning Coordinator",
+      "feed_url": "https://cityplanningcoordinator.wordpress.com/feed/",
+      "website_url": "https://cityplanningcoordinator.wordpress.com/",
+      "description": "Random Thoughts and Ideas of an Urban Planner Working as a City Planning Director (City Planning and Development Coordinator) in a Progressive Medium-Size City in the Philippines.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5235028.jpg?t=1610357959"
+    },
+    {
+      "title": "Inhabitat",
+      "feed_url": "https://inhabitat.com/feed/",
+      "website_url": "https://inhabitat.com/",
+      "description": "Inhabitat is a green design and lifestyle site that provides coverage of environmental news and the latest in sustainable design. Their website is devoted to the future of design, innovative technology, and any architectural projects or concepts that emphasize energy efficiency, sustainability, and connection to the surrounding environment. Go through their blog and learn more about the latest news, designs, lifestyle, and more.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 155500,
+        "instagram": 54800
+      },
+      "image_url": "https://i1.feedspot.com/454372.jpg?t=1605961225"
+    },
+    {
+      "title": "Venetian Letter Blog",
+      "feed_url": "https://www.venetianletter.com/feed/",
+      "website_url": "https://www.venetianletter.com/blog-2/",
+      "description": "Enjoy blog posts, interviews, books, and events on human-focused architecture and urban design from Venetian Letter. The Blog is an initiative of two architecture professionals with an aim to encourage a dialogue between science and architecture and create places that benefit human wellbeing.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5600426.jpg?t=1686908546"
+    },
+    {
+      "title": "Tata Projects Blogs",
+      "feed_url": "https://tataprojects.com/feed/",
+      "website_url": "https://tataprojects.com/blogs/",
+      "description": "Looking for insights into the world of construction and infrastructure? Check out the TATA Projects blog for expert opinions and industry news. Tata Projects is one of the fastest growing and most admired Technology led Engineering, Procurement and Construction (EPC) company in India.",
+      "followers": {
+        "facebook": 95900,
+        "twitter": 213
+      },
+      "image_url": "https://i1.feedspot.com/5616875.jpg?t=1688473374"
+    },
+    {
+      "title": "Project for Public Spaces | Placemaking Blog",
+      "feed_url": "https://www.pps.org/blog/feed",
+      "website_url": "https://www.pps.org/blog",
+      "description": "Project for Public Spaces (PPS) is the central hub of the global Placemaking movement, connecting people to ideas, expertise, and partners who share a passion for creating vital places.",
+      "followers": {
+        "facebook": 88500,
+        "twitter": 83400,
+        "instagram": 34500
+      },
+      "image_url": "https://i1.feedspot.com/4700165.jpg?t=1612441397"
+    },
+    {
+      "title": "EnP Marion Micah Tinio",
+      "feed_url": "https://enptinio.wordpress.com/feed/",
+      "website_url": "https://enptinio.wordpress.com/blog/",
+      "description": "I am a Licensed Environmental Planner. I also have a degree of Master of Science in Environmental Science. Contact me for projects on waste management and environmental planning.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5038349.jpg?t=1605961780"
+    },
+    {
+      "title": "Restoring Prosperity to Ohio | Greater Ohio Policy Center Blog",
+      "feed_url": "https://www.greaterohio.org/blog/?feed=rss",
+      "website_url": "https://www.greaterohio.org/blog/",
+      "description": "The Mission of the Greater Ohio Policy Center is to champion revitalization and sustainable growth in Ohio.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4701278.jpg"
+    },
+    {
+      "title": "Broken Sidewalk | A Place For Urbanism",
+      "feed_url": "https://brokensidewalk.com/urbanism/feed/",
+      "website_url": "https://brokensidewalk.com/urbanism/",
+      "description": "Here at Broken Sidewalk, we cover urbanism, architecture, transportation, development, and more at a neighborhood level.",
+      "followers": {
+        "twitter": 3600,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4700314.jpg?t=1605962003"
+    },
+    {
+      "title": "JUA Blog | Blog of the Journal of Urban Affairs",
+      "feed_url": "https://juablog.com/feed/",
+      "website_url": "https://aesopyoungacademics.wordpress.com/",
+      "description": "Focusing on urban research and policy, JUA offers a multidisciplinary perspective on issues relevant to scholars and practitioners.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4700765.jpg?t=1605962041"
+    },
+    {
+      "title": "AESOP Young Academics",
+      "feed_url": "https://aesop-youngacademics.net/blog/feed/",
+      "website_url": "https://aesopyoungacademics.wordpress.com/",
+      "description": "The blog of the Young Academics of the Association of the European Schools of Planning",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5083213.jpg?t=1612421967"
+    },
+    {
+      "title": "At the Helm of the Public Realm: An Urban Design Blog",
+      "feed_url": "https://helmofthepublicrealm.com/feed/",
+      "website_url": "https://myradiantcity.com/blog/",
+      "description": "Musings on Urban Design, Urban Planning and the Built Environment authored by an urban designer, planner, and trained architect Erin Chantry.",
+      "followers": {
+        "twitter": 653
+      },
+      "image_url": "https://i1.feedspot.com/4700267.jpg?t=1605963140"
+    },
+    {
+      "title": "The Global Grid | Urbanist news. Local views.",
+      "feed_url": "https://theglobalgrid.org/feed/",
+      "website_url": "https://myradiantcity.com/blog/",
+      "description": "The Global Grid is a platform dedicated to providing unique hyperlocal urbanist news from around the world. Using their insights from local culture, politics, religion and context, our team provides local perspectives to global themes. You'll find the latest developments in urban planning, architecture, landscape architecture and engineering, here, every weekday.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 5900,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4862172.jpg?t=1605962522"
+    },
+    {
+      "title": "My Radiant City",
+      "feed_url": "https://myradiantcity.com/blog?format=RSS",
+      "website_url": "https://myradiantcity.com/blog/",
+      "description": "Keep up with articles from My Radiant City.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4514015.jpg?t=1612419321"
+    },
+    {
+      "title": "Urban Design Associates Blog",
+      "feed_url": "https://www.urbandesignassociatesltd.com/feed/",
+      "website_url": "https://www.urbandesignassociatesltd.com/blog/",
+      "description": "The Urban Design Associates' blog covers everything you need to know about architecture and building the home of your dreams. Urban Design Associates are award-winning, full-service Scottsdale architects who specialize in bringing your dream home design to life.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 132,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4478481.jpg?t=1609825840"
+    },
+    {
+      "title": "Cyburbia Forums",
+      "feed_url": "https://www.cyburbia.org/forums/forums/-/index.rss",
+      "website_url": "https://cityfarmer.info/",
+      "description": "Cyburbia Forums is a third place for planners, planning students, architects, urbanists, and others interested or involved in shaping the built environment.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/972900.jpg?t=1618578284"
+    },
+    {
+      "title": "City Farmer News",
+      "feed_url": "https://cityfarmer.info/feed/",
+      "website_url": "https://cityfarmer.info/",
+      "description": "City Farmer News links to stories about urban agriculture from around the world. City Farmer was founded in 2009 as a gathering place to realize our mission; to engage, motivate and inspire urban dwellers to garden, eat better and teach their children to follow; and to create an identity that says it all in two words.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 399
+      },
+      "image_url": "https://i1.feedspot.com/679586.jpg?t=1605963389"
+    },
+    {
+      "title": "Copenhagenize.com - Bicycle Culture by Design",
+      "feed_url": "https://copenhagenize.com/feeds/posts/default",
+      "website_url": "https://copenhagenize.com/",
+      "description": "Copenhagenize Design Co. works to create life-sized cities and we focus on the integral role that Bicycle Urbanism plays in our return to them.",
+      "followers": {
+        "facebook": 31500,
+        "twitter": 572,
+        "instagram": 36200
+      },
+      "image_url": "https://i1.feedspot.com/153818.jpg?t=1605961513"
+    },
+    {
+      "title": "Plataforma Urbana",
+      "feed_url": "https://www.plataformaurbana.cl/feed/",
+      "website_url": "https://www.plataformaurbana.cl/",
+      "description": "The most widely read city and urban site in Latin America. The site is about News in Town Planning, City, Growth, Public Participation.",
+      "followers": {
+        "facebook": 131100,
+        "twitter": 54100,
+        "instagram": 31800
+      },
+      "image_url": "https://i1.feedspot.com/705820.jpg?t=1605963397"
+    },
+    {
+      "title": "URBAN HUB",
+      "feed_url": "https://www.urban-hub.com/feed/",
+      "description": "URBAN HUB is an interactive platform for people working on the future of cities and mobility. We collect personal stories about urban landmarks and future ideas for the sustainable development of cities worldwide.",
+      "followers": {
+        "facebook": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4713373.jpg?t=1605961431"
+    }
+  ]
+}

@@ -1,0 +1,482 @@
+{
+  "category": "Los Angeles News",
+  "source_url": "https://rss.feedspot.com/los_angeles_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Los Angeles Times",
+      "feed_url": "https://www.latimes.com/news/rss2.0.xml",
+      "website_url": "https://www.latimes.com/",
+      "description": "The LA Times is a leading source of breaking news, entertainment, sports, politics, and more for the nation, world and California.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 3800000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/94.jpg?t=1541479676"
+    },
+    {
+      "title": "Los Angeles Daily News",
+      "feed_url": "https://www.dailynews.com/feed/",
+      "website_url": "https://www.dailynews.com/",
+      "description": "The Los Angeles Daily News is the local news source for Los Angeles and the San Fernando Valley region, providing breaking news, sports, business, entertainment, things to do, opinion, photos, videos and more from L.A.",
+      "followers": {
+        "facebook": 63000,
+        "twitter": 66000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4821501.jpg?t=1754309937"
+    },
+    {
+      "title": "NBC Los Angeles",
+      "feed_url": "https://www.nbclosangeles.com/?rss=y",
+      "website_url": "https://www.nbclosangeles.com/",
+      "description": "Get the latest Los Angeles weather, traffic, politics, sports, and entertainment news in LA, Orange County, San Bernardino, Riverside, and Ventura. Get LA news, LA breaking local and national news from NBC Southern California.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 598900,
+        "instagram": 369800
+      },
+      "image_url": "https://i1.feedspot.com/4821568.jpg?t=1551333704"
+    },
+    {
+      "title": "KTLA",
+      "feed_url": "https://ktla.com/feed/",
+      "website_url": "https://ktla.com/",
+      "description": "Get round-the-clock news stories and updates on trending Los Angeles affairs here at ktla.com. LA's very own KTLA 5 news team covers News, Sports, Weather, Community and your Daily morning rundowns. KTLA 5 is a Los Angeles News and Video for Southern California.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/927031.jpg?t=1754310252"
+    },
+    {
+      "title": "Time Out Los Angeles",
+      "feed_url": "https://www.timeout.com/los-angeles/blog/feed.rss",
+      "website_url": "https://www.timeout.com/los-angeles",
+      "description": "Up-to-the-minute news about Los Angeles events, restaurants, bars, nightlife, ticket alerts and LA ephemera!",
+      "followers": {
+        "facebook": 192400,
+        "twitter": 29400,
+        "instagram": 209200
+      },
+      "image_url": "https://i1.feedspot.com/4470080.jpg?t=1515583120"
+    },
+    {
+      "title": "LAist",
+      "feed_url": "https://laist.com/index.atom",
+      "website_url": "https://laist.com/",
+      "description": "Find in-depth coverage of LA-specific issues and community events that is valuable, credible, accurate, entertaining, fair, and relevant. LAist is a non-profit, member-supported source for stories that elevate and celebrate the city that's defining the new America. We are authentically LA.",
+      "followers": {
+        "facebook": 281000,
+        "twitter": 754900,
+        "instagram": 114400
+      },
+      "image_url": "https://i1.feedspot.com/5539792.jpg?t=1681297788"
+    },
+    {
+      "title": "The Real Deal \u00bb LA",
+      "feed_url": "https://therealdeal.com/la/feed/",
+      "website_url": "https://therealdeal.com/la/",
+      "description": "The Real Deal provides cutting edge news on the real estate market in Los Angeles and beyond. The Real Deal is the premier real estate news outlet in the US, reaching millions of professionals daily through digital, print, social media and events. They empower real estate professionals with up-to-date news, data, information and tools.",
+      "followers": {
+        "twitter": 4200,
+        "instagram": 438200
+      },
+      "image_url": "https://i1.feedspot.com/4651192.jpg?t=1627552462"
+    },
+    {
+      "title": "Los Angeles Business Journal stories",
+      "feed_url": "https://labusinessjournal.com/feed/",
+      "website_url": "https://labusinessjournal.com/",
+      "description": "Each week, the award-winning Los Angeles Business Journal examines the many ways that the L.A. economy operates. First-rate editorial and research teams provide in-depth analyses of the community's dynamic business and economic scene.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 6900,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/1146110.jpg?t=1515584466"
+    },
+    {
+      "title": "Los Angeles Blade",
+      "feed_url": "https://www.losangelesblade.com/category/news/local-news/los-angeles/feed/",
+      "website_url": "https://www.losangelesblade.com/",
+      "description": "Los Angeles' LGBT newspaper covering the latest gay, lesbian, bisexual and transgender news in Southern California and around the world.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4821702.jpg?t=1541422657"
+    },
+    {
+      "title": "L.A. Taco",
+      "feed_url": "https://lataco.com/feed",
+      "website_url": "https://lataco.com/",
+      "description": "An independent, member-driven food and news source that looks at Los Angeles from the street up, including breaking discoveries in the world of L.A. street food. They are a source of news and information covering food, culture, and community in the metropolitan area. L.A. TACO was founded in late 2006 by its founders' simple desire to document the things they love about the city.",
+      "followers": {
+        "facebook": 43800,
+        "twitter": 56800,
+        "instagram": 314200
+      },
+      "image_url": "https://i1.feedspot.com/5423956.jpg?t=1658400395"
+    },
+    {
+      "title": "Knock LA",
+      "feed_url": "https://knock-la.com/feed/",
+      "website_url": "https://knock-la.com/",
+      "description": "Explore accurate, reliable, hyperlocal coverage of Los Angeles exploring critical issues like law enforcement misconduct, and corporate labor abuses. Knock LA is a nonprofit community journalism project, originally conceived by Ground Game LA. We are dedicated to providing independent journalism and telling the real story of LA.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 24500,
+        "instagram": 20200
+      },
+      "image_url": "https://i1.feedspot.com/5539791.jpg?t=1681297781"
+    },
+    {
+      "title": "Los Angeles Wave Newspapers",
+      "feed_url": "https://wavepublication.com/feed/",
+      "website_url": "https://wavepublication.com/",
+      "description": "Read News covering LA's Health, Business, Sports, and Community circles. You will also find critical opinions, in-depth feature stories, and tons of celebrity news in the Entertainment section. The Los Angeles Wave Newspaper Group is a leading source of local news, entertainment, business, and style In Los Angeles.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 1400,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5539795.jpg?t=1681297811"
+    },
+    {
+      "title": "Los Angeles Standard Newspaper",
+      "feed_url": "https://lastandardnewspaper.com/index.php/news.feed?type=rss",
+      "website_url": "https://lastandardnewspaper.com/index.php/news.html",
+      "description": "The Los Angeles Standard Community newspaper serves Crenshaw, Leimert Park, Baldwin Hills, and other major neighborhoods of Los Angeles County. Our online portal serves as a continuous news source for readers with a fair and fast average of local matters including Businesses, Politics, Sports, Health, Lifestyle, and Entertainment.",
+      "followers": {
+        "twitter": 118,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5539796.jpg?t=1681297829"
+    },
+    {
+      "title": "Century City Westwood News",
+      "feed_url": "https://centurycity-westwoodnews.com/feed/",
+      "website_url": "https://centurycity-westwoodnews.com/",
+      "description": "Breaking News and Stories keeping you up-to-date on the latest word in Westside of LA. Browse Local News, Information and Event Sources for the Century City/Westwood areas. Century City News is an independent community newspaper and website serving Century city and Westwood region.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5539793.jpg?t=1681297986"
+    },
+    {
+      "title": "Rafu Shimpo",
+      "feed_url": "https://rafu.com/feed/",
+      "website_url": "https://rafu.com/",
+      "description": "Handpicked, Accurate, and Relevant stories that provide a birds-eye view of the Little Tokyo community. Read up on Japanese culture, Anime, as well as community and politics. The Rafu Shimpo is the nation's leading Japanese American newspaper since its original publication, proudly serving the Japanese American community from Downtown Los Angeles.",
+      "followers": {
+        "facebook": 11300,
+        "twitter": 4000,
+        "instagram": 13300
+      },
+      "image_url": "https://i1.feedspot.com/5539797.jpg?t=1681297832"
+    },
+    {
+      "title": "WestsideToday",
+      "feed_url": "https://westsidetoday.com/feed/",
+      "website_url": "https://westsidetoday.com/",
+      "description": "Latest news and upbeat stories to keep you informed on LA's bustling Westside neighborhoods. Discover local businesses, lifestyle and other coverage. Westside Today is the ultimate source of News, Culture, and Lifestyle for Culver City, Mar Vista, Del Rey, Palms, and West Los Angeles.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 963
+      },
+      "image_url": "https://i1.feedspot.com/5539794.jpg?t=1681297807"
+    },
+    {
+      "title": "The Los Angeles Post",
+      "feed_url": "https://lapost.us/?feed=rss2",
+      "website_url": "https://lapost.us/",
+      "description": "The Los Angeles Post is an independent online news agency, covering a broad spectrum of issues pertaining to US politics, economy, art, and society, as well as international affairs, for global audiences.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5504224.jpg?t=1675678462"
+    },
+    {
+      "title": "LA Observed",
+      "feed_url": "http://www.laobserved.com/index.rdf",
+      "website_url": "http://www.laobserved.com/",
+      "description": "LA Observed provides Los Angeles media, politics, business and place. A Observed, Kevin Roderick's website of Los Angeles news, media, politics and place.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 22400
+      },
+      "image_url": "https://i1.feedspot.com/87133.jpg?t=1603896908"
+    },
+    {
+      "title": "The Business Journals \u00bb Los Angeles",
+      "feed_url": "https://feeds.bizjournals.com/losangeles",
+      "website_url": "https://www.bizjournals.com/losangeles",
+      "description": "The L.A. Business First features local business news about Los Angeles.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 6900,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/8655166.jpg?t=1754308372"
+    },
+    {
+      "title": "LA Kings Insider",
+      "feed_url": "https://lakingsinsider.com/feed/",
+      "website_url": "https://lakingsinsider.com/",
+      "description": "LA Kings Insider provides in-depth, independent coverage of the Los Angeles Kings. Get the latest LAKings news, stats, roster, player news, and much more on LA Kings Insider.",
+      "followers": {
+        "facebook": 874600,
+        "instagram": 5000
+      },
+      "image_url": "https://i1.feedspot.com/337271.jpg?t=1754312230"
+    },
+    {
+      "title": "KTLA",
+      "feed_url": "https://ktla.com/feed/",
+      "website_url": "https://ktla.com/",
+      "description": "Get round-the-clock news stories and updates on trending Los Angeles affairs here at ktla.com. LA's very own KTLA 5 news team covers News, Sports, Weather, Community and your Daily morning rundowns. KTLA 5 is a Los Angeles News and Video for Southern California.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/927031.jpg?t=1754310252"
+    },
+    {
+      "title": "ABC7 Los Angeles",
+      "feed_url": "https://abc7.com/feed/",
+      "website_url": "https://abc7.com/",
+      "description": "Enjoy trending Fitness stories and workout tips from experts. ABC7 Los Angeles is the city's source for breaking news and live-streaming video online. Covering Los Angeles, Orange County, and all of the greater Southern California area.",
+      "followers": {
+        "facebook": 5200000,
+        "twitter": 1300000,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4409795.jpg?t=1754308500"
+    },
+    {
+      "title": "MyNewsLA.com",
+      "feed_url": "https://mynewsla.com/feed",
+      "website_url": "https://mynewsla.com/",
+      "description": "Breaking news for greater Los Angeles and Orange County from MyNewsLA.com",
+      "followers": {
+        "facebook": 15200,
+        "twitter": 959,
+        "instagram": 154
+      },
+      "image_url": "https://i1.feedspot.com/4552345.jpg?t=1754310132"
+    },
+    {
+      "title": "Los Angeles Daily News",
+      "feed_url": "https://www.dailynews.com/feed/",
+      "website_url": "https://www.dailynews.com/",
+      "description": "The Los Angeles Daily News is the local news source for Los Angeles and the San Fernando Valley region, providing breaking news, sports, business, entertainment, things to do, opinion, photos, videos and more from L.A.",
+      "followers": {
+        "facebook": 63000,
+        "twitter": 66000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4821501.jpg?t=1754309937"
+    },
+    {
+      "title": "Robb Report",
+      "feed_url": "https://robbreport.com/feed/",
+      "website_url": "https://robbreport.com/",
+      "description": "The Best Luxury Cars, Jets, Yachts, Travel, Watches from Robb Report.",
+      "followers": {
+        "facebook": 856100,
+        "twitter": 159200,
+        "instagram": 387500
+      },
+      "image_url": "https://i1.feedspot.com/5275645.jpg?t=1754312649"
+    },
+    {
+      "title": "dot.LA",
+      "feed_url": "https://dot.la/feeds/feed.rss",
+      "website_url": "https://dot.la/",
+      "description": "Stay up-to-date on the latest developments in the Start-up and Tech scene with dot.LA's nuanced, multifaceted analysis and coverage. Reporting funding rounds and other aspects of the Startup ecosystem, dot.LA is a news and events company with a mission of shining a light on innovation in the L.A. startup and tech community.",
+      "followers": {
+        "facebook": 26200,
+        "twitter": 25300,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5529143.jpg?t=1754313221"
+    },
+    {
+      "title": "LA Sports Report",
+      "feed_url": "https://lasportsreport.com/feed/",
+      "website_url": "https://lasportsreport.com/",
+      "description": "LA Sports Report is a sports publishing network based in Los Angeles. It covers teams in the Los Angeles area, including the Dodgers, Rams, Lakers, and Trojans.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 700,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5716692.jpg?t=1754312395"
+    },
+    {
+      "title": "Page Six \u00bb Los Angeles",
+      "feed_url": "https://pagesix.com/tag/los-angeles/feed/",
+      "website_url": "https://pagesix.com/tag/los-angeles/",
+      "description": "Get the latest los angeles news, articles, videos and photos on Page Six.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 386100,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/8655164.jpg?t=1754308711"
+    },
+    {
+      "title": "FOX 11 Los Angeles",
+      "feed_url": "https://www.foxla.com/rss/category/news",
+      "website_url": "https://www.foxla.com/",
+      "description": "Find the latest News | FOX 11 Los Angeles news, articles and videos by FOX 11 Los Angeles",
+      "followers": {
+        "facebook": 3200000,
+        "twitter": 426700,
+        "instagram": 508700
+      },
+      "image_url": "https://i1.feedspot.com/8655165.jpg?t=1754312307"
+    },
+    {
+      "title": "LA Sports Hub",
+      "feed_url": "https://lasportshub.com/feed",
+      "website_url": "https://lasportshub.com/",
+      "description": "LA Sports Hub - A Los Angeles Sports Site - Lakers, Clippers, Rams, Chargers, Kings, Dodgers, Angels, USC Trojans, UCLA Bruins, Ducks, Galaxy.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 1700,
+        "instagram": 101
+      },
+      "image_url": "https://i1.feedspot.com/8655167.jpg?t=1754312569"
+    },
+    {
+      "title": "Los Angeles Public Library Blog",
+      "feed_url": "https://www.lapl.org/collections-resources/blogs/lapl/feed",
+      "website_url": "https://www.lapl.org/collections-resources/blogs/lapl",
+      "description": "All Blog articles from Los Angeles Public Library.",
+      "followers": {
+        "facebook": 63600,
+        "twitter": 63900,
+        "instagram": 196200
+      },
+      "image_url": "https://i1.feedspot.com/8655168.jpg?t=1754308640"
+    },
+    {
+      "title": "Orange County Register \u00bb Los Angeles County",
+      "feed_url": "https://www.ocregister.com/location/california/los-angeles-county/feed/",
+      "website_url": "https://www.ocregister.com/location/california/los-angeles-county/",
+      "description": "Get Orange County and California news from Orange County Register",
+      "followers": {
+        "facebook": 186400,
+        "twitter": 262600,
+        "instagram": 107300
+      },
+      "image_url": "https://i1.feedspot.com/8655169.jpg?t=1754312034"
+    },
+    {
+      "title": "FreightWaves \u00bb Los Angeles",
+      "feed_url": "https://www.freightwaves.com/news/tag/los-angeles/feed",
+      "website_url": "https://www.freightwaves.com/news/tag/los-angeles",
+      "description": "All articles about Los Angeles from FreightWaves.",
+      "followers": {
+        "facebook": 95200,
+        "twitter": 46700,
+        "instagram": 42600
+      },
+      "image_url": "https://i1.feedspot.com/8655170.jpg?t=1754313095"
+    },
+    {
+      "title": "CNBC \u00bb Los Angeles",
+      "feed_url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000572",
+      "website_url": "https://www.cnbc.com/los-angeles/",
+      "description": "All articles about Los Angeles from CNBC.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/8655171.jpg?t=1754312800"
+    },
+    {
+      "title": "SciTechDaily \u00bb UCLA",
+      "feed_url": "https://scitechdaily.com/tag/ucla/feed/",
+      "website_url": "https://scitechdaily.com/tag/ucla/",
+      "description": "The University of California, Los Angeles (UCLA) is a leading public research university known for its groundbreaking contributions across a wide range of scientific fields, from medicine and neuroscience to engineering, climate science, and space exploration.",
+      "followers": {
+        "facebook": 167700,
+        "twitter": 11400,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/8655172.jpg?t=1754312909"
+    },
+    {
+      "title": "CBS News \u00bb Los Angeles",
+      "feed_url": "https://www.cbsnews.com/losangeles/",
+      "website_url": "https://www.cbsnews.com/losangeles/",
+      "description": "CBS Los Angeles provides news, Sports, Weather, Traffic and the Best of LA/OC.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 370300
+      },
+      "image_url": "https://i1.feedspot.com/936052.jpg?t=1603896087"
+    },
+    {
+      "title": "LA Sports Hub",
+      "feed_url": "https://lasportshub.com/feed/",
+      "website_url": "https://lasportshub.com/",
+      "description": "The ultimate home for Los Angeles sports news and updates. Covering the Los Angeles Lakers, Los Angeles Clippers, Los Angeles Dodgers, Los Angeles Angles, Los Angeles Rams, Los Angeles Chargers, Los Anaheim Ducks, USC Trojans, UCLA Bruins, Los Angeles Galaxy, and more!",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 1700,
+        "instagram": 101
+      },
+      "image_url": "https://i1.feedspot.com/4822152.jpg?t=1515656414"
+    },
+    {
+      "title": "WhatNow \u00bb Los Angeles",
+      "feed_url": "https://whatnow.com/los-angeles/feed/",
+      "website_url": "https://whatnow.com/los-angeles/",
+      "description": "What Now Atlanta is the premier news source for planned restaurants, retail, and real estate in the Atlanta, Georgia area. Learn what's trending in Atlanta today. Our sole focus at What Now Atlanta is on being the first to bring you the scoop on yet-to-be-announced and yet-to-open businesses in your neighborhood.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5472911.jpg?t=1669706056"
+    },
+    {
+      "title": "L.A. Weekly",
+      "feed_url": "https://www.laweekly.com/feed/",
+      "website_url": "https://www.laweekly.com/",
+      "description": "LA Weekly magazine is the definitive source of information for news, music, movies, restaurants, reviews, and events in Los Angeles.",
+      "followers": {
+        "facebook": 366200,
+        "twitter": 705400,
+        "instagram": 208800
+      },
+      "image_url": "https://i1.feedspot.com/4414845.jpg?t=1603896548"
+    },
+    {
+      "title": "LA Mag",
+      "feed_url": "https://lamag.com/",
+      "website_url": "https://lamag.com/",
+      "description": "Los Angeles magazine is the definitive resource on the people, food, culture, arts & entertainment, fashion, lifestyle, & Los Angeles news that defines L.A.",
+      "followers": {
+        "facebook": 179800,
+        "twitter": 484200,
+        "instagram": 304200
+      },
+      "image_url": "https://i1.feedspot.com/4414846.jpg?t=1609401181"
+    },
+    {
+      "title": "Los Angeles Sentinel",
+      "feed_url": "https://lasentinel.net/",
+      "website_url": "https://lasentinel.net/",
+      "description": "The Los Angeles Sentinel is an African American owned and operated newspaper that puts emphasis on issues concerning the African-American community and it's readers. Its a highly regarded paper that significantly influences the perceptions, attitudes and buying decisions of it's readership.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 7400,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4821579.jpg?t=1658406159"
+    }
+  ]
+}

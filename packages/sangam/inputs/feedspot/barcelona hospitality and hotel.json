@@ -1,0 +1,92 @@
+{
+  "category": "Barcelona Hospitality and Hotel",
+  "source_url": "https://rss.feedspot.com/barcelona_hospitality_and_hotel_rss_feeds",
+  "feeds": [
+    {
+      "title": "ZT Hotels",
+      "feed_url": "https://zthotels.wordpress.com/feed/",
+      "website_url": "https://zthotels.wordpress.com/",
+      "description": "Noticias, novedades e informaci\u00f3n complementaria",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 1600,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/7292495.jpg?t=1712322011"
+    },
+    {
+      "title": "Axel Hotels Blog",
+      "feed_url": "https://www.axelmag.com/feed/",
+      "website_url": "https://www.axelmag.com/",
+      "description": "Axel Hotels Blog",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 13000,
+        "instagram": 62500
+      },
+      "image_url": "https://i1.feedspot.com/7292497.jpg?t=1712322020"
+    },
+    {
+      "title": "Casagrand Luxury Suites Blog",
+      "feed_url": "https://www.casagrand.com/feed/",
+      "website_url": "https://www.casagrand.com/our-blog/",
+      "description": "Casagrand Luxury Apartments Barcelona",
+      "followers": {
+        "facebook": 276,
+        "instagram": 868
+      },
+      "image_url": "https://i1.feedspot.com/7292498.jpg?t=1712322031"
+    },
+    {
+      "title": "Barcelona Century Blog",
+      "feed_url": "https://www.hotelbarcelonacentury.com/feed/",
+      "website_url": "https://www.hotelbarcelonacentury.com/",
+      "description": "Blog del hotel Barcelona Century en el que hablamos de Barcelona.",
+      "followers": {
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/7292499.jpg?t=1712554608"
+    },
+    {
+      "title": "Grums Barcelona Hotel & Spa Blog",
+      "feed_url": "https://hotelgrumsbarcelona.com/feed/",
+      "website_url": "https://hotelgrumsbarcelona.com/blog-grums-los-mejores-planes-en-barcelona/",
+      "description": "Barcelona Hotel & Spa",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 799,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/7292504.jpg?t=1712322071"
+    },
+    {
+      "title": "SB Hotels Blog",
+      "feed_url": "https://www.sbhotels.es/en/blog/feed/",
+      "website_url": "https://www.sbhotels.es/en/blog/",
+      "description": "Otro sitio m\u00e1s de Mirai Multisite 3 Sites",
+      "followers": {
+        "instagram": 14600
+      },
+      "image_url": "https://i1.feedspot.com/7292502.jpg?t=1712553618"
+    },
+    {
+      "title": "Hotel Augusta Vall\u00e8s Blog",
+      "feed_url": "https://www.hotelaugustavalles.com/es/blog/feed/",
+      "website_url": "https://www.hotelaugustavalles.com/es/blog/",
+      "description": "Otro sitio m\u00e1s de Mirai Multisite 3 Sites",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7292500.jpg?t=1712555050"
+    },
+    {
+      "title": "hcc hotels Barcelona Blog",
+      "feed_url": "https://www.hcchotels.com/en/blog/feed/",
+      "website_url": "https://www.hcchotels.com/en/blog/",
+      "description": "Otro sitio m\u00e1s de Mirai Multisite 3 Sites",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 944
+      },
+      "image_url": "https://i1.feedspot.com/7292496.jpg?t=1712555145"
+    }
+  ]
+}

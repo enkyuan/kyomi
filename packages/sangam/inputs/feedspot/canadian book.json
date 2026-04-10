@@ -1,0 +1,826 @@
+{
+  "category": "Canadian Book",
+  "source_url": "https://rss.feedspot.com/canadian_book_rss_feeds",
+  "feeds": [
+    {
+      "title": "49thShelf.com: Discover Canadian Books, Book Reviews, Book Lists & more Blog",
+      "feed_url": "https://49thshelf.com/rss/feed/blog",
+      "website_url": "https://49thshelf.com/Blog",
+      "description": "Canada's biggest selection of Canadian books, Canadian authors, book reviews, book lists, and more. It is A website stocked with Canadian books by authors both world-renowned and up-and-coming, writing in every genre. On 49th Shelf, you'll find books you'll never forget, meet people whose lists and reviews you'll admire, and learn more about the authors who intrigue you.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 15300
+      },
+      "image_url": "https://i1.feedspot.com/4872429.jpg?t=1612347381"
+    },
+    {
+      "title": "BookNet Canada Blog",
+      "feed_url": "https://www.booknetcanada.ca/blog?format=RSS",
+      "website_url": "https://www.booknetcanada.ca/blog",
+      "description": "BookNet Canada is a non-profit organization that fosters technology innovation for Canadian publishers, distributors and booksellers great and small.BookNet Canada is an industry-driven not-for-profit organization that develops technology, education and standards for the book supply chain to support book sales in the Canadian market.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4740593.jpg?t=1681718174"
+    },
+    {
+      "title": "Prairie Fire",
+      "feed_url": "https://www.prairiefire.ca/category/book-review/feed/",
+      "website_url": "https://www.prairiefire.ca/category/book-review/",
+      "description": "Award-winning Canadian journal of innovative writing that has been publishing exceptional writing for over 39 years. One of Canada's oldest literary magazines.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 2500,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4950718.jpg?t=1612347408"
+    },
+    {
+      "title": "Ottawa Review of Books",
+      "feed_url": "https://www.ottawareviewofbooks.com/blog-feed.xml",
+      "website_url": "https://www.ottawareviewofbooks.com/",
+      "description": "The Ottawa Review of Books is dedicated to bringing to readers the best in established and emerging Canadian fiction writers. We welcome new submissions of reviews of recently published works of fiction by Canadian writers living in Canada and abroad, and non-Canadian writers living in Canada.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 567
+      },
+      "image_url": "https://i1.feedspot.com/4950586.jpg?t=1612347415"
+    },
+    {
+      "title": "Books and Ladders",
+      "feed_url": "https://blog.booksandladders.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://blog.booksandladders.co.uk/",
+      "description": "Jamie is a Canadian book blogger who owns more books than she can fit in her room. She mostly reads YA but has a soft spot for all types Science Fiction and Fantasy.",
+      "followers": {
+        "facebook": 97,
+        "twitter": 3700,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4950692.jpg?t=1612347428"
+    },
+    {
+      "title": "The Miramichi Reader",
+      "feed_url": "https://miramichireader.ca/feed/",
+      "website_url": "https://miramichireader.ca/",
+      "description": "The Miramichi Reader highlights noteworthy books and authors across Canada from coast to coast to coast. We invite you to peruse our site for in-depth Book Reviews, Author Interviews, Literary Criticism and Essays, posted daily.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 1300,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4872487.jpg?t=1636637648"
+    },
+    {
+      "title": "Letters From Windermere Blog",
+      "feed_url": "https://www.elinorflorence.com/feed/",
+      "website_url": "https://www.elinorflorence.com/blog/",
+      "description": "Letters From Windermere is a monthly blog about history, writing, books, and travel by journalist and historical fiction author Elinor Florence. Journey along Elinor to vivid places and the stories they tell, from art havens to natural histories.",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/6309820.jpg?t=1706640163"
+    },
+    {
+      "title": "In-Sight Publishing",
+      "feed_url": "https://in-sightpublishing.com/feed/",
+      "website_url": "https://in-sightpublishing.com/",
+      "description": "In-Sight Publishing began in Winter 2014. It publishes ebooks, for free and charge, and operates in independent and public interests rather than for private gains, and is committed to publishing, in innovative ways, ways of cultural, community, educational, moral, personal, and social value that seem often deemed insufficiently profitable. It operates inside and outside of the bounds of non-profit/not-for-profit.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6702547.jpg?t=1707138665"
+    },
+    {
+      "title": "Kristin Kraves Books",
+      "feed_url": "https://kristinkravesbooks.com/feed/",
+      "website_url": "https://kristinkravesbooks.com/",
+      "description": "Kristin Kraves Books is a book blog from a reader who is open to all genres. Kristin posts everything from book reviews to recommendation lists. What she loves most is interacting with fellow book lovers!",
+      "followers": {
+        "facebook": 143,
+        "twitter": 1900,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5403494.jpg?t=1653385771"
+    },
+    {
+      "title": "Fictionophile",
+      "feed_url": "https://fictionophile.com/feed/",
+      "website_url": "https://fictionophile.com/",
+      "description": "Hello, my name is Lynne. I love to share reading with others and use my blog as a way of documenting my own reading and to serve as an additional online place where I can share my opinions about the books I read.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 6800,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4527187.jpg?t=1638433863"
+    },
+    {
+      "title": "Dead End Follies",
+      "feed_url": "http://www.deadendfollies.com/blog?format=RSS",
+      "website_url": "http://www.deadendfollies.com/",
+      "description": "My name is Ben and I'm a workaholic reviewer living in Montreal, Canada with my better half Josie and my dog Scarlett. This place is a forum for my friends and I do nerd out about books, movies, music and pop culture in general.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4872581.jpg?t=1612347544"
+    },
+    {
+      "title": "Mysteries and More from Saskatchewan",
+      "feed_url": "http://mysteriesandmore.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mysteriesandmore.blogspot.com/",
+      "description": "I am a lawyer in Melfort, Saskatchewan, Canada who enjoys reading, especially mysteries. Since 2000 I have been writing personal book reviews. This blog includes my reviews, information on and interviews with authors and descriptions of mystery bookstores I have visited. Other Canadian mysteries are listed under the Rest of Canada.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950689.jpg?t=1612347535"
+    },
+    {
+      "title": "Avocado Diaries",
+      "feed_url": "https://www.avocadodiaries.com/feeds/posts/default",
+      "website_url": "https://www.avocadodiaries.com/",
+      "description": "Avocado Diaries is a book review platform that highlights an array of brilliant works of fiction and non-fiction, the authors who wrote them, and the designers who worked on the jackets.",
+      "followers": {
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5405244.jpg?t=1653989158"
+    },
+    {
+      "title": "Montreal Review of Books",
+      "feed_url": "https://mtlreviewofbooks.ca/feed/",
+      "website_url": "https://mtlreviewofbooks.ca/",
+      "description": "The Montreal Review of Books is a free, nationally distributed journal of reviews, features, and essays on English-language books by Quebec writers and publishers. The mRb covers literature, non-fiction, poetry, memoirs, history, graphic novels, children's books, and more.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/3785642.jpg?t=1636633658"
+    },
+    {
+      "title": "Amie's Book Review Blog",
+      "feed_url": "https://amiesbookreviews.wordpress.com/feed/",
+      "website_url": "https://amiesbookreviews.wordpress.com/",
+      "description": "This blog is the place where I post reviews of the books I have read. I review audiobooks, regular books and eBooks for authors and publishers as well as any other book or audiobook that catches my eye.",
+      "followers": {
+        "twitter": 1800,
+        "instagram": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4967816.jpg?t=1612347466"
+    },
+    {
+      "title": "BreakEven Books",
+      "feed_url": "https://breakevenbooks.com/feed/",
+      "website_url": "https://breakevenbooks.com/",
+      "description": "I'm a guy that likes to read. A lot. So I figured why not have fun with it and ask authors to send me books to review. I never expected it to actually happen. So now here I am writing this blog to help new authors or publishers out by reading their work and telling them what I think about it.",
+      "followers": {
+        "facebook": 497,
+        "twitter": 4300,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4951007.jpg?t=1612347438"
+    },
+    {
+      "title": "Schatje's Shelves",
+      "feed_url": "https://schatjesshelves.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://schatjesshelves.blogspot.com/",
+      "description": "Schatje's Shelves is my reading blog devoted primarily to reviews of the books I acquire for my library - a library which has 5,425+books (print, ebooks, audiobooks) and keeps growing. My focus is contemporary literary fiction (especially Canadian fiction) and mysteries.",
+      "followers": {
+        "twitter": 90
+      },
+      "image_url": "https://i1.feedspot.com/5161431.jpg?t=1612347449"
+    },
+    {
+      "title": "A Bookworm's World",
+      "feed_url": "https://feeds.feedburner.com/ABookwormsWorld",
+      "website_url": "http://luanne-abookwormsworld.blogspot.com/",
+      "description": "I feel a distinct sense of panic if I don't have a book with me at all times. Or if the stack on the floor starts to get too low. A Bookworm's World is a book review and giveaway blog featuring new and current titles.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/1181943.jpg?t=1612347470"
+    },
+    {
+      "title": "Falling Letters",
+      "feed_url": "https://fallingletters.ca/feed",
+      "website_url": "https://fallingletters.ca/",
+      "description": "Hello everyone! My name is Jenna. I'm a 20-something from the Canadian Prairies. I turned my focus to book blogging in April 2014. For me, reviews are the heart of blogging and that's mostly what you'll find here. I usually like to read Genre-defying literary fiction for children or adults, including magical realism, fantasy with a twist a la Gaiman, dark and gothic and creepy with a touch of terror (but less horror), or just straight up literary fiction with moving prose charachters",
+      "followers": {
+        "twitter": 766
+      },
+      "image_url": "https://i1.feedspot.com/4872558.jpg?t=1612347477"
+    },
+    {
+      "title": "CanLit for LittleCanadians",
+      "feed_url": "https://canlitforlittlecanadians.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://canlitforlittlecanadians.blogspot.com/",
+      "description": "CanLit for LittleCanadians is a site promoting children's and YA books by Canadian authors and illustrators. I am a bibliophile, teacher-librarian, reviewer & promoter of great Canadian reading for young people.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4848309.jpg?t=1612347530"
+    },
+    {
+      "title": "Pickle Me This",
+      "feed_url": "https://picklemethis.com/feed/",
+      "website_url": "https://picklemethis.com/",
+      "description": "Pickle Me thisI have been blogging about books, writing, reading, my family, and curious adventures and diversions. I'm a reader, National Magazine Award-nominated writer, an editor, a writing instructor & a world famous would-be pickler.",
+      "followers": {
+        "twitter": 3,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/2873709.jpg?t=1612347556"
+    },
+    {
+      "title": "What's Better Than Books?",
+      "feed_url": "https://whatsbetterthanbooks.com/feed/",
+      "website_url": "https://whatsbetterthanbooks.com/",
+      "description": "I am a stay-at-home mom of a 20-year-old daughter and an 18-year-old son who loves to read all genres from Historical Fiction to Contemporary Romance and everything in between. Most days, aside from reading, I spend my time cycling, hiking, volunteering, or running around for my kids. This blog will not have remarkable insight or exceptional literary review, but it may help the average joe decide which book to pick up next.",
+      "followers": {
+        "twitter": 5000,
+        "instagram": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4683343.jpg?t=1638437883"
+    },
+    {
+      "title": "Consumed by Ink",
+      "feed_url": "https://consumedbyink.ca/feed/",
+      "website_url": "https://consumedbyink.ca/",
+      "description": "I originally started this blog to challenge myself to read more Canadian books, encouraged along by my A-Z CanLit Project. I have declared this to be a success, and am now intent on focusing even more on Reading Atlantic Canada.",
+      "followers": {
+        "facebook": 245,
+        "twitter": 908
+      },
+      "image_url": "https://i1.feedspot.com/4950657.jpg?t=1612347602"
+    },
+    {
+      "title": "Readers' Salon",
+      "feed_url": "https://winnipegpublibrary.wordpress.com/feed/",
+      "website_url": "https://winnipegpublibrary.wordpress.com/",
+      "description": "Welcome to the Readers' Salon, a blog for, you guessed it, readers \u2014 sponsored by the staff of Winnipeg Public Library. Our aim is create a forum for you to interact with the larger community of readers. A place for book news. A place that encourages the love of reading.",
+      "followers": {
+        "facebook": 14700,
+        "twitter": 6100,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4950668.jpg?t=1612347606"
+    },
+    {
+      "title": "Canadian Book Addict",
+      "feed_url": "https://canadianbookaddict.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://canadianbookaddict.blogspot.com/",
+      "description": "My name is Chantale and I am a 40-something Canadian who loves reading. I have loved reading since I first learned to read. I am addicted to reading. I will be reviewing books that I have purchased and also books that was given to me for my honest review. I like YA, paranormal, fantasy, new adult, historical romance and some erotica.",
+      "followers": {
+        "facebook": 563,
+        "twitter": 740,
+        "instagram": 320
+      },
+      "image_url": "https://i1.feedspot.com/4950612.jpg?t=1612347763"
+    },
+    {
+      "title": "The Captive Reader",
+      "feed_url": "https://thecaptivereader.com/feed/",
+      "website_url": "https://thecaptivereader.com/",
+      "description": "Hi, I'm Claire. I am an avid reader from Vancouver, Canada who loves 20th Century middlebrow fiction, domestic Victorian novels, volumes of correspondence, gossipy diaries, books about European history, and almost anything having to do with Jane Austen.",
+      "followers": {
+        "twitter": 291
+      },
+      "image_url": "https://i1.feedspot.com/4950654.jpg"
+    },
+    {
+      "title": "Library of Clean Reads",
+      "feed_url": "https://feeds.feedburner.com/LibraryOfCleanReads",
+      "website_url": "http://www.libraryofcleanreads.com/",
+      "description": "I am an author, book reviewer, entrepreneur and blogger since 2009. I also own iRead Book Tours and Italy Book Tours where I organize professional virtual book tours. My reading tastes vary greatly and I read both fiction and non-fiction. I review adult, YA and children's books, since I love reading to my children. I review books for pleasure and learning.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4848302.jpg?t=1612347780"
+    },
+    {
+      "title": "The Indextrious Reader",
+      "feed_url": "https://feeds.feedburner.com/TheIndextriousReader",
+      "website_url": "https://indextrious.blogspot.com/",
+      "description": "Notes & Quotes from a Literary Librarian. Blogging keeps me connected to the bookish world, my favourite place to be! I am interested in everything to do with reading, writing, storytelling and all kinds of related ideas. I'm also one of many bookish sewists out there who like to stitch up both stories and clothing.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/487779.jpg?t=1612347788"
+    },
+    {
+      "title": "Canadian Bookworm",
+      "feed_url": "http://cdnbookworm.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://cdnbookworm.blogspot.com/",
+      "description": "We are 2 professional Librarians based in Ontario with almost 50 years of experience between us. We both have a passion for reading, connecting readers to books, and helping other librarians to develop and enhance their readers' advisory skills. I read avidly, both fiction and nonfiction, and try to read a fair bit of Canadian authors to get the word out about how good they are.",
+      "followers": {
+        "twitter": 221
+      },
+      "image_url": "https://i1.feedspot.com/4950631.jpg"
+    },
+    {
+      "title": "Speculating Canada",
+      "feed_url": "https://speculatingcanada.ca/feed/",
+      "website_url": "https://speculatingcanada.ca/",
+      "description": "My hope is that this site will encourage people to read Canadian speculative fiction and engage with it. I use Speculative Fiction or SF here to encompass science fiction, fantasy, and horror, as well as areas of magical realism, urban fantasy, dark fantasy, paranormal romance, and other genres of the fantastic or speculative.",
+      "followers": {
+        "facebook": 622,
+        "twitter": 791
+      },
+      "image_url": "https://i1.feedspot.com/4950589.jpg?t=1612348065"
+    },
+    {
+      "title": "Goodreports",
+      "feed_url": "https://goodreports.net/feed/",
+      "website_url": "https://goodreports.net/",
+      "description": "In 1997 I began reviewing books for a local daily newspaper. A year later I started a website, briefly known as Alex Good's Book Page, which in 1999 became GoodReports.net. The site had various features, including an anthology of fiction and poetry links, essays, author interviews, and reports on the latest book news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950706.jpg?t=1612349100"
+    },
+    {
+      "title": "Leanne Dyck's blog",
+      "feed_url": "http://authorleannedyck.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://authorleannedyck.blogspot.com/",
+      "description": "Author Leanne Dyck offers short stories, book reviews and the continuing saga of an adult with dyslexia on an exciting author journey.",
+      "followers": {
+        "facebook": 53,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4950640.jpg?t=1612348087"
+    },
+    {
+      "title": "Book Addiction",
+      "feed_url": "http://boughtbooks.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://boughtbooks.blogspot.com/",
+      "description": "Teacher, reader, reviewer, bookbuyer. I accept review copies from publishers, but I don't promise to read unsolicited books; if I do read something, though, I promise that I'll post an honest review.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4950965.jpg?t=1612348096"
+    },
+    {
+      "title": "Fly-by-night",
+      "feed_url": "https://canadianfly-by-night.blogspot.com/feeds/posts/default",
+      "website_url": "https://canadianfly-by-night.blogspot.com/",
+      "description": "CANADIAN PAPERBACKS OF THE 40S AND 50S",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2222226.jpg?t=1612348896"
+    },
+    {
+      "title": "Storeys of Stories | Book Reviews",
+      "feed_url": "https://jwmartin.com/index.php/feed/",
+      "website_url": "https://jwmartin.com/",
+      "description": "Writing, books, movies, tv, even video games. Anything with a story. Book Reviews by writer J.W.Martin from Ontario, Canada.",
+      "followers": {
+        "facebook": 106,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4950845.jpg?t=1612348173"
+    },
+    {
+      "title": "Muse and Views",
+      "feed_url": "https://bookclub9.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bookclub9.blogspot.com/",
+      "description": "An electronic journal for the members of a Book Club in Ottawa, ON Canada. Each member of the club has the opportunity to recommend a book and host the meetings of the club. There is no particular theme for this club so we have read a great variety of books.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4950907.jpg?t=1612348191"
+    },
+    {
+      "title": "Reading in Bed",
+      "feed_url": "https://reading-in-bed.com/feed/",
+      "website_url": "https://reading-in-bed.com/",
+      "description": "Reading the classics, CanLit, and everything else. In bed.",
+      "followers": {
+        "twitter": 1800,
+        "instagram": 676
+      },
+      "image_url": "https://i1.feedspot.com/4950780.jpg?t=1612348195"
+    },
+    {
+      "title": "Bookshipper",
+      "feed_url": "https://feeds.feedburner.com/blogspot/NJHEs",
+      "website_url": "http://bookshipper.blogspot.com/",
+      "description": "I am a lover of all things books. I started writing reviews a few years ago and most of these can be seen on Amazon - I decided to start this book blog! I love reviewing books and I am always available to do so - nothing better than reading a book and giving your opinion of it!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4879572.jpg?t=1612348641"
+    },
+    {
+      "title": "BooklyMatters",
+      "feed_url": "https://booklymatters.com/feed/",
+      "website_url": "https://www.booklymatters.com/",
+      "description": "Covers book reviews with a difference - the essence of a book, with no spoilers ever. Terri reads and review most genres, Fiction and Non-Fiction, and she is always delighted to talk books.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5349490.jpg?t=1638440124"
+    },
+    {
+      "title": "Books for Mind",
+      "feed_url": "https://booksformind.com/feed/",
+      "website_url": "https://booksformind.com/",
+      "description": "This is my personal blog about my love of books, among many other interests. I am always passionate about learning new things, and I am a foodie at heart. But it is mostly book related.Hope you join me on my journey, Anca.",
+      "followers": {
+        "facebook": 114,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5485073.jpg?t=1672308995"
+    },
+    {
+      "title": "Sci-Fi Fan Letter Blog",
+      "feed_url": "http://scififanletter.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://scififanletter.blogspot.com/",
+      "description": "Reviews of Science Fiction and Fantasy novels by author Jessica Stride from Toronto.",
+      "followers": {
+        "twitter": 161
+      },
+      "image_url": "https://i1.feedspot.com/4681705.jpg?t=1652333127"
+    },
+    {
+      "title": "Xpresso Reads",
+      "feed_url": "http://feeds.xpressoreads.com/xpressoreads",
+      "website_url": "http://www.xpressoreads.com/",
+      "description": "Xpresso Reads is a blog run by Giselle, Amy and Rashika featuring book reviews, book tours, author interviews and other book...",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 26900
+      },
+      "image_url": "https://i1.feedspot.com/651377.jpg?t=1612347549"
+    },
+    {
+      "title": "Sci/Why",
+      "feed_url": "http://sci-why.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sci-why.blogspot.com/",
+      "description": "To help parents, teachers and librarians discover the wide world of Canadian science writing for kids. Canadian children's writers discuss science, words, and the eternal question - why?",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4950741.jpg"
+    },
+    {
+      "title": "AE Science Fiction",
+      "feed_url": "https://aescifi.ca/feed/",
+      "website_url": "https://aescifi.ca/",
+      "description": "We publish weekly short fiction that explores worlds that could be, paying authors fair rates and promoting under-represented voices. AE is volunteer-run by authors and fans who believe that a vibrant, professional market for Canadian science fiction is something worth doing.",
+      "followers": {
+        "facebook": 164,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4950496.jpg?t=1612347571"
+    },
+    {
+      "title": "Reading, Reading, Reading",
+      "feed_url": "https://readingreadingreading.com/feed/",
+      "website_url": "https://readingreadingreading.com/",
+      "description": "My name is Alyssa Cohen and I am a sixteen-year-old book worm and blogger! I have loved books ever since I can remember, and have very strong memories of my parents reading books to me as a child. Not only have my parents always been huge influences on my life and my values, but they have also past down their love of reading onto me!",
+      "followers": {
+        "facebook": 128,
+        "twitter": 261,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4972461.jpg?t=1612347776"
+    },
+    {
+      "title": "Tundra Books",
+      "feed_url": "https://tundrabooks.com/feed/",
+      "website_url": "https://tundrabooks.com/",
+      "description": "Tundra is Canada's oldest children's book publisher and is renowned across North America and throughout the world for its beautifully illustrated, award-winning books. We publish primarily for young readers, in a wide range of categories: board books, picture books, chapter books, graphic novels, illustrated nonfiction, and middle-grade fiction.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 12800,
+        "instagram": 46900
+      },
+      "image_url": "https://i1.feedspot.com/4950735.jpg?t=1668687460"
+    },
+    {
+      "title": "Clues and Reviews",
+      "feed_url": "https://cluesandreviews.wordpress.com/feed/",
+      "website_url": "https://cluesandreviews.wordpress.com/",
+      "description": "A Blog For Book Lovers by A Book Lover! authored by Sam, a book-a-holic and mystery/thriller novel enthusiast. As a book-a-holic and mystery/thriller novel enthusiast, I have been on the hunt for amazing books for as long as I can remember.",
+      "followers": {
+        "facebook": 222,
+        "twitter": 2200,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4671141.jpg?t=1612347944"
+    },
+    {
+      "title": "Books Etc.",
+      "feed_url": "https://feeds.feedburner.com/blogspot/tZudr",
+      "website_url": "https://booksandstuff-kstar.blogspot.com/",
+      "description": "Hey there! My name's Kaley and I'm the voice behind Books Etc. I started this blog in November 2010 as a way to write about one of my favourite things - books. You'll see a lot of contemporary books reviewed on this blog because they're my favourite kinds of books to read.",
+      "followers": {
+        "twitter": 1400,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/2882144.jpg?t=1612348032"
+    },
+    {
+      "title": "Nuts About Books",
+      "feed_url": "https://nutsaboutbooks.ca/feed/",
+      "website_url": "https://nutsaboutbooks.ca/latest-offerings/",
+      "description": "Are you nuts about books? If you are, then congratulations, you've come to the right place. Any Canadian blogger can apply to receive free books and other products to review on their blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950615.jpg"
+    },
+    {
+      "title": "Ohana Reads",
+      "feed_url": "http://ohanareads.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ohanareads.blogspot.com/",
+      "description": "Hi! My name is Stephanie Ehmann and I run Ohana Reads! I've been running the blog since it was created back in 2014, and it's been an adventure ever since. Combined with her love of reading ( Thank you Twilight Saga), writing, organizing and social media, Ohana Reads was born.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4950600.jpg?t=1612348100"
+    },
+    {
+      "title": "Angelic Book Reviews",
+      "feed_url": "http://angelic-reviews.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://angelic-reviews.blogspot.com/",
+      "description": "My name is Aneta, I currently live in Canada, but I was born in Poland. I have a passion for reading books. I always read YA (young adult) books, but recently I've been trying to explore a little and read some NA and Adult books. My favorite genre is Fantasy, but I do like reading other kinds of books.",
+      "followers": {
+        "twitter": 1100,
+        "instagram": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4950605.jpg?t=1612348105"
+    },
+    {
+      "title": "A Tapestry Of Words",
+      "feed_url": "https://feeds.feedburner.com/ATapestryOfWordsYaReviews",
+      "website_url": "http://atapestryofwords.blogspot.com/",
+      "description": "An avid reader & chocoholic! Working as a speech-language pathologist at a school for children with special needs. Genre-wise I am a fairly eclectic reader, as I like to read fantasy, realistic fiction, dystopian, historical fiction, and some mysteries. I am also fond of some classics, particularly Jane Austen. Check out my blog for book reviews!",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4872567.jpg?t=1612348111"
+    },
+    {
+      "title": "Write Reads",
+      "feed_url": "https://writereads.wordpress.com/feed/",
+      "website_url": "https://writereads.wordpress.com/",
+      "description": "A Canadian book club podcast that will change the world of literature forever. We try to stick with paperbacks as much as possible and all books must be written by a Canadian author.",
+      "followers": {
+        "facebook": 149,
+        "twitter": 125
+      },
+      "image_url": "https://i1.feedspot.com/4950794.jpg?t=1612348123"
+    },
+    {
+      "title": "Literary Thunder Bay",
+      "feed_url": "http://literarythunderbay.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://literarythunderbay.blogspot.com/",
+      "description": "Publishing Thunder Bay's Writers. Send submissions: short fiction, poetry, reviews, creative non-fiction. literary events. I love reading, love writing, love music and love Thunder Bay. I write stories and novels, garden, snowshoe and canoe",
+      "followers": {
+        "twitter": 126
+      },
+      "image_url": "https://i1.feedspot.com/4950904.jpg?t=1612348164"
+    },
+    {
+      "title": "Ruth Latta",
+      "feed_url": "http://ruthlatta.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://ruthlatta.blogspot.com/",
+      "description": "As the author of thirteen published books (as of 2010) and many articles and reviews, including reviews in Ottawa's Forever Young and the online magazine Canadian Materials, I have a lot of experience thinking about books and their various reasons for appealing to readers. I'll read your book (or manuscript) and write you a review that expresses my honest, informed and considered opinion.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950950.jpg?t=1612348791"
+    },
+    {
+      "title": "Words, Pages, Books",
+      "feed_url": "https://wordspagesbooks.blog/category/reviews/feed/",
+      "website_url": "https://wordspagesbooks.blog/category/reviews/",
+      "description": "Book blogger & bookstagrammer aka I take photos of books and share them with other people who like books. Check out book reviews, Montreal cafe recommendations, and more posts about what I love (mainly books and Netflix).",
+      "followers": {
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4951003.jpg?t=1612348680"
+    },
+    {
+      "title": "Jeatherhane Reads",
+      "feed_url": "https://www.jeatherhanereads.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.jeatherhanereads.com/",
+      "description": "My goal is to read all the good books.",
+      "followers": {
+        "facebook": 30,
+        "twitter": 476
+      },
+      "image_url": "https://i1.feedspot.com/5166601.jpg?t=1612348198"
+    },
+    {
+      "title": "Kerry On Can Lit",
+      "feed_url": "https://kerryoncanlit.wordpress.com/feed/",
+      "website_url": "https://kerryoncanlit.wordpress.com/",
+      "description": "Serious but accessible exploration of current Canadian literature.",
+      "followers": {
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/4950659.jpg?t=1612348215"
+    },
+    {
+      "title": "Simply Books",
+      "feed_url": "http://simplybooksblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://simplybooksblog.blogspot.com/",
+      "description": "Canadian bookworm who pays for her book addiction working as a Digital Marketing Manager and frequently brags about her Ravenclaw status.",
+      "followers": {
+        "instagram": 549
+      },
+      "image_url": "https://i1.feedspot.com/4950797.jpg?t=1612348219"
+    },
+    {
+      "title": "Me on Books",
+      "feed_url": "https://feeds.feedburner.com/MeOnBooks",
+      "website_url": "http://me-on-books.blogspot.com/",
+      "description": "Reviews of young adult novels and the occasional middle grade, adult fantasy, or graphic novel. Plugging Canadian YA when possible.",
+      "followers": {
+        "twitter": 766
+      },
+      "image_url": "https://i1.feedspot.com/4950647.jpg?t=1612348232"
+    },
+    {
+      "title": "Read With Katrin",
+      "feed_url": "https://readwithkatrin.wordpress.com/feed/",
+      "website_url": "https://readwithkatrin.wordpress.com/",
+      "description": "Hi! My name is Katrin. I'm a 20-something year-old reader, as well as, book hoarder. Currently, I'm in the middle of finishing my combined degrees in Bachelor of Management in Accounting and Bachelor of Arts in French/Spanish. When I first started university, I didn't do any fun reading and I think I was more stressed because I had no balance.",
+      "followers": {
+        "twitter": 61,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5050233.jpg?t=1612348379"
+    },
+    {
+      "title": "Darlene's Book Nook",
+      "feed_url": "http://feeds.feedburner.com/blogspot/qsgTy",
+      "website_url": "https://darlenesbooknook.blogspot.com/",
+      "description": "I am a busy mother of two, and I love reading on the go! I love listening to audiobooks on my iPod. My genres of interest are paranormal, suspense/thriller, mystery, young adult, horror, urban fantasy, fantasy, romantic suspense, mainstream fiction, and juvenile fiction (which I will read aloud to my children). Accepting a book for review does not guarantee that my review will be positive. I can only post fair and honest reviews which I feel will be helpful to readers.",
+      "followers": {
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/2041203.jpg?t=1612348386"
+    },
+    {
+      "title": "BritReadsBooks",
+      "feed_url": "https://britreadsbooks.wordpress.com/feed/",
+      "website_url": "https://britreadsbooks.wordpress.com/",
+      "description": "Hello, I'm Brittany, and welcome to my blog! First and foremost, I'm a huge bookworm and I buy books faster than I can read. Seriously, though, someone send help because I'm about to be buried or eaten alive by them. Genres I love include YA, NA, Contemporary, Fantasy, Romance, and Poetry. You can always find me at the bookstore wandering through the shelves looking for the next great read, probably sipping on Starbucks.",
+      "followers": {
+        "twitter": 532,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5225432.jpg?t=1607347170"
+    },
+    {
+      "title": "The Canadian Book Review",
+      "feed_url": "https://canadianbookreview.wordpress.com/feed/",
+      "website_url": "https://canadianbookreview.wordpress.com/",
+      "description": "I blog about CanLit simply because I love it. Canadian Literature has, for over a decade now, been of deep personal interest to me. It was my academic speciality in university; collecting Canadian literature is my primary hobby; and reading books from the Great White North is one of my favourite ways to wind down after a long day. I have no rhyme or reason on why I review the individual titles I review; this blog is an arbitrary review of what I decide to read.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4872527.jpg?t=1612347695"
+    },
+    {
+      "title": "Apples With Many Seeds",
+      "feed_url": "https://feeds.feedburner.com/blogspot/qXNX",
+      "website_url": "http://applewithmanyseedsdoucette.blogspot.com/",
+      "description": "Finding books that connect to the real world are the ones I enjoy promoting the most. Reviewing children's and young adult fiction & nonfiction books. Connecting classroom teaching ideas to inspirational resources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3839763.jpg?t=1612348451"
+    },
+    {
+      "title": "Bionic Book Worm",
+      "feed_url": "https://bionicbookwormblog.wordpress.com/feed/",
+      "website_url": "https://bionicbookwormblog.wordpress.com/",
+      "description": "My name is Shanah. I live in SW Ontario Canada, have two kids, a wonderful husband, an adorable dog. Reading is my one and only favourite escape. I've been an avid reader my whole life who's love of reading came from my mom, who always had shelves full of books.",
+      "followers": {
+        "twitter": 1600,
+        "instagram": 806
+      },
+      "image_url": "https://i1.feedspot.com/4950801.jpg?t=1612347452"
+    },
+    {
+      "title": "The Candid Cover",
+      "feed_url": "https://candidcover.net/feed/",
+      "website_url": "https://candidcover.net/",
+      "description": "Olivia is a Canadian young adult book blogger. She reviews books and conducts author Interviews, giveaways, and discussions. She rates books from one to five stars based on the characters, setting, writing style, and overall enjoyment of the book. Her blog The Candid Cover features Young Adult books, audiobooks, and book-to-movie adaptations thorough information and engaging posts.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 5200,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4950744.jpg?t=1612347424"
+    },
+    {
+      "title": "Tim Challies \u00bb Book Reviews",
+      "feed_url": "https://www.challies.com/collections/book-reviews/feed/",
+      "website_url": "https://www.challies.com/collections/book-reviews/",
+      "description": "I love to write about Christian living, theology, and reviews of books that are of interest to Christians.",
+      "followers": {
+        "facebook": 170200,
+        "twitter": 85500
+      },
+      "image_url": "https://i1.feedspot.com/4852139.jpg?t=1611729809"
+    },
+    {
+      "title": "Quill and Quire",
+      "feed_url": "https://quillandquire.com/review/feed/",
+      "website_url": "https://quillandquire.com/review/",
+      "description": "Quill & Quire is the magazine of the Canadian book trade. The print edition, published 10 times per year, includes author profiles, news about upcoming books and developments in the Canadian industry, and reviews of new adult and children's titles. The magazine reviews around 400 new titles each year, offering the most comprehensive look at Canadian-authored books in the country.",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 27600,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/4950666.jpg?t=1612347386"
+    },
+    {
+      "title": "Canadian Children's Book Centre",
+      "feed_url": "https://bookcentre.ca/feed",
+      "website_url": "https://bookcentre.ca/",
+      "description": "The Canadian Children's Book Centre (CCBC) is a national, not-for-profit organization founded in 1976. We are dedicated to encouraging, promoting, and supporting the reading, writing, illustrating, and publishing of Canadian books for young readers. Our programs, publications, and resources help teachers, librarians, booksellers, and parents select the very best for young readers.",
+      "followers": {
+        "facebook": 9000,
+        "twitter": 10700,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4950597.jpg?t=1612347400"
+    },
+    {
+      "title": "Books On Beechwood",
+      "feed_url": "https://booksonbeechwood.ca/category/reviews/feed/",
+      "website_url": "https://www.bookreviewsandmore.ca/",
+      "description": "Books on Beechwood is an independent, locally owned, bookstore that reflects the interests of the surrounding neighbourhoods. The selections on literary fiction, biography, and history are particularly strong. We also have a good selection of mysteries, of children's books and of cookbooks.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 778,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4950865.jpg?t=1612347593"
+    },
+    {
+      "title": "Book Reviews and More",
+      "feed_url": "https://feeds.feedburner.com/BookReviewsAndMore",
+      "website_url": "https://www.bookreviewsandmore.ca/",
+      "description": "The book reviews and literary ramblings of Steven R. McEvoy!A collection of Catholic, Fiction, Children's and Tech book reviews and published articles.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4872451.jpg"
+    },
+    {
+      "title": "trishajennreads Blog",
+      "feed_url": "https://www.trishajennreads.com/feed/",
+      "website_url": "https://www.trishajennreads.com/blog",
+      "description": "Trisha Jenn Loehr reviews books, writes about the bookish lifestyle, and offers ideas and discussions for readers and writers alike. Other aspects of trishajennreads include a redbubble shop of bookish designs, an etsy shop of book inspired jewelery (Noveletta Avenue), freelance writing and freelance editing services.",
+      "followers": {
+        "facebook": 18,
+        "twitter": 1200,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4872458.jpg?t=1612347797"
+    },
+    {
+      "title": "Olivia Lavery",
+      "feed_url": "https://www.olivialavery.com/blog?format=RSS",
+      "website_url": "https://www.olivialavery.com/",
+      "description": "I am a 23-year-old journalist living on the Canadian east coast. I love reading, writing and photography, and after years of enjoying those things privately, I decided that I wanted to share my hobbies publicly. This is a blog of literary reviews, book recommendations, and author profiles.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/4972456.jpg?t=1612347954"
+    },
+    {
+      "title": "book-a-rama",
+      "feed_url": "http://feeds2.feedburner.com/Book-a-rama",
+      "website_url": "https://www.chrisbookarama.com/",
+      "description": "Creator of the book blog previously known as book-a-rama, now Chrisbookarama. I read the books then talk about them. I'm Chris, a book loving lady living in Nova Scotia, Canada. I'd love to read all day but being a mom makes that kinda hard. I squeeze it in where I can.Some of my favorite genres: classics, literary fiction, historical fiction, suspense, and occasionally young adult and non-fiction",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/3661368.jpg?t=1612349154"
+    },
+    {
+      "title": "SF Canada",
+      "feed_url": "https://northbynotwest.com/SFCanada-WP/?feed=rss2",
+      "website_url": "https://www.sfcanada.org/",
+      "description": "SF Canada exists to foster a sense of community among Canadian writers of speculative fiction, to improve communication, to foster the growth of quality writing, to lobby on behalf of Canadian writers, and to encourage the translation of Canadian speculative fiction. SF Canada supports positive social action.",
+      "followers": {
+        "twitter": 984
+      },
+      "image_url": "https://i1.feedspot.com/4950684.jpg?t=1612348117"
+    },
+    {
+      "title": "The Book Wars",
+      "feed_url": "https://thebookwars.ca/feed/",
+      "website_url": "https://thebookwars.ca/",
+      "description": "We read, write, discuss, and celebrate children's lit & culture. Here you will find unadulterated fangirling of children's books, authors, and bookstores. We present to you a variety of perspectives and we talk about a variety of books.",
+      "followers": {
+        "facebook": 271,
+        "twitter": 603
+      },
+      "image_url": "https://i1.feedspot.com/4950580.jpg?t=1612348391"
+    },
+    {
+      "title": "Stories All the Way Down",
+      "feed_url": "https://gmbaker.net/feed/",
+      "website_url": "https://gmbaker.net/",
+      "description": "A blog about the current state of literature and its ills; about the writing life and its follies; about historical fiction and its foibles; about being a Catholic novelist and its contradictions; about roaming about and its perplexities.",
+      "followers": {
+        "facebook": 61,
+        "twitter": 969
+      },
+      "image_url": "https://i1.feedspot.com/5231680.jpg?t=1609307597"
+    }
+  ]
+}

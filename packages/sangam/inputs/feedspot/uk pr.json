@@ -1,0 +1,60 @@
+{
+  "category": "UK PR",
+  "source_url": "https://rss.feedspot.com/uk_pr_rss_feeds",
+  "feeds": [
+    {
+      "title": "Neo PR",
+      "feed_url": "https://neopr.co.uk/feed/",
+      "website_url": "https://neopr.co.uk/content-hub/",
+      "description": "Neo PR is a leading technology PR agency delivering impactful public relation campaigns that build market awareness, engage target audiences and drive sales.",
+      "followers": {
+        "facebook": 127,
+        "twitter": 1200,
+        "instagram": 202
+      },
+      "image_url": "https://i1.feedspot.com/4530628.jpg?t=1613732931"
+    },
+    {
+      "title": "Escapade Blog",
+      "feed_url": "https://escapadepr.com/blog/feed/",
+      "website_url": "https://escapadepr.com/blog/",
+      "description": "PR blog from the Escapade team, covers all aspects of consumer lifestyle PR, market trends, data insight, social media and more.",
+      "followers": {
+        "facebook": 235,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4528803.jpg?t=1613732934"
+    },
+    {
+      "title": "EC-PR",
+      "feed_url": "https://ec-pr.com/feed/",
+      "website_url": "https://ec-pr.com/pr-news-and-blog/",
+      "description": "Emmett & Churchman is a London B2B PR consultancy. We help our clients to communicate more effectively with customers, colleagues and the media.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4530724.jpg?t=1613733070"
+    },
+    {
+      "title": "Vitis PR Blog",
+      "feed_url": "https://www.vitispr.com/blog/feed/",
+      "website_url": "https://www.vitispr.com/blog/",
+      "description": "Vitis PR is a technology PR agency set up in 2006 to provide PR services to small to medium sized technology and telecoms companies. We share our latest thoughts on PR trends, social media. We also share our research and blog about all things relating to technology.",
+      "followers": {
+        "facebook": 239,
+        "twitter": 398
+      },
+      "image_url": "https://i1.feedspot.com/4528480.jpg?t=1613733006"
+    },
+    {
+      "title": "Wildfire PR Blog",
+      "feed_url": "https://www.wildfirepr.com/blog/feed/",
+      "website_url": "https://www.wildfirepr.com/blog/",
+      "description": "Wildfire PR is a technology PR agency delivering high impact campaigns that build market awareness, engage target audiences and drive sales for technology businesses across global markets.",
+      "followers": {
+        "facebook": 145,
+        "twitter": 4600,
+        "instagram": 473
+      },
+      "image_url": "https://i1.feedspot.com/4527856.jpg?t=1613732914"
+    }
+  ]
+}

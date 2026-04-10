@@ -1,0 +1,29 @@
+{
+  "category": "Carmel News",
+  "source_url": "https://rss.feedspot.com/carmel_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Youarecurrent.com \u00bb Carmel",
+      "feed_url": "https://www.youarecurrent.com/category/carmel/feed/",
+      "website_url": "https://www.youarecurrent.com/category/carmel/",
+      "description": "We are weekly, local newspaper serving Carmel, Indiana since 2006. The editorial content in our publications is gathered and packaged based on the results of independent marketplace research. We are the community's newspaper, We deliver enrich source on point.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5143077.jpg?t=1623157493"
+    },
+    {
+      "title": "City of Carmel",
+      "feed_url": "https://www.carmel.in.gov/Home/Components/RssFeeds/RssFeed/View?ctID=5&cateIDs=1,6,7,8,9,10,11,12,13,14,36",
+      "website_url": "https://www.carmel.in.gov/our-city/news-releases",
+      "description": "Carmel is one of the fastest-growing cities in Indiana. Located just north of Indianapolis in Hamilton County, Carmel is a dynamic edge city with award-winning schools, thriving businesses, and family-oriented neighborhoods. Follow this feed for the latest news, city updates, traffic alerts, economic, environment development, election news, and much more.",
+      "followers": {
+        "facebook": 30400,
+        "twitter": 14300,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/5143088.jpg?t=1626248621"
+    }
+  ]
+}

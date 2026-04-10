@@ -1,0 +1,63 @@
+{
+  "category": "Australian Diet",
+  "source_url": "https://rss.feedspot.com/australian_diet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Rapid Loss Blog",
+      "feed_url": "https://rapidwellness.com.au/blogs/news.atom",
+      "website_url": "https://rapidwellness.com.au/blogs/news",
+      "description": "Rapid Loss consists of a range of nutritious Meal Replacement Shakes that assist in reducing weight rapidly.* These have been formulated so that you can use them to replace meals or replace snacks. So if you want to drop the weight as fast as possible you can replace meals.",
+      "followers": {
+        "facebook": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4912943.jpg?t=1620288239"
+    },
+    {
+      "title": "Dietitian Approved Blog",
+      "feed_url": "https://www.dietitianapproved.com/blog.rss",
+      "website_url": "https://www.dietitianapproved.com/blog/",
+      "description": "Breaking down the latest science in sports nutrition to help you with practical, easy to understand and implement advice. Taryn love is working with people to help them eat for health and performance.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 206,
+        "instagram": 13000
+      },
+      "image_url": "https://i1.feedspot.com/4503279.jpg?t=1612242098"
+    },
+    {
+      "title": "Love What You Eat Blog",
+      "feed_url": "https://lovewhatyoueat.com.au/feed/",
+      "website_url": "https://lovewhatyoueat.com.au/blog/",
+      "description": "Melbourne's best dietitian & nutritionist, Zoe, can heal your relationship with food through a non-diet approach. Zoe can also help with your Food Intolerance queries, including Low FODMAP.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 3400,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4912922.jpg?t=1620288263"
+    },
+    {
+      "title": "FEEDinc. Canberra Dietitians & Nutritionists Blog",
+      "feed_url": "https://www.feedinc.net/blog/feed",
+      "website_url": "https://www.feedinc.net/blog",
+      "description": "Follow this blog for information regarding Fitness, Education, Energy and Diet.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4503593.jpg?t=1612242051"
+    },
+    {
+      "title": "Body Soul",
+      "feed_url": "https://www.bodyandsoul.com.au/diet/feed",
+      "website_url": "https://www.bodyandsoul.com.au/diet",
+      "description": "Australia's home of health and happiness. mybody soul's experts offer weight loss advice, diet tips & exercise plans to help you reach your wellness goals!",
+      "followers": {
+        "facebook": 216200,
+        "twitter": 13900,
+        "instagram": 131100
+      },
+      "image_url": "https://i1.feedspot.com/4912945.jpg?t=1620288234"
+    }
+  ]
+}

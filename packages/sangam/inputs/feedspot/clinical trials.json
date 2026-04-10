@@ -1,0 +1,746 @@
+{
+  "category": "Clinical Trials",
+  "source_url": "https://rss.feedspot.com/clinical_trials_rss_feeds",
+  "feeds": [
+    {
+      "title": "ACRP Blog",
+      "feed_url": "https://acrpnet.org/news/blog/feed",
+      "website_url": "https://acrpnet.org/news/blog",
+      "description": "ACRP raises clinical research standards and accelerates careers. Being part of the ACRP community means you are the gold standard in clinical research, and you have the qualifications to prove it.",
+      "followers": {
+        "facebook": 23200,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5061029.jpg?t=1622798976"
+    },
+    {
+      "title": "Science-Based Medicine \u00bb Clinical Trials",
+      "feed_url": "https://sciencebasedmedicine.org/category/clinical-trials/feed/",
+      "website_url": "https://sciencebasedmedicine.org/category/clinical-trials/",
+      "description": "Science-Based Medicine explores issues and controversies in the relationship between science and medicine. Follow us to get updates on clinical trials.",
+      "followers": {
+        "facebook": 63100,
+        "twitter": 34300
+      },
+      "image_url": "https://i1.feedspot.com/5061033.jpg?t=1622799002"
+    },
+    {
+      "title": "Crucial Data Solutions Blog",
+      "feed_url": "https://www.crucialdatasolutions.com/feed/",
+      "website_url": "https://www.crucialdatasolutions.com/blog/",
+      "description": "Crucial Data Solutions, Inc. is a forward-thinking company dedicated to developing innovative technologies that reduce the cost of medical research. The blog covers the latest in clinical research technology and keeps you up-to-date on the industry news.",
+      "followers": {
+        "twitter": 286
+      },
+      "image_url": "https://i1.feedspot.com/5061019.jpg?t=1622799009"
+    },
+    {
+      "title": "ClinVigilant Blog",
+      "feed_url": "https://www.clinvigilant.com/feed/",
+      "website_url": "https://www.clinvigilant.com/blog/",
+      "description": "ClinVigilant provides cost-effective digital solutions and consulting services for phase I-IV clinical trials across the globe, including the US, Europe, UK, Asia-Pacific, Middle East, North Africa, and Latin America. Read more about their study-specific eClinical solutions for remote monitoring and management of virtual and decentralized clinical trials in this blog..",
+      "followers": {
+        "facebook": 7,
+        "twitter": 380,
+        "instagram": 297
+      },
+      "image_url": "https://i1.feedspot.com/5684402.jpg?t=1704196651"
+    },
+    {
+      "title": "Aurous HealthCare CRO \u00bb Clinical Trial",
+      "feed_url": "https://auroushealthcare.wordpress.com/category/clinical-trial/feed/",
+      "website_url": "https://auroushealthcare.wordpress.com/category/clinical-trial/",
+      "description": "Aurous HealthCare (AHC) is an independent CRO with a focus on clinical research. It provides pharmaceutical services in all sectors of drug research such as clinical trial management, medical writing, In vitro cell line research, animal safety and toxicity research. Subscribe for more updates.",
+      "followers": {
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/5061028.jpg?t=1622799063"
+    },
+    {
+      "title": "Applied Clinical Trials Online Blog",
+      "feed_url": "https://www.appliedclinicaltrialsonline.com/rss",
+      "website_url": "https://www.appliedclinicaltrialsonline.com/blogs",
+      "description": "Applied Clinical Trials is the authoritative resource for information on Phase I - III clinical trials, news, company info, best practices, articles. Latest solutions, case studies, interviews, practical articles for clinical trials operations, data management, technology, investigative sites and services.",
+      "followers": {
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/5396213.jpg?t=1651495265"
+    },
+    {
+      "title": "Advanced Clinical Blog",
+      "feed_url": "https://blog.advancedclinical.com/rss.xml",
+      "website_url": "https://blog.advancedclinical.com/",
+      "description": "Your destination for clinical research trends, topics, and news. Advanced Clinical is clinical development and strategic resourcing organization committed to providing a better clinical experience across the drug development journey.",
+      "followers": {
+        "facebook": 648,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5396939.jpg?t=1651669184"
+    },
+    {
+      "title": "Conquest Research Blog",
+      "feed_url": "https://conquestresearch.com/feed/",
+      "website_url": "https://conquestresearch.com/blog",
+      "description": "Explore our articles to learn more about clinical research news, innovative treatment options, and tips on accessing the most current care. Conquest Research is a medical research firm focused on developing new medical treatments to treat health conditions in individuals and communities worldwide.",
+      "followers": {
+        "facebook": 3300,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5485111.jpg?t=1672313339"
+    },
+    {
+      "title": "Antidote Blog",
+      "feed_url": "https://www.antidote.me/blog/rss.xml",
+      "website_url": "https://www.antidote.me/blog",
+      "description": "The Antidote blog shares news covering the latest strides in research, medical & health tips, and more. Antidote connects volunteers to the right clinical research studies. We are accelerating the breakthroughs of new treatments by bridging the gap between medical research and the people who need them.",
+      "followers": {
+        "facebook": 96200,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5396217.jpg?t=1651494181"
+    },
+    {
+      "title": "Worldwide Clinical Trials",
+      "feed_url": "https://www.worldwide.com/insights/feed/",
+      "website_url": "https://www.worldwide.com/insights/",
+      "description": "Read Worldwide's practical and expert perspective on the latest in CRO and clinical research breakthroughs. Founded by physicians dedicated to advancing medical science, Worldwide is a customer-centric CRO that strategically balances science, medicine, operations, and commercial intelligence to achieve successful drug development.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 2800,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5485118.jpg?t=1672312635"
+    },
+    {
+      "title": "ProofPilot Blog",
+      "feed_url": "https://www.proofpilot.com/blog/rss.xml",
+      "website_url": "https://www.proofpilot.com/blog",
+      "description": "Clinical trial blogs from ProofPilot ensure you stay current on the latest in clinical resources, from clinical trial news to fresh takes from our experts. ProofPilot is a digital protocol automation platform that eliminates guesswork and protocol deviations to create high-performance experiences for your sites and patients.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485112.jpg?t=1672313379"
+    },
+    {
+      "title": "North Georgia Clinical Research Blog",
+      "feed_url": "https://ngclinicalresearch.com/feed/",
+      "website_url": "https://ngclinicalresearch.com/blog/",
+      "description": "Read the latest clinical research news & updates in research trials from NGCR. North Georgia Clinical Research is a leading research clinic that evaluates new therapies for many common medical problems that are faced by both women and men through research.",
+      "followers": {
+        "facebook": 970,
+        "twitter": 24,
+        "instagram": 253
+      },
+      "image_url": "https://i1.feedspot.com/5396600.jpg?t=1651581845"
+    },
+    {
+      "title": "Altus Research Blog",
+      "feed_url": "https://altusresearch.com/our-blog/feed/",
+      "website_url": "https://altusresearch.com/our-blog/",
+      "description": "Altus Research is an independent, state-of-the-art clinical research facility in Lake Worth endeavoring to advance Medicine through Community Partnership. Our blog presents information expanding on crucial elements about Clinical Trials, Common questions, and the latest news and updates from Altus.",
+      "followers": {
+        "facebook": 621,
+        "twitter": 86,
+        "instagram": 265
+      },
+      "image_url": "https://i1.feedspot.com/5485110.jpg?t=1672312586"
+    },
+    {
+      "title": "Boston Biotech Clinical Research Blog",
+      "feed_url": "https://bbcrconsulting.com/feed/",
+      "website_url": "https://bbcrconsulting.com/clinical-research-resources/clinical-trials-blog/",
+      "description": "Through the BBCR blog, we aim to share our knowledge and expertise and also potential solutions to current challenges in the regulatory and research environments. Boston Biotech Clinical Research (BBCR) works with biotech, pharmaceutical, and device companies to develop roadmaps for simplified, streamlined, and cost-effective clinical trials.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 21,
+        "instagram": 1
+      },
+      "image_url": "https://i1.feedspot.com/5485102.jpg?t=1672729442"
+    },
+    {
+      "title": "Seattle Clinical Research Center Blog",
+      "feed_url": "https://seattlecrc.com/feed/",
+      "website_url": "https://seattlecrc.com/blog/",
+      "description": "Stay up-to-date on clinical research news & updates in research trials from Seattle Clinical Research. Seattle Clinical Research Center (SCRC) is a dedicated clinical trial investigative site and has a track record of successfully executing several multi-specialty Phase I-IV medical device and biopharma clinical trials.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 72,
+        "instagram": 750
+      },
+      "image_url": "https://i1.feedspot.com/5485104.jpg?t=1672312551"
+    },
+    {
+      "title": "Praxis Blog",
+      "feed_url": "https://www.gopraxis.com/news/category/blog/feed/",
+      "website_url": "https://www.gopraxis.com/news/category/blog/",
+      "description": "Get astute health tips and stay current on the latest medical events and research breakthroughs with the Praxis Blog. Praxis is a global patient recruiter connecting the world's leading pharmaceutical companies with the right patient pool for their studies and clinical trials since 2002.",
+      "followers": {
+        "facebook": 185,
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/5485101.jpg?t=1672731203"
+    },
+    {
+      "title": "QPS Blog",
+      "feed_url": "https://417studies.com/feed/",
+      "website_url": "https://417studies.com/blog/",
+      "description": "Check out the QPS Blog and learn more about Clinical Research Studies. Our Experts provide in-depth and concise knowledge of key concepts like Benefits, Potential Side effects, and more. QPS is a global Clinical Research Organization supporting the discovery, preclinical and clinical development of new pharmaceutical products.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 131,
+        "instagram": 584
+      },
+      "image_url": "https://i1.feedspot.com/5485099.jpg?t=1672312516"
+    },
+    {
+      "title": "Midwest Clinical Research Center Blog",
+      "feed_url": "https://midwestclinical.com/blog/feed/",
+      "website_url": "https://midwestclinical.com/blog/",
+      "description": "Clinical Studies Blog featuring Resources and information about clinical studies. Read extensive articles on diseases, medical conditions, common treatments, and other health-related insights. The Midwest Clinical Research Center provides quality clinical trial execution across all clinical research phases to help sponsors speed up the production of life-saving and life-enhancing therapeutics.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 34,
+        "instagram": 621
+      },
+      "image_url": "https://i1.feedspot.com/5485117.jpg?t=1672312630"
+    },
+    {
+      "title": "Synergy Research Center Blog",
+      "feed_url": "https://www.synergyresearchcenters.com/blog/feed/",
+      "website_url": "https://www.synergyresearchcenters.com/blog/",
+      "description": "Educate yourself on clinical research trials in San Diego, psychiatric disorders, and mental disorders with Synergy San Diego's blog. Learn more here. Synergy Research Centers is a San Diego medical research facility with locations in Lemon Grove, dedicated to finding solutions to diseases and disorders that afflict millions of people around the world.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 560,
+        "instagram": 580
+      },
+      "image_url": "https://i1.feedspot.com/5485116.jpg?t=1672312624"
+    },
+    {
+      "title": "Imperial Clinical Research Services Blog",
+      "feed_url": "https://www.imperialcrs.com/blog/feed/",
+      "website_url": "https://www.imperialcrs.com/blog/",
+      "description": "Imperial provides specialized services to help bridge the gap from clinical trial to approval. With skills and experience critical to making your trial a success, we assist at every step or target the specific areas of your choice from protocol creation to study closeout.",
+      "followers": {
+        "twitter": 158
+      },
+      "image_url": "https://i1.feedspot.com/5396248.jpg?t=1651496307"
+    },
+    {
+      "title": "Citruslabs Blog",
+      "feed_url": "https://www.citruslabs.com/blog-feed.xml",
+      "website_url": "https://www.citruslabs.com/blog",
+      "description": "The Citruslabs blog covers all things clinical trial patient recruitment and retention as well as exciting news and developments in the medical research industry. Browse our recent posts or search for a topic you're interested in to learn more. Citruslabs provides clinical trials and consumer perception studies for consumer brands seeking research-backed claims.",
+      "followers": {
+        "twitter": 538,
+        "instagram": 641
+      },
+      "image_url": "https://i1.feedspot.com/5485114.jpg?t=1672312608"
+    },
+    {
+      "title": "SOCRA Blog",
+      "feed_url": "https://www.socra.org/blog/feed/",
+      "website_url": "https://www.socra.org/blog/",
+      "description": "Learn more about SOCRA, the latest techniques used in Clinical Trials, Conferences, and Event, and expert thought leadership from established medical professionals. The Society of Clinical Research Associates, Inc. is a non-profit, professional organization dedicated to the continuing education and development of clinical research professionals.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5396595.jpg?t=1651580173"
+    },
+    {
+      "title": "RCR",
+      "feed_url": "https://rcrclinical.com/feed/",
+      "website_url": "https://rcrclinical.com/news/",
+      "description": "Get important information and life-saving health advice from medical experts in the Rochester Clinical Research Blog. RCR is a research organization founded in 1994 to provide residents of the Greater Rochester Area access to clinical research studies, and to advance new medical treatments that improve quality of life.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 384,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5485107.jpg?t=1672312569"
+    },
+    {
+      "title": "LMK Clinical Research Blog",
+      "feed_url": "https://www.lmkclinicalresearch.com/blog/feed/",
+      "website_url": "https://www.lmkclinicalresearch.com/blog/",
+      "description": "On this page, you will find several blog posts and entries from the LMK team diving into some of the most important topics related to the TMF. LMK Clinical Research Consulting is a leader in Trial Master File (TMF) document management services and solutions for the life sciences industry.",
+      "followers": {
+        "facebook": 732,
+        "twitter": 167
+      },
+      "image_url": "https://i1.feedspot.com/5485113.jpg?t=1672312602"
+    },
+    {
+      "title": "CLiNFo.EU Blog",
+      "feed_url": "https://www.clinfo.eu/feed/",
+      "website_url": "https://www.clinfo.eu/blog/",
+      "description": "CLiNFo.EU Blog is your source of information on developments in clinical research: study design, study management, digitalization & data management, biostatistics, and safety. We are a team of Medical professionals dedicated to a common goal of disseminating correct and timely medical and disease information to persons in need of it.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485136.jpg?t=1672313464"
+    },
+    {
+      "title": "BioMedCentral | Trials",
+      "feed_url": "https://trialsjournal.biomedcentral.com/articles/most-recent/rss.xml",
+      "website_url": "https://trialsjournal.biomedcentral.com/articles",
+      "description": "Trials Journal by Springer Nature encompasses all aspects of the performance and findings of randomized controlled trials in health. We publish articles on general trial methodology and research into trial processes, as well as study protocols and statistical analysis plans for randomized controlled trials, commentaries, and traditional results papers.",
+      "followers": {
+        "facebook": 107100,
+        "twitter": 76200
+      },
+      "image_url": "https://i1.feedspot.com/2044196.jpg?t=1672313589"
+    },
+    {
+      "title": "Certara Blog",
+      "feed_url": "https://www.certara.com/feed/",
+      "website_url": "https://www.certara.com/resources/blogs/",
+      "description": "Stay up to date with the latest clinical trial news and developments. You'll find guidance and insights on all your clinical metadata woes. Search and find all you need to know on any topic of interest surrounding clinical research. Formedix is a medical software firm that offers Ryze - a cloud-based Clinical Metadata Repository & automation suite.",
+      "followers": {
+        "facebook": 117,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5485148.jpg?t=1672312826"
+    },
+    {
+      "title": "European Pharmaceutical Review \u00bb Clinical Trials",
+      "feed_url": "https://www.europeanpharmaceuticalreview.com/topic/clinical-trials/feed/",
+      "website_url": "https://www.europeanpharmaceuticalreview.com/topic/clinical-trials/",
+      "description": "News stories and articles referencing Clinical Trials in European Pharmaceutical Review. European Pharmaceutical Review is the leading resource for scientists working in late-stage drug development, scale-up, and manufacturing. We keep the pharma and life science community up-to-date with the latest regulation, research, and developments.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/5485131.jpg?t=1672816973"
+    },
+    {
+      "title": "On Biostatistics and Clinical Trials",
+      "feed_url": "https://feeds.feedburner.com/blogspot/sVwyB",
+      "website_url": "http://onbiostatistics.blogspot.com/",
+      "description": "CQ's web blog on the issues in biostatistics and clinical trials. Read the blog posts by a Medical Doctor turned into Biostatistician in Clinical Trial and Drug Development Industry. Dr. Deng works in the field of Clinical Trials, Biostatistics, Statistical Programming, and Data Management.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/602877.jpg?t=1668690201"
+    },
+    {
+      "title": "TrialSiteNews",
+      "feed_url": "https://www.trialsitenews.com/feed",
+      "website_url": "https://www.trialsitenews.com/",
+      "description": "Read trending articles and news from the world's leading scientists and medical researchers in the Trialsite News blog, as it dissects Research studies, Vaccine production updates, and other crucial topics. TrialSiteNews website aims to provide more transparency for the broader population as to the nuts and bolts of clinical trials.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485128.jpg?t=1672313677"
+    },
+    {
+      "title": "Tandem Clinical Research Blog",
+      "feed_url": "https://www.tandemclinicalresearch.com/feed/",
+      "website_url": "https://www.tandemclinicalresearch.com/blog/",
+      "description": "Learn more about Tandem Clinical Research, insights, and articles about clinical trials and tips on how to live healthily and improve well-being. Tandem Clinical Research is a dedicated, phase I-IV, clinical trials group with clinics in New Orleans and New York City.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 44,
+        "instagram": 579
+      },
+      "image_url": "https://i1.feedspot.com/5485129.jpg?t=1672818668"
+    },
+    {
+      "title": "Clinical Trials Arena",
+      "feed_url": "https://www.clinicaltrialsarena.com/feed/",
+      "website_url": "https://www.clinicaltrialsarena.com/",
+      "description": "Access hard data and deep insights on clinical trials strategy & operations from Clinical Trials Arena. Featuring in-depth analysis and commentary on published research studies, commercial products and more. Clinicaltrialsarena.com is one of a network of 30+ proprietary B2B websites, serving a global audience of active decision-makers, influencers, and opinion leaders across the world.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5485151.jpg?t=1672312848"
+    },
+    {
+      "title": "Clinical Pathways Blog",
+      "feed_url": "https://www.clinicalpathwaysresearch.com/blog?format=rss",
+      "website_url": "https://www.clinicalpathwaysresearch.com/blog",
+      "description": "Stay up-to-date on hot topics in clinical research. Our concise, state-of-the-art blog will allow you to dive further into the clinical research and development world. Clinical Pathways, LLC is a consulting team out of the Research Triangle Park area of North Carolina that provides a variety of quality clinical research services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485138.jpg?t=1672313759"
+    },
+    {
+      "title": "Clinical Research News",
+      "feed_url": "https://www.clinicalresearchnewsonline.com/feeds/daily-news",
+      "website_url": "https://www.clinicalresearchnewsonline.com/",
+      "description": "Clinical Research News reports on innovative technologies from clinical trials to medical informatics. It provides authoritative news, views, and insights on the vast landscape of innovation between clinical trial management and delivery of care.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 3800,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5396931.jpg?t=1651668614"
+    },
+    {
+      "title": "DaVita Clinical Research Blog",
+      "feed_url": "https://davitaclinicalresearch.com/feed/",
+      "website_url": "https://davitaclinicalresearch.com/media-library/blog/",
+      "description": "Read our blog for expert medical opinions and thought leadership on Clinical Trials & Research and future trends in the industry. DaVita Clinical Research\u00ae is a leading provider of clinical trial services to the pharmaceutical and biotech industry.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5485133.jpg?t=1672828143"
+    },
+    {
+      "title": "Catalyst Clinical Research Blog",
+      "feed_url": "https://catalystcr.com/feed/",
+      "website_url": "https://catalystcr.com/news-blog/",
+      "description": "Catalyst is Clinical Research Organization focused on providing unique, customizable, and dynamic research solutions to biopharma companies. In our blog, we communicate to readers about our latest research findings, programs & events, philanthropic and community outreach among other topic.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5485140.jpg?t=1672312770"
+    },
+    {
+      "title": "Triage Cancer \u00bb Clinical Trials",
+      "feed_url": "https://triagecancer.org/category/clinical-trials/feed",
+      "website_url": "https://triagecancer.org/category/clinical-trials",
+      "description": "Triage Cancer is a national, nonprofit organization that provides education on the practical and legal issues that may impact individuals diagnosed with cancer and their caregivers, through events, materials, and resources. Get more information by following our feed.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 2400,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5061034.jpg?t=1622799045"
+    },
+    {
+      "title": "The Clinical Trials Guru Blog",
+      "feed_url": "https://www.theclinicaltrialsguru.com/blog1?format=rss",
+      "website_url": "https://www.theclinicaltrialsguru.com/blog1",
+      "description": "Dan Sfera runs a full-time clinical research consulting firm that is slowly evolving into a CRO. It provides consulting services such as business development, clinical operations, contracts and budgets, recruitment, Investigator location services and more.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 8400,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5061024.jpg?t=1622798980"
+    },
+    {
+      "title": "FindMeCure Blog \u00bb Clinical trials",
+      "feed_url": "https://www.findmecure.com/blog/category/clinical-trials/feed/",
+      "website_url": "https://www.findmecure.com/blog/category/clinical-trials/",
+      "description": "FindMeCure is an online platform allowing every person struggling with a medical condition to access treatments in development. It helps you find, weigh and understand treatments in development. Subscribe for more updates.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 517,
+        "instagram": 219
+      },
+      "image_url": "https://i1.feedspot.com/5061027.jpg?t=1622799005"
+    },
+    {
+      "title": "WCG",
+      "feed_url": "https://www.wcgclinical.com/feed/",
+      "website_url": "https://www.wcgclinical.com/",
+      "description": "WCG works to improve the quality and efficiency of clinical trials, helping biopharmaceutical companies, CROs, and institutions facilitate the development of new treatments. Read articles focusing on several relevant topics related to Clinical Trials as well as in-depth Case studies in this blog.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4327155.jpg?t=1672313428"
+    },
+    {
+      "title": "AustralianClinicalTrials.com Blog",
+      "feed_url": "https://australianclinicaltrials.com/blog/feed/",
+      "website_url": "https://australianclinicaltrials.com/blog/",
+      "description": "Read critical insights and tips for creating, promoting, and running successful clinical trials in Australia. The AustralianClinicalTrials.com website is an initiative from Datapharm Australia with the aim to make Australian) clinical trials more accessible & easier to complete and to make studies 'high-quality low-cost'.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1500,
+        "instagram": 862
+      },
+      "image_url": "https://i1.feedspot.com/5485115.jpg?t=1672312616"
+    },
+    {
+      "title": "Advarra Blog",
+      "feed_url": "https://www.advarra.com/blog/feed/",
+      "website_url": "https://www.advarra.com/blog/",
+      "description": "Read new posts authored by the experts at Advarra and explore the archive to reach a deeper understanding of best practices in research review and compliance. Advarra offers integrated solutions to help safeguard trial participants and makes clinical research safer, smarter, and faster.",
+      "followers": {
+        "facebook": 196,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5485100.jpg?t=1672312523"
+    },
+    {
+      "title": "FHI Clinical Blog",
+      "feed_url": "https://fhiclinical.com/feed/",
+      "website_url": "https://fhiclinical.com/blog/",
+      "description": "Read our blog for insights on what's happening in the industry today. FHI Clinical is a global contract research organization managing complex research in resource-limited settings around the world. FHI Clinical is a global contract research organization managing complex research in resource-limited settings around the world.",
+      "followers": {
+        "twitter": 317
+      },
+      "image_url": "https://i1.feedspot.com/5396706.jpg?t=1651660828"
+    },
+    {
+      "title": "Clinosol Research Blog",
+      "feed_url": "https://www.clinosol.com/blog-feed.xml",
+      "website_url": "https://www.clinosol.com/blog",
+      "description": "Clinosol Research Blog provides the latest word on innovation and developing ideas about the way Clinical Trials are conducted. Read articles pertaining to automation in healthcare, pharmacovigilance, and more. Clinosol is one of India's leading clinical research industries offering training and business skills to create students into expert professionals.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 85,
+        "instagram": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5485144.jpg?t=1672312799"
+    },
+    {
+      "title": "Acceler8 Clinical Research Blog",
+      "feed_url": "http://acceler8clinicalresearch.com/blog/feed/",
+      "website_url": "http://acceler8clinicalresearch.com/blog/",
+      "description": "View Press releases, News, and future goals of the Clinical Research and Trials industry as well as perceptive opinions from our experts on recent events and issues in the Acceler8 Clinical Research Blog. Acceler8 Clinical Research is a global provider of biopharmaceutical services and conducts Clinical Trials on the behalf of Pharma companies.",
+      "followers": {
+        "facebook": 39,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5485127.jpg?t=1672813351"
+    },
+    {
+      "title": "Clinicubes Blog",
+      "feed_url": "https://www.clinicubes.com/feed/",
+      "website_url": "https://www.clinicubes.com/blog/",
+      "description": "Designed to Simplify ComplexityVisit our blog to discover the latest news, updates, and posts about Clinicubes, the CTMS market, and the clinical research industry. Clinicubes is a centralized software, which provides an efficient way of creating one ecosystem that brings everyone together and also simplifies the complexity behind every clinical trial project.",
+      "followers": {
+        "facebook": 111,
+        "twitter": 56
+      },
+      "image_url": "https://i1.feedspot.com/5485146.jpg?t=1672312811"
+    },
+    {
+      "title": "ActivMed Practices & Research, LLC Blog",
+      "feed_url": "https://activmedresearch.com/feed/",
+      "website_url": "https://activmedresearch.com/blog/",
+      "description": "ActivMed Practices and Research, LLC. is a network of four free-standing clinical research institutions, with associated private practices. Our motto is quality care, quality data, and quality recruitment in an expedient manner.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5396872.jpg?t=1651665555"
+    },
+    {
+      "title": "Clinical Research LA Blog",
+      "feed_url": "https://www.clinicalresearchla.com/blog/feed/",
+      "website_url": "https://www.clinicalresearchla.com/blog/",
+      "description": "Get routine updates on all our research studies and programs here at Clinical Research LA. We provide critical information and news about the detection, and treatment of diseases and how you can help prevent them. Clinical Research LA conducts FDA-governed clinical research studies to help determine and develop safe and accurate treatments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485134.jpg?t=1672313627"
+    },
+    {
+      "title": "OneStudyTeam Blog",
+      "feed_url": "https://blog.onestudyteam.com/rss.xml",
+      "website_url": "https://blog.onestudyteam.com/",
+      "description": "The OneStudyTeam Blog provides information about our solution, StudyTeam, how we help sites and sponsors with patient recruitment and trial enrollment, and our perspectives on clinical trials. OneStudyTeam, a member of the Reify Health family, provides the cloud-based platform StudyTeam to accelerate the development of new and life-saving therapies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485130.jpg?t=1672313653"
+    },
+    {
+      "title": "EDGE Clinical Research Blog",
+      "feed_url": "https://edgeclinical.com/blog?format=rss",
+      "website_url": "https://edgeclinical.com/blog",
+      "description": "The EDGE Clinical Research Blog educates and provides medical insight and news covering the EDGE community and beyond. Learn more about our software, people, and goals for the future. EDGE is a cloud-based clinical research management system developed by CIRU (Clinical Informatics Research Unit) from the University of Southampton.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5485135.jpg?t=1672825264"
+    },
+    {
+      "title": "PRC Clinical Blog",
+      "feed_url": "https://prcclinical.com/feed/",
+      "website_url": "https://prcclinical.com/blog/",
+      "description": "Read the Latest Regenerative Medicine, Ophthalmology, CNS, Pulmonary Blogs, and More From PRC Clinical. Built to connect healthcare companies to the right patients for their products, PRC Clinical specializes in meeting the needs of pharmaceutical, biotech, and medical device sponsors through personalized clinical project management.",
+      "followers": {
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5485132.jpg?t=1672819538"
+    },
+    {
+      "title": "Florence Healthcare Blog",
+      "feed_url": "https://florencehc.com/feed/",
+      "website_url": "https://florencehc.com/resources/blogs/",
+      "description": "Explore blog articles from Florence Healthcare that unpack useful tips and the latest news information on the Monitoring, Compliance, Patient Retention, Diversity & Inclusion and other important topics surrounding Clinical Trials and Research Industry. Florence Healthcare is a top-rated clinical trial workflow platform known for its ease-of-use and set-up.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485149.jpg?t=1672313709"
+    },
+    {
+      "title": "The Keosys Blog",
+      "feed_url": "https://blog.keosys.com/rss.xml",
+      "website_url": "https://blog.keosys.com/",
+      "description": "The Keosys Blog is dedicated to providing educational and quality insights into topics such as medical imaging in clinical trials, nuclear medicine, and clinical operations issues related to imaging. Founded with the goal to enhance Image Data Quality and techniques across the world, Keosy is a global leader in medical imaging technology and associated services.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5371158.jpg?t=1644567325"
+    },
+    {
+      "title": "AZ Clinical Trials Blog",
+      "feed_url": "https://www.azclinicaltrials.com/feed/",
+      "website_url": "https://www.azclinicaltrials.com/blog/",
+      "description": "Learn more about your local clinical trials and treatment options today. The State's Leading Source for Innovative Clinical Trials. Our passion is bringing new treatments and therapies for all patients through our vibrant clinical trials program.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 56,
+        "instagram": 359
+      },
+      "image_url": "https://i1.feedspot.com/5396605.jpg?t=1651581767"
+    },
+    {
+      "title": "Let Life Happen \u00bb Clinical Studies",
+      "feed_url": "https://www.letlifehappen.com/category/clinical-studies-news/feed/",
+      "website_url": "https://www.letlifehappen.com/category/clinical-studies-news/",
+      "description": "Barbara Jacoby is an award-winning blogger that has contributed her two-time Breast Cancer journey, patient advocacy mission and Domestic Abuse experience to multiple online publications that have touched readers worldwide. Follow to keep up with the latest from this feed.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 19600,
+        "instagram": 13800
+      },
+      "image_url": "https://i1.feedspot.com/5061038.jpg?t=1622799041"
+    },
+    {
+      "title": "Clariness",
+      "feed_url": "https://clariness.com/resource/feed/",
+      "website_url": "https://clariness.com/resource/",
+      "description": "Clariness is an international service provider for the pharmaceutical industry. It serves customers from the pharmaceutical, biotechnical and medical device industries. Get more information about clinical research by following our feed.",
+      "followers": {
+        "facebook": 371,
+        "twitter": 694
+      },
+      "image_url": "https://i1.feedspot.com/5061025.jpg?t=1622799014"
+    },
+    {
+      "title": "Deltaclinical",
+      "feed_url": "https://www.deltaclinical.be/en/blog/",
+      "website_url": "https://www.deltaclinical.be/en/blog/",
+      "description": "Delta Healthcare Consulting is specialized in the management and execution of clinical research. It is your partner in clinical trial services, both in the hospital and at the patient's home. Find out more by following our blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5061126.jpg?t=1672313245"
+    },
+    {
+      "title": "Prorelix Research Blog",
+      "feed_url": "https://prorelixresearch.com/feed/",
+      "website_url": "https://prorelixresearch.com/blog/",
+      "description": "At ProRelix Research, we draw on our knowledge base of vast clinical research experience, feasibility assessments of clinical trial site, site relationships, regulatory considerations, and industry catalysts to provide a level of insight that is not attainable using traditional site feasibility assessments in India, USA, Europe, UK. We write high-quality blogs on all the latest trends in the clinical research industry.",
+      "followers": {
+        "facebook": 603,
+        "twitter": 371
+      },
+      "image_url": "https://i1.feedspot.com/5240259.jpg?t=1622799056"
+    },
+    {
+      "title": "MCRC",
+      "feed_url": "https://miamiclinicalresearch.com/feed/",
+      "website_url": "https://miamiclinicalresearch.com/blog/",
+      "description": "Miami Clinical Research Blog offers helpful information about Clinical Trials. Find out about the benefits, various phases and techniques involved, and the latest clinical research news, and more. Miami Clinical Research is a group of healthcare professionals that endeavor to enhance the quality of health and wellness through medical research.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5485105.jpg?t=1672313312"
+    },
+    {
+      "title": "BioPharma Services Inc Blog",
+      "feed_url": "https://www.biopharmaservices.com/feed/",
+      "website_url": "https://www.biopharmaservices.com/blog/",
+      "description": "BioPharma Services Inc. is a full-service Contract Research Organization (CRO) specializing in Phase I/IIa as well as Bioequivalence clinical trials with research facilities in Toronto, Canada, and St. Louis, Missouri.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5037357.jpg?t=1651496175"
+    },
+    {
+      "title": "Endeavor Clinical Trials",
+      "feed_url": "https://endeavorct.com/feed/",
+      "website_url": "https://endeavorct.com/about/blog/",
+      "description": "Read the latest posts from our blogs for news and insights on Health, Clinical Trials, vaccines, and other preventive measures. Endeavor Clinical Trials serves as a high-quality clinical research unit equipped with the experience and facility to conduct safe, precise, well-controlled clinical research with new and existing drugs.",
+      "followers": {
+        "facebook": 6600,
+        "twitter": 257,
+        "instagram": 899
+      },
+      "image_url": "https://i1.feedspot.com/5485108.jpg?t=1672312575"
+    },
+    {
+      "title": "Orlando Clinical Research Center Blog",
+      "feed_url": "https://ocrc.net/blog/feed/",
+      "website_url": "https://ocrc.net/blog/",
+      "description": "Recent News and articles showcasing programs and activities from Orlando Clinical Research Center. Find health tips, medical career advice, and other insight related to Clinical Trials. Orlando Clinical Research Center (OCRC) is an independent Phase I-IV research site specifically designed for Phase 1 trials in Orlando.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5485126.jpg?t=1672827517"
+    },
+    {
+      "title": "Pharma IQ \u00bb Clinical",
+      "feed_url": "https://www.pharma-iq.com/rss/categories/clinical",
+      "website_url": "https://www.pharma-iq.com/clinical",
+      "description": "Pharma IQ is the leading online resource hub for global pharmaceutical professionals. Discover results-proven tools and methodologies for your clinical development. Learn how to improve your trial design, data collection, and clinical supply.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/5061030.jpg?t=1622798995"
+    },
+    {
+      "title": "BMC Blog \u00bb Clinical Trials",
+      "feed_url": "https://blogs.biomedcentral.com/on-medicine/tag/clinical-trials/feed/",
+      "website_url": "https://blogs.biomedcentral.com/on-medicine/tag/clinical-trials/",
+      "description": "BMC has an evolving portfolio of some 300 peer-reviewed journals, sharing discoveries from research communities in science, technology, engineering, and medicine. Find out more by following our feed.",
+      "followers": {
+        "facebook": 107100,
+        "twitter": 76200
+      },
+      "image_url": "https://i1.feedspot.com/5061031.jpg?t=1622799022"
+    },
+    {
+      "title": "Cloudbyz",
+      "feed_url": "https://www.cloudbyz.com/resources/",
+      "website_url": "https://www.cloudbyz.com/resources/",
+      "description": "Cloudbyz's project portfolio management and clinical trial management apps built on the salesforce.com cloud help businesses to increase productivity and streamline communication. Follow us to keep up with the latest updates from this feed.",
+      "followers": {
+        "facebook": 398,
+        "twitter": 414
+      },
+      "image_url": "https://i1.feedspot.com/5061039.jpg?t=1672313206"
+    },
+    {
+      "title": "JLI Blog \u00bb Clinical Trial",
+      "feed_url": "https://www.jliedu.com/blog/category/clinical-trail/feed/",
+      "website_url": "https://www.jliedu.com/blog/category/clinical-trial/",
+      "description": "James Lind Institute (JLI) offers multiple diploma and advanced programs related to clinical research, healthcare management, public health, etc. Subscribe here and learn more about clinical research.",
+      "followers": {
+        "facebook": 113800,
+        "twitter": 596
+      },
+      "image_url": "https://i1.feedspot.com/5061045.jpg?t=1622799067"
+    },
+    {
+      "title": "Outsourcing-Pharma",
+      "feed_url": "https://www.outsourcing-pharma.com/Info/Outsourcing-Pharma-RSS",
+      "website_url": "https://www.outsourcing-pharma.com/",
+      "description": "Get the daily news on pharmaceutical outsourcing. Outsourcing-Pharma is the leading online news source for the pharma industry, offering 360-degree coverage of the pharma landscape, and providing industry professionals with news focused on clinical trials, commercial development, and the manufacture of small molecule drugs.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5053935.jpg?t=1664783291"
+    },
+    {
+      "title": "THREAD Blog",
+      "feed_url": "https://www.threadresearch.com/blog?format=rss",
+      "website_url": "https://www.threadresearch.com/blog",
+      "description": "THREAD is a leading provider of a proprietary, decentralized research platform and suite of supporting services used by biopharma, CROs and life science organizations to remotely capture data from participants and sites during, in-between and in lieu of in-clinic visits.",
+      "followers": {
+        "twitter": 641
+      },
+      "image_url": "https://i1.feedspot.com/5396593.jpg?t=1651579816"
+    },
+    {
+      "title": "Siron Clinical Blog",
+      "feed_url": "https://sironclinical.com/feed/",
+      "website_url": "https://sironclinical.com/blogs-and-news/",
+      "description": "Discover our blogs and news where we share our thought leadership on clinical trials, and updates from within our organization. Siron Clinical is a dedicated and experienced CRO, with headquarters in the Netherlands, providing regulatory and clinical operation services across Europe, Israel, and Turkey.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/5396246.jpg?t=1651496230"
+    },
+    {
+      "title": "Precision for Medicine Blog",
+      "feed_url": "https://www.precisionformedicine.com/feed/",
+      "website_url": "https://www.precisionformedicine.com/blog",
+      "description": "Precision for Medicine is a global, precision-medicine, clinical research organization purpose-built to shift the development curve for life sciences clients. Check out our blog to gain info on Industry trends and best practices from Precision experts and know more about how we help deliver life-changing treatments for patients around the globe.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5485139.jpg?t=1672312767"
+    }
+  ]
+}

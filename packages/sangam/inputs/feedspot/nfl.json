@@ -1,0 +1,986 @@
+{
+  "category": "NFL",
+  "source_url": "https://rss.feedspot.com/nfl_rss_feeds",
+  "feeds": [
+    {
+      "title": "ESPN \u00bb NFL",
+      "feed_url": "https://www.espn.com/espn/rss/nfl/news?null",
+      "website_url": "https://www.espn.com/nfl/",
+      "description": "Visit ESPN for NFL live scores, video highlights and latest news. Stream Monday Night Football on ESPN+ and play Fantasy Football.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 4200000,
+        "instagram": 28300000
+      },
+      "image_url": "https://i1.feedspot.com/4757576.jpg?t=1752488417"
+    },
+    {
+      "title": "Steelers Depot",
+      "feed_url": "https://feeds.feedburner.com/SteelersDepotBlog",
+      "website_url": "https://steelersdepot.com/",
+      "description": "Pittsburgh Steelers blog featuring news, discussion & merchandise!",
+      "followers": {
+        "facebook": 80200,
+        "twitter": 126900
+      },
+      "image_url": "https://i1.feedspot.com/4755726.jpg?t=1607074818"
+    },
+    {
+      "title": "The Cold Wire",
+      "feed_url": "https://www.thecoldwire.com/sports/nfl/feed/",
+      "website_url": "https://www.thecoldwire.com/sports/nfl/",
+      "description": "A go to source for trending sports news covering the NFL, MLB, NBA, college football, entertainment, and much more. The Cold Wire is a global platform for the most sought-after trending sports and entertainment news. Get the latest NFL news, updates, rumors, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 9700,
+        "twitter": 1300,
+        "instagram": 100
+      },
+      "image_url": "https://i1.feedspot.com/5508352.jpg?t=1676460227"
+    },
+    {
+      "title": "Pro Football Mania",
+      "feed_url": "https://profootballmania.com/feed/",
+      "website_url": "https://profootballmania.com/",
+      "description": "ProFootballMania is a website that provides news and features about the National Football League (NFL). The website covers a variety of topics, including fantasy football, NFL player news, and college football coverage. ProFootballMania also has a blog where writers share their thoughts on the latest NFL news and events.",
+      "followers": {
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5573048.jpg?t=1684750753"
+    },
+    {
+      "title": "New York Times",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/http://www.nytimes.com/topic/organization/national-football-league/rss.xml",
+      "website_url": "https://www.nytimes.com/topic/subject/football",
+      "description": "News about the National Football League. Commentary and archival information about the N.F.L. from The New York Times.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4755338.jpg?t=1607074833"
+    },
+    {
+      "title": "The Washington Post",
+      "feed_url": "https://feeds.washingtonpost.com/rss/rss_football-insider",
+      "website_url": "https://www.washingtonpost.com/sports/washington-football/",
+      "description": "News, Updates, Stat on Washington Football Team.",
+      "followers": {
+        "facebook": 7600000,
+        "twitter": 19800000
+      },
+      "image_url": "https://i1.feedspot.com/702698.jpg?t=1607074844"
+    },
+    {
+      "title": "New York Post \u00bb New York Jets",
+      "feed_url": "https://nypost.com/new-york-jets/feed/",
+      "website_url": "https://nypost.com/new-york-jets/",
+      "description": "Your source for breaking news, news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more. Get the latest New York Jets news, scores, rosters, schedules, trade rumors and more on the New York Post.",
+      "followers": {
+        "facebook": 6900000,
+        "twitter": 3500000,
+        "instagram": 2100000
+      },
+      "image_url": "https://i1.feedspot.com/3336735.jpg?t=1607074848"
+    },
+    {
+      "title": "Yardbarker",
+      "feed_url": "https://www.yardbarker.com/rss/sport_merged/2",
+      "website_url": "https://www.yardbarker.com/nfl",
+      "description": "Yardbarker breaks down traditional barriers, allowing fans and athletes to debate sports, read and write articles, and watch videos.",
+      "followers": {
+        "facebook": 151800,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/437406.jpg?t=1607074870"
+    },
+    {
+      "title": "Pro Football Network",
+      "feed_url": "https://www.profootballnetwork.com/feed/",
+      "website_url": "https://www.profootballnetwork.com/",
+      "description": "Pro Football Network has all of the latest NFL news and rumors, plus analysis regarding fantasy football, betting, the NFL Draft, & more. Pro Football Network strives to passionately deliver purposeful, captivating, and exceptional football content.",
+      "followers": {
+        "facebook": 95200,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5054460.jpg?t=1613048965"
+    },
+    {
+      "title": "Pewter Report",
+      "feed_url": "https://www.pewterreport.com/feed/",
+      "website_url": "https://www.pewterreport.com/",
+      "description": "If you want to be the first to read about breaking news on the Tampa Bay Buccaneers, the inside scoop on what is going on with the Buccaneers, and want more in-depth Bucs coverage and unmatched Bucs draft reporting than other sources offer -you've come to the right place.",
+      "followers": {
+        "facebook": 29400,
+        "twitter": 55500,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4757343.jpg?t=1639984227"
+    },
+    {
+      "title": "Russell Street Report",
+      "feed_url": "https://russellstreetreport.com/feed/",
+      "website_url": "https://russellstreetreport.com/",
+      "description": "Ravens fansite for Baltimore Ravens news & message boards. Get Ravens articles, forums, interviews, schedule, predictions, salary cap analysis, commentary, and more on the Ravens from the perspective of a fan.",
+      "followers": {
+        "facebook": 92900,
+        "twitter": 16900,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/588152.jpg?t=1607075009"
+    },
+    {
+      "title": "NFL Draft Diamonds",
+      "feed_url": "https://nfldraftdiamonds.com/feed/",
+      "website_url": "https://nfldraftdiamonds.com/",
+      "description": "NFL Draft Diamonds is a website dedicated to small school football players. We talk NFL draft news, NFL draft rumors, fantasy football, NFL draft advice and help, small school football, small school interviews, and more.",
+      "followers": {
+        "facebook": 26000,
+        "twitter": 102800,
+        "instagram": 32200
+      },
+      "image_url": "https://i1.feedspot.com/5192107.jpg?t=1677147761"
+    },
+    {
+      "title": "Vikings Territory",
+      "feed_url": "https://vikingsterritory.com/feed",
+      "website_url": "https://vikingsterritory.com/",
+      "description": "Vikings Territory is the leading local/independent resource for the Minnesota Vikings latest News, rumors, speculation, reaction, and content from the fans and for the fans! New articles daily!",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 18000
+      },
+      "image_url": "https://i1.feedspot.com/3998273.jpg?t=1607074966"
+    },
+    {
+      "title": "JetNation",
+      "feed_url": "https://feeds.feedburner.com/Jetnationcom",
+      "website_url": "https://www.jetnation.com/",
+      "description": "JetNation.com is a fan run website devoted to all things Jets. We are your home for New York Jets news. We launched in 2005 with a simple goal; to create a home for Jet fans that was fun.",
+      "followers": {
+        "facebook": 23000,
+        "twitter": 22400,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5078598.jpg?t=1607074942"
+    },
+    {
+      "title": "Raiders Newswire",
+      "feed_url": "https://raidersnewswire.com/feed/",
+      "website_url": "https://raidersnewswire.com/",
+      "description": "keep up with Raiders News Rumors, Videos, Schedule, Roster, Salaries And More.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5160892.jpg?t=1648187192"
+    },
+    {
+      "title": "Westwood One Sports",
+      "feed_url": "https://westwoodonesports.com/category/nfl/feed/",
+      "website_url": "https://westwoodonesports.com/category/nfl/",
+      "description": "Westwood One Sports | Radio Home of the NFL NCAA Football March Madness Olympics and MastersWestwood One Sports.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4757460.jpg?t=1607075146"
+    },
+    {
+      "title": "Steel City Underground",
+      "feed_url": "https://www.steelcityunderground.com/feed/",
+      "website_url": "https://www.steelcityunderground.com/news/",
+      "description": "Pittsburgh Steelers blog & podcast dedicated to pro football news, rumors, updates, free agency, NFL draft, tailgating, stats, scores & more.",
+      "followers": {
+        "facebook": 29000,
+        "twitter": 13100,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4757006.jpg?t=1607075031"
+    },
+    {
+      "title": "PatsPropaganda",
+      "feed_url": "https://www.patspropaganda.com/feed/",
+      "website_url": "https://www.patspropaganda.com/",
+      "description": "PatsPropaganda is a loyalist blog dedicated to the New England Patriots written by Mike Dussault. His work has been featured on FoxSports, Yahoo Sports, and SI and has been a featured guest on podcasts as well as a Pats panelist at Boston Sports Then and Now's Blogapalooza.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4756972.jpg?t=1610796756"
+    },
+    {
+      "title": "The Power Sweep",
+      "feed_url": "https://thepowersweep.com/blog?format=RSS",
+      "website_url": "https://thepowersweep.com/",
+      "description": "Your home for high quality Packers storytelling in all shapes and sizes. We will help you become a smarter Green Bay Packers fan with our blogs and podcasts.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4757022.jpg?t=1607075181"
+    },
+    {
+      "title": "Gridiron Studs Blog",
+      "feed_url": "https://www.gridironstuds.com/blog/feed/",
+      "website_url": "https://www.gridironstuds.com/blog/",
+      "description": "Get updates about college football recruits, getting college football scholarships, college football coaches, high school football, defensive back technique & more.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 15900,
+        "instagram": 70800
+      },
+      "image_url": "https://i1.feedspot.com/4755840.jpg?t=1660223965"
+    },
+    {
+      "title": "ChiefsCrow",
+      "feed_url": "https://www.chiefscrowd.com/feed/",
+      "website_url": "http://www.chiefscrowd.com/",
+      "description": "Get latest information and new on Kansas city Chiefs, team members, gameplays and more! ChiefsCrowd.com is a Kansas City Chiefs Fan Site. The content is created by the fans, for the fans.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 317
+      },
+      "image_url": "https://i1.feedspot.com/4757416.jpg?t=1607075273"
+    },
+    {
+      "title": "Gridiron Experts",
+      "feed_url": "https://gridironexperts.com/feed/",
+      "website_url": "https://gridironexperts.com/",
+      "description": "Gridiron Experts is a NFL Fantasy Football advisory blog. We give out free predictions and fantasy advice. Not to mention great articles written by some of the best writers around. .",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 12700
+      },
+      "image_url": "https://i1.feedspot.com/4756715.jpg?t=1607074949"
+    },
+    {
+      "title": "Daily Mail Online \u00bb NFL",
+      "feed_url": "https://www.dailymail.co.uk/sport/nfl/index.rss",
+      "website_url": "https://www.dailymail.co.uk/sport/nfl/index.html/",
+      "description": "Get the latest NFL news, fixtures, match previews, results and updates here.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8536452.jpg?t=1753084029"
+    },
+    {
+      "title": "BBC Sport \u00bb NFL",
+      "feed_url": "https://feeds.bbci.co.uk/sport/american-football/rss.xml",
+      "website_url": "https://www.bbc.com/sport/american-football/",
+      "description": "The latest NFL and more American football news on BBC Sport.",
+      "followers": {
+        "facebook": 15300000,
+        "twitter": 10600000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/8536453.jpg?t=1753084031"
+    },
+    {
+      "title": "The Athletic \u00bb NFL",
+      "feed_url": "https://www.nytimes.com/athletic/rss/nfl/",
+      "website_url": "https://www.nytimes.com/athletic/nfl/",
+      "description": "Breaking NFL news and in-depth analysis from the best newsroom in sports. Follow your favorite teams. Get the latest injury updates, trade analysis, draft info and more from around the league.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8536454.jpg?t=1753084042"
+    },
+    {
+      "title": "Athlon Sports \u00bb NFL Draft",
+      "feed_url": "https://athlonsports.com/.rss/feed/99d9ddce-9758-498f-8961-bd110c2d720f.xml",
+      "website_url": "https://athlonsports.com/nfl-draft/",
+      "description": "The Athlon Sports NFL page is a comprehensive hub delivering the latest NFL news, rumors, game highlights, schedules, scores, stats, and expert analysis.",
+      "followers": {
+        "facebook": 44800,
+        "twitter": 25200,
+        "instagram": 25300
+      },
+      "image_url": "https://i1.feedspot.com/7894241.jpg?t=1743502915"
+    },
+    {
+      "title": "Boston Herald \u00bb NFL",
+      "feed_url": "https://www.bostonherald.com/sports/nfl/feed/",
+      "website_url": "https://www.bostonherald.com/sports/nfl/",
+      "description": "The latest news and analysis on NFL and football from the Boston Herald.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8536456.jpg?t=1753084056"
+    },
+    {
+      "title": "ClutchPoints \u00bb NFL",
+      "feed_url": "https://clutchpoints.com/nfl/feed",
+      "website_url": "https://clutchpoints.com/nfl/",
+      "description": "Catch up with the latest NFL news, rumors, scores, updates, injuries, trades, free agent signings, predictions, previews, and analysis from ClutchPoints.",
+      "followers": {
+        "facebook": 3100000,
+        "twitter": 336500,
+        "instagram": 981400
+      },
+      "image_url": "https://i1.feedspot.com/8536458.jpg?t=1753084061"
+    },
+    {
+      "title": "NBC Sports \u00bb NFL",
+      "feed_url": "https://www.nbcsports.com/nfl.atom",
+      "website_url": "https://www.nbcsports.com/nfl/",
+      "description": "Find all the latest NFL news, live coverage, videos, highlights, stats, predictions, and results right here on NBC Sports.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 1800000
+      },
+      "image_url": "https://i1.feedspot.com/8536457.jpg?t=1753084058"
+    },
+    {
+      "title": "Mass Live \u00bb NFL",
+      "feed_url": "https://www.masslive.com/arc/outboundfeeds/rss/?outputType=xml",
+      "website_url": "https://www.masslive.com/topic/NFL/index.html/",
+      "description": "MassLive Media is a leading media and marketing company in New England. They are driven by helping businesses and their community to grow. By combining their comprehensive digital solutions and superior audience targeting capabilities, they drive insights that inform every aspect of your marketing plans, whether as a full-service agency or as a consultant to your in-house staff.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 4400,
+        "instagram": 13200
+      },
+      "image_url": "https://i1.feedspot.com/5527843.jpg?t=1679917374"
+    },
+    {
+      "title": "Heavy \u00bb NFL",
+      "feed_url": "https://heavy.com/sports/nfl/feed/",
+      "website_url": "https://heavy.com/sports/nfl/",
+      "description": "Heavy on NFL is your hub for NFL news, trade rumors, roster moves, transactions and fantasy projections.",
+      "followers": {
+        "facebook": 120800,
+        "twitter": 26800
+      },
+      "image_url": "https://i1.feedspot.com/8536462.jpg?t=1753084076"
+    },
+    {
+      "title": "Toronto Sun \u00bb NFL",
+      "feed_url": "https://torontosun.com/category/sports/football/nfl/feed.xml",
+      "website_url": "https://torontosun.com/category/sports/football/nfl/",
+      "description": "Read the latest National Football League (NFL) news in Canada, featuring NFL scores, game updates, schedules and athlete news.",
+      "followers": {
+        "facebook": 165600,
+        "twitter": 449500,
+        "instagram": 25500
+      },
+      "image_url": "https://i1.feedspot.com/8536455.jpg?t=1753084046"
+    },
+    {
+      "title": "Larry Brown Sports \u00bb NFL",
+      "feed_url": "https://larrybrownsports.com/category/football/feed",
+      "website_url": "https://larrybrownsports.com/category/football/",
+      "description": "Stories, news, headlines, statistics, contract information and more in the world of football - this is Larry Brown Sports' NFL section.",
+      "followers": {
+        "facebook": 8800,
+        "instagram": 992
+      },
+      "image_url": "https://i1.feedspot.com/8536460.jpg?t=1753084070"
+    },
+    {
+      "title": "Wisconsin Sports Heroics \u00bb NFL",
+      "feed_url": "https://wisportsheroics.com/nfl/feed/",
+      "website_url": "https://wisportsheroics.com/nfl/",
+      "description": "Wisconsin Sports Heroics brings you regular Green Bay Packers and NFL news, schedule information, standing analysis, rumors, and reports",
+      "followers": {
+        "facebook": 78100,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/8536461.jpg?t=1753084074"
+    },
+    {
+      "title": "FOX Sports \u00bb NFL",
+      "feed_url": "https://api.foxsports.com/v2/content/optimized-rss?partnerKey=MB0Wehpmuj2lUhuRhQaafhBjAJqaPU244mlTDK1i&size=30&tags=fs/nfl",
+      "website_url": "https://www.foxsports.com/nfl/",
+      "description": "Get NFL news, scores, stats, standings & more for your favorite teams and players. You can also watch highlights and live games on our website! FOX Sports is the umbrella entity representing FOX Corporation's wide array of multi-platform US-based sports assets.",
+      "followers": {
+        "facebook": 9700000,
+        "twitter": 2100000,
+        "instagram": 1400000
+      },
+      "image_url": "https://i1.feedspot.com/5686155.jpg?t=1696870920"
+    },
+    {
+      "title": "Yahoo Sports \u00bb NFL",
+      "feed_url": "https://sports.yahoo.com/nfl/rss/",
+      "website_url": "https://sports.yahoo.com/nfl/",
+      "description": "Comprehensive National Football League news, scores, standings, fantasy games, rumors, and more",
+      "followers": {
+        "facebook": 4099999,
+        "twitter": 573300,
+        "instagram": 478000
+      },
+      "image_url": "https://i1.feedspot.com/7329828.jpg?t=1723656309"
+    },
+    {
+      "title": "The Denver Post \u00bb NFL",
+      "feed_url": "https://www.denverpost.com/sports/nfl/feed/",
+      "website_url": "https://www.denverpost.com/sports/nfl/",
+      "description": "Colorado breaking news, sports, business, weather, entertainment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8536451.jpg?t=1753084019"
+    },
+    {
+      "title": "PFF \u00bb NFL Draft",
+      "feed_url": "https://www.pff.com/feed",
+      "website_url": "https://www.pff.com/draft/",
+      "description": "The latest football news, analysis, and rankings from PFF. Featuring player grades, rankings and stats for the NFL, fantasy football, and NFL Draft. Pro Football Focus is a sports analytics company that focuses on thorough analysis of the National Football League and NCAA Division-I football in the United States.",
+      "followers": {
+        "facebook": 196000,
+        "twitter": 1500000,
+        "instagram": 794800
+      },
+      "image_url": "https://i1.feedspot.com/1403544.jpg?t=1609410781"
+    },
+    {
+      "title": "Captain Comeback Blog",
+      "feed_url": "https://captaincomeback.blog/feed/",
+      "website_url": "https://captaincomeback.blog/",
+      "description": "Quantifying clutch (and anything else that needs it).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8536459.jpg?t=1753084062"
+    },
+    {
+      "title": "Da Bears Blog",
+      "feed_url": "https://www.dabearsblog.com/feed",
+      "website_url": "https://www.dabearsblog.com/",
+      "description": "Chicago Bears news,updates,stats and much more.",
+      "followers": {
+        "twitter": 49100
+      },
+      "image_url": "https://i1.feedspot.com/4756088.jpg?t=1613048976"
+    },
+    {
+      "title": "Browns Plainly Blog",
+      "feed_url": "https://brownsplainly.com/blog/feed/",
+      "website_url": "https://brownsplainly.com/blog/",
+      "description": "Straight-up Browns analysis and commentary, and a clean source for the latest Cleveland Blog post. Get a unique take on what's happening with the Cleveland Browns.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 92
+      },
+      "image_url": "https://i1.feedspot.com/4757352.jpg?t=1648192895"
+    },
+    {
+      "title": "Niners Nation",
+      "feed_url": "https://www.ninersnation.com/rss/index.xml",
+      "website_url": "https://www.ninersnation.com/",
+      "description": "Your best source for quality San Francisco 49ers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 165500,
+        "twitter": 155500,
+        "instagram": 138900
+      },
+      "image_url": "https://i1.feedspot.com/4756153.jpg?t=1607075331"
+    },
+    {
+      "title": "Bleeding Green Nation, a Philadelphia Eagles community",
+      "feed_url": "https://www.bleedinggreennation.com/rss/index.xml",
+      "website_url": "https://www.bleedinggreennation.com/",
+      "description": "Your best source for quality Philadelphia Eagles news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 146800,
+        "twitter": 156600
+      },
+      "image_url": "https://i1.feedspot.com/4755409.jpg?t=1607075313"
+    },
+    {
+      "title": "Blogging The Boys",
+      "feed_url": "https://www.bloggingtheboys.com/rss/index.xml",
+      "website_url": "https://www.bloggingtheboys.com/",
+      "description": "Dallas Cowboys Schedule, News, Roster and Stats.",
+      "followers": {
+        "facebook": 199800,
+        "twitter": 154900,
+        "instagram": 25200
+      },
+      "image_url": "https://i1.feedspot.com/4755406.jpg?t=1610777396"
+    },
+    {
+      "title": "Windy City Gridiron",
+      "feed_url": "https://www.windycitygridiron.com/rss/index.xml",
+      "website_url": "https://www.windycitygridiron.com/",
+      "description": "Your best source for quality Chicago Bears news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 43100,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4756925.jpg?t=1607075648"
+    },
+    {
+      "title": "Pride Of Detroit",
+      "feed_url": "https://www.prideofdetroit.com/rss/index.xml",
+      "website_url": "https://www.prideofdetroit.com/",
+      "description": "A Detroit Lions blog by Lions fans, for Lions fans. Your best source for quality Detroit Lions news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 65600,
+        "twitter": 139200
+      },
+      "image_url": "https://i1.feedspot.com/4756103.jpg?t=1607075674"
+    },
+    {
+      "title": "The Phinsider",
+      "feed_url": "https://www.thephinsider.com/rss/index.xml",
+      "website_url": "https://www.thephinsider.com/",
+      "description": "The Phinsider is your best source for all the things related to the Miami Dolphins. Check out quality news, rumors, analysis, stats, and scores from the fan perspective along with the Miami Dolphins roster and schedule.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 29800
+      },
+      "image_url": "https://i1.feedspot.com/4755294.jpg?t=1610630554"
+    },
+    {
+      "title": "Pats Pulpit",
+      "feed_url": "https://www.patspulpit.com/rss/index.xml",
+      "website_url": "https://www.patspulpit.com/",
+      "description": "Your best source for quality New England Patriots news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 113700,
+        "twitter": 47300
+      },
+      "image_url": "https://i1.feedspot.com/4755393.jpg?t=1610781472"
+    },
+    {
+      "title": "Field Gulls",
+      "feed_url": "https://www.fieldgulls.com/rss/index.xml",
+      "website_url": "https://www.fieldgulls.com/",
+      "description": "Your best source for quality Seattle Seahawks news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 65600
+      },
+      "image_url": "https://i1.feedspot.com/4755795.jpg?t=1607075621"
+    },
+    {
+      "title": "Arrowhead Pride",
+      "feed_url": "https://www.arrowheadpride.com/rss/index.xml",
+      "website_url": "https://www.arrowheadpride.com/",
+      "description": "Your best source for quality Kansas City Chiefs news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 173900,
+        "twitter": 292100,
+        "instagram": 95500
+      },
+      "image_url": "https://i1.feedspot.com/4755819.jpg?t=1607075610"
+    },
+    {
+      "title": "Daily Norseman",
+      "feed_url": "https://www.dailynorseman.com/rss/index.xml",
+      "website_url": "https://www.dailynorseman.com/",
+      "description": "Your best source for quality Minnesota Vikings news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 32700,
+        "twitter": 32900
+      },
+      "image_url": "https://i1.feedspot.com/4756141.jpg?t=1607075626"
+    },
+    {
+      "title": "Cat Crave",
+      "feed_url": "https://catcrave.com/feed/",
+      "website_url": "https://catcrave.com/",
+      "description": "The ultimate home for Carolina Panthers news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 34500,
+        "twitter": 22100
+      },
+      "image_url": "https://i1.feedspot.com/4757086.jpg?t=1607075002"
+    },
+    {
+      "title": "Big Blue View",
+      "feed_url": "https://www.bigblueview.com/rss/index.xml",
+      "website_url": "https://www.bigblueview.com/",
+      "description": "Your best source for quality New York Giants news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 70500,
+        "twitter": 37200,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4755412.jpg?t=1608299475"
+    },
+    {
+      "title": "Mile High Report",
+      "feed_url": "https://www.milehighreport.com/rss/index.xml",
+      "website_url": "https://www.milehighreport.com/",
+      "description": "Mile High Report has been bringing you Broncos news, for fans, by fans, since 2006, along with the best Denver Broncos community on the web!",
+      "followers": {
+        "facebook": 111700,
+        "twitter": 81900
+      },
+      "image_url": "https://i1.feedspot.com/4755802.jpg?t=1607075631"
+    },
+    {
+      "title": "Buffalo Rumblings",
+      "feed_url": "https://www.buffalorumblings.com/rss/index.xml",
+      "website_url": "https://www.buffalorumblings.com/",
+      "description": "Your best source for quality Buffalo Bills news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 57100,
+        "twitter": 73200,
+        "instagram": 12800
+      },
+      "image_url": "https://i1.feedspot.com/4755374.jpg?t=1607075639"
+    },
+    {
+      "title": "Silver And Black Pride",
+      "feed_url": "https://www.silverandblackpride.com/rss/index.xml",
+      "website_url": "https://www.silverandblackpride.com/",
+      "description": "Our Mission is to provide the best, pure Oakland Raider content on the web.",
+      "followers": {
+        "facebook": 110600,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/4756150.jpg?t=1607075635"
+    },
+    {
+      "title": "Stampede Blue",
+      "feed_url": "https://www.stampedeblue.com/rss/index.xml",
+      "website_url": "https://www.stampedeblue.com/",
+      "description": "Your best source for quality Indianapolis Colts news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 14100
+      },
+      "image_url": "https://i1.feedspot.com/4756122.jpg?t=1607075652"
+    },
+    {
+      "title": "Acme Packing Company",
+      "feed_url": "https://www.acmepackingcompany.com/rss/index.xml",
+      "website_url": "https://www.acmepackingcompany.com/",
+      "description": "Your best source for quality Green Bay Packers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 43700,
+        "twitter": 18700,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4755404.jpg?t=1607075657"
+    },
+    {
+      "title": "Cincy Jungle",
+      "feed_url": "https://www.cincyjungle.com/rss/index.xml",
+      "website_url": "https://www.cincyjungle.com/",
+      "description": "Your best source for quality Cincinnati Bengals news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 86600,
+        "twitter": 40800,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4756096.jpg?t=1607075678"
+    },
+    {
+      "title": "Gang Green Nation",
+      "feed_url": "https://www.ganggreennation.com/rss/index.xml",
+      "website_url": "https://www.ganggreennation.com/",
+      "description": "Gang Green Nation is your best source for quality New York Jets news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 30100,
+        "twitter": 25800
+      },
+      "image_url": "https://i1.feedspot.com/4756148.jpg?t=1607075660"
+    },
+    {
+      "title": "The Falcoholic",
+      "feed_url": "https://www.thefalcoholic.com/rss/index.xml",
+      "website_url": "https://www.thefalcoholic.com/",
+      "description": "Founded in 2006, The Falcoholic is dedicated to delivering the news and analysis that matters to Atlanta Falcons fans.",
+      "followers": {
+        "facebook": 66200,
+        "twitter": 64900
+      },
+      "image_url": "https://i1.feedspot.com/4757291.jpg?t=1610692365"
+    },
+    {
+      "title": "Turf Show Times",
+      "feed_url": "https://www.turfshowtimes.com/rss/index.xml",
+      "website_url": "https://www.turfshowtimes.com/",
+      "description": "The web's best Los Angeles Rams fan community and blog brought to you by SB Nation's Turf Show Times. The web's best Los Angeles Rams fan community and blog brought to you by SB Nation's Turf Show Times.",
+      "followers": {
+        "facebook": 22300,
+        "twitter": 18500
+      },
+      "image_url": "https://i1.feedspot.com/4756129.jpg?t=1609402382"
+    },
+    {
+      "title": "The Landry Hat",
+      "feed_url": "https://thelandryhat.com/feed/",
+      "website_url": "https://thelandryhat.com/",
+      "description": "The ultimate home for Dallas Cowboys news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 113300,
+        "twitter": 5800,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4756966.jpg?t=1610777473"
+    },
+    {
+      "title": "Titan Sized",
+      "feed_url": "https://titansized.com/feed/",
+      "website_url": "https://titansized.com/",
+      "description": "Welcome to Titan Sized, the Tennessee Titans news, and opinions site brought to you by the FanSided Network. Titan Sized is dedicated to providing top-notch Titans news, views, and original content. This site also serves as a community for like-minded fans to come together to catch up on the latest news and to discuss their passion.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 9400,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4757387.jpg?t=1607075013"
+    },
+    {
+      "title": "Who Dat Dish",
+      "feed_url": "https://whodatdish.com/feed/",
+      "website_url": "https://whodatdish.com/",
+      "description": "The ultimate home for New Orleans Saints news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 18100,
+        "twitter": 8600,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4757010.jpg?t=1648195532"
+    },
+    {
+      "title": "Canal Street Chronicles",
+      "feed_url": "https://www.canalstreetchronicles.com/rss/index.xml",
+      "website_url": "https://www.canalstreetchronicles.com/",
+      "description": "Canal Street Chronicles is your best source for quality New Orleans Saints news, rumours, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 31400
+      },
+      "image_url": "https://i1.feedspot.com/4756144.jpg?t=1645257271"
+    },
+    {
+      "title": "Baltimore Beatdown",
+      "feed_url": "https://www.baltimorebeatdown.com/rss/index.xml",
+      "website_url": "https://www.baltimorebeatdown.com/",
+      "description": "To be the place where casual and serious fans go to have their voice heard in opinions and commentary on everything related to the Baltimore Ravens.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 19800,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4756082.jpg?t=1607075681"
+    },
+    {
+      "title": "Dawgs By Nature",
+      "feed_url": "https://www.dawgsbynature.com/rss/index.xml",
+      "website_url": "https://www.dawgsbynature.com/",
+      "description": "Non-stop coverage of the team with the best fans in the NFL, the Cleveland Browns.",
+      "followers": {
+        "facebook": 55700,
+        "twitter": 27000
+      },
+      "image_url": "https://i1.feedspot.com/4756098.jpg?t=1607075730"
+    },
+    {
+      "title": "12th Man Rising",
+      "feed_url": "https://12thmanrising.com/feed/",
+      "website_url": "https://12thmanrising.com/",
+      "description": "The ultimate home for Seattle Seahawks news, rumors, updates, trades, signings, injuries, commentary, analysis, and more.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 6600,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4757091.jpg?t=1610961874"
+    },
+    {
+      "title": "Big Cat Country",
+      "feed_url": "https://www.bigcatcountry.com/rss/index.xml",
+      "website_url": "https://www.bigcatcountry.com/",
+      "description": "Your best source for quality Jacksonville Jaguars news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 35300,
+        "twitter": 52800
+      },
+      "image_url": "https://i1.feedspot.com/4756124.jpg?t=1607075710"
+    },
+    {
+      "title": "Bolts From The Blue",
+      "feed_url": "https://www.boltsfromtheblue.com/rss/index.xml",
+      "website_url": "https://www.boltsfromtheblue.com/",
+      "description": "Your best source for quality Los Angeles Chargers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 20900
+      },
+      "image_url": "https://i1.feedspot.com/4756127.jpg?t=1609402378"
+    },
+    {
+      "title": "Predominantly Orange",
+      "feed_url": "https://predominantlyorange.com/feed/",
+      "website_url": "https://predominantlyorange.com/",
+      "description": "Predominantly Orange is the ultimate home for top-notch Denver Broncos news, quality content, rumors, opinions, roster, updates, trades, signings, injuries, stats, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4757016.jpg?t=1607074996"
+    },
+    {
+      "title": "Black and Teal",
+      "feed_url": "https://blackandteal.com/feed/",
+      "website_url": "https://blackandteal.com/",
+      "description": "Black and Teal is the ultimate home for top-notch Jacksonville Jaguars news, quality content, rumors, roster, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 14100,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4757377.jpg?t=1607075036"
+    },
+    {
+      "title": "Music City Miracles",
+      "feed_url": "https://www.musiccitymiracles.com/rss/index.xml",
+      "website_url": "https://www.musiccitymiracles.com/",
+      "description": "The best Tennessee Titans coverage on the internet 365 days a year.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 20900
+      },
+      "image_url": "https://i1.feedspot.com/4756158.jpg?t=1607075734"
+    },
+    {
+      "title": "Cat Scratch Reader",
+      "feed_url": "https://www.catscratchreader.com/rss/index.xml",
+      "website_url": "https://www.catscratchreader.com/",
+      "description": "Your best source for quality Carolina Panthers news, rumors, analysis, stats, and scores from the fan perspective.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 15200
+      },
+      "image_url": "https://i1.feedspot.com/4756084.jpg?t=1607075718"
+    },
+    {
+      "title": "Bucs Nation",
+      "feed_url": "https://www.bucsnation.com/rss/index.xml",
+      "website_url": "https://www.bucsnation.com/",
+      "description": "Your best source for quality Tampa Bay Buccaneers news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 20600,
+        "twitter": 18100
+      },
+      "image_url": "https://i1.feedspot.com/4756157.jpg?t=1610630573"
+    },
+    {
+      "title": "Battle Red Blog",
+      "feed_url": "https://www.battleredblog.com/rss/index.xml",
+      "website_url": "https://www.battleredblog.com/",
+      "description": "Battle Red Blog is your best source for quality Houston Texans news, rumors, analysis, stats, and scores from the fan perspective. Here, you'll find dedicated Texans faithful from all over the world, united by a shared passion for Battle Red. Whether you're dissecting the latest game, or commiserating over a close loss, this is your one-stop shop for all things Texans.",
+      "followers": {
+        "facebook": 13200,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4756115.jpg?t=1610699746"
+    },
+    {
+      "title": "SideLion",
+      "feed_url": "https://sidelionreport.com/feed/",
+      "website_url": "https://sidelionreport.com/",
+      "description": "SideLion Report is one of the premier Detroit Lions Blogs on the net! Bringing you news, reports, and commentary on the Detroit Lions and the NFL. The ultimate home for Detroit Lions news, rumors, updates, trades, signings, injuries, commentary, analysis, and more!",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4757307.jpg?t=1613048970"
+    },
+    {
+      "title": "Hogs Haven",
+      "feed_url": "https://www.hogshaven.com/rss/index.xml",
+      "website_url": "https://www.hogshaven.com/",
+      "description": "Your best source for quality Washington Redskins news, rumors, analysis, stats and scores from the fan perspective.",
+      "followers": {
+        "facebook": 63400,
+        "twitter": 69500
+      },
+      "image_url": "https://i1.feedspot.com/4756161.jpg?t=1607075645"
+    },
+    {
+      "title": "Revenge of the Birds",
+      "feed_url": "https://www.revengeofthebirds.com/rss/index.xml",
+      "website_url": "https://www.revengeofthebirds.com/",
+      "description": "Your best source for quality Arizona Cardinals news, rumors, analysis, stats and scores from the fan perspective. An Arizona Cardinals fan community by SB Nation. Posts and articles from the fan perspective with some insider access.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4756078.jpg?t=1607075726"
+    },
+    {
+      "title": "Draft Dive",
+      "feed_url": "https://www.draftdive.com/feed/",
+      "website_url": "https://www.draftdive.com/",
+      "description": "Covers all things NFL Draft related, prospect scouting reports, analysis and information regarding the draft!",
+      "followers": {
+        "facebook": 398,
+        "twitter": 1700,
+        "instagram": 196
+      },
+      "image_url": "https://i1.feedspot.com/5322684.jpg?t=1631862491"
+    },
+    {
+      "title": "Boss of Betting \u00bb NFL",
+      "feed_url": "https://www.bossofbetting.com/feed",
+      "website_url": "https://www.bossofbetting.com/betting-guides/nfl",
+      "description": "Our NFL betting guide will help you place profitable bets during the football season. Learn about the best strategies, different bet types, and best NFL betting sites.",
+      "followers": {
+        "twitter": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4962658.jpg?t=1607074928"
+    },
+    {
+      "title": "Arizona Cardinals",
+      "feed_url": "https://www.azcardinals.com/",
+      "website_url": "https://www.azcardinals.com/",
+      "description": "Follow us to keep up with news and articles from Arizona Cardinals.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4757355.jpg?t=1607075738"
+    },
+    {
+      "title": "NFL Nation",
+      "feed_url": "https://www.espn.com/blog/nflnation",
+      "website_url": "https://www.espn.com/blog/nflnation",
+      "description": "To serve sports fans wherever sports are watched, listened to, discussed, debated, read about or played. ESPN's official NFL coverage. Sunday NFL Countdown, NFL LIVE, NFL matchup, NFL Draft and Monday Night Football.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/4758191.jpg?t=1607074750"
+    },
+    {
+      "title": "FanSided",
+      "feed_url": "https://fansided.com/nfl/feed/",
+      "website_url": "https://fansided.com/nfl/",
+      "description": "The ultimate home for fans.News & blogs on NFL. The FanSided Network is comprised of over 300 regional sports & entertainment sites hellbent on giving fans the most in-depth coverage they can't get anywhere else.",
+      "followers": {
+        "facebook": 973500,
+        "twitter": 46700,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/4755332.jpg?t=1607074754"
+    },
+    {
+      "title": "Giants Wire",
+      "feed_url": "https://giantswire.usatoday.com/feed/",
+      "website_url": "https://giantswire.usatoday.com/",
+      "description": "The best source of New York Giants news, updates, and opinion. Get the latest New York Giants news, schedule, photos, and rumors from Giants Wire, the best New York Giants blog available.",
+      "followers": {
+        "facebook": 66000,
+        "twitter": 34900
+      },
+      "image_url": "https://i1.feedspot.com/4756979.jpg?t=1608298405"
+    },
+    {
+      "title": "Football Pro",
+      "feed_url": "https://footballpro.co.network/feed",
+      "website_url": "https://www.profootballnetwork.com/nfl/",
+      "description": "Best place to find all of your News, Information and Bestselling Products in the NFL",
+      "followers": {
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5173336.jpg?t=1607075218"
+    },
+    {
+      "title": "The Daily Dolphin",
+      "feed_url": "https://www.usatoday.com/sports/nfl/",
+      "website_url": "https://www.usatoday.com/sports/nfl/",
+      "description": "The biggest and best team of reporters out there covering the Miami Dolphins like no one else in South Florida.",
+      "followers": {
+        "facebook": 90700,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/3970875.jpg?t=1607075306"
+    }
+  ]
+}

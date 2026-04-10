@@ -1,0 +1,29 @@
+{
+  "category": "Marysville News",
+  "source_url": "https://rss.feedspot.com/marysville_ohio_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Marysville Journal-Tribune",
+      "feed_url": "https://www.marysvillejt.com/category/news/feed/",
+      "website_url": "https://www.marysvillejt.com/category/news/",
+      "description": "Marysville Journal-Tribune has remained Union County's longest-running and award-winning source of daily local news. Keep up with the latest news and updates in Marysville, Ohio.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 635
+      },
+      "image_url": "https://i1.feedspot.com/5164293.jpg"
+    },
+    {
+      "title": "City of Marysville",
+      "feed_url": "https://www.marysvilleohio.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.marysvilleohio.org/CivicAlerts.aspx?CID=1,9",
+      "description": "Get the latest news and updates in Marysville, OH.",
+      "followers": {
+        "facebook": 13100,
+        "twitter": 2000,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5164294.jpg?t=1592892837"
+    }
+  ]
+}

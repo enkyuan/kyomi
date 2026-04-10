@@ -1,0 +1,53 @@
+{
+  "category": "San Marcos News",
+  "source_url": "https://rss.feedspot.com/san_marcos_texas_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of San Marcos, TX",
+      "feed_url": "https://sanmarcostx.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://sanmarcostx.gov/CivicAlerts.aspx",
+      "description": "City of San Marcos, TX provide you with an inside look into city services, community events, and local attractions. Get the latest news and happenings in San Marcos, Texas.",
+      "followers": {
+        "facebook": 39700,
+        "twitter": 20500,
+        "instagram": 10000
+      },
+      "image_url": "https://i1.feedspot.com/5147644.jpg?t=1626331510"
+    },
+    {
+      "title": "KXAN Austin \u00bb San Marcos",
+      "feed_url": "https://www.kxan.com/news/local/san-marcos/feed/",
+      "website_url": "https://www.kxan.com/news/local/san-marcos/",
+      "description": "Top San Marcos headlines and comprehensive news analysis to keep readers current on local topics, governments, business, politics, sports, and more, KXAN to provides the most valuable and most consumed local news content by creating exceptional in-depth reporting and investigative journalism for Central Texas region.",
+      "followers": {
+        "facebook": 509400,
+        "twitter": 259800,
+        "instagram": 114500
+      },
+      "image_url": "https://i1.feedspot.com/5516081.jpg?t=1677830879"
+    },
+    {
+      "title": "Corridor News \u00bb San Marcos",
+      "feed_url": "https://smcorridornews.com/category/news/san-marcos/feed/",
+      "website_url": "https://smcorridornews.com/category/news/san-marcos/",
+      "description": "Hays County & San Marcos' premier online news source for breaking news to local happenings and everything in-between. Covering the latest breaking news, entertainment, sports, weather etc.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5147643.jpg?t=1626331498"
+    },
+    {
+      "title": "San Marcos Record",
+      "feed_url": "https://www.sanmarcosrecord.com/taxonomy/term/1/all/feed",
+      "website_url": "https://www.sanmarcosrecord.com/",
+      "description": "San Marcos Record is sharing news, features and sports with the San Marcos community since 1912. We bring you your latest San Marcos news, all in one place. Construction, education, local businesses and events are just a few topics found in our publication.",
+      "followers": {
+        "facebook": 23900,
+        "twitter": 4500,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5147642.jpg?t=1626331513"
+    }
+  ]
+}

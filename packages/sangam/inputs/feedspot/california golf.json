@@ -1,0 +1,79 @@
+{
+  "category": "California Golf",
+  "source_url": "https://rss.feedspot.com/california_golf_rss_feeds",
+  "feeds": [
+    {
+      "title": "Torrey Pines Golf Blog",
+      "feed_url": "https://www.torreypines.com/blog/feed/",
+      "website_url": "https://www.torreypines.com/blog/",
+      "description": "The Torrey Pines Golf Blog is where you can read the latest news about golf, the courses, golfers, and much more. TorreyPines.com is owned and operated by San Diego Golf Reservations. SDGR is the largest and oldest golf concierge service in San Diego. We have been making guaranteed tee time reservations at Torrey Pines Golf Course for over 30 years.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5516904.jpg?t=1678100833"
+    },
+    {
+      "title": "Palm Desert Country Club Blog",
+      "feed_url": "https://palmdesertgolf.com/blog/feed/",
+      "website_url": "https://palmdesertgolf.com/blog/",
+      "description": "Whether you are a beginner or an expert, there are always ways to improve your golf game. Learn some tips, techniques and more on the Palm Desert Golf blog. Since 1962, the Palm Desert Country Club has been a premier golf destination in the Coachella Valley, renowned for its wide fairways and subtle greens.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/5315112.jpg?t=1629869351"
+    },
+    {
+      "title": "South Carolina Golf Blog",
+      "feed_url": "https://www.scga.org/blog/feed/",
+      "website_url": "https://www.scga.org/blog/",
+      "description": "Join the Millions of Southern California Golf Players enjoying great deals, tips and news from the best golf association around. The Southern California Golf Association is devoted to providing all Southland golfers with the best experience possible. Its primary goal is to enhance the enjoyment of the game for those who actively live the golf lifestyle or have just learned to swing a club.",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5516903.jpg?t=1678100136"
+    },
+    {
+      "title": "Hacienda's Golf Club Blog",
+      "feed_url": "https://www.haciendagolfclub.com/blog/rss.xml",
+      "website_url": "https://www.haciendagolfclub.com/blog",
+      "description": "Check out topics ranging from game improvement to junior development, with everything in between. Hacienda Golf Club was born during the Golden Age of golf course architecture as a dream of turn-of-the-century oil millionaire Alphonso Bell. Before founding Bel-Air Country Club, which he located within his vast landholdings extending from what is now West Los Angeles to the Pacific Palisades, Bell founded Hacienda.",
+      "followers": {
+        "facebook": 819,
+        "twitter": 121
+      },
+      "image_url": "https://i1.feedspot.com/5516905.jpg?t=1678099900"
+    },
+    {
+      "title": "Your Golf Guru",
+      "feed_url": "https://yourgolfguru.com/feed/",
+      "website_url": "https://yourgolfguru.com/golf-science-articles/",
+      "description": "Expand your industry knowledge through golf science articles. Dive deep into the world of golf with insightful articles that unravel the science behind the game. Kiran Kanwar, also known as Your Golf Guru, was India's first female golf-teaching professional. Here, she shares 30+ years of experience in golf teaching and research.",
+      "followers": {
+        "twitter": 631
+      },
+      "image_url": "https://i1.feedspot.com/7267283.jpg?t=1709666096"
+    },
+    {
+      "title": "Poppy Hills Blog",
+      "feed_url": "https://blog.poppyhillsgolf.ncga.org/rss.xml",
+      "website_url": "https://blog.poppyhillsgolf.ncga.org/",
+      "description": "Welcome to the new Poppy Hills Golf Course in Pebble Beach. Check out the blog to get to know about the course and other details. A proud, NCGA-owned course, Poppy Hills is the most accessible, nationally recognized championship course in Pebble Beach, California, and provides guests with what architect Robert Trent Jones, Jr. calls 'the closest you can get to playing golf in a National Park.'",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 1700,
+        "instagram": 26200
+      },
+      "image_url": "https://i1.feedspot.com/5516902.jpg?t=1678100723"
+    },
+    {
+      "title": "California Golf + Travel",
+      "feed_url": "https://calgolfnews.com/feed/",
+      "website_url": "https://calgolfnews.com/",
+      "description": "California Golf + Travel informs you about the latest golf stories, courses, news, equipment, and much more. California Golf + Travel provides California golfers information about great places to travel, play, eat, and enjoy life.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 369
+      },
+      "image_url": "https://i1.feedspot.com/5516901.jpg?t=1678099871"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "category": "Tour De France",
+  "source_url": "https://rss.feedspot.com/tour_de_france_rss_feeds",
+  "feeds": [
+    {
+      "title": "Cycling Weekly \u00bb Tour de France",
+      "feed_url": "https://www.cyclingweekly.com/feeds/tag/tour-de-france",
+      "website_url": "https://www.cyclingweekly.com/racing/tour-de-france",
+      "description": "Daily cycling news and cycle equipment reviews from Cycling Weekly, the UK's best-selling cycling magazine. Everything you need to know about the Tour de France 2019: GC standings, latest news, plus information on riders, stage profiles, reports, photos and more.",
+      "followers": {
+        "facebook": 483600,
+        "twitter": 260399,
+        "instagram": 90500
+      },
+      "image_url": "https://i1.feedspot.com/4917674.jpg?t=1620622505"
+    },
+    {
+      "title": "Mail Online \u00bb Tour de France",
+      "feed_url": "https://www.dailymail.co.uk/sport/tour_de_france/index.rss",
+      "website_url": "https://www.dailymail.co.uk/sport/tour_de_france/index.html",
+      "description": "Get the latest Tour de France news, dates, stages, and routes including standings and winners plus Chris Froome, Mark Cavendish and crash updates from MailOnline and the Daily Mail newspaper.",
+      "followers": {
+        "facebook": 23200000,
+        "twitter": 797200
+      },
+      "image_url": "https://i1.feedspot.com/4917684.jpg?t=1620622510"
+    },
+    {
+      "title": "Tour de France on TV Blog",
+      "feed_url": "https://tourdefranceontv.co.uk/feed/",
+      "website_url": "https://tourdefranceontv.co.uk/blog/",
+      "description": "Tour de France on TV is a site about sitting around on your arse watching cycling. I'm Alex Bowden and I'm a writer who cycles, so it seemed to make sense to write about the peloton. I've also written about the sport as a pastime for Cycling Active magazine.",
+      "followers": {
+        "twitter": 172
+      },
+      "image_url": "https://i1.feedspot.com/4917668.jpg?t=1675159851"
+    },
+    {
+      "title": "Blog P\u00e9daleur \u00bb \u00c9tape Du Tour & Tour De France",
+      "feed_url": "https://blog-cycliste.pedaleur.fr/category/etape-du-tour-tour-de-france/feed/",
+      "website_url": "https://blog-cycliste.pedaleur.fr/category/etape-du-tour-tour-de-france/",
+      "description": "Discover our reconnaissance of the Etape du Tour and Tour De France, and our impressions on the routes of the Tour. Get information on the program, detailed routes and feelings on the passes. The P\u00e9daleur team is made up of cycling enthusiasts and it was in 2015 that we created the P\u00e9daleur community. Our ambition is to bring together cyclists and share around our sport.",
+      "followers": {
+        "facebook": 13500,
+        "instagram": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5501495.jpg?t=1675159819"
+    },
+    {
+      "title": "John Eric Goff's Blog",
+      "feed_url": "http://johnericgoff.blogspot.com/feeds/posts/default",
+      "website_url": "http://johnericgoff.blogspot.com/",
+      "description": "The John Eric Goff Blog provides information and insight on the Tour de France and other sports events. John Eric Goff is a Professor of Physics at the University of Lynchburg. He has written a book on the science of sports and has a PhD in Physics.",
+      "followers": {
+        "facebook": 534
+      },
+      "image_url": "https://i1.feedspot.com/5501494.jpg?t=1675159907"
+    },
+    {
+      "title": "Geo-Sports",
+      "feed_url": "https://www.geo-sports.org/feed/",
+      "website_url": "https://www.geo-sports.org/blogs/",
+      "description": "The Tour de France seen by geologists. A geological description and the geological history that characterizes the stage at that particular day. Geo - Tour de France is an initiative of Douwe J.J. van Hinsbergen. As a cycling fanatic and a geology professor, all got combined on this website.",
+      "followers": {
+        "twitter": 6500
+      },
+      "image_url": "https://i1.feedspot.com/5501499.jpg?t=1677219008"
+    }
+  ]
+}

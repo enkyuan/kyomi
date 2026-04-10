@@ -1,0 +1,78 @@
+{
+  "category": "Swedish Food",
+  "source_url": "https://rss.feedspot.com/swedish_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Call Me Cupcake",
+      "feed_url": "https://www.callmecupcake.se/feed",
+      "website_url": "https://www.callmecupcake.se/",
+      "description": "Hello everyone! I'm Linda. I live in the little town I grew up in, in the south of Sweden. In 2009 I discovered how incredibly fun baking could be. I quickly became obsessed with cupcakes and wanted to share my experiences with people then I started this blog. And I needed pictures to run a blog of course. After studying photography in high school, I had a camera that I barely used. So when I started baking, I also started taking pictures of my baked goods.",
+      "followers": {
+        "facebook": 91100,
+        "twitter": 2400,
+        "instagram": 765600
+      },
+      "image_url": "https://i1.feedspot.com/4500220.jpg?t=1678872690"
+    },
+    {
+      "title": "Green Kitchen Stories",
+      "feed_url": "https://greenkitchenstories.com/feed/",
+      "website_url": "https://greenkitchenstories.com/recipe-index/",
+      "description": "Welcome to our Green Kitchen. Here we cook and eat healthy and simple vegetarian food with natural ingredients, whole grains, good fats, fruit, and vegetables. Also, read about our travels where we have gathered some of our travel guides and photos and posts about the kids.",
+      "followers": {
+        "facebook": 132900,
+        "twitter": 10200,
+        "instagram": 378200
+      },
+      "image_url": "https://i1.feedspot.com/224425.jpg?t=1671539703"
+    },
+    {
+      "title": "Swedish Spoon Blog",
+      "feed_url": "https://swedishspoon.com/feed/",
+      "website_url": "https://swedishspoon.com/blog/",
+      "description": "Hello and welcome! My name is Isabelle. Here at Swedish Spoon, you'll find Swedish food history where I trawl the archives of libraries, newspapers, and my own cookbook collection for interesting tidbits, tried-and-tested recipes, and a lot of obsessing over great butter. You can also expect some travel tips.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5520783.jpg?t=1678872536"
+    },
+    {
+      "title": "Scandinavian Simple Eating Blog",
+      "feed_url": "https://scandinaviansimpleeating.com/feed/",
+      "website_url": "https://scandinaviansimpleeating.com/",
+      "description": "I started Scandinavian Simple Eating in 2018 because I love food and I love to prepare food. Scandinavian Simple Eating is here to inspire, help and offer you more Scandinavia in your and your family's dinner menus. Something to be proud of.",
+      "followers": {
+        "facebook": 231,
+        "instagram": 579
+      },
+      "image_url": "https://i1.feedspot.com/5520784.jpg?t=1678872551"
+    },
+    {
+      "title": "The Nordic Kitchen Blog",
+      "feed_url": "https://www.thenordickitchen.com/feed/",
+      "website_url": "https://www.thenordickitchen.com/",
+      "description": "The Nordic Kitchen is a blog devoted to seasonal cooking, finding beauty in everyday moments, and enjoying food that is good for us and the planet. Here you'll find plant-based recipes, travel stories, posts about natural beauty, and stories about my life in Sweden.",
+      "followers": {
+        "instagram": 21800
+      },
+      "image_url": "https://i1.feedspot.com/4978295.jpg?t=1678872623"
+    },
+    {
+      "title": "Anne's Food Blog",
+      "feed_url": "http://annesfood.blogspot.com/feeds/posts/default",
+      "website_url": "http://annesfood.blogspot.com/",
+      "description": "Hi, I am Anne. I just love food. I love reading about food, writing about food, cooking food, and not surprisingly, eating food. I live in Stockholm, Sweden, with my husband, our two boys, and our cats. In this blog, I write about my experiences and give you new recipes that are famous here in Sweden.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/583622.jpg?t=1678872722"
+    },
+    {
+      "title": "Lost In A Pot Blog",
+      "feed_url": "https://lostinapot.com/feed/",
+      "description": "Welcome to the Lost in a Pot site, a place where we'll re-experience the foods of our past, current and future travels as well as the memories associated with them. We're sharing this from our home base in Sweden. We hope to reach out through this site and find many more friends to share recipes and life experiences with.",
+      "followers": {
+        "facebook": 65
+      },
+      "image_url": "https://i1.feedspot.com/4846764.jpg?t=1678872656"
+    }
+  ]
+}

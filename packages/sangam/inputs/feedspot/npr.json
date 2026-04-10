@@ -1,0 +1,352 @@
+{
+  "category": "NPR",
+  "source_url": "https://rss.feedspot.com/npr_rss_feeds",
+  "feeds": [
+    {
+      "title": "NPR",
+      "feed_url": "https://feeds.npr.org/1002/rss.xml",
+      "website_url": "https://www.npr.org/",
+      "description": "NPR is an independent, nonprofit media organization that was founded on a mission to create a more informed public. Top stories in the U.S. and world news, politics, health, science, business, music, arts and culture. Nonprofit journalism with a mission.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb World",
+      "feed_url": "https://feeds.npr.org/1004/rss.xml",
+      "website_url": "https://www.npr.org/sections/world/",
+      "description": "NPR world news, international art and culture, world business and financial markets, world economy, and global trends in health, science and technology.",
+      "followers": {
+        "facebook": 7800000,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb National",
+      "feed_url": "https://feeds.npr.org/1003/rss.xml",
+      "website_url": "https://www.npr.org/sections/national/",
+      "description": "NPR coverage of national news, U.S. politics, elections, business, arts, culture, health and science, and technology.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Asia",
+      "feed_url": "https://feeds.npr.org/1125/rss.xml",
+      "website_url": "https://www.npr.org/sections/asia/",
+      "description": "All articles about Asia from NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Middle East",
+      "feed_url": "https://feeds.npr.org/1009/rss.xml",
+      "website_url": "https://www.npr.org/sections/middle-east/",
+      "description": "Middle East news, arts, culture, and politics. Updates on Iraq, Israel, Palestine, Iran, OPEC, and the Persian Gulf states NPR streaming audio.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Economy",
+      "feed_url": "https://feeds.npr.org/1017/rss.xml",
+      "website_url": "https://www.npr.org/sections/economy/",
+      "description": "NPR news on the U.S. and world economy, the World Bank, and Federal Reserve. Commentary on economic trends. Subscribe to NPR Economy podcasts and RSS feeds.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Europe",
+      "feed_url": "https://feeds.npr.org/1124/rss.xml",
+      "website_url": "https://www.npr.org/sections/europe/",
+      "description": "All articles about Europe from NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Africa",
+      "feed_url": "https://feeds.npr.org/1126/rss.xml",
+      "website_url": "https://www.npr.org/sections/africa/",
+      "description": "Get the latest African news, updates, and much more only on the NPR Africa section.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Latin America",
+      "feed_url": "https://feeds.npr.org/1127/rss.xml",
+      "website_url": "https://www.npr.org/sections/latin-america/",
+      "description": "Discover the latest news & analysis, music & arts covering the Latin America region only on NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb National Security",
+      "feed_url": "https://feeds.npr.org/1122/rss.xml",
+      "website_url": "https://www.npr.org/sections/national-security/",
+      "description": "All articles about National Security from NPR.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Politics",
+      "feed_url": "https://feeds.npr.org/1014/rss.xml",
+      "website_url": "https://www.npr.org/sections/politics/",
+      "description": "NPR's expanded coverage of U.S. and world politics, the latest news from Congress and the White House, and elections.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Business",
+      "feed_url": "https://feeds.npr.org/1006/rss.xml",
+      "website_url": "https://www.npr.org/sections/business/",
+      "description": "Find the latest business news with reports on Wall Street, interest rates, banking, companies, and the U.S. and world financial markets.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Health",
+      "feed_url": "https://feeds.npr.org/1128/rss.xml",
+      "website_url": "https://www.npr.org/sections/health/",
+      "description": "Get the latest health news from the health care industry only on NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Law",
+      "feed_url": "https://feeds.npr.org/1070/rss.xml",
+      "website_url": "https://www.npr.org/sections/law/",
+      "description": "NPR stories on legal issues, court rulings, Supreme Court hearings, new laws and government investigations.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Science",
+      "feed_url": "https://feeds.npr.org/1007/rss.xml",
+      "website_url": "https://www.npr.org/sections/science/",
+      "description": "The latest health and science news from NPR. Updates on medicine, healthy living, nutrition, drugs, diet, and advances in science and technology.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Technology",
+      "feed_url": "https://feeds.npr.org/1019/rss.xml",
+      "website_url": "https://www.npr.org/sections/technology/",
+      "description": "Latest technology news and breakthroughs in technology, science, and industry from NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Education",
+      "feed_url": "https://feeds.npr.org/1013/rss.xml",
+      "website_url": "https://www.npr.org/sections/education/",
+      "description": "All articles about Education from NPR.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Code Switch",
+      "feed_url": "https://feeds.npr.org/173754155/rss.xml",
+      "website_url": "https://www.npr.org/sections/codeswitch/",
+      "description": "Get the latest updates on race and identity only on NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Books",
+      "feed_url": "https://feeds.npr.org/1032/rss.xml",
+      "website_url": "https://www.npr.org/books/",
+      "description": "NPR brings you news about books and authors along with our picks for great reads. Interviews, reviews, the NPR Bestseller Lists, New in Paperback, and much more.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Movies",
+      "feed_url": "https://feeds.npr.org/1045/rss.xml",
+      "website_url": "https://www.npr.org/sections/movies/",
+      "description": "NPR Movies podcast, movie reviews, and commentary on new and classic films. Get the latest interviews with filmmakers, actors, and actresses.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Television",
+      "feed_url": "https://feeds.npr.org/1138/rss.xml",
+      "website_url": "https://www.npr.org/sections/television/",
+      "description": "Get the latest TV news and updates on NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Pop Culture",
+      "feed_url": "https://feeds.npr.org/1048/rss.xml",
+      "website_url": "https://www.npr.org/sections/pop-culture/",
+      "description": "View the latest news and commentary on popular culture trends only on NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Art & Design",
+      "feed_url": "https://feeds.npr.org/1047/rss.xml",
+      "website_url": "https://www.npr.org/sections/art-design/",
+      "description": "NPR explores the visual arts including design, photography, sculpture, and architecture. Interviews, commentary, and audio.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Gaming",
+      "feed_url": "https://feeds.npr.org/820266919/rss.xml",
+      "website_url": "https://www.npr.org/sections/gaming/",
+      "description": "NPR explores the latest in games and gaming culture \u2014 from the latest digital titles to what's on our tabletops.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Culture",
+      "feed_url": "https://feeds.npr.org/1008/rss.xml",
+      "website_url": "https://www.npr.org/sections/culture/",
+      "description": "Art and entertainment commentary plus interviews, book reviews, movie reviews, music reviews, comedy, and visual art. Follow this feed and stay updated on trends in music, painting, art, architecture, photography, and design.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Food",
+      "feed_url": "https://feeds.npr.org/1053/rss.xml",
+      "website_url": "https://www.npr.org/sections/food/",
+      "description": "Stories on food, nutrition, recipes, cooking, cookbook reviews, and health. Download Food and Hidden Kitchen podcasts and subscribe to RSS feeds.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Climate",
+      "feed_url": "https://feeds.npr.org/1167/rss.xml",
+      "website_url": "https://www.npr.org/sections/climate/",
+      "description": "NPR gives full coverage of climate change and related issues on this page. NPR is an independent, nonprofit media organization that was founded on a mission to create a more informed public. NPR connects with millions of Americans on the air, online, and in-person to explore the news, ideas, and what it means to be human.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Space",
+      "feed_url": "https://feeds.npr.org/1026/rss.xml",
+      "website_url": "https://www.npr.org/sections/space/",
+      "description": "NPR covers of space exploration, space shuttle missions, news from NASA, private space exploration, satellite technology, and new discoveries in astronomy and astrophysics.",
+      "followers": {
+        "facebook": 7800000,
+        "twitter": 8199999,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Animals",
+      "feed_url": "https://feeds.npr.org/1132/rss.xml",
+      "website_url": "https://www.npr.org/sections/animals/",
+      "description": "All articles about Animals from NPR.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Energy",
+      "feed_url": "https://feeds.npr.org/1131/rss.xml",
+      "website_url": "https://www.npr.org/sections/energy/",
+      "description": "All articles about Energy from NPR.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Environment",
+      "feed_url": "https://feeds.npr.org/1025/podcast.xml",
+      "website_url": "https://www.npr.org/sections/environment/",
+      "description": "All articles about Environment from NPR.",
+      "followers": {
+        "facebook": 7800000,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    },
+    {
+      "title": "NPR \u00bb Elections",
+      "feed_url": "https://feeds.npr.org/139482413/rss.xml",
+      "website_url": "https://www.npr.org/sections/elections/",
+      "description": "Explore NPR's latest election coverage.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5242090.jpg?t=1752644345"
+    }
+  ]
+}

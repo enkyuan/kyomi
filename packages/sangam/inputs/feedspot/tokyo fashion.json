@@ -1,0 +1,88 @@
+{
+  "category": "Tokyo Fashion",
+  "source_url": "https://rss.feedspot.com/tokyo_fashion_rss_feeds",
+  "feeds": [
+    {
+      "title": "MEN'S NON-NO Blog",
+      "feed_url": "https://www.mensnonno.jp/blog/feed/",
+      "website_url": "https://www.mensnonno.jp/fashion/",
+      "description": "MEN'S NON-NO is the male fashion magazine by Tokyo-based Shueisha. MEN'S NON-NO features an extensive array of menswear styles ranging from street, contemporary and high fashion, as well as more formal attire, making it appealing to a broad audience regardless of age and interest.",
+      "followers": {
+        "facebook": 57900,
+        "twitter": 300100,
+        "instagram": 294800
+      },
+      "image_url": "https://i1.feedspot.com/4660490.jpg?t=1677216834"
+    },
+    {
+      "title": "Tokyo Fashion Technology Lab Blog",
+      "feed_url": "https://tfl.tokyo/category/blog/feed",
+      "website_url": "https://tfl.tokyo/category/blog/",
+      "description": "Read about the latest developments in technology for the fashion industry with the Tokyo Fashion Technology Lab. 'TFL' (Tokyo Fashion Technology Lab) is a school that fosters a new age in fashion. It is for those who will be in charge of the fashion of the new era, a new idea of technology.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 794,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5498849.jpg?t=1674555137"
+    },
+    {
+      "title": "Samantha Mariko Blog",
+      "feed_url": "https://samanthamariko.com/feed/",
+      "website_url": "https://samanthamariko.com/blog/",
+      "description": "My name is Samantha Mariko, currently residing in Tokyo, Japan. I started this blog in late 2011, where I can share my style, modeling work, beauty, travels, music and anything that interests & inspires me.",
+      "followers": {
+        "twitter": 655,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/4659853.jpg?t=1617631114"
+    },
+    {
+      "title": "Tokyobanhbao \u00bb Fashion",
+      "feed_url": "https://www.tokyobanhbao.com/en/category/fashion/feed/",
+      "website_url": "http://www.tokyobanhbao.com/en/category/fashion/",
+      "description": "Welcome! I'm Tokyobanhbao, illustrator, in love with Paris, Tokyo and all things fashion. This blog has been my illustrated logbook and playground since 2007. I write fashion reviews and also post about food, travel and much more.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 8800,
+        "instagram": 57000
+      },
+      "image_url": "https://i1.feedspot.com/4666596.jpg?t=1610976668"
+    },
+    {
+      "title": "Tokyo Fashion",
+      "feed_url": "https://tokyo-fashion.tumblr.com/rss",
+      "website_url": "https://tokyo-fashion.tumblr.com/",
+      "description": "Harajuku-based online magazine dedicated to Tokyo street fashion, Japanese fashion and Harajuku style.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 176900,
+        "instagram": 897800
+      },
+      "image_url": "https://i1.feedspot.com/1333601.jpg?t=1579846302"
+    },
+    {
+      "title": "Fashion in Japan",
+      "feed_url": "https://fashioninjapan.com/feed",
+      "website_url": "https://fashioninjapan.com/",
+      "description": "Fashion in Japan brings you fresh photos of the latest fashion trends happening on the streets of Tokyo, Japan's Fashion Capital.",
+      "followers": {
+        "twitter": 1200,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4659846.jpg?t=1617631103"
+    },
+    {
+      "title": "SALZ Tokyo Blog",
+      "feed_url": "https://salz-tokyo.com/feed",
+      "website_url": "https://salz-tokyo.com/blogs/blog",
+      "description": "Hi, I'm Anji, a stylist & fashion blogger. An antique kimono addict & Harajuku fashion chameleon living in Tokyo. My goal is to spread the word and interest in kimono in Japan and overseas. I want to inspire with modern and alternative styling ideas as well as embracing traditional aspects.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 4900,
+        "instagram": 23300
+      },
+      "image_url": "https://i1.feedspot.com/4661313.jpg?t=1617631109"
+    }
+  ]
+}

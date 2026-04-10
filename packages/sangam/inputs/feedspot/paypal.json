@@ -1,0 +1,82 @@
+{
+  "category": "PayPal",
+  "source_url": "https://rss.feedspot.com/paypal_rss_feeds",
+  "feeds": [
+    {
+      "title": "PayPal News",
+      "feed_url": "https://newsroom.uk.paypal-corp.com/news?pagetemplate=rss",
+      "website_url": "https://newsroom.uk.paypal-corp.com/news",
+      "description": "PayPal UK's mission is to give buyers and sellers a safe, secure way to pay and do business.",
+      "followers": {
+        "facebook": 6600000,
+        "twitter": 76600
+      },
+      "image_url": "https://i1.feedspot.com/4926415.jpg?t=1620993148"
+    },
+    {
+      "title": "PayPal News",
+      "feed_url": "https://newsroom.paypal-corp.com/news?pagetemplate=rss",
+      "website_url": "https://newsroom.paypal-corp.com/home",
+      "description": "PayPal is the faster, safer way to send money, make an online payment, receive money or set up a merchant account in Southeast Asia (SEA).",
+      "followers": {
+        "facebook": 6700000,
+        "twitter": 999600
+      },
+      "image_url": "https://i1.feedspot.com/4926417.jpg?t=1620993156"
+    },
+    {
+      "title": "Medium \u00bb PayPal Technology",
+      "feed_url": "https://medium.com/feed/paypal-tech",
+      "website_url": "https://medium.com/paypal-tech/",
+      "description": "PayPal Engineering Blog shows our adventures in node.js, Java, security, cloud, mobile, scale, user experience, and more.",
+      "followers": {
+        "facebook": 6700000,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/3511098.jpg?t=1620993131"
+    },
+    {
+      "title": "The PayPal Technology Blog",
+      "feed_url": "https://medium.com/feed/paypal-tech",
+      "website_url": "https://medium.com/paypal-tech",
+      "description": "Medium is not like any other platform on the internet. Find all the insights of PayPal from those who build it.",
+      "followers": {
+        "facebook": 520799,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4926423.jpg?t=1620993140"
+    },
+    {
+      "title": "PayPal News",
+      "feed_url": "https://newsroom.ca.paypal-corp.com/news?pagetemplate=rss",
+      "website_url": "https://newsroom.ca.paypal-corp.com/news",
+      "description": "PayPal is the faster, safer way to send money, make an online payment, receive money or set up a merchant account in Canada.",
+      "followers": {
+        "facebook": 6600000,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4926414.jpg?t=1620993144"
+    },
+    {
+      "title": "AngellEYE Blog",
+      "feed_url": "https://www.angelleye.com/feed/",
+      "website_url": "https://www.angelleye.com/blog/",
+      "description": "Our blog contains PayPal information for buyers, sellers, and developers. Get your PayPal information from a PayPal Partner and certified developer. AngellEYE is a Certified developer and a trusted source for PayPal info and payments integration.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 166
+      },
+      "image_url": "https://i1.feedspot.com/5483818.jpg?t=1672060436"
+    },
+    {
+      "title": "Omega Theme Blog \u00bb PayPal",
+      "feed_url": "https://www.omegatheme.com/blog/92-paypal-posts?format=feed&type=rss",
+      "website_url": "https://www.omegatheme.com/blog/92-paypal-posts",
+      "description": "Keep track of the latest Paypal-related news and information updates with the Omega Theme Blog. Omega Theme is an app developer platform that provides useful Shopify apps to help merchants increase sales, autonomous workflow, and cut down on operation costs.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5483817.jpg?t=1672060544"
+    }
+  ]
+}

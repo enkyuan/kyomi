@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Claudio subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Tiras" title="Tiras">
+            <outline type="rss" text="Um Sábado Qualquer" title="Um Sábado Qualquer" xmlUrl="http://www.umsabadoqualquer.com/feed/" htmlUrl="https://www.umsabadoqualquer.com"/>
+            <outline type="rss" text="Dilbert Daily Strip" title="Dilbert Daily Strip" xmlUrl="http://feeds.dilbert.com/DilbertDailyStrip" htmlUrl="http://dilbert.com"/>
+            <outline type="rss" text="xkcd.com" title="xkcd.com" xmlUrl="http://xkcd.com/atom.xml" htmlUrl="https://xkcd.com/"/>
+        </outline>
+        <outline text="Cloud" title="Cloud">
+            <outline type="rss" text="The GitHub Blog" title="The GitHub Blog" xmlUrl="https://github.com/blog/all.atom" htmlUrl="https://github.blog"/>
+            <outline type="rss" text="Microsoft Azure" title="Microsoft Azure" xmlUrl="https://medium.com/feed/microsoftazure" htmlUrl="https://medium.com/microsoftazure?source=rss----8bec1183ada9---4"/>
+            <outline type="rss" text="Microsoft Azure Blog" title="Microsoft Azure Blog" xmlUrl="http://azure.microsoft.com/blog/feed/" htmlUrl="http://azure.microsoft.com/blog/"/>
+            <outline type="rss" text="Microsoft Teams Blog articles" title="Microsoft Teams Blog articles" xmlUrl="https://techcommunity.microsoft.com/gxcuf89792/rss/board?board.id=MicrosoftTeamsBlog" htmlUrl="https://techcommunity.microsoft.com/t5/microsoft-teams-blog/bg-p/MicrosoftTeamsBlog"/>
+            <outline type="rss" text="Amazon Elastic Compute Cloud (N. Virginia) Service Status" title="Amazon Elastic Compute Cloud (N. Virginia) Service Status" xmlUrl="http://status.aws.amazon.com/rss/ec2-us-east-1.rss" htmlUrl="http://status.aws.amazon.com/"/>
+            <outline type="rss" text="AWS News Blog" title="AWS News Blog" xmlUrl="http://aws.typepad.com/aws/atom.xml" htmlUrl="https://aws.amazon.com/blogs/aws/"/>
+            <outline type="rss" text="Recent Announcements" title="Recent Announcements" xmlUrl="http://aws.amazon.com/rss/whats-new.rss" htmlUrl="https://aws.amazon.com/about-aws/whats-new/recent/"/>
+            <outline type="rss" text="Azure na Pratica" title="Azure na Pratica" xmlUrl="https://medium.com/feed/azure-na-pratica" htmlUrl="https://medium.com/azure-na-pratica?source=rss----d5ab611d22a8---4"/>
+            <outline type="rss" text="O blog da AWS" title="O blog da AWS" xmlUrl="https://aws.amazon.com/pt/blogs/aws-brasil/feed/" htmlUrl="https://aws.amazon.com/pt/blogs/aws-brasil/"/>
+        </outline>
+        <outline text="Dev" title="Dev">
+            <outline type="rss" text="Scott Hanselman" title="Scott Hanselman" xmlUrl="http://feeds.feedburner.com/ScottHanselman" htmlUrl="https://www.hanselman.com/blog/"/>
+            <outline type="rss" text="EximiaCo - Português" title="EximiaCo - Português" xmlUrl="https://www.eximia.co/pt/feed/" htmlUrl="https://www.eximia.co"/>
+            <outline type="rss" text="ASP.NET Blog" title="ASP.NET Blog" xmlUrl="http://blogs.msdn.com/webdevtools/rss.xml" htmlUrl="https://devblogs.microsoft.com/aspnet"/>
+            <outline type="rss" text="Windows Command Line" title="Windows Command Line" xmlUrl="https://blogs.msdn.microsoft.com/commandline/feed/" htmlUrl="https://devblogs.microsoft.com/commandline"/>
+            <outline type="rss" text="you've been HAACKED" title="you've been HAACKED" xmlUrl="http://feeds.haacked.com/haacked" htmlUrl="https://haacked.com/"/>
+            <outline type="rss" text="Azure DevOps - Recent Events" title="Azure DevOps - Recent Events" xmlUrl="https://status.dev.azure.com/_rss" htmlUrl="https://status.dev.azure.com/"/>
+            <outline type="rss" text="The Morning Brew" title="The Morning Brew" xmlUrl="http://feeds.feedburner.com/ReflectivePerspective" htmlUrl="http://blog.cwa.me.uk"/>
+            <outline type="rss" text="AWS DevOps Blog" title="AWS DevOps Blog" xmlUrl="http://blogs.aws.amazon.com/application-management/blog/feed/recentPosts.rss" htmlUrl="https://aws.amazon.com/blogs/devops/"/>
+            <outline type="rss" text="Azure DevOps Blog" title="Azure DevOps Blog" xmlUrl="https://devblogs.microsoft.com/devops/feed/" htmlUrl="https://devblogs.microsoft.com/devops"/>
+            <outline type="rss" text="EximiaCo.Tech - Português" title="EximiaCo.Tech - Português" xmlUrl="https://www.eximia.tech/pt/feed/" htmlUrl="https://www.eximiaco.tech"/>
+            <outline type="rss" text="Elton Minetto" title="Elton Minetto" xmlUrl="http://eltonminetto.net/index.xml" htmlUrl="https://eltonminetto.dev/"/>
+            <outline type="rss" text="The Clean Code Blog" title="The Clean Code Blog" xmlUrl="http://blog.cleancoder.com/atom.xml" htmlUrl="http://blog.cleancoder.com/"/>
+            <outline type="rss" text="Visual Studio Code" title="Visual Studio Code" xmlUrl="https://code.visualstudio.com/feed.xml" htmlUrl="https://code.visualstudio.com/"/>
+            <outline type="rss" text="Lambda3" title="Lambda3" xmlUrl="https://www.lambda3.com.br/feed" htmlUrl="https://www.lambda3.com.br"/>
+            <outline type="rss" text="Stories by Renato Groffe on Medium" title="Stories by Renato Groffe on Medium" xmlUrl="https://medium.com/feed/@renatogroffe" htmlUrl="https://medium.com/@renatogroffe?source=rss-6698199cd3bb------2"/>
+            <outline type="rss" text="Microsoft Quantum Blog" title="Microsoft Quantum Blog" xmlUrl="https://cloudblogs.microsoft.com/quantum/feed/" htmlUrl="https://cloudblogs.microsoft.com/quantum"/>
+            <outline type="rss" text=".NET Blog" title=".NET Blog" xmlUrl="http://blogs.msdn.com/b/dotnet/rss.aspx" htmlUrl="https://devblogs.microsoft.com/dotnet"/>
+            <outline type="rss" text="Visual Studio Blog" title="Visual Studio Blog" xmlUrl="https://devblogs.microsoft.com/visualstudio/feed/" htmlUrl="https://devblogs.microsoft.com/visualstudio"/>
+            <outline type="rss" text="node blog" title="node blog" xmlUrl="http://blog.nodejs.org/feed/" htmlUrl="https://nodejs.org/en/"/>
+            <outline type="rss" text="TypeScript" title="TypeScript" xmlUrl="http://blogs.msdn.com/b/typescript/rss.aspx" htmlUrl="https://devblogs.microsoft.com/typescript"/>
+            <outline type="rss" text="The NuGet Blog" title="The NuGet Blog" xmlUrl="http://blog.nuget.org/feeds/atom.xml" htmlUrl="https://devblogs.microsoft.com/nuget"/>
+            <outline type="rss" text="gaGO.io" title="gaGO.io" xmlUrl="http://luizcarlosfaria.net/feed/" htmlUrl="https://gago.io"/>
+            <outline type="rss" text="Gomex Blog" title="Gomex Blog" xmlUrl="https://gomex.me/index.xml" htmlUrl="https://gomex.me/index.xml"/>
+            <outline type="rss" text="Bruno Brito" title="Bruno Brito" xmlUrl="https://www.brunobrito.net.br/rss/" htmlUrl="https://www.brunobrito.net.br/"/>
+        </outline>
+        <outline text="Promocoes" title="Promocoes">
+            <outline type="rss" text="hardMOB - Promoções" title="hardMOB - Promoções" xmlUrl="http://kidopi.com.br/feeds/hardmob/" htmlUrl="http://www.hardmob.com.br/promocoes"/>
+        </outline>
+        <outline text="Tecnologia" title="Tecnologia">
+            <outline type="rss" text="Blog do iPhone" title="Blog do iPhone" xmlUrl="http://feeds.feedburner.com/blogdoiphone/rss" htmlUrl="https://blogdoiphone.com"/>
+            <outline type="rss" text="Fabio Akita" title="Fabio Akita" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCib793mnUOhWymCh2VJKplQ" htmlUrl="https://www.youtube.com/channel/UCib793mnUOhWymCh2VJKplQ"/>
+            <outline type="rss" text="dia a dia, bit a bit" title="dia a dia, bit a bit" xmlUrl="http://boletim.de/feed/" htmlUrl="https://silvio.meira.com"/>
+            <outline type="rss" text="Gizmodo Brasil" title="Gizmodo Brasil" xmlUrl="http://gizmodo.uol.com.br/feed/" htmlUrl="https://gizmodo.uol.com.br"/>
+            <outline type="rss" text="Fabulous Adventures In Coding" title="Fabulous Adventures In Coding" xmlUrl="http://ericlippert.com/feed/" htmlUrl="https://ericlippert.com"/>
+        </outline>
+        <outline text="Cars" title="Cars">
+            <outline type="rss" text="Autoentusiastas" title="Autoentusiastas" xmlUrl="http://feeds.feedburner.com/AutoEntusiastas" htmlUrl="https://www.autoentusiastas.com.br"/>
+            <outline type="rss" text="Garagem do Bellote" title="Garagem do Bellote" xmlUrl="http://www.garagemdobellote.com.br/feeds/posts/default" htmlUrl="https://garagemdobellotetv.com.br"/>
+            <outline type="rss" text="FlatOut!" title="FlatOut!" xmlUrl="http://www.flatout.com.br/feed/" htmlUrl="https://flatout.com.br"/>
+        </outline>
+        <outline text="Containers" title="Containers">
+            <outline type="rss" text="Kubernetes – Production-Grade Container Orchestration" title="Kubernetes – Production-Grade Container Orchestration" xmlUrl="https://kubernetes.io/feed.xml" htmlUrl="https://kubernetes.io/"/>
+            <outline type="rss" text="Docker Blog" title="Docker Blog" xmlUrl="https://blog.docker.com/feed/" htmlUrl="https://www.docker.com/blog"/>
+        </outline>
+        <outline text="News" title="News">
+            <outline type="rss" text="All about Microsoft Blog RSS | ZDNet" title="All about Microsoft Blog RSS | ZDNet" xmlUrl="http://www.zdnet.com/blog/microsoft/rss" htmlUrl="https://www.zdnet.com/"/>
+            <outline type="rss" text="Thurrott.com" title="Thurrott.com" xmlUrl="https://www.thurrott.com/feed" htmlUrl="https://www.thurrott.com"/>
+        </outline>
+    </body>
+</opml>

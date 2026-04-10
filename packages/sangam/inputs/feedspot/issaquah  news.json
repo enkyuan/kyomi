@@ -1,0 +1,28 @@
+{
+  "category": "Issaquah  News",
+  "source_url": "https://rss.feedspot.com/issaquah_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Issaquah Reporter",
+      "feed_url": "https://www.issaquahreporter.com/feed/",
+      "website_url": "https://www.issaquahreporter.com/news/",
+      "description": "The Issaquah Reporter covers breaking news, crime, transportation, politics, education, and health in Issaquah and Sammamish, Washington.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 5800
+      },
+      "image_url": "https://i1.feedspot.com/5157283.jpg?t=1590734283"
+    },
+    {
+      "title": "City of Issaquah",
+      "feed_url": "https://www.issaquahwa.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.issaquahwa.gov/CivicAlerts.aspx",
+      "description": "Get the latest news and updates about Issaquah, WA.",
+      "followers": {
+        "facebook": 17500,
+        "twitter": 10800
+      },
+      "image_url": "https://i1.feedspot.com/5157286.jpg?t=1590734761"
+    }
+  ]
+}

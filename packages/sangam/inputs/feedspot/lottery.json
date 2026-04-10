@@ -1,0 +1,361 @@
+{
+  "category": "Lottery",
+  "source_url": "https://rss.feedspot.com/lottery_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lottery Post",
+      "feed_url": "http://feeds.lotterypost.com/LotteryNews?format=xml",
+      "website_url": "https://www.lotterypost.com/",
+      "description": "The latest lottery industry news, brought to you by Lottery Post, the Internet's most active lottery community, featuring forums, news, worldwide lottery results, jackpots, predictions, numbers systems, and information for the serious lottery player.",
+      "followers": {
+        "facebook": 18800,
+        "twitter": 2700,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4350044.jpg?t=1604730196"
+    },
+    {
+      "title": "Ithuba National Lottery Blog",
+      "feed_url": "https://www.nationallottery.co.za/blogs/itemlist?format=feed&type=rss",
+      "website_url": "https://www.nationallottery.co.za/blogs/",
+      "description": "On this site, we provide information about winning numbers after each draw; the jackpot prizes and simplified, how to play instructions for all Lottery games. Players also have the opportunity to register to play online and enjoy the convenience of playing their favorite National Lottery games from anywhere.",
+      "followers": {
+        "facebook": 837900,
+        "twitter": 196000
+      },
+      "image_url": "https://i1.feedspot.com/5160389.jpg?t=1604730356"
+    },
+    {
+      "title": "Jumbo Ticket Blog",
+      "feed_url": "https://blog.jumboticket.com/feed/",
+      "website_url": "https://blog.jumboticket.com/",
+      "description": "Covers articles about lottery tips and tricks, industry news, winning stories, and more. Jumbo Ticket is an online lottery platform that strives to provide its users the best online lottery experience.",
+      "followers": {
+        "facebook": 18300
+      },
+      "image_url": "https://i1.feedspot.com/5314015.jpg?t=1629454135"
+    },
+    {
+      "title": "Michigan Lottery Connect",
+      "feed_url": "https://milotteryconnect.com/feed/",
+      "website_url": "https://milotteryconnect.com/",
+      "description": "Michigan Lottery Connect provides all the lottery news and updates around michigan area.",
+      "followers": {
+        "twitter": 13200,
+        "instagram": 17800
+      },
+      "image_url": "https://i1.feedspot.com/4950629.jpg?t=1604730362"
+    },
+    {
+      "title": "La Fleur's Lottery World",
+      "feed_url": "https://lafleurs.com/feed/",
+      "website_url": "https://lafleurs.com/",
+      "description": "In 1993, TLF Publications launched La Fleur's Lottery World, a monthly newsletter. In 1995, La Fleur's Magazine evolved into a full-color magazine dedicated to serving the global lottery industry. Subscribe to get lottery news, stats and facts from La Fleur's Lottery World",
+      "followers": {
+        "twitter": 821
+      },
+      "image_url": "https://i1.feedspot.com/5160481.jpg?t=1604730386"
+    },
+    {
+      "title": "International Lottery",
+      "feed_url": "https://internationallottery.org/feed/",
+      "website_url": "https://internationallottery.org/",
+      "description": "InternationalLottery.org was founded to bring the millionaire dream to people who don't have a chance to come to America or Europe to buy lottery tickets for themselves. We give you a detailed guide to help you buy tickets online safely and legally from reputable lotto messenger services.",
+      "followers": {
+        "twitter": 325
+      },
+      "image_url": "https://i1.feedspot.com/5160446.jpg"
+    },
+    {
+      "title": "Lottery Daily",
+      "feed_url": "https://lotterydaily.com/feed/",
+      "website_url": "https://lotterydaily.com/",
+      "description": "Lottery Daily is dedicated to providing the latest news, trends and developments to the global lottery business. Lottery Daily is part of the SBC News Network.",
+      "followers": {
+        "twitter": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5476679.jpg?t=1670398724"
+    },
+    {
+      "title": "TheLotter US Blog",
+      "feed_url": "https://www.thelotter.us/feed/",
+      "website_url": "https://www.thelotter.us/blog/",
+      "description": "Explore TheLotter US Blog for online lottery guides, tips, winner stories, and news on Mega Millions, Powerball, state lotteries, jackpots, and more!",
+      "followers": {
+        "facebook": 6000,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/8545136.jpg?t=1753109306"
+    },
+    {
+      "title": "LottoShield Blog",
+      "feed_url": "https://lottoshield.com/blog/rss.xml",
+      "website_url": "https://lottoshield.com/blog/",
+      "description": "Visit the LottoShield blog to learn best practices for selling lottery and managing convenience stores.",
+      "followers": {
+        "facebook": 296,
+        "instagram": 175
+      },
+      "image_url": "https://i1.feedspot.com/8545137.jpg?t=1753109309"
+    },
+    {
+      "title": "Lottonia Blog",
+      "feed_url": "https://lottonia.com/feed/",
+      "website_url": "https://lottonia.com/blog/",
+      "description": "Get ready to have a blast at our Lottery Blog! Explore thrilling stories, handy tips, and all things lottery fun right here.",
+      "followers": {
+        "facebook": 12,
+        "instagram": 36
+      },
+      "image_url": "https://i1.feedspot.com/8545138.jpg?t=1753109312"
+    },
+    {
+      "title": "Tulotero Blog",
+      "feed_url": "https://tulotero.com/feed/",
+      "website_url": "https://tulotero.com/blog/",
+      "description": "TuLotero's blog is a lively mix of lottery news, winner stories, draw schedules, 'how\u2011to' guides for popular state lotteries (like Powerball, Mega Millions, Gopher\u202f5), and fun curiosity pieces tied to holidays and superstitions.",
+      "followers": {
+        "facebook": 252,
+        "twitter": 97,
+        "instagram": 260
+      },
+      "image_url": "https://i1.feedspot.com/8545139.jpg?t=1753109316"
+    },
+    {
+      "title": "Lottery Predictor",
+      "feed_url": "https://feeds.feedburner.com/LotteryPredictor",
+      "website_url": "https://lotterypredictor.com/",
+      "description": "Lottery Predictor helps you pick your winning numbers for the next Powerball, Mega Millions or state lottery drawing.",
+      "followers": {
+        "facebook": 84100,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4980650.jpg?t=1604730327"
+    },
+    {
+      "title": "Online Lotto Sites Blog",
+      "feed_url": "https://onlinelottosites.com/feed/",
+      "website_url": "https://onlinelottosites.com/blog/",
+      "description": "Hello, my name is Alfred Ballester and I am the founder of OnlineLottoSites.com. The main reason why I started this website was because of my own troubles enjoying international lotteries. Where I'm from, you can only purchase tickets for the local lottery. Many people, including me, enjoy playing the Euromillions however, and to purchase a ticket, you need to go to a local kiosk in nearby Spain. I wanted to create a place where international lottery enthusiasts and players alike could come for guidance and information and not suffer the same way I did.",
+      "followers": {
+        "facebook": 15600,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5036156.jpg?t=1614324194"
+    },
+    {
+      "title": "LotteryCurrent Blog",
+      "feed_url": "https://www.lotterycurrent.com/blog/feed/",
+      "website_url": "https://www.lotterycurrent.com/blog/",
+      "description": "LotteryCurrent is a website and mobile application that allows lottery players from all over the United States to find the latest lottery results, lottery news, generate lottery numbers, tell your winning stories and more. Our blog list content about winners stories, jackpots and lottery stories.",
+      "followers": {
+        "facebook": 11
+      },
+      "image_url": "https://i1.feedspot.com/5615575.jpg?t=1688371019"
+    },
+    {
+      "title": "Lotto Express Blog",
+      "feed_url": "https://www.lottoexpress.com/blog/feed/",
+      "website_url": "https://www.lottoexpress.com/blog/",
+      "description": "Read the latest updates, lottery tricks and tips from Lotto Express. Lotto Express is a privately owned and operated platform that provides an online service carefully designed and created for lottery enthusiasts offering them safety, security, and the convenience to play internationally based lotteries any time they choose.",
+      "followers": {
+        "facebook": 260,
+        "twitter": 97
+      },
+      "image_url": "https://i1.feedspot.com/5659431.jpg"
+    },
+    {
+      "title": "Lotto Plays Blog",
+      "feed_url": "https://medium.com/feed/@lottoplays",
+      "website_url": "https://www.lottoplays.com/blog",
+      "description": "Provides live lottery data for scratch tickets, PowerBall, & MegaMillions. LottoPlays crunches the latest lotto data into top lists & dashboards to give you an edge against the lottery & help you play smarter! The LottoPlays blog covers a variety of lottery related topics.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5341177.jpg?t=1636722203"
+    },
+    {
+      "title": "ialottery Blog",
+      "feed_url": "https://feeds.feedburner.com/ialotteryblog",
+      "website_url": "https://www.ialotteryblog.com/",
+      "description": "The IALottery provides entertainment and prizes to its players while at the same time raising billions of dollars for the state programs that benefit all Iowans. Through the years, Lottery funds have been used in a variety of ways to enhance the state, including projects to create new recreation areas, support research at Iowa's public universities, benefit Iowa veterans, develop new products and techniques for agriculture, and promote tourism. Follow this blog to know more about IAlottery.",
+      "followers": {
+        "twitter": 9200,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4950613.jpg?t=1604730372"
+    },
+    {
+      "title": "Global Lottery Review Blog",
+      "feed_url": "http://www.global-lottery-review.com/lottery.xml",
+      "website_url": "http://www.global-lottery-review.com/lottery-blog.html",
+      "description": "The Global Lottery Review Blog keeps you up-to-date with all additions of 75 different world lotteries. Find the best lottos to play & learn how to increase chances of winning lottery games.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4950618.jpg?t=1604730875"
+    },
+    {
+      "title": "Lottery Magazine",
+      "feed_url": "https://lotmag.com/feed/",
+      "website_url": "https://lotmag.com/",
+      "description": "Lottery Magazine brings you all the latest news, updates, information, tips, and trick on how to play the lottery. The magazine also publishes articles on different lotteries, lottery winners, and more.",
+      "followers": {
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5476681.jpg?t=1670400818"
+    },
+    {
+      "title": "Lottery Guy Blog",
+      "feed_url": "http://feeds.feedburner.com/LotteryGuy",
+      "website_url": "https://www.lottery-guy.com/lgblog/",
+      "description": "'Where can I find actionable lottery tips that get results?', you're in the right place. Lottery Guy is where lottery players go for proven lottery advice. For lottery tips and strategies, ignore the nonsense and just start right here where I talk sense and bust myths.",
+      "followers": {
+        "facebook": 680,
+        "twitter": 840
+      },
+      "image_url": "https://i1.feedspot.com/5476676.jpg?t=1670394650"
+    },
+    {
+      "title": "The Lottery Lawyer & CPA Blog",
+      "feed_url": "https://www.lotterylawyercpa.com/category/blog/feed/",
+      "website_url": "https://www.lotterylawyercpa.com/category/blog/",
+      "description": "Kurt D. Panouses, ESQ, CPA is an Attorney & Certified Public Accountant (CPA). He is also board certified as a specialist in Wills, Trusts, and Estates Law based in Florida, serving clients nationwide for over 35 years. He is dedicated to providing lottery winners with legal services related to pre-winning strategies, incorporation, estate planning, business planning, tax planning, and administration strategies & issues.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5476675.jpg?t=1670398251"
+    },
+    {
+      "title": "Silver Lotto Blog",
+      "feed_url": "https://silverlotto.com/blog?format=rss",
+      "website_url": "https://silverlotto.com/blog/",
+      "description": "The Lotto Life is about inspiring and motivating lottery players. I do it by giving out personalised information, experiences and helpful tips. If you're a Silverite (buyer of my System and products), this blog shows you how to win faster and more often. I hope the tips in this blog will assist you to make an informed decision, and learn more about getting the most out your lottery game.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950725.jpg?t=1604730518"
+    },
+    {
+      "title": "Casino.org News \u00bb Lottery",
+      "feed_url": "https://www.casino.org/news/lottery/feed/",
+      "website_url": "https://www.casino.org/news/lottery/",
+      "description": "We are the world's #1 guide to online casinos and gambling, with players being our only priority. Serving you since 1995. Subscribe to get all the latest information about the lottery from Casino.org.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 15300,
+        "instagram": 16800
+      },
+      "image_url": "https://i1.feedspot.com/5160484.jpg"
+    },
+    {
+      "title": "Lotto Social Blog",
+      "feed_url": "https://lottosocial.com/blog/feed",
+      "website_url": "https://4dinsingapore.com/category/singapore-4d-articles/",
+      "description": "Follow this blog to know about every day new prize draws, new winning stories, offers and fun stories related to out beloved lottery world.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/4950574.jpg?t=1604730199"
+    },
+    {
+      "title": "4DInSingapore",
+      "feed_url": "https://4dinsingapore.com/feed/",
+      "website_url": "https://4dinsingapore.com/category/singapore-4d-articles/",
+      "description": "Make money from Singapore 4D with accurate prediction from a Real 4D Master. See Proof In the winning ticket!",
+      "followers": {
+        "facebook": 15400,
+        "twitter": 167,
+        "instagram": 331
+      },
+      "image_url": "https://i1.feedspot.com/4957682.jpg?t=1604730275"
+    },
+    {
+      "title": "Oz Lotteries Blog",
+      "feed_url": "https://www.ozlotteries.com/blog/feed/",
+      "website_url": "https://www.ozlotteries.com/blog",
+      "description": "Oz Lotteries is a fully accredited retailer of Australian lottery tickets. Check out this site to know more about Oz Lotteries Winners and Lotto News.",
+      "followers": {
+        "twitter": 1800,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4950568.jpg?t=1604730289"
+    },
+    {
+      "title": "Lotterycodex Blog",
+      "feed_url": "https://lotterycodex.com/feed/",
+      "website_url": "https://lotterycodex.com/blog/",
+      "description": "Lotterycodex features Sensible Hacks to Lottery Success According to Math.",
+      "followers": {
+        "twitter": 71
+      },
+      "image_url": "https://i1.feedspot.com/5002043.jpg?t=1604730319"
+    },
+    {
+      "title": "Smart Luck Lottery News Blog",
+      "feed_url": "https://www.smartluck.com/blog/feed/",
+      "website_url": "https://www.smartluck.com/blog/",
+      "description": "Smart Luck's mission is to provide you with every possible tool that will help bring you closer to your goal of winning a lottery jackpot. This blog provides lottery News, Free Lotto Tips, and more.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 82
+      },
+      "image_url": "https://i1.feedspot.com/4950386.jpg?t=1604730331"
+    },
+    {
+      "title": "Lotto Edge",
+      "feed_url": "https://lottoedge.com/feed/",
+      "website_url": "https://lottoedge.com/",
+      "description": "Lotto Edge analyzes every scratch game and every prize each day to provide players the BEST odds of winning! Both free and premium memberships available. You have INSTANT access to the MOST ADVANCED scratcher rankings anywhere! Are you ready to stop wasting your money guessing which scratch-offs to buy?",
+      "followers": {
+        "facebook": 768,
+        "twitter": 44
+      },
+      "image_url": "https://i1.feedspot.com/5160467.jpg?t=1604730367"
+    },
+    {
+      "title": "Powerball Magazine",
+      "feed_url": "http://www.powerballmagazine.com/feed/",
+      "website_url": "http://www.powerballmagazine.com/",
+      "description": "The Powerball Magazine is a independent lottery news magazine. Our target is to bring the most interesting, entertaining and informative international stories out to the readers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950695.jpg?t=1604730599"
+    },
+    {
+      "title": "Lotteries Blog",
+      "feed_url": "https://www.lotteries.com/blog/feed/",
+      "website_url": "https://www.lotteries.com/blog/",
+      "description": "Lotteries.com is the ultimate destination for lottery betting. Follow this blog to know more about lotto tickets online, US Powerball, US Mega Million, Euro Millions, EL Gordo, Australian OZ Lotto, British Lotto plus many more.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 199,
+        "instagram": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4950702.jpg?t=1604759507"
+    },
+    {
+      "title": "LotteryTexts Blog",
+      "feed_url": "https://lotterytexts.com/blog/feed/",
+      "website_url": "https://lotterytexts.com/blog/",
+      "description": "We are lottery enthusiasts who analyzed the lack of a dedicated platform that makes it easier and more exciting to view lottery results, analyze the trends over the years, check the winning odds, and make the game experience much more compelling. With a team ranging from lottery experts, content curators, researchers, data analysts, and others, LotteryTexts' prime mission is to offer you the most accurate results in the least possible time.",
+      "followers": {
+        "facebook": 353,
+        "twitter": 26,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5476673.jpg?t=1670397517"
+    },
+    {
+      "title": "Lottery 'n Go Blog",
+      "feed_url": "https://lotteryngo.com/feed/",
+      "website_url": "https://lotteryngo.com/blog/",
+      "description": "Lottery 'n Go is an informative and supportive home to a community of lottery enthusiasts. We are experts in playing safely and securely online. We provide our community with the information, so they can too play the best and most reliable lotteries online. All the most interesting articles on both online and offline lotteries. Learn about winning lottery strategies and read about your favorite games & stories!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 23,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5476674.jpg?t=1670394715"
+    }
+  ]
+}

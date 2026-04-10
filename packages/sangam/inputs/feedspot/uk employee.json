@@ -1,0 +1,372 @@
+{
+  "category": "UK Employee",
+  "source_url": "https://rss.feedspot.com/uk_employee_rss_feeds",
+  "feeds": [
+    {
+      "title": "Great Place To Work Blog",
+      "feed_url": "https://www.greatplacetowork.co.uk/resources/rss.xml",
+      "website_url": "https://www.greatplacetowork.co.uk/resources/tag/blog",
+      "description": "Great Place To Work Blog shares Guides, webinars & tools to develop a great workplace culture. They help HR leaders create high-performing workplaces where employees feel trusted and valued. Follow us for great insights, best practices & more!",
+      "followers": {
+        "facebook": 101,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/7258849.jpg?t=1708606823"
+    },
+    {
+      "title": "Business Healthy Blog",
+      "feed_url": "https://www.businesshealthy.org/feed/",
+      "website_url": "https://www.businesshealthy.org/blog/",
+      "description": "A community and online resource for business leaders committed to improving the health and wellbeing of their workforce. Business Healthy aim is to bring together businesses in the City to ignite a positive change in the health & wellbeing of their workforce.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7258840.jpg?t=1708606846"
+    },
+    {
+      "title": "Breathe Blog",
+      "feed_url": "https://www.breathehr.com/en-gb/blog/rss.xml",
+      "website_url": "https://www.breathehr.com/en-gb/blog",
+      "description": "Time-saving people software that helps SMEs put their people first and drive their business forward. Part of the ELMO Software Group.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 8200,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5332065.jpg?t=1634376377"
+    },
+    {
+      "title": "Health at Work Blog",
+      "feed_url": "https://healthatworkcentre.org.uk/news-and-blog/feed/",
+      "website_url": "https://healthatworkcentre.org.uk/news-and-blog/",
+      "description": "Health@Work Consultancy Services was established to help businesses to build healthy and safe workplaces. They offer a holistic approach to health, safety and wellbeing within the workplace, personalised to benefit your business, employees and customers. The qualifications, knowledge and extensive experience of our team and affiliates mean we are capable of being a one-stop-shop for all your health, safety and wellbeing requirements.",
+      "followers": {
+        "facebook": 266,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/7258834.jpg?t=1708606861"
+    },
+    {
+      "title": "The HR Dept Blog",
+      "feed_url": "https://www.hrdept.co.uk/feed/",
+      "website_url": "https://www.hrdept.co.uk/blog/",
+      "description": "Outsource your HR needs and get unlimited phone and email support, so you can focus on growing your business. The HR Dept: Preventing People Problems",
+      "followers": {
+        "facebook": 633,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4904192.jpg?t=1613566754"
+    },
+    {
+      "title": "Engage Employee Blog",
+      "feed_url": "https://www.engageemployee.com/blog/rss.xml",
+      "website_url": "https://www.engageemployee.com/blog",
+      "description": "The latest news, articles and blogs on employee engagement, from Engage Employee. They provide of the largest employee engagement event in Europe.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/7258831.jpg?t=1708606894"
+    },
+    {
+      "title": "Terryberry Blog",
+      "feed_url": "https://www.terryberry.com/blog/feed/",
+      "website_url": "https://www.terryberry.com/blog/",
+      "description": "Terryberry meets you where you are and helps you create an engaged, purpose-led organization through the power of recognition. HR, get employee recognition ideas and tips for building a great workplace culture from Terryberry's blog.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/7258846.jpg?t=1708606913"
+    },
+    {
+      "title": "Newman HR Blog",
+      "feed_url": "https://www.ukemploymentlawadvice.co.uk/feed/",
+      "website_url": "https://www.ukemploymentlawadvice.co.uk/blog/",
+      "description": "Visit our Newman HR Blog. Here we update on relevent news and events both within the company and relating to UK employment. NewmanHR is a personalised employment law advice and human resources consultancy providing a bespoke service catering to the needs of companies, associations, public concerns, charities in the small and medium size business sector.",
+      "followers": {
+        "facebook": 75,
+        "twitter": 234
+      },
+      "image_url": "https://i1.feedspot.com/5570438.jpg?t=1708607045"
+    },
+    {
+      "title": "Tailored Thinking Blog",
+      "feed_url": "https://tailoredthinking.co.uk/blog?format=rss",
+      "website_url": "https://tailoredthinking.co.uk/blog",
+      "description": "Tailored Thinking work with organisations to make work better and enable better work through the application of wellbeing, positive psychology and behavioural science. Fostering a positive business approach, we provide consultancy, workshops and leadership development. We specialise in enabling positive organisational change and advising on how employees can take a tailored approach to their work; bringing their strengths, passions and interests to life.",
+      "followers": {
+        "twitter": 460
+      },
+      "image_url": "https://i1.feedspot.com/7258838.jpg?t=1708607086"
+    },
+    {
+      "title": "Reward Gateway UK Blog",
+      "feed_url": "https://www.rewardgateway.com/uk/blog/rss.xml",
+      "website_url": "https://www.rewardgateway.com/uk/blog",
+      "description": "Reward Gateway helps companies to attract, engage & retain their people with an employee engagement platform that brings everything together in one unified hub. Advice for the HR community from Reward Gateway - the employee engagement experts.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/7258835.jpg?t=1708606752"
+    },
+    {
+      "title": "Personnel Today",
+      "feed_url": "https://www.personneltoday.com/feed/",
+      "website_url": "https://www.personneltoday.com/all-pt-content/",
+      "description": "Personnel Today is the UK's leading free-access HR website. Personnel Today provides HR professionals and employers with easy-to-read, timely and relevant content, bringing them high-quality, accurate information on employment law, best HR practices, and news on the labour market in the UK and beyond. Find HR news and your next human resources job on Personnel Today.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 55100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/3899873.jpg?t=1668769996"
+    },
+    {
+      "title": "Reality HR Blog",
+      "feed_url": "https://www.realityhr.co.uk/feed/",
+      "website_url": "https://www.realityhr.co.uk/blog/",
+      "description": "Reality HR are the experts when it comes to HR consultancy, providing professional and practical employment support to businesses and organisations of all sizes. Read their latest advisory blog posts giving you the best expert updates on HR Consulting topics and issues.",
+      "followers": {
+        "facebook": 54,
+        "twitter": 850
+      },
+      "image_url": "https://i1.feedspot.com/7258837.jpg?t=1708607235"
+    },
+    {
+      "title": "Clover HR Blog",
+      "feed_url": "https://www.cloverhr.co.uk/feed/",
+      "website_url": "https://www.cloverhr.co.uk/blog/",
+      "description": "Clover HR specialise in providing bespoke HR consultancy services and solutions, to SMEs across the UK. They provide you with, not only expertise, but with peace of mind, to know your people priorities and challenges are being taken care of. Clover HR provides news, tips and insights to help you access accurate information on a wide range of HR based topics. Written by Experts.",
+      "followers": {
+        "facebook": 624,
+        "twitter": 1100,
+        "instagram": 616
+      },
+      "image_url": "https://i1.feedspot.com/5604899.jpg?t=1687419009"
+    },
+    {
+      "title": "Headway Recruitment Blog",
+      "feed_url": "https://headwayrecruitment.co.uk/feed/",
+      "website_url": "https://headwayrecruitment.co.uk/blog/",
+      "description": "Headway Recruitment - They are a recruitment company for purpose-driven organisations. A certified B Corp making a positive social and environmental impact.",
+      "followers": {
+        "facebook": 778,
+        "twitter": 502
+      },
+      "image_url": "https://i1.feedspot.com/7258844.jpg?t=1708606812"
+    },
+    {
+      "title": "UK People Reward and Mobility Hub Blog",
+      "feed_url": "https://www.ukemploymenthub.com/feed/",
+      "website_url": "https://www.ukemploymenthub.com/",
+      "description": "The latest updates in employment, benefits, pensions and immigration. UK People Reward and Mobility Hub People, Reward and Mobility team in the UK advises on all aspects of employment law, both contentious and non-contentious, and covers the full range of pensions and employee benefits issues as well as all areas of immigration law. The UK team, of more than 45 members, has strong experience working with clients across a wide range of sectors, and is based in Edinburgh, Glasgow, London and Milton Keynes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7258833.jpg?t=1708607317"
+    },
+    {
+      "title": "UK Labour Law Blog",
+      "feed_url": "https://uklabourlawblog.com/feed/",
+      "website_url": "https://uklabourlawblog.com/",
+      "description": "Here you can read articles about Labour Law related incidents and stories, as well as information related to the Labour Law. Supported by UCL Laws, UK Labour Law is a forum for academics, practising lawyers and those engaged in labour law policies to provide expert analysis of labour law matters.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5452845.jpg?t=1666179044"
+    },
+    {
+      "title": "Employee Experience Magazine",
+      "feed_url": "https://www.emexmag.com/feed/",
+      "website_url": "https://www.emexmag.com/category/employee-experience/",
+      "description": "Employee Experience Magazine is the perfect place for EX and HR professionals, employers, and anyone looking to advance their career. Employee Experience Magazine is the go-to place for EX and HR professionals, as well as anyone looking to advance their career and organisation.",
+      "followers": {},
+      "image_url": "https://www.emexmag.com/wp-content/uploads/2021/06/favicon-1-150x150.ico?t=1708606749"
+    },
+    {
+      "title": "Factorial Blog",
+      "feed_url": "https://factorialhr.co.uk/blog/feed/",
+      "website_url": "https://factorialhr.co.uk/blog/",
+      "description": "Factorial provides intuitive HR solutions for SMEs around the world. Factorial tools automate and centralise administrative tasks to provide insights and help organisations run more smoothly. The primary destination for HR-related news and advice, offering updates tailored for managers, employers, and HR professionals.",
+      "followers": {
+        "facebook": 625,
+        "twitter": 43
+      },
+      "image_url": "https://i1.feedspot.com/5604891.jpg?t=1687418991"
+    },
+    {
+      "title": "Crimson Blog \u00bb Employee Engagement",
+      "feed_url": "https://blog.crimson.co.uk/rss.xml",
+      "website_url": "https://blog.crimson.co.uk/tag/employee-engagement",
+      "description": "News and advice from Crimson around IT recruitment and Microsoft technology trends. Crimson is a Microsoft IT solutions ad recruitment business that unites your people, processes and technology. Crimson is part of the \u00a31bn Nash Squared. Employee Engagement | News and advice from Crimson around IT recruitment and Microsoft technology trends.",
+      "followers": {
+        "facebook": 108,
+        "twitter": 442
+      },
+      "image_url": "https://i1.feedspot.com/7258832.jpg?t=1708606734"
+    },
+    {
+      "title": "Four Day Week Blog",
+      "feed_url": "https://fourdayweek.co.uk/feed/",
+      "website_url": "https://fourdayweek.co.uk/blog/",
+      "description": "Four Day Week is a job site changing the way you work. They focus on four day week and flexi-time roles, giving you more time to do the things you love. The Four Day Week blog looks at companies that offer a 4 day week. Read guest blogs and find information about flexible, remote and four day week jobs.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/7258842.jpg?t=1708606790"
+    },
+    {
+      "title": "Staffology Blog",
+      "feed_url": "https://www.staffology.co.uk/feed/",
+      "website_url": "https://www.staffology.co.uk/blog/",
+      "description": "The Staffology blog is about all things payroll and HR. As well as product updates and notices, we'll cover industry topics and useful information.",
+      "followers": {
+        "twitter": 254
+      },
+      "image_url": "https://i1.feedspot.com/5605498.jpg?t=1687432019"
+    },
+    {
+      "title": "Pacific Prime UK's Blog \u00bb Employee Benefits",
+      "feed_url": "https://www.pacificprime.co.uk/blog/category/employee-benefits/feed/",
+      "website_url": "https://www.pacificprime.co.uk/blog/category/employee-benefits/",
+      "description": "Pacific Prime UK offers local and international insurance solutions for individuals and companies. Contact us for a free quote! They provide health & travel insurance to expats globally. Learn about parental leave in Singapore in our article.",
+      "followers": {
+        "facebook": 43,
+        "twitter": 432
+      },
+      "image_url": "https://i1.feedspot.com/7258843.jpg?t=1708607192"
+    },
+    {
+      "title": "The RM2 Blog",
+      "feed_url": "https://www.rm2.co.uk/feed/",
+      "website_url": "https://www.rm2.co.uk/resources/blog/",
+      "description": "Topical discussions about employee ownership and employee share plans, read the latest from RM2 here.",
+      "followers": {
+        "twitter": 896
+      },
+      "image_url": "https://i1.feedspot.com/7258841.jpg?t=1708607218"
+    },
+    {
+      "title": "Nelsons Solicitors Blog \u00bb Employment",
+      "feed_url": "https://www.nelsonslaw.co.uk/category/blog/employment/feed/",
+      "website_url": "https://www.nelsonslaw.co.uk/category/blog/employment/",
+      "description": "Have a read of Nelsons Solicitors' expert employment law blogs, which provide specialist legal updates and advice. Contact us for further information. Nelsons Solicitors was formed in 1983 by Tim Hastings and two other solicitors in a small Nottingham office. Since then we have grown to become one of the leading law firms providing expert support and advice to businesses, individuals, and families with their legal and investment needs.",
+      "followers": {
+        "facebook": 264,
+        "twitter": 1700,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5570445.jpg?t=1684404550"
+    },
+    {
+      "title": "H&H",
+      "feed_url": "https://handhcomms.co.uk/category/employee-experience/",
+      "website_url": "https://handhcomms.co.uk/category/employee-experience/",
+      "description": "Take a look at our insights and resources on internal communications and employee engagement. You can also download the H&H communications research and read their blog. We are a team of talented individuals who are always committed to delivering what we promise. At H&H, we value open-mindedness, creativity, and curiosity. Their top priority is to delight our clients, which is why we constantly challenge ourselves and each other, push each other's thinking, and learn together. This means that you can always expect our best.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7258657.jpg?t=1708607072"
+    },
+    {
+      "title": "HR Heads",
+      "feed_url": "https://www.hrheads.co.uk/category/insights/feed/",
+      "website_url": "https://www.hrheads.co.uk/category/insights/",
+      "description": "With years of experience in the HR market, our experts share their thoughts, insights and observations on current trends and thinking within the HR community. They focus on recruitment best practices, local and regional business news, the evolvement of HR practice, policy and trends.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 710,
+        "instagram": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5197004.jpg?t=1600241919"
+    },
+    {
+      "title": "Customer Experience Magazine \u00bb Employee Experience",
+      "feed_url": "https://cxm.world/category/employee-experience/feed/",
+      "website_url": "https://cxm.world/category/employee-experience/",
+      "description": "Customer Experience Magazine is packed full of all the latest news and articles from the world of Customer Experience. Customer Experience Magazine informs the decisions of CX professionals through trustworthy research, argument-driven, and solution-based stories. We're here to make sure you learn from relevant, brave and authoritative industry voices. Their goal is to challenge your perspective by inviting diverse voices to publish with CXM.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 8100,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/7258839.jpg?t=1708606773"
+    },
+    {
+      "title": "Employer News",
+      "feed_url": "https://employernews.co.uk/feed/",
+      "website_url": "https://www.acas.org.uk/blog",
+      "description": "Employer News shares updates related to Latest HR News, Employment, and Finance throughout the UK. Employer News is an online magazine for UK Employers sharing HR & Business News. UK Businesses are the magazine's news, so if you want to learn more about what's happening in UK employment, read its news.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 420
+      },
+      "image_url": "https://i1.feedspot.com/5322345.jpg?t=1631864398"
+    },
+    {
+      "title": "Wurk Place",
+      "feed_url": "https://wurkplace.co.uk/hr-blog/",
+      "website_url": "https://wurkplace.co.uk/hr-blog/",
+      "description": "Wurkplace offers a complete back office solution to business throughout the UK including HR Support, Health and Safety Services & Online Training Courses. Follow the HR blog for expert insights and practical advice on building a thriving team. Discover effective hiring strategies and performance management solutions.",
+      "followers": {
+        "facebook": 487,
+        "twitter": 1200,
+        "instagram": 635
+      },
+      "image_url": "https://i1.feedspot.com/5604890.jpg?t=1687418988"
+    },
+    {
+      "title": "Dale Carnegie Blog",
+      "feed_url": "https://www.dalecarnegie.co.uk/feed/",
+      "website_url": "https://www.dalecarnegie.co.uk/leadership-blogs/",
+      "description": "For over 100 years we have been creating inspirational leaders, confident communicators, powerful presenters and successful salespeople.Their unique methodology, proven tools, expertise, and support transform relationships, radically change team performance, create organisational impact, and reshape cultures.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/7258836.jpg?t=1708606759"
+    },
+    {
+      "title": "Employee Ownership Association Blog",
+      "feed_url": "https://employeeownership.co.uk/news/feed/",
+      "website_url": "https://employeeownership.co.uk/Site/Site/content/News-and-Insights/News-and-Insights.aspx",
+      "description": "Employee Ownership Association is the voice of the UK's rapidly expanding employee ownership sector. They represent businesses where employees have a significant ownership stake.",
+      "followers": {
+        "facebook": 554,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/7258848.jpg?t=1708607145"
+    },
+    {
+      "title": "Your FLOCK Blog",
+      "feed_url": "https://yourflock.co.uk/feed/",
+      "website_url": "https://hraspectsmagazine.co.uk/",
+      "description": "Elevate your leadership skills with our AI Coach in 5 minutes a day. Raise your hybrid team retention with their Employee Feedback Platform. Experience significant cost savings averaging \u00a3100K per year for businesses with 20 employees. Your FLOCK helps reduce turnover and enhance company culture alignment, ensuring your remote and on-site team members stay engaged, productive, and committed to your values and shared motivations.",
+      "followers": {
+        "facebook": 131,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/7258845.jpg?t=1708607295"
+    },
+    {
+      "title": "HR Aspects Magazine",
+      "feed_url": "https://hraspectsmagazine.co.uk/",
+      "website_url": "https://hraspectsmagazine.co.uk/",
+      "description": "HR Aspects Magazine provides articles, news and information about a wide selection of HR issues. We look forward to bringing you news about legislation changes and updates on issues facing employers as well as details of events and seminars across the region that may be of benefit to you and your workforce.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 17700
+      },
+      "image_url": "https://i1.feedspot.com/4941738.jpg?t=1629178941"
+    },
+    {
+      "title": "Employee Benefits",
+      "feed_url": "https://employeebenefits.co.uk/feed/",
+      "website_url": "https://employeebenefits.co.uk/news/",
+      "description": "Employee Benefits is the market-leading website for the reward and employee benefits industry in the UK. The latest news, covering all areas of employee benefits, including pay, pensions and health, and wellbeing, how organizations are approaching their employee benefits programs, tax and legislation, and the latest research news.",
+      "followers": {
+        "facebook": 326,
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5075356.jpg?t=1622899282"
+    }
+  ]
+}

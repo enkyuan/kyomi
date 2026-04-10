@@ -1,0 +1,128 @@
+{
+  "category": "Electronic Design",
+  "source_url": "https://rss.feedspot.com/electronicdesign_rss_feeds",
+  "feeds": [
+    {
+      "title": "Electronic Design",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22home%22%7D",
+      "website_url": "https://www.electronicdesign.com/",
+      "description": "The latest articles, news, products, blogs and videos from Electronic Design",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Top Stories",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22resources/top-stories-of-the-week%22%7D",
+      "website_url": "https://www.electronicdesign.com/resources/top-stories-of-the-week",
+      "description": "Articles, news, products, blogs and videos covering the Resources > Top Stories of the Week market.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/7879118.jpg?t=1740113414"
+    },
+    {
+      "title": "Electronic Design \u00bb TechXchange",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22techxchange%22%7D",
+      "website_url": "https://www.electronicdesign.com/techxchange",
+      "description": "Check out the entire collection of TechXchange digital issues. The latest issues are listed below.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Analog",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/analog%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/analog",
+      "description": "Articles, news, products, blogs and videos covering the Technologies > Analog market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Power",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/power%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/power",
+      "description": "Articles, news, products, blogs and videos covering the Technologies > Power market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Embedded",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/embedded%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/embedded",
+      "description": "Articles, news, products, blogs and videos covering the Technologies > Embedded market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Power Supply",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/power/power-supply%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/power/power-supply",
+      "description": "Articles, news, products, blogs and videos covering the Technologies > Power > Power Supply market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Power Protection",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/power/power-protection%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/power/power-protection",
+      "description": "Articles, news, products, blogs and videos covering the Technologies > Power > Power Protection market.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Sensors",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/analog/sensors%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/analog/sensors",
+      "description": "Articles, news, products, blogs and videos covering the Technologies > Analog > Sensors market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Automotive",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22markets/automotive%22%7D",
+      "website_url": "https://www.electronicdesign.com/markets/automotive",
+      "description": "Welcome to Electronic Design's destination for automotive technology trends, products, industry news, new applications, articles and commentary from our contributing technical experts and the community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Machine Learning",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/embedded/machine-learning%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/embedded/machine-learning",
+      "description": "Articles, news, products, blogs and videos covering the Technologies > Embedded > Machine Learning market.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Test & Measurement",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/test-measurement%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/test-measurement",
+      "description": "Welcome to Electronic Design's destination for test and measurement technology trends, products, industry news, new applications, articles and commentary from our contributing technical experts and the community.",
+      "followers": {
+        "facebook": 34400,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    },
+    {
+      "title": "Electronic Design \u00bb Alternative Energy",
+      "feed_url": "https://www.electronicdesign.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22technologies/power/alternative-energy%22%7D",
+      "website_url": "https://www.electronicdesign.com/technologies/power/alternative-energy",
+      "description": "Articles, news, products, blogs and videos covering the Technologies > Power > Alternative Energy market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7304414.jpg?t=1713935459"
+    }
+  ]
+}

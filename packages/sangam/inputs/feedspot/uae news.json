@@ -1,0 +1,135 @@
+{
+  "category": "UAE News",
+  "source_url": "https://rss.feedspot.com/uae_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Emirates 24/7",
+      "feed_url": "https://www.emirates247.com/cmlink/rss-feed-1.4268?localLinksEnabled=false",
+      "website_url": "https://www.emirates247.com/",
+      "description": "Emirates247.com provides real time reports with focus on UAE, Dubai, Abu Dhabi, Gulf-Khaleej. Emirates 24|7 offers breaking news, business, entertainment, lifestyle, sports, weather, property, gold, jobs and more.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 496500,
+        "instagram": 85300
+      },
+      "image_url": "https://i1.feedspot.com/4823060.jpg"
+    },
+    {
+      "title": "Emirates today",
+      "feed_url": "https://www.emaratalyoum.com/1.533091?ot=ot.AjaxPageLayout",
+      "website_url": "https://www.emaratalyoum.com/",
+      "description": "Your life in the newspaper .. Local, political, sports, economic, technical and entertainment news from the UAE, the Arab world and the world",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 2500000,
+        "instagram": 899700
+      },
+      "image_url": "https://i1.feedspot.com/1740376.jpg"
+    },
+    {
+      "title": "Arabian Business \u00bb Uae",
+      "feed_url": "https://www.arabianbusiness.com/gcc/uae/feed",
+      "website_url": "https://www.arabianbusiness.com/gcc/uae",
+      "description": "Arabian Business covers breaking news and business stories in Dubai, the UAE and the GCC.",
+      "followers": {
+        "facebook": 217100,
+        "twitter": 82800,
+        "instagram": 163600
+      },
+      "image_url": "https://i1.feedspot.com/4823385.jpg?t=1515822364"
+    },
+    {
+      "title": "Arabian Post",
+      "feed_url": "https://thearabianpost.com/feed/",
+      "website_url": "https://thearabianpost.com/",
+      "description": "Arabian Post is the only news website you need to access to be up to date with the latest happenings. A Comprehensive Guide to Business & Gulf Industry News including, Banking & Finance, Energy, Media & Marketing, Real Estate, Technology, Political News.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 191,
+        "instagram": 20
+      },
+      "image_url": "https://i1.feedspot.com/5031580.jpg?t=1698921808"
+    },
+    {
+      "title": "Dubai Chronicle",
+      "feed_url": "https://www.dubaichronicle.com/feed/",
+      "website_url": "https://www.dubaichronicle.com/",
+      "description": "Your daily dose of entertainemnt, news and trends updates starts at the Dubai Chronicle homepage. Launched in 2006, Dubai Chronicle is the 1st privately owned, online-only, business and lifestyle magazine in Dubai.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 4100,
+        "instagram": 572
+      },
+      "image_url": "https://i1.feedspot.com/815077.jpg?t=1698906273"
+    },
+    {
+      "title": "UAE24x7",
+      "feed_url": "https://uae24x7.com/feed/",
+      "website_url": "https://uae24x7.com/",
+      "description": "UAE 24x7 is a leading portal that generates leads for the brands.",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5209736.jpg?t=1603449896"
+    },
+    {
+      "title": "Dubay Blog",
+      "feed_url": "https://dubayblog.com/feed/",
+      "website_url": "https://dubayblog.com/",
+      "description": "Born as blog and later evolved into a site and then a real portal, Dubay Blog is a network of websites and social pages about Dubai, UAE and the Middle East in general.",
+      "followers": {
+        "facebook": 10800,
+        "instagram": 47700
+      },
+      "image_url": "https://i1.feedspot.com/4730138.jpg?t=1607686777"
+    },
+    {
+      "title": "Aletihad",
+      "feed_url": "https://www.aletihad.ae/",
+      "website_url": "https://www.aletihad.ae/",
+      "description": "Latest UAE, Arab and international news, latest developments, reports and debates, local news, economy, culture and art, sport, medicine and health, science and technology, crimes, courts and police",
+      "followers": {
+        "facebook": 18200,
+        "twitter": 1300000,
+        "instagram": 587800
+      },
+      "image_url": "https://i1.feedspot.com/1740351.jpg"
+    },
+    {
+      "title": "Khaleej Times",
+      "feed_url": "https://www.khaleejtimes.com/",
+      "website_url": "https://www.khaleejtimes.com/",
+      "description": "Khaleej Times Online provides complete UAE news and international news coverage and online utilities like Dubai Gold Rate, Dubai draft rate, UAE Exchange rate, silver rate.",
+      "followers": {
+        "facebook": 4200000,
+        "twitter": 1100000,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/4823011.jpg"
+    },
+    {
+      "title": "Al-Bayan newspaper",
+      "feed_url": "https://www.albayan.ae/cmlink/mobile-year-of-zayed-1.3150246",
+      "website_url": "https://www.albayan.ae/",
+      "description": "The official website of Al Bayan newspaper, which includes all the articles published in the newspaper. In addition, it is constantly updated around the clock with the latest news on the latest developments in the local, regional and international arena.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 919000,
+        "instagram": 507100
+      },
+      "image_url": "https://i1.feedspot.com/4823040.jpg"
+    },
+    {
+      "title": "Al Arabiya English",
+      "feed_url": "https://english.alarabiya.net/",
+      "website_url": "https://english.alarabiya.net/",
+      "description": "Find latest news, videos, features related to UAE and dubai on this site.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 935900
+      },
+      "image_url": "https://i1.feedspot.com/4824290.jpg"
+    }
+  ]
+}

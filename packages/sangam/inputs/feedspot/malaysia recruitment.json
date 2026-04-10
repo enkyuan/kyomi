@@ -1,0 +1,61 @@
+{
+  "category": "Malaysia Recruitment",
+  "source_url": "https://rss.feedspot.com/malaysia_recruitment_rss_feeds",
+  "feeds": [
+    {
+      "title": "BTC Recruitment Malaysia",
+      "feed_url": "https://btcrecruitment.com/feed/",
+      "website_url": "https://btcrecruitment.com/category/hr-corner/",
+      "description": "BTC Recruitment Malaysia is a focused Executive Search and Recruitment Company located in Malaysia and Singapore with a footprint across the region.",
+      "followers": {
+        "facebook": 751,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5674122.jpg?t=1695185669"
+    },
+    {
+      "title": "Talent Recruit Malaysia",
+      "feed_url": "https://talentrecruit.com.my/feed/",
+      "website_url": "https://talentrecruit.com.my/articles/",
+      "description": "Agensi Pekerjaan Talent Recruit Sdn. Bhd. is a licensed recruitment agency based in Malaysia. Talent Recruit Malaysia offer Permanent Placement, Contract Staffing, and International Recruitment services, ranging from small companies to large multinational organizations representing various industries and job specialization.",
+      "followers": {
+        "facebook": 615
+      },
+      "image_url": "https://i1.feedspot.com/5674118.jpg?t=1697546350"
+    },
+    {
+      "title": "Seekers Malaysia Blog",
+      "feed_url": "https://seekers.my/blog/rss/",
+      "website_url": "https://seekers.my/blog/",
+      "description": "Seekers is a headhunting tech firm that provides an all-in-one job posting platform for companies looking to hire faster than usual. This page covers HR news and trends in technology. Explore topics like remote work, hybrid models, and the evolving expectations of the modern workforce.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 703
+      },
+      "image_url": "https://i1.feedspot.com/5644636.jpg?t=1691489068"
+    },
+    {
+      "title": "The Recruiter Malaysia Blog",
+      "feed_url": "https://therecruiter.com.my/feed/",
+      "website_url": "https://therecruiter.com.my/blog/",
+      "description": "Great People Great Jobs Start Here",
+      "followers": {
+        "facebook": 3200,
+        "instagram": 373
+      },
+      "image_url": "https://i1.feedspot.com/5644498.jpg?t=1695185744"
+    },
+    {
+      "title": "A Job Thing Blog",
+      "feed_url": "https://www.ajobthing.com/resources/blog//feed",
+      "website_url": "https://www.ajobthing.com/resources/blog",
+      "description": "Information about recruitment in Malaysia to assist employers and HR in hiring the right candidates that match their preferences. AJobThing is a recruitment platform tool for hiring better staff. AJobThing helps facilitate the recruitment process of talented candidates for the organization. A Job Thing attracts the best candidates allowing us the opportunity to source and select the best talents to match company requirements.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 461,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5674120.jpg?t=1697546934"
+    }
+  ]
+}

@@ -1,0 +1,703 @@
+{
+  "category": "Lego",
+  "source_url": "https://rss.feedspot.com/lego_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Brothers Brick",
+      "feed_url": "https://feeds.feedburner.com/TheBrothersBrick",
+      "website_url": "https://www.brothers-brick.com/",
+      "description": "The Brothers Brick is a LEGO website for adult builders and fans of LEGO. They highlight the best LEGO creations of every type from builders around the world, including ever-popular LEGO Star Wars, steampunk, and mecha creations. You can also find the latest LEGO news, opinions, and LEGO set reviews right here on The Brothers Brick.",
+      "followers": {
+        "facebook": 291400,
+        "twitter": 25300,
+        "instagram": 58400
+      },
+      "image_url": "https://i1.feedspot.com/1080462.jpg?t=1615790522"
+    },
+    {
+      "title": "Jay's Brick Blog",
+      "feed_url": "https://jaysbrickblog.com/feed/",
+      "website_url": "https://jaysbrickblog.com/",
+      "description": "Jay's Brick Blog is a LEGO blog with a distinctive Aussie flavour that primarily focuses on high quality editorial content and perspectives of LEGO. This blog is all about celebrating the love of LEGO, sharing exciting news and being a hub for LEGO fans to connect with one another. I have an extensive collection of LEGO Set Reviews that's curated in the Review Hub.",
+      "followers": {
+        "facebook": 26300,
+        "twitter": 5100,
+        "instagram": 70700
+      },
+      "image_url": "https://i1.feedspot.com/4610311.jpg?t=1679661307"
+    },
+    {
+      "title": "BrickNerd",
+      "feed_url": "https://bricknerd.com/home?format=rss",
+      "website_url": "https://bricknerd.com/",
+      "description": "BrickNerd, is a place for LEGO art, artists and all things LEGO. The work featured on this site represents the best of the best, from innovative building techniques and clever design to inspired creations and fantastic photography.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/3178135.jpg?t=1615791392"
+    },
+    {
+      "title": "The Brick Fan",
+      "feed_url": "https://feeds.feedburner.com/LegoEverlasting-LegoReviewsNews",
+      "website_url": "https://www.thebrickfan.com/",
+      "description": "A LEGO blog dedicated to reporting the latest LEGO news and information. They also have in-depth reviews and discussions on various LEGO sets.",
+      "followers": {
+        "facebook": 31400,
+        "twitter": 15000,
+        "instagram": 18600
+      },
+      "image_url": "https://i1.feedspot.com/1104871.jpg?t=1615790530"
+    },
+    {
+      "title": "Brickmania",
+      "feed_url": "https://brickmaniatoys.com/feed/",
+      "website_url": "https://brickmaniatoys.com/",
+      "description": "Brickmania makes unofficial custom model building kits using LEGO\u00ae brand bricks and parts. They also an official international BrickArms reseller and stock a wide variety of building supplies and products for enthusiasts of all ages.",
+      "followers": {
+        "facebook": 178900,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4611478.jpg?t=1615790595"
+    },
+    {
+      "title": "Brickset: LEGO set guide and database",
+      "feed_url": "https://brickset.com/feed/",
+      "website_url": "https://brickset.com/",
+      "description": "Brickset is the best online guide to LEGO sets old and new. It is the best LEGO database on the web, and to keep it updated with news, set information, photos and so on.",
+      "followers": {
+        "facebook": 47800,
+        "twitter": 51800,
+        "instagram": 86000
+      },
+      "image_url": "https://i1.feedspot.com/4241321.jpg?t=1614073157"
+    },
+    {
+      "title": "JK Brickworks Blog",
+      "feed_url": "https://feeds.feedburner.com/JKBrickworks",
+      "website_url": "https://jkbrickworks.com/blog/",
+      "description": "Jason Allemann design and build custom models using LEGO bricks. From basic brick sculptures to complex robots I enjoy many styles of building. This website showcases many of the models we have designed and built.",
+      "followers": {
+        "facebook": 78900,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/3646758.jpg?t=1615790534"
+    },
+    {
+      "title": "The Rambling Brick",
+      "feed_url": "https://ramblingbrick.com/feed/",
+      "website_url": "https://ramblingbrick.com/",
+      "description": "Enjoy rambling Lego reviews, opinions, nostalgia, and building techniques. Richard Jones is an Adult Fan of LEGO in Melbourne, Australia. He aims to take a look at some of Lego the things that are often not blogged about but are still relevant to upbuilders: Photography, Lighting, MOC design, Exhibiting, and so on.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 465
+      },
+      "image_url": "https://i1.feedspot.com/5526825.jpg?t=1698405498"
+    },
+    {
+      "title": "The Lego Car Blog",
+      "feed_url": "https://thelegocarblog.com/feed/",
+      "website_url": "https://thelegocarblog.com/",
+      "description": "The Lego Car Blog was founded in late 2011 to cater for the growing vehicle-building portion of the online Lego community. Their articles range from publicising builders' creations to Lego news, set reviews and builder interviews.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4610410.jpg?t=1615790570"
+    },
+    {
+      "title": "It's Not Lego!",
+      "feed_url": "https://its-not-lego.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://its-not-lego.blogspot.com/",
+      "description": "Reviews of bootleg Lego, fake Lego, lego clones and non Lego brands of Building Blocks, such as Enlighten, Sluban, Sheng Yuan, Decool and many more.",
+      "followers": {
+        "facebook": 658
+      },
+      "image_url": "https://i1.feedspot.com/4610490.jpg?t=1615790620"
+    },
+    {
+      "title": "Legosaurus",
+      "feed_url": "https://www.legosaurus.com/rss",
+      "website_url": "https://www.legosaurus.com/",
+      "description": "It is your daily source for Lego goodness.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/968260.jpg"
+    },
+    {
+      "title": "Rebrickable Blog",
+      "feed_url": "https://rebrickable.com/blog/rss/",
+      "website_url": "https://rebrickable.com/blog/",
+      "description": "Rebrickable.com is created by Nathan Thom in 2011. Rebrickable will show you which LEGO sets you can build from the sets and parts you already own. Check out Rebrickable Blog as it features LEGO reviews, LEGO sets, MOC, building instructions, and more.",
+      "followers": {
+        "facebook": 35700,
+        "twitter": 18400,
+        "instagram": 73100
+      },
+      "image_url": "https://i1.feedspot.com/5283546.jpg?t=1621862832"
+    },
+    {
+      "title": "The Brick Blogger",
+      "feed_url": "https://thebrickblogger.com/feed/",
+      "website_url": "https://thebrickblogger.com/",
+      "description": "A blog about Tips & Tricks about building with LEGO Bricks.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 16100
+      },
+      "image_url": "https://i1.feedspot.com/1961329.jpg?t=1615790541"
+    },
+    {
+      "title": "Toys N Bricks",
+      "feed_url": "https://www.toysnbricks.com/feed/",
+      "website_url": "https://www.toysnbricks.com/",
+      "description": "Toys N Bricks is an online LEGO News site and LEGO Fan Community that has been established since 2009. For over 10 years, we've been recognized as the leading destination for LEGO News. We offer media coverage on various LEGO Creations, News, Reviews, and Sales.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1600,
+        "instagram": 370
+      },
+      "image_url": "https://i1.feedspot.com/5169144.jpg?t=1679649590"
+    },
+    {
+      "title": "Letbricks Blog",
+      "feed_url": "https://www.letbricks.com/feed/",
+      "website_url": "https://www.letbricks.com/blog/",
+      "description": "Letbricks blog is committed to collect and share good ideas of MOC. All MOCs here were licensed from the designers. Our aim is to make block fans to enjoy the designer's excellent works at an lower price.and encourage more creators to continue creating.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5434639.jpg?t=1661250691"
+    },
+    {
+      "title": "Bricking Around",
+      "feed_url": "https://brickingaround.com/feed/",
+      "website_url": "https://brickingaround.com/",
+      "description": "Bricking Around is an Australian LEGO fan blog. Our core coverage includes LEGO news, Australian LEGO sales, and Australian LEGO events.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 292,
+        "instagram": 375
+      },
+      "image_url": "https://i1.feedspot.com/5283554.jpg?t=1679661337"
+    },
+    {
+      "title": "Classic Pirates",
+      "feed_url": "https://www.classic-pirates.com/feed",
+      "website_url": "https://www.classic-pirates.com/",
+      "description": "Explore all the latest and greatest pirate LEGO news on the website. Classic Pirate's mission is to unite LEGO Pirate enthusiasts as a community and provide a convenient platform for exchanging news and content.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 497,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/310514.jpg?t=1669024743"
+    },
+    {
+      "title": "Foolish Bricks",
+      "feed_url": "https://foolishbricks.com/feed/",
+      "website_url": "https://foolishbricks.com/",
+      "description": "Home of the Foolish Lego Comic and Lego Toy Photography. Also, a knowledge base containing, amongst others, articles on creating your own brick comic and behind the scenes posts.",
+      "followers": {
+        "twitter": 2100,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4979641.jpg?t=1615791529"
+    },
+    {
+      "title": "Brick Math Series Blog",
+      "feed_url": "https://www.brickmathseries.com/brick-math-blog/feed",
+      "website_url": "https://www.brickmathseries.com/brick-math-blog",
+      "description": "The Brick Math Series was developed by Dr. Shirley Disseler to help students learn math by using LEGO\u00ae bricks. Shirley is the foremost expert in the US on teaching math using LEGO\u00ae bricks. They help students learn basic math subjects through a guided program for teachers using LEGO\u00ae bricks as the hands-on material.",
+      "followers": {
+        "facebook": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4611069.jpg?t=1615790561"
+    },
+    {
+      "title": "Brick Brains",
+      "feed_url": "https://brickbrains.com/feed/",
+      "website_url": "https://brickbrains.com/",
+      "description": "A small but dedicated band of LEGO enthusiasts, we report on LEGO news, events, ways for you to have more LEGO fun. Join us as we continue our journey with LEGO. Building a community of dedicated LEGO fans by sharing news, MOCs and other items of interest to LEGO builders everywhere.",
+      "followers": {
+        "facebook": 373,
+        "twitter": 798,
+        "instagram": 450
+      },
+      "image_url": "https://i1.feedspot.com/4896612.jpg?t=1679649608"
+    },
+    {
+      "title": "HelloBricks",
+      "feed_url": "https://www.hellobricks.com/feed/",
+      "website_url": "https://www.hellobricks.com/",
+      "description": "The LEGO blog with news, reviews of new sets, the most beautiful MOCs and good plans.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1100,
+        "instagram": 52200
+      },
+      "image_url": "https://i1.feedspot.com/4731226.jpg?t=1615791396"
+    },
+    {
+      "title": "Bricks And Figures",
+      "feed_url": "https://bricksandfigs.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bricksandfigs.blogspot.com/",
+      "description": "This is the place to see all the latest Lego and alternative Lego brick sets and my growing collection of mini-figures. The latest news and finds for Lego alternate and bootleg clone Minifigures and brick sets.",
+      "followers": {
+        "twitter": 607
+      },
+      "image_url": "https://i1.feedspot.com/5186308.jpg?t=1615792045"
+    },
+    {
+      "title": "Bricks McGee Blog",
+      "feed_url": "https://www.bricksmcgee.com/blog/feed/",
+      "website_url": "https://www.bricksmcgee.com/blog/",
+      "description": "An AFOL (Adult Fan of LEGO) based in the UK, he build for displaying at LEGO exhibitions and shows, and have had the pleasure of displaying at large LEGO fan events as well as at events including those organised by the National Railway Museum. LEGO modelling commissions, inspiration and ideas for AFOLs from LEGO addict Richard Carter.",
+      "followers": {
+        "facebook": 938,
+        "twitter": 605,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4610474.jpg?t=1615791388"
+    },
+    {
+      "title": "LAminifigs Blog",
+      "feed_url": "https://laminifigs.com/blogs/blog.atom",
+      "website_url": "https://laminifigs.com/blogs/blog",
+      "description": "On this blog you can find interesting facts about LEGO\u00ae building sets, product reviews, latest news and a lot of great content related to LEGO\u00ae. Also, you will find a lot of educational information as well as some creative ideas for custom MOCs.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 182,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5063025.jpg?t=1615791407"
+    },
+    {
+      "title": "LEGOs by fuckyeahlegos",
+      "feed_url": "https://fuckyeahlegos.tumblr.com/rss",
+      "website_url": "https://fuckyeahlegos.tumblr.com/",
+      "description": "Matt's Brick Gallery is the foremost LEGO tumblr out there. This tumblr is mostly about large models made of LEGO bricks",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2186334.jpg"
+    },
+    {
+      "title": "Davidslegoroom",
+      "feed_url": "https://davidslegoroom.blogspot.com/feeds/posts/default",
+      "website_url": "https://davidslegoroom.blogspot.com/",
+      "description": "Articles about how I built a lego room, lego ideas, and 44 years of collecting legos.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5362783.jpg?t=1642231851"
+    },
+    {
+      "title": "Belle-Ve Bricks Blog",
+      "feed_url": "https://bellevebricks.com/feed/",
+      "website_url": "https://bellevebricks.com/blog/",
+      "description": "Belle-Ve Bricks is the website where we work with the best LEGO designers in the world to help share their LEGO MOCs with you. Here, you'll find a convenient way to find alternate builds for your LEGO sets Also, do not miss out on the latest LEGO news, tutorials, reviews and facts on our blog.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 86,
+        "instagram": 11300
+      },
+      "image_url": "https://i1.feedspot.com/5368112.jpg?t=1643969456"
+    },
+    {
+      "title": "FireStar Toys Blog",
+      "feed_url": "https://blog.firestartoys.com/feed/",
+      "website_url": "https://blog.firestartoys.com/blog/",
+      "description": "FireStar Toys Blog written by LEGO lovers for LEGO lovers. Our mission is to give LEGO fans a destination to discuss all things from reviews, custom products, rants, to the most exciting and current topics. So, if LEGO is your passion, and you want to be part of the discussion - then get involved!",
+      "followers": {
+        "facebook": 114600,
+        "twitter": 6100,
+        "instagram": 81800
+      },
+      "image_url": "https://i1.feedspot.com/5283550.jpg?t=1621854936"
+    },
+    {
+      "title": "Minifigures Blog",
+      "feed_url": "https://blog.minifigures.com/feed/",
+      "website_url": "https://blog.minifigures.com/blog/",
+      "description": "Welcome to the Minifigures.com Blog. In our mission to making some of the most unique Minifigures for all LEGO Lovers, we decided to make a home for our site to discuss and talk about all things Minifigs and the latest LEGO news. Whether it's news, reviews, or just general Minifigure discussions, this is sure to be the blog for you.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 1900,
+        "instagram": 11900
+      },
+      "image_url": "https://i1.feedspot.com/5283548.jpg?t=1621856648"
+    },
+    {
+      "title": "The Brick Show",
+      "feed_url": "https://brickshow.com/feed/",
+      "website_url": "https://brickshow.com/",
+      "description": "The Brick Show is a popular web show covering the latest LEGO news, product reviews, happenings and more. They covers everything in the world of LEGO.",
+      "followers": {
+        "facebook": 82200,
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4610977.jpg?t=1615790526"
+    },
+    {
+      "title": "Serious Play Pro",
+      "feed_url": "https://seriousplaypro.com/feed/",
+      "website_url": "https://seriousplaypro.com/",
+      "description": "LEGO\u00ae SERIOUS PLAY\u00ae is a radical, innovative, experiential process designed to enhance business performance. It is based on the belief that everyone can contribute to the discussion, the decisions and the outcome. The use of LEGO bricks simply enables you to take a speedy shortcut to the core.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4611073.jpg?t=1615790575"
+    },
+    {
+      "title": "BrickWarriors Blog",
+      "feed_url": "https://www.brickwarriors.com/rss.php?action=newblogs&type=rss",
+      "website_url": "https://www.brickwarriors.com/blog/",
+      "description": "BrickWarriors is a small business that designs and produces LEGO\u00ae compatible accessories and minifigures. All of the products are manufactured with the highest tolerances and are designed to perfectly fit your minifigures.",
+      "followers": {
+        "facebook": 45400,
+        "twitter": 4900,
+        "instagram": 18900
+      },
+      "image_url": "https://i1.feedspot.com/4610452.jpg?t=1615790551"
+    },
+    {
+      "title": "BricksEasy",
+      "feed_url": "https://brickseasy.com/feed/",
+      "website_url": "https://brickseasy.com/",
+      "description": "BricksEasy is a Lego Sets Guide, Lego Blog & Lego Reviews Written by a Young Lego Enthusiast. Follow this blog as new reviews are added regularly.",
+      "followers": {
+        "facebook": 28,
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/4610972.jpg?t=1615791731"
+    },
+    {
+      "title": "Brick Model Railroader",
+      "feed_url": "https://brickmodelrailroader.com/index.php/feed/",
+      "website_url": "https://brickmodelrailroader.com/",
+      "description": "Brick Model Railroader is a news and information resource for all things LEGO trains. Our mission at Brick Model Railroader is to serve the LEGO Train Hobby as an online news resource and to help promote and grow the hobby of LEGO Trains in all its forms.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 246,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5283555.jpg?t=1621854469"
+    },
+    {
+      "title": "Brick Built Blogs",
+      "feed_url": "https://brickbuiltblog15.blogspot.com/feeds/posts/default",
+      "website_url": "https://brickbuiltblog15.blogspot.com/",
+      "description": "An AFOL lego news and review blog dedicated to all things brick based.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5133421.jpg"
+    },
+    {
+      "title": "Robot Wonders Blog",
+      "feed_url": "https://robotwonders.com/feed/",
+      "website_url": "https://robotwonders.com/blog/",
+      "description": "Welcome to Robot Wonders. We love to share our LEGO League (FLL) Robot Design, EV3 Programming, Robot Game Strategy, and other practical experiences. We hope our posts help.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5276526.jpg?t=1621948348"
+    },
+    {
+      "title": "FriendsBricks",
+      "feed_url": "https://friendsbricks.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://friendsbricks.blogspot.com/",
+      "description": "FriendsBricks is a LEGO Friends fan creations blog.",
+      "followers": {
+        "facebook": 869
+      },
+      "image_url": "https://i1.feedspot.com/5283545.jpg?t=1621944398"
+    },
+    {
+      "title": "Lego Loki",
+      "feed_url": "https://lego-loki.tumblr.com/rss",
+      "website_url": "https://lego-loki.tumblr.com/",
+      "description": "A blog on lego characters and lego superhero miniatures .",
+      "followers": {
+        "twitter": 39500
+      },
+      "image_url": "https://i1.feedspot.com/4611433.jpg"
+    },
+    {
+      "title": "PlayWell TEKnologies",
+      "feed_url": "https://playwelltek.wordpress.com/feed/",
+      "website_url": "https://playwelltek.wordpress.com/",
+      "description": "Play-Well TEKnologies provides project-based programs designed to teach principles and methods of engineering to grades Kindergarten through 5th, utilizing LEGO\u00ae",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 5100,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4611178.jpg?t=1615791404"
+    },
+    {
+      "title": "Reviews of LEGO sets.",
+      "feed_url": "https://mybrickarchive.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://mybrickarchive.blogspot.com/",
+      "description": "Post on Reviews of lego Sets.",
+      "followers": {
+        "facebook": 4600,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4729025.jpg?t=1615791420"
+    },
+    {
+      "title": "Gimme Lego",
+      "feed_url": "https://gimmelego.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://gimmelego.blogspot.com/",
+      "description": "A blog by Dr Dave Watford about LEGO-related reviews, comment and musings.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 508
+      },
+      "image_url": "https://i1.feedspot.com/1422440.jpg?t=1615791424"
+    },
+    {
+      "title": "Boris Bricks",
+      "feed_url": "https://borislim.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://borislim.blogspot.com/",
+      "description": "The blog about the little plastic bricks that we all use to love every now and then. Lego news and reviews of sets such as Lego Harry Potter, Lego Star Wars, Lego Ninjago, Lego minifigures, and many more. I hope you enjoy my blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4902137.jpg"
+    },
+    {
+      "title": "Baron von Brunk's",
+      "feed_url": "https://vonbrunk.tumblr.com/rss",
+      "website_url": "https://vonbrunk.tumblr.com/",
+      "description": "Custom LEGO\u00ae art, vignettes, dioramas, and minifigs made by 'Baron' Julius von Brunk: a tattooed and quirky professional graphic multimedia artist in New York City! No reblogged material here, unless specified: all posts are native content of Julius von Brunk, unless specified.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4611487.jpg"
+    },
+    {
+      "title": "happyboy & curiousgirl",
+      "feed_url": "https://happyboy-and-curiousgirl.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://happyboy-and-curiousgirl.blogspot.com/",
+      "description": "I am Happy Boy and my wife to be Curious Girl. I'm cheerful 99% of the time, hence, the nick name Happy Boy. My wife to is curious about everything, hence, Curious Girl. The purpose of the blog is to consolidate all the information we gain from our research on various / random topics that we come across.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5168843.jpg?t=1615791741"
+    },
+    {
+      "title": "Construct-a-Venture Blog",
+      "feed_url": "https://www.constructaventure.blog/feeds/posts/default",
+      "website_url": "https://www.constructaventure.blog/",
+      "description": "Construct-a-Venture is a blog about exploration in story telling using building blocks.",
+      "followers": {
+        "facebook": 252,
+        "twitter": 12,
+        "instagram": 128
+      },
+      "image_url": "https://i1.feedspot.com/5010604.jpg?t=1615791753"
+    },
+    {
+      "title": "My Lego Talk",
+      "feed_url": "http://mylegotalk.blogspot.in//feeds/posts/default",
+      "website_url": "http://mylegotalk.blogspot.com/",
+      "description": "Lego Girl publishes various posts about her big passion which is LEGO. She also writes reviews about different LEGO sets, minifigures, books and many more LEGO related things. She also shares her analysis about different LEGO sets which are, or will be, a worthy investment and will increase in their value.",
+      "followers": {
+        "facebook": 143
+      },
+      "image_url": "https://i1.feedspot.com/4610942.jpg?t=1615791757"
+    },
+    {
+      "title": "Bricks Blog",
+      "feed_url": "https://bricksblog.com/feed/",
+      "website_url": "https://bricksblog.com/",
+      "description": "Bricks Blog is all about Lego. We love Lego and want to spread that joy with everyone.",
+      "followers": {
+        "facebook": 165
+      },
+      "image_url": "https://i1.feedspot.com/5119020.jpg?t=1615791777"
+    },
+    {
+      "title": "brickhello",
+      "feed_url": "https://www.brickhello.com/blog-feed.xml",
+      "website_url": "https://www.brickhello.com/",
+      "description": "Brick Hello is a place where you find unique LEGO content that you'll be hard pressed to find elsewhere. We want to bring you something different to keep you entertained, beyond the bricks in particular and peripheral topics that are interesting, and from time to time, inject some humour into everything!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 28,
+        "instagram": 221
+      },
+      "image_url": "https://i1.feedspot.com/4821037.jpg?t=1615791782"
+    },
+    {
+      "title": "Ninja Brick LEGO News - Ninjago, Star Wars Sets & More",
+      "feed_url": "https://ninjabrick.com/feed/",
+      "website_url": "https://ninjabrick.com/",
+      "description": "We are the Ninja Brick team and we are passionate about LEGO. Our independent website has been created as a hub for LEGO fans around the globe who want to catch up on all the latest news and announcements.",
+      "followers": {
+        "facebook": 657,
+        "twitter": 315
+      },
+      "image_url": "https://i1.feedspot.com/4849838.jpg?t=1615790624"
+    },
+    {
+      "title": "Janbricks Lego reviews & moc",
+      "feed_url": "https://www.jangbricks.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.jangbricks.com/",
+      "description": "LEGO set reviews, custom MOC work & more! City, Star Wars, Bionicle, trains, and other themes!",
+      "followers": {
+        "facebook": 41200,
+        "twitter": 15400,
+        "instagram": 105900
+      },
+      "image_url": "https://i1.feedspot.com/4610500.jpg?t=1615790590"
+    },
+    {
+      "title": "Heartlake Times",
+      "feed_url": "https://heartlaketimes.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://heartlaketimes.blogspot.com/",
+      "description": "Friends Bricks is a community of LEGO fans who build with bricks from LEGO Friends sets, My Own Creations & modular structures.",
+      "followers": {
+        "facebook": 869,
+        "twitter": 797
+      },
+      "image_url": "https://i1.feedspot.com/4610939.jpg?t=1615790633"
+    },
+    {
+      "title": "The Brickman",
+      "feed_url": "https://www.thebrickman.com/news/feed/",
+      "website_url": "https://www.thebrickman.com/news/",
+      "description": "Ryan McNaught is a LEGO certified Professional, one of only 14 in the world and the only one in the Southern Hemisphere. The Brickman is a team of skilled LEGO artists and craftspeople. Ryan and his team have built some of the worlds most detailed and large LEGO models, and even have the honour of being responsible for building models for LEGO offices around the globe.",
+      "followers": {
+        "facebook": 38900,
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4610535.jpg?t=1615790579"
+    },
+    {
+      "title": "Hoth Bricks",
+      "feed_url": "https://www.hothbricks.com/feed/",
+      "website_url": "https://en.hothbricks.com/",
+      "description": "All the news about LEGO products, news, contests, reviews, shopping tips.",
+      "followers": {
+        "facebook": 25500,
+        "twitter": 7400,
+        "instagram": 48200
+      },
+      "image_url": "https://i1.feedspot.com/4689401.jpg?t=1615790566"
+    },
+    {
+      "title": "Brick Fanatics",
+      "feed_url": "https://www.brickfanatics.com/feed",
+      "website_url": "https://www.brickfanatics.com/",
+      "description": "Building your world of LEGO. News, reviews and builds.",
+      "followers": {
+        "facebook": 20700,
+        "twitter": 32500,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/4649180.jpg?t=1615790556"
+    },
+    {
+      "title": "The Family Brick",
+      "feed_url": "https://thefamilybrick.com/feed/",
+      "website_url": "https://thefamilybrick.com/",
+      "description": "The Family Brick is a family-friendly LEGO blog, sharing what we do with our LEGO stash, showcasing LEGO builds and providing helpful LEGO-related information and news.",
+      "followers": {
+        "facebook": 125,
+        "twitter": 560,
+        "instagram": 251
+      },
+      "image_url": "https://i1.feedspot.com/4610948.jpg"
+    },
+    {
+      "title": "Bill Ward's Brickpile",
+      "feed_url": "https://www.brickpile.com/feed/",
+      "website_url": "https://falconbricks.com/news/",
+      "description": "Building a brighter tomorrow with LEGO\u00ae bricks. This blog is all about Lego structure, building lego, new ideas and news about lego.",
+      "followers": {
+        "facebook": 877
+      },
+      "image_url": "https://i1.feedspot.com/1087230.jpg?t=1615790605"
+    },
+    {
+      "title": "The New Elementary",
+      "feed_url": "https://feeds.feedburner.com/TheNewElementary",
+      "website_url": "https://www.newelementary.com/",
+      "description": "A blog about new LEGO parts with set reviews, building techniques and brick model ideas. You'll find posts about new pieces, new or returning colours, LEGO history.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 6800,
+        "instagram": 50800
+      },
+      "image_url": "https://i1.feedspot.com/2016995.jpg?t=1614073172"
+    },
+    {
+      "title": "BrickResales Blog",
+      "feed_url": "https://brickresales.com.au/blogs/news.atom",
+      "website_url": "https://brickresales.com.au/blogs/news/",
+      "description": "The news section features articles on LEGO minifigures, expert tips, build ideas and much more related to LEGO. BrickResales is so much more than a pre-loved LEGO brick business. BrickResales is a community of people, connected through the amazing LEGO world.",
+      "followers": {
+        "facebook": 21000,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5434631.jpg?t=1679661286"
+    },
+    {
+      "title": "Minifigure Price Guide",
+      "feed_url": "http://minifigpriceguide.com/wordpress/feed",
+      "website_url": "http://minifigpriceguide.com/wordpress/",
+      "description": "The latest prices for Lego and Mega Bloks Minifigures.",
+      "followers": {
+        "facebook": 20300
+      },
+      "image_url": "https://i1.feedspot.com/4786074.jpg?t=1615790613"
+    },
+    {
+      "title": "Brick Builder's Handbook",
+      "feed_url": "https://brickbuildershandbook.com/feed/",
+      "website_url": "https://brickbuildershandbook.com/",
+      "description": "Deepak Shenoy showcases highly accurate LEGO models of iconic American skyscrapers such as the Empire State Building, Chrysler Building, 30 Rock, etc.",
+      "followers": {
+        "twitter": 8,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5185736.jpg?t=1598277906"
+    },
+    {
+      "title": "The LEGO collection",
+      "feed_url": "https://legollection.tumblr.com/rss",
+      "website_url": "https://legollection.tumblr.com/",
+      "description": "A blog on collection og lego sets and If it's LEGO, we like it!",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4611437.jpg"
+    },
+    {
+      "title": "Beardly Designs",
+      "feed_url": "https://beardlydesigns.tumblr.com/rss",
+      "website_url": "https://beardlydesigns.tumblr.com/",
+      "description": "A LEGO and Graphic Designs blog by UK amateur Lewis Hammond",
+      "followers": {
+        "facebook": 928
+      },
+      "image_url": "https://i1.feedspot.com/4611461.jpg"
+    },
+    {
+      "title": "Modalt Masks",
+      "feed_url": "https://modaltmasks.tumblr.com/rss",
+      "website_url": "https://www.tumblr.com/modaltmasks",
+      "description": "A blog about custom masks for lego.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4611455.jpg?t=1540460299"
+    },
+    {
+      "title": "the FARQUAR",
+      "feed_url": "http://thefarquar.com/index.php/feed/",
+      "website_url": "http://thefarquar.com/",
+      "description": "Home to various things like the web comic Farquar, Lego News, Art updates, and Various doodads. Some pretty interesting stuff.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4960254.jpg?t=1615791342"
+    },
+    {
+      "title": "Lego Mecha",
+      "feed_url": "https://legomecha.tumblr.com/rss",
+      "website_url": "https://legomecha.tumblr.com/",
+      "description": "Mechanical creations in Lego form",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4611233.jpg"
+    }
+  ]
+}

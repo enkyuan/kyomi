@@ -1,0 +1,93 @@
+{
+  "category": "Louisiana Gardening",
+  "source_url": "https://rss.feedspot.com/louisiana_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Akin's Nursery & Landscaping Blog",
+      "feed_url": "https://www.akinsnursery.com/blog-feed.xml",
+      "website_url": "https://www.akinsnursery.com/blog",
+      "description": "Akin's Nursery & Landscaping is committed to bringing you the highest quality and largest selection of plants in the ArkLaTex.",
+      "followers": {
+        "facebook": 7500,
+        "instagram": 42100
+      },
+      "image_url": "https://i1.feedspot.com/5315375.jpg?t=1629869343"
+    },
+    {
+      "title": "The Plant Gallery Blog",
+      "feed_url": "https://theplantgallery.com/feed/",
+      "website_url": "https://theplantgallery.com/about-us/blog/",
+      "description": "The Plant Gallery is a comprehensive center for sophisticated lifestyle & gardening services and products. We specialize in custom landscaping and floral arrangements for events. Our blog features all the tips and advice to get your garden growing for everyone from beginners to experts.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 58,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/5315436.jpg?t=1686649663"
+    },
+    {
+      "title": "Mirliton Blog",
+      "feed_url": "https://www.mirliton.org/feed/",
+      "website_url": "https://www.mirliton.org/Blogs/",
+      "description": "Mirliton.org is a nonprofit organization dedicated to promoting the conservation and innovative uses of Louisiana heirloom mirlitons. Dr. Lance Hill is the former founder and director of the Southern Institute for Education and Research at Tulane University and is an expert on the origins and cultivation of Louisiana heirloom mirlitons. Check out his articles on various plants, gardening tips, suggestions and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5315452.jpg?t=1686649661"
+    },
+    {
+      "title": "Sammy's Plant World Blog",
+      "feed_url": "https://sammysplantworld.com/blogs/plant-care-tips.atom",
+      "website_url": "https://sammysplantworld.com/blogs/plant-care-tips",
+      "description": "Plant Care tips from Sammy's Plant World. Sammy's Plant World is a locally owned and operated plant nursery in West Monroe Louisiana.",
+      "followers": {
+        "facebook": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5315362.jpg?t=1629866873"
+    },
+    {
+      "title": "Country Roads \u00bb Gardening",
+      "feed_url": "https://countryroadsmagazine.com/outdoors/gardening/index.rss",
+      "website_url": "https://countryroadsmagazine.com/outdoors/gardening",
+      "description": "Gardening in the humid South. Country Roads is a cultural print and online magazine focused on events, festivals, art, cuisine, and travel around South Louisiana and Mississippi - published continuously since 1983.",
+      "followers": {
+        "facebook": 16800,
+        "twitter": 3700,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/5315364.jpg?t=1629867434"
+    },
+    {
+      "title": "Grow Your Own Food Anywhere",
+      "feed_url": "https://www.blog.advancegreenhouses.com/feed/",
+      "website_url": "https://www.blog.advancegreenhouses.com/",
+      "description": "We are all concerned with the quality and safety of our food today. You can grow on a back patio, on a windowsill, in a spare room, in your living room, on a balcony, in a greenhouse, just about anywhere that you can spare a little space. There are many space-saving methods and methods of growing that will increase your yield and your harvest. We intend to discuss all of these options on this blog.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 87
+      },
+      "image_url": "https://i1.feedspot.com/4946127.jpg?t=1627452890"
+    },
+    {
+      "title": "GreenSeasons Blog",
+      "feed_url": "https://www.greenseasons.us/blog/feed",
+      "website_url": "https://www.greenseasons.us/blog",
+      "description": "Helping you with all of your landscaping needs. GreenSeasons is your best choice for landscaping in Louisiana. We specialize in landscaping, irrigation, and lawn care. We service residential, commercial, and industrial locations.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 40,
+        "instagram": 187
+      },
+      "image_url": "https://i1.feedspot.com/4662113.jpg?t=1631953731"
+    },
+    {
+      "title": "LGD Lawn & Landscape Blog",
+      "feed_url": "https://www.nolalgd.com/lgd-blog?format=rss",
+      "website_url": "https://www.nolalgd.com/lgd-blog",
+      "description": "Landscape Tips and Specials from LGD. From our comprehensive maintenance plans to complete landscape installation, LGD Lawn & Landscape is committed to providing the highest quality customer service while using the highest quality products and equipment.",
+      "followers": {
+        "facebook": 2300,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5322559.jpg?t=1631796372"
+    }
+  ]
+}

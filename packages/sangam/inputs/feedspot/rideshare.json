@@ -1,0 +1,102 @@
+{
+  "category": "Rideshare",
+  "source_url": "https://rss.feedspot.com/rideshare_rss_feeds",
+  "feeds": [
+    {
+      "title": "Poparide Blog",
+      "feed_url": "https://www.poparide.com/blog/feed/",
+      "website_url": "https://www.poparide.com/blog/",
+      "description": "The Poparide blog is a source of information for everyone who is interested in carpooling and ridesharing, with news, articles, ideas and more. Join the conversation, and share your ideas with the Poparide community. Our team is on a mission to fill empty seats in cars and make travel more social, affordable and sustainable for everyone.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 1000,
+        "instagram": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5434349.jpg?t=1661173512"
+    },
+    {
+      "title": "Rideshare AU NZ Blog",
+      "feed_url": "https://www.rideshareaunz.com/feed/",
+      "website_url": "https://www.rideshareaunz.com/blog/",
+      "description": "RideshareAUNZ.com is a blog about All Things Ridesharing in Australia and New Zealand. We are writing about ride sharing app tutorials, news, tips, promotions and more. We create useful content for ridesharing users or for those who want to know more about on-demand transportation booking and food delivery app.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5417737.jpg?t=1656748803"
+    },
+    {
+      "title": "Gridwise Blog",
+      "feed_url": "https://gridwise.io/feed/",
+      "website_url": "https://gridwise.io/blog/",
+      "description": "Read the Gridwise blog for tips and advice on how to make the most money while driving for Lyft, Uber, DoorDash, GrubHub, and more! Ryan and Brian started Gridwise because they had seen firsthand the challenges that drivers face every day. They knew there had to be a better way, and so they set out to build tools to make rideshare and delivery driving easier.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 1400,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/5434348.jpg?t=1661173868"
+    },
+    {
+      "title": "Ridesharing Driver Blog",
+      "feed_url": "https://www.ridesharingdriver.com/feed/",
+      "website_url": "https://www.ridesharingdriver.com/blog/",
+      "description": "The latest posts from RidesharingDriver.com. Find information and news about Uber, Lyft, and the on-demand app industry. Ridesharing Driver helps you learn how you can become an Uber or Lyft driver, and learn all about ridesharing apps.",
+      "followers": {
+        "facebook": 193,
+        "twitter": 332
+      },
+      "image_url": "https://i1.feedspot.com/5434350.jpg?t=1661173976"
+    },
+    {
+      "title": "The Ridesharing Blog",
+      "feed_url": "https://www.rideshare.com/blog/rss.xml",
+      "website_url": "https://www.rideshare.com/blog/",
+      "description": "Learn about the cost of commuting, the financial & environmental benefits of ridesharing, and more on the Rideshare Company's blog. The Rideshare Company is a non-profit organization created to make it easier for people to get to and from work, while saving them money and reducing some of the hassles of commuting.",
+      "followers": {
+        "facebook": 614,
+        "twitter": 2900,
+        "instagram": 624
+      },
+      "image_url": "https://i1.feedspot.com/5434351.jpg?t=1661173896"
+    },
+    {
+      "title": "The Rideshare Guy News",
+      "feed_url": "https://therideshareguy.com/category/news/feed/",
+      "website_url": "https://therideshareguy.com/category/news/",
+      "description": "Harry Campbell (The Rideshare Guy) and his team share tips, resources, and the latest news for rideshare drivers and the gig economy workforce. Harry's goal is to educate drivers and help them earn more money by working smarter, not harder.",
+      "followers": {
+        "facebook": 23600,
+        "twitter": 14400,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5434354.jpg?t=1661174088"
+    },
+    {
+      "title": "Uber Insurance Blog",
+      "feed_url": "https://www.uberinsurance.com/feed/",
+      "website_url": "https://www.uberinsurance.com/blog/",
+      "description": "Uber Insurance's blog shares useful article, how-to's, and guidelines which will help Uber Drivers and will make their life much easier. We specialize in servicing the Taxi and For-Hire Industry in New York City. Uber Insurance offers easy quoting for Liability and Collision coverage for TLC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434356.jpg?t=1661173799"
+    },
+    {
+      "title": "Ridester.com",
+      "feed_url": "https://www.ridester.com/feed/",
+      "website_url": "https://www.ridester.com/news/",
+      "description": "Read the latest articles and news on food delivery apps, ridesharing, and more. Ridester is your go-to resource for everything related to rideshare services, covering some of the biggest brands in the industry. We strive to produce only the highest quality content, based on our years of experience in the transportation space.",
+      "followers": {
+        "facebook": 553,
+        "twitter": 135
+      },
+      "image_url": "https://i1.feedspot.com/5434347.jpg?t=1661173569"
+    },
+    {
+      "title": "HyreCar Blog",
+      "feed_url": "https://www.hyrecar.com/feed/",
+      "website_url": "https://www.hyrecar.com/blog/",
+      "description": "Learn What's happening in the Rideshare and Delivery Industry. We cover everything you need to know to get started or become a better rideshare or delivery driver. You can also learn how to Rent a Car to Drive for Uber or Lyft. HyreCar is empowering opportunity and building connections through mobility.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434352.jpg?t=1661173851"
+    }
+  ]
+}

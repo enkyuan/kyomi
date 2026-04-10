@@ -1,0 +1,669 @@
+{
+  "category": "Dog Food",
+  "source_url": "https://rss.feedspot.com/dog_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vetnutrition",
+      "feed_url": "https://sites.tufts.edu/petfoodology/feed/",
+      "website_url": "https://sites.tufts.edu/petfoodology/",
+      "description": "Nutrition information for cats and dogs by board certified nutritionists",
+      "followers": {
+        "twitter": 977
+      },
+      "image_url": "https://i1.feedspot.com/4658114.jpg?t=1641894742"
+    },
+    {
+      "title": "Truth about Pet Food",
+      "feed_url": "https://truthaboutpetfood.com/feed/",
+      "website_url": "https://truthaboutpetfood.com/",
+      "description": "Educating pet owners all over the world how to choose safe and healthy pet foods, treats, and toys.",
+      "followers": {
+        "facebook": 93100,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4657565.jpg?t=1617433241"
+    },
+    {
+      "title": "The Dog Bakery",
+      "feed_url": "https://www.thedogbakery.com/blogs/news.atom",
+      "website_url": "https://www.thedogbakery.com/blogs/news",
+      "description": "The Dog Bakery's world famous bakeries make freshly-baked dog treats, celebration cakes, cookies, dog birthday cakes and even dog wedding cakes.",
+      "followers": {
+        "facebook": 35300,
+        "twitter": 828,
+        "instagram": 63800
+      },
+      "image_url": "https://i1.feedspot.com/4516318.jpg?t=1641903139"
+    },
+    {
+      "title": "Dog Child",
+      "feed_url": "https://dogchild.co/blogs/recipes.atom",
+      "website_url": "https://dogchild.co/blogs/recipes",
+      "description": "Dog Child is a cook-at-home dog food brand with products developed alongside leading vets & pet nutritionists. All our recipes are simple, nutritious, and delicious. Recipes have been developed with vets & nutritionists. Our dog children deserve to eat fresh whole foods.",
+      "followers": {
+        "facebook": 75500,
+        "instagram": 96800
+      },
+      "image_url": "https://i1.feedspot.com/5751472.jpg?t=1704796263"
+    },
+    {
+      "title": "Pet Food Experts Blog",
+      "feed_url": "https://blog.petfoodexperts.com/rss.xml",
+      "website_url": "https://blog.petfoodexperts.com/",
+      "description": "WELCOME! From the Experts is your one-stop-shop to learn all about the latest in pet nutrition, exciting new products from our vendors, the latest additions to our portfolio, and what is going on at Pet Food Experts.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 478,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4657141.jpg?t=1617434823"
+    },
+    {
+      "title": "The NutriSource Blog",
+      "feed_url": "https://nutrisourcepetfoods.com/feed/",
+      "website_url": "https://nutrisourcepetfoods.com/blog/",
+      "description": "At NutriSource and PureVita Pet Foods we know a healthy life leads to a long life. Tuffy's Pet Foods the maker of NutriSource & PureVita Pet Foods has been Manufacturing Pet Food for 50 years. With our dedication to Quality Control you will be able to feed your pet our foods worry free. Our products include nothing but the best ingredients for your furry family member.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 1400,
+        "instagram": 28900
+      },
+      "image_url": "https://i1.feedspot.com/4657484.jpg?t=1617434829"
+    },
+    {
+      "title": "Primal Blog",
+      "feed_url": "https://primalpetfoods.com/collections/all.atom",
+      "website_url": "https://primalpetfoods.com/blogs/news",
+      "description": "This blog was created to provide additional insight to our brand in a community environment. Stop by anytime and visit often to read our blog and share your thoughts about Primal! Get involved. It's easy!",
+      "followers": {
+        "facebook": 108400,
+        "twitter": 5200,
+        "instagram": 66900
+      },
+      "image_url": "https://i1.feedspot.com/4658253.jpg?t=1617433314"
+    },
+    {
+      "title": "Raw & Fresh Blog",
+      "feed_url": "https://rawandfresh.com.au/blogs/blog.atom",
+      "website_url": "https://rawandfresh.com.au/blogs/blog",
+      "description": "Founded in 2015, Raw & Fresh has been created out of a love of pets, their nutrition and providing the best customer service in the industry.All of our team is dedicated to delivering a healthier diet to your pets in the most convenient way possible. The pride we all have for Raw & Fresh can be seen everywhere from the online store through to the care we take in every product that leaves our factories.",
+      "followers": {
+        "facebook": 26100,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/4658292.jpg?t=1617435198"
+    },
+    {
+      "title": "Keep the Tail Wagging Blog",
+      "feed_url": "https://keepthetailwagging.com/feed/",
+      "website_url": "https://keepthetailwagging.com/blog/",
+      "description": "Keep the Tail Wagging is a personal blog about raw feeding, essential oils, and raising dogs naturally from a dog owner's perspective.",
+      "followers": {
+        "facebook": 38800,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4656997.jpg?t=1617433306"
+    },
+    {
+      "title": "Dog Food Guru",
+      "feed_url": "https://dogfood.guru/feed/",
+      "website_url": "https://dogfood.guru/",
+      "description": "Dog Food.Guru is founded by Sean Green, a leading developer of many different pet-related websites. Here at Dog Food.Guru, you will get unbiased up-to-date information about each dog food brand on the market. Our in-depth analysis of each brand will help you choose the best dog food for your beloved furry child.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4658720.jpg?t=1641964364"
+    },
+    {
+      "title": "Happy Dog Food",
+      "feed_url": "https://happydogfood.com/blogs/news.atom",
+      "website_url": "https://happydogfood.com/blogs/news",
+      "description": "Happy Dog Food, makes real food dog food that contains only natural ingredients, ensuring your dog consumes a healthy, balanced diet.",
+      "followers": {
+        "facebook": 5500,
+        "twitter": 1200,
+        "instagram": 311
+      },
+      "image_url": "https://i1.feedspot.com/4658026.jpg?t=1617435341"
+    },
+    {
+      "title": "Muenster Milling Blog",
+      "feed_url": "https://muensterpet.com/blogs/blog.atom",
+      "website_url": "https://muensterpet.com/blogs/blog",
+      "description": "Muenster Milling Co. mision is to continuously provide the highest quality nutrition for your pets by using the best ingredients, technology, and maintaining the best quality control in the business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4657120.jpg?t=1617434866"
+    },
+    {
+      "title": "Happy Dog UK Blog",
+      "feed_url": "https://www.happydoguk.com/blogs/dogs.atom",
+      "website_url": "https://www.happydoguk.com/blogs/dogs",
+      "description": "Welcome to the home of healthy dog food. Nutritious dog food for every size, every need and every age - from puppy to senior. Trusted feeding since 1968. The best natural dog food for puppies, adult and senior dogs.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 811
+      },
+      "image_url": "https://i1.feedspot.com/4657410.jpg?t=1644325715"
+    },
+    {
+      "title": "Animush Raw Pet Food Blog",
+      "feed_url": "https://animushrawpetfood.com/category/dog-food-blog/feed/",
+      "website_url": "https://animushrawpetfood.com/category/dog-food-blog/",
+      "description": "Animush Raw Pet Food is a family owned and operated business, we are proud pet owners who have taken the time to create raw pet food solutions that promote health and longevity.",
+      "followers": {
+        "facebook": 336,
+        "twitter": 13
+      },
+      "image_url": "https://i1.feedspot.com/4657157.jpg?t=1617435151"
+    },
+    {
+      "title": "Best Bully Sticks Blog",
+      "feed_url": "https://www.bestbullysticks.com/blogs/bbs-blog.atom",
+      "website_url": "https://www.bestbullysticks.com/blogs/bbs-blog",
+      "description": "Founded in 2008, Best Bully Sticks' mission is to provide high quality Bully Sticks, Dog Treats, and Dog Chews at great prices. Passionate pet company dedicated to natural products for dogs! Specializing in bully sticks.",
+      "followers": {
+        "facebook": 168800,
+        "twitter": 9700,
+        "instagram": 36400
+      },
+      "image_url": "https://i1.feedspot.com/4657478.jpg?t=1617433299"
+    },
+    {
+      "title": "Tom&Sawyer Blog",
+      "feed_url": "https://tomandsawyer.com/blogs/news.atom",
+      "website_url": "https://tomandsawyer.com/blogs/news/",
+      "description": "Tom&Sawyer provides fresh and nutritious small-batch meals for the four-legged foodie in your family, using real ingredients that humans eat, in recipes specifically developed for dogs and cats.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 17600,
+        "instagram": 13400
+      },
+      "image_url": "https://i1.feedspot.com/4657446.jpg?t=1617433266"
+    },
+    {
+      "title": "Whoa Nelly Blog",
+      "feed_url": "https://www.whoanelly.com.au/blog?format=RSS",
+      "website_url": "https://www.whoanelly.com.au/blog/",
+      "description": "Hi, we're Jimi and Tory and this is Nelly! We believe that selecting the best food is the most important decision you can make for your furry best friend. Here you will find Nutrition, doggy tips and more!",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 219,
+        "instagram": 947
+      },
+      "image_url": "https://i1.feedspot.com/4656962.jpg?t=1617434913"
+    },
+    {
+      "title": "Redbarn Pet Products Blog",
+      "feed_url": "https://www.redbarn.com/blogs/blog.atom",
+      "website_url": "https://www.redbarn.com/blogs/blog",
+      "description": "Redbarn is your source for premium dog & cat products. We manufacture natural bully sticks, dog treats & chews as well as cat food & treats.",
+      "followers": {
+        "facebook": 86500,
+        "twitter": 8100,
+        "instagram": 35500
+      },
+      "image_url": "https://i1.feedspot.com/4657399.jpg?t=1602672598"
+    },
+    {
+      "title": "Holistic Dog Nutrition Blog",
+      "feed_url": "https://hunde.com.au/blogs/hunde.atom",
+      "website_url": "https://hunde.com.au/blogs/hunde",
+      "description": "HUNDE was founded by Clare Kearney and a dog called Tex Perkins. Clare is an animal nutritionist (yes, that's a thing) writer, specialising in holistic canine nutrition. A blog by a holistic animal nutritionist, about really healthy things for dogs. I write mostly about canine nutrition and feeding your dog a natural diet.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 48,
+        "instagram": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4657404.jpg?t=1617435219"
+    },
+    {
+      "title": "The Dog Foods Guide",
+      "feed_url": "https://dogfoodguides.com/feed/",
+      "website_url": "https://dogfoodguides.com/",
+      "description": "The Dog Foods Guide provides you the best Dog Food Reviews and Tips about different things.",
+      "followers": {
+        "facebook": 4800,
+        "twitter": 215
+      },
+      "image_url": "https://i1.feedspot.com/5161824.jpg?t=1602679905"
+    },
+    {
+      "title": "Know Better Pet Food Blog",
+      "feed_url": "https://www.knowbetterpetfood.com/blogs/blog.atom",
+      "website_url": "https://www.knowbetterpetfood.com/blogs/blog",
+      "description": "Better in the Raw is a dog food designed to provide your dog with essential nutrients and protein for health and longevity. It makes balancing a raw meat diet easy and convenient. Better in the Raw comes either with liver or without liver included.",
+      "followers": {
+        "facebook": 939,
+        "twitter": 575
+      },
+      "image_url": "https://i1.feedspot.com/4657035.jpg?t=1646657866"
+    },
+    {
+      "title": "K9s Over Coffee",
+      "feed_url": "https://www.k9sovercoffee.com/feed/",
+      "website_url": "https://www.k9sovercoffee.com/",
+      "description": "Help Your Dog Thrive With Raw Dog Food & Exercise. Welcome To The K9s Over Coffee Blog! I'm your host Barbara Rivers, a trilingual, 40-something dog lover, e-book author and the writer behind the K9s Over Coffee Blog. My main mission is to help dogs thrive using daily exercise and a species-appropriate, raw dog food diet.",
+      "followers": {
+        "facebook": 783,
+        "twitter": 3200,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5465357.jpg?t=1668141572"
+    },
+    {
+      "title": "Diamond Pet Food Blog",
+      "feed_url": "https://www.diamondpet.com/blog/feed/?x=1",
+      "website_url": "https://www.diamondpet.com/blog/",
+      "description": "Blog posts on adoption, behavior, culture, grooming, health and nutrition. Stay up-up-to-date with the latest articles regarding pet care on our Pet Talk blog. We bring you informative articles covering what matters to pet parents, from activities that you and your pet can do together, to important nutrition and health related topics.",
+      "followers": {
+        "facebook": 47700,
+        "twitter": 1600,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4624740.jpg?t=1602666190"
+    },
+    {
+      "title": "Dogs For The Earth Blog",
+      "feed_url": "https://www.dogsfortheearth.com/blogs/blog.atom",
+      "website_url": "https://www.dogsfortheearth.com/blogs/blog",
+      "description": "Dogs For The Earth is for people who love their dogs. Choosing a healthy dog food should not require studying complex scientific terms and evaluating sprayed on synthetic vitamins.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 90,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4657202.jpg?t=1641903351"
+    },
+    {
+      "title": "Dog Food Smart Blog",
+      "feed_url": "https://dogfoodsmart.com/blog/feed/",
+      "website_url": "https://dogfoodsmart.com/blog/",
+      "description": "We, as humans, very often forget that just as we are individuals, so are dogs. That's why it's important to get our dogs the best food!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4657150.jpg?t=1617439484"
+    },
+    {
+      "title": "Dogs First Blog",
+      "feed_url": "https://dogsfirst.ie/dr-conor-brady-blog/feed/",
+      "website_url": "https://dogsfirst.ie/dr-conor-brady-blog/",
+      "description": "Dogs First uses good science in support of better canine nutrition and health.",
+      "followers": {
+        "facebook": 69000
+      },
+      "image_url": "https://i1.feedspot.com/4657181.jpg?t=1617433310"
+    },
+    {
+      "title": "Shih Tzu Expert",
+      "feed_url": "https://shihtzuexpert.com/feed/",
+      "website_url": "https://shihtzuexpert.com/",
+      "description": "Here you can find everything about Shih Tzu dogs. This blog focuses on best dog food, grooming tips, and advice, training, and health issues of Shih Tzu and other small breed dogs.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/4732958.jpg?t=1621507571"
+    },
+    {
+      "title": "Mr Dog Food Blog",
+      "feed_url": "https://mrdogfood.com/feed/",
+      "website_url": "https://mrdogfood.com/blog/",
+      "description": "We are very passionate about Dogs and love sharing everything we learn about them. Mr. Dog Food is the perfect resource for learning everything about your dog's nutritional needs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5272650.jpg?t=1619586435"
+    },
+    {
+      "title": "Dogfooditems",
+      "feed_url": "https://dogfooditems.com/feed/",
+      "website_url": "https://dogfooditems.com/",
+      "description": "Keep up with articles from Dogfooditems.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5049444.jpg?t=1641964997"
+    },
+    {
+      "title": "True Carnivores Blog",
+      "feed_url": "https://www.truecarnivores.com/feed/",
+      "website_url": "https://www.truecarnivores.com/learning-centre/blog/",
+      "description": "We believe that the raw diet is the best diet you can feed your pet. On this page we will share with you the benefits of raw, get advice on 'making the switch', products and supplements that we recommend, and much more!",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/4656996.jpg?t=1617434836"
+    },
+    {
+      "title": "Puppy Gang Fresh Foods",
+      "feed_url": "https://www.puppygangfreshfoods.com/blogs/news.atom",
+      "website_url": "https://www.puppygangfreshfoods.com/blogs/news",
+      "description": "Healthy dog food in Toronto. Delivering to your door, Puppy Gang Fresh Foods provides you with nutritious, homemade dog food your dog will love. Prepared with the utmost care and in consultation with holistic veterinarians, every ingredient is selected specifically to provide dogs with all the nutrients they need.",
+      "followers": {
+        "facebook": 1100,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5042236.jpg?t=1646650778"
+    },
+    {
+      "title": "Guru Pet Food",
+      "feed_url": "https://www.gurupetfood.com/category/guru-news/feed/",
+      "website_url": "https://www.gurupetfood.com/guru-news/",
+      "description": "Cold pressing is a unique method we use to prepare your dog's food. The ingredients are ground then gently mixed together. Discover the finest, naturally balanced and healthy cold pressed dog food at Guru pet food. All our meals are packed full of nutritious ingredients!",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 3500,
+        "instagram": 12300
+      },
+      "image_url": "https://i1.feedspot.com/4656967.jpg?t=1617435145"
+    },
+    {
+      "title": "Dog Food Insider Blog",
+      "feed_url": "https://www.dogfoodinsider.com/feed/",
+      "website_url": "https://www.dogfoodinsider.com/category/the-dog-blog/",
+      "description": "www.DogFoodInsider.com has the most detailed, honest, unbiased, and informative dog food reviews you'll find everywhere. We also have information on dog nutrition and training.",
+      "followers": {
+        "facebook": 26700,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/4476947.jpg?t=1617433254"
+    },
+    {
+      "title": "KOHA Pet Food",
+      "feed_url": "https://kohapet.com/blogs/news.atom",
+      "website_url": "https://kohapet.com/blogs/news",
+      "description": "Koha Grain Free Pet Food contains novel proteins like Kangaroo,Venison and Guineafowl for cats and dogs with digestive issues.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 847,
+        "instagram": 7500
+      },
+      "image_url": "https://i1.feedspot.com/4657081.jpg?t=1617434819"
+    },
+    {
+      "title": "Teacup Dogs Daily",
+      "feed_url": "https://teacupdogdaily.com/dog-food/feed/",
+      "website_url": "https://teacupdogdaily.com/dog-food/",
+      "description": "The primary purpose of this site is to share our knowledge about Teacup Dogs. Not only that, but History, Training, Foods, Tips and Breeds as well. This site was really built with you in mind and we hope you will find it useful.",
+      "followers": {
+        "twitter": 300
+      },
+      "image_url": "https://i1.feedspot.com/4433110.jpg?t=1646654845"
+    },
+    {
+      "title": "Ninth Street Barking Lot Blog",
+      "feed_url": "https://www.9thstreetbarkinglot.com/blog?format=RSS",
+      "website_url": "https://www.9thstreetbarkinglot.com/blog/",
+      "description": "Our team at Barking Lot has a lifetime experience with dogs, and we consider them as a part of our family. You can rest assured knowing that each and every dog that visits us will be cared for as if they were one of our own.",
+      "followers": {
+        "facebook": 2000,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4657043.jpg?t=1646654938"
+    },
+    {
+      "title": "The Hungry Dog Blog",
+      "feed_url": "https://thehungrydogblog.com/feed/",
+      "website_url": "https://thehungrydogblog.com/",
+      "description": "The Hungry Dog Blog is your source for stories focused on food, farming, chefs and charcuterie in and around Seattle and the Pacific Northwest. It includes recipes and profiles of some of Seattle's best food and beverage businesses and is written by Jason Price.",
+      "followers": {
+        "facebook": 297,
+        "twitter": 1400,
+        "instagram": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4657051.jpg?t=1617434918"
+    },
+    {
+      "title": "Fluid Motion Blog",
+      "feed_url": "https://fluidmotionagility.com/feed/",
+      "website_url": "https://fluidmotionagility.com/fluid-motion-blog/",
+      "description": "A blog for Fluid Motion Agility, an animal professional from Ontario, OR.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 152
+      },
+      "image_url": "https://i1.feedspot.com/5128029.jpg?t=1617440107"
+    },
+    {
+      "title": "Sarah's Pet Sitting & Dog Walking Blog",
+      "feed_url": "https://sarahspetsittingonline.com/feed/",
+      "website_url": "https://sarahspetsittingonline.com/sps-blog/",
+      "description": "Sarah's Pet Sitting provides dog walking, pet sitting visits, overnight pet sitting and in home dog training. In this blog you will find some good tips for dog food supplement.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 251,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4657223.jpg?t=1617435175"
+    },
+    {
+      "title": "Back 2 Raw",
+      "feed_url": "https://back2raw.ca/blogs/raw-dog-food.atom",
+      "website_url": "https://back2raw.ca/blogs/raw-dog-food",
+      "description": "Handcrafted raw whole food. Our recipes are specific to breed, various stages of life and are nutritionally balanced to promote good digestion & sound health. This blog is to update you on what is going on here at Back 2 Raw as well as information to help support why raw feeding is the best choice for your cat or dog",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 33
+      },
+      "image_url": "https://i1.feedspot.com/4658068.jpg?t=1617435190"
+    },
+    {
+      "title": "Evanger's Dog and Cat Food",
+      "feed_url": "http://evangersdogfood.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://evangersdogfood.blogspot.com/",
+      "description": "A blog about Evanger's Pet Food, pet health, pet nutrition tips, and tips from our Evanger's nutritionist. Evanger's mission is to improve the health, length, and quality of your pet's life, and therefore is committed to producing the highest quality pet food available.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4657165.jpg"
+    },
+    {
+      "title": "Fit for a Pet: The Truth About Pet Foods",
+      "feed_url": "http://petnutritionbysmart.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://petnutritionbysmart.blogspot.com/",
+      "description": "Are you confused about what to feed your pet? Why are so many supplements available on the market if commercial diets are considered 'complete and balanced'? Can you get the truth from the industry, your veterinarian, the pet food store employees? Are home made diets really bad?I will attempt to help you make an informed decision.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4657087.jpg?t=1617438808"
+    },
+    {
+      "title": "The Dog Food Dude",
+      "feed_url": "http://dogfooddude.blogspot.com/feeds/posts/default",
+      "website_url": "http://dogfooddude.blogspot.com/",
+      "description": "I stumbled onto making homemade dog food for my dog simply because he had lymphoma and wouldn't eat. Fixing him meals not only made him feel better - it gave me a mission to help others feed their dogs wholesome foods.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 694
+      },
+      "image_url": "https://i1.feedspot.com/4236619.jpg?t=1617435231"
+    },
+    {
+      "title": "Poisoned Pets",
+      "feed_url": "https://www.poisonedpets.com/category/pet-food-product-news/feed/",
+      "website_url": "https://www.poisonedpets.com/category/pet-food-product-news/",
+      "description": "The best guide to pet food safety news, recalls and alerts on the net!",
+      "followers": {
+        "twitter": 396
+      },
+      "image_url": "https://i1.feedspot.com/4656957.jpg?t=1617435348"
+    },
+    {
+      "title": "FirstMate Pet Foods Blog",
+      "feed_url": "https://firstmate.com/blog/feed/",
+      "website_url": "https://firstmate.com/blog/",
+      "description": "FirstMate and Kasiks pet food uses only the highest quality ingredients to create our lines of Grain Friendly, Grain Free and Canned pet food.",
+      "followers": {
+        "facebook": 23500,
+        "twitter": 923,
+        "instagram": 9600
+      },
+      "image_url": "https://i1.feedspot.com/4657001.jpg?t=1617434840"
+    },
+    {
+      "title": "Pure Love Dog Food",
+      "feed_url": "https://purelovedogfood.com/blogs/raw-dog-food.atom",
+      "website_url": "https://purelovedogfood.com/blogs/raw-dog-food",
+      "description": "Pure Love Dog Food isn't just another raw dog food company, it's a venture that came from a personal need. Our fresh blends have everything your dog needs to stay fit, healthy and have a happy tummy. We always put your dog's health first and we make each meal with a little (or a lot) of extra love.",
+      "followers": {
+        "facebook": 746,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5272648.jpg?t=1619182222"
+    },
+    {
+      "title": "Just Raw Pet Food",
+      "feed_url": "https://justrawpetfood.ca/blogs/news.atom",
+      "website_url": "https://justrawpetfood.ca/blogs/news",
+      "description": "Just Raw Pet Food is a Canadian company that provides high-quality, all-natural raw dog food and dehydrated dog treats, locally sourced and made in Toronto.",
+      "followers": {
+        "facebook": 326,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5214073.jpg?t=1604737368"
+    },
+    {
+      "title": "Global Pet Foods New Brunswick Blog",
+      "feed_url": "https://globalpetfoodsnb.ca/feed/",
+      "website_url": "https://globalpetfoodsnb.ca/blog/",
+      "description": "Healthy food for your pets Nutritious pet food & treats Accessories Knowledgeable staff Did you know? Much like us, a proper diet can help your pets live a long, healthy life. Find tips, deals and other items focusing on the health and wellness of pets in New Brunswick!",
+      "followers": {
+        "facebook": 22400,
+        "twitter": 888,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4657117.jpg?t=1646653227"
+    },
+    {
+      "title": "VegAnnie",
+      "feed_url": "https://www.vegannie.com/category/dog-food-recipes/feed/",
+      "website_url": "https://www.vegannie.com/category/dog-food-recipes/",
+      "description": "I'm Annie! I'm a weight-loss expert, Holistic Health Coach and PhD student at UT Austin who loves creating and sharing simple, plant-based, budget-friendly recipes that are quick and easy to prepare.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 10900,
+        "instagram": 41900
+      },
+      "image_url": "https://i1.feedspot.com/4657444.jpg?t=1617434832"
+    },
+    {
+      "title": "ThatMutt.com",
+      "feed_url": "https://www.thatmutt.com/category/raw-dog-food/feed/",
+      "website_url": "https://www.thatmutt.com/category/raw-dog-food/",
+      "description": "That Mutt is a site for dog lovers who live in the real world. That Mutt is a welcoming place where down-to-earth dog owners can learn from one another. Here you will find information on feeding a dog a raw diet, whether it's homemade raw dog food recipes or information about commercial raw dog food.",
+      "followers": {
+        "facebook": 8000,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4658049.jpg?t=1617435337"
+    },
+    {
+      "title": "My Ollie",
+      "feed_url": "https://blog.myollie.com/rss/",
+      "website_url": "https://blog.myollie.com/",
+      "description": "On a mission to give dog food a good name. Ollie delivers freshly made food from real, human-grade ingredients, tailored to your dog's unique nutritional needs.",
+      "followers": {
+        "facebook": 66300
+      },
+      "image_url": "https://i1.feedspot.com/4657113.jpg?t=1617433278"
+    },
+    {
+      "title": "Petsworld Blog",
+      "feed_url": "https://petsworld.in/blogs/news.atom",
+      "website_url": "https://petsworld.in/blogs/news/",
+      "description": "Pets World is India's favorite online pets shop offering food supplies and accessories for Dogs, Cats, Fishes, Puppies, Kittens etc. In this blog you will find some dog food ideas.",
+      "followers": {
+        "facebook": 74800,
+        "twitter": 91,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4658070.jpg?t=1646657681"
+    },
+    {
+      "title": "PetfoodIndustry.com",
+      "feed_url": "https://www.petfoodindustry.com/__rss/website-scheduled-content.xml?input={&#34;sectionAlias&#34;:&#34;home&#34;}",
+      "website_url": "https://www.petfoodindustry.com/",
+      "description": "Blog posts on Pet Food Market, Nutrition, Safety & Quality, Production, Packaging, Branding and more. Petfood Industry magazine is the source for dog food and cat food manufacturers and pet food industry professionals.",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4403852.jpg?t=1602666091"
+    },
+    {
+      "title": "Top Dog Tips",
+      "feed_url": "https://topdogtips.com/dog-food/feed/",
+      "website_url": "https://topdogtips.com/dog-food/",
+      "description": "Top Dog Tips is a growing pets media website, dedicated to providing the best advice and videos on best dog food brands, interviews with vets on dog nutrition, top dog food reviews and guides on how to read dog food labels, etc.",
+      "followers": {
+        "facebook": 187200,
+        "twitter": 1600,
+        "instagram": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4657416.jpg?t=1641903057"
+    },
+    {
+      "title": "Freshpet Blog",
+      "feed_url": "https://www.freshpet.com/blog",
+      "website_url": "https://www.freshpet.com/blog",
+      "description": "Check out our articles on all things related to giving your pet a healthy lifestyle. Learn more here about dog-friendly national parks, the benefits of adopting a pet, dogs that are ideal for apartment living, great pet gifts for Valentine's day, and more.",
+      "followers": {
+        "facebook": 189900,
+        "twitter": 5700,
+        "instagram": 53500
+      },
+      "image_url": "https://i1.feedspot.com/4624739.jpg?t=1602665974"
+    },
+    {
+      "title": "Brookside Barkery & Bath Blog",
+      "feed_url": "https://barkerybath.com/feed/",
+      "website_url": "https://www.beastieboutique.com/blog/",
+      "description": "Pets are a lot like people. They can give and receive love. They can be happy or sad. They can learn. They can remember. And to stay healthy, they need more than a simple bag of food.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 1500,
+        "instagram": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4657392.jpg?t=1641964808"
+    },
+    {
+      "title": "Tails.com Dog Blog",
+      "feed_url": "https://tails.com/blog/category/recipes/feed/",
+      "website_url": "https://www.beastieboutique.com/blog/",
+      "description": "Every dog is different. That's why we tailor our dog food to suit your dog's individual needs. Read the latest blog posts from tails.com, creators of freshly-blended dog food, tailor-made to meet your dog's individual needs.",
+      "followers": {
+        "facebook": 178300,
+        "twitter": 8900,
+        "instagram": 86600
+      },
+      "image_url": "https://i1.feedspot.com/4657053.jpg?t=1610027319"
+    },
+    {
+      "title": "Beastie Boutique Blog",
+      "feed_url": "https://www.beastieboutique.com/blog/feed/",
+      "website_url": "https://www.beastieboutique.com/blog/",
+      "description": "Beastie Boutique was started in 2006 in Salmon Creek. Our goal and focus is to provide outstanding one-on-one customer service and unique products. We provide natural pet foods, pet accessories, pet clothing, supplements, and full service professional dog grooming seven days a week. Read on to see our latest tips & insights into how you can best care for your furry friend.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 294
+      },
+      "image_url": "https://i1.feedspot.com/4657401.jpg?t=1617435154"
+    },
+    {
+      "title": "Pet Wants Dayton Blog",
+      "feed_url": "https://petwantsdayton.com/blog/feed",
+      "website_url": "https://www.petwants.com/Blog",
+      "description": "Pet Wants dog and cat foods are all-natural and gluten free, with no fillers or by-products, and no corn, wheat, or soy. We take time to make sure every ingredient is in our food for a reason!",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 2300,
+        "instagram": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4657596.jpg?t=1617435214"
+    },
+    {
+      "title": "PuppyWire",
+      "feed_url": "https://www.puppywire.com/feed/",
+      "website_url": "https://www.puppywire.com/",
+      "description": "Find out which dog products are worth it and which ones are not. We do reviews and comparisons of popular dog supplements, training aids, etc.",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 775
+      },
+      "image_url": "https://i1.feedspot.com/4676550.jpg?t=1617435359"
+    }
+  ]
+}

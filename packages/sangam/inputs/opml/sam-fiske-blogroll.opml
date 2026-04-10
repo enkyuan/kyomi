@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<opml version="2.0">
+  <head>
+    <title>Sam Fiske - Blogroll</title>
+  </head>
+  <body>
+    <outline type="rss" text="Defector" xmlUrl="https://defector.com/feed" htmlUrl="http://defector.com" category="Recommendations"/>
+    <outline type="rss" text="Photos" xmlUrl="https://samfiske.net/feed.xml" htmlUrl="https://samfiske.net/photos/" category="Clownish Interests"/>
+    <outline type="rss" text="ProPublica" xmlUrl="" htmlUrl="http://propublica.org" category="Recommendations"/>
+    <outline type="rss" text="Wired" xmlUrl="https://www.wired.com/feed/rss" htmlUrl="http://wired.com" category="Recommendations"/>
+    <outline type="rss" text="Kate Morrissey" xmlUrl="https://beyondthebordernews.substack.com/feed" htmlUrl="https://beyondthebordernews.substack.com?utm_source=navbar&amp;utm_medium=fiske" category="Recommendations"/>
+    <outline type="rss" text="Assigned Media" xmlUrl="https://www.assignedmedia.org/breaking-news?format=rss" htmlUrl="https://www.assignedmedia.org" category="Recommendations"/>
+    <outline type="rss" text="Voice of San Diego" xmlUrl="https://voiceofsandiego.org/feed/" htmlUrl="https://voiceofsandiego.org" category="Recommendations"/>
+    <outline type="rss" text="Kingscrowd" xmlUrl="" htmlUrl="http://newsletter.kingscrowd.com" category="Recommendations"/>
+  </body>
+</opml>

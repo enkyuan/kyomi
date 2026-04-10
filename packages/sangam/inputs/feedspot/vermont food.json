@@ -1,0 +1,140 @@
+{
+  "category": "Vermont Food",
+  "source_url": "https://rss.feedspot.com/vermont_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hungry Enough To Eat Six",
+      "feed_url": "https://hungryenoughtoeatsix.com/feed/",
+      "website_url": "https://hungryenoughtoeatsix.com/",
+      "description": "I'm Nancy. Browse hundreds of casual, creative, and delicious recipes - apps, dinners, drinks, desserts, and more. Then, stick around for culinary adventures with my New England family on the road!",
+      "followers": {
+        "facebook": 640,
+        "twitter": 529
+      },
+      "image_url": "https://i1.feedspot.com/4979749.jpg?t=1630677567"
+    },
+    {
+      "title": "Vermont Foodbank Blog",
+      "feed_url": "https://www.vtfoodbank.org/feed/",
+      "website_url": "https://www.vtfoodbank.org/newsroom/blog/",
+      "description": "The Vermont Foodbank gathers and shares quality food and nurtures partnerships so that no one in Vermont will go hungry.",
+      "followers": {
+        "facebook": 16200,
+        "twitter": 6600,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5326097.jpg?t=1632826298"
+    },
+    {
+      "title": "Seven Days VT \u00bb Vermont Food + Drink",
+      "feed_url": "https://www.sevendaysvt.com/vermont/Rss.xml?oid=2125922",
+      "website_url": "https://www.sevendaysvt.com/food-drink/",
+      "description": "This section features articles on Food and Drinks. Seven Days are the independent Vermont newspaper and website covering news, politics, food, arts, and culture.",
+      "followers": {
+        "facebook": 86400,
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/5326191.jpg?t=1632834924"
+    },
+    {
+      "title": "Tavernier Chocolates Blog",
+      "feed_url": "https://www.tavernierchocolates.com/feed/",
+      "website_url": "https://www.tavernierchocolates.com/blog/",
+      "description": "Stay in the chocolate loop with our chocolate blog, a look at the latest news, updates, and recipes from Tavernier Chocolates. Earthy, elegant, seasonally-inspired artisanal chocolates handcrafted in the splendor of southern Vermont are the heart of Tavernier Chocolates.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 361,
+        "instagram": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5326125.jpg?t=1632828580"
+    },
+    {
+      "title": "Vermont Breakfast on the Farm Blog",
+      "feed_url": "https://vermontbreakfastonthefarm.com/feed/",
+      "website_url": "https://vermontbreakfastonthefarm.com/blog/",
+      "description": "Vermont Breakfast on the Farm is the perfect opportunity to learn about dairy farming in the Green Mountain State. You'll get a first-hand look at modern food production, and meet the farm families who work to produce safe, wholesome food.",
+      "followers": {
+        "facebook": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5326141.jpg?t=1632830257"
+    },
+    {
+      "title": "Healthy Seasonal Recipes Blog",
+      "feed_url": "https://www.healthyseasonalrecipes.com/feed/",
+      "website_url": "https://www.healthyseasonalrecipes.com/blog/",
+      "description": "Healthy Seasonal Recipes food blog has hundreds of easy tasty meals, delicious weeknight dinners, simple seasonal vegetable side dishes, and salads from Vermonter, Culinary Nerd, and Artist Katie Webster that are perfect for busy families all with detailed step-by-step tutorials and expert tips.",
+      "followers": {
+        "facebook": 163300,
+        "twitter": 15200,
+        "instagram": 27800
+      },
+      "image_url": "https://i1.feedspot.com/1085443.jpg?t=1611292247"
+    },
+    {
+      "title": "MamaSezz",
+      "feed_url": "https://www.mamasezz.com/blogs/news.atom",
+      "website_url": "https://www.mamasezz.com/blogs/news",
+      "description": "Get hearty and delicious plant-based meals delivered to your door, ready-made and fresh. MamaSezz is a meal delivery service for busy folks who want to eat clean, healthy foods. We take the hassle out of eating well by delivering ready-made, satisfying, and delicious plant-based meals to your door.",
+      "followers": {
+        "facebook": 11300
+      },
+      "image_url": "https://i1.feedspot.com/4864916.jpg?t=1612170931"
+    },
+    {
+      "title": "Adamant Kitchen",
+      "feed_url": "https://adamantkitchen.com/feed/",
+      "website_url": "https://adamantkitchen.com/",
+      "description": "Welcome to my table! Here you'll find me cooking up the world from my tiny Vermont kitchen. Follow along for traditional recipes from around the globe, as well as some of my own special creations.",
+      "followers": {
+        "facebook": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5326139.jpg?t=1632829981"
+    },
+    {
+      "title": "Vermont Fine Dining Blog",
+      "feed_url": "https://vermontfinedining.com/feed/",
+      "website_url": "https://vermontfinedining.com/blog/",
+      "description": "Restaurant and dining reviews. Vermont Fine Dining offers a choice of casual dining and cocktails at The Lounge, or a more atmospheric and crafted dining experience at Pangaea.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 103
+      },
+      "image_url": "https://i1.feedspot.com/5326148.jpg?t=1632830660"
+    },
+    {
+      "title": "Slow Food Vermont Blog",
+      "feed_url": "https://www.slowfoodvermont.org/blog?format=rss",
+      "website_url": "https://www.slowfoodvermont.org/blog",
+      "description": "Articles, book reviews, and updates from the Slow Food Vermont community. They are a local chapter of Slow Food, an international movement dedicated to good, clean, and fair food with over 1,500 chapters in 160 countries. Here in Vermont, they aim to share their many food cultures with each other and the broader Slow Food community.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3800,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5326132.jpg?t=1632829321"
+    },
+    {
+      "title": "Agency of Agriculture, Food and Markets Blog",
+      "feed_url": "https://agriculture.vermont.gov/blog.xml",
+      "website_url": "https://agriculture.vermont.gov/blog",
+      "description": "News from the Vermont Agency of Agriculture, Food, and Markets. The Vermont Agency of Agriculture, Food & Markets (VAAFM) facilitates, supports and encourages the growth and viability of agriculture in Vermont while protecting the working landscape, human health, animal health, plant health, consumers and the environment.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5326111.jpg?t=1632827838"
+    },
+    {
+      "title": "DigInVT Blog",
+      "feed_url": "https://diginvt.com/blog/",
+      "website_url": "https://diginvt.com/blog/",
+      "description": "The DigInVT blog goes in-depth and behind the scenes with the people, places and products that are part of Vermont's food community. DigInVT.com is the online portal and event guide helping tourists & travelers find authentic food & farm experiences in Vermont.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 997,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5326150.jpg?t=1632830892"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "category": "Calabasas News",
+  "source_url": "https://rss.feedspot.com/calabasas_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KTLA \u00bb Calabasas",
+      "feed_url": "https://ktla.com/tag/calabasas/feed/",
+      "website_url": "https://ktla.com/tag/calabasas/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond. Get the latest news and updates about Calabasas at KTLA.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5176250.jpg?t=1596281337"
+    }
+  ]
+}

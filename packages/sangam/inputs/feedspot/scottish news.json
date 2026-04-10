@@ -1,0 +1,422 @@
+{
+  "category": "Scottish News",
+  "source_url": "https://rss.feedspot.com/scottish_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Daily Record",
+      "feed_url": "https://www.dailyrecord.co.uk/?service=rss",
+      "website_url": "https://www.dailyrecord.co.uk/",
+      "description": "The first for Scottish news, sport, UK and world news. Get breaking news related to Scotland on this site.",
+      "followers": {
+        "facebook": 827100,
+        "twitter": 153700
+      },
+      "image_url": "https://i1.feedspot.com/4828100.jpg?t=1551188174"
+    },
+    {
+      "title": "The Scotsman",
+      "feed_url": "https://www.scotsman.com/rss",
+      "website_url": "https://www.scotsman.com/",
+      "description": "Get the Scottish perspective on news, sport, business, lifestyle, food and drink and more, from Scotland's national newspaper, The Scotsman. The Scotsman has played a vital part in forming and reporting national opinion for nearly 200 years. Having first published in 1817, The Scotsman is firmly established as a quality daily Scottish newspaper, with a reputation for original thinking and thought-provoking writing.",
+      "followers": {
+        "facebook": 326800,
+        "twitter": 188900,
+        "instagram": 26000
+      },
+      "image_url": "https://i1.feedspot.com/8776936.jpg?t=1761327188"
+    },
+    {
+      "title": "STV News",
+      "feed_url": "https://news.stv.tv/feed",
+      "website_url": "https://news.stv.tv/",
+      "description": "All your favourite STV programmes, soaps and sport - live and on-demand. Plus all the latest breaking news, sport and weather.",
+      "followers": {
+        "facebook": 783800,
+        "twitter": 584800
+      },
+      "image_url": "https://i1.feedspot.com/4738185.jpg?t=1611752622"
+    },
+    {
+      "title": "The National",
+      "feed_url": "https://www.thenational.scot/news/rss/",
+      "website_url": "https://www.thenational.scot/",
+      "description": "Hello and welcome to the official site for Scotland's new national daily newspaper, The National, the only one that supports the idea of independence for Scotland. Latest Scottish news and politics from The National.",
+      "followers": {
+        "facebook": 246800,
+        "twitter": 140600,
+        "instagram": 107500
+      },
+      "image_url": "https://i1.feedspot.com/4741232.jpg?t=1608118201"
+    },
+    {
+      "title": "The Herald Scotland",
+      "feed_url": "https://www.heraldscotland.com/news/rss/",
+      "website_url": "https://www.heraldscotland.com/",
+      "description": "The Herald is a Scottish broadsheet newspaper founded in 1783. The Herald is the longest running national newspaper in the world and is the eighth oldest daily paper in the world.",
+      "followers": {
+        "facebook": 164700,
+        "twitter": 126600,
+        "instagram": 36700
+      },
+      "image_url": "https://i1.feedspot.com/4405183.jpg?t=1516597424"
+    },
+    {
+      "title": "The Scottish Sun \u00bb Liverpool FC",
+      "feed_url": "https://www.thescottishsun.co.uk/feed/",
+      "website_url": "https://www.thescottishsun.co.uk/sport/football/team/173659/liverpool/",
+      "description": "Get the latest Scottish, UK and world news, sport, celebrity gossip, showbiz, politics, business and lifestyle from The Scottish Sun. The Scottish Sun strives to the very highest standards of accuracy in its reporting and continues to invest in original journalism in print and online.",
+      "followers": {
+        "facebook": 433600,
+        "twitter": 61600
+      },
+      "image_url": "https://i1.feedspot.com/4629738.jpg?t=1608117650"
+    },
+    {
+      "title": "Glasgow Times",
+      "feed_url": "https://www.glasgowtimes.co.uk/news/rss/",
+      "website_url": "https://www.glasgowtimes.co.uk/news/",
+      "description": "Get the latest Scottish news from Glasgow and across Scotland, stay updated with the Glasgow Times.",
+      "followers": {
+        "facebook": 267100
+      },
+      "image_url": "https://i1.feedspot.com/4629807.jpg?t=1612512109"
+    },
+    {
+      "title": "The Courier",
+      "feed_url": "https://www.thecourier.co.uk/feed/",
+      "website_url": "https://www.thecourier.co.uk/",
+      "description": "Read daily updated latest news and headlines related with economy, politics, sports, technology, international news and more. Scotland's leading local news voice, providing trusted news from Dundee, Fife, Perth, Perthshire, Angus, and across Scotland.",
+      "followers": {
+        "facebook": 112200,
+        "twitter": 53900
+      },
+      "image_url": "https://i1.feedspot.com/4828906.jpg?t=1645781499"
+    },
+    {
+      "title": "Edinburgh Evening News",
+      "feed_url": "https://www.edinburghnews.scotsman.com/rss",
+      "website_url": "https://www.edinburghnews.scotsman.com/",
+      "description": "An Edinburgh and Lothians' perspective on news, sport, what's on, lifestyle and more, from Scotland's capital city paper, the Edinburgh Evening News.",
+      "followers": {
+        "twitter": 180500
+      },
+      "image_url": "https://i1.feedspot.com/4828768.jpg?t=1621067429"
+    },
+    {
+      "title": "Glasgow Live",
+      "feed_url": "https://www.glasgowlive.co.uk/?service=rss",
+      "website_url": "https://www.glasgowlive.co.uk/",
+      "description": "Glasgow Live is a website that brings news and sport, essential updates on traffic, travel and weather, plus lifestyle and features to the people of Glasgow.",
+      "followers": {
+        "facebook": 468500,
+        "twitter": 104200
+      },
+      "image_url": "https://i1.feedspot.com/4832037.jpg?t=1621261082"
+    },
+    {
+      "title": "Deadline News",
+      "feed_url": "https://www.deadlinenews.co.uk/feed/",
+      "website_url": "https://www.deadlinenews.co.uk/",
+      "description": "Deadline News is one of Scotland's leading press and picture agencies serving content to national newspapers, magazines and online press.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/2192997.jpg?t=1553495744"
+    },
+    {
+      "title": "Press and Journal",
+      "feed_url": "https://www.pressandjournal.co.uk/feed/",
+      "website_url": "https://www.pressandjournal.co.uk/",
+      "description": "The Press and Journal, often called the P&J, is a daily regional newspaper serving the northern counties of Scotland including the cities of Aberdeen and Inverness. Established in 1747 as the Aberdeen Journal, it is Scotland's oldest daily newspaper.",
+      "followers": {
+        "facebook": 132800,
+        "twitter": 70700
+      },
+      "image_url": "https://i1.feedspot.com/4828918.jpg?t=1517208424"
+    },
+    {
+      "title": "GlasgowWorld",
+      "feed_url": "https://www.glasgowworld.com/rss",
+      "website_url": "https://www.glasgowworld.com/",
+      "description": "GlasgowWorld is a news website serving Glasgow with serious local journalism. Check out the latest breaking news and analysis.",
+      "followers": {
+        "facebook": 99500,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4828967.jpg?t=1634645168"
+    },
+    {
+      "title": "Wings Over Scotland",
+      "feed_url": "https://wingsoverscotland.com/feed/",
+      "website_url": "https://wingsoverscotland.com/",
+      "description": "Find latest Scottish political analysis and commentary, plus football and Bullseye.",
+      "followers": {
+        "facebook": 29900
+      },
+      "image_url": "https://i1.feedspot.com/4828850.jpg"
+    },
+    {
+      "title": "Insider Magazine",
+      "feed_url": "https://www.insider.co.uk/?service=rss",
+      "website_url": "https://www.insider.co.uk/",
+      "description": "The online arm of the Scottish Business Insider, insider.co.uk brings you breaking Scottish business news. Our informed and insightful coverage includes interviews, analysis, pictures, video and more",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4828890.jpg?t=1678440172"
+    },
+    {
+      "title": "Falkirk Herald",
+      "feed_url": "https://www.falkirkherald.co.uk/rss",
+      "website_url": "https://www.falkirkherald.co.uk/",
+      "description": "A Falkirk perspective on news, sport, what's on, and more, for Grangemouth and the Central Lowlands of Scotland's newspaper, The Falkirk Herald.",
+      "followers": {
+        "facebook": 64599,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/4828960.jpg?t=1516619190"
+    },
+    {
+      "title": "DIGIT",
+      "feed_url": "https://www.digit.fyi/feed/",
+      "website_url": "https://www.digit.fyi/",
+      "description": "The latest news, events and updates from Scotland's rapidly evolving digital technology sector. IT, cybersecurity, IoT, FinTech, HealthTech, EduTech & data.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4832809.jpg?t=1516773608"
+    },
+    {
+      "title": "The Shetland Times",
+      "feed_url": "https://www.shetlandtimes.co.uk/feed",
+      "website_url": "https://www.shetlandtimes.co.uk/",
+      "description": "The Shetland Times Ltd publishes the islands' weekly newspaper, and books of local interest, covering Shetland news, jobs, sport, property and much more.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/3717916.jpg"
+    },
+    {
+      "title": "Border Telegraph",
+      "feed_url": "https://www.bordertelegraph.com/news/rss/",
+      "website_url": "https://www.bordertelegraph.com/news/",
+      "description": "Get the latest Galashiels, Peeblesshire and surrounding areas news, sport and entertainment.",
+      "followers": {
+        "facebook": 28700,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4494830.jpg?t=1517208436"
+    },
+    {
+      "title": "The Renfrewshire Gazette",
+      "feed_url": "https://www.the-gazette.co.uk/news/rss/",
+      "website_url": "https://www.the-gazette.co.uk/news/",
+      "description": "Find latest news related to Scotland on this site.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/646529.jpg"
+    },
+    {
+      "title": "The Sunday Post",
+      "feed_url": "https://www.sundaypost.com/feed/",
+      "website_url": "https://www.sundaypost.com/",
+      "description": "The website of Scotland's favourite family newspaper since 1914. Find news related to Scotland on Sunday Post.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 23200
+      },
+      "image_url": "https://i1.feedspot.com/4742459.jpg?t=1608118194"
+    },
+    {
+      "title": "Scottish Licensed Trade News",
+      "feed_url": "https://sltn.co.uk/feed/",
+      "website_url": "https://sltn.co.uk/",
+      "description": "Launched in 1964 SLTN remains the leading publication for the drinks, leisure and hospitality industry in Scotland.",
+      "followers": {
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4831956.jpg?t=1517210450"
+    },
+    {
+      "title": "Scottish Field",
+      "feed_url": "https://www.scottishfield.co.uk/feed/",
+      "website_url": "https://www.scottishfield.co.uk/",
+      "description": "Scottish Field is Scotland's quality lifestyle magazine, bringing you country news, fashion, interiors, travel, food & drink, property features and much more. Established in 1903, Scottish Field has just celebrated its 113th birthday. Read the latest posts and get to know more about Scotland.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 23800,
+        "instagram": 14000
+      },
+      "image_url": "https://i1.feedspot.com/4629816.jpg?t=1553495720"
+    },
+    {
+      "title": "Talking-up Scotland",
+      "feed_url": "https://talkingupscotlandtwo.com/feed/",
+      "website_url": "https://talkingupscotlandtwo.com/blog-feed/",
+      "description": "Subscribe and get news updates on Scotland from Talking-Up Scotland II.",
+      "followers": {
+        "twitter": 9700
+      },
+      "image_url": "https://i1.feedspot.com/5120536.jpg"
+    },
+    {
+      "title": "The Southern Reporter",
+      "feed_url": "https://www.thesouthernreporter.co.uk/rss",
+      "website_url": "https://www.thesouthernreporter.co.uk/",
+      "description": "A Selkirk perspective on news, sport, what's on, lifestyle and more, from your local paper The Southern Reporter.",
+      "followers": {
+        "facebook": 19400,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4832866.jpg"
+    },
+    {
+      "title": "Homes & Interiors Scotland",
+      "feed_url": "https://homesandinteriorsscotland.com/feed/",
+      "website_url": "https://homesandinteriorsscotland.com/",
+      "description": "Here you can find beautiful interior-designed homes and cutting-edge architecture features alongside expert advice and sharp, informative writing. Homes & Interiors Scotland is the country's leading interior design and architecture magazine. More than just a print title, they are a multi-platform brand offering insight and inspiration across social media, online and through events.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4831871.jpg?t=1517210451"
+    },
+    {
+      "title": "Inverness Courier",
+      "feed_url": "https://www.inverness-courier.co.uk/_api/rss/inverness-news-feed.xml",
+      "website_url": "https://www.inverness-courier.co.uk/",
+      "description": "Inverness Courier provides the latest news, updates, sports, lifestyle, and entertainment information about Inverness.",
+      "followers": {
+        "facebook": 54900,
+        "twitter": 12700,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/4832023.jpg?t=1604494289"
+    },
+    {
+      "title": "The Orkney News",
+      "feed_url": "https://theorkneynews.scot/feed/",
+      "website_url": "https://theorkneynews.scot/",
+      "description": "The Orkney News is a community based, not for profit, free to view online newspaper bringing the alternative news to Orkney.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4832077.jpg?t=1516699667"
+    },
+    {
+      "title": "Scottish Trans",
+      "feed_url": "https://www.scottishtrans.org/feed/",
+      "website_url": "https://www.scottishtrans.org/category/news/",
+      "description": "Scottish Trans Alliance works to improve gender identity and gender reassignment equality, rights and inclusion in Scotland.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 13900
+      },
+      "image_url": "https://i1.feedspot.com/4832243.jpg?t=1516729705"
+    },
+    {
+      "title": "Grampian Online",
+      "feed_url": "https://www.grampianonline.co.uk/_api/rss/grampian-news-feed.xml",
+      "website_url": "https://www.grampianonline.co.uk/",
+      "description": "The Latest News, Sport and What's On from Banff, Buckie, Keith, and Huntly - Grampian Online from Highland News & Media Ltd.",
+      "followers": {
+        "facebook": 13600,
+        "twitter": 765
+      },
+      "image_url": "https://i1.feedspot.com/4832897.jpg?t=1604499586"
+    },
+    {
+      "title": "Newsnet.scot",
+      "feed_url": "https://newsnet.scot/feed/",
+      "website_url": "https://newsnet.scot/",
+      "description": "Newsnet Scotland was launched on 12th March 2010 by a small group of unpaid volunteers from Greenock. The site was set up in order to address what we believed to be an imbalance in the reporting of Scottish News and current affairs. News, current affairs and opinion from Scotland.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 25000
+      },
+      "image_url": "https://i1.feedspot.com/4629813.jpg?t=1553495728"
+    },
+    {
+      "title": "Scottish Journals",
+      "feed_url": "https://newsinscotland.wordpress.com/feed/",
+      "website_url": "https://newsinscotland.wordpress.com/",
+      "description": "This site provides news and opinion from a variety of social and mainstream media sources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4831987.jpg"
+    },
+    {
+      "title": "The Church of Scotland",
+      "feed_url": "https://www.churchofscotland.org.uk/feeds/news",
+      "website_url": "https://www.churchofscotland.org.uk/",
+      "description": "The vision of the Church of Scotland is to be a church which seeks to inspire the people of Scotland and beyond with the good news of Jesus Christ through enthusiastic worshipping, witnessing, nurturing and serving communities.",
+      "followers": {
+        "facebook": 50500,
+        "twitter": 13700,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4828832.jpg?t=1611908659"
+    },
+    {
+      "title": "Scottish Development International",
+      "feed_url": "https://www.pressandjournal.co.uk/",
+      "website_url": "https://www.pressandjournal.co.uk/",
+      "description": "Find job alerts, industry news and relocation information. Employers register to promote your company and job ops.",
+      "followers": {
+        "twitter": 27500
+      },
+      "image_url": "https://i1.feedspot.com/4832145.jpg"
+    },
+    {
+      "title": "The Press and Journal",
+      "feed_url": "https://www.pressandjournal.co.uk/",
+      "website_url": "https://www.pressandjournal.co.uk/",
+      "description": "Evening Express is a newspaper serving the city of Aberdeen and the North-east of Scotland. Find local news of Aberdeen on this site.",
+      "followers": {
+        "twitter": 38400
+      },
+      "image_url": "https://i1.feedspot.com/4832881.jpg"
+    },
+    {
+      "title": "The Scotsman",
+      "feed_url": "https://www.scotsman.com/",
+      "website_url": "https://www.scotsman.com/",
+      "description": "A Peterhead perspective on news, sport, what's on, lifestyle and more, from your local paper the Buchan Observer.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 188900
+      },
+      "image_url": "https://i1.feedspot.com/4832940.jpg?t=1516779498"
+    },
+    {
+      "title": "Cricket Scotland",
+      "feed_url": "https://www.cricketscotland.com/feed",
+      "website_url": "https://www.cricketscotland.com/news",
+      "description": "CricketScotland.com is The National Governing Body for cricket in Scotland. Find latest news on Scotland official cricket team.",
+      "followers": {
+        "facebook": 246300,
+        "twitter": 200600,
+        "instagram": 68700
+      },
+      "image_url": "https://i1.feedspot.com/4740555.jpg?t=1608118311"
+    },
+    {
+      "title": "Scotland Rugby News",
+      "feed_url": "https://www.newsquest.co.uk/",
+      "website_url": "https://www.scotlandrugbynews.com/",
+      "description": "The latest independent Scottish rugby news, articles, features, banter, gossip, match reports, and highlights.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 2900,
+        "instagram": 12000
+      },
+      "image_url": "https://i1.feedspot.com/4832000.jpg?t=1611558255"
+    }
+  ]
+}

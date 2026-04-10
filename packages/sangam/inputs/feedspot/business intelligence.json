@@ -1,0 +1,549 @@
+{
+  "category": "Business Intelligence",
+  "source_url": "https://rss.feedspot.com/business_intelligence_rss_feeds",
+  "feeds": [
+    {
+      "title": "BI Insight",
+      "feed_url": "https://biinsight.com/feed/",
+      "website_url": "https://biinsight.com/",
+      "description": "My name is Soheil Bakhshi. I am a Business Intelligence Consultant. Find Business Intelligence and Data Visualisation articles.",
+      "followers": {
+        "twitter": 901
+      },
+      "image_url": "https://i1.feedspot.com/3959724.jpg?t=1612884250"
+    },
+    {
+      "title": "Domosphere Blog",
+      "feed_url": "https://www.domo.com/blog/feed/",
+      "website_url": "https://www.domo.com/blog/",
+      "description": "The Domo business intelligence (BI) blog. Where thought leadership and business strategy mingle. Check out how the BI world is changing! Domo is the Business Cloud, empowering organizations of all sizes with BI leverage at cloud scale in record time.",
+      "followers": {
+        "facebook": 71000,
+        "twitter": 69300
+      },
+      "image_url": "https://i1.feedspot.com/4511934.jpg?t=1612884219"
+    },
+    {
+      "title": "Dataversity - Business Intelligence",
+      "feed_url": "https://www.dataversity.net/category/data-topics/business-intelligence-data-topics/feed/",
+      "website_url": "https://www.dataversity.net/category/data-topics/business-intelligence-data-topics/",
+      "description": "Learn the latest business intelligence news and get a thorough business intelligence education through Dataversity's business intelligence articles. Dataversity offers rescues for IT professionals, executives, and business managers on data uses and management.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/4511952.jpg?t=1612884223"
+    },
+    {
+      "title": "SmartData Collective",
+      "feed_url": "https://www.smartdatacollective.com/category/business-intelligence/feed/",
+      "website_url": "https://www.smartdatacollective.com/category/business-intelligence/",
+      "description": "SmartData Collective is an online community that provides enterprise leaders access to the latest Business Intelligence trends. As a 'platform for recognized, global experts to share their insights through peer contributions, custom content publishing and alignment with industry leaders.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/16866.jpg?t=1616409397"
+    },
+    {
+      "title": "Jet Reports Blog",
+      "feed_url": "https://insightsoftware.com/blog/feed/",
+      "website_url": "https://insightsoftware.com/blog/",
+      "description": "The JetReports Blog features insights on Business Intelligence, marketing, sales, development, and related topics, with tips and information on maximizing and optimizing your data to drive results. Jet Reports is an affordable Business Intelligence and reporting solution that leverages existing investments to facilitate streamlined, informed decision-making.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 770,
+        "instagram": 733
+      },
+      "image_url": "https://i1.feedspot.com/4512206.jpg?t=1625555992"
+    },
+    {
+      "title": "Christian Steven Bi- Blog",
+      "feed_url": "https://go.christiansteven.com/bi-blog/rss.xml",
+      "website_url": "https://go.christiansteven.com/bi-blog",
+      "description": "ChristianSteven Software delivers advanced Business Intelligence (BI) solutions that solve mission-critical large enterprise needs and includes reporting, distribution, scheduling, dashboards and automating business processes.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 3900,
+        "instagram": 93
+      },
+      "image_url": "https://i1.feedspot.com/4511969.jpg?t=1612884211"
+    },
+    {
+      "title": "Reveal BI Blog",
+      "feed_url": "https://www.revealbi.io/blog/feed",
+      "website_url": "https://www.revealbi.io/blog",
+      "description": "Read our business intelligence blog to find out the latest about embedded analytics, data visualization, BI trends and more. Great practical tips delivered by our analytics experts. Reveal combines decades-long experience in data visualization, data access, and user experience with an innovative self-service solution. With Reveal, everyone can now use simple data visualization techniques to easily see and act on their own critical data.",
+      "followers": {
+        "facebook": 242,
+        "twitter": 854,
+        "instagram": 49
+      },
+      "image_url": "https://i1.feedspot.com/5359684.jpg?t=1641293622"
+    },
+    {
+      "title": "Intellify Solutions Blog",
+      "feed_url": "https://intellifysolutions.com/feed/",
+      "website_url": "https://intellifysolutions.com/blog/",
+      "description": "Read our thoughts, learnings. predictions, and everything related to technology in one place! We are an offshore development partner offering services in Business Intelligence, Data Analytics, Data Visualization, and Artificial Intelligence along with technology consulting for small to large organizations across the globe.",
+      "followers": {
+        "facebook": 822,
+        "twitter": 43
+      },
+      "image_url": "https://i1.feedspot.com/5359695.jpg?t=1641293107"
+    },
+    {
+      "title": "Tableau Blog",
+      "feed_url": "https://www.tableau.com/feed.rss",
+      "website_url": "https://www.tableau.com/blog",
+      "description": "Collection of news, tips & tricks, training, entertainment, and happenings around Tableau. Learn, play, and find your own insights.",
+      "followers": {
+        "facebook": 345100,
+        "twitter": 175000
+      },
+      "image_url": "https://i1.feedspot.com/4414879.jpg?t=1612884218"
+    },
+    {
+      "title": "Fingent Blog",
+      "feed_url": "https://www.fingent.com/feed/",
+      "website_url": "https://www.fingent.com/blog/",
+      "description": "Sign up to get the latest updates and insights on IT solutions like custom software and application development that will help your business to solve complex challenges",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4702144.jpg?t=1612884228"
+    },
+    {
+      "title": "ClicData Blog",
+      "feed_url": "https://www.clicdata.com/feed/",
+      "website_url": "https://www.clicdata.com/blog/",
+      "description": "All you need to know about business intelligence, data visualisation, or the future of data is in our blog. Read our experts' insights on these topics. ClicData makes Business Intelligence simpler and more accessible to all types of businesses. Our goal is to revolutionize how our clients use technology with new and fresh ideas and concepts.",
+      "followers": {
+        "facebook": 531,
+        "twitter": 851
+      },
+      "image_url": "https://i1.feedspot.com/4945672.jpg?t=1641293515"
+    },
+    {
+      "title": "Forrester \u00bb Business Intelligence",
+      "feed_url": "https://go.forrester.com/blogs/category/business-intelligence/feed/",
+      "website_url": "https://go.forrester.com/blogs/category/business-intelligence/",
+      "description": "Better ways of doing business are locked up in your company's data. Business intelligence can play the role of Rosetta Stone. Follow to read best practices for selecting and orchestrating business intelligence software.",
+      "followers": {
+        "twitter": 354300
+      },
+      "image_url": "https://i1.feedspot.com/5267580.jpg?t=1620883135"
+    },
+    {
+      "title": "The TIBCO Blog",
+      "feed_url": "https://www.tibco.com/blog/feed/",
+      "website_url": "https://www.tibco.com/blog/",
+      "description": "TIBCO Software Inc. unlocks the potential of real-time data for making faster, smarter decisions. Our Connected Intelligence platform seamlessly connects any application or data source; intelligently unifies data for greater access, trust, and control; and confidently predicts outcomes in real-time and at scale.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 21400
+      },
+      "image_url": "https://i1.feedspot.com/5267581.jpg?t=1618377477"
+    },
+    {
+      "title": "R-bloggers",
+      "feed_url": "https://www.r-bloggers.com/feed/",
+      "website_url": "https://www.r-bloggers.com/",
+      "description": "'R' is a language and open-source software used as a standard by statisticians in the development of statistical software. R-Bloggers focuses on tutorials and tips for using R to create effective and efficient applications for use in Business Intelligence and other solutions.",
+      "followers": {
+        "facebook": 83100,
+        "twitter": 106300
+      },
+      "image_url": "https://i1.feedspot.com/4512210.jpg?t=1612588496"
+    },
+    {
+      "title": "Aretove Technologies \u00bb Business Intelligence",
+      "feed_url": "https://www.aretove.com/business-intelligence/feed",
+      "website_url": "https://www.aretove.com/business-intelligence",
+      "description": "This section of Aretove Technologies is dedicated to articles on Business Intelligence. We are a data science company committed to providing software services and solutions at the intersection of business intelligence, artificial intelligence and machine Learning.",
+      "followers": {
+        "facebook": 446,
+        "twitter": 533
+      },
+      "image_url": "https://i1.feedspot.com/5359694.jpg?t=1641359037"
+    },
+    {
+      "title": "Helical Insight Blog",
+      "feed_url": "https://www.helicalinsight.com/blog/feed/",
+      "website_url": "https://www.helicalinsight.com/blog/",
+      "description": "Helical Insight is worlds first open source Business Intelligence framework. It is completely browser based solution and provides all the capabilities expected out of any BI tool like user role management, multi-tenant environment, exporting, email scheduling, device compatibility, Administration etc.",
+      "followers": {
+        "facebook": 635,
+        "twitter": 100
+      },
+      "image_url": "https://i1.feedspot.com/4512222.jpg?t=1612884256"
+    },
+    {
+      "title": "Pyramid Analytics Blog",
+      "feed_url": "https://www.pyramidanalytics.com/feed/",
+      "website_url": "https://www.pyramidanalytics.com/resources/blog/",
+      "description": "Pyramid Analytics is a recognized innovator in business analytics. With Pyramid, we've uniquely combined the best of self-service analytics and legacy BI systems. The result is a modern enterprise analytics platform that enables everyone in your company to make better, faster decisions based on the same trusted information. Read our business intelligence blog to find out the latest Pyramid Analytics news, BI Office features, and trends in business analytics.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 10500
+      },
+      "image_url": "https://i1.feedspot.com/5267585.jpg?t=1618379260"
+    },
+    {
+      "title": "BARC",
+      "feed_url": "https://barc.com/feed/",
+      "website_url": "https://barc.com/news/",
+      "description": "Get free industry-leading research on BI & Analytics software. Containing user & analyst ratings, market research findings, best practice guides & much more",
+      "followers": {
+        "twitter": 340
+      },
+      "image_url": "https://i1.feedspot.com/4512221.jpg?t=1612884258"
+    },
+    {
+      "title": "Paul Turley's SQL Server BI Blog",
+      "feed_url": "https://sqlserverbi.blog/feed/",
+      "website_url": "https://sqlserverbi.blog/",
+      "description": "Sharing my experiences with SQL Server BI, Data Modeling, SSAS Design, Power Pivot, Power BI, SSRS Advanced Design, Dashboards & Visualization",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4512229.jpg?t=1651314898"
+    },
+    {
+      "title": "ezdatamunch.com Blog",
+      "feed_url": "https://ezdatamunch.com/feed/",
+      "website_url": "https://ezdatamunch.com/blog/",
+      "description": "EzDataMunch provides BI Dashboards and Consulting Services to help companies with business growth by providing insights into business performance.",
+      "followers": {
+        "facebook": 404
+      },
+      "image_url": "https://i1.feedspot.com/5120860.jpg?t=1612884263"
+    },
+    {
+      "title": "Chris Webb's BI Blog",
+      "feed_url": "https://blog.crossjoin.co.uk/feed/",
+      "website_url": "https://blog.crossjoin.co.uk/",
+      "description": "My name's Chris Webb, and I'm a specialist in Analysis Services, MDX, Power Pivot, DAX, Power Query and Power BI in general. I've been blogging about Microsoft BI for over 10 years, and racked up over 1000 posts here!",
+      "followers": {
+        "twitter": 16800
+      },
+      "image_url": "https://i1.feedspot.com/4477456.jpg?t=1641359338"
+    },
+    {
+      "title": "Timo Elliott's Blog",
+      "feed_url": "https://timoelliott.com/blog/feed/atom",
+      "website_url": "https://timoelliott.com/blog/",
+      "description": "This blog tracks innovation in analytics and social media, including topics such as big data, collaborative decision-making, and social analytics. Timo Elliott is an innovation evangelist and international conference speaker who has presented to business and IT audiences in over fifty countries around the world.",
+      "followers": {
+        "twitter": 23000
+      },
+      "image_url": "https://i1.feedspot.com/540128.jpg?t=1608191479"
+    },
+    {
+      "title": "TDAN.com \u00bb Business Intelligence",
+      "feed_url": "https://tdan.com/category/data-topics/business-intelligence/feed",
+      "website_url": "https://tdan.com/category/data-topics/business-intelligence",
+      "description": "Quality Content for Data Management Professionals Since 1997. TDAN is the industry leading publication for people interested in learning about data administration and data management disciplines & businees intelligence.",
+      "followers": {
+        "facebook": 156,
+        "twitter": 989
+      },
+      "image_url": "https://i1.feedspot.com/4512212.jpg?t=1612884237"
+    },
+    {
+      "title": "InfoSol Blog",
+      "feed_url": "https://infosolblog.com/feed/",
+      "website_url": "https://infosolblog.com/",
+      "description": "We're Passionate About Business Intelligence.",
+      "followers": {
+        "facebook": 353,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/3819256.jpg?t=1612884286"
+    },
+    {
+      "title": "Stellar Consulting - Business Intelligence Experts",
+      "feed_url": "https://stellarconsulting.co.nz/feed/",
+      "website_url": "https://stellarconsulting.co.nz/news-blogs/",
+      "description": "Read what the Stellar Consulting team has to say on Business Intelligence Strategy, BI Technology, Data Warehousing, Advanced Analytics, Big Data and more.",
+      "followers": {
+        "facebook": 145,
+        "twitter": 415
+      },
+      "image_url": "https://i1.feedspot.com/4512040.jpg?t=1612884296"
+    },
+    {
+      "title": "PARIS Tech Blog",
+      "feed_url": "http://paristech.com/feed/",
+      "website_url": "https://paristech.com/blog/",
+      "description": "PARIS develops and implements BI solutions worldwide. We know there is a better way to work with data that makes people's lives better.",
+      "followers": {
+        "facebook": 362,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4511966.jpg?t=1612884271"
+    },
+    {
+      "title": "AlphaSense Blog",
+      "feed_url": "https://www.alpha-sense.com/feed/",
+      "website_url": "https://www.alpha-sense.com/blog/",
+      "description": "AlphaSense finds information on companies, data and themes from within millions of research documents in seconds, all with ONE simple search.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5032854.jpg?t=1612884233"
+    },
+    {
+      "title": "SplashBI Blog",
+      "feed_url": "https://splashbi.com/feed/",
+      "website_url": "https://splashbi.com/blog/",
+      "description": "SplashBI covers articles related to reporting, analytics, business intelligence, and workforce analytics. SplashBI helps organizations make the very best business decisions by providing instant access to data from disparate systems in the form of reports, visualizations, & trends.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5083967.jpg?t=1641290796"
+    },
+    {
+      "title": "Tim Mitchell - Business Intelligence",
+      "feed_url": "https://www.timmitchell.net/feed/",
+      "website_url": "https://www.timmitchell.net/",
+      "description": "Tim Mitchell is a business intelligence consultant, author, and trainer. He specializes in ETL/SSIS, data warehouse architecture, and data quality.",
+      "followers": {
+        "facebook": 179,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4512039.jpg?t=1612884260"
+    },
+    {
+      "title": "IT Business Edge",
+      "feed_url": "https://www.itbusinessedge.com/business-intelligence/feed/",
+      "website_url": "https://www.itbusinessedge.com/business-intelligence/",
+      "description": "A well-known, premium B2B Technology brand, IT Business Edge is part of the QuinStreet Enterprise. IT Business Edge seeks to help executives make strategic decisions by providing articles and resources from leading industry experts in Business Intelligence.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/1040179.jpg?t=1616408199"
+    },
+    {
+      "title": "BI Data Intelligence Blog",
+      "feed_url": "https://bidataintel.com/blog/feed/",
+      "website_url": "https://bidataintel.com/blog/",
+      "description": "Learn the latest data intelligence news from the BDI business blog, created by our team of business experts. BDI was founded in 2019 by Lee Robbins. BDI's mission is to help organisations use data intelligently. As a result, BDI offers a variety of services to help each organisation unlock the hidden value of their data. Whether you're searching for an easier way to make data-informed decisions or need help with managing to budget, BDI can work with you to find the solution.",
+      "followers": {
+        "twitter": 16,
+        "instagram": 60
+      },
+      "image_url": "https://i1.feedspot.com/5359693.jpg?t=1641292850"
+    },
+    {
+      "title": "TRG International \u00bb Business Intelligence",
+      "feed_url": "https://blog.trginternational.com/topic/business-intelligence/rss.xml",
+      "website_url": "https://blog.trginternational.com/topic/business-intelligence",
+      "description": "Be updated with the latest trends, advice and ideas in accounting, hospitality, financial management and technology enterprises. TRG International is a global market-leading professional services firm, focused on delivering technical excellence. Innovation is at the forefront of our efforts, we offer the latest in the cloud, A.I., and mobile technologies - providing a launching pad for sustainable growth.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 5400
+      },
+      "image_url": "https://i1.feedspot.com/5359690.jpg?t=1641292341"
+    },
+    {
+      "title": "Athena IT Solutions \u00bb Business Intelligence",
+      "feed_url": "https://athena-solutions.com/category/business-intelligence/feed/",
+      "website_url": "https://athena-solutions.com/category/business-intelligence/",
+      "description": "Read articles on Business Intelligence by Athena IT Solutions in this section. Athena IT Solutions offers data warehousing and business intelligence consulting services. The experts at Athena IT Solutions have over twenty years of business intelligence experience, having worked on over 100 successful projects in various industries such as financial services, healthcare, consumer product goods, retail, telecom and high tech.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5359683.jpg?t=1641291036"
+    },
+    {
+      "title": "BI Hub Blog",
+      "feed_url": "https://bihub.com/feed/",
+      "website_url": "https://bihub.com/blogs/",
+      "description": "Learn about BI Hub as an enterprise BI portal and how it empowers business intelligence reporting in enterprises with blogs. BI Hub is ideal for any organization that wants to create a unified BI experience for their report consumers. It helps you to integrate all your BI reports, dashboards from the existing analytics system and provides you with a personalized branded BI Portal experience.",
+      "followers": {
+        "facebook": 21,
+        "twitter": 40
+      },
+      "image_url": "https://i1.feedspot.com/5359692.jpg?t=1641291210"
+    },
+    {
+      "title": "bi5 Blog",
+      "feed_url": "https://www.bi5.com.au/feed/",
+      "website_url": "https://www.bi5.com.au/business-intelligence-software-blog/",
+      "description": "The latest news, industry trends, and updates in Business Intelligence software & technologies from bi5. Our aim is to empower our customers to spend less time coordinating data and more time analyzing it.",
+      "followers": {
+        "facebook": 20,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/5359681.jpg?t=1642148827"
+    },
+    {
+      "title": "Visiongain Blog",
+      "feed_url": "https://www.visiongain.com/feed/",
+      "website_url": "https://www.visiongain.com/blog/",
+      "description": "Visiongain publishes independent, insightful, analytical market-led business information. Reports cover a 10 year forecast & company analysis; in rapidly evolving economic and technological landscapes, Visiongain reports will help you understand the opportunities from changes in technologies, materials & regulations.",
+      "followers": {
+        "facebook": 449,
+        "twitter": 1200,
+        "instagram": 115
+      },
+      "image_url": "https://i1.feedspot.com/5005992.jpg?t=1612884254"
+    },
+    {
+      "title": "Key2 Consulting Blog",
+      "feed_url": "https://key2consulting.com/feed/",
+      "website_url": "https://key2consulting.com/blog/",
+      "description": "Key2 Consulting was founded with one mission in mind - to help businesses like yours get the most out of your data.Since our inception nearly 10 years ago, we have seen the data warehousing and business intelligence landscape change drastically. Today, outstanding data analytics is all about speed, accuracy, and reliability. It is our mission to help you optimize yours. Stay in the know by reading our technical and functional articles.",
+      "followers": {
+        "facebook": 20,
+        "twitter": 735
+      },
+      "image_url": "https://i1.feedspot.com/5267583.jpg?t=1618380149"
+    },
+    {
+      "title": "BI4Cloud Blog",
+      "feed_url": "https://www.bi4cloud.com/blog/feed/",
+      "website_url": "https://www.bi4cloud.com/blog/",
+      "description": "BI4Cloud includes blogs which provide Effortless Business Intelligence.",
+      "followers": {
+        "facebook": 18,
+        "twitter": 154,
+        "instagram": 47
+      },
+      "image_url": "https://i1.feedspot.com/4512235.jpg?t=1612884281"
+    },
+    {
+      "title": "Sage Intelligence Blog",
+      "feed_url": "https://www.sageintelligence.com/blog/feed/",
+      "website_url": "https://www.sageintelligence.com/blog/",
+      "description": "Get better business insight with flexible Excel-based reporting. As a business owner in today's technologically revolutionary environment, it's becoming more and more evident that, in order to stay up-to-date and remain relevant, you need to have your latest data readily available to make those crucial business decisions.",
+      "followers": {
+        "twitter": 993
+      },
+      "image_url": "https://i1.feedspot.com/4512032.jpg?t=1612884305"
+    },
+    {
+      "title": "Perceptual Edge Blog",
+      "feed_url": "https://www.perceptualedge.com/blog/?feed=rss2",
+      "website_url": "https://www.perceptualedge.com/blog/",
+      "description": "A Visual Business Intelligence blog by Stephen Few. This blog is written by Stephen Few, a leading expert in data visualisation and business intelligence. You won't find many glittering charts or rich infographics here, but you will find a decade's worth of well-written and thought provoking articles about statistics, analytics and 'data viz' tools.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4512191.jpg?t=1612884252"
+    },
+    {
+      "title": "Panorama Blog",
+      "feed_url": "https://panorama.com/feed/",
+      "website_url": "https://panorama.com/blog/",
+      "description": "Panorama is innovative business intelligence software company, working to make business intellegence analysis simple. Discover our software solutions here.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4512189.jpg?t=1612884265"
+    },
+    {
+      "title": "Reportserver Blog",
+      "feed_url": "https://reportserver.net/en/blog/",
+      "website_url": "https://reportserver.net/en/blog/",
+      "description": "ReportServer is the modern and versatile business intelligence (OSBI) platform for your company.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5359682.jpg?t=1641363432"
+    },
+    {
+      "title": "To-Increase \u00bb Analytics and Business intelligence",
+      "feed_url": "https://www.to-increase.com/analytics-and-business-intelligence/blog/rss.xml",
+      "website_url": "https://staedean.com/blog",
+      "description": "This section features articles on Analytics and Business intelligence. Founded in 2005, To-Increase provides business software solutions to over 2200 mid-market and enterprise customers in 45 countries.",
+      "followers": {
+        "facebook": 566,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5359698.jpg?t=1641291498"
+    },
+    {
+      "title": "Phocas Software Blog",
+      "feed_url": "https://www.phocassoftware.com/resources/blog/rss.xml",
+      "website_url": "https://www.phocassoftware.com/resources/blog",
+      "description": "Business intelligence software blog is a collection of the latest trends about data analysis written by industry experts specifically for mid-market manufacturers, distributors and retailers. Learn the latest trends in business intelligence for your industry, job role or ERP through our blog.",
+      "followers": {
+        "facebook": 927,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4512227.jpg?t=1612884240"
+    },
+    {
+      "title": "ScienceSoft Blog \u00bb Data Analytics",
+      "feed_url": "https://www.scnsoft.com/blog/category/data-analytics/",
+      "website_url": "https://www.scnsoft.com/blog/category/data-analytics/",
+      "description": "Welcome to our Business Intelligence blog for CIOs, IT managers and analysts where we cover the trickiest BI-related issues. If you want to read about recent BI trends to empower your business or learn how to visualize your data to satisfy different business users needs you've landed in the right place!",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 915
+      },
+      "image_url": "https://i1.feedspot.com/4959149.jpg?t=1612884221"
+    },
+    {
+      "title": "Panintelligence Blog",
+      "feed_url": "https://panintelligence.com/blog/feed/",
+      "website_url": "https://panintelligence.com/blog/",
+      "description": "Panintelligence is a fast-growing predictive analytics specialist building a global community. We are driven by one purpose: to make data management amazing and our goal is to be the BI partner of choice for the SaaS community. Our embedded business intelligence and analytics solution, pi, is made up of three powerful elements - reporting, data visualization dashboards and predictive analytics.",
+      "followers": {
+        "facebook": 86,
+        "twitter": 2200,
+        "instagram": 212
+      },
+      "image_url": "https://i1.feedspot.com/5359689.jpg?t=1641293011"
+    },
+    {
+      "title": "MineralTree Blog",
+      "feed_url": "https://www.mineraltree.com/feed/",
+      "website_url": "https://www.mineraltree.com/blog/",
+      "description": "MineralTree provides the easiest to use Accounts Payable (AP) and Payment Automation solutions for finance professionals. MineralTree streamlines AP, giving customers unparalleled visibility and significant cost savings in an affordable, integrated platform that is guaranteed secure.",
+      "followers": {
+        "facebook": 645,
+        "twitter": 1200,
+        "instagram": 663
+      },
+      "image_url": "https://i1.feedspot.com/4775970.jpg?t=1612884234"
+    },
+    {
+      "title": "Business Intelligence Group Blog",
+      "feed_url": "https://www.bintelligence.com/blog?format=RSS",
+      "website_url": "https://www.bintelligence.com/blog",
+      "description": "The Business Intelligence Group was founded with a mission to reward organizations, products and individuals for superior performances with business awards.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4512036.jpg"
+    },
+    {
+      "title": "Sisense Blog",
+      "feed_url": "https://www.sisense.com/blog/",
+      "website_url": "https://www.sisense.com/blog/",
+      "description": "Read all the latest news, discussions and practical tips on complex data analytics, business intelligence software and big data.",
+      "followers": {
+        "facebook": 27000,
+        "twitter": 6800,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4511968.jpg"
+    },
+    {
+      "title": "David Lai's Business Intelligence Blog",
+      "feed_url": "http://davidlai101.com/blog/feed/",
+      "description": "Tips, Tricks, and Best practices to get the most out of your BI implementation",
+      "followers": {
+        "twitter": 105
+      },
+      "image_url": "https://i1.feedspot.com/4511997.jpg?t=1612884293"
+    }
+  ]
+}

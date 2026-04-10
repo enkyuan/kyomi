@@ -1,0 +1,27 @@
+{
+  "category": "Minnesota Conservative",
+  "source_url": "https://rss.feedspot.com/minnesota_conservative_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Conservative Brief",
+      "feed_url": "https://www.theconservativebrief.com/feed/",
+      "website_url": "https://www.theconservativebrief.com/",
+      "description": "The Conservative Brief was created to promote independent thinking and to share common sense ideas. All The Conservative Brief editorials have these things in common-they promote American family values, freedom, independence, common-sense thinking and self-reliance, taking responsibility as individuals for our own lives in order to help keep our families safe and our country strong.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 609
+      },
+      "image_url": "https://i1.feedspot.com/5375045.jpg?t=1645681412"
+    },
+    {
+      "title": "The Brad Carlson Blog",
+      "feed_url": "https://bradley1969.blogspot.com/feeds/posts/default",
+      "website_url": "https://bradley1969.blogspot.com/",
+      "description": "'Are the things you are living for worth Christ dying for?' - epitaph of Leonard Ravenhill. The Brad Carlson Blog is managed by a conservative radio host named Brad Carlson. It discusses his beliefs and his radio show.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/7257382.jpg?t=1708510487"
+    }
+  ]
+}

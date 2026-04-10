@@ -1,0 +1,76 @@
+{
+  "category": "Austria Technology",
+  "source_url": "https://rss.feedspot.com/austria_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "Atwork.at Blog",
+      "feed_url": "https://blog.atwork.at/syndication.axd",
+      "website_url": "https://blog.atwork.at/",
+      "description": "This is the blog of Atwork corporation. Atwork blog informs about news and info about Microsoft, technology, cloud services and more. Our team consists of collaborators and independent experts and we deliver Know-How and tips & tricks for IT-Professionals and Developers. We started this blog in 2007 and currently have about 2.000 articles available here. Atwork is an IT service provider and offers expertise in different areas. We provide support and advice, and develop business solutions to meet the growing application of Internet technologies in business processes.",
+      "followers": {
+        "facebook": 397,
+        "twitter": 84
+      },
+      "image_url": "https://i1.feedspot.com/5526055.jpg?t=1679577073"
+    },
+    {
+      "title": "Techbold Blog",
+      "feed_url": "https://www.techbold.at/feed",
+      "website_url": "https://www.techbold.at/blog",
+      "description": "We are a rapidly growing IT company in the heart of Vienna. More than 600 companies now entrust their IT infrastructure to around 150 techbold employees. Together we are building one of the leading IT service providers for small and medium-sized companies in Austria. We act extremely solution-oriented, love challenges and live our credo: It's never crowded along the extra mile. Explore the latest news and trends - everything that moves us.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5526143.jpg?t=1679633992"
+    },
+    {
+      "title": "Willhaben Tech Blog",
+      "feed_url": "https://tech.willhaben.at/feed",
+      "website_url": "https://tech.willhaben.at/",
+      "description": "Willhaben is the largest marketplace app in Austria. Stay up to date with the latest news, trends, technology news, insights and more!",
+      "followers": {
+        "facebook": 169600,
+        "twitter": 352
+      },
+      "image_url": "https://i1.feedspot.com/5526054.jpg?t=1679577050"
+    },
+    {
+      "title": "Digitale Welt",
+      "feed_url": "https://digitalewelt.at/feed/",
+      "website_url": "https://digitalewelt.at/",
+      "description": "Digitale Welt is a blog for smart technology and entertainment. On this blog, you will find a new review, an unboxing, a test or a step-by-step guide at least twice a month. I deal with the topics Smart Home, Kodi, Raspberry Pi, digital life and top apps and gadgets.",
+      "followers": {
+        "facebook": 113,
+        "twitter": 23
+      },
+      "image_url": "https://i1.feedspot.com/5526148.jpg?t=1679634301"
+    },
+    {
+      "title": "Helferlein \u00bb Tech News",
+      "feed_url": "https://helferline.at/category/tech-news/feed/",
+      "website_url": "https://helferline.at/category/tech-news/",
+      "description": "The HELFERLINE blog informs readers about innovative news from the technology sector, new inventions and things worth knowing for those who are interested. There is also an insight into the everyday life of little helpers, as well as tips and tricks for solving technical problems. We offer a cost-effective assistance service for all kinds of technical problems, specially designed for private individuals. Just call us and describe your problem, we will send you a competent and friendly helper who will help you with all difficulties.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5526147.jpg?t=1679634339"
+    },
+    {
+      "title": "TECHNIK-Depot Blog",
+      "feed_url": "https://technik-depot.at/blog/?sRss=1",
+      "website_url": "https://technik-depot.at/blog/",
+      "description": "Explore news, current topics, technology, trends and product comparisons. In the TECHNIK-Depot blog, we try to pick up interesting topics for you, collect information about new products and technologies and present practical tests of our products.",
+      "followers": {
+        "facebook": 89,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5526164.jpg?t=1679635711"
+    },
+    {
+      "title": "SALAMANTEX",
+      "feed_url": "https://medium.com/feed/@salamantex",
+      "website_url": "https://salamantex.medium.com/",
+      "description": "Established in 2017, SALAMANTEX has since rolled out its solutions across Austria and is currently expanding throughout the entire Euro zone. This growth is fast-tracked through partnerships with major acquirers and point-of-sale device manufacturers for a seamless integration into merchants' existing payment infrastructures. Explore the articles on technology, trends, news and more in Austria.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5527792.jpg?t=1679915792"
+    }
+  ]
+}

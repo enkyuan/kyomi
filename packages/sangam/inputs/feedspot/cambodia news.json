@@ -1,0 +1,161 @@
+{
+  "category": "Cambodia News",
+  "source_url": "https://rss.feedspot.com/cambodia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Koh Santepheap Daily",
+      "feed_url": "https://kohsantepheapdaily.com.kh/feed",
+      "website_url": "https://kohsantepheapdaily.com.kh/",
+      "description": "Find the latest Cambodian news covering topics like the economy, politics, sports, technology, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5347068.jpg?t=1638261835"
+    },
+    {
+      "title": "Kampuchea Thmey Daily",
+      "feed_url": "https://www.kampucheathmey.com/feed",
+      "website_url": "https://www.kampucheathmey.com/",
+      "description": "Kampuchea Thmey Newspaper is a leading website in Cambodia that contributes to the promotion of education, social, economic, political and breaking news.",
+      "followers": {
+        "facebook": 93100
+      },
+      "image_url": "https://i1.feedspot.com/5347069.jpg?t=1638261835"
+    },
+    {
+      "title": "Cambodia Express News",
+      "feed_url": "https://cen.com.kh/feed",
+      "website_url": "https://cen.com.kh/",
+      "description": "National news on politics, economy, entertainment, technology, health, beauty, and more.",
+      "followers": {
+        "facebook": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/5347114.jpg?t=1638261904"
+    },
+    {
+      "title": "Khmer Breaking News",
+      "feed_url": "https://kbn.news/feed",
+      "website_url": "https://kbn.news/",
+      "description": "National and international news on agriculture, health, sports, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5347112.jpg?t=1638261901"
+    },
+    {
+      "title": "DAP News",
+      "feed_url": "https://dap-news.com/feed/",
+      "website_url": "https://dap-news.com/",
+      "description": "Find the best breaking news in Cambodia.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5347110.jpg?t=1638261899"
+    },
+    {
+      "title": "CamNEWS",
+      "feed_url": "http://www.camnews.org/feed/",
+      "website_url": "http://www.camnews.org/",
+      "description": "Camnews is the Cambodian Internet Newspaper. Get articles on sports, technology, business, life, health, and more.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5347061.jpg?t=1638261830"
+    },
+    {
+      "title": "The Cambodia News.Net",
+      "feed_url": "http://feeds.thecambodianews.net/rss/c7e1014a94f7e43b",
+      "website_url": "https://www.thecambodianews.net/",
+      "description": "The Cambodia News.Net includes comprehensive local, international, and business headlines, as well as in-depth local feature stories, regional maps, foreign exchange coverage, and tourist information.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 591
+      },
+      "image_url": "https://i1.feedspot.com/5347058.jpg?t=1638261828"
+    },
+    {
+      "title": "Cambodian Times",
+      "feed_url": "http://feeds.cambodiantimes.com/rss/c7e1014a94f7e43b",
+      "website_url": "https://www.cambodiantimes.com/",
+      "description": "Cambodian Times is an online newspaper for Cambodia, with daily breaking news, local features articles, in-depth community features and reports on business and finance, as well as weather reports, daily quotes of interest, and reader polls.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5347057.jpg?t=1638261827"
+    },
+    {
+      "title": "MONOROOM.info",
+      "feed_url": "https://monoroom.info/feed/",
+      "website_url": "https://monoroom.info/",
+      "description": "All the latest news in the world covering topics like culture, life, sports, technology, entertainment, and more.",
+      "followers": {
+        "facebook": 780200,
+        "twitter": 3000,
+        "instagram": 849
+      },
+      "image_url": "https://i1.feedspot.com/5347109.jpg?t=1638261899"
+    },
+    {
+      "title": "The Cambodia Daily",
+      "feed_url": "https://english.cambodiadaily.com/feed/",
+      "website_url": "https://english.cambodiadaily.com/",
+      "description": "The Cambodia Daily was a daily English-language newspaper that covered news, politics, business, and culture in Cambodia. However, it ceased publication in September 2017 due to tax and licensing issues.",
+      "followers": {
+        "facebook": 530400,
+        "twitter": 66200
+      },
+      "image_url": "https://i1.feedspot.com/5347059.jpg?t=1638261829"
+    },
+    {
+      "title": "VOA Khmer",
+      "feed_url": "https://khmer.voanews.com/api/",
+      "website_url": "https://khmer.voanews.com/",
+      "description": "News, in-depth reporting, expert analysis about the latest news in Cambodia, the United States, and around the world.",
+      "followers": {
+        "facebook": 7900000,
+        "twitter": 347600,
+        "instagram": 160900
+      },
+      "image_url": "https://i1.feedspot.com/5347108.jpg?t=1638261898"
+    },
+    {
+      "title": "Nokor Wat News",
+      "feed_url": "http://nokorwatnews.com/feed",
+      "website_url": "http://nokorwatnews.com/",
+      "description": "Nokorwat News is the first newspaper in Cambodia. Articles on politics, sports, technology, health and more.",
+      "followers": {
+        "facebook": 182100
+      },
+      "image_url": "https://i1.feedspot.com/5347111.jpg?t=1638261900"
+    },
+    {
+      "title": "Khmer Times",
+      "feed_url": "https://www.khmertimeskh.com/feed/",
+      "website_url": "https://www.khmertimeskh.com/",
+      "description": "The latest Cambodia News. Khmer Times is the region's fastest growing newspaper with daily insights into Cambodia.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5347060.jpg?t=1638261829"
+    },
+    {
+      "title": "Bayon Television",
+      "feed_url": "http://bayontv.com.kh/feed/",
+      "website_url": "https://bayontv.com.kh/",
+      "description": "Bayon Television is one of the leading TV stations in Cambodia - with full broadcast coverage nationwide. Bayon TV is the leader in News, Dramas, Concerts, Boxing, and Variety Entertainment programs.",
+      "followers": {
+        "facebook": 2600000,
+        "instagram": 71600
+      },
+      "image_url": "https://i1.feedspot.com/5347115.jpg?t=1638261904"
+    },
+    {
+      "title": "The Phnom Penh Post",
+      "feed_url": "https://www.phnompenhpost.com/",
+      "website_url": "https://www.phnompenhpost.com/",
+      "description": "Cambodia's oldest English-language newspaper. Latest news on business, politics, sports, lifestyle, travel and more.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 315700,
+        "instagram": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5347071.jpg?t=1638261837"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "category": "UK Whole Food",
+  "source_url": "https://rss.feedspot.com/uk_whole_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Good Eatings",
+      "feed_url": "https://goodeatings.com/recipes/feed/",
+      "website_url": "https://goodeatings.com/recipes/",
+      "description": "Welcome! My name is Malin and with my love for good, wholesome vegan food I started this blog. Here I share all my favourite recipes, my travel shenanigans and general thoughts on this and that. Stay tuned for delicious food and lots of good stuff",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 396,
+        "instagram": 43000
+      },
+      "image_url": "https://i1.feedspot.com/4507777.jpg?t=1606391246"
+    },
+    {
+      "title": "Nirvana Cakery",
+      "feed_url": "https://nirvanacakery.com/feed/",
+      "website_url": "https://nirvanacakery.com/",
+      "description": "Wholesome Seasonal Plant Based Recipes.Nirvana Cakery is on a mission to create wholesome and delicious recipes that are not only good for you, but make you feel great!",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 864,
+        "instagram": 9900
+      },
+      "image_url": "https://i1.feedspot.com/4690210.jpg?t=1613994634"
+    }
+  ]
+}

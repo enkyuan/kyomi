@@ -1,0 +1,800 @@
+{
+  "category": "Audiobooks",
+  "source_url": "https://rss.feedspot.com/audiobooks_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Audioblog",
+      "feed_url": "https://blog.audiobooks.com/feed/",
+      "website_url": "https://blog.audiobooks.com/",
+      "description": "Audiobook.com started this blog named Audioblog to share their recommended reads, their tech tips for happy listening, and to fill in on all the buzz in the world of audiobooks. Audiobook reviews and news are mostly covered in the blog.",
+      "followers": {
+        "facebook": 35100,
+        "twitter": 9900
+      },
+      "image_url": "https://i1.feedspot.com/5173476.jpg?t=1626241269"
+    },
+    {
+      "title": "The Audiobook Blog",
+      "feed_url": "https://theaudiobookblog.com/feed/",
+      "website_url": "https://theaudiobookblog.com/",
+      "description": "The best place for books and audiobooks reviews. News about narrators, authors and the audiobook industry. It provide a best platform for all Audio Booklovers.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5173474.jpg?t=1626241274"
+    },
+    {
+      "title": "Brians Book Blog",
+      "feed_url": "https://www.briansbookblog.com/feed/",
+      "website_url": "https://www.briansbookblog.com/",
+      "description": "Best audiobook reviews from a group of people who love audiobooks. Check back daily for more reviews, features, and more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5173457.jpg?t=1614262150"
+    },
+    {
+      "title": "Lovely Audiobooks",
+      "feed_url": "https://lovelyaudiobooks.info/feed/",
+      "website_url": "https://lovelyaudiobooks.info/",
+      "description": "Lovely Audiobooks is basically a book blog, where you can find Fantasy and Romance Audible books that are really worth your time. Also helping you to find the best unlimited audiobook subscription. All in one place for review and blog related to audiobooks.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5173534.jpg?t=1626241379"
+    },
+    {
+      "title": "Caffeinated Reviewer",
+      "feed_url": "https://caffeinatedbookreviewer.com/feed",
+      "website_url": "https://caffeinatedbookreviewer.com/",
+      "description": "Here you will find Book reviews, news, author information, guest posts, blog tours and giveaways...and coffee lots and lots of coffee. Welcome to Caffeinated Reviewer. I am an avid reader, audiobook junkie and coffee drinker.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4961597.jpg?t=1614173608"
+    },
+    {
+      "title": "Between The Lines: Books'n'Stuff \u00bb Audiobooks",
+      "feed_url": "https://betweenthelinesbookblog.com/tag/audiobook/feed/",
+      "website_url": "https://betweenthelinesbookblog.com/tag/audiobook/",
+      "description": "Books have been a constant throughout my life and I love sharing those I've enjoyed with others. I've been writing reviews and blogging about those books I've enjoyed for a few years now and still find it very satisfying and pleasurable. Apart from anything else, it's a good way for me to keep track of the books I read and listen to and if it's helpful and/or enjoyable for others so much the better. All reviews on the blog are just my personal opinions and thoughts on books I've read/listened to.",
+      "followers": {
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/5248395.jpg?t=1614230160"
+    },
+    {
+      "title": "BOOK RIOT \u00bb Audiobooks",
+      "feed_url": "https://bookriot.com/category/audiobooks/feed/",
+      "website_url": "https://bookriot.com/category/audiobooks/",
+      "description": "Book Riot celebrates all things books! Find the best books for your next read or book club, including new books in all genres. Get more books in your face. Whether you're looking for free audiobooks you can download online, or hankering after full-cast Harry Potter audiobooks, we've got recommendations for the best audiobooks you can get in your ears.",
+      "followers": {
+        "facebook": 875100,
+        "twitter": 262600,
+        "instagram": 306200
+      },
+      "image_url": "https://i1.feedspot.com/5248178.jpg?t=1614166985"
+    },
+    {
+      "title": "Libro.fm \u00bb Audiobooks",
+      "feed_url": "https://blog.libro.fm/category/audiobooks/feed/",
+      "website_url": "https://blog.libro.fm/category/audiobooks/",
+      "description": "Libro.fm provides a dedicated blog for all Audiobook lover and frequently post about new trends and audiobooks. Libro.fm makes it possible for you to buy audiobooks directly through a local bookstore.",
+      "followers": {
+        "facebook": 12900,
+        "twitter": 15300,
+        "instagram": 115200
+      },
+      "image_url": "https://i1.feedspot.com/5173637.jpg?t=1626241384"
+    },
+    {
+      "title": "Out Loud Blog",
+      "feed_url": "http://feeds.feedburner.com/BlogOutLoud",
+      "website_url": "https://www.learnoutloud.com/content/blog/",
+      "description": "LearnOutLoud.com is your one-stop destination for audio and video learning. Browse over 50,000 educational audio books, MP3 downloads, podcasts, and videos.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5223793.jpg?t=1614149922"
+    },
+    {
+      "title": "AudiobooksNow Blog",
+      "feed_url": "https://www.audiobooksnow.com/blog/feed/",
+      "website_url": "https://www.audiobooksnow.com/blog/",
+      "description": "AudiobooksNow is the premier digital audiobook download and streaming service with the best selection and best pricing of digital audiobook content. Here, you will find digital audiobook related news and information.",
+      "followers": {
+        "facebook": 16300,
+        "twitter": 204
+      },
+      "image_url": "https://i1.feedspot.com/5248484.jpg?t=1614240730"
+    },
+    {
+      "title": "Modern Mrs Darcy \u00bb Audiobooks",
+      "feed_url": "https://modernmrsdarcy.com/category/books-reading/audiobooks/feed/",
+      "website_url": "https://modernmrsdarcy.com/category/books-reading/audiobooks/",
+      "description": "Anne Bogel is an author, the creator of the blog Modern Mrs. Darcy, and host of What Should I Read Next? podcast. Modern Mrs. Darcy, which derives its name from a Jane Austen book, is a lifestyle blog for nerds who appreciate Anne's modus operandi of approaching old, familiar ideas from new and fresh angles. While Modern Mrs. Darcy isn't strictly a book blog, Anne writes frequently about books and reading.",
+      "followers": {
+        "facebook": 65300,
+        "twitter": 13300,
+        "instagram": 81400
+      },
+      "image_url": "https://i1.feedspot.com/5248308.jpg?t=1614175388"
+    },
+    {
+      "title": "Lightspeed Magazine",
+      "feed_url": "https://feeds.feedburner.com/LightspeedMagazine",
+      "website_url": "https://www.lightspeedmagazine.com/",
+      "description": "Lightspeed Magazine is a digital science fiction & fantasy magazine edited by John Joseph Adams a Winner of the 2014 & 2015 Hugo Award. Find various audiobooks here!",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 32700
+      },
+      "image_url": "https://i1.feedspot.com/132688.jpg?t=1614150371"
+    },
+    {
+      "title": "Listen Up! That's What I'm Talking About\u2026 \u00bb Audiobook Reviews",
+      "feed_url": "https://twimom227.com/category/listen-up/feed",
+      "website_url": "https://twimom227.com/category/listen-up",
+      "description": "Providing honest reviews and discussion covering the romance and urban fantasy genres (and a few others from time to time).",
+      "followers": {
+        "facebook": 860,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5248320.jpg?t=1614176755"
+    },
+    {
+      "title": "Beware Of The Reader \u00bb Audiobook Reviews",
+      "feed_url": "https://www.bewareofthereader.com/category/reviews/audiobook/feed/",
+      "website_url": "https://www.bewareofthereader.com/category/reviews/audiobook/",
+      "description": "Here,you will find articles on various books along with their reviews.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 533
+      },
+      "image_url": "https://i1.feedspot.com/5248677.jpg?t=1614256877"
+    },
+    {
+      "title": "Fabulous Book Fiend \u00bb Audiobooks",
+      "feed_url": "http://www.fabulousbookfiend.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.fabulousbookfiend.com/search/label/Audiobook",
+      "description": "I am a busy teacher but just love to escape with a fabulous book and a cup of coffee. Before having my own blog I contributed to The Sweet Bookshelf Blog and then decided to start this baby!",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4888267.jpg?t=1600429017"
+    },
+    {
+      "title": "The Faerie Review \u00bb Audiobooks",
+      "feed_url": "https://www.thefaeriereview.com/feed/",
+      "website_url": "https://www.thefaeriereview.com/",
+      "description": "Bringing you the magic of books! Here, you will find various Book reviews and promos.",
+      "followers": {
+        "facebook": 659,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5248470.jpg?t=1614239527"
+    },
+    {
+      "title": "Naxos AudioBooks Blog",
+      "feed_url": "https://naxosaudiobooks.com/category/nab-blog/feed/",
+      "website_url": "https://naxosaudiobooks.com/category/nab-blog/",
+      "description": "Naxos AudioBooks was founded in 1994 by Klaus Heymann and Nicolas Soames with the purpose of providing classic literature with classical music on CD and cassette. It is committed to expanding its list of quality audiobooks for dissemination through all the new media.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5173697.jpg?t=1626241404"
+    },
+    {
+      "title": "Good Books & Good Wine \u00bb Audiobooks",
+      "feed_url": "https://goodbooksandgoodwine.com/tag/audiobook/feed",
+      "website_url": "https://goodbooksandgoodwine.com/tag/audiobook",
+      "description": "April is in her 30s and created Good Books And Good Wine. She works for a non-profit. April always has a book on hand. In her free time she can be found binge watching The Office with her husband and toddler, spending way too much time on Pinterest or exploring her neighborhood.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 8400,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5248459.jpg?t=1614237323"
+    },
+    {
+      "title": "Suzanne Rogerson Fantasy Author",
+      "feed_url": "https://suzannerogersonfantasyauthor.com/feed/",
+      "website_url": "https://suzannerogersonfantasyauthor.com/",
+      "description": "Suzanne lives in Middlesex, England with her hugely encouraging husband and two children & has been self publishing for a few years now. She wrote her first novel at the age of 12 & has wrote various books namely Visions of Zarua, The Lost Sentinel, The Sentinel's Reign and The Sentinel's Alliance. All of her books are in the process of being produced into audiobooks.",
+      "followers": {
+        "facebook": 296,
+        "twitter": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5248086.jpg?t=1614152144"
+    },
+    {
+      "title": "The Unseen Library \u00bb Audiobooks",
+      "feed_url": "https://unseenlibrary.com/category/audiobook/feed/",
+      "website_url": "https://unseenlibrary.com/category/audiobook/",
+      "description": "Expert reviews of the latest and the best in Fantasy, Historical Fiction, Science Fiction and Crime Fiction from an Australian reviewer.",
+      "followers": {
+        "twitter": 442
+      },
+      "image_url": "https://i1.feedspot.com/5248543.jpg?t=1614248913"
+    },
+    {
+      "title": "Rainbow Gold Reviews \u00bb Audiobooks",
+      "feed_url": "https://rainbowgoldreviews.wordpress.com/category/book-format/audiobook/feed/",
+      "website_url": "https://rainbowgoldreviews.wordpress.com/category/book-format/audiobook/",
+      "description": "Follow the Rainbow to the Pot of Gold! We will review and share the many great LGBT and M/M Romance treasures this genre has to offer!",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/5248464.jpg?t=1614237994"
+    },
+    {
+      "title": "FictionFan's Book Reviews \u00bb Audiobooks",
+      "feed_url": "https://fictionfanblog.wordpress.com/tag/audiobook/feed/",
+      "website_url": "https://fictionfanblog.wordpress.com/tag/audiobook/",
+      "description": "Reviews of books.. and occasional other stuff. Welcome to FictionFan's Book Reviews! I've been reviewing books for several years now and have got into the habit of reviewing everything I read. I do it mainly for my own pleasure, to remind me of what I liked about a book, but I hope other people might find them interesting too.",
+      "followers": {
+        "twitter": 516
+      },
+      "image_url": "https://i1.feedspot.com/5248405.jpg?t=1626241412"
+    },
+    {
+      "title": "The BiblioSanctum \u00bb Audiobooks",
+      "feed_url": "https://bibliosanctum.com/category/audiobooks/feed/",
+      "website_url": "https://bibliosanctum.com/category/audiobooks/",
+      "description": "The BiblioSanctum is a Book Blog for Speculative Fiction, Graphic Novels... and more!",
+      "followers": {
+        "facebook": 171,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5248674.jpg?t=1614256477"
+    },
+    {
+      "title": "Eden Redd \u00bb Audiobooks",
+      "feed_url": "https://edenredd.com/category/audiobook/feed/",
+      "website_url": "https://edenredd.com/category/audiobook/",
+      "description": "Erotic Author with a love for monsters and carnal desires. Join my mailing list and receive a free story!",
+      "followers": {
+        "facebook": 3900,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5248589.jpg?t=1626241418"
+    },
+    {
+      "title": "What Rebecca's Read \u00bb Audiobooks",
+      "feed_url": "https://whatrebeccasread.wordpress.com/category/audiobooks/feed/",
+      "website_url": "https://whatrebeccasread.wordpress.com/category/audiobooks/",
+      "description": "Rebecca is a book blogger, a penguin enthusiast & a part time runner. Here, you will find the posts about Audiobooks written by her.",
+      "followers": {
+        "twitter": 634,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5248104.jpg?t=1614154137"
+    },
+    {
+      "title": "The Book Nut \u00bb Audiobooks",
+      "feed_url": "https://thebooknut.com/category/audio-book/feed/",
+      "website_url": "https://thebooknut.com/category/audio-book/",
+      "description": "I read. I blog. I sell books. I chauffeur my children. What more do you need to know?",
+      "followers": {
+        "twitter": 1000,
+        "instagram": 526
+      },
+      "image_url": "https://i1.feedspot.com/5248466.jpg?t=1614238233"
+    },
+    {
+      "title": "The Book Stop \u00bb Audiobooks",
+      "feed_url": "https://thebookstop.wordpress.com/category/audiobook/feed/",
+      "website_url": "https://thebookstop.wordpress.com/category/audiobook/",
+      "description": "I read nearly every genre, but some of my favorites are historical fiction, science fiction, fantasy, and children's literature. I try to read diversely and travel the world through my reading.",
+      "followers": {
+        "twitter": 272
+      },
+      "image_url": "https://i1.feedspot.com/5248552.jpg?t=1614249632"
+    },
+    {
+      "title": "Robert McCammon \u00bb Audiobooks",
+      "feed_url": "https://www.robertmccammon.com/category/audiobook/feed/",
+      "website_url": "https://www.robertmccammon.com/category/audiobook/",
+      "description": "Robert McCammon is the author of 23 novels and two short story collections. Starting with his first novel, Baal, in 1978, McCammon quickly became one of the bestselling horror authors of the 1980s, with three consecutive novels hitting the New York Times Bestsellers List. Follow the website for more.",
+      "followers": {
+        "facebook": 19500,
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5248572.jpg?t=1614250337"
+    },
+    {
+      "title": "Books on the 7:47 \u00bb Audiobooks",
+      "feed_url": "https://booksonthe747.com/category/audiobook/feed/",
+      "website_url": "https://booksonthe747.com/category/audiobook/",
+      "description": "A book review blog featuring the wonderful books that make me look forward to my commute.",
+      "followers": {
+        "facebook": 73,
+        "twitter": 529,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5248441.jpg?t=1614234898"
+    },
+    {
+      "title": "Booksaremyfavouriteandbest \u00bb Audiobooks",
+      "feed_url": "https://booksaremyfavouriteandbest.com/tag/audiobook/feed/",
+      "website_url": "https://booksaremyfavouriteandbest.com/tag/audiobook/",
+      "description": "Follow the blog to read various articles on Audiobooks & their reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5248532.jpg?t=1626242006"
+    },
+    {
+      "title": "Lost in a Good Book \u00bb Audiobooks",
+      "feed_url": "https://lostinagoodbk.com/category/audiobook/feed/",
+      "website_url": "https://lostinagoodbk.com/category/audiobook/",
+      "description": "Welcome to Lost in a Good Book, my small corner of the internet where I am able to share my passion for books with other like-minded people. My name is Amy & I started this blog in 2013 because I wanted to share some of the amazing books I had been reading. From there it has grown into something I absolutely adore doing and I am constantly finding new and amazing things to share with the world. I post mainly reviews but often you will find a recap of author events, writers festivals, or maybe even rambles of mine about books or reading or some other topic that has caught my attention.",
+      "followers": {
+        "facebook": 754,
+        "twitter": 531
+      },
+      "image_url": "https://i1.feedspot.com/5248581.jpg?t=1614250837"
+    },
+    {
+      "title": "Blue Mood \u00bb Audiobooks",
+      "feed_url": "https://bluemoodcafe.com/category/audiobook/feed/",
+      "website_url": "https://bluemoodcafe.com/category/audiobook/",
+      "description": "Welcome! What you'll find here at the Blue Mood Cafe are simply reviews of the books that come my way. I LOVE reading, enjoying quite a few genres. I'm open to exploring new authors and appreciate those who not only write well but can deliciously craft a character and a tale. My tastes are fairly eclectic and I'm open to most genres.",
+      "followers": {
+        "twitter": 514
+      },
+      "image_url": "https://i1.feedspot.com/5248615.jpg?t=1614252160"
+    },
+    {
+      "title": "Flippin' Pages Book Reviews \u00bb Audiobooks",
+      "feed_url": "https://flippinpages.blog/category/audiobook/feed/",
+      "website_url": "https://flippinpages.blog/category/audiobook/",
+      "description": "We're just two ladies who love to read and we want to share our reviews with you! We mostly read and review historical romance and historical mysteries.",
+      "followers": {
+        "facebook": 627,
+        "twitter": 548
+      },
+      "image_url": "https://i1.feedspot.com/5248631.jpg?t=1614253142"
+    },
+    {
+      "title": "Love Bytes Reviews \u00bb Audiobook Reviews",
+      "feed_url": "https://lovebytesreviews.com/category/audio-book-2/feed/",
+      "website_url": "https://lovebytesreviews.com/category/audio-book-2/",
+      "description": "Love Bytes Reviews started in 2013 and is one of the larger LGBTQ+ romance book review blogs. Our sole aim is to promote and review LGBTQ+ books mainly focusing on mm same sex romance. Beyond the reviews of romance books, we also have author guest posts, giveaways, and much more.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5248726.jpg?t=1614260244"
+    },
+    {
+      "title": "Writing Bookish Notes \u00bb Audiobook Reviews",
+      "feed_url": "https://writingbookishnotes.wordpress.com/category/audiobook-review/feed/",
+      "website_url": "https://writingbookishnotes.wordpress.com/category/audiobook-review/",
+      "description": "Here, you will find reviews of various audiobooks!",
+      "followers": {
+        "twitter": 905,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5248689.jpg?t=1614257839"
+    },
+    {
+      "title": "Rosie Writes... \u00bb Audiobook Reviews",
+      "feed_url": "https://everythingisbetterwithdragons.co.uk/category/reviews-3/audiobook/feed/",
+      "website_url": "https://everythingisbetterwithdragons.co.uk/category/reviews-3/audiobook/",
+      "description": "Hi I'm Rosemarie and I like to write. I write short stories and longer fiction, poetry and occasionally articles.",
+      "followers": {
+        "twitter": 891
+      },
+      "image_url": "https://i1.feedspot.com/5248711.jpg?t=1626241470"
+    },
+    {
+      "title": "Quella Reviews",
+      "feed_url": "https://quellareviews.wordpress.com/feed/",
+      "website_url": "https://quellareviews.wordpress.com/",
+      "description": "We have always found reviews and the people who spend time writing up detail about a product helpful. This site is hopefully our way of giving back to all those who came before us and provided great advice with detailed reviews that take time and effort. We want to provide that same level of detail to people interested in the various products we may have in common, be that hardware, software, or other material such as audiobooks.",
+      "followers": {
+        "twitter": 196
+      },
+      "image_url": "https://i1.feedspot.com/5248427.jpg?t=1614234501"
+    },
+    {
+      "title": "Digitalbook.io Blog",
+      "feed_url": "https://www.digitalbook.io/blog/feed/",
+      "website_url": "https://www.digitalbook.io/blog/",
+      "description": "A great place to get updated by blogs on different audiobooks and ebooks based on different topics. A hub for all book lover.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 405
+      },
+      "image_url": "https://i1.feedspot.com/5173452.jpg?t=1626241368"
+    },
+    {
+      "title": "Silver Button Books \u00bb Audiobooks",
+      "feed_url": "https://silverbuttonbooks.com/category/audio-book/feed/",
+      "website_url": "https://silverbuttonbooks.com/category/audio-book/",
+      "description": "Book Recommendations From One Book Lover to Another.",
+      "followers": {
+        "facebook": 17,
+        "twitter": 114
+      },
+      "image_url": "https://i1.feedspot.com/5248387.jpg?t=1614228500"
+    },
+    {
+      "title": "Behear Blog",
+      "feed_url": "https://www.behear.co.uk/feed/",
+      "website_url": "https://www.behear.co.uk/blog/",
+      "description": "Behear is where dreams and stories come to life and are shared with everyone. We create and share a dramatized audio series of your brilliant stories.",
+      "followers": {
+        "facebook": 496,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5588744.jpg?t=1685701852"
+    },
+    {
+      "title": "BookBaby Blog",
+      "feed_url": "https://blog.bookbaby.com/tag/audiobook/feed",
+      "website_url": "https://blog.bookbaby.com/tag/audiobook",
+      "description": "The BookBaby Blog provides book writing tips such as how to publish a book for authors of all kinds. Here is where writers become authors.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 8500,
+        "instagram": 24300
+      },
+      "image_url": "https://i1.feedspot.com/5248134.jpg?t=1614160606"
+    },
+    {
+      "title": "Findaway Voices Blog",
+      "feed_url": "https://blog.findawayvoices.com/rss/",
+      "website_url": "https://blog.findawayvoices.com/",
+      "description": "We make it easy to create and sell audiobooks to listeners in nearly every country in the world through the largest audiobook distribution network. Here, you will find news, product updates, and special announcements from the team at Findaway Voices.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 3800,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5248080.jpg?t=1614151453"
+    },
+    {
+      "title": "Two Chicks Obsessed \u00bb Audiobook Reviews",
+      "feed_url": "https://twochicksobsessed.com/category/audiobook-reviews/feed/",
+      "website_url": "https://twochicksobsessed.com/category/audiobook-reviews/",
+      "description": "Two Chicks Obsessed with Books and Eye Candy is a book blog where we review M/M Romance, & enjoy eye candy.",
+      "followers": {
+        "facebook": 2200,
+        "instagram": 429
+      },
+      "image_url": "https://i1.feedspot.com/5248608.jpg?t=1614251860"
+    },
+    {
+      "title": "EBookObsessed \u00bb Audiobook Reviews",
+      "feed_url": "https://ebookobsessed.com/category/book-reviews/audiobook-book-reviews/feed/",
+      "website_url": "https://ebookobsessed.com/category/book-reviews/audiobook-book-reviews/",
+      "description": "We love books. Doesn't matter is it is paper, eBooks, or audiobooks. We can't get enough of romance no matter the genre. Enter our weekly giveaway.",
+      "followers": {
+        "facebook": 417,
+        "twitter": 549
+      },
+      "image_url": "https://i1.feedspot.com/5248654.jpg?t=1614255125"
+    },
+    {
+      "title": "Coffee With Kenobi \u00bb Audiobook Reviews",
+      "feed_url": "https://coffeewithkenobi.com/category/audiobook-reviews/feed/",
+      "website_url": "https://coffeewithkenobi.com/category/audiobook-reviews/",
+      "description": "Coffee With Kenobi, your spoiler-free source for Star Wars discussion, analysis, and rhetoric, is the award-winning podcast that analyzes the saga in a whole new way. Here is where you will find reviews and commentary on Star Wars audiobooks.",
+      "followers": {
+        "facebook": 9600,
+        "twitter": 12000,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5248443.jpg?t=1614235266"
+    },
+    {
+      "title": "Amie's Book Reviews \u00bb Audiobooks Reviewed",
+      "feed_url": "https://amiesbookreviews.wordpress.com/category/audiobooks-reviewed/feed/",
+      "website_url": "https://amiesbookreviews.wordpress.com/category/audiobooks-reviewed/",
+      "description": "This blog is the place where I post reviews of the books I have read. I review audiobooks, regular books and eBooks for authors and publishers as well as any other book or audiobook that catches my eye.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5248414.jpg?t=1614232176"
+    },
+    {
+      "title": "Dab of Darkness Book Reviews",
+      "feed_url": "https://dabofdarkness.com/feed/",
+      "website_url": "https://dabofdarkness.com/",
+      "description": "Dab of Darkness focuses on audiobook reviews, especially books by independent & small publishers. While much of what I read fits into science fiction, fantasy, and historical fiction I have been known to read some non-fiction, mysteries, and modern-day adventure/thriller fiction.",
+      "followers": {
+        "facebook": 901,
+        "twitter": 1500,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4961997.jpg?t=1618815285"
+    },
+    {
+      "title": "For the Love of Audiobooks",
+      "feed_url": "https://4theloveofaudiobooks.wordpress.com/feed/",
+      "website_url": "https://4theloveofaudiobooks.wordpress.com/",
+      "description": "Here, you will find articles on various audiobooks & their reviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5248488.jpg?t=1626244774"
+    },
+    {
+      "title": "Author Don Winn's Blog",
+      "feed_url": "https://donwinn.blog/feed/",
+      "website_url": "https://donwinn.blog/",
+      "description": "Where it's all about imagination, great stories, and helping kids learn to love to read.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 4100,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5248157.jpg?t=1614163345"
+    },
+    {
+      "title": "Cheryl M-M's Book Blog \u00bb Audiobooks",
+      "feed_url": "https://mmcheryl.wordpress.com/category/audiobook/feed/",
+      "website_url": "https://mmcheryl.wordpress.com/category/audiobook/",
+      "description": "What can I say? I just love books. Indie/self/trad published...I don't give two monkeys. My reviews are always my subjective and honest opinion. Nothing more and nothing less.",
+      "followers": {
+        "facebook": 169,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5248451.jpg?t=1614236195"
+    },
+    {
+      "title": "Celebrity Readers \u00bb Audiobooks",
+      "feed_url": "https://celebrityreaders.com/category/audio-books/feed/",
+      "website_url": "https://celebrityreaders.com/category/audio-books/",
+      "description": "Welcome to our little corner of the blogosphere! We're a couple of off-beat characters who share a love of reading... and I mean a SERIOUS love of reading. Celebrity Readers was created so that two superfans could share that love with the world in our own unique and crazy ways.",
+      "followers": {
+        "facebook": 696
+      },
+      "image_url": "https://i1.feedspot.com/5248335.jpg?t=1614178347"
+    },
+    {
+      "title": "The Tangential \u00bb Audiobooks",
+      "feed_url": "https://thetangential.com/tag/audiobooks/feed/",
+      "website_url": "https://thetangential.com/tag/audiobooks/",
+      "description": "This is The Tangential, a pop culture and creative writing blog. We publish writing about anything and everything, as long as it isn't boring and doesn't suck.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5248705.jpg?t=1614259207"
+    },
+    {
+      "title": "BFF Book Blog \u00bb Audiobooks",
+      "feed_url": "http://www.bffbookblog.com/tag/audiobook/feed/",
+      "website_url": "http://www.bffbookblog.com/tag/audiobook/",
+      "description": "BFF's reading and recommending great books! BFF Book Blog started as an endeavor between two best friends to read and review and share great books.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 646
+      },
+      "image_url": "https://i1.feedspot.com/5248456.jpg?t=1614237109"
+    },
+    {
+      "title": "Just 4 My Books \u00bb Audiobooks",
+      "feed_url": "https://just4mybooks.wordpress.com/category/audiobook/feed/",
+      "website_url": "https://just4mybooks.wordpress.com/category/audiobook/",
+      "description": "Welcome to my personal writing space! This is where you can find details of the stories I am writing, eventually you will see those that I have published too. As a newcomer to writing, my writing space is still uncluttered as I begin my journey to authordom. Please come by and check out my new.",
+      "followers": {
+        "facebook": 977
+      },
+      "image_url": "https://i1.feedspot.com/5248411.jpg?t=1614231709"
+    },
+    {
+      "title": "Mystery Thriller Week \u00bb Audiobooks",
+      "feed_url": "https://mysterythrillerweek.com/category/audiobook/feed/",
+      "website_url": "https://mysterythrillerweek.com/category/audiobook/",
+      "description": "An annual event that celebrates the mystery, thriller genre. Welcome to all writers, readers, bloggers,fans. Come join us!",
+      "followers": {
+        "facebook": 312,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5248093.jpg?t=1614153443"
+    },
+    {
+      "title": "Novel Visits \u00bb Audiobooks",
+      "feed_url": "https://novelvisits.com/category/audiobooks/feed/",
+      "website_url": "https://novelvisits.com/category/audiobooks/",
+      "description": "Novel Visits is a blog focused on reviews of newer novels, other book related topics, and more.",
+      "followers": {
+        "facebook": 852,
+        "twitter": 502,
+        "instagram": 7100
+      },
+      "image_url": "https://i1.feedspot.com/5248639.jpg?t=1614253602"
+    },
+    {
+      "title": "Feed The Crime \u00bb Audiobooks",
+      "feed_url": "https://feedthecrime.wordpress.com/tag/audiobook/feed/",
+      "website_url": "https://feedthecrime.wordpress.com/tag/audiobook/",
+      "description": "Hey Guys, My name is Blair and I am hopelessly addicted to reading crime fiction and thrillers. Are you ready to join me? Then buckle up, it's gonna be a bumpy ride!",
+      "followers": {
+        "twitter": 894
+      },
+      "image_url": "https://i1.feedspot.com/5248400.jpg?t=1614230817"
+    },
+    {
+      "title": "George Ellington Blog \u00bb Audiobooks",
+      "feed_url": "https://gaelicdreams.wordpress.com/category/audiobooks/feed/",
+      "website_url": "https://gaelicdreams.wordpress.com/tag/audiobooks/",
+      "description": "Welcome to my Gaelic Dreams, where I am honored to share my poetry, photography, thoughts, and aspirations. Poetry Blog | Travel Photography | Audiobook Narration",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5248119.jpg?t=1626241901"
+    },
+    {
+      "title": "The Book Designer \u00bb Audiobooks",
+      "feed_url": "https://www.thebookdesigner.com/category/audiobooks/feed/",
+      "website_url": "https://www.thebookdesigner.com/category/audiobooks/",
+      "description": "The Book Designer provides practical advice to help build better books. Find the best tips for writing your audiobook here.",
+      "followers": {
+        "facebook": 122000,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5248168.jpg?t=1614164538"
+    },
+    {
+      "title": "A Listener's Slant",
+      "feed_url": "https://alistenersslant.wordpress.com/feed/",
+      "website_url": "https://alistenersslant.wordpress.com/",
+      "description": "Here, you will find musings about & reviews on various audiobooks.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5248107.jpg?t=1626241629"
+    },
+    {
+      "title": "Hibooks",
+      "feed_url": "https://blog.hibooks.com/feed/",
+      "website_url": "https://blog.hibooks.com/",
+      "description": "If you're a fan of audiobooks then you're in the right place. Read and listen to audiobooks articles, keep up to date with the latest bestsellers!",
+      "followers": {
+        "facebook": 32200
+      },
+      "image_url": "https://i1.feedspot.com/5173447.jpg?t=1626241399"
+    },
+    {
+      "title": "Audiobooks Today",
+      "feed_url": "http://audiobookstoday.blogspot.com/feeds/posts/default",
+      "website_url": "http://audiobookstoday.blogspot.com/",
+      "description": "Here, you will find various audiobook reviews and author interviews.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5248425.jpg?t=1626241585"
+    },
+    {
+      "title": "Julio Fong",
+      "feed_url": "https://www.juliofong.com/en/feed",
+      "website_url": "https://www.juliofong.com/en/",
+      "description": "Covers audiobooks from the author Julio Fong.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5318718.jpg?t=1630651411"
+    },
+    {
+      "title": "The Writing Train: Join the Locomotion",
+      "feed_url": "https://thewritingtrain.com/category/audiobooks/feed/",
+      "website_url": "https://thewritingtrain.com/category/audiobooks/",
+      "description": "A Grand Procession of the Reading & Writing Community",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5248145.jpg?t=1614161665"
+    },
+    {
+      "title": "Tor/Forge Blog \u00bb Audiobooks",
+      "feed_url": "https://www.torforgeblog.com/tag/audiobook/feed/",
+      "website_url": "https://www.torforgeblog.com/tag/audiobook/",
+      "description": "Publisher of science fiction, fantasy, horror, paranormal romance, mystery, thriller & suspense, and other speculative fiction.",
+      "followers": {
+        "facebook": 90500,
+        "twitter": 299500,
+        "instagram": 184200
+      },
+      "image_url": "https://i1.feedspot.com/5248478.jpg?t=1614239512"
+    },
+    {
+      "title": "TCK Publishing \u00bb Audiobooks",
+      "feed_url": "https://www.tckpublishing.com/category/book-publishing-2/audiobooks/feed/",
+      "website_url": "https://www.tckpublishing.com/category/book-publishing-2/audiobooks/",
+      "description": "TCK Publishing is a traditional book publisher that publishes mass market fiction and nonfiction. Discover our best selling books, new releases, and special deals for readers.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5248642.jpg?t=1614254013"
+    },
+    {
+      "title": "World of Blyton \u00bb Audiobooks & Audio Dramatisations",
+      "feed_url": "https://worldofblyton.com/category/audio-books-and-audio-dramatisations/feed/",
+      "website_url": "https://worldofblyton.com/category/audio-books-and-audio-dramatisations/",
+      "description": "World of Blyton is a blog that celebrates Enid Blyton and her wonderful creations. Every week we post book reviews, personal stories, fan fiction and lots of other interesting things to do with Blyton.",
+      "followers": {
+        "facebook": 329,
+        "twitter": 597
+      },
+      "image_url": "https://i1.feedspot.com/5248313.jpg?t=1614176212"
+    },
+    {
+      "title": "Karen Commins",
+      "feed_url": "https://www.karencommins.com/category/audiobooks-2/feed",
+      "website_url": "https://www.karencommins.com/category/audiobooks-2",
+      "description": "Compelling. Committed. Communicator. Award-winning Atlanta audiobook narrator of over 60 books specializing in narrations of cozy mysteries and books set in the South and/or starring Southern characters. Check out my demos, titles, reviews, and blogs for authors and narrators.",
+      "followers": {
+        "facebook": 769,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5248286.jpg?t=1614173103"
+    },
+    {
+      "title": "The ACX Blog",
+      "feed_url": "https://www.acx.com/mp/blog/",
+      "website_url": "https://www.acx.com/mp/blog/",
+      "description": "Audiobook Creation Exchange ACX.com is the first online platform that connects rights holders with established producers to enable any professionally published book to become an audiobook.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 11100
+      },
+      "image_url": "https://i1.feedspot.com/5248056.jpg?t=1614153526"
+    },
+    {
+      "title": "CDAudiobook \u00bb Audiobook",
+      "feed_url": "https://cdaudiobook.com/category/audiobook/feed/",
+      "website_url": "https://cdaudiobook.com/category/audiobook/",
+      "description": "AudioBooksLab is a one stop point for finding popular novels and books in audiobook format for free. It allows to Listen To & Download All Popular Audiobooks For Free.",
+      "followers": {
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/5248548.jpg?t=1614249367"
+    },
+    {
+      "title": "Pick A Good Book \u00bb Audiobook Reviews",
+      "feed_url": "https://pickagoodbook.com/category/adult-books/audio/feed/",
+      "website_url": "https://pickagoodbook.com/category/adult-books/audio/",
+      "description": "My name is Debbie & I hope these reviews help you to Pick A Good Book!",
+      "followers": {
+        "facebook": 211,
+        "twitter": 471,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5248226.jpg?t=1614169364"
+    },
+    {
+      "title": "Podium Entertainment",
+      "feed_url": "https://podiumentertainment.com/",
+      "website_url": "https://podiumentertainment.com/",
+      "description": "Browse the best science fiction and fantasy audiobooks from Podium Audio, an audio-first entertainment studio and top independent audiobook publisher.",
+      "followers": {
+        "facebook": 79000,
+        "twitter": 4300,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/5248213.jpg?t=1614168488"
+    },
+    {
+      "title": "Penguin Random House Audio \u00bb Audiobooks",
+      "feed_url": "https://www.penguinrandomhouseaudio.com/blog/category/audiobook/feed/",
+      "website_url": "https://penguinrandomhouseaudio.com/posts/",
+      "description": "Penguin Random House Audio is dedicated to producing top-quality fiction and nonfiction audiobooks written and read by the best in the business. Our audiobooks have won countless Grammy Awards, Audie Awards, and Odyssey Awards and Honors.",
+      "followers": {
+        "facebook": 68900,
+        "twitter": 13900
+      },
+      "image_url": "https://i1.feedspot.com/5248073.jpg?t=1614151115"
+    },
+    {
+      "title": "Mom Loves Reading \u00bb Audiobooks",
+      "feed_url": "https://momlovesreading.com/category/audiobooks/feed/",
+      "description": "Book reviews, book recommendations, photos of the books I am reading or books I have read, all things books, audiobooks, and book related!",
+      "followers": {
+        "twitter": 1300,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5248646.jpg?t=1614254276"
+    }
+  ]
+}

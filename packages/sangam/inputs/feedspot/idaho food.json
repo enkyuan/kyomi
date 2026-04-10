@@ -1,0 +1,122 @@
+{
+  "category": "Idaho Food",
+  "source_url": "https://rss.feedspot.com/idaho_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Natasha's Kitchen",
+      "feed_url": "https://natashaskitchen.com/feed/",
+      "website_url": "https://natashaskitchen.com/",
+      "description": "A family food blog with hundreds of simple, tested and approved recipes. Find easy step-by-step photo cooking instructions and video recipes.",
+      "followers": {
+        "facebook": 9500000,
+        "twitter": 4600,
+        "instagram": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/826751.jpg?t=1600345208"
+    },
+    {
+      "title": "Mel's Kitchen Cafe",
+      "feed_url": "https://www.melskitchencafe.com/feed/",
+      "website_url": "https://www.melskitchencafe.com/",
+      "description": "I'm Mel! I live in Idaho with my husband, 5 kids, and selection of weird farm animals. I've been posting my favorite, tried-and-true recipes on Mel's Kitchen Cafe since 2008. I also share tips, tutorials, and occasional glimpses into real life.",
+      "followers": {
+        "facebook": 188300,
+        "twitter": 880,
+        "instagram": 192300
+      },
+      "image_url": "https://i1.feedspot.com/1768415.jpg?t=1600345461"
+    },
+    {
+      "title": "Our Best Bites",
+      "feed_url": "https://ourbestbites.com/feed/",
+      "website_url": "https://ourbestbites.com/",
+      "description": "Bringing you tips, tricks, and tastes straight from the kitchen of two girls who love to cook and create.",
+      "followers": {
+        "facebook": 199300,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4477011.jpg?t=1600346136"
+    },
+    {
+      "title": "Crinkled Cookbook",
+      "feed_url": "https://crinkledcookbook.com/feed/",
+      "website_url": "https://crinkledcookbook.com/",
+      "description": "Homemade food and delicious meals help bring families and friends close. Here you'll find scratch made recipes with step-by-step instructions on each post. These are recipes to help you succeed in the kitchen.",
+      "followers": {
+        "instagram": 546
+      },
+      "image_url": "https://i1.feedspot.com/5314086.jpg?t=1629463988"
+    },
+    {
+      "title": "Boise Foodie Guild Blog",
+      "feed_url": "https://boisefoodieguild.blog/feed/",
+      "website_url": "https://boisefoodieguild.blog/",
+      "description": "Enjoy a meal or a recipe with us! One of the greatest pleasures that we have is to prepare a meal for friends and relatives. We are not degreed Chefs! But we love our kitchen and the new design. Here you can find posts on some of the restaurants we have been to and that you might like.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5314047.jpg?t=1629461178"
+    },
+    {
+      "title": "Kate's Real Food Blog",
+      "feed_url": "https://katesrealfood.com/blogs/blog.atom",
+      "website_url": "https://katesrealfood.com/blogs/blog",
+      "description": "Read our blog with posts all about our brand, ingredients and adventures! Kate's Real Food provides the ultimate taste and satisfaction available in energy bars in order to Fuel You Stoke. We've got everything from the original Tram Bar (and the dark chocolate version, the Grizzly Bar), the cherry-licious Handle Bar, to the nutty Stash Bar.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 136
+      },
+      "image_url": "https://i1.feedspot.com/5314127.jpg?t=1629468370"
+    },
+    {
+      "title": "IN THE KITCHEN",
+      "feed_url": "https://eatsmartidahointhekitchen.com/feed/",
+      "website_url": "https://eatsmartidahointhekitchen.com/",
+      "description": "Eat Smart Idaho knows that nutrition is important for everybody. Join us by following our blog, In the Kitchen, for weekly recipes, tips, and tricks directly from our nutrition advisers. We are a team of nutrition savvy individuals located all over the state with a mission to create a healthier Idaho.",
+      "followers": {
+        "facebook": 1200,
+        "instagram": 718
+      },
+      "image_url": "https://i1.feedspot.com/5314073.jpg?t=1629463193"
+    },
+    {
+      "title": "2nd South Market Blog",
+      "feed_url": "https://www.2ndsouthmarket.com/blog/feed/blog-feed.xml",
+      "website_url": "https://www.2ndsouthmarket.com/blog",
+      "description": "2nd South Market is Idaho's first food hall featuring seven unique food vendors and a beer/wine bar in a large open space concept.",
+      "followers": {
+        "facebook": 7100,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5314123.jpg?t=1629469114"
+    },
+    {
+      "title": "Rasberrys Blog",
+      "feed_url": "http://www.rasberrys.net/blog?format=rss",
+      "website_url": "http://www.rasberrys.net/blog",
+      "description": "Providing fresh, organic and local foods, we serve our celebrated Tex-Mex cuisine, signature salads, sandwiches, soups, and daily specials.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5314065.jpg?t=1629462069"
+    },
+    {
+      "title": "Idahoan Foods Blog",
+      "feed_url": "https://idahoanfoodservice.com/feed/",
+      "website_url": "https://idahoanfoodservice.com/blog/",
+      "description": "Potato Foodservice Blog and Articles. For 50 years, the name Idahoan has stood for the highest quality potatoes in the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5314083.jpg?t=1629463627"
+    },
+    {
+      "title": "Idaho Preferred Blog",
+      "feed_url": "https://idahopreferred.com/blog/feed/",
+      "website_url": "https://idahopreferred.com/blog/",
+      "description": "The Idaho Preferred blog showcases the quality, diversity, and availability of Idaho food and agricultural products as well as working to assist Idaho consumers in their efforts to find local products.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 286,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/5314060.jpg?t=1629461607"
+    }
+  ]
+}

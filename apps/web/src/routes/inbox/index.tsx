@@ -4,10 +4,10 @@ import { requireAuth } from "@/routes/-guards";
 import { InboxPage } from "@pages/inbox/";
 
 const inboxSearchSchema = z.object({
-  source: z.enum(["reddit", "x"]).optional(),
-  status: z.enum(["new", "saved", "dismissed", "replied", "converted"]).optional(),
+  filter: z.enum(["today", "unread", "saved"]).optional(),
   search: z.string().optional(),
-  sort: z.enum(["rank", "recent"]).optional(),
+  feedId: z.string().optional(),
+  folderId: z.string().optional(),
   itemId: z.string().optional(),
 });
 

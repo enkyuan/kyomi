@@ -1,0 +1,97 @@
+{
+  "category": "Australian Beer",
+  "source_url": "https://rss.feedspot.com/australian_beer_rss_feeds",
+  "feeds": [
+    {
+      "title": "Beer & Brewer",
+      "feed_url": "https://www.beerandbrewer.com/feed/",
+      "website_url": "https://www.beerandbrewer.com/",
+      "description": "Beer & Brewer is a consumer lifestyle magazine that celebrates all things beer in Australia & New Zealand. Read by consumers and trade, the title delivers entertaining and authoritative content via a quarterly magazine, a website and a weekly e-newsletter.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/4487634.jpg?t=1611036313"
+    },
+    {
+      "title": "Craft Cartel Blog",
+      "feed_url": "https://craftcartel.com.au/feed/",
+      "website_url": "https://craftcartel.com.au/blog/",
+      "description": "At Craft Cartel we hunt down Australia's best craft beers and spirits along with a smattering of fine international brands. We're talking award winners, small batch brews, seasonal specials and crowd pleasers. Craft brewers are colourful characters who love to push the boundaries when it comes to flavour. Read their stories here on Crafty News craft beer news.",
+      "followers": {
+        "facebook": 16700,
+        "instagram": 11700
+      },
+      "image_url": "https://i1.feedspot.com/4911627.jpg?t=1620137024"
+    },
+    {
+      "title": "Back Of The Ferry",
+      "feed_url": "https://backoftheferry.com/feed/",
+      "website_url": "https://backoftheferry.com/",
+      "description": "About beer drunk on the Back of the Ferry (BotF). Bars, #beerp0rn, #botfontour also, but mainly beer, where we drink it and the yabberings of BotF blokes.",
+      "followers": {
+        "facebook": 271,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4911619.jpg?t=1620137053"
+    },
+    {
+      "title": "Beer Cartel Blog",
+      "feed_url": "https://www.beercartel.com.au/rss.php?action=newblogs&type=rss",
+      "website_url": "https://www.beercartel.com.au/blog/",
+      "description": "Covers the latest craft beer insights, interviews, scoops, beer recommendations, and much more. At Beer Cartel we believe there is simply too little time to waste on poor beer - our founding philosophy is to put good beer in the hands of consumers, allowing people to enjoy quality craft beer sourced from across the world.",
+      "followers": {
+        "facebook": 51900,
+        "twitter": 4300,
+        "instagram": 37700
+      },
+      "image_url": "https://i1.feedspot.com/4488655.jpg?t=1611035804"
+    },
+    {
+      "title": "BEER IS YOUR FRIEND",
+      "feed_url": "https://beerisyourfriend.org/feed/",
+      "website_url": "https://beerisyourfriend.org/",
+      "description": "Yes, this is a blog about beer (from an award-winning beer writer, by the way). More specifically, about my efforts to better understand beer.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 958
+      },
+      "image_url": "https://i1.feedspot.com/4911586.jpg?t=1620137029"
+    },
+    {
+      "title": "Hop On Brewery Tours Blog",
+      "feed_url": "https://hoponbrewerytours.com.au/feed/",
+      "website_url": "https://hoponbrewerytours.com.au/blog/",
+      "description": "Hop On Brewery Tours takes you on a brewing journey from Brisbane to Gold Coast & Mt Tamborine. This blog includes articles on a range of craft beers, brewery experience, explore new places and discover a new favourite brew.",
+      "followers": {
+        "facebook": 4000,
+        "twitter": 299,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4911622.jpg?t=1611039136"
+    },
+    {
+      "title": "Australian Brews News",
+      "feed_url": "https://brewsnews.com.au/feed/",
+      "website_url": "https://brewsnews.com.au/",
+      "description": "Part blog, part online magazine, Australian Brews News delivers the best beer discussion and commentary daily to you. It also publishes in-depth features about beer, brewing, beer history, breweries and just about everything else of interest to beer lovers and aims to be your comprehensive source for Australian beer knowledge.",
+      "followers": {
+        "facebook": 14000,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4488469.jpg?t=1611035805"
+    },
+    {
+      "title": "Balter Brewing",
+      "feed_url": "https://www.balter.com.au/RSSRetrieve.aspx?ID=14543&Type=RSS20",
+      "website_url": "https://www.balter.com.au/news",
+      "description": "Balter Brewing Company bringing you the good beer news with enjoyment from the sunny shores of Currumbin, Gold Coast!",
+      "followers": {
+        "facebook": 31400,
+        "twitter": 1600,
+        "instagram": 81700
+      },
+      "image_url": "https://i1.feedspot.com/4911615.jpg?t=1620137066"
+    }
+  ]
+}

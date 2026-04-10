@@ -1,0 +1,153 @@
+{
+  "category": "Arizona Business",
+  "source_url": "https://rss.feedspot.com/arizona_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "BizTucson",
+      "feed_url": "https://biztucson.com/feed/",
+      "website_url": "https://biztucson.com/",
+      "description": "BizTucson is a business magazine that covers the Tucson, Arizona region. It provides news, features, and profiles of businesses and entrepreneurs in the area. The magazine also hosts events and awards programs to recognize the achievements of local businesses.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4903446.jpg?t=1526625291"
+    },
+    {
+      "title": "Flagstaff Business News",
+      "feed_url": "https://www.flagstaffbusinessnews.com/feed/",
+      "website_url": "https://www.flagstaffbusinessnews.com/",
+      "description": "Flagstaff Business News is a newspaper and online news source covering Northern Arizona's most influential business leaders and delivered to high income residents and local businesses. They are Northern Arizona's premier source for business, education and health news.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 4000
+      },
+      "image_url": "https://i1.feedspot.com/5146890.jpg?t=1625551157"
+    },
+    {
+      "title": "Chamber Business News",
+      "feed_url": "https://chamberbusinessnews.com/feed/",
+      "website_url": "https://chamberbusinessnews.com/",
+      "description": "Chamber Business News are know for Delivering insider information, engaging newsmakers and addressing statewide issues. Get the latest breaking business and political news, insights and analysis from Chamber Business News.",
+      "followers": {
+        "twitter": 1900,
+        "instagram": 422
+      },
+      "image_url": "https://i1.feedspot.com/5708778.jpg?t=1704799764"
+    },
+    {
+      "title": "AZ Big Media \u00bb Business",
+      "feed_url": "https://azbigmedia.com/category/business/feed/",
+      "website_url": "https://azbigmedia.com/category/business/",
+      "description": "For more than 35 years, AZ Big Media has been bringing readers the state's most compelling business, real estate and lifestyle news through the print editions of Az Business and AZRE magazines. They want to keep you up to date on all the latest Arizona business news. Learn about the business opportunities, trends and trendsetters in Arizona through ier specified business section.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 5500,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/5708774.jpg?t=1699512551"
+    },
+    {
+      "title": "Arizona Business Sales Blog",
+      "feed_url": "https://arizonabizsales.com/feed/",
+      "website_url": "https://arizonabizsales.com/blogs/",
+      "description": "Established in 2000, Arizona Business Sales is a boutique brokerage firm specializing in the confidential representation of privately held businesses across a broad range of industries. Go through their blog and learn more about the business world in Arizona, policies, taxation, government modules, finance tips and more.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5708775.jpg?t=1699512555"
+    },
+    {
+      "title": "In Business Magazine Phoenix",
+      "feed_url": "https://inbusinessphx.com/feed",
+      "website_url": "https://inbusinessphx.com/",
+      "description": "In Business Magazine is a business magazine and website that covers the Greater Phoenix area. The magazine is published monthly and the website is updated daily with news, features, and events related to business in the Phoenix area. Get to know the top business news stories and read the latest features.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4901392.jpg?t=1693458215"
+    },
+    {
+      "title": "CJ Cornell Blog",
+      "feed_url": "https://www.cjcornell.net/feed/",
+      "website_url": "https://www.cjcornell.net/blog/",
+      "description": "CJ Cornell is a veteran media and tech executive, entrepreneur, investor, author and educator with a long history of creating products and companies television, broadband, and other consumer media platforms.",
+      "followers": {
+        "facebook": 495,
+        "twitter": 4500
+      },
+      "image_url": "https://i1.feedspot.com/5708783.jpg?t=1699512602"
+    },
+    {
+      "title": "Conscious Capitalism Arizona Blog",
+      "feed_url": "https://ccarizona.org/feed/",
+      "website_url": "https://ccarizona.org/blog/",
+      "description": "From concepts to implementation, Conscious Capitalism Arizona Blog will enrich your understanding of Conscious Capitalism and those applying its tenets to their businesses.",
+      "followers": {
+        "facebook": 409,
+        "twitter": 375,
+        "instagram": 773
+      },
+      "image_url": "https://i1.feedspot.com/5708779.jpg?t=1699512579"
+    },
+    {
+      "title": "The Copper Courier \u00bb Business",
+      "feed_url": "https://coppercourier.com/story/category/business/feed/",
+      "website_url": "https://coppercourier.com/story/category/business/",
+      "description": "The Copper Courier is an Arizona news outlet that keeps it 100\u2014just like the temperature. Through original reporting and human-focused storytelling, they highlight issues that shape our lives and call attention to policy-making and political action at the local level. Their business section shares information on their local businesses, feature stories, business modules, government policies, daily news, finance market research and more.",
+      "followers": {
+        "facebook": 66200,
+        "twitter": 3000,
+        "instagram": 52600
+      },
+      "image_url": "https://i1.feedspot.com/5708782.jpg?t=1699512595"
+    },
+    {
+      "title": "Greater Phoenix Chamber",
+      "feed_url": "https://phoenixchamber.com/feed/",
+      "website_url": "https://phoenixchamber.com/",
+      "description": "The Greater Phoenix Chamber supports the growth and development of business by offering networking and marketing opportunities, money-saving programs and a voice in government, keeping its members informed, connected and prosperous. The Chamber also enhances members' success by promoting economic development, entrepreneurship and a connection to the community.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 22700,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/4948219.jpg?t=1621407951"
+    },
+    {
+      "title": "Arizona Informant \u00bb Business",
+      "feed_url": "https://azinformant.com/category/business/feed/",
+      "website_url": "https://www.gpec.org/news/",
+      "description": "Since 1971, the Arizona Informant has provided an important voice for the Black community throughout the state.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5708780.jpg?t=1699512584"
+    },
+    {
+      "title": "Maricopa SBDC Blog",
+      "feed_url": "https://www.maricopa-sbdc.com/feed/",
+      "website_url": "https://www.nbarizona.com/business/community/arizona-business-today/",
+      "description": "Maricopa SBDC specialises in Small Business Resources, one-on-one counseling, high-quality training classes, and technical assistance. No Cost, funded by the SBA and Maricopa Community Colleges. Their blog shares topics on small business ownership, operations, marketing and more to help business owners start, grow, sustain and exit.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 650
+      },
+      "image_url": "https://i1.feedspot.com/5708784.jpg?t=1699512608"
+    },
+    {
+      "title": "Nextiva Blog",
+      "feed_url": "https://www.nextiva.com/blog/feed",
+      "website_url": "https://www.nextiva.com/blog/",
+      "description": "Nextiva provides innovative communication solutions to strengthen customer relationships. They aim to simplify business operations and increase profitability with competitive products and services. The Nextiva Blog offers valuable insights into VoIP, business communications, and customer experience.",
+      "followers": {
+        "facebook": 116100,
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/4752400.jpg?t=1599312868"
+    }
+  ]
+}

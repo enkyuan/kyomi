@@ -1,0 +1,110 @@
+{
+  "category": "Lofi Music",
+  "source_url": "https://rss.feedspot.com/lofi_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "The New LoFi",
+      "feed_url": "https://thenewlofi.com/feed/",
+      "website_url": "https://thenewlofi.com/",
+      "description": "The New LoFi is an exploration of new music. This website was created by Damon and James in 2010 and exists to support new music and the artists that are behind it. We're not here to replace Spotify or Soundcloud, we're just a group of people that want to help you curate the masses of music out there. We are music nerds.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2600,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/1442536.jpg?t=1668746772"
+    },
+    {
+      "title": "Lofi Weekly Blog",
+      "feed_url": "https://www.lofiweekly.com/feed/",
+      "website_url": "https://www.lofiweekly.com/blog/",
+      "description": "LoFi Weekly blog writes about instruments, tunes, mistakes, mixing, and more in Lofi music. It provides resources for creators. For instance, these include royalty-free sample packs, tips, and positive vibes.",
+      "followers": {
+        "twitter": 25,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5469004.jpg?t=1668746809"
+    },
+    {
+      "title": "Hi54 Blog",
+      "feed_url": "https://hi54.blog/content?format=rss",
+      "website_url": "https://hi54.blog/",
+      "description": "Hi54 blog mix tapes, mix CDs, fandcamp, quick hits, long pulls, highly recommended. HI54.BLOG is a DIY radio station and blog and a general mental dumping ground for stuff that HI54LOFI is into.",
+      "followers": {
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5469007.jpg?t=1668746949"
+    },
+    {
+      "title": "Angled Trees Music Blog \u00bb Lo-Fi",
+      "feed_url": "https://blog.angledtrees.com/category/lofi/feed/",
+      "website_url": "https://blog.angledtrees.com/category/lofi/",
+      "description": "Latest New Indie Rock Music",
+      "followers": {
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/7251396.jpg?t=1707811310"
+    },
+    {
+      "title": "Widen Island",
+      "feed_url": "https://widenisland.com/feed/",
+      "website_url": "https://widenisland.com/wi-news/",
+      "description": "I'm Edwin, a French dude that is currently based in Stockholm Sweden. I decided to create this platform, first of all, to make contacts within the music business and then to share my vision of a cool community of musicians and inspiring music creators. I'm curious about many different arts, paintings, digital arts, surrealism, mixing and mastering techniques, music gears, analog gears, guitar pedals, and well so many other things.",
+      "followers": {
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5469006.jpg?t=1668747305"
+    },
+    {
+      "title": "Homemade Lofi Psych",
+      "feed_url": "https://homemade-lofi-psychedelic.blogspot.com/feeds/posts/default",
+      "website_url": "https://homemade-lofi-psychedelic.blogspot.com/",
+      "description": "A blog dedicated to the mystical or psychedelic aspects in art, especially music. And a platform for artists & musicians with high ideals but lofi equipment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5423962.jpg?t=1672031996"
+    },
+    {
+      "title": "Chill Space Records Blog",
+      "feed_url": "https://www.chillspacelofi.com/blog-feed.xml",
+      "website_url": "https://www.chillspacelofi.com/theloficottage",
+      "description": "My Site",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7251393.jpg?t=1707811445"
+    },
+    {
+      "title": "Flow State Records Blog",
+      "feed_url": "https://www.flowstaterecords.co.uk/blog?format=rss",
+      "website_url": "https://www.flowstaterecords.co.uk/blog",
+      "description": "Stay updated with the latest news, artist features, and lo-fi hip hop insights on the Flow State Records blog. Dive into chill beats and creative inspiration.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/7251395.jpg?t=1707811328"
+    },
+    {
+      "title": "Lofi Alien Blog",
+      "feed_url": "https://lofialien.com/feed/",
+      "website_url": "https://lofialien.com/blog/",
+      "description": "Music That's Out of this World",
+      "followers": {
+        "instagram": 17
+      },
+      "image_url": "https://i1.feedspot.com/7251390.jpg?t=1707811549"
+    },
+    {
+      "title": "Mondo Loops Blog",
+      "feed_url": "https://mondoloops.com/blogs/blog.atom",
+      "website_url": "https://mondoloops.com/blogs/blog",
+      "description": "Lofi Hip Hop Blog by Lofi Girl Producer Mondo Loops. Covering all things lofi, including VSTs, music, gear and tutorials.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7251391.jpg?t=1707811348"
+    },
+    {
+      "title": "Lofi Tokyo Blog",
+      "feed_url": "https://lofi-tokyo.com/blogs/the-notepad.atom",
+      "website_url": "https://lofi-tokyo.com/blogs/the-notepad",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7251392.jpg?t=1707811398"
+    }
+  ]
+}

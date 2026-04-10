@@ -1,0 +1,63 @@
+{
+  "category": "Jersey City News",
+  "source_url": "https://rss.feedspot.com/jersey_city_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jersey City Times",
+      "feed_url": "https://jcitytimes.com/feed/",
+      "website_url": "https://jcitytimes.com/",
+      "description": "The Jersey City news website provides in-depth local news. We cover politics, art, music, theater, dance, comedy, restaurants, dining, bars, and nightlife.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 2400,
+        "instagram": 7700
+      },
+      "image_url": "https://i1.feedspot.com/5211179.jpg?t=1603884799"
+    },
+    {
+      "title": "Hudson Reporter \u00bb Jersey City",
+      "feed_url": "https://hudsonreporter.com/news/jersey-city/feed/",
+      "website_url": "https://hudsonreporter.com/news/jersey-city/",
+      "description": "Hudson Reporter is Hudson County's only independent newspaper group. It is a trusted local news source for over 35 years. Know about everything that is happening in Jersey City at Hudson Reporter.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5211168.jpg?t=1603884406"
+    },
+    {
+      "title": "Hudson County View \u00bb Jersey City",
+      "feed_url": "https://hudsoncountyview.com/l/jersey-city/feed/",
+      "website_url": "https://hudsoncountyview.com/l/jersey-city/",
+      "description": "Hudson County View is an independent media outlet covering news and politics for Hudson County, NJ, and all of its municipalities. Owned and operated by John Heinis, an investigative reporter, Hudson County View focuses on covering elections, public policy, lawsuits, corruption and all other things related to government and politics in Hudson County. Stay tuned to get the latest news on Jersey City.",
+      "followers": {
+        "facebook": 85200,
+        "twitter": 6200,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5211180.jpg?t=1603885212"
+    },
+    {
+      "title": "River View Observer",
+      "feed_url": "https://riverviewobserver.net/feed/",
+      "website_url": "https://riverviewobserver.net/",
+      "description": "A lifestyle and entertainment publication serving the Jersey City, Hoboken, Bayonne, Weehawken, West New York, North Bergen, Cliffside Park, Edgewater, Secaucus and Guttenberg Waterfront Communities. Get the latest news and updates on Jersey City at River View Observer.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5142228.jpg?t=1603882336"
+    },
+    {
+      "title": "TAPinto \u00bb Jersey City",
+      "feed_url": "https://www.tapinto.net/towns/jersey-city/articles.atom",
+      "website_url": "https://www.tapinto.net/towns/jersey-city/",
+      "description": "TAPinto is a network of 85+ franchised online local news sites. Read some of our best stories and updates on Jersey City here. It provides high-quality, objective, non-partisan news and information to the public in real time in an environmentally friendly format. It is also a community resource that helps to promote our towns, clubs/organizations, religious institutions and local businesses.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5211166.jpg?t=1603882940"
+    }
+  ]
+}

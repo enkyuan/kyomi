@@ -1,0 +1,59 @@
+{
+  "category": "UK Atheist",
+  "source_url": "https://rss.feedspot.com/uk_atheist_rss_feeds",
+  "feeds": [
+    {
+      "title": "New Humanist Blog",
+      "feed_url": "https://feeds.feedburner.com/RaBlogFull",
+      "website_url": "https://newhumanist.org.uk/blog",
+      "description": "New Humanist is the London based magazine of the Rationalist Association, promoting reason, debate and free thought since 1885. In addition, the New Humanist website features daily updates and a lively weblog.",
+      "followers": {
+        "facebook": 15500,
+        "twitter": 32000
+      },
+      "image_url": "https://i1.feedspot.com/4911851.jpg?t=1620192691"
+    },
+    {
+      "title": "Ex-Muslims",
+      "feed_url": "https://ex-muslim.org.uk/feed/",
+      "website_url": "https://www.ex-muslim.org.uk/",
+      "description": "We, non-believers, atheists, and ex-Muslims, are establishing or joining the Council of Ex-Muslims of Britain to insist that no one is pigeonholed as Muslims with culturally relative rights nor deemed to be represented by regressive Islamic organizations and 'Muslim community leaders'.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4911860.jpg?t=1620192698"
+    },
+    {
+      "title": "Patheos",
+      "feed_url": "https://www.patheos.com/blogs/thefreethinker/feed/",
+      "website_url": "https://www.patheos.com/",
+      "description": "The Freethinker was one of the world's longest-running atheist journal. The Freethinker is an anti-Christian organ, and must, therefore, be chiefly aggressive. It will wage a relentless war against superstition in general, and against Christian superstition in particular.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 8500
+      },
+      "image_url": "https://i1.feedspot.com/475152.jpg?t=1620192683"
+    },
+    {
+      "title": "Dorset Humanists",
+      "feed_url": "https://dorset-humanists1.blogspot.com/feeds/posts/default",
+      "website_url": "https://dorset-humanists1.blogspot.com/",
+      "description": "Dorset Humanists is a welcoming group for humanists, atheists, and agnostics who seek to live ethical and fulfilling lives based on reason and humanity.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4911856.jpg"
+    },
+    {
+      "title": "Fadewblogs",
+      "feed_url": "https://www.fadewblogs.eu.org/feeds/posts/default",
+      "website_url": "https://www.fadewblogs.eu.org/",
+      "description": "Covers interesting and factual updates and news about current affairs, entertainment, economy, politics, education, etc. Fadewblogs is an independent online magazine & publishing platform, sharing stories that matter.",
+      "followers": {
+        "facebook": 875
+      },
+      "image_url": "https://i1.feedspot.com/5362249.jpg?t=1642067539"
+    }
+  ]
+}

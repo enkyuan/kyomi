@@ -1,0 +1,121 @@
+{
+  "category": "Zambia News",
+  "source_url": "https://rss.feedspot.com/zambia_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Times of Zambia",
+      "feed_url": "https://www.times.co.zm/?feed=rss2",
+      "website_url": "https://www.times.co.zm/",
+      "description": "The latest news on Zambia and the world covering business, entertainment, sports, opinions, and more.",
+      "followers": {
+        "facebook": 66900,
+        "twitter": 34400
+      },
+      "image_url": "https://i1.feedspot.com/5346593.jpg?t=1644842373"
+    },
+    {
+      "title": "Lusaka Star",
+      "feed_url": "https://lusakastar.com/feed",
+      "website_url": "https://lusakastar.com/",
+      "description": "The University of Zambia's number one news source for local news.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 210
+      },
+      "image_url": "https://i1.feedspot.com/5346590.jpg?t=1644842514"
+    },
+    {
+      "title": "News Diggers!",
+      "feed_url": "https://diggers.news/feed/",
+      "website_url": "https://diggers.news/",
+      "description": "News Diggers! is Zambia's first multimedia publication focused on investigative journalism. It comprises a team of experienced journalists with a blend of new and dedicated talent eager to shape the art of digital journalism.",
+      "followers": {
+        "facebook": 376200,
+        "twitter": 128699
+      },
+      "image_url": "https://i1.feedspot.com/4739320.jpg?t=1644842754"
+    },
+    {
+      "title": "Daily Nation Zambia",
+      "feed_url": "https://www.dailynationzambia.com/feed/",
+      "website_url": "https://www.dailynationzambia.com/",
+      "description": "Daily Nation is a an independent daily publication which aims at pursuing justice and equity with integrity.",
+      "followers": {
+        "facebook": 292400,
+        "twitter": 88300,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5346671.jpg?t=1644842854"
+    },
+    {
+      "title": "Zambian Mining News Magazine",
+      "feed_url": "https://www.miningnewszambia.com/feed/",
+      "website_url": "https://www.miningnewszambia.com/",
+      "description": "The Zambian Mining Magazine is a premier source of news on mining developments in Zambia's most important industry. It provides in-depth coverage of mining projects and the personalities reshaping the mining industry in the country. Read the recent posts to learn more about mining in Zambia.",
+      "followers": {
+        "facebook": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5346667.jpg?t=1644843057"
+    },
+    {
+      "title": "Zambia News365",
+      "feed_url": "https://zambianews365.com/feed/",
+      "website_url": "https://zambianews365.com/",
+      "description": "Articles on Zambia news, entertainment, football, food, sports, politics, travel, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5346664.jpg?t=1644843170"
+    },
+    {
+      "title": "Zambia News.Net",
+      "feed_url": "http://feeds.zambianews.net/rss/9d7bb2c5689ae774",
+      "website_url": "https://www.zambianews.net/",
+      "description": "Zambia News is a stand-alone site covering news of the area, including stories from around the region and beyond. Additionally we provide international headlines, business and finance stories, and foreign exchange rates.",
+      "followers": {
+        "facebook": 6500,
+        "twitter": 437
+      },
+      "image_url": "https://i1.feedspot.com/5346665.jpg?t=1637761743"
+    },
+    {
+      "title": "Lusaka Voice",
+      "feed_url": "https://lusakavoice.com/feed/",
+      "website_url": "https://lusakavoice.com/",
+      "description": "The most reliable and up-to-date news agency bringing you the most important news about Zambia.",
+      "followers": {
+        "facebook": 102300,
+        "twitter": 8400
+      },
+      "image_url": "https://i1.feedspot.com/5346591.jpg?t=1644842543"
+    },
+    {
+      "title": "Mwebantu",
+      "feed_url": "https://www.mwebantu.com/feed/",
+      "website_url": "https://www.mwebantu.com/",
+      "description": "Mwebantu is Zambia's new media publisher. We share news as it breaks, shares popular videos, politics, entertainment, sports, lifestyle, celebrities & more.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 471100,
+        "instagram": 718800
+      },
+      "image_url": "https://i1.feedspot.com/4272176.jpg?t=1644842695"
+    },
+    {
+      "title": "Zambia 24",
+      "feed_url": "https://zambia24.com/feed/",
+      "website_url": "https://www.zambiainvest.com/",
+      "description": "Zambia 24 is Zambia's leading online news website.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5346666.jpg?t=1644843342"
+    },
+    {
+      "title": "ZambiaInvest",
+      "feed_url": "https://www.zambiainvest.com/",
+      "website_url": "https://www.zambiainvest.com/",
+      "description": "ZambiaInvest is the number 1 source of information to invest and do business in Zambia.",
+      "followers": {
+        "twitter": 72
+      },
+      "image_url": "https://i1.feedspot.com/5346670.jpg?t=1644843278"
+    }
+  ]
+}

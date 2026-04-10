@@ -1,0 +1,18 @@
+{
+  "category": "Glen Ellyn News",
+  "source_url": "https://rss.feedspot.com/glen_ellyn_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Village of Glen Ellyn, IL",
+      "feed_url": "https://www.glenellyn.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.glenellyn.org/CivicAlerts.aspx",
+      "description": "Follow for the latest news, information, updates and upcoming events about the Glen Ellyn village.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 3400,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/5153440.jpg?t=1625731336"
+    }
+  ]
+}

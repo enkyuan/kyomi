@@ -1,0 +1,619 @@
+{
+  "category": "Student",
+  "source_url": "https://rss.feedspot.com/student_rss_feeds",
+  "feeds": [
+    {
+      "title": "Student Life Network Blog",
+      "feed_url": "https://blog.studentlifenetwork.com/feed/",
+      "website_url": "https://blog.studentlifenetwork.com/",
+      "description": "Student Life Network is Canada's most comprehensive resource hub dedicated to helping and empowering millions of students. We give awesome stuff to awesome students.",
+      "followers": {
+        "facebook": 274300,
+        "twitter": 97800,
+        "instagram": 74600
+      },
+      "image_url": "https://i1.feedspot.com/4847675.jpg?t=1611312548"
+    },
+    {
+      "title": "The Student Loan Sherpa Blog",
+      "feed_url": "https://studentloansherpa.com/feed/",
+      "website_url": "https://studentloansherpa.com/blog/",
+      "description": "The Student Loan Sherpa is your source for expert student loan advice, based on personal experience and years of research. Student Loan Expert Michael Lux blogs about student loan strategy, student loan news, and reviews refinance and consolidation companies.",
+      "followers": {
+        "facebook": 719,
+        "twitter": 805
+      },
+      "image_url": "https://i1.feedspot.com/4848174.jpg"
+    },
+    {
+      "title": "SJSU Blog",
+      "feed_url": "https://ischool.sjsu.edu/taxonomy/term/1734/0/feed",
+      "website_url": "https://ischool.sjsu.edu/istudent-blog",
+      "description": "The San Jos\u00e9 State University School of Information prepares individuals for careers as information professionals. Students in all of our programs, as well as applicants, will find the iStudent Blog a gold mine. Written by a current student, this blog provides important information and resources and useful advice, including posts about courses, career pathways, online learning, time management, student groups, conferences, and financial aid.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 2800,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5285536.jpg?t=1622185132"
+    },
+    {
+      "title": "Flashlearners",
+      "feed_url": "https://flashlearners.com/feed/",
+      "website_url": "https://flashlearners.com/",
+      "description": "FlashLearners is an Educational And Career blog, which serves as a reliable source for Educational Information and Career Guide. Topics treated here at FlashLearners Include General Online Tutorials, School News, Blogging And SEO, Making Money Online And Offline, Tech Guide, Jobs And Scholarships, External And Internal Examinations Guide, Students Lifestyle, Skills Acquisition and Admission Guide.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 156,
+        "instagram": 507
+      },
+      "image_url": "https://i1.feedspot.com/5173853.jpg?t=1604411972"
+    },
+    {
+      "title": "INTO Study Blog",
+      "feed_url": "https://blog.intostudy.com/feed/",
+      "website_url": "https://blog.intostudy.com/",
+      "description": "A student blog all about living, learning and adventure while studying abroad in the UK, USA & China.",
+      "followers": {
+        "facebook": 284300,
+        "twitter": 2800,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4847718.jpg?t=1611312715"
+    },
+    {
+      "title": "Student Loan Planner - Student Loan Blog",
+      "feed_url": "https://www.studentloanplanner.com/feed/",
+      "website_url": "https://www.studentloanplanner.com/blog/",
+      "description": "At Student Loan Planner, we specialize in helping students resolve their student loan issues. Read about federal student loan policy, PSLF, PAYE, REPAYE, IBR, the cost of grad school, how to save thousands paying back student loans, and more.",
+      "followers": {
+        "facebook": 8300,
+        "twitter": 5700,
+        "instagram": 36200
+      },
+      "image_url": "https://i1.feedspot.com/4847657.jpg?t=1611312702"
+    },
+    {
+      "title": "Stay Informed Group",
+      "feed_url": "https://stayinformedgroup.com/feed/",
+      "website_url": "https://stayinformedgroup.com/",
+      "description": "Stay Informed Group is the right place to go if you are looking for Fully Funded Scholarships, Grants, Free Online Courses, Fellowships, Internships, Study Abroad Tips, career tips, motivational contents, travel abroad tips and Scholarships.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 6,
+        "instagram": 566
+      },
+      "image_url": "https://i1.feedspot.com/5142459.jpg?t=1611312730"
+    },
+    {
+      "title": "Daniel Wong Blog",
+      "feed_url": "https://www.daniel-wong.com/feed/",
+      "website_url": "https://www.daniel-wong.com/blog/",
+      "description": "Daniel Wong is a learning & teen expert. He specializes in empowering students and teens to become both happy and successful. He shows parents how they can help too. Daniel Wong's blog covers topics like education, study techniques, child development, teen and pre-teen behavior, and parenting.",
+      "followers": {
+        "facebook": 10000,
+        "twitter": 804
+      },
+      "image_url": "https://i1.feedspot.com/4847736.jpg?t=1611312736"
+    },
+    {
+      "title": "The Learning Scientists Blog",
+      "feed_url": "https://www.learningscientists.org/blog?format=rss",
+      "website_url": "https://www.learningscientists.org/blog/",
+      "description": "We are cognitive psychological scientists interested in research on education. Our main research focus is on the science of learning. Our vision is to make scientific research on learning more accessible to students, teachers, and other educators.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 30100
+      },
+      "image_url": "https://i1.feedspot.com/4645547.jpg?t=1611313164"
+    },
+    {
+      "title": "ReachIvy",
+      "feed_url": "https://www.reachivy.com/blog/feed",
+      "website_url": "https://www.reachivy.com/blog/",
+      "description": "Get tips & guidance from experts about studying abroad & choosing career. ReachIvy Blog keeps students updated with the latest news from their dream colleges.",
+      "followers": {
+        "facebook": 26800,
+        "twitter": 540,
+        "instagram": 8800
+      },
+      "image_url": "https://i1.feedspot.com/4848061.jpg?t=1611313130"
+    },
+    {
+      "title": "Sincerely Students",
+      "feed_url": "https://sincerelystudents.com/feed/",
+      "website_url": "https://sincerelystudents.com/",
+      "description": "Sincerely Students provides the most up-to-date tips for high school and college students, including studying, productivity, college prep, online classes, organization, and more!",
+      "followers": {
+        "twitter": 571
+      },
+      "image_url": "https://i1.feedspot.com/5283425.jpg?t=1621849483"
+    },
+    {
+      "title": "The Red Pen Blog",
+      "feed_url": "https://theredpen.in/feed/",
+      "website_url": "https://theredpen.in/blog/",
+      "description": "Advice on study abroad admissions process, essays, SOP, profile development, summer programs, resumes, financial aid in The Red Pen blog. The Red Pen has successfully guided students from high school students to MBA hopefuls through the process of applying abroad.",
+      "followers": {
+        "facebook": 5300,
+        "twitter": 1300,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4848069.jpg?t=1611313135"
+    },
+    {
+      "title": "Global Career Compass Blog",
+      "feed_url": "https://globalcareercompass.blog/feed/",
+      "website_url": "https://globalcareercompass.blog/",
+      "description": "Global Career Compass focus is on global higher education trends, impact of ed abroad on student career dev & employability, intl service-learning.",
+      "followers": {
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4846180.jpg?t=1674540888"
+    },
+    {
+      "title": "myUCD",
+      "feed_url": "http://www.myucdblog.com/feed/",
+      "website_url": "http://www.myucdblog.com/",
+      "description": "Here at myUCD we want to help second level students choose the right course for them. We want to provide all the info you need to make this important decision and are here to listen if you need to ask questions and put you in touch with academics or students currently studying the degree, all to help inform your decision!",
+      "followers": {
+        "facebook": 22000,
+        "twitter": 2700,
+        "instagram": 8300
+      },
+      "image_url": "https://i1.feedspot.com/4847552.jpg?t=1611313668"
+    },
+    {
+      "title": "National Student Clearinghouse Blog",
+      "feed_url": "https://www.studentclearinghouse.org/nscblog/feed/",
+      "website_url": "https://www.studentclearinghouse.org/nscblog/",
+      "description": "The Clearinghouse Today blog offers the latest information on the National Student Clearinghouse, its services, and its research reports. The nation's trusted source for education verification and student outcomes research. Keep up on us and higher ed topics.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 6000,
+        "instagram": 976
+      },
+      "image_url": "https://i1.feedspot.com/4848023.jpg?t=1611313697"
+    },
+    {
+      "title": "McCague Borlack",
+      "feed_url": "http://mblawstudents.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://mblawstudents.blogspot.com/",
+      "description": "The blog talks about day in the life of a student in a litigation law firm. McCague Borlack are are one of Toronto's leading litigation law firms who pride themselves on being the largest insurance boutique law firm in Canada and service the global legal market with a wide range of practice areas and specialized knowledge.",
+      "followers": {
+        "facebook": 172,
+        "twitter": 500
+      },
+      "image_url": "https://i1.feedspot.com/5441245.jpg?t=1663066713"
+    },
+    {
+      "title": "The Thesis Whisperer",
+      "feed_url": "https://thesiswhisperer.com/feed/",
+      "website_url": "https://thesiswhisperer.com/",
+      "description": "The Thesis Whisperer blog is dedicated to the topic of doing a Ph.D. and being an academic in the neo-liberal precarious academy that we (kinda) love. Since 2006 I have worked exclusively with Ph.D. students and early career academics. I help people finish complex research projects with (sometimes very) demanding stakeholders. I'm passionate about helping people reach their potential as researchers and helping to create a kinder, more inclusive academy. I strive to create spaces where people can do their best work and advance human knowledge for the good of all.",
+      "followers": {
+        "facebook": 26500,
+        "twitter": 52800,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4636014.jpg?t=1678348231"
+    },
+    {
+      "title": "Wesleying",
+      "feed_url": "https://www.wesleying.org/blog-feed.xml",
+      "website_url": "https://www.wesleying.org/",
+      "description": "Wesleying was founded in 2006 by Xue Sun and Holly Wood, members of the class of 2008. Since, it has become a space for undergraduate students at Wesleyan to post about news, events, and student life on campus.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/8662527.jpg?t=1755863867"
+    },
+    {
+      "title": "Bwog",
+      "feed_url": "https://bwog.com/feed/",
+      "website_url": "https://bwog.com/",
+      "description": "Bwog is an independent, student-run campus news site. We publish content that is relevant to undergraduate students at Columbia University, including breaking news; campus arts, science, sports, and culture events; investigative features; and reflections on student life\u2014often with a humorous voice.",
+      "followers": {
+        "facebook": 4200
+      },
+      "image_url": "https://i1.feedspot.com/1119235.jpg?t=1755863962"
+    },
+    {
+      "title": "Harvard Independent",
+      "feed_url": "https://harvardindependent.com/feed/",
+      "website_url": "https://harvardindependent.com/",
+      "description": "Harvard doesn't own our office. The 24-hour news cycle doesn't constrain our coverage. Our editorials aren't restricted to any fixed ideology. In 1969, student protests underscored an emerging need to break away from the openly biased press environment of the time. And so, the Indy was born. We were founded by a group of undergraduates who have gone on to write for many of the nation's greatest papers and have founded influential media outlets. Since then, we have proudly provided a counterpoint to the prevailing opinions and a writing style that digs deep into every issue.",
+      "followers": {},
+      "image_url": "https://harvardindependent.com/wp-content/uploads/2024/11/unnamed.png?t=1755863376"
+    },
+    {
+      "title": "College Info Geek",
+      "feed_url": "https://collegeinfogeek.com/feed/",
+      "website_url": "https://collegeinfogeek.com/",
+      "description": "Hi, I'm Thomas Frank. My team and I built College Info Geek from the ground up to help you learn effectively, spend less time studying, and become more productive (even if you're not in college).",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4688634.jpg?t=1653282969"
+    },
+    {
+      "title": "The International Student Blog",
+      "feed_url": "https://blog.internationalstudent.com/feed/",
+      "website_url": "https://blog.internationalstudent.com/",
+      "description": "We aim to provide the very best resources for international students anywhere in the world, whether for insurance, loans or finding a school! Students traveling around the world can have the latest news, tips, insight and resources available to international student with the InternationalStudent.com blog.",
+      "followers": {
+        "facebook": 73000,
+        "twitter": 16600,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4683819.jpg?t=1611312562"
+    },
+    {
+      "title": "Save the Student",
+      "feed_url": "https://www.savethestudent.org/feed",
+      "website_url": "https://www.savethestudent.org/",
+      "description": "The student money website is designed by keeping students in mind. It offers advice on finance, good deals, banking, accommodation, news, and much more. Get the latest student discounts, student jobs, make-money ideas, and more.",
+      "followers": {
+        "facebook": 269500,
+        "twitter": 11500,
+        "instagram": 83500
+      },
+      "image_url": "https://i1.feedspot.com/4848111.jpg?t=1668082008"
+    },
+    {
+      "title": "The Warwick Careers Blog",
+      "feed_url": "https://careersblog.warwick.ac.uk/feed/",
+      "website_url": "https://careersblog.warwick.ac.uk/",
+      "description": "Articles on topics such as career development, learning, job market, job interviews, career decisions, interview questions, applications, self-awareness, personal branding, work experience, and more. Warwick is one of the UK's leading universities, with an acknowledged reputation for excellence in research and teaching, for innovation, and links with business and industry.",
+      "followers": {
+        "twitter": 39
+      },
+      "image_url": "https://i1.feedspot.com/4510587.jpg?t=1611312675"
+    },
+    {
+      "title": "Access Scholarships Blog",
+      "feed_url": "https://accessscholarships.com/feed/",
+      "website_url": "https://accessscholarships.com/our-blog/",
+      "description": "Access Scholarships is a scholarship search engine and college resource platform for students. The Access Scholarships blog covers topics such as college life, scholarships, and navigating the college admissions process.",
+      "followers": {
+        "facebook": 873,
+        "instagram": 119900
+      },
+      "image_url": "https://i1.feedspot.com/5294196.jpg?t=1624014079"
+    },
+    {
+      "title": "Talentnook",
+      "feed_url": "https://talentnook.com/blog/feed",
+      "website_url": "https://talentnook.com/blog",
+      "description": "Get the latest on online learning and tutoring trends, smart strategies, and resources for your child in academics, music, language, art, test prep, and more.",
+      "followers": {
+        "facebook": 517,
+        "twitter": 139
+      },
+      "image_url": "https://i1.feedspot.com/5235472.jpg?t=1610461816"
+    },
+    {
+      "title": "KeepnTrack - Visitor, Volunteer, and Student Management and Resource Blog",
+      "feed_url": "https://www.keepntrack.com/feed/",
+      "website_url": "https://www.keepntrack.com/blog/",
+      "description": "KeepnTrack provides student, volunteer and visitor management software. Get informed on the latest Visitor, Volunteer, and Student Management Software news.",
+      "followers": {
+        "facebook": 87,
+        "twitter": 80
+      },
+      "image_url": "https://i1.feedspot.com/4847442.jpg?t=1611313253"
+    },
+    {
+      "title": "The Student Minds Blog",
+      "feed_url": "https://www.studentmindsblog.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.studentmindsblog.co.uk/",
+      "description": "The Student Minds blog is the UK's biggest blog on student wellbeing and mental health, sharing student experiences of mental health difficulties.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 25100
+      },
+      "image_url": "https://i1.feedspot.com/4847133.jpg?t=1610548617"
+    },
+    {
+      "title": "The Universities at Shady Grove",
+      "feed_url": "https://uatshadygrove.org/feed/",
+      "website_url": "https://uatshadygrove.org/",
+      "description": "Around the Grove is a blog for students enrolled in programs at The Universities at Shady Grove (USG). Students are able to blog about their college experiences, both inside and outside of the classroom.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4847599.jpg?t=1611313659"
+    },
+    {
+      "title": "Worcester Student Life",
+      "feed_url": "https://worcesterstudentlife.com/feed/",
+      "website_url": "https://worcesterstudentlife.com/",
+      "description": "We are current students at the University of Worcester, sharing our university experiences and tips on student life. If you want to know what it's like to live and study in Worcester, this is the place to find out.",
+      "followers": {
+        "facebook": 29800,
+        "twitter": 21200,
+        "instagram": 23300
+      },
+      "image_url": "https://i1.feedspot.com/4847752.jpg?t=1611313680"
+    },
+    {
+      "title": "THE STUDENT LIFE BLOG | Trent University Durham GTA",
+      "feed_url": "https://trentudurham.wordpress.com/feed/",
+      "website_url": "https://trentudurham.wordpress.com/",
+      "description": "A hub of learning and innovation, Trent University Durham offers a dynamic and rigorous education experience grounded in the social sciences and humanities and unparalleled in the Durham Region and eastern GTA.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1900,
+        "instagram": 316
+      },
+      "image_url": "https://i1.feedspot.com/4847595.jpg?t=1611313703"
+    },
+    {
+      "title": "Student Life",
+      "feed_url": "https://studentlifeweb.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://studentlifeweb.blogspot.com/",
+      "description": "Student Accommodation and Student life discussed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5076004.jpg?t=1611314008"
+    },
+    {
+      "title": "The mind field of an IIT Aspirant",
+      "feed_url": "https://stimulatedme.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://stimulatedme.blogspot.com/",
+      "description": "Keep up with articles from The mind field of an IIT Aspirant",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5055591.jpg"
+    },
+    {
+      "title": "Student life (ronak sharma)",
+      "feed_url": "https://rksnewblog081.blogspot.com/feeds/posts/default",
+      "website_url": "https://rksnewblog081.blogspot.com/",
+      "description": "Why Student life is the most amazing phase of any person's life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149453.jpg?t=1611314871"
+    },
+    {
+      "title": "The Fashion Student Hub | Fashion Design Blog For Students",
+      "feed_url": "https://www.thefashionstudenthub.com/blog.rss",
+      "website_url": "https://www.thefashionstudenthub.com/blog/",
+      "description": "The fashion design blog for people wanting a career in the fashion industry. We provide you with inspirational content, helpful tips and guidance as well as online courses from fashion experts. This is an online education site for fashion students of all ages and experience levels.",
+      "followers": {
+        "facebook": 373,
+        "twitter": 120
+      },
+      "image_url": "https://i1.feedspot.com/4847497.jpg?t=1611314300"
+    },
+    {
+      "title": "The Student Social Work Hub Blog",
+      "feed_url": "https://thestudentsocialworkhub.wordpress.com/feed/",
+      "website_url": "https://thestudentsocialworkhub.wordpress.com/blogs/",
+      "description": "At present we are a small team of seven friends whilst focusing on the academic aspects of social work, we also want to promote self-care and ensure that we maintain a relaxed outlook on student life. We aim to share blogs, articles, webinars, platforms, and academic writing in ways that students are interested in.",
+      "followers": {
+        "twitter": 5700,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5285538.jpg?t=1668082048"
+    },
+    {
+      "title": "Student Caff\u00e9 Blog",
+      "feed_url": "http://blog.studentcaffe.com/feed/",
+      "website_url": "http://blog.studentcaffe.com/",
+      "description": "Connecting students with the resources they need to make the best decisions for their education and career. Student Caff\u00e9 is a free, inclusive website that offers advice to anyone who hopes to achieve higher education, afford their tuition, and thrive as a student.",
+      "followers": {
+        "facebook": 781,
+        "twitter": 412,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4848037.jpg?t=1611312576"
+    },
+    {
+      "title": "Foreigner Tingz",
+      "feed_url": "https://foreigner-tingz.wixsite.com/myblogsite/blog-feed.xml",
+      "website_url": "https://foreigner-tingz.wixsite.com/myblogsite",
+      "description": "An amazing and detailed journey of being an international student in the US. New experience. Challenges. Tips and tricks. Let's check it out at Foreigner Tingz !!!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5238320.jpg?t=1611227281"
+    },
+    {
+      "title": "STUDY HUB",
+      "feed_url": "https://shauryaa.wixsite.com/myblogs/blog-feed.xml",
+      "website_url": "https://shauryaa.wixsite.com/myblogs/",
+      "description": "STUDY HUB: Student school survival platform. Here you will find some of the most unknown and unique study tips which you can actually use in your day to day life. Happy Learning!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5210963.jpg?t=1603810155"
+    },
+    {
+      "title": "Research Student Careers Blog",
+      "feed_url": "https://researchstudentcareers.wordpress.com/feed/",
+      "website_url": "https://researchstudentcareers.wordpress.com/",
+      "description": "This blog is written by Sharon Maguire, Careers Consultant at the University of Edinburgh who works with research students and staff. This blog will inform research students about career related events and news, job vacancies for research students, and more, all with the aim of helping with career decision making.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4847577.jpg?t=1611313341"
+    },
+    {
+      "title": "Abbey Road Programs",
+      "feed_url": "https://www.goabbeyroad.com/feed/",
+      "website_url": "https://www.goabbeyroad.com/",
+      "description": "Abbey Road Summer Programs programs for high school students offer many different options to choose from. Choose your summer program in France, Italy, Spain, Germany, Greece and in the U.S.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 838,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4940351.jpg?t=1611314339"
+    },
+    {
+      "title": "Student Debt Relief | Student Loan Forgiveness",
+      "feed_url": "https://www.studentdebtrelief.us/feed/",
+      "website_url": "https://www.studentdebtrelief.us/news/",
+      "description": "Student Debt Relief information on Student Loan Forgiveness plans and Federal Student Loan Consolidations. Their mission is to help people learn more about Student Loans.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 603
+      },
+      "image_url": "https://i1.feedspot.com/4848220.jpg?t=1611313186"
+    },
+    {
+      "title": "global2",
+      "feed_url": "https://global2.vic.edu.au/feed/",
+      "website_url": "https://global2.vic.edu.au/",
+      "description": "Global2 is the place for students to learn about social media, using social media. Teachers and students in Victorian Government and Catholic schools are invited to set up their class and student spaces, create blogs and digital portfolios.",
+      "followers": {
+        "twitter": 450
+      },
+      "image_url": "https://i1.feedspot.com/4846175.jpg?t=1611314347"
+    },
+    {
+      "title": "Kidblog Safe Student Publishing",
+      "feed_url": "https://kidblog.org/home/feed/",
+      "website_url": "https://fan.school/spaces?spaceId=y3xUrnZHvGAEqMI1KSXB",
+      "description": "We empower students to write with a meaningful purpose and to share their voice with an authentic audience. Teachers in over 70 countries trust Kidblog to share student writing with a real audience.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/4729876.jpg?t=1607670631"
+    },
+    {
+      "title": "edublogs",
+      "feed_url": "https://studentchallenge.edublogs.org/feed/",
+      "website_url": "https://studentchallenge.edublogs.org/",
+      "description": "The aim of the student blogging challenge is to connect student bloggers with a global audience while supporting teachers with their classroom blogging.",
+      "followers": {
+        "facebook": 62200,
+        "twitter": 39300
+      },
+      "image_url": "https://i1.feedspot.com/4847619.jpg?t=1611312670"
+    },
+    {
+      "title": "College Ave Corner",
+      "feed_url": "https://www.collegeavestudentloans.com/blog/feed/",
+      "website_url": "https://www.collegeave.com/articles/",
+      "description": "Tired of being confused when researching student loans? Then you're in the right place. Get advice on preparing and paying for college in a way that's easy to understand.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4806837.jpg?t=1610449156"
+    },
+    {
+      "title": "SchoolHabits",
+      "feed_url": "https://schoolhabits.com/feed/",
+      "website_url": "https://schoolhabits.com/category/time-management/",
+      "description": "My name is Katie Azevedo. Through private coaching and video tutorials, I teach students how to learn. I work with students in elementary school through graduate school, as well as adults looking to further their work productivity habits.",
+      "followers": {
+        "facebook": 575,
+        "twitter": 146,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4689399.jpg?t=1605765095"
+    },
+    {
+      "title": "Study in Sweden Blog",
+      "feed_url": "https://studyinsweden.se/blogs/",
+      "website_url": "https://studyinsweden.se/blogs/",
+      "description": "Study in Sweden is a comprehensive, official resource on studying in Sweden for prospective and current international students. Here you'll find everything you need to know on the Swedish higher education system, finding and applying for a programme, searching for scholarships, living as an international student in Sweden and learning Swedish.",
+      "followers": {
+        "facebook": 479300,
+        "instagram": 116700
+      },
+      "image_url": "https://i1.feedspot.com/4590507.jpg?t=1611209127"
+    },
+    {
+      "title": "School Companion",
+      "feed_url": "https://school-companion.com/feed/",
+      "website_url": "https://school-companion.com/",
+      "description": "School Companion specializes in curating the finest selection of school accessories, meticulously chosen to complement your student life. From trendsetting backpacks to weather-ready umbrellas and raincoats, hydration solutions in the form of stylish water bottles, footwear that blends comfort with fashion, and lunch boxes that make your mealtime a delight, here you will find everything.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7278198.jpg?t=1710929989"
+    },
+    {
+      "title": "Studelp Blog",
+      "feed_url": "https://studelp.com/feeds/posts/default",
+      "website_url": "https://studelp.com/blog",
+      "description": "Studelp is a place to learn and grab a lot of study tips, strategies and guides. Apart from these, This site also provides you the best information about various courses and career options to make your future bright.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/5263710.jpg?t=1617275753"
+    },
+    {
+      "title": "StudentUniverse Travel - Written for Young Travelers, by Young Travelers Blog",
+      "feed_url": "https://www.studentuniverse.com/blog/feed",
+      "website_url": "https://www.studentuniverse.com/blog/",
+      "description": "StudentUniverse is the world's leading travel booking site for students and youth. This blog is for students looking to travel the world, we offer our members special rates on flights, hotels and tours, allowing students to travel more and spend less. Tips for Cheap Student Travel from Fellow Jetsetters.",
+      "followers": {
+        "facebook": 417300,
+        "twitter": 105400,
+        "instagram": 78800
+      },
+      "image_url": "https://i1.feedspot.com/4670589.jpg?t=1611312689"
+    },
+    {
+      "title": "Study in Germany",
+      "feed_url": "https://www.study-in-germany.de/en/community/",
+      "website_url": "https://www.study-in-germany.de/en/community/",
+      "description": "Information about studying and living in Germany and the German university landscape. On our blog international students share their experiences about studying and living in Germany.",
+      "followers": {
+        "facebook": 601000,
+        "instagram": 50000
+      },
+      "image_url": "https://i1.feedspot.com/4847532.jpg?t=1612352615"
+    },
+    {
+      "title": "Comevo Blog",
+      "feed_url": "https://comevo.com/feed/",
+      "website_url": "https://comevo.com/blog",
+      "description": "Comevo provides an engaging, easy to use, cloud based software service for online orientation. Comevo is a software company dedicated to cultivating technology that will serve the staff and students at colleges and universities throughout North America.",
+      "followers": {
+        "facebook": 105,
+        "twitter": 234
+      },
+      "image_url": "https://i1.feedspot.com/4847474.jpg?t=1611313616"
+    },
+    {
+      "title": "The Student Blogger - Blogging away the time...",
+      "feed_url": "http://thestudentblogger.co.uk/feed/",
+      "website_url": "https://careersblog.uts.edu.au/",
+      "description": "The Student Blogger brings you the very latest money-saving tips, studenty recipes, fashion and general advice to help ensure your student days the best days of your life!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 17000
+      },
+      "image_url": "https://i1.feedspot.com/4847504.jpg?t=1611313644"
+    },
+    {
+      "title": "UTS Careers Blog",
+      "feed_url": "https://careersblog.uts.edu.au/feed/",
+      "website_url": "https://careersblog.uts.edu.au/",
+      "description": "The UTS Careers blog aims to provide students from all walks of life with the tips, know-how and insights needed to maximise their potential career success!",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 3100,
+        "instagram": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4847588.jpg?t=1611313689"
+    },
+    {
+      "title": "The Mature Student",
+      "feed_url": "https://thematurestudent.co.uk/f.atom",
+      "website_url": "https://thematurestudent.co.uk/",
+      "description": "The Mature Student is a personal study blog that focuses on the inane musings of a mature speech and language therapy university student, lacking in both maturity and studiousness...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5274670.jpg?t=1619777692"
+    },
+    {
+      "title": "Prestige Student Living Blog | Accommodation across the UK",
+      "feed_url": "https://prestigestudentliving.com/blog/feed",
+      "website_url": "https://prestigestudentliving.com/blog",
+      "description": "Prestige Student Living offers luxury student accommodation across the UK, from onsite gyms, cinema rooms and luxury student studios.",
+      "followers": {
+        "twitter": 187,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4847681.jpg?t=1611313181"
+    }
+  ]
+}

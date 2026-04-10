@@ -1,0 +1,91 @@
+{
+  "category": "EEG",
+  "source_url": "https://rss.feedspot.com/eeg_rss_feeds",
+  "feeds": [
+    {
+      "title": "mBrainTrain Blog",
+      "feed_url": "https://mbraintrain.com/feed/",
+      "website_url": "https://mbraintrain.com/blog/",
+      "description": "We developed a family of portable EEG products starting with pure simple eeg systems to professional and high-density systems and finally innovative solutions that fit into real-life situations. Our mission is to enable everyday brain tracking and unlock the hidden potentials of the human brain.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2900,
+        "instagram": 857
+      },
+      "image_url": "https://i1.feedspot.com/5594086.jpg?t=1686304773"
+    },
+    {
+      "title": "Integris Neuro Blog",
+      "feed_url": "https://www.integrisneuro.com/blog-feed.xml",
+      "website_url": "https://www.integrisneuro.com/blog",
+      "description": "Our goal at Integris Neuro is to put the neurologists back on top. We are so dedicated to this goal, our entire business is built around this premise. From our service offerings to our service fees, everything we do is about building your business and helping your practice grow. We have found that we are only successful when you are.",
+      "followers": {
+        "facebook": 120
+      },
+      "image_url": "https://i1.feedspot.com/5594088.jpg?t=1686304786"
+    },
+    {
+      "title": "Neuroscience News \u00bb Eeg",
+      "feed_url": "https://neurosciencenews.com/neuroscience-terms/eeg/feed/",
+      "website_url": "https://neurosciencenews.com/neuroscience-terms/eeg/",
+      "description": "Neuroscience News provides research news for neuroscience, neurology, psychology, AI, brain science, mental health, robotics, and cognitive sciences. Check out interesting and informative articles about EEG.",
+      "followers": {
+        "facebook": 257600,
+        "twitter": 503300,
+        "instagram": 181600
+      },
+      "image_url": "https://i1.feedspot.com/5594080.jpg?t=1686304743"
+    },
+    {
+      "title": "Cadwell News",
+      "feed_url": "https://www.cadwell.com/feed/",
+      "website_url": "https://www.cadwell.com/news/",
+      "description": "Cadwell is dedicated to innovating Neurodiagnostic, Neuromonitoring, and Sleep Diagnostic solutions. Our entire focus is providing innovative and easy-to-use neurodiagnostic, neuromonitoring, and sleep medical solutions. Learn what's happening in the world and in the world of Cadwell with news stories on EEG, EMG, PSG, Sleep Diagnostics, and philanthropy.",
+      "followers": {
+        "facebook": 34100,
+        "twitter": 227,
+        "instagram": 799
+      },
+      "image_url": "https://i1.feedspot.com/5594082.jpg?t=1686304752"
+    },
+    {
+      "title": "Neurosteer News",
+      "feed_url": "https://www.neurosteer.com//feed/rss2",
+      "website_url": "https://www.neurosteer.com/news",
+      "description": "Founded in 2015, Neurosteer Inc. has developed the world's first wearable, medical-grade brain activity interpretation platform for a wide range of medical, wellness, and lifestyle applications. The company was founded by Prof. Nathan Intrator, who initially developed the technology while at Tel Aviv University. Neurosteer has deep expertise in signal processing and neuroscience, with teams in New York, California, and Israel.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 115
+      },
+      "image_url": "https://i1.feedspot.com/5594083.jpg?t=1686304757"
+    },
+    {
+      "title": "Neuromonitoring Technologies Blog",
+      "feed_url": "https://neuromonitoringtechnology.com/blog/feed/",
+      "website_url": "https://neuromonitoringtechnology.com/blog/",
+      "description": "NMT is an elite group of individuals with highly specialized expertise and training. Our goal is to correlate relationships between physiological variables with cEEG patterns and report these to the ICU team to anticipate seizures and ischemic events in advance versus reporting seizures/ischemia after they have occurred for maximal patient outcomes.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5594089.jpg?t=1686304793"
+    },
+    {
+      "title": "Neuro Style Blog",
+      "feed_url": "https://neuro-style.com/feed/",
+      "website_url": "https://neuro-style.com/blog/",
+      "description": "Neurostyle is dedicated to the development and production of innovative technologies in the field of neurology and at the same time, allows the world to gain easier access to the advantages of these neurological innovations. The company is dedicated to design, develop and manufacture neurological diagnostic and rehabilitation devices.",
+      "followers": {
+        "facebook": 489
+      },
+      "image_url": "https://i1.feedspot.com/5594084.jpg?t=1686304763"
+    },
+    {
+      "title": "TMSi Blog",
+      "feed_url": "https://www.tmsi.artinis.com/blog?format=rss",
+      "website_url": "https://www.tmsi.artinis.com/blog/",
+      "description": "At TMSi our goal is to enable our clients and partners to conduct the best electrophysiological research possible. We do this by continually designing and developing superior measurement solutions to advance medical research worldwide.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5594078.jpg?t=1686305211"
+    }
+  ]
+}

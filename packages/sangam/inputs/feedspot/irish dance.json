@@ -1,0 +1,43 @@
+{
+  "category": "Irish Dance",
+  "source_url": "https://rss.feedspot.com/irish_dance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Bristol Irish Set Dancing Club",
+      "feed_url": "http://bristolirishsetdancing.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://bristolirishsetdancing.blogspot.com/",
+      "description": "The Bristol Irish Set Dancing Club meets weekly on Sunday nights. This blog will list upcoming events and post news and images from recent meetings.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5014071.jpg?t=1622281145"
+    },
+    {
+      "title": "Atlanta Irish Dance by Burke Connolly Blog",
+      "feed_url": "https://www.burkeconnolly.com/new-blog?format=RSS",
+      "website_url": "http://www.burkeconnolly.com/new-blog",
+      "description": "Irish dance classes in Atlanta Georgia. We teach Irish dancing to kids and adults. Get information about the world of Atlanta Irish dance for kids and adults.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5013845.jpg?t=1622281108"
+    },
+    {
+      "title": "Target Training Dance",
+      "feed_url": "https://www.targettrainingdance.com/blog-feed.xml",
+      "website_url": "https://www.targettrainingdance.com/blog",
+      "description": "Accelerate your dancing with Target Training's Irish dance-specific strength & conditioning programs. Optimize performance & improve technique through targeted, Irish dance specific strength & mobility exercises.",
+      "followers": {
+        "facebook": 7100,
+        "instagram": 15200
+      },
+      "image_url": "https://i1.feedspot.com/5013838.jpg?t=1622281121"
+    },
+    {
+      "title": "Tina Jordan Rees News",
+      "feed_url": "http://tinajordanrees.com/category/news/feed/",
+      "website_url": "http://tinajordanrees.com/category/news/",
+      "description": "Hi!! I am Tina Jordan. I am a traditional musician, Irish dance musician, composer, instrumental teacher, and Irish dancer. This blog provides new tracks from Irish dance culture.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5013971.jpg?t=1622281116"
+    }
+  ]
+}

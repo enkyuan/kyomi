@@ -1,0 +1,273 @@
+{
+  "category": "Champaign",
+  "source_url": "https://rss.feedspot.com/champaign_rss_feeds",
+  "feeds": [
+    {
+      "title": "News-Gazette",
+      "feed_url": "https://www.news-gazette.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.news-gazette.com/news/",
+      "description": "News-Gazette delivers up-to-the-minute news and information on the latest top stories, weather, entertainment, politics and more.",
+      "followers": {
+        "facebook": 64200,
+        "twitter": 45300,
+        "instagram": 17700
+      },
+      "image_url": "https://i1.feedspot.com/5139900.jpg?t=1623650018"
+    },
+    {
+      "title": "Investigate Midwest",
+      "feed_url": "https://investigatemidwest.org/feed/",
+      "website_url": "https://investigatemidwest.org/",
+      "description": "Investigate Midwest is an independent, nonprofit newsroom. Our mission is to serve the public interest by exposing dangerous and costly practices of influential agricultural corporations and institutions through in-depth and data-driven investigative journalism.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 2900,
+        "instagram": 618
+      },
+      "image_url": "https://i1.feedspot.com/5400895.jpg?t=1652763948"
+    },
+    {
+      "title": "IMEC Technologies",
+      "feed_url": "https://www.imectechnologies.com/category/health-safety/feed/",
+      "website_url": "https://www.imectechnologies.com/category/health-safety/",
+      "description": "IMEC Technologies is a Mobile Centric Software Solution provider operating in the EHS space, with a suite of compliance software products focused on Safety Management and Waste Management that are used in a broad variety of organizations. IMEC is headquartered in Dublin, Ireland, and has a Sales & Support office in Champaign, Illinois, USA. All software development is performed by IMEC at our headquarters in Dublin, Ireland.",
+      "followers": {
+        "twitter": 91
+      },
+      "image_url": "https://i1.feedspot.com/5216282.jpg?t=1608619222"
+    },
+    {
+      "title": "FreshRN Blog",
+      "feed_url": "https://www.freshrn.com/feed/",
+      "website_url": "https://www.freshrn.com/blog/",
+      "description": "Kati Kleber, MSN RN is a nurse educator, author, national speaker, host of the FreshRN Podcast, and owner of FreshRN - an online platform created to educate, encourage, and motivate newly licensed nurses in innovative ways.",
+      "followers": {
+        "twitter": 22700,
+        "instagram": 36700
+      },
+      "image_url": "https://i1.feedspot.com/4550468.jpg?t=1670588369"
+    },
+    {
+      "title": "Environmental News Bits",
+      "feed_url": "https://envnewsbits.info/feed/",
+      "website_url": "https://envnewsbits.info/",
+      "description": "The blog is about Browsing environmental news everyday.",
+      "followers": {
+        "facebook": 183,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4698890.jpg"
+    },
+    {
+      "title": "European Union Center at the University of Illinois",
+      "feed_url": "http://eucenterillinois.blogspot.com/feeds/posts/default",
+      "website_url": "http://eucenterillinois.blogspot.com/",
+      "description": "The European Union Center blog is an initiative of the European Union Center at the University of Illinois, USA. It is intended as a forum for the sharing of ideas about issues related to the EU. Our mission is to promote scholarly research on the EU and transatlantic relations by serving as a national resource center",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5447872.jpg?t=1663667054"
+    },
+    {
+      "title": "WCIA 3",
+      "feed_url": "https://www.wcia.com/feed/",
+      "website_url": "https://www.wcia.com/",
+      "description": "WCIA.com is a Central Illinois and Champaign news, weather, and sports leader. Stay up to date with your world and your community.",
+      "followers": {
+        "facebook": 192900,
+        "twitter": 44500
+      },
+      "image_url": "https://i1.feedspot.com/5130443.jpg?t=1623650030"
+    },
+    {
+      "title": "Audio Drama Reviews",
+      "feed_url": "http://audiodramareviews.com/feed/",
+      "website_url": "https://audiodramareviews.com/",
+      "description": "Audio Drama Reviews tries its best to look at what people are doing in the realm of podcasts and audible dramas, through an editorial eye. The founder is a writer, who can't help but look at everything story-related through the lens of a writer and what could writers learn from listening.",
+      "followers": {
+        "facebook": 528,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4524287.jpg?t=1606801627"
+    },
+    {
+      "title": "Wolfram Community \u00bb Machine Learning",
+      "feed_url": "https://community.wolfram.com/content/-/discussions-list/filtered/all%20groups/active/Any%20discussions/none/machine%20learning/feed.rss",
+      "website_url": "https://community.wolfram.com/content?curTag=machine%20learning",
+      "description": "This section of the forum is for algorithms that can learn from and make classifications and predictions on data. Ask machine learning related questions, discuss about different projects, and contribute to other people's projects.",
+      "followers": {
+        "facebook": 58500,
+        "twitter": 65800
+      },
+      "image_url": "https://i1.feedspot.com/5408503.jpg?t=1654680691"
+    },
+    {
+      "title": "BIGG Success Blog",
+      "feed_url": "https://biggsuccess.com/feed/",
+      "website_url": "https://biggsuccess.com/blog/",
+      "description": "Articles on helping people with an entrepreneur mindset find focus, removing the fog, so that one can clearly see the best path forward for personal, professional, financial, and business success. While BIGG Success is a coaching and e-learning firm, we don't push you to learn more - we help you DO more. Our guidance allows you to focus on your next step so you can take action and achieve your goals faster!",
+      "followers": {
+        "facebook": 817,
+        "twitter": 2500,
+        "instagram": 226
+      },
+      "image_url": "https://i1.feedspot.com/3982306.jpg?t=1659691357"
+    },
+    {
+      "title": "Wolfram Community \u00bb Cryptography",
+      "feed_url": "https://community.wolfram.com/content/-/discussions-list/filtered/all%20groups/active/Any%20discussions/none/cryptography/feed.rss",
+      "website_url": "https://community.wolfram.com/content?curTag=cryptography",
+      "description": "Wolfram Community offers space to connect with users of Wolfram technologies to learn, solve and share ideas. This category is for getting technical discussions about classic and modern cryptography and related Wolfram technologies, including RSA, elliptic curve, quantum, and other cryptographic approaches.",
+      "followers": {
+        "facebook": 58500,
+        "twitter": 65800
+      },
+      "image_url": "https://i1.feedspot.com/5386713.jpg?t=1648780384"
+    },
+    {
+      "title": "On the Horizon RC Podcast",
+      "feed_url": "https://feed.podbean.com/horizonhobby/feed.xml",
+      "website_url": "https://horizonhobby.podbean.com/",
+      "description": "Interviews with RC legends, celebrities and community influencers!",
+      "followers": {
+        "facebook": 949000,
+        "twitter": 27500,
+        "instagram": 486800
+      },
+      "image_url": "https://i1.feedspot.com/5231754.jpg?t=1752286053"
+    },
+    {
+      "title": "LittleCoffeeFox | Inspiration Through Organization",
+      "feed_url": "https://littlecoffeefox.com/feed/",
+      "website_url": "https://littlecoffeefox.com/",
+      "description": "Organization is key, and I use my bullet journal to build structure, plan, and change my life for the better and I'm here to help you do the same. I'm all about planners, lettering, & other creativity!",
+      "followers": {
+        "facebook": 33100,
+        "twitter": 2000,
+        "instagram": 26700
+      },
+      "image_url": "https://i1.feedspot.com/4870443.jpg?t=1623650022"
+    },
+    {
+      "title": "Artlandia Blog",
+      "feed_url": "https://blog.artlandia.com/feed/",
+      "website_url": "https://blog.artlandia.com/",
+      "description": "Artlandia, Inc. develops, markets, and supports award-winning graphic design software that delivers both ease of use to beginners and unprecedented creative freedom to accomplished professionals.",
+      "followers": {
+        "facebook": 408,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/4785000.jpg?t=1609321290"
+    },
+    {
+      "title": "Stacy Garrop's Composer's Blog",
+      "feed_url": "https://cusymphony.org/blog/feed/",
+      "website_url": "https://cusymphony.org/blog/",
+      "description": "The CUSO is a professional orchestra dedicated to enhancing the quality of life in the community through live performances and music education.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5011133.jpg?t=1622275008"
+    },
+    {
+      "title": "Prairie Zen Center Sunday Dharma Talks",
+      "feed_url": "http://www.prairiezen.org/podcast/sunday/pzc_sunday.xml",
+      "website_url": "http://www.prairiezen.org/Sunday_audio.html",
+      "description": "Prairie Zen Center Sunday Dharma Talks",
+      "followers": {
+        "facebook": 374
+      },
+      "image_url": "https://i1.feedspot.com/5173094.jpg?t=1752341132"
+    },
+    {
+      "title": "Beyond The Gym Floor",
+      "feed_url": "https://feeds.buzzsprout.com/728111.rss",
+      "website_url": "https://www.buzzsprout.com/728111",
+      "description": "Jamie O'Connor, a Teaching Associate Professor in the College of Applied Health Sciences at the University of Illinois, sets the stage for her podcast, which focuses on area physical educators. 'Physical educators matter and I want to talk about how you are changing lives.'",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1600,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5250142.jpg?t=1614660153"
+    },
+    {
+      "title": "Ryan Dallas Real Estate Blog",
+      "feed_url": "https://www.centralilhomefinder.com/feed/",
+      "website_url": "https://www.centralilhomefinder.com/blog/",
+      "description": "The blog provides the latest insights on owning a home or property in the local area and the latest in real estate in Champaign County.Ryan Dallas Real Estate provides the Champaign County Real Estate information and listings, homes for sale, foreclosures, condos for sale, and Champaign County land for sale.",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 11,
+        "instagram": 873
+      },
+      "image_url": "https://i1.feedspot.com/5307869.jpg?t=1627898247"
+    },
+    {
+      "title": "Illinois Marathon Blog",
+      "feed_url": "https://illinoismarathon.com/feed/",
+      "website_url": "https://illinoismarathon.com/blog/",
+      "description": "Keep up to date with the Illinois Marathon news and information from the Illinois Marathon Blog.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 2500,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5284035.jpg?t=1621944201"
+    },
+    {
+      "title": "Women's Health Practice Blog",
+      "feed_url": "https://blog.womenshealthpractice.com/?feed=rss2",
+      "website_url": "https://blog.womenshealthpractice.com/",
+      "description": "We believe women deserve a better patient experience than they are receiving in the traditional healthcare model. Our process is focused on intensely personal treatment plans, a focus on health as well as overall wellness, and follow-ups with patients to ensure continuing well-being.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5081710.jpg?t=1619008923"
+    },
+    {
+      "title": "Illinois State Climatologist Blog",
+      "feed_url": "https://climateillinois.wordpress.com/feed/",
+      "website_url": "https://climateillinois.wordpress.com/",
+      "description": "Welcome to Illinois State Climatologist by Dr. Jim Angel. Illinois State Climatologist features related to climate in Illinois, Illinois State Water Survey, Prairie Research Institute, etc",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950602.jpg?t=1744090058"
+    },
+    {
+      "title": "Investigative Journalism Education Consortium",
+      "feed_url": "https://ijec.org/feed/",
+      "website_url": "https://ijec.org/",
+      "description": "The Investigative Journalism Education Consortium brings together the experience and knowledge of university educators who teach investigative and data journalism throughout the world.",
+      "followers": {
+        "facebook": 733,
+        "twitter": 330
+      },
+      "image_url": "https://i1.feedspot.com/3694936.jpg?t=1652773889"
+    },
+    {
+      "title": "University of Illinois - Women's Tennis",
+      "feed_url": "https://fightingillini.com/sorry.ashx",
+      "website_url": "https://fightingillini.com/sports/womens-tennis/archives",
+      "description": "University of Illinois Women's Tennis team, updated by the Illini Athletics Communication office. Official website of FIGHTING ILLINI Women's Tennis with news, schedules, rosters, features, facilities and gameday information for University of Illinois Athletics",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1800,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4854633.jpg?t=1611744059"
+    },
+    {
+      "title": "University of Illinois | UI Press",
+      "feed_url": "https://www.press.uillinois.edu/wordpress/feed/",
+      "website_url": "https://www.press.uillinois.edu/",
+      "description": "The University of Illinois Press supports the mission of the university through the worldwide dissemination of significant scholarship, striving to enhance and extend the reputation of the university. Through its publishing programs, the Press promotes research and education, enriches cultural and intellectual life, and fosters regional pride and accomplishments.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 8200,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/1537672.jpg?t=1621497938"
+    }
+  ]
+}

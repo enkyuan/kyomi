@@ -1,0 +1,88 @@
+{
+  "category": "UK Hospice",
+  "source_url": "https://rss.feedspot.com/uk_hospice_rss_feeds",
+  "feeds": [
+    {
+      "title": "Together for Short Lives",
+      "feed_url": "https://www.togetherforshortlives.org.uk/about-us/news-media/news/feed/",
+      "website_url": "https://www.togetherforshortlives.org.uk/about-us/news-media/news/",
+      "description": "Together for Short Lives is the UK charity for children and young people who are expected to have short lives.",
+      "followers": {
+        "facebook": 35900,
+        "twitter": 26000,
+        "instagram": 12100
+      },
+      "image_url": "https://i1.feedspot.com/4918092.jpg?t=1620632036"
+    },
+    {
+      "title": "St Richard's Hospice",
+      "feed_url": "https://www.strichards.org.uk/feed/",
+      "website_url": "https://www.strichards.org.uk/news/",
+      "description": "St Richard's Hospice cares for patients and families in Worcestershire who are living with life-threatening illnesses.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 8300,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4741991.jpg?t=1608183385"
+    },
+    {
+      "title": "St Catherine's Hospice Blog",
+      "feed_url": "https://www.stch.org.uk/news-blog/feed/",
+      "website_url": "https://www.stch.org.uk/news-blog/",
+      "description": "We're there for people in Sussex and East Surrey, with expert hospice care, when and where they need us most.",
+      "followers": {
+        "facebook": 14200,
+        "twitter": 4900,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4918102.jpg?t=1620632041"
+    },
+    {
+      "title": "The Myton Hospices",
+      "feed_url": "https://www.mytonhospice.org/news/feed/",
+      "website_url": "https://www.mytonhospice.org/news/",
+      "description": "At The Myton Hospices we believe that everyone matters for every single moment of their life; we focus on enhancing life when cure is no longer an option.",
+      "followers": {
+        "facebook": 24000,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/4743959.jpg?t=1608182385"
+    },
+    {
+      "title": "St Wilfrid's Hospice Blog",
+      "feed_url": "https://stwh.co.uk/feed/",
+      "website_url": "https://stwh.co.uk/blog/",
+      "description": "St Wilfrid's Hospice provides end of life care in the community and at our Hospice. We provide essential support for both patients and relatives.",
+      "followers": {
+        "facebook": 7400,
+        "twitter": 2400,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4743997.jpg?t=1608183389"
+    },
+    {
+      "title": "Jersey Hospice Care",
+      "feed_url": "https://www.jerseyhospicecare.com/about-us/news/?/",
+      "website_url": "https://www.jerseyhospicecare.com/about-us/news/?/",
+      "description": "Jersey Hospice Care (JHC) is a specialist palliative nursing service which provides holistic care free of charge, for patients with life-limited conditions.",
+      "followers": {
+        "facebook": 12100,
+        "twitter": 3700,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4744728.jpg?t=1608182415"
+    },
+    {
+      "title": "Kilbryde Hospice Blog",
+      "feed_url": "https://kilbrydehospice.org.uk/feed/",
+      "description": "Kilbryde Hospice is a charity which provides care and support to people in and around South Lanarkshire with life limiting illness and their carers.",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 2600,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4744098.jpg?t=1608182412"
+    }
+  ]
+}

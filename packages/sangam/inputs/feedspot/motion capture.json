@@ -1,0 +1,59 @@
+{
+  "category": "Motion Capture",
+  "source_url": "https://rss.feedspot.com/motion_capture_rss_feeds",
+  "feeds": [
+    {
+      "title": "Motion Analysis Blog",
+      "feed_url": "https://www.motionanalysis.com/blog/feed/",
+      "website_url": "https://www.motionanalysis.com/blog/",
+      "description": "Read our motion capture blog for regular updates, insights, and trends from Motion Analysis. Motion Analysis Corporation has been an international industry leader in motion capture technology for 40 years. We've worked closely with renowned specialists to create continuously cutting-edge hardware and software solutions for a wide range of industries including video game design, studio broadcasting, AR, VR, biomechanics, product development, robotics, and ergonomics.",
+      "followers": {
+        "facebook": 543,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5438054.jpg?t=1663322408"
+    },
+    {
+      "title": "Xsens Blog",
+      "feed_url": "https://www.movella.com/resources/rss.xml",
+      "website_url": "https://www.movella.com/resources?content_type=blog",
+      "description": "On this blog, we will share new information from our team, on new features and experiences. We'll also include occasional guest blogs. Xsens is recognized for its motion tracking and motion capture products with best-in-class performance, outstanding quality, and high ease of use. We're focused on capturing, processing, and sharing data on body and motion, and will provide premium solutions for animation; and more!",
+      "followers": {
+        "facebook": 2,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/5438057.jpg?t=1662121362"
+    },
+    {
+      "title": "STT Systems Blog",
+      "feed_url": "https://www.stt-systems.com/feed/",
+      "website_url": "https://www.stt-systems.com/blog/",
+      "description": "Check out the STT Systems blog, and discover all the news about the sector, industry, and our company. STT was created by a group of engineers with our primary focus being able to develop innovative products and solutions for various Motion Analysis and Machine Vision applications.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 591,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5438063.jpg?t=1662118239"
+    },
+    {
+      "title": "TheMotionMonitor Blog",
+      "feed_url": "https://feeds.feedburner.com/themotionmonitorblogteam/Hrqh",
+      "website_url": "https://www.animatrik.com/blog",
+      "description": "TheMotionMonitorm writes about all things motion capture. Topics range from the state of 3D mocap hardware to breakthrough biomechanics research, and whatever else might be on our minds at the time. If you are a biomechanist, athletic trainer, physical therapist, neuroscientist, coach, or simply interested in life sciences and how humans move, you may find this blog of interest.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5438053.jpg?t=1662119382"
+    },
+    {
+      "title": "Animatrik Film Design Blog",
+      "feed_url": "https://www.animatrik.com/blog?format=rss",
+      "website_url": "https://www.animatrik.com/blog",
+      "description": "Animatrik is a world leader in groundbreaking motion capture, pre-visualization, and virtual cinematography services. Our team of technicians and visual effects artists come with incredible pedigree and experience, having worked on the entertainment industry's biggest blockbusters and most innovative visual effects experiences. To know about us and how we use our design in pictures and cinemas, follow our blog!",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 709
+      },
+      "image_url": "https://i1.feedspot.com/5438056.jpg?t=1663323551"
+    }
+  ]
+}

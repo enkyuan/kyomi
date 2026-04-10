@@ -1,0 +1,101 @@
+{
+  "category": "UK Jazz",
+  "source_url": "https://rss.feedspot.com/uk_jazz_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Jazz Mann",
+      "feed_url": "https://feeds.feedburner.com/thejazzmann",
+      "website_url": "https://www.thejazzmann.com/",
+      "description": "Jazz news, Jazz reviews and live Jazz gigs, events and reviews from Ian Mann the Jazz Man.",
+      "followers": {
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4907103.jpg"
+    },
+    {
+      "title": "bebop spoken here",
+      "feed_url": "https://lance-bebopspokenhere.blogspot.com/feeds/posts/default",
+      "website_url": "https://lance-bebopspokenhere.blogspot.com/",
+      "description": "For the last ten years we've been updating the world about jazz in the north east of England and updating the north east of England about jazz in the world.",
+      "followers": {
+        "twitter": 624
+      },
+      "image_url": "https://i1.feedspot.com/2267738.jpg?t=1613985778"
+    },
+    {
+      "title": "The Blue Moment \u00bb Jazz",
+      "feed_url": "https://thebluemoment.com/category/jazz/feed/",
+      "website_url": "https://thebluemoment.com/category/jazz/",
+      "description": "The following section of The Blue Moment is dedicated to Jazz. Since the late 1960s, I've written about music. A list of the people I've most enjoyed interviewing during that time would include Marvin Gaye, Laura Nyro, Booker T. Jones, Miles Davis, and more. The Blue Moment is about music by me.",
+      "followers": {
+        "twitter": 25100
+      },
+      "image_url": "https://i1.feedspot.com/4908518.jpg?t=1648123601"
+    },
+    {
+      "title": "Jazz from Geoff",
+      "feed_url": "http://jazzfromgeoff.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://jazzfromgeoff.blogspot.com/",
+      "description": "A listing of live jazz events, mostly in North Berkshire and South Bucks, PLUS CD reviews from Geoff.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4907104.jpg?t=1613986539"
+    },
+    {
+      "title": "The Jazz Centre UK",
+      "feed_url": "https://www.thejazzcentreuk.co.uk/blog-feed.xml",
+      "website_url": "https://www.thejazzcentreuk.co.uk/news",
+      "description": "The Jazz Centre (UK), also referred to as The Jazz Centre UK or TJCUK, celebrates jazz music's heritage, and actively supports and promotes contemporary performance and education. The mission is to preserve promote and celebrate the art of jazz music in all its forms.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 883,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4907147.jpg?t=1613985821"
+    },
+    {
+      "title": "The Guardian - Jazz",
+      "feed_url": "https://www.theguardian.com/music/jazz/rss",
+      "website_url": "https://www.theguardian.com/music/jazz",
+      "description": "Latest newsjazz news and features from theguardian.com, the world's leading liberal voice",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4572090.jpg?t=1613985792"
+    },
+    {
+      "title": "LondonJazz",
+      "feed_url": "https://londonjazznews.com/feed/?alt=rss",
+      "website_url": "https://londonjazznews.com/category/news/",
+      "description": "News, reviews, features and comment from the London jazz scene plus our writers' list of recommended gigs. 'LondonJazz News provides what must be the most in-depth local Jazz coverage on the planet.'",
+      "followers": {
+        "facebook": 10200,
+        "twitter": 48700
+      },
+      "image_url": "https://i1.feedspot.com/909141.jpg?t=1613985760"
+    },
+    {
+      "title": "BabyJazz Blog",
+      "feed_url": "https://babyjazz.co.uk/blog?format=RSS",
+      "website_url": "https://babyjazz.co.uk/blog/",
+      "description": "Welcome to BabyJazz - a new take on music, classes and entertainment for parents, babies and young children. Founded and led by singer Ruby Barker, for babies & toddlers but enjoyed by all - BabyJazz puts a swing in your step, a smile on your face and song in your heart. Its educational too! Offering high quality music, classes and pram jam gigs with Family Band.",
+      "followers": {
+        "facebook": 709,
+        "twitter": 486
+      },
+      "image_url": "https://i1.feedspot.com/4907163.jpg?t=1613985813"
+    },
+    {
+      "title": "Jazz Cafe",
+      "feed_url": "https://ns1.galaxy.mu/feed",
+      "website_url": "https://thejazzcafe.co.uk/blog/category/music/jazz/",
+      "description": "Features Jazz Events, Soul Music, Christmas, and Wedding. Jazz Cafe is leading dining and live music venue for fans of Jazz, Funk and Soul.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 3100,
+        "instagram": 924
+      },
+      "image_url": "https://i1.feedspot.com/5331486.jpg?t=1634197911"
+    }
+  ]
+}

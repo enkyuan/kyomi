@@ -1,0 +1,586 @@
+{
+  "category": "Powershell",
+  "source_url": "https://rss.feedspot.com/powershell_rss_feeds",
+  "feeds": [
+    {
+      "title": "Windows PowerShell Blog",
+      "feed_url": "https://devblogs.microsoft.com/powershell/feed/",
+      "website_url": "https://devblogs.microsoft.com/powershell/",
+      "description": "Get the latest information, insights, announcements, and news from Microsoft experts and developers in the PowerShell MSDN blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4431159.jpg"
+    },
+    {
+      "title": "Mike F Robbins Scripting",
+      "feed_url": "https://mikefrobbins.com/index.xml",
+      "website_url": "https://mikefrobbins.com/",
+      "description": "Mike F Robbins is a Microsoft MVP on Windows PowerShell and a SAPIEN Technologies MVP. He is a co-author of Windows PowerShell TFM 4th Edition and is a contributing author of a chapter in the PowerShell Deep Dives book.",
+      "followers": {
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/1514658.jpg?t=1610970752"
+    },
+    {
+      "title": "Evotec",
+      "feed_url": "https://evotec.xyz/category/powershell/feed/",
+      "website_url": "https://evotec.xyz/category/powershell/",
+      "description": "Evotec is a team of professionals helping out small, medium and large businesses to grow. Evotec team has huge experience in IT.",
+      "followers": {
+        "facebook": 695,
+        "twitter": 243
+      },
+      "image_url": "https://i1.feedspot.com/4961464.jpg?t=1616484863"
+    },
+    {
+      "title": "LazyAdmin",
+      "feed_url": "https://lazyadmin.nl/category/powershell/feed/",
+      "website_url": "https://adamtheautomator.com/",
+      "description": "Tips from an other Admin on PowerShell",
+      "followers": {
+        "twitter": 700
+      },
+      "image_url": "https://i1.feedspot.com/4944171.jpg?t=1616487297"
+    },
+    {
+      "title": "Adam, the Automator - Automate all the things",
+      "feed_url": "https://adamtheautomator.com/feed/",
+      "website_url": "https://adamtheautomator.com/",
+      "description": "Senior Systems Automation Engineer, writer, trainer, Microsoft Cloud/Datacenter Management MVP, fiercely independent, laid back guy that loves sharing.",
+      "followers": {
+        "twitter": 13800
+      },
+      "image_url": "https://i1.feedspot.com/4103479.jpg?t=1616485021"
+    },
+    {
+      "title": "Active Directory FAQ",
+      "feed_url": "https://activedirectoryfaq.com/feed/",
+      "website_url": "https://activedirectoryfaq.com/",
+      "description": "AD Administration, Migration, PowerShell - Tips and tricks for Microsoft environments - Active Directory tech blog by FirstAttribute",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 966
+      },
+      "image_url": "https://i1.feedspot.com/5098851.jpg?t=1616485034"
+    },
+    {
+      "title": "IT-Koehler-Blog",
+      "feed_url": "https://blog.it-koehler.com/en/feed",
+      "website_url": "https://blog.it-koehler.com/en/",
+      "description": "Hi everyone, on my blog i will describe some field experiences and solutions. At the moment I work as a system engineer in a middle sized system vendor. My daily work mostly contains consulting and implementing server solutions with Microsoft products. Hopefully my blog can give some helpful advice for some issues which normally never occur.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4986903.jpg?t=1616485043"
+    },
+    {
+      "title": "Tao Yang's System Center Blog",
+      "feed_url": "https://feeds.feedburner.com/TaoYangsSystemManagementBlog",
+      "website_url": "https://blog.tyang.org/",
+      "description": "Welcome to my blog! My name is Tao Yang, I am a system engineer based in Melbourne, Australia. I spend most of my time working on Microsoft technologies. This blog provides a place for me to share my thoughts on various aspect of enterprise system management, especially SCOM, SCCM and PowerShell scripting.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/2181097.jpg"
+    },
+    {
+      "title": "Dan Tsekhanskiy Blog",
+      "feed_url": "https://tseknet.com/feed.xml",
+      "website_url": "https://tseknet.com/blog/",
+      "description": "Windows Systems Administrator with an unhealthy addiction to automation and SRE practices. With over five years of experience in IT, my primary areas of focus are PowerShell, Python, automation, continuous integration/continuous delivery, infrastructure as code, imaging/provisioning, configuration management, and championing SRE practices.",
+      "followers": {
+        "twitter": 94
+      },
+      "image_url": "https://i1.feedspot.com/5187076.jpg?t=1598601949"
+    },
+    {
+      "title": "PowerShell is Fun",
+      "feed_url": "https://powershellisfun.com/feed/",
+      "website_url": "https://powershellisfun.com/about/",
+      "description": "HarmVeenstra I started working at 18, from a ServiceDesk employee to a workspace and system engineer at a large insurance firm in the Netherlands. 1996, those were the days! After working there for almost 11 years, I had different system engineer jobs and learned much about Citrix, Cisco, VMWare, storage, and Microsoft. Currently, I'm employed\u2026",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663745.jpg"
+    },
+    {
+      "title": "Michev \u00bb PowerShell",
+      "feed_url": "https://michev.info/blog/post/category/powershell/feed",
+      "website_url": "https://michev.info/blog/post/category/powershell/",
+      "description": "Vasil Michev's PowerShell category offers senior Microsoft 365 administrators practical scripts, Graph SDK automation, licensing and compliance walkthroughs, and proactive insights into evolving PowerShell cmdlets and connectivity patterns.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663744.jpg?t=1756355588"
+    },
+    {
+      "title": "Todd Klindt's Blog",
+      "feed_url": "https://www.toddklindt.com/feed/",
+      "website_url": "https://www.toddklindt.com/",
+      "description": "Todd Klindt's blog is a technical PowerShell resource hub, offering in-depth scripts, deployment guides, PnP.PowerShell utilities, and SharePoint/Microsoft 365 tips\u2014all delivered with clarity from a veteran engineer immersed in Microsoft technologies.",
+      "followers": {
+        "twitter": 11000
+      },
+      "image_url": "https://i1.feedspot.com/8663747.jpg?t=1756231926"
+    },
+    {
+      "title": "Office 365 for IT Pros \u00bb PowerShell",
+      "feed_url": "https://office365itpros.com/category/powershell/feed/",
+      "website_url": "https://office365itpros.com/category/powershell/",
+      "description": "The only always up-to-date book about the cloud Office system in Microsoft 365 covering Exchange Online, SharePoint Online, OneDrive for Business, Microsoft Teams, Planner, Azure Active Directory, and more.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 11500
+      },
+      "image_url": "https://i1.feedspot.com/8663741.jpg?t=1756231946"
+    },
+    {
+      "title": "ScriptingNerd",
+      "feed_url": "https://scriptingnerd.com/category/powershell/feed/",
+      "website_url": "https://scriptingnerd.com/category/powershell/",
+      "description": "ScriptingNerd's PowerShell section delivers hands-on, practical scripting guidance. From triggering task sequences and driver installations to managing Git hooks, running scripts under system context, and automating documentation in enterprise environments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663751.jpg?t=1756232091"
+    },
+    {
+      "title": "Get Practical \u00bb PowerShell",
+      "feed_url": "https://getpractical.co.uk/category/microsoft/powershell/feed/",
+      "website_url": "https://getpractical.co.uk/category/microsoft/powershell/",
+      "description": "Unlock the power of Azure in the GetPractical.co.uk blog. In today's rapidly evolving IT ecosystem, Get Practical provides simple guides and tutorials for readers to keep pace with upcoming IT trends, with a special focus on Microsoft applications. Explore the latest blog posts now!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663743.jpg?t=1756232124"
+    },
+    {
+      "title": "The World According to Mitch \u00bb PowerShell",
+      "feed_url": "https://garvis.ca/category/powershell/feed/",
+      "website_url": "https://garvis.ca/category/powershell/",
+      "description": "Posts about PowerShell written by Mitch Garvis",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663742.jpg"
+    },
+    {
+      "title": "imab.dk \u00bb PowerShell",
+      "feed_url": "https://www.imab.dk/category/powershell/feed/",
+      "website_url": "https://www.imab.dk/category/powershell/",
+      "description": "Everything can be done automatically, as long as you configure it manually \ud83d\ude42",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/8663748.jpg?t=1756355621"
+    },
+    {
+      "title": "The Lonely Administrator Blog",
+      "feed_url": "https://jdhitsolutions.com/blog/feed/",
+      "website_url": "https://jdhitsolutions.com/blog/",
+      "description": "A blog devoted to Windows system administrators who need to do more with less. This blog will focus on Windows PowerShell, automation and DevOps.",
+      "followers": {
+        "twitter": 21300
+      },
+      "image_url": "https://i1.feedspot.com/79519.jpg?t=1616487513"
+    },
+    {
+      "title": "Tommymaynard.com",
+      "feed_url": "https://tommymaynard.com/feed/",
+      "website_url": "https://tommymaynard.com/",
+      "description": "Tommy Maynard is a Windows PowerShell enthusiast with over 15 years of Information Technology experience. In the last few years, it finally feels like Tommy has found his calling within the industry. His goal is to help educate and inspire people that work in his industry to embrace PowerShell, and in general, scripting and automation. He's not a developer or programmer; he's just a Windows System Administrator who understands the importance of learning PowerShell.",
+      "followers": {
+        "twitter": 850
+      },
+      "image_url": "https://i1.feedspot.com/5265437.jpg?t=1617773439"
+    },
+    {
+      "title": "PowerShell Community",
+      "feed_url": "https://devblogs.microsoft.com/powershell-community/feed/",
+      "website_url": "https://devblogs.microsoft.com/powershell-community/",
+      "description": "A place for the community to learn PowerShell and share insights",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4637360.jpg?t=1619434655"
+    },
+    {
+      "title": "Shell is Only the Beginning - Sharing my thoughts and idead",
+      "feed_url": "https://www.darkoperator.com/blog?format=RSS",
+      "website_url": "https://www.darkoperator.com/",
+      "description": "Security Weekly Podcast, Infosec Tactico podcast, Microsoft PowerShell MVP, Metasploit contributor and all around techie. Opinions are my own.",
+      "followers": {
+        "twitter": 44400
+      },
+      "image_url": "https://i1.feedspot.com/4637948.jpg?t=1616485050"
+    },
+    {
+      "title": "Mick's IT Blogs",
+      "feed_url": "https://feeds.feedburner.com/MicksItBlogs",
+      "website_url": "https://mickitblog.blogspot.com/",
+      "description": "My blog is here to help solve issues I have encountered and solved, publish scripts I have written, and educate others in understanding areas that are not well covered. These blogs cover many different aspects of IT, but are mainly concentrated on software deployments.",
+      "followers": {
+        "facebook": 628,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4637900.jpg?t=1616485078"
+    },
+    {
+      "title": "PowerShell Geek",
+      "feed_url": "https://www.powershellgeek.com/feed/",
+      "website_url": "https://www.powershellgeek.com/",
+      "description": "Hey, I'm Damian Scoles. For the past 20+ years, I have worked at various levels in the IT field. I am now looking to give back after all the years of finding answers to my questions on other people's blogs. The posts here will be about personal experiences/solutions as well as random thoughts on PowerShell, Office 365, Exchange and Exchange Online, Security and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5291687.jpg?t=1623328044"
+    },
+    {
+      "title": "Precision Computing - Software Design and Development Blog",
+      "feed_url": "https://www.leeholmes.com/blog/feed/",
+      "website_url": "https://www.leeholmes.com/blog/",
+      "description": "Lee Holmes is a Lead Security Architect for Azure Management, Azure Stack. PowerShell developer, author, and Maker of the blog Precision Computing.",
+      "followers": {
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/79502.jpg?t=1616485054"
+    },
+    {
+      "title": "Wag the Real Blog",
+      "feed_url": "https://alainassaf.com/feed.xml",
+      "website_url": "https://alainassaf.com/blog/",
+      "description": "A hard, rough, abrasive look at camel spotting...no dromedaries...no virtualization.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4655481.jpg?t=1616486797"
+    },
+    {
+      "title": "SQL Powershell",
+      "feed_url": "https://sqlpowershell.wordpress.com/feed/",
+      "website_url": "https://sqlpowershell.wordpress.com/",
+      "description": "Prashanth Jayaram is DB Technologist, Author, Blogger, Service Delivery Manager at CTS, Automation Expert, Technet WIKI Ninja, MVB, and Powershell Geek.",
+      "followers": {
+        "twitter": 315
+      },
+      "image_url": "https://i1.feedspot.com/5265436.jpg?t=1617773029"
+    },
+    {
+      "title": "Simon Wahlin",
+      "feed_url": "https://blog.simonw.se/index.xml",
+      "website_url": "https://blog.simonw.se/",
+      "description": "Technical Architect with Knowledge Factory. PowerShell Hero and Microsoft MVP. The opinions on this blog are my own. This blog is intended to be a place where I can share my notes and experiences and I hope that some one else will have good use for it.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4637861.jpg"
+    },
+    {
+      "title": "The Automation Code",
+      "feed_url": "https://theautomationcode.com/feed/",
+      "website_url": "https://theautomationcode.com/",
+      "description": "Hi, This is Chirag Nagrekar, author and writer of this blog. I have more than 9 years of experience in managing and implementing IT Infrastructure and primarily working and focusing on Infrastructure Automation Projects. This blog is for System Admins and novice automation developers to help them for Automation and Simplification of processes and make their life easier. This blog primarily focuses on Automation with PowerShell and other automation scripting tools.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5198066.jpg?t=1600682558"
+    },
+    {
+      "title": "Power in the shell",
+      "feed_url": "https://powerintheshell.com/feed/",
+      "website_url": "https://powerintheshell.com/",
+      "description": "Hi. My name is David and I work as Premier Field Engineer at Microsoft Germany. My specialties are Dev, Powershell and Windows 10 Client and I am focused in client workshops and dev requests. Beside my work I write my own blog and speak at conferences on PS/Dev topics.",
+      "followers": {
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4637928.jpg?t=1616487484"
+    },
+    {
+      "title": "Under The Stairs",
+      "feed_url": "https://tfl09.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://tfl09.blogspot.com/",
+      "description": "PowerShell/Lync Geek, Grateful Dead/Jerry Live Recording Enthusiast and living in the UK. Thomas Lee's collection of random interesting items, views on things, mainly IT related, as well as the occasional rant.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/3514141.jpg?t=1616486612"
+    },
+    {
+      "title": "The PoSh Wolf",
+      "feed_url": "https://theposhwolf.com/feed",
+      "website_url": "https://theposhwolf.com/",
+      "description": "A blog for PowerShellers from beginner to expert. I am a PowerShell Consultant.",
+      "followers": {
+        "twitter": 805
+      },
+      "image_url": "https://i1.feedspot.com/5017666.jpg?t=1616486719"
+    },
+    {
+      "title": "Jason Yoder, MCT",
+      "feed_url": "http://feeds.feedburner.com/blogspot/jQyYS",
+      "website_url": "http://mctexpert.blogspot.com/",
+      "description": "Welcome to the blogsite of MCTExpert. I am a Microsoft Certified Trainer specializing in PowerShell and Windows Server/Client.",
+      "followers": {
+        "twitter": 681
+      },
+      "image_url": "https://i1.feedspot.com/1514325.jpg?t=1616486622"
+    },
+    {
+      "title": "PowerTheShell PowerShell Resources",
+      "feed_url": "https://powershell.one/feed.xml",
+      "website_url": "https://powershell.one/",
+      "description": "PowerTheShell is an informational electronic PowerShell paper and updated by PowerShell MVP Dr. Tobias Weltner.",
+      "followers": {
+        "twitter": 17
+      },
+      "image_url": "https://i1.feedspot.com/79501.jpg"
+    },
+    {
+      "title": "Keith Hill's Blog",
+      "feed_url": "https://rkeithhill.wordpress.com/feed/",
+      "website_url": "https://rkeithhill.wordpress.com/",
+      "description": "I am a software developer working primarily in .NET technologies such as C#, WCF, WPF, ASP.NET MVC, etc. I am also a Microsoft Windows PowerShell MVP (since 2006). You can usually find me on StackOverflow answering PowerShell questions. I am also the project coordinator and a primary contributor to the PowerShell Community Extensions project on CodePlex.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4637805.jpg?t=1616486631"
+    },
+    {
+      "title": "PowerShell Robert van den Nieuwendijk's Blog",
+      "feed_url": "https://rvdnieuwendijk.com/category/powershell/feed/",
+      "website_url": "https://rvdnieuwendijk.com/category/powershell/",
+      "description": "Posts about PowerShell written by Robert van den Nieuwendijk.",
+      "followers": {
+        "twitter": 997
+      },
+      "image_url": "https://i1.feedspot.com/4637894.jpg?t=1616486635"
+    },
+    {
+      "title": "Ravikanth Chaganti Clouds and Containers Blog",
+      "feed_url": "https://ravichaganti.com/blog/index.xml",
+      "website_url": "https://ravichaganti.com/blog/",
+      "description": "Ravikanth is a virtualization, cloud, and enterprise application expert and works at Dell Inc. as a lead engineer in Enterprise Solutions Group. He is a multi-year recepient of MIcrosoft Most Valueable Professional (MVP) award. He is a well-known personality in the PowerShell community and a published author. You can hear him speak regularly at BITPro and PowerShell Bangalore user group meetings.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/3313631.jpg"
+    },
+    {
+      "title": "LazyWinAdmin",
+      "feed_url": "https://lazywinadmin.com/feed",
+      "website_url": "https://lazywinadmin.com/",
+      "description": "I'm Francois-Xavier Cat and I'm a Systems Engineer focusing mostly on Microsoft and VMware technologies. I created this blog mainly for the purpose of documenting my day-to-day work. Often I find myself referring back to old posts on troubleshooting issues or previous implementations to help me resolve current problems or tasks.LazyWinAdmin is a blog about my day to day SysAdmin life.",
+      "followers": {
+        "facebook": 646,
+        "twitter": 8
+      },
+      "image_url": "https://i1.feedspot.com/4637786.jpg?t=1610971075"
+    },
+    {
+      "title": "CyberFibers",
+      "feed_url": "https://cyberfibers.com/feed/",
+      "website_url": "https://cyberfibers.com/",
+      "description": "My Location of Thoughts During a Buffer Overflow. Follow to get updates on powershell, windows, linux, etc.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5056619.jpg"
+    },
+    {
+      "title": "PowerShell Station - Mike's PowerShell Musings",
+      "feed_url": "https://powershellstation.com/feed/",
+      "website_url": "https://www.powershellstation.com/",
+      "description": "My name is Mike Shepard, and I'm currently a Solutions Architect (whatever that means) for a software company focusing on financial institutions. I've been writing code since I first saw an Apple computer in the early 80's. I enjoy coding in PowerShell (duh), Python, and VB.NET, and usually end up hooking whatever I write to a database of some sort.",
+      "followers": {
+        "twitter": 331
+      },
+      "image_url": "https://i1.feedspot.com/4637813.jpg?t=1616486685"
+    },
+    {
+      "title": "LucD notes - My PowerShell ramblings",
+      "feed_url": "https://www.lucd.info/feed/",
+      "website_url": "https://www.lucd.info/",
+      "description": "This blog will host some of my notes which I think could be useful to fellow PowerShell explorers.",
+      "followers": {
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/321037.jpg"
+    },
+    {
+      "title": "As a Consultant",
+      "feed_url": "http://asaconsultant.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://asaconsultant.blogspot.com/",
+      "description": "Co-founder of Firstpoint AS, Firstpoint Bergen AS, Firstpoint Oslo AS, Firstpoint Holding AS. Love automation, Cloud, Powershell and Azurestack.",
+      "followers": {
+        "twitter": 432
+      },
+      "image_url": "https://i1.feedspot.com/4637968.jpg?t=1616486820"
+    },
+    {
+      "title": "Scripting Library",
+      "feed_url": "https://www.scriptinglibrary.com/feed/",
+      "website_url": "https://www.scriptinglibrary.com/",
+      "description": "Scripting Library is a collection of scripts and experiences shared by IT Pros, Developers and Geeks across Linux and Windows OS from all over the world. This website is created and maintained by Paolo Frigo with the aim of learning by sharing a passion for IT and create an open repository where constantly being inspired and having fun.",
+      "followers": {
+        "twitter": 54
+      },
+      "image_url": "https://i1.feedspot.com/4901587.jpg?t=1616485060"
+    },
+    {
+      "title": "Kevin Marquette on PowerShell Theory Blog",
+      "feed_url": "https://powershellexplained.com/feed.xml",
+      "website_url": "https://powershellexplained.com/blog/",
+      "description": "I love to explore and discover how Powershell works.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4655460.jpg?t=1616484876"
+    },
+    {
+      "title": "Richard Siddaway's Blog",
+      "feed_url": "https://richardspowershellblog.wordpress.com/feed/",
+      "website_url": "https://richardspowershellblog.wordpress.com/",
+      "description": "Richard Siddaway's Blog of PowerShell and other things.",
+      "followers": {
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4637391.jpg?t=1616484854"
+    },
+    {
+      "title": "netnerds.net",
+      "feed_url": "https://feeds.feedburner.com/netnerdsnet",
+      "website_url": "https://blog.netnerds.net/",
+      "description": "I'm a Microsoft PowerShell MVP, specializing in SQL Server, PowerShell and network security. I'm also a proud Cajun, who's living it up in Belgium, doing systems stuff.",
+      "followers": {
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4637874.jpg?t=1616485038"
+    },
+    {
+      "title": "Learn Powershell",
+      "feed_url": "https://learn-powershell.net/feed/",
+      "website_url": "https://learn-powershell.net/",
+      "description": "Learn Powershell blog is authored by Boe Prox. He is a Senior Windows System Administrator and has been using PowerShell since 2008. He is also a recipient of the Microsoft MVP award in Windows PowerShell.",
+      "followers": {
+        "twitter": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4498366.jpg?t=1616485074"
+    },
+    {
+      "title": "Powers Hell",
+      "feed_url": "https://powers-hell.com//index.xml",
+      "website_url": "https://powers-hell.com/",
+      "description": "Powers Hell is a deeply technical PowerShell and cloud-native blog where a seasoned automation and DevOps expert shares hands-on guides\u2014from Azure Functions, Kubernetes, and Graph integrations to managed identities and secure multi-tenant automation\u2014packed with practical scripts and expert insights.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663746.jpg?t=1756232028"
+    },
+    {
+      "title": "F12 \u00bb PowerShell",
+      "feed_url": "https://f12.hu/category/powershell/feed/",
+      "website_url": "https://f12.hu/category/powershell/",
+      "description": "IT notes by Daniel Kovacs",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663749.jpg"
+    },
+    {
+      "title": "o365info \u00bb PowerShell",
+      "feed_url": "https://o365info.com/category/powershell/feed/",
+      "website_url": "https://o365info.com/category/powershell/",
+      "description": "o365info's PowerShell category equips Microsoft 365 administrators with practical automation tutorials. From managing distribution and shared mailboxes to exporting group memberships, handling user permissions, and streamlining tenant-wide tasks using PowerShell.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8663750.jpg?t=1756355713"
+    },
+    {
+      "title": "Planet PowerShell",
+      "feed_url": "https://www.planetpowershell.com/feed",
+      "website_url": "https://www.planetpowershell.com/preview",
+      "description": "An aggregated feed from the PowerShell community.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 3600
+      },
+      "image_url": "https://i1.feedspot.com/4573263.jpg?t=1616484849"
+    },
+    {
+      "title": "PowerShell Magazine",
+      "feed_url": "https://powershellmagazine.com/feed/",
+      "website_url": "https://powershellmagazine.com/",
+      "description": "The 'PowerShell Magazine' is an online magazine serving exclusive PowerShell content with 60 contributing authors and five PowerShell MVPs!",
+      "followers": {
+        "facebook": 7700,
+        "twitter": 18300
+      },
+      "image_url": "https://i1.feedspot.com/79499.jpg"
+    },
+    {
+      "title": "Jonathan Medd's Blog | Automating anything that moves",
+      "feed_url": "https://www.jonathanmedd.net/feed",
+      "website_url": "https://www.jonathanmedd.net/",
+      "description": "Jonathan Medd is a Senior Consultant with Xtravirt based in the UK. He co-hosts a regular PowerShell podcast which contains info on how to learn PowerShell and what's going on in the PowerShell world.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/79528.jpg"
+    },
+    {
+      "title": "Faris The SysAdmin",
+      "feed_url": "https://www.powershellcenter.com/feed/",
+      "website_url": "https://www.powershellcenter.com/",
+      "description": "This is a blog by Faris who writes about automating admin tasks and issues and how to solve them using PowerShell. Faris believes sharing knowledge is an essential key for progressing and learning for everyone. The more the technology is advancing, the more help and contribution is needed, so he decided to be part of this community and share the knowledge of what he knows through this blog.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 19,
+        "instagram": 264
+      },
+      "image_url": "https://i1.feedspot.com/5276550.jpg?t=1620209861"
+    },
+    {
+      "title": "Command Line Ninja",
+      "feed_url": "https://commandline.ninja/rss/",
+      "website_url": "https://commandline.ninja/",
+      "description": "Learn how to automate using PowerShell. Articles cover how-tos about automating sysadmin, cloud, and DevOps tasks with PowerShell.",
+      "followers": {
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5409929.jpg?t=1655124192"
+    },
+    {
+      "title": "Don Jones",
+      "feed_url": "https://donjones.com/feed/",
+      "website_url": "https://donjones.com/",
+      "description": "My name is Don Jones. I'm in the information technology (IT) industry. I'm a big fan of Microsoft's Windows PowerShell. I'm a Curriculum Director for IT Ops content at Pluralsight, a PowerShell MVP, and a longtime author, speaker, and journalist in the IT field.",
+      "followers": {
+        "facebook": 948,
+        "twitter": 17700
+      },
+      "image_url": "https://i1.feedspot.com/4637925.jpg?t=1616485082"
+    },
+    {
+      "title": "Robstr",
+      "feed_url": "https://robstr.dev/feed.xml/",
+      "website_url": "https://robstr.dev/",
+      "description": "Cloud consultant working primarily with Microsoft Azure, automation and infrastructure.",
+      "followers": {
+        "twitter": 749
+      },
+      "image_url": "https://i1.feedspot.com/5171649.jpg?t=1616486601"
+    },
+    {
+      "title": "Max Trinidad - The PowerShell Front",
+      "feed_url": "https://www.maxtblog.com/feed/",
+      "website_url": "http://www.maxtblog.com/",
+      "description": "I'm Maximo Trinidad from Puerto Rico, have been working with computers since 1979. I have worked with SQL Server Technologies, provided support to Windows Servers/Client machines, Microsoft Virtualization Technologies, and build some Visual Studio solutions. I'm a Microsoft PowerShell MVP since 2009 and MVP SAPIEN Technologies. Also founder of the Florida PowerShell User Group.",
+      "followers": {
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/79547.jpg?t=1616487412"
+    },
+    {
+      "title": "SQL DBA with A Beard",
+      "feed_url": "https://wordpress.com/typo/?subdomain=sqldbawithabeard",
+      "website_url": "https://blog.robsewell.com/",
+      "description": "Hi, My name is Rob. I am a Microsoft Cloud and Data Center Management MVP. I love automation and am a big Powershell evangelist.",
+      "followers": {
+        "twitter": 7700
+      },
+      "image_url": "https://i1.feedspot.com/4775833.jpg?t=1616485063"
+    },
+    {
+      "title": "dbatools Blog",
+      "feed_url": "https://dbatools.io/feed/",
+      "website_url": "https://dbatools.io/blog/",
+      "description": "dbatools is an awesome PowerShell module that helps you migrate entire instances with a single command, plus a whole lot more.",
+      "followers": {
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4637882.jpg?t=1616487300"
+    },
+    {
+      "title": "Charlie Russel's Blog - Just another PowerShell MVP's site",
+      "feed_url": "https://blogs.msmvps.com/russel/feed/",
+      "website_url": "https://theitbros.com/category/windows/powershell/",
+      "description": "Charlie Russel has been a Microsoft MVP for Windows XP, Security, Windows Server, and Windows PowerShell. He's a chemist by education, an electrician by trade, a UNIX and Windows sysadmin and Oracle DBA because he raised his hand when he should have known better, and an IT Manager for a major international software and security company by choice. He's also an instructor at the University of BC.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/79541.jpg?t=1616487381"
+    }
+  ]
+}

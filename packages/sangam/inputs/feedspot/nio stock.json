@@ -1,0 +1,53 @@
+{
+  "category": "NIO Stock",
+  "source_url": "https://rss.feedspot.com/nio_stock_rss_feeds",
+  "feeds": [
+    {
+      "title": "Moomoo \u00bb NIO",
+      "feed_url": "https://www.moomoo.com/stock/NIO-US",
+      "website_url": "https://www.moomoo.com/stock/NIO-US",
+      "description": "Moomoo provides the latest NIO Inc(NIO) market data, including prices, cycle charts, basic information and real-time news information, financial analysis, company introduction, dividends and dividend information. Moomoo is an intuitive stock trading platform helping users succeed in the market.",
+      "followers": {
+        "facebook": 16500,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/5422034.jpg?t=1657883481"
+    },
+    {
+      "title": "Benzinga \u00bb NIO",
+      "feed_url": "https://www.benzinga.com/quote/NIO",
+      "website_url": "https://www.benzinga.com/quote/NIO",
+      "description": "NIO Quotes and News Summary on Benzinga. Benzinga prides itself on providing original, accurate, and timely global financial content every day. The service features content from industry experts and experienced analysts to provide traders with an edge.",
+      "followers": {
+        "facebook": 502600,
+        "twitter": 312100,
+        "instagram": 254000
+      },
+      "image_url": "https://i1.feedspot.com/5422059.jpg?t=1657884331"
+    },
+    {
+      "title": "Seeking Alpha \u00bb NIO",
+      "feed_url": "https://seekingalpha.com/symbol/NIO",
+      "website_url": "https://seekingalpha.com/symbol/NIO",
+      "description": "A high-level overview of NIO Inc. (NIO) stock. Stay up to date on the latest stock price, chart, news, analysis, fundamentals, trading and investment tools. Seeking Alpha is the world's largest investing community. Powered by the wisdom and diversity of crowdsourcing - millions of passionate investors connect daily to discover and share new investing ideas, discuss the latest news, debate the merits of stocks, and make informed investment decisions.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/5422065.jpg?t=1657885593"
+    },
+    {
+      "title": "Nasdaq \u00bb NIO Inc. News",
+      "feed_url": "https://www.nasdaq.com/market-activity/stocks/nio/news-headlines",
+      "website_url": "https://www.nasdaq.com/market-activity/stocks/nio/news-headlines",
+      "description": "Find the latest news headlines from NIO Inc. American depositary shares, each representing one Class A ordinary share (NIO) at Nasdaq.com. At Nasdaq, our purpose is to champion inclusive growth and prosperity. We power stronger economies, create more equitable opportunities, and contribute to a more sustainable world to help our communities, clients, employees, and people of all backgrounds reach their full potential.",
+      "followers": {
+        "facebook": 825600,
+        "twitter": 148000,
+        "instagram": 594700
+      },
+      "image_url": "https://i1.feedspot.com/5422061.jpg?t=1657886714"
+    }
+  ]
+}

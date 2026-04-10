@@ -1,0 +1,58 @@
+{
+  "category": "UK Juice",
+  "source_url": "https://rss.feedspot.com/uk_juice_rss_feeds",
+  "feeds": [
+    {
+      "title": "Juicers UK Blog",
+      "feed_url": "https://www.juicers.co.uk/rss.php?action=newblogs&type=rss",
+      "website_url": "https://www.juicers.co.uk/blog/",
+      "description": "Subscribe us to keep up with articles from Juicers UK.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 85,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4910509.jpg?t=1614849444"
+    },
+    {
+      "title": "Vegishake Ltd Blog",
+      "feed_url": "https://www.vegishake.co.uk/blog/feed/",
+      "website_url": "https://www.vegishake.co.uk/blog/",
+      "description": "Organic supplements & juice smoothies, superfood packages offering you the best nutrition on the market. How to make the best 4 breakfast smoothies guide to choose from. Step by step guide for easy preparing and recipes to help you to lose weight and tone up.",
+      "followers": {
+        "facebook": 8500,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4910503.jpg?t=1620049910"
+    },
+    {
+      "title": "TruFoo Juice Bar co. Blog",
+      "feed_url": "https://www.trufoojuicebar.co.uk/blog-feed.xml",
+      "website_url": "https://www.trufoojuicebar.co.uk/blog",
+      "description": "trufoojuicebar",
+      "followers": {
+        "facebook": 211,
+        "twitter": 200
+      },
+      "image_url": "https://i1.feedspot.com/7316326.jpg?t=1716304172"
+    },
+    {
+      "title": "The Garden Eatery Blog",
+      "feed_url": "https://thegardeneatery.co.uk/blogs/news.atom",
+      "website_url": "https://thegardeneatery.co.uk/blogs/news/",
+      "description": "Updates from the garden team on lifestyle, nutrition advice, health, well being, beauty, recipes and more. Sign up to our newsletter for the latest articles & juice cleanse offers",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7316325.jpg?t=1716304117"
+    },
+    {
+      "title": "Cold Press Juicers Blog",
+      "feed_url": "https://www.coldpressjuicers.co.uk/feed/",
+      "description": "Cold Press Juicers are the UK exclusive distributor of Kuvings gold award winner, lelit coffee machines and gaggia. Keep up to date with latest articles on juices from this blog.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 41
+      },
+      "image_url": "https://i1.feedspot.com/4910500.jpg?t=1614849574"
+    }
+  ]
+}

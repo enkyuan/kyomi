@@ -1,0 +1,52 @@
+{
+  "category": "Montana Lifestyle",
+  "source_url": "https://rss.feedspot.com/montana_lifestyle_rss_feeds",
+  "feeds": [
+    {
+      "title": "Montana Happy",
+      "feed_url": "https://montanahappy.com/feed/",
+      "website_url": "https://montanahappy.com/",
+      "description": "This blog is a journey into simplicity. The authors mission is creating a comfortable life that nurtures body and soul. Through comfort food recipes, simple living ideas and even helping you dream up your own cottage industry business, the author is here to help give you ideas on how you can become part of the cozy revolution!",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 1400,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5328162.jpg?t=1633342235"
+    },
+    {
+      "title": "James Gibbon",
+      "feed_url": "https://montanafarmlife.com/blogjamesgibbon?format=rss",
+      "website_url": "https://montanafarmlife.com/blogjamesgibbon/",
+      "description": "My name is James Gibbon. I grew up in Montana and recently returned to our family farm. This lifestyle hasn't always been a part of my life and I have decided to start a blog about my experience living the 'farm life' in Montana.",
+      "followers": {
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/5121254.jpg?t=1616475723"
+    },
+    {
+      "title": "Sytog North Blog",
+      "feed_url": "https://sytognorth.wordpress.com/feed/",
+      "website_url": "https://sytognorth.wordpress.com/blog-2/",
+      "description": "A Montana Outdoor Lifestyle Blog. Create your own journey while I share mine with you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5324516.jpg?t=1632396765"
+    },
+    {
+      "title": "Montana Beyond",
+      "feed_url": "https://mtbeyond.com/feed/",
+      "website_url": "https://mtbeyond.com/category/lifestyle/",
+      "description": "Montana Beyond is an online platform for people to discover the U.S. state of Montana \u2014 from trip planning and discovering the history and culture of the state to shopping for original local artwork and gifts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5778813.jpg?t=1706609267"
+    },
+    {
+      "title": "Livin' the Yeh Life",
+      "feed_url": "https://livintheyehlifemontana.wordpress.com/feed/",
+      "website_url": "https://livintheyehlifemontana.wordpress.com/",
+      "description": "Read Blog posts on Montana life, cooking, baking, kids' stuff, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5324517.jpg?t=1632397048"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "category": "UK Catholic",
+  "source_url": "https://rss.feedspot.com/uk_catholic_rss_feeds",
+  "feeds": [
+    {
+      "title": "Roman Catholic Diocese Of East Anglia",
+      "feed_url": "https://www.rcdea.org.uk/feed/",
+      "website_url": "https://www.rcdea.org.uk/latest-news/",
+      "description": "A warm welcome to the Diocese of East Anglia. Our Diocesan mission is to respond to Christ's call to proclaim the gospel. I pray that your contact with us, through this website and, if you are in East Anglia, through meeting us, will encourage you to enter more deeply into the encounter with God in Jesus Christ who is the source of our life and joy.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4756757.jpg?t=1607003945"
+    },
+    {
+      "title": "auntie joanna writes",
+      "feed_url": "http://joannabogle.blogspot.com/feeds/posts/default",
+      "website_url": "http://joannabogle.blogspot.com/",
+      "description": "THIS IS A Catholic blog. I am a Catholic journalist and author. My object, in writing a blog, is to pass on information and to comment on issues of general interest and specifically those relating to the Catholic Church.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1106206.jpg?t=1620116864"
+    },
+    {
+      "title": "CAFOD Blog",
+      "feed_url": "https://blog.cafod.org.uk/feed/",
+      "website_url": "https://blog.cafod.org.uk/",
+      "description": "CAFOD stands for the Catholic Agency For Overseas Development. We are an international development charity and the official aid agency of the Catholic Church in England and Wales. Our aim is to promote justice and equality, and bring about positive changes in the lives of underprivileged people.",
+      "followers": {
+        "facebook": 34500,
+        "twitter": 31500,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4911251.jpg?t=1620116795"
+    },
+    {
+      "title": "Catholic Herald",
+      "feed_url": "https://thecatholicherald.com/",
+      "website_url": "https://thecatholicherald.com/",
+      "description": "The Catholic Herald is Britain's leading Catholic magazine. Breaking news and opinion from the online edition of Britain's leading Catholic newspaper.",
+      "followers": {
+        "facebook": 74500,
+        "twitter": 94700
+      },
+      "image_url": "https://i1.feedspot.com/42244.jpg?t=1607000908"
+    }
+  ]
+}

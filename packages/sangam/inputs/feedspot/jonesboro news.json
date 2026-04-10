@@ -1,0 +1,38 @@
+{
+  "category": "Jonesboro News",
+  "source_url": "https://rss.feedspot.com/jonesboro_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Jonesboro Sun",
+      "feed_url": "https://www.jonesborosun.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.jonesborosun.com/",
+      "description": "The Jonesboro Sun is Northeast Arkansas' regional newspaper serving over 80,000 readers with a market coverage in seven counties of Arkansas each day.",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/5150092.jpg?t=1626691927"
+    },
+    {
+      "title": "NEA Report",
+      "feed_url": "https://neareport.com/feed/",
+      "website_url": "https://neareport.com/",
+      "description": "NEA Report, LLC is a local news outlet in Northeast Arkansas connecting readers to neighborhood news stories and relevant topics. View Crime Reports, the latest updates on Coronavirus, Business, Health, Education, and local Community.",
+      "followers": {
+        "facebook": 76600
+      },
+      "image_url": "https://i1.feedspot.com/5150095.jpg?t=1670216484"
+    },
+    {
+      "title": "KJNB 39",
+      "feed_url": "https://www.kjnbtv.com/blog-feed.xml",
+      "website_url": "https://www.kjnbtv.com/",
+      "description": "Northeast Arkansas News is your source for the best local news, weather and sports in Jonesboro.",
+      "followers": {
+        "twitter": 1000,
+        "instagram": 998
+      },
+      "image_url": "https://i1.feedspot.com/5150096.jpg?t=1626691939"
+    }
+  ]
+}

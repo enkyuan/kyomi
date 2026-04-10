@@ -1,0 +1,68 @@
+{
+  "category": "Zombie",
+  "source_url": "https://rss.feedspot.com/zombie_rss_feeds",
+  "feeds": [
+    {
+      "title": "Zombies In My Blog",
+      "feed_url": "https://zombiesinmyblog.com/feed/",
+      "website_url": "https://zombiesinmyblog.com/",
+      "description": "Zombies In My Blog is an online blog that covers everything in pop culture, Geek Culture and horror. We're all about Zombies and Other Monsters.",
+      "followers": {
+        "facebook": 504,
+        "twitter": 965
+      },
+      "image_url": "https://i1.feedspot.com/4688908.jpg?t=1613479585"
+    },
+    {
+      "title": "GirlZombieAuthors",
+      "feed_url": "https://girlzombieauthors.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://girlzombieauthors.blogspot.com/",
+      "description": "Female authors writing zombie and horror fiction. Girls kicking zombie butts - why should the guys have all the fun?",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4737362.jpg?t=1619085520"
+    },
+    {
+      "title": "ZombieGift.com Zombie Blog",
+      "feed_url": "https://www.zombiegift.com/zombie-blog/feed/",
+      "website_url": "https://www.zombiegift.com/zombie-blog/",
+      "description": "Welcome to our Zombie Blog: Zombie News, Zombie Product Reviews and More!",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5055578.jpg"
+    },
+    {
+      "title": "Zombie Apocalypse Monthly",
+      "feed_url": "https://zamonthly.org/feed/",
+      "website_url": "https://zamonthly.org/",
+      "description": "Featuring a blend of zombie pop culture news (covering film, television, books and more) and real-world disaster preparedness information.",
+      "followers": {
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5340850.jpg?t=1636379041"
+    },
+    {
+      "title": "ZOMBIE! REAL HORROR ROCK!",
+      "feed_url": "https://horrorpunk.tumblr.com/rss",
+      "website_url": "https://horrorpunk.tumblr.com/",
+      "description": "This blog provides us different zombie photos, videos, gifs.",
+      "followers": {
+        "facebook": 182800,
+        "twitter": 205800,
+        "instagram": 19700
+      },
+      "image_url": "https://i1.feedspot.com/4689000.jpg"
+    },
+    {
+      "title": "Zombietale AU",
+      "feed_url": "https://zombie-frisk.tumblr.com/rss",
+      "website_url": "https://zombie-frisk.tumblr.com/",
+      "description": "Zombietale AU is a comic on Zombies. Guest post are welcome!",
+      "followers": {
+        "facebook": 14600
+      },
+      "image_url": "https://i1.feedspot.com/4689250.jpg"
+    }
+  ]
+}

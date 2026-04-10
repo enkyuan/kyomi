@@ -1,0 +1,45 @@
+{
+  "category": "Mississippi Cannabis",
+  "source_url": "https://rss.feedspot.com/mississippi_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "Pause Pain & Wellness Blog",
+      "feed_url": "https://pausethepain.com/feed/",
+      "website_url": "https://pausethepain.com/mental-health-blog/",
+      "description": "Pause Pain and Wellness offers compassionate care to Mississippi patients through evidence-based medical cannabis applications. Guided by values of education, empathy, and exceptional service, they prioritize patient well-being. Stay informed with the latest mental health news in Mississippi, exploring how cannabis and other treatments can support personal goals through their insightful updates.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 74
+      },
+      "image_url": "https://i1.feedspot.com/7290299.jpg?t=1712159916"
+    },
+    {
+      "title": "MJBizDaily \u00bb Mississippi",
+      "feed_url": "https://mjbizdaily.com/news-by-state/mississippi/feed/",
+      "website_url": "https://mjbizdaily.com/news-by-state/mississippi/",
+      "description": "Since 2011, MJBiz has been a leading source of cannabis business information. Access Mississippi cannabis industry news and legislation updates through Marijuana Business Daily, a prominent publication in the cannabis sector. Stay informed with the latest developments in Mississippi's evolving cannabis landscape.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 77900,
+        "instagram": 73600
+      },
+      "image_url": "https://i1.feedspot.com/7290298.jpg?t=1712160020"
+    },
+    {
+      "title": "Kelly's Green Blog",
+      "feed_url": "https://kellysgreen.com/feed/",
+      "website_url": "https://kellysgreen.com/blogs/",
+      "description": "Kelly's Green has been actively engaged in advocating for medical marijuana in Mississippi since the outset. They strive to lead the industry with a focus on transforming perceptions and enhancing patient experiences. Explore their blog for insightful articles on medical cannabis, cultivation methods, and wellness insights tailored to Mississippi's landscape.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290296.jpg?t=1712159538"
+    },
+    {
+      "title": "Mississippi Marijuana Card Blog",
+      "feed_url": "https://www.mississippimarijuanacard.com/blog-feed.xml",
+      "website_url": "https://www.mississippimarijuanacard.com/blog",
+      "description": "Mississippi Marijuana Card aids qualifying patients in securing their medical marijuana card. Stay informed on industry news, tips, and more through their comprehensive resources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7290300.jpg?t=1712159951"
+    }
+  ]
+}

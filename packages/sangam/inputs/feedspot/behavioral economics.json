@@ -1,0 +1,46 @@
+{
+  "category": "Behavioral Economics",
+  "source_url": "https://rss.feedspot.com/behavioral_economics_rss_feeds",
+  "feeds": [
+    {
+      "title": "BehavioralEconomics.com Blog",
+      "feed_url": "https://www.behavioraleconomics.com/feed/",
+      "website_url": "https://www.behavioraleconomics.com/blog/",
+      "description": "BehavioralEconomics.com is home to the popular Behavioral Economics Guide, a global social network (Behavioral Economics Group), the Behavioral Economics Academy, and a blog that publishes the latest behavioral insights from academia, business, and public policy.",
+      "followers": {
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/5033077.jpg?t=1626355026"
+    },
+    {
+      "title": "Jason Collins Blog",
+      "feed_url": "https://www.jasoncollins.blog/index.xml",
+      "website_url": "https://www.jasoncollins.blog/",
+      "description": "A blog by Jason Collins on behavioural and data science, and economics.",
+      "followers": {
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/1322916.jpg?t=1651320664"
+    },
+    {
+      "title": "The daily blog of behavioral and cognitive economics",
+      "feed_url": "https://alessandroinnocenti.wordpress.com/feed/",
+      "website_url": "https://alessandroinnocenti.wordpress.com/",
+      "description": "The daily blog of behavioral and cognitive economics by Alessandro Innocenti.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5377034.jpg?t=1646288808"
+    },
+    {
+      "title": "Ideas Matter \u00bb Behavioral Economics",
+      "feed_url": "https://blogs.iadb.org/ideas-matter/en/category/behavioral-economics/feed/",
+      "website_url": "https://blogs.iadb.org/ideas-matter/en/category/behavioral-economics/",
+      "description": "This section features articles on behavioral economics. The blog of the IDB's Research Department shares ideas that matter on public policy and development in Latin America and the Caribbean.",
+      "followers": {
+        "facebook": 96300,
+        "twitter": 68700,
+        "instagram": 278700
+      },
+      "image_url": "https://i1.feedspot.com/5163078.jpg?t=1646288014"
+    }
+  ]
+}

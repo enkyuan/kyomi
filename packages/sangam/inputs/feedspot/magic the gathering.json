@@ -1,0 +1,300 @@
+{
+  "category": "Magic The Gathering",
+  "source_url": "https://rss.feedspot.com/magic_the_gathering_rss_feeds",
+  "feeds": [
+    {
+      "title": "MTGGoldfish",
+      "feed_url": "https://www.mtggoldfish.com/feed",
+      "website_url": "https://www.mtggoldfish.com/",
+      "description": "MTGGoldfish brings you fast and accurate prices, decks, and strategies for Magic the Gathering and Magic the Gathering Online.",
+      "followers": {
+        "facebook": 384,
+        "twitter": 97400,
+        "instagram": 77400
+      },
+      "image_url": "https://i1.feedspot.com/4968636.jpg?t=1651040153"
+    },
+    {
+      "title": "Draftsim Blog",
+      "feed_url": "https://draftsim.com/feed/",
+      "website_url": "https://draftsim.com/blog/",
+      "description": "If you want to get better at limited, you've come to the right place. And if you like to nerd out on data, math, and stats, then Draftsim is definitely for you. I've been playing Magic on and off for over 20 years. On Draftsim, I plan to share everything I learn with you. I love limited so much and there's nothing I'd rather be doing than drafting all the time.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5394239.jpg?t=1651034061"
+    },
+    {
+      "title": "Card Kingdom Blog",
+      "feed_url": "https://blog.cardkingdom.com/feed/",
+      "website_url": "https://blog.cardkingdom.com/",
+      "description": "The Card Kingdom is owned and operated by brothers John and Damon Morris. It is one of the world's biggest retailers of Magic: the Gathering, with two brick-and-mortar locations in the Seattle area. The Card Kingdom is the best place on earth to buy Magic cards.",
+      "followers": {
+        "facebook": 26000,
+        "twitter": 28900,
+        "instagram": 43500
+      },
+      "image_url": "https://i1.feedspot.com/5393428.jpg?t=1650631038"
+    },
+    {
+      "title": "EDHREC",
+      "feed_url": "https://edhrec.com/articles/feed/",
+      "website_url": "https://edhrec.com/articles",
+      "description": "EDHREC was founded in 2015 as a data-driven Magic: The Gathering resource for the Commander format (also known as EDH). We provide data on popular archetypes, deck staples, and high synergy combos to help you build your next deck.",
+      "followers": {
+        "facebook": 16700,
+        "twitter": 35800,
+        "instagram": 49000
+      },
+      "image_url": "https://i1.feedspot.com/5394240.jpg?t=1651034066"
+    },
+    {
+      "title": "Star City Games",
+      "feed_url": "https://articles.starcitygames.com/feed/",
+      "website_url": "https://articles.starcitygames.com/",
+      "description": "Star City Games blog is the community's premier source for Magic: The Gathering content. Star City Games is the world's premier Trading Card Game (TCG) retailer and event organizer. It is on a mission to provide Magic: The Gathering fans with content, consumer, and event experiences that continually exceed their expectations.",
+      "followers": {
+        "facebook": 115600,
+        "twitter": 65900,
+        "instagram": 60700
+      },
+      "image_url": "https://i1.feedspot.com/5394246.jpg?t=1651034097"
+    },
+    {
+      "title": "MTG Price Blog",
+      "feed_url": "https://blog.mtgprice.com/feed/",
+      "website_url": "https://blog.mtgprice.com/",
+      "description": "World's leading MTG Finance community helping players & vendors make/save money playing Magic: The Gathering. We show you the true market value for your Magic cards, along with current and historical prices.",
+      "followers": {
+        "facebook": 842,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5394238.jpg?t=1651040829"
+    },
+    {
+      "title": "MTG Arena Zone",
+      "feed_url": "https://mtgazone.com/news/feed/",
+      "website_url": "https://mtgazone.com/news/",
+      "description": "MTG Arena Zone is your top website dedicated to Magic: The Gathering Arena. We provide the highest quality articles, guides, the most up-to-date decks, and much more, for all levels of players from beginners to casuals to competitive.",
+      "followers": {
+        "facebook": 903,
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/5139401.jpg?t=1651052153"
+    },
+    {
+      "title": "MTG Arena Pro Blog",
+      "feed_url": "https://mtgarena.pro/feed/",
+      "website_url": "https://mtgarena.pro/blog/",
+      "description": "MTG Arena Pro is a live tracking and decks for Magic The Gathering Arena. Read the latest MTG Arena news, trending cards, events, streaming channels, and more.",
+      "followers": {
+        "twitter": 958
+      },
+      "image_url": "https://i1.feedspot.com/5394241.jpg?t=1651052581"
+    },
+    {
+      "title": "MTGStocks News",
+      "feed_url": "https://api.mtgstocks.com/news/feed",
+      "website_url": "https://www.mtgstocks.com/news",
+      "description": "Your favorite resource for daily price updates on Magic: the Gathering cards. We track the prices of all cards and report the ones that have recently fluctuated the most for your Magic finance convenience!",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 8300
+      },
+      "image_url": "https://i1.feedspot.com/5394243.jpg?t=1651034079"
+    },
+    {
+      "title": "Quiet Speculation",
+      "feed_url": "https://www.quietspeculation.com/feed/",
+      "website_url": "https://www.quietspeculation.com/",
+      "description": "Quiet Speculation is a daily web magazine specializing in making money in the trading card game industry. Our focus is Magic: The Gathering, and we strive to stay on top of all facets of the game at all times. We deliver a variety of quality Magic-related content, and our card price and collection tracking data tools for subscribers are unparalleled.",
+      "followers": {
+        "facebook": 919,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5394247.jpg?t=1651039471"
+    },
+    {
+      "title": "Face To Face Games \u00bb Magic",
+      "feed_url": "https://magic.facetofacegames.com/feed/",
+      "website_url": "https://magic.facetofacegames.com/",
+      "description": "The following blog of Face To Face Games features articles on Magic: The Gathering. Face To Face Games is Canada's largest Magic: The Gathering online store with the best selection of singles and products nationwide.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5394248.jpg?t=1651051678"
+    },
+    {
+      "title": "AetherHub",
+      "feed_url": "https://aetherhub.com/Feed/Atom",
+      "website_url": "https://aetherhub.com/",
+      "description": "Your Hub for Everything Magic The Gathering. Explore the metagame, articles, decklists, manage tournaments or your collection. Get the latest news and keep up to data on MTG Arena.",
+      "followers": {
+        "facebook": 224
+      },
+      "image_url": "https://i1.feedspot.com/8658543.jpg"
+    },
+    {
+      "title": "Gathering Games Blog \u00bb Magic the Gathering",
+      "feed_url": "https://gatheringgames.co.uk/community/blog/feed/category/magic-the-gathering?limit=10",
+      "website_url": "https://gatheringgames.co.uk/community/blog/category/magic-the-gathering/",
+      "description": "From commander deck guides to the latest MTG news, check out all things Magic right here at the Gathering Games blog.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/8658546.jpg"
+    },
+    {
+      "title": "Wizard Tower Blog",
+      "feed_url": "https://www.wizardtower.com/feed/",
+      "website_url": "https://www.wizardtower.com/blog/",
+      "description": "The Wizard's Tower blog is a great go-to for news, deck ideas, and strategy whether one is a beginner or a seasoned player.",
+      "followers": {
+        "facebook": 4200
+      },
+      "image_url": "https://i1.feedspot.com/8658548.jpg?t=1755073365"
+    },
+    {
+      "title": "MTG Rocks",
+      "feed_url": "https://mtgrocks.com/feed/",
+      "website_url": "https://mtgrocks.com/",
+      "description": "MTG Rocks is the home of all things Magic The Gathering! MTG Rocks covers spoilers, strategy, deckbuilding & all formats like Standard, Modern, Draft & more.",
+      "followers": {
+        "facebook": 270200
+      },
+      "image_url": "https://i1.feedspot.com/8658542.jpg?t=1755073301"
+    },
+    {
+      "title": "MTG DECKS",
+      "feed_url": "https://mtgdecks.net/events/index.rss?1179375565",
+      "website_url": "https://mtgdecks.net/articles/",
+      "description": "Get the latest MTG articles including guides, deck primes and news that will take you ahead in the metagame.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/8658540.jpg"
+    },
+    {
+      "title": "Goblin Gathering",
+      "feed_url": "https://www.goblingathering.com/feeds/posts/default",
+      "website_url": "https://www.goblingathering.com/",
+      "description": "The Goblin Gathering blog is a Goblin-lover's dream packed with glowing card features, deck ideas, format breakdowns, and a tight-knit community of passionate players.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8658537.jpg?t=1755073184"
+    },
+    {
+      "title": "MTG Salvation",
+      "feed_url": "https://www.mtgsalvation.com/articles.rss",
+      "website_url": "https://www.mtgsalvation.com/articles/",
+      "description": "MTG Salvation blogs gave advice, news, and opinions for Magic players covering cards, decks, and the game's story in one place.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/8658547.jpg?t=1755073107"
+    },
+    {
+      "title": "Magic Spoiler",
+      "feed_url": "https://www.magicspoiler.com/feed/",
+      "website_url": "https://www.magicspoiler.com/",
+      "description": "MTG spoiler blog is a go-to site for early glimpses of new cards, beautiful galleries, release schedules, and MTG news all in one place.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4111825.jpg?t=1755073059"
+    },
+    {
+      "title": "Total Cards Blog \u00bb Magic the Gathering",
+      "feed_url": "https://totalcards.net/blogs/magic-the-gathering.atom",
+      "website_url": "https://totalcards.net/blogs/magic-the-gathering/",
+      "description": "Discover the latest MTG news, card releases, strategies, and more at Total Cards. Stay updated with exclusive updates, in-depth analyses, and expert insights into Magic The Gathering.",
+      "followers": {
+        "facebook": 17200,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/8658541.jpg?t=1755073409"
+    },
+    {
+      "title": "17Lands Blog",
+      "feed_url": "https://blog.17lands.com//feed",
+      "website_url": "https://blog.17lands.com/",
+      "description": "The 17Lands blog is all about using real, community-submitted data from MTGA Limited formats to uncover strategic insights, test tools, and share how the best players make decisions. It's a goldmine for anyone looking to improve with analytics, simulations, or just understanding how the limited meta trends evolve.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8658538.jpg?t=1755072997"
+    },
+    {
+      "title": "Wargamer \u00bb Magic the Gathering",
+      "feed_url": "https://www.wargamer.com/mainrss.xml",
+      "website_url": "https://www.wargamer.com/magic-the-gathering/",
+      "description": "The Wargamer MTG blog is a go-to for fresh MTG news, deep-dive discussions, format updates, and bold opinion pieces, all wrapped in thoughtful coverage that captures both design logic and community sentiment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403384.jpg?t=1755072677"
+    },
+    {
+      "title": "Three For One Trading",
+      "feed_url": "https://www.threeforonetrading.com/en/feed",
+      "website_url": "https://www.threeforonetrading.com/en/magazine/",
+      "description": "News & Articles 341 Magazine The latest articles, news and events from the world of Magic: The Gathering. Brought to you by Three for One Trading and a team of awesome writers. Authors Article Highlights Latest Articles Events & Tournaments",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8658545.jpg"
+    },
+    {
+      "title": "Toracles",
+      "feed_url": "https://toracles.com/feed/",
+      "website_url": "https://toracles.com/",
+      "description": "Magic the Gathering Commander site, page in Spanish with the best information about Commander, combos, decks, commanders, and news.",
+      "followers": {
+        "twitter": 7
+      },
+      "image_url": "https://i1.feedspot.com/5686436.jpg?t=1696924349"
+    },
+    {
+      "title": "Magic Card Investor",
+      "feed_url": "https://www.magiccardinvestor.com/feed/",
+      "website_url": "https://www.magiccardinvestor.com/",
+      "description": "Magic Card Investor is a trusted website for advice on buying and investing in Magic: The Gathering, MetaZoo, and other Trading Card Games. Browse a ton of content on How to play MetaZoo and MTG games. Stay tuned for more facts and trivia about fascinating MTG card editions.",
+      "followers": {
+        "facebook": 5,
+        "instagram": 72
+      },
+      "image_url": "https://i1.feedspot.com/5724837.jpg?t=1701338783"
+    },
+    {
+      "title": "Multiverse in Review",
+      "feed_url": "http://multiverseinreview.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://multiverseinreview.blogspot.com/",
+      "description": "On this blog, I review the Magic the Gathering storyline. Every single novel, anthology, comic, online vignette, and all the other obscure little media outlets this franchise has wormed its way into.",
+      "followers": {
+        "twitter": 438
+      },
+      "image_url": "https://i1.feedspot.com/5394237.jpg?t=1651041023"
+    },
+    {
+      "title": "Guild Blog \u00bb MTG",
+      "feed_url": "https://blog.guildredemund.net/category/mtg/feed/",
+      "website_url": "https://blog.guildredemund.net/category/mtg/",
+      "description": "Guild Blog is a personal Magic blog where the author blends memories of playing over the years with helpful guides on deckbuilding and strategic questions.",
+      "followers": {
+        "facebook": 85
+      },
+      "image_url": "https://i1.feedspot.com/8658544.jpg"
+    },
+    {
+      "title": "Old School Mtg",
+      "feed_url": "https://oldschool-mtg.blogspot.com/feeds/posts/default",
+      "website_url": "https://oldschool-mtg.blogspot.com/",
+      "description": "The blag is a rich, well-organized Old School MTG blog filled with personal stories, tournament coverage, deck analysis, and a strong sense of community. Whether you're looking for event memories, deck ideas, or just a nostalgic read, it's a great place to explore.",
+      "followers": {
+        "facebook": 227
+      },
+      "image_url": "https://i1.feedspot.com/8658539.jpg?t=1755073526"
+    },
+    {
+      "title": "Playing MTG",
+      "feed_url": "https://playingmtg.com/feed/",
+      "website_url": "https://playingmtg.com/articles/",
+      "description": "Read articles on Magic: The Gathering stats, matchups, metagame, and more. Here on mtgmeta.io you will find metagame share percentages and performance of various decks against the field and versus specific decks.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5394242.jpg?t=1651034074"
+    }
+  ]
+}

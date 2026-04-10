@@ -1,0 +1,1876 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet href="https://massimiliano.farinetti.eu/web/trans.xsl" type="text/xsl"?>
+
+<opml version="2.0" xmlns:opml="http://opml.org/spec2">
+
+	<head>
+
+		<ownerName>Massimiliano Farinetti</ownerName>
+		<ownerId>https://massimiliano.farinetti.eu/</ownerId>
+
+		<dateModified>2025-11-29T20:34:00Z</dateModified>
+
+	</head>
+
+	<body>
+
+		<outline text="Roll Around the Blog" category="roll-around-the-blog">
+
+			<outline type="rss"
+				text="Massimiliano Farinetti"
+				title="Verba volant. Scripta manent. Virtualia?"
+				htmlUrl="https://massimiliano.farinetti.eu/"
+				xmlUrl="https://massimiliano.farinetti.eu/feed.xml" />
+			<!--
+			<outline type="rss"
+				text="$Author_Name"
+				title="$Blog_Title"
+				htmlUrl="$blog_url"
+				xmlUrl="$feed_url" />
+			-->
+			<outline type="rss"
+				text="Aegir Hallmundur"
+				title="Aegir.org"
+				htmlUrl="https://aegir.org/"
+				xmlUrl="https://aegir.org/words/feed/" />
+			<outline type="rss"
+				text="Alberto Alemanno"
+				title="Alberto Alemanno"
+				htmlUrl="https://albertoalemanno.com/"
+				xmlUrl="https://albertoalemanno.com/feed/" />
+			<outline type="rss"
+				text="Alessandra Daniele"
+				title="Schegge taglienti"
+				htmlUrl="https://scheggetaglienti.wordpress.com/"
+				xmlUrl="https://scheggetaglienti.wordpress.com/feed/" />
+			<outline type="rss"
+				text="Alessandro Capriccioli"
+				title="Metilparaben"
+				htmlUrl="https://alessandrocapriccioli.it/"
+				xmlUrl="https://alessandrocapriccioli.it/feed/" />
+			<outline type="rss"
+				text="Alessandro Robecchi"
+				title="Alessandro Robecchi"
+				htmlUrl="https://www.alessandrorobecchi.it/"
+				xmlUrl="https://www.alessandrorobecchi.it/index.php/feed/atom/" />
+			<outline type="rss"
+				text="Alessandro Vicenzi"
+				title="Buoni presagi"
+				htmlUrl="https://buonipresagi.wordpress.com/"
+				xmlUrl="https://buonipresagi.wordpress.com/feed/" />
+			<outline type="rss"
+				text="Amleto De Silva"
+				title="Amlo"
+				htmlUrl="https://www.amlo.it/"
+				xmlUrl="https://www.amlo.it/?feed=rss2" />
+			<outline type="rss"
+				text="Ana Rodrigues"
+				title="Oh Hello Ana"
+				htmlUrl="https://ohhelloana.blog/"
+				xmlUrl="https://ohhelloana.blog/feed.xml" />
+			<outline type="rss"
+				text="Andrea Beggi"
+				title="Andrea Beggi"
+				htmlUrl="https://andreabeggi.net/"
+				xmlUrl="https://andreabeggi.net/feed/" />
+			<outline type="rss"
+				text="Andrea Contino"
+				title="Go With The Flow"
+				htmlUrl="https://contino.com/"
+				xmlUrl="https://contino.com/feed/" />
+			<outline type="rss"
+				text="Anil Dash"
+				title="Anil Dash"
+				htmlUrl="https://www.anildash.com/"
+				xmlUrl="https://www.anildash.com/feed.xml" />
+			<outline type="rss"
+				text="Antonella Beccaria"
+				title="Xaaraan"
+				htmlUrl="http://antonella.beccaria.org/"
+				xmlUrl="http://antonella.beccaria.org/feed/" />
+			<outline type="rss"
+				text="Au Taylor"
+				title="Blogust"
+				htmlUrl="https://blog.au27.net/"
+				xmlUrl="https://blog.au27.net/feed.xml" />
+			<outline type="rss"
+				text="Biljana Prijić"
+				title="Most"
+				htmlUrl="https://biljaic.com/"
+				xmlUrl="https://biljaic.com/feed/" />
+			<outline type="rss"
+				text="Brent Simmons"
+				title="Inessential"
+				htmlUrl="https://inessential.com/"
+				xmlUrl="https://inessential.com/xml/rss.xml" />
+			<outline type="rss"
+				text="Charity Majors"
+				title="Charity.wtf"
+				htmlUrl="https://charity.wtf/"
+				xmlUrl="https://charity.wtf/feed/" />
+			<outline type="rss"
+				text="Chris Coyier"
+				title="Chris Coyier"
+				htmlUrl="https://chriscoyier.net/"
+				xmlUrl="https://chriscoyier.net/feed/" />
+			<outline type="rss"
+				text="Claudio Giunta"
+				title="Claudio Giunta"
+				htmlUrl="https://claudiogiunta.it/"
+				xmlUrl="https://claudiogiunta.it/feed/" />
+			<outline type="rss"
+				text="Cory Doctorow"
+				title="Pluralistic"
+				htmlUrl="https://pluralistic.net/"
+				xmlUrl="https://pluralistic.net/feed/" />
+			<outline type="rss"
+				text="Craig Mod"
+				title="Craig Mod"
+				htmlUrl="https://craigmod.com/"
+				xmlUrl="https://craigmod.com/index.xml" />
+			<outline type="rss"
+				text="Dave Winer"
+				title="Scripting News"
+				htmlUrl="http://scripting.com/"
+				xmlUrl="http://scripting.com/rss.xml" />
+			<outline type="rss"
+				text="Davide Piacenza"
+				title="Culture Wars"
+				htmlUrl="https://www.culturewars.it/"
+				xmlUrl="https://www.culturewars.it/rss/" />
+			<outline type="rss"
+				text="Derek Sivers"
+				title="Derek Sivers"
+				htmlUrl="https://sive.rs/"
+				xmlUrl="https://sive.rs/en.atom" />
+			<outline type="rss"
+				text="Doc Searls"
+				title="Doc Searls Weblog"
+				htmlUrl="https://www.searls.com/"
+				xmlUrl="https://doc.searls.com/feed/" />
+			<outline type="rss"
+				text="Edoardo Dezani"
+				title="Visiogeist"
+				htmlUrl="http://www.visiogeist.com/"
+				xmlUrl="http://www.visiogeist.com/blog/feed/atom/blog/blog-2?format=feed" />
+			<outline type="rss"
+				text="Eleonora Sacco"
+				title="Pain de Route"
+				htmlUrl="https://www.painderoute.it/"
+				xmlUrl="https://www.painderoute.it/feed/" />
+			<outline type="rss"
+				text="Emanuele Di Vita"
+				title="Time Is What You Make of It"
+				htmlUrl="https://www.dreamsworld.it/"
+				xmlUrl="https://www.dreamsworld.it/emanuele/feed/" />
+			<outline type="rss"
+				text="Enzo Baruffaldi"
+				title="Memoria Polaroid – un blog alla radio"
+				htmlUrl="https://unblogallaradio.blogspot.com/"
+				xmlUrl="https://unblogallaradio.blogspot.com/feeds/posts/default" />
+			<outline type="rss"
+				text="Eric Meyer"
+				title="Meyerweb"
+				htmlUrl="https://meyerweb.com/"
+				xmlUrl="https://meyerweb.com/eric/thoughts/feed/" />
+			<outline type="rss"
+				text="Erin Casali"
+				title="Intense Minimalism"
+				htmlUrl="https://intenseminimalism.com/"
+				xmlUrl="https://intenseminimalism.com/feed/" />
+			<outline type="rss"
+				text="Ethan Marcotte"
+				title="Ethan Marcotte"
+				htmlUrl="https://ethanmarcotte.com/"
+				xmlUrl="https://ethanmarcotte.com/wrote/feed.xml" />
+			<outline type="rss"
+				text="Fabio De Luca"
+				title="Weekendance"
+				htmlUrl="https://weekendance.tumblr.com/"
+				xmlUrl="https://weekendance.tumblr.com/rss/" />
+			<outline type="rss"
+				text="Filippo Valsorda"
+				title="Filippo Valsorda"
+				htmlUrl="https://filippo.io/"
+				xmlUrl="https://words.filippo.io/rss/" />
+			<outline type="rss"
+				text="Flavio Parisi"
+				title="Pesceriso"
+				htmlUrl="https://flavioparisi.com/"
+				xmlUrl="https://flavioparisi.com/feed/" />
+			<outline type="rss"
+				text="Francesco Costa"
+				title="Francesco Costa"
+				htmlUrl="https://www.francescocosta.net/"
+				xmlUrl="https://www.francescocosta.net/feed/" />
+			<outline type="rss"
+				text="Francesco Farabegoli"
+				title="Bastonate per Posta"
+				htmlUrl="https://bastonate.substack.com/"
+				xmlUrl="https://bastonate.substack.com/feed/" />
+			<outline type="rss"
+				text="Francesco Tucci"
+				title="ilTucci.com"
+				htmlUrl="https://www.iltucci.com/blog/"
+				xmlUrl="https://www.iltucci.com/blog/feed/" />
+			<outline type="rss"
+				text="Gaspar Torriero"
+				title="Gaspar Torriero gone verbose"
+				htmlUrl="https://gaspartorriero.it/"
+				xmlUrl="https://gaspartorriero.it/feed/" />
+			<outline type="rss"
+				text="Gennaro Carotenuto"
+				title="Giornalismo partecipativo"
+				htmlUrl="https://www.gennarocarotenuto.it/"
+				xmlUrl="https://www.gennarocarotenuto.it/feed/" />
+			<outline type="rss"
+				text="Georgia Spaccapietra"
+				title="Buba"
+				htmlUrl="https://www.buba.it/"
+				xmlUrl="https://www.buba.it/feed/" />
+			<outline type="rss"
+				text="Gerlando Termini"
+				title="Due chiacchiere"
+				htmlUrl="https://duechiacchiere.it/"
+				xmlUrl="https://duechiacchiere.it/feed/" />
+			<outline type="rss"
+				text="Giles Turnbull"
+				title="Giles Turnbull’s website"
+				htmlUrl="https://gilest.org/"
+				xmlUrl="https://gilest.org/feed/index.xml" />
+			<outline type="rss"
+				text="Giorgio Gilestro"
+				title="La bottega"
+				htmlUrl="https://giorgio.gilest.ro/"
+				xmlUrl="https://giorgio.gilest.ro/feed/" />
+			<outline type="rss"
+				text="Giovanni Fontana"
+				title="Distanti saluti"
+				htmlUrl="https://www.distantisaluti.com/"
+				xmlUrl="https://www.distantisaluti.com/feed/" />
+			<outline type="rss"
+				text="Giulio Pianese"
+				title="Verba manent / Zu"
+				htmlUrl="https://giuliozu.blogspot.com/"
+				xmlUrl="https://giuliozu.blogspot.com/feeds/posts/default" />
+			<outline type="rss"
+				text="Giuseppe Bilotta"
+				title="Oblomov"
+				htmlUrl="https://www.oblomov.eu/"
+				xmlUrl="https://wok.oblomov.eu/index.atom" />
+			<outline type="rss"
+				text="Herman Martinus"
+				title="Herman’s blog"
+				htmlUrl="https://herman.bearblog.dev/"
+				xmlUrl="https://herman.bearblog.dev/feed/" />
+			<outline type="rss"
+				text="Ivo Silvestro"
+				title="L’estinto"
+				htmlUrl="https://www.lestinto.ch/"
+				xmlUrl="https://www.lestinto.ch/feed/" />
+			<outline type="rss"
+				text="James Gallagher"
+				title="James’ Coffee Blog"
+				htmlUrl="https://jamesg.blog/"
+				xmlUrl="https://jamesg.blog/feeds/posts.xml" />
+			<outline type="rss"
+				text="Jamie Zawinski"
+				title="jwz"
+				htmlUrl="https://www.jwz.org/"
+				xmlUrl="https://www.jwz.org/blog/feed/" />
+			<outline type="rss"
+				text="Jason Kottke"
+				title="Kottke.org"
+				htmlUrl="https://kottke.org/"
+				xmlUrl="https://feeds.kottke.org/main/" />
+			<outline type="rss"
+				text="Jens Oliver Meiert"
+				title="Jens Oliver Meiert"
+				htmlUrl="https://meiert.com/"
+				xmlUrl="https://meiert.com/feed/" />
+			<outline type="rss"
+				text="Jeremy Keith"
+				title="Adactio"
+				htmlUrl="https://adactio.com/"
+				xmlUrl="https://adactio.com/rss/" />
+			<outline type="rss"
+				text="John Gruber"
+				title="Daring Fireball"
+				htmlUrl="https://daringfireball.net/"
+				xmlUrl="https://daringfireball.net/feeds/main" />
+			<outline type="rss"
+				text="Jon Worth"
+				title="Jon Worth"
+				htmlUrl="https://jonworth.eu/"
+				xmlUrl="https://jonworth.eu/feed/" />
+			<outline type="rss"
+				text="Justin Myers"
+				title="The Guyliner"
+				htmlUrl="https://theguyliner.com/"
+				xmlUrl="https://theguyliner.com/feed/" />
+			<outline type="rss"
+				text="Katie Featherstone"
+				title="Feathery Travels"
+				htmlUrl="https://www.featherytravels.com/"
+				xmlUrl="https://www.featherytravels.com/rss/blog/" />
+			<outline type="rss"
+				text="Kev Quirk"
+				title="Kev Quirk"
+				htmlUrl="https://kevquirk.com/"
+				xmlUrl="https://kevquirk.com/feed" />
+			<outline type="rss"
+				text="Kevin Kelly"
+				title="The Technium"
+				htmlUrl="https://kk.org/"
+				xmlUrl="https://feedpress.me/thetechnium" />
+			<outline type="rss"
+				text="Lara Hogan"
+				title="Lara Hogan"
+				htmlUrl="https://larahogan.me/"
+				xmlUrl="https://larahogan.me/feed.xml" />
+			<outline type="rss"
+				text="Leonardo Bianchi"
+				title="Complotti!"
+				htmlUrl="https://complotti.substack.com/"
+				xmlUrl="https://complotti.substack.com/feed/" />
+			<outline type="rss"
+				text="Leonardo Tondelli"
+				title="Leonardo"
+				htmlUrl="https://leonardo.blogspot.com/"
+				xmlUrl="https://leonardo.blogspot.com/feeds/posts/default" />
+			<outline type="rss"
+				text="Licia Corbolante"
+				title="Terminologia etc."
+				htmlUrl="https://www.terminologiaetc.it/"
+				xmlUrl="https://www.terminologiaetc.it/feed/" />
+			<outline type="rss"
+				text="Loredana Lipperini"
+				title="Lipperatura"
+				htmlUrl="https://www.lipperatura.it/"
+				xmlUrl="https://www.lipperatura.it/feed/" />
+			<outline type="rss"
+				text="Lorenzo Campani"
+				title="LorenzoC"
+				htmlUrl="https://www.lorenzoc.net/"
+				xmlUrl="https://www.lorenzoc.net/feed/" />
+			<outline type="rss"
+				text="Luca Castelli"
+				title="Il Pozzo di Cabal"
+				htmlUrl="https://cabaldixit.blogspot.com/"
+				xmlUrl="https://cabaldixit.blogspot.com/feeds/posts/default" />
+			<outline type="rss"
+				text="Luca De Biase"
+				title="Luca De Biase"
+				htmlUrl="https://blog.debiase.com/"
+				xmlUrl="https://blog.debiase.com/feed/" />
+			<outline type="rss"
+				text="Luca Di Ciaccio"
+				title="Ludik"
+				htmlUrl="https://www.ludik.it/"
+				xmlUrl="https://www.ludik.it/feed/" />
+			<outline type="rss"
+				text="Luca Sofri"
+				title="Wittgenstein"
+				htmlUrl="https://www.wittgenstein.it/"
+				xmlUrl="https://www.wittgenstein.it/feed/" />
+			<outline type="rss"
+				text="Luigi Castaldi"
+				title="Malvino"
+				htmlUrl="https://malvinodue.blogspot.com/"
+				xmlUrl="https://malvinodue.blogspot.com/feeds/posts/default" />
+			<outline type="rss"
+				text="Maciej Cegłowski"
+				title="Idle Words"
+				htmlUrl="https://idlewords.com/"
+				xmlUrl="https://idlewords.com/index.xml" />
+			<outline type="rss"
+				text="Maggie Appleton"
+				title="The Garden"
+				htmlUrl="https://maggieappleton.com/"
+				xmlUrl="https://maggieappleton.com/rss.xml" />
+			<outline type="rss"
+				text="Mandy Brown"
+				title="A Working Library"
+				htmlUrl="https://aworkinglibrary.com/"
+				xmlUrl="https://aworkinglibrary.com/feed/index.xml" />
+			<outline type="rss"
+				text="Manuel Moreale"
+				title="Manu"
+				htmlUrl="https://manuelmoreale.com/"
+				xmlUrl="https://manuelmoreale.com/feed/rss" />
+			<outline type="rss"
+				text="Marco Cedaro"
+				title="Cedmax.net"
+				htmlUrl="https://cedmax.net/"
+				xmlUrl="https://cedmax.net/rss/all/" />
+			<outline type="rss"
+				text="Mario Seminerio"
+				title="Phastidio"
+				htmlUrl="https://phastidio.net/"
+				xmlUrl="https://phastidio.net/feed/" />
+			<outline type="rss"
+				text="Martino Pietropoli"
+				title="Il Pensiero Lungo"
+				htmlUrl="https://martinopietropoli.substack.com/"
+				xmlUrl="https://martinopietropoli.substack.com/feed/" />
+			<outline type="rss"
+				text="Massimo Mantellini"
+				title="Manteblog"
+				htmlUrl="https://www.mantellini.it/"
+				xmlUrl="https://www.mantellini.it/feed/" />
+			<outline type="rss"
+				text="Massimo Moruzzi"
+				title="Dotcoma"
+				htmlUrl="https://www.dotcoma.it/"
+				xmlUrl="https://www.dotcoma.it/feed/" />
+			<outline type="rss"
+				text="Massimo Pigliucci"
+				title="Figs in Winter"
+				htmlUrl="https://figsinwintertime.substack.com/"
+				xmlUrl="https://figsinwintertime.substack.com/feed" />
+			<outline type="rss"
+				text="Matheus Lima"
+				title="Terrible Software"
+				htmlUrl="https://terriblesoftware.org/"
+				xmlUrl="https://terriblesoftware.org/feed/" />
+			<outline type="rss"
+				text="Matt Webb"
+				title="Interconnected"
+				htmlUrl="https://www.interconnected.org/"
+				xmlUrl="https://www.interconnected.org/home/feed" />
+			<outline type="rss"
+				text="Matthew Perpetua"
+				title="Fluxblog"
+				htmlUrl="https://www.fluxblog.org/"
+				xmlUrl="https://www.fluxblog.org/feed/" />
+			<outline type="rss"
+				text="Matthias Ott"
+				title="Matthias Ott"
+				htmlUrl="https://matthiasott.com/"
+				xmlUrl="https://matthiasott.com/rss/" />
+			<outline type="rss"
+				text="Maurizio Codogno"
+				title="Notiziole di .mau."
+				htmlUrl="https://xmau.com/"
+				xmlUrl="https://xmau.com/wp/notiziole/feed/" />
+			<outline type="rss"
+				text="Maximiliano Bianchi"
+				title="Strelnik"
+				htmlUrl="https://www.strelnik.it/"
+				xmlUrl="https://www.strelnik.it/blog/feed/" />
+			<outline type="rss"
+				text="Molly White"
+				title="Citation Needed"
+				htmlUrl="https://citationneeded.news/"
+				xmlUrl="https://citationneeded.news/rss/" />
+			<outline type="rss"
+				text="Monique Sliedrecht"
+				title="Northern Drift"
+				htmlUrl="https://www.moniquesliedrecht.com/"
+				xmlUrl="https://www.moniquesliedrecht.com/blog-feed.xml" />
+			<outline type="rss"
+				text="Nick Southall"
+				title="Sick Mouthy"
+				htmlUrl="https://sickmouthy.wordpress.com/"
+				xmlUrl="https://sickmouthy.wordpress.com/feed/" />
+			<outline type="rss"
+				text="Nicola Losito"
+				title="kOoLiNuS"
+				htmlUrl="https://www.koolinus.net/"
+				xmlUrl="https://www.koolinus.net/blog/feed/" />
+			<outline type="rss"
+				text="Nicolas Magand"
+				title="The Jolly Teapot"
+				htmlUrl="https://thejollyteapot.com/"
+				xmlUrl="https://thejollyteapot.com/feed.rss" />
+			<outline type="rss"
+				text="Nicolò Zuliani"
+				title="Bagni Proeliator"
+				htmlUrl="https://bagniproeliator.it/"
+				xmlUrl="https://bagniproeliator.it/feed/" />
+			<outline type="rss"
+				text="Pablo Renzi"
+				title="Pablog"
+				htmlUrl="https://www.pablog.it/"
+				xmlUrl="https://www.pablog.it/feed/" />
+			<outline type="rss"
+				text="Paolo Albera"
+				title="MySpiace"
+				htmlUrl="https://www.myspiace.it/"
+				xmlUrl="https://www.myspiace.it/feed/" />
+			<outline type="rss"
+				text="Paolo Attivissimo"
+				title="Attivissimo.me"
+				htmlUrl="https://attivissimo.me/"
+				xmlUrl="https://attivissimo.me/feed/" />
+			<outline type="rss"
+				text="Paolo Madeddu"
+				title="A margine"
+				htmlUrl="https://www.amargine.it/"
+				xmlUrl="https://www.amargine.it/feed/" />
+			<outline type="rss"
+				text="Paolo Ruggeri"
+				title="Feadin.eu"
+				htmlUrl="https://www.feadin.eu/"
+				xmlUrl="https://www.feadin.eu/en/posts/index.xml" />
+			<outline type="rss"
+				text="Paul Coldren"
+				title="brr"
+				htmlUrl="https://brr.fyi/"
+				xmlUrl="https://brr.fyi/feed.xml" />
+			<outline type="rss"
+				text="Rachel J. Kwon"
+				title="Kwon.nyc"
+				htmlUrl="https://www.kwon.nyc/"
+				xmlUrl="https://www.kwon.nyc/notes/index.xml" />
+			<outline type="rss"
+				text="Rachel Smith"
+				title="Rach Smith’s digital garden"
+				htmlUrl="https://rachsmith.com/"
+				xmlUrl="https://rachsmith.com/feed.xml" />
+			<outline type="rss"
+				text="Randall Munroe"
+				title="xkcd"
+				htmlUrl="https://xkcd.com/"
+				xmlUrl="https://xkcd.com/atom.xml" />
+			<outline type="rss"
+				text="Raymond Hines"
+				title="Along the Ray"
+				htmlUrl="https://alongtheray.com/"
+				xmlUrl="https://alongtheray.com/all-the-things-feed.rss" />
+			<outline type="rss"
+				text="René Coignard"
+				title="René Coignard"
+				htmlUrl="https://renecoignard.com/"
+				xmlUrl="https://renecoignard.com/rss/" />
+			<outline type="rss"
+				text="Riccardo Cazzin"
+				title="~zinricky"
+				htmlUrl="https://tilde.team/~zinricky/"
+				xmlUrl="https://tilde.team/~zinricky/atom.xml" />
+			<outline type="rss"
+				text="Riccardo Mori"
+				title="Riccardo Mori"
+				htmlUrl="https://morrick.me/"
+				xmlUrl="https://morrick.me/feed" />
+			<outline type="rss"
+				text="Richard Hemmer"
+				title="Stormgrass"
+				htmlUrl="https://stormgrass.com/"
+				xmlUrl="https://stormgrass.com/rss/" />
+			<outline type="rss"
+				text="Roberto Briozzo"
+				title="Alcuni aneddoti dal mio futuro"
+				htmlUrl="https://www.plus1gmt.it/"
+				xmlUrl="https://www.plus1gmt.it/feed/" />
+			<outline type="rss"
+				text="Sabine Hasicka"
+				title="Wanderwarbler"
+				htmlUrl="https://wanderwarbler.com/"
+				xmlUrl="https://wanderwarbler.com/feed/" />
+			<outline type="rss"
+				text="Sam Hughes"
+				title="Things Of Interest"
+				htmlUrl="https://qntm.org/"
+				xmlUrl="https://qntm.org/rss.php" />
+			<outline type="rss"
+				text="Samuele Silva"
+				title="Samuele Silva"
+				htmlUrl="https://www.samuelesilva.net/"
+				xmlUrl="https://www.samuelesilva.net/blog/feed/" />
+			<outline type="rss"
+				text="Serena Piccioni"
+				title="Terzo Livello"
+				htmlUrl="https://xlthlx.com/"
+				xmlUrl="https://xlthlx.com/feed/" />
+			<outline type="rss"
+				text="Sergio Pilu"
+				title="Squonk"
+				htmlUrl="https://www.blogsquonk.it/"
+				xmlUrl="https://www.blogsquonk.it/feed/" />
+			<outline type="rss"
+				text="Silvia Maggi"
+				title="Silvia Maggi’s digital home"
+				htmlUrl="https://www.silviamaggi.co.uk/"
+				xmlUrl="https://www.silviamaggi.co.uk/feed.xml" />
+			<outline type="rss"
+				text="Silvia Ziche"
+				title="Silvia Ziche"
+				htmlUrl="https://www.silviaziche.com/"
+				xmlUrl="https://www.silviaziche.com/feed/" />
+			<outline type="rss"
+				text="Simon Collison"
+				title="Simon Collison"
+				htmlUrl="https://colly.com/"
+				xmlUrl="https://colly.com/journal/feed/" />
+			<outline type="rss"
+				text="Simon Evans"
+				title="Sidewalken"
+				htmlUrl="https://sidewalken.com/"
+				xmlUrl="https://sidewalken.com/feed/" />
+			<outline type="rss"
+				text="Simone Silvestroni"
+				title="Minutes to Midnight"
+				htmlUrl="https://www.minutestomidnight.co.uk/"
+				xmlUrl="https://www.minutestomidnight.co.uk/feed.xml" />
+			<outline type="rss"
+				text="Sophie Koonin"
+				title="Localghost"
+				htmlUrl="https://localghost.dev/"
+				xmlUrl="https://localghost.dev/feed.xml" />
+			<outline type="rss"
+				text="Stefano Quintarelli"
+				title="Quinta’s weblog"
+				htmlUrl="https://blog.quintarelli.it/"
+				xmlUrl="https://blog.quintarelli.it/feed/" />
+			<outline type="rss"
+				text="Stefano Tartarotti"
+				title="Tartablog"
+				htmlUrl="https://tartarotti.wordpress.com/"
+				xmlUrl="https://tartarotti.wordpress.com/feed/" />
+			<outline type="rss"
+				text="Terence Eden"
+				title="Terence Eden’s Blog"
+				htmlUrl="https://shkspr.mobi/blog/"
+				xmlUrl="https://shkspr.mobi/blog/feed/" />
+			<outline type="rss"
+				text="Tim Bray"
+				title="ongoing"
+				htmlUrl="https://www.tbray.org/"
+				xmlUrl="https://www.tbray.org/ongoing/ongoing.atom" />
+			<outline type="rss"
+				text="Tommaso Marmo"
+				title="Tommi Space"
+				htmlUrl="https://tommi.space/"
+				xmlUrl="https://tommi.space/index.xml" />
+			<outline type="rss"
+				text="Tracy Durnell"
+				title="Tracy Durnell’s Mind Garden"
+				htmlUrl="https://tracydurnell.com/"
+				xmlUrl="https://tracydurnell.com/feed/" />
+			<outline type="rss"
+				text="Uriel Fanelli"
+				title="Das Böse Büro"
+				htmlUrl="https://keinpfusch.net/"
+				xmlUrl="https://keinpfusch.net/feed/" />
+			<outline type="rss"
+				text="Vittorio Bertola"
+				title="Near a Tree"
+				htmlUrl="https://bertola.eu/"
+				xmlUrl="https://bertola.eu/nearatree/feed/" />
+			<outline type="rss"
+				text="Westley Winks"
+				title="Westley Winks"
+				htmlUrl="https://wwinks.com/"
+				xmlUrl="https://wwinks.com/feed.xml" />
+			<outline type="rss"
+				text="Winnie Lim"
+				title="Winnie Lim"
+				htmlUrl="https://winnielim.org/"
+				xmlUrl="https://winnielim.org/feed/" />
+			<outline type="rss"
+				text="Wouter Groeneveld"
+				title="Brain Baking"
+				htmlUrl="https://brainbaking.com/"
+				xmlUrl="https://brainbaking.com/index.xml" />
+			<outline type="rss"
+				text="Wu Ming"
+				title="Giap"
+				htmlUrl="https://www.wumingfoundation.com/giap/"
+				xmlUrl="https://www.wumingfoundation.com/giap/feed/" />
+
+		</outline>
+
+		<outline text="Feedless Fruits" category="feedless-fruits">
+
+			<outline type="link"
+				text="Giorgia Cavicchia"
+				url="https://www.theeiderway.com/" />
+			<outline type="link"
+				text="Massimo Sandal"
+				url="https://www.massimosandal.com/" />
+			<outline type="link"
+				text="Sarah Barrett"
+				url="https://sarahrbarrett.com/" />
+
+		</outline>
+
+		<outline text="Alessandria, Piemonte" category="alessandria-piemonte">
+
+			<outline text="Lenga" category="lenga">
+
+				<outline type="link"
+					text="Carlo Demichelis › Il piemontese"
+					url="https://digilander.libero.it/dotor43/ind10.html" />
+				<outline type="link"
+					text="Grand dissionari piemontèis"
+					url="https://www.piemonteis.com/" />
+				<outline type="link"
+					text="Piemunteis"
+					url="https://piemunteis.it/" />
+				<outline type="link"
+					text="Rivista Savej"
+					url="https://rivistasavej.it/" />
+				<outline type="link"
+					text="Vittorio Bertola › Introduzione al piemontese"
+					url="https://bertola.eu/piemonteis/" />
+
+			</outline>
+
+			<outline text="Pais" category="pais">
+
+				<outline type="rss"
+					text="L’Ancora"
+					htmlUrl="https://www.settimanalelancora.it/"
+					xmlUrl="https://www.settimanalelancora.it/feed/" />
+				<outline type="link"
+					text="Associazione Ursaria"
+					url="https://www.ursaria.it/" />
+				<outline type="link"
+					text="Comune di Orsara Bormida"
+					url="https://comune.orsara.al.it/" />
+
+			</outline>
+
+			<outline text="Sità" category="sita">
+
+				<outline type="link"
+					text="Città di Alessandria"
+					url="https://www.comune.alessandria.it/" />
+				<outline type="link"
+					text="F.C. Alessandria"
+					url="https://www.fcalessandria.it/" />
+				<outline type="link"
+					text="Meteo AM › Alessandria"
+					url="https://www.meteoam.it/it/meteo-citta/alessandria" />
+				<outline type="link"
+					text="Meteo MFN"
+					url="https://meteo.mfn.unipmn.it/" />
+				<outline type="rss"
+					text="Museo Grigio"
+					htmlUrl="https://www.museogrigio.it/"
+					xmlUrl="https://www.museogrigio.it/wp/feed/" />
+				<outline type="rss"
+					text="Il Piccolo"
+					htmlUrl="https://www.ilpiccolo.net/"
+					xmlUrl="https://www.ilpiccolo.net/feed/" />
+				<outline type="rss"
+					text="Verso il Kurdistan"
+					htmlUrl="https://versoilkurdistan.blogspot.com/"
+					xmlUrl="https://versoilkurdistan.blogspot.com/feeds/posts/default" />
+
+			</outline>
+
+		</outline>
+
+		<outline text="Brno, Morava" category="brno-morava">
+
+			<outline text="Akademie" category="akademie">
+
+				<outline type="link"
+					text="Janáčkova akademie múzických umění"
+					url="https://www.jamu.cz/" />
+				<outline type="link"
+					text="Masarykova univerzita"
+					url="https://www.muni.cz/" />
+				<outline type="link"
+					text="Mendelova univerzita v Brně"
+					url="https://www.mendelu.cz/" />
+				<outline type="link"
+					text="Veterinární univerzita Brno"
+					url="https://www.vetuni.cz/" />
+				<outline type="link"
+					text="Vysoké učení technické v Brně"
+					url="https://www.vut.cz/" />
+
+			</outline>
+
+			<outline text="Chuť" category="chut">
+
+				<outline type="link"
+					text="Franck &amp; Thierry"
+					url="https://www.franck-thierry.cz/" />
+				<outline type="link"
+					text="Hustopečská mandlárna"
+					url="https://www.mandlarna.cz/" />
+				<outline type="link"
+					text="Klub cestovatelů"
+					url="https://www.klubcestovatelubrno.cz/" />
+				<outline type="link"
+					text="Richardova limonáda"
+					url="https://www.richardovalimonada.cz/" />
+				<outline type="link"
+					text="Vanda sirupy a marmelády"
+					url="https://www.vandasirupyamarmelady.cz/" />
+
+			</outline>
+
+			<outline text="Divadlo" category="divadlo">
+
+				<outline type="link"
+					text="Divadlo Barka"
+					url="https://divadlobarka.cz/" />
+				<outline type="link"
+					text="Divadlo Bolka Polívky"
+					url="https://divadlobolkapolivky.cz/" />
+				<outline type="link"
+					text="Divadlo Husa na provázku"
+					url="https://www.provazek.cz/" />
+				<outline type="link"
+					text="HaDivadlo"
+					url="https://www.hadivadlo.cz/" />
+				<outline type="link"
+					text="Městské divadlo Brno"
+					url="https://www.mdb.cz/" />
+				<outline type="link"
+					text="Národní divadlo Brno"
+					url="https://www.ndbrno.cz/" />
+				<outline type="link"
+					text="Semilasso"
+					url="https://semilasso.cz/" />
+
+			</outline>
+
+			<outline text="Doprava" category="doprava">
+
+				<outline type="link"
+					text="Dopravní podnik města Brna"
+					url="https://www.dpmb.cz/" />
+				<outline type="link"
+					text="Integrovaný dopravní systém Jihomoravského kraje"
+					url="https://www.idsjmk.cz/" />
+				<outline type="link"
+					text="Letiště Brno–Tuřany"
+					url="https://www.brno-airport.cz/" />
+
+			</outline>
+
+			<outline text="Hudba" category="hudba">
+
+				<outline type="link"
+					text="Alterna"
+					url="https://www.alterna.cz/" />
+				<outline type="link"
+					text="Fléda"
+					url="https://www.fleda.cz/" />
+				<outline type="link"
+					text="Kabinet Múz"
+					url="https://www.kabinetmuz.cz/" />
+				<outline type="link"
+					text="Melodka"
+					url="https://www.melodka.cz/" />
+				<outline type="link"
+					text="Music Lab"
+					url="https://musiclab.cz/" />
+				<outline type="link"
+					text="Sono Music Club"
+					url="https://www.sono.cz/" />
+				<outline type="link"
+					text="Stará Pekárna"
+					url="https://www.starapekarna.cz/" />
+
+			</outline>
+
+			<outline text="Jundrov" category="jundrov">
+
+				<outline type="rss"
+					text="Brno–Jundrov"
+					htmlUrl="https://www.jundrov.info/"
+					xmlUrl="https://www.jundrov.info/rss/" />
+				<outline type="link"
+					text="Penzion Vanessa"
+					url="https://www.penzion-jundrov.cz/" />
+				<outline type="link"
+					text="Rebel Bean"
+					url="https://www.rebelbean.cz/" />
+				<outline type="link"
+					text="Restaurace na Piavě"
+					url="https://www.piava.cz/" />
+				<outline type="link"
+					text="Sauna Třpyt"
+					url="https://www.saunatrpyt.cz/" />
+
+			</outline>
+
+			<outline text="Kino" category="kino">
+
+				<outline type="link"
+					text="Kino Art"
+					url="https://www.kinoart.cz/" />
+				<outline type="link"
+					text="Kino Lucerna"
+					url="http://www.kinolucerna.info/" />
+				<outline type="link"
+					text="Kino Scala"
+					url="https://www.kinoscala.cz/" />
+
+			</outline>
+
+			<outline text="Kultura" category="kultura">
+
+				<outline type="link"
+					text="Dům umění"
+					url="https://www.dum-umeni.cz/" />
+				<outline type="link"
+					text="Industra"
+					url="https://industra.space/" />
+				<outline type="link"
+					text="Moravská galerie"
+					url="https://moravska-galerie.cz/" />
+				<outline type="link"
+					text="Moravská zemská knihovna"
+					url="https://www.mzk.cz/" />
+				<outline type="link"
+					text="Moravské zemské muzeum"
+					url="https://www.mzm.cz/" />
+				<outline type="link"
+					text="Technické muzeum v Brně"
+					url="https://www.tmbrno.cz/" />
+				<outline type="link"
+					text="Vida! science centrum"
+					url="https://vida.cz/" />
+
+			</outline>
+
+			<outline text="Medlánky" category="medlanky">
+
+				<outline type="link"
+					text="Aeroklub Brno–Medlánky"
+					url="https://www.aeroklubmedlanky.cz/" />
+				<outline type="link"
+					text="Brno–Medlánky"
+					url="https://medlanky.brno.cz/" />
+				<outline type="link"
+					text="Caffè Rotatoria"
+					url="https://www.rotatoria.cz/" />
+				<outline type="link"
+					text="Lucky Bastard"
+					url="https://www.lucky-bastard.cz/" />
+
+			</outline>
+
+			<outline text="Město" category="mesto">
+
+				<outline type="link"
+					text="Brněnské podzemí"
+					url="https://podzemibrno.cz/" />
+				<outline type="link"
+					text="Druhé Brno"
+					url="https://druhebrno.cz" />
+				<outline type="link"
+					text="Encyklopedie dějin města Brna"
+					url="https://encyklopedie.brna.cz/" />
+				<outline type="link"
+					text="Go to Brno"
+					url="https://www.gotobrno.cz/" />
+				<outline type="link"
+					text="Muzeum města Brna"
+					url="https://www.muzeumbrna.cz/" />
+				<outline type="rss"
+					text="One Man Brno Blog"
+					htmlUrl="https://www.onemanbrnoblog.cz/"
+					xmlUrl="https://www.onemanbrnoblog.cz/feed/" />
+				<outline type="link"
+					text="Statutární město Brno"
+					url="https://www.brno.cz/" />
+
+			</outline>
+
+			<outline text="Okolí" category="okoli">
+
+				<outline type="link"
+					text="Go from Brno"
+					url="https://www.gofrombrno.cz/" />
+				<outline type="link"
+					text="Hrad Veveří"
+					url="https://www.hrad-veveri.cz/" />
+				<outline type="link"
+					text="Moravský kras"
+					url="https://www.moravskykras.net/" />
+				<outline type="link"
+					text="Slavnosti mandloní a vína"
+					url="https://www.slavnosti-mandloni.cz/" />
+				<outline type="link"
+					text="Slovácký rok v Kyjově"
+					url="http://www.slovackyrok.cz/" />
+
+			</outline>
+
+			<outline text="Podnikání" category="podnikani">
+
+				<outline type="link"
+					text="Brno Region"
+					url="https://brnoregion.com/" />
+				<outline type="link"
+					text="Technology Park Brno"
+					url="https://www.technologypark.cz/" />
+				<outline type="link"
+					text="Veletrhy Brno"
+					url="https://www.bvv.cz/" />
+
+			</outline>
+
+			<outline text="Příroda" category="priroda">
+
+				<outline type="link"
+					text="Brněnská přehrada"
+					url="https://www.brnenskaprehrada.cz/" />
+				<outline type="link"
+					text="ČHMÚ › Webkamera Brno"
+					url="https://www.chmi.cz/files/portal/docs/meteo/kam/prohlizec.html?cam=brno" />
+				<outline type="link"
+					text="Lesy města Brna"
+					url="https://www.lesymb.cz/" />
+				<outline type="link"
+					text="Miluji Brno"
+					url="https://www.milujibrno.cz/" />
+				<outline type="link"
+					text="Prygl"
+					url="https://www.prygl.net/" />
+				<outline type="link"
+					text="Rezekvítek"
+					url="https://www.rezekvitek.cz" />
+				<outline type="link"
+					text="Teplárny Brno › Teploty"
+					url="https://www.teplarny.cz/cs/teploty/" />
+
+			</outline>
+
+			<outline text="Reality" category="reality">
+
+				<outline type="link"
+					text="Arnoldova vila"
+					url="https://www.arnoldovavila.cz/" />
+				<outline type="link"
+					text="Hrad Špilberk"
+					url="https://www.spilberk.cz/" />
+				<outline type="link"
+					text="Vila Löw-Beer"
+					url="https://www.vilalowbeer.cz/" />
+				<outline type="link"
+					text="Vila Stiassni"
+					url="https://www.vila-stiassni.cz/" />
+				<outline type="link"
+					text="Vila Tugendhat"
+					url="https://www.tugendhat.eu/" />
+
+			</outline>
+
+			<outline text="Společnost" category="spolecnost">
+
+				<outline type="link"
+					text="Brněnské hantec"
+					url="https://www.hantec.cz/" />
+				<outline type="rss"
+					text="Brno Expat Centre"
+					htmlUrl="https://www.brnoexpatcentre.eu/"
+					xmlUrl="https://www.brnoexpatcentre.eu/blog/feed/" />
+				<outline type="rss"
+					text="Brno Pride"
+					htmlUrl="https://www.brnopride.cz/"
+					xmlUrl="https://www.brnopride.cz/?format=feed" />
+				<outline type="link"
+					text="Muzeum romské kultury"
+					url="https://www.rommuz.cz/" />
+				<outline type="link"
+					text="Štetl"
+					url="https://www.stetl.cz/" />
+				<outline type="link"
+					text="STUD"
+					url="https://www.stud.cz/" />
+				<outline type="link"
+					text="Vesna"
+					url="https://spolekvesna.cz/" />
+
+			</outline>
+
+			<outline text="Zábava" category="zabava">
+
+				<outline type="link"
+					text="Brněnská muzejní noc"
+					url="https://www.brnenskamuzejninoc.cz/" />
+				<outline type="rss"
+					text="FC Zbrojovka Brno"
+					htmlUrl="https://www.fczbrno.cz/"
+					xmlUrl="https://www.fczbrno.cz/rss.asp" />
+				<outline type="link"
+					text="Ignis Brunensis"
+					url="https://www.ignisbrunensis.cz/" />
+				<outline type="link"
+					text="Maraton hudby Brno"
+					url="https://www.maratonhudby.cz/" />
+				<outline type="link"
+					text="Zoo Brno"
+					url="https://www.zoobrno.cz/" />
+
+			</outline>
+
+			<outline text="Zprávy" category="zpravy">
+
+				<outline type="rss"
+					text="Brněnský deník"
+					htmlUrl="https://brnensky.denik.cz/"
+					xmlUrl="https://brnensky.denik.cz/rss/server-original.html" />
+				<outline type="rss"
+					text="Brno Daily"
+					htmlUrl="https://www.brnodaily.com/"
+					xmlUrl="https://www.brnodaily.com/feed/" />
+
+			</outline>
+
+		</outline>
+
+		<outline text="Česko\Slovensko" category="cesko-slovensko">
+
+			<outline text="Časopisy" category="casopisy">
+
+				<outline type="rss"
+					text="Deník Alarm"
+					htmlUrl="https://denikalarm.cz/"
+					xmlUrl="https://denikalarm.cz/feed/" />
+				<outline type="link"
+					text="Page Not Found"
+					url="https://pagenotfound.cz/" />
+				<outline type="rss"
+					text="Respekt"
+					htmlUrl="https://www.respekt.cz/"
+					xmlUrl="https://www.respekt.cz/api/rss" />
+				<outline type="rss"
+					text="Voxpot"
+					htmlUrl="https://www.voxpot.cz/"
+					xmlUrl="https://www.voxpot.cz/feed/" />
+
+			</outline>
+
+			<outline text="Čestování" category="cestovani">
+
+				<outline type="link"
+					text="České dráhy"
+					url="https://www.cd.cz/" />
+				<outline type="link"
+					text="European Sleeper"
+					url="https://www.europeansleeper.eu/" />
+				<outline type="link"
+					text="FlixBus"
+					url="https://www.flixbus.cz/" />
+				<outline type="link"
+					text="Gepard Express"
+					url="https://www.gepard.com/" />
+				<outline type="link"
+					text="RegioJet"
+					url="https://regiojet.cz/" />
+				<outline type="link"
+					text="Smartwings"
+					url="https://www.smartwings.com/" />
+				<outline type="link"
+					text="Železničná spoločnosť Slovensko"
+					url="https://www.zssk.sk/" />
+
+			</outline>
+
+			<outline text="Jazyk" category="jazyk">
+
+				<outline type="link"
+					text="Internetová jazyková příručka ÚJČ AV ČR"
+					url="https://prirucka.ujc.cas.cz/" />
+				<outline type="link"
+					text="Lingea překladač"
+					url="https://prekladac.lingea.cz/" />
+				<outline type="link"
+					text="Lingea slovníky"
+					url="https://slovniky.lingea.cz/" />
+				<outline type="link"
+					text="Nárečie.sk"
+					url="https://narecie.sk/" />
+				<outline type="link"
+					text="Slovníkový portál JÚĽŠ SAV"
+					url="https://slovnik.juls.savba.sk/" />
+
+			</outline>
+
+			<outline text="Literatura" category="literatura">
+
+				<outline type="link"
+					text="Česko-saská literární krajina"
+					url="https://www.literarnikrajina.eu/" />
+				<outline type="rss"
+					text="Czech Literary Centre"
+					htmlUrl="https://www.czechlit.cz/"
+					xmlUrl="https://www.czechlit.cz/cz/feed/" />
+				<outline type="rss"
+					text="eSamizdat"
+					htmlUrl="https://www.esamizdat.it/"
+					xmlUrl="https://www.esamizdat.it/ojs/index.php/eS/gateway/plugin/WebFeedGatewayPlugin/rss/" />
+				<outline type="rss"
+					text="Magnesia Litera"
+					htmlUrl="https://www.magnesia-litera.cz/"
+					xmlUrl="https://www.magnesia-litera.cz/feed/" />
+				<outline type="link"
+					text="Slavia"
+					url="https://www.slavia.it/" />
+				<outline type="link"
+					text="Slovenské literárne centrum"
+					url="https://www.litcentrum.sk/" />
+				<outline type="link"
+					text="Visegrad Literature"
+					url="https://www.visegradliterature.net/" />
+
+			</outline>
+
+			<outline text="Média" category="media">
+
+				<outline type="link"
+					text="ČT24"
+					url="https://ct24.ceskatelevize.cz/" />
+				<outline type="link"
+					text="ČT Art"
+					url="https://art.ceskatelevize.cz/" />
+				<outline type="link"
+					text="ČT Sport"
+					url="https://sport.ceskatelevize.cz/" />
+				<outline type="link"
+					text="KVIFF.tv"
+					url="https://kviff.tv/" />
+				<outline type="link"
+					text="Rádio_FM"
+					url="https://fm.rtvs.sk/" />
+				<outline type="link"
+					text="Radio 1"
+					url="https://www.radio1.cz/" />
+				<outline type="link"
+					text="Radio Wave"
+					url="https://www.mujrozhlas.cz/zive/radio-wave" />
+
+			</outline>
+
+			<outline text="Novinky" category="novinky">
+
+				<outline type="rss"
+					text="Aktuálně"
+					htmlUrl="https://www.aktualne.cz/"
+					xmlUrl="https://www.aktualne.cz/rss/" />
+				<outline type="rss"
+					text="České noviny"
+					htmlUrl="https://www.ceskenoviny.cz/"
+					xmlUrl="https://www.ceskenoviny.cz/sluzby/rss/zpravy.php" />
+				<outline type="rss"
+					text="iRozhlas"
+					htmlUrl="https://www.irozhlas.cz/"
+					xmlUrl="https://www.irozhlas.cz/rss/irozhlas" />
+				<outline type="rss"
+					text="Radio Prague International"
+					htmlUrl="https://english.radio.cz/"
+					xmlUrl="https://english.radio.cz/rcz-rss/en" />
+				<outline type="rss"
+					text="The Slovak Spectator"
+					htmlUrl="https://spectator.sme.sk/"
+					xmlUrl="https://spectator.sme.sk/rss" />
+
+			</outline>
+
+			<outline text="Obchody" category="obchody">
+
+				<outline type="link"
+					text="Black Vinyl Bazar"
+					url="https://www.blackvinylbazar.cz/" />
+				<outline type="link"
+					text="Houpej se"
+					url="https://houpejse.cz/" />
+				<outline type="link"
+					text="Indies Records"
+					url="https://www.indiesrecords.cz/" />
+				<outline type="link"
+					text="Knihobot"
+					url="https://knihobot.cz/" />
+				<outline type="link"
+					text="Music Records"
+					url="https://www.musicrecords.cz/" />
+
+			</outline>
+
+			<outline text="Stát" category="stat">
+
+				<outline type="link"
+					text="Finanční správa ČR"
+					url="https://www.financnisprava.cz/" />
+				<outline type="link"
+					text="Parlament ČR"
+					url="https://www.psp.cz/" />
+				<outline type="link"
+					text="Pražský hrad"
+					url="https://www.hrad.cz/" />
+				<outline type="link"
+					text="Senát ČR"
+					url="https://www.senat.cz/" />
+				<outline type="link"
+					text="Vláda ČR"
+					url="https://vlada.gov.cz/" />
+
+			</outline>
+
+			<outline text="Vlast" category="vlast">
+
+				<outline type="link"
+					text="Ambasciata d’Italia a Praga"
+					url="https://ambpraga.esteri.it/" />
+				<outline type="link"
+					text="Progetto Repubblica Ceca"
+					url="https://www.progetto.cz/" />
+				<outline type="link"
+					text="Società Dante Alighieri"
+					url="https://dantepraga.cz/" />
+
+			</outline>
+
+		</outline>
+
+		<outline text="Europa Europa" category="europa-europa">
+
+			<outline text="Nouvelles" category="nouvelles">
+
+				<outline type="rss"
+					text="EurActiv"
+					htmlUrl="https://www.euractiv.com/"
+					xmlUrl="https://www.euractiv.com/feed/" />
+				<outline type="rss"
+					text="Euronews"
+					htmlUrl="https://www.euronews.com/"
+					xmlUrl="https://www.euronews.com/rss" />
+				<outline type="rss"
+					text="Euro|topics"
+					htmlUrl="https://www.eurotopics.net/"
+					xmlUrl="https://www.eurotopics.net/export/en/rss.xml" />
+				<outline type="rss"
+					text="Politico Europe"
+					htmlUrl="https://www.politico.eu/"
+					xmlUrl="https://www.politico.eu/feed/" />
+				<outline type="rss"
+					text="Voxeurop"
+					htmlUrl="https://www.voxeurop.eu/"
+					xmlUrl="https://www.voxeurop.eu/feed/" />
+
+			</outline>
+
+			<outline text="Sguardi" category="sguardi">
+
+				<outline type="link"
+					text="Centrum Report"
+					url="https://www.centrumreport.com/" />
+				<outline type="rss"
+					text="East Journal"
+					htmlUrl="https://www.eastjournal.net/"
+					xmlUrl="https://www.eastjournal.net/feed" />
+				<outline type="rss"
+					text="New Eastern Europe"
+					htmlUrl="https://neweasterneurope.eu/"
+					xmlUrl="https://neweasterneurope.eu/feed/" />
+				<outline type="rss"
+					text="Osservatorio Balcani e Caucaso Transeuropa"
+					htmlUrl="https://www.balcanicaucaso.org/"
+					xmlUrl="https://www.balcanicaucaso.org/rss/feed/news/" />
+				<outline type="rss"
+					text="Transitions"
+					htmlUrl="https://tol.org/"
+					xmlUrl="https://tol.org/feed" />
+
+			</outline>
+
+			<outline text="Unterwegs" category="unterwegs">
+
+				<outline type="rss"
+					text="Andergraund"
+					htmlUrl="https://www.andergraundrivista.com/"
+					xmlUrl="https://www.andergraundrivista.com/feed/" />
+				<outline type="rss"
+					text="Est/ranei"
+					htmlUrl="https://www.estranei.org/"
+					xmlUrl="https://www.estranei.org/feed/" />
+				<outline type="rss"
+					text="Extinguished Countries"
+					htmlUrl="https://extinguishedcountries.com/"
+					xmlUrl="https://extinguishedcountries.com/feed/" />
+				<outline type="rss"
+					text="Hidden Europe"
+					htmlUrl="https://www.hiddeneurope.eu/"
+					xmlUrl="https://www.hiddeneurope.eu/hidden-europe-rss-feed" />
+				<outline type="rss"
+					text="Meridiano 13"
+					htmlUrl="https://www.meridiano13.it/"
+					xmlUrl="https://www.meridiano13.it/feed/" />
+
+			</outline>
+
+		</outline>
+
+		<outline text="Italia" category="italia">
+
+			<outline text="Lingua" category="lingua">
+
+				<outline type="link"
+					text="Accademia della Crusca"
+					url="https://accademiadellacrusca.it/" />
+				<outline type="link"
+					text="Dizionario italiano De Mauro"
+					url="https://dizionario.internazionale.it/" />
+				<outline type="link"
+					text="Istituto della Enciclopedia Italiana"
+					url="https://www.treccani.it/" />
+				<outline type="link"
+					text="Liber Liber"
+					url="https://www.liberliber.it/" />
+
+			</outline>
+
+			<outline text="Notizie" category="notizie">
+
+				<outline type="rss"
+					text="Il Post"
+					htmlUrl="https://www.ilpost.it/"
+					xmlUrl="https://www.ilpost.it/feed" />
+				<outline type="rss"
+					text="Rai News"
+					htmlUrl="https://www.rainews.it/"
+					xmlUrl="https://www.rainews.it/rss/tutti" />
+
+			</outline>
+
+			<outline text="Riviste" category="riviste">
+
+				<outline type="rss"
+					text="Carmilla"
+					htmlUrl="https://www.carmillaonline.com/"
+					xmlUrl="https://www.carmillaonline.com/feed/" />
+				<outline type="rss"
+					text="Doppiozero"
+					htmlUrl="https://www.doppiozero.com/"
+					xmlUrl="https://www.doppiozero.com/feed/" />
+				<outline type="rss"
+					text="Lavoce"
+					htmlUrl="https://lavoce.info/"
+					xmlUrl="https://lavoce.info/feed/" />
+				<outline type="rss"
+					text="Minima et Moralia"
+					htmlUrl="https://www.minimaetmoralia.it/"
+					xmlUrl="https://www.minimaetmoralia.it/wp/feed/" />
+				<outline type="rss"
+					text="Rivista il Mulino"
+					htmlUrl="https://www.rivistailmulino.it/"
+					xmlUrl="https://www.rivistailmulino.it/rss/all/" />
+
+			</outline>
+
+			<outline text="Stile" category="stile">
+
+				<outline type="link"
+					text="Italy Segreta"
+					url="https://italysegreta.com/" />
+
+			</outline>
+
+		</outline>
+
+		<outline text="Wick, Caithness" category="wick-caithness">
+
+			<outline type="link"
+				text="Highland Council"
+				url="https://www.highland.gov.uk/" />
+			<outline type="rss"
+				text="John O’Groat Journal"
+				htmlUrl="https://www.johnogroat-journal.co.uk/"
+				xmlUrl="https://www.johnogroat-journal.co.uk/_api/rss/john-ogroat-news.xml" />
+			<outline type="link"
+				text="Old Pulteney"
+				url="https://oldpulteney.com/" />
+			<outline type="link"
+				text="Venture North"
+				url="https://www.venture-north.co.uk/" />
+			<outline type="rss"
+				text="Wick Academy F.C."
+				htmlUrl="https://wick-academy.co.uk/"
+				xmlUrl="https://wick-academy.co.uk/feed/" />
+			<outline type="link"
+				text="Wick John O’Groats Airport"
+				url="https://www.hial.co.uk/wick-john-ogroats-airport" />
+			<outline type="link"
+				text="The Wick Society"
+				url="https://www.wickheritage.org/" />
+
+		</outline>
+
+		<outline text="World Wide" category="world-wide">
+
+			<outline text="Coding" category="coding">
+
+				<outline type="rss"
+					text="A List Apart"
+					htmlUrl="https://alistapart.com/"
+					xmlUrl="https://alistapart.com/main/feed/" />
+				<outline type="rss"
+					text="Can I use…"
+					htmlUrl="https://caniuse.com/"
+					xmlUrl="https://caniuse.com/feed/" />
+				<outline type="rss"
+					text="CSS-Tricks"
+					htmlUrl="https://css-tricks.com/"
+					xmlUrl="https://css-tricks.com/feed/" />
+				<outline type="rss"
+					text="IndieWeb"
+					htmlUrl="https://indieweb.org/"
+					xmlUrl="https://indieweb.org/wiki/api.php?action=feedrecentchanges" />
+				<outline type="rss"
+					text="Mozilla Developer Network"
+					htmlUrl="https://developer.mozilla.org/"
+					xmlUrl="https://developer.mozilla.org/en-US/blog/rss.xml" />
+				<outline type="rss"
+					text="Smashing Magazine"
+					htmlUrl="https://www.smashingmagazine.com/"
+					xmlUrl="https://www.smashingmagazine.com/feed/" />
+				<outline type="link"
+					text="W3C"
+					url="https://www.w3.org/" />
+
+			</outline>
+
+			<outline text="Knowledge" category="knowledge">
+
+				<outline type="link"
+					text="Internet Archive"
+					url="https://www.archive.org/" />
+				<outline type="link"
+					text="The Internet Speculative Fiction Database"
+					url="https://www.isfdb.org/" />
+				<outline type="link"
+					text="Library of Congress"
+					url="https://www.loc.gov/" />
+				<outline type="link"
+					text="Project Gutenberg"
+					url="https://www.gutenberg.org/" />
+				<outline type="rss"
+					text="The Public Domain Review"
+					htmlUrl="https://publicdomainreview.org/"
+					xmlUrl="https://publicdomainreview.org/rss.xml" />
+				<outline type="rss"
+					text="Standard Ebooks"
+					htmlUrl="https://standardebooks.org/"
+					xmlUrl="https://standardebooks.org/feeds/atom/new-releases" />
+				<outline type="link"
+					text="Wikipedia"
+					url="https://www.wikipedia.org/" />
+
+			</outline>
+
+			<outline text="Literature" category="literature">
+
+				<outline type="rss"
+					text="Granta"
+					htmlUrl="https://granta.com/"
+					xmlUrl="https://granta.com/feed/" />
+				<outline type="rss"
+					text="Harper’s Magazine"
+					htmlUrl="https://harpers.org/"
+					xmlUrl="https://harpers.org/feed/" />
+				<outline type="rss"
+					text="Literary Hub"
+					htmlUrl="https://lithub.com/"
+					xmlUrl="https://lithub.com/feed/" />
+				<outline type="rss"
+					text="London Review of Books"
+					htmlUrl="https://www.lrb.co.uk/"
+					xmlUrl="https://www.lrb.co.uk/feeds/rss" />
+				<outline type="rss"
+					text="The New York Review of Books"
+					htmlUrl="https://www.nybooks.com/"
+					xmlUrl="https://www.nybooks.com/articles/feeds/public/" />
+				<outline type="rss"
+					text="The Paris Review"
+					htmlUrl="https://www.theparisreview.org/"
+					xmlUrl="https://www.theparisreview.org/blog/feed/" />
+				<outline type="rss"
+					text="The Times Literary Supplement"
+					htmlUrl="https://www.the-tls.co.uk/"
+					xmlUrl="https://www.the-tls.co.uk/feed/" />
+
+			</outline>
+
+			<outline text="Magazines" category="magazines">
+
+				<outline type="rss"
+					text="Aeon"
+					htmlUrl="https://aeon.co/"
+					xmlUrl="https://aeon.co/feed.atom" />
+				<outline type="rss"
+					text="Bellingcat"
+					htmlUrl="https://www.bellingcat.com/"
+					xmlUrl="https://www.bellingcat.com/feed/" />
+				<outline type="rss"
+					text="The Diplomat"
+					htmlUrl="https://thediplomat.com/"
+					xmlUrl="https://thediplomat.com/feed/" />
+				<outline type="rss"
+					text="Global Voices"
+					htmlUrl="https://globalvoices.org/"
+					xmlUrl="https://globalvoices.org/feed/" />
+				<outline type="rss"
+					text="The Intercept"
+					htmlUrl="https://theintercept.com/"
+					xmlUrl="https://theintercept.com/feed/" />
+				<outline type="rss"
+					text="The New Yorker"
+					htmlUrl="https://www.newyorker.com/"
+					xmlUrl="https://www.newyorker.com/feed/rss/" />
+				<outline type="rss"
+					text="Splice Today"
+					htmlUrl="https://www.splicetoday.com/"
+					xmlUrl="https://www.splicetoday.com/rss/feed.atom" />
+
+			</outline>
+
+			<outline text="News" category="news">
+
+				<outline type="link"
+					text="Associated Press"
+					url="https://www.apnews.com/" />
+				<outline type="rss"
+					text="BBC News"
+					htmlUrl="https://www.bbc.com/news"
+					xmlUrl="https://feeds.bbci.co.uk/news/rss.xml" />
+				<outline type="rss"
+					text="Deutsche Welle"
+					htmlUrl="https://www.dw.com/"
+					xmlUrl="https://rss.dw.com/atom/rss-en-all" />
+				<outline type="rss"
+					text="France 24"
+					htmlUrl="https://www.france24.com/"
+					xmlUrl="https://www.france24.com/rss" />
+				<outline type="rss"
+					text="The Guardian"
+					htmlUrl="https://www.theguardian.com/"
+					xmlUrl="https://www.theguardian.com/rss" />
+				<outline type="rss"
+					text="The New York Times"
+					htmlUrl="https://www.nytimes.com/"
+					xmlUrl="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" />
+				<outline type="link"
+					text="Reuters"
+					url="https://www.reuters.com/" />
+
+			</outline>
+
+			<outline text="NGOs" category="ngos">
+
+				<outline type="link"
+					text="Amnesty International"
+					url="https://www.amnesty.org/" />
+				<outline type="link"
+					text="Human Rights Watch"
+					url="https://www.hrw.org/" />
+				<outline type="link"
+					text="Médecins Sans Frontières"
+					url="https://www.msf.org/" />
+				<outline type="link"
+					text="Reporters Sans Frontières"
+					url="https://rsf.org/" />
+
+			</outline>
+
+			<outline text="Piracy" category="piracy">
+
+				<outline type="link"
+					text="Anna’s Archive"
+					url="https://annas-archive.org/" />
+				<outline type="rss"
+					text="New Album Releases"
+					htmlUrl="https://newalbumreleases.net/"
+					xmlUrl="https://newalbumreleases.net/feed/" />
+				<outline type="link"
+					text="OpenSubtitles"
+					url="https://www.opensubtitles.org/" />
+				<outline type="link"
+					text="Rojadirecta"
+					url="http://www.rojadirecta.eu/" />
+				<outline type="link"
+					text="Sdílej.cz"
+					url="https://www.sdilej.cz/" />
+
+			</outline>
+
+			<outline text="Politics" category="politics">
+
+				<outline type="rss"
+					text="ElectoralVote"
+					htmlUrl="https://www.electoral-vote.com/"
+					xmlUrl="https://www.electoral-vote.com/index.rss" />
+				<outline type="rss"
+					text="Europe Elects"
+					htmlUrl="https://europeelects.eu/"
+					xmlUrl="https://europeelects.eu/feed/" />
+
+			</outline>
+
+			<outline text="Pop" category="pop">
+
+				<outline type="rss"
+					text="The A.V. Club"
+					htmlUrl="https://www.avclub.com/"
+					xmlUrl="https://www.avclub.com/rss.xml" />
+				<outline type="rss"
+					text="Consequence"
+					htmlUrl="https://consequence.net/"
+					xmlUrl="https://consequence.net/feed/" />
+				<outline type="rss"
+					text="Pitchfork"
+					htmlUrl="https://pitchfork.com/"
+					xmlUrl="https://pitchfork.com/feed/rss/" />
+				<outline type="rss"
+					text="PopMatters"
+					htmlUrl="https://www.popmatters.com/"
+					xmlUrl="https://www.popmatters.com/feed" />
+				<outline type="rss"
+					text="The Quietus"
+					htmlUrl="https://thequietus.com/"
+					xmlUrl="https://thequietus.com/feed/" />
+
+			</outline>
+
+			<outline text="Radio" category="radio">
+
+				<outline type="link"
+					text="BBC Radio 6 Music"
+					url="https://www.bbc.co.uk/sounds/play/live:bbc_6music" />
+				<outline type="link"
+					text="European Radio Map"
+					url="https://www.radiomap.eu/" />
+				<outline type="link"
+					text="KCRW"
+					url="https://www.kcrw.com/" />
+				<outline type="link"
+					text="KEXP"
+					url="https://www.kexp.org/" />
+				<outline type="link"
+					text="SomaFM"
+					url="https://somafm.com/" />
+
+			</outline>
+
+			<outline text="Science" category="science">
+
+				<outline type="link"
+					text="arXiv"
+					url="https://www.arxiv.org" />
+				<outline type="rss"
+					text="Astronomy Picture of the Day"
+					htmlUrl="https://apod.nasa.gov/"
+					xmlUrl="https://apod.nasa.gov/apod.rss" />
+				<outline type="link"
+					text="CERN"
+					url="https://home.cern/" />
+
+			</outline>
+
+			<outline text="Technology" category="technology">
+
+				<outline type="rss"
+					text="Electronic Frontier Foundation"
+					htmlUrl="https://www.eff.org/"
+					xmlUrl="https://www.eff.org/rss/updates.xml" />
+				<outline type="rss"
+					text="The Markup"
+					htmlUrl="https://themarkup.org/"
+					xmlUrl="https://themarkup.org/feeds/atom.xml" />
+				<outline type="rss"
+					text="The Register"
+					htmlUrl="https://www.theregister.com/"
+					xmlUrl="https://www.theregister.com/headlines.atom" />
+
+			</outline>
+
+			<outline text="Travel" category="travel">
+
+				<outline type="rss"
+					text="Atlas Obscura"
+					htmlUrl="https://www.atlasobscura.com/"
+					xmlUrl="https://www.atlasobscura.com/feeds/latest/" />
+				<outline type="link"
+					text="Flightradar24"
+					url="https://www.flightradar24.com/" />
+				<outline type="rss"
+					text="Lapůta"
+					htmlUrl="https://www.laputa.it/"
+					xmlUrl="https://www.laputa.it/feed/" />
+				<outline type="link"
+					text="The Man in Seat 61"
+					url="https://www.seat61.com/" />
+				<outline type="link"
+					text="OpenRailwayMap"
+					url="https://www.openrailwaymap.org/" />
+				<outline type="link"
+					text="OpenStreetMap"
+					url="https://www.openstreetmap.org/" />
+				<outline type="link"
+					text="Use-It"
+					url="https://www.use-it.travel/" />
+
+			</outline>
+
+			<outline text="Work" category="work">
+
+				<outline type="link"
+					text="Specific Suggestions"
+					url="https://specificsuggestions.com/" />
+
+			</outline>
+
+		</outline>
+
+		<outline text="zZzZzZz" category="zzzzzzz">
+
+			<outline type="link"
+				text="Asphalto"
+				url="https://web.archive.org/web/20180929222132/https://www.asphalto.org/" />
+			<outline type="link"
+				text="Bongo City"
+				url="https://www.bongocity.com/" />
+			<outline type="link"
+				text="Buongiorno Slovacchia"
+				url="https://web.archive.org/web/20230830221232/https://www.buongiornoslovacchia.sk/" />
+			<outline type="link"
+				text="Camino"
+				url="https://caminobrowser.org/" />
+			<outline type="link"
+				text="Habari Project"
+				url="https://web.archive.org/web/20151223122547/https://habariproject.org/en/" />
+			<outline type="link"
+				text="The Mirror Project"
+				url="https://www.mirrorproject.com/" />
+			<outline type="link"
+				text="Picture Yourself"
+				url="https://web.archive.org/web/20051223074830/http://www.pictureyourself.org/" />
+			<outline type="link"
+				text="Stylus Magazine"
+				url="https://web.archive.org/web/20071227063820/http://www.stylusmagazine.com/" />
+			<outline type="link"
+				text="Trascendentale"
+				url="https://web.archive.org/web/20211201190829/https://www.harrr.org/trascendentale/" />
+			<outline type="link"
+				text="Veikko’s Blur Page"
+				url="https://web.archive.org/web/20230715044019/http://www.vblurpage.com/" />
+			<outline type="link"
+				text="Windscreen Gallery"
+				url="https://web.archive.org/web/20091231061352/http://www.windscreen.tv/" />
+
+		</outline>
+
+		<!--
+		<outline type="link"
+			text="$Site_Title"
+			url="$site_url" />
+		<outline type="rss"
+			text="$Site_Title"
+			htmlUrl="$site_url"
+			xmlUrl="$feed_url" />
+		-->
+
+	</body>
+
+</opml>

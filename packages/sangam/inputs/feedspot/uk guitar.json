@@ -1,0 +1,114 @@
+{
+  "category": "UK Guitar",
+  "source_url": "https://rss.feedspot.com/uk_guitar_rss_feeds",
+  "feeds": [
+    {
+      "title": "Guitar.com",
+      "feed_url": "https://guitar.com/feed/",
+      "website_url": "https://guitar.com/",
+      "description": "The world's leading authority and resource for all things guitar. We provide insight and opinion about gear, artists, technique and the guitar industry.",
+      "followers": {
+        "facebook": 172200,
+        "twitter": 13200,
+        "instagram": 104400
+      },
+      "image_url": "https://i1.feedspot.com/4911211.jpg?t=1612167828"
+    },
+    {
+      "title": "Truth In Shredding",
+      "feed_url": "https://feeds.feedburner.com/TruthInShredding",
+      "website_url": "https://www.truthinshredding.com/",
+      "description": "A blog about guitar playing, state of the art techniques, rock, metal, fusion and jazz.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4910693.jpg?t=1620110051"
+    },
+    {
+      "title": "James' Home of Tone",
+      "feed_url": "https://www.homeoftone.co.uk/blogs/news.atom",
+      "website_url": "https://www.homeoftone.co.uk/blogs/news",
+      "description": "The Home of Tone Blog is home to our 'Meet the Maker' interview series', product news and reviews, artist features and general guitar geekery!",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 203,
+        "instagram": 12200
+      },
+      "image_url": "https://i1.feedspot.com/4910684.jpg?t=1620110066"
+    },
+    {
+      "title": "AJ Green Guitar Tuition",
+      "feed_url": "https://www.ajgreenguitartuition.co.uk/feed/",
+      "website_url": "https://www.ajgreenguitartuition.co.uk/",
+      "description": "I teach all levels and abilities across all ages at competitive rates. Lessons are one-to-one so there is no pressure and you can learn at your own pace, in a friendly well equipped environment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5002796.jpg?t=1620110143"
+    },
+    {
+      "title": "London Guitar Institute Blog",
+      "feed_url": "https://www.londonguitarinstitute.co.uk/feed/",
+      "website_url": "https://www.londonguitarinstitute.co.uk/blog/",
+      "description": "London Guitar Institute covers all topics that could be of interest to amateur guitarists whether they are absolute beginners or proficient players. Read fantastic articles about guitar playing written by expert guitar instructors and guitarists from The London Guitar Institute.",
+      "followers": {
+        "facebook": 291,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/5287687.jpg?t=1622618745"
+    },
+    {
+      "title": "Guitar Blog",
+      "feed_url": "http://feeds.feedburner.com/guitarz",
+      "website_url": "http://guitarz.blogspot.com/",
+      "description": "Guitars and guitarists, basses and bassists, guitar news and products, links to interesting guitar sites and products found on the internet, plus features on my own guitars and renovation projects.",
+      "followers": {
+        "facebook": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4910698.jpg?t=1620110055"
+    },
+    {
+      "title": "TomGuitar Blog",
+      "feed_url": "https://www.tomguitar.co.uk/feed/rss2",
+      "website_url": "https://www.tomguitar.co.uk/blog",
+      "description": "TomGuitar is a great UK guitar blog featuring a host of great reviews, articles and lessons. Find free weekly lessons for intermediate and advanced guitar players. Massive rock guitar courses for skyrocketing your skills.",
+      "followers": {
+        "facebook": 428
+      },
+      "image_url": "https://i1.feedspot.com/4910676.jpg?t=1620110059"
+    },
+    {
+      "title": "Guitaarr",
+      "feed_url": "https://guitaarr.com/feed/",
+      "website_url": "https://guitaarr.com/",
+      "description": "Guitaarr is a website dedicated to reviewing, discovering, and sharing all the greatest news, reviews, videos, updates, trends and everything guitar related.",
+      "followers": {
+        "facebook": 123,
+        "twitter": 476,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4911221.jpg?t=1620110063"
+    },
+    {
+      "title": "The North American Guitar Blog",
+      "feed_url": "https://thenorthamericanguitar.com/blogs/news.atom",
+      "website_url": "https://cartervintage.com/blog",
+      "description": "The North American Guitar was founded by entrepreneur and keen blues guitarist Robert Montague CBE in 2010. They help build the link between you and the experts building your guitar, so you can track your instrument being precisely made, to your specifications. Video links, photos, visits and weekly updates keep you up to speed, and the stress levels down.",
+      "followers": {
+        "facebook": 19500,
+        "twitter": 924,
+        "instagram": 20500
+      },
+      "image_url": "https://i1.feedspot.com/4911206.jpg?t=1620110047"
+    },
+    {
+      "title": "martinseanmcconnell Blog",
+      "feed_url": "https://www.martinseanmcconnell.co.uk/feed.xml",
+      "website_url": "https://www.mcguitar.co.uk/blog",
+      "description": "Guitar lessons, that cover all aspects of the instrument, including technique, theory, performance and musicality.",
+      "followers": {
+        "facebook": 138
+      },
+      "image_url": "https://i1.feedspot.com/5002798.jpg?t=1620110070"
+    }
+  ]
+}

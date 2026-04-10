@@ -1,0 +1,86 @@
+{
+  "category": "Iceland Food",
+  "source_url": "https://rss.feedspot.com/iceland_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Yummy Iceland",
+      "feed_url": "https://yummy-iceland.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://yummy-iceland.blogspot.com/",
+      "description": "In their blog 'Yummy Iceland' they present the cuisine of Iceland and many Icelandic recipes. With over 50 recipes Yummy Iceland brings to you Icelandic dishes along with authentic festive and seasonal pastries and appetizers, and traditional and modern main courses.",
+      "followers": {
+        "facebook": 1400,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5459807.jpg?t=1666776811"
+    },
+    {
+      "title": "Your Friend In Reykjavik \u00bb Food & Drink in Iceland",
+      "feed_url": "https://yourfriendinreykjavik.com/category/food-drink-iceland/feed/",
+      "website_url": "https://yourfriendinreykjavik.com/category/food-drink-iceland/",
+      "description": "Your Friend in Reykjavik, a tour operator in Reykjavik, Iceland. The blog features articles about Iceland, including travel tips, tour recommendations, and local insights. The blog also features articles about the company itself, such as its history and its team of guides.",
+      "followers": {
+        "facebook": 29900,
+        "instagram": 6600
+      },
+      "image_url": "https://i1.feedspot.com/5459808.jpg?t=1666776350"
+    },
+    {
+      "title": "Saltverk Blog",
+      "feed_url": "https://saltverk.com/blogs/recipes.atom",
+      "website_url": "https://saltverk.com/blogs/recipes",
+      "description": "Saltverk makes artisan flaky sea salt in Iceland. It is founded with the passion of making the world's best flaky sea salt. With access to some of the cleanest seawater imaginable, the raw material used for making sea salt, it is located in the northwestern part of Iceland. Find delicious and traditional recipes on our website.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 467,
+        "instagram": 17000
+      },
+      "image_url": "https://i1.feedspot.com/5459810.jpg?t=1666776775"
+    },
+    {
+      "title": "\u00cd bo\u00f0i n\u00e1tt\u00farunnar \u00bb Recipes",
+      "feed_url": "https://ibn.is/category/matur/uppskriftir/feed/",
+      "website_url": "https://ibn.is/category/matur/uppskriftir/",
+      "description": "Their goal is to find and share good stories and ideas that inspire us to live better - in harmony with nature. At the invitation of nature is a publication with an ideal and defines itself as a 'slow' publication and has grown and prospered 'organically' since 2010. In thier magazine they share Recipes of healthy Icelandic food and cuisine.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 276,
+        "instagram": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5459816.jpg?t=1666776239"
+    },
+    {
+      "title": "Stuck in Iceland \u00bb Icelandic Cuisine",
+      "feed_url": "https://www.stuckiniceland.com/category/icelandic-cuisine/feed/",
+      "website_url": "https://www.stuckiniceland.com/category/icelandic-cuisine/",
+      "description": "Founded in 2012, this leading online Iceland travels magazine features high-quality travel tips and discount promo codes for top-rated Iceland tours. The ultimate travel advice site focuses on things to do and places to see in Iceland. The magazine is home to the most extensive selection of discount promo codes for Iceland tours.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 3800,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5459809.jpg?t=1666776596"
+    },
+    {
+      "title": "Icelandic Food",
+      "feed_url": "https://icelandicfood.is/feed/",
+      "website_url": "https://icelandicfood.is/",
+      "description": "Icelandic food is a website about Icelandic food culture, people and stories. Icelandic food culture is known for lamb, dairy and fish. Here you'll find the best restaurants, recipes and articles about Iceland's unusual food history.",
+      "followers": {
+        "facebook": 470
+      },
+      "image_url": "https://i1.feedspot.com/5459812.jpg?t=1666776295"
+    },
+    {
+      "title": "Icelandic Roots Blog \u00bb Icelandic Food",
+      "feed_url": "https://www.icelandicroots.com/blog/categories/icelandic-food",
+      "website_url": "https://www.icelandicroots.com/blog/categories/icelandic-food",
+      "description": "The Icelandic Roots Community is a non-profit, educational, heritage organization specializing in the genealogy, history, culture, and traditions of our Icelandic ancestors. They provide seminars, webinars, blogs, podcasts, workshops, social media, Samtal Hours, New Member Training, a dedicated Icelandic Genealogy Database, and much more. Their Icelandic food section features some of the best Icelandic recipes that you must check.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 144,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5459820.jpg?t=1666777431"
+    }
+  ]
+}

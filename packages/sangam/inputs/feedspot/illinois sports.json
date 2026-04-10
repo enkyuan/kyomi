@@ -1,0 +1,70 @@
+{
+  "category": "Illinois Sports",
+  "source_url": "https://rss.feedspot.com/illinois_sports_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Champaign Room",
+      "feed_url": "https://www.thechampaignroom.com/rss/current.xml",
+      "website_url": "https://www.thechampaignroom.com/",
+      "description": "The Champaign Room is your best source for quality Illinois Fighting Illini news, rumors, analysis, stats and scores from the fan perspective. Check out our website to get the latest sports news and much more.",
+      "followers": {
+        "facebook": 31400,
+        "twitter": 35500
+      },
+      "image_url": "https://i1.feedspot.com/5504234.jpg?t=1675678792"
+    },
+    {
+      "title": "Illinois Loyalty",
+      "feed_url": "https://www.illinoisloyalty.com/community/home.13/index.rss",
+      "website_url": "https://www.illinoisloyalty.com/",
+      "description": "Are you looking for the latest Illinois sports news updates? Check out our website for the most recent Illinois sports news. Illinois Loyalty is where you can find the best and latest Illinois basket ball and football news.",
+      "followers": {
+        "twitter": 30200
+      },
+      "image_url": "https://i1.feedspot.com/5504235.jpg?t=1675678466"
+    },
+    {
+      "title": "IlliniGuys",
+      "feed_url": "https://illiniguys.com/feed/",
+      "website_url": "https://illiniguys.com/",
+      "description": "The IlliniGuys brings you all the latest sports news updates and other sports related information. The IlliniGuys are just five regular guys in the middle of their professional careers who are diehard Illini fans.",
+      "followers": {
+        "twitter": 9700,
+        "instagram": 706
+      },
+      "image_url": "https://i1.feedspot.com/5504236.jpg?t=1675678839"
+    },
+    {
+      "title": "Armchair Illinois",
+      "feed_url": "https://armchairillini.com/feed/",
+      "website_url": "https://armchairillini.com/",
+      "description": "At ArmchairIllini.com, our mission is simple: to be your go-to destination for comprehensive and passionate coverage of the Illinois Fighting Illini. We are die-hard Illini fans ourselves, and we understand the passion and dedication that defines our beloved team. It is this shared passion that drives us to deliver the latest news, game analysis, and behind-the-scenes stories that every Illini fan craves.",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5778686.jpg?t=1706613136"
+    },
+    {
+      "title": "WRSP",
+      "feed_url": "https://foxillinois.com/sports",
+      "website_url": "https://foxillinois.com/sports",
+      "description": "WRSP/WCCU Fox Illinois provides local news, weather forecasts, traffic updates, notices of events and items of interest in the community, sports and entertainment programming for Springfield and nearby towns and communities. Find out all about sports and the local sports teams with the help of our website.",
+      "followers": {
+        "facebook": 55700
+      },
+      "image_url": "https://i1.feedspot.com/5504239.jpg?t=1675679012"
+    },
+    {
+      "title": "The Daily Illini",
+      "feed_url": "https://dailyillini.com/sports-stories/",
+      "website_url": "https://dailyillini.com/sports-stories/",
+      "description": "Read about the latest happenings in sports with The Daily Illini. Since 1871, The Daily Illini has been the University of Illinois' independent student newspaper. Distributed in print and digitally, The Daily Illini provides the campus community with its primary source for news, sports coverage, commentary and public opinion.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 28500,
+        "instagram": 18100
+      },
+      "image_url": "https://i1.feedspot.com/5504241.jpg?t=1675678427"
+    }
+  ]
+}

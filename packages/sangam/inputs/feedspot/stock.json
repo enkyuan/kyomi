@@ -1,0 +1,1433 @@
+{
+  "category": "Stock",
+  "source_url": "https://rss.feedspot.com/stock_rss_feeds",
+  "feeds": [
+    {
+      "title": "MarketWatch",
+      "feed_url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+      "website_url": "https://www.marketwatch.com/",
+      "description": "MarketWatch.com, published by Dow Jones & Company, tracks the pulse of markets for engaged investors with more than 16 million visitors per month. MarketWatch provides the latest stock market, financial and business news. Get stock market quotes, personal finance advice, company news and more.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/80109.jpg?t=1656573003"
+    },
+    {
+      "title": "Seeking Alpha",
+      "feed_url": "https://seekingalpha.com/feed.xml",
+      "website_url": "https://seekingalpha.com/stock-ideas",
+      "description": "Stock market Insights & financial analysis, including free earnings call transcripts, investment ideas and ETF & stock research written by finance experts.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26600
+      },
+      "image_url": "https://i1.feedspot.com/2274.jpg?t=1622804314"
+    },
+    {
+      "title": "Investing.com \u00bb Stock Market News",
+      "feed_url": "https://www.investing.com/rss/news_25.rss",
+      "website_url": "https://www.investing.com/news/stock-market-news",
+      "description": "Get the stock market news that is impacting trading in the US and around the world. Investing.com's stock market news team reports on before and after-hours trading, earnings reports, company news, and any news impacting today's major stock markets.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5198805.jpg?t=1751368957"
+    },
+    {
+      "title": "The Economic Times \u00bb Stocks Markets",
+      "feed_url": "https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146842.cms",
+      "website_url": "https://economictimes.indiatimes.com/markets/stocks",
+      "description": "Get Stock News and analysis on stocks. Latest Indian Stock Market News on SENSEX, NIFTY, BSE, NSE Live and on Indian stocks analysis.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 4400000,
+        "instagram": 2400000
+      },
+      "image_url": "https://i1.feedspot.com/4438874.jpg?t=1622804326"
+    },
+    {
+      "title": "CNBC \u00bb Market Insider",
+      "feed_url": "https://www.cnbc.com/id/20409666/device/rss/rss.html?x=1",
+      "website_url": "https://www.cnbc.com/market-insider/",
+      "description": "Your daily guide to events and trends that drive the financial markets. Whether it's a stock, foreign exchange, commodities, or bonds, you'll get a distinctive look at the discussion shaping investment decisions as well a wide range of opinions.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4723547.jpg?t=1603890123"
+    },
+    {
+      "title": "Emerging Market Skeptic",
+      "feed_url": "https://emergingmarketskeptic.substack.com/feed",
+      "website_url": "https://emergingmarketskeptic.substack.com/",
+      "description": "Emerging market link posts (Mondays), EM fund stock picks (Tuesdays) and EM stock pick write-ups (ongoing - usually at least a few per week).",
+      "followers": {
+        "twitter": 466
+      },
+      "image_url": "https://i1.feedspot.com/5621955.jpg?t=1688993818"
+    },
+    {
+      "title": "MQL5: Traders' Blogs",
+      "feed_url": "https://www.mql5.com/en/blogs/rss",
+      "website_url": "https://www.mql5.com/en/blogs/trading",
+      "description": "MQL5: language of trade strategies built-in the MetaTrader 5 Trading Platform, allows writing your own trading robots, technical indicators, scripts and libraries of functions. Follow this blog to learn various trading strategies.",
+      "followers": {
+        "facebook": 259200,
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4550918.jpg?t=1605157102"
+    },
+    {
+      "title": "StockCharts.com",
+      "feed_url": "https://stockcharts.com/articles/atom.xml",
+      "website_url": "https://stockcharts.com/articles/index.html",
+      "description": "StockCharts.com is the web's leading technical analysis and financial charting platform for online retail investors. Founded in 1999 by early Microsoft developer Chip Anderson, the company has been an industry leader in the financial technology space for nearly two decades, providing innovative, award-winning charting and analysis tools to a global audience. Follow for insightful market commentary and educational articles about investing technical analysis, and financial charting, written by expert technical analysts.",
+      "followers": {
+        "facebook": 28800,
+        "twitter": 42400
+      },
+      "image_url": "https://i1.feedspot.com/5286765.jpg?t=1646476904"
+    },
+    {
+      "title": "B-Stock Solutions Blog \u00bb Buyer",
+      "feed_url": "https://bstock.com/blog/category/buyer/feed/",
+      "website_url": "https://bstock.com/blog/category/buyer/",
+      "description": "Liquidation auctions of excess inventory, customer returns and overstock inventory directly from major retailers and manufacturers at BStock Solutions.",
+      "followers": {
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4549860.jpg?t=1622804330"
+    },
+    {
+      "title": "Trade Brains Blog",
+      "feed_url": "https://tradebrains.in/blog/feed/",
+      "website_url": "https://tradebrains.in/blog/",
+      "description": "Welcome to Trade Brains. Here we help you become a self-taught stock market expert, mastering the skill of Investing, portfolio management, trading & more.",
+      "followers": {
+        "facebook": 17300,
+        "twitter": 37200,
+        "instagram": 557200
+      },
+      "image_url": "https://i1.feedspot.com/4684087.jpg?t=1622804334"
+    },
+    {
+      "title": "The Motley Fool Canada",
+      "feed_url": "http://www.fool.ca/feed/",
+      "website_url": "https://www.fool.ca/recent-headlines/",
+      "description": "The Motley Fool (fool.ca) offers stock market and investing advice, showing people how to take control of their money and make better financial decisions. Follow this website to get stock investment advice with the sole intention of helping you take control of your own money and make better financial decisions.",
+      "followers": {
+        "facebook": 36000,
+        "twitter": 6200
+      },
+      "image_url": "https://i1.feedspot.com/708366.jpg?t=1612952630"
+    },
+    {
+      "title": "Trading Sim Blog",
+      "feed_url": "https://www.tradingsim.com/blog/rss.xml",
+      "website_url": "https://www.tradingsim.com/blog",
+      "description": "TradingSim accelerates the steep learning curve of becoming a consistently profitable trader by allowing you to replay the market as if you were trading live today, for any day from the last 2 years it's really a trading time machine. Practice day trading or swing trading over 11,000 Nasdaq, NYSE and AMEX stocks without risking your shirt? Learn with the best stock simulator on the web. .",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4550408.jpg?t=1605157137"
+    },
+    {
+      "title": "StockManiacs Blog",
+      "feed_url": "https://www.stockmaniacs.net/blog/feed/",
+      "website_url": "https://www.stockmaniacs.net/blog/",
+      "description": "StockManiacs is your Guide To The Stock Market. We can show you the exact technique to generate serious income.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5046025.jpg?t=1622804342"
+    },
+    {
+      "title": "Stock Gumshoe",
+      "feed_url": "https://www.stockgumshoe.com/feed/",
+      "website_url": "https://www.stockgumshoe.com/",
+      "description": "Stock Gumshoe specializes in 'sleuthing out' the investments being teased and tracking them to see, over time, whether it would have made sense to buy stocks based on the teaser ads they received. In addition to newsletter analysis, the financial blog provides contributor content, premium content to subscribers, and a lively community that actively contributes valuable comments.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4120627.jpg?t=1622804338"
+    },
+    {
+      "title": "Liberated Stock Trader",
+      "feed_url": "https://www.liberatedstocktrader.com/category/latest-articles/feed/",
+      "website_url": "https://www.liberatedstocktrader.com/category/latest-articles/",
+      "description": "Barry D. Moore is the founder of LiberatedStockTrader.com. He is an IFTA Certified Market Analyst with nearly 2 decades of Investing experience, a published Author & Leading Investment Blogger. At Liberated Stock Trader we work to enable 'YOU' to understand core concepts of the stock market and enable 'YOU' to always make informed decisions about where your money will go.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4860845.jpg?t=1622804346"
+    },
+    {
+      "title": "Day Trade Review",
+      "feed_url": "https://daytradereview.com/feed/",
+      "website_url": "https://daytradereview.com/",
+      "description": "Day Trade Review offers advice and reviews to help day traders choose the best trading chat rooms, brokers, and platforms. Follow this site to get news and information on Broker, Newsletter, & Financial Reviews.",
+      "followers": {
+        "facebook": 554,
+        "twitter": 306
+      },
+      "image_url": "https://i1.feedspot.com/4738720.jpg?t=1608730713"
+    },
+    {
+      "title": "Calculated Risk Blog",
+      "feed_url": "https://feeds.feedburner.com/CalculatedRisk",
+      "website_url": "https://www.calculatedriskblog.com/",
+      "description": "Calculated Risk is a well known financial blog maintained by Bill McBride since January of 2005. While its coverage of individual stocks is limited, the financial blog is widely followed for its economic commentary. Traders often use the stories to formulate opinions about macroeconomic events such as housing data or employment statistics and how they will affect major indices.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 89700
+      },
+      "image_url": "https://i1.feedspot.com/30277.jpg?t=1618403879"
+    },
+    {
+      "title": "Musings on Markets",
+      "feed_url": "https://aswathdamodaran.blogspot.com/feeds/posts/default",
+      "website_url": "https://aswathdamodaran.blogspot.com/",
+      "description": "A blog about markets, finance and all things money related. Find thoughts about valuation, corporate finance and the news of the day!",
+      "followers": {
+        "twitter": 356700
+      },
+      "image_url": "https://i1.feedspot.com/95944.jpg?t=1612770754"
+    },
+    {
+      "title": "VantagePoint AI Blog",
+      "feed_url": "https://www.vantagepointsoftware.com/blog/feed/",
+      "website_url": "https://www.vantagepointsoftware.com/blog/",
+      "description": "Founded in 1979 by Louis B. Mendelsohn. To enhance the trading success of financial market investors by providing unparalleled predictive market forecasting software and support. We will foster an environment where personal integrity, commitment and accountability to our team members, customers and stakeholders is without compromise and exceeding expectations is the definition of success.",
+      "followers": {
+        "twitter": 11
+      },
+      "image_url": "https://i1.feedspot.com/4724031.jpg?t=1622804357"
+    },
+    {
+      "title": "Gorilla Trades Blog",
+      "feed_url": "https://www.gorillatrades.com/stock-market-blog/feed/",
+      "website_url": "https://www.gorillatrades.com/stock-market-blog/",
+      "description": "Gorilla Trades is the market-tested online investing system that provides you with potentially explosive stock picks and the specifics on how to trade them. The Gorilla Trades stock picking system provides you with explosive stock picks, background research and specifics on how to trade.",
+      "followers": {
+        "facebook": 28400,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4549843.jpg?t=1622804350"
+    },
+    {
+      "title": "EquityPandit News",
+      "feed_url": "https://www.equitypandit.com/category/latest-news/feed/",
+      "website_url": "https://www.equitypandit.com/category/latest-news/",
+      "description": "EquityPandit is been promoted by a group of Stock Market analysts who are certified by National Stock exchange and other International certifications and have experience of more than 5-10 years of Technical and fundamental analysis. We offer diversified range of products according to the difference in the Needs of an investor, trader or a broker.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 27
+      },
+      "image_url": "https://i1.feedspot.com/4550277.jpg?t=1622804382"
+    },
+    {
+      "title": "Peter Brandt Blog",
+      "feed_url": "https://www.peterlbrandt.com/feed/",
+      "website_url": "https://www.peterlbrandt.com/blog/",
+      "description": "Made for serious traders, the Factor Trading Service provides expert reporting, chart analysis and commentary from veteran trader, Peter L. Brandt.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 697000
+      },
+      "image_url": "https://i1.feedspot.com/4543677.jpg?t=1605157364"
+    },
+    {
+      "title": "TraderFeed",
+      "feed_url": "http://traderfeed.blogspot.com/feeds/posts/default",
+      "website_url": "http://traderfeed.blogspot.com/",
+      "description": "Brett Steenbarger, author of The Psychology of Trading, Enhancing Trader Performance, The Daily Trading Coach, Trading Psychology 2.0, and Radical Renewa with an interest in using historical patterns in markets to find a trading edge. As a performance coach for portfolio managers and traders at financial organizations, I am also interested in performance enhancement among traders, drawing upon research from expert performers in various fields. Find the updates on trading psychology and more at TraderFeed.",
+      "followers": {
+        "twitter": 83700
+      },
+      "image_url": "https://i1.feedspot.com/62311.jpg?t=1605157297"
+    },
+    {
+      "title": "A Singaporean Stocks Investor (ASSI)",
+      "feed_url": "https://feeds.feedburner.com/ASingaporeanStockmarketInvestorassi",
+      "website_url": "https://singaporeanstocksinvestor.blogspot.com/",
+      "description": "Have a more secure financial future in an uncertain world by creating a stream of reliable passive income with high yields.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 300
+      },
+      "image_url": "https://i1.feedspot.com/1447595.jpg?t=1610366295"
+    },
+    {
+      "title": "The Blue Collar Investor Blog",
+      "feed_url": "https://www.thebluecollarinvestor.com/feed/",
+      "website_url": "https://www.thebluecollarinvestor.com/blog/",
+      "description": "Learn how to invest by selling stock options. Alan Ellman guides us through his system of options trading so you too can become CEO Of Your Own Money.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4549760.jpg?t=1622804377"
+    },
+    {
+      "title": "Terry's Tips Blog",
+      "feed_url": "https://www.terrystips.com/blog/feed/",
+      "website_url": "https://www.terrystips.com/blog/",
+      "description": "Dr. Allen graduated Harvard Business School and earned his doctorate in business at the University of Virginia. He's been trading stock options since 1977. Let his learning experiences be your guide. Over the years, he has identified a few strategies that consistently yield extraordinary gains, even when the market stays flat. You can discover these strategies for yourself at Terry's Tips. Follow his blog to get tips and strategies to trade options.",
+      "followers": {
+        "facebook": 258,
+        "twitter": 276
+      },
+      "image_url": "https://i1.feedspot.com/4550255.jpg?t=1607161990"
+    },
+    {
+      "title": "The Brown Report Blog",
+      "feed_url": "https://thebrownreport.com/blog/feed/",
+      "website_url": "https://thebrownreport.com/blog/",
+      "description": "Get the stock market education you need to succeed. See our stock trading tutorials, stock options training videos, the proper mindset training and more.",
+      "followers": {
+        "facebook": 26400,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4549830.jpg?t=1622806381"
+    },
+    {
+      "title": "Wishing Wealth Blog",
+      "feed_url": "https://feeds2.feedburner.com/typepad/wishingwealth",
+      "website_url": "https://www.wishingwealthblog.com/",
+      "description": "A stock market technical indicators and analysis blog by Dr. Wish. Here you'll find 40 years of strategies and tested market technical indicators.",
+      "followers": {
+        "twitter": 26700
+      },
+      "image_url": "https://i1.feedspot.com/363165.jpg?t=1622804365"
+    },
+    {
+      "title": "DivHut",
+      "feed_url": "https://divhut.com/feed/",
+      "website_url": "https://divhut.com/",
+      "description": "The goal of this site is to inform and entertain as I wish to educate my readers about stock investing in a simple and easy to read manner. For those that are interested, I make all my purchases through CapitalOne Investing (formerly Sharebuilder) and pay a grandfathered commission rate of $2 per trade under a promotion Sharebuilder had for Costco members. Follow this site to get useful articles on dividend investing in easy understandable manner.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4168729.jpg?t=1608268144"
+    },
+    {
+      "title": "Option Strategist Blog",
+      "feed_url": "https://www.optionstrategist.com/blog/feed",
+      "website_url": "https://www.optionstrategist.com/blog",
+      "description": "Founded by professional trader and best-selling author, Lawrence G. McMillan, McMillan Analysis Corporation ('MAC'), a registered investment adviser and commodity trading adviser, has been providing options-oriented advice, money management. Known synonymously by OptionStrategist.com, our company offers a wide range of top quality products and services for the serious options traders.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 15400
+      },
+      "image_url": "https://i1.feedspot.com/1871060.jpg?t=1607162013"
+    },
+    {
+      "title": "Crossing Wall Street",
+      "feed_url": "https://feeds.feedburner.com/Crossingwallstreet",
+      "website_url": "https://www.crossingwallstreet.com/",
+      "description": "Your guide to financial success. Here, author Eddy Elfenbein will give investors an unbiased view of the market. Eddy is a Washington, DC-based speaker, and portfolio manager.",
+      "followers": {
+        "twitter": 75800
+      },
+      "image_url": "https://i1.feedspot.com/312719.jpg?t=1624876712"
+    },
+    {
+      "title": "My Stocks Investing",
+      "feed_url": "https://mystocksinvesting.com/feed/",
+      "website_url": "http://mystocksinvesting.com/",
+      "description": "Sharing my stock investing experience at my blog. A Singapore Stock Analysis, Singapore REITs and Singapore Stock Blog.",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 171
+      },
+      "image_url": "https://i1.feedspot.com/656795.jpg?t=1619431240"
+    },
+    {
+      "title": "SG Wealth Builder",
+      "feed_url": "https://sgwealthbuilder.com/feed/",
+      "website_url": "https://sgwealthbuilder.com/",
+      "description": "To make money. To build wealth. To preserve wealth.",
+      "followers": {
+        "facebook": 8400
+      },
+      "image_url": "https://i1.feedspot.com/4683993.jpg?t=1619432235"
+    },
+    {
+      "title": "Ciovacco Capital Management",
+      "feed_url": "https://www.ccmmarketmodel.com/short-takes?format=RSS",
+      "website_url": "https://www.ccmmarketmodel.com/short-takes/",
+      "description": "Short Takes is a stock market blog updated regularly by Ciovacco Capital Management, LLC. This financial blog covers investing topics, such as economic cycles, stocks, commodities, currencies, and technical analysis.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 72700
+      },
+      "image_url": "https://i1.feedspot.com/352913.jpg?t=1622804405"
+    },
+    {
+      "title": "DivGro",
+      "feed_url": "https://divgro.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://divgro.blogspot.com/",
+      "description": "A blog about creating a reliable and growing dividend income stream.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4111335.jpg?t=1613020814"
+    },
+    {
+      "title": "SEM Trader's Blog",
+      "feed_url": "https://tradersblog.semwealth.com/rss/",
+      "website_url": "https://tradersblog.semwealth.com/",
+      "description": "Get daily insight on what is really moving the stock market & what the future economic environment may look like.",
+      "followers": {
+        "facebook": 451,
+        "twitter": 130
+      },
+      "image_url": "https://i1.feedspot.com/4550466.jpg?t=1622805281"
+    },
+    {
+      "title": "TSI Blog",
+      "feed_url": "https://tsi-blog.com/feed/",
+      "website_url": "https://tsi-blog.com/",
+      "description": "The Speculative Investor analyses cover equities, gold and gold stocks, currency exchange rates, commodities and bonds.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4201318.jpg?t=1646482244"
+    },
+    {
+      "title": "Spiking\u200a Blog",
+      "feed_url": "https://spiking.com/blog/rss/",
+      "website_url": "https://spiking.com/blog/",
+      "description": "Spiking is the newest app to excite the financial technology community, brings transparency to the Singapore stock exchange through real-time verified information on trades made by the big-time sophisticated investors.We help you to invest smarter. Our real-time updates on the big stock players keep you one step ahead of the game.",
+      "followers": {
+        "facebook": 113000
+      },
+      "image_url": "https://i1.feedspot.com/4550287.jpg?t=1619435201"
+    },
+    {
+      "title": "Fat Tail Daily",
+      "feed_url": "https://daily.fattail.com.au/feed/",
+      "website_url": "https://daily.fattail.com.au/",
+      "description": "The news on the World and Australian stock markets worth paying attention to - and what it might mean for your investments. Our mission is very different to that of newspapers or mainstream financial outlets. Our mission is to look at the investment world and the financial world in a sceptical and contrarian way.",
+      "followers": {
+        "twitter": 746
+      },
+      "image_url": "https://i1.feedspot.com/4550298.jpg?t=1620627245"
+    },
+    {
+      "title": "Dear Mr. Market",
+      "feed_url": "https://dearmrmarket.com/feed/",
+      "website_url": "https://dearmrmarket.com/",
+      "description": "Thoughts regarding the stock market, investing, and the economy from My Portfolio Guide, LLC. Mission is to provide clients with Unwavering Ethics, Superior Discipline and Unsurpassed Value.",
+      "followers": {
+        "facebook": 419,
+        "twitter": 941
+      },
+      "image_url": "https://i1.feedspot.com/4764388.jpg?t=1614164780"
+    },
+    {
+      "title": "Alpha Ideas",
+      "feed_url": "https://alphaideas.in/feed/",
+      "website_url": "https://alphaideas.in/",
+      "description": "This blog is an investment blog for the Indian markets.This blog is a forecast free blog i.e.it doesn't make forecasts nor does it give any tips.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 47600
+      },
+      "image_url": "https://i1.feedspot.com/657428.jpg?t=1610094099"
+    },
+    {
+      "title": "Gale.in | Stock Blog",
+      "feed_url": "https://gale.in/feed/",
+      "website_url": "https://gale.in/",
+      "description": "Indian Stock Market, stock recommendations for short term, medium term & long term, Mutual Funds review & recommendations, Personal Finance, etc.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4745531.jpg?t=1622804458"
+    },
+    {
+      "title": "Carl Futia",
+      "feed_url": "http://carlfutia.blogspot.com/feeds/posts/default",
+      "website_url": "http://carlfutia.blogspot.com/",
+      "description": "Carl Futia's blog provides insights into e-mini S&P trading and contrarian commentary on the markets. Most traders watch the blog's Guesstimates, which provide commentary on S&P e-mini futures, the QQQ index, euro-dollar, dollar-yen, crude oil, gold, silver, and other popular securities. Mr. Futia also runs a subscription-based blog and a trading seminar that provides real-time picks.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/269651.jpg?t=1622804501"
+    },
+    {
+      "title": "The Daily Tearsheet",
+      "feed_url": "https://thedailytearsheet.com/feed/",
+      "website_url": "https://thedailytearsheet.com/",
+      "description": "A place where financial markets, real estate and economics intersect.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5164104.jpg?t=1622806305"
+    },
+    {
+      "title": "Investment Talk",
+      "feed_url": "https://feeds.feedburner.com/InvestmentTalkWithSpbrunner",
+      "website_url": "https://spbrunner.blogspot.com/",
+      "description": "Blog by Susan Brunner on specific Canadian Stocks, especially ones that pay dividends and also reviews books.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4546806.jpg?t=1614746650"
+    },
+    {
+      "title": "Blue Horseshoe Stocks",
+      "feed_url": "http://bluehorseshoestocks.com/feed/",
+      "website_url": "http://bluehorseshoestocks.com/",
+      "description": "Blue Horseshoe Stocks is part of the Bull in Advantage Network. Our picks are selected independently by our staff, and in most instances we do not receive compensation for the coverage. We are, however, active stock traders, thus it should be assumed that we are trading any/all stocks mentioned.",
+      "followers": {
+        "facebook": 9,
+        "twitter": 395
+      },
+      "image_url": "https://i1.feedspot.com/4550362.jpg"
+    },
+    {
+      "title": "Master Charts Trading - Swing Trading Service & Technical Analysis",
+      "feed_url": "https://www.masterchartstrading.com/1/feed",
+      "website_url": "https://www.masterchartstrading.com/blog",
+      "description": "MasterChartsTrading.com - an alternative view of stocks, bonds, gold and commodities. Our Trading Approach 1. Identify the primary trend. 2. Trade in the direction of this trend. 3. If you are wrong, cut your losses immediately ... but let your winners ride!",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4556716.jpg?t=1605158335"
+    },
+    {
+      "title": "Singapore Trading Insights",
+      "feed_url": "https://singaporetradinginsights.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://singaporetradinginsights.blogspot.com/",
+      "description": "This blog highlights some Stock Trading calls by Joey Choy, a Top Tier Stockbroker and Trader in Singapore. Joey has conducted numerous full house seminars to educate his clients and the public on how they can trade stocks profitably with the right trading strategies, risk management methods and technical analysis.",
+      "followers": {
+        "facebook": 13000
+      },
+      "image_url": "https://i1.feedspot.com/4550272.jpg?t=1605158327"
+    },
+    {
+      "title": "RASHI INVEST STOCK TIPS",
+      "feed_url": "http://rashiinveststocktips.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://rashiinveststocktips.blogspot.com/",
+      "description": "Rashi Invest is the best stocks investment advisory company in India. It provides recommendations or tips in (Stock future/ stock option/ stock cash/ bank nifty future/ bank nifty option/ nifty future/ nifty option) To invest in national stock exchange (NSE India).",
+      "followers": {
+        "facebook": 4500,
+        "twitter": 721
+      },
+      "image_url": "https://i1.feedspot.com/4550359.jpg?t=1622805277"
+    },
+    {
+      "title": "Goaled",
+      "feed_url": "https://goaleducation.co.in/feed/",
+      "website_url": "https://goaleducation.co.in/",
+      "description": "Goaled (Goal Education) provides Stock Market Courses such as Technical Analysis, Fundamental Analysis & more in Mumbai.",
+      "followers": {
+        "facebook": 92,
+        "twitter": 5,
+        "instagram": 49
+      },
+      "image_url": "https://i1.feedspot.com/5083718.jpg?t=1622805331"
+    },
+    {
+      "title": "MarketBeat News",
+      "feed_url": "https://www.marketbeat.com/rss.ashx?type=headlines",
+      "website_url": "https://www.marketbeat.com/",
+      "description": "Read the latest stock market news on MarketBeat. Get real-time analyst ratings, dividend information, earnings results, financials, headlines, insider trades and options data for any stock.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5141205.jpg?t=1675329991"
+    },
+    {
+      "title": "Hashtag Investing Blog",
+      "feed_url": "https://www.hashtaginvesting.com/feed",
+      "website_url": "https://www.hashtaginvesting.com/blog",
+      "description": "#1 exclusive community for stock investors. Learn, share, and discuss in real-time to make better stock trading decisions.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 1600,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5013937.jpg?t=1634821262"
+    },
+    {
+      "title": "Sharekhan Education Blog",
+      "feed_url": "https://www.sharekhaneducation.com/blog/feed/",
+      "website_url": "https://sharekhaneducation.com/blog/",
+      "description": "Grab yourself Free Resources that will help you enhance your trading & investment skills. The Sharekhan Education Knowledge Center provides in-depth analyses of various upcoming stocks, IPOs, and more to help you make informed decisions and strengthen your portfolio.",
+      "followers": {
+        "facebook": 19800,
+        "twitter": 714,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/7292929.jpg?t=1712571921"
+    },
+    {
+      "title": "INO.com Blog",
+      "feed_url": "https://www.ino.com/blog/feed/",
+      "website_url": "https://www.ino.com/blog/",
+      "description": "We specialize in the futures and options markets, serving traders worldwide with a continuous information service of quotes, charts and news. We are also a storefront for trading tools, charts, publications, educational courses and other resources. We are privately-held and independent. Follow this blog to get financial news, analysis and unique perspectives from some of the most trusted financial analysts on the web - covering stocks, futures, forex, mutual funds, political and economic events.",
+      "followers": {
+        "facebook": 2300
+      },
+      "image_url": "https://i1.feedspot.com/3711832.jpg?t=1605157024"
+    },
+    {
+      "title": "FinanceBrokerage",
+      "feed_url": "https://www.financebrokerage.com/feed/",
+      "website_url": "https://www.financebrokerage.com/",
+      "description": "Finance Brokerage is leading source of recent economy, trading, and Forex news. Check Forex Brokers Reviews and the trading education.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5044762.jpg?t=1614694234"
+    },
+    {
+      "title": "Dr Vijay Malik",
+      "feed_url": "https://www.drvijaymalik.com/feed/",
+      "website_url": "https://www.drvijaymalik.com/all-articles/",
+      "description": "Simplifying value investing in India. Learn fundamental analysis by value investing blog, value investing workshop, online course and live company analysis.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 70800
+      },
+      "image_url": "https://i1.feedspot.com/4930154.jpg?t=1622804370"
+    },
+    {
+      "title": "Indian Stock Market Tips by Technical Analysis for Share Trading",
+      "feed_url": "https://www.technicalanalysisofstocks.in/blog/feed/",
+      "website_url": "https://www.technicalanalysisofstocks.in/blog/",
+      "description": "Indian Stock Market Technical Analyst providing share trading tips daily and weekly based on technical analysis of stocks since 2009. All our short term tips are supported by the charts with reason. Here you will get Free Stock Tips daily for Investing and Trading in Nse and Bse of Indian Share Market by Technical Analysis of stocks and shares.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 99500
+      },
+      "image_url": "https://i1.feedspot.com/4549804.jpg?t=1605157556"
+    },
+    {
+      "title": "WALLSTNOW",
+      "feed_url": "https://wallstnow.com/feed/",
+      "website_url": "https://wallstnow.com/",
+      "description": "WALLSTNOW brings you the best stock market news, financial news, gold-stock news, and premium investing ideas.",
+      "followers": {
+        "facebook": 117,
+        "twitter": 60
+      },
+      "image_url": "https://i1.feedspot.com/5245315.jpg?t=1613411507"
+    },
+    {
+      "title": "Guerilla Stock Trading",
+      "feed_url": "https://www.guerillastocktrading.com/feed/",
+      "website_url": "https://www.guerillastocktrading.com/",
+      "description": "Secret stealthy tactics for analyzing the stock market. Hit and run on stocks. Stock trading using charting, technical analysis. Urban stock investing for the small guy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/353410.jpg?t=1622804390"
+    },
+    {
+      "title": "Morpheus Trading Group Blog",
+      "feed_url": "https://feeds.feedburner.com/mtg-swing-trading",
+      "website_url": "https://morpheustrading.com/blog/",
+      "description": "Learn to trade stocks and ETFs with our proven swing trading strategy and market timing system. Consistent trading profits since 2002.",
+      "followers": {
+        "facebook": 982,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/2149502.jpg?t=1605157388"
+    },
+    {
+      "title": "STOCK MARKET VIEW BY SACHIN AGGARWAL",
+      "feed_url": "https://sachinstockview.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://sachinstockview.blogspot.com/",
+      "description": "Blog by Sachin Aggarwal. Technical Analyst and Chartered Accountant(FCA).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4550347.jpg?t=1622804658"
+    },
+    {
+      "title": "The Stock Market on the Internet",
+      "feed_url": "https://thestockmarketontheinternet.com/feed/",
+      "website_url": "https://thestockmarketontheinternet.com/",
+      "description": "My name is Stavros Georgiadis, CFA. I am a CFA charter holder. The stock market newsletter is focusing on fundamental analysis with the addition of technical analysis to evaluate stock picks, stocks, equities. The focus is on US stocks only.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5091353.jpg?t=1622804445"
+    },
+    {
+      "title": "Singapore Humble Stock",
+      "feed_url": "http://singaporehumblestock.com/feed/",
+      "website_url": "https://singaporehumblestock.com/",
+      "description": "A free sharing Trading Blog where we humbly post our analysis of Singapore Stock Market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4702010.jpg?t=1619439619"
+    },
+    {
+      "title": "My Trader's Journal",
+      "feed_url": "http://mytradersjournal.com/stock-options/feed/",
+      "website_url": "http://mytradersjournal.com/stock-options/",
+      "description": "Investing in Stocks Through Options. My Trader's Journal is a valuable resource for ideas because I believe I manage risk and reward well.",
+      "followers": {
+        "twitter": 281
+      },
+      "image_url": "https://i1.feedspot.com/354143.jpg?t=1607162065"
+    },
+    {
+      "title": "Penny Stock Dream Blog",
+      "feed_url": "http://www.pennystockdream.com/blog/rss",
+      "website_url": "http://www.pennystockdream.com/blog",
+      "description": "Penny Stock Dream is not your usual penny stock picking website. We are a team of analysts and investors in the field of selecting penny stock picks. We have gotten used to separating the ordinary from the extraordinary when it comes to the stock market, especially when it comes to researching and reviewing penny stocks trading on the OTC Market and Pink-Sheets exchanges.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4550338.jpg?t=1629727421"
+    },
+    {
+      "title": "FinDynamics",
+      "feed_url": "https://findynamics.com/feed/",
+      "website_url": "https://findynamics.com/blog/",
+      "description": "FinDnynamics, Inc. operates a cloud-based financial data platform delivering data from SEC filings and stock exchanges for fundamental and accounting analysis. In addition to the data Subscriptions, we built and support advanced Excel-based Addins that facilitate fetching the financial data from our cloud databases into your Excel models without the need to do coding and learn any complex web-based applications.",
+      "followers": {
+        "facebook": 110,
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/5277052.jpg?t=1620222575"
+    },
+    {
+      "title": "Lucky Idiot",
+      "feed_url": "https://jimitzaveri.com/feed/",
+      "website_url": "https://jimitzaveri.com/",
+      "description": "Jimit Zaveri's mission through this blog is to educate novice investors and to distribute learning to more and more people in a simple manner. Jimit Zaveri is a Research Analyst and an Investor; identifying companies for an investment purpose.",
+      "followers": {
+        "facebook": 95,
+        "twitter": 368
+      },
+      "image_url": "https://i1.feedspot.com/4585803.jpg?t=1656572485"
+    },
+    {
+      "title": "Goode Trades",
+      "feed_url": "https://www.goodetrades.com/feed/",
+      "website_url": "https://www.goodetrades.com/",
+      "description": "The Unbiased Source for Stock Promotion & Penny Stock News. My name is Michael Goode. I have a Master's Degree in Cognitive Psychology, and following some brief entrepreneurial forays I became a full-time stock day-trader in May, 2008.",
+      "followers": {
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/4550413.jpg?t=1670332101"
+    },
+    {
+      "title": "HGSI - High Growth Stock Investor",
+      "feed_url": "http://www.highgrowthstock.com/feed/#",
+      "website_url": "http://www.highgrowthstock.com/hgsi-blog/",
+      "description": "HGS Investor supports a community of traders & longer term investors who maximize opps and profits via our powerful stock screening and evaluation software.",
+      "followers": {
+        "twitter": 496
+      },
+      "image_url": "https://i1.feedspot.com/3386994.jpg?t=1620792152"
+    },
+    {
+      "title": "Gold Stock Trades",
+      "feed_url": "http://goldstocktrades.com/blog/feed/",
+      "website_url": "http://goldstocktrades.com/blog/",
+      "description": "Gold Stock Trades Editor Jeb Handwerger is a highly sought-after stock analyst and best selling writer syndicated internationally and known throughout the financial industry for his accurate, in depth and timely analysis of the general markets, particularly as they relate to the precious metals, nuclear and rare earth sector.",
+      "followers": {
+        "facebook": 119,
+        "twitter": 18000
+      },
+      "image_url": "https://i1.feedspot.com/4550829.jpg?t=1615890711"
+    },
+    {
+      "title": "The GRS Solution | Best Stock Trading Services Provider",
+      "feed_url": "https://the-grs-solution.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://the-grs-solution.blogspot.com/",
+      "description": "The GRS Solution is a leading financial advisory that provides stock tips, equity tips, option tips, best intraday tips, MCX tips etc.",
+      "followers": {
+        "twitter": 168
+      },
+      "image_url": "https://i1.feedspot.com/5064607.jpg?t=1622805228"
+    },
+    {
+      "title": "Trading Goddess",
+      "feed_url": "https://feeds2.feedburner.com/blogspot/VRgY",
+      "website_url": "https://tradinggoddess.com/",
+      "description": "TradingGoddess.com is the source for Stock Market news, stock picks, and trading and investing opinion.",
+      "followers": {
+        "twitter": 66100
+      },
+      "image_url": "https://i1.feedspot.com/369843.jpg?t=1605158221"
+    },
+    {
+      "title": "Securities Research Company",
+      "feed_url": "https://www.securities-research.com/feed/",
+      "website_url": "https://www.securities-research.com/",
+      "description": "Securities Research Company is one of America's top stock research firms and has been consistently been one of best investment research sites for investors seeking stock fundamental performance.",
+      "followers": {
+        "facebook": 210
+      },
+      "image_url": "https://i1.feedspot.com/5120389.jpg?t=1622805241"
+    },
+    {
+      "title": "Reminiscences of a Stockblogger",
+      "feed_url": "https://reminiscencesofastockblogger.com/feed/",
+      "website_url": "https://reminiscencesofastockblogger.com/",
+      "description": "My name is Lsigurd and I plan to use this blog to share the research that I do for stocks that I am purchasing in my own accounts.",
+      "followers": {
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/4550258.jpg?t=1622806149"
+    },
+    {
+      "title": "Divesh Technical Analysis | WD Gann's Price Time Trading Secrets",
+      "feed_url": "https://www.diveshtechanalysis.com/feed/",
+      "website_url": "https://www.diveshtechanalysis.com/",
+      "description": "WD Gann Secret was simple, he studied the Universal & Natural Laws of universe then formed & perfected that Natural Laws language into markets trading techniques, I'am offering those type of trading techniques in today's time.",
+      "followers": {
+        "facebook": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4865709.jpg?t=1622805253"
+    },
+    {
+      "title": "Nifty Vision - Nifty Update",
+      "feed_url": "http://niftyvision.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://niftyvision.blogspot.com/",
+      "description": "Prudent Investments is a stock broking & research firm which works on profit sharing model. Also deal in Algo Trading and Mutual Funds. Prudent Investments is a Technical Research Advisory & Training firm which assists you in Trading in Equity, Futures & Commodities via our Trading Strategies.",
+      "followers": {
+        "facebook": 830,
+        "twitter": 93
+      },
+      "image_url": "https://i1.feedspot.com/4745514.jpg?t=1622805260"
+    },
+    {
+      "title": "Share Investor Blog",
+      "feed_url": "https://feeds.feedburner.com/Darrensfeeds",
+      "website_url": "http://shareinvestornz.blogspot.com/",
+      "description": "Darren Rickard's daily machinations with the stockmarket , investing & the business world.",
+      "followers": {
+        "twitter": 911
+      },
+      "image_url": "https://i1.feedspot.com/3403281.jpg?t=1622805270"
+    },
+    {
+      "title": "Stock Market India",
+      "feed_url": "https://learnstockmarketconcept.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://learnstockmarketconcept.blogspot.com/",
+      "description": "Indian Investment and Stock Market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5142301.jpg?t=1622806125"
+    },
+    {
+      "title": "Simple Stock Market Tips",
+      "feed_url": "https://simplestockmarketupdates.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://simplestockmarketupdates.blogspot.com/",
+      "description": "My blog provides the latest updates regarding the stock and commodity market. Follow to get updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5063686.jpg?t=1622806080"
+    },
+    {
+      "title": "Star India Equity Tips",
+      "feed_url": "https://starindiaequitytips.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://starindiaequitytips.blogspot.com/",
+      "description": "Updates on stock,equity market with accuracy and 100% profit margins. In Star India Market Research- we believe to create breakouts rather than wait for it; to gain maximum profit. We cater your investment needs.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4804281.jpg?t=1622805876"
+    },
+    {
+      "title": "Trend Traders",
+      "feed_url": "https://shurojit.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://shurojit.blogspot.com/",
+      "description": "Debnath's Blog : tracking global trends in Stock Markets.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4980640.jpg?t=1622805822"
+    },
+    {
+      "title": "Sensex Today",
+      "feed_url": "https://sensextoday.co.in/feed/",
+      "website_url": "https://sensextoday.co.in/",
+      "description": "Educatinal Blog Channel with all the blogs which you need to know before investing.",
+      "followers": {
+        "facebook": 621,
+        "instagram": 76
+      },
+      "image_url": "https://i1.feedspot.com/5147793.jpg?t=1622805325"
+    },
+    {
+      "title": "SINGAPORE STOCKS INVESTING",
+      "feed_url": "https://singapore-stocks-investing.blogspot.com/feeds/posts/default",
+      "website_url": "https://singapore-stocks-investing.blogspot.com/",
+      "description": "Singapore Stocks Blog is a stocks investment blog which focuses on wealth creation through investing, trading, savings and financial discipline.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 399
+      },
+      "image_url": "https://i1.feedspot.com/672415.jpg?t=1619435191"
+    },
+    {
+      "title": "Stock Market Research News Letter",
+      "feed_url": "https://stockmarketresearchnewsletterreport.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://stockmarketresearchnewsletterreport.blogspot.com/",
+      "description": "Carson Investment Services LLC provide information to individuals and small businesses data on stocks. We are in the process of adding services for the combined hedge funding and lending business. By creating a online sign up list to start up by lending $500 hundred to setup the accounts for individuals and small businesses. We will start with the first 60 customers by combining $30 thousand as a group to begin the hedge funding service, with the stocks paying off the loan.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5173128.jpg?t=1615013674"
+    },
+    {
+      "title": "StocksHub",
+      "feed_url": "https://stockshub2020.blogspot.com/feeds/posts/default",
+      "website_url": "https://stockshub2020.blogspot.com/",
+      "description": "In this blog, you will find the latest stock news, articles, updates, and much more. Follow the blog to know more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5212741.jpg?t=1604329190"
+    },
+    {
+      "title": "The Ace Investor",
+      "feed_url": "http://theaceinvestor.blogspot.com/feeds/posts/default",
+      "website_url": "http://theaceinvestor.blogspot.com/",
+      "description": "Value Picks Blog Best Investment Picks Hidden Gems Multibagger Tips Indian Stock Market.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 12500
+      },
+      "image_url": "https://i1.feedspot.com/4436283.jpg?t=1610099509"
+    },
+    {
+      "title": "Stock and Ladder Simplifying Stock Market Investing",
+      "feed_url": "https://stockandladder.com/feed/",
+      "website_url": "https://stockandladder.com/",
+      "description": "Stock and Ladder is focused on studying the best investing minds to create a manual of investing wisdom on 'what works in investing' and to find out 'how money has been successfully made in the past'",
+      "followers": {
+        "facebook": 68,
+        "twitter": 25700
+      },
+      "image_url": "https://i1.feedspot.com/4865732.jpg?t=1622806378"
+    },
+    {
+      "title": "Dalal Street Investor Learn | Invest | Grow",
+      "feed_url": "https://dalalstreetinvestor.wordpress.com/feed/",
+      "website_url": "https://dalalstreetinvestor.wordpress.com/",
+      "description": "Welcome to Dalal Street Investor. I'm Ajinkya, part Engineer part Finance Undergrad. Smitten by the world of Equity Investments, I entered the Stock Market a couple of years back. I pen down my analysis about my picks, I hope this blog helps you in crafting some wealth-creating ideas",
+      "followers": {
+        "twitter": 391
+      },
+      "image_url": "https://i1.feedspot.com/4865722.jpg?t=1622805314"
+    },
+    {
+      "title": "Infimoney Uncommon Financial Wisdom",
+      "feed_url": "https://infimoney.com/feed/",
+      "website_url": "https://infimoney.com/",
+      "description": "Our mission is to bring readers information that is worth money in a simple and enjoyable way to read. We address issues related to economics, investments, personal finance, politics, consumer, career and business.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 572900
+      },
+      "image_url": "https://i1.feedspot.com/4745540.jpg?t=1622806374"
+    },
+    {
+      "title": "OBSERVE",
+      "feed_url": "https://puzzledtrading.blogspot.com/feeds/posts/default",
+      "website_url": "https://puzzledtrading.blogspot.com/",
+      "description": "Capitalizing on uncertain trends relative to the current market turbulence!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5149877.jpg"
+    },
+    {
+      "title": "SpeedTrader",
+      "feed_url": "https://speedtrader.com/feed/",
+      "website_url": "https://speedtrader.com/blog/",
+      "description": "Speed Trader is a division of Stock USA Execution Services Inc broker/dealer and a member of SIPC, FINRA. The firm specializes in the online trading.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4724036.jpg?t=1622805366"
+    },
+    {
+      "title": "LearnBonds.com",
+      "feed_url": "https://learnbonds.com/feed/",
+      "website_url": "https://learnbonds.com/",
+      "description": "Features Bond Market news, analysis and education for the individual bond investor. LearnBonds is a leading online investment and personal finance publications and provide expert investment news and guides for millennial investors.",
+      "followers": {
+        "facebook": 502,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5026242.jpg?t=1637842397"
+    },
+    {
+      "title": "Nasdaq \u00bb Stocks",
+      "feed_url": "https://www.nasdaq.com/feed/rssoutbound?category=Stocks",
+      "website_url": "https://www.nasdaq.com/news-and-insights/topic/markets/stocks",
+      "description": "Get timely analysis and expert opinions on stocks to make informed investment decisions. Stay up to date on the latest news and insights from Nasdaq.",
+      "followers": {
+        "facebook": 825600,
+        "twitter": 148000,
+        "instagram": 594700
+      },
+      "image_url": "https://i1.feedspot.com/5211728.jpg?t=1733996924"
+    },
+    {
+      "title": "FinanceAsia",
+      "feed_url": "https://www.financeasia.com/rss/latest",
+      "website_url": "https://www.financeasia.com/",
+      "description": "FinanceAsia is Asia's authoritative source for finance, investment banking, economic and capital markets news, for those involved in corporate finance, banking, asset management and market regulation.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4836356.jpg?t=1752836469"
+    },
+    {
+      "title": "Mint \u00bb Stock Markets",
+      "feed_url": "https://www.livemint.com/rss/markets",
+      "website_url": "https://www.livemint.com/market/stock-market-news",
+      "description": "Get share market latest news & headlines. Check share market news live, NIFTY, SENSEX today live, BSE/ NSE live, forex commodity market news, analysis on equity at Mint.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 2100000,
+        "instagram": 719000
+      },
+      "image_url": "https://i1.feedspot.com/5043311.jpg?t=1753187341"
+    },
+    {
+      "title": "S&P \u00bb Research",
+      "feed_url": "https://www.spglobal.com/spdji/en/rss/rss-details/?rssFeedName=research",
+      "website_url": "https://www.spglobal.com/spdji/en/research-insights/research/",
+      "description": "Get the latest content from S&P Dow Jones Indices. Find latest index news including thought leadership content and more.",
+      "followers": {
+        "facebook": 57400,
+        "twitter": 44000,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5485874.jpg?t=1752815910"
+    },
+    {
+      "title": "Business Standard \u00bb Stock Market Today",
+      "feed_url": "https://www.business-standard.com/rss/markets/stock-market-news-10618.rss",
+      "website_url": "https://www.business-standard.com/markets/stock-market-news",
+      "description": "Stay Updated with Latest Stock Market News and Headlines, Read Stock market Breaking news, Get Stock Market News Live Updates on Business Standard.",
+      "followers": {
+        "facebook": 591900,
+        "twitter": 2200000,
+        "instagram": 707800
+      },
+      "image_url": "https://i1.feedspot.com/7313299.jpg?t=1753188068"
+    },
+    {
+      "title": "CNBC TV18 \u00bb Market",
+      "feed_url": "https://www.cnbctv18.com/commonfeeds/v1/cne/rss/market.xml",
+      "website_url": "https://www.cnbctv18.com/market",
+      "description": "Get the stock and share market live news from BSE/NSE sensex, share markets updates, NIFTY 50, SENSEX today. Check world stock market news, live market news, share market today and forex commodity market news.",
+      "followers": {
+        "facebook": 2300000,
+        "twitter": 1400000,
+        "instagram": 916500
+      },
+      "image_url": "https://i1.feedspot.com/7838102.jpg?t=1752818729"
+    },
+    {
+      "title": "Business Line \u00bb Stocks",
+      "feed_url": "https://www.thehindubusinessline.com/markets/stock-markets/feeder/default.rss",
+      "website_url": "https://www.thehindubusinessline.com/markets/stock-markets/",
+      "description": "Get the latest stock/share market live news from BSE/NSE sensex, share markets updates, NIFTY 50, SENSEX today news from Businessline.",
+      "followers": {
+        "facebook": 644000,
+        "twitter": 115000,
+        "instagram": 113000
+      },
+      "image_url": "https://i1.feedspot.com/5520704.jpg?t=1678863795"
+    },
+    {
+      "title": "MoneyWorks4me \u00bb Global Markets",
+      "feed_url": "https://www.moneyworks4me.com/company/news/latest-stock-news-rss/global-markets",
+      "website_url": "https://www.moneyworks4me.com/indianstocks/global-markets-news",
+      "description": "Get Latest news on Global Markets in India. Also get Global Markets Analysis, Updates with latest stock/share market news and reports.",
+      "followers": {
+        "facebook": 23100,
+        "twitter": 11800,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/7880375.jpg?t=1740477034"
+    },
+    {
+      "title": "The Hindu \u00bb Markets",
+      "feed_url": "https://www.thehindu.com/business/markets/feeder/default.rss",
+      "website_url": "https://www.thehindu.com/business/markets/",
+      "description": "Stay up to date with all the latest news about Sensex, Nifty, BSE, NSE, indian Stock market, global stock market from The Hindu.",
+      "followers": {
+        "facebook": 5300000,
+        "twitter": 8400000,
+        "instagram": 3700000
+      },
+      "image_url": "https://i1.feedspot.com/8535719.jpg?t=1753182041"
+    },
+    {
+      "title": "The Indian Express \u00bb Market",
+      "feed_url": "https://indianexpress.com/section/business/market/feed/",
+      "website_url": "https://indianexpress.com/section/business/market/",
+      "description": "All articles about Markets from The Indian Express.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8643422.jpg?t=1753131223"
+    },
+    {
+      "title": "Shutterstock",
+      "feed_url": "https://investor.shutterstock.com/rss/news-releases.xml",
+      "website_url": "https://investor.shutterstock.com/news-events/press-releases",
+      "description": "The Investor Relations website contains information about Shutterstock, Inc.'s business for stockholders, potential investors, and financial analysts.",
+      "followers": {
+        "facebook": 975700,
+        "twitter": 272000,
+        "instagram": 400600
+      },
+      "image_url": "https://i1.feedspot.com/8644317.jpg?t=1753164488"
+    },
+    {
+      "title": "Benzinga Blog",
+      "feed_url": "https://www.benzinga.com/apis/feed/",
+      "website_url": "https://www.benzinga.com/apis/blog/",
+      "description": "All articles from Benzinga.",
+      "followers": {
+        "facebook": 502600,
+        "twitter": 312100,
+        "instagram": 254000
+      },
+      "image_url": "https://i1.feedspot.com/8644385.jpg?t=1753170027"
+    },
+    {
+      "title": "Palo Alto Networks",
+      "feed_url": "https://investors.paloaltonetworks.com/rss/news-releases.xml",
+      "website_url": "https://investors.paloaltonetworks.com/news-and-events/news-releases",
+      "description": "The Investor Relations website contains information about Palo Alto Networks's business for stockholders, potential investors, and financial analysts.",
+      "followers": {
+        "facebook": 51800,
+        "twitter": 127100,
+        "instagram": 38900
+      },
+      "image_url": "https://i1.feedspot.com/8644450.jpg?t=1753172199"
+    },
+    {
+      "title": "Metropolitan Stock Exchange of India Limited",
+      "feed_url": "https://www.msei.in/rss/rss?type=RELEASE&id=0",
+      "website_url": "https://www.msei.in/media/press-release",
+      "description": "Latest press releases from Metropolitan Stock Exchange of India Limited.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 2300,
+        "instagram": 4700
+      },
+      "image_url": "https://i1.feedspot.com/8644475.jpg?t=1753177795"
+    },
+    {
+      "title": "Amman Stock Exchange",
+      "feed_url": "https://www.exchange.jo/en/rss_news_en/rss.xml",
+      "website_url": "https://www.ase.com.jo/en/news",
+      "description": "The ASE Company aims to operate, manage and develop the operations and activities of securities, commodities, and derivatives markets inside and outside Jordan.",
+      "followers": {
+        "facebook": 13400,
+        "twitter": 614,
+        "instagram": 684
+      },
+      "image_url": "https://i1.feedspot.com/8644484.jpg?t=1753178706"
+    },
+    {
+      "title": "NinjaTrader Blog",
+      "feed_url": "https://ninjatrader.com/blog/",
+      "website_url": "https://ninjatrader.com/blog/",
+      "description": "NinjaTrader Group, LLC together with its subsidiaries provides award winning trading software and brokerage services to active traders.Founded in 2003, NinjaTrader has evolved into an industry leader supporting over 40,000 traders around the globe with best-in-class technology, deep discount commissions and world class support.",
+      "followers": {
+        "facebook": 30100,
+        "twitter": 23900,
+        "instagram": 32900
+      },
+      "image_url": "https://i1.feedspot.com/4550451.jpg?t=1615198899"
+    },
+    {
+      "title": "ValueWalk",
+      "feed_url": "https://www.valuewalk.com/rss/",
+      "website_url": "https://www.valuewalk.com/",
+      "description": "ValueWalk.com is a highly regarded, non-partisan site - the website provides unique coverage on hedge funds, large asset managers, and value investing. ValueWalk also contains archives of famous investors and features many investor resource pages. Our mission is to provide a framework to improve your investing process while collecting newsworthy information about trends in business, politics, and tech areas.",
+      "followers": {
+        "facebook": 91900,
+        "twitter": 61800,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5286750.jpg?t=1622463316"
+    },
+    {
+      "title": "SwingTradeBot",
+      "feed_url": "https://swingtradebot.com/blog/feed",
+      "website_url": "https://swingtradebot.com/blog/",
+      "description": "Swing Trade Bot was created to help you stay on top of the market. It helps you find entries as well as exits.",
+      "followers": {
+        "facebook": 503,
+        "twitter": 16400
+      },
+      "image_url": "https://i1.feedspot.com/4585844.jpg?t=1611895830"
+    },
+    {
+      "title": "Almanac Trader",
+      "feed_url": "https://jeffhirsch.tumblr.com/rss",
+      "website_url": "https://jeffhirsch.tumblr.com/",
+      "description": "Stock Traders Almanac is dedicated to arming traders and investors with accurate information and historical data thus empowering them to make more profitable trades and investments! You will find a host of indispensable tools and offerings on this site, including the online research tool, investor alerts, and in-depth market research.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 30200
+      },
+      "image_url": "https://i1.feedspot.com/4385333.jpg?t=1646478205"
+    },
+    {
+      "title": "ProAct Traders | Forex Trading Software",
+      "feed_url": "https://www.proacttraders.com/blog/feed",
+      "website_url": "https://www.proacttraders.com/blog",
+      "description": "ProAct Traders has the most AMAZING Forex Trading Software is you have ever seen and a free Forex Target Training Protocol for both new and experienced traders using time-tested proven methodologies that consistently create high probability trading returns.",
+      "followers": {
+        "facebook": 832,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4550443.jpg?t=1622804467"
+    },
+    {
+      "title": "StockBrokers.com",
+      "feed_url": "https://www.stockbrokers.com/media",
+      "website_url": "https://www.stockbrokers.com/media",
+      "description": "StockTrader.com provides weekly stock market recaps, 100s of educational articles, and a Trade Journal tool. Our mission is to empower the independent investor.",
+      "followers": {
+        "facebook": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4549809.jpg?t=1605159104"
+    },
+    {
+      "title": "StocksToTrade.com",
+      "feed_url": "https://stockstotrade.com/blog/",
+      "website_url": "https://stockstotrade.com/blog/",
+      "description": "StocksToTrade is a real-time stock screening, charting and trading platform that allows you to find the best stocks every day!",
+      "followers": {
+        "facebook": 21200,
+        "twitter": 236000,
+        "instagram": 172400
+      },
+      "image_url": "https://i1.feedspot.com/4550903.jpg?t=1622804318"
+    },
+    {
+      "title": "BlackRock",
+      "feed_url": "https://www.blackrock.com/us/individual/insights",
+      "website_url": "https://www.blackrock.com/us/individual/insights",
+      "description": "Provides timely commentaries and special reports which discuss key events driving the financial markets. Stay ahead of the markets with insights from the strategists and portfolio managers. Uncover the latest on the global economy, geopolitics and retirement, among other timely investment ideas.",
+      "followers": {
+        "facebook": 109900,
+        "twitter": 965300,
+        "instagram": 319200
+      },
+      "image_url": "https://i1.feedspot.com/4491938.jpg?t=1646476680"
+    },
+    {
+      "title": "Timothy Sykes Blog",
+      "feed_url": "https://www.timothysykes.com/blog/",
+      "website_url": "https://www.timothysykes.com/blog/",
+      "description": "Welcome to Timothy Sykes Blog, Timothy is a millionaire stock trader and entrepreneur. He is best known for earning $1.65 million.",
+      "followers": {
+        "facebook": 603300,
+        "twitter": 325600
+      },
+      "image_url": "https://i1.feedspot.com/4550215.jpg?t=1614757557"
+    },
+    {
+      "title": "Bullish Bears",
+      "feed_url": "https://bullishbears.com/stock-market-blog/feed/",
+      "website_url": "https://bullishbears.com/stock-market-blog/",
+      "description": "A stock market blog that is updated weekly with stock market content. The Bullish Bears trading community is your home for Stock Trading Courses and we help you learn how to day trade as well as learn swing trading.",
+      "followers": {
+        "facebook": 14400,
+        "twitter": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5296894.jpg?t=1646477892"
+    },
+    {
+      "title": "Lightspeed Financial",
+      "feed_url": "https://lightspeed.com/trader-education/active-trader-blog",
+      "website_url": "https://lightspeed.com/trader-education/active-trader-blog",
+      "description": "Lightspeed Trading has been supporting sophisticated, active and professional traders since 1994. With high touch service and high end tools, Lightspeed has been able to stand out as an industry leading firm. Low cost stock and options trading with Lightspeed for day traders, professional traders, trading groups, institutions, and hedge funds.",
+      "followers": {
+        "facebook": 113,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/4550462.jpg?t=1605157455"
+    },
+    {
+      "title": "My Stocks Study | Stock Research Blog",
+      "feed_url": "https://www.stocksstudy.com/feed",
+      "website_url": "https://themoneycog.com/",
+      "description": "Looking for top notch articles on stock market basics,value investing,fundamental and technical studies of stocks.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4950123.jpg?t=1622805406"
+    },
+    {
+      "title": "ShareandStocks.com",
+      "feed_url": "https://www.shareandstocks.com/feed/",
+      "website_url": "https://themoneycog.com/",
+      "description": "We offer the latest stock market news, providing information about individual stocks, earnings, IPO, corporate announcements, macro-environment, and the movers and shakers of the stock market. It is a free resource for all things finance. The website offers an advanced charting application along with a fundamental analysis and technical analysis screener. More than 100 technical analysis indicators and fundamental data metrics can be plotted on a chart for easy analysis. It is truly a technical & fundamental all in one platform to provide top class easy analysis for users of all needs.",
+      "followers": {
+        "facebook": 1500,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5225235.jpg?t=1607581058"
+    },
+    {
+      "title": "Finasko",
+      "feed_url": "https://finasko.com/feed/",
+      "website_url": "https://themoneycog.com/",
+      "description": "Provides live financial quotes, charts and news analysis, IPO alerts, and investment ideas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4790096.jpg?t=1642404008"
+    },
+    {
+      "title": "The Money Cog",
+      "feed_url": "https://themoneycog.com/news/feed/gn",
+      "website_url": "https://themoneycog.com/",
+      "description": "The Money Cog publishes stock research reports to help the world invest better. We also cover the latest investing and stock market news. NewThe Money Cog is an equity research platform that helps investors find their next greatest investment.",
+      "followers": {
+        "facebook": 222,
+        "twitter": 90,
+        "instagram": 14300
+      },
+      "image_url": "https://i1.feedspot.com/5379395.jpg?t=1646827208"
+    },
+    {
+      "title": "Finance Journey",
+      "feed_url": "https://www.financejourney.com/feed/",
+      "website_url": "https://www.bullsonwallstreet.com/blog",
+      "description": "A Journey Through Personal Finance & Investing.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 488
+      },
+      "image_url": "https://i1.feedspot.com/4550289.jpg?t=1622804436"
+    },
+    {
+      "title": "BullsOnWallStreet",
+      "feed_url": "https://www.bullsonwallstreet.com/feed",
+      "website_url": "https://www.bullsonwallstreet.com/blog",
+      "description": "The ultimate trading website featuring some of the best stock market gurus around. Learn LIVE from Kunal Desai and other top professional traders. Become a winning stock trader with our trade alerts, strategies, and live trading courses.",
+      "followers": {
+        "facebook": 152800,
+        "twitter": 25800,
+        "instagram": 51
+      },
+      "image_url": "https://i1.feedspot.com/1118954.jpg?t=1605157228"
+    },
+    {
+      "title": "Denaliguide Summit",
+      "feed_url": "https://denaliguidesummit.com/feed/",
+      "website_url": "https://denaliguidesummit.com/",
+      "description": "I started writing about stock technical analysis in 2007, assisting stockholders in a buy-out fight for a small resource company against Rothchild's of Canada. With the technical knowledge of the potential target price, we were able to develop a fair, competing buyout offer and double the stock holders buyout price from a larger miner.",
+      "followers": {
+        "facebook": 10,
+        "twitter": 522
+      },
+      "image_url": "https://i1.feedspot.com/5049307.jpg?t=1622805294"
+    },
+    {
+      "title": "Stockwinners, Stock Research, Option Picks, Stock Picks",
+      "feed_url": "https://www.stockwinners.com/blog/feed/",
+      "website_url": "https://www.stockwinners.com/blog/",
+      "description": "Stockwinners is one of the oldest stock advisory services on the web. We believe that education and up-to-date information are the best tools available to today's investors. Knowledge is power! We provide upgrades downgrades, latest financial news, earnings report, real time option reports on our site.",
+      "followers": {
+        "facebook": 890,
+        "twitter": 952
+      },
+      "image_url": "https://i1.feedspot.com/4723535.jpg?t=1622804401"
+    },
+    {
+      "title": "The Investor's Field Guide",
+      "feed_url": "https://investorfieldguide.com/feed/",
+      "website_url": "http://investorfieldguide.com/",
+      "description": "A Journey Through the Stock Market Jungle.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 290000
+      },
+      "image_url": "https://i1.feedspot.com/4381906.jpg?t=1622804451"
+    },
+    {
+      "title": "iBankCoin - Stock Picks and Discussion",
+      "feed_url": "http://ibankcoin.com/rcblog/feed/",
+      "website_url": "http://ibankcoin.com/rcblog/",
+      "description": "Financial content with a distinctive voice. Offering a fresh perspective on financial news, and bold opinions on investment opportunities.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 26000
+      },
+      "image_url": "https://i1.feedspot.com/1352436.jpg?t=1622804462"
+    },
+    {
+      "title": "Earnstockmoney",
+      "feed_url": "https://www.earnstockmoney.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.zainfinancials.com/",
+      "description": "Keep up with articles from Earnstockmoney.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5087437.jpg"
+    },
+    {
+      "title": "ZainFinancials",
+      "feed_url": "https://www.zainfinancials.com/feed",
+      "website_url": "https://www.zainfinancials.com/",
+      "description": "Keep up with articles from ZainFinancials.",
+      "followers": {
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5096500.jpg"
+    },
+    {
+      "title": "Highlight Investment Research",
+      "feed_url": "http://highlightinvestment.com/blog/feed/",
+      "website_url": "http://www.highlightinvestment.com/blog/",
+      "description": "Highlight Investment research's blogs provides all share market news and updates to its client, It is one of the finest resource of Blog where you get Real value for money to all its clients.",
+      "followers": {
+        "facebook": 4800
+      },
+      "image_url": "https://i1.feedspot.com/4804283.jpg?t=1622805727"
+    },
+    {
+      "title": "Stock Analysis",
+      "feed_url": "https://stockanalysis.com/",
+      "website_url": "https://stockanalysis.com/",
+      "description": "Stock Analysis has everything you need to analyze individual stocks, including detailed fundamental data, articles and a financial dictionary.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 462
+      },
+      "image_url": "https://i1.feedspot.com/5128349.jpg?t=1622805334"
+    },
+    {
+      "title": "Marvin Germo Blog",
+      "feed_url": "https://marvingermo.com/feed/",
+      "website_url": "http://lifestyletrading101.com/blog/",
+      "description": "Marvin Germo, is a stock market trader, entrepreneur, book author, international key note speaker, brand ambassador and personal financial consultant who is among one of the most passionate personal finance experts in the land. His energy and zeal to educate the Filipino people has translated into transformed lives, financially free families and has transformed ordinary consumers into investors.",
+      "followers": {
+        "twitter": 35800,
+        "instagram": 25400
+      },
+      "image_url": "https://i1.feedspot.com/4549822.jpg?t=1622806392"
+    },
+    {
+      "title": "LifeStyleTrading101",
+      "feed_url": "http://lifestyletrading101.com/feed/",
+      "website_url": "http://lifestyletrading101.com/blog/",
+      "description": "LifeStyleTrading101.com/blog is a FREE daily stock market education blog that teaches you how to make consistent weekly income (up to $4k per month) from your mobile phone. All it takes is 1 trade per week. Learn how to generate consistent weekly income by combining Elliott Wave Patterns in the stock market with Weekly Options Risk Control to place 1 high probability bet each week.",
+      "followers": {
+        "facebook": 231,
+        "twitter": 276
+      },
+      "image_url": "https://i1.feedspot.com/4550419.jpg?t=1607162130"
+    },
+    {
+      "title": "Ray Barros' Blog for Trading Success",
+      "feed_url": "http://www.tradingsuccess.com/blog/feed",
+      "website_url": "http://www.tradingsuccess.com/blog/",
+      "description": "Ray Barros is a professional trader, fund manager, author, and educator.This is place where experienced and novice traders meet to share ideas. experiences, successes and failures. Our mission is to provide traders and investors with a proven learning process that internalizes proven trading and risk management strategies and tactics.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 876
+      },
+      "image_url": "https://i1.feedspot.com/4550401.jpg?t=1605159154"
+    }
+  ]
+}

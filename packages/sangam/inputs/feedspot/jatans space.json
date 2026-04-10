@@ -1,0 +1,38 @@
+{
+  "category": "Jatans Space",
+  "source_url": "https://rss.feedspot.com/jatansspace_rss_feeds",
+  "feeds": [
+    {
+      "title": "Jatan's Space",
+      "feed_url": "https://jatan.space/rss/",
+      "website_url": "https://jatan.space/",
+      "description": "Blog of Jatan Mehta, a globally published independent space writer, author of Moon Monday, and invited speaker.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880542.jpg?t=1740487459"
+    },
+    {
+      "title": "Jatan's Space \u00bb Moon Monday",
+      "feed_url": "https://jatan.space/tag/moon-monday/rss/",
+      "website_url": "https://jatan.space/tag/moon-monday/",
+      "description": "All articles about Moon Monday from Jatan's Space.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880544.jpg?t=1740487443"
+    },
+    {
+      "title": "Jatan's Space \u00bb Indian Space",
+      "feed_url": "https://jatan.space/tag/indian-space/rss/",
+      "website_url": "https://jatan.space/tag/indian-space/",
+      "description": "All articles about Indian Space from Jatan's Space.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880541.jpg?t=1740487429"
+    },
+    {
+      "title": "Jatan's Space \u00bb Articles",
+      "feed_url": "https://jatan.space/tag/articles/rss/",
+      "website_url": "https://jatan.space/tag/articles/",
+      "description": "Dives into articles about lunar exploration, space technology, Indian space, planetary science, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7880543.jpg?t=1740487365"
+    }
+  ]
+}

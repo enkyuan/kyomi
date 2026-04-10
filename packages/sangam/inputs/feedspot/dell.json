@@ -1,0 +1,47 @@
+{
+  "category": "Dell",
+  "source_url": "https://rss.feedspot.com/dell_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dell EMC PowerMax with VMware",
+      "feed_url": "https://drewtonnesen.wordpress.com/feed/",
+      "website_url": "https://drewtonnesen.wordpress.com/",
+      "description": "Blog by Drew Tonnesen. Learn how to integrate the PowerMax with VMware technologies. He has worked for Dell Technologies (Dell EMC) for the past 15 years. His primary focus is on the PowerMax platform and VMware.",
+      "followers": {
+        "twitter": 235
+      },
+      "image_url": "https://i1.feedspot.com/3713889.jpg?t=1639630541"
+    },
+    {
+      "title": "DavidRing.ie",
+      "feed_url": "https://davidring.ie/feed/",
+      "website_url": "https://davidring.ie/category/dell-emc/",
+      "description": "David Ring is currently working as a Global HCI Engineering Technologist (VxSEALs) focused on all things VxRail at Dell EMC. His blog site is primarily focused on storage, virtualization, and related CI/HCI platforms such as VxRail/VxBlock.",
+      "followers": {
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4320234.jpg?t=1639631876"
+    },
+    {
+      "title": "Itzikr's Blog",
+      "feed_url": "https://volumes.blog/feed/",
+      "website_url": "https://volumes.blog/",
+      "description": "My name is Itzik Reich and I'm working for DELL EMC as a VP Technologists, ISG. This blog will mainly focus on FLASH Technologies & Virtualization. Other topics covered are Dell EMC Storage, PowerStore, PowerFlex PowerMax, and XtremIO.",
+      "followers": {
+        "twitter": 2300,
+        "instagram": 181
+      },
+      "image_url": "https://i1.feedspot.com/5353464.jpg?t=1639631127"
+    },
+    {
+      "title": "Dell Technologies Services Blog",
+      "feed_url": "https://infocus.delltechnologies.com/feed/",
+      "website_url": "https://www.dell.com/en-us/blog/",
+      "description": "Explore Insights and Expertise on Topics Shaping Application, IT, security, and Workforce Transformation - Dell Technologies Services & Dell Digital Blog.",
+      "followers": {
+        "facebook": 3900000
+      },
+      "image_url": "https://i1.feedspot.com/4913052.jpg?t=1605009931"
+    }
+  ]
+}

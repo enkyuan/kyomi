@@ -1,0 +1,517 @@
+{
+  "category": "New York Art",
+  "source_url": "https://rss.feedspot.com/new_york_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "Gurney Journey",
+      "feed_url": "https://feeds.feedburner.com/blogspot/NVaYV",
+      "website_url": "http://gurneyjourney.blogspot.com/",
+      "description": "Gurney Journey, established in 2007 by renowned artist and author James Gurney, is a widely respected blog that offers valuable insights into illustration, plein-air painting, sketching, and the creative process. James Gurney, best known for his 'Dinotopia' book series, created the blog as a visual journal to document his artistic adventures and discoveries. The blog provides practical studio tips, explorations of art techniques, and firsthand reports from art schools and museums, making it a vital resource for illustrators, animators, comic artists, art students, and writers.",
+      "followers": {
+        "facebook": 75600,
+        "twitter": 41000
+      },
+      "image_url": "https://i1.feedspot.com/30892.jpg?t=1608298995"
+    },
+    {
+      "title": "Art Observed",
+      "feed_url": "https://artobserved.com/feed/",
+      "website_url": "https://artobserved.com/",
+      "description": "Art Observed covers contemporary art globally from a New York City perspective. We intend to provide a selective, editorialized, curated perspective on the fine art arena including the trends and forces that drive the market.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 158000,
+        "instagram": 393800
+      },
+      "image_url": "https://i1.feedspot.com/4758.jpg?t=1604584865"
+    },
+    {
+      "title": "Street Art NYC",
+      "feed_url": "https://streetartnyc.org/feed/",
+      "website_url": "https://streetartnyc.org/",
+      "description": "Street Art NYC Blog features the best of the street art, graffiti and public art on the streets of NYC and anywhere else we happen to be.",
+      "followers": {
+        "facebook": 47000,
+        "twitter": 23500
+      },
+      "image_url": "https://i1.feedspot.com/675684.jpg?t=1602850563"
+    },
+    {
+      "title": "Bottleneck Art Gallery",
+      "feed_url": "https://bottleneckgallery.com/blogs/news.atom",
+      "website_url": "https://bottleneckgallery.com/blogs/news",
+      "description": "Contemporary art space located in the heart of Williamsburg, Brooklyn specializing in pop-culture, gig and alternative movie posters.",
+      "followers": {
+        "facebook": 49200,
+        "twitter": 38100
+      },
+      "image_url": "https://i1.feedspot.com/4541695.jpg?t=1604584868"
+    },
+    {
+      "title": "Ephemeral New York",
+      "feed_url": "https://ephemeralnewyork.wordpress.com/feed/",
+      "website_url": "https://ephemeralnewyork.wordpress.com/",
+      "description": "Ephemeral New York is a blog founded in 2008 that explores the history of New York City's forgotten, overlooked, and disappearing sites and stories. The blog covers topics such as lost neighborhoods, vanished buildings, and forgotten events that have shaped the city's history.",
+      "followers": {
+        "facebook": 19000,
+        "twitter": 7300
+      },
+      "image_url": "https://i1.feedspot.com/4684924.jpg?t=1678884229"
+    },
+    {
+      "title": "HaberArts",
+      "feed_url": "https://www.haberarts.com/feed/",
+      "website_url": "https://www.haberarts.com/",
+      "description": "Follow us to keep up with articles from Haberarts. It features art reviews from around New York city.",
+      "followers": {
+        "twitter": 131
+      },
+      "image_url": "https://i1.feedspot.com/1477728.jpg?t=1621007644"
+    },
+    {
+      "title": "The New York Times \u00bb Arts",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/arts/rss.xml",
+      "website_url": "https://www.nytimes.com/section/arts",
+      "description": "The Arts section of The New York Times Cultural news and reviews from our critics and reporters, including coverage of visual art, books, dance, movies, music, television and theater.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 54900000
+      },
+      "image_url": "https://i1.feedspot.com/4927580.jpg?t=1621007647"
+    },
+    {
+      "title": "Rehs Galleries",
+      "feed_url": "https://rehs.com/eng/feed/",
+      "website_url": "https://rehs.com/eng/",
+      "description": "Rehs Galleries is a family-owned art gallery specializing in 19th and 20th-century European and American paintings, with a focus on Realist art. Uncover the hidden gems of its diverse collection, and gain insights from generations of art enthusiasts shaping legacies.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5792141.jpg?t=1706619451"
+    },
+    {
+      "title": "The Art Studio NY Blog",
+      "feed_url": "https://www.theartstudiony.com/blog/feed/",
+      "website_url": "https://www.theartstudiony.com/blog/",
+      "description": "The Art Studio is a nurturing, inspiring and relaxing spa-like art school that welcomes all people of all ages and backgrounds to express their true selves. Through our unique approach to artistic creativity, our clients tap into their authentic self-expression. When we express our true selves, we naturally inspire others to do the same.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 1300,
+        "instagram": 10300
+      },
+      "image_url": "https://i1.feedspot.com/4927570.jpg?t=1621007667"
+    },
+    {
+      "title": "Arte Fuse",
+      "feed_url": "https://artefuse.com/feed/",
+      "website_url": "https://artefuse.com/",
+      "description": "Arte Fuse is a contemporary art platform focused on art shows which are currently on display, interviews and studio visits.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 4500,
+        "instagram": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4927468.jpg?t=1621007670"
+    },
+    {
+      "title": "ArtBinder",
+      "feed_url": "https://blog.artbinder.com/feed/",
+      "website_url": "https://blog.artbinder.com/",
+      "description": "Follow us to keep up with the leading digital platform for the artworld.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 1900,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4927574.jpg?t=1621007663"
+    },
+    {
+      "title": "Art in New York City",
+      "feed_url": "https://artinnewyorkcity.com/feed/",
+      "website_url": "https://artinnewyorkcity.com/",
+      "description": "Art in New York City promotes the work of local artists and art events.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4927571.jpg?t=1621007674"
+    },
+    {
+      "title": "Charles Fazzino Blog",
+      "feed_url": "http://www.fazzino.com/feed/",
+      "website_url": "http://www.fazzino.com/art-blog/",
+      "description": "Blog by Master of 3D Pop Art Charles Fazzino. He is a graduate of the School of Visual Arts in New York City & is one of the most popular and highly-collected pop artists of all time. During his more-than-thirty years as a pop artist, he has inserted his unique, detailed, vibrant, and three-dimensional style of artwork into the very fabric of popular culture.",
+      "followers": {
+        "facebook": 170900,
+        "twitter": 20,
+        "instagram": 34900
+      },
+      "image_url": "https://i1.feedspot.com/4476219.jpg?t=1602850711"
+    },
+    {
+      "title": "The Painter's Eye",
+      "feed_url": "https://www.thepainterseye.com/blog-feed.xml",
+      "website_url": "https://www.thepainterseye.com/",
+      "description": "Covers opinionated, fact-based, informative posts on why art matters. Rossella BLUE Mocerino shares articles on her life as an artist and her observations on art in general.",
+      "followers": {
+        "twitter": 89
+      },
+      "image_url": "https://i1.feedspot.com/5339475.jpg?t=1635851077"
+    },
+    {
+      "title": "Art in Brooklyn",
+      "feed_url": "https://artinbrooklyn.com/feed/",
+      "website_url": "https://artinbrooklyn.com/",
+      "description": "Art In Brooklyn was founded by Michael Sorgatz to promote the work of local artists.",
+      "followers": {
+        "facebook": 453,
+        "twitter": 2500,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/1369125.jpg?t=1613550767"
+    },
+    {
+      "title": "Hyperallergic",
+      "feed_url": "https://hyperallergic.com/feed/",
+      "website_url": "https://hyperallergic.com/",
+      "description": "A forum for serious, playful, and radical perspectives on art & culture in the world today. Covers the latest art news, reviews, and commentary. Hyperallergic is an online arts magazine, based in Brooklyn, New York. Founded by the art critic Hrag Vartanian and his husband Veken Gueyikian in October 2009.",
+      "followers": {
+        "facebook": 413700,
+        "twitter": 170600,
+        "instagram": 368800
+      },
+      "image_url": "https://i1.feedspot.com/5274256.jpg?t=1634284385"
+    },
+    {
+      "title": "Brooklyn Street Art",
+      "feed_url": "https://www.brooklynstreetart.com/feed/",
+      "website_url": "https://www.brooklynstreetart.com/",
+      "description": "Brooklyn Street Art (BSA), founded in 2008 by Steven P. Harrington and Jaime Rojo, is a prominent platform dedicated to documenting and celebrating the dynamic world of street art and graffiti. Based in Brooklyn but with a global reach, BSA provides insightful commentary, analysis, and extensive photography, capturing the evolving landscape of public art from New York to S\u00e3o Paulo and beyond. Harrington serves as Editor-in-Chief, while Rojo is the Editor of Photography. The blog is committed to supporting the arts and fostering respect for creative expression and property.",
+      "followers": {
+        "facebook": 208300,
+        "twitter": 48600,
+        "instagram": 116900
+      },
+      "image_url": "https://i1.feedspot.com/5061687.jpg?t=1627641219"
+    },
+    {
+      "title": "Women's Caucus for Art",
+      "feed_url": "https://nationalwca.org/feed/",
+      "website_url": "https://nationalwca.org/art_insights/",
+      "description": "The mission of the Women's Caucus for Art is to create community through art, education, and social activism. WCA is committed to recognizing the contribution of women in the arts; providing women with leadership opportunities and professional development.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 573,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5554769.jpg?t=1683092309"
+    },
+    {
+      "title": "New York Times \u00bb Arts",
+      "feed_url": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/international/section/arts/rss.xml",
+      "website_url": "https://www.nytimes.com/international/section/arts",
+      "description": "News and reviews from our critics and reporters, including coverage of pop music, classical music, visual art, dance, movies, music, television and theater.",
+      "followers": {
+        "facebook": 21000000,
+        "twitter": 4200
+      },
+      "image_url": "https://i1.feedspot.com/7282625.jpg?t=1711444575"
+    },
+    {
+      "title": "I Love New York Blog \u00bb Arts & Culture",
+      "feed_url": "https://www.iloveny.com/blog/category/arts-&-culture/653abd028c99a714d7138bc9/rss/",
+      "website_url": "https://www.iloveny.com/blog/category/arts-%26-culture/653abd028c99a714d7138bc9/",
+      "description": "Read blog posts from I Love NY that highlight the latest and greatest of what's going on in New York State including attractions and events.",
+      "followers": {
+        "facebook": 1500000,
+        "twitter": 303100,
+        "instagram": 348500
+      },
+      "image_url": "https://i1.feedspot.com/7282630.jpg?t=1711444605"
+    },
+    {
+      "title": "New York Academy of Art Blog",
+      "feed_url": "https://nyaa.edu/feed/",
+      "website_url": "https://nyaa.edu/blog/",
+      "description": "New York Academy of Art",
+      "followers": {
+        "facebook": 74800
+      },
+      "image_url": "https://i1.feedspot.com/7282628.jpg?t=1711444178"
+    },
+    {
+      "title": "Artnet",
+      "feed_url": "https://news.artnet.com//feed",
+      "website_url": "https://news.artnet.com/",
+      "description": "The world's most-read and best trusted art publication",
+      "followers": {
+        "facebook": 483200,
+        "twitter": 1900000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/7282624.jpg?t=1711450898"
+    },
+    {
+      "title": "ArtPlacer Blog",
+      "feed_url": "https://www.artplacer.com/blog/feed/",
+      "website_url": "https://www.artplacer.com/blog/",
+      "description": "Interviews with artpreneurs and industry leads, art resources, news and advice for artists, collectors and gallerists alike.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 118
+      },
+      "image_url": "https://i1.feedspot.com/7282626.jpg?t=1711444167"
+    },
+    {
+      "title": "Dia Art Foundation Blog",
+      "feed_url": "https://www.diaart.blog/home?format=rss",
+      "website_url": "https://www.diaart.blog/",
+      "description": "Each week, we will feature new posts on Dia's Artist Web Projects, exhibitions, public programs, poetry, prompts from artists, and more.",
+      "followers": {
+        "facebook": 93600,
+        "twitter": 66700
+      },
+      "image_url": "https://i1.feedspot.com/7282629.jpg?t=1711444182"
+    },
+    {
+      "title": "Clay Art Center Blog",
+      "feed_url": "https://www.clayartcenter.org/clay-art-center-blog?format=rss",
+      "website_url": "https://www.clayartcenter.org/clay-art-center-blog",
+      "description": "Read articles and news by Clay Art Center staff about our education, community arts, exhibition and artist programs.",
+      "followers": {
+        "facebook": 7500,
+        "instagram": 14200
+      },
+      "image_url": "https://i1.feedspot.com/7282627.jpg?t=1711459049"
+    },
+    {
+      "title": "New York Foundation for the Arts News",
+      "feed_url": "https://www.nyfa.org/news/feed/",
+      "website_url": "https://www.nyfa.org/news/",
+      "description": "New York Foundation for the Arts",
+      "followers": {
+        "facebook": 151100,
+        "twitter": 32200
+      },
+      "image_url": "https://i1.feedspot.com/7282633.jpg?t=1711444914"
+    },
+    {
+      "title": "Ashcan Art Blog",
+      "feed_url": "https://topartcollege.com/feed/",
+      "website_url": "https://topartcollege.com/",
+      "description": "APPLY TO ART SCHOOL WITH CONFIDENCE",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7282623.jpg?t=1711444764"
+    },
+    {
+      "title": "AGI Fine Art Blog",
+      "feed_url": "https://agifineart.com/advice/feed/",
+      "website_url": "https://agifineart.com/advice/",
+      "description": "The Artist Advice Blog is where you can find tips and guides from our staff as well as fellow artists.",
+      "followers": {
+        "facebook": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5755541.jpg?t=1705404820"
+    },
+    {
+      "title": "Artrepreneur",
+      "feed_url": "https://journal.atp.art/feed/",
+      "website_url": "https://journal.atp.art/",
+      "description": "For the Love of Art and Design",
+      "followers": {
+        "twitter": 890,
+        "instagram": 44600
+      },
+      "image_url": "https://i1.feedspot.com/7282634.jpg?t=1711444791"
+    },
+    {
+      "title": "The Guggenheim Museums and Foundation",
+      "feed_url": "https://www.guggenheim.org/feed",
+      "website_url": "https://www.guggenheim.org/articles",
+      "description": "Committed to innovation, the Solomon R. Guggenheim Foundation collects, preserves, and interprets modern and contemporary art, and explores ideas across cultures through dynamic curatorial and educational initiatives and collaborations. With its constellation of architecturally and culturally distinct museums, exhibitions, publications, and digital platforms, the foundation engages both local and global audiences.",
+      "followers": {
+        "facebook": 877800,
+        "twitter": 3300000
+      },
+      "image_url": "https://i1.feedspot.com/4927461.jpg?t=1621007655"
+    },
+    {
+      "title": "The Curious Frenchy",
+      "feed_url": "https://thecuriousfrenchy.wordpress.com/feed/",
+      "website_url": "https://thecuriousfrenchy.wordpress.com/",
+      "description": "The Curious Frenchy is the blog of French artist Laurence de Valmy. Along her way, she had the chance to meet many passionate and inspiring persons who can be either entrepreneurs, artists, bloggers, chefs.",
+      "followers": {
+        "facebook": 549,
+        "twitter": 878,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4791385.jpg?t=1602851707"
+    },
+    {
+      "title": "New York Arts",
+      "feed_url": "https://newyorkarts.net/feed/",
+      "website_url": "https://newyorkarts.net/",
+      "description": "New York arts is an international journal for arts. Follow us to keep up with articles from New York Arts.",
+      "followers": {
+        "facebook": 611,
+        "twitter": 354
+      },
+      "image_url": "https://i1.feedspot.com/4927464.jpg?t=1621007678"
+    },
+    {
+      "title": "Artists & Climate Change",
+      "feed_url": "https://artistsandclimatechange.com/feed/",
+      "website_url": "https://artistsandclimatechange.com/",
+      "description": "Celebrating artists who explore the intersection of arts & climate change. Artists & Climate Change is a blog and international network that bring together artists working at the intersection of arts and climate change. It is an initiative of The Arctic Cycle.",
+      "followers": {
+        "facebook": 10700,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4950620.jpg?t=1621007682"
+    },
+    {
+      "title": "Arrested Motion",
+      "feed_url": "https://arrestedmotion.com/feed/",
+      "website_url": "https://arrestedmotion.com/",
+      "description": "Online magazine providing exclusive worldwide coverage of the low brow, urban & contemporary art scene.",
+      "followers": {
+        "facebook": 76000,
+        "twitter": 15100
+      },
+      "image_url": "https://i1.feedspot.com/4998968.jpg?t=1627641856"
+    },
+    {
+      "title": "Woman Seeking Art",
+      "feed_url": "https://womanseekingart.com/feed/",
+      "website_url": "https://womanseekingart.com/",
+      "description": "Woman Seeking Art is who and what I am. I am a ceramic artist, art lover, mother of three, and now blogger. The blogs I regularly follow entertain and inspire me, but also make me feel part of a community with common tastes, and help me stay connected to things I love.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5554770.jpg?t=1683092636"
+    },
+    {
+      "title": "The High Line \u00bb Art",
+      "feed_url": "https://www.thehighline.org/blog/category/art/feed/",
+      "website_url": "https://www.thehighline.org/blog/category/art/",
+      "followers": {
+        "facebook": 211600,
+        "twitter": 91100
+      },
+      "image_url": "https://i1.feedspot.com/7282631.jpg?t=1711444192"
+    },
+    {
+      "title": "The Art Story Blog",
+      "feed_url": "https://www.theartstory.org/blog/feed/",
+      "website_url": "https://www.theartstory.org/blog/",
+      "description": "The Art Story website is modern art history education that is optimized for online learning. We clearly and graphically analyze modern art movements, artists, and ideas.",
+      "followers": {
+        "facebook": 35000,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4476220.jpg?t=1711456365"
+    },
+    {
+      "title": "New York Art Studio Blog",
+      "feed_url": "https://www.nyartstudio.com/category/blog/feed/",
+      "website_url": "https://www.nyartstudio.com/category/blog/",
+      "description": "College Portfolio Preparation, Personalized Curriculum, 19+ Years of Experience",
+      "followers": {
+        "twitter": 8000
+      },
+      "image_url": "https://i1.feedspot.com/7282635.jpg?t=1711458708"
+    },
+    {
+      "title": "Questroyal Fine Art Blog",
+      "feed_url": "https://www.questroyalfineart.com/feed/",
+      "website_url": "https://www.questroyalfineart.com/blog/",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/7282632.jpg?t=1711444196"
+    },
+    {
+      "title": "VoCA Blog",
+      "feed_url": "https://voca.network/feed/",
+      "website_url": "https://voca.network/voca-blog/",
+      "description": "Voices in Contemporary Art (VoCA) is a non-profit that promotes collaborative, interdisciplinary dialogue around the preservation of contemporary art",
+      "followers": {
+        "facebook": 3600,
+        "twitter": 824
+      },
+      "image_url": "https://i1.feedspot.com/4476231.jpg?t=1602850716"
+    },
+    {
+      "title": "Artsy",
+      "feed_url": "https://www.artsy.net/rss/news",
+      "website_url": "https://www.artsy.net/news",
+      "description": "Artsy, founded in 2009 by Carter Cleveland, is a leading online platform that connects collectors to the world's most influential artists and galleries. Based in New York, Artsy offers an extensive database for discovering, buying, and selling art, featuring works from emerging talents to established masters. The platform's editorial team includes experienced art writers and critics who provide insightful coverage of art trends and market analysis. Artsy's mission is to make art accessible and promote a more inclusive art world through innovative technology and partnerships.",
+      "followers": {
+        "facebook": 976300,
+        "twitter": 1800000,
+        "instagram": 1900000
+      },
+      "image_url": "https://i1.feedspot.com/4763817.jpg?t=1658210821"
+    },
+    {
+      "title": "Art21",
+      "feed_url": "https://feeds.feedburner.com/Art21Blog",
+      "website_url": "http://magazine.art21.org/",
+      "description": "Art21 was founded in 1997 with the mission to increase knowledge of contemporary art, ignite discussion, and inspire creative thinking by using diverse media to present contemporary artists at work and in their own words.",
+      "followers": {
+        "facebook": 567500,
+        "twitter": 187400,
+        "instagram": 453800
+      },
+      "image_url": "https://i1.feedspot.com/399813.jpg?t=1602849610"
+    },
+    {
+      "title": "The Center for Italian Modern Art Blog",
+      "feed_url": "https://www.italianmodernart.org/feed/",
+      "website_url": "https://www.italianmodernart.org/blog/",
+      "description": "The Center for Italian Modern Art (CIMA) was established in 2013 in New York City to promote the study and appreciation of modern and contemporary Italian art in the United States and internationally.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/3696740.jpg?t=1602850703"
+    },
+    {
+      "title": "Grey Art Gallery New York Blog",
+      "feed_url": "https://greyartgallery.nyu.edu/category/blog/feed/",
+      "website_url": "http://magazine.art21.org/",
+      "description": "The Grey Art Gallery is New York University's fine arts museum, located on historic Washington Square Park in New York City's Greenwich Village.",
+      "followers": {
+        "facebook": 5100,
+        "twitter": 3300,
+        "instagram": 10700
+      },
+      "image_url": "https://i1.feedspot.com/4927594.jpg?t=1621007652"
+    },
+    {
+      "title": "Art21 Magazine",
+      "feed_url": "http://magazine.art21.org/feed/",
+      "website_url": "http://magazine.art21.org/",
+      "description": "Art21 was founded in 1997 with the mission to increase knowledge of contemporary art, ignite discussion, and inspire creative thinking by using diverse media to present contemporary artists at work and in their own words.",
+      "followers": {
+        "facebook": 567500,
+        "twitter": 187400,
+        "instagram": 453800
+      },
+      "image_url": "https://i1.feedspot.com/4927458.jpg?t=1621007659"
+    },
+    {
+      "title": "Art F City",
+      "feed_url": "https://artfcity.com/feed/",
+      "website_url": "http://artfcity.com/",
+      "description": "Art Fag City is New York-based art blog dedicated to providing exposure to emerging contemporary art and under-known artists.",
+      "followers": {
+        "facebook": 14200,
+        "twitter": 48700
+      },
+      "image_url": "https://i1.feedspot.com/2091662.jpg?t=1711444876"
+    }
+  ]
+}

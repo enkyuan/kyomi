@@ -1,0 +1,29 @@
+{
+  "category": "Hialeah News",
+  "source_url": "https://rss.feedspot.com/hialeah_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Hialeah",
+      "feed_url": "https://www.hialeahfl.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.hialeahfl.gov/CivicAlerts.aspx?sort=date",
+      "description": "Hialeah, FL is dedicated to keeping residents informed and up-to-date by providing the latest news about schools, sports, business, performing arts, health/safety issues, human interest, and more.",
+      "followers": {
+        "facebook": 12800,
+        "twitter": 7000,
+        "instagram": 31500
+      },
+      "image_url": "https://i1.feedspot.com/5211826.jpg?t=1604045188"
+    },
+    {
+      "title": "Hy-Lo News \u00bb Hialeah",
+      "feed_url": "https://hylonewsmiami.com/category/news-by-neighborhood/hialeah/feed/",
+      "website_url": "https://hylonewsmiami.com/category/news-by-neighborhood/hialeah/",
+      "description": "Featured articles covering Hialeah's Community, Businesses, Local issues, and other important topics from Hialeah and surrounding neighborhoods. Hy-Lo is a hyper-local news content platform focusing on the Black communities in South Florida. In 2018, We evolved to focus our coverage on Black and Brown Millennials in South Florida.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 929
+      },
+      "image_url": "https://i1.feedspot.com/5469390.jpg?t=1668776772"
+    }
+  ]
+}

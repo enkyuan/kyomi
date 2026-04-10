@@ -1,0 +1,331 @@
+{
+  "category": "Arizona News",
+  "source_url": "https://rss.feedspot.com/arizona_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Arizona Mirror",
+      "feed_url": "https://azmirror.com/feed/",
+      "website_url": "https://azmirror.com/",
+      "description": "The Arizona Mirror is an independent, nonprofit news organization that is focused on connecting public policy with the people it affects and bringing a fresh perspective to coverage of the state's biggest issues.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/5130641.jpg?t=1693457858"
+    },
+    {
+      "title": "Arizona Capitol Times",
+      "feed_url": "https://azcapitoltimes.com/feed/",
+      "website_url": "https://azcapitoltimes.com/",
+      "description": "The Arizona Capitol Times is your inside source for the Arizona government, politics, and business. Get updates on Arizona politics & political news, covering elections, the governor, legislature, courts, agencies & campaigns in print and online. Our coverage influences policy defines important issues and connects the various communities that makeup state government.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 29300
+      },
+      "image_url": "https://i1.feedspot.com/4825729.jpg?t=1666937432"
+    },
+    {
+      "title": "Arizona Daily Sun",
+      "feed_url": "https://azdailysun.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+      "website_url": "https://azdailysun.com/",
+      "description": "Arizona Daily Sun is serving Flagstaff and northern Arizona since 1883 with the local news that's important to our unique community.",
+      "followers": {
+        "facebook": 53100,
+        "twitter": 14400,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4825375.jpg?t=1625551172"
+    },
+    {
+      "title": "12News",
+      "feed_url": "http://rssfeeds.12news.com/kpnx/home",
+      "website_url": "https://www.12news.com/",
+      "description": "12 News KPNX is owned and operated by TEGNA Inc., an innovative media company that serves the greater good of its communities. Get Phoenix's Leading Local News: Weather, Traffic, Sports and more.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 238600
+      },
+      "image_url": "https://i1.feedspot.com/5130627.jpg?t=1584790573"
+    },
+    {
+      "title": "havasunews.com",
+      "feed_url": "https://www.havasunews.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.havasunews.com/",
+      "description": "Today's News Herald is the best source for news, sports and opinions in Lake Havasu City, Arizona.",
+      "followers": {
+        "facebook": 25800,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4825714.jpg?t=1626436628"
+    },
+    {
+      "title": "InMaricopa",
+      "feed_url": "https://www.inmaricopa.com/feed/",
+      "website_url": "https://www.inmaricopa.com/",
+      "description": "InMaricopa is the No.1 source for news and information in the City of Maricopa. We provide a full time editor, reporters and sales staff to bring you quality new and information about Maricopa!",
+      "followers": {
+        "facebook": 40200,
+        "twitter": 2300,
+        "instagram": 6800
+      },
+      "image_url": "https://i1.feedspot.com/4825827.jpg?t=1584789464"
+    },
+    {
+      "title": "Tucson Weekly",
+      "feed_url": "https://www.tucsonweekly.com/tucson/Rss.xml/feed",
+      "website_url": "https://www.tucsonweekly.com/",
+      "description": "The Tucson Weekly is the Tucson news source that matters. Politics, culture, arts, music, food and everything else that makes our city great in print and online.",
+      "followers": {
+        "facebook": 42900,
+        "twitter": 57300,
+        "instagram": 16800
+      },
+      "image_url": "https://i1.feedspot.com/4825933.jpg?t=1613485997"
+    },
+    {
+      "title": "The Tribune",
+      "feed_url": "https://www.tribunenewsnow.com/feed/",
+      "website_url": "https://www.tribunenewsnow.com/",
+      "description": "The Tribune keeps you up to date with Arizona news. Get to know the latest news from the community, sports, police and court, obituaries and more. The Tribune is your newspaper serving Central Navajo County for over 100 years!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5525934.jpg?t=1679576921"
+    },
+    {
+      "title": "Sonoran News",
+      "feed_url": "https://sonorannews.com/feed/",
+      "website_url": "https://sonorannews.com/",
+      "description": "Sonoran News was founded in 1995 as a community watchdog. The paper has remained true to its mission: It is dedicated to exposing corrupt and unethical local, county, state and national business and political practices.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 397,
+        "instagram": 132
+      },
+      "image_url": "https://i1.feedspot.com/5525930.jpg?t=1679572078"
+    },
+    {
+      "title": "North Central News",
+      "feed_url": "https://northcentralnews.net/feed/",
+      "website_url": "https://northcentralnews.net/",
+      "description": "North Central News is a monthly community newspaper in North Central Phoenix delivering updates on current issues. On this associated website, you will find Top stories from the Print edition covering Local and National Politics, Business, Community, Health, Education, Weather, and Public Safety.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 427
+      },
+      "image_url": "https://i1.feedspot.com/5482009.jpg?t=1671601499"
+    },
+    {
+      "title": "Sedona Red Rock News",
+      "feed_url": "https://www.redrocknews.com/feed/",
+      "website_url": "https://www.redrocknews.com/",
+      "description": "Visit the Sedona Red Rock News website to know about the latest happenings in Arizona. We are proud to be Sedona's newspaper of record and the largest travel, sports and source of Sedona business information for almost 60 years.",
+      "followers": {
+        "facebook": 23400,
+        "twitter": 1900,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5525931.jpg?t=1679572086"
+    },
+    {
+      "title": "City Sun Times \u00bb Queen Creek",
+      "feed_url": "https://www.citysuntimes.com/search/?f=rss&t=article&c=news/queencreek&l=50&s=start_time&sd=desc",
+      "website_url": "https://www.citysuntimes.com/news/queencreek/",
+      "description": "Stay updated with Queen Creek Sun Times news, events, weather, obituaries and more - all focused on Queen Creek. We are building a local news website that is dedicated to sharing the news and information that matters most to the Queen Creek community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5525938.jpg?t=1679576807"
+    },
+    {
+      "title": "AZ Free News",
+      "feed_url": "https://azfreenews.com/feed/",
+      "website_url": "https://azfreenews.com/",
+      "description": "The mainstream media has been going through a significant shift during the past decade. Too many journalists would rather share their opinion or twist facts to suit their own bias. That's why AZ Free News exists. Our mission is to foster independent journalism and provide people like you with access to news and information not covered by traditional corporate media.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 846
+      },
+      "image_url": "https://i1.feedspot.com/5525932.jpg?t=1679576632"
+    },
+    {
+      "title": "Tucson Sentinel",
+      "feed_url": "https://www.tucsonsentinel.com/site/rss/",
+      "website_url": "https://www.tucsonsentinel.com/",
+      "description": "Tucson Sentinel is an independent nonpartisan news organization, dedicated to the idea that a smarter Tucson is a better Tucson. We act as an honest broker of information, filling the need for a virtual roundtable where the community can discuss the issues of the day.",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/1665805.jpg?t=1669281885"
+    },
+    {
+      "title": "ABC15 Arizona",
+      "feed_url": "https://www.abc15.com/index.rss",
+      "website_url": "https://www.abc15.com/",
+      "description": "Arizona's source for breaking news, weather, traffic and in-depth investigations from ABC15 Arizona in Phoenix. ABC15 Arizona is your number one source for news in Arizona. KNXV-TV is a television station in Phoenix, Arizona, United States, affiliated with ABC. It is owned by the E. W. Scripps Company alongside CW affiliate KASW.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 474900,
+        "instagram": 280400
+      },
+      "image_url": "https://i1.feedspot.com/5130617.jpg?t=1679576347"
+    },
+    {
+      "title": "Cronkite News",
+      "feed_url": "https://cronkitenews.azpbs.org/rss-ticker/",
+      "website_url": "https://cronkitenews.azpbs.org/",
+      "description": "Cronkite News is a multiplatform news organization. Cronkite News provides news, feature and investigative stories each week on issues critical to Arizonans.",
+      "followers": {
+        "facebook": 18400,
+        "twitter": 25800,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4493939.jpg?t=1671597736"
+    },
+    {
+      "title": "Mohave Valley Daily News",
+      "feed_url": "https://www.mohavedailynews.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc/feed",
+      "website_url": "https://www.mohavedailynews.com/",
+      "description": "Mohave Valley Daily News provides breaking news and up-to-date information to all its readers in the Tri-state region.",
+      "followers": {
+        "facebook": 57500
+      },
+      "image_url": "https://i1.feedspot.com/4825841.jpg?t=1584786945"
+    },
+    {
+      "title": "AZCentral",
+      "feed_url": "https://www.azcentral.com/",
+      "website_url": "https://www.azcentral.com/",
+      "description": "Follow us to stay informed with Arizona local news and headlines, photos and videos from around the Valley of Sun, including Chandler, Gilbert, Glendale, Peoria, Mesa, Phoenix, Scottsdale, Surprise and northwest Valley, the southwest Valley and Tempe.",
+      "followers": {
+        "facebook": 653800,
+        "twitter": 453500,
+        "instagram": 156800
+      },
+      "image_url": "https://i1.feedspot.com/4825324.jpg?t=1621407098"
+    },
+    {
+      "title": "Phoenix New Times",
+      "feed_url": "https://www.phoenixnewtimes.com/phoenix/Rss.xml",
+      "website_url": "https://www.phoenixnewtimes.com/",
+      "description": "Original reporting and compelling writing on local news, restaurants, arts and culture have made Phoenix New Times a vital resource for readers who want to understand and engage with their community.",
+      "followers": {
+        "facebook": 143300,
+        "twitter": 151100,
+        "instagram": 107300
+      },
+      "image_url": "https://i1.feedspot.com/4538229.jpg?t=1694080531"
+    },
+    {
+      "title": "Arizona Media Association",
+      "feed_url": "https://azmedia.org/feed/",
+      "website_url": "https://azmedia.org/",
+      "description": "Arizona Newspapers Association has been uniting strong newspapers for a better Arizona since 1939. It is a non-profit trade organization that represents more than 80 Arizona newspapers.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5525933.jpg?t=1679572091"
+    },
+    {
+      "title": "AZFamily",
+      "feed_url": "https://www.azfamily.com/",
+      "website_url": "https://www.azfamily.com/",
+      "description": "Welcome to Arizona's Family, the largest news organization in the state. 3TV and CBS 5 - covering news you want from your neighborhood, bringing you local coverage of events as they happen and investigating the stories that matter to you.",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 295500,
+        "instagram": 234800
+      },
+      "image_url": "https://i1.feedspot.com/5130629.jpg?t=1694080323"
+    },
+    {
+      "title": "AZ Big Media",
+      "feed_url": "https://azbigmedia.com/",
+      "website_url": "https://azbigmedia.com/",
+      "description": "AZ BIG Media has grown exponentially since then to cover a multitude of niche topics and industries within its various publications, and become a host for a series of publication-related events.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 5500,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4526448.jpg?t=1584791724"
+    },
+    {
+      "title": "Prescott Enews",
+      "feed_url": "https://prescottenews.com/index.php/news/current-news?format=feed",
+      "website_url": "https://prescottenews.com/",
+      "description": "Get news, local news, national news, politics, community, and events from eNews AZ.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4825970.jpg?t=1625732431"
+    },
+    {
+      "title": "Arizona Daily Star",
+      "feed_url": "https://tucson.com/",
+      "website_url": "https://tucson.com/",
+      "description": "Read the latest news, Arizona Wildcats sports, lifestyle, parenting, business, entertainment, weather, jobs, autos and real estate listings from the Arizona Daily Star.",
+      "followers": {
+        "twitter": 87400,
+        "instagram": 49400
+      },
+      "image_url": "https://i1.feedspot.com/4825362.jpg?t=1694072535"
+    },
+    {
+      "title": "Prescott Daily Courier",
+      "feed_url": "https://www.dcourier.com/rss/headlines/",
+      "website_url": "https://www.dcourier.com/",
+      "description": "The Daily Courier is the trusted local news leader for Prescott, Arizona and surrounding communities. Local news, sports, videos, photos from the Prescott, Prescott Valley, Chino Valley and Dewey-Humboldt Quad-cities in Arizona.",
+      "followers": {
+        "facebook": 24800,
+        "twitter": 5300,
+        "instagram": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4825371.jpg?t=1589364237"
+    },
+    {
+      "title": "Kingman Miner",
+      "feed_url": "https://www.kdminer.com/",
+      "website_url": "https://www.kdminer.com/",
+      "description": "The Kingman Miner is the primary source of local news and sports coverage in Kingman, Arizona. Get Local news, sports, videos, photos from the Kingman, Arizona area and Mohave County.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 1800,
+        "instagram": 698
+      },
+      "image_url": "https://i1.feedspot.com/4825924.jpg?t=1584785998"
+    },
+    {
+      "title": "Navajo Times",
+      "feed_url": "https://navajotimes.com/feed/",
+      "website_url": "https://navajotimes.com/",
+      "description": "The Navajo Times provides the most recent news and updates on what is going on in the Navajo Nations. The Navajo Times covers all five agencies in New Mexico, Arizona, and Utah and provides you with all of the information you need.",
+      "followers": {
+        "facebook": 268900,
+        "twitter": 54800,
+        "instagram": 70800
+      },
+      "image_url": "https://i1.feedspot.com/4825885.jpg?t=1584787775"
+    },
+    {
+      "title": "The Prescott Times",
+      "feed_url": "https://theprescotttimes.com/",
+      "website_url": "https://theprescotttimes.com/",
+      "description": "The most reliable and independent local news site for Prescott, AZ. Get current Prescott area news, crime, politics, weather, sports, entertainment, arts, features, obituaries, real estate and all other stories relevant to residents of Prescott, Arizona, USA.",
+      "followers": {
+        "facebook": 52600,
+        "twitter": 311,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/5150109.jpg?t=1589366973"
+    },
+    {
+      "title": "Arizona Informant",
+      "feed_url": "https://azinformant.com/feed/",
+      "description": "Since 1971, the Arizona Informant has provided an important voice for the Black community throughout the state. The family owned and operated newspaper continues to capture the attention of the Black community and others. Published every Wednesday, the Arizona Informant Newspaper is the only African-American owned weekly newspaper in the state.",
+      "followers": {
+        "facebook": 15100,
+        "twitter": 2600
+      },
+      "image_url": "https://i1.feedspot.com/5482008.jpg?t=1679576603"
+    }
+  ]
+}

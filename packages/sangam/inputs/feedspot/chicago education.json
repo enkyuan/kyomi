@@ -1,0 +1,64 @@
+{
+  "category": "Chicago Education",
+  "source_url": "https://rss.feedspot.com/chicago_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "South Side Weekly \u00bb Chicago Education News & Analysis",
+      "feed_url": "https://southsideweekly.com/category/education/feed/",
+      "website_url": "https://southsideweekly.com/category/education/",
+      "description": "The South Side Weekly is a nonprofit newsprint magazine written for and about neighborhoods on the South Side of Chicago. We publish in-depth coverage of the arts and issues of public interest alongside oral histories, poetry, fiction, interviews, and artwork from local photographers and illustrators.",
+      "followers": {
+        "facebook": 8800,
+        "twitter": 19100,
+        "instagram": 19100
+      },
+      "image_url": "https://i1.feedspot.com/4925954.jpg?t=1620977129"
+    },
+    {
+      "title": "Chicago Public Education Fund Blog",
+      "feed_url": "https://thefundchicago.org/blog/feed/",
+      "website_url": "https://thefundchicago.org/blog/",
+      "description": "The Chicago Public Education Fund is a nonprofit organization working to build a critical mass of great public schools in Chicago. We're amplifying the voices of our city's best principals, and to tell the positive stories we see in our Chicago public schools.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4925945.jpg?t=1620977117"
+    },
+    {
+      "title": "Chicago Semester",
+      "feed_url": "https://chicagosemester.org/blog/feed/",
+      "website_url": "https://chicagosemester.org/blog/",
+      "description": "Chicago Semester is an experience-based academic program that provides real-world opportunities for college students seeking personal and professional growth.",
+      "followers": {
+        "facebook": 850,
+        "twitter": 255
+      },
+      "image_url": "https://i1.feedspot.com/4784864.jpg?t=1609323647"
+    },
+    {
+      "title": "Ed Post",
+      "feed_url": "https://www.edpost.com/",
+      "website_url": "https://www.edpost.com/",
+      "description": "We are a nonprofit, non-partisan communications organization dedicated to building support for student-focused improvements in public education from preschool to high school graduation.",
+      "followers": {
+        "facebook": 103600,
+        "twitter": 53500,
+        "instagram": 82600
+      },
+      "image_url": "https://i1.feedspot.com/4924345.jpg?t=1608183987"
+    },
+    {
+      "title": "Chicago Public Schools Blog",
+      "feed_url": "https://blog.cps.edu/feed/",
+      "website_url": "https://www.cps.edu/sites/blog",
+      "description": "At Chicago Public Schools, our mission is to provide a high-quality public education for every child, in every neighborhood, that prepares each for success in college, career and civic life. Chicago Public Schools is looking for teachers, leaders, and non-instructional staff to transform the face of urban education.",
+      "followers": {
+        "facebook": 105600,
+        "twitter": 88100,
+        "instagram": 696200000
+      },
+      "image_url": "https://i1.feedspot.com/4925938.jpg?t=1620977203"
+    }
+  ]
+}

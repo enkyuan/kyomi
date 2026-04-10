@@ -1,0 +1,29 @@
+{
+  "category": "North Canton News",
+  "source_url": "https://rss.feedspot.com/north_canton_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Fox 8 \u00bb North Canton News",
+      "feed_url": "https://fox8.com/tag/north-canton-news/feed/",
+      "website_url": "https://fox8.com/tag/north-canton-news/",
+      "description": "Cleveland's source for news and weather. The Latest News and Updates in north canton news brought to you by the team at fox8.com.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 293700,
+        "instagram": 217600
+      },
+      "image_url": "https://i1.feedspot.com/5173087.jpg?t=1595401866"
+    },
+    {
+      "title": "Canton Repository \u00bb North Canton",
+      "feed_url": "https://www.cantonrep.com/communities/north-canton/",
+      "website_url": "https://www.cantonrep.com/communities/north-canton/",
+      "description": "Get the latest breaking news, sports, entertainment, obituaries in North Canton, OH from Canton Repository.",
+      "followers": {
+        "facebook": 83800,
+        "twitter": 16300
+      },
+      "image_url": "https://i1.feedspot.com/5173084.jpg?t=1626678990"
+    }
+  ]
+}

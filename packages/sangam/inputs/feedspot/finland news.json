@@ -1,0 +1,249 @@
+{
+  "category": "Finland News",
+  "source_url": "https://rss.feedspot.com/finland_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Finland Today",
+      "feed_url": "https://finlandtoday.fi/feed/",
+      "website_url": "https://finlandtoday.fi/",
+      "description": "Finland Today provides you with the latest Finnish news in English in an interesting way. Prepare to be informed and entertained.",
+      "followers": {
+        "facebook": 26500,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4827589.jpg"
+    },
+    {
+      "title": "Helsinki Times",
+      "feed_url": "https://www.helsinkitimes.fi/?format=feed",
+      "website_url": "https://www.helsinkitimes.fi/",
+      "description": "Helsinki Times is an independent online newspaper covering news and events in Finland.",
+      "followers": {
+        "facebook": 41000,
+        "twitter": 26800
+      },
+      "image_url": "https://i1.feedspot.com/4827579.jpg?t=1621485882"
+    },
+    {
+      "title": "Iltalehti",
+      "feed_url": "https://www.iltalehti.fi/rss/rss.xml",
+      "website_url": "https://www.iltalehti.fi/",
+      "description": "Find News on Sports, Entertainment, Economy, Health, Eating, Health, Family, Food, all the fresh news from one hour around the clock.",
+      "followers": {
+        "facebook": 508400,
+        "twitter": 151800,
+        "instagram": 198000
+      },
+      "image_url": "https://i1.feedspot.com/852695.jpg?t=1621485797"
+    },
+    {
+      "title": "Daily Finland",
+      "feed_url": "https://dailyfinland.fi/feed/latest-rss.xml",
+      "website_url": "https://www.dailyfinland.fi/",
+      "description": "Daily Finland, an English online daily published from Finland.",
+      "followers": {
+        "facebook": 30200,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4827603.jpg?t=1621485822"
+    },
+    {
+      "title": "Ilkkapohjalainen",
+      "feed_url": "https://fiare-prod-qt-images.s3.amazonaws.com/production/i-mediat/feed.xml",
+      "website_url": "https://ilkkapohjalainen.fi/",
+      "description": "Credible news and information about South Ostrobothnia region and covers news, phenomena, and events as well as the most significant national and global topics. Check out Ilkkapohjalainen.fi to stay updated on Finland's Sports, Economics, Crime & accidents, People, and culture.",
+      "followers": {
+        "facebook": 48200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5488901.jpg?t=1673007114"
+    },
+    {
+      "title": "L\u00e4nsi-Savo",
+      "feed_url": "https://www.lansi-savo.fi/feed/rss",
+      "website_url": "https://www.lansi-savo.fi/",
+      "description": "L\u00e4nsi-Savo online brings forward editorial opinions and articles that expand on current events and trending topics in the region and country. Read here our latest stories covering the Economy, Sports, Culture, and Foreign Relations. We are an online magazine and part of the Keskisuomalainen Group.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488907.jpg?t=1673007639"
+    },
+    {
+      "title": "Hankasalmen Sanomat",
+      "feed_url": "https://www.hankasalmensanomat.fi/feed/rss",
+      "website_url": "https://www.hankasalmensanomat.fi/",
+      "description": "Binge on the latest news and the most interesting content in local news, sports, business, and cultural space. With a continuously updated news website, Hankasalmen Sanomat is a daily newspaper in Finland owned by the Keskisuomalainen Group.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488912.jpg?t=1673007997"
+    },
+    {
+      "title": "H\u00e4meen Sanomat",
+      "feed_url": "https://www.hameensanomat.fi/feed/rss",
+      "website_url": "https://www.hameensanomat.fi/",
+      "description": "Read some of the most buzzing and trending news and stories, videos, pictures, and columns of the H\u00e4meenlinna region here at the H\u00e4meen Sanomat news portal. A prime source of local news and credible information, H\u00e4meen Sanomat is part of the Keskisuomalainen Group.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488899.jpg?t=1673007481"
+    },
+    {
+      "title": "Kansan Uutiset",
+      "feed_url": "https://www.ku.fi/feed",
+      "website_url": "https://www.ku.fi/",
+      "description": "Read critical and analytical commentary on social and economical issues faced by the common people. Here we dissect and provide news and insight on several mainstream topics. Kansan Uutiset is a monthly magazine recognized nationally for its leftist perspectives and ideas.",
+      "followers": {
+        "facebook": 14500,
+        "twitter": 10300
+      },
+      "image_url": "https://i1.feedspot.com/5488898.jpg?t=1673006481"
+    },
+    {
+      "title": "Aamuposti",
+      "feed_url": "https://www.aamuposti.fi/feed/rss",
+      "website_url": "https://www.aamuposti.fi/",
+      "description": "Aamuposti brings to its readers on the web the most interesting and comprehensive news content through articles and videos covering a number of relevant categories like Financial News, Health, Sports, Covid, and Local life. Aamuposti is a daily morning newspaper in Finland.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488896.jpg?t=1673007248"
+    },
+    {
+      "title": "Etel\u00e4-Saimaa",
+      "feed_url": "https://www.esaimaa.fi/feed/rss",
+      "website_url": "https://www.esaimaa.fi/",
+      "description": "Etel\u00e4-Saimaa online delivers the latest news updates throughout the day from the South Saimaa region. Read and follow trending news topics and development from a variety of areas including Finance, Sports, Politics, Culture and Local community. Etel\u00e4-Saimaa is a leading broadsheet daily published in Finland.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488900.jpg?t=1673007422"
+    },
+    {
+      "title": "Keskisuomalainen",
+      "feed_url": "https://www.ksml.fi/feed/rss",
+      "website_url": "https://www.ksml.fi/",
+      "description": "Read the latest news and watch the most interesting KSML.tv videos from the newspaper Keskisuomalainen's online service at KSML.fi Keskisuomalainen is a daily Finnish Language paper serving critical news and analysis to readers in the Central region and all over the world through this website.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488895.jpg?t=1673007538"
+    },
+    {
+      "title": "Salon Seudun Sanomat",
+      "feed_url": "https://www.sss.fi/feed/",
+      "website_url": "https://www.sss.fi/",
+      "description": "Salon Seudun Sanomat is a seven-day newspaper in the Salo economic area. Our digital edition and archives provide all necessary news and information to those looking to stay up-to-date on contemporary issues and affairs in the region and country. Read the latest updates in published articles and videos.",
+      "followers": {
+        "facebook": 13000,
+        "twitter": 2500,
+        "instagram": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4381970.jpg?t=1673008975"
+    },
+    {
+      "title": "Borg\u00e5bladet",
+      "feed_url": "https://www.bbl.fi/feeds/feed.xml",
+      "website_url": "https://www.bbl.fi/",
+      "description": "Discover news updates from eastern Nyland's largest Swedish-language newspaper on its associated website. Ostnyland.fi publishes recent news stories and opinion articles on various topics some of which are Sports, Entertainment, Local Politics, Business, and Special events in the region. Read more in the newest posts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488936.jpg?t=1673007155"
+    },
+    {
+      "title": "Etel\u00e4-Suomen Sanomat",
+      "feed_url": "https://www.ess.fi/feed/rss",
+      "website_url": "https://www.ess.fi/",
+      "description": "Gather the latest news and topics from Lahti and P\u00e4ij\u00e4t-H\u00e4mee regions. Etel\u00e4-Suomen Sanomat online publishes in-depth & impartial perspectives on current topics and phenomena in the Finland and rest of the world and engaging personal interviews around different themes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488894.jpg?t=1673006916"
+    },
+    {
+      "title": "Uusimaa",
+      "feed_url": "https://www.uusimaa.fi/feed/rss",
+      "website_url": "https://www.uusimaa.fi/",
+      "description": "The latest news stories and exciting content from the Uusimaa region appear here. Stay updated on all that's happening with our cutting-edge coverage of the local politics, financial, community, and cultural landscapes. Additionally, you can also find extra content like lifestyle hacks, and relationship advice in our special sections.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488909.jpg?t=1673007723"
+    },
+    {
+      "title": "Paikallislehti Sis\u00e4-Savo",
+      "feed_url": "https://www.sisa-savolehti.fi/feed/rss",
+      "website_url": "https://www.sisa-savolehti.fi/",
+      "description": "The online frontpage of Paikallislehti Sis\u00e4-Savo is a regularly-visited news destination of the Sis\u00e4-Savo area, with accurate and complete coverage of regional affairs including Political, Sports, and Local news articles. Paikallislehti Sis\u00e4-Savo is a daily newspaper in Finland owned by the Savon Media company.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488908.jpg?t=1673009016"
+    },
+    {
+      "title": "Kouvolan Sanomat",
+      "feed_url": "https://www.kouvolansanomat.fi/feed/rss",
+      "website_url": "https://www.kouvolansanomat.fi/",
+      "description": "Kouvola Sanomat is an independent, trusted daily source of local updates for the Kouvolan municipality. Read top Headlines covering the latest National, regional and global politics, business and sports sectors, as well as insightful articles on offbeat themes like Relationships, Local life and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488905.jpg?t=1673007578"
+    },
+    {
+      "title": "Keskilaakso",
+      "feed_url": "https://www.keskilaakso.fi/feed/rss",
+      "website_url": "https://www.keskilaakso.fi/",
+      "description": "Stay informed and entertained with complete, and balanced news coverage from Keskilaakso newspaper. We provide readers with the latest information and developments on the Kouvolan region and the rest of the nation. Keep up with day-to-day issues with regular updates on keskilaakso.fi.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488904.jpg?t=1673008076"
+    },
+    {
+      "title": "Kymen Sanomat",
+      "feed_url": "https://www.kymensanomat.fi/feed/rss",
+      "website_url": "https://www.kymensanomat.fi/",
+      "description": "Get an informed and balanced perspective of the Kymenlaakso with Kymen Sanomat's comprehensive ad consistent reporting of local events. Our news website showcases extended coverage of Politics, Business, Sports, Economy, Culture, and more special features on relevant topics like Festival celebrations, Family life, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488906.jpg?t=1673007605"
+    },
+    {
+      "title": "It\u00e4-H\u00e4me",
+      "feed_url": "https://www.itahame.fi/feed/rss",
+      "website_url": "https://www.itahame.fi/",
+      "description": "Read the latest news, the most important topics, and the most interesting perspectives from the Heinola region and the rest of the world at the Ita-Hame.fi news website. It\u00e4-H\u00e4me is a morning tabloid newspaper published in Heinola in It\u00e4-H\u00e4me, Finland.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488903.jpg?t=1673007514"
+    },
+    {
+      "title": "Savon Sanomat",
+      "feed_url": "https://www.savonsanomat.fi/feed/rss",
+      "website_url": "https://www.savonsanomat.fi/",
+      "description": "Catch trending news articles and watch the most interesting SSTV videos on the online service of the newspaper Savon Sanomie at SavonSanomat.fi. Savon Sanomat is a daily Finnish language newspaper covering the Savon region and owned by the Keskisuomalainen Group.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5488910.jpg?t=1673007928"
+    },
+    {
+      "title": "\u00c5landstidningen",
+      "feed_url": "https://www.alandstidningen.ax/rss/allt",
+      "website_url": "https://www.alandstidningen.ax/",
+      "description": "Featuring exclusive news scops and updates on all the latest developments from State, Politics, Sports, Business, and Social Culture. \u00c5landstidningen is one of \u00c5land's largest and leading newspapers. Keep track of the latest news on the web, on mobile, and on paper six days a week.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5488902.jpg?t=1673006545"
+    },
+    {
+      "title": "Satakunnan Kansa \u00bb Rauma Region",
+      "feed_url": "https://www.satakunnankansa.fi/aihe/rauman-seutu/?ref=ls24",
+      "website_url": "https://www.satakunnankansa.fi/aihe/rauman-seutu/?ref=ls24",
+      "description": "ls24.fi delivers the latest news, information, and entertainment content reported by L\u00e4nsi-Suomi. Read Popular articles, event information, and local and regional news covered directly from the ground. L\u00e4nsi-Suomi is a non-partisan newspaper published daily in the economic district of Rauma.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5488897.jpg?t=1673007895"
+    },
+    {
+      "title": "Good News from Finland",
+      "feed_url": "https://www.goodnewsfinland.com/feed/",
+      "website_url": "https://www.goodnewsfinland.com/en/",
+      "description": "Good News from Finland is a news service that covers positive and globally interesting company, business and innovation-related news topics from Finland.",
+      "followers": {
+        "facebook": 133800,
+        "twitter": 38900,
+        "instagram": 8100
+      },
+      "image_url": "https://i1.feedspot.com/4827607.jpg?t=1658141886"
+    },
+    {
+      "title": "Kainuun Sanomat",
+      "feed_url": "https://www.kainuunsanomat.fi/",
+      "website_url": "https://www.kainuunsanomat.fi/",
+      "description": "Kainnun Sanomat is a Finnish Morning newspaper published in Kainuun Region. Both through print and digital it offers refreshing news updates and opinions on a variety of subjects including Finland, Sports, Culture, Economy, and topical issues like Covid. Keeps you on top of all local and international news.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5488893.jpg?t=1673007450"
+    }
+  ]
+}

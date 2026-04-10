@@ -1,0 +1,109 @@
+{
+  "category": "Sushi",
+  "source_url": "https://rss.feedspot.com/sushi_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sushiuniversity Blog",
+      "feed_url": "https://sushiuniversity.jp/sushiblog/feed/",
+      "website_url": "https://sushiuniversity.jp/sushiblog/",
+      "description": "Excite all five of your senses, taking on all the Sushi offered to you. Acquiring the correct knowledge will give you the opportunity for true bliss.",
+      "followers": {
+        "twitter": 342
+      },
+      "image_url": "https://i1.feedspot.com/4917971.jpg?t=1610429422"
+    },
+    {
+      "title": "Make my Sushi",
+      "feed_url": "https://makemysushi.com/feed",
+      "website_url": "https://makemysushi.com/sushi-recipes",
+      "description": "My name is Y. Weil. This site is aimed to help my fellow sushi fans with their first steps in sushi making. Making sushi at home is easy, with recipes for: California Roll, Spicy Tuna, Dragon Roll. Learn how to make Nigiri Sushi, Maki, inside out sushi and more.",
+      "followers": {
+        "facebook": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4805001.jpg?t=1610429748"
+    },
+    {
+      "title": "Make Sushi Blog",
+      "feed_url": "https://www.makesushi.com/feed/",
+      "website_url": "https://www.makesushi.com/blog/",
+      "description": "Make Sushi is exactly what it sounds, here we teach you how to make sushi. Learn how to create beautiful and delicious sushi and Japanese dishes at home with the guidance of self-taught sushi chef, Davy Devaux.",
+      "followers": {
+        "facebook": 390200,
+        "twitter": 1200,
+        "instagram": 353000
+      },
+      "image_url": "https://i1.feedspot.com/4804125.jpg?t=1610429403"
+    },
+    {
+      "title": "Epicuryan",
+      "feed_url": "http://tangbro1.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tangbro1.blogspot.com/",
+      "description": "Only eat what feeds your soul! A Sushi Blog.",
+      "followers": {
+        "twitter": 75
+      },
+      "image_url": "https://i1.feedspot.com/4805669.jpg?t=1610429438"
+    },
+    {
+      "title": "Sushi monogatari - a story about sushi",
+      "feed_url": "http://sushimonogatari.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://sushimonogatari.blogspot.com/",
+      "description": "I am a sushi chef working in the profession since 2005. Here I share my sushi experiences with other enthusiasts.",
+      "followers": {
+        "facebook": 461
+      },
+      "image_url": "https://i1.feedspot.com/4806539.jpg?t=1610429706"
+    },
+    {
+      "title": "Raymond's Sushi Adventures",
+      "feed_url": "http://www.raymondsushi.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.raymondsushi.com/",
+      "description": "I am one of the biggest die-hard sushi fans you can find in Vancouver. Not a single day goes by in which I don't think about sushi. I have visited more than 250 sushi restaurants all across Greater Vancouver, and this blog is where I share my experiences with you.",
+      "followers": {
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/4804206.jpg?t=1610429727"
+    },
+    {
+      "title": "Purple Avocado \u00bb Sushi",
+      "feed_url": "https://purpleavocado.de/en/category/recipes/sushi-en/feed/",
+      "website_url": "https://purpleavocado.de/en/category/recipes/sushi-en/",
+      "description": "I'm Sabrina, the multitasking photographer, stylist and cook from Purple Avocado. On this pages you will find unconventional yet classic recipes as well as inspiration for a creative and diverse handling of few and fresh ingredients.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4805571.jpg?t=1610429742"
+    },
+    {
+      "title": "Easy Homemade Sushi",
+      "feed_url": "https://www.easyhomemadesushi.com/feed/",
+      "website_url": "https://www.easyhomemadesushi.com/",
+      "description": "I'm James and I have been a sushi enthusiast since my Japanese friend introduced me to this wonderful delicacy. I have endlessly researched sushi and wish to share the wealth of information with you.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5316001.jpg?t=1630051730"
+    },
+    {
+      "title": "Sushi Otaku",
+      "feed_url": "https://www.sushifaq.com/sushiotaku/feed/",
+      "website_url": "https://www.sushifaq.com/sushiotaku/",
+      "description": "The ultimate guide to sushi, with everything you would ever want to know including how to make your own and sushi calorie and nutritional information.",
+      "followers": {
+        "facebook": 263,
+        "twitter": 69
+      },
+      "image_url": "https://i1.feedspot.com/4432453.jpg?t=1610429762"
+    },
+    {
+      "title": "The Sushi Legend",
+      "feed_url": "https://thesushilegend.com/feed/",
+      "website_url": "https://thesushilegend.com/",
+      "description": "The Sushi Legend is a passion project, born from an unhealthy amount of time/money/battery spent digesting sushi both literally (through eating) and figuratively. Get reviews of Sushi restaurants from my various travels, essential knowledge for the aspiring Sushi master, even some picture and more.",
+      "followers": {
+        "facebook": 1000,
+        "instagram": 36300
+      },
+      "image_url": "https://i1.feedspot.com/5161442.jpg?t=1610429427"
+    }
+  ]
+}

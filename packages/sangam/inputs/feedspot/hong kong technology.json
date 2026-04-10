@@ -1,0 +1,85 @@
+{
+  "category": "Hong Kong Technology",
+  "source_url": "https://rss.feedspot.com/hong_kong_technology_rss_feeds",
+  "feeds": [
+    {
+      "title": "TechCrunch \u00bb Hong Kong",
+      "feed_url": "https://techcrunch.com/tag/hong-kong/feed/",
+      "website_url": "https://techcrunch.com/tag/hong-kong/",
+      "description": "Technology news and analysis with a focus on founders and startup teams.",
+      "followers": {
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/5348117.jpg?t=1640273472"
+    },
+    {
+      "title": "Fintech News Hong Kong",
+      "feed_url": "https://fintechnews.hk/feed/",
+      "website_url": "https://fintechnews.hk/",
+      "description": "Fintech News Hong Kong provides a source of timely, deep insights and the latest local and global news about Fintech.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4649860.jpg?t=1610454628"
+    },
+    {
+      "title": "PTS Technology Blog",
+      "feed_url": "https://www.ptsconsulting.com.hk/blog?format=rss",
+      "website_url": "https://www.ptsconsulting.com.hk/blog/",
+      "description": "Visit PTS Blog for expert tips on managed IT services, cybersecurity, workplace tech, and the latest industry news relevant to Hong Kong businesses.",
+      "followers": {},
+      "image_url": "https://images.squarespace-cdn.com/content/v1/6815cbb94d47fc0e1249052b/27bcbc2e-2012-4692-9548-3c55f654734a/PTS_Logotype_Blue.png?format=1500w?t=1754468351"
+    },
+    {
+      "title": "Hong Kong Information Technology Federation",
+      "feed_url": "https://www.hkitf.org.hk/feed",
+      "website_url": "https://www.hkitf.org.hk/",
+      "description": "The Hong Kong Information Technology Federation was founded in 1980 as a non-profit, non-political trade association to provide a forum in which the IT-related business in Hong Kong can work together for the benefit of the industry and to maintain a high level of business practice amongst the members.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8660703.jpg?t=1755520583"
+    },
+    {
+      "title": "Innopath Solutions Blog",
+      "feed_url": "https://innopath.com.hk/feed/",
+      "website_url": "https://innopath.com.hk/blog-2/",
+      "description": "a Data Center Service and IT Service Provider",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8660704.jpg?t=1755520359"
+    },
+    {
+      "title": "PTS Managed Services Insights",
+      "feed_url": "https://www.ptsconsulting.com.hk/feed/",
+      "website_url": "https://www.ptsconsulting.com.hk/insights/",
+      "description": "PTS Managed Services blog posts covers a broad range of technology and solutions for businesses in Hong Kong and China. At PTS we believe that technology should be simple to use, secure and reliable. We put people at the heart of everything that we do, technology should always deliver a seamless experience for your users.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437983.jpg?t=1662112520"
+    },
+    {
+      "title": "Tech Fest Summit 2025",
+      "feed_url": "https://techfest.hk/feed/",
+      "website_url": "https://techfest.hk/",
+      "description": "Tech Fest Summit Hong Kong 2025 is a premier technology conference uniting over 1,500 senior tech leaders to explore cloud innovation, cybersecurity, and emerging technologies through panels, workshops, and networking opportunities.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8660705.jpg?t=1755520560"
+    },
+    {
+      "title": "A.S.I.A Tech Development Group Blog",
+      "feed_url": "https://www.asiatechgroup.hk/blog-feed.xml",
+      "website_url": "https://www.asiatechgroup.hk/blog/",
+      "description": "Explore the latest insights, innovations, and updates from A.S.I.A Tech Development Group. Stay ahead with expert perspectives on technology, software development, and industry trends.",
+      "followers": {},
+      "image_url": "https://static.wixstatic.com/media/f9a5e6_c7d2781a641746029ce540c24b4314a6~mv2.webp/v1/fill/w_640,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/f9a5e6_c7d2781a641746029ce540c24b4314a6~mv2.webp?t=1755520429"
+    },
+    {
+      "title": "ePrice.HK",
+      "feed_url": "https://www.eprice.com.hk/news/rss.xml",
+      "website_url": "https://www.eprice.com.hk/",
+      "description": "ePrice.HK is Hong Kong's strongest mobile phone + technology information station.",
+      "followers": {
+        "facebook": 74600
+      },
+      "image_url": "https://i1.feedspot.com/84692.jpg?t=1638189152"
+    }
+  ]
+}

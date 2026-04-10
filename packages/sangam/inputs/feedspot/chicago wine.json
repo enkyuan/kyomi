@@ -1,0 +1,26 @@
+{
+  "category": "Chicago Wine",
+  "source_url": "https://rss.feedspot.com/chicago_wine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Diversey Wine Blog",
+      "feed_url": "https://www.diverseywine.com/blog?format=rss",
+      "website_url": "https://www.diverseywine.com/blog",
+      "description": "Diversey Wine Blog selectively features stories and information on wine as its new arrivals come to Chicago. Diversey Wine specializes in natural wines, which means, for us, wines that are made by real humans, with grapes that are farmed organically, and then fermented naturally in the cellar with no additives.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5450823.jpg?t=1664369554"
+    },
+    {
+      "title": "Grape Experiences",
+      "feed_url": "https://www.grape-experiences.com/feed/",
+      "website_url": "https://www.grape-experiences.com/",
+      "description": "Cindy Rynning writes about wine reviews, food, and wine pairings along with her interviews with winemakers and winery owners. Here on Grape Experiences, you'll enjoy reading articles about my national and international travels, food & wine pairings, and more. Each article is meant to be an insightful and hopefully, entertaining way to help guide you toward your next wine experience.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 12600,
+        "instagram": 3500
+      },
+      "image_url": "https://i1.feedspot.com/5016171.jpg?t=1605159928"
+    }
+  ]
+}

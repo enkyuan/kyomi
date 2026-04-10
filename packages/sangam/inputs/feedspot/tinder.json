@@ -1,0 +1,71 @@
+{
+  "category": "Tinder",
+  "source_url": "https://rss.feedspot.com/tinder_rss_feeds",
+  "feeds": [
+    {
+      "title": "TechCrunch \u00bb Tinder",
+      "feed_url": "https://techcrunch.com/tag/tinder/feed/",
+      "website_url": "https://techcrunch.com/tag/tinder/",
+      "description": "TechCrunch is dedicated to obsessively profiling startups, reviewing gadgets and internet products, and breaking tech news. Follow to get regular updates on tinder from this blog in your inbox.",
+      "followers": {
+        "facebook": 3000000,
+        "twitter": 10300000
+      },
+      "image_url": "https://i1.feedspot.com/5046160.jpg?t=1622546395"
+    },
+    {
+      "title": "Tinder Plus",
+      "feed_url": "https://tinderoplus.com/feed/",
+      "website_url": "https://tinderoplus.com/blog/",
+      "description": "This blog gives information about tinder lite, orientation, swipe techniques and about tinder plus. Get updates about tinder by following our feed.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5046037.jpg?t=1622547031"
+    },
+    {
+      "title": "Dater Help",
+      "feed_url": "https://www.daterhelp.com/blog-feed.xml",
+      "website_url": "https://www.daterhelp.com/dater-help-blog",
+      "description": "Your source for all things Dating Apps. Online dating stories, dating tips, dating advice. A blog created by Tinder's most 'Right-Swiped' Male.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 13,
+        "instagram": 913
+      },
+      "image_url": "https://i1.feedspot.com/5156281.jpg?t=1622546403"
+    },
+    {
+      "title": "Tinder Newsroom",
+      "feed_url": "https://www.tinderpressroom.com/news?pagetemplate=rss",
+      "website_url": "https://www.tinderpressroom.com/",
+      "description": "Tinder is a dating app that is used by over 7 million users worldwide. It allows users to swipe left and right if they like or dislike someone's photos. Follow this blog to get weekly updates of tinder in your inbox.",
+      "followers": {
+        "facebook": 1900000,
+        "twitter": 230000,
+        "instagram": 447400
+      },
+      "image_url": "https://i1.feedspot.com/5046129.jpg?t=1622546349"
+    },
+    {
+      "title": "Georgia Eye Partners Blog",
+      "feed_url": "https://www.gaeyepartners.com/blog/feed/",
+      "website_url": "https://www.gaeyepartners.com/blog/",
+      "description": "PsyPost is a psychology news website dedicated to reporting research related to tinder. PsyPost gives you tactics in appealing and dating people on tinder.",
+      "followers": {
+        "facebook": 210900,
+        "twitter": 208300,
+        "instagram": 55600
+      },
+      "image_url": "https://i1.feedspot.com/5046069.jpg?t=1622546386"
+    },
+    {
+      "title": "MakeUseOf \u00bb Tinder",
+      "feed_url": "https://www.makeuseof.com/tags/tinder/feed/",
+      "description": "MakeUseOf is a technology website, focused on bridging the connection between users, computers, devices and the Internet through education. This blog helps you with tinder and to discover cool stuff on the Internet.",
+      "followers": {
+        "facebook": 120,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5046162.jpg?t=1622546391"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "category": "North Korea Business",
+  "source_url": "https://rss.feedspot.com/north_korea_business_rss_feeds",
+  "feeds": [
+    {
+      "title": "38 North \u00bb Economy",
+      "feed_url": "https://www.38north.org/topics/economy/feed/",
+      "website_url": "https://www.38north.org/topics/economy/",
+      "description": "Explore critical pieces on developments and trends in North Korea's economy, economic infrastructure, and political institutions. 38 North, a publication of the Stimson Center, is an authoritative source of policy and technical analysis regarding North Korea's internal and external affairs.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 39300
+      },
+      "image_url": "https://i1.feedspot.com/7273128.jpg?t=1710413080"
+    },
+    {
+      "title": "Choson Exchange Blog",
+      "feed_url": "https://www.chosonexchange.org/our-blog?format=RSS",
+      "website_url": "https://www.chosonexchange.org/our-blog",
+      "description": "Choson Exchange supports entrepreneurs and business-minded individuals in North Korea through workshops, internships, mentorships and scholarships inside and outside of the DPRK. We also help policymakers, researchers and international media understand North Korea's business and economic environment through on-the-ground research",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 3900,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4740052.jpg?t=1608189881"
+    },
+    {
+      "title": "North Korean Economy Watch",
+      "feed_url": "https://www.nkeconwatch.com/feed/",
+      "website_url": "https://www.nkeconwatch.com/",
+      "description": "Gain valuable insights into the unique practices shaping North Korea's economic prowess, and discover the opportunities for investment, collaboration, and expansion within this vibrant market. North Korean Economy Watch is an affiliate of 38 North, a leading news provider of happenings in North Korea.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5431442.jpg?t=1660292501"
+    }
+  ]
+}

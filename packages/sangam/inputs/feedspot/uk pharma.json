@@ -1,0 +1,94 @@
+{
+  "category": "UK Pharma",
+  "source_url": "https://rss.feedspot.com/uk_pharma_rss_feeds",
+  "feeds": [
+    {
+      "title": "European Pharmaceutical Review",
+      "feed_url": "https://www.europeanpharmaceuticalreview.com/article/feed/",
+      "website_url": "https://www.europeanpharmaceuticalreview.com/article/",
+      "description": "European Pharmaceutical Review is the leading publication for information on technologies in drug discovery and manufacturing.",
+      "followers": {
+        "facebook": 3500,
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4725044.jpg?t=1614146714"
+    },
+    {
+      "title": "Pf Media",
+      "feed_url": "https://pf-media.co.uk/feed/",
+      "website_url": "https://pf-media.co.uk/",
+      "description": "Pf Media represents Pf Magazine, PharmaJobs, and Pf Awards in supporting pharma, life sciences, and health. This Pf Media website delivers up-to-date pharma news, multimedia insight, opinion, and virtual events. It is supported by our quarterly Pf Magazine which brings quality thought-leadership, opinion, analysis, comment, and interviews to the desks of pharma professionals. We also publish our special Pf Awards Brochure celebrating the fantastic achievements of the industry.",
+      "followers": {
+        "facebook": 248,
+        "twitter": 2200
+      },
+      "image_url": "https://i1.feedspot.com/4983947.jpg?t=1710911504"
+    },
+    {
+      "title": "pharmaphorum",
+      "feed_url": "https://pharmaphorum.com/rssfeed/news-and-features",
+      "website_url": "https://pharmaphorum.com/news",
+      "description": "Pharmaphorum reports all the latest Pharma news, views, and analysis of healthcare in a rapidly changing world. At Pharmaphorum We are publishers, consultants, and creatives bringing healthcare together. We support our pharmaceutical industry clients through both the reach and reputation of our publication and our consultative and creative capabilities in marketing, medical, communications, and digital innovation.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 24500
+      },
+      "image_url": "https://i1.feedspot.com/4512272.jpg?t=1614146724"
+    },
+    {
+      "title": "Pharma Industry Review",
+      "feed_url": "https://pharma-industry-review.com/feed",
+      "website_url": "https://pharma-industry-review.com/",
+      "description": "Pharma Industry Review is created to provide you with the latest news, reviews and insights from the pharmaceutical industry so that you can take your business one step ahead.",
+      "followers": {
+        "twitter": 590
+      },
+      "image_url": "https://i1.feedspot.com/5203472.jpg?t=1625844669"
+    },
+    {
+      "title": "The Guardian | Pharmaceuticals industry",
+      "feed_url": "https://www.theguardian.com/business/pharmaceuticals-industry/rss",
+      "website_url": "https://www.theguardian.com/business/pharmaceuticals-industry",
+      "description": "Follow us to keep up with the Latest news about the Pharmaceutical industry from The Guardian, the world's leading liberal voice",
+      "followers": {
+        "facebook": 9200000,
+        "twitter": 10600000
+      },
+      "image_url": "https://i1.feedspot.com/4553609.jpg?t=1614146737"
+    },
+    {
+      "title": "Reuters Events \u00bb Pharma",
+      "feed_url": "https://www.reutersevents.com/pharma/rss.xml",
+      "website_url": "https://www.reutersevents.com/pharma/",
+      "description": "Thought leadership and innovation for the Pharmaceutical Industry. Our mission is to make pharma more open and valued. More open so that the strongest ideas and insights are brought to the fore in a transparent, trustworthy manner. More valued by having an authentic approach to building products and services that matter to patients.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 26800
+      },
+      "image_url": "https://i1.feedspot.com/1369322.jpg?t=1622108014"
+    },
+    {
+      "title": "PharmaTimes",
+      "feed_url": "https://www.pharmatimes.com/rss/news_rss.rss",
+      "website_url": "https://pharmatimes.com/",
+      "description": "PharmaTimes offers a unique blend of health stories, interviews, features, covering all aspects of health as it affects every individual and mankind.",
+      "followers": {
+        "facebook": 22200,
+        "twitter": 57000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4552124.jpg?t=1659014577"
+    },
+    {
+      "title": "PMLiVE",
+      "feed_url": "https://www.pmlive.com/rss/sitewide",
+      "website_url": "https://pmlive.com/",
+      "description": "PMLiVE.com is the online home to PME, Communiqu\u00e9, and The Directory. The platform offers the latest pharma news, analysis, jobs, and events, including the annual Pharmaceutical Market Excellence Awards (PMEAs) and Communiqu\u00e9 Awards.",
+      "followers": {
+        "facebook": 422,
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/2780834.jpg?t=1614146732"
+    }
+  ]
+}

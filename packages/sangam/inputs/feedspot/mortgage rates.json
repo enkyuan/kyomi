@@ -1,0 +1,101 @@
+{
+  "category": "Mortgage Rates",
+  "source_url": "https://rss.feedspot.com/mortgage_rates_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Mortgage Reports",
+      "feed_url": "https://themortgagereports.com/feed",
+      "website_url": "https://themortgagereports.com/all-articles",
+      "description": "The Mortgage Reports cover mortgage rates, mortgage news, mortgage strategy, and real estate.",
+      "followers": {
+        "facebook": 42900,
+        "twitter": 15800,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4643588.jpg?t=1616670289"
+    },
+    {
+      "title": "Canadian Mortgage Trends",
+      "feed_url": "https://www.canadianmortgagetrends.com/feed/",
+      "website_url": "https://www.canadianmortgagetrends.com/",
+      "description": "Canadian Mortgage Trends set out to be a primary source of information on Canada's mortgage market. To empower readers with the tools and insider knowledge needed to make informed mortgage decisions. Get news on Canadian mortgages, mortgage brokers, and mortgage rates.",
+      "followers": {
+        "facebook": 7500,
+        "twitter": 15500
+      },
+      "image_url": "https://i1.feedspot.com/4640333.jpg?t=1616416588"
+    },
+    {
+      "title": "The Mortgage Centre \u00bb Mortgage Rates",
+      "feed_url": "https://mikebrandsma.ca/category/mortgage-rates/feed/",
+      "website_url": "https://mikebrandsma.ca/category/mortgage-rates/",
+      "description": "The Mortgage Centre has access to a number of lenders that provide a wide range of mortgage products and terms to choose from, including major banks, credit unions, mortgage companies and private lenders. Whether you are purchasing your first home or renewing your mortgage years down the road, we're here to help you with all of your mortgage needs. Learn more about mortgage rates, market news, tips and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5507571.jpg?t=1676359849"
+    },
+    {
+      "title": "The Truth About Mortgage \u00bb Mortgage Rates",
+      "feed_url": "https://www.thetruthaboutmortgage.com/category/mortgage-rates/feed/",
+      "website_url": "https://www.thetruthaboutmortgage.com/category/mortgage-rates/",
+      "description": "Find everything you've ever wanted to know about mortgage rates. And even more than that quite possibly the most important aspect of the home loan process. The #1 goal of the The Truth About Mortgage has always been financial literacy. And beyond that, financial empowerment. Because these subjects are rarely taught in school or elsewhere, we must seek out this information on our own from those who have experienced it first hand.",
+      "followers": {
+        "facebook": 773,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5507569.jpg?t=1676359893"
+    },
+    {
+      "title": "Rate Spy",
+      "feed_url": "https://www.ratespy.com/rate-news/feed",
+      "website_url": "https://www.ratespy.com/rate-news",
+      "description": "RateSpy.com is a Canadian mortgage comparison site. Its mission is to uncover Canada's best mortgage rates by comparing virtually every lender and top mortgage broker. The latest news on the best Canadian mortgage rates.",
+      "followers": {
+        "facebook": 490,
+        "twitter": 78
+      },
+      "image_url": "https://i1.feedspot.com/4954716.jpg?t=1616670296"
+    },
+    {
+      "title": "Hatch Mortgages Blog",
+      "feed_url": "https://hatchmortgage.com/blog/feed/",
+      "website_url": "https://hatchmortgage.com/blog/",
+      "description": "Hatch Online Mortgages is an experienced, full-service broker offering the best mortgage rates in Ottawa, Ontario, Canada.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 303
+      },
+      "image_url": "https://i1.feedspot.com/4643986.jpg?t=1616670300"
+    },
+    {
+      "title": "Sammamish Mortgage \u00bb Mortage Rates",
+      "feed_url": "https://www.sammamishmortgage.com/category/mortgage-rates/feed/",
+      "website_url": "https://www.sammamishmortgage.com/category/mortgage-rates/",
+      "description": "Proudly serving the Pacific Northwest since 1992, we're a family-owned and operated company dedicated to helping home buyers get the best possible loan with a great rate. Learn more about mortgage rates, tips and advice, market insights and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5507573.jpg?t=1676359804"
+    },
+    {
+      "title": "CNBC \u00bb Mortgages",
+      "feed_url": "https://www.cnbc.com/id/100617599/device/rss",
+      "website_url": "https://www.cnbc.com/mortgages/",
+      "description": "CNBC is the world leader in business news and real-time financial market coverage. Mortgage and real estate news including mortgage rates, processing, and refinancing.",
+      "followers": {
+        "facebook": 4700000,
+        "twitter": 5400000,
+        "instagram": 3000000
+      },
+      "image_url": "https://i1.feedspot.com/4643667.jpg?t=1616416417"
+    },
+    {
+      "title": "Total Mortgage",
+      "feed_url": "https://www.totalmortgage.com/blog/feed",
+      "website_url": "https://learn.totalmortgage.com/",
+      "description": "Total Mortgage provides insights into mortgage rates and news from the mortgage industry along with offering some of the lowest mortgage rates in the U.S. Our mission is to work individually with you to create a home financing option that makes the most sense for you and your family's future.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/4637888.jpg?t=1616421825"
+    }
+  ]
+}

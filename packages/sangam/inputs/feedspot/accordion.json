@@ -1,0 +1,42 @@
+{
+  "category": "Accordion",
+  "source_url": "https://rss.feedspot.com/accordion_rss_feeds",
+  "feeds": [
+    {
+      "title": "Accordion Chords",
+      "feed_url": "https://accordionchords.com/feed/",
+      "website_url": "https://accordionchords.com/",
+      "description": "Hi! I am Giovanni Lucifero the creator of Accordion Chords. We are a growing resource for beginners and advanced accordionists. We will post music theory lessons, exercises, quizzes, and tutorials to improve your technique and expand your knowledge.",
+      "followers": {
+        "facebook": 54
+      },
+      "image_url": "https://i1.feedspot.com/5411204.jpg?t=1655442562"
+    },
+    {
+      "title": "Accordionists Central",
+      "feed_url": "https://accordionistscentral.com/feed/",
+      "website_url": "https://accordionistscentral.com/",
+      "description": "Accordionists Central features content for beginner and intermediate accordion fans looking to level up their skills, find out more information about accordion music or pick out the best equipment. Accordionists Central - Dedicated to new and veteran accordion players and fans.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411203.jpg?t=1655386177"
+    },
+    {
+      "title": "Accordion Doctor Blog",
+      "feed_url": "https://accordion-doctor.com/feed/",
+      "website_url": "https://accordion-doctor.com/blog/",
+      "description": "We write blog posts on regular basis about anything and everything that has something to do with diatonic button accordions & melodeons. Accordion Doctor is an accordion repair and restoration business owned and operated by Ole Carstensen and Moa Hofer. We specialize in repairing, restoring, and selling all sorts of second-hand diatonic button accordions as used in various folk music styles around the globe.",
+      "followers": {
+        "facebook": 719
+      },
+      "image_url": "https://i1.feedspot.com/5411202.jpg?t=1655441594"
+    },
+    {
+      "title": "Neil Sutcliffe Blog",
+      "feed_url": "https://www.neilsutcliffe.scot/blog-feed.xml",
+      "website_url": "https://www.neilsutcliffe.scot/blog",
+      "description": "Read news, stories, and articles on Accordion, at Neil Sutcliffe Blog. Neil Sutcliffe is a Scottish musician originally from Stirling but now based in Glasgow. His principal instrument is the accordion, on which he plays a variety of styles.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5411205.jpg?t=1655441895"
+    }
+  ]
+}

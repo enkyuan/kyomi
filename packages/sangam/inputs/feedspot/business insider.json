@@ -1,0 +1,18 @@
+{
+  "category": "Business Insider",
+  "source_url": "https://rss.feedspot.com/businessinsider_rss_feeds",
+  "feeds": [
+    {
+      "title": "Business Insider",
+      "feed_url": "https://feeds.businessinsider.com/custom/all",
+      "website_url": "https://www.businessinsider.com/",
+      "description": "All latest articles from Business Insider.",
+      "followers": {
+        "facebook": 15100000,
+        "twitter": 4099999,
+        "instagram": 4900000
+      },
+      "image_url": "https://i1.feedspot.com/5396971.jpg?t=1758095885"
+    }
+  ]
+}

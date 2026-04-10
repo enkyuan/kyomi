@@ -1,0 +1,73 @@
+{
+  "category": "Kenyan Food",
+  "source_url": "https://rss.feedspot.com/kenyan_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Leo Tunapika?",
+      "feed_url": "https://leotunapika.com/feed/",
+      "website_url": "https://leotunapika.com/",
+      "description": "My name is Gatuiri Mwangi, a Kenyan food blogger and I love good food. I started this food blog to journal my kitchen adventures. Join me as I answer the daily question, Leo tunapika? (what's cooking?)",
+      "followers": {
+        "facebook": 29900,
+        "twitter": 9600,
+        "instagram": 49200
+      },
+      "image_url": "https://i1.feedspot.com/5171519.jpg?t=1623144296"
+    },
+    {
+      "title": "Nairobi Kitchen",
+      "feed_url": "https://nairobikitchen.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://nairobikitchen.blogspot.com/",
+      "description": "In Nairobi Kitchen, you will find Mulunga who loves eating what she has cooked. You will mostly find her perusing recipe sites, cooking channels to find that perfect recipe. Her all-time favourite cooking shows are Master Chef, Hells Kitchen, Cake Boss, Royco Fuata Flavor, and My Kitchen Rules. Follow her blog to experience cooking together.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 98,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5171543.jpg?t=1623397263"
+    },
+    {
+      "title": "Yummy Magazine",
+      "feed_url": "https://yummy.co.ke/feed/",
+      "website_url": "https://yummy.co.ke/",
+      "description": "Yummy is a food and lifestyle publication that brings you the best in food, drinks, and all-around life content!",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 773
+      },
+      "image_url": "https://i1.feedspot.com/5171778.jpg?t=1623397268"
+    },
+    {
+      "title": "Healthy Living Kenya",
+      "feed_url": "https://healthylivingkenya.wordpress.com/feed/",
+      "website_url": "https://healthylivingkenya.wordpress.com/",
+      "description": "Eating healthy is the best choice to make for your diet. Follow the blog to get updates on healthy living and a good life.",
+      "followers": {
+        "facebook": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4290040.jpg?t=1623397272"
+    },
+    {
+      "title": "Toasterding",
+      "feed_url": "https://toasterding.com/feed/",
+      "website_url": "https://toasterding.com/",
+      "description": "Straight to the point recipes, no backstories. Detailed food blog posts that are beginner-friendly, as we assume no prior knowledge.",
+      "followers": {
+        "instagram": 41
+      },
+      "image_url": "https://i1.feedspot.com/5564835.jpg?t=1683800711"
+    },
+    {
+      "title": "Kaluhi's Kitchen",
+      "feed_url": "https://www.kaluhiskitchen.com/",
+      "website_url": "https://www.kaluhiskitchen.com/",
+      "description": "Kaluhi shares with you her self-taught recipes, steeped in nostalgia and the happiest of memories. Kaluhi's Kitchen is a Kenyan food blog, for the everyday Kenyan, which plans to change the way people plan for meals, cook, eat, and share their food.",
+      "followers": {
+        "facebook": 54000,
+        "twitter": 83500,
+        "instagram": 116400
+      },
+      "image_url": "https://i1.feedspot.com/4676297.jpg?t=1600346734"
+    }
+  ]
+}

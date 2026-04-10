@@ -1,0 +1,115 @@
+{
+  "category": "Japan Art",
+  "source_url": "https://rss.feedspot.com/japan_art_rss_feeds",
+  "feeds": [
+    {
+      "title": "ART iT",
+      "feed_url": "https://www.art-it.asia/en/feed/",
+      "website_url": "https://www.art-it.asia/en/",
+      "description": "ART iT intends to rethink the nature of online media. Rather than focusing on constantly updated information, the publication features in-depth, articulated ideas about contemporary art and culture.",
+      "followers": {
+        "facebook": 6800,
+        "twitter": 43000,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/5343007.jpg?t=1636980809"
+    },
+    {
+      "title": "quartier-latin Art Blog",
+      "feed_url": "https://www.quartier-latin.jp/art/blog/rss2.xml",
+      "website_url": "https://www.quartier-latin.jp/art/blog/",
+      "description": "From basic drawings, watercolor paintings to Western paintings (oil paintings) and Japanese paintings.",
+      "followers": {
+        "facebook": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5343010.jpg?t=1636978179"
+    },
+    {
+      "title": "Theory of art",
+      "feed_url": "https://theory-of-art.blog.jp/index.rdf",
+      "website_url": "https://theory-of-art.blog.jp/",
+      "description": "I'm Akina, an art writer / blogger. The blog covers museums and galleries with photos and reviews of the theories behind many famous arts.",
+      "followers": {
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5343011.jpg?t=1636976116"
+    },
+    {
+      "title": "Art School Osaka Blog",
+      "feed_url": "https://www.art-school.co.jp/blog/feed/",
+      "website_url": "https://www.art-school.co.jp/blog/",
+      "description": "This is a school where you can feel art. A place where children and seniors can go whenever they want. Take a peek at the blog for articles about various art forms done by people of all ages.",
+      "followers": {
+        "facebook": 968,
+        "twitter": 1300,
+        "instagram": 519
+      },
+      "image_url": "https://i1.feedspot.com/5343013.jpg?t=1636979444"
+    },
+    {
+      "title": "grape Japan \u00bb Art",
+      "feed_url": "https://grapeejapan.com/category/art/feed",
+      "website_url": "https://grapeejapan.com/category/art",
+      "description": "Welcome to Grape Japan, a website dedicated to sharing interesting content related to Japan, ranging from the country's most beautiful traditional aspects to its popular modern sub-cultures.",
+      "followers": {
+        "facebook": 227800,
+        "twitter": 2600,
+        "instagram": 4800
+      },
+      "image_url": "https://i1.feedspot.com/5343006.jpg?t=1636981251"
+    },
+    {
+      "title": "The Art Blog",
+      "feed_url": "https://theart.co.jp/blog/feed/",
+      "website_url": "http://theart.co.jp/blog/",
+      "description": "We will inform you about exhibition and event information on arts in Japan promptly along with information on famous arts and artists.",
+      "followers": {
+        "facebook": 44,
+        "twitter": 1800,
+        "instagram": 10100
+      },
+      "image_url": "https://i1.feedspot.com/5343002.jpg?t=1636980968"
+    },
+    {
+      "title": "NHK Himi Blog",
+      "feed_url": "https://www.nhk.or.jp/nichibi-blog/index.xml",
+      "website_url": "https://www.nhk.or.jp/nichibi-blog/",
+      "description": "NHK blog covers articles on exhibition information, studio flowers, art columns, and more; delivered by the Sunday Art Museum.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5342999.jpg?t=1636975941"
+    },
+    {
+      "title": "Art mind Blog",
+      "feed_url": "https://rssblog.ameba.jp/artmind-japan/rss20.xml",
+      "website_url": "https://ameblo.jp/artmind-japan/entrylist.html",
+      "description": "This blog is a blog that introduces the art mind coaching, art mind drawing power run by the Japan Art Education Promotion Association and spells out knowledge and know-how about art.",
+      "followers": {
+        "facebook": 5800,
+        "twitter": 181,
+        "instagram": 6200
+      },
+      "image_url": "https://i1.feedspot.com/5343008.jpg?t=1636975605"
+    },
+    {
+      "title": "SHIFT Blog",
+      "feed_url": "https://www.shift.jp.org/en/blog/feed/",
+      "website_url": "https://www.shift.jp.org/en/blog/",
+      "description": "SHIFT is an online magazine about culture and creative industries, including art, design, fashion, music and multimedia.Our magazine provides in-depth articles, such as interviews, exhibition/event reports, publications reviews, in both Japanese and English.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/5343001.jpg?t=1636980543"
+    },
+    {
+      "title": "The Japan Times \u00bb Art",
+      "feed_url": "https://www.japantimes.co.jp/culture/art/",
+      "website_url": "https://www.japantimes.co.jp/culture/art/",
+      "description": "News and features from the most widely read English-newspaper in Japan. Full coverage of the visual arts in Japan.",
+      "followers": {
+        "facebook": 900500,
+        "twitter": 467800
+      },
+      "image_url": "https://i1.feedspot.com/5343003.jpg?t=1636980143"
+    }
+  ]
+}

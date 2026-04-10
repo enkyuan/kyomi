@@ -1,0 +1,331 @@
+{
+  "category": "Twin Cities",
+  "source_url": "https://rss.feedspot.com/twin_cities_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mpls.St.Paul Magazine",
+      "feed_url": "https://mspmag.com/api/rss/content.rss",
+      "website_url": "https://mspmag.com/topics/music_1/",
+      "description": "Find out about the best places to dine, shop, go out, and live a healthy life from the editors of Mpls.St.Paul Magazine. Get the latest Twin Cities lifestyle news and ideas, plus search the editor-curated restaurant, shops, health, and wedding guides of resources in Minneapolis and St. Paul.",
+      "followers": {
+        "facebook": 89400,
+        "twitter": 154700,
+        "instagram": 190300
+      },
+      "image_url": "https://i1.feedspot.com/4923337.jpg?t=1611032532"
+    },
+    {
+      "title": "Twin Cities Gateway | Twin Cities Tourism Blog",
+      "feed_url": "https://www.tcgateway.com/blog/feed/",
+      "website_url": "https://www.tcgateway.com/blog/",
+      "description": "The Twin Cities Gateway area & the towns near Minneapolis offer exciting attractions, hotels & amenities. Twin Cities Gateway offers access to the excitement of the metro area while holding onto small town charm.",
+      "followers": {
+        "facebook": 22900,
+        "twitter": 619
+      },
+      "image_url": "https://i1.feedspot.com/4923123.jpg?t=1611032539"
+    },
+    {
+      "title": "Pioneer Press",
+      "feed_url": "https://www.twincities.com/feed/",
+      "website_url": "https://www.twincities.com/",
+      "description": "Twin Cities news, sports, politics, entertainment and business from the St. Paul Pioneer Press, Minnesota's first newspaper.",
+      "followers": {
+        "facebook": 115300,
+        "twitter": 183400
+      },
+      "image_url": "https://i1.feedspot.com/4826140.jpg?t=1611032542"
+    },
+    {
+      "title": "Family Fun Twin Cities | Twin Cities Events Blog",
+      "feed_url": "https://www.familyfuntwincities.com/feed/",
+      "website_url": "https://www.familyfuntwincities.com/",
+      "description": "FamilyFunTwinCities is a website dedicated to connecting families with fun activities in the Twin Cities and greater Minnesota.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 798,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4923517.jpg?t=1611032547"
+    },
+    {
+      "title": "Star Tribune",
+      "feed_url": "https://www.startribune.com/local/index.rss2",
+      "website_url": "https://www.startribune.com/",
+      "description": "Your source for Minnesota news today. Read articles, view photos or watch videos about news in Minneapolis, St. Paul, Duluth, St. Cloud, Rochester, and beyond.",
+      "followers": {
+        "facebook": 275700,
+        "twitter": 431600,
+        "instagram": 211600
+      },
+      "image_url": "https://i1.feedspot.com/10911.jpg?t=1611032551"
+    },
+    {
+      "title": "Eater Twin Cities",
+      "feed_url": "https://twincities.eater.com/rss/index.xml",
+      "website_url": "https://twincities.eater.com/",
+      "description": "Eater Twin Cities is a local Restaurant, Bar, and Nightlife Blog. From the vibrant colors to the intricate textures, the blog dissects the artistry behind every dish, appreciating the creativity, skill, and dedication that goes into each culinary creation.",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 9900,
+        "instagram": 1500000
+      },
+      "image_url": "https://i1.feedspot.com/4922797.jpg?t=1611032553"
+    },
+    {
+      "title": "Pioneer Press \u00bb Twin Cities Crime and Public Safety",
+      "feed_url": "https://www.twincities.com/news/crime-public-safety/feed/",
+      "website_url": "https://www.twincities.com/news/crime-public-safety/",
+      "description": "Coverage of crime, trials, and public safety in St. Paul, MN, as well as Ramsey County, Washington County and Dakota County.",
+      "followers": {
+        "facebook": 115300,
+        "twitter": 183400,
+        "instagram": 16600
+      },
+      "image_url": "https://i1.feedspot.com/4923242.jpg?t=1611032563"
+    },
+    {
+      "title": "Wit & Delight",
+      "feed_url": "http://witanddelight.com/feed/",
+      "website_url": "https://witanddelight.com/",
+      "description": "Wit & Delight was created in late 2008 while Kate was working as a graphic designer in Minneapolis, Minnesota. Kate Arends started Wit & Delight to discover how style fit into her life. Wit & Delight became Kate's way of considering all areas where style is concerned, serving as a platform for her thought process in developing her own personal style.",
+      "followers": {
+        "facebook": 15700,
+        "twitter": 11800,
+        "instagram": 318900
+      },
+      "image_url": "https://i1.feedspot.com/1817745.jpg?t=1601730532"
+    },
+    {
+      "title": "The Herbivorous Butcher Blog",
+      "feed_url": "https://www.theherbivorousbutcher.com/blogs/blog.atom",
+      "website_url": "https://www.theherbivorousbutcher.com/blogs/blog",
+      "description": "Sister and brother duo Aubry and Kale Walch have spent the last several years perfecting The Herbivorous Butcher's deliciously deceiving meat-free meats. We'd love to share with you stories from our shop and the foods that we make.",
+      "followers": {
+        "facebook": 85600,
+        "twitter": 9700,
+        "instagram": 129699
+      },
+      "image_url": "https://i1.feedspot.com/4923457.jpg?t=1653984036"
+    },
+    {
+      "title": "Twin Cities Geek | Twin Cities Geek Culture Magazine",
+      "feed_url": "https://feeds.feedburner.com/TwinCitiesGeek",
+      "website_url": "https://twincitiesgeek.com/",
+      "description": "Twin Cities Geek is an online culture magazine for the self-identifying geek community in Minnesota, particularly focused around the areas of Minneapolis, MN and Saint Paul, MN. Find news on events, conventions, pop culture, gaming, LGBTQA, forums, event calendar & more.",
+      "followers": {
+        "facebook": 10400,
+        "twitter": 7100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/4923434.jpg"
+    },
+    {
+      "title": "Homes MSP Team Blog",
+      "feed_url": "https://homesmsp.com/feed",
+      "website_url": "https://homesmsp.com/blog",
+      "description": "Covers posts on Real estate updates, Buying a home, Home maintenance, Home Staging Tips, Homes for Sale, Foreclosures, and more.The Homes MSP Team is committed to using their extensive knowledge of the market, local neighborhoods, and housing styles to give you personalized service to help you find the home and neighborhood that fit your lifestyle.",
+      "followers": {
+        "facebook": 240,
+        "twitter": 1500,
+        "instagram": 216
+      },
+      "image_url": "https://i1.feedspot.com/4923428.jpg?t=1632288266"
+    },
+    {
+      "title": "Reviler",
+      "feed_url": "https://www.reviler.org/feed/",
+      "website_url": "https://www.reviler.org/",
+      "description": "Reviler is a Minneapolis/St. Paul-based music site that has been operating since 2009. It covers music from all over the map but with special emphasis on the local Minneapolis/St. Paul scene. Stay tuned for reviews, interviews, and insights into the heart of the city's sonic landscape.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 2000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4923005.jpg?t=1611032574"
+    },
+    {
+      "title": "The Heavy Table | Twin Cities Food Magazine",
+      "feed_url": "http://heavytable.com/feed/",
+      "website_url": "https://heavytable.com/",
+      "description": "The Heavy Table is a Twin Cities-based magazine passionately telling the stories of food and drink from roots to table in the Upper Midwest.",
+      "followers": {
+        "facebook": 12400,
+        "twitter": 15600
+      },
+      "image_url": "https://i1.feedspot.com/165595.jpg?t=1611032596"
+    },
+    {
+      "title": "Twin Cities Arts | Twin Cities Arts and Lifestyle Blog",
+      "feed_url": "https://twincitiesarts.com/feed/",
+      "website_url": "http://twincitiesarts.com/",
+      "description": "The Twin Cities Arts Reader is an online arts and lifestyle magazine serving the greater Twin Cities metro region.",
+      "followers": {
+        "facebook": 560,
+        "twitter": 76
+      },
+      "image_url": "https://i1.feedspot.com/4923514.jpg?t=1611032584"
+    },
+    {
+      "title": "Twin City Sidewalks",
+      "feed_url": "http://tcsidewalks.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://tcsidewalks.blogspot.com/",
+      "description": "A blog on urban planning and sidewalks and city life. Bill Lindeke keeps a great chronicle of all that. He snaps pictures of sidewalks and then writes about the area.",
+      "followers": {
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/4923423.jpg"
+    },
+    {
+      "title": "Twin Cities Daily Planet | Twin Cities News",
+      "feed_url": "https://www.tcdailyplanet.net/feed/",
+      "website_url": "https://www.tcdailyplanet.net/",
+      "description": "The Daily Planet is a media arts project of the Twin Cities Media Alliance, a nonprofit organization dedicated to equipping individuals and organizations with the power of media arts to shape narratives that advance equity and justice.",
+      "followers": {
+        "facebook": 8100,
+        "twitter": 9300
+      },
+      "image_url": "https://i1.feedspot.com/4923475.jpg?t=1611032545"
+    },
+    {
+      "title": "Business Journal | Twin Cities Business News",
+      "feed_url": "http://feeds.bizjournals.com/bizj_twincities",
+      "website_url": "https://www.bizjournals.com/twincities/",
+      "description": "The Minneapolis/St Paul Business Journal is the source for local business news, research and events in the greater Minneapolis/St Paul region.",
+      "followers": {
+        "facebook": 49400,
+        "twitter": 42100
+      },
+      "image_url": "https://i1.feedspot.com/699737.jpg?t=1611032557"
+    },
+    {
+      "title": "Twin Cities Kids Club | Twin Cities Family Blog",
+      "feed_url": "https://twincitieskidsclub.com/feed/",
+      "website_url": "https://twincitieskidsclub.com/blog/",
+      "description": "Twin Cities Kids Club is a fun, active club for ALL families in the Minneapolis/St. Paul area and surrounding suburbs. We are passionate about connecting families with local businesses and organizations throughout the Twin Cities, and we take pride in offering families valuable memberships that result in invaluable experiences.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 449,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4923442.jpg?t=1611032559"
+    },
+    {
+      "title": "Twin Cities Gamer | Twin Cities Gaming Blog",
+      "feed_url": "https://twincitiesfieldofglory.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://twincitiesfieldofglory.blogspot.com/",
+      "description": "A blog about 28mm miniature painting and playing Saga, Bolt Action, Frostgrave and other rules.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4923438.jpg?t=1611033532"
+    },
+    {
+      "title": "Secrets of the City | Twin Cities Arts and Culture Blog",
+      "feed_url": "https://www.secretsofthecity.com/feed/",
+      "website_url": "http://www.secretsofthecity.com/",
+      "description": "A daily digest of Twin Cities arts and culture.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/1711797.jpg?t=1611032567"
+    },
+    {
+      "title": "Twin Cities Pride | Twin Cities LGBT Blog",
+      "feed_url": "https://tcpride.org/feed/",
+      "website_url": "https://tcpride.org/",
+      "description": "The mission of Twin Cities Pride is to create experiences that bring the greater GLBT community together to commemorate our diverse heritage, foster inclusion, educate and create awareness of issues, and celebrate achievements in equality.",
+      "followers": {
+        "facebook": 45200,
+        "twitter": 6100,
+        "instagram": 22800
+      },
+      "image_url": "https://i1.feedspot.com/4923524.jpg?t=1611032579"
+    },
+    {
+      "title": "Twin Cities Stages",
+      "feed_url": "https://www.twincitiesstages.com/blog-feed.xml",
+      "website_url": "https://www.twincitiesstages.com/",
+      "description": "I am a theatre lover who has been trying to see as much trying to soak up all at the Twin Cities has to offer. This blog is a place for me to share my thoughts about the shows I see. I would love to start and conversation and hope that others get out to enjoy theatre.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 362
+      },
+      "image_url": "https://i1.feedspot.com/4923311.jpg?t=1611032598"
+    },
+    {
+      "title": "Compassionate Action for Animals | Twin Cities Vegan Blog",
+      "feed_url": "https://exploreveg.org/feed/",
+      "website_url": "https://exploreveg.org/blog/",
+      "description": "Compassionate Action for Animals exists to build a truly animal-friendly community in the Twin Cities region. Through outreach, education, and community building, we educate the public about animal suffering and help people move toward a vegan diet.",
+      "followers": {
+        "facebook": 8800,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4923448.jpg?t=1611032603"
+    },
+    {
+      "title": "Pink and Navy Stripes | Twin Cities Style and Beauty Blog",
+      "feed_url": "https://pinkandnavystripes.com/feed/",
+      "website_url": "https://pinkandnavystripes.com/",
+      "description": "A Style and Beauty Website -",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 201,
+        "instagram": 17600
+      },
+      "image_url": "https://i1.feedspot.com/4923484.jpg?t=1611032615"
+    },
+    {
+      "title": "Concert Communicator | Twin Cities Concert Blog",
+      "feed_url": "https://www.concertcommunicator.com/blog-feed.xml",
+      "website_url": "https://www.concertcommunicator.com/concert-news",
+      "description": "A complete resource for Minneapolis concerts & St. Paul concerts including calendar, reviews, galleries, ticket buying links and Twin Cities venue information.",
+      "followers": {
+        "facebook": 194,
+        "twitter": 133
+      },
+      "image_url": "https://i1.feedspot.com/4923356.jpg?t=1611032617"
+    },
+    {
+      "title": "Twin Cities Family Blog",
+      "feed_url": "https://twincitiesfamily.com/feed/",
+      "website_url": "https://twincitiesfamily.com/blog/",
+      "description": "Twin Cities Mom Collective is a locally-focused parenting resource for moms and families. Passionate about parenting and our community, TCMC strives to connect area moms to relevant resources, local businesses, can't-miss happenings, and most of all - each other!",
+      "followers": {
+        "facebook": 43200,
+        "twitter": 3200,
+        "instagram": 29200
+      },
+      "image_url": "https://i1.feedspot.com/4923350.jpg?t=1611032561"
+    },
+    {
+      "title": "Phenomnal Twin Cities | Twin Cities Coupon Blog",
+      "feed_url": "https://www.phenomnaltwincities.com/feed/",
+      "website_url": "https://www.phenomnaltwincities.com/",
+      "description": "A budget-oriented blog to getting the most out of living in Minneapolis and St. Paul, Minnesota. Find coupons, show tickets and deals to restaurants and entertainment. Daily Twin Cities Deals and Discounts for events.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4923302.jpg?t=1611033912"
+    },
+    {
+      "title": "Leyen Decker Luxury",
+      "feed_url": "https://leyendeckerluxury.com/blog/",
+      "website_url": "https://leyendeckerluxury.com/blog/",
+      "description": "Leyendecker Realty is a boutique, luxury real estate agency that strives to bring unparalleled integrity, service, marketing, talent and professional standards to each transaction they handle. With more than 650 properties sold for over a quarter of $1 billion in residential sales experience, this dedicated team brings a wealth of knowledge to the Twin Cities home and condo/loft market and consistently provides their clients with world class fiduciary care, advocacy and representation.",
+      "followers": {
+        "facebook": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4923431.jpg?t=1607434907"
+    },
+    {
+      "title": "SOULSITE",
+      "feed_url": "https://soulsitemedia.com/feed/",
+      "website_url": "https://soulsitemedia.com/",
+      "description": "Lifestyle Photographer, Blogger and Social Media Consultant. I love capturing real moments that will live on forever. I hope to stir your soul with inspiration and all the best life has to offer from the Twin Cities and beyond.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4923315.jpg?t=1611033876"
+    }
+  ]
+}

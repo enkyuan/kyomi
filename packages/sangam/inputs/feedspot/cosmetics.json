@@ -1,0 +1,494 @@
+{
+  "category": "Cosmetics",
+  "source_url": "https://rss.feedspot.com/cosmetics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Phyrra",
+      "feed_url": "https://phyrra.net/feed",
+      "website_url": "https://phyrra.net/",
+      "description": "Pale? It's called porcelain and I'm rockin' it Hi, I'm Courtney, I'm a writer and a beauty addict. I share honest reviews, how-to's, tips and more to help you be fearlessly beautiful. I specialize in pale girl beauty, hooded eye makeup, cruelty free beauty and vegan fashion.",
+      "followers": {
+        "facebook": 110100,
+        "twitter": 12300,
+        "instagram": 23400
+      },
+      "image_url": "https://i1.feedspot.com/4754421.jpg?t=1608547535"
+    },
+    {
+      "title": "Makeup and Beauty Blog",
+      "feed_url": "https://makeupandbeautyblog.com/feed/",
+      "website_url": "https://makeupandbeautyblog.com/",
+      "description": "A beauty blog blooming with fresh makeup reviews, makeup tips, tutorials, swatches and pictures from your friendly neighborhood beauty addict.",
+      "followers": {
+        "facebook": 14800,
+        "twitter": 28300,
+        "instagram": 20900
+      },
+      "image_url": "https://i1.feedspot.com/226162.jpg?t=1625036282"
+    },
+    {
+      "title": "The Derm Review",
+      "feed_url": "https://thedermreview.com/feed/",
+      "website_url": "https://thedermreview.com/",
+      "description": "A comprehensive resource on skin care products, cosmetic ingredients and beauty how to's. We give you in-depth and concise advice to help you get the most out of your beauty regimen. In addition to our reviews, we also provide a platform that allows consumers to rate their favorite skin care products.",
+      "followers": {
+        "facebook": 94,
+        "twitter": 6
+      },
+      "image_url": "https://i1.feedspot.com/1545267.jpg?t=1641388802"
+    },
+    {
+      "title": "Global Cosmetics News",
+      "feed_url": "https://www.globalcosmeticsnews.com/feed/",
+      "website_url": "https://www.globalcosmeticsnews.com/",
+      "description": "Global Cosmetics News is a digital publisher of the latest global business information for professionals working in the cosmetics industry. They cover daily news relating to all aspects of the cosmetics industry, from ingredients and packaging design to manufacturing processes, product launches, and digital technology.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2100,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4754638.jpg?t=1613036886"
+    },
+    {
+      "title": "Premium Beauty News",
+      "feed_url": "https://www.premiumbeautynews.com/spip.php?page=backend&id_rubrique=1&lang=en/feed",
+      "website_url": "https://www.premiumbeautynews.com/",
+      "description": "Premium Beauty News provides professionals in the cosmetics and beauty industries with business news on markets and trends, regulations, ingredients, packaging and environmental issues.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4754639.jpg?t=1613036932"
+    },
+    {
+      "title": "The Small Things Blog \u00bb Beauty",
+      "feed_url": "https://www.thesmallthingsblog.com/category/beauty/feed/",
+      "website_url": "https://www.thesmallthingsblog.com/category/beauty/",
+      "description": "This fan page is intended for conversation and sharing, but please don't use it for self-promotion or to promote giveaways/contests on your personal blog.",
+      "followers": {
+        "facebook": 255700,
+        "twitter": 18200,
+        "instagram": 516700
+      },
+      "image_url": "https://i1.feedspot.com/4754558.jpg?t=1613036928"
+    },
+    {
+      "title": "Hello Miss Niki",
+      "feed_url": "https://www.hellomissniki.com/feed/",
+      "website_url": "https://www.hellomissniki.com/",
+      "description": "HelloMissNiki.com is a blog dedicated beauty, lifestyle and beyond! This blog inspires others with in-depth product reviews, tips, tricks, DIYs and more.",
+      "followers": {
+        "facebook": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4004809.jpg?t=1613036936"
+    },
+    {
+      "title": "Really Ree",
+      "feed_url": "https://reallyree.com/feed/",
+      "website_url": "https://reallyree.com/",
+      "description": "I'm Ree and I started my blog, ReallyRee.com in 2010. I am obsessed with everything to do with beauty and love discovering new products and sharing my findings. I love to write about beauty in an honest and accessible way for people just like me. You'll find sneak peeks, in-depth reviews, photos, swatches and more!",
+      "followers": {
+        "facebook": 10900,
+        "twitter": 31000,
+        "instagram": 68600
+      },
+      "image_url": "https://i1.feedspot.com/4553710.jpg?t=1642571833"
+    },
+    {
+      "title": "Musings of a Muse",
+      "feed_url": "https://www.musingsofamuse.com/feed",
+      "website_url": "https://www.musingsofamuse.com/",
+      "description": "Musings of a Muse is a makeup and beauty blog dedicated to makeup reviews, beauty on a budget finds, skincare, and much more from both the US and Asia.",
+      "followers": {
+        "facebook": 17800,
+        "twitter": 15800,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/17146.jpg?t=1609851647"
+    },
+    {
+      "title": "Makeup Savvy",
+      "feed_url": "https://feeds.feedburner.com/co/XRuB",
+      "website_url": "https://www.makeupsavvy.co.uk/",
+      "description": "Makeup Savvy is a beauty blog wrote by Fee focusing primarily on low-cost products on the high street & online. With product reviews to tips on how to be more savvy!",
+      "followers": {
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/1891025.jpg?t=1613036945"
+    },
+    {
+      "title": "Wake Up For Makeup",
+      "feed_url": "http://wakeupformakeup.com/feed/",
+      "website_url": "http://wakeupformakeup.com/",
+      "description": "I'm Ivy and I really do wake up for makeup. I studied art in college and was a graphic designer in the ad agency world until my makeup dreams intervened. I am a freelance makeup artist and previously served as Operations Consultant and Senior Education Consultant & Certified Color Artist for Sephora. I do makeup and talk about it on the internet.",
+      "followers": {
+        "facebook": 3400,
+        "twitter": 1400,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/4753854.jpg?t=1609852485"
+    },
+    {
+      "title": "Cosmetic Proof",
+      "feed_url": "https://www.cosmeticproof.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.cosmeticproof.com/",
+      "description": "Cosmetic Proof is a Vancouver beauty blogger, nail artist, skincare and makeup fiend with a love for science, nail art and super cool skincare. Also cats.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2200,
+        "instagram": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4014208.jpg?t=1605176266"
+    },
+    {
+      "title": "Koel Colours Blog - Tips, News and Reviews",
+      "feed_url": "https://koelcolours.com/feed/",
+      "website_url": "https://koelcolours.com/category/news/",
+      "description": "Check out our blog periodically for timely tips, news and reviews about pharmaceutical dyes & cosmetic pigments from leading colorant manufacturer in India.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/4754690.jpg?t=1613036953"
+    },
+    {
+      "title": "Lisa Eldridge",
+      "feed_url": "https://www.lisaeldridge.com/blogs/articles.atom",
+      "website_url": "https://www.lisaeldridge.com/blogs/articles",
+      "description": "Lisa Eldridge is a Pro Makeup Artist, Creative Director and author of NY Times bestselling book 'Face Paint - The Story Of Makeup'. This blog is on makeup, fresh, flawless skin and an understated modern approach to beauty. Subscribe to get latest articles from this blog in your inbox.",
+      "followers": {
+        "facebook": 546600,
+        "twitter": 147600,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/4536134.jpg?t=1605178991"
+    },
+    {
+      "title": "Youngblood Mineral Cosmetics Blog",
+      "feed_url": "https://youngbloodmineralcosmetics.com.au/blogs/blogs.atom",
+      "website_url": "https://youngbloodmineralcosmetics.com.au/blogs/blogs",
+      "description": "Everything beauty related, check out our YB blog for make up tutorials, beauty trend reports and news on all our latest products. Breathe new life into your skin with Youngblood Mineral Cosmetics. Made from 100% pure minerals, Youngblood provides superior coverage for all ages.",
+      "followers": {
+        "facebook": 20800,
+        "twitter": 590,
+        "instagram": 17900
+      },
+      "image_url": "https://i1.feedspot.com/4751330.jpg?t=1613037064"
+    },
+    {
+      "title": "Cruelty-Free Kitty",
+      "feed_url": "https://www.crueltyfreekitty.com/feed/",
+      "website_url": "https://www.crueltyfreekitty.com/",
+      "description": "Your resource for cruelty-free makeup and cosmetics not tested on animals. Cruelty-Free Kitty is a beauty blog and resource for curated cruelty-free information. We're into cruelty-free makeup, beauty tips, and healthy lifestyle choices.",
+      "followers": {
+        "facebook": 66900,
+        "twitter": 9600,
+        "instagram": 163700
+      },
+      "image_url": "https://i1.feedspot.com/4754696.jpg?t=1608547624"
+    },
+    {
+      "title": "Beauty Crazed in Canada",
+      "feed_url": "http://www.beautycrazed.ca/feeds/posts/default?alt=rss",
+      "website_url": "http://www.beautycrazed.ca/",
+      "description": "Two quirky girls from Toronto, Canada review products, trash fashion and generally have a good time with the world of beauty.",
+      "followers": {
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4752558.jpg?t=1611224431"
+    },
+    {
+      "title": "Katherine Daniels Cosmetics Blog",
+      "feed_url": "https://katherinedanielscosmetics.com/blogs/blog.atom",
+      "website_url": "https://katherinedanielscosmetics.com/blogs/blog",
+      "description": "We are dedicated to giving British salons the tools they truly need to treat skin in the UK effectively and we are committed to de-mystifying skincare for everyone.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 1200,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/4753920.jpg"
+    },
+    {
+      "title": "The RAEviewer",
+      "feed_url": "http://feeds.feedburner.com/TheRaeviewer",
+      "website_url": "http://www.theraeviewer.com/",
+      "description": "TheRAEviewer.com is the journaled resource hub for luxury and designer cosmetics, all falling under RAEview beauty umbrella. TheRAEviewer.com features in-depth product reviews, photos, swatches, and video tutorials.",
+      "followers": {
+        "facebook": 30300,
+        "twitter": 12300,
+        "instagram": 57600
+      },
+      "image_url": "https://i1.feedspot.com/1389076.jpg?t=1613036841"
+    },
+    {
+      "title": "This That Beauty",
+      "feed_url": "http://thisthatbeauty.com/feed/",
+      "website_url": "https://thisthatbeauty.com/",
+      "description": "Felicia is a Publisher and Editor in Chief for ThisThatBeauty, a top-rated blog that features fashion, product reviews, trend spotting, industry interviews, and more.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 30600,
+        "instagram": 72400
+      },
+      "image_url": "https://i1.feedspot.com/4473120.jpg?t=1605164172"
+    },
+    {
+      "title": "Pretty Connected",
+      "feed_url": "https://prettyconnected.com/feed/",
+      "website_url": "https://prettyconnected.com/",
+      "description": "Pretty Connected is a NYC based style, beauty, lifestyle and travel blog founded by Lara Eurdolian. Get the latest fashion news, cosmetic launches and product reviews.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 12800,
+        "instagram": 64300
+      },
+      "image_url": "https://i1.feedspot.com/4753264.jpg?t=1613036844"
+    },
+    {
+      "title": "Cosmetics Gears",
+      "feed_url": "https://www.cosmeticsgears.com/feed/",
+      "website_url": "https://www.cosmeticsgears.com/",
+      "description": "Aleeza is an ordinary girl, who fails to blend her eyeshadow properly and has too many blushes and hopes that she doesn't find her holy grail makeup products since she enjoys the hunt so much. Her aim is to provide an honest review of products for skincare, makeup, and everything beauty related.",
+      "followers": {
+        "twitter": 15
+      },
+      "image_url": "https://i1.feedspot.com/5564830.jpg?t=1683800422"
+    },
+    {
+      "title": "Into The Gloss",
+      "feed_url": "https://feeds.feedburner.com/intothegloss/oqoU",
+      "website_url": "https://intothegloss.com/",
+      "description": "Into The Gloss is an enriching source of beauty tips, makeup tutorials, product reviews, and techniques from industry leaders worldwide. Into The Gloss is a beauty website that explores the routines of inspiring women. The site is known for its profiles, particularly The Top Shelf and Top Shelf After Dark.",
+      "followers": {
+        "facebook": 94100,
+        "twitter": 172700,
+        "instagram": 1100000
+      },
+      "image_url": "https://i1.feedspot.com/4469937.jpg?t=1605162402"
+    },
+    {
+      "title": "Camera Ready Cosmetics Blog",
+      "feed_url": "https://camerareadycosmetics.com/blogs/news.atom",
+      "website_url": "https://camerareadycosmetics.com/blogs/news",
+      "description": "Camera Ready Cosmetics was founded in 2003 by Makeup Artist Mary Erickson. Mary Erickson has been a key player in the Makeup Artist industry for 30 years. She started the online store to provide fellow artists with the best supplies in their kits. We've narrowed our products down to the best of the best. We have chosen the brands that respect and formulate their products for artists.",
+      "followers": {
+        "facebook": 30500,
+        "twitter": 6200,
+        "instagram": 99400
+      },
+      "image_url": "https://i1.feedspot.com/4753832.jpg?t=1613036877"
+    },
+    {
+      "title": "Besame Cosmetics Blog",
+      "feed_url": "https://besamecosmetics.com/blogs/blog.atom",
+      "website_url": "https://besamecosmetics.com/blogs/blog",
+      "description": "Besame Cosmetics a luxury vintage makeup brand which honors the style, spirit, & sensibility of female beauty. The Besame Cosmetics Collection incorporates the power of classic ideas of femininity into an outstanding group of products designed to provide the woman of today with responsible elegance and glamour.",
+      "followers": {
+        "facebook": 115800,
+        "twitter": 10700,
+        "instagram": 262500
+      },
+      "image_url": "https://i1.feedspot.com/4750956.jpg?t=1613036881"
+    },
+    {
+      "title": "Vanity No Apologies",
+      "feed_url": "https://vanitynoapologies.com/feed/",
+      "website_url": "https://vanitynoapologies.com/",
+      "description": "Vanity No Apologies is not just a beauty website but a global reference and resource for beauty enthusiasts featuring in-depth reviews, beauty news, photos, DIYs, tutorials, beauty tips along with popular features.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4472727.jpg?t=1607587824"
+    },
+    {
+      "title": "Beautygeeks",
+      "feed_url": "https://imabeautygeek.com/.rss/excerpt/",
+      "website_url": "https://imabeautygeek.com/",
+      "description": "Beautygeeks is a site about happy skin, pretty manicures, healthy-looking hair, and lots more smart, easy ways to look our best at every age. Get the scoop here on new releases, nail polish, makeup, expert advice, tutorials, reviews, and celebrity interviews, too.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 5900,
+        "instagram": 10600
+      },
+      "image_url": "https://i1.feedspot.com/4752697.jpg?t=1613036941"
+    },
+    {
+      "title": "Crazy for Cosmetics",
+      "feed_url": "http://www.crazyforcosmetics.com//feeds/posts/default",
+      "website_url": "http://www.crazyforcosmetics.com/",
+      "description": "An Indian Beauty/lifestyle blog that gives detailed reviews of cosmetics,styling tips for outfits,makeup tutorials, and detailed travelogue.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 484
+      },
+      "image_url": "https://i1.feedspot.com/4751709.jpg?t=1613037060"
+    },
+    {
+      "title": "Beauty Bakerie Blog",
+      "feed_url": "https://www.beautybakerie.com/blogs/ice-cream-social.atom",
+      "website_url": "https://www.beautybakerie.com/blogs/ice-cream-social",
+      "description": "Beauty Bakerie is the leading cruelty free cosmetic brand. Get cruelty free makeup: eyeliner, eyeshadow, liquid matte lipstick, and eyebrow makeup. Their vision is that they will remind the world of the value in being better not bitter; the value of being sweet and sweetening the lives of others.",
+      "followers": {
+        "facebook": 198200,
+        "twitter": 105500,
+        "instagram": 998400
+      },
+      "image_url": "https://i1.feedspot.com/4754633.jpg?t=1608547607"
+    },
+    {
+      "title": "Ty Alexander \u00bb Beauty",
+      "feed_url": "https://tyalexander.co/blog/category/Beauty?format=rss",
+      "website_url": "https://tyalexander.co/blog/category/Beauty",
+      "description": "Ty Alexander is a bestselling author, speaker, podcaster and wellness blogger who teaches women how to choose gratitude over grief. She is also a leading authority in lifestyle, beauty, and wellness-related content. Check out her posts related to beauty here on the blog.",
+      "followers": {
+        "facebook": 24400,
+        "twitter": 11600
+      },
+      "image_url": "https://i1.feedspot.com/4753744.jpg?t=1611561005"
+    },
+    {
+      "title": "Glamour Cosmetics",
+      "feed_url": "http://glamourcosmeticsofficial.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://glamourcosmeticsofficial.blogspot.com/",
+      "description": "Glamour Cosmetics provides clients with confidence and beauty through the art of makeup. Trained and certified by a world renowned makeup artist in Los Angeles, Garineh Ashjian brings the most up-to date and innovative techniques of makeup artistry to Boston.",
+      "followers": {
+        "facebook": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4751735.jpg?t=1613037644"
+    },
+    {
+      "title": "Let's talk beauty",
+      "feed_url": "https://cosmeticproductsreviews.blogspot.com/feeds/posts/default",
+      "website_url": "https://cosmeticproductsreviews.blogspot.com/",
+      "description": "Cosmetic products reviews from Pretty Beautiful Soul.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5135971.jpg"
+    },
+    {
+      "title": "ICT",
+      "feed_url": "https://www.icovetthee.com/feeds/posts/default?alt=rss",
+      "website_url": "https://www.icovetthee.com/",
+      "description": "I'm Alix, writer of I Covet Thee and self professed makeup and cosmetics obsessive. This blog is my outlet for all things beauty and fashion related with a little bit of my everyday life thrown in for good measure!",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 49500,
+        "instagram": 152500
+      },
+      "image_url": "https://i1.feedspot.com/4754076.jpg?t=1613037627"
+    },
+    {
+      "title": "Ethical Elephant",
+      "feed_url": "https://ethicalelephant.com/feed/",
+      "website_url": "https://ethicalelephant.com/",
+      "description": "I'm Vicky, the creator of ethical elephant. I'm here to help answer common cruelty-free and vegan lifestyle questions so that you know what, where, and how to shop cruelty-free.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 4000,
+        "instagram": 45100
+      },
+      "image_url": "https://i1.feedspot.com/4754168.jpg?t=1608547545"
+    },
+    {
+      "title": "Cosmetics Design USA",
+      "feed_url": "https://www.cosmeticsdesign.com/Info/CosmeticsDesign-USA-RSS",
+      "website_url": "https://www.cosmeticsdesign.com/",
+      "description": "CosmeticsDesign.com USA is a daily online news service available as a free-access website and provides daily and weekly newsletters to subscribers. The service seeks out news stories and data of value to decision-makers in Cosmetic Formulation & Packaging in the USA.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 6900
+      },
+      "image_url": "https://i1.feedspot.com/4754602.jpg?t=1613036868"
+    },
+    {
+      "title": "in-cosmetics Connect",
+      "feed_url": "https://connect.in-cosmetics.com/feed/",
+      "website_url": "https://connect.in-cosmetics.com/",
+      "description": "The leading global business platform for personal care ingredients.in-cosmetics brings together the world's leading personal care ingredients suppliers, formulators, R&D and marketing specialists and showcases the most diverse range of innovative cosmetics ingredients and technologies.",
+      "followers": {
+        "facebook": 35300,
+        "twitter": 8000,
+        "instagram": 27600
+      },
+      "image_url": "https://i1.feedspot.com/4754659.jpg?t=1613036865"
+    },
+    {
+      "title": "Fi\u00e8ra Cosmetics",
+      "feed_url": "https://fieracosmetics.com/blogs/news.atom",
+      "website_url": "https://fieracosmetics.com/blogs/news",
+      "description": "Covers news and updates from Fi\u00e8ra Cosmetics. Fi\u00e8ra Cosmetics offers luxury cosmetic products for women over 40.",
+      "followers": {
+        "facebook": 53500,
+        "instagram": 63900
+      },
+      "image_url": "https://i1.feedspot.com/5323884.jpg?t=1632220880"
+    },
+    {
+      "title": "Nykaa BeautyBook Blog",
+      "feed_url": "https://www.nykaa.com/beauty-blog/feed",
+      "website_url": "https://www.nykaa.com/beauty-blog/",
+      "description": "Nykaa offers you latest beauty trends, Fashion, Lifestyle, reviews on makeup and beauty products, wellness tips and much more. Read now.",
+      "followers": {
+        "facebook": 3400000,
+        "twitter": 40600
+      },
+      "image_url": "https://i1.feedspot.com/4751350.jpg"
+    },
+    {
+      "title": "Cult Beauty Blog",
+      "feed_url": "https://www.cultbeauty.co.uk/blog/feed/",
+      "website_url": "https://www.cultbeauty.co.uk/blog/",
+      "description": "Cult Beauty is an insider's destination to shop the world's best beauty products. From skin care to make up, each of the beauty products is chosen by our world-class expert panel for its efficacy and stand-alone brilliance. Subscribe to keep track of new posts from this blog.",
+      "followers": {
+        "facebook": 340000,
+        "twitter": 63200,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/4754703.jpg?t=1609424862"
+    },
+    {
+      "title": "Total Beauty",
+      "feed_url": "https://www.totalbeauty.com/page_not_found?msg=%2Fpage_not_found%3Fmsg%3D%252Ffeeds%252Ftotalbeauty.xml",
+      "website_url": "https://www.totalbeauty.com/",
+      "description": "TotalBeauty has believed in truth, democracy, and education with style. At TotalBeauty, we are committed to bringing you unbiased beauty advice. We are always striving to expand our knowledge and experience in order to be the smartest, most comprehensive, and most useful resource for all things beauty. Expert beauty advice, product reviews, beauty tips, makeup samples, cosmetics, and hairstyles all in one place.",
+      "followers": {
+        "facebook": 566300,
+        "instagram": 45600
+      },
+      "image_url": "https://i1.feedspot.com/647899.jpg?t=1613036860"
+    },
+    {
+      "title": "Rouge 18",
+      "feed_url": "http://www.rouge18.com/feed/",
+      "website_url": "http://www.rouge18.com/",
+      "description": "Rouge18 is one of the hottest beauty blogs in New York. Created by Amber Katz as a fusion of beauty news and reviews, pop culture references, and personal anecdotes, Rouge18 today is a premier source of insights on Exotic beauty products, Make-up tools, Selfcare and also essential tips to improve your blogging skills.",
+      "followers": {
+        "facebook": 7600,
+        "twitter": 29400,
+        "instagram": 29200
+      },
+      "image_url": "https://i1.feedspot.com/4753187.jpg?t=1619775866"
+    },
+    {
+      "title": "Farlie Solomons",
+      "feed_url": "https://www.farliesolomons.com/feed/",
+      "website_url": "https://www.beecosmetics.co.uk/blogs/news",
+      "description": "We help you to embrace your personal beauty, skincare and makeup sense confidently by including the latest, most exclusive and effective products from across the globe.",
+      "followers": {
+        "facebook": 22100
+      },
+      "image_url": "https://i1.feedspot.com/5178281.jpg?t=1605180861"
+    },
+    {
+      "title": "Bee Cosmetics",
+      "feed_url": "https://www.beecosmetics.co.uk/blogs/news.atom",
+      "website_url": "https://www.beecosmetics.co.uk/blogs/news",
+      "description": "Naturally beautiful skincare, sourced from nature. We believe in creating simple recipes using natural ingredients. Our business is based on harnessing the natural skincare properties of beeswax, honey and propolis in our handmade products.",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4751749.jpg?t=1613037634"
+    }
+  ]
+}

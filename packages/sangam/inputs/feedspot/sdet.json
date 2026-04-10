@@ -1,0 +1,25 @@
+{
+  "category": "SDET",
+  "source_url": "https://rss.feedspot.com/sdet_rss_feeds",
+  "feeds": [
+    {
+      "title": "Automaters: Full Stack QA_SDET",
+      "feed_url": "https://automationreinvented.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://automationreinvented.blogspot.com/",
+      "description": "This blog will help Automation Testing/SDET/QA profile job seekers with rich and precise interview content. I will write Interview questions on Selenium Webdriver, Java, Rest API, Maven, and CI/CD.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5403280.jpg?t=1653304974"
+    },
+    {
+      "title": "DevLabs Alliance \u00bb SDET",
+      "feed_url": "https://www.devlabsalliance.com/category/sdet/feed",
+      "website_url": "https://www.devlabsalliance.com/category/sdet",
+      "description": "The following section of DevLabs Alliance is dedicated to articles on SDET. DevLabs Alliance is an emerging Information technology consulting and training company headquartered in Gurugram. We conduct career transformation workshops & training in Artificial Intelligence, Machine Learning, Deep Learning, Agile, DevOps, Big Data, BlockChain, Software Test Automation, Robotics Process Automation, and other cutting edge technologies.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 35
+      },
+      "image_url": "https://i1.feedspot.com/5403283.jpg?t=1653303940"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "category": "Jordan News",
+  "source_url": "https://rss.feedspot.com/jordan_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Jordan Times",
+      "feed_url": "https://jordantimes.com/404",
+      "website_url": "https://www.jordantimes.com/",
+      "description": "The Jordan Times is an independent English-language daily published by the Jordan Press Foundation since October 26, 1975. Covering topics like the world, business, sports, opinions, and more.",
+      "followers": {
+        "facebook": 248300,
+        "twitter": 110000
+      },
+      "image_url": "https://i1.feedspot.com/5345467.jpg?t=1637557856"
+    },
+    {
+      "title": "Ammon News",
+      "feed_url": "https://www.ammonnews.net/rss.php?type=news&id=78",
+      "website_url": "https://www.ammonnews.net/",
+      "description": "Ammon represents the first electronic news agency in Jordan and provides news of Jordan, the world, Palestine, sports news, radio, education and universities, economy, culture, cartoons, art, interviews, book, articles, videos, voting, and more.",
+      "followers": {
+        "facebook": 4300000,
+        "twitter": 316900
+      },
+      "image_url": "https://i1.feedspot.com/5345470.jpg?t=1637558086"
+    },
+    {
+      "title": "Trail Runner Nation",
+      "feed_url": "https://www.sarahanews.net/feed/",
+      "website_url": "https://www.sarahanews.net/",
+      "description": "Trail Runner Nation is devoted to sharing knowledge and advice to the trail running community - from beginners to the pros! We offer tips and discussion regarding race nutrition, pacing strategy, mental focus and much more from well-respected members of the trail community.",
+      "followers": {
+        "facebook": 186900,
+        "twitter": 19100,
+        "instagram": 27600
+      },
+      "image_url": "https://i1.feedspot.com/5345486.jpg?t=1637574247"
+    },
+    {
+      "title": "Jafra News",
+      "feed_url": "https://jfranews.com.jo/feed/",
+      "website_url": "https://jfranews.com.jo/",
+      "description": "Jordan's daily news on the Jafra website, daily governorate news, breaking news from Amman and the Jordanian governorates.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 29400
+      },
+      "image_url": "https://i1.feedspot.com/5345485.jpg?t=1637574598"
+    },
+    {
+      "title": "Watan Today",
+      "feed_url": "https://watananews.com/?feed=rss2",
+      "website_url": "https://watananews.com/",
+      "description": "A website for publishing local and international news.",
+      "followers": {
+        "facebook": 84600,
+        "twitter": 4200,
+        "instagram": 4600
+      },
+      "image_url": "https://i1.feedspot.com/5345673.jpg?t=1637579887"
+    },
+    {
+      "title": "Alghad",
+      "feed_url": "https://alghad.com/feed",
+      "website_url": "https://alghad.com/",
+      "description": "Alghad is jordan's first independent Arabic newspaper which was founded in 2004. Find articles on politics, sports, your life, cars, towers and Jordan's news.",
+      "followers": {
+        "facebook": 2900000,
+        "twitter": 1100000,
+        "instagram": 79600
+      },
+      "image_url": "https://i1.feedspot.com/4974832.jpg?t=1637557759"
+    },
+    {
+      "title": "Al-Sabeel",
+      "feed_url": "https://assabeel.net/feeds",
+      "website_url": "https://assabeel.net/",
+      "description": "Al-Sabil is a comprehensive Jordanian daily newspaper. Covering topics such as health, economics, technology, sports, and more.",
+      "followers": {
+        "facebook": 18700,
+        "twitter": 19300
+      },
+      "image_url": "https://i1.feedspot.com/5345469.jpg?t=1637557994"
+    },
+    {
+      "title": "Jo 24",
+      "feed_url": "https://jo24.net/feed/",
+      "website_url": "https://jo24.net/",
+      "description": "JO24 is an independent Jordanian electronic newspaper that will not compromise on the news. It will make sure to publish all the news and coverage it receives with accuracy, objectivity and impartiality.",
+      "followers": {
+        "facebook": 241500,
+        "twitter": 69600,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5345487.jpg?t=1637575813"
+    }
+  ]
+}

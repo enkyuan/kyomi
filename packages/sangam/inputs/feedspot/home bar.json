@@ -1,0 +1,73 @@
+{
+  "category": "Home Bar",
+  "source_url": "https://rss.feedspot.com/home_bar_rss_feeds",
+  "feeds": [
+    {
+      "title": "Home Bars Blog and Ideas | Home Bars USA",
+      "feed_url": "https://www.homebarsusa.com/blogs/home-bar-blog.atom",
+      "website_url": "https://www.homebarsusa.com/blogs/home-bar-blog",
+      "description": "Find answers and inspiration in our Home Bar Blog! View articles divulging Stylish, Space-saving furniture ideas and recommendations among other facts. Home Bars USA is a Factory Authorized Dealer that high quality home bar furniture, curio cabinets and massage chairs from the most respectable manufacturers.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 191,
+        "instagram": 172
+      },
+      "image_url": "https://i1.feedspot.com/5589904.jpg?t=1685949369"
+    },
+    {
+      "title": "Home Bars Furniture & Decor Blog",
+      "feed_url": "https://www.homebars.com.au/feed/",
+      "website_url": "https://www.homebars.com.au/blog/",
+      "description": "Visit our site and read our blog to know about home decor, home bars, bar stools, bar trolleys, glassware, accessories, and many more. Explore in-depth styles guides and reviews to help you glam up your Home Bar setting with State-of-the-Art furniture and decor ideas. Home Bars is an Australian-owned Home Bars and related furniture business in Australia.",
+      "followers": {
+        "facebook": 4200,
+        "instagram": 581
+      },
+      "image_url": "https://i1.feedspot.com/5589907.jpg?t=1685949398"
+    },
+    {
+      "title": "Garnish Blog",
+      "feed_url": "http://www.garnishblog.com/feed",
+      "website_url": "http://www.garnishblog.com/",
+      "description": "A blog about cocktails and building your home bar. Authored by Katie Stryjewski, a Cocktail blogger and recipe developer. Learn more about spirits and cocktails and keep track of recipes arranged according to their base spirits.",
+      "followers": {
+        "twitter": 901,
+        "instagram": 26700
+      },
+      "image_url": "https://i1.feedspot.com/5295956.jpg?t=1685949495"
+    },
+    {
+      "title": "The Modern Home Bar Blog",
+      "feed_url": "https://themodernhomebar.com/blogs/news.atom",
+      "website_url": "https://themodernhomebar.com/blogs/news",
+      "description": "Stay in the know on cocktail recipes, the latest home barware, and everything in between. Our blog is your one-stop shop for your modern home bar. The Modern Home Bar is a glassware and barware manufacturing business that continues the American tradition of crafting extraordinary drinkware.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 430,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5589903.jpg?t=1685949363"
+    },
+    {
+      "title": "Our Home Bar Creations Blog",
+      "feed_url": "https://www.ourhomebarcreations.com/?feed=rss2",
+      "website_url": "https://www.ourhomebarcreations.com/?page_id=317",
+      "description": "Our Home Bar Creations Blog Page is stacked with exotic Drink recipes, Cocktail trivia, Useful Home bar guides and so much more. Explore today to uncover a selection of perfect cocktails and recipes. Home Bar Creations is a complete resource website for all Home Bar essentials - from new gadgets and products to mixology tips, you'll find it here.",
+      "followers": {
+        "facebook": 140900,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5589906.jpg?t=1685949383"
+    },
+    {
+      "title": "Bar Stool Home Blog",
+      "feed_url": "https://www.barstoolhome.com.au/blogs/bar-stool-home-blog.atom",
+      "website_url": "https://www.barstoolhome.com.au/blogs/bar-stool-home-blog",
+      "description": "At Bar Stool Home we're more than just the product and are passionate about sharing advice and tips that can help our customers from purchase to beyond. The Bar Stool Home Blog serves this purpose by updating readers with the latest Bar stool trends, Buyer guides, and other essential information about Bar furniture through the latest blog posts.",
+      "followers": {
+        "facebook": 2100
+      },
+      "image_url": "https://i1.feedspot.com/5589905.jpg?t=1685949376"
+    }
+  ]
+}

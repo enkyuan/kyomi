@@ -1,0 +1,62 @@
+{
+  "category": "Crossbow",
+  "source_url": "https://rss.feedspot.com/crossbow_rss_feeds",
+  "feeds": [
+    {
+      "title": "TenPoint Crossbow Technologies Blog",
+      "feed_url": "https://www.tenpointcrossbows.com/feed/",
+      "website_url": "https://www.tenpointcrossbows.com/blog/",
+      "description": "The leader in crossbows and crossbow accessories, Ten Point sets the crossbow industry standard for performance, quality and customer service. Follow us to get articles on crossbows and reviews.",
+      "followers": {
+        "facebook": 231200,
+        "twitter": 8300,
+        "instagram": 29400
+      },
+      "image_url": "https://i1.feedspot.com/5045415.jpg?t=1622537400"
+    },
+    {
+      "title": "Crossbow Experts Blog",
+      "feed_url": "https://crossbowexpert.com/blog/feed/",
+      "website_url": "https://crossbowexpert.com/blog/",
+      "description": "Crossbow Experts was started with the idea of offering our customers a place where they could gather knowledge and information before making a crossbow or crossbow accessory purchase. Follow us to get expert advice and information on the crossbow.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 662,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5045420.jpg?t=1622537404"
+    },
+    {
+      "title": "Hunting Giant Blog",
+      "feed_url": "https://huntinggiant.com/blogs/hunting-with-hunting-giant.atom",
+      "website_url": "https://huntinggiant.com/blogs/hunting-with-hunting-giant",
+      "description": "Hunting Giant is one of your no. 1 sources of hunting gear, crossbows, bows, and all the accessories you need for the sport. It has been our mission to offer reliable, affordable yet highly effective hunting gear that is widely accepted among professional and recreational hunters.",
+      "followers": {
+        "facebook": 644,
+        "instagram": 122
+      },
+      "image_url": "https://i1.feedspot.com/5413014.jpg?t=1655797514"
+    },
+    {
+      "title": "Savvy Crossbow Blog",
+      "feed_url": "https://savvycrossbow.com/feed/",
+      "website_url": "https://savvycrossbow.com/blog/",
+      "description": "Savvy Crossbow is the largest premium review website for crossbow enthusiasts. We provide reviews of all of the best hunting gears and parts available in the market. Our goal is to help our visitors make better and informed decisions about the equipment and products they purchase.",
+      "followers": {
+        "facebook": 1
+      },
+      "image_url": "https://i1.feedspot.com/5413015.jpg?t=1655796614"
+    },
+    {
+      "title": "Hunting Bow",
+      "feed_url": "https://feeds.feedburner.com/Hunting-bow-News",
+      "website_url": "https://www.hunting-bow.com/blogs/news",
+      "description": "All you need to know about archery & bow hunting whether you are a complete beginner or a more advanced shooter.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 717
+      },
+      "image_url": "https://i1.feedspot.com/5045487.jpg?t=1622537410"
+    }
+  ]
+}

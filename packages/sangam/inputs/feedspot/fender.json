@@ -1,0 +1,62 @@
+{
+  "category": "Fender",
+  "source_url": "https://rss.feedspot.com/fender_rss_feeds",
+  "feeds": [
+    {
+      "title": "True Vintage Guitar Blog",
+      "feed_url": "https://truevintageguitar.com/blogs/tvg-blog.atom",
+      "website_url": "https://truevintageguitar.com/blogs/tvg-blog",
+      "description": "Welcome to the new home of True Vintage Guitar! Curated by John Shults, each guitar and amplifier is meticulously chosen, inspected, and presented with passion. Whether buying, selling, or browsing, visitors discover a treasure trove of vintage gear, accompanied by news, tips, and rare finds.",
+      "followers": {
+        "facebook": 14400
+      },
+      "image_url": "https://i1.feedspot.com/5543943.jpg?t=1710936795"
+    },
+    {
+      "title": "The Music Zoo \u00bb Fender",
+      "feed_url": "https://www.themusiczoo.com/blogs/news/tagged/fender.atom",
+      "website_url": "https://www.themusiczoo.com/blogs/news/tagged/fender",
+      "description": "The Music Zoo is your daily source for the best guitar news, reviews, videos, new product launches, NAMM coverage, artist models, vintage guitars, and used gear!",
+      "followers": {
+        "facebook": 97300,
+        "twitter": 23300,
+        "instagram": 73900
+      },
+      "image_url": "https://i1.feedspot.com/5543944.jpg?t=1681796605"
+    },
+    {
+      "title": "The Blogging Musician \u00bb Fender",
+      "feed_url": "https://adamharkus.com/tag/fender/feed/",
+      "website_url": "https://adamharkus.com/tag/fender/",
+      "description": "I'm a guitarist and singer/songwriter with a new-found passion for sharing all the knowledge and experiences I've picked up in over 20 years of playing, writing, and producing music.",
+      "followers": {
+        "facebook": 187,
+        "twitter": 357
+      },
+      "image_url": "https://i1.feedspot.com/5557135.jpg?t=1683281668"
+    },
+    {
+      "title": "Gear News \u00bb Fender",
+      "feed_url": "https://www.gearnews.com/manufacturer/fender/feed/",
+      "website_url": "https://www.gearnews.com/manufacturer/fender/",
+      "description": "All the latest news, rumors and tips about musical instruments, studio tech, and live",
+      "followers": {
+        "facebook": 25000,
+        "twitter": 1700,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/5557136.jpg?t=1683281628"
+    },
+    {
+      "title": "Acoustic Guitar \u00bb Fender",
+      "feed_url": "https://acousticguitar.com/tag/fender/feed/",
+      "website_url": "https://acousticguitar.com/tag/fender/",
+      "description": "Follow the blog anf learn the musical lessons, music to play, and how-tos for all guitarists. The Fender Paramount PR-180E is an affordable resonator that has a sweet sound and appeal for slide guitarists, fingerpickers, flatpickers and strummers alike.",
+      "followers": {
+        "facebook": 447500,
+        "twitter": 29200
+      },
+      "image_url": "https://i1.feedspot.com/5543945.jpg?t=1681796591"
+    }
+  ]
+}

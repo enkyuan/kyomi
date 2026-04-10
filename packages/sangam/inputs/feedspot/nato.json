@@ -1,0 +1,38 @@
+{
+  "category": "NATO",
+  "source_url": "https://rss.feedspot.com/nato_rss_feeds",
+  "feeds": [
+    {
+      "title": "NATO Watch",
+      "feed_url": "https://natowatch.org/news.xml",
+      "website_url": "https://natowatch.org/news",
+      "description": "NATO Watch News Briefs cover a range of NATO-related news items from around the world. This syndicated news feed is free. Feeds allow you to stay up to date with the latest news and features by adding the feed address to a news reader program, or to your own website.",
+      "followers": {
+        "twitter": 221
+      },
+      "image_url": "https://i1.feedspot.com/5507794.jpg?t=1676375349"
+    },
+    {
+      "title": "U.S. Mission To The NATO",
+      "feed_url": "https://nato.usmission.gov/feed/",
+      "website_url": "https://nato.usmission.gov/news/",
+      "description": "Formed in 1949 with the signing of the Washington Treaty, NATO is a security alliance of 30 countries from North America and Europe. Its fundamental goal is to safeguard the Allies' freedom and security by political and military means. It is the practical means through which the security of North America and Europe are permanently tied together.",
+      "followers": {
+        "facebook": 207800,
+        "twitter": 293100,
+        "instagram": 180500
+      },
+      "image_url": "https://i1.feedspot.com/5507796.jpg?t=1676375364"
+    },
+    {
+      "title": "NATO's ACT",
+      "feed_url": "https://act.nato.int/rss/news",
+      "description": "From its inception in 2003, Allied Command Transformation demonstrated the importance placed by NATO Nations on the roles of transformation and development as continuous and essential drivers for change. Our mission is to contribute to preserving the peace, security, and territorial integrity of Alliance member states by leading the warfare development of military structures, forces, capabilities, and doctrines.",
+      "followers": {
+        "facebook": 101400,
+        "twitter": 56900
+      },
+      "image_url": "https://i1.feedspot.com/5527981.jpg?t=1679919869"
+    }
+  ]
+}

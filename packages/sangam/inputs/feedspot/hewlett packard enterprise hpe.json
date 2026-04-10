@@ -1,0 +1,32 @@
+{
+  "category": "Hewlett Packard Enterprise (HPE)",
+  "source_url": "https://rss.feedspot.com/hewlett_packard_enterprise_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hewlett Packard Enterprise Community",
+      "feed_url": "https://community.hpe.com/hpeb/rss/Community?interaction.style=blog&feeds.replies=true",
+      "website_url": "https://community.hpe.com/",
+      "description": "Hewlett Packard Enterprise is the global edge-to-cloud company. Sharing our passion and purpose through technology and innovation. Find out what is happening in our community, people's opinions, our experts' insights and more!",
+      "followers": {
+        "twitter": 83000
+      },
+      "image_url": "https://i1.feedspot.com/5434513.jpg?t=1661238146"
+    },
+    {
+      "title": "HPE Developer Blog",
+      "feed_url": "https://developer.hpe.com/rss.xml",
+      "website_url": "https://developer.hpe.com/blog/",
+      "description": "HPE Developer's community, values development and collaboration. Partnering with us enabling you users to contribute your best and brightest ideas. Sharing expertise is a great way to move technology forward. Browse through our library of tutorials and articles to learn new ways to do things.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5434512.jpg?t=1661237108"
+    },
+    {
+      "title": "Hewlett Packard Enterprise Investor",
+      "feed_url": "https://investors.hpe.com/rss/news",
+      "website_url": "https://investors.hpe.com/",
+      "description": "Hewlett Packard Enterprise is an industry leading enterprise technology company that simplifies Hybrid IT, powers the Intelligent Edge and provides the expertise to make it all happen. Explore insights and news in investment industry, tips and advice from our investors and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4912521.jpg?t=1661237995"
+    }
+  ]
+}

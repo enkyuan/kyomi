@@ -1,0 +1,48 @@
+{
+  "category": "Vertical Gardening",
+  "source_url": "https://rss.feedspot.com/vertical_gardening_rss_feeds",
+  "feeds": [
+    {
+      "title": "Agrotonomy Blog",
+      "feed_url": "https://agrotonomy.com/feed/",
+      "website_url": "https://agrotonomy.com/blog/",
+      "description": "Learn how to use your Tower Garden on our aeroponic Blog. We give all kinds of tips, tricks, and advice for growing optimal crops on your Tower Garden. Agrotonomy Corp. focuses on autonomous agricultural 4.0 solutions for commercial and residential markets. We specialize in vertical farming & greenhouse full turnkey solutions.",
+      "followers": {
+        "facebook": 3500000,
+        "instagram": 6100000
+      },
+      "image_url": "https://i1.feedspot.com/5366700.jpg?t=1643624353"
+    },
+    {
+      "title": "Vertical Green Blog",
+      "feed_url": "https://verticalgreen.com.ph/feed/",
+      "website_url": "https://verticalgreen.com.ph/blog/",
+      "description": "Discover our content and learn more about Vertical Green's journey. Vertical Green is a landscape consultant company that specializes in the design and installation of living vertical gardens with an automated irrigation and fertilization system.",
+      "followers": {
+        "facebook": 818,
+        "instagram": 975
+      },
+      "image_url": "https://i1.feedspot.com/5345803.jpg?t=1637905768"
+    },
+    {
+      "title": "Up the Wall Gardens Blog",
+      "feed_url": "https://www.upthewallgardens.com/blog?format=rss",
+      "website_url": "https://www.upthewallgardens.com/blog",
+      "description": "Transform your vertical space with growing walls. We offer many types of modular wall planters and vertical growing systems from framed living art portrait systems to a complete wall of living plants. We utilize an array of textures and colours to bring life to your green wall dreams to life.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5366702.jpg?t=1643625078"
+    },
+    {
+      "title": "Tower Garden Blog \u00bb Growing Inspiration",
+      "feed_url": "https://www.towergarden.com/blog.all.html?emag-category=growing-inspiration",
+      "website_url": "https://www.towergarden.com/blog.all.html?emag-category=growing-inspiration",
+      "description": "View our latest mix of gardening tips, growing inspiration, fresh recipes and more. Good health starts with good habits, like eating wholesome foods. Tower Garden systems let you easily grow your own fresh, nutrient-rich food without soil. The new Tower Garden HOME is ideal for indoor gardening, while the Tower Garden FLEX is slightly larger and can be used indoors or outdoors.",
+      "followers": {
+        "facebook": 83000,
+        "twitter": 19100,
+        "instagram": 56200
+      },
+      "image_url": "https://i1.feedspot.com/5366708.jpg?t=1643626712"
+    }
+  ]
+}

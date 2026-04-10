@@ -1,0 +1,133 @@
+{
+  "category": "Facebook",
+  "source_url": "https://rss.feedspot.com/facebook_rss_feeds",
+  "feeds": [
+    {
+      "title": "Facebook Newsroom",
+      "feed_url": "https://about.fb.com/feed/",
+      "website_url": "https://about.fb.com/news/",
+      "description": "Get the latest news, announcements and media resources from the Facebook company. The Facebook company builds technologies that give people the power to connect with friends and family, find communities and grow businesses.",
+      "followers": {
+        "facebook": 94400000,
+        "twitter": 13900000,
+        "instagram": 5000000
+      },
+      "image_url": "https://i1.feedspot.com/3881708.jpg?t=1659955887"
+    },
+    {
+      "title": "Facebook For Business",
+      "feed_url": "https://en-gb.facebook.com/business/news/rss",
+      "website_url": "https://en-gb.facebook.com/business/news",
+      "description": "Discover the latest product updates, trends, research and case studies about our tools to help businesses succeed with marketing on Facebook. Get the latest updates, marketing trends and advertising tips in your inbox.",
+      "followers": {
+        "twitter": 524600
+      },
+      "image_url": "https://i1.feedspot.com/4912949.jpg?t=1620295946"
+    },
+    {
+      "title": "Meta Engineering",
+      "feed_url": "https://engineering.fb.com/feed/",
+      "website_url": "https://engineering.fb.com/",
+      "description": "Stay up-to-date with the latest open source project releases from Facebook, news about Infrastructure Systems, Open Source, Connectivity, Data Center Engineering, and Developer Tools. Meta is helping build a future where people have more ways to play and connect in the metaverse.",
+      "followers": {
+        "facebook": 92000000,
+        "twitter": 13900000,
+        "instagram": 5000000
+      },
+      "image_url": "https://i1.feedspot.com/4278042.jpg?t=1659956163"
+    },
+    {
+      "title": "Facebook Developer Blog",
+      "feed_url": "https://developers.facebook.com/blog/feed",
+      "website_url": "https://developers.facebook.com/blog/",
+      "description": "Find a variety of blog articles and the latest updates by Facebook for Developers. Learn more about AI, App Events, FB Start, and more.",
+      "followers": {
+        "facebook": 8700000
+      },
+      "image_url": "https://i1.feedspot.com/26246.jpg?t=1620295900"
+    },
+    {
+      "title": "Jon Loomer Blogs",
+      "feed_url": "https://www.jonloomer.com/feed/",
+      "website_url": "https://www.jonloomer.com/",
+      "description": "This is where advanced Facebook advertisers go to sharpen their skills and stay on top of the constantly evolving world of advertising. Jon Loomer's site is also where inexperienced advertisers go to become advanced.",
+      "followers": {
+        "facebook": 196400,
+        "twitter": 30300,
+        "instagram": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4705842.jpg?t=1619581855"
+    },
+    {
+      "title": "Post Planner \u00bb Facebook",
+      "feed_url": "https://www.postplanner.com/blog/rss.xml",
+      "website_url": "https://www.postplanner.com/blog/topic/facebook/",
+      "description": "Articles on how to improve your social media marketing on Facebook, Instagram, LinkedIn, Pinterest and Twitter. Also covers topics such as content marketing, social networks, social media tools, etc. Keep up with the post planner announcements and hot features. Post Planner is the social media scheduler built for engagement.",
+      "followers": {
+        "facebook": 343300,
+        "twitter": 48900,
+        "instagram": 15000
+      },
+      "image_url": "https://i1.feedspot.com/4450427.jpg?t=1754304962"
+    },
+    {
+      "title": "Social Media Today \u00bb Facebook",
+      "feed_url": "https://www.socialmediatoday.com/feeds/news/",
+      "website_url": "https://www.socialmediatoday.com/topic/facebook/",
+      "description": "Social Media Today is a leading industry publication operated by Industry Dive. They bring together news, trends, and best practices around enterprise social and digital marketing.",
+      "followers": {
+        "facebook": 601300,
+        "twitter": 863800,
+        "instagram": 111200
+      },
+      "image_url": "https://i1.feedspot.com/4835610.jpg?t=1713849346"
+    },
+    {
+      "title": "PCMag",
+      "feed_url": "https://www.pcmag.com/feeds/rss/latest",
+      "website_url": "https://www.pcmag.com/",
+      "description": "PCMag is your complete guide to PC computers, peripherals and upgrades. We test and review computer- and Internet-related products and services, report technology news and trends, and provide shopping advice and price comparisons.",
+      "followers": {
+        "facebook": 986800,
+        "twitter": 404300,
+        "instagram": 532000
+      },
+      "image_url": "https://i1.feedspot.com/7250317.jpg?t=1744781805"
+    },
+    {
+      "title": "The Verge \u00bb Facebook",
+      "feed_url": "https://www.theverge.com/rss/index.xml",
+      "website_url": "https://www.theverge.com/facebook/",
+      "description": "The Verge was founded in 2011 in partnership with Vox Media and covers the intersection of technology, science, art, and culture. Its mission is to offer in-depth reporting and long-form feature stories, breaking news coverage, product information, and community content in a unified and cohesive manner.",
+      "followers": {
+        "facebook": 3600000,
+        "twitter": 3500000,
+        "instagram": 1600000
+      },
+      "image_url": "https://i1.feedspot.com/1779403.jpg?t=1616242481"
+    },
+    {
+      "title": "9to5Mac",
+      "feed_url": "https://9to5mac.com/feed/",
+      "website_url": "https://9to5mac.com/",
+      "description": "Apple News & Mac Rumors Breaking All Day.",
+      "followers": {
+        "facebook": 280600,
+        "twitter": 1000000,
+        "instagram": 174100
+      },
+      "image_url": "https://i1.feedspot.com/4467234.jpg?t=1758879912"
+    },
+    {
+      "title": "Hootsuite \u00bb Facebook",
+      "feed_url": "https://blog.hootsuite.com/network/facebook/feed/",
+      "website_url": "https://blog.hootsuite.com/network/facebook/",
+      "description": "The Hootsuite blog provides up\u2011to\u2011date insights and strategies for effectively marketing on Facebook, including deep dives into the algorithm, performance metrics, user demographics, and content planning guides.",
+      "followers": {
+        "facebook": 927500,
+        "instagram": 228500
+      },
+      "image_url": "https://i1.feedspot.com/8655125.jpg?t=1760349183"
+    }
+  ]
+}

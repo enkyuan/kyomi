@@ -1,0 +1,976 @@
+{
+  "category": "UK Property",
+  "source_url": "https://rss.feedspot.com/uk_property_rss_feeds",
+  "feeds": [
+    {
+      "title": "Property Industry Eye",
+      "feed_url": "https://propertyindustryeye.com/feed/",
+      "website_url": "https://propertyindustryeye.com/news/",
+      "description": "Property Industry Eye is dedicated to the publication of independent, unbiased, factual, and accurate news for the UK property market. Breaking property news for the residential property industry. Independent, unbiased, and factual reporting. A forum for discussion and debate of topics of the day.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 19600
+      },
+      "image_url": "https://i1.feedspot.com/4841256.jpg?t=1611211893"
+    },
+    {
+      "title": "Country Life \u00bb Property",
+      "feed_url": "https://www.countrylife.co.uk/property/feed",
+      "website_url": "https://www.countrylife.co.uk/property-home",
+      "description": "Find the latest news and quality articles related to property here.",
+      "followers": {
+        "facebook": 91600,
+        "twitter": 33800,
+        "instagram": 354900
+      },
+      "image_url": "https://i1.feedspot.com/4626626.jpg?t=1611211907"
+    },
+    {
+      "title": "Progressive Property Blog",
+      "feed_url": "https://www.progressiveproperty.co.uk/blog/feed/",
+      "website_url": "https://www.progressiveproperty.co.uk/blog/",
+      "description": "Find UK's commercial property market news, tips, and advice for property newcomers & investors entering the UK's buy-to-let property market!",
+      "followers": {
+        "facebook": 56300,
+        "twitter": 12600,
+        "instagram": 48800
+      },
+      "image_url": "https://i1.feedspot.com/4818058.jpg?t=1611211965"
+    },
+    {
+      "title": "Rightmove News",
+      "feed_url": "https://www.rightmove.co.uk/news/feed/",
+      "website_url": "https://www.rightmove.co.uk/news/",
+      "description": "Rightmove property blog is the UK's ultimate destination for housing market trends and news, advice for buyers, sellers, renters and landlords. Our mission is help property hunters throughout the UK find the property of their dreams.",
+      "followers": {
+        "facebook": 333600,
+        "twitter": 97900,
+        "instagram": 133400
+      },
+      "image_url": "https://i1.feedspot.com/4482266.jpg?t=1611211980"
+    },
+    {
+      "title": "SevenCapital",
+      "feed_url": "https://sevencapital.com/feed/",
+      "website_url": "https://sevencapital.com/",
+      "description": "SevenCapital is a forward-thinking property investment company transforming commercial spaces in key city centre locations into stunning residential apartments and also building brand new apartment complexes in equally desirable locations.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4842094.jpg?t=1587214103"
+    },
+    {
+      "title": "Property Investments UK",
+      "feed_url": "https://www.propertyinvestmentsuk.co.uk/feed/",
+      "website_url": "https://www.propertyinvestmentsuk.co.uk/articles/",
+      "description": "Here you will find property investment tips, training, mentorship, guides or videos. Property investing, like any investment carries risks. It's important to note that Results achieved in property or using our training course is only a typical and may vary from user to user. Follow this blog to discover Personalised Property Investment Deals, News, Insights and In-Depth Training.",
+      "followers": {
+        "facebook": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4785105.jpg?t=1611212014"
+    },
+    {
+      "title": "Northwood Blog",
+      "feed_url": "https://www.northwooduk.com/blog/feed/",
+      "website_url": "https://www.northwooduk.com/blog/",
+      "description": "Estate and Letting Agents specializing in Guaranteed Rent for Landlords. With offices across the UK, we have a wide range of properties to let and for sale. Read the latest news on renting, buying, selling, or letting a house, apartment, or flat and stories on decoration, interior design, renovation, and gardening in the UK.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4841969.jpg?t=1670833712"
+    },
+    {
+      "title": "PropertyWire",
+      "feed_url": "https://www.propertywire.com/feed/",
+      "website_url": "https://www.propertywire.com/",
+      "description": "PropertyWire.com is an online channel focused on news from both the residential and commercial real estate sectors. It is aimed at key business decision makers from industries such as estate agencies, property development and construction. Get Global property news, real estate news, property investment reviews and analysis, real estate features and up-to-date UK and overseas property news.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 64200
+      },
+      "image_url": "https://i1.feedspot.com/4626826.jpg?t=1603807346"
+    },
+    {
+      "title": "Property Division",
+      "feed_url": "https://propertydivision.co.uk/feed/",
+      "website_url": "https://propertydivision.co.uk/",
+      "description": "Property Division is specialists in marketing for the property industry. We like to hear from any property related businesses such as estate agents, architects, interior designers, or tradesmen, or individuals involved in property investment, such as landlords or property developers. Property Division is focused on news updates, advice, tips, and insight information on the residential and commercial property sectors from the UK & London.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5237357.jpg?t=1611049680"
+    },
+    {
+      "title": "NovaLoca - Commercial Property Listing: Offices, Industrial Units & Retail Space Blog",
+      "feed_url": "https://www.novaloca.com/blog/index.php/feed/",
+      "website_url": "https://www.novaloca.com/blog/",
+      "description": "NovaLoca commercial property listing is a UK business premises database of offices, industrial units and retail space available to rent or buy. Get news, advice and insight about Commercial Property in the UK.",
+      "followers": {
+        "twitter": 3800
+      },
+      "image_url": "https://i1.feedspot.com/4626634.jpg?t=1603807557"
+    },
+    {
+      "title": "Citylets - Home of Scottish Letting Blog",
+      "feed_url": "https://www.citylets.co.uk/blog/feed/",
+      "website_url": "https://www.citylets.co.uk/blog/",
+      "description": "Citylets make moving home so much easier by taking the legwork out of finding flats to rent in Edinburgh, Glasgow, Aberdeen, and across Scotland.",
+      "followers": {
+        "facebook": 9400,
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4842554.jpg?t=1611212230"
+    },
+    {
+      "title": "Just Do Property Blog",
+      "feed_url": "https://justdoproperty.co.uk/feed/",
+      "website_url": "https://justdoproperty.co.uk/blog/",
+      "description": "UK's no. 1 property investment guide offers advice for property investors and landlords. Visit our website to get expert advice and find out more.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 9800
+      },
+      "image_url": "https://i1.feedspot.com/4965119.jpg?t=1611214664"
+    },
+    {
+      "title": "UK Property Finance",
+      "feed_url": "https://ukpropertyfinance.co.uk/feed/",
+      "website_url": "https://ukpropertyfinance.co.uk/news/",
+      "description": "Covers all of the latest news from within the finance industry, including bridging loans, secured loans, mortgage finance, development finance and commercial finance.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5344233.jpg?t=1637217126"
+    },
+    {
+      "title": "RW Invest",
+      "feed_url": "https://www.rw-invest.com/property-news/feed",
+      "website_url": "https://www.rw-invest.com/property-news/",
+      "description": "UK Property Investment Company with offices in London, Liverpool and Manchester offering the highest yield property investments and exclusive buy to let opportunities. A long standing and trusted property investment company specializing in the buy to let property market, and with exclusive access to unique developments.",
+      "followers": {
+        "facebook": 4200
+      },
+      "image_url": "https://i1.feedspot.com/4629818.jpg?t=1611212334"
+    },
+    {
+      "title": "The Landlord Law Blog",
+      "feed_url": "https://www.landlordlawblog.co.uk/feed/",
+      "website_url": "https://www.landlordlawblog.co.uk/blog-posts/",
+      "description": "An online information service site that has interesting articles, news, and tips on residential landlord & tenant law and practice. It helps landlords and tenants understand their legal rights and obligations.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4708149.jpg?t=1608801730"
+    },
+    {
+      "title": "Progressive Property Blog",
+      "feed_url": "https://www.progressiveproperty.co.uk/blog/feed/",
+      "website_url": "https://www.progressiveproperty.co.uk/blog/",
+      "description": "Progressive Property helps you make smarter property & real estate investments. Invest for freedom, choice & profit. Investment and development blog,UK property market news,tips and advice for property newcomers and investors entering the UK property buy-to-let market.",
+      "followers": {
+        "facebook": 56300,
+        "twitter": 12600,
+        "instagram": 48800
+      },
+      "image_url": "https://i1.feedspot.com/4625626.jpg?t=1611214058"
+    },
+    {
+      "title": "Addicted To Property - News from the UK Housing Market",
+      "feed_url": "https://addictedtoproperty.co.uk/feed/",
+      "website_url": "https://addictedtoproperty.co.uk/",
+      "description": "For any property related news and updates in and around London and the South of England!",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 3700
+      },
+      "image_url": "https://i1.feedspot.com/4785116.jpg?t=1611212222"
+    },
+    {
+      "title": "HM Land Registry",
+      "feed_url": "https://hmlandregistry.blog.gov.uk/feed/",
+      "website_url": "https://hmlandregistry.blog.gov.uk/",
+      "description": "We register the ownership of land and property in England and Wales. On this blog, we talk about land and property, and the work we do.",
+      "followers": {
+        "facebook": 8700,
+        "twitter": 14800
+      },
+      "image_url": "https://i1.feedspot.com/4841313.jpg?t=1611211987"
+    },
+    {
+      "title": "Rettie & Co Property Blog",
+      "feed_url": "https://www.rettie.co.uk/blog.rss",
+      "website_url": "https://www.rettie.co.uk/blog",
+      "description": "Rettie & Co are Scotland's leading independent firm of property specialists. We help clients all over the world sell and let quality property in Scotland and Northumberland, from city centre flats in Edinburgh and Glasgow, to premium family homes and rural estates. The Rettie & Co blog contains everything about property, property research and lifestyle.",
+      "followers": {
+        "facebook": 3700,
+        "twitter": 3900,
+        "instagram": 7200
+      },
+      "image_url": "https://i1.feedspot.com/4625483.jpg?t=1603807635"
+    },
+    {
+      "title": "Beds for Builders",
+      "feed_url": "https://www.bedsforbuilders.co.uk/feed/",
+      "website_url": "https://www.bedsforbuilders.co.uk/blog/",
+      "description": "At BedsForBuilders.co.uk, we provide Contractors Accommodation Service for Contractors and tradesmen working in the construction industry in the UK and IRELAND. We have over 1000 accommodation service providers working with us to accommodate Contractors and Tradesmen. Discover the latest news from beds for builders plus tips and trips for contractor and business travel.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 423
+      },
+      "image_url": "https://i1.feedspot.com/5222595.jpg?t=1607061161"
+    },
+    {
+      "title": "Anna Clare Harper",
+      "feed_url": "https://annaclareharper.com/feed/",
+      "website_url": "https://annaclareharper.com/media/",
+      "description": "With 10+ years experience in property, investment and finance Anna Clare Harper help investors grow their wealth through identifying long term value in the UK housing market.",
+      "followers": {
+        "facebook": 208,
+        "twitter": 438
+      },
+      "image_url": "https://i1.feedspot.com/5148606.jpg?t=1611212474"
+    },
+    {
+      "title": "LegalForLandlords",
+      "feed_url": "https://legalforlandlords.co.uk/news/feed/",
+      "website_url": "https://legalforlandlords.co.uk/news/",
+      "description": "Insurance and professional and legal services for landlords and letting agents.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5161936.jpg"
+    },
+    {
+      "title": "CARE4PROPERTIES",
+      "feed_url": "https://care4properties.co.uk/feed/",
+      "website_url": "https://care4properties.co.uk/blog/",
+      "description": "Care4Properties is a well-known name in Property Letting, Sales and Management Services operating in Leeds since 2010. We are property specialists and offer to sell or buy residential and commercial properties to potential buyers, sellers or investors.",
+      "followers": {
+        "facebook": 1700
+      },
+      "image_url": "https://i1.feedspot.com/5130351.jpg?t=1611212508"
+    },
+    {
+      "title": "The Clapham Property Blog",
+      "feed_url": "https://www.claphampropertyblog.com/feeds/posts/default?alt=rss",
+      "website_url": "http://www.claphampropertyblog.com/",
+      "description": "Do you have rental properties in South London? Do you want better returns? Stay tuned with the Clapham Property Blog for local market news and investment tips to maximise your investment returns!",
+      "followers": {
+        "facebook": 518,
+        "twitter": 116
+      },
+      "image_url": "https://i1.feedspot.com/4626114.jpg?t=1611212517"
+    },
+    {
+      "title": "Inside Property Investing Podcast Blog",
+      "feed_url": "https://www.insidepropertyinvesting.com/feed/",
+      "website_url": "https://www.insidepropertyinvesting.com/category/blog/",
+      "description": "Inside Property Investing is a podcast sharing successful property investors interviews to help inspire and motivate you on your own investing journey. Our goal is not only to motivate you with insights into how these successful investors got started, but also to give you real life guidance and tactics so that you too can achieve huge success from investing in property.",
+      "followers": {
+        "facebook": 10100,
+        "twitter": 1700,
+        "instagram": 37700
+      },
+      "image_url": "https://i1.feedspot.com/4629791.jpg?t=1603807923"
+    },
+    {
+      "title": "Property And Development Magazine",
+      "feed_url": "https://www.padmagazine.co.uk/feed/",
+      "website_url": "https://www.padmagazine.co.uk/",
+      "description": "Property And Development Magazine, the UK Architecture and Property Magazine, and UK Property News Site for Architecture, Property Management and FM News.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4626666.jpg?t=1603807935"
+    },
+    {
+      "title": "Mountgrange Heritage Blog",
+      "feed_url": "https://www.mountgrangeheritage.co.uk/feed/",
+      "website_url": "https://www.mountgrangeheritage.co.uk/property-market-blog/",
+      "description": "Read our property market blog for the Notting Hill and Kensington area, with topics ranging from local guides, market comment, planning and interior design.",
+      "followers": {
+        "twitter": 687,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/4841702.jpg?t=1611213126"
+    },
+    {
+      "title": "Miles & Barr Blog",
+      "feed_url": "https://www.milesandbarr.co.uk/get-social/estate-agent-blog?format=feed&type=rss",
+      "website_url": "https://www.milesandbarr.co.uk/get-social/estate-agent-blog",
+      "description": "Miles & Barr an independent Kent estate agents dealing with property selling, buying, renting, mortgage advice, property management and relocation services. Read the latest property news from Miles & Barr leading estate and letting agents in Kent, and know the updated information about the property market.",
+      "followers": {
+        "facebook": 20500,
+        "twitter": 2100,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4626225.jpg?t=1611213143"
+    },
+    {
+      "title": "Norfolk Property Lettings & Management Blog",
+      "feed_url": "https://norfolkpropertymanagement.co.uk/feed/",
+      "website_url": "https://norfolkpropertymanagement.co.uk/blog/",
+      "description": "Norfolk Property Lettings and Management has been exclusively managing and letting properties for many years throughout Norwich, Norfolk and the surrounding areas.",
+      "followers": {
+        "facebook": 727,
+        "twitter": 1800,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4842670.jpg?t=1611213153"
+    },
+    {
+      "title": "Cleaver Property Management News",
+      "feed_url": "https://www.cleaverproperty.co.uk//feed/rss2",
+      "website_url": "https://www.cleaverproperty.co.uk/news",
+      "description": "Cleaver Property Management is an independent, family-owned specialist property management and residential letting agent. They offer a high-quality, responsive management service to multi-tenanted properties throughout Berkshire and the Thames Valley. Their property managers will work proactively and efficiently, often without you even being aware of it. They are focused on delivering outstanding customer service. Wade through their blog and learn more about their services, resources, news, case studies, and more.",
+      "followers": {
+        "facebook": 171
+      },
+      "image_url": "https://i1.feedspot.com/4842704.jpg?t=1611213191"
+    },
+    {
+      "title": "Hounslow Property Blog",
+      "feed_url": "https://hounslowpropertyblog.co.uk/feed/",
+      "website_url": "https://hounslowpropertyblog.co.uk/",
+      "description": "Hounslow Property Market Blog by Husband and wife Manraj & Sheetel Bisran to follow the property market in Hounslow and surrounding areas.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 187
+      },
+      "image_url": "https://i1.feedspot.com/4843544.jpg?t=1611213197"
+    },
+    {
+      "title": "The Lancaster Property Blog",
+      "feed_url": "https://www.lancasterpropertyblog.co.uk/feed/",
+      "website_url": "https://www.lancasterpropertyblog.co.uk/",
+      "description": "This blog is all about what is happening in the local property market. It's primaliry aimed at landlords. Together we will look closely at the change in prices and where the best places for you to invest are.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4626037.jpg?t=1611213207"
+    },
+    {
+      "title": "AinsworthLordEstates",
+      "feed_url": "https://ainsworthlordestates.co.uk/feed/",
+      "website_url": "http://ainsworthlordestates.co.uk/",
+      "description": "Ainsworth Lord Estates has a complimentary take on the Selling, Letting and Managing Properties. Get news on what is happening on the Darwen Property Scene from an investor's perspective",
+      "followers": {
+        "facebook": 9,
+        "twitter": 376
+      },
+      "image_url": "https://i1.feedspot.com/4625550.jpg?t=1603808111"
+    },
+    {
+      "title": "Invest for Property",
+      "feed_url": "https://www.investforproperty.co.uk/feed/",
+      "website_url": "https://www.investforproperty.co.uk/",
+      "description": "Get all the latest news about Stock Market, investment property and shares at Invest For Property website. We cover the news from all over the world.",
+      "followers": {
+        "facebook": 598
+      },
+      "image_url": "https://i1.feedspot.com/5030388.jpg?t=1611213225"
+    },
+    {
+      "title": "Waymark Property Blog",
+      "feed_url": "https://www.waymarkproperty.co.uk/property-rss.xml/feed",
+      "website_url": "https://www.waymarkproperty.co.uk/blog/",
+      "description": "Estate Agents, Chartered Surveyors and Commercial Property Consultant covering Faringdon, Wantage and surrounding villages.",
+      "followers": {
+        "facebook": 380
+      },
+      "image_url": "https://i1.feedspot.com/4842781.jpg?t=1611213749"
+    },
+    {
+      "title": "Moovahome Property Sales",
+      "feed_url": "https://moovahome.co.uk/news/feed/",
+      "website_url": "https://moovahome.co.uk/news/",
+      "description": "Moovahome Blog is a local Swindon Estate Agency based on Victoria Road and we specialise in houses for sale in Swindon and the surrounding areas.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 139
+      },
+      "image_url": "https://i1.feedspot.com/4841330.jpg?t=1611213779"
+    },
+    {
+      "title": "Morton Reeves",
+      "feed_url": "https://www.mortonreeves.co.uk/feed/",
+      "website_url": "https://www.mortonreeves.co.uk/blog/",
+      "description": "Covers Property News, Buying & Selling, Morton Reeves News, Morton Reeves Advice, and Video Tips. Morton Reeves is an estate agency in Norwich that offers a personal service, as well as experience and knowledge in the local property market.",
+      "followers": {
+        "facebook": 247,
+        "twitter": 2900,
+        "instagram": 902
+      },
+      "image_url": "https://i1.feedspot.com/5380448.jpg?t=1647002912"
+    },
+    {
+      "title": "Housebuyers4u Blog",
+      "feed_url": "https://housebuyers4u.co.uk/feed/",
+      "website_url": "https://housebuyers4u.co.uk/blog/",
+      "description": "The Housebuyers4u Property Vibes blog is your go-to place for advice which includes, guides, in-depth analysis, reports, reviews & a host of useful resources.",
+      "followers": {
+        "facebook": 125,
+        "twitter": 683
+      },
+      "image_url": "https://i1.feedspot.com/5066126.jpg?t=1611214652"
+    },
+    {
+      "title": "Garrington",
+      "feed_url": "https://www.garrington.co.uk/feed/",
+      "website_url": "https://www.garrington.co.uk/blog/",
+      "description": "Blog posts from UK property finder, Garrington Property Finders, providing insights into the ever changing Property Market and home buying advice",
+      "followers": {
+        "facebook": 509,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/8657606.jpg?t=1754910387"
+    },
+    {
+      "title": "Property Week",
+      "feed_url": "https://www.propertyweek.com/news/feed",
+      "website_url": "https://www.propertyweek.com/news/",
+      "description": "Get the latest property news, events and valuations from the commercial property market. Property Week covers residential and commercial property news.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 76400
+      },
+      "image_url": "https://i1.feedspot.com/8657605.jpg"
+    },
+    {
+      "title": "Property Division \u00bb Property News",
+      "feed_url": "https://propertydivision.co.uk/category/property-news/feed/",
+      "website_url": "https://propertydivision.co.uk/category/property-news/",
+      "description": "Property Division is an innovative UK property news hub offering expert-driven advice, templates, tips, and insights for landlords, buy-to-let investors, homeowners, and professionals across residential and commercial property sectors.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/8657607.jpg?t=1754910977"
+    },
+    {
+      "title": "Homeviews",
+      "feed_url": "https://www.homeviews.com/category/blog/feed",
+      "website_url": "https://www.homeviews.com/category/blog/",
+      "description": "Homeviews is a pioneering residential development review website. Check out their blog read the latest news and get valuable tips and insight. Dive into industry trends, explore the UK's diverse property landscape, and learn to extract trustworthy information from the intricate world of real estate.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 712,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5688837.jpg?t=1697199160"
+    },
+    {
+      "title": "Property Hawk",
+      "feed_url": "https://blog.propertyhawk.co.uk/feeds/posts/default",
+      "website_url": "https://blog.propertyhawk.co.uk/",
+      "description": "A blog for landlords in the UK private residential sector; BTL mortgage, PRS legislation, property prices and property management news.",
+      "followers": {
+        "facebook": 288,
+        "twitter": 10900
+      },
+      "image_url": "https://i1.feedspot.com/1422703.jpg?t=1610774372"
+    },
+    {
+      "title": "Walsall Property Blog",
+      "feed_url": "https://walsallpropertyblog.com/feed/",
+      "website_url": "https://walsallpropertyblog.com/",
+      "description": "Ashmore Lettings provides a Professional and Personal Service to the Private Landlord in Walsall and surrounding areas. On this blog I will talk about what is happening in the town property market itself, even looking at specific streets or housing estates.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 270
+      },
+      "image_url": "https://i1.feedspot.com/4625488.jpg?t=1611211975"
+    },
+    {
+      "title": "Property Solvers Blog",
+      "feed_url": "https://www.propertysolvers.co.uk/feed/",
+      "website_url": "https://www.propertysolvers.co.uk/blog/",
+      "description": "We are experienced property professionals and landlords that work with property owners in search of a fast sale.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1700,
+        "instagram": 28
+      },
+      "image_url": "https://i1.feedspot.com/5031688.jpg?t=1611212242"
+    },
+    {
+      "title": "Gladfish Property Investment Blog",
+      "feed_url": "https://www.gladfish.com/feed/",
+      "website_url": "https://www.gladfish.com/ukpropertyinvestmentblog/",
+      "description": "Gladfish Property Investment is a Property investment education blog that publishes over 2000 articles on the UK property market.",
+      "followers": {
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/5051854.jpg"
+    },
+    {
+      "title": "HIP Consultant",
+      "feed_url": "http://www.hip-consultant.co.uk/blog/feed/",
+      "website_url": "http://www.hip-consultant.co.uk/blog/",
+      "description": "Innovating the property market. News, articles and blog commentary; including advice and guides on the current housing market, conveyancing, energy efficiency.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4841212.jpg?t=1611212714"
+    },
+    {
+      "title": "What the Flip: Property Investing",
+      "feed_url": "https://wtfpropertyinvesting.com/feed",
+      "website_url": "https://wtfpropertyinvesting.com/",
+      "description": "In this blog, you will learn how to get started in property investing in the UK. Discover the world of buy-to-let, HMO's and property development. Follow the blog to know more.",
+      "followers": {
+        "facebook": 124,
+        "twitter": 112
+      },
+      "image_url": "https://i1.feedspot.com/5184895.jpg?t=1598612837"
+    },
+    {
+      "title": "RFM Group",
+      "feed_url": "https://www.rfm-group.com/feed/",
+      "website_url": "https://www.rfm-group.com/feed/",
+      "description": "We are property experts that consult, build, manage and maintain all types of property. Here you will find property business insights across commercial, educational, health, residential and retail sectors. We've always got news, insights, and expertise to share, not to mention the occasional opinion on construction, facilities management, property repair and maintenance.",
+      "followers": {
+        "facebook": 50,
+        "twitter": 464
+      },
+      "image_url": "https://i1.feedspot.com/5246092.jpg?t=1613570847"
+    },
+    {
+      "title": "Agents Diary",
+      "feed_url": "http://agentsdiary.blogspot.com/feeds/posts/default",
+      "website_url": "http://agentsdiary.blogspot.com/",
+      "description": "The weary musings of a time-served estate agent (realtor) somewhere in the UK. If you want advice on the property market, or alternative careers to this one, let me know, I might reply. In the meantime I'm plagued by cretinous idiots who I work with and for, and who may well feature in my diary at some time.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/324807.jpg?t=1611212252"
+    },
+    {
+      "title": "Property Solvers Investor Services Blog",
+      "feed_url": "https://www.psinvestors.co.uk/blog/feed/",
+      "website_url": "https://www.psinvestors.co.uk/blog/",
+      "description": "A blog written for anyone interested in UK property investment. PS Investor Services source and package high quality residential buy to let / trading opportunities for professional property investors.",
+      "followers": {
+        "facebook": 32,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4629656.jpg?t=1611212476"
+    },
+    {
+      "title": "365 Property Buyer - News and Updates About Properties in UK",
+      "feed_url": "https://365propertybuyer.co.uk/blog/feed/",
+      "website_url": "https://365propertybuyer.co.uk/blog/",
+      "description": "Get the latest blog posts about UK property market by 365 Property Buyers. Read about the latest real estate news and information for United Kingdom house market!",
+      "followers": {
+        "facebook": 422,
+        "twitter": 212
+      },
+      "image_url": "https://i1.feedspot.com/4842405.jpg?t=1611212476"
+    },
+    {
+      "title": "StayTech Blog",
+      "feed_url": "https://www.staytech.co.uk/blog/feed",
+      "website_url": "https://www.staytech.co.uk/blog",
+      "description": "Scrumpy provides easy to use booking websites to holiday property owners. An easy to use, powerful booking management system coupled with a clean, stylish website, we help property owners easily manage their holiday properties.",
+      "followers": {
+        "facebook": 103,
+        "twitter": 252
+      },
+      "image_url": "https://i1.feedspot.com/4626587.jpg?t=1603807883"
+    },
+    {
+      "title": "Property Personnel - Estate Agent and Property Blog",
+      "feed_url": "https://www.propertypersonnel.co.uk/blog/feed/",
+      "website_url": "https://www.propertypersonnel.co.uk/blog/",
+      "description": "Keep on top of the latest news and views in estate agency and property services from the UK's leading property recruitment specialists.",
+      "followers": {
+        "facebook": 480,
+        "twitter": 1100,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4841747.jpg?t=1611212498"
+    },
+    {
+      "title": "Property UK Blog - United Kingdom real estate blog",
+      "feed_url": "http://www.propertyuk.com/rss/news",
+      "website_url": "http://www.propertyuk.com/blog-uk",
+      "description": "Find the latest updates on United Kingdom real estate, London investment tips, guides to buying a home in the UK, about London, Liverpool!",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 51
+      },
+      "image_url": "https://i1.feedspot.com/4842834.jpg?t=1611212532"
+    },
+    {
+      "title": "Letting Focus",
+      "feed_url": "https://www.lettingfocus.com/blogs/feed/",
+      "website_url": "https://www.lettingfocus.com/blogs/",
+      "description": "Property investment & buy to let advice, help & information for landlords. Consulting for organisations which have business with the private rented sector.",
+      "followers": {
+        "twitter": 8200
+      },
+      "image_url": "https://i1.feedspot.com/4841157.jpg?t=1611213119"
+    },
+    {
+      "title": "LetBritain",
+      "feed_url": "https://letbritain.co.uk/blog/feed/",
+      "website_url": "https://letbritain.co.uk/blog/",
+      "description": "Stay up to date with the latest property news, research and regulations, free advice for both Landlords and Tenants on our daily updated LetBritain blogs portal.",
+      "followers": {
+        "facebook": 519,
+        "twitter": 315,
+        "instagram": 247
+      },
+      "image_url": "https://i1.feedspot.com/5123036.jpg?t=1611212540"
+    },
+    {
+      "title": "The Chelmsford Property blog - Brought to you by chelmsfords' property experts",
+      "feed_url": "https://chelmsfordpropertyblog.co.uk/feed/",
+      "website_url": "https://chelmsfordpropertyblog.co.uk/",
+      "description": "This blog follows the buy-to-let market in Chelmsford. You'll find tips, guidance, and analysis that relates specifically to Chelmsford and you'll also find properties from all the estate agents in the town on here that may make decent investments. I operate Martin and Co in Chelmsford and if you're thinking of buying a property to let in Chelmsford, I'm happy to offer a second opinion.",
+      "followers": {
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4625563.jpg?t=1611213130"
+    },
+    {
+      "title": "Warrington Property Blog",
+      "feed_url": "https://warringtonproperty.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://warringtonproperty.blogspot.com/",
+      "description": "This blog follows the buy-to-let market in Warrington. You'll find tips, guidance, and analysis that relates specifically to Warrington.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 517
+      },
+      "image_url": "https://i1.feedspot.com/4626144.jpg?t=1611213162"
+    },
+    {
+      "title": "The Property Blog",
+      "feed_url": "https://thepropertyblog.co.uk/category/property-blogs/feed/",
+      "website_url": "https://thepropertyblog.co.uk/category/property-blogs/",
+      "description": "Our aim is to connect with industry relevant writers providing our viewers with a single platform for all things property.",
+      "followers": {
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4841308.jpg?t=1611213168"
+    },
+    {
+      "title": "UK Property, Cryptocurrency and Investments with Aran Mathai",
+      "feed_url": "https://aranmathai.com/feed/",
+      "website_url": "https://aranmathai.com/",
+      "description": "This blog aims to help you identify the opportunities and risks as we move into a new financial order. Aran Mathai presents news and his views on the coming financial crisis and property, cryptocurrency, and investment markets.",
+      "followers": {
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5175902.jpg?t=1671602001"
+    },
+    {
+      "title": "East Midlands Property Management - News for renting or letting houses or homes",
+      "feed_url": "https://empm.co.uk/feed/",
+      "website_url": "https://empm.co.uk/news/",
+      "description": "Read all the latest news regarding letting and renting property in Newark & Grantham.",
+      "followers": {
+        "twitter": 325
+      },
+      "image_url": "https://i1.feedspot.com/4842663.jpg?t=1611213765"
+    },
+    {
+      "title": "The Aylesbury Property Blog",
+      "feed_url": "http://theaylesburypropertyblog.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://theaylesburypropertyblog.blogspot.com/",
+      "description": "The latest news and views on the Aylesbury Property Market.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4842762.jpg?t=1611214280"
+    },
+    {
+      "title": "Rotherham Property Blog",
+      "feed_url": "http://rotherhampropertyblog.co.uk/feed/",
+      "website_url": "http://rotherhampropertyblog.co.uk/",
+      "description": "The Rotherham Property Blog is written by Chris Holmes. On this blog I will share what is happening in Rotherham's Property market, even looking at specific areas and housing estates. At other times I will post what I consider are decent buy to let deals. Some will be on the market with me whilst others may be marketed by other agents in Rotherham.",
+      "followers": {
+        "facebook": 40,
+        "twitter": 277
+      },
+      "image_url": "https://i1.feedspot.com/4625573.jpg?t=1611214014"
+    },
+    {
+      "title": "The Property Fox",
+      "feed_url": "https://www.fastpropertysales.co.uk/updates.atom",
+      "website_url": "https://www.fastpropertysales.co.uk/blog/",
+      "description": "I offer personal property advice and estate agency across the West of Leicester. I help buyers and sellers get what they want!",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 896,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4842845.jpg?t=1611214026"
+    },
+    {
+      "title": "James Bennett",
+      "feed_url": "https://www.jamesbennett.uk/blog-feed.xml",
+      "website_url": "https://www.jamesbennett.uk/blog",
+      "description": "My mission is to equip as many aspiring property investors as possible with the correct tools and knowledge they need to go out and create the lifestyle of their choice. Property investing has enabled me to help many people on their path to achieving a life of freedom James Bennett property coach.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5214866.jpg?t=1611214142"
+    },
+    {
+      "title": "North East House Buyers",
+      "feed_url": "https://www.northeasthousebuyers.co.uk/feed/",
+      "website_url": "https://www.northeasthousebuyers.co.uk/blog/",
+      "description": "North East House Buyers is a cash home buyer based in the North East. We aim to provide useful content to help people in the UK fully understand the options they have when it comes to selling their home!",
+      "followers": {
+        "facebook": 464
+      },
+      "image_url": "https://i1.feedspot.com/5286698.jpg?t=1622462962"
+    },
+    {
+      "title": "Home Truths - Home Selling Blog",
+      "feed_url": "https://www.home-truths.co.uk/home-selling-blog/feed/",
+      "website_url": "https://www.home-truths.co.uk/home-selling-blog/",
+      "description": "Samantha Ashdown HomeTruths Established in 2004, Home Truths specialises in helping clients that have had their homes for sale for six months or more.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/4841185.jpg?t=1611214657"
+    },
+    {
+      "title": "London Evening Standard",
+      "feed_url": "https://www.homesandproperty.co.uk/rss",
+      "website_url": "https://www.standard.co.uk/homesandproperty",
+      "description": "Homes & Property is the leading newspaper property supplement in the country.Follow us to keep up with all the latest property news, area guides, buying, renting, interiors & design trends.",
+      "followers": {
+        "facebook": 30500,
+        "twitter": 50800
+      },
+      "image_url": "https://i1.feedspot.com/4842562.jpg?t=1611211898"
+    },
+    {
+      "title": "RE/MAX Real Estate Agents London Blog",
+      "feed_url": "https://realestateagentslondon.co.uk/category/blogs/",
+      "website_url": "https://realestateagentslondon.co.uk/category/blogs/",
+      "description": "Follow Real Estate news and thought-provoking commentary on the latest market conditions. Uncover expert insights that can get you the best deals in London's Real Estate. RE/MAX Estate Agents Part of a well-known worldwide Brand, operates and cater to the residential and commercial property needs of buyers, sellers and tenants in Canning Town.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 77,
+        "instagram": 691
+      },
+      "image_url": "https://i1.feedspot.com/5688833.jpg?t=1697199131"
+    },
+    {
+      "title": "Allsop Insights",
+      "feed_url": "https://www.allsop.co.uk/insights/",
+      "website_url": "https://www.allsop.co.uk/insights/",
+      "description": "Allsop has a market-leading reputation for high quality service and integrity in property consultancy and auctions",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/4841818.jpg?t=1611212009"
+    },
+    {
+      "title": "Property Investment Project Blog",
+      "feed_url": "https://www.propertyinvestmentproject.co.uk/blog/",
+      "website_url": "https://www.propertyinvestmentproject.co.uk/blog/",
+      "description": "Covers articles on Landlord Legal Issues, Marketing & Finding Tenants, Managing Your Rental Property, Selling Your House Tips & Advice, Letting Agents and more. Documenting one man's struggle to financial success through Property & Buy-to-Let. From Property Idiot, to Property Landlord. Follow this site to get landlord information and advice.",
+      "followers": {
+        "facebook": 3800,
+        "twitter": 8100
+      },
+      "image_url": "https://i1.feedspot.com/3811970.jpg?t=1610774363"
+    },
+    {
+      "title": "Letting Agent Today",
+      "feed_url": "https://www.lettingagenttoday.co.uk/rss/news/1",
+      "website_url": "https://www.lettingagenttoday.co.uk/",
+      "description": "Letting Agent Today is the go-to news site for the UK's letting agents and property managers.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 34900
+      },
+      "image_url": "https://i1.feedspot.com/4842603.jpg?t=1611212002"
+    },
+    {
+      "title": "Doncaster Property Blog",
+      "feed_url": "https://www.doncasterpropertyblog.co.uk/feed/",
+      "website_url": "https://kubie-gold.co.uk/blog/",
+      "description": "Doncaster's award winning Sales and Letting agent, proud members of The Guild of Professional Estate Agents & Relocation Agent Network. This blog follows the property market in Doncaster and the surrounding areas. From potential buy to let property deals to analysis and comment on the local property market. If you're serious about investing in buy to let property in Doncaster.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4625534.jpg?t=1611213149"
+    },
+    {
+      "title": "London Property Hub Blog",
+      "feed_url": "https://www.propertylondon.co.uk/feed/",
+      "website_url": "https://kubie-gold.co.uk/blog/",
+      "description": "LondonPropertyHub is an online platform specialising in architecture and interior design. Our mission is to showcase inspirational properties for sale, and fresh ideas for your contemporary or luxury home.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 50,
+        "instagram": 406900
+      },
+      "image_url": "https://i1.feedspot.com/5083960.jpg?t=1611214248"
+    },
+    {
+      "title": "Property London",
+      "feed_url": "https://www.propertylondon.co.uk/feed/",
+      "website_url": "https://kubie-gold.co.uk/blog/",
+      "description": "Property London is a digital magazine showcasing inspirational homes for sale in London, and the surrounding areas. PL keeps you up to date with the latest deals and government incentives, such as help to buy and shared ownership. Along with the latest news, PL publishes reviews, inspiration, and ideas for creating a stunning new home!",
+      "followers": {
+        "facebook": 124700,
+        "twitter": 204,
+        "instagram": 406900
+      },
+      "image_url": "https://i1.feedspot.com/5179162.jpg?t=1611214034"
+    },
+    {
+      "title": "LandlordZONE",
+      "feed_url": "https://www.landlordzone.co.uk/",
+      "website_url": "https://www.landlordzone.co.uk/",
+      "description": "LandlordZONE is the UK's leading landlord publication, providing property news, advice, legal information, comment and insight for the rental property industry.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 25900
+      },
+      "image_url": "https://i1.feedspot.com/4820080.jpg?t=1619191116"
+    },
+    {
+      "title": "Your Move: Estate Agents and Letting Agents in the UK Blog",
+      "feed_url": "https://www.your-move.co.uk/blog/rss",
+      "website_url": "https://www.your-move.co.uk/blog",
+      "description": "The UK's most visited estate agents! Your Move estate agents can help you buy, sell, rent and let property with branches across the UK. Keep up to date with property trends and market analysis, brand news, articles and competitions.",
+      "followers": {
+        "facebook": 35300,
+        "twitter": 4700
+      },
+      "image_url": "https://i1.feedspot.com/4455998.jpg?t=1611211913"
+    },
+    {
+      "title": "The Rat and Mouse | London's property blog",
+      "feed_url": "https://theratandmouse.co.uk/feed/",
+      "website_url": "https://theratandmouse.co.uk/",
+      "description": "The Rat and Mouse was founded at the beginning of 2005 by mysterious and pseudonymous writer/publisher Ben Brandt. In less than a year it had become cult reading among both home-movers and the property industry offering a unique cocktail of property gossip and market news and views, served with a twist of cynicism and wit!",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4841138.jpg?t=1611211960"
+    },
+    {
+      "title": "Reeds Rains - Reeds Rains Property Blog",
+      "feed_url": "https://www.reedsrains.co.uk/blog/rss",
+      "website_url": "https://www.reedsrains.co.uk/blog",
+      "description": "Reeds Rains Estate and Letting Agents with properties for sale and to let across England, Wales and Northern Ireland. The Reeds Rains blog publishing up to date property market news, and helpful articles for all stages of buying, selling, renting and letting.",
+      "followers": {
+        "facebook": 11800,
+        "twitter": 4600
+      },
+      "image_url": "https://i1.feedspot.com/4621775.jpg?t=1611211970"
+    },
+    {
+      "title": "The Property Construction Company Blog",
+      "feed_url": "https://thepropertyconstructioncompany.co.uk/feed/",
+      "website_url": "https://thepropertyconstructioncompany.co.uk/blogs/",
+      "description": "Explore insightful blogs from The Property Construction Company. Gain knowledge about construction, real estate, and more in these blogs. The property construction company is a leading property maintenance company, proudly serving the vibrant communities of North West London.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5758977.jpg?t=1705905445"
+    },
+    {
+      "title": "Ello Property Blog",
+      "feed_url": "https://elloproperty.co.uk/blog/f.atom",
+      "website_url": "https://elloproperty.co.uk/blog?blog=y",
+      "description": "Ello Property emphasizes empowering landlords to manage their properties effectively. Ello Property offers resources such as guides, templates, and access to a Landlord Portal, aiming to help landlords save money and efficiently manage their rental properties. Additionally, the service provides expert advice, downloadable documentation, and access to qualified property consultants.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7264141.jpg?t=1709274214"
+    },
+    {
+      "title": "LandlordZONE",
+      "feed_url": "https://www.landlordzone.co.uk/feed",
+      "website_url": "https://www.landlordzone.co.uk/",
+      "description": "LandlordZONE\u00ae is a free access website for landlords & agents involved in letting property. Our primary aim is to assist new & experienced landlords with successful property investment & management. We do this by providing an encyclopaedic wealth of information for Landlords, Letting Agents & other property professionals. Follow for news, advice, legal comment and insight from this site.",
+      "followers": {
+        "facebook": 6100,
+        "twitter": 25900,
+        "instagram": 679
+      },
+      "image_url": "https://i1.feedspot.com/4626642.jpg?t=1603807530"
+    },
+    {
+      "title": "HomeViews Blog",
+      "feed_url": "https://www.homeviews.com/feed",
+      "website_url": "https://www.homeviews.com/blog",
+      "description": "One of the biggest decisions we ever make, financially and emotionally, is choosing a home. Our mission at HomeViews is to share useful, trustworthy insights about residential developments to support you in making that decision. Have a look at our review guidelines and all of our tips to make the right choice when looking for a new home.",
+      "followers": {
+        "facebook": 494,
+        "twitter": 712,
+        "instagram": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5159592.jpg?t=1611212214"
+    },
+    {
+      "title": "The Heaton Group",
+      "feed_url": "https://blog.heatongroup.co.uk/news/rss.xml",
+      "website_url": "https://blog.heatongroup.co.uk/news",
+      "description": "The Heaton Group creates unique property investment opportunities, focusing on quality, efficiency, and rental yield, for serious property investors. Read updates on property investment, North West developments currently in progress, and more.",
+      "followers": {
+        "facebook": 947,
+        "twitter": 716
+      },
+      "image_url": "https://i1.feedspot.com/5172025.jpg?t=1611212482"
+    },
+    {
+      "title": "UK Property Cash Buyers",
+      "feed_url": "https://www.ukpropertycashbuyers.co.uk/blog/feed/",
+      "website_url": "https://www.ukpropertycashbuyers.co.uk/uk-property-insights/",
+      "description": "UK Property Cash buyers has all the information you need to get clued up on the property market.",
+      "followers": {
+        "facebook": 406,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4841677.jpg?t=1611212486"
+    },
+    {
+      "title": "LSL Land and New Homes | Latest News & Property Blog",
+      "feed_url": "https://www.lsllandandnewhomes.co.uk/blog/rss",
+      "website_url": "https://www.lsllandandnewhomes.co.uk/blog",
+      "description": "Keep up to date with all the latest property trends and market analysis.",
+      "followers": {
+        "facebook": 547,
+        "twitter": 2900,
+        "instagram": 247
+      },
+      "image_url": "https://i1.feedspot.com/4842143.jpg?t=1611213138"
+    },
+    {
+      "title": "The Northampton Property Blog",
+      "feed_url": "https://www.northamptonpropertyblog.com/feed",
+      "website_url": "https://www.northamptonpropertyblog.com/",
+      "description": "This blog follows the property market in Northampton. You'll find tips, guidance, and analysis that relates specifically to the property market in Northampton. You will also find properties from all the estate agents in the town on here that may make decent investments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4626538.jpg?t=1603808105"
+    },
+    {
+      "title": "The Property Network",
+      "feed_url": "https://thepropertynetwork.net/feed/",
+      "website_url": "https://thepropertynetwork.net/",
+      "description": "My name is Jordan & I have years of experience working in the UK property industry. I decided to create The Property Network with the aim of providing the best tips, advice, news & more about all things property. Whether you're buying, selling or renting, The Property Network is here to offer relevant and insightful information to help you along your property journey. The Property Network will be updated regularly with a range of original articles and content covering a wide variety of topics.",
+      "followers": {
+        "twitter": 175
+      },
+      "image_url": "https://i1.feedspot.com/5053400.jpg?t=1611213235"
+    },
+    {
+      "title": "Betterplace",
+      "feed_url": "https://www.betterplace.co.uk/blog-feed.xml",
+      "website_url": "https://www.betterplace.co.uk/blog",
+      "description": "Betterplace's blog provides advice on selling your property and commentary on the property market. Articles from Betterplace on property, finance, and personal development. Helping you get to a better place.",
+      "followers": {
+        "facebook": 63,
+        "twitter": 22
+      },
+      "image_url": "https://i1.feedspot.com/5234177.jpg?t=1611214044"
+    }
+  ]
+}

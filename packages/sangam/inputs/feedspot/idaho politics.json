@@ -1,0 +1,157 @@
+{
+  "category": "Idaho Politics",
+  "source_url": "https://rss.feedspot.com/idaho_politics_rss_feeds",
+  "feeds": [
+    {
+      "title": "Conservation Voters of Idaho",
+      "feed_url": "https://cvidaho.org/news/feed/",
+      "website_url": "https://cvidaho.org/news/",
+      "description": "Conservation Voters of Idaho are working to elect conservation leaders, pass policies to protect Idaho's quality of life and environment, and hold politicians accountable.",
+      "followers": {
+        "twitter": 1400,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5312963.jpg?t=1629273315"
+    },
+    {
+      "title": "Idaho Reports",
+      "feed_url": "https://blog.idahoreports.idahoptv.org/feed/",
+      "website_url": "https://blog.idahoreports.idahoptv.org/category/politics/",
+      "description": "Idaho Reports is a weekly news program dedicated to coverage of state politics during the legislative session and public policy show focused on issues that affect Idahoans in every corner of the state.",
+      "followers": {
+        "facebook": 3200,
+        "twitter": 12900
+      },
+      "image_url": "https://i1.feedspot.com/5313079.jpg?t=1629274340"
+    },
+    {
+      "title": "City of Idaho Falls",
+      "feed_url": "https://www.idahofallsidaho.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.idahofallsidaho.gov/CivicAlerts.aspx?CID=5",
+      "description": "The purpose of the site is to communicate matters of public interest concerning city news, programs and activities and to create a space for open interaction.",
+      "followers": {
+        "facebook": 20100,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5130922.jpg?t=1629275619"
+    },
+    {
+      "title": "City of Pocatello",
+      "feed_url": "https://pocatello.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://pocatello.gov/CivicAlerts.aspx",
+      "description": "Get the latest news, information, events, and important announcements from the official website of Pocatello, ID.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 2500,
+        "instagram": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5145856.jpg?t=1626161575"
+    },
+    {
+      "title": "City of Twin Falls, ID",
+      "feed_url": "https://www.tfid.org/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.tfid.org/CivicAlerts.aspx?sort=date",
+      "description": "Twin Falls, ID is dedicated to keeping residents informed and up-to-date by providing the latest news about sports, business, performing arts, health/safety issues, human interest and more.",
+      "followers": {
+        "twitter": 2000,
+        "instagram": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5150587.jpg?t=1623156468"
+    },
+    {
+      "title": "City of Nampa, ID",
+      "feed_url": "https://www.cityofnampa.us/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.cityofnampa.us/CivicAlerts.aspx?sort=date",
+      "description": "Get the latest news, updates, information and important announcements from the official website of Nampa, ID.",
+      "followers": {
+        "facebook": 20900,
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5139494.jpg?t=1629273789"
+    },
+    {
+      "title": "Local News 8 Idaho Politics",
+      "feed_url": "https://localnews8.com/category/politics/idaho-politics/feed/",
+      "website_url": "https://localnews8.com/category/politics/idaho-politics/",
+      "description": "Local News 8 is a news station for Eastern Idaho and Western Wyoming. Covers articles on Idaho political updates and news.",
+      "followers": {
+        "facebook": 149300,
+        "twitter": 20200
+      },
+      "image_url": "https://i1.feedspot.com/5312955.jpg?t=1629271608"
+    },
+    {
+      "title": "Idaho Capital Sun Government & Politics",
+      "feed_url": "https://idahocapitalsun.com/category/government-politics/feed/",
+      "website_url": "https://idahocapitalsun.com/category/government-politics/",
+      "description": "Accountability reporting for the 208's political landscape. They aim to tell untold stories and provide data, context, and analysis on the issues that matter most.",
+      "followers": {
+        "facebook": 4100,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/5312959.jpg?t=1629271716"
+    },
+    {
+      "title": "East Idaho News Politics",
+      "feed_url": "https://www.eastidahonews.com/news/politics/feed/",
+      "website_url": "https://www.eastidahonews.com/news/politics/",
+      "description": "East Idaho News covers Idaho news, education news, crime news, good news, business news, entertainment news, and more. This section covers political updates.",
+      "followers": {
+        "facebook": 199700,
+        "twitter": 13500
+      },
+      "image_url": "https://i1.feedspot.com/5312962.jpg?t=1629273008"
+    },
+    {
+      "title": "The Times-News Politics",
+      "feed_url": "https://magicvalley.com/search/?f=rss",
+      "website_url": "https://magicvalley.com/news/local/government-politics/",
+      "description": "The Times-News is an award-winning local news organization in Twin Falls, Idaho, founded in 1904. Covers Southern Idaho political news and local government from the Twin Falls, Idaho, the Magic Valley, and around the state of Idaho.",
+      "followers": {
+        "facebook": 34900,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5312956.jpg?t=1629206948"
+    },
+    {
+      "title": "Boise State Public Radio News Politics & Government",
+      "feed_url": "https://www.boisestatepublicradio.org/politics-government.rss",
+      "website_url": "https://www.boisestatepublicradio.org/politics-government",
+      "description": "Boise State Public Radio is southern and central Idaho's listener-supported NPR member station. It Covers stories about politics, policy, and how government works.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 7600
+      },
+      "image_url": "https://i1.feedspot.com/5313066.jpg?t=1629273457"
+    },
+    {
+      "title": "The Boise Guardian Politics",
+      "feed_url": "https://boiseguardian.com/category/politics/feed/",
+      "website_url": "https://boiseguardian.com/category/politics/",
+      "description": "A fun, factual, informed, and opinionated look at current events in and around Boise, Idaho. It Covers political updates and news.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5313072.jpg?t=1629275268"
+    },
+    {
+      "title": "Political Potatoes",
+      "feed_url": "https://politicalpotatoes.substack.com/feed",
+      "website_url": "https://politicalpotatoes.substack.com/",
+      "description": "PoliticalPotatoes.org was founded with a clear mission in mind: to foster an inclusive and civil environment for political discourse. We strive to promote critical thinking, empathy, and respectful dialogue among individuals with varying perspectives. Our goal is to empower users with accurate information, encourage active engagement, and inspire positive change.",
+      "followers": {
+        "facebook": 11000,
+        "twitter": 3300
+      },
+      "image_url": "https://i1.feedspot.com/5758949.jpg?t=1705900142"
+    },
+    {
+      "title": "Idaho Conservatives",
+      "feed_url": "https://idahoconservatives.com/feed/",
+      "description": "Idaho Conservatives were established to stand up and defend the ideals of real Idaho conservatives by providing an accurate dialogue on public policy, legislative issues, and elections.",
+      "followers": {
+        "facebook": 9200,
+        "twitter": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5312954.jpg?t=1629274490"
+    }
+  ]
+}

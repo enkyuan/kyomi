@@ -1,0 +1,65 @@
+{
+  "category": "UK Footwear",
+  "source_url": "https://rss.feedspot.com/uk_footwear_rss_feeds",
+  "feeds": [
+    {
+      "title": "size.co.uk Blog",
+      "feed_url": "https://blog.size.co.uk/feed/",
+      "website_url": "https://blog.size.co.uk/",
+      "description": "Updates and musings from the global supplier of footwear and garments by a collection of the world's best brands. founded back in 2000, size? has proudly specialised in supplying the UK, Ireland and the rest of the world with the finest brands in footwear, apparel and accessories.",
+      "followers": {
+        "facebook": 465300,
+        "twitter": 200800,
+        "instagram": 1000000
+      },
+      "image_url": "https://i1.feedspot.com/4582798.jpg?t=1603371875"
+    },
+    {
+      "title": "The Shoe Snob Blog",
+      "feed_url": "https://theshoesnobblog.com/feed/",
+      "website_url": "https://theshoesnobblog.com/",
+      "description": "Welcome to The Shoe Snob Blog! This blog was created to not only show the journey of one man, Justin FitzPatrick, who wanted to make the shoe industry the best it could be but also the share all of the knowledge gained along the way. Ultimately this blog is about seeing men wearing better shoes through education and sharing what is out there that deserves recognition.",
+      "followers": {
+        "facebook": 126800,
+        "twitter": 8200,
+        "instagram": 166400
+      },
+      "image_url": "https://i1.feedspot.com/4577244.jpg?t=1638874572"
+    },
+    {
+      "title": "En Brogue",
+      "feed_url": "https://enbrogue.com/feed/",
+      "website_url": "https://enbrogue.com/",
+      "description": "En Brogue is a blog about stylish flat shoes written and illustrated by Hannah Rochell, Fashion Features Editor at InStyle magazine in London. You'll find nothing on here but stylish flat shoes and inspiration on how to wear them, along with a few of my illustrations to boot.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4578238.jpg?t=1603432348"
+    },
+    {
+      "title": "Pavers Blog",
+      "feed_url": "https://www.pavers.co.uk/blogs/news.atom",
+      "website_url": "https://www.pavers.co.uk/blogs",
+      "description": "Find your perfect style for every occasion with Pavers Shoes, one of the UK's leading comfort shoe retailers.",
+      "followers": {
+        "facebook": 131500,
+        "twitter": 16400,
+        "instagram": 20400
+      },
+      "image_url": "https://i1.feedspot.com/4908843.jpg?t=1614086141"
+    },
+    {
+      "title": "Strive Footwear",
+      "feed_url": "https://us.strivefootwear.com/sole-writer",
+      "website_url": "https://us.strivefootwear.com/sole-writer",
+      "description": "Strive Footwear provide orthotic footwear in a unique mix of both style and support. Incorporating Biomechanical Footbed Technology, which is designed to relieve common aches and pains.",
+      "followers": {
+        "facebook": 15000,
+        "twitter": 635,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/4582936.jpg?t=1603372279"
+    }
+  ]
+}

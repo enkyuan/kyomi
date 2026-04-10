@@ -1,0 +1,109 @@
+{
+  "category": "Alabama News",
+  "source_url": "https://rss.feedspot.com/alabama_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "NEWS 9",
+      "feed_url": "https://whnt.com/feed/",
+      "website_url": "https://whnt.com/",
+      "description": "Whnt News 19 is the news leader in North Alabama. Follow to keep up with the latest news and information on sports, weather and much more.",
+      "followers": {
+        "facebook": 436900,
+        "twitter": 147000,
+        "instagram": 63300
+      },
+      "image_url": "https://i1.feedspot.com/3014.jpg?t=1603806599"
+    },
+    {
+      "title": "Alabama Political Reporter",
+      "feed_url": "https://www.alreporter.com/feed/",
+      "website_url": "https://www.alreporter.com/category/news/",
+      "description": "Alabama Political Reporter is a political news site devoted to Alabama politics providing accurate, reliable coverage of policy, elections, and government. It is a political news organization that gives citizens, lawmakers, business leaders, and organizations one place where they can find thorough coverage of all the political news.",
+      "followers": {
+        "facebook": 17900,
+        "twitter": 14000,
+        "instagram": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4891394.jpg?t=1666937897"
+    },
+    {
+      "title": "WVTM13",
+      "feed_url": "https://www.wvtm13.com/topstories-rss",
+      "website_url": "https://www.wvtm13.com/",
+      "description": "WVTM-TV, virtual and VHF digital channel 13, is an NBC-affiliated television station licensed to Birmingham, Alabama, United States. The station is owned by the Hearst Television subsidiary of Hearst Communications. Get the top Birmingham, Alabama news of the day, with live, local coverage and the latest weather.",
+      "followers": {
+        "facebook": 649500,
+        "twitter": 83400
+      },
+      "image_url": "https://i1.feedspot.com/4891424.jpg?t=1676021936"
+    },
+    {
+      "title": "Dothan Eagle",
+      "feed_url": "https://dothaneagle.com/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc",
+      "website_url": "https://dothaneagle.com/",
+      "description": "Find the latest news in Dothan and the Wiregrass, discover photos, videos, commentary and more all at dothaneagle.com.",
+      "followers": {
+        "facebook": 37200,
+        "twitter": 11100,
+        "instagram": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5148010.jpg?t=1626161348"
+    },
+    {
+      "title": "Alabama Today",
+      "feed_url": "http://altoday.com/feed",
+      "website_url": "https://altoday.com/",
+      "description": "Alabama Today will be the first place Alabamians of influence go for an inside look at breaking statewide, political and business news.",
+      "followers": {
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/4891404.jpg?t=1694080891"
+    },
+    {
+      "title": "Montgomery Advertiser",
+      "feed_url": "https://www.montgomeryadvertiser.com/",
+      "website_url": "https://www.montgomeryadvertiser.com/",
+      "description": "Find in depth and updated Montgomery, Alabama local news as well as headlines and stories from around the world.",
+      "followers": {
+        "facebook": 80100,
+        "twitter": 50200
+      },
+      "image_url": "https://i1.feedspot.com/4891376.jpg?t=1586776002"
+    },
+    {
+      "title": "WTVY",
+      "feed_url": "https://www.wtvy.com/rss/",
+      "website_url": "https://www.wtvy.com/",
+      "description": "WTVY is Your Hometown News Leader, providing the latest news and information on weather and sports.",
+      "followers": {
+        "facebook": 159900,
+        "twitter": 7900
+      },
+      "image_url": "https://i1.feedspot.com/4891428.jpg?t=1626161356"
+    },
+    {
+      "title": "Lagniappe",
+      "feed_url": "https://www.lagniappemobile.com/",
+      "website_url": "https://www.lagniappemobile.com/",
+      "description": "Lagniappe is Mobile, Alabama's independent weekly newspaper. We provide highly localized content for the citizens of Mobile and neighboring communities such as Fairhope, Daphne, Tillman's Corner, Theodore and Gulf Shores.",
+      "followers": {
+        "facebook": 37900,
+        "twitter": 18900,
+        "instagram": 8700
+      },
+      "image_url": "https://i1.feedspot.com/4891464.jpg?t=1603792509"
+    },
+    {
+      "title": "Opelika Auburn News",
+      "feed_url": "https://oanow.com/news/",
+      "website_url": "https://oanow.com/news/",
+      "description": "Read today's Opelika Auburn News, and Lee County headlines. Get breaking news, events, and information for Alabama sports, crime, politics, and education.",
+      "followers": {
+        "facebook": 43100,
+        "twitter": 19200,
+        "instagram": 5600
+      },
+      "image_url": "https://i1.feedspot.com/5310325.jpg?t=1628344141"
+    }
+  ]
+}

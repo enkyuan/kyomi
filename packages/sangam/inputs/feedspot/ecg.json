@@ -1,0 +1,101 @@
+{
+  "category": "ECG",
+  "source_url": "https://rss.feedspot.com/ecg_rss_feeds",
+  "feeds": [
+    {
+      "title": "Emergucate Blog \u00bb ECG Cases",
+      "feed_url": "http://www.emergucate.com/category/advanced-em-cases/ecg-of-the-week/feed/",
+      "website_url": "http://www.emergucate.com/category/advanced-em-cases/ecg-of-the-week/",
+      "description": "A weekly dissection of notable ECG Cases and reports with an aim to educate readers. Emergucate is an Emergency Medicine (EM) blog developed with 2 intentions - to provide basic user information for junior doctors who are new or starting out in EM, and to provide Advanced EM cases for the consideration of the more senior Emergency practitioner.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460623.jpg?t=1666942571"
+    },
+    {
+      "title": "Dr. Smith's ECG Blog",
+      "feed_url": "http://hqmeded-ecg.blogspot.com/feeds/posts/default",
+      "website_url": "http://hqmeded-ecg.blogspot.com/",
+      "description": "Dr. Smith's ECG Blog features well-written pieces of Instructive ECGs in Emergency Medicine Clinical Context. His team of editors writes and highlights learning points from each case. Dr. Stephen W. Smith is a faculty physician in the Emergency Medicine Residency at Hennepin County Medical Center (HCMC) in Minneapolis, MN.",
+      "followers": {
+        "facebook": 95600,
+        "twitter": 50100
+      },
+      "image_url": "https://i1.feedspot.com/4632.jpg?t=1650628584"
+    },
+    {
+      "title": "ECG Interpretation Blog",
+      "feed_url": "https://ecg-interpretation.blogspot.com/feeds/posts/default",
+      "website_url": "https://ecg-interpretation.blogspot.com/",
+      "description": "An ECG Interpretation Blog by Dr. Ken Grauer, MD. Here, he critically examines and offers an exhaustive analysis of various instructive ECG reports and Cases. Dr. Grauer is Professor Emeritus, Community Health and Family Medicine, University of Florida - and developed this blog in 2010 with the goal to facilitate clinical ECG & Arrhythmia Interpretation.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/581482.jpg?t=1666941600"
+    },
+    {
+      "title": "Medical Xpress \u00bb ECG",
+      "feed_url": "https://medicalxpress.com/rss-feed/tags/ecg/",
+      "website_url": "https://medicalxpress.com/tags/ecg/",
+      "description": "News articles from Medical Xpress tagged Cardiology and Electrocardiography. Medical Xpress is a part of the Science X network, one of the largest online communities for science-minded people, providing the most comprehensive Medical Science News coverage on the web.",
+      "followers": {
+        "facebook": 44200,
+        "twitter": 21000
+      },
+      "image_url": "https://i1.feedspot.com/5460619.jpg?t=1666942625"
+    },
+    {
+      "title": "CineECG Blog",
+      "feed_url": "https://cineecg.com/feed",
+      "website_url": "https://cineecg.com/blog",
+      "description": "Stay up to date with developments in ECG interpretation, the use of AI in ECG analysis and diagnostics, CineECG developments, case studies, ECG technology developments, and Emergency Medicine Cardiac Diagnostics trends. CineECG is a patented technology powered by ECG Excellence, a ECG data signal processing and (inverse) cardiac modelling company.",
+      "followers": {
+        "facebook": 15
+      },
+      "image_url": "https://i1.feedspot.com/5460621.jpg?t=1666942130"
+    },
+    {
+      "title": "All About Cardiovascular System and Disorders \u00bb ECG",
+      "feed_url": "https://johnsonfrancis.org/professional/category/cardiology/ecg-electrophysiology/ecg-library/feed/",
+      "website_url": "https://johnsonfrancis.org/professional/category/ecg-electrophysiology/ecg-library/",
+      "description": "Read up on all the latest techniques and advancements in ECG and Electrophysiology. This blog is intended to give you better insight into the working and handling of ECG Machines and results. It aims to serve as a portal for medical professionals and students of modern medicine to understand all about the cardiovascular system and its disorders.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460620.jpg?t=1666942323"
+    },
+    {
+      "title": "Dr. Wes Blog",
+      "feed_url": "https://feeds.feedburner.com/blogspot/TuRAx",
+      "website_url": "https://drwes.blogspot.com/",
+      "description": "Dr. Westby G. Fisher, MD, FACC is a board certified internist, cardiologist, and cardiac electrophysiologist (doctor specializing in heart rhythm disorders) practicing at NorthShore University. In his blog, he discusses and opines about the latest Medical Practices, Rules and regulations for Physicians, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1857595.jpg?t=1666941296"
+    },
+    {
+      "title": "ECG Weekly Blog",
+      "feed_url": "https://ecgweekly.com/feed/",
+      "website_url": "https://ecgweekly.com/weekly-workouts/",
+      "description": "Amal Mattu is a tenured professor of Emergency Medicine at the University of Maryland School of Medicine. In this weekly blog, he brings his expertise in ECG interpretation to share with younger professionals. With each new post, he dissects a new ECG case report with particularity.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5460624.jpg?t=1666942406"
+    },
+    {
+      "title": "EMS 12-Lead",
+      "feed_url": "https://www.ems12lead.com/blog-feed.xml",
+      "website_url": "https://www.ems12lead.com/",
+      "description": "EMS 12-Lead provides resources on12-Lead ECG Interpretation, Resuscitation, Time Sensitive Diagnoses. Its main aim is to educate readers on various EMS-related diagnoses and resuscitation techniques.",
+      "followers": {
+        "facebook": 110700,
+        "twitter": 24200
+      },
+      "image_url": "https://i1.feedspot.com/5333443.jpg?t=1666941623"
+    },
+    {
+      "title": "Wellnest Blog",
+      "feed_url": "https://www.wellnest.tech/blog-feed.xml",
+      "website_url": "https://www.wellnest.tech/blog",
+      "description": "Read more about our products, insights on ECG training from experts, and more cardio health tips in this blog. Wellness Tech is an Online Portable ECG Machine provider based in India. Our 12 Lead Portable ECG Monitor is a clinically validated & CE-certified device that enables anyone to capture ECG with minimal training.",
+      "followers": {
+        "facebook": 589,
+        "twitter": 21,
+        "instagram": 715
+      },
+      "image_url": "https://i1.feedspot.com/5460622.jpg?t=1666942177"
+    }
+  ]
+}

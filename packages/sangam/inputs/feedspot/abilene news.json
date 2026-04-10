@@ -1,0 +1,53 @@
+{
+  "category": "Abilene News",
+  "source_url": "https://rss.feedspot.com/abilene_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KTAB News",
+      "feed_url": "https://www.bigcountryhomepage.com/feed/",
+      "website_url": "https://www.bigcountryhomepage.com/",
+      "description": "We tell local Abilene news & weather stories, and we do what we do to make Abilene, Sweetwater and the rest of the Texas Big Country a better place to live.",
+      "followers": {
+        "facebook": 152600,
+        "twitter": 7400,
+        "instagram": 4200
+      },
+      "image_url": "https://i1.feedspot.com/5139642.jpg?t=1626500158"
+    },
+    {
+      "title": "Abilene, TX | Official News",
+      "feed_url": "https://abilenetx.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://abilenetx.gov/CivicAlerts.aspx?CID=1",
+      "description": "News and information from the City of Abilene, TX.",
+      "followers": {
+        "facebook": 28100,
+        "twitter": 7900,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/5139644.jpg?t=1626500163"
+    },
+    {
+      "title": "FOX West Texas",
+      "feed_url": "https://www.myfoxzone.com/feeds/syndication/rss/news",
+      "website_url": "https://www.myfoxzone.com/",
+      "description": "FOX West Texas Leading Local News: Weather, Traffic, Sports and more | Abilene and San Angelo, Texas.",
+      "followers": {
+        "facebook": 71800,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5139646.jpg?t=1587040690"
+    },
+    {
+      "title": "Abilene Reporter-News",
+      "feed_url": "http://rssfeeds.reporternews.com/abilene/news",
+      "website_url": "https://www.reporternews.com/",
+      "description": "News, sports, business and opinion for Abilene, the Big Country region and Midwest Texas. Brought to you by Abilene Reporter-News.",
+      "followers": {
+        "facebook": 33300,
+        "twitter": 7200,
+        "instagram": 3700
+      },
+      "image_url": "https://i1.feedspot.com/5139640.jpg?t=1626500152"
+    }
+  ]
+}

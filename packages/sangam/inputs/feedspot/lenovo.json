@@ -1,0 +1,106 @@
+{
+  "category": "Lenovo",
+  "source_url": "https://rss.feedspot.com/lenovo_rss_feeds",
+  "feeds": [
+    {
+      "title": "Lenovo News",
+      "feed_url": "https://news.lenovo.com/feed/",
+      "website_url": "https://news.lenovo.com/",
+      "description": "Lenovo's official site for press materials and original stories about the vision and passion behind the technology. Get updates on products and corporate news about our PCs, smartphones, and enterprise products.",
+      "followers": {
+        "facebook": 6600000,
+        "twitter": 737000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5348992.jpg?t=1638350310"
+    },
+    {
+      "title": "Lenovo \u00bb Press Releases",
+      "feed_url": "https://news.lenovo.com/pressroom/press-releases/feed/",
+      "website_url": "https://news.lenovo.com/pressroom/press-releases/",
+      "description": "Lenovo's official site for press materials and original stories about the vision and passion behind the technology.",
+      "followers": {
+        "facebook": 6600000,
+        "twitter": 737000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/2190613.jpg?t=1762520190"
+    },
+    {
+      "title": "Microsoft \u00bb Lenovo",
+      "feed_url": "https://blogs.windows.com/windowsexperience/tag/lenovo/feed/",
+      "website_url": "https://blogs.windows.com/windowsexperience/tag/lenovo/",
+      "description": "This section of the Microsoft Blog lets you explore Windows Experience on Lenovo Products.",
+      "followers": {
+        "facebook": 13300000,
+        "twitter": 13900000,
+        "instagram": 4500000
+      },
+      "image_url": "https://i1.feedspot.com/5348990.jpg?t=1638352567"
+    },
+    {
+      "title": "TechSpective \u00bb Lenovo",
+      "feed_url": "https://techspective.net/category/news/lenovo/feed/",
+      "website_url": "https://techspective.net/category/news/lenovo/",
+      "description": "Lenovo section of the TechSpective Blog covers breaking news and updates about Lenovo Products. TechSpective brings the latest technology trends and news in a meaningful way and provides you with information relevant to you.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 570,
+        "instagram": 257
+      },
+      "image_url": "https://i1.feedspot.com/5348989.jpg?t=1638353898"
+    },
+    {
+      "title": "Gizmochina \u00bb Lenovo",
+      "feed_url": "https://www.gizmochina.com/category/lenovo/feed/",
+      "website_url": "https://www.gizmochina.com/category/lenovo/",
+      "description": "Lenovo News, Review, Price, Promotion, and Comparisons from Gizmochina. Gizmochina brings you the best of Chinese Tech from emerging smartphones, innovative startups, to crazy smart home products and revolutionary technologies.",
+      "followers": {
+        "facebook": 386100,
+        "twitter": 44600,
+        "instagram": 6900
+      },
+      "image_url": "https://i1.feedspot.com/5348991.jpg?t=1638355251"
+    },
+    {
+      "title": "Lenovo Think Deploy Blog",
+      "feed_url": "https://thinkdeploy.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://thinkdeploy.blogspot.com/",
+      "description": "The goal of the Commercial Deployment Readiness Team is to make deployments of our Think products as easy as possible for our commercial customers.",
+      "followers": {
+        "facebook": 6600000,
+        "twitter": 737000
+      },
+      "image_url": "https://i1.feedspot.com/4912623.jpg?t=1620280319"
+    },
+    {
+      "title": "Askprob \u00bb Lenovo",
+      "feed_url": "https://askprob.com/category/lenovo/feed/",
+      "website_url": "https://askprob.com/category/lenovo/",
+      "description": "A Lenovo Troubleshooting Blog where Askprob experts provide solutions to your queries with tutorials. Askprob is an online community for the public to get help from experts and intellectual people on their issues.",
+      "followers": {
+        "facebook": 187,
+        "twitter": 99
+      },
+      "image_url": "https://i1.feedspot.com/5348994.jpg?t=1638353304"
+    },
+    {
+      "title": "ACCESS Newswire",
+      "feed_url": "https://accessnw.multiscreensite.com/feed/rss2",
+      "website_url": "https://accessnw.multiscreensite.com/blog/",
+      "description": "Whether at work or in the classroom, Lenovo Software lets you create more flexible workspaces, engaged classrooms, and collaborative online training environments.",
+      "followers": {
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/4912620.jpg?t=1620280345"
+    },
+    {
+      "title": "manuals.plus \u00bb Lenovo",
+      "feed_url": "https://manuals.plus/category/lenovo/feed",
+      "website_url": "https://manuals.plus/category/lenovo",
+      "description": "manuals.plus is a collection of user manuals, instruction guides, datasheets, and specifications for electronics products. Here, you'll find user manuals guides & instructions for all your Lenovo Products.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5348988.jpg?t=1638354733"
+    }
+  ]
+}

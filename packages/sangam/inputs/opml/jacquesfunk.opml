@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<opml version="1.0">
+    <head>
+        <title>Muneer subscriptions in feedly Cloud</title>
+    </head>
+    <body>
+        <outline text="Sports" title="Sports">
+            <outline type="rss" text="Ron Shandler" title="Ron Shandler" xmlUrl="http://ronshandler.com/feed/" htmlUrl="http://ronshandler.com"/>
+            <outline type="rss" text="Football Outsiders" title="Football Outsiders" xmlUrl="http://feeds.feedburner.com/FootballOutsiders" htmlUrl="http://www.footballoutsiders.com/rss/main"/>
+            <outline type="rss" text="Smart Fantasy Baseball" title="Smart Fantasy Baseball" xmlUrl="http://www.smartfantasybaseball.com/feed/" htmlUrl="http://www.smartfantasybaseball.com"/>
+            <outline type="rss" text="Articles" title="Articles" xmlUrl="http://theclassical.org/rss/articles/" htmlUrl="http://theclassical.org/articles"/>
+            <outline type="rss" text="GM Games - Sports General Manager Video Games" title="GM Games - Sports General Manager Video Games" xmlUrl="http://gmgames.org/feed/" htmlUrl="http://gmgames.org"/>
+            <outline type="rss" text="FanGraphs Baseball » Royals" title="FanGraphs Baseball » Royals" xmlUrl="http://www.fangraphs.com/blogs/category/teams/royals/feed/" htmlUrl="http://www.fangraphs.com/blogs"/>
+            <outline type="rss" text=": All Grant Brisbee Posts" title=": All Grant Brisbee Posts" xmlUrl="http://mlb.sbnation.com/authors/grant-brisbee/rss" htmlUrl="http://www.sbnation.com/"/>
+        </outline>
+        <outline text="Religion" title="Religion">
+            <outline type="rss" text="Religion Dispatches" title="Religion Dispatches" xmlUrl="http://www.religiondispatches.org/rss/" htmlUrl="http://religiondispatches.org"/>
+        </outline>
+        <outline text="Thinking and Creativity" title="Thinking and Creativity">
+            <outline type="rss" text="Overcoming Bias" title="Overcoming Bias" xmlUrl="http://www.overcomingbias.com/feed" htmlUrl="http://www.overcomingbias.com"/>
+            <outline type="rss" text="The Blog of James Clear - Medium" title="The Blog of James Clear - Medium" xmlUrl="http://medium.com/feed/the-blog-of-james-clear" htmlUrl="https://medium.com/the-blog-of-james-clear?source=rss----11fd6bf89ab3---4"/>
+            <outline type="rss" text="Barking up the wrong tree" title="Barking up the wrong tree" xmlUrl="http://feeds.feedburner.com/bakadesuyo" htmlUrl="http://www.bakadesuyo.com"/>
+            <outline type="rss" text="Farnam Street" title="Farnam Street" xmlUrl="http://www.farnamstreet.org/feed/" htmlUrl="https://www.farnamstreetblog.com"/>
+            <outline type="rss" text="Factually" title="Factually" xmlUrl="http://factually.gizmodo.com/rss" htmlUrl="http://factually.gizmodo.com"/>
+            <outline type="rss" text="Study Hacks" title="Study Hacks" xmlUrl="http://feeds.feedburner.com/StudyHacks" htmlUrl="http://calnewport.com"/>
+            <outline type="rss" text="Slate Star Codex" title="Slate Star Codex" xmlUrl="http://Slatestarcodex.com/feed/" htmlUrl="http://slatestarcodex.com"/>
+            <outline type="rss" text="99U" title="99U" xmlUrl="http://feeds.feedburner.com/The99Percent" htmlUrl="http://99u.com"/>
+        </outline>
+        <outline text="Writing" title="Writing">
+            <outline type="rss" text="Gangrey.com" title="Gangrey.com" xmlUrl="http://gangrey.com/?feed=rss2" htmlUrl="http://gangrey.com"/>
+        </outline>
+        <outline text="Misc" title="Misc">
+            <outline type="rss" text="Adequate Man" title="Adequate Man" xmlUrl="http://adequateman.deadspin.com/rss" htmlUrl="http://adequateman.deadspin.com"/>
+            <outline type="rss" text="Jalopnik" title="Jalopnik" xmlUrl="http://jalopnik.com/tag/horror-stories/rss" htmlUrl="http://jalopnik.com"/>
+            <outline type="rss" text="Deadspin" title="Deadspin" xmlUrl="http://deadspin.com/tag/horror-stories/rss" htmlUrl="http://deadspin.com"/>
+            <outline type="rss" text="Gizmodo" title="Gizmodo" xmlUrl="http://gizmodo.com/tag/horror-stories/rss" htmlUrl="http://gizmodo.com"/>
+            <outline type="rss" text="Foodspin" title="Foodspin" xmlUrl="http://foodspin.deadspin.com/rss" htmlUrl="http://foodspin.deadspin.com"/>
+            <outline type="rss" text="Gawker" title="Gawker" xmlUrl="http://gawker.com/tag/horror-stories/rss" htmlUrl="http://gawker.com"/>
+            <outline type="rss" text="Jezebel" title="Jezebel" xmlUrl="http://jezebel.com/tag/horror-stories/rss" htmlUrl="http://jezebel.com"/>
+            <outline type="rss" text="Outside the Law School Scam" title="Outside the Law School Scam" xmlUrl="http://outsidethelawschoolscam.blogspot.com/feeds/posts/default" htmlUrl="http://outsidethelawschoolscam.blogspot.com/"/>
+            <outline type="rss" text="Car Buying" title="Car Buying" xmlUrl="http://carbuying.jalopnik.com/tag/behind-closed-garage-doors/rss" htmlUrl="http://thegarage.jalopnik.com"/>
+            <outline type="rss" text="Wait But Why" title="Wait But Why" xmlUrl="http://waitbutwhy.com/feed" htmlUrl="http://waitbutwhy.com"/>
+            <outline type="rss" text="Wonkette » Off the Menu" title="Wonkette » Off the Menu" xmlUrl="http://wonkette.com/tag/off-the-menu/feed" htmlUrl="http://wonkette.com"/>
+            <outline type="rss" text="Digg: digg summarizes Stories" title="Digg: digg summarizes Stories" xmlUrl="http://digg.com/search/?q=digg%20summarizes&amp;format=rss" htmlUrl="http://digg.com/search/digg%20summarizes"/>
+            <outline type="rss" text="Digg: Originals" title="Digg: Originals" xmlUrl="http://www.digg.com/tag/originals.rss" htmlUrl="http://digg.com/channel/originals"/>
+        </outline>
+        <outline type="rss" text="Cool Tools" title="Cool Tools" xmlUrl="http://feeds.feedburner.com/CoolTools" htmlUrl="http://kk.org/cooltools"/>
+        <outline type="rss" text="American Economic Association" title="American Economic Association" xmlUrl="https://www.aeaweb.org/rss/aea.rss" htmlUrl="http://www.aeaweb.org"/>
+        <outline type="rss" text="Stirling Behavioural Science Blog" title="Stirling Behavioural Science Blog" xmlUrl="http://economicspsychologypolicy.blogspot.com/feeds/posts/default" htmlUrl="http://economicspsychologypolicy.blogspot.com/"/>
+        <outline type="rss" text="JCL Keyword search: 'decision making'" title="JCL Keyword search: 'decision making'" xmlUrl="https://jocolibrary.bibliocommons.com/search/rss?commit=Search&amp;display_quantity=25&amp;q=decision+making&amp;searchOpt=catalogue&amp;search_category=keyword&amp;t=keyword&amp;utf8=%E2%9C%93" htmlUrl="https://jocolibrary.bibliocommons.com/index/search"/>
+        <outline type="rss" text="JCL Keyword search: 'behavioral economics'" title="JCL Keyword search: 'behavioral economics'" xmlUrl="https://jocolibrary.bibliocommons.com/search/rss?commit=Search&amp;display_quantity=25&amp;from_login=true&amp;q=behavioral+economics&amp;searchOpt=catalogue&amp;t=keyword" htmlUrl="https://jocolibrary.bibliocommons.com/index/search"/>
+        <outline type="rss" text="Creativeconflictwisdom's Blog" title="Creativeconflictwisdom's Blog" xmlUrl="https://creativeconflictwisdom.wordpress.com/feed/" htmlUrl="https://creativeconflictwisdom.wordpress.com"/>
+        <outline type="rss" text="ken-jennings.com » ken-jennings.com" title="ken-jennings.com » ken-jennings.com" xmlUrl="http://ken-jennings.com/blog/feed/atom" htmlUrl="http://ken-jennings.com/blog"/>
+        <outline type="rss" text="Decision.io Blog" title="Decision.io Blog" xmlUrl="https://decision.io/blog/feed/" htmlUrl="https://decision.io/blog"/>
+        <outline type="rss" text="Economists Do It With Models" title="Economists Do It With Models" xmlUrl="http://feeds2.feedburner.com/economistsdoitwithmodels" htmlUrl="http://www.economistsdoitwithmodels.com"/>
+        <outline type="rss" text="Seeing What Others Don&amp;#039;t" title="Seeing What Others Don&amp;#039;t" xmlUrl="https://www.psychologytoday.com/blog/seeing-what-others-dont/feed" htmlUrl="https://www.psychologytoday.com/"/>
+        <outline type="rss" text=":InDecision: | inside decision-making science" title=":InDecision: | inside decision-making science" xmlUrl="http://indecisionblog.com/feed/" htmlUrl="http://indecisionblog.com"/>
+        <outline type="rss" text="Lifehacker" title="Lifehacker" xmlUrl="http://lifehacker.com/tag/thinking/rss" htmlUrl="http://lifehacker.com"/>
+        <outline type="rss" text="io9" title="io9" xmlUrl="http://io9.gizmodo.com/tag/boo-ks/rss" htmlUrl="http://io9.gizmodo.com"/>
+        <outline type="rss" text="Buster Benson on Medium" title="Buster Benson on Medium" xmlUrl="https://medium.com/feed/@buster" htmlUrl="https://medium.com/@buster?source=rss-5142451174a3------2"/>
+        <outline type="rss" text="TEDTalks (audio)" title="TEDTalks (audio)" xmlUrl="http://feeds.feedburner.com/tedtalks_audio" htmlUrl="http://www.ted.com/talks/list"/>
+        <outline type="rss" text="Ask MetaFilter questions tagged with thinking" title="Ask MetaFilter questions tagged with thinking" xmlUrl="http://ask.metafilter.com/tags/thinking/rss" htmlUrl="http://ask.metafilter.com/tags/thinking"/>
+        <outline type="rss" text="Bret Victor's website" title="Bret Victor's website" xmlUrl="http://worrydream.com/feed.xml" htmlUrl="http://worrydream.com/"/>
+        <outline type="rss" text="Simoleon Sense" title="Simoleon Sense" xmlUrl="http://feeds.feedburner.com/SimoleonSense" htmlUrl="http://www.simoleonsense.com"/>
+        <outline type="rss" text="Quantified Self" title="Quantified Self" xmlUrl="http://feeds.feedburner.com/QuantifiedSelf" htmlUrl="http://quantifiedself.com"/>
+        <outline type="rss" text="Chief Marketing Technologist" title="Chief Marketing Technologist" xmlUrl="http://chiefmartec.com/feed/" htmlUrl="http://chiefmartec.com"/>
+        <outline type="rss" text=": All Jon Bois Posts" title=": All Jon Bois Posts" xmlUrl="http://www.sbnation.com/authors/jon-bois/rss" htmlUrl="http://www.sbnation.com/"/>
+    </body>
+</opml>

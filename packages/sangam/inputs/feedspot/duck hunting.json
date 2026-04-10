@@ -1,0 +1,60 @@
+{
+  "category": "Duck Hunting",
+  "source_url": "https://rss.feedspot.com/duck_hunting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Colorado Outdoors \u00bb Waterfowl Hunting",
+      "feed_url": "https://coloradooutdoorsmag.com/category/waterfowl-hunting/feed/",
+      "website_url": "https://coloradooutdoorsmag.com/category/waterfowl-hunting/",
+      "description": "Colorado Outdoors Online uses the latest Web-based media, featuring informative blogs, videos, photo essays and audio podcasts to help the outdoor enthusiast get the most out of their outdoor experience. This magazine tries to give information on different hunting styles, fishing techniques and talks about outdoor adventures.",
+      "followers": {
+        "facebook": 10200
+      },
+      "image_url": "https://i1.feedspot.com/5002064.jpg?t=1622187415"
+    },
+    {
+      "title": "Hunter's Wholesale",
+      "feed_url": "https://hunterswholesale.net/blogs/news.atom",
+      "website_url": "https://hunterswholesale.net/blogs/news",
+      "description": "Hunters Wholesale is the leading Hunting Supplier in the midwest. Shotgun Shells, Duck Decoys, Goose Decoys, Duck Calls, Tree Stands, Ice Eaters, Blinds.",
+      "followers": {
+        "twitter": 275
+      },
+      "image_url": "https://i1.feedspot.com/5172675.jpg?t=1614241372"
+    },
+    {
+      "title": "Delta Waterfowl",
+      "feed_url": "https://deltawaterfowl.org/feed/",
+      "website_url": "https://deltawaterfowl.org/news/",
+      "description": "Delta Waterfowl is The Duck Hunters Organization, a leading conservation group. We work to produce ducks through intensive management programs and the conservation of breeding duck habitat. Delta conducts vital waterfowl research and promotes and protects the continuing tradition of waterfowl hunting in North America.",
+      "followers": {
+        "facebook": 297700,
+        "twitter": 36200,
+        "instagram": 213000
+      },
+      "image_url": "https://i1.feedspot.com/5001974.jpg?t=1622187407"
+    },
+    {
+      "title": "Duck Dog Trainer Blog",
+      "feed_url": "https://duckdogtrainer.com/feed/",
+      "website_url": "https://duckdogtrainer.com/blog/",
+      "description": "DuckDogTrainer.com strives to provide the best information available on duck dog training. We work with clients who are looking to have their hunting dog become a champion duck dog. This blog exists to educate and inform those who love duck dogs.",
+      "followers": {
+        "facebook": 6700,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4841881.jpg?t=1611234625"
+    },
+    {
+      "title": "Birdtail Waterfowl Blog",
+      "feed_url": "https://birdtailwaterfowl.com/blog/feed",
+      "website_url": "https://birdtailwaterfowl.com/blog",
+      "description": "Birdtail Waterfowl hunting guides and staff are a unique group of people that all work towards a mutual goal. That goal is to deliver unforgettable guided waterfowl hunting experiences. Our passion for waterfowl, creating memories, and building long-term relationships is evident in everything we do.",
+      "followers": {
+        "facebook": 6300,
+        "twitter": 313
+      },
+      "image_url": "https://i1.feedspot.com/5001975.jpg?t=1622187423"
+    }
+  ]
+}

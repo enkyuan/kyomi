@@ -1,0 +1,36 @@
+{
+  "category": "Home Birth",
+  "source_url": "https://rss.feedspot.com/home_birth_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hearth and Home Midwifery Blog",
+      "feed_url": "https://hearthandhomemidwifery.com/blog?format=rss",
+      "website_url": "https://hearthandhomemidwifery.com/blog",
+      "description": "As Certified Professional Midwives, we've seen countless moms overcome some of their greatest fears together with us. We're with you every step of the way, from your very first prenatal checkup through 6 weeks postpartum, to ensure you and your baby get off to the best start imaginable. As trained experts in natural birth, we create a safe environment in which you can connect with your power, overcome your fears, and give birth on your terms.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5509644.jpg?t=1676628657"
+    },
+    {
+      "title": "Jessica Medrea Birth Blog",
+      "feed_url": "https://www.jessicamedreabirth.com/blog?format=rss",
+      "website_url": "https://www.jessicamedreabirth.com/blog",
+      "description": "Welcome! I know that pregnancy is an intense transition that comes with many questions and worries, not to mention conflicting information and unsolicited advice. I am a birth doula serving Vancouver, Burnaby, North Vancouver, and West Vancouver and I can support you to birth your baby as optimally as possible - whatever that uniquely means to you.",
+      "followers": {
+        "facebook": 127
+      },
+      "image_url": "https://i1.feedspot.com/5509643.jpg?t=1676628608"
+    },
+    {
+      "title": "Serenity Birth Center Blog",
+      "feed_url": "https://www.serenitybirthcenter.com/blog.rss",
+      "website_url": "https://www.serenitybirthcenter.com/blog/",
+      "description": "Serenity Birth Center, Nevada's first and only free-standing birthing center, provides you with a home-like birth experience and full-service well-woman care. Experience the serenity of natural birth while receiving care and attention throughout your whole pregnancy, birth, and beyond from April Clyde and her well-qualified and experienced team.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 17,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5509641.jpg?t=1676628526"
+    }
+  ]
+}

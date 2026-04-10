@@ -1,0 +1,119 @@
+{
+  "category": "UK Retail",
+  "source_url": "https://rss.feedspot.com/uk_retail_rss_feeds",
+  "feeds": [
+    {
+      "title": "Retail Gazette",
+      "feed_url": "https://www.retailgazette.co.uk/feed/",
+      "website_url": "https://www.retailgazette.co.uk/",
+      "description": "The Retail Gazette publishes news stories, interviews, comment and features relating to the UK's diverse consumer-facing retail industry and it is catered to senior professionals who work for these retail brands.",
+      "followers": {
+        "facebook": 2500,
+        "twitter": 27600
+      },
+      "image_url": "https://i1.feedspot.com/4905391.jpg?t=1613643826"
+    },
+    {
+      "title": "Retail Sector",
+      "feed_url": "https://www.retailsector.co.uk/feed/",
+      "website_url": "https://www.retailsector.co.uk/",
+      "description": "A vibrant community of journalists, expert contributors, and opinion-makers, keeping you in the picture for modern retailing. We bring you the latest news & business intelligence from across the sector both on the high street & online, from luxury goods and electricals to supermarkets and more.",
+      "followers": {
+        "facebook": 174,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5330299.jpg?t=1633948045"
+    },
+    {
+      "title": "Retail Bulletin",
+      "feed_url": "https://www.theretailbulletin.com/rss/",
+      "website_url": "https://www.theretailbulletin.com/",
+      "description": "The Retail Bulletin is the online news, information resource and Events company. Read by leading retailers throughout the UK and beyond.",
+      "followers": {
+        "twitter": 14600,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4652337.jpg?t=1613643831"
+    },
+    {
+      "title": "Retail Focus Magazine",
+      "feed_url": "https://retail-focus.co.uk/feed/",
+      "website_url": "https://retail-focus.co.uk/category/news/",
+      "description": "Retail Design and Visual Merchandising news, the latest store concepts,specialist features, trade show listings, opinions, retail design blog and the retail supplier directory. Media partners to Euroshop and the VM and Display Show.",
+      "followers": {
+        "facebook": 14900,
+        "twitter": 25900,
+        "instagram": 37300
+      },
+      "image_url": "https://i1.feedspot.com/3888377.jpg?t=1613643838"
+    },
+    {
+      "title": "Retail Assist Blog",
+      "feed_url": "https://retail-assist.com/blog/feed/",
+      "website_url": "https://retail-assist.com/blog/",
+      "description": "Retail Assist is a leading retail-only solutions and services company. We work in partnership with UK and international retailers to provide them with integrated Supply Chain, Head Office and Store Systems, including our Merret ERP application, plus managed services and solutions.",
+      "followers": {
+        "facebook": 300,
+        "twitter": 2600,
+        "instagram": 368
+      },
+      "image_url": "https://i1.feedspot.com/4905377.jpg?t=1613643849"
+    },
+    {
+      "title": "Retail Times - The Retail Industry News Portal",
+      "feed_url": "https://retailtimes.co.uk/feed/",
+      "website_url": "https://retailtimes.co.uk/",
+      "description": "Retail Times is an independently owned website reporting on local and global retail markets. It delivers original and unique retail news and is first with the detail; discovering, exploring and revealing the latest retail trends, opinion and innovation in this vibrant business sector.",
+      "followers": {
+        "twitter": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4651788.jpg?t=1664802237"
+    },
+    {
+      "title": "Intelligent Retail Blog",
+      "feed_url": "https://www.intelligentretail.com/blog/feed/",
+      "website_url": "https://www.intelligentretail.com/blog/",
+      "description": "Intelligent Retail offer class leading EPoS Software Systems and eCommerce websites for independent retailers which allow sales across multiple channels. Sell via Ebay, Amazon, Shop Till and Website with drag and drop functionality!",
+      "followers": {
+        "facebook": 164,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4905398.jpg?t=1613643868"
+    },
+    {
+      "title": "Charged Retail",
+      "feed_url": "https://www.chargedretail.co.uk/feed/",
+      "website_url": "https://www.soultsretailview.co.uk/",
+      "description": "Covers the latest news, analysis, insight, and comment about the technologies driving transformation in the retail sector. Charged is a free independent online news publication that aims to provide the latest and most important retail technology news.",
+      "followers": {
+        "facebook": 180,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5308795.jpg?t=1628083193"
+    },
+    {
+      "title": "Soult's Retail View",
+      "feed_url": "https://www.soultsretailview.co.uk/feed/",
+      "website_url": "https://www.soultsretailview.co.uk/",
+      "description": "A blog written by retail consultant Graham Soult, Soult's Retail View gives a multi-perspective view of the retail industry, featuring insights from experienced retailers and updates on the UK retail industry.",
+      "followers": {
+        "facebook": 176,
+        "twitter": 16200,
+        "instagram": 478
+      },
+      "image_url": "https://i1.feedspot.com/75518.jpg?t=1611147965"
+    },
+    {
+      "title": "British Independent Retailers Association",
+      "feed_url": "https://bira.co.uk/feed/",
+      "website_url": "https://bira.co.uk/news/",
+      "description": "The British Independent Retailers Association is the leading trade association for independent retailers in the United Kingdom. Stay ahead with all the latest sector information and insights. You'll find articles, research, factsheets, legal documents and opinion pieces, all right here in the hub.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 3600,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4905387.jpg?t=1613643863"
+    }
+  ]
+}

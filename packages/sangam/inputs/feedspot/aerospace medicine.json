@@ -1,0 +1,72 @@
+{
+  "category": "Aerospace Medicine",
+  "source_url": "https://rss.feedspot.com/aerospace_medicine_rss_feeds",
+  "feeds": [
+    {
+      "title": "Space Daily \u00bb Space Medicine",
+      "feed_url": "https://www.spacedaily.com/Space_Medicine.xml",
+      "website_url": "https://www.spacedaily.com/Space_Medicine.html",
+      "description": "News about Space Medicine from the Space Daily.",
+      "followers": {
+        "facebook": 210,
+        "twitter": 36
+      },
+      "image_url": "https://i1.feedspot.com/5267744.jpg?t=1618392242"
+    },
+    {
+      "title": "ICATT Blog",
+      "feed_url": "https://icatt.in/category/blog/feed/",
+      "website_url": "https://icatt.in/blog/",
+      "description": "International Critical Care Air Transfer Team (ICATT) is a specialized Air Ambulance service that helps with the aero-medical transfers of critically ill patients, accident victims, victims of natural disasters and internal organs.",
+      "followers": {
+        "facebook": 15800,
+        "twitter": 71,
+        "instagram": 638
+      },
+      "image_url": "https://i1.feedspot.com/5269382.jpg?t=1618462606"
+    },
+    {
+      "title": "Space Medicine Ireland Blog",
+      "feed_url": "https://spacemedireland.com/blog/feed/",
+      "website_url": "https://spacemedireland.com/blog/",
+      "description": "Welcome to Space Medicine Ireland medics with an interest in aerospace medicine.Run by physicians for all with an interest in aerospace & space medicine",
+      "followers": {
+        "twitter": 338
+      },
+      "image_url": "https://i1.feedspot.com/5273506.jpg?t=1619522499"
+    },
+    {
+      "title": "NGAM Blog",
+      "feed_url": "https://nextgenasm.wordpress.com/feed/",
+      "website_url": "https://nextgenasm.wordpress.com/blog-2/",
+      "description": "The Next Generation of Aerospace Medicine (NGAM) is a group designed to represent, co-ordinate and engage with UK students and early career professionals with an interest in aerospace medicine in order to promote the understanding of aerospace medicine and its application to all aspects of civilian and military aviation and human spaceflight.",
+      "followers": {
+        "twitter": 659
+      },
+      "image_url": "https://i1.feedspot.com/5267650.jpg?t=1618382435"
+    },
+    {
+      "title": "Go Flight Medicine",
+      "feed_url": "https://www.goflightmedicine.com/blog/",
+      "website_url": "https://www.goflightmedicine.com/blog/",
+      "description": "Go Flight Medicine (GFM) is the online world authority in aerospace medicine with a focus on military & civilian aviation, space, wilderness and dive medicine.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 681,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5273503.jpg?t=1619520655"
+    },
+    {
+      "title": "Flight Safety Foundation \u00bb Aviation Medicine",
+      "feed_url": "https://flightsafety.org/category/aviation-medicine/feed/",
+      "website_url": "https://flightsafety.org/category/aviation-medicine/",
+      "description": "Flight Safety Foundation is the leading voice of safety for the global aerospace/aviation community.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 7500
+      },
+      "image_url": "https://i1.feedspot.com/5267839.jpg?t=1618399195"
+    }
+  ]
+}

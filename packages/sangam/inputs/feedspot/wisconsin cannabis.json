@@ -1,0 +1,46 @@
+{
+  "category": "Wisconsin Cannabis",
+  "source_url": "https://rss.feedspot.com/wisconsin_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "BATCH Blog",
+      "feed_url": "https://hellobatch.com/blogs/insights.atom",
+      "website_url": "https://hellobatch.com/blogs/insights",
+      "description": "BATCH by Wisconsin Hemp Blog helps you learn more about marijuana, its products, and the benefits of using it. BATCH is a locally sourced brand of premium CBD products. BATCH's mission is to enrich your daily life by crafting products that utilize nature's most amazing plants, fungi, and nutrients.",
+      "followers": {
+        "facebook": 20200
+      },
+      "image_url": "https://i1.feedspot.com/7290908.jpg?t=1712226921"
+    },
+    {
+      "title": "MJBiz \u00bb Wisconsin",
+      "feed_url": "https://mjbizdaily.com/news-by-state/wisconsin/feed/",
+      "website_url": "https://mjbizdaily.com/news-by-state/wisconsin/",
+      "description": "Get Wisconsin Cannabis Industry News and Marijuana legislation updates at Marijuana Business Daily, the leading publication in the cannabis world. Founded in 2011, MJBiz is the most trusted, independent publisher and event producer serving America's cannabis industry entrepreneurs and investors.",
+      "followers": {
+        "facebook": 33200,
+        "twitter": 77900,
+        "instagram": 73600
+      },
+      "image_url": "https://i1.feedspot.com/7290907.jpg?t=1712226917"
+    },
+    {
+      "title": "Wisconsin Marijuana Card Blog",
+      "feed_url": "https://www.wisconsinmarijuanacard.com/blog-feed.xml",
+      "website_url": "https://www.wisconsinmarijuanacard.com/blog",
+      "description": "Wisconsin Marijuana Card Blog explores the latest news, press, and editorials about medical marijuana and recreational marijuana in Wisconsin. The Wisconsin Marijuana Card helps qualifying patients obtain their medical marijuana card. Read more about Marijuana on the website.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7296460.jpg?t=1712837492"
+    },
+    {
+      "title": "Door County Cannabis Company Blog",
+      "feed_url": "https://doorcountycannabis.co/feed/",
+      "website_url": "https://doorcountycannabis.co/blog/",
+      "description": "Discover informative articles about Delta-9 THC, CBD Tinctures, and the latest cannabis news on the Wisconsin Cannabis Blog. At Door County Cannabis Co., they're committed to propelling Wisconsin forward in the cannabis world. Elevate your understanding of cannabis, from dispensaries to Delta-9 THC, CBD, and the legal landscape.",
+      "followers": {
+        "facebook": 597
+      },
+      "image_url": "https://i1.feedspot.com/7290909.jpg?t=1712226983"
+    }
+  ]
+}

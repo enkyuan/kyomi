@@ -1,0 +1,53 @@
+{
+  "category": "UK Pole Dance",
+  "source_url": "https://rss.feedspot.com/uk_pole_dance_rss_feeds",
+  "feeds": [
+    {
+      "title": "Chrome Chronicles",
+      "feed_url": "https://chromechroniclespole.com/feed/",
+      "website_url": "https://chromechroniclespole.com/",
+      "description": "This blog is created by Eilish Foxen. She's been pole dancing for two years at the fabulous glitter cave 360 Pole Dancing in Bristol, UK. This is the place where she documents her adventures in the world of Pole Dance.",
+      "followers": {
+        "facebook": 517,
+        "twitter": 404,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4788927.jpg?t=1609409330"
+    },
+    {
+      "title": "Blogger On Pole",
+      "feed_url": "https://bloggeronpole.com/feed/",
+      "website_url": "https://bloggeronpole.com/",
+      "description": "Italian Londoner blogger Carolina blogging about pole dance, food, drinks, travel, fitness and mental health. Subscribe to keep up with latest updates from this blog.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 6200,
+        "instagram": 31200
+      },
+      "image_url": "https://i1.feedspot.com/4920183.jpg?t=1620716182"
+    },
+    {
+      "title": "Pole Passion",
+      "feed_url": "http://polepassion.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://polepassion.blogspot.com/",
+      "description": "Pole Passion was founded in 2003 with the ambition to educate and provide a new form of fitness for women incorporating personal growth for all abilities and backgrounds. They offer practical, emotional, and therapeutic support to clients in tailor-made interventions that aim to address a range of underlying issues. Subscribe to keep up with latest updates from this blog.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4789341.jpg?t=1613392144"
+    },
+    {
+      "title": "Tipsy Bartender",
+      "feed_url": "https://tipsybartender.com/feed",
+      "website_url": "https://tipsybartender.com/",
+      "description": "Welcome to Tipsy Bartender - The largest social media gathering of drinking enthusiasts in the world! Whether you are looking for an epic jungle juice for your next party or a tasty new mimosa to brighten up brunch - you have come to the right place! From creative jello shots to spiked desserts -we have it all right here.",
+      "followers": {
+        "facebook": 34900000,
+        "twitter": 166200,
+        "instagram": 8000000
+      },
+      "image_url": "https://i1.feedspot.com/4789921.jpg?t=1609567984"
+    }
+  ]
+}

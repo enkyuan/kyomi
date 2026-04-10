@@ -1,0 +1,50 @@
+{
+  "category": "CBS Sports",
+  "source_url": "https://rss.feedspot.com/cbssports_rss_feeds",
+  "feeds": [
+    {
+      "title": "CBS Sports \u00bb College Basketball",
+      "feed_url": "https://www.cbssports.com/rss/headlines/college-basketball/",
+      "website_url": "https://www.cbssports.com/college-basketball/",
+      "description": "All latest articles about College Basketball from CBS Sports.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 1500000,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/1397504.jpg?t=1741255869"
+    },
+    {
+      "title": "CBS Sports \u00bb Golf",
+      "feed_url": "https://www.cbssports.com/rss/headlines/golf/",
+      "website_url": "https://www.cbssports.com/golf/",
+      "description": "CBS Sports has the latest Golf news, live scores, player stats, standings, fantasy games, and projections.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 1500000,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/5284189.jpg?t=1741255871"
+    },
+    {
+      "title": "CBS Sports \u00bb MLB",
+      "feed_url": "https://www.cbssports.com/rss/headlines/mlb/",
+      "website_url": "https://www.cbssports.com/mlb/",
+      "description": "All latest articles about MLB from CBS Sports.",
+      "followers": {
+        "facebook": 4500000,
+        "twitter": 1500000,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/5407097.jpg?t=1741255864"
+    },
+    {
+      "title": "CBS Sports \u00bb WWE",
+      "feed_url": "https://www.cbssports.com/rss/headlines/wwe/",
+      "website_url": "https://www.cbssports.com/wwe/",
+      "description": "All latest articles about WWE from CBS Sports.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7883837.jpg?t=1741255861"
+    }
+  ]
+}

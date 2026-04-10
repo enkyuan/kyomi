@@ -1,0 +1,25 @@
+{
+  "category": "Marshalltown News",
+  "source_url": "https://rss.feedspot.com/marshalltown_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Marshalltown, IA",
+      "feed_url": "https://www.marshalltown-ia.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+      "website_url": "https://www.marshalltown-ia.gov/CivicAlerts.aspx",
+      "description": "Get the latest news and information about Marshalltown, IA.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5157321.jpg"
+    },
+    {
+      "title": "WHO 13 \u00bb Marshalltown",
+      "feed_url": "https://who13.com/tag/marshalltown/feed/",
+      "website_url": "https://who13.com/tag/marshalltown/",
+      "description": "WHO 13 News is Iowa's leader for local news, weather, sports and politics. Follow this feed to read the latest news and updates in Marshalltown brought to you by the team at who13.com.",
+      "followers": {
+        "facebook": 283000,
+        "twitter": 86600
+      },
+      "image_url": "https://i1.feedspot.com/5157328.jpg?t=1590746014"
+    }
+  ]
+}

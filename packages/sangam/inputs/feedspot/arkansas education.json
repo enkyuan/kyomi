@@ -1,0 +1,81 @@
+{
+  "category": "Arkansas Education",
+  "source_url": "https://rss.feedspot.com/arkansas_education_rss_feeds",
+  "feeds": [
+    {
+      "title": "Education Week",
+      "feed_url": "https://www.edweek.org/arkansas.rss",
+      "website_url": "https://www.edweek.org/arkansas",
+      "description": "Inspiring you through K-12 news, analysis, and opinion. Empowering you to make a difference in your community. News, analysis, and opinion about K-12 education in Arkansas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6698517.jpg?t=1706785020"
+    },
+    {
+      "title": "University of Arkansas Grantham Blog",
+      "feed_url": "https://www.uagrantham.edu/blog/feed/",
+      "website_url": "https://www.uagrantham.edu/blog/",
+      "description": "University of Arkansas Grantham is affordable, flexible & respected. As an online, accredited university, they offer 60+ degree programs for adult learners. UA Grantham's blog is updated regularly with student and alumni online degree success stories, academic information, online education advice, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6698518.jpg?t=1706786633"
+    },
+    {
+      "title": "University of Arkansas Blog",
+      "feed_url": "https://oep.uark.edu/feed/",
+      "website_url": "https://oep.uark.edu/blog/",
+      "description": "University of Arkansas are here to serve as a resource to state lawmakers, educators, administrators, and other leaders, providing them with current national, state, and regional research in education to support them in thoughtful decision-making concerning PreK-20 education in the State of Arkansas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4029334.jpg?t=1685617643"
+    },
+    {
+      "title": "Southern Arkansas University",
+      "feed_url": "https://web.saumag.edu/news/feed/",
+      "website_url": "https://web.saumag.edu/news/",
+      "description": "Southern Arkansas University offers personalized tour visits, faculty and staff who invest in student success, and a caring campus community. SAU also offers traditional and unique academic degree programs that are ranked nationally for quality and affordability.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6698521.jpg?t=1706785063"
+    },
+    {
+      "title": "Arkansas Early Childhood Association Blog",
+      "feed_url": "https://arkansasearlychildhood.org/feed/",
+      "website_url": "https://arkansasearlychildhood.org/resources/blog/",
+      "description": "The mission of AECA is to enhance the lives of children, families, and early childhood professionals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6698516.jpg?t=1706785009"
+    },
+    {
+      "title": "Central Baptist College Blog",
+      "feed_url": "https://www.cbc.edu/blog-feed.xml",
+      "website_url": "https://www.cbc.edu/blog",
+      "description": "Central Baptist College is a private liberal arts college located in the Historic District of downtown Conway, Arkansas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6698519.jpg?t=1706786659"
+    },
+    {
+      "title": "University of Central Arkansas Blog",
+      "feed_url": "https://uca.edu/acre/feed/",
+      "website_url": "https://uca.edu/acre/arkansas-economic-policy-blog/",
+      "description": "Arkansas Center for Research in Economics is an academic research centre in the University of Central Arkansas College of Business. ACRE is a privately-funded research and education centre housed in the University of Central Arkansas.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6698520.jpg?t=1706785052"
+    },
+    {
+      "title": "ACRE Social Studies Resource Library Blog",
+      "feed_url": "https://www.socialstudiesar.org/blog?format=rss",
+      "website_url": "https://www.socialstudiesar.org/blog",
+      "description": "Social Studies Library blog is a resource for K-12 social studies teachers in Arkansas who are looking for interdisciplinary lessons, readings, activities, and more. It provides a space for teachers to receive materials and resources from fellow teachers and education partners around the state.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 140
+      },
+      "image_url": "https://i1.feedspot.com/5308430.jpg?t=1627985615"
+    },
+    {
+      "title": "University of Arkansas",
+      "feed_url": "https://online-learner.uark.edu/feed/",
+      "website_url": "https://online.uark.edu/blog/#group=blog&default=1",
+      "description": "Founded in 1871 as the state's first land-grant institution, the University of Arkansas is the flagship of the University of Arkansas System. Our picturesque campus is located in Fayetteville and is considered among the nation's finest college towns.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/6698522.jpg?t=1706786684"
+    }
+  ]
+}

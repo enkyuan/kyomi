@@ -1,0 +1,120 @@
+{
+  "category": "UK Sports News",
+  "source_url": "https://rss.feedspot.com/uk_sports_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sky Sports",
+      "feed_url": "https://www.skysports.com/rss/12040",
+      "website_url": "https://www.skysports.com/",
+      "description": "Follow us to keep up with the news on Football, Golf, Rugby, Cricket, Tennis, F1, Boxing and more from Sky Sports.",
+      "followers": {
+        "facebook": 17000000,
+        "twitter": 7600000
+      },
+      "image_url": "https://i1.feedspot.com/9995.jpg?t=1603205385"
+    },
+    {
+      "title": "Daily Mirror \u00bb Sport",
+      "feed_url": "https://www.mirror.co.uk/sport/?service=rss",
+      "website_url": "https://www.mirror.co.uk/sport/",
+      "description": "Read the latest Sport news, including Football, UFC, Boxing, Racing and more. Get the best match reports, opinion and live blogs from Mirror Sport now.",
+      "followers": {
+        "facebook": 216500,
+        "twitter": 1400000,
+        "instagram": 586300
+      },
+      "image_url": "https://i1.feedspot.com/4889106.jpg?t=1542693932"
+    },
+    {
+      "title": "London Evening Standard \u00bb Sport",
+      "feed_url": "https://www.standard.co.uk/sport/rss",
+      "website_url": "https://www.standard.co.uk/sport",
+      "description": "Sports news and breaking stories including football, tennis, F1, golf, boxing, cricket and rugby.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 191300
+      },
+      "image_url": "https://i1.feedspot.com/4918556.jpg?t=1686555207"
+    },
+    {
+      "title": "The Independent \u00bb Sport",
+      "feed_url": "http://www.independent.co.uk/sport/rss",
+      "website_url": "https://www.independent.co.uk/sport",
+      "description": "Subscribe us to keep up with the latest sports news and breaking sports stories including Football, Tennis, F1, Golf and Rugby.",
+      "followers": {
+        "facebook": 11000000,
+        "twitter": 3500000
+      },
+      "image_url": "https://i1.feedspot.com/441794.jpg"
+    },
+    {
+      "title": "The Sporting Blog",
+      "feed_url": "https://thesporting.blog/blog?format=RSS",
+      "website_url": "https://thesporting.blog/",
+      "description": "The Sporting Blog - Sports Interviews, Opinions, Stories, Reviews, Fitness & Training. The antidote to boring Sports Blogs.",
+      "followers": {
+        "facebook": 33000,
+        "twitter": 2300,
+        "instagram": 625
+      },
+      "image_url": "https://i1.feedspot.com/4689470.jpg"
+    },
+    {
+      "title": "SportsNewsIreland",
+      "feed_url": "https://www.sportsnewsireland.com/feed",
+      "website_url": "https://www.sportsnewsireland.com/",
+      "description": "Irish based independent sports news website, offering live score commentary updates on GAA, Airtricity League, RaboPro12, Athletics and Heineken Cup.",
+      "followers": {
+        "twitter": 14700
+      },
+      "image_url": "https://i1.feedspot.com/4780999.jpg?t=1529906753"
+    },
+    {
+      "title": "Boxing News",
+      "feed_url": "https://boxingnewsonline.net/feed/",
+      "website_url": "https://boxingnewsonline.net/",
+      "description": "Boxing News Magazine is all about the sport of boxing. It covers big fights, rankings, and stories about famous and upcoming boxers. The magazine also gives previews, results, and expert opinions on matches. It's made for boxing fans who want the latest updates and insights on the sport.",
+      "followers": {
+        "facebook": 2800000,
+        "twitter": 316000,
+        "instagram": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/3962674.jpg?t=1615201248"
+    },
+    {
+      "title": "BBC Sport - Scores, Fixtures, News - Live Sport",
+      "feed_url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "website_url": "https://www.bbc.com/sport/",
+      "description": "Breaking news & live sports coverage including results, video, audio, and analysis on Football, F1, Cricket, Rugby Union, Rugby League, Golf, Tennis, and all the main world sports, plus major events such as the Olympic Games.",
+      "followers": {
+        "facebook": 61300000,
+        "twitter": 15400000,
+        "instagram": 3600000
+      },
+      "image_url": "https://i1.feedspot.com/236623.jpg?t=1752666204"
+    },
+    {
+      "title": "GiveMeSport",
+      "feed_url": "https://www.givemesport.com/feed/",
+      "website_url": "https://www.tntsports.co.uk/",
+      "description": "GiveMeSport (GMS) is a sport media outlet providing exclusive player, coach and manager interviews, and providing fans with up-to-date features and analysis.",
+      "followers": {
+        "facebook": 26300000,
+        "twitter": 93500,
+        "instagram": 547500
+      },
+      "image_url": "https://i1.feedspot.com/7833203.jpg?t=1732775154"
+    },
+    {
+      "title": "Digital Sport",
+      "feed_url": "https://digitalsport.co/feed",
+      "website_url": "https://digitalsport.co/",
+      "description": "Follow us to keep up with sports news and updates from Digital Sport.",
+      "followers": {
+        "facebook": 538,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4918563.jpg"
+    }
+  ]
+}

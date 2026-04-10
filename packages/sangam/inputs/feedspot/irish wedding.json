@@ -1,0 +1,69 @@
+{
+  "category": "Irish Wedding",
+  "source_url": "https://rss.feedspot.com/irish_wedding_rss_feeds",
+  "feeds": [
+    {
+      "title": "One Fab Day",
+      "feed_url": "https://onefabday.com/feed/",
+      "website_url": "https://onefabday.com/",
+      "description": "Daily wedding inspiration from beautiful real weddings and bridal style advice to wedding decor ideas, invitations, photography and super wedding venues.",
+      "followers": {
+        "facebook": 130000,
+        "twitter": 16400,
+        "instagram": 76800
+      },
+      "image_url": "https://i1.feedspot.com/4842630.jpg?t=1611293932"
+    },
+    {
+      "title": "Weddingsonline Blog",
+      "feed_url": "https://www.weddingsonline.ie/blog/feed/",
+      "website_url": "https://www.weddingsonline.ie/blog/",
+      "description": "Ireland's top wedding blog with real weddings, wedding dresses, wedding hairstyles, advice and lots of wedding ideas and inspiration.",
+      "followers": {
+        "facebook": 93800,
+        "twitter": 9600,
+        "instagram": 25000
+      },
+      "image_url": "https://i1.feedspot.com/4476593.jpg?t=1609748061"
+    },
+    {
+      "title": "Wedding Dates Blog",
+      "feed_url": "https://weddingdates.ie/blog/feed/",
+      "website_url": "https://weddingdates.ie/blog/",
+      "description": "Wedding Dates allows engaged couples to search for their perfect wedding venue and suppliers based on their ideal wedding date",
+      "followers": {
+        "facebook": 45900,
+        "twitter": 9000,
+        "instagram": 8500
+      },
+      "image_url": "https://i1.feedspot.com/4975890.jpg?t=1621950739"
+    },
+    {
+      "title": "Dream Irish Wedding Blog",
+      "feed_url": "http://www.dreamirishwedding.com/blog/feed/",
+      "website_url": "http://www.dreamirishwedding.com/blog/",
+      "description": "Bring your romantic dream to life today with a castle wedding in Ireland. These experts plan your wedding in one of the most breathtaking wedding venues in Ireland",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4975910.jpg?t=1621950743"
+    },
+    {
+      "title": "Irish Wedding Bands Blog",
+      "feed_url": "https://www.irishweddingbands.ie/blog/feed/",
+      "website_url": "https://www.irishweddingbands.ie/blog/",
+      "description": "Irish Wedding Bands Blog for all things with relation to wedding music right here. This blog offers you informative and alternative ideas for your Wedding party.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4975914.jpg?t=1621950748"
+    },
+    {
+      "title": "Irish Wedding DJ Association Blog",
+      "feed_url": "https://weddingdjassociation.ie/blog/feed/",
+      "website_url": "https://weddingdjassociation.ie/blog/",
+      "description": "With this blog Irish Wedding DJ Association brings you ideas, inspiration and information to help make your wedding planning easier and more enjoyable",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4975985.jpg"
+    }
+  ]
+}

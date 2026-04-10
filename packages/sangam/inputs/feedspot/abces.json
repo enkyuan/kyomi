@@ -1,0 +1,568 @@
+{
+  "category": "ABC.es",
+  "source_url": "https://rss.feedspot.com/abcdotes_rss_feeds",
+  "feeds": [
+    {
+      "title": "ABC.es",
+      "feed_url": "https://www.abc.es/rss/2.0/portada/",
+      "website_url": "https://www.abc.es/",
+      "description": "Follow the latest news and current events from Spain and the world, all the news on sports, economy, international, culture, society, technology, motor, television, people and the most complete signatures and opinion.",
+      "followers": {
+        "facebook": 1700000,
+        "twitter": 2300000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Latest news",
+      "feed_url": "https://www.abc.es/rss/atom/ultima-hora/",
+      "website_url": "https://www.abc.es/ultimas-noticias/",
+      "description": "Follow the latest news and current events from Spain and the world, all the news on sports, economy, international, culture, society, technology, motor, television, people and the most complete signatures and opinion from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Opinion",
+      "feed_url": "https://www.abc.es/rss/atom/opinion/",
+      "website_url": "https://www.abc.es/opinion/",
+      "description": "Opinion pieces from your favorite authors, cartoons, and editorials from ABC. A fresh take on the day's latest news.",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Madrid",
+      "feed_url": "https://www.abc.es/rss/atom/espana/madrid/",
+      "website_url": "https://www.abc.es/espana/madrid/",
+      "description": "Breaking news from Madrid. Stay up-to-date with all the local news and news from the Madrid region on ABC.es.",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Asturias",
+      "feed_url": "https://www.abc.es/rss/atom/espana/asturias/",
+      "website_url": "https://www.abc.es/espana/asturias/",
+      "description": "All articles about Asturias from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Aragon",
+      "feed_url": "https://www.abc.es/rss/atom/espana/aragon/",
+      "website_url": "https://www.abc.es/espana/aragon/",
+      "description": "All articles about Aragon from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Baleares",
+      "feed_url": "https://www.abc.es/rss/atom/espana/baleares/",
+      "website_url": "https://www.abc.es/espana/baleares/",
+      "description": "Information and articles on the Balearic Islands. News, highlights, news, and the latest news from the region on ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Canary Islands",
+      "feed_url": "https://www.abc.es/rss/atom/espana/canarias/",
+      "website_url": "https://www.abc.es/espana/canarias/",
+      "description": "All articles about Canary Islands from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Cantabria",
+      "feed_url": "https://www.abc.es/rss/atom/espana/cantabria/",
+      "website_url": "https://www.abc.es/espana/cantabria/",
+      "description": "All articles about Cantabria from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Catalonia",
+      "feed_url": "https://www.abc.es/rss/atom/espana/cataluna/",
+      "website_url": "https://www.abc.es/espana/catalunya/",
+      "description": "News about Catalonia. Current affairs on the economy, sports, politics, and much more on ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Estremadura",
+      "feed_url": "https://www.abc.es/rss/atom/espana/extremadura/",
+      "website_url": "https://www.abc.es/espana/extremadura/",
+      "description": "All the news from Extremadura from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Galicia",
+      "feed_url": "https://www.abc.es/rss/atom/espana/galicia/",
+      "website_url": "https://www.abc.es/rss/atom/espana/galicia/",
+      "description": "All articles about Galicia from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Navarra",
+      "feed_url": "https://www.abc.es/rss/atom/espana/navarra/",
+      "website_url": "https://www.abc.es/espana/navarra/",
+      "description": "All articles about Navarra from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Murcia",
+      "feed_url": "https://www.abc.es/rss/atom/espana/murcia/",
+      "website_url": "https://www.abc.es/espana/murcia/",
+      "description": "News from the Murcia region, including news, businesses, entrepreneurs, and initiatives from Murcia on ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb International",
+      "feed_url": "https://www.abc.es/rss/atom/internacional/",
+      "website_url": "https://www.abc.es/internacional/",
+      "description": "All International articles from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Economy",
+      "feed_url": "https://www.abc.es/rss/atom/economia/",
+      "website_url": "https://www.abc.es/economia/",
+      "description": "Economic news. All the information on finance, markets, companies, stock quotes, the stock market, and banking on ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Real Estate",
+      "feed_url": "https://www.abc.es/rss/atom/economia/inmobiliario/",
+      "website_url": "https://www.abc.es/economia/inmobiliario/",
+      "description": "All articles about Real Estate from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Economy Training",
+      "feed_url": "https://www.abc.es/rss/atom/economia/formacion/",
+      "website_url": "https://www.abc.es/economia/formacion/",
+      "description": "Find all the information related to the world of training. Get the latest news on degrees, master's degrees, and postgraduate programs with ABC.es.",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Society",
+      "feed_url": "https://www.abc.es/rss/atom/sociedad/",
+      "website_url": "https://www.abc.es/sociedad/",
+      "description": "Discover the latest news on national and international social events, the society news that matters to you as a citizen, on ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Health",
+      "feed_url": "https://www.abc.es/rss/atom/salud/",
+      "website_url": "https://www.abc.es/salud/",
+      "description": "All articles about Health from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Natural",
+      "feed_url": "https://www.abc.es/rss/atom/natural/",
+      "website_url": "https://www.abc.es/natural/",
+      "description": "All articles about Nature from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Science",
+      "feed_url": "https://www.abc.es/rss/atom/ciencia/",
+      "website_url": "https://www.abc.es/ciencia/",
+      "description": "All articles about Science from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Technology",
+      "feed_url": "https://www.abc.es/rss/atom/tecnologia/",
+      "website_url": "https://www.abc.es/tecnologia/",
+      "description": "Follow the latest technology news through our specialized portal. Up-to-date information on the Internet, IT, and telecommunications at ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb People",
+      "feed_url": "https://www.abc.es/rss/atom/gente/",
+      "website_url": "https://www.abc.es/gente/",
+      "description": "People News. All the latest on people and much more at ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Culture",
+      "feed_url": "https://www.abc.es/rss/atom/cultura/",
+      "website_url": "https://www.abc.es/cultura/",
+      "description": "All articles about Culture from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Books",
+      "feed_url": "https://www.abc.es/rss/atom/cultura/libros/",
+      "website_url": "https://www.abc.es/cultura/libros/",
+      "description": "All articles about Books from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Music",
+      "feed_url": "https://www.abc.es/rss/atom/cultura/musica/",
+      "website_url": "https://www.abc.es/cultura/musica/",
+      "description": "All articles about Music from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Theater",
+      "feed_url": "https://www.abc.es/rss/atom/cultura/teatros/",
+      "website_url": "https://www.abc.es/cultura/teatros/",
+      "description": "All articles about Theater from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Art",
+      "feed_url": "https://www.abc.es/rss/atom/cultura/arte/",
+      "website_url": "https://www.abc.es/rss/atom/cultura/arte/",
+      "description": "All articles about Art from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Bullfighting",
+      "feed_url": "https://www.abc.es/rss/atom/cultura/toros/",
+      "website_url": "https://www.abc.es/cultura/toros/",
+      "description": "All articles about Bullfighting from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Anthropy",
+      "feed_url": "https://www.abc.es/rss/atom/antropia/",
+      "website_url": "https://www.abc.es/antropia/",
+      "description": "All articles about Anthropy from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Cultural",
+      "feed_url": "https://www.abc.es/rss/atom/cultura/cultural/",
+      "website_url": "https://www.abc.es/cultura/cultural/",
+      "description": "All the news on culture, film, music, books, bullfighting, art, theater, dance, and performing arts from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Motor",
+      "feed_url": "https://www.abc.es/rss/atom/summum/motor/",
+      "website_url": "https://www.abc.es/summum/motor/",
+      "description": "All articles about Motors from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Psychology-Sex",
+      "feed_url": "https://www.abc.es/rss/atom/bienestar/psicologia-sexo/",
+      "website_url": "https://www.abc.es/bienestar/psicologia-sexo/",
+      "description": "All articles about Psychology-Sex from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Fitness",
+      "feed_url": "https://www.abc.es/rss/atom/bienestar/fitness/",
+      "website_url": "https://www.abc.es/bienestar/fitness/",
+      "description": "All about the latest fitness trends, exercises, and how to maintain a healthy, strong body and attitude from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Nutrition",
+      "feed_url": "https://www.abc.es/rss/atom/bienestar/alimentacion/",
+      "website_url": "https://www.abc.es/bienestar/alimentacion/",
+      "description": "All articles about Nutrition from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Welfare",
+      "feed_url": "https://www.abc.es/rss/atom/bienestar/",
+      "website_url": "https://www.abc.es/bienestar/",
+      "description": "All articles about Welfare from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Decoration",
+      "feed_url": "https://www.abc.es/rss/atom/estilo/decoracion/",
+      "website_url": "https://www.abc.es/estilo/decoracion/",
+      "description": "Home Decor News and Updates. All the Home Decor information. News, videos, photo galleries, and much more at ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Beauty",
+      "feed_url": "https://www.abc.es/rss/atom/estilo/belleza/",
+      "website_url": "https://www.abc.es/estilo/belleza/",
+      "description": "All articles about Beauty from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Fashion",
+      "feed_url": "https://www.abc.es/rss/atom/estilo/moda/",
+      "website_url": "https://www.abc.es/estilo/moda/",
+      "description": "Fashion news and updates. All the People and Style information. News, videos, photo galleries, and much more at ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Gastronomy",
+      "feed_url": "https://www.abc.es/rss/atom/gastronomia/",
+      "website_url": "https://www.abc.es/gastronomia/",
+      "description": "Food, wine, and restaurant news. Stay up-to-date on gourmet and foodie topics, along with other current culinary trends from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Travel",
+      "feed_url": "https://www.abc.es/rss/atom/viajar/",
+      "website_url": "https://www.abc.es/viajar/",
+      "description": "Travel: Information on destinations around the world, Asia, Africa, Europe, photos, videos, and much more at ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Style",
+      "feed_url": "https://www.abc.es/rss/atom/estilo/",
+      "website_url": "https://www.abc.es/estilo/",
+      "description": "All articles about Style from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Hunt",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/caza/",
+      "website_url": "https://www.abc.es/deportes/caza/",
+      "description": "All articles about Hunt from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Candle",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/vela/",
+      "website_url": "https://www.abc.es/deportes/vela/",
+      "description": "All articles about Candle from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Cycling",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/ciclismo/",
+      "website_url": "https://www.abc.es/deportes/ciclismo/",
+      "description": "Discover the latest news from the world of cycling. Experience this season's major tours, such as the Vuelta a Espa\u00f1a, the Tour de France, the Giro\u2026 from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Formula 1",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/formula-1/",
+      "website_url": "https://www.abc.es/deportes/formula-1/",
+      "description": "All articles about Formula 1 from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Tennis",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/tenis/",
+      "website_url": "https://www.abc.es/deportes/tenis/",
+      "description": "All articles about Tennis from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Basketball",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/baloncesto/",
+      "website_url": "https://www.abc.es/deportes/baloncesto/",
+      "description": "All articles about Basketball from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb MMA",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/mma/",
+      "website_url": "https://www.abc.es/deportes/mma/",
+      "description": "Get the latest news, events, and shows from the world of Mixed Martial Arts (MMA). All about the UFC, Ilia Topuria, Joel \u00c1lvarez, and WOW from \u00c1lvaro Colmenero and ABC specialists from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Football",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/futbol/",
+      "website_url": "https://www.abc.es/deportes/futbol/",
+      "description": "All articles about Football from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Atl\u00e9tico de Madrid",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/atletico-madrid/",
+      "website_url": "https://www.abc.es/deportes/atletico-madrid/",
+      "description": "All articles about Atl\u00e9tico de Madrid from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Real Madrid",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/real-madrid/",
+      "website_url": "https://www.abc.es/deportes/real-madrid/",
+      "description": "All the latest Real Madrid CF sports news, including the squad, matches, videos, and more at ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Sports",
+      "feed_url": "https://www.abc.es/rss/atom/deportes/",
+      "website_url": "https://www.abc.es/deportes/",
+      "description": "All articles about Sports from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb History",
+      "feed_url": "https://www.abc.es/rss/atom/historia/",
+      "website_url": "https://www.abc.es/historia/",
+      "description": "All articles about History from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Cinema",
+      "feed_url": "https://www.abc.es/rss/atom/play/cine/",
+      "website_url": "https://www.abc.es/play/cine/",
+      "description": "All articles about Cinema from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Series",
+      "feed_url": "https://www.abc.es/rss/atom/play/series/",
+      "website_url": "https://www.abc.es/play/series/",
+      "description": "All articles about Series from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Eurovision",
+      "feed_url": "https://www.abc.es/rss/atom/play/television/eurovision/",
+      "website_url": "https://www.abc.es/play/television/eurovision/",
+      "description": "All the news from Eurovision 2025. The most complete information on the song contest from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Television",
+      "feed_url": "https://www.abc.es/rss/atom/play/television/",
+      "website_url": "https://www.abc.es/play/television/",
+      "description": "All articles about Television from ABC.es",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    },
+    {
+      "title": "ABC.es \u00bb Play",
+      "feed_url": "https://www.abc.es/rss/atom/play/",
+      "website_url": "https://www.abc.es/play/",
+      "description": "All the latest on movies, films, series, and television on ABC.es. Find out about the latest movie releases and new seasons of the best TV series, characters, and more from ABC.es",
+      "followers": {
+        "facebook": 1700000,
+        "instagram": 1700000
+      },
+      "image_url": "https://i1.feedspot.com/7892337.jpg?t=1742981902"
+    }
+  ]
+}

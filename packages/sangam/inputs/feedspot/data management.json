@@ -1,0 +1,282 @@
+{
+  "category": "Data Management",
+  "source_url": "https://rss.feedspot.com/data_management_rss_feeds",
+  "feeds": [
+    {
+      "title": "TDAN.com",
+      "feed_url": "https://tdan.com/feed",
+      "website_url": "https://tdan.com/",
+      "description": "The Data Administration Newsletter (TDAN.com) is an internet-based publication focused on sharing data management approaches, best practices, solutions and technologies to an avid reader-base of managers, practitioners, and consultants.",
+      "followers": {
+        "facebook": 156,
+        "twitter": 989
+      },
+      "image_url": "https://i1.feedspot.com/4443930.jpg?t=1622614086"
+    },
+    {
+      "title": "Actian Blog",
+      "feed_url": "https://www.actian.com/feed/",
+      "website_url": "https://www.actian.com/blog/",
+      "description": "Actian offers on-premises and cloud data management solutions for seamless performance, insights, and outcomes. Follow this blog for the latest business and technical insights from thought leaders in data management, data integration, and analytics.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 2900
+      },
+      "image_url": "https://i1.feedspot.com/5051770.jpg?t=1622614090"
+    },
+    {
+      "title": "Database Trends and Applications",
+      "feed_url": "http://feeds.infotoday.com/DBTA-Articles",
+      "website_url": "https://www.dbta.com/",
+      "description": "Database Trends and Applications is a magazine covering data and information management, big data, and data science. Our magazine and website delivers advanced trends analysis and case studies serving the IT and business stakeholders of complex data environments. Stay tuned to get the latest updates.",
+      "followers": {
+        "twitter": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4470067.jpg?t=1646398103"
+    },
+    {
+      "title": "DATAVERSITY",
+      "feed_url": "https://www.dataversity.net/category/blogs/feed/",
+      "website_url": "https://www.dataversity.net/category/blogs/",
+      "description": "DATAVERSITY provides resources for information technology (IT) professionals, executives and business managers to learn about the uses and management of data. Follow our data industry blog for educational resources on data management from enterprise leaders.",
+      "followers": {
+        "facebook": 6700,
+        "twitter": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5051802.jpg?t=1622614107"
+    },
+    {
+      "title": "Stackby Blog for Remote Work & Automation",
+      "feed_url": "https://stackby.com/blog/rss/",
+      "website_url": "https://stackby.com/blog/",
+      "description": "Insights and advise for Remote work, Data Management and Work Automation.",
+      "followers": {
+        "facebook": 612,
+        "twitter": 1000,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5156435.jpg?t=1622614116"
+    },
+    {
+      "title": "Only Hyperion - Oracle Hyperion EPM blog",
+      "feed_url": "https://onlyhyperion.blogspot.com/feeds/posts/default",
+      "website_url": "https://onlyhyperion.blogspot.com/",
+      "description": "Hi! I'm Dayalan Punniyamoorthy. I am passionate about the Oracle Hyperion EPM suite of products and like to share my knowledge of multiple suites. In this blog, I post my findings and the learnings I feel are helpful to others who are using the Oracle Hyperion EPM Suite of products.",
+      "followers": {
+        "twitter": 439
+      },
+      "image_url": "https://i1.feedspot.com/5051784.jpg?t=1667981816"
+    },
+    {
+      "title": "OpenText Blog",
+      "feed_url": "https://blogs.opentext.com/feed/",
+      "website_url": "https://blogs.opentext.com/",
+      "description": "The OpenText team of industry experts provide the latest news, opinion, advice and industry trends for all things EIM & digital transformation. OpenText is a world leader in Information Management, helping companies securely capture, govern and exchange information on a global scale.",
+      "followers": {
+        "twitter": 21700
+      },
+      "image_url": "https://i1.feedspot.com/5556888.jpg?t=1683271862"
+    },
+    {
+      "title": "UniquesData Blog",
+      "feed_url": "https://www.uniquesdata.com/feed/",
+      "website_url": "https://www.uniquesdata.com/blog/",
+      "description": "Here's all you need to know about Data Management, Processing, Conversion, Mining, and modern ways of outsourcing Data-related tasks. UniquesData is an international company that provides a wide range of data entry, data processing & data conversion services to a global clientele.",
+      "followers": {
+        "facebook": 193,
+        "twitter": 287,
+        "instagram": 436
+      },
+      "image_url": "https://i1.feedspot.com/5675742.jpg?t=1695291396"
+    },
+    {
+      "title": "Hevo Data",
+      "feed_url": "https://hevodata.com/learn/feed/",
+      "website_url": "https://hevodata.com/learn/",
+      "description": "A directory of tutorials, how-to guides, and practical tips on all things data. Hevo is an end-to-end data pipeline platform that enables you to easily pull data from all your sources to the warehouse, run transformations for analytics, and deliver operational intelligence to business tools.",
+      "followers": {
+        "twitter": 751
+      },
+      "image_url": "https://i1.feedspot.com/5421873.jpg?t=1659445079"
+    },
+    {
+      "title": "Komprise Intelligent Data Management Blog",
+      "feed_url": "https://www.komprise.com/category/blog/feed/",
+      "website_url": "https://www.komprise.com/blog/",
+      "description": "Learn from data storage & data management experts hearing their thoughts on how to save costs, cut complexity, and get more from your data with Komprise. Topics covered are Cloud Data Archiving, Cloud Data Migration, Cloud Tiering, News & Events, and Use Cases. Komprise is an intelligent, analytics-driven data management solution that analyzes data growth across an organization's current storage.",
+      "followers": {
+        "facebook": 195,
+        "twitter": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5328793.jpg?t=1633503866"
+    },
+    {
+      "title": "LightsOnData",
+      "feed_url": "https://www.lightsondata.com/feed/",
+      "website_url": "https://www.lightsondata.com/",
+      "description": "Practical resources, online courses, free articles and videos for data management, data governance, data quality, and business intelligence",
+      "followers": {
+        "twitter": 961
+      },
+      "image_url": "https://i1.feedspot.com/5067226.jpg?t=1622614154"
+    },
+    {
+      "title": "Data Sleek Blog",
+      "feed_url": "https://data-sleek.com/feed/",
+      "website_url": "https://data-sleek.com/blog/",
+      "description": "Here is a selection of carefully-curated blogs and articles you can read to get valuable data management insights. Data Sleek specializes in data solutions tailored to small and medium sized businesses.",
+      "followers": {
+        "facebook": 30,
+        "instagram": 302
+      },
+      "image_url": "https://i1.feedspot.com/5460291.jpg?t=1666871973"
+    },
+    {
+      "title": "Zerion | Big Data",
+      "feed_url": "https://zerionsoftware.com/category/big-data/feed/",
+      "website_url": "https://zerionsoftware.com/category/big-data/",
+      "description": "Zerion helps you focus on what matters most by delivering solutions to create efficiency and productivity at every phase of your company. Discover more about data management and how big data is managed in the mobile data collection arena by following this feed.",
+      "followers": {
+        "facebook": 2100,
+        "twitter": 997,
+        "instagram": 283
+      },
+      "image_url": "https://i1.feedspot.com/5051774.jpg?t=1622614178"
+    },
+    {
+      "title": "The Data Roundtable \u00bb Data Management",
+      "feed_url": "https://blogs.sas.com/content/datamanagement/feed/",
+      "website_url": "https://blogs.sas.com/content/datamanagement/",
+      "description": "The Data Roundtable is a forum where data management experts share tips, tricks and practical advice on all sorts of topics, including SAS Data Management software. Follow to get the latest articles from this feed in your inbox.",
+      "followers": {
+        "facebook": 289100,
+        "twitter": 62400,
+        "instagram": 24100
+      },
+      "image_url": "https://i1.feedspot.com/5051789.jpg?t=1622614144"
+    },
+    {
+      "title": "InformationWeek \u00bb Data Management",
+      "feed_url": "https://www.informationweek.com/data-management",
+      "website_url": "https://www.informationweek.com/data-management",
+      "description": "InformationWeek shares news, analysis and advice on Data Management and how to turn analytics into business results. Connect with Data Management experts in our community.",
+      "followers": {
+        "facebook": 49900,
+        "twitter": 108500
+      },
+      "image_url": "https://i1.feedspot.com/5051777.jpg?t=1622614112"
+    },
+    {
+      "title": "Software Blog",
+      "feed_url": "https://www.softwareag.com/en_corporate/blog.html",
+      "website_url": "https://www.softwareag.com/en_corporate/blog.html",
+      "description": "StreamSets believes in the audacious, ambitious goal of teasing order out of the chaos of modern data and help customers achieve that goal by solving the problem of data integration and data management for continuous delivery and constant change across any platform past, present, and future. The StreamSets DataOps Blog turns engineering experience and industry thought leadership into best practices for managing modern data integration. Follow to get updates.",
+      "followers": {
+        "facebook": 334,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5180548.jpg?t=1597138503"
+    },
+    {
+      "title": "Elucidata Blog",
+      "feed_url": "https://www.elucidata.io/resources/blog",
+      "website_url": "https://www.elucidata.io/resources/blog",
+      "description": "Elucidata's mission is to use data analytics to transform decision-making processes in R&D labs in biotechnology and pharmaceutical companies. On our Blog, you will find easy-to-understand and actionable insights to help your company improve its data management.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 465
+      },
+      "image_url": "https://i1.feedspot.com/5156339.jpg?t=1607346565"
+    },
+    {
+      "title": "DataStax",
+      "feed_url": "http://feeds.feedburner.com/datastax",
+      "website_url": "https://www.datastax.com/blog",
+      "description": "DataStax delivers an Active Everywhere, always-on, distributed cloud database built on Apache Cassandra and designed for hybrid cloud. Follow this blog to find perspectives about datastax, our latest product offerings, insights from customers and business insights about big data",
+      "followers": {
+        "facebook": 13900,
+        "twitter": 98300
+      },
+      "image_url": "https://i1.feedspot.com/504480.jpg?t=1622614099"
+    },
+    {
+      "title": "EWSOLUTIONS",
+      "feed_url": "https://www.ewsolutions.com/feed/",
+      "website_url": "https://www.ewsolutions.com/",
+      "description": "EWSolutions offers full-service data management consulting including data integration, data warehousing, business intelligence, analytics and metadata management. Follow to keep up with latest from this blog",
+      "followers": {
+        "facebook": 85,
+        "twitter": 83,
+        "instagram": 46
+      },
+      "image_url": "https://i1.feedspot.com/5051768.jpg?t=1622614139"
+    },
+    {
+      "title": "TekGenio Blog",
+      "feed_url": "https://tekgenio.com/feed",
+      "website_url": "https://online-spss.com/blog/",
+      "description": "Find the latest blogs news from TekGenio. See articles related to data quality management and information technology, business analysts, data cleansing & many more.Tekgenio.com is the leading Odoo Solution provider in the USA. It provides every feature a company needs to manage its operations and develop its business.",
+      "followers": {
+        "twitter": 43,
+        "instagram": 249
+      },
+      "image_url": "https://i1.feedspot.com/5517293.jpg?t=1678256451"
+    },
+    {
+      "title": "SPSS Data Analysis Blog",
+      "feed_url": "https://online-spss.com/feed/",
+      "website_url": "https://online-spss.com/blog/",
+      "description": "Elevate Your Research with Online SPSS help and professional data analysis services from expert statisticians. At Online-SPSS, you're assured of SPSS data analysis services, Dissertation Data Analysis Services, assignment help, and statistics assignment help, among other services. All of these services are always available at affordable prices.",
+      "followers": {
+        "facebook": 2000
+      },
+      "image_url": "https://i1.feedspot.com/7264116.jpg?t=1711011933"
+    },
+    {
+      "title": "Rivery Data Management Blog",
+      "feed_url": "https://rivery.io/blog/feed/",
+      "website_url": "https://rivery.io/blog/",
+      "description": "Discover new insights, resources, and trends on all things data management, including ETL, DataOps, ELT, Data Integration, and more! Rivery is a SaaS DataOps platform for all your organizational data, offering a suite of cloud-native solutions.",
+      "followers": {
+        "facebook": 489,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5328796.jpg?t=1633504070"
+    },
+    {
+      "title": "Research Data Management Blog",
+      "feed_url": "https://blogs.ucl.ac.uk/rdm/feed/",
+      "website_url": "https://blogs.ucl.ac.uk/rdm/",
+      "description": "UCL Library Services consists of 18 libraries and learning spaces located across London, covering a wide range of specialist subjects ranging from bio-medicine and science to arts, architecture, and archaeology. Get more information about data management by following our feed.",
+      "followers": {
+        "facebook": 288400,
+        "twitter": 141700,
+        "instagram": 275800
+      },
+      "image_url": "https://i1.feedspot.com/5051691.jpg?t=1622614163"
+    },
+    {
+      "title": "Io-Tahoe",
+      "feed_url": "https://io-tahoe.com/feed",
+      "website_url": "https://www.healthdatamanagement.com/",
+      "description": "Io-Tahoe is a smart data discovery product that enables organizations to discover data in lakes and relational data instances. Follow the Io-Tahoe blog, where CIOs, CDO, CTOs and data experts can learn about data management trends.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1700,
+        "instagram": 334
+      },
+      "image_url": "https://i1.feedspot.com/5051712.jpg?t=1622614174"
+    },
+    {
+      "title": "Health Data Management",
+      "feed_url": "https://www.healthdatamanagement.com/index.rss",
+      "website_url": "https://www.healthdatamanagement.com/",
+      "description": "Health Data Management offers Healthcare IT news & analysis on health technology, HIPAA, meaningful use, health information exchange, EHRs & ICD-10. Follow this blog for weekly updates.",
+      "followers": {
+        "facebook": 9500,
+        "twitter": 20300
+      },
+      "image_url": "https://i1.feedspot.com/5051791.jpg?t=1622614158"
+    }
+  ]
+}

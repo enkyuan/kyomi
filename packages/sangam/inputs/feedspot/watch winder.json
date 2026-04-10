@@ -1,0 +1,27 @@
+{
+  "category": "Watch Winder",
+  "source_url": "https://rss.feedspot.com/watch_winder_rss_feeds",
+  "feeds": [
+    {
+      "title": "Mozsly Blog",
+      "feed_url": "https://www.mozsly.com/blogs/about-watch-winder.atom",
+      "website_url": "https://www.mozsly.com/blogs/about-watch-winder",
+      "description": "The MOZSLY is the top brand for high-quality watch winders exclusive business. We pride ourselves on providing the most excellent customer support along with free shipping, painless returns & the lowest prices. Regardless of your budget, you shouldn't have to sacrifice quality for the price. This is why we provide the highest quality products from trusted brands for the lowest prices around.",
+      "followers": {
+        "facebook": 225,
+        "instagram": 2700
+      },
+      "image_url": "https://i1.feedspot.com/5496687.jpg?t=1674132508"
+    },
+    {
+      "title": "LUX Watch Winders Blog",
+      "feed_url": "https://www.luxwatchwinders.com/blogs/news.atom",
+      "website_url": "https://www.luxwatchwinders.com/blogs/news",
+      "description": "LUX Watch Winders is an online retailer created and designed to accommodate the high expectations you have in making your purchases. By avoiding the brick-and-mortar setting, we are able to create savings that we can pass on to the public. Our aim is to provide quality and luxurious Watch Winders, Watch Cases, Watch Boxes, Jewelry Chests, Jewelry Armoires, and Jewelry Safes at the most reasonable price while offering a wide selection for each category.",
+      "followers": {
+        "facebook": 122
+      },
+      "image_url": "https://i1.feedspot.com/5496686.jpg?t=1674132489"
+    }
+  ]
+}

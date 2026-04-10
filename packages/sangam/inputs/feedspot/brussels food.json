@@ -1,0 +1,81 @@
+{
+  "category": "Brussels Food",
+  "source_url": "https://rss.feedspot.com/brussels_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Together Magazine \u00bb Food and drink",
+      "feed_url": "https://togethermag.eu/category/leisure/food-and-drink/feed/",
+      "website_url": "https://togethermag.eu/category/leisure/food-and-drink/",
+      "description": "Get to know more about food and drinks to try in Brussels through Together Magazine. Together is THE high-class English language magazine for international business people in Brussels - a perfect blend of personal development, lifestyle, and leisure. Our aim is to inspire our readers to reach their dreams.",
+      "followers": {
+        "facebook": 5600,
+        "twitter": 587,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5442166.jpg?t=1663243859"
+    },
+    {
+      "title": "Brussels.com Blog \u00bb Food & Drinks",
+      "feed_url": "https://www.brussels.com/blog/category/food-drink/feed/",
+      "website_url": "https://www.brussels.com/blog/category/food-drink/",
+      "description": "We are part of the Travelagents.com Network and one of over 50 Online City Guides offering the best online travel deals from a choice of well-known providers. Brussels Tourism and Travel Information. A complete guide to hotels, flights to Brussels, entertainment, properties, news, and more on Brussels, Belgium.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 362
+      },
+      "image_url": "https://i1.feedspot.com/5470781.jpg?t=1669191818"
+    },
+    {
+      "title": "Tips from a waitress Blog",
+      "feed_url": "https://www.tipsfromawaitress.be/blog?format=rss",
+      "website_url": "https://www.tipsfromawaitress.be/blog",
+      "description": "Are you searching for a great restaurant or bar to hang out with your friends? Let me help you with some insider tips from my years of experience as a waitress. Tips from a Waitress Blog can recommend the best spots for lunch, dinner, or even a late-night drink any day of the week.",
+      "followers": {
+        "facebook": 827
+      },
+      "image_url": "https://i1.feedspot.com/5470782.jpg?t=1669191490"
+    },
+    {
+      "title": "Brussels' Kitchen",
+      "feed_url": "https://www.brusselskitchen.com/feed?lang=en",
+      "website_url": "https://www.brusselskitchen.com/?lang=en",
+      "description": "Belgian blog for food hotspots. Restaurants, wine bars, tea rooms, markets, organic eateries, etc in Brussels. Gorgeous places for the eyes, amazing food for the taste, and new experiences just for pleasure. Culinary events & experiences. Charming hotels and rooms in Brussels. Online guide to the best places to eat & drink out in style in Brussels, by Chlo\u00e9 Roose. Traveling outside of Brussels, find our best recommendations.",
+      "followers": {
+        "facebook": 17600,
+        "twitter": 1700,
+        "instagram": 77100
+      },
+      "image_url": "https://i1.feedspot.com/5470784.jpg?t=1669191509"
+    },
+    {
+      "title": "InsideBrussels.be \u00bb Manger",
+      "feed_url": "https://www.insidebrussels.be/V2/bruxelles/category/manger-a-bruxelles/feed/",
+      "website_url": "https://www.insidebrussels.be/V2/bruxelles/category/manger-a-bruxelles/",
+      "description": "Looking for great restaurants in Brussels? You've come to the right place! InsideBrussels blog features reviews and recommendations from a local blogger, covering everything from affordable eats to high-end dining experiences. Plus, you can expect plenty of mouth-watering photos to accompany each post.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5470785.jpg?t=1669191060"
+    },
+    {
+      "title": "Vegan Brussels",
+      "feed_url": "https://www.veganbrussels.com/blog-feed.xml",
+      "website_url": "https://www.veganbrussels.com/",
+      "description": "The Vegan Brussels blog serves as an online guide to vegan and vegan-friendly establishments in Brussels. Its purpose is to uncover the vegan side of Brussels by highlighting delightful spots and hidden gems for eating and shopping in a vegan style.",
+      "followers": {
+        "facebook": 6900,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5470786.jpg?t=1669191185"
+    },
+    {
+      "title": "Real Simple Food Blog",
+      "feed_url": "https://realsimplefoodblog.com/feed/",
+      "website_url": "https://realsimplefoodblog.com/",
+      "description": "Food lover & coffee addict. Wish I had written the flavor thesaurus. Forever playing with the contents of my spice drawer. In my blog, I write about various flavors, delicious dishes, and more. Check it out if you are a foodie, just like me.",
+      "followers": {
+        "twitter": 374,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5470780.jpg?t=1669190896"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "category": "HP",
+  "source_url": "https://rss.feedspot.com/hp_rss_feeds",
+  "feeds": [
+    {
+      "title": "Hewlett Packard Enterprise Community",
+      "feed_url": "https://community.hpe.com/hpeb/rss/Community?interaction.style=forum&feeds.replies=true",
+      "website_url": "https://community.hpe.com/hpeb/",
+      "description": "Make a difference and join the conversation in the Hewlett Packard Enterprise Community, where you can read the latest HPE blogs, get advice, join discussions, find solutions and exchange information.",
+      "followers": {
+        "facebook": 308200,
+        "twitter": 182600
+      },
+      "image_url": "https://i1.feedspot.com/4912575.jpg?t=1620223330"
+    },
+    {
+      "title": "NCS Technologies, Inc. Blog \u00bb HP",
+      "feed_url": "https://blog.ncst.com/rss.xml",
+      "website_url": "https://blog.ncst.com/topic/hp/",
+      "description": "NCS Technologies' HP topic section explores advanced collaboration between NCS and HP\u2014highlighting enterprise 3D printing partnerships, endpoint security solutions, AI-powered PCs, and managed print services designed for government, healthcare, and hybrid work environments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/8662477.jpg?t=1755878108"
+    },
+    {
+      "title": "South China Morning Post \u00bb Hewlett-Packard",
+      "feed_url": "https://www.scmp.com/rss/57661/feed/",
+      "website_url": "https://www.scmp.com/topics/hewlett-packard/",
+      "description": "Hewlett-Packard Company (HP) is an American multinational information technology corporation that provides products, technologies, software, solutions and services to consumers, small- and medium-sized businesses (SMBs) and large enterprises, including customers in the government, health and education sectors.",
+      "followers": {
+        "facebook": 5000000
+      },
+      "image_url": "https://i1.feedspot.com/8662478.jpg"
+    },
+    {
+      "title": "HP Printer Support",
+      "feed_url": "https://hp-printer-support-us.blogspot.com/feeds/posts/default",
+      "website_url": "https://hp-printer-support-us.blogspot.com/",
+      "description": "In this blog, you will find informative articles about hp printers, and everything related to it. Follow the blog to know more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5212502.jpg?t=1604409535"
+    },
+    {
+      "title": "HP Printer Technical Support Blog",
+      "feed_url": "https://www.hpprintersupportpro.com/blog/feed/",
+      "website_url": "https://www.hpprintersupportpro.com/blog/",
+      "description": "hpprintersupportpro.com is an independent third party online tech support service provider for software, hardware, and peripherals. Check out the blog to know more.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5225483.jpg?t=1607354871"
+    },
+    {
+      "title": "HP Printer Support Blog",
+      "feed_url": "https://www.hpprintersupportpro.net/blog/feed/",
+      "website_url": "https://www.hpprintersupportpro.net/blog/",
+      "description": "HP Printers Support is an HP Printer Customer Service provider and posts blog related to the HP Printers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5096590.jpg"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "category": "WGBH",
+  "source_url": "https://rss.feedspot.com/wgbh_rss_feeds",
+  "feeds": [
+    {
+      "title": "WGBH",
+      "feed_url": "https://www.wgbh.org/news.rss",
+      "website_url": "https://www.wgbh.org/news",
+      "description": "GBH News is among the fastest growing local news providers in greater Boston and draws on the talent of a multi-platform newsroom that includes 89.7 GBH, Boston's Local NPR, television and digital reporting.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/8542206.jpg"
+    },
+    {
+      "title": "WGBH \u00bb Local",
+      "feed_url": "https://www.wgbh.org/news/local.rss",
+      "website_url": "https://www.wgbh.org/news/local",
+      "description": "Local reporting, analysis, and context for Massachusetts and beyond from WGBH.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 45200,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5260454.jpg?t=1750847840"
+    },
+    {
+      "title": "WGBH \u00bb National",
+      "feed_url": "https://www.wgbh.org/news/national.rss",
+      "website_url": "https://www.wgbh.org/news/national-news",
+      "description": "Get the national news and updates only on WGBH.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 45200,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5260454.jpg?t=1750847840"
+    },
+    {
+      "title": "WGBH \u00bb Politics",
+      "feed_url": "https://www.wgbh.org/news/politics.rss",
+      "website_url": "https://www.wgbh.org/news/politics",
+      "description": "Essential political coverage from Boston and the presidential campaign, including in-depth commentary, analysis, and election results from WGBH.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 45200,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5260454.jpg?t=1750847840"
+    },
+    {
+      "title": "WGBH \u00bb Culture",
+      "feed_url": "https://www.wgbh.org/culture.rss",
+      "website_url": "https://www.wgbh.org/culture",
+      "description": "The best Arts, Music and Culture coverage in Greater Boston.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/8542208.jpg"
+    },
+    {
+      "title": "WGBH \u00bb Science",
+      "feed_url": "https://www.wgbh.org/tags/science.rss",
+      "website_url": "https://www.wgbh.org/tags/science",
+      "description": "In-depth science news about space exploration, medical science, climate change, technological breakthroughs, and the latest scientific studies from WGBH.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 45200,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5260454.jpg?t=1750847840"
+    },
+    {
+      "title": "WGBH \u00bb Education",
+      "feed_url": "https://www.wgbh.org/news/education-news.rss",
+      "website_url": "https://www.wgbh.org/news/education-news",
+      "description": "Get the latest education news and updates only on the WGBH.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 45200,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5260454.jpg?t=1750847840"
+    },
+    {
+      "title": "WGBH \u00bb Jazz",
+      "feed_url": "https://www.wgbh.org/music/jazz.rss",
+      "website_url": "https://www.wgbh.org/music/jazz",
+      "description": "Tune in to GBH Music's Jazz on 89.7 Fridays, Saturdays, and Sundays starting at 9pm, and sign up for GBH Music's jazz newsletter!",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/8542210.jpg"
+    },
+    {
+      "title": "WGBH \u00bb Health",
+      "feed_url": "https://www.wgbh.org/news/health.rss",
+      "website_url": "https://www.wgbh.org/news/health",
+      "description": "All articles about Health from WGBH.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/8542211.jpg"
+    },
+    {
+      "title": "WGBH \u00bb Film & TV",
+      "feed_url": "https://www.wgbh.org/culture/film-and-tv.rss",
+      "website_url": "https://www.wgbh.org/culture/film-and-tv",
+      "description": "All articles about Film & TV from WGBH.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/8542213.jpg"
+    },
+    {
+      "title": "WGBH \u00bb Books",
+      "feed_url": "https://www.wgbh.org/culture/books.rss",
+      "website_url": "https://www.wgbh.org/culture/books",
+      "description": "All articles about Books from WGBH.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/8542212.jpg"
+    },
+    {
+      "title": "WGBH \u00bb Music",
+      "feed_url": "https://www.wgbh.org/music.rss",
+      "website_url": "https://www.wgbh.org/music",
+      "description": "All articles about Music from WGBH.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/5260454.jpg?t=1750847840"
+    },
+    {
+      "title": "WGBH \u00bb Housing",
+      "feed_url": "https://www.wgbh.org/news/housing.rss",
+      "website_url": "https://www.wgbh.org/news/housing",
+      "description": "Competition for housing has driven up home prices to record levels across Massachusetts. GBH News is exploring the impact on residents and possible solutions.",
+      "followers": {
+        "facebook": 47200,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/8542207.jpg"
+    },
+    {
+      "title": "WGBH \u00bb Commentary",
+      "feed_url": "https://www.wgbh.org/news/commentary.rss",
+      "website_url": "https://www.wgbh.org/news/commentary",
+      "description": "All commentary from WGBH.",
+      "followers": {
+        "facebook": 47200,
+        "twitter": 45200,
+        "instagram": 31700
+      },
+      "image_url": "https://i1.feedspot.com/5260454.jpg?t=1750847840"
+    },
+    {
+      "title": "WGBH \u00bb Visual Arts",
+      "feed_url": "https://www.wgbh.org/culture/visual-arts.rss",
+      "website_url": "https://www.wgbh.org/culture/visual-arts",
+      "description": "All articles about Visual Arts from WGBH.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/8542215.jpg"
+    },
+    {
+      "title": "WGBH \u00bb Performing Arts",
+      "feed_url": "https://www.wgbh.org/culture/performing-arts.rss",
+      "website_url": "https://www.wgbh.org/culture/performing-arts",
+      "description": "All articles about Performing Arts from WGBH.",
+      "followers": {
+        "facebook": 174800,
+        "twitter": 54700,
+        "instagram": 121800
+      },
+      "image_url": "https://i1.feedspot.com/8542214.jpg"
+    }
+  ]
+}

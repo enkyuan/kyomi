@@ -1,0 +1,41 @@
+{
+  "category": "Durham News",
+  "source_url": "https://rss.feedspot.com/durham_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "City of Durham",
+      "feed_url": "https://www.durhamnc.gov/RSSFeed.aspx?ModID=76&CID=All-0",
+      "website_url": "https://www.durhamnc.gov/CivicAlerts.aspx?CID=1",
+      "description": "As the local municipal government for the City of Durham, North Carolina, our 2,400 employees are dedicated to providing quality services that make Durham a great place to live, work, and play. Follow to get the latest alerts and all other stories relevant to residents of Durham, NC.",
+      "followers": {
+        "facebook": 22800,
+        "twitter": 23700,
+        "instagram": 24300
+      },
+      "image_url": "https://i1.feedspot.com/5132667.jpg?t=1585566371"
+    },
+    {
+      "title": "CBS17 \u00bb Durham County",
+      "feed_url": "https://www.cbs17.com/news/local-news/durham-county-news/feed/",
+      "website_url": "https://www.cbs17.com/news/local-news/durham-county-news/",
+      "description": "CBS 17 WNCN-TV is the local CBS affiliate serving Raleigh, Durham, Fayetteville, and surrounding communities in North Carolina, U.S. We share award-winning journalism, professional-quality content, and powerful human stories. We tell local Raleigh, NC news & weather stories, and we do what we do to make Raleigh, Durham, Fayetteville and the rest of North Carolina a better place to live.",
+      "followers": {
+        "facebook": 216700,
+        "twitter": 56500,
+        "instagram": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5132661.jpg?t=1585565474"
+    },
+    {
+      "title": "The Herald-Sun",
+      "feed_url": "https://feeds.mcclatchy.com/heraldsun/sections/news/local/stories",
+      "website_url": "https://abc13.com/tag/durham-county-news/",
+      "description": "The Herald-Sun and its predecessor papers have been serving Durham city and county and the surrounding area more than 125 years, with the first issue of The Durham Sun appearing in February 1889. Published as The Herald-Sun since 1991, the paper offers national and international news and features but focuses primarily on local news, sports, business, arts, and culture.",
+      "followers": {
+        "facebook": 11500,
+        "twitter": 16600
+      },
+      "image_url": "https://i1.feedspot.com/5132663.jpg?t=1585564970"
+    }
+  ]
+}

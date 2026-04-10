@@ -1,0 +1,58 @@
+{
+  "category": "China Music",
+  "source_url": "https://rss.feedspot.com/china_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "Early Chinese Music Resources Blog",
+      "feed_url": "http://earlychinesemusic.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://earlychinesemusic.blogspot.com/",
+      "description": "Early Chinese Music Resources Blog is a blog dedicated to exploring the rich heritage of ancient Chinese melodies. It offers a collection of well-researched articles about the origins, instruments, and evolution of traditional Chinese music. The blog features articles and content about ancient Chinese music, including information about its origins, traditional instruments, and how it has evolved over time.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461137.jpg?t=1667203507"
+    },
+    {
+      "title": "Musicinfo Blog",
+      "feed_url": "https://musicinfo.io/blog/rss/index/store_id/1/",
+      "website_url": "https://musicinfo.io/blog-page",
+      "description": "Musicinfo is a blog that helps artists distribute their music to China. It offers a variety of distribution plans, including one-time distribution and monthly subscription plans. The Musicinfo blog covers a variety of topics related to music distribution and promotion in China.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 460,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5453821.jpg?t=1665137604"
+    },
+    {
+      "title": "Live China Music",
+      "feed_url": "https://www.livechinamusic.com/feed/",
+      "website_url": "https://www.livechinamusic.com/",
+      "description": "Live China Music is a website and blog that covers the vibrant and diverse music scene in China. The blog offers a more personal and in-depth look at the Chinese music scene, with insights from the author, William Griffith. It features news and reviews of new releases, interviews with musicians, and features on the latest music trends.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461139.jpg?t=1667203071"
+    },
+    {
+      "title": "China Music Radar",
+      "feed_url": "https://www.chinamusicradar.com/feed/",
+      "website_url": "https://www.chinamusicradar.com/",
+      "description": "China Music Radar is a website about the music industry in China, with a focus on the emerging domestic music scene and related trends. Read writing from China Music Radar on Medium. Stories, analysis and long-form features on China's burgeoning music industry. It s a blog about the music industry in China, especially the emerging popular music scene",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461140.jpg?t=1667203365"
+    },
+    {
+      "title": "Music & Copyright Blog \u00bb China",
+      "feed_url": "https://musicandcopyright.wordpress.com/category/china/feed/",
+      "website_url": "https://musicandcopyright.wordpress.com/category/china/",
+      "description": "Music & Copyright Blog provides information about Chinese copyright law, as well as tips for protecting your music copyright in China. The blog features articles and interviews about music copyright law and practice in China.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5461136.jpg?t=1667203912"
+    },
+    {
+      "title": "Wooozy",
+      "feed_url": "https://www.wooozy.cn/feed/",
+      "website_url": "https://www.wooozy.cn/",
+      "description": "Wooozy is a Chinese-language specialist web publication that focuses on both underground and mainstream music in China and across the globe. It was launched in April 2009 and is one of the first Chinese-language specialist web publications focusing on both underground and mainstream music in China and across the globe. The blog features original music content and news articles about the latest and best independent music in China.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/767896.jpg?t=1668492926"
+    }
+  ]
+}

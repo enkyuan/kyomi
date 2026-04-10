@@ -1,0 +1,302 @@
+{
+  "category": "Pig",
+  "source_url": "https://rss.feedspot.com/pig_rss_feeds",
+  "feeds": [
+    {
+      "title": "pig333.com",
+      "feed_url": "https://www.pig333.com/rss/home",
+      "website_url": "https://www.pig333.com/",
+      "description": "Site about the pig production chain aimed at veterinarians, farmers, etc. Articles by swine specialists on health, husbandry, etc.",
+      "followers": {
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4638004.jpg?t=1616489016"
+    },
+    {
+      "title": "Pig World",
+      "feed_url": "https://www.pig-world.co.uk/feed",
+      "website_url": "https://www.pig-world.co.uk/",
+      "description": "Pig World is also the official magazine of the National Pig Association and provides pig industry news. Read articles on animal health, breeding, business, environment, food safety, housing, marketing, and more.",
+      "followers": {
+        "twitter": 3500
+      },
+      "image_url": "https://i1.feedspot.com/4637995.jpg?t=1616489023"
+    },
+    {
+      "title": "Farmer's Weekly \u00bb Pigs",
+      "feed_url": "https://www.farmersweekly.co.za/animals/pigs/feed/",
+      "website_url": "https://www.farmersweekly.co.za/animals/pigs/",
+      "description": "Farmer's Weekly brings you the latest pig farming and production news and updates from South Africa and the rest of Africa.",
+      "followers": {
+        "facebook": 170300,
+        "twitter": 49900,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4638889.jpg?t=1614591529"
+    },
+    {
+      "title": "Bacon Today",
+      "feed_url": "https://bacontoday.com/feed/",
+      "website_url": "https://bacontoday.com/",
+      "description": "Daily News on the World of Sweet, Sweet Bacon! We have dedicated this blog to all things bacon and things related to bacon. We bring you awesome products, recipes, articles, blogs, and pure fun.",
+      "followers": {
+        "facebook": 58600
+      },
+      "image_url": "https://i1.feedspot.com/4638958.jpg?t=1616489011"
+    },
+    {
+      "title": "NPCC",
+      "feed_url": "https://nppc.org/feed/",
+      "website_url": "https://nppc.org/news-resources/",
+      "description": "The Global Voice of the U.S. Pork Industry. NPPC's mission is to fight for reasonable legislation and regulations, develop revenue and market opportunities and protect the livelihoods of America's 60,000 pork producers.",
+      "followers": {
+        "facebook": 54700,
+        "twitter": 12600,
+        "instagram": 3300
+      },
+      "image_url": "https://i1.feedspot.com/4638827.jpg?t=1616489105"
+    },
+    {
+      "title": "Pig Brig News",
+      "feed_url": "https://pigbrig.com/blogs/trapping-resources.atom",
+      "website_url": "https://pigbrig.com/blogs/trapping-resources",
+      "description": "The Pig Brig Trap System is the easy, effective feral pig trap that's quick to set up, lightweight to transport, and meets your budget. The blog shares all the information about the trap and keeps the users updated with the product's detail.",
+      "followers": {
+        "facebook": 66400,
+        "twitter": 224
+      },
+      "image_url": "https://i1.feedspot.com/5265908.jpg?t=1617862003"
+    },
+    {
+      "title": "Swineweb.com",
+      "feed_url": "https://www.swineweb.com/feed/",
+      "website_url": "https://www.swineweb.com/",
+      "description": "Swineweb.com is the only North American Pork Industry website highlighting complete Swine information daily: Commentaries, News, Technical Information, Market Information, Streaming Web casts, Regional coverage per state, Videos, and the famous Jim Long Pork Commentary.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 11700
+      },
+      "image_url": "https://i1.feedspot.com/4638644.jpg?t=1616489136"
+    },
+    {
+      "title": "North American Pet Pig Association Blog",
+      "feed_url": "https://petpigs.com/feed/",
+      "website_url": "https://petpigs.com/blog/",
+      "description": "North American Pet Pig Association - Pigs As Pets, Pig Education, Care of Pigs, Preserving Pigs, Protecting Pigs, Pet Pigs. The mission of North American pet pig Association is to preserve and protect the pet pig as a pet, promote the proper care of pet pigs, and inform pet pig owners as well as the general public about pet pigs all through education and other lawful means.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 25
+      },
+      "image_url": "https://i1.feedspot.com/4638234.jpg?t=1616489507"
+    },
+    {
+      "title": "Passion for Pork Blog",
+      "feed_url": "http://www.passionforpork.com/blog/feed/",
+      "website_url": "http://www.passionforpork.com/blog/",
+      "description": "Love pork? Share your passion. We scout the latest news, recipes and trends from Alberta and B.C. pork lovers like you.",
+      "followers": {
+        "facebook": 945,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4638687.jpg?t=1616489142"
+    },
+    {
+      "title": "The Pig Site",
+      "feed_url": "https://feedpress.me/thepigsite-news",
+      "website_url": "https://www.thepigsite.com/",
+      "description": "All the latest pig industry news, including pig diseases, health and welfare information, nutrition and much more.",
+      "followers": {
+        "facebook": 7900,
+        "twitter": 6300
+      },
+      "image_url": "https://i1.feedspot.com/875922.jpg"
+    },
+    {
+      "title": "National Swine Registry",
+      "feed_url": "https://nationalswine.com/wp/feed/",
+      "website_url": "https://nationalswine.com/wp/",
+      "description": "The global leader in providing pedigree services, marketing platforms and educational resources that support members in promoting and merchandising documented swine genetics. Its mission is Enhance the value of pedigreed swine, maintain breed integrity, and provide relevant member education and youth development experiences.",
+      "followers": {
+        "facebook": 29400,
+        "twitter": 4200,
+        "instagram": 17000
+      },
+      "image_url": "https://i1.feedspot.com/4638694.jpg"
+    },
+    {
+      "title": "The Mountain Kitchen",
+      "feed_url": "https://www.themountainkitchen.com/meats/pork-recipes/feed/",
+      "website_url": "https://www.themountainkitchen.com/meats/pork-recipes/",
+      "description": "Welcome To The Mountain Kitchen. my name is Debbie and I want to share my dishes, pork recipes with others.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1100,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4638867.jpg?t=1616490359"
+    },
+    {
+      "title": "Arbuckle Farms & Arbuckle Show Pigs Blog",
+      "feed_url": "https://www.arbucklefarmsandshowpigs.com/blog/feed/",
+      "website_url": "http://www.arbucklefarmsandshowpigs.com/blog/",
+      "description": "Arbuckle Farm is located in Southern Michigan and show pigs are our specialty. Our record speaks for itself!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4638245.jpg?t=1616489964"
+    },
+    {
+      "title": "Bacon Scouts Blog",
+      "feed_url": "https://www.baconscouts.com/blog?format=rss",
+      "website_url": "https://www.baconscouts.com/blog",
+      "description": "The official blog for Bacon Scouts, the world's leading bacon review and bacon delivery service.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 180
+      },
+      "image_url": "https://i1.feedspot.com/4638955.jpg?t=1616489125"
+    },
+    {
+      "title": "Nebraska Pork",
+      "feed_url": "https://nepork.org/feed/",
+      "website_url": "https://nepork.org/news/",
+      "description": "Nebraska Pork is a non profit organization established in 1961--was developed to promote the pork industry through the enhancement of consumer demand, producer education and research. NPPA's mission is about communicating opportunities and encouraging profitability and sustainability for Nebraska's pork producers.",
+      "followers": {
+        "facebook": 7000,
+        "twitter": 3400
+      },
+      "image_url": "https://i1.feedspot.com/4638859.jpg?t=1616489128"
+    },
+    {
+      "title": "Pork Nova Scotia",
+      "feed_url": "https://porknovascotia.ca/industry-news/feed/",
+      "website_url": "https://porknovascotia.ca/industry-news/",
+      "description": "The pork industry in Nova Scotia is a family business that plays an integral role in the province's employment and economical development. Pork Nova Scotia is the marketing agent for hogs in Nova Scotia.",
+      "followers": {
+        "facebook": 851,
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/4638832.jpg?t=1616489862"
+    },
+    {
+      "title": "your daily pig",
+      "feed_url": "https://dailypiggie.tumblr.com/rss",
+      "website_url": "https://dailypiggie.tumblr.com/",
+      "description": "keep calm and love piggies! all of the pics I post here are not mine unless I say so. \ud83d\ude42 enjoy!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4638941.jpg"
+    },
+    {
+      "title": "Pigs4Ever",
+      "feed_url": "https://potbelliedpigs4ever.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://potbelliedpigs4ever.blogspot.com/",
+      "description": "A fun and helpful resource forinformation, gifts and supplies mini pigs, pet owners of pot bellied pigs.",
+      "followers": {
+        "facebook": 25500,
+        "twitter": 217
+      },
+      "image_url": "https://i1.feedspot.com/4638228.jpg?t=1616489158"
+    },
+    {
+      "title": "OvertheCounter - Pigs / Poultry",
+      "feed_url": "https://www.overthecounter.news/news/pigs-poultry/feed/",
+      "website_url": "https://www.overthecounter.news/news/pigs-poultry/",
+      "description": "A news website for animal health advisers & country store buyers. Blog post covers pig poultry sector news and information with global feed production.",
+      "followers": {
+        "twitter": 219
+      },
+      "image_url": "https://i1.feedspot.com/4637757.jpg?t=1616475741"
+    },
+    {
+      "title": "Dawson Valley Free Range",
+      "feed_url": "http://dawsonvalleyfreerange.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://dawsonvalleyfreerange.blogspot.com/",
+      "description": "This blog is to give our customers a birds eye view of what we are doing, how we raise our pigs, as well as how we sell them. It will keep customers up to date with when we are selling our pork and other products as they come on board.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4638720.jpg?t=1616489663"
+    },
+    {
+      "title": "Charming Mini Pigs",
+      "feed_url": "https://charmingminipigs.tumblr.com/rss",
+      "website_url": "https://charmingminipigs.tumblr.com/",
+      "description": "Adventures with pigs of all sizes on Tumblr.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4638942.jpg"
+    },
+    {
+      "title": "Life with a Mini Pig",
+      "feed_url": "http://lifewithaminipig.com/feed/",
+      "website_url": "http://lifewithaminipig.com/",
+      "description": "Come meet Oscar and watch as we adjust to life with a pet mini pig. This blog is full of experienced pig parents who are a wealth of information and can provide quick responses to many questions for both potential and current mini pig owners.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 254
+      },
+      "image_url": "https://i1.feedspot.com/4638681.jpg?t=1616489540"
+    },
+    {
+      "title": "Mini Pig Info Blog",
+      "feed_url": "https://www.minipiginfo.com/dear-pig-whisperers-blog/feed",
+      "website_url": "https://www.minipiginfo.com/dear-pig-whisperers-blog",
+      "description": "This blog is dedicated to educating whomever is interested in learning about pigs. Follow our blog that will feature to help you beacome the best pig parents you can be..Our mission is to provide accurate and factual information to others in the pig community.",
+      "followers": {
+        "facebook": 43500,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4638663.jpg?t=1616489036"
+    },
+    {
+      "title": "AMPA Blog",
+      "feed_url": "https://americanminipigassociation.com/feed/",
+      "website_url": "https://americanminipigassociation.com/blog/",
+      "description": "American Mini Pig Association is comprised of reputable owners, breeders, rescues advocates, and vets to set a standard and education in the mini pig world.",
+      "followers": {
+        "facebook": 41100,
+        "twitter": 131,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4638673.jpg?t=1616489045"
+    },
+    {
+      "title": "PigCHAMP Chit Chat Blog",
+      "feed_url": "https://www.pigchamp.com/news/blog/rssid/1",
+      "website_url": "https://www.pigchamp.com/news/blog",
+      "description": "PigCHAMP provides industry-leading swine production software to farms and businesses world wide. In our blog, we will learn more about PigCHAMP, its staff and and global partners, and celebrate the pork production industry.",
+      "followers": {
+        "facebook": 747,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4638717.jpg?t=1616490349"
+    },
+    {
+      "title": "The Atherton Farm Blog",
+      "feed_url": "https://theathertonfarm.com/feed/",
+      "website_url": "https://theathertonfarm.com/",
+      "description": "The story of the Atherton family's attempt at self-sufficiency.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 18
+      },
+      "image_url": "https://i1.feedspot.com/4638895.jpg?t=1616490362"
+    },
+    {
+      "title": "Pork Checkoff",
+      "feed_url": "https://www.porkcheckoff.org/feed/",
+      "website_url": "https://www.porkcheckoff.org/news",
+      "description": "The National Pork Board will elevate U.S. pork as the global protein of choice by continuously and collaboratively working to do what's right for people, pigs and the planet. The National Pork Board is the catalyst that unites pork producers with key stakeholders focused on building a bright future for the pork industry through research, promotion and education.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 9400
+      },
+      "image_url": "https://i1.feedspot.com/4638823.jpg?t=1616489033"
+    },
+    {
+      "title": "Petpiggies",
+      "feed_url": "http://www.petpiggies.co.uk/blog/feed",
+      "description": "Petpiggies has years of experience breeding happy, healthy, pet micro pigs with great temperaments. We are proud to have earned a reputation for honesty and openness and for maintaining the highest levels of welfare for our little pigs with the support of specialist veterinarians and nutritionists.",
+      "followers": {
+        "facebook": 40500,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4638238.jpg?t=1616489525"
+    }
+  ]
+}

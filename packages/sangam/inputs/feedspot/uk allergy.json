@@ -1,0 +1,70 @@
+{
+  "category": "UK Allergy",
+  "source_url": "https://rss.feedspot.com/uk_allergy_rss_feeds",
+  "feeds": [
+    {
+      "title": "Allergy Insight Blog",
+      "feed_url": "https://www.allergy-insight.com/blog/feed/",
+      "website_url": "https://www.allergy-insight.com/blog/",
+      "description": "Get updates on Issues in food allergy and intolerance, coeliac disease, gut disorders, eczema, 'free from' and all allergies and sensitivities!",
+      "followers": {
+        "facebook": 341,
+        "twitter": 1
+      },
+      "image_url": "https://i1.feedspot.com/4574268.jpg?t=1607145806"
+    },
+    {
+      "title": "London Allergy and Immunology Centre Blog",
+      "feed_url": "https://www.allergycliniclondon.co.uk/category/allergyblog/feed/",
+      "website_url": "https://www.allergycliniclondon.co.uk/category/allergyblog/",
+      "description": "The official Allergy Blog of Allergy Clinic London.",
+      "followers": {
+        "facebook": 3100,
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/4908805.jpg?t=1614081796"
+    },
+    {
+      "title": "What Allergy Blog",
+      "feed_url": "https://whatallergy.com/top-10-blogs/feed/",
+      "website_url": "https://whatallergy.com/top-10-blogs/",
+      "description": "What Allergy Blog, over 600 articles on allergies, food allergies, living with allergies, allergy treatments, cold sores and eczema from Ruth Holroyd.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 5000,
+        "instagram": 6300
+      },
+      "image_url": "https://i1.feedspot.com/4908794.jpg?t=1614081802"
+    },
+    {
+      "title": "YorkTest Blog",
+      "feed_url": "https://www.yorktest.com/feed/",
+      "website_url": "https://www.yorktest.com/advice-hub/blog/",
+      "description": "Check out the YorkTest food allergy and intolerance blog for tips, guides, and discussions.",
+      "followers": {
+        "facebook": 10300,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4908796.jpg?t=1614081806"
+    },
+    {
+      "title": "Michelle's blog",
+      "feed_url": "https://michellesblog.co.uk/feed/",
+      "website_url": "https://michellesblog.co.uk/",
+      "description": "Food allergy and food intolerance, freefrom foods, electrosensitivity, this and that...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4908788.jpg?t=1614083374"
+    },
+    {
+      "title": "My Allergy Kitchen",
+      "feed_url": "https://www.myallergykitchen.com/feed/",
+      "website_url": "https://www.myallergykitchen.com/",
+      "description": "Hello there! I'm Zoe and I'm the blogger behind My Allergy Kitchen. At My Allergy Kitchen, I share practical tips and guidance for managing life with food allergies, including allergy-friendly recipes and parenting advice. It all started because everyone in my family has some form of allergy or intolerance, and I wanted to help others in the same situation.",
+      "followers": {
+        "facebook": 978,
+        "twitter": 722
+      },
+      "image_url": "https://i1.feedspot.com/5123338.jpg?t=1658384523"
+    }
+  ]
+}

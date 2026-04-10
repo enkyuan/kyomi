@@ -1,0 +1,56 @@
+{
+  "category": "Asia AdTech",
+  "source_url": "https://rss.feedspot.com/asia_adtech_rss_feeds",
+  "feeds": [
+    {
+      "title": "ADZYMIC Blog",
+      "feed_url": "https://www.adzymic.co/blog/feed",
+      "website_url": "https://www.adzymic.co/blog",
+      "description": "Adzymic is a dynamic creative platform that is in a league of its own when it comes to employing dynamic advertising solutions. Contact us for details.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7249894.jpg?t=1707481756"
+    },
+    {
+      "title": "AlgoriX Blog",
+      "feed_url": "https://www.algorix.co/feed/",
+      "website_url": "https://www.algorix.co/blog/",
+      "description": "Media innovations through technology that connect the world. AlgoriX is an independent global media and technology company offering best-in-class technology solutions and know-how to deliver results.",
+      "followers": {
+        "twitter": 26
+      },
+      "image_url": "https://i1.feedspot.com/7249893.jpg?t=1710311971"
+    },
+    {
+      "title": "AlikeAudience Blog \u00bb AdTech",
+      "feed_url": "https://www.alikeaudience.com/category/ad-tech-guides/feed/",
+      "website_url": "https://www.alikeaudience.com/category/ad-tech-guides/",
+      "description": "AlikeAudience began in Sunnyvale, California, when three friends met at a Hackathon during an accelerator program. Catching the wave of the future, the three young men figured better data solutions will add value to the world, by helping advertisers target the right audience with ease.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7249896.jpg?t=1707481949"
+    },
+    {
+      "title": "Tech in Asia \u00bb AdTech",
+      "feed_url": "https://www.techinasia.com/tag/adtech/feed",
+      "website_url": "https://www.techinasia.com/tag/adtech",
+      "description": "Tech in Asia (YC W15) is the largest English-language technology media company that focuses on Asia. From the latest news to the hottest trends and the boldest startups to the strongest titans, we cover everything tech in the region. Our goal is to build and serve Asia's tech and startup community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7249895.jpg?t=1707481725"
+    },
+    {
+      "title": "HKAI Limited Blog",
+      "feed_url": "https://www.hkai.io/feed/",
+      "website_url": "https://www.hkai.io/news-and-blog/",
+      "description": "Explore HKAI's latest press releases, company news, product upates and blog posts. Subscribe to their newsletter to get the latest updates from HKAI.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7249897.jpg?t=1707481837"
+    },
+    {
+      "title": "TenMax Blog",
+      "feed_url": "https://www.tenmax.io/en/feed",
+      "website_url": "https://www.tenmax.io/en/blog",
+      "description": "Established in 2015, TenMax Ad Tech Lab is a leading native and innovative ad network focusing on research, innovation, and development of digital advertising technologies.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7249898.jpg?t=1707481882"
+    }
+  ]
+}

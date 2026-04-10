@@ -1,0 +1,41 @@
+{
+  "category": "Retargeting",
+  "source_url": "https://rss.feedspot.com/retargeting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Retargeting Blog",
+      "feed_url": "https://blog.retargeting.biz/feed/",
+      "website_url": "https://blog.retargeting.biz/",
+      "description": "Retargeting offers online shops automated Facebook and Google ads campaigns designed to retarget existing users, as well as generate new traffic. Retargeting is a marketing automation tool that boosts the conversion rates and sales of online stores.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 258
+      },
+      "image_url": "https://i1.feedspot.com/4901934.jpg?t=1612877090"
+    },
+    {
+      "title": "Media Venue \u00bb Retargeting",
+      "feed_url": "https://mediavenue.com/tag/retargeting/feed/",
+      "website_url": "https://mediavenue.com/tag/retargeting/",
+      "description": "This section of the Media Venue features articles that have to do exclusively with Retargeting. Media Venue is a full-service advertising agency based out of Louisville, KY.",
+      "followers": {
+        "facebook": 687,
+        "twitter": 91,
+        "instagram": 138
+      },
+      "image_url": "https://i1.feedspot.com/5350805.jpg?t=1638941880"
+    },
+    {
+      "title": "Entrepreneur \u00bb Ad Retargeting",
+      "feed_url": "https://www.entrepreneur.com/topic/ad-retargeting.rss",
+      "website_url": "https://www.entrepreneur.com/topic/ad-retargeting",
+      "description": "Advice, insight, profiles, and guides for established and aspiring entrepreneurs worldwide. Get the latest news, videos, and discussion topics on Ad Retargeting.",
+      "followers": {
+        "facebook": 42,
+        "twitter": 3600000,
+        "instagram": 4600000
+      },
+      "image_url": "https://i1.feedspot.com/4901950.jpg"
+    }
+  ]
+}

@@ -1,0 +1,688 @@
+{
+  "category": "Java",
+  "source_url": "https://rss.feedspot.com/java_rss_feeds",
+  "feeds": [
+    {
+      "title": "Baeldung \u00bb Java",
+      "feed_url": "https://feeds.feedblitz.com/baeldung",
+      "website_url": "https://www.baeldung.com/category/java",
+      "description": "Baeldung helps developers explore the Java ecosystem and simply be better engineers. Java is the popular programming language that originated in 1995. Today, the Java ecosystem includes a very large number of specifications, libraries, frameworks, tools, as well as a thriving community. Take a dive through our collection of Java tutorials that cover a wide array of Java-related topics.",
+      "followers": {
+        "facebook": 50100,
+        "twitter": 66600
+      },
+      "image_url": "https://i1.feedspot.com/5270464.jpg?t=1618645227"
+    },
+    {
+      "title": "JOOQ",
+      "feed_url": "https://blog.jooq.org/feed/",
+      "website_url": "https://blog.jooq.org/",
+      "description": "Best Practices and Lessons Learned from Writing Awesome Java and SQL Code. Get some hands-on insight on what's behind developing jOOQ.",
+      "followers": {
+        "twitter": 10100
+      },
+      "image_url": "https://i1.feedspot.com/4483351.jpg?t=1664784460"
+    },
+    {
+      "title": "Java Revisited",
+      "feed_url": "https://feeds.feedburner.com/Javarevisited",
+      "website_url": "https://javarevisited.blogspot.com/#axzz6qDNU0twc",
+      "description": "To become goto place for Java Programmers, Interview question, SQL developer and anyone who wants to become better software programmer. Authored by Javin Paul.",
+      "followers": {
+        "facebook": 49100,
+        "twitter": 82900
+      },
+      "image_url": "https://i1.feedspot.com/133485.jpg?t=1618326831"
+    },
+    {
+      "title": "Adam Bien",
+      "feed_url": "https://www.adam-bien.com/roller/abien/feed/entries/atom",
+      "website_url": "https://www.adam-bien.com/roller/abien/",
+      "description": "Adam Bien's Software Engineering Weblog. Adam is a Freelancer, Author, JavaONE Rockstar Consultant, Java Champion and trainer.",
+      "followers": {
+        "twitter": 36400
+      },
+      "image_url": "https://i1.feedspot.com/27439.jpg?t=1618328991"
+    },
+    {
+      "title": "Oracle",
+      "feed_url": "https://blogs.oracle.com/java/rss",
+      "website_url": "https://blogs.oracle.com/java/",
+      "description": "Java powers more than 4.5 billion devices including 800 million computers and 1.5 billion cell phones. If you love Java, this is the blog you must follow.",
+      "followers": {
+        "facebook": 334600,
+        "twitter": 577500
+      },
+      "image_url": "https://i1.feedspot.com/4528214.jpg?t=1664784495"
+    },
+    {
+      "title": "InfoQ \u00bb Java",
+      "feed_url": "https://feed.infoq.com/java",
+      "website_url": "https://www.infoq.com/java/",
+      "description": "All latest articles about Java from InfoQ.",
+      "followers": {
+        "facebook": 21500,
+        "twitter": 57100
+      },
+      "image_url": "https://i1.feedspot.com/4478566.jpg?t=1746095161"
+    },
+    {
+      "title": "Java Code Geeks",
+      "feed_url": "https://www.javacodegeeks.com/feed",
+      "website_url": "https://www.javacodegeeks.com/",
+      "description": "Java Code Geeks is an independent online community focused on creating the ultimate Java-to-Java developers resource center; targeted at the technical architect, technical team lead (senior developer), project manager and junior developers alike. JCGs serve the Java, Scala, Android, SOA, Agile and Telecom communities with daily java news written by domain experts.",
+      "followers": {
+        "facebook": 64300,
+        "twitter": 178200
+      },
+      "image_url": "https://i1.feedspot.com/4430903.jpg"
+    },
+    {
+      "title": "Vlad Mihalcea Blog",
+      "feed_url": "https://vladmihalcea.com/feed/",
+      "website_url": "https://vladmihalcea.com/blog/",
+      "description": "On Vlad Mihalcea's blog, you can find a lot of articles about Hibernate, Relational Databases, No SQL, Spring, Caching, and other Enterprise-related topics. Vlad is the author of High-Performance Java Persistence https://t.co/QeuIiJjLbQ",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 83100
+      },
+      "image_url": "https://i1.feedspot.com/4528357.jpg?t=1664784538"
+    },
+    {
+      "title": "Java AWS Developer Blog",
+      "feed_url": "https://aws.amazon.com/blogs/developer/category/programing-language/java/feed/",
+      "website_url": "https://aws.amazon.com/blogs/developer/category/programing-language/java/",
+      "description": "Updates on Java from the AWS Developer blog. Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services.",
+      "followers": {
+        "facebook": 1100000,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/4528224.jpg?t=1618326842"
+    },
+    {
+      "title": "Java67",
+      "feed_url": "https://feeds.feedburner.com/Java67",
+      "website_url": "https://www.java67.com/",
+      "description": "Java Tutorial Example program tips homework assignment solution, interview question answers eclipse debugging unix linux sql xml blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/795873.jpg?t=1618329140"
+    },
+    {
+      "title": "Java tutorial for beginners",
+      "feed_url": "https://feeds.feedburner.com/arpitmandliyasblog?alt=rss",
+      "website_url": "https://java2blog.com/",
+      "description": "A blog on core java, android, data structures,web services and various frameworks like struts 2,spring,spring mvc,hibernate and various java design patterns",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 2700
+      },
+      "image_url": "https://i1.feedspot.com/4528222.jpg?t=1618326863"
+    },
+    {
+      "title": "A Java geek",
+      "feed_url": "https://blog.frankel.ch/feed.xml",
+      "website_url": "https://blog.frankel.ch/",
+      "description": "Nicolas Fr\u00e4nkel's blog. IT architect focusing on Java, Java EE, and their surrounding ecosystems. He is a trainer, book writer, speaker & blogger.",
+      "followers": {
+        "twitter": 14200
+      },
+      "image_url": "https://i1.feedspot.com/4528220.jpg?t=1618329170"
+    },
+    {
+      "title": "Random Thoughts on Java Programming",
+      "feed_url": "http://randomthoughtsonjavaprogramming.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://randomthoughtsonjavaprogramming.blogspot.com/",
+      "description": "Trying to define some of my thoughts on Software Design.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4528312.jpg"
+    },
+    {
+      "title": "TheServerSide.com",
+      "feed_url": "https://www.theserverside.com/rss/ContentSyndication.xml",
+      "website_url": "https://www.theserverside.com/",
+      "description": "TheServerSide.com is the world's largest online community for enterprise Java architects and developers. If you're interested in learning more about Java database connectivity (JDBC), J2ME, or Java 2 Platform, Enterprise Edition (J2EE), you will discover a wealth of unbiased coverage, tutorials, definitions, and discussion forums about these topics and many other relevant areas of Java development and architecture. Our team offers news, features, and conference coverage to keep you as up-to-date as possible on everything new in the world of Java.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5012151.jpg?t=1618823992"
+    },
+    {
+      "title": "Java at Microsoft",
+      "feed_url": "https://devblogs.microsoft.com/java/feed/",
+      "website_url": "https://devblogs.microsoft.com/java/",
+      "description": "Follow for weekly news, updates, and insights for Java development with Microsoft tools, Azure services, and OpenJDK.",
+      "followers": {
+        "twitter": 13400
+      },
+      "image_url": "https://i1.feedspot.com/5270461.jpg?t=1618651500"
+    },
+    {
+      "title": "Red Hat Developer \u00bb Enterprise Java",
+      "feed_url": "https://developers.redhat.com/taxonomy/term/8705/feed",
+      "website_url": "https://developers.redhat.com/topics/enterprise-java",
+      "description": "Articles feature the latest Insights, news, and advice on building Enterprise Java Applications. Red Hat Developer program provides no-cost software subscriptions, tutorials, and career insights to enterprise software developers and architects.",
+      "followers": {
+        "facebook": 94200,
+        "twitter": 19400
+      },
+      "image_url": "https://i1.feedspot.com/4528218.jpg?t=1597507636"
+    },
+    {
+      "title": "Mkyong.com",
+      "feed_url": "https://mkyong.com/feed/",
+      "website_url": "https://mkyong.com/",
+      "description": "Mkyong.com is providing Java and Spring tutorials and code snippets since 2008. All published articles are simple and easy to understand and well tested in our development environment.",
+      "followers": {
+        "facebook": 49900,
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/5270460.jpg?t=1618651691"
+    },
+    {
+      "title": "How to do in JAVA",
+      "feed_url": "https://howtodoinjava.com/feed/",
+      "website_url": "https://howtodoinjava.com/",
+      "description": "Java blog for smart concepts and coding practices",
+      "followers": {
+        "facebook": 15900,
+        "twitter": 7100
+      },
+      "image_url": "https://i1.feedspot.com/1315396.jpg?t=1618326857"
+    },
+    {
+      "title": "Programming for beginners",
+      "feed_url": "https://self-learning-java-tutorial.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://self-learning-java-tutorial.blogspot.com/2020/12/",
+      "description": "Programming Languages ABAP C# Groovy Haskell Java JavaScript Julia Kotlin Prolog Python R Tutorial Esoteric Program...",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5018080.jpg?t=1608096242"
+    },
+    {
+      "title": "Inside.java",
+      "feed_url": "https://inside.java/feed.xml",
+      "website_url": "https://inside.java/",
+      "description": "Inside.java is a collection of curated content produced by the Java Platform Group at Oracle. Content includes blog posts, mailing list activity, conference talks, and more. It is a window into the world of the team that stewards the Java ecosystem.",
+      "followers": {
+        "twitter": 577500
+      },
+      "image_url": "https://i1.feedspot.com/5183717.jpg?t=1597728388"
+    },
+    {
+      "title": "GC easy Universal Java GC Log Analyser",
+      "feed_url": "https://blog.gceasy.io/feed/",
+      "website_url": "https://blog.gceasy.io/",
+      "description": "Need help with Scalability, Performance, Availability(SPA) problems?Need to train your team on performance engineering? You are at the right place.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5127277.jpg"
+    },
+    {
+      "title": "nipafx",
+      "feed_url": "https://nipafx.dev/feed.xml",
+      "website_url": "https://nipafx.dev/",
+      "description": "I'm nipafx, but you can call me Nicolai, a Java enthusiast with a passion for learning and sharing, online and offline. If you want to sharpen your Java skills, follow this blog feed.",
+      "followers": {
+        "twitter": 18400
+      },
+      "image_url": "https://i1.feedspot.com/5270465.jpg?t=1618645019"
+    },
+    {
+      "title": "FusionReactor Blog",
+      "feed_url": "https://fusion-reactor.com/feed/",
+      "website_url": "https://fusion-reactor.com/blog/",
+      "description": "FusionReactor is an Application Performance Monitor for Java and ColdFusion, which goes beyond monitoring to actively minimize downtime and accelerate time to fix.",
+      "followers": {
+        "facebook": 425,
+        "twitter": 10000
+      },
+      "image_url": "https://i1.feedspot.com/4528298.jpg?t=1628493264"
+    },
+    {
+      "title": "Make & Know Java",
+      "feed_url": "http://javaonfly.blogspot.in//feeds/posts/default",
+      "website_url": "http://javaonfly.blogspot.com/",
+      "description": "Want to master in Java!! make yourself Observer and make this blog observable (A Javaonfly Production). A blog on detailed discussion on Java/ JavaEE/Spring/Microservices,Agile also included Interview questions.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4765659.jpg"
+    },
+    {
+      "title": "Java Inspires",
+      "feed_url": "https://javainspires.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://javainspires.blogspot.com/",
+      "description": "Covers java code examples, java interview questions, java tutorials, java programs, and everything related to Java.",
+      "followers": {
+        "twitter": 16
+      },
+      "image_url": "https://i1.feedspot.com/5335814.jpg?t=1635419959"
+    },
+    {
+      "title": "Let's talk about Java",
+      "feed_url": "http://letstalkaboutjava.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://letstalkaboutjava.blogspot.com/",
+      "description": "A Java blog about things related to the quality of the code and ways of improving it. Authored by Sebastian Malaca, a Agile maniac and OOP fanatic, Leader, developer, Blogger and speaker.",
+      "followers": {
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/4528309.jpg"
+    },
+    {
+      "title": "Thorben Janssen Blog",
+      "feed_url": "https://thorben-janssen.com/blog/feed/",
+      "website_url": "https://thorben-janssen.com/blog/",
+      "description": "Read in-depth articles and get regular updates to stay up-to-date with JPA, Hibernate and microservice-related persistence topics. Hi, My name is Thorben Janssen. I'm the author of this blog and of the Amazon bestselling book Hibernate Tips - More than 70 solutions to common Hibernate problems. For the last 15 years, I have been using Hibernate and JPA in all kinds of projects. From small ones with very aggressive timelines to huge projects that had to handle thousands of users.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 16800
+      },
+      "image_url": "https://i1.feedspot.com/5398903.jpg?t=1652082373"
+    },
+    {
+      "title": "Java India Blog",
+      "feed_url": "https://www.javaindia.in/blog/feed/",
+      "website_url": "https://www.javaindia.in/blog/",
+      "description": "Get the latest updates,news related to java technologies and services. Java India offers high-quality Java Development services to clients with diverse requirements and from various industry verticals. We bring together the expertise and experience of seasoned Java developers to create applications that deliver excellent results for the client's business.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5398909.jpg?t=1652098148"
+    },
+    {
+      "title": "Java Concept Of The Day",
+      "feed_url": "https://javaconceptoftheday.com/feed/",
+      "website_url": "https://javaconceptoftheday.com/",
+      "description": "javaconceptoftheday.com started with an ambition to teach one java concept everyday to its users in simplest way possible. Concepts are designed in such a way that both beginners as well as experts will find it useful. Java beginners can use this site to learn java concepts from most basic concepts to advanced ones in an easy way. Java experts can use this site to fresh up their java basic skills. Job aspirants may also find this site helpful for quick recap of java concepts before attending an interview.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5398900.jpg?t=1652094310"
+    },
+    {
+      "title": "Jakarta Blog",
+      "feed_url": "https://feeds.feedburner.com/jakartaeeblogs",
+      "website_url": "https://jakartablogs.ee/",
+      "description": "Learn more about Jakarta EE, java open cloud and more! Jakarta Enterprise Edition (EE) is the future of cloud native Java. Jakarta EE open source software drives cloud native innovation, modernizes enterprise applications and protects investments in Java EE.",
+      "followers": {
+        "facebook": 835,
+        "twitter": 18300
+      },
+      "image_url": "https://i1.feedspot.com/5398905.jpg?t=1652082383"
+    },
+    {
+      "title": "foojay \u00bb JavaFX",
+      "feed_url": "https://foojay.io/today/category/javafx/feed/",
+      "website_url": "https://foojay.io/today/category/javafx/",
+      "description": "Welcome to Foojay, a central resource for the Java community's daily information needs, a place for friends of OpenJDK, and a community platform for the Java ecosystem - bringing together and helping Java professionals everywhere.",
+      "followers": {
+        "twitter": 10400
+      },
+      "image_url": "https://i1.feedspot.com/5398906.jpg?t=1652082387"
+    },
+    {
+      "title": "PrepBytes Blog \u00bb Java",
+      "feed_url": "https://www.prepbytes.com/blog/category/java/feed/",
+      "website_url": "https://www.prepbytes.com/blog/category/java/",
+      "description": "Know more about Java, get interview and test prep material, questions and more! PrepBytes is an initiative to help students in their placement preparations targeting Software development/engineering, Analyst & Product based roles in IT/Internet/Analytics companies.We are a team of graduates from IITs/NITs having work experience in fast paced start-ups & top companies across the globe.",
+      "followers": {
+        "facebook": 14000,
+        "instagram": 96400
+      },
+      "image_url": "https://i1.feedspot.com/5398910.jpg?t=1652082414"
+    },
+    {
+      "title": "Cay Horstmann's unblog",
+      "feed_url": "https://horstmann.com/unblog/rss.xml",
+      "website_url": "https://horstmann.com/unblog/index.html",
+      "description": "I am a professor of computer science and wrote many professional and college books on Java, Scala, other programming languages, and introductory programming. In this blog, I share the occasional tidbit of useful information or rant about the latest injustice in the worlds of Java and computer science education.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5398898.jpg?t=1652101271"
+    },
+    {
+      "title": "Vanilla Java Blog",
+      "feed_url": "http://blog.vanillajava.blog/feeds/posts/default?alt=rss",
+      "website_url": "http://blog.vanillajava.blog/",
+      "description": "This blog is all about Understanding how Core Java really works can help you write simpler, faster applications. Find tutorials and guides on core java, news and updates and more!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5398889.jpg?t=1652101194"
+    },
+    {
+      "title": "The JetBrains Blog \u00bb Java Annotated",
+      "feed_url": "https://blog.jetbrains.com/idea/tag/java-annotated/feed/",
+      "website_url": "https://blog.jetbrains.com/idea/tag/java-annotated/",
+      "description": "A solid portion of JVM news, presented in a handy way - pressed specially for you. Java News Java Tutorials & Tips Languages, Frameworks, Libraries, and Technologies Intell. At JetBrains, code is our passion. Ever since we started, back in 2000, we have strived to make the strongest, most effective developer tools on earth. By automating routine checks and corrections, our tools speed up production, freeing developers to grow, discover and create.",
+      "followers": {
+        "facebook": 117500,
+        "twitter": 201100,
+        "instagram": 112700
+      },
+      "image_url": "https://i1.feedspot.com/5398892.jpg?t=1652082319"
+    },
+    {
+      "title": "Java Guides",
+      "feed_url": "https://www.javaguides.net/feeds/posts/default?alt=rss",
+      "website_url": "https://www.javaguides.net/",
+      "description": "Guides and Tutorials on Java/Java EE, Design Patterns, OOPS, Spring Framework, Spring Boot, Hibernate Framework, Jersey, RestEasy, Maven, JUnit, Coding, Restful, Angular, React, Vue, Full Stack Java Development",
+      "followers": {
+        "facebook": 23300,
+        "twitter": 83500
+      },
+      "image_url": "https://i1.feedspot.com/5398895.jpg?t=1652097593"
+    },
+    {
+      "title": "JBoss Tools Blog",
+      "feed_url": "https://tools.jboss.org/blog/news.atom",
+      "website_url": "https://tools.jboss.org/blog/",
+      "description": "We provide Eclipse tooling for JBoss related technologies (Application server, Hibernate, Openshift, Seam, Drools, jBPM, JSF, EJB3, JPA, ESB etc.) Folow our blog to know more about the Jboss Tools.",
+      "followers": {
+        "twitter": 1800
+      },
+      "image_url": "https://i1.feedspot.com/5398896.jpg?t=1652082340"
+    },
+    {
+      "title": "Oracle Java Certified",
+      "feed_url": "https://oraclejavacertified.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://oraclejavacertified.blogspot.com/",
+      "description": "Oracle Java Certified Blog by Keturah Carol. Features articles on Core Java, Oracle Java Programming, JDK, Java IO, Java Applet, Java OOPs, Oracle Java Database, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5335813.jpg?t=1635420425"
+    },
+    {
+      "title": "Java To The Point - Simplifying Learning",
+      "feed_url": "https://javatothepoint.com/feed/",
+      "website_url": "https://javatothepoint.com/",
+      "description": "Welcome to our Java website! We are a team of highly skilled developers and experts with a passion for creating innovative solutions using the power of Java. With over a decade of experience in the industry, our team has worked with clients from various sectors, including finance, healthcare, e-commerce, and education. We have a deep understanding of the latest industry trends, technologies, and best practices, and we leverage this knowledge to help our clients achieve their business goals.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5571669.jpg?t=1684490300"
+    },
+    {
+      "title": "JAVA REMASTERED",
+      "feed_url": "https://javaeasycodings.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://javaeasycodings.blogspot.com/",
+      "description": "JAVA REMASTERED is one of the most useful sites of Java which gives you enough knowledge about Java like interview questions, number programs, and java core. Access high-quality learning materials, articles, coding examples, and theory that will help you master this popular programming language.",
+      "followers": {
+        "twitter": 5
+      },
+      "image_url": "https://i1.feedspot.com/5595616.jpg?t=1686568813"
+    },
+    {
+      "title": "The Java Programmer",
+      "feed_url": "https://www.thejavaprogrammer.com/feed/",
+      "website_url": "https://www.thejavaprogrammer.com/",
+      "description": "TheJavaProgrammer.com is a programming and development blog that provides free tutorials, programs, projects and interview questions for technologies related to Java programming language. It is an all in one blog that will definitely help beginners and experts for enhancing their knowledge of Java programming.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4528327.jpg"
+    },
+    {
+      "title": "Minborg's Java Pot",
+      "feed_url": "http://minborgsjavapot.blogspot.com/feeds/posts/default",
+      "website_url": "http://minborgsjavapot.blogspot.com/",
+      "description": "This is my Java blog with various tips and tricks that are targeted for medium and advanced Java users.",
+      "followers": {
+        "twitter": 734
+      },
+      "image_url": "https://i1.feedspot.com/4399072.jpg"
+    },
+    {
+      "title": "Java Hungry",
+      "feed_url": "https://javahungry.blogspot.com//feeds/posts/default",
+      "website_url": "https://javahungry.blogspot.com/",
+      "description": "Java Hungry features Java developers tutorials and coding.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4989864.jpg?t=1618329085"
+    },
+    {
+      "title": "Code Complete",
+      "feed_url": "https://betterjavacode.com/feed",
+      "website_url": "https://betterjavacode.com/",
+      "description": "Code Complete is a blog all about Java. Follow the blog for smart concepts, coding, best practices, tips and more.",
+      "followers": {
+        "twitter": 446
+      },
+      "image_url": "https://i1.feedspot.com/5186363.jpg?t=1598429226"
+    },
+    {
+      "title": "Inspired by Actual Events",
+      "feed_url": "https://feeds.feedburner.com/InspiredByActualEvents",
+      "website_url": "https://marxsoftware.blogspot.com/",
+      "description": "Hi, I'm Dustin Marx. This blog about my observations and thoughts related to software development (general development, Java, JavaFX, Groovy, Flex, ...). These observations include tips and tricks that I have learned, solutions to problems I have faced, and other concepts I have found interesting and useful. This blog is intended to provide information to help other developers facing the same issues as well as providing me a method to document things in a well-known location for my future reference.",
+      "followers": {
+        "twitter": 269
+      },
+      "image_url": "https://i1.feedspot.com/5270463.jpg?t=1618651425"
+    },
+    {
+      "title": "Java Interview Questions and Answers",
+      "feed_url": "https://adnjavainterview.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://adnjavainterview.blogspot.com/",
+      "description": "This blog is Java interview questions and answers for helpfull to the job seeker,core java, j2ee, in core java , String, Collection, threading, Multithreading, OOPs Concept, JSP, Servlet, Struts , Spring and hibernate, Java interview questions and answers",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5018082.jpg"
+    },
+    {
+      "title": "Java Programs for Beginners",
+      "feed_url": "https://codingwithvikash.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://codingwithvikash.blogspot.com/",
+      "description": "Hii Everyone, Vikash here. I am a Coder and Programmer and I likes to make Java Progams. And here, I will upload my programs so that everyone can understand, learn and also can do the same.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5198200.jpg?t=1600696446"
+    },
+    {
+      "title": "Tech Stack Journal",
+      "feed_url": "https://techstackjournal.com/feed/",
+      "website_url": "https://techstackjournal.com/",
+      "description": "My name is Srinivasa Akundi, I'm in Software Development Industry from the last 14 years. I have started my career with Java. During my professional journey, I have learned about various other technologies too. I always wished to share my knowledge, but tight project schedules kept me busy. Finally, I've started Tech Stack Journal and started posting the Core Java concepts and Node.Js concepts. Hopefully, I'll be able to complete them soon and proceed with other advanced concepts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5168003.jpg"
+    },
+    {
+      "title": "Stacktraceguru",
+      "feed_url": "https://stacktraceguru.com/feed/",
+      "website_url": "https://stacktraceguru.com/",
+      "description": "This blog walks you through various features of Java 8 with lucid examples which will be helpful for beginners as well as experienced developers",
+      "followers": {
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5151053.jpg?t=1618328779"
+    },
+    {
+      "title": "dev cases | Java development tutorials",
+      "feed_url": "https://devcases.com/feed/",
+      "website_url": "https://devcases.com/",
+      "description": "In this tutorial you will know, how you can organize efficiently your dependencies in project with multiple modules.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5018086.jpg"
+    },
+    {
+      "title": "Java Software Development Tutorials and Videos",
+      "feed_url": "https://www.java-tv.com/feed/",
+      "website_url": "https://www.java-tv.com/",
+      "description": "Java-TV.com (Java Tutorials and Videos) is a directory of videos, interviews and tutorials focused on software development activities with the Java programming language and the technologies that are associated to Java like Eclipse, NetBeans, Groovy, Grails, Spring, GlassFish, JBoss, Hibernate, JUnit, Struts, JavaServer Faces, JavaFX, Maven, Gradle, Jenkins, Hudson, Tomcat, Seam, FindBugs, Sonar, et.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5398902.jpg?t=1652082367"
+    },
+    {
+      "title": "Oracle SOA and Java Blog",
+      "feed_url": "https://javaoraclesoa.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://javaoraclesoa.blogspot.com/",
+      "description": "Articles containing tips, tricks and nice to knows related to IT stuff I find interesting. Also serves as online memory.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5398897.jpg?t=1652095207"
+    },
+    {
+      "title": "Java Advent Calendar",
+      "feed_url": "http://feeds.feedburner.com/JavaAdventCalendar",
+      "website_url": "https://www.javaadvent.com/archive",
+      "description": "Welcome to the Java Advent Calendar. Every year, you will find 24 fresh and sweet JVM related articles during the advent season. This project started in 2012 with the idea of providing technical content during the Christmas Advent period. So, 24 articles in each of the days in December.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1401353.jpg?t=1652095076"
+    },
+    {
+      "title": "Antonio's Blog",
+      "feed_url": "https://antoniogoncalves.org/feed/",
+      "website_url": "https://antoniogoncalves.org/",
+      "description": "My name is Antonio Goncalves, I am a senior software architect living in Paris. I've started working in IT in 1992. Initially focused in C and C++ development, I switched to Java in the late 1990s. This is my blog, mainly about Java.",
+      "followers": {
+        "facebook": 27,
+        "twitter": 19200
+      },
+      "image_url": "https://i1.feedspot.com/1209339.jpg?t=1652100129"
+    },
+    {
+      "title": "Arjan Tijms",
+      "feed_url": "https://arjan-tijms.omnifaces.org/feeds/posts/default?alt=rss",
+      "website_url": "https://arjan-tijms.omnifaces.org/",
+      "description": "Musings of a Java EE developer. Explore articles on java, java EE",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5398891.jpg?t=1652100549"
+    },
+    {
+      "title": "Codingface \u00bb Java",
+      "feed_url": "https://codingface.com/java/feed/",
+      "website_url": "https://codingface.com/java/",
+      "description": "Java is one of the most popular programming languages, known as the evergreen programming language. We have given the most important programs on Java. Codingface.com is one of the leading independent programming posting portal, specially designed for providing simple coding logic of programs in multiple languages like Java, Python, C, C++, PHP and more.",
+      "followers": {
+        "facebook": 5,
+        "twitter": 52
+      },
+      "image_url": "https://i1.feedspot.com/5398894.jpg?t=1652082329"
+    },
+    {
+      "title": "BenchResources.Net",
+      "feed_url": "https://www.benchresources.net/feed/",
+      "website_url": "https://www.benchresources.net/",
+      "description": "BenchResources.Net is an open source technology weblog on Java, J2ee, Spring, Web Service, Oracle SOA-OSB & Maven for sharing technical knowledge",
+      "followers": {
+        "facebook": 253
+      },
+      "image_url": "https://i1.feedspot.com/4642900.jpg?t=1618326877"
+    },
+    {
+      "title": "Java Deep | Pure Java, what else",
+      "feed_url": "https://javax0.wordpress.com/feed/",
+      "website_url": "https://javax0.wordpress.com/",
+      "description": "Javax0 is a technical Java oriented blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4359546.jpg?t=1618328745"
+    },
+    {
+      "title": "Reza Rahman",
+      "feed_url": "https://reza-rahman.me/feed/",
+      "website_url": "https://reza-rahman.me/blog/",
+      "description": "My ramblings on Java EE, Java SE and the crazy World of technology in general.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/249624.jpg?t=1618328441"
+    },
+    {
+      "title": "Info World",
+      "feed_url": "https://www.infoworld.com/java/",
+      "website_url": "https://www.infoworld.com/java/",
+      "description": "The original independent resource for Java developers, architects, and managers.",
+      "followers": {
+        "facebook": 72300,
+        "twitter": 88400
+      },
+      "image_url": "https://i1.feedspot.com/3609361.jpg?t=1597507285"
+    },
+    {
+      "title": "devmio Blog",
+      "feed_url": "https://devm.io/blog/",
+      "website_url": "https://devm.io/blog/",
+      "description": "JAXenter is everything you need to blow the minds of your developer colleagues with some cutting-edge programming know-how - bringing you the latest technology news, useful development tools, coding tutorials, career tips, videos from JAX conferences, and the occasional rant about life as a developer. Check out our stories, articles, and commentaries on open-source, JVM, Java, JavaScript and countless other programming topics.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/5270467.jpg?t=1618644802"
+    },
+    {
+      "title": "The Couchbase Blog \u00bb Java",
+      "feed_url": "https://www.couchbase.com/blog/category/java/feed/",
+      "website_url": "https://www.couchbase.com/blog/category/java/",
+      "description": "Learn more about the best practices and tutorials for the category Java. Couchbase is the modern database for enterprise applications.",
+      "followers": {
+        "twitter": 146100
+      },
+      "image_url": "https://i1.feedspot.com/5398886.jpg?t=1652095731"
+    },
+    {
+      "title": "Harness Blog",
+      "feed_url": "https://www.harness.io/blog/rss.xml",
+      "website_url": "http://www.harness.io/blog/rss.xml",
+      "description": "OverOps was founded in 2011 by a team that had one goal in mind: to provide a better way to analyze, understand and act on issues within servers and applications, even in real-time. Overops' new blog, is richer in information, accurate and professional just the way you like it.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 9100
+      },
+      "image_url": "https://i1.feedspot.com/4149397.jpg?t=1614339495"
+    },
+    {
+      "title": "Java Tech Online",
+      "feed_url": "https://javatechonline.com/web-stories/feed/",
+      "website_url": "https://javatechonline.com/",
+      "description": "A website dedicated to Java Professionals. We are providing the content of each article after a deep analysis of the topic. Our delivery of content is from basic to advanced on each topic so that each level of the developer can get the full benefit from it.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/5523240.jpg?t=1679308115"
+    },
+    {
+      "title": "Dreamix Group \u00bb Java",
+      "feed_url": "https://dreamix.eu/blog/category/java/feed",
+      "website_url": "https://dreamix.eu/insights/category/technology/",
+      "description": "We believe that people can create value using Java & Oracle technologies.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4575077.jpg"
+    },
+    {
+      "title": "KnpCode",
+      "feed_url": "https://www.knpcode.com/feed/",
+      "website_url": "https://www.knpcode.com/",
+      "description": "Java, Spring, BigData, Web development tutorials with examples",
+      "followers": {
+        "facebook": 10
+      },
+      "image_url": "https://i1.feedspot.com/5018085.jpg?t=1618326873"
+    },
+    {
+      "title": "My experience in Java",
+      "feed_url": "https://simplyengineer.in/feed/",
+      "website_url": "https://sandeepdass003.wordpress.com/",
+      "description": "This blog is all about my experience that I had in Java Programming. There are few things that I think can be explained very well in such an easy way rather than using high tech terms. So my aim is to provide easy content/programs about any Java concept. Authored by Sandy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4528307.jpg?t=1618328083"
+    },
+    {
+      "title": "javatechonline Blog",
+      "feed_url": "https://javatechonline.com/blogs/feed/",
+      "website_url": "https://javatechonline.com/blogs/",
+      "description": "We will keep updating with the best materials possible on the latest on-demand technologies. Even we will use the latest APIs as per industry standards as much as possible and avoid outdated concepts & APIs to make you updated with the latest trends in the industry. I have been working in Java/J2EE technologies from more than 14 years. During this journey, apart from Core java, Servlets, JSP etc. I also worked on various frameworks such as Struts, JSF, Spring, Hibernate, Spring Boot, Microservices.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 37
+      },
+      "image_url": "https://i1.feedspot.com/5398901.jpg?t=1652082362"
+    },
+    {
+      "title": "Xperti Blog",
+      "feed_url": "https://xperti.io/blogs/feed/",
+      "website_url": "https://xperti.io/blogs/",
+      "description": "Xperti Blogs section is your one stop solution to learn how to become a top talent for top IT Projects. Xperti, an Arthur Lawrence company, pairs top tech experts with the right projects at the right time.",
+      "followers": {
+        "facebook": 6000,
+        "twitter": 905,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/5398904.jpg?t=1652082377"
+    },
+    {
+      "title": "Java Developer Central",
+      "feed_url": "https://javadevcentral.com/feed",
+      "website_url": "https://javadevcentral.com/",
+      "description": "Java Developer Central has tutorials, informational posts on various topics on Java and is aimed to be a one-stop shop for Java programmers. I'm a Software Developer passionate about learning. I believe the most efficient way to learn is by practicing and by teaching or discussing with others the subject you are learning. I also write about design patterns which is language agnostic and will help all programmers. Also, I write about best practices and share my views, thoughts on subjects related to Java.",
+      "followers": {
+        "facebook": 1000,
+        "twitter": 842
+      },
+      "image_url": "https://i1.feedspot.com/5398899.jpg?t=1652082353"
+    }
+  ]
+}

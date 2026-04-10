@@ -1,0 +1,50 @@
+{
+  "category": "UK Animal Rescue",
+  "source_url": "https://rss.feedspot.com/uk_animal_rescue_rss_feeds",
+  "feeds": [
+    {
+      "title": "Dogs Blog",
+      "feed_url": "https://www.dogsblog.com/feed/",
+      "website_url": "https://www.dogsblog.com/category/bulldog/",
+      "description": "DogsBlog.com is a dedicated platform launched in 2007, focusing on finding new homes for shelter dogs across the UK. It works in partnership with over 500 shelters and has successfully rehomed over 70,000 dogs, offering a win-win solution by saving millions in welfare costs. The blog seeks to accelerate the adoption process by spotlighting rescue dogs available for immediate adoption, thereby reducing the duration dogs spend in shelters.",
+      "followers": {
+        "facebook": 8600,
+        "twitter": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4476478.jpg?t=1611059817"
+    },
+    {
+      "title": "Give a Dog a\u00a0Home Blog",
+      "feed_url": "http://www.giveadogahome.org.uk/blog/feed",
+      "website_url": "http://www.giveadogahome.org.uk/blog",
+      "description": "Give a Dog a Home has some wonderful fosterers and volunteers who are experienced with all types of dogs and who often help in other practical ways as well. Helping you find the right rescue dog or puppy in Kent, Sussex, East Sussex and Surrey. Dogs in distress need people who care and who go on caring. This describes every one of the team involved in Give a Dog a Home.",
+      "followers": {
+        "facebook": 10800,
+        "twitter": 319
+      },
+      "image_url": "https://i1.feedspot.com/4917203.jpg?t=1620385822"
+    },
+    {
+      "title": "RSPCA Brighton | Shelter for Animals",
+      "feed_url": "https://rspca-brighton.org.uk/feed/",
+      "website_url": "https://rspca-brighton.org.uk/",
+      "description": "Welcome to the Sussex Brighton and East Grinstead Branch of the RSPCA. We are an entirely self-funding charity, run by an active committee of volunteers who are trustees of the Branch funds. The Branch is responsible for the Brighton Animal Shelter at Patcham.Over 3000 animals are cared for at the Shelter each year, including dogs, cats, rabbits, hamsters, guinea pigs, reptiles, foxes, badgers, hedgehogs, chickens, ferrets and various birds, both wild and domestic.",
+      "followers": {
+        "facebook": 16100,
+        "twitter": 213
+      },
+      "image_url": "https://i1.feedspot.com/4917186.jpg?t=1620385816"
+    },
+    {
+      "title": "8 Lives: Sheffield 8 Cat Rescue",
+      "feed_url": "https://8livescatrescue.com/feed/",
+      "website_url": "https://8livescatrescue.com/",
+      "description": "We are a new and very small rescue, set up with the aim of helping cats in need in the Sheffield 8 post code. '8 Lives' reflects both the post code and the sad reality that cats and kittens who come to us have invariably lost at least one of their 9 lives by the time they get to us.",
+      "followers": {
+        "facebook": 3000,
+        "twitter": 312
+      },
+      "image_url": "https://i1.feedspot.com/4836955.jpg?t=1611060793"
+    }
+  ]
+}

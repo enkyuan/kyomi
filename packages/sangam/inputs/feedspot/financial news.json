@@ -1,0 +1,360 @@
+{
+  "category": "Financial News",
+  "source_url": "https://rss.feedspot.com/financial_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Financial Times",
+      "feed_url": "https://www.ft.com/rss/home",
+      "website_url": "https://www.ft.com/",
+      "description": "News, analysis, and comment from the Financial Times. The Financial Times is one of the world's leading news organizations, recognized internationally for its authority, integrity, and accuracy. They provide essential news and analysis to ambitious individuals and companies around the world, alongside a suite of leadership services that put their content and expertise to practical use.",
+      "followers": {
+        "facebook": 4600000,
+        "twitter": 7400000,
+        "instagram": 4200000
+      },
+      "image_url": "https://i1.feedspot.com/5359994.jpg?t=1658493364"
+    },
+    {
+      "title": "Fortune",
+      "feed_url": "https://fortune.com/feed/fortune-feeds/?id=3230629",
+      "website_url": "https://fortune.com/",
+      "description": "Unrivaled access, premier storytelling, and the best of business since 1930. Fortune is a global media organization dedicated to helping its readers, viewers, and attendees succeed big in business through unrivaled access and best-in-class storytelling.",
+      "followers": {
+        "facebook": 1800000,
+        "twitter": 2300000,
+        "instagram": 865100
+      },
+      "image_url": "https://i1.feedspot.com/5419207.jpg?t=1658298695"
+    },
+    {
+      "title": "Seeking Alpha",
+      "feed_url": "https://seekingalpha.com/feed.xml",
+      "website_url": "https://seekingalpha.com/market-news",
+      "description": "Discover new investing ideas, read in-depth analysis articles by bulls and bears, discuss the latest news, debate the merits of stocks, and get access to professional-grade tools with Seeking Alpha. We are one of the world's largest investing communities of passionate investors connecting daily to share investing advice, tips, and market insights.",
+      "followers": {
+        "facebook": 67300,
+        "twitter": 294700,
+        "instagram": 26800
+      },
+      "image_url": "https://i1.feedspot.com/4730177.jpg?t=1657181398"
+    },
+    {
+      "title": "The Motley Fool \u00bb Stock News & Analysis",
+      "feed_url": "https://www.fool.com/a/feeds/partner/googlechromefollow?apikey=5e092c1f-c5f9-4428-9219-908a47d2e2de",
+      "website_url": "https://www.fool.com/investing-news/",
+      "description": "The Motley Fool has been providing investing insights and financial advice to millions of people for over 25 years. Learn how we make the world Smarter, Happier & Richer. The Motley Fool seeks to teach individual investors how to invest in a smart and strategic way. Our investing advice focuses on buying great stocks of great companies that will build wealth over the long term.",
+      "followers": {
+        "facebook": 930900,
+        "twitter": 858800,
+        "instagram": 313100
+      },
+      "image_url": "https://i1.feedspot.com/5417364.jpg?t=1657187044"
+    },
+    {
+      "title": "Nasdaq",
+      "feed_url": "https://www.nasdaq.com/feed/nasdaq-original/rss.xml",
+      "website_url": "https://www.nasdaq.com/",
+      "description": "Get the latest stock market news, stock information & quotes, data analysis reports, as well as a general overview of the market landscape from Nasdaq. At Nasdaq, our purpose is to champion inclusive growth and prosperity. We power stronger economies, create more equitable opportunities, and contribute to a more sustainable world to help our communities, clients, employees, and people of all backgrounds reach their full potential.",
+      "followers": {
+        "facebook": 825600,
+        "twitter": 148000,
+        "instagram": 594700
+      },
+      "image_url": "https://i1.feedspot.com/5419327.jpg?t=1657186486"
+    },
+    {
+      "title": "Business Standard \u00bb Latest News",
+      "feed_url": "https://www.business-standard.com/rss/latest.rss",
+      "website_url": "https://www.business-standard.com/latest-news",
+      "description": "Get the latest stock share market news, financial news, budget 2023 news, economy news, company news, politics news, India news, and breaking news at Business Standard. Business-standard.com is the online property of India's leading business daily, Business Standard.",
+      "followers": {
+        "facebook": 591900,
+        "twitter": 2200000
+      },
+      "image_url": "https://i1.feedspot.com/2116546.jpg?t=1657186822"
+    },
+    {
+      "title": "TheStreet",
+      "feed_url": "https://www.thestreet.com/.rss/full/",
+      "website_url": "https://www.thestreet.com/",
+      "description": "Get business news that moves markets, award-winning stock analysis, market data, and stock trading ideas. TheStreet, Inc. is a leading digital financial media company reporting on the latest investing trends and analyses to investors around the world providing all the tools and insight needed to help you make the best financial decisions.",
+      "followers": {
+        "facebook": 332600,
+        "twitter": 848800,
+        "instagram": 123000
+      },
+      "image_url": "https://i1.feedspot.com/5083601.jpg?t=1663921012"
+    },
+    {
+      "title": "Benzinga",
+      "feed_url": "http://feeds.benzinga.com/benzinga",
+      "website_url": "https://www.benzinga.com/topic/energy-stocks",
+      "description": "Stock market quotes, business news, financial news, trading ideas, and stock research by professionals. Benzinga prides itself on providing original, accurate, and timely global financial content every day. The service features content from industry experts and experienced analysts to provide traders with an edge",
+      "followers": {
+        "facebook": 502600,
+        "twitter": 312100
+      },
+      "image_url": "https://i1.feedspot.com/366473.jpg?t=1657259234"
+    },
+    {
+      "title": "MarketBeat",
+      "feed_url": "https://www.marketbeat.com/feed/",
+      "website_url": "https://www.marketbeat.com/",
+      "description": "Read the latest stock market news on MarketBeat. Get real-time analyst ratings, dividend information, earnings results, financials, headlines, insider trades and options data for any stock.",
+      "followers": {
+        "facebook": 15400,
+        "twitter": 13700
+      },
+      "image_url": "https://i1.feedspot.com/5419816.jpg?t=1657257768"
+    },
+    {
+      "title": "Money",
+      "feed_url": "https://money.com/money/feed/",
+      "website_url": "https://money.com/",
+      "description": "Money is an online magazine that guides people to financial victories through up-to-date information, free weekly newsletters, instructional videos, and tools. Money is committed to helping readers take charge of their finances and their futures. They provide advice about all aspects of people's financial lives: Jobs, savings, investments, spending, real estate, and retirement.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 414500,
+        "instagram": 609400
+      },
+      "image_url": "https://i1.feedspot.com/4524143.jpg?t=1657259122"
+    },
+    {
+      "title": "Global Finance Magazine",
+      "feed_url": "https://gfmag.com/feed/",
+      "website_url": "https://gfmag.com/",
+      "description": "Global Finance was founded in 1987 as a monthly print magazine by publishing entrepreneurs Joseph Giarraputo and Carl Burgen. The company's mission is to help corporate leaders, bankers and investors chart the course of global business and finance. Global Finance magazine provides Country Economic Reports, GDP and Trade Statistics, Best Bank listings, and Global Financial News.",
+      "followers": {
+        "facebook": 8900,
+        "twitter": 12700,
+        "instagram": 371
+      },
+      "image_url": "https://i1.feedspot.com/4919491.jpg?t=1657256355"
+    },
+    {
+      "title": "Financial Samurai",
+      "feed_url": "https://www.financialsamurai.com/feed/",
+      "website_url": "https://www.financialsamurai.com/",
+      "description": "Financial Samurai delves deeper into investing, real estate, retirement planning, and career strategies, to achieve financial independence sooner, rather than later. Every article is written based on firsthand experience to provide the most helpful insights possible. Financial Samurai is one of the largest independently-owned personal finance sites in the world.",
+      "followers": {
+        "facebook": 11700,
+        "twitter": 40600
+      },
+      "image_url": "https://i1.feedspot.com/4025370.jpg?t=1624608886"
+    },
+    {
+      "title": "MoneyWeek",
+      "feed_url": "https://moneyweek.com/feed/all",
+      "website_url": "https://moneyweek.com/investments/stocks-and-shares/energy-stocks",
+      "description": "MoneyWeek is the UK's best-selling financial magazine. Our readers primarily consist of private investors, city professionals, and those interested in intelligent, easy-to-read analysis of the week's financial news. Their mission is to bring you news, analysis, and information to help you make informed investment decisions as well as bring you the news that matters to your finances.",
+      "followers": {
+        "facebook": 18300,
+        "twitter": 28800
+      },
+      "image_url": "https://i1.feedspot.com/5323268.jpg?t=1658304321"
+    },
+    {
+      "title": "Finance Monthly",
+      "feed_url": "https://www.finance-monthly.com/feed/",
+      "website_url": "https://www.finance-monthly.com/",
+      "description": "Monthly Finance News Magazine is dedicated to reporting the key financial stories of the day from across the globe for an international corporate readership. Finance Monthly reports on the news and topics that matter to CEOs, CFOs, investors, company directors, entrepreneurs, and SMEs.",
+      "followers": {
+        "facebook": 24600,
+        "twitter": 7500,
+        "instagram": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4919506.jpg?t=1628315553"
+    },
+    {
+      "title": "The European Financial Review",
+      "feed_url": "https://www.europeanfinancialreview.com/feed/",
+      "website_url": "https://www.europeanfinancialreview.com/",
+      "description": "The European Financial Review is the leading financial intelligence magazine read widely by financial experts and the wider business community. It is committed to giving readers unlimited access to authoritative coverage of the latest developments in banking, finance, capital markets, investment, fintech, and sustainable finance in Europe and worldwide.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 906
+      },
+      "image_url": "https://i1.feedspot.com/4919554.jpg?t=1657257850"
+    },
+    {
+      "title": "Money Morning",
+      "feed_url": "https://moneymorning.com/feed/",
+      "website_url": "https://moneymorning.com/",
+      "description": "Read the articles on stocks, cryptocurrencies, penny stocks, cannabis, fast profits and more. Keep up with daily recommendations to help you make big gains, get insider tips & stock recommendations, and learn how to protect yourself from the looming debt crisis. Money Morning is your daily map to financial freedom.",
+      "followers": {
+        "twitter": 16200
+      },
+      "image_url": "https://i1.feedspot.com/347856.jpg?t=1657186566"
+    },
+    {
+      "title": "Dealbreaker",
+      "feed_url": "https://dealbreaker.com/.rss/full/",
+      "website_url": "https://dealbreaker.com/",
+      "description": "Dealbreaker covers the personalities and culture that shape the financial industry, offering original commentary, news and entertainment.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 40600
+      },
+      "image_url": "https://i1.feedspot.com/5159437.jpg?t=1657256763"
+    },
+    {
+      "title": "World Finance",
+      "feed_url": "https://www.worldfinance.com/feed",
+      "website_url": "https://www.worldfinance.com/",
+      "description": "World Finance is a quarterly print and online magazine providing comprehensive coverage and analysis of the financial industry, international business, and the global economy. The magazine targets an audience of finance professionals and corporate and private investors, but its lucid voice makes it an intelligible and essential reading for anybody who wants to understand the machinations of finance in the 21st century.",
+      "followers": {
+        "facebook": 9800,
+        "twitter": 17100
+      },
+      "image_url": "https://i1.feedspot.com/4919528.jpg?t=1628315564"
+    },
+    {
+      "title": "finews.com",
+      "feed_url": "https://www.finews.com/news/english-news?format=feed&type=rss",
+      "website_url": "https://www.finews.com/news/english-news",
+      "description": "finews.com is Switzerland's leading news site for all professionals in the financial sector. Discover breaking news, feature stories, industry trends, and exclusive interviews with opinion leaders.",
+      "followers": {
+        "facebook": 507,
+        "twitter": 11500,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5419818.jpg?t=1657257909"
+    },
+    {
+      "title": "FinanceAsia",
+      "feed_url": "https://www.financeasia.com/rss/latest",
+      "website_url": "https://www.financeasia.com/",
+      "description": "FinanceAsia is Asia's authoritative source for finance, investment banking, economic and capital markets news, for those involved in corporate finance, banking, asset management and market regulation.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 11800
+      },
+      "image_url": "https://i1.feedspot.com/4836356.jpg?t=1752836469"
+    },
+    {
+      "title": "Bankpedia",
+      "feed_url": "https://bankpediaa.com/feed/",
+      "website_url": "https://bankpediaa.com/",
+      "description": "Your guide to the world of personal finance and investments. Learn and achieve financial freedom. Bankpediaa is a news website that aims to provide the latest economic news across the globe. The team behind Bankpedia strives to provide the most accurate and relevant news to its readers.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5748858.jpg?t=1704372733"
+    },
+    {
+      "title": "iShook Finance",
+      "feed_url": "https://ishookfinance.com/",
+      "website_url": "https://ishookfinance.com/",
+      "description": "iShook Finance provides comprehensive financial news and insights, covering areas such as forex, technology, real estate, commodities, stocks, and cryptocurrencies. The website features breaking news, detailed analysis, expert opinions, and market updates, helping readers stay informed about current economic trends and developments.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 15600,
+        "instagram": 25200
+      },
+      "image_url": "https://i1.feedspot.com/fsppublisher/4405266/page/7327317/logo_1721649268.png"
+    },
+    {
+      "title": "CFI.co",
+      "feed_url": "https://cfi.co/feed",
+      "website_url": "https://cfi.co/",
+      "description": "CFI.co (Capital Finance International), a print journal and online resource reporting on business, economics and finance, recognises that the traditional distinction between emerging and developed markets is now far less meaningful as world economies converge. Headquartered in London, the world's most multicultural city, CFI.co brings you coverage and analysis of the drivers behind change.",
+      "followers": {
+        "facebook": 9100,
+        "twitter": 5600,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5041688.jpg?t=1657257701"
+    },
+    {
+      "title": "The Financial Express",
+      "feed_url": "https://www.financialexpress.com/feed/",
+      "website_url": "https://www.financialexpress.com/",
+      "description": "Find the latest business news and finance news, market updates, live stock market news, IPO update, banking and insurance sector updates.",
+      "followers": {
+        "facebook": 2000000,
+        "twitter": 816300
+      },
+      "image_url": "https://i1.feedspot.com/5271447.jpg?t=1657260177"
+    },
+    {
+      "title": "The Wall Street Journal",
+      "feed_url": "https://www.wsj.com/",
+      "website_url": "https://www.wsj.com/",
+      "description": "Breaking news, investigative reporting, business coverage, and features from The Wall Street Journal. The Wall Street Journal was founded in July 1889. Ever since the Journal has led the way in chronicling the rise of industries in America and around the world.",
+      "followers": {
+        "facebook": 7700000,
+        "twitter": 20800000,
+        "instagram": 5600000
+      },
+      "image_url": "https://i1.feedspot.com/5419273.jpg?t=1657181048"
+    },
+    {
+      "title": "Investing.com",
+      "feed_url": "https://www.investing.com/",
+      "website_url": "https://www.investing.com/",
+      "description": "Investing.com is a leading financial platform that offers real-time quotes, streaming charts, up-to-date financial news, technical analysis, and more.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 1300000
+      },
+      "image_url": "https://i1.feedspot.com/5419476.jpg?t=1657196991"
+    },
+    {
+      "title": "The Economist",
+      "feed_url": "https://www.economist.com/",
+      "website_url": "https://www.economist.com/",
+      "description": "Authoritative global news and analysis. The Economist offers fair-minded, fact-checked coverage of world politics, economics, business, science, culture and more.",
+      "followers": {
+        "facebook": 11200000,
+        "twitter": 27000000,
+        "instagram": 7300000
+      },
+      "image_url": "https://i1.feedspot.com/5419329.jpg?t=1657182112"
+    },
+    {
+      "title": "Bankrate News",
+      "feed_url": "https://www.bankrate.com/news/",
+      "website_url": "https://www.bankrate.com/news/",
+      "description": "Get the latest news, original data reporting and expert analysis on mortgages, savings, CDs, credit cards and more. Bankrate guides savers and spenders through the next steps of their financial journey. Whether you're buying a home, paying off a loan or saving up for college, we offer free tools and resources to help you reach your goals.",
+      "followers": {
+        "facebook": 330900,
+        "twitter": 86500,
+        "instagram": 44300
+      },
+      "image_url": "https://i1.feedspot.com/5419857.jpg?t=1657260390"
+    },
+    {
+      "title": "Kiplinger",
+      "feed_url": "https://www.kiplinger.com/",
+      "website_url": "https://www.kiplinger.com/",
+      "description": "Leader in personal finance news and business forecasting. Get trusted advice on investing, retirement, taxes, saving, real estate, cars, college, insurance. At Kiplinger, we start with the expectation that our readers will act on our advice, and benefit from doing so. Our award-winning editorial content is just the beginning of the story.",
+      "followers": {
+        "facebook": 105300,
+        "twitter": 56500,
+        "instagram": 13100
+      },
+      "image_url": "https://i1.feedspot.com/5360015.jpg?t=1641382186"
+    },
+    {
+      "title": "International Business Times",
+      "feed_url": "https://www.ibtimes.com/",
+      "website_url": "https://www.ibtimes.com/",
+      "description": "International Business Times is the leading provider of business news and financial news from the US and around the world. It is a growing digital global news publication that delivers international business news to an audience of over 12 million in the U.S. and 3 million people worldwide every month through its network of digital publishing platforms.",
+      "followers": {
+        "facebook": 423900,
+        "twitter": 115200
+      },
+      "image_url": "https://i1.feedspot.com/5419475.jpg?t=1657199620"
+    },
+    {
+      "title": "Investor's Business Daily",
+      "feed_url": "https://www.investors.com/",
+      "website_url": "https://www.investors.com/",
+      "description": "Perform stock investment research with our IBD research tools to help investment strategies. We provide the resources to help make informed decisions. Investor's Business Daily is a leading financial news and research organization recognized for its record of identifying stock leaders as they emerge.",
+      "followers": {
+        "facebook": 2700000,
+        "twitter": 411100,
+        "instagram": 95400
+      },
+      "image_url": "https://i1.feedspot.com/4919453.jpg?t=1657261112"
+    }
+  ]
+}

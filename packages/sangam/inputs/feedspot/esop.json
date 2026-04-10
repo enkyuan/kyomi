@@ -1,0 +1,58 @@
+{
+  "category": "ESOP",
+  "source_url": "https://rss.feedspot.com/esop_rss_feeds",
+  "feeds": [
+    {
+      "title": "ESOP Partners Blog",
+      "feed_url": "https://www.esoppartners.com/blog/rss.xml",
+      "website_url": "https://www.esoppartners.com/blog",
+      "description": "The One-Stop ESOP Blog is dedicated to providing ESOP companies and professionals with a single location on the Web to find all of their ESOP information. ESOP Partners offers clients a broad range of ESOP services and expertise, ranging from ESOP administration, compliance, planning, and consulting.",
+      "followers": {
+        "facebook": 149,
+        "twitter": 543
+      },
+      "image_url": "https://i1.feedspot.com/5292329.jpg?t=1623399754"
+    },
+    {
+      "title": "ButcherJoseph & Co Blog \u00bb ESOP",
+      "feed_url": "https://butcherjoseph.com/blog/category/esop/feed",
+      "website_url": "https://butcherjoseph.com/blog/category/esop",
+      "description": "ButcherJoseph provides advice on ESOP related trends, insights and services and is a strong advocate for employee ownership across the US.",
+      "followers": {
+        "twitter": 446,
+        "instagram": 106
+      },
+      "image_url": "https://i1.feedspot.com/5292439.jpg?t=1623416312"
+    },
+    {
+      "title": "Blue Ridge ESOP Associates Blog",
+      "feed_url": "https://news.blueridgeesop.com/blog/rss.xml",
+      "website_url": "https://news.blueridgeesop.com/blog",
+      "description": "Blue Ridge ESOP Associates is the largest independent ESOP and 401(k) Third Party Administration and Recordkeeping firm. We cover a range of topics, including ESOP Administration, Distributions, Plan Design, Employee-Ownership, and more.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 209
+      },
+      "image_url": "https://i1.feedspot.com/5292421.jpg?t=1624945090"
+    },
+    {
+      "title": "ESOP Direct",
+      "feed_url": "https://www.esopdirect.com/feed",
+      "website_url": "https://www.esopdirect.com/blogs",
+      "description": "ESOP Direct has a long and rich legacy in the field of accounting and finance, going back to more than five decades. We are part of the Kirtane Pandit Group, that started as an Accounting and Finance Consultancy in 1956 and branched into Software Development and Business Process Consulting company over the years. Our service offerings cover the entire life cycle of ESOPs including Plan conceptualization, Design, Documentation, Plan management, Compliance and reporting.",
+      "followers": {
+        "facebook": 526,
+        "twitter": 67
+      },
+      "image_url": "https://i1.feedspot.com/5292322.jpg?t=1623399513"
+    },
+    {
+      "title": "Workplace Development, Inc. Blog",
+      "feed_url": "https://workplacedevelopment.com/feed/",
+      "website_url": "https://workplacedevelopment.com/blog/",
+      "description": "Whether you're a new ESOP that wants to roll out your plan successfully or an existing one that wants to make the most of employee ownership, we can help. Our practical, field-tested services will maximize the recruitment, retention, productivity, and profitability benefits of engaged employee-owners.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5292333.jpg?t=1623400032"
+    }
+  ]
+}

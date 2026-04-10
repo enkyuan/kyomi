@@ -1,0 +1,18 @@
+{
+  "category": "The Onion",
+  "source_url": "https://rss.feedspot.com/theonion_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Onion",
+      "feed_url": "https://www.theonion.com/rss",
+      "website_url": "https://theonion.com/",
+      "description": "The Onion brings you all of the latest news, stories, photos, videos, and more from America's finest news source. The Onion is the world's leading news publication, offering highly acclaimed, universally revered coverage of breaking national, international, and local news events. The Onion is a Peabody award-winning news source founded in 1756 by Friedrich Siegfried Zweibel. T. Herman Zweibel.",
+      "followers": {
+        "facebook": 6100000,
+        "twitter": 11600000,
+        "instagram": 4800000
+      },
+      "image_url": "https://i1.feedspot.com/4832485.jpg?t=1665473626"
+    }
+  ]
+}

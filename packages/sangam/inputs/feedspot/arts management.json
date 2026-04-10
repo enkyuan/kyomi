@@ -1,0 +1,101 @@
+{
+  "category": "Arts Management",
+  "source_url": "https://rss.feedspot.com/arts_management_rss_feeds",
+  "feeds": [
+    {
+      "title": "Arts Management & Technology Laboratory Blog",
+      "feed_url": "https://amt-lab.org/blog?format=rss",
+      "website_url": "https://amt-lab.org/blog",
+      "description": "The Arts Management & Technology Laboratory (AMTL) is a research lab based at the Heinz College of Carnegie Mellon University. The lab focuses on exploring the intersection of arts, technology, and management. Its blog features articles on topics such as digital marketing, data analysis, audience engagement, and more, all from the perspective of arts management.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 9700,
+        "instagram": 709
+      },
+      "image_url": "https://i1.feedspot.com/5480808.jpg?t=1671195036"
+    },
+    {
+      "title": "Grantmakers in the Arts",
+      "feed_url": "https://www.giarts.org/rss.xml",
+      "website_url": "https://www.giarts.org/news",
+      "description": "Grantmakers in the Arts (GIA) is a national association of public and private arts funders that was founded in 1984. Its mission is to support and promote arts philanthropy and grantmaking. The GIA blog features news and updates on arts funding, research, and policy, as well as guest posts from arts funders and practitioners.",
+      "followers": {
+        "facebook": 11400,
+        "twitter": 6100,
+        "instagram": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5480802.jpg?t=1671195009"
+    },
+    {
+      "title": "Healing Arts Management Blog",
+      "feed_url": "https://www.healingartsmgmt.com/feed/",
+      "website_url": "https://www.healingartsmgmt.com/blog/",
+      "description": "Healing Arts Management Blog is a blog dedicated to exploring the intersection of healthcare and the arts. Founded in 2012 by Laura Wood, the blog aims to provide resources, inspiration, and ideas for using the arts to promote health and wellness. The blog covers topics such as art therapy, music therapy, dance therapy, and more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5480807.jpg?t=1678774599"
+    },
+    {
+      "title": "Inside The Arts",
+      "feed_url": "https://insidethearts.com/buttsintheseats/feed/",
+      "website_url": "https://insidethearts.com/buttsintheseats/",
+      "description": "Butts In The Seats is a blog by Andrew Taylor, a veteran arts marketer and professor of arts management at American University. The blog, which was launched in 2009, covers a wide range of topics related to arts marketing and management, including audience development, fundraising, and leadership.",
+      "followers": {
+        "twitter": 442
+      },
+      "image_url": "https://i1.feedspot.com/5480805.jpg?t=1678774621"
+    },
+    {
+      "title": "MARKETING THE ARTS TO DEATH",
+      "feed_url": "https://trevorodonnell.com/feed/",
+      "website_url": "https://trevorodonnell.com/",
+      "description": "This blog was founded in 2011 by Trevor O'Donnell, who is an arts marketing consultant. The blog aims to provide insights into the art world and how to market it effectively. It covers various topics such as digital marketing, branding, audience engagement, and more. The blog's unique perspective and witty writing style make it an interesting read for anyone interested in the intersection of marketing and the arts.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1318197.jpg?t=1678774241"
+    },
+    {
+      "title": "Arts Management Ireland",
+      "feed_url": "https://artsmanagement.ie/feed/",
+      "website_url": "https://artsmanagement.ie/",
+      "description": "Founded in 2015, Arts Management Ireland is a blog dedicated to exploring the world of arts management in Ireland. It covers various topics such as funding, policy, audience development, and more. The blog also features interviews with prominent arts leaders and organizations, providing valuable insights into the challenges and opportunities facing the Irish arts community.",
+      "followers": {
+        "twitter": 7400
+      },
+      "image_url": "https://i1.feedspot.com/5480803.jpg?t=1678774467"
+    },
+    {
+      "title": "Creative Infrastructure",
+      "feed_url": "https://creativeinfrastructure.org/feed/",
+      "website_url": "https://creativeinfrastructure.org/",
+      "description": "Creative Infrastructure is a blog by Linda Essig, director of the School of Theatre, Film and Television at the University of Arizona. The blog, which was launched in 2012, covers a wide range of topics related to arts and cultural infrastructure, including arts education, creative placemaking, and cultural policy. The blog aims to provide a forum for ideas and discussion about the role of the arts in society.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/1223233.jpg?t=1678774967"
+    },
+    {
+      "title": "The David Snider \u00bb Arts Management",
+      "feed_url": "https://thedavidsnider.com/category/arts-management/feed/",
+      "website_url": "https://thedavidsnider.com/category/arts-management/",
+      "description": "David Snider is an arts management consultant and educator who has worked with numerous arts organizations and institutions. His blog covers various topics related to arts management, including organizational culture, leadership, strategic planning, and more. Snider's blog offers practical insights and advice based on his years of experience in the field.",
+      "followers": {
+        "twitter": 80,
+        "instagram": 75
+      },
+      "image_url": "https://i1.feedspot.com/5480806.jpg?t=1671195027"
+    },
+    {
+      "title": "Management and the Arts Blog",
+      "feed_url": "https://managementandthearts.com/5e/category/blog/feed/",
+      "website_url": "https://managementandthearts.com/5e/category/blog/",
+      "description": "This blog is maintained by Teri A. McMurtry-Chubb, who is an Associate Professor of Management at the University of Illinois. Her blog explores the intersection of management and the arts, covering topics such as nonprofit governance, leadership, and cultural policy.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5480804.jpg?t=1678774522"
+    },
+    {
+      "title": "ArtsJournal",
+      "feed_url": "https://feeds.feedburner.com/artsjournal/VaOO",
+      "website_url": "https://www.artsjournal.com/artfulmanager/",
+      "description": "This is a blog by Michael M. Kaiser, former president of the Kennedy Center for the Performing Arts and the author of 'The Art of the Turnaround.' The blog, which was launched in 2003, focuses on the business of the arts, with a particular emphasis on issues related to arts management and leadership.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/716471.jpg?t=1678774690"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "category": "Auto Appraiser",
+  "source_url": "https://rss.feedspot.com/auto_appraiser_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vintage Auto Appraisal Magazines",
+      "feed_url": "https://www.vintageautoappraisal.com/blog-feed.xml",
+      "website_url": "https://www.vintageautoappraisal.com/vintage-auto-appraisal-magazin",
+      "description": "It's About The Great Old Cars, The People And The Stories Along Life's Highway",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5758402.jpg?t=1705659250"
+    },
+    {
+      "title": "Auto Mediator Blog",
+      "feed_url": "https://www.theautomediator.com/feed/",
+      "website_url": "https://www.theautomediator.com/blog/",
+      "description": "20 years of Knowledge, Experience and Expertise",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5758394.jpg?t=1705659659"
+    },
+    {
+      "title": "US Auto Appraisers Blog",
+      "feed_url": "https://usautoappraisers.com/feed/",
+      "website_url": "https://usautoappraisers.com/blog/",
+      "description": "Comprehensive and High-Quality Vehicle Appraisals serving Maryland, Washington DC, Northern Virginia & South Florida",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5758395.jpg?t=1705659943"
+    },
+    {
+      "title": "Diminished Value Georgia Blog",
+      "feed_url": "https://diminishedvalueofgeorgia.com/feed/",
+      "website_url": "https://diminishedvalueofgeorgia.com/our-blog/",
+      "description": "The Auto Appraiser Blog discusses various topics like diminished value, car appraisals, and insights into the automotive industry. It highlights the importance of avoiding driving into floodwaters, shares a case study on a Lexus GX's diminished value, analyses U.S. light-vehicle sales trends, and provides updates on the auto market, including Ford's challenges and Tesla's future models. Additionally, it educates readers about the method of calculating diminished value in repaired vehicles and offers services for appraisal and total loss claims...",
+      "followers": {
+        "facebook": 434,
+        "twitter": 457,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/5758396.jpg?t=1705659217"
+    },
+    {
+      "title": "Ia Path Blog",
+      "feed_url": "https://iapath.com/feed/",
+      "website_url": "https://iapath.com/blog/",
+      "description": "Learn How to Become a Successful Independent Adjuster",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5758397.jpg?t=1705661001"
+    },
+    {
+      "title": "Benchmark Auto Appraisers Blog",
+      "feed_url": "https://benchmarkautoappraisers.com/auto-appraisal-blog/feed/",
+      "website_url": "https://benchmarkautoappraisers.com/auto-appraisal-blog/",
+      "description": "RV Motorhome Truck Car Motorcycle Appraisals Service",
+      "followers": {
+        "facebook": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5758398.jpg?t=1705659652"
+    }
+  ]
+}

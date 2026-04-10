@@ -1,0 +1,29 @@
+{
+  "category": "Covina News",
+  "source_url": "https://rss.feedspot.com/covina_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "KTLA 5 \u00bb Covina",
+      "feed_url": "https://ktla.com/tag/covina/feed/",
+      "website_url": "https://ktla.com/tag/covina/",
+      "description": "L.A.'s Very Own, KTLA is Southern California's source for Los Angeles-area breaking news, streaming live video, traffic and weather in L.A., Orange and Ventura counties, plus the Inland Empire and beyond.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 1000000,
+        "instagram": 952400
+      },
+      "image_url": "https://i1.feedspot.com/5155264.jpg?t=1590036802"
+    },
+    {
+      "title": "CBS Los Angeles \u00bb West Covina",
+      "feed_url": "https://losangeles.cbslocal.com/tag/covina/feed/",
+      "website_url": "https://www.cbsnews.com/losangeles/tag/west-covina/",
+      "description": "Get Covina News, Sports, Weather, Traffic and the Best of LA/OC from CBS Los Angeles.",
+      "followers": {
+        "facebook": 1600000,
+        "twitter": 329
+      },
+      "image_url": "https://i1.feedspot.com/5155263.jpg?t=1590036704"
+    }
+  ]
+}

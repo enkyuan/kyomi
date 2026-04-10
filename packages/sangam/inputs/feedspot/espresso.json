@@ -1,0 +1,97 @@
+{
+  "category": "Espresso",
+  "source_url": "https://rss.feedspot.com/espresso_rss_feeds",
+  "feeds": [
+    {
+      "title": "CoffeeGeek Blog",
+      "feed_url": "https://coffeegeek.com/feed/",
+      "website_url": "https://coffeegeek.com/blog/",
+      "description": "CoffeeGeek is where you'll learn to make coffee and espresso better. The CoffeeGeek website's first and foremost mission is to educate consumers on better coffee and espresso.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 27600,
+        "instagram": 14500
+      },
+      "image_url": "https://i1.feedspot.com/5274170.jpg?t=1644231580"
+    },
+    {
+      "title": "Mr. Espresso news",
+      "feed_url": "https://mrespresso.com/feed/",
+      "website_url": "https://mrespresso.com/in-the-news/",
+      "description": "Get the latest news from Mr. Espresso, espresso recipes, interviews, and more! Our Oak Wood roasted coffee is an homage to the classic flavors of Old World Italy, refined and reinterpreted for modern tastes.",
+      "followers": {
+        "facebook": 4200,
+        "twitter": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5367848.jpg?t=1643892730"
+    },
+    {
+      "title": "Londinium Espresso Blog",
+      "feed_url": "https://blog.londiniumespresso.com/feed/",
+      "website_url": "https://blog.londiniumespresso.com/",
+      "description": "Coffee news & resources from espresso roaster Londinium espresso. Londinium Espresso was built from day one as a global online business to provide our customers with the opportunity to self service their lever espresso machines in remote locations.",
+      "followers": {
+        "facebook": 2100,
+        "instagram": 4100
+      },
+      "image_url": "https://i1.feedspot.com/5367847.jpg?t=1643892499"
+    },
+    {
+      "title": "Flair Espresso Blog",
+      "feed_url": "https://flairespresso.com/feed/",
+      "website_url": "https://flairespresso.com/blog/",
+      "description": "Join the community of Flair-istas and be the first to hear news, special offers & the best in Espresso Made Right.Take matters of extraction into your own hands with the Flair Espresso Maker. All manual, non-electric, and elegantly designed with portability and durability in mind, you can craft professional-level espresso in the kitchen, cafe, or campground.",
+      "followers": {
+        "facebook": 34100,
+        "instagram": 223900
+      },
+      "image_url": "https://i1.feedspot.com/5367843.jpg?t=1643888983"
+    },
+    {
+      "title": "Odyssey Espresso Blog",
+      "feed_url": "https://www.odysseyespresso.com/blog?format=rss",
+      "website_url": "https://www.odysseyespresso.com/blog",
+      "description": "Sign up to receive news and production updates.Based in Denver, Colorado, Odyssey Espresso sets out to make quality espresso accessible to coffee lovers around the world.",
+      "followers": {
+        "facebook": 1700,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/5367840.jpg?t=1643890562"
+    },
+    {
+      "title": "Espresso Canada Blog",
+      "feed_url": "https://espressocanada.com/blogs/news.atom",
+      "website_url": "https://espressocanada.com/blogs/news",
+      "description": "Luciano from Espresso Canada is committed to sharing his knowledge and experience with espresso machines and coffee that he has gained throughout his 30 year career. Espresso Canada has a simple goal- to ensure you have the knowledge and tools to make the perfect espresso in your home or office.",
+      "followers": {
+        "facebook": 3200,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/5367839.jpg?t=1643893608"
+    },
+    {
+      "title": "Espresso Machine Addict Blog",
+      "feed_url": "https://espressomachineaddict.com/feed/",
+      "website_url": "https://espressomachineaddict.com/blog/",
+      "description": "Hi! My name is Hanna, and I'm an espresso machine addict. I built EspressoMachineAddict.com and asked some of my fellow addicts to contribute their espresso machine reviews as well. On this site, you'll find all of our top espresso machine picks to help you find your own perfect cup of espresso.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5367842.jpg?t=1643961920"
+    },
+    {
+      "title": "Espresso Perks",
+      "feed_url": "https://espressoperks.com/feed/",
+      "website_url": "https://espressoperks.com/posts/",
+      "description": "On our website, you'll find in-depth reviews of coffee and espresso equipment, ranging from espresso machines and grinders to milk frothers and pour-over drippers. We break down the features, pros, and cons of each product, helping you make an informed decision when it comes to your coffee setup. Learn more about a strong brew with our regular updates.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5616865.jpg?t=1688475980"
+    },
+    {
+      "title": "Brew Espresso Coffee Blog",
+      "feed_url": "https://brewespressocoffee.com/feed/",
+      "website_url": "https://brewespressocoffee.com/blog/",
+      "description": "Brew Espresso Coffee is dedicated to all baristas - beginners to experienced. We write about espresso so you can make great coffee at home. Our primary mission is to help barista improve their knowledge and their skills.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5452728.jpg?t=1666953473"
+    }
+  ]
+}

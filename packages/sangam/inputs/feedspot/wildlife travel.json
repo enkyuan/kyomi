@@ -1,0 +1,48 @@
+{
+  "category": "Wildlife Travel",
+  "source_url": "https://rss.feedspot.com/wildlife_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Thomson Safaris Blog",
+      "feed_url": "https://thomsonsafaris.com/blog/feed/",
+      "website_url": "https://thomsonsafaris.com/blog/",
+      "description": "Thomson Safaris' mission is to provide travel experiences of quality and integrity and to deliver them with the highest level of service and value for our guests. In so doing, we will be socially responsible in the communities and environments where we operate, treading lightly on the land and giving back to the people.",
+      "followers": {
+        "facebook": 9300,
+        "twitter": 1800,
+        "instagram": 9700
+      },
+      "image_url": "https://i1.feedspot.com/4998904.jpg?t=1622180228"
+    },
+    {
+      "title": "Travel For Wildlife Blog",
+      "feed_url": "https://www.travel4wildlife.com/feed/",
+      "website_url": "https://www.travel4wildlife.com/blogs/",
+      "description": "Follow along as we share photography, videos, and articles from our adventures! Travel For Wildlife focuses on ethical wildlife tourism and we want everyone to enjoy wildlife without harming them or their habitat in any way. Our mission is to promote wildlife conservation through responsible wildlife tourism.",
+      "followers": {
+        "facebook": 9900,
+        "twitter": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4520197.jpg?t=1606729130"
+    },
+    {
+      "title": "Shoestring Safari Blog",
+      "feed_url": "https://shoestringsafari.com/feed/",
+      "website_url": "https://shoestringsafari.com/blog/",
+      "description": "Shoestring safari is a blog by naturalist and traveler Shaun Edmond who travels around the continents and discovers the wildlife around the world.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5447989.jpg?t=1663672424"
+    },
+    {
+      "title": "Good Nature Travel \u00bb Nature & Wildlife",
+      "feed_url": "http://wp.nathabblog.com/category/nature-wildlife/feed/",
+      "website_url": "https://www.nathab.com/blog/category/nature-wildlife",
+      "description": "Good Nature Travel is an adventure travel blog by WWF and Natural Habitat Adventures, the leaders in worldwide nature and wildlife travel tours. We feature reports from the field, news about the natural world and thoughts from our accomplished writers and staff.",
+      "followers": {
+        "facebook": 112600,
+        "twitter": 4300
+      },
+      "image_url": "https://i1.feedspot.com/4998878.jpg?t=1622180221"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "category": "Manchester Food",
+  "source_url": "https://rss.feedspot.com/manchester_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Manchestereveningnews.co.uk \u00bb Food And Drink",
+      "feed_url": "https://www.manchestereveningnews.co.uk/whats-on/food-drink-news/?service=rss",
+      "website_url": "https://www.manchestereveningnews.co.uk/whats-on/food-drink-news/",
+      "description": "Find out what's the best food and drink in and around Manchester and the Greater Manchester area. Live music, rock and pop gigs, theatre, nightclubs, family days out, and more! manchestereveningnews.co.uk is the online edition of the Manchester evening news. M.E.N. has always sought to entertain its readers as well as inform them. We lead the way in coverage of our city's vibrant cultural and suggest to our readers the best way to enjoy their leisure time.",
+      "followers": {
+        "facebook": 2500000,
+        "twitter": 783700,
+        "instagram": 437000
+      },
+      "image_url": "https://i1.feedspot.com/5440127.jpg?t=1662720324"
+    },
+    {
+      "title": "Manchester Food Tourist",
+      "feed_url": "https://manchesterfoodtourist.com/feed/",
+      "website_url": "https://manchesterfoodtourist.com/",
+      "description": "Manchester Food Tourist is a blog based on food, drink, and travel. Our blog will pride you with all the information on Manchester's food, restaurants, wine, gin, and more. You can also find home product recommendations and reviews from Manchester and the World!",
+      "followers": {
+        "facebook": 170,
+        "twitter": 3700,
+        "instagram": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5440128.jpg?t=1662720432"
+    },
+    {
+      "title": "Manchester Finest \u00bb Eating And Drinking",
+      "feed_url": "https://manchesterwire.co.uk/what/food-drink/feed/",
+      "website_url": "https://www.manchestersfinest.com/category/eating-and-drinking/",
+      "description": "Manchester Finest brings you some of the best things to see, eat and do in and around Manchester. This website is dedicated to all the great things going on in Manchester and making sure you don't miss out on any of them. To help you get the most out of Manchester, we've put together some guides we think will make getting around and choosing the best places to visit that bit easier.",
+      "followers": {
+        "facebook": 318400,
+        "twitter": 76300,
+        "instagram": 469500
+      },
+      "image_url": "https://i1.feedspot.com/5440129.jpg?t=1662720347"
+    },
+    {
+      "title": "Jen's Food Blog \u00bb Food In Manchester",
+      "feed_url": "https://jensfoodblog.com/tag/food-in-manchester/feed/",
+      "website_url": "https://jensfoodblog.com/tag/food-in-manchester/",
+      "description": "Posts about food in manchester written by Jen's Food Blog! I'm Jen, I'm from Leeds and I love food-cooking it and of course, eating it, and I love the joy it brings people. So here I am sharing my homemade recipes or eating out experiences mainly within Yorkshire, but occasionally venturing further afield!",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 24,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/5440130.jpg?t=1662720351"
+    },
+    {
+      "title": "Food Junkie UK",
+      "feed_url": "https://www.foodjunkieuk.co.uk/feed/",
+      "website_url": "https://www.foodjunkieuk.co.uk/",
+      "description": "Food Junkie UK is by a Manchester-based food blogger providing honest reviews across the UK! I blog about my experience eating at restaurants which are mostly based in Manchester and the places I've traveled. I don't want to rate or put a score on restaurants, instead, I just want to let people know about interesting places to eat and explore.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 57,
+        "instagram": 18900
+      },
+      "image_url": "https://i1.feedspot.com/5440131.jpg?t=1662720362"
+    },
+    {
+      "title": "Bounceback Food Blog",
+      "feed_url": "https://bouncebackfood.co.uk/blog/feed/",
+      "website_url": "https://bouncebackfood.co.uk/blog/",
+      "description": "Find out how the Bounceback Food team has been fighting food poverty in communities across Greater Manchester, Cheshire, and North Wales! Bounceback Food CIC is a non-profit community cookery school that supports people living in food poverty across the UK. We teach people how to cook, donate good quality items of food to food banks as part of our 'buy one, give one foodbank drive at market events and provide catering services in disadvantaged areas.",
+      "followers": {
+        "facebook": 1700,
+        "twitter": 3600,
+        "instagram": 3800
+      },
+      "image_url": "https://i1.feedspot.com/5440132.jpg?t=1662720362"
+    },
+    {
+      "title": "Just Food Manchester",
+      "feed_url": "https://justfoodmanchester.co.uk/feed/",
+      "website_url": "https://justfoodmanchester.co.uk/",
+      "description": "Just Food Manchester works for supporting restaurants in and around Manchester! Having worked for many restaurants over the last four years, we decided to make our blog having learned a thing or two about the industry. We now post independent reviews from places we have had the pleasure of visiting across the city.",
+      "followers": {
+        "facebook": 316,
+        "instagram": 9000
+      },
+      "image_url": "https://i1.feedspot.com/5440133.jpg?t=1662721734"
+    },
+    {
+      "title": "Eatmcr.co.uk",
+      "feed_url": "https://www.eatmcr.co.uk/feed/",
+      "website_url": "https://www.eatmcr.co.uk/",
+      "description": "Eatmcr.co.uk works for curating, supporting, and promoting the vibrant Manchester food industry, drinks and culture. Our blogs give you insights on all the food, bread, buns, poultry legacy, dining offers for different months, and more!",
+      "followers": {
+        "facebook": 24100,
+        "instagram": 366500
+      },
+      "image_url": "https://i1.feedspot.com/5440134.jpg?t=1662720380"
+    }
+  ]
+}

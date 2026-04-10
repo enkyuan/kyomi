@@ -1,0 +1,80 @@
+{
+  "category": "Aviation Safety",
+  "source_url": "https://rss.feedspot.com/aviation_safety_rss_feeds",
+  "feeds": [
+    {
+      "title": "SMS Pro Aviation Safety Blog",
+      "feed_url": "https://aviationsafetyblog.asms-pro.com/blog/rss.xml",
+      "website_url": "https://aviationsafetyblog.asms-pro.com/blog",
+      "description": "SMS Pro is an Internet or Intranet-based integrated safety management system designed to manage Safety, Security, Quality, and Compliance issues. Educate and inform aviation safety professional of best practices in aviation safety management systems and also share ideas for improving safety culture and managing data.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5206123.jpg?t=1602771378"
+    },
+    {
+      "title": "JDA Journal \u00bb Aviation Safety",
+      "feed_url": "https://jdasolutions.aero/blog/category/aviation-safety/feed/",
+      "website_url": "https://jdasolutions.aero/blog/category/aviation-safety/",
+      "description": "JDA Journal is aviation's independent and most trusted partner for safety and performance. Stay tuned to get the latest information about aviation safety at JDA Journal.",
+      "followers": {
+        "facebook": 527,
+        "twitter": 1200
+      },
+      "image_url": "https://i1.feedspot.com/5206160.jpg?t=1602775855"
+    },
+    {
+      "title": "Flightradar24 Blog \u00bb Aviation Safety",
+      "feed_url": "https://www.flightradar24.com/blog/category/aviation-safety/feed/",
+      "website_url": "https://www.flightradar24.com/blog/category/aviation-safety/",
+      "description": "The world's most popular flight tracker. Track planes in real-time on our flight tracker map and get up-to-date flight status & airport information. Know about latest updates and information on aviation safety at Flightradar24.",
+      "followers": {
+        "facebook": 1300000,
+        "twitter": 1200000
+      },
+      "image_url": "https://i1.feedspot.com/5206167.jpg?t=1602777204"
+    },
+    {
+      "title": "ADB SAFEGATE Blog \u00bb Safety",
+      "feed_url": "https://blog.adbsafegate.com/category/a-safety/feed/",
+      "website_url": "https://blog.adbsafegate.com/category/a-safety/",
+      "description": "Get to know our experts on airport traffic expansion, aviation safety, aviation trends and innovation, and explore ADB SAFEGATE around the world.",
+      "followers": {
+        "facebook": 626,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/5206164.jpg?t=1602776723"
+    },
+    {
+      "title": "Flight Safety Blog",
+      "feed_url": "https://flightsafety.blog/feed/",
+      "website_url": "https://flightsafety.blog/",
+      "description": "Get to know everything related to aviation safety at Flight Safety Blog.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5206120.jpg?t=1602766463"
+    },
+    {
+      "title": "AviationHunt \u00bb Safety",
+      "feed_url": "https://www.aviationhunt.com/category/safety/feed/",
+      "website_url": "https://www.aviationhunt.com/category/aviation/safety/",
+      "description": "AviationHunt is an aviation resources site related to Aircraft Maintenance Technology and Aviation Safety. Our mission is to provide the best aviation resources and technology tips related to Aircraft Maintenance and safety.",
+      "followers": {
+        "facebook": 704,
+        "twitter": 12
+      },
+      "image_url": "https://i1.feedspot.com/5206126.jpg?t=1602772138"
+    },
+    {
+      "title": "AVweb \u00bb Flight Safety",
+      "feed_url": "https://www.avweb.com/topics/flight-safety/feed/",
+      "website_url": "https://www.avweb.com/topics/flight-safety/",
+      "description": "AVweb is the world's premier independent aviation news source. Get to know about the latest updates on flight safety at AVweb.",
+      "followers": {
+        "facebook": 4300,
+        "twitter": 17500
+      },
+      "image_url": "https://i1.feedspot.com/5206131.jpg?t=1602772758"
+    }
+  ]
+}

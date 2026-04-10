@@ -1,0 +1,50 @@
+{
+  "category": "Canon Photography",
+  "source_url": "https://rss.feedspot.com/canon_photography_rss_feeds",
+  "feeds": [
+    {
+      "title": "Canon Rumors",
+      "feed_url": "https://www.canonrumors.com/feed/",
+      "website_url": "https://www.canonrumors.com/",
+      "description": "Canon Rumors is the No.1 source on the web for Canon imaging products, past, present, and future. we include a growing number of product reviews as well as a community forum that has become quite popular.",
+      "followers": {
+        "facebook": 108500,
+        "twitter": 65200,
+        "instagram": 9100
+      },
+      "image_url": "https://i1.feedspot.com/105528.jpg?t=1611577202"
+    },
+    {
+      "title": "EOS Magazine News",
+      "feed_url": "https://eos-magazine-news.blogspot.com/feeds/posts/default",
+      "website_url": "https://eos-magazine-news.blogspot.com/",
+      "description": "Keep up with the latest news and updates from the world of Canon EOS photography with EOS magazine news. We'll bring you the latest EOS camera and lens product announcements, firmware updates, and offers, plus inspiration and information for your photography.",
+      "followers": {
+        "facebook": 10600,
+        "twitter": 833
+      },
+      "image_url": "https://i1.feedspot.com/4857724.jpg?t=1611577208"
+    },
+    {
+      "title": "Awake The Light",
+      "feed_url": "http://awakethelight.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://awakethelight.blogspot.com/",
+      "description": "Awake The Light Photo Tours and Workshops are run by a professional photographer and educator Mollie Isaacs. All photo workshops and tours are designed to make each day informative and creative while placing you in magnificent locations.",
+      "followers": {
+        "facebook": 646,
+        "twitter": 38
+      },
+      "image_url": "https://i1.feedspot.com/4857734.jpg?t=1611577223"
+    },
+    {
+      "title": "Canon Blogger",
+      "feed_url": "https://canonblogger.com/feed/",
+      "website_url": "https://canonblogger.com/",
+      "description": "This blog is simply sharing authors' experiences as learned about the craft and technicalities of photography. Find the latest posts on Canon photography from Cannon Blogger.",
+      "followers": {
+        "twitter": 1700
+      },
+      "image_url": "https://i1.feedspot.com/4851265.jpg?t=1611577232"
+    }
+  ]
+}

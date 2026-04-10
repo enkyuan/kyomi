@@ -1,0 +1,50 @@
+{
+  "category": "North Dakota Music",
+  "source_url": "https://rss.feedspot.com/north_dakota_music_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Veeder Ranch \u00bb Music",
+      "feed_url": "https://veederranch.com/tag/music-2/feed/",
+      "website_url": "https://veederranch.com/tag/music-2/",
+      "description": "music, poetry, musings, photography and philosophy from a woman who found her way back home and wants you to come over for a hike and a cocktail.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300948.jpg?t=1714740678"
+    },
+    {
+      "title": "Dakota Country Z 96.1",
+      "feed_url": "https://dakotacountry961.com/feed/",
+      "website_url": "https://dakotacountry961.com/",
+      "description": "#1 For New Country",
+      "followers": {
+        "facebook": 3300
+      },
+      "image_url": "https://i1.feedspot.com/7300945.jpg?t=1713366733"
+    },
+    {
+      "title": "96.5 The Walleye",
+      "feed_url": "https://965thewalleye.com/feed/",
+      "website_url": "https://965thewalleye.com/",
+      "description": "The Walleye (KQWB-FM) is a radio station based in Fargo, North Dakota, USA. 96.5 The Walleye is a radio station that focuses on classic rock music, featuring hits from the 1960s through the 1990s.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300944.jpg?t=1713366721"
+    },
+    {
+      "title": "KEYZ AM 660",
+      "feed_url": "https://keyzradio.com/feed/",
+      "website_url": "https://keyzradio.com/",
+      "description": "660 KEYZ News Radio is a Townsquare Media radio station and your local news and infomation connection.",
+      "followers": {
+        "facebook": 15900
+      },
+      "image_url": "https://i1.feedspot.com/7300943.jpg?t=1713366708"
+    },
+    {
+      "title": "The Bismarck Tribune \u00bb Music",
+      "feed_url": "https://bismarcktribune.com/search/?f=rss&t=article&c=life-entertainment/nation-world/music&l=50&s=start_time&sd=desc",
+      "website_url": "https://bismarcktribune.com/life-entertainment/nation-world/music/",
+      "description": "bismarcktribune.com - RSS Results in section(s) life-entertainment/nation-world/music only for asset type(s) of article",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7300949.jpg?t=1713366807"
+    }
+  ]
+}

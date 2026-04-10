@@ -1,0 +1,53 @@
+{
+  "category": "VBA",
+  "source_url": "https://rss.feedspot.com/vba_rss_feeds",
+  "feeds": [
+    {
+      "title": "TheSmallman.com Blog",
+      "feed_url": "https://www.thesmallman.com/blog?format=RSS",
+      "website_url": "https://www.thesmallman.com/blog/",
+      "description": "Here you can find an Excel dashboard, VBA, and formula page, taking on interesting Excel problems. There are hundreds of Excel templates and examples on the site. My name is Marcus Small. I am a financial modeler and VBA developer with an ANU Masters's degree in Finance.",
+      "followers": {
+        "facebook": 262,
+        "twitter": 107
+      },
+      "image_url": "https://i1.feedspot.com/4888711.jpg?t=1662006909"
+    },
+    {
+      "title": "Xelplus",
+      "feed_url": "https://www.xelplus.com/feed/",
+      "website_url": "https://www.xelplus.com/",
+      "description": "Empower yourself with tips & tricks and helpful articles given in the Xelplus blog. Become a master in spreadsheet operations. Xelplus offers Excel Training, Excel Consulting, Excel Online Courses, and Tutorials to improve your Excel skills including advanced techniques and Excel Charts",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5325315.jpg?t=1661861836"
+    },
+    {
+      "title": "How To Excel At Excel \u00bb VBA",
+      "feed_url": "https://howtoexcelatexcel.com/category/vba/feed/",
+      "website_url": "https://howtoexcelatexcel.com/category/vba/",
+      "description": "How To Excel At Excel blog shares formulas, excel tips and tricks, insights on excel charting, VBA, and essential and advanced stuff about excel. Learn To Excel At Excel With Our Videos, Downloads, Tips and other excellent resources.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437207.jpg?t=1662008435"
+    },
+    {
+      "title": "Analyst Cave",
+      "feed_url": "https://analystcave.com/feed/",
+      "website_url": "https://analystcave.com/",
+      "description": "Learn VBA with Analyst Cave - one of the best resources to learn everything about Excel, VBA, and Web Scraping. Master Excel VBA today. The primary aim of AnalystCave is to help you Learn VBA for Excel. Visual Basic for Applications is a powerful tool to help you Excel at automation and helps make your office life easier.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5437210.jpg?t=1662007706"
+    },
+    {
+      "title": "Educba \u00bb VBA Blog",
+      "feed_url": "https://www.educba.com/vba/vba-resources/feed/",
+      "website_url": "https://www.educba.com/vba/vba-resources/",
+      "description": "Find free VBA Resources Tutorial guides you to learn the most important concepts of VBA at your own pace. These articles will teach you the best practices of VBA. EDUCBA (Corporate Bridge Consultancy Pvt Ltd) is a leading global provider of skill-based education addressing the needs of its members across 70+ Countries.",
+      "followers": {
+        "facebook": 77500,
+        "twitter": 902,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5437212.jpg?t=1662008972"
+    }
+  ]
+}

@@ -1,0 +1,974 @@
+{
+  "category": "Construction",
+  "source_url": "https://rss.feedspot.com/construction_rss_feeds",
+  "feeds": [
+    {
+      "title": "Construction Dive",
+      "feed_url": "https://www.constructiondive.com/feeds/news/",
+      "website_url": "https://www.constructiondive.com/",
+      "description": "Construction Dive provides news and analysis for construction industry executives. We cover commercial and residential construction, focusing on topics like technology, design, regulation, legal issues and more.",
+      "followers": {
+        "facebook": 12300,
+        "twitter": 29600
+      },
+      "image_url": "https://i1.feedspot.com/3847601.jpg?t=1612933345"
+    },
+    {
+      "title": "Construction Enquirer News",
+      "feed_url": "https://www.constructionenquirer.com/feed/",
+      "website_url": "https://www.constructionenquirer.com/",
+      "description": "Follow to keep up with construction news, building news, construction jobs, contracts news and more from the Construction Enquirer.",
+      "followers": {
+        "facebook": 1500,
+        "twitter": 73300
+      },
+      "image_url": "https://i1.feedspot.com/1567.jpg?t=1612933341"
+    },
+    {
+      "title": "Contractor Magazine",
+      "feed_url": "https://www.contractormag.com/__rss/all-published-content.xml",
+      "website_url": "https://www.contractormag.com/",
+      "description": "The contractor features news and features on emerging technology for contractors in plumbing, heating, specialty piping, and fire protection systems. Contractor Magazine has been helping contractors build their business since 1954.",
+      "followers": {
+        "facebook": 5900,
+        "twitter": 31800
+      },
+      "image_url": "https://i1.feedspot.com/3607423.jpg?t=1662383145"
+    },
+    {
+      "title": "Engineering News-Record Magazine",
+      "feed_url": "https://www.enr.com/rss/articles",
+      "website_url": "https://www.enr.com/",
+      "description": "Engineering News-Record is a stand-by construction magazine that has been around since 1874. Always offering the latest construction industry data, analysis, news, and commentary, it is a must for all construction professionals, from contractors to suppliers to regulators.",
+      "followers": {
+        "facebook": 25700,
+        "twitter": 52500
+      },
+      "image_url": "https://i1.feedspot.com/4387276.jpg?t=1663572782"
+    },
+    {
+      "title": "ConstructConnect Blog",
+      "feed_url": "https://www.constructconnect.com/blog/rss.xml",
+      "website_url": "https://www.constructconnect.com/blog",
+      "description": "ConstructConnect is a connector - bringing general contractors, subcontractors and building product manufacturers together throughout North America with the most complete, accurate and actionable construction data in the markets in which they work. Get access to bidding commercial construction projects and information about ConstructConnect by reading their blog.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 54800,
+        "instagram": 7400
+      },
+      "image_url": "https://i1.feedspot.com/4656938.jpg?t=1675322678"
+    },
+    {
+      "title": "The Construction Index",
+      "feed_url": "https://www.theconstructionindex.co.uk/feeds/news.xml",
+      "website_url": "https://www.theconstructionindex.co.uk/",
+      "description": "The Construction Index is one of the leading online information sources for the UK construction industry. The website provides a wide range of content including - comprehensive coverage of the main news and issues affecting the construction industry; contract leads, tenders, and awards; in depth market forecasts; construction law analysis.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 100300,
+        "instagram": 5700
+      },
+      "image_url": "https://i1.feedspot.com/4402635.jpg?t=1612933328"
+    },
+    {
+      "title": "building.co.uk",
+      "feed_url": "https://www.building.co.uk/2815.rss",
+      "website_url": "https://www.building.co.uk/",
+      "description": "Building is the UK's best-read, most-established magazine in the construction industry. Building provides an unrivalled combination of news, interviews, analysis and hard industry data and leads the way in journalism for the construction industry.",
+      "followers": {
+        "facebook": 7100,
+        "twitter": 98800
+      },
+      "image_url": "https://i1.feedspot.com/4959281.jpg?t=1612933334"
+    },
+    {
+      "title": "Construction News",
+      "feed_url": "https://www.constructionnews.co.uk/feed/",
+      "website_url": "https://www.constructionnews.co.uk/",
+      "description": "Construction News is a UK-based magazine. With an emphasis on market intelligence, forecasting, and trend analysis, this resource is great for companies looking to figure out how to stay ahead of the curve.",
+      "followers": {
+        "facebook": 17100,
+        "twitter": 122900,
+        "instagram": 7000
+      },
+      "image_url": "https://i1.feedspot.com/4510365.jpg?t=1612933337"
+    },
+    {
+      "title": "Shyam Steel Blog",
+      "feed_url": "https://shyamsteel.com/feed/",
+      "website_url": "https://shyamsteel.com/category/blogs/",
+      "description": "Established in 1953, Shyam Steel Industries Ltd is one of the leading primary steel producers in India, manufacturing TMT Rebar and Structural steel. Read more about the company, its steel products, services, and highly informative articles that will benefit you before buying steel.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 19900,
+        "instagram": 21600
+      },
+      "image_url": "https://i1.feedspot.com/5021408.jpg?t=1612933359"
+    },
+    {
+      "title": "Autodesk Construction Cloud Blog \u00bb Construction",
+      "feed_url": "https://www.autodesk.com/blogs/construction/feed/",
+      "website_url": "https://www.autodesk.com/blogs/construction/",
+      "description": "Autodesk Construction Solutions is the team responsible for Autodesk Construction Cloud, which combines advanced technology, a unique builders network, and predictive insights to connect people and data across the entire building lifecycle. Ready to explore the future of construction? Digital Builder blog has must-read content & in-depth analysis of the industry's biggest trends.",
+      "followers": {
+        "facebook": 100000,
+        "twitter": 23400,
+        "instagram": 30600
+      },
+      "image_url": "https://i1.feedspot.com/5266940.jpg?t=1618214093"
+    },
+    {
+      "title": "Levelset",
+      "feed_url": "https://www.levelset.com/feed/",
+      "website_url": "https://www.levelset.com/news/",
+      "description": "Levelset helps contractors and suppliers get payment under control, and sees a world where no one loses a night's sleep overpayment. Over 500,000 contractors and suppliers connect on Levelset's cloud-based platform to make payment processes stress-free. Follow for the latest construction industry news, payment trends, and financial insights.",
+      "followers": {
+        "facebook": 5400,
+        "instagram": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5266932.jpg?t=1618210371"
+    },
+    {
+      "title": "Simpson Strong-Tie",
+      "feed_url": "https://blog.strongtie.com/feed/",
+      "website_url": "https://blog.strongtie.com/",
+      "description": "Innovative resources and industry insights to help construction professionals design and build safer, stronger structures more efficiently. Simpson Strong-Tie is one of the world's largest suppliers of structural building products.",
+      "followers": {
+        "facebook": 33800,
+        "twitter": 2700,
+        "instagram": 51600
+      },
+      "image_url": "https://i1.feedspot.com/5322075.jpg?t=1631692254"
+    },
+    {
+      "title": "Commercial Construction and Renovation",
+      "feed_url": "https://ccr-mag.com/feed/",
+      "website_url": "https://ccr-mag.com/",
+      "description": "While Commercial could function as a basic construction news site, its real strength comes from its job board. Subcontractors and contractors can use its list to bid on projects, all online.",
+      "followers": {
+        "twitter": 973,
+        "instagram": 396
+      },
+      "image_url": "https://i1.feedspot.com/4510287.jpg?t=1612933371"
+    },
+    {
+      "title": "Equipment World",
+      "feed_url": "https://www.equipmentworld.com/feed/",
+      "website_url": "https://www.equipmentworld.com/",
+      "description": "Equipment World serves up the latest construction news, heavy equipment, pickups and everything else that helps you get the hard work done.",
+      "followers": {
+        "facebook": 136000,
+        "twitter": 14500
+      },
+      "image_url": "https://i1.feedspot.com/943919.jpg?t=1612164991"
+    },
+    {
+      "title": "Construction Specifier",
+      "feed_url": "https://www.constructionspecifier.com/feed/",
+      "website_url": "https://www.constructionspecifier.com/",
+      "description": "Construction Specifier is a solutions for the Construction Industries.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/4510569.jpg?t=1670392495"
+    },
+    {
+      "title": "The FBi Blog",
+      "feed_url": "https://info.fbibuildings.com/blog/rss.xml",
+      "website_url": "https://info.fbibuildings.com/blog",
+      "description": "Since 1958, we have been designing and building pole barn buildings. Whether you're looking for a farm shop, horse barn, commercial building or a hobby garage. We're the preferred pole barn builder for Illinois and Indiana.",
+      "followers": {
+        "facebook": 54400,
+        "twitter": 185
+      },
+      "image_url": "https://i1.feedspot.com/5058048.jpg?t=1612933384"
+    },
+    {
+      "title": "Construction Marketing Association Blog",
+      "feed_url": "https://blog.constructionmarketingassociation.org/feed/",
+      "website_url": "https://blog.constructionmarketingassociation.org/",
+      "description": "Latest construction marketing tips and news. The Construction Marketing Association (CMA) is a professional group focused on a broad range of resources and support for marketers in the construction category.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 31500
+      },
+      "image_url": "https://i1.feedspot.com/5266923.jpg?t=1626704446"
+    },
+    {
+      "title": "Work Gearz",
+      "feed_url": "https://workgearz.com/feed/",
+      "website_url": "https://workgearz.com/",
+      "description": "WorkGearz provides in-depth gear reviews, work, and safety tips to help you work smartly. Guides are based on research and experiences by professionals.",
+      "followers": {
+        "facebook": 284,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5085026.jpg?t=1661420539"
+    },
+    {
+      "title": "The UK Construction Blog",
+      "feed_url": "https://ukconstructionblog.co.uk/feed/",
+      "website_url": "https://ukconstructionblog.co.uk/category/construction-industry-news/",
+      "description": "Welcome to The UK Construction Blog, a place where everyone is free to post news, comments, products and relevant information about the UK Construction Industry. Everything Surveying, Architectural & Construction Related.",
+      "followers": {
+        "twitter": 71800
+      },
+      "image_url": "https://i1.feedspot.com/4449765.jpg?t=1612933537"
+    },
+    {
+      "title": "Prodyogi",
+      "feed_url": "https://www.blogger.com/feeds/2609844246835890016/posts/default",
+      "website_url": "https://www.prodyogi.com/",
+      "description": "Prodyogi is an engineering online journal or weblog on civil engineering and construction technologies around the world. We share knowledge on Civil engineering, construction, technology, research, sustainability, and architecture.",
+      "followers": {
+        "facebook": 186
+      },
+      "image_url": "https://i1.feedspot.com/5384874.jpg?t=1648191101"
+    },
+    {
+      "title": "Construction Today",
+      "feed_url": "https://construction-today.com/feed/",
+      "website_url": "https://construction-today.com/",
+      "description": "Construction Today is a vital resource for anyone looking to stay up-to-date on the issues facing companies involved in the built environment. Covering areas as diverse as major infrastructure projects, house and road building, tunnels, bridges, canals, dams, wind farms, and rail construction, Construction Today also touches on all the associated disciplines that are essential for these ventures to be constructed on time and on budget.",
+      "followers": {
+        "twitter": 205
+      },
+      "image_url": "https://i1.feedspot.com/5267127.jpg?t=1618375848"
+    },
+    {
+      "title": "Construction Industry Federation",
+      "feed_url": "https://cif.ie/feed/",
+      "website_url": "https://cif.ie/news/",
+      "description": "The Construction Industry Federation (CIF) is the representative body for construction companies & contractors working across all sectors in Ireland. Discover news, topical issues, member activities, economic trends, new products and developments covering all sectors of the industry.",
+      "followers": {
+        "facebook": 13300,
+        "twitter": 12400,
+        "instagram": 3900
+      },
+      "image_url": "https://i1.feedspot.com/4510517.jpg?t=1612933442"
+    },
+    {
+      "title": "Contractors Liability Blog",
+      "feed_url": "https://contractorsliability.com/feed/",
+      "website_url": "https://contractorsliability.com/blog/",
+      "description": "Contractors Liability is here to help with all your insurance coverage needs, including specialized plans and tailored insurance policies. Their knowledgeable professionals can give you the advice you need to ensure you get the coverage you need. Go through their blog and learn more about the latest news, updates, articles, e-books, services, and much more for the insurance business.",
+      "followers": {
+        "facebook": 338,
+        "twitter": 69,
+        "instagram": 124
+      },
+      "image_url": "https://i1.feedspot.com/5119462.jpg?t=1612933392"
+    },
+    {
+      "title": "Sourceable",
+      "feed_url": "https://sourceable.net/construction/feed/",
+      "website_url": "https://sourceable.net/construction/",
+      "description": "Delivering Architecture, Construction, Engineering and Interior Design news and analysis from across Australia and around the world.",
+      "followers": {
+        "facebook": 5400,
+        "twitter": 5000
+      },
+      "image_url": "https://i1.feedspot.com/4510416.jpg?t=1670397091"
+    },
+    {
+      "title": "AEC Business",
+      "feed_url": "https://aec-business.com/feed/",
+      "website_url": "https://aec-business.com/",
+      "description": "This is a blog for innovators and game-changers in the construction industry. The blog includes podcast episodes. We share ideas, success stories, tools and techniques that you can use to increase your company's success through strategies, innovation, and development.",
+      "followers": {
+        "facebook": 529,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4863665.jpg?t=1612165026"
+    },
+    {
+      "title": "The Construction History Society News",
+      "feed_url": "http://www.constructionhistory.co.uk/feed/",
+      "website_url": "http://www.constructionhistory.co.uk/news/",
+      "description": "The CHS seeks to bring together people from a wide range of professional and academic disciplines who are enthusiastic about construction history.",
+      "followers": {
+        "twitter": 181
+      },
+      "image_url": "https://i1.feedspot.com/4510552.jpg?t=1612933655"
+    },
+    {
+      "title": "Construction Daily News",
+      "feed_url": "https://constructiondaily.news/feed/",
+      "website_url": "https://constructiondaily.news/category/construction-contracts/",
+      "description": "The Construction Daily News is a blog dedicated to construction industry news, views and opinions. We cover the latest in the world of building, engineering, architecture and design. Topics include; Construction technology innovation, green building information, sustainability tips for builders and architects, insights into new architectural trends and much more.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5454988.jpg?t=1665409390"
+    },
+    {
+      "title": "Construction Analytics",
+      "feed_url": "https://edzarenski.com/feed/",
+      "website_url": "https://edzarenski.com/",
+      "description": "Ed Zarenski retired (well, semi-retired) in 2014 from a 42 year career in construction, 30 of those years as a building project cost estimator and construction economics analyst. He created the blog Construction Analytics as a place where his readers can find in-depth, behind the headlines commentary related to the economics of building construction.",
+      "followers": {
+        "twitter": 2800
+      },
+      "image_url": "https://i1.feedspot.com/5134743.jpg?t=1612933419"
+    },
+    {
+      "title": "The Construction Seyt",
+      "feed_url": "https://www.constructionseyt.com/feed/",
+      "website_url": "https://www.constructionseyt.com/",
+      "description": "Practical Updates in Construction Law. Our purpose isn't just to educate builders and designers about developments in the industry; we strive to give practical analysis for avoiding disputes and, if disputes they become inevitable, resolving them efficiently and with optimal results.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 9600
+      },
+      "image_url": "https://i1.feedspot.com/5021401.jpg?t=1612933552"
+    },
+    {
+      "title": "Construction Placements",
+      "feed_url": "https://www.constructionplacements.com/feed/",
+      "website_url": "https://www.constructionplacements.com/",
+      "description": "Construction, Real Estate, Infrastructure, Projects, and Oil and gas markets are flooded with information and job opportunities. Still, very few platforms are available for high-caliber construction professionals to grab a slice of industry information and lucrative job offers in the current market. The mission is to provide all the job updates and necessary information to all job aspirants and students.",
+      "followers": {
+        "facebook": 68100,
+        "instagram": 18000
+      },
+      "image_url": "https://i1.feedspot.com/4791470.jpg?t=1612933347"
+    },
+    {
+      "title": "West Shore Construction Blog",
+      "feed_url": "https://westshore-construction.com/construction-blog/feed/",
+      "website_url": "https://westshore-construction.com/construction-blog/",
+      "description": "A construction blog about automated hurricane protection, home maintenance, hurricane protection, and remodeling. West Shore Construction is Florida-based hurricane protection, window, and remodeling company.",
+      "followers": {
+        "facebook": 2600,
+        "instagram": 333
+      },
+      "image_url": "https://i1.feedspot.com/5308345.jpg?t=1627971993"
+    },
+    {
+      "title": "Flodeal Inc. Blog",
+      "feed_url": "https://flodeal.com/feed/",
+      "website_url": "https://flodeal.com/blog/",
+      "description": "Flodeal is one of the best Indian granite Manufacturer and exporter company in India. We supply our Granite and marble to different countries wordlwide.",
+      "followers": {
+        "facebook": 592,
+        "twitter": 139,
+        "instagram": 133
+      },
+      "image_url": "https://i1.feedspot.com/5069363.jpg?t=1612933379"
+    },
+    {
+      "title": "Colby Construction Blog",
+      "feed_url": "https://colbyconstruction.com/feed/",
+      "website_url": "https://colbyconstruction.com/blog/",
+      "description": "Founded in 1981, Colby Construction is a team of Wisconsin custom home builders that creates timeless custom homes with exquisite exterior details and innovative interiors. Colby balances tradition with the latest conveniences to make your home your haven. We establish this hallmark on each and every home we produce and never build the same home twice. Our blog is a resource for all Milwaukee home builders, from working with an architect to decorating for the holidays. Inspiration ahead!",
+      "followers": {
+        "facebook": 559,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/5266925.jpg?t=1618208034"
+    },
+    {
+      "title": "Stahl Construction News",
+      "feed_url": "https://stahlconstruction.com/feed/",
+      "website_url": "https://stahlconstruction.com/news/",
+      "description": "Founded in 1981, Stahl provides quality, competitively-priced general contracting, construction management, and design/build services. We focus on the process of evolving the built environment and ensuring our partners find success in their endeavors.",
+      "followers": {
+        "facebook": 652,
+        "twitter": 750
+      },
+      "image_url": "https://i1.feedspot.com/4510584.jpg?t=1611837580"
+    },
+    {
+      "title": "Whirlwind Steel Blog",
+      "feed_url": "https://www.whirlwindsteel.com/feed/",
+      "website_url": "https://www.whirlwindsteel.com/building-for-life-blog/",
+      "description": "Whirlwind Steel Buildings designs and manufactures a complete line of metal building systems and metal building components including metal roofs, walls and panels.",
+      "followers": {
+        "facebook": 11200,
+        "twitter": 370
+      },
+      "image_url": "https://i1.feedspot.com/4709594.jpg?t=1612933397"
+    },
+    {
+      "title": "Federal Construction Contracting Blog",
+      "feed_url": "http://federalconstruction.phslegal.com/feed/",
+      "website_url": "https://federalconstruction.phslegal.com/",
+      "description": "This blog, produced by Cohen Seglias Pallas Greenhall & Furman, offers legal information & resources for federal construction contractors including those involved in military and civil works construction.",
+      "followers": {
+        "facebook": 366
+      },
+      "image_url": "https://i1.feedspot.com/4510394.jpg?t=1670393964"
+    },
+    {
+      "title": "Specification Product Update",
+      "feed_url": "https://specificationproductupdate.com/feed/",
+      "website_url": "https://specificationproductupdate.com/",
+      "description": "Product Update blog by Gemma Edwards for specifiers working across the architectural, construction and building sector.",
+      "followers": {
+        "facebook": 579,
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4923699.jpg?t=1612933549"
+    },
+    {
+      "title": "Havit Steel Structure Blog",
+      "feed_url": "https://www.steelbuildingstructure.com/feed/",
+      "website_url": "https://www.steelbuildingstructure.com/blog-post/",
+      "description": "Havit Steel Structure design and fabricated Steel Structure Building,Prefab Steel Building,Steel Workshop,Steel Warehouse,Steel Shed,Aircraft hangar,Garage.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 9
+      },
+      "image_url": "https://i1.feedspot.com/5047516.jpg?t=1612933589"
+    },
+    {
+      "title": "Hard Hat Chat",
+      "feed_url": "http://commercialconstructionblog.com/feed/",
+      "website_url": "http://commercialconstructionblog.com/",
+      "description": "Run through Englewood Construction Management, the Hard Hat Chat blog is an excellent resource for those interested in commercial construction, development, and management. While updated less-frequently than one would like, these blog posts offer original intuitions about niche construction sectors\u2014like new restaurant building\u2014that will, at the very least, make you think.",
+      "followers": {
+        "facebook": 442,
+        "twitter": 343
+      },
+      "image_url": "https://i1.feedspot.com/4437336.jpg?t=1612933426"
+    },
+    {
+      "title": "9 To 5 Civil",
+      "feed_url": "https://9to5civil.com/feed/",
+      "website_url": "https://9to5civil.com/",
+      "description": "9to5civil is a civil engineering educational resources website. It was founded by Bhadresh Khatri to serve all civil engineers for various civil engineering tasks. Bhadresh has worked in the Civil Engineering industry for five years and learned many things. All he wants to do is share his gathered knowledge with people.",
+      "followers": {
+        "facebook": 1,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5340843.jpg?t=1636378067"
+    },
+    {
+      "title": "Safeway Driveway Company London Blog",
+      "feed_url": "https://safewaydriveways.com/feed/",
+      "website_url": "https://safewaydriveways.com/blogs/",
+      "description": "This is a blog page of latest news & information regarding Tarmac Driveways and Block Paving by Safeway Driveways . Safeway Driveways is reputed for the best Driveway Company London, has skilled professionals with decades of experience in the construction of Resin Driveways London, block paving driveways, tarmac driveways, and raised patios.",
+      "followers": {
+        "facebook": 600,
+        "twitter": 44,
+        "instagram": 30
+      },
+      "image_url": "https://i1.feedspot.com/5469318.jpg?t=1668773815"
+    },
+    {
+      "title": "For Construction Pros",
+      "feed_url": "https://www.forconstructionpros.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22:%22home%22%7D",
+      "website_url": "https://www.forconstructionpros.com/",
+      "description": "ForConstructionPros.com compiles construction business-improvement insights we create for readers of Equipment Today, Rental, Concrete Contractor, Asphalt Contractor and Pavement Maintenance magazines. Follow for the latest articles, news, products, blogs, and videos from For Construction Pros.",
+      "followers": {
+        "facebook": 10500,
+        "twitter": 8600
+      },
+      "image_url": "https://i1.feedspot.com/5266931.jpg?t=1618213323"
+    },
+    {
+      "title": "Trimble Viewpoint Blog",
+      "feed_url": "https://www.viewpoint.com/blog/rss",
+      "website_url": "https://www.viewpoint.com/en-gb/blog",
+      "description": "We keep the construction industry connected with our software solutions for the Office, Team, and Field. Stay connected to the news you can use, right here on Viewpoint's own construction technology blog.",
+      "followers": {
+        "facebook": 2300,
+        "twitter": 2100,
+        "instagram": 701
+      },
+      "image_url": "https://i1.feedspot.com/4915729.jpg?t=1670390880"
+    },
+    {
+      "title": "Helms Construction Blog",
+      "feed_url": "https://www.helmsconstruction.ca/feed/",
+      "website_url": "https://www.helmsconstruction.ca/blog/",
+      "description": "Helms Construction is one of the best construction companies in Calgary. We are commercial builders and general contractors to fulfill your construction needs. Helms Construction specializes in supplying, installing and erecting pre-engineered buildings, such as sports arenas, warehouses and fabrication shops.",
+      "followers": {
+        "facebook": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5514808.jpg?t=1677668887"
+    },
+    {
+      "title": "ECMAS Blog",
+      "feed_url": "https://ecmas.in/feed/",
+      "website_url": "https://ecmas.in/blog/",
+      "description": "The ECMAS Group is a multi-brand conglomerate that produces a broad range of construction chemicals, unsaturated polyester resins, and specialty chemicals. Whatever your pain point - manufacturing, sourcing, R&D, and more - our team can navigate you toward a complete solution.",
+      "followers": {
+        "facebook": 814
+      },
+      "image_url": "https://i1.feedspot.com/5552237.jpg?t=1682592345"
+    },
+    {
+      "title": "The Jobsite",
+      "feed_url": "https://www.procore.com/jobsite/feed",
+      "website_url": "https://www.procore.com/jobsite",
+      "description": "Procore Technologies, Inc. provides cloud-based construction software to clients across the globe. Using its award-winning suite of project management tools, hundreds of thousands of registered Procore users manage all types of construction projects including industrial plants, office buildings, apartment complexes, university facilities, retail centers, and more. Follow construction news by Jobsite to get the latest stories impacting construction, and learn what practices are driving the industry forward.",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2800,
+        "instagram": 24700
+      },
+      "image_url": "https://i1.feedspot.com/5266929.jpg?t=1618208263"
+    },
+    {
+      "title": "ONE-KEY\u2122",
+      "feed_url": "https://onekeyresources.milwaukeetool.com/en/rss.xml",
+      "website_url": "https://onekeyresources.milwaukeetool.com/en",
+      "description": "Construction industry news and insights from the developers of ONE-KEY, Milwaukee Tool's equipment management software application. Get asset management, smart tool technology, crib inventory tips, and more!",
+      "followers": {
+        "facebook": 1200000,
+        "twitter": 90800,
+        "instagram": 2000000
+      },
+      "image_url": "https://i1.feedspot.com/5293906.jpg?t=1623927176"
+    },
+    {
+      "title": "Construction Business Owner",
+      "feed_url": "https://www.constructionbusinessowner.com//feed",
+      "website_url": "https://www.constructionbusinessowner.com/",
+      "description": "Construction Business Owner (CBO) is the leading business magazine for contractors and is designed to help owners of construction firms run successful businesses. Founded in 2004, CBO provides real-world business management education and the kind of management knowledge that is of real value to the owners of construction companies. CBO's monthly trade magazine, weekly newsletters, and digital media products offer construction industry professionals the business management tips they need to run a successful business.",
+      "followers": {
+        "facebook": 6200,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/5266926.jpg?t=1618210756"
+    },
+    {
+      "title": "UKREiiF",
+      "feed_url": "https://www.built-environment-networking.com/feed/",
+      "website_url": "https://www.ukreiif.com/investment-news/",
+      "description": "The UK's leading provider of networking and development insights events in the construction and property industry, connecting public & private sectors.",
+      "followers": {
+        "facebook": 153,
+        "twitter": 8100,
+        "instagram": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5118762.jpg?t=1612933450"
+    },
+    {
+      "title": "Construction Informer",
+      "feed_url": "https://constructioninformer.com/feed/",
+      "website_url": "https://constructioninformer.com/",
+      "description": "There's always a lot happening in construction and it is a very fascinating industry. How magical can it get taking two-dimensional plans, or plans that exist as 3D virtual renderings, and building them in the true third dimension? Most people today seldom get a chance to do that! This blog is a place to find information and participate in free-spirited discussions about building structures and the things that make up the built environment. I hope you find it is useful.",
+      "followers": {
+        "twitter": 3
+      },
+      "image_url": "https://i1.feedspot.com/5266935.jpg?t=1622180273"
+    },
+    {
+      "title": "Granger Construction Blog",
+      "feed_url": "https://www.grangerconstruction.com/blog/feed/",
+      "website_url": "http://www.grangerconstruction.com/blog/",
+      "description": "At Granger Construction, we strive to truly understand our customers' vision and aspirations. We listen intently, collaborate closely, and consistently build results that make a positive impact on the communities they serve.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 774
+      },
+      "image_url": "https://i1.feedspot.com/4510565.jpg?t=1670398550"
+    },
+    {
+      "title": "Sunland Construction Blog",
+      "feed_url": "https://sunlandconstruction.com/feed/",
+      "website_url": "https://sunlandconstruction.com/blog-standard/",
+      "description": "For more than 40 years, Sunland Construction, Inc. and our family of companies have been leaders in innovative pipeline construction and related energy services, while assuring a safe and healthy work environment for everyone. Our goal is to perform quality work that meets or exceeds our clients requirements and expectations, ensuring positive outcomes and responsible care of the environment.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5021256.jpg?t=1612933648"
+    },
+    {
+      "title": "Builtlogy",
+      "feed_url": "https://builtlogy.com/feed/",
+      "website_url": "https://builtlogy.com/",
+      "description": "Builtlogy is the digital publication of Sihela Consultants. On this site, you will find articles and information related to the construction industry.",
+      "followers": {
+        "facebook": 736
+      },
+      "image_url": "https://i1.feedspot.com/5424789.jpg?t=1660135404"
+    },
+    {
+      "title": "Paradox Blog",
+      "feed_url": "https://blog.paradoxaccess.com/rss.xml",
+      "website_url": "https://blog.paradoxaccess.com/",
+      "description": "Paradox's Blog is a hub for thought leadership in the areas of construction, engineering, project management, leadership, and business in the civil construction and geotechnical engineering industries.",
+      "followers": {
+        "facebook": 875,
+        "twitter": 261,
+        "instagram": 1100
+      },
+      "image_url": "https://i1.feedspot.com/5060830.jpg?t=1612165020"
+    },
+    {
+      "title": "Dirty Girl Construction Blog",
+      "feed_url": "http://www.dirtygirlconstruction.com/blog?format=RSS",
+      "website_url": "http://www.dirtygirlconstruction.com/blog/",
+      "description": "Dirty Girl Construction, Inc. (DGC) is a full-service general contracting company, serving both residential and commercial clients in the greater Los Angeles area.",
+      "followers": {
+        "facebook": 670,
+        "twitter": 49,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/4510521.jpg?t=1612933611"
+    },
+    {
+      "title": "DRB Development Solutions Blog",
+      "feed_url": "https://www.consultdrb.com/feed/",
+      "website_url": "https://www.consultdrb.com/blog/",
+      "description": "DRB Consulting is an Atlanta-based construction Program Management firm that provides in-depth advisory services to owners, lenders and developers in the real estate development, design, construction and litigation industries. From project management to disaster restoration, DRB tailors our construction management services to meet your unique needs.",
+      "followers": {
+        "facebook": 172
+      },
+      "image_url": "https://i1.feedspot.com/4857175.jpg?t=1612933563"
+    },
+    {
+      "title": "Extranet Evolution",
+      "feed_url": "http://extranetevolution.com/feed/",
+      "website_url": "http://extranetevolution.com/",
+      "description": "This blog is a bit dated on the user interface side of things, but it makes up for that by providing a great level of in-depth data. Within their posts, they offer graphs and data sets that will help you better understand what is going on in the construction industry.",
+      "followers": {
+        "facebook": 82,
+        "twitter": 13900
+      },
+      "image_url": "https://i1.feedspot.com/446387.jpg?t=1612933436"
+    },
+    {
+      "title": "Fenagh Engineering and Testing Blog",
+      "feed_url": "https://www.fenaghengineering.com/feed/",
+      "website_url": "https://www.fenaghengineering.com/blog/",
+      "description": "Fenagh Engineering & Testing was established to address the structural integrity of construction projects in the Greater New England, New York, Las Vegas, and California areas. Fenagh has provided special inspections, materials testing, and geotechnical engineering services for a wide array of private and public sector development.",
+      "followers": {
+        "twitter": 129
+      },
+      "image_url": "https://i1.feedspot.com/5021394.jpg?t=1612933545"
+    },
+    {
+      "title": "360 Industrial Group Blog",
+      "feed_url": "https://360industrialgroup.com/feed/",
+      "website_url": "https://360industrialgroup.com/blog/",
+      "description": "Read 360 Industrial Group's blog to stay up to date - from demolition safety to scrap metal recycling, plus more!",
+      "followers": {
+        "facebook": 129,
+        "instagram": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5122363.jpg?t=1612933573"
+    },
+    {
+      "title": "Steel Fabrication Services Australia",
+      "feed_url": "https://weldinprocess.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://weldinprocess.blogspot.com/",
+      "description": "Get the latest about Steel Fabrication from Steel Fabrication Services Australia",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5021412.jpg?t=1670475076"
+    },
+    {
+      "title": "Cement Marketing Consultant",
+      "feed_url": "https://cementmarketingconsultant.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://cementmarketingconsultant.blogspot.com/",
+      "description": "News clips from all over on Cement Markets, Cement Marketing, Sales Consulting, Marketing Consulting for the Cement Marketing Consultant, Cement Marketing Consultant Google+.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5021391.jpg?t=1670475262"
+    },
+    {
+      "title": "Halpert Life Safety Blog",
+      "feed_url": "https://halpertlifesafety.com/feed/",
+      "website_url": "https://halpertlifesafety.com/blog/",
+      "description": "Halpert Life Safety Consulting LLC partners in passive fire protection solutions for new construction and building maintenance",
+      "followers": {
+        "facebook": 174,
+        "twitter": 142
+      },
+      "image_url": "https://i1.feedspot.com/5129115.jpg?t=1612933602"
+    },
+    {
+      "title": "Rausch Coleman Homes",
+      "feed_url": "http://rauschcolemanhomes.blogspot.com/feeds/posts/default",
+      "website_url": "http://rauschcolemanhomes.blogspot.com/",
+      "description": "More Than A Home Builder. Rausch Coleman Homes has become one of the top homebuilders in the United States. For over 65 years, we've helped families better their lives and achieve their dream of home ownership.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5148696.jpg?t=1670475781"
+    },
+    {
+      "title": "Develop Coaching Blog",
+      "feed_url": "https://developcoaching.co.uk/blog/feed/",
+      "website_url": "https://developcoaching.co.uk/blog/",
+      "description": "Catch up on the latest news in the construction industry and inspiring blogs to challenge your thinking.",
+      "followers": {
+        "facebook": 2400,
+        "twitter": 1400
+      },
+      "image_url": "https://i1.feedspot.com/5160735.jpg?t=1670395444"
+    },
+    {
+      "title": "Dispute Data News",
+      "feed_url": "https://www.disputedata.io/blog-feed.xml",
+      "website_url": "https://www.disputedata.io/news",
+      "description": "Dispute Data was founded to allow construction and engineering clients benefit from the significant time, cost and quality benefits and improved outcomes that flow from early, experience backed data services. We work with commercial, expert and legal teams to help them first understand the risk and then capitalise on the opportunity of project data.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5172545.jpg?t=1670398801"
+    },
+    {
+      "title": "Construction Home",
+      "feed_url": "https://constructionhome2020.blogspot.com/feeds/posts/default",
+      "website_url": "https://constructionhome2020.blogspot.com/",
+      "description": "Construction home is a good platform for obtaining practical and theoretical knowledge of building construction For Civil Engineers And Supervisor.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5174753.jpg?t=1612933638"
+    },
+    {
+      "title": "Equipment Radar \u00bb Construction",
+      "feed_url": "https://www.equipmentradar.com/blog/feed/rss/construction",
+      "website_url": "https://www.equipmentradar.com/blog/tags/construction",
+      "description": "Equipment Radar is an online marketplace to buy and sell new and used agriculture, construction, material handling and transportation equipment. Coverage for the construction industry. Our posts include industry news coverage, sector trends, guides, items we think are helpful as well as macro thoughts.",
+      "followers": {
+        "facebook": 470,
+        "twitter": 480
+      },
+      "image_url": "https://i1.feedspot.com/5271766.jpg?t=1618987338"
+    },
+    {
+      "title": "M.T. Copeland \u00bb Construction Basics",
+      "feed_url": "https://mtcopeland.com/blog/category/construction-basics/feed/",
+      "website_url": "https://mtcopeland.com/blog/category/construction-basics/",
+      "description": "Our articles cover industry highlights and trends in the construction world. Learn the latest news, career advice, and practical tips to help you at the job site.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 14
+      },
+      "image_url": "https://i1.feedspot.com/5197115.jpg?t=1600265071"
+    },
+    {
+      "title": "Construction Junkie Blog",
+      "feed_url": "https://feeds.feedburner.com/ConstructionJunkieBlog-ConstructionJunkie",
+      "website_url": "https://www.constructionjunkie.com/blog/",
+      "description": "Construction Junkie is the construction industry's source for all of the latest and greatest Construction News, Technology, Safety, Tools, and more!",
+      "followers": {
+        "facebook": 7300,
+        "twitter": 14800,
+        "instagram": 5900
+      },
+      "image_url": "https://i1.feedspot.com/4510497.jpg?t=1612164980"
+    },
+    {
+      "title": "Handoff AI Estimating Blog",
+      "feed_url": "https://www.handoff.ai/blog",
+      "website_url": "https://www.handoff.ai/blog",
+      "description": "1build uses machine intelligence to convert building blueprints into material shopping lists and cost estimates. It is a critical pain point for 3.2 mln builders in the US. We are on a mission to create a data-driven approach for humans and algorithms to collaborate on building design and construction. We were founded by top leaders hailing from technology and AEC industries who are passionate about re-imagining preconstruction from first principles. The 1build construction blog features news, stories, research, and resources on construction cost estimating, bidding, and project management.",
+      "followers": {
+        "facebook": 5200,
+        "twitter": 204
+      },
+      "image_url": "https://i1.feedspot.com/5266934.jpg?t=1618213899"
+    },
+    {
+      "title": "PC Construction Blog",
+      "feed_url": "https://pcconstruction.com/news/feed/",
+      "website_url": "https://pcconstruction.com/news/",
+      "description": "PC Construction shares over half a century of industry-leading excellence with every client we meet. We offer general contracting, construction management, and design-build services to private and public companies for projects of all sizes - from a single office fit-up to water supply programs valued at over $300 million. Follow our blog to get the latest updates on construction projects.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/5266928.jpg?t=1618211941"
+    },
+    {
+      "title": "Acme Brick",
+      "feed_url": "https://brick.com/stories/",
+      "website_url": "https://brick.com/stories/",
+      "description": "American manufacturer and distributor of brick, masonry-related products, flooring, iron doors, and more!",
+      "followers": {
+        "facebook": 7200,
+        "twitter": 1000,
+        "instagram": 4900
+      },
+      "image_url": "https://i1.feedspot.com/5021398.jpg?t=1612933364"
+    },
+    {
+      "title": "Building Design + Construction",
+      "feed_url": "https://feeds.feedburner.com/bdcnetwork/news",
+      "website_url": "https://www.bdcnetwork.com/",
+      "description": "An award-winning Building Design + Construction magazine that provides the best daily news, trends, and more for Architects, Engineers, and Contractors. BD+C's cause is to provide essential solutions that inspire building teams to design and construct great places for people.",
+      "followers": {
+        "facebook": 44700,
+        "twitter": 24200,
+        "instagram": 5400
+      },
+      "image_url": "https://i1.feedspot.com/963179.jpg?t=1618205441"
+    },
+    {
+      "title": "Build LLC Blog",
+      "feed_url": "https://blog.buildllc.com/feed/",
+      "website_url": "https://blog.buildllc.com/",
+      "description": "A discussion of modern design from the Northwest. This blog is really about architecture, but they deserve a mention as one of my favorites. The projects and ideas they share are stunningly artistic and wonderfully designed. If you are into modern architecture, check them out.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 4500,
+        "instagram": 21500
+      },
+      "image_url": "https://i1.feedspot.com/773214.jpg?t=1612933394"
+    },
+    {
+      "title": "Fieldwire Blog",
+      "feed_url": "https://www.fieldwire.com/feed.xml",
+      "website_url": "https://www.fieldwire.com/blog/",
+      "description": "Fieldwire is an end-to-end Jobsite software - solution for the construction industry. With its instinctive mobile application, Fieldwire connects the entire project team - from the subcontractor's foremen to the general contractor's project manager - enabling efficient and real-time information sharing. Used on more than 800,000 projects worldwide, Fieldwire has saved its users millions of dollars by powering clear and efficient communication between the office and the field. Follow our blog feed for the latest construction management updates.",
+      "followers": {
+        "facebook": 13500,
+        "twitter": 11400
+      },
+      "image_url": "https://i1.feedspot.com/5266927.jpg?t=1618207796"
+    },
+    {
+      "title": "LetsBuild Blog",
+      "feed_url": "https://www.letsbuild.com/feed",
+      "website_url": "https://www.letsbuild.com/blog",
+      "description": "Construction is one of the biggest sectors in the world in terms of value, but maybe even bigger in terms of its impact on our lives. We live and work in buildings, we travel to work or on holiday using infrastructure, we are surrounded by the output of this industry.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 7800
+      },
+      "image_url": "https://i1.feedspot.com/4707706.jpg?t=1599485579"
+    },
+    {
+      "title": "ProBuilder Magazine",
+      "feed_url": "https://www.probuilder.com/feed",
+      "website_url": "https://www.probuilder.com/",
+      "description": "Professional Builder magazine provides breaking news, industry trends, product innovations, and best practices for the U.S. home building industry. Since 1936, Professional Builder has been a leading business-to-business media source for the U.S. housing industry, delivering award-winning content in print, digital, video, email, social, and in-person channels.",
+      "followers": {
+        "facebook": 40200,
+        "twitter": 7200,
+        "instagram": 5100
+      },
+      "image_url": "https://i1.feedspot.com/1731791.jpg?t=1651752090"
+    },
+    {
+      "title": "4castplus Blog",
+      "feed_url": "https://4castplus.com/feed/",
+      "website_url": "https://4castplus.com/blog/",
+      "description": "4castplus Blog reports on trends, and ideas in the project management space, most often in construction and infrastructure. 4castplus is a progressive, innovative technology company that understands that software should be easy to use, rich in functionality, with intelligent workflows that simplify the complexities of construction projects.",
+      "followers": {
+        "facebook": 519,
+        "twitter": 442
+      },
+      "image_url": "https://i1.feedspot.com/5452162.jpg?t=1664790851"
+    },
+    {
+      "title": "cnstrctr",
+      "feed_url": "https://www.cnstrctr.com/feed/",
+      "website_url": "https://www.thelienzone.com/",
+      "description": "cnstrcr.com is a social construction website and blog for people to come and share their ideas, stories, and advice.",
+      "followers": {
+        "facebook": 16400,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/4886697.jpg?t=1612933409"
+    },
+    {
+      "title": "The Lien Zone",
+      "feed_url": "https://www.thelienzone.com/feed/",
+      "website_url": "https://www.thelienzone.com/",
+      "description": "Find answers to all of your Florida Construction Law questions, TheLienZone.com, Published weekly by board certified Miami construction lawyer Alex Barthet.",
+      "followers": {
+        "facebook": 434,
+        "twitter": 636,
+        "instagram": 10800
+      },
+      "image_url": "https://i1.feedspot.com/4654860.jpg?t=1612933567"
+    },
+    {
+      "title": "Talk.Build",
+      "feed_url": "https://talk.build/blogs/rss",
+      "website_url": "https://talk.build/",
+      "description": "Welcome to talk.build, an independent website set up to exchange news and views about the construction industry. We are not linked to any other publishing group and only post blogs that want to contribute knowledge, information and up to date views about our market place.",
+      "followers": {
+        "twitter": 230
+      },
+      "image_url": "https://i1.feedspot.com/4734927.jpg?t=1670394536"
+    },
+    {
+      "title": "Rabbet Blog",
+      "feed_url": "https://rabbet.com/blog/feed",
+      "website_url": "https://rabbet.com/blog",
+      "description": "Rabbet is the only construction finance platform for real estate lenders and developers. Check out the latest and greatest from the team at Rabbet. Read through our blog posts covering the ins and outs of construction loans and financing.",
+      "followers": {
+        "facebook": 113,
+        "twitter": 204
+      },
+      "image_url": "https://i1.feedspot.com/4906364.jpg?t=1612156939"
+    },
+    {
+      "title": "Mates in Construction News",
+      "feed_url": "https://matesinconstruction.org.au/feed/",
+      "website_url": "https://www.bigrentz.com/blog",
+      "description": "Mates in Construction is a charity established in 2008 to reduce the high level of suicide among Australian construction workers. Show your support today.",
+      "followers": {
+        "facebook": 18000,
+        "twitter": 1700,
+        "instagram": 6400
+      },
+      "image_url": "https://i1.feedspot.com/4510542.jpg?t=1612933592"
+    },
+    {
+      "title": "BigRentz Blog",
+      "feed_url": "https://www.bigrentz.com/blog",
+      "website_url": "https://www.bigrentz.com/blog",
+      "description": "Blog topics cover Construction news, safety measures, equipment knowledge, business, technology in construction, trends, and general tips. BigRentz is an online construction equipment rental marketplace & is innovating the way construction equipment is rented.",
+      "followers": {
+        "facebook": 1400,
+        "twitter": 984,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5296931.jpg?t=1624874523"
+    },
+    {
+      "title": "eSUB Construction Blog",
+      "feed_url": "https://esub.com/feed/",
+      "website_url": "https://esub.com/blog",
+      "description": "The eSUB mission is to champion and elevate trade contractors to the forefront of the construction tech marketplace. Our eSUB team members are passionate and results-driven individuals deeply committed to empowering trade contractors and making a positive impact to improve construction. That passion has translated into strong customer retention and consistent ratings as the leader in customer satisfaction and usability. The eSUB Construction blog features industry issues, topics, and news. Find out what is happening in the construction world of subcontractors.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 2300,
+        "instagram": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5266921.jpg?t=1618221945"
+    },
+    {
+      "title": "Lontto Blog",
+      "feed_url": "https://www.block-machine.net/blog/feed/",
+      "website_url": "https://www.block-machine.net/blog/",
+      "description": "We are 30 years of experience manufacturing construction machinery, including Brick making machine, Concrete mixing plant, AAC block plant, Pipe making machine. Follow to get updates.",
+      "followers": {
+        "facebook": 207700,
+        "twitter": 29
+      },
+      "image_url": "https://i1.feedspot.com/5070342.jpg?t=1670476991"
+    },
+    {
+      "title": "CORE Construction News",
+      "feed_url": "http://www.coreconstruction.com/feed/",
+      "website_url": "https://coreconstruction.com/news/",
+      "description": "Utilizing comprehensive construction knowledge and industry expertise, CORE provides exceptional building services in 11 markets.",
+      "followers": {
+        "twitter": 381,
+        "instagram": 2600
+      },
+      "image_url": "https://i1.feedspot.com/4510555.jpg?t=1612933530"
+    },
+    {
+      "title": "Constructech",
+      "feed_url": "https://constructech.com/feed/",
+      "website_url": "https://www.eliteelevators.com/blog/",
+      "description": "Constructech is a fantastic resource that offers some news, but also intuitive information that catches attention and provides valuable insight to the construction industry. The blog can also come in the form of a magazine, which is preferable to some.",
+      "followers": {
+        "twitter": 13900
+      },
+      "image_url": "https://i1.feedspot.com/4510418.jpg?t=1612933373"
+    },
+    {
+      "title": "Elite Elevators Blog",
+      "feed_url": "https://www.eliteelevators.com/blog/feed/",
+      "website_url": "https://www.eliteelevators.com/blog/",
+      "description": "This is Elite Elevators corporate blog post, where we will share about our various product details, features, and their benefits.",
+      "followers": {
+        "facebook": 41700,
+        "twitter": 55
+      },
+      "image_url": "https://i1.feedspot.com/5049184.jpg?t=1612933645"
+    }
+  ]
+}

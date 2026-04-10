@@ -1,0 +1,230 @@
+{
+  "category": "API (Application Programming Interface)",
+  "source_url": "https://rss.feedspot.com/api_rss_feeds",
+  "feeds": [
+    {
+      "title": "Nordic APIs Blog",
+      "feed_url": "https://nordicapis.com/feed/",
+      "website_url": "https://nordicapis.com/blog/",
+      "description": "Nordic APIs is the number one place for information and resources on API technology and business. Ebooks, events, blog posts and much much more! Follow this blog to learn how to make smarter tech decisions using APIs.",
+      "followers": {
+        "facebook": 631,
+        "twitter": 5500
+      },
+      "image_url": "https://i1.feedspot.com/4888470.jpg?t=1622695383"
+    },
+    {
+      "title": "APIscene",
+      "feed_url": "https://www.apiscene.io/feed/",
+      "website_url": "https://www.apiscene.io/",
+      "description": "Dive deep into the API Economy with the API Scene. Read about API platform practices, cloud APIs, and how to participate in the API platform. Follow this blog for more updates.",
+      "followers": {
+        "twitter": 9500
+      },
+      "image_url": "https://i1.feedspot.com/5056545.jpg?t=1622695386"
+    },
+    {
+      "title": "apilayer Blog",
+      "feed_url": "https://blog.apilayer.com/feed/",
+      "website_url": "https://blog.apilayer.com/",
+      "description": "APILayer is a leading provider of cloud-based API and Software-as-a-Service (SaaS) brands for developers, startups as well as Fortune 500s. With close to 1 million B2B customers worldwide, our scalable products range from automated data verification, lookup, conversion and enrichment all the way to productivity solutions in the Electronic Signature and Cloud Accounting space.",
+      "followers": {
+        "facebook": 48100,
+        "twitter": 1500,
+        "instagram": 2300
+      },
+      "image_url": "https://i1.feedspot.com/5450391.jpg?t=1664280066"
+    },
+    {
+      "title": "API Security",
+      "feed_url": "https://apisecurity.io/feed/index.xml",
+      "website_url": "https://apisecurity.io/",
+      "description": "API Security is a community website for all things related to API security. Our daily news and weekly API Security newsletter cover the latest breaches, vulnerabilities, standards, best practices, regulations, and technology.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5472066.jpg?t=1687413442"
+    },
+    {
+      "title": "Moesif Blog",
+      "feed_url": "https://www.moesif.com/blog/feed.xml",
+      "website_url": "https://www.moesif.com/blog/",
+      "description": "We built the most advanced API Analytics service helping everyone at API-driven organizations learn from their API data and make smarter decisions that drive growth. Explore the best practices for Building and Growing API Platforms.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604724.jpg?t=1687413530"
+    },
+    {
+      "title": "APIs You Won't Hate Blog",
+      "feed_url": "https://apisyouwonthate.com/rss/",
+      "website_url": "https://apisyouwonthate.com/blog/",
+      "description": "APIs You won't Hate is a community resource for building and designing and well-crafted APIs. We publish books, articles, podcasts, and a newsletter for API Devs around the world. APIs You Won't Hate started out as a book, with founder Phil Sturgeon pouring everything API related he knew, all the problems he faced, all the design decisions he wish he thought about earlier. Phil soon teamed up with cofounder Mike Bifulco, a developer advocate and startup founder, to build the APIs You Won't Hate community.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604715.jpg?t=1687413575"
+    },
+    {
+      "title": "Tyk API Expertise Blog",
+      "feed_url": "https://tyk.io/feed/",
+      "website_url": "https://tyk.io/blog/",
+      "description": "Have a look through our articles on API. They might inspire you to do great things. All written by our own Tyklings. Tyk Open Source API Gateway has now been installed by tens of thousands of businesses. Our fantastic team of engineers, collaborating with the open source community, operating from our offices in London, Atlanta and Singapore, means that Tyk is now deployed into some of the world's largest enterprises and trusted with mission-critical systems in highly regulated industries.",
+      "followers": {
+        "facebook": 364,
+        "twitter": 1900
+      },
+      "image_url": "https://i1.feedspot.com/5604725.jpg?t=1687413450"
+    },
+    {
+      "title": "MuleSoft Blog \u00bb Learn APIs",
+      "feed_url": "https://blogs.mulesoft.com/learn-apis/feed/",
+      "website_url": "https://blogs.mulesoft.com/learn-apis/",
+      "description": "An API is a software intermediary that allows two applications to talk to each other. Learn everything you need to know about API-led connectivity and how to implement APIs to drive innovation in your organization. The future of business is AI + Data + CRM. MuleSoft, the world's #1 integration and API platform, makes it easy to connect data from any system to create connected experiences, faster.",
+      "followers": {
+        "facebook": 89200,
+        "twitter": 95100,
+        "instagram": 20300
+      },
+      "image_url": "https://i1.feedspot.com/5604718.jpg?t=1687413466"
+    },
+    {
+      "title": "OpenAPI Initiative Blog",
+      "feed_url": "https://www.openapis.org/feed",
+      "website_url": "https://www.openapis.org/blog",
+      "description": "The OpenAPI Initiative provides an open source, technical community, within which industry participants may easily contribute to building a vendor-neutral, portable and an open specification for providing technical metadata for REST APIs - the 'OpenAPI Specification' (OAS).",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5225129.jpg?t=1687419643"
+    },
+    {
+      "title": "OpenAPIHub API Blog",
+      "feed_url": "https://blog.openapihub.com/en-us/feed/",
+      "website_url": "https://blog.openapihub.com/en-us/",
+      "description": "The OpenAPIHub blog is a forum for the discussion of topics related to API development, management and go-to-market etc. Readers can read about and share their own technical know-how, industry insights, and the latest buzz in technology and events.",
+      "followers": {
+        "facebook": 51,
+        "twitter": 4
+      },
+      "image_url": "https://i1.feedspot.com/5604722.jpg?t=1687413499"
+    },
+    {
+      "title": "Newsdata.io Blog",
+      "feed_url": "https://newsdata.io/blog/feed/",
+      "website_url": "https://newsdata.io/blog/",
+      "description": "Get the latest news updates on News API and stay updated about the top trends and technological advancements on the NewsData.io blog. Newsdata.io, a data analytical tool, is devoted to searching, collecting, and tracking worldwide news in real-time.",
+      "followers": {
+        "facebook": 106,
+        "twitter": 913,
+        "instagram": 411
+      },
+      "image_url": "https://i1.feedspot.com/7256625.jpg?t=1708456290"
+    },
+    {
+      "title": "Ambassador API Gateway Blog",
+      "feed_url": "https://blog.getambassador.io/feed",
+      "website_url": "https://blog.getambassador.io/",
+      "description": "Ambassador API Gateway is an open-source, Kubernetes-native API Gateway built on Envoy medium. Follow this blog to know more. Code, ship, and run apps for Kubernetes faster and easier than ever - powered by our industry-leading developer experience.",
+      "followers": {
+        "facebook": 1300,
+        "twitter": 2400
+      },
+      "image_url": "https://i1.feedspot.com/5056467.jpg?t=1622695395"
+    },
+    {
+      "title": "RapidAPI Blog",
+      "feed_url": "https://rapidapi.com/blog/feed/",
+      "website_url": "https://rapidapi.com/blog/",
+      "description": "RapidAPI is the world's largest API marketplace where over a million developers find and connect to thousands of public APIs. Use RapidAPI to Find, Connect, & Share 1000s of APIs using our Multi-cloud platform. Improve Developer Experience with API Design, Testing, Monitoring, & More! Check out the RapidAPI Blog which is your #1 source for API tutorials, industry news, and more.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 119200
+      },
+      "image_url": "https://i1.feedspot.com/5294131.jpg?t=1624003875"
+    },
+    {
+      "title": "Dana Epp Blog",
+      "feed_url": "https://danaepp.com/feed",
+      "website_url": "https://danaepp.com/",
+      "description": "Hi, I'm Dana Epp. I write this blog, build and break software for a living, and am a Microsoft Regional Director and Developer Security MVP. I'm advising others on how to build and break their applications and environments.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604717.jpg?t=1687413382"
+    },
+    {
+      "title": "API Handyman Blog",
+      "feed_url": "https://apihandyman.io/feed.xml",
+      "website_url": "https://apihandyman.io/blog/",
+      "description": "Hi! I'm Arnaud Lauret, the API Handyman and author of The Design of Web APIs. I like to share what I do, struggle with, learn, and teach while working in the API space.",
+      "followers": {
+        "twitter": 5700
+      },
+      "image_url": "https://i1.feedspot.com/5604716.jpg?t=1687413212"
+    },
+    {
+      "title": "The ReadMe Blog",
+      "feed_url": "https://blog.readme.com/rss/",
+      "website_url": "https://blog.readme.com/",
+      "description": "APIs and the Developer Experience, explained. Expert articles on documentation and user experience for software developers. ReadMe gives teams the tools they need to create and manage beautiful documentation with ease, monitor their APIs, and connect with their users in more personal ways.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5604719.jpg?t=1687413410"
+    },
+    {
+      "title": "API Friends",
+      "feed_url": "https://apifriends.com/feed/",
+      "website_url": "https://blog.axway.com/",
+      "description": "API Friends in an expert community of thought leaders, product marketers, product managers, developers, enterprise architects, sales engineers and professional consultants working on modern digital projects using APIs. Follow to get regular updates from this blog in your inbox.",
+      "followers": {
+        "facebook": 2900,
+        "twitter": 5100,
+        "instagram": 829
+      },
+      "image_url": "https://i1.feedspot.com/5056450.jpg?t=1687500153"
+    },
+    {
+      "title": "Traceable API Security Blog",
+      "feed_url": "https://www.traceable.ai/blog",
+      "website_url": "https://www.traceable.ai/blog",
+      "description": "Stay up to date with expert insights on application security. Traceable has grown to be the industry's leading API security platform that identifies and tests APIs, evaluates API risk posture, stops API attacks, and provides deep analytics for threat hunting and forensic research.",
+      "followers": {
+        "twitter": 2500
+      },
+      "image_url": "https://i1.feedspot.com/5604728.jpg?t=1687413354"
+    },
+    {
+      "title": "Postman Blog",
+      "feed_url": "https://blog.postman.com/feed/",
+      "website_url": "https://blog.postman.com/",
+      "description": "The Postman blog is your hub for API resources, news, and community. Learn about the Postman API Platform and much more. Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs - faster.",
+      "followers": {
+        "twitter": 42500
+      },
+      "image_url": "https://i1.feedspot.com/5604723.jpg?t=1687413495"
+    },
+    {
+      "title": "Dream Factory",
+      "feed_url": "https://blog.dreamfactory.com/feed/",
+      "website_url": "https://blog.dreamfactory.com/",
+      "description": "Expert advice to help you instantly create APIs and build applications faster.",
+      "followers": {
+        "facebook": 38800,
+        "twitter": 4400
+      },
+      "image_url": "https://i1.feedspot.com/5155990.jpg?t=1622695404"
+    },
+    {
+      "title": "Stoplight API Design Blog",
+      "feed_url": "https://blog.stoplight.io/rss.xml",
+      "website_url": "https://blog.stoplight.io/",
+      "description": "All you need to know about API design, API programs, & API governance. Read API blogs on the official Stoplight Blog, written by API industry experts. Stoplight is a collaborative API design platform that integrates seamlessly into your existing workflows to enable all stakeholders working with APIs to be more productive.",
+      "followers": {
+        "facebook": 910,
+        "twitter": 3200
+      },
+      "image_url": "https://i1.feedspot.com/5604720.jpg?t=1687413503"
+    },
+    {
+      "title": "Wib API Security Blog",
+      "feed_url": "https://wib.com/wow-blog/feed/",
+      "website_url": "https://www.f5.com/company/blog",
+      "description": "THE source for all things API security. Wib experts explore best practices, industry trends, evolving threats and more in the WOW blog. Wib is on a mission to secure the APIs that power today's modern economy. By delivering API integrity and assurance we liberate modern organisations from the security constraints that threaten business evolution, integrity and growth.",
+      "followers": {
+        "twitter": 20,
+        "instagram": 55
+      },
+      "image_url": "https://i1.feedspot.com/5604714.jpg?t=1687413217"
+    }
+  ]
+}

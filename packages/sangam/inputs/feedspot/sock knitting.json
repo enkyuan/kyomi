@@ -1,0 +1,61 @@
+{
+  "category": "Sock Knitting",
+  "source_url": "https://rss.feedspot.com/sock_knitting_rss_feeds",
+  "feeds": [
+    {
+      "title": "Traveling Sock Knitter",
+      "feed_url": "https://www.travelingsockknitter.net/feed/",
+      "website_url": "https://www.travelingsockknitter.net/",
+      "description": "A blog and video podcast about knitting, spinning, books, and board games.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4833118.jpg?t=1611118571"
+    },
+    {
+      "title": "Knit Better Socks",
+      "feed_url": "http://knitbettersocks.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://knitbettersocks.blogspot.com/",
+      "description": "A blog packed with sock-knitting and sock-spinning techniques.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4839257.jpg?t=1611118490"
+    },
+    {
+      "title": "CoopKnits Blog",
+      "feed_url": "http://www.coopknits.co.uk/blog?format=rss",
+      "website_url": "http://www.coopknits.co.uk/blog",
+      "description": "Knitwear designer with a focus on small and intricate pieces that are both beautiful and functional.",
+      "followers": {
+        "twitter": 5600,
+        "instagram": 14900
+      },
+      "image_url": "https://i1.feedspot.com/3713634.jpg?t=1611118249"
+    },
+    {
+      "title": "Knitting Only Socks",
+      "feed_url": "http://onlysocks.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://onlysocks.blogspot.com/",
+      "description": "I am a wife, the mother of four grown sons, and nana to five grandchildren. I work part-time as a librarian/ archivist at a university library. I enjoy knitting socks, hats, mittens and other items for charity, reading, hand quilting, growing old-fashioned flowers, and bird watching.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4840231.jpg?t=1611118441"
+    },
+    {
+      "title": "sock-crazy",
+      "feed_url": "http://luvsockknitting.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://luvsockknitting.blogspot.com/",
+      "description": "I learned to knit as a child but abandoned it for more childlike activities. I started again as an adult and knit almost every day. Socks are my favorite thing to knit but I also am hooked on shawls, fingerless mitts, hats, and cowls. I like smaller projects that can be finished in a reasonable length of time.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4840221.jpg?t=1611118294"
+    },
+    {
+      "title": "Winwick Mum",
+      "feed_url": "https://www.winwickmum.co.uk/feeds/posts/default?alt=rss",
+      "website_url": "https://www.winwickmum.co.uk/",
+      "description": "An award-winning creative lifestyle blog featuring the hugely popular free Sockalong sock-knitting tutorials for beginners - let the fun begin! I'm Christine. I live in Winwick, a small village in Cheshire, and this is where I write about what makes me happy: my family, knitting, gardening, home-making, enjoying the outdoors.",
+      "followers": {
+        "facebook": 7800,
+        "twitter": 425,
+        "instagram": 15800
+      },
+      "image_url": "https://i1.feedspot.com/4833025.jpg?t=1611118232"
+    }
+  ]
+}

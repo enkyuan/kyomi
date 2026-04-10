@@ -1,0 +1,47 @@
+{
+  "category": "Ghana Food",
+  "source_url": "https://rss.feedspot.com/ghana_food_rss_feeds",
+  "feeds": [
+    {
+      "title": "Food Business Africa Magazine \u00bb Ghana",
+      "feed_url": "https://www.foodbusinessafrica.com/tag/ghana/feed/",
+      "website_url": "https://www.foodbusinessafrica.com/tag/ghana/",
+      "description": "We organize some of the most impactful face-to-face and virtual trade events and publish leading magazines and websites that bring Africa to the World and the World to Africa. We believe that when people come together, networks grow and businesses thrive. Read about Ghana cuisine in the following segment of the magazine.",
+      "followers": {
+        "facebook": 4400,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/5485222.jpg?t=1672319589"
+    },
+    {
+      "title": "Fafa Gilbert Blog \u00bb Ghana Food",
+      "feed_url": "https://fafagilbert.com/tag/ghana-food-blogger/feed/",
+      "website_url": "https://fafagilbert.com/tag/ghana-food-blogger/",
+      "description": "Chef Fafa Gilbert specializes in fusion African cuisine, where she mixes both African, Asian, and Western ingredients together to create her own recipes. Read posts about Ghana Food bloggers written by Fafa Gilbert in this segment of the blog.",
+      "followers": {
+        "facebook": 24800,
+        "twitter": 1600000,
+        "instagram": 60100
+      },
+      "image_url": "https://i1.feedspot.com/5481977.jpg?t=1671598974"
+    },
+    {
+      "title": "Tapoli Food",
+      "feed_url": "https://tapolifood.com/feed/",
+      "website_url": "https://tapolifood.com/",
+      "description": "My name is Afia and welcome to my food blog. As long as I can remember I have been fascinated with food. I am of Ghanaian descent and spent time in the Caribbean when I was in medical school. Here you find West African and Caribbean-inspired dishes. I am a real foodie so don't be surprised if you find another international fare.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5481976.jpg?t=1671599130"
+    },
+    {
+      "title": "Eat With Afia",
+      "feed_url": "https://eatwithafia.com/feed/",
+      "website_url": "https://eatwithafia.com/",
+      "description": "My name is Afia Amoako and I am the creator and curator of this blog. In this blog, you will find tasty recipes that are easy, cheap, and pay homage to my Ghanaian roots. In addition to food, I share tips about living a healthy lifestyle and share more about my Ghanaian identity as well as some tasty eats from around the African content.",
+      "followers": {
+        "facebook": 1600
+      },
+      "image_url": "https://i1.feedspot.com/5170479.jpg?t=1626094445"
+    }
+  ]
+}

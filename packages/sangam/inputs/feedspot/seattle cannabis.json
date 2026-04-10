@@ -1,0 +1,87 @@
+{
+  "category": "Seattle Cannabis",
+  "source_url": "https://rss.feedspot.com/seattle_cannabis_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Fresh Toast",
+      "feed_url": "https://thefreshtoast.com/feed/",
+      "website_url": "https://thefreshtoast.com/",
+      "description": "The Fresh Toast is a leading source of lifestyle and entertainment news, complemented by comprehensive coverage of cannabis and medical marijuana information. With a user-friendly retail directory, it offers readers a daily dose of diverse content, earning its reputation as the most trusted name in cannabis media.",
+      "followers": {
+        "facebook": 119400,
+        "twitter": 8300,
+        "instagram": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4953168.jpg?t=1605945227"
+    },
+    {
+      "title": "Hashtag Cannabis Blog",
+      "feed_url": "https://seattlehashtag.com/blog?format=rss",
+      "website_url": "https://seattlehashtag.com/blog",
+      "description": "Hashtag Cannabis provides clarity in the cannabis realm through insightful articles. From CBD insights to landrace strain exploration, their blog offers comprehensive coverage. Discover why they're acclaimed as Seattle and Redmond's premier recreational dispensary.",
+      "followers": {
+        "twitter": 2300
+      },
+      "image_url": "https://i1.feedspot.com/7292631.jpg?t=1712422639"
+    },
+    {
+      "title": "Herbs House Blog",
+      "feed_url": "https://www.herbshouse.org/feed/",
+      "website_url": "https://www.herbshouse.org/blog/",
+      "description": "At Herbs House, the mission revolves around offering Washington State's finest cannabis products. With a diverse selection catering to all preferences and budgets, they prioritize value with competitive pricing and enticing daily deals, ensuring a satisfying experience for every customer.",
+      "followers": {
+        "facebook": 543,
+        "twitter": 220
+      },
+      "image_url": "https://i1.feedspot.com/7295885.jpg?t=1714916437"
+    },
+    {
+      "title": "Novel Tree Cannabis Blog",
+      "feed_url": "https://www.novel-tree.com/cannabis-blog?format=rss",
+      "website_url": "https://www.novel-tree.com/cannabis-blog",
+      "description": "At Novel Tree Cannabis, the commitment to excellence shines through their knowledgeable staff, who bring stories to life with expertise. As industry pioneers, they prioritize top-notch customer service, ensuring the most enjoyable shopping experience with responsive staff.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7295883.jpg?t=1712822554"
+    },
+    {
+      "title": "Mr. Greens Blog",
+      "feed_url": "https://mrgreens.com/feed/",
+      "website_url": "https://mrgreens.com/blog/",
+      "description": "Mr. Greens is a collective of dedicated individuals advocating for cannabis's transformative potential. Committed to offering premium products and empowering informed choices, they prioritize transparency, sustainability, and community engagement. With a focus on building lasting relationships, Mr. Greens fosters a culture of wellness and education within their local community.",
+      "followers": {
+        "facebook": 136
+      },
+      "image_url": "https://i1.feedspot.com/7295881.jpg?t=1712822390"
+    },
+    {
+      "title": "Greenside Recreational Blog",
+      "feed_url": "https://greensiderec.com/feed/",
+      "website_url": "https://greensiderec.com/blog/",
+      "description": "With roots tracing back to Lake City in 2011, Greenside Medical has been an integral part of the Seattle cannabis community. Their commitment to exceptional customer experiences, whether medical or recreational, is evident in their knowledgeable and approachable staff. Explore a wealth of cannabis-related topics through their informative resources, covering everything from cannabinoids to product reviews.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 425
+      },
+      "image_url": "https://i1.feedspot.com/7295879.jpg?t=1714916257"
+    },
+    {
+      "title": "Locals Canna House Blog",
+      "feed_url": "https://localscannahouse.com/feed/",
+      "website_url": "https://localscannahouse.com/blog/",
+      "description": "Locals Canna House prioritizes delivering exceptional cannabis experiences, catering to recreational, medical, and health and wellness needs. Their curated selection of locally sourced products ensures freshness and quality. Stay updated on cannabis-related blogs and news from this Washington-based dispensary.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7295882.jpg?t=1714916314"
+    },
+    {
+      "title": "The Seattle Times \u00bb Marijuana",
+      "feed_url": "https://www.seattletimes.com/seattle-news/marijuana/feed/",
+      "website_url": "https://www.seattletimes.com/marijuana/",
+      "description": "The Seattle Times illuminates the Pacific Northwest with dynamic storytelling. Their impactful coverage shapes community discourse and influences policy. Committed to quality journalism, they champion public service and innovation. Explore comprehensive coverage of marijuana's legal, recreational markets in Washington and Colorado.",
+      "followers": {
+        "facebook": 449600,
+        "twitter": 730900
+      },
+      "image_url": "https://i1.feedspot.com/7295880.jpg?t=1712822386"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "category": "UK Melanoma",
+  "source_url": "https://rss.feedspot.com/uk_melanoma_rss_feeds",
+  "feeds": [
+    {
+      "title": "Melanoma UK News",
+      "feed_url": "https://www.melanomauk.org.uk/handlers/rss.ashx?feed=1",
+      "website_url": "https://www.melanomauk.org.uk/Pages/News/",
+      "description": "Covers patient stories health and fitness tips fundraising ideas and charity news. Melanoma UK is a patient support group set up to raise awareness of the causes of Melanoma skin cancer and help sufferers.",
+      "followers": {
+        "facebook": 11600,
+        "twitter": 8200,
+        "instagram": 6100
+      },
+      "image_url": "https://i1.feedspot.com/4464165.jpg?t=1613649316"
+    },
+    {
+      "title": "lucysmelanomaadventure",
+      "feed_url": "https://lucysmelanomaadventure.wordpress.com/feed/",
+      "website_url": "https://lucysmelanomaadventure.wordpress.com/",
+      "description": "This blog is about my melanoma story. In May 2011, aged 34, I was diagnosed with Malignant Melanoma with a scar on my back and one in my armpit.",
+      "followers": {
+        "facebook": 477,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4608118.jpg?t=1615556861"
+    },
+    {
+      "title": "Melanoma Fund | Tackling Rising Rates of Melanoma",
+      "feed_url": "https://melanoma-fund.co.uk/feed/",
+      "website_url": "https://melanoma-fund.co.uk/",
+      "description": "Melanoma Fund aims to educate, raise awareness & fund vital research finding a cure for melanoma skin cancer. Help us today, spread the word and donate.",
+      "followers": {
+        "facebook": 1900,
+        "twitter": 2300,
+        "instagram": 744
+      },
+      "image_url": "https://i1.feedspot.com/4912952.jpg?t=1620292823"
+    },
+    {
+      "title": "Melanoma Rollercoaster",
+      "feed_url": "http://www.melanomarollercoaster.co.uk/feed/",
+      "website_url": "http://www.melanomarollercoaster.co.uk/",
+      "description": "My blog Melanoma Rollercoaster tells you about the Rollercoaster ride I am on with Melanoma. I write a blog to raise awareness. I hope that this blog helps to keep my loved ones up to date with what is happening for me & that it also helps to raise awareness about Melanoma & Skin Cancer in general.",
+      "followers": {
+        "facebook": 723,
+        "twitter": 2100
+      },
+      "image_url": "https://i1.feedspot.com/4607272.jpg"
+    }
+  ]
+}

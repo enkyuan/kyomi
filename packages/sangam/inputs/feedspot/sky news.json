@@ -1,0 +1,125 @@
+{
+  "category": "Sky News",
+  "source_url": "https://rss.feedspot.com/sky_news_rss_feeds",
+  "feeds": [
+    {
+      "title": "Sky News",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/home.xml",
+      "website_url": "https://news.sky.com/",
+      "description": "Sky news delivers breaking news, headlines and top stories from business, politics, entertainment and more in the UK and worldwide.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/4479115.jpg?t=1721214585"
+    },
+    {
+      "title": "Sky News \u00bb UK",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/uk.xml",
+      "website_url": "https://news.sky.com/uk",
+      "description": "Expert comment and analysis on the latest UK news, with headlines from England, Scotland, Northern Ireland, and Wales from Sky News.",
+      "followers": {
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    },
+    {
+      "title": "Sky News \u00bb World",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/world.xml",
+      "website_url": "https://news.sky.com/world",
+      "description": "The latest international news from Sky, featuring top stories from around the world and breaking news, as it happens.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    },
+    {
+      "title": "Sky News \u00bb Politics",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/politics.xml",
+      "website_url": "https://news.sky.com/politics",
+      "description": "Sky News delivers daily politics reports from the UK and worldwide and the latest breaking political news as it happens.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    },
+    {
+      "title": "Sky News \u00bb US",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/us.xml",
+      "website_url": "https://news.sky.com/us",
+      "description": "The latest news, video, and expert analysis from around the United States of America delivered by Sky News.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    },
+    {
+      "title": "Sky News \u00bb Money",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/business.xml",
+      "website_url": "https://news.sky.com/business",
+      "description": "Sky business news provides up to the minute reports on markets, share prices, and the world economy, alongside expert business commentary.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    },
+    {
+      "title": "Sky News \u00bb Science, Climate & Technology",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/technology.xml",
+      "website_url": "https://news.sky.com/science-climate-tech",
+      "description": "Sky News technology provides you with all the latest tech and gadget news, game reviews, Internet and web news across the globe.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    },
+    {
+      "title": "Sky News \u00bb Entertainment",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/entertainment.xml",
+      "website_url": "https://news.sky.com/entertainment",
+      "description": "The latest entertainment news in the UK and worldwide can be found on Sky News. Follow up for the latest showbiz and celebrity news.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    },
+    {
+      "title": "Sky News \u00bb Offbeat",
+      "feed_url": "https://feeds.skynews.com/feeds/rss/strange.xml",
+      "website_url": "https://news.sky.com/offbeat",
+      "description": "Weird and strange news stories from across the globe. There's bound to be some odd and bizarre news to make you stand back in amazement.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    },
+    {
+      "title": "Sky News \u00bb Travel",
+      "feed_url": "https://news.sky.com/topic/travel-9732/4",
+      "website_url": "https://news.sky.com/topic/travel-9732/4",
+      "description": "Plan your trip or vacation to the United Kingdom with expert travel tips, recommendations, and guides.",
+      "followers": {
+        "facebook": 11600000,
+        "twitter": 8600000,
+        "instagram": 2800000
+      },
+      "image_url": "https://i1.feedspot.com/5243646.jpg?t=1750930067"
+    }
+  ]
+}

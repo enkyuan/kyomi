@@ -1,0 +1,66 @@
+{
+  "category": "Card Magic",
+  "source_url": "https://rss.feedspot.com/card_magic_rss_feeds",
+  "feeds": [
+    {
+      "title": "Vanishing Inc. Blog",
+      "feed_url": "https://www.vanishingincmagic.com/blog/rss/",
+      "website_url": "https://www.vanishingincmagic.com/blog/",
+      "description": "Vanishing Inc. is a new, reliable alternative to the online magic shop. The latest magic tricks, interviews, articles, essays and hints and tips from Vanishing Inc.",
+      "followers": {
+        "facebook": 5700,
+        "twitter": 10100,
+        "instagram": 32299
+      },
+      "image_url": "https://i1.feedspot.com/4552399.jpg?t=1618918619"
+    },
+    {
+      "title": "Card Magic By Jason Blog",
+      "feed_url": "https://cardmagicbyjason.com/blog/feed/",
+      "website_url": "https://cardmagicbyjason.com/blog/",
+      "description": "One of the best card magicians in the world today, Jason Ladanye entertains all across the country. From corporate events, private parties, and colleges to resort casinos and national television, Jason's unique brand of entertainment is stunning his audiences.",
+      "followers": {
+        "facebook": 200100,
+        "twitter": 1300,
+        "instagram": 941500
+      },
+      "image_url": "https://i1.feedspot.com/5008961.jpg?t=1622265145"
+    },
+    {
+      "title": "Cut At The Crimp",
+      "feed_url": "https://cutatthecrimp.wordpress.com/feed/",
+      "website_url": "https://cutatthecrimp.wordpress.com/",
+      "description": "A blog about Card Magic where you may just learn a thing or two. Follow this blog that is created to share authors thoughts, ideas and some of the hidden gems that author has found along the way buried in books, lecture notes and the many many magic magazines that are out there.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5009001.jpg?t=1622265199"
+    },
+    {
+      "title": "Magic News....",
+      "feed_url": "https://magicnews.org/rss",
+      "website_url": "https://magicnews.org/",
+      "description": "Rick Carruth's Magic News is published by the same folks that brings you the popular free publication, the Magic Roadshow Journal of Magic. This is a source of magic, magic articles, product reviews and interviews. Over 1100 posts for the true magic lover.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5265255.jpg?t=1617712558"
+    },
+    {
+      "title": "Card Tricks Blog",
+      "feed_url": "https://www.best-card-tricks.com/feed/",
+      "website_url": "https://www.best-card-tricks.com/",
+      "description": "Find amazing card tricks for beginners and advanced. Here you will find step by step guides that will explain and reveal how to do Incredible card magic tricks! Tutorials that will show you how to perform tricks that will amaze everybody!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5009027.jpg?t=1622265279"
+    },
+    {
+      "title": "Dan and Dave Industries Blog",
+      "feed_url": "https://dananddave.com/news?format=RSS",
+      "website_url": "https://dananddave.com/blogs/news",
+      "description": "Dan and Dave Industries is the parent company of businesses founded by Dan and Dave Buck, with a focus on playing cards, magic, cardistry, puzzles, and games.",
+      "followers": {
+        "facebook": 109600,
+        "twitter": 17800,
+        "instagram": 59300
+      },
+      "image_url": "https://i1.feedspot.com/5009065.jpg?t=1622265158"
+    }
+  ]
+}

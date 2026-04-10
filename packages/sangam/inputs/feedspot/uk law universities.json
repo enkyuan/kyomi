@@ -1,0 +1,73 @@
+{
+  "category": "UK Law Universities",
+  "source_url": "https://rss.feedspot.com/uk_law_universities_rss_feeds",
+  "feeds": [
+    {
+      "title": "University of Cambridge News",
+      "feed_url": "https://www.law.cam.ac.uk/press/news/feed.xml/10",
+      "website_url": "https://www.law.cam.ac.uk/press/news/current",
+      "description": "Get Latest Updates from the Faculty of Law, University of Cambridge.",
+      "followers": {
+        "facebook": 4900,
+        "twitter": 17500,
+        "instagram": 11400
+      },
+      "image_url": "https://i1.feedspot.com/4951866.jpg?t=1621864791"
+    },
+    {
+      "title": "University of Bristol Law School",
+      "feed_url": "https://legalresearch.blogs.bris.ac.uk/feed/",
+      "website_url": "https://legalresearch.blogs.bris.ac.uk/",
+      "description": "University of Bristol Law School gives information about UK law in this blog.",
+      "followers": {
+        "facebook": 14600,
+        "twitter": 6000
+      },
+      "image_url": "https://i1.feedspot.com/4889359.jpg?t=1612177033"
+    },
+    {
+      "title": "University of Sussex \u00bb Law, Politics and Sociology",
+      "feed_url": "https://www.sussex.ac.uk/broadcast/feed/news/school-of-law-politics-and-sociology.rss",
+      "website_url": "https://www.sussex.ac.uk/schools/law-politics-and-sociology/",
+      "description": "Latest news and events from University of Sussex Law",
+      "followers": {
+        "twitter": 2200,
+        "instagram": 79900
+      },
+      "image_url": "https://i1.feedspot.com/4959359.jpg?t=1621864801"
+    },
+    {
+      "title": "University Of Reading \u00bb Law",
+      "feed_url": "https://blogs.reading.ac.uk/law/feed/",
+      "website_url": "https://blogs.reading.ac.uk/law/",
+      "description": "The latest news, events, courses and goings in University of Reading- Law School",
+      "followers": {
+        "facebook": 89700,
+        "twitter": 60500
+      },
+      "image_url": "https://i1.feedspot.com/4959718.jpg?t=1621864820"
+    },
+    {
+      "title": "University of Warwick News",
+      "feed_url": "https://warwick.ac.uk/sitebuilder2/api/rss/siteChanges.rss?page=/fac/soc/law",
+      "website_url": "https://warwick.ac.uk/fac/soc/law/news/",
+      "description": "Warwick Law School pioneered the study of law in its social, political and economic context. The School research follows many tracks, emphasizing historical, international, comparative, theoretical and cross cultural approaches. Its contextual approach encompasses criminal, commercial, corporate, environmental and human rights law.",
+      "followers": {
+        "facebook": 2700,
+        "twitter": 3500,
+        "instagram": 3000
+      },
+      "image_url": "https://i1.feedspot.com/4959352.jpg?t=1621864795"
+    },
+    {
+      "title": "Brighton Law School Blog",
+      "feed_url": "https://blogs.brighton.ac.uk/bbsopportunities/feed/",
+      "website_url": "https://blogs.brighton.ac.uk/bbsopportunities/",
+      "description": "Promoting opportunities, and bringing together Students, Alumni, and Professionals.",
+      "followers": {
+        "twitter": 572
+      },
+      "image_url": "https://i1.feedspot.com/4959485.jpg?t=1621864826"
+    }
+  ]
+}

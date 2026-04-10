@@ -1,0 +1,70 @@
+{
+  "category": "UK Gold",
+  "source_url": "https://rss.feedspot.com/uk_gold_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Pure Gold Company Blog",
+      "feed_url": "https://thepuregoldcompany.co.uk/feed/",
+      "website_url": "https://thepuregoldcompany.co.uk/category/blog/",
+      "description": "Looking to invest in physical gold or silver but not sure where to start? Read The Pure Gold Company Blog articles to get help with your gold investment journey. The Pure Gold Company is the UK's preferred choice for gold and silver investments.",
+      "followers": {
+        "facebook": 2000,
+        "twitter": 258
+      },
+      "image_url": "https://i1.feedspot.com/5353473.jpg?t=1639634816"
+    },
+    {
+      "title": "Gold Investments Blog",
+      "feed_url": "https://www.goldinvestments.co.uk/feed/",
+      "website_url": "https://www.goldinvestments.co.uk/blog-news/",
+      "description": "Dealers in gold and silver bars and bullion coins. We are one of the few bullion houses that offer the option to buy gold online, whether it's investment gold, gold coins or bars. Keep up with articles on Gold and Gold Investments.",
+      "followers": {
+        "facebook": 529,
+        "twitter": 907
+      },
+      "image_url": "https://i1.feedspot.com/4917617.jpg?t=1620622353"
+    },
+    {
+      "title": "Bullion Reviews",
+      "feed_url": "https://karatbarsreviews.home.blog/blog-feed/feed/",
+      "website_url": "https://karatbarsreviews.home.blog/",
+      "description": "Articles on Gold.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5051333.jpg"
+    },
+    {
+      "title": "Rosland Gold News",
+      "feed_url": "https://www.roslandgold.co.uk/blogs/news.atom",
+      "website_url": "https://www.roslandgold.co.uk/blogs/news/",
+      "description": "Rosland Gold, your precious metals specialist, is here to help you on your journey building a collection that is suitable for you. The most recent gold news and updates can be found here. Rosland sells gold, silver, platinum, and palladium in physical form.",
+      "followers": {
+        "facebook": 4600,
+        "twitter": 2200,
+        "instagram": 774
+      },
+      "image_url": "https://i1.feedspot.com/5353470.jpg?t=1639636908"
+    },
+    {
+      "title": "UK Gold Trading Experts",
+      "feed_url": "https://www.goldtradingexperts.com/gold-blog/feed",
+      "website_url": "https://www.gold.org/news",
+      "description": "UK Gold Trading Experts provide free daily gold trading market overviews, analysis and tips for trading the gold futures market.",
+      "followers": {
+        "facebook": 1200,
+        "twitter": 2000
+      },
+      "image_url": "https://i1.feedspot.com/4644535.jpg?t=1647934418"
+    },
+    {
+      "title": "World Gold Council News",
+      "feed_url": "https://www.gold.org/news",
+      "website_url": "https://www.gold.org/news",
+      "description": "Gold market news and events from World Gold Council, the market development organization for the gold industry. It is the global authority on gold & its uses and the first source of informed opinion & advice for stakeholders & decision-makers.",
+      "followers": {
+        "facebook": 29900,
+        "twitter": 195800
+      },
+      "image_url": "https://i1.feedspot.com/5353471.jpg?t=1639636147"
+    }
+  ]
+}

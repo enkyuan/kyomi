@@ -1,0 +1,35 @@
+{
+  "category": "Venezuela Travel",
+  "source_url": "https://rss.feedspot.com/venezuela_travel_rss_feeds",
+  "feeds": [
+    {
+      "title": "Backpacking Latin America \u00bb Venezuela",
+      "feed_url": "https://www.latinamericabackpacking.com/tag/venezuela/feed/",
+      "website_url": "https://www.latinamericabackpacking.com/tag/venezuela/",
+      "description": "Explore the enchanting beauty of Venezuela in this segment. Welcome to BLATAM! Fully seasoned backpackers Dan & George are here to share their no non-sense travel guides for Latin America designed to help you to explore the continent with ease.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/7261655.jpg?t=1708945947"
+    },
+    {
+      "title": "Osprey Expeditions Blog",
+      "feed_url": "https://ospreyexpeditions.com/feed/",
+      "website_url": "https://ospreyexpeditions.com/blog/",
+      "description": "Welcome to the best Travel Blog of Venezuela. The Osprey Expeditions team will be uploading useful information as well as interesting articles about the best sites in the country and Colombia. Special focus on Adventure, trekking, and nature trips. Small groups.",
+      "followers": {
+        "facebook": 763
+      },
+      "image_url": "https://i1.feedspot.com/7261656.jpg?t=1708952184"
+    },
+    {
+      "title": "XIXERONE \u00bb Venezuela",
+      "feed_url": "https://xixerone.com/en/travel-to/americas/venezuela/feed/",
+      "website_url": "https://xixerone.com/en/travel-to/americas/venezuela/",
+      "description": "On this XIXERONE Venezuela travel blog, you'll be equipped with all the essential information you need to plan the perfect Venezuelan holiday. From finding the ideal accommodation to uncovering the country's top attractions and hidden gems, the team has you covered every step of the way.",
+      "followers": {
+        "facebook": 4700,
+        "twitter": 6700
+      },
+      "image_url": "https://i1.feedspot.com/7261657.jpg?t=1708945815"
+    }
+  ]
+}

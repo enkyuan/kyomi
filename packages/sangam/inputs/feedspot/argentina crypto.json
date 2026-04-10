@@ -1,0 +1,35 @@
+{
+  "category": "Argentina Crypto",
+  "source_url": "https://rss.feedspot.com/argentina_crypto_rss_feeds",
+  "feeds": [
+    {
+      "title": "Coinrule Blog",
+      "feed_url": "https://coinrule.com/blog/feed/",
+      "website_url": "https://coinrule.com.ar/blog/",
+      "description": "Coinrule, your gateway to cryptocurrency mastery, delivers breaking news, profound analysis, and expert insights. Tailored for both seasoned hodlers and curious newcomers, it empowers users with knowledge and tools to navigate the dynamic market landscape effectively. Explore, dive in, and unleash crypto's potential!",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5516545.jpg?t=1709814013"
+    },
+    {
+      "title": "Estudio Nunes & Asociados \u00bb Crypto",
+      "feed_url": "https://estudionunes.com.ar/category/crypto/feed/",
+      "website_url": "https://estudionunes.com.ar/category/crypto/",
+      "description": "Estudio Nunes and Asociados, thriving since 1981, evolved from a modest office to a multidisciplinary legal firm with global and local alliances. Their personalized approach assigns a lead lawyer to each client, ensuring tailored solutions with immediate responses backed by continual training.",
+      "followers": {
+        "facebook": 366
+      },
+      "image_url": "https://i1.feedspot.com/7280440.jpg?t=1711105515"
+    },
+    {
+      "title": "Bitwage Blog \u00bb Cryptocurrencies",
+      "feed_url": "https://blog.bitwage.com.ar/tag/criptomonedas/rss/",
+      "website_url": "https://blog.bitwage.com.ar/tag/criptomonedas/",
+      "description": "Established in 2014, Bitwage stands as the forefront platform for cryptocurrency or digital dollar payments, favored by freelancers and service exporters. Offering non-custodial, swift, and cost-effective services, it empowers users to select their preferred payment method. Access articles on top cryptocurrencies like Bitcoin, Ethereum, and major stablecoins for comprehensive insights.",
+      "followers": {
+        "facebook": 22,
+        "twitter": 5100
+      },
+      "image_url": "https://i1.feedspot.com/7280439.jpg?t=1711105606"
+    }
+  ]
+}

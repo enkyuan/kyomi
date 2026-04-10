@@ -1,0 +1,362 @@
+{
+  "category": "Sports Nutrition",
+  "source_url": "https://rss.feedspot.com/sports_nutrition_rss_feeds",
+  "feeds": [
+    {
+      "title": "IronMag",
+      "feed_url": "https://www.ironmagazine.com/category/articles/feed/",
+      "website_url": "https://www.ironmagazine.com/category/articles/",
+      "description": "Online bodybuilding and fitness magazine and community. It contains in-depth information on the usefulness of supplements, training videos and a forum where you can talk with other bodybuilders.",
+      "followers": {
+        "facebook": 34000,
+        "twitter": 8900
+      },
+      "image_url": "https://i1.feedspot.com/4756121.jpg?t=1608378409"
+    },
+    {
+      "title": "Big Muscles Nutrition Blog",
+      "feed_url": "https://www.bigmusclesnutrition.com/blogs/news.atom",
+      "website_url": "https://www.bigmusclesnutrition.com/blogs/news",
+      "description": "Welcome to the official Twitter page of BIGMUSCLES Nutrition, one of India's leading food supplement manufacturing companies authentic for all bodybuilding needs.",
+      "followers": {
+        "facebook": 98900,
+        "twitter": 478,
+        "instagram": 352800
+      },
+      "image_url": "https://i1.feedspot.com/4755883.jpg?t=1605795285"
+    },
+    {
+      "title": "Legion Athletics Blog",
+      "feed_url": "https://legionathletics.com/blog/feed/",
+      "website_url": "https://legionathletics.com/blog/",
+      "description": "'I founded Legion Athletics to create healthy, high-quality sports supplements based on sound science, and to sell them honestly and at a fair price,' said by founder Mike Matthews.",
+      "followers": {
+        "facebook": 316800,
+        "twitter": 27100,
+        "instagram": 1600
+      },
+      "image_url": "https://i1.feedspot.com/4755995.jpg?t=1605793761"
+    },
+    {
+      "title": "The PricePlow Blog",
+      "feed_url": "https://blog.priceplow.com/feed",
+      "website_url": "https://blog.priceplow.com/",
+      "description": "PricePlow's Blog gives the latest supplement news and ingredient research! PricePlow.com is a price comparison site for supplements, vitamins, and nutrition products. We show you where to get the best deals on supplements by comparing prices at 20+ stores. With ever-rising food and nutrition costs, it is our goal to get you the best deals on supplements so that you do not have to pay retail prices.",
+      "followers": {
+        "facebook": 8400,
+        "twitter": 3500,
+        "instagram": 22700
+      },
+      "image_url": "https://i1.feedspot.com/4756156.jpg?t=1608378507"
+    },
+    {
+      "title": "Precision Nutrition Blog",
+      "feed_url": "https://www.precisionnutrition.com/blog/feed",
+      "website_url": "https://www.precisionnutrition.com/blog",
+      "description": "Here you'll find free articles and infographics on the latest in nutrition, exercise, health, and coaching. Precision Nutrition is home to the world's top nutrition and lifestyle coaches, and the company professionals turn to for advice. We transform how people look, feel and perform - through education, technology, and expert coaching - with industry leading behavior-change solutions for both individuals and health and fitness professionals.",
+      "followers": {
+        "facebook": 516799,
+        "twitter": 40100,
+        "instagram": 379900
+      },
+      "image_url": "https://i1.feedspot.com/4942659.jpg?t=1608378514"
+    },
+    {
+      "title": "First Endurance Blog",
+      "feed_url": "https://firstendurance.com/blogs/articles.atom",
+      "website_url": "https://firstendurance.com/blogs/articles",
+      "description": "First Endurance is a premium endurance nutrition line that's been clinically proven to improve endurance performance. They provide the ultimate sports nutrition supplements by integrating the latest clinical research with input from the best endurance athletes in the world. Our blog offers tips, tricks, fitness advice, information on caffeine, and many more!",
+      "followers": {
+        "facebook": 17000,
+        "twitter": 5500,
+        "instagram": 20100
+      },
+      "image_url": "https://i1.feedspot.com/4943075.jpg?t=1663139957"
+    },
+    {
+      "title": "Swolverine Blog",
+      "feed_url": "https://swolverine.com/blogs/blog.atom",
+      "website_url": "https://swolverine.com/blogs/blog",
+      "description": "Swolverine is an endurance athlete and active lifestyle brand that provides supplements to fuel your athletic performance, increase strength, and enhance recovery. Get the nutrients you need to power your active lifestyle.",
+      "followers": {
+        "facebook": 11100,
+        "twitter": 889
+      },
+      "image_url": "https://i1.feedspot.com/5194325.jpg?t=1599483277"
+    },
+    {
+      "title": "Elite Nutrition and Performance Blog",
+      "feed_url": "https://elitenutritionandperformance.com/feed/",
+      "website_url": "http://elitenutritionandperformance.com/blog/",
+      "description": "Up to date information about the latest in sports performance, nutrition, and health. Kristen Ziesmer is a sports dietitian and personal trainer who works with ahtletes all over the world to help them fuel and train for optimal health & performance.",
+      "followers": {
+        "facebook": 694,
+        "twitter": 196
+      },
+      "image_url": "https://i1.feedspot.com/4486732.jpg?t=1608378552"
+    },
+    {
+      "title": "Drug-Free Bodybuilding Blog",
+      "feed_url": "http://drug-free-bodybuilding.blogspot.com/feeds/posts/default",
+      "website_url": "http://drug-free-bodybuilding.blogspot.com/",
+      "description": "Tips for health-conscious bodybuilders.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/4515316.jpg?t=1608379249"
+    },
+    {
+      "title": "Heather Mangieri RDN Blog",
+      "feed_url": "https://heathermangieri.com/feed/",
+      "website_url": "https://heathermangieri.com/my-blog/",
+      "description": "Heather Mangieri is an Author, Sports and wellness Dietitian, Speaker, Spokesperson, and a Busy Mom. Her blog shares simple, balanced meals to fuel busy lifestyles and tips to life a healthy life when you're on the go.",
+      "followers": {
+        "facebook": 2200,
+        "twitter": 6900,
+        "instagram": 18800
+      },
+      "image_url": "https://i1.feedspot.com/4753899.jpg?t=1608379377"
+    },
+    {
+      "title": "The Nutrition Mechanic -Dina Griffin Blog",
+      "feed_url": "https://nutritionmechanic.com/blog?format=RSS",
+      "website_url": "https://nutritionmechanic.com/blog/",
+      "description": "Dina Griffin is a cutting edge Sports Dietitian and Registered Dietitian Nutritionist propelling the health and athletic performance of individuals everywhere. She not only addresses needs related to disease and illness but also takes a proactive approach in optimizing health to prevent disease, deficiencies, and breakdowns via personalized sports nutrition coaching.",
+      "followers": {
+        "facebook": 812,
+        "twitter": 669,
+        "instagram": 3100
+      },
+      "image_url": "https://i1.feedspot.com/4942864.jpg?t=1608378818"
+    },
+    {
+      "title": "Vitalyte Sports Nutrition Blog",
+      "feed_url": "https://vitalyte.com/blogs/news.atom",
+      "website_url": "https://vitalyte.com/blogs/news",
+      "description": "Vitalyte Sports Nutrition is a leading sports nutrition company with products for athletes of levels and abilities. From the fastest absorbing electrolyte replacement to our extreme endurance fuels, to our line of lifestyle nutrition products, Vitalyte Sports Nutrition offers healthy all natural products for everyone looking to improve the quality of their life.",
+      "followers": {
+        "facebook": 68900,
+        "twitter": 2000,
+        "instagram": 1300
+      },
+      "image_url": "https://i1.feedspot.com/4943094.jpg?t=1608378525"
+    },
+    {
+      "title": "Mysportscience",
+      "feed_url": "https://www.mysportscience.com/blog-feed.xml",
+      "website_url": "https://www.mysportscience.com/blogs",
+      "description": "Founded by Asker Jeukendrup, a sports nutritionist, in 2014. Makes sports science and sports nutrition easy to understand and busts myths in the process. The blog's mission is to provide athletes and coaches with the latest research and practical information on sports nutrition.",
+      "followers": {
+        "facebook": 12200,
+        "twitter": 63700,
+        "instagram": 131900
+      },
+      "image_url": "https://i1.feedspot.com/4308909.jpg?t=1658477083"
+    },
+    {
+      "title": "Cardiff Sports Nutrition Blog",
+      "feed_url": "https://www.cardiffsportsnutrition.co.uk/blogs/articles.atom",
+      "website_url": "https://www.cardiffsportsnutrition.co.uk/blogs/articles",
+      "description": "Cardiff Sports Nutrition supply the finest sports nutrition, bodybuilding supplements and sports supplements from the biggest brands in the industry for proven results! Find all the latest news on supplements, recipes, workouts and more.",
+      "followers": {
+        "facebook": 37700,
+        "twitter": 23600
+      },
+      "image_url": "https://i1.feedspot.com/4754106.jpg?t=1608378414"
+    },
+    {
+      "title": "Eat to Compete!",
+      "feed_url": "http://rdkate.blogspot.com/feeds/posts/default",
+      "website_url": "http://rdkate.blogspot.com/",
+      "description": "Wondering how to use food to improve performance? Whether you are a weekend warrior, amateur athlete or elite competitor, this blog will provide you with evidenced-based, practical advice. No supplements. No gimmicks. Just real food for real athletes.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/2688033.jpg?t=1608379290"
+    },
+    {
+      "title": "BioSteel Sports Nutrition Inc. Blog",
+      "feed_url": "https://biosteel.com/blogs/news.atom",
+      "website_url": "https://biosteel.com/blogs/news",
+      "description": "The BioSteel way begins with Sports Nutrition but encompasses a lifestyle that encourages everyone to be at their best. Whether it is recipes, training tips, healthy living advice or supplement deep dives the BioSteel Blog is your resource for being better.",
+      "followers": {
+        "facebook": 45000,
+        "twitter": 74600
+      },
+      "image_url": "https://i1.feedspot.com/4942987.jpg?t=1608378520"
+    },
+    {
+      "title": "Sports Dietitians Australia Blog",
+      "feed_url": "https://www.sportsdietitians.com.au/sda-blog/feed/",
+      "website_url": "https://www.sportsdietitians.com.au/sda-blog/",
+      "description": "Sports Dietitians Australia (SDA) is the peak professional body for sports dietitians in Australia. Their vision is that Accredited Sports Dietitians are recognised as an integral part of a committed athlete's team helping them achieve their health and performance goals.",
+      "followers": {
+        "facebook": 23400,
+        "twitter": 11200
+      },
+      "image_url": "https://i1.feedspot.com/4942844.jpg?t=1608378545"
+    },
+    {
+      "title": "Eleat Sports Nutrition, LLC Blog",
+      "feed_url": "https://eleatnutrition.com/blog?format=rss",
+      "website_url": "https://eleatnutrition.com/blog/",
+      "description": "Eleat Sports Nutrition, LLC provides nutrition services from Angie Asche, MS, RD, LMNT, that enhance lifelong health, fitness, and sports performance. Services include sports nutrition for athletes, weight management, and general nutrition",
+      "followers": {
+        "facebook": 3300,
+        "twitter": 2100,
+        "instagram": 98800
+      },
+      "image_url": "https://i1.feedspot.com/4753787.jpg?t=1608378559"
+    },
+    {
+      "title": "Climbing Nutrition",
+      "feed_url": "https://www.climbingnutrition.com/feed/",
+      "website_url": "https://www.climbingnutrition.com/",
+      "description": "Climbing Nutrition began in 2015 with the purpose of helping climbers (or really anyone) make good, rationale choices about nutrition. With this goal in mind, Climbing Nutrition produces content that focuses on three primary concepts: Sports Nutrition for Climbing, General Nutritional Advice and Critical Thinking About Nutrition.",
+      "followers": {
+        "facebook": 2600,
+        "twitter": 4900
+      },
+      "image_url": "https://i1.feedspot.com/4754562.jpg?t=1608379186"
+    },
+    {
+      "title": "Evolved Sport and Nutrition Blog",
+      "feed_url": "https://www.evolvedsportandnutrition.com/blog/feed",
+      "website_url": "https://www.evolvedsportandnutrition.com/blog",
+      "description": "Evolved Sport and Nutrition is dedicated to bringing you the latest cutting-edge science-based lifestyle interventions for your nutritional and athletic goals. We specialize in serving athletes but serve everyone!",
+      "followers": {
+        "facebook": 307,
+        "twitter": 1000,
+        "instagram": 746
+      },
+      "image_url": "https://i1.feedspot.com/4754085.jpg?t=1608378702"
+    },
+    {
+      "title": "Anita Bean Blog",
+      "feed_url": "https://anitabean.co.uk/feed/",
+      "website_url": "https://anitabean.co.uk/blog/",
+      "description": "Anita Bean is a Sports Nutritionist. She set up her nutrition consultancy in 1990, specializing in sport and exercise nutrition. Over the years she has written more than 20 books and hundreds of articles and continued to build my knowledge and expertise in sport and exercise nutrition.",
+      "followers": {
+        "twitter": 5300
+      },
+      "image_url": "https://i1.feedspot.com/4754503.jpg?t=1608378706"
+    },
+    {
+      "title": "Nutrition in Motion PA holistic sports nutrition for athletes Blog",
+      "feed_url": "https://nutrition-in-motion.net/feed",
+      "website_url": "https://nutrition-in-motion.net/blog",
+      "description": "A blog acout Holistic sports nutrition to resolve the underlying cause to your issues. They use real food meal plans, energy work and essential oils to help athletes perform better at work, play or racing.Unleash your inner athlete and gain your competitive edge.",
+      "followers": {
+        "facebook": 1100,
+        "twitter": 509
+      },
+      "image_url": "https://i1.feedspot.com/4942971.jpg?t=1608378714"
+    },
+    {
+      "title": "Evolved Sport and Nutrition Blog",
+      "feed_url": "https://www.evolvedsportandnutrition.com/blog/feed",
+      "website_url": "https://www.evolvedsportandnutrition.com/blog",
+      "description": "Evolved Sport and Nutrition is dedicated to bringing the most innovative and cutting edge research based information to his athletes and teams in order to maximize everyone's potential.",
+      "followers": {
+        "facebook": 307,
+        "twitter": 1000
+      },
+      "image_url": "https://i1.feedspot.com/4942835.jpg?t=1608378778"
+    },
+    {
+      "title": "SCAN DPG Blog",
+      "feed_url": "https://scandpg.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://scandpg.blogspot.com/",
+      "description": "SCAN is the largest dietetic practice group of the Academy of Nutrition and Dietetics. Members are registered dietitians with nutrition expertise in the areas of sports, physical activity, cardiovascular health, wellness, and the prevention and treatment of disordered eating and eating disorders.",
+      "followers": {
+        "twitter": 12400
+      },
+      "image_url": "https://i1.feedspot.com/4753976.jpg?t=1608378787"
+    },
+    {
+      "title": "Craig Watson Sports Nutrition Blog",
+      "feed_url": "https://craigwatsonsportsnutrition.com/feed/",
+      "website_url": "https://craigwatsonsportsnutrition.com/blog/",
+      "description": "For all the latest news and information relating to all things Nutrition and\u00a0Sports Nutrition by Craig. Craig is a fully qualified and registered Sports Nutritionist based in Central Scotland.",
+      "followers": {
+        "facebook": 935,
+        "twitter": 188
+      },
+      "image_url": "https://i1.feedspot.com/4754080.jpg?t=1608378792"
+    },
+    {
+      "title": "The Sports Dietitian",
+      "feed_url": "https://www.thesportsdietitian.co.uk/blog-feed.xml",
+      "website_url": "https://www.thesportsdietitian.co.uk/blog-1",
+      "description": "The Sports Dietitian is a sports nutrition consultancy specialising in endurance sports. It is your go to resource for athletes of all levels to maximise performance through up to date, evidenced based nutrition advice. The main aim is to help athletes achieve personal sporting goals through refining their nutrition for training, competition and day to day life.",
+      "followers": {
+        "facebook": 1600,
+        "twitter": 1500
+      },
+      "image_url": "https://i1.feedspot.com/4915659.jpg?t=1608378808"
+    },
+    {
+      "title": "Fueling Fitness",
+      "feed_url": "http://marciabristow.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "http://marciabristow.blogspot.com/",
+      "description": "Marcia Bristow is an author. She is RD & certified specialist in sports dietetics. She helps clients to achieve weight, health and performance goals through diet and exercise.",
+      "followers": {
+        "twitter": 746
+      },
+      "image_url": "https://i1.feedspot.com/4754635.jpg?t=1608378824"
+    },
+    {
+      "title": "Same Day Supplements Blog",
+      "feed_url": "https://www.samedaysupplements.com/blog/feed/",
+      "website_url": "https://www.samedaysupplements.com/blog/",
+      "description": "SameDaySupplements.com is the leading worldwide supplement warehouse. We offer a wide selection of bodybuilding supplements to fit your dietary needs. From your daily protein shakes to your as-needed pre-workouts, fat burners, and more; we got you covered.",
+      "followers": {
+        "facebook": 99700,
+        "twitter": 1200,
+        "instagram": 14400
+      },
+      "image_url": "https://i1.feedspot.com/4756748.jpg?t=1605793777"
+    },
+    {
+      "title": "Best Workout Supplements Blog",
+      "feed_url": "https://www.bestworkoutsupplementsblog.com/feed/",
+      "website_url": "https://www.bestworkoutsupplementsblog.com/",
+      "description": "The Best Pre Workout Supplements and Supplement Reviews. Check out Reviews and Comparisons on all the best workout supplements! Get solid advice on bodybuilding supplements before you go to the store.",
+      "followers": {
+        "facebook": 18500,
+        "twitter": 117
+      },
+      "image_url": "https://i1.feedspot.com/4756776.jpg?t=1608378420"
+    },
+    {
+      "title": "FWDfuel Blog",
+      "feed_url": "https://www.fwdfuel.com/blog/feed/",
+      "website_url": "https://www.fwdfuel.com/blog/",
+      "description": "Welcome to FWDfuel sports nutrition, the best website for information on a gluten and dairy free meal plan for athletes as well as info about a basic food sensitivity elimination diet. This is sports nutrition with a whole food approach individualized to meet your specific needs.",
+      "followers": {
+        "facebook": 1800,
+        "twitter": 1100,
+        "instagram": 10900
+      },
+      "image_url": "https://i1.feedspot.com/4918661.jpg?t=1608378530"
+    },
+    {
+      "title": "Sanford POWER: Sports & Athletic Training",
+      "feed_url": "http://www.sanfordpower.com/category/nutrition/feed/",
+      "website_url": "https://www.sanfordsports.com/blog/nutrition#sort=date%20descending",
+      "description": "Sanford POWER uses the latest athletic training techniques and equipment to unlock athletes' full potential or get them back in the game.",
+      "followers": {
+        "facebook": 2,
+        "twitter": 5200
+      },
+      "image_url": "https://i1.feedspot.com/4754733.jpg?t=1608378766"
+    },
+    {
+      "title": "EnlightenU Nutrition Consulting, LLC Blog",
+      "feed_url": "https://enlightenunutrition.wordpress.com/feed/",
+      "website_url": "https://valschonberg.com/blog/",
+      "description": "Val Schonberg is a registered dietitian and sports nutritionist who enjoys helping people learn how to manage food, eating, and health.",
+      "followers": {
+        "facebook": 623,
+        "twitter": 141
+      },
+      "image_url": "https://i1.feedspot.com/4753857.jpg?t=1608378797"
+    }
+  ]
+}

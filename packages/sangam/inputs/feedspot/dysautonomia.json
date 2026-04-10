@@ -1,0 +1,37 @@
+{
+  "category": "Dysautonomia",
+  "source_url": "https://rss.feedspot.com/dysautonomia_rss_feeds",
+  "feeds": [
+    {
+      "title": "The Dysautonomia Dispatch",
+      "feed_url": "http://dysautonomiainternational.org/blog/wordpress/feed/",
+      "website_url": "http://dysautonomiainternational.org/blog/wordpress/",
+      "description": "Dysautonomia International is a non-profit organization that seeks to improve the lives of individuals living with autonomic nervous system disorders through research, physician education, public awareness, and patient empowerment programs.",
+      "followers": {
+        "facebook": 129500,
+        "twitter": 27100,
+        "instagram": 48700
+      },
+      "image_url": "https://i1.feedspot.com/5086909.jpg"
+    },
+    {
+      "title": "Familial Dysautonomia Blog",
+      "feed_url": "https://fdnow.org/feed/",
+      "website_url": "https://fdnow.org/blog/",
+      "description": "FD NOW, founded by The Slaw Family, supports research that will drive better treatments and cures for patients with FD. Our goal is to deliver the next safe, natural substance to the FD community, provide support to FD families and promote education and awareness to the medical community and public.",
+      "followers": {},
+      "image_url": "https://i1.feedspot.com/5086912.jpg"
+    },
+    {
+      "title": "Living with Bob (Dysautonomia)",
+      "feed_url": "https://bobisdysautonomia.blogspot.com/feeds/posts/default?alt=rss",
+      "website_url": "https://bobisdysautonomia.blogspot.com/",
+      "description": "Living with Bob is about finding the funny when faced with the absurd and disheartening world of chronic illness. It doesn't take life too seriously, instead choosing to face the crapfest that is my health with a large dose of black humor. There may be the occasional piece of useful medical information, but you are far more likely to encounter lengthy descriptions of my bowel habits.",
+      "followers": {
+        "facebook": 2800,
+        "twitter": 2
+      },
+      "image_url": "https://i1.feedspot.com/5086911.jpg?t=1623060839"
+    }
+  ]
+}

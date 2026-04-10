@@ -1,0 +1,18 @@
+{
+  "category": "SB Nation",
+  "source_url": "https://rss.feedspot.com/sbnation_rss_feeds",
+  "feeds": [
+    {
+      "title": "SB Nation",
+      "feed_url": "https://www.sbnation.com/rss/current.xml",
+      "website_url": "https://www.sbnation.com/",
+      "description": "SB Nation is the largest independent sports media brand, consisting of SBNation.com, MMAFighting.com and over 300 fan-centric team communities.",
+      "followers": {
+        "facebook": 1400000,
+        "twitter": 283200,
+        "instagram": 203600
+      },
+      "image_url": "https://i1.feedspot.com/4718600.jpg?t=1644324197"
+    }
+  ]
+}
