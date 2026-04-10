@@ -25,8 +25,7 @@ const BLOCKED_HOSTNAME_PATTERNS = [
 ];
 
 function isBlockedHostname(hostname: string): boolean {
-  const normalized = hostname.replace(/^\[/, "").replace(/\]$/, "");
-  return BLOCKED_HOSTNAME_PATTERNS.some((pattern) => pattern.test(normalized));
+  return BLOCKED_HOSTNAME_PATTERNS.some((pattern) => pattern.test(hostname));
 }
 
 /**

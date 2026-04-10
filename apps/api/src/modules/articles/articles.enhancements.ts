@@ -4,6 +4,39 @@ import type { ArticleDetailDto } from "./articles.types";
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_HTML_BYTES = 2 * 1024 * 1024;
 
+/**
+ * Patterns that match private/loopback hostnames and IP ranges.
+ * Used to block outbound server-side fetches to internal network targets.
+ */
+const PRIVATE_IP_PATTERNS = [
+  /^127\./,
+  /^10\./,
+  /^172\.(1[6-9]|2\d|3[01])\./,
+  /^192\.168\./,
+  /^169\.254\./,
+  /^0\.0\.0\.0$/,
+  /^::1$/,
+  /^::$/,
+  /^::ffff:/i,
+  /^fc00:/i,
+  /^fe80:/i,
+  /^localhost$/i,
+];
+
+function isSafeUrl(raw: string): boolean {
+  let url: URL;
+  try {
+    url = new URL(raw);
+  } catch {
+    return false;
+  }
+  if (url.protocol !== "http:" && url.protocol !== "https:") {
+    return false;
+  }
+  // url.hostname already strips brackets for IPv6 addresses (e.g. [::1] -> ::1)
+  return !PRIVATE_IP_PATTERNS.some((pattern) => pattern.test(url.hostname));
+}
+
 function stripHtmlTags(input: string): string {
   return input
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
@@ -42,6 +75,12 @@ export function resolveEnhancementContent(
 }
 
 export async function extractFullTextFromUrl(url: string): Promise<string> {
+  if (!isSafeUrl(url)) {
+    throw new AppError("Invalid or blocked URL", {
+      status: 400,
+      code: "EXTRACTION_URL_BLOCKED",
+    });
+  }
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
   try {
