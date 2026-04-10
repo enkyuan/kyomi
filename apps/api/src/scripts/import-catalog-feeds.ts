@@ -118,12 +118,39 @@ async function upsertCatalogFeed(record: NormalizedImportRecord): Promise<boolea
   return true;
 }
 
+async function* readLines(filePath: string): AsyncIterable<string> {
+  const stream = Bun.file(filePath).stream();
+  const reader = stream.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) {
+        break;
+      }
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = lines.pop() ?? "";
+      for (const line of lines) {
+        yield line;
+      }
+    }
+    // Flush any remaining bytes
+    buffer += decoder.decode();
+    if (buffer) {
+      yield buffer;
+    }
+  } finally {
+    reader.releaseLock();
+  }
+}
+
 async function importCatalogFile(inputPath: string, dryRun: boolean): Promise<ImportStats> {
   const stats: ImportStats = { processed: 0, imported: 0, skipped: 0, failed: 0 };
-  const content = await Bun.file(inputPath).text();
-  const lines = content.split("\n");
 
-  for (const line of lines) {
+  for await (const line of readLines(inputPath)) {
     if (!line.trim()) {
       continue;
     }

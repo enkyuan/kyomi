@@ -26,7 +26,27 @@ return {current, ttl}
 
 const memoryRateLimitState = new Map<string, { count: number; resetAt: number }>();
 
+const MEMORY_PRUNE_INTERVAL_MS = 60_000;
+let memoryPruneTimer: ReturnType<typeof setInterval> | null = null;
+
+function ensureMemoryPruneTimer(): void {
+  if (memoryPruneTimer !== null) {
+    return;
+  }
+  memoryPruneTimer = setInterval(() => {
+    const now = Date.now();
+    for (const [key, entry] of memoryRateLimitState) {
+      if (entry.resetAt <= now) {
+        memoryRateLimitState.delete(key);
+      }
+    }
+  }, MEMORY_PRUNE_INTERVAL_MS);
+  // Allow the process to exit even if the timer is still running
+  memoryPruneTimer.unref?.();
+}
+
 function consumeInMemoryRateLimit(key: string, rule: RateLimitRule): RateLimitState {
+  ensureMemoryPruneTimer();
   const now = Date.now();
   const current = memoryRateLimitState.get(key);
   if (!current || current.resetAt <= now) {

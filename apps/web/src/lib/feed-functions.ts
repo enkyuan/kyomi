@@ -37,10 +37,6 @@ type FollowedFeedsResponse = {
   items: FollowedFeed[];
 };
 
-type FeedUnreadCountResponse = {
-  items: Array<{ id: string }>;
-};
-
 function looksLikeFeedUrl(value: string) {
   return /^https?:\/\/\S+$/i.test(value) || /^[\w-]+(\.[\w-]+)+\S*$/i.test(value);
 }
@@ -125,15 +121,8 @@ export const getFollowedFeedUnreadCounts = createServerFn({ method: "POST" })
       return {};
     }
 
-    const counts = await Promise.all(
-      uniqueIds.map(async (feedId) => {
-        const response = await apiJson<FeedUnreadCountResponse>(
-          `/api/v1/articles?is_read=false&feed_id=${encodeURIComponent(feedId)}&limit=100`,
-          { headers },
-        );
-        return [feedId, response.items.length] as const;
-      }),
+    return apiJson<Record<string, number>>(
+      `/api/v1/articles/unread-counts?feed_ids=${encodeURIComponent(uniqueIds.join(","))}`,
+      { headers },
     );
-
-    return Object.fromEntries(counts);
   });

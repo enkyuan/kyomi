@@ -37,13 +37,9 @@ export async function getOrCreateFolderByName(
     throw new AppError("name is required", { status: 400, code: "FOLDER_NAME_REQUIRED" });
   }
 
-  const existing = await findFolderByName(database, userId, trimmed);
-  if (existing) {
-    return existing;
-  }
-
   const now = new Date();
-  const [inserted] = await database
+  // Attempt insert; if the (userId, name) unique index fires, silently skip.
+  await database
     .insert(folders)
     .values({
       id: crypto.randomUUID(),
@@ -52,13 +48,15 @@ export async function getOrCreateFolderByName(
       createdAt: now,
       updatedAt: now,
     })
-    .returning();
+    .onConflictDoNothing();
 
-  if (!inserted) {
+  // Always select after the upsert — works whether we just inserted or raced with another request.
+  const folder = await findFolderByName(database, userId, trimmed);
+  if (!folder) {
     throw new AppError("Failed to create folder", { status: 500, code: "FOLDER_CREATE_FAILED" });
   }
 
-  return inserted;
+  return folder;
 }
 
 export async function createFolder(database: DB, userId: string, name: string): Promise<FolderDto> {

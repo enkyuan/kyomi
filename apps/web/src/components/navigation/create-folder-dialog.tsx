@@ -130,9 +130,7 @@ export function CreateFolderDialog({
                 type="text"
                 value={name}
                 onBlur={() => {
-                  if (name.trim().length > 0) {
-                    setTouched(true);
-                  }
+                  setTouched(true);
                 }}
                 onChange={(event) => {
                   setName(event.target.value);

@@ -3,7 +3,7 @@ import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { uuidParam } from "@shared/http/v1-stub";
 import { createArticleClip, listClipsForUser } from "./articles.clips";
-import { getArticleCountsForUser } from "./articles.counts";
+import { getArticleCountsForUser, getUnreadCountsPerFeed } from "./articles.counts";
 import { getArticleDetailForUser } from "./articles.detail";
 import {
   extractFullTextFromUrl,
@@ -153,6 +153,25 @@ export function registerArticleRoutes(app: Elysia) {
         return getArticleCountsForUser(db, userId);
       },
       { response: { 200: countsResponse } },
+    )
+    .get(
+      "/articles/unread-counts",
+      async (context) => {
+        const { db, query, userId } = v1HandlerContext<unknown, { feed_ids?: string }>(context);
+        const rawIds = typeof query.feed_ids === "string" ? query.feed_ids : "";
+        const feedIds = rawIds
+          .split(",")
+          .map((id) => id.trim())
+          .filter(Boolean);
+        const counts = await getUnreadCountsPerFeed(db, userId, feedIds);
+        return counts;
+      },
+      {
+        query: t.Object({
+          feed_ids: t.Optional(t.String()),
+        }),
+        response: { 200: t.Record(t.String(), t.Number()) },
+      },
     )
     .get(
       "/articles/check-saved",

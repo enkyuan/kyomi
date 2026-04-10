@@ -41,7 +41,7 @@ function buildFaviconUrl(siteUrl: string | null, feedUrl: string) {
     return null;
   }
 
-  return `https://www.google.com/s2/favicons?sz=64&domain_url=${encodeURIComponent(hostUrl)}`;
+  return `/api/favicon?domain=${encodeURIComponent(hostUrl)}`;
 }
 
 function parseHostUrl(raw: string | null | undefined) {
