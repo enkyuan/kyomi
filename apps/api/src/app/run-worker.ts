@@ -16,11 +16,17 @@ export async function runWorkerLoop(signal?: AbortSignal): Promise<void> {
       signal,
       onJob: async ({ id, job, attempts }) => {
         if (job.type === "feed.refresh") {
-          const result = await runFeedRefresh(env.DATABASE_URL, job.payload.feedId, {
-            url: env.MEILI_URL ?? "",
-            masterKey: env.MEILI_MASTER_KEY,
-            indexUid: env.MEILI_INDEX_FEEDS,
-          });
+          const result = await runFeedRefresh(
+            env.DATABASE_URL,
+            job.payload.feedId,
+            env.MEILI_URL
+              ? {
+                  url: env.MEILI_URL,
+                  masterKey: env.MEILI_MASTER_KEY,
+                  indexUid: env.MEILI_INDEX_FEEDS,
+                }
+              : undefined,
+          );
           if (!result.ok) {
             throw new Error("Feed refresh failed");
           }

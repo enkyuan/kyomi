@@ -1,7 +1,6 @@
 "use client";
 
-import { EyeCloseLine, EyeLine } from "@mingcute/react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useForm } from "@tanstack/react-form";
 import { Link, useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth-client";
@@ -17,62 +16,10 @@ import {
 } from "@components/ui/card";
 import { Form } from "@components/ui/form";
 import { Field, FieldError, FieldLabel } from "@components/ui/field";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@components/ui/input-group";
 import { Input } from "@components/ui/input";
+import { PasswordInput } from "@components/ui/password-input";
 import { toastManager } from "@components/ui/toast";
-import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
 import { getFieldErrorMessage, registerDefaultValues, registerFormSchema } from "./schema";
-
-function PasswordInput({
-  autoComplete,
-  name,
-  onBlur,
-  onChange,
-  placeholder,
-  value,
-}: {
-  autoComplete?: string;
-  name: string;
-  onBlur: () => void;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
-  value: string;
-}) {
-  const [showPassword, setShowPassword] = useState(false);
-
-  return (
-    <InputGroup>
-      <InputGroupInput
-        aria-label="Password with toggle visibility"
-        autoComplete={autoComplete}
-        name={name}
-        onBlur={onBlur}
-        onChange={onChange}
-        placeholder={placeholder}
-        type={showPassword ? "text" : "password"}
-        value={value}
-      />
-      <InputGroupAddon align="inline-end">
-        <Tooltip>
-          <TooltipTrigger
-            render={
-              <Button
-                aria-label={showPassword ? "Hide password" : "Show password"}
-                onClick={() => setShowPassword(!showPassword)}
-                size="icon-xs"
-                type="button"
-                variant="ghost"
-              />
-            }
-          >
-            {showPassword ? <EyeCloseLine /> : <EyeLine />}
-          </TooltipTrigger>
-          <TooltipPopup>{showPassword ? "Hide password" : "Show password"}</TooltipPopup>
-        </Tooltip>
-      </InputGroupAddon>
-    </InputGroup>
-  );
-}
 
 export function RegisterPage() {
   const router = useRouter();

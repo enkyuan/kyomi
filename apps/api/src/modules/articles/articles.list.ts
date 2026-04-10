@@ -63,11 +63,17 @@ async function maybeRefreshEmptyFeed(
   if (!shouldAutoRefreshEmpty(opts, pageLength)) {
     return null;
   }
-  const refreshed = await runFeedRefresh(env.DATABASE_URL, opts.feedId, {
-    url: env.MEILI_URL ?? "",
-    masterKey: env.MEILI_MASTER_KEY,
-    indexUid: env.MEILI_INDEX_FEEDS,
-  });
+  const refreshed = await runFeedRefresh(
+    env.DATABASE_URL,
+    opts.feedId,
+    env.MEILI_URL
+      ? {
+          url: env.MEILI_URL,
+          masterKey: env.MEILI_MASTER_KEY,
+          indexUid: env.MEILI_INDEX_FEEDS,
+        }
+      : undefined,
+  );
   if (!refreshed.ok || refreshed.itemCount <= 0) {
     return null;
   }

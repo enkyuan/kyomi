@@ -33,6 +33,23 @@ export function isMeiliConfigured(): boolean {
   return Boolean(getBaseUrl());
 }
 
+function normalizeHeaders(extra?: HeadersInit): Record<string, string> {
+  if (!extra) {
+    return {};
+  }
+  if (extra instanceof Headers) {
+    const result: Record<string, string> = {};
+    extra.forEach((value, key) => {
+      result[key] = value;
+    });
+    return result;
+  }
+  if (Array.isArray(extra)) {
+    return Object.fromEntries(extra);
+  }
+  return extra as Record<string, string>;
+}
+
 async function meiliFetch(path: string, init?: RequestInit): Promise<Response> {
   const baseUrl = getBaseUrl();
   if (!baseUrl) {
@@ -46,7 +63,7 @@ async function meiliFetch(path: string, init?: RequestInit): Promise<Response> {
     ...init,
     headers: {
       ...headers(),
-      ...(init?.headers ?? {}),
+      ...normalizeHeaders(init?.headers),
     },
   });
 }

@@ -82,7 +82,7 @@ services:
       [
         "sh",
         "-lc",
-        "bun install --frozen-lockfile && bun run start"
+        "[ -d /app/node_modules ] || bun install --frozen-lockfile; exec bun run start"
       ]
     environment:
       PORT: 8000
@@ -100,6 +100,7 @@ services:
       - "${API_PORT:-8000}:8000"
     volumes:
       - ..:/app
+      - cronos_node_modules:/app/node_modules
     depends_on:
       postgres:
         condition: service_healthy
@@ -119,7 +120,7 @@ services:
       [
         "sh",
         "-lc",
-        "bun install --frozen-lockfile && bun run worker"
+        "[ -d /app/node_modules ] || bun install --frozen-lockfile; exec bun run worker"
       ]
     environment:
       PORT: 8000
@@ -135,6 +136,7 @@ services:
       MEILI_INDEX_FEEDS: ${MEILI_INDEX_FEEDS:-feeds}
     volumes:
       - ..:/app
+      - cronos_node_modules:/app/node_modules
     depends_on:
       postgres:
         condition: service_healthy
@@ -151,6 +153,7 @@ volumes:
   garage_data:
   garage_meta:
   meili_data:
+  cronos_node_modules:
 
 networks:
   cronos-network:

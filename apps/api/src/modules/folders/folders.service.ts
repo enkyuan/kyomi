@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { feedSubscriptions, folders } from "@cronos/db";
-import { and, eq } from "drizzle-orm";
+import { and, eq, sql, desc } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
 import type { FolderDto, FolderReadStatusResponseDto } from "./folders.types";
 
@@ -79,19 +79,9 @@ export async function listFolders(database: DB, userId: string): Promise<FolderD
     .select()
     .from(folders)
     .where(eq(folders.userId, userId))
-    .orderBy(folders.name);
+    .orderBy(desc(sql`(${folders.name} = ${DEFAULT_FOLDER_NAME})`), folders.name);
 
-  return rows
-    .sort((left, right) => {
-      if (left.name === DEFAULT_FOLDER_NAME) {
-        return -1;
-      }
-      if (right.name === DEFAULT_FOLDER_NAME) {
-        return 1;
-      }
-      return left.name.localeCompare(right.name);
-    })
-    .map(mapFolder);
+  return rows.map(mapFolder);
 }
 
 export async function updateFolder(
