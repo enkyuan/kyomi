@@ -82,7 +82,7 @@ services:
       [
         "sh",
         "-lc",
-        "[ -d /app/node_modules ] || bun install --frozen-lockfile; exec bun run start"
+        "[ -d /app/node_modules ] || bun install --frozen-lockfile && exec bun run start"
       ]
     environment:
       PORT: 8000
@@ -120,7 +120,7 @@ services:
       [
         "sh",
         "-lc",
-        "[ -d /app/node_modules ] || bun install --frozen-lockfile; exec bun run worker"
+        "[ -d /app/node_modules ] || bun install --frozen-lockfile && exec bun run worker"
       ]
     environment:
       PORT: 8000
