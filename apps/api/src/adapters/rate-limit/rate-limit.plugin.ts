@@ -42,7 +42,9 @@ function ensureMemoryPruneTimer(): void {
     }
   }, MEMORY_PRUNE_INTERVAL_MS);
   // Allow the process to exit even if the timer is still running
-  memoryPruneTimer.unref?.();
+  if (typeof memoryPruneTimer.unref === "function") {
+    memoryPruneTimer.unref();
+  }
 }
 
 function consumeInMemoryRateLimit(key: string, rule: RateLimitRule): RateLimitState {

@@ -143,7 +143,11 @@ async function* readLines(filePath: string): AsyncIterable<string> {
       yield buffer;
     }
   } finally {
-    reader.releaseLock();
+    try {
+      reader.releaseLock();
+    } catch {
+      // Stream may already be closed; ignore cleanup errors
+    }
   }
 }
 
