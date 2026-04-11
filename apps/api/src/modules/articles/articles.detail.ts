@@ -2,6 +2,7 @@ import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
 import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
+import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { getClipDetailForUser } from "./articles.clips";
 import { articleIsReadSql } from "./articles.sql-read";
 import type { ArticleDetailDto } from "./articles.types";
@@ -49,13 +50,13 @@ async function getFeedArticleDetailForUser(
 
   return {
     id: r.id,
-    title: r.title,
+    title: decodeText(r.title),
     link: r.link,
-    summary: r.summary,
-    content: r.content,
+    summary: decodeNullableText(r.summary),
+    content: decodeNullableText(r.content),
     publishedAt: r.publishedAt.toISOString(),
     feedId: r.feedId,
-    feedTitle: r.feedTitle,
+    feedTitle: decodeText(r.feedTitle),
     isRead: r.isRead,
     isSaved: Boolean(r.isSaved),
     articleType: "feed",

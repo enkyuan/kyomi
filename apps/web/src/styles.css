@@ -1,5 +1,8 @@
 @import "tailwindcss";
 @import "@fontsource-variable/inter";
+@import "@fontsource/dm-sans/400.css";
+@import "@fontsource/dm-sans/500.css";
+@import "@fontsource/dm-sans/700.css";
 
 @theme inline {
   --font-sans: var(--font-sans);
@@ -66,6 +69,7 @@
 :root {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-reader: "DM Sans", var(--font-sans);
   --font-mono:
     "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
@@ -223,4 +227,12 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.reader-content {
+  font-family: var(--font-reader);
+}
+
+.reader-content :is(p, span, a) {
+  font-family: var(--font-reader);
 }

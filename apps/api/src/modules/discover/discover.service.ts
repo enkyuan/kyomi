@@ -4,6 +4,7 @@ import type { db } from "@adapters/db/client";
 import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/meili";
 import type { AppLogger } from "@adapters/logger";
 import { AppError } from "@shared/errors/app-error";
+import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { resolveRemoteFeed } from "./discover.resolve-remote-feed";
 import type { FeedPreviewDto, FeedSearchResultDto } from "./discover.types";
 
@@ -36,8 +37,8 @@ export async function previewFeedFromUrl(
   return {
     id: existing?.id ?? null,
     url: resolved.canonicalUrl,
-    title: resolved.title,
-    description: resolved.description,
+    title: decodeText(resolved.title),
+    description: decodeText(resolved.description),
     link: resolved.link,
     isSubscribed,
   };
@@ -72,6 +73,8 @@ export async function searchFeeds(
       const subscribedIds = new Set(subscriptionRows.map((row) => row.feedId));
       return hits.map((hit) => ({
         ...hit,
+        title: decodeText(hit.title),
+        description: decodeNullableText(hit.description),
         isSubscribed: subscribedIds.has(hit.id),
       }));
     } catch (error) {
@@ -122,5 +125,9 @@ export async function searchFeeds(
     .orderBy(sql`score`, asc(feeds.title))
     .limit(safeLimit);
 
-  return rows.map(({ score: _score, ...row }) => row);
+  return rows.map(({ score: _score, ...row }) => ({
+    ...row,
+    title: decodeText(row.title),
+    description: decodeNullableText(row.description),
+  }));
 }

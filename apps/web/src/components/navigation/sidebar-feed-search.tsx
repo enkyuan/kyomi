@@ -48,7 +48,12 @@ export function SidebarFeedSearchTrigger({
     queryKey: ["discover", "feeds", deferredQuery],
     queryFn: () => searchFeeds({ data: { query: deferredQuery } }),
     enabled: dialogOpen && deferredQuery.length > 0,
+    placeholderData: (previousData) => previousData,
   });
+  const searchResults = discoverResultsQuery.data ?? [];
+  const shouldShowLoading = discoverResultsQuery.isFetching && searchResults.length === 0;
+  const shouldShowEmpty =
+    !shouldShowLoading && (deferredQuery.length === 0 || searchResults.length === 0);
 
   const setDialogOpen = (nextOpen: boolean) => {
     if (open === undefined) {
@@ -60,9 +65,15 @@ export function SidebarFeedSearchTrigger({
   const followFeedMutation = useMutation({
     mutationFn: ({ url }: { url: string }) => followFeed({ data: { url } }),
     onSuccess: async (result) => {
-      await queryClient.invalidateQueries({
-        queryKey: ["discover", "feeds"],
-      });
+      queryClient.setQueriesData(
+        { queryKey: ["discover", "feeds"] },
+        (current: Awaited<ReturnType<typeof searchFeeds>> | undefined) =>
+          current?.map((item) =>
+            item.url === result.url
+              ? { ...item, isSubscribed: true, id: item.id ?? result.feedId }
+              : item,
+          ),
+      );
       await queryClient.invalidateQueries({
         queryKey: ["feeds", "followed"],
       });
@@ -143,12 +154,14 @@ export function SidebarFeedSearchTrigger({
           />
           <CommandPanel>
             <CommandList>
-              <CommandEmpty>
-                {deferredQuery
-                  ? "No feeds found yet. Try a broader topic or paste a feed URL."
-                  : "Search by topic or paste an RSS, Atom, or site feed URL."}
-              </CommandEmpty>
-              {discoverResultsQuery.isFetching ? (
+              {shouldShowEmpty ? (
+                <CommandEmpty>
+                  {deferredQuery
+                    ? "No feeds found yet. Try a broader topic or paste a feed URL."
+                    : "Search by topic or paste an RSS, Atom, or site feed URL."}
+                </CommandEmpty>
+              ) : null}
+              {shouldShowLoading ? (
                 <CommandGroup>
                   <CommandGroupLabel>Feeds</CommandGroupLabel>
                   <CommandItem disabled value="searching">
@@ -157,10 +170,10 @@ export function SidebarFeedSearchTrigger({
                   </CommandItem>
                 </CommandGroup>
               ) : null}
-              {discoverResultsQuery.data?.length ? (
+              {searchResults.length ? (
                 <CommandGroup>
                   <CommandGroupLabel>Feeds</CommandGroupLabel>
-                  {discoverResultsQuery.data.map((item) => (
+                  {searchResults.map((item) => (
                     <CommandItem
                       key={`${item.id ?? item.url}-${item.url}`}
                       value={`${item.title} ${item.url} ${item.description ?? ""}`}

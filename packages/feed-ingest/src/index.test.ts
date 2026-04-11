@@ -1,5 +1,13 @@
 import { describe, expect, test } from "bun:test";
-import { parseFeedDocument } from "./index";
+import { decodeHtmlEntities, parseFeedDocument } from "./index";
+
+describe("decodeHtmlEntities", () => {
+  test("decodes numeric and named entities", () => {
+    expect(decodeHtmlEntities("NASA &#8216;Artemis&#8217; &amp; beyond")).toBe(
+      "NASA ‘Artemis’ & beyond",
+    );
+  });
+});
 
 describe("parseFeedDocument", () => {
   test("parses RSS metadata and items", () => {
@@ -7,11 +15,11 @@ describe("parseFeedDocument", () => {
       `<?xml version="1.0"?>
       <rss version="2.0">
         <channel>
-          <title>Example Feed</title>
+          <title>Example &#8216;Feed&#8217;</title>
           <description>Latest updates</description>
           <link>https://example.com</link>
           <item>
-            <title>Hello world</title>
+            <title>Hello &#8217;world&#8217;</title>
             <link>https://example.com/posts/hello</link>
             <description><![CDATA[<p>First post</p>]]></description>
             <pubDate>Tue, 08 Apr 2026 10:00:00 GMT</pubDate>
@@ -22,10 +30,10 @@ describe("parseFeedDocument", () => {
       "https://example.com/feed.xml",
     );
 
-    expect(parsed.metadata.title).toBe("Example Feed");
+    expect(parsed.metadata.title).toBe("Example ‘Feed’");
     expect(parsed.metadata.link).toBe("https://example.com");
     expect(parsed.items).toHaveLength(1);
-    expect(parsed.items[0]?.title).toBe("Hello world");
+    expect(parsed.items[0]?.title).toBe("Hello ’world’");
     expect(parsed.items[0]?.link).toBe("https://example.com/posts/hello");
     expect(parsed.items[0]?.summary).toBe("First post");
   });

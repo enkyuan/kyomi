@@ -8,8 +8,8 @@ describe("discover.service", () => {
         {
           id: "feed_1",
           url: "https://example.com/feed.xml",
-          title: "Example Feed",
-          description: "Latest updates",
+          title: "Example &#8216;Feed&#8217;",
+          description: "Latest &amp; updates",
           link: "https://example.com",
           isSubscribed: true,
           score: 0,
@@ -29,8 +29,8 @@ describe("discover.service", () => {
       {
         id: "feed_1",
         url: "https://example.com/feed.xml",
-        title: "Example Feed",
-        description: "Latest updates",
+        title: "Example ‘Feed’",
+        description: "Latest & updates",
         link: "https://example.com",
         isSubscribed: true,
       },

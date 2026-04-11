@@ -8,10 +8,11 @@ import { useNavigate } from "@tanstack/react-router";
 import { Filter2Fill } from "@mingcute/react";
 import { Route } from "@/routes/inbox/index";
 import { FeedItem } from "@components/pages/inbox/feed-item";
+import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
 import { AppShell } from "@pages/app-shell";
 import { getInboxItemDetail, getInboxItems } from "@lib/inbox-functions";
 import { EmptyStateIcon } from "@components/icons/empty-state-svg";
-import { Card } from "@components/ui/card";
+
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 
@@ -181,21 +182,34 @@ export function InboxPage() {
             >
               <div className="min-h-full w-full pb-4">
                 {inboxQuery.isLoading ? (
-                  <ul className="flex w-full flex-col gap-3">
+                  <ul className="w-full">
                     {Array.from({ length: 6 }).map((_, index) => (
-                      <li key={`skeleton-${index}`}>
-                        <Card className="gap-2 rounded-xl border-border/70 p-3">
-                          <div className="flex items-start justify-between gap-3">
-                            <div className="min-w-0 flex-1 space-y-2">
-                              <Skeleton className="h-4 w-5/6 rounded" />
-                              <Skeleton className="h-3 w-2/5 rounded" />
-                            </div>
-                            <Skeleton className="h-4 w-12 rounded" />
+                      <li
+                        key={`skeleton-${index}`}
+                        className={`w-full border-x-0 border-border/70 bg-transparent${index === 0 ? "" : " border-t"}`}
+                      >
+                        {/* Source row zone */}
+                        <div className="flex flex-col gap-2 px-5 py-3">
+                          <div className="flex items-center gap-2">
+                            <Skeleton className="size-4.5 shrink-0 rounded-[3px]" />
+                            <Skeleton className="h-3 w-24 rounded" />
                           </div>
-                          <Skeleton className="h-3 w-full rounded" />
-                          <Skeleton className="h-3 w-4/5 rounded" />
-                          <Skeleton className="h-px w-full rounded-none" />
-                        </Card>
+                          {/* Title: 2 lines */}
+                          <div className="space-y-1.5">
+                            <Skeleton className="h-[18px] w-full rounded" />
+                            <Skeleton className="h-[18px] w-3/4 rounded" />
+                          </div>
+                        </div>
+                        {/* Summary: 3 lines */}
+                        <div className="space-y-1.5 px-5">
+                          <Skeleton className="h-3.5 w-full rounded" />
+                          <Skeleton className="h-3.5 w-full rounded" />
+                          <Skeleton className="h-3.5 w-4/5 rounded" />
+                        </div>
+                        {/* Timestamp */}
+                        <div className="mt-2 px-5 pb-3">
+                          <Skeleton className="h-3 w-28 rounded" />
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -273,7 +287,7 @@ export function InboxPage() {
           {selectedItem ? (
             <ScrollAreaPrimitive.Root className="min-h-0 flex-1 overflow-hidden">
               <ScrollAreaPrimitive.Viewport className="h-full overflow-x-hidden outline-none data-has-overflow-y:overscroll-y-contain">
-                <div className="min-h-full p-4 pb-4">
+                <div className="min-h-full p-12">
                   <ItemDetail item={selectedItem} />
                 </div>
               </ScrollAreaPrimitive.Viewport>
@@ -380,17 +394,26 @@ function ItemDetail({
   item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>;
 }) {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="reader-content flex flex-col gap-3">
       <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
-        <span>{item.articleType}</span>
         <span>{formatArticleTimestamp(item.publishedAt)}</span>
       </div>
       <div>
-        <p className="text-lg font-semibold text-foreground">{item.title}</p>
-        <p className="mt-1 text-sm text-muted-foreground">{item.feedTitle}</p>
+        <p className="text-xl font-semibold text-foreground">{item.title}</p>
+        <InboxSourceRow
+          articleUrl={item.link}
+          feedTitle={item.feedTitle}
+          className="mt-1"
+          labelClassName="text-sm"
+        />
       </div>
-      <p className="text-sm text-muted-foreground">{item.summary || "No summary available."}</p>
-      {item.content ? <p className="text-sm leading-6 text-foreground/90">{item.content}</p> : null}
+      {item.content ? (
+        <div
+          className="mt-3 text-base leading-7 text-foreground/90"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: item.content }}
+        />
+      ) : null}
       <a
         href={item.link}
         target="_blank"

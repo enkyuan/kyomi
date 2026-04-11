@@ -3,6 +3,7 @@ import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
 import { runFeedRefresh } from "@cronos/feed-ingest";
 import { and, desc, eq, gte, lt, or, sql, type SQL } from "drizzle-orm";
+import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { articleIsReadSql } from "./articles.sql-read";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "./articles.types";
 
@@ -77,12 +78,12 @@ async function maybeRefreshEmptyFeed(
 function toArticleListItems(page: RawRow[]): ArticleListItemDto[] {
   return page.map((r) => ({
     id: r.id,
-    title: r.title,
+    title: decodeText(r.title),
     link: r.link,
-    summary: r.summary,
+    summary: decodeNullableText(r.summary),
     publishedAt: r.publishedAt.toISOString(),
     feedId: r.feedId,
-    feedTitle: r.feedTitle,
+    feedTitle: decodeText(r.feedTitle),
     isRead: r.isRead,
     isSaved: r.isSaved,
     articleType: "feed" as const,

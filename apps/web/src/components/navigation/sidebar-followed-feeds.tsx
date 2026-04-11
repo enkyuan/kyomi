@@ -167,7 +167,7 @@ function FollowedFeedMenuItem({
         }
       >
         <FeedFavicon
-          className="size-4 rounded-sm"
+          className="size-4 overflow-hidden rounded-[3px]"
           feedUrl={item.url}
           siteUrl={item.link}
           title={feedLabel}

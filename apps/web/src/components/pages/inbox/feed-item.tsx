@@ -2,20 +2,11 @@
 
 import { layout, prepare } from "@chenglou/pretext";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { RssFill } from "@mingcute/react";
 import type { InboxItem } from "@lib/inbox-functions";
 import { cn } from "@lib/utils";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@components/ui/card";
+import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@components/ui/card";
 
-const FEED_META_FONT = '500 13px "Inter Variable"';
-const FEED_META_LINE_HEIGHT = 18;
 const TITLE_FONT = '600 16px "Inter Variable"';
 const TITLE_LINE_HEIGHT = 22;
 const FOOTER_FONT = '500 13px "Inter Variable"';
@@ -48,18 +39,7 @@ export function FeedItem({
       onClick={onSelect}
     >
       <CardHeader className="gap-2 px-5 py-3">
-        <div className="flex w-full items-center gap-2">
-          <FeedFavicon feedTitle={item.feedTitle} articleUrl={item.link} />
-          <CardDescription className="min-w-0 text-[12px] text-muted-foreground/85">
-            <PretextText
-              className="line-clamp-1 text-[12px] font-medium tracking-[0.015em] text-muted-foreground/85"
-              lineHeight={FEED_META_LINE_HEIGHT}
-              maxLines={1}
-              text={getSourceLabel(item.link, item.feedTitle)}
-              font={FEED_META_FONT}
-            />
-          </CardDescription>
-        </div>
+        <InboxSourceRow articleUrl={item.link} feedTitle={item.feedTitle} />
         <CardTitle className="min-w-0 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground">
           <PretextText
             className="line-clamp-2 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground"
@@ -94,52 +74,6 @@ export function FeedItem({
         ) : null}
       </CardFooter>
     </Card>
-  );
-}
-
-function getSourceLabel(articleUrl: string, fallback: string) {
-  try {
-    const hostname = new URL(articleUrl).hostname.replace(/^www\./i, "");
-    if (!hostname || hostname === "news.ycombinator.com") {
-      return fallback;
-    }
-    return hostname;
-  } catch {
-    return fallback;
-  }
-}
-
-function FeedFavicon({ feedTitle, articleUrl }: { feedTitle: string; articleUrl: string }) {
-  const [errored, setErrored] = useState(false);
-  const faviconUrl = useMemo(() => {
-    if (errored) {
-      return null;
-    }
-    try {
-      const parsed = new URL(articleUrl);
-      return `https://www.google.com/s2/favicons?sz=64&domain_url=${encodeURIComponent(parsed.origin)}`;
-    } catch {
-      return null;
-    }
-  }, [articleUrl, errored]);
-
-  return (
-    <span className="inline-flex size-4.5 shrink-0 items-center justify-center overflow-hidden rounded-sm bg-muted">
-      {faviconUrl ? (
-        <img
-          alt={`${feedTitle} favicon`}
-          className="size-4"
-          loading="lazy"
-          src={faviconUrl}
-          onError={(event) => {
-            event.preventDefault();
-            setErrored(true);
-          }}
-        />
-      ) : (
-        <RssFill className="size-3 text-muted-foreground" aria-label={`${feedTitle} feed`} />
-      )}
-    </span>
   );
 }
 

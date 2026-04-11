@@ -1,4 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
+import { decodeHtmlEntities } from "@cronos/feed-ingest";
 
 export type ParsedFeedMetadata = {
   title: string;
@@ -7,10 +8,12 @@ export type ParsedFeedMetadata = {
 };
 
 function stripTags(html: string): string {
-  return html
-    .replace(/<[^>]*>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  return decodeHtmlEntities(
+    html
+      .replace(/<[^>]*>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim(),
+  );
 }
 
 function xmlText(value: unknown): string {

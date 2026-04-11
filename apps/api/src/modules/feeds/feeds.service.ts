@@ -5,6 +5,7 @@ import { upsertFeedSearchDocument } from "@adapters/search/meili";
 import { resolveRemoteFeed } from "@modules/discover/discover.resolve-remote-feed";
 import { AppError } from "@shared/errors/app-error";
 import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/folders.service";
+import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { displayFeedTitle } from "./feeds.display-title";
 import type {
   BulkUnsubscribeResponseDto,
@@ -43,7 +44,7 @@ export async function listSubscribedFeeds(
     subscriptionId: r.subscriptionId,
     feedId: r.feedId,
     url: r.url,
-    title: displayFeedTitle(r.feedTitle, r.customTitle),
+    title: decodeText(displayFeedTitle(r.feedTitle, r.customTitle)),
     customTitle: r.customTitle,
     link: r.link,
     folderId: r.folderId,
@@ -108,7 +109,7 @@ export async function createOrSubscribeToFeed(
         feedId,
         subscriptionId: existingSub[0].id,
         url: resolved.canonicalUrl,
-        title: resolved.title,
+        title: decodeText(resolved.title),
         link: resolved.link,
         newFeed,
         newSubscription: false,
@@ -129,7 +130,7 @@ export async function createOrSubscribeToFeed(
       feedId,
       subscriptionId,
       url: resolved.canonicalUrl,
-      title: resolved.title,
+      title: decodeText(resolved.title),
       link: resolved.link,
       newFeed,
       newSubscription: true,
@@ -139,8 +140,8 @@ export async function createOrSubscribeToFeed(
   await upsertFeedSearchDocument({
     id: result.feedId,
     url: result.url,
-    title: result.title,
-    description: resolved.description,
+    title: decodeText(result.title),
+    description: decodeText(resolved.description),
     link: result.link,
   }).catch(() => undefined);
 
@@ -183,7 +184,7 @@ export async function subscribeToExistingFeed(
         feedId: feed.id,
         subscriptionId: existingSub[0].id,
         url: feed.url,
-        title: feed.title,
+        title: decodeText(feed.title),
         link: feed.link,
         newFeed: false,
         newSubscription: false,
@@ -204,7 +205,7 @@ export async function subscribeToExistingFeed(
       feedId: feed.id,
       subscriptionId,
       url: feed.url,
-      title: feed.title,
+      title: decodeText(feed.title),
       link: feed.link,
       newFeed: false,
       newSubscription: true,
@@ -252,9 +253,9 @@ export async function getFeedDetailForUser(
   return {
     id: feed.id,
     url: feed.url,
-    title: displayFeedTitle(feed.title, sub?.customTitle),
+    title: decodeText(displayFeedTitle(feed.title, sub?.customTitle)),
     customTitle: sub?.customTitle ?? null,
-    description: feed.description,
+    description: decodeNullableText(feed.description),
     link: feed.link,
     createdAt: feed.createdAt.toISOString(),
     updatedAt: feed.updatedAt.toISOString(),
