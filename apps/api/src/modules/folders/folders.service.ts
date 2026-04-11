@@ -65,12 +65,23 @@ export async function createFolder(database: DB, userId: string, name: string): 
     throw new AppError("name is required", { status: 400, code: "FOLDER_NAME_REQUIRED" });
   }
 
-  const existing = await findFolderByName(database, userId, trimmed);
-  if (existing) {
+  const now = new Date();
+  const [folder] = await database
+    .insert(folders)
+    .values({
+      id: crypto.randomUUID(),
+      userId,
+      name: trimmed,
+      createdAt: now,
+      updatedAt: now,
+    })
+    .onConflictDoNothing()
+    .returning();
+
+  if (!folder) {
     throw new AppError("Folder already exists", { status: 409, code: "FOLDER_DUPLICATE" });
   }
 
-  const folder = await getOrCreateFolderByName(database, userId, trimmed);
   return mapFolder(folder);
 }
 

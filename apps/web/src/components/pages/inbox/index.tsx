@@ -35,6 +35,7 @@ export function InboxPage() {
   const [leftPanelPercent, setLeftPanelPercent] = useState(32);
   const [isResizing, setIsResizing] = useState(false);
   const [listViewportHeight, setListViewportHeight] = useState(0);
+  const [listContainerWidth, setListContainerWidth] = useState(0);
   const [hasListVerticalOverflow, setHasListVerticalOverflow] = useState(false);
   const selectedItemId = itemId;
 
@@ -133,6 +134,7 @@ export function InboxPage() {
 
     const updateViewportMetrics = () => {
       setListViewportHeight(viewport.clientHeight);
+      setListContainerWidth(viewport.clientWidth);
       setHasListVerticalOverflow(viewport.scrollHeight - viewport.clientHeight > 1);
     };
 
@@ -245,6 +247,7 @@ export function InboxPage() {
                             item={item}
                             isSelected={selectedItemId === item.id}
                             isFirst={virtualRow.index === 0}
+                            containerWidth={listContainerWidth || undefined}
                             showBottomSeparator={
                               showBottomSeparatorOnLastItem &&
                               virtualRow.index === inboxItems.length - 1

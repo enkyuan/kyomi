@@ -59,6 +59,8 @@ async function fetchFollowingRedirects(
     }
 
     const nextUrl = resolveRedirectTarget(response, currentUrl, redirectCount);
+    // Drain/cancel the redirect response body so the connection is released promptly.
+    response.body?.cancel().catch(() => undefined);
     if ("ok" in nextUrl) {
       return nextUrl;
     }

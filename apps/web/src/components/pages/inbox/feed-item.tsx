@@ -20,12 +20,14 @@ export function FeedItem({
   isSelected,
   isFirst,
   showBottomSeparator,
+  containerWidth,
   onSelect,
 }: {
   item: InboxItem;
   isSelected: boolean;
   isFirst: boolean;
   showBottomSeparator: boolean;
+  containerWidth?: number;
   onSelect: () => void;
 }) {
   return (
@@ -47,6 +49,7 @@ export function FeedItem({
             maxLines={2}
             text={item.title}
             font={TITLE_FONT}
+            containerWidth={containerWidth}
           />
         </CardTitle>
       </CardHeader>
@@ -62,6 +65,7 @@ export function FeedItem({
           maxLines={1}
           text={formatArticleTimestamp(item.publishedAt)}
           font={FOOTER_FONT}
+          containerWidth={containerWidth}
         />
         {item.isSaved ? (
           <PretextText
@@ -70,6 +74,7 @@ export function FeedItem({
             maxLines={1}
             text="Saved"
             font={FOOTER_FONT}
+            containerWidth={containerWidth}
           />
         ) : null}
       </CardFooter>
@@ -83,18 +88,25 @@ function PretextText({
   lineHeight,
   maxLines,
   className,
+  containerWidth,
 }: {
   text: string;
   font: string;
   lineHeight: number;
   maxLines: number;
   className?: string;
+  containerWidth?: number;
 }) {
   const ref = useRef<HTMLParagraphElement | null>(null);
   const prepared = useMemo(() => prepare(text, font), [font, text]);
-  const [maxWidth, setMaxWidth] = useState<number | null>(null);
+  const [parentWidth, setParentWidth] = useState<number | null>(null);
 
   useEffect(() => {
+    // Skip per-item observer when width is provided by the parent container.
+    if (containerWidth !== undefined) {
+      return;
+    }
+
     const element = ref.current;
     const parent = element?.parentElement;
     if (!element || !parent) {
@@ -102,14 +114,16 @@ function PretextText({
     }
 
     const updateWidth = () => {
-      setMaxWidth(parent.clientWidth);
+      setParentWidth(parent.clientWidth);
     };
 
     updateWidth();
     const observer = new ResizeObserver(() => updateWidth());
     observer.observe(parent);
     return () => observer.disconnect();
-  }, []);
+  }, [containerWidth]);
+
+  const maxWidth = containerWidth ?? parentWidth;
 
   const fittedWidth = useMemo(() => {
     if (!maxWidth || maxWidth <= 0) {
