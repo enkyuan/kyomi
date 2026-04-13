@@ -26,7 +26,11 @@ function isTodo(value: unknown): value is Todo {
     return false
   }
   const candidate = value as Partial<Todo>
-  return typeof candidate.id === 'number' && typeof candidate.title === 'string'
+  return (
+    Number.isInteger(candidate.id) &&
+    (candidate.id ?? 0) > 0 &&
+    typeof candidate.title === 'string'
+  )
 }
 
 async function loadTodos() {
