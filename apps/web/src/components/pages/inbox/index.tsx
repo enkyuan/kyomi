@@ -62,12 +62,16 @@ export function InboxPage() {
     queryKey: ["inbox", "item-detail", selectedItemId],
     enabled: Boolean(selectedItemId),
     retry: 1,
-    queryFn: () =>
-      getInboxItemDetail({
+    queryFn: () => {
+      if (!selectedItemId) {
+        throw new Error("Missing inbox item id");
+      }
+      return getInboxItemDetail({
         data: {
-          itemId: selectedItemId!,
+          itemId: selectedItemId,
         },
-      }),
+      });
+    },
   });
 
   useEffect(() => {
