@@ -4,6 +4,7 @@ import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { getClipDetailForUser } from "./articles.clips";
+import { buildStoredReaderContent } from "./articles.normalize-content";
 import { articleIsReadSql } from "./articles.sql-read";
 import type { ArticleDetailDto } from "./articles.types";
 
@@ -30,6 +31,13 @@ async function getFeedArticleDetailForUser(
       link: feedItems.link,
       summary: feedItems.summary,
       content: feedItems.content,
+      contentHtml: feedItems.contentHtml,
+      contentText: feedItems.contentText,
+      contentMarkdown: feedItems.contentMarkdown,
+      contentStatus: feedItems.contentStatus,
+      contentSource: feedItems.contentSource,
+      extractionErrorCode: feedItems.extractionErrorCode,
+      extractionErrorMessage: feedItems.extractionErrorMessage,
       publishedAt: feedItems.publishedAt,
       feedId: feedItems.feedId,
       feedTitle: feeds.title,
@@ -53,13 +61,32 @@ async function getFeedArticleDetailForUser(
     title: decodeText(r.title),
     link: r.link,
     summary: decodeNullableText(r.summary),
-    content: decodeNullableText(r.content),
+    contentHtml: r.contentHtml,
+    contentText: decodeNullableText(r.contentText),
+    contentMarkdown: r.contentMarkdown,
+    contentStatus: (r.contentStatus as ArticleDetailDto["contentStatus"]) ?? "pending",
+    contentSource: (r.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
+    extractionErrorCode: r.extractionErrorCode,
+    extractionErrorMessage: r.extractionErrorMessage,
     publishedAt: r.publishedAt.toISOString(),
     feedId: r.feedId,
     feedTitle: decodeText(r.feedTitle),
     isRead: r.isRead,
     isSaved: Boolean(r.isSaved),
     articleType: "feed",
+    reader: buildStoredReaderContent({
+      articleType: "feed",
+      title: decodeText(r.title),
+      summary: decodeNullableText(r.summary),
+      legacyContent: decodeNullableText(r.content),
+      contentHtml: r.contentHtml,
+      contentText: decodeNullableText(r.contentText),
+      contentMarkdown: r.contentMarkdown,
+      contentStatus: (r.contentStatus as ArticleDetailDto["contentStatus"]) ?? "pending",
+      contentSource: (r.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
+      extractionErrorCode: r.extractionErrorCode,
+      extractionErrorMessage: r.extractionErrorMessage,
+    }),
   };
 }
 

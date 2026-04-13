@@ -9,8 +9,14 @@ import { Filter2Fill } from "@mingcute/react";
 import { Route } from "@/routes/inbox/index";
 import { FeedItem } from "@components/pages/inbox/feed-item";
 import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
+import { ReaderContent } from "@components/reader/reader-content";
 import { AppShell } from "@pages/app-shell";
-import { getInboxItemDetail, getInboxItems } from "@lib/inbox-functions";
+import {
+  extractInboxItemFullText,
+  getInboxItemDetail,
+  getInboxItems,
+  type ReaderContentResponse,
+} from "@lib/inbox-functions";
 import { EmptyStateIcon } from "@components/icons/empty-state-svg";
 
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
@@ -55,12 +61,17 @@ export function InboxPage() {
   const detailQuery = useQuery({
     queryKey: ["inbox", "item-detail", selectedItemId],
     enabled: Boolean(selectedItemId),
-    queryFn: () =>
-      getInboxItemDetail({
+    retry: 1,
+    queryFn: () => {
+      if (!selectedItemId) {
+        throw new Error("Missing inbox item id");
+      }
+      return getInboxItemDetail({
         data: {
-          itemId: selectedItemId!,
+          itemId: selectedItemId,
         },
-      }),
+      });
+    },
   });
 
   useEffect(() => {
@@ -113,6 +124,8 @@ export function InboxPage() {
     [inboxItems],
   );
   const selectedItem = detailQuery.data?.item ?? null;
+  const isDetailLoading = detailQuery.isFetching;
+  const isDetailError = detailQuery.isError;
   const virtualizer = useVirtualizer({
     count: inboxItems.length,
     getItemKey: (index) => inboxItems[index]?.id ?? index,
@@ -254,7 +267,7 @@ export function InboxPage() {
                             }
                             onSelect={() => {
                               void navigate({
-                                to: "/inbox",
+                                from: Route.fullPath,
                                 search: (prev) => ({
                                   ...prev,
                                   itemId: item.id,
@@ -269,7 +282,7 @@ export function InboxPage() {
                 )}
               </div>
             </ScrollAreaPrimitive.Viewport>
-            {hasListVerticalOverflow ? <ScrollBar className="m-0" orientation="vertical" /> : null}
+            {hasListVerticalOverflow ? <ScrollBar orientation="vertical" /> : null}
           </ScrollAreaPrimitive.Root>
         </section>
 
@@ -290,12 +303,43 @@ export function InboxPage() {
           {selectedItem ? (
             <ScrollAreaPrimitive.Root className="min-h-0 flex-1 overflow-hidden">
               <ScrollAreaPrimitive.Viewport className="h-full overflow-x-hidden outline-none data-has-overflow-y:overscroll-y-contain">
-                <div className="min-h-full p-12">
+                <div className="min-h-full px-4 md:px-8">
                   <ItemDetail item={selectedItem} />
                 </div>
               </ScrollAreaPrimitive.Viewport>
-              <ScrollBar className="m-0" orientation="vertical" />
+              <ScrollBar orientation="vertical" />
             </ScrollAreaPrimitive.Root>
+          ) : isDetailLoading ? (
+            <div className="flex min-h-0 flex-1 flex-col gap-5 p-12">
+              <div className="space-y-3">
+                <Skeleton className="h-3 w-24 rounded" />
+                <Skeleton className="h-6 w-3/4 rounded" />
+                <Skeleton className="h-6 w-1/2 rounded" />
+                <Skeleton className="h-4 w-32 rounded" />
+              </div>
+              <div className="space-y-2.5">
+                <Skeleton className="h-4 w-full rounded" />
+                <Skeleton className="h-4 w-[94%] rounded" />
+                <Skeleton className="h-4 w-[88%] rounded" />
+                <Skeleton className="h-4 w-full rounded" />
+                <Skeleton className="h-4 w-[91%] rounded" />
+                <Skeleton className="h-4 w-[85%] rounded" />
+              </div>
+              <div className="space-y-2.5">
+                <Skeleton className="h-4 w-[96%] rounded" />
+                <Skeleton className="h-4 w-full rounded" />
+                <Skeleton className="h-4 w-[90%] rounded" />
+              </div>
+            </div>
+          ) : isDetailError ? (
+            <div className="flex h-full min-h-72 flex-col items-center justify-center gap-3 px-6 py-10 text-center">
+              <p className="text-base font-semibold text-foreground">Couldn&apos;t load article</p>
+              <p className="text-sm text-muted-foreground">
+                {detailQuery.error instanceof Error
+                  ? detailQuery.error.message
+                  : "There was a problem loading this item."}
+              </p>
+            </div>
           ) : (
             <div className="flex h-full min-h-72 flex-col items-center justify-center gap-5 px-6 py-10 text-center">
               <EmptyStateIcon className="size-40 shrink-0 sm:size-44" height={176} width={176} />
@@ -391,41 +435,122 @@ function BalancedEmptyStateBody({ text }: { text: string }) {
   );
 }
 
+function estimateReadingTime(html: string): number {
+  const text = html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const words = text.split(" ").filter(Boolean).length;
+  return Math.max(1, Math.round(words / 238));
+}
+
+/** Content sources that haven't gone through Readability — always extract. */
+const UNEXTRACTED_SOURCES = new Set([null, "text_fallback", "feed_markdown", "feed_summary"]);
+
 function ItemDetail({
   item,
 }: {
   item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>;
 }) {
+  const [readerOverride, setReaderOverride] = useState<ReaderContentResponse | null>(null);
+  const [isExtracting, setIsExtracting] = useState(false);
+
+  useEffect(() => {
+    setReaderOverride(null);
+
+    // Extract if the backend flagged it, OR if the content source is a raw
+    // RSS text/markdown blob (no Readability-parsed HTML available yet).
+    const needsExtraction =
+      item.reader.shouldExtract || UNEXTRACTED_SOURCES.has(item.reader.contentSource);
+
+    if (!needsExtraction) return;
+
+    let cancelled = false;
+    setIsExtracting(true);
+    extractInboxItemFullText({ data: { itemId: item.id } })
+      .then((result) => {
+        if (cancelled) return;
+        setReaderOverride(result.reader);
+      })
+      .catch((error: unknown) => {
+        if (cancelled) return;
+        setReaderOverride({
+          ...item.reader,
+          notice: "Full preview unavailable right now.",
+          contentStatus: item.reader.fallbackSummary ? "partial" : "failed",
+          extractionErrorCode: "FETCH_FAILED",
+          extractionErrorMessage:
+            error instanceof Error ? error.message : "Failed to extract full text.",
+          shouldExtract: false,
+        });
+      })
+      .finally(() => {
+        if (cancelled) return;
+        setIsExtracting(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [item.id, item.reader]);
+
+  const reader = readerOverride ?? item.reader;
+
+  const displayContent = reader.contentHtml ?? reader.contentMarkdown ?? reader.contentText ?? "";
+  const readTime = displayContent ? estimateReadingTime(displayContent) : null;
+
   return (
-    <div className="reader-content flex flex-col gap-3">
-      <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
-        <span>{formatArticleTimestamp(item.publishedAt)}</span>
-      </div>
-      <div>
+    <article className="reader-content prose prose-neutral dark:prose-invert mx-auto max-w-3xl py-10 px-2">
+      {/* Header */}
+      <div className="not-prose mb-6 flex flex-col gap-2">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
+          <span>{formatArticleTimestamp(item.publishedAt)}</span>
+          {readTime && (
+            <>
+              <span>·</span>
+              <span>{readTime} min read</span>
+            </>
+          )}
+        </div>
         <p className="text-xl font-semibold text-foreground">{item.title}</p>
         <InboxSourceRow
           articleUrl={item.link}
           feedTitle={item.feedTitle}
-          className="mt-1"
+          className=""
           labelClassName="text-sm"
         />
       </div>
-      {item.content ? (
-        <div
-          className="mt-3 text-base leading-7 text-foreground/90"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: item.content }}
-        />
-      ) : null}
-      <a
-        href={item.link}
-        target="_blank"
-        rel="noreferrer"
-        className="text-xs text-muted-foreground underline"
-      >
-        Open original article
-      </a>
-    </div>
+
+      {/* Extraction loading state */}
+      {isExtracting && (
+        <div className="not-prose space-y-3">
+          <p className="text-xs uppercase tracking-wide text-muted-foreground">
+            Extracting full text…
+          </p>
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[92%]" />
+            <Skeleton className="h-4 w-[86%]" />
+            <Skeleton className="h-4 w-[90%]" />
+            <Skeleton className="h-4 w-[84%]" />
+          </div>
+        </div>
+      )}
+
+      {/* Article body */}
+      {!isExtracting && <ReaderContent reader={reader} />}
+
+      {/* Footer link */}
+      <div className="not-prose mt-10 border-t border-border pt-6">
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noreferrer"
+          className="text-xs text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
+        >
+          View original article →
+        </a>
+      </div>
+    </article>
   );
 }
 

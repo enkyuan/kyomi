@@ -1,7 +1,5 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { eq, sql } from "drizzle-orm";
-// @ts-expect-error workspace runtime resolves pg correctly; package-local type resolution does not propagate here.
-import { Pool } from "pg";
 import { XMLParser } from "fast-xml-parser";
 import { feedItems, feeds } from "@cronos/db";
 import * as schema from "@cronos/db";
@@ -50,6 +48,8 @@ export type FeedRefreshResult = {
   itemCount: number;
 };
 
+export type FeedIngestDatabase = ReturnType<typeof drizzle<typeof schema>>;
+
 type FeedMetadata = {
   title: string;
   description: string;
@@ -63,6 +63,19 @@ type ParsedFeedItem = {
   link: string;
   summary: string | null;
   content: string | null;
+  contentHtml: string | null;
+  contentText: string | null;
+  contentMarkdown: string | null;
+  contentStatus: "ready" | "partial" | "failed" | "pending";
+  contentSource:
+    | "feed_html"
+    | "feed_markdown"
+    | "feed_summary"
+    | "extracted_html"
+    | "text_fallback"
+    | "link_only";
+  extractionErrorCode: string | null;
+  extractionErrorMessage: string | null;
   imageUrl: string | null;
   publishedAt: Date;
 };
@@ -178,6 +191,81 @@ function sanitizeStoredContent(value: string | null): string | null {
     .replace(/\son\w+='[^']*'/gi, "")
     .trim();
   return sanitized || null;
+}
+
+function looksLikeHtml(value: string | null): boolean {
+  return Boolean(value && /<[a-z][\s\S]*>/i.test(value));
+}
+
+function looksLikeMarkdown(value: string | null): boolean {
+  return Boolean(
+    value && /(^|\n)(#{1,6}\s|[-*+]\s|\d+\.\s|>\s|```)|\[[^\]]+\]\([^)]+\)|\$(.+)\$/m.test(value),
+  );
+}
+
+function buildStoredFeedContent(
+  value: string | null,
+): Pick<
+  ParsedFeedItem,
+  | "content"
+  | "contentHtml"
+  | "contentText"
+  | "contentMarkdown"
+  | "contentStatus"
+  | "contentSource"
+  | "extractionErrorCode"
+  | "extractionErrorMessage"
+> {
+  const sanitized = sanitizeStoredContent(value);
+  if (!sanitized) {
+    return {
+      content: null,
+      contentHtml: null,
+      contentText: null,
+      contentMarkdown: null,
+      contentStatus: "pending",
+      contentSource: "link_only",
+      extractionErrorCode: null,
+      extractionErrorMessage: null,
+    };
+  }
+
+  if (looksLikeHtml(sanitized)) {
+    return {
+      content: sanitized,
+      contentHtml: sanitized,
+      contentText: stripTags(sanitized),
+      contentMarkdown: null,
+      contentStatus: "ready",
+      contentSource: "feed_html",
+      extractionErrorCode: null,
+      extractionErrorMessage: null,
+    };
+  }
+
+  if (looksLikeMarkdown(sanitized)) {
+    return {
+      content: sanitized,
+      contentHtml: null,
+      contentText: sanitized,
+      contentMarkdown: sanitized,
+      contentStatus: "ready",
+      contentSource: "feed_markdown",
+      extractionErrorCode: null,
+      extractionErrorMessage: null,
+    };
+  }
+
+  return {
+    content: sanitized,
+    contentHtml: null,
+    contentText: sanitized,
+    contentMarkdown: null,
+    contentStatus: "partial",
+    contentSource: "text_fallback",
+    extractionErrorCode: null,
+    extractionErrorMessage: null,
+  };
 }
 
 function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
@@ -386,19 +474,52 @@ async function fetchFeedDocument(url: string): Promise<FetchFeedDocumentResult> 
   }
 }
 
-async function fetchArticleEnrichment(
-  url: string,
-): Promise<{ content: string | null; imageUrl: string | null }> {
+async function fetchArticleEnrichment(url: string): Promise<{
+  content: string | null;
+  contentHtml: string | null;
+  contentText: string | null;
+  contentStatus: ParsedFeedItem["contentStatus"];
+  contentSource: ParsedFeedItem["contentSource"];
+  extractionErrorCode: string | null;
+  extractionErrorMessage: string | null;
+  imageUrl: string | null;
+}> {
   if (!isSafeEnrichmentUrl(url)) {
-    return { content: null, imageUrl: null };
+    return {
+      content: null,
+      contentHtml: null,
+      contentText: null,
+      contentStatus: "failed",
+      contentSource: "link_only",
+      extractionErrorCode: "BLOCKED_URL",
+      extractionErrorMessage: "Invalid or unsafe URL provided.",
+      imageUrl: null,
+    };
   }
   const fetched = await fetchFeedDocument(url);
   if (!fetched.ok) {
-    return { content: null, imageUrl: null };
+    return {
+      content: null,
+      contentHtml: null,
+      contentText: null,
+      contentStatus: "failed",
+      contentSource: "link_only",
+      extractionErrorCode: "FETCH_FAILED",
+      extractionErrorMessage: fetched.error,
+      imageUrl: null,
+    };
   }
 
+  const contentText = sanitizeStoredContent(extractReadableTextFromHtml(fetched.body));
+
   return {
-    content: sanitizeStoredContent(extractReadableTextFromHtml(fetched.body)),
+    content: contentText,
+    contentHtml: null,
+    contentText,
+    contentStatus: contentText ? "partial" : "failed",
+    contentSource: contentText ? "text_fallback" : "link_only",
+    extractionErrorCode: null,
+    extractionErrorMessage: null,
     imageUrl: extractImageUrl(fetched.body, fetched.finalUrl),
   };
 }
@@ -479,7 +600,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       typeof record.content_html === "string" ? record.content_html.trim() || null : null;
     const contentText =
       typeof record.content_text === "string" ? record.content_text.trim() || null : null;
-    const content = sanitizeStoredContent(contentHtml ?? contentText);
+    const storedContent = buildStoredFeedContent(contentHtml ?? contentText);
     const imageUrl = extractImageUrl(contentHtml, itemLink);
     const publishedAt = parsePublishedAt(record.date_published, now);
     return [
@@ -489,8 +610,8 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
         link: itemLink,
         summary:
           (typeof record.summary === "string" && summarizeText(record.summary)) ||
-          summarizeText(content),
-        content,
+          summarizeText(storedContent.content),
+        ...storedContent,
         imageUrl,
         publishedAt,
       },
@@ -527,14 +648,14 @@ function parseRssDocument(
       record.link,
       rawText(record.guid) ?? `${finalUrl}#item-${index + 1}`,
     );
-    const content = sanitizeStoredContent(
+    const storedContent = buildStoredFeedContent(
       rawText(record["content:encoded"]) ?? rawText(record.description),
     );
     const imageUrl = extractImageUrl(
       rawText(record["content:encoded"]) ?? rawText(record.description),
       itemLink,
     );
-    const summary = summarizeText(rawText(record.description) ?? content);
+    const summary = summarizeText(rawText(record.description) ?? storedContent.content);
     const publishedAt = parsePublishedAt(record.pubDate ?? record.isoDate, now);
 
     return [
@@ -543,7 +664,7 @@ function parseRssDocument(
         title: itemTitle,
         link: itemLink,
         summary,
-        content,
+        ...storedContent,
         imageUrl,
         publishedAt,
       },
@@ -577,9 +698,11 @@ function parseAtomDocument(
     const record = entry as Record<string, unknown>;
     const itemTitle = xmlText(record.title) || `Untitled item ${index + 1}`;
     const itemLink = pickAtomLink(record.link, `${finalUrl}#entry-${index + 1}`);
-    const content = sanitizeStoredContent(rawText(record.content) ?? rawText(record.summary));
+    const storedContent = buildStoredFeedContent(
+      rawText(record.content) ?? rawText(record.summary),
+    );
     const imageUrl = extractImageUrl(rawText(record.content) ?? rawText(record.summary), itemLink);
-    const summary = summarizeText(rawText(record.summary) ?? content);
+    const summary = summarizeText(rawText(record.summary) ?? storedContent.content);
     const publishedAt = parsePublishedAt(record.published ?? record.updated, now);
 
     return [
@@ -588,7 +711,7 @@ function parseAtomDocument(
         title: itemTitle,
         link: itemLink,
         summary,
-        content,
+        ...storedContent,
         imageUrl,
         publishedAt,
       },
@@ -638,13 +761,10 @@ export function parseFeedDocument(
 }
 
 export async function runFeedRefresh(
-  databaseUrl: string,
+  database: FeedIngestDatabase,
   feedId: string,
   searchSync?: SearchSyncConfig,
 ): Promise<FeedRefreshResult> {
-  const pool = new Pool({ connectionString: databaseUrl });
-  const database = drizzle(pool, { schema });
-
   try {
     const [feed] = await database
       .select({
@@ -673,7 +793,7 @@ export async function runFeedRefresh(
     const items = Array.from(deduped.values());
     // TODO: add language detection once we settle on the TS-side metadata/storage model.
     const enrichmentCandidates = items
-      .filter((item) => !(item.content && item.content.length >= 220 && item.imageUrl))
+      .filter((item) => !(item.contentText && item.contentText.length >= 220 && item.imageUrl))
       .slice(0, MAX_ENRICHMENTS_PER_REFRESH);
 
     for (let i = 0; i < enrichmentCandidates.length; i += ENRICHMENT_CONCURRENCY) {
@@ -681,9 +801,16 @@ export async function runFeedRefresh(
       await Promise.all(
         batch.map(async (item) => {
           const enrichment = await fetchArticleEnrichment(item.link);
-          if ((!item.content || item.content.length < 220) && enrichment.content) {
+          if ((!item.contentText || item.contentText.length < 220) && enrichment.content) {
             item.content = enrichment.content;
-            item.summary = summarizeText(enrichment.content) ?? item.summary;
+            item.contentHtml = enrichment.contentHtml;
+            item.contentText = enrichment.contentText ?? enrichment.content;
+            item.contentStatus = enrichment.contentStatus;
+            item.contentSource = enrichment.contentSource;
+            item.extractionErrorCode = enrichment.extractionErrorCode;
+            item.extractionErrorMessage = enrichment.extractionErrorMessage;
+            item.summary =
+              summarizeText(enrichment.contentText ?? enrichment.content) ?? item.summary;
           }
           if (!item.imageUrl && enrichment.imageUrl) {
             item.imageUrl = enrichment.imageUrl;
@@ -718,6 +845,13 @@ export async function runFeedRefresh(
             link: item.link,
             summary: item.summary,
             content: item.content,
+            contentHtml: item.contentHtml,
+            contentText: item.contentText,
+            contentMarkdown: item.contentMarkdown,
+            contentStatus: item.contentStatus,
+            contentSource: item.contentSource,
+            extractionErrorCode: item.extractionErrorCode,
+            extractionErrorMessage: item.extractionErrorMessage,
             imageUrl: item.imageUrl,
             publishedAt: item.publishedAt,
             createdAt: now,
@@ -731,6 +865,13 @@ export async function runFeedRefresh(
             link: sql`excluded.link`,
             summary: sql`excluded.summary`,
             content: sql`excluded.content`,
+            contentHtml: sql`excluded.content_html`,
+            contentText: sql`excluded.content_text`,
+            contentMarkdown: sql`excluded.content_markdown`,
+            contentStatus: sql`excluded.content_status`,
+            contentSource: sql`excluded.content_source`,
+            extractionErrorCode: sql`excluded.extraction_error_code`,
+            extractionErrorMessage: sql`excluded.extraction_error_message`,
             imageUrl: sql`excluded.image_url`,
             publishedAt: sql`excluded.published_at`,
             updatedAt: now,
@@ -752,7 +893,5 @@ export async function runFeedRefresh(
       ok: false,
       itemCount: 0,
     };
-  } finally {
-    await pool.end();
   }
 }

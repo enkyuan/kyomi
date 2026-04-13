@@ -1,4 +1,5 @@
 import { env } from "@config/env";
+import { db } from "@adapters/db/client";
 import { logger } from "@adapters/logger";
 import { closeRedis, getRedis } from "@adapters/redis";
 import { runFeedRefresh } from "@cronos/feed-ingest";
@@ -16,7 +17,7 @@ export async function runWorkerLoop(signal?: AbortSignal): Promise<void> {
       signal,
       onJob: async ({ id, job, attempts }) => {
         if (job.type === "feed.refresh") {
-          const result = await runFeedRefresh(env.DATABASE_URL, job.payload.feedId, {
+          const result = await runFeedRefresh(db, job.payload.feedId, {
             url: env.MEILI_URL ?? "",
             masterKey: env.MEILI_MASTER_KEY,
             indexUid: env.MEILI_INDEX_FEEDS,

@@ -16,6 +16,33 @@ export type InboxItem = {
   isSaved: boolean;
 };
 
+export type ReaderContentResponse = {
+  contentStatus: "ready" | "partial" | "failed" | "pending";
+  contentSource:
+    | "feed_html"
+    | "feed_markdown"
+    | "feed_summary"
+    | "extracted_html"
+    | "text_fallback"
+    | "link_only";
+  bodyKind: "html" | "markdown" | "text" | "fallback";
+  title: string | null;
+  byline: string | null;
+  excerpt: string | null;
+  contentHtml: string | null;
+  contentMarkdown: string | null;
+  contentText: string | null;
+  fallbackSummary: string | null;
+  fallbackReason: "extraction_failed" | "timeout" | "missing_content" | null;
+  siteName: string | null;
+  language: string | null;
+  publishedTime: string | null;
+  notice: string | null;
+  extractionErrorCode: string | null;
+  extractionErrorMessage: string | null;
+  shouldExtract: boolean;
+};
+
 type CursorListResponse = {
   items: Array<{
     id: string;
@@ -39,13 +66,20 @@ type ArticleDetailResponse = {
   title: string;
   link: string;
   summary: string | null;
-  content: string | null;
+  contentHtml: string | null;
+  contentText: string | null;
+  contentMarkdown: string | null;
+  contentStatus: ReaderContentResponse["contentStatus"];
+  contentSource: ReaderContentResponse["contentSource"];
+  extractionErrorCode: string | null;
+  extractionErrorMessage: string | null;
   publishedAt: string;
   feedId: string;
   feedTitle: string;
   isRead: boolean;
   isSaved: boolean;
   articleType: "feed" | "clip";
+  reader: ReaderContentResponse;
 };
 
 type ArticleCountsResponse = {
@@ -71,7 +105,23 @@ type InboxResponse = {
 };
 
 type InboxDetailResponse = {
-  item: (InboxItem & { content: string | null }) | null;
+  item:
+    | (InboxItem & {
+        contentHtml: string | null;
+        contentText: string | null;
+        contentMarkdown: string | null;
+        contentStatus: ReaderContentResponse["contentStatus"];
+        contentSource: ReaderContentResponse["contentSource"];
+        extractionErrorCode: string | null;
+        extractionErrorMessage: string | null;
+        reader: ReaderContentResponse;
+      })
+    | null;
+};
+
+type ExtractFullTextResponse = {
+  reader: ReaderContentResponse;
+  persisted: boolean;
 };
 
 type GetInboxItemsInput = {
@@ -178,13 +228,20 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
         id: item.id,
         title: item.title,
         summary: item.summary,
-        content: item.content,
+        contentHtml: item.contentHtml,
+        contentText: item.contentText,
+        contentMarkdown: item.contentMarkdown,
+        contentStatus: item.contentStatus,
+        contentSource: item.contentSource,
+        extractionErrorCode: item.extractionErrorCode,
+        extractionErrorMessage: item.extractionErrorMessage,
         link: item.link,
         publishedAt: item.publishedAt,
         feedTitle: item.feedTitle,
         articleType: item.articleType,
         isRead: item.isRead,
         isSaved: item.isSaved,
+        reader: item.reader,
       },
     };
   });
@@ -195,6 +252,18 @@ export const getInboxCounts = createServerFn({ method: "GET" }).handler(async ()
     headers: buildForwardHeaders(headers),
   });
 });
+
+export const extractInboxItemFullText = createServerFn({ method: "POST" })
+  .inputValidator((input: { itemId: string }) => input)
+  .handler(async ({ data }): Promise<ExtractFullTextResponse> => {
+    const headers = getRequestHeaders();
+    const forwarded = buildForwardHeaders(headers);
+
+    return apiJson<ExtractFullTextResponse>(`/api/v1/articles/${data.itemId}/extract-full-text`, {
+      method: "POST",
+      headers: forwarded,
+    });
+  });
 
 export const getSidebarInboxCounts = createServerFn({ method: "GET" }).handler(
   async (): Promise<SidebarInboxCounts> => {

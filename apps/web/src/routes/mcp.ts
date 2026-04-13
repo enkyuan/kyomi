@@ -20,9 +20,12 @@ server.registerTool(
       title: z.string().describe('The title of the todo'),
     },
   },
-  ({ title }) => ({
-    content: [{ type: 'text', text: String(addTodo(title)) }],
-  }),
+  async ({ title }) => {
+    const todo = await addTodo(title)
+    return {
+      content: [{ type: 'text', text: `Added todo #${todo.id}: ${todo.title}` }],
+    }
+  },
 )
 
 // server.registerResource(

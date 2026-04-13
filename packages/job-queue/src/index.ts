@@ -84,6 +84,12 @@ export function parseJobMessageFields(id: string, fields: Record<string, string>
   };
 }
 
+type RedisTransaction = {
+  xadd: (...args: unknown[]) => RedisTransaction;
+  xack: (...args: unknown[]) => RedisTransaction;
+  exec: () => Promise<unknown>;
+};
+
 function streamFieldsToRecord(fields: string[]): Record<string, string> {
   if (fields.length % 2 !== 0) {
     throw new Error("Redis stream message fields must be key/value pairs");
@@ -94,6 +100,44 @@ function streamFieldsToRecord(fields: string[]): Record<string, string> {
     out[fields[i]!] = fields[i + 1]!;
   }
   return out;
+}
+
+function deadLetterFieldsFromRawInput(
+  fields: string[],
+  id: string,
+  error: unknown,
+): Record<string, string> {
+  const base =
+    fields.length % 2 === 0
+      ? streamFieldsToRecord(fields)
+      : {
+          raw_fields: JSON.stringify(fields),
+        };
+  const errorMessage = error instanceof Error ? error.message : String(error);
+
+  return {
+    ...base,
+    attempts: base.attempts ?? "0",
+    error: errorMessage,
+    failed_at: new Date().toISOString(),
+    original_stream_id: id,
+  };
+}
+
+async function xaddAndAck(
+  redis: Redis,
+  options: {
+    destinationStream: string;
+    destinationFields: Record<string, string>;
+    sourceStream: string;
+    group: string;
+    id: string;
+  },
+): Promise<void> {
+  const tx = (redis as Redis & { multi: () => RedisTransaction }).multi();
+  tx.xadd(options.destinationStream, "*", ...toRedisStreamFieldList(options.destinationFields));
+  tx.xack(options.sourceStream, options.group, options.id);
+  await tx.exec();
 }
 
 export async function ensureConsumerGroup(
@@ -156,22 +200,26 @@ async function retryOrDeadLetterJob(
     if (retryDelayMs > 0 && !signal?.aborted) {
       await new Promise<void>((resolve) => {
         const timer = setTimeout(resolve, retryDelayMs);
-        signal?.addEventListener("abort", () => {
-          clearTimeout(timer);
-          resolve();
-        }, { once: true });
+        signal?.addEventListener(
+          "abort",
+          () => {
+            clearTimeout(timer);
+            resolve();
+          },
+          { once: true },
+        );
       });
     }
-    await redis.xadd(
-      streamKey,
-      "*",
-      ...toRedisStreamFieldList(
-        fieldsForJob(message.job, {
-          attempts: nextAttempts,
-          lastError: errorMessage,
-        }),
-      ),
-    );
+    await xaddAndAck(redis, {
+      destinationStream: streamKey,
+      destinationFields: fieldsForJob(message.job, {
+        attempts: nextAttempts,
+        lastError: errorMessage,
+      }),
+      sourceStream: streamKey,
+      group,
+      id: message.id,
+    });
   } else {
     const deadLetterFields = {
       ...message.rawFields,
@@ -180,10 +228,14 @@ async function retryOrDeadLetterJob(
       failed_at: new Date().toISOString(),
       original_stream_id: message.id,
     };
-    await redis.xadd(deadLetterStreamKey, "*", ...toRedisStreamFieldList(deadLetterFields));
+    await xaddAndAck(redis, {
+      destinationStream: deadLetterStreamKey,
+      destinationFields: deadLetterFields,
+      sourceStream: streamKey,
+      group,
+      id: message.id,
+    });
   }
-
-  await redis.xack(streamKey, group, message.id);
 }
 
 async function claimPendingJobs(
@@ -243,22 +295,13 @@ async function processMessage(
         signal: options.signal,
       });
     } else {
-      // Parsing failed — dead-letter the raw message so it is not stuck in the PEL forever.
-      const rawFields = streamFieldsToRecord(fields);
-      const errorMessage = error instanceof Error ? error.message : String(error);
-      const deadLetterFields = {
-        ...rawFields,
-        attempts: rawFields.attempts ?? "0",
-        error: errorMessage,
-        failed_at: new Date().toISOString(),
-        original_stream_id: id,
-      };
-      await redis.xadd(
-        options.deadLetterStreamKey,
-        "*",
-        ...toRedisStreamFieldList(deadLetterFields),
-      );
-      await redis.xack(options.streamKey, options.group, id);
+      await xaddAndAck(redis, {
+        destinationStream: options.deadLetterStreamKey,
+        destinationFields: deadLetterFieldsFromRawInput(fields, id, error),
+        sourceStream: options.streamKey,
+        group: options.group,
+        id,
+      });
     }
     await options.onError?.(error, message);
   }

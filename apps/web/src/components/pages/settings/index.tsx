@@ -39,6 +39,7 @@ const SETTINGS_NAV = [
   inboxBehaviorSection,
   advancedSection,
 ] as const;
+const DEFAULT_ACTIVE_SECTION_NAME = SETTINGS_NAV[0]?.name ?? "Account";
 
 type SettingsDialogProps = {
   onOpenChange: (open: boolean) => void;
@@ -47,7 +48,7 @@ type SettingsDialogProps = {
 
 export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
   const router = useRouter();
-  const [activeSectionName, setActiveSectionName] = useState<string>(SETTINGS_NAV[0]!.name);
+  const [activeSectionName, setActiveSectionName] = useState<string>(DEFAULT_ACTIVE_SECTION_NAME);
 
   const handleLogout = async () => {
     await toastManager.promise(

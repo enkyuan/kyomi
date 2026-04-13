@@ -24,6 +24,13 @@ describe("createArticleClip", () => {
           url: "https://example.com/article",
           title: "Fetched title Fetched body",
           content: "Fetched title Fetched body",
+          contentHtml: null,
+          contentText: "Fetched title Fetched body",
+          contentMarkdown: null,
+          contentStatus: "partial",
+          contentSource: "text_fallback",
+          extractionErrorCode: null,
+          extractionErrorMessage: null,
           note: null,
           isRead: false,
           isSaved: true,
@@ -41,6 +48,6 @@ describe("createArticleClip", () => {
     });
 
     expect(result.title).toBe("Fetched title Fetched body");
-    expect(result.content).toBe("Fetched title Fetched body");
+    expect(result.contentText).toBe("Fetched title Fetched body");
   });
 });

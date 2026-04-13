@@ -21,10 +21,34 @@ function makeMockRedis(overrides?: Partial<Record<string, (...args: unknown[]) =
   const handler = {
     get(_: object, cmd: string) {
       if (cmd === "calls") return calls;
-      return overrides?.[cmd] ?? ((...args: unknown[]) => {
-        calls.push({ cmd, args });
-        return Promise.resolve("OK");
-      });
+      if (cmd === "multi") {
+        return () => {
+          const tx = {
+            xadd: (...args: unknown[]) => {
+              calls.push({ cmd: "multi.xadd", args });
+              overrides?.xadd?.(...args);
+              return tx;
+            },
+            xack: (...args: unknown[]) => {
+              calls.push({ cmd: "multi.xack", args });
+              overrides?.xack?.(...args);
+              return tx;
+            },
+            exec: (...args: unknown[]) => {
+              calls.push({ cmd: "multi.exec", args });
+              return Promise.resolve([]);
+            },
+          };
+          return tx;
+        };
+      }
+      return (
+        overrides?.[cmd] ??
+        ((...args: unknown[]) => {
+          calls.push({ cmd, args });
+          return Promise.resolve("OK");
+        })
+      );
     },
   };
 
@@ -82,6 +106,10 @@ function validFields(): string[] {
 
 function invalidFields(): string[] {
   return ["type", "unknown-type", "payload", "{}"];
+}
+
+function malformedOddFields(): string[] {
+  return ["type", "feed.refresh", "payload"];
 }
 
 describe("retry and dead-letter", () => {
@@ -229,6 +257,37 @@ describe("retry and dead-letter", () => {
     expect(xackCalls[0]).toContain("1-4");
   });
 
+  test("malformed field pairs are dead-lettered and XACK-ed", async () => {
+    const controller = new AbortController();
+
+    const redis = makeMockRedis({
+      xgroup: () => Promise.resolve("OK"),
+      call: () => Promise.resolve(["0-0", []]),
+      xreadgroup: () => {
+        controller.abort();
+        return Promise.resolve([[JOBS_STREAM_KEY, [["1-4b", malformedOddFields()]]]]);
+      },
+      xack: mock(() => Promise.resolve(1)),
+      xadd: mock(() => Promise.resolve("2-0")),
+    });
+
+    await consumeJobs(redis as never, {
+      consumer: "w1",
+      signal: controller.signal,
+      onJob: async () => {},
+    });
+
+    const xaddCalls = (redis.xadd as ReturnType<typeof mock>).mock.calls;
+    expect(xaddCalls.length).toBe(1);
+    const xaddArgs = xaddCalls[0] as string[];
+    expect(xaddArgs[0]).toBe(JOBS_DEAD_LETTER_STREAM_KEY);
+    expect(xaddArgs.includes("raw_fields")).toBe(true);
+
+    const xackCalls = (redis.xack as ReturnType<typeof mock>).mock.calls;
+    expect(xackCalls.length).toBe(1);
+    expect(xackCalls[0]).toContain("1-4b");
+  });
+
   test("retryDelayMs resolves promptly when signal is aborted", async () => {
     const controller = new AbortController();
 
@@ -297,5 +356,30 @@ describe("retry and dead-letter", () => {
     const xackCalls = (redis.xack as ReturnType<typeof mock>).mock.calls;
     expect(xackCalls.length).toBe(1);
     expect(xackCalls[0]).toContain("2-0");
+  });
+
+  test("retry and dead-letter writes are executed through Redis MULTI", async () => {
+    const controller = new AbortController();
+
+    const redis = makeMockRedis({
+      xgroup: () => Promise.resolve("OK"),
+      call: () => Promise.resolve(["0-0", []]),
+      xreadgroup: () => {
+        controller.abort();
+        return Promise.resolve([[JOBS_STREAM_KEY, [["1-6", validFields()]]]]);
+      },
+      xack: mock(() => Promise.resolve(1)),
+      xadd: mock(() => Promise.resolve("2-0")),
+    });
+
+    await consumeJobs(redis as never, {
+      consumer: "w1",
+      signal: controller.signal,
+      onJob: async () => {
+        throw new Error("fail");
+      },
+    });
+
+    expect(redis.calls.some((call) => call.cmd === "multi.exec")).toBe(true);
   });
 });

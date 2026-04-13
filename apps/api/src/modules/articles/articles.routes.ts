@@ -3,22 +3,107 @@ import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { uuidParam } from "@shared/http/v1-stub";
 import { createArticleClip, listClipsForUser } from "./articles.clips";
+import {
+  buildFallbackReaderContent,
+  buildReadabilityReaderContent,
+} from "./articles.normalize-content";
 import { getArticleCountsForUser, getUnreadCountsPerFeed } from "./articles.counts";
 import { getArticleDetailForUser } from "./articles.detail";
 import {
-  extractFullTextFromUrl,
   resolveEnhancementContent,
   summarizeContent,
   translateContent,
 } from "./articles.enhancements";
-import { listArticlesForUser } from "./articles.list";
-import { checkSavedArticleForUser } from "./articles.saved-check";
-import { updateArticleOrClipForUser } from "./articles.update";
+import { extractArticleContentFromUrl } from "./articles.extract-content";
 import {
   listMergedRecentlyReadView,
   listMergedSavedView,
   listMergedTodayView,
 } from "./articles.views-merged";
+import { updateArticleOrClipForUser } from "./articles.update";
+import { listArticlesForUser } from "./articles.list";
+import { checkSavedArticleForUser } from "./articles.saved-check";
+
+const readerContent = t.Object({
+  contentStatus: t.Union([
+    t.Literal("ready"),
+    t.Literal("partial"),
+    t.Literal("failed"),
+    t.Literal("pending"),
+  ]),
+  contentSource: t.Union([
+    t.Literal("feed_html"),
+    t.Literal("feed_markdown"),
+    t.Literal("feed_summary"),
+    t.Literal("extracted_html"),
+    t.Literal("text_fallback"),
+    t.Literal("link_only"),
+  ]),
+  bodyKind: t.Union([
+    t.Literal("html"),
+    t.Literal("markdown"),
+    t.Literal("text"),
+    t.Literal("fallback"),
+  ]),
+  title: t.Union([t.String(), t.Null()]),
+  byline: t.Union([t.String(), t.Null()]),
+  excerpt: t.Union([t.String(), t.Null()]),
+  contentHtml: t.Union([t.String(), t.Null()]),
+  contentMarkdown: t.Union([t.String(), t.Null()]),
+  contentText: t.Union([t.String(), t.Null()]),
+  fallbackSummary: t.Union([t.String(), t.Null()]),
+  fallbackReason: t.Union([
+    t.Literal("extraction_failed"),
+    t.Literal("timeout"),
+    t.Literal("missing_content"),
+    t.Null(),
+  ]),
+  siteName: t.Union([t.String(), t.Null()]),
+  language: t.Union([t.String(), t.Null()]),
+  publishedTime: t.Union([t.String(), t.Null()]),
+  notice: t.Union([t.String(), t.Null()]),
+  extractionErrorCode: t.Union([t.String(), t.Null()]),
+  extractionErrorMessage: t.Union([t.String(), t.Null()]),
+  shouldExtract: t.Boolean(),
+});
+
+const articleDetail = t.Object({
+  id: t.String(),
+  title: t.String(),
+  link: t.String(),
+  summary: t.Union([t.String(), t.Null()]),
+  contentHtml: t.Union([t.String(), t.Null()]),
+  contentText: t.Union([t.String(), t.Null()]),
+  contentMarkdown: t.Union([t.String(), t.Null()]),
+  contentStatus: t.Union([
+    t.Literal("ready"),
+    t.Literal("partial"),
+    t.Literal("failed"),
+    t.Literal("pending"),
+  ]),
+  contentSource: t.Union([
+    t.Literal("feed_html"),
+    t.Literal("feed_markdown"),
+    t.Literal("feed_summary"),
+    t.Literal("extracted_html"),
+    t.Literal("text_fallback"),
+    t.Literal("link_only"),
+  ]),
+  extractionErrorCode: t.Union([t.String(), t.Null()]),
+  extractionErrorMessage: t.Union([t.String(), t.Null()]),
+  publishedAt: t.String(),
+  feedId: t.String(),
+  feedTitle: t.String(),
+  isRead: t.Boolean(),
+  isSaved: t.Boolean(),
+  articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
+  reader: readerContent,
+});
+
+const extractResponse = t.Object({
+  reader: readerContent,
+  persisted: t.Boolean(),
+});
 
 const articleListItem = t.Object({
   id: t.String(),
@@ -40,20 +125,6 @@ const cursorListResponse = t.Object({
   total_count: t.Null(),
 });
 
-const articleDetail = t.Object({
-  id: t.String(),
-  title: t.String(),
-  link: t.String(),
-  summary: t.Union([t.String(), t.Null()]),
-  content: t.Union([t.String(), t.Null()]),
-  publishedAt: t.String(),
-  feedId: t.String(),
-  feedTitle: t.String(),
-  isRead: t.Boolean(),
-  isSaved: t.Boolean(),
-  articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
-});
-
 const countsResponse = t.Object({
   unread: t.Number(),
   saved: t.Number(),
@@ -73,10 +144,6 @@ const savedCheckResponse = t.Object({
 
 const messageResponse = t.Object({
   message: t.String(),
-});
-
-const extractResponse = t.Object({
-  content: t.String(),
 });
 
 const summarizeBody = t.Object({
@@ -199,12 +266,101 @@ export function registerArticleRoutes(app: Elysia) {
       async (context) => {
         const { db, logger, params, userId } = v1HandlerContext(context);
         const article = await getArticleDetailForUser(db, userId, params.articleId);
-        const content = await extractFullTextFromUrl(article.link);
+        const extracted = await extractArticleContentFromUrl(article.link);
+
+        if (!extracted.ok) {
+          const reader = buildFallbackReaderContent(
+            {
+              articleType: article.articleType,
+              title: article.title,
+              summary: article.summary,
+              legacyContent: null,
+              contentHtml: article.contentHtml,
+              contentText: article.contentText,
+              contentMarkdown: article.contentMarkdown,
+              contentStatus: article.contentStatus,
+              contentSource: article.contentSource,
+              extractionErrorCode: article.extractionErrorCode,
+              extractionErrorMessage: article.extractionErrorMessage,
+            },
+            {
+              code: extracted.errorCode,
+              message: extracted.errorMessage,
+            },
+          );
+
+          let persisted = false;
+          if (
+            reader.contentStatus !== article.contentStatus ||
+            reader.contentSource !== article.contentSource ||
+            reader.extractionErrorCode !== article.extractionErrorCode ||
+            reader.extractionErrorMessage !== article.extractionErrorMessage
+          ) {
+            await updateArticleOrClipForUser(db, userId, params.articleId, {
+              contentHtml: reader.contentHtml,
+              contentText: reader.contentText,
+              contentMarkdown: reader.contentMarkdown,
+              contentStatus: reader.contentStatus,
+              contentSource: reader.contentSource,
+              extractionErrorCode: reader.extractionErrorCode,
+              extractionErrorMessage: reader.extractionErrorMessage,
+            });
+            persisted = true;
+          }
+
+          logger.warn("articles.extract_full_text.fallback", {
+            userId,
+            articleId: params.articleId,
+            errorCode: extracted.errorCode,
+            persisted,
+          });
+
+          return { reader, persisted };
+        }
+
+        const reader = buildReadabilityReaderContent(
+          {
+            articleType: article.articleType,
+            title: article.title,
+            summary: article.summary,
+            legacyContent: null,
+            contentHtml: article.contentHtml,
+            contentText: article.contentText,
+            contentMarkdown: article.contentMarkdown,
+            contentStatus: article.contentStatus,
+            contentSource: article.contentSource,
+            extractionErrorCode: article.extractionErrorCode,
+            extractionErrorMessage: article.extractionErrorMessage,
+          },
+          extracted.content,
+        );
+
+        let persisted = false;
+        if (
+          reader.contentHtml !== article.contentHtml ||
+          reader.contentText !== article.contentText ||
+          reader.contentStatus !== article.contentStatus ||
+          reader.contentSource !== article.contentSource
+        ) {
+          await updateArticleOrClipForUser(db, userId, params.articleId, {
+            contentHtml: reader.contentHtml,
+            contentText: reader.contentText,
+            contentMarkdown: reader.contentMarkdown,
+            contentStatus: reader.contentStatus,
+            contentSource: reader.contentSource,
+            extractionErrorCode: reader.extractionErrorCode,
+            extractionErrorMessage: reader.extractionErrorMessage,
+          });
+          persisted = true;
+        }
+
         logger.info("articles.extract_full_text.succeeded", {
           userId,
           articleId: params.articleId,
+          persisted,
         });
-        return { content };
+
+        return { reader, persisted };
       },
       {
         params: t.Object({ articleId: uuidParam }),
@@ -352,7 +508,20 @@ export function registerArticleRoutes(app: Elysia) {
             isSaved?: boolean;
             title?: string;
             note?: string | null;
-            content?: string | null;
+            contentHtml?: string | null;
+            contentText?: string | null;
+            contentMarkdown?: string | null;
+            contentStatus?: "ready" | "partial" | "failed" | "pending" | null;
+            contentSource?:
+              | "feed_html"
+              | "feed_markdown"
+              | "feed_summary"
+              | "extracted_html"
+              | "text_fallback"
+              | "link_only"
+              | null;
+            extractionErrorCode?: string | null;
+            extractionErrorMessage?: string | null;
           },
           Record<string, unknown>,
           { articleId: string }
@@ -367,7 +536,31 @@ export function registerArticleRoutes(app: Elysia) {
           isSaved: t.Optional(t.Boolean()),
           title: t.Optional(t.String()),
           note: t.Optional(t.Union([t.String(), t.Null()])),
-          content: t.Optional(t.Union([t.String(), t.Null()])),
+          contentHtml: t.Optional(t.Union([t.String(), t.Null()])),
+          contentText: t.Optional(t.Union([t.String(), t.Null()])),
+          contentMarkdown: t.Optional(t.Union([t.String(), t.Null()])),
+          contentStatus: t.Optional(
+            t.Union([
+              t.Literal("ready"),
+              t.Literal("partial"),
+              t.Literal("failed"),
+              t.Literal("pending"),
+              t.Null(),
+            ]),
+          ),
+          contentSource: t.Optional(
+            t.Union([
+              t.Literal("feed_html"),
+              t.Literal("feed_markdown"),
+              t.Literal("feed_summary"),
+              t.Literal("extracted_html"),
+              t.Literal("text_fallback"),
+              t.Literal("link_only"),
+              t.Null(),
+            ]),
+          ),
+          extractionErrorCode: t.Optional(t.Union([t.String(), t.Null()])),
+          extractionErrorMessage: t.Optional(t.Union([t.String(), t.Null()])),
         }),
         response: { 200: messageResponse },
       },

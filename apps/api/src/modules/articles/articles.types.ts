@@ -1,3 +1,5 @@
+import type { ArticleReaderContentDto, ArticleStoredContentDto } from "./articles.content.types";
+
 export type ArticleListItemDto = {
   id: string;
   title: string;
@@ -19,12 +21,26 @@ export type ArticlesCursorListResponseDto = {
 };
 
 export type ArticleDetailDto = ArticleListItemDto & {
-  content: string | null;
+  contentHtml: string | null;
+  contentText: string | null;
+  contentMarkdown: string | null;
+  contentStatus: ArticleStoredContentDto["contentStatus"];
+  contentSource: ArticleStoredContentDto["contentSource"];
+  extractionErrorCode: string | null;
+  extractionErrorMessage: string | null;
+  reader: ArticleReaderContentDto;
 };
 
 export type ArticleUpdateBody = {
   isRead?: boolean | null;
   isSaved?: boolean;
+  contentHtml?: string | null;
+  contentText?: string | null;
+  contentMarkdown?: string | null;
+  contentStatus?: ArticleStoredContentDto["contentStatus"] | null;
+  contentSource?: ArticleStoredContentDto["contentSource"] | null;
+  extractionErrorCode?: string | null;
+  extractionErrorMessage?: string | null;
 };
 
 export type ArticleCountsDto = {
