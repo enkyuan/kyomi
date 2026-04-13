@@ -58,7 +58,12 @@ async function loadTodos() {
 }
 
 async function persistTodos() {
-  await fs.writeFile(todosPath, JSON.stringify(todos, null, 2))
+  try {
+    await fs.writeFile(todosPath, JSON.stringify(todos, null, 2))
+  } catch (error) {
+    console.error('[mcp-todos] Failed to persist todos file.', error)
+    throw error
+  }
 }
 
 // Get the todos for a user
@@ -70,7 +75,8 @@ export async function getTodos(): Promise<Todo[]> {
 // Add an item to the todos
 export async function addTodo(title: string): Promise<Todo> {
   await loadTodos()
-  const todo = { id: todos.length + 1, title }
+  const nextId = Math.max(0, ...todos.map((todo) => todo.id)) + 1
+  const todo = { id: nextId, title }
   todos.push(todo)
   await persistTodos()
   notifySubscribers()
