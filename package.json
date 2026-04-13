@@ -30,6 +30,7 @@
     "db:push": "bun run --cwd packages/db db:push",
     "db:pull": "bun run --cwd packages/db db:pull",
     "db:studio": "bun run --cwd packages/db db:studio",
+    "db:seed:feeds": "bun run catalog:import",
     "catalog:install": "bun run --cwd packages/sangam install",
     "catalog:export": "bun run --cwd packages/sangam export:catalog",
     "catalog:import": "bun run --cwd apps/api catalog:import",

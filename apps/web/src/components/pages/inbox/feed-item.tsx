@@ -38,7 +38,19 @@ export function FeedItem({
         showBottomSeparator ? "border-b" : "border-b-0",
         isSelected ? "bg-background" : "hover:bg-background/70",
       )}
-      onClick={onSelect}
+      render={
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={onSelect}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              onSelect();
+            }
+          }}
+        />
+      }
     >
       <CardHeader className="gap-2 px-5 py-3">
         <InboxSourceRow articleUrl={item.link} feedTitle={item.feedTitle} />

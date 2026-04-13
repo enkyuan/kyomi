@@ -4,6 +4,7 @@ import { assertHttpOrHttpsUrl } from "@modules/discover/discover.normalize-feed-
 import { and, desc, eq, gte, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
 import { extractFullTextFromUrl } from "./articles.enhancements";
+import { buildStoredContentRecord, buildStoredReaderContent } from "./articles.normalize-content";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./articles.clips.constants";
 import type {
   ArticleDetailDto,
@@ -113,7 +114,14 @@ function assertClipUpdateHasFields(body: ClipUpdateBody): void {
     Object.hasOwn(body, "isSaved") ||
     Object.hasOwn(body, "title") ||
     Object.hasOwn(body, "note") ||
-    Object.hasOwn(body, "content");
+    Object.hasOwn(body, "content") ||
+    Object.hasOwn(body, "contentHtml") ||
+    Object.hasOwn(body, "contentText") ||
+    Object.hasOwn(body, "contentMarkdown") ||
+    Object.hasOwn(body, "contentStatus") ||
+    Object.hasOwn(body, "contentSource") ||
+    Object.hasOwn(body, "extractionErrorCode") ||
+    Object.hasOwn(body, "extractionErrorMessage");
   if (!hasAny) {
     throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
   }
@@ -124,10 +132,34 @@ function resolveClipUpdateValues(body: ClipUpdateBody, prev: typeof articleClips
     Object.hasOwn(body, "title") && typeof body.title === "string"
       ? body.title.trim() || prev.title
       : prev.title;
+  const contentHtml = Object.hasOwn(body, "contentHtml") ? body.contentHtml : prev.contentHtml;
+  const contentText = Object.hasOwn(body, "contentText") ? body.contentText : prev.contentText;
+  const contentMarkdown = Object.hasOwn(body, "contentMarkdown")
+    ? body.contentMarkdown
+    : prev.contentMarkdown;
+  const contentStatus = Object.hasOwn(body, "contentStatus")
+    ? body.contentStatus
+    : prev.contentStatus;
+  const contentSource = Object.hasOwn(body, "contentSource")
+    ? body.contentSource
+    : prev.contentSource;
+  const extractionErrorCode = Object.hasOwn(body, "extractionErrorCode")
+    ? body.extractionErrorCode
+    : prev.extractionErrorCode;
+  const extractionErrorMessage = Object.hasOwn(body, "extractionErrorMessage")
+    ? body.extractionErrorMessage
+    : prev.extractionErrorMessage;
   return {
     title,
     note: Object.hasOwn(body, "note") ? body.note : prev.note,
     content: Object.hasOwn(body, "content") ? body.content : prev.content,
+    contentHtml,
+    contentText,
+    contentMarkdown,
+    contentStatus,
+    contentSource,
+    extractionErrorCode,
+    extractionErrorMessage,
     isRead: Object.hasOwn(body, "isRead") ? body.isRead === true : prev.isRead,
     isSaved: Object.hasOwn(body, "isSaved") ? body.isSaved === true : prev.isSaved,
   };
@@ -141,6 +173,19 @@ export async function createArticleClip(
   const trimmedUrl = ensureClipUrl(body.url);
   const content = await resolveClipContent(body.content, trimmedUrl);
   const title = resolveClipTitle(body.title, content, trimmedUrl);
+  const stored = buildStoredContentRecord({
+    articleType: "clip",
+    title,
+    summary: body.note?.trim() || null,
+    legacyContent: content,
+    contentHtml: null,
+    contentText: null,
+    contentMarkdown: null,
+    contentStatus: null,
+    contentSource: null,
+    extractionErrorCode: null,
+    extractionErrorMessage: null,
+  });
 
   const id = crypto.randomUUID();
   const now = new Date();
@@ -152,6 +197,13 @@ export async function createArticleClip(
       url: trimmedUrl,
       title,
       content,
+      contentHtml: stored.contentHtml,
+      contentText: stored.contentText,
+      contentMarkdown: stored.contentMarkdown,
+      contentStatus: stored.contentStatus,
+      contentSource: stored.contentSource,
+      extractionErrorCode: stored.extractionErrorCode,
+      extractionErrorMessage: stored.extractionErrorMessage,
       note: body.note?.trim() || null,
       isRead: false,
       isSaved: true,
@@ -172,7 +224,26 @@ function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDetailDto {
   const base = clipToListItem(row);
   return {
     ...base,
-    content: row.content,
+    contentHtml: row.contentHtml,
+    contentText: row.contentText,
+    contentMarkdown: row.contentMarkdown,
+    contentStatus: (row.contentStatus as ArticleDetailDto["contentStatus"]) ?? "pending",
+    contentSource: (row.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
+    extractionErrorCode: row.extractionErrorCode,
+    extractionErrorMessage: row.extractionErrorMessage,
+    reader: buildStoredReaderContent({
+      articleType: "clip",
+      title: row.title,
+      summary: row.note,
+      legacyContent: row.content,
+      contentHtml: row.contentHtml,
+      contentText: row.contentText,
+      contentMarkdown: row.contentMarkdown,
+      contentStatus: row.contentStatus as ArticleDetailDto["contentStatus"] | null,
+      contentSource: row.contentSource as ArticleDetailDto["contentSource"] | null,
+      extractionErrorCode: row.extractionErrorCode,
+      extractionErrorMessage: row.extractionErrorMessage,
+    }),
   };
 }
 
@@ -196,6 +267,13 @@ export type ClipUpdateBody = {
   title?: string;
   note?: string | null;
   content?: string | null;
+  contentHtml?: string | null;
+  contentText?: string | null;
+  contentMarkdown?: string | null;
+  contentStatus?: ArticleDetailDto["contentStatus"] | null;
+  contentSource?: ArticleDetailDto["contentSource"] | null;
+  extractionErrorCode?: string | null;
+  extractionErrorMessage?: string | null;
 };
 
 export async function updateArticleClipForUser(
@@ -225,6 +303,13 @@ export async function updateArticleClipForUser(
       title: next.title,
       note: next.note,
       content: next.content,
+      contentHtml: next.contentHtml,
+      contentText: next.contentText,
+      contentMarkdown: next.contentMarkdown,
+      contentStatus: next.contentStatus,
+      contentSource: next.contentSource,
+      extractionErrorCode: next.extractionErrorCode,
+      extractionErrorMessage: next.extractionErrorMessage,
       isRead: next.isRead,
       isSaved: next.isSaved,
       updatedAt: now,

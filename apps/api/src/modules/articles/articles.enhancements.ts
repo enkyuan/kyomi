@@ -1,19 +1,6 @@
 import { AppError } from "@shared/errors/app-error";
 import type { ArticleDetailDto } from "./articles.types";
-
-const FETCH_TIMEOUT_MS = 12_000;
-const MAX_HTML_BYTES = 2 * 1024 * 1024;
-
-function stripHtmlTags(input: string): string {
-  return input
-    .replace(/<script[\s\S]*?<\/script>/gi, " ")
-    .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;/gi, " ")
-    .replace(/&amp;/gi, "&")
-    .replace(/\s+/g, " ")
-    .trim();
-}
+import { extractArticleContentFromUrl } from "./articles.extract-content";
 
 function firstSentences(input: string, maxSentences: number): string {
   const chunks = input
@@ -31,7 +18,13 @@ export function resolveEnhancementContent(
   if (explicit) {
     return explicit;
   }
-  const fallback = (article.content ?? article.summary ?? "").trim();
+  const fallback = (
+    article.contentText ??
+    article.contentMarkdown ??
+    article.contentHtml ??
+    article.summary ??
+    ""
+  ).trim();
   if (!fallback) {
     throw new AppError("No content available to process", {
       status: 400,
@@ -42,51 +35,23 @@ export function resolveEnhancementContent(
 }
 
 export async function extractFullTextFromUrl(url: string): Promise<string> {
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
-  try {
-    const res = await fetch(url, {
-      signal: controller.signal,
-      redirect: "follow",
-      headers: { "user-agent": "CronosArticleExtractor/1.0" },
-    });
-    if (!res.ok) {
-      throw new AppError(`Extraction failed (HTTP ${res.status})`, {
-        status: 400,
-        code: "EXTRACTION_FAILED",
-      });
-    }
-
-    const body = await res.text();
-    if (body.length > MAX_HTML_BYTES) {
-      throw new AppError("Article response too large", {
-        status: 400,
-        code: "EXTRACTION_TOO_LARGE",
-      });
-    }
-
-    const text = stripHtmlTags(body);
-    if (!text) {
-      throw new AppError("No extractable content found", {
-        status: 400,
-        code: "EXTRACTION_EMPTY",
-      });
-    }
-    return text;
-  } catch (error) {
-    if (error instanceof AppError) {
-      throw error;
-    }
-    throw new AppError("Failed to extract article content", {
+  const extracted = await extractArticleContentFromUrl(url);
+  if (!extracted.ok) {
+    throw new AppError(extracted.errorMessage, {
       status: 400,
-      code: "EXTRACTION_FAILED",
-      cause: error,
+      code: extracted.errorCode,
     });
-  } finally {
-    clearTimeout(timer);
   }
-}
 
+  if (!extracted.content.contentHtml) {
+    throw new AppError("No readable HTML content was extracted.", {
+      status: 400,
+      code: "EXTRACTION_EMPTY",
+    });
+  }
+
+  return extracted.content.contentHtml;
+}
 export function summarizeContent(content: string, languageKey: string | undefined): string {
   const text = content.trim();
   if (!text) {

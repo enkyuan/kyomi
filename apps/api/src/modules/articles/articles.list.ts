@@ -50,9 +50,7 @@ function shouldAutoRefreshEmpty(
   opts: ListArticlesOptions,
   pageLength: number,
 ): opts is ListArticlesOptions & { feedId: string } {
-  return Boolean(
-    opts.autoRefreshEmpty && opts.feedId && !opts.cursor && pageLength === 0 && env.DATABASE_URL,
-  );
+  return Boolean(opts.autoRefreshEmpty && opts.feedId && !opts.cursor && pageLength === 0);
 }
 
 async function maybeRefreshEmptyFeed(
@@ -64,7 +62,7 @@ async function maybeRefreshEmptyFeed(
   if (!shouldAutoRefreshEmpty(opts, pageLength)) {
     return null;
   }
-  const refreshed = await runFeedRefresh(env.DATABASE_URL, opts.feedId, {
+  const refreshed = await runFeedRefresh(database, opts.feedId, {
     url: env.MEILI_URL ?? "",
     masterKey: env.MEILI_MASTER_KEY,
     indexUid: env.MEILI_INDEX_FEEDS,
