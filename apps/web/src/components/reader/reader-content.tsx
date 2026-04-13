@@ -10,7 +10,7 @@ export function ReaderContent({ reader }: { reader: ReaderContentModel }) {
   const showNotice = reader.notice && reader.bodyKind !== "fallback";
 
   return (
-    <div className="space-y-0">
+    <div>
       {showNotice ? <p className="mt-3 text-sm text-muted-foreground">{reader.notice}</p> : null}
 
       {reader.bodyKind === "html" && reader.contentHtml ? (
