@@ -6,11 +6,11 @@ services:
     container_name: cronos-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-cronos}
-      POSTGRES_USER: ${POSTGRES_USER:-postgres}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-admin}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
-      - "${POSTGRES_PORT:-5432}:5432"
+      - "${POSTGRES_PORT}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -28,7 +28,7 @@ services:
     restart: unless-stopped
     command: redis-server --appendonly yes
     ports:
-      - "${REDIS_PORT:-6379}:6379"
+      - "${REDIS_PORT}:6379"
     volumes:
       - redis_data:/data
     healthcheck:
@@ -49,9 +49,9 @@ services:
       - garage_data:/var/lib/garage/data
       - garage_meta:/var/lib/garage/meta
     ports:
-      - "${GARAGE_S3_PORT:-3900}:3900"
-      - "${GARAGE_RPC_PORT:-3901}:3901"
-      - "${GARAGE_WEB_PORT:-3902}:3902"
+      - "${GARAGE_S3_PORT}:3900"
+      - "${GARAGE_RPC_PORT}:3901"
+      - "${GARAGE_WEB_PORT}:3902"
     networks:
       - cronos-network
 
@@ -60,10 +60,10 @@ services:
     container_name: cronos-meilisearch
     restart: unless-stopped
     environment:
-      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-cronos-meili-dev-key}
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
       MEILI_NO_ANALYTICS: "true"
     ports:
-      - "${MEILI_PORT:-7700}:7700"
+      - "${MEILI_PORT}:7700"
     volumes:
       - meili_data:/meili_data
     healthcheck:
@@ -88,18 +88,18 @@ services:
       ]
     environment:
       PORT: 8000
-      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-admin}@postgres:5432/${POSTGRES_DB:-cronos}
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       REDIS_URL: redis://redis:6379
-      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:3000}
-      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:-a7324a983ce0ed18c033d38800b184b5308db076cca4f1fd47cd6dfc0ce78317}
-      BETTER_AUTH_URL: ${BETTER_AUTH_URL:-http://localhost:3000}
-      LOG_LEVEL: ${LOG_LEVEL:-info}
-      FEED_ADMIN_USER_IDS: ${FEED_ADMIN_USER_IDS:-}
+      WEB_ORIGIN: ${WEB_ORIGIN}
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET}
+      BETTER_AUTH_URL: ${BETTER_AUTH_URL}
+      LOG_LEVEL: ${LOG_LEVEL}
+      FEED_ADMIN_USER_IDS: ${FEED_ADMIN_USER_IDS}
       MEILI_URL: http://meilisearch:7700
-      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-cronos-meili-dev-key}
-      MEILI_INDEX_FEEDS: ${MEILI_INDEX_FEEDS:-feeds}
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
+      MEILI_INDEX_FEEDS: ${MEILI_INDEX_FEEDS}
     ports:
-      - "${API_PORT:-8000}:8000"
+      - "${API_PORT}:8000"
     volumes:
       - ..:/app
     depends_on:
@@ -125,16 +125,16 @@ services:
       ]
     environment:
       PORT: 8000
-      DATABASE_URL: postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-admin}@postgres:5432/${POSTGRES_DB:-cronos}
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       REDIS_URL: redis://redis:6379
-      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:3000}
-      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:-a7324a983ce0ed18c033d38800b184b5308db076cca4f1fd47cd6dfc0ce78317}
-      BETTER_AUTH_URL: ${BETTER_AUTH_URL:-http://localhost:3000}
-      LOG_LEVEL: ${LOG_LEVEL:-info}
-      FEED_ADMIN_USER_IDS: ${FEED_ADMIN_USER_IDS:-}
+      WEB_ORIGIN: ${WEB_ORIGIN}
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET}
+      BETTER_AUTH_URL: ${BETTER_AUTH_URL}
+      LOG_LEVEL: ${LOG_LEVEL}
+      FEED_ADMIN_USER_IDS: ${FEED_ADMIN_USER_IDS}
       MEILI_URL: http://meilisearch:7700
-      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-cronos-meili-dev-key}
-      MEILI_INDEX_FEEDS: ${MEILI_INDEX_FEEDS:-feeds}
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
+      MEILI_INDEX_FEEDS: ${MEILI_INDEX_FEEDS}
     volumes:
       - ..:/app
     depends_on:

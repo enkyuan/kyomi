@@ -1,6 +1,13 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeaders } from "@tanstack/react-start/server";
 import { apiJson, buildForwardHeaders } from "@lib/api";
+import {
+  apiJsonValidated,
+  discoverFeedResultSchema,
+  followFeedResultSchema,
+  followedFeedsListSchema,
+} from "@lib/api-schemas";
+import { z } from "zod";
 
 export type DiscoverFeedResult = {
   id: string | null;
@@ -61,9 +68,11 @@ export const searchFeeds = createServerFn({ method: "GET" })
     const headers = buildForwardHeaders(getRequestHeaders());
 
     if (looksLikeFeedUrl(query)) {
-      const preview = await apiJson<DiscoverFeedResult>(
-        `/api/v1/discover/preview?url=${encodeURIComponent(normalizeUrlCandidate(query))}`,
-        { headers },
+      const preview = await apiJsonValidated(discoverFeedResultSchema, () =>
+        apiJson<DiscoverFeedResult>(
+          `/api/v1/discover/preview?url=${encodeURIComponent(normalizeUrlCandidate(query))}`,
+          { headers },
+        ),
       );
 
       return [preview];
@@ -73,9 +82,11 @@ export const searchFeeds = createServerFn({ method: "GET" })
       return [];
     }
 
-    return apiJson<DiscoverFeedResult[]>(
-      `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=8`,
-      { headers },
+    return apiJsonValidated(z.array(discoverFeedResultSchema), () =>
+      apiJson<DiscoverFeedResult[]>(
+        `/api/v1/discover/search?q=${encodeURIComponent(query)}&limit=8`,
+        { headers },
+      ),
     );
   });
 
@@ -85,19 +96,23 @@ export const followFeed = createServerFn({ method: "POST" })
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");
 
-    return apiJson<FollowFeedResult>("/api/v1/feeds", {
-      method: "POST",
-      headers,
-      body: JSON.stringify({ url: normalizeUrlCandidate(data.url.trim()) }),
-    });
+    return apiJsonValidated(followFeedResultSchema, () =>
+      apiJson<FollowFeedResult>("/api/v1/feeds", {
+        method: "POST",
+        headers,
+        body: JSON.stringify({ url: normalizeUrlCandidate(data.url.trim()) }),
+      }),
+    );
   });
 
 export const listFollowedFeeds = createServerFn({ method: "GET" }).handler(
   async (): Promise<FollowedFeed[]> => {
     const headers = buildForwardHeaders(getRequestHeaders());
-    const response = await apiJson<FollowedFeedsResponse>("/api/v1/feeds", {
-      headers,
-    });
+    const response = await apiJsonValidated(followedFeedsListSchema, () =>
+      apiJson<FollowedFeedsResponse>("/api/v1/feeds", {
+        headers,
+      }),
+    );
     return response.items;
   },
 );

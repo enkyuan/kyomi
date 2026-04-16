@@ -5,72 +5,239 @@ import {
   buildStoredReaderContent,
 } from "./articles.normalize-content";
 
+/*
+ * Base input factory — all fields null/empty. Override only what each test cares about.
+ */
+function makeInput(overrides: Record<string, unknown> = {}) {
+  return {
+    articleType: "feed" as const,
+    title: "Test Article",
+    summary: null as string | null,
+    legacyContent: null as string | null,
+    contentHtml: null as string | null,
+    contentText: null as string | null,
+    contentMarkdown: null as string | null,
+    contentStatus: null as string | null,
+    contentSource: null as string | null,
+    extractionErrorCode: null as string | null,
+    extractionErrorMessage: null as string | null,
+    ...overrides,
+  };
+}
+
+// ---------------------------------------------------------------------------
+// buildStoredReaderContent — shouldExtract threshold edge cases
+// ---------------------------------------------------------------------------
 describe("articles.normalize-content", () => {
-  test("marks low-signal stored feed content as partial and extractable", () => {
-    const reader = buildStoredReaderContent({
-      articleType: "feed",
-      title: "Haunt",
-      summary:
-        "CHEZ MOOSE TERMINAL MODEL IV * Phosphor Green P1 Amber P3 White Speed Slow Normal Fast Instant Flicker",
-      legacyContent:
-        "CHEZ MOOSE TERMINAL MODEL IV * Phosphor Green P1 Amber P3 White Speed Slow Normal Fast Instant Flicker",
-      contentHtml: null,
-      contentText: null,
-      contentMarkdown: null,
-      contentStatus: null,
-      contentSource: null,
-      extractionErrorCode: null,
-      extractionErrorMessage: null,
+  describe("shouldExtractStoredContent thresholds", () => {
+    test("marks low-signal stored feed content as partial and extractable", () => {
+      const reader = buildStoredReaderContent(
+        makeInput({
+          summary:
+            "CHEZ MOOSE TERMINAL MODEL IV * Phosphor Green P1 Amber P3 White Speed Slow Normal Fast Instant Flicker",
+          legacyContent:
+            "CHEZ MOOSE TERMINAL MODEL IV * Phosphor Green P1 Amber P3 White Speed Slow Normal Fast Instant Flicker",
+        }),
+      );
+
+      expect(reader.contentStatus).toBe("partial");
+      expect(reader.shouldExtract).toBe(true);
+      expect(reader.bodyKind).toBe("text");
     });
 
-    expect(reader.contentStatus).toBe("partial");
-    expect(reader.shouldExtract).toBe(true);
-    expect(reader.bodyKind).toBe("text");
+    test("extracts when word count is exactly at the sub-40 boundary", () => {
+      // 39 words — below 40 threshold → should extract
+      const words39 = Array.from({ length: 39 }, (_, i) => `word${i}`).join(" ");
+      const reader = buildStoredReaderContent(
+        makeInput({ legacyContent: words39, summary: "Different summary" }),
+      );
+      expect(reader.shouldExtract).toBe(true);
+    });
+
+    test("does NOT extract when word count is at or above 40 with distinct summary", () => {
+      // 41 words, HTML present, distinct from summary → should NOT extract
+      const words41 = Array.from({ length: 41 }, (_, i) => `word${i}`).join(" ");
+      const htmlContent = `<p>${words41}</p>`;
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentHtml: htmlContent,
+          contentText: words41,
+          contentStatus: "ready",
+          contentSource: "feed_html",
+          summary: "Completely different summary text that shares no overlap.",
+        }),
+      );
+      expect(reader.shouldExtract).toBe(false);
+    });
+
+    test("extracts when content echoes summary at sub-180 word boundary", () => {
+      // Summary echo + under 180 words → should extract
+      const summary = Array.from({ length: 50 }, (_, i) => `word${i}`).join(" ");
+      const reader = buildStoredReaderContent(makeInput({ legacyContent: summary, summary }));
+      expect(reader.shouldExtract).toBe(true);
+    });
+
+    test("does NOT extract summary echo when word count exceeds 180", () => {
+      // Summary echo but over 180 words — the content is substantial enough
+      const summary = Array.from({ length: 60 }, (_, i) => `word${i}`).join(" ");
+      const extra = Array.from({ length: 130 }, (_, i) => `extra${i}`).join(" ");
+      const content = `${summary} ${extra}`;
+      const htmlContent = `<p>${content}</p>`;
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentHtml: htmlContent,
+          contentText: content,
+          contentStatus: "ready",
+          contentSource: "feed_html",
+          summary,
+        }),
+      );
+      expect(reader.shouldExtract).toBe(false);
+    });
+
+    test("extracts when content lacks HTML and has < 2 sentences and < 90 words", () => {
+      // No HTML structural tags, 1 sentence, 50 words → should extract
+      const content = Array.from({ length: 50 }, (_, i) => `word${i}`).join(" ") + ".";
+      const reader = buildStoredReaderContent(
+        makeInput({ legacyContent: content, summary: "Different summary" }),
+      );
+      expect(reader.shouldExtract).toBe(true);
+    });
+
+    test("does NOT extract when content has 2+ sentences even below 90 words", () => {
+      // HTML present + 2 sentences → should NOT extract even at 50 words
+      const content = "First sentence with enough words here. Second sentence with more words.";
+      const htmlContent = `<p>${content}</p>`;
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentHtml: htmlContent,
+          contentText: content,
+          contentStatus: "ready",
+          contentSource: "feed_html",
+          summary: "Completely different summary.",
+        }),
+      );
+      expect(reader.shouldExtract).toBe(false);
+    });
+
+    test("never extracts clip articles", () => {
+      const words20 = Array.from({ length: 20 }, (_, i) => `word${i}`).join(" ");
+      const reader = buildStoredReaderContent(
+        makeInput({
+          articleType: "clip",
+          legacyContent: words20,
+          summary: "Different",
+        }),
+      );
+      expect(reader.shouldExtract).toBe(false);
+    });
+
+    test("extracts when content is just 'comments' or 'Comments on ...'", () => {
+      const reader1 = buildStoredReaderContent(
+        makeInput({ legacyContent: "comments", summary: "Some summary" }),
+      );
+      expect(reader1.shouldExtract).toBe(true);
+
+      const reader2 = buildStoredReaderContent(
+        makeInput({ legacyContent: "Comments on this post", summary: "Some summary" }),
+      );
+      expect(reader2.shouldExtract).toBe(true);
+    });
   });
 
-  test("falls back to summary with a reader-safe notice after extraction failure", () => {
-    const reader = buildFallbackReaderContent(
-      {
-        articleType: "feed",
-        title: "Example",
-        summary: "Short summary",
-        legacyContent: null,
-        contentHtml: null,
-        contentText: null,
-        contentMarkdown: null,
-        contentStatus: null,
-        contentSource: null,
-        extractionErrorCode: null,
-        extractionErrorMessage: null,
-      },
-      {
+  // ---------------------------------------------------------------------------
+  // looksLikeSummaryEcho — the 48-char delta threshold
+  // ---------------------------------------------------------------------------
+  describe("looksLikeSummaryEcho 48-char delta", () => {
+    test("treats identical content and summary as echo", () => {
+      const text = "This is a short summary.";
+      const reader = buildStoredReaderContent(makeInput({ legacyContent: text, summary: text }));
+      // Short + echo → extract
+      expect(reader.shouldExtract).toBe(true);
+    });
+
+    test("treats near-identical content (within 48 chars) as echo", () => {
+      const summary = "This is the original summary text for testing.";
+      const content = summary + " extra"; // +6 chars, well within 48
+      const reader = buildStoredReaderContent(makeInput({ legacyContent: content, summary }));
+      expect(reader.shouldExtract).toBe(true);
+    });
+
+    test("does NOT treat content as echo when delta exceeds 48 chars", () => {
+      const summary = "Short summary.";
+      const extra = "A".repeat(60); // 60 char delta
+      const content = `${summary} ${extra}`;
+      // Still under 40 words though, so it'll extract for that reason
+      // Let's make it long enough to bypass the word-count threshold:
+      const baseContent = Array.from({ length: 50 }, (_, i) => `word${i}`).join(" ");
+      const fullContent = `${baseContent} ${extra}`;
+      const htmlContent = `<p>${fullContent}</p>`;
+
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentHtml: htmlContent,
+          contentText: fullContent,
+          contentStatus: "ready",
+          contentSource: "feed_html",
+          summary,
+        }),
+      );
+      // Content is 50+ words, distinct from summary, has HTML → should NOT extract
+      expect(reader.shouldExtract).toBe(false);
+    });
+  });
+
+  // ---------------------------------------------------------------------------
+  // buildFallbackReaderContent edge cases
+  // ---------------------------------------------------------------------------
+  describe("buildFallbackReaderContent", () => {
+    test("falls back to summary with a reader-safe notice after extraction failure", () => {
+      const reader = buildFallbackReaderContent(makeInput({ summary: "Short summary" }), {
         code: "TIMEOUT",
         message: "Full preview unavailable right now.",
-      },
-    );
+      });
 
-    expect(reader.contentStatus).toBe("partial");
-    expect(reader.bodyKind).toBe("fallback");
-    expect(reader.notice).toContain("Showing feed summary instead");
-    expect(reader.extractionErrorCode).toBe("TIMEOUT");
+      expect(reader.contentStatus).toBe("partial");
+      expect(reader.bodyKind).toBe("fallback");
+      expect(reader.notice).toContain("Showing feed summary instead");
+      expect(reader.extractionErrorCode).toBe("TIMEOUT");
+    });
+
+    test("falls back to link-only when no summary exists", () => {
+      const reader = buildFallbackReaderContent(makeInput({}), {
+        code: "FETCH_FAILED",
+        message: "Connection refused",
+      });
+
+      expect(reader.contentStatus).toBe("failed");
+      expect(reader.bodyKind).toBe("fallback");
+      expect(reader.contentSource).toBe("link_only");
+      expect(reader.notice).toContain("could not be previewed");
+    });
+
+    test("preserves existing stored content when extraction fails", () => {
+      const reader = buildFallbackReaderContent(
+        makeInput({
+          contentHtml: "<p>Previously extracted content.</p>",
+          contentText: "Previously extracted content.",
+          contentStatus: "ready",
+          contentSource: "extracted_html",
+        }),
+        { code: "TIMEOUT", message: "Preview timed out." },
+      );
+
+      // Should keep existing content, just update error fields
+      expect(reader.contentHtml).toBe("<p>Previously extracted content.</p>");
+      expect(reader.extractionErrorCode).toBe("TIMEOUT");
+    });
   });
 
-  test("promotes readability output to ready html content", () => {
-    const reader = buildReadabilityReaderContent(
-      {
-        articleType: "feed",
-        title: "Original title",
-        summary: "Original summary",
-        legacyContent: null,
-        contentHtml: null,
-        contentText: null,
-        contentMarkdown: null,
-        contentStatus: null,
-        contentSource: null,
-        extractionErrorCode: null,
-        extractionErrorMessage: null,
-      },
-      {
+  // ---------------------------------------------------------------------------
+  // buildReadabilityReaderContent edge cases
+  // ---------------------------------------------------------------------------
+  describe("buildReadabilityReaderContent", () => {
+    test("promotes readability output to ready html content", () => {
+      const reader = buildReadabilityReaderContent(makeInput({}), {
         title: "Readability title",
         byline: "Author",
         excerpt: "Excerpt",
@@ -79,33 +246,38 @@ describe("articles.normalize-content", () => {
         siteName: "Example",
         language: "en",
         publishedTime: null,
-      },
-    );
+      });
 
-    expect(reader.contentStatus).toBe("ready");
-    expect(reader.contentSource).toBe("extracted_html");
-    expect(reader.contentHtml).toContain("<p>Article body.</p>");
-    expect(reader.shouldExtract).toBe(false);
-  });
-
-  test("returns link-only fallback when nothing usable exists", () => {
-    const reader = buildStoredReaderContent({
-      articleType: "feed",
-      title: "Original title",
-      summary: null,
-      legacyContent: null,
-      contentHtml: null,
-      contentText: null,
-      contentMarkdown: null,
-      contentStatus: null,
-      contentSource: null,
-      extractionErrorCode: null,
-      extractionErrorMessage: null,
+      expect(reader.contentStatus).toBe("ready");
+      expect(reader.contentSource).toBe("extracted_html");
+      expect(reader.contentHtml).toContain("<p>Article body.</p>");
+      expect(reader.shouldExtract).toBe(false);
     });
 
-    expect(reader.contentStatus).toBe("failed");
-    expect(reader.contentSource).toBe("link_only");
-    expect(reader.bodyKind).toBe("fallback");
-    expect(reader.notice).toContain("could not be previewed");
+    test("uses readability byline and excerpt in the reader", () => {
+      const reader = buildReadabilityReaderContent(makeInput({}), {
+        title: "Title",
+        byline: "Jane Doe",
+        excerpt: "A short excerpt of the article.",
+        contentHtml: "<p>Real content.</p>",
+        contentText: "Real content.",
+        siteName: null,
+        language: null,
+        publishedTime: "2024-01-15T10:00:00Z",
+      });
+
+      expect(reader.byline).toBe("Jane Doe");
+      expect(reader.excerpt).toBe("A short excerpt of the article.");
+      expect(reader.publishedTime).toBe("2024-01-15T10:00:00Z");
+    });
+
+    test("returns link-only fallback when nothing usable exists", () => {
+      const reader = buildStoredReaderContent(makeInput({}));
+
+      expect(reader.contentStatus).toBe("failed");
+      expect(reader.contentSource).toBe("link_only");
+      expect(reader.bodyKind).toBe("fallback");
+      expect(reader.notice).toContain("could not be previewed");
+    });
   });
 });

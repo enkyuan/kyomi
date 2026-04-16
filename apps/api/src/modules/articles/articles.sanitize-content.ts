@@ -1,11 +1,28 @@
 import { JSDOM } from "jsdom";
+import createDOMPurify from "dompurify";
 
-const ALLOWED_TAGS = new Set([
+// Create a DOMPurify instance using JSDOM's window for server-side usage.
+const window = new JSDOM("").window;
+const DOMPurify = createDOMPurify(window);
+
+/**
+ * DOMPurify-based article HTML sanitizer.
+ *
+ * Replaces the previous hand-rolled JSDOM walker with a battle-tested
+ * sanitization library. Configured to:
+ * - Allow only article-safe structural tags
+ * - Strip all event handlers, style attributes, and dangerous URI schemes
+ * - Allow safe link/image attributes and code language classes
+ * - Remove interactive/chrome elements entirely (forms, nav, buttons, etc.)
+ */
+
+const ALLOWED_TAGS = [
   "a",
   "article",
   "blockquote",
   "br",
   "code",
+  "details",
   "em",
   "figcaption",
   "figure",
@@ -19,11 +36,16 @@ const ALLOWED_TAGS = new Set([
   "img",
   "li",
   "main",
+  "mark",
   "ol",
   "p",
   "pre",
   "section",
   "strong",
+  "sub",
+  "summary",
+  "sup",
+  "abbr",
   "table",
   "tbody",
   "td",
@@ -31,9 +53,34 @@ const ALLOWED_TAGS = new Set([
   "thead",
   "tr",
   "ul",
-]);
+];
 
-const DROP_WITH_CONTENT = new Set([
+const ALLOWED_ATTR = [
+  // Links
+  "href",
+  "rel",
+  "target",
+  // Images
+  "src",
+  "alt",
+  "title",
+  "width",
+  "height",
+  "loading",
+  // Tables
+  "colspan",
+  "rowspan",
+  "scope",
+  // Code highlighting
+  "class",
+];
+
+/**
+ * Tags that should be removed entirely (including their children), not
+ * just unwrapped. These are interactive/chrome elements that have no
+ * place in article content.
+ */
+const FORBID_TAGS = [
   "aside",
   "button",
   "footer",
@@ -48,100 +95,48 @@ const DROP_WITH_CONTENT = new Set([
   "style",
   "svg",
   "textarea",
-]);
+];
 
-function isSafeHref(value: string): boolean {
-  try {
-    const parsed = new URL(value, "https://example.com");
-    return parsed.protocol === "http:" || parsed.protocol === "https:";
-  } catch {
-    return false;
-  }
-}
+// Configure DOMPurify once
+DOMPurify.setConfig({
+  ALLOWED_TAGS,
+  ALLOWED_ATTR,
+  FORBID_TAGS,
+  ALLOW_DATA_ATTR: false,
+  ALLOWED_URI_REGEXP: /^https?:\/\//i,
+});
 
-function sanitizeNode(node: Node, document: Document): void {
-  if (node.nodeType !== document.ELEMENT_NODE) {
-    return;
-  }
-
-  const element = node as Element;
-  const tag = element.tagName.toLowerCase();
-
-  if (DROP_WITH_CONTENT.has(tag)) {
-    element.remove();
-    return;
-  }
-
-  if (!ALLOWED_TAGS.has(tag)) {
-    const fragment = document.createDocumentFragment();
-    while (element.firstChild) {
-      fragment.appendChild(element.firstChild);
+// Hook: only allow `class` attribute on `code` elements with a language- pattern
+DOMPurify.addHook("uponSanitizeAttribute", (node, data) => {
+  if (data.attrName === "class") {
+    if (node.tagName?.toLowerCase() !== "code" || !/^language-[\w-]+$/.test(data.attrValue)) {
+      data.keepAttr = false;
     }
-    element.replaceWith(fragment);
-    return;
   }
+});
 
-  for (const attr of [...element.attributes]) {
-    const name = attr.name.toLowerCase();
-    const value = attr.value.trim();
-
-    if (name.startsWith("on")) {
-      element.removeAttribute(attr.name);
-      continue;
-    }
-
-    if (tag === "a" && name === "href") {
-      if (!isSafeHref(value)) {
-        element.removeAttribute(attr.name);
-      }
-      continue;
-    }
-
-    if (tag === "img" && (name === "src" || name === "alt" || name === "title")) {
-      if (name === "src" && !isSafeHref(value)) {
-        element.remove();
-      }
-      continue;
-    }
-
-    if (tag === "code" && name === "class" && /^language-[\w-]+$/.test(value)) {
-      continue;
-    }
-
-    if (name === "colspan" || name === "rowspan" || name === "scope") {
-      continue;
-    }
-
-    element.removeAttribute(attr.name);
+// Hook: remove empty elements (except void elements)
+const VOID_ELEMENTS = new Set(["br", "hr", "img"]);
+DOMPurify.addHook("afterSanitizeElements", (node) => {
+  if (
+    node.nodeType === 1 &&
+    !VOID_ELEMENTS.has((node as Element).tagName.toLowerCase()) &&
+    !(node as Element).hasChildNodes() &&
+    !node.textContent?.trim()
+  ) {
+    node.parentNode?.removeChild(node);
   }
-
-  for (const child of [...element.childNodes]) {
-    sanitizeNode(child, document);
-  }
-}
+});
 
 export function sanitizeArticleHtml(html: string): string {
-  const dom = new JSDOM(`<body>${html}</body>`);
-  const { document } = dom.window;
-  const body = document.body;
-
-  for (const child of [...body.childNodes]) {
-    sanitizeNode(child, document);
-  }
-
-  for (const element of body.querySelectorAll("*")) {
-    if (
-      element.childNodes.length === 0 &&
-      !["br", "hr", "img"].includes(element.tagName.toLowerCase()) &&
-      !element.textContent?.trim()
-    ) {
-      element.remove();
-    }
-  }
-
-  return body.innerHTML.replace(/\n{3,}/g, "\n\n").trim();
+  const clean = DOMPurify.sanitize(html);
+  return clean.replace(/\n{3,}/g, "\n\n").trim();
 }
 
+/**
+ * Strip all HTML tags and produce plain text. Inserts newlines at block
+ * boundaries for readability.
+ */
 export function htmlToText(html: string): string {
   const dom = new JSDOM(`<body>${html}</body>`);
   const { document } = dom.window;

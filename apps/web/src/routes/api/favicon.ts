@@ -80,6 +80,74 @@ async function assertSafeFaviconHost(hostname: string): Promise<boolean> {
  *
  * Usage: GET /api/favicon?domain=https://example.com
  */
+const FETCH_OPTIONS = {
+  headers: { Accept: "image/*,*/*" },
+  redirect: "follow" as const,
+  signal: undefined as AbortSignal | undefined,
+};
+
+/** Try fetching a URL and return the response only if it looks like a valid image. */
+async function tryFetchImage(imageUrl: string): Promise<Response | null> {
+  try {
+    const response = await fetch(imageUrl, {
+      ...FETCH_OPTIONS,
+      signal: AbortSignal.timeout(5_000),
+    });
+    if (!response.ok) return null;
+    const contentType = response.headers.get("content-type") ?? "";
+    if (!contentType.startsWith("image/") && !contentType.includes("icon")) return null;
+    return response;
+  } catch {
+    return null;
+  }
+}
+
+/** Parse homepage HTML to find a <link rel="icon"> href. */
+async function findIconFromHtml(origin: string): Promise<string | null> {
+  try {
+    const response = await fetch(origin, {
+      headers: { Accept: "text/html" },
+      redirect: "follow",
+      signal: AbortSignal.timeout(5_000),
+    });
+    if (!response.ok) return null;
+    // Only read the first 16KB to find <link> tags in <head>
+    const reader = response.body?.getReader();
+    if (!reader) return null;
+    let html = "";
+    while (html.length < 16_384) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      html += new TextDecoder().decode(value);
+    }
+    reader.cancel().catch(() => {});
+
+    const match = html.match(/<link[^>]+rel=["'](?:shortcut )?icon["'][^>]*>/i);
+    if (!match) return null;
+    const hrefMatch = match[0].match(/href=["']([^"']+)["']/i);
+    if (!hrefMatch?.[1]) return null;
+
+    try {
+      return new URL(hrefMatch[1], origin).href;
+    } catch {
+      return null;
+    }
+  } catch {
+    return null;
+  }
+}
+
+function buildFaviconResponse(upstream: Response): Response {
+  const contentType = upstream.headers.get("content-type") ?? "image/x-icon";
+  return new Response(upstream.body, {
+    status: 200,
+    headers: {
+      "Content-Type": contentType,
+      "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
+    },
+  });
+}
+
 async function handleFaviconRequest(request: Request): Promise<Response> {
   const url = new URL(request.url);
   const rawDomain = url.searchParams.get("domain") ?? "";
@@ -102,32 +170,30 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     return new Response("Invalid domain", { status: 400 });
   }
 
-  const faviconUrl = `${origin}/favicon.ico`;
-
-  try {
-    const upstream = await fetch(faviconUrl, {
-      headers: { Accept: "image/*,*/*" },
-      redirect: "follow",
-      signal: AbortSignal.timeout(5_000),
-    });
-
-    if (!upstream.ok) {
-      return new Response(null, { status: 404 });
-    }
-
-    const contentType = upstream.headers.get("content-type") ?? "image/x-icon";
-    const body = await upstream.arrayBuffer();
-
-    return new Response(body, {
-      status: 200,
-      headers: {
-        "Content-Type": contentType,
-        "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
-      },
-    });
-  } catch {
-    return new Response(null, { status: 404 });
+  // Strategy 1: Try /favicon.ico directly (fastest, works for most major sites)
+  const directResult = await tryFetchImage(`${origin}/favicon.ico`);
+  if (directResult) {
+    return buildFaviconResponse(directResult);
   }
+
+  // Strategy 2: Parse the homepage HTML for <link rel="icon">
+  const iconHref = await findIconFromHtml(origin);
+  if (iconHref) {
+    const htmlIconResult = await tryFetchImage(iconHref);
+    if (htmlIconResult) {
+      return buildFaviconResponse(htmlIconResult);
+    }
+  }
+
+  // Strategy 3: Proxy through Google's public favicon service
+  const googleResult = await tryFetchImage(
+    `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=32`,
+  );
+  if (googleResult) {
+    return buildFaviconResponse(googleResult);
+  }
+
+  return new Response(null, { status: 404 });
 }
 
 export const Route = createFileRoute("/api/favicon")({

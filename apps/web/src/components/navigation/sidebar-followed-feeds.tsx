@@ -17,7 +17,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
-import { toastManager } from "@components/ui/toast";
 import { cn } from "@lib/utils";
 import {
   type FollowedFeed,
@@ -190,38 +189,17 @@ function FollowedFeedMenuItem({
       <Menu open={menuOpen} onOpenChange={setMenuOpen}>
         {anchorRef.current ? (
           <MenuPopup align="start" anchor={anchorRef.current} side="right" sideOffset={6}>
-            <MenuItem
-              onClick={() => {
-                toastManager.add({
-                  title: "Marked as essential",
-                  description: feedLabel,
-                  type: "success",
-                });
-              }}
-            >
+            <MenuItem disabled className="opacity-50">
               Mark As Essential
+              <span className="ml-auto text-[10px] text-muted-foreground">Soon</span>
             </MenuItem>
-            <MenuItem
-              onClick={() => {
-                toastManager.add({
-                  title: "Muted for today",
-                  description: feedLabel,
-                  type: "success",
-                });
-              }}
-            >
+            <MenuItem disabled className="opacity-50">
               Mute For Today
+              <span className="ml-auto text-[10px] text-muted-foreground">Soon</span>
             </MenuItem>
-            <MenuItem
-              onClick={() => {
-                toastManager.add({
-                  title: "Opened in a thought lane",
-                  description: feedLabel,
-                  type: "success",
-                });
-              }}
-            >
+            <MenuItem disabled className="opacity-50">
               Open In Thought Lane
+              <span className="ml-auto text-[10px] text-muted-foreground">Soon</span>
             </MenuItem>
           </MenuPopup>
         ) : null}

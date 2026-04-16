@@ -1,6 +1,7 @@
 import { and, eq, inArray } from "drizzle-orm";
 import { feedSubscriptions, feeds, folders } from "@cronos/db";
 import type { db } from "@adapters/db/client";
+import { logger } from "@adapters/logger";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
 import { resolveRemoteFeed } from "@modules/discover/discover.resolve-remote-feed";
 import { AppError } from "@shared/errors/app-error";
@@ -54,7 +55,103 @@ export async function listSubscribedFeeds(
 }
 
 /**
- * Fetch feed document, upsert `feeds` by canonical URL, ensure `feed_subscriptions` row for user.
+ * Upsert the global `feeds` row by canonical URL. Returns the feed ID and
+ * whether a new row was inserted.
+ */
+async function upsertFeedRecord(
+  tx: Parameters<Parameters<DB["transaction"]>[0]>[0],
+  resolved: Awaited<ReturnType<typeof resolveRemoteFeed>>,
+): Promise<{ feedId: string; newFeed: boolean }> {
+  const now = new Date();
+
+  const existingFeed = await tx
+    .select({ id: feeds.id })
+    .from(feeds)
+    .where(eq(feeds.url, resolved.canonicalUrl))
+    .limit(1);
+
+  if (existingFeed[0]) {
+    await tx
+      .update(feeds)
+      .set({
+        title: resolved.title,
+        description: resolved.description,
+        link: resolved.link,
+        updatedAt: now,
+      })
+      .where(eq(feeds.id, existingFeed[0].id));
+    return { feedId: existingFeed[0].id, newFeed: false };
+  }
+
+  const feedId = crypto.randomUUID();
+  await tx.insert(feeds).values({
+    id: feedId,
+    url: resolved.canonicalUrl,
+    title: resolved.title,
+    description: resolved.description,
+    link: resolved.link,
+    createdAt: now,
+    updatedAt: now,
+  });
+  return { feedId, newFeed: true };
+}
+
+/**
+ * Ensure a `feed_subscriptions` row exists for the user. Creates the default
+ * folder if needed.
+ */
+async function subscribeUserToFeed(
+  tx: Parameters<Parameters<DB["transaction"]>[0]>[0],
+  userId: string,
+  feedId: string,
+): Promise<{ subscriptionId: string; newSubscription: boolean }> {
+  const existingSub = await tx
+    .select({ id: feedSubscriptions.id })
+    .from(feedSubscriptions)
+    .where(and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.feedId, feedId)))
+    .limit(1);
+
+  if (existingSub[0]) {
+    return { subscriptionId: existingSub[0].id, newSubscription: false };
+  }
+
+  const subscriptionId = crypto.randomUUID();
+  const defaultFolder = await getOrCreateFolderByName(tx, userId, DEFAULT_FOLDER_NAME);
+  await tx.insert(feedSubscriptions).values({
+    id: subscriptionId,
+    userId,
+    feedId,
+    folderId: defaultFolder.id,
+    createdAt: new Date(),
+  });
+  return { subscriptionId, newSubscription: true };
+}
+
+/**
+ * Index the feed in the search engine. Logs errors instead of silently
+ * swallowing them so search indexing failures are visible in telemetry.
+ */
+async function indexFeedForSearch(metadata: {
+  id: string;
+  url: string;
+  title: string;
+  description: string | null;
+  link: string | null;
+}): Promise<void> {
+  try {
+    await upsertFeedSearchDocument(metadata);
+  } catch (error) {
+    logger.warn("feeds.search_index.failed", {
+      feedId: metadata.id,
+      url: metadata.url,
+      error: error instanceof Error ? error.message : String(error),
+    });
+  }
+}
+
+/**
+ * Fetch feed document, upsert `feeds` by canonical URL, ensure
+ * `feed_subscriptions` row for user, and index for search.
  */
 export async function createOrSubscribeToFeed(
   database: DB,
@@ -62,70 +159,10 @@ export async function createOrSubscribeToFeed(
   rawUrl: string,
 ): Promise<FeedSubscribeResultDto> {
   const resolved = await resolveRemoteFeed(rawUrl);
+
   const result = await database.transaction(async (tx) => {
-    const now = new Date();
-
-    const existingFeed = await tx
-      .select({ id: feeds.id })
-      .from(feeds)
-      .where(eq(feeds.url, resolved.canonicalUrl))
-      .limit(1);
-
-    let feedId: string;
-    let newFeed = false;
-    if (existingFeed[0]) {
-      feedId = existingFeed[0].id;
-      await tx
-        .update(feeds)
-        .set({
-          title: resolved.title,
-          description: resolved.description,
-          link: resolved.link,
-          updatedAt: now,
-        })
-        .where(eq(feeds.id, feedId));
-    } else {
-      newFeed = true;
-      feedId = crypto.randomUUID();
-      await tx.insert(feeds).values({
-        id: feedId,
-        url: resolved.canonicalUrl,
-        title: resolved.title,
-        description: resolved.description,
-        link: resolved.link,
-        createdAt: now,
-        updatedAt: now,
-      });
-    }
-
-    const existingSub = await tx
-      .select({ id: feedSubscriptions.id })
-      .from(feedSubscriptions)
-      .where(and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.feedId, feedId)))
-      .limit(1);
-
-    if (existingSub[0]) {
-      return {
-        feedId,
-        subscriptionId: existingSub[0].id,
-        url: resolved.canonicalUrl,
-        title: decodeText(resolved.title),
-        link: resolved.link,
-        newFeed,
-        newSubscription: false,
-      };
-    }
-
-    const subscriptionId = crypto.randomUUID();
-    const defaultFolder = await getOrCreateFolderByName(tx, userId, DEFAULT_FOLDER_NAME);
-    await tx.insert(feedSubscriptions).values({
-      id: subscriptionId,
-      userId,
-      feedId,
-      folderId: defaultFolder.id,
-      createdAt: now,
-    });
-
+    const { feedId, newFeed } = await upsertFeedRecord(tx, resolved);
+    const { subscriptionId, newSubscription } = await subscribeUserToFeed(tx, userId, feedId);
     return {
       feedId,
       subscriptionId,
@@ -133,17 +170,17 @@ export async function createOrSubscribeToFeed(
       title: decodeText(resolved.title),
       link: resolved.link,
       newFeed,
-      newSubscription: true,
+      newSubscription,
     };
   });
 
-  await upsertFeedSearchDocument({
+  await indexFeedForSearch({
     id: result.feedId,
     url: result.url,
     title: decodeText(result.title),
     description: decodeText(resolved.description),
     link: result.link,
-  }).catch(() => undefined);
+  });
 
   return result;
 }

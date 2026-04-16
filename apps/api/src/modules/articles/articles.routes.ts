@@ -435,7 +435,6 @@ export function registerArticleRoutes(app: Elysia) {
           folderId: parsed.folderId,
           isRead: parsed.isRead,
           isSaved: parsed.isSaved,
-          autoRefreshEmpty: Boolean(parsed.feedId),
         });
       },
       {

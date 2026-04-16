@@ -1,7 +1,5 @@
-import { env } from "@config/env";
 import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
-import { runFeedRefresh } from "@cronos/feed-ingest";
 import { and, desc, eq, gte, lt, or, sql, type SQL } from "drizzle-orm";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { articleIsReadSql } from "./articles.sql-read";
@@ -18,8 +16,6 @@ export type ListArticlesOptions = {
   publishedBefore?: Date;
   limit: number;
   cursor?: string;
-  /** When listing a single feed’s first page and results are empty, run a remote refresh once. */
-  autoRefreshEmpty?: boolean;
 };
 
 function baseJoins(userId: string) {
@@ -46,33 +42,6 @@ function paginateRows(rows: RawRow[], limit: number) {
   return { hasMore, page, nextCursor };
 }
 
-function shouldAutoRefreshEmpty(
-  opts: ListArticlesOptions,
-  pageLength: number,
-): opts is ListArticlesOptions & { feedId: string } {
-  return Boolean(opts.autoRefreshEmpty && opts.feedId && !opts.cursor && pageLength === 0);
-}
-
-async function maybeRefreshEmptyFeed(
-  database: DB,
-  userId: string,
-  opts: ListArticlesOptions,
-  pageLength: number,
-): Promise<ArticlesCursorListResponseDto | null> {
-  if (!shouldAutoRefreshEmpty(opts, pageLength)) {
-    return null;
-  }
-  const refreshed = await runFeedRefresh(database, opts.feedId, {
-    url: env.MEILI_URL ?? "",
-    masterKey: env.MEILI_MASTER_KEY,
-    indexUid: env.MEILI_INDEX_FEEDS,
-  });
-  if (!refreshed.ok || refreshed.itemCount <= 0) {
-    return null;
-  }
-  return listArticlesForUser(database, userId, { ...opts, autoRefreshEmpty: false });
-}
-
 function toArticleListItems(page: RawRow[]): ArticleListItemDto[] {
   return page.map((r) => ({
     id: r.id,
@@ -97,11 +66,6 @@ export async function listArticlesForUser(
 
   const rows = await listArticleRows(database, userId, opts, limit + 1);
   const { hasMore, page, nextCursor } = paginateRows(rows, limit);
-
-  const refreshedResponse = await maybeRefreshEmptyFeed(database, userId, opts, page.length);
-  if (refreshedResponse) {
-    return refreshedResponse;
-  }
 
   const items = toArticleListItems(page);
   return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };

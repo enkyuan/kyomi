@@ -2,22 +2,15 @@
 
 import { layout, prepare } from "@chenglou/pretext";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { useNavigate } from "@tanstack/react-router";
 import { Filter2Fill } from "@mingcute/react";
 import { Route } from "@/routes/inbox/index";
 import { FeedItem } from "@components/pages/inbox/feed-item";
-import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
-import { ReaderContent } from "@components/reader/reader-content";
+import { ItemDetail } from "@components/pages/inbox/item-detail";
 import { AppShell } from "@pages/app-shell";
-import {
-  extractInboxItemFullText,
-  getInboxItemDetail,
-  getInboxItems,
-  type ReaderContentResponse,
-} from "@lib/inbox-functions";
 import { EmptyStateIcon } from "@components/icons/empty-state-svg";
+import { dedupeInboxItems, useInboxQueries } from "@components/pages/inbox/use-inbox-queries";
 
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
@@ -45,33 +38,12 @@ export function InboxPage() {
   const [hasListVerticalOverflow, setHasListVerticalOverflow] = useState(false);
   const selectedItemId = itemId;
 
-  const inboxQuery = useQuery({
-    queryKey: ["inbox", "items", filter, search, feedId, folderId],
-    queryFn: () =>
-      getInboxItems({
-        data: {
-          filter,
-          search,
-          feedId,
-          folderId,
-        },
-      }),
-  });
-
-  const detailQuery = useQuery({
-    queryKey: ["inbox", "item-detail", selectedItemId],
-    enabled: Boolean(selectedItemId),
-    retry: 1,
-    queryFn: () => {
-      if (!selectedItemId) {
-        throw new Error("Missing inbox item id");
-      }
-      return getInboxItemDetail({
-        data: {
-          itemId: selectedItemId,
-        },
-      });
-    },
+  const { inboxQuery, detailQuery } = useInboxQueries({
+    filter: filter ?? "today",
+    search,
+    feedId,
+    folderId,
+    selectedItemId,
   });
 
   useEffect(() => {
@@ -116,8 +88,8 @@ export function InboxPage() {
   }, [isResizing]);
 
   const inboxItems = useMemo(
-    () => dedupeInboxItems(Array.isArray(inboxQuery.data?.items) ? inboxQuery.data.items : []),
-    [inboxQuery.data?.items],
+    () => dedupeInboxItems(inboxQuery.data?.pages.flatMap((page) => page.items) ?? []),
+    [inboxQuery.data?.pages],
   );
   const unreadCount = useMemo(
     () => inboxItems.reduce((count, item) => count + (item.isRead ? 0 : 1), 0),
@@ -134,6 +106,25 @@ export function InboxPage() {
     overscan: 6,
   });
   const virtualItems = virtualizer.getVirtualItems();
+  const lastVirtualItem = virtualItems[virtualItems.length - 1];
+
+  useEffect(() => {
+    if (
+      lastVirtualItem &&
+      lastVirtualItem.index >= inboxItems.length - 10 &&
+      inboxQuery.hasNextPage &&
+      !inboxQuery.isFetchingNextPage
+    ) {
+      inboxQuery.fetchNextPage();
+    }
+  }, [
+    lastVirtualItem?.index,
+    inboxItems.length,
+    inboxQuery.hasNextPage,
+    inboxQuery.isFetchingNextPage,
+    inboxQuery.fetchNextPage,
+  ]);
+
   const showBottomSeparatorOnLastItem =
     inboxItems.length > 0 && virtualizer.getTotalSize() < listViewportHeight;
 
@@ -244,21 +235,17 @@ export function InboxPage() {
                       }
                       return (
                         <div
-                          key={item.id}
+                          key={virtualRow.key}
                           className="absolute left-0 top-0 w-full"
                           data-index={virtualRow.index}
-                          ref={(node) => {
-                            if (node) {
-                              virtualizer.measureElement(node);
-                            }
-                          }}
+                          ref={virtualizer.measureElement}
                           style={{
                             transform: `translateY(${virtualRow.start}px)`,
                           }}
                         >
                           <FeedItem
                             item={item}
-                            isSelected={selectedItemId === item.id}
+                            isSelected={selectedItem?.id === item.id}
                             isFirst={virtualRow.index === 0}
                             containerWidth={listContainerWidth || undefined}
                             showBottomSeparator={
@@ -357,16 +344,6 @@ export function InboxPage() {
   );
 }
 
-function dedupeInboxItems(items: Awaited<ReturnType<typeof getInboxItems>>["items"]) {
-  const unique = new Map<string, (typeof items)[number]>();
-  for (const item of items) {
-    if (!unique.has(item.id)) {
-      unique.set(item.id, item);
-    }
-  }
-  return [...unique.values()];
-}
-
 function BalancedEmptyStateBody({ text }: { text: string }) {
   const containerRef = useRef<HTMLParagraphElement | null>(null);
   const prepared = useMemo(() => prepare(text, EMPTY_STATE_BODY_FONT), [text]);
@@ -433,136 +410,4 @@ function BalancedEmptyStateBody({ text }: { text: string }) {
       {text}
     </p>
   );
-}
-
-function estimateReadingTime(html: string): number {
-  const text = html
-    .replace(/<[^>]*>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-  const words = text.split(" ").filter(Boolean).length;
-  return Math.max(1, Math.round(words / 238));
-}
-
-/** Content sources that haven't gone through Readability — always extract. */
-const UNEXTRACTED_SOURCES = new Set([null, "text_fallback", "feed_markdown", "feed_summary"]);
-
-function ItemDetail({
-  item,
-}: {
-  item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>;
-}) {
-  const [readerOverride, setReaderOverride] = useState<ReaderContentResponse | null>(null);
-  const [isExtracting, setIsExtracting] = useState(false);
-
-  useEffect(() => {
-    setReaderOverride(null);
-
-    // Extract if the backend flagged it, OR if the content source is a raw
-    // RSS text/markdown blob (no Readability-parsed HTML available yet).
-    const needsExtraction =
-      item.reader.shouldExtract || UNEXTRACTED_SOURCES.has(item.reader.contentSource);
-
-    if (!needsExtraction) return;
-
-    let cancelled = false;
-    setIsExtracting(true);
-    extractInboxItemFullText({ data: { itemId: item.id } })
-      .then((result) => {
-        if (cancelled) return;
-        setReaderOverride(result.reader);
-      })
-      .catch((error: unknown) => {
-        if (cancelled) return;
-        setReaderOverride({
-          ...item.reader,
-          notice: "Full preview unavailable right now.",
-          contentStatus: item.reader.fallbackSummary ? "partial" : "failed",
-          extractionErrorCode: "FETCH_FAILED",
-          extractionErrorMessage:
-            error instanceof Error ? error.message : "Failed to extract full text.",
-          shouldExtract: false,
-        });
-      })
-      .finally(() => {
-        if (cancelled) return;
-        setIsExtracting(false);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [item.id, item.reader]);
-
-  const reader = readerOverride ?? item.reader;
-
-  const displayContent = reader.contentHtml ?? reader.contentMarkdown ?? reader.contentText ?? "";
-  const readTime = displayContent ? estimateReadingTime(displayContent) : null;
-
-  return (
-    <article className="reader-content prose prose-neutral dark:prose-invert mx-auto max-w-3xl py-10 px-2">
-      {/* Header */}
-      <div className="not-prose mb-6 flex flex-col gap-2">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
-          <span>{formatArticleTimestamp(item.publishedAt)}</span>
-          {readTime && (
-            <>
-              <span>·</span>
-              <span>{readTime} min read</span>
-            </>
-          )}
-        </div>
-        <p className="text-xl font-semibold text-foreground">{item.title}</p>
-        <InboxSourceRow
-          articleUrl={item.link}
-          feedTitle={item.feedTitle}
-          className=""
-          labelClassName="text-sm"
-        />
-      </div>
-
-      {/* Extraction loading state */}
-      {isExtracting && (
-        <div className="not-prose space-y-3">
-          <p className="text-xs uppercase tracking-wide text-muted-foreground">
-            Extracting full text…
-          </p>
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[92%]" />
-            <Skeleton className="h-4 w-[86%]" />
-            <Skeleton className="h-4 w-[90%]" />
-            <Skeleton className="h-4 w-[84%]" />
-          </div>
-        </div>
-      )}
-
-      {/* Article body */}
-      {!isExtracting && <ReaderContent reader={reader} />}
-
-      {/* Footer link */}
-      <div className="not-prose mt-10 border-t border-border pt-6">
-        <a
-          href={item.link}
-          target="_blank"
-          rel="noreferrer"
-          className="text-xs text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
-        >
-          View original article →
-        </a>
-      </div>
-    </article>
-  );
-}
-
-function formatArticleTimestamp(value: string) {
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return value;
-  }
-
-  return new Intl.DateTimeFormat("en", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
 }
