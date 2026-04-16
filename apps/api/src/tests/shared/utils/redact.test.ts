@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { redactForLog } from "./redact";
+import { redactForLog } from "@shared/utils/redact";
 
 describe("redactForLog", () => {
   test("masks sensitive keys", () => {

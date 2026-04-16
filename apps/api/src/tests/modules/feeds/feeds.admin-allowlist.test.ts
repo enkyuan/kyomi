@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { parseFeedAdminUserIds } from "./feeds.admin-allowlist";
+import { parseFeedAdminUserIds } from "@modules/feeds/feeds.admin-allowlist";
 
 describe("parseFeedAdminUserIds", () => {
   test("returns empty for undefined or blank", () => {

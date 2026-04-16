@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, test } from "bun:test";
 import { AppError } from "@shared/errors/app-error";
-import { resolveRemoteFeed } from "./discover.resolve-remote-feed";
+import { resolveRemoteFeed } from "@modules/discover/discover.resolve-remote-feed";
 
 describe("resolveRemoteFeed", () => {
   const originalFetch = globalThis.fetch;

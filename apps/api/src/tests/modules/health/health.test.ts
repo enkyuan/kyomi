@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import type { db } from "@adapters/db/client";
-import { buildReadinessPayload, getHealth } from "./health.service";
+import { buildReadinessPayload, getHealth } from "@modules/health/health.service";
 
 type DB = typeof db;
 

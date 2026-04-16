@@ -3,7 +3,7 @@ import {
   buildFallbackReaderContent,
   buildReadabilityReaderContent,
   buildStoredReaderContent,
-} from "./articles.normalize-content";
+} from "@modules/articles/articles.normalize-content";
 
 /*
  * Base input factory — all fields null/empty. Override only what each test cares about.

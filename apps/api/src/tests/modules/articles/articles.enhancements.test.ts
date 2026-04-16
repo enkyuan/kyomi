@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { summarizeContent, translateContent } from "./articles.enhancements";
+import { summarizeContent, translateContent } from "@modules/articles/articles.enhancements";
 
 describe("articles.enhancements", () => {
   test("summarizeContent returns first sentence chunk", () => {

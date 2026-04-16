@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 
-import { requireAuth } from "./auth.middleware";
+import { requireAuth } from "@shared/http/auth.middleware";
 
 describe("requireAuth", () => {
   test("returns the Better Auth user id from the resolved session", async () => {

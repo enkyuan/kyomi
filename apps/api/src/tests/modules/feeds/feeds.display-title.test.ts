@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { displayFeedTitle } from "./feeds.display-title";
+import { displayFeedTitle } from "@modules/feeds/feeds.display-title";
 
 describe("displayFeedTitle", () => {
   test("uses global when custom is nullish", () => {

@@ -1,6 +1,6 @@
 import { describe, expect, mock, test } from "bun:test";
 import { AppError } from "@shared/errors/app-error";
-import { createFolder, markFolderReadStatus } from "./folders.service";
+import { createFolder, markFolderReadStatus } from "@modules/folders/folders.service";
 
 describe("folders.service", () => {
   test("createFolder trims and returns inserted folder", async () => {

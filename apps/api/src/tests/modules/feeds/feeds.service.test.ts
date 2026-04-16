@@ -8,7 +8,7 @@ import {
   listSubscribedFeeds,
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
-} from "./feeds.service";
+} from "@modules/feeds/feeds.service";
 
 describe("feeds.service", () => {
   test("listSubscribedFeeds maps rows", async () => {

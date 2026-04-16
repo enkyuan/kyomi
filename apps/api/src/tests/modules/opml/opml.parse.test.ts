@@ -1,7 +1,7 @@
 import { describe, expect, test } from "bun:test";
 import { AppError } from "@shared/errors/app-error";
-import { OPML_MAX_OUTLINES } from "./opml.constants";
-import { parseOpmlFeeds } from "./opml.parse";
+import { OPML_MAX_OUTLINES } from "@modules/opml/opml.constants";
+import { parseOpmlFeeds } from "@modules/opml/opml.parse";
 
 const sampleOpml = `<?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0">

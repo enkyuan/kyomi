@@ -1,6 +1,6 @@
 import { describe, expect, mock, test } from "bun:test";
 import { AppError } from "@shared/errors/app-error";
-import { checkSavedArticleForUser } from "./articles.saved-check";
+import { checkSavedArticleForUser } from "@modules/articles/articles.saved-check";
 
 describe("checkSavedArticleForUser", () => {
   test("returns the matching saved clip before checking feed items", async () => {

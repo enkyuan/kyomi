@@ -1,5 +1,8 @@
 import { describe, expect, test } from "bun:test";
-import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./discover.normalize-feed-url";
+import {
+  assertHttpOrHttpsUrl,
+  normalizeFeedUrl,
+} from "@modules/discover/discover.normalize-feed-url";
 
 describe("normalizeFeedUrl", () => {
   test("lowercases host and strips hash", () => {

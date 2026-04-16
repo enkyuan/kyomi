@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { htmlToText, sanitizeArticleHtml } from "./articles.sanitize-content";
+import { htmlToText, sanitizeArticleHtml } from "@modules/articles/articles.sanitize-content";
 
 describe("articles.sanitize-content", () => {
   test("preserves headings, lists, code blocks, tables, and strips scripts", () => {

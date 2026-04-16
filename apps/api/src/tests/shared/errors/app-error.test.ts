@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { AppError } from "./app-error";
+import { AppError } from "@shared/errors/app-error";
 
 describe("AppError", () => {
   test("forwards cause to the platform Error", () => {

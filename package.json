@@ -43,7 +43,7 @@
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "turbo": "^2.9.5"
+    "turbo": "^2.9.6"
   },
   "dependencies": {
     "drizzle-orm": "^0.45.2",
