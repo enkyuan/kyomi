@@ -45,15 +45,29 @@ type FollowedFeedsResponse = {
 };
 
 function looksLikeFeedUrl(value: string) {
-  return /^https?:\/\/\S+$/i.test(value) || /^[\w-]+(\.[\w-]+)+\S*$/i.test(value);
+  return Boolean(normalizeUrlCandidate(value));
 }
 
 function normalizeUrlCandidate(value: string) {
-  if (/^https?:\/\//i.test(value)) {
-    return value;
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return null;
   }
 
-  return `https://${value}`;
+  const withProtocol = /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+
+  try {
+    const parsed = new URL(withProtocol);
+    if (!parsed.hostname) {
+      return null;
+    }
+    if (!parsed.hostname.includes(".") && parsed.hostname !== "localhost") {
+      return null;
+    }
+    return parsed.toString();
+  } catch {
+    return null;
+  }
 }
 
 export const searchFeeds = createServerFn({ method: "GET" })
@@ -68,14 +82,32 @@ export const searchFeeds = createServerFn({ method: "GET" })
     const headers = buildForwardHeaders(getRequestHeaders());
 
     if (looksLikeFeedUrl(query)) {
-      const preview = await apiJsonValidated(discoverFeedResultSchema, () =>
-        apiJson<DiscoverFeedResult>(
-          `/api/v1/discover/preview?url=${encodeURIComponent(normalizeUrlCandidate(query))}`,
-          { headers },
-        ),
-      );
+      const normalizedUrl = normalizeUrlCandidate(query);
+      if (!normalizedUrl) {
+        return [];
+      }
 
-      return [preview];
+      try {
+        const preview = await apiJsonValidated(discoverFeedResultSchema, () =>
+          apiJson<DiscoverFeedResult>(
+            `/api/v1/discover/preview?url=${encodeURIComponent(normalizedUrl)}`,
+            { headers },
+          ),
+        );
+
+        return [preview];
+      } catch {
+        return [
+          {
+            id: null,
+            url: normalizedUrl,
+            title: normalizedUrl,
+            description: "Couldn't preview this feed. Select it to try following directly.",
+            link: normalizedUrl,
+            isSubscribed: false,
+          },
+        ];
+      }
     }
 
     if (query.length < 2) {
@@ -100,7 +132,7 @@ export const followFeed = createServerFn({ method: "POST" })
       apiJson<FollowFeedResult>("/api/v1/feeds", {
         method: "POST",
         headers,
-        body: JSON.stringify({ url: normalizeUrlCandidate(data.url.trim()) }),
+        body: JSON.stringify({ url: normalizeUrlCandidate(data.url.trim()) ?? data.url.trim() }),
       }),
     );
   });
@@ -140,4 +172,19 @@ export const getFollowedFeedUnreadCounts = createServerFn({ method: "POST" })
       `/api/v1/articles/unread-counts?feed_ids=${encodeURIComponent(uniqueIds.join(","))}`,
       { headers },
     );
+  });
+
+export const moveFeedsToFolder = createServerFn({ method: "POST" })
+  .inputValidator((input: { feedIds: string[]; folderId: string }) => input)
+  .handler(async ({ data }): Promise<{ updatedCount: number }> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    headers.set("content-type", "application/json");
+    return apiJson<{ updatedCount: number }>("/api/v1/feeds/folder", {
+      method: "PATCH",
+      headers,
+      body: JSON.stringify({
+        feedIds: data.feedIds.map((id) => id.trim()).filter(Boolean),
+        folderId: data.folderId.trim(),
+      }),
+    });
   });

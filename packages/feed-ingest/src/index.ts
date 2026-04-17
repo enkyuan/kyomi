@@ -46,6 +46,7 @@ function isSafeEnrichmentUrl(raw: string): boolean {
 export type FeedRefreshResult = {
   ok: boolean;
   itemCount: number;
+  error?: string;
 };
 
 export type FeedIngestDatabase = ReturnType<typeof drizzle<typeof schema>>;
@@ -776,12 +777,12 @@ export async function runFeedRefresh(
       .limit(1);
 
     if (!feed) {
-      return { ok: false, itemCount: 0 };
+      return { ok: false, itemCount: 0, error: "Feed not found" };
     }
 
     const fetched = await fetchFeedDocument(feed.url);
     if (!fetched.ok) {
-      return { ok: false, itemCount: 0 };
+      return { ok: false, itemCount: 0, error: `Feed fetch failed: ${fetched.error}` };
     }
 
     const parsed = parseFeedDocument(fetched.body, feed.id, fetched.finalUrl);
@@ -888,10 +889,16 @@ export async function runFeedRefresh(
       ok: true,
       itemCount: items.length,
     };
-  } catch {
+  } catch (error) {
+    let message = "Feed refresh failed";
+    if (error instanceof Error) {
+      const cause = (error as Error & { cause?: unknown }).cause;
+      message = cause instanceof Error ? cause.message : error.message;
+    }
     return {
       ok: false,
       itemCount: 0,
+      error: message,
     };
   }
 }

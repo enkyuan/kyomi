@@ -173,7 +173,24 @@ type ParsedListQuery = {
   source: string;
   isRead: boolean | undefined;
   isSaved: boolean | undefined;
+  publishedAfter: Date | undefined;
+  publishedBefore: Date | undefined;
 };
+
+function parseOptionalIsoDate(value: unknown): Date | undefined {
+  if (typeof value !== "string") {
+    return undefined;
+  }
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return undefined;
+  }
+  const parsed = new Date(trimmed);
+  if (Number.isNaN(parsed.getTime())) {
+    return undefined;
+  }
+  return parsed;
+}
 
 function parseArticlesListQuery(query: Record<string, unknown>): ParsedListQuery {
   return {
@@ -184,6 +201,8 @@ function parseArticlesListQuery(query: Record<string, unknown>): ParsedListQuery
     source: typeof query.source === "string" ? query.source.toLowerCase() : "feeds",
     isRead: query.is_read === "true" ? true : query.is_read === "false" ? false : undefined,
     isSaved: query.is_saved === "true" ? true : undefined,
+    publishedAfter: parseOptionalIsoDate(query.published_after),
+    publishedBefore: parseOptionalIsoDate(query.published_before),
   };
 }
 
@@ -426,6 +445,8 @@ export function registerArticleRoutes(app: Elysia) {
             cursor: parsed.cursor,
             isRead: parsed.isRead,
             isSaved: parsed.isSaved,
+            publishedAfter: parsed.publishedAfter,
+            publishedBefore: parsed.publishedBefore,
           });
         }
         return listArticlesForUser(db, userId, {
@@ -435,6 +456,8 @@ export function registerArticleRoutes(app: Elysia) {
           folderId: parsed.folderId,
           isRead: parsed.isRead,
           isSaved: parsed.isSaved,
+          publishedAfter: parsed.publishedAfter,
+          publishedBefore: parsed.publishedBefore,
         });
       },
       {

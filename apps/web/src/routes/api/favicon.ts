@@ -19,6 +19,24 @@ blockedAddressList.addSubnet("fe80::", 10, "ipv6");
 
 const blockedExactHostnames = new Set(["localhost", "metadata.google.internal"]);
 const blockedHostnameSuffixes = [".localhost", ".local", ".internal", ".home.arpa"];
+const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
+const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;
+const FAVICON_CACHE_TTL_MS = FAVICON_CACHE_MAX_AGE_SECONDS * 1000;
+const FAVICON_MISS_CACHE_TTL_MS = 60 * 30 * 1000;
+
+type CachedFavicon =
+  | {
+      kind: "hit";
+      body: Uint8Array;
+      contentType: string;
+      expiresAt: number;
+    }
+  | {
+      kind: "miss";
+      expiresAt: number;
+    };
+
+const faviconResponseCache = new Map<string, CachedFavicon>();
 
 function canonicalHostname(hostname: string): string {
   const withoutBrackets =
@@ -63,7 +81,13 @@ async function assertSafeFaviconHost(hostname: string): Promise<boolean> {
     addresses = [canonical];
   } else {
     try {
-      const resolved = await lookup(canonical, { all: true, verbatim: true });
+      const lookupPromise = lookup(canonical, { all: true, verbatim: true });
+      const timeoutPromise = new Promise<never>((_, reject) =>
+        setTimeout(() => reject(new Error("DNS timeout")), 1500),
+      );
+      const resolved = (await Promise.race([lookupPromise, timeoutPromise])) as {
+        address: string;
+      }[];
       addresses = [...new Set(resolved.map((r) => normalizeIpAddress(r.address)))];
     } catch {
       return false;
@@ -91,7 +115,7 @@ async function tryFetchImage(imageUrl: string): Promise<Response | null> {
   try {
     const response = await fetch(imageUrl, {
       ...FETCH_OPTIONS,
-      signal: AbortSignal.timeout(5_000),
+      signal: AbortSignal.timeout(2500),
     });
     if (!response.ok) return null;
     const contentType = response.headers.get("content-type") ?? "";
@@ -108,7 +132,7 @@ async function findIconFromHtml(origin: string): Promise<string | null> {
     const response = await fetch(origin, {
       headers: { Accept: "text/html" },
       redirect: "follow",
-      signal: AbortSignal.timeout(5_000),
+      signal: AbortSignal.timeout(2500),
     });
     if (!response.ok) return null;
     // Only read the first 16KB to find <link> tags in <head>
@@ -122,9 +146,10 @@ async function findIconFromHtml(origin: string): Promise<string | null> {
     }
     reader.cancel().catch(() => {});
 
-    const match = html.match(/<link[^>]+rel=["'](?:shortcut )?icon["'][^>]*>/i);
+    const links = html.match(/<link[^>]*>/gi) ?? [];
+    const match = links.find((linkTag) => /\brel=["'][^"']*\bicon\b[^"']*["']/i.test(linkTag));
     if (!match) return null;
-    const hrefMatch = match[0].match(/href=["']([^"']+)["']/i);
+    const hrefMatch = match.match(/href=["']([^"']+)["']/i);
     if (!hrefMatch?.[1]) return null;
 
     try {
@@ -137,13 +162,58 @@ async function findIconFromHtml(origin: string): Promise<string | null> {
   }
 }
 
-function buildFaviconResponse(upstream: Response): Response {
+function buildCachedFaviconResponse(cached: CachedFavicon): Response | null {
+  if (cached.kind !== "hit") {
+    return null;
+  }
+  return new Response(cached.body.slice(), {
+    status: 200,
+    headers: {
+      "Content-Type": cached.contentType,
+      "Cache-Control": `public, max-age=${FAVICON_CACHE_MAX_AGE_SECONDS}, stale-while-revalidate=${FAVICON_CACHE_STALE_SECONDS}`,
+      Vary: "Accept",
+    },
+  });
+}
+
+function readCache(hostname: string): Response | null {
+  const cached = faviconResponseCache.get(hostname);
+  if (!cached) {
+    return null;
+  }
+  if (cached.expiresAt <= Date.now()) {
+    faviconResponseCache.delete(hostname);
+    return null;
+  }
+  if (cached.kind === "miss") {
+    return new Response(null, {
+      status: 404,
+      headers: {
+        "Cache-Control": "public, max-age=1800, stale-while-revalidate=3600",
+      },
+    });
+  }
+  return buildCachedFaviconResponse(cached);
+}
+
+async function cacheAndBuildFaviconResponse(
+  hostname: string,
+  upstream: Response,
+): Promise<Response> {
   const contentType = upstream.headers.get("content-type") ?? "image/x-icon";
-  return new Response(upstream.body, {
+  const bodyBytes = new Uint8Array(await upstream.arrayBuffer());
+  faviconResponseCache.set(hostname, {
+    kind: "hit",
+    body: bodyBytes,
+    contentType,
+    expiresAt: Date.now() + FAVICON_CACHE_TTL_MS,
+  });
+  return new Response(bodyBytes.slice(), {
     status: 200,
     headers: {
       "Content-Type": contentType,
-      "Cache-Control": "public, max-age=86400, stale-while-revalidate=604800",
+      "Cache-Control": `public, max-age=${FAVICON_CACHE_MAX_AGE_SECONDS}, stale-while-revalidate=${FAVICON_CACHE_STALE_SECONDS}`,
+      Vary: "Accept",
     },
   });
 }
@@ -170,10 +240,15 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     return new Response("Invalid domain", { status: 400 });
   }
 
+  const cachedResponse = readCache(hostname);
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+
   // Strategy 1: Try /favicon.ico directly (fastest, works for most major sites)
   const directResult = await tryFetchImage(`${origin}/favicon.ico`);
   if (directResult) {
-    return buildFaviconResponse(directResult);
+    return cacheAndBuildFaviconResponse(hostname, directResult);
   }
 
   // Strategy 2: Parse the homepage HTML for <link rel="icon">
@@ -181,7 +256,7 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
   if (iconHref) {
     const htmlIconResult = await tryFetchImage(iconHref);
     if (htmlIconResult) {
-      return buildFaviconResponse(htmlIconResult);
+      return cacheAndBuildFaviconResponse(hostname, htmlIconResult);
     }
   }
 
@@ -190,8 +265,19 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=32`,
   );
   if (googleResult) {
-    return buildFaviconResponse(googleResult);
+    return cacheAndBuildFaviconResponse(hostname, googleResult);
   }
+
+  // Strategy 4: Fallback provider with broad domain coverage.
+  const duckDuckGoResult = await tryFetchImage(`https://icons.duckduckgo.com/ip3/${hostname}.ico`);
+  if (duckDuckGoResult) {
+    return cacheAndBuildFaviconResponse(hostname, duckDuckGoResult);
+  }
+
+  faviconResponseCache.set(hostname, {
+    kind: "miss",
+    expiresAt: Date.now() + FAVICON_MISS_CACHE_TTL_MS,
+  });
 
   return new Response(null, { status: 404 });
 }

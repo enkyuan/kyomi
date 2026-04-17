@@ -48,7 +48,13 @@ import { cn } from "@lib/utils";
 const WORKSPACE_SCOPE_FONT = '500 13px "Inter Variable"';
 const WORKSPACE_SCOPE_LINE_HEIGHT = 20;
 
-export function SidebarWorkspaceHeader({ isMacPlatform }: { isMacPlatform: boolean }) {
+type SidebarWorkspaceHeaderProps = {
+  isMac?: boolean;
+  isMacPlatform?: boolean;
+};
+
+export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspaceHeaderProps) {
+  const isMacKeyboard = isMacPlatform ?? isMac ?? false;
   const navigate = useNavigate();
   const location = useLocation();
   const [commandOpen, setCommandOpen] = useState(false);
@@ -71,7 +77,8 @@ export function SidebarWorkspaceHeader({ isMacPlatform }: { isMacPlatform: boole
       action: () =>
         navigate({
           to: "/inbox",
-          search: () => ({
+          search: (prev) => ({
+            ...prev,
             filter: "today" as const,
             search: undefined,
             feedId: undefined,
@@ -87,7 +94,8 @@ export function SidebarWorkspaceHeader({ isMacPlatform }: { isMacPlatform: boole
       action: () =>
         navigate({
           to: "/inbox",
-          search: () => ({
+          search: (prev) => ({
+            ...prev,
             filter: "unread" as const,
             search: undefined,
             feedId: undefined,
@@ -103,7 +111,8 @@ export function SidebarWorkspaceHeader({ isMacPlatform }: { isMacPlatform: boole
       action: () =>
         navigate({
           to: "/inbox",
-          search: () => ({
+          search: (prev) => ({
+            ...prev,
             filter: "saved" as const,
             search: undefined,
             feedId: undefined,
@@ -116,14 +125,8 @@ export function SidebarWorkspaceHeader({ isMacPlatform }: { isMacPlatform: boole
 
   const folderItems = foldersQuery.data ?? [];
   const feedItems = followedFeedsQuery.data ?? [];
-  const currentFeedId =
-    location.pathname === "/inbox" && location.search.filter === "unread"
-      ? location.search.feedId
-      : undefined;
-  const currentFolderId =
-    location.pathname === "/inbox" && location.search.filter === "unread"
-      ? location.search.folderId
-      : undefined;
+  const currentFeedId = location.pathname === "/inbox" ? location.search.feedId : undefined;
+  const currentFolderId = location.pathname === "/inbox" ? location.search.folderId : undefined;
   const currentFeed = currentFeedId
     ? feedItems.find((item) => item.feedId === currentFeedId)
     : undefined;
@@ -286,7 +289,7 @@ export function SidebarWorkspaceHeader({ isMacPlatform }: { isMacPlatform: boole
                               void navigate({
                                 to: "/inbox",
                                 search: () => ({
-                                  filter: "unread" as const,
+                                  filter: "today" as const,
                                   search: undefined,
                                   feedId: item.feedId,
                                   folderId: undefined,
@@ -297,7 +300,7 @@ export function SidebarWorkspaceHeader({ isMacPlatform }: { isMacPlatform: boole
                             }}
                           >
                             <FeedFavicon
-                              className="me-2 size-4 shrink-0 rounded-sm"
+                              className="ms-0.5 me-2 size-4 shrink-0 rounded-sm"
                               feedUrl={item.url}
                               siteUrl={item.link}
                               title={item.title || item.url}
@@ -347,14 +350,13 @@ export function SidebarWorkspaceHeader({ isMacPlatform }: { isMacPlatform: boole
                   </CommandPanel>
                   <CommandFooter>
                     <span>Open inbox views, folders, feeds, or organization actions.</span>
-                    <CommandShortcut>{isMacPlatform ? "⌘K" : "Ctrl K"}</CommandShortcut>
                   </CommandFooter>
                 </Command>
               </CommandDialogPopup>
             </CommandDialog>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarFeedSearchTrigger isMacPlatform={isMacPlatform} />
+            <SidebarFeedSearchTrigger isMacPlatform={isMacKeyboard} />
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>

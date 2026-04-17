@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "build": "bunx turbo run build",
+    "bootstrap": "bun run docker:up && bun run db:migrate && bun run catalog:sync",
     "dev": "bunx turbo run dev",
     "dev:app": "bunx turbo run dev --filter=@cronos/api --filter=@cronos/web",
     "lint": "bunx turbo run lint",

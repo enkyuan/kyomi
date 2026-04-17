@@ -23,7 +23,7 @@ export async function runWorkerLoop(signal?: AbortSignal): Promise<void> {
             indexUid: env.MEILI_INDEX_FEEDS,
           });
           if (!result.ok) {
-            throw new Error("Feed refresh failed");
+            throw new Error(result.error ?? "Feed refresh failed");
           }
           logger.info("worker.job.feed_refresh.completed", {
             streamId: id,

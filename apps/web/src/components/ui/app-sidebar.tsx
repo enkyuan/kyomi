@@ -14,9 +14,11 @@ import { getSidebarInboxCounts } from "@lib/inbox-functions";
 export function AppSidebar() {
   const [isMacPlatform, setIsMacPlatform] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
   const inboxSummaryQuery = useQuery({
-    queryKey: ["sidebar", "inbox-summary"],
-    queryFn: () => getSidebarInboxCounts(),
+    queryKey: ["sidebar", "inbox-summary", timezoneOffsetMinutes],
+    enabled: timezoneOffsetMinutes !== undefined,
+    queryFn: () => getSidebarInboxCounts({ data: { timezoneOffsetMinutes } }),
   });
   const counts = inboxSummaryQuery.data ?? { today: 0, unread: 0, saved: 0 };
 
@@ -26,6 +28,7 @@ export function AppSidebar() {
     }
 
     setIsMacPlatform(/Mac|iPhone|iPad|iPod/.test(navigator.platform));
+    setTimezoneOffsetMinutes(new Date().getTimezoneOffset());
   }, []);
 
   return (

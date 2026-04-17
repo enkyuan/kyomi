@@ -2,9 +2,10 @@
 
 import { type ColumnDef, flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table";
 import { useMemo, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { Badge } from "@components/ui/badge";
+
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Checkbox } from "@components/ui/checkbox";
+import { Button } from "@components/ui/button";
 import {
   Dialog,
   DialogDescription,
@@ -23,7 +24,11 @@ import {
   TableHeader,
   TableRow,
 } from "@components/ui/table";
-import { listFollowedFeeds, type FollowedFeed } from "@lib/feed-functions";
+import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@components/ui/select";
+import { listFollowedFeeds, moveFeedsToFolder, type FollowedFeed } from "@lib/feed-functions";
+import { listFolders } from "@lib/folder-functions";
+import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
+import { PinFill, PinLine } from "@mingcute/react";
 
 type ManageFeedsDialogProps = {
   open: boolean;
@@ -32,11 +37,17 @@ type ManageFeedsDialogProps = {
 
 type FeedRow = {
   followedAtLabel: string;
+  folderId: string | null;
   folderName: string;
   id: string;
   source: string;
   title: string;
   url: string;
+};
+
+type FolderOption = {
+  label: string;
+  value: string;
 };
 
 function formatDateLabel(value: string) {
@@ -62,7 +73,19 @@ function getSourceLabel(feed: FollowedFeed) {
   }
 }
 
-function getColumns(): ColumnDef<FeedRow>[] {
+function getColumns({
+  folderOptions,
+  onMoveToFolder,
+  movingFeedId,
+  pinnedFeedIdSet,
+  onTogglePinned,
+}: {
+  folderOptions: FolderOption[];
+  onMoveToFolder: (feedId: string, folderId: string) => void;
+  movingFeedId: string | null;
+  pinnedFeedIdSet: Set<string>;
+  onTogglePinned: (feedId: string) => void;
+}): ColumnDef<FeedRow>[] {
   return [
     {
       id: "select",
@@ -105,7 +128,37 @@ function getColumns(): ColumnDef<FeedRow>[] {
     {
       accessorKey: "folderName",
       header: "Folder",
-      cell: ({ row }) => <Badge variant="outline">{row.original.folderName}</Badge>,
+      cell: ({ row }) => {
+        const currentFolderId = row.original.folderId ?? folderOptions[0]?.value;
+        if (!currentFolderId) {
+          return <span className="text-muted-foreground text-sm">{row.original.folderName}</span>;
+        }
+
+        return (
+          <Select
+            aria-label={`Move ${row.original.title} to folder`}
+            items={folderOptions}
+            value={currentFolderId}
+            onValueChange={(nextValue) => {
+              if (!nextValue || nextValue === currentFolderId) {
+                return;
+              }
+              onMoveToFolder(row.original.id, nextValue);
+            }}
+          >
+            <SelectTrigger className="w-fit min-w-0 max-w-44" size="sm">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectPopup>
+              {folderOptions.map(({ label, value }) => (
+                <SelectItem key={value} value={value}>
+                  {label}
+                </SelectItem>
+              ))}
+            </SelectPopup>
+          </Select>
+        );
+      },
     },
     {
       accessorKey: "source",
@@ -113,6 +166,32 @@ function getColumns(): ColumnDef<FeedRow>[] {
       cell: ({ row }) => (
         <span className="text-muted-foreground text-sm">{row.original.source}</span>
       ),
+    },
+    {
+      id: "pinned",
+      header: () => <div className="text-center">Pinned</div>,
+      cell: ({ row }) => {
+        const isPinned = pinnedFeedIdSet.has(row.original.id);
+        const isMovingFeed = movingFeedId === row.original.id;
+
+        return (
+          <div className="flex justify-center">
+            <Button
+              aria-label={isPinned ? `Unpin ${row.original.title}` : `Pin ${row.original.title}`}
+              disabled={isMovingFeed}
+              size="icon-sm"
+              variant="ghost"
+              onClick={() => onTogglePinned(row.original.id)}
+            >
+              {isPinned ? (
+                <PinFill className="text-amber-500" />
+              ) : (
+                <PinLine className="text-muted-foreground" />
+              )}
+            </Button>
+          </div>
+        );
+      },
     },
     {
       accessorKey: "followedAtLabel",
@@ -128,10 +207,48 @@ function getColumns(): ColumnDef<FeedRow>[] {
 
 export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps) {
   const [rowSelection, setRowSelection] = useState({});
+  const [movingFeedId, setMovingFeedId] = useState<string | null>(null);
+  const queryClient = useQueryClient();
   const followedFeedsQuery = useQuery({
     queryKey: ["feeds", "followed"],
     queryFn: () => listFollowedFeeds(),
     enabled: open,
+  });
+  const foldersQuery = useQuery({
+    queryKey: ["folders"],
+    queryFn: () => listFolders(),
+    enabled: open,
+  });
+  const { pinnedFeedIdSet, setPinned } = usePinnedFeedIds();
+  const folderOptions = useMemo<FolderOption[]>(
+    () => (foldersQuery.data ?? []).map((folder) => ({ label: folder.name, value: folder.id })),
+    [foldersQuery.data],
+  );
+  const unsortedFolderId = useMemo(
+    () => (foldersQuery.data ?? []).find((folder) => folder.name === "Unsorted")?.id ?? null,
+    [foldersQuery.data],
+  );
+
+  const moveFeedFolderMutation = useMutation({
+    mutationFn: ({ feedId, folderId }: { feedId: string; folderId: string }) =>
+      moveFeedsToFolder({ data: { feedIds: [feedId], folderId } }),
+    onMutate: ({ feedId }) => {
+      setMovingFeedId(feedId);
+    },
+    onSuccess: (_, { feedId, folderId }) => {
+      const targetFolder = folderOptions.find((option) => option.value === folderId);
+      queryClient.setQueryData(["feeds", "followed"], (current: FollowedFeed[] | undefined) =>
+        current?.map((feed) =>
+          feed.feedId === feedId
+            ? { ...feed, folderId, folderName: targetFolder?.label ?? feed.folderName }
+            : feed,
+        ),
+      );
+      void queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] });
+    },
+    onSettled: () => {
+      setMovingFeedId(null);
+    },
   });
 
   const tableData = useMemo<FeedRow[]>(() => {
@@ -139,13 +256,29 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
       id: feed.feedId,
       title: feed.title || feed.url,
       url: feed.url,
+      folderId: feed.folderId ?? unsortedFolderId,
       folderName: feed.folderName ?? "Unsorted",
       source: getSourceLabel(feed),
       followedAtLabel: formatDateLabel(feed.subscribedAt),
     }));
-  }, [followedFeedsQuery.data]);
+  }, [followedFeedsQuery.data, unsortedFolderId]);
 
-  const columns = useMemo(() => getColumns(), []);
+  const columns = useMemo(
+    () =>
+      getColumns({
+        folderOptions,
+        movingFeedId,
+        pinnedFeedIdSet,
+        onMoveToFolder: (feedId, folderId) => {
+          if (moveFeedFolderMutation.isPending) {
+            return;
+          }
+          moveFeedFolderMutation.mutate({ feedId, folderId });
+        },
+        onTogglePinned: (feedId) => setPinned(feedId, !pinnedFeedIdSet.has(feedId)),
+      }),
+    [folderOptions, moveFeedFolderMutation, movingFeedId, pinnedFeedIdSet, setPinned],
+  );
 
   const table = useReactTable({
     columns,
@@ -231,7 +364,7 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
               </TableBody>
               <TableFooter>
                 <TableRow>
-                  <TableCell colSpan={4}>
+                  <TableCell colSpan={Math.max(1, columns.length - 1)}>
                     {selectedCount > 0 ? `${selectedCount} selected` : "Total feeds"}
                   </TableCell>
                   <TableCell className="text-right">{tableData.length}</TableCell>

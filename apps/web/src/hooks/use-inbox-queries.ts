@@ -9,6 +9,7 @@ type UseInboxQueriesInput = {
   feedId?: string;
   folderId?: string;
   selectedItemId?: string;
+  timezoneOffsetMinutes?: number;
 };
 
 export function dedupeInboxItems(items: Awaited<ReturnType<typeof getInboxItems>>["items"]) {
@@ -27,9 +28,10 @@ export function useInboxQueries({
   feedId,
   folderId,
   selectedItemId,
+  timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
   const inboxQuery = useInfiniteQuery({
-    queryKey: ["inbox", "items", filter, search, feedId, folderId],
+    queryKey: ["inbox", "items", filter, search, feedId, folderId, timezoneOffsetMinutes],
     initialPageParam: undefined as string | undefined,
     queryFn: ({ pageParam }) =>
       getInboxItems({
@@ -39,6 +41,7 @@ export function useInboxQueries({
           feedId,
           folderId,
           cursor: pageParam,
+          timezoneOffsetMinutes,
         },
       }),
     getNextPageParam: (lastPage) =>

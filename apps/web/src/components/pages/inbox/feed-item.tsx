@@ -9,8 +9,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@component
 
 const TITLE_FONT = '600 16px "Inter Variable"';
 const TITLE_LINE_HEIGHT = 22;
-const FOOTER_FONT = '500 13px "Inter Variable"';
-const FOOTER_LINE_HEIGHT = 18;
 const PRETEXT_MIN_FILL_RATIO = 0.97;
 const PRETEXT_MAX_TRIM = 8;
 const PRETEXT_WIDTH_BUFFER = 4;
@@ -71,23 +69,13 @@ export function FeedItem({
         </p>
       </CardContent>
       <CardFooter className="mt-2 flex w-full flex-wrap items-center gap-2 px-5 pb-3 pt-0">
-        <PretextText
-          className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/75"
-          lineHeight={FOOTER_LINE_HEIGHT}
-          maxLines={1}
-          text={formatArticleTimestamp(item.publishedAt)}
-          font={FOOTER_FONT}
-          containerWidth={containerWidth}
-        />
+        <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/75">
+          {formatArticleTimestamp(item.publishedAt)}
+        </span>
         {item.isSaved ? (
-          <PretextText
-            className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/75"
-            lineHeight={FOOTER_LINE_HEIGHT}
-            maxLines={1}
-            text="Saved"
-            font={FOOTER_FONT}
-            containerWidth={containerWidth}
-          />
+          <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/75">
+            Saved
+          </span>
         ) : null}
       </CardFooter>
     </Card>

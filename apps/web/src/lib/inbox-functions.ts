@@ -137,7 +137,23 @@ type GetInboxItemsInput = {
   feedId?: string;
   folderId?: string;
   cursor?: string;
+  timezoneOffsetMinutes?: number;
 };
+
+function getLocalDayRangeIso(timezoneOffsetMinutes: number) {
+  const nowUtcMs = Date.now();
+  const nowLocalMs = nowUtcMs - timezoneOffsetMinutes * 60_000;
+  const nowLocal = new Date(nowLocalMs);
+  const localStartUtcMs =
+    Date.UTC(nowLocal.getUTCFullYear(), nowLocal.getUTCMonth(), nowLocal.getUTCDate(), 0, 0, 0, 0) +
+    timezoneOffsetMinutes * 60_000;
+  const localEndUtcMs = localStartUtcMs + 24 * 60 * 60 * 1000;
+
+  return {
+    start: new Date(localStartUtcMs).toISOString(),
+    end: new Date(localEndUtcMs).toISOString(),
+  };
+}
 
 function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
   return {
@@ -169,36 +185,33 @@ function filterItemsBySearch(items: InboxItem[], search?: string) {
 
 async function fetchInboxList(
   filter: InboxFilter,
+  timezoneOffsetMinutes: number,
   cursor: string | undefined,
   headers: Headers,
 ): Promise<CursorListResponse> {
-  let url =
-    filter === "saved"
-      ? "/api/v1/articles/views/read-later"
-      : filter === "unread"
-        ? "/api/v1/articles?is_read=false&limit=200"
-        : "/api/v1/articles/views/today";
-
-  if (cursor) {
-    const separator = url.includes("?") ? "&" : "?";
-    url += `${separator}cursor=${encodeURIComponent(cursor)}`;
-  }
-
   return apiJsonValidated(cursorListResponseSchema, () =>
-    apiJson<CursorListResponse>(url, {
-      headers: buildForwardHeaders(headers),
-    }),
+    apiJson<CursorListResponse>(
+      buildArticlesUrl(filter, timezoneOffsetMinutes, undefined, undefined, cursor),
+      {
+        headers: buildForwardHeaders(headers),
+      },
+    ),
   );
 }
 
 function buildArticlesUrl(
   filter: InboxFilter,
+  timezoneOffsetMinutes: number,
   feedId?: string,
   folderId?: string,
   cursor?: string,
 ) {
   const params = new URLSearchParams();
-  if (filter === "unread") {
+  if (filter === "today") {
+    const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
+    params.set("published_after", start);
+    params.set("published_before", end);
+  } else if (filter === "unread") {
     params.set("is_read", "false");
   } else if (filter === "saved") {
     params.set("is_saved", "true");
@@ -221,17 +234,26 @@ export const getInboxItems = createServerFn({ method: "GET" })
   .handler(async ({ data }): Promise<InboxResponse> => {
     const headers = getRequestHeaders();
     const filter = data.filter ?? "today";
+    const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
+      ? Number(data.timezoneOffsetMinutes)
+      : 0;
     const response =
-      (data.feedId?.trim() || data.folderId?.trim()) && filter !== "today"
+      data.feedId?.trim() || data.folderId?.trim()
         ? await apiJsonValidated(cursorListResponseSchema, () =>
             apiJson<CursorListResponse>(
-              buildArticlesUrl(filter, data.feedId, data.folderId, data.cursor),
+              buildArticlesUrl(
+                filter,
+                timezoneOffsetMinutes,
+                data.feedId,
+                data.folderId,
+                data.cursor,
+              ),
               {
                 headers: buildForwardHeaders(headers),
               },
             ),
           )
-        : await fetchInboxList(filter, data.cursor, headers);
+        : await fetchInboxList(filter, timezoneOffsetMinutes, data.cursor, headers);
     const items = filterItemsBySearch(response.items.map(mapInboxItem), data.search);
 
     return {
@@ -298,10 +320,14 @@ export const extractInboxItemFullText = createServerFn({ method: "POST" })
     );
   });
 
-export const getSidebarInboxCounts = createServerFn({ method: "GET" }).handler(
-  async (): Promise<SidebarInboxCounts> => {
+export const getSidebarInboxCounts = createServerFn({ method: "GET" })
+  .inputValidator((input: { timezoneOffsetMinutes?: number }) => input)
+  .handler(async ({ data }): Promise<SidebarInboxCounts> => {
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
+    const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
+      ? Number(data.timezoneOffsetMinutes)
+      : 0;
 
     // Use the proper COUNT(*) endpoint for unread+saved instead of fetching
     // full item lists and counting .length (which silently capped at the
@@ -309,7 +335,10 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" }).handler(
     // count endpoint exists — but today is date-bounded so the list is small.
     const [counts, todayResponse] = await Promise.all([
       apiJson<ArticleCountsResponse>("/api/v1/articles/counts", { headers: forwarded }),
-      apiJson<CursorListResponse>("/api/v1/articles/views/today", { headers: forwarded }),
+      apiJson<CursorListResponse>(
+        buildArticlesUrl("today", timezoneOffsetMinutes, undefined, undefined, undefined),
+        { headers: forwarded },
+      ),
     ]);
 
     return {
@@ -317,8 +346,7 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" }).handler(
       unread: counts.unread,
       saved: counts.saved,
     };
-  },
-);
+  });
 
 export const getScopedUnreadCount = createServerFn({ method: "GET" })
   .inputValidator((input: { feedId?: string; folderId?: string }) => input)
@@ -343,7 +371,7 @@ export const getScopedUnreadCount = createServerFn({ method: "GET" })
     // Folder-scoped unread: no dedicated count endpoint yet, fall back to
     // the list query. TODO: add a folder-scoped count endpoint on the API.
     const response = await apiJson<CursorListResponse>(
-      buildArticlesUrl("unread", data.feedId, data.folderId),
+      buildArticlesUrl("unread", 0, data.feedId, data.folderId),
       { headers: buildForwardHeaders(headers) },
     );
     return { count: response.items.length };
