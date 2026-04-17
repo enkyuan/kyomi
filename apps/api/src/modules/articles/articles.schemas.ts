@@ -104,7 +104,8 @@ export const cursorListResponseSchema = t.Object({
   items: t.Array(articleListItemSchema),
   next_cursor: t.Union([t.String(), t.Null()]),
   has_more: t.Boolean(),
-  total_count: t.Null(),
+  /** Accurate count on first page (no cursor). Returns 0 for cursor-paginated requests. */
+  total_count: t.Number(),
 });
 
 export const countsResponseSchema = t.Object({

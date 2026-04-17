@@ -331,10 +331,11 @@ export async function listClipsForUser(
 ): Promise<ArticlesCursorListResponseDto> {
   const filters = buildClipFilters(userId, opts);
   const limit = Math.min(Math.max(opts.limit, 1), 200);
+  const isFirstPage = !opts.cursor;
   const listFilters = [...filters];
   const [rows, totalCount] = await Promise.all([
     listClipRows(database, listFilters, userId, opts, limit + 1),
-    countClipsForUser(database, filters),
+    isFirstPage ? countClipsForUser(database, filters) : Promise.resolve(0),
   ]);
   const hasMore = rows.length > limit;
   const page = hasMore ? rows.slice(0, limit) : rows;

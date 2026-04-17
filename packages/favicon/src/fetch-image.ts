@@ -19,10 +19,12 @@ export async function tryFetchImage(url: string): Promise<Response | null> {
       signal: AbortSignal.timeout(2500),
     });
     if (!response.ok) {
+      void response.body?.cancel();
       return null;
     }
     const contentType = response.headers.get("content-type") ?? "";
     if (!contentType.startsWith("image/") && !contentType.includes("icon")) {
+      void response.body?.cancel();
       return null;
     }
     return response;

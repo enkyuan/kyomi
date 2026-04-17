@@ -64,7 +64,10 @@ export async function listArticlesForUser(
 ): Promise<ArticlesCursorListResponseDto> {
   const limit = normalizeLimit(opts.limit);
   const { feedSubscriptionsJoin, userStateJoin } = baseJoins(userId);
+  const isFirstPage = !opts.cursor;
 
+  // Build both filter sets in parallel. The cursor-less variant is always
+  // a pure in-memory operation (no DB query) so this is negligible overhead.
   const [filtersWithCursor, filtersWithoutCursor] = await Promise.all([
     buildFilters(database, userId, opts, feedSubscriptionsJoin, true),
     buildFilters(database, userId, opts, feedSubscriptionsJoin, false),
@@ -72,7 +75,11 @@ export async function listArticlesForUser(
 
   const [rows, totalCount] = await Promise.all([
     listArticleRows(database, feedSubscriptionsJoin, userStateJoin, filtersWithCursor, limit + 1),
-    countArticlesForUser(database, feedSubscriptionsJoin, userStateJoin, filtersWithoutCursor),
+    // Only run COUNT(*) on the first page to avoid extra DB work on every
+    // cursor-paginated request (infinite scroll). Returns 0 for later pages.
+    isFirstPage
+      ? countArticlesForUser(database, feedSubscriptionsJoin, userStateJoin, filtersWithoutCursor)
+      : Promise.resolve(0),
   ]);
   const { hasMore, page, nextCursor } = paginateRows(rows, limit);
 

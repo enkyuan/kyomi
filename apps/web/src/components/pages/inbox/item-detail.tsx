@@ -96,6 +96,8 @@ function originalLooksWeak(
   );
 }
 
+type ReaderMode = "original" | "extracted";
+
 function resolveDefaultReaderMode(
   item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>,
 ): ReaderMode {
