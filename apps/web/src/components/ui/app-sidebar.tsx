@@ -36,8 +36,8 @@ export function AppSidebar() {
       side="left"
       variant="inset"
       collapsible="icon"
-      className="p-0 px-2 py-2 group-data-[collapsible=icon]:**:data-[sidebar=menu-item]:flex group-data-[collapsible=icon]:**:data-[sidebar=menu-item]:justify-start group-data-[collapsible=icon]:**:data-[sidebar=menu-button]:justify-start group-data-[collapsible=icon]:**:data-[sidebar=menu-button]:px-2"
-      style={{ "--sidebar-width": "14rem" } as CSSProperties}
+      className="p-0 px-0 py-2 group-data-[collapsible=icon]:**:data-[sidebar=menu-item]:flex group-data-[collapsible=icon]:**:data-[sidebar=menu-item]:justify-start group-data-[collapsible=icon]:**:data-[sidebar=menu-button]:justify-start group-data-[collapsible=icon]:**:data-[sidebar=menu-button]:px-2"
+      style={{ "--sidebar-width": "12rem" } as CSSProperties}
     >
       <SidebarWorkspaceHeader isMacPlatform={isMacPlatform} />
 

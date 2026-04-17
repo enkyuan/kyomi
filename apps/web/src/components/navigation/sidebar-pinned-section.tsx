@@ -87,7 +87,7 @@ export function SidebarPinnedSection() {
                       siteUrl={feed.link}
                       title={feed.title || feed.url}
                     />
-                    <span className="truncate">{feed.title || feed.url}</span>
+                    <span className="min-w-0 flex-1 truncate">{feed.title || feed.url}</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))

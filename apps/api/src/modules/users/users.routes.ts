@@ -3,7 +3,7 @@ import { t } from "elysia";
 import { AppError } from "@shared/errors/app-error";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { listMembershipsForUser } from "./users-organizations.service";
-import { getUserProfileById } from "./users.service";
+import { getUserProfileById, updateUserEmailById } from "./users.service";
 
 const userProfileResponse = t.Object({
   id: t.String(),
@@ -25,6 +25,10 @@ const membershipItem = t.Object({
 
 const userMembershipsResponse = t.Object({
   items: t.Array(membershipItem),
+});
+
+const updateEmailBody = t.Object({
+  email: t.String(),
 });
 
 export function registerUserRoutes(app: Elysia) {
@@ -55,6 +59,20 @@ export function registerUserRoutes(app: Elysia) {
       {
         response: {
           200: userMembershipsResponse,
+        },
+      },
+    )
+    .post(
+      "/users/profile/email",
+      async (context) => {
+        const { db, userId, body } = v1HandlerContext<{ email: string }>(context);
+
+        return updateUserEmailById(db, userId, body.email);
+      },
+      {
+        body: updateEmailBody,
+        response: {
+          200: userProfileResponse,
         },
       },
     );

@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo } from "react";
 import DOMPurify from "dompurify";
+import { memo } from "react";
 import "katex/dist/katex.min.css";
 
 /**
@@ -96,7 +96,6 @@ function sanitizeHtml(dirty: string): string {
   });
 }
 
-export function RenderHtml({ html }: { html: string }) {
-  const cleanHtml = useMemo(() => sanitizeHtml(html), [html]);
-  return <div className="article-body" dangerouslySetInnerHTML={{ __html: cleanHtml }} />;
-}
+export const RenderHtml = memo(function RenderHtml({ html }: { html: string }) {
+  return <div className="article-body" dangerouslySetInnerHTML={{ __html: sanitizeHtml(html) }} />;
+});

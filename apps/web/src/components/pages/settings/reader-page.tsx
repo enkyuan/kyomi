@@ -1,7 +1,6 @@
 "use client";
 
 import { NewsFill, PhoneFill } from "@mingcute/react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@components/ui/card";
 import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
 
 export const readerSection = {
@@ -29,36 +28,28 @@ export function ReaderPageNav({ isActive, onSelect }: ReaderPageNavProps) {
 export function ReaderPagePanel() {
   return (
     <>
-      <Card>
-        <CardHeader>
-          <div className="flex items-start gap-3">
-            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-border bg-muted/40">
-              <readerSection.icon className="size-5" />
-            </div>
-            <div className="min-w-0">
-              <CardTitle>{readerSection.name}</CardTitle>
-              <CardDescription className="mt-1">{readerSection.description}</CardDescription>
-            </div>
+      <section className="space-y-3">
+        <div className="flex items-start gap-3">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-border bg-muted/40">
+            <readerSection.icon className="size-5" />
           </div>
-        </CardHeader>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-sm">Preferences</CardTitle>
-          <CardDescription>Reader settings content will be added here.</CardDescription>
-        </CardHeader>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-sm">Support</CardTitle>
-        </CardHeader>
-        <CardContent className="pt-0">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <PhoneFill className="size-4 shrink-0" />
-            <span>Support and feedback actions remain available in the sidebar.</span>
+          <div className="min-w-0">
+            <h2 className="text-base font-semibold">{readerSection.name}</h2>
+            <p className="mt-1 text-sm text-muted-foreground">{readerSection.description}</p>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </section>
+      <section className="space-y-1">
+        <h3 className="text-sm font-semibold">Preferences</h3>
+        <p className="text-sm text-muted-foreground">Reader settings content will be added here.</p>
+      </section>
+      <section className="space-y-1">
+        <h3 className="text-sm font-semibold">Support</h3>
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <PhoneFill className="size-4 shrink-0" />
+          <span>Support and feedback actions remain available in the sidebar.</span>
+        </div>
+      </section>
     </>
   );
 }
