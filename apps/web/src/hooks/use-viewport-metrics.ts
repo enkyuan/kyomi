@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+"use client";
+
+import { type RefObject, useEffect, useRef, useState } from "react";
 
 type ViewportMetrics = {
   viewportHeight: number;
@@ -7,8 +9,8 @@ type ViewportMetrics = {
 };
 
 export function useViewportMetrics(
-  viewportRef: React.RefObject<HTMLElement | null>,
-  dependencies: any[] = [],
+  viewportRef: RefObject<HTMLElement | null>,
+  dependencies: unknown[] = [],
 ) {
   const [metrics, setMetrics] = useState<ViewportMetrics>({
     viewportHeight: 0,

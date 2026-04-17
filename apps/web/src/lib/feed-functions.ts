@@ -125,6 +125,11 @@ export const searchFeeds = createServerFn({ method: "GET" })
 export const followFeed = createServerFn({ method: "POST" })
   .inputValidator((input: { url: string }) => input)
   .handler(async ({ data }): Promise<FollowFeedResult> => {
+    const normalizedUrl = normalizeUrlCandidate(data.url.trim());
+    if (!normalizedUrl) {
+      throw new Error("Invalid feed URL");
+    }
+
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");
 
@@ -132,7 +137,7 @@ export const followFeed = createServerFn({ method: "POST" })
       apiJson<FollowFeedResult>("/api/v1/feeds", {
         method: "POST",
         headers,
-        body: JSON.stringify({ url: normalizeUrlCandidate(data.url.trim()) ?? data.url.trim() }),
+        body: JSON.stringify({ url: normalizedUrl }),
       }),
     );
   });

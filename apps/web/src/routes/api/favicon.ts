@@ -23,6 +23,8 @@ const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
 const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;
 const FAVICON_CACHE_TTL_MS = FAVICON_CACHE_MAX_AGE_SECONDS * 1000;
 const FAVICON_MISS_CACHE_TTL_MS = 60 * 30 * 1000;
+const FAVICON_CACHE_MAX_ENTRIES = 500;
+const FAVICON_MAX_RESPONSE_BYTES = 64 * 1024;
 
 type CachedFavicon =
   | {
@@ -37,6 +39,16 @@ type CachedFavicon =
     };
 
 const faviconResponseCache = new Map<string, CachedFavicon>();
+
+function setCachedFavicon(hostname: string, value: CachedFavicon) {
+  if (faviconResponseCache.size >= FAVICON_CACHE_MAX_ENTRIES) {
+    const oldest = faviconResponseCache.keys().next().value;
+    if (oldest !== undefined) {
+      faviconResponseCache.delete(oldest);
+    }
+  }
+  faviconResponseCache.set(hostname, value);
+}
 
 function canonicalHostname(hostname: string): string {
   const withoutBrackets =
@@ -201,8 +213,33 @@ async function cacheAndBuildFaviconResponse(
   upstream: Response,
 ): Promise<Response> {
   const contentType = upstream.headers.get("content-type") ?? "image/x-icon";
-  const bodyBytes = new Uint8Array(await upstream.arrayBuffer());
-  faviconResponseCache.set(hostname, {
+  const contentLength = Number(upstream.headers.get("content-length") ?? "0");
+  if (contentLength > FAVICON_MAX_RESPONSE_BYTES) {
+    return new Response(null, { status: 404 });
+  }
+  const reader = upstream.body?.getReader();
+  if (!reader) {
+    return new Response(null, { status: 404 });
+  }
+  const chunks: Uint8Array[] = [];
+  let totalBytes = 0;
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    totalBytes += value.byteLength;
+    if (totalBytes > FAVICON_MAX_RESPONSE_BYTES) {
+      reader.cancel();
+      return new Response(null, { status: 404 });
+    }
+    chunks.push(value);
+  }
+  const bodyBytes = new Uint8Array(totalBytes);
+  let offset = 0;
+  for (const chunk of chunks) {
+    bodyBytes.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  setCachedFavicon(hostname, {
     kind: "hit",
     body: bodyBytes,
     contentType,
@@ -274,7 +311,7 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     return cacheAndBuildFaviconResponse(hostname, duckDuckGoResult);
   }
 
-  faviconResponseCache.set(hostname, {
+  setCachedFavicon(hostname, {
     kind: "miss",
     expiresAt: Date.now() + FAVICON_MISS_CACHE_TTL_MS,
   });
