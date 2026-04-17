@@ -12,8 +12,19 @@ import { Skeleton } from "@components/ui/skeleton";
 
 /** Content sources that haven't gone through Readability — always extract. */
 const UNEXTRACTED_SOURCES = new Set([null, "text_fallback", "feed_markdown", "feed_summary"]);
+const EXTRACTION_CACHE_MAX_ENTRIES = 100;
 const extractionResultCache = new Map<string, ReaderContentResponse>();
 const extractionRequestCache = new Map<string, Promise<ReaderContentResponse>>();
+
+function setCachedExtractionResult(key: string, value: ReaderContentResponse) {
+  if (extractionResultCache.size >= EXTRACTION_CACHE_MAX_ENTRIES) {
+    const oldest = extractionResultCache.keys().next().value;
+    if (oldest !== undefined) {
+      extractionResultCache.delete(oldest);
+    }
+  }
+  extractionResultCache.set(key, value);
+}
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -64,7 +75,7 @@ export function ItemDetail({
       extractionRequestCache.get(item.id) ??
       extractInboxItemFullText({ data: { itemId: item.id } })
         .then((result) => {
-          extractionResultCache.set(item.id, result.reader);
+          setCachedExtractionResult(item.id, result.reader);
           return result.reader;
         })
         .catch((error: unknown) => {
@@ -77,7 +88,7 @@ export function ItemDetail({
               error instanceof Error ? error.message : "Failed to extract full text.",
             shouldExtract: false,
           };
-          extractionResultCache.set(item.id, fallbackReader);
+          setCachedExtractionResult(item.id, fallbackReader);
           return fallbackReader;
         })
         .finally(() => {

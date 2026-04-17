@@ -1,3 +1,5 @@
+"use client";
+
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { Filter2Fill } from "@mingcute/react";
 import { useNavigate } from "@tanstack/react-router";
@@ -7,11 +9,12 @@ import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { Route } from "@/routes/inbox/index";
 import { useEffect, useRef } from "react";
+import type { InboxItem } from "@lib/inbox-functions";
 
 const FEED_ITEM_ROW_ESTIMATE = 176;
 
 interface InboxListProps {
-  inboxItems: any[];
+  inboxItems: InboxItem[];
   unreadCount: number;
   selectedItemId?: string;
   isLoading: boolean;
