@@ -265,6 +265,11 @@ export async function getFeedDetailForUser(
       link: feeds.link,
       createdAt: feeds.createdAt,
       updatedAt: feeds.updatedAt,
+      refreshStatus: feeds.refreshStatus,
+      lastRefreshCompletedAt: feeds.lastRefreshCompletedAt,
+      lastRefreshFailedAt: feeds.lastRefreshFailedAt,
+      lastRefreshError: feeds.lastRefreshError,
+      nextRefreshAt: feeds.nextRefreshAt,
     })
     .from(feeds)
     .where(eq(feeds.id, feedId))
@@ -299,6 +304,13 @@ export async function getFeedDetailForUser(
     isSubscribed: Boolean(sub),
     subscriptionId: sub?.id ?? null,
     subscribedAt: sub ? sub.createdAt.toISOString() : null,
+    refreshStatus: feed.refreshStatus,
+    lastRefreshCompletedAt: feed.lastRefreshCompletedAt
+      ? feed.lastRefreshCompletedAt.toISOString()
+      : null,
+    lastRefreshFailedAt: feed.lastRefreshFailedAt ? feed.lastRefreshFailedAt.toISOString() : null,
+    lastRefreshError: feed.lastRefreshError,
+    nextRefreshAt: feed.nextRefreshAt ? feed.nextRefreshAt.toISOString() : null,
   };
 }
 

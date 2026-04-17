@@ -22,6 +22,11 @@ export const feedDetailResponse = t.Object({
   isSubscribed: t.Boolean(),
   subscriptionId: t.Union([t.String(), t.Null()]),
   subscribedAt: t.Union([t.String(), t.Null()]),
+  refreshStatus: t.String(),
+  lastRefreshCompletedAt: t.Union([t.String(), t.Null()]),
+  lastRefreshFailedAt: t.Union([t.String(), t.Null()]),
+  lastRefreshError: t.Union([t.String(), t.Null()]),
+  nextRefreshAt: t.Union([t.String(), t.Null()]),
 });
 
 export const messageResponse = t.Object({

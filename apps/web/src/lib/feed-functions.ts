@@ -4,6 +4,7 @@ import { apiJson, buildForwardHeaders } from "@lib/api";
 import {
   apiJsonValidated,
   discoverFeedResultSchema,
+  feedDetailSchema,
   followFeedResultSchema,
   followedFeedsListSchema,
 } from "@lib/api-schemas";
@@ -38,6 +39,25 @@ export type FollowedFeed = {
   folderId: string | null;
   folderName: string | null;
   subscribedAt: string;
+};
+
+export type FeedDetail = {
+  id: string;
+  url: string;
+  title: string;
+  customTitle: string | null;
+  description: string | null;
+  link: string | null;
+  createdAt: string;
+  updatedAt: string;
+  isSubscribed: boolean;
+  subscriptionId: string | null;
+  subscribedAt: string | null;
+  refreshStatus: "idle" | "queued" | "running" | "failed";
+  lastRefreshCompletedAt: string | null;
+  lastRefreshFailedAt: string | null;
+  lastRefreshError: string | null;
+  nextRefreshAt: string | null;
 };
 
 type FollowedFeedsResponse = {
@@ -187,9 +207,31 @@ export const moveFeedsToFolder = createServerFn({ method: "POST" })
     return apiJson<{ updatedCount: number }>("/api/v1/feeds/folder", {
       method: "PATCH",
       headers,
-      body: JSON.stringify({
-        feedIds: data.feedIds.map((id) => id.trim()).filter(Boolean),
-        folderId: data.folderId.trim(),
-      }),
+      body: JSON.stringify(data),
     });
+  });
+
+export const refreshFeed = createServerFn({ method: "POST" })
+  .inputValidator((input: { feedId: string }) => input)
+  .handler(async ({ data }): Promise<{ accepted: boolean; jobId: string; type: string }> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    return apiJson<{ accepted: boolean; jobId: string; type: string }>(
+      `/api/v1/feeds/${encodeURIComponent(data.feedId)}/refresh`,
+      {
+        method: "POST",
+        headers,
+      },
+    );
+  });
+
+export const getFeedDetail = createServerFn({ method: "GET" })
+  .inputValidator((input: { feedId: string }) => input)
+  .handler(async ({ data }): Promise<FeedDetail> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    return apiJsonValidated(feedDetailSchema, () =>
+      apiJson<FeedDetail>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
+        method: "GET",
+        headers,
+      }),
+    );
   });

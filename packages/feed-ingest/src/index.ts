@@ -46,6 +46,9 @@ function isSafeEnrichmentUrl(raw: string): boolean {
 export type FeedRefreshResult = {
   ok: boolean;
   itemCount: number;
+  insertedCount?: number;
+  updatedCount?: number;
+  notModified?: boolean;
   error?: string;
 };
 
@@ -87,7 +90,16 @@ type ParsedFeedDocument = {
 };
 
 type FetchFeedDocumentResult =
-  | { ok: true; finalUrl: string; body: string; contentType: string }
+  | {
+      ok: true;
+      finalUrl: string;
+      body: string;
+      contentType: string;
+      etag: string | null;
+      lastModified: string | null;
+      notModified: false;
+    }
+  | { ok: true; notModified: true }
   | { ok: false; error: string };
 
 type SearchSyncConfig = {
@@ -95,6 +107,19 @@ type SearchSyncConfig = {
   masterKey?: string;
   indexUid?: string;
 };
+
+type RefreshTimingSnapshot = {
+  lastRefreshSucceededAt: Date | null;
+  lastRefreshFailedAt: Date | null;
+};
+
+function computeFailureBackoffMs(snapshot: RefreshTimingSnapshot): number {
+  const hasConsecutiveFailure =
+    Boolean(snapshot.lastRefreshFailedAt) &&
+    (!snapshot.lastRefreshSucceededAt ||
+      snapshot.lastRefreshFailedAt!.getTime() >= snapshot.lastRefreshSucceededAt.getTime());
+  return hasConsecutiveFailure ? 60 * 60 * 1000 : 15 * 60 * 1000;
+}
 
 const NAMED_HTML_ENTITIES: Record<string, string> = {
   amp: "&",
@@ -436,19 +461,31 @@ function computeFeedItemId(
   return stableUuid(`${feedId}|${link}|${title}|${publishedAt.toISOString()}|${ordinal}`);
 }
 
-async function fetchFeedDocument(url: string): Promise<FetchFeedDocumentResult> {
+async function fetchFeedDocument(
+  url: string,
+  etag?: string | null,
+  lastModified?: string | null,
+): Promise<FetchFeedDocumentResult> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
   try {
+    const headers: Record<string, string> = {
+      accept:
+        "application/rss+xml, application/atom+xml, application/xml, application/json, text/xml;q=0.9, */*;q=0.8",
+      "user-agent": "CronosFeedFetcher/1.0",
+    };
+    if (etag) headers["if-none-match"] = etag;
+    if (lastModified) headers["if-modified-since"] = lastModified;
+
     const response = await fetch(url, {
       redirect: "follow",
       signal: controller.signal,
-      headers: {
-        accept:
-          "application/rss+xml, application/atom+xml, application/xml, application/json, text/xml;q=0.9, */*;q=0.8",
-        "user-agent": "CronosFeedFetcher/1.0",
-      },
+      headers,
     });
+
+    if (response.status === 304) {
+      return { ok: true, notModified: true };
+    }
 
     if (!response.ok) {
       return { ok: false, error: `HTTP ${response.status}` };
@@ -464,6 +501,9 @@ async function fetchFeedDocument(url: string): Promise<FetchFeedDocumentResult> 
       finalUrl: response.url,
       body: new TextDecoder("utf-8", { fatal: false }).decode(buffer),
       contentType: response.headers.get("content-type") ?? "",
+      etag: response.headers.get("etag"),
+      lastModified: response.headers.get("last-modified"),
+      notModified: false,
     };
   } catch (error) {
     return {
@@ -507,6 +547,18 @@ async function fetchArticleEnrichment(url: string): Promise<{
       contentSource: "link_only",
       extractionErrorCode: "FETCH_FAILED",
       extractionErrorMessage: fetched.error,
+      imageUrl: null,
+    };
+  }
+  if (fetched.notModified) {
+    return {
+      content: null,
+      contentHtml: null,
+      contentText: null,
+      contentStatus: "failed",
+      contentSource: "link_only",
+      extractionErrorCode: "FETCH_NOT_MODIFIED",
+      extractionErrorMessage: "Unexpected 304 Not Modified for enrichment",
       imageUrl: null,
     };
   }
@@ -767,10 +819,20 @@ export async function runFeedRefresh(
   searchSync?: SearchSyncConfig,
 ): Promise<FeedRefreshResult> {
   try {
+    const startedAt = new Date();
+    await database
+      .update(feeds)
+      .set({ refreshStatus: "running", lastRefreshStartedAt: startedAt })
+      .where(eq(feeds.id, feedId));
+
     const [feed] = await database
       .select({
         id: feeds.id,
         url: feeds.url,
+        etag: feeds.etag,
+        lastModified: feeds.lastModified,
+        lastRefreshSucceededAt: feeds.lastRefreshSucceededAt,
+        lastRefreshFailedAt: feeds.lastRefreshFailedAt,
       })
       .from(feeds)
       .where(eq(feeds.id, feedId))
@@ -780,9 +842,39 @@ export async function runFeedRefresh(
       return { ok: false, itemCount: 0, error: "Feed not found" };
     }
 
-    const fetched = await fetchFeedDocument(feed.url);
+    const fetched = await fetchFeedDocument(feed.url, feed.etag, feed.lastModified);
     if (!fetched.ok) {
+      const now = new Date();
+      const backoffMs = computeFailureBackoffMs({
+        lastRefreshSucceededAt: feed.lastRefreshSucceededAt,
+        lastRefreshFailedAt: feed.lastRefreshFailedAt,
+      });
+      await database
+        .update(feeds)
+        .set({
+          refreshStatus: "failed",
+          lastRefreshFailedAt: now,
+          lastRefreshError: fetched.error,
+          lastRefreshCompletedAt: now,
+          nextRefreshAt: new Date(now.getTime() + backoffMs),
+        })
+        .where(eq(feeds.id, feedId));
       return { ok: false, itemCount: 0, error: `Feed fetch failed: ${fetched.error}` };
+    }
+
+    if (fetched.notModified) {
+      const now = new Date();
+      await database
+        .update(feeds)
+        .set({
+          refreshStatus: "idle",
+          lastRefreshCompletedAt: now,
+          lastRefreshSucceededAt: now,
+          lastRefreshError: null,
+          nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000), // Next refresh in 1 hour
+        })
+        .where(eq(feeds.id, feedId));
+      return { ok: true, itemCount: 0, notModified: true };
     }
 
     const parsed = parseFeedDocument(fetched.body, feed.id, fetched.finalUrl);
@@ -829,6 +921,13 @@ export async function runFeedRefresh(
           description: parsed.metadata.description,
           link: parsed.metadata.link,
           updatedAt: now,
+          refreshStatus: "idle",
+          lastRefreshCompletedAt: now,
+          lastRefreshSucceededAt: now,
+          lastRefreshError: null,
+          etag: fetched.etag,
+          lastModified: fetched.lastModified,
+          nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
         })
         .where(eq(feeds.id, feed.id));
 
@@ -888,6 +987,7 @@ export async function runFeedRefresh(
     return {
       ok: true,
       itemCount: items.length,
+      insertedCount: items.length, // Rough estimate as we don't have exact UPSERT counts right now
     };
   } catch (error) {
     let message = "Feed refresh failed";
@@ -895,6 +995,20 @@ export async function runFeedRefresh(
       const cause = (error as Error & { cause?: unknown }).cause;
       message = cause instanceof Error ? cause.message : error.message;
     }
+    const now = new Date();
+    const backoffMs = 30 * 60 * 1000;
+    await database
+      .update(feeds)
+      .set({
+        refreshStatus: "failed",
+        lastRefreshFailedAt: now,
+        lastRefreshError: message,
+        lastRefreshCompletedAt: now,
+        nextRefreshAt: new Date(now.getTime() + backoffMs),
+      })
+      .where(eq(feeds.id, feedId))
+      .catch(() => {});
+
     return {
       ok: false,
       itemCount: 0,

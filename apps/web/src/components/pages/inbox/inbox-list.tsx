@@ -4,6 +4,7 @@ import { useVirtualizer } from "@tanstack/react-virtual";
 import { Filter2Fill } from "@mingcute/react";
 import { useNavigate } from "@tanstack/react-router";
 import { FeedItem } from "@components/pages/inbox/feed-item";
+import { FeedRefreshStatus } from "@components/feed-refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
@@ -17,6 +18,7 @@ interface InboxListProps {
   inboxItems: InboxItem[];
   unreadCount: number;
   selectedItemId?: string;
+  feedId?: string;
   isLoading: boolean;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
@@ -27,6 +29,7 @@ export function InboxList({
   inboxItems,
   unreadCount,
   selectedItemId,
+  feedId,
   isLoading,
   hasNextPage,
   isFetchingNextPage,
@@ -72,9 +75,12 @@ export function InboxList({
     <section className="flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground md:min-h-0">
       <div className="sticky top-0 z-10 shrink-0 border-b border-border bg-card">
         <div className="flex items-center justify-between gap-3 px-2 py-2">
-          <span className="ps-1 font-medium text-muted-foreground text-sm tabular-nums">
-            {unreadCount} unread
-          </span>
+          <div className="flex items-center gap-4">
+            <span className="ps-1 font-medium text-muted-foreground text-sm tabular-nums">
+              {unreadCount} unread
+            </span>
+            {feedId && <FeedRefreshStatus feedId={feedId} />}
+          </div>
           <button
             type="button"
             aria-label="Feed filters coming soon"

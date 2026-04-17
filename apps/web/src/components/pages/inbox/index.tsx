@@ -66,6 +66,7 @@ export function InboxPage() {
           inboxItems={inboxItems}
           unreadCount={unreadCount}
           selectedItemId={selectedItemId}
+          feedId={feedId}
           isLoading={inboxQuery.isPending}
           hasNextPage={!!inboxQuery.hasNextPage}
           isFetchingNextPage={inboxQuery.isFetchingNextPage}

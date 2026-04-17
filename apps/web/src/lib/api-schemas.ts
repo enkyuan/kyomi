@@ -151,6 +151,27 @@ export const followedFeedsListSchema = z.object({
   items: z.array(followedFeedSchema),
 });
 
+export const feedRefreshStatusSchema = z.enum(["idle", "queued", "running", "failed"]);
+
+export const feedDetailSchema = z.object({
+  id: z.string(),
+  url: z.string(),
+  title: z.string(),
+  customTitle: z.string().nullable(),
+  description: z.string().nullable(),
+  link: z.string().nullable(),
+  createdAt: z.string(),
+  updatedAt: z.string(),
+  isSubscribed: z.boolean(),
+  subscriptionId: z.string().nullable(),
+  subscribedAt: z.string().nullable(),
+  refreshStatus: feedRefreshStatusSchema,
+  lastRefreshCompletedAt: z.string().nullable(),
+  lastRefreshFailedAt: z.string().nullable(),
+  lastRefreshError: z.string().nullable(),
+  nextRefreshAt: z.string().nullable(),
+});
+
 export const messageResponseSchema = z.object({
   message: z.string(),
 });
@@ -168,6 +189,7 @@ export type ExtractFullTextResponseDto = z.infer<typeof extractFullTextResponseS
 export type DiscoverFeedResultDto = z.infer<typeof discoverFeedResultSchema>;
 export type FollowFeedResultDto = z.infer<typeof followFeedResultSchema>;
 export type FollowedFeedDto = z.infer<typeof followedFeedSchema>;
+export type FeedDetailDto = z.infer<typeof feedDetailSchema>;
 
 // ---------------------------------------------------------------------------
 // Validated fetch helper

@@ -22,6 +22,8 @@ import {
   updateFeedSubscriptionSettings,
 } from "./feeds.service";
 import * as dto from "./feeds.dto";
+import { feeds } from "@cronos/db";
+import { eq } from "drizzle-orm";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",
@@ -30,6 +32,7 @@ const createFeedRateLimit = {
 } as const;
 
 async function enqueueFeedRefreshAfterSubscribe(
+  db: ReturnType<typeof v1HandlerContext>["db"],
   feedId: string,
   userId: string,
   logger: {
@@ -41,8 +44,9 @@ async function enqueueFeedRefreshAfterSubscribe(
     const redis = getRedis();
     const jobId = await publishJob(redis, {
       type: "feed.refresh",
-      payload: { feedId, userId },
+      payload: { feedId, userId, reason: "subscription_created" },
     });
+    await db.update(feeds).set({ refreshStatus: "queued" }).where(eq(feeds.id, feedId));
     logger.info("queue.job.enqueued", {
       jobId,
       jobType: "feed.refresh",
@@ -69,7 +73,7 @@ export function registerFeedRoutes(app: Elysia) {
         await enforceRateLimitForContext(context, userId, createFeedRateLimit);
         const result = await createOrSubscribeToFeed(db, userId, body.url.trim());
         if (result.newSubscription) {
-          await enqueueFeedRefreshAfterSubscribe(result.feedId, userId, logger);
+          await enqueueFeedRefreshAfterSubscribe(db, result.feedId, userId, logger);
         }
         set.status = result.newSubscription ? 201 : 200;
         logger.info("feeds.subscribe.by_url", {
@@ -94,7 +98,7 @@ export function registerFeedRoutes(app: Elysia) {
         const { db, logger, params, set, userId } = v1HandlerContext(context);
         const result = await subscribeToExistingFeed(db, userId, params.feedId);
         if (result.newSubscription) {
-          await enqueueFeedRefreshAfterSubscribe(result.feedId, userId, logger);
+          await enqueueFeedRefreshAfterSubscribe(db, result.feedId, userId, logger);
         }
         set.status = result.newSubscription ? 201 : 200;
         logger.info("feeds.subscribe.by_id", {
@@ -277,13 +281,18 @@ export function registerFeedRoutes(app: Elysia) {
           const redis = getRedis();
           const jobId = await publishJob(redis, {
             type: "feed.refresh",
-            payload: { feedId: params.feedId, userId },
+            payload: { feedId: params.feedId, userId, reason: "manual" },
           });
+          await db
+            .update(feeds)
+            .set({ refreshStatus: "queued" })
+            .where(eq(feeds.id, params.feedId));
           logger.info("queue.job.enqueued", {
             jobId,
             jobType: "feed.refresh",
             feedId: params.feedId,
             userId,
+            reason: "manual",
           });
           set.status = 202;
           return {
