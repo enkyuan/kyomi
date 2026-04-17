@@ -76,7 +76,7 @@ export const cursorListResponseSchema = z.object({
   items: z.array(articleListItemSchema),
   next_cursor: z.string().nullable(),
   has_more: z.boolean(),
-  total_count: z.number(),
+  total_count: z.number().nullable(),
 });
 
 // ---------------------------------------------------------------------------
@@ -91,11 +91,6 @@ export const articleDetailSchema = articleListItemSchema.extend({
   contentSource: contentSourceSchema,
   extractionErrorCode: z.string().nullable(),
   extractionErrorMessage: z.string().nullable(),
-  extractedContentHtml: z.string().nullable(),
-  extractedContentText: z.string().nullable(),
-  extractedContentStatus: z.enum(["pending", "ready", "failed"]),
-  extractedContentError: z.string().nullable(),
-  extractedContentUpdatedAt: z.string().nullable(),
   reader: readerContentSchema,
 });
 
@@ -136,7 +131,6 @@ export const followFeedResultSchema = z.object({
   url: z.string(),
   title: z.string(),
   link: z.string().nullable(),
-  faviconUrl: z.string().nullable(),
   newFeed: z.boolean(),
   newSubscription: z.boolean(),
 });
@@ -148,7 +142,6 @@ export const followedFeedSchema = z.object({
   title: z.string(),
   customTitle: z.string().nullable(),
   link: z.string().nullable(),
-  faviconUrl: z.string().nullable(),
   folderId: z.string().nullable(),
   folderName: z.string().nullable(),
   subscribedAt: z.string(),
@@ -167,9 +160,6 @@ export const feedDetailSchema = z.object({
   customTitle: z.string().nullable(),
   description: z.string().nullable(),
   link: z.string().nullable(),
-  faviconUrl: z.string().nullable(),
-  faviconSource: z.string().nullable(),
-  faviconFetchedAt: z.string().nullable(),
   createdAt: z.string(),
   updatedAt: z.string(),
   isSubscribed: z.boolean(),

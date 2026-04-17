@@ -82,6 +82,9 @@ export function SidebarInboxNav({
                     search={(prev) => ({
                       ...prev,
                       ...item.search,
+                      search: undefined,
+                      feedId: undefined,
+                      folderId: undefined,
                       itemId: undefined,
                     })}
                   />

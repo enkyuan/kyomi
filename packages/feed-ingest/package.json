@@ -1,12 +1,11 @@
 {
-  "name": "@cronos/ingestion",
+  "name": "@cronos/feed-ingest",
   "private": true,
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@cronos/favicon": "workspace:*",
     "@cronos/db": "workspace:*",
     "drizzle-orm": "^0.45.2",
     "fast-xml-parser": "^5.5.10",

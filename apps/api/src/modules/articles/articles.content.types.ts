@@ -1,5 +1,4 @@
 export type ArticleContentStatus = "ready" | "partial" | "failed" | "pending";
-export type ArticleExtractedContentStatus = "pending" | "ready" | "failed";
 
 export type ArticleContentSource =
   | "feed_html"

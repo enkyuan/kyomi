@@ -2,7 +2,6 @@ import type { FetchArticleDocumentResult } from "./articles.content.types";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_HTML_BYTES = 3 * 1024 * 1024;
-const MAX_REDIRECTS = 5;
 
 const PRIVATE_IP_PATTERNS = [
   /^127\./,
@@ -56,60 +55,16 @@ export async function fetchArticleDocument(url: string): Promise<FetchArticleDoc
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
   try {
-    let currentUrl = url;
-    let response: Response | null = null;
-    for (let redirectCount = 0; redirectCount <= MAX_REDIRECTS; redirectCount += 1) {
-      response = await fetch(currentUrl, {
-        redirect: "manual",
-        signal: controller.signal,
-        headers: {
-          "user-agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          accept: "text/html,application/xhtml+xml;q=0.9,text/plain;q=0.8,*/*;q=0.5",
-          "accept-language": "en-US,en;q=0.9",
-        },
-      });
-
-      const isRedirect = response.status >= 300 && response.status < 400;
-      if (!isRedirect) {
-        break;
-      }
-
-      const nextLocation = response.headers.get("location");
-      if (!nextLocation) {
-        return {
-          ok: false,
-          errorCode: "FETCH_FAILED",
-          errorMessage: "Extraction failed while following redirects.",
-        };
-      }
-
-      if (redirectCount === MAX_REDIRECTS) {
-        return {
-          ok: false,
-          errorCode: "TOO_MANY_REDIRECTS",
-          errorMessage: "This source redirected too many times.",
-        };
-      }
-
-      const resolvedUrl = new URL(nextLocation, currentUrl).toString();
-      if (!isSafeArticleUrl(resolvedUrl)) {
-        return {
-          ok: false,
-          errorCode: "BLOCKED_URL",
-          errorMessage: "Invalid or unsafe URL provided.",
-        };
-      }
-      currentUrl = resolvedUrl;
-    }
-
-    if (!response) {
-      return {
-        ok: false,
-        errorCode: "FETCH_FAILED",
-        errorMessage: "Extraction failed.",
-      };
-    }
+    const response = await fetch(url, {
+      redirect: "follow",
+      signal: controller.signal,
+      headers: {
+        "user-agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        accept: "text/html,application/xhtml+xml;q=0.9,text/plain;q=0.8,*/*;q=0.5",
+        "accept-language": "en-US,en;q=0.9",
+      },
+    });
 
     if (!response.ok) {
       return {
@@ -139,7 +94,7 @@ export async function fetchArticleDocument(url: string): Promise<FetchArticleDoc
 
     return {
       ok: true,
-      finalUrl: currentUrl,
+      finalUrl: response.url,
       body,
       contentType,
     };

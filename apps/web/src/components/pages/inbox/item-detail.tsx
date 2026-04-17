@@ -1,9 +1,30 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
 import { ReaderContent } from "@components/reader/reader-content";
-import { getInboxItemDetail, type ReaderContentResponse } from "@lib/inbox-functions";
+import {
+  extractInboxItemFullText,
+  getInboxItemDetail,
+  type ReaderContentResponse,
+} from "@lib/inbox-functions";
+import { Skeleton } from "@components/ui/skeleton";
+
+/** Content sources that haven't gone through Readability — always extract. */
+const UNEXTRACTED_SOURCES = new Set([null, "text_fallback", "feed_markdown", "feed_summary"]);
+const EXTRACTION_CACHE_MAX_ENTRIES = 100;
+const extractionResultCache = new Map<string, ReaderContentResponse>();
+const extractionRequestCache = new Map<string, Promise<ReaderContentResponse>>();
+
+function setCachedExtractionResult(key: string, value: ReaderContentResponse) {
+  if (extractionResultCache.size >= EXTRACTION_CACHE_MAX_ENTRIES) {
+    const oldest = extractionResultCache.keys().next().value;
+    if (oldest !== undefined) {
+      extractionResultCache.delete(oldest);
+    }
+  }
+  extractionResultCache.set(key, value);
+}
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -32,9 +53,65 @@ export function ItemDetail({
 }: {
   item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>;
 }) {
-  const extractedReader = useMemo(() => buildExtractedReader(item), [item]);
-  const defaultMode = resolveDefaultReaderMode(item);
-  const reader = defaultMode === "extracted" && extractedReader ? extractedReader : item.reader;
+  const [readerOverride, setReaderOverride] = useState<ReaderContentResponse | null>(null);
+  const [isExtracting, setIsExtracting] = useState(false);
+
+  useEffect(() => {
+    const cachedReader = extractionResultCache.get(item.id);
+    setReaderOverride(cachedReader ?? null);
+    setIsExtracting(false);
+
+    // Extract if the backend flagged it, OR if the content source is a raw
+    // RSS text/markdown blob (no Readability-parsed HTML available yet).
+    const needsExtraction =
+      item.reader.shouldExtract || UNEXTRACTED_SOURCES.has(item.reader.contentSource);
+
+    if (!needsExtraction) return;
+    if (cachedReader) return;
+
+    let cancelled = false;
+    setIsExtracting(true);
+    const request =
+      extractionRequestCache.get(item.id) ??
+      extractInboxItemFullText({ data: { itemId: item.id } })
+        .then((result) => {
+          setCachedExtractionResult(item.id, result.reader);
+          return result.reader;
+        })
+        .catch((error: unknown) => {
+          const fallbackReader: ReaderContentResponse = {
+            ...item.reader,
+            notice: "Full preview unavailable right now.",
+            contentStatus: item.reader.fallbackSummary ? "partial" : "failed",
+            extractionErrorCode: "FETCH_FAILED",
+            extractionErrorMessage:
+              error instanceof Error ? error.message : "Failed to extract full text.",
+            shouldExtract: false,
+          };
+          setCachedExtractionResult(item.id, fallbackReader);
+          return fallbackReader;
+        })
+        .finally(() => {
+          extractionRequestCache.delete(item.id);
+        });
+    extractionRequestCache.set(item.id, request);
+
+    request
+      .then((reader) => {
+        if (cancelled) return;
+        setReaderOverride(reader);
+      })
+      .finally(() => {
+        if (cancelled) return;
+        setIsExtracting(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [item.id, item.reader]);
+
+  const reader = readerOverride ?? item.reader;
 
   const displayContent = reader.contentHtml ?? reader.contentMarkdown ?? reader.contentText ?? "";
   const readTime = displayContent ? estimateReadingTime(displayContent) : null;
@@ -61,8 +138,23 @@ export function ItemDetail({
         />
       </div>
 
+      {/* Extraction loading state */}
+      {isExtracting && (
+        <div className="not-prose space-y-3">
+          <p className="text-xs uppercase tracking-wide text-muted-foreground">
+            Extracting full text…
+          </p>
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[92%]" />
+            <Skeleton className="h-4 w-[86%]" />
+            <Skeleton className="h-4 w-[90%]" />
+            <Skeleton className="h-4 w-[84%]" />
+          </div>
+        </div>
+      )}
+
       {/* Article body */}
-      <ReaderContent reader={reader} />
+      {!isExtracting && <ReaderContent reader={reader} />}
 
       {/* Footer link */}
       <div className="not-prose mt-10 border-t border-border pt-6">
@@ -77,66 +169,4 @@ export function ItemDetail({
       </div>
     </article>
   );
-}
-
-function hasRenderableContent(reader: ReaderContentResponse): boolean {
-  return Boolean(
-    reader.contentHtml?.trim() || reader.contentMarkdown?.trim() || reader.contentText?.trim(),
-  );
-}
-
-function originalLooksWeak(
-  item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>,
-) {
-  const text = (item.reader.contentText ?? "").trim();
-  return (
-    item.reader.bodyKind === "fallback" ||
-    item.reader.contentStatus !== "ready" ||
-    (item.reader.contentSource !== "feed_html" && text.length < 280)
-  );
-}
-
-type ReaderMode = "original" | "extracted";
-
-function resolveDefaultReaderMode(
-  item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>,
-): ReaderMode {
-  const extractedReady = item.extractedContentStatus === "ready";
-  const originalUsable = hasRenderableContent(item.reader) && item.reader.bodyKind !== "fallback";
-  const originalBad = !originalUsable || originalLooksWeak(item);
-
-  if (extractedReady && originalBad) return "extracted";
-  if (originalUsable) return "original";
-  if (extractedReady) return "extracted";
-  return "original";
-}
-
-function buildExtractedReader(
-  item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>,
-): ReaderContentResponse | null {
-  if (item.extractedContentStatus !== "ready") {
-    return null;
-  }
-
-  const html = item.extractedContentHtml?.trim() || null;
-  const text = item.extractedContentText?.trim() || null;
-  if (!html && !text) {
-    return null;
-  }
-
-  return {
-    ...item.reader,
-    contentStatus: "ready",
-    contentSource: "extracted_html",
-    bodyKind: html ? "html" : "text",
-    contentHtml: html,
-    contentMarkdown: null,
-    contentText: text,
-    fallbackSummary: null,
-    fallbackReason: null,
-    notice: null,
-    extractionErrorCode: null,
-    extractionErrorMessage: null,
-    shouldExtract: false,
-  };
 }

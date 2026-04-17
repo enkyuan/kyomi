@@ -71,7 +71,7 @@ const baseJob = {
 // Existing tests
 // ---------------------------------------------------------------------------
 
-describe("worker", () => {
+describe("job-queue", () => {
   test("round-trips a feed refresh job through flat fields", () => {
     const fields = fieldsForJob(baseJob);
     expect(toRedisStreamFieldList(fields)).toEqual([
