@@ -69,8 +69,6 @@ export function SidebarInboxNav({
                 className={cn(badgeValue > 0 ? "pe-10" : undefined)}
                 isActive={
                   location.pathname === "/inbox" &&
-                  !location.search.feedId &&
-                  !location.search.folderId &&
                   FILTER_KEYS.every((key) => {
                     const expected = item.search[key];
                     const actual = location.search[key];
@@ -84,6 +82,7 @@ export function SidebarInboxNav({
                     search={(prev) => ({
                       ...prev,
                       ...item.search,
+                      search: undefined,
                       feedId: undefined,
                       folderId: undefined,
                       itemId: undefined,

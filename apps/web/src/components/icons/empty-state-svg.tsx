@@ -14,14 +14,23 @@ interface EmptyStateBaseProps extends EmptyStateSVGProps {
 
 function useResolvedTheme() {
   const [resolvedTheme, setResolvedTheme] = useState<"dark" | "light">(() =>
-    typeof document !== "undefined" && document.documentElement.classList.contains("light")
-      ? "light"
-      : "dark",
+    typeof document !== "undefined" && document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light",
   );
 
   useEffect(() => {
     const root = document.documentElement;
-    const getTheme = () => (root.classList.contains("dark") ? "dark" : "light");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const getTheme = () => {
+      if (root.classList.contains("dark")) {
+        return "dark" as const;
+      }
+      if (root.classList.contains("light")) {
+        return "light" as const;
+      }
+      return mediaQuery.matches ? ("dark" as const) : ("light" as const);
+    };
     const updateTheme = () => {
       setResolvedTheme(getTheme());
     };
@@ -30,18 +39,15 @@ function useResolvedTheme() {
 
     const observer = new MutationObserver(updateTheme);
     observer.observe(root, {
-      attributeFilter: ["class", "data-theme", "style"],
+      attributeFilter: ["class", "data-theme"],
       attributes: true,
     });
 
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     mediaQuery.addEventListener("change", updateTheme);
-    window.addEventListener("storage", updateTheme);
 
     return () => {
       observer.disconnect();
       mediaQuery.removeEventListener("change", updateTheme);
-      window.removeEventListener("storage", updateTheme);
     };
   }, []);
 

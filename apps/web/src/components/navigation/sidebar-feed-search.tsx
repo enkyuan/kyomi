@@ -39,6 +39,7 @@ export function SidebarFeedSearchTrigger({
   hideTrigger = false,
   enableGlobalShortcut = true,
 }: SidebarFeedSearchTriggerProps) {
+  const shortcutLabel = isMacPlatform ? "⌘K" : "Ctrl K";
   const queryClient = useQueryClient();
   const [internalOpen, setInternalOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -103,7 +104,16 @@ export function SidebarFeedSearchTrigger({
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key.toLowerCase() !== "k" || (!event.metaKey && !event.ctrlKey)) {
+      const usesPlatformShortcut = isMacPlatform
+        ? event.metaKey && !event.ctrlKey
+        : event.ctrlKey && !event.metaKey;
+
+      if (
+        event.key.toLowerCase() !== "k" ||
+        !usesPlatformShortcut ||
+        event.shiftKey ||
+        event.altKey
+      ) {
         return;
       }
 
@@ -113,7 +123,7 @@ export function SidebarFeedSearchTrigger({
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [enableGlobalShortcut]);
+  }, [enableGlobalShortcut, isMacPlatform]);
 
   return (
     <CommandDialog open={dialogOpen} onOpenChange={setDialogOpen}>
@@ -132,10 +142,10 @@ export function SidebarFeedSearchTrigger({
                 />
                 <InputGroupAddon
                   align="inline-end"
-                  className="h-full items-center self-stretch has-[>kbd:last-child]:me-0"
+                  className="ms-auto h-full items-center self-stretch has-[>kbd:last-child]:me-0"
                 >
                   <Kbd className="min-w-0 whitespace-nowrap px-1.5 text-[10px] leading-none">
-                    {isMacPlatform ? "⌘K" : "⌃K"}
+                    {shortcutLabel}
                   </Kbd>
                 </InputGroupAddon>
               </InputGroup>

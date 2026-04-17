@@ -1,7 +1,7 @@
 "use client";
 
 import { Combobox as ComboboxPrimitive } from "@base-ui/react/combobox";
-import { ChevronsUpDownIcon, XIcon } from "lucide-react";
+import { CloseFill, SelectorVerticalFill } from "@mingcute/react";
 import * as React from "react";
 import { cn } from "@lib/utils";
 import { Input } from "@components/ui/input";
@@ -110,7 +110,7 @@ export function ComboboxInput({
           {...triggerProps}
         >
           <ComboboxPrimitive.Icon data-slot="combobox-icon">
-            <ChevronsUpDownIcon />
+            <SelectorVerticalFill />
           </ComboboxPrimitive.Icon>
         </ComboboxTrigger>
       )}
@@ -122,7 +122,7 @@ export function ComboboxInput({
           )}
           {...clearProps}
         >
-          <XIcon />
+          <CloseFill />
         </ComboboxClear>
       )}
     </ComboboxPrimitive.InputGroup>
@@ -397,7 +397,7 @@ export function ComboboxChipRemove(props: ComboboxPrimitive.ChipRemove.Props): R
       data-slot="combobox-chip-remove"
       {...props}
     >
-      <XIcon />
+      <CloseFill />
     </ComboboxPrimitive.ChipRemove>
   );
 }

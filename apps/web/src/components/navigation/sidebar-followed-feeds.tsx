@@ -2,12 +2,13 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { DownFill, NewsFill } from "@mingcute/react";
 import { CreateFolderDialog } from "@components/navigation/create-folder-dialog";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { Menu, MenuItem, MenuPopup } from "@components/ui/menu";
+import { toastManager } from "@components/ui/toast";
 import {
   SidebarGroup,
   SidebarGroupContent,
@@ -22,6 +23,7 @@ import {
   type FollowedFeed,
   getFollowedFeedUnreadCounts,
   listFollowedFeeds,
+  unfollowFeed,
 } from "@lib/feed-functions";
 
 export function SidebarFollowedFeeds() {
@@ -94,9 +96,7 @@ export function SidebarFollowedFeeds() {
                   item={item}
                   unreadCount={unreadCounts[item.feedId] ?? 0}
                   isActive={
-                    location.pathname === "/inbox" &&
-                    location.search.filter === "unread" &&
-                    location.search.feedId === item.feedId
+                    location.pathname === "/inbox" && location.search.feedId === item.feedId
                   }
                 />
               ))}
@@ -120,6 +120,33 @@ function FollowedFeedMenuItem({
   const [menuOpen, setMenuOpen] = useState(false);
   const [anchorPoint, setAnchorPoint] = useState({ x: 0, y: 0 });
   const anchorRef = useRef<HTMLDivElement | null>(null);
+  const queryClient = useQueryClient();
+  const feedLabel = item.title || item.url;
+  const feedSourceUrl = item.link ?? item.url;
+
+  const unfollowFeedMutation = useMutation({
+    mutationFn: ({ feedId }: { feedId: string }) => unfollowFeed({ data: { feedId } }),
+    onSuccess: async () => {
+      await Promise.all([
+        queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] }),
+        queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] }),
+        queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] }),
+      ]);
+      setMenuOpen(false);
+      toastManager.add({
+        title: "Feed unfollowed",
+        description: feedLabel,
+        type: "success",
+      });
+    },
+    onError: (error) => {
+      toastManager.add({
+        title: "Unable to unfollow feed",
+        description: error instanceof Error ? error.message : "Try again in a moment.",
+        type: "error",
+      });
+    },
+  });
 
   useEffect(() => {
     if (!menuOpen) {
@@ -138,8 +165,6 @@ function FollowedFeedMenuItem({
       window.removeEventListener("resize", closeMenu);
     };
   }, [menuOpen]);
-
-  const feedLabel = item.title || item.url;
 
   return (
     <SidebarMenuItem key={item.feedId}>
@@ -189,17 +214,60 @@ function FollowedFeedMenuItem({
       <Menu open={menuOpen} onOpenChange={setMenuOpen}>
         {anchorRef.current ? (
           <MenuPopup align="start" anchor={anchorRef.current} side="right" sideOffset={6}>
-            <MenuItem disabled className="opacity-50">
-              Mark As Essential
-              <span className="ml-auto text-[10px] text-muted-foreground">Soon</span>
+            <MenuItem
+              onClick={() => {
+                window.open(feedSourceUrl, "_blank", "noopener,noreferrer");
+                setMenuOpen(false);
+              }}
+            >
+              Open source website
             </MenuItem>
-            <MenuItem disabled className="opacity-50">
-              Mute For Today
-              <span className="ml-auto text-[10px] text-muted-foreground">Soon</span>
+            <MenuItem
+              onClick={() => {
+                if (!navigator.clipboard?.writeText) {
+                  toastManager.add({
+                    title: "Unable to copy feed URL",
+                    description: "Clipboard access is unavailable in this browser.",
+                    type: "error",
+                  });
+                  setMenuOpen(false);
+                  return;
+                }
+
+                void navigator.clipboard.writeText(item.url).then(
+                  () => {
+                    toastManager.add({
+                      title: "Feed URL copied",
+                      description: item.url,
+                      type: "success",
+                    });
+                    setMenuOpen(false);
+                  },
+                  (error: unknown) => {
+                    toastManager.add({
+                      title: "Unable to copy feed URL",
+                      description:
+                        error instanceof Error ? error.message : "Copy the URL manually instead.",
+                      type: "error",
+                    });
+                    setMenuOpen(false);
+                  },
+                );
+              }}
+            >
+              Copy feed URL
             </MenuItem>
-            <MenuItem disabled className="opacity-50">
-              Open In Thought Lane
-              <span className="ml-auto text-[10px] text-muted-foreground">Soon</span>
+            <MenuItem
+              variant="destructive"
+              disabled={unfollowFeedMutation.isPending}
+              onClick={() => {
+                if (unfollowFeedMutation.isPending) {
+                  return;
+                }
+                unfollowFeedMutation.mutate({ feedId: item.feedId });
+              }}
+            >
+              {unfollowFeedMutation.isPending ? "Unfollowing..." : "Unfollow feed"}
             </MenuItem>
           </MenuPopup>
         ) : null}

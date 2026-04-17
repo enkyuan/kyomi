@@ -12,6 +12,19 @@ import { Skeleton } from "@components/ui/skeleton";
 
 /** Content sources that haven't gone through Readability — always extract. */
 const UNEXTRACTED_SOURCES = new Set([null, "text_fallback", "feed_markdown", "feed_summary"]);
+const EXTRACTION_CACHE_MAX_ENTRIES = 100;
+const extractionResultCache = new Map<string, ReaderContentResponse>();
+const extractionRequestCache = new Map<string, Promise<ReaderContentResponse>>();
+
+function setCachedExtractionResult(key: string, value: ReaderContentResponse) {
+  if (extractionResultCache.size >= EXTRACTION_CACHE_MAX_ENTRIES) {
+    const oldest = extractionResultCache.keys().next().value;
+    if (oldest !== undefined) {
+      extractionResultCache.delete(oldest);
+    }
+  }
+  extractionResultCache.set(key, value);
+}
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -44,7 +57,9 @@ export function ItemDetail({
   const [isExtracting, setIsExtracting] = useState(false);
 
   useEffect(() => {
-    setReaderOverride(null);
+    const cachedReader = extractionResultCache.get(item.id);
+    setReaderOverride(cachedReader ?? null);
+    setIsExtracting(false);
 
     // Extract if the backend flagged it, OR if the content source is a raw
     // RSS text/markdown blob (no Readability-parsed HTML available yet).
@@ -52,25 +67,39 @@ export function ItemDetail({
       item.reader.shouldExtract || UNEXTRACTED_SOURCES.has(item.reader.contentSource);
 
     if (!needsExtraction) return;
+    if (cachedReader) return;
 
     let cancelled = false;
     setIsExtracting(true);
-    extractInboxItemFullText({ data: { itemId: item.id } })
-      .then((result) => {
-        if (cancelled) return;
-        setReaderOverride(result.reader);
-      })
-      .catch((error: unknown) => {
-        if (cancelled) return;
-        setReaderOverride({
-          ...item.reader,
-          notice: "Full preview unavailable right now.",
-          contentStatus: item.reader.fallbackSummary ? "partial" : "failed",
-          extractionErrorCode: "FETCH_FAILED",
-          extractionErrorMessage:
-            error instanceof Error ? error.message : "Failed to extract full text.",
-          shouldExtract: false,
+    const request =
+      extractionRequestCache.get(item.id) ??
+      extractInboxItemFullText({ data: { itemId: item.id } })
+        .then((result) => {
+          setCachedExtractionResult(item.id, result.reader);
+          return result.reader;
+        })
+        .catch((error: unknown) => {
+          const fallbackReader: ReaderContentResponse = {
+            ...item.reader,
+            notice: "Full preview unavailable right now.",
+            contentStatus: item.reader.fallbackSummary ? "partial" : "failed",
+            extractionErrorCode: "FETCH_FAILED",
+            extractionErrorMessage:
+              error instanceof Error ? error.message : "Failed to extract full text.",
+            shouldExtract: false,
+          };
+          setCachedExtractionResult(item.id, fallbackReader);
+          return fallbackReader;
+        })
+        .finally(() => {
+          extractionRequestCache.delete(item.id);
         });
+    extractionRequestCache.set(item.id, request);
+
+    request
+      .then((reader) => {
+        if (cancelled) return;
+        setReaderOverride(reader);
       })
       .finally(() => {
         if (cancelled) return;

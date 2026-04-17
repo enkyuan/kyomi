@@ -2,13 +2,11 @@
 
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
-import { ChevronRight, MoreHorizontal } from "lucide-react";
+import { More1Fill, RightFill } from "@mingcute/react";
 import type * as React from "react";
 import { cn } from "@lib/utils";
 
-export function Breadcrumb({
-  ...props
-}: React.ComponentProps<"nav">): React.ReactElement {
+export function Breadcrumb({ ...props }: React.ComponentProps<"nav">): React.ReactElement {
   return <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />;
 }
 
@@ -85,7 +83,7 @@ export function BreadcrumbSeparator({
       role="presentation"
       {...props}
     >
-      {children ?? <ChevronRight />}
+      {children ?? <RightFill />}
     </li>
   );
 }
@@ -102,7 +100,7 @@ export function BreadcrumbEllipsis({
       role="presentation"
       {...props}
     >
-      <MoreHorizontal className="size-4" />
+      <More1Fill className="size-4" />
       <span className="sr-only">More</span>
     </span>
   );

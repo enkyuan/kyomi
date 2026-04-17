@@ -1,7 +1,7 @@
 "use client";
 
 import { NumberField as NumberFieldPrimitive } from "@base-ui/react/number-field";
-import { MinusIcon, PlusIcon } from "lucide-react";
+import { AddFill, MinusCircleFill } from "@mingcute/react";
 import * as React from "react";
 import { cn } from "@lib/utils";
 import { Label } from "@components/ui/label";
@@ -65,7 +65,7 @@ export function NumberFieldDecrement({
       data-slot="number-field-decrement"
       {...props}
     >
-      <MinusIcon />
+      <MinusCircleFill />
     </NumberFieldPrimitive.Decrement>
   );
 }
@@ -83,7 +83,7 @@ export function NumberFieldIncrement({
       data-slot="number-field-increment"
       {...props}
     >
-      <PlusIcon />
+      <AddFill />
     </NumberFieldPrimitive.Increment>
   );
 }
@@ -135,9 +135,7 @@ export function NumberFieldScrubArea({
   );
 }
 
-export function CursorGrowIcon(
-  props: React.ComponentProps<"svg">,
-): React.ReactElement {
+export function CursorGrowIcon(props: React.ComponentProps<"svg">): React.ReactElement {
   return (
     <svg
       aria-hidden="true"

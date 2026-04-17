@@ -29,6 +29,37 @@ const createFeedRateLimit = {
   windowMs: 10 * 60_000,
 } as const;
 
+async function enqueueFeedRefreshAfterSubscribe(
+  feedId: string,
+  userId: string,
+  logger: {
+    info: (msg: string, meta?: Record<string, unknown>) => void;
+    warn: (msg: string, meta?: Record<string, unknown>) => void;
+  },
+): Promise<void> {
+  try {
+    const redis = getRedis();
+    const jobId = await publishJob(redis, {
+      type: "feed.refresh",
+      payload: { feedId, userId },
+    });
+    logger.info("queue.job.enqueued", {
+      jobId,
+      jobType: "feed.refresh",
+      feedId,
+      userId,
+      reason: "subscription_created",
+    });
+  } catch (error) {
+    logger.warn("queue.job.enqueue.skipped", {
+      feedId,
+      userId,
+      reason: "subscription_created",
+      error: error instanceof Error ? error.message : String(error),
+    });
+  }
+}
+
 export function registerFeedRoutes(app: Elysia) {
   return app
     .post(
@@ -37,6 +68,9 @@ export function registerFeedRoutes(app: Elysia) {
         const { body, db, logger, set, userId } = v1HandlerContext<{ url: string }>(context);
         await enforceRateLimitForContext(context, userId, createFeedRateLimit);
         const result = await createOrSubscribeToFeed(db, userId, body.url.trim());
+        if (result.newSubscription) {
+          await enqueueFeedRefreshAfterSubscribe(result.feedId, userId, logger);
+        }
         set.status = result.newSubscription ? 201 : 200;
         logger.info("feeds.subscribe.by_url", {
           userId,
@@ -59,6 +93,9 @@ export function registerFeedRoutes(app: Elysia) {
       async (context) => {
         const { db, logger, params, set, userId } = v1HandlerContext(context);
         const result = await subscribeToExistingFeed(db, userId, params.feedId);
+        if (result.newSubscription) {
+          await enqueueFeedRefreshAfterSubscribe(result.feedId, userId, logger);
+        }
         set.status = result.newSubscription ? 201 : 200;
         logger.info("feeds.subscribe.by_id", {
           userId,

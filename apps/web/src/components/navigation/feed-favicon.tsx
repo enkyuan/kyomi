@@ -1,7 +1,9 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { RssFill } from "@mingcute/react";
+
+const failedFaviconUrls = new Set<string>();
 
 type FeedFaviconProps = {
   feedUrl: string;
@@ -11,11 +13,13 @@ type FeedFaviconProps = {
 };
 
 export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconProps) {
-  const [imageError, setImageError] = useState(false);
-  const faviconUrl = useMemo(() => buildFaviconUrl(siteUrl, feedUrl), [feedUrl, siteUrl]);
+  const faviconUrl = buildFaviconUrl(siteUrl, feedUrl);
+  const [imageError, setImageError] = useState(
+    faviconUrl ? failedFaviconUrls.has(faviconUrl) : false,
+  );
 
   useEffect(() => {
-    setImageError(false);
+    setImageError(faviconUrl ? failedFaviconUrls.has(faviconUrl) : false);
   }, [faviconUrl]);
 
   if (!faviconUrl || imageError) {
@@ -26,9 +30,12 @@ export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconP
     <img
       alt={`${title} favicon`}
       className={className}
+      decoding="async"
       loading="lazy"
+      referrerPolicy="no-referrer"
       src={faviconUrl}
       onError={() => {
+        failedFaviconUrls.add(faviconUrl);
         setImageError(true);
       }}
     />
