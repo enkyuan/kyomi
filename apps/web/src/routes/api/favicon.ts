@@ -129,9 +129,17 @@ async function tryFetchImage(imageUrl: string): Promise<Response | null> {
       ...FETCH_OPTIONS,
       signal: AbortSignal.timeout(2500),
     });
-    if (!response.ok) return null;
+    if (!response.ok) {
+      // Cancelling the body prevents leaving the stream open; ignore cancel errors.
+      response.body?.cancel().catch(() => {});
+      return null;
+    }
     const contentType = response.headers.get("content-type") ?? "";
-    if (!contentType.startsWith("image/") && !contentType.includes("icon")) return null;
+    if (!contentType.startsWith("image/") && !contentType.includes("icon")) {
+      // Cancelling the body prevents leaving the stream open; ignore cancel errors.
+      response.body?.cancel().catch(() => {});
+      return null;
+    }
     return response;
   } catch {
     return null;

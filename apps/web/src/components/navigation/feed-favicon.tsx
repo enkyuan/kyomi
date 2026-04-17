@@ -3,7 +3,23 @@
 import { useEffect, useState } from "react";
 import { RssFill } from "@mingcute/react";
 
-const failedFaviconUrls = new Set<string>();
+const FAVICON_ERROR_TTL_MS = 5 * 60 * 1000;
+
+const failedFaviconUrls = new Map<string, number>();
+
+function hasFaviconFailed(url: string): boolean {
+  const expiresAt = failedFaviconUrls.get(url);
+  if (expiresAt === undefined) return false;
+  if (Date.now() >= expiresAt) {
+    failedFaviconUrls.delete(url);
+    return false;
+  }
+  return true;
+}
+
+function markFaviconFailed(url: string): void {
+  failedFaviconUrls.set(url, Date.now() + FAVICON_ERROR_TTL_MS);
+}
 
 type FeedFaviconProps = {
   feedUrl: string;
@@ -15,11 +31,11 @@ type FeedFaviconProps = {
 export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconProps) {
   const faviconUrl = buildFaviconUrl(siteUrl, feedUrl);
   const [imageError, setImageError] = useState(
-    faviconUrl ? failedFaviconUrls.has(faviconUrl) : false,
+    faviconUrl ? hasFaviconFailed(faviconUrl) : false,
   );
 
   useEffect(() => {
-    setImageError(faviconUrl ? failedFaviconUrls.has(faviconUrl) : false);
+    setImageError(faviconUrl ? hasFaviconFailed(faviconUrl) : false);
   }, [faviconUrl]);
 
   if (!faviconUrl || imageError) {
@@ -35,7 +51,7 @@ export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconP
       referrerPolicy="no-referrer"
       src={faviconUrl}
       onError={() => {
-        failedFaviconUrls.add(faviconUrl);
+        markFaviconFailed(faviconUrl);
         setImageError(true);
       }}
     />
