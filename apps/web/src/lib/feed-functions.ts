@@ -25,6 +25,7 @@ export type FollowFeedResult = {
   url: string;
   title: string;
   link: string | null;
+  faviconUrl: string | null;
   newFeed: boolean;
   newSubscription: boolean;
 };
@@ -36,6 +37,7 @@ export type FollowedFeed = {
   title: string;
   customTitle: string | null;
   link: string | null;
+  faviconUrl: string | null;
   folderId: string | null;
   folderName: string | null;
   subscribedAt: string;
@@ -48,6 +50,9 @@ export type FeedDetail = {
   customTitle: string | null;
   description: string | null;
   link: string | null;
+  faviconUrl: string | null;
+  faviconSource: string | null;
+  faviconFetchedAt: string | null;
   createdAt: string;
   updatedAt: string;
   isSubscribed: boolean;

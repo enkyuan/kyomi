@@ -1,0 +1,89 @@
+import { Readability } from "@mozilla/readability";
+import { parseHTML } from "linkedom";
+import { fetchArticleDocument } from "./articles.fetch-document";
+import { htmlToText, sanitizeArticleHtml } from "./articles.sanitize-content";
+import type { ArticleExtractionCandidate } from "./articles.content.types";
+
+function wordCount(input: string): number {
+  return input.split(/\s+/).filter(Boolean).length;
+}
+
+function paragraphCount(input: string): number {
+  return input
+    .split(/\n{2,}/)
+    .map((part) => part.trim())
+    .filter(Boolean).length;
+}
+
+function looksLikeNonArticlePage(url: URL): boolean {
+  const path = url.pathname.toLowerCase();
+  return ["/search", "/login", "/signin", "/archive", "/archives", "/tag/", "/tags/"].some(
+    (pattern) => path === pattern || path.startsWith(pattern),
+  );
+}
+
+export async function extractArticleFullTextFromUrl(
+  url: string,
+): Promise<
+  | { ok: true; content: ArticleExtractionCandidate }
+  | { ok: false; errorCode: string; errorMessage: string }
+> {
+  const fetched = await fetchArticleDocument(url);
+  if (!fetched.ok) {
+    return fetched;
+  }
+
+  if (looksLikeNonArticlePage(new URL(fetched.finalUrl))) {
+    return {
+      ok: false,
+      errorCode: "NO_READABLE_CONTENT",
+      errorMessage: "This source is not a readable article page.",
+    };
+  }
+
+  let article: ReturnType<Readability["parse"]> | null;
+  try {
+    const { document } = parseHTML(fetched.body);
+    const reader = new Readability(document);
+    article = reader.parse();
+  } catch {
+    return {
+      ok: false,
+      errorCode: "PARSING_FAILED",
+      errorMessage: "Could not parse source HTML.",
+    };
+  }
+
+  if (!article?.content) {
+    return {
+      ok: false,
+      errorCode: "NO_READABLE_CONTENT",
+      errorMessage: "No readable article body was found.",
+    };
+  }
+
+  const contentHtml = sanitizeArticleHtml(article.content);
+  const contentText = htmlToText(contentHtml);
+
+  if (wordCount(contentText) < 60 || paragraphCount(contentText) < 2) {
+    return {
+      ok: false,
+      errorCode: "NO_READABLE_CONTENT",
+      errorMessage: "This source did not expose enough readable article text.",
+    };
+  }
+
+  return {
+    ok: true,
+    content: {
+      title: article.title?.trim() || null,
+      byline: article.byline?.trim() || null,
+      excerpt: article.excerpt?.trim() || null,
+      contentHtml: contentHtml || null,
+      contentText: contentText || null,
+      siteName: article.siteName?.trim() || null,
+      language: article.lang?.trim() || null,
+      publishedTime: null,
+    },
+  };
+}

@@ -80,6 +80,11 @@ type ArticleDetailResponse = {
   contentSource: ReaderContentResponse["contentSource"];
   extractionErrorCode: string | null;
   extractionErrorMessage: string | null;
+  extractedContentHtml: string | null;
+  extractedContentText: string | null;
+  extractedContentStatus: "pending" | "ready" | "failed";
+  extractedContentError: string | null;
+  extractedContentUpdatedAt: string | null;
   publishedAt: string;
   feedId: string;
   feedTitle: string;
@@ -121,6 +126,11 @@ type InboxDetailResponse = {
         contentSource: ReaderContentResponse["contentSource"];
         extractionErrorCode: string | null;
         extractionErrorMessage: string | null;
+        extractedContentHtml: string | null;
+        extractedContentText: string | null;
+        extractedContentStatus: "pending" | "ready" | "failed";
+        extractedContentError: string | null;
+        extractedContentUpdatedAt: string | null;
         reader: ReaderContentResponse;
       })
     | null;
@@ -286,6 +296,11 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
         contentSource: item.contentSource,
         extractionErrorCode: item.extractionErrorCode,
         extractionErrorMessage: item.extractionErrorMessage,
+        extractedContentHtml: item.extractedContentHtml,
+        extractedContentText: item.extractedContentText,
+        extractedContentStatus: item.extractedContentStatus,
+        extractedContentError: item.extractedContentError,
+        extractedContentUpdatedAt: item.extractedContentUpdatedAt,
         link: item.link,
         publishedAt: item.publishedAt,
         feedTitle: item.feedTitle,

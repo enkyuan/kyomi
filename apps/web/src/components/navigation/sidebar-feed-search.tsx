@@ -22,7 +22,7 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from "@components/ui/inp
 import { Kbd } from "@components/ui/kbd";
 import { SidebarMenuButton } from "@components/ui/sidebar";
 import { toastManager } from "@components/ui/toast";
-import { followFeed, searchFeeds } from "@lib/feed-functions";
+import { followFeed, searchFeeds, unfollowFeed } from "@lib/feed-functions";
 
 type SidebarFeedSearchTriggerProps = {
   isMacPlatform: boolean;
@@ -49,7 +49,6 @@ export function SidebarFeedSearchTrigger({
     queryKey: ["discover", "feeds", deferredQuery],
     queryFn: () => searchFeeds({ data: { query: deferredQuery } }),
     enabled: dialogOpen && deferredQuery.length > 0,
-    placeholderData: (previousData) => previousData,
   });
   const searchResults = discoverResultsQuery.data ?? [];
   const shouldShowLoading = discoverResultsQuery.isFetching && searchResults.length === 0;
@@ -61,6 +60,26 @@ export function SidebarFeedSearchTrigger({
       setInternalOpen(nextOpen);
     }
     onOpenChange?.(nextOpen);
+  };
+
+  const refreshInboxAfterSubscriptionChange = async () => {
+    await Promise.all([
+      queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] }),
+      queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] }),
+      queryClient.invalidateQueries({ queryKey: ["folders"] }),
+      queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] }),
+      queryClient.invalidateQueries({ queryKey: ["inbox", "items"] }),
+    ]);
+
+    const followUpWindowsMs = [4_000, 12_000];
+    for (const delayMs of followUpWindowsMs) {
+      setTimeout(() => {
+        void Promise.all([
+          queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] }),
+          queryClient.invalidateQueries({ queryKey: ["inbox", "items"] }),
+        ]);
+      }, delayMs);
+    }
   };
 
   const followFeedMutation = useMutation({
@@ -75,12 +94,7 @@ export function SidebarFeedSearchTrigger({
               : item,
           ),
       );
-      await queryClient.invalidateQueries({
-        queryKey: ["feeds", "followed"],
-      });
-      await queryClient.invalidateQueries({
-        queryKey: ["folders"],
-      });
+      await refreshInboxAfterSubscriptionChange();
       setDialogOpen(false);
       setQuery("");
       toastManager.add({
@@ -93,6 +107,32 @@ export function SidebarFeedSearchTrigger({
       toastManager.add({
         title: "Unable to follow feed",
         description: error instanceof Error ? error.message : "Try another topic or feed URL.",
+        type: "error",
+      });
+    },
+  });
+  const unfollowFeedMutation = useMutation({
+    mutationFn: ({ feedId }: { feedId: string }) => unfollowFeed({ data: { feedId } }),
+    onSuccess: async (_result, variables) => {
+      queryClient.setQueriesData(
+        { queryKey: ["discover", "feeds"] },
+        (current: Awaited<ReturnType<typeof searchFeeds>> | undefined) =>
+          current?.map((item) =>
+            item.id === variables.feedId ? { ...item, isSubscribed: false } : item,
+          ),
+      );
+      await refreshInboxAfterSubscriptionChange();
+      setDialogOpen(false);
+      setQuery("");
+      toastManager.add({
+        title: "Feed unfollowed",
+        type: "success",
+      });
+    },
+    onError: (error) => {
+      toastManager.add({
+        title: "Unable to unfollow feed",
+        description: error instanceof Error ? error.message : "Try again in a moment.",
         type: "error",
       });
     },
@@ -188,7 +228,20 @@ export function SidebarFeedSearchTrigger({
                       key={`${item.id ?? item.url}-${item.url}`}
                       value={`${item.title} ${item.url} ${item.description ?? ""}`}
                       onClick={() => {
-                        if (item.isSubscribed || followFeedMutation.isPending) {
+                        if (followFeedMutation.isPending || unfollowFeedMutation.isPending) {
+                          return;
+                        }
+
+                        if (item.isSubscribed) {
+                          if (!item.id) {
+                            toastManager.add({
+                              title: "Unable to unfollow feed",
+                              description: "Missing feed id for this subscription.",
+                              type: "error",
+                            });
+                            return;
+                          }
+                          unfollowFeedMutation.mutate({ feedId: item.id });
                           return;
                         }
 
@@ -208,7 +261,7 @@ export function SidebarFeedSearchTrigger({
                         </p>
                       </div>
                       <span className="shrink-0 rounded-full bg-sidebar-foreground/8 px-2 py-0.5 text-[11px] font-medium text-sidebar-foreground/72">
-                        {item.isSubscribed ? "Following" : "Follow"}
+                        {item.isSubscribed ? "Unfollow" : "Follow"}
                       </span>
                     </CommandItem>
                   ))}

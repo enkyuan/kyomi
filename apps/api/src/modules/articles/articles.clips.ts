@@ -231,6 +231,11 @@ function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDetailDto {
     contentSource: (row.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
     extractionErrorCode: row.extractionErrorCode,
     extractionErrorMessage: row.extractionErrorMessage,
+    extractedContentHtml: null,
+    extractedContentText: null,
+    extractedContentStatus: "pending",
+    extractedContentError: null,
+    extractedContentUpdatedAt: null,
     reader: buildStoredReaderContent({
       articleType: "clip",
       title: row.title,

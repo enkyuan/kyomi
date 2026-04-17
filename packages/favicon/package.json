@@ -1,0 +1,12 @@
+{
+  "name": "@cronos/favicon",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "@cronos/job-queue",
+  "name": "@cronos/worker",
   "private": true,
   "type": "module",
   "exports": {

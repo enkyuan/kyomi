@@ -1,5 +1,5 @@
 import type Redis from "ioredis";
-import { fieldsForJob, JOBS_STREAM_KEY, toRedisStreamFieldList, type Job } from "@cronos/job-queue";
+import { fieldsForJob, JOBS_STREAM_KEY, toRedisStreamFieldList, type Job } from "@cronos/worker";
 
 /** XADD a typed job. Returns Redis stream ID. */
 export async function publishJob(redis: Redis, job: Job): Promise<string> {

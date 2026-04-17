@@ -8,14 +8,22 @@ const FAVICON_FAILURE_TTL_MS = 5 * 60 * 1000;
 const failedFaviconUrls = new Map<string, number>();
 
 type FeedFaviconProps = {
+  /** Persisted feed favicon URL from the API when enrichment succeeded. */
+  faviconUrl?: string | null;
   feedUrl: string;
   siteUrl: string | null;
   title: string;
   className?: string;
 };
 
-export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconProps) {
-  const faviconUrl = buildFaviconUrl(siteUrl, feedUrl);
+export function FeedFavicon({
+  faviconUrl: storedFaviconUrl,
+  feedUrl,
+  siteUrl,
+  title,
+  className,
+}: FeedFaviconProps) {
+  const faviconUrl = resolveDisplayFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
   const [imageError, setImageError] = useState(
     faviconUrl ? isTemporarilyFailedUrl(faviconUrl) : false,
   );
@@ -27,8 +35,12 @@ export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconP
 
   if (!faviconUrl || imageError) {
     return (
-      <span className={cn("text-orange-300")} role="img" aria-label={`${title} feed`}>
-        <RssFill color="currentColor" />
+      <span
+        className={cn("inline-flex items-center justify-center text-blue-500", resolvedClassName)}
+        role="img"
+        aria-label={`${title} feed`}
+      >
+        <RssFill className="size-full fill-current" color="currentColor" />
       </span>
     );
   }
@@ -53,6 +65,18 @@ export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconP
       }}
     />
   );
+}
+
+function resolveDisplayFaviconUrl(
+  stored: string | null | undefined,
+  siteUrl: string | null,
+  feedUrl: string,
+) {
+  const trimmed = stored?.trim();
+  if (trimmed) {
+    return trimmed;
+  }
+  return buildProxyFaviconUrl(siteUrl, feedUrl);
 }
 
 function isTemporarilyFailedUrl(faviconUrl: string) {
@@ -93,7 +117,7 @@ function isRenderableFavicon(image: HTMLImageElement): boolean {
   }
 }
 
-function buildFaviconUrl(siteUrl: string | null, feedUrl: string) {
+function buildProxyFaviconUrl(siteUrl: string | null, feedUrl: string) {
   const hostUrl = parseHostUrl(siteUrl) ?? parseHostUrl(feedUrl);
   if (!hostUrl) {
     return null;

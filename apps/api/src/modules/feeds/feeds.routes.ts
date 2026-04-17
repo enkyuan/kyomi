@@ -8,19 +8,17 @@ import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { uuidParam } from "@shared/http/v1-stub";
 import { assertFeedAdminUser } from "./feeds.admin-guard";
 import { adminDeleteGlobalFeed, adminUpdateGlobalFeed } from "./feeds.admin.service";
+import { getFeedDetailForUser, listSubscribedFeeds } from "./feeds.read.service";
 import { markAllArticlesReadInFeed } from "./feeds.read-status";
-import type { AdminUpdateGlobalFeedBody } from "./feeds.types";
+import { createOrSubscribeToFeed, subscribeToExistingFeed } from "./feeds.subscription.service";
 import {
   assertUserSubscribedToFeed,
   bulkMoveFeedsToFolder,
   bulkUnsubscribeFromFeeds,
-  createOrSubscribeToFeed,
-  getFeedDetailForUser,
-  listSubscribedFeeds,
-  subscribeToExistingFeed,
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
-} from "./feeds.service";
+} from "./feeds.subscription-mutations";
+import type { AdminUpdateGlobalFeedBody } from "./feeds.types";
 import * as dto from "./feeds.dto";
 import { feeds } from "@cronos/db";
 import { eq } from "drizzle-orm";

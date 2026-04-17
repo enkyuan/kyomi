@@ -28,6 +28,11 @@ export type ArticleDetailDto = ArticleListItemDto & {
   contentSource: ArticleStoredContentDto["contentSource"];
   extractionErrorCode: string | null;
   extractionErrorMessage: string | null;
+  extractedContentHtml: string | null;
+  extractedContentText: string | null;
+  extractedContentStatus: "pending" | "ready" | "failed";
+  extractedContentError: string | null;
+  extractedContentUpdatedAt: string | null;
   reader: ArticleReaderContentDto;
 };
 
@@ -41,6 +46,11 @@ export type ArticleUpdateBody = {
   contentSource?: ArticleStoredContentDto["contentSource"] | null;
   extractionErrorCode?: string | null;
   extractionErrorMessage?: string | null;
+  extractedContentHtml?: string | null;
+  extractedContentText?: string | null;
+  extractedContentStatus?: "pending" | "ready" | "failed" | null;
+  extractedContentError?: string | null;
+  extractedContentUpdatedAt?: string | null;
 };
 
 export type ArticleCountsDto = {

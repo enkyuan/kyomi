@@ -1,31 +1,17 @@
-import { lookup } from "node:dns/promises";
-import { BlockList, isIP } from "node:net";
 import { createFileRoute } from "@tanstack/react-router";
-
-const ALLOWED_SCHEMES = new Set(["http:", "https:"]);
-
-const blockedAddressList = new BlockList();
-blockedAddressList.addSubnet("0.0.0.0", 8, "ipv4");
-blockedAddressList.addSubnet("10.0.0.0", 8, "ipv4");
-blockedAddressList.addSubnet("100.64.0.0", 10, "ipv4");
-blockedAddressList.addSubnet("127.0.0.0", 8, "ipv4");
-blockedAddressList.addSubnet("169.254.0.0", 16, "ipv4");
-blockedAddressList.addSubnet("172.16.0.0", 12, "ipv4");
-blockedAddressList.addSubnet("192.168.0.0", 16, "ipv4");
-blockedAddressList.addSubnet("::", 128, "ipv6");
-blockedAddressList.addSubnet("::1", 128, "ipv6");
-blockedAddressList.addSubnet("fc00::", 7, "ipv6");
-blockedAddressList.addSubnet("fe80::", 10, "ipv6");
-
-const blockedExactHostnames = new Set(["localhost", "metadata.google.internal"]);
-const blockedHostnameSuffixes = [".localhost", ".local", ".internal", ".home.arpa"];
+import {
+  ALLOWED_SCHEMES,
+  assertSafeFaviconHost,
+  findIconHrefFromHtml,
+  tryFetchImage,
+  tryFetchImageIfHostSafe,
+} from "@cronos/favicon";
 const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
 const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;
 const FAVICON_CACHE_TTL_MS = FAVICON_CACHE_MAX_AGE_SECONDS * 1000;
 const FAVICON_MISS_CACHE_TTL_MS = 60 * 10 * 1000;
 const FAVICON_CACHE_MAX_ENTRIES = 500;
 const FAVICON_MAX_RESPONSE_BYTES = 256 * 1024;
-const HTML_ICON_SCAN_BYTES = 128 * 1024;
 
 type CachedFavicon =
   | {
@@ -49,134 +35,6 @@ function setCachedFavicon(hostname: string, value: CachedFavicon) {
     }
   }
   faviconResponseCache.set(hostname, value);
-}
-
-function canonicalHostname(hostname: string): string {
-  const withoutBrackets =
-    hostname.startsWith("[") && hostname.endsWith("]") ? hostname.slice(1, -1) : hostname;
-  return withoutBrackets.toLowerCase().replace(/\.+$/, "");
-}
-
-function isBlockedHostname(hostname: string): boolean {
-  return (
-    blockedExactHostnames.has(hostname) ||
-    blockedHostnameSuffixes.some((suffix) => hostname.endsWith(suffix))
-  );
-}
-
-function normalizeIpAddress(address: string): string {
-  const normalized = canonicalHostname(address);
-  const mappedIpv4Prefix = "::ffff:";
-  if (!normalized.startsWith(mappedIpv4Prefix)) {
-    return normalized;
-  }
-  const mappedIpv4 = normalized.slice(mappedIpv4Prefix.length);
-  return isIP(mappedIpv4) === 4 ? mappedIpv4 : normalized;
-}
-
-function isBlockedIpAddress(address: string): boolean {
-  const normalized = normalizeIpAddress(address);
-  const family = isIP(normalized);
-  if (family === 0) {
-    return false;
-  }
-  return blockedAddressList.check(normalized, family === 6 ? "ipv6" : "ipv4");
-}
-
-async function assertSafeFaviconHost(hostname: string): Promise<boolean> {
-  const canonical = canonicalHostname(hostname);
-  if (!canonical || isBlockedHostname(canonical)) {
-    return false;
-  }
-
-  let addresses: string[];
-  if (isIP(canonical) !== 0) {
-    addresses = [canonical];
-  } else {
-    try {
-      const lookupPromise = lookup(canonical, { all: true, verbatim: true });
-      const timeoutPromise = new Promise<never>((_, reject) =>
-        setTimeout(() => reject(new Error("DNS timeout")), 1500),
-      );
-      const resolved = (await Promise.race([lookupPromise, timeoutPromise])) as {
-        address: string;
-      }[];
-      addresses = [...new Set(resolved.map((r) => normalizeIpAddress(r.address)))];
-    } catch {
-      return false;
-    }
-  }
-
-  return !addresses.some((addr) => isBlockedIpAddress(addr));
-}
-
-/**
- * Proxy favicon fetches through our server so the client's browser never
- * contacts a third-party service (e.g. Google S2) directly, which would
- * leak the user's followed-feed domains.
- *
- * Usage: GET /api/favicon?domain=https://example.com
- */
-const FETCH_OPTIONS = {
-  headers: {
-    Accept: "image/*,*/*",
-    "User-Agent":
-      "Mozilla/5.0 (compatible; CronosFaviconProxy/1.0; +https://cronos.local/favicon-proxy)",
-  },
-  redirect: "follow" as const,
-  signal: undefined as AbortSignal | undefined,
-};
-
-/** Try fetching a URL and return the response only if it looks like a valid image. */
-async function tryFetchImage(imageUrl: string): Promise<Response | null> {
-  try {
-    const response = await fetch(imageUrl, {
-      ...FETCH_OPTIONS,
-      signal: AbortSignal.timeout(2500),
-    });
-    if (!response.ok) return null;
-    const contentType = response.headers.get("content-type") ?? "";
-    if (!contentType.startsWith("image/") && !contentType.includes("icon")) return null;
-    return response;
-  } catch {
-    return null;
-  }
-}
-
-/** Parse homepage HTML to find a <link rel="icon"> href. */
-async function findIconFromHtml(origin: string): Promise<string | null> {
-  try {
-    const response = await fetch(origin, {
-      headers: { Accept: "text/html" },
-      redirect: "follow",
-      signal: AbortSignal.timeout(2500),
-    });
-    if (!response.ok) return null;
-    // Read only a bounded prefix of HTML while scanning <head> for icon tags.
-    const reader = response.body?.getReader();
-    if (!reader) return null;
-    let html = "";
-    while (html.length < HTML_ICON_SCAN_BYTES) {
-      const { value, done } = await reader.read();
-      if (done) break;
-      html += new TextDecoder().decode(value);
-    }
-    reader.cancel().catch(() => {});
-
-    const links = html.match(/<link[^>]*>/gi) ?? [];
-    const match = links.find((linkTag) => /\brel=["'][^"']*\bicon\b[^"']*["']/i.test(linkTag));
-    if (!match) return null;
-    const hrefMatch = match.match(/href=["']([^"']+)["']/i);
-    if (!hrefMatch?.[1]) return null;
-
-    try {
-      return new URL(hrefMatch[1], origin).href;
-    } catch {
-      return null;
-    }
-  } catch {
-    return null;
-  }
 }
 
 function buildCachedFaviconResponse(cached: CachedFavicon): Response | null {
@@ -226,7 +84,9 @@ async function cacheAndBuildFaviconResponse(
   let totalBytes = 0;
   while (true) {
     const { done, value } = await reader.read();
-    if (done) break;
+    if (done) {
+      break;
+    }
     totalBytes += value.byteLength;
     if (totalBytes > FAVICON_MAX_RESPONSE_BYTES) {
       reader.cancel();
@@ -256,6 +116,16 @@ async function cacheAndBuildFaviconResponse(
   });
 }
 
+/**
+ * Proxy favicon fetches through our server so the client's browser never
+ * contacts a third-party service (e.g. Google S2) directly, which would
+ * leak the user's followed-feed domains.
+ *
+ * Usage: GET /api/favicon?domain=https://example.com
+ *
+ * Prefer persisted `faviconUrl` on feed rows; this route is a fallback when
+ * stored metadata is missing.
+ */
 async function handleFaviconRequest(request: Request): Promise<Response> {
   const url = new URL(request.url);
   const rawDomain = url.searchParams.get("domain") ?? "";
@@ -283,13 +153,11 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     return cachedResponse;
   }
 
-  // Strategy 1: Try /favicon.ico directly (fastest, works for most major sites)
   const directResult = await tryFetchImage(`${origin}/favicon.ico`);
   if (directResult) {
     return cacheAndBuildFaviconResponse(hostname, directResult);
   }
 
-  // Strategy 1b: Try common static icon locations used by modern CMS themes.
   const commonIconPaths = [
     "/favicon.png",
     "/favicon-32x32.png",
@@ -304,25 +172,24 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     }
   }
 
-  // Strategy 2: Parse the homepage HTML for <link rel="icon">
-  const iconHref = await findIconFromHtml(origin);
+  const iconHref = await findIconHrefFromHtml(origin);
   if (iconHref) {
-    const htmlIconResult = await tryFetchImage(iconHref);
+    const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
     if (htmlIconResult) {
       return cacheAndBuildFaviconResponse(hostname, htmlIconResult);
     }
   }
 
-  // Strategy 3: Proxy through Google's public favicon service
-  const googleResult = await tryFetchImage(
+  const googleResult = await tryFetchImageIfHostSafe(
     `https://www.google.com/s2/favicons?domain_url=${encodeURIComponent(origin)}&sz=64`,
   );
   if (googleResult) {
     return cacheAndBuildFaviconResponse(hostname, googleResult);
   }
 
-  // Strategy 4: Fallback provider with broad domain coverage.
-  const duckDuckGoResult = await tryFetchImage(`https://icons.duckduckgo.com/ip3/${hostname}.ico`);
+  const duckDuckGoResult = await tryFetchImageIfHostSafe(
+    `https://icons.duckduckgo.com/ip3/${hostname}.ico`,
+  );
   if (duckDuckGoResult) {
     return cacheAndBuildFaviconResponse(hostname, duckDuckGoResult);
   }

@@ -37,7 +37,12 @@ export async function updateArticleForUser(
     Object.hasOwn(body, "contentStatus") ||
     Object.hasOwn(body, "contentSource") ||
     Object.hasOwn(body, "extractionErrorCode") ||
-    Object.hasOwn(body, "extractionErrorMessage");
+    Object.hasOwn(body, "extractionErrorMessage") ||
+    Object.hasOwn(body, "extractedContentHtml") ||
+    Object.hasOwn(body, "extractedContentText") ||
+    Object.hasOwn(body, "extractedContentStatus") ||
+    Object.hasOwn(body, "extractedContentError") ||
+    Object.hasOwn(body, "extractedContentUpdatedAt");
   if (!hasRead && !hasSaved && !hasContentFields) {
     throw new AppError("No updatable fields provided", { status: 400, code: "EMPTY_UPDATE" });
   }
@@ -60,6 +65,23 @@ export async function updateArticleForUser(
           : undefined,
         extractionErrorMessage: Object.hasOwn(body, "extractionErrorMessage")
           ? body.extractionErrorMessage
+          : undefined,
+        extractedContentHtml: Object.hasOwn(body, "extractedContentHtml")
+          ? body.extractedContentHtml
+          : undefined,
+        extractedContentText: Object.hasOwn(body, "extractedContentText")
+          ? body.extractedContentText
+          : undefined,
+        extractedContentStatus: Object.hasOwn(body, "extractedContentStatus")
+          ? body.extractedContentStatus
+          : undefined,
+        extractedContentError: Object.hasOwn(body, "extractedContentError")
+          ? body.extractedContentError
+          : undefined,
+        extractedContentUpdatedAt: Object.hasOwn(body, "extractedContentUpdatedAt")
+          ? body.extractedContentUpdatedAt
+            ? new Date(body.extractedContentUpdatedAt)
+            : null
           : undefined,
         updatedAt: now,
       })
@@ -184,6 +206,25 @@ export async function updateArticleOrClipForUser(
   }
   if (Object.hasOwn(raw, "extractionErrorMessage")) {
     feedBody.extractionErrorMessage = raw.extractionErrorMessage as string | null;
+  }
+  if (Object.hasOwn(raw, "extractedContentHtml")) {
+    feedBody.extractedContentHtml = raw.extractedContentHtml as string | null;
+  }
+  if (Object.hasOwn(raw, "extractedContentText")) {
+    feedBody.extractedContentText = raw.extractedContentText as string | null;
+  }
+  if (Object.hasOwn(raw, "extractedContentStatus")) {
+    feedBody.extractedContentStatus = raw.extractedContentStatus as
+      | "pending"
+      | "ready"
+      | "failed"
+      | null;
+  }
+  if (Object.hasOwn(raw, "extractedContentError")) {
+    feedBody.extractedContentError = raw.extractedContentError as string | null;
+  }
+  if (Object.hasOwn(raw, "extractedContentUpdatedAt")) {
+    feedBody.extractedContentUpdatedAt = raw.extractedContentUpdatedAt as string | null;
   }
   await updateArticleForUser(database, userId, articleId, feedBody);
 }
