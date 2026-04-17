@@ -1,10 +1,9 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { Filter2Fill } from "@mingcute/react";
+import { Filter2Fill, Refresh2Fill } from "@mingcute/react";
 import { useNavigate } from "@tanstack/react-router";
 import { FeedItem } from "@components/pages/inbox/feed-item";
-import { FeedRefreshStatus } from "@components/feed-refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
@@ -18,7 +17,7 @@ interface InboxListProps {
   inboxItems: InboxItem[];
   unreadCount: number;
   selectedItemId?: string;
-  feedId?: string;
+  showAutoRefreshIndicator: boolean;
   isLoading: boolean;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
@@ -29,7 +28,7 @@ export function InboxList({
   inboxItems,
   unreadCount,
   selectedItemId,
-  feedId,
+  showAutoRefreshIndicator,
   isLoading,
   hasNextPage,
   isFetchingNextPage,
@@ -79,15 +78,26 @@ export function InboxList({
             <span className="ps-1 font-medium text-muted-foreground text-sm tabular-nums">
               {unreadCount} unread
             </span>
-            {feedId && <FeedRefreshStatus feedId={feedId} />}
           </div>
-          <button
-            type="button"
-            aria-label="Feed filters coming soon"
-            className="inline-flex size-8 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
-          >
-            <Filter2Fill className="size-4" />
-          </button>
+          <div className="flex items-center gap-1">
+            {showAutoRefreshIndicator ? (
+              <button
+                type="button"
+                disabled
+                aria-label="Refreshing inbox items"
+                className="inline-flex size-8 items-center justify-center rounded-xl text-muted-foreground"
+              >
+                <Refresh2Fill className="size-4 animate-spin" />
+              </button>
+            ) : null}
+            <button
+              type="button"
+              aria-label="Feed filters coming soon"
+              className="inline-flex size-8 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+            >
+              <Filter2Fill className="size-4" />
+            </button>
+          </div>
         </div>
       </div>
       <ScrollAreaPrimitive.Root className="min-h-0 flex-1 overflow-hidden">

@@ -22,9 +22,10 @@ const blockedHostnameSuffixes = [".localhost", ".local", ".internal", ".home.arp
 const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
 const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;
 const FAVICON_CACHE_TTL_MS = FAVICON_CACHE_MAX_AGE_SECONDS * 1000;
-const FAVICON_MISS_CACHE_TTL_MS = 60 * 30 * 1000;
+const FAVICON_MISS_CACHE_TTL_MS = 60 * 10 * 1000;
 const FAVICON_CACHE_MAX_ENTRIES = 500;
-const FAVICON_MAX_RESPONSE_BYTES = 64 * 1024;
+const FAVICON_MAX_RESPONSE_BYTES = 256 * 1024;
+const HTML_ICON_SCAN_BYTES = 128 * 1024;
 
 type CachedFavicon =
   | {
@@ -117,7 +118,11 @@ async function assertSafeFaviconHost(hostname: string): Promise<boolean> {
  * Usage: GET /api/favicon?domain=https://example.com
  */
 const FETCH_OPTIONS = {
-  headers: { Accept: "image/*,*/*" },
+  headers: {
+    Accept: "image/*,*/*",
+    "User-Agent":
+      "Mozilla/5.0 (compatible; CronosFaviconProxy/1.0; +https://cronos.local/favicon-proxy)",
+  },
   redirect: "follow" as const,
   signal: undefined as AbortSignal | undefined,
 };
@@ -147,11 +152,11 @@ async function findIconFromHtml(origin: string): Promise<string | null> {
       signal: AbortSignal.timeout(2500),
     });
     if (!response.ok) return null;
-    // Only read the first 16KB to find <link> tags in <head>
+    // Read only a bounded prefix of HTML while scanning <head> for icon tags.
     const reader = response.body?.getReader();
     if (!reader) return null;
     let html = "";
-    while (html.length < 16_384) {
+    while (html.length < HTML_ICON_SCAN_BYTES) {
       const { value, done } = await reader.read();
       if (done) break;
       html += new TextDecoder().decode(value);
@@ -284,6 +289,21 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     return cacheAndBuildFaviconResponse(hostname, directResult);
   }
 
+  // Strategy 1b: Try common static icon locations used by modern CMS themes.
+  const commonIconPaths = [
+    "/favicon.png",
+    "/favicon-32x32.png",
+    "/apple-touch-icon.png",
+    "/apple-touch-icon-precomposed.png",
+    "/favicon-196x196.png",
+  ];
+  for (const path of commonIconPaths) {
+    const result = await tryFetchImage(`${origin}${path}`);
+    if (result) {
+      return cacheAndBuildFaviconResponse(hostname, result);
+    }
+  }
+
   // Strategy 2: Parse the homepage HTML for <link rel="icon">
   const iconHref = await findIconFromHtml(origin);
   if (iconHref) {
@@ -295,7 +315,7 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
 
   // Strategy 3: Proxy through Google's public favicon service
   const googleResult = await tryFetchImage(
-    `https://www.google.com/s2/favicons?domain=${encodeURIComponent(hostname)}&sz=32`,
+    `https://www.google.com/s2/favicons?domain_url=${encodeURIComponent(origin)}&sz=64`,
   );
   if (googleResult) {
     return cacheAndBuildFaviconResponse(hostname, googleResult);

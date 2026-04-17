@@ -1,11 +1,15 @@
 "use client";
 
-import { dedupeInboxItems, useInboxQueries } from "@hooks/use-inbox-queries";
+import {
+  AUTO_REFRESH_INDICATOR_VISIBLE_MS,
+  dedupeInboxItems,
+  useInboxQueries,
+} from "@hooks/use-inbox-queries";
 import { useSplitPane } from "@hooks/use-split-pane";
 import { InboxList } from "@components/pages/inbox/inbox-list";
 import { InboxDetailView } from "@components/pages/inbox/inbox-detail-view";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Route } from "@/routes/inbox/index";
 import { AppShell } from "@pages/app-shell";
 
@@ -16,6 +20,8 @@ export function InboxPage() {
   const { filter = "today", search, feedId, folderId, itemId } = Route.useSearch();
   const selectedItemId = itemId;
   const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
+  const [showAutoRefreshIndicator, setShowAutoRefreshIndicator] = useState(false);
+  const hideIndicatorTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     setTimezoneOffsetMinutes(new Date().getTimezoneOffset());
@@ -31,7 +37,7 @@ export function InboxPage() {
     initialPercent: 32,
   });
 
-  const { inboxQuery, detailQuery } = useInboxQueries({
+  const { inboxQuery, detailQuery, isAutoRefreshEnabled } = useInboxQueries({
     filter: filter ?? "today",
     search,
     feedId,
@@ -53,6 +59,48 @@ export function InboxPage() {
   const selectedItem = detailQuery.data?.item ?? null;
   const isDetailLoading = detailQuery.isFetching;
   const isDetailError = detailQuery.isError;
+  const isIntervalRefetching =
+    isAutoRefreshEnabled &&
+    inboxQuery.isRefetching &&
+    !inboxQuery.isFetchingNextPage &&
+    !inboxQuery.isPending;
+
+  useEffect(() => {
+    if (!isAutoRefreshEnabled) {
+      setShowAutoRefreshIndicator(false);
+      if (hideIndicatorTimeoutRef.current) {
+        clearTimeout(hideIndicatorTimeoutRef.current);
+      }
+      hideIndicatorTimeoutRef.current = null;
+      return;
+    }
+
+    if (isIntervalRefetching) {
+      if (hideIndicatorTimeoutRef.current) {
+        clearTimeout(hideIndicatorTimeoutRef.current);
+      }
+      hideIndicatorTimeoutRef.current = null;
+      setShowAutoRefreshIndicator(true);
+      return;
+    }
+
+    if (!showAutoRefreshIndicator) {
+      return;
+    }
+
+    hideIndicatorTimeoutRef.current = setTimeout(() => {
+      setShowAutoRefreshIndicator(false);
+      hideIndicatorTimeoutRef.current = null;
+    }, AUTO_REFRESH_INDICATOR_VISIBLE_MS);
+
+    return () => {
+      if (hideIndicatorTimeoutRef.current) {
+        clearTimeout(hideIndicatorTimeoutRef.current);
+      }
+      hideIndicatorTimeoutRef.current = null;
+    };
+  }, [isAutoRefreshEnabled, isIntervalRefetching, showAutoRefreshIndicator]);
+
   return (
     <AppShell>
       <div
@@ -66,7 +114,7 @@ export function InboxPage() {
           inboxItems={inboxItems}
           unreadCount={unreadCount}
           selectedItemId={selectedItemId}
-          feedId={feedId}
+          showAutoRefreshIndicator={showAutoRefreshIndicator}
           isLoading={inboxQuery.isPending}
           hasNextPage={!!inboxQuery.hasNextPage}
           isFetchingNextPage={inboxQuery.isFetchingNextPage}

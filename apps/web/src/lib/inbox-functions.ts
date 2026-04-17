@@ -321,18 +321,44 @@ export const extractInboxItemFullText = createServerFn({ method: "POST" })
   });
 
 export const getSidebarInboxCounts = createServerFn({ method: "GET" })
-  .inputValidator((input: { timezoneOffsetMinutes?: number }) => input)
+  .inputValidator(
+    (input: { timezoneOffsetMinutes?: number; feedId?: string; folderId?: string }) => input,
+  )
   .handler(async ({ data }): Promise<SidebarInboxCounts> => {
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
       ? Number(data.timezoneOffsetMinutes)
       : 0;
+    const feedId = data.feedId?.trim() || undefined;
+    const folderId = data.folderId?.trim() || undefined;
+    const isScoped = Boolean(feedId || folderId);
 
-    // Use the proper COUNT(*) endpoint for unread+saved instead of fetching
-    // full item lists and counting .length (which silently capped at the
-    // query limit). For "today" we still fetch the view since no dedicated
-    // count endpoint exists — but today is date-bounded so the list is small.
+    // Scoped counts should follow the active feed/folder context in the sidebar.
+    // For unscoped unread+saved we still use the dedicated COUNT(*) endpoint.
+    if (isScoped) {
+      const [todayResponse, unreadResponse, savedResponse] = await Promise.all([
+        apiJson<CursorListResponse>(
+          buildArticlesUrl("today", timezoneOffsetMinutes, feedId, folderId, undefined),
+          { headers: forwarded },
+        ),
+        apiJson<CursorListResponse>(
+          buildArticlesUrl("unread", timezoneOffsetMinutes, feedId, folderId, undefined),
+          { headers: forwarded },
+        ),
+        apiJson<CursorListResponse>(
+          buildArticlesUrl("saved", timezoneOffsetMinutes, feedId, folderId, undefined),
+          { headers: forwarded },
+        ),
+      ]);
+
+      return {
+        today: todayResponse.items.length,
+        unread: unreadResponse.items.length,
+        saved: savedResponse.items.length,
+      };
+    }
+
     const [counts, todayResponse] = await Promise.all([
       apiJson<ArticleCountsResponse>("/api/v1/articles/counts", { headers: forwarded }),
       apiJson<CursorListResponse>(

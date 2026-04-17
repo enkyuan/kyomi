@@ -10,6 +10,7 @@ import { listFollowedFeeds, type FollowedFeed } from "@lib/feed-functions";
 import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
 import {
   SidebarGroup,
+  SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
@@ -49,50 +50,52 @@ export function SidebarPinnedSection() {
           </SidebarGroupLabel>
         </CollapsibleTrigger>
         <CollapsiblePanel>
-          <SidebarMenu>
-            {pinnedFeeds.length === 0 ? (
-              <SidebarMenuItem>
-                <SidebarMenuButton
-                  disabled
-                  className="cursor-default opacity-72"
-                  tooltip="No pinned feeds yet"
-                >
-                  <span className="truncate">No pinned feeds yet</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            ) : (
-              pinnedFeeds.map((feed) => (
-                <SidebarMenuItem key={feed.feedId}>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {pinnedFeeds.length === 0 ? (
+                <SidebarMenuItem>
                   <SidebarMenuButton
-                    tooltip={feed.title || feed.url}
-                    isActive={
-                      location.pathname === "/inbox" && location.search.feedId === feed.feedId
-                    }
-                    render={
-                      <Link
-                        to="/inbox"
-                        search={(prev) => ({
-                          ...prev,
-                          filter: "unread",
-                          feedId: feed.feedId,
-                          folderId: undefined,
-                          itemId: undefined,
-                        })}
-                      />
-                    }
+                    disabled
+                    className="cursor-default opacity-72"
+                    tooltip="No pinned feeds yet"
                   >
-                    <FeedFavicon
-                      className="size-4 shrink-0 rounded-[3px]"
-                      feedUrl={feed.url}
-                      siteUrl={feed.link}
-                      title={feed.title || feed.url}
-                    />
-                    <span className="min-w-0 flex-1 truncate">{feed.title || feed.url}</span>
+                    <span className="truncate">No pinned feeds yet</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
-              ))
-            )}
-          </SidebarMenu>
+              ) : (
+                pinnedFeeds.map((feed) => (
+                  <SidebarMenuItem key={feed.feedId}>
+                    <SidebarMenuButton
+                      tooltip={feed.title || feed.url}
+                      isActive={
+                        location.pathname === "/inbox" && location.search.feedId === feed.feedId
+                      }
+                      render={
+                        <Link
+                          to="/inbox"
+                          search={(prev) => ({
+                            ...prev,
+                            filter: "unread",
+                            feedId: feed.feedId,
+                            folderId: undefined,
+                            itemId: undefined,
+                          })}
+                        />
+                      }
+                    >
+                      <FeedFavicon
+                        className="size-4 shrink-0 rounded-[3px]"
+                        feedUrl={feed.url}
+                        siteUrl={feed.link}
+                        title={feed.title || feed.url}
+                      />
+                      <span className="min-w-0 flex-1 truncate">{feed.title || feed.url}</span>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))
+              )}
+            </SidebarMenu>
+          </SidebarGroupContent>
         </CollapsiblePanel>
       </Collapsible>
     </SidebarGroup>
