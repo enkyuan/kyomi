@@ -19,29 +19,35 @@ export function SidebarFooterActions({ onOpenSettings }: { onOpenSettings: () =>
   return (
     <SidebarFooter className="px-2 pb-2 pt-0">
       <SidebarMenu>
-        {FOOTER_NAV.map((item) => (
-          <SidebarMenuItem key={item.label}>
-            {item.label === "Feedback" ? (
-              <FeedbackDialog
-                trigger={
-                  <SidebarMenuButton tooltip={item.label} className="opacity-72">
-                    <item.icon />
-                    <span>{item.label}</span>
-                  </SidebarMenuButton>
-                }
-              />
-            ) : (
-              <SidebarMenuButton
-                tooltip={item.label}
-                className="opacity-72"
-                onClick={item.label === "Settings" ? onOpenSettings : undefined}
-              >
-                <item.icon />
-                <span>{item.label}</span>
-              </SidebarMenuButton>
-            )}
-          </SidebarMenuItem>
-        ))}
+        {FOOTER_NAV.map((item) => {
+          const isSettings = item.label === "Settings";
+          const isUpgrade = item.label === "Upgrade Plan";
+
+          return (
+            <SidebarMenuItem key={item.label}>
+              {item.label === "Feedback" ? (
+                <FeedbackDialog
+                  trigger={
+                    <SidebarMenuButton tooltip={item.label} className="opacity-72">
+                      <item.icon />
+                      <span>{item.label}</span>
+                    </SidebarMenuButton>
+                  }
+                />
+              ) : (
+                <SidebarMenuButton
+                  tooltip={item.label}
+                  className="opacity-72"
+                  disabled={isUpgrade}
+                  onClick={isSettings ? onOpenSettings : undefined}
+                >
+                  <item.icon />
+                  <span>{item.label}</span>
+                </SidebarMenuButton>
+              )}
+            </SidebarMenuItem>
+          );
+        })}
       </SidebarMenu>
     </SidebarFooter>
   );

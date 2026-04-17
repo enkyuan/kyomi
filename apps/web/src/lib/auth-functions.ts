@@ -78,6 +78,7 @@ export const updateUserEmail = createServerFn({ method: "POST" })
   .handler(async ({ data }) => {
     const headers = buildForwardHeaders(getRequestHeaders());
     headers.set("content-type", "application/json");
+    const normalizedEmail = data.email.trim();
 
     return apiJson<{
       id: string;
@@ -90,6 +91,6 @@ export const updateUserEmail = createServerFn({ method: "POST" })
     }>("/api/v1/users/profile/email", {
       method: "POST",
       headers,
-      body: JSON.stringify({ email: data.email }),
+      body: JSON.stringify({ email: normalizedEmail }),
     });
   });

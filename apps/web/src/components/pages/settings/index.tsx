@@ -27,13 +27,13 @@ import { Separator } from "@components/ui/separator";
 import { toastManager } from "@components/ui/toast";
 import { AccountPageNav, AccountPagePanel, accountSection } from "./account-page";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "./advanced-page";
-import { InboxBehaviorPageNav, InboxBehaviorPagePanel, inboxBehaviorSection } from "./inbox-page";
+import { InboxPageNav, InboxPagePanel, inboxSection } from "./inbox-page";
 import { ReaderPageNav, ReaderPagePanel, readerSection } from "./reader-page";
 
 const SETTINGS_NAV = [
   accountSection,
   readerSection,
-  inboxBehaviorSection,
+  inboxSection,
   advancedSection,
   { name: "Import OPML" },
 ] as const;
@@ -97,27 +97,27 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                 <SidebarGroupContent>
                   <SidebarMenu>
                     <AccountPageNav
-                      isActive={activeSectionName === "Account"}
+                      isActive={activeSectionName === accountSection.name}
                       onSelect={() => {
-                        setActiveSectionName("Account");
+                        setActiveSectionName(accountSection.name);
                       }}
                     />
                     <ReaderPageNav
-                      isActive={activeSectionName === "Reader"}
+                      isActive={activeSectionName === readerSection.name}
                       onSelect={() => {
-                        setActiveSectionName("Reader");
+                        setActiveSectionName(readerSection.name);
                       }}
                     />
-                    <InboxBehaviorPageNav
-                      isActive={activeSectionName === "Inbox Behavior"}
+                    <InboxPageNav
+                      isActive={activeSectionName === inboxSection.name}
                       onSelect={() => {
-                        setActiveSectionName("Inbox Behavior");
+                        setActiveSectionName(inboxSection.name);
                       }}
                     />
                     <AdvancedPageNav
-                      isActive={activeSectionName === "Advanced"}
+                      isActive={activeSectionName === advancedSection.name}
                       onSelect={() => {
-                        setActiveSectionName("Advanced");
+                        setActiveSectionName(advancedSection.name);
                       }}
                     />
                     <SidebarMenuItem>
@@ -152,12 +152,12 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
             </header>
             <Separator />
             <div className="flex flex-1 flex-col gap-4 overflow-y-auto p-5">
-              {activeSectionName === "Account" ? (
+              {activeSectionName === accountSection.name ? (
                 <AccountPagePanel onLogout={handleLogout} />
               ) : null}
-              {activeSectionName === "Reader" ? <ReaderPagePanel /> : null}
-              {activeSectionName === "Inbox Behavior" ? <InboxBehaviorPagePanel /> : null}
-              {activeSectionName === "Advanced" ? <AdvancedPagePanel /> : null}
+              {activeSectionName === readerSection.name ? <ReaderPagePanel /> : null}
+              {activeSectionName === inboxSection.name ? <InboxPagePanel /> : null}
+              {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
               {activeSectionName === "Import OPML" ? (
                 <section className="space-y-1">
                   <h2 className="text-base font-semibold">Import OPML</h2>

@@ -305,7 +305,7 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
         </DialogHeader>
         <DialogPanel className="pt-0">
           <Frame className="w-full">
-            <Table>
+            <Table variant="card">
               <TableHeader>
                 {table.getHeaderGroups().map((headerGroup) => (
                   <TableRow key={headerGroup.id}>

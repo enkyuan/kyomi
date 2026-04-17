@@ -6,7 +6,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { DownFill, NewsFill } from "@mingcute/react";
 import { CreateFolderDialog } from "@components/navigation/create-folder-dialog";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
-import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { Menu, MenuItem, MenuPopup } from "@components/ui/menu";
 import { toastManager } from "@components/ui/toast";
@@ -197,7 +196,7 @@ function FollowedFeedMenuItem({
           siteUrl={item.link}
           title={feedLabel}
         />
-        <SidebarPretextLabel label={feedLabel} />
+        <span className="min-w-0 flex-1 truncate">{feedLabel}</span>
       </SidebarMenuButton>
       {unreadCount > 0 ? (
         <SidebarMenuBadge className="right-2 rounded-full bg-sidebar-foreground/10 px-1.5 text-[11px] font-semibold">
