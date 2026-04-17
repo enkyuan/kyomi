@@ -61,10 +61,7 @@ export async function forwardRequestToApi(request: Request) {
 }
 
 export async function apiJson<T>(path: string, init?: RequestInit) {
-  const response = await fetch(resolveApiUrl(path), {
-    cache: "no-store",
-    ...init,
-  });
+  const response = await fetch(resolveApiUrl(path), init);
 
   if (!response.ok) {
     const message = await response.text();

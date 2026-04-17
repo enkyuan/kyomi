@@ -1,5 +1,5 @@
 import { XMLParser } from "fast-xml-parser";
-import { decodeHtmlEntities } from "@cronos/ingestion";
+import { decodeHtmlEntities } from "@cronos/feed-ingest";
 
 export type ParsedFeedMetadata = {
   title: string;

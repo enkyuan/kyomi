@@ -138,7 +138,6 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
         icon: (
           <FeedFavicon
             className="size-4 shrink-0 rounded-sm"
-            faviconUrl={currentFeed.faviconUrl}
             feedUrl={currentFeed.url}
             siteUrl={currentFeed.link}
             title={currentFeed.title || currentFeed.url}
@@ -307,7 +306,6 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                           >
                             <FeedFavicon
                               className="ms-0.5 me-2 size-4 shrink-0 rounded-sm"
-                              faviconUrl={item.faviconUrl}
                               feedUrl={item.url}
                               siteUrl={item.link}
                               title={item.title || item.url}
