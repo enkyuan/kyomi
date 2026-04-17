@@ -115,6 +115,7 @@ export function InboxPage() {
           unreadCount={unreadCount}
           selectedItemId={selectedItemId}
           showAutoRefreshIndicator={showAutoRefreshIndicator}
+          feedId={feedId}
           isLoading={inboxQuery.isPending}
           hasNextPage={!!inboxQuery.hasNextPage}
           isFetchingNextPage={inboxQuery.isFetchingNextPage}
