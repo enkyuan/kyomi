@@ -1,6 +1,5 @@
 "use client";
 
-import { useMemo } from "react";
 import { Renderer, marked } from "marked";
 import markedKatex from "marked-katex-extension";
 import { RenderHtml } from "./render-html";
@@ -44,7 +43,5 @@ marked.use(markedKatex({ throwOnError: false }));
 marked.use({ renderer });
 
 export function RenderMarkdown({ markdown }: { markdown: string }) {
-  const html = useMemo(() => marked.parse(markdown, { async: false }) as string, [markdown]);
-
-  return <RenderHtml html={html} />;
+  return <RenderHtml html={marked.parse(markdown, { async: false }) as string} />;
 }
