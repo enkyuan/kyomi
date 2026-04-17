@@ -76,7 +76,7 @@ export const cursorListResponseSchema = z.object({
   items: z.array(articleListItemSchema),
   next_cursor: z.string().nullable(),
   has_more: z.boolean(),
-  total_count: z.number().nullable(),
+  total_count: z.number(),
 });
 
 // ---------------------------------------------------------------------------

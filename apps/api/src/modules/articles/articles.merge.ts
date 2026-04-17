@@ -11,11 +11,14 @@ export function mergeArticleItemsByDate(
     .slice(0, cap);
 }
 
-export function mergedFeedClipResponse(items: ArticleListItemDto[]): ArticlesCursorListResponseDto {
+export function mergedFeedClipResponse(
+  items: ArticleListItemDto[],
+  totalCount: number,
+): ArticlesCursorListResponseDto {
   return {
     items,
     next_cursor: null,
     has_more: false,
-    total_count: null,
+    total_count: totalCount,
   };
 }

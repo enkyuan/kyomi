@@ -27,8 +27,12 @@ export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconP
 
   if (!faviconUrl || imageError) {
     return (
-      <span className={cn("text-orange-300")} role="img" aria-label={`${title} feed`}>
-        <RssFill color="currentColor" />
+      <span
+        className={cn(resolvedClassName, "text-orange-300")}
+        role="img"
+        aria-label={`${title} feed`}
+      >
+        <RssFill className="size-full" color="currentColor" />
       </span>
     );
   }

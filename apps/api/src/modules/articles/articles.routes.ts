@@ -122,7 +122,7 @@ const cursorListResponse = t.Object({
   items: t.Array(articleListItem),
   next_cursor: t.Union([t.String(), t.Null()]),
   has_more: t.Boolean(),
-  total_count: t.Null(),
+  total_count: t.Number(),
 });
 
 const countsResponse = t.Object({

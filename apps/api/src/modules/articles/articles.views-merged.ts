@@ -27,7 +27,8 @@ export async function listMergedTodayView(database: DB, userId: string, limit: n
       publishedBefore: end,
     }),
   ]);
-  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit));
+  const totalCount = (feed.total_count ?? feed.items.length) + (clips.total_count ?? clips.items.length);
+  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit), totalCount);
 }
 
 export async function listMergedRecentlyReadView(database: DB, userId: string, limit: number) {
@@ -35,7 +36,8 @@ export async function listMergedRecentlyReadView(database: DB, userId: string, l
     listArticlesForUser(database, userId, { limit: 120, isRead: true }),
     listClipsForUser(database, userId, { limit: 120, isRead: true }),
   ]);
-  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit));
+  const totalCount = (feed.total_count ?? feed.items.length) + (clips.total_count ?? clips.items.length);
+  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit), totalCount);
 }
 
 export async function listMergedSavedView(database: DB, userId: string, limit: number) {
@@ -43,5 +45,6 @@ export async function listMergedSavedView(database: DB, userId: string, limit: n
     listArticlesForUser(database, userId, { limit: 120, isSaved: true }),
     listClipsForUser(database, userId, { limit: 120, isSaved: true }),
   ]);
-  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit));
+  const totalCount = (feed.total_count ?? feed.items.length) + (clips.total_count ?? clips.items.length);
+  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit), totalCount);
 }
