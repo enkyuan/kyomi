@@ -44,6 +44,11 @@ export type FeedDetailDto = {
   isSubscribed: boolean;
   subscriptionId: string | null;
   subscribedAt: string | null;
+  refreshStatus: string;
+  lastRefreshCompletedAt: string | null;
+  lastRefreshFailedAt: string | null;
+  lastRefreshError: string | null;
+  nextRefreshAt: string | null;
 };
 
 export type MessageResponseDto = {

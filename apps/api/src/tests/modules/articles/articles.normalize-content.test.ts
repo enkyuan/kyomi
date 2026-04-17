@@ -4,6 +4,7 @@ import {
   buildReadabilityReaderContent,
   buildStoredReaderContent,
 } from "@modules/articles/articles.normalize-content";
+import type { ArticleStoredContentDto } from "@modules/articles/articles.content.types";
 
 /*
  * Base input factory — all fields null/empty. Override only what each test cares about.
@@ -17,8 +18,8 @@ function makeInput(overrides: Record<string, unknown> = {}) {
     contentHtml: null as string | null,
     contentText: null as string | null,
     contentMarkdown: null as string | null,
-    contentStatus: null as string | null,
-    contentSource: null as string | null,
+    contentStatus: null as ArticleStoredContentDto["contentStatus"] | null,
+    contentSource: null as ArticleStoredContentDto["contentSource"] | null,
     extractionErrorCode: null as string | null,
     extractionErrorMessage: null as string | null,
     ...overrides,

@@ -9,6 +9,7 @@ export type FeedRefreshJob = {
   payload: {
     feedId: string;
     userId: string;
+    reason?: string;
   };
 };
 
@@ -69,6 +70,7 @@ export function parseJob(fields: Record<string, string>): Job {
     payload: {
       feedId: parsedPayload.feedId,
       userId: parsedPayload.userId,
+      reason: typeof parsedPayload.reason === "string" ? parsedPayload.reason : undefined,
     },
   };
 }
