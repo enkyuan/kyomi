@@ -138,6 +138,26 @@ async function tryFetchImage(imageUrl: string): Promise<Response | null> {
   }
 }
 
+async function tryFetchImageIfHostSafe(imageUrl: string): Promise<Response | null> {
+  let hostname: string;
+  try {
+    const parsed = new URL(imageUrl);
+    if (!ALLOWED_SCHEMES.has(parsed.protocol)) {
+      return null;
+    }
+    hostname = parsed.hostname;
+  } catch {
+    return null;
+  }
+
+  const isSafe = await assertSafeFaviconHost(hostname);
+  if (!isSafe) {
+    return null;
+  }
+
+  return tryFetchImage(imageUrl);
+}
+
 /** Parse homepage HTML to find a <link rel="icon"> href. */
 async function findIconFromHtml(origin: string): Promise<string | null> {
   try {
@@ -287,7 +307,7 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
   // Strategy 2: Parse the homepage HTML for <link rel="icon">
   const iconHref = await findIconFromHtml(origin);
   if (iconHref) {
-    const htmlIconResult = await tryFetchImage(iconHref);
+    const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
     if (htmlIconResult) {
       return cacheAndBuildFaviconResponse(hostname, htmlIconResult);
     }

@@ -2,6 +2,7 @@ import type { FetchArticleDocumentResult } from "./articles.content.types";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_HTML_BYTES = 3 * 1024 * 1024;
+const MAX_REDIRECT_HOPS = 5;
 
 const PRIVATE_IP_PATTERNS = [
   /^127\./,
@@ -42,6 +43,38 @@ function isReadableDocumentContentType(contentType: string): boolean {
   );
 }
 
+async function fetchWithSafeRedirects(
+  inputUrl: string,
+  init: RequestInit,
+): Promise<Response> {
+  let nextUrl = inputUrl;
+
+  for (let hop = 0; hop <= MAX_REDIRECT_HOPS; hop += 1) {
+    const response = await fetch(nextUrl, {
+      ...init,
+      redirect: "manual",
+    });
+
+    if (response.status < 300 || response.status >= 400) {
+      return response;
+    }
+
+    const location = response.headers.get("location");
+    if (!location) {
+      return response;
+    }
+
+    const redirectedUrl = new URL(location, nextUrl).toString();
+    if (!isSafeArticleUrl(redirectedUrl)) {
+      throw new Error("Unsafe redirect target blocked.");
+    }
+
+    nextUrl = redirectedUrl;
+  }
+
+  throw new Error("Too many redirects.");
+}
+
 export async function fetchArticleDocument(url: string): Promise<FetchArticleDocumentResult> {
   if (!isSafeArticleUrl(url)) {
     return {
@@ -55,8 +88,7 @@ export async function fetchArticleDocument(url: string): Promise<FetchArticleDoc
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
 
   try {
-    const response = await fetch(url, {
-      redirect: "follow",
+    const response = await fetchWithSafeRedirects(url, {
       signal: controller.signal,
       headers: {
         "user-agent":
