@@ -63,12 +63,28 @@ export async function listArticlesForUser(
   opts: ListArticlesOptions,
 ): Promise<ArticlesCursorListResponseDto> {
   const limit = normalizeLimit(opts.limit);
+  const { feedSubscriptionsJoin, userStateJoin } = baseJoins(userId);
+  const isFirstPage = !opts.cursor;
 
-  const rows = await listArticleRows(database, userId, opts, limit + 1);
+  // Build both filter sets in parallel. The cursor-less variant is always
+  // a pure in-memory operation (no DB query) so this is negligible overhead.
+  const [filtersWithCursor, filtersWithoutCursor] = await Promise.all([
+    buildFilters(database, userId, opts, feedSubscriptionsJoin, true),
+    buildFilters(database, userId, opts, feedSubscriptionsJoin, false),
+  ]);
+
+  const [rows, totalCount] = await Promise.all([
+    listArticleRows(database, feedSubscriptionsJoin, userStateJoin, filtersWithCursor, limit + 1),
+    // Only run COUNT(*) on the first page to avoid extra DB work on every
+    // cursor-paginated request (infinite scroll). Returns 0 for later pages.
+    isFirstPage
+      ? countArticlesForUser(database, feedSubscriptionsJoin, userStateJoin, filtersWithoutCursor)
+      : Promise.resolve(0),
+  ]);
   const { hasMore, page, nextCursor } = paginateRows(rows, limit);
 
   const items = toArticleListItems(page);
-  return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
+  return { items, next_cursor: nextCursor, has_more: hasMore, total_count: totalCount };
 }
 
 type RawRow = {
@@ -112,14 +128,31 @@ function pushPublishedDateFilters(filters: SQL[], opts: ListArticlesOptions): vo
   }
 }
 
+async function buildFilters(
+  database: DB,
+  userId: string,
+  opts: ListArticlesOptions,
+  feedSubscriptionsJoin: SQL<unknown>,
+  includeCursorFilter: boolean,
+): Promise<SQL[]> {
+  const filters: SQL[] = [];
+  pushBaseFilters(filters, opts);
+  pushReadSavedFilters(filters, opts);
+  pushPublishedDateFilters(filters, opts);
+  if (includeCursorFilter) {
+    await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, filters);
+  }
+  return filters;
+}
+
 async function pushCursorFilter(
   database: DB,
   userId: string,
   opts: ListArticlesOptions,
-  feedSubscriptionsJoin: SQL<unknown> | undefined,
+  feedSubscriptionsJoin: SQL<unknown>,
   filters: SQL[],
 ): Promise<void> {
-  if (!opts.cursor || !feedSubscriptionsJoin) {
+  if (!opts.cursor) {
     return;
   }
   const cur = await database
@@ -151,18 +184,11 @@ async function pushCursorFilter(
 
 async function listArticleRows(
   database: DB,
-  userId: string,
-  opts: ListArticlesOptions,
+  feedSubscriptionsJoin: SQL<unknown>,
+  userStateJoin: SQL<unknown>,
+  filters: SQL[],
   take: number,
 ): Promise<RawRow[]> {
-  const { feedSubscriptionsJoin, userStateJoin } = baseJoins(userId);
-
-  const filters: SQL[] = [];
-  pushBaseFilters(filters, opts);
-  pushReadSavedFilters(filters, opts);
-  pushPublishedDateFilters(filters, opts);
-  await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, filters);
-
   return database
     .select({
       id: feedItems.id,
@@ -182,4 +208,20 @@ async function listArticleRows(
     .where(filters.length > 0 ? and(...filters) : sql`true`)
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
     .limit(take);
+}
+
+async function countArticlesForUser(
+  database: DB,
+  feedSubscriptionsJoin: SQL<unknown>,
+  userStateJoin: SQL<unknown>,
+  filters: SQL[],
+): Promise<number> {
+  const [row] = await database
+    .select({ c: sql<number>`count(*)::int` })
+    .from(feedItems)
+    .innerJoin(feedSubscriptions, feedSubscriptionsJoin)
+    .leftJoin(feedItemUserState, userStateJoin)
+    .where(filters.length > 0 ? and(...filters) : sql`true`);
+
+  return row?.c ?? 0;
 }

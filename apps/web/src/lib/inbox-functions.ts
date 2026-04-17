@@ -65,7 +65,7 @@ type CursorListResponse = {
   }>;
   next_cursor: string | null;
   has_more: boolean;
-  total_count: number | null;
+  total_count: number;
 };
 
 type ArticleDetailResponse = {
@@ -80,6 +80,11 @@ type ArticleDetailResponse = {
   contentSource: ReaderContentResponse["contentSource"];
   extractionErrorCode: string | null;
   extractionErrorMessage: string | null;
+  extractedContentHtml: string | null;
+  extractedContentText: string | null;
+  extractedContentStatus: "pending" | "ready" | "failed";
+  extractedContentError: string | null;
+  extractedContentUpdatedAt: string | null;
   publishedAt: string;
   feedId: string;
   feedTitle: string;
@@ -121,6 +126,11 @@ type InboxDetailResponse = {
         contentSource: ReaderContentResponse["contentSource"];
         extractionErrorCode: string | null;
         extractionErrorMessage: string | null;
+        extractedContentHtml: string | null;
+        extractedContentText: string | null;
+        extractedContentStatus: "pending" | "ready" | "failed";
+        extractedContentError: string | null;
+        extractedContentUpdatedAt: string | null;
         reader: ReaderContentResponse;
       })
     | null;
@@ -205,6 +215,7 @@ function buildArticlesUrl(
   feedId?: string,
   folderId?: string,
   cursor?: string,
+  limit = 200,
 ) {
   const params = new URLSearchParams();
   if (filter === "today") {
@@ -225,7 +236,7 @@ function buildArticlesUrl(
   if (cursor?.trim()) {
     params.set("cursor", cursor.trim());
   }
-  params.set("limit", "200");
+  params.set("limit", String(Math.min(Math.max(limit, 1), 200)));
   return `/api/v1/articles?${params.toString()}`;
 }
 
@@ -286,6 +297,11 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
         contentSource: item.contentSource,
         extractionErrorCode: item.extractionErrorCode,
         extractionErrorMessage: item.extractionErrorMessage,
+        extractedContentHtml: item.extractedContentHtml,
+        extractedContentText: item.extractedContentText,
+        extractedContentStatus: item.extractedContentStatus,
+        extractedContentError: item.extractedContentError,
+        extractedContentUpdatedAt: item.extractedContentUpdatedAt,
         link: item.link,
         publishedAt: item.publishedAt,
         feedTitle: item.feedTitle,
@@ -321,28 +337,54 @@ export const extractInboxItemFullText = createServerFn({ method: "POST" })
   });
 
 export const getSidebarInboxCounts = createServerFn({ method: "GET" })
-  .inputValidator((input: { timezoneOffsetMinutes?: number }) => input)
+  .inputValidator(
+    (input: { timezoneOffsetMinutes?: number; feedId?: string; folderId?: string }) => input,
+  )
   .handler(async ({ data }): Promise<SidebarInboxCounts> => {
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
     const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
       ? Number(data.timezoneOffsetMinutes)
       : 0;
+    const feedId = data.feedId?.trim() || undefined;
+    const folderId = data.folderId?.trim() || undefined;
+    const isScoped = Boolean(feedId || folderId);
 
-    // Use the proper COUNT(*) endpoint for unread+saved instead of fetching
-    // full item lists and counting .length (which silently capped at the
-    // query limit). For "today" we still fetch the view since no dedicated
-    // count endpoint exists — but today is date-bounded so the list is small.
+    // Scoped counts should follow the active feed/folder context in the sidebar.
+    // For unscoped unread+saved we still use the dedicated COUNT(*) endpoint.
+    if (isScoped) {
+      const [todayResponse, unreadResponse, savedResponse] = await Promise.all([
+        apiJson<CursorListResponse>(
+          buildArticlesUrl("today", timezoneOffsetMinutes, feedId, folderId, undefined, 1),
+          { headers: forwarded },
+        ),
+        apiJson<CursorListResponse>(
+          buildArticlesUrl("unread", timezoneOffsetMinutes, feedId, folderId, undefined, 1),
+          { headers: forwarded },
+        ),
+        apiJson<CursorListResponse>(
+          buildArticlesUrl("saved", timezoneOffsetMinutes, feedId, folderId, undefined, 1),
+          { headers: forwarded },
+        ),
+      ]);
+
+      return {
+        today: todayResponse.total_count,
+        unread: unreadResponse.total_count,
+        saved: savedResponse.total_count,
+      };
+    }
+
     const [counts, todayResponse] = await Promise.all([
       apiJson<ArticleCountsResponse>("/api/v1/articles/counts", { headers: forwarded }),
       apiJson<CursorListResponse>(
-        buildArticlesUrl("today", timezoneOffsetMinutes, undefined, undefined, undefined),
+        buildArticlesUrl("today", timezoneOffsetMinutes, undefined, undefined, undefined, 1),
         { headers: forwarded },
       ),
     ]);
 
     return {
-      today: todayResponse.items.length,
+      today: todayResponse.total_count,
       unread: counts.unread,
       saved: counts.saved,
     };
@@ -371,8 +413,8 @@ export const getScopedUnreadCount = createServerFn({ method: "GET" })
     // Folder-scoped unread: no dedicated count endpoint yet, fall back to
     // the list query. TODO: add a folder-scoped count endpoint on the API.
     const response = await apiJson<CursorListResponse>(
-      buildArticlesUrl("unread", 0, data.feedId, data.folderId),
+      buildArticlesUrl("unread", 0, data.feedId, data.folderId, undefined, 1),
       { headers: buildForwardHeaders(headers) },
     );
-    return { count: response.items.length };
+    return { count: response.total_count };
   });

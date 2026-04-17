@@ -7,6 +7,8 @@ export type SubscribedFeedListItemDto = {
   /** Raw override; null means use global feed title. */
   customTitle: string | null;
   link: string | null;
+  /** Persisted favicon URL when enrichment succeeded; null if unset. */
+  faviconUrl: string | null;
   folderId: string | null;
   folderName: string | null;
   subscribedAt: string;
@@ -23,6 +25,8 @@ export type FeedSubscribeResultDto = {
   url: string;
   title: string;
   link: string | null;
+  /** Persisted favicon URL after best-effort enrichment. */
+  faviconUrl: string | null;
   /** Inserted a new row in `feeds` (first subscriber globally for this URL). */
   newFeed: boolean;
   /** Inserted a new row in `feed_subscriptions` for this user. */
@@ -39,6 +43,9 @@ export type FeedDetailDto = {
   customTitle: string | null;
   description: string | null;
   link: string | null;
+  faviconUrl: string | null;
+  faviconSource: string | null;
+  faviconFetchedAt: string | null;
   createdAt: string;
   updatedAt: string;
   isSubscribed: boolean;

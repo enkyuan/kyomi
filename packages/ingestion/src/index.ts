@@ -1,6 +1,11 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import { eq, sql } from "drizzle-orm";
 import { XMLParser } from "fast-xml-parser";
+import {
+  normalizeHttpUrlComparable,
+  pickHttpUrlForFaviconResolution,
+  resolveFaviconUrlFromHttpUrl,
+} from "@cronos/favicon";
 import { feedItems, feeds } from "@cronos/db";
 import * as schema from "@cronos/db";
 
@@ -112,6 +117,35 @@ type RefreshTimingSnapshot = {
   lastRefreshSucceededAt: Date | null;
   lastRefreshFailedAt: Date | null;
 };
+
+async function tryPersistFeedFavicon(
+  database: FeedIngestDatabase,
+  feedId: string,
+  link: string | null,
+  feedUrl: string,
+): Promise<void> {
+  const site = pickHttpUrlForFaviconResolution(link, feedUrl);
+  if (!site) {
+    return;
+  }
+  try {
+    const resolved = await resolveFaviconUrlFromHttpUrl(site);
+    if (!resolved) {
+      return;
+    }
+    await database
+      .update(feeds)
+      .set({
+        faviconUrl: resolved.url,
+        faviconSource: resolved.source,
+        faviconFetchedAt: new Date(),
+        updatedAt: new Date(),
+      })
+      .where(eq(feeds.id, feedId));
+  } catch {
+    /* best-effort enrichment */
+  }
+}
 
 function computeFailureBackoffMs(snapshot: RefreshTimingSnapshot): number {
   const hasConsecutiveFailure =
@@ -829,6 +863,8 @@ export async function runFeedRefresh(
       .select({
         id: feeds.id,
         url: feeds.url,
+        link: feeds.link,
+        faviconUrl: feeds.faviconUrl,
         etag: feeds.etag,
         lastModified: feeds.lastModified,
         lastRefreshSucceededAt: feeds.lastRefreshSucceededAt,
@@ -864,6 +900,9 @@ export async function runFeedRefresh(
 
     if (fetched.notModified) {
       const now = new Date();
+      if (!feed.faviconUrl && feed.link) {
+        await tryPersistFeedFavicon(database, feed.id, feed.link, feed.url);
+      }
       await database
         .update(feeds)
         .set({
@@ -879,6 +918,34 @@ export async function runFeedRefresh(
 
     const parsed = parseFeedDocument(fetched.body, feed.id, fetched.finalUrl);
     const now = new Date();
+    const linkChanged =
+      normalizeHttpUrlComparable(feed.link) !== normalizeHttpUrlComparable(parsed.metadata.link);
+    const shouldTryFavicon = !feed.faviconUrl || linkChanged;
+    let faviconPatch: {
+      faviconUrl: string;
+      faviconSource: string;
+      faviconFetchedAt: Date;
+    } | null = null;
+    if (shouldTryFavicon) {
+      const site = pickHttpUrlForFaviconResolution(
+        parsed.metadata.link,
+        parsed.metadata.canonicalUrl,
+      );
+      if (site) {
+        try {
+          const resolved = await resolveFaviconUrlFromHttpUrl(site);
+          if (resolved) {
+            faviconPatch = {
+              faviconUrl: resolved.url,
+              faviconSource: resolved.source,
+              faviconFetchedAt: now,
+            };
+          }
+        } catch {
+          /* best-effort */
+        }
+      }
+    }
     const deduped = new Map<string, ParsedFeedItem>();
     for (const item of parsed.items) {
       deduped.set(item.id, item);
@@ -928,6 +995,13 @@ export async function runFeedRefresh(
           etag: fetched.etag,
           lastModified: fetched.lastModified,
           nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
+          ...(faviconPatch
+            ? {
+                faviconUrl: faviconPatch.faviconUrl,
+                faviconSource: faviconPatch.faviconSource,
+                faviconFetchedAt: faviconPatch.faviconFetchedAt,
+              }
+            : {}),
         })
         .where(eq(feeds.id, feed.id));
 

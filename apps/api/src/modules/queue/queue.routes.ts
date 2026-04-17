@@ -7,7 +7,7 @@ import {
   fieldsForJob,
   parseJobMessageFields,
   toRedisStreamFieldList,
-} from "@cronos/job-queue";
+} from "@cronos/worker";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { assertFeedAdminUser } from "@modules/feeds/feeds.admin-guard";
 

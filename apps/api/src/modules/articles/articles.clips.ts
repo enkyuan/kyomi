@@ -1,7 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { articleClips } from "@cronos/db";
 import { assertHttpOrHttpsUrl } from "@modules/discover/discover.normalize-feed-url";
-import { and, desc, eq, gte, lt, or, type SQL } from "drizzle-orm";
+import { and, desc, eq, gte, lt, or, sql, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
 import { extractFullTextFromUrl } from "./articles.enhancements";
 import { buildStoredContentRecord, buildStoredReaderContent } from "./articles.normalize-content";
@@ -231,6 +231,11 @@ function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDetailDto {
     contentSource: (row.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
     extractionErrorCode: row.extractionErrorCode,
     extractionErrorMessage: row.extractionErrorMessage,
+    extractedContentHtml: null,
+    extractedContentText: null,
+    extractedContentStatus: "pending",
+    extractedContentError: null,
+    extractedContentUpdatedAt: null,
     reader: buildStoredReaderContent({
       articleType: "clip",
       title: row.title,
@@ -324,8 +329,14 @@ export async function listClipsForUser(
   userId: string,
   opts: ListClipsOptions,
 ): Promise<ArticlesCursorListResponseDto> {
+  const filters = buildClipFilters(userId, opts);
   const limit = Math.min(Math.max(opts.limit, 1), 200);
-  const rows = await listClipRows(database, userId, opts, limit + 1);
+  const isFirstPage = !opts.cursor;
+  const listFilters = [...filters];
+  const [rows, totalCount] = await Promise.all([
+    listClipRows(database, listFilters, userId, opts, limit + 1),
+    isFirstPage ? countClipsForUser(database, filters) : Promise.resolve(0),
+  ]);
   const hasMore = rows.length > limit;
   const page = hasMore ? rows.slice(0, limit) : rows;
   const nextCursor = hasMore && page.length > 0 ? page[page.length - 1].id : null;
@@ -334,16 +345,11 @@ export async function listClipsForUser(
     items: page.map((r) => clipToListItem(r)),
     next_cursor: nextCursor,
     has_more: hasMore,
-    total_count: null,
+    total_count: totalCount,
   };
 }
 
-async function listClipRows(
-  database: DB,
-  userId: string,
-  opts: ListClipsOptions,
-  take: number,
-): Promise<(typeof articleClips.$inferSelect)[]> {
+function buildClipFilters(userId: string, opts: ListClipsOptions): SQL[] {
   const filters: SQL[] = [eq(articleClips.userId, userId)];
   if (opts.isRead === true) {
     filters.push(eq(articleClips.isRead, true));
@@ -361,7 +367,16 @@ async function listClipRows(
   if (opts.publishedBefore) {
     filters.push(lt(articleClips.createdAt, opts.publishedBefore));
   }
+  return filters;
+}
 
+async function listClipRows(
+  database: DB,
+  filters: SQL[],
+  userId: string,
+  opts: ListClipsOptions,
+  take: number,
+): Promise<(typeof articleClips.$inferSelect)[]> {
   if (opts.cursor) {
     const cur = await database
       .select({ createdAt: articleClips.createdAt, id: articleClips.id })
@@ -385,4 +400,13 @@ async function listClipRows(
     .where(and(...filters))
     .orderBy(desc(articleClips.createdAt), desc(articleClips.id))
     .limit(take);
+}
+
+async function countClipsForUser(database: DB, filters: SQL[]): Promise<number> {
+  const [row] = await database
+    .select({ c: sql<number>`count(*)::int` })
+    .from(articleClips)
+    .where(filters.length > 0 ? and(...filters) : sql`true`);
+
+  return row?.c ?? 0;
 }

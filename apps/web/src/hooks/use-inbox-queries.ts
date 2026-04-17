@@ -3,6 +3,9 @@
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { getInboxItemDetail, getInboxItems, type InboxFilter } from "@lib/inbox-functions";
 
+export const AUTO_REFRESH_INTERVAL_MS = 10 * 60 * 1000;
+export const AUTO_REFRESH_INDICATOR_VISIBLE_MS = Math.min(8_000, AUTO_REFRESH_INTERVAL_MS);
+
 type UseInboxQueriesInput = {
   filter: InboxFilter;
   search?: string;
@@ -30,8 +33,17 @@ export function useInboxQueries({
   selectedItemId,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
+  const shouldAutoRefresh = filter === "today" || filter === "unread";
+  const isTimezoneReadyForToday = filter !== "today" || timezoneOffsetMinutes !== undefined;
+
   const inboxQuery = useInfiniteQuery({
     queryKey: ["inbox", "items", filter, search, feedId, folderId, timezoneOffsetMinutes],
+    enabled: isTimezoneReadyForToday,
+    refetchOnMount: shouldAutoRefresh ? false : true,
+    refetchOnWindowFocus: shouldAutoRefresh ? false : true,
+    refetchOnReconnect: shouldAutoRefresh ? false : true,
+    refetchIntervalInBackground: shouldAutoRefresh,
+    refetchInterval: shouldAutoRefresh ? AUTO_REFRESH_INTERVAL_MS : false,
     initialPageParam: undefined as string | undefined,
     queryFn: ({ pageParam }) =>
       getInboxItems({
@@ -64,5 +76,5 @@ export function useInboxQueries({
     },
   });
 
-  return { inboxQuery, detailQuery };
+  return { inboxQuery, detailQuery, isAutoRefreshEnabled: shouldAutoRefresh };
 }
