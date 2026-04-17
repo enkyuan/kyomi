@@ -6,7 +6,7 @@ import { runFeedRefresh } from "@cronos/feed-ingest";
 import { consumeJobs } from "@cronos/job-queue";
 import { publishJob } from "@adapters/queue/publish-job";
 import { feeds } from "@cronos/db";
-import { lte, and, ne, eq } from "drizzle-orm";
+import { lte, and, ne, eq, or, isNull } from "drizzle-orm";
 
 function sleep(ms: number, signal?: AbortSignal): Promise<void> {
   return new Promise((resolve) => {
@@ -87,7 +87,7 @@ async function runStaleFeedScheduler(signal?: AbortSignal) {
         .from(feeds)
         .where(
           and(
-            lte(feeds.nextRefreshAt, now),
+            or(isNull(feeds.nextRefreshAt), lte(feeds.nextRefreshAt, now)),
             ne(feeds.refreshStatus, "running"),
             ne(feeds.refreshStatus, "queued"),
           ),
