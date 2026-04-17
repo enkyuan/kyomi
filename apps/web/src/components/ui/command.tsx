@@ -1,7 +1,7 @@
 "use client";
 
 import { Dialog as CommandDialogPrimitive } from "@base-ui/react/dialog";
-import { SearchIcon } from "lucide-react";
+import { SearchFill } from "@mingcute/react";
 import type * as React from "react";
 import { cn } from "@lib/utils";
 import {
@@ -117,7 +117,7 @@ export function CommandInput({
         )}
         placeholder={placeholder}
         size="lg"
-        startAddon={<SearchIcon />}
+        startAddon={<SearchFill />}
         {...props}
       />
     </div>

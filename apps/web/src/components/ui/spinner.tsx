@@ -1,13 +1,13 @@
-import { Loader2Icon } from "lucide-react";
+import { LoadingFill } from "@mingcute/react";
 import type React from "react";
 import { cn } from "@lib/utils";
 
 export function Spinner({
   className,
   ...props
-}: React.ComponentProps<typeof Loader2Icon>): React.ReactElement {
+}: React.ComponentProps<typeof LoadingFill>): React.ReactElement {
   return (
-    <Loader2Icon
+    <LoadingFill
       aria-label="Loading"
       className={cn("animate-spin", className)}
       role="status"

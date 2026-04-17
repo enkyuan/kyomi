@@ -3,7 +3,7 @@
 import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import { cva, type VariantProps } from "class-variance-authority";
-import { PanelLeftIcon } from "lucide-react";
+import { LayoutLeftFill } from "@mingcute/react";
 import * as React from "react";
 import { useMediaQuery } from "@hooks/use-media-query";
 import { cn } from "@lib/utils";
@@ -284,7 +284,7 @@ export function SidebarTrigger({
       variant="ghost"
       {...props}
     >
-      <PanelLeftIcon />
+      <LayoutLeftFill />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   );

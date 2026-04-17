@@ -1,13 +1,11 @@
 "use client";
 
 import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion";
-import { ChevronDownIcon } from "lucide-react";
+import { DownFill } from "@mingcute/react";
 import type React from "react";
 import { cn } from "@lib/utils";
 
-export function Accordion(
-  props: AccordionPrimitive.Root.Props,
-): React.ReactElement {
+export function Accordion(props: AccordionPrimitive.Root.Props): React.ReactElement {
   return <AccordionPrimitive.Root data-slot="accordion" {...props} />;
 }
 
@@ -40,7 +38,7 @@ export function AccordionTrigger({
         {...props}
       >
         {children}
-        <ChevronDownIcon
+        <DownFill
           className="pointer-events-none size-4 shrink-0 translate-y-0.5 opacity-80 transition-transform duration-200 ease-in-out"
           data-slot="accordion-indicator"
         />
