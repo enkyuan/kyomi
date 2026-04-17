@@ -5,6 +5,7 @@ import { DownFill } from "@mingcute/react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
+import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { listFollowedFeeds, type FollowedFeed } from "@lib/feed-functions";
 import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
@@ -87,7 +88,7 @@ export function SidebarPinnedSection() {
                       siteUrl={feed.link}
                       title={feed.title || feed.url}
                     />
-                    <span className="truncate">{feed.title || feed.url}</span>
+                    <SidebarPretextLabel label={feed.title || feed.url} />
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))

@@ -1,6 +1,6 @@
 "use client";
 
-import { Chat3Fill, PhoneFill, Settings3Fill } from "@mingcute/react";
+import { ArrowUpCircleFill, Chat3Fill, Settings3Fill } from "@mingcute/react";
 import { FeedbackDialog } from "@components/ui/feedback-dialog";
 import {
   SidebarFooter,
@@ -10,7 +10,7 @@ import {
 } from "@components/ui/sidebar";
 
 const FOOTER_NAV = [
-  { label: "Support", icon: PhoneFill },
+  { label: "Upgrade Plan", icon: ArrowUpCircleFill },
   { label: "Feedback", icon: Chat3Fill },
   { label: "Settings", icon: Settings3Fill },
 ];

@@ -1,48 +1,48 @@
 "use client";
 
-import { PhoneFill, SwitchFill } from "@mingcute/react";
+import { InboxFill, PhoneFill } from "@mingcute/react";
 import { SidebarMenuButton, SidebarMenuItem } from "@components/ui/sidebar";
 
-export const advancedSection = {
-  description: "Update advanced preferences and account-level controls.",
-  icon: SwitchFill,
-  name: "Advanced",
+export const inboxBehaviorSection = {
+  description: "Control saved views, starring, and default sorting behavior.",
+  icon: InboxFill,
+  name: "Inbox",
 } as const;
 
-type AdvancedPageNavProps = {
+type InboxBehaviorPageNavProps = {
   isActive: boolean;
   onSelect: () => void;
 };
 
-export function AdvancedPageNav({ isActive, onSelect }: AdvancedPageNavProps) {
+export function InboxBehaviorPageNav({ isActive, onSelect }: InboxBehaviorPageNavProps) {
   return (
     <SidebarMenuItem>
       <SidebarMenuButton isActive={isActive} onClick={onSelect}>
-        <SwitchFill />
-        <span>{advancedSection.name}</span>
+        <InboxFill />
+        <span>{inboxBehaviorSection.name}</span>
       </SidebarMenuButton>
     </SidebarMenuItem>
   );
 }
 
-export function AdvancedPagePanel() {
+export function InboxBehaviorPagePanel() {
   return (
     <>
       <section className="space-y-3">
         <div className="flex items-start gap-3">
           <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-border bg-muted/40">
-            <advancedSection.icon className="size-5" />
+            <inboxBehaviorSection.icon className="size-5" />
           </div>
           <div className="min-w-0">
-            <h2 className="text-base font-semibold">{advancedSection.name}</h2>
-            <p className="mt-1 text-sm text-muted-foreground">{advancedSection.description}</p>
+            <h2 className="text-base font-semibold">{inboxBehaviorSection.name}</h2>
+            <p className="mt-1 text-sm text-muted-foreground">{inboxBehaviorSection.description}</p>
           </div>
         </div>
       </section>
       <section className="space-y-1">
         <h3 className="text-sm font-semibold">Preferences</h3>
         <p className="text-sm text-muted-foreground">
-          Advanced settings content will be added here.
+          Inbox behavior settings content will be added here.
         </p>
       </section>
       <section className="space-y-1">

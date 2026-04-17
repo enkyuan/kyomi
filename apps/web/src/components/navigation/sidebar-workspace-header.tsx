@@ -1,7 +1,6 @@
 "use client";
 
-import { layout, prepare } from "@chenglou/pretext";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation, useNavigate } from "@tanstack/react-router";
 import {
@@ -41,11 +40,12 @@ import {
   SidebarMenuItem,
 } from "@components/ui/sidebar";
 import { SidebarFeedSearchTrigger } from "@components/navigation/sidebar-feed-search";
+import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
 import { listFollowedFeeds } from "@lib/feed-functions";
 import { listFolders } from "@lib/folder-functions";
 import { cn } from "@lib/utils";
 
-const WORKSPACE_SCOPE_FONT = '500 13px "Inter Variable"';
+const WORKSPACE_SCOPE_FONT = '500 14px "Inter Variable"';
 const WORKSPACE_SCOPE_LINE_HEIGHT = 20;
 
 type SidebarWorkspaceHeaderProps = {
@@ -170,7 +170,12 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                   <SidebarMenuButton className="h-auto py-2" isActive={Boolean(currentScope)}>
                     <span className="min-w-0 flex flex-1 items-center gap-2">
                       {currentScope ? currentScope.icon : null}
-                      <WorkspaceScopeLabel label={workspaceLabel} />
+                      <SidebarPretextLabel
+                        className="font-medium text-sm"
+                        font={WORKSPACE_SCOPE_FONT}
+                        label={workspaceLabel}
+                        lineHeight={WORKSPACE_SCOPE_LINE_HEIGHT}
+                      />
                     </span>
                     <SelectorVerticalLine className="-me-1 size-6 shrink-0" />
                   </SidebarMenuButton>
@@ -363,68 +368,5 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
       <CreateFolderDialog hideTrigger open={createFolderOpen} onOpenChange={setCreateFolderOpen} />
       <ManageFeedsDialog open={manageFeedsOpen} onOpenChange={setManageFeedsOpen} />
     </>
-  );
-}
-
-function WorkspaceScopeLabel({ label }: { label: string }) {
-  const containerRef = useRef<HTMLSpanElement | null>(null);
-  const preparedLabel = useMemo(() => prepare(label, WORKSPACE_SCOPE_FONT), [label]);
-  const [availableWidth, setAvailableWidth] = useState(0);
-
-  useEffect(() => {
-    const element = containerRef.current;
-    if (!element) {
-      return;
-    }
-
-    const updateWidth = () => {
-      setAvailableWidth(element.clientWidth);
-    };
-
-    updateWidth();
-
-    const observer = new ResizeObserver(() => {
-      updateWidth();
-    });
-    observer.observe(element);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  const fittedLabel = useMemo(() => {
-    if (availableWidth <= 0) {
-      return label;
-    }
-
-    if (layout(preparedLabel, availableWidth, WORKSPACE_SCOPE_LINE_HEIGHT).lineCount <= 1) {
-      return label;
-    }
-
-    let low = 0;
-    let high = label.length;
-    let best = "…";
-
-    while (low <= high) {
-      const mid = Math.floor((low + high) / 2);
-      const candidate = `${label.slice(0, mid).trimEnd()}…`;
-      const preparedCandidate = prepare(candidate, WORKSPACE_SCOPE_FONT);
-
-      if (layout(preparedCandidate, availableWidth, WORKSPACE_SCOPE_LINE_HEIGHT).lineCount <= 1) {
-        best = candidate;
-        low = mid + 1;
-      } else {
-        high = mid - 1;
-      }
-    }
-
-    return best;
-  }, [availableWidth, label, preparedLabel]);
-
-  return (
-    <span ref={containerRef} className="min-w-0 flex-1 truncate font-medium text-sm">
-      {fittedLabel}
-    </span>
   );
 }

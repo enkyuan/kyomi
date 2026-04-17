@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "@tanstack/react-router";
+import { FileImportFill } from "@mingcute/react";
 import { authClient } from "@lib/auth-client";
 import {
   Breadcrumb,
@@ -18,26 +19,23 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
   SidebarProvider,
 } from "@components/ui/sidebar";
 import { Separator } from "@components/ui/separator";
 import { toastManager } from "@components/ui/toast";
 import { AccountPageNav, AccountPagePanel, accountSection } from "./account-page";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "./advanced-page";
-import { BillingPageNav, BillingPagePanel, billingSection } from "./billing-page";
-import {
-  InboxBehaviorPageNav,
-  InboxBehaviorPagePanel,
-  inboxBehaviorSection,
-} from "./inbox-behavior-page";
+import { InboxBehaviorPageNav, InboxBehaviorPagePanel, inboxBehaviorSection } from "./inbox-page";
 import { ReaderPageNav, ReaderPagePanel, readerSection } from "./reader-page";
 
 const SETTINGS_NAV = [
   accountSection,
-  billingSection,
   readerSection,
   inboxBehaviorSection,
   advancedSection,
+  { name: "Import OPML" },
 ] as const;
 const DEFAULT_ACTIVE_SECTION_NAME = SETTINGS_NAV[0]?.name ?? "Account";
 
@@ -104,12 +102,6 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                         setActiveSectionName("Account");
                       }}
                     />
-                    <BillingPageNav
-                      isActive={activeSectionName === "Billing"}
-                      onSelect={() => {
-                        setActiveSectionName("Billing");
-                      }}
-                    />
                     <ReaderPageNav
                       isActive={activeSectionName === "Reader"}
                       onSelect={() => {
@@ -128,6 +120,17 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                         setActiveSectionName("Advanced");
                       }}
                     />
+                    <SidebarMenuItem>
+                      <SidebarMenuButton
+                        isActive={activeSectionName === "Import OPML"}
+                        onClick={() => {
+                          setActiveSectionName("Import OPML");
+                        }}
+                      >
+                        <FileImportFill />
+                        <span>Import OPML</span>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
                   </SidebarMenu>
                 </SidebarGroupContent>
               </SidebarGroup>
@@ -152,10 +155,17 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
               {activeSectionName === "Account" ? (
                 <AccountPagePanel onLogout={handleLogout} />
               ) : null}
-              {activeSectionName === "Billing" ? <BillingPagePanel /> : null}
               {activeSectionName === "Reader" ? <ReaderPagePanel /> : null}
               {activeSectionName === "Inbox Behavior" ? <InboxBehaviorPagePanel /> : null}
               {activeSectionName === "Advanced" ? <AdvancedPagePanel /> : null}
+              {activeSectionName === "Import OPML" ? (
+                <section className="space-y-1">
+                  <h2 className="text-base font-semibold">Import OPML</h2>
+                  <p className="text-sm text-muted-foreground">
+                    Import your OPML file to quickly add feed subscriptions.
+                  </p>
+                </section>
+              ) : null}
             </div>
           </main>
         </SidebarProvider>
