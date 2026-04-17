@@ -2,6 +2,7 @@
 
 import { Renderer, marked } from "marked";
 import markedKatex from "marked-katex-extension";
+import { memo } from "react";
 import { RenderHtml } from "./render-html";
 
 function isSafeUrl(url: string): boolean {
@@ -42,6 +43,6 @@ renderer.html = function ({ text }) {
 marked.use(markedKatex({ throwOnError: false }));
 marked.use({ renderer });
 
-export function RenderMarkdown({ markdown }: { markdown: string }) {
+export const RenderMarkdown = memo(function RenderMarkdown({ markdown }: { markdown: string }) {
   return <RenderHtml html={marked.parse(markdown, { async: false }) as string} />;
-}
+});
