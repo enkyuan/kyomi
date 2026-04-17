@@ -213,10 +213,6 @@ async function cacheAndBuildFaviconResponse(
   upstream: Response,
 ): Promise<Response> {
   const contentType = upstream.headers.get("content-type") ?? "image/x-icon";
-  const contentLength = Number(upstream.headers.get("content-length") ?? "0");
-  if (contentLength > FAVICON_MAX_RESPONSE_BYTES) {
-    return new Response(null, { status: 404 });
-  }
   const reader = upstream.body?.getReader();
   if (!reader) {
     return new Response(null, { status: 404 });
