@@ -4,6 +4,7 @@ import { useVirtualizer } from "@tanstack/react-virtual";
 import { Filter2Fill, Refresh2Fill } from "@mingcute/react";
 import { useNavigate } from "@tanstack/react-router";
 import { FeedItem } from "@components/pages/inbox/feed-item";
+import { FeedRefreshStatus } from "@components/feed-refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
@@ -18,6 +19,7 @@ interface InboxListProps {
   unreadCount: number;
   selectedItemId?: string;
   showAutoRefreshIndicator: boolean;
+  feedId?: string;
   isLoading: boolean;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
@@ -29,6 +31,7 @@ export function InboxList({
   unreadCount,
   selectedItemId,
   showAutoRefreshIndicator,
+  feedId,
   isLoading,
   hasNextPage,
   isFetchingNextPage,
@@ -78,6 +81,7 @@ export function InboxList({
             <span className="ps-1 font-medium text-muted-foreground text-sm tabular-nums">
               {unreadCount} unread
             </span>
+            {feedId && <FeedRefreshStatus feedId={feedId} />}
           </div>
           <div className="flex items-center gap-1">
             {showAutoRefreshIndicator ? (

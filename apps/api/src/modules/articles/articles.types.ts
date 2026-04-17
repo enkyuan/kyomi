@@ -17,7 +17,7 @@ export type ArticlesCursorListResponseDto = {
   items: ArticleListItemDto[];
   next_cursor: string | null;
   has_more: boolean;
-  total_count: null;
+  total_count: number;
 };
 
 export type ArticleDetailDto = ArticleListItemDto & {
