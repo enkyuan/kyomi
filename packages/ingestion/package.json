@@ -1,5 +1,5 @@
 {
-  "name": "@cronos/feed-ingest",
+  "name": "@cronos/ingestion",
   "private": true,
   "type": "module",
   "exports": {
@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@cronos/db": "workspace:*",
+    "@cronos/favicon": "workspace:*",
     "drizzle-orm": "^0.45.2",
     "fast-xml-parser": "^5.5.10",
     "pg": "^8.16.3"

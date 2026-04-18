@@ -1,9 +1,9 @@
 [project]
 name = "sangam-catalog"
 version = "0.1.0"
-description = "The RSS dataset powering the Readspace discovery system"
+description = "The RSS dataset powering Cronos"
 authors = [
-    {name = "Kamui",email = "fin-kamui@pm.me"}
+    {name = "enkyuan",email = "yuan.enkng@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"

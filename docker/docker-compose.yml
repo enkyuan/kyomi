@@ -84,7 +84,7 @@ services:
       [
         "sh",
         "-lc",
-        "bun install --frozen-lockfile && bun run start"
+        "bun install --frozen-lockfile --ignore-scripts && bun run start"
       ]
     environment:
       PORT: 8000
@@ -121,7 +121,7 @@ services:
       [
         "sh",
         "-lc",
-        "bun install --frozen-lockfile && bun run worker"
+        "bun install --frozen-lockfile --ignore-scripts && bun run worker"
       ]
     environment:
       PORT: 8000

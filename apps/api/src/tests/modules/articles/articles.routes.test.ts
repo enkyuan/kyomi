@@ -41,13 +41,13 @@ describe("articles.routes", () => {
       "get /articles/unread-counts",
       "get /articles/check-saved",
       "get /articles/saved",
+      "get /articles",
+      "get /articles/clips",
+      "get /articles/:articleId",
       "post /articles/:articleId/extract-full-text",
       "post /articles/:articleId/summarize",
       "post /articles/:articleId/translate",
-      "get /articles",
-      "get /articles/clips",
       "post /articles",
-      "get /articles/:articleId",
       "put /articles/:articleId",
     ]);
     for (const route of routes) {

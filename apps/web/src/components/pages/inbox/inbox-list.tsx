@@ -75,19 +75,19 @@ export function InboxList({
     <section className="flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground md:min-h-0">
       <div className="sticky top-0 z-10 shrink-0 border-b border-border bg-card">
         <div className="flex items-center justify-between gap-3 px-2 py-2">
-          <div className="flex items-center gap-4">
-            <span className="ps-1 font-medium text-muted-foreground text-sm tabular-nums">
-              {unreadCount} unread
-            </span>
-            {feedId && <FeedRefreshStatus feedId={feedId} />}
+          <span className="ps-1 font-medium text-muted-foreground text-sm tabular-nums">
+            {unreadCount} unread
+          </span>
+          <div className="flex items-center gap-0.5">
+            {feedId ? <FeedRefreshStatus feedId={feedId} /> : null}
+            <button
+              type="button"
+              aria-label="Feed filters coming soon"
+              className="inline-flex size-8 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+            >
+              <Filter2Fill className="size-4" />
+            </button>
           </div>
-          <button
-            type="button"
-            aria-label="Feed filters coming soon"
-            className="inline-flex size-8 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
-          >
-            <Filter2Fill className="size-4" />
-          </button>
         </div>
       </div>
       <ScrollAreaPrimitive.Root className="min-h-0 flex-1 overflow-hidden">

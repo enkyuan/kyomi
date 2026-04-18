@@ -41,7 +41,7 @@ export function AppSidebar() {
     >
       <SidebarWorkspaceHeader isMacPlatform={isMacPlatform} />
 
-      <SidebarContent className="overflow-x-hidden">
+      <SidebarContent>
         <SidebarInboxNav counts={counts} />
         <SidebarPinnedSection />
       </SidebarContent>

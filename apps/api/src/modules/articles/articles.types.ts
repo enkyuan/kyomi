@@ -1,4 +1,8 @@
-import type { ArticleReaderContentDto, ArticleStoredContentDto } from "./articles.content.types";
+import type {
+  ArticleReaderContentDto,
+  ArticleStoredContentDto,
+  ExtractedContentStatus,
+} from "./articles.content.types";
 
 export type ArticleListItemDto = {
   id: string;
@@ -28,7 +32,15 @@ export type ArticleDetailDto = ArticleListItemDto & {
   contentSource: ArticleStoredContentDto["contentSource"];
   extractionErrorCode: string | null;
   extractionErrorMessage: string | null;
-  reader: ArticleReaderContentDto;
+  /** Normalized reader view from feed-provided / stored original content only. */
+  readerOriginal: ArticleReaderContentDto;
+  /** Reader view from on-demand source-page extraction; null unless extraction succeeded. */
+  readerExtracted: ArticleReaderContentDto | null;
+  extractedContentStatus: ExtractedContentStatus;
+  extractedContentError: string | null;
+  extractedContentUpdatedAt: string | null;
+  /** Hint for initial mode; client may override (e.g. user toggle). */
+  defaultReaderMode: "original" | "extracted";
 };
 
 export type ArticleUpdateBody = {

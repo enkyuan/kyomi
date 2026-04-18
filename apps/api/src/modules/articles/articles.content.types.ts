@@ -1,5 +1,8 @@
 export type ArticleContentStatus = "ready" | "partial" | "failed" | "pending";
 
+/** On-demand source-page extraction lifecycle (stored separately from feed content). */
+export type ExtractedContentStatus = "pending" | "ready" | "failed";
+
 export type ArticleContentSource =
   | "feed_html"
   | "feed_markdown"

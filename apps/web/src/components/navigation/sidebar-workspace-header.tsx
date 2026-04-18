@@ -57,6 +57,8 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
   const isMacKeyboard = isMacPlatform ?? isMac ?? false;
   const navigate = useNavigate();
   const location = useLocation();
+  const scopedFeedId = location.pathname === "/inbox" ? location.search.feedId : undefined;
+  const scopedFolderId = location.pathname === "/inbox" ? location.search.folderId : undefined;
   const [commandOpen, setCommandOpen] = useState(false);
   const [createFolderOpen, setCreateFolderOpen] = useState(false);
   const [manageFeedsOpen, setManageFeedsOpen] = useState(false);
@@ -77,12 +79,11 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
       action: () =>
         navigate({
           to: "/inbox",
-          search: (prev) => ({
-            ...prev,
+          search: () => ({
             filter: "today" as const,
             search: undefined,
-            feedId: undefined,
-            folderId: undefined,
+            feedId: scopedFeedId,
+            folderId: scopedFolderId,
             itemId: undefined,
           }),
         }),
@@ -94,12 +95,11 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
       action: () =>
         navigate({
           to: "/inbox",
-          search: (prev) => ({
-            ...prev,
+          search: () => ({
             filter: "unread" as const,
             search: undefined,
-            feedId: undefined,
-            folderId: undefined,
+            feedId: scopedFeedId,
+            folderId: scopedFolderId,
             itemId: undefined,
           }),
         }),
@@ -111,12 +111,11 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
       action: () =>
         navigate({
           to: "/inbox",
-          search: (prev) => ({
-            ...prev,
+          search: () => ({
             filter: "saved" as const,
             search: undefined,
-            feedId: undefined,
-            folderId: undefined,
+            feedId: scopedFeedId,
+            folderId: scopedFolderId,
             itemId: undefined,
           }),
         }),
@@ -138,6 +137,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
         icon: (
           <FeedFavicon
             className="size-4 shrink-0 rounded-sm"
+            faviconUrl={currentFeed.faviconUrl}
             feedUrl={currentFeed.url}
             siteUrl={currentFeed.link}
             title={currentFeed.title || currentFeed.url}
@@ -306,6 +306,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                           >
                             <FeedFavicon
                               className="ms-0.5 me-2 size-4 shrink-0 rounded-sm"
+                              faviconUrl={item.faviconUrl}
                               feedUrl={item.url}
                               siteUrl={item.link}
                               title={item.title || item.url}

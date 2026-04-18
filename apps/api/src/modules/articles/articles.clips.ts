@@ -4,7 +4,13 @@ import { assertHttpOrHttpsUrl } from "@modules/discover/discover.normalize-feed-
 import { and, desc, eq, gte, lt, or, type SQL } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
 import { extractFullTextFromUrl } from "./articles.enhancements";
-import { buildStoredContentRecord, buildStoredReaderContent } from "./articles.normalize-content";
+import type { ExtractedContentStatus } from "./articles.content.types";
+import {
+  buildExtractedReaderViewFromDb,
+  buildStoredContentRecord,
+  buildStoredReaderContent,
+} from "./articles.normalize-content";
+import { inferDefaultReaderMode } from "./articles.reader-mode";
 import { CLIP_LIST_FEED_ID, CLIP_LIST_FEED_TITLE } from "./articles.clips.constants";
 import type {
   ArticleDetailDto,
@@ -222,6 +228,33 @@ export async function createArticleClip(
 
 function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDetailDto {
   const base = clipToListItem(row);
+  const extractedStatus = (row.extractedContentStatus as ExtractedContentStatus) ?? "pending";
+  const readerOriginal = buildStoredReaderContent({
+    articleType: "clip",
+    title: row.title,
+    summary: row.note,
+    legacyContent: row.content,
+    contentHtml: row.contentHtml,
+    contentText: row.contentText,
+    contentMarkdown: row.contentMarkdown,
+    contentStatus: row.contentStatus as ArticleDetailDto["contentStatus"] | null,
+    contentSource: row.contentSource as ArticleDetailDto["contentSource"] | null,
+    extractionErrorCode: row.extractionErrorCode,
+    extractionErrorMessage: row.extractionErrorMessage,
+  });
+  const readerExtracted = buildExtractedReaderViewFromDb({
+    articleType: "clip",
+    title: row.title,
+    summary: row.note,
+    extractedContentHtml: row.extractedContentHtml,
+    extractedContentText: row.extractedContentText,
+    extractedContentStatus: extractedStatus,
+  });
+  const defaultReaderMode = inferDefaultReaderMode({
+    readerOriginal,
+    readerExtracted,
+    extractedContentStatus: extractedStatus,
+  });
   return {
     ...base,
     contentHtml: row.contentHtml,
@@ -231,19 +264,12 @@ function clipToDetail(row: typeof articleClips.$inferSelect): ArticleDetailDto {
     contentSource: (row.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
     extractionErrorCode: row.extractionErrorCode,
     extractionErrorMessage: row.extractionErrorMessage,
-    reader: buildStoredReaderContent({
-      articleType: "clip",
-      title: row.title,
-      summary: row.note,
-      legacyContent: row.content,
-      contentHtml: row.contentHtml,
-      contentText: row.contentText,
-      contentMarkdown: row.contentMarkdown,
-      contentStatus: row.contentStatus as ArticleDetailDto["contentStatus"] | null,
-      contentSource: row.contentSource as ArticleDetailDto["contentSource"] | null,
-      extractionErrorCode: row.extractionErrorCode,
-      extractionErrorMessage: row.extractionErrorMessage,
-    }),
+    readerOriginal,
+    readerExtracted,
+    extractedContentStatus: extractedStatus,
+    extractedContentError: row.extractedContentError,
+    extractedContentUpdatedAt: row.extractedContentUpdatedAt?.toISOString() ?? null,
+    defaultReaderMode,
   };
 }
 

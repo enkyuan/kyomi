@@ -7,6 +7,7 @@ import {
   feedDetailSchema,
   followFeedResultSchema,
   followedFeedsListSchema,
+  messageResponseSchema,
 } from "@lib/api-schemas";
 import { z } from "zod";
 
@@ -25,6 +26,8 @@ export type FollowFeedResult = {
   url: string;
   title: string;
   link: string | null;
+  faviconUrl: string | null;
+  faviconSource: string | null;
   newFeed: boolean;
   newSubscription: boolean;
 };
@@ -36,6 +39,10 @@ export type FollowedFeed = {
   title: string;
   customTitle: string | null;
   link: string | null;
+  faviconUrl: string | null;
+  faviconSource: string | null;
+  isPinned: boolean;
+  pinnedAt: string | null;
   folderId: string | null;
   folderName: string | null;
   subscribedAt: string;
@@ -48,11 +55,16 @@ export type FeedDetail = {
   customTitle: string | null;
   description: string | null;
   link: string | null;
+  faviconUrl: string | null;
+  faviconSource: string | null;
+  faviconFetchedAt: string | null;
   createdAt: string;
   updatedAt: string;
   isSubscribed: boolean;
   subscriptionId: string | null;
   subscribedAt: string | null;
+  isPinned: boolean;
+  pinnedAt: string | null;
   refreshStatus: "idle" | "queued" | "running" | "failed";
   lastRefreshCompletedAt: string | null;
   lastRefreshFailedAt: string | null;
@@ -232,6 +244,26 @@ export const getFeedDetail = createServerFn({ method: "GET" })
       apiJson<FeedDetail>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
         method: "GET",
         headers,
+      }),
+    );
+  });
+
+export const updateFeedSubscription = createServerFn({ method: "POST" })
+  .inputValidator(
+    (input: { feedId: string; customTitle?: string | null; isPinned?: boolean }) => input,
+  )
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    headers.set("content-type", "application/json");
+
+    return apiJsonValidated(messageResponseSchema, () =>
+      apiJson<{ message: string }>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
+        method: "PUT",
+        headers,
+        body: JSON.stringify({
+          customTitle: data.customTitle,
+          isPinned: data.isPinned,
+        }),
       }),
     );
   });

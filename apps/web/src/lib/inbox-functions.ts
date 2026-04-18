@@ -7,6 +7,9 @@ import {
   articleDetailSchema,
   cursorListResponseSchema,
   extractFullTextResponseSchema,
+  type ArticleDetailDto,
+  type ExtractFullTextResponseDto,
+  type ReaderContentDto,
 } from "@lib/api-schemas";
 
 export type InboxFilter = "today" | "unread" | "saved";
@@ -23,32 +26,8 @@ export type InboxItem = {
   isSaved: boolean;
 };
 
-export type ReaderContentResponse = {
-  contentStatus: "ready" | "partial" | "failed" | "pending";
-  contentSource:
-    | "feed_html"
-    | "feed_markdown"
-    | "feed_summary"
-    | "extracted_html"
-    | "text_fallback"
-    | "link_only";
-  bodyKind: "html" | "markdown" | "text" | "fallback";
-  title: string | null;
-  byline: string | null;
-  excerpt: string | null;
-  contentHtml: string | null;
-  contentMarkdown: string | null;
-  contentText: string | null;
-  fallbackSummary: string | null;
-  fallbackReason: "extraction_failed" | "timeout" | "missing_content" | null;
-  siteName: string | null;
-  language: string | null;
-  publishedTime: string | null;
-  notice: string | null;
-  extractionErrorCode: string | null;
-  extractionErrorMessage: string | null;
-  shouldExtract: boolean;
-};
+/** @deprecated Prefer ReaderContentDto from api-schemas */
+export type ReaderContentResponse = ReaderContentDto;
 
 type CursorListResponse = {
   items: Array<{
@@ -66,27 +45,6 @@ type CursorListResponse = {
   next_cursor: string | null;
   has_more: boolean;
   total_count: number | null;
-};
-
-type ArticleDetailResponse = {
-  id: string;
-  title: string;
-  link: string;
-  summary: string | null;
-  contentHtml: string | null;
-  contentText: string | null;
-  contentMarkdown: string | null;
-  contentStatus: ReaderContentResponse["contentStatus"];
-  contentSource: ReaderContentResponse["contentSource"];
-  extractionErrorCode: string | null;
-  extractionErrorMessage: string | null;
-  publishedAt: string;
-  feedId: string;
-  feedTitle: string;
-  isRead: boolean;
-  isSaved: boolean;
-  articleType: "feed" | "clip";
-  reader: ReaderContentResponse;
 };
 
 type ArticleCountsResponse = {
@@ -111,24 +69,8 @@ type InboxResponse = {
   hasMore: boolean;
 };
 
-type InboxDetailResponse = {
-  item:
-    | (InboxItem & {
-        contentHtml: string | null;
-        contentText: string | null;
-        contentMarkdown: string | null;
-        contentStatus: ReaderContentResponse["contentStatus"];
-        contentSource: ReaderContentResponse["contentSource"];
-        extractionErrorCode: string | null;
-        extractionErrorMessage: string | null;
-        reader: ReaderContentResponse;
-      })
-    | null;
-};
-
-type ExtractFullTextResponse = {
-  reader: ReaderContentResponse;
-  persisted: boolean;
+export type InboxDetailResponse = {
+  item: ArticleDetailDto | null;
 };
 
 type GetInboxItemsInput = {
@@ -269,32 +211,12 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
   .handler(async ({ data }): Promise<InboxDetailResponse> => {
     const headers = getRequestHeaders();
     const item = await apiJsonValidated(articleDetailSchema, () =>
-      apiJson<ArticleDetailResponse>(`/api/v1/articles/${data.itemId}`, {
+      apiJson<ArticleDetailDto>(`/api/v1/articles/${data.itemId}`, {
         headers: buildForwardHeaders(headers),
       }),
     );
 
-    return {
-      item: {
-        id: item.id,
-        title: item.title,
-        summary: item.summary,
-        contentHtml: item.contentHtml,
-        contentText: item.contentText,
-        contentMarkdown: item.contentMarkdown,
-        contentStatus: item.contentStatus,
-        contentSource: item.contentSource,
-        extractionErrorCode: item.extractionErrorCode,
-        extractionErrorMessage: item.extractionErrorMessage,
-        link: item.link,
-        publishedAt: item.publishedAt,
-        feedTitle: item.feedTitle,
-        articleType: item.articleType,
-        isRead: item.isRead,
-        isSaved: item.isSaved,
-        reader: item.reader,
-      },
-    };
+    return { item };
   });
 
 export const getInboxCounts = createServerFn({ method: "GET" }).handler(async () => {
@@ -308,12 +230,12 @@ export const getInboxCounts = createServerFn({ method: "GET" }).handler(async ()
 
 export const extractInboxItemFullText = createServerFn({ method: "POST" })
   .inputValidator((input: { itemId: string }) => input)
-  .handler(async ({ data }): Promise<ExtractFullTextResponse> => {
+  .handler(async ({ data }): Promise<ExtractFullTextResponseDto> => {
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
 
     return apiJsonValidated(extractFullTextResponseSchema, () =>
-      apiJson<ExtractFullTextResponse>(`/api/v1/articles/${data.itemId}/extract-full-text`, {
+      apiJson<ExtractFullTextResponseDto>(`/api/v1/articles/${data.itemId}/extract-full-text`, {
         method: "POST",
         headers: forwarded,
       }),

@@ -87,6 +87,11 @@ export const feeds = pgTable(
     etag: text("etag"),
     lastModified: text("last_modified"),
     nextRefreshAt: timestamp("next_refresh_at"),
+    /** Best-effort resolved favicon image URL (often same-origin or public icon CDN). */
+    faviconUrl: text("favicon_url"),
+    /** How `favicon_url` was resolved, e.g. favicon_ico, html_link, google_s2, duckduckgo. */
+    faviconSource: text("favicon_source"),
+    faviconFetchedAt: timestamp("favicon_fetched_at"),
   },
   (table) => [uniqueIndex("feeds_url_unique").on(table.url)],
 );
@@ -116,6 +121,8 @@ export const feedSubscriptions = pgTable(
       .notNull()
       .references(() => feeds.id, { onDelete: "cascade" }),
     folderId: text("folder_id").references(() => folders.id, { onDelete: "set null" }),
+    isPinned: boolean("is_pinned").notNull().default(false),
+    pinnedAt: timestamp("pinned_at"),
     customTitle: text("custom_title"),
     lastReadCutoff: timestamp("last_read_cutoff"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
@@ -142,6 +149,12 @@ export const feedItems = pgTable("feed_items", {
   contentSource: text("content_source"),
   extractionErrorCode: text("extraction_error_code"),
   extractionErrorMessage: text("extraction_error_message"),
+  /** Source-page full text (Readability); separate from feed-provided content fields. */
+  extractedContentHtml: text("extracted_content_html"),
+  extractedContentText: text("extracted_content_text"),
+  extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
+  extractedContentError: text("extracted_content_error"),
+  extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
   imageUrl: text("image_url"),
   publishedAt: timestamp("published_at").notNull(),
   createdAt: timestamp("created_at").notNull().defaultNow(),
@@ -179,6 +192,11 @@ export const articleClips = pgTable("article_clips", {
   contentSource: text("content_source"),
   extractionErrorCode: text("extraction_error_code"),
   extractionErrorMessage: text("extraction_error_message"),
+  extractedContentHtml: text("extracted_content_html"),
+  extractedContentText: text("extracted_content_text"),
+  extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
+  extractedContentError: text("extracted_content_error"),
+  extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
   note: text("note"),
   isRead: boolean("is_read").notNull().default(false),
   isSaved: boolean("is_saved").notNull().default(true),

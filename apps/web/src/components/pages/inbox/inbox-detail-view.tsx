@@ -4,16 +4,14 @@ import { ItemDetail } from "@components/pages/inbox/item-detail";
 import { EmptyStateIcon } from "@components/icons/empty-state-svg";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
-import type { getInboxItemDetail } from "@lib/inbox-functions";
-
-type InboxDetailItem = NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>;
+import type { ArticleDetailDto } from "@lib/api-schemas";
 
 const EMPTY_STATE_BODY_COPY =
   "Stories from your feeds appear here so you can preview them before opening the original source.";
 const EMPTY_STATE_BODY_WIDTH = 440;
 
 interface InboxDetailViewProps {
-  selectedItem: InboxDetailItem | null;
+  selectedItem: ArticleDetailDto | null;
   isDetailLoading: boolean;
   isDetailError: boolean;
   detailError: unknown;

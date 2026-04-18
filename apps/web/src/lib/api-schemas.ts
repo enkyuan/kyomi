@@ -83,6 +83,8 @@ export const cursorListResponseSchema = z.object({
 // Article detail
 // ---------------------------------------------------------------------------
 
+export const extractedContentStatusSchema = z.enum(["pending", "ready", "failed"]);
+
 export const articleDetailSchema = articleListItemSchema.extend({
   contentHtml: z.string().nullable(),
   contentText: z.string().nullable(),
@@ -91,7 +93,12 @@ export const articleDetailSchema = articleListItemSchema.extend({
   contentSource: contentSourceSchema,
   extractionErrorCode: z.string().nullable(),
   extractionErrorMessage: z.string().nullable(),
-  reader: readerContentSchema,
+  readerOriginal: readerContentSchema,
+  readerExtracted: readerContentSchema.nullable(),
+  extractedContentStatus: extractedContentStatusSchema,
+  extractedContentError: z.string().nullable(),
+  extractedContentUpdatedAt: z.string().nullable(),
+  defaultReaderMode: z.enum(["original", "extracted"]),
 });
 
 // ---------------------------------------------------------------------------
@@ -107,10 +114,18 @@ export const articleCountsSchema = z.object({
 // Extract full text
 // ---------------------------------------------------------------------------
 
-export const extractFullTextResponseSchema = z.object({
-  reader: readerContentSchema,
-  persisted: z.boolean(),
-});
+export const extractFullTextResponseSchema = z.discriminatedUnion("ok", [
+  z.object({
+    ok: z.literal(true),
+    article: articleDetailSchema,
+  }),
+  z.object({
+    ok: z.literal(false),
+    errorCode: z.string(),
+    errorMessage: z.string(),
+    article: articleDetailSchema,
+  }),
+]);
 
 // ---------------------------------------------------------------------------
 // Feed types
@@ -131,6 +146,8 @@ export const followFeedResultSchema = z.object({
   url: z.string(),
   title: z.string(),
   link: z.string().nullable(),
+  faviconUrl: z.string().nullable(),
+  faviconSource: z.string().nullable(),
   newFeed: z.boolean(),
   newSubscription: z.boolean(),
 });
@@ -142,6 +159,10 @@ export const followedFeedSchema = z.object({
   title: z.string(),
   customTitle: z.string().nullable(),
   link: z.string().nullable(),
+  faviconUrl: z.string().nullable(),
+  faviconSource: z.string().nullable(),
+  isPinned: z.boolean(),
+  pinnedAt: z.string().nullable(),
   folderId: z.string().nullable(),
   folderName: z.string().nullable(),
   subscribedAt: z.string(),
@@ -160,11 +181,16 @@ export const feedDetailSchema = z.object({
   customTitle: z.string().nullable(),
   description: z.string().nullable(),
   link: z.string().nullable(),
+  faviconUrl: z.string().nullable(),
+  faviconSource: z.string().nullable(),
+  faviconFetchedAt: z.string().nullable(),
   createdAt: z.string(),
   updatedAt: z.string(),
   isSubscribed: z.boolean(),
   subscriptionId: z.string().nullable(),
   subscribedAt: z.string().nullable(),
+  isPinned: z.boolean(),
+  pinnedAt: z.string().nullable(),
   refreshStatus: feedRefreshStatusSchema,
   lastRefreshCompletedAt: z.string().nullable(),
   lastRefreshFailedAt: z.string().nullable(),

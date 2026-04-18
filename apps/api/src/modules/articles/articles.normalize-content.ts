@@ -3,6 +3,7 @@ import type {
   ArticleReaderContentDto,
   ArticleReaderFallbackReason,
   ArticleStoredContentDto,
+  ExtractedContentStatus,
 } from "./articles.content.types";
 import { htmlToText, sanitizeArticleHtml } from "./articles.sanitize-content";
 
@@ -317,6 +318,53 @@ export function buildStoredReaderContent(input: ReaderArticleInput): ArticleRead
     extractionErrorMessage: input.extractionErrorMessage,
     shouldExtract: input.articleType === "feed",
   };
+}
+
+/**
+ * Builds the extracted-mode reader view from persisted extracted columns (already sanitized on write).
+ */
+export function buildExtractedReaderViewFromDb(input: {
+  articleType: "feed" | "clip";
+  title: string;
+  summary: string | null;
+  extractedContentHtml: string | null;
+  extractedContentText: string | null;
+  extractedContentStatus: ExtractedContentStatus;
+}): ArticleReaderContentDto | null {
+  if (input.extractedContentStatus !== "ready") {
+    return null;
+  }
+  const rawHtml = input.extractedContentHtml?.trim();
+  if (!rawHtml) {
+    return null;
+  }
+  const sanitized = sanitizeArticleHtml(rawHtml);
+  const text = input.extractedContentText?.trim() || (sanitized ? htmlToText(sanitized) : null);
+  return buildReadabilityReaderContent(
+    {
+      articleType: input.articleType,
+      title: input.title,
+      summary: input.summary,
+      legacyContent: null,
+      contentHtml: null,
+      contentText: null,
+      contentMarkdown: null,
+      contentStatus: "ready",
+      contentSource: "feed_html",
+      extractionErrorCode: null,
+      extractionErrorMessage: null,
+    },
+    {
+      title: null,
+      byline: null,
+      excerpt: input.summary,
+      contentHtml: sanitized || null,
+      contentText: text,
+      siteName: null,
+      language: null,
+      publishedTime: null,
+    },
+  );
 }
 
 export function buildReadabilityReaderContent(

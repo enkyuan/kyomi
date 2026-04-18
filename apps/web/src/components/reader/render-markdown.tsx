@@ -36,10 +36,6 @@ renderer.image = function ({ href, title, text }) {
   return `<img src="${escapeAttr(href)}" alt="${escapeAttr(text)}"${titleAttr}>`;
 };
 
-renderer.html = function ({ text }) {
-  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-};
-
 marked.use(markedKatex({ throwOnError: false }));
 marked.use({ renderer });
 

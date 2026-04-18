@@ -189,7 +189,7 @@ export function registerFeedRoutes(app: Elysia) {
       "/feeds/:feedId",
       async (context) => {
         const { body, db, logger, params, userId } = v1HandlerContext<
-          { customTitle?: string | null },
+          { customTitle?: string | null; isPinned?: boolean },
           Record<string, unknown>,
           { feedId: string }
         >(context);

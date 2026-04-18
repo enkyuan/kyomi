@@ -71,9 +71,9 @@ export function SidebarPinnedSection() {
                     render={
                       <Link
                         to="/inbox"
-                        search={(prev) => ({
-                          ...prev,
-                          filter: "unread",
+                        search={() => ({
+                          filter: "today" as const,
+                          search: undefined,
                           feedId: feed.feedId,
                           folderId: undefined,
                           itemId: undefined,
@@ -83,6 +83,7 @@ export function SidebarPinnedSection() {
                   >
                     <FeedFavicon
                       className="size-4 shrink-0 rounded-[3px]"
+                      faviconUrl={feed.faviconUrl}
                       feedUrl={feed.url}
                       siteUrl={feed.link}
                       title={feed.title || feed.url}

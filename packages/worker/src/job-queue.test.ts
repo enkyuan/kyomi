@@ -7,7 +7,7 @@ import {
   parseJob,
   parseJobMessageFields,
   toRedisStreamFieldList,
-} from "./index";
+} from "./job-queue";
 
 // ---------------------------------------------------------------------------
 // Helpers

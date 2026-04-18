@@ -1,3 +1,4 @@
+import { resolveFeedFaviconUrl } from "@cronos/favicon";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { eq, sql } from "drizzle-orm";
 import { XMLParser } from "fast-xml-parser";
@@ -813,10 +814,28 @@ export function parseFeedDocument(
   throw new Error("Unsupported feed format");
 }
 
+async function tryResolveFaviconMetadata(seedUrl: string): Promise<{
+  url: string;
+  source: string;
+} | null> {
+  try {
+    return await resolveFeedFaviconUrl(seedUrl);
+  } catch (error) {
+    console.warn("[ingestion] favicon resolution failed", {
+      seedUrl,
+      error: error instanceof Error ? error.message : String(error),
+    });
+    return null;
+  }
+}
+
 export async function runFeedRefresh(
   database: FeedIngestDatabase,
   feedId: string,
   searchSync?: SearchSyncConfig,
+  options?: {
+    enrichArticles?: boolean;
+  },
 ): Promise<FeedRefreshResult> {
   try {
     const startedAt = new Date();
@@ -829,6 +848,8 @@ export async function runFeedRefresh(
       .select({
         id: feeds.id,
         url: feeds.url,
+        link: feeds.link,
+        faviconUrl: feeds.faviconUrl,
         etag: feeds.etag,
         lastModified: feeds.lastModified,
         lastRefreshSucceededAt: feeds.lastRefreshSucceededAt,
@@ -864,6 +885,24 @@ export async function runFeedRefresh(
 
     if (fetched.notModified) {
       const now = new Date();
+      let faviconPatch: {
+        faviconUrl: string;
+        faviconSource: string;
+        faviconFetchedAt: Date;
+        updatedAt: Date;
+      } | null = null;
+      if (!feed.faviconUrl) {
+        const seed = feed.link ?? feed.url;
+        const resolved = await tryResolveFaviconMetadata(seed);
+        if (resolved) {
+          faviconPatch = {
+            faviconUrl: resolved.url,
+            faviconSource: resolved.source,
+            faviconFetchedAt: now,
+            updatedAt: now,
+          };
+        }
+      }
       await database
         .update(feeds)
         .set({
@@ -872,6 +911,7 @@ export async function runFeedRefresh(
           lastRefreshSucceededAt: now,
           lastRefreshError: null,
           nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000), // Next refresh in 1 hour
+          ...(faviconPatch ?? {}),
         })
         .where(eq(feeds.id, feedId));
       return { ok: true, itemCount: 0, notModified: true };
@@ -885,31 +925,55 @@ export async function runFeedRefresh(
     }
     const items = Array.from(deduped.values());
     // TODO: add language detection once we settle on the TS-side metadata/storage model.
-    const enrichmentCandidates = items
-      .filter((item) => !(item.contentText && item.contentText.length >= 220 && item.imageUrl))
-      .slice(0, MAX_ENRICHMENTS_PER_REFRESH);
+    const enrichArticles = options?.enrichArticles ?? true;
+    if (enrichArticles) {
+      const enrichmentCandidates = items
+        .filter((item) => !(item.contentText && item.contentText.length >= 220 && item.imageUrl))
+        .slice(0, MAX_ENRICHMENTS_PER_REFRESH);
 
-    for (let i = 0; i < enrichmentCandidates.length; i += ENRICHMENT_CONCURRENCY) {
-      const batch = enrichmentCandidates.slice(i, i + ENRICHMENT_CONCURRENCY);
-      await Promise.all(
-        batch.map(async (item) => {
-          const enrichment = await fetchArticleEnrichment(item.link);
-          if ((!item.contentText || item.contentText.length < 220) && enrichment.content) {
-            item.content = enrichment.content;
-            item.contentHtml = enrichment.contentHtml;
-            item.contentText = enrichment.contentText ?? enrichment.content;
-            item.contentStatus = enrichment.contentStatus;
-            item.contentSource = enrichment.contentSource;
-            item.extractionErrorCode = enrichment.extractionErrorCode;
-            item.extractionErrorMessage = enrichment.extractionErrorMessage;
-            item.summary =
-              summarizeText(enrichment.contentText ?? enrichment.content) ?? item.summary;
-          }
-          if (!item.imageUrl && enrichment.imageUrl) {
-            item.imageUrl = enrichment.imageUrl;
-          }
-        }),
-      );
+      for (let i = 0; i < enrichmentCandidates.length; i += ENRICHMENT_CONCURRENCY) {
+        const batch = enrichmentCandidates.slice(i, i + ENRICHMENT_CONCURRENCY);
+        await Promise.all(
+          batch.map(async (item) => {
+            const enrichment = await fetchArticleEnrichment(item.link);
+            if ((!item.contentText || item.contentText.length < 220) && enrichment.content) {
+              item.content = enrichment.content;
+              item.contentHtml = enrichment.contentHtml;
+              item.contentText = enrichment.contentText ?? enrichment.content;
+              item.contentStatus = enrichment.contentStatus;
+              item.contentSource = enrichment.contentSource;
+              item.extractionErrorCode = enrichment.extractionErrorCode;
+              item.extractionErrorMessage = enrichment.extractionErrorMessage;
+              item.summary =
+                summarizeText(enrichment.contentText ?? enrichment.content) ?? item.summary;
+            }
+            if (!item.imageUrl && enrichment.imageUrl) {
+              item.imageUrl = enrichment.imageUrl;
+            }
+          }),
+        );
+      }
+    }
+
+    const prevLink = feed.link ?? null;
+    const nextLink = parsed.metadata.link ?? null;
+    const linkChanged = (prevLink ?? "") !== (nextLink ?? "");
+    const needsFavicon = !feed.faviconUrl || linkChanged;
+    let faviconPatch: {
+      faviconUrl: string;
+      faviconSource: string;
+      faviconFetchedAt: Date;
+    } | null = null;
+    if (needsFavicon) {
+      const seed = nextLink ?? parsed.metadata.canonicalUrl;
+      const resolved = await tryResolveFaviconMetadata(seed);
+      if (resolved) {
+        faviconPatch = {
+          faviconUrl: resolved.url,
+          faviconSource: resolved.source,
+          faviconFetchedAt: now,
+        };
+      }
     }
 
     await database.transaction(async (tx) => {
@@ -928,6 +992,7 @@ export async function runFeedRefresh(
           etag: fetched.etag,
           lastModified: fetched.lastModified,
           nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000),
+          ...(faviconPatch ?? {}),
         })
         .where(eq(feeds.id, feed.id));
 

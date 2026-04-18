@@ -83,8 +83,6 @@ export function SidebarInboxNav({
                       ...prev,
                       ...item.search,
                       search: undefined,
-                      feedId: undefined,
-                      folderId: undefined,
                       itemId: undefined,
                     })}
                   />

@@ -18,6 +18,7 @@ import { Form } from "@components/ui/form";
 import { Field, FieldError, FieldLabel } from "@components/ui/field";
 import { Input } from "@components/ui/input";
 import { PasswordInput } from "@components/ui/password-input";
+import { Spinner } from "@components/ui/spinner";
 import { toastManager } from "@components/ui/toast";
 import { getFieldErrorMessage, registerDefaultValues, registerFormSchema } from "./schema";
 
@@ -77,7 +78,14 @@ export function RegisterPage() {
   }, [isAuthenticated, isPending, router]);
 
   if (isPending) {
-    return null;
+    return (
+      <main className="flex min-h-dvh w-full items-center justify-center px-4 py-12">
+        <div className="flex items-center gap-2 text-muted-foreground text-sm">
+          <Spinner className="size-4" />
+          <span>Loading...</span>
+        </div>
+      </main>
+    );
   }
 
   return (

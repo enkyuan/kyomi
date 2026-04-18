@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { ReaderContent } from "./reader-content";
 import type { ReaderContent as ReaderContentModel } from "./reader-types";
@@ -55,6 +55,33 @@ describe("ReaderContent", () => {
     expect(document.querySelector("table")).toBeTruthy();
     expect(screen.getByText("const value = 1;")).toBeTruthy();
     expect(document.querySelector(".katex")).toBeTruthy();
+  });
+
+  test("renders safe inline html tags from markdown as markup, not literal text", () => {
+    render(
+      <ReaderContent
+        reader={baseReader({
+          contentMarkdown: "Use <code>AllocationRecord</code> for this schema.",
+        })}
+      />,
+    );
+
+    expect(screen.getByText("AllocationRecord")).toBeTruthy();
+    expect(document.querySelector("code")?.textContent).toBe("AllocationRecord");
+    expect(screen.queryByText("<code>AllocationRecord</code>")).toBeNull();
+  });
+
+  test("unwraps inline markdown where backticks wrap a literal <code>…</code> string", () => {
+    const { container } = render(
+      <ReaderContent
+        reader={baseReader({
+          contentMarkdown: "Use `<code>AllocationRecord</code>` for this schema.",
+        })}
+      />,
+    );
+
+    expect(within(container).getByText("AllocationRecord")).toBeTruthy();
+    expect(container.querySelector("p code")?.textContent).toBe("AllocationRecord");
   });
 
   test("renders link-only fallback without surfacing raw backend errors", () => {
