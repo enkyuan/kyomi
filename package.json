@@ -43,7 +43,7 @@
     "catalog:sync:local": "bun run --cwd packages/sangam sync"
   },
   "devDependencies": {
-    "@typescript/native-preview": "^7.0.0-dev.20260407.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260418.1",
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
