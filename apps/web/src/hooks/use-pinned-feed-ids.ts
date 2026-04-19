@@ -1,5 +1,10 @@
 "use client";
 
+/**
+ * Pin state is persisted on the server (`feed_subscriptions.is_pinned` / `pinned_at`).
+ * localStorage keys below exist only for one-time migration from a legacy client-only list.
+ */
+
 import { useEffect, useMemo, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/auth-provider";

@@ -212,7 +212,8 @@ export const followedFeedsListSchema = z.object({
   items: z.array(followedFeedSchema),
 });
 
-export const feedRefreshStatusSchema = z.enum(["idle", "queued", "running", "failed"]);
+/** Matches API `feeds.refresh_status` text column (not a closed enum in DB). */
+export const feedRefreshStatusSchema = z.string();
 
 export const feedDetailSchema = z.object({
   id: z.string(),

@@ -11,6 +11,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
+import { isInboxPathname } from "@lib/routes/inbox-path";
 
 type InboxNavSearch = {
   filter?: "today" | "unread" | "saved";
@@ -50,6 +51,8 @@ export function SidebarInboxNav({
   counts: { today: number; unread: number; saved: number };
 }) {
   const location = useLocation();
+  const isInbox = isInboxPathname(location.pathname);
+  const activeFilter = isInbox ? (location.search.filter ?? "today") : undefined;
   const badgeValueByLabel: Record<string, number> = {
     Today: counts.today,
     "All Unread": counts.unread,
@@ -68,10 +71,10 @@ export function SidebarInboxNav({
               <SidebarMenuButton
                 className={cn(badgeValue > 0 ? "pe-10" : undefined)}
                 isActive={
-                  location.pathname === "/inbox" &&
+                  isInbox &&
                   FILTER_KEYS.every((key) => {
                     const expected = item.search[key];
-                    const actual = location.search[key];
+                    const actual = key === "filter" ? activeFilter : location.search[key];
                     return expected === undefined ? actual === undefined : actual === expected;
                   })
                 }

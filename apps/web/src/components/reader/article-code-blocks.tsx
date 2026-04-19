@@ -1,10 +1,15 @@
 import hljs from "highlight.js";
-import { createRoot, type Root } from "react-dom/client";
-import { ArticleCodeCopyButton } from "./article-code-copy-button";
 
 import "highlight.js/styles/github-dark.css";
 
 const WRAPPER = "data-reader-code-block";
+const COPY_MOUNTED = "data-reader-copy-mounted";
+
+// SVG path data extracted from @mingcute/react (Copy2Fill / CheckFill), viewBox 0 0 24 24.
+const COPY_ICON_PATH =
+  "M9 2a2 2 0 0 0-2 2v2h2V4h11v11h-2v2h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM4 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z";
+const CHECK_ICON_PATH =
+  "M21.546 5.111a1.5 1.5 0 0 1 0 2.121L10.303 18.475a1.6 1.6 0 0 1-2.263 0L2.454 12.89a1.5 1.5 0 1 1 2.121-2.121l4.596 4.596L19.424 5.111a1.5 1.5 0 0 1 2.122 0";
 
 /** Markdown ` ```ts ` → `language-ts`; map to highlight.js ids where needed. */
 const LANGUAGE_ALIASES: Record<string, string> = {
@@ -141,13 +146,20 @@ function languageToDisplayName(
   return "Plain text";
 }
 
-function extractFenceLanguage(code: HTMLElement): string | undefined {
-  for (const cls of code.classList) {
+function classListFenceLanguage(classList: DOMTokenList): string | undefined {
+  for (const cls of classList) {
     if (cls.startsWith("language-")) {
       return cls.slice("language-".length).trim();
     }
+    if (cls.startsWith("lang-")) {
+      return cls.slice("lang-".length).trim();
+    }
   }
   return undefined;
+}
+
+function extractFenceLanguage(pre: HTMLPreElement, code: HTMLElement): string | undefined {
+  return classListFenceLanguage(code.classList) ?? classListFenceLanguage(pre.classList);
 }
 
 function resolveHighlightLanguage(raw: string): string | undefined {
@@ -183,21 +195,119 @@ function highlightCode(
   }
 }
 
+function normalizeStandaloneCodeElements(container: HTMLElement): void {
+  for (const code of container.querySelectorAll<HTMLElement>("code")) {
+    if (code.closest("pre") || code.closest(`[${WRAPPER}]`)) {
+      continue;
+    }
+    const text = code.textContent ?? "";
+    if (!text.includes("\n")) {
+      continue;
+    }
+    const pre = document.createElement("pre");
+    const className = code.className.trim();
+    const languageClass = className
+      .split(/\s+/)
+      .find((token) => token.startsWith("language-") || token.startsWith("lang-"));
+    if (languageClass) {
+      pre.classList.add(languageClass);
+    }
+    const nextCode = document.createElement("code");
+    if (languageClass) {
+      nextCode.classList.add(languageClass);
+    }
+    nextCode.textContent = text;
+    pre.appendChild(nextCode);
+    code.replaceWith(pre);
+  }
+}
+
+function makeSvgIcon(pathD: string): SVGSVGElement {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("width", "16");
+  svg.setAttribute("height", "16");
+  svg.setAttribute("aria-hidden", "true");
+  svg.setAttribute("fill", "currentColor");
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", pathD);
+  svg.appendChild(path);
+  return svg;
+}
+
+function mountCopyButton(host: HTMLElement, text: string): void {
+  if (host.getAttribute(COPY_MOUNTED) === "true") {
+    return;
+  }
+
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "reader-code-copy-button";
+  button.setAttribute("aria-label", "Copy code");
+
+  const copyIcon = makeSvgIcon(COPY_ICON_PATH);
+  copyIcon.setAttribute("class", "rcb-icon rcb-icon-copy");
+
+  const checkIcon = makeSvgIcon(CHECK_ICON_PATH);
+  checkIcon.setAttribute("class", "rcb-icon rcb-icon-check");
+
+  button.appendChild(copyIcon);
+  button.appendChild(checkIcon);
+
+  button.addEventListener("click", () => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        button.classList.add("is-copied");
+        button.setAttribute("aria-label", "Copied");
+        window.setTimeout(() => {
+          button.classList.remove("is-copied");
+          button.setAttribute("aria-label", "Copy code");
+        }, 2000);
+      })
+      .catch(() => {
+        /* clipboard unavailable — silently ignore */
+      });
+  });
+
+  host.appendChild(button);
+  host.setAttribute(COPY_MOUNTED, "true");
+}
+
 /**
- * Wraps `pre > code` fences, applies syntax highlighting, and mounts a React copy control.
- * Returns roots to unmount when the article body is torn down.
+ * Wraps `pre > code` fences, applies syntax highlighting, and mounts a pure-DOM copy button.
+ * No nested React roots are created so the enhancement survives React reconciliation of the
+ * parent `dangerouslySetInnerHTML` container.
  */
-export function enhanceArticleCodeBlocks(container: HTMLElement): Root[] {
-  const roots: Root[] = [];
+export function enhanceArticleCodeBlocks(container: HTMLElement): void {
+  normalizeStandaloneCodeElements(container);
+
+  // Idempotent pass: re-mount copy controls on already-wrapped blocks (e.g. after StrictMode
+  // double-invoke or when the effect runs a second time on the same DOM node).
+  for (const wrapper of container.querySelectorAll<HTMLElement>(`[${WRAPPER}]`)) {
+    const host = wrapper.querySelector<HTMLElement>(".reader-code-copy-host");
+    const code = wrapper.querySelector<HTMLElement>("pre code");
+    if (!host || !code) {
+      continue;
+    }
+    const text = code.textContent ?? "";
+    if (!text.trim()) {
+      continue;
+    }
+    mountCopyButton(host, text);
+  }
 
   for (const pre of container.querySelectorAll<HTMLPreElement>("pre")) {
     if (pre.closest(`[${WRAPPER}]`)) {
       continue;
     }
 
-    const code = pre.querySelector<HTMLElement>("code");
+    let code = pre.querySelector<HTMLElement>("code");
     if (!code) {
-      continue;
+      // Some publisher HTML uses bare `<pre>` without a nested `<code>`.
+      code = document.createElement("code");
+      code.textContent = pre.textContent ?? "";
+      pre.replaceChildren(code);
     }
 
     const text = code.textContent ?? "";
@@ -205,7 +315,7 @@ export function enhanceArticleCodeBlocks(container: HTMLElement): Root[] {
       continue;
     }
 
-    const fenceLang = extractFenceLanguage(code);
+    const fenceLang = extractFenceLanguage(pre, code);
     const { value, language: hlLanguage } = highlightCode(text, fenceLang);
     const labelText = languageToDisplayName(fenceLang, hlLanguage);
 
@@ -245,10 +355,6 @@ export function enhanceArticleCodeBlocks(container: HTMLElement): Root[] {
 
     pre.classList.add("reader-code-pre");
 
-    const root = createRoot(host);
-    root.render(<ArticleCodeCopyButton text={text} />);
-    roots.push(root);
+    mountCopyButton(host, text);
   }
-
-  return roots;
 }

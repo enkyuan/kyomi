@@ -25,9 +25,11 @@ import {
   listFollowedFeeds,
   unfollowFeed,
 } from "@lib/feed-functions";
+import { isInboxPathname } from "@lib/routes/inbox-path";
 
 export function SidebarFollowedFeeds() {
   const location = useLocation();
+  const isInbox = isInboxPathname(location.pathname);
   const [feedsOpen, setFeedsOpen] = useState(true);
   const followedFeedsQuery = useQuery({
     queryKey: ["feeds", "followed"],
@@ -95,9 +97,7 @@ export function SidebarFollowedFeeds() {
                   key={item.feedId}
                   item={item}
                   unreadCount={unreadCounts[item.feedId] ?? 0}
-                  isActive={
-                    location.pathname === "/inbox" && location.search.feedId === item.feedId
-                  }
+                  isActive={isInbox && location.search.feedId === item.feedId}
                 />
               ))}
             </SidebarMenu>

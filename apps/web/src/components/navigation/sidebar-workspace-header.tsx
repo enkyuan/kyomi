@@ -43,6 +43,7 @@ import { SidebarFeedSearchTrigger } from "@components/navigation/sidebar-feed-se
 import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
 import { listFollowedFeeds } from "@lib/feed-functions";
 import { listFolders } from "@lib/folder-functions";
+import { isInboxPathname } from "@lib/routes/inbox-path";
 import { cn } from "@lib/utils";
 
 const WORKSPACE_SCOPE_FONT = '500 14px "Inter Variable"';
@@ -57,8 +58,9 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
   const isMacKeyboard = isMacPlatform ?? isMac ?? false;
   const navigate = useNavigate();
   const location = useLocation();
-  const scopedFeedId = location.pathname === "/inbox" ? location.search.feedId : undefined;
-  const scopedFolderId = location.pathname === "/inbox" ? location.search.folderId : undefined;
+  const isInbox = isInboxPathname(location.pathname);
+  const scopedFeedId = isInbox ? location.search.feedId : undefined;
+  const scopedFolderId = isInbox ? location.search.folderId : undefined;
   const [commandOpen, setCommandOpen] = useState(false);
   const [createFolderOpen, setCreateFolderOpen] = useState(false);
   const [manageFeedsOpen, setManageFeedsOpen] = useState(false);

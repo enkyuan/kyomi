@@ -220,7 +220,9 @@ export const extractInboxItemFullText = createServerFn({ method: "POST" })
   });
 
 export const getSidebarInboxCounts = createServerFn({ method: "GET" })
-  .inputValidator((input: { timezoneOffsetMinutes?: number }) => input)
+  .inputValidator(
+    (input: { timezoneOffsetMinutes?: number; feedId?: string; folderId?: string }) => input,
+  )
   .handler(async ({ data }): Promise<SidebarInboxCounts> => {
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
@@ -232,6 +234,12 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
     const params = new URLSearchParams();
     params.set("published_after", start);
     params.set("published_before", end);
+    if (data.feedId?.trim()) {
+      params.set("feed_id", data.feedId.trim());
+    }
+    if (data.folderId?.trim()) {
+      params.set("folder_id", data.folderId.trim());
+    }
 
     const counts = await apiJsonValidated(articleCountsSchema, () =>
       apiJson<ArticleCountsResponse>(`/api/v1/articles/counts?${params.toString()}`, {
@@ -244,6 +252,50 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
       unread: counts.unread,
       saved: counts.saved,
     };
+  });
+
+export const getInboxViewCount = createServerFn({ method: "GET" })
+  .inputValidator(
+    (input: {
+      filter: InboxFilter;
+      timezoneOffsetMinutes?: number;
+      feedId?: string;
+      folderId?: string;
+    }) => input,
+  )
+  .handler(async ({ data }): Promise<ScopedUnreadCountResponse> => {
+    const headers = getRequestHeaders();
+    const forwarded = buildForwardHeaders(headers);
+    const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
+      ? Number(data.timezoneOffsetMinutes)
+      : 0;
+
+    const params = new URLSearchParams();
+    if (data.filter === "today") {
+      const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
+      params.set("published_after", start);
+      params.set("published_before", end);
+    }
+    if (data.feedId?.trim()) {
+      params.set("feed_id", data.feedId.trim());
+    }
+    if (data.folderId?.trim()) {
+      params.set("folder_id", data.folderId.trim());
+    }
+
+    const counts = await apiJsonValidated(articleCountsSchema, () =>
+      apiJson<ArticleCountsResponse>(`/api/v1/articles/counts?${params.toString()}`, {
+        headers: forwarded,
+      }),
+    );
+
+    if (data.filter === "today") {
+      return { count: counts.today ?? 0 };
+    }
+    if (data.filter === "saved") {
+      return { count: counts.saved };
+    }
+    return { count: counts.unread };
   });
 
 export const getScopedUnreadCount = createServerFn({ method: "GET" })

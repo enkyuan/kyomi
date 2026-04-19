@@ -3,23 +3,8 @@
 import { Marked, Renderer } from "marked";
 import markedKatex from "marked-katex-extension";
 import { memo } from "react";
+import { normalizeSafeHttpUrl } from "@lib/safe-http-url";
 import { RenderHtml } from "./render-html";
-
-function normalizeSafeHttpUrl(raw: string, baseUrl?: string | null): string | null {
-  const candidate = raw.trim();
-  if (!candidate) {
-    return null;
-  }
-  try {
-    const parsed = new URL(candidate, baseUrl ?? undefined);
-    if (parsed.protocol === "http:" || parsed.protocol === "https:") {
-      return parsed.href;
-    }
-    return null;
-  } catch {
-    return null;
-  }
-}
 
 function escapeAttr(value: string): string {
   return value
@@ -62,6 +47,18 @@ function createMarked(baseUrl?: string | null): Marked {
   return marked;
 }
 
+const markedByBaseUrl = new Map<string, ReturnType<typeof createMarked>>();
+
+function getMarkedForBaseUrl(baseUrl?: string | null): Marked {
+  const key = baseUrl ?? "";
+  let parser = markedByBaseUrl.get(key);
+  if (!parser) {
+    parser = createMarked(baseUrl);
+    markedByBaseUrl.set(key, parser);
+  }
+  return parser;
+}
+
 export const RenderMarkdown = memo(function RenderMarkdown({
   markdown,
   baseUrl,
@@ -69,7 +66,7 @@ export const RenderMarkdown = memo(function RenderMarkdown({
   markdown: string;
   baseUrl?: string | null;
 }) {
-  const parser = createMarked(baseUrl);
+  const parser = getMarkedForBaseUrl(baseUrl);
   const html = parser.parse(markdown, { async: false }) as string;
   return <RenderHtml html={html} baseUrl={baseUrl} />;
 });

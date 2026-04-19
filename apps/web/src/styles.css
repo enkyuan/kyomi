@@ -423,6 +423,25 @@ body {
   color: #b9e2ff;
 }
 
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-number,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-literal,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-symbol,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-bullet {
+  color: #f9c67a;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title.class_,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title.function_ {
+  color: #9bd8ff;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-attr,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-attribute,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-params {
+  color: #c6d6f0;
+}
+
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-host {
   position: relative;
   z-index: 1;
@@ -431,14 +450,21 @@ body {
   align-items: center;
   justify-content: center;
   margin-inline-end: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease;
+}
+
+.reader-content .article-body [data-reader-code-block]:is(:hover, :focus-within) .reader-code-copy-host {
+  opacity: 1;
   pointer-events: auto;
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  /* Grid stacks both icons in one cell and centers them reliably (flex on <svg> does not). */
+  display: inline-grid;
+  place-items: center;
   box-sizing: border-box;
   width: 2rem;
   height: 2rem;
@@ -467,6 +493,40 @@ body {
   background: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
+/* Icon crossfade: copy ↔ check on .is-copied */
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon {
+  grid-area: 1 / 1;
+  display: block;
+  flex-shrink: 0;
+  transform-origin: center;
+  transition: opacity 300ms ease, transform 300ms ease, filter 300ms ease;
+  will-change: opacity, transform, filter;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon-copy {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon-check {
+  opacity: 0;
+  transform: scale(0.25);
+  filter: blur(3px);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button.is-copied .rcb-icon-copy {
+  opacity: 0;
+  transform: scale(0.25);
+  filter: blur(3px);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button.is-copied .rcb-icon-check {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0px);
+}
+
 .reader-content .article-body table {
   width: 100%;
   border-collapse: collapse;
@@ -488,13 +548,37 @@ body {
 
 /* Typography `prose` adds margin-block on img; we use paragraph/figure rhythm instead */
 .reader-content .article-body img {
-  display: block;
-  margin-block: 0;
-  margin-inline: auto;
-  width: 100%;
   max-width: 100%;
   height: auto;
   border-radius: 6px;
+}
+
+.reader-content .article-body [data-reader-inline-img] {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  vertical-align: text-bottom;
+  border-radius: 4px;
+}
+
+.reader-content .article-body [data-reader-img-frame] {
+  display: block;
+  width: min(100%, 56rem);
+  margin-inline: auto;
+}
+
+.reader-content .article-body [data-reader-img-frame] > img {
+  display: block;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Some feeds (e.g. BBC) ship a grey placeholder when the hero asset failed upstream — tone down the solid tile */
+.reader-content .article-body img[aria-label="image unavailable"],
+.reader-content .article-body img[src*="grey-placeholder"] {
+  opacity: 0.42;
+  filter: grayscale(1);
 }
 
 /* Author avatars / small portraits (see data-reader-profile-thumb in render-html.tsx) */

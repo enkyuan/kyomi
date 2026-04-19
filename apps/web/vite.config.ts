@@ -17,6 +17,13 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
+  resolve: {
+    dedupe: ["react", "react-dom"],
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+  },
 });
 
 export default config;

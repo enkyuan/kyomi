@@ -330,3 +330,78 @@ describe("RenderHtml – edge cases", () => {
     });
   });
 });
+
+describe("RenderHtml – media/image hardening", () => {
+  test("keeps inline badge images out of block media frames", async () => {
+    const html = `
+      <p>
+        <img src="https://img.shields.io/badge/CI-passing-brightgreen" alt="CI badge" />
+        <img src="https://img.shields.io/badge/license-apache--2.0-blue" alt="License badge" />
+      </p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      const badges = root?.querySelectorAll("img[data-reader-inline-img]");
+      expect(badges?.length).toBe(2);
+      expect(root?.querySelector("[data-reader-img-frame]")).toBeNull();
+    });
+  });
+
+  test("removes placeholder siblings when a real image is present", async () => {
+    const html = `
+      <p>
+        <img src="https://example.com/grey-placeholder.png" class="article-image unavailable" alt="" />
+        <img src="https://example.com/real-photo.jpg" alt="Real photo" />
+      </p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      const imgs = root?.querySelectorAll("img");
+      expect(imgs?.length).toBe(1);
+      expect(imgs?.[0]?.getAttribute("src")).toContain("real-photo.jpg");
+    });
+  });
+
+  test("removes likely author social cards from article body", async () => {
+    const html = `
+      <div class="author-card">
+        <img src="https://example.com/author.jpg" alt="Author" />
+        <p>Jane Doe, editor at Example.</p>
+        <a href="https://twitter.com/jane">X</a>
+        <a href="https://linkedin.com/in/jane">LinkedIn</a>
+      </div>
+      <p>Actual article paragraph.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector(".author-card")).toBeNull();
+      expect(root?.textContent).toContain("Actual article paragraph");
+    });
+  });
+});
+
+describe("RenderHtml – code block normalization", () => {
+  test("normalizes standalone multiline code tags into enhanced blocks", async () => {
+    const html = `
+      <div>
+        <code class="language-bash">mydumper \\
+  --threads 32 \\
+  --outputdir /root/mydumper_backup/</code>
+      </div>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-code-block]")).toBeTruthy();
+      expect(root?.querySelector("button[aria-label='Copy code']")).toBeTruthy();
+      expect(root?.querySelector(".reader-code-lang-label")?.textContent).toBe("Bash");
+    });
+  });
+});

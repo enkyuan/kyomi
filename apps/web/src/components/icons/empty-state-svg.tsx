@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useLayoutEffect, useId, useState } from "react";
 
 interface EmptyStateSVGProps {
   width?: number;
@@ -13,23 +13,33 @@ interface EmptyStateBaseProps extends EmptyStateSVGProps {
 }
 
 function useResolvedTheme() {
-  const [resolvedTheme, setResolvedTheme] = useState<"dark" | "light">(() =>
-    typeof document !== "undefined" && document.documentElement.classList.contains("dark")
-      ? "dark"
-      : "light",
-  );
+  const [resolvedTheme, setResolvedTheme] = useState<"dark" | "light">(() => {
+    if (typeof document === "undefined") {
+      return "dark";
+    }
+    const root = document.documentElement;
+    const dataTheme = root.getAttribute("data-theme");
+    if (root.classList.contains("dark") || dataTheme === "dark") {
+      return "dark";
+    }
+    if (root.classList.contains("light") || dataTheme === "light") {
+      return "light";
+    }
+    return "dark";
+  });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const root = document.documentElement;
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const getTheme = () => {
-      if (root.classList.contains("dark")) {
+      const dataTheme = root.getAttribute("data-theme");
+      if (root.classList.contains("dark") || dataTheme === "dark") {
         return "dark" as const;
       }
-      if (root.classList.contains("light")) {
+      if (root.classList.contains("light") || dataTheme === "light") {
         return "light" as const;
       }
-      return mediaQuery.matches ? ("dark" as const) : ("light" as const);
+      return "dark" as const;
     };
     const updateTheme = () => {
       setResolvedTheme(getTheme());

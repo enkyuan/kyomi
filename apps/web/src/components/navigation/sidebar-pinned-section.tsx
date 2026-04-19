@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { listFollowedFeeds, type FollowedFeed } from "@lib/feed-functions";
+import { isInboxPathname } from "@lib/routes/inbox-path";
 import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
 import {
   SidebarGroup,
@@ -23,6 +24,7 @@ function isFollowedFeed(value: FollowedFeed | undefined): value is FollowedFeed 
 
 export function SidebarPinnedSection() {
   const location = useLocation();
+  const isInbox = isInboxPathname(location.pathname);
   const [pinnedOpen, setPinnedOpen] = useState(true);
   const followedFeedsQuery = useQuery({
     queryKey: ["feeds", "followed"],
@@ -65,9 +67,7 @@ export function SidebarPinnedSection() {
                 <SidebarMenuItem key={feed.feedId}>
                   <SidebarMenuButton
                     tooltip={feed.title || feed.url}
-                    isActive={
-                      location.pathname === "/inbox" && location.search.feedId === feed.feedId
-                    }
+                    isActive={isInbox && location.search.feedId === feed.feedId}
                     render={
                       <Link
                         to="/inbox"

@@ -8,6 +8,7 @@ import { Spinner } from "@components/ui/spinner";
 import { toastManager } from "@components/ui/toast";
 import { useArticleExtraction } from "@hooks/use-article-extraction";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/api-schemas";
+import { readerContentForMode } from "@lib/reader-display";
 import { cn } from "@lib/utils";
 
 function estimateReadingTime(html: string): number {
@@ -36,7 +37,7 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
   const extractMutation = useArticleExtraction(item.id);
   const requestedExtractionForItemRef = useRef<string | null>(null);
 
-  const displayReader = item.readerExtracted ?? item.readerOriginal;
+  const displayReader = readerContentForMode(item, item.defaultReaderMode);
 
   const displayContent =
     displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "";
@@ -126,7 +127,9 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
             </>
           ) : null}
         </div>
-        <p className="text-xl font-semibold text-foreground">{item.title}</p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <p className="min-w-0 flex-1 text-xl font-semibold text-foreground">{item.title}</p>
+        </div>
         <InboxSourceRow
           articleUrl={item.link}
           feedTitle={item.feedTitle}

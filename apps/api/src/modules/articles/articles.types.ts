@@ -62,6 +62,11 @@ export type ArticleCountsDto = {
   today?: number;
 };
 
+export type ArticleCountScope = {
+  feedId?: string;
+  folderId?: string;
+};
+
 export type SavedArticleMatchDto = {
   id: string;
   title: string;

@@ -177,6 +177,8 @@ export const cursorListResponseSchema = t.Object({
 export const articleCountsQuerySchema = t.Object({
   published_after: t.Optional(t.String()),
   published_before: t.Optional(t.String()),
+  feed_id: t.Optional(t.String()),
+  folder_id: t.Optional(t.String()),
 });
 
 export const countsResponseSchema = t.Object({

@@ -12,6 +12,11 @@ type UseInboxQueriesInput = {
   timezoneOffsetMinutes?: number;
 };
 
+/**
+ * De-duplicates by primary key when combining infinite-query pages (React Query can
+ * briefly overlap windows). The API also collapses same-feed canonical URL duplicates
+ * server-side — this is only a client idempotency guard.
+ */
 export function dedupeInboxItems(items: Awaited<ReturnType<typeof getInboxItems>>["items"]) {
   const unique = new Map<string, (typeof items)[number]>();
   for (const item of items) {

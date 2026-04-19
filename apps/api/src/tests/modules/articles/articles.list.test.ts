@@ -2,7 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   collapseObviousDuplicates,
   normalizedArticleIdentity,
-} from "@modules/articles/articles.list";
+} from "@modules/articles/articles-list-dedupe";
 
 type Row = {
   id: string;

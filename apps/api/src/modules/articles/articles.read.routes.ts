@@ -58,9 +58,18 @@ export function registerArticleReadRoutes(app: Elysia) {
       async (context) => {
         const { db, query, userId } = v1HandlerContext<
           unknown,
-          { published_after?: string; published_before?: string }
+          {
+            published_after?: string;
+            published_before?: string;
+            feed_id?: string;
+            folder_id?: string;
+          }
         >(context);
-        const base = await getArticleCountsForUser(db, userId);
+        const scope = {
+          feedId: typeof query.feed_id === "string" ? query.feed_id : undefined,
+          folderId: typeof query.folder_id === "string" ? query.folder_id : undefined,
+        };
+        const base = await getArticleCountsForUser(db, userId, scope);
         const publishedAfter = parseOptionalIsoDate(query.published_after);
         const publishedBefore = parseOptionalIsoDate(query.published_before);
         if (publishedAfter && publishedBefore) {
@@ -69,6 +78,7 @@ export function registerArticleReadRoutes(app: Elysia) {
             userId,
             publishedAfter,
             publishedBefore,
+            scope,
           );
           return { ...base, today };
         }

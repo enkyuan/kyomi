@@ -3,22 +3,31 @@
 import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useLocation } from "@tanstack/react-router";
 import { SidebarFooterActions } from "@components/navigation/sidebar-footer-actions";
 import { SidebarInboxNav } from "@components/navigation/sidebar-inbox-nav";
 import { SidebarPinnedSection } from "@components/navigation/sidebar-pinned-section";
 import { SidebarWorkspaceHeader } from "@components/navigation/sidebar-workspace-header";
-import { SettingsDialog } from "src/components/pages/settings";
+import { SettingsDialog } from "@components/pages/settings";
 import { Sidebar, SidebarContent } from "@components/ui/sidebar";
 import { getSidebarInboxCounts } from "@lib/inbox-functions";
+import { isInboxPathname } from "@lib/routes/inbox-path";
 
 export function AppSidebar() {
+  const location = useLocation();
   const [isMacPlatform, setIsMacPlatform] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
+  const isInbox = isInboxPathname(location.pathname);
+  const scopedFeedId = isInbox ? location.search.feedId : undefined;
+  const scopedFolderId = isInbox ? location.search.folderId : undefined;
   const inboxSummaryQuery = useQuery({
-    queryKey: ["sidebar", "inbox-summary", timezoneOffsetMinutes],
+    queryKey: ["sidebar", "inbox-summary", timezoneOffsetMinutes, scopedFeedId, scopedFolderId],
     enabled: timezoneOffsetMinutes !== undefined,
-    queryFn: () => getSidebarInboxCounts({ data: { timezoneOffsetMinutes } }),
+    queryFn: () =>
+      getSidebarInboxCounts({
+        data: { timezoneOffsetMinutes, feedId: scopedFeedId, folderId: scopedFolderId },
+      }),
   });
   const counts = inboxSummaryQuery.data ?? { today: 0, unread: 0, saved: 0 };
 

@@ -6,6 +6,7 @@ import type {
   ArticleStoredContentDto,
   ExtractedContentStatus,
 } from "./articles.content.types";
+import { normalizeMarkdownFeedArtifacts } from "./articles.markdown-artifacts";
 import { htmlToText, sanitizeArticleHtml } from "./articles.sanitize-content";
 
 type ReaderArticleInput = {
@@ -144,17 +145,18 @@ function contentFromLegacy(input: ReaderArticleInput) {
         return null;
       }
       const bodyKind: "markdown" | "text" = looksLikeMarkdown(text) ? "markdown" : "text";
+      const normalizedText = bodyKind === "markdown" ? normalizeMarkdownFeedArtifacts(text) : text;
       return {
         bodyKind,
         contentHtml: null,
-        contentMarkdown: bodyKind === "markdown" ? text : null,
-        contentText: text,
+        contentMarkdown: bodyKind === "markdown" ? normalizedText : null,
+        contentText: normalizedText,
         contentSource:
           bodyKind === "markdown" ? ("feed_markdown" as const) : ("text_fallback" as const),
         contentStatus: "partial" as const,
       };
     }
-    const htmlText = htmlToText(html).trim();
+    const htmlText = normalizeMarkdownFeedArtifacts(htmlToText(html).trim());
     if (htmlText && looksLikeMarkdown(htmlText) && htmlLooksLikeWrappedMarkdown(html)) {
       return {
         bodyKind: "markdown" as const,
@@ -176,11 +178,12 @@ function contentFromLegacy(input: ReaderArticleInput) {
   }
 
   if (looksLikeMarkdown(legacy)) {
+    const md = normalizeMarkdownFeedArtifacts(legacy);
     return {
       bodyKind: "markdown" as const,
       contentHtml: null,
-      contentMarkdown: legacy,
-      contentText: legacy,
+      contentMarkdown: md,
+      contentText: md,
       contentSource: "feed_markdown" as const,
       contentStatus: "partial" as const,
     };
@@ -201,11 +204,11 @@ function buildStoredBody(input: ReaderArticleInput) {
   if (input.contentHtml?.trim()) {
     const html = sanitizeArticleHtml(input.contentHtml, { baseUrl });
     if (!html) {
-      const textCandidate = input.contentText?.trim() ?? htmlToText(input.contentHtml).trim();
-      if (textCandidate) {
-        const bodyKind: "markdown" | "text" = looksLikeMarkdown(textCandidate)
-          ? "markdown"
-          : "text";
+      const rawCandidate = input.contentText?.trim() ?? htmlToText(input.contentHtml).trim();
+      if (rawCandidate) {
+        const bodyKind: "markdown" | "text" = looksLikeMarkdown(rawCandidate) ? "markdown" : "text";
+        const textCandidate =
+          bodyKind === "markdown" ? normalizeMarkdownFeedArtifacts(rawCandidate) : rawCandidate;
         return {
           bodyKind,
           contentHtml: null,
@@ -218,7 +221,9 @@ function buildStoredBody(input: ReaderArticleInput) {
       }
       return null;
     }
-    const htmlText = input.contentText?.trim() || htmlToText(html).trim();
+    const htmlText = normalizeMarkdownFeedArtifacts(
+      (input.contentText?.trim() || htmlToText(html).trim()).trim(),
+    );
     if (htmlText && looksLikeMarkdown(htmlText) && htmlLooksLikeWrappedMarkdown(html)) {
       return {
         bodyKind: "markdown" as const,
@@ -240,19 +245,21 @@ function buildStoredBody(input: ReaderArticleInput) {
   }
 
   if (input.contentMarkdown?.trim()) {
+    const md = normalizeMarkdownFeedArtifacts(input.contentMarkdown.trim());
     return {
       bodyKind: "markdown" as const,
       contentHtml: null,
-      contentMarkdown: input.contentMarkdown.trim(),
-      contentText: input.contentText?.trim() || input.contentMarkdown.trim(),
+      contentMarkdown: md,
+      contentText: input.contentText?.trim() || md,
       contentSource: input.contentSource ?? "feed_markdown",
       contentStatus: input.contentStatus ?? "ready",
     };
   }
 
   if (input.contentText?.trim()) {
-    const text = input.contentText.trim();
-    const bodyKind: "markdown" | "text" = looksLikeMarkdown(text) ? "markdown" : "text";
+    const rawText = input.contentText.trim();
+    const bodyKind: "markdown" | "text" = looksLikeMarkdown(rawText) ? "markdown" : "text";
+    const text = bodyKind === "markdown" ? normalizeMarkdownFeedArtifacts(rawText) : rawText;
     return {
       bodyKind,
       contentHtml: null,
