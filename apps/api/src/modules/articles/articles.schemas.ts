@@ -7,13 +7,8 @@ export const extractedContentStatusSchema = t.Union([
   t.Literal("failed"),
 ]);
 
-export const readerContentSchema = t.Object({
-  contentStatus: t.Union([
-    t.Literal("ready"),
-    t.Literal("partial"),
-    t.Literal("failed"),
-    t.Literal("pending"),
-  ]),
+const readerContentCommonProperties = {
+  contentStatus: t.Union([t.Literal("ready"), t.Literal("partial"), t.Literal("failed")]),
   contentSource: t.Union([
     t.Literal("feed_html"),
     t.Literal("feed_markdown"),
@@ -28,9 +23,21 @@ export const readerContentSchema = t.Object({
     t.Literal("text"),
     t.Literal("fallback"),
   ]),
+  contentBaseUrl: t.Union([t.String(), t.Null()]),
   title: t.Union([t.String(), t.Null()]),
   byline: t.Union([t.String(), t.Null()]),
   excerpt: t.Union([t.String(), t.Null()]),
+  siteName: t.Union([t.String(), t.Null()]),
+  language: t.Union([t.String(), t.Null()]),
+  publishedTime: t.Union([t.String(), t.Null()]),
+  notice: t.Union([t.String(), t.Null()]),
+  extractionErrorCode: t.Union([t.String(), t.Null()]),
+  extractionErrorMessage: t.Union([t.String(), t.Null()]),
+  shouldExtract: t.Boolean(),
+} as const;
+
+export const readerContentSchema = t.Object({
+  ...readerContentCommonProperties,
   contentHtml: t.Union([t.String(), t.Null()]),
   contentMarkdown: t.Union([t.String(), t.Null()]),
   contentText: t.Union([t.String(), t.Null()]),
@@ -41,14 +48,60 @@ export const readerContentSchema = t.Object({
     t.Literal("missing_content"),
     t.Null(),
   ]),
-  siteName: t.Union([t.String(), t.Null()]),
-  language: t.Union([t.String(), t.Null()]),
-  publishedTime: t.Union([t.String(), t.Null()]),
-  notice: t.Union([t.String(), t.Null()]),
-  extractionErrorCode: t.Union([t.String(), t.Null()]),
-  extractionErrorMessage: t.Union([t.String(), t.Null()]),
-  shouldExtract: t.Boolean(),
 });
+
+const readerFallbackReasonSchema = t.Union([
+  t.Literal("extraction_failed"),
+  t.Literal("timeout"),
+  t.Literal("missing_content"),
+]);
+
+const readerHtmlSchema = t.Object({
+  ...readerContentCommonProperties,
+  bodyKind: t.Literal("html"),
+  contentHtml: t.String(),
+  contentMarkdown: t.Null(),
+  contentText: t.Union([t.String(), t.Null()]),
+  fallbackSummary: t.Null(),
+  fallbackReason: t.Null(),
+});
+
+const readerMarkdownSchema = t.Object({
+  ...readerContentCommonProperties,
+  bodyKind: t.Literal("markdown"),
+  contentHtml: t.Null(),
+  contentMarkdown: t.String(),
+  contentText: t.Union([t.String(), t.Null()]),
+  fallbackSummary: t.Null(),
+  fallbackReason: t.Null(),
+});
+
+const readerTextSchema = t.Object({
+  ...readerContentCommonProperties,
+  bodyKind: t.Literal("text"),
+  contentHtml: t.Null(),
+  contentMarkdown: t.Null(),
+  contentText: t.String(),
+  fallbackSummary: t.Null(),
+  fallbackReason: t.Null(),
+});
+
+const readerFallbackSchema = t.Object({
+  ...readerContentCommonProperties,
+  bodyKind: t.Literal("fallback"),
+  contentHtml: t.Null(),
+  contentMarkdown: t.Null(),
+  contentText: t.Null(),
+  fallbackSummary: t.Union([t.String(), t.Null()]),
+  fallbackReason: readerFallbackReasonSchema,
+});
+
+export const readerContentContractSchema = t.Union([
+  readerHtmlSchema,
+  readerMarkdownSchema,
+  readerTextSchema,
+  readerFallbackSchema,
+]);
 
 export const articleDetailSchema = t.Object({
   id: t.String(),
@@ -80,8 +133,8 @@ export const articleDetailSchema = t.Object({
   isRead: t.Boolean(),
   isSaved: t.Boolean(),
   articleType: t.Union([t.Literal("feed"), t.Literal("clip")]),
-  readerOriginal: readerContentSchema,
-  readerExtracted: t.Union([readerContentSchema, t.Null()]),
+  readerOriginal: readerContentContractSchema,
+  readerExtracted: t.Union([readerContentContractSchema, t.Null()]),
   extractedContentStatus: extractedContentStatusSchema,
   extractedContentError: t.Union([t.String(), t.Null()]),
   extractedContentUpdatedAt: t.Union([t.String(), t.Null()]),
@@ -121,9 +174,15 @@ export const cursorListResponseSchema = t.Object({
   total_count: t.Null(),
 });
 
+export const articleCountsQuerySchema = t.Object({
+  published_after: t.Optional(t.String()),
+  published_before: t.Optional(t.String()),
+});
+
 export const countsResponseSchema = t.Object({
   unread: t.Number(),
   saved: t.Number(),
+  today: t.Optional(t.Number()),
 });
 
 export const savedCheckArticleSchema = t.Object({

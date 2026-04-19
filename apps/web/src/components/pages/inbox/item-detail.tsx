@@ -1,11 +1,14 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
 import { ReaderContent } from "@components/reader/reader-content";
 import { Button } from "@components/ui/button";
+import { Spinner } from "@components/ui/spinner";
+import { toastManager } from "@components/ui/toast";
 import { useArticleExtraction } from "@hooks/use-article-extraction";
-import type { ArticleDetailDto } from "@lib/api-schemas";
+import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/api-schemas";
+import { cn } from "@lib/utils";
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -47,6 +50,52 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
   const showFailedBanner =
     item.extractedContentStatus === "failed" && Boolean(item.extractedContentError);
 
+  const runExtract = useCallback(
+    (reason: "auto" | "manual") => {
+      if (extractMutation.isPending) {
+        return;
+      }
+
+      const extractionPromise = extractMutation
+        .mutateAsync()
+        .then((result: ExtractFullTextResponseDto) => {
+          if (!result.ok) {
+            const detail = [result.errorMessage, result.errorCode].filter(Boolean).join(" ");
+            throw new Error(detail || "Extraction failed");
+          }
+          return result;
+        });
+
+      if (reason === "auto") {
+        void extractionPromise.catch(() => {
+          requestedExtractionForItemRef.current = null;
+        });
+        return;
+      }
+
+      void toastManager.promise(extractionPromise, {
+        loading: {
+          title: "Extracting full text...",
+          description: "Fetching full article text.",
+          type: "loading",
+          timeout: 0,
+        },
+        success: {
+          title: "Full text ready",
+          description: "Article content has been refreshed.",
+          type: "success",
+        },
+        error: (error) => ({
+          title: "Extraction failed",
+          description:
+            error instanceof Error ? error.message : "Could not fetch extracted article content.",
+          type: "error",
+        }),
+      });
+    },
+    [extractMutation],
+  );
+
   useEffect(() => {
     if (!shouldAutoExtract || extractMutation.isPending) {
       return;
@@ -56,13 +105,17 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
     }
 
     requestedExtractionForItemRef.current = item.id;
-    extractMutation.mutate();
-  }, [extractMutation, item.id, shouldAutoExtract]);
-
-  const runExtract = () => extractMutation.mutate();
+    runExtract("auto");
+  }, [extractMutation.isPending, item.id, runExtract, shouldAutoExtract]);
 
   return (
-    <article className="reader-content prose prose-neutral dark:prose-invert mx-auto max-w-3xl py-10 px-2">
+    <article className="reader-content prose prose-neutral dark:prose-invert relative mx-auto max-w-3xl px-2 py-10">
+      {extractMutation.isPending && !showFailedBanner && !item.readerExtracted ? (
+        <div className="not-prose absolute right-2 top-10 flex items-center gap-2 text-muted-foreground text-xs">
+          <Spinner className="size-4" />
+        </div>
+      ) : null}
+
       <div className="not-prose mb-6 flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
           <span>{formatArticleTimestamp(item.publishedAt)}</span>
@@ -82,26 +135,29 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
         />
       </div>
 
-      {extractMutation.isPending ? (
-        <p className="not-prose mb-3 text-xs uppercase tracking-wide text-muted-foreground">
-          Extracting full text…
-        </p>
-      ) : null}
-
       {showFailedBanner ? (
-        <div className="not-prose mb-4 rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-sm text-foreground">
+        <div
+          className={cn(
+            "not-prose relative mb-4 rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-sm text-foreground",
+            extractMutation.isPending ? "pr-11" : null,
+          )}
+        >
+          {extractMutation.isPending ? (
+            <div className="absolute right-3 top-3 text-muted-foreground" aria-hidden>
+              <Spinner className="size-4" />
+            </div>
+          ) : null}
           <p className="font-medium text-destructive">Couldn&apos;t load extracted text</p>
           <p className="mt-1 text-muted-foreground">{item.extractedContentError}</p>
           {canRequestExtraction ? (
             <Button
               type="button"
-              variant="outline"
+              variant="ghost"
               size="sm"
               className="mt-2"
-              disabled={extractMutation.isPending}
-              onClick={() => runExtract()}
+              onClick={() => runExtract("manual")}
             >
-              {extractMutation.isPending ? "Retrying…" : "Try again"}
+              Try again
             </Button>
           ) : null}
         </div>

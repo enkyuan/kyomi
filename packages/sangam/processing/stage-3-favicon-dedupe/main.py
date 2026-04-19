@@ -4,7 +4,7 @@ import logging
 import sys
 import os
 
-# Ensure project root is in path for readspace import
+# Ensure project root is in path for feed import
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
 from pipeline import Pipeline

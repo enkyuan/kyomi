@@ -124,13 +124,11 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
 
   const folderItems = foldersQuery.data ?? [];
   const feedItems = followedFeedsQuery.data ?? [];
-  const currentFeedId = location.pathname === "/inbox" ? location.search.feedId : undefined;
-  const currentFolderId = location.pathname === "/inbox" ? location.search.folderId : undefined;
-  const currentFeed = currentFeedId
-    ? feedItems.find((item) => item.feedId === currentFeedId)
+  const currentFeed = scopedFeedId
+    ? feedItems.find((item) => item.feedId === scopedFeedId)
     : undefined;
-  const currentFolder = currentFolderId
-    ? folderItems.find((folder) => folder.id === currentFolderId)
+  const currentFolder = scopedFolderId
+    ? folderItems.find((folder) => folder.id === scopedFolderId)
     : undefined;
   const currentScope = currentFeed
     ? {
@@ -232,8 +230,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                             key={folder.id}
                             value={`${folder.name} folder`}
                             className={cn(
-                              currentFolderId === folder.id &&
-                                "bg-accent/72 text-accent-foreground",
+                              scopedFolderId === folder.id && "bg-accent/72 text-accent-foreground",
                             )}
                             onClick={() => {
                               void navigate({
@@ -251,7 +248,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                           >
                             <Folder2Fill className="me-2 size-4" />
                             <span>{folder.name}</span>
-                            {currentFolderId === folder.id ? (
+                            {scopedFolderId === folder.id ? (
                               <Badge className="ms-auto" size="sm" variant="secondary">
                                 Current
                               </Badge>
@@ -287,8 +284,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                             key={item.feedId}
                             value={`${item.title} ${item.url} ${item.folderName ?? ""}`}
                             className={cn(
-                              currentFeedId === item.feedId &&
-                                "bg-accent/72 text-accent-foreground",
+                              scopedFeedId === item.feedId && "bg-accent/72 text-accent-foreground",
                             )}
                             onClick={() => {
                               void navigate({
@@ -316,7 +312,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                               <span
                                 className={cn(
                                   "truncate text-xs",
-                                  currentFeedId === item.feedId
+                                  scopedFeedId === item.feedId
                                     ? "text-accent-foreground/72"
                                     : "text-muted-foreground",
                                 )}
@@ -324,7 +320,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                                 {item.folderName}
                               </span>
                             ) : null}
-                            {currentFeedId === item.feedId ? (
+                            {scopedFeedId === item.feedId ? (
                               <Badge className="ms-2" size="sm" variant="secondary">
                                 Current
                               </Badge>

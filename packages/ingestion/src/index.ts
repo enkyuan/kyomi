@@ -64,6 +64,7 @@ type FeedMetadata = {
 
 type ParsedFeedItem = {
   id: string;
+  stableIdentity: string;
   title: string;
   link: string;
   summary: string | null;
@@ -100,7 +101,12 @@ type FetchFeedDocumentResult =
       lastModified: string | null;
       notModified: false;
     }
-  | { ok: true; notModified: true }
+  | {
+      ok: true;
+      notModified: true;
+      etag: string | null;
+      lastModified: string | null;
+    }
   | { ok: false; error: string };
 
 type SearchSyncConfig = {
@@ -194,6 +200,25 @@ function normalizeFeedUrl(raw: string): string {
   return url.href;
 }
 
+function normalizedArticleIdentity(raw: string): string {
+  try {
+    const url = new URL(raw.trim());
+    url.hash = "";
+    url.hostname = url.hostname.toLowerCase();
+    for (const key of [...url.searchParams.keys()]) {
+      if (/^utm_/i.test(key) || key === "fbclid" || key === "gclid" || key === "mc_cid") {
+        url.searchParams.delete(key);
+      }
+    }
+    if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
+      url.pathname = url.pathname.slice(0, -1);
+    }
+    return url.href;
+  } catch {
+    return raw.trim();
+  }
+}
+
 function stripTags(html: string): string {
   return decodeHtmlEntities(
     html
@@ -224,10 +249,42 @@ function looksLikeHtml(value: string | null): boolean {
   return Boolean(value && /<[a-z][\s\S]*>/i.test(value));
 }
 
+function markdownSignalScore(value: string): number {
+  let score = 0;
+  if (/(^|\n)\s*```[\w-]*\n[\s\S]*?\n\s*```/m.test(value)) score += 7;
+  if (/(^|\n)\s{0,3}(?:[-*+]\s+|\d+[.)]\s+)/m.test(value)) score += 4;
+  if (/(^|\n)\s{0,3}>[^\n]+/m.test(value)) score += 3;
+  if (/(^|\n)\s{0,3}#{1,6}\s+\S/m.test(value)) score += 4;
+  if (/(^|\n)[^\n]+\n(?:=+|-{3,})\s*($|\n)/m.test(value)) score += 4;
+  if (/(^|\n)\s*\|.+\|\s*\n\s*\|[-:\s|]+\|/m.test(value)) score += 6;
+  if (/\[[^\]]+\]\(([^)\s]+)(?:\s+"[^"]*")?\)/m.test(value)) score += 4;
+  if (/!\[[^\]]*]\(([^)\s]+)(?:\s+"[^"]*")?\)/m.test(value)) score += 4;
+  if (/`[^`\n]{1,140}`/.test(value)) score += 3;
+  if (/(^|\n)\s*[-*_]{3,}\s*($|\n)/m.test(value)) score += 2;
+  return score;
+}
+
 function looksLikeMarkdown(value: string | null): boolean {
-  return Boolean(
-    value && /(^|\n)(#{1,6}\s|[-*+]\s|\d+\.\s|>\s|```)|\[[^\]]+\]\([^)]+\)|\$(.+)\$/m.test(value),
-  );
+  if (!value) {
+    return false;
+  }
+  const score = markdownSignalScore(value);
+  const hasHeading = /(^|\n)\s{0,3}#{1,6}\s+\S/m.test(value);
+  const hasSetextHeading = /(^|\n)[^\n]+\n(?:=+|-{3,})\s*($|\n)/m.test(value);
+  const hasList = /(^|\n)\s{0,3}(?:[-*+]\s+|\d+[.)]\s+)/m.test(value);
+  const hasRule = /(^|\n)\s*[-*_]{3,}\s*($|\n)/m.test(value);
+
+  if (score >= 6) {
+    return true;
+  }
+  if (value.length > 1800 && score >= 4 && (hasHeading || hasSetextHeading || hasList || hasRule)) {
+    return true;
+  }
+  return score >= 3 && value.length <= 2600;
+}
+
+function htmlLooksLikeWrappedMarkdown(value: string): boolean {
+  return !/<(h[1-6]|ul|ol|li|blockquote|pre|table|thead|tbody|tr|th|td|hr|code)\b/i.test(value);
 }
 
 function buildStoredFeedContent(
@@ -258,6 +315,19 @@ function buildStoredFeedContent(
   }
 
   if (looksLikeHtml(sanitized)) {
+    const htmlText = stripTags(sanitized);
+    if (looksLikeMarkdown(htmlText) && htmlLooksLikeWrappedMarkdown(sanitized)) {
+      return {
+        content: sanitized,
+        contentHtml: null,
+        contentText: htmlText,
+        contentMarkdown: htmlText,
+        contentStatus: "ready",
+        contentSource: "feed_markdown",
+        extractionErrorCode: null,
+        extractionErrorMessage: null,
+      };
+    }
     return {
       content: sanitized,
       contentHtml: sanitized,
@@ -452,14 +522,8 @@ function stableUuid(seed: string): string {
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20, 32)}`;
 }
 
-function computeFeedItemId(
-  feedId: string,
-  link: string,
-  title: string,
-  publishedAt: Date,
-  ordinal: number,
-): string {
-  return stableUuid(`${feedId}|${link}|${title}|${publishedAt.toISOString()}|${ordinal}`);
+function computeFeedItemId(feedId: string, stableIdentity: string): string {
+  return stableUuid(`${feedId}|${stableIdentity}`);
 }
 
 async function fetchFeedDocument(
@@ -485,7 +549,12 @@ async function fetchFeedDocument(
     });
 
     if (response.status === 304) {
-      return { ok: true, notModified: true };
+      return {
+        ok: true,
+        notModified: true,
+        etag: response.headers.get("etag"),
+        lastModified: response.headers.get("last-modified"),
+      };
     }
 
     if (!response.ok) {
@@ -650,6 +719,8 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       (typeof record.url === "string" && record.url.trim()) ||
       (typeof record.external_url === "string" && record.external_url.trim()) ||
       `${finalUrl}#item-${index + 1}`;
+    const stableIdentity =
+      (typeof record.id === "string" && record.id.trim()) || normalizedArticleIdentity(itemLink);
     const contentHtml =
       typeof record.content_html === "string" ? record.content_html.trim() || null : null;
     const contentText =
@@ -659,7 +730,8 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
     const publishedAt = parsePublishedAt(record.date_published, now);
     return [
       {
-        id: computeFeedItemId(feedId, itemLink, itemTitle, publishedAt, index),
+        id: computeFeedItemId(feedId, stableIdentity),
+        stableIdentity,
         title: itemTitle,
         link: itemLink,
         summary:
@@ -702,6 +774,7 @@ function parseRssDocument(
       record.link,
       rawText(record.guid) ?? `${finalUrl}#item-${index + 1}`,
     );
+    const stableIdentity = rawText(record.guid) ?? normalizedArticleIdentity(itemLink);
     const storedContent = buildStoredFeedContent(
       rawText(record["content:encoded"]) ?? rawText(record.description),
     );
@@ -714,7 +787,8 @@ function parseRssDocument(
 
     return [
       {
-        id: computeFeedItemId(feedId, itemLink, itemTitle, publishedAt, index),
+        id: computeFeedItemId(feedId, stableIdentity),
+        stableIdentity,
         title: itemTitle,
         link: itemLink,
         summary,
@@ -752,6 +826,7 @@ function parseAtomDocument(
     const record = entry as Record<string, unknown>;
     const itemTitle = xmlText(record.title) || `Untitled item ${index + 1}`;
     const itemLink = pickAtomLink(record.link, `${finalUrl}#entry-${index + 1}`);
+    const stableIdentity = rawText(record.id) ?? normalizedArticleIdentity(itemLink);
     const storedContent = buildStoredFeedContent(
       rawText(record.content) ?? rawText(record.summary),
     );
@@ -761,7 +836,8 @@ function parseAtomDocument(
 
     return [
       {
-        id: computeFeedItemId(feedId, itemLink, itemTitle, publishedAt, index),
+        id: computeFeedItemId(feedId, stableIdentity),
+        stableIdentity,
         title: itemTitle,
         link: itemLink,
         summary,
@@ -841,7 +917,11 @@ export async function runFeedRefresh(
     const startedAt = new Date();
     await database
       .update(feeds)
-      .set({ refreshStatus: "running", lastRefreshStartedAt: startedAt })
+      .set({
+        refreshStatus: "running",
+        lastRefreshStartedAt: startedAt,
+        lastRefreshError: null,
+      })
       .where(eq(feeds.id, feedId));
 
     const [feed] = await database
@@ -910,6 +990,8 @@ export async function runFeedRefresh(
           lastRefreshCompletedAt: now,
           lastRefreshSucceededAt: now,
           lastRefreshError: null,
+          etag: fetched.etag ?? feed.etag,
+          lastModified: fetched.lastModified ?? feed.lastModified,
           nextRefreshAt: new Date(now.getTime() + 60 * 60 * 1000), // Next refresh in 1 hour
           ...(faviconPatch ?? {}),
         })
@@ -921,7 +1003,7 @@ export async function runFeedRefresh(
     const now = new Date();
     const deduped = new Map<string, ParsedFeedItem>();
     for (const item of parsed.items) {
-      deduped.set(item.id, item);
+      deduped.set(item.stableIdentity, item);
     }
     const items = Array.from(deduped.values());
     // TODO: add language detection once we settle on the TS-side metadata/storage model.

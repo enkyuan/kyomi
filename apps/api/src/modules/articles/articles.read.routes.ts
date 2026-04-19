@@ -2,14 +2,19 @@ import type { Elysia } from "elysia";
 import { t } from "elysia";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { listClipsForUser } from "./articles.clips";
-import { getArticleCountsForUser, getUnreadCountsPerFeed } from "./articles.counts";
+import {
+  countFeedArticlesPublishedInRange,
+  getArticleCountsForUser,
+  getUnreadCountsPerFeed,
+} from "./articles.counts";
 import { getArticleDetailForUser } from "./articles.detail";
 import { listArticlesForUser } from "./articles.list";
-import { parseArticlesListQuery } from "./articles.query";
+import { parseArticlesListQuery, parseOptionalIsoDate } from "./articles.query";
 import {
   articleDetailSchema,
   articleIdParamsSchema,
   checkSavedQuerySchema,
+  articleCountsQuerySchema,
   countsResponseSchema,
   cursorListResponseSchema,
   savedCheckResponseSchema,
@@ -51,10 +56,28 @@ export function registerArticleReadRoutes(app: Elysia) {
     .get(
       "/articles/counts",
       async (context) => {
-        const { db, userId } = v1HandlerContext(context);
-        return getArticleCountsForUser(db, userId);
+        const { db, query, userId } = v1HandlerContext<
+          unknown,
+          { published_after?: string; published_before?: string }
+        >(context);
+        const base = await getArticleCountsForUser(db, userId);
+        const publishedAfter = parseOptionalIsoDate(query.published_after);
+        const publishedBefore = parseOptionalIsoDate(query.published_before);
+        if (publishedAfter && publishedBefore) {
+          const today = await countFeedArticlesPublishedInRange(
+            db,
+            userId,
+            publishedAfter,
+            publishedBefore,
+          );
+          return { ...base, today };
+        }
+        return base;
       },
-      { response: { 200: countsResponseSchema } },
+      {
+        query: articleCountsQuerySchema,
+        response: { 200: countsResponseSchema },
+      },
     )
     .get(
       "/articles/unread-counts",

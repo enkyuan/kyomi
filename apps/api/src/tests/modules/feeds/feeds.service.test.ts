@@ -82,9 +82,12 @@ describe("feeds.service", () => {
                     createdAt: feedCreated,
                     updatedAt: feedCreated,
                     refreshStatus: "idle",
+                    lastRefreshStartedAt: null,
                     lastRefreshCompletedAt: null,
                     lastRefreshFailedAt: null,
                     lastRefreshError: null,
+                    etag: "etag-1",
+                    lastModified: "Wed, 21 Oct 2015 07:28:00 GMT",
                     nextRefreshAt: null,
                   },
                 ]),
@@ -96,7 +99,15 @@ describe("feeds.service", () => {
         from: () => ({
           where: () => ({
             limit: () =>
-              Promise.resolve([{ id: "s1", createdAt: subCreated, customTitle: "Override" }]),
+              Promise.resolve([
+                {
+                  id: "s1",
+                  createdAt: subCreated,
+                  customTitle: "Override",
+                  isPinned: false,
+                  pinnedAt: null,
+                },
+              ]),
           }),
         }),
       };
@@ -108,6 +119,8 @@ describe("feeds.service", () => {
     expect(detail.subscriptionId).toBe("s1");
     expect(detail.title).toBe("Override");
     expect(detail.customTitle).toBe("Override");
+    expect(detail.etag).toBe("etag-1");
+    expect(detail.lastModified).toBe("Wed, 21 Oct 2015 07:28:00 GMT");
   });
 
   test("getFeedDetailForUser throws when feed missing", async () => {
@@ -197,6 +210,25 @@ describe("feeds.service", () => {
 
     const r = await updateFeedSubscriptionSettings(fakeDb, "u1", "f1", { customTitle: "X" });
     expect(r.message).toBe("Feed settings updated successfully");
+  });
+
+  test("updateFeedSubscriptionSettings sets pinnedAt when pinning", async () => {
+    const returning = mock(() => Promise.resolve([{ id: "s1" }]));
+    const where = mock(() => ({ returning }));
+    const set = mock(() => ({ where }));
+    const update = mock(() => ({ set }));
+    const fakeDb = { update } as unknown as Parameters<typeof updateFeedSubscriptionSettings>[0];
+
+    const r = await updateFeedSubscriptionSettings(fakeDb, "u1", "f1", { isPinned: true });
+    expect(r.message).toBe("Feed settings updated successfully");
+    expect(set).toHaveBeenCalled();
+    const firstSetArg = (set as unknown as { mock: { calls: unknown[][] } }).mock.calls[0]?.[0];
+    expect(firstSetArg).toEqual(
+      expect.objectContaining({
+        isPinned: true,
+        pinnedAt: expect.any(Date),
+      }),
+    );
   });
 
   test("updateFeedSubscriptionSettings throws when no fields", async () => {

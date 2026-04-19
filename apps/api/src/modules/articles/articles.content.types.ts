@@ -19,18 +19,15 @@ export type ArticleReaderBodyKind = "html" | "markdown" | "text" | "fallback";
 
 export type ArticleReaderFallbackReason = "extraction_failed" | "timeout" | "missing_content";
 
-export type ArticleReaderContentDto = {
-  contentStatus: ArticleContentStatus;
+type ArticleReaderCommon = {
+  contentStatus: ArticleReaderStatus;
   contentSource: ArticleContentSource;
   bodyKind: ArticleReaderBodyKind;
+  /** Absolute http(s) URL used to resolve relative links/images in content. */
+  contentBaseUrl: string | null;
   title: string | null;
   byline: string | null;
   excerpt: string | null;
-  contentHtml: string | null;
-  contentMarkdown: string | null;
-  contentText: string | null;
-  fallbackSummary: string | null;
-  fallbackReason: ArticleReaderFallbackReason | null;
   siteName: string | null;
   language: string | null;
   publishedTime: string | null;
@@ -39,6 +36,48 @@ export type ArticleReaderContentDto = {
   extractionErrorMessage: string | null;
   shouldExtract: boolean;
 };
+
+type ArticleReaderHtml = ArticleReaderCommon & {
+  bodyKind: "html";
+  contentHtml: string;
+  contentMarkdown: null;
+  contentText: string | null;
+  fallbackSummary: null;
+  fallbackReason: null;
+};
+
+type ArticleReaderMarkdown = ArticleReaderCommon & {
+  bodyKind: "markdown";
+  contentHtml: null;
+  contentMarkdown: string;
+  contentText: string | null;
+  fallbackSummary: null;
+  fallbackReason: null;
+};
+
+type ArticleReaderText = ArticleReaderCommon & {
+  bodyKind: "text";
+  contentHtml: null;
+  contentMarkdown: null;
+  contentText: string;
+  fallbackSummary: null;
+  fallbackReason: null;
+};
+
+type ArticleReaderFallback = ArticleReaderCommon & {
+  bodyKind: "fallback";
+  contentHtml: null;
+  contentMarkdown: null;
+  contentText: null;
+  fallbackSummary: string | null;
+  fallbackReason: ArticleReaderFallbackReason;
+};
+
+export type ArticleReaderContentDto =
+  | ArticleReaderHtml
+  | ArticleReaderMarkdown
+  | ArticleReaderText
+  | ArticleReaderFallback;
 
 export type ArticleExtractionCandidate = {
   title: string | null;

@@ -10,7 +10,7 @@ const PINNED_FEED_IDS_STORAGE_KEY = "cronos:pinned-feed-ids";
 const PINNED_FEED_IDS_MIGRATION_KEY_PREFIX = "cronos:pinned-feed-ids:migrated:v1";
 const PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX = "cronos:pinned-feed-ids:migration-started:v1";
 
-function readLegacyPinnedFeedIds() {
+export function readLegacyPinnedFeedIds() {
   if (typeof window === "undefined") {
     return [] as string[];
   }
@@ -30,11 +30,11 @@ function readLegacyPinnedFeedIds() {
   }
 }
 
-function buildMigrationKey(userId: string) {
+export function buildMigrationKey(userId: string) {
   return `${PINNED_FEED_IDS_MIGRATION_KEY_PREFIX}:${userId}`;
 }
 
-function buildMigrationStartedKey(userId: string) {
+export function buildMigrationStartedKey(userId: string) {
   return `${PINNED_FEED_IDS_MIGRATION_STARTED_KEY_PREFIX}:${userId}`;
 }
 
@@ -76,7 +76,11 @@ function markMigrationCompleted(migrationKey: string) {
   window.localStorage.removeItem(PINNED_FEED_IDS_STORAGE_KEY);
 }
 
-function applyPinnedState(current: FollowedFeed[] | undefined, feedId: string, pinned: boolean) {
+export function applyPinnedState(
+  current: FollowedFeed[] | undefined,
+  feedId: string,
+  pinned: boolean,
+) {
   if (!current) {
     return current;
   }
@@ -88,7 +92,7 @@ function applyPinnedState(current: FollowedFeed[] | undefined, feedId: string, p
   );
 }
 
-function sortPinnedFeeds(feeds: FollowedFeed[]) {
+export function sortPinnedFeeds(feeds: FollowedFeed[]) {
   return feeds
     .filter((feed) => feed.isPinned)
     .sort((a, b) => {

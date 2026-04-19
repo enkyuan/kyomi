@@ -34,18 +34,14 @@ export const fallbackReasonSchema = z
 // Reader content
 // ---------------------------------------------------------------------------
 
-export const readerContentSchema = z.object({
-  contentStatus: contentStatusSchema,
+const readerContentCommonSchema = z.object({
+  contentStatus: z.enum(["ready", "partial", "failed"]),
   contentSource: contentSourceSchema,
   bodyKind: bodyKindSchema,
+  contentBaseUrl: z.string().nullable(),
   title: z.string().nullable(),
   byline: z.string().nullable(),
   excerpt: z.string().nullable(),
-  contentHtml: z.string().nullable(),
-  contentMarkdown: z.string().nullable(),
-  contentText: z.string().nullable(),
-  fallbackSummary: z.string().nullable(),
-  fallbackReason: fallbackReasonSchema,
   siteName: z.string().nullable(),
   language: z.string().nullable(),
   publishedTime: z.string().nullable(),
@@ -54,6 +50,49 @@ export const readerContentSchema = z.object({
   extractionErrorMessage: z.string().nullable(),
   shouldExtract: z.boolean(),
 });
+
+const readerHtmlSchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("html"),
+  contentHtml: z.string(),
+  contentMarkdown: z.null(),
+  contentText: z.string().nullable(),
+  fallbackSummary: z.null(),
+  fallbackReason: z.null(),
+});
+
+const readerMarkdownSchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("markdown"),
+  contentHtml: z.null(),
+  contentMarkdown: z.string(),
+  contentText: z.string().nullable(),
+  fallbackSummary: z.null(),
+  fallbackReason: z.null(),
+});
+
+const readerTextSchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("text"),
+  contentHtml: z.null(),
+  contentMarkdown: z.null(),
+  contentText: z.string(),
+  fallbackSummary: z.null(),
+  fallbackReason: z.null(),
+});
+
+const readerFallbackSchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("fallback"),
+  contentHtml: z.null(),
+  contentMarkdown: z.null(),
+  contentText: z.null(),
+  fallbackSummary: z.string().nullable(),
+  fallbackReason: z.enum(["extraction_failed", "timeout", "missing_content"]),
+});
+
+export const readerContentSchema = z.discriminatedUnion("bodyKind", [
+  readerHtmlSchema,
+  readerMarkdownSchema,
+  readerTextSchema,
+  readerFallbackSchema,
+]);
 
 // ---------------------------------------------------------------------------
 // Article list items
@@ -108,6 +147,7 @@ export const articleDetailSchema = articleListItemSchema.extend({
 export const articleCountsSchema = z.object({
   unread: z.number(),
   saved: z.number(),
+  today: z.number().optional(),
 });
 
 // ---------------------------------------------------------------------------
@@ -192,9 +232,12 @@ export const feedDetailSchema = z.object({
   isPinned: z.boolean(),
   pinnedAt: z.string().nullable(),
   refreshStatus: feedRefreshStatusSchema,
+  lastRefreshStartedAt: z.string().nullable(),
   lastRefreshCompletedAt: z.string().nullable(),
   lastRefreshFailedAt: z.string().nullable(),
   lastRefreshError: z.string().nullable(),
+  etag: z.string().nullable(),
+  lastModified: z.string().nullable(),
   nextRefreshAt: z.string().nullable(),
 });
 

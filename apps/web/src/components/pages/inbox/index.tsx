@@ -14,7 +14,6 @@ const MIN_RIGHT_PERCENT = 64;
 
 export function InboxPage() {
   const { filter = "today", search, feedId, folderId, itemId } = Route.useSearch();
-  const selectedItemId = itemId;
   const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export function InboxPage() {
     search,
     feedId,
     folderId,
-    selectedItemId,
+    itemId,
     timezoneOffsetMinutes,
   });
 
@@ -65,7 +64,7 @@ export function InboxPage() {
         <InboxList
           inboxItems={inboxItems}
           unreadCount={unreadCount}
-          selectedItemId={selectedItemId}
+          selectedItemId={itemId}
           feedId={feedId}
           isLoading={inboxQuery.isPending}
           hasNextPage={!!inboxQuery.hasNextPage}

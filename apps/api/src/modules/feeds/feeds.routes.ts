@@ -46,7 +46,10 @@ async function enqueueFeedRefreshAfterSubscribe(
       type: "feed.refresh",
       payload: { feedId, userId, reason: "subscription_created" },
     });
-    await db.update(feeds).set({ refreshStatus: "queued" }).where(eq(feeds.id, feedId));
+    await db
+      .update(feeds)
+      .set({ refreshStatus: "queued", lastRefreshError: null })
+      .where(eq(feeds.id, feedId));
     logger.info("queue.job.enqueued", {
       jobId,
       jobType: "feed.refresh",
@@ -285,7 +288,7 @@ export function registerFeedRoutes(app: Elysia) {
           });
           await db
             .update(feeds)
-            .set({ refreshStatus: "queued" })
+            .set({ refreshStatus: "queued", lastRefreshError: null })
             .where(eq(feeds.id, params.feedId));
           logger.info("queue.job.enqueued", {
             jobId,

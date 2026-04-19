@@ -71,6 +71,7 @@ async function getFeedArticleDetailForUser(
     articleType: "feed",
     title: decodeText(r.title),
     summary: decodeNullableText(r.summary),
+    contentBaseUrl: r.link,
     legacyContent: decodeNullableText(r.content),
     contentHtml: r.contentHtml,
     contentText: decodeNullableText(r.contentText),
@@ -84,6 +85,7 @@ async function getFeedArticleDetailForUser(
     articleType: "feed",
     title: decodeText(r.title),
     summary: decodeNullableText(r.summary),
+    contentBaseUrl: r.link,
     extractedContentHtml: r.extractedContentHtml,
     extractedContentText: r.extractedContentText
       ? decodeNullableText(r.extractedContentText)

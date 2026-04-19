@@ -110,14 +110,24 @@ async function runStaleFeedScheduler(signal?: AbortSignal) {
           if (signal?.aborted) {
             break;
           }
-          await db.update(feeds).set({ refreshStatus: "queued" }).where(eq(feeds.id, feed.id));
+          await db
+            .update(feeds)
+            .set({ refreshStatus: "queued", lastRefreshError: null })
+            .where(eq(feeds.id, feed.id));
           await publishJob(redis, {
             type: "feed.refresh",
             payload: { feedId: feed.id, userId: "system", reason: "scheduled" },
           }).catch(async (err) => {
+            const failedAt = new Date();
             await db
               .update(feeds)
-              .set({ refreshStatus: "idle" })
+              .set({
+                refreshStatus: "failed",
+                lastRefreshFailedAt: failedAt,
+                lastRefreshCompletedAt: failedAt,
+                lastRefreshError: err instanceof Error ? err.message : String(err),
+                nextRefreshAt: new Date(failedAt.getTime() + 15 * 60 * 1000),
+              })
               .where(eq(feeds.id, feed.id))
               .catch(() => {});
             logger.error("scheduler.stale_feeds.publish_error", {

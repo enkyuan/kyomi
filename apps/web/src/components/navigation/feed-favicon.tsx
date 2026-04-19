@@ -64,7 +64,7 @@ export function FeedFavicon({
   );
 }
 
-function buildFaviconUrl(
+export function buildFaviconUrl(
   storedFaviconUrl: string | null | undefined,
   siteUrl: string | null,
   feedUrl: string,

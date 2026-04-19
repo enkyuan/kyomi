@@ -4,7 +4,7 @@ import { useVirtualizer } from "@tanstack/react-virtual";
 import { Filter2Fill } from "@mingcute/react";
 import { useNavigate } from "@tanstack/react-router";
 import { FeedItem } from "@components/pages/inbox/feed-item";
-import { FeedRefreshStatus } from "@components/feed-refresh-status";
+import { FeedRefreshStatus } from "src/components/pages/inbox/feed-refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
@@ -109,8 +109,8 @@ export function InboxList({
                       <Skeleton className="h-3 w-24 rounded" />
                     </div>
                     <div className="space-y-1.5">
-                      <Skeleton className="h-[18px] w-full rounded" />
-                      <Skeleton className="h-[18px] w-3/4 rounded" />
+                      <Skeleton className="h-4.5 w-full rounded" />
+                      <Skeleton className="h-4.5 w-3/4 rounded" />
                     </div>
                   </div>
                   <div className="space-y-1.5 px-5">

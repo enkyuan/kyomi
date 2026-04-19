@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
-import { articleClips, feedItemUserState, feedItems, feedSubscriptions } from "@cronos/db";
-import { and, eq, inArray, sql } from "drizzle-orm";
+import { articleClips, feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
+import { and, eq, gte, inArray, lt, sql } from "drizzle-orm";
 import { articleIsReadSql } from "./articles.sql-read";
 import type { ArticleCountsDto } from "./articles.types";
 
@@ -50,6 +50,33 @@ export async function getArticleCountsForUser(
 }
 
 /**
+ * Counts subscribed feed articles whose `publishedAt` falls in `[publishedAfter, publishedBefore)`,
+ * matching the date window used by `GET /articles` with the same query params (feeds source only).
+ */
+export async function countFeedArticlesPublishedInRange(
+  database: DB,
+  userId: string,
+  publishedAfter: Date,
+  publishedBefore: Date,
+): Promise<number> {
+  const joinCond = and(
+    eq(feedItems.feedId, feedSubscriptions.feedId),
+    eq(feedSubscriptions.userId, userId),
+  );
+
+  const [row] = await database
+    .select({ c: sql<number>`count(*)::int` })
+    .from(feedItems)
+    .innerJoin(feedSubscriptions, joinCond)
+    .innerJoin(feeds, eq(feedItems.feedId, feeds.id))
+    .where(
+      and(gte(feedItems.publishedAt, publishedAfter), lt(feedItems.publishedAt, publishedBefore)),
+    );
+
+  return row?.c ?? 0;
+}
+
+/**
  * Returns a map of feedId → unread article count for each of the supplied feed IDs.
  * Uses a single GROUP BY query so it scales to many feeds without N+1 requests.
  */
@@ -79,12 +106,7 @@ export async function getUnreadCountsPerFeed(
     .from(feedItems)
     .innerJoin(feedSubscriptions, joinCond)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        inArray(feedItems.feedId, feedIds),
-        sql`(${articleIsReadSql}) = false`,
-      ),
-    )
+    .where(and(inArray(feedItems.feedId, feedIds), sql`(${articleIsReadSql}) = false`))
     .groupBy(feedItems.feedId);
 
   const result: Record<string, number> = {};

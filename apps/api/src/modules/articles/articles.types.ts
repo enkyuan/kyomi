@@ -58,6 +58,8 @@ export type ArticleUpdateBody = {
 export type ArticleCountsDto = {
   unread: number;
   saved: number;
+  /** Present when the client supplied `published_after` + `published_before` (local “today” window). */
+  today?: number;
 };
 
 export type SavedArticleMatchDto = {

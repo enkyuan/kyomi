@@ -69,9 +69,12 @@ export async function getFeedDetailForUser(
       createdAt: feeds.createdAt,
       updatedAt: feeds.updatedAt,
       refreshStatus: feeds.refreshStatus,
+      lastRefreshStartedAt: feeds.lastRefreshStartedAt,
       lastRefreshCompletedAt: feeds.lastRefreshCompletedAt,
       lastRefreshFailedAt: feeds.lastRefreshFailedAt,
       lastRefreshError: feeds.lastRefreshError,
+      etag: feeds.etag,
+      lastModified: feeds.lastModified,
       nextRefreshAt: feeds.nextRefreshAt,
     })
     .from(feeds)
@@ -115,11 +118,16 @@ export async function getFeedDetailForUser(
     isPinned: sub?.isPinned ?? false,
     pinnedAt: sub?.pinnedAt ? sub.pinnedAt.toISOString() : null,
     refreshStatus: feed.refreshStatus,
+    lastRefreshStartedAt: feed.lastRefreshStartedAt
+      ? feed.lastRefreshStartedAt.toISOString()
+      : null,
     lastRefreshCompletedAt: feed.lastRefreshCompletedAt
       ? feed.lastRefreshCompletedAt.toISOString()
       : null,
     lastRefreshFailedAt: feed.lastRefreshFailedAt ? feed.lastRefreshFailedAt.toISOString() : null,
     lastRefreshError: feed.lastRefreshError,
+    etag: feed.etag,
+    lastModified: feed.lastModified,
     nextRefreshAt: feed.nextRefreshAt ? feed.nextRefreshAt.toISOString() : null,
   };
 }

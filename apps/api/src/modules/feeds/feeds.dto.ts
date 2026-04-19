@@ -30,9 +30,12 @@ export const feedDetailResponse = t.Object({
   isPinned: t.Boolean(),
   pinnedAt: t.Union([t.String(), t.Null()]),
   refreshStatus: t.String(),
+  lastRefreshStartedAt: t.Union([t.String(), t.Null()]),
   lastRefreshCompletedAt: t.Union([t.String(), t.Null()]),
   lastRefreshFailedAt: t.Union([t.String(), t.Null()]),
   lastRefreshError: t.Union([t.String(), t.Null()]),
+  etag: t.Union([t.String(), t.Null()]),
+  lastModified: t.Union([t.String(), t.Null()]),
   nextRefreshAt: t.Union([t.String(), t.Null()]),
 });
 

@@ -7,28 +7,71 @@ import { RenderMarkdown } from "./render-markdown";
 import { RenderText } from "./render-text";
 
 export function ReaderContent({ reader }: { reader: ReaderContentModel }) {
-  const showNotice = reader.notice && reader.bodyKind !== "fallback";
+  function ContractViolationFallback() {
+    return (
+      <ReaderFallback
+        notice={
+          reader.notice ??
+          "Saved content could not be rendered with the expected format. Showing fallback view."
+        }
+        summary={reader.fallbackSummary}
+      />
+    );
+  }
+
+  if (reader.bodyKind === "html") {
+    if (!reader.contentHtml) {
+      return <ContractViolationFallback />;
+    }
+    const body = <RenderHtml html={reader.contentHtml} baseUrl={reader.contentBaseUrl} />;
+    if (!reader.notice) {
+      return body;
+    }
+    return (
+      <div className="space-y-3">
+        <p className="text-sm text-muted-foreground">{reader.notice}</p>
+        {body}
+      </div>
+    );
+  }
+
+  if (reader.bodyKind === "markdown") {
+    if (!reader.contentMarkdown) {
+      return <ContractViolationFallback />;
+    }
+    const body = (
+      <RenderMarkdown markdown={reader.contentMarkdown} baseUrl={reader.contentBaseUrl} />
+    );
+    if (!reader.notice) {
+      return body;
+    }
+    return (
+      <div className="space-y-3">
+        <p className="text-sm text-muted-foreground">{reader.notice}</p>
+        {body}
+      </div>
+    );
+  }
+
+  if (reader.bodyKind === "text") {
+    if (!reader.contentText) {
+      return <ContractViolationFallback />;
+    }
+    const body = <RenderText text={reader.contentText} />;
+    if (!reader.notice) {
+      return body;
+    }
+    return (
+      <div className="space-y-3">
+        <p className="text-sm text-muted-foreground">{reader.notice}</p>
+        {body}
+      </div>
+    );
+  }
 
   return (
     <div>
-      {showNotice ? <p className="mt-3 text-sm text-muted-foreground">{reader.notice}</p> : null}
-
-      {reader.bodyKind === "html" && reader.contentHtml ? (
-        <RenderHtml html={reader.contentHtml} />
-      ) : null}
-
-      {reader.bodyKind === "markdown" && reader.contentMarkdown ? (
-        <RenderMarkdown markdown={reader.contentMarkdown} />
-      ) : null}
-
-      {reader.bodyKind === "text" && reader.contentText ? (
-        <RenderText text={reader.contentText} />
-      ) : null}
-
-      {reader.bodyKind === "fallback" ||
-      (!reader.contentHtml && !reader.contentMarkdown && !reader.contentText) ? (
-        <ReaderFallback notice={reader.notice} summary={reader.fallbackSummary} />
-      ) : null}
+      <ReaderFallback notice={reader.notice} summary={reader.fallbackSummary} />
     </div>
   );
 }

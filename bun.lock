@@ -23,6 +23,7 @@
         "@cronos/db": "workspace:*",
         "@cronos/favicon": "workspace:*",
         "@cronos/ingestion": "workspace:*",
+        "@cronos/sanitization": "workspace:*",
         "@cronos/worker": "workspace:*",
         "@elysiajs/cors": "^1.4.0",
         "@elysiajs/swagger": "^1.3.1",
@@ -73,8 +74,10 @@
         "@chenglou/pretext": "^0.0.4",
         "@cronos/db": "workspace:*",
         "@cronos/favicon": "workspace:*",
+        "@cronos/sanitization": "workspace:*",
         "@fontsource-variable/inter": "^5.2.8",
         "@fontsource/dm-sans": "^5.2.8",
+        "@fontsource/jetbrains-mono": "^5.2.8",
         "@mingcute/react": "^1.1.8",
         "@modelcontextprotocol/sdk": "^1.27.1",
         "@posthog/react": "^1.7.0",
@@ -178,6 +181,12 @@
     },
     "packages/sangam": {
       "name": "@cronos/sangam",
+    },
+    "packages/sanitization": {
+      "name": "@cronos/sanitization",
+      "dependencies": {
+        "dompurify": "^3.4.0",
+      },
     },
     "packages/worker": {
       "name": "@cronos/worker",
@@ -442,6 +451,8 @@
 
     "@cronos/sangam": ["@cronos/sangam@workspace:packages/sangam"],
 
+    "@cronos/sanitization": ["@cronos/sanitization@workspace:packages/sanitization"],
+
     "@cronos/web": ["@cronos/web@workspace:apps/web"],
 
     "@cronos/worker": ["@cronos/worker@workspace:packages/worker"],
@@ -593,6 +604,8 @@
     "@fontsource-variable/inter": ["@fontsource-variable/inter@5.2.8", "", {}, "sha512-kOfP2D+ykbcX/P3IFnokOhVRNoTozo5/JxhAIVYLpea/UBmCQ/YWPBfWIDuBImXX/15KH+eKh4xpEUyS2sQQGQ=="],
 
     "@fontsource/dm-sans": ["@fontsource/dm-sans@5.2.8", "", {}, "sha512-tlovG42m9ESG28WiHpLq3F5umAlm64rv0RkqTbYowRn70e9OlRr5a3yTJhrhrY+k5lftR/OFJjPzOLQzk8EfCA=="],
+
+    "@fontsource/jetbrains-mono": ["@fontsource/jetbrains-mono@5.2.8", "", {}, "sha512-6w8/SG4kqvIMu7xd7wt6x3idn1Qux3p9N62s6G3rfldOUYHpWcc2FKrqf+Vo44jRvqWj2oAtTHrZXEP23oSKwQ=="],
 
     "@google/genai": ["@google/genai@1.48.0", "", { "dependencies": { "google-auth-library": "^10.3.0", "p-retry": "^4.6.2", "protobufjs": "^7.5.4", "ws": "^8.18.0" }, "peerDependencies": { "@modelcontextprotocol/sdk": "^1.25.2" }, "optionalPeers": ["@modelcontextprotocol/sdk"] }, "sha512-plonYK4ML2PrxsRD9SeqmFt76eREWkQdPCglOA6aYDzL1AAbE+7PUnT54SvpWGfws13L0AZEqGSpL7+1IPnTxQ=="],
 

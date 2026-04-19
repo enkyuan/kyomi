@@ -22,11 +22,7 @@ function requireApiOrigin() {
     return "http://localhost:8000";
   }
 
-  if (!apiOrigin) {
-    throw new Error("[api] Missing required API_ORIGIN");
-  }
-
-  return apiOrigin.replace(/\/$/, "");
+  throw new Error("[api] Missing required API_ORIGIN");
 }
 
 export function resolveApiUrl(pathname: string, search = "") {

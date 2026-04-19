@@ -8,7 +8,7 @@ type UseInboxQueriesInput = {
   search?: string;
   feedId?: string;
   folderId?: string;
-  selectedItemId?: string;
+  itemId?: string;
   timezoneOffsetMinutes?: number;
 };
 
@@ -27,7 +27,7 @@ export function useInboxQueries({
   search,
   feedId,
   folderId,
-  selectedItemId,
+  itemId,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
   const inboxQuery = useInfiniteQuery({
@@ -49,16 +49,16 @@ export function useInboxQueries({
   });
 
   const detailQuery = useQuery({
-    queryKey: ["inbox", "item-detail", selectedItemId],
-    enabled: Boolean(selectedItemId),
+    queryKey: ["inbox", "item-detail", itemId],
+    enabled: Boolean(itemId),
     retry: 1,
     queryFn: () => {
-      if (!selectedItemId) {
+      if (!itemId) {
         throw new Error("Missing inbox item id");
       }
       return getInboxItemDetail({
         data: {
-          itemId: selectedItemId,
+          itemId,
         },
       });
     },

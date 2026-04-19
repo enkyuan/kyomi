@@ -57,9 +57,12 @@ export type FeedDetailDto = {
   isPinned: boolean;
   pinnedAt: string | null;
   refreshStatus: string;
+  lastRefreshStartedAt: string | null;
   lastRefreshCompletedAt: string | null;
   lastRefreshFailedAt: string | null;
   lastRefreshError: string | null;
+  etag: string | null;
+  lastModified: string | null;
   nextRefreshAt: string | null;
 };
 

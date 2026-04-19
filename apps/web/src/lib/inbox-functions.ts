@@ -9,8 +9,8 @@ import {
   extractFullTextResponseSchema,
   type ArticleDetailDto,
   type ExtractFullTextResponseDto,
-  type ReaderContentDto,
 } from "@lib/api-schemas";
+import { z } from "zod";
 
 export type InboxFilter = "today" | "unread" | "saved";
 
@@ -26,31 +26,8 @@ export type InboxItem = {
   isSaved: boolean;
 };
 
-/** @deprecated Prefer ReaderContentDto from api-schemas */
-export type ReaderContentResponse = ReaderContentDto;
-
-type CursorListResponse = {
-  items: Array<{
-    id: string;
-    title: string;
-    link: string;
-    summary: string | null;
-    publishedAt: string;
-    feedId: string;
-    feedTitle: string;
-    isRead: boolean;
-    isSaved: boolean;
-    articleType: "feed" | "clip";
-  }>;
-  next_cursor: string | null;
-  has_more: boolean;
-  total_count: number | null;
-};
-
-type ArticleCountsResponse = {
-  unread: number;
-  saved: number;
-};
+type CursorListResponse = z.infer<typeof cursorListResponseSchema>;
+type ArticleCountsResponse = z.infer<typeof articleCountsSchema>;
 
 type SidebarInboxCounts = {
   today: number;
@@ -251,20 +228,19 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
       ? Number(data.timezoneOffsetMinutes)
       : 0;
 
-    // Use the proper COUNT(*) endpoint for unread+saved instead of fetching
-    // full item lists and counting .length (which silently capped at the
-    // query limit). For "today" we still fetch the view since no dedicated
-    // count endpoint exists — but today is date-bounded so the list is small.
-    const [counts, todayResponse] = await Promise.all([
-      apiJson<ArticleCountsResponse>("/api/v1/articles/counts", { headers: forwarded }),
-      apiJson<CursorListResponse>(
-        buildArticlesUrl("today", timezoneOffsetMinutes, undefined, undefined, undefined),
-        { headers: forwarded },
-      ),
-    ]);
+    const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
+    const params = new URLSearchParams();
+    params.set("published_after", start);
+    params.set("published_before", end);
+
+    const counts = await apiJsonValidated(articleCountsSchema, () =>
+      apiJson<ArticleCountsResponse>(`/api/v1/articles/counts?${params.toString()}`, {
+        headers: forwarded,
+      }),
+    );
 
     return {
-      today: todayResponse.items.length,
+      today: counts.today ?? 0,
       unread: counts.unread,
       saved: counts.saved,
     };
@@ -293,7 +269,7 @@ export const getScopedUnreadCount = createServerFn({ method: "GET" })
     // Folder-scoped unread: no dedicated count endpoint yet, fall back to
     // the list query. TODO: add a folder-scoped count endpoint on the API.
     const response = await apiJson<CursorListResponse>(
-      buildArticlesUrl("unread", 0, data.feedId, data.folderId),
+      buildArticlesUrl("unread", 0, undefined, data.folderId),
       { headers: buildForwardHeaders(headers) },
     );
     return { count: response.items.length };

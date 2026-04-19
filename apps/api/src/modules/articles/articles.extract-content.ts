@@ -71,7 +71,7 @@ export async function extractArticleContentFromUrl(
     };
   }
 
-  const contentHtml = sanitizeArticleHtml(article.content);
+  const contentHtml = sanitizeArticleHtml(article.content, { baseUrl: fetched.finalUrl });
   const contentText = htmlToText(contentHtml);
 
   if (wordCount(contentText) < 60 || paragraphCount(contentText) < 2) {

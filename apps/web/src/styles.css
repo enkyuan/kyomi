@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @import "@fontsource-variable/inter";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
 @import "@fontsource/dm-sans/400.css";
 @import "@fontsource/dm-sans/500.css";
 @import "@fontsource/dm-sans/700.css";
@@ -74,6 +76,9 @@
   --font-mono:
     "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+  --font-code:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
   --radius: 0.625rem;
   --background: var(--color-white);
   --foreground: var(--color-neutral-800);
@@ -230,6 +235,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .reader-content {
   font-family: var(--font-reader);
 }
@@ -292,11 +304,18 @@ body {
   font-family: var(--font-mono);
 }
 
-.reader-content .article-body code {
+/* Inline code only (fenced blocks are styled separately below). */
+.reader-content .article-body :where(p, li, blockquote, td, th, figcaption, a, span, em, strong, h1, h2, h3, h4, h5, h6) > code {
   border-radius: 6px;
   background: color-mix(in srgb, var(--foreground) 7%, transparent);
-  padding: 0.12rem 0.35rem;
-  font-size: 0.92em;
+  padding: 0.1rem 0.3rem;
+  font-size: 0.88em;
+  line-height: 1.3;
+}
+
+.reader-content .article-body code::before,
+.reader-content .article-body code::after {
+  content: none;
 }
 
 .reader-content .article-body pre {
@@ -309,6 +328,143 @@ body {
 .reader-content .article-body pre code {
   background: transparent;
   padding: 0;
+}
+
+/* Fenced code: JetBrains Mono, highlight.js tokens (github-dark), language + copy above code (no toolbar strip) */
+.reader-content .article-body [data-reader-code-block] {
+  --reader-code-inline-pad: 0.875rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+  background: var(--card);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-block: 0.4rem 0.25rem;
+  padding-inline-start: var(--reader-code-inline-pad);
+  padding-inline-end: calc(var(--reader-code-inline-pad) - 0.35rem);
+  border: none;
+  background: transparent;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-lang-label {
+  min-width: 0;
+  flex: 1 1 auto;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+  color: color-mix(in srgb, var(--foreground) 62%, transparent);
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre {
+  margin: 0;
+  overflow-x: auto;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs {
+  font-family: var(--font-code);
+  font-size: 13.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  display: block;
+  color: #d5dee8;
+  padding-block: 0.375rem 0.75rem;
+  padding-inline: var(--reader-code-inline-pad);
+  border-radius: 0;
+  tab-size: 2;
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs :where(*) {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-punctuation,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-operator,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-subst {
+  color: #d5dee8;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-comment,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-code,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-formula {
+  color: #9aa6b2;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-keyword,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-meta .hljs-keyword,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-template-tag,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-template-variable,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-type,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-variable.language_ {
+  color: #ff8c82;
+}
+
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-string,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-meta .hljs-string,
+.reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-regexp {
+  color: #b9e2ff;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-host {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 0;
+  pointer-events: auto;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: calc(var(--radius) - 2px);
+  background: color-mix(in srgb, var(--background) 88%, transparent);
+  color: var(--foreground);
+  cursor: pointer;
+  outline: 1px solid var(--border);
+  outline-offset: 0;
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--foreground) / 8%);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button:hover {
+  background: color-mix(in srgb, var(--background) 95%, transparent);
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--ring) 72%, transparent);
+  outline-offset: 2px;
+}
+
+.reader-content .article-body [data-reader-code-block] .reader-code-copy-button:active {
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 .reader-content .article-body table {
@@ -330,8 +486,10 @@ body {
   font-weight: 600;
 }
 
+/* Typography `prose` adds margin-block on img; we use paragraph/figure rhythm instead */
 .reader-content .article-body img {
   display: block;
+  margin-block: 0;
   margin-inline: auto;
   width: 100%;
   max-width: 100%;
@@ -339,21 +497,197 @@ body {
   border-radius: 6px;
 }
 
+/* Author avatars / small portraits (see data-reader-profile-thumb in render-html.tsx) */
+.reader-content .article-body [data-reader-img-frame][data-reader-profile-thumb] {
+  float: left;
+  clear: left;
+  width: auto;
+  max-width: 6.5rem;
+  margin: 0 1rem 0.75rem 0;
+}
+
+/* When the profile thumb is inside a media-aside flex row, suppress the float so the
+   flex layout governs sizing instead. The first-child img-frame rules handle width. */
+.reader-content .article-body [data-reader-media-aside] [data-reader-img-frame][data-reader-profile-thumb] {
+  float: none;
+  clear: none;
+  margin: 0;
+}
+
+.reader-content .article-body [data-reader-img-frame][data-reader-profile-thumb] img {
+  margin-inline: 0;
+}
+
+.reader-content .article-body::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .reader-content .article-body figure {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.8rem;
 }
 
+/* Many publishers wrap figure images in <p>; neutralize paragraph margins there
+   so captions don't drift too far below the image block. */
+.reader-content .article-body figure > p:has(> [data-reader-img-frame]),
+.reader-content .article-body figure > p:has(> img) {
+  width: min(100%, 56rem);
+  margin: 0;
+}
+
+.reader-content .article-body [data-reader-img-frame][data-reader-img-loading] {
+  min-height: 4rem;
+}
+
+/*
+ * Beside layouts only when `[data-reader-media-aside]` is set in render-html after inspecting
+ * the DOM (child count, leading media, CMS/author classes). Do not use broad `:has(> img)`
+ * on generic divs — a wrapper around the whole article (hero + many <p>) would become a
+ * horizontal flex of every block.
+ */
+.reader-content .article-body [data-reader-media-aside] {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .reader-content .article-body [data-reader-media-aside] {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .reader-content .article-body [data-reader-media-aside] > *:first-child:is([data-reader-img-frame]),
+  .reader-content .article-body [data-reader-media-aside] > *:first-child:is(a):has(> [data-reader-img-frame]) {
+    max-width: 5rem;
+  }
+}
+
+.reader-content .article-body [data-reader-media-aside] > *:first-child {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.reader-content .article-body [data-reader-media-aside] > *:first-child:is([data-reader-img-frame]) {
+  width: auto;
+  max-width: min(40%, 10rem);
+  margin: 0;
+  align-self: flex-start;
+}
+
+.reader-content .article-body [data-reader-media-aside] > *:first-child:is(a):has(> [data-reader-img-frame]) {
+  width: auto;
+  max-width: min(40%, 10rem);
+  margin: 0;
+  align-self: flex-start;
+}
+
+.reader-content .article-body [data-reader-media-aside] > a:first-child > [data-reader-img-frame] {
+  width: 100%;
+}
+
+.reader-content .article-body [data-reader-media-aside] > figure:first-child {
+  flex: 0 0 auto;
+  margin-block: 0;
+  max-width: min(45%, 14rem);
+  width: auto;
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.reader-content .article-body [data-reader-media-aside] > *:not(:first-child) {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.reader-content .article-body figure > [data-reader-img-frame],
 .reader-content .article-body figure > img {
   width: min(100%, 56rem);
 }
 
+.reader-content .article-body figure > p:has(> [data-reader-img-frame]) > [data-reader-img-frame],
+.reader-content .article-body figure > p:has(> img) > img {
+  width: 100%;
+}
+
+/* Class-gated: author/portrait + caption beside (not stacked like article figures) */
+.reader-content .article-body figure:where(.author-bio, .media-object) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.reader-content .article-body figure:where(.author-bio, .media-object) > [data-reader-img-frame],
+.reader-content .article-body figure:where(.author-bio, .media-object) > img {
+  width: auto;
+  max-width: min(40%, 10rem);
+  flex: 0 0 auto;
+}
+
 .reader-content .article-body figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0;
   text-align: center;
+  text-wrap: balance;
   color: color-mix(in srgb, var(--foreground) 68%, transparent);
   font-size: 0.9rem;
+  line-height: 1.35;
+  max-width: 42rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.reader-content .article-body figure:where(.author-bio, .media-object) > figcaption {
+  flex: 1 1 0%;
+  min-width: 0;
+  margin-top: 0;
+  text-align: start;
+  max-width: none;
+  margin-inline: 0;
+}
+
+.reader-content .article-body figcaption :is(p, ul, ol) {
+  margin: 0;
+}
+
+/* Classified caption text outside <figure> (see render-html.tsx classifyImageAdjacentText) */
+.reader-content .article-body [data-reader-figure-caption] {
+  color: color-mix(in srgb, var(--foreground) 68%, transparent);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+/* Classified photo/image credit text */
+.reader-content .article-body [data-reader-figure-credit] {
+  color: color-mix(in srgb, var(--foreground) 55%, transparent);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.3;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-top: 0.25rem;
+}
+
+/* When caption or credit follows an image frame directly, tighten the spacing */
+.reader-content .article-body [data-reader-img-frame] + [data-reader-figure-caption],
+.reader-content .article-body [data-reader-img-frame] + [data-reader-figure-credit] {
+  margin-top: 0.35rem;
+}
+
+.reader-content .article-body [data-reader-figure-caption] + [data-reader-figure-credit] {
+  margin-top: 0.15rem;
 }
 
 .reader-content .article-body hr {
