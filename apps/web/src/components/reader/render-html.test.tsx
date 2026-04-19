@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { render, waitFor } from "@testing-library/react";
+import { act, render, waitFor } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { RenderHtml } from "./render-html";
 
@@ -402,6 +402,31 @@ describe("RenderHtml – code block normalization", () => {
       expect(root?.querySelector("[data-reader-code-block]")).toBeTruthy();
       expect(root?.querySelector("button[aria-label='Copy code']")).toBeTruthy();
       expect(root?.querySelector(".reader-code-lang-label")?.textContent).toBe("Bash");
+    });
+  });
+
+  test("re-applies code block chrome when the DOM is reset (hydration reload)", async () => {
+    const html = `
+      <pre><code class="language-ts">const hello: string = "world"</code></pre>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    expect(root).toBeTruthy();
+
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-code-block]")).toBeTruthy();
+    });
+
+    act(() => {
+      if (root) {
+        root.innerHTML = html;
+      }
+    });
+
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-code-block]")).toBeTruthy();
+      expect(root?.querySelector("button[aria-label='Copy code']")).toBeTruthy();
+      expect(root?.querySelector(".reader-code-lang-label")?.textContent).toBe("TypeScript");
     });
   });
 });
