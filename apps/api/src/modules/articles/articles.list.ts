@@ -2,6 +2,7 @@ import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
 import { and, desc, eq, gte, lt, or, sql, type SQL } from "drizzle-orm";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
+import { collapseObviousDuplicates, type ArticleListRawRow } from "./articles-list-dedupe";
 import { articleIsReadSql } from "./articles.sql-read";
 import type { ArticleListItemDto, ArticlesCursorListResponseDto } from "./articles.types";
 
@@ -35,14 +36,15 @@ function normalizeLimit(limit: number): number {
   return Math.min(Math.max(limit, 1), 200);
 }
 
-function paginateRows(rows: RawRow[], limit: number) {
-  const hasMore = rows.length > limit;
-  const page = hasMore ? rows.slice(0, limit) : rows;
+function paginateRows(rows: ArticleListRawRow[], limit: number) {
+  const dedupedRows = collapseObviousDuplicates(rows);
+  const hasMore = dedupedRows.length > limit;
+  const page = hasMore ? dedupedRows.slice(0, limit) : dedupedRows;
   const nextCursor = hasMore && page.length > 0 ? page[page.length - 1].id : null;
   return { hasMore, page, nextCursor };
 }
 
-function toArticleListItems(page: RawRow[]): ArticleListItemDto[] {
+function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
   return page.map((r) => ({
     id: r.id,
     title: decodeText(r.title),
@@ -70,18 +72,6 @@ export async function listArticlesForUser(
   const items = toArticleListItems(page);
   return { items, next_cursor: nextCursor, has_more: hasMore, total_count: null };
 }
-
-type RawRow = {
-  id: string;
-  title: string;
-  link: string;
-  summary: string | null;
-  publishedAt: Date;
-  feedId: string;
-  feedTitle: string;
-  isRead: boolean;
-  isSaved: boolean;
-};
 
 function pushBaseFilters(filters: SQL[], opts: ListArticlesOptions): void {
   if (opts.feedId) {
@@ -154,7 +144,7 @@ async function listArticleRows(
   userId: string,
   opts: ListArticlesOptions,
   take: number,
-): Promise<RawRow[]> {
+): Promise<ArticleListRawRow[]> {
   const { feedSubscriptionsJoin, userStateJoin } = baseJoins(userId);
 
   const filters: SQL[] = [];
@@ -181,5 +171,5 @@ async function listArticleRows(
     .leftJoin(feedItemUserState, userStateJoin)
     .where(filters.length > 0 ? and(...filters) : sql`true`)
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
-    .limit(take);
+    .limit(Math.min(800, take * 3));
 }

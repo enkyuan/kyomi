@@ -14,12 +14,14 @@
     "fmt:check": "bunx oxfmt --check src",
     "lint": "bunx oxlint src",
     "lint:fix": "bunx oxlint --fix src",
-    "typecheck": "bunx tsc -p tsconfig.json --noEmit"
+    "typecheck": "bunx tsgo -p tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@cronos/sanitization": "workspace:*",
     "@cronos/db": "workspace:*",
-    "@cronos/feed-ingest": "workspace:*",
-    "@cronos/job-queue": "workspace:*",
+    "@cronos/favicon": "workspace:*",
+    "@cronos/ingestion": "workspace:*",
+    "@cronos/worker": "workspace:*",
     "@elysiajs/cors": "^1.4.0",
     "@elysiajs/swagger": "^1.3.1",
     "@mozilla/readability": "^0.6.0",
@@ -33,6 +35,7 @@
     "fast-xml-parser": "^5.5.10",
     "ioredis": "^5.6.0",
     "jsdom": "^29.0.2",
+    "linkedom": "^0.18.12",
     "pg": "^8.16.3",
     "pino": "^9.7.0",
     "zod": "^4.3.6"

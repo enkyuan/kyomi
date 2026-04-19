@@ -4,9 +4,14 @@ import { and, eq, sql } from "drizzle-orm";
 import { AppError } from "@shared/errors/app-error";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { getClipDetailForUser } from "./articles.clips";
-import { buildStoredReaderContent } from "./articles.normalize-content";
+import {
+  buildExtractedReaderViewFromDb,
+  buildStoredReaderContent,
+} from "./articles.normalize-content";
+import { inferDefaultReaderMode } from "./articles.reader-mode";
 import { articleIsReadSql } from "./articles.sql-read";
 import type { ArticleDetailDto } from "./articles.types";
+import type { ExtractedContentStatus } from "./articles.content.types";
 
 type DB = typeof db;
 
@@ -38,6 +43,11 @@ async function getFeedArticleDetailForUser(
       contentSource: feedItems.contentSource,
       extractionErrorCode: feedItems.extractionErrorCode,
       extractionErrorMessage: feedItems.extractionErrorMessage,
+      extractedContentHtml: feedItems.extractedContentHtml,
+      extractedContentText: feedItems.extractedContentText,
+      extractedContentStatus: feedItems.extractedContentStatus,
+      extractedContentError: feedItems.extractedContentError,
+      extractedContentUpdatedAt: feedItems.extractedContentUpdatedAt,
       publishedAt: feedItems.publishedAt,
       feedId: feedItems.feedId,
       feedTitle: feeds.title,
@@ -55,6 +65,38 @@ async function getFeedArticleDetailForUser(
   if (!r) {
     return null;
   }
+
+  const extractedStatus = (r.extractedContentStatus as ExtractedContentStatus) ?? "pending";
+  const readerOriginal = buildStoredReaderContent({
+    articleType: "feed",
+    title: decodeText(r.title),
+    summary: decodeNullableText(r.summary),
+    contentBaseUrl: r.link,
+    legacyContent: decodeNullableText(r.content),
+    contentHtml: r.contentHtml,
+    contentText: decodeNullableText(r.contentText),
+    contentMarkdown: r.contentMarkdown,
+    contentStatus: (r.contentStatus as ArticleDetailDto["contentStatus"]) ?? "pending",
+    contentSource: (r.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
+    extractionErrorCode: r.extractionErrorCode,
+    extractionErrorMessage: r.extractionErrorMessage,
+  });
+  const readerExtracted = buildExtractedReaderViewFromDb({
+    articleType: "feed",
+    title: decodeText(r.title),
+    summary: decodeNullableText(r.summary),
+    contentBaseUrl: r.link,
+    extractedContentHtml: r.extractedContentHtml,
+    extractedContentText: r.extractedContentText
+      ? decodeNullableText(r.extractedContentText)
+      : null,
+    extractedContentStatus: extractedStatus,
+  });
+  const defaultReaderMode = inferDefaultReaderMode({
+    readerOriginal,
+    readerExtracted,
+    extractedContentStatus: extractedStatus,
+  });
 
   return {
     id: r.id,
@@ -74,19 +116,12 @@ async function getFeedArticleDetailForUser(
     isRead: r.isRead,
     isSaved: Boolean(r.isSaved),
     articleType: "feed",
-    reader: buildStoredReaderContent({
-      articleType: "feed",
-      title: decodeText(r.title),
-      summary: decodeNullableText(r.summary),
-      legacyContent: decodeNullableText(r.content),
-      contentHtml: r.contentHtml,
-      contentText: decodeNullableText(r.contentText),
-      contentMarkdown: r.contentMarkdown,
-      contentStatus: (r.contentStatus as ArticleDetailDto["contentStatus"]) ?? "pending",
-      contentSource: (r.contentSource as ArticleDetailDto["contentSource"]) ?? "link_only",
-      extractionErrorCode: r.extractionErrorCode,
-      extractionErrorMessage: r.extractionErrorMessage,
-    }),
+    readerOriginal,
+    readerExtracted,
+    extractedContentStatus: extractedStatus,
+    extractedContentError: r.extractedContentError,
+    extractedContentUpdatedAt: r.extractedContentUpdatedAt?.toISOString() ?? null,
+    defaultReaderMode,
   };
 }
 

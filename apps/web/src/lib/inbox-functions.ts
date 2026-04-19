@@ -7,7 +7,10 @@ import {
   articleDetailSchema,
   cursorListResponseSchema,
   extractFullTextResponseSchema,
+  type ArticleDetailDto,
+  type ExtractFullTextResponseDto,
 } from "@lib/api-schemas";
+import { z } from "zod";
 
 export type InboxFilter = "today" | "unread" | "saved";
 
@@ -23,76 +26,8 @@ export type InboxItem = {
   isSaved: boolean;
 };
 
-export type ReaderContentResponse = {
-  contentStatus: "ready" | "partial" | "failed" | "pending";
-  contentSource:
-    | "feed_html"
-    | "feed_markdown"
-    | "feed_summary"
-    | "extracted_html"
-    | "text_fallback"
-    | "link_only";
-  bodyKind: "html" | "markdown" | "text" | "fallback";
-  title: string | null;
-  byline: string | null;
-  excerpt: string | null;
-  contentHtml: string | null;
-  contentMarkdown: string | null;
-  contentText: string | null;
-  fallbackSummary: string | null;
-  fallbackReason: "extraction_failed" | "timeout" | "missing_content" | null;
-  siteName: string | null;
-  language: string | null;
-  publishedTime: string | null;
-  notice: string | null;
-  extractionErrorCode: string | null;
-  extractionErrorMessage: string | null;
-  shouldExtract: boolean;
-};
-
-type CursorListResponse = {
-  items: Array<{
-    id: string;
-    title: string;
-    link: string;
-    summary: string | null;
-    publishedAt: string;
-    feedId: string;
-    feedTitle: string;
-    isRead: boolean;
-    isSaved: boolean;
-    articleType: "feed" | "clip";
-  }>;
-  next_cursor: string | null;
-  has_more: boolean;
-  total_count: number | null;
-};
-
-type ArticleDetailResponse = {
-  id: string;
-  title: string;
-  link: string;
-  summary: string | null;
-  contentHtml: string | null;
-  contentText: string | null;
-  contentMarkdown: string | null;
-  contentStatus: ReaderContentResponse["contentStatus"];
-  contentSource: ReaderContentResponse["contentSource"];
-  extractionErrorCode: string | null;
-  extractionErrorMessage: string | null;
-  publishedAt: string;
-  feedId: string;
-  feedTitle: string;
-  isRead: boolean;
-  isSaved: boolean;
-  articleType: "feed" | "clip";
-  reader: ReaderContentResponse;
-};
-
-type ArticleCountsResponse = {
-  unread: number;
-  saved: number;
-};
+type CursorListResponse = z.infer<typeof cursorListResponseSchema>;
+type ArticleCountsResponse = z.infer<typeof articleCountsSchema>;
 
 type SidebarInboxCounts = {
   today: number;
@@ -111,24 +46,8 @@ type InboxResponse = {
   hasMore: boolean;
 };
 
-type InboxDetailResponse = {
-  item:
-    | (InboxItem & {
-        contentHtml: string | null;
-        contentText: string | null;
-        contentMarkdown: string | null;
-        contentStatus: ReaderContentResponse["contentStatus"];
-        contentSource: ReaderContentResponse["contentSource"];
-        extractionErrorCode: string | null;
-        extractionErrorMessage: string | null;
-        reader: ReaderContentResponse;
-      })
-    | null;
-};
-
-type ExtractFullTextResponse = {
-  reader: ReaderContentResponse;
-  persisted: boolean;
+export type InboxDetailResponse = {
+  item: ArticleDetailDto | null;
 };
 
 type GetInboxItemsInput = {
@@ -269,32 +188,12 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
   .handler(async ({ data }): Promise<InboxDetailResponse> => {
     const headers = getRequestHeaders();
     const item = await apiJsonValidated(articleDetailSchema, () =>
-      apiJson<ArticleDetailResponse>(`/api/v1/articles/${data.itemId}`, {
+      apiJson<ArticleDetailDto>(`/api/v1/articles/${data.itemId}`, {
         headers: buildForwardHeaders(headers),
       }),
     );
 
-    return {
-      item: {
-        id: item.id,
-        title: item.title,
-        summary: item.summary,
-        contentHtml: item.contentHtml,
-        contentText: item.contentText,
-        contentMarkdown: item.contentMarkdown,
-        contentStatus: item.contentStatus,
-        contentSource: item.contentSource,
-        extractionErrorCode: item.extractionErrorCode,
-        extractionErrorMessage: item.extractionErrorMessage,
-        link: item.link,
-        publishedAt: item.publishedAt,
-        feedTitle: item.feedTitle,
-        articleType: item.articleType,
-        isRead: item.isRead,
-        isSaved: item.isSaved,
-        reader: item.reader,
-      },
-    };
+    return { item };
   });
 
 export const getInboxCounts = createServerFn({ method: "GET" }).handler(async () => {
@@ -308,12 +207,12 @@ export const getInboxCounts = createServerFn({ method: "GET" }).handler(async ()
 
 export const extractInboxItemFullText = createServerFn({ method: "POST" })
   .inputValidator((input: { itemId: string }) => input)
-  .handler(async ({ data }): Promise<ExtractFullTextResponse> => {
+  .handler(async ({ data }): Promise<ExtractFullTextResponseDto> => {
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
 
     return apiJsonValidated(extractFullTextResponseSchema, () =>
-      apiJson<ExtractFullTextResponse>(`/api/v1/articles/${data.itemId}/extract-full-text`, {
+      apiJson<ExtractFullTextResponseDto>(`/api/v1/articles/${data.itemId}/extract-full-text`, {
         method: "POST",
         headers: forwarded,
       }),
@@ -321,7 +220,9 @@ export const extractInboxItemFullText = createServerFn({ method: "POST" })
   });
 
 export const getSidebarInboxCounts = createServerFn({ method: "GET" })
-  .inputValidator((input: { timezoneOffsetMinutes?: number }) => input)
+  .inputValidator(
+    (input: { timezoneOffsetMinutes?: number; feedId?: string; folderId?: string }) => input,
+  )
   .handler(async ({ data }): Promise<SidebarInboxCounts> => {
     const headers = getRequestHeaders();
     const forwarded = buildForwardHeaders(headers);
@@ -329,23 +230,72 @@ export const getSidebarInboxCounts = createServerFn({ method: "GET" })
       ? Number(data.timezoneOffsetMinutes)
       : 0;
 
-    // Use the proper COUNT(*) endpoint for unread+saved instead of fetching
-    // full item lists and counting .length (which silently capped at the
-    // query limit). For "today" we still fetch the view since no dedicated
-    // count endpoint exists — but today is date-bounded so the list is small.
-    const [counts, todayResponse] = await Promise.all([
-      apiJson<ArticleCountsResponse>("/api/v1/articles/counts", { headers: forwarded }),
-      apiJson<CursorListResponse>(
-        buildArticlesUrl("today", timezoneOffsetMinutes, undefined, undefined, undefined),
-        { headers: forwarded },
-      ),
-    ]);
+    const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
+    const params = new URLSearchParams();
+    params.set("published_after", start);
+    params.set("published_before", end);
+    if (data.feedId?.trim()) {
+      params.set("feed_id", data.feedId.trim());
+    }
+    if (data.folderId?.trim()) {
+      params.set("folder_id", data.folderId.trim());
+    }
+
+    const counts = await apiJsonValidated(articleCountsSchema, () =>
+      apiJson<ArticleCountsResponse>(`/api/v1/articles/counts?${params.toString()}`, {
+        headers: forwarded,
+      }),
+    );
 
     return {
-      today: todayResponse.items.length,
+      today: counts.today ?? 0,
       unread: counts.unread,
       saved: counts.saved,
     };
+  });
+
+export const getInboxViewCount = createServerFn({ method: "GET" })
+  .inputValidator(
+    (input: {
+      filter: InboxFilter;
+      timezoneOffsetMinutes?: number;
+      feedId?: string;
+      folderId?: string;
+    }) => input,
+  )
+  .handler(async ({ data }): Promise<ScopedUnreadCountResponse> => {
+    const headers = getRequestHeaders();
+    const forwarded = buildForwardHeaders(headers);
+    const timezoneOffsetMinutes = Number.isFinite(data.timezoneOffsetMinutes)
+      ? Number(data.timezoneOffsetMinutes)
+      : 0;
+
+    const params = new URLSearchParams();
+    if (data.filter === "today") {
+      const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
+      params.set("published_after", start);
+      params.set("published_before", end);
+    }
+    if (data.feedId?.trim()) {
+      params.set("feed_id", data.feedId.trim());
+    }
+    if (data.folderId?.trim()) {
+      params.set("folder_id", data.folderId.trim());
+    }
+
+    const counts = await apiJsonValidated(articleCountsSchema, () =>
+      apiJson<ArticleCountsResponse>(`/api/v1/articles/counts?${params.toString()}`, {
+        headers: forwarded,
+      }),
+    );
+
+    if (data.filter === "today") {
+      return { count: counts.today ?? 0 };
+    }
+    if (data.filter === "saved") {
+      return { count: counts.saved };
+    }
+    return { count: counts.unread };
   });
 
 export const getScopedUnreadCount = createServerFn({ method: "GET" })
@@ -371,7 +321,7 @@ export const getScopedUnreadCount = createServerFn({ method: "GET" })
     // Folder-scoped unread: no dedicated count endpoint yet, fall back to
     // the list query. TODO: add a folder-scoped count endpoint on the API.
     const response = await apiJson<CursorListResponse>(
-      buildArticlesUrl("unread", 0, data.feedId, data.folderId),
+      buildArticlesUrl("unread", 0, undefined, data.folderId),
       { headers: buildForwardHeaders(headers) },
     );
     return { count: response.items.length };

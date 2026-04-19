@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
 import { ReaderContent } from "./reader-content";
 import type { ReaderContent as ReaderContentModel } from "./reader-types";
@@ -10,11 +10,12 @@ function baseReader(overrides: Partial<ReaderContentModel> = {}): ReaderContentM
     contentStatus: "ready",
     contentSource: "feed_markdown",
     bodyKind: "markdown",
+    contentBaseUrl: "https://example.com/article",
     title: "Title",
     byline: null,
     excerpt: null,
     contentHtml: null,
-    contentMarkdown: null,
+    contentMarkdown: "Sample markdown body",
     contentText: null,
     fallbackSummary: null,
     fallbackReason: null,
@@ -26,7 +27,7 @@ function baseReader(overrides: Partial<ReaderContentModel> = {}): ReaderContentM
     extractionErrorMessage: null,
     shouldExtract: false,
     ...overrides,
-  };
+  } as ReaderContentModel;
 }
 
 describe("ReaderContent", () => {
@@ -55,6 +56,49 @@ describe("ReaderContent", () => {
     expect(document.querySelector("table")).toBeTruthy();
     expect(screen.getByText("const value = 1;")).toBeTruthy();
     expect(document.querySelector(".katex")).toBeTruthy();
+  });
+
+  test("renders safe inline html tags from markdown as markup, not literal text", () => {
+    const { container } = render(
+      <ReaderContent
+        reader={baseReader({
+          contentMarkdown: "Use <code>AllocationRecord</code> for this schema.",
+        })}
+      />,
+    );
+
+    expect(screen.getByText("AllocationRecord")).toBeTruthy();
+    expect(container.querySelector("code")?.textContent).toBe("AllocationRecord");
+    expect(screen.queryByText("<code>AllocationRecord</code>")).toBeNull();
+  });
+
+  test("unwraps inline markdown where backticks wrap a literal <code>…</code> string", () => {
+    const { container } = render(
+      <ReaderContent
+        reader={baseReader({
+          contentMarkdown: "Use `<code>AllocationRecord</code>` for this schema.",
+        })}
+      />,
+    );
+
+    expect(within(container).getByText("AllocationRecord")).toBeTruthy();
+    expect(container.querySelector("p code")?.textContent).toBe("AllocationRecord");
+  });
+
+  test("resolves relative markdown links and images against contentBaseUrl", () => {
+    const { container } = render(
+      <ReaderContent
+        reader={baseReader({
+          contentBaseUrl: "https://example.com/blog/entry",
+          contentMarkdown: "[docs](/guide)\n\n![graph](./assets/graph.png)",
+        })}
+      />,
+    );
+
+    const link = container.querySelector("a");
+    const image = container.querySelector("img");
+    expect(link?.getAttribute("href")).toBe("https://example.com/guide");
+    expect(image?.getAttribute("src")).toBe("https://example.com/blog/assets/graph.png");
   });
 
   test("renders link-only fallback without surfacing raw backend errors", () => {

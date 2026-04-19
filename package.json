@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "bootstrap": "bun run docker:up && bun run db:migrate && bun run catalog:sync",
+    "bootstrap": "bun run setup:app",
+    "bootstrap:full": "bun run setup:app && bun run setup:catalog",
     "dev": "turbo run dev",
     "dev:app": "turbo run dev --filter=@cronos/api --filter=@cronos/web",
     "lint": "turbo run lint",
@@ -32,6 +33,8 @@
     "db:pull": "bun run --cwd packages/db db:pull",
     "db:studio": "bun run --cwd packages/db db:studio",
     "db:seed:feeds": "bun run catalog:import",
+    "setup:app": "bun run docker:up && bun run db:migrate",
+    "setup:catalog": "bun run catalog:sync",
     "catalog:install": "bun run --cwd packages/sangam install",
     "catalog:export": "bun run --cwd packages/sangam export:catalog",
     "catalog:import": "bun run --cwd apps/api catalog:import",
@@ -40,7 +43,7 @@
     "catalog:sync:local": "bun run --cwd packages/sangam sync"
   },
   "devDependencies": {
-    "@typescript/native-preview": "^7.0.0-dev.20260407.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260418.1",
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",

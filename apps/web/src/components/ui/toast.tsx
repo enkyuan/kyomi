@@ -1,6 +1,7 @@
 "use client";
 
 import { Toast } from "@base-ui/react/toast";
+import type { ToastObject } from "@base-ui/react/toast";
 import {
   AlertFill,
   CheckCircleFill,
@@ -19,6 +20,32 @@ const TOAST_ICONS = {
   success: CheckCircleFill,
   warning: WarningFill,
 } as const;
+
+/**
+ * Mingcute icons set `style={{ color: "currentColor" }}` on the root SVG, which wins over
+ * `text-*` utilities and resolves `currentColor` from the toast surface (popover text), so
+ * semantic tints never apply. Pass explicit theme colors via the `color` prop instead.
+ */
+function toastMingcuteIconColor(type: string | undefined): string {
+  switch (type) {
+    case "error":
+      return "var(--color-destructive)";
+    case "success":
+      return "var(--color-success)";
+    case "info":
+      return "var(--color-info)";
+    case "warning":
+      return "var(--color-warning)";
+    case "loading":
+      return "var(--color-muted-foreground)";
+    default:
+      return "var(--color-muted-foreground)";
+  }
+}
+
+function toastMingcuteIconClassName(type: string | undefined): string {
+  return type === "loading" ? "animate-spin opacity-90" : "";
+}
 
 type SwipeDirection = "up" | "down" | "left" | "right";
 
@@ -58,6 +85,8 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
       >
         {toasts.map((toast) => {
           const Icon = toast.type ? TOAST_ICONS[toast.type as keyof typeof TOAST_ICONS] : null;
+          const iconColor = toastMingcuteIconColor(toast.type);
+          const iconClass = toastMingcuteIconClassName(toast.type);
 
           return (
             <Toast.Root
@@ -114,7 +143,7 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
                       className="[&>svg]:h-lh [&>svg]:w-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
                       data-slot="toast-icon"
                     >
-                      <Icon className="in-data-[type=loading]:animate-spin in-data-[type=error]:text-destructive in-data-[type=info]:text-info in-data-[type=success]:text-success in-data-[type=warning]:text-warning in-data-[type=loading]:opacity-80" />
+                      <Icon className={cn("h-4 w-4 shrink-0", iconClass)} color={iconColor} />
                     </div>
                   )}
 
@@ -140,77 +169,83 @@ function Toasts({ position }: { position: ToastPosition }): React.ReactElement {
   );
 }
 
+function AnchoredToastItem({
+  toast,
+}: {
+  toast: ToastObject<Record<string, unknown>>;
+}): React.ReactElement | null {
+  const Icon = toast.type ? TOAST_ICONS[toast.type as keyof typeof TOAST_ICONS] : null;
+  const iconColor = toastMingcuteIconColor(toast.type);
+  const iconClass = toastMingcuteIconClassName(toast.type);
+  const tooltipStyle = (toast.data as { tooltipStyle?: boolean })?.tooltipStyle ?? false;
+  const positionerProps = toast.positionerProps;
+
+  if (!positionerProps?.anchor) {
+    return null;
+  }
+
+  return (
+    <Toast.Positioner
+      className="z-50 max-w-[min(--spacing(64),var(--available-width))]"
+      data-slot="toast-positioner"
+      sideOffset={positionerProps.sideOffset ?? 4}
+      toast={toast}
+    >
+      <Toast.Root
+        className={cn(
+          "relative text-balance border border-border bg-popover not-dark:bg-clip-padding text-popover-foreground text-xs transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:shadow-[0_1px_--theme(--color-black/4%)] data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0 dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
+          tooltipStyle
+            ? "rounded-md shadow-md/5 before:rounded-[calc(var(--radius-md)-1px)]"
+            : "rounded-lg shadow-lg/5 before:rounded-[calc(var(--radius-lg)-1px)]",
+        )}
+        data-slot="toast-popup"
+        toast={toast}
+      >
+        {tooltipStyle ? (
+          <Toast.Content className="pointer-events-auto px-2 py-1">
+            <Toast.Title data-slot="toast-title" />
+          </Toast.Content>
+        ) : (
+          <Toast.Content className="pointer-events-auto flex items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm">
+            <div className="flex gap-2">
+              {Icon && (
+                <div
+                  className="[&>svg]:h-lh [&>svg]:w-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+                  data-slot="toast-icon"
+                >
+                  <Icon className={cn("h-4 w-4 shrink-0", iconClass)} color={iconColor} />
+                </div>
+              )}
+
+              <div className="flex flex-col gap-0.5">
+                <Toast.Title className="font-medium" data-slot="toast-title" />
+                <Toast.Description
+                  className="text-muted-foreground"
+                  data-slot="toast-description"
+                />
+              </div>
+            </div>
+            {toast.actionProps && (
+              <Toast.Action className={buttonVariants({ size: "xs" })} data-slot="toast-action">
+                {toast.actionProps.children}
+              </Toast.Action>
+            )}
+          </Toast.Content>
+        )}
+      </Toast.Root>
+    </Toast.Positioner>
+  );
+}
+
 function AnchoredToasts(): React.ReactElement {
   const { toasts } = Toast.useToastManager();
 
   return (
     <Toast.Portal data-slot="toast-portal-anchored">
       <Toast.Viewport className="outline-none" data-slot="toast-viewport-anchored">
-        {toasts.map((toast) => {
-          const Icon = toast.type ? TOAST_ICONS[toast.type as keyof typeof TOAST_ICONS] : null;
-          const tooltipStyle = (toast.data as { tooltipStyle?: boolean })?.tooltipStyle ?? false;
-          const positionerProps = toast.positionerProps;
-
-          if (!positionerProps?.anchor) {
-            return null;
-          }
-
-          return (
-            <Toast.Positioner
-              className="z-50 max-w-[min(--spacing(64),var(--available-width))]"
-              data-slot="toast-positioner"
-              key={toast.id}
-              sideOffset={positionerProps.sideOffset ?? 4}
-              toast={toast}
-            >
-              <Toast.Root
-                className={cn(
-                  "relative text-balance border border-border bg-popover not-dark:bg-clip-padding text-popover-foreground text-xs transition-[scale,opacity] before:pointer-events-none before:absolute before:inset-0 before:shadow-[0_1px_--theme(--color-black/4%)] data-ending-style:scale-98 data-starting-style:scale-98 data-ending-style:opacity-0 data-starting-style:opacity-0 dark:before:shadow-[0_-1px_--theme(--color-white/6%)]",
-                  tooltipStyle
-                    ? "rounded-md shadow-md/5 before:rounded-[calc(var(--radius-md)-1px)]"
-                    : "rounded-lg shadow-lg/5 before:rounded-[calc(var(--radius-lg)-1px)]",
-                )}
-                data-slot="toast-popup"
-                toast={toast}
-              >
-                {tooltipStyle ? (
-                  <Toast.Content className="pointer-events-auto px-2 py-1">
-                    <Toast.Title data-slot="toast-title" />
-                  </Toast.Content>
-                ) : (
-                  <Toast.Content className="pointer-events-auto flex items-center justify-between gap-1.5 overflow-hidden px-3.5 py-3 text-sm">
-                    <div className="flex gap-2">
-                      {Icon && (
-                        <div
-                          className="[&>svg]:h-lh [&>svg]:w-4 [&_svg]:pointer-events-none [&_svg]:shrink-0"
-                          data-slot="toast-icon"
-                        >
-                          <Icon className="in-data-[type=loading]:animate-spin in-data-[type=error]:text-destructive in-data-[type=info]:text-info in-data-[type=success]:text-success in-data-[type=warning]:text-warning in-data-[type=loading]:opacity-80" />
-                        </div>
-                      )}
-
-                      <div className="flex flex-col gap-0.5">
-                        <Toast.Title className="font-medium" data-slot="toast-title" />
-                        <Toast.Description
-                          className="text-muted-foreground"
-                          data-slot="toast-description"
-                        />
-                      </div>
-                    </div>
-                    {toast.actionProps && (
-                      <Toast.Action
-                        className={buttonVariants({ size: "xs" })}
-                        data-slot="toast-action"
-                      >
-                        {toast.actionProps.children}
-                      </Toast.Action>
-                    )}
-                  </Toast.Content>
-                )}
-              </Toast.Root>
-            </Toast.Positioner>
-          );
-        })}
+        {toasts.map((toast) => (
+          <AnchoredToastItem key={toast.id} toast={toast} />
+        ))}
       </Toast.Viewport>
     </Toast.Portal>
   );

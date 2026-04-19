@@ -1,0 +1,71 @@
+import { describe, expect, test } from "bun:test";
+import {
+  collapseObviousDuplicates,
+  normalizedArticleIdentity,
+} from "@modules/articles/articles-list-dedupe";
+
+type Row = {
+  id: string;
+  title: string;
+  link: string;
+  summary: string | null;
+  publishedAt: Date;
+  feedId: string;
+  feedTitle: string;
+  isRead: boolean;
+  isSaved: boolean;
+};
+
+function row(overrides: Partial<Row>): Row {
+  return {
+    id: "a",
+    title: "Title",
+    link: "https://example.com/post",
+    summary: null,
+    publishedAt: new Date("2026-04-01T00:00:00.000Z"),
+    feedId: "feed-1",
+    feedTitle: "Feed",
+    isRead: false,
+    isSaved: false,
+    ...overrides,
+  };
+}
+
+describe("articles.list duplicate collapse", () => {
+  test("normalizes tracking params/hash/trailing slash for identity", () => {
+    const normalized = normalizedArticleIdentity(
+      "https://Example.com/post/?utm_source=x&fbclid=abc#section",
+    );
+    expect(normalized).toBe("https://example.com/post");
+  });
+
+  test("collapses obvious same-feed duplicates and keeps richer row", () => {
+    const rows = [
+      row({
+        id: "1",
+        link: "https://example.com/post?utm_source=mail",
+        summary: null,
+      }),
+      row({
+        id: "2",
+        link: "https://example.com/post",
+        summary: "Richer summary",
+      }),
+    ];
+
+    const deduped = collapseObviousDuplicates(rows);
+    expect(deduped).toHaveLength(1);
+    expect(deduped[0]?.id).toBe("2");
+    expect(deduped[0]?.summary).toBe("Richer summary");
+  });
+
+  test("does not collapse across different feeds", () => {
+    const rows = [
+      row({ id: "1", feedId: "feed-1", link: "https://example.com/post" }),
+      row({ id: "2", feedId: "feed-2", link: "https://example.com/post" }),
+    ];
+
+    const deduped = collapseObviousDuplicates(rows);
+    expect(deduped).toHaveLength(2);
+  });
+});

@@ -1,0 +1,432 @@
+// @vitest-environment jsdom
+
+import { act, render, waitFor } from "@testing-library/react";
+import { describe, expect, test } from "vitest";
+import { RenderHtml } from "./render-html";
+
+describe("RenderHtml", () => {
+  test("keeps div structure and filtered classes aligned with server sanitizer", () => {
+    const html = `
+      <div class="author-bio media-object">
+        <img src="https://example.com/x.png" alt="" />
+        <div class="bio-text"><p class="name">Sam</p></div>
+      </div>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    expect(root?.querySelector(".author-bio")).toBeTruthy();
+    expect(root?.querySelectorAll("div").length).toBeGreaterThanOrEqual(2);
+    expect(root?.querySelector("img")?.getAttribute("src")).toBe("https://example.com/x.png");
+  });
+
+  test("tags avatar class and author-bio hosts as profile thumbs", async () => {
+    const html = `
+      <div class="author-bio"><img src="https://example.com/a.png" alt="" /></div>
+      <p><img src="https://example.com/b.png" alt="" class="avatar" /></p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelectorAll("[data-reader-profile-thumb]").length).toBe(2);
+    });
+  });
+
+  test("does not mark a full-article wrapper (hero + many blocks) as media-aside", async () => {
+    const html = `
+      <div class="article-wrap">
+        <img src="https://example.com/hero.png" alt="" />
+        <p>First paragraph.</p>
+        <p>Second paragraph.</p>
+        <p>Third paragraph.</p>
+      </div>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector(".article-wrap")?.hasAttribute("data-reader-media-aside")).toBe(
+        false,
+      );
+    });
+  });
+
+  test("marks author-bio, media-object, and wp-block-media-text for aside layout after enhance", async () => {
+    const html = `
+      <section class="author-bio">
+        <img src="https://example.com/a.png" alt="" />
+        <div class="bio-text"><p>Bio</p></div>
+      </section>
+      <div class="wp-block-media-text">
+        <figure class="wp-block-media-text__media"><img src="https://example.com/b.png" alt="" /></figure>
+        <div class="wp-block-media-text__content"><p>Aside</p></div>
+      </div>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(
+        root?.querySelector("section.author-bio")?.getAttribute("data-reader-media-aside"),
+      ).toBe("");
+      expect(
+        root?.querySelector(".wp-block-media-text")?.getAttribute("data-reader-media-aside"),
+      ).toBe("");
+    });
+  });
+});
+
+describe("RenderHtml – carousel stripping", () => {
+  test("strips lists where every item is a single bullet/dot character", async () => {
+    const html = `
+      <p>Some real content.</p>
+      <ul>
+        <li>•</li>
+        <li>•</li>
+        <li>•</li>
+      </ul>
+      <p>More real content.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector("ul")).toBeNull();
+      expect(root?.querySelectorAll("p").length).toBeGreaterThanOrEqual(2);
+    });
+  });
+
+  test("strips <ul> where every item is a bare number (slide index)", async () => {
+    const html = `
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+      <p>Article text.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector("ul")).toBeNull();
+    });
+  });
+
+  test("removes empty lists", async () => {
+    const html = `
+      <ul></ul>
+      <p>Article text.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector("ul")).toBeNull();
+    });
+  });
+
+  test("preserves legitimate article lists with real text content", async () => {
+    const html = `
+      <ul>
+        <li>First the cats arrived</li>
+        <li>Then the dogs followed</li>
+        <li>Finally the birds nested</li>
+      </ul>
+      <p>Article text after a real list.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector("ul")).toBeTruthy();
+      expect(root?.querySelectorAll("li").length).toBe(3);
+    });
+  });
+});
+
+describe("RenderHtml – image-adjacent text classification", () => {
+  test("classifies a short paragraph after an image as caption", async () => {
+    const html = `
+      <img src="https://example.com/photo.jpg" alt="" />
+      <p>A bustling market in downtown Tokyo during rush hour.</p>
+      <p>The city has seen rapid growth in the last decade, with new transit lines opening every year. Public transportation is the backbone of urban mobility.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      const paragraphs = root?.querySelectorAll("p");
+      expect(paragraphs?.length).toBeGreaterThanOrEqual(2);
+      // First short paragraph should be classified as caption
+      const captionEl = root?.querySelector("[data-reader-figure-caption]");
+      expect(captionEl).toBeTruthy();
+      expect(captionEl?.textContent).toContain("bustling market");
+      // Longer body paragraph should NOT be classified
+      const bodyParagraph = Array.from(paragraphs ?? []).find((p) =>
+        p.textContent?.includes("rapid growth"),
+      );
+      expect(bodyParagraph?.hasAttribute("data-reader-figure-caption")).toBe(false);
+      expect(bodyParagraph?.hasAttribute("data-reader-figure-credit")).toBe(false);
+    });
+  });
+
+  test("classifies credit line after an image", async () => {
+    const html = `
+      <img src="https://example.com/photo.jpg" alt="" />
+      <p>Photo by Jane Smith / Reuters</p>
+      <p>The economy continued to grow steadily throughout the quarter.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      const creditEl = root?.querySelector("[data-reader-figure-credit]");
+      expect(creditEl).toBeTruthy();
+      expect(creditEl?.textContent).toContain("Photo by Jane Smith");
+      // Body text should NOT be classified
+      const bodyP = Array.from(root?.querySelectorAll("p") ?? []).find((p) =>
+        p.textContent?.includes("economy"),
+      );
+      expect(bodyP?.hasAttribute("data-reader-figure-credit")).toBe(false);
+    });
+  });
+
+  test("does not classify long body paragraphs as caption", async () => {
+    const html = `
+      <img src="https://example.com/photo.jpg" alt="" />
+      <p>The president spoke at length about the importance of investing in infrastructure, renewable energy, and public education to build a stronger foundation for future generations of Americans.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-figure-caption]")).toBeNull();
+      expect(root?.querySelector("[data-reader-figure-credit]")).toBeNull();
+    });
+  });
+
+  test("skips classification inside figure elements", async () => {
+    const html = `
+      <figure>
+        <img src="https://example.com/photo.jpg" alt="" />
+        <figcaption>A real figcaption</figcaption>
+      </figure>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      // figcaption should be present and NOT wrapped with data-reader-figure-caption
+      expect(root?.querySelector("figcaption")).toBeTruthy();
+      expect(root?.querySelector("[data-reader-figure-caption]")).toBeNull();
+    });
+  });
+});
+
+describe("RenderHtml – author bio text detection", () => {
+  test("detects author bio from adjacent text content", async () => {
+    const html = `
+      <p><img src="https://example.com/headshot.jpg" alt="" /></p>
+      <p>Jane Doe is a reporter covering technology and innovation.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-profile-thumb]")).toBeTruthy();
+    });
+  });
+
+  test("detects broader author host selectors (contributor, bio-wrapper)", async () => {
+    const html = `
+      <div class="contributor">
+        <img src="https://example.com/author.jpg" alt="" />
+        <div><p>John Smith, Senior Editor</p></div>
+      </div>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      // The contributor wrapper should be marked as media-aside (flex layout)
+      expect(root?.querySelector(".contributor")?.hasAttribute("data-reader-media-aside")).toBe(
+        true,
+      );
+    });
+  });
+});
+
+describe("RenderHtml – gallery markup with class-based indicators", () => {
+  test("strips carousel class name from lists via sanitization", async () => {
+    const html = `
+      <p>Article content before gallery.</p>
+      <ul class="carousel-dots">
+        <li>slide 1</li>
+        <li>slide 2</li>
+        <li>slide 3</li>
+      </ul>
+      <p>Content after gallery.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      // The carousel class is stripped by DOMPurify's denied tokens.
+      // Items with real text survive (correct conservative behavior).
+      const lists = root?.querySelectorAll("ul");
+      if (lists && lists.length > 0) {
+        for (const ul of lists) {
+          expect(ul.className).not.toMatch(/carousel/i);
+        }
+      }
+    });
+  });
+
+  test("strips carousel dot lists with only bullet characters", async () => {
+    const html = `
+      <p>Content.</p>
+      <ul class="slider-dots">
+        <li>•</li>
+        <li>•</li>
+        <li>•</li>
+      </ul>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      // The dot-only items cause full removal by the structural heuristic
+      expect(root?.querySelector("ul")).toBeNull();
+    });
+  });
+});
+
+describe("RenderHtml – edge cases", () => {
+  test("preserves mixed list with real text even if one item looks numeric", async () => {
+    const html = `
+      <ol>
+        <li>1. Install the package</li>
+        <li>2. Configure your environment</li>
+        <li>3. Run the application</li>
+      </ol>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      // This is a real list — each item has more than just a number
+      expect(root?.querySelector("ol")).toBeTruthy();
+    });
+  });
+
+  test("handles nested wrappers with misleading class names without false positives", async () => {
+    const html = `
+      <div class="content-wrapper">
+        <div class="media-container">
+          <img src="https://example.com/hero.jpg" alt="" />
+        </div>
+        <div class="text-content">
+          <p>First paragraph of a long article.</p>
+          <p>Second paragraph with more detail.</p>
+          <p>Third paragraph wrapping up.</p>
+        </div>
+      </div>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      // The outer wrapper has >2 grandchildren via nested divs, so it shouldn't
+      // get incorrectly wrapped as media-aside
+      const allParagraphs = root?.querySelectorAll("p");
+      expect(allParagraphs?.length).toBeGreaterThanOrEqual(3);
+      // None of them should be classified as caption (they're body text)
+      expect(root?.querySelector("[data-reader-figure-caption]")).toBeNull();
+    });
+  });
+});
+
+describe("RenderHtml – media/image hardening", () => {
+  test("keeps inline badge images out of block media frames", async () => {
+    const html = `
+      <p>
+        <img src="https://img.shields.io/badge/CI-passing-brightgreen" alt="CI badge" />
+        <img src="https://img.shields.io/badge/license-apache--2.0-blue" alt="License badge" />
+      </p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      const badges = root?.querySelectorAll("img[data-reader-inline-img]");
+      expect(badges?.length).toBe(2);
+      expect(root?.querySelector("[data-reader-img-frame]")).toBeNull();
+    });
+  });
+
+  test("removes placeholder siblings when a real image is present", async () => {
+    const html = `
+      <p>
+        <img src="https://example.com/grey-placeholder.png" class="article-image unavailable" alt="" />
+        <img src="https://example.com/real-photo.jpg" alt="Real photo" />
+      </p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      const imgs = root?.querySelectorAll("img");
+      expect(imgs?.length).toBe(1);
+      expect(imgs?.[0]?.getAttribute("src")).toContain("real-photo.jpg");
+    });
+  });
+
+  test("removes likely author social cards from article body", async () => {
+    const html = `
+      <div class="author-card">
+        <img src="https://example.com/author.jpg" alt="Author" />
+        <p>Jane Doe, editor at Example.</p>
+        <a href="https://twitter.com/jane">X</a>
+        <a href="https://linkedin.com/in/jane">LinkedIn</a>
+      </div>
+      <p>Actual article paragraph.</p>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector(".author-card")).toBeNull();
+      expect(root?.textContent).toContain("Actual article paragraph");
+    });
+  });
+});
+
+describe("RenderHtml – code block normalization", () => {
+  test("normalizes standalone multiline code tags into enhanced blocks", async () => {
+    const html = `
+      <div>
+        <code class="language-bash">mydumper \\
+  --threads 32 \\
+  --outputdir /root/mydumper_backup/</code>
+      </div>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-code-block]")).toBeTruthy();
+      expect(root?.querySelector("button[aria-label='Copy code']")).toBeTruthy();
+      expect(root?.querySelector(".reader-code-lang-label")?.textContent).toBe("Bash");
+    });
+  });
+
+  test("re-applies code block chrome when the DOM is reset (hydration reload)", async () => {
+    const html = `
+      <pre><code class="language-ts">const hello: string = "world"</code></pre>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    expect(root).toBeTruthy();
+
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-code-block]")).toBeTruthy();
+    });
+
+    act(() => {
+      if (root) {
+        root.innerHTML = html;
+      }
+    });
+
+    await waitFor(() => {
+      expect(root?.querySelector("[data-reader-code-block]")).toBeTruthy();
+      expect(root?.querySelector("button[aria-label='Copy code']")).toBeTruthy();
+      expect(root?.querySelector(".reader-code-lang-label")?.textContent).toBe("TypeScript");
+    });
+  });
+});

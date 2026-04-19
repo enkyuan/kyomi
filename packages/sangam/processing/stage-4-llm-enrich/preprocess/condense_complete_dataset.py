@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 # Add project root
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
-from readspace.parsing import convert_to_markdown, clean_html_text
+from feed.parsing import convert_to_markdown, clean_html_text
 
 INPUT_FILE = "processing/stage-3-favicon-dedupe/stage_3_feeds.jsonl"
 OUTPUT_FILE = "processing/stage-4-llm-enrich/feeds_llm_input.jsonl"

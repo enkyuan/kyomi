@@ -1,3 +1,4 @@
+import { ARTICLE_HTML_PURIFY_CONFIG, registerArticleHtmlSanitizeHooks } from "@cronos/sanitization";
 import { JSDOM } from "jsdom";
 import createDOMPurify from "dompurify";
 
@@ -5,132 +6,148 @@ import createDOMPurify from "dompurify";
 const window = new JSDOM("").window;
 const DOMPurify = createDOMPurify(window);
 
+registerArticleHtmlSanitizeHooks(DOMPurify);
+DOMPurify.setConfig(ARTICLE_HTML_PURIFY_CONFIG);
+
 /**
- * DOMPurify-based article HTML sanitizer.
+ * DOMPurify-based article HTML sanitizer (see `@cronos/sanitization`).
  *
- * Replaces the previous hand-rolled JSDOM walker with a battle-tested
- * sanitization library. Configured to:
- * - Allow only article-safe structural tags
- * - Strip all event handlers, style attributes, and dangerous URI schemes
- * - Allow safe link/image attributes and code language classes
+ * Configured to:
+ * - Allow article-safe structural tags including `div` for publisher layout
+ * - Filter `class` tokens to layout/content patterns; `code` keeps `language-*` only
+ * - Strip inline `style` except on KaTeX spans and MathML (DOMPurify still validates CSS)
+ * - Strip event handlers and dangerous URI schemes
  * - Remove interactive/chrome elements entirely (forms, nav, buttons, etc.)
  */
 
-const ALLOWED_TAGS = [
-  "a",
-  "article",
-  "blockquote",
-  "br",
-  "code",
-  "details",
-  "em",
-  "figcaption",
-  "figure",
-  "h1",
-  "h2",
-  "h3",
-  "h4",
-  "h5",
-  "h6",
-  "hr",
-  "img",
-  "li",
-  "main",
-  "mark",
-  "ol",
-  "p",
-  "pre",
-  "section",
-  "strong",
-  "sub",
-  "summary",
-  "sup",
-  "abbr",
-  "table",
-  "tbody",
-  "td",
-  "th",
-  "thead",
-  "tr",
-  "ul",
-];
+function normalizeSafeHttpUrl(raw: string, baseUrl?: string | null): string | null {
+  const candidate = raw.trim();
+  if (!candidate) {
+    return null;
+  }
+  try {
+    const parsed = new URL(candidate, baseUrl ?? undefined);
+    if (parsed.protocol === "http:" || parsed.protocol === "https:") {
+      return parsed.href;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
 
-const ALLOWED_ATTR = [
-  // Links
-  "href",
-  "rel",
-  "target",
-  // Images
-  "src",
-  "alt",
-  "title",
-  "width",
-  "height",
-  "loading",
-  // Tables
-  "colspan",
-  "rowspan",
-  "scope",
-  // Code highlighting
-  "class",
-];
+function resolveRelativeAssetUrls(html: string, baseUrl?: string | null): string {
+  if (!baseUrl) {
+    return html;
+  }
+  const root = normalizeSafeHttpUrl(baseUrl);
+  if (!root) {
+    return html;
+  }
+  const dom = new JSDOM(`<body>${html}</body>`);
+  const { document } = dom.window;
 
-/**
- * Tags that should be removed entirely (including their children), not
- * just unwrapped. These are interactive/chrome elements that have no
- * place in article content.
- */
-const FORBID_TAGS = [
-  "aside",
-  "button",
-  "footer",
-  "form",
-  "header",
-  "iframe",
-  "input",
-  "nav",
-  "noscript",
-  "script",
-  "select",
-  "style",
-  "svg",
-  "textarea",
-];
-
-// Configure DOMPurify once
-DOMPurify.setConfig({
-  ALLOWED_TAGS,
-  ALLOWED_ATTR,
-  FORBID_TAGS,
-  ALLOW_DATA_ATTR: false,
-  ALLOWED_URI_REGEXP: /^https?:\/\//i,
-});
-
-// Hook: only allow `class` attribute on `code` elements with a language- pattern
-DOMPurify.addHook("uponSanitizeAttribute", (node, data) => {
-  if (data.attrName === "class") {
-    if (node.tagName?.toLowerCase() !== "code" || !/^language-[\w-]+$/.test(data.attrValue)) {
-      data.keepAttr = false;
+  for (const link of document.querySelectorAll("a[href]")) {
+    const href = link.getAttribute("href");
+    if (!href) {
+      continue;
+    }
+    const normalized = normalizeSafeHttpUrl(href, root);
+    if (normalized) {
+      link.setAttribute("href", normalized);
+    } else {
+      link.removeAttribute("href");
     }
   }
-});
 
-// Hook: remove empty elements (except void elements)
-const VOID_ELEMENTS = new Set(["br", "hr", "img"]);
-DOMPurify.addHook("afterSanitizeElements", (node) => {
-  if (
-    node.nodeType === 1 &&
-    !VOID_ELEMENTS.has((node as Element).tagName.toLowerCase()) &&
-    !(node as Element).hasChildNodes() &&
-    !node.textContent?.trim()
-  ) {
-    node.parentNode?.removeChild(node);
+  for (const img of document.querySelectorAll("img[src]")) {
+    const src = img.getAttribute("src");
+    if (!src) {
+      continue;
+    }
+    const normalized = normalizeSafeHttpUrl(src, root);
+    if (normalized) {
+      img.setAttribute("src", normalized);
+    } else {
+      img.removeAttribute("src");
+    }
   }
-});
 
-export function sanitizeArticleHtml(html: string): string {
-  const clean = DOMPurify.sanitize(html);
-  return clean.replace(/\n{3,}/g, "\n\n").trim();
+  return document.body.innerHTML;
+}
+
+/**
+ * Carousel / slider control class-name substrings that flag a `<ul>/<ol>` for removal.
+ * We only strip when the list *also* matches structural heuristics (see below).
+ */
+const CAROUSEL_CLASS_RE =
+  /carousel|slider|slick|swiper|glide|dots?|indicator|pagination|pager|nav-thumb|slideshow|owl/i;
+
+/**
+ * Returns `true` when `text` looks like a single pagination marker:
+ * - empty / whitespace-only
+ * - single unicode bullet / circle / dot / digit
+ * - a bare number like "1", "2", "10"
+ */
+function isSingleDotOrIndex(text: string): boolean {
+  const t = text.trim();
+  if (!t) return true;
+  // Single bullet / dot / circle character
+  if (/^[•●○◦◼◻■□▪▫–—·‣⬤\u2022\u25CF\u25CB]$/.test(t)) return true;
+  // Bare number (slide index)
+  if (/^\d{1,3}$/.test(t)) return true;
+  return false;
+}
+
+/**
+ * Strips carousel/slider pagination artifacts from sanitized HTML.
+ *
+ * Heuristics (must be satisfied together):
+ * 1. The `<ul>/<ol>` carries a class matching CAROUSEL_CLASS_RE, **or**
+ * 2. Every `<li>` in the list contains only a single dot/bullet/number/empty text.
+ *
+ * This avoids stripping legitimate article lists.
+ */
+function stripCarouselArtifacts(html: string): string {
+  if (!html.includes("<li")) return html;
+  const dom = new JSDOM(`<body>${html}</body>`);
+  const { document } = dom.window;
+  let changed = false;
+
+  for (const list of document.querySelectorAll("ul, ol")) {
+    const items = list.querySelectorAll(":scope > li");
+    if (items.length === 0) {
+      // Empty list — remove
+      list.remove();
+      changed = true;
+      continue;
+    }
+
+    const hasCarouselClass = CAROUSEL_CLASS_RE.test(list.className ?? "");
+    const allDots = Array.from(items).every((li) => isSingleDotOrIndex(li.textContent ?? ""));
+
+    // For <ol>, bare numbers ("1","2","3") are legitimate — only strip if class signals carousel
+    if (list.tagName === "OL" && !hasCarouselClass) continue;
+
+    if (hasCarouselClass || allDots) {
+      list.remove();
+      changed = true;
+    }
+  }
+
+  return changed ? document.body.innerHTML : html;
+}
+
+export function sanitizeArticleHtml(
+  html: string,
+  options?: {
+    baseUrl?: string | null;
+  },
+): string {
+  const normalized = resolveRelativeAssetUrls(html, options?.baseUrl);
+  const clean = DOMPurify.sanitize(normalized);
+  const withoutCarousel = stripCarouselArtifacts(clean);
+  return withoutCarousel.replace(/\n{3,}/g, "\n\n").trim();
 }
 
 /**
@@ -146,7 +163,7 @@ export function htmlToText(html: string): string {
   }
 
   for (const element of document.querySelectorAll(
-    "p, li, blockquote, pre, h1, h2, h3, h4, h5, h6, tr",
+    "p, li, blockquote, pre, h1, h2, h3, h4, h5, h6, tr, div, section, article, main",
   )) {
     element.append("\n");
   }

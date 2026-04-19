@@ -1,18 +1,10 @@
 "use client";
 
-import { Renderer, marked } from "marked";
+import { Marked, Renderer } from "marked";
 import markedKatex from "marked-katex-extension";
 import { memo } from "react";
+import { normalizeSafeHttpUrl } from "@lib/safe-http-url";
 import { RenderHtml } from "./render-html";
-
-function isSafeUrl(url: string): boolean {
-  try {
-    const parsed = new URL(url, "https://example.com");
-    return parsed.protocol === "http:" || parsed.protocol === "https:";
-  } catch {
-    return false;
-  }
-}
 
 function escapeAttr(value: string): string {
   return value
@@ -22,27 +14,59 @@ function escapeAttr(value: string): string {
     .replace(/>/g, "&gt;");
 }
 
-const renderer = new Renderer();
+function createMarked(baseUrl?: string | null): Marked {
+  const renderer = new Renderer();
 
-renderer.link = function ({ href, title, text }) {
-  if (!isSafeUrl(href)) return text;
-  const titleAttr = title ? ` title="${escapeAttr(title)}"` : "";
-  return `<a href="${escapeAttr(href)}"${titleAttr} rel="noopener noreferrer">${text}</a>`;
-};
+  renderer.link = function ({ href, title, text }) {
+    const resolvedHref = href ? normalizeSafeHttpUrl(href, baseUrl) : null;
+    if (!resolvedHref) return text;
+    const titleAttr = title ? ` title="${escapeAttr(title)}"` : "";
+    return `<a href="${escapeAttr(resolvedHref)}"${titleAttr} rel="noopener noreferrer" target="_blank">${text}</a>`;
+  };
 
-renderer.image = function ({ href, title, text }) {
-  if (!isSafeUrl(href)) return text;
-  const titleAttr = title ? ` title="${escapeAttr(title)}"` : "";
-  return `<img src="${escapeAttr(href)}" alt="${escapeAttr(text)}"${titleAttr}>`;
-};
+  renderer.image = function ({ href, title, text }) {
+    const resolvedSrc = href ? normalizeSafeHttpUrl(href, baseUrl) : null;
+    if (!resolvedSrc) return text;
+    const titleAttr = title ? ` title="${escapeAttr(title)}"` : "";
+    return `<img src="${escapeAttr(resolvedSrc)}" alt="${escapeAttr(text)}"${titleAttr}>`;
+  };
 
-renderer.html = function ({ text }) {
-  return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-};
+  renderer.code = function ({ text, lang }) {
+    const language = (lang ?? "").trim();
+    const classAttr = language ? ` class="language-${escapeAttr(language)}"` : "";
+    return `<pre><code${classAttr}>${escapeAttr(text)}</code></pre>`;
+  };
 
-marked.use(markedKatex({ throwOnError: false }));
-marked.use({ renderer });
+  const marked = new Marked();
+  marked.use(markedKatex({ throwOnError: false }));
+  marked.use({
+    gfm: true,
+    breaks: false,
+    renderer,
+  });
+  return marked;
+}
 
-export const RenderMarkdown = memo(function RenderMarkdown({ markdown }: { markdown: string }) {
-  return <RenderHtml html={marked.parse(markdown, { async: false }) as string} />;
+const markedByBaseUrl = new Map<string, ReturnType<typeof createMarked>>();
+
+function getMarkedForBaseUrl(baseUrl?: string | null): Marked {
+  const key = baseUrl ?? "";
+  let parser = markedByBaseUrl.get(key);
+  if (!parser) {
+    parser = createMarked(baseUrl);
+    markedByBaseUrl.set(key, parser);
+  }
+  return parser;
+}
+
+export const RenderMarkdown = memo(function RenderMarkdown({
+  markdown,
+  baseUrl,
+}: {
+  markdown: string;
+  baseUrl?: string | null;
+}) {
+  const parser = getMarkedForBaseUrl(baseUrl);
+  const html = parser.parse(markdown, { async: false }) as string;
+  return <RenderHtml html={html} baseUrl={baseUrl} />;
 });

@@ -1,5 +1,5 @@
 import { Readability } from "@mozilla/readability";
-import { JSDOM } from "jsdom";
+import { parseHTML } from "linkedom";
 import { fetchArticleDocument } from "./articles.fetch-document";
 import { htmlToText, sanitizeArticleHtml } from "./articles.sanitize-content";
 import type { ArticleExtractionCandidate } from "./articles.content.types";
@@ -43,8 +43,14 @@ export async function extractArticleContentFromUrl(
 
   let article: ReturnType<Readability["parse"]> | null;
   try {
-    const dom = new JSDOM(fetched.body, { url: fetched.finalUrl });
-    const reader = new Readability(dom.window.document);
+    const htmlView = parseHTML(fetched.body);
+    const doc = htmlView.document;
+    try {
+      Object.defineProperty(doc, "URL", { value: fetched.finalUrl, configurable: true });
+    } catch {
+      /* ignore if runtime does not allow redefining URL */
+    }
+    const reader = new Readability(doc);
     article = reader.parse();
   } catch (error) {
     return {
@@ -65,7 +71,7 @@ export async function extractArticleContentFromUrl(
     };
   }
 
-  const contentHtml = sanitizeArticleHtml(article.content);
+  const contentHtml = sanitizeArticleHtml(article.content, { baseUrl: fetched.finalUrl });
   const contentText = htmlToText(contentHtml);
 
   if (wordCount(contentText) < 60 || paragraphCount(contentText) < 2) {

@@ -22,11 +22,7 @@ function requireApiOrigin() {
     return "http://localhost:8000";
   }
 
-  if (!apiOrigin) {
-    throw new Error("[api] Missing required API_ORIGIN");
-  }
-
-  return apiOrigin.replace(/\/$/, "");
+  throw new Error("[api] Missing required API_ORIGIN");
 }
 
 export function resolveApiUrl(pathname: string, search = "") {
@@ -61,11 +57,13 @@ export async function forwardRequestToApi(request: Request) {
 }
 
 export async function apiJson<T>(path: string, init?: RequestInit) {
-  const response = await fetch(resolveApiUrl(path), init);
+  const url = resolveApiUrl(path);
+  const response = await fetch(url, init);
 
   if (!response.ok) {
-    const message = await response.text();
-    throw new Error(message || `API request failed: ${response.status}`);
+    const body = (await response.text()).trim();
+    const summary = body || response.statusText || "Unknown error";
+    throw new Error(`[api] ${response.status} ${url.pathname}${url.search}: ${summary}`);
   }
 
   return (await response.json()) as T;

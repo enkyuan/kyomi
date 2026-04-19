@@ -14,7 +14,7 @@ from tqdm import tqdm
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
-from readspace.favicon import extract_favicon_and_canonical_url
+from feed.favicon import extract_favicon_and_canonical_url
 
 # Setup logging
 # Suppress noisy libraries

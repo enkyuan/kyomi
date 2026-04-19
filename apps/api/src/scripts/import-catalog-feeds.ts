@@ -221,10 +221,21 @@ async function main() {
 
 main()
   .catch((error: unknown) => {
+    const maybeCause =
+      typeof error === "object" &&
+      error !== null &&
+      "cause" in error &&
+      (error as { cause?: unknown }).cause
+        ? (error as { cause?: unknown }).cause
+        : null;
+
     console.error(
       "[catalog-import] failed:",
       error instanceof Error ? error.message : String(error),
     );
+    if (maybeCause) {
+      console.error("[catalog-import] cause:", maybeCause);
+    }
     process.exitCode = 1;
   })
   .finally(async () => {

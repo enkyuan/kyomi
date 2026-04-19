@@ -152,5 +152,5 @@ First off, the dataset is too huge to load into memory. Try converting to DuckDB
 
 Wait the trank_rank and domain are based on the feed_url, not the website_url. We should fix that.
 
-1. Missing image_url for ~8-9k feeds. Run extract_favicon_and_canonical_url from readspace/favicon.py on each website_url
+1. Missing image_url for ~8-9k feeds. Run extract_favicon_and_canonical_url from feed/favicon.py on each website_url
 2. Deduplication based on content_hash and other heuristics (e.g. extremely similar title). See how many we filter out

@@ -22,17 +22,23 @@ function markFaviconFailed(url: string): void {
 }
 
 type FeedFaviconProps = {
+  /** Persisted favicon URL from feed metadata (ingestion); preferred over the proxy when set. */
+  faviconUrl?: string | null;
   feedUrl: string;
   siteUrl: string | null;
   title: string;
   className?: string;
 };
 
-export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconProps) {
-  const faviconUrl = buildFaviconUrl(siteUrl, feedUrl);
-  const [imageError, setImageError] = useState(
-    faviconUrl ? hasFaviconFailed(faviconUrl) : false,
-  );
+export function FeedFavicon({
+  faviconUrl: storedFaviconUrl,
+  feedUrl,
+  siteUrl,
+  title,
+  className,
+}: FeedFaviconProps) {
+  const faviconUrl = buildFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
+  const [imageError, setImageError] = useState(faviconUrl ? hasFaviconFailed(faviconUrl) : false);
 
   useEffect(() => {
     setImageError(faviconUrl ? hasFaviconFailed(faviconUrl) : false);
@@ -58,7 +64,15 @@ export function FeedFavicon({ feedUrl, siteUrl, title, className }: FeedFaviconP
   );
 }
 
-function buildFaviconUrl(siteUrl: string | null, feedUrl: string) {
+export function buildFaviconUrl(
+  storedFaviconUrl: string | null | undefined,
+  siteUrl: string | null,
+  feedUrl: string,
+) {
+  const trimmed = storedFaviconUrl?.trim();
+  if (trimmed) {
+    return trimmed;
+  }
   const hostUrl = parseHostUrl(siteUrl) ?? parseHostUrl(feedUrl);
   if (!hostUrl) {
     return null;

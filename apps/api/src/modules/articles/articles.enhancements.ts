@@ -18,10 +18,14 @@ export function resolveEnhancementContent(
   if (explicit) {
     return explicit;
   }
+  const primary =
+    article.defaultReaderMode === "extracted" && article.readerExtracted
+      ? article.readerExtracted
+      : article.readerOriginal;
   const fallback = (
-    article.contentText ??
-    article.contentMarkdown ??
-    article.contentHtml ??
+    primary.contentText ??
+    primary.contentMarkdown ??
+    primary.contentHtml ??
     article.summary ??
     ""
   ).trim();

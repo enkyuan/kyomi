@@ -4,6 +4,8 @@ import { dedupeInboxItems, useInboxQueries } from "@hooks/use-inbox-queries";
 import { useSplitPane } from "@hooks/use-split-pane";
 import { InboxList } from "@components/pages/inbox/inbox-list";
 import { InboxDetailView } from "@components/pages/inbox/inbox-detail-view";
+import { useQuery } from "@tanstack/react-query";
+import { getInboxViewCount } from "@lib/inbox-functions";
 
 import { useEffect, useMemo, useState } from "react";
 import { Route } from "@/routes/inbox/index";
@@ -14,7 +16,6 @@ const MIN_RIGHT_PERCENT = 64;
 
 export function InboxPage() {
   const { filter = "today", search, feedId, folderId, itemId } = Route.useSearch();
-  const selectedItemId = itemId;
   const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export function InboxPage() {
     search,
     feedId,
     folderId,
-    selectedItemId,
+    itemId,
     timezoneOffsetMinutes,
   });
 
@@ -45,10 +46,20 @@ export function InboxPage() {
     [inboxQuery.data?.pages],
   );
 
-  const unreadCount = useMemo(
-    () => inboxItems.reduce((count, item) => count + (item.isRead ? 0 : 1), 0),
-    [inboxItems],
-  );
+  const viewCountQuery = useQuery({
+    queryKey: ["inbox", "view-count", filter, feedId, folderId, timezoneOffsetMinutes],
+    enabled: timezoneOffsetMinutes !== undefined,
+    queryFn: () =>
+      getInboxViewCount({
+        data: {
+          filter,
+          feedId,
+          folderId,
+          timezoneOffsetMinutes,
+        },
+      }),
+  });
+  const viewCount = viewCountQuery.data?.count ?? inboxItems.length;
 
   const selectedItem = detailQuery.data?.item ?? null;
   const isDetailLoading = detailQuery.isFetching;
@@ -64,8 +75,9 @@ export function InboxPage() {
       >
         <InboxList
           inboxItems={inboxItems}
-          unreadCount={unreadCount}
-          selectedItemId={selectedItemId}
+          viewCount={viewCount}
+          filter={filter}
+          selectedItemId={itemId}
           feedId={feedId}
           isLoading={inboxQuery.isPending}
           hasNextPage={!!inboxQuery.hasNextPage}

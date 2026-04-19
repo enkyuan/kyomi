@@ -4,15 +4,14 @@ import sys
 import os
 from typing import List, Dict, Any, Optional
 
-# Add project root to sys.path to allow imports from readspace
+# Add project root to sys.path to allow imports from feed
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
 if project_root not in sys.path:
     sys.path.append(project_root)
 
-from readspace.language_detection import detect_language
-from readspace.language_detection import detect_language
-from readspace.favicon import extract_favicon_and_canonical_url
-from readspace.parsing import clean_html_text
+from feed.language_detection import detect_language
+from feed.favicon import extract_favicon_and_canonical_url
+from feed.parsing import clean_html_text
 
 
 class Enricher:
@@ -59,7 +58,7 @@ class Enricher:
         self, feed_title: str, feed_desc: str, items: List[Dict[str, Any]]
     ) -> Optional[str]:
         """
-        Detect language using readspace logic.
+        Detect language using feed.language_detection.
         """
         text_parts = [feed_title or "", feed_desc or ""]
         for item in items[:5]:

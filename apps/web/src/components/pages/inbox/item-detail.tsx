@@ -1,30 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
 import { ReaderContent } from "@components/reader/reader-content";
-import {
-  extractInboxItemFullText,
-  getInboxItemDetail,
-  type ReaderContentResponse,
-} from "@lib/inbox-functions";
-import { Skeleton } from "@components/ui/skeleton";
-
-/** Content sources that haven't gone through Readability — always extract. */
-const UNEXTRACTED_SOURCES = new Set([null, "text_fallback", "feed_markdown", "feed_summary"]);
-const EXTRACTION_CACHE_MAX_ENTRIES = 100;
-const extractionResultCache = new Map<string, ReaderContentResponse>();
-const extractionRequestCache = new Map<string, Promise<ReaderContentResponse>>();
-
-function setCachedExtractionResult(key: string, value: ReaderContentResponse) {
-  if (extractionResultCache.size >= EXTRACTION_CACHE_MAX_ENTRIES) {
-    const oldest = extractionResultCache.keys().next().value;
-    if (oldest !== undefined) {
-      extractionResultCache.delete(oldest);
-    }
-  }
-  extractionResultCache.set(key, value);
-}
+import { Button } from "@components/ui/button";
+import { Spinner } from "@components/ui/spinner";
+import { toastManager } from "@components/ui/toast";
+import { useArticleExtraction } from "@hooks/use-article-extraction";
+import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/api-schemas";
+import { readerContentForMode } from "@lib/reader-display";
+import { cn } from "@lib/utils";
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -48,88 +33,103 @@ export function formatArticleTimestamp(value: string) {
   }).format(date);
 }
 
-export function ItemDetail({
-  item,
-}: {
-  item: NonNullable<Awaited<ReturnType<typeof getInboxItemDetail>>["item"]>;
-}) {
-  const [readerOverride, setReaderOverride] = useState<ReaderContentResponse | null>(null);
-  const [isExtracting, setIsExtracting] = useState(false);
+export function ItemDetail({ item }: { item: ArticleDetailDto }) {
+  const extractMutation = useArticleExtraction(item.id);
+  const requestedExtractionForItemRef = useRef<string | null>(null);
 
-  useEffect(() => {
-    const cachedReader = extractionResultCache.get(item.id);
-    setReaderOverride(cachedReader ?? null);
-    setIsExtracting(false);
+  const displayReader = readerContentForMode(item, item.defaultReaderMode);
 
-    // Extract if the backend flagged it, OR if the content source is a raw
-    // RSS text/markdown blob (no Readability-parsed HTML available yet).
-    const needsExtraction =
-      item.reader.shouldExtract || UNEXTRACTED_SOURCES.has(item.reader.contentSource);
-
-    if (!needsExtraction) return;
-    if (cachedReader) return;
-
-    let cancelled = false;
-    setIsExtracting(true);
-    const request =
-      extractionRequestCache.get(item.id) ??
-      extractInboxItemFullText({ data: { itemId: item.id } })
-        .then((result) => {
-          setCachedExtractionResult(item.id, result.reader);
-          return result.reader;
-        })
-        .catch((error: unknown) => {
-          const fallbackReader: ReaderContentResponse = {
-            ...item.reader,
-            notice: "Full preview unavailable right now.",
-            contentStatus: item.reader.fallbackSummary ? "partial" : "failed",
-            extractionErrorCode: "FETCH_FAILED",
-            extractionErrorMessage:
-              error instanceof Error ? error.message : "Failed to extract full text.",
-            shouldExtract: false,
-          };
-          setCachedExtractionResult(item.id, fallbackReader);
-          return fallbackReader;
-        })
-        .finally(() => {
-          extractionRequestCache.delete(item.id);
-        });
-    extractionRequestCache.set(item.id, request);
-
-    request
-      .then((reader) => {
-        if (cancelled) return;
-        setReaderOverride(reader);
-      })
-      .finally(() => {
-        if (cancelled) return;
-        setIsExtracting(false);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [item.id, item.reader]);
-
-  const reader = readerOverride ?? item.reader;
-
-  const displayContent = reader.contentHtml ?? reader.contentMarkdown ?? reader.contentText ?? "";
+  const displayContent =
+    displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "";
   const readTime = displayContent ? estimateReadingTime(displayContent) : null;
 
+  const canRequestExtraction = item.link.startsWith("http");
+  const shouldAutoExtract =
+    canRequestExtraction &&
+    item.extractedContentStatus === "pending" &&
+    item.readerExtracted === null;
+  const showFailedBanner =
+    item.extractedContentStatus === "failed" && Boolean(item.extractedContentError);
+
+  const runExtract = useCallback(
+    (reason: "auto" | "manual") => {
+      if (extractMutation.isPending) {
+        return;
+      }
+
+      const extractionPromise = extractMutation
+        .mutateAsync()
+        .then((result: ExtractFullTextResponseDto) => {
+          if (!result.ok) {
+            const detail = [result.errorMessage, result.errorCode].filter(Boolean).join(" ");
+            throw new Error(detail || "Extraction failed");
+          }
+          return result;
+        });
+
+      if (reason === "auto") {
+        void extractionPromise.catch(() => {
+          requestedExtractionForItemRef.current = null;
+        });
+        return;
+      }
+
+      void toastManager.promise(extractionPromise, {
+        loading: {
+          title: "Extracting full text...",
+          description: "Fetching full article text.",
+          type: "loading",
+          timeout: 0,
+        },
+        success: {
+          title: "Full text ready",
+          description: "Article content has been refreshed.",
+          type: "success",
+        },
+        error: (error) => ({
+          title: "Extraction failed",
+          description:
+            error instanceof Error ? error.message : "Could not fetch extracted article content.",
+          type: "error",
+        }),
+      });
+    },
+    [extractMutation],
+  );
+
+  useEffect(() => {
+    if (!shouldAutoExtract || extractMutation.isPending) {
+      return;
+    }
+    if (requestedExtractionForItemRef.current === item.id) {
+      return;
+    }
+
+    requestedExtractionForItemRef.current = item.id;
+    runExtract("auto");
+  }, [extractMutation.isPending, item.id, runExtract, shouldAutoExtract]);
+
   return (
-    <article className="reader-content prose prose-neutral dark:prose-invert mx-auto max-w-3xl py-10 px-2">
-      {/* Header */}
-      <div className="not-prose mb-6 flex flex-col gap-2">
-        <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
+    <article className="reader-content prose prose-neutral dark:prose-invert relative mx-auto max-w-3xl px-2 py-10">
+      {extractMutation.isPending && !showFailedBanner && !item.readerExtracted ? (
+        <div className="not-prose absolute right-2 top-10 flex items-center gap-2 text-muted-foreground text-xs">
+          <Spinner className="size-4" />
+        </div>
+      ) : null}
+
+      <div className="not-prose mb-6 flex flex-col gap-3">
+        <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
           <span>{formatArticleTimestamp(item.publishedAt)}</span>
-          {readTime && (
+          {readTime ? (
             <>
               <span>·</span>
               <span>{readTime} min read</span>
             </>
-          )}
+          ) : null}
         </div>
-        <p className="text-xl font-semibold text-foreground">{item.title}</p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <p className="min-w-0 flex-1 text-xl font-semibold text-foreground">{item.title}</p>
+        </div>
         <InboxSourceRow
           articleUrl={item.link}
           feedTitle={item.feedTitle}
@@ -138,31 +138,42 @@ export function ItemDetail({
         />
       </div>
 
-      {/* Extraction loading state */}
-      {isExtracting && (
-        <div className="not-prose space-y-3">
-          <p className="text-xs uppercase tracking-wide text-muted-foreground">
-            Extracting full text…
-          </p>
-          <div className="space-y-2">
-            <Skeleton className="h-4 w-[92%]" />
-            <Skeleton className="h-4 w-[86%]" />
-            <Skeleton className="h-4 w-[90%]" />
-            <Skeleton className="h-4 w-[84%]" />
-          </div>
+      {showFailedBanner ? (
+        <div
+          className={cn(
+            "not-prose relative mb-4 rounded-lg border border-destructive/30 bg-destructive/5 px-3 py-2 text-sm text-foreground",
+            extractMutation.isPending ? "pr-11" : null,
+          )}
+        >
+          {extractMutation.isPending ? (
+            <div className="absolute right-3 top-3 text-muted-foreground" aria-hidden>
+              <Spinner className="size-4" />
+            </div>
+          ) : null}
+          <p className="font-medium text-destructive">Couldn&apos;t load extracted text</p>
+          <p className="mt-1 text-muted-foreground">{item.extractedContentError}</p>
+          {canRequestExtraction ? (
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className="mt-2"
+              onClick={() => runExtract("manual")}
+            >
+              Try again
+            </Button>
+          ) : null}
         </div>
-      )}
+      ) : null}
 
-      {/* Article body */}
-      {!isExtracting && <ReaderContent reader={reader} />}
+      <ReaderContent reader={displayReader} />
 
-      {/* Footer link */}
       <div className="not-prose mt-10 border-t border-border pt-6">
         <a
           href={item.link}
           target="_blank"
           rel="noreferrer"
-          className="text-xs text-muted-foreground underline underline-offset-4 hover:text-foreground transition-colors"
+          className="text-xs text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
         >
           View original article →
         </a>

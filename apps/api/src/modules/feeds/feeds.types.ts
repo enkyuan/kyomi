@@ -7,6 +7,11 @@ export type SubscribedFeedListItemDto = {
   /** Raw override; null means use global feed title. */
   customTitle: string | null;
   link: string | null;
+  /** Persisted favicon image URL from ingestion; null if not yet resolved. */
+  faviconUrl: string | null;
+  faviconSource: string | null;
+  isPinned: boolean;
+  pinnedAt: string | null;
   folderId: string | null;
   folderName: string | null;
   subscribedAt: string;
@@ -23,6 +28,8 @@ export type FeedSubscribeResultDto = {
   url: string;
   title: string;
   link: string | null;
+  faviconUrl: string | null;
+  faviconSource: string | null;
   /** Inserted a new row in `feeds` (first subscriber globally for this URL). */
   newFeed: boolean;
   /** Inserted a new row in `feed_subscriptions` for this user. */
@@ -39,15 +46,23 @@ export type FeedDetailDto = {
   customTitle: string | null;
   description: string | null;
   link: string | null;
+  faviconUrl: string | null;
+  faviconSource: string | null;
+  faviconFetchedAt: string | null;
   createdAt: string;
   updatedAt: string;
   isSubscribed: boolean;
   subscriptionId: string | null;
   subscribedAt: string | null;
+  isPinned: boolean;
+  pinnedAt: string | null;
   refreshStatus: string;
+  lastRefreshStartedAt: string | null;
   lastRefreshCompletedAt: string | null;
   lastRefreshFailedAt: string | null;
   lastRefreshError: string | null;
+  etag: string | null;
+  lastModified: string | null;
   nextRefreshAt: string | null;
 };
 
@@ -66,6 +81,8 @@ export type BulkMoveFeedsResponseDto = {
 export type UpdateFeedSubscriptionBody = {
   /** Omit field to leave unchanged; `null` clears override. */
   customTitle?: string | null;
+  /** Omit to leave unchanged. */
+  isPinned?: boolean;
 };
 
 /** `PUT /feeds/:feedId/admin` — global `feeds` row (platform admin allowlist only). */

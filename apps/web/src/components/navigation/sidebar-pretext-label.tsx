@@ -7,6 +7,14 @@ import { cn } from "@lib/utils";
 const SIDEBAR_LABEL_FONT = '400 14px "Inter Variable"';
 const SIDEBAR_LABEL_LINE_HEIGHT = 20;
 
+/** `prepare()` uses canvas text measurement — not available during SSR (Node). */
+function prepareLabelForLayout(label: string, font: string) {
+  if (import.meta.env.SSR) {
+    return null;
+  }
+  return prepare(label, font);
+}
+
 export function SidebarPretextLabel({
   className,
   font = SIDEBAR_LABEL_FONT,
@@ -19,7 +27,7 @@ export function SidebarPretextLabel({
   lineHeight?: number;
 }) {
   const containerRef = useRef<HTMLSpanElement | null>(null);
-  const preparedLabel = useMemo(() => prepare(label, font), [font, label]);
+  const preparedLabel = useMemo(() => prepareLabelForLayout(label, font), [font, label]);
   const [availableWidth, setAvailableWidth] = useState(0);
 
   useEffect(() => {
@@ -45,6 +53,9 @@ export function SidebarPretextLabel({
   }, []);
 
   const fittedLabel = useMemo(() => {
+    if (!preparedLabel) {
+      return label;
+    }
     if (availableWidth <= 0) {
       return label;
     }

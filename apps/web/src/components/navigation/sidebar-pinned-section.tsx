@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { listFollowedFeeds, type FollowedFeed } from "@lib/feed-functions";
+import { isInboxPathname } from "@lib/routes/inbox-path";
 import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
 import {
   SidebarGroup,
@@ -23,6 +24,7 @@ function isFollowedFeed(value: FollowedFeed | undefined): value is FollowedFeed 
 
 export function SidebarPinnedSection() {
   const location = useLocation();
+  const isInbox = isInboxPathname(location.pathname);
   const [pinnedOpen, setPinnedOpen] = useState(true);
   const followedFeedsQuery = useQuery({
     queryKey: ["feeds", "followed"],
@@ -65,15 +67,13 @@ export function SidebarPinnedSection() {
                 <SidebarMenuItem key={feed.feedId}>
                   <SidebarMenuButton
                     tooltip={feed.title || feed.url}
-                    isActive={
-                      location.pathname === "/inbox" && location.search.feedId === feed.feedId
-                    }
+                    isActive={isInbox && location.search.feedId === feed.feedId}
                     render={
                       <Link
                         to="/inbox"
-                        search={(prev) => ({
-                          ...prev,
-                          filter: "unread",
+                        search={() => ({
+                          filter: "today" as const,
+                          search: undefined,
                           feedId: feed.feedId,
                           folderId: undefined,
                           itemId: undefined,
@@ -83,6 +83,7 @@ export function SidebarPinnedSection() {
                   >
                     <FeedFavicon
                       className="size-4 shrink-0 rounded-[3px]"
+                      faviconUrl={feed.faviconUrl}
                       feedUrl={feed.url}
                       siteUrl={feed.link}
                       title={feed.title || feed.url}

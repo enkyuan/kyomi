@@ -29,6 +29,27 @@
       "when": 1776440299499,
       "tag": "0003_sudden_hardball",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1776469526491,
+      "tag": "0004_chemical_ultimatum",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1776500000000,
+      "tag": "0005_reader_extracted_content",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1776480999505,
+      "tag": "0006_reflective_hardball",
+      "breakpoints": true
     }
   ]
 }

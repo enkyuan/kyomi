@@ -4,9 +4,7 @@ import { Collapsible as CollapsiblePrimitive } from "@base-ui/react/collapsible"
 import type React from "react";
 import { cn } from "@lib/utils";
 
-export function Collapsible({
-  ...props
-}: CollapsiblePrimitive.Root.Props): React.ReactElement {
+export function Collapsible({ ...props }: CollapsiblePrimitive.Root.Props): React.ReactElement {
   return <CollapsiblePrimitive.Root data-slot="collapsible" {...props} />;
 }
 
@@ -25,6 +23,7 @@ export function CollapsibleTrigger({
 
 export function CollapsiblePanel({
   className,
+  children,
   ...props
 }: CollapsiblePrimitive.Panel.Props): React.ReactElement {
   return (
@@ -35,7 +34,9 @@ export function CollapsiblePanel({
       )}
       data-slot="collapsible-panel"
       {...props}
-    />
+    >
+      <div className="min-h-0 px-0.5 py-1">{children}</div>
+    </CollapsiblePrimitive.Panel>
   );
 }
 

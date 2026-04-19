@@ -1,9 +1,9 @@
 [project]
 name = "sangam-catalog"
 version = "0.1.0"
-description = "The RSS dataset powering the Readspace discovery system"
+description = "The RSS dataset powering Cronos"
 authors = [
-    {name = "Kamui",email = "fin-kamui@pm.me"}
+    {name = "enkyuan",email = "yuan.enkng@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"
@@ -32,6 +32,7 @@ dependencies = [
     "seaborn (>=0.13.2,<0.14.0)",
     "numpy (>=2.3.5,<3.0.0)",
     "dedupe (>=3.0.3,<4.0.0)",
+    "extract-favicon (>=0.5.4,<0.6.0)",
 ]
 
 [tool.poetry]

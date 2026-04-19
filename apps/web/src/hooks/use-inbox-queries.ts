@@ -8,10 +8,15 @@ type UseInboxQueriesInput = {
   search?: string;
   feedId?: string;
   folderId?: string;
-  selectedItemId?: string;
+  itemId?: string;
   timezoneOffsetMinutes?: number;
 };
 
+/**
+ * De-duplicates by primary key when combining infinite-query pages (React Query can
+ * briefly overlap windows). The API also collapses same-feed canonical URL duplicates
+ * server-side — this is only a client idempotency guard.
+ */
 export function dedupeInboxItems(items: Awaited<ReturnType<typeof getInboxItems>>["items"]) {
   const unique = new Map<string, (typeof items)[number]>();
   for (const item of items) {
@@ -27,7 +32,7 @@ export function useInboxQueries({
   search,
   feedId,
   folderId,
-  selectedItemId,
+  itemId,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
   const inboxQuery = useInfiniteQuery({
@@ -49,16 +54,16 @@ export function useInboxQueries({
   });
 
   const detailQuery = useQuery({
-    queryKey: ["inbox", "item-detail", selectedItemId],
-    enabled: Boolean(selectedItemId),
+    queryKey: ["inbox", "item-detail", itemId],
+    enabled: Boolean(itemId),
     retry: 1,
     queryFn: () => {
-      if (!selectedItemId) {
+      if (!itemId) {
         throw new Error("Missing inbox item id");
       }
       return getInboxItemDetail({
         data: {
-          itemId: selectedItemId,
+          itemId,
         },
       });
     },

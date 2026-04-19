@@ -14,6 +14,7 @@ function makeInput(overrides: Record<string, unknown> = {}) {
     articleType: "feed" as const,
     title: "Test Article",
     summary: null as string | null,
+    contentBaseUrl: "https://example.com/articles/test",
     legacyContent: null as string | null,
     contentHtml: null as string | null,
     contentText: null as string | null,
@@ -106,8 +107,10 @@ describe("articles.normalize-content", () => {
     });
 
     test("does NOT extract when content has 2+ sentences even below 90 words", () => {
-      // HTML present + 2 sentences → should NOT extract even at 50 words
-      const content = "First sentence with enough words here. Second sentence with more words.";
+      // HTML present + 2 sentences + substantial words → should NOT extract
+      const sentenceA = Array.from({ length: 24 }, (_, i) => `first${i}`).join(" ");
+      const sentenceB = Array.from({ length: 24 }, (_, i) => `second${i}`).join(" ");
+      const content = `${sentenceA}. ${sentenceB}.`;
       const htmlContent = `<p>${content}</p>`;
       const reader = buildStoredReaderContent(
         makeInput({
@@ -143,6 +146,84 @@ describe("articles.normalize-content", () => {
         makeInput({ legacyContent: "Comments on this post", summary: "Some summary" }),
       );
       expect(reader2.shouldExtract).toBe(true);
+    });
+
+    test("classifies technical text with markdown code/list syntax as markdown", () => {
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentText: "Deploy checklist:\n- `bun install`\n- `bun test`\n- `bun run build`",
+          contentStatus: "ready",
+          contentSource: "text_fallback",
+        }),
+      );
+      expect(reader.bodyKind).toBe("markdown");
+      expect(reader.contentMarkdown).toContain("`bun install`");
+    });
+
+    test("classifies fenced code blocks as markdown", () => {
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentText: "```bash\nbun run test\n```",
+          contentStatus: "ready",
+          contentSource: "text_fallback",
+        }),
+      );
+      expect(reader.bodyKind).toBe("markdown");
+      expect(reader.contentMarkdown).toContain("```bash");
+    });
+
+    test("keeps clearly plain prose as text", () => {
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentText:
+            "This release contains stability improvements and reliability fixes across the sync pipeline.",
+          contentStatus: "ready",
+          contentSource: "text_fallback",
+        }),
+      );
+      expect(reader.bodyKind).toBe("text");
+      expect(reader.contentText).toContain("stability improvements");
+    });
+
+    test("classifies long heading-heavy markdown as markdown", () => {
+      const markdown = Array.from(
+        { length: 90 },
+        (_, i) => `# Section ${i + 1}\n\nBody line ${i + 1}.`,
+      ).join("\n\n");
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentText: markdown,
+          contentStatus: "ready",
+          contentSource: "text_fallback",
+        }),
+      );
+      expect(markdown.length).toBeGreaterThan(1800);
+      expect(reader.bodyKind).toBe("markdown");
+    });
+
+    test("classifies markdown with single-line horizontal rule delimiters", () => {
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentText: "# Changelog\n\n---\n\n### Added\n\n- New sync worker",
+          contentStatus: "ready",
+          contentSource: "text_fallback",
+        }),
+      );
+      expect(reader.bodyKind).toBe("markdown");
+    });
+
+    test("classifies raw markdown wrapped in trivial html tags as markdown", () => {
+      const reader = buildStoredReaderContent(
+        makeInput({
+          contentHtml:
+            "<p># Changelog</p><p>---</p><p>### Added</p><p>- fixed parser edge case</p>",
+          contentStatus: "ready",
+          contentSource: "feed_html",
+        }),
+      );
+      expect(reader.bodyKind).toBe("markdown");
+      expect(reader.contentMarkdown).toContain("# Changelog");
+      expect(reader.contentMarkdown).toContain("---");
     });
   });
 

@@ -17,7 +17,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"
 
 from ingest import get_reader, get_writer
 
-from readspace.favicon import extract_favicon_and_canonical_url
+from feed.favicon import extract_favicon_and_canonical_url
 
 logger = logging.getLogger(__name__)
 

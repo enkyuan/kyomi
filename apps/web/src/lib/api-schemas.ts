@@ -34,18 +34,14 @@ export const fallbackReasonSchema = z
 // Reader content
 // ---------------------------------------------------------------------------
 
-export const readerContentSchema = z.object({
-  contentStatus: contentStatusSchema,
+const readerContentCommonSchema = z.object({
+  contentStatus: z.enum(["ready", "partial", "failed"]),
   contentSource: contentSourceSchema,
   bodyKind: bodyKindSchema,
+  contentBaseUrl: z.string().nullable(),
   title: z.string().nullable(),
   byline: z.string().nullable(),
   excerpt: z.string().nullable(),
-  contentHtml: z.string().nullable(),
-  contentMarkdown: z.string().nullable(),
-  contentText: z.string().nullable(),
-  fallbackSummary: z.string().nullable(),
-  fallbackReason: fallbackReasonSchema,
   siteName: z.string().nullable(),
   language: z.string().nullable(),
   publishedTime: z.string().nullable(),
@@ -54,6 +50,49 @@ export const readerContentSchema = z.object({
   extractionErrorMessage: z.string().nullable(),
   shouldExtract: z.boolean(),
 });
+
+const readerHtmlSchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("html"),
+  contentHtml: z.string(),
+  contentMarkdown: z.null(),
+  contentText: z.string().nullable(),
+  fallbackSummary: z.null(),
+  fallbackReason: z.null(),
+});
+
+const readerMarkdownSchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("markdown"),
+  contentHtml: z.null(),
+  contentMarkdown: z.string(),
+  contentText: z.string().nullable(),
+  fallbackSummary: z.null(),
+  fallbackReason: z.null(),
+});
+
+const readerTextSchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("text"),
+  contentHtml: z.null(),
+  contentMarkdown: z.null(),
+  contentText: z.string(),
+  fallbackSummary: z.null(),
+  fallbackReason: z.null(),
+});
+
+const readerFallbackSchema = readerContentCommonSchema.extend({
+  bodyKind: z.literal("fallback"),
+  contentHtml: z.null(),
+  contentMarkdown: z.null(),
+  contentText: z.null(),
+  fallbackSummary: z.string().nullable(),
+  fallbackReason: z.enum(["extraction_failed", "timeout", "missing_content"]),
+});
+
+export const readerContentSchema = z.discriminatedUnion("bodyKind", [
+  readerHtmlSchema,
+  readerMarkdownSchema,
+  readerTextSchema,
+  readerFallbackSchema,
+]);
 
 // ---------------------------------------------------------------------------
 // Article list items
@@ -83,6 +122,8 @@ export const cursorListResponseSchema = z.object({
 // Article detail
 // ---------------------------------------------------------------------------
 
+export const extractedContentStatusSchema = z.enum(["pending", "ready", "failed"]);
+
 export const articleDetailSchema = articleListItemSchema.extend({
   contentHtml: z.string().nullable(),
   contentText: z.string().nullable(),
@@ -91,7 +132,12 @@ export const articleDetailSchema = articleListItemSchema.extend({
   contentSource: contentSourceSchema,
   extractionErrorCode: z.string().nullable(),
   extractionErrorMessage: z.string().nullable(),
-  reader: readerContentSchema,
+  readerOriginal: readerContentSchema,
+  readerExtracted: readerContentSchema.nullable(),
+  extractedContentStatus: extractedContentStatusSchema,
+  extractedContentError: z.string().nullable(),
+  extractedContentUpdatedAt: z.string().nullable(),
+  defaultReaderMode: z.enum(["original", "extracted"]),
 });
 
 // ---------------------------------------------------------------------------
@@ -101,16 +147,25 @@ export const articleDetailSchema = articleListItemSchema.extend({
 export const articleCountsSchema = z.object({
   unread: z.number(),
   saved: z.number(),
+  today: z.number().optional(),
 });
 
 // ---------------------------------------------------------------------------
 // Extract full text
 // ---------------------------------------------------------------------------
 
-export const extractFullTextResponseSchema = z.object({
-  reader: readerContentSchema,
-  persisted: z.boolean(),
-});
+export const extractFullTextResponseSchema = z.discriminatedUnion("ok", [
+  z.object({
+    ok: z.literal(true),
+    article: articleDetailSchema,
+  }),
+  z.object({
+    ok: z.literal(false),
+    errorCode: z.string(),
+    errorMessage: z.string(),
+    article: articleDetailSchema,
+  }),
+]);
 
 // ---------------------------------------------------------------------------
 // Feed types
@@ -131,6 +186,8 @@ export const followFeedResultSchema = z.object({
   url: z.string(),
   title: z.string(),
   link: z.string().nullable(),
+  faviconUrl: z.string().nullable(),
+  faviconSource: z.string().nullable(),
   newFeed: z.boolean(),
   newSubscription: z.boolean(),
 });
@@ -142,6 +199,10 @@ export const followedFeedSchema = z.object({
   title: z.string(),
   customTitle: z.string().nullable(),
   link: z.string().nullable(),
+  faviconUrl: z.string().nullable(),
+  faviconSource: z.string().nullable(),
+  isPinned: z.boolean(),
+  pinnedAt: z.string().nullable(),
   folderId: z.string().nullable(),
   folderName: z.string().nullable(),
   subscribedAt: z.string(),
@@ -151,7 +212,8 @@ export const followedFeedsListSchema = z.object({
   items: z.array(followedFeedSchema),
 });
 
-export const feedRefreshStatusSchema = z.enum(["idle", "queued", "running", "failed"]);
+/** Matches API `feeds.refresh_status` text column (not a closed enum in DB). */
+export const feedRefreshStatusSchema = z.string();
 
 export const feedDetailSchema = z.object({
   id: z.string(),
@@ -160,15 +222,23 @@ export const feedDetailSchema = z.object({
   customTitle: z.string().nullable(),
   description: z.string().nullable(),
   link: z.string().nullable(),
+  faviconUrl: z.string().nullable(),
+  faviconSource: z.string().nullable(),
+  faviconFetchedAt: z.string().nullable(),
   createdAt: z.string(),
   updatedAt: z.string(),
   isSubscribed: z.boolean(),
   subscriptionId: z.string().nullable(),
   subscribedAt: z.string().nullable(),
+  isPinned: z.boolean(),
+  pinnedAt: z.string().nullable(),
   refreshStatus: feedRefreshStatusSchema,
+  lastRefreshStartedAt: z.string().nullable(),
   lastRefreshCompletedAt: z.string().nullable(),
   lastRefreshFailedAt: z.string().nullable(),
   lastRefreshError: z.string().nullable(),
+  etag: z.string().nullable(),
+  lastModified: z.string().nullable(),
   nextRefreshAt: z.string().nullable(),
 });
 

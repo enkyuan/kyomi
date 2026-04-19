@@ -7,61 +7,21 @@ import {
   feedDetailSchema,
   followFeedResultSchema,
   followedFeedsListSchema,
+  messageResponseSchema,
+  type DiscoverFeedResultDto,
+  type FeedDetailDto,
+  type FollowFeedResultDto,
+  type FollowedFeedDto,
 } from "@lib/api-schemas";
 import { z } from "zod";
 
-export type DiscoverFeedResult = {
-  id: string | null;
-  url: string;
-  title: string;
-  description: string | null;
-  link: string | null;
-  isSubscribed: boolean;
-};
-
-export type FollowFeedResult = {
-  feedId: string;
-  subscriptionId: string;
-  url: string;
-  title: string;
-  link: string | null;
-  newFeed: boolean;
-  newSubscription: boolean;
-};
-
-export type FollowedFeed = {
-  subscriptionId: string;
-  feedId: string;
-  url: string;
-  title: string;
-  customTitle: string | null;
-  link: string | null;
-  folderId: string | null;
-  folderName: string | null;
-  subscribedAt: string;
-};
-
-export type FeedDetail = {
-  id: string;
-  url: string;
-  title: string;
-  customTitle: string | null;
-  description: string | null;
-  link: string | null;
-  createdAt: string;
-  updatedAt: string;
-  isSubscribed: boolean;
-  subscriptionId: string | null;
-  subscribedAt: string | null;
-  refreshStatus: "idle" | "queued" | "running" | "failed";
-  lastRefreshCompletedAt: string | null;
-  lastRefreshFailedAt: string | null;
-  lastRefreshError: string | null;
-  nextRefreshAt: string | null;
-};
+export type DiscoverFeedResult = DiscoverFeedResultDto;
+export type FollowFeedResult = FollowFeedResultDto;
+export type FollowedFeed = FollowedFeedDto;
+export type FeedDetail = FeedDetailDto;
 
 type FollowedFeedsResponse = {
-  items: FollowedFeed[];
+  items: FollowedFeedDto[];
 };
 
 function looksLikeFeedUrl(value: string) {
@@ -232,6 +192,26 @@ export const getFeedDetail = createServerFn({ method: "GET" })
       apiJson<FeedDetail>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
         method: "GET",
         headers,
+      }),
+    );
+  });
+
+export const updateFeedSubscription = createServerFn({ method: "POST" })
+  .inputValidator(
+    (input: { feedId: string; customTitle?: string | null; isPinned?: boolean }) => input,
+  )
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    headers.set("content-type", "application/json");
+
+    return apiJsonValidated(messageResponseSchema, () =>
+      apiJson<{ message: string }>(`/api/v1/feeds/${encodeURIComponent(data.feedId)}`, {
+        method: "PUT",
+        headers,
+        body: JSON.stringify({
+          customTitle: data.customTitle,
+          isPinned: data.isPinned,
+        }),
       }),
     );
   });

@@ -12,15 +12,15 @@ from typing import List, Dict, Any, Set
 from tqdm.asyncio import tqdm
 
 # Setup imports
-# Add project root for readspace imports
+# Add project root for feed imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 # Add local directory for local imports
 sys.path.append(os.path.dirname(__file__))
 
 from storage import FeedCache
 from enrichment import Enricher
-from readspace.fetching import fetch_feed_content
-from readspace.parsing import parse_feed_content
+from feed.fetching import fetch_feed_content
+from feed.parsing import parse_feed_content
 
 # Configure logging
 root_logger = logging.getLogger()
@@ -161,7 +161,7 @@ class Pipeline:
         last_modified = cached_meta.get("http_last_modified") if cached_meta else None
 
         # 1. Fetch
-        # Using readspace.fetching
+        # Using feed.fetching
         fetch_result = await fetch_feed_content(
             url, etag=etag, last_modified=last_modified
         )
@@ -178,7 +178,7 @@ class Pipeline:
             return None, {"url": url, "error": error_msg, "reason": "fetch_error"}
 
         # 2. Parse
-        # Using readspace.parsing
+        # Using feed.parsing
         try:
             parsed = parse_feed_content(
                 fetch_result["content"], fetch_result["final_url"] or url

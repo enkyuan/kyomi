@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 # Add project root to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
-from readspace.language_detection import detect_feed_language
+from feed.language_detection import detect_feed_language
 
 INPUT_FILE = "processing/stage-4-llm-enrich/feeds_llm_input.jsonl"
 OUTPUT_FILE = "processing/stage-4-llm-enrich/evaluation_set.json"
