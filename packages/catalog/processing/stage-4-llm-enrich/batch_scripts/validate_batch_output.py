@@ -3,7 +3,7 @@ import json
 import logging
 from pathlib import Path
 
-# Add sangam root to path to allow importing feed.language_detection
+# Add catalog root to path to allow importing feed.language_detection
 # Script is in processing/stage-4-llm-enrich/batch_scripts/
 # We need to go up 4 levels to reach root 'rss-r-us'
 # root: /home/kamui/rss-r-us

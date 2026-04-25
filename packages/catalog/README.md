@@ -23,7 +23,7 @@ This directory is the absorbed Python pipeline from the former `rss-r-us` reposi
 
 Exporter writes:
 
-- `packages/sangam/processing/exports/catalog-feeds.jsonl`
+- `packages/catalog/processing/exports/catalog-feeds.jsonl`
 
 Each JSONL record contains:
 
@@ -47,8 +47,8 @@ This asserts discover search returns expected seeded results for a known query.
 
 Use the repository script for local cron scheduling:
 
-- `bash packages/sangam/scripts/sync.sh`
-- or from package scope: `bun run --cwd packages/sangam sync`
+- `bash packages/catalog/scripts/sync.sh`
+- or from package scope: `bun run --cwd packages/catalog sync`
 
 The script:
 
@@ -58,7 +58,7 @@ The script:
 
 Example `crontab -e` entry (every 30 minutes):
 
-- `*/30 * * * * /bin/bash /ABSOLUTE_PATH_TO_REPO/packages/sangam/scripts/sync.sh`
+- `*/30 * * * * /bin/bash /ABSOLUTE_PATH_TO_REPO/packages/catalog/scripts/sync.sh`
 
 Troubleshooting:
 

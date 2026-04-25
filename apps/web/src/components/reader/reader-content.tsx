@@ -6,7 +6,13 @@ import { RenderHtml } from "./render-html";
 import { RenderMarkdown } from "./render-markdown";
 import { RenderText } from "./render-text";
 
-export function ReaderContent({ reader }: { reader: ReaderContentModel }) {
+export function ReaderContent({
+  reader,
+  openLinksInNewTab = true,
+}: {
+  reader: ReaderContentModel;
+  openLinksInNewTab?: boolean;
+}) {
   function ContractViolationFallback() {
     return (
       <ReaderFallback
@@ -23,7 +29,13 @@ export function ReaderContent({ reader }: { reader: ReaderContentModel }) {
     if (!reader.contentHtml) {
       return <ContractViolationFallback />;
     }
-    const body = <RenderHtml html={reader.contentHtml} baseUrl={reader.contentBaseUrl} />;
+    const body = (
+      <RenderHtml
+        html={reader.contentHtml}
+        baseUrl={reader.contentBaseUrl}
+        openLinksInNewTab={openLinksInNewTab}
+      />
+    );
     if (!reader.notice) {
       return body;
     }
@@ -40,7 +52,11 @@ export function ReaderContent({ reader }: { reader: ReaderContentModel }) {
       return <ContractViolationFallback />;
     }
     const body = (
-      <RenderMarkdown markdown={reader.contentMarkdown} baseUrl={reader.contentBaseUrl} />
+      <RenderMarkdown
+        markdown={reader.contentMarkdown}
+        baseUrl={reader.contentBaseUrl}
+        openLinksInNewTab={openLinksInNewTab}
+      />
     );
     if (!reader.notice) {
       return body;

@@ -1,10 +1,104 @@
 import { and, eq, ne } from "drizzle-orm";
-import { users } from "@cronos/db";
+import { userPreferences, users } from "@cronos/db";
 import type { db } from "@adapters/db/client";
 import { AppError } from "@shared/errors/app-error";
-import type { UserProfileDto } from "./users.types";
+import type {
+  ReaderContentWidthDto,
+  ReaderDefaultModeDto,
+  UpdateUserPreferencesDto,
+  UserPreferencesDto,
+  UserProfileDto,
+} from "./users.types";
 
 type DB = typeof db;
+
+const MIN_READER_FONT_SIZE_PX = 14;
+const MAX_READER_FONT_SIZE_PX = 22;
+
+export const DEFAULT_USER_PREFERENCES: UserPreferencesDto = {
+  defaultMode: "smart",
+  fontSizePx: 17,
+  contentWidth: "medium",
+  openLinksInNewTab: true,
+  showImages: true,
+};
+
+function parseReaderMode(value: string): ReaderDefaultModeDto {
+  if (value === "smart" || value === "original" || value === "extracted") {
+    return value;
+  }
+  return DEFAULT_USER_PREFERENCES.defaultMode;
+}
+
+function parseContentWidth(value: string): ReaderContentWidthDto {
+  if (value === "narrow" || value === "medium" || value === "wide") {
+    return value;
+  }
+  return DEFAULT_USER_PREFERENCES.contentWidth;
+}
+
+function clampReaderFontSize(value: number): number {
+  if (!Number.isFinite(value)) {
+    return DEFAULT_USER_PREFERENCES.fontSizePx;
+  }
+  return Math.max(MIN_READER_FONT_SIZE_PX, Math.min(MAX_READER_FONT_SIZE_PX, Math.round(value)));
+}
+
+function rowToPreferences(row: typeof userPreferences.$inferSelect): UserPreferencesDto {
+  return {
+    defaultMode: parseReaderMode(row.readerMode),
+    fontSizePx: clampReaderFontSize(row.readerFontSizePx),
+    contentWidth: parseContentWidth(row.readerContentWidth),
+    openLinksInNewTab: row.readerOpenLinksInNewTab,
+    showImages: row.readerShowImages,
+  };
+}
+
+function sanitizePreferencesPatch(input: UpdateUserPreferencesDto): UpdateUserPreferencesDto {
+  const next: UpdateUserPreferencesDto = {};
+
+  if (input.defaultMode !== undefined) {
+    if (
+      input.defaultMode !== "smart" &&
+      input.defaultMode !== "original" &&
+      input.defaultMode !== "extracted"
+    ) {
+      throw new AppError("Unsupported reader mode.", {
+        status: 400,
+        code: "USER_PREFERENCES_INVALID_READER_MODE",
+      });
+    }
+    next.defaultMode = input.defaultMode;
+  }
+
+  if (input.fontSizePx !== undefined) {
+    next.fontSizePx = clampReaderFontSize(input.fontSizePx);
+  }
+
+  if (input.contentWidth !== undefined) {
+    if (
+      input.contentWidth !== "narrow" &&
+      input.contentWidth !== "medium" &&
+      input.contentWidth !== "wide"
+    ) {
+      throw new AppError("Unsupported reader content width.", {
+        status: 400,
+        code: "USER_PREFERENCES_INVALID_CONTENT_WIDTH",
+      });
+    }
+    next.contentWidth = input.contentWidth;
+  }
+
+  if (input.openLinksInNewTab !== undefined) {
+    next.openLinksInNewTab = Boolean(input.openLinksInNewTab);
+  }
+
+  if (input.showImages !== undefined) {
+    next.showImages = Boolean(input.showImages);
+  }
+
+  return next;
+}
 
 export async function getUserProfileById(
   database: DB,
@@ -95,4 +189,73 @@ export async function updateUserEmailById(
     createdAt: updatedRow.createdAt.toISOString(),
     updatedAt: updatedRow.updatedAt.toISOString(),
   };
+}
+
+export async function getUserPreferences(
+  database: DB,
+  userId: string,
+): Promise<UserPreferencesDto> {
+  const row = await database.query.userPreferences.findFirst({
+    where: eq(userPreferences.userId, userId),
+  });
+
+  return row ? rowToPreferences(row) : DEFAULT_USER_PREFERENCES;
+}
+
+export async function updateUserPreferences(
+  database: DB,
+  userId: string,
+  input: UpdateUserPreferencesDto,
+): Promise<UserPreferencesDto> {
+  const patch = sanitizePreferencesPatch(input);
+  const now = new Date();
+
+  const [seededRow] = await database
+    .insert(userPreferences)
+    .values({
+      userId,
+      readerMode: DEFAULT_USER_PREFERENCES.defaultMode,
+      readerFontSizePx: DEFAULT_USER_PREFERENCES.fontSizePx,
+      readerContentWidth: DEFAULT_USER_PREFERENCES.contentWidth,
+      readerOpenLinksInNewTab: DEFAULT_USER_PREFERENCES.openLinksInNewTab,
+      readerShowImages: DEFAULT_USER_PREFERENCES.showImages,
+      createdAt: now,
+      updatedAt: now,
+    })
+    .onConflictDoNothing({
+      target: userPreferences.userId,
+    })
+    .returning();
+
+  const updateSet: Partial<typeof userPreferences.$inferInsert> = {
+    updatedAt: now,
+  };
+  if (patch.defaultMode !== undefined) {
+    updateSet.readerMode = patch.defaultMode;
+  }
+  if (patch.fontSizePx !== undefined) {
+    updateSet.readerFontSizePx = patch.fontSizePx;
+  }
+  if (patch.contentWidth !== undefined) {
+    updateSet.readerContentWidth = patch.contentWidth;
+  }
+  if (patch.openLinksInNewTab !== undefined) {
+    updateSet.readerOpenLinksInNewTab = patch.openLinksInNewTab;
+  }
+  if (patch.showImages !== undefined) {
+    updateSet.readerShowImages = patch.showImages;
+  }
+
+  const [updatedRow] = await database
+    .update(userPreferences)
+    .set(updateSet)
+    .where(eq(userPreferences.userId, userId))
+    .returning();
+
+  const finalRow = updatedRow ?? seededRow;
+  if (finalRow) {
+    return rowToPreferences(finalRow);
+  }
+
+  return getUserPreferences(database, userId);
 }

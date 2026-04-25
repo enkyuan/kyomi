@@ -2,9 +2,11 @@
  * List-time deduplication for feed items that share an equivalent canonical URL
  * within the same feed (historical ingest duplicates, tracking-param variants).
  *
- * Ingest should still prefer unique (feed_id, normalized link) rows; this layer
- * is a defensive guard for the list API cursor pagination window.
+ * TODO: Remove this one release after the canonical_url backfill and
+ * unique(feed_id, canonical_url) migration are verified in production. This layer
+ * is now only a defensive guard for the list API cursor pagination window.
  */
+import { normalizeArticleUrl } from "@cronos/ingestion";
 
 export type ArticleListRawRow = {
   id: string;
@@ -18,25 +20,8 @@ export type ArticleListRawRow = {
   isSaved: boolean;
 };
 
-// Keep this normalization aligned with ingestion identity rules:
-// same-feed links that differ only by tracking params/hash/trailing slash are one article.
 export function normalizedArticleIdentity(rawUrl: string): string {
-  try {
-    const url = new URL(rawUrl);
-    url.hash = "";
-    url.hostname = url.hostname.toLowerCase();
-    for (const key of [...url.searchParams.keys()]) {
-      if (/^utm_/i.test(key) || key === "fbclid" || key === "gclid" || key === "mc_cid") {
-        url.searchParams.delete(key);
-      }
-    }
-    if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
-      url.pathname = url.pathname.slice(0, -1);
-    }
-    return url.href;
-  } catch {
-    return rawUrl;
-  }
+  return normalizeArticleUrl(rawUrl);
 }
 
 function rowRichnessScore(row: ArticleListRawRow): number {

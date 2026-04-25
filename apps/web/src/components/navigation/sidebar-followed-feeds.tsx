@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "@tanstack/react-router";
+import { Link, useLocation, useRouter } from "@tanstack/react-router";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { DownFill, NewsFill } from "@mingcute/react";
 import { CreateFolderDialog } from "@components/navigation/create-folder-dialog";
@@ -26,6 +26,8 @@ import {
   unfollowFeed,
 } from "@lib/feed-functions";
 import { isInboxPathname } from "@lib/routes/inbox-path";
+import { QUERY_TIMES } from "@lib/query-policies";
+import { prefetchInboxFlow } from "@lib/inbox-prefetch";
 
 export function SidebarFollowedFeeds() {
   const location = useLocation();
@@ -34,6 +36,8 @@ export function SidebarFollowedFeeds() {
   const followedFeedsQuery = useQuery({
     queryKey: ["feeds", "followed"],
     queryFn: () => listFollowedFeeds(),
+    staleTime: QUERY_TIMES.staticMetadataStale,
+    gcTime: QUERY_TIMES.staticMetadataGc,
   });
   const items = followedFeedsQuery.data ?? [];
   const unreadCountsQuery = useQuery({
@@ -43,7 +47,8 @@ export function SidebarFollowedFeeds() {
         data: { feedIds: items.map((item) => item.feedId) },
       }),
     enabled: items.length > 0,
-    staleTime: 30_000,
+    staleTime: QUERY_TIMES.countsStale,
+    gcTime: QUERY_TIMES.countsGc,
     refetchOnWindowFocus: true,
   });
   const unreadCounts = unreadCountsQuery.data ?? {};
@@ -123,6 +128,7 @@ function FollowedFeedMenuItem({
   const [anchorPoint, setAnchorPoint] = useState({ x: 0, y: 0 });
   const anchorRef = useRef<HTMLDivElement | null>(null);
   const queryClient = useQueryClient();
+  const router = useRouter();
   const feedLabel = item.title || item.url;
   const feedSourceUrl = item.link ?? item.url;
 
@@ -172,6 +178,14 @@ function FollowedFeedMenuItem({
     <SidebarMenuItem key={item.feedId}>
       <SidebarMenuButton
         className={unreadCount > 0 ? "pe-10" : undefined}
+        onFocus={() => {
+          void prefetchInboxFlow(router, queryClient, { filter: "today", feedId: item.feedId });
+        }}
+        onPointerEnter={(event) => {
+          if (event.pointerType === "mouse" || event.pointerType === "pen") {
+            void prefetchInboxFlow(router, queryClient, { filter: "today", feedId: item.feedId });
+          }
+        }}
         onContextMenu={(event) => {
           event.preventDefault();
           setAnchorPoint({ x: event.clientX, y: event.clientY });

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { RssFill } from "@mingcute/react";
+import { buildClientFaviconUrl } from "@cronos/favicon/browser";
 
 const FAVICON_ERROR_TTL_MS = 5 * 60 * 1000;
 
@@ -21,20 +22,6 @@ function markFaviconFailed(url: string): void {
   failedFaviconUrls.set(url, Date.now() + FAVICON_ERROR_TTL_MS);
 }
 
-/** Accepted schemes for the favicon proxy (mirrors @cronos/favicon's ALLOWED_SCHEMES). */
-const PROXY_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
-
-function parseOrigin(raw: string | null | undefined): string | null {
-  if (!raw) return null;
-  try {
-    const parsed = new URL(raw);
-    if (!PROXY_ALLOWED_SCHEMES.has(parsed.protocol)) return null;
-    return parsed.origin;
-  } catch {
-    return null;
-  }
-}
-
 /**
  * Returns the URL to use for a feed favicon:
  * - Stored favicon URL from feed metadata when available.
@@ -45,11 +32,20 @@ export function buildFaviconUrl(
   siteUrl: string | null,
   feedUrl: string,
 ): string | null {
-  const trimmed = storedFaviconUrl?.trim();
-  if (trimmed) return trimmed;
-  const origin = parseOrigin(siteUrl) ?? parseOrigin(feedUrl);
-  if (!origin) return null;
-  return `/api/favicon?domain=${encodeURIComponent(origin)}`;
+  return buildClientFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
+}
+
+export function buildFaviconUrlCandidates(
+  storedFaviconUrl: string | null | undefined,
+  siteUrl: string | null,
+  feedUrl: string,
+): string[] {
+  const preferredUrl = buildClientFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
+  const proxyFallbackUrl = buildClientFaviconUrl(null, siteUrl, feedUrl);
+
+  return [
+    ...new Set([preferredUrl, proxyFallbackUrl].filter((url): url is string => Boolean(url))),
+  ];
 }
 
 type FeedFaviconProps = {
@@ -68,14 +64,25 @@ export function FeedFavicon({
   title,
   className,
 }: FeedFaviconProps) {
-  const faviconUrl = buildFaviconUrl(storedFaviconUrl, siteUrl, feedUrl);
-  const [useFallback, setUseFallback] = useState(faviconUrl ? hasFaviconFailed(faviconUrl) : true);
+  const faviconUrls = buildFaviconUrlCandidates(storedFaviconUrl, siteUrl, feedUrl);
+  const [faviconIndex, setFaviconIndex] = useState(() =>
+    faviconUrls.findIndex((url) => !hasFaviconFailed(url)),
+  );
+  const faviconUrl = faviconIndex >= 0 ? faviconUrls[faviconIndex] : null;
 
   useEffect(() => {
-    setUseFallback(faviconUrl ? hasFaviconFailed(faviconUrl) : true);
-  }, [faviconUrl]);
+    setFaviconIndex(faviconUrls.findIndex((url) => !hasFaviconFailed(url)));
+  }, [faviconUrls.join("\n")]);
 
-  if (!faviconUrl || useFallback) {
+  const failCurrentFavicon = () => {
+    if (!faviconUrl) {
+      return;
+    }
+    markFaviconFailed(faviconUrl);
+    setFaviconIndex(faviconUrls.findIndex((url) => url !== faviconUrl && !hasFaviconFailed(url)));
+  };
+
+  if (!faviconUrl) {
     return <RssFill className={className} aria-label={`${title} feed`} />;
   }
 
@@ -90,13 +97,11 @@ export function FeedFavicon({
       onLoad={(e) => {
         const { naturalWidth, naturalHeight } = e.currentTarget;
         if (naturalWidth < 2 || naturalHeight < 2) {
-          markFaviconFailed(faviconUrl);
-          setUseFallback(true);
+          failCurrentFavicon();
         }
       }}
       onError={() => {
-        markFaviconFailed(faviconUrl);
-        setUseFallback(true);
+        failCurrentFavicon();
       }}
     />
   );

@@ -1,7 +1,8 @@
 "use client";
 
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { getInboxItemDetail, getInboxItems, type InboxFilter } from "@lib/inbox-functions";
+import { getInboxItems, type InboxFilter } from "@lib/inbox-functions";
+import { inboxDetailQueryOptions, inboxItemsInfiniteQueryOptions } from "@lib/inbox-query-options";
 
 type UseInboxQueriesInput = {
   filter: InboxFilter;
@@ -35,39 +36,11 @@ export function useInboxQueries({
   itemId,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
-  const inboxQuery = useInfiniteQuery({
-    queryKey: ["inbox", "items", filter, search, feedId, folderId, timezoneOffsetMinutes],
-    initialPageParam: undefined as string | undefined,
-    queryFn: ({ pageParam }) =>
-      getInboxItems({
-        data: {
-          filter,
-          search,
-          feedId,
-          folderId,
-          cursor: pageParam,
-          timezoneOffsetMinutes,
-        },
-      }),
-    getNextPageParam: (lastPage) =>
-      lastPage.hasMore ? (lastPage.nextCursor ?? undefined) : undefined,
-  });
+  const inboxQuery = useInfiniteQuery(
+    inboxItemsInfiniteQueryOptions({ filter, search, feedId, folderId, timezoneOffsetMinutes }),
+  );
 
-  const detailQuery = useQuery({
-    queryKey: ["inbox", "item-detail", itemId],
-    enabled: Boolean(itemId),
-    retry: 1,
-    queryFn: () => {
-      if (!itemId) {
-        throw new Error("Missing inbox item id");
-      }
-      return getInboxItemDetail({
-        data: {
-          itemId,
-        },
-      });
-    },
-  });
+  const detailQuery = useQuery(inboxDetailQueryOptions(itemId));
 
   return { inboxQuery, detailQuery };
 }

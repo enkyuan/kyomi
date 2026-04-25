@@ -8,7 +8,9 @@ import { Checkbox } from "@components/ui/checkbox";
 import { Button } from "@components/ui/button";
 import {
   Dialog,
+  DialogClose,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogPanel,
   DialogPopup,
@@ -25,7 +27,13 @@ import {
   TableRow,
 } from "@components/ui/table";
 import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@components/ui/select";
-import { listFollowedFeeds, moveFeedsToFolder, type FollowedFeed } from "@lib/feed-functions";
+import { toastManager } from "@components/ui/toast";
+import {
+  listFollowedFeeds,
+  moveFeedsToFolder,
+  type FollowedFeed,
+  unfollowFeed,
+} from "@lib/feed-functions";
 import { listFolders } from "@lib/folder-functions";
 import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
 import { PinFill, PinLine } from "@mingcute/react";
@@ -250,6 +258,40 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
       setMovingFeedId(null);
     },
   });
+  const deleteFeedsMutation = useMutation({
+    mutationFn: async ({ feedIds }: { feedIds: string[] }) => {
+      await Promise.all(feedIds.map((feedId) => unfollowFeed({ data: { feedId } })));
+      return { feedIds };
+    },
+    onSuccess: async ({ feedIds }) => {
+      const deletedFeedIdSet = new Set(feedIds);
+      queryClient.setQueryData(["feeds", "followed"], (current: FollowedFeed[] | undefined) =>
+        current?.filter((feed) => !deletedFeedIdSet.has(feed.feedId)),
+      );
+      setRowSelection({});
+      await Promise.all([
+        queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] }),
+        queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] }),
+        queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] }),
+        queryClient.invalidateQueries({ queryKey: ["folders"] }),
+      ]);
+      toastManager.add({
+        title: feedIds.length === 1 ? "Feed deleted" : "Feeds deleted",
+        description:
+          feedIds.length === 1
+            ? "The selected feed has been removed from your following."
+            : `${feedIds.length} selected feeds were removed from your following.`,
+        type: "success",
+      });
+    },
+    onError: (error) => {
+      toastManager.add({
+        title: "Unable to remove selected feeds",
+        description: error instanceof Error ? error.message : "Try again in a moment.",
+        type: "error",
+      });
+    },
+  });
 
   const tableData = useMemo<FeedRow[]>(() => {
     return (followedFeedsQuery.data ?? []).map((feed) => ({
@@ -293,9 +335,18 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
   });
 
   const selectedCount = table.getSelectedRowModel().rows.length;
+  const selectedFeedIds = table.getSelectedRowModel().rows.map((row) => row.original.id);
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog
+      open={open}
+      onOpenChange={(nextOpen) => {
+        if (!nextOpen) {
+          setRowSelection({});
+        }
+        onOpenChange(nextOpen);
+      }}
+    >
       <DialogPopup className="sm:max-w-4xl">
         <DialogHeader>
           <DialogTitle>Manage feeds</DialogTitle>
@@ -373,6 +424,26 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
             </Table>
           </Frame>
         </DialogPanel>
+        <DialogFooter>
+          <DialogClose render={<Button variant="ghost" />}>Close</DialogClose>
+          <Button
+            disabled={selectedCount === 0 || deleteFeedsMutation.isPending}
+            variant="destructive"
+            onClick={() => {
+              if (selectedFeedIds.length === 0 || deleteFeedsMutation.isPending) {
+                return;
+              }
+
+              deleteFeedsMutation.mutate({ feedIds: selectedFeedIds });
+            }}
+          >
+            {deleteFeedsMutation.isPending
+              ? "Deleting..."
+              : selectedCount === 1
+                ? "Delete selected feed"
+                : "Delete selected feeds"}
+          </Button>
+        </DialogFooter>
       </DialogPopup>
     </Dialog>
   );

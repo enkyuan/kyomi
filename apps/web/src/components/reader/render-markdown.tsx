@@ -14,13 +14,16 @@ function escapeAttr(value: string): string {
     .replace(/>/g, "&gt;");
 }
 
-function createMarked(baseUrl?: string | null): Marked {
+function createMarked(baseUrl?: string | null, openLinksInNewTab = true): Marked {
   const renderer = new Renderer();
 
   renderer.link = function ({ href, title, text }) {
     const resolvedHref = href ? normalizeSafeHttpUrl(href, baseUrl) : null;
     if (!resolvedHref) return text;
     const titleAttr = title ? ` title="${escapeAttr(title)}"` : "";
+    if (!openLinksInNewTab) {
+      return `<a href="${escapeAttr(resolvedHref)}"${titleAttr}>${text}</a>`;
+    }
     return `<a href="${escapeAttr(resolvedHref)}"${titleAttr} rel="noopener noreferrer" target="_blank">${text}</a>`;
   };
 
@@ -49,11 +52,11 @@ function createMarked(baseUrl?: string | null): Marked {
 
 const markedByBaseUrl = new Map<string, ReturnType<typeof createMarked>>();
 
-function getMarkedForBaseUrl(baseUrl?: string | null): Marked {
-  const key = baseUrl ?? "";
+function getMarkedForBaseUrl(baseUrl?: string | null, openLinksInNewTab = true): Marked {
+  const key = `${baseUrl ?? ""}|${openLinksInNewTab ? "blank" : "same"}`;
   let parser = markedByBaseUrl.get(key);
   if (!parser) {
-    parser = createMarked(baseUrl);
+    parser = createMarked(baseUrl, openLinksInNewTab);
     markedByBaseUrl.set(key, parser);
   }
   return parser;
@@ -62,11 +65,13 @@ function getMarkedForBaseUrl(baseUrl?: string | null): Marked {
 export const RenderMarkdown = memo(function RenderMarkdown({
   markdown,
   baseUrl,
+  openLinksInNewTab = true,
 }: {
   markdown: string;
   baseUrl?: string | null;
+  openLinksInNewTab?: boolean;
 }) {
-  const parser = getMarkedForBaseUrl(baseUrl);
+  const parser = getMarkedForBaseUrl(baseUrl, openLinksInNewTab);
   const html = parser.parse(markdown, { async: false }) as string;
-  return <RenderHtml html={html} baseUrl={baseUrl} />;
+  return <RenderHtml html={html} baseUrl={baseUrl} openLinksInNewTab={openLinksInNewTab} />;
 });

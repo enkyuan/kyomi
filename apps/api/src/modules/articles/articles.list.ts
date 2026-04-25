@@ -1,6 +1,7 @@
 import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
 import { and, desc, eq, gte, lt, or, sql, type SQL } from "drizzle-orm";
+import { logger } from "@adapters/logger";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { collapseObviousDuplicates, type ArticleListRawRow } from "./articles-list-dedupe";
 import { articleIsReadSql } from "./articles.sql-read";
@@ -38,6 +39,13 @@ function normalizeLimit(limit: number): number {
 
 function paginateRows(rows: ArticleListRawRow[], limit: number) {
   const dedupedRows = collapseObviousDuplicates(rows);
+  if (dedupedRows.length !== rows.length) {
+    logger.warn("articles.list_time_dedupe.collapsed", {
+      rawCount: rows.length,
+      dedupedCount: dedupedRows.length,
+      collapsedCount: rows.length - dedupedRows.length,
+    });
+  }
   const hasMore = dedupedRows.length > limit;
   const page = hasMore ? dedupedRows.slice(0, limit) : dedupedRows;
   const nextCursor = hasMore && page.length > 0 ? page[page.length - 1].id : null;

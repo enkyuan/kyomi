@@ -9,22 +9,13 @@ import { SidebarPinnedSection } from "@components/navigation/sidebar-pinned-sect
 import { SidebarWorkspaceHeader } from "@components/navigation/sidebar-workspace-header";
 import { SettingsDialog } from "@components/pages/settings";
 import { Sidebar, SidebarContent } from "@components/ui/sidebar";
-import { getSidebarInboxCounts } from "@lib/inbox-functions";
+import { sidebarInboxSummaryQueryOptions } from "@lib/inbox-query-options";
 
 export function AppSidebar() {
   const [isMacPlatform, setIsMacPlatform] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
-  const inboxSummaryQuery = useQuery({
-    queryKey: ["sidebar", "inbox-summary", "global", timezoneOffsetMinutes],
-    enabled: timezoneOffsetMinutes !== undefined,
-    queryFn: () =>
-      getSidebarInboxCounts({
-        data: { timezoneOffsetMinutes },
-      }),
-    staleTime: 30_000,
-    refetchOnWindowFocus: true,
-  });
+  const inboxSummaryQuery = useQuery(sidebarInboxSummaryQueryOptions(timezoneOffsetMinutes));
   const counts = inboxSummaryQuery.data ?? { today: 0, unread: 0, saved: 0 };
 
   useEffect(() => {

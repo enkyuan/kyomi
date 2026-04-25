@@ -2,8 +2,10 @@
 
 import { useEffect } from "react";
 import { useForm } from "@tanstack/react-form";
+import { useQueryClient } from "@tanstack/react-query";
 import { Link, useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth-client";
+import { prefetchInboxFlow } from "@lib/inbox-prefetch";
 import { useAuth } from "@integrations/better-auth/auth-provider";
 import { Button } from "@components/ui/button";
 import {
@@ -24,6 +26,7 @@ import { getFieldErrorMessage, loginDefaultValues, loginFormSchema } from "./sch
 
 export function LoginPage() {
   const router = useRouter();
+  const queryClient = useQueryClient();
   const { isAuthenticated, isPending } = useAuth();
   const form = useForm({
     defaultValues: loginDefaultValues,
@@ -45,6 +48,7 @@ export function LoginPage() {
           }
 
           await router.invalidate();
+          await prefetchInboxFlow(router, queryClient);
           await router.navigate({ to: "/inbox" });
         })(),
         {
@@ -71,9 +75,11 @@ export function LoginPage() {
 
   useEffect(() => {
     if (!isPending && isAuthenticated) {
-      void router.navigate({ to: "/inbox" });
+      void prefetchInboxFlow(router, queryClient).finally(() => {
+        void router.navigate({ to: "/inbox" });
+      });
     }
-  }, [isAuthenticated, isPending, router]);
+  }, [isAuthenticated, isPending, queryClient, router]);
 
   if (isPending) {
     return (

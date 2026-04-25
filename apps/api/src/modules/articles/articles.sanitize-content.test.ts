@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "bun:test";
 import { sanitizeArticleHtml } from "./articles.sanitize-content";
 
 describe("sanitizeArticleHtml – carousel artifact stripping", () => {

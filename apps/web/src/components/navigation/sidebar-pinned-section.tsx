@@ -2,13 +2,15 @@
 
 import { useState } from "react";
 import { DownFill } from "@mingcute/react";
-import { Link, useLocation } from "@tanstack/react-router";
-import { useQuery } from "@tanstack/react-query";
+import { Link, useLocation, useRouter } from "@tanstack/react-router";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { listFollowedFeeds, type FollowedFeed } from "@lib/feed-functions";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
+import { QUERY_TIMES } from "@lib/query-policies";
+import { prefetchInboxFlow } from "@lib/inbox-prefetch";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -24,11 +26,15 @@ function isFollowedFeed(value: FollowedFeed | undefined): value is FollowedFeed 
 
 export function SidebarPinnedSection() {
   const location = useLocation();
+  const router = useRouter();
+  const queryClient = useQueryClient();
   const isInbox = isInboxPathname(location.pathname);
   const [pinnedOpen, setPinnedOpen] = useState(true);
   const followedFeedsQuery = useQuery({
     queryKey: ["feeds", "followed"],
     queryFn: () => listFollowedFeeds(),
+    staleTime: QUERY_TIMES.staticMetadataStale,
+    gcTime: QUERY_TIMES.staticMetadataGc,
   });
   const { pinnedFeedIds } = usePinnedFeedIds();
   const feedItems = followedFeedsQuery.data ?? [];
@@ -64,6 +70,20 @@ export function SidebarPinnedSection() {
                   <SidebarMenuButton
                     tooltip={feed.title || feed.url}
                     isActive={isInbox && location.search.feedId === feed.feedId}
+                    onFocus={() => {
+                      void prefetchInboxFlow(router, queryClient, {
+                        filter: "today",
+                        feedId: feed.feedId,
+                      });
+                    }}
+                    onPointerEnter={(event) => {
+                      if (event.pointerType === "mouse" || event.pointerType === "pen") {
+                        void prefetchInboxFlow(router, queryClient, {
+                          filter: "today",
+                          feedId: feed.feedId,
+                        });
+                      }
+                    }}
                     render={
                       <Link
                         to="/inbox"
