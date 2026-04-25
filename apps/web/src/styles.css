@@ -235,6 +235,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  outline-offset: -1px;
+}
+
+.dark img {
+  outline-color: rgba(255, 255, 255, 0.1);
+}
+
 *,
 *::before,
 *::after {
@@ -347,7 +356,7 @@ body {
   gap: 0.5rem;
   padding-block: 0.4rem 0.25rem;
   padding-inline-start: var(--reader-code-inline-pad);
-  padding-inline-end: calc(var(--reader-code-inline-pad) - 0.35rem);
+  padding-inline-end: calc(var(--reader-code-inline-pad) - 0.4rem);
   border: none;
   background: transparent;
 }
@@ -466,8 +475,8 @@ body {
   display: inline-grid;
   place-items: center;
   box-sizing: border-box;
-  width: 2rem;
-  height: 2rem;
+  width: var(--rcb-button-size, 2rem);
+  height: var(--rcb-button-size, 2rem);
   margin: 0;
   padding: 0;
   border: none;
@@ -497,7 +506,8 @@ body {
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon {
   grid-area: 1 / 1;
   display: block;
-  flex-shrink: 0;
+  width: var(--rcb-icon-size, 1rem);
+  height: var(--rcb-icon-size, 1rem);
   transform-origin: center;
   transition: opacity 300ms ease, transform 300ms ease, filter 300ms ease;
   will-change: opacity, transform, filter;
@@ -551,6 +561,7 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
+  margin-block: 0;
 }
 
 .reader-content .article-body [data-reader-inline-img] {
@@ -566,12 +577,14 @@ body {
   display: block;
   width: min(100%, 56rem);
   margin-inline: auto;
+  /* Kill stray line-box gap under replaced content when nested in flex/prose. */
+  line-height: 0;
 }
 
 .reader-content .article-body [data-reader-img-frame] > img {
   display: block;
   width: 100%;
-  margin-inline: auto;
+  margin: 0;
 }
 
 /* Some feeds (e.g. BBC) ship a grey placeholder when the hero asset failed upstream — tone down the solid tile */
@@ -612,7 +625,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   gap: 0.8rem;
+}
+
+/* Stacked figure: flex `gap` between media and caption. :has() applies before JS sets
+   data-reader-figure-has-caption; both beat stray publisher `gap-*` utilities. */
+.reader-content .article-body figure:has(> figcaption),
+.reader-content .article-body figure[data-reader-figure-has-caption] {
+  gap: 4px;
+  margin-block: 0.75rem;
 }
 
 /* Many publishers wrap figure images in <p>; neutralize paragraph margins there
@@ -716,15 +738,22 @@ body {
 }
 
 .reader-content .article-body figcaption {
+  display: block;
   margin-top: 0;
   text-align: center;
-  text-wrap: balance;
+  text-wrap: pretty;
   color: color-mix(in srgb, var(--foreground) 68%, transparent);
   font-size: 0.9rem;
   line-height: 1.35;
-  max-width: 42rem;
-  width: 100%;
+  width: min(100%, 56rem);
+  max-width: none;
   margin-inline: auto;
+}
+
+.reader-content .article-body figure:has(> figcaption) > figcaption {
+  align-self: stretch;
+  margin-inline: 0;
+  text-align: start;
 }
 
 .reader-content .article-body figure:where(.author-bio, .media-object) > figcaption {
@@ -746,8 +775,8 @@ body {
   font-size: 0.9rem;
   line-height: 1.35;
   text-align: center;
-  text-wrap: balance;
-  max-width: 42rem;
+  text-wrap: pretty;
+  max-width: min(100%, 56rem);
   margin-inline: auto;
 }
 
@@ -758,8 +787,8 @@ body {
   font-style: italic;
   line-height: 1.3;
   text-align: center;
-  text-wrap: balance;
-  max-width: 42rem;
+  text-wrap: pretty;
+  max-width: min(100%, 56rem);
   margin-inline: auto;
   margin-top: 0.25rem;
 }

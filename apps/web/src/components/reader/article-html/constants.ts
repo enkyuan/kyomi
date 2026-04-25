@@ -9,3 +9,5 @@ export const READER_PROFILE_THUMB = "data-reader-profile-thumb";
 export const READER_FIGURE_CAPTION = "data-reader-figure-caption";
 /** Marks a text block as a photo/image credit line. */
 export const READER_FIGURE_CREDIT = "data-reader-figure-credit";
+/** Marks image figures that include a real figcaption so spacing can be tightened safely. */
+export const READER_FIGURE_HAS_CAPTION = "data-reader-figure-has-caption";

@@ -27,7 +27,7 @@ export function FeedRefreshStatus({ feedId }: { feedId: string }) {
         e.preventDefault();
         refresh();
       }}
-      className={`inline-flex size-8 items-center justify-center rounded-xl transition-colors hover:bg-background disabled:opacity-50 ${statusClass}`}
+      className={`inline-flex size-10 items-center justify-center rounded-xl transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] active:scale-[0.96] motion-reduce:active:scale-100 hover:bg-background disabled:opacity-50 ${statusClass}`}
       aria-label="Refresh feed"
       title={title}
     >

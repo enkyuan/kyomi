@@ -8,14 +8,14 @@ import { useQuery } from "@tanstack/react-query";
 import { getInboxViewCount } from "@lib/inbox-functions";
 
 import { useEffect, useMemo, useState } from "react";
-import { Route } from "@/routes/inbox/index";
+import { useSearch } from "@tanstack/react-router";
 import { AppShell } from "@pages/app-shell";
 
 const MIN_LEFT_PERCENT = 26;
 const MIN_RIGHT_PERCENT = 64;
 
 export function InboxPage() {
-  const { filter = "today", search, feedId, folderId, itemId } = Route.useSearch();
+  const { filter = "today", search, feedId, folderId, itemId } = useSearch({ from: "/inbox/" });
   const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
 
   useEffect(() => {

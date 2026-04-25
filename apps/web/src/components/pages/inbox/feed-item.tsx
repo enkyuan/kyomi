@@ -31,7 +31,7 @@ export function FeedItem({
   return (
     <Card
       className={cn(
-        "w-full cursor-pointer gap-0 overflow-hidden rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-colors",
+        "w-full cursor-pointer gap-0 overflow-hidden rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform active:scale-[0.996] motion-reduce:active:scale-100",
         isFirst ? "border-t-0" : "border-t",
         showBottomSeparator ? "border-b" : "border-b-0",
         isSelected ? "bg-background" : "hover:bg-background/70",
@@ -64,12 +64,12 @@ export function FeedItem({
         </CardTitle>
       </CardHeader>
       <CardContent className="px-5 pb-0 pt-0">
-        <p className="line-clamp-3 overflow-hidden text-[14px] leading-[1.45] text-muted-foreground/90">
+        <p className="line-clamp-3 overflow-hidden text-pretty text-[14px] leading-[1.45] text-muted-foreground/90">
           {item.summary || "No summary available."}
         </p>
       </CardContent>
       <CardFooter className="mt-2 flex w-full flex-wrap items-center gap-2 px-5 pb-3 pt-0">
-        <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/75">
+        <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/75 tabular-nums">
           {formatArticleTimestamp(item.publishedAt)}
         </span>
         {item.isSaved ? (

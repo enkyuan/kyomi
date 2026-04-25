@@ -4,6 +4,7 @@ import { normalizeCaptionText } from "./string-prep";
 import {
   READER_FIGURE_CAPTION,
   READER_FIGURE_CREDIT,
+  READER_FIGURE_HAS_CAPTION,
   READER_IMG_FRAME,
   READER_INLINE_IMG,
   READER_MEDIA_ASIDE,
@@ -494,6 +495,37 @@ function unwrapImageOnlyParagraph(frame: HTMLElement): void {
   }
 }
 
+/** Remove loading skeleton once the image has dimensions (load, error, or decode). */
+function bindReaderImageReveal(
+  wrap: HTMLElement,
+  skeletonEl: HTMLElement,
+  img: HTMLImageElement,
+): void {
+  let revealed = false;
+  const reveal = (): void => {
+    if (revealed) {
+      return;
+    }
+    revealed = true;
+    wrap.removeAttribute("data-reader-img-loading");
+    skeletonEl.remove();
+    img.classList.remove("opacity-0");
+  };
+
+  if (img.complete && img.naturalWidth > 0) {
+    reveal();
+  } else {
+    img.addEventListener("load", reveal, { once: true });
+    img.addEventListener("error", reveal, { once: true });
+  }
+
+  requestAnimationFrame(() => {
+    if (img.naturalWidth > 0 || img.naturalHeight > 0) {
+      reveal();
+    }
+  });
+}
+
 function enhanceArticleBodyImages(container: HTMLElement): void {
   pruneRedundantLazyImages(container);
   dedupeFigureInlineCaptionNoise(container);
@@ -541,18 +573,7 @@ function enhanceArticleBodyImages(container: HTMLElement): void {
       "duration-200",
     );
 
-    const reveal = (): void => {
-      wrap.removeAttribute("data-reader-img-loading");
-      skeletonEl.remove();
-      img.classList.remove("opacity-0");
-    };
-
-    if (img.complete && img.naturalWidth > 0) {
-      reveal();
-    } else {
-      img.addEventListener("load", reveal, { once: true });
-      img.addEventListener("error", reveal, { once: true });
-    }
+    bindReaderImageReveal(wrap, skeletonEl, img);
   }
 }
 
@@ -648,11 +669,40 @@ function classifyImageAdjacentText(container: HTMLElement): void {
   }
 }
 
+function markCaptionedFigures(container: HTMLElement): void {
+  for (const figure of container.querySelectorAll<HTMLElement>("figure")) {
+    const caption = figure.querySelector<HTMLElement>(":scope > figcaption");
+    if (!caption) {
+      figure.removeAttribute(READER_FIGURE_HAS_CAPTION);
+      continue;
+    }
+
+    const captionText = normalizeCaptionText(caption.textContent ?? "");
+    if (!captionText) {
+      figure.removeAttribute(READER_FIGURE_HAS_CAPTION);
+      continue;
+    }
+
+    const hasMedia = Boolean(
+      figure.querySelector(
+        `:scope > [${READER_IMG_FRAME}], :scope > img, :scope > picture, :scope > video, :scope > iframe, :scope > p > [${READER_IMG_FRAME}], :scope > p > img`,
+      ),
+    );
+
+    if (hasMedia) {
+      figure.setAttribute(READER_FIGURE_HAS_CAPTION, "");
+    } else {
+      figure.removeAttribute(READER_FIGURE_HAS_CAPTION);
+    }
+  }
+}
+
 /** Runs client-side reader DOM passes after sanitized HTML is injected. Order matters. */
 export function runReaderDomEnhancements(container: HTMLElement): void {
   stripClientCarouselArtifacts(container);
   removeLikelyAuthorCards(container);
   enhanceArticleBodyImages(container);
+  markCaptionedFigures(container);
   wrapOrphanedProfileImageParagraphs(container);
   markReaderMediaAsideLayouts(container);
   markReaderProfileThumbs(container);

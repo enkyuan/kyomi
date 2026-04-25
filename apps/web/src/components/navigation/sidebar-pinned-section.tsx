@@ -53,14 +53,10 @@ export function SidebarPinnedSection() {
         <CollapsiblePanel>
           <SidebarMenu>
             {pinnedFeeds.length === 0 ? (
-              <SidebarMenuItem>
-                <SidebarMenuButton
-                  disabled
-                  className="cursor-default opacity-72"
-                  tooltip="No pinned feeds yet"
-                >
+              <SidebarMenuItem className="list-none">
+                <p className="flex h-8 items-center px-2 text-sm text-muted-foreground/75">
                   <span className="truncate">No pinned feeds yet</span>
-                </SidebarMenuButton>
+                </p>
               </SidebarMenuItem>
             ) : (
               pinnedFeeds.map((feed) => (
