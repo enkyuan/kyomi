@@ -127,6 +127,11 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
       )}
       style={{ "--reader-font-size": `${preferences.fontSizePx}px` } as Record<string, string>}
     >
+      {extractMutation.isPending && !showFailedBanner && !item.readerExtracted ? (
+        <div className="not-prose absolute right-2 top-10 flex items-center gap-2 text-muted-foreground text-xs">
+          <Spinner className="size-4" />
+        </div>
+      ) : null}
       <div className="not-prose mb-6 flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
           <span>{formatArticleTimestamp(item.publishedAt)}</span>
