@@ -737,6 +737,168 @@ img {
   flex: 0 0 auto;
 }
 
+.reader-content .article-body [data-reader-inline-img] {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  vertical-align: text-bottom;
+  border-radius: 4px;
+}
+
+.reader-content .article-body [data-reader-img-frame] {
+  display: block;
+  width: min(100%, 56rem);
+  margin-inline: auto;
+}
+
+.reader-content .article-body [data-reader-img-frame] > img {
+  display: block;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Some feeds (e.g. BBC) ship a grey placeholder when the hero asset failed upstream — tone down the solid tile */
+.reader-content .article-body img[aria-label="image unavailable"],
+.reader-content .article-body img[src*="grey-placeholder"] {
+  opacity: 0.42;
+  filter: grayscale(1);
+}
+
+/* Author avatars / small portraits (see data-reader-profile-thumb in render-html.tsx) */
+.reader-content .article-body [data-reader-img-frame][data-reader-profile-thumb] {
+  float: left;
+  clear: left;
+  width: auto;
+  max-width: 6.5rem;
+  margin: 0 1rem 0.75rem 0;
+}
+
+/* When the profile thumb is inside a media-aside flex row, suppress the float so the
+   flex layout governs sizing instead. The first-child img-frame rules handle width. */
+.reader-content .article-body [data-reader-media-aside] [data-reader-img-frame][data-reader-profile-thumb] {
+  float: none;
+  clear: none;
+  margin: 0;
+}
+
+.reader-content .article-body [data-reader-img-frame][data-reader-profile-thumb] img {
+  margin-inline: 0;
+}
+
+.reader-content .article-body::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.reader-content .article-body figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Many publishers wrap figure images in <p>; neutralize paragraph margins there
+   so captions don't drift too far below the image block. */
+.reader-content .article-body figure > p:has(> [data-reader-img-frame]),
+.reader-content .article-body figure > p:has(> img) {
+  width: min(100%, 56rem);
+  margin: 0;
+}
+
+.reader-content .article-body [data-reader-img-frame][data-reader-img-loading] {
+  min-height: 4rem;
+}
+
+/*
+ * Beside layouts only when `[data-reader-media-aside]` is set in render-html after inspecting
+ * the DOM (child count, leading media, CMS/author classes). Do not use broad `:has(> img)`
+ * on generic divs — a wrapper around the whole article (hero + many <p>) would become a
+ * horizontal flex of every block.
+ */
+.reader-content .article-body [data-reader-media-aside] {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .reader-content .article-body [data-reader-media-aside] {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .reader-content .article-body [data-reader-media-aside] > *:first-child:is([data-reader-img-frame]),
+  .reader-content .article-body [data-reader-media-aside] > *:first-child:is(a):has(> [data-reader-img-frame]) {
+    max-width: 5rem;
+  }
+}
+
+.reader-content .article-body [data-reader-media-aside] > *:first-child {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.reader-content .article-body [data-reader-media-aside] > *:first-child:is([data-reader-img-frame]) {
+  width: auto;
+  max-width: min(40%, 10rem);
+  margin: 0;
+  align-self: flex-start;
+}
+
+.reader-content .article-body [data-reader-media-aside] > *:first-child:is(a):has(> [data-reader-img-frame]) {
+  width: auto;
+  max-width: min(40%, 10rem);
+  margin: 0;
+  align-self: flex-start;
+}
+
+.reader-content .article-body [data-reader-media-aside] > a:first-child > [data-reader-img-frame] {
+  width: 100%;
+}
+
+.reader-content .article-body [data-reader-media-aside] > figure:first-child {
+  flex: 0 0 auto;
+  margin-block: 0;
+  max-width: min(45%, 14rem);
+  width: auto;
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.reader-content .article-body [data-reader-media-aside] > *:not(:first-child) {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.reader-content .article-body figure > [data-reader-img-frame],
+.reader-content .article-body figure > img {
+  width: min(100%, 56rem);
+}
+
+.reader-content .article-body figure > p:has(> [data-reader-img-frame]) > [data-reader-img-frame],
+.reader-content .article-body figure > p:has(> img) > img {
+  width: 100%;
+}
+
+/* Class-gated: author/portrait + caption beside (not stacked like article figures) */
+.reader-content .article-body figure:where(.author-bio, .media-object) {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.reader-content .article-body figure:where(.author-bio, .media-object) > [data-reader-img-frame],
+.reader-content .article-body figure:where(.author-bio, .media-object) > img {
+  width: auto;
+  max-width: min(40%, 10rem);
+  flex: 0 0 auto;
+}
+
 .reader-content .article-body figcaption {
   display: block;
   margin-top: 0;
