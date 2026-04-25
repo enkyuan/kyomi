@@ -28,6 +28,8 @@ export function AppSidebar() {
       getSidebarInboxCounts({
         data: { timezoneOffsetMinutes, feedId: scopedFeedId, folderId: scopedFolderId },
       }),
+    staleTime: 30_000,
+    refetchOnWindowFocus: true,
   });
   const counts = inboxSummaryQuery.data ?? { today: 0, unread: 0, saved: 0 };
 

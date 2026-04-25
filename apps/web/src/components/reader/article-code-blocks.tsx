@@ -4,12 +4,14 @@ import "highlight.js/styles/github-dark.css";
 
 const WRAPPER = "data-reader-code-block";
 const COPY_MOUNTED = "data-reader-copy-mounted";
+const BUTTON_ICON_SIZE = 16;
+const BUTTON_ICON_PADDING = 14;
 
-// SVG path data extracted from @mingcute/react (Copy2Fill / CheckFill), viewBox 0 0 24 24.
+// SVG paths (Mingcute-style), viewBox 0 0 24 24.
 const COPY_ICON_PATH =
   "M9 2a2 2 0 0 0-2 2v2h2V4h11v11h-2v2h2a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM4 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z";
 const CHECK_ICON_PATH =
-  "M21.546 5.111a1.5 1.5 0 0 1 0 2.121L10.303 18.475a1.6 1.6 0 0 1-2.263 0L2.454 12.89a1.5 1.5 0 1 1 2.121-2.121l4.596 4.596L19.424 5.111a1.5 1.5 0 0 1 2.122 0";
+  "M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2m3.535 6.381-4.95 4.95-2.12-2.121a1 1 0 0 0-1.415 1.414l2.758 2.758a1.1 1.1 0 0 0 1.556 0l5.586-5.586a1 1 0 0 0-1.415-1.415";
 
 /** Markdown ` ```ts ` → `language-ts`; map to highlight.js ids where needed. */
 const LANGUAGE_ALIASES: Record<string, string> = {
@@ -225,8 +227,8 @@ function normalizeStandaloneCodeElements(container: HTMLElement): void {
 function makeSvgIcon(pathD: string): SVGSVGElement {
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("viewBox", "0 0 24 24");
-  svg.setAttribute("width", "16");
-  svg.setAttribute("height", "16");
+  svg.setAttribute("width", String(BUTTON_ICON_SIZE));
+  svg.setAttribute("height", String(BUTTON_ICON_SIZE));
   svg.setAttribute("aria-hidden", "true");
   svg.setAttribute("fill", "currentColor");
   const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
@@ -244,6 +246,8 @@ function mountCopyButton(host: HTMLElement, text: string): void {
   button.type = "button";
   button.className = "reader-code-copy-button";
   button.setAttribute("aria-label", "Copy code");
+  button.style.setProperty("--rcb-icon-size", `${BUTTON_ICON_SIZE}px`);
+  button.style.setProperty("--rcb-button-size", `${BUTTON_ICON_SIZE + BUTTON_ICON_PADDING}px`);
 
   const copyIcon = makeSvgIcon(COPY_ICON_PATH);
   copyIcon.setAttribute("class", "rcb-icon rcb-icon-copy");

@@ -19,7 +19,7 @@ describe("RenderHtml", () => {
     expect(root?.querySelector("img")?.getAttribute("src")).toBe("https://example.com/x.png");
   });
 
-  test("tags avatar class and author-bio hosts as profile thumbs", async () => {
+  test("tags author-bio host as profile thumb and keeps avatar-class image inline", async () => {
     const html = `
       <div class="author-bio"><img src="https://example.com/a.png" alt="" /></div>
       <p><img src="https://example.com/b.png" alt="" class="avatar" /></p>
@@ -27,7 +27,8 @@ describe("RenderHtml", () => {
     const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
     const root = container.querySelector(".article-body");
     await waitFor(() => {
-      expect(root?.querySelectorAll("[data-reader-profile-thumb]").length).toBe(2);
+      expect(root?.querySelectorAll("[data-reader-profile-thumb]").length).toBe(1);
+      expect(root?.querySelectorAll("[data-reader-inline-img]").length).toBe(1);
     });
   });
 
@@ -69,6 +70,24 @@ describe("RenderHtml", () => {
       expect(
         root?.querySelector(".wp-block-media-text")?.getAttribute("data-reader-media-aside"),
       ).toBe("");
+    });
+  });
+
+  test("marks media figures with real figcaptions for tighter caption spacing", async () => {
+    const html = `
+      <figure>
+        <img src="https://example.com/photo.jpg" alt="" />
+        <figcaption>
+          Lindell Williams and Grant Brodnik align an optical fiber while a second line wraps in the same caption block.
+        </figcaption>
+      </figure>
+    `;
+    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      expect(root?.querySelector("figure")?.hasAttribute("data-reader-figure-has-caption")).toBe(
+        true,
+      );
     });
   });
 });
@@ -405,12 +424,14 @@ describe("RenderHtml – code block normalization", () => {
     });
   });
 
-  test("re-applies code block chrome when the DOM is reset (hydration reload)", async () => {
+  test("re-applies code block chrome after content remount (new article body)", async () => {
     const html = `
       <pre><code class="language-ts">const hello: string = "world"</code></pre>
     `;
-    const { container } = render(<RenderHtml html={html} baseUrl="https://example.com/p" />);
-    const root = container.querySelector(".article-body");
+    const { container, rerender } = render(
+      <RenderHtml key="first" html={html} baseUrl="https://example.com/p" />,
+    );
+    let root = container.querySelector(".article-body");
     expect(root).toBeTruthy();
 
     await waitFor(() => {
@@ -418,10 +439,9 @@ describe("RenderHtml – code block normalization", () => {
     });
 
     act(() => {
-      if (root) {
-        root.innerHTML = html;
-      }
+      rerender(<RenderHtml key="second" html={html} baseUrl="https://example.com/p" />);
     });
+    root = container.querySelector(".article-body");
 
     await waitFor(() => {
       expect(root?.querySelector("[data-reader-code-block]")).toBeTruthy();

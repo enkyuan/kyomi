@@ -28,6 +28,12 @@ export function useFeedRefresh(feedId: string) {
   const status = detailQuery.data?.refreshStatus ?? "idle";
   const isRefreshing = mutation.isPending || status === "queued" || status === "running";
 
+  // Reset status tracking when the monitored feed changes so a stale previous status from
+  // one feed cannot trigger invalidations for a different feed.
+  useEffect(() => {
+    previousStatusRef.current = "idle";
+  }, [feedId]);
+
   useEffect(() => {
     const prev = previousStatusRef.current;
     const now = status;
@@ -40,7 +46,7 @@ export function useFeedRefresh(feedId: string) {
       queryClient.invalidateQueries({ queryKey: ["feed-detail", feedId] });
     }
     previousStatusRef.current = now;
-  }, [status, queryClient]);
+  }, [status, feedId, queryClient]);
 
   const triggerRefresh = () => {
     if (mutation.isPending || isRefreshing) {

@@ -95,7 +95,7 @@ export function SidebarInboxNav({
                 <span className="truncate">{item.label}</span>
               </SidebarMenuButton>
               {badgeValue > 0 ? (
-                <SidebarMenuBadge className="right-2 rounded-full bg-sidebar-foreground/10 px-1.5 text-[11px] font-semibold">
+                <SidebarMenuBadge className="right-2 min-w-5 rounded-full bg-sidebar-foreground/10 px-1.5 text-center text-[11px] font-semibold tabular-nums">
                   {badgeValue}
                 </SidebarMenuBadge>
               ) : null}

@@ -54,7 +54,7 @@ describe("ReaderContent", () => {
 
     expect(screen.getByText("Heading")).toBeTruthy();
     expect(document.querySelector("table")).toBeTruthy();
-    expect(screen.getByText("const value = 1;")).toBeTruthy();
+    expect(document.querySelector("pre code")?.textContent).toContain("const value = 1;");
     expect(document.querySelector(".katex")).toBeTruthy();
   });
 

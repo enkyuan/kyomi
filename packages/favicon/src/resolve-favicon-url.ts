@@ -1,30 +1,82 @@
 import { assertSafeFaviconHost, ALLOWED_SCHEMES } from "./host-safety";
 
-const FETCH_OPTIONS = {
-  headers: { Accept: "image/*,*/*" },
-  redirect: "follow" as const,
-};
+const MAX_REDIRECT_HOPS = 5;
+
+/**
+ * Follows redirects manually, re-validating each Location URL's hostname with
+ * assertSafeFaviconHost when `validateEachHop` is true. This prevents SSRF via
+ * open-redirect chains that could reach private/internal addresses.
+ */
+async function fetchWithRedirectGuard(
+  startUrl: string,
+  init: Omit<RequestInit, "redirect"> & { signal?: AbortSignal },
+  validateEachHop: boolean,
+): Promise<Response | null> {
+  let url = startUrl;
+  for (let hop = 0; hop <= MAX_REDIRECT_HOPS; hop++) {
+    let parsed: URL;
+    try {
+      parsed = new URL(url);
+    } catch {
+      return null;
+    }
+    if (!ALLOWED_SCHEMES.has(parsed.protocol)) {
+      return null;
+    }
+    if (validateEachHop) {
+      const isSafe = await assertSafeFaviconHost(parsed.hostname);
+      if (!isSafe) {
+        return null;
+      }
+    }
+
+    let response: Response;
+    try {
+      response = await fetch(url, { ...init, redirect: "manual" });
+    } catch {
+      return null;
+    }
+
+    if (response.status >= 300 && response.status < 400) {
+      const location = response.headers.get("location");
+      response.body?.cancel().catch(() => {});
+      if (!location) {
+        return null;
+      }
+      try {
+        url = new URL(location, url).href;
+      } catch {
+        return null;
+      }
+      continue;
+    }
+
+    return response;
+  }
+
+  // Exceeded maximum redirect hops.
+  return null;
+}
+
+/** Validates that a Response is an HTTP 200 OK with an image content-type. */
+function isImageResponse(response: Response): boolean {
+  if (!response.ok) return false;
+  const contentType = response.headers.get("content-type") ?? "";
+  return contentType.startsWith("image/") || contentType.includes("icon");
+}
 
 /** Try fetching a URL and return the response only if it looks like a valid image. */
 export async function tryFetchImage(imageUrl: string): Promise<Response | null> {
-  try {
-    const response = await fetch(imageUrl, {
-      ...FETCH_OPTIONS,
-      signal: AbortSignal.timeout(2500),
-    });
-    if (!response.ok) {
-      response.body?.cancel().catch(() => {});
-      return null;
-    }
-    const contentType = response.headers.get("content-type") ?? "";
-    if (!contentType.startsWith("image/") && !contentType.includes("icon")) {
-      response.body?.cancel().catch(() => {});
-      return null;
-    }
-    return response;
-  } catch {
+  const response = await fetchWithRedirectGuard(
+    imageUrl,
+    { headers: { Accept: "image/*,*/*" }, signal: AbortSignal.timeout(2500) },
+    false,
+  );
+  if (!response || !isImageResponse(response)) {
+    response?.body?.cancel().catch(() => {});
     return null;
   }
+  return response;
 }
 
 export async function tryFetchImageIfHostSafe(imageUrl: string): Promise<Response | null> {
@@ -44,18 +96,29 @@ export async function tryFetchImageIfHostSafe(imageUrl: string): Promise<Respons
     return null;
   }
 
-  return tryFetchImage(imageUrl);
+  // Use redirect guard with per-hop host validation so a redirect chain cannot
+  // bypass the SSRF guard by pointing to a private/internal address.
+  const response = await fetchWithRedirectGuard(
+    imageUrl,
+    { headers: { Accept: "image/*,*/*" }, signal: AbortSignal.timeout(2500) },
+    true,
+  );
+  if (!response || !isImageResponse(response)) {
+    response?.body?.cancel().catch(() => {});
+    return null;
+  }
+  return response;
 }
 
 /** Parse homepage HTML to find a <link rel="icon"> href. */
 export async function findIconFromHtml(origin: string): Promise<string | null> {
   try {
-    const response = await fetch(origin, {
-      headers: { Accept: "text/html" },
-      redirect: "follow",
-      signal: AbortSignal.timeout(2500),
-    });
-    if (!response.ok) return null;
+    const response = await fetchWithRedirectGuard(
+      origin,
+      { headers: { Accept: "text/html" }, signal: AbortSignal.timeout(2500) },
+      true,
+    );
+    if (!response?.ok) return null;
     const reader = response.body?.getReader();
     if (!reader) return null;
     let html = "";

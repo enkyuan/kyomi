@@ -73,6 +73,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
     queryFn: () => listFollowedFeeds(),
   });
 
+  /** Inbox quick switches from the command palette always return to full-workspace views. */
   const inboxItems = [
     {
       label: "Today",

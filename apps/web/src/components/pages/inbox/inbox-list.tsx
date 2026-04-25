@@ -8,7 +8,6 @@ import { FeedRefreshStatus } from "@components/pages/inbox/feed-refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
-import { Route } from "@/routes/inbox/index";
 import { useEffect, useRef } from "react";
 import type { InboxFilter, InboxItem } from "@lib/inbox-functions";
 
@@ -87,7 +86,7 @@ export function InboxList({
             <button
               type="button"
               aria-label="Feed filters coming soon"
-              className="inline-flex size-8 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+              className="inline-flex size-10 items-center justify-center rounded-xl text-muted-foreground transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] hover:bg-background hover:text-foreground active:scale-[0.96] motion-reduce:active:scale-100"
             >
               <Filter2Fill className="size-4" />
             </button>
@@ -160,7 +159,7 @@ export function InboxList({
                       }
                       onSelect={() => {
                         void navigate({
-                          from: Route.fullPath,
+                          from: "/inbox/",
                           search: (prev) => ({
                             ...prev,
                             itemId: item.id,

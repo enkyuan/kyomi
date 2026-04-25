@@ -43,6 +43,8 @@ export function SidebarFollowedFeeds() {
         data: { feedIds: items.map((item) => item.feedId) },
       }),
     enabled: items.length > 0,
+    staleTime: 30_000,
+    refetchOnWindowFocus: true,
   });
   const unreadCounts = unreadCountsQuery.data ?? {};
 

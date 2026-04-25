@@ -21,7 +21,7 @@ export function InboxSourceRow({
 }: InboxSourceRowProps) {
   return (
     <div className={cn("flex w-full min-w-0 items-center gap-2", className)}>
-      <span className="inline-flex size-4.5 shrink-0 items-center justify-center overflow-hidden rounded-[3px] bg-muted">
+      <span className="inline-flex size-4.5 shrink-0 items-center justify-center overflow-hidden rounded-[3px] bg-muted ring-1 ring-border/45 shadow-[0_1px_0_0_color-mix(in_srgb,var(--foreground)_5%,transparent)]">
         <FeedFavicon
           className={cn("size-4 shrink-0 rounded-[inherit]", iconClassName)}
           feedUrl={articleUrl}
