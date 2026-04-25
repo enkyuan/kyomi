@@ -247,6 +247,21 @@ export const messageResponseSchema = z.object({
 });
 
 // ---------------------------------------------------------------------------
+// User preferences
+// ---------------------------------------------------------------------------
+
+export const readerDefaultModeSchema = z.enum(["smart", "original", "extracted"]);
+export const readerContentWidthSchema = z.enum(["narrow", "medium", "wide"]);
+
+export const readerPreferencesSchema = z.object({
+  defaultMode: readerDefaultModeSchema,
+  fontSizePx: z.number(),
+  contentWidth: readerContentWidthSchema,
+  openLinksInNewTab: z.boolean(),
+  showImages: z.boolean(),
+});
+
+// ---------------------------------------------------------------------------
 // Type exports (inferred from schemas)
 // ---------------------------------------------------------------------------
 
@@ -260,6 +275,9 @@ export type DiscoverFeedResultDto = z.infer<typeof discoverFeedResultSchema>;
 export type FollowFeedResultDto = z.infer<typeof followFeedResultSchema>;
 export type FollowedFeedDto = z.infer<typeof followedFeedSchema>;
 export type FeedDetailDto = z.infer<typeof feedDetailSchema>;
+export type ReaderDefaultModeDto = z.infer<typeof readerDefaultModeSchema>;
+export type ReaderContentWidthDto = z.infer<typeof readerContentWidthSchema>;
+export type ReaderPreferencesDto = z.infer<typeof readerPreferencesSchema>;
 
 // ---------------------------------------------------------------------------
 // Validated fetch helper

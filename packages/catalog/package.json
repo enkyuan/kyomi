@@ -1,5 +1,5 @@
 {
-  "name": "@cronos/sangam",
+  "name": "@cronos/catalog",
   "private": true,
   "scripts": {
     "install": "poetry install",

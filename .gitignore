@@ -10,13 +10,13 @@ coverage
 .cursor/*
 
 # Python pipeline artifacts
-packages/sangam/.venv
-packages/sangam/**/__pycache__
-packages/sangam/**/*.py[codz]
-packages/sangam/.mypy_cache
-packages/sangam/.ruff_cache
-packages/sangam/.pytest_cache
-packages/sangam/processing/exports
-packages/sangam/**/*.parquet
-packages/sangam/**/*.duckdb
-packages/sangam/**/*.db
+packages/catalog/.venv
+packages/catalog/**/__pycache__
+packages/catalog/**/*.py[codz]
+packages/catalog/.mypy_cache
+packages/catalog/.ruff_cache
+packages/catalog/.pytest_cache
+packages/catalog/processing/exports
+packages/catalog/**/*.parquet
+packages/catalog/**/*.duckdb
+packages/catalog/**/*.db

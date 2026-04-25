@@ -1,8 +1,10 @@
 "use client";
 
-import { useLocation, Link } from "@tanstack/react-router";
+import { useQueryClient } from "@tanstack/react-query";
+import { useLocation, Link, useRouter } from "@tanstack/react-router";
 import { Calendar3Fill, NewsFill, StarFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
+import { prefetchInboxFlow } from "@lib/inbox-prefetch";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -51,6 +53,8 @@ export function SidebarInboxNav({
   counts: { today: number; unread: number; saved: number };
 }) {
   const location = useLocation();
+  const router = useRouter();
+  const queryClient = useQueryClient();
   const isInbox = isInboxPathname(location.pathname);
   const activeFilter = isInbox ? (location.search.filter ?? "today") : undefined;
   const badgeValueByLabel: Record<string, number> = {
@@ -70,6 +74,14 @@ export function SidebarInboxNav({
             <SidebarMenuItem key={item.label}>
               <SidebarMenuButton
                 className={cn(badgeValue > 0 ? "pe-10" : undefined)}
+                onFocus={() => {
+                  void prefetchInboxFlow(router, queryClient, item.search);
+                }}
+                onPointerEnter={(event) => {
+                  if (event.pointerType === "mouse" || event.pointerType === "pen") {
+                    void prefetchInboxFlow(router, queryClient, item.search);
+                  }
+                }}
                 isActive={
                   isInbox &&
                   FILTER_KEYS.every((key) => {

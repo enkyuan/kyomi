@@ -4,6 +4,9 @@ import { eq, sql } from "drizzle-orm";
 import { XMLParser } from "fast-xml-parser";
 import { feedItems, feeds } from "@cronos/db";
 import * as schema from "@cronos/db";
+import { normalizeArticleUrl } from "./article-identity";
+
+export { buildArticleIdentity, normalizeArticleUrl } from "./article-identity";
 
 const FETCH_TIMEOUT_MS = 12_000;
 const MAX_BYTES = 2 * 1024 * 1024;
@@ -65,6 +68,7 @@ type FeedMetadata = {
 type ParsedFeedItem = {
   id: string;
   stableIdentity: string;
+  canonicalUrl: string;
   title: string;
   link: string;
   summary: string | null;
@@ -198,25 +202,6 @@ function normalizeFeedUrl(raw: string): string {
     url.pathname = url.pathname.slice(0, -1);
   }
   return url.href;
-}
-
-function normalizedArticleIdentity(raw: string): string {
-  try {
-    const url = new URL(raw.trim());
-    url.hash = "";
-    url.hostname = url.hostname.toLowerCase();
-    for (const key of [...url.searchParams.keys()]) {
-      if (/^utm_/i.test(key) || key === "fbclid" || key === "gclid" || key === "mc_cid") {
-        url.searchParams.delete(key);
-      }
-    }
-    if (url.pathname.length > 1 && url.pathname.endsWith("/")) {
-      url.pathname = url.pathname.slice(0, -1);
-    }
-    return url.href;
-  } catch {
-    return raw.trim();
-  }
 }
 
 function stripTags(html: string): string {
@@ -719,8 +704,8 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       (typeof record.url === "string" && record.url.trim()) ||
       (typeof record.external_url === "string" && record.external_url.trim()) ||
       `${finalUrl}#item-${index + 1}`;
-    const stableIdentity =
-      (typeof record.id === "string" && record.id.trim()) || normalizedArticleIdentity(itemLink);
+    const canonicalUrl = normalizeArticleUrl(itemLink);
+    const stableIdentity = (typeof record.id === "string" && record.id.trim()) || canonicalUrl;
     const contentHtml =
       typeof record.content_html === "string" ? record.content_html.trim() || null : null;
     const contentText =
@@ -732,6 +717,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       {
         id: computeFeedItemId(feedId, stableIdentity),
         stableIdentity,
+        canonicalUrl,
         title: itemTitle,
         link: itemLink,
         summary:
@@ -774,7 +760,8 @@ function parseRssDocument(
       record.link,
       rawText(record.guid) ?? `${finalUrl}#item-${index + 1}`,
     );
-    const stableIdentity = rawText(record.guid) ?? normalizedArticleIdentity(itemLink);
+    const canonicalUrl = normalizeArticleUrl(itemLink);
+    const stableIdentity = rawText(record.guid) ?? canonicalUrl;
     const storedContent = buildStoredFeedContent(
       rawText(record["content:encoded"]) ?? rawText(record.description),
     );
@@ -789,6 +776,7 @@ function parseRssDocument(
       {
         id: computeFeedItemId(feedId, stableIdentity),
         stableIdentity,
+        canonicalUrl,
         title: itemTitle,
         link: itemLink,
         summary,
@@ -826,7 +814,8 @@ function parseAtomDocument(
     const record = entry as Record<string, unknown>;
     const itemTitle = xmlText(record.title) || `Untitled item ${index + 1}`;
     const itemLink = pickAtomLink(record.link, `${finalUrl}#entry-${index + 1}`);
-    const stableIdentity = rawText(record.id) ?? normalizedArticleIdentity(itemLink);
+    const canonicalUrl = normalizeArticleUrl(itemLink);
+    const stableIdentity = rawText(record.id) ?? canonicalUrl;
     const storedContent = buildStoredFeedContent(
       rawText(record.content) ?? rawText(record.summary),
     );
@@ -838,6 +827,7 @@ function parseAtomDocument(
       {
         id: computeFeedItemId(feedId, stableIdentity),
         stableIdentity,
+        canonicalUrl,
         title: itemTitle,
         link: itemLink,
         summary,
@@ -1003,7 +993,7 @@ export async function runFeedRefresh(
     const now = new Date();
     const deduped = new Map<string, ParsedFeedItem>();
     for (const item of parsed.items) {
-      deduped.set(item.stableIdentity, item);
+      deduped.set(item.canonicalUrl, item);
     }
     const items = Array.from(deduped.values());
     // TODO: add language detection once we settle on the TS-side metadata/storage model.
@@ -1088,6 +1078,7 @@ export async function runFeedRefresh(
           items.map((item) => ({
             id: item.id,
             feedId: feed.id,
+            canonicalUrl: item.canonicalUrl,
             title: item.title,
             link: item.link,
             summary: item.summary,
@@ -1106,21 +1097,21 @@ export async function runFeedRefresh(
           })),
         )
         .onConflictDoUpdate({
-          target: feedItems.id,
+          target: [feedItems.feedId, feedItems.canonicalUrl],
           set: {
-            title: sql`excluded.title`,
-            link: sql`excluded.link`,
-            summary: sql`excluded.summary`,
-            content: sql`excluded.content`,
-            contentHtml: sql`excluded.content_html`,
-            contentText: sql`excluded.content_text`,
-            contentMarkdown: sql`excluded.content_markdown`,
-            contentStatus: sql`excluded.content_status`,
-            contentSource: sql`excluded.content_source`,
-            extractionErrorCode: sql`excluded.extraction_error_code`,
-            extractionErrorMessage: sql`excluded.extraction_error_message`,
-            imageUrl: sql`excluded.image_url`,
-            publishedAt: sql`excluded.published_at`,
+            title: sql`CASE WHEN length(trim(excluded.title)) > length(trim(${feedItems.title})) THEN excluded.title ELSE ${feedItems.title} END`,
+            link: sql`COALESCE(NULLIF(${feedItems.link}, ''), excluded.link)`,
+            summary: sql`CASE WHEN length(COALESCE(excluded.summary, '')) > length(COALESCE(${feedItems.summary}, '')) THEN excluded.summary ELSE ${feedItems.summary} END`,
+            content: sql`COALESCE(${feedItems.content}, excluded.content)`,
+            contentHtml: sql`COALESCE(${feedItems.contentHtml}, excluded.content_html)`,
+            contentText: sql`COALESCE(${feedItems.contentText}, excluded.content_text)`,
+            contentMarkdown: sql`COALESCE(${feedItems.contentMarkdown}, excluded.content_markdown)`,
+            contentStatus: sql`CASE WHEN ${feedItems.content} IS NULL AND excluded.content IS NOT NULL THEN excluded.content_status ELSE ${feedItems.contentStatus} END`,
+            contentSource: sql`CASE WHEN ${feedItems.content} IS NULL AND excluded.content IS NOT NULL THEN excluded.content_source ELSE ${feedItems.contentSource} END`,
+            extractionErrorCode: sql`COALESCE(${feedItems.extractionErrorCode}, excluded.extraction_error_code)`,
+            extractionErrorMessage: sql`COALESCE(${feedItems.extractionErrorMessage}, excluded.extraction_error_message)`,
+            imageUrl: sql`COALESCE(${feedItems.imageUrl}, excluded.image_url)`,
+            publishedAt: sql`LEAST(${feedItems.publishedAt}, excluded.published_at)`,
             updatedAt: now,
           },
         });

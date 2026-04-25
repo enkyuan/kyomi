@@ -6,7 +6,28 @@ import { prepareArticleHtml } from "./article-html/string-prep";
 import { runReaderDomEnhancements } from "./article-html/dom-enhancements";
 import "katex/dist/katex.min.css";
 
-export function RenderHtml({ html, baseUrl }: { html: string; baseUrl?: string | null }) {
+function updateReaderLinkTargets(node: HTMLElement, openLinksInNewTab: boolean) {
+  const anchors = node.querySelectorAll("a[href]");
+  anchors.forEach((anchor) => {
+    if (openLinksInNewTab) {
+      anchor.setAttribute("target", "_blank");
+      anchor.setAttribute("rel", "noopener noreferrer");
+      return;
+    }
+    anchor.removeAttribute("target");
+    anchor.removeAttribute("rel");
+  });
+}
+
+export function RenderHtml({
+  html,
+  baseUrl,
+  openLinksInNewTab = true,
+}: {
+  html: string;
+  baseUrl?: string | null;
+  openLinksInNewTab?: boolean;
+}) {
   const articleBodyRef = useRef<HTMLDivElement | null>(null);
   const prepared = useMemo(() => prepareArticleHtml(html, baseUrl), [html, baseUrl]);
 
@@ -17,6 +38,7 @@ export function RenderHtml({ html, baseUrl }: { html: string; baseUrl?: string |
       // Guard against stale closure: only run if this node is still mounted.
       if (articleBodyRef.current === node) {
         runReaderDomEnhancements(node);
+        updateReaderLinkTargets(node, openLinksInNewTab);
       }
     });
   };
@@ -28,7 +50,7 @@ export function RenderHtml({ html, baseUrl }: { html: string; baseUrl?: string |
     }
 
     runAllEnhancements(node);
-  }, [prepared]);
+  }, [openLinksInNewTab, prepared]);
 
   useEffect(() => {
     const node = articleBodyRef.current;
@@ -62,7 +84,7 @@ export function RenderHtml({ html, baseUrl }: { html: string; baseUrl?: string |
 
     observer.observe(node, { childList: true, subtree: true });
     return () => observer.disconnect();
-  }, [prepared]);
+  }, [openLinksInNewTab, prepared]);
 
   return (
     <div

@@ -50,6 +50,20 @@
       "when": 1776480999505,
       "tag": "0006_reflective_hardball",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1777082400000,
+      "tag": "0007_canonical_article_identity",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1777086000000,
+      "tag": "0008_user_preferences",
+      "breakpoints": true
     }
   ]
 }

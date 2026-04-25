@@ -44,6 +44,7 @@ import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-labe
 import { listFollowedFeeds } from "@lib/feed-functions";
 import { listFolders } from "@lib/folder-functions";
 import { isInboxPathname } from "@lib/routes/inbox-path";
+import { QUERY_TIMES } from "@lib/query-policies";
 import { cn } from "@lib/utils";
 
 const WORKSPACE_SCOPE_FONT = '500 14px "Inter Variable"';
@@ -67,10 +68,14 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
   const foldersQuery = useQuery({
     queryKey: ["folders"],
     queryFn: () => listFolders(),
+    staleTime: QUERY_TIMES.staticMetadataStale,
+    gcTime: QUERY_TIMES.staticMetadataGc,
   });
   const followedFeedsQuery = useQuery({
     queryKey: ["feeds", "followed"],
     queryFn: () => listFollowedFeeds(),
+    staleTime: QUERY_TIMES.staticMetadataStale,
+    gcTime: QUERY_TIMES.staticMetadataGc,
   });
 
   /** Inbox quick switches from the command palette always return to full-workspace views. */

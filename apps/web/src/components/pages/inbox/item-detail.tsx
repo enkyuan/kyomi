@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef } from "react";
+import type React from "react";
 import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
 import { ReaderContent } from "@components/reader/reader-content";
 import { Button } from "@components/ui/button";
@@ -9,6 +10,7 @@ import { toastManager } from "@components/ui/toast";
 import { useArticleExtraction } from "@hooks/use-article-extraction";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/api-schemas";
 import { readerContentForMode } from "@lib/reader-display";
+import { useReaderPreferences } from "@lib/reader-preferences";
 import { cn } from "@lib/utils";
 
 function estimateReadingTime(html: string): number {
@@ -34,10 +36,12 @@ export function formatArticleTimestamp(value: string) {
 }
 
 export function ItemDetail({ item }: { item: ArticleDetailDto }) {
+  const { preferences } = useReaderPreferences();
   const extractMutation = useArticleExtraction(item.id);
   const requestedExtractionForItemRef = useRef<string | null>(null);
-
-  const displayReader = readerContentForMode(item, item.defaultReaderMode);
+  const effectiveReaderMode =
+    preferences.defaultMode === "smart" ? item.defaultReaderMode : preferences.defaultMode;
+  const displayReader = readerContentForMode(item, effectiveReaderMode);
 
   const displayContent =
     displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "";
@@ -50,6 +54,12 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
     item.readerExtracted === null;
   const showFailedBanner =
     item.extractedContentStatus === "failed" && Boolean(item.extractedContentError);
+  const maxWidthClassName =
+    preferences.contentWidth === "narrow"
+      ? "max-w-2xl"
+      : preferences.contentWidth === "wide"
+        ? "max-w-4xl"
+        : "max-w-3xl";
 
   const runExtract = useCallback(
     (reason: "auto" | "manual") => {
@@ -110,13 +120,19 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
   }, [extractMutation.isPending, item.id, runExtract, shouldAutoExtract]);
 
   return (
-    <article className="reader-content prose prose-neutral dark:prose-invert relative mx-auto max-w-3xl px-2 py-10">
+    <article
+      className={cn(
+        "reader-content prose prose-neutral dark:prose-invert relative mx-auto px-2 py-10",
+        maxWidthClassName,
+        !preferences.showImages && "reader-hide-images",
+      )}
+      style={{ "--reader-font-size": `${preferences.fontSizePx}px` } as React.CSSProperties}
+    >
       {extractMutation.isPending && !showFailedBanner && !item.readerExtracted ? (
         <div className="not-prose absolute right-2 top-10 flex items-center gap-2 text-muted-foreground text-xs">
           <Spinner className="size-4" />
         </div>
       ) : null}
-
       <div className="not-prose mb-6 flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
           <span>{formatArticleTimestamp(item.publishedAt)}</span>
@@ -166,13 +182,13 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
         </div>
       ) : null}
 
-      <ReaderContent reader={displayReader} />
+      <ReaderContent reader={displayReader} openLinksInNewTab={preferences.openLinksInNewTab} />
 
       <div className="not-prose mt-10 border-t border-border pt-6">
         <a
           href={item.link}
-          target="_blank"
-          rel="noreferrer"
+          target={preferences.openLinksInNewTab ? "_blank" : undefined}
+          rel={preferences.openLinksInNewTab ? "noreferrer" : undefined}
           className="text-xs text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
         >
           View original article →

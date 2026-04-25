@@ -81,6 +81,14 @@ function markMigrationCompleted(migrationKey: string) {
   window.localStorage.removeItem(PINNED_FEED_IDS_STORAGE_KEY);
 }
 
+function logPinnedMigration(event: "attempted" | "succeeded" | "failed" | "skipped", context = {}) {
+  if (typeof console === "undefined") {
+    return;
+  }
+
+  console.info("[pinned-feed-migration]", { event, ...context });
+}
+
 export function applyPinnedState(
   current: FollowedFeed[] | undefined,
   feedId: string,
@@ -161,15 +169,18 @@ export function usePinnedFeedIds() {
       .filter((feedId) => !serverPinnedFeedIdSet.has(feedId));
 
     if (!migrationStarted && serverHasPinnedFeeds) {
+      logPinnedMigration("skipped", { reason: "server_already_has_pinned_feeds" });
       markMigrationCompleted(migrationKey);
       return;
     }
 
     if (migratableFeedIds.length === 0) {
+      logPinnedMigration("skipped", { reason: "no_migratable_feed_ids" });
       markMigrationCompleted(migrationKey);
       return;
     }
 
+    logPinnedMigration("attempted", { count: migratableFeedIds.length });
     markMigrationStarted(migrationStartedKey);
     migrationRunningForKeyRef.current = migrationKey;
     void Promise.allSettled(
@@ -179,7 +190,13 @@ export function usePinnedFeedIds() {
     ).then((results) => {
       const allSucceeded = results.every((result) => result.status === "fulfilled");
       if (allSucceeded) {
+        logPinnedMigration("succeeded", { count: migratableFeedIds.length });
         markMigrationCompleted(migrationKey);
+      } else {
+        logPinnedMigration("failed", {
+          count: migratableFeedIds.length,
+          failedCount: results.filter((result) => result.status === "rejected").length,
+        });
       }
       migrationRunningForKeyRef.current = null;
       void queryClient.invalidateQueries({ queryKey: FOLLOWED_FEEDS_QUERY_KEY });

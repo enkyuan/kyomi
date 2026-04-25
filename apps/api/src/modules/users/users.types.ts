@@ -8,3 +8,16 @@ export type UserProfileDto = {
   createdAt: string;
   updatedAt: string;
 };
+
+export type ReaderDefaultModeDto = "smart" | "original" | "extracted";
+export type ReaderContentWidthDto = "narrow" | "medium" | "wide";
+
+export type UserPreferencesDto = {
+  defaultMode: ReaderDefaultModeDto;
+  fontSizePx: number;
+  contentWidth: ReaderContentWidthDto;
+  openLinksInNewTab: boolean;
+  showImages: boolean;
+};
+
+export type UpdateUserPreferencesDto = Partial<UserPreferencesDto>;

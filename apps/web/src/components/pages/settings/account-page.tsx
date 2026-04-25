@@ -6,7 +6,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "@tanstack/react-router";
 import { updateUserEmail } from "@lib/auth-functions";
 import { useAuth } from "@integrations/better-auth/auth-provider";
-import { Badge } from "@components/ui/badge";
 import { Button } from "@components/ui/button";
 import { Frame } from "@components/ui/frame";
 import { Input } from "@components/ui/input";
@@ -362,22 +361,14 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
                     <TableCell>{formatTimestamp(sessionItem.expiresAt)}</TableCell>
                     <TableCell className="text-right">
                       {sessionItem.isCurrent ? (
-                        <Badge variant="outline">
-                          <span
-                            aria-hidden="true"
-                            className="size-1.5 rounded-full bg-emerald-500"
-                          />
-                          Current
-                        </Badge>
-                      ) : (
-                        <Badge variant="outline">
-                          <span
-                            aria-hidden="true"
-                            className="size-1.5 rounded-full bg-muted-foreground/64"
-                          />
-                          Active
-                        </Badge>
-                      )}
+                        <span className="inline-flex items-center justify-end">
+                          <span className="relative inline-flex size-2.5">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/64" />
+                            <span className="relative inline-flex size-2.5 rounded-full bg-emerald-500" />
+                          </span>
+                          <span className="sr-only">Current session</span>
+                        </span>
+                      ) : null}
                     </TableCell>
                   </TableRow>
                 ))

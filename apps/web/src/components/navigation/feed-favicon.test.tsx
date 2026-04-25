@@ -1,4 +1,4 @@
-import { buildFaviconUrl } from "./feed-favicon";
+import { buildFaviconUrl, buildFaviconUrlCandidates } from "./feed-favicon";
 import { describe, expect, test } from "vitest";
 
 describe("buildFaviconUrl", () => {
@@ -19,5 +19,18 @@ describe("buildFaviconUrl", () => {
   test("rejects non-http/https feed URLs (no proxy for data:/file: URIs)", () => {
     const url = buildFaviconUrl(null, null, "file:///etc/hosts");
     expect(url).toBeNull();
+  });
+
+  test("keeps proxy fallback behind stored favicon URL", () => {
+    const urls = buildFaviconUrlCandidates(
+      "https://cdn.example.com/icon.png",
+      "https://example.com/posts",
+      "https://example.com/feed.xml",
+    );
+
+    expect(urls).toEqual([
+      "https://cdn.example.com/icon.png",
+      "/api/favicon?domain=https%3A%2F%2Fexample.com",
+    ]);
   });
 });

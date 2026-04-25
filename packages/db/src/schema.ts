@@ -1,5 +1,6 @@
 import {
   boolean,
+  integer,
   primaryKey,
   pgTable,
   serial,
@@ -133,33 +134,40 @@ export const feedSubscriptions = pgTable(
   ],
 );
 
-export const feedItems = pgTable("feed_items", {
-  id: text("id").primaryKey(),
-  feedId: text("feed_id")
-    .notNull()
-    .references(() => feeds.id, { onDelete: "cascade" }),
-  title: text("title").notNull(),
-  link: text("link").notNull(),
-  summary: text("summary"),
-  content: text("content"),
-  contentHtml: text("content_html"),
-  contentText: text("content_text"),
-  contentMarkdown: text("content_markdown"),
-  contentStatus: text("content_status"),
-  contentSource: text("content_source"),
-  extractionErrorCode: text("extraction_error_code"),
-  extractionErrorMessage: text("extraction_error_message"),
-  /** Source-page full text (Readability); separate from feed-provided content fields. */
-  extractedContentHtml: text("extracted_content_html"),
-  extractedContentText: text("extracted_content_text"),
-  extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
-  extractedContentError: text("extracted_content_error"),
-  extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
-  imageUrl: text("image_url"),
-  publishedAt: timestamp("published_at").notNull(),
-  createdAt: timestamp("created_at").notNull().defaultNow(),
-  updatedAt: timestamp("updated_at").notNull().defaultNow(),
-});
+export const feedItems = pgTable(
+  "feed_items",
+  {
+    id: text("id").primaryKey(),
+    feedId: text("feed_id")
+      .notNull()
+      .references(() => feeds.id, { onDelete: "cascade" }),
+    canonicalUrl: text("canonical_url").notNull(),
+    title: text("title").notNull(),
+    link: text("link").notNull(),
+    summary: text("summary"),
+    content: text("content"),
+    contentHtml: text("content_html"),
+    contentText: text("content_text"),
+    contentMarkdown: text("content_markdown"),
+    contentStatus: text("content_status"),
+    contentSource: text("content_source"),
+    extractionErrorCode: text("extraction_error_code"),
+    extractionErrorMessage: text("extraction_error_message"),
+    /** Source-page full text (Readability); separate from feed-provided content fields. */
+    extractedContentHtml: text("extracted_content_html"),
+    extractedContentText: text("extracted_content_text"),
+    extractedContentStatus: text("extracted_content_status").notNull().default("pending"),
+    extractedContentError: text("extracted_content_error"),
+    extractedContentUpdatedAt: timestamp("extracted_content_updated_at"),
+    imageUrl: text("image_url"),
+    publishedAt: timestamp("published_at").notNull(),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+    updatedAt: timestamp("updated_at").notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("feed_items_feed_id_canonical_url_unique").on(table.feedId, table.canonicalUrl),
+  ],
+);
 
 export const feedItemUserState = pgTable(
   "feed_item_user_state",
@@ -176,6 +184,22 @@ export const feedItemUserState = pgTable(
   },
   (table) => [primaryKey({ columns: [table.userId, table.feedItemId] })],
 );
+
+export const userPreferences = pgTable("user_preferences", {
+  userId: text("user_id")
+    .primaryKey()
+    .references(() => users.id, { onDelete: "cascade" }),
+  readerMode: text("reader_mode").notNull().default("smart"),
+  theme: text("theme"),
+  inboxDensity: text("inbox_density"),
+  articleOpenBehavior: text("article_open_behavior"),
+  readerFontSizePx: integer("reader_font_size_px").notNull().default(17),
+  readerContentWidth: text("reader_content_width").notNull().default("medium"),
+  readerOpenLinksInNewTab: boolean("reader_open_links_in_new_tab").notNull().default(true),
+  readerShowImages: boolean("reader_show_images").notNull().default(true),
+  createdAt: timestamp("created_at").notNull().defaultNow(),
+  updatedAt: timestamp("updated_at").notNull().defaultNow(),
+});
 
 export const articleClips = pgTable("article_clips", {
   id: text("id").primaryKey(),

@@ -6,6 +6,7 @@ import { InboxList } from "@components/pages/inbox/inbox-list";
 import { InboxDetailView } from "@components/pages/inbox/inbox-detail-view";
 import { useQuery } from "@tanstack/react-query";
 import { getInboxViewCount } from "@lib/inbox-functions";
+import { QUERY_TIMES } from "@lib/query-policies";
 
 import { useEffect, useMemo, useState } from "react";
 import { useSearch } from "@tanstack/react-router";
@@ -58,6 +59,8 @@ export function InboxPage() {
           timezoneOffsetMinutes,
         },
       }),
+    staleTime: QUERY_TIMES.countsStale,
+    gcTime: QUERY_TIMES.countsGc,
   });
   const viewCount = viewCountQuery.data?.count ?? inboxItems.length;
 
