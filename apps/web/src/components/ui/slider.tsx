@@ -794,6 +794,8 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerUp}
+            onLostPointerCapture={handlePointerUp}
           >
             {/* Extended hit area — 8px beyond each edge */}
             <div
@@ -802,6 +804,8 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
               onPointerDown={handlePointerDown}
               onPointerMove={handlePointerMove}
               onPointerUp={handlePointerUp}
+              onPointerCancel={handlePointerUp}
+              onLostPointerCapture={handlePointerUp}
             />
             {/* Hover value tooltip */}
             <AnimatePresence>

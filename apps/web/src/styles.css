@@ -235,12 +235,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img {
+.reader-content img {
   outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
 }
 
-.dark img {
+.dark .reader-content img {
   outline-color: rgba(255, 255, 255, 0.1);
 }
 

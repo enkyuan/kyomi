@@ -15,6 +15,7 @@ function updateReaderLinkTargets(node: HTMLElement, openLinksInNewTab: boolean) 
       return;
     }
     anchor.removeAttribute("target");
+    anchor.removeAttribute("rel");
   });
 }
 

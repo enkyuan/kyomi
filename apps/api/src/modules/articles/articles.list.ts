@@ -40,7 +40,7 @@ function normalizeLimit(limit: number): number {
 function paginateRows(rows: ArticleListRawRow[], limit: number) {
   const dedupedRows = collapseObviousDuplicates(rows);
   if (dedupedRows.length !== rows.length) {
-    logger.warn("articles.list_time_dedupe.collapsed", {
+    logger.info("articles.list_time_dedupe.collapsed", {
       rawCount: rows.length,
       dedupedCount: dedupedRows.length,
       collapsedCount: rows.length - dedupedRows.length,

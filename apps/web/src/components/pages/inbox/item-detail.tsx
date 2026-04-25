@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef } from "react";
+import type React from "react";
 import { InboxSourceRow } from "@components/pages/inbox/inbox-source-row";
 import { ReaderContent } from "@components/reader/reader-content";
 import { Button } from "@components/ui/button";
@@ -125,7 +126,7 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
         maxWidthClassName,
         !preferences.showImages && "reader-hide-images",
       )}
-      style={{ "--reader-font-size": `${preferences.fontSizePx}px` } as Record<string, string>}
+      style={{ "--reader-font-size": `${preferences.fontSizePx}px` } as React.CSSProperties}
     >
       {extractMutation.isPending && !showFailedBanner && !item.readerExtracted ? (
         <div className="not-prose absolute right-2 top-10 flex items-center gap-2 text-muted-foreground text-xs">

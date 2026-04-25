@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/auth-provider";
 import type {
@@ -114,6 +114,16 @@ export function useReaderPreferences() {
   const latestRequestIdRef = useRef(0);
   const mutationDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const mutationRollbackRef = useRef<ReaderPreferences | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (mutationDebounceRef.current) {
+        clearTimeout(mutationDebounceRef.current);
+        mutationDebounceRef.current = null;
+        mutationRollbackRef.current = null;
+      }
+    };
+  }, []);
 
   const preferences = preferencesQuery.data;
 
