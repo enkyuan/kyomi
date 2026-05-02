@@ -111,7 +111,6 @@ export const FeedItem = memo(function FeedItem({
   containerWidth?: number;
   onSelect: (itemId: string) => void;
 }) {
-  const selectItem = () => onSelect(item.id);
   const queryClient = useQueryClient();
   const updateItemMutation = useMutation({
     mutationFn: (input: { patch: InboxItemPatch; removeFromList?: boolean }) =>
@@ -136,11 +135,18 @@ export const FeedItem = memo(function FeedItem({
   const updateItem = (patch: InboxItemPatch, removeFromList = false) => {
     updateItemMutation.mutate({ patch, removeFromList });
   };
+  const isReadDimmed = item.isRead;
+  const selectItem = () => {
+    if (!item.isRead) {
+      updateItem({ isRead: true });
+    }
+    onSelect(item.id);
+  };
 
   return (
     <Card
       className={cn(
-        "group/inbox-item relative z-0 w-full cursor-pointer gap-0 overflow-visible rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform hover:z-20 focus-within:z-20 active:scale-[0.996] motion-reduce:active:scale-100",
+        "group/inbox-item relative z-0 w-full cursor-pointer gap-0 overflow-visible rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform hover:z-20 active:scale-[0.996] motion-reduce:active:scale-100",
         isFirst ? "border-t-0" : "border-t",
         showBottomSeparator ? "border-b" : "border-b-0",
         isSelected || item.isRead ? "bg-background" : "hover:bg-background/70",
@@ -171,10 +177,20 @@ export const FeedItem = memo(function FeedItem({
           articleUrl={item.link}
           feedFaviconUrl={item.feedFaviconUrl}
           feedTitle={item.feedTitle}
+          iconClassName={cn(isReadDimmed && "opacity-65")}
+          labelClassName={cn(isReadDimmed && "text-muted-foreground/70")}
         />
-        <CardTitle className="min-w-0 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground">
+        <CardTitle
+          className={cn(
+            "min-w-0 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground",
+            isReadDimmed && "text-foreground/82",
+          )}
+        >
           <PretextText
-            className="line-clamp-2 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground"
+            className={cn(
+              "line-clamp-2 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground",
+              isReadDimmed && "text-foreground/82",
+            )}
             lineHeight={TITLE_LINE_HEIGHT}
             maxLines={2}
             text={item.title}
@@ -184,16 +200,31 @@ export const FeedItem = memo(function FeedItem({
         </CardTitle>
       </CardHeader>
       <CardContent className="px-5 pb-0 pt-0">
-        <p className="line-clamp-3 overflow-hidden text-pretty text-[14px] leading-[1.45] text-muted-foreground/95">
+        <p
+          className={cn(
+            "line-clamp-3 overflow-hidden text-pretty text-[14px] leading-[1.45] text-muted-foreground/95",
+            isReadDimmed && "text-muted-foreground/65",
+          )}
+        >
           {item.summary || "No summary available."}
         </p>
       </CardContent>
       <CardFooter className="mt-2 flex w-full flex-wrap items-center gap-2 px-5 pb-3 pt-0">
-        <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/85 tabular-nums">
+        <span
+          className={cn(
+            "line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/85 tabular-nums",
+            isReadDimmed && "text-muted-foreground/65",
+          )}
+        >
           {formatArticleTimestamp(item.publishedAt)}
         </span>
         {item.isSaved ? (
-          <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/85">
+          <span
+            className={cn(
+              "line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/85",
+              isReadDimmed && "text-muted-foreground/65",
+            )}
+          >
             Saved
           </span>
         ) : null}

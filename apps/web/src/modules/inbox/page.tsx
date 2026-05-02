@@ -10,7 +10,7 @@ import { getInboxViewCount } from "@modules/inbox/api";
 import { QUERY_TIMES } from "@lib/query-policies";
 
 import { useEffect, useMemo, useState } from "react";
-import { useSearch } from "@tanstack/react-router";
+import { useNavigate, useSearch } from "@tanstack/react-router";
 
 const MIN_LEFT_PERCENT = 26;
 const MIN_RIGHT_PERCENT = 64;
@@ -33,14 +33,31 @@ export function InboxPage() {
     showHidden,
     showRead,
   } = useSearch({ from: "/inbox/" });
+  const navigate = useNavigate({ from: "/inbox/" });
   const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
   const showHiddenItems = parseSearchFlag(showHidden);
   const showReadItems = parseSearchFlag(showRead);
-  const includeRead = filter === "unread" && (showHiddenItems || showReadItems);
+  const supportsReadScopedFilters = filter === "today";
+  const isReadScopedFilterActive = supportsReadScopedFilters && (showHiddenItems || showReadItems);
+  const includeRead = isReadScopedFilterActive;
 
   useEffect(() => {
     setTimezoneOffsetMinutes(new Date().getTimezoneOffset());
   }, []);
+
+  useEffect(() => {
+    if (supportsReadScopedFilters || (!showHiddenItems && !showReadItems)) {
+      return;
+    }
+    void navigate({
+      search: (prev) => ({
+        ...prev,
+        showHidden: undefined,
+        showRead: undefined,
+      }),
+      replace: true,
+    });
+  }, [navigate, showHiddenItems, showReadItems, supportsReadScopedFilters]);
 
   const {
     containerRef: splitContainerRef,
@@ -66,23 +83,20 @@ export function InboxPage() {
     () => dedupeInboxItems(inboxQuery.data?.pages.flatMap((page) => page.items) ?? []),
     [inboxQuery.data?.pages],
   );
-  const activeScopeLabel =
-    filter === "unread"
-      ? showHiddenItems && !showReadItems
-        ? "hidden"
-        : showReadItems
-          ? "read"
-          : undefined
-      : undefined;
+  const activeScopeLabel = isReadScopedFilterActive
+    ? showHiddenItems && !showReadItems
+      ? "hidden"
+      : "read"
+    : undefined;
   const inboxItems = useMemo(() => {
-    if (filter !== "unread") {
-      return rawInboxItems;
+    if (filter === "saved") {
+      return rawInboxItems.filter((item) => !item.isRead);
     }
-    if (showHiddenItems || showReadItems) {
+    if (isReadScopedFilterActive) {
       return rawInboxItems.filter((item) => item.isRead);
     }
     return rawInboxItems;
-  }, [filter, rawInboxItems, showHiddenItems, showReadItems]);
+  }, [filter, isReadScopedFilterActive, rawInboxItems]);
 
   const viewCountQuery = useQuery({
     queryKey: ["inbox", "view-count", filter, feedId, folderId, timezoneOffsetMinutes, includeRead],

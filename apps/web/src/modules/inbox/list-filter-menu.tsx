@@ -12,17 +12,21 @@ import {
   MenuPopup,
   MenuTrigger,
 } from "@components/ui/menu";
+import type { InboxFilter } from "@modules/inbox/api";
 
 type InboxListFilterMenuProps = {
+  filter: InboxFilter;
   showHidden: boolean;
   showRead: boolean;
 };
 
 export function InboxListFilterMenu({
+  filter,
   showHidden,
   showRead,
 }: InboxListFilterMenuProps): React.ReactElement {
   const navigate = useNavigate();
+  const canApplyReadScopedFilters = filter === "today";
 
   const updateSearch = (next: { showHidden?: boolean; showRead?: boolean }) => {
     void navigate({
@@ -56,25 +60,31 @@ export function InboxListFilterMenu({
         <Filter2Fill className="size-4" />
       </MenuTrigger>
       <MenuPopup align="end">
-        <MenuGroup>
-          <MenuGroupLabel>Filters</MenuGroupLabel>
-          <MenuCheckboxItem
-            checked={showHidden}
-            onCheckedChange={(checked) => {
-              updateSearch({ showHidden: checked === true });
-            }}
-          >
-            Hidden
-          </MenuCheckboxItem>
-          <MenuCheckboxItem
-            checked={showRead}
-            onCheckedChange={(checked) => {
-              updateSearch({ showRead: checked === true });
-            }}
-          >
-            Read
-          </MenuCheckboxItem>
-        </MenuGroup>
+        {canApplyReadScopedFilters ? (
+          <MenuGroup>
+            <MenuGroupLabel>Filters</MenuGroupLabel>
+            <MenuCheckboxItem
+              checked={showHidden}
+              onCheckedChange={(checked) => {
+                updateSearch({ showHidden: checked === true });
+              }}
+            >
+              Hidden
+            </MenuCheckboxItem>
+            <MenuCheckboxItem
+              checked={showRead}
+              onCheckedChange={(checked) => {
+                updateSearch({ showRead: checked === true });
+              }}
+            >
+              Read
+            </MenuCheckboxItem>
+          </MenuGroup>
+        ) : (
+          <div className="px-2 py-1.5 text-muted-foreground text-xs">
+            No extra filters in this view.
+          </div>
+        )}
       </MenuPopup>
     </Menu>
   );

@@ -1,6 +1,13 @@
 "use client";
 
-import { type ColumnDef, flexRender, getCoreRowModel, useReactTable } from "@tanstack/react-table";
+import {
+  type ColumnDef,
+  flexRender,
+  getCoreRowModel,
+  getPaginationRowModel,
+  type PaginationState,
+  useReactTable,
+} from "@tanstack/react-table";
 import { useMemo, useState } from "react";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
@@ -27,6 +34,13 @@ import {
   TableRow,
 } from "@components/ui/table";
 import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@components/ui/select";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationNext,
+  PaginationPrevious,
+} from "@components/ui/pagination";
 import { toastManager } from "@components/ui/toast";
 import {
   listFollowedFeeds,
@@ -215,6 +229,10 @@ function getColumns({
 
 export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps) {
   const [rowSelection, setRowSelection] = useState({});
+  const [pagination, setPagination] = useState<PaginationState>({
+    pageIndex: 0,
+    pageSize: 10,
+  });
   const [movingFeedId, setMovingFeedId] = useState<string | null>(null);
   const queryClient = useQueryClient();
   const followedFeedsQuery = useQuery({
@@ -327,15 +345,21 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
     data: tableData,
     enableRowSelection: true,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
     getRowId: (row) => row.id,
+    onPaginationChange: setPagination,
     onRowSelectionChange: setRowSelection,
     state: {
+      pagination,
       rowSelection,
     },
   });
 
   const selectedCount = table.getSelectedRowModel().rows.length;
   const selectedFeedIds = table.getSelectedRowModel().rows.map((row) => row.original.id);
+  const pageCount = table.getPageCount();
+  const pageIndex = table.getState().pagination.pageIndex;
+  const pageSize = table.getState().pagination.pageSize;
 
   return (
     <Dialog
@@ -415,10 +439,90 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
               </TableBody>
               <TableFooter>
                 <TableRow>
-                  <TableCell colSpan={Math.max(1, columns.length - 1)}>
-                    {selectedCount > 0 ? `${selectedCount} selected` : "Total feeds"}
+                  <TableCell colSpan={columns.length}>
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="min-w-0 flex items-center gap-2 whitespace-nowrap text-muted-foreground text-sm">
+                        {selectedCount > 0 ? (
+                          <span>
+                            <strong className="font-medium text-foreground">{selectedCount}</strong>{" "}
+                            selected
+                          </span>
+                        ) : null}
+                        {pageCount > 0 ? (
+                          <>
+                            <span>Viewing</span>
+                            <Select
+                              items={Array.from({ length: pageCount }, (_, i) => {
+                                const start = i * pageSize + 1;
+                                const end = Math.min((i + 1) * pageSize, tableData.length);
+                                const pageNum = i + 1;
+                                return { label: `${start}-${end}`, value: pageNum };
+                              })}
+                              value={pageIndex + 1}
+                              onValueChange={(value) => {
+                                table.setPageIndex((value as number) - 1);
+                              }}
+                            >
+                              <SelectTrigger className="w-fit min-w-none" size="sm">
+                                <SelectValue />
+                              </SelectTrigger>
+                              <SelectPopup>
+                                {Array.from({ length: pageCount }, (_, i) => {
+                                  const start = i * pageSize + 1;
+                                  const end = Math.min((i + 1) * pageSize, tableData.length);
+                                  const pageNum = i + 1;
+                                  return (
+                                    <SelectItem key={pageNum} value={pageNum}>
+                                      {`${start}-${end}`}
+                                    </SelectItem>
+                                  );
+                                })}
+                              </SelectPopup>
+                            </Select>
+                          </>
+                        ) : (
+                          <span>Viewing 0</span>
+                        )}
+                        <span>
+                          of{" "}
+                          <strong className="font-medium text-foreground">
+                            {tableData.length}
+                          </strong>
+                        </span>
+                      </div>
+
+                      <Pagination className="mx-0 ml-auto w-auto shrink-0 justify-end">
+                        <PaginationContent>
+                          <PaginationItem>
+                            <PaginationPrevious
+                              className="sm:*:[svg]:hidden"
+                              render={
+                                <Button
+                                  disabled={!table.getCanPreviousPage()}
+                                  size="sm"
+                                  variant="outline"
+                                  onClick={() => table.previousPage()}
+                                />
+                              }
+                            />
+                          </PaginationItem>
+                          <PaginationItem>
+                            <PaginationNext
+                              className="sm:*:[svg]:hidden"
+                              render={
+                                <Button
+                                  disabled={!table.getCanNextPage()}
+                                  size="sm"
+                                  variant="outline"
+                                  onClick={() => table.nextPage()}
+                                />
+                              }
+                            />
+                          </PaginationItem>
+                        </PaginationContent>
+                      </Pagination>
+                    </div>
                   </TableCell>
-                  <TableCell className="text-right">{tableData.length}</TableCell>
                 </TableRow>
               </TableFooter>
             </Table>

@@ -142,6 +142,7 @@ function buildArticlesUrl(
     params.set("is_read", "false");
   } else if (filter === "saved") {
     params.set("is_saved", "true");
+    params.set("is_read", "false");
   }
   if (feedId?.trim()) {
     params.set("feed_id", feedId.trim());
