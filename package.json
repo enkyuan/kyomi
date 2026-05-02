@@ -36,7 +36,7 @@
     "db:seed:feeds": "bun run catalog:import",
     "setup:app": "bun run docker:up && bun run db:migrate",
     "setup:catalog": "bun run catalog:sync",
-    "catalog:install": "bun run --cwd packages/catalog install",
+    "catalog:install": "bun run --cwd packages/catalog setup",
     "catalog:export": "bun run --cwd packages/catalog export:catalog",
     "catalog:import": "bun run --cwd apps/api catalog:import",
     "catalog:smoke": "bun run --cwd apps/api catalog:smoke",
