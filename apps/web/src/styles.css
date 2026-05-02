@@ -262,7 +262,6 @@ body {
 .reader-content .article-body {
   font-size: var(--reader-font-size, 1rem);
   color: color-mix(in srgb, var(--foreground) 92%, transparent);
-  transition: font-size 80ms ease;
 }
 
 .reader-content .article-body > *:first-child {
