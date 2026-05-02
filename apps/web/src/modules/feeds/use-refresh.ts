@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
-import { getFeedDetail, refreshFeed } from "@/features/feeds/api";
+import { getFeedDetail, refreshFeed } from "@modules/feeds/api";
 import { useEffect, useRef } from "react";
 
 export function useFeedRefresh(feedId: string) {

@@ -3,13 +3,13 @@
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { Filter2Fill } from "@mingcute/react";
 import { useNavigate } from "@tanstack/react-router";
-import { FeedItem } from "@/features/inbox/item";
-import { FeedRefreshStatus } from "@/features/inbox/refresh-status";
+import { FeedItem } from "@modules/inbox/item";
+import { FeedRefreshStatus } from "@modules/inbox/refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { useCallback, useEffect, useRef } from "react";
-import type { InboxFilter, InboxItem } from "@/features/inbox/api";
+import type { InboxFilter, InboxItem } from "@modules/inbox/api";
 
 const FEED_ITEM_ROW_ESTIMATE = 176;
 

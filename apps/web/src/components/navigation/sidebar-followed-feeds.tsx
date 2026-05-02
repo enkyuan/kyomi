@@ -24,8 +24,8 @@ import {
   getFollowedFeedUnreadCounts,
   listFollowedFeeds,
   unfollowFeed,
-} from "@/features/feeds/api";
-import { prefetchInboxFlow } from "@/features/inbox/prefetch";
+} from "@modules/feeds/api";
+import { prefetchInboxFlow } from "@modules/inbox/prefetch";
 import { QUERY_TIMES } from "@lib/query-policies";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 

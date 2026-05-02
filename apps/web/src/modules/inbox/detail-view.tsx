@@ -1,6 +1,6 @@
 "use client";
 
-import { ItemDetail } from "@/features/inbox/detail-panel";
+import { ItemDetail } from "@modules/inbox/detail-panel";
 import { EmptyStateIcon } from "@components/icons/empty-state-svg";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";

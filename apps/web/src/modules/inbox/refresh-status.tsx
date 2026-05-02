@@ -1,4 +1,4 @@
-import { useFeedRefresh } from "@/features/feeds/use-refresh";
+import { useFeedRefresh } from "@modules/feeds/use-refresh";
 import { Refresh2Fill } from "@mingcute/react";
 
 export function FeedRefreshStatus({ feedId }: { feedId: string }) {

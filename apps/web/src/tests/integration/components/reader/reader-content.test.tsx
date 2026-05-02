@@ -2,8 +2,8 @@
 
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
-import { ReaderContent } from "@/features/reader/content";
-import type { ReaderContent as ReaderContentModel } from "@/features/reader/types";
+import { ReaderContent } from "@modules/reader/content";
+import type { ReaderContent as ReaderContentModel } from "@modules/reader/types";
 
 function baseReader(overrides: Partial<ReaderContentModel> = {}): ReaderContentModel {
   return {

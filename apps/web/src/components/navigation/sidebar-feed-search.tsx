@@ -22,7 +22,7 @@ import { InputGroup, InputGroupAddon, InputGroupInput } from "@components/ui/inp
 import { Kbd } from "@components/ui/kbd";
 import { SidebarMenuButton } from "@components/ui/sidebar";
 import { toastManager } from "@components/ui/toast";
-import { followFeed, searchFeeds } from "@/features/feeds/api";
+import { followFeed, searchFeeds } from "@modules/feeds/api";
 
 type SidebarFeedSearchTriggerProps = {
   isMacPlatform: boolean;

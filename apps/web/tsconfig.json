@@ -7,6 +7,7 @@
     "paths": {
       "*": ["./*"],
       "@/*": ["./src/*"],
+      "@modules/*": ["./src/modules/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@integrations/*": ["./src/integrations/*"],

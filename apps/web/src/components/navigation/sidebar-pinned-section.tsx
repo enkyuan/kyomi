@@ -6,11 +6,11 @@ import { Link, useLocation, useRouter } from "@tanstack/react-router";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
-import { listFollowedFeeds, type FollowedFeed } from "@/features/feeds/api";
+import { listFollowedFeeds, type FollowedFeed } from "@modules/feeds/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
-import { usePinnedFeedIds } from "@/features/feeds/use-pins";
+import { usePinnedFeedIds } from "@modules/feeds/use-pins";
 import { QUERY_TIMES } from "@lib/query-policies";
-import { prefetchInboxFlow } from "@/features/inbox/prefetch";
+import { prefetchInboxFlow } from "@modules/inbox/prefetch";
 import {
   SidebarGroup,
   SidebarGroupLabel,

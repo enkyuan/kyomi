@@ -2,9 +2,9 @@
 
 import { layout, prepare } from "@chenglou/pretext";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
-import type { InboxItem } from "@/features/inbox/api";
+import type { InboxItem } from "@modules/inbox/api";
 import { cn } from "@lib/utils";
-import { InboxSourceRow } from "@/features/inbox/source-row";
+import { InboxSourceRow } from "@modules/inbox/source-row";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@components/ui/card";
 
 const TITLE_FONT = '600 16px "Inter Variable"';

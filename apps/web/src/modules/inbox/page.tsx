@@ -1,12 +1,12 @@
 "use client";
 
 import { AppShell } from "@/app/app-shell";
-import { dedupeInboxItems, useInboxQueries } from "@/features/inbox/use-queries";
+import { dedupeInboxItems, useInboxQueries } from "@modules/inbox/use-queries";
 import { useSplitPane } from "@hooks/use-split-pane";
-import { InboxDetailView } from "@/features/inbox/detail-view";
-import { InboxList } from "@/features/inbox/list";
+import { InboxDetailView } from "@modules/inbox/detail-view";
+import { InboxList } from "@modules/inbox/list";
 import { useQuery } from "@tanstack/react-query";
-import { getInboxViewCount } from "@/features/inbox/api";
+import { getInboxViewCount } from "@modules/inbox/api";
 import { QUERY_TIMES } from "@lib/query-policies";
 
 import { useEffect, useMemo, useState } from "react";

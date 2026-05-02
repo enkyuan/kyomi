@@ -8,9 +8,9 @@ import { SidebarFooterActions } from "@components/navigation/sidebar-footer-acti
 import { SidebarInboxNav } from "@components/navigation/sidebar-inbox-nav";
 import { SidebarPinnedSection } from "@components/navigation/sidebar-pinned-section";
 import { SidebarWorkspaceHeader } from "@components/navigation/sidebar-workspace-header";
-import { SettingsDialog } from "@/features/settings/dialog";
+import { SettingsDialog } from "@modules/settings/dialog";
 import { Sidebar, SidebarContent } from "@components/ui/sidebar";
-import { getSidebarInboxCounts } from "@/features/inbox/api";
+import { getSidebarInboxCounts } from "@modules/inbox/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 
 export function AppSidebar() {

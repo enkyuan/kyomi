@@ -1,12 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useRef } from "react";
-import { InboxSourceRow } from "@/features/inbox/source-row";
-import { ReaderContent } from "@/features/reader/content";
+import { InboxSourceRow } from "@modules/inbox/source-row";
+import { ReaderContent } from "@modules/reader/content";
 import { Button } from "@components/ui/button";
 import { Spinner } from "@components/ui/spinner";
 import { toastManager } from "@components/ui/toast";
-import { useArticleExtraction } from "@/features/reader/use-extraction";
+import { useArticleExtraction } from "@modules/reader/use-extraction";
 import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/api-schemas";
 import { readerContentForMode } from "@lib/reader-display";
 import { useReaderPreferences } from "@lib/reader-preferences";

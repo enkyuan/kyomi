@@ -33,9 +33,9 @@ import {
   moveFeedsToFolder,
   type FollowedFeed,
   unfollowFeed,
-} from "@/features/feeds/api";
-import { listFolders } from "@/features/folders/api";
-import { usePinnedFeedIds } from "@/features/feeds/use-pins";
+} from "@modules/feeds/api";
+import { listFolders } from "@modules/folders/api";
+import { usePinnedFeedIds } from "@modules/feeds/use-pins";
 import { PinFill, PinLine } from "@mingcute/react";
 
 type ManageFeedsDialogProps = {
