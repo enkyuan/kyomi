@@ -1,6 +1,7 @@
 export type ParsedListQuery = {
   limit: number;
   cursor: string | undefined;
+  search: string | undefined;
   feedId: string | undefined;
   folderId: string | undefined;
   source: string;
@@ -26,9 +27,15 @@ export function parseOptionalIsoDate(value: unknown): Date | undefined {
 }
 
 export function parseArticlesListQuery(query: Record<string, unknown>): ParsedListQuery {
+  const normalizedSearch =
+    typeof query.search === "string" && query.search.trim().length > 0
+      ? query.search.trim()
+      : undefined;
+
   return {
     limit: Math.min(200, Math.max(1, Number(query.limit ?? 50) || 50)),
     cursor: typeof query.cursor === "string" ? query.cursor : undefined,
+    search: normalizedSearch,
     feedId: typeof query.feed_id === "string" ? query.feed_id : undefined,
     folderId: typeof query.folder_id === "string" ? query.folder_id : undefined,
     source: typeof query.source === "string" ? query.source.toLowerCase() : "feeds",

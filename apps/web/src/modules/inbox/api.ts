@@ -13,6 +13,7 @@ import {
 import { z } from "zod";
 
 export type InboxFilter = "today" | "unread" | "saved";
+const INBOX_PAGE_LIMIT = 100;
 
 export type InboxItem = {
   id: string;
@@ -90,29 +91,16 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
   };
 }
 
-function filterItemsBySearch(items: InboxItem[], search?: string) {
-  const normalizedSearch = search?.trim().toLowerCase();
-
-  if (!normalizedSearch) {
-    return items;
-  }
-
-  return items.filter((item) =>
-    [item.title, item.summary, item.feedTitle, item.articleType]
-      .filter((value): value is string => Boolean(value))
-      .some((value) => value.toLowerCase().includes(normalizedSearch)),
-  );
-}
-
 async function fetchInboxList(
   filter: InboxFilter,
   timezoneOffsetMinutes: number,
+  search: string | undefined,
   cursor: string | undefined,
   headers: Headers,
 ): Promise<CursorListResponse> {
   return apiJsonValidated(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
-      buildArticlesUrl(filter, timezoneOffsetMinutes, undefined, undefined, cursor),
+      buildArticlesUrl(filter, timezoneOffsetMinutes, search, undefined, undefined, cursor),
       {
         headers: buildForwardHeaders(headers),
       },
@@ -123,6 +111,7 @@ async function fetchInboxList(
 function buildArticlesUrl(
   filter: InboxFilter,
   timezoneOffsetMinutes: number,
+  search?: string,
   feedId?: string,
   folderId?: string,
   cursor?: string,
@@ -143,10 +132,13 @@ function buildArticlesUrl(
   if (folderId?.trim()) {
     params.set("folder_id", folderId.trim());
   }
+  if (search?.trim()) {
+    params.set("search", search.trim());
+  }
   if (cursor?.trim()) {
     params.set("cursor", cursor.trim());
   }
-  params.set("limit", "200");
+  params.set("limit", String(INBOX_PAGE_LIMIT));
   return `/api/v1/articles?${params.toString()}`;
 }
 
@@ -165,6 +157,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
               buildArticlesUrl(
                 filter,
                 timezoneOffsetMinutes,
+                data.search,
                 data.feedId,
                 data.folderId,
                 data.cursor,
@@ -174,8 +167,8 @@ export const getInboxItems = createServerFn({ method: "GET" })
               },
             ),
           )
-        : await fetchInboxList(filter, timezoneOffsetMinutes, data.cursor, headers);
-    const items = filterItemsBySearch(response.items.map(mapInboxItem), data.search);
+        : await fetchInboxList(filter, timezoneOffsetMinutes, data.search, data.cursor, headers);
+    const items = response.items.map(mapInboxItem);
 
     return {
       items,
@@ -323,7 +316,7 @@ export const getScopedUnreadCount = createServerFn({ method: "GET" })
     // Folder-scoped unread: no dedicated count endpoint yet, fall back to
     // the list query. TODO: add a folder-scoped count endpoint on the API.
     const response = await apiJson<CursorListResponse>(
-      buildArticlesUrl("unread", 0, undefined, data.folderId),
+      buildArticlesUrl("unread", 0, undefined, undefined, data.folderId),
       { headers: buildForwardHeaders(headers) },
     );
     return { count: response.items.length };

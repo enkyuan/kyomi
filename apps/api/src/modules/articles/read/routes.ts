@@ -143,6 +143,7 @@ export function registerArticleReadRoutes(app: Elysia) {
         return listArticlesForUser(db, userId, {
           limit: parsed.limit,
           cursor: parsed.cursor,
+          search: parsed.search,
           feedId: parsed.feedId,
           folderId: parsed.folderId,
           isRead: parsed.isRead,

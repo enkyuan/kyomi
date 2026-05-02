@@ -1,6 +1,6 @@
 import type { db } from "@adapters/db/client";
 import { feedItemUserState, feedItems, feedSubscriptions, feeds } from "@cronos/db";
-import { and, desc, eq, gte, lt, or, sql, type SQL } from "drizzle-orm";
+import { and, desc, eq, gte, ilike, lt, or, sql, type SQL } from "drizzle-orm";
 import { logger } from "@adapters/logger";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
 import { collapseObviousDuplicates, type ArticleListRawRow } from "./dedupe";
@@ -12,6 +12,7 @@ type DB = typeof db;
 export type ListArticlesOptions = {
   feedId?: string;
   folderId?: string;
+  search?: string;
   isRead?: boolean;
   isSaved?: boolean;
   publishedAfter?: Date;
@@ -37,6 +38,31 @@ function normalizeLimit(limit: number): number {
   return Math.min(Math.max(limit, 1), 200);
 }
 
+function encodeCompositeCursor(row: Pick<ArticleListRawRow, "publishedAt" | "id">): string {
+  return `${row.publishedAt.toISOString()}::${row.id}`;
+}
+
+function decodeCompositeCursor(cursor: string): { publishedAt: Date; id: string } | null {
+  const parts = cursor.split("::");
+  if (parts.length !== 2) {
+    return null;
+  }
+  const [publishedAtIso, id] = parts;
+  if (!publishedAtIso || !id) {
+    return null;
+  }
+  const publishedAt = new Date(publishedAtIso);
+  if (Number.isNaN(publishedAt.getTime())) {
+    return null;
+  }
+  return { publishedAt, id };
+}
+
+function computeFetchWindowSize(opts: ListArticlesOptions, take: number): number {
+  const multiplier = opts.feedId ? 2 : 3;
+  return Math.min(800, take * multiplier);
+}
+
 function paginateRows(rows: ArticleListRawRow[], limit: number) {
   const dedupedRows = collapseObviousDuplicates(rows);
   if (dedupedRows.length !== rows.length) {
@@ -48,7 +74,8 @@ function paginateRows(rows: ArticleListRawRow[], limit: number) {
   }
   const hasMore = dedupedRows.length > limit;
   const page = hasMore ? dedupedRows.slice(0, limit) : dedupedRows;
-  const nextCursor = hasMore && page.length > 0 ? page[page.length - 1].id : null;
+  const nextCursor =
+    hasMore && page.length > 0 ? encodeCompositeCursor(page[page.length - 1]!) : null;
   return { hasMore, page, nextCursor };
 }
 
@@ -111,6 +138,25 @@ function pushPublishedDateFilters(filters: SQL[], opts: ListArticlesOptions): vo
   }
 }
 
+function escapeLikePattern(input: string): string {
+  return input.replaceAll("\\", "\\\\").replaceAll("%", "\\%").replaceAll("_", "\\_");
+}
+
+function pushSearchFilter(filters: SQL[], opts: ListArticlesOptions): void {
+  const search = opts.search?.trim();
+  if (!search) {
+    return;
+  }
+  const pattern = `%${escapeLikePattern(search)}%`;
+  filters.push(
+    or(
+      ilike(feedItems.title, pattern),
+      ilike(feedItems.summary, pattern),
+      ilike(feeds.title, pattern),
+    )!,
+  );
+}
+
 async function pushCursorFilter(
   database: DB,
   userId: string,
@@ -119,6 +165,16 @@ async function pushCursorFilter(
   filters: SQL[],
 ): Promise<void> {
   if (!opts.cursor || !feedSubscriptionsJoin) {
+    return;
+  }
+  const decoded = decodeCompositeCursor(opts.cursor);
+  if (decoded) {
+    filters.push(
+      or(
+        lt(feedItems.publishedAt, decoded.publishedAt),
+        and(eq(feedItems.publishedAt, decoded.publishedAt), lt(feedItems.id, decoded.id)),
+      )!,
+    );
     return;
   }
   const cur = await database
@@ -160,6 +216,7 @@ async function listArticleRows(
   pushBaseFilters(filters, opts);
   pushReadSavedFilters(filters, opts);
   pushPublishedDateFilters(filters, opts);
+  pushSearchFilter(filters, opts);
   await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, filters);
 
   return database
@@ -182,5 +239,5 @@ async function listArticleRows(
     .leftJoin(feedItemUserState, userStateJoin)
     .where(filters.length > 0 ? and(...filters) : sql`true`)
     .orderBy(desc(feedItems.publishedAt), desc(feedItems.id))
-    .limit(Math.min(800, take * 3));
+    .limit(computeFetchWindowSize(opts, take));
 }

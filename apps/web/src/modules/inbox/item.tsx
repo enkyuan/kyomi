@@ -13,6 +13,10 @@ const PRETEXT_MIN_FILL_RATIO = 0.97;
 const PRETEXT_MAX_TRIM = 8;
 const PRETEXT_WIDTH_BUFFER = 4;
 const PRETEXT_CACHE_LIMIT = 600;
+const ARTICLE_TIMESTAMP_FORMATTER = new Intl.DateTimeFormat("en", {
+  dateStyle: "medium",
+  timeStyle: "short",
+});
 const pretextPrepareCache = new Map<string, ReturnType<typeof prepare>>();
 const pretextFitCache = new Map<string, number | undefined>();
 
@@ -288,8 +292,5 @@ function formatArticleTimestamp(value: string) {
     return value;
   }
 
-  return new Intl.DateTimeFormat("en", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
+  return ARTICLE_TIMESTAMP_FORMATTER.format(date);
 }

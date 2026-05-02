@@ -12,6 +12,11 @@ import { readerContentForMode } from "@lib/reader-display";
 import { useReaderPreferences } from "@lib/reader-preferences";
 import { cn } from "@lib/utils";
 
+const ARTICLE_TIMESTAMP_FORMATTER = new Intl.DateTimeFormat("en", {
+  dateStyle: "medium",
+  timeStyle: "short",
+});
+
 function estimateReadingTime(html: string): number {
   const text = html
     .replace(/<[^>]*>/g, " ")
@@ -28,10 +33,7 @@ export function formatArticleTimestamp(value: string) {
     return value;
   }
 
-  return new Intl.DateTimeFormat("en", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(date);
+  return ARTICLE_TIMESTAMP_FORMATTER.format(date);
 }
 
 export function ItemDetail({ item }: { item: ArticleDetailDto }) {
@@ -40,6 +42,7 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
   const requestedExtractionForItemRef = useRef<string | null>(null);
   const effectiveReaderMode =
     preferences.defaultMode === "smart" ? item.reader.activeMode : preferences.defaultMode;
+  const isViewingExtracted = effectiveReaderMode === "extracted";
   const displayReader = readerContentForMode(item, effectiveReaderMode);
 
   const displayContent =
@@ -52,7 +55,10 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
     item.reader.extracted.status === "pending" &&
     item.reader.extracted.content === null;
   const showFailedBanner =
-    item.reader.extracted.status === "failed" && Boolean(item.reader.extracted.error);
+    isViewingExtracted &&
+    item.reader.extracted.status === "failed" &&
+    item.reader.extracted.content === null &&
+    Boolean(item.reader.extracted.error);
   const maxWidthClassName =
     preferences.contentWidth === "narrow"
       ? "max-w-2xl"
