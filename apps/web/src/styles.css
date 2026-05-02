@@ -235,12 +235,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img {
+.reader-content img {
   outline: 1px solid rgba(0, 0, 0, 0.1);
   outline-offset: -1px;
 }
 
-.dark img {
+.dark .reader-content img {
   outline-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -262,11 +262,7 @@ img {
 .reader-content .article-body {
   font-size: var(--reader-font-size, 1rem);
   color: color-mix(in srgb, var(--foreground) 92%, transparent);
-}
-
-.reader-content .article-body > :where(p, ul, ol, blockquote, pre, table, figure, hr, div, section, article) {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 12rem;
+  transition: font-size 80ms ease;
 }
 
 .reader-content .article-body > *:first-child {

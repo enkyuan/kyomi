@@ -49,7 +49,7 @@ export function subscribeHotQueryCachePersistence(queryClient: QueryClient) {
     return () => {};
   }
 
-  return queryClient.getQueryCache().subscribe(() => {
+  const unsubscribe = queryClient.getQueryCache().subscribe(() => {
     if (persistTimer) {
       return;
     }
@@ -74,4 +74,12 @@ export function subscribeHotQueryCachePersistence(queryClient: QueryClient) {
       }
     }, PERSIST_THROTTLE_MS);
   });
+
+  return () => {
+    unsubscribe();
+    if (persistTimer) {
+      clearTimeout(persistTimer);
+      persistTimer = undefined;
+    }
+  };
 }

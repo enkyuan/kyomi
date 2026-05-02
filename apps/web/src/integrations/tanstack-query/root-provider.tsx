@@ -17,9 +17,10 @@ export function getContext() {
 }
 
 export default function TanstackQueryProvider({ children }: { children: ReactNode }) {
-  hydrateHotQueryCache(queryClient);
-
-  useEffect(() => subscribeHotQueryCachePersistence(queryClient), []);
+  useEffect(() => {
+    hydrateHotQueryCache(queryClient);
+    return subscribeHotQueryCachePersistence(queryClient);
+  }, []);
 
   return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
 }
