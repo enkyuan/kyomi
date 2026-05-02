@@ -465,7 +465,7 @@ describe("RenderHtml – code block normalization", () => {
     });
   });
 
-  test("keeps ambiguous snippets unlabeled as plain text", async () => {
+  test("defaults ambiguous snippets to bash", async () => {
     const html = `
       <pre><code>hello(world);</code></pre>
     `;
@@ -473,12 +473,9 @@ describe("RenderHtml – code block normalization", () => {
     const root = container.querySelector(".article-body");
 
     await waitFor(() => {
-      expect(root?.querySelector(".reader-code-lang-label")?.textContent).toBe("Plain text");
+      expect(root?.querySelector(".reader-code-lang-label")?.textContent).toBe("Bash");
       const code = root?.querySelector("pre code");
-      const languageClass = Array.from(code?.classList ?? []).find((klass) =>
-        klass.startsWith("language-"),
-      );
-      expect(languageClass).toBeUndefined();
+      expect(code?.classList.contains("language-bash")).toBe(true);
     });
   });
 
@@ -497,6 +494,30 @@ done</code></pre>
       expect(root?.querySelector(".reader-code-lang-label")?.textContent).toBe("Bash");
       const code = root?.querySelector("pre code");
       expect(code?.classList.contains("language-bash")).toBe(true);
+    });
+  });
+});
+
+describe("RenderHtml – fidelity layout mode", () => {
+  test("preserves image DOM structure without reader layout transforms", async () => {
+    const html = `
+      <div class="author-bio media-object">
+        <p><img src="https://example.com/a.png" alt="" /></p>
+        <p>Jane Doe is a reporter covering technology.</p>
+      </div>
+    `;
+    const { container } = render(
+      <RenderHtml html={html} baseUrl="https://example.com/p" layoutMode="fidelity" />,
+    );
+    const root = container.querySelector(".article-body");
+
+    await waitFor(() => {
+      expect(root?.querySelector("div.author-bio")).toBeTruthy();
+      expect(root?.querySelector("div.author-bio")?.hasAttribute("data-reader-media-aside")).toBe(
+        false,
+      );
+      expect(root?.querySelector("[data-reader-img-frame]")).toBeNull();
+      expect(root?.querySelector("[data-reader-profile-thumb]")).toBeNull();
     });
   });
 });

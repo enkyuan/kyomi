@@ -5,6 +5,7 @@ import markedKatex from "marked-katex-extension";
 import { memo } from "react";
 import { normalizeSafeHttpUrl } from "@lib/safe-http-url";
 import { RenderHtml } from "./html";
+import type { ReaderLayoutMode } from "./html/dom-enhancements";
 
 function escapeAttr(value: string): string {
   return value
@@ -66,12 +67,21 @@ export const RenderMarkdown = memo(function RenderMarkdown({
   markdown,
   baseUrl,
   openLinksInNewTab = true,
+  layoutMode = "normalized",
 }: {
   markdown: string;
   baseUrl?: string | null;
   openLinksInNewTab?: boolean;
+  layoutMode?: ReaderLayoutMode;
 }) {
   const parser = getMarkedForBaseUrl(baseUrl, openLinksInNewTab);
   const html = parser.parse(markdown, { async: false }) as string;
-  return <RenderHtml html={html} baseUrl={baseUrl} openLinksInNewTab={openLinksInNewTab} />;
+  return (
+    <RenderHtml
+      html={html}
+      baseUrl={baseUrl}
+      openLinksInNewTab={openLinksInNewTab}
+      layoutMode={layoutMode}
+    />
+  );
 });

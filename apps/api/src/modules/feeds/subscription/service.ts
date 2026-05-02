@@ -1,10 +1,10 @@
-import { resolveFeedFaviconUrl } from "@cronos/favicon";
 import { and, eq } from "drizzle-orm";
 import { feedSubscriptions, feeds } from "@cronos/db";
 import type { db } from "@adapters/db/client";
-import { logger } from "@adapters/logger";
 import { AppError } from "@shared/errors/app-error";
 import { resolveRemoteFeed } from "@modules/discover/resolve-remote-feed";
+import { resolveRemoteFeedFavicon } from "@modules/discover/resolve-feed-favicon";
+import { logger } from "@adapters/logger";
 import { decodeText } from "@shared/text/html-entities";
 import { DEFAULT_FOLDER_NAME, getOrCreateFolderByName } from "@modules/folders/service";
 import type { FeedSubscribeResultDto } from "../types";
@@ -28,16 +28,7 @@ export async function createOrSubscribeToFeed(
 ): Promise<FeedSubscribeResultDto> {
   const resolved = await resolveRemoteFeed(rawUrl);
 
-  const faviconSeed = resolved.link?.trim() || resolved.canonicalUrl;
-  let favicon: FaviconEnrichment = null;
-  try {
-    favicon = await resolveFeedFaviconUrl(faviconSeed);
-  } catch (error) {
-    logger.warn("feeds.favicon.resolve_failed", {
-      seed: faviconSeed,
-      error: error instanceof Error ? error.message : String(error),
-    });
-  }
+  const favicon: FaviconEnrichment = await resolveRemoteFeedFavicon(resolved, logger);
 
   const result = await database.transaction(async (tx) => {
     const { feedId, newFeed, faviconUrl, faviconSource } = await upsertFeedRecord(
@@ -65,6 +56,7 @@ export async function createOrSubscribeToFeed(
     title: decodeText(result.title),
     description: decodeText(resolved.description),
     link: result.link,
+    faviconUrl: result.faviconUrl,
   });
 
   return result;

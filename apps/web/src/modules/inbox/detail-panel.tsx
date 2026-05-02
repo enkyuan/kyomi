@@ -127,11 +127,6 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
       )}
       style={{ "--reader-font-size": `${preferences.fontSizePx}px` } as Record<string, string>}
     >
-      {extractMutation.isPending && !showFailedBanner && !item.reader.extracted.content ? (
-        <div className="not-prose absolute right-2 top-10 flex items-center gap-2 text-muted-foreground text-xs">
-          <Spinner className="size-4" />
-        </div>
-      ) : null}
       <div className="not-prose mb-6 flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
           <span>{formatArticleTimestamp(item.publishedAt)}</span>
@@ -147,6 +142,7 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
         </div>
         <InboxSourceRow
           articleUrl={item.link}
+          feedFaviconUrl={item.feedFaviconUrl}
           feedTitle={item.feedTitle}
           className=""
           labelClassName="text-sm"
@@ -181,7 +177,11 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
         </div>
       ) : null}
 
-      <ReaderContent reader={displayReader} openLinksInNewTab={preferences.openLinksInNewTab} />
+      <ReaderContent
+        reader={displayReader}
+        openLinksInNewTab={preferences.openLinksInNewTab}
+        layoutMode="fidelity"
+      />
 
       <div className="not-prose mt-10 border-t border-border pt-6">
         <a

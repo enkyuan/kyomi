@@ -10,6 +10,7 @@ const feed = (id: string, at: string): ArticleListItemDto => ({
   publishedAt: at,
   feedId: "f1",
   feedTitle: "F",
+  feedFaviconUrl: null,
   isRead: false,
   isSaved: false,
   articleType: "feed",

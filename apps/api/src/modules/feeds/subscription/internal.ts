@@ -130,6 +130,7 @@ export async function indexFeedForSearch(metadata: {
   title: string;
   description: string | null;
   link: string | null;
+  faviconUrl?: string | null;
 }): Promise<void> {
   try {
     await upsertFeedSearchDocument(metadata);

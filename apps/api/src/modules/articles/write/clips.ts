@@ -41,6 +41,7 @@ function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemD
     publishedAt: row.createdAt.toISOString(),
     feedId: CLIP_LIST_FEED_ID,
     feedTitle: CLIP_LIST_FEED_TITLE,
+    feedFaviconUrl: null,
     isRead: row.isRead,
     isSaved: row.isSaved,
     articleType: "clip",

@@ -12,6 +12,7 @@ export type ArticleListItemDto = {
   publishedAt: string;
   feedId: string;
   feedTitle: string;
+  feedFaviconUrl: string | null;
   isRead: boolean;
   isSaved: boolean;
   articleType: "feed" | "clip";

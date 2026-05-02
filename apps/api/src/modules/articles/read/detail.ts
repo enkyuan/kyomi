@@ -51,6 +51,7 @@ async function getFeedArticleDetailForUser(
       publishedAt: feedItems.publishedAt,
       feedId: feedItems.feedId,
       feedTitle: feeds.title,
+      feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
     })
@@ -115,6 +116,7 @@ async function getFeedArticleDetailForUser(
     publishedAt: r.publishedAt.toISOString(),
     feedId: r.feedId,
     feedTitle: decodeText(r.feedTitle),
+    feedFaviconUrl: r.feedFaviconUrl,
     isRead: r.isRead,
     isSaved: Boolean(r.isSaved),
     articleType: "feed",

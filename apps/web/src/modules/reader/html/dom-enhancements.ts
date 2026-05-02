@@ -11,6 +11,8 @@ import {
   READER_PROFILE_THUMB,
 } from "./constants";
 
+export type ReaderLayoutMode = "fidelity" | "normalized";
+
 /** Avoid treating a whole article wrapper (hero image + many blocks) as a single media row. */
 const MEDIA_ASIDE_MAX_DIRECT_CHILDREN = 8;
 
@@ -698,7 +700,15 @@ function markCaptionedFigures(container: HTMLElement): void {
 }
 
 /** Runs client-side reader DOM passes after sanitized HTML is injected. Order matters. */
-export function runReaderDomEnhancements(container: HTMLElement): void {
+export function runReaderDomEnhancements(
+  container: HTMLElement,
+  options?: { layoutMode?: ReaderLayoutMode },
+): void {
+  const layoutMode = options?.layoutMode ?? "normalized";
+  if (layoutMode === "fidelity") {
+    return;
+  }
+
   stripClientCarouselArtifacts(container);
   removeLikelyAuthorCards(container);
   enhanceArticleBodyImages(container);

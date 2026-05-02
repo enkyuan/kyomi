@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import { enhanceArticleCodeBlocks } from "./code-blocks";
 import { prepareArticleHtml } from "./html/string-prep";
-import { runReaderDomEnhancements } from "./html/dom-enhancements";
+import { runReaderDomEnhancements, type ReaderLayoutMode } from "./html/dom-enhancements";
 import "katex/dist/katex.min.css";
 
 function updateReaderLinkTargets(node: HTMLElement, openLinksInNewTab: boolean) {
@@ -22,10 +22,12 @@ export function RenderHtml({
   html,
   baseUrl,
   openLinksInNewTab = true,
+  layoutMode = "normalized",
 }: {
   html: string;
   baseUrl?: string | null;
   openLinksInNewTab?: boolean;
+  layoutMode?: ReaderLayoutMode;
 }) {
   const articleBodyRef = useRef<HTMLDivElement | null>(null);
   const enhancementRunRef = useRef(0);
@@ -34,7 +36,7 @@ export function RenderHtml({
 
   const runAllEnhancements = (node: HTMLElement) => {
     enhanceArticleCodeBlocks(node);
-    runReaderDomEnhancements(node);
+    runReaderDomEnhancements(node, { layoutMode });
     updateReaderLinkTargets(node, openLinksInNewTab);
   };
 
@@ -98,7 +100,7 @@ export function RenderHtml({
     }
 
     return scheduleEnhancements(node);
-  }, [openLinksInNewTab, prepared]);
+  }, [layoutMode, openLinksInNewTab, prepared]);
 
   useEffect(() => {
     return () => {
@@ -139,11 +141,12 @@ export function RenderHtml({
 
     observer.observe(node, { childList: true, subtree: true });
     return () => observer.disconnect();
-  }, [openLinksInNewTab, prepared]);
+  }, [layoutMode, openLinksInNewTab, prepared]);
 
   return (
     <div
       className="article-body"
+      data-reader-layout-mode={layoutMode}
       suppressHydrationWarning
       ref={articleBodyRef}
       dangerouslySetInnerHTML={{ __html: prepared }}

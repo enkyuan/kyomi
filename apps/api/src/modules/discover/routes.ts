@@ -22,6 +22,7 @@ const feedPreviewResponse = t.Object({
   title: t.String(),
   description: t.String(),
   link: t.Union([t.String(), t.Null()]),
+  faviconUrl: t.Union([t.String(), t.Null()]),
   isSubscribed: t.Boolean(),
 });
 
@@ -31,6 +32,7 @@ const feedSearchItem = t.Object({
   title: t.String(),
   description: t.Union([t.String(), t.Null()]),
   link: t.Union([t.String(), t.Null()]),
+  faviconUrl: t.Union([t.String(), t.Null()]),
   isSubscribed: t.Boolean(),
 });
 

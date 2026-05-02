@@ -8,6 +8,7 @@ export type ResolvedRemoteFeed = {
   title: string;
   description: string;
   link: string | null;
+  iconUrl: string | null;
 };
 
 /** Fetch URL, follow redirects, parse RSS/Atom/JSON Feed, return canonical URL + metadata. */
@@ -52,5 +53,6 @@ export async function resolveRemoteFeed(rawUrl: string): Promise<ResolvedRemoteF
     title: meta.title,
     description: meta.description,
     link: meta.link,
+    iconUrl: meta.iconUrl,
   };
 }

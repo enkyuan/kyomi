@@ -8,131 +8,144 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from "./routes/__root";
-import { Route as RegisterRouteImport } from "./routes/register";
-import { Route as McpRouteImport } from "./routes/mcp";
-import { Route as IndexRouteImport } from "./routes/index";
-import { Route as InboxIndexRouteImport } from "./routes/inbox/index";
-import { Route as ApiFaviconRouteImport } from "./routes/api/favicon";
-import { Route as ApiAuthSplatRouteImport } from "./routes/api/auth/$";
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as McpRouteImport } from './routes/mcp'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as InboxIndexRouteImport } from './routes/inbox/index'
+import { Route as ApiFaviconRouteImport } from './routes/api/favicon'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 
 const RegisterRoute = RegisterRouteImport.update({
-  id: "/register",
-  path: "/register",
+  id: '/register',
+  path: '/register',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const McpRoute = McpRouteImport.update({
-  id: "/mcp",
-  path: "/mcp",
+  id: '/mcp',
+  path: '/mcp',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const IndexRoute = IndexRouteImport.update({
-  id: "/",
-  path: "/",
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const InboxIndexRoute = InboxIndexRouteImport.update({
-  id: "/inbox/",
-  path: "/inbox/",
+  id: '/inbox/',
+  path: '/inbox/',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const ApiFaviconRoute = ApiFaviconRouteImport.update({
-  id: "/api/favicon",
-  path: "/api/favicon",
+  id: '/api/favicon',
+  path: '/api/favicon',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
-  id: "/api/auth/$",
-  path: "/api/auth/$",
+  id: '/api/auth/$',
+  path: '/api/auth/$',
   getParentRoute: () => rootRouteImport,
-} as any);
+} as any)
 
 export interface FileRoutesByFullPath {
-  "/": typeof IndexRoute;
-  "/mcp": typeof McpRoute;
-  "/register": typeof RegisterRoute;
-  "/api/favicon": typeof ApiFaviconRoute;
-  "/inbox/": typeof InboxIndexRoute;
-  "/api/auth/$": typeof ApiAuthSplatRoute;
+  '/': typeof IndexRoute
+  '/mcp': typeof McpRoute
+  '/register': typeof RegisterRoute
+  '/api/favicon': typeof ApiFaviconRoute
+  '/inbox/': typeof InboxIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
-  "/": typeof IndexRoute;
-  "/mcp": typeof McpRoute;
-  "/register": typeof RegisterRoute;
-  "/api/favicon": typeof ApiFaviconRoute;
-  "/inbox": typeof InboxIndexRoute;
-  "/api/auth/$": typeof ApiAuthSplatRoute;
+  '/': typeof IndexRoute
+  '/mcp': typeof McpRoute
+  '/register': typeof RegisterRoute
+  '/api/favicon': typeof ApiFaviconRoute
+  '/inbox': typeof InboxIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport;
-  "/": typeof IndexRoute;
-  "/mcp": typeof McpRoute;
-  "/register": typeof RegisterRoute;
-  "/api/favicon": typeof ApiFaviconRoute;
-  "/inbox/": typeof InboxIndexRoute;
-  "/api/auth/$": typeof ApiAuthSplatRoute;
+  __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/mcp': typeof McpRoute
+  '/register': typeof RegisterRoute
+  '/api/favicon': typeof ApiFaviconRoute
+  '/inbox/': typeof InboxIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath;
-  fullPaths: "/" | "/mcp" | "/register" | "/api/favicon" | "/inbox/" | "/api/auth/$";
-  fileRoutesByTo: FileRoutesByTo;
-  to: "/" | "/mcp" | "/register" | "/api/favicon" | "/inbox" | "/api/auth/$";
-  id: "__root__" | "/" | "/mcp" | "/register" | "/api/favicon" | "/inbox/" | "/api/auth/$";
-  fileRoutesById: FileRoutesById;
+  fileRoutesByFullPath: FileRoutesByFullPath
+  fullPaths:
+    | '/'
+    | '/mcp'
+    | '/register'
+    | '/api/favicon'
+    | '/inbox/'
+    | '/api/auth/$'
+  fileRoutesByTo: FileRoutesByTo
+  to: '/' | '/mcp' | '/register' | '/api/favicon' | '/inbox' | '/api/auth/$'
+  id:
+    | '__root__'
+    | '/'
+    | '/mcp'
+    | '/register'
+    | '/api/favicon'
+    | '/inbox/'
+    | '/api/auth/$'
+  fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute;
-  McpRoute: typeof McpRoute;
-  RegisterRoute: typeof RegisterRoute;
-  ApiFaviconRoute: typeof ApiFaviconRoute;
-  InboxIndexRoute: typeof InboxIndexRoute;
-  ApiAuthSplatRoute: typeof ApiAuthSplatRoute;
+  IndexRoute: typeof IndexRoute
+  McpRoute: typeof McpRoute
+  RegisterRoute: typeof RegisterRoute
+  ApiFaviconRoute: typeof ApiFaviconRoute
+  InboxIndexRoute: typeof InboxIndexRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
 }
 
-declare module "@tanstack/react-router" {
+declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    "/register": {
-      id: "/register";
-      path: "/register";
-      fullPath: "/register";
-      preLoaderRoute: typeof RegisterRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/mcp": {
-      id: "/mcp";
-      path: "/mcp";
-      fullPath: "/mcp";
-      preLoaderRoute: typeof McpRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/": {
-      id: "/";
-      path: "/";
-      fullPath: "/";
-      preLoaderRoute: typeof IndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/inbox/": {
-      id: "/inbox/";
-      path: "/inbox";
-      fullPath: "/inbox/";
-      preLoaderRoute: typeof InboxIndexRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/api/favicon": {
-      id: "/api/favicon";
-      path: "/api/favicon";
-      fullPath: "/api/favicon";
-      preLoaderRoute: typeof ApiFaviconRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
-    "/api/auth/$": {
-      id: "/api/auth/$";
-      path: "/api/auth/$";
-      fullPath: "/api/auth/$";
-      preLoaderRoute: typeof ApiAuthSplatRouteImport;
-      parentRoute: typeof rootRouteImport;
-    };
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mcp': {
+      id: '/mcp'
+      path: '/mcp'
+      fullPath: '/mcp'
+      preLoaderRoute: typeof McpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inbox/': {
+      id: '/inbox/'
+      path: '/inbox'
+      fullPath: '/inbox/'
+      preLoaderRoute: typeof InboxIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/favicon': {
+      id: '/api/favicon'
+      path: '/api/favicon'
+      fullPath: '/api/favicon'
+      preLoaderRoute: typeof ApiFaviconRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -143,16 +156,16 @@ const rootRouteChildren: RootRouteChildren = {
   ApiFaviconRoute: ApiFaviconRoute,
   InboxIndexRoute: InboxIndexRoute,
   ApiAuthSplatRoute: ApiAuthSplatRoute,
-};
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>();
+  ._addFileTypes<FileRouteTypes>()
 
-import type { getRouter } from "./router.tsx";
-import type { createStart } from "@tanstack/react-start";
-declare module "@tanstack/react-start" {
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
   interface Register {
-    ssr: true;
-    router: Awaited<ReturnType<typeof getRouter>>;
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
   }
 }

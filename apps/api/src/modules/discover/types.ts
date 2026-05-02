@@ -6,6 +6,7 @@ export type FeedPreviewDto = {
   title: string;
   description: string;
   link: string | null;
+  faviconUrl: string | null;
   isSubscribed: boolean;
 };
 
@@ -15,5 +16,6 @@ export type FeedSearchResultDto = {
   title: string;
   description: string | null;
   link: string | null;
+  faviconUrl: string | null;
   isSubscribed: boolean;
 };

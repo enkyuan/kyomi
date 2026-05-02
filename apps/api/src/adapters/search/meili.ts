@@ -7,6 +7,7 @@ export type FeedSearchDocument = {
   title: string;
   description: string | null;
   link: string | null;
+  faviconUrl?: string | null;
 };
 
 function getBaseUrl(): string | null {

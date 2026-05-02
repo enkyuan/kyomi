@@ -80,6 +80,36 @@ function asPlain(reason: string): CodeLanguageDetection {
   };
 }
 
+function looksLikePlainText(text: string): boolean {
+  const normalized = text.replace(/\s+/g, " ").trim();
+  if (!normalized) {
+    return true;
+  }
+
+  const lines = text
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean);
+  const words = normalized.split(/\s+/).filter(Boolean);
+  const wordCount = words.length;
+  const hasSentenceEnding = /[.!?](?:\s|$)/.test(normalized);
+  const codeMarkerHits = (
+    normalized.match(/[{}[\]()<>;$=\\`|]|=>|::|\/\/|#include|function\s*\(|SELECT\s+/gi) ?? []
+  ).length;
+  const hasIndentedBlock = /\n\s{2,}\S/.test(text);
+  const hasListPrefix = lines.some((line) => /^[-*]\s+/.test(line));
+  const mostlyNaturalWords = words.filter((word) => /^[A-Za-z][A-Za-z'-]*$/.test(word)).length;
+
+  return (
+    wordCount >= 6 &&
+    mostlyNaturalWords >= Math.floor(wordCount * 0.7) &&
+    codeMarkerHits === 0 &&
+    !hasIndentedBlock &&
+    !hasListPrefix &&
+    hasSentenceEnding
+  );
+}
+
 function tryDetectJson(text: string): CodeLanguageDetection | null {
   const trimmed = text.trim();
   if (!trimmed || (!trimmed.startsWith("{") && !trimmed.startsWith("["))) {
@@ -306,5 +336,14 @@ export function detectCodeLanguage(text: string, explicitLanguage?: string): Cod
     return deterministic;
   }
 
-  return asPlain("no deterministic language signature matched");
+  if (looksLikePlainText(trimmed)) {
+    return asPlain("plain prose text without code markers");
+  }
+
+  return {
+    language: "bash",
+    label: "Bash",
+    confidence: "deterministic",
+    reason: "default shell fallback for unlabeled code blocks",
+  };
 }

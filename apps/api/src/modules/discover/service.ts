@@ -5,6 +5,7 @@ import { isMeiliConfigured, searchFeedSearchDocuments } from "@adapters/search/m
 import type { AppLogger } from "@adapters/logger";
 import { AppError } from "@shared/errors/app-error";
 import { decodeNullableText, decodeText } from "@shared/text/html-entities";
+import { resolveRemoteFeedFavicon } from "./resolve-feed-favicon";
 import { resolveRemoteFeed } from "./resolve-remote-feed";
 import type { FeedPreviewDto, FeedSearchResultDto } from "./types";
 
@@ -18,7 +19,7 @@ export async function previewFeedFromUrl(
   const resolved = await resolveRemoteFeed(rawUrl);
 
   const existingRows = await database
-    .select({ id: feeds.id })
+    .select({ id: feeds.id, faviconUrl: feeds.faviconUrl })
     .from(feeds)
     .where(eq(feeds.url, resolved.canonicalUrl))
     .limit(1);
@@ -34,12 +35,16 @@ export async function previewFeedFromUrl(
     isSubscribed = subRows.length > 0;
   }
 
+  const favicon =
+    existing?.faviconUrl ?? (await resolveRemoteFeedFavicon(resolved, undefined))?.url ?? null;
+
   return {
     id: existing?.id ?? null,
     url: resolved.canonicalUrl,
     title: decodeText(resolved.title),
     description: decodeText(resolved.description),
     link: resolved.link,
+    faviconUrl: favicon,
     isSubscribed,
   };
 }
@@ -73,6 +78,7 @@ export async function searchFeeds(
           ...hit,
           title: decodeText(hit.title),
           description: decodeNullableText(hit.description),
+          faviconUrl: hit.faviconUrl ?? null,
           isSubscribed: subscribedIds.has(hit.id),
         }));
       }
@@ -100,6 +106,7 @@ export async function searchFeeds(
       title: feeds.title,
       description: feeds.description,
       link: feeds.link,
+      faviconUrl: feeds.faviconUrl,
       isSubscribed: sql<boolean>`CASE WHEN ${feedSubscriptions.id} IS NULL THEN false ELSE true END`,
       score: sql<number>`
         CASE
@@ -128,5 +135,6 @@ export async function searchFeeds(
     ...row,
     title: decodeText(row.title),
     description: decodeNullableText(row.description),
+    faviconUrl: row.faviconUrl,
   }));
 }

@@ -956,6 +956,8 @@ interface SliderComfortableProps extends Omit<
 > {
   value: number;
   onChange: (value: number) => void;
+  /** Invoked when a pointer drag ends (or resize handle) with the final value; also runs for keyboard changes via the hidden Radix control. */
+  onValueCommit?: (value: number) => void;
   min?: number;
   max?: number;
   step?: number;
@@ -970,6 +972,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
     {
       value,
       onChange,
+      onValueCommit,
       min = 0,
       max = 100,
       step = 1,
@@ -1117,19 +1120,25 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
 
     const getValueFromX = useCallback(
       (clientX: number) => {
-        const rect = containerRef.current?.getBoundingClientRect();
-        if (!rect) return min;
-        const x = clientX - rect.left;
-        const clamped = Math.max(0, Math.min(rect.width, x));
+        const el = containerRef.current;
+        if (!el) return min;
+        const rect = el.getBoundingClientRect();
+        // Match computeHoverPreview + CSS % widths: map in the padding/content box (clientWidth),
+        // not border-box width, so pointer position aligns with the fill under `border`.
+        const w = el.clientWidth;
+        if (w <= 0) return min;
+        const borderLeft = rect.width - w > 0 ? (rect.width - w) / 2 : 0;
+        const x = clientX - rect.left - borderLeft;
+        const clamped = Math.max(0, Math.min(w, x));
         if (variant === "pips") {
           if (pipCount <= 1) return min;
           const index = Math.max(
             0,
-            Math.min(pipCount - 1, Math.round((clamped / rect.width) * (pipCount - 1))),
+            Math.min(pipCount - 1, Math.round((clamped / w) * (pipCount - 1))),
           );
           return pipSteps[index];
         } else {
-          const raw = min + (clamped / rect.width) * (max - min);
+          const raw = min + (clamped / w) * (max - min);
           const snapped = Math.round((raw - min) / step) * step + min;
           return Math.max(min, Math.min(max, snapped));
         }
@@ -1182,12 +1191,23 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
             animate(fillPercent, newPercent, springs.fast);
           }
           animate(zeroOffset, newVal === min ? zeroTarget : 0, springs.fast);
+          onValueCommit?.(newVal);
         }
         dragging.current = false;
         setIsPressed(false);
         setHoverPreview(null);
       },
-      [fillPercent, getValueFromX, max, min, onChange, variant, zeroOffset, zeroTarget],
+      [
+        fillPercent,
+        getValueFromX,
+        max,
+        min,
+        onChange,
+        onValueCommit,
+        variant,
+        zeroOffset,
+        zeroTarget,
+      ],
     );
 
     // Resize handle drag handlers (direct cursor position)
@@ -1226,20 +1246,22 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
           onChange(newVal);
           fillPercent.set(Math.max(0, Math.min(1, (newVal - min) / (max - min))));
           animate(zeroOffset, newVal === min ? zeroTarget : 0, springs.fast);
+          onValueCommit?.(newVal);
         }
         handleDragging.current = false;
         setIsPressed(false);
         setHoverPreview(null);
       },
-      [fillPercent, getValueFromX, max, min, onChange, zeroOffset, zeroTarget],
+      [fillPercent, getValueFromX, max, min, onChange, onValueCommit, zeroOffset, zeroTarget],
     );
 
     const handleRadixChange = useCallback(
       (newValues: number[]) => {
         const nextValue = newValues[0] ?? min;
         onChange(nextValue);
+        onValueCommit?.(nextValue);
       },
-      [min, onChange],
+      [min, onChange, onValueCommit],
     );
 
     const isActive = isHovered || isFocused;

@@ -5,13 +5,16 @@ import { ReaderFallback } from "./fallback";
 import { RenderHtml } from "./html";
 import { RenderMarkdown } from "./markdown";
 import { RenderText } from "./text";
+import type { ReaderLayoutMode } from "./html/dom-enhancements";
 
 export function ReaderContent({
   reader,
   openLinksInNewTab = true,
+  layoutMode = "normalized",
 }: {
   reader: ReaderContentModel;
   openLinksInNewTab?: boolean;
+  layoutMode?: ReaderLayoutMode;
 }) {
   // Client invariant: only render the server-selected `bodyKind`; never re-classify content format.
   function ContractViolationFallback() {
@@ -35,6 +38,7 @@ export function ReaderContent({
         html={reader.contentHtml}
         baseUrl={reader.contentBaseUrl}
         openLinksInNewTab={openLinksInNewTab}
+        layoutMode={layoutMode}
       />
     );
     if (!reader.notice) {
@@ -57,6 +61,7 @@ export function ReaderContent({
         markdown={reader.contentMarkdown}
         baseUrl={reader.contentBaseUrl}
         openLinksInNewTab={openLinksInNewTab}
+        layoutMode={layoutMode}
       />
     );
     if (!reader.notice) {

@@ -25,7 +25,7 @@ export const feeds = pgTable(
     nextRefreshAt: timestamp("next_refresh_at"),
     /** Best-effort resolved favicon image URL (often same-origin or public icon CDN). */
     faviconUrl: text("favicon_url"),
-    /** How `favicon_url` was resolved, e.g. favicon_ico, html_link, google_s2, duckduckgo. */
+    /** How `favicon_url` was resolved, e.g. html_link, favicon_ico, feed_icon, google_s2. */
     faviconSource: text("favicon_source"),
     faviconFetchedAt: timestamp("favicon_fetched_at"),
   },

@@ -20,6 +20,7 @@ export type InboxItem = {
   summary: string | null;
   link: string;
   publishedAt: string;
+  feedFaviconUrl: string | null;
   feedTitle: string;
   articleType: "feed" | "clip";
   isRead: boolean;
@@ -81,6 +82,7 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
     summary: item.summary,
     link: item.link,
     publishedAt: item.publishedAt,
+    feedFaviconUrl: item.feedFaviconUrl,
     feedTitle: item.feedTitle,
     articleType: item.articleType,
     isRead: item.isRead,

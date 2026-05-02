@@ -61,6 +61,7 @@ function toArticleListItems(page: ArticleListRawRow[]): ArticleListItemDto[] {
     publishedAt: r.publishedAt.toISOString(),
     feedId: r.feedId,
     feedTitle: decodeText(r.feedTitle),
+    feedFaviconUrl: r.feedFaviconUrl,
     isRead: r.isRead,
     isSaved: r.isSaved,
     articleType: "feed" as const,
@@ -171,6 +172,7 @@ async function listArticleRows(
       publishedAt: feedItems.publishedAt,
       feedId: feedItems.feedId,
       feedTitle: feeds.title,
+      feedFaviconUrl: feeds.faviconUrl,
       isRead: articleIsReadSql,
       isSaved: sql<boolean>`COALESCE(${feedItemUserState.isSaved}, false)`,
     })

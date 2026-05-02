@@ -106,6 +106,11 @@ export const articleListItemSchema = z.object({
   publishedAt: z.string(),
   feedId: z.string(),
   feedTitle: z.string(),
+  feedFaviconUrl: z
+    .string()
+    .nullable()
+    .optional()
+    .transform((value) => value ?? null),
   isRead: z.boolean(),
   isSaved: z.boolean(),
   articleType: articleTypeSchema,
@@ -186,6 +191,11 @@ export const discoverFeedResultSchema = z.object({
   title: z.string(),
   description: z.string().nullable(),
   link: z.string().nullable(),
+  faviconUrl: z
+    .string()
+    .nullable()
+    .optional()
+    .transform((value) => value ?? null),
   isSubscribed: z.boolean(),
 });
 

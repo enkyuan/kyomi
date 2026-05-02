@@ -3,7 +3,9 @@ export {
   resolveFeedFaviconUrl,
   tryFetchImage,
   tryFetchImageIfHostSafe,
+  findIconsFromHtml,
   findIconFromHtml,
+  linkRelDeclaresSiteIcon,
   type FaviconResolutionSource,
   type ResolveFeedFaviconUrlResult,
 } from "./resolve-favicon-url";

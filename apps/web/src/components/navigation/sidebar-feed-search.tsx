@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeferredValue, useEffect, useState } from "react";
+import { startTransition, useDeferredValue, useEffect, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { RssFill } from "@mingcute/react";
 import { FeedFavicon } from "@components/navigation/feed-favicon";
@@ -23,6 +23,9 @@ import { Kbd } from "@components/ui/kbd";
 import { SidebarMenuButton } from "@components/ui/sidebar";
 import { toastManager } from "@components/ui/toast";
 import { followFeed, searchFeeds } from "@modules/feeds/api";
+
+/** Cap list rows so opening the dialog never mounts thousands of command items in one commit. */
+const DISCOVER_RESULTS_UI_CAP = 200;
 
 type SidebarFeedSearchTriggerProps = {
   isMacPlatform: boolean;
@@ -52,16 +55,36 @@ export function SidebarFeedSearchTrigger({
     placeholderData: (previousData) => previousData,
   });
   const searchResults = discoverResultsQuery.data ?? [];
+  const cappedSearchResults =
+    searchResults.length > DISCOVER_RESULTS_UI_CAP
+      ? searchResults.slice(0, DISCOVER_RESULTS_UI_CAP)
+      : searchResults;
+  const discoverResultsTruncated = searchResults.length > DISCOVER_RESULTS_UI_CAP;
   const shouldShowLoading = discoverResultsQuery.isFetching && searchResults.length === 0;
   const shouldShowEmpty =
     !shouldShowLoading && (deferredQuery.length === 0 || searchResults.length === 0);
 
   const setDialogOpen = (nextOpen: boolean) => {
-    if (open === undefined) {
-      setInternalOpen(nextOpen);
+    const commit = () => {
+      if (open === undefined) {
+        setInternalOpen(nextOpen);
+      }
+      onOpenChange?.(nextOpen);
+    };
+    // Opening mounts a large Base UI dialog + autocomplete subtree; keep close synchronous
+    // so Escape dismiss feels immediate.
+    if (nextOpen) {
+      startTransition(commit);
+    } else {
+      commit();
     }
-    onOpenChange?.(nextOpen);
   };
+
+  useEffect(() => {
+    if (!dialogOpen) {
+      setQuery("");
+    }
+  }, [dialogOpen]);
 
   const followFeedMutation = useMutation({
     mutationFn: ({ url }: { url: string }) => followFeed({ data: { url } }),
@@ -183,7 +206,7 @@ export function SidebarFeedSearchTrigger({
               {searchResults.length ? (
                 <CommandGroup>
                   <CommandGroupLabel>Feeds</CommandGroupLabel>
-                  {searchResults.map((item) => (
+                  {cappedSearchResults.map((item) => (
                     <CommandItem
                       key={`${item.id ?? item.url}-${item.url}`}
                       value={`${item.title} ${item.url} ${item.description ?? ""}`}
@@ -195,12 +218,15 @@ export function SidebarFeedSearchTrigger({
                         followFeedMutation.mutate({ url: item.url });
                       }}
                     >
-                      <FeedFavicon
-                        className="me-2 size-4 shrink-0 rounded-sm"
-                        feedUrl={item.url}
-                        siteUrl={item.link}
-                        title={item.title}
-                      />
+                      <span className="me-2 inline-flex size-5 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-sidebar-foreground/8 ring-1 ring-sidebar-border/70">
+                        <FeedFavicon
+                          className="size-4 shrink-0 rounded-[3px] text-sidebar-foreground/70"
+                          faviconUrl={item.faviconUrl}
+                          feedUrl={item.url}
+                          siteUrl={item.link}
+                          title={item.title}
+                        />
+                      </span>
                       <div className="min-w-0 flex-1">
                         <p className="truncate text-sm text-foreground">{item.title || item.url}</p>
                         <p className="truncate text-muted-foreground text-xs">
@@ -212,6 +238,14 @@ export function SidebarFeedSearchTrigger({
                       </span>
                     </CommandItem>
                   ))}
+                  {discoverResultsTruncated ? (
+                    <CommandItem disabled value="discover-truncated-hint">
+                      <span className="text-muted-foreground text-xs">
+                        Showing first {DISCOVER_RESULTS_UI_CAP} results — refine your search to
+                        narrow matches.
+                      </span>
+                    </CommandItem>
+                  ) : null}
                 </CommandGroup>
               ) : null}
             </CommandList>

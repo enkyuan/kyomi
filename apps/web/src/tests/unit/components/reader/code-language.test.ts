@@ -36,13 +36,25 @@ done`);
     expect(result.confidence).toBe("deterministic");
   });
 
-  test("falls back to plain text for ambiguous snippets", () => {
+  test("defaults to bash for ambiguous snippets", () => {
     const result = detectCodeLanguage("hello(world);");
+    expect(result).toEqual({
+      language: "bash",
+      label: "Bash",
+      confidence: "deterministic",
+      reason: "default shell fallback for unlabeled code blocks",
+    });
+  });
+
+  test("keeps prose-style snippets as plain text", () => {
+    const result = detectCodeLanguage(
+      "This is plain prose text that explains a concept without any code symbols.",
+    );
     expect(result).toEqual({
       language: "plaintext",
       label: "Plain text",
       confidence: "plain",
-      reason: "no deterministic language signature matched",
+      reason: "plain prose text without code markers",
     });
   });
 });

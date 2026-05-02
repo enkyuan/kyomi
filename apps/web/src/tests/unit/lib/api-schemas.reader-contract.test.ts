@@ -1,5 +1,9 @@
 import { describe, expect, test } from "vitest";
-import { articleDetailSchema, readerContentSchema } from "@lib/api-schemas";
+import {
+  articleDetailSchema,
+  cursorListResponseSchema,
+  readerContentSchema,
+} from "@lib/api-schemas";
 
 const base = {
   contentStatus: "ready",
@@ -18,6 +22,30 @@ const base = {
 };
 
 describe("reader content schema contract", () => {
+  test("normalizes legacy article list items without feed favicon metadata", () => {
+    const parsed = cursorListResponseSchema.parse({
+      items: [
+        {
+          id: "a1",
+          title: "Example",
+          link: "https://example.com/posts/1",
+          summary: null,
+          publishedAt: "2026-05-01T00:00:00.000Z",
+          feedId: "f1",
+          feedTitle: "Feed",
+          isRead: false,
+          isSaved: false,
+          articleType: "feed",
+        },
+      ],
+      next_cursor: null,
+      has_more: false,
+      total_count: null,
+    });
+
+    expect(parsed.items[0]?.feedFaviconUrl).toBeNull();
+  });
+
   test("accepts coherent html body payload", () => {
     const parsed = readerContentSchema.parse({
       ...base,
@@ -91,6 +119,7 @@ describe("reader content schema contract", () => {
       publishedAt: "2026-05-01T00:00:00.000Z",
       feedId: "f1",
       feedTitle: "Feed",
+      feedFaviconUrl: null,
       isRead: false,
       isSaved: false,
       articleType: "feed",

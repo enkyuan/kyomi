@@ -5,6 +5,7 @@ export type ParsedFeedMetadata = {
   title: string;
   description: string;
   link: string | null;
+  iconUrl: string | null;
 };
 
 function stripTags(html: string): string {
@@ -36,6 +37,17 @@ function textFromUnknown(value: unknown): string | null {
   }
   const text = String((value as { "#text": unknown })["#text"]).trim();
   return text || null;
+}
+
+function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
+  if (!candidate) {
+    return null;
+  }
+  try {
+    return new URL(candidate, baseUrl).href;
+  } catch {
+    return null;
+  }
 }
 
 function pickHrefFromAtomCandidate(
@@ -98,6 +110,22 @@ function pickAtomLink(feed: Record<string, unknown>, fallback: string): string |
   return fallback || null;
 }
 
+function pickRssImageUrl(channel: Record<string, unknown>, fallbackUrl: string): string | null {
+  const image = channel.image;
+  if (typeof image === "string") {
+    return absoluteUrl(image.trim() || null, fallbackUrl);
+  }
+  if (!image || typeof image !== "object") {
+    return null;
+  }
+  const rec = image as Record<string, unknown>;
+  return absoluteUrl(textFromUnknown(rec.url) ?? textFromUnknown(rec["@_href"]), fallbackUrl);
+}
+
+function pickAtomIconUrl(feed: Record<string, unknown>, fallbackUrl: string): string | null {
+  return absoluteUrl(textFromUnknown(feed.icon) ?? textFromUnknown(feed.logo), fallbackUrl);
+}
+
 function parseJsonFeedPreview(body: string, fallbackUrl: string): ParsedFeedMetadata {
   const data: unknown = JSON.parse(body);
   if (!data || typeof data !== "object") {
@@ -114,6 +142,9 @@ function parseJsonFeedPreview(body: string, fallbackUrl: string): ParsedFeedMeta
     title: title || "Untitled",
     description: description || "Follow recent articles from this feed",
     link: home || null,
+    iconUrl:
+      absoluteUrl(typeof rec.icon === "string" ? rec.icon : null, fallbackUrl) ??
+      absoluteUrl(typeof rec.favicon === "string" ? rec.favicon : null, fallbackUrl),
   };
 }
 
@@ -124,7 +155,7 @@ function parseRssChannel(
   const title = xmlText(channel.title) || "Untitled";
   const description = xmlText(channel.description) || "Follow recent articles from this feed";
   const link = pickLinkFromRssChannel(channel.link, fallbackUrl);
-  return { title, description, link };
+  return { title, description, link, iconUrl: pickRssImageUrl(channel, fallbackUrl) };
 }
 
 function parseAtomFeed(feed: Record<string, unknown>, fallbackUrl: string): ParsedFeedMetadata {
@@ -132,7 +163,7 @@ function parseAtomFeed(feed: Record<string, unknown>, fallbackUrl: string): Pars
   const subtitle = xmlText(feed.subtitle);
   const description = subtitle || "Follow recent articles from this feed";
   const link = pickAtomLink(feed, fallbackUrl);
-  return { title, description, link };
+  return { title, description, link, iconUrl: pickAtomIconUrl(feed, fallbackUrl) };
 }
 
 /**

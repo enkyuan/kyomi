@@ -84,6 +84,7 @@ export const searchFeeds = createServerFn({ method: "GET" })
             title: normalizedUrl,
             description: "Couldn't preview this feed. Select it to try following directly.",
             link: normalizedUrl,
+            faviconUrl: null,
             isSubscribed: false,
           },
         ];

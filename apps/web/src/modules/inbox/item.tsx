@@ -121,7 +121,11 @@ export const FeedItem = memo(function FeedItem({
       }
     >
       <CardHeader className="gap-2 px-5 py-3">
-        <InboxSourceRow articleUrl={item.link} feedTitle={item.feedTitle} />
+        <InboxSourceRow
+          articleUrl={item.link}
+          feedFaviconUrl={item.feedFaviconUrl}
+          feedTitle={item.feedTitle}
+        />
         <CardTitle className="min-w-0 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground">
           <PretextText
             className="line-clamp-2 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground"
@@ -134,16 +138,16 @@ export const FeedItem = memo(function FeedItem({
         </CardTitle>
       </CardHeader>
       <CardContent className="px-5 pb-0 pt-0">
-        <p className="line-clamp-3 overflow-hidden text-pretty text-[14px] leading-[1.45] text-muted-foreground/90">
+        <p className="line-clamp-3 overflow-hidden text-pretty text-[14px] leading-[1.45] text-muted-foreground/95">
           {item.summary || "No summary available."}
         </p>
       </CardContent>
       <CardFooter className="mt-2 flex w-full flex-wrap items-center gap-2 px-5 pb-3 pt-0">
-        <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/75 tabular-nums">
+        <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/85 tabular-nums">
           {formatArticleTimestamp(item.publishedAt)}
         </span>
         {item.isSaved ? (
-          <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/75">
+          <span className="line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/85">
             Saved
           </span>
         ) : null}
@@ -230,6 +234,7 @@ function areFeedItemsEqual(a: InboxItem, b: InboxItem) {
     a.summary === b.summary &&
     a.link === b.link &&
     a.publishedAt === b.publishedAt &&
+    a.feedFaviconUrl === b.feedFaviconUrl &&
     a.feedTitle === b.feedTitle &&
     a.articleType === b.articleType &&
     a.isRead === b.isRead &&
