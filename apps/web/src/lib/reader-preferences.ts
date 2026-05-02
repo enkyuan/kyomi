@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/auth-provider";
 import type {
@@ -115,6 +115,16 @@ export function useReaderPreferences() {
   const mutationDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const mutationRollbackRef = useRef<ReaderPreferences | null>(null);
 
+  useEffect(() => {
+    return () => {
+      if (mutationDebounceRef.current) {
+        clearTimeout(mutationDebounceRef.current);
+        mutationDebounceRef.current = null;
+        mutationRollbackRef.current = null;
+      }
+    };
+  }, []);
+
   const preferences = preferencesQuery.data;
 
   const updateMutation = useMutation({
@@ -150,6 +160,8 @@ export function useReaderPreferences() {
   return {
     preferences,
     setPreferences: async (next: Partial<ReaderPreferences>) => {
+      await queryClient.cancelQueries({ queryKey });
+
       const current = preferencesQuery.data;
       const optimistic = sanitizeReaderPreferences({ ...current, ...next });
       if (JSON.stringify(current) === JSON.stringify(optimistic)) {
@@ -158,7 +170,6 @@ export function useReaderPreferences() {
 
       queryClient.setQueryData(queryKey, optimistic);
       writeCachedReaderPreferences(optimistic, user?.id);
-      void queryClient.cancelQueries({ queryKey });
 
       if (!user?.id) {
         return;
@@ -181,6 +192,8 @@ export function useReaderPreferences() {
       }, 300);
     },
     setPreferencesAsync: async (next: Partial<ReaderPreferences>) => {
+      await queryClient.cancelQueries({ queryKey });
+
       const current = preferencesQuery.data;
       const optimistic = sanitizeReaderPreferences({ ...current, ...next });
       if (JSON.stringify(current) === JSON.stringify(optimistic)) {
@@ -189,7 +202,6 @@ export function useReaderPreferences() {
 
       queryClient.setQueryData(queryKey, optimistic);
       writeCachedReaderPreferences(optimistic, user?.id);
-      void queryClient.cancelQueries({ queryKey });
 
       if (!user?.id) {
         return optimistic;
@@ -205,10 +217,11 @@ export function useReaderPreferences() {
       });
     },
     resetPreferences: async () => {
+      await queryClient.cancelQueries({ queryKey });
+
       const current = preferencesQuery.data;
       queryClient.setQueryData(queryKey, DEFAULT_READER_PREFERENCES);
       writeCachedReaderPreferences(DEFAULT_READER_PREFERENCES, user?.id);
-      void queryClient.cancelQueries({ queryKey });
 
       if (!user?.id) {
         return;
