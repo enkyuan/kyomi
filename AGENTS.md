@@ -1,7 +1,7 @@
 ## Learned User Preferences
 - Follow attached implementation plans exactly and do not edit the plan file.
 - Reuse existing plan to-dos; do not recreate them, and move statuses in order while executing.
-- Prioritize deep root-cause diagnosis and standards-based fixes over quick or hacky workarounds.
+- Prioritize deep root-cause diagnosis and clean, standards-based fixes over quick/hacky workarounds or patch-style bandaids.
 - When asked to refactor, preserve behavior and avoid runtime regressions.
 - Apply UI feedback literally and iteratively with precise visual adjustments; prefer Tailwind utility classes over inline styles for small layout and typography tweaks in `apps/web` when both are viable.
 - For form UX, show validation errors per-field (not all at once) and only when relevant.

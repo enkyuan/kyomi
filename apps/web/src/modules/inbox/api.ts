@@ -52,11 +52,18 @@ export type InboxDetailResponse = {
   item: ArticleDetailDto | null;
 };
 
+export type UpdateInboxItemStateInput = {
+  itemId: string;
+  isRead?: boolean | null;
+  isSaved?: boolean;
+};
+
 type GetInboxItemsInput = {
   filter?: InboxFilter;
   search?: string;
   feedId?: string;
   folderId?: string;
+  includeRead?: boolean;
   cursor?: string;
   timezoneOffsetMinutes?: number;
 };
@@ -94,13 +101,22 @@ function mapInboxItem(item: CursorListResponse["items"][number]): InboxItem {
 async function fetchInboxList(
   filter: InboxFilter,
   timezoneOffsetMinutes: number,
+  includeRead: boolean,
   search: string | undefined,
   cursor: string | undefined,
   headers: Headers,
 ): Promise<CursorListResponse> {
   return apiJsonValidated(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
-      buildArticlesUrl(filter, timezoneOffsetMinutes, search, undefined, undefined, cursor),
+      buildArticlesUrl(
+        filter,
+        timezoneOffsetMinutes,
+        includeRead,
+        search,
+        undefined,
+        undefined,
+        cursor,
+      ),
       {
         headers: buildForwardHeaders(headers),
       },
@@ -111,6 +127,7 @@ async function fetchInboxList(
 function buildArticlesUrl(
   filter: InboxFilter,
   timezoneOffsetMinutes: number,
+  includeRead = false,
   search?: string,
   feedId?: string,
   folderId?: string,
@@ -121,7 +138,7 @@ function buildArticlesUrl(
     const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
     params.set("published_after", start);
     params.set("published_before", end);
-  } else if (filter === "unread") {
+  } else if (filter === "unread" && !includeRead) {
     params.set("is_read", "false");
   } else if (filter === "saved") {
     params.set("is_saved", "true");
@@ -157,6 +174,7 @@ export const getInboxItems = createServerFn({ method: "GET" })
               buildArticlesUrl(
                 filter,
                 timezoneOffsetMinutes,
+                Boolean(data.includeRead),
                 data.search,
                 data.feedId,
                 data.folderId,
@@ -167,7 +185,14 @@ export const getInboxItems = createServerFn({ method: "GET" })
               },
             ),
           )
-        : await fetchInboxList(filter, timezoneOffsetMinutes, data.search, data.cursor, headers);
+        : await fetchInboxList(
+            filter,
+            timezoneOffsetMinutes,
+            Boolean(data.includeRead),
+            data.search,
+            data.cursor,
+            headers,
+          );
     const items = response.items.map(mapInboxItem);
 
     return {
@@ -189,6 +214,28 @@ export const getInboxItemDetail = createServerFn({ method: "GET" })
     );
 
     return { item };
+  });
+
+export const updateInboxItemState = createServerFn({ method: "POST" })
+  .inputValidator((input: UpdateInboxItemStateInput) => input)
+  .handler(async ({ data }): Promise<{ message: string }> => {
+    const headers = getRequestHeaders();
+    const forwarded = buildForwardHeaders(headers);
+    forwarded.set("content-type", "application/json");
+
+    const body: Omit<UpdateInboxItemStateInput, "itemId"> = {};
+    if (Object.hasOwn(data, "isRead")) {
+      body.isRead = data.isRead;
+    }
+    if (Object.hasOwn(data, "isSaved")) {
+      body.isSaved = data.isSaved;
+    }
+
+    return apiJson<{ message: string }>(`/api/v1/articles/${data.itemId}`, {
+      method: "PUT",
+      headers: forwarded,
+      body: JSON.stringify(body),
+    });
   });
 
 export const getInboxCounts = createServerFn({ method: "GET" }).handler(async () => {
@@ -253,6 +300,7 @@ export const getInboxViewCount = createServerFn({ method: "GET" })
   .inputValidator(
     (input: {
       filter: InboxFilter;
+      includeRead?: boolean;
       timezoneOffsetMinutes?: number;
       feedId?: string;
       folderId?: string;
@@ -270,6 +318,10 @@ export const getInboxViewCount = createServerFn({ method: "GET" })
       const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
       params.set("published_after", start);
       params.set("published_before", end);
+    } else if (data.filter === "unread" && !data.includeRead) {
+      params.set("is_read", "false");
+    } else if (data.filter === "saved") {
+      params.set("is_saved", "true");
     }
     if (data.feedId?.trim()) {
       params.set("feed_id", data.feedId.trim());
@@ -316,7 +368,7 @@ export const getScopedUnreadCount = createServerFn({ method: "GET" })
     // Folder-scoped unread: no dedicated count endpoint yet, fall back to
     // the list query. TODO: add a folder-scoped count endpoint on the API.
     const response = await apiJson<CursorListResponse>(
-      buildArticlesUrl("unread", 0, undefined, undefined, data.folderId),
+      buildArticlesUrl("unread", 0, false, undefined, undefined, data.folderId),
       { headers: buildForwardHeaders(headers) },
     );
     return { count: response.items.length };

@@ -8,6 +8,7 @@ export type InboxQueryScope = {
   search?: string;
   feedId?: string;
   folderId?: string;
+  includeRead?: boolean;
   itemId?: string;
   timezoneOffsetMinutes?: number;
 };
@@ -17,9 +18,19 @@ export function inboxItemsQueryKey({
   search,
   feedId,
   folderId,
+  includeRead,
   timezoneOffsetMinutes = getTimezoneOffsetMinutes(),
 }: InboxQueryScope = {}) {
-  return ["inbox", "items", filter, search, feedId, folderId, timezoneOffsetMinutes] as const;
+  return [
+    "inbox",
+    "items",
+    filter,
+    search,
+    feedId,
+    folderId,
+    includeRead,
+    timezoneOffsetMinutes,
+  ] as const;
 }
 
 export function inboxDetailQueryKey(itemId: string | undefined) {
@@ -44,6 +55,7 @@ export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
           search: scope.search,
           feedId: scope.feedId,
           folderId: scope.folderId,
+          includeRead: scope.includeRead,
           cursor: pageParam,
           timezoneOffsetMinutes,
         },

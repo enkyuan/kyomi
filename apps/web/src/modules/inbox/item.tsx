@@ -2,9 +2,13 @@
 
 import { layout, prepare } from "@chenglou/pretext";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
-import type { InboxItem } from "@modules/inbox/api";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import type { InfiniteData, QueryClient } from "@tanstack/react-query";
+import type { ArticleDetailDto } from "@lib/api-schemas";
+import { updateInboxItemState, type InboxItem } from "@modules/inbox/api";
 import { cn } from "@lib/utils";
 import { InboxSourceRow } from "@modules/inbox/source-row";
+import { InboxItemToolbar } from "@modules/inbox/item-toolbar";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@components/ui/card";
 
 const TITLE_FONT = '600 16px "Inter Variable"';
@@ -17,6 +21,13 @@ const ARTICLE_TIMESTAMP_FORMATTER = new Intl.DateTimeFormat("en", {
   dateStyle: "medium",
   timeStyle: "short",
 });
+type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
+type InboxItemsInfiniteData = InfiniteData<{
+  items: InboxItem[];
+  total: number;
+  nextCursor: string | null;
+  hasMore: boolean;
+}>;
 const pretextPrepareCache = new Map<string, ReturnType<typeof prepare>>();
 const pretextFitCache = new Map<string, number | undefined>();
 
@@ -101,14 +112,38 @@ export const FeedItem = memo(function FeedItem({
   onSelect: (itemId: string) => void;
 }) {
   const selectItem = () => onSelect(item.id);
+  const queryClient = useQueryClient();
+  const updateItemMutation = useMutation({
+    mutationFn: (input: { patch: InboxItemPatch; removeFromList?: boolean }) =>
+      updateInboxItemState({
+        data: {
+          itemId: item.id,
+          ...input.patch,
+        },
+      }),
+    onMutate: async ({ patch, removeFromList }) => {
+      await queryClient.cancelQueries({ queryKey: ["inbox"] });
+      updateInboxItemCaches(queryClient, item.id, patch, Boolean(removeFromList));
+    },
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "item-detail", item.id] });
+      void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
+    },
+  });
+
+  const updateItem = (patch: InboxItemPatch, removeFromList = false) => {
+    updateItemMutation.mutate({ patch, removeFromList });
+  };
 
   return (
     <Card
       className={cn(
-        "w-full cursor-pointer gap-0 overflow-hidden rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform active:scale-[0.996] motion-reduce:active:scale-100",
+        "group/inbox-item relative z-0 w-full cursor-pointer gap-0 overflow-visible rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform hover:z-20 focus-within:z-20 active:scale-[0.996] motion-reduce:active:scale-100",
         isFirst ? "border-t-0" : "border-t",
         showBottomSeparator ? "border-b" : "border-b-0",
-        isSelected ? "bg-background" : "hover:bg-background/70",
+        isSelected || item.isRead ? "bg-background" : "hover:bg-background/70",
       )}
       render={
         <div
@@ -124,6 +159,13 @@ export const FeedItem = memo(function FeedItem({
         />
       }
     >
+      <InboxItemToolbar
+        isRead={item.isRead}
+        isSaved={item.isSaved}
+        onHide={() => updateItem({ isRead: true }, true)}
+        onMarkRead={() => updateItem({ isRead: true })}
+        onToggleSaved={() => updateItem({ isSaved: !item.isSaved })}
+      />
       <CardHeader className="gap-2 px-5 py-3">
         <InboxSourceRow
           articleUrl={item.link}
@@ -293,4 +335,48 @@ function formatArticleTimestamp(value: string) {
   }
 
   return ARTICLE_TIMESTAMP_FORMATTER.format(date);
+}
+
+function updateInboxItemCaches(
+  queryClient: QueryClient,
+  itemId: string,
+  patch: InboxItemPatch,
+  removeFromList: boolean,
+) {
+  queryClient.setQueriesData<InboxItemsInfiniteData>({ queryKey: ["inbox", "items"] }, (data) => {
+    if (!data) {
+      return data;
+    }
+
+    return {
+      ...data,
+      pages: data.pages.map((page) => {
+        const items = removeFromList
+          ? page.items.filter((item) => item.id !== itemId)
+          : page.items.map((item) => (item.id === itemId ? { ...item, ...patch } : item));
+
+        return {
+          ...page,
+          items,
+          total: items.length,
+        };
+      }),
+    };
+  });
+
+  queryClient.setQueryData<{ item: ArticleDetailDto | null }>(
+    ["inbox", "item-detail", itemId],
+    (data) => {
+      if (!data?.item) {
+        return data;
+      }
+      return {
+        ...data,
+        item: {
+          ...data.item,
+          ...patch,
+        },
+      };
+    },
+  );
 }

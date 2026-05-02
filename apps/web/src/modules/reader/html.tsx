@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef } from "react";
 import { enhanceArticleCodeBlocks } from "./code-blocks";
 import { prepareArticleHtml } from "./html/string-prep";
 import { runReaderDomEnhancements, type ReaderLayoutMode } from "./html/dom-enhancements";
+import { mountReaderLinkPreviewCards } from "./link-preview-card";
 import "katex/dist/katex.min.css";
 
 function updateReaderLinkTargets(node: HTMLElement, openLinksInNewTab: boolean) {
@@ -32,12 +33,21 @@ export function RenderHtml({
   const articleBodyRef = useRef<HTMLDivElement | null>(null);
   const enhancementRunRef = useRef(0);
   const cancelScheduledEnhancementRef = useRef<(() => void) | null>(null);
+  const linkPreviewCleanupsRef = useRef<(() => void)[]>([]);
   const prepared = useMemo(() => prepareArticleHtml(html, baseUrl), [html, baseUrl]);
+
+  const disposeAllLinkPreviewMounts = () => {
+    for (let i = linkPreviewCleanupsRef.current.length - 1; i >= 0; i -= 1) {
+      linkPreviewCleanupsRef.current[i]();
+    }
+    linkPreviewCleanupsRef.current = [];
+  };
 
   const runAllEnhancements = (node: HTMLElement) => {
     enhanceArticleCodeBlocks(node);
     runReaderDomEnhancements(node, { layoutMode });
     updateReaderLinkTargets(node, openLinksInNewTab);
+    linkPreviewCleanupsRef.current.push(mountReaderLinkPreviewCards(node));
   };
 
   const scheduleEnhancements = (node: HTMLElement) => {
@@ -94,6 +104,10 @@ export function RenderHtml({
   };
 
   useEffect(() => {
+    disposeAllLinkPreviewMounts();
+  }, [prepared]);
+
+  useEffect(() => {
     const node = articleBodyRef.current;
     if (!node || typeof window === "undefined" || typeof document === "undefined") {
       return;
@@ -106,6 +120,10 @@ export function RenderHtml({
     return () => {
       cancelScheduledEnhancementRef.current?.();
       cancelScheduledEnhancementRef.current = null;
+      for (let i = linkPreviewCleanupsRef.current.length - 1; i >= 0; i -= 1) {
+        linkPreviewCleanupsRef.current[i]();
+      }
+      linkPreviewCleanupsRef.current = [];
     };
   }, []);
 

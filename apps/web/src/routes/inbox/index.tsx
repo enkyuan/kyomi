@@ -9,6 +9,8 @@ const inboxSearchSchema = z.object({
   feedId: z.string().optional(),
   folderId: z.string().optional(),
   itemId: z.string().optional(),
+  showHidden: z.literal("1").optional(),
+  showRead: z.literal("1").optional(),
 });
 
 export const Route = createFileRoute("/inbox/")({

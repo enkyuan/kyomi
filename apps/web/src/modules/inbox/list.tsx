@@ -1,9 +1,9 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { Filter2Fill } from "@mingcute/react";
 import { useNavigate } from "@tanstack/react-router";
 import { FeedItem } from "@modules/inbox/item";
+import { InboxListFilterMenu } from "@modules/inbox/list-filter-menu";
 import { FeedRefreshStatus } from "@modules/inbox/refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
@@ -17,8 +17,11 @@ interface InboxListProps {
   inboxItems: InboxItem[];
   viewCount: number;
   filter: InboxFilter;
+  activeScopeLabel?: "hidden" | "read";
   selectedItemId?: string;
   feedId?: string;
+  showHidden?: boolean;
+  showRead?: boolean;
   isLoading: boolean;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
@@ -59,6 +62,7 @@ function InboxListSkeletonRows() {
 
 function InboxListVirtualized({
   listScrollRef,
+  allowFirstRowOverlay,
   inboxItems,
   selectedItemId,
   isLoading,
@@ -68,6 +72,7 @@ function InboxListVirtualized({
   onSelectItem,
 }: {
   listScrollRef: RefObject<HTMLDivElement | null>;
+  allowFirstRowOverlay: boolean;
   inboxItems: InboxItem[];
   selectedItemId?: string;
   isLoading: boolean;
@@ -130,7 +135,7 @@ function InboxListVirtualized({
           <div
             key={virtualRow.key}
             ref={virtualizer.measureElement}
-            className="absolute left-0 top-0 w-full"
+            className={`group/inbox-row absolute left-0 top-0 z-0 w-full${virtualRow.index === 0 && allowFirstRowOverlay ? " hover:z-40 focus-within:z-40" : ""}`}
             data-index={virtualRow.index}
             style={{
               transform: `translateY(${virtualRow.start}px)`,
@@ -157,14 +162,18 @@ export function InboxList({
   inboxItems,
   viewCount,
   filter,
+  activeScopeLabel,
   selectedItemId,
   feedId,
+  showHidden = false,
+  showRead = false,
   isLoading,
   hasNextPage,
   isFetchingNextPage,
   fetchNextPage,
 }: InboxListProps) {
   const [isVirtualizerHostMounted, setIsVirtualizerHostMounted] = useState(false);
+  const [allowFirstRowOverlay, setAllowFirstRowOverlay] = useState(true);
   const listScrollRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
   const navigateRef = useRef(navigate);
@@ -177,6 +186,21 @@ export function InboxList({
     navigateRef.current = navigate;
   }, [navigate]);
 
+  useEffect(() => {
+    const node = listScrollRef.current;
+    if (!node) {
+      return;
+    }
+
+    const syncOverlayState = () => {
+      setAllowFirstRowOverlay(node.scrollTop <= 1);
+    };
+
+    syncOverlayState();
+    node.addEventListener("scroll", syncOverlayState, { passive: true });
+    return () => node.removeEventListener("scroll", syncOverlayState);
+  }, []);
+
   const handleSelectItem = useCallback((itemId: string) => {
     void navigateRef.current({
       from: "/inbox/",
@@ -187,53 +211,56 @@ export function InboxList({
     });
   }, []);
 
-  const countLabel = filter === "today" ? "today" : filter === "saved" ? "saved" : "unread";
+  const countLabel =
+    activeScopeLabel ?? (filter === "today" ? "today" : filter === "saved" ? "saved" : "unread");
 
   return (
-    <section className="flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground md:min-h-0">
-      <div className="sticky top-0 z-10 shrink-0 border-b border-border bg-card">
-        <div className="flex items-center justify-between gap-3 px-2 py-2">
+    <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground [--inbox-header-height:2.75rem] md:min-h-0">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-[var(--inbox-header-height)] border-b border-border bg-card">
+        <div className="pointer-events-auto flex h-full items-center justify-between gap-3 px-2">
           <span className="ps-1 font-medium text-muted-foreground text-sm tabular-nums">
             {viewCount} {countLabel}
           </span>
           <div className="flex items-center gap-0.5">
             {feedId ? <FeedRefreshStatus feedId={feedId} /> : null}
-            <button
-              type="button"
-              aria-label="Feed filters coming soon"
-              className="inline-flex size-10 items-center justify-center rounded-xl text-muted-foreground transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] hover:bg-background hover:text-foreground active:scale-[0.96] motion-reduce:active:scale-100"
-            >
-              <Filter2Fill className="size-4" />
-            </button>
+            {filter === "unread" ? (
+              <InboxListFilterMenu showHidden={showHidden} showRead={showRead} />
+            ) : null}
           </div>
         </div>
       </div>
       <ScrollAreaPrimitive.Root className="min-h-0 flex-1 overflow-hidden">
         <ScrollAreaPrimitive.Viewport
           ref={listScrollRef}
-          className="h-full overflow-x-hidden outline-none data-has-overflow-y:overscroll-y-contain"
+          className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
           data-slot="inbox-list-viewport"
         >
-          {!isVirtualizerHostMounted ? (
-            isLoading && inboxItems.length === 0 ? (
-              <InboxListSkeletonRows />
-            ) : inboxItems.length === 0 ? null : (
-              <InboxListSkeletonRows />
-            )
-          ) : (
-            <InboxListVirtualized
-              listScrollRef={listScrollRef}
-              inboxItems={inboxItems}
-              selectedItemId={selectedItemId}
-              isLoading={isLoading}
-              hasNextPage={hasNextPage}
-              isFetchingNextPage={isFetchingNextPage}
-              fetchNextPage={fetchNextPage}
-              onSelectItem={handleSelectItem}
-            />
-          )}
+          <div className="pt-[var(--inbox-header-height)]">
+            {!isVirtualizerHostMounted ? (
+              isLoading && inboxItems.length === 0 ? (
+                <InboxListSkeletonRows />
+              ) : inboxItems.length === 0 ? null : (
+                <InboxListSkeletonRows />
+              )
+            ) : (
+              <InboxListVirtualized
+                listScrollRef={listScrollRef}
+                allowFirstRowOverlay={allowFirstRowOverlay}
+                inboxItems={inboxItems}
+                selectedItemId={selectedItemId}
+                isLoading={isLoading}
+                hasNextPage={hasNextPage}
+                isFetchingNextPage={isFetchingNextPage}
+                fetchNextPage={fetchNextPage}
+                onSelectItem={handleSelectItem}
+              />
+            )}
+          </div>
         </ScrollAreaPrimitive.Viewport>
-        <ScrollBar orientation="vertical" />
+        <ScrollBar
+          className="z-50 mt-[var(--inbox-header-height)] h-[calc(100%-var(--inbox-header-height))]"
+          orientation="vertical"
+        />
       </ScrollAreaPrimitive.Root>
     </section>
   );

@@ -10,6 +10,7 @@ type UseInboxQueriesInput = {
   feedId?: string;
   folderId?: string;
   itemId?: string;
+  includeRead?: boolean;
   timezoneOffsetMinutes?: number;
 };
 
@@ -34,10 +35,18 @@ export function useInboxQueries({
   feedId,
   folderId,
   itemId,
+  includeRead,
   timezoneOffsetMinutes,
 }: UseInboxQueriesInput) {
   const inboxQuery = useInfiniteQuery(
-    inboxItemsInfiniteQueryOptions({ filter, search, feedId, folderId, timezoneOffsetMinutes }),
+    inboxItemsInfiniteQueryOptions({
+      filter,
+      search,
+      feedId,
+      folderId,
+      includeRead,
+      timezoneOffsetMinutes,
+    }),
   );
 
   const detailQuery = useQuery(inboxDetailQueryOptions(itemId));

@@ -15,9 +15,28 @@ import { useSearch } from "@tanstack/react-router";
 const MIN_LEFT_PERCENT = 26;
 const MIN_RIGHT_PERCENT = 64;
 
+function parseSearchFlag(value: string | undefined) {
+  if (!value) {
+    return false;
+  }
+  const normalized = value.replaceAll('"', "");
+  return normalized === "1" || normalized === "true";
+}
+
 export function InboxPage() {
-  const { filter = "today", search, feedId, folderId, itemId } = useSearch({ from: "/inbox/" });
+  const {
+    filter = "today",
+    search,
+    feedId,
+    folderId,
+    itemId,
+    showHidden,
+    showRead,
+  } = useSearch({ from: "/inbox/" });
   const [timezoneOffsetMinutes, setTimezoneOffsetMinutes] = useState<number | undefined>(undefined);
+  const showHiddenItems = parseSearchFlag(showHidden);
+  const showReadItems = parseSearchFlag(showRead);
+  const includeRead = filter === "unread" && (showHiddenItems || showReadItems);
 
   useEffect(() => {
     setTimezoneOffsetMinutes(new Date().getTimezoneOffset());
@@ -39,17 +58,35 @@ export function InboxPage() {
     feedId,
     folderId,
     itemId,
+    includeRead,
     timezoneOffsetMinutes,
   });
 
-  const inboxItems = useMemo(
+  const rawInboxItems = useMemo(
     () => dedupeInboxItems(inboxQuery.data?.pages.flatMap((page) => page.items) ?? []),
     [inboxQuery.data?.pages],
   );
+  const activeScopeLabel =
+    filter === "unread"
+      ? showHiddenItems && !showReadItems
+        ? "hidden"
+        : showReadItems
+          ? "read"
+          : undefined
+      : undefined;
+  const inboxItems = useMemo(() => {
+    if (filter !== "unread") {
+      return rawInboxItems;
+    }
+    if (showHiddenItems || showReadItems) {
+      return rawInboxItems.filter((item) => item.isRead);
+    }
+    return rawInboxItems;
+  }, [filter, rawInboxItems, showHiddenItems, showReadItems]);
 
   const viewCountQuery = useQuery({
-    queryKey: ["inbox", "view-count", filter, feedId, folderId, timezoneOffsetMinutes],
-    enabled: timezoneOffsetMinutes !== undefined,
+    queryKey: ["inbox", "view-count", filter, feedId, folderId, timezoneOffsetMinutes, includeRead],
+    enabled: timezoneOffsetMinutes !== undefined && !includeRead,
     queryFn: () =>
       getInboxViewCount({
         data: {
@@ -57,6 +94,7 @@ export function InboxPage() {
           feedId,
           folderId,
           timezoneOffsetMinutes,
+          includeRead,
         },
       }),
     staleTime: QUERY_TIMES.countsStale,
@@ -80,8 +118,11 @@ export function InboxPage() {
           inboxItems={inboxItems}
           viewCount={viewCount}
           filter={filter}
+          activeScopeLabel={activeScopeLabel}
           selectedItemId={itemId}
           feedId={feedId}
+          showHidden={showHiddenItems}
+          showRead={showReadItems}
           isLoading={inboxQuery.isPending}
           hasNextPage={!!inboxQuery.hasNextPage}
           isFetchingNextPage={inboxQuery.isFetchingNextPage}

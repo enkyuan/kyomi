@@ -1,6 +1,7 @@
 "use client";
 
 import { FeedFavicon } from "@components/navigation/feed-favicon";
+import { PreviewCard, PreviewCardPopup, PreviewCardTrigger } from "@components/ui/preview-card";
 import { getFeedSourceLabel } from "@lib/feed-source-label";
 import { cn } from "@lib/utils";
 
@@ -21,6 +22,8 @@ export function InboxSourceRow({
   labelClassName,
   iconClassName,
 }: InboxSourceRowProps) {
+  const sourceLabel = getFeedSourceLabel(articleUrl, feedTitle);
+
   return (
     <div className={cn("flex w-full min-w-0 items-center gap-2.5", className)}>
       <FeedFavicon
@@ -33,14 +36,27 @@ export function InboxSourceRow({
         siteUrl={articleUrl}
         title={feedTitle}
       />
-      <p
-        className={cn(
-          "min-w-0 flex-1 truncate text-[12px] font-medium tracking-[0.015em] text-muted-foreground/95",
-          labelClassName,
-        )}
-      >
-        {getFeedSourceLabel(articleUrl, feedTitle)}
-      </p>
+      <PreviewCard>
+        <PreviewCardTrigger
+          render={
+            <span
+              className={cn(
+                "min-w-0 flex-1 truncate text-[12px] font-medium tracking-[0.015em] text-muted-foreground/95",
+                labelClassName,
+              )}
+            />
+          }
+        >
+          {sourceLabel}
+        </PreviewCardTrigger>
+        <PreviewCardPopup align="start" className="w-72 gap-0 p-3">
+          <div className="flex flex-col gap-1.5">
+            <h4 className="truncate font-medium text-sm">{sourceLabel}</h4>
+            <p className="line-clamp-2 text-muted-foreground text-xs">{feedTitle}</p>
+            <p className="break-all text-muted-foreground/90 text-xs">{articleUrl}</p>
+          </div>
+        </PreviewCardPopup>
+      </PreviewCard>
     </div>
   );
 }
