@@ -49,13 +49,7 @@ export async function getArticleCountsForUser(
     .from(feedItems)
     .innerJoin(feedSubscriptions, joinCond)
     .leftJoin(feedItemUserState, stateJoin)
-    .where(
-      and(
-        sql`${feedItemUserState.isSaved} IS TRUE`,
-        sql`(${articleIsReadSql}) = false`,
-        feedScopeFilter,
-      ),
-    );
+    .where(and(sql`${feedItemUserState.isSaved} IS TRUE`, feedScopeFilter));
 
   const includeClipCounts = !scopedFeedId && !scopedFolderId;
   const clipUnread = includeClipCounts
@@ -70,13 +64,7 @@ export async function getArticleCountsForUser(
     ? await database
         .select({ c: sql<number>`count(*)::int` })
         .from(articleClips)
-        .where(
-          and(
-            eq(articleClips.userId, userId),
-            eq(articleClips.isSaved, true),
-            eq(articleClips.isRead, false),
-          ),
-        )
+        .where(and(eq(articleClips.userId, userId), eq(articleClips.isSaved, true)))
     : [];
   const clipAll = includeClipCounts
     ? await database

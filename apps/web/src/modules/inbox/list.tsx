@@ -167,7 +167,7 @@ function InboxListVirtualized({
           <div
             key={virtualRow.key}
             ref={virtualizer.measureElement}
-            className={`group/inbox-row absolute left-0 top-0 z-0 w-full${virtualRow.index === 0 && allowFirstRowOverlay ? " hover:z-40" : ""}`}
+            className={`group/inbox-row absolute left-0 top-0 z-0 w-full${virtualRow.index === 0 && allowFirstRowOverlay ? " hover:z-40 focus-within:z-40" : ""}`}
             data-index={virtualRow.index}
             style={{
               transform: `translateY(${virtualRow.start}px)`,
