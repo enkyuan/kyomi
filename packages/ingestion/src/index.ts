@@ -133,6 +133,35 @@ function computeFailureBackoffMs(snapshot: RefreshTimingSnapshot): number {
   return hasConsecutiveFailure ? 60 * 60 * 1000 : 15 * 60 * 1000;
 }
 
+function faviconSourceRank(source: string | null): number {
+  switch (source) {
+    case "html_link":
+    case "feed_icon":
+      return 3;
+    case "google_s2":
+    case "duckduckgo":
+      return 2;
+    case "favicon_ico":
+      return 1;
+    default:
+      return 0;
+  }
+}
+
+function shouldResolveFavicon({
+  currentUrl,
+  currentSource,
+  linkChanged,
+}: {
+  currentUrl: string | null;
+  currentSource: string | null;
+  linkChanged: boolean;
+}): boolean {
+  return (
+    !currentUrl || linkChanged || faviconSourceRank(currentSource) < faviconSourceRank("html_link")
+  );
+}
+
 const NAMED_HTML_ENTITIES: Record<string, string> = {
   amp: "&",
   lt: "<",
@@ -971,6 +1000,7 @@ export async function runFeedRefresh(
         url: feeds.url,
         link: feeds.link,
         faviconUrl: feeds.faviconUrl,
+        faviconSource: feeds.faviconSource,
         etag: feeds.etag,
         lastModified: feeds.lastModified,
         lastRefreshSucceededAt: feeds.lastRefreshSucceededAt,
@@ -1012,7 +1042,13 @@ export async function runFeedRefresh(
         faviconFetchedAt: Date;
         updatedAt: Date;
       } | null = null;
-      if (!feed.faviconUrl) {
+      if (
+        shouldResolveFavicon({
+          currentUrl: feed.faviconUrl,
+          currentSource: feed.faviconSource,
+          linkChanged: false,
+        })
+      ) {
         const seed = feed.link ?? feed.url;
         const resolved = await tryResolveFaviconMetadata(seed);
         if (resolved) {
@@ -1082,7 +1118,11 @@ export async function runFeedRefresh(
     const prevLink = feed.link ?? null;
     const nextLink = parsed.metadata.link ?? null;
     const linkChanged = (prevLink ?? "") !== (nextLink ?? "");
-    const needsFavicon = !feed.faviconUrl || linkChanged;
+    const needsFavicon = shouldResolveFavicon({
+      currentUrl: feed.faviconUrl,
+      currentSource: feed.faviconSource,
+      linkChanged,
+    });
     let faviconPatch: {
       faviconUrl: string;
       faviconSource: string;

@@ -10,6 +10,21 @@ type DB = typeof db;
 
 export type FaviconEnrichment = { url: string; source: string } | null;
 
+function faviconSourceRank(source: string | null): number {
+  switch (source) {
+    case "html_link":
+    case "feed_icon":
+      return 3;
+    case "google_s2":
+    case "duckduckgo":
+      return 2;
+    case "favicon_ico":
+      return 1;
+    default:
+      return 0;
+  }
+}
+
 /**
  * Upsert the global `feeds` row by canonical URL. Returns the feed ID and
  * whether a new row was inserted.
@@ -27,14 +42,22 @@ export async function upsertFeedRecord(
   const now = new Date();
 
   const existingFeed = await tx
-    .select({ id: feeds.id, link: feeds.link, faviconUrl: feeds.faviconUrl })
+    .select({
+      id: feeds.id,
+      link: feeds.link,
+      faviconUrl: feeds.faviconUrl,
+      faviconSource: feeds.faviconSource,
+    })
     .from(feeds)
     .where(eq(feeds.url, resolved.canonicalUrl))
     .limit(1);
 
   if (existingFeed[0]) {
     const linkChanged = (existingFeed[0].link ?? "") !== (resolved.link ?? "");
-    const shouldApplyFavicon = favicon && (!existingFeed[0].faviconUrl || linkChanged);
+    const hasBetterFavicon =
+      faviconSourceRank(favicon?.source ?? null) > faviconSourceRank(existingFeed[0].faviconSource);
+    const shouldApplyFavicon =
+      favicon && (!existingFeed[0].faviconUrl || linkChanged || hasBetterFavicon);
 
     await tx
       .update(feeds)

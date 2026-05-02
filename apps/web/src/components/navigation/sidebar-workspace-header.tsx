@@ -90,8 +90,8 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
           search: () => ({
             filter: "today" as const,
             search: undefined,
-            feedId: scopedFeedId,
-            folderId: scopedFolderId,
+            feedId: undefined,
+            folderId: undefined,
             itemId: undefined,
           }),
         }),
@@ -106,8 +106,8 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
           search: () => ({
             filter: "unread" as const,
             search: undefined,
-            feedId: scopedFeedId,
-            folderId: scopedFolderId,
+            feedId: undefined,
+            folderId: undefined,
             itemId: undefined,
           }),
         }),
@@ -122,8 +122,8 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
           search: () => ({
             filter: "saved" as const,
             search: undefined,
-            feedId: scopedFeedId,
-            folderId: scopedFolderId,
+            feedId: undefined,
+            folderId: undefined,
             itemId: undefined,
           }),
         }),
