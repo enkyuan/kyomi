@@ -72,6 +72,7 @@ export type ArticleUpdateBody = {
 };
 
 export type ArticleCountsDto = {
+  all?: number;
   unread: number;
   saved: number;
   /** Present when the client supplied `published_after` + `published_before` (local “today” window). */

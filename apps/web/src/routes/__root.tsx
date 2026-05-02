@@ -14,6 +14,8 @@ interface MyRouterContext {
 }
 
 const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getItem('theme');var mode=(stored==='light'||stored==='dark'||stored==='auto')?stored:'dark';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=mode==='auto'?(prefersDark?'dark':'light'):mode;var root=document.documentElement;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;}catch(e){console.warn('theme init failed',e);}})();`;
+const REACT_SCAN_STORAGE_KEY = "cronos:dev:react-scan";
+const REACT_SCAN_QUERY_PARAM = "react-scan";
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
   loader: async () => {
@@ -82,14 +84,49 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
+  useEffect(() => {
+    if (!import.meta.env.DEV || typeof window === "undefined") {
+      return;
+    }
+
+    const searchParams = new URLSearchParams(window.location.search);
+    const queryValue = searchParams.get(REACT_SCAN_QUERY_PARAM);
+
+    if (queryValue === "1") {
+      window.localStorage.setItem(REACT_SCAN_STORAGE_KEY, "1");
+    } else if (queryValue === "0") {
+      window.localStorage.removeItem(REACT_SCAN_STORAGE_KEY);
+    }
+
+    if (window.localStorage.getItem(REACT_SCAN_STORAGE_KEY) !== "1") {
+      return;
+    }
+
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      'script[data-cronos-react-scan="true"]',
+    );
+    if (existingScript) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.crossOrigin = "anonymous";
+    script.dataset.cronosReactScan = "true";
+    script.src = "https://unpkg.com/react-scan/dist/auto.global.js";
+    document.head.appendChild(script);
+
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         {/* Inline theme init must be its own script: if `src` is set, browsers ignore inline body. */}
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
-        {import.meta.env.DEV ? (
-          <script crossOrigin="anonymous" src="https://unpkg.com/react-scan/dist/auto.global.js" />
-        ) : null}
         <HeadContent />
       </head>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased wrap-anywhere selection:bg-[rgba(79,184,178,0.24)]">

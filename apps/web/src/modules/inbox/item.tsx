@@ -3,31 +3,26 @@
 import { layout, prepare } from "@chenglou/pretext";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import type { InfiniteData, QueryClient } from "@tanstack/react-query";
-import type { ArticleDetailDto } from "@lib/api-schemas";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
 import { updateInboxItemState, type InboxItem } from "@modules/inbox/api";
 import { cn } from "@lib/utils";
 import { InboxSourceRow } from "@modules/inbox/source-row";
 import { InboxItemToolbar } from "@modules/inbox/item-toolbar";
+import type { InboxFilter } from "@modules/inbox/api";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@components/ui/card";
+import { updateInboxItemCaches } from "@modules/inbox/cache";
+import { formatInboxTimestamp } from "@modules/inbox/format-timestamp";
 
 const TITLE_FONT = '600 16px "Inter Variable"';
-const TITLE_LINE_HEIGHT = 22;
+const TITLE_LINE_HEIGHT = {
+  comfortable: 22,
+  compact: 20,
+} as const;
 const PRETEXT_MIN_FILL_RATIO = 0.97;
 const PRETEXT_MAX_TRIM = 8;
 const PRETEXT_WIDTH_BUFFER = 4;
 const PRETEXT_CACHE_LIMIT = 600;
-const ARTICLE_TIMESTAMP_FORMATTER = new Intl.DateTimeFormat("en", {
-  dateStyle: "medium",
-  timeStyle: "short",
-});
 type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
-type InboxItemsInfiniteData = InfiniteData<{
-  items: InboxItem[];
-  total: number;
-  nextCursor: string | null;
-  hasMore: boolean;
-}>;
 const pretextPrepareCache = new Map<string, ReturnType<typeof prepare>>();
 const pretextFitCache = new Map<string, number | undefined>();
 
@@ -97,19 +92,29 @@ function getFittedPretextWidth({
 }
 
 export const FeedItem = memo(function FeedItem({
+  filter,
   item,
   isSelected,
   isFirst,
   showBottomSeparator,
   containerWidth,
+  density,
+  showFavicons,
+  timestampDisplay,
+  timestampHourCycle,
   onSelect,
 }: {
+  filter: InboxFilter;
   item: InboxItem;
   isSelected: boolean;
   isFirst: boolean;
   showBottomSeparator: boolean;
   containerWidth?: number;
-  onSelect: (itemId: string) => void;
+  density: InboxDensityDto;
+  showFavicons: boolean;
+  timestampDisplay: InboxTimestampDisplayDto;
+  timestampHourCycle: "12h" | "24h";
+  onSelect: (item: InboxItem) => void;
 }) {
   const queryClient = useQueryClient();
   const updateItemMutation = useMutation({
@@ -135,12 +140,10 @@ export const FeedItem = memo(function FeedItem({
   const updateItem = (patch: InboxItemPatch, removeFromList = false) => {
     updateItemMutation.mutate({ patch, removeFromList });
   };
-  const isReadDimmed = item.isRead;
+  const isReadDimmed = item.isRead && filter !== "recent";
+  const isCompact = density === "compact";
   const selectItem = () => {
-    if (!item.isRead) {
-      updateItem({ isRead: true });
-    }
-    onSelect(item.id);
+    onSelect(item);
   };
 
   return (
@@ -166,32 +169,44 @@ export const FeedItem = memo(function FeedItem({
       }
     >
       <InboxItemToolbar
+        filter={filter}
         isRead={item.isRead}
         isSaved={item.isSaved}
         onHide={() => updateItem({ isRead: true }, true)}
-        onMarkRead={() => updateItem({ isRead: true })}
+        onMarkRead={() =>
+          filter === "recent" ? updateItem({ isRead: false }, true) : updateItem({ isRead: true })
+        }
         onToggleSaved={() => updateItem({ isSaved: !item.isSaved })}
       />
-      <CardHeader className="gap-2 px-5 py-3">
+      <CardHeader className={cn("px-5", isCompact ? "gap-1.5 py-2.5" : "gap-2 py-3")}>
         <InboxSourceRow
           articleUrl={item.link}
           feedFaviconUrl={item.feedFaviconUrl}
           feedTitle={item.feedTitle}
+          showFavicon={showFavicons}
+          className={cn(isCompact && "gap-2")}
           iconClassName={cn(isReadDimmed && "opacity-65")}
-          labelClassName={cn(isReadDimmed && "text-muted-foreground/70")}
+          labelClassName={cn(
+            isCompact ? "text-[11px]" : undefined,
+            isReadDimmed && "text-muted-foreground/70",
+          )}
         />
         <CardTitle
           className={cn(
-            "min-w-0 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground",
+            "min-w-0 font-semibold tracking-[-0.012em] text-foreground",
+            isCompact ? "text-[15px] leading-5" : "text-[16px] leading-5.5",
             isReadDimmed && "text-foreground/82",
           )}
         >
           <PretextText
             className={cn(
-              "line-clamp-2 text-[16px] font-semibold leading-5.5 tracking-[-0.012em] text-foreground",
+              "font-semibold tracking-[-0.012em] text-foreground",
+              isCompact
+                ? "line-clamp-2 text-[15px] leading-5"
+                : "line-clamp-2 text-[16px] leading-5.5",
               isReadDimmed && "text-foreground/82",
             )}
-            lineHeight={TITLE_LINE_HEIGHT}
+            lineHeight={TITLE_LINE_HEIGHT[density]}
             maxLines={2}
             text={item.title}
             font={TITLE_FONT}
@@ -202,26 +217,36 @@ export const FeedItem = memo(function FeedItem({
       <CardContent className="px-5 pb-0 pt-0">
         <p
           className={cn(
-            "line-clamp-3 overflow-hidden text-pretty text-[14px] leading-[1.45] text-muted-foreground/95",
+            "overflow-hidden text-pretty text-muted-foreground/95",
+            isCompact
+              ? "line-clamp-2 text-[13px] leading-[1.38]"
+              : "line-clamp-3 text-[14px] leading-[1.45]",
             isReadDimmed && "text-muted-foreground/65",
           )}
         >
           {item.summary || "No summary available."}
         </p>
       </CardContent>
-      <CardFooter className="mt-2 flex w-full flex-wrap items-center gap-2 px-5 pb-3 pt-0">
+      <CardFooter
+        className={cn(
+          "flex w-full flex-wrap items-center gap-2 px-5 pt-0",
+          isCompact ? "mt-1.5 pb-2.5" : "mt-2 pb-3",
+        )}
+      >
         <span
           className={cn(
-            "line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/85 tabular-nums",
+            "line-clamp-1 font-medium tracking-[0.01em] text-muted-foreground/85 tabular-nums",
+            isCompact ? "text-[11px]" : "text-[12px]",
             isReadDimmed && "text-muted-foreground/65",
           )}
         >
-          {formatArticleTimestamp(item.publishedAt)}
+          {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
         </span>
         {item.isSaved ? (
           <span
             className={cn(
-              "line-clamp-1 text-[12px] font-medium tracking-[0.01em] text-muted-foreground/85",
+              "line-clamp-1 font-medium tracking-[0.01em] text-muted-foreground/85",
+              isCompact ? "text-[11px]" : "text-[12px]",
               isReadDimmed && "text-muted-foreground/65",
             )}
           >
@@ -296,12 +321,17 @@ const PretextText = memo(function PretextText({
 }, arePretextTextPropsEqual);
 
 type FeedItemProps = {
+  filter: InboxFilter;
   item: InboxItem;
   isSelected: boolean;
   isFirst: boolean;
   showBottomSeparator: boolean;
   containerWidth?: number;
-  onSelect: (itemId: string) => void;
+  density: InboxDensityDto;
+  showFavicons: boolean;
+  timestampDisplay: InboxTimestampDisplayDto;
+  timestampHourCycle: "12h" | "24h";
+  onSelect: (item: InboxItem) => void;
 };
 
 function areFeedItemsEqual(a: InboxItem, b: InboxItem) {
@@ -321,11 +351,16 @@ function areFeedItemsEqual(a: InboxItem, b: InboxItem) {
 
 function areFeedItemPropsEqual(prev: FeedItemProps, next: FeedItemProps) {
   return (
+    prev.filter === next.filter &&
     areFeedItemsEqual(prev.item, next.item) &&
     prev.isSelected === next.isSelected &&
     prev.isFirst === next.isFirst &&
     prev.showBottomSeparator === next.showBottomSeparator &&
     prev.containerWidth === next.containerWidth &&
+    prev.density === next.density &&
+    prev.showFavicons === next.showFavicons &&
+    prev.timestampDisplay === next.timestampDisplay &&
+    prev.timestampHourCycle === next.timestampHourCycle &&
     prev.onSelect === next.onSelect
   );
 }
@@ -355,59 +390,5 @@ function arePretextTextPropsEqual(
     prev.maxLines === next.maxLines &&
     prev.className === next.className &&
     prev.containerWidth === next.containerWidth
-  );
-}
-
-function formatArticleTimestamp(value: string) {
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return value;
-  }
-
-  return ARTICLE_TIMESTAMP_FORMATTER.format(date);
-}
-
-function updateInboxItemCaches(
-  queryClient: QueryClient,
-  itemId: string,
-  patch: InboxItemPatch,
-  removeFromList: boolean,
-) {
-  queryClient.setQueriesData<InboxItemsInfiniteData>({ queryKey: ["inbox", "items"] }, (data) => {
-    if (!data) {
-      return data;
-    }
-
-    return {
-      ...data,
-      pages: data.pages.map((page) => {
-        const items = removeFromList
-          ? page.items.filter((item) => item.id !== itemId)
-          : page.items.map((item) => (item.id === itemId ? { ...item, ...patch } : item));
-
-        return {
-          ...page,
-          items,
-          total: items.length,
-        };
-      }),
-    };
-  });
-
-  queryClient.setQueryData<{ item: ArticleDetailDto | null }>(
-    ["inbox", "item-detail", itemId],
-    (data) => {
-      if (!data?.item) {
-        return data;
-      }
-      return {
-        ...data,
-        item: {
-          ...data.item,
-          ...patch,
-        },
-      };
-    },
   );
 }

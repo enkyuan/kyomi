@@ -37,6 +37,13 @@ export async function getArticleCountsForUser(
     .leftJoin(feedItemUserState, stateJoin)
     .where(and(sql`(${articleIsReadSql}) = false`, feedScopeFilter));
 
+  const [allRow] = await database
+    .select({ c: sql<number>`count(*)::int` })
+    .from(feedItems)
+    .innerJoin(feedSubscriptions, joinCond)
+    .leftJoin(feedItemUserState, stateJoin)
+    .where(feedScopeFilter);
+
   const [savedRow] = await database
     .select({ c: sql<number>`count(*)::int` })
     .from(feedItems)
@@ -71,9 +78,17 @@ export async function getArticleCountsForUser(
           ),
         )
     : [];
+  const clipAll = includeClipCounts
+    ? await database
+        .select({ c: sql<number>`count(*)::int` })
+        .from(articleClips)
+        .where(eq(articleClips.userId, userId))
+    : [];
+  const clipAllRow = clipAll[0];
   const clipSavedRow = clipSaved[0];
 
   return {
+    all: (allRow?.c ?? 0) + (clipAllRow?.c ?? 0),
     unread: (unreadRow?.c ?? 0) + (clipUnreadRow?.c ?? 0),
     saved: (savedRow?.c ?? 0) + (clipSavedRow?.c ?? 0),
   };

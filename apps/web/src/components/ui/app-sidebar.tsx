@@ -31,7 +31,7 @@ export function AppSidebar() {
     staleTime: 30_000,
     refetchOnWindowFocus: true,
   });
-  const counts = inboxSummaryQuery.data ?? { today: 0, unread: 0, saved: 0 };
+  const counts = inboxSummaryQuery.data ?? { all: 0, today: 0, unread: 0, saved: 0 };
 
   useEffect(() => {
     if (typeof navigator === "undefined") {

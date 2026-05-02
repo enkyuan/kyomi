@@ -193,6 +193,7 @@ export const articleCountsQuerySchema = t.Object({
 });
 
 export const countsResponseSchema = t.Object({
+  all: t.Optional(t.Number()),
   unread: t.Number(),
   saved: t.Number(),
   today: t.Optional(t.Number()),

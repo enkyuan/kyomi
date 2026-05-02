@@ -72,14 +72,14 @@ export function SidebarPinnedSection() {
                     isActive={isInbox && location.search.feedId === feed.feedId}
                     onFocus={() => {
                       void prefetchInboxFlow(router, queryClient, {
-                        filter: "today",
+                        filter: "inbox",
                         feedId: feed.feedId,
                       });
                     }}
                     onPointerEnter={(event) => {
                       if (event.pointerType === "mouse" || event.pointerType === "pen") {
                         void prefetchInboxFlow(router, queryClient, {
-                          filter: "today",
+                          filter: "inbox",
                           feedId: feed.feedId,
                         });
                       }
@@ -88,7 +88,7 @@ export function SidebarPinnedSection() {
                       <Link
                         to="/inbox"
                         search={() => ({
-                          filter: "today" as const,
+                          filter: "inbox" as const,
                           search: undefined,
                           feedId: feed.feedId,
                           folderId: undefined,

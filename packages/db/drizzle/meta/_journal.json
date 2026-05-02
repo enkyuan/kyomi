@@ -64,6 +64,55 @@
       "when": 1777086000000,
       "tag": "0008_user_preferences",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1777809600000,
+      "tag": "0009_inbox_preferences",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1777820400000,
+      "tag": "0010_inbox_default_view",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1777824000000,
+      "tag": "0011_inbox_show_favicons",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1777827600000,
+      "tag": "0012_inbox_show_favicons_default_false",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1777831200000,
+      "tag": "0013_inbox_show_favicons_default_true",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1777834800000,
+      "tag": "0014_inbox_default_view_today",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1777838400000,
+      "tag": "0015_inbox_font_size",
+      "breakpoints": true
     }
   ]
 }

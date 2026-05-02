@@ -179,11 +179,11 @@ function FollowedFeedMenuItem({
       <SidebarMenuButton
         className={unreadCount > 0 ? "pe-10" : undefined}
         onFocus={() => {
-          void prefetchInboxFlow(router, queryClient, { filter: "today", feedId: item.feedId });
+          void prefetchInboxFlow(router, queryClient, { filter: "inbox", feedId: item.feedId });
         }}
         onPointerEnter={(event) => {
           if (event.pointerType === "mouse" || event.pointerType === "pen") {
-            void prefetchInboxFlow(router, queryClient, { filter: "today", feedId: item.feedId });
+            void prefetchInboxFlow(router, queryClient, { filter: "inbox", feedId: item.feedId });
           }
         }}
         onContextMenu={(event) => {
@@ -197,7 +197,7 @@ function FollowedFeedMenuItem({
           <Link
             to="/inbox"
             search={() => ({
-              filter: "today" as const,
+              filter: "inbox" as const,
               search: undefined,
               feedId: item.feedId,
               folderId: undefined,

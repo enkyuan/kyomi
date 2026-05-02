@@ -8,6 +8,7 @@ import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
 import { cn } from "@lib/utils";
 
 type InboxItemToolbarProps = {
+  filter: "inbox" | "today" | "unread" | "saved" | "recent";
   isRead: boolean;
   isSaved: boolean;
   onHide: () => void;
@@ -16,12 +17,16 @@ type InboxItemToolbarProps = {
 };
 
 export function InboxItemToolbar({
+  filter,
   isRead,
   isSaved,
   onHide,
   onMarkRead,
   onToggleSaved,
 }: InboxItemToolbarProps) {
+  const readLabel =
+    filter === "recent" ? "Mark as unread" : isRead ? "Already read" : "Mark as read";
+
   return (
     <Toolbar
       className={cn(
@@ -40,11 +45,7 @@ export function InboxItemToolbar({
         <InboxItemToolbarButton label="Hide from inbox" onClick={onHide}>
           <EyeLine />
         </InboxItemToolbarButton>
-        <InboxItemToolbarButton
-          label={isRead ? "Already read" : "Mark as read"}
-          onClick={onMarkRead}
-          active={isRead}
-        >
+        <InboxItemToolbarButton label={readLabel} onClick={onMarkRead} active={isRead}>
           {isRead ? <MailOpenFill /> : <MailOpenLine />}
         </InboxItemToolbarButton>
       </ToolbarGroup>

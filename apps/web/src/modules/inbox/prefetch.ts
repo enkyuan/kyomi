@@ -13,7 +13,7 @@ export async function prefetchInboxFlow(
     router.preloadRoute({
       to: "/inbox",
       search: {
-        filter: scope.filter ?? "today",
+        filter: scope.filter ?? "inbox",
         search: scope.search,
         feedId: scope.feedId,
         folderId: scope.folderId,

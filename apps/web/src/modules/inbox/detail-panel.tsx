@@ -7,15 +7,15 @@ import { Button } from "@components/ui/button";
 import { Spinner } from "@components/ui/spinner";
 import { toastManager } from "@components/ui/toast";
 import { useArticleExtraction } from "@modules/reader/use-extraction";
-import type { ArticleDetailDto, ExtractFullTextResponseDto } from "@lib/api-schemas";
+import type {
+  ArticleDetailDto,
+  ExtractFullTextResponseDto,
+  InboxTimestampDisplayDto,
+} from "@lib/api-schemas";
 import { readerContentForMode } from "@lib/reader-display";
 import { useReaderPreferences } from "@lib/reader-preferences";
 import { cn } from "@lib/utils";
-
-const ARTICLE_TIMESTAMP_FORMATTER = new Intl.DateTimeFormat("en", {
-  dateStyle: "medium",
-  timeStyle: "short",
-});
+import { formatInboxTimestamp } from "@modules/inbox/format-timestamp";
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -26,17 +26,17 @@ function estimateReadingTime(html: string): number {
   return Math.max(1, Math.round(words / 238));
 }
 
-export function formatArticleTimestamp(value: string) {
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) {
-    return value;
-  }
-
-  return ARTICLE_TIMESTAMP_FORMATTER.format(date);
-}
-
-export function ItemDetail({ item }: { item: ArticleDetailDto }) {
+export function ItemDetail({
+  item,
+  showFavicons,
+  timestampDisplay,
+  timestampHourCycle,
+}: {
+  item: ArticleDetailDto;
+  showFavicons: boolean;
+  timestampDisplay: InboxTimestampDisplayDto;
+  timestampHourCycle: "12h" | "24h";
+}) {
   const { preferences } = useReaderPreferences();
   const extractMutation = useArticleExtraction(item.id);
   const requestedExtractionForItemRef = useRef<string | null>(null);
@@ -135,7 +135,9 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
     >
       <div className="not-prose mb-6 flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
-          <span>{formatArticleTimestamp(item.publishedAt)}</span>
+          <span>
+            {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
+          </span>
           {readTime ? (
             <>
               <span>·</span>
@@ -150,6 +152,7 @@ export function ItemDetail({ item }: { item: ArticleDetailDto }) {
           articleUrl={item.link}
           feedFaviconUrl={item.feedFaviconUrl}
           feedTitle={item.feedTitle}
+          showFavicon={showFavicons}
           className=""
           labelClassName="text-sm"
         />

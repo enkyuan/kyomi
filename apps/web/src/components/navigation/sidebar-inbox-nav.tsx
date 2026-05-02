@@ -2,8 +2,9 @@
 
 import { useQueryClient } from "@tanstack/react-query";
 import { useLocation, Link, useRouter } from "@tanstack/react-router";
-import { Calendar3Fill, NewsFill, StarFill } from "@mingcute/react";
+import { Calendar3Fill, NewsFill, StarFill, TimeDurationFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
+import { useInboxPreferences } from "@lib/inbox-preferences";
 import { prefetchInboxFlow } from "@modules/inbox/prefetch";
 import {
   SidebarGroup,
@@ -16,10 +17,10 @@ import {
 import { isInboxPathname } from "@lib/routes/inbox-path";
 
 type InboxNavSearch = {
-  filter?: "today" | "unread" | "saved";
+  filter?: "today" | "unread" | "saved" | "recent";
 };
 
-const INBOX_NAV: Array<{
+const BASE_INBOX_NAV: Array<{
   label: string;
   to: "/inbox";
   search: InboxNavSearch;
@@ -50,13 +51,25 @@ const FILTER_KEYS = ["filter"] as const;
 export function SidebarInboxNav({
   counts,
 }: {
-  counts: { today: number; unread: number; saved: number };
+  counts: { all: number; today: number; unread: number; saved: number };
 }) {
   const location = useLocation();
   const router = useRouter();
   const queryClient = useQueryClient();
+  const { preferences } = useInboxPreferences();
   const isInbox = isInboxPathname(location.pathname);
-  const activeFilter = isInbox ? (location.search.filter ?? "today") : undefined;
+  const activeFilter = isInbox ? location.search.filter : undefined;
+  const inboxNav = preferences.inboxShowRecents
+    ? [
+        ...BASE_INBOX_NAV,
+        {
+          label: "Recents",
+          to: "/inbox" as const,
+          search: { filter: "recent" as const },
+          icon: TimeDurationFill,
+        },
+      ]
+    : BASE_INBOX_NAV;
   const badgeValueByLabel: Record<string, number> = {
     Today: counts.today,
     "All Unread": counts.unread,
@@ -67,7 +80,7 @@ export function SidebarInboxNav({
     <SidebarGroup className="gap-1">
       <SidebarGroupLabel>Inbox</SidebarGroupLabel>
       <SidebarMenu>
-        {INBOX_NAV.map((item) => {
+        {inboxNav.map((item) => {
           const badgeValue = badgeValueByLabel[item.label] ?? 0;
 
           return (
@@ -97,6 +110,8 @@ export function SidebarInboxNav({
                     search={(prev) => ({
                       ...prev,
                       ...item.search,
+                      feedId: item.search.filter === "recent" ? undefined : prev.feedId,
+                      folderId: item.search.filter === "recent" ? undefined : prev.folderId,
                       search: undefined,
                       itemId: undefined,
                     })}

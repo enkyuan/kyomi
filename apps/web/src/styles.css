@@ -343,6 +343,10 @@ body {
 /* Fenced code: JetBrains Mono, highlight.js tokens (github-dark), language + copy above code (no toolbar strip) */
 .reader-content .article-body [data-reader-code-block] {
   --reader-code-inline-pad: 0.875rem;
+  --reader-code-label-size: 0.8125em;
+  --reader-code-body-size: 0.84em;
+  --reader-code-button-size: 1.25em;
+  --reader-code-icon-size: 0.625em;
   margin: 1rem 0;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -366,7 +370,7 @@ body {
   min-width: 0;
   flex: 1 1 auto;
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
+  font-size: var(--reader-code-label-size);
   font-weight: 500;
   letter-spacing: normal;
   text-transform: none;
@@ -386,7 +390,7 @@ body {
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs {
   font-family: var(--font-code);
-  font-size: 13.5px;
+  font-size: var(--reader-code-body-size);
   line-height: 1.5;
   font-weight: 500;
   display: block;
@@ -483,8 +487,8 @@ body {
   display: inline-grid;
   place-items: center;
   box-sizing: border-box;
-  width: var(--rcb-button-size, 2rem);
-  height: var(--rcb-button-size, 2rem);
+  width: var(--rcb-button-size, var(--reader-code-button-size));
+  height: var(--rcb-button-size, var(--reader-code-button-size));
   margin: 0;
   padding: 0;
   border: none;
@@ -519,8 +523,8 @@ body {
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button .rcb-icon {
   grid-area: 1 / 1;
   display: block;
-  width: var(--rcb-icon-size, 1rem);
-  height: var(--rcb-icon-size, 1rem);
+  width: var(--rcb-icon-size, var(--reader-code-icon-size));
+  height: var(--rcb-icon-size, var(--reader-code-icon-size));
   transform-origin: center;
   transition: opacity 300ms ease, transform 300ms ease, filter 300ms ease;
   will-change: opacity, transform, filter;
@@ -553,7 +557,7 @@ body {
 .reader-content .article-body table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.95rem;
+  font-size: 0.95em;
 }
 
 .reader-content .article-body :is(th, td) {

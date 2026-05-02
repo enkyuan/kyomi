@@ -159,6 +159,7 @@ export const articleDetailSchema = articleListItemSchema.extend({
 // ---------------------------------------------------------------------------
 
 export const articleCountsSchema = z.object({
+  all: z.number().optional(),
   unread: z.number(),
   saved: z.number(),
   today: z.number().optional(),
@@ -271,6 +272,12 @@ export const messageResponseSchema = z.object({
 
 export const readerDefaultModeSchema = z.enum(["smart", "original", "extracted"]);
 export const readerContentWidthSchema = z.enum(["narrow", "medium", "wide"]);
+export const inboxDefaultViewSchema = z.enum(["inbox", "today", "unread", "saved"]);
+export const inboxDensitySchema = z.enum(["comfortable", "compact"]);
+export const articleOpenBehaviorSchema = z.enum(["split", "reader", "original"]);
+export const inboxMarkReadBehaviorSchema = z.enum(["on-open", "after-delay", "manual"]);
+export const inboxTimestampDisplaySchema = z.enum(["absolute", "relative"]);
+export const inboxTimestampHourCycleSchema = z.enum(["12h", "24h"]);
 
 export const readerPreferencesSchema = z.object({
   defaultMode: readerDefaultModeSchema,
@@ -278,6 +285,30 @@ export const readerPreferencesSchema = z.object({
   contentWidth: readerContentWidthSchema,
   openLinksInNewTab: z.boolean(),
   showImages: z.boolean(),
+});
+
+export const inboxPreferencesSchema = z.object({
+  inboxDefaultView: inboxDefaultViewSchema,
+  inboxDensity: inboxDensitySchema,
+  articleOpenBehavior: articleOpenBehaviorSchema,
+  inboxMarkReadBehavior: inboxMarkReadBehaviorSchema,
+  inboxTimestampDisplay: inboxTimestampDisplaySchema,
+  inboxTimestampHourCycle: inboxTimestampHourCycleSchema,
+  inboxFontSizePx: z.number(),
+  inboxShowRecents: z.boolean(),
+  inboxShowFavicons: z.boolean(),
+});
+
+export const userPreferencesSchema = readerPreferencesSchema.extend({
+  inboxDefaultView: inboxDefaultViewSchema,
+  inboxDensity: inboxDensitySchema,
+  articleOpenBehavior: articleOpenBehaviorSchema,
+  inboxMarkReadBehavior: inboxMarkReadBehaviorSchema,
+  inboxTimestampDisplay: inboxTimestampDisplaySchema,
+  inboxTimestampHourCycle: inboxTimestampHourCycleSchema,
+  inboxFontSizePx: z.number(),
+  inboxShowRecents: z.boolean(),
+  inboxShowFavicons: z.boolean(),
 });
 
 // ---------------------------------------------------------------------------
@@ -297,6 +328,14 @@ export type FeedDetailDto = z.infer<typeof feedDetailSchema>;
 export type ReaderDefaultModeDto = z.infer<typeof readerDefaultModeSchema>;
 export type ReaderContentWidthDto = z.infer<typeof readerContentWidthSchema>;
 export type ReaderPreferencesDto = z.infer<typeof readerPreferencesSchema>;
+export type InboxDefaultViewDto = z.infer<typeof inboxDefaultViewSchema>;
+export type InboxDensityDto = z.infer<typeof inboxDensitySchema>;
+export type ArticleOpenBehaviorDto = z.infer<typeof articleOpenBehaviorSchema>;
+export type InboxMarkReadBehaviorDto = z.infer<typeof inboxMarkReadBehaviorSchema>;
+export type InboxTimestampDisplayDto = z.infer<typeof inboxTimestampDisplaySchema>;
+export type InboxTimestampHourCycleDto = z.infer<typeof inboxTimestampHourCycleSchema>;
+export type InboxPreferencesDto = z.infer<typeof inboxPreferencesSchema>;
+export type UserPreferencesDto = z.infer<typeof userPreferencesSchema>;
 
 // ---------------------------------------------------------------------------
 // Validated fetch helper

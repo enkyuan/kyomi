@@ -14,7 +14,7 @@ export type InboxQueryScope = {
 };
 
 export function inboxItemsQueryKey({
-  filter = "today",
+  filter = "inbox",
   search,
   feedId,
   folderId,
@@ -42,7 +42,7 @@ export function sidebarInboxSummaryQueryKey(timezoneOffsetMinutes = getTimezoneO
 }
 
 export function inboxItemsInfiniteQueryOptions(scope: InboxQueryScope = {}) {
-  const filter = scope.filter ?? "today";
+  const filter = scope.filter ?? "inbox";
   const timezoneOffsetMinutes = scope.timezoneOffsetMinutes ?? getTimezoneOffsetMinutes();
 
   return {

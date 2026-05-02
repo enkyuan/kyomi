@@ -11,6 +11,12 @@ export type UserProfileDto = {
 
 export type ReaderDefaultModeDto = "smart" | "original" | "extracted";
 export type ReaderContentWidthDto = "narrow" | "medium" | "wide";
+export type InboxDefaultViewDto = "inbox" | "today" | "unread" | "saved";
+export type InboxDensityDto = "comfortable" | "compact";
+export type ArticleOpenBehaviorDto = "split" | "reader" | "original";
+export type InboxMarkReadBehaviorDto = "on-open" | "after-delay" | "manual";
+export type InboxTimestampDisplayDto = "absolute" | "relative";
+export type InboxTimestampHourCycleDto = "12h" | "24h";
 
 export type UserPreferencesDto = {
   defaultMode: ReaderDefaultModeDto;
@@ -18,6 +24,15 @@ export type UserPreferencesDto = {
   contentWidth: ReaderContentWidthDto;
   openLinksInNewTab: boolean;
   showImages: boolean;
+  inboxDefaultView: InboxDefaultViewDto;
+  inboxDensity: InboxDensityDto;
+  articleOpenBehavior: ArticleOpenBehaviorDto;
+  inboxMarkReadBehavior: InboxMarkReadBehaviorDto;
+  inboxTimestampDisplay: InboxTimestampDisplayDto;
+  inboxTimestampHourCycle: InboxTimestampHourCycleDto;
+  inboxFontSizePx: number;
+  inboxShowRecents: boolean;
+  inboxShowFavicons: boolean;
 };
 
 export type UpdateUserPreferencesDto = Partial<UserPreferencesDto>;

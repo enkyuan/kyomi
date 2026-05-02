@@ -1,22 +1,30 @@
 "use client";
 
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { useNavigate } from "@tanstack/react-router";
 import { FeedItem } from "@modules/inbox/item";
 import { InboxListFilterMenu } from "@modules/inbox/list-filter-menu";
 import { FeedRefreshStatus } from "@modules/inbox/refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
-import { useCallback, useEffect, useRef, useState, type RefObject } from "react";
+import { useEffect, useRef, useState, type RefObject } from "react";
 import type { InboxFilter, InboxItem } from "@modules/inbox/api";
+import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
 
-const FEED_ITEM_ROW_ESTIMATE = 176;
+const FEED_ITEM_ROW_ESTIMATE = {
+  comfortable: 176,
+  compact: 136,
+} as const;
 
 interface InboxListProps {
   inboxItems: InboxItem[];
   viewCount: number;
   filter: InboxFilter;
+  density: InboxDensityDto;
+  fontSizePx: number;
+  showFavicons: boolean;
+  timestampDisplay: InboxTimestampDisplayDto;
+  timestampHourCycle: "12h" | "24h";
   activeScopeLabel?: "hidden" | "read";
   selectedItemId?: string;
   feedId?: string;
@@ -26,9 +34,17 @@ interface InboxListProps {
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   fetchNextPage: () => void;
+  onSelectItem: (item: InboxItem) => void;
 }
 
-function InboxListSkeletonRows() {
+function InboxListSkeletonRows({
+  density,
+  showFavicons,
+}: {
+  density: InboxDensityDto;
+  showFavicons: boolean;
+}) {
+  const isCompact = density === "compact";
   return (
     <ul className="w-full">
       {Array.from({ length: 6 }).map((_, index) => (
@@ -36,9 +52,13 @@ function InboxListSkeletonRows() {
           key={`skeleton-${index}`}
           className={`w-full border-x-0 border-border/70 bg-transparent${index === 0 ? "" : " border-t"}`}
         >
-          <div className="flex flex-col gap-2 px-5 py-3">
+          <div
+            className={
+              isCompact ? "flex flex-col gap-1.5 px-5 py-2.5" : "flex flex-col gap-2 px-5 py-3"
+            }
+          >
             <div className="flex items-center gap-2">
-              <Skeleton className="size-4.5 shrink-0 rounded-[3px]" />
+              {showFavicons ? <Skeleton className="size-4.5 shrink-0 rounded-[3px]" /> : null}
               <Skeleton className="h-3 w-24 rounded" />
             </div>
             <div className="space-y-1.5">
@@ -49,9 +69,9 @@ function InboxListSkeletonRows() {
           <div className="space-y-1.5 px-5">
             <Skeleton className="h-3.5 w-full rounded" />
             <Skeleton className="h-3.5 w-full rounded" />
-            <Skeleton className="h-3.5 w-4/5 rounded" />
+            {isCompact ? null : <Skeleton className="h-3.5 w-4/5 rounded" />}
           </div>
-          <div className="mt-2 px-5 pb-3">
+          <div className={isCompact ? "mt-1.5 px-5 pb-2.5" : "mt-2 px-5 pb-3"}>
             <Skeleton className="h-3 w-28 rounded" />
           </div>
         </li>
@@ -63,6 +83,12 @@ function InboxListSkeletonRows() {
 function InboxListVirtualized({
   listScrollRef,
   allowFirstRowOverlay,
+  filter,
+  density,
+  fontSizePx,
+  showFavicons,
+  timestampDisplay,
+  timestampHourCycle,
   inboxItems,
   selectedItemId,
   isLoading,
@@ -73,19 +99,25 @@ function InboxListVirtualized({
 }: {
   listScrollRef: RefObject<HTMLDivElement | null>;
   allowFirstRowOverlay: boolean;
+  filter: InboxFilter;
+  density: InboxDensityDto;
+  fontSizePx: number;
+  showFavicons: boolean;
+  timestampDisplay: InboxTimestampDisplayDto;
+  timestampHourCycle: "12h" | "24h";
   inboxItems: InboxItem[];
   selectedItemId?: string;
   isLoading: boolean;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
   fetchNextPage: () => void;
-  onSelectItem: (itemId: string) => void;
+  onSelectItem: (item: InboxItem) => void;
 }) {
   const virtualizer = useVirtualizer({
     count: inboxItems.length,
     getItemKey: (index) => inboxItems[index]?.id ?? index,
     getScrollElement: () => listScrollRef.current,
-    estimateSize: () => FEED_ITEM_ROW_ESTIMATE,
+    estimateSize: () => FEED_ITEM_ROW_ESTIMATE[density],
     overscan: 6,
   });
 
@@ -112,7 +144,7 @@ function InboxListVirtualized({
     inboxItems.length > 0 && listContentHeight < listViewportHeight;
 
   if (isLoading && inboxItems.length === 0) {
-    return <InboxListSkeletonRows />;
+    return <InboxListSkeletonRows density={density} showFavicons={showFavicons} />;
   }
 
   if (inboxItems.length === 0) {
@@ -142,6 +174,7 @@ function InboxListVirtualized({
             }}
           >
             <FeedItem
+              filter={filter}
               item={item}
               isSelected={selectedItemId === item.id}
               isFirst={virtualRow.index === 0}
@@ -149,6 +182,11 @@ function InboxListVirtualized({
               showBottomSeparator={
                 showBottomSeparatorOnLastItem && virtualRow.index === inboxItems.length - 1
               }
+              density={density}
+              fontSizePx={fontSizePx}
+              showFavicons={showFavicons}
+              timestampDisplay={timestampDisplay}
+              timestampHourCycle={timestampHourCycle}
               onSelect={onSelectItem}
             />
           </div>
@@ -162,6 +200,11 @@ export function InboxList({
   inboxItems,
   viewCount,
   filter,
+  density,
+  fontSizePx,
+  showFavicons,
+  timestampDisplay,
+  timestampHourCycle,
   activeScopeLabel,
   selectedItemId,
   feedId,
@@ -171,20 +214,15 @@ export function InboxList({
   hasNextPage,
   isFetchingNextPage,
   fetchNextPage,
+  onSelectItem,
 }: InboxListProps) {
   const [isVirtualizerHostMounted, setIsVirtualizerHostMounted] = useState(false);
   const [allowFirstRowOverlay, setAllowFirstRowOverlay] = useState(true);
   const listScrollRef = useRef<HTMLDivElement | null>(null);
-  const navigate = useNavigate();
-  const navigateRef = useRef(navigate);
 
   useEffect(() => {
     setIsVirtualizerHostMounted(true);
   }, []);
-
-  useEffect(() => {
-    navigateRef.current = navigate;
-  }, [navigate]);
 
   useEffect(() => {
     const node = listScrollRef.current;
@@ -201,18 +239,15 @@ export function InboxList({
     return () => node.removeEventListener("scroll", syncOverlayState);
   }, []);
 
-  const handleSelectItem = useCallback((itemId: string) => {
-    void navigateRef.current({
-      from: "/inbox/",
-      search: (prev) => ({
-        ...prev,
-        itemId,
-      }),
-    });
-  }, []);
-
   const countLabel =
-    activeScopeLabel ?? (filter === "today" ? "today" : filter === "saved" ? "saved" : "unread");
+    activeScopeLabel ??
+    (filter === "today"
+      ? "today"
+      : filter === "saved"
+        ? "saved"
+        : filter === "recent"
+          ? "read"
+          : "unread");
 
   return (
     <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground [--inbox-header-height:2.75rem] md:min-h-0">
@@ -236,21 +271,27 @@ export function InboxList({
           <div className="pt-[var(--inbox-header-height)]">
             {!isVirtualizerHostMounted ? (
               isLoading && inboxItems.length === 0 ? (
-                <InboxListSkeletonRows />
+                <InboxListSkeletonRows density={density} showFavicons={showFavicons} />
               ) : inboxItems.length === 0 ? null : (
-                <InboxListSkeletonRows />
+                <InboxListSkeletonRows density={density} showFavicons={showFavicons} />
               )
             ) : (
               <InboxListVirtualized
                 listScrollRef={listScrollRef}
                 allowFirstRowOverlay={allowFirstRowOverlay}
+                filter={filter}
+                density={density}
+                fontSizePx={fontSizePx}
+                showFavicons={showFavicons}
+                timestampDisplay={timestampDisplay}
+                timestampHourCycle={timestampHourCycle}
                 inboxItems={inboxItems}
                 selectedItemId={selectedItemId}
                 isLoading={isLoading}
                 hasNextPage={hasNextPage}
                 isFetchingNextPage={isFetchingNextPage}
                 fetchNextPage={fetchNextPage}
-                onSelectItem={handleSelectItem}
+                onSelectItem={onSelectItem}
               />
             )}
           </div>

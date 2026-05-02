@@ -4,7 +4,7 @@ import { requireAuth } from "@/routes/-guards";
 import { InboxPage } from "@modules/inbox/page";
 
 const inboxSearchSchema = z.object({
-  filter: z.enum(["today", "unread", "saved"]).optional(),
+  filter: z.enum(["inbox", "today", "unread", "saved", "recent"]).optional(),
   search: z.string().optional(),
   feedId: z.string().optional(),
   folderId: z.string().optional(),
