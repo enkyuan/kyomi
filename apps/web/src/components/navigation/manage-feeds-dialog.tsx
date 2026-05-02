@@ -463,7 +463,7 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
                                 table.setPageIndex((value as number) - 1);
                               }}
                             >
-                              <SelectTrigger className="w-fit min-w-none" size="sm">
+                              <SelectTrigger className="w-fit min-w-0" size="sm">
                                 <SelectValue />
                               </SelectTrigger>
                               <SelectPopup>

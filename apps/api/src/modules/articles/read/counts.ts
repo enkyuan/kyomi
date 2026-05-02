@@ -45,7 +45,6 @@ export async function getArticleCountsForUser(
     .where(
       and(
         sql`${feedItemUserState.isSaved} IS TRUE`,
-        sql`(${articleIsReadSql}) = false`,
         feedScopeFilter,
       ),
     );
@@ -67,7 +66,6 @@ export async function getArticleCountsForUser(
           and(
             eq(articleClips.userId, userId),
             eq(articleClips.isSaved, true),
-            eq(articleClips.isRead, false),
           ),
         )
     : [];

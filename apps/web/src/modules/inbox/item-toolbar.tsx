@@ -25,7 +25,7 @@ export function InboxItemToolbar({
   return (
     <Toolbar
       className={cn(
-        "pointer-events-auto absolute right-3 z-50 gap-0 rounded-lg border-border/80 bg-popover/95 p-0.5 text-popover-foreground opacity-0 shadow-md/10 transition-opacity duration-150 group-hover/inbox-item:opacity-100",
+        "pointer-events-auto absolute right-3 z-50 gap-0 rounded-lg border-border/80 bg-popover/95 p-0.5 text-popover-foreground opacity-0 shadow-md/10 transition-opacity duration-150 group-hover/inbox-item:opacity-100 group-focus-within/inbox-item:opacity-100",
         "-top-2",
       )}
     >
@@ -44,6 +44,7 @@ export function InboxItemToolbar({
           label={isRead ? "Already read" : "Mark as read"}
           onClick={onMarkRead}
           active={isRead}
+          disabled={isRead}
         >
           {isRead ? <MailOpenFill /> : <MailOpenLine />}
         </InboxItemToolbarButton>
