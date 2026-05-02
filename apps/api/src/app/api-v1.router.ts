@@ -1,11 +1,11 @@
 import { Elysia } from "elysia";
-import { registerArticleRoutes } from "@modules/articles/articles.routes";
-import { registerDiscoverRoutes } from "@modules/discover/discover.routes";
-import { registerFeedRoutes } from "@modules/feeds/feeds.routes";
-import { registerFolderRoutes } from "@modules/folders/folders.routes";
-import { registerOpmlRoutes } from "@modules/opml/opml.routes";
-import { registerQueueRoutes } from "@modules/queue/queue.routes";
-import { registerUserRoutes } from "@modules/users/users.routes";
+import { registerArticleRoutes } from "@modules/articles/routes";
+import { registerDiscoverRoutes } from "@modules/discover/routes";
+import { registerFeedRoutes } from "@modules/feeds/routes";
+import { registerFolderRoutes } from "@modules/folders/routes";
+import { registerOpmlRoutes } from "@modules/opml/routes";
+import { registerQueueRoutes } from "@modules/queue/routes";
+import { registerUserRoutes } from "@modules/users/routes";
 import { apiV1AdapterPlugin } from "@shared/http/stacks";
 import { resolveSessionContext } from "@shared/http/session-context.middleware";
 

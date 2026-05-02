@@ -3,7 +3,7 @@ import { assertDevelopmentDatabaseSchemaReady } from "@adapters/db/startup-schem
 import { env } from "@config/env";
 import { shutdownAdapters } from "@adapters/lifecycle";
 import { logger } from "@adapters/logger";
-import { parseFeedAdminUserIds } from "@modules/feeds/feeds.admin-allowlist";
+import { parseFeedAdminUserIds } from "@modules/feeds/admin/allowlist";
 
 /**
  * Startup / shutdown hooks (FastAPI `lifespan` equivalent).

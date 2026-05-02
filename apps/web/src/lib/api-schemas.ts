@@ -132,12 +132,21 @@ export const articleDetailSchema = articleListItemSchema.extend({
   contentSource: contentSourceSchema,
   extractionErrorCode: z.string().nullable(),
   extractionErrorMessage: z.string().nullable(),
-  readerOriginal: readerContentSchema,
-  readerExtracted: readerContentSchema.nullable(),
-  extractedContentStatus: extractedContentStatusSchema,
-  extractedContentError: z.string().nullable(),
-  extractedContentUpdatedAt: z.string().nullable(),
-  defaultReaderMode: z.enum(["original", "extracted"]),
+  reader: z.object({
+    activeMode: z.enum(["original", "extracted"]),
+    selected: readerContentSchema,
+    original: z.object({
+      available: z.boolean(),
+      content: readerContentSchema,
+    }),
+    extracted: z.object({
+      available: z.boolean(),
+      content: readerContentSchema.nullable(),
+      status: extractedContentStatusSchema,
+      error: z.string().nullable(),
+      updatedAt: z.string().nullable(),
+    }),
+  }),
 });
 
 // ---------------------------------------------------------------------------

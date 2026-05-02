@@ -2,6 +2,8 @@
 
 This directory is the absorbed Python pipeline from the former `rss-r-us` repository.
 
+This package is intentionally optional/offline for Cronos app runtime: normal app setup/dev does not require Poetry or catalog sync.
+
 ## Purpose
 
 - Build a broad RSS feed catalog from multiple datasets.

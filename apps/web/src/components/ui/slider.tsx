@@ -981,6 +981,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
     const containerRef = useRef<HTMLDivElement>(null);
     const dragging = useRef(false);
     const handleDragging = useRef(false);
+    const [displayValue, setDisplayValue] = useState(value);
     const [isHovered, setIsHovered] = useState(false);
     const [isPressed, setIsPressed] = useState(false);
     const [isFocused, setIsFocused] = useState(false);
@@ -1020,6 +1021,11 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
       [min, max, step],
     );
     const pipCount = pipSteps.length;
+
+    useEffect(() => {
+      if (dragging.current || handleDragging.current) return;
+      setDisplayValue(value);
+    }, [value]);
 
     // Fill motion value
     const fillPercent = useMotionValue(
@@ -1141,6 +1147,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
         dragging.current = true;
         setIsPressed(true);
         const newVal = getValueFromX(e.clientX);
+        setDisplayValue(newVal);
         onChange(newVal);
         const newPercent = Math.max(0, Math.min(1, (newVal - min) / (max - min)));
         animate(fillPercent, newPercent, springs.fast);
@@ -1154,6 +1161,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
       (e: React.PointerEvent<HTMLDivElement>) => {
         if (!dragging.current) return;
         const newVal = getValueFromX(e.clientX);
+        setDisplayValue(newVal);
         onChange(newVal);
         const newPercent = Math.max(0, Math.min(1, (newVal - min) / (max - min)));
         if (variant === "scrubber") {
@@ -1170,6 +1178,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
       (e: React.PointerEvent<HTMLDivElement>) => {
         if (dragging.current) {
           const newVal = getValueFromX(e.clientX);
+          setDisplayValue(newVal);
           onChange(newVal);
           const newPercent = Math.max(0, Math.min(1, (newVal - min) / (max - min)));
           if (variant === "scrubber") {
@@ -1196,6 +1205,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
         handleDragging.current = true;
         setIsPressed(true);
         const newVal = getValueFromX(e.clientX);
+        setDisplayValue(newVal);
         onChange(newVal);
         fillPercent.set(Math.max(0, Math.min(1, (newVal - min) / (max - min))));
         animate(zeroOffset, newVal === min ? zeroTarget : 0, springs.fast);
@@ -1208,6 +1218,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
       (e: React.PointerEvent<HTMLDivElement>) => {
         if (!handleDragging.current) return;
         const newVal = getValueFromX(e.clientX);
+        setDisplayValue(newVal);
         onChange(newVal);
         fillPercent.set(Math.max(0, Math.min(1, (newVal - min) / (max - min))));
         animate(zeroOffset, newVal === min ? zeroTarget : 0, springs.fast);
@@ -1219,6 +1230,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
       (e: React.PointerEvent<HTMLDivElement>) => {
         if (handleDragging.current) {
           const newVal = getValueFromX(e.clientX);
+          setDisplayValue(newVal);
           onChange(newVal);
           fillPercent.set(Math.max(0, Math.min(1, (newVal - min) / (max - min))));
           animate(zeroOffset, newVal === min ? zeroTarget : 0, springs.fast);
@@ -1233,6 +1245,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
     const handleRadixChange = useCallback(
       (newValues: number[]) => {
         const nextValue = newValues[0] ?? min;
+        setDisplayValue(nextValue);
         onChange(nextValue);
       },
       [min, onChange],
@@ -1315,7 +1328,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
         >
           {/* Invisible Radix for keyboard nav + a11y */}
           <SliderPrimitive.Root
-            value={[value]}
+            value={[displayValue]}
             onValueChange={handleRadixChange}
             min={min}
             max={max}
@@ -1357,7 +1370,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
               style={{ WebkitMaskImage: pipsMaskStyle, maskImage: pipsMaskStyle }}
             >
               {pipSteps.map((pipValue) => {
-                const isActivePip = pipValue === value;
+                const isActivePip = pipValue === displayValue;
                 return (
                   <div
                     key={pipValue}
@@ -1397,7 +1410,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
                 className="text-[13px] tabular-nums ml-auto px-2 bg-background text-transparent select-none"
                 style={{ minWidth: `${String(formatValue(max)).length}ch` }}
               >
-                {formatValue(value)}
+                {formatValue(displayValue)}
               </span>
             </div>
           )}
@@ -1455,7 +1468,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
                 transition={springs.fast}
                 style={{ minWidth: `${String(formatValue(max)).length}ch`, textAlign: "right" }}
               >
-                {formatValue(value)}
+                {formatValue(displayValue)}
               </motion.span>
             </div>
           )}
@@ -1516,7 +1529,7 @@ const SliderComfortable = forwardRef<HTMLDivElement, SliderComfortableProps>(
                 transition={springs.fast}
                 style={{ minWidth: `${String(formatValue(max)).length}ch` }}
               >
-                {formatValue(value)}
+                {formatValue(displayValue)}
               </motion.span>
             </>
           )}

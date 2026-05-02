@@ -19,7 +19,7 @@ import { Field, FieldError } from "@components/ui/field";
 import { Form } from "@components/ui/form";
 import { Input } from "@components/ui/input";
 import { toastManager } from "@components/ui/toast";
-import { createFolder } from "@lib/folder-functions";
+import { createFolder } from "@/features/folders/api";
 
 type CreateFolderDialogProps = {
   open?: boolean;

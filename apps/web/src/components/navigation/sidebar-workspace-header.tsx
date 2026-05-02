@@ -41,8 +41,8 @@ import {
 } from "@components/ui/sidebar";
 import { SidebarFeedSearchTrigger } from "@components/navigation/sidebar-feed-search";
 import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
-import { listFollowedFeeds } from "@lib/feed-functions";
-import { listFolders } from "@lib/folder-functions";
+import { listFollowedFeeds } from "@/features/feeds/api";
+import { listFolders } from "@/features/folders/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 import { QUERY_TIMES } from "@lib/query-policies";
 import { cn } from "@lib/utils";

@@ -993,6 +993,7 @@ export async function runFeedRefresh(
     const now = new Date();
     const deduped = new Map<string, ParsedFeedItem>();
     for (const item of parsed.items) {
+      // Ingestion owns canonical URL generation and in-memory dedupe before DB upsert.
       deduped.set(item.canonicalUrl, item);
     }
     const items = Array.from(deduped.values());
@@ -1097,6 +1098,8 @@ export async function runFeedRefresh(
           })),
         )
         .onConflictDoUpdate({
+          // Primary identity lives in DB unique(feed_id, canonical_url).
+          // Any list-time dedupe is defensive only.
           target: [feedItems.feedId, feedItems.canonicalUrl],
           set: {
             title: sql`CASE WHEN length(trim(excluded.title)) > length(trim(${feedItems.title})) THEN excluded.title ELSE ${feedItems.title} END`,

@@ -1,6 +1,6 @@
 import { Elysia } from "elysia";
 import { authRoutes } from "@adapters/auth/auth.routes";
-import { healthPlugin } from "@modules/health/health.routes";
+import { healthPlugin } from "@modules/health/routes";
 import { apiV1Router } from "./api-v1.router";
 
 /** Root HTTP plugin: operational endpoints + versioned product API. */

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LoginPage } from "@pages/auth";
+import { LoginPage } from "@/features/auth";
 import { requireGuest } from "./-guards";
 
 export const Route = createFileRoute("/")({

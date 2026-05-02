@@ -54,6 +54,7 @@ export default function AuthProvider({
   );
   const shouldUseInitialSession =
     isPending && liveSession == null && normalizedInitialSession != null;
+  // Client session hook is hydration/cache; authoritative route gating remains server-side.
   const session = shouldUseInitialSession ? normalizedInitialSession : (liveSession ?? null);
   const pending = isPending && session == null;
 

@@ -1,5 +1,5 @@
 import { db, pool } from "@adapters/db/client";
-import { searchFeeds } from "@modules/discover/discover.service";
+import { searchFeeds } from "@modules/discover/service";
 
 function getArgValue(flag: string): string | null {
   const index = process.argv.indexOf(flag);

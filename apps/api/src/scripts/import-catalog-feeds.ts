@@ -1,10 +1,7 @@
 import { feeds } from "@cronos/db";
 import { db, pool } from "@adapters/db/client";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
-import {
-  assertHttpOrHttpsUrl,
-  normalizeFeedUrl,
-} from "@modules/discover/discover.normalize-feed-url";
+import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/normalize-feed-url";
 
 type CatalogFeedRecord = {
   feed_url: string;
