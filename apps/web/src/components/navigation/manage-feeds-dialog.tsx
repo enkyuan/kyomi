@@ -33,9 +33,9 @@ import {
   moveFeedsToFolder,
   type FollowedFeed,
   unfollowFeed,
-} from "@lib/feed-functions";
-import { listFolders } from "@lib/folder-functions";
-import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
+} from "@modules/feeds/api";
+import { listFolders } from "@modules/folders/api";
+import { usePinnedFeedIds } from "@modules/feeds/use-pins";
 import { PinFill, PinLine } from "@mingcute/react";
 
 type ManageFeedsDialogProps = {
@@ -260,44 +260,29 @@ export function ManageFeedsDialog({ open, onOpenChange }: ManageFeedsDialogProps
   });
   const deleteFeedsMutation = useMutation({
     mutationFn: async ({ feedIds }: { feedIds: string[] }) => {
-      const results = await Promise.allSettled(
-        feedIds.map((feedId) => unfollowFeed({ data: { feedId } })),
-      );
-      const succeeded = feedIds.filter((_, i) => results[i].status === "fulfilled");
-      const failedCount = feedIds.length - succeeded.length;
-      return { feedIds: succeeded, failedCount };
+      await Promise.all(feedIds.map((feedId) => unfollowFeed({ data: { feedId } })));
+      return { feedIds };
     },
-    onSuccess: async ({ feedIds, failedCount }) => {
+    onSuccess: async ({ feedIds }) => {
       const deletedFeedIdSet = new Set(feedIds);
       queryClient.setQueryData(["feeds", "followed"], (current: FollowedFeed[] | undefined) =>
         current?.filter((feed) => !deletedFeedIdSet.has(feed.feedId)),
       );
-      if (feedIds.length > 0) {
-        setRowSelection({});
-      }
-      await Promise.allSettled([
+      setRowSelection({});
+      await Promise.all([
         queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] }),
         queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] }),
         queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] }),
         queryClient.invalidateQueries({ queryKey: ["folders"] }),
       ]);
-      if (feedIds.length > 0) {
-        toastManager.add({
-          title: feedIds.length === 1 ? "Feed deleted" : "Feeds deleted",
-          description:
-            feedIds.length === 1
-              ? "The selected feed has been removed from your following."
-              : `${feedIds.length} selected feeds were removed from your following.`,
-          type: "success",
-        });
-      }
-      if (failedCount > 0) {
-        toastManager.add({
-          title: "Some feeds could not be removed",
-          description: `${failedCount} feed${failedCount > 1 ? "s" : ""} failed to unfollow. Try again in a moment.`,
-          type: "error",
-        });
-      }
+      toastManager.add({
+        title: feedIds.length === 1 ? "Feed deleted" : "Feeds deleted",
+        description:
+          feedIds.length === 1
+            ? "The selected feed has been removed from your following."
+            : `${feedIds.length} selected feeds were removed from your following.`,
+        type: "success",
+      });
     },
     onError: (error) => {
       toastManager.add({

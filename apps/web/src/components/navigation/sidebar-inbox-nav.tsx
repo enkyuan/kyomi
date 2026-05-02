@@ -4,7 +4,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useLocation, Link, useRouter } from "@tanstack/react-router";
 import { Calendar3Fill, NewsFill, StarFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
-import { prefetchInboxFlow } from "@lib/inbox-prefetch";
+import { prefetchInboxFlow } from "@modules/inbox/prefetch";
 import {
   SidebarGroup,
   SidebarGroupLabel,

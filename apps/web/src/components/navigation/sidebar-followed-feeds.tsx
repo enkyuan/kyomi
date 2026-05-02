@@ -24,10 +24,10 @@ import {
   getFollowedFeedUnreadCounts,
   listFollowedFeeds,
   unfollowFeed,
-} from "@lib/feed-functions";
-import { isInboxPathname } from "@lib/routes/inbox-path";
+} from "@modules/feeds/api";
+import { prefetchInboxFlow } from "@modules/inbox/prefetch";
 import { QUERY_TIMES } from "@lib/query-policies";
-import { prefetchInboxFlow } from "@lib/inbox-prefetch";
+import { isInboxPathname } from "@lib/routes/inbox-path";
 
 export function SidebarFollowedFeeds() {
   const location = useLocation();

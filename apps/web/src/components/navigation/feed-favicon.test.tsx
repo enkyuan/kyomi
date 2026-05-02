@@ -13,7 +13,7 @@ describe("buildFaviconUrl", () => {
 
   test("falls back to favicon proxy when stored metadata is missing", () => {
     const url = buildFaviconUrl(null, "https://example.com/posts", "https://example.com/feed.xml");
-    expect(url).toBe("/api/favicon?domain=https%3A%2F%2Fexample.com");
+    expect(url).toBe("/api/favicon?domain=https%3A%2F%2Fexample.com&v=2");
   });
 
   test("rejects non-http/https feed URLs (no proxy for data:/file: URIs)", () => {
@@ -21,7 +21,7 @@ describe("buildFaviconUrl", () => {
     expect(url).toBeNull();
   });
 
-  test("keeps proxy fallback behind stored favicon URL", () => {
+  test("prioritizes stored favicon URL before proxy fallback", () => {
     const urls = buildFaviconUrlCandidates(
       "https://cdn.example.com/icon.png",
       "https://example.com/posts",
@@ -30,7 +30,16 @@ describe("buildFaviconUrl", () => {
 
     expect(urls).toEqual([
       "https://cdn.example.com/icon.png",
-      "/api/favicon?domain=https%3A%2F%2Fexample.com",
+      "/api/favicon?domain=https%3A%2F%2Fexample.com&v=2",
+      "https://example.com/favicon.ico",
+    ]);
+  });
+
+  test("includes direct-origin favicon fallback when stored metadata is missing", () => {
+    const urls = buildFaviconUrlCandidates(null, "https://techcrunch.com/news", "https://rss.tc");
+    expect(urls).toEqual([
+      "/api/favicon?domain=https%3A%2F%2Ftechcrunch.com&v=2",
+      "https://techcrunch.com/favicon.ico",
     ]);
   });
 });

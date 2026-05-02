@@ -1,4 +1,4 @@
-import { resolveFeedFaviconUrl } from "@cronos/favicon";
+import { resolveFeedFaviconUrl, tryFetchImageIfHostSafe } from "@cronos/favicon";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { eq, sql } from "drizzle-orm";
 import { XMLParser } from "fast-xml-parser";
@@ -62,6 +62,7 @@ type FeedMetadata = {
   title: string;
   description: string;
   link: string | null;
+  iconUrl: string | null;
   canonicalUrl: string;
 };
 
@@ -130,6 +131,35 @@ function computeFailureBackoffMs(snapshot: RefreshTimingSnapshot): number {
     (!snapshot.lastRefreshSucceededAt ||
       snapshot.lastRefreshFailedAt!.getTime() >= snapshot.lastRefreshSucceededAt.getTime());
   return hasConsecutiveFailure ? 60 * 60 * 1000 : 15 * 60 * 1000;
+}
+
+function faviconSourceRank(source: string | null): number {
+  switch (source) {
+    case "html_link":
+    case "feed_icon":
+      return 3;
+    case "google_s2":
+    case "duckduckgo":
+      return 2;
+    case "favicon_ico":
+      return 1;
+    default:
+      return 0;
+  }
+}
+
+function shouldResolveFavicon({
+  currentUrl,
+  currentSource,
+  linkChanged,
+}: {
+  currentUrl: string | null;
+  currentSource: string | null;
+  linkChanged: boolean;
+}): boolean {
+  return (
+    !currentUrl || linkChanged || faviconSourceRank(currentSource) < faviconSourceRank("html_link")
+  );
 }
 
 const NAMED_HTML_ENTITIES: Record<string, string> = {
@@ -359,6 +389,29 @@ function absoluteUrl(candidate: string | null, baseUrl: string): string | null {
   } catch {
     return null;
   }
+}
+
+function embeddedJsonFeedIconUrl(feed: Record<string, unknown>, baseUrl: string): string | null {
+  return (
+    absoluteUrl(typeof feed.icon === "string" ? feed.icon : null, baseUrl) ??
+    absoluteUrl(typeof feed.favicon === "string" ? feed.favicon : null, baseUrl)
+  );
+}
+
+function embeddedRssFeedIconUrl(channel: Record<string, unknown>, baseUrl: string): string | null {
+  const image = channel.image;
+  if (typeof image === "string") {
+    return absoluteUrl(image.trim() || null, baseUrl);
+  }
+  if (!image || typeof image !== "object") {
+    return null;
+  }
+  const rec = image as Record<string, unknown>;
+  return absoluteUrl(rawText(rec.url) ?? rawText(rec["@_href"]), baseUrl);
+}
+
+function embeddedAtomFeedIconUrl(feed: Record<string, unknown>, baseUrl: string): string | null {
+  return absoluteUrl(rawText(feed.icon) ?? rawText(feed.logo), baseUrl);
 }
 
 function firstMatch(input: string, pattern: RegExp): string | null {
@@ -672,6 +725,7 @@ async function syncFeedToSearch(
         title: document.title,
         description: document.description,
         link: document.link,
+        faviconUrl: document.iconUrl,
       },
     ]),
   }).catch((error: unknown) => {
@@ -735,6 +789,7 @@ function parseJsonFeedDocument(body: string, feedId: string, finalUrl: string): 
       title: title || "Untitled",
       description: description || "Follow recent articles from this feed",
       link: link || null,
+      iconUrl: embeddedJsonFeedIconUrl(parsed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
     },
     items,
@@ -792,6 +847,7 @@ function parseRssDocument(
       title,
       description,
       link: link || null,
+      iconUrl: embeddedRssFeedIconUrl(channel, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
     },
     items,
@@ -843,6 +899,7 @@ function parseAtomDocument(
       title,
       description,
       link: link || null,
+      iconUrl: embeddedAtomFeedIconUrl(feed, finalUrl),
       canonicalUrl: normalizeFeedUrl(finalUrl),
     },
     items,
@@ -880,15 +937,38 @@ export function parseFeedDocument(
   throw new Error("Unsupported feed format");
 }
 
-async function tryResolveFaviconMetadata(seedUrl: string): Promise<{
+async function tryResolveFaviconMetadata(
+  seedUrl: string,
+  embeddedIconUrl?: string | null,
+): Promise<{
   url: string;
   source: string;
 } | null> {
   try {
-    return await resolveFeedFaviconUrl(seedUrl);
+    const websiteIcon = await resolveFeedFaviconUrl(seedUrl);
+    if (websiteIcon) {
+      return websiteIcon;
+    }
   } catch (error) {
     console.warn("[ingestion] favicon resolution failed", {
       seedUrl,
+      error: error instanceof Error ? error.message : String(error),
+    });
+  }
+
+  if (!embeddedIconUrl) {
+    return null;
+  }
+  try {
+    const response = await tryFetchImageIfHostSafe(embeddedIconUrl);
+    if (!response) {
+      return null;
+    }
+    response.body?.cancel().catch(() => {});
+    return { url: embeddedIconUrl, source: "feed_icon" };
+  } catch (error) {
+    console.warn("[ingestion] embedded favicon resolution failed", {
+      iconUrl: embeddedIconUrl,
       error: error instanceof Error ? error.message : String(error),
     });
     return null;
@@ -920,6 +1000,7 @@ export async function runFeedRefresh(
         url: feeds.url,
         link: feeds.link,
         faviconUrl: feeds.faviconUrl,
+        faviconSource: feeds.faviconSource,
         etag: feeds.etag,
         lastModified: feeds.lastModified,
         lastRefreshSucceededAt: feeds.lastRefreshSucceededAt,
@@ -961,7 +1042,13 @@ export async function runFeedRefresh(
         faviconFetchedAt: Date;
         updatedAt: Date;
       } | null = null;
-      if (!feed.faviconUrl) {
+      if (
+        shouldResolveFavicon({
+          currentUrl: feed.faviconUrl,
+          currentSource: feed.faviconSource,
+          linkChanged: false,
+        })
+      ) {
         const seed = feed.link ?? feed.url;
         const resolved = await tryResolveFaviconMetadata(seed);
         if (resolved) {
@@ -993,6 +1080,7 @@ export async function runFeedRefresh(
     const now = new Date();
     const deduped = new Map<string, ParsedFeedItem>();
     for (const item of parsed.items) {
+      // Ingestion owns canonical URL generation and in-memory dedupe before DB upsert.
       deduped.set(item.canonicalUrl, item);
     }
     const items = Array.from(deduped.values());
@@ -1030,7 +1118,11 @@ export async function runFeedRefresh(
     const prevLink = feed.link ?? null;
     const nextLink = parsed.metadata.link ?? null;
     const linkChanged = (prevLink ?? "") !== (nextLink ?? "");
-    const needsFavicon = !feed.faviconUrl || linkChanged;
+    const needsFavicon = shouldResolveFavicon({
+      currentUrl: feed.faviconUrl,
+      currentSource: feed.faviconSource,
+      linkChanged,
+    });
     let faviconPatch: {
       faviconUrl: string;
       faviconSource: string;
@@ -1038,7 +1130,7 @@ export async function runFeedRefresh(
     } | null = null;
     if (needsFavicon) {
       const seed = nextLink ?? parsed.metadata.canonicalUrl;
-      const resolved = await tryResolveFaviconMetadata(seed);
+      const resolved = await tryResolveFaviconMetadata(seed, parsed.metadata.iconUrl);
       if (resolved) {
         faviconPatch = {
           faviconUrl: resolved.url,
@@ -1097,6 +1189,8 @@ export async function runFeedRefresh(
           })),
         )
         .onConflictDoUpdate({
+          // Primary identity lives in DB unique(feed_id, canonical_url).
+          // Any list-time dedupe is defensive only.
           target: [feedItems.feedId, feedItems.canonicalUrl],
           set: {
             title: sql`CASE WHEN length(trim(excluded.title)) > length(trim(${feedItems.title})) THEN excluded.title ELSE ${feedItems.title} END`,
@@ -1120,6 +1214,7 @@ export async function runFeedRefresh(
     await syncFeedToSearch(searchSync, {
       id: feed.id,
       ...parsed.metadata,
+      iconUrl: faviconPatch?.faviconUrl ?? feed.faviconUrl ?? parsed.metadata.iconUrl,
     });
 
     return {

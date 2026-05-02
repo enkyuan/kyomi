@@ -16,7 +16,7 @@ export const getReaderPreferences = createServerFn({ method: "GET" }).handler(
   },
 );
 
-export const updateReaderPreferences = createServerFn({ method: "PATCH" })
+export const updateReaderPreferences = createServerFn({ method: "POST" })
   .inputValidator((input: Partial<ReaderPreferencesDto>) => input)
   .handler(async ({ data }): Promise<ReaderPreferencesDto> => {
     const headers = buildForwardHeaders(getRequestHeaders());

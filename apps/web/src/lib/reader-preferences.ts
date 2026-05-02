@@ -109,6 +109,8 @@ export function useReaderPreferences() {
     enabled: Boolean(user?.id),
     staleTime: 5 * 60 * 1000,
     initialData: () => readCachedReaderPreferences(user?.id),
+    // Avoid GET /me/preferences completing during slider interaction and overwriting optimistic updates.
+    refetchOnWindowFocus: false,
   });
 
   const latestRequestIdRef = useRef(0);
@@ -159,17 +161,22 @@ export function useReaderPreferences() {
 
   return {
     preferences,
-    setPreferences: async (next: Partial<ReaderPreferences>) => {
-      await queryClient.cancelQueries({ queryKey });
-
-      const current = preferencesQuery.data;
+    setPreferences: (next: Partial<ReaderPreferences>) => {
+      const current =
+        queryClient.getQueryData<ReaderPreferences>(queryKey) ??
+        preferencesQuery.data ??
+        DEFAULT_READER_PREFERENCES;
       const optimistic = sanitizeReaderPreferences({ ...current, ...next });
       if (JSON.stringify(current) === JSON.stringify(optimistic)) {
         return;
       }
 
+      // Apply optimistic cache + storage synchronously so UI never flashes stale values while
+      // `cancelQueries` is pending (await previously deferred this update).
       queryClient.setQueryData(queryKey, optimistic);
       writeCachedReaderPreferences(optimistic, user?.id);
+
+      void queryClient.cancelQueries({ queryKey });
 
       if (!user?.id) {
         return;
@@ -192,9 +199,10 @@ export function useReaderPreferences() {
       }, 300);
     },
     setPreferencesAsync: async (next: Partial<ReaderPreferences>) => {
-      await queryClient.cancelQueries({ queryKey });
-
-      const current = preferencesQuery.data;
+      const current =
+        queryClient.getQueryData<ReaderPreferences>(queryKey) ??
+        preferencesQuery.data ??
+        DEFAULT_READER_PREFERENCES;
       const optimistic = sanitizeReaderPreferences({ ...current, ...next });
       if (JSON.stringify(current) === JSON.stringify(optimistic)) {
         return optimistic;
@@ -202,6 +210,8 @@ export function useReaderPreferences() {
 
       queryClient.setQueryData(queryKey, optimistic);
       writeCachedReaderPreferences(optimistic, user?.id);
+
+      void queryClient.cancelQueries({ queryKey });
 
       if (!user?.id) {
         return optimistic;
@@ -216,12 +226,15 @@ export function useReaderPreferences() {
         rollback: current,
       });
     },
-    resetPreferences: async () => {
-      await queryClient.cancelQueries({ queryKey });
-
-      const current = preferencesQuery.data;
+    resetPreferences: () => {
+      const current =
+        queryClient.getQueryData<ReaderPreferences>(queryKey) ??
+        preferencesQuery.data ??
+        DEFAULT_READER_PREFERENCES;
       queryClient.setQueryData(queryKey, DEFAULT_READER_PREFERENCES);
       writeCachedReaderPreferences(DEFAULT_READER_PREFERENCES, user?.id);
+
+      void queryClient.cancelQueries({ queryKey });
 
       if (!user?.id) {
         return;

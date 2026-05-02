@@ -1,7 +1,7 @@
 import {
   ALLOWED_SCHEMES,
   assertSafeFaviconHost,
-  findIconFromHtml,
+  findIconsFromHtml,
   tryFetchImage,
   tryFetchImageIfHostSafe,
 } from "@cronos/favicon";
@@ -10,9 +10,10 @@ import { createFileRoute } from "@tanstack/react-router";
 const FAVICON_CACHE_MAX_AGE_SECONDS = 60 * 60 * 24 * 7;
 const FAVICON_CACHE_STALE_SECONDS = 60 * 60 * 24 * 30;
 const FAVICON_CACHE_TTL_MS = FAVICON_CACHE_MAX_AGE_SECONDS * 1000;
-const FAVICON_MISS_CACHE_TTL_MS = 60 * 30 * 1000;
+const FAVICON_MISS_CACHE_TTL_MS = 60 * 2 * 1000;
 const FAVICON_CACHE_MAX_ENTRIES = 500;
 const FAVICON_MAX_RESPONSE_BYTES = 64 * 1024;
+const FAVICON_RESOLUTION_CACHE_VERSION = "html-first-v2";
 
 type CachedFavicon =
   | {
@@ -38,6 +39,10 @@ function setCachedFavicon(hostname: string, value: CachedFavicon) {
   faviconResponseCache.set(hostname, value);
 }
 
+function getFaviconCacheKey(hostname: string): string {
+  return `${FAVICON_RESOLUTION_CACHE_VERSION}:${hostname}`;
+}
+
 function buildCachedFaviconResponse(cached: CachedFavicon): Response | null {
   if (cached.kind !== "hit") {
     return null;
@@ -53,19 +58,19 @@ function buildCachedFaviconResponse(cached: CachedFavicon): Response | null {
 }
 
 function readCache(hostname: string): Response | null {
-  const cached = faviconResponseCache.get(hostname);
+  const cached = faviconResponseCache.get(getFaviconCacheKey(hostname));
   if (!cached) {
     return null;
   }
   if (cached.expiresAt <= Date.now()) {
-    faviconResponseCache.delete(hostname);
+    faviconResponseCache.delete(getFaviconCacheKey(hostname));
     return null;
   }
   if (cached.kind === "miss") {
     return new Response(null, {
       status: 404,
       headers: {
-        "Cache-Control": "public, max-age=1800, stale-while-revalidate=3600",
+        "Cache-Control": "public, max-age=120, stale-while-revalidate=600",
       },
     });
   }
@@ -99,7 +104,7 @@ async function cacheAndBuildFaviconResponse(
     bodyBytes.set(chunk, offset);
     offset += chunk.byteLength;
   }
-  setCachedFavicon(hostname, {
+  setCachedFavicon(getFaviconCacheKey(hostname), {
     kind: "hit",
     body: bodyBytes,
     contentType,
@@ -150,17 +155,17 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     return cachedResponse;
   }
 
-  const directResult = await tryFetchImage(`${origin}/favicon.ico`);
-  if (directResult) {
-    return cacheAndBuildFaviconResponse(hostname, directResult);
-  }
-
-  const iconHref = await findIconFromHtml(origin);
-  if (iconHref) {
+  const iconHrefs = await findIconsFromHtml(origin);
+  for (const iconHref of iconHrefs) {
     const htmlIconResult = await tryFetchImageIfHostSafe(iconHref);
     if (htmlIconResult) {
       return cacheAndBuildFaviconResponse(hostname, htmlIconResult);
     }
+  }
+
+  const directResult = await tryFetchImage(`${origin}/favicon.ico`);
+  if (directResult) {
+    return cacheAndBuildFaviconResponse(hostname, directResult);
   }
 
   const googleResult = await tryFetchImage(
@@ -175,12 +180,17 @@ async function handleFaviconRequest(request: Request): Promise<Response> {
     return cacheAndBuildFaviconResponse(hostname, duckDuckGoResult);
   }
 
-  setCachedFavicon(hostname, {
+  setCachedFavicon(getFaviconCacheKey(hostname), {
     kind: "miss",
     expiresAt: Date.now() + FAVICON_MISS_CACHE_TTL_MS,
   });
 
-  return new Response(null, { status: 404 });
+  return new Response(null, {
+    status: 404,
+    headers: {
+      "Cache-Control": "public, max-age=120, stale-while-revalidate=600",
+    },
+  });
 }
 
 export const Route = createFileRoute("/api/favicon")({

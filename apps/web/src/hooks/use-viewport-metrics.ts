@@ -1,6 +1,6 @@
 "use client";
 
-import { type RefObject, useEffect, useRef, useState } from "react";
+import { type RefObject, useCallback, useEffect, useRef, useState } from "react";
 
 type ViewportMetrics = {
   viewportHeight: number;
@@ -18,6 +18,7 @@ export function useViewportMetrics(
     hasVerticalOverflow: false,
   });
   const updateRef = useRef<() => void>(() => {});
+  const rafIdRef = useRef<number | null>(null);
 
   useEffect(() => {
     updateRef.current = () => {
@@ -42,22 +43,21 @@ export function useViewportMetrics(
     };
   }, [viewportRef]);
 
+  const scheduleUpdate = useCallback(() => {
+    if (rafIdRef.current !== null) {
+      return;
+    }
+    rafIdRef.current = window.requestAnimationFrame(() => {
+      rafIdRef.current = null;
+      updateRef.current();
+    });
+  }, []);
+
   useEffect(() => {
     const viewport = viewportRef.current;
     if (!viewport) {
       return;
     }
-
-    let rafId: number | null = null;
-    const scheduleUpdate = () => {
-      if (rafId !== null) {
-        return;
-      }
-      rafId = window.requestAnimationFrame(() => {
-        rafId = null;
-        updateRef.current();
-      });
-    };
 
     scheduleUpdate();
 
@@ -68,16 +68,17 @@ export function useViewportMetrics(
     observer.observe(viewport);
 
     return () => {
-      if (rafId !== null) {
-        window.cancelAnimationFrame(rafId);
+      if (rafIdRef.current !== null) {
+        window.cancelAnimationFrame(rafIdRef.current);
+        rafIdRef.current = null;
       }
       observer.disconnect();
     };
-  }, [viewportRef]);
+  }, [viewportRef, scheduleUpdate]);
 
   useEffect(() => {
-    updateRef.current();
-  }, dependencies);
+    scheduleUpdate();
+  }, [scheduleUpdate, ...dependencies]);
 
   return metrics;
 }

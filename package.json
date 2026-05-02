@@ -36,7 +36,7 @@
     "db:seed:feeds": "bun run catalog:import",
     "setup:app": "bun run docker:up && bun run db:migrate",
     "setup:catalog": "bun run catalog:sync",
-    "catalog:install": "bun run --cwd packages/catalog install",
+    "catalog:install": "bun run --cwd packages/catalog setup",
     "catalog:export": "bun run --cwd packages/catalog export:catalog",
     "catalog:import": "bun run --cwd apps/api catalog:import",
     "catalog:smoke": "bun run --cwd apps/api catalog:smoke",
@@ -48,7 +48,7 @@
     "drizzle-kit": "^0.31.10",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "turbo": "^2.9.6"
+    "turbo": "^2.9.7"
   },
   "dependencies": {
     "@radix-ui/react-slider": "^1.3.6",

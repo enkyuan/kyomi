@@ -41,8 +41,8 @@ import {
 } from "@components/ui/sidebar";
 import { SidebarFeedSearchTrigger } from "@components/navigation/sidebar-feed-search";
 import { SidebarPretextLabel } from "@components/navigation/sidebar-pretext-label";
-import { listFollowedFeeds } from "@lib/feed-functions";
-import { listFolders } from "@lib/folder-functions";
+import { listFollowedFeeds } from "@modules/feeds/api";
+import { listFolders } from "@modules/folders/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 import { QUERY_TIMES } from "@lib/query-policies";
 import { cn } from "@lib/utils";
@@ -90,8 +90,8 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
           search: () => ({
             filter: "today" as const,
             search: undefined,
-            feedId: scopedFeedId,
-            folderId: scopedFolderId,
+            feedId: undefined,
+            folderId: undefined,
             itemId: undefined,
           }),
         }),
@@ -106,8 +106,8 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
           search: () => ({
             filter: "unread" as const,
             search: undefined,
-            feedId: scopedFeedId,
-            folderId: scopedFolderId,
+            feedId: undefined,
+            folderId: undefined,
             itemId: undefined,
           }),
         }),
@@ -122,8 +122,8 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
           search: () => ({
             filter: "saved" as const,
             search: undefined,
-            feedId: scopedFeedId,
-            folderId: scopedFolderId,
+            feedId: undefined,
+            folderId: undefined,
             itemId: undefined,
           }),
         }),

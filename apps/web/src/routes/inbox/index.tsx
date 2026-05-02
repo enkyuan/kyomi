@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
 import { requireAuth } from "@/routes/-guards";
-import { InboxPage } from "@components/pages/inbox/index";
+import { InboxPage } from "@modules/inbox/page";
 
 const inboxSearchSchema = z.object({
   filter: z.enum(["today", "unread", "saved"]).optional(),
@@ -9,6 +9,8 @@ const inboxSearchSchema = z.object({
   feedId: z.string().optional(),
   folderId: z.string().optional(),
   itemId: z.string().optional(),
+  showHidden: z.literal("1").optional(),
+  showRead: z.literal("1").optional(),
 });
 
 export const Route = createFileRoute("/inbox/")({

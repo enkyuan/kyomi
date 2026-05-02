@@ -36,6 +36,8 @@ export async function runWorkerLoop(signal?: AbortSignal): Promise<void> {
       signal,
       onJob: async ({ id, job, attempts }) => {
         if (job.type === "feed.refresh") {
+          // Canonical refresh execution path: queued job -> worker -> ingestion.
+          // API/read paths should only enqueue or read status, never run refresh inline.
           const startTime = Date.now();
           const result = await runFeedRefresh(
             db,

@@ -7,12 +7,12 @@
     "paths": {
       "*": ["./*"],
       "@/*": ["./src/*"],
+      "@modules/*": ["./src/modules/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@integrations/*": ["./src/integrations/*"],
       "@lib/*": ["./src/lib/*"],
       "@utils/*": ["./src/utils/*"],
-      "@pages/*": ["./src/components/pages/*"],
     },
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "types": ["vite/client"],

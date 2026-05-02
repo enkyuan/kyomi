@@ -1,5 +1,6 @@
 /** Schemes accepted by the server-side favicon proxy (mirrors host-safety.ts). */
 const PROXY_ALLOWED_SCHEMES = new Set(["http:", "https:"]);
+const FAVICON_PROXY_VERSION = "2";
 
 function parseOrigin(raw: string | null | undefined): string | null {
   if (!raw) return null;
@@ -32,5 +33,5 @@ export function buildClientFaviconUrl(
   const origin = parseOrigin(siteUrl) ?? parseOrigin(feedUrl);
   if (!origin) return null;
 
-  return `/api/favicon?domain=${encodeURIComponent(origin)}`;
+  return `/api/favicon?domain=${encodeURIComponent(origin)}&v=${FAVICON_PROXY_VERSION}`;
 }
