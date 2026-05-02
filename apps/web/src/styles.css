@@ -70,6 +70,36 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  /* OKLCH palette (sRGB equivalents aligned with Tailwind default scale). */
+  --palette-white: oklch(1 0 0);
+  --palette-black: oklch(0 0 0);
+  --palette-neutral-50: oklch(0.9851 0 0);
+  --palette-neutral-100: oklch(0.9702 0 0);
+  --palette-neutral-400: oklch(0.7155 0 0);
+  --palette-neutral-500: oklch(0.5555 0 0);
+  --palette-neutral-800: oklch(0.2686 0 0);
+  --palette-neutral-950: oklch(0.1448 0 0);
+  --palette-red-400: oklch(0.7106 0.1661 22.22);
+  --palette-red-500: oklch(0.6368 0.2078 25.33);
+  --palette-red-700: oklch(0.5054 0.1905 27.52);
+  --palette-blue-400: oklch(0.7137 0.1434 254.62);
+  --palette-blue-500: oklch(0.6231 0.188 259.81);
+  --palette-blue-700: oklch(0.4882 0.2172 264.38);
+  --palette-emerald-400: oklch(0.7729 0.1535 163.22);
+  --palette-emerald-500: oklch(0.6959 0.1491 162.48);
+  --palette-emerald-700: oklch(0.5081 0.1049 165.61);
+  --palette-amber-400: oklch(0.8369 0.1644 84.43);
+  --palette-amber-500: oklch(0.7686 0.1647 70.08);
+  --palette-amber-700: oklch(0.5553 0.1455 49);
+  /* Reader fenced code (github-dark hljs) */
+  --hljs-foreground: oklch(0.8967 0.0168 250.85);
+  --hljs-comment: oklch(0.7195 0.0221 248.14);
+  --hljs-keyword: oklch(0.7629 0.1409 26.08);
+  --hljs-string: oklch(0.8932 0.0586 239.12);
+  --hljs-number: oklch(0.8559 0.1105 76.38);
+  --hljs-title: oklch(0.8545 0.0827 237.06);
+  --hljs-attr: oklch(0.8722 0.04 260.14);
+
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
   --font-reader: "DM Sans", var(--font-sans);
@@ -80,54 +110,54 @@
     "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", monospace;
   --radius: 0.625rem;
-  --background: var(--color-white);
-  --foreground: var(--color-neutral-800);
-  --card: var(--color-white);
-  --card-foreground: var(--color-neutral-800);
-  --popover: var(--color-white);
-  --popover-foreground: var(--color-neutral-800);
-  --primary: var(--color-neutral-800);
-  --primary-foreground: var(--color-neutral-50);
-  --secondary: --alpha(var(--color-black) / 4%);
-  --secondary-foreground: var(--color-neutral-800);
-  --muted: --alpha(var(--color-black) / 4%);
+  --background: var(--palette-white);
+  --foreground: var(--palette-neutral-800);
+  --card: var(--palette-white);
+  --card-foreground: var(--palette-neutral-800);
+  --popover: var(--palette-white);
+  --popover-foreground: var(--palette-neutral-800);
+  --primary: var(--palette-neutral-800);
+  --primary-foreground: var(--palette-neutral-50);
+  --secondary: color-mix(in oklch, var(--palette-black) 4%, transparent);
+  --secondary-foreground: var(--palette-neutral-800);
+  --muted: color-mix(in oklch, var(--palette-black) 4%, transparent);
   --muted-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-500) 90%,
-    var(--color-black)
+    in oklch,
+    var(--palette-neutral-500) 90%,
+    var(--palette-black)
   );
-  --accent: --alpha(var(--color-black) / 4%);
-  --accent-foreground: var(--color-neutral-800);
-  --destructive: var(--color-red-500);
-  --destructive-foreground: var(--color-red-700);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-700);
-  --success: var(--color-emerald-500);
-  --success-foreground: var(--color-emerald-700);
-  --warning: var(--color-amber-500);
-  --warning-foreground: var(--color-amber-700);
-  --input: --alpha(var(--color-black) / 10%);
+  --accent: color-mix(in oklch, var(--palette-black) 4%, transparent);
+  --accent-foreground: var(--palette-neutral-800);
+  --destructive: var(--palette-red-500);
+  --destructive-foreground: var(--palette-red-700);
+  --info: var(--palette-blue-500);
+  --info-foreground: var(--palette-blue-700);
+  --success: var(--palette-emerald-500);
+  --success-foreground: var(--palette-emerald-700);
+  --warning: var(--palette-amber-500);
+  --warning-foreground: var(--palette-amber-700);
+  --input: color-mix(in oklch, var(--palette-black) 10%, transparent);
   --border: var(--input);
-  --ring: var(--color-neutral-400);
-  --sidebar: var(--color-neutral-50);
+  --ring: var(--palette-neutral-400);
+  --sidebar: var(--palette-neutral-50);
   --sidebar-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-800) 64%,
+    in oklch,
+    var(--palette-neutral-800) 64%,
     var(--sidebar)
   );
-  --sidebar-primary: var(--color-neutral-800);
-  --sidebar-primary-foreground: var(--color-neutral-50);
-  --sidebar-accent: --alpha(var(--color-black) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-800);
+  --sidebar-primary: var(--palette-neutral-800);
+  --sidebar-primary-foreground: var(--palette-neutral-50);
+  --sidebar-accent: color-mix(in oklch, var(--palette-black) 4%, transparent);
+  --sidebar-accent-foreground: var(--palette-neutral-800);
   --sidebar-border: var(--border);
-  --sidebar-ring: var(--color-neutral-400);
+  --sidebar-ring: var(--palette-neutral-400);
   --scrollbar-thumb: color-mix(
-    in srgb,
+    in oklch,
     var(--foreground) 18%,
     transparent
   );
   --scrollbar-thumb-hover: color-mix(
-    in srgb,
+    in oklch,
     var(--foreground) 28%,
     transparent
   );
@@ -136,58 +166,58 @@
 
 .dark {
   --background: color-mix(
-    in srgb,
-    var(--color-neutral-950) 95%,
-    var(--color-white)
+    in oklch,
+    var(--palette-neutral-950) 95%,
+    var(--palette-white)
   );
-  --foreground: var(--color-neutral-100);
-  --card: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --card-foreground: var(--color-neutral-100);
-  --popover: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --popover-foreground: var(--color-neutral-100);
-  --primary: var(--color-neutral-100);
-  --primary-foreground: var(--color-neutral-800);
-  --secondary: --alpha(var(--color-white) / 4%);
-  --secondary-foreground: var(--color-neutral-100);
-  --muted: --alpha(var(--color-white) / 4%);
+  --foreground: var(--palette-neutral-100);
+  --card: color-mix(in oklch, var(--background) 98%, var(--palette-white));
+  --card-foreground: var(--palette-neutral-100);
+  --popover: color-mix(in oklch, var(--background) 98%, var(--palette-white));
+  --popover-foreground: var(--palette-neutral-100);
+  --primary: var(--palette-neutral-100);
+  --primary-foreground: var(--palette-neutral-800);
+  --secondary: color-mix(in oklch, var(--palette-white) 4%, transparent);
+  --secondary-foreground: var(--palette-neutral-100);
+  --muted: color-mix(in oklch, var(--palette-white) 4%, transparent);
   --muted-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-500) 90%,
-    var(--color-white)
+    in oklch,
+    var(--palette-neutral-500) 90%,
+    var(--palette-white)
   );
-  --accent: --alpha(var(--color-white) / 4%);
-  --accent-foreground: var(--color-neutral-100);
+  --accent: color-mix(in oklch, var(--palette-white) 4%, transparent);
+  --accent-foreground: var(--palette-neutral-100);
   --destructive: color-mix(
-    in srgb,
-    var(--color-red-500) 90%,
-    var(--color-white)
+    in oklch,
+    var(--palette-red-500) 90%,
+    var(--palette-white)
   );
-  --destructive-foreground: var(--color-red-400);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-400);
-  --success: var(--color-emerald-500);
-  --success-foreground: var(--color-emerald-400);
-  --warning: var(--color-amber-500);
-  --warning-foreground: var(--color-amber-400);
-  --input: --alpha(var(--color-white) / 8%);
+  --destructive-foreground: var(--palette-red-400);
+  --info: var(--palette-blue-500);
+  --info-foreground: var(--palette-blue-400);
+  --success: var(--palette-emerald-500);
+  --success-foreground: var(--palette-emerald-400);
+  --warning: var(--palette-amber-500);
+  --warning-foreground: var(--palette-amber-400);
+  --input: color-mix(in oklch, var(--palette-white) 8%, transparent);
   --border: var(--input);
-  --ring: var(--color-neutral-500);
+  --ring: var(--palette-neutral-500);
   --sidebar: color-mix(
-    in srgb,
-    var(--color-neutral-950) 97%,
-    var(--color-white)
+    in oklch,
+    var(--palette-neutral-950) 97%,
+    var(--palette-white)
   );
   --sidebar-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-100) 64%,
+    in oklch,
+    var(--palette-neutral-100) 64%,
     var(--sidebar)
   );
-  --sidebar-primary: var(--color-neutral-100);
-  --sidebar-primary-foreground: var(--color-neutral-800);
-  --sidebar-accent: --alpha(var(--color-white) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-100);
+  --sidebar-primary: var(--palette-neutral-100);
+  --sidebar-primary-foreground: var(--palette-neutral-800);
+  --sidebar-accent: color-mix(in oklch, var(--palette-white) 4%, transparent);
+  --sidebar-accent-foreground: var(--palette-neutral-100);
   --sidebar-border: var(--border);
-  --sidebar-ring: var(--color-neutral-400);
+  --sidebar-ring: var(--palette-neutral-400);
 }
 
 * {
@@ -236,12 +266,12 @@ body {
 }
 
 .reader-content img {
-  outline: 1px solid rgba(0, 0, 0, 0.1);
+  outline: 1px solid color-mix(in oklch, var(--palette-black) 10%, transparent);
   outline-offset: -1px;
 }
 
 .dark .reader-content img {
-  outline-color: rgba(255, 255, 255, 0.1);
+  outline-color: color-mix(in oklch, var(--palette-white) 10%, transparent);
 }
 
 *,
@@ -261,7 +291,7 @@ body {
 
 .reader-content .article-body {
   font-size: var(--reader-font-size, 1rem);
-  color: color-mix(in srgb, var(--foreground) 92%, transparent);
+  color: color-mix(in oklch, var(--foreground) 92%, transparent);
   transition: font-size 80ms ease;
 }
 
@@ -306,9 +336,9 @@ body {
 }
 
 .reader-content .article-body blockquote {
-  border-left: 3px solid color-mix(in srgb, var(--foreground) 18%, transparent);
+  border-left: 3px solid color-mix(in oklch, var(--foreground) 18%, transparent);
   padding-left: 1rem;
-  color: color-mix(in srgb, var(--foreground) 78%, transparent);
+  color: color-mix(in oklch, var(--foreground) 78%, transparent);
 }
 
 .reader-content .article-body :is(code, pre) {
@@ -318,7 +348,7 @@ body {
 /* Inline code only (fenced blocks are styled separately below). */
 .reader-content .article-body :where(p, li, blockquote, td, th, figcaption, a, span, em, strong, h1, h2, h3, h4, h5, h6) > code {
   border-radius: 6px;
-  background: color-mix(in srgb, var(--foreground) 7%, transparent);
+  background: color-mix(in oklch, var(--foreground) 7%, transparent);
   padding: 0.1rem 0.3rem;
   font-size: 0.88em;
   line-height: 1.3;
@@ -332,7 +362,7 @@ body {
 .reader-content .article-body pre {
   overflow-x: auto;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--foreground) 7%, transparent);
+  background: color-mix(in oklch, var(--foreground) 7%, transparent);
   padding: 1rem;
 }
 
@@ -347,7 +377,7 @@ body {
   margin: 1rem 0;
   overflow: hidden;
   border-radius: 0.5rem;
-  border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
+  border: 1px solid color-mix(in oklch, var(--foreground) 14%, transparent);
   background: var(--card);
 }
 
@@ -371,7 +401,7 @@ body {
   font-weight: 500;
   letter-spacing: normal;
   text-transform: none;
-  color: color-mix(in srgb, var(--foreground) 62%, transparent);
+  color: color-mix(in oklch, var(--foreground) 62%, transparent);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre {
@@ -391,7 +421,7 @@ body {
   line-height: 1.5;
   font-weight: 500;
   display: block;
-  color: #d5dee8;
+  color: var(--hljs-foreground);
   padding-block: 0.375rem 0.75rem;
   padding-inline: var(--reader-code-inline-pad);
   border-radius: 0;
@@ -410,13 +440,13 @@ body {
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-punctuation,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-operator,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-subst {
-  color: #d5dee8;
+  color: var(--hljs-foreground);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-comment,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-code,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-formula {
-  color: #9aa6b2;
+  color: var(--hljs-comment);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-keyword,
@@ -425,32 +455,32 @@ body {
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-template-variable,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-type,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-variable.language_ {
-  color: #ff8c82;
+  color: var(--hljs-keyword);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-string,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-meta .hljs-string,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-regexp {
-  color: #b9e2ff;
+  color: var(--hljs-string);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-number,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-literal,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-symbol,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-bullet {
-  color: #f9c67a;
+  color: var(--hljs-number);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title.class_,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-title.function_ {
-  color: #9bd8ff;
+  color: var(--hljs-title);
 }
 
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-attr,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-attribute,
 .reader-content .article-body [data-reader-code-block] pre.reader-code-pre code.hljs .hljs-params {
-  color: #c6d6f0;
+  color: var(--hljs-attr);
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-host {
@@ -483,25 +513,25 @@ body {
   padding: 0;
   border: none;
   border-radius: calc(var(--radius) - 2px);
-  background: color-mix(in srgb, var(--background) 88%, transparent);
+  background: color-mix(in oklch, var(--background) 88%, transparent);
   color: var(--foreground);
   cursor: pointer;
   outline: 1px solid var(--border);
   outline-offset: 0;
-  box-shadow: 0 1px 2px color-mix(in srgb, var(--foreground) / 8%);
+  box-shadow: 0 1px 2px color-mix(in oklch, var(--foreground) 8%, transparent);
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button:hover {
-  background: color-mix(in srgb, var(--background) 95%, transparent);
+  background: color-mix(in oklch, var(--background) 95%, transparent);
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--ring) 72%, transparent);
+  outline: 2px solid color-mix(in oklch, var(--ring) 72%, transparent);
   outline-offset: 2px;
 }
 
 .reader-content .article-body [data-reader-code-block] .reader-code-copy-button:active {
-  background: color-mix(in srgb, var(--accent) 40%, transparent);
+  background: color-mix(in oklch, var(--accent) 40%, transparent);
 }
 
 /* Icon crossfade: copy ↔ check on .is-copied */
@@ -546,14 +576,14 @@ body {
 }
 
 .reader-content .article-body :is(th, td) {
-  border: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+  border: 1px solid color-mix(in oklch, var(--foreground) 12%, transparent);
   padding: 0.6rem 0.75rem;
   text-align: left;
   vertical-align: top;
 }
 
 .reader-content .article-body th {
-  background: color-mix(in srgb, var(--foreground) 5%, transparent);
+  background: color-mix(in oklch, var(--foreground) 5%, transparent);
   font-family: var(--font-sans);
   font-weight: 600;
 }
@@ -910,7 +940,7 @@ body {
   margin-top: 0;
   text-align: center;
   text-wrap: pretty;
-  color: color-mix(in srgb, var(--foreground) 68%, transparent);
+  color: color-mix(in oklch, var(--foreground) 68%, transparent);
   font-size: 0.9rem;
   line-height: 1.35;
   width: min(100%, 56rem);
@@ -939,7 +969,7 @@ body {
 
 /* Classified caption text outside <figure> (see render-html.tsx classifyImageAdjacentText) */
 .reader-content .article-body [data-reader-figure-caption] {
-  color: color-mix(in srgb, var(--foreground) 68%, transparent);
+  color: color-mix(in oklch, var(--foreground) 68%, transparent);
   font-size: 0.9rem;
   line-height: 1.35;
   text-align: center;
@@ -950,7 +980,7 @@ body {
 
 /* Classified photo/image credit text */
 .reader-content .article-body [data-reader-figure-credit] {
-  color: color-mix(in srgb, var(--foreground) 55%, transparent);
+  color: color-mix(in oklch, var(--foreground) 55%, transparent);
   font-size: 0.8rem;
   font-style: italic;
   line-height: 1.3;
@@ -973,5 +1003,5 @@ body {
 
 .reader-content .article-body hr {
   border: 0;
-  border-top: 1px solid color-mix(in srgb, var(--foreground) 12%, transparent);
+  border-top: 1px solid color-mix(in oklch, var(--foreground) 12%, transparent);
 }
