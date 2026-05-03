@@ -2,6 +2,7 @@
 
 import { layout, prepare } from "@chenglou/pretext";
 import { memo, useEffect, useMemo, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
 import { updateInboxItemState, type InboxItem } from "@modules/inbox/api";
@@ -13,11 +14,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@component
 import { updateInboxItemCaches } from "@modules/inbox/cache";
 import { formatInboxTimestamp } from "@modules/inbox/format-timestamp";
 
-const TITLE_FONT = '600 16px "Inter Variable"';
-const TITLE_LINE_HEIGHT = {
-  comfortable: 22,
-  compact: 20,
-} as const;
 const PRETEXT_MIN_FILL_RATIO = 0.97;
 const PRETEXT_MAX_TRIM = 8;
 const PRETEXT_WIDTH_BUFFER = 4;
@@ -99,6 +95,7 @@ export const FeedItem = memo(function FeedItem({
   showBottomSeparator,
   containerWidth,
   density,
+  fontSizePx,
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
@@ -111,6 +108,7 @@ export const FeedItem = memo(function FeedItem({
   showBottomSeparator: boolean;
   containerWidth?: number;
   density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
@@ -142,6 +140,12 @@ export const FeedItem = memo(function FeedItem({
   };
   const isReadDimmed = item.isRead && filter !== "recent";
   const isCompact = density === "compact";
+  const titleFontSizePx = isCompact ? Math.max(14, fontSizePx - 1) : fontSizePx;
+  const titleLineHeightPx = isCompact ? titleFontSizePx + 5 : titleFontSizePx + 6;
+  const titleFont = `600 ${titleFontSizePx}px "Inter Variable"`;
+  const summaryFontSizePx = Math.max(12, Math.round(fontSizePx * 0.875));
+  const summaryLineHeightPx = Math.round(summaryFontSizePx * (isCompact ? 1.38 : 1.45));
+  const metaFontSizePx = Math.max(11, Math.round(fontSizePx * 0.75));
   const selectItem = () => {
     onSelect(item);
   };
@@ -194,23 +198,28 @@ export const FeedItem = memo(function FeedItem({
         <CardTitle
           className={cn(
             "min-w-0 font-semibold tracking-[-0.012em] text-foreground",
-            isCompact ? "text-[15px] leading-5" : "text-[16px] leading-5.5",
             isReadDimmed && "text-foreground/82",
           )}
+          style={{
+            fontSize: `${titleFontSizePx}px`,
+            lineHeight: `${titleLineHeightPx}px`,
+          }}
         >
           <PretextText
             className={cn(
               "font-semibold tracking-[-0.012em] text-foreground",
-              isCompact
-                ? "line-clamp-2 text-[15px] leading-5"
-                : "line-clamp-2 text-[16px] leading-5.5",
+              "line-clamp-2",
               isReadDimmed && "text-foreground/82",
             )}
-            lineHeight={TITLE_LINE_HEIGHT[density]}
+            lineHeight={titleLineHeightPx}
             maxLines={2}
             text={item.title}
-            font={TITLE_FONT}
+            font={titleFont}
             containerWidth={containerWidth}
+            style={{
+              fontSize: `${titleFontSizePx}px`,
+              lineHeight: `${titleLineHeightPx}px`,
+            }}
           />
         </CardTitle>
       </CardHeader>
@@ -218,11 +227,13 @@ export const FeedItem = memo(function FeedItem({
         <p
           className={cn(
             "overflow-hidden text-pretty text-muted-foreground/95",
-            isCompact
-              ? "line-clamp-2 text-[13px] leading-[1.38]"
-              : "line-clamp-3 text-[14px] leading-[1.45]",
+            isCompact ? "line-clamp-2" : "line-clamp-3",
             isReadDimmed && "text-muted-foreground/65",
           )}
+          style={{
+            fontSize: `${summaryFontSizePx}px`,
+            lineHeight: `${summaryLineHeightPx}px`,
+          }}
         >
           {item.summary || "No summary available."}
         </p>
@@ -236,9 +247,9 @@ export const FeedItem = memo(function FeedItem({
         <span
           className={cn(
             "line-clamp-1 font-medium tracking-[0.01em] text-muted-foreground/85 tabular-nums",
-            isCompact ? "text-[11px]" : "text-[12px]",
             isReadDimmed && "text-muted-foreground/65",
           )}
+          style={{ fontSize: `${metaFontSizePx}px` }}
         >
           {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
         </span>
@@ -246,9 +257,9 @@ export const FeedItem = memo(function FeedItem({
           <span
             className={cn(
               "line-clamp-1 font-medium tracking-[0.01em] text-muted-foreground/85",
-              isCompact ? "text-[11px]" : "text-[12px]",
               isReadDimmed && "text-muted-foreground/65",
             )}
+            style={{ fontSize: `${metaFontSizePx}px` }}
           >
             Saved
           </span>
@@ -265,6 +276,7 @@ const PretextText = memo(function PretextText({
   maxLines,
   className,
   containerWidth,
+  style,
 }: {
   text: string;
   font: string;
@@ -272,6 +284,7 @@ const PretextText = memo(function PretextText({
   maxLines: number;
   className?: string;
   containerWidth?: number;
+  style?: CSSProperties;
 }) {
   const ref = useRef<HTMLParagraphElement | null>(null);
   const [parentWidth, setParentWidth] = useState<number | null>(null);
@@ -313,6 +326,7 @@ const PretextText = memo(function PretextText({
       className={cn("w-full", className)}
       style={{
         maxWidth: fittedWidth ? `${fittedWidth}px` : undefined,
+        ...style,
       }}
     >
       {text}
@@ -328,6 +342,7 @@ type FeedItemProps = {
   showBottomSeparator: boolean;
   containerWidth?: number;
   density: InboxDensityDto;
+  fontSizePx: number;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
@@ -358,6 +373,7 @@ function areFeedItemPropsEqual(prev: FeedItemProps, next: FeedItemProps) {
     prev.showBottomSeparator === next.showBottomSeparator &&
     prev.containerWidth === next.containerWidth &&
     prev.density === next.density &&
+    prev.fontSizePx === next.fontSizePx &&
     prev.showFavicons === next.showFavicons &&
     prev.timestampDisplay === next.timestampDisplay &&
     prev.timestampHourCycle === next.timestampHourCycle &&
@@ -373,6 +389,7 @@ function arePretextTextPropsEqual(
     maxLines: number;
     className?: string;
     containerWidth?: number;
+    style?: CSSProperties;
   },
   next: {
     text: string;
@@ -381,6 +398,7 @@ function arePretextTextPropsEqual(
     maxLines: number;
     className?: string;
     containerWidth?: number;
+    style?: CSSProperties;
   },
 ) {
   return (
@@ -389,6 +407,8 @@ function arePretextTextPropsEqual(
     prev.lineHeight === next.lineHeight &&
     prev.maxLines === next.maxLines &&
     prev.className === next.className &&
-    prev.containerWidth === next.containerWidth
+    prev.containerWidth === next.containerWidth &&
+    prev.style?.fontSize === next.style?.fontSize &&
+    prev.style?.lineHeight === next.style?.lineHeight
   );
 }

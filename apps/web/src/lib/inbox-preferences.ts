@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth } from "@integrations/better-auth/auth-provider";
 import { inboxPreferencesSchema, type InboxPreferencesDto } from "@lib/api-schemas";
@@ -90,18 +90,20 @@ function writeCachedInboxPreferences(next: InboxPreferences, userId?: string) {
   window.localStorage.setItem(inboxPreferencesStorageKey(userId), JSON.stringify(next));
 }
 
-export function useInboxPreferences() {
+export function useInboxPreferences(initialPreferences?: InboxPreferences) {
   const { user } = useAuth();
   const queryClient = useQueryClient();
   const queryKey = inboxPreferencesQueryKey(user?.id);
   const latestRequestIdRef = useRef(0);
+  const mutationDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const mutationRollbackRef = useRef<InboxPreferences | null>(null);
 
   const preferencesQuery = useQuery({
     queryKey,
     queryFn: () => getInboxPreferences(),
     enabled: Boolean(user?.id),
     staleTime: 5 * 60 * 1000,
-    initialData: () => readCachedInboxPreferences(user?.id),
+    initialData: () => initialPreferences ?? readCachedInboxPreferences(user?.id),
     refetchOnWindowFocus: false,
   });
 
@@ -110,6 +112,16 @@ export function useInboxPreferences() {
       writeCachedInboxPreferences(preferencesQuery.data, user?.id);
     }
   }, [preferencesQuery.data, user?.id]);
+
+  useEffect(() => {
+    return () => {
+      if (mutationDebounceRef.current) {
+        clearTimeout(mutationDebounceRef.current);
+        mutationDebounceRef.current = null;
+        mutationRollbackRef.current = null;
+      }
+    };
+  }, []);
 
   const updateMutation = useMutation({
     mutationFn: ({
@@ -138,6 +150,14 @@ export function useInboxPreferences() {
     },
   });
 
+  const limits = useMemo(
+    () => ({
+      minFontSizePx: MIN_INBOX_FONT_SIZE_PX,
+      maxFontSizePx: MAX_INBOX_FONT_SIZE_PX,
+    }),
+    [],
+  );
+
   return {
     preferences: preferencesQuery.data,
     defaults: DEFAULT_INBOX_PREFERENCES,
@@ -162,11 +182,25 @@ export function useInboxPreferences() {
 
       const requestId = latestRequestIdRef.current + 1;
       latestRequestIdRef.current = requestId;
-      updateMutation.mutate({
-        patch: next,
-        requestId,
-        rollback: current,
-      });
+
+      if (!mutationDebounceRef.current) {
+        mutationRollbackRef.current = current;
+      }
+      if (mutationDebounceRef.current) {
+        clearTimeout(mutationDebounceRef.current);
+      }
+
+      mutationDebounceRef.current = setTimeout(() => {
+        mutationDebounceRef.current = null;
+        const rollback = mutationRollbackRef.current ?? current;
+        mutationRollbackRef.current = null;
+        const patch = queryClient.getQueryData<InboxPreferences>(queryKey) ?? optimistic;
+        updateMutation.mutate({
+          patch,
+          requestId,
+          rollback,
+        });
+      }, 300);
     },
     resetPreferences: () => {
       const current =
@@ -193,9 +227,6 @@ export function useInboxPreferences() {
     },
     isLoadingPreferences: preferencesQuery.isLoading,
     isUpdatingPreferences: updateMutation.isPending,
-    limits: {
-      minFontSizePx: MIN_INBOX_FONT_SIZE_PX,
-      maxFontSizePx: MAX_INBOX_FONT_SIZE_PX,
-    },
+    limits,
   };
 }

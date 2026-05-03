@@ -14,9 +14,17 @@ import { updateInboxItemCaches } from "@modules/inbox/cache";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearch } from "@tanstack/react-router";
 import { LayoutGroup, motion } from "motion/react";
+import type { InboxPreferences } from "@lib/inbox-preferences";
 
 const MIN_LEFT_PERCENT = 26;
 const MIN_RIGHT_PERCENT = 64;
+const INBOX_PANEL_SPACING_PX = 4;
+const INBOX_PANEL_VERTICAL_PADDING_STYLE = {
+  paddingBlock: `${INBOX_PANEL_SPACING_PX}px`,
+} as const;
+const INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE = {
+  paddingInlineEnd: `${INBOX_PANEL_SPACING_PX}px`,
+} as const;
 
 function parseSearchFlag(value: string | undefined) {
   if (!value) {
@@ -26,8 +34,12 @@ function parseSearchFlag(value: string | undefined) {
   return normalized === "1" || normalized === "true";
 }
 
-export function InboxPage() {
-  const { preferences } = useInboxPreferences();
+export function InboxPage({
+  initialInboxPreferences,
+}: {
+  initialInboxPreferences?: InboxPreferences;
+}) {
+  const { preferences } = useInboxPreferences(initialInboxPreferences);
   const queryClient = useQueryClient();
   const { filter, search, feedId, folderId, itemId, showHidden, showRead } = useSearch({
     from: "/inbox/",
@@ -245,11 +257,12 @@ export function InboxPage() {
     isReaderFocusList && !inboxQuery.isPending && inboxItems.length === 0;
 
   return (
-    <AppShell>
+    <AppShell readerFocusList={isReaderFocusMode}>
       {isReaderFocus ? (
         <div
           data-reader-focus-list
-          className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden px-4 pb-2"
+          className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden px-4"
+          style={INBOX_PANEL_VERTICAL_PADDING_STYLE}
         >
           <div className="h-full min-h-0 w-full min-w-0">
             <InboxDetailView
@@ -270,7 +283,8 @@ export function InboxPage() {
           {isReaderFocusList ? (
             <motion.div
               data-reader-focus-list
-              className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden px-4 pb-2"
+              className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden"
+              style={INBOX_PANEL_VERTICAL_PADDING_STYLE}
               layout
             >
               <motion.div
@@ -317,7 +331,8 @@ export function InboxPage() {
               ref={splitContainerRef}
               className="grid h-full max-h-full min-h-0 min-w-0 flex-1 gap-0 overflow-hidden"
               style={{
-                gridTemplateColumns: `${leftPanelPercent}% 4px minmax(0, 1fr)`,
+                ...INBOX_PANEL_VERTICAL_PADDING_STYLE,
+                gridTemplateColumns: `${leftPanelPercent}% ${INBOX_PANEL_SPACING_PX}px minmax(0, 1fr)`,
               }}
               layout
             >
@@ -357,7 +372,11 @@ export function InboxPage() {
                 <div className="h-full w-px bg-transparent" />
               </div>
 
-              <motion.div className="h-full min-h-0 min-w-0" layout>
+              <motion.div
+                className="h-full min-h-0 min-w-0"
+                style={INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE}
+                layout
+              >
                 <InboxDetailView
                   selectedItem={selectedItem}
                   isDetailLoading={isDetailLoading}

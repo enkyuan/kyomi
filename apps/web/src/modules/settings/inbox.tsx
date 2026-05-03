@@ -1,16 +1,6 @@
 "use client";
 
-import {
-  Calendar3Fill,
-  DocumentFill,
-  FontSizeLine,
-  InboxFill,
-  Layout5Fill,
-  MailOpenFill,
-  NewsFill,
-  StarFill,
-  TimeFill,
-} from "@mingcute/react";
+import { FontSizeLine, InboxFill } from "@mingcute/react";
 import { Button } from "@components/ui/button";
 import { Group, GroupSeparator } from "@components/ui/group";
 import { Select, SelectItem, SelectPopup, SelectTrigger, SelectValue } from "@components/ui/select";
@@ -41,52 +31,12 @@ export function InboxPageNav({ isActive, onSelect }: InboxPageNavProps) {
   );
 }
 
-function SettingHeading({
-  description,
-  icon: Icon,
-  title,
-}: {
-  description: string;
-  icon: typeof InboxFill;
-  title: string;
-}) {
+function SettingHeading({ description, title }: { description: string; title: string }) {
   return (
     <div className="space-y-1">
-      <p className="flex items-center gap-2 text-sm font-medium text-foreground">
-        <Icon className="size-4 text-muted-foreground" />
-        <span>{title}</span>
-      </p>
+      <p className="text-sm font-medium text-foreground">{title}</p>
       <p className="text-xs text-muted-foreground">{description}</p>
     </div>
-  );
-}
-
-const INBOX_VIEW_ICON_BY_VALUE = {
-  inbox: InboxFill,
-  saved: StarFill,
-  today: Calendar3Fill,
-  unread: NewsFill,
-} as const;
-
-function AnimatedInboxViewIcon({ value }: { value: keyof typeof INBOX_VIEW_ICON_BY_VALUE }) {
-  return (
-    <span className="relative size-4 shrink-0 overflow-hidden">
-      {Object.entries(INBOX_VIEW_ICON_BY_VALUE).map(([iconValue, Icon]) => {
-        const isActive = iconValue === value;
-
-        return (
-          <Icon
-            key={iconValue}
-            className={[
-              "absolute inset-0 size-4 text-muted-foreground transition-[opacity,filter,transform] duration-200 ease-out",
-              isActive
-                ? "scale-100 opacity-100 blur-0"
-                : "scale-92 opacity-0 blur-[6px] pointer-events-none",
-            ].join(" ")}
-          />
-        );
-      })}
-    </span>
   );
 }
 
@@ -104,10 +54,7 @@ export function InboxPagePanel() {
 
       <div className="space-y-3 py-1">
         <div className="space-y-1">
-          <p className="flex items-center gap-2 text-sm font-medium text-foreground">
-            <AnimatedInboxViewIcon value={preferences.inboxDefaultView} />
-            <span>Default view</span>
-          </p>
+          <p className="text-sm font-medium text-foreground">Default view</p>
           <p className="text-xs text-muted-foreground">
             Choose which inbox view opens first when you land on the inbox.
           </p>
@@ -139,7 +86,6 @@ export function InboxPagePanel() {
       <div className="space-y-3 py-1">
         <SettingHeading
           description="Compact trims row spacing for denser scanning. Comfortable preserves the current roomy card layout."
-          icon={Layout5Fill}
           title="Inbox density"
         />
         <Select
@@ -167,7 +113,6 @@ export function InboxPagePanel() {
       <div className="space-y-3 py-1">
         <SettingHeading
           description="Scale inbox item text while preserving title, summary, and metadata hierarchy."
-          icon={FontSizeLine}
           title="Inbox text size"
         />
         <SliderComfortable
@@ -187,7 +132,6 @@ export function InboxPagePanel() {
       <div className="space-y-3 py-1">
         <SettingHeading
           description="Split keeps the current list and detail layout. Reader opens a dedicated reading view, while Original goes straight to the source."
-          icon={DocumentFill}
           title="Article view"
         />
         <Select
@@ -217,7 +161,6 @@ export function InboxPagePanel() {
       <div className="space-y-3 py-1">
         <SettingHeading
           description="Control whether opening an article immediately clears it from unread, waits briefly, or leaves that action manual."
-          icon={MailOpenFill}
           title="Mark as read"
         />
         <Select
@@ -247,7 +190,6 @@ export function InboxPagePanel() {
       <div className="space-y-3 py-1">
         <SettingHeading
           description="Choose whether inbox timestamps prioritize precise calendar dates or relative recency."
-          icon={TimeFill}
           title="Timestamp"
         />
         <Group aria-label="Timestamp format">

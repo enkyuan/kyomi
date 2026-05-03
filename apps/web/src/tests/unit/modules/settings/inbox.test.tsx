@@ -10,6 +10,7 @@ const resetPreferencesMock = vi.fn();
 
 vi.mock("@lib/inbox-preferences", () => ({
   useInboxPreferences: () => ({
+    limits: { minFontSizePx: 14, maxFontSizePx: 20 },
     defaults: {
       inboxDefaultView: "today",
       inboxDensity: "comfortable",
@@ -17,6 +18,7 @@ vi.mock("@lib/inbox-preferences", () => ({
       inboxMarkReadBehavior: "on-open",
       inboxTimestampDisplay: "absolute",
       inboxTimestampHourCycle: "12h",
+      inboxFontSizePx: 16,
       inboxShowRecents: false,
       inboxShowFavicons: true,
     },
@@ -27,6 +29,7 @@ vi.mock("@lib/inbox-preferences", () => ({
       inboxMarkReadBehavior: "on-open",
       inboxTimestampDisplay: "absolute",
       inboxTimestampHourCycle: "12h",
+      inboxFontSizePx: 16,
       inboxShowRecents: false,
       inboxShowFavicons: true,
     },
@@ -87,6 +90,10 @@ vi.mock("@components/ui/switch", () => ({
       toggle
     </button>
   ),
+}));
+
+vi.mock("@components/ui/slider", () => ({
+  SliderComfortable: () => <div>slider</div>,
 }));
 
 describe("InboxPagePanel", () => {
