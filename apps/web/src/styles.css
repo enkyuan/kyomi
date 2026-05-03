@@ -993,18 +993,21 @@ body {
 
 /*
  * Fidelity mode preserves publisher layout semantics.
- * Keep typography and code enhancements, but avoid overriding media structure.
+ * Keep typography and code enhancements, but still use the reader's media primitives
+ * so cleaned-up images, captions, and credits remain visually coherent without the
+ * publisher's original CSS/JS runtime.
  */
-.reader-content .article-body[data-reader-layout-mode="fidelity"] :is(figure, figcaption, img) {
-  all: revert;
-  box-sizing: border-box;
-}
-
 .reader-content .article-body[data-reader-layout-mode="fidelity"] img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
 .reader-content .article-body[data-reader-layout-mode="fidelity"] figure {
-  margin: 1em 40px;
+  margin: 0.75rem auto;
+  width: 100%;
+}
+
+.reader-content .article-body[data-reader-layout-mode="fidelity"] figcaption {
+  width: min(100%, 56rem);
 }

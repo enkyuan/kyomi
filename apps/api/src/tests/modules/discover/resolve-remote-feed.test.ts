@@ -43,4 +43,42 @@ describe("resolveRemoteFeed", () => {
       code: "FEED_URL_FORBIDDEN",
     } satisfies Partial<AppError>);
   });
+
+  test("autodiscovers feed URL from HTML alternate links", async () => {
+    const siteUrl = "https://93.184.216.34/";
+    const feedUrl = "https://93.184.216.34/feed.xml";
+
+    globalThis.fetch = (async (input: Request | string | URL) => {
+      const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
+      if (url === siteUrl) {
+        return new Response(
+          `<!doctype html><html><head><link rel="alternate" type="application/rss+xml" href="/feed.xml"></head><body></body></html>`,
+          {
+            status: 200,
+            headers: { "content-type": "text/html; charset=utf-8" },
+          },
+        );
+      }
+      if (url === feedUrl) {
+        return new Response(
+          `<?xml version="1.0"?><rss version="2.0"><channel><title>Example Feed</title><link>${siteUrl}</link><description>Latest updates</description></channel></rss>`,
+          {
+            status: 200,
+            headers: { "content-type": "application/rss+xml" },
+          },
+        );
+      }
+      throw new Error(`unexpected fetch: ${url}`);
+    }) as unknown as typeof fetch;
+
+    const result = await resolveRemoteFeed(siteUrl);
+
+    expect(result).toEqual({
+      canonicalUrl: feedUrl,
+      title: "Example Feed",
+      description: "Latest updates",
+      link: siteUrl,
+      iconUrl: null,
+    });
+  });
 });

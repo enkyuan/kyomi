@@ -77,36 +77,35 @@ export function registerOpmlRoutes(app: Elysia) {
         const urls = parseOpmlFeeds(body.xml);
         logger.info("opml.import.started", { userId, taskId, urlCount: urls.length });
 
-        const summary = await importOpmlFeedUrls(db, userId, urls);
-        const completedAt = new Date().toISOString();
+        // Run the import in the background
+        void (async () => {
+          const summary = await importOpmlFeedUrls(db, userId, urls);
+          const completedAt = new Date().toISOString();
 
-        try {
-          await saveOpmlTask(taskId, {
-            userId,
-            status: "completed",
-            createdAt,
-            completedAt,
-            summary,
-          });
-        } catch (error) {
-          logger.error("opml.import.task_store_failed", {
+          try {
+            await saveOpmlTask(taskId, {
+              userId,
+              status: "completed",
+              createdAt,
+              completedAt,
+              summary,
+            });
+          } catch (error) {
+            logger.error("opml.import.task_store_failed", {
+              userId,
+              taskId,
+              error: error instanceof Error ? error.message : String(error),
+            });
+          }
+
+          logger.info("opml.import.completed", {
             userId,
             taskId,
-            error: error instanceof Error ? error.message : String(error),
+            subscribed: summary.subscribed,
+            alreadySubscribed: summary.alreadySubscribed,
+            failed: summary.failed,
           });
-          throw new AppError("Could not record import task", {
-            status: 503,
-            code: "OPML_TASK_STORE_FAILED",
-          });
-        }
-
-        logger.info("opml.import.completed", {
-          userId,
-          taskId,
-          subscribed: summary.subscribed,
-          alreadySubscribed: summary.alreadySubscribed,
-          failed: summary.failed,
-        });
+        })();
 
         set.status = 202;
         return { taskId };

@@ -1,4 +1,5 @@
 import { AppError } from "@shared/errors/app-error";
+import { discoverFeedUrlFromHtml } from "./discover-feed-url";
 import { fetchFeedDocument } from "./fetch-feed";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "./normalize-feed-url";
 import { parseFeedMetadata } from "./parse-feed";
@@ -25,7 +26,20 @@ export async function resolveRemoteFeed(rawUrl: string): Promise<ResolvedRemoteF
     throw new AppError("Invalid feed URL", { status: 400, code: "INVALID_FEED_URL" });
   }
 
-  const fetched = await fetchFeedDocument(initial.href);
+  return await resolveRemoteFeedFromUrl(initial.href, new Set());
+}
+
+async function resolveRemoteFeedFromUrl(
+  url: string,
+  visitedUrls: Set<string>,
+): Promise<ResolvedRemoteFeed> {
+  const normalizedInputUrl = normalizeFeedUrl(url);
+  if (visitedUrls.has(normalizedInputUrl)) {
+    throw new AppError("Failed to parse feed", { status: 500, code: "FEED_PARSE_FAILED" });
+  }
+  visitedUrls.add(normalizedInputUrl);
+
+  const fetched = await fetchFeedDocument(url);
   if (!fetched.ok) {
     if (fetched.code === "BLOCKED_URL") {
       throw new AppError(fetched.error || "Invalid feed URL", {
@@ -39,20 +53,20 @@ export async function resolveRemoteFeed(rawUrl: string): Promise<ResolvedRemoteF
     });
   }
 
-  let meta;
   try {
-    meta = parseFeedMetadata(fetched.body, fetched.finalUrl);
+    const meta = parseFeedMetadata(fetched.body, fetched.finalUrl);
+    return {
+      canonicalUrl: normalizeFeedUrl(fetched.finalUrl),
+      title: meta.title,
+      description: meta.description,
+      link: meta.link,
+      iconUrl: meta.iconUrl,
+    };
   } catch {
+    const discoveredFeedUrl = discoverFeedUrlFromHtml(fetched.body, fetched.finalUrl);
+    if (discoveredFeedUrl) {
+      return await resolveRemoteFeedFromUrl(discoveredFeedUrl, visitedUrls);
+    }
     throw new AppError("Failed to parse feed", { status: 500, code: "FEED_PARSE_FAILED" });
   }
-
-  const canonicalUrl = normalizeFeedUrl(fetched.finalUrl);
-
-  return {
-    canonicalUrl,
-    title: meta.title,
-    description: meta.description,
-    link: meta.link,
-    iconUrl: meta.iconUrl,
-  };
 }

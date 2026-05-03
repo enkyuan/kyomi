@@ -353,6 +353,67 @@ describe("articles.normalize.content", () => {
       expect(reader.publishedTime).toBe("2024-01-15T10:00:00Z");
     });
 
+    test("strips redundant leading source headline and metadata from readability html", () => {
+      const reader = buildReadabilityReaderContent(
+        makeInput({
+          title: "Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'",
+          summary: "A short summary.",
+        }),
+        {
+          title: "Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'",
+          byline: "Jaroslav Lukiv",
+          excerpt: "A short summary.",
+          contentHtml: `
+            <h1>Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'</h1>
+            <p>1 hour ago</p>
+            <p>Jaroslav Lukiv</p>
+            <p>Body paragraph starts here.</p>
+          `,
+          contentText: "Body paragraph starts here.",
+          siteName: null,
+          language: null,
+          publishedTime: null,
+        },
+      );
+
+      expect(reader.contentHtml).not.toContain("<h1>");
+      expect(reader.contentHtml).not.toContain("Jaroslav Lukiv");
+      expect(reader.contentHtml).not.toContain("1 hour ago");
+      expect(reader.contentHtml).toContain("Body paragraph starts here.");
+    });
+
+    test("strips nested publisher header scaffolding from readability html", () => {
+      const reader = buildReadabilityReaderContent(
+        makeInput({
+          title: "Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'",
+          summary: "A short summary.",
+        }),
+        {
+          title: "Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'",
+          byline: "Jaroslav Lukiv",
+          excerpt: "A short summary.",
+          contentHtml: `
+            <div><div><article>
+              <div><h2>Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'</h2></div>
+              <div><p>1 hour ago</p><p></p><div><p><span>Jaroslav Lukiv</span></p></div></div>
+              <div><figure><img src="https://example.com/photo.jpg" alt=""></figure></div>
+              <div><p>Body paragraph starts here.</p></div>
+            </article></div></div>
+          `,
+          contentText: "Body paragraph starts here.",
+          siteName: null,
+          language: null,
+          publishedTime: null,
+        },
+      );
+
+      expect(reader.contentHtml).not.toContain("<h2>");
+      expect(reader.contentHtml).not.toContain("Jaroslav Lukiv");
+      expect(reader.contentHtml).not.toContain("1 hour ago");
+      expect(reader.contentHtml).toContain("<figure>");
+      expect(reader.contentHtml).toContain("Body paragraph starts here.");
+    });
+
     test("returns link-only fallback when nothing usable exists", () => {
       const reader = buildStoredReaderContent(makeInput({}));
 
@@ -360,6 +421,29 @@ describe("articles.normalize.content", () => {
       expect(reader.contentSource).toBe("link_only");
       expect(reader.bodyKind).toBe("fallback");
       expect(reader.notice).toContain("could not be previewed");
+    });
+
+    test("strips redundant leading source headline and metadata from stored html", () => {
+      const reader = buildStoredReaderContent(
+        makeInput({
+          title: "Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'",
+          summary: "A short summary.",
+          contentHtml: `
+            <h1>Germany says US troop withdrawal 'foreseeable' as Trump warns of more 'cuts'</h1>
+            <p>2 hours ago</p>
+            <p>Jaroslav Lukiv</p>
+            <p>Body paragraph starts here.</p>
+          `,
+          contentText: "Body paragraph starts here.",
+          contentStatus: "ready",
+          contentSource: "feed_html",
+        }),
+      );
+
+      expect(reader.contentHtml).not.toContain("<h1>");
+      expect(reader.contentHtml).not.toContain("Jaroslav Lukiv");
+      expect(reader.contentHtml).not.toContain("2 hours ago");
+      expect(reader.contentHtml).toContain("Body paragraph starts here.");
     });
   });
 });

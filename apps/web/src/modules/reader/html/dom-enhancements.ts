@@ -614,6 +614,21 @@ function stripClientCarouselArtifacts(container: HTMLElement): void {
 const CREDIT_RE =
   /^(?:(?:photo|image|illustration|picture|video|graphic|source)s?\s*(?:by|courtesy|credit|via|from|:|\/))|(?:(?:getty|ap|reuters|afp|shutterstock|unsplash|pexels|istock|alamy|\u00a9|copyright|\(c\)))/i;
 
+function looksLikeBareCreditLabel(text: string): boolean {
+  const compact = text.trim().replace(/\s+/g, " ");
+  if (!compact) {
+    return false;
+  }
+  const words = compact.split(" ");
+  if (words.length < 2 || words.length > 5) {
+    return false;
+  }
+  if (!words.every((word) => /^[A-Z][a-zA-Z.'-]*$/.test(word))) {
+    return false;
+  }
+  return true;
+}
+
 function classifyImageAdjacentText(container: HTMLElement): void {
   const frames = [...container.querySelectorAll<HTMLElement>(`[${READER_IMG_FRAME}]`)];
 
@@ -628,6 +643,7 @@ function classifyImageAdjacentText(container: HTMLElement): void {
 
     let cursor = anchor.nextElementSibling as HTMLElement | null;
     let classified = 0;
+    let hasCaption = false;
 
     while (cursor && classified < 2) {
       if (cursor.tagName !== "P") break;
@@ -646,21 +662,34 @@ function classifyImageAdjacentText(container: HTMLElement): void {
       }
 
       const wordCount = text.split(/\s+/).filter(Boolean).length;
+      const nextText =
+        cursor.nextElementSibling?.tagName === "P"
+          ? (cursor.nextElementSibling.textContent ?? "").trim()
+          : "";
+      const nextWordCount = nextText ? nextText.split(/\s+/).filter(Boolean).length : 0;
 
-      if (wordCount <= 20 && CREDIT_RE.test(text)) {
+      if (
+        (wordCount <= 20 && CREDIT_RE.test(text)) ||
+        (classified === 0 &&
+          wordCount <= 5 &&
+          looksLikeBareCreditLabel(text) &&
+          nextWordCount > 0 &&
+          nextWordCount <= 30)
+      ) {
         cursor.setAttribute(READER_FIGURE_CREDIT, "");
         classified++;
         cursor = cursor.nextElementSibling as HTMLElement | null;
         continue;
       }
 
-      if (classified === 0 && wordCount <= 30) {
+      if (!hasCaption && wordCount <= 30) {
         const sentenceCount = (text.match(/[.!?](?=\s|$)/g) ?? []).length;
         const isStrongCaption = wordCount <= 15;
         const isWeakCaption = wordCount <= 30 && sentenceCount <= 1;
         if (isStrongCaption || isWeakCaption) {
           cursor.setAttribute(READER_FIGURE_CAPTION, "");
           classified++;
+          hasCaption = true;
           cursor = cursor.nextElementSibling as HTMLElement | null;
           continue;
         }
@@ -706,6 +735,9 @@ export function runReaderDomEnhancements(
 ): void {
   const layoutMode = options?.layoutMode ?? "normalized";
   if (layoutMode === "fidelity") {
+    enhanceArticleBodyImages(container);
+    markCaptionedFigures(container);
+    classifyImageAdjacentText(container);
     return;
   }
 

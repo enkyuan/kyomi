@@ -3,7 +3,7 @@
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { FeedItem } from "@modules/inbox/item";
 import { InboxListFilterMenu } from "@modules/inbox/list-filter-menu";
-import { FeedRefreshStatus } from "@modules/inbox/refresh-status";
+import { FeedRefreshStatus, FeedRefreshSummary } from "@modules/inbox/refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
@@ -252,11 +252,12 @@ export function InboxList({
             : "unread");
 
   return (
-    <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground [--inbox-header-height:2.75rem] md:min-h-0">
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-[var(--inbox-header-height)] border-b border-border bg-card">
-        <div className="pointer-events-auto flex h-full items-center justify-between gap-3 px-2">
-          <span className="ps-1 font-medium text-muted-foreground text-sm tabular-nums">
+    <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground [--inbox-header-height:3rem] md:min-h-0">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-(--inbox-header-height) border-b border-border bg-card">
+        <div className="pointer-events-auto flex h-full items-center justify-between gap-3 pl-2.5 pr-2">
+          <span className="inline-flex items-center whitespace-nowrap ps-1.5 font-medium text-muted-foreground text-sm tabular-nums">
             {viewCount} {countLabel}
+            {feedId ? <FeedRefreshSummary feedId={feedId} /> : null}
           </span>
           <div className="flex items-center gap-0.5">
             {feedId ? <FeedRefreshStatus feedId={feedId} /> : null}
@@ -270,7 +271,7 @@ export function InboxList({
           className="h-full overflow-x-hidden outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden data-has-overflow-y:overscroll-y-contain"
           data-slot="inbox-list-viewport"
         >
-          <div className="pt-[var(--inbox-header-height)]">
+          <div className="pt-(--inbox-header-height)">
             {!isVirtualizerHostMounted ? (
               isLoading && inboxItems.length === 0 ? (
                 <InboxListSkeletonRows density={density} showFavicons={showFavicons} />
@@ -299,7 +300,7 @@ export function InboxList({
           </div>
         </ScrollAreaPrimitive.Viewport>
         <ScrollBar
-          className="z-50 mt-[var(--inbox-header-height)] h-[calc(100%-var(--inbox-header-height))]"
+          className="z-50 mt-(--inbox-header-height) h-[calc(100%-var(--inbox-header-height))]"
           orientation="vertical"
         />
       </ScrollAreaPrimitive.Root>

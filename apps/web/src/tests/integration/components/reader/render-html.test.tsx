@@ -233,6 +233,45 @@ describe("RenderHtml – image-adjacent text classification", () => {
   });
 });
 
+describe("RenderHtml – fidelity media cleanup", () => {
+  test("drops redundant placeholder images in fidelity mode", async () => {
+    const html = `
+      <p>
+        <img src="https://example.com/grey-placeholder.png" alt="" width="300" height="180" />
+        <img src="https://example.com/photo.jpg" alt="Article photo" width="1200" height="800" />
+      </p>
+    `;
+    const { container } = render(
+      <RenderHtml html={html} baseUrl="https://example.com/p" layoutMode="fidelity" />,
+    );
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      const images = root?.querySelectorAll("img");
+      expect(images?.length).toBe(1);
+      expect(images?.[0]?.getAttribute("src")).toContain("photo.jpg");
+    });
+  });
+
+  test("classifies adjacent credit text in fidelity mode", async () => {
+    const html = `
+      <img src="https://example.com/photo.jpg" alt="" />
+      <p>Northern Territory Police</p>
+      <p>A picture of Kumanjayi Little Baby, used with the permission of her family</p>
+      <p>Body text starts here and should remain regular article copy.</p>
+    `;
+    const { container } = render(
+      <RenderHtml html={html} baseUrl="https://example.com/p" layoutMode="fidelity" />,
+    );
+    const root = container.querySelector(".article-body");
+    await waitFor(() => {
+      const credit = root?.querySelector("[data-reader-figure-credit]");
+      const caption = root?.querySelector("[data-reader-figure-caption]");
+      expect(credit?.textContent).toContain("Northern Territory Police");
+      expect(caption?.textContent).toContain("used with the permission");
+    });
+  });
+});
+
 describe("RenderHtml – author bio text detection", () => {
   test("detects author bio from adjacent text content", async () => {
     const html = `

@@ -94,6 +94,28 @@ function writeCachedInboxPreferences(next: InboxPreferences, userId?: string) {
   }
 }
 
+export function resolveInitialInboxPreferences(
+  queryClient: ReturnType<typeof useQueryClient>,
+  queryKey: ReturnType<typeof inboxPreferencesQueryKey>,
+  initialPreferences?: InboxPreferences,
+  userId?: string,
+) {
+  const cachedQuery = queryClient.getQueryData<InboxPreferences>(queryKey);
+  if (cachedQuery) {
+    return cachedQuery;
+  }
+
+  if (initialPreferences) {
+    return sanitizeInboxPreferences(initialPreferences);
+  }
+
+  if (typeof window !== "undefined") {
+    return readCachedInboxPreferences(userId);
+  }
+
+  return DEFAULT_INBOX_PREFERENCES;
+}
+
 export function useInboxPreferences(initialPreferences?: InboxPreferences) {
   const { user } = useAuth();
   const queryClient = useQueryClient();
@@ -107,7 +129,10 @@ export function useInboxPreferences(initialPreferences?: InboxPreferences) {
     queryFn: () => getInboxPreferences(),
     enabled: Boolean(user?.id),
     staleTime: 5 * 60 * 1000,
-    initialData: () => initialPreferences ?? readCachedInboxPreferences(user?.id),
+    // Loader-provided preferences are the authoritative server state for this route. Prefer them
+    // over local cache so a stale client value cannot hide the inbox list by forcing reader focus.
+    initialData: () =>
+      resolveInitialInboxPreferences(queryClient, queryKey, initialPreferences, user?.id),
     refetchOnWindowFocus: false,
   });
 

@@ -19,7 +19,7 @@ import {
   CommandPanel,
 } from "@components/ui/command";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@components/ui/input-group";
-import { Kbd } from "@components/ui/kbd";
+import { Kbd, KbdGroup } from "@components/ui/kbd";
 import { SidebarMenuButton } from "@components/ui/sidebar";
 import { toastManager } from "@components/ui/toast";
 import { followFeed, searchFeeds } from "@modules/feeds/api";
@@ -42,7 +42,6 @@ export function SidebarFeedSearchTrigger({
   hideTrigger = false,
   enableGlobalShortcut = true,
 }: SidebarFeedSearchTriggerProps) {
-  const shortcutLabel = isMacPlatform ? "⌘K" : "Ctrl K";
   const queryClient = useQueryClient();
   const [internalOpen, setInternalOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -167,9 +166,10 @@ export function SidebarFeedSearchTrigger({
                   align="inline-end"
                   className="ms-auto h-full items-center self-stretch has-[>kbd:last-child]:me-0"
                 >
-                  <Kbd className="min-w-0 whitespace-nowrap px-1.5 text-[10px] leading-none">
-                    {shortcutLabel}
-                  </Kbd>
+                  <KbdGroup className="-me-1">
+                    <Kbd>&#8984;</Kbd>
+                    <Kbd>K</Kbd>
+                  </KbdGroup>
                 </InputGroupAddon>
               </InputGroup>
             </SidebarMenuButton>

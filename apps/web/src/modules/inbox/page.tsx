@@ -183,25 +183,6 @@ export function InboxPage({
 
   const selectItem = useCallback(
     (item: InboxItem) => {
-      if (preferences.articleOpenBehavior === "original") {
-        void navigate({
-          search: (prev) => ({
-            ...prev,
-            itemId: undefined,
-          }),
-          replace: true,
-        });
-        window.open(item.link, "_blank", "noopener,noreferrer");
-        if (
-          !item.isRead &&
-          effectiveFilter !== "recent" &&
-          preferences.inboxMarkReadBehavior !== "manual"
-        ) {
-          markReadMutation.mutate(item.id);
-        }
-        return;
-      }
-
       void navigate({
         search: (prev) => ({
           ...prev,
@@ -209,13 +190,7 @@ export function InboxPage({
         }),
       });
     },
-    [
-      effectiveFilter,
-      markReadMutation,
-      navigate,
-      preferences.articleOpenBehavior,
-      preferences.inboxMarkReadBehavior,
-    ],
+    [navigate],
   );
 
   useEffect(() => {

@@ -65,23 +65,25 @@ export async function searchFeeds(
   if (isMeiliConfigured()) {
     try {
       const hits = await searchFeedSearchDocuments(query, safeLimit);
-      if (hits.length > 0) {
-        const hitIds = hits.map((hit) => hit.id);
-        const subscriptionRows = await database
-          .select({ feedId: feedSubscriptions.feedId })
-          .from(feedSubscriptions)
-          .where(
-            and(eq(feedSubscriptions.userId, userId), inArray(feedSubscriptions.feedId, hitIds)),
-          );
-        const subscribedIds = new Set(subscriptionRows.map((row) => row.feedId));
-        return hits.map((hit) => ({
-          ...hit,
-          title: decodeText(hit.title),
-          description: decodeNullableText(hit.description),
-          faviconUrl: hit.faviconUrl ?? null,
-          isSubscribed: subscribedIds.has(hit.id),
-        }));
+      if (hits.length === 0) {
+        return [];
       }
+
+      const hitIds = hits.map((hit) => hit.id);
+      const subscriptionRows = await database
+        .select({ feedId: feedSubscriptions.feedId })
+        .from(feedSubscriptions)
+        .where(
+          and(eq(feedSubscriptions.userId, userId), inArray(feedSubscriptions.feedId, hitIds)),
+        );
+      const subscribedIds = new Set(subscriptionRows.map((row) => row.feedId));
+      return hits.map((hit) => ({
+        ...hit,
+        title: decodeText(hit.title),
+        description: decodeNullableText(hit.description),
+        faviconUrl: hit.faviconUrl ?? null,
+        isSubscribed: subscribedIds.has(hit.id),
+      }));
     } catch (error) {
       logger?.warn("discover.search.meili_fallback", {
         userId,
