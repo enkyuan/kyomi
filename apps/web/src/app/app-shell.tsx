@@ -4,7 +4,7 @@ import type { CSSProperties, ReactNode } from "react";
 import { APP_SIDEBAR_WIDTH, AppSidebar } from "@components/ui/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@components/ui/sidebar";
 
-const READER_FOCUS_LIST_MAX_WIDTH = "36rem";
+const READER_FOCUS_LIST_MAX_WIDTH = "40rem";
 const READER_FOCUS_LIST_WIDTH = "min(100%, var(--reader-focus-list-max-width))";
 const READER_FOCUS_LEFT_GUTTER = `max(0px, calc((100% - ${READER_FOCUS_LIST_WIDTH}) / 2 - var(--sidebar-width)))`;
 const READER_FOCUS_RIGHT_GUTTER = `max(0px, calc((100% - ${READER_FOCUS_LIST_WIDTH}) / 2))`;
