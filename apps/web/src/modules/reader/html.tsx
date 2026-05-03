@@ -23,11 +23,13 @@ export function RenderHtml({
   html,
   baseUrl,
   openLinksInNewTab = true,
+  showLinkPreviews = true,
   layoutMode = "normalized",
 }: {
   html: string;
   baseUrl?: string | null;
   openLinksInNewTab?: boolean;
+  showLinkPreviews?: boolean;
   layoutMode?: ReaderLayoutMode;
 }) {
   const articleBodyRef = useRef<HTMLDivElement | null>(null);
@@ -47,7 +49,9 @@ export function RenderHtml({
     enhanceArticleCodeBlocks(node);
     runReaderDomEnhancements(node, { layoutMode });
     updateReaderLinkTargets(node, openLinksInNewTab);
-    linkPreviewCleanupsRef.current.push(mountReaderLinkPreviewCards(node));
+    if (showLinkPreviews) {
+      linkPreviewCleanupsRef.current.push(mountReaderLinkPreviewCards(node));
+    }
   };
 
   const scheduleEnhancements = (node: HTMLElement) => {
@@ -114,7 +118,7 @@ export function RenderHtml({
     }
 
     return scheduleEnhancements(node);
-  }, [layoutMode, openLinksInNewTab, prepared]);
+  }, [layoutMode, openLinksInNewTab, prepared, showLinkPreviews]);
 
   useEffect(() => {
     return () => {
@@ -159,7 +163,7 @@ export function RenderHtml({
 
     observer.observe(node, { childList: true, subtree: true });
     return () => observer.disconnect();
-  }, [layoutMode, openLinksInNewTab, prepared]);
+  }, [layoutMode, openLinksInNewTab, prepared, showLinkPreviews]);
 
   return (
     <div

@@ -137,6 +137,20 @@ export function ReaderPagePanel() {
         </label>
         <label className="flex items-center justify-between gap-4">
           <span className="min-w-0">
+            <span className="block text-sm font-medium text-foreground">
+              Link previews on hover
+            </span>
+            <span className="block text-xs text-muted-foreground">
+              Show preview cards when hovering article links in the reader.
+            </span>
+          </span>
+          <Switch
+            checked={preferences.showLinkPreviews}
+            onCheckedChange={(checked) => setPreferences({ showLinkPreviews: checked })}
+          />
+        </label>
+        <label className="flex items-center justify-between gap-4">
+          <span className="min-w-0">
             <span className="block text-sm font-medium text-foreground">Show images</span>
             <span className="block text-xs text-muted-foreground">
               Hide inline images for a cleaner, text-first reading view.

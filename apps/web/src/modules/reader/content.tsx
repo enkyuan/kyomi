@@ -10,10 +10,12 @@ import type { ReaderLayoutMode } from "./html/dom-enhancements";
 export function ReaderContent({
   reader,
   openLinksInNewTab = true,
+  showLinkPreviews = true,
   layoutMode = "normalized",
 }: {
   reader: ReaderContentModel;
   openLinksInNewTab?: boolean;
+  showLinkPreviews?: boolean;
   layoutMode?: ReaderLayoutMode;
 }) {
   // Client invariant: only render the server-selected `bodyKind`; never re-classify content format.
@@ -38,6 +40,7 @@ export function ReaderContent({
         html={reader.contentHtml}
         baseUrl={reader.contentBaseUrl}
         openLinksInNewTab={openLinksInNewTab}
+        showLinkPreviews={showLinkPreviews}
         layoutMode={layoutMode}
       />
     );
@@ -61,6 +64,7 @@ export function ReaderContent({
         markdown={reader.contentMarkdown}
         baseUrl={reader.contentBaseUrl}
         openLinksInNewTab={openLinksInNewTab}
+        showLinkPreviews={showLinkPreviews}
         layoutMode={layoutMode}
       />
     );

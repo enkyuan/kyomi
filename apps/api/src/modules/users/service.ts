@@ -28,6 +28,7 @@ export const DEFAULT_USER_PREFERENCES: UserPreferencesDto = {
   fontSizePx: 17,
   contentWidth: "medium",
   openLinksInNewTab: true,
+  showLinkPreviews: true,
   showImages: true,
   inboxDefaultView: "today",
   inboxDensity: "comfortable",
@@ -69,7 +70,7 @@ function parseInboxDensity(value: string): InboxDensityDto {
 }
 
 function parseArticleOpenBehavior(value: string): ArticleOpenBehaviorDto {
-  if (value === "split" || value === "reader" || value === "original") {
+  if (value === "split" || value === "reader") {
     return value;
   }
   return DEFAULT_USER_PREFERENCES.articleOpenBehavior;
@@ -116,6 +117,7 @@ function rowToPreferences(row: typeof userPreferences.$inferSelect): UserPrefere
     fontSizePx: clampReaderFontSize(row.readerFontSizePx),
     contentWidth: parseContentWidth(row.readerContentWidth),
     openLinksInNewTab: row.readerOpenLinksInNewTab,
+    showLinkPreviews: row.readerShowLinkPreviews,
     showImages: row.readerShowImages,
     inboxDefaultView: parseInboxDefaultView(row.inboxDefaultView),
     inboxDensity: parseInboxDensity(row.inboxDensity),
@@ -168,6 +170,10 @@ function sanitizePreferencesPatch(input: UpdateUserPreferencesDto): UpdateUserPr
     next.openLinksInNewTab = Boolean(input.openLinksInNewTab);
   }
 
+  if (input.showLinkPreviews !== undefined) {
+    next.showLinkPreviews = Boolean(input.showLinkPreviews);
+  }
+
   if (input.showImages !== undefined) {
     next.showImages = Boolean(input.showImages);
   }
@@ -198,11 +204,7 @@ function sanitizePreferencesPatch(input: UpdateUserPreferencesDto): UpdateUserPr
   }
 
   if (input.articleOpenBehavior !== undefined) {
-    if (
-      input.articleOpenBehavior !== "split" &&
-      input.articleOpenBehavior !== "reader" &&
-      input.articleOpenBehavior !== "original"
-    ) {
+    if (input.articleOpenBehavior !== "split" && input.articleOpenBehavior !== "reader") {
       throw new AppError("Unsupported article open behavior.", {
         status: 400,
         code: "USER_PREFERENCES_INVALID_ARTICLE_OPEN_BEHAVIOR",
@@ -387,6 +389,7 @@ export async function updateUserPreferences(
       readerFontSizePx: DEFAULT_USER_PREFERENCES.fontSizePx,
       readerContentWidth: DEFAULT_USER_PREFERENCES.contentWidth,
       readerOpenLinksInNewTab: DEFAULT_USER_PREFERENCES.openLinksInNewTab,
+      readerShowLinkPreviews: DEFAULT_USER_PREFERENCES.showLinkPreviews,
       readerShowImages: DEFAULT_USER_PREFERENCES.showImages,
       createdAt: now,
       updatedAt: now,
@@ -437,6 +440,9 @@ export async function updateUserPreferences(
   }
   if (patch.openLinksInNewTab !== undefined) {
     updateSet.readerOpenLinksInNewTab = patch.openLinksInNewTab;
+  }
+  if (patch.showLinkPreviews !== undefined) {
+    updateSet.readerShowLinkPreviews = patch.showLinkPreviews;
   }
   if (patch.showImages !== undefined) {
     updateSet.readerShowImages = patch.showImages;

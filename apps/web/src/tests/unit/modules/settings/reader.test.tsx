@@ -16,6 +16,7 @@ vi.mock("@lib/reader-preferences", () => ({
       fontSizePx: 17,
       contentWidth: "medium",
       openLinksInNewTab: true,
+      showLinkPreviews: true,
       showImages: true,
     },
     setPreferences: setPreferencesMock,
@@ -47,7 +48,17 @@ vi.mock("@components/ui/sidebar", () => ({
 }));
 
 vi.mock("@components/ui/switch", () => ({
-  Switch: () => null,
+  Switch: ({
+    checked,
+    onCheckedChange,
+  }: {
+    checked?: boolean;
+    onCheckedChange?: (checked: boolean) => void;
+  }) => (
+    <button onClick={() => onCheckedChange?.(!checked)} type="button">
+      toggle
+    </button>
+  ),
 }));
 
 vi.mock("@components/ui/select", () => ({
@@ -70,5 +81,13 @@ describe("ReaderPagePanel", () => {
     fireEvent.click(screen.getByRole("button", { name: "font-size-slider" }));
 
     expect(setPreferencesMock).toHaveBeenCalledWith({ fontSizePx: 21 });
+  });
+
+  test("toggles reader link previews", () => {
+    render(<ReaderPagePanel />);
+
+    fireEvent.click(screen.getByRole("button", { name: /link previews on hover/i }));
+
+    expect(setPreferencesMock).toHaveBeenCalledWith({ showLinkPreviews: false });
   });
 });

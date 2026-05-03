@@ -192,6 +192,7 @@ export function ItemDetail({
       <ReaderContent
         reader={displayReader}
         openLinksInNewTab={preferences.openLinksInNewTab}
+        showLinkPreviews={preferences.showLinkPreviews}
         layoutMode="fidelity"
       />
 

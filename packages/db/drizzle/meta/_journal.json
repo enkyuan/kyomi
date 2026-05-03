@@ -113,6 +113,13 @@
       "when": 1777838400000,
       "tag": "0015_inbox_font_size",
       "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1777842000000,
+      "tag": "0016_reader_show_link_previews",
+      "breakpoints": true
     }
   ]
 }

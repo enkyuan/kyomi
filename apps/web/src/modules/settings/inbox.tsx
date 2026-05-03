@@ -131,18 +131,17 @@ export function InboxPagePanel() {
 
       <div className="space-y-3 py-1">
         <SettingHeading
-          description="Split keeps the current list and detail layout. Reader opens a dedicated reading view, while Original goes straight to the source."
+          description="Split keeps the current list and detail layout. Reader opens a dedicated reading view."
           title="Article view"
         />
         <Select
           items={[
             { label: "Split view", value: "split" },
             { label: "Reader focus", value: "reader" },
-            { label: "Original link", value: "original" },
           ]}
           value={preferences.articleOpenBehavior}
           onValueChange={(value) => {
-            if (value === "split" || value === "reader" || value === "original") {
+            if (value === "split" || value === "reader") {
               setPreferences({ articleOpenBehavior: value });
             }
           }}
@@ -153,7 +152,6 @@ export function InboxPagePanel() {
           <SelectPopup>
             <SelectItem value="split">Split view</SelectItem>
             <SelectItem value="reader">Reader focus</SelectItem>
-            <SelectItem value="original">Original link</SelectItem>
           </SelectPopup>
         </Select>
       </div>

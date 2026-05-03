@@ -181,6 +181,7 @@ export const FeedItem = memo(function FeedItem({
         onMarkRead={() =>
           filter === "recent" ? updateItem({ isRead: false }, true) : updateItem({ isRead: true })
         }
+        onOpenSource={() => window.open(item.link, "_blank", "noopener,noreferrer")}
         onToggleSaved={() => updateItem({ isSaved: !item.isSaved })}
       />
       <CardHeader className={cn("px-5", isCompact ? "gap-1.5 py-2.5" : "gap-2 py-3")}>
@@ -193,6 +194,7 @@ export const FeedItem = memo(function FeedItem({
           iconClassName={cn(isReadDimmed && "opacity-65")}
           labelClassName={cn(isReadDimmed && "text-muted-foreground/70")}
           labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
+          enablePreview={false}
         />
         <CardTitle
           className={cn(

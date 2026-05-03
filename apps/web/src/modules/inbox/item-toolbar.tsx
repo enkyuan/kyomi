@@ -1,7 +1,14 @@
 "use client";
 
 import type React from "react";
-import { EyeLine, MailOpenFill, MailOpenLine, StarFill, StarLine } from "@mingcute/react";
+import {
+  ExternalLinkLine,
+  EyeLine,
+  MailOpenFill,
+  MailOpenLine,
+  StarFill,
+  StarLine,
+} from "@mingcute/react";
 import { Button } from "@components/ui/button";
 import { Toolbar, ToolbarButton, ToolbarGroup } from "@components/ui/toolbar";
 import { Tooltip, TooltipPopup, TooltipTrigger } from "@components/ui/tooltip";
@@ -13,6 +20,7 @@ type InboxItemToolbarProps = {
   isSaved: boolean;
   onHide: () => void;
   onMarkRead: () => void;
+  onOpenSource: () => void;
   onToggleSaved: () => void;
 };
 
@@ -22,6 +30,7 @@ export function InboxItemToolbar({
   isSaved,
   onHide,
   onMarkRead,
+  onOpenSource,
   onToggleSaved,
 }: InboxItemToolbarProps) {
   const readLabel =
@@ -41,6 +50,9 @@ export function InboxItemToolbar({
           active={isSaved}
         >
           {isSaved ? <StarFill /> : <StarLine />}
+        </InboxItemToolbarButton>
+        <InboxItemToolbarButton label="Open source article" onClick={onOpenSource}>
+          <ExternalLinkLine />
         </InboxItemToolbarButton>
         <InboxItemToolbarButton label="Hide from inbox" onClick={onHide}>
           <EyeLine />

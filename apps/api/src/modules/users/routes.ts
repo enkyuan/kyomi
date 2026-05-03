@@ -41,6 +41,7 @@ const userPreferencesResponse = t.Object({
   fontSizePx: t.Number(),
   contentWidth: t.Union([t.Literal("narrow"), t.Literal("medium"), t.Literal("wide")]),
   openLinksInNewTab: t.Boolean(),
+  showLinkPreviews: t.Boolean(),
   showImages: t.Boolean(),
   inboxDefaultView: t.Union([
     t.Literal("inbox"),
@@ -49,7 +50,7 @@ const userPreferencesResponse = t.Object({
     t.Literal("saved"),
   ]),
   inboxDensity: t.Union([t.Literal("comfortable"), t.Literal("compact")]),
-  articleOpenBehavior: t.Union([t.Literal("split"), t.Literal("reader"), t.Literal("original")]),
+  articleOpenBehavior: t.Union([t.Literal("split"), t.Literal("reader")]),
   inboxMarkReadBehavior: t.Union([
     t.Literal("on-open"),
     t.Literal("after-delay"),
@@ -69,14 +70,13 @@ const updateUserPreferencesBody = t.Object({
   fontSizePx: t.Optional(t.Number({ minimum: 14, maximum: 22 })),
   contentWidth: t.Optional(t.Union([t.Literal("narrow"), t.Literal("medium"), t.Literal("wide")])),
   openLinksInNewTab: t.Optional(t.Boolean()),
+  showLinkPreviews: t.Optional(t.Boolean()),
   showImages: t.Optional(t.Boolean()),
   inboxDefaultView: t.Optional(
     t.Union([t.Literal("inbox"), t.Literal("today"), t.Literal("unread"), t.Literal("saved")]),
   ),
   inboxDensity: t.Optional(t.Union([t.Literal("comfortable"), t.Literal("compact")])),
-  articleOpenBehavior: t.Optional(
-    t.Union([t.Literal("split"), t.Literal("reader"), t.Literal("original")]),
-  ),
+  articleOpenBehavior: t.Optional(t.Union([t.Literal("split"), t.Literal("reader")])),
   inboxMarkReadBehavior: t.Optional(
     t.Union([t.Literal("on-open"), t.Literal("after-delay"), t.Literal("manual")]),
   ),
@@ -109,10 +109,11 @@ export function registerUserRoutes(app: Elysia) {
           fontSizePx?: number;
           contentWidth?: "narrow" | "medium" | "wide";
           openLinksInNewTab?: boolean;
+          showLinkPreviews?: boolean;
           showImages?: boolean;
           inboxDefaultView?: "inbox" | "today" | "unread" | "saved";
           inboxDensity?: "comfortable" | "compact";
-          articleOpenBehavior?: "split" | "reader" | "original";
+          articleOpenBehavior?: "split" | "reader";
           inboxMarkReadBehavior?: "on-open" | "after-delay" | "manual";
           inboxTimestampDisplay?: "absolute" | "relative";
           inboxTimestampHourCycle?: "12h" | "24h";

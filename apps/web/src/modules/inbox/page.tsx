@@ -115,9 +115,6 @@ export function InboxPage({
       : "read"
     : undefined;
   const inboxItems = useMemo(() => {
-    if (effectiveFilter === "saved") {
-      return rawInboxItems.filter((item) => !item.isRead);
-    }
     if (isReadScopedFilterActive) {
       return rawInboxItems.filter((item) => item.isRead);
     }
@@ -186,18 +183,6 @@ export function InboxPage({
 
   const selectItem = useCallback(
     (item: InboxItem) => {
-      if (preferences.articleOpenBehavior === "original") {
-        void navigate({
-          search: (prev) => ({
-            ...prev,
-            itemId: undefined,
-          }),
-          replace: true,
-        });
-        window.open(item.link, "_blank", "noopener,noreferrer");
-        return;
-      }
-
       void navigate({
         search: (prev) => ({
           ...prev,
@@ -205,7 +190,7 @@ export function InboxPage({
         }),
       });
     },
-    [navigate, preferences.articleOpenBehavior],
+    [navigate],
   );
 
   useEffect(() => {
@@ -219,7 +204,6 @@ export function InboxPage({
       !selectedItem ||
       selectedItem.isRead ||
       effectiveFilter === "recent" ||
-      preferences.articleOpenBehavior === "original" ||
       preferences.inboxMarkReadBehavior === "manual"
     ) {
       return;
@@ -241,14 +225,7 @@ export function InboxPage({
         delayedReadTimeoutRef.current = null;
       }
     };
-  }, [
-    effectiveFilter,
-    itemId,
-    markReadMutation,
-    preferences.articleOpenBehavior,
-    preferences.inboxMarkReadBehavior,
-    selectedItem,
-  ]);
+  }, [effectiveFilter, itemId, markReadMutation, preferences.inboxMarkReadBehavior, selectedItem]);
 
   const isReaderFocusMode = preferences.articleOpenBehavior === "reader";
   const isReaderFocus = isReaderFocusMode && Boolean(itemId);

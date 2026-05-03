@@ -114,6 +114,13 @@ async function fetchInboxList(
       }),
     );
   }
+  if (filter === "saved" && !search?.trim() && !cursor?.trim()) {
+    return apiJsonValidated(cursorListResponseSchema, () =>
+      apiJson<CursorListResponse>("/api/v1/articles/views/read-later", {
+        headers: buildForwardHeaders(headers),
+      }),
+    );
+  }
   return apiJsonValidated(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
       buildArticlesUrl(
@@ -152,7 +159,6 @@ function buildArticlesUrl(
     params.set("is_read", "true");
   } else if (filter === "saved") {
     params.set("is_saved", "true");
-    params.set("is_read", "false");
   }
   if (feedId?.trim()) {
     params.set("feed_id", feedId.trim());

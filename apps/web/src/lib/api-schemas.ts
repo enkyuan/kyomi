@@ -274,7 +274,7 @@ export const readerDefaultModeSchema = z.enum(["smart", "original", "extracted"]
 export const readerContentWidthSchema = z.enum(["narrow", "medium", "wide"]);
 export const inboxDefaultViewSchema = z.enum(["inbox", "today", "unread", "saved"]);
 export const inboxDensitySchema = z.enum(["comfortable", "compact"]);
-export const articleOpenBehaviorSchema = z.enum(["split", "reader", "original"]);
+export const articleOpenBehaviorSchema = z.enum(["split", "reader"]);
 export const inboxMarkReadBehaviorSchema = z.enum(["on-open", "after-delay", "manual"]);
 export const inboxTimestampDisplaySchema = z.enum(["absolute", "relative"]);
 export const inboxTimestampHourCycleSchema = z.enum(["12h", "24h"]);
@@ -284,6 +284,7 @@ export const readerPreferencesSchema = z.object({
   fontSizePx: z.number(),
   contentWidth: readerContentWidthSchema,
   openLinksInNewTab: z.boolean(),
+  showLinkPreviews: z.boolean(),
   showImages: z.boolean(),
 });
 

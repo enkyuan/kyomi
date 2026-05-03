@@ -15,6 +15,7 @@ type InboxSourceRowProps = {
   labelClassName?: string;
   labelStyle?: CSSProperties;
   iconClassName?: string;
+  enablePreview?: boolean;
 };
 
 export function InboxSourceRow({
@@ -26,8 +27,20 @@ export function InboxSourceRow({
   labelClassName,
   labelStyle,
   iconClassName,
+  enablePreview = true,
 }: InboxSourceRowProps) {
   const sourceLabel = getFeedSourceLabel(articleUrl, feedTitle);
+  const label = (
+    <span
+      className={cn(
+        "min-w-0 flex-1 truncate text-[12px] font-medium tracking-[0.015em] text-muted-foreground/95",
+        labelClassName,
+      )}
+      style={labelStyle}
+    >
+      {sourceLabel}
+    </span>
+  );
 
   return (
     <div className={cn("flex w-full min-w-0 items-center gap-2.5", className)}>
@@ -43,28 +56,20 @@ export function InboxSourceRow({
           title={feedTitle}
         />
       ) : null}
-      <PreviewCard>
-        <PreviewCardTrigger
-          render={
-            <span
-              className={cn(
-                "min-w-0 flex-1 truncate text-[12px] font-medium tracking-[0.015em] text-muted-foreground/95",
-                labelClassName,
-              )}
-              style={labelStyle}
-            />
-          }
-        >
-          {sourceLabel}
-        </PreviewCardTrigger>
-        <PreviewCardPopup align="start" className="w-72 gap-0 p-3">
-          <div className="flex flex-col gap-1.5">
-            <h4 className="truncate font-medium text-sm">{sourceLabel}</h4>
-            <p className="line-clamp-2 text-muted-foreground text-xs">{feedTitle}</p>
-            <p className="break-all text-muted-foreground/90 text-xs">{articleUrl}</p>
-          </div>
-        </PreviewCardPopup>
-      </PreviewCard>
+      {enablePreview ? (
+        <PreviewCard>
+          <PreviewCardTrigger render={label}>{sourceLabel}</PreviewCardTrigger>
+          <PreviewCardPopup align="start" className="w-72 gap-0 p-3">
+            <div className="flex flex-col gap-1.5">
+              <h4 className="truncate font-medium text-sm">{sourceLabel}</h4>
+              <p className="line-clamp-2 text-muted-foreground text-xs">{feedTitle}</p>
+              <p className="break-all text-muted-foreground/90 text-xs">{articleUrl}</p>
+            </div>
+          </PreviewCardPopup>
+        </PreviewCard>
+      ) : (
+        label
+      )}
     </div>
   );
 }

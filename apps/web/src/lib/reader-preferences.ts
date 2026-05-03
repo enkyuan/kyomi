@@ -23,6 +23,7 @@ const DEFAULT_READER_PREFERENCES: ReaderPreferences = {
   fontSizePx: 17,
   contentWidth: "medium",
   openLinksInNewTab: true,
+  showLinkPreviews: true,
   showImages: true,
 };
 
@@ -68,6 +69,10 @@ function sanitizeReaderPreferences(value: unknown): ReaderPreferences {
       typeof record.openLinksInNewTab === "boolean"
         ? record.openLinksInNewTab
         : DEFAULT_READER_PREFERENCES.openLinksInNewTab,
+    showLinkPreviews:
+      typeof record.showLinkPreviews === "boolean"
+        ? record.showLinkPreviews
+        : DEFAULT_READER_PREFERENCES.showLinkPreviews,
     showImages:
       typeof record.showImages === "boolean"
         ? record.showImages
