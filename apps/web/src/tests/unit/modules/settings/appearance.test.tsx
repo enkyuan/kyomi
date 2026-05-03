@@ -3,10 +3,12 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import { InboxPagePanel } from "@modules/settings/inbox";
+import { AppearancePagePanel } from "@modules/settings/appearance";
 
-const setPreferencesMock = vi.fn();
-const resetPreferencesMock = vi.fn();
+const setInboxPreferencesMock = vi.fn();
+const resetInboxPreferencesMock = vi.fn();
+const setReaderPreferencesMock = vi.fn();
+const resetReaderPreferencesMock = vi.fn();
 
 vi.mock("@lib/inbox-preferences", () => ({
   useInboxPreferences: () => ({
@@ -33,8 +35,32 @@ vi.mock("@lib/inbox-preferences", () => ({
       inboxShowRecents: false,
       inboxShowFavicons: true,
     },
-    resetPreferences: resetPreferencesMock,
-    setPreferences: setPreferencesMock,
+    resetPreferences: resetInboxPreferencesMock,
+    setPreferences: setInboxPreferencesMock,
+  }),
+}));
+
+vi.mock("@lib/reader-preferences", () => ({
+  useReaderPreferences: () => ({
+    limits: { minFontSizePx: 14, maxFontSizePx: 22 },
+    defaults: {
+      defaultMode: "smart",
+      fontSizePx: 17,
+      contentWidth: "medium",
+      openLinksInNewTab: true,
+      showLinkPreviews: true,
+      showImages: true,
+    },
+    preferences: {
+      defaultMode: "smart",
+      fontSizePx: 17,
+      contentWidth: "medium",
+      openLinksInNewTab: true,
+      showLinkPreviews: true,
+      showImages: true,
+    },
+    setPreferences: setReaderPreferencesMock,
+    resetPreferences: resetReaderPreferencesMock,
   }),
 }));
 
@@ -93,44 +119,60 @@ vi.mock("@components/ui/switch", () => ({
 }));
 
 vi.mock("@components/ui/slider", () => ({
-  SliderComfortable: () => <div>slider</div>,
+  SliderComfortable: ({ onChange }: { onChange?: (value: number) => void }) => (
+    <button onClick={() => onChange?.(21)} type="button">
+      font-size-slider
+    </button>
+  ),
 }));
 
-describe("InboxPagePanel", () => {
+vi.mock("@components/ui/group", () => ({
+  Group: ({ children }: { children: ReactNode }) => <div>{children}</div>,
+  GroupSeparator: () => <div />,
+}));
+
+vi.mock("@modules/settings/theme-switcher", () => ({
+  ThemeSwitcher: () => <div>theme-switcher</div>,
+}));
+
+describe("AppearancePagePanel", () => {
   beforeEach(() => {
-    setPreferencesMock.mockReset();
-    resetPreferencesMock.mockReset();
+    setInboxPreferencesMock.mockReset();
+    resetInboxPreferencesMock.mockReset();
+    setReaderPreferencesMock.mockReset();
+    resetReaderPreferencesMock.mockReset();
   });
 
-  test("updates the default inbox view preference", () => {
-    render(<InboxPagePanel />);
+  test("updates inbox default view preferences from the merged page", () => {
+    render(<AppearancePagePanel />);
 
     fireEvent.click(screen.getByRole("button", { name: "All unread" }));
 
-    expect(setPreferencesMock).toHaveBeenCalledWith({ inboxDefaultView: "unread" });
+    expect(setInboxPreferencesMock).toHaveBeenCalledWith({ inboxDefaultView: "unread" });
   });
 
-  test("toggles the recents tab preference", () => {
-    render(<InboxPagePanel />);
+  test("updates reader font size preferences from the merged page", () => {
+    render(<AppearancePagePanel />);
 
-    fireEvent.click(screen.getByRole("button", { name: /show recents tab/i }));
+    fireEvent.click(screen.getAllByRole("button", { name: "font-size-slider" })[1]!);
 
-    expect(setPreferencesMock).toHaveBeenCalledWith({ inboxShowRecents: true });
+    expect(setReaderPreferencesMock).toHaveBeenCalledWith({ fontSizePx: 21 });
   });
 
-  test("resets inbox defaults", () => {
-    render(<InboxPagePanel />);
+  test("toggles reader link previews from the merged page", () => {
+    render(<AppearancePagePanel />);
+
+    fireEvent.click(screen.getByRole("button", { name: /link previews on hover/i }));
+
+    expect(setReaderPreferencesMock).toHaveBeenCalledWith({ showLinkPreviews: false });
+  });
+
+  test("resets inbox and reader defaults together", () => {
+    render(<AppearancePagePanel />);
 
     fireEvent.click(screen.getByRole("button", { name: "Reset defaults" }));
 
-    expect(resetPreferencesMock).toHaveBeenCalled();
-  });
-
-  test("toggles the favicon preference", () => {
-    render(<InboxPagePanel />);
-
-    fireEvent.click(screen.getByRole("button", { name: /show favicons/i }));
-
-    expect(setPreferencesMock).toHaveBeenCalledWith({ inboxShowFavicons: false });
+    expect(resetInboxPreferencesMock).toHaveBeenCalled();
+    expect(resetReaderPreferencesMock).toHaveBeenCalled();
   });
 });

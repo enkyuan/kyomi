@@ -167,7 +167,7 @@ export function SidebarFeedSearchTrigger({
                   className="ms-auto h-full items-center self-stretch has-[>kbd:last-child]:me-0"
                 >
                   <KbdGroup className="-me-1">
-                    <Kbd>&#8984;</Kbd>
+                    <Kbd>{isMacPlatform ? "\u2318" : "\u2303"}</Kbd>
                     <Kbd>K</Kbd>
                   </KbdGroup>
                 </InputGroupAddon>
