@@ -9,7 +9,6 @@ import {
   FolderForbidFill,
   FolderInfoFill,
   FolderWarningFill,
-  InboxFill,
   NewsFill,
   SelectorVerticalLine,
   StarFill,
@@ -81,22 +80,6 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
 
   /** Inbox quick switches from the command palette always return to full-workspace views. */
   const inboxItems = [
-    {
-      label: "Inbox",
-      shortcut: "G A",
-      icon: InboxFill,
-      action: () =>
-        navigate({
-          to: "/inbox",
-          search: () => ({
-            filter: "inbox" as const,
-            search: undefined,
-            feedId: undefined,
-            folderId: undefined,
-            itemId: undefined,
-          }),
-        }),
-    },
     {
       label: "Today",
       shortcut: "G I",
@@ -261,7 +244,7 @@ export function SidebarWorkspaceHeader({ isMac, isMacPlatform }: SidebarWorkspac
                               void navigate({
                                 to: "/inbox",
                                 search: () => ({
-                                  filter: "inbox" as const,
+                                  filter: "today" as const,
                                   search: undefined,
                                   folderId: folder.id,
                                   feedId: undefined,

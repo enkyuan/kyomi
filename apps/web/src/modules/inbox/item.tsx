@@ -146,6 +146,7 @@ export const FeedItem = memo(function FeedItem({
   const summaryFontSizePx = Math.max(12, Math.round(fontSizePx * 0.875));
   const summaryLineHeightPx = Math.round(summaryFontSizePx * (isCompact ? 1.38 : 1.45));
   const metaFontSizePx = Math.max(11, Math.round(fontSizePx * 0.75));
+  const sourceLabelFontSizePx = isCompact ? Math.max(11, metaFontSizePx - 1) : metaFontSizePx;
   const selectItem = () => {
     onSelect(item);
   };
@@ -190,10 +191,8 @@ export const FeedItem = memo(function FeedItem({
           showFavicon={showFavicons}
           className={cn(isCompact && "gap-2")}
           iconClassName={cn(isReadDimmed && "opacity-65")}
-          labelClassName={cn(
-            isCompact ? "text-[11px]" : undefined,
-            isReadDimmed && "text-muted-foreground/70",
-          )}
+          labelClassName={cn(isReadDimmed && "text-muted-foreground/70")}
+          labelStyle={{ fontSize: `${sourceLabelFontSizePx}px` }}
         />
         <CardTitle
           className={cn(

@@ -258,85 +258,55 @@ export function InboxPage({
 
   return (
     <AppShell readerFocusList={isReaderFocusMode}>
-      {isReaderFocus ? (
-        <div
-          data-reader-focus-list
-          className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden px-4"
-          style={INBOX_PANEL_VERTICAL_PADDING_STYLE}
-        >
-          <div className="h-full min-h-0 w-full min-w-0">
-            <InboxDetailView
-              selectedItem={selectedItem}
-              isDetailLoading={isDetailLoading}
-              isDetailError={isDetailError}
-              detailError={detailQuery.error}
-              showFavicons={preferences.inboxShowFavicons}
-              timestampDisplay={preferences.inboxTimestampDisplay}
-              timestampHourCycle={preferences.inboxTimestampHourCycle}
-              showBackToList
-              onBackToList={clearSelectedItem}
-            />
-          </div>
-        </div>
-      ) : (
-        <LayoutGroup id="inbox-layout">
-          {isReaderFocusList ? (
+      <LayoutGroup id="inbox-layout">
+        {isReaderFocus ? (
+          <motion.div
+            data-reader-focus-list
+            className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden"
+            style={INBOX_PANEL_VERTICAL_PADDING_STYLE}
+            layout
+          >
             <motion.div
-              data-reader-focus-list
-              className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden"
-              style={INBOX_PANEL_VERTICAL_PADDING_STYLE}
+              className="h-full min-h-0 w-full min-w-0"
               layout
+              layoutId="inbox-detail-panel"
             >
-              <motion.div
-                className="h-full min-h-0 w-full min-w-0"
-                layout
-                layoutId="inbox-list-panel"
-              >
-                {showReaderFocusEmptyState ? (
-                  <InboxDetailView
-                    selectedItem={null}
-                    isDetailLoading={false}
-                    isDetailError={false}
-                    detailError={null}
-                    showFavicons={preferences.inboxShowFavicons}
-                    timestampDisplay={preferences.inboxTimestampDisplay}
-                    timestampHourCycle={preferences.inboxTimestampHourCycle}
-                  />
-                ) : (
-                  <InboxList
-                    inboxItems={inboxItems}
-                    viewCount={viewCount}
-                    filter={effectiveFilter}
-                    density={preferences.inboxDensity}
-                    fontSizePx={preferences.inboxFontSizePx}
-                    showFavicons={preferences.inboxShowFavicons}
-                    timestampDisplay={preferences.inboxTimestampDisplay}
-                    timestampHourCycle={preferences.inboxTimestampHourCycle}
-                    activeScopeLabel={activeScopeLabel}
-                    selectedItemId={itemId}
-                    feedId={feedId}
-                    showHidden={showHiddenItems}
-                    showRead={showReadItems}
-                    isLoading={inboxQuery.isPending}
-                    hasNextPage={!!inboxQuery.hasNextPage}
-                    isFetchingNextPage={inboxQuery.isFetchingNextPage}
-                    fetchNextPage={() => inboxQuery.fetchNextPage()}
-                    onSelectItem={selectItem}
-                  />
-                )}
-              </motion.div>
+              <InboxDetailView
+                selectedItem={selectedItem}
+                isDetailLoading={isDetailLoading}
+                isDetailError={isDetailError}
+                detailError={detailQuery.error}
+                showFavicons={preferences.inboxShowFavicons}
+                timestampDisplay={preferences.inboxTimestampDisplay}
+                timestampHourCycle={preferences.inboxTimestampHourCycle}
+                showBackToList
+                onBackToList={clearSelectedItem}
+              />
             </motion.div>
-          ) : (
+          </motion.div>
+        ) : isReaderFocusList ? (
+          <motion.div
+            data-reader-focus-list
+            className="flex h-full max-h-full min-h-0 w-full min-w-0 items-stretch justify-center overflow-hidden"
+            style={INBOX_PANEL_VERTICAL_PADDING_STYLE}
+            layout
+          >
             <motion.div
-              ref={splitContainerRef}
-              className="grid h-full max-h-full min-h-0 min-w-0 flex-1 gap-0 overflow-hidden"
-              style={{
-                ...INBOX_PANEL_VERTICAL_PADDING_STYLE,
-                gridTemplateColumns: `${leftPanelPercent}% ${INBOX_PANEL_SPACING_PX}px minmax(0, 1fr)`,
-              }}
+              className="h-full min-h-0 w-full min-w-0"
               layout
+              layoutId="inbox-list-panel"
             >
-              <motion.div className="h-full min-h-0 min-w-0" layout layoutId="inbox-list-panel">
+              {showReaderFocusEmptyState ? (
+                <InboxDetailView
+                  selectedItem={null}
+                  isDetailLoading={false}
+                  isDetailError={false}
+                  detailError={null}
+                  showFavicons={preferences.inboxShowFavicons}
+                  timestampDisplay={preferences.inboxTimestampDisplay}
+                  timestampHourCycle={preferences.inboxTimestampHourCycle}
+                />
+              ) : (
                 <InboxList
                   inboxItems={inboxItems}
                   viewCount={viewCount}
@@ -357,40 +327,74 @@ export function InboxPage({
                   fetchNextPage={() => inboxQuery.fetchNextPage()}
                   onSelectItem={selectItem}
                 />
-              </motion.div>
-
-              <div
-                role="separator"
-                aria-orientation="vertical"
-                aria-label="Resize panels"
-                className="group flex h-full cursor-col-resize items-stretch justify-center"
-                onPointerDown={(event) => {
-                  event.preventDefault();
-                  setIsResizing(true);
-                }}
-              >
-                <div className="h-full w-px bg-transparent" />
-              </div>
-
-              <motion.div
-                className="h-full min-h-0 min-w-0"
-                style={INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE}
-                layout
-              >
-                <InboxDetailView
-                  selectedItem={selectedItem}
-                  isDetailLoading={isDetailLoading}
-                  isDetailError={isDetailError}
-                  detailError={detailQuery.error}
-                  showFavicons={preferences.inboxShowFavicons}
-                  timestampDisplay={preferences.inboxTimestampDisplay}
-                  timestampHourCycle={preferences.inboxTimestampHourCycle}
-                />
-              </motion.div>
+              )}
             </motion.div>
-          )}
-        </LayoutGroup>
-      )}
+          </motion.div>
+        ) : (
+          <motion.div
+            ref={splitContainerRef}
+            className="grid h-full max-h-full min-h-0 min-w-0 flex-1 gap-0 overflow-hidden"
+            style={{
+              ...INBOX_PANEL_VERTICAL_PADDING_STYLE,
+              gridTemplateColumns: `${leftPanelPercent}% ${INBOX_PANEL_SPACING_PX}px minmax(0, 1fr)`,
+            }}
+            layout
+          >
+            <motion.div className="h-full min-h-0 min-w-0" layout layoutId="inbox-list-panel">
+              <InboxList
+                inboxItems={inboxItems}
+                viewCount={viewCount}
+                filter={effectiveFilter}
+                density={preferences.inboxDensity}
+                fontSizePx={preferences.inboxFontSizePx}
+                showFavicons={preferences.inboxShowFavicons}
+                timestampDisplay={preferences.inboxTimestampDisplay}
+                timestampHourCycle={preferences.inboxTimestampHourCycle}
+                activeScopeLabel={activeScopeLabel}
+                selectedItemId={itemId}
+                feedId={feedId}
+                showHidden={showHiddenItems}
+                showRead={showReadItems}
+                isLoading={inboxQuery.isPending}
+                hasNextPage={!!inboxQuery.hasNextPage}
+                isFetchingNextPage={inboxQuery.isFetchingNextPage}
+                fetchNextPage={() => inboxQuery.fetchNextPage()}
+                onSelectItem={selectItem}
+              />
+            </motion.div>
+
+            <div
+              role="separator"
+              aria-orientation="vertical"
+              aria-label="Resize panels"
+              className="group flex h-full cursor-col-resize items-stretch justify-center"
+              onPointerDown={(event) => {
+                event.preventDefault();
+                setIsResizing(true);
+              }}
+            >
+              <div className="h-full w-px bg-transparent" />
+            </div>
+
+            <motion.div
+              className="h-full min-h-0 min-w-0"
+              style={INBOX_DETAIL_PANEL_OUTER_SPACING_STYLE}
+              layout
+              layoutId="inbox-detail-panel"
+            >
+              <InboxDetailView
+                selectedItem={selectedItem}
+                isDetailLoading={isDetailLoading}
+                isDetailError={isDetailError}
+                detailError={detailQuery.error}
+                showFavicons={preferences.inboxShowFavicons}
+                timestampDisplay={preferences.inboxTimestampDisplay}
+                timestampHourCycle={preferences.inboxTimestampHourCycle}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </LayoutGroup>
     </AppShell>
   );
 }

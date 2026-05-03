@@ -94,12 +94,13 @@ export function InboxDetailView({
                   Back to feed
                 </Button>
               ) : null}
-              <div className="pl-1 md:pl-5">
+              <div className={cn(showBackToList ? "pl-1 md:pl-5" : null)}>
                 <ItemDetail
                   item={selectedItem}
                   showFavicons={showFavicons}
                   timestampDisplay={timestampDisplay}
                   timestampHourCycle={timestampHourCycle}
+                  readerFocusMode={showBackToList}
                 />
               </div>
             </div>

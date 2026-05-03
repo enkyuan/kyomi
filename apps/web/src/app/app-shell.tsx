@@ -16,37 +16,29 @@ export function AppShell({
   children: ReactNode;
   readerFocusList?: boolean;
 }) {
-  if (readerFocusList) {
-    return (
-      <SidebarProvider defaultOpen>
-        <div
-          className="grid h-dvh max-h-dvh min-h-0 w-full overflow-hidden"
-          style={
-            {
-              "--sidebar-width": APP_SIDEBAR_WIDTH,
-              "--reader-focus-list-max-width": READER_FOCUS_LIST_MAX_WIDTH,
-              gridTemplateColumns: `${READER_FOCUS_LEFT_GUTTER} auto minmax(0, ${READER_FOCUS_LIST_WIDTH}) ${READER_FOCUS_RIGHT_GUTTER}`,
-            } as CSSProperties
-          }
-        >
-          <AppSidebar style={{ gridColumn: "2" }} />
-
-          <SidebarInset
-            className="h-full max-h-full min-h-0 min-w-0 w-full max-w-4xl overflow-hidden bg-transparent p-0 md:peer-data-[variant=inset]:m-0 md:peer-data-[variant=inset]:ms-0"
-            style={{ gridColumn: "3" }}
-          >
-            {children}
-          </SidebarInset>
-        </div>
-      </SidebarProvider>
-    );
-  }
-
   return (
     <SidebarProvider defaultOpen>
-      <div className="flex h-dvh max-h-dvh min-h-0 w-full overflow-hidden">
-        <AppSidebar />
-        <SidebarInset className="h-full max-h-full min-h-0 min-w-0 flex-1 overflow-hidden bg-transparent p-0 md:peer-data-[variant=inset]:m-0 md:peer-data-[variant=inset]:ms-0">
+      <div
+        className={
+          readerFocusList
+            ? "grid h-dvh max-h-dvh min-h-0 w-full overflow-hidden"
+            : "flex h-dvh max-h-dvh min-h-0 w-full overflow-hidden"
+        }
+        style={
+          readerFocusList
+            ? ({
+                "--sidebar-width": APP_SIDEBAR_WIDTH,
+                "--reader-focus-list-max-width": READER_FOCUS_LIST_MAX_WIDTH,
+                gridTemplateColumns: `${READER_FOCUS_LEFT_GUTTER} auto minmax(0, ${READER_FOCUS_LIST_WIDTH}) ${READER_FOCUS_RIGHT_GUTTER}`,
+              } as CSSProperties)
+            : undefined
+        }
+      >
+        <AppSidebar style={readerFocusList ? { gridColumn: "2" } : undefined} />
+        <SidebarInset
+          className={`h-full max-h-full min-h-0 min-w-0 overflow-hidden bg-transparent p-0 md:peer-data-[variant=inset]:m-0 md:peer-data-[variant=inset]:ms-0 ${readerFocusList ? "w-full max-w-4xl" : "flex-1"}`}
+          style={readerFocusList ? { gridColumn: "3" } : undefined}
+        >
           {children}
         </SidebarInset>
       </div>

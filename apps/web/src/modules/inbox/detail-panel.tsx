@@ -31,11 +31,13 @@ export function ItemDetail({
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
+  readerFocusMode = false,
 }: {
   item: ArticleDetailDto;
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
+  readerFocusMode?: boolean;
 }) {
   const { preferences } = useReaderPreferences();
   const extractMutation = useArticleExtraction(item.id);
@@ -127,7 +129,8 @@ export function ItemDetail({
   return (
     <article
       className={cn(
-        "reader-content prose prose-neutral dark:prose-invert relative mx-auto px-2 py-10",
+        "reader-content prose prose-neutral dark:prose-invert relative mx-auto px-2 pb-10",
+        readerFocusMode ? "pt-5" : "pt-10",
         maxWidthClassName,
         !preferences.showImages && "reader-hide-images",
       )}
