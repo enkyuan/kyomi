@@ -37,8 +37,8 @@ type ReaderToolbarProps = {
 };
 
 const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
-  narrow: "Narrow width",
-  wide: "Wide width",
+  narrow: "Narrow",
+  wide: "Wide",
 };
 
 export function ReaderToolbar({
@@ -107,7 +107,7 @@ export function ReaderToolbar({
         orientation="vertical"
       />
       <ToolbarGroup className="gap-0.5">
-        <ReaderToolbarButton label="Open original article" onClick={onOpenOriginal}>
+        <ReaderToolbarButton label="Open source" onClick={onOpenOriginal}>
           <ExternalLinkLine />
         </ReaderToolbarButton>
         <ReaderToolbarButton label="Distill this article" onClick={onOpenAi}>
