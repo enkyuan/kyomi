@@ -115,14 +115,11 @@ export function InboxPage({
       : "read"
     : undefined;
   const inboxItems = useMemo(() => {
-    if (effectiveFilter === "saved") {
-      return rawInboxItems.filter((item) => !item.isRead);
-    }
     if (isReadScopedFilterActive) {
       return rawInboxItems.filter((item) => item.isRead);
     }
     return rawInboxItems;
-  }, [effectiveFilter, isReadScopedFilterActive, rawInboxItems]);
+  }, [isReadScopedFilterActive, rawInboxItems]);
 
   const viewCountQuery = useQuery({
     queryKey: [
@@ -134,7 +131,7 @@ export function InboxPage({
       timezoneOffsetMinutes,
       includeRead,
     ],
-    enabled: timezoneOffsetMinutes !== undefined && !includeRead,
+    enabled: timezoneOffsetMinutes !== undefined && !includeRead && effectiveFilter !== "recent",
     queryFn: () =>
       getInboxViewCount({
         data: {
@@ -195,6 +192,9 @@ export function InboxPage({
           replace: true,
         });
         window.open(item.link, "_blank", "noopener,noreferrer");
+        if (!item.isRead && effectiveFilter !== "recent" && preferences.inboxMarkReadBehavior !== "manual") {
+          markReadMutation.mutate(item.id);
+        }
         return;
       }
 
@@ -205,7 +205,7 @@ export function InboxPage({
         }),
       });
     },
-    [navigate, preferences.articleOpenBehavior],
+    [effectiveFilter, markReadMutation, navigate, preferences.articleOpenBehavior, preferences.inboxMarkReadBehavior],
   );
 
   useEffect(() => {
@@ -219,7 +219,6 @@ export function InboxPage({
       !selectedItem ||
       selectedItem.isRead ||
       effectiveFilter === "recent" ||
-      preferences.articleOpenBehavior === "original" ||
       preferences.inboxMarkReadBehavior === "manual"
     ) {
       return;
@@ -245,7 +244,6 @@ export function InboxPage({
     effectiveFilter,
     itemId,
     markReadMutation,
-    preferences.articleOpenBehavior,
     preferences.inboxMarkReadBehavior,
     selectedItem,
   ]);

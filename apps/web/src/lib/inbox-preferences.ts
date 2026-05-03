@@ -87,7 +87,11 @@ function writeCachedInboxPreferences(next: InboxPreferences, userId?: string) {
     return;
   }
 
-  window.localStorage.setItem(inboxPreferencesStorageKey(userId), JSON.stringify(next));
+  try {
+    window.localStorage.setItem(inboxPreferencesStorageKey(userId), JSON.stringify(next));
+  } catch {
+    // Ignore storage errors (quota exceeded, storage disabled, etc.)
+  }
 }
 
 export function useInboxPreferences(initialPreferences?: InboxPreferences) {

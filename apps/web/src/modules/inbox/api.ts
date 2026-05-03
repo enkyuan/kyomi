@@ -107,13 +107,6 @@ async function fetchInboxList(
   cursor: string | undefined,
   headers: Headers,
 ): Promise<CursorListResponse> {
-  if (filter === "recent" && !search?.trim() && !cursor?.trim()) {
-    return apiJsonValidated(cursorListResponseSchema, () =>
-      apiJson<CursorListResponse>("/api/v1/articles/views/recently-read", {
-        headers: buildForwardHeaders(headers),
-      }),
-    );
-  }
   return apiJsonValidated(cursorListResponseSchema, () =>
     apiJson<CursorListResponse>(
       buildArticlesUrl(
@@ -152,7 +145,6 @@ function buildArticlesUrl(
     params.set("is_read", "true");
   } else if (filter === "saved") {
     params.set("is_saved", "true");
-    params.set("is_read", "false");
   }
   if (feedId?.trim()) {
     params.set("feed_id", feedId.trim());
@@ -326,14 +318,6 @@ export const getInboxViewCount = createServerFn({ method: "GET" })
       : 0;
 
     const params = new URLSearchParams();
-    if (data.filter === "recent") {
-      const response = await apiJsonValidated(cursorListResponseSchema, () =>
-        apiJson<CursorListResponse>("/api/v1/articles/views/recently-read", {
-          headers: forwarded,
-        }),
-      );
-      return { count: response.items.length };
-    }
     if (data.filter === "today") {
       const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
       params.set("published_after", start);
