@@ -18,7 +18,7 @@ export const userPreferences = pgTable("user_preferences", {
   inboxShowRecents: boolean("inbox_show_recents").notNull().default(false),
   inboxShowFavicons: boolean("inbox_show_favicons").notNull().default(true),
   readerFontSizePx: integer("reader_font_size_px").notNull().default(17),
-  readerContentWidth: text("reader_content_width").notNull().default("medium"),
+  readerContentWidth: text("reader_content_width").notNull().default("wide"),
   readerOpenLinksInNewTab: boolean("reader_open_links_in_new_tab").notNull().default(true),
   readerShowLinkPreviews: boolean("reader_show_link_previews").notNull().default(true),
   readerShowImages: boolean("reader_show_images").notNull().default(true),

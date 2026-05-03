@@ -1,4 +1,5 @@
 import { db, pool } from "@adapters/db/client";
+import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
 import { searchFeeds } from "@modules/discover/service";
 
 function getArgValue(flag: string): string | null {
@@ -15,6 +16,11 @@ async function main() {
   const expected = (getArgValue("--expect") ?? "hacker news").toLowerCase();
   const probeUserId = getArgValue("--user-id") ?? "00000000-0000-0000-0000-000000000000";
   const limit = Number(getArgValue("--limit") ?? "20");
+
+  await assertApiDatabaseReady({
+    commandName: "catalog:smoke",
+    ensureSchema: true,
+  });
 
   const rows = await searchFeeds(db, probeUserId, query, Number.isFinite(limit) ? limit : 20);
   if (rows.length === 0) {

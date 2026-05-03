@@ -14,6 +14,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@components/ui/sidebar";
+import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-text";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 
 type InboxNavSearch = {
@@ -78,7 +79,9 @@ export function SidebarInboxNav({
 
   return (
     <SidebarGroup className="gap-1">
-      <SidebarGroupLabel>Inbox</SidebarGroupLabel>
+      <SidebarGroupLabel>
+        <SidebarModeAnimatedText>Inbox</SidebarModeAnimatedText>
+      </SidebarGroupLabel>
       <SidebarMenu>
         {inboxNav.map((item) => {
           const badgeValue = badgeValueByLabel[item.label] ?? 0;
@@ -119,11 +122,15 @@ export function SidebarInboxNav({
                 }
               >
                 <item.icon />
-                <span className="truncate">{item.label}</span>
+                <span className="min-w-0 flex-1">
+                  <SidebarModeAnimatedText className="truncate">
+                    {item.label}
+                  </SidebarModeAnimatedText>
+                </span>
               </SidebarMenuButton>
               {badgeValue > 0 ? (
-                <SidebarMenuBadge className="right-2 min-w-5 rounded-full bg-sidebar-foreground/10 px-1.5 text-center text-[11px] font-semibold tabular-nums">
-                  {badgeValue}
+                <SidebarMenuBadge>
+                  <span>{badgeValue}</span>
                 </SidebarMenuBadge>
               ) : null}
             </SidebarMenuItem>

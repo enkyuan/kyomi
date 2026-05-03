@@ -10,7 +10,7 @@ export type UserProfileDto = {
 };
 
 export type ReaderDefaultModeDto = "smart" | "original" | "extracted";
-export type ReaderContentWidthDto = "narrow" | "medium" | "wide";
+export type ReaderContentWidthDto = "narrow" | "wide";
 export type InboxDefaultViewDto = "inbox" | "today" | "unread" | "saved";
 export type InboxDensityDto = "comfortable" | "compact";
 export type ArticleOpenBehaviorDto = "split" | "reader";

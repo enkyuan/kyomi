@@ -288,6 +288,7 @@ export function InboxPage({
                   inboxItems={inboxItems}
                   viewCount={viewCount}
                   filter={effectiveFilter}
+                  readerFocusMode
                   density={preferences.inboxDensity}
                   fontSizePx={preferences.inboxFontSizePx}
                   showFavicons={preferences.inboxShowFavicons}
@@ -322,6 +323,7 @@ export function InboxPage({
                 inboxItems={inboxItems}
                 viewCount={viewCount}
                 filter={effectiveFilter}
+                readerFocusMode={false}
                 density={preferences.inboxDensity}
                 fontSizePx={preferences.inboxFontSizePx}
                 showFavicons={preferences.inboxShowFavicons}

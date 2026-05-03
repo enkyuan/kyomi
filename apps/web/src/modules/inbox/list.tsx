@@ -14,12 +14,15 @@ import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/api-schemas
 const FEED_ITEM_ROW_ESTIMATE = {
   comfortable: 176,
   compact: 136,
+  comfortableReaderFocus: 212,
+  compactReaderFocus: 164,
 } as const;
 
 interface InboxListProps {
   inboxItems: InboxItem[];
   viewCount: number;
   filter: InboxFilter;
+  readerFocusMode?: boolean;
   density: InboxDensityDto;
   fontSizePx: number;
   showFavicons: boolean;
@@ -40,11 +43,14 @@ interface InboxListProps {
 function InboxListSkeletonRows({
   density,
   showFavicons,
+  readerFocusMode = false,
 }: {
   density: InboxDensityDto;
   showFavicons: boolean;
+  readerFocusMode?: boolean;
 }) {
   const isCompact = density === "compact";
+  const summaryLineCount = readerFocusMode ? (isCompact ? 4 : 5) : isCompact ? 2 : 3;
   return (
     <ul className="w-full">
       {Array.from({ length: 6 }).map((_, index) => (
@@ -69,9 +75,24 @@ function InboxListSkeletonRows({
           <div className="space-y-1.5 px-5">
             <Skeleton className="h-3.5 w-full rounded" />
             <Skeleton className="h-3.5 w-full rounded" />
-            {isCompact ? null : <Skeleton className="h-3.5 w-4/5 rounded" />}
+            {Array.from({ length: Math.max(0, summaryLineCount - 2) }).map((_, index) => (
+              <Skeleton
+                key={`summary-line-${index}`}
+                className={`h-3.5 rounded ${index === summaryLineCount - 3 ? "w-4/5" : "w-full"}`}
+              />
+            ))}
           </div>
-          <div className={isCompact ? "mt-1.5 px-5 pb-2.5" : "mt-2 px-5 pb-3"}>
+          <div
+            className={
+              readerFocusMode
+                ? isCompact
+                  ? "mt-2 px-5 pb-3"
+                  : "mt-2.5 px-5 pb-3.5"
+                : isCompact
+                  ? "mt-1.5 px-5 pb-2.5"
+                  : "mt-2 px-5 pb-3"
+            }
+          >
             <Skeleton className="h-3 w-28 rounded" />
           </div>
         </li>
@@ -84,6 +105,7 @@ function InboxListVirtualized({
   listScrollRef,
   allowFirstRowOverlay,
   filter,
+  readerFocusMode,
   density,
   fontSizePx,
   showFavicons,
@@ -100,6 +122,7 @@ function InboxListVirtualized({
   listScrollRef: RefObject<HTMLDivElement | null>;
   allowFirstRowOverlay: boolean;
   filter: InboxFilter;
+  readerFocusMode: boolean;
   density: InboxDensityDto;
   fontSizePx: number;
   showFavicons: boolean;
@@ -117,7 +140,14 @@ function InboxListVirtualized({
     count: inboxItems.length,
     getItemKey: (index) => inboxItems[index]?.id ?? index,
     getScrollElement: () => listScrollRef.current,
-    estimateSize: () => FEED_ITEM_ROW_ESTIMATE[density],
+    estimateSize: () =>
+      FEED_ITEM_ROW_ESTIMATE[
+        readerFocusMode
+          ? density === "compact"
+            ? "compactReaderFocus"
+            : "comfortableReaderFocus"
+          : density
+      ],
     overscan: 6,
   });
 
@@ -179,6 +209,7 @@ function InboxListVirtualized({
               isSelected={selectedItemId === item.id}
               isFirst={virtualRow.index === 0}
               containerWidth={listContainerWidth || undefined}
+              readerFocusMode={readerFocusMode}
               showBottomSeparator={
                 showBottomSeparatorOnLastItem && virtualRow.index === inboxItems.length - 1
               }
@@ -200,6 +231,7 @@ export function InboxList({
   inboxItems,
   viewCount,
   filter,
+  readerFocusMode = false,
   density,
   fontSizePx,
   showFavicons,
@@ -276,13 +308,18 @@ export function InboxList({
               isLoading && inboxItems.length === 0 ? (
                 <InboxListSkeletonRows density={density} showFavicons={showFavicons} />
               ) : inboxItems.length === 0 ? null : (
-                <InboxListSkeletonRows density={density} showFavicons={showFavicons} />
+                <InboxListSkeletonRows
+                  density={density}
+                  showFavicons={showFavicons}
+                  readerFocusMode={readerFocusMode}
+                />
               )
             ) : (
               <InboxListVirtualized
                 listScrollRef={listScrollRef}
                 allowFirstRowOverlay={allowFirstRowOverlay}
                 filter={filter}
+                readerFocusMode={readerFocusMode}
                 density={density}
                 fontSizePx={fontSizePx}
                 showFavicons={showFavicons}

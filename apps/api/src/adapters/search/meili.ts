@@ -1,5 +1,6 @@
 import { env } from "@config/env";
 import { AppError } from "@shared/errors/app-error";
+import { normalizeLoopbackUrl } from "@shared/net/normalize-loopback-url";
 
 export type FeedSearchDocument = {
   id: string;
@@ -12,7 +13,7 @@ export type FeedSearchDocument = {
 
 function getBaseUrl(): string | null {
   const raw = env.MEILI_URL?.trim();
-  return raw ? raw.replace(/\/+$/, "") : null;
+  return raw ? normalizeLoopbackUrl(raw).replace(/\/+$/, "") : null;
 }
 
 function getIndexUid(): string {

@@ -46,7 +46,7 @@ vi.mock("@lib/reader-preferences", () => ({
     defaults: {
       defaultMode: "smart",
       fontSizePx: 17,
-      contentWidth: "medium",
+      contentWidth: "wide",
       openLinksInNewTab: true,
       showLinkPreviews: true,
       showImages: true,
@@ -54,7 +54,7 @@ vi.mock("@lib/reader-preferences", () => ({
     preferences: {
       defaultMode: "smart",
       fontSizePx: 17,
-      contentWidth: "medium",
+      contentWidth: "wide",
       openLinksInNewTab: true,
       showLinkPreviews: true,
       showImages: true,

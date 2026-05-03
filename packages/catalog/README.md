@@ -67,3 +67,5 @@ Troubleshooting:
 - If runs are skipped repeatedly, check for stale lock directory: `.catalog-sync.lock`.
 - If sync fails, inspect latest log in `.catalog-sync-logs/`.
 - Make sure `bun`, project `.env` files, and local Postgres/Redis/Meilisearch are available in the cron environment.
+- For local Docker-backed development, run `bun run setup:app` once first, or `bun run docker:up` if the stack is currently stopped. `catalog:import` and `catalog:smoke` now fail early with this hint when Postgres is unreachable or migrations have not been applied.
+- Local API env values that point at `localhost` are normalized to `127.0.0.1` inside the API adapters to avoid Bun loopback timeout issues during catalog import/smoke commands.

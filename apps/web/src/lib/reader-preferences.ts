@@ -21,7 +21,7 @@ const MAX_FONT_SIZE_PX = 22;
 const DEFAULT_READER_PREFERENCES: ReaderPreferences = {
   defaultMode: "smart",
   fontSizePx: 17,
-  contentWidth: "medium",
+  contentWidth: "wide",
   openLinksInNewTab: true,
   showLinkPreviews: true,
   showImages: true,
@@ -50,8 +50,11 @@ function parseDefaultMode(value: unknown): ReaderDefaultMode {
 }
 
 function parseContentWidth(value: unknown): ReaderContentWidth {
-  if (value === "narrow" || value === "medium" || value === "wide") {
+  if (value === "narrow" || value === "wide") {
     return value;
+  }
+  if (value === "medium") {
+    return "wide";
   }
   return DEFAULT_READER_PREFERENCES.contentWidth;
 }

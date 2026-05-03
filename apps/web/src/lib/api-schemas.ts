@@ -271,7 +271,7 @@ export const messageResponseSchema = z.object({
 // ---------------------------------------------------------------------------
 
 export const readerDefaultModeSchema = z.enum(["smart", "original", "extracted"]);
-export const readerContentWidthSchema = z.enum(["narrow", "medium", "wide"]);
+export const readerContentWidthSchema = z.enum(["narrow", "wide"]);
 export const inboxDefaultViewSchema = z.enum(["inbox", "today", "unread", "saved"]);
 export const inboxDensitySchema = z.enum(["comfortable", "compact"]);
 export const articleOpenBehaviorSchema = z.enum(["split", "reader"]);

@@ -4,7 +4,7 @@ import type React from "react";
 import {
   ExternalLinkLine,
   EyeLine,
-  MailOpenFill,
+  MailFill,
   MailOpenLine,
   StarFill,
   StarLine,
@@ -63,10 +63,33 @@ export function InboxItemToolbar({
           active={isRead}
           disabled={isRead && filter !== "recent"}
         >
-          {isRead ? <MailOpenFill /> : <MailOpenLine />}
+          <ReadStateIcon isRead={isRead} />
         </InboxItemToolbarButton>
       </ToolbarGroup>
     </Toolbar>
+  );
+}
+
+function ReadStateIcon({ isRead }: { isRead: boolean }) {
+  return (
+    <span className="relative block size-4.5 sm:size-4" aria-hidden>
+      <span
+        className={cn(
+          "absolute inset-0 flex items-center justify-center transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform,filter]",
+          isRead ? "scale-25 opacity-0 blur-[4px]" : "scale-100 opacity-100 blur-0",
+        )}
+      >
+        <MailOpenLine />
+      </span>
+      <span
+        className={cn(
+          "absolute inset-0 flex items-center justify-center transition-[opacity,transform,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)] will-change-[opacity,transform,filter]",
+          isRead ? "scale-100 opacity-100 blur-0" : "scale-25 opacity-0 blur-[4px]",
+        )}
+      >
+        <MailFill />
+      </span>
+    </span>
   );
 }
 

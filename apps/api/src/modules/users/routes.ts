@@ -39,7 +39,7 @@ const updateEmailBody = t.Object({
 const userPreferencesResponse = t.Object({
   defaultMode: t.Union([t.Literal("smart"), t.Literal("original"), t.Literal("extracted")]),
   fontSizePx: t.Number(),
-  contentWidth: t.Union([t.Literal("narrow"), t.Literal("medium"), t.Literal("wide")]),
+  contentWidth: t.Union([t.Literal("narrow"), t.Literal("wide")]),
   openLinksInNewTab: t.Boolean(),
   showLinkPreviews: t.Boolean(),
   showImages: t.Boolean(),
@@ -68,7 +68,7 @@ const updateUserPreferencesBody = t.Object({
     t.Union([t.Literal("smart"), t.Literal("original"), t.Literal("extracted")]),
   ),
   fontSizePx: t.Optional(t.Number({ minimum: 14, maximum: 22 })),
-  contentWidth: t.Optional(t.Union([t.Literal("narrow"), t.Literal("medium"), t.Literal("wide")])),
+  contentWidth: t.Optional(t.Union([t.Literal("narrow"), t.Literal("wide")])),
   openLinksInNewTab: t.Optional(t.Boolean()),
   showLinkPreviews: t.Optional(t.Boolean()),
   showImages: t.Optional(t.Boolean()),
@@ -107,7 +107,7 @@ export function registerUserRoutes(app: Elysia) {
         const { db, userId, body } = v1HandlerContext<{
           defaultMode?: "smart" | "original" | "extracted";
           fontSizePx?: number;
-          contentWidth?: "narrow" | "medium" | "wide";
+          contentWidth?: "narrow" | "wide";
           openLinksInNewTab?: boolean;
           showLinkPreviews?: boolean;
           showImages?: boolean;

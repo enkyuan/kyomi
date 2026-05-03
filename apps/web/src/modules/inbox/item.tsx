@@ -95,6 +95,7 @@ export const FeedItem = memo(function FeedItem({
   isFirst,
   showBottomSeparator,
   containerWidth,
+  readerFocusMode = false,
   density,
   fontSizePx,
   showFavicons,
@@ -108,6 +109,7 @@ export const FeedItem = memo(function FeedItem({
   isFirst: boolean;
   showBottomSeparator: boolean;
   containerWidth?: number;
+  readerFocusMode?: boolean;
   density: InboxDensityDto;
   fontSizePx: number;
   showFavicons: boolean;
@@ -147,7 +149,11 @@ export const FeedItem = memo(function FeedItem({
   const titleLineHeightPx = isCompact ? titleFontSizePx + 5 : titleFontSizePx + 6;
   const titleFont = `600 ${titleFontSizePx}px "Inter Variable"`;
   const summaryFontSizePx = Math.max(12, Math.round(fontSizePx * 0.875));
-  const summaryLineHeightPx = Math.round(summaryFontSizePx * (isCompact ? 1.38 : 1.45));
+  const summaryLineHeightPx = Math.round(
+    summaryFontSizePx * (readerFocusMode ? (isCompact ? 1.42 : 1.48) : isCompact ? 1.38 : 1.45),
+  );
+  const summaryMaxLines = readerFocusMode ? (isCompact ? 4 : 5) : isCompact ? 2 : 3;
+  const summaryFont = `400 ${summaryFontSizePx}px "Inter Variable"`;
   const metaFontSizePx = Math.max(11, Math.round(fontSizePx * 0.75));
   const sourceLabelFontSizePx = isCompact ? Math.max(11, metaFontSizePx - 1) : metaFontSizePx;
   const selectItem = () => {
@@ -187,7 +193,18 @@ export const FeedItem = memo(function FeedItem({
         onOpenSource={() => window.open(item.link, "_blank", "noopener,noreferrer")}
         onToggleSaved={() => updateItem({ isSaved: !item.isSaved })}
       />
-      <CardHeader className={cn("px-5", isCompact ? "gap-1.5 py-2.5" : "gap-2 py-3")}>
+      <CardHeader
+        className={cn(
+          "px-5",
+          readerFocusMode
+            ? isCompact
+              ? "gap-2 py-3"
+              : "gap-2.5 py-3.5"
+            : isCompact
+              ? "gap-1.5 py-2.5"
+              : "gap-2 py-3",
+        )}
+      >
         <InboxSourceRow
           articleUrl={item.link}
           feedFaviconUrl={item.feedFaviconUrl}
@@ -228,24 +245,35 @@ export const FeedItem = memo(function FeedItem({
         </CardTitle>
       </CardHeader>
       <CardContent className="px-5 pb-0 pt-0">
-        <p
+        <PretextText
           className={cn(
             "overflow-hidden text-pretty text-muted-foreground/95",
-            isCompact ? "line-clamp-2" : "line-clamp-3",
             isReadDimmed && "text-muted-foreground/65",
           )}
+          text={item.summary || "No summary available."}
+          font={summaryFont}
+          lineHeight={summaryLineHeightPx}
+          maxLines={summaryMaxLines}
+          containerWidth={containerWidth}
           style={{
+            display: "-webkit-box",
             fontSize: `${summaryFontSizePx}px`,
             lineHeight: `${summaryLineHeightPx}px`,
+            WebkitBoxOrient: "vertical",
+            WebkitLineClamp: summaryMaxLines,
           }}
-        >
-          {item.summary || "No summary available."}
-        </p>
+        />
       </CardContent>
       <CardFooter
         className={cn(
           "flex w-full flex-wrap items-center gap-2 px-5 pt-0",
-          isCompact ? "mt-1.5 pb-2.5" : "mt-2 pb-3",
+          readerFocusMode
+            ? isCompact
+              ? "mt-2 pb-3"
+              : "mt-2.5 pb-3.5"
+            : isCompact
+              ? "mt-1.5 pb-2.5"
+              : "mt-2 pb-3",
         )}
       >
         <span

@@ -1,11 +1,15 @@
 "use client";
 
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { InboxSourceRow } from "@modules/inbox/source-row";
+import { ReaderToolbar } from "@modules/inbox/reader-toolbar";
 import { ReaderContent } from "@modules/reader/content";
 import { Button } from "@components/ui/button";
 import { Spinner } from "@components/ui/spinner";
 import { toastManager } from "@components/ui/toast";
+import { updateInboxItemState, type InboxItem } from "@modules/inbox/api";
+import { updateInboxItemCaches } from "@modules/inbox/cache";
 import { useArticleExtraction } from "@modules/reader/use-extraction";
 import type {
   ArticleDetailDto,
@@ -17,6 +21,8 @@ import { useReaderPreferences } from "@lib/reader-preferences";
 import { cn } from "@lib/utils";
 import { formatInboxTimestamp } from "@modules/inbox/format-timestamp";
 import { useRelativeTimestampRefresh } from "@modules/inbox/use-relative-timestamp-refresh";
+
+type InboxItemPatch = Partial<Pick<InboxItem, "isRead" | "isSaved">>;
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -40,18 +46,44 @@ export function ItemDetail({
   timestampHourCycle: "12h" | "24h";
   readerFocusMode?: boolean;
 }) {
-  const { preferences } = useReaderPreferences();
+  const queryClient = useQueryClient();
+  const { preferences, setPreferences, limits } = useReaderPreferences();
   const extractMutation = useArticleExtraction(item.id);
   const requestedExtractionForItemRef = useRef<string | null>(null);
+  const updateItemMutation = useMutation({
+    mutationFn: (patch: InboxItemPatch) =>
+      updateInboxItemState({
+        data: {
+          itemId: item.id,
+          ...patch,
+        },
+      }),
+    onMutate: async (patch) => {
+      await queryClient.cancelQueries({ queryKey: ["inbox"] });
+      updateInboxItemCaches(queryClient, item.id, patch, false);
+    },
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });
+      void queryClient.invalidateQueries({ queryKey: ["inbox", "item-detail", item.id] });
+      void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
+    },
+  });
 
   useRelativeTimestampRefresh(timestampDisplay);
   const effectiveReaderMode =
     preferences.defaultMode === "smart" ? item.reader.activeMode : preferences.defaultMode;
   const isViewingExtracted = effectiveReaderMode === "extracted";
-  const displayReader = readerContentForMode(item, effectiveReaderMode);
+  const displayReader = useMemo(
+    () => readerContentForMode(item, effectiveReaderMode),
+    [effectiveReaderMode, item.reader],
+  );
 
-  const displayContent =
-    displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "";
+  const displayContent = useMemo(
+    () =>
+      displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "",
+    [displayReader],
+  );
   const readTime = displayContent ? estimateReadingTime(displayContent) : null;
 
   const canRequestExtraction = item.link.startsWith("http");
@@ -64,12 +96,9 @@ export function ItemDetail({
     item.reader.extracted.status === "failed" &&
     item.reader.extracted.content === null &&
     Boolean(item.reader.extracted.error);
+  const effectiveContentWidth = preferences.contentWidth === "narrow" ? "narrow" : "wide";
   const maxWidthClassName =
-    preferences.contentWidth === "narrow"
-      ? "max-w-2xl"
-      : preferences.contentWidth === "wide"
-        ? "max-w-4xl"
-        : "max-w-3xl";
+    effectiveContentWidth === "narrow" ? "max-w-2xl" : readerFocusMode ? "max-w-6xl" : "max-w-5xl";
 
   const runExtract = useCallback(
     (reason: "auto" | "manual") => {
@@ -117,6 +146,55 @@ export function ItemDetail({
     [extractMutation],
   );
 
+  const updateItem = useCallback(
+    (patch: InboxItemPatch) => {
+      updateItemMutation.mutate(patch);
+    },
+    [updateItemMutation],
+  );
+
+  const cycleContentWidth = useCallback(() => {
+    const nextWidth = effectiveContentWidth === "narrow" ? "wide" : "narrow";
+    setPreferences({ contentWidth: nextWidth });
+  }, [effectiveContentWidth, setPreferences]);
+
+  const adjustFontSize = useCallback(
+    (delta: number) => {
+      const nextFontSize = Math.max(
+        limits.minFontSizePx,
+        Math.min(limits.maxFontSizePx, preferences.fontSizePx + delta),
+      );
+      setPreferences({ fontSizePx: nextFontSize });
+    },
+    [limits.maxFontSizePx, limits.minFontSizePx, preferences.fontSizePx, setPreferences],
+  );
+
+  const handleModeChange = useCallback(
+    (mode: "original" | "extracted") => {
+      if (mode === "extracted" && !item.reader.extracted.available) {
+        return;
+      }
+      setPreferences({ defaultMode: mode });
+    },
+    [item.reader.extracted.available, setPreferences],
+  );
+
+  const handleOpenOriginal = useCallback(() => {
+    window.open(
+      item.link,
+      preferences.openLinksInNewTab ? "_blank" : "_self",
+      preferences.openLinksInNewTab ? "noopener,noreferrer" : undefined,
+    );
+  }, [item.link, preferences.openLinksInNewTab]);
+
+  const handleOpenAi = useCallback(() => {
+    toastManager.add({
+      title: "AI tools coming next",
+      description: "This button is reserved for article-side LLM actions.",
+      type: "info",
+    });
+  }, []);
+
   useEffect(() => {
     if (!shouldAutoExtract || extractMutation.isPending) {
       return;
@@ -140,16 +218,31 @@ export function ItemDetail({
       style={{ "--reader-font-size": `${preferences.fontSizePx}px` } as Record<string, string>}
     >
       <div className="not-prose mb-6 flex flex-col gap-3">
-        <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
-          <span>
-            {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
-          </span>
-          {readTime ? (
-            <>
-              <span>·</span>
-              <span>{readTime} min read</span>
-            </>
-          ) : null}
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs uppercase tracking-wide text-muted-foreground">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
+            <span>
+              {formatInboxTimestamp(item.publishedAt, timestampDisplay, timestampHourCycle)}
+            </span>
+            {readTime ? (
+              <>
+                <span>·</span>
+                <span>{readTime} min read</span>
+              </>
+            ) : null}
+          </div>
+          <ReaderToolbar
+            activeMode={effectiveReaderMode}
+            extractedAvailable={item.reader.extracted.available}
+            isSaved={item.isSaved}
+            limits={limits}
+            preferences={preferences}
+            onAdjustFontSize={adjustFontSize}
+            onCycleContentWidth={cycleContentWidth}
+            onModeChange={handleModeChange}
+            onOpenAi={handleOpenAi}
+            onOpenOriginal={handleOpenOriginal}
+            onToggleSaved={() => updateItem({ isSaved: !item.isSaved })}
+          />
         </div>
         <div className="flex flex-wrap items-start justify-between gap-3">
           <p className="min-w-0 flex-1 text-xl font-semibold text-foreground">{item.title}</p>
@@ -198,17 +291,6 @@ export function ItemDetail({
         showLinkPreviews={preferences.showLinkPreviews}
         layoutMode="fidelity"
       />
-
-      <div className="not-prose mt-10 border-t border-border pt-6">
-        <a
-          href={item.link}
-          target={preferences.openLinksInNewTab ? "_blank" : undefined}
-          rel={preferences.openLinksInNewTab ? "noreferrer" : undefined}
-          className="text-xs text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground"
-        >
-          View original article →
-        </a>
-      </div>
     </article>
   );
 }

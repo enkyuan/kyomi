@@ -1,5 +1,6 @@
 import { feeds } from "@cronos/db";
 import { db, pool } from "@adapters/db/client";
+import { assertApiDatabaseReady } from "@adapters/db/script-preflight";
 import { upsertFeedSearchDocument } from "@adapters/search/meili";
 import { assertHttpOrHttpsUrl, normalizeFeedUrl } from "@modules/discover/normalize-feed-url";
 
@@ -201,6 +202,12 @@ async function main() {
   }
 
   const dryRun = hasFlag("--dry-run");
+  if (!dryRun) {
+    await assertApiDatabaseReady({
+      commandName: "catalog:import",
+      ensureSchema: true,
+    });
+  }
   const stats = await importCatalogFile(input, dryRun);
 
   console.log(

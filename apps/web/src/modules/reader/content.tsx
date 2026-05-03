@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import type { ReaderContent as ReaderContentModel } from "./types";
 import { ReaderFallback } from "./fallback";
 import { RenderHtml } from "./html";
@@ -7,7 +8,7 @@ import { RenderMarkdown } from "./markdown";
 import { RenderText } from "./text";
 import type { ReaderLayoutMode } from "./html/dom-enhancements";
 
-export function ReaderContent({
+export const ReaderContent = memo(function ReaderContent({
   reader,
   openLinksInNewTab = true,
   showLinkPreviews = true,
@@ -100,4 +101,4 @@ export function ReaderContent({
       <ReaderFallback notice={reader.notice} summary={reader.fallbackSummary} />
     </div>
   );
-}
+});

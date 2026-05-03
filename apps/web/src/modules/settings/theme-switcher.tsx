@@ -18,7 +18,7 @@ type StoredThemeMode = "auto" | "dark" | "light";
 
 function readStoredTheme(): ThemeOption {
   if (typeof window === "undefined") {
-    return "dark";
+    return "system";
   }
 
   const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
@@ -28,7 +28,7 @@ function readStoredTheme(): ThemeOption {
   if (stored === "auto") {
     return "system";
   }
-  return "dark";
+  return "system";
 }
 
 function applyTheme(next: ThemeOption) {

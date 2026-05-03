@@ -360,12 +360,11 @@ export function AppearancePagePanel() {
           <Select
             items={[
               { label: "Narrow", value: "narrow" },
-              { label: "Medium", value: "medium" },
               { label: "Wide", value: "wide" },
             ]}
             value={readerPreferences.contentWidth}
             onValueChange={(value) => {
-              if (value === "narrow" || value === "medium" || value === "wide") {
+              if (value === "narrow" || value === "wide") {
                 setReaderPreferences({ contentWidth: value });
               }
             }}
@@ -375,7 +374,6 @@ export function AppearancePagePanel() {
             </SelectTrigger>
             <SelectPopup>
               <SelectItem value="narrow">Narrow</SelectItem>
-              <SelectItem value="medium">Medium</SelectItem>
               <SelectItem value="wide">Wide</SelectItem>
             </SelectPopup>
           </Select>
