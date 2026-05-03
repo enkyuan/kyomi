@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { refreshBatchFeeds } from "@modules/feeds/api";
 import { useFeedRefresh } from "@modules/feeds/use-refresh";
 import { Refresh2Fill } from "@mingcute/react";
 import { Button } from "@components/ui/button";
@@ -122,6 +124,36 @@ export function FeedRefreshStatus({ feedId }: { feedId: string }) {
   );
 }
 
+export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
+  const queryClient = useQueryClient();
+  const mutation = useMutation({
+    mutationFn: async () => {
+      return refreshBatchFeeds({ data: { folderId } });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] });
+      queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] });
+    },
+  });
+
+  return (
+    <Button
+      aria-label="Refresh feeds"
+      className="text-muted-foreground hover:text-foreground"
+      disabled={mutation.isPending}
+      size="icon"
+      title="Refresh feeds"
+      variant="ghost"
+      onClick={(e) => {
+        e.preventDefault();
+        mutation.mutate();
+      }}
+    >
+      <Refresh2Fill className={`size-4 ${mutation.isPending ? "animate-spin" : ""}`} />
+    </Button>
+  );
+}
+
 export function FeedRefreshSummary({ feedId }: { feedId: string }) {
   const { refreshStatus, lastRefreshStartedAt, lastRefreshCompletedAt, lastRefreshFailedAt } =
     useFeedRefresh(feedId);
@@ -167,7 +199,7 @@ export function FeedRefreshSummary({ feedId }: { feedId: string }) {
     <span
       className={cn(
         "inline-flex items-center text-muted-foreground transition-[opacity,filter,transform] ease-out motion-reduce:transition-none",
-        isVisible ? "translate-y-0 opacity-100 blur-0" : "translate-y-[-1px] opacity-0 blur-[2px]",
+        isVisible ? "translate-y-0 opacity-100 blur-0" : "-translate-y-px opacity-0 blur-[2px]",
       )}
       style={{ transitionDuration: `${SUMMARY_FADE_MS}ms` }}
     >

@@ -22,7 +22,7 @@ export function useFeedRefresh(feedId: string) {
       if (status === "queued" || status === "running") {
         return 2000; // poll every 2 seconds while refreshing
       }
-      return 10 * 60 * 1000; // background sync every 10 minutes
+      return false; // only poll when a refresh is actively running
     },
   });
 

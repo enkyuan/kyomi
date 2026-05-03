@@ -297,6 +297,7 @@ export function InboxPage({
                   activeScopeLabel={activeScopeLabel}
                   selectedItemId={itemId}
                   feedId={feedId}
+                  folderId={folderId}
                   showHidden={showHiddenItems}
                   showRead={showReadItems}
                   isLoading={inboxQuery.isPending}
@@ -332,6 +333,7 @@ export function InboxPage({
                 activeScopeLabel={activeScopeLabel}
                 selectedItemId={itemId}
                 feedId={feedId}
+                folderId={folderId}
                 showHidden={showHiddenItems}
                 showRead={showReadItems}
                 isLoading={inboxQuery.isPending}

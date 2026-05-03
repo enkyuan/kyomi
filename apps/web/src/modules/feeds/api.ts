@@ -185,6 +185,18 @@ export const refreshFeed = createServerFn({ method: "POST" })
     );
   });
 
+export const refreshBatchFeeds = createServerFn({ method: "POST" })
+  .inputValidator((input: { folderId?: string } | void) => input || {})
+  .handler(async ({ data }): Promise<{ accepted: boolean; count: number }> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    headers.set("content-type", "application/json");
+    return apiJson<{ accepted: boolean; count: number }>(`/api/v1/feeds/refresh`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify(data),
+    });
+  });
+
 export const getFeedDetail = createServerFn({ method: "GET" })
   .inputValidator((input: { feedId: string }) => input)
   .handler(async ({ data }): Promise<FeedDetail> => {

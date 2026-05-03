@@ -3,7 +3,11 @@
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { FeedItem } from "@modules/inbox/item";
 import { InboxListFilterMenu } from "@modules/inbox/list-filter-menu";
-import { FeedRefreshStatus, FeedRefreshSummary } from "@modules/inbox/refresh-status";
+import {
+  FeedRefreshStatus,
+  FeedRefreshSummary,
+  BatchFeedRefreshStatus,
+} from "@modules/inbox/refresh-status";
 import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import { useViewportMetrics } from "@hooks/use-viewport-metrics";
@@ -28,9 +32,10 @@ interface InboxListProps {
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
-  activeScopeLabel?: "hidden" | "read";
-  selectedItemId?: string;
-  feedId?: string;
+  activeScopeLabel?: string | null;
+  selectedItemId?: string | null;
+  feedId?: string | null;
+  folderId?: string | null;
   showHidden?: boolean;
   showRead?: boolean;
   isLoading: boolean;
@@ -129,7 +134,7 @@ function InboxListVirtualized({
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
   inboxItems: InboxItem[];
-  selectedItemId?: string;
+  selectedItemId?: string | null;
   isLoading: boolean;
   hasNextPage: boolean;
   isFetchingNextPage: boolean;
@@ -240,6 +245,7 @@ export function InboxList({
   activeScopeLabel,
   selectedItemId,
   feedId,
+  folderId,
   showHidden = false,
   showRead = false,
   isLoading,
@@ -292,7 +298,11 @@ export function InboxList({
             {feedId ? <FeedRefreshSummary feedId={feedId} /> : null}
           </span>
           <div className="flex items-center gap-0.5">
-            {feedId ? <FeedRefreshStatus feedId={feedId} /> : null}
+            {feedId ? (
+              <FeedRefreshStatus feedId={feedId} />
+            ) : (
+              <BatchFeedRefreshStatus folderId={folderId ?? undefined} />
+            )}
             <InboxListFilterMenu filter={filter} showHidden={showHidden} showRead={showRead} />
           </div>
         </div>
