@@ -119,7 +119,7 @@ export function InboxPage({
       return rawInboxItems.filter((item) => item.isRead);
     }
     return rawInboxItems;
-  }, [effectiveFilter, isReadScopedFilterActive, rawInboxItems]);
+  }, [isReadScopedFilterActive, rawInboxItems]);
 
   const viewCountQuery = useQuery({
     queryKey: [
@@ -131,7 +131,7 @@ export function InboxPage({
       timezoneOffsetMinutes,
       includeRead,
     ],
-    enabled: timezoneOffsetMinutes !== undefined && !includeRead,
+    enabled: timezoneOffsetMinutes !== undefined && !includeRead && effectiveFilter !== "recent",
     queryFn: () =>
       getInboxViewCount({
         data: {
@@ -183,6 +183,25 @@ export function InboxPage({
 
   const selectItem = useCallback(
     (item: InboxItem) => {
+      if (preferences.articleOpenBehavior === "original") {
+        void navigate({
+          search: (prev) => ({
+            ...prev,
+            itemId: undefined,
+          }),
+          replace: true,
+        });
+        window.open(item.link, "_blank", "noopener,noreferrer");
+        if (
+          !item.isRead &&
+          effectiveFilter !== "recent" &&
+          preferences.inboxMarkReadBehavior !== "manual"
+        ) {
+          markReadMutation.mutate(item.id);
+        }
+        return;
+      }
+
       void navigate({
         search: (prev) => ({
           ...prev,
@@ -190,7 +209,13 @@ export function InboxPage({
         }),
       });
     },
-    [navigate],
+    [
+      effectiveFilter,
+      markReadMutation,
+      navigate,
+      preferences.articleOpenBehavior,
+      preferences.inboxMarkReadBehavior,
+    ],
   );
 
   useEffect(() => {

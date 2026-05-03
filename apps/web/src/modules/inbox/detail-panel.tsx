@@ -16,6 +16,7 @@ import { readerContentForMode } from "@lib/reader-display";
 import { useReaderPreferences } from "@lib/reader-preferences";
 import { cn } from "@lib/utils";
 import { formatInboxTimestamp } from "@modules/inbox/format-timestamp";
+import { useRelativeTimestampRefresh } from "@modules/inbox/use-relative-timestamp-refresh";
 
 function estimateReadingTime(html: string): number {
   const text = html
@@ -42,6 +43,8 @@ export function ItemDetail({
   const { preferences } = useReaderPreferences();
   const extractMutation = useArticleExtraction(item.id);
   const requestedExtractionForItemRef = useRef<string | null>(null);
+
+  useRelativeTimestampRefresh(timestampDisplay);
   const effectiveReaderMode =
     preferences.defaultMode === "smart" ? item.reader.activeMode : preferences.defaultMode;
   const isViewingExtracted = effectiveReaderMode === "extracted";

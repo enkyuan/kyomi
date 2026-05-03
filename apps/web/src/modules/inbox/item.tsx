@@ -13,6 +13,7 @@ import type { InboxFilter } from "@modules/inbox/api";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@components/ui/card";
 import { updateInboxItemCaches } from "@modules/inbox/cache";
 import { formatInboxTimestamp } from "@modules/inbox/format-timestamp";
+import { useRelativeTimestampRefresh } from "@modules/inbox/use-relative-timestamp-refresh";
 
 const PRETEXT_MIN_FILL_RATIO = 0.97;
 const PRETEXT_MAX_TRIM = 8;
@@ -138,6 +139,8 @@ export const FeedItem = memo(function FeedItem({
   const updateItem = (patch: InboxItemPatch, removeFromList = false) => {
     updateItemMutation.mutate({ patch, removeFromList });
   };
+
+  useRelativeTimestampRefresh(timestampDisplay);
   const isReadDimmed = item.isRead && filter !== "recent";
   const isCompact = density === "compact";
   const titleFontSizePx = isCompact ? Math.max(14, fontSizePx - 1) : fontSizePx;
@@ -154,7 +157,7 @@ export const FeedItem = memo(function FeedItem({
   return (
     <Card
       className={cn(
-        "group/inbox-item relative z-0 w-full cursor-pointer gap-0 overflow-visible rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform hover:z-20 active:scale-[0.996] motion-reduce:active:scale-100",
+        "group/inbox-item relative z-0 w-full cursor-pointer gap-0 overflow-visible rounded-none border-x-0 border-border/70 bg-transparent shadow-none before:hidden transition-[background-color,color,transform] duration-200 ease-[cubic-bezier(0.2,0,0,1)] will-change-transform hover:z-20 focus-within:z-20 active:scale-[0.996] motion-reduce:active:scale-100",
         isFirst ? "border-t-0" : "border-t",
         showBottomSeparator ? "border-b" : "border-b-0",
         isSelected || item.isRead ? "bg-background" : "hover:bg-background/70",

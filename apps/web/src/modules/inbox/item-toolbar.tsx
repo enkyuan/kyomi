@@ -61,7 +61,7 @@ export function InboxItemToolbar({
           label={readLabel}
           onClick={onMarkRead}
           active={isRead}
-          disabled={isRead}
+          disabled={isRead && filter !== "recent"}
         >
           {isRead ? <MailOpenFill /> : <MailOpenLine />}
         </InboxItemToolbarButton>

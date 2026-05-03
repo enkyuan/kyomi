@@ -332,14 +332,6 @@ export const getInboxViewCount = createServerFn({ method: "GET" })
       : 0;
 
     const params = new URLSearchParams();
-    if (data.filter === "recent") {
-      const response = await apiJsonValidated(cursorListResponseSchema, () =>
-        apiJson<CursorListResponse>("/api/v1/articles/views/recently-read", {
-          headers: forwarded,
-        }),
-      );
-      return { count: response.items.length };
-    }
     if (data.filter === "today") {
       const { start, end } = getLocalDayRangeIso(timezoneOffsetMinutes);
       params.set("published_after", start);

@@ -247,7 +247,9 @@ export function InboxList({
         ? "saved"
         : filter === "recent"
           ? "read"
-          : "unread");
+          : filter === "inbox"
+            ? "items"
+            : "unread");
 
   return (
     <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground [--inbox-header-height:2.75rem] md:min-h-0">
