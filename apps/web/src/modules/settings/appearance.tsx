@@ -94,13 +94,19 @@ export function AppearancePagePanel() {
           />
           <Select
             items={[
+              { label: "All items", value: "inbox" },
               { label: "Today", value: "today" },
               { label: "All unread", value: "unread" },
               { label: "Read later", value: "saved" },
             ]}
             value={inboxPreferences.inboxDefaultView}
             onValueChange={(value) => {
-              if (value === "today" || value === "unread" || value === "saved") {
+              if (
+                value === "inbox" ||
+                value === "today" ||
+                value === "unread" ||
+                value === "saved"
+              ) {
                 setInboxPreferences({ inboxDefaultView: value });
               }
             }}
@@ -109,6 +115,7 @@ export function AppearancePagePanel() {
               <SelectValue />
             </SelectTrigger>
             <SelectPopup>
+              <SelectItem value="inbox">All items</SelectItem>
               <SelectItem value="today">Today</SelectItem>
               <SelectItem value="unread">All unread</SelectItem>
               <SelectItem value="saved">Read later</SelectItem>

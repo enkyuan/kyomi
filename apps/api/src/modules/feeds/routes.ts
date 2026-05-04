@@ -23,7 +23,7 @@ import {
 } from "./service";
 import * as dto from "./dto";
 import { feeds, feedSubscriptions } from "@cronos/db";
-import { and, eq } from "drizzle-orm";
+import { and, eq, inArray } from "drizzle-orm";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",
@@ -352,16 +352,18 @@ export function registerFeedRoutes(app: Elysia) {
 
         try {
           const redis = getRedis();
-          for (const feedId of feedIdsToRefresh) {
-            await publishJob(redis, {
-              type: "feed.refresh",
-              payload: { feedId, userId, reason: "manual" },
-            });
-            await db
-              .update(feeds)
-              .set({ refreshStatus: "queued", lastRefreshError: null })
-              .where(eq(feeds.id, feedId));
-          }
+          await Promise.all(
+            feedIdsToRefresh.map((feedId) =>
+              publishJob(redis, {
+                type: "feed.refresh",
+                payload: { feedId, userId, reason: "manual" },
+              }),
+            ),
+          );
+          await db
+            .update(feeds)
+            .set({ refreshStatus: "queued", lastRefreshError: null })
+            .where(inArray(feeds.id, feedIdsToRefresh));
 
           logger.info("queue.job.enqueued.batch", {
             count: feedIdsToRefresh.length,
