@@ -34,6 +34,7 @@ type ReaderToolbarProps = {
   onAdjustFontSize: (delta: number) => void;
   onOpenOriginal: () => void;
   onOpenAi: () => void;
+  variant?: "inline" | "floating";
 };
 
 const CONTENT_WIDTH_LABELS: Record<ReaderContentWidth, string> = {
@@ -53,21 +54,29 @@ export function ReaderToolbar({
   onAdjustFontSize,
   onOpenOriginal,
   onOpenAi,
+  variant = "inline",
 }: ReaderToolbarProps) {
   const canDecreaseFont = preferences.fontSizePx > limits.minFontSizePx;
   const canIncreaseFont = preferences.fontSizePx < limits.maxFontSizePx;
   const effectiveContentWidth = preferences.contentWidth === "narrow" ? "narrow" : "wide";
+  const tooltipSideOffset = variant === "floating" ? 10 : 8;
 
   return (
     <Toolbar
       aria-label="Reader tools"
-      className="min-w-0 border-0 bg-transparent p-0 text-muted-foreground shadow-none"
+      className={cn(
+        "min-w-0 border-0 p-0 text-muted-foreground shadow-none",
+        variant === "inline"
+          ? "bg-transparent"
+          : "reader-floating-toolbar bg-background rounded-xl px-1.5 py-1",
+      )}
     >
       <ToolbarGroup className="min-w-0 gap-0.5">
         <ReaderToolbarButton
           label={isSaved ? "Remove from read later" : "Read later"}
           active={isSaved}
           onClick={onToggleSaved}
+          tooltipSideOffset={tooltipSideOffset}
         >
           {isSaved ? <StarFill /> : <StarLine />}
         </ReaderToolbarButton>
@@ -76,12 +85,14 @@ export function ReaderToolbar({
           active={activeMode === "extracted"}
           disabled={!extractedAvailable}
           onClick={() => onModeChange(activeMode === "original" ? "extracted" : "original")}
+          tooltipSideOffset={tooltipSideOffset}
         >
           {activeMode === "extracted" ? <TextFill /> : <TextLine />}
         </ReaderToolbarButton>
         <ReaderToolbarButton
           label={`Content width: ${CONTENT_WIDTH_LABELS[effectiveContentWidth]}`}
           onClick={onCycleContentWidth}
+          tooltipSideOffset={tooltipSideOffset}
         >
           {effectiveContentWidth === "narrow" ? <SquareLine /> : <RectangleLine />}
         </ReaderToolbarButton>
@@ -91,6 +102,7 @@ export function ReaderToolbar({
           label="Decrease font size"
           disabled={!canDecreaseFont}
           onClick={() => onAdjustFontSize(-1)}
+          tooltipSideOffset={tooltipSideOffset}
         >
           <MinimizeLine />
         </ReaderToolbarButton>
@@ -98,6 +110,7 @@ export function ReaderToolbar({
           label="Increase font size"
           disabled={!canIncreaseFont}
           onClick={() => onAdjustFontSize(1)}
+          tooltipSideOffset={tooltipSideOffset}
         >
           <AddLine />
         </ReaderToolbarButton>
@@ -107,10 +120,18 @@ export function ReaderToolbar({
         orientation="vertical"
       />
       <ToolbarGroup className="gap-0.5">
-        <ReaderToolbarButton label="Open source" onClick={onOpenOriginal}>
+        <ReaderToolbarButton
+          label="Open source"
+          onClick={onOpenOriginal}
+          tooltipSideOffset={tooltipSideOffset}
+        >
           <ExternalLinkLine />
         </ReaderToolbarButton>
-        <ReaderToolbarButton label="Distill this article" onClick={onOpenAi}>
+        <ReaderToolbarButton
+          label="Distill this article"
+          onClick={onOpenAi}
+          tooltipSideOffset={tooltipSideOffset}
+        >
           <HeadAiLine />
         </ReaderToolbarButton>
       </ToolbarGroup>
@@ -125,6 +146,7 @@ function ReaderToolbarButton({
   active = false,
   disabled = false,
   className,
+  tooltipSideOffset = 8,
 }: {
   label: string;
   children: React.ReactNode;
@@ -132,6 +154,7 @@ function ReaderToolbarButton({
   active?: boolean;
   disabled?: boolean;
   className?: string;
+  tooltipSideOffset?: number;
 }) {
   return (
     <Tooltip>
@@ -142,7 +165,7 @@ function ReaderToolbarButton({
             render={
               <Button
                 className={cn(
-                  "size-7 rounded-md text-muted-foreground transition-[color,background-color,transform] hover:text-foreground data-[pressed]:text-foreground",
+                  "size-7 rounded-md text-muted-foreground transition-[color,background-color,transform] hover:text-foreground data-pressed:text-foreground",
                   active && "bg-accent/50 text-foreground",
                   className,
                 )}
@@ -161,7 +184,7 @@ function ReaderToolbarButton({
           </ToolbarButton>
         }
       />
-      <TooltipPopup sideOffset={8}>{label}</TooltipPopup>
+      <TooltipPopup sideOffset={tooltipSideOffset}>{label}</TooltipPopup>
     </Tooltip>
   );
 }
