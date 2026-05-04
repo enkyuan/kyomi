@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { refreshBatchFeeds } from "@modules/feeds/api";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { listFollowedFeeds, refreshBatchFeeds } from "@modules/feeds/api";
 import { useFeedRefresh } from "@hooks/use-feed-refresh";
 import { Refresh2Fill } from "@mingcute/react";
 import { Button } from "@components/ui/button";
@@ -9,6 +9,8 @@ import { cn } from "@lib/utils";
 const refreshRelativeFormatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 const SUMMARY_HOLD_MS = 2200;
 const SUMMARY_FADE_MS = 420;
+const BATCH_REFRESH_POLL_MS = 2000;
+const BATCH_REFRESH_GRACE_MS = 12_000;
 
 function formatRelativeRefreshTimestamp(value: string) {
   const date = new Date(value);
@@ -126,15 +128,82 @@ export function FeedRefreshStatus({ feedId }: { feedId: string }) {
 
 export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
   const queryClient = useQueryClient();
+  const [isWatching, setIsWatching] = useState(false);
+  const pollStartRef = useRef<number | null>(null);
+  const wasRefreshingRef = useRef(false);
+
+  const invalidateRefreshQueries = useCallback(() => {
+    queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] });
+    queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] });
+    queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+    queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
+  }, [queryClient]);
+
+  const followedFeedsQuery = useQuery({
+    queryKey: ["feeds", "followed"],
+    queryFn: () => listFollowedFeeds(),
+    enabled: isWatching,
+    refetchInterval: (query) => {
+      const items = query.state?.data ?? [];
+      const hasActiveRefresh = items.some(
+        (item) => item.refreshStatus === "queued" || item.refreshStatus === "running",
+      );
+      if (hasActiveRefresh) {
+        return BATCH_REFRESH_POLL_MS;
+      }
+      const startedAt = pollStartRef.current;
+      if (startedAt && Date.now() - startedAt < BATCH_REFRESH_GRACE_MS) {
+        return BATCH_REFRESH_POLL_MS;
+      }
+      return false;
+    },
+  });
+
+  const hasActiveRefresh = (followedFeedsQuery.data ?? []).some(
+    (item) => item.refreshStatus === "queued" || item.refreshStatus === "running",
+  );
+
   const mutation = useMutation({
     mutationFn: async () => {
       return refreshBatchFeeds({ data: { folderId } });
     },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["feeds", "followed"] });
-      queryClient.invalidateQueries({ queryKey: ["feeds", "followed", "unread-counts"] });
+    onSuccess: (result) => {
+      invalidateRefreshQueries();
+      if (result.count > 0) {
+        pollStartRef.current = Date.now();
+        wasRefreshingRef.current = false;
+        setIsWatching(true);
+      }
     },
   });
+
+  useEffect(() => {
+    if (!isWatching) {
+      pollStartRef.current = null;
+      wasRefreshingRef.current = false;
+      return;
+    }
+
+    if (!pollStartRef.current) {
+      pollStartRef.current = Date.now();
+    }
+
+    if (hasActiveRefresh) {
+      wasRefreshingRef.current = true;
+      return;
+    }
+
+    const startedAt = pollStartRef.current;
+    if (wasRefreshingRef.current) {
+      invalidateRefreshQueries();
+      setIsWatching(false);
+      return;
+    }
+
+    if (startedAt && Date.now() - startedAt >= BATCH_REFRESH_GRACE_MS) {
+      setIsWatching(false);
+    }
+  }, [hasActiveRefresh, invalidateRefreshQueries, isWatching]);
 
   return (
     <Button

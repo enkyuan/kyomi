@@ -120,6 +120,13 @@
       "when": 1777842000000,
       "tag": "0016_reader_show_link_previews",
       "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1777845600000,
+      "tag": "0017_reader_content_width_default_wide",
+      "breakpoints": true
     }
   ]
 }

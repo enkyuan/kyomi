@@ -10,6 +10,7 @@ export type SubscribedFeedListItemDto = {
   /** Persisted favicon image URL from ingestion; null if not yet resolved. */
   faviconUrl: string | null;
   faviconSource: string | null;
+  refreshStatus: string;
   isPinned: boolean;
   pinnedAt: string | null;
   folderId: string | null;

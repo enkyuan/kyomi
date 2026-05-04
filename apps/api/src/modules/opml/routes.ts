@@ -32,27 +32,40 @@ const opmlImportAccepted = t.Object({
   taskId: uuidParam,
 });
 
+const opmlTaskStatusValue = t.Union([
+  t.Literal("pending"),
+  t.Literal("completed"),
+  t.Literal("failed"),
+]);
+
+const opmlTaskSummary = t.Union([importSummary, t.Null()]);
+
 const opmlTaskStatus = t.Object({
   taskId: t.String(),
-  status: t.Literal("completed"),
+  status: opmlTaskStatusValue,
   createdAt: t.String(),
-  completedAt: t.String(),
-  summary: importSummary,
+  completedAt: t.Union([t.String(), t.Null()]),
+  summary: opmlTaskSummary,
 });
+
+const opmlActiveSummary = t.Union([
+  t.Object({
+    subscribed: t.Number(),
+    alreadySubscribed: t.Number(),
+    failed: t.Number(),
+    totalUrls: t.Number(),
+  }),
+  t.Null(),
+]);
 
 const opmlActiveResponse = t.Object({
   items: t.Array(
     t.Object({
       taskId: t.String(),
-      status: t.Literal("completed"),
+      status: opmlTaskStatusValue,
       createdAt: t.String(),
-      completedAt: t.String(),
-      summary: t.Object({
-        subscribed: t.Number(),
-        alreadySubscribed: t.Number(),
-        failed: t.Number(),
-        totalUrls: t.Number(),
-      }),
+      completedAt: t.Union([t.String(), t.Null()]),
+      summary: opmlActiveSummary,
     }),
   ),
 });
@@ -75,14 +88,41 @@ export function registerOpmlRoutes(app: Elysia) {
         const taskId = crypto.randomUUID();
         const createdAt = new Date().toISOString();
         const urls = parseOpmlFeeds(body.xml);
+        const baseSummary = {
+          subscribed: 0,
+          alreadySubscribed: 0,
+          failed: 0,
+          failures: [] as Array<{ url: string; code: string; message: string }>,
+          totalUrls: urls.length,
+        };
+
+        try {
+          await saveOpmlTask(taskId, {
+            userId,
+            status: "pending",
+            createdAt,
+            completedAt: null,
+            summary: baseSummary,
+          });
+        } catch (error) {
+          logger.error("opml.import.task_store_failed", {
+            userId,
+            taskId,
+            error: error instanceof Error ? error.message : String(error),
+          });
+          throw new AppError("Failed to start OPML import", {
+            status: 503,
+            code: "OPML_TASK_STORE_UNAVAILABLE",
+          });
+        }
         logger.info("opml.import.started", { userId, taskId, urlCount: urls.length });
 
         // Run the import in the background
         void (async () => {
-          const summary = await importOpmlFeedUrls(db, userId, urls);
-          const completedAt = new Date().toISOString();
-
           try {
+            const summary = await importOpmlFeedUrls(db, userId, urls);
+            const completedAt = new Date().toISOString();
+
             await saveOpmlTask(taskId, {
               userId,
               status: "completed",
@@ -90,21 +130,53 @@ export function registerOpmlRoutes(app: Elysia) {
               completedAt,
               summary,
             });
-          } catch (error) {
-            logger.error("opml.import.task_store_failed", {
+
+            logger.info("opml.import.completed", {
               userId,
               taskId,
-              error: error instanceof Error ? error.message : String(error),
+              subscribed: summary.subscribed,
+              alreadySubscribed: summary.alreadySubscribed,
+              failed: summary.failed,
+            });
+          } catch (error) {
+            const completedAt = new Date().toISOString();
+            const message = error instanceof Error ? error.message : String(error);
+            const summary = {
+              ...baseSummary,
+              failed: baseSummary.totalUrls,
+              failures: baseSummary.totalUrls
+                ? [
+                    {
+                      url: "",
+                      code: "OPML_IMPORT_FAILED",
+                      message,
+                    },
+                  ]
+                : [],
+            };
+
+            try {
+              await saveOpmlTask(taskId, {
+                userId,
+                status: "failed",
+                createdAt,
+                completedAt,
+                summary,
+              });
+            } catch (saveError) {
+              logger.error("opml.import.task_store_failed", {
+                userId,
+                taskId,
+                error: saveError instanceof Error ? saveError.message : String(saveError),
+              });
+            }
+
+            logger.error("opml.import.failed", {
+              userId,
+              taskId,
+              error: message,
             });
           }
-
-          logger.info("opml.import.completed", {
-            userId,
-            taskId,
-            subscribed: summary.subscribed,
-            alreadySubscribed: summary.alreadySubscribed,
-            failed: summary.failed,
-          });
         })();
 
         set.status = 202;
@@ -124,7 +196,11 @@ export function registerOpmlRoutes(app: Elysia) {
       async (context) => {
         const { userId } = v1HandlerContext(context);
         const items = await listOpmlTasksForUser(userId);
-        items.sort((a, b) => (a.completedAt < b.completedAt ? 1 : -1));
+        items.sort((a, b) => {
+          const aTime = a.completedAt ?? a.createdAt;
+          const bTime = b.completedAt ?? b.createdAt;
+          return aTime < bTime ? 1 : -1;
+        });
         return { items };
       },
       {

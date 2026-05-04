@@ -84,6 +84,7 @@ export const subscribedFeedItem = t.Object({
   link: t.Union([t.String(), t.Null()]),
   faviconUrl: t.Union([t.String(), t.Null()]),
   faviconSource: t.Union([t.String(), t.Null()]),
+  refreshStatus: t.String(),
   isPinned: t.Boolean(),
   pinnedAt: t.Union([t.String(), t.Null()]),
   folderId: t.Union([t.String(), t.Null()]),

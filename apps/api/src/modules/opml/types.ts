@@ -14,10 +14,10 @@ export type OpmlImportSummary = {
 
 export type OpmlTaskPayload = {
   userId: string;
-  status: "completed";
+  status: "pending" | "completed" | "failed";
   createdAt: string;
-  completedAt: string;
-  summary: OpmlImportSummary;
+  completedAt: string | null;
+  summary: OpmlImportSummary | null;
 };
 
 export type OpmlOutlineEntry = {

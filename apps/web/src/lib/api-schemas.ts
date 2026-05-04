@@ -221,6 +221,7 @@ export const followedFeedSchema = z.object({
   link: z.string().nullable(),
   faviconUrl: z.string().nullable(),
   faviconSource: z.string().nullable(),
+  refreshStatus: feedRefreshStatusSchema,
   isPinned: z.boolean(),
   pinnedAt: z.string().nullable(),
   folderId: z.string().nullable(),
