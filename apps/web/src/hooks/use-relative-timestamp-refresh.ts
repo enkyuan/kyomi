@@ -1,19 +1,47 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import type { InboxTimestampDisplayDto } from "@lib/api-schemas";
 
+let relativeTimestampTick = 0;
+let relativeTimestampIntervalId: ReturnType<typeof setInterval> | null = null;
+const relativeTimestampListeners = new Set<() => void>();
+
+function emitRelativeTimestampTick() {
+  relativeTimestampTick += 1;
+  for (const listener of relativeTimestampListeners) {
+    listener();
+  }
+}
+
+function subscribeToRelativeTimestampTick(listener: () => void) {
+  relativeTimestampListeners.add(listener);
+
+  if (relativeTimestampIntervalId === null) {
+    relativeTimestampIntervalId = setInterval(emitRelativeTimestampTick, 60_000);
+  }
+
+  return () => {
+    relativeTimestampListeners.delete(listener);
+    if (relativeTimestampListeners.size === 0 && relativeTimestampIntervalId !== null) {
+      clearInterval(relativeTimestampIntervalId);
+      relativeTimestampIntervalId = null;
+    }
+  };
+}
+
+function getRelativeTimestampSnapshot() {
+  return relativeTimestampTick;
+}
+
 /**
- * Forces a re-render every 60 seconds when `display === "relative"` so that
- * relative timestamps (e.g. "5 minutes ago") don't stay frozen after the
- * initial render.
+ * Keeps relative timestamps fresh with one shared minute ticker for the whole app
+ * instead of one interval per rendered row/detail surface.
  */
 export function useRelativeTimestampRefresh(display: InboxTimestampDisplayDto) {
-  const [, setTick] = useState(0);
-
-  useEffect(() => {
-    if (display !== "relative") return;
-    const id = setInterval(() => setTick((n) => n + 1), 60_000);
-    return () => clearInterval(id);
-  }, [display]);
+  useSyncExternalStore(
+    display === "relative" ? subscribeToRelativeTimestampTick : () => () => {},
+    getRelativeTimestampSnapshot,
+    () => 0,
+  );
 }

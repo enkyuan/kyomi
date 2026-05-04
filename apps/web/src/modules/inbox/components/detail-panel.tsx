@@ -78,16 +78,9 @@ export function ItemDetail({
   const effectiveReaderMode =
     preferences.defaultMode === "smart" ? item.reader.activeMode : preferences.defaultMode;
   const isViewingExtracted = effectiveReaderMode === "extracted";
-  const displayReader = useMemo(
-    () => readerContentForMode(item, effectiveReaderMode),
-    [effectiveReaderMode, item.reader],
-  );
-
-  const displayContent = useMemo(
-    () =>
-      displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "",
-    [displayReader],
-  );
+  const displayReader = readerContentForMode(item, effectiveReaderMode);
+  const displayContent =
+    displayReader.contentHtml ?? displayReader.contentMarkdown ?? displayReader.contentText ?? "";
   const readTime = displayContent ? estimateReadingTime(displayContent) : null;
 
   const canRequestExtraction = item.link.startsWith("http");
@@ -150,54 +143,45 @@ export function ItemDetail({
     [extractMutation],
   );
 
-  const updateItem = useCallback(
-    (patch: InboxItemPatch) => {
-      updateItemMutation.mutate(patch);
-    },
-    [updateItemMutation],
-  );
+  const updateItem = (patch: InboxItemPatch) => {
+    updateItemMutation.mutate(patch);
+  };
 
-  const cycleContentWidth = useCallback(() => {
+  const cycleContentWidth = () => {
     const nextWidth = effectiveContentWidth === "narrow" ? "wide" : "narrow";
     setPreferences({ contentWidth: nextWidth });
-  }, [effectiveContentWidth, setPreferences]);
+  };
 
-  const adjustFontSize = useCallback(
-    (delta: number) => {
-      const nextFontSize = Math.max(
-        limits.minFontSizePx,
-        Math.min(limits.maxFontSizePx, preferences.fontSizePx + delta),
-      );
-      setPreferences({ fontSizePx: nextFontSize });
-    },
-    [limits.maxFontSizePx, limits.minFontSizePx, preferences.fontSizePx, setPreferences],
-  );
+  const adjustFontSize = (delta: number) => {
+    const nextFontSize = Math.max(
+      limits.minFontSizePx,
+      Math.min(limits.maxFontSizePx, preferences.fontSizePx + delta),
+    );
+    setPreferences({ fontSizePx: nextFontSize });
+  };
 
-  const handleModeChange = useCallback(
-    (mode: "original" | "extracted") => {
-      if (mode === "extracted" && !item.reader.extracted.available) {
-        return;
-      }
-      setPreferences({ defaultMode: mode });
-    },
-    [item.reader.extracted.available, setPreferences],
-  );
+  const handleModeChange = (mode: "original" | "extracted") => {
+    if (mode === "extracted" && !item.reader.extracted.available) {
+      return;
+    }
+    setPreferences({ defaultMode: mode });
+  };
 
-  const handleOpenOriginal = useCallback(() => {
+  const handleOpenOriginal = () => {
     window.open(
       item.link,
       preferences.openLinksInNewTab ? "_blank" : "_self",
       preferences.openLinksInNewTab ? "noopener,noreferrer" : undefined,
     );
-  }, [item.link, preferences.openLinksInNewTab]);
+  };
 
-  const handleOpenAi = useCallback(() => {
+  const handleOpenAi = () => {
     toastManager.add({
       title: "AI tools coming next",
       description: "This button is reserved for article-side LLM actions.",
       type: "info",
     });
-  }, []);
+  };
 
   useEffect(() => {
     if (!shouldAutoExtract || extractMutation.isPending) {

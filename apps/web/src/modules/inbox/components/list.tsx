@@ -173,7 +173,7 @@ function InboxListVirtualized({
   const listContentHeight = virtualizer.getTotalSize();
 
   const { viewportHeight: listViewportHeight, containerWidth: listContainerWidth } =
-    useViewportMetrics(listScrollRef, [isLoading, inboxItems.length, listContentHeight]);
+    useViewportMetrics(listScrollRef, [isLoading, inboxItems.length]);
 
   const showBottomSeparatorOnLastItem =
     inboxItems.length > 0 && listContentHeight < listViewportHeight;
