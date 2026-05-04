@@ -147,7 +147,7 @@ export function registerOpmlRoutes(app: Elysia) {
               failures: baseSummary.totalUrls
                 ? [
                     {
-                      url: "",
+                      url: "OPML_IMPORT",
                       code: "OPML_IMPORT_FAILED",
                       message,
                     },
@@ -197,8 +197,8 @@ export function registerOpmlRoutes(app: Elysia) {
         const { userId } = v1HandlerContext(context);
         const items = await listOpmlTasksForUser(userId);
         items.sort((a, b) => {
-          const aTime = a.completedAt ?? a.createdAt;
-          const bTime = b.completedAt ?? b.createdAt;
+          const aTime = new Date(a.completedAt ?? a.createdAt).getTime();
+          const bTime = new Date(b.completedAt ?? b.createdAt).getTime();
           return aTime < bTime ? 1 : -1;
         });
         return { items };

@@ -11,6 +11,11 @@ const SUMMARY_HOLD_MS = 2200;
 const SUMMARY_FADE_MS = 420;
 const BATCH_REFRESH_POLL_MS = 2000;
 const BATCH_REFRESH_GRACE_MS = 12_000;
+const ACTIVE_REFRESH_STATUSES = new Set(["queued", "running"]);
+
+function hasActiveRefreshStatus(items: Array<{ refreshStatus: string }>) {
+  return items.some((item) => ACTIVE_REFRESH_STATUSES.has(item.refreshStatus));
+}
 
 function formatRelativeRefreshTimestamp(value: string) {
   const date = new Date(value);
@@ -145,9 +150,7 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
     enabled: isWatching,
     refetchInterval: (query) => {
       const items = query.state?.data ?? [];
-      const hasActiveRefresh = items.some(
-        (item) => item.refreshStatus === "queued" || item.refreshStatus === "running",
-      );
+      const hasActiveRefresh = hasActiveRefreshStatus(items);
       if (hasActiveRefresh) {
         return BATCH_REFRESH_POLL_MS;
       }
@@ -159,9 +162,7 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
     },
   });
 
-  const hasActiveRefresh = (followedFeedsQuery.data ?? []).some(
-    (item) => item.refreshStatus === "queued" || item.refreshStatus === "running",
-  );
+  const hasActiveRefresh = hasActiveRefreshStatus(followedFeedsQuery.data ?? []);
 
   const mutation = useMutation({
     mutationFn: async () => {
