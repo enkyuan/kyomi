@@ -434,6 +434,9 @@ const Slider = forwardRef<HTMLDivElement, SliderProps>(
       if (!el) return;
       const ro = new ResizeObserver(([entry]) => {
         const w = entry.contentRect.width;
+        if (Math.abs(trackWidthRef.current - w) < 0.5) {
+          return;
+        }
         trackWidthRef.current = w;
         if (!dragging.current && initialSyncDone.current) {
           const v = valuesRef.current;

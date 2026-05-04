@@ -227,8 +227,7 @@ export function BatchFeedRefreshStatus({ folderId }: { folderId?: string }) {
 export function FeedRefreshSummary({ feedId }: { feedId: string }) {
   const { refreshStatus, lastRefreshStartedAt, lastRefreshCompletedAt, lastRefreshFailedAt } =
     useFeedRefresh(feedId);
-  const [isVisible, setIsVisible] = useState(true);
-  const [shouldRender, setShouldRender] = useState(true);
+  const [phase, setPhase] = useState<"visible" | "fading" | "hidden">("visible");
 
   const summaryLabel = getRefreshSummaryLabel({
     refreshStatus,
@@ -240,19 +239,18 @@ export function FeedRefreshSummary({ feedId }: { feedId: string }) {
   const shouldPersist = refreshStatus === "running" || refreshStatus === "queued";
 
   useEffect(() => {
-    setShouldRender(true);
-    setIsVisible(true);
+    setPhase("visible");
 
     if (shouldPersist) {
       return;
     }
 
     const fadeTimer = window.setTimeout(() => {
-      setIsVisible(false);
+      setPhase("fading");
     }, SUMMARY_HOLD_MS);
 
     const hideTimer = window.setTimeout(() => {
-      setShouldRender(false);
+      setPhase("hidden");
     }, SUMMARY_HOLD_MS + SUMMARY_FADE_MS);
 
     return () => {
@@ -261,7 +259,7 @@ export function FeedRefreshSummary({ feedId }: { feedId: string }) {
     };
   }, [shouldPersist, summaryLabel]);
 
-  if (!shouldRender) {
+  if (phase === "hidden") {
     return null;
   }
 
@@ -269,7 +267,9 @@ export function FeedRefreshSummary({ feedId }: { feedId: string }) {
     <span
       className={cn(
         "inline-flex items-center text-muted-foreground transition-[opacity,filter,transform] ease-out motion-reduce:transition-none",
-        isVisible ? "translate-y-0 opacity-100 blur-0" : "-translate-y-px opacity-0 blur-[2px]",
+        phase === "visible"
+          ? "translate-y-0 opacity-100 blur-0"
+          : "-translate-y-px opacity-0 blur-[2px]",
       )}
       style={{ transitionDuration: `${SUMMARY_FADE_MS}ms` }}
     >
