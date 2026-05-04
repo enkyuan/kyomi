@@ -40,6 +40,12 @@ function createMarked(baseUrl?: string | null, openLinksInNewTab = true): Marked
     return `<pre><code${classAttr}>${escapeAttr(text)}</code></pre>`;
   };
 
+  // Escape raw HTML blocks/inline HTML instead of passing them through, so
+  // untrusted markdown (e.g. user clips) cannot inject arbitrary tags/attributes.
+  renderer.html = function ({ text }) {
+    return escapeAttr(text);
+  };
+
   const marked = new Marked();
   marked.use(markedKatex({ throwOnError: false }));
   marked.use({
