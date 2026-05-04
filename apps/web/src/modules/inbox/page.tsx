@@ -1,12 +1,12 @@
 "use client";
 
 import { AppShell } from "@/app/app-shell";
-import { dedupeInboxItems, useInboxQueries } from "@hooks/use-inbox-queries";
 import { useSplitPane } from "@hooks/use-split-pane";
 import { InboxDetailView } from "@modules/inbox/components/detail-view";
 import { InboxList } from "@modules/inbox/components/list";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getInboxViewCount, updateInboxItemState, type InboxItem } from "@modules/inbox/api";
+import { dedupePagedInboxItemsById, useInboxQueries } from "@modules/inbox/use-queries";
 import { QUERY_TIMES } from "@lib/query-policies";
 import { useInboxPreferences } from "@lib/inbox-preferences";
 import { updateInboxItemCaches } from "@modules/inbox/lib/cache";
@@ -106,7 +106,7 @@ export function InboxPage({
   });
 
   const rawInboxItems = useMemo(
-    () => dedupeInboxItems(inboxQuery.data?.pages.flatMap((page) => page.items) ?? []),
+    () => dedupePagedInboxItemsById(inboxQuery.data?.pages.flatMap((page) => page.items) ?? []),
     [inboxQuery.data?.pages],
   );
   const activeScopeLabel = isReadScopedFilterActive
@@ -171,6 +171,7 @@ export function InboxPage({
       void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
     },
   });
+  const markItemRead = markReadMutation.mutate;
 
   const clearSelectedItem = useCallback(() => {
     void navigate({
@@ -210,12 +211,12 @@ export function InboxPage({
     }
 
     if (preferences.inboxMarkReadBehavior === "on-open") {
-      markReadMutation.mutate(itemId);
+      markItemRead(itemId);
       return;
     }
 
     delayedReadTimeoutRef.current = window.setTimeout(() => {
-      markReadMutation.mutate(itemId);
+      markItemRead(itemId);
       delayedReadTimeoutRef.current = null;
     }, 1500);
 
@@ -225,7 +226,7 @@ export function InboxPage({
         delayedReadTimeoutRef.current = null;
       }
     };
-  }, [effectiveFilter, itemId, markReadMutation, preferences.inboxMarkReadBehavior, selectedItem]);
+  }, [effectiveFilter, itemId, markItemRead, preferences.inboxMarkReadBehavior, selectedItem]);
 
   const isReaderFocusMode = preferences.articleOpenBehavior === "reader";
   const isReaderFocus = isReaderFocusMode && Boolean(itemId);
