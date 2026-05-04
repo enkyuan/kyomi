@@ -5,7 +5,7 @@ import { useLocation, Link, useRouter } from "@tanstack/react-router";
 import { Calendar3Fill, NewsFill, StarFill, TimeDurationFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
 import { useInboxPreferences } from "@lib/inbox-preferences";
-import { prefetchInboxFlow } from "@modules/inbox/prefetch";
+import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
 import {
   SidebarGroup,
   SidebarGroupLabel,

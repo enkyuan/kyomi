@@ -22,8 +22,8 @@ import {
   updateFeedSubscriptionSettings,
 } from "./service";
 import * as dto from "./dto";
-import { feeds } from "@cronos/db";
-import { eq } from "drizzle-orm";
+import { feeds, feedSubscriptions } from "@cronos/db";
+import { and, eq } from "drizzle-orm";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",

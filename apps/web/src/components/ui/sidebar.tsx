@@ -300,7 +300,7 @@ export function SidebarRail({
     <button
       aria-label="Toggle Sidebar"
       className={cn(
-        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-[background-color,transform,opacity] duration-200 ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
+        "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-[background-color,transform,opacity] duration-200 ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-0.5 hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
         "in-data-[side=left]:cursor-w-resize in-data-[side=right]:cursor-e-resize",
         "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
         "group-data-[collapsible=offcanvas]:translate-x-0 hover:group-data-[collapsible=offcanvas]:bg-sidebar group-data-[collapsible=offcanvas]:after:left-full",
@@ -645,7 +645,7 @@ export function SidebarMenuBadge({
   return (
     <div
       className={cn(
-        "pointer-events-none absolute right-2 flex h-5 min-w-5 select-none items-center justify-center rounded-full bg-sidebar-foreground/10 px-1.5 font-semibold text-sidebar-foreground text-[0.6875rem] leading-4 tabular-nums transition-[top,right,height,min-width,padding,font-size,line-height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:right-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-6 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:min-w-6 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-[0.8125rem] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-[1.125rem]",
+        "pointer-events-none absolute right-2 flex h-5 min-w-5 select-none items-center justify-center rounded-full bg-sidebar-foreground/10 px-1.5 font-semibold text-sidebar-foreground text-[0.6875rem] leading-4 tabular-nums transition-[top,right,height,min-width,padding,font-size,line-height] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:right-2.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:h-6 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:min-w-6 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-2 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-[0.8125rem] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-4.5",
         "peer-hover/menu-button:text-sidebar-accent-foreground peer-data-[active=true]/menu-button:text-sidebar-accent-foreground",
         "peer-data-[size=sm]/menu-button:top-1",
         "peer-data-[size=default]/menu-button:top-1.5 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:peer-data-[size=default]/menu-button:top-2",

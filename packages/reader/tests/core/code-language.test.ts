@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { detectCodeLanguage } from "@cronos/reader/core";
+import { detectCodeLanguage } from "../../src/core/code-language";
 
 describe("detectCodeLanguage", () => {
   test("uses explicit language when present", () => {

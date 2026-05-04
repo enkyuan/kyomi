@@ -1,0 +1,1 @@
+export const DEFAULT_NATIVE_READER_BACKGROUND = "#f7f5f2";

@@ -8,9 +8,9 @@ import { FeedFavicon } from "@components/navigation/feed-favicon";
 import { Collapsible, CollapsiblePanel, CollapsibleTrigger } from "@components/ui/collapsible";
 import { listFollowedFeeds, type FollowedFeed } from "@modules/feeds/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
-import { usePinnedFeedIds } from "@modules/feeds/use-pins";
+import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
 import { QUERY_TIMES } from "@lib/query-policies";
-import { prefetchInboxFlow } from "@modules/inbox/prefetch";
+import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
 import {
   SidebarGroup,
   SidebarGroupLabel,

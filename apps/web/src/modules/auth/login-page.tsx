@@ -5,7 +5,7 @@ import { useForm } from "@tanstack/react-form";
 import { useQueryClient } from "@tanstack/react-query";
 import { Link, useRouter } from "@tanstack/react-router";
 import { authClient } from "@lib/auth-client";
-import { prefetchInboxFlow } from "@modules/inbox/prefetch";
+import { prefetchInboxFlow } from "@modules/inbox/lib/prefetch";
 import { useAuth } from "@integrations/better-auth/auth-provider";
 import { Button } from "@components/ui/button";
 import {

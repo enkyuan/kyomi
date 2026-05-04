@@ -2,7 +2,7 @@
 
 import { act, render, waitFor } from "@testing-library/react";
 import { describe, expect, test } from "vitest";
-import { RenderHtml } from "@modules/reader/html";
+import { RenderHtml } from "@cronos/reader/web";
 
 describe("RenderHtml", () => {
   test("keeps div structure and filtered classes aligned with server sanitizer", () => {

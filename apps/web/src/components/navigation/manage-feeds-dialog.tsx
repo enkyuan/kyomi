@@ -49,7 +49,7 @@ import {
   unfollowFeed,
 } from "@modules/feeds/api";
 import { listFolders } from "@modules/folders/api";
-import { usePinnedFeedIds } from "@modules/feeds/use-pins";
+import { usePinnedFeedIds } from "@hooks/use-pinned-feed-ids";
 import { PinFill, PinLine } from "@mingcute/react";
 
 type ManageFeedsDialogProps = {
