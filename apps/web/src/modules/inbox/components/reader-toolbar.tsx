@@ -65,13 +65,11 @@ export function ReaderToolbar({
     <Toolbar
       aria-label="Reader tools"
       className={cn(
-        "min-w-0 border-0 p-0 text-muted-foreground shadow-none",
-        variant === "inline"
-          ? "bg-transparent"
-          : "reader-floating-toolbar bg-background rounded-xl px-1.5 py-1",
+        "min-w-0 gap-1 border-0 p-0 text-muted-foreground shadow-none",
+        variant === "inline" ? "bg-transparent" : "reader-floating-toolbar rounded-xl px-1.5 py-1",
       )}
     >
-      <ToolbarGroup className="min-w-0 gap-0.5">
+      <ToolbarGroup className="min-w-0 gap-1">
         <ReaderToolbarButton
           label={isSaved ? "Remove from read later" : "Read later"}
           active={isSaved}
@@ -97,7 +95,7 @@ export function ReaderToolbar({
           {effectiveContentWidth === "narrow" ? <SquareLine /> : <RectangleLine />}
         </ReaderToolbarButton>
       </ToolbarGroup>
-      <ToolbarGroup className="gap-0 rounded-md bg-accent/50 p-0.5">
+      <ToolbarGroup className="gap-1 rounded-md bg-accent/50 p-0.5">
         <ReaderToolbarButton
           label="Decrease font size"
           disabled={!canDecreaseFont}
@@ -115,11 +113,8 @@ export function ReaderToolbar({
           <AddLine />
         </ReaderToolbarButton>
       </ToolbarGroup>
-      <ToolbarSeparator
-        className="mx-1 hidden h-4 w-px bg-border/70 sm:block"
-        orientation="vertical"
-      />
-      <ToolbarGroup className="gap-0.5">
+      <ToolbarSeparator className="mx-1 hidden w-px bg-border/70 sm:block" orientation="vertical" />
+      <ToolbarGroup className="gap-1">
         <ReaderToolbarButton
           label="Open source"
           onClick={onOpenOriginal}
@@ -165,12 +160,12 @@ function ReaderToolbarButton({
             render={
               <Button
                 className={cn(
-                  "size-7 rounded-md text-muted-foreground transition-[color,background-color,transform] hover:text-foreground data-pressed:text-foreground",
+                  "rounded-md text-muted-foreground transition-[color,background-color,transform] hover:text-foreground data-pressed:text-foreground",
                   active && "bg-accent/50 text-foreground",
                   className,
                 )}
                 disabled={disabled}
-                size="icon-xs"
+                size="icon-sm"
                 variant="ghost"
                 onClick={(event) => {
                   event.preventDefault();

@@ -272,8 +272,8 @@ export function ItemDetail({
               exit={{
                 filter: "blur(4px)",
                 opacity: 0,
-                scale: 0.96,
-                y: -16,
+                scale: 0.98,
+                y: -12,
               }}
               initial={
                 prefersReducedMotion
@@ -281,14 +281,14 @@ export function ItemDetail({
                   : {
                       filter: "blur(4px)",
                       opacity: 0,
-                      scale: 0.96,
-                      y: -24,
+                      scale: 0.98,
+                      y: -12,
                     }
               }
               transition={
                 prefersReducedMotion
                   ? { duration: 0 }
-                  : { type: "spring", duration: 0.35, bounce: 0 }
+                  : { type: "spring", duration: 0.28, bounce: 0 }
               }
             >
               <ReaderToolbar {...toolbarProps} variant="floating" />

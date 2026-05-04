@@ -58,6 +58,13 @@ export async function getArticleCountsForUser(
         .from(articleClips)
         .where(and(eq(articleClips.userId, userId), eq(articleClips.isSaved, true)))
     : [];
+  const clipAll = includeClipCounts
+    ? await database
+        .select({ c: sql<number>`count(*)::int` })
+        .from(articleClips)
+        .where(eq(articleClips.userId, userId))
+    : [];
+  const clipAllRow = clipAll[0];
   const clipSavedRow = clipSaved[0];
 
   return {
