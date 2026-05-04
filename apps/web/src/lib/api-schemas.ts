@@ -236,6 +236,15 @@ export const followedFeedsListSchema = z.object({
   items: z.array(followedFeedSchema),
 });
 
+export const feedRefreshStatusRowSchema = z.object({
+  feedId: z.string(),
+  refreshStatus: z.string(),
+});
+
+export const feedRefreshStatusListSchema = z.object({
+  items: z.array(feedRefreshStatusRowSchema),
+});
+
 export const feedDetailSchema = z.object({
   id: z.string(),
   url: z.string(),

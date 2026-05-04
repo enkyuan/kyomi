@@ -92,6 +92,7 @@ function collectAnchorProps(anchor: HTMLAnchorElement): Record<string, string> {
 export function mountReaderLinkPreviewCards(container: HTMLElement): () => void {
   const mountedRoots: Root[] = [];
   const mountedHosts: HTMLElement[] = [];
+  let disposed = false;
 
   for (const anchor of Array.from(container.querySelectorAll<HTMLAnchorElement>("a[href]"))) {
     if (!shouldEnhanceAnchor(anchor)) {
@@ -126,11 +127,20 @@ export function mountReaderLinkPreviewCards(container: HTMLElement): () => void 
   }
 
   return () => {
-    for (const root of mountedRoots) {
-      root.unmount();
+    if (disposed) {
+      return;
     }
-    for (const host of mountedHosts) {
-      host.remove();
-    }
+    disposed = true;
+
+    // These preview cards live in nested standalone React roots. Defer unmount to the next
+    // task so parent reader cleanup does not synchronously unmount child roots mid-commit.
+    window.setTimeout(() => {
+      for (const root of mountedRoots) {
+        root.unmount();
+      }
+      for (const host of mountedHosts) {
+        host.remove();
+      }
+    }, 0);
   };
 }

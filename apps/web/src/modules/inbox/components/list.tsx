@@ -14,6 +14,7 @@ import { useViewportMetrics } from "@hooks/use-viewport-metrics";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import type { InboxFilter, InboxItem } from "@modules/inbox/api";
 import type { InboxDensityDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
+import type { InboxListHeaderCount } from "@modules/inbox/lib/count-display";
 
 const FEED_ITEM_ROW_ESTIMATE = {
   comfortable: 176,
@@ -24,7 +25,7 @@ const FEED_ITEM_ROW_ESTIMATE = {
 
 interface InboxListProps {
   inboxItems: InboxItem[];
-  viewCount: number;
+  headerCount: InboxListHeaderCount;
   filter: InboxFilter;
   readerFocusMode?: boolean;
   density: InboxDensityDto;
@@ -32,7 +33,6 @@ interface InboxListProps {
   showFavicons: boolean;
   timestampDisplay: InboxTimestampDisplayDto;
   timestampHourCycle: "12h" | "24h";
-  activeScopeLabel?: string | null;
   selectedItemId?: string | null;
   feedId?: string | null;
   folderId?: string | null;
@@ -234,7 +234,7 @@ function InboxListVirtualized({
 
 export function InboxList({
   inboxItems,
-  viewCount,
+  headerCount,
   filter,
   readerFocusMode = false,
   density,
@@ -242,7 +242,6 @@ export function InboxList({
   showFavicons,
   timestampDisplay,
   timestampHourCycle,
-  activeScopeLabel,
   selectedItemId,
   feedId,
   folderId,
@@ -277,24 +276,12 @@ export function InboxList({
     return () => node.removeEventListener("scroll", syncOverlayState);
   }, []);
 
-  const countLabel =
-    activeScopeLabel ??
-    (filter === "today"
-      ? "today"
-      : filter === "saved"
-        ? "saved"
-        : filter === "recent"
-          ? "read"
-          : filter === "inbox"
-            ? "items"
-            : "unread");
-
   return (
     <section className="relative flex h-full max-h-full min-h-80 min-w-0 flex-col overflow-hidden rounded-2xl supports-[-webkit-touch-callout:none]:rounded-[1.75rem] border border-border bg-card text-card-foreground [--inbox-header-height:3rem] md:min-h-0">
       <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-(--inbox-header-height) border-b border-border bg-card">
         <div className="pointer-events-auto flex h-full items-center justify-between gap-3 pl-2.5 pr-2">
           <span className="inline-flex items-center whitespace-nowrap ps-1.5 font-medium text-muted-foreground text-sm tabular-nums">
-            {viewCount} {countLabel}
+            {headerCount.numberPart} {headerCount.unitPart}
             {feedId ? <FeedRefreshSummary feedId={feedId} /> : null}
           </span>
           <div className="flex items-center gap-0.5">

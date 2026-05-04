@@ -16,9 +16,10 @@ const config = defineConfig(() => {
       ? [tsconfigPaths({ projects: ["./tsconfig.json"] }), viteReact()]
       : [
           devtools(),
-          nitro({ rollupConfig: { external: [/^@sentry\//] } }),
           tsconfigPaths({ projects: ["./tsconfig.json"] }),
-          tailwindcss(),
+          // TanStack Start must register the server-fn resolver and environments before Nitro’s
+          // dev worker wires `fetch`; otherwise `#tanstack-start-server-fn-resolver` stays on the
+          // package stub and `getInboxViewCount` etc. 500 with "Cannot read properties of undefined (reading 'method')".
           tanstackStart({
             // Avoid lazy `?tsr-split=component` chunks — in dev they can 404 (SSR catches the URL
             // before Vite transforms it), causing "Failed to fetch dynamically imported module".
@@ -29,6 +30,8 @@ const config = defineConfig(() => {
             },
           }),
           viteReact(),
+          tailwindcss(),
+          nitro({ rollupConfig: { external: [/^@sentry\//] } }),
         ],
     resolve: {
       dedupe: ["react", "react-dom"],

@@ -5,6 +5,8 @@ import {
   apiJsonValidated,
   discoverFeedResultSchema,
   feedDetailSchema,
+  feedRefreshStatusListSchema,
+  feedRefreshStatusRowSchema,
   followFeedResultSchema,
   followedFeedsListSchema,
   messageResponseSchema,
@@ -123,6 +125,8 @@ export const followFeed = createServerFn({ method: "POST" })
     );
   });
 
+export type FeedRefreshStatusRow = z.infer<typeof feedRefreshStatusRowSchema>;
+
 export const listFollowedFeeds = createServerFn({ method: "GET" }).handler(
   async (): Promise<FollowedFeed[]> => {
     const headers = buildForwardHeaders(getRequestHeaders());
@@ -134,6 +138,24 @@ export const listFollowedFeeds = createServerFn({ method: "GET" }).handler(
     return response.items;
   },
 );
+
+export const listFeedRefreshStatuses = createServerFn({ method: "GET" })
+  .inputValidator((input: { folderId?: string } | void) => input ?? {})
+  .handler(async ({ data }): Promise<FeedRefreshStatusRow[]> => {
+    const headers = buildForwardHeaders(getRequestHeaders());
+    const params = new URLSearchParams();
+    if (data.folderId?.trim()) {
+      params.set("folder_id", data.folderId.trim());
+    }
+    const qs = params.toString();
+    const response = await apiJsonValidated(feedRefreshStatusListSchema, () =>
+      apiJson<{ items: FeedRefreshStatusRow[] }>(
+        `/api/v1/feeds/refresh-status${qs ? `?${qs}` : ""}`,
+        { headers },
+      ),
+    );
+    return response.items;
+  });
 
 export const unfollowFeed = createServerFn({ method: "POST" })
   .inputValidator((input: { feedId: string }) => input)
@@ -187,15 +209,20 @@ export const refreshFeed = createServerFn({ method: "POST" })
 
 export const refreshBatchFeeds = createServerFn({ method: "POST" })
   .inputValidator((input: { folderId?: string } | void) => input || {})
-  .handler(async ({ data }): Promise<{ accepted: boolean; count: number }> => {
-    const headers = buildForwardHeaders(getRequestHeaders());
-    headers.set("content-type", "application/json");
-    return apiJson<{ accepted: boolean; count: number }>(`/api/v1/feeds/refresh`, {
-      method: "POST",
-      headers,
-      body: JSON.stringify(data),
-    });
-  });
+  .handler(
+    async ({ data }): Promise<{ accepted: boolean; count: number; failedCount?: number }> => {
+      const headers = buildForwardHeaders(getRequestHeaders());
+      headers.set("content-type", "application/json");
+      return apiJson<{ accepted: boolean; count: number; failedCount?: number }>(
+        `/api/v1/feeds/refresh`,
+        {
+          method: "POST",
+          headers,
+          body: JSON.stringify(data),
+        },
+      );
+    },
+  );
 
 export const getFeedDetail = createServerFn({ method: "GET" })
   .inputValidator((input: { feedId: string }) => input)

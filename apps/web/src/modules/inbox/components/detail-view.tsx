@@ -6,7 +6,7 @@ import { ScrollAreaPrimitive, ScrollBar } from "@components/ui/scroll-area";
 import { Skeleton } from "@components/ui/skeleton";
 import type { ArticleDetailDto, InboxTimestampDisplayDto } from "@lib/api-schemas";
 import { Button } from "@components/ui/button";
-import { ArrowLeftFill } from "@mingcute/react";
+import { LeftFill } from "@mingcute/react";
 import { cn } from "@lib/utils";
 import type { CSSProperties } from "react";
 
@@ -94,7 +94,7 @@ export function InboxDetailView({
                   className="mb-3 gap-2"
                   onClick={onBackToList}
                 >
-                  <ArrowLeftFill className="size-4" />
+                  <LeftFill className="size-4" />
                   Back to feed
                 </Button>
               ) : null}

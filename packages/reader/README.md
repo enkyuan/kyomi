@@ -1,10 +1,14 @@
-# `@cronos/reader`
+# @cronos/reader
 
-Shared reader package for Cronos.
+Shared reader types, WebView HTML generation, and optional React **web** UI.
 
-- `@cronos/reader/core`: platform-neutral types and helpers
-- `@cronos/reader/web`: browser rendering for `apps/web`
-- `@cronos/reader/webview`: pure HTML document generation for mobile WebViews
-- `@cronos/reader/native`: thin React wrapper around the WebView document layer
+## Peer / runtime dependencies
 
-Fetching, route state, inbox layout, and settings persistence stay outside this package.
+| Package | When needed |
+|--------|----------------|
+| `react`, `react-dom` | Importing `@cronos/reader/web` (React components). |
+| `@base-ui/react` | Link preview UI inside `@cronos/reader/web`. |
+
+`@cronos/reader/core` and `@cronos/reader/webview` do not import React.
+
+HTML sanitization in `@cronos/reader/web` (`sanitizeReaderArticleHtml` → DOMPurify) runs **only in the browser** (a real `window`). That keeps the Vite client bundle free of Node-only modules such as `node:module` / `jsdom`. For server-side or script sanitization, use `@cronos/sanitization` with an appropriate DOM implementation in your app.

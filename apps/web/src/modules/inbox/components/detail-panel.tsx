@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { InboxSourceRow } from "@modules/inbox/components/source-row";
 import { ReaderToolbar } from "@modules/inbox/components/reader-toolbar";
@@ -239,6 +239,7 @@ export function ItemDetail({
     isSaved: item.isSaved,
     limits,
     preferences,
+    readerFocusMode,
     onAdjustFontSize: adjustFontSize,
     onCycleContentWidth: cycleContentWidth,
     onModeChange: handleModeChange,

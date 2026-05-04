@@ -96,6 +96,15 @@ export const subscribedFeedsListResponse = t.Object({
   items: t.Array(subscribedFeedItem),
 });
 
+export const feedRefreshStatusRow = t.Object({
+  feedId: t.String(),
+  refreshStatus: t.String(),
+});
+
+export const feedRefreshStatusListResponse = t.Object({
+  items: t.Array(feedRefreshStatusRow),
+});
+
 export const updateFeedSubscriptionBody = t.Object({
   customTitle: t.Optional(t.Union([t.String(), t.Null()])),
   isPinned: t.Optional(t.Boolean()),

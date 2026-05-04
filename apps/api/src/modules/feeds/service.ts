@@ -5,7 +5,11 @@
  * Implementation: `feeds/read/service`, `feeds/subscription/service`, `feeds/subscription/mutations`.
  */
 
-export { listSubscribedFeeds, getFeedDetailForUser } from "./read/service";
+export {
+  listSubscribedFeeds,
+  getFeedDetailForUser,
+  listFeedRefreshStatusesForUser,
+} from "./read/service";
 export { createOrSubscribeToFeed, subscribeToExistingFeed } from "./subscription/service";
 export {
   assertUserSubscribedToFeed,

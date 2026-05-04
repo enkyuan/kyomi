@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "@tanstack/react-router";
-import { FileImportFill } from "@mingcute/react";
 import { authClient } from "@lib/auth-client";
 import {
   Breadcrumb,
@@ -19,8 +18,6 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
   SidebarProvider,
 } from "@components/ui/sidebar";
 import { Separator } from "@components/ui/separator";
@@ -28,14 +25,14 @@ import { toastManager } from "@components/ui/toast";
 import { AccountPageNav, AccountPagePanel, accountSection } from "./account";
 import { AdvancedPageNav, AdvancedPagePanel, advancedSection } from "./advanced";
 import { AppearancePageNav, AppearancePagePanel, appearanceSection } from "./appearance";
+import { BillingPageNav, BillingPagePanel, billingSection } from "./billing";
+import {
+  PersonalizationPageNav,
+  PersonalizationPagePanel,
+  personalizationSection,
+} from "./personalization";
 
-const SETTINGS_NAV = [
-  accountSection,
-  appearanceSection,
-  advancedSection,
-  { name: "Import OPML" },
-] as const;
-const DEFAULT_ACTIVE_SECTION_NAME = SETTINGS_NAV[0]?.name ?? "Account";
+const DEFAULT_ACTIVE_SECTION_NAME = accountSection.name;
 
 type SettingsDialogProps = {
   onOpenChange: (open: boolean) => void;
@@ -106,23 +103,24 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                         setActiveSectionName(appearanceSection.name);
                       }}
                     />
+                    <PersonalizationPageNav
+                      isActive={activeSectionName === personalizationSection.name}
+                      onSelect={() => {
+                        setActiveSectionName(personalizationSection.name);
+                      }}
+                    />
+                    <BillingPageNav
+                      isActive={activeSectionName === billingSection.name}
+                      onSelect={() => {
+                        setActiveSectionName(billingSection.name);
+                      }}
+                    />
                     <AdvancedPageNav
                       isActive={activeSectionName === advancedSection.name}
                       onSelect={() => {
                         setActiveSectionName(advancedSection.name);
                       }}
                     />
-                    <SidebarMenuItem>
-                      <SidebarMenuButton
-                        isActive={activeSectionName === "Import OPML"}
-                        onClick={() => {
-                          setActiveSectionName("Import OPML");
-                        }}
-                      >
-                        <FileImportFill />
-                        <span>Import OPML</span>
-                      </SidebarMenuButton>
-                    </SidebarMenuItem>
                   </SidebarMenu>
                 </SidebarGroupContent>
               </SidebarGroup>
@@ -148,15 +146,11 @@ export function SettingsDialog({ open, onOpenChange }: SettingsDialogProps) {
                 <AccountPagePanel onLogout={handleLogout} />
               ) : null}
               {activeSectionName === appearanceSection.name ? <AppearancePagePanel /> : null}
-              {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
-              {activeSectionName === "Import OPML" ? (
-                <section className="space-y-1">
-                  <h2 className="text-base font-semibold">Import OPML</h2>
-                  <p className="text-sm text-muted-foreground">
-                    Import your OPML file to quickly add feed subscriptions.
-                  </p>
-                </section>
+              {activeSectionName === personalizationSection.name ? (
+                <PersonalizationPagePanel />
               ) : null}
+              {activeSectionName === billingSection.name ? <BillingPagePanel /> : null}
+              {activeSectionName === advancedSection.name ? <AdvancedPagePanel /> : null}
             </div>
           </main>
         </SidebarProvider>

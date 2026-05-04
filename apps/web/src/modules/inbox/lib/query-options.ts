@@ -13,6 +13,36 @@ export type InboxQueryScope = {
   timezoneOffsetMinutes?: number;
 };
 
+export function followedFeedsQueryKey() {
+  return ["feeds", "followed"] as const;
+}
+
+export function followedFeedsUnreadCountsQueryKey() {
+  return ["feeds", "followed", "unread-counts"] as const;
+}
+
+export function feedRefreshStatusQueryKey(folderId?: string | null) {
+  return ["feeds", "refresh-status", folderId ?? "__all__"] as const;
+}
+
+export function inboxViewCountQueryKey(scope: {
+  filter: string;
+  feedId?: string | null;
+  folderId?: string | null;
+  timezoneOffsetMinutes?: number;
+  includeRead?: boolean;
+}) {
+  return [
+    "inbox",
+    "view-count",
+    scope.filter,
+    scope.feedId,
+    scope.folderId,
+    scope.timezoneOffsetMinutes,
+    scope.includeRead,
+  ] as const;
+}
+
 export function inboxItemsQueryKey({
   filter = "inbox",
   search,
@@ -101,6 +131,15 @@ export function sidebarInboxSummaryQueryOptions(
     gcTime: QUERY_TIMES.countsGc,
     refetchOnWindowFocus: true,
   };
+}
+
+export function invalidateFeedAndInboxQueries(queryClient: QueryClient) {
+  void queryClient.invalidateQueries({ queryKey: followedFeedsQueryKey() });
+  void queryClient.invalidateQueries({ queryKey: followedFeedsUnreadCountsQueryKey() });
+  void queryClient.invalidateQueries({ queryKey: ["feeds", "refresh-status"] });
+  void queryClient.invalidateQueries({ queryKey: ["inbox", "items"] });
+  void queryClient.invalidateQueries({ queryKey: ["inbox", "view-count"] });
+  void queryClient.invalidateQueries({ queryKey: ["sidebar", "inbox-summary"] });
 }
 
 export async function prefetchInboxHotQueries(

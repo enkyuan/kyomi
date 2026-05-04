@@ -319,22 +319,6 @@ export function AccountPagePanel({ onLogout }: AccountPagePanelProps) {
       </section>
       <section className="space-y-3">
         <div className="space-y-1">
-          <h3 className="text-sm font-semibold">Billing</h3>
-          <p className="text-sm text-muted-foreground">
-            Review your workspace plan, payment method, and billing history.
-          </p>
-        </div>
-        <div className="space-y-3">
-          <div className="flex flex-wrap items-center justify-between gap-3">
-            <span className="text-sm text-muted-foreground">Basic</span>
-            <div className="flex flex-wrap items-center gap-3">
-              <Button variant="outline">Upgrade Plan</Button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="space-y-3">
-        <div className="space-y-1">
           <h3 className="text-sm font-semibold">Session</h3>
           <p className="text-sm text-muted-foreground">Manage active sessions for this account.</p>
         </div>

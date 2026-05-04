@@ -238,6 +238,12 @@ export const unreadCountsQuerySchema = t.Object({
   feed_ids: t.Optional(t.String()),
 });
 
+/** Merged feed+clip list views accept `limit` and `cursor` for keyset pagination. */
+export const mergedArticleViewsQuerySchema = t.Object({
+  limit: t.Optional(t.String()),
+  cursor: t.Optional(t.String()),
+});
+
 export const checkSavedQuerySchema = t.Object({
   url: t.String({ minLength: 1 }),
 });

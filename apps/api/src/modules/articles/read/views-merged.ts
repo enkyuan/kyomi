@@ -1,9 +1,14 @@
 import type { db } from "@adapters/db/client";
 import { listClipsForUser } from "../write/clips";
-import { mergeArticleItemsByDate, mergedFeedClipResponse } from "./merge";
+import { mergeArticleListsSortedDesc, mergedFeedClipResponsePaged } from "./merge";
+import { decodeMergedListCursor } from "./merged-view-cursor";
 import { listArticlesForUser } from "./list";
 
 type DB = typeof db;
+
+function perSourceFetchLimit(responseLimit: number) {
+  return Math.min(200, Math.max(responseLimit * 2, responseLimit));
+}
 
 function utcDayRange() {
   const start = new Date();
@@ -13,35 +18,77 @@ function utcDayRange() {
   return { start, end };
 }
 
-export async function listMergedTodayView(database: DB, userId: string, limit: number) {
+export async function listMergedTodayView(
+  database: DB,
+  userId: string,
+  limit: number,
+  cursor?: string,
+) {
+  const boundary = decodeMergedListCursor(cursor);
+  const take = perSourceFetchLimit(limit);
   const { start, end } = utcDayRange();
   const [feed, clips] = await Promise.all([
     listArticlesForUser(database, userId, {
-      limit: 120,
+      limit: take,
       publishedAfter: start,
       publishedBefore: end,
+      exclusiveBefore: boundary,
     }),
     listClipsForUser(database, userId, {
-      limit: 120,
+      limit: take,
       publishedAfter: start,
       publishedBefore: end,
+      exclusiveBefore: boundary,
     }),
   ]);
-  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit));
+  const mergedSorted = mergeArticleListsSortedDesc([feed.items, clips.items]);
+  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more);
 }
 
-export async function listMergedRecentlyReadView(database: DB, userId: string, limit: number) {
+export async function listMergedRecentlyReadView(
+  database: DB,
+  userId: string,
+  limit: number,
+  cursor?: string,
+) {
+  const boundary = decodeMergedListCursor(cursor);
+  const take = perSourceFetchLimit(limit);
   const [feed, clips] = await Promise.all([
-    listArticlesForUser(database, userId, { limit: 120, isRead: true }),
-    listClipsForUser(database, userId, { limit: 120, isRead: true }),
+    listArticlesForUser(database, userId, {
+      limit: take,
+      isRead: true,
+      exclusiveBefore: boundary,
+    }),
+    listClipsForUser(database, userId, {
+      limit: take,
+      isRead: true,
+      exclusiveBefore: boundary,
+    }),
   ]);
-  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit));
+  const mergedSorted = mergeArticleListsSortedDesc([feed.items, clips.items]);
+  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more);
 }
 
-export async function listMergedSavedView(database: DB, userId: string, limit: number) {
+export async function listMergedSavedView(
+  database: DB,
+  userId: string,
+  limit: number,
+  cursor?: string,
+) {
+  const boundary = decodeMergedListCursor(cursor);
+  const take = perSourceFetchLimit(limit);
   const [feed, clips] = await Promise.all([
-    listArticlesForUser(database, userId, { limit: 120, isSaved: true }),
-    listClipsForUser(database, userId, { limit: 120, isSaved: true }),
+    listArticlesForUser(database, userId, {
+      limit: take,
+      isSaved: true,
+      exclusiveBefore: boundary,
+    }),
+    listClipsForUser(database, userId, {
+      limit: take,
+      isSaved: true,
+      exclusiveBefore: boundary,
+    }),
   ]);
-  return mergedFeedClipResponse(mergeArticleItemsByDate([feed.items, clips.items], limit));
+  const mergedSorted = mergeArticleListsSortedDesc([feed.items, clips.items]);
+  return mergedFeedClipResponsePaged(mergedSorted, limit, feed.has_more, clips.has_more);
 }

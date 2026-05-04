@@ -7,31 +7,24 @@ import {
 type PurifyInstance = ReturnType<typeof createDOMPurify>;
 
 let cached: PurifyInstance | null = null;
-let JSDOMCtor: (typeof import("jsdom"))["JSDOM"] | null = null;
-
-if (typeof window === "undefined") {
-  const { JSDOM } = await import("jsdom");
-  JSDOMCtor = JSDOM;
-}
 
 function getPurify(): PurifyInstance {
   if (cached) {
     return cached;
   }
-  if (typeof window !== "undefined") {
-    cached = createDOMPurify(window);
-  } else {
-    if (!JSDOMCtor) {
-      throw new Error("JSDOM is unavailable during SSR sanitization");
-    }
-    const { window } = new JSDOMCtor("");
-    cached = createDOMPurify(window as unknown as Window & typeof globalThis);
+  if (typeof window === "undefined") {
+    throw new Error(
+      "@cronos/reader: sanitizeReaderArticleHtml requires a browser DOM. " +
+        "Use `@cronos/reader/web` from client components (or a Vitest jsdom environment). " +
+        "For Node-only sanitization, use `@cronos/sanitization` with your own JSDOM window.",
+    );
   }
+  cached = createDOMPurify(window);
   registerArticleHtmlSanitizeHooks(cached);
   return cached;
 }
 
-/** Same policy as the API sanitizer; safe on SSR (JSDOM) and in the browser. */
+/** Same policy as the API sanitizer; runs in the browser (DOMPurify + `window`). */
 export function sanitizeReaderArticleHtml(dirty: string): string {
   return getPurify().sanitize(dirty, getArticleHtmlSanitizeOptions());
 }

@@ -16,7 +16,7 @@ import { getSidebarInboxCounts } from "@modules/inbox/api";
 import { isInboxPathname } from "@lib/routes/inbox-path";
 
 export const APP_SIDEBAR_WIDTH = "12rem";
-export const APP_SIDEBAR_WIDTH_READER_FOCUS = "16rem";
+export const APP_SIDEBAR_WIDTH_READER_FOCUS = "14rem";
 
 export function AppSidebar({
   className,

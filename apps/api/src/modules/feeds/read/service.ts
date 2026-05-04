@@ -52,6 +52,28 @@ export async function listSubscribedFeeds(
   }));
 }
 
+/** Minimal rows for refresh polling — optionally scoped to a folder’s subscriptions. */
+export async function listFeedRefreshStatusesForUser(
+  database: DB,
+  userId: string,
+  folderId?: string,
+): Promise<{ feedId: string; refreshStatus: string }[]> {
+  const q = database
+    .select({
+      feedId: feeds.id,
+      refreshStatus: feeds.refreshStatus,
+    })
+    .from(feedSubscriptions)
+    .innerJoin(feeds, eq(feedSubscriptions.feedId, feeds.id))
+    .where(
+      folderId
+        ? and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.folderId, folderId))
+        : eq(feedSubscriptions.userId, userId),
+    );
+  const rows = await q;
+  return rows.map((r) => ({ feedId: r.feedId, refreshStatus: r.refreshStatus }));
+}
+
 /** Load feed by id; include subscription fields when the current user is subscribed. */
 export async function getFeedDetailForUser(
   database: DB,

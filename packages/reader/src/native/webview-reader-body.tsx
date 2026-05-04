@@ -2,6 +2,8 @@ import React from "react";
 import type { ReaderContent, ReaderLayoutMode, ReaderPreferences } from "../core";
 import { createReaderDocument } from "../webview";
 
+/** Native entry: React is required here for `renderWebView`; string HTML still comes from `createReaderDocument`. */
+
 export type WebViewReaderBodyProps = {
   reader: ReaderContent;
   preferences?: Partial<ReaderPreferences>;

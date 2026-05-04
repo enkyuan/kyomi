@@ -18,11 +18,13 @@ type UseInboxQueriesInput = {
 };
 
 /**
- * De-duplicates by primary key when combining infinite-query pages (React Query can
- * briefly overlap windows). The API also collapses same-feed canonical URL duplicates
- * server-side — this is only a client idempotency guard.
+ * De-duplicates by id when flattening infinite-query pages (React Query can briefly overlap pages).
+ * The API also collapses same-feed canonical URL duplicates server-side — this is only a client
+ * idempotency guard.
  */
-export function dedupeInboxItems(items: Awaited<ReturnType<typeof getInboxItems>>["items"]) {
+export function dedupePagedInboxItemsById(
+  items: Awaited<ReturnType<typeof getInboxItems>>["items"],
+) {
   const unique = new Map<string, (typeof items)[number]>();
   for (const item of items) {
     if (!unique.has(item.id)) {
@@ -31,6 +33,9 @@ export function dedupeInboxItems(items: Awaited<ReturnType<typeof getInboxItems>
   }
   return [...unique.values()];
 }
+
+/** @deprecated Prefer `dedupePagedInboxItemsById` (same implementation). */
+export const dedupeInboxItems = dedupePagedInboxItemsById;
 
 export function useInboxQueries({
   filter,

@@ -1,7 +1,7 @@
 "use client";
 
 import type { CSSProperties, ReactNode } from "react";
-import { motion } from "motion/react";
+import { motion, useReducedMotion } from "motion/react";
 import {
   APP_SIDEBAR_WIDTH,
   APP_SIDEBAR_WIDTH_READER_FOCUS,
@@ -22,9 +22,15 @@ export function AppShell({
   children: ReactNode;
   readerFocusList?: boolean;
 }) {
+  const prefersReducedMotion = useReducedMotion();
+  const transition = prefersReducedMotion
+    ? { duration: 0 }
+    : { type: "spring" as const, duration: 0.38, bounce: 0 };
+
   return (
     <SidebarProvider data-reader-focus-sidebar={readerFocusList ? "true" : undefined} defaultOpen>
       <motion.div
+        initial={false}
         layout
         className="grid h-dvh max-h-dvh min-h-0 w-full overflow-hidden"
         style={
@@ -36,12 +42,15 @@ export function AppShell({
               : DEFAULT_GRID_TEMPLATE_COLUMNS,
           } as CSSProperties
         }
+        transition={transition}
       >
         <motion.div
+          initial={false}
           layout
           layoutId="app-sidebar-shell"
           className="min-h-0"
           style={readerFocusList ? { gridColumn: "2" } : { gridColumn: "1" }}
+          transition={transition}
         >
           <AppSidebar
             readerFocusSidebar={readerFocusList}
@@ -55,10 +64,12 @@ export function AppShell({
           />
         </motion.div>
         <motion.div
+          initial={false}
           layout
           layoutId="app-main-shell"
           className="min-h-0 min-w-0"
           style={readerFocusList ? { gridColumn: "3" } : { gridColumn: "2" }}
+          transition={transition}
         >
           <SidebarInset
             className={`h-full max-h-full min-h-0 min-w-0 overflow-hidden bg-transparent p-0 md:peer-data-[variant=inset]:m-0 md:peer-data-[variant=inset]:ms-0 ${readerFocusList ? "w-full max-w-4xl" : "flex-1"}`}

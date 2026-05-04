@@ -24,6 +24,7 @@ import { SidebarModeAnimatedText } from "@components/ui/sidebar-mode-animated-te
 import { SidebarMenuButton } from "@components/ui/sidebar";
 import { toastManager } from "@components/ui/toast";
 import { followFeed, searchFeeds } from "@modules/feeds/api";
+import { invalidateFeedAndInboxQueries } from "@modules/inbox/lib/query-options";
 
 /** Cap list rows so opening the dialog never mounts thousands of command items in one commit. */
 const DISCOVER_RESULTS_UI_CAP = 200;
@@ -98,9 +99,7 @@ export function SidebarFeedSearchTrigger({
               : item,
           ),
       );
-      await queryClient.invalidateQueries({
-        queryKey: ["feeds", "followed"],
-      });
+      invalidateFeedAndInboxQueries(queryClient);
       await queryClient.invalidateQueries({
         queryKey: ["folders"],
       });
@@ -153,8 +152,8 @@ export function SidebarFeedSearchTrigger({
       {!hideTrigger ? (
         <CommandDialogTrigger
           render={
-            <SidebarMenuButton className="mt-1 h-auto rounded-2xl p-0 shadow-none hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent focus-visible:ring-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-0">
-              <InputGroup className="h-9 w-full rounded-2xl border-sidebar-border/70 bg-sidebar-accent/40 shadow-none before:hidden transition-colors hover:bg-sidebar-accent/56">
+            <SidebarMenuButton className="mt-1 items-stretch overflow-visible rounded-xl p-0 shadow-none transition-shadow duration-150 ease-out hover:bg-transparent active:bg-transparent data-[active=true]:bg-transparent focus-visible:ring-0 focus-within:shadow-[0_0_0_2px_var(--sidebar-ring)] group-data-[reader-focus-sidebar=true]/sidebar-wrapper:gap-0 group-data-[reader-focus-sidebar=true]/sidebar-wrapper:px-0">
+              <InputGroup className="h-full min-h-0 w-full rounded-xl border-sidebar-border/70 bg-sidebar-accent/40 shadow-none outline-none ring-0 ring-transparent ring-offset-0 before:hidden transition-[background-color,border-color] hover:bg-sidebar-accent/56 has-[input:focus-visible]:border-sidebar-border/70 has-[input:focus-visible]:shadow-none has-[input:focus-visible]:ring-0 has-[input:focus-visible]:ring-transparent dark:has-[input:focus-visible]:ring-0">
                 <InputGroupInput
                   aria-label="Discover"
                   size="sm"
@@ -167,7 +166,7 @@ export function SidebarFeedSearchTrigger({
                   align="inline-end"
                   className="ms-auto h-full items-center self-stretch has-[>kbd:last-child]:me-0"
                 >
-                  <KbdGroup className="-me-1">
+                  <KbdGroup className="-me-0.5">
                     <Kbd className="bg-sidebar-foreground/6 text-sidebar-foreground/60 shadow-none group-data-[reader-focus-sidebar=true]/sidebar-wrapper:text-sm group-data-[reader-focus-sidebar=true]/sidebar-wrapper:leading-5">
                       <SidebarModeAnimatedText>
                         {isMacPlatform ? "\u2318" : "\u2303"}
