@@ -23,6 +23,8 @@ type ReaderToolbarProps = {
   isSaved: boolean;
   activeMode: "original" | "extracted";
   extractedAvailable: boolean;
+  /** When true (reader-focused article layout), content width is layout-driven; hide the toggle. */
+  readerFocusMode?: boolean;
   preferences: ReaderPreferences;
   limits: {
     minFontSizePx: number;
@@ -46,6 +48,7 @@ export function ReaderToolbar({
   isSaved,
   activeMode,
   extractedAvailable,
+  readerFocusMode = false,
   preferences,
   limits,
   onToggleSaved,
@@ -87,13 +90,15 @@ export function ReaderToolbar({
         >
           {activeMode === "extracted" ? <TextFill /> : <TextLine />}
         </ReaderToolbarButton>
-        <ReaderToolbarButton
-          label={`Content width: ${CONTENT_WIDTH_LABELS[effectiveContentWidth]}`}
-          onClick={onCycleContentWidth}
-          tooltipSideOffset={tooltipSideOffset}
-        >
-          {effectiveContentWidth === "narrow" ? <SquareLine /> : <RectangleLine />}
-        </ReaderToolbarButton>
+        {!readerFocusMode ? (
+          <ReaderToolbarButton
+            label={`Content width: ${CONTENT_WIDTH_LABELS[effectiveContentWidth]}`}
+            onClick={onCycleContentWidth}
+            tooltipSideOffset={tooltipSideOffset}
+          >
+            {effectiveContentWidth === "narrow" ? <SquareLine /> : <RectangleLine />}
+          </ReaderToolbarButton>
+        ) : null}
       </ToolbarGroup>
       <ToolbarGroup className="gap-1 rounded-md bg-accent/50 p-0.5">
         <ReaderToolbarButton
@@ -113,7 +118,10 @@ export function ReaderToolbar({
           <AddLine />
         </ReaderToolbarButton>
       </ToolbarGroup>
-      <ToolbarSeparator className="mx-1 hidden w-px bg-border/70 sm:block" orientation="vertical" />
+      <ToolbarSeparator
+        className="mx-0.5 hidden w-px bg-border/70 sm:block"
+        orientation="vertical"
+      />
       <ToolbarGroup className="gap-1">
         <ReaderToolbarButton
           label="Open source"

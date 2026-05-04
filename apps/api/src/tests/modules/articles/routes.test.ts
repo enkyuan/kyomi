@@ -42,6 +42,7 @@ describe("articles.routes", () => {
       "get /articles/check-saved",
       "get /articles/saved",
       "get /articles",
+      "get /articles/clips",
       "get /articles/write/clips",
       "get /articles/:articleId",
       "post /articles/:articleId/extract-full-text",

@@ -19,6 +19,8 @@ export type ListArticlesOptions = {
   publishedBefore?: Date;
   limit: number;
   cursor?: string;
+  /** Merged feed+clip pagination: rows strictly older than this (publishedAt, id) in global sort order. */
+  exclusiveBefore?: { publishedAt: Date; id: string };
 };
 
 function baseJoins(userId: string) {
@@ -217,7 +219,17 @@ async function listArticleRows(
   pushReadSavedFilters(filters, opts);
   pushPublishedDateFilters(filters, opts);
   pushSearchFilter(filters, opts);
-  await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, filters);
+  if (opts.exclusiveBefore) {
+    const { publishedAt, id } = opts.exclusiveBefore;
+    filters.push(
+      or(
+        lt(feedItems.publishedAt, publishedAt),
+        and(eq(feedItems.publishedAt, publishedAt), lt(feedItems.id, id)),
+      )!,
+    );
+  } else {
+    await pushCursorFilter(database, userId, opts, feedSubscriptionsJoin, filters);
+  }
 
   return database
     .select({

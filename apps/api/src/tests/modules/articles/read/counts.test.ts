@@ -1,7 +1,13 @@
 import { describe, expect, mock, test } from "bun:test";
 import { getArticleCountsForUser } from "@modules/articles/read/counts";
 
-function createFakeDb(results: { unread: number; all: number; saved: number; clipSaved?: number }) {
+function createFakeDb(results: {
+  unread: number;
+  all: number;
+  saved: number;
+  clipSaved?: number;
+  clipAll?: number;
+}) {
   let selectCall = 0;
   const select = mock(() => {
     selectCall += 1;
@@ -22,7 +28,7 @@ function createFakeDb(results: { unread: number; all: number; saved: number; cli
       };
     }
     if (currentCall === 2) {
-      // all
+      // all (feed items only)
       return {
         from: () => ({
           innerJoin: () => ({
@@ -34,7 +40,7 @@ function createFakeDb(results: { unread: number; all: number; saved: number; cli
       };
     }
     if (currentCall === 3) {
-      // saved
+      // saved (feed items only)
       return {
         from: () => ({
           innerJoin: () => ({
@@ -46,10 +52,18 @@ function createFakeDb(results: { unread: number; all: number; saved: number; cli
       };
     }
     if (currentCall === 4) {
-      // clipSaved
+      // clipSaved (global only)
       return {
         from: () => ({
           where: () => returnCount(results.clipSaved ?? 0),
+        }),
+      };
+    }
+    if (currentCall === 5) {
+      // clipAll (global only; merged into `all` total)
+      return {
+        from: () => ({
+          where: () => returnCount(results.clipAll ?? 0),
         }),
       };
     }
@@ -61,19 +75,20 @@ function createFakeDb(results: { unread: number; all: number; saved: number; cli
 }
 
 describe("getArticleCountsForUser", () => {
-  test("returns unmerged all and unread counts, and merged saved count when unscoped", async () => {
+  test("merges clip totals into all and saved when unscoped", async () => {
     const fakeDb = createFakeDb({
       unread: 5,
       all: 10,
       saved: 3,
       clipSaved: 2,
+      clipAll: 4,
     });
 
     const result = await getArticleCountsForUser(fakeDb, "user_1");
 
-    expect(fakeDb.getSelectCallCount()).toBe(4);
+    expect(fakeDb.getSelectCallCount()).toBe(5);
     expect(result).toEqual({
-      all: 10,
+      all: 14, // 10 feed items + 4 clips
       unread: 5,
       saved: 5, // 3 feed saved + 2 clip saved
     });

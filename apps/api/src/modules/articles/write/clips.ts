@@ -30,6 +30,8 @@ export type ListClipsOptions = {
   publishedBefore?: Date;
   limit: number;
   cursor?: string;
+  /** Merged feed+clip pagination: rows strictly older than this instant/id (uses `createdAt` vs DTO `publishedAt`). */
+  exclusiveBefore?: { publishedAt: Date; id: string };
 };
 
 function clipToListItem(row: typeof articleClips.$inferSelect): ArticleListItemDto {
@@ -385,7 +387,15 @@ async function listClipRows(
     filters.push(lt(articleClips.createdAt, opts.publishedBefore));
   }
 
-  if (opts.cursor) {
+  if (opts.exclusiveBefore) {
+    const { publishedAt, id } = opts.exclusiveBefore;
+    filters.push(
+      or(
+        lt(articleClips.createdAt, publishedAt),
+        and(eq(articleClips.createdAt, publishedAt), lt(articleClips.id, id)),
+      )!,
+    );
+  } else if (opts.cursor) {
     const cur = await database
       .select({ createdAt: articleClips.createdAt, id: articleClips.id })
       .from(articleClips)

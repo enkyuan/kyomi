@@ -100,13 +100,13 @@ export function resolveInitialInboxPreferences(
   initialPreferences?: InboxPreferences,
   userId?: string,
 ) {
+  if (initialPreferences) {
+    return sanitizeInboxPreferences(initialPreferences);
+  }
+
   const cachedQuery = queryClient.getQueryData<InboxPreferences>(queryKey);
   if (cachedQuery) {
     return cachedQuery;
-  }
-
-  if (initialPreferences) {
-    return sanitizeInboxPreferences(initialPreferences);
   }
 
   if (typeof window !== "undefined") {

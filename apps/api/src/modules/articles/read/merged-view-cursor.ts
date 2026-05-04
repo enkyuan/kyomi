@@ -1,0 +1,70 @@
+import { AppError } from "@shared/errors/app-error";
+import type { ArticleListItemDto } from "../types";
+
+const PREFIX = "m1.";
+
+type MergedCursorPayloadV1 = {
+  v: 1;
+  /** ISO-8601 instant (same string as `ArticleListItemDto.publishedAt`). */
+  pa: string;
+  id: string;
+};
+
+function toBase64Url(json: string): string {
+  return Buffer.from(json, "utf8").toString("base64url");
+}
+
+function fromBase64Url(b64: string): string {
+  return Buffer.from(b64, "base64url").toString("utf8");
+}
+
+/** Cursor for merged feed+clip lists: strictly older than this (publishedAt, id) in global sort order. */
+export function encodeMergedListCursorFromItem(item: ArticleListItemDto): string {
+  const payload: MergedCursorPayloadV1 = { v: 1, pa: item.publishedAt, id: item.id };
+  return PREFIX + toBase64Url(JSON.stringify(payload));
+}
+
+export function decodeMergedListCursor(
+  cursor: string | undefined,
+): { publishedAt: Date; id: string } | undefined {
+  if (cursor === undefined || cursor.trim() === "") {
+    return undefined;
+  }
+  const trimmed = cursor.trim();
+  if (!trimmed.startsWith(PREFIX)) {
+    throw new AppError("Invalid merged view cursor.", {
+      status: 400,
+      code: "MERGED_VIEW_CURSOR_INVALID",
+    });
+  }
+  let raw: unknown;
+  try {
+    raw = JSON.parse(fromBase64Url(trimmed.slice(PREFIX.length)));
+  } catch {
+    throw new AppError("Invalid merged view cursor.", {
+      status: 400,
+      code: "MERGED_VIEW_CURSOR_INVALID",
+    });
+  }
+  if (!raw || typeof raw !== "object") {
+    throw new AppError("Invalid merged view cursor.", {
+      status: 400,
+      code: "MERGED_VIEW_CURSOR_INVALID",
+    });
+  }
+  const o = raw as Partial<MergedCursorPayloadV1>;
+  if (o.v !== 1 || typeof o.pa !== "string" || typeof o.id !== "string" || !o.id.trim()) {
+    throw new AppError("Invalid merged view cursor.", {
+      status: 400,
+      code: "MERGED_VIEW_CURSOR_INVALID",
+    });
+  }
+  const publishedAt = new Date(o.pa);
+  if (Number.isNaN(publishedAt.getTime())) {
+    throw new AppError("Invalid merged view cursor.", {
+      status: 400,
+      code: "MERGED_VIEW_CURSOR_INVALID",
+    });
+  }
+  return { publishedAt, id: o.id };
+}

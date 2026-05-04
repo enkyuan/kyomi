@@ -18,6 +18,33 @@ describe("createReaderDocument", () => {
     expect(document).toContain("--reader-font-size: 19px");
   });
 
+  test("renders markdown as HTML (not escaped pre)", () => {
+    const document = createReaderDocument({
+      reader: {
+        bodyKind: "markdown",
+        contentMarkdown: "# Hi\n\n**Bold**",
+        contentBaseUrl: "https://example.com/",
+      },
+    });
+
+    expect(document).not.toContain("<pre>&lt;");
+    expect(document).toContain("<h1");
+    expect(document).toContain("Bold");
+  });
+
+  test("strips injected script content from article html (bridge script remains)", () => {
+    const document = createReaderDocument({
+      reader: {
+        bodyKind: "html",
+        contentHtml: '<p>Hi</p><script>document.write("x")</script>',
+      },
+    });
+
+    expect(document).not.toContain("document.write");
+    expect(document).toContain("<p>Hi</p>");
+    expect(document).toContain("__CRONOS_READER_READY__");
+  });
+
   test("hides images when preferences disable them", () => {
     const document = createReaderDocument({
       reader: {

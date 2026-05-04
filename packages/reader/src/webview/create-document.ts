@@ -1,7 +1,16 @@
 import type { ReaderContent, ReaderLayoutMode, ReaderPreferences } from "../core";
 import { normalizeSafeHttpUrl } from "../core";
+import { readerMarkdownToHtml } from "../shared/reader-markdown-html";
 import { getReaderWebViewBridgeScript } from "./bridge-script";
+import { stripDangerousMarkupForWebViewFragment } from "./strip-dangerous-html";
 import { getReaderWebViewStyles } from "./styles";
+
+/**
+ * WebView HTML contract:
+ * - `bodyKind === "html"`: `contentHtml` is treated as already server-sanitized (same as API reader payloads).
+ * - Markdown is expanded here for parity with the web reader; clip/user markdown is still untrusted HTML
+ *   after parsing — keep CSP / script blocking on the native shell.
+ */
 
 function escapeHtml(value: string) {
   return value
@@ -20,7 +29,10 @@ function renderReaderBody(reader: ReaderContent): string {
     return reader.contentHtml ?? "";
   }
   if (reader.bodyKind === "markdown") {
-    return `<pre>${escapeHtml(reader.contentMarkdown ?? "")}</pre>`;
+    return readerMarkdownToHtml(reader.contentMarkdown ?? "", {
+      baseUrl: reader.contentBaseUrl,
+      openLinksInNewTab: true,
+    });
   }
   if (reader.bodyKind === "text") {
     return `<div>${escapeBodyText(reader.contentText ?? "")}</div>`;
@@ -51,7 +63,7 @@ export function createReaderDocument({
 }) {
   const fontSizePx = preferences?.fontSizePx ?? 17;
   const hideImages = preferences?.showImages === false;
-  const body = renderReaderBody(reader);
+  const body = stripDangerousMarkupForWebViewFragment(renderReaderBody(reader));
 
   return `<!doctype html>
 <html>

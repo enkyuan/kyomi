@@ -51,8 +51,10 @@ export async function getArticleCountsForUser(
     .leftJoin(feedItemUserState, stateJoin)
     .where(and(sql`${feedItemUserState.isSaved} IS TRUE`, feedScopeFilter));
 
-  const includeMergedClipSavedCount = !scopedFeedId && !scopedFolderId;
-  const clipSaved = includeMergedClipSavedCount
+  // Global/unscoped: `all` counts subscribed feed items plus all clips; `saved` merges feed saved + clip saved.
+  // Scoped by feed or folder: counts are feed-subscription rows only (clips are not folder-scoped).
+  const includeClipCounts = !scopedFeedId && !scopedFolderId;
+  const clipSaved = includeClipCounts
     ? await database
         .select({ c: sql<number>`count(*)::int` })
         .from(articleClips)
@@ -68,7 +70,7 @@ export async function getArticleCountsForUser(
   const clipSavedRow = clipSaved[0];
 
   return {
-    all: allRow?.c ?? 0,
+    all: (allRow?.c ?? 0) + (clipAllRow?.c ?? 0),
     unread: unreadRow?.c ?? 0,
     saved: (savedRow?.c ?? 0) + (clipSavedRow?.c ?? 0),
   };

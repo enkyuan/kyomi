@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { afterEach, describe, expect, test } from "vitest";
+import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import type { InboxPreferences } from "@lib/inbox-preferences";
 import { resolveInitialInboxPreferences } from "@lib/inbox-preferences";
 
@@ -24,11 +24,32 @@ const READER_PREFERENCES: InboxPreferences = {
 };
 
 describe("resolveInitialInboxPreferences", () => {
+  const storage = new Map<string, string>();
+
+  beforeEach(() => {
+    storage.clear();
+    Object.defineProperty(window, "localStorage", {
+      value: {
+        getItem: vi.fn((key: string) => storage.get(key) ?? null),
+        setItem: vi.fn((key: string, value: string) => {
+          storage.set(key, value);
+        }),
+        removeItem: vi.fn((key: string) => {
+          storage.delete(key);
+        }),
+        clear: vi.fn(() => {
+          storage.clear();
+        }),
+      },
+      configurable: true,
+    });
+  });
+
   afterEach(() => {
     window.localStorage.clear();
   });
 
-  test("prefers cached query data over all other sources", () => {
+  test("prefers loader/server preferences over cached query data", () => {
     const queryClient = {
       getQueryData: () => READER_PREFERENCES,
     } as { getQueryData: <T>() => T | undefined };
@@ -45,7 +66,7 @@ describe("resolveInitialInboxPreferences", () => {
       "user_1",
     );
 
-    expect(resolved.articleOpenBehavior).toBe("reader");
+    expect(resolved.articleOpenBehavior).toBe("split");
   });
 
   test("prefers loader/server preferences over stale local cache", () => {

@@ -1,9 +1,6 @@
 import type { Elysia } from "elysia";
 import { t } from "elysia";
-import { publishJob } from "@adapters/queue/publish-job";
 import { enforceRateLimitForContext } from "@adapters/rate-limit/rate-limit.plugin";
-import { getRedis } from "@adapters/redis";
-import { AppError } from "@shared/errors/app-error";
 import { v1HandlerContext } from "@shared/http/v1-handler-context";
 import { uuidParam } from "@shared/http/v1-stub";
 import { assertFeedAdminUser } from "./admin/guard";
@@ -16,56 +13,24 @@ import {
   bulkUnsubscribeFromFeeds,
   createOrSubscribeToFeed,
   getFeedDetailForUser,
+  listFeedRefreshStatusesForUser,
   listSubscribedFeeds,
   subscribeToExistingFeed,
   unsubscribeFromFeed,
   updateFeedSubscriptionSettings,
 } from "./service";
 import * as dto from "./dto";
-import { feeds, feedSubscriptions } from "@cronos/db";
-import { and, eq, inArray } from "drizzle-orm";
+import {
+  enqueueBatchFeedRefresh,
+  enqueueFeedRefresh,
+  listRefreshableFeedIdsForUser,
+} from "./refresh/service";
 
 const createFeedRateLimit = {
   name: "feeds.create_by_url",
   max: 20,
   windowMs: 10 * 60_000,
 } as const;
-
-async function enqueueFeedRefreshAfterSubscribe(
-  db: ReturnType<typeof v1HandlerContext>["db"],
-  feedId: string,
-  userId: string,
-  logger: {
-    info: (msg: string, meta?: Record<string, unknown>) => void;
-    warn: (msg: string, meta?: Record<string, unknown>) => void;
-  },
-): Promise<void> {
-  try {
-    const redis = getRedis();
-    const jobId = await publishJob(redis, {
-      type: "feed.refresh",
-      payload: { feedId, userId, reason: "subscription_created" },
-    });
-    await db
-      .update(feeds)
-      .set({ refreshStatus: "queued", lastRefreshError: null })
-      .where(eq(feeds.id, feedId));
-    logger.info("queue.job.enqueued", {
-      jobId,
-      jobType: "feed.refresh",
-      feedId,
-      userId,
-      reason: "subscription_created",
-    });
-  } catch (error) {
-    logger.warn("queue.job.enqueue.skipped", {
-      feedId,
-      userId,
-      reason: "subscription_created",
-      error: error instanceof Error ? error.message : String(error),
-    });
-  }
-}
 
 export function registerFeedRoutes(app: Elysia) {
   return app
@@ -76,7 +41,7 @@ export function registerFeedRoutes(app: Elysia) {
         await enforceRateLimitForContext(context, userId, createFeedRateLimit);
         const result = await createOrSubscribeToFeed(db, userId, body.url.trim());
         if (result.newSubscription) {
-          await enqueueFeedRefreshAfterSubscribe(db, result.feedId, userId, logger);
+          await enqueueFeedRefresh(db, result.feedId, userId, "subscription_created", logger);
         }
         set.status = result.newSubscription ? 201 : 200;
         logger.info("feeds.subscribe.by_url", {
@@ -101,7 +66,7 @@ export function registerFeedRoutes(app: Elysia) {
         const { db, logger, params, set, userId } = v1HandlerContext(context);
         const result = await subscribeToExistingFeed(db, userId, params.feedId);
         if (result.newSubscription) {
-          await enqueueFeedRefreshAfterSubscribe(db, result.feedId, userId, logger);
+          await enqueueFeedRefresh(db, result.feedId, userId, "subscription_created", logger);
         }
         set.status = result.newSubscription ? 201 : 200;
         logger.info("feeds.subscribe.by_id", {
@@ -167,6 +132,23 @@ export function registerFeedRoutes(app: Elysia) {
       {
         response: {
           200: dto.subscribedFeedsListResponse,
+        },
+      },
+    )
+    .get(
+      "/feeds/refresh-status",
+      async (context) => {
+        const { db, query, userId } = v1HandlerContext<unknown, { folder_id?: string }>(context);
+        const folderId =
+          typeof query.folder_id === "string" && query.folder_id.trim().length > 0
+            ? query.folder_id.trim()
+            : undefined;
+        const items = await listFeedRefreshStatusesForUser(db, userId, folderId);
+        return { items };
+      },
+      {
+        response: {
+          200: dto.feedRefreshStatusListResponse,
         },
       },
     )
@@ -283,40 +265,13 @@ export function registerFeedRoutes(app: Elysia) {
         // Refresh is an explicit action and always flows through queue -> worker -> ingestion.
         const { db, logger, set, userId, params } = v1HandlerContext(context);
         await assertUserSubscribedToFeed(db, userId, params.feedId);
-        try {
-          const redis = getRedis();
-          const jobId = await publishJob(redis, {
-            type: "feed.refresh",
-            payload: { feedId: params.feedId, userId, reason: "manual" },
-          });
-          await db
-            .update(feeds)
-            .set({ refreshStatus: "queued", lastRefreshError: null })
-            .where(eq(feeds.id, params.feedId));
-          logger.info("queue.job.enqueued", {
-            jobId,
-            jobType: "feed.refresh",
-            feedId: params.feedId,
-            userId,
-            reason: "manual",
-          });
-          set.status = 202;
-          return {
-            accepted: true as const,
-            jobId,
-            type: "feed.refresh" as const,
-          };
-        } catch (error) {
-          logger.error("queue.job.enqueue.failed", {
-            feedId: params.feedId,
-            userId,
-            error: error instanceof Error ? error.message : String(error),
-          });
-          throw new AppError("Failed to enqueue feed refresh", {
-            status: 503,
-            code: "QUEUE_UNAVAILABLE",
-          });
-        }
+        const { jobId } = await enqueueFeedRefresh(db, params.feedId, userId, "manual", logger);
+        set.status = 202;
+        return {
+          accepted: true as const,
+          jobId,
+          type: "feed.refresh" as const,
+        };
       },
       { params: t.Object({ feedId: uuidParam }) },
     )
@@ -326,62 +281,17 @@ export function registerFeedRoutes(app: Elysia) {
         const { db, logger, set, userId, body } = v1HandlerContext<{ folderId?: string }>(context);
         const { folderId } = body || {};
 
-        let feedIdsToRefresh: string[] = [];
-        if (folderId) {
-          const rows = await db
-            .select({ id: feeds.id })
-            .from(feedSubscriptions)
-            .innerJoin(feeds, eq(feedSubscriptions.feedId, feeds.id))
-            .where(
-              and(eq(feedSubscriptions.userId, userId), eq(feedSubscriptions.folderId, folderId)),
-            );
-          feedIdsToRefresh = rows.map((r) => r.id);
-        } else {
-          const rows = await db
-            .select({ id: feeds.id })
-            .from(feedSubscriptions)
-            .innerJoin(feeds, eq(feedSubscriptions.feedId, feeds.id))
-            .where(eq(feedSubscriptions.userId, userId));
-          feedIdsToRefresh = rows.map((r) => r.id);
-        }
+        const feedIdsToRefresh = await listRefreshableFeedIdsForUser(db, userId, folderId);
+        const result = await enqueueBatchFeedRefresh(
+          db,
+          feedIdsToRefresh,
+          userId,
+          "manual",
+          logger,
+        );
 
-        if (feedIdsToRefresh.length === 0) {
-          set.status = 200;
-          return { accepted: true as const, count: 0 };
-        }
-
-        try {
-          const redis = getRedis();
-          await Promise.all(
-            feedIdsToRefresh.map((feedId) =>
-              publishJob(redis, {
-                type: "feed.refresh",
-                payload: { feedId, userId, reason: "manual" },
-              }),
-            ),
-          );
-          await db
-            .update(feeds)
-            .set({ refreshStatus: "queued", lastRefreshError: null })
-            .where(inArray(feeds.id, feedIdsToRefresh));
-
-          logger.info("queue.job.enqueued.batch", {
-            count: feedIdsToRefresh.length,
-            userId,
-            folderId,
-          });
-          set.status = 202;
-          return { accepted: true as const, count: feedIdsToRefresh.length };
-        } catch (error) {
-          logger.error("queue.job.enqueue.batch.failed", {
-            userId,
-            error: error instanceof Error ? error.message : String(error),
-          });
-          throw new AppError("Failed to enqueue batch feed refresh", {
-            status: 503,
-            code: "QUEUE_UNAVAILABLE",
-          });
-        }
+        set.status = 202;
+        return result;
       },
       {
         body: t.Optional(t.Object({ folderId: t.Optional(uuidParam) })),
