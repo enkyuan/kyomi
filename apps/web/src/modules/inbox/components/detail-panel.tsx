@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { InboxSourceRow } from "@modules/inbox/components/source-row";
 import { ReaderToolbar } from "@modules/inbox/components/reader-toolbar";
@@ -202,24 +202,26 @@ export function ItemDetail({
     }
 
     const viewport = inlineToolbarNode.closest<HTMLElement>("[data-reader-detail-viewport]");
-    if (!viewport) {
-      return;
-    }
-
-    const revealOffsetPx = readerFocusMode ? 88 : 28;
-    if (typeof IntersectionObserver === "undefined") {
+    if (!viewport || typeof IntersectionObserver === "undefined") {
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowFloatingToolbar(false);
+          return;
+        }
+
         const rootTop = entry.rootBounds?.top ?? 0;
-        const shouldShow = entry.boundingClientRect.bottom <= rootTop;
-        setShowFloatingToolbar((current) => (current === shouldShow ? current : shouldShow));
+        const isRendered = entry.boundingClientRect.height > 0;
+        const isScrolledPast = entry.boundingClientRect.bottom <= rootTop;
+
+        setShowFloatingToolbar(isRendered && isScrolledPast);
       },
       {
         root: viewport,
-        rootMargin: `-${revealOffsetPx}px 0px 0px 0px`,
+        rootMargin: "0px",
         threshold: 0,
       },
     );
