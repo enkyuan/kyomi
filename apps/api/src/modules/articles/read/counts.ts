@@ -30,45 +30,49 @@ export async function getArticleCountsForUser(
         )
       : undefined;
 
-  const [unreadRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, joinCond)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(and(sql`(${articleIsReadSql}) = false`, feedScopeFilter));
+  const includeClipCounts = !scopedFeedId && !scopedFolderId;
 
-  const [allRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, joinCond)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(feedScopeFilter);
+  const [unreadRows, allRows, savedRows, clipSavedRows, clipAllRows] = await Promise.all([
+    database
+      .select({ c: sql<number>`count(*)::int` })
+      .from(feedItems)
+      .innerJoin(feedSubscriptions, joinCond)
+      .leftJoin(feedItemUserState, stateJoin)
+      .where(and(sql`(${articleIsReadSql}) = false`, feedScopeFilter)),
+    database
+      .select({ c: sql<number>`count(*)::int` })
+      .from(feedItems)
+      .innerJoin(feedSubscriptions, joinCond)
+      .leftJoin(feedItemUserState, stateJoin)
+      .where(feedScopeFilter),
+    database
+      .select({ c: sql<number>`count(*)::int` })
+      .from(feedItems)
+      .innerJoin(feedSubscriptions, joinCond)
+      .leftJoin(feedItemUserState, stateJoin)
+      .where(and(sql`${feedItemUserState.isSaved} IS TRUE`, feedScopeFilter)),
+    includeClipCounts
+      ? database
+          .select({ c: sql<number>`count(*)::int` })
+          .from(articleClips)
+          .where(and(eq(articleClips.userId, userId), eq(articleClips.isSaved, true)))
+      : Promise.resolve([]),
+    includeClipCounts
+      ? database
+          .select({ c: sql<number>`count(*)::int` })
+          .from(articleClips)
+          .where(eq(articleClips.userId, userId))
+      : Promise.resolve([]),
+  ]);
 
-  const [savedRow] = await database
-    .select({ c: sql<number>`count(*)::int` })
-    .from(feedItems)
-    .innerJoin(feedSubscriptions, joinCond)
-    .leftJoin(feedItemUserState, stateJoin)
-    .where(and(sql`${feedItemUserState.isSaved} IS TRUE`, feedScopeFilter));
-
-  const includeMergedClipSavedCount = !scopedFeedId && !scopedFolderId;
-  const clipSaved = includeMergedClipSavedCount
-    ? await database
-        .select({ c: sql<number>`count(*)::int` })
-        .from(articleClips)
-        .where(and(eq(articleClips.userId, userId), eq(articleClips.isSaved, true)))
-    : [];
-  const clipAll = includeClipCounts
-    ? await database
-        .select({ c: sql<number>`count(*)::int` })
-        .from(articleClips)
-        .where(eq(articleClips.userId, userId))
-    : [];
-  const clipAllRow = clipAll[0];
-  const clipSavedRow = clipSaved[0];
+  const unreadRow = unreadRows[0];
+  const allRow = allRows[0];
+  const savedRow = savedRows[0];
+  const clipSavedRow = clipSavedRows[0];
+  const clipAllRow = clipAllRows[0];
 
   return {
-    all: allRow?.c ?? 0,
+    all: (allRow?.c ?? 0) + (clipAllRow?.c ?? 0),
     unread: unreadRow?.c ?? 0,
     saved: (savedRow?.c ?? 0) + (clipSavedRow?.c ?? 0),
   };
