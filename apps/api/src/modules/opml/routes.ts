@@ -88,7 +88,7 @@ export function registerOpmlRoutes(app: Elysia) {
         const taskId = crypto.randomUUID();
         const createdAt = new Date().toISOString();
         const urls = parseOpmlFeeds(body.xml);
-        const baseSummary = {
+        const pendingSummary = {
           subscribed: 0,
           alreadySubscribed: 0,
           failed: 0,
@@ -102,7 +102,7 @@ export function registerOpmlRoutes(app: Elysia) {
             status: "pending",
             createdAt,
             completedAt: null,
-            summary: baseSummary,
+            summary: pendingSummary,
           });
         } catch (error) {
           logger.error("opml.import.task_store_failed", {
@@ -142,12 +142,12 @@ export function registerOpmlRoutes(app: Elysia) {
             const completedAt = new Date().toISOString();
             const message = error instanceof Error ? error.message : String(error);
             const summary = {
-              ...baseSummary,
-              failed: baseSummary.totalUrls,
-              failures: baseSummary.totalUrls
+              ...pendingSummary,
+              failed: pendingSummary.totalUrls,
+              failures: pendingSummary.totalUrls
                 ? [
                     {
-                      url: "OPML_IMPORT",
+                      url: "N/A",
                       code: "OPML_IMPORT_FAILED",
                       message,
                     },
